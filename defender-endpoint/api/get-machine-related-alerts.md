@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -22,7 +22,6 @@ appliesto:
 ---
 
 # Get machine related alerts  API
-
 
 ## API description
 
@@ -40,11 +39,10 @@ When obtaining a token using user credentials:
 - The user needs to have at least the following role permission: 'View Data'. For more information about permissions, see: [Create and manage roles](../user-roles.md).
 - The user needs to have access to the device, based on device group settings. For more information about device group settings, see: [Create and manage device groups](../machine-groups.md).
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-|Application|Alert.ReadWrite.All|'Read and write all alerts'
-|Delegated (work or school account) | Alert.ReadWrite | 'Read and write alerts'
-
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Alert.ReadWrite.All|'Read and write all alerts'|
+|Delegated (work or school account)|Alert.ReadWrite|'Read and write alerts'|
 
 ## HTTP request
 
@@ -54,9 +52,9 @@ GET /api/machines/{id}/alerts
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization | String | Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -65,5 +63,3 @@ Empty
 ## Response
 
 If successful and device exists: 200 OK with list of [alert](alerts.md) entities in the body. If device was not found: 404 Not Found.
-
-

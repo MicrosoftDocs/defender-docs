@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ms.date: 03/21/2025
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -21,19 +21,14 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
 ---
+
 # Use Microsoft Defender for Endpoint APIs
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-
-
 > [!IMPORTANT]
 > Advanced hunting capabilities are not included in Defender for Business.
-
-
-
 
 [!INCLUDE [Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -148,7 +143,7 @@ For more information on Microsoft Entra tokens, see [Microsoft Entra tutorial](/
         {
             private const string Authority = "https://login.microsoftonline.com";
 
-            private const string WdatpResourceId = "https://api.securitycenter.microsoft.com";
+            private const string WdatpResourceId = "https://api.security.microsoft.com";
 
             public static async Task<string> AcquireUserTokenAsync(string username, string password, string appId, string tenantId)
             {
@@ -195,7 +190,7 @@ Verify to make sure you got a correct token:
     ```csharp
     var httpClient = new HttpClient();
 
-    var request = new HttpRequestMessage(HttpMethod.Get, "https://api.securitycenter.microsoft.com/api/alerts");
+    var request = new HttpRequestMessage(HttpMethod.Get, "https://api.security.microsoft.com/api/alerts");
 
     request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
@@ -209,4 +204,3 @@ Verify to make sure you got a correct token:
 - [Microsoft Defender for Endpoint APIs](exposed-apis-list.md)
 - [Access Microsoft Defender for Endpoint with application context](exposed-apis-create-app-webapp.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

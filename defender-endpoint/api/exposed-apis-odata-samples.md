@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ms.date: 05/20/2025
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -21,8 +21,8 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
 ---
+
 # OData queries with Microsoft Defender for Endpoint
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
@@ -50,14 +50,14 @@ Not all properties are filterable.
 Get 10 latest Alerts with related Evidence:
 
 ```http
-HTTP GET  https://api.securitycenter.microsoft.com/api/alerts?$top=10&$expand=evidence
+HTTP GET  https://api.security.microsoft.com/api/alerts?$top=10&$expand=evidence
 ```
 
 #### Response
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Alerts",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Alerts",
     "value": [
         {
             "id": "da637472900382838869_1364969609",
@@ -195,14 +195,14 @@ HTTP GET  https://api.securitycenter.microsoft.com/api/alerts?$top=10&$expand=ev
 Get all the alerts last updated after November 22, 2019 00:00:00:
 
 ```http
-HTTP GET  https://api.securitycenter.microsoft.com/api/alerts?$filter=lastUpdateTime+ge+2019-11-22T00:00:00Z
+HTTP GET  https://api.security.microsoft.com/api/alerts?$filter=lastUpdateTime+ge+2019-11-22T00:00:00Z
 ```
 
 #### Response
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Alerts",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Alerts",
     "value": [
         {
             "id": "da637308392288907382_-880718168",
@@ -257,14 +257,14 @@ HTTP GET  https://api.securitycenter.microsoft.com/api/alerts?$filter=lastUpdate
 Get all the devices with 'High' 'RiskScore':
 
 ```http
-HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=riskScore+eq+'High'
+HTTP GET  https://api.security.microsoft.com/api/machines?$filter=riskScore+eq+'High'
 ```
 
 #### Response
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Machines",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Machines",
     "value": [
         {
             "id": "1e5bc9d7e413ddd7902c2932e418702b84d0cc07",
@@ -310,14 +310,14 @@ HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=riskScor
 Get top 100 devices with 'HealthStatus' not equals to 'Active':
 
 ```http
-HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=healthStatus+ne+'Active'&$top=100 
+HTTP GET  https://api.security.microsoft.com/api/machines?$filter=healthStatus+ne+'Active'&$top=100
 ```
 
 #### Response
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Machines",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Machines",
     "value": [
         {
             "id": "1e5bc9d7e413ddd7902c2932e418702b84d0cc07",
@@ -363,14 +363,14 @@ HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=healthSt
 Get all the devices that last seen after October 20, 2018:
 
 ```http
-HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=lastSeen gt 2018-08-01Z
+HTTP GET  https://api.security.microsoft.com/api/machines?$filter=lastSeen gt 2018-08-01Z
 ```
 
 #### Response
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Machines",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Machines",
     "value": [
         {
             "id": "1e5bc9d7e413ddd7902c2932e418702b84d0cc07",
@@ -416,14 +416,14 @@ HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=lastSeen
 Get the Anti-Virus scans that the user Analyst@examples.onmicrosoft.com created using Microsoft Defender for Endpoint:
 
 ```http
-HTTP GET  https://api.securitycenter.microsoft.com/api/machineactions?$filter=requestor eq 'Analyst@contoso.com' and type eq 'RunAntiVirusScan'
+HTTP GET  https://api.security.microsoft.com/api/machineactions?$filter=requestor eq 'Analyst@contoso.com' and type eq 'RunAntiVirusScan'
 ```
 
 #### Response
 
 ```json
 json{
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#MachineActions",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#MachineActions",
     "value": [
         {
             "id": "2e9da30d-27f6-4208-81f2-9cd3d67893ba",
@@ -448,7 +448,7 @@ json{
 Get the count of open alerts for a specific device:
 
 ```http
-HTTP GET  https://api.securitycenter.microsoft.com/api/machines/123321d0c675eaa415b8e5f383c6388bff446c62/alerts/$count?$filter=status ne 'Resolved'
+HTTP GET  https://api.security.microsoft.com/api/machines/123321d0c675eaa415b8e5f383c6388bff446c62/alerts/$count?$filter=status ne 'Resolved'
 ```
 
 #### Response
@@ -462,14 +462,14 @@ HTTP GET  https://api.securitycenter.microsoft.com/api/machines/123321d0c675eaa4
 Get all the devices with 'computerDnsName' starting with `mymachine`:
 
 ```http
-HTTP GET  https://api.securitycenter.microsoft.com/api/machines?$filter=startswith(computerDnsName,'mymachine')
+HTTP GET  https://api.security.microsoft.com/api/machines?$filter=startswith(computerDnsName,'mymachine')
 ```
 
 #### Response
 
 ```json
 json{
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Machines",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Machines",
     "value": [
         {
             "id": "1e5bc9d7e413ddd7902c2932e418702b84d0cc07",

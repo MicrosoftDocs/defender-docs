@@ -24,7 +24,6 @@ appliesto:
 
 # List devices by software
 
-
 [!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 Retrieve a list of device references that has this software installed.
@@ -33,10 +32,10 @@ Retrieve a list of device references that has this software installed.
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md) for details.
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Software.Read.All|'Read Threat and Vulnerability Management Software information'
-Delegated (work or school account)|Software.Read|'Read Threat and Vulnerability Management Software information'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Software.Read.All|'Read Threat and Vulnerability Management Software information'|
+|Delegated (work or school account)|Software.Read|'Read Threat and Vulnerability Management Software information'|
 
 ## HTTP request
 
@@ -46,9 +45,9 @@ GET /api/Software/{Id}/machineReferences
 
 ## Request headers
 
-|Name|Type|Description
+|Name|Type|Description|
 |---|---|---|
-|Authorization|String|Bearer {token}.**Required**.
+|Authorization|String|Bearer {token}.**Required**.|
 
 ## Request body
 
@@ -65,7 +64,7 @@ If successful, this method returns 200 OK and a list of devices with the softwar
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/Software/microsoft-_-edge/machineReferences
+GET https://api.security.microsoft.com/api/Software/microsoft-_-edge/machineReferences
 ```
 
 ### Response example
@@ -75,7 +74,7 @@ Here`s an example of the response.
 ```json
 
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#MachineReferences",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#MachineReferences",
     "value": [
         {
             "id": "7c7e1896fa39efb0a32a2cf421d837af1b9bf762",

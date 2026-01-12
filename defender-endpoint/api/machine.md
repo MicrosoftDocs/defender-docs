@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -20,14 +20,11 @@ appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Business
-
 ---
 
 # Machine resource type
 
-
 [!INCLUDE [Prerelease information](../../includes/prerelease.md)]
-
 
 ## Properties
 
@@ -54,4 +51,3 @@ appliesto:
 |deviceValue|Nullable Enum|The [value of the device](/defender-vulnerability-management/tvm-assign-device-value). Possible values are: `Normal`, `Low`, and `High`.|
 |ipAddresses|IpAddress collection|Set of ***IpAddress*** objects. See [Get machines API](get-machines.md).|
 |osArchitecture|String|Operating system architecture. Possible values are: `32-bit`, `64-bit`. Use this property instead of osProcessor.|
-
