@@ -11,7 +11,7 @@ ms.topic: concept-article
 
 # Microsoft Defender portal implementation guide for MSSPs
 
-This implementation guide provides Managed Security Service Providers (MSSPs) with step-by-step guidance to implement and operationalize multitenant management capabilities in the Microsoft Defender portal. 
+This implementation guide provides Managed Security Service Providers (MSSPs) with step-by-step guidance to implement and operationalize multitenant management capabilities in the Microsoft Defender portal.
 
 The Microsoft Defender portal's multitenant management features enable MSSPs to manage security operations across multiple customer tenants through a single, unified interface. For a comprehensive overview of these capabilities and their benefits, see [Microsoft Defender multitenant management](mto-overview.md).
 
@@ -194,9 +194,11 @@ To allow an analyst to triage and **manage** incidents for the Microsoft Sentine
 Additional permission might be required for the analyst to triage and investigate incidents like the Microsoft Sentinel Playbook Operator role, specific Entra ID, Cloud Apps, etc., roles and permissions.
 
 Please refer here: [Import roles to Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/import-rbac-roles) to import roles to get you quickly started with URBAC, or here [Create custom roles with Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/create-custom-rbac-roles#create-a-custom-role) to create custom roles.
---->
 
-For sample role assignments for different SOC roles, see the [Sample permission mappings of Microsoft Sentinel built-in roles to Microsoft Defender XDR Unified RBAC roles](../defender-xdr/compare-rbac-roles.md#sample-permission-mappings-of-microsoft-sentinel-built-in-roles-to-microsoft-defender-xdr-unified-rbac-roles)
+
+For sample role assignments for different SOC roles, see the [Sample permission mappings of Microsoft Sentinel built-in roles to Microsoft Defender XDR Unified RBAC roles](../defender-xdr/compare-rbac-roles.md#sample-permission-mappings-of-microsoft-sentinel-built-in-roles-to-microsoft-defender-xdr-unified-rbac-roles) --->
+
+For sample role assignments for different SOC roles, see the [Sample permission mappings of Microsoft Sentinel built-in roles to Microsoft Defender XDR Unified RBAC roles](../defender-xdr/compare-rbac-roles.md).
 
 ## Step 2 - Content Management
 
