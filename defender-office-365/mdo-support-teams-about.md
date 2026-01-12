@@ -16,7 +16,7 @@ ms.collection:
   - tier1
 description: Admins can learn about Microsoft Teams features in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 12/15/2025
+ms.date: 01/08/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -39,10 +39,10 @@ All licenses of Microsoft Teams in Microsoft 365 include the following built-in 
 
   To turn this feature off or on, see [Verify warnings for unsafe links are shown in Microsoft Teams messages](mdo-support-teams-quick-configure.md#step-3-verify-warnings-for-unsafe-links-are-shown-in-microsoft-teams-messages).
 
-Microsoft Defender for Office 365 provides the following extra Teams protection features:
+Microsoft Defender for Office 365 Plan 1 provides the following extra Teams protection features:
 
 - Time of click protection for URLs and files in Teams messages through [Safe Links for Microsoft Teams](safe-links-about.md#safe-links-settings-for-microsoft-teams) and [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md).
-- Allow/block [domains](tenant-allow-block-list-teams-domains-configure.md), [URLs](tenant-allow-block-list-urls-configure.md) and [files](tenant-allow-block-list-files-configure.md) inside Teams using the Tenant Allow Block List.
+- Allow/block [domains and addresses](tenant-allow-block-list-teams-domains-configure.md), [URLs](tenant-allow-block-list-urls-configure.md) and [files](tenant-allow-block-list-files-configure.md) inside Teams using the Tenant Allow Block List.
 - **Zero-hour auto protection (ZAP) for Teams**: ZAP is an existing email protection feature that detects and neutralizes spam, phishing, and malware messages after delivery by moving the messages to the Junk Email folder or quarantine.
 
   ZAP for Teams quarantines messages in internal Teams chats or channels that are found to be malware or high confidence phishing. For more information, see [Zero-hour auto purge (ZAP) in Microsoft Teams](zero-hour-auto-purge.md#zero-hour-auto-purge-zap-in-microsoft-teams).

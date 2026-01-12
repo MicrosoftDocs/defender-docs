@@ -20,14 +20,11 @@ appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender Vulnerability Management
-
 ---
 
 # Get scan definitions
 
-
-[!Include[Prerelease information](../../includes/prerelease.md)]
-
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 ## API description
 
@@ -43,11 +40,10 @@ When obtaining a token using user credentials, to view data, the user needs to h
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md).
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Machine.Read.All| Read all scan information.
-Delegated (work or school account)|Machine.Read.All|Read all scan information.
-
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Machine.Read.All|Read all scan information.|
+|Delegated (work or school account)|Machine.Read.All|Read all scan information.|
 
 ## HTTP request
 
@@ -57,9 +53,9 @@ GET /api/DeviceAuthenticatedScanDefinitions
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -76,7 +72,7 @@ If successful, this method returns 200 - OK response code with a list of authent
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefinitions
+GET https://api.security.microsoft.com/api/DeviceAuthenticatedScanDefinitions
 ```
 
 ### Response example
@@ -85,7 +81,7 @@ Here's an example of the response.
 
 ```json
 {
-"@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#DeviceAuthenticatedScanDefinitions",
+"@odata.context": "https://api.security.microsoft.com/api/$metadata#DeviceAuthenticatedScanDefinitions",
     "value": [
     {
     "id": "60c4aa57-ioi3-1290-7ff6-09fr14792a92",
