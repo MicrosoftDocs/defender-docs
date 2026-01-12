@@ -25,6 +25,10 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## January 2026
 
+|Version number|Updates|
+|---|---|
+|2.254|The sensor now supports a new DNS zone target for *.aatp.gcc.azure.com. Make sure your sensors in GCC can access this zone with your sensor dns prefix.|
+
 ### New security posture assessment: Identify service accounts in privileged groups
 
 This identity security posture assessment lists Active Directory service accounts with direct or nested membership in privileged groups.
@@ -61,8 +65,8 @@ New ADWS LDAP search activity is now available in the 'IdentityQueryEvents' tabl
 
 |Version number|Updates|
 |---|---|
-|2.252|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
 |2.253|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
+|2.252|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
 
 ## November 2025
 
@@ -91,9 +95,9 @@ For more information, see: [Link or Unlink an Account to an Identity (Preview)](
 
 You can now perform remediation actions such as disabling accounts or resetting passwords on one or more accounts linked to an identity. For more information, see: [Remediation actions](remediation-actions.md#roles-and-permissions).
 
-### New security posture assessment: Change password for on-prem account with potentially leaked credentials (Preview)
+### New security posture assessment: Change password for on-premises account with potentially leaked credentials (Preview)
 
-The new security posture assessment lists users whose valid credentials have been leaked. For more information, see: [Change password for on-prem account with potentially leaked credentials (Preview)](/defender-for-identity/security-posture-assessments/accounts#change-password-for-on-prem-account-with-potentially-leaked-credentials-preview)
+The new security posture assessment lists users whose valid credentials have been leaked. For more information, see: [Change password for on-premises account with potentially leaked credentials (Preview)](/defender-for-identity/security-posture-assessments/accounts#change-password-for-on-prem-account-with-potentially-leaked-credentials-preview)
 
 ### Microsoft Defender for Identity sensor version updates
 
