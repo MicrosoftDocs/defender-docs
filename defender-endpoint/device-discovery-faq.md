@@ -133,9 +133,12 @@ As device discovery uses passive methods to discover devices in the network, any
 
 Devices will actively be probed when changes in device characteristics are observed to make sure the existing information is up to date (typically, devices probed no more than once in a three-week period)
 
-## What happens with discovered devices that are not onboarded, is there a period of time when they are removed?
+## Are non-onboarded devices removed after a period of time?
 
-Non-onboarded devices will remain on the portal (More than 180 days) even if it is not onboarded, as long as it is still discovered by another onboarded machine on the network or discovered by OT Sensor.
+A non-onboarded device remains in the Defender portal (for more than 180 days), if one of these conditions are met:
+
+- The device is discovered by an onboarded endpoint on the same network
+- The device is discovered by an OT sensor
 
 ## My security tool raised alert on UnicastScanner.ps1 / PSScript_{GUID}.ps1 or port scanning activity initiated by it. What should I do?
 
