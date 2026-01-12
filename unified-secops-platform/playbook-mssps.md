@@ -4,9 +4,11 @@ description: Implementation guide for partners and SOC architects implementing M
 author: guywi-ms
 ms.author: guywild
 ms.date: 11/20/2025
-ms.service: unified-security-operations
+ms.service: microsoft-defender
+ms.subservice: unified-security-operations
 ms.topic: concept-article
 ---
+
 # Microsoft Defender portal implementation guide for MSSPs
 
 This implementation guide provides Managed Security Service Providers (MSSPs) with step-by-step guidance to implement and operationalize multitenant management capabilities in the Microsoft Defender portal. 
@@ -71,19 +73,21 @@ Some advanced scenarios using automation rules and playbooks might still require
 
 #### Unified RBAC
 When looking at using Unified RBAC in managing your Microsoft Defender for Office 365 customers, you must have Defender for Office 365 Plan 2 license. For more information, see:
+
 - [Email and collaboration permissions mapping](/defender-xdr/compare-rbac-roles#email--collaboration-permissions-mapping)
-- [Exchange Online permissions mapping](/defender-xdr/compare-rbac-roles.md#exchange-online-permissions-mapping)
+- [Exchange Online permissions mapping](/defender-xdr/compare-rbac-roles#exchange-online-permissions-mapping)
 
    >[!NOTE]
    >GDAP isn't currently supported for managing Defender for Office 365.
 
 #### Azure B2B 
+
 Azure B2B invited guests aren't supported by experiences that were previously under Microsoft Exchange Online RBAC. Since Defender for Office 365 Unified RBAC leans on Exchange Online Admin APIs, this creates limitations for actions performed in Defender for Office 365. This can result in B2B guest admins getting errors when attempting to perform certain actions, such as:
+
 - Managing spam and phishing policies
 - Managing TABL
 - Cannot release emails from quarantine
 - Missing Threat Explorer in navigation pane
-
 
 ## Manage entitlement
 
@@ -192,7 +196,7 @@ Additional permission might be required for the analyst to triage and investigat
 Please refer here: [Import roles to Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/import-rbac-roles) to import roles to get you quickly started with URBAC, or here [Create custom roles with Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/create-custom-rbac-roles#create-a-custom-role) to create custom roles.
 --->
 
-For sample role assignments for different SOC roles, see the [Sample permission mappings of Microsoft Sentinel built-in roles to Microsoft Defender XDR Unified RBAC roles](../defender-xdr/compare-rbac-roles#sample-permission-mappings-of-microsoft-sentinel-built-in-roles-to-microsoft-defender-xdr-unified-rbac-roles)
+For sample role assignments for different SOC roles, see the [Sample permission mappings of Microsoft Sentinel built-in roles to Microsoft Defender XDR Unified RBAC roles](../defender-xdr/compare-rbac-roles.md#sample-permission-mappings-of-microsoft-sentinel-built-in-roles-to-microsoft-defender-xdr-unified-rbac-roles)
 
 ## Step 2 - Content Management
 
@@ -216,6 +220,7 @@ MSSPs working in the Microsoft Defender portal have several tools for managing a
 A key consideration with multi-customer CI/CD pipelines is choosing the best structure to serve all clients. While there’s no universal approach, here are three patterns we recommend considering:
 
 #### **Pattern 1: Central repository for generic content, customer-specific repositories for tailored content**
+
 - One central repository for common content deployed to all customers
 - Individual repositories for customer-specific customizations
 - Each customer workspace connects to both repositories
@@ -224,6 +229,7 @@ A key consideration with multi-customer CI/CD pipelines is choosing the best str
   :::image type="content" source="./media/playbook-mssps/sentinel-content-deployment-diagram.png" alt-text="Repository architecture showing central and customer-specific content deployment":::
 
 #### **Pattern 2: Single repository with custom folders**
+
 - All content in one repository
 - Folder structure based on shared data sources - for example, Entra ID Analytics - or customer names
 - Deployment pipelines customized per customer connection
@@ -232,6 +238,7 @@ A key consideration with multi-customer CI/CD pipelines is choosing the best str
   :::image type="content" source="./media/playbook-mssps/content-distribution-workflow-diagram.png" alt-text="Single repository architecture with custom folder deployment workflows":::
 
 #### **Pattern 3: One repository per customer**
+
 - Complete content separation across customers
 - Full customization flexibility for each customer
 - Best for customers with unique content requirements
@@ -323,9 +330,10 @@ Defender for Cloud Apps is natively integrated with Microsoft Defender and follo
 For more information, see [Microsoft Defender for Cloud Apps overview](/defender-cloud-apps/what-is-defender-for-cloud-apps).
 
 #### Cloud
+
 **Microsoft Defender for Cloud** is integrated with Microsoft Defender. This integration lets you access Defender for Cloud alerts and incidents within the Defender portal, and provides you with richer context to investigations that span cloud resources, devices, and identities. It allows security teams to get the complete picture of an attack, including suspicious and malicious events that happen in their cloud environment.
 
-For more information, see [What is Microsoft Defender for Cloud?](../defender-for-cloud/defender-for-cloud-introduction.md).
+For more information, see [What is Microsoft Defender for Cloud?](/azure/defender-for-cloud/defender-for-cloud-introduction).
 
 #### Exposure management
 
