@@ -120,7 +120,5 @@ Some features (such as enterprise IoT vulnerability display) are controlled by t
 ## Next steps
 
 - [Configure device discovery](configure-device-discovery.md)
+- [Review and assess devices](assess-devices.md)
 - [Device discovery FAQs](device-discovery-faq.md)
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
-
