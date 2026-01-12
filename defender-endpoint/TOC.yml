@@ -605,9 +605,7 @@
       - name: Manage device discovery
         href: configure-device-discovery.md
       - name: Review and assess devices
-        href: assess-devices.md
-      - name: Device discovery FAQ
-        href: device-discovery-faq.md  
+        href: assess-devices.md        
 
     - name: Authenticated network scans
       href: network-devices.md

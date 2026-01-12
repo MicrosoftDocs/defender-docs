@@ -197,6 +197,34 @@ The following table summarizes device discovery capabilities by license:
 
 Some features (such as enterprise IoT vulnerability display) are controlled by toggles and may be off by default, depending on your license. Enabling these features may change the data shown in the inventory and UI.
 
+## Does standard discovery look like malicious network activity?
+
+When considering Standard discovery, you may be wondering about the implications of probing, and specifically whether security tools might suspect such activity as malicious. The following subsection explains why, in almost all cases, organizations should have no concerns around enabling Standard discovery.  
+
+### Probing is distributed across all Windows devices on the network
+
+As opposed to malicious activity, which would typically scan the entire network from a few compromised devices, Microsoft Defender for Endpoint's Standard discovery probing is initiated from all onboarded Windows devices making the activity benign and non-anomalous. The probing is centrally managed from the cloud to balance the probing attempt between all the supported onboarded devices in the network.  
+
+### Active probing generates negligible amount of extra traffic
+
+Unmanaged devices would typically get probed no more than once in a three-week period and generate less than 50KB of traffic. Malicious activity usually includes high repetitive probing attempts and in some cases data exfiltration that generates a significant amount of network traffic that can be identified as an anomaly by network monitoring tools.
+
+### Your Windows device already runs active discovery
+
+Active discovery capabilities have always been embedded in the Windows operating system, to find nearby devices, endpoints, and printers, for easier "plug and play" experiences and file sharing between endpoints in the network. Similar functionality is implemented in mobile devices, network equipment, and inventory applications just to name a few.  
+
+Standard discovery uses the same discovery methods to identify devices and to have a unified visibility for all the devices in your network in the Microsoft Defender XDR Device Inventory. For example – Standard discovery identifies nearby endpoints in the network the same way Windows lists available printers in the network. 
+
+Network security and monitoring tools are indifferent to such activities performed by devices on the network. 
+
+### Only unmanaged devices are being probed
+
+The device discovery capabilities have been built to only discover and identify unmanaged devices on your network. This means that previously discovered devices that are already onboarded with Microsoft Defender for Endpoint won't be probed.
+
+### You can exclude network lures from active probing
+
+Standard discovery supports exclusion of devices or ranges (subnets) from active probing. If you have network lures deployed in place, you can use the Device Discovery settings to define exclusions based on IP addresses or subnets (a range of IP addresses). Defining those exclusions ensure that those devices won't be actively probed and won't be alerted. Those devices are discovered using passive methods only (similar to Basic discovery mode).
+
 ## Next steps
 
 - [Configure device discovery](configure-device-discovery.md)
