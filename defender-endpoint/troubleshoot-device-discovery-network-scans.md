@@ -77,7 +77,7 @@ Ask your system administrator to assign you the required permissions. Alternatel
 
 Try a different browser or copy the sign-in link and code to a different device.
 
-### Text too small or can't copy text from command line
+## Text too small or can't copy text from command line
 
 Change command-line settings on your device to allow copying and change text size.
 

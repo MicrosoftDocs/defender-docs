@@ -105,6 +105,10 @@ To filter the network list, select **Filter**, select the **Network monitor stat
 - **Ignored**: Networks where device discovery isn't active.
 - **All**: Shows both monitored and ignored networks.
 
+## Review and assess devices
+
+To review and assess non-onboarded devices, and to find other device details, see [Review and assess devices](assess-devices.md).
+
 ## Disable device discovery
 
 You can disable device discovery in the [Advanced features](advanced-features.md) page. When you disable device discovery, Defender for Endpoint doesn't discover devices in your network, but **SenseNDR.exe** still runs on the onboarded devices.
