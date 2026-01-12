@@ -148,6 +148,22 @@ The following tables list, per cloud app, which abilities are supported with App
 | [Zendesk](protect-zendesk.md)  |  |  |  |  | Preview |
 | [Zoom](protect-zoom.md)   |  |  |  |   |
 
+## Enable app connectors
+
+To enable an app connector for the first time, you must configure an API connection for the specific cloud app you want to connect. Microsoft Defender for Cloud Apps doesn't provide a single universal enablement flow for all apps.
+
+### To get started
+
+1. In the Microsoft Defender portal, go to **Cloud Apps** > **Connected apps**.
+2. Select **Connect an app** (or **Add a new connector**).
+3. Choose the cloud app you want to connect.
+4. Follow the instructions in the corresponding app-specific API connector guide. These instructions include the required permissions and authentication steps.
+
+Each cloud app has its own enablement process based on the APIs it supports.
+
+> [!NOTE]
+> This article provides an overview of app connectors. Detailed steps for enabling connectors are documented in individual connector guides for each supported app.
+
 ## Prerequisites
 
 - When working with the [Microsoft 365 connector](protect-office-365.md), you'll need a license for each service where you want to view security recommendations. For example, to view recommendations for Microsoft Forms, you'll need a license that supports Forms.
