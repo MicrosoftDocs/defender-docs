@@ -91,15 +91,11 @@ To select a device that performs the authenticated network scans:
 
 You can complete the registration on the designated scanning device or any other device (for example, your personal client device).
 
-> [!NOTE]
-> The account the user signs in with and the device used to complete the sign in process, must be in the same tenant where the device is onboarded to Microsoft Defender for Endpoint.
+The account the user signs in with and the device used to complete the sign in process, must be in the same tenant where the device is onboarded to Microsoft Defender for Endpoint.
 
 To complete the scanner registration process:
 
-1. Copy and follow the URL that appears on the command line and use the provided installation code to complete the registration process.
-
-   > [!NOTE]
-   > You may need to change command prompt settings to copy the URL.
+1. Copy and follow the URL that appears on the command line and use the provided installation code to complete the registration process. You might need to change command prompt settings to copy the URL.
 
 1. Type the code and sign in using a Microsoft account that has the **Manage security settings in Defender** permission.
 
