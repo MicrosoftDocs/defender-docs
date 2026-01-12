@@ -41,6 +41,9 @@ This article is updated frequently to let you know what's new in the latest rele
 > [!NOTE]  
 > Defender for Endpoint on Linux is updated regularly. While security fixes are included as part of monthly releases, the fixes aren't always listed as a separate **Security Patch** item in these notes. If a release contains security-related updates, the updates are listed in this article under [Releases for Defender for Endpoint on Linux](#releases-for-defender-for-endpoint-on-linux) in the specific version section. For detailed information on Microsoft security updates, see the [Microsoft Security Update Guide](https://msrc.microsoft.com/update-guide).
 
+> [!NOTE]
+> Build numbers for Defender for Endpoint on Linux are not strictly sequential by month. A later release can have a lower build number if it originates from a different servicing branch. Always use the release date, not the numeric build value alone, to determine the most recent version. 
+
 ## Releases for Defender for Endpoint on Linux
 
 ### December-2025 Build: 101.25092.0005 | Release version: 30.125092.0005.0
