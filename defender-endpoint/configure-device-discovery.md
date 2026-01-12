@@ -27,12 +27,7 @@ appliesto:
 
 This article describes how to set up and configure device discovery in Microsoft Defender for Endpoint. 
 
-## Prerequisites
-
-### Supported operating systems
-
-- Windows 10 and later
-- Windows Server 2019 and later.
+For operating systems that device discovery supports, see [Supported operating systems](device-discovery.md#supported-operating-systems)
 
 ## Set up device discovery
 

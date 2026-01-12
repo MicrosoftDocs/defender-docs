@@ -90,7 +90,7 @@ To identify a network as corporate, Defender for Endpoint correlates network ide
 
 Private network devices aren't listed in the inventory and aren't actively probed.
 
-To override this setting, you can add networks to the monitored list. For more information, see [Select networks to monitor](configure-device-discovery.md#select-networks-to-monitor).
+To override this setting, you can add networks to the monitored list. For more information, see [Select networks to monitor](configure-device-discovery.md#view-and-manage-monitored-networks).
 
 ## Supported devices and protocols
 
@@ -159,13 +159,13 @@ For advanced analysis, vulnerability assessment, and hunting queries, see [Confi
 |----------------------------|:---------------:|-------------------------------------------------------------------------------|-----------------------------------------|------------------|
 | Basic discovery   | No   | Detects unmanaged endpoints, network devices, IoT assets via traffic. Can be used for sensitive/legacy networks. | **System** > **Settings** > **Device discovery** > **Discovery mode** > **Basic**      | [Discovery modes and scans](#discovery-modes-and-scans) |
 | Standard discovery | Yes  | Adds protocol-based probes for deeper device identification and richer inventory. Can be disabled (switch to **Basic** mode). | **System** > **Settings** > **Device discovery** > **Discovery mode** > **Standard discovery (recommended)**          |[Discovery modes and scans](#discovery-modes-and-scans)  |
-| Device inventory integration | Yes   | Unified view of onboarded and discovered devices. Filter, assess, and take action in inventory. | **Assets** > **Devices** | [Review devices that aren't onboarded](configure-device-discovery.md#review-devices-that-arent-onboarded-to-defender-for-endpoint) |
-| Network list management  | Yes | Monitors corporate networks, ignores non-corporate by default. Can monitor/ignore specific networks. | **System** > **Settings** > **Device discovery** > **Monitored networks**   |[Network list management](configure-device-discovery.md#select-networks-to-monitor)  |
+| Device inventory integration | Yes   | Unified view of onboarded and discovered devices. Filter, assess, and take action in inventory. | **Assets** > **Devices** | [Review devices that aren't onboarded](assess-devices.md#monitor-non-onboarded-devices-in-the-device-inventory) |
+| Network list management  | Yes | Monitors corporate networks, ignores non-corporate by default. Can monitor/ignore specific networks. | **System** > **Settings** > **Device discovery** > **Monitored networks**   |[Network list management](configure-device-discovery.md#view-and-manage-monitored-networks)  |
 | Exclusions  | No  | Exclude IPs or device groups from scans. | **System** > **Settings** > **Device discovery** > **Exclusions** |[Exclude devices](configure-device-discovery.md#exclude-devices-from-standard-discovery)  |
 | Network scans  | No  | - Discover and classify network infrastructure devices that cannot be onboarded.<br>- Schedule scans and define scan targets beyond the default subnet. | **System** > **Settings** > **Device discovery** > **Device discovery** > **Authenticated scans**  |[Network device discovery and vulnerability management](network-devices.md)  |
 | OT/IoT device discovery | No | Integrate with Defender for IoT to discover OT and enterprise IoT devices. | **System** > **Settings** > **Device discovery** > **Enterprise IoT** | [Onboard Defender for IoT in the Defender portal](/defender-for-iot/get-started) |
 | Vulnerability assessment | Yes | Assess vulnerabilities on discovered devices and get remediation guidance. For example, search for **SSH** to find recommendations on SSH vulnerabilities related to unmanaged devices. | **Exposure management > Recommendations** | [Vulnerability management overview](/defender-vulnerability-management/defender-vulnerability-management) |
-| Advanced hunting on discovered devices | Yes | Use advanced hunting queries to investigate discovered devices, their activities, and related threats. | **Advanced hunting** | [Use advanced hunting on discovered devices](configure-device-discovery.md#use-advanced-hunting-on-discovered-devices) |
+| Advanced hunting on discovered devices | Yes | Use advanced hunting queries to investigate discovered devices, their activities, and related threats. | **Advanced hunting** | [Use advanced hunting on discovered devices](assess-devices.md#use-advanced-hunting-on-discovered-devices) |
 
 ## Device discovery capabilities by license
 
@@ -195,4 +195,3 @@ When considering standard discovery, you may be wondering about the implications
 
 - [Configure device discovery](configure-device-discovery.md)
 - [Review and assess devices](assess-devices.md)
-- [Device discovery FAQs](device-discovery-faq.md)
