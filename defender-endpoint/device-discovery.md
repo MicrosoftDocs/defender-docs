@@ -58,18 +58,23 @@ Defender for Endpoint discovers:
 
 - Enterprise endpoints (workstations, servers, and mobile devices) that aren't yet onboarded to Defender for Endpoint
 - Network devices like routers and switches
-- IoT devices like printers and cameras 
+- IoT devices like printers and cameras
 
 ### Discovery modes and scans
 
-Device discovery uses two main discovery modes. The mode controls the level of visibility you can get for unmanaged devices in your corporate network. You select the device discovery mode in the **System** > **Settings** > **Device discovery** > **Discovery mode** section.
+Device discovery uses two main discovery modes. The mode controls the level of visibility you can get for unmanaged devices in your corporate network. 
+
+You select the device discovery mode in the **System** > **Settings** > **Device discovery** > **Discovery mode** section. For more information, see [Set up device discovery](configure-device-discovery.md#set-up-device-discovery).
 
 | Mode | Description   | Use cases and recommendations  |
 |:------------------|:---------------------------------------------------------------------------|:-------------------------------------------|
-| Basic scan   | - Passively collects events in your network and extract device information.<br>- Extracts data from all network traffic seen by an onboarded device.<br>- Uses the **SenseNDR.exe** binary for passive network data collection; no network traffic is initiated.<br>- Provides limited visibility of unmanaged endpoints in your network. | Sensitive/legacy networks, minimal impact. |
-| Standard scan (default) | - Actively finds devices in your network to enrich collected data and discover more devices.<br>- Uses common discovery protocols and runs multicast queries in the network to find more devices.<br>- Uses active probing to discover more information about observed devices.<br>- Helps you build a coherent device inventory, enriching existing device information. | Most environments, recommended.  |
+| Basic scan   | - Passively collects events in your network and extract device information.<br>- Extracts data from all network traffic seen by an onboarded device.<br>- Uses the **SenseNDR.exe** binary for passive network data collection; no network traffic is initiated.<br>- Provides limited visibility of unmanaged endpoints in your network. | - We recommended this mode for sensitive/legacy networks.<br>- While we recommend that you use device discovery for essential visibility into your network, you can disable basic discovery if needed. For more information, see [Disable device discovery](configure-device-discovery.md#disable-device-discovery). |
+| Standard scan (default) | - Actively finds devices in your network to enrich collected data and discover more devices.<br>- Uses common discovery protocols and runs multicast queries in the network to find more devices.<br>- Uses active probing to discover more information about observed devices.<br>- Helps you build a coherent device inventory, enriching existing device information.<br>- Defender for Endpoint probes devices when it observes changes in device characteristics.Typically, devices are probed no more than once in a three-week period.<br>- Active probing can generate up to 50Kb of traffic between the onboarded device and the probed device, for every probing attempt. | - We highly recommend this mode for building a reliable and coherent device inventory.<br>- If you select basic discovery, you reduce the visibility of unmanaged endpoints in your network.<br>- To customize the list of devices that that perform standard discovery, see [Control which devices perform standard discovery](configure-device-discovery.md#control-which-devices-perform-standard-discovery).<br>- To exclude targets from standard discovery, see [Exclude devices](configure-device-discovery.md#exclude-devices-from-standard-discovery). |
 
-#### Authenticated network scans
+> [!NOTE]
+> Because device discovery uses passive methods to discover devices in the network, any device that communicates with your onboarded devices in the corporate network can be discovered and listed in the inventory. You can exclude devices from active discovery only.
+
+### Authenticated network scans
 
 As an additional layer of discovery, [authenticated network scans](network-devices.md) use designated onboarded devices to perform agentless network scans of preconfigured network devices using supported protocols. These scans are recommended for environments that need deeper visibility into network infrastructure devices.
 
@@ -81,9 +86,84 @@ For more information, see [Network devices](network-devices.md).
 
 Microsoft Defender for Endpoint analyzes a network and determines if it's a corporate network that needs to be monitored or a non-corporate network that can be ignored. Devices that aren't connected to corporate networks aren't discovered or listed in the device inventory.
 
-To identify a network as corporate, Defender for Endpoint correlates network identifiers across all of the tenant's clients. If most of the devices in the organization report that they're connected to the same network name, with the same default gateway and DHCP server address, Defender for Endpoint assumes that the network is a corporate network. 
+To identify a network as corporate, Defender for Endpoint correlates network identifiers across all of the tenant's clients. If most of the devices in the organization report that they're connected to the same network name, with the same default gateway and DHCP server address, Defender for Endpoint assumes that the network is a corporate network.
+
+Private network devices aren't listed in the inventory and aren't actively probed.
 
 To override this setting, you can add networks to the monitored list. For more information, see [Select networks to monitor](configure-device-discovery.md#select-networks-to-monitor).
+
+## Supported devices and protocols
+
+### Supported operating systems
+
+- Windows 10 version 1809 or later
+- Windows 11
+- Windows Server 2019 and later
+- Azure Stack HCI OS, version 23H2 and later
+
+### Devices that can perform device discovery
+
+Onboarded devices running the following versions of Windows can perform device discovery:
+
+- Windows 11
+- Windows 10, version 1809 or later
+- Windows Server 2019 and later
+- Azure Stack HCI OS, version 23H2 and later
+
+## Supported protocols
+
+By default, device discovery captures and analyzes the following protocols:
+
+- `ARP`
+- `CDP`
+- `DHCP`
+- `DHCPv6`
+- `IP` (headers)
+- `LLDP`
+- `LLMNR`
+- `mDNS`
+- `MNDP`
+- `MSSQL`
+- `NBNS`
+- `SSDP`
+- `TCP` (SYN headers)
+- `UDP` (headers)
+- `WSD`
+
+## Protocols used for active probing in standard discovery
+
+When you enable standard mode, device discovery captures and analyzes the following protocols:
+
+- `AFP`
+- `ARP`
+- `DHCP`
+- `FTP`
+- `HTTP`
+- `HTTPS`
+- `ICMP`
+- `IphoneSync`
+- `IPP`
+- `LDAP`
+- `LLMNR`
+- `mDNS`
+- `NBNS`
+- `NBSS`
+- `PJL`
+- `RDP`
+- `RPC`
+- `SIP`
+- `SLP`
+- `SMB`
+- `SMTP`
+- `SNMP`
+- `SSH`
+- `Telnet`
+- `UPNP`
+- `VNC`
+- `WinRM`
+- `WSD`
+
+Device discovery might also scan other commonly used ports to improve classification accuracy and coverage.
 
 ## Capabilities and configuration options
 

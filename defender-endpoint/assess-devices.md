@@ -38,20 +38,38 @@ This article describes how to review and assess devices discovered by device dis
 
 You can review the device inventory for discovered devices that aren't onboarded to Defender for Endpoint.
 
+> [!NOTE]
+> A non-onboarded device remains in the Defender portal (for more than 180 days), if one of these conditions are met:
+>
+>- The device is discovered by an onboarded endpoint on the same network
+>- The device is discovered by an OT sensor
+
 To assess these devices, navigate to the device inventory, and use the **Onboarding status** filter, with one of the following values:
 
 - **Onboarded**: The endpoint is onboarded to Defender for Endpoint.
 - **Can be onboarded**: Defender for Endpoint discovers the device in the network and supports its operating system, but the device isn't onboarded. We highly recommend you onboard such devices.
+
+    > [!NOTE]
+    > You may notice differences between the number of listed devices under **can be onboarded** in the device inventory, the **onboard to Microsoft Defender for Endpoint** security recommendation, and the **devices to onboard** dashboard widget.
+    > The security recommendation and the dashboard widget are for devices that are stable in the network, excluding ephemeral devices, guest devices, and others. The idea is to recommend on persistent devices that also imply on the overall security score of the organization.
+
 - **Unsupported**: Defender for Endpoint discovers the endpoint, but doesn't support the device.
 - **Insufficient info**: The system couldn't determine the supportability of the device. Enable standard discovery on more devices in the network to enrich the discovered attributes.
 
 :::image type="content" source="media/2b62255cd3a9dd42f3219e437b956fb9.png" alt-text="The device inventory dashboard" lightbox="media/2b62255cd3a9dd42f3219e437b956fb9.png":::
+
+### Onboard unmanaged devices
+
+You can [onboard unmanaged devices manually](onboarding.md). Unmanaged endpoints in your network introduce vulnerabilities and risks to your network. Onboarding them to the service can increase the security visibility on them.
 
 ## Use advanced hunting on discovered devices
 
 You can use advanced hunting queries to gain visibility on discovered devices. Find details about discovered devices in the DeviceInfo table, or network-related information about those devices, in the DeviceNetworkInfo table.
 
 :::image type="content" source="media/f48ba1779eddee9872f167453c24e5c9.png" alt-text="The Advanced hunting page on which queries can be used" lightbox="media/f48ba1779eddee9872f167453c24e5c9.png":::
+
+> [!TIP]
+> You can also use the onboarding status column on API queries to filter out unmanaged devices.
 
 ### Explore devices in the network
 

@@ -46,12 +46,18 @@ To set up device discovery:
 
     > [!TIP] 
     > While standard is the recommended mode, you can change to the basic mode if needed. For more information, see [Discovery modes and scans](device-discovery.md#discovery-modes-and-scans).
-    > While standard is the recommended mode, you can change to the basic mode if needed. For more information, see [Discovery modes and scans](device-discovery.md#discovery-modes-and-scans).
 
 1. Select **Save**.
 
 > [!NOTE]
 > Standard discovery uses various PowerShell scripts to actively probe devices in the network. These PowerShell scripts are signed by Microsoft, and are executed from the following location: `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\*.ps`. For example, `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\UnicastScannerV1.1.0.ps1`.
+
+## Control which devices perform standard discovery
+
+To customize the list of devices used to perform standard discovery, do one of the following:
+
+- Enable standard discovery on all onboarded devices that that support device discovery.
+- Select a subset or subsets of your devices using device tags (see [Set up device discovery](configure-device-discovery.md#set-up-device-discovery)). In this case, all other devices run basic discovery only.
 
 ## Exclude devices from standard discovery
 
@@ -67,6 +73,11 @@ To exclude a device:
 1. Select **Save**.
 
 The exclusion is visible in the **Exclusions** list. You can select an exclusion in the list to view the exclusion details, edit, or delete the exclusion.
+
+> [!NOTE]
+>
+> - Excluded devices might still reply to multicast discovery attempts in the network. These devices are discovered but aren't actively probed.
+> - Because device discovery uses passive methods to discover devices in the network, any device that communicates with your onboarded devices in the corporate network can be discovered and listed in the inventory. You can exclude devices from active discovery only.
 
 ## View and manage monitored networks
 
@@ -98,6 +109,18 @@ To filter the network list, select **Filter**, select the **Network monitor stat
 - **Monitored**: Networks where device discovery is active.
 - **Ignored**: Networks where device discovery isn't active.
 - **All**: Shows both monitored and ignored networks.
+
+## Disable device discovery
+
+You can disable device discovery in the [Advanced features](advanced-features.md) page. When you disable device discovery, Defender for Endpoint doesn't discover devices in your network, but **SenseNDR.exe** still runs on the onboarded devices.
+
+## Troubleshoot device discovery
+
+### My security tool raised alert on UnicastScanner.ps1 / PSScript_{GUID}.ps1 or port scanning activity initiated by it. What should I do?
+
+The active probing scripts are signed by Microsoft and are safe. You can add the following path to your exclusion list:
+
+`C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\*.ps1`
 
 ## Next steps
 
