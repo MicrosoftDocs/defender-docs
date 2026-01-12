@@ -14,7 +14,7 @@ This article explains how to enable Microsoft Defender for Containers for Amazon
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
-AWS-specific requirements:
+### AWS-specific requirements
 
 - An AWS account with permissions to create and manage IAM roles and deploy CloudFormation stacks
 - One or more Amazon EKS clusters running Kubernetes version 1.19 or later
@@ -324,6 +324,13 @@ kubectl run test-alert --image=nginx --rm -it --restart=Never -- sh -c "echo tes
 ```
 
 Check for the alert in Defender for Cloud within 5 to 10 minutes.
+
+## View your current coverage
+
+Defender for Cloud provides access to [workbooks](custom-dashboards-azure-workbooks.md) through [Azure workbooks](/azure/azure-monitor/visualize/workbooks-overview). Workbooks are customizable reports that provide insights into your security posture.
+
+
+The [coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) helps you understand your current coverage by showing which plans are enabled on your subscriptions and resources.
 
 ## Troubleshooting - move to new page?
 
