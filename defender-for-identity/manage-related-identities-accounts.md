@@ -55,7 +55,7 @@ Use the procedures in this article to manually link accounts to identities, and 
 
     :::image type="content" source="media/link-unlink-account-to-identity/accounts-observed-in-organization.png" alt-text="Screenshot that shows the accounts observed in an organization." lightbox="media/link-unlink-account-to-identity/accounts-observed-in-organization.png":::
 
-1. On the **Accounts** tab, select :::image type="icon" source="media/m365-cc-sc-link-accounts.png" border="false"::: **Link**.
+1. On the **Accounts** tab, select :::image type="icon" source="media/link-accounts.png" border="false"::: **Link**.
 
 1. The **Link accounts** wizard opens. On the **Select accounts** page, use the search box to find an account. You can search by:
    - Display name
@@ -85,7 +85,7 @@ Use the procedures in this article to manually link accounts to identities, and 
 
 1. On the **Identities** tab of the **Identity Inventory** page at <https://security.microsoft.com/identity-inventory>, select an **Identity** from the list by clicking on the **Display name** value.
 1. On the identity details page that opens, select the **Observed in organization** tab, and verify the **Accounts** tab is selected.
-1. On the **Accounts** tab, select the account you want to unlink from the identity by selecting the check box next to the **Display name** column, and then select :::image type="icon" source="media/m365-cc-sc-unlink-accounts.png" border="false"::: **Unlink**.
+1. On the **Accounts** tab, select the account you want to unlink from the identity by selecting the check box next to the **Display name** column, and then select :::image type="icon" source="media/unlink-accounts.png" border="false"::: **Unlink**.
 1. In the **Unlink accounts from ...** confirmation dialog that opens, read the information, and then select **Unlink accounts**.
 
 ## What to expect after linking or unlinking an account in Defender for Identity
