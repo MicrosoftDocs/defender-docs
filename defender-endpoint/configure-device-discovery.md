@@ -111,15 +111,7 @@ You can disable device discovery in the [Advanced features](advanced-features.md
 
 ## Troubleshoot device discovery
 
-### Security tool raises alert on UnicastScanner.ps1 / PSScript_{GUID}.ps1 or port scanning activity initiated by the security tool
-
-The active probing scripts are signed by Microsoft and are safe. You can add the following path to your exclusion list:
-
-`C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\*.ps1`
-
-## Unmanaged device health state is always "Active".
-
-Temporarily, unmanaged device health state is "Active" during the standard retention period of the device inventory, regardless of their actual state.
+If you encounter issues with device discovery or authenticated network scans, see [Troubleshoot device discovery and authenticated network scans](network-authenticated-scan-troubleshooting.md).
 
 ## Next steps
 

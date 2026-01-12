@@ -609,6 +609,8 @@
 
       - name: Discover network devices (network scans)
         href: network-devices.md
+      - name: Troubleshoot
+        href: troubleshoot-device-discovery-network-scans.md
     - name: Devices
       items:
       - name: Device inventory
