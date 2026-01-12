@@ -50,7 +50,7 @@ Watch this video for a quick overview of how to assess and onboard unmanaged dev
 
 With this capability, a security recommendation to onboard devices to Defender for Endpoint is available as part of the existing Microsoft Defender Vulnerability Management experience.
 
-### Discovered assets
+## Discovered assets
 
 Unknown and unmanaged devices introduce significant risks to your network - whether it's an unpatched printer, network devices with weak security configurations, or a server with no security controls.
 
@@ -59,6 +59,10 @@ Defender for Endpoint discovers:
 - Enterprise endpoints (workstations, servers, and mobile devices) that aren't yet onboarded to Defender for Endpoint
 - Network devices like routers and switches
 - IoT devices like printers and cameras
+
+### Discovered IoT and OT devices
+
+Defender for Endpoint can discover a wide range of IoT and OT devices in your network, including printers, cameras, medical devices, industrial control systems (ICS), and more. These devices often have unique characteristics and may not support traditional security agents, making them challenging to monitor and protect. To detect these devices, you need to [onboard Defender for IoT in the Defender portal](/defender-for-iot/get-started.md).
 
 ### Discovery modes and scans
 
