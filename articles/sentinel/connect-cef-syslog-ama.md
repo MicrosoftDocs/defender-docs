@@ -5,7 +5,7 @@ author: guywi-ms
 ms.author: guywild
 ms.topic: how-to
 ms.custom: linux-related-content
-ms.date: 06/27/2024
+ms.date: 01/12/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
@@ -18,10 +18,10 @@ ms.collection: usx-security
 
 # Ingest syslog and CEF messages to Microsoft Sentinel with the Azure Monitor Agent
 
-This article describes how to use the **Syslog via AMA** and **Common Event Format (CEF) via AMA** connectors to quickly filter and ingest syslog messages, including messages in Common Event Format (CEF), from Linux machines and from network and security devices and appliances. To learn more about these data connectors, see [Syslog and Common Event Format (CEF) via AMA connectors for Microsoft Sentinel](cef-syslog-ama-overview.md). 
+This article shows you how to use the **Syslog via AMA** and **Common Event Format (CEF) via AMA** connectors to filter and ingest syslog and CEF messages from Linux machines, network devices, and security appliances. To learn more about these data connectors, see [Syslog and Common Event Format (CEF) via AMA connectors for Microsoft Sentinel](cef-syslog-ama-overview.md). 
 
 > [!NOTE]
-> Container Insights now supports the automatic collection of Syslog events from Linux nodes in your AKS clusters. To learn more, see [Syslog collection with Container Insights](/azure/azure-monitor/containers/container-insights-syslog).
+> Container Insights supports automatic collection of syslog events from Linux nodes in your AKS clusters. Learn more in [Syslog collection with Container Insights](/azure/azure-monitor/containers/container-insights-syslog).
 
 ## Prerequisites
 
@@ -33,7 +33,7 @@ Install the appropriate Microsoft Sentinel solution and make sure you have the p
 
 - Install the appropriate solution from the **Content hub** in Microsoft Sentinel. For more information, see [Discover and manage Microsoft Sentinel out-of-the-box content](sentinel-solutions-deploy.md).
 
-- Identify which data connector the Microsoft Sentinel solution requires &mdash; **Syslog via AMA** or **Common Event Format (CEF) via AMA** and whether you need to install the **Syslog** or **Common Event Format** solution. To fulfill this prerequisite, 
+- Identify which data connector the Microsoft Sentinel solution requires  **Syslog via AMA** or **Common Event Format (CEF) via AMA** and whether you need to install the **Syslog** or **Common Event Format** solution. To fulfill this prerequisite, 
 
   - In the **Content hub**, select **Manage** on the installed solution and review the data connector listed. 
 
@@ -84,7 +84,7 @@ If your devices are sending syslog and CEF logs over TLS because, for example, y
 
 ## Configure the data connector
 
-The setup process for the Syslog via AMA  or Common Event Format (CEF) via AMA data connectors includes the following steps:
+The setup process for the Syslog via AMA or Common Event Format (CEF) via AMA data connectors includes the following steps:
 
 1. Install the Azure Monitor Agent and create a Data Collection Rule (DCR) by using either of the following methods:
     - [Azure or Defender portal](?tabs=syslog%2Cportal#create-data-collection-rule-dcr)
@@ -351,7 +351,7 @@ It collects syslog event messages for:
 
 If you're using a log forwarder, configure the syslog daemon to listen for messages from other machines, and open the necessary local ports.
 
-1. From the connector page, copy the command line that appears under **Run the following command to install and apply the CEF collector:**
+1. From the connector page, copy the command line that appears under **Run the following command to install and apply the CEF collector:**.
 
     :::image type="content" source="media/connect-cef-ama/run-install-script.png" alt-text="Screenshot of command line on connector page.":::
 
@@ -374,7 +374,7 @@ If you're using a log forwarder, configure the syslog daemon to listen for messa
     > For more information, see [RSyslog](https://www.rsyslog.com/doc/master/configuration/actions.html) or [Syslog-ng](https://syslog-ng.github.io/).
 
 
-1. Check the service status
+1. Check the service status.
 
     Check the AMA service status on your log forwarder:
     ```bash
@@ -391,20 +391,20 @@ If you're using a log forwarder, configure the syslog daemon to listen for messa
 
 ## Configure the security device or appliance
 
-Get specific instructions to configure your security device or appliance by going to one of the following articles:
+For instructions to configure your security device or appliance, see one of the following articles:
 
 - [CEF via AMA data connector - Configure specific appliances and devices for Microsoft Sentinel data ingestion](unified-connector-cef-device.md)
 - [Syslog via AMA data connector - Configure specific appliances and devices for Microsoft Sentinel data ingestion](unified-connector-syslog-device.md)
 
-Contact the solution provider for more information or where information is unavailable for the appliance or device.
+For more information about your appliance or device, contact the solution provider.
 
 ## Test the connector
 
-Verify that logs messages from your linux machine or security devices and appliances are ingested into Microsoft Sentinel. 
+Verify that log messages from your Linux machine or security devices and appliances are ingested into Microsoft Sentinel. 
 
 1. To validate that the syslog daemon is running on the UDP port and that the AMA is listening, run this command:
 
-    ```
+   ```bash
     netstat -lnptv
     ```
 
@@ -412,22 +412,22 @@ Verify that logs messages from your linux machine or security devices and applia
 
 1. To capture messages sent from a logger or a connected device, run this command in the background:
 
-    ```
+    ```bash
     sudo tcpdump -i any port 514 or 28330 -A -vv &
     ```
-1. After you complete the validation, we recommend that you stop the `tcpdump`: Type `fg` and then select <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+1. After you complete the validation, stop `tcpdump`. Type `fg`, and then select <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 
 
 ### Send test messages
 
-To send demo messages, complete of the following steps: 
+To send demo messages, complete one of the following steps: 
 
 1. Use the `nc` netcat utility. In this example, the utility reads data posted through the `echo` command with the newline switch turned off. The utility then writes the data to UDP port `514` on the localhost with no timeout. To execute the netcat utility, you might need to install another package.
     
-      ```
-      echo -n "<164>CEF:0|Mock-test|MOCK|common=event-format-test|end|TRAFFIC|1|rt=$common=event-formatted-receive_time" | nc -u -w0 localhost 514
-      ```
+    ```
+    echo -n "<164>CEF:0|Mock-test|MOCK|common=event-format-test|end|TRAFFIC|1|rt=$common=event-formatted-receive_time" | nc -u -w0 localhost 514
+    ```
     
 1. Use the `logger` command. This example writes the message to the `local 4` facility, at severity level `Warning`, to port `514`, on the local host, in the CEF RFC format. The `-t` and `--rfc3164` flags are used to comply with the expected RFC format.
     
@@ -441,10 +441,10 @@ To send demo messages, complete of the following steps:
     echo -n "<164>%ASA-7-106010: Deny inbound TCP src inet:1.1.1.1 dst inet:2.2.2.2" | nc -u -w0 localhost 514
     ```
 
-    After execute these commands, you should see messages arrive on port 514 and forward to port 28330.
+    After you run these commands, messages arrive on port 514 and forward to port 28330.
 
 
-1. After sending test messages, query your Log Analytics workspace. Logs may take up to 20 minutes to appear in your workspace.
+1. After sending test messages, query your Log Analytics workspace. Logs can take up to 20 minutes to appear in your workspace.
 
 For CEF logs:
 
@@ -465,7 +465,7 @@ CommonSecurityLog
 
 ## Additional troubleshooting
 
-If you aren't seeing any traffic on port 514 or your test messages aren't ingested, see [Troubleshoot Syslog and CEF via AMA connectors for Microsoft Sentinel](cef-syslog-ama-troubleshooting.md) for help troubleshooting.
+If you don't see traffic on port 514 or your test messages aren't ingested, see [Troubleshoot Syslog and CEF via AMA connectors for Microsoft Sentinel](cef-syslog-ama-troubleshooting.md) to troubleshoot.
 
 
 ## Related content
