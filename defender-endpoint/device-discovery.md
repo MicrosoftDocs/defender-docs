@@ -48,8 +48,6 @@ Watch this video for a quick overview of how to assess and onboard unmanaged dev
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=a101261e-87ab-4aa6-a1e1-c1463e797ca2]
 
-With this capability, a security recommendation to onboard devices to Defender for Endpoint is available as part of the existing Microsoft Defender Vulnerability Management experience.
-
 ## Discovered assets
 
 Unknown and unmanaged devices introduce significant risks to your network - whether it's an unpatched printer, network devices with weak security configurations, or a server with no security controls.
@@ -62,21 +60,18 @@ Defender for Endpoint discovers:
 
 ### Discovered IoT and OT devices
 
-Defender for Endpoint can discover a wide range of IoT and OT devices in your network, including printers, cameras, medical devices, industrial control systems (ICS), and more. These devices often have unique characteristics and may not support traditional security agents, making them challenging to monitor and protect. To detect these devices, you need to [onboard Defender for IoT in the Defender portal](/defender-for-iot/get-started.md).
+Defender for Endpoint can discover a wide range of Internet of Things (IoT) and Operational Technology (OT) devices in your network, including printers, cameras, medical devices, industrial control systems (ICS), and more. These devices often have unique characteristics and may not support traditional security agents, making them challenging to monitor and protect. To detect these devices, you need to [onboard Defender for IoT in the Defender portal](/defender-for-iot/get-started.md).
 
-### Discovery modes and scans
+## Discovery modes and scans
 
 Device discovery uses two main discovery modes. The mode controls the level of visibility you can get for unmanaged devices in your corporate network. 
 
 You select the device discovery mode in the **System** > **Settings** > **Device discovery** > **Discovery mode** section. For more information, see [Set up device discovery](configure-device-discovery.md#set-up-device-discovery).
 
-| Mode | Description   | Use cases and recommendations  |
-|:------------------|:---------------------------------------------------------------------------|:-------------------------------------------|
-| Basic scan   | - Passively collects events in your network and extract device information.<br>- Extracts data from all network traffic seen by an onboarded device.<br>- Uses the **SenseNDR.exe** binary for passive network data collection; no network traffic is initiated.<br>- Provides limited visibility of unmanaged endpoints in your network. | - We recommended this mode for sensitive/legacy networks.<br>- While we recommend that you use device discovery for essential visibility into your network, you can disable basic discovery if needed. For more information, see [Disable device discovery](configure-device-discovery.md#disable-device-discovery). |
-| Standard scan (default) | - Actively finds devices in your network to enrich collected data and discover more devices.<br>- Uses common discovery protocols and runs multicast queries in the network to find more devices.<br>- Uses active probing to discover more information about observed devices.<br>- Helps you build a coherent device inventory, enriching existing device information.<br>- Defender for Endpoint probes devices when it observes changes in device characteristics.Typically, devices are probed no more than once in a three-week period.<br>- Active probing can generate up to 50Kb of traffic between the onboarded device and the probed device, for every probing attempt. | - We highly recommend this mode for building a reliable and coherent device inventory.<br>- If you select basic discovery, you reduce the visibility of unmanaged endpoints in your network.<br>- To customize the list of devices that that perform standard discovery, see [Control which devices perform standard discovery](configure-device-discovery.md#control-which-devices-perform-standard-discovery).<br>- To exclude targets from standard discovery, see [Exclude devices](configure-device-discovery.md#exclude-devices-from-standard-discovery).<br>- In almost all cases, organizations should have no security concerns around enabling standard discovery. For more information, see [Standard discovery security considerations](#standard-discovery-security-considerations).  |
-
-> [!NOTE]
-> Because device discovery uses passive methods to discover devices in the network, any device that communicates with your onboarded devices in the corporate network can be discovered and listed in the inventory. You can exclude devices from active discovery only.
+| Mode | Description | How it works | Considerations and actions | Use cases and recommendations |
+|:------------------|:------------|:--------------|:--------------|:-----------------------------|
+| Standard scan (default) | Active scan that enriches device data and discovers more devices using network protocols and active probing. | - Uses common discovery protocols and multicast queries to find devices.<br>- Actively probes observed devices for more information.<br>- Probes devices when characteristics change, typically no more than once every three weeks. | - Active probing can generate up to 50KB of traffic between the onboarded device and the probed device per attempt.<br>- To customize which devices perform standard discovery, see [Control which devices perform standard discovery](configure-device-discovery.md#control-which-devices-perform-standard-discovery).<br>- To exclude targets from standard discovery, see [Exclude devices](configure-device-discovery.md#exclude-devices-from-standard-discovery). | - Highly recommended for building a reliable and coherent device inventory.<br>- In almost all cases, organizations should have no security concerns around enabling standard discovery. For more information, see [Standard discovery security considerations](#standard-discovery-security-considerations). |
+| Basic scan | Passive scan that collects network events and device information without sending probes. | - Passively collects events and extracts device information from all network traffic seen by onboarded devices.<br>- Uses the **SenseNDR.exe** binary for passive network data collection.<br>- No network traffic is initiated by the scan. |Because device discovery uses passive methods to discover devices in the network, any device that communicates with your onboarded devices in the corporate network can be discovered and listed in the inventory. You can exclude devices from standard (active) scans only. | - Recommended for sensitive/legacy networks.<br>- Provides limited visibility of unmanaged endpoints. |
 
 ### Authenticated network scans
 
