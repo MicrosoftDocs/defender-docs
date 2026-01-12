@@ -44,9 +44,6 @@ To set up device discovery:
 
 1. Select **Save**.
 
-> [!NOTE]
-> Standard discovery uses various PowerShell scripts to actively probe devices in the network. These PowerShell scripts are signed by Microsoft, and are executed from the following location: `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\*.ps`. For example, `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\UnicastScannerV1.1.0.ps1`.
-
 ## Control which devices perform standard discovery
 
 To customize the list of devices used to perform standard discovery, do one of the following:
@@ -64,7 +61,7 @@ To exclude a device:
 
 1. In the device discovery settings, select **Exclusions**.
 1. Select **Add exclusion** and in the **Add exclusion** page, add IP addresses or subnets to exclude from standard scans.
-1. (Optional)Add a description for the exclusion.
+1. Add a description for the exclusion.
 1. Select **Save**.
 
 The exclusion is visible in the **Exclusions** list. You can select an exclusion in the list to view the exclusion details, edit, or delete the exclusion.
@@ -78,12 +75,9 @@ The exclusion is visible in the **Exclusions** list. You can select an exclusion
 
 The **Monitored networks** page shows a list of networks where device discovery is active.
 
-> [!NOTE]
->
-> - The list shows networks that were identified as corporate networks. If fewer than 50 networks are identified as corporate networks, then list shows up to 50 networks with the most onboarded devices.
-> - The list of monitored networks is sorted based on the total number of devices seen on the network in the last seven days.
-
 By default, Defender for Endpoint automatically monitors networks that are identified as corporate networks, and ignores non-corporate networks.
+
+The list sorts networks based on the total number of devices seen on the network in the last seven days. If fewer than 50 networks are identified as corporate networks, then list shows up to 50 networks with the most onboarded devices.
 
 ### Manage monitored networks
 
@@ -95,7 +89,7 @@ To manage monitored networks, in the device discovery settings, select **Monitor
 |--------|-------------|-------|
 | **Monitor this network** | Monitors a network that Defender for Endpoint doesn't monitor by default. | Monitoring a network not identified as corporate can trigger device discovery outside your corporate network, including home or other noncorporate devices. Ensure you have permission before monitoring non-corporate networks. |
 | **Ignore this network from monitoring** | Stops monitoring and discovering devices in the network. | Discovered devices remain in inventory but are no longer updated. Details are retained until the Defender for Endpoint data retention period expires. |
-| **Automatically monitor** | Sets the initial discovery classification for the network. |  |
+| **Automatically monitor** | Automatically monitors a network that is identified as corporate. |  |
 
 ### Filter network list
 

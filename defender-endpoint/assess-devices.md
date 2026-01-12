@@ -46,17 +46,12 @@ You can review the device inventory for discovered devices that aren't onboarded
 
 To assess these devices, navigate to the device inventory, and use the **Onboarding status** filter, with one of the following values:
 
-- **Onboarded**: The endpoint is onboarded to Defender for Endpoint.
-- **Can be onboarded**: Defender for Endpoint discovers the device in the network and supports its operating system, but the device isn't onboarded. We highly recommend you onboard such devices.
-
-    > [!NOTE]
-    > You may notice differences between the number of listed devices under **can be onboarded** in the device inventory, the **onboard to Microsoft Defender for Endpoint** security recommendation, and the **devices to onboard** dashboard widget.
-    > The security recommendation and the dashboard widget are for devices that are stable in the network, excluding ephemeral devices, guest devices, and others. The idea is to recommend on persistent devices that also imply on the overall security score of the organization.
-
-- **Unsupported**: Defender for Endpoint discovers the endpoint, but doesn't support the device.
-- **Insufficient info**: The system couldn't determine the supportability of the device. Enable standard discovery on more devices in the network to enrich the discovered attributes.
-
-:::image type="content" source="media/2b62255cd3a9dd42f3219e437b956fb9.png" alt-text="The device inventory dashboard" lightbox="media/2b62255cd3a9dd42f3219e437b956fb9.png":::
+| Value              | Description  | Comments |
+|--------------------|---------------------------------------------------------------------------------------------------------------|----------|
+| Onboarded     | The endpoint is onboarded to Defender for Endpoint.                                                           |          |
+| Can be onboarded   | Defender for Endpoint discovers the device in the network and supports its operating system, but the device isn't onboarded. | - We highly recommend you onboard such devices.<br>- You may notice differences between the number of listed devices under **can be onboarded** in the device inventory, the **onboard to Microsoft Defender for Endpoint** security recommendation, and the **devices to onboard** dashboard widget. The security recommendation and the dashboard widget are for devices that are stable in the network, excluding ephemeral devices, guest devices, and others. The idea is to recommend on persistent devices that also impact the overall security score of the organization. |
+| Unsupported        | Defender for Endpoint discovers the endpoint, but doesn't support the device.                                 |          |
+| Insufficient info  | The system couldn't determine the supportability of the device. Enable standard discovery on more devices in the network to enrich the discovered attributes. |          |
 
 ### Onboard unmanaged devices
 
@@ -65,8 +60,6 @@ You can [onboard unmanaged devices manually](onboarding.md). Unmanaged endpoints
 ## Use advanced hunting on discovered devices
 
 You can use advanced hunting queries to gain visibility on discovered devices. Find details about discovered devices in the DeviceInfo table, or network-related information about those devices, in the DeviceNetworkInfo table.
-
-:::image type="content" source="media/f48ba1779eddee9872f167453c24e5c9.png" alt-text="The Advanced hunting page on which queries can be used" lightbox="media/f48ba1779eddee9872f167453c24e5c9.png":::
 
 > [!TIP]
 > You can also use the onboarding status column on API queries to filter out unmanaged devices.
@@ -147,5 +140,3 @@ To review relevant vulnerabilities, see the **Exposure management** > **Recommen
 For example, search for **SSH** in the security recommendations list to find SSH vulnerabilities related to unmanaged and managed devices.
 
 For more information on vulnerability management features, see [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management).
-
-:::image type="content" source="media/1156c82ffadd356ce329d1cf551e806c.png" alt-text="The security recommendations dashboard" lightbox="media/1156c82ffadd356ce329d1cf551e806c.png":::
