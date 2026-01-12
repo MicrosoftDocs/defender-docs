@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -20,11 +20,9 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
 ---
 
 # Release device from isolation API
-
 
 ## API description
 
@@ -46,7 +44,6 @@ Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 
 ## Permissions
 
-
 When obtaining a token using user credentials:
 
 - The user needs to have at least the following role permission: 'Active remediation actions'. For more information, see: [Create and manage roles](../user-roles.md).
@@ -54,11 +51,10 @@ When obtaining a token using user credentials:
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Machine.Isolate|'Isolate machine'
-Delegated (work or school account)|Machine.Isolate|'Isolate machine'
-
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Machine.Isolate|'Isolate machine'|
+|Delegated (work or school account)|Machine.Isolate|'Isolate machine'|
 
 ## HTTP request
 
@@ -68,18 +64,18 @@ POST https://api.security.microsoft.com/api/machines/{id}/unisolate
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
-Content-Type|string|application/json. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
+|Content-Type|string|application/json. **Required**.|
 
 ## Request body
 
 In the request body, supply a JSON object with the following parameters:
 
-Parameter|Type|Description
-:---|:---|:---
-Comment|String|Comment to associate with the action. **Required**.
+|Parameter|Type|Description|
+|---|---|---|
+|Comment|String|Comment to associate with the action. **Required**.|
 
 ## Response
 
@@ -94,7 +90,7 @@ If you send multiple API calls to remove isolation for the same device, it retur
 Here is an example of the request.
 
 ```http
-POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/unisolate 
+POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/unisolate
 ```
 
 ```json
@@ -102,5 +98,3 @@ POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e41
   "Comment": "Unisolate machine since it was clean and validated"
 }
 ```
-
-
