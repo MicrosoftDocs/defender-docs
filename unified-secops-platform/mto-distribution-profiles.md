@@ -3,8 +3,8 @@ title: Content distribution using distribution profiles in multitenant managemen
 description: Learn about content distribution across tenants in the Microsoft Defender multitenant portal.
 ms.service: microsoft-defender
 ms.subservice: unified-security-operations
-ms.author: guywild
-author: guywi-ms
+ms.author: monaberdugo
+author: mberdugo
 ms.localizationpriority: medium
 manager: orspodek
 audience: ITPro
@@ -49,7 +49,7 @@ To create a new distribution profile:
 
 1. In the Microsoft Defender multitenant portal, go to the [**Multi-tenant management > Content distribution**](https://mto.security.microsoft.com/contentdistribution) page.
 
-1. Select **Create** to open the **Create content distribution profile** wizard. In the wizard, enter the following details, selecting **Next** as needed to navigate through the tabs. Some tabs are only relevant if you've selected that type of content to distribute.
+1. Select **Create** to open the **Create content distribution profile** wizard. In the wizard, enter the following details, selecting **Next** as needed to navigate through the tabs. Some tabs are only relevant if you selected that type of content to distribute.
    
    |Tab  |Instructions  |
    |---------|---------|
@@ -59,7 +59,7 @@ To create a new distribution profile:
    |**Custom detection rules**     | Relevant only if you'd selected **Custom detection rules** in the **Select content type** page. <br><br>1. Select **Add content**.<br>2. In the **Select detection rules** side pane, select the rules that you want to add to the distribution profile, and then select **Add to distribution profile**.    |
    |**Endpoint security policies**     | Relevant only if you'd selected **Endpoint security policies** in the **Select content type page**. <br><br>1. Select **Add content**. <br>2. In the **Select security policies** side pane, select the policies that you want to add to the distribution profile, and then select **Add to distribution profile**.         |
 
-   At this point, you'll reach either the **Device groups** sub-page or the **Endpoint security policies** subpage, where you define the devices or device groups that need to be in your tenant's scope. Distribution profiles support a single scope for the entire profile, or separate scopes per rule. 
+   At this point, you reach either the **Device groups** subpage or the **Endpoint security policies** subpage, where you define the devices or device groups that need to be in your tenant's scope. Distribution profiles support a single scope for the entire profile, or separate scopes per rule. 
 
    Select **Single scope** or **Scope per rule** to toggle between these options, and **Edit scope** to make changes as needed. 
 
@@ -75,7 +75,7 @@ Your newly created distribution profile appears in the distribution profiles pag
 
 Select a distribution profile from the list to add or remove content, add, edit, or remove tenants, or sync the distribution profile. Use the toolbar options at the top of the page to edit, remove, or sync distribution profiles.
 
-If you're syncing the profiles, check the sync results under the **Last sync result** column. If the result is *partially successful* or *failed*, select the result to investigate the cause. When selecting the result, a side pane containing the errors, recommendations, and impacted assets appears. For example:
+If you're syncing the profiles, check the sync results under the **Last sync result** column. If the result is *partially successful* or *failed*, select the result to investigate the cause. When you select the result, a side pane containing the errors, recommendations, and impacted assets appears. For example:
 
 :::image type="content" source="media/mto-tenantgroups/mto-sync-results.png" alt-text="Screenshot of sync results side pane." lightbox="media/mto-tenantgroups/mto-sync-results.png":::
 
@@ -106,7 +106,7 @@ Automation rules that trigger a playbook can't be distributed
 
 ## Troubleshooting and error handling
 
-Common reasons for a sync to fail include:
+The following are some common reasons a sync might fail:
 
 - User doesn't have permission to create custom detection rules on the target tenant.
 - User doesn't have permission to read custom detection rules from **content source**.
