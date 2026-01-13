@@ -25,9 +25,6 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## January 2026
 
-### New Health Alert: Sensor v3.x RPC Audit Misconfigured
-We’ve added a new health alert to help quickly identify v3.x sensors where the enhanced RPC auditing configuration is not enabled or was applied incorrectly. Enhanced RPC auditing is required for several advanced identity detections in Defender for Identity. [Configure RPC auditing on sensors v3.x](/deploy/prerequisites-sensor-version-3?#configure-rpc-on-v3x-sensors-to-support-advanced-identity-detections)
-
 ### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x
 Enabling Automatic Windows event-auditing configuration for sensors v3.x and related health alerts are being gradually rolled out to streamline deployment by automatically applying the required Windows event-auditing settings to new sensors and fixing misconfigurations on existing ones. Learn more [here](/deploy/configure-windows-event-collection?#configure-windows-event-auditing-with-the-defender-for-identity-sensor-v3x)
 
