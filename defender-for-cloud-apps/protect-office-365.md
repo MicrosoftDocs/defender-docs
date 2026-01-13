@@ -144,7 +144,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
     :::image type="content" source="media/connect-an-app.png" alt-text="Screenshot that shows the connect an app button." lightbox="media/connect-an-app.png":::
 
-1. In the **Select Microsoft 365 components** page, select the components you want to protect, and then select **Connect**. By default, all components are selected for maximum protection
+1. In the **Select Microsoft 365 components** page, select the components you want to protect, and then select **Connect**. By default, all components are selected for maximum protection.
 
     > [!NOTE]
     > - In January 2026, the default values were added to support complete security coverage. If you configured your application before January 2026, make sure you select all of the default options and select **Connect** again to update your configuration.
