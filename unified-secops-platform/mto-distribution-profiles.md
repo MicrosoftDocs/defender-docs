@@ -27,11 +27,11 @@ Content distribution in the Microsoft Defender multitenant portal helps you orga
 
 Create distribution profiles to distribute the following types of content across multiple tenants:
 
-- Custom detection rules
-- Endpoint security policies, supported for Microsoft Defender for Endpoint customers only
-- Analytics rules
-- Automation rules
-- Workbooks
+- [Custom detection rules](/azure/sentinel/compare-analytics-rules-custom-detections)
+- [Endpoint security](/defender-endpoint/microsoft-defender-endpoint) policies, supported for Microsoft Defender for Endpoint customers only
+- [Analytics rules](/azure/sentinel/scheduled-rules-overview?)
+- [Automation rules](/azure/sentinel/create-manage-use-automation-rules)
+- [Workbooks](/azure/sentinel/monitor-your-data)
 
 ## Requirements
 
