@@ -157,14 +157,6 @@ Defender for Cloud provides access to [workbooks](custom-dashboards-azure-workbo
 
 The [coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) helps you understand your current coverage by showing which plans are enabled on your subscriptions and resources.
 
-## Integrate with Microsoft Defender XDR
-
-When you enable Defender for Cloud, Defender for Cloud alerts are automatically integrated into the Microsoft Defender Portal.
-
-The integration between Microsoft Defender for Cloud and Microsoft Defender XDR brings your cloud environments into Microsoft Defender XDR. With Defender for Cloud's alerts and cloud correlations integrated into Microsoft Defender XDR, SOC teams can now access all security information from a single interface.
-
-Learn more about Defender for Cloud's [alerts in Microsoft Defender XDR](concept-integration-365.md).
-
 ## Next steps
 
 Connecting your GCP project is part of the multicloud experience available in Microsoft Defender for Cloud:
