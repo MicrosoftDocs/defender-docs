@@ -41,7 +41,7 @@ To build Security Operations on the Microsoft Defender Portal, read through the 
 
 1. [Step 2](#step-2---manage-content) - Content Management: Build security content once and deploy it across all customer tenants efficiently.
 
-1. [Step 3](#step-3---multitenant-operations) - multitenant operations: Run daily incident response, threat hunting, and investigations across customer tenants.
+1. [Step 3](#step-3---multitenant-security-operations) - Multitenant Security Operations: Run daily incident response, threat hunting, and investigations across customer tenants.
 
 ## Prerequisites
 
