@@ -16,19 +16,17 @@ This article explains how to enable Microsoft Defender for Containers for Amazon
 
 ### AWS-specific requirements
 
-- An AWS account with permissions to create and manage IAM roles and deploy CloudFormation stacks
-- One or more Amazon EKS clusters running Kubernetes version 1.19 or later
-- Container images stored in Amazon ECR
+Before you begin, make sure you have:
+
+- An AWS account with permissions to create and manage IAM roles and deploy CloudFormation stacks. Learn how to [connect your AWS account to Microsoft Defender for Cloud](quickstart-onboard-aws.md).
+- One or more Amazon EKS clusters running Kubernetes version 1.19 or later.
+- Container images stored in Amazon ECR.
 
 ## Create AWS connector
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Go to **Microsoft Defender for Cloud**.
-
-1. Select **Environment settings** from the left menu.
-
-1. Select **Add environment** > **Amazon Web Services**.
+1. Go to **Microsoft Defender for Cloud** > **Environment Settings** > **Amazon Web Services**.
 
     :::image type="content" source="media/defender-for-kubernetes-intro/add-aws-environment.png" alt-text="Screenshot of selections for adding an AWS environment in Microsoft Defender for Cloud." lightbox="media/defender-for-kubernetes-intro/add-aws-environment.png":::
 
