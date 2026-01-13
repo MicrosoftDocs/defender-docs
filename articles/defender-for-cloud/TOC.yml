@@ -1500,7 +1500,6 @@
         - name: Code reachability analysis
           DisplayName: Code reachability analysis, reachable vulnerabilities
           href: episode-sixty.md
-          href: episode-sixty-two.md
         - name: Agentless code scanning
           DisplayName: Agentless code scanning
           href: episode-sixty-three.md
