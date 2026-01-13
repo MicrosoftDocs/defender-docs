@@ -148,12 +148,6 @@ When you're connecting GCP projects to specific Azure subscriptions, consider th
 
 After you create the connector, a scan starts on your GCP environment. New recommendations appear in Defender for Cloud after up to 6 hours. If you enabled autoprovisioning, Azure Arc and any enabled extensions are installed automatically for each newly detected resource.
 
-## Optional: Configure selected plans
-
-By default, all plans are **On**. You can turn off plans that you don't need.
-
-:::image type="content" source="media/quickstart-onboard-gcp/toggle-plans-to-on.png" alt-text="Screenshot that shows toggles turned on for all plans." lightbox="media/quickstart-onboard-gcp/toggle-plans-to-on.png":::
-
 ## Ingest GCP cloud logging with Pub/Sub (Preview)
 
 Integrating Google Cloud Platform (GCP) Cloud Logging with Microsoft Defender for Cloud allows you to ingest activity logs from GCP, enhancing your ability to monitor, detect, and respond to security events across your Google Cloud environments. You can configure log ingestion either at the project level or centrally at the organization level. Data streamed from GCP Pub/Sub provides the necessary context for Cloud Infrastructure Entitlement Management (CIEM) in Defender for Cloud, dependent on the log activity, calculated risk-based recommendations, security posture insights, and attack path analysis.
