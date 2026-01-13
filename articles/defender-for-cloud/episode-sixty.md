@@ -32,4 +32,4 @@ ms.date: 02/19/2025
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Kubernetes lateral movement](episode-sixty-one.md)
+> [AWS connector](episode-one.md)
