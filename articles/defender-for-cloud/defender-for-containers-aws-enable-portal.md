@@ -287,117 +287,20 @@ aws eks update-cluster-config \
 
 ## Verify deployment
 
-### Check connector health
+After deployment, verify that Defender for Containers is operating correctly.
 
-1. Go to **Environment settings**.
+- Confirm the AWS connector shows as **Connected**.
+- Verify EKS clusters appear as **Connected** in Azure Arc.
+- Check that Defender sensor pods are running.
 
-1. Select your AWS connector.
+Learn more about [verifying Defender for Containers deployment on AWS (EKS)](defender-for-containers-aws-verify.md).
 
-1. Verify:
-   - Status: **Connected**
-   - Last sync: Recent timestamp
-   - Discovered resources count
+## Troubleshooting
 
-### View discovered resources
+If you encounter issues during deployment or verification—such as missing clusters, disconnected components, or alerts not appearing—use the troubleshooting guide to identify common causes and resolution steps.
 
-1. Go to **Inventory**.
-
-Use the **Environment** filter to show resources from **AWS**.
-
-1. Make sure you see:
-   - All EKS clusters (or only selected ones if deployed selectively)
-   - ECR registries
-   - Container images
-
-### Test security detection
-
-Generate a test security alert:
-
-```bash
-# Connect to an EKS cluster
-aws eks update-kubeconfig --name <cluster-name> --region <region>
-
-# Trigger a test alert
-kubectl run test-alert --image=nginx --rm -it --restart=Never -- sh -c "echo test > /etc/shadow"
-```
-
-Check for the alert in Defender for Cloud within 5 to 10 minutes.
-
-## View your current coverage
-
-Defender for Cloud provides access to [workbooks](custom-dashboards-azure-workbooks.md) through [Azure workbooks](/azure/azure-monitor/visualize/workbooks-overview). Workbooks are customizable reports that provide insights into your security posture.
-
-The [coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) helps you understand your current coverage by showing which plans are enabled on your subscriptions and resources.
-
-## Troubleshooting - move to new page?
-
-### Deployment issues
-
-If components fail to deploy:
-
-1. **Check Arc connection**: Ensure clusters show as Connected
-1. **Verify IAM role**: Confirm the role has all required permissions
-1. **Review network**: Check outbound HTTPS connectivity
-1. **Check quotas**: Verify AWS service quotas aren't exceeded
-
-### Sensor pods not starting
-
-```bash
-# Check pod status
-kubectl describe pods -n kube-system -l app=microsoft-defender
-
-# Common issues:
-# - Image pull errors: Check network connectivity
-# - Permission denied: Verify RBAC settings
-# - Resource constraints: Check node resources
-```
-
-### Arc extension stuck
-
-```bash
-# Check extension status
-az k8s-extension show \
-    --cluster-name <cluster-name> \
-    --resource-group <rg> \
-    --cluster-type connectedClusters \
-    --name microsoft.azuredefender.kubernetes
-
-# If stuck, delete and recreate
-az k8s-extension delete \
-    --cluster-name <cluster-name> \
-    --resource-group <rg> \
-    --cluster-type connectedClusters \
-    --name microsoft.azuredefender.kubernetes
-```
-
-### ECR scanning not working
-
-1. Verify the IAM role has ECR permissions.
-
-1. Check if the scanner can access registries.
-
-1. Ensure images are in supported regions.
-
-1. Review scanner logs in Log Analytics workspace.
-
-### Common verification issues
-
-- **Missing resources**: Wait 15-30 minutes for discovery.
-- **Partial coverage**: Check excluded resources configuration.
-- **No alerts**: Verify audit logging is enabled.
-- **Scan failures**: Check ECR permissions and network access.
-
-## Best practices - move to overview?
-
-1. **Start with non-production**: Test on dev/test clusters first for selective deployment.
-1. **Regular reviews**: Check the dashboard weekly.
-1. **Alert response**: Investigate high-severity alerts promptly.
-1. **Image hygiene**: Scan and update base images regularly.
-1. **Compliance**: Address CIS benchmark failures.
-1. **Access control**: Review IAM roles and RBAC permissions.
-1. **Document exclusions**: Track why certain clusters are excluded in selective deployments.
-1. **Deploy incrementally**: When using selective deployment, add one component at a time.
-1. **Monitor each step**: Verify each component before proceeding to the next.
+Learn more about how to troubleshoot Defender for Containers on AWS (EKS) in
+[Troubleshoot Defender for Containers on AWS (EKS)](troubleshoot-defender-for-containers-aws-eks.md).
 
 ## Clean up resources - seperate offboarding page?
 
