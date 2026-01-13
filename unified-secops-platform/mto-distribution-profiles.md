@@ -29,6 +29,9 @@ Create distribution profiles to distribute the following types of content across
 
 - Custom detection rules
 - Endpoint security policies, supported for Microsoft Defender for Endpoint customers only
+- Analytics rules
+- Automation rules
+- Workbooks
 
 ## Requirements
 
@@ -96,6 +99,10 @@ To sync content across distribution profiles for the tenants you have permission
 Sync results show the number of synced tenants and content. Synced tenants indicate how many tenants had custom detection rules applied successfully.
 
 For example, if all rules are applied in 3 out of 3 tenants, the count is **3**; if only 2 tenants succeed, the count is **2**. Synced content represents the total custom detection rules synced across all target tenants.
+
+## Limitations
+
+Automation rules that trigger a playbook can't be distributed
 
 ## Troubleshooting and error handling
 
