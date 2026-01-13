@@ -22,9 +22,9 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# The Teams message entity panel in Microsoft Defender for Office 365 
+# The Teams message entity panel in Microsoft Defender for Office 365
 
-Similar to the [The Email summary panel](mdo-email-entity-page.md#the-email-summary-panel) for email messages, Microsoft 365 organizations that have Microsoft Defender for Office 365 Plan 1 and above (add-on licenses or included in subscriptions like Microsoft 365 E5) have the _Microsoft Teams message entity panel_ in the Microsoft Defender portal. The Teams message entity panel is a details flyout includes all Microsoft Teams data about suspicious or malicious chats, channels, and group chats on a single, actionable panel.
+Similar to the [The Email summary panel](mdo-email-entity-page.md#the-email-summary-panel) for email messages, Microsoft 365 organizations that have Microsoft Defender for Office 365 Plan 1 or Plan 2 (add-on licenses or included in subscriptions like Microsoft 365 E5) have the _Microsoft Teams message entity panel_ in the Microsoft Defender portal. The Teams message entity panel is a details flyout includes all Microsoft Teams data about suspicious or malicious chats, channels, and group chats on a single, actionable panel.
 
 This article explains the information and actions on the Teams message entity panel.
 
