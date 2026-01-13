@@ -1,5 +1,5 @@
 ---
-title: Start and Stop MDE Client Analyzer Trace via live response
+title: Run remote MDE Client Analyzer traces via live response
 description: Step-by-step guidelines to start and stop MDE Client Analyzer tracing on Windows devices via live response.
 ms.service: defender-endpoint
 ms.author: chrisda
