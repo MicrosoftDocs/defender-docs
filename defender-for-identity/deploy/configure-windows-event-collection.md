@@ -53,7 +53,7 @@ Automatic windows auditing performs all configuration tasks automatically:
 
 - Checks current windows event auditing configuration.
 - Identifies any gaps in the configuration.
-- The sensor applies any necessary changes, inlcuding all of the steps in the manual configuration:
+- The sensor applies any necessary changes, including all of the steps in the manual configuration:
     - **Directory services advanced auditing**: Adds audit entries to the domain root object's System Access Control List (SACL) to enable required directory service auditing.
     -  **NTLM auditing** - Uses standard Windows Registry APIs to configure the required NTLM auditing registry values.
     -  **Domain object auditing** - Modifies the SACL on the Configuration partition to capture changes to directory service configuration objects.
