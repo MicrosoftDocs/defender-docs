@@ -1500,7 +1500,6 @@
         - name: Code reachability analysis
           DisplayName: Code reachability analysis, reachable vulnerabilities
           href: episode-sixty.md
-          DisplayName: Kubernetes lateral movement, Kubernetes RBAC, attack paths
           href: episode-sixty-one.md
         - name: Kubernetes gated deployment
           DisplayName: Kubernetes gated deployment, gated rules
