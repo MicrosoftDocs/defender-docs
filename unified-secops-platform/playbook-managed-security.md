@@ -11,11 +11,9 @@ ms.topic: concept-article
 
 # Microsoft Defender portal implementation guide for MSSPs
 
-This implementation guide provides Managed Security Service Providers (MSSPs) with step-by-step guidance to implement and operationalize multitenant management capabilities in the Microsoft Defender portal.
+Microsoft Defender's multitenant management features enable MSSPs to manage security operations across multiple customer tenants through a single, unified interface. For a comprehensive overview of these capabilities and their benefits, see [Microsoft Defender multitenant management](mto-overview.md).
 
-The Microsoft Defender portal's multitenant management features enable MSSPs to manage security operations across multiple customer tenants through a single, unified interface. For a comprehensive overview of these capabilities and their benefits, see [Microsoft Defender multitenant management](mto-overview.md).
-
-This guide focuses on practical implementation - from initial setup and customer onboarding through advanced operational workflows. Use this guide to transform the multitenant management features into an efficient, scalable security operations practice for your MSSP organization.
+This guide provides step-by-step implementation of Microsoft Defender's multitenant management for MSSPs, covering setup, customer onboarding, and operational workflows to build efficient, scalable security operations.
 
 ## What is Microsoft Defender Portal for MSSPs?
 
