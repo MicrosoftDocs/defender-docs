@@ -107,7 +107,7 @@ Before you begin, ensure the following:
 
 1. If you don't see the connector, install the Amazon Web Services solution from the Content Hub in Microsoft Sentinel.
 
-1. Follow the instructions in the [official documentation](https://learn.microsoft.com/en-us/azure/sentinel/connect-aws) to set up your AWS environment and connect it to Sentinel.
+1. Follow the instructions in the [official documentation](./connect-aws.md) to set up your AWS environment and connect it to Sentinel.
 
 1. Provide the IAM role ARN and SQS queue URL as required.
 
@@ -373,4 +373,4 @@ Write-Host "Role ARN: arn:aws:iam::$account_id:role/$role_name" -ForegroundColor
 ## Additional Resources
 
 - [Connect Microsoft Sentinel to Amazon Web Services to ingest AWS service log data](./connect-aws.md)
-- [Sentinel data connectors](./data-connectors-reference#sentinel-data-connectors)
+- [Sentinel data connectors](./data-connectors-reference.md#sentinel-data-connectors)
