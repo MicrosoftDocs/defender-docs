@@ -37,10 +37,10 @@ appliesto:
 This migration phase includes the following steps:
 
 1. Get and deploy updates across your organization's devices.
-2. Get Microsoft Defender for Endpoint Plan 1 or Plan 2.
-3. Grant access to the Microsoft Defender portal.
-4. Review more information about device proxy and internet connectivity settings.
-5. Capture performance baseline data from the endpoint. 
+1. Get Microsoft Defender for Endpoint Plan 1 or Plan 2.
+1. Grant access to the Microsoft Defender portal.
+1. Review more information about device proxy and internet connectivity settings.
+1. Capture performance baseline data from the endpoint. 
 
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
@@ -70,11 +70,11 @@ Now that you've updated your organization's devices, the next step is to get Def
 
 1. Buy or try Defender for Endpoint today. [Start a free trial or request a quote](https://aka.ms/mdatp). Microsoft 365 E3 includes Defender for Endpoint Plan 1, and Microsoft 365 E5 includes Defender for Endpoint Plan 2.
 
-2. Verify that your licenses are properly provisioned. [Check your license state](production-deployment.md#check-your-license-state).
+1. Verify that your licenses are properly provisioned. [Check your license state](production-deployment.md#check-your-license-state).
 
-3. Set up your dedicated cloud instance of Defender for Endpoint. See [Defender for Endpoint setup: Tenant configuration](production-deployment.md#tenant-configuration).
+1. Set up your dedicated cloud instance of Defender for Endpoint. See [Defender for Endpoint setup: Tenant configuration](production-deployment.md#tenant-configuration).
 
-4. If any devices in your organization use a proxy to access the internet, follow the guidance in [Defender for Endpoint setup: Network configuration](production-deployment.md#network-configuration).
+1. If any devices in your organization use a proxy to access the internet, follow the guidance in [Defender for Endpoint setup: Network configuration](production-deployment.md#network-configuration).
 
 At this point, you're ready to grant access to your security administrators and security operators to use the [Microsoft Defender portal](https://security.microsoft.com).
 
@@ -88,7 +88,7 @@ Permissions to the Microsoft Defender portal can be granted by using either basi
 
 1. Plan the roles and permissions for your security administrators and security operators. See [Role-based access control](prepare-deployment.md#role-based-access-control).
 
-2. Set up and configure RBAC. We recommend using [Intune](/mem/intune/fundamentals/what-is-intune) to configure RBAC, especially if your organization is using a combination of Windows, macOS, iOS, and Android devices. See [setting up RBAC using Intune](/mem/intune/fundamentals/role-based-access-control).
+1. Set up and configure RBAC. We recommend using [Intune](/mem/intune/fundamentals/what-is-intune) to configure RBAC, especially if your organization is using a combination of Windows, macOS, iOS, and Android devices. See [setting up RBAC using Intune](/mem/intune/fundamentals/role-based-access-control).
 
     If your organization requires a method other than Intune, choose one of the following options:
 
@@ -96,7 +96,7 @@ Permissions to the Microsoft Defender portal can be granted by using either basi
     - [Advanced Group Policy Management](/microsoft-desktop-optimization-pack/agpm)
     - [Windows Admin Center](/windows-server/manage/windows-admin-center/overview)
 
-3. Grant your security team access to the Microsoft Defender portal. Need help? See [Manage portal access using RBAC](rbac.md).
+1. Grant your security team access to the Microsoft Defender portal. Need help? See [Manage portal access using RBAC](rbac.md).
 
 > [!IMPORTANT]
 > Starting February 16, 2025, new Microsoft Defender for Endpoint customers will only have access to the Unified Role-Based Access Control (URBAC).
