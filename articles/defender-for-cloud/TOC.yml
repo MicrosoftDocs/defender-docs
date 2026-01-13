@@ -1497,6 +1497,9 @@
         - name: Integrate CLI with CI/CD pipelines
           DisplayName: Defender for Cloud CLI, CI/CD pipelines
           href: episode-fifty-nine.md
+        - name: Code reachability analysis
+          DisplayName: Code reachability analysis, reachable vulnerabilities
+          href: episode-sixty.md
         - name: Agentless code scanning
           DisplayName: Agentless code scanning
           href: episode-sixty-three.md
