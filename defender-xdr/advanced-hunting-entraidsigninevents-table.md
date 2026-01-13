@@ -88,8 +88,6 @@ For information on other tables in the advanced hunting schema, see the [advance
 |`RequestId`|`string`|Unique identifier of the request|
 |`ReportId`|`string`|Unique identifier for the event|
 |`EndpointCall`|`string`|Information about the Microsoft Entra ID endpoint that the request was sent to and the type of request sent during sign in.|
-|`IsThroughGlobalSecureAccess`|`boolean`|Indicates whether the sign-in event came through Global Secure Access.|
-|`UniqueTokenId`|`string`|A unique identifier for the token passed during sign-in. This identifier is used to correlate the sign-in with the token request.|
 
 ## Related articles
 

@@ -18,7 +18,7 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: reference
-ms.date: 12/26/2025
+ms.date: 01/13/2026
 ---
 
 # GraphApiAuditEvents (Preview)
