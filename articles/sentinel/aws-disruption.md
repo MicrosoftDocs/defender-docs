@@ -19,15 +19,10 @@ This article describes how to configure your AWS environment so that Microsoft S
 Before you begin, ensure the following:
 
 - You have an active AWS account with administrative privileges.
-
 - Your Microsoft Sentinel analytic workspace is connected to the unified security operations portal.
-
 - The AWS Connector for Microsoft Sentinel is deployed and enabled
-
 - AWS CloudTrail logs are being ingested into Microsoft Sentinel
-
-See: [Connect Microsoft Sentinel to Amazon Web Services to ingest AWS service log data](https://learn.microsoft.com/en-us/azure/sentinel/connect-aws)
-
+  See: [Connect Microsoft Sentinel to Amazon Web Services to ingest AWS service log data](./connect-aws.md)
 - Appropriate IAM roles and permissions are configured in AWS to allow Sentinel to perform actions on IAM accounts.
 
 ------------------------------------------------------------------------
@@ -36,13 +31,13 @@ See: [Connect Microsoft Sentinel to Amazon Web Services to ingest AWS service lo
 
 ### 1.1 Create a Dedicated IAM Role for Sentinel
 
-1.  In the AWS console, go to **IAM \> Roles**.
+1. In the AWS console, go to **IAM \> Roles**.
 
-2.  Click **Create role**.
+1. Select **Create role**.
 
-3.  Select **AWS service** as the trusted entity and choose **EC2** (you will update the trust relationship later).
+1. Select **AWS service** as the trusted entity and choose **EC2** (you will update the trust relationship later).
 
-4.  Attach the following policy to the role (replace \<YOUR_ACCOUNT_ID\> as needed):
+1. Attach the following policy to the role (replace \<YOUR_ACCOUNT_ID\> as needed):
 
 ```json
 {
@@ -70,15 +65,15 @@ See: [Connect Microsoft Sentinel to Amazon Web Services to ingest AWS service lo
 }
 ```
 
-> 5\. Name the role (e.g., SentinelAttackDisruptionRole) and create it.
+5. Name the role (e.g., SentinelAttackDisruptionRole) and create it.
 
 ### 1.2 Configure Trust Relationship
 
-1.  In the IAM role you just created, go to the **Trust relationships** tab.
+1. In the IAM role you just created, go to the **Trust relationships** tab.
 
-2.  Click **Edit trust relationship**.
+1. Select **Edit trust relationship**.
 
-3.  Replace the trust policy with the following, specifying the Sentinel integration principal:
+1. Replace the trust policy with the following, specifying the Sentinel integration principal:
 
 ```json
 {
@@ -98,71 +93,57 @@ See: [Connect Microsoft Sentinel to Amazon Web Services to ingest AWS service lo
 
 **Note**: Replace \<YOUR_AZURE_SUBSCRIPTION_ID\> with your actual Azure subscription ID.
 
-## Step 2: Enable CloudTrail 
+## Step 2: Enable CloudTrail
 
-1.  In the AWS console, go to **CloudTrail**.
+1. In the AWS console, go to **CloudTrail**.
 
-2.  Ensure that a cloudtrail is enabled and logging is active for all regions.
-
-------------------------------------------------------------------------
+1. Ensure that a cloudtrail is enabled and logging is active for all regions.
 
 ## Step 3: Deploy and Enable the AWS Connector in Sentinel
 
-1.  In the Azure portal, go to **Microsoft Sentinel \> Data connectors**.
+1. In the Azure portal, go to **Microsoft Sentinel \> Data connectors**.
 
-2.  Select **Amazon Web Services S3** from the data connectors gallery.
+1. Select **Amazon Web Services S3** from the data connectors gallery.
 
-3.  If you don't see the connector, install the Amazon Web Services solution from the Content Hub in Microsoft Sentinel.
+1. If you don't see the connector, install the Amazon Web Services solution from the Content Hub in Microsoft Sentinel.
 
-4.  Follow the instructions in the [official documentation](https://learn.microsoft.com/en-us/azure/sentinel/connect-aws) to set up your AWS environment and connect it to Sentinel.
+1. Follow the instructions in the [official documentation](https://learn.microsoft.com/en-us/azure/sentinel/connect-aws) to set up your AWS environment and connect it to Sentinel.
 
-5.  Provide the IAM role ARN and SQS queue URL as required.
-
-------------------------------------------------------------------------
+1. Provide the IAM role ARN and SQS queue URL as required.
 
 ## Step 4: Validate Integration
 
-1.  In Sentinel, confirm that the connector status is **Connected**.
+1. In Sentinel, confirm that the connector status is **Connected**.
 
-2.  Verify log ingestion and connector health using SentinelHealth logs and AWS SQS queue status.
+1. Verify log ingestion and connector health using SentinelHealth logs and AWS SQS queue status.
 
-3.  In AWS, check that CloudTrail and GuardDuty events are being sent to Sentinel.
-
-------------------------------------------------------------------------
+1. In AWS, check that CloudTrail and GuardDuty events are being sent to Sentinel.
 
 ## Step 5: Test the Integration
 
-1.  Trigger a test alert in AWS (e.g., simulated credential compromise).
+1. Trigger a test alert in AWS (e.g., simulated credential compromise).
 
-2.  Confirm that Sentinel can take the configured actions on the affected IAM account.
+1. Confirm that Sentinel can take the configured actions on the affected IAM account.
 
-3.  Review audit logs in AWS and Sentinel to verify successful execution.
-
-------------------------------------------------------------------------
+1. Review audit logs in AWS and Sentinel to verify successful execution.
 
 ## Step 6: Monitor and Maintain
 
 - Regularly review IAM role permissions and audit logs in AWS.
-
 - Update Sentinel analytic rules and automation playbooks as needed to reflect changes in your AWS environment.
-
 - Monitor alerts and response actions in the Sentinel portal.
 
-------------------------------------------------------------------------
+The following scripts can automate the process for building the integration with Sentinel and AWS to enable attack disruption:
 
-The following scripts can automate the process for building the integration with Sentinel and AWS to enable attack disruption
-
-------------------------------------------------------------------------
-
+### [Bash Script](#tab/bash)
 Save the following code snippet as a bash file and execute it.
 
 ```bash
 #!/bin/bash
-
 # AWS Sentinel OIDC Setup Script
 # Configures IAM roles and policies for Microsoft Sentinel integration
 
-set -e # Exit on error
+set -e  # Exit on error
 
 # Color codes for output
 RED='\033[0;31m'
@@ -179,76 +160,72 @@ policy_name="SentinelActionsPolicy"
 # Verify AWS credentials are configured
 echo -e "${CYAN}Verifying AWS credentials...${NC}"
 if ! account_id=$(aws sts get-caller-identity --query Account --output text 2>&1); then
-  echo -e "\n${RED}ERROR: AWS credentials not configured or invalid${NC}"
-  echo -e "${RED}Details: $account_id${NC}"
-  echo -e "\n${YELLOW}Please authenticate using one of these methods:${NC}"
-  echo -e "${YELLOW} 1. Run 'aws configure' to set up credentials${NC}"
-  echo -e "${YELLOW} 2. Set AWS environment variables (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY)${NC}"
-  echo -e "${YELLOW} 3. Use 'aws sso login --profile <profile-name>' for SSO${NC}"
-  exit 1
+    echo -e "\n${RED}ERROR: AWS credentials not configured or invalid${NC}"
+    echo -e "${RED}Details: $account_id${NC}"
+    echo -e "\n${YELLOW}Please authenticate using one of these methods:${NC}"
+    echo -e "${YELLOW}  1. Run 'aws configure' to set up credentials${NC}"
+    echo -e "${YELLOW}  2. Set AWS environment variables (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY)${NC}"
+    echo -e "${YELLOW}  3. Use 'aws sso login --profile <profile-name>' for SSO${NC}"
+    exit 1
 fi
 echo -e "${GREEN}✓ AWS authenticated (Account: $account_id)${NC}"
-
 trust_policy_document=$(cat << EOM
+{
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Federated": "arn:aws:iam::$account_id:oidc-provider/$ms_federated_endpoint/"
+            },
+            "Action": "sts:AssumeRoleWithWebIdentity",
+            "Condition": {
+                "StringEquals": {
+                    "$ms_federated_endpoint/:aud": "$actions_audience",
+                    "sts:RoleSessionName": "MicrosoftSentinel_$account_id"
+                }
+            }
+        }
+    ]
+}
+EOM
+)
+permissions_policy_document=$(cat << EOM
 {
   "Statement": [
     {
+      "Sid": "SentinelActionsPermissions",
       "Effect": "Allow",
-      "Principal": {
-      "Federated": "arn:aws:iam::$account_id:oidc-provider/$ms_federated_endpoint/"
-    },
-    "Action": "sts:AssumeRoleWithWebIdentity",
-    "Condition": {
-      "StringEquals": {
-        "$ms_federated_endpoint/:aud": "$actions_audience",
-        "sts:RoleSessionName": "MicrosoftSentinel_$account_id"
-       }
-     }
+      "Action": [
+        "iam:GetUserPolicy",
+        "iam:DeleteRolePolicy",
+        "iam:PutUserPolicy",
+        "iam:AttachUserPolicy",
+        "iam:ListUserPolicies",
+        "iam:PutRolePolicy",
+        "iam:GetUser",
+        "iam:DetachUserPolicy",
+        "iam:GetRolePolicy",
+        "iam:DeleteUserPolicy",
+        "s3:PutBucketPublicAccessBlock"
+      ],
+      "Resource": "*"
     }
   ]
 }
 EOM
 )
 
-permissions_policy_document=$(cat << EOM
-{
-  "Statement": [
-  {
-    "Sid": "SentinelActionsPermissions",
-    "Effect": "Allow",
-    "Action": [
-    "iam:GetUserPolicy",
-    "iam:DeleteRolePolicy",
-    "iam:PutUserPolicy",
-    "iam:AttachUserPolicy",
-    "iam:ListUserPolicies",
-    "iam:PutRolePolicy",
-    "iam:GetUser",
-    "iam:DetachUserPolicy",
-    "iam:GetRolePolicy",
-    "iam:DeleteUserPolicy",
-    "s3:PutBucketPublicAccessBlock"
-  ],
-  "Resource": "*"
-  }
- ]
-}
-EOM
-)
-
 aws iam add-client-id-to-open-id-connect-provider --open-id-connect-provider-arn arn:aws:iam::$account_id:oidc-provider/$ms_federated_endpoint/ --client-id $actions_audience
-
 aws iam create-role --role-name $role_name --assume-role-policy-document "$trust_policy_document" || aws iam update-assume-role-policy --role-name $role_name --policy-document "$trust_policy_document"
-
 aws iam put-role-policy --role-name $role_name --policy-name $policy_name --policy-document "$permissions_policy_document"
+
 ```
 
-------------------------------------------------------------------------
+### [PowerShell Script](#tab/powershell)
 
 For a powershell version of the script use the following code snippet
 
 ```powershell
-
 # AWS Sentinel OIDC Setup Script
 # Configures IAM roles and policies for Microsoft Sentinel integration
 
@@ -260,240 +237,140 @@ $role_name = "OIDC_Actions_Sentinel"
 $policy_name = "SentinelActionsPolicy"
 
 # Verify AWS credentials are configured
-
 Write-Host "Verifying AWS credentials..." -ForegroundColor Cyan
 try {
-
-    $account_id = aws sts get-caller-identity --query Account --output text 2\>&1
-    if (\$LASTEXITCODE -ne 0) {
-       throw "AWS credentials not configured or invalid. Output: \$account_id"
-
-   }
-
-  Write-Host "✓ AWS authenticated (Account: \$account_id)" -ForegroundColor Green
+    $account_id = aws sts get-caller-identity --query Account --output text 2>&1
+    if ($LASTEXITCODE -ne 0) { 
+        throw "AWS credentials not configured or invalid. Output: $account_id" 
+    }
+    Write-Host "✓ AWS authenticated (Account: $account_id)" -ForegroundColor Green
 } catch {
-  Write-Host "\`nERROR: AWS credentials not configured or invalid" -ForegroundColor Red
-  Write-Host "Details: \$(\$\_.Exception.Message)" -ForegroundColor Red
-  Write-Host "\`nPlease authenticate using one of these methods:" -ForegroundColor Yellow
-  Write-Host " 1. Run 'aws configure' to set up credentials" -ForegroundColor Yellow
-  Write-Host " 2. Set AWS environment variables (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY)" -ForegroundColor Yellow
-  Write-Host " 3. Use 'aws sso login --profile \<profile-name\>' for SSO" -ForegroundColor Yellow
-  exit 1
+    Write-Host "`nERROR: AWS credentials not configured or invalid" -ForegroundColor Red
+    Write-Host "Details: $($_.Exception.Message)" -ForegroundColor Red
+    Write-Host "`nPlease authenticate using one of these methods:" -ForegroundColor Yellow
+    Write-Host "  1. Run 'aws configure' to set up credentials" -ForegroundColor Yellow
+    Write-Host "  2. Set AWS environment variables (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY)" -ForegroundColor Yellow
+    Write-Host "  3. Use 'aws sso login --profile <profile-name>' for SSO" -ForegroundColor Yellow
+    exit 1
 }
 
 # Define trust policy document
 $trust_policy_document = @"
-
 {
-  "Statement": \[
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Federated": "arn:aws:iam::$account_id:oidc-provider/$ms_federated_endpoint/"
+            },
+            "Action": "sts:AssumeRoleWithWebIdentity",
+            "Condition": {
+                "StringEquals": {
+                    "$ms_federated_endpoint/:aud": "$actions_audience",
+                    "sts:RoleSessionName": "MicrosoftSentinel_$account_id"
+                }
+            }
+        }
+    ]
+}
+"@
+
+# Define permissions policy document
+$permissions_policy_document = @"
+{
+  "Statement": [
     {
+      "Sid": "SentinelActionsPermissions",
       "Effect": "Allow",
-      "Principal": {
-          "Federated": "arn:aws:iam::\$account_id:oidc-provider/\$ms_federated_endpoint/"
-      },
-      "Action": "sts:AssumeRoleWithWebIdentity",
-      "Condition": {
-        "StringEquals": {
-
-"\$ms_federated_endpoint/:aud": "\$actions_audience",
-
-"sts:RoleSessionName": "MicrosoftSentinel\_\$account_id"
-
+      "Action": [
+        "iam:GetUserPolicy",
+        "iam:DeleteRolePolicy",
+        "iam:PutUserPolicy",
+        "iam:AttachUserPolicy",
+        "iam:ListUserPolicies",
+        "iam:PutRolePolicy",
+        "iam:GetUser",
+        "iam:DetachUserPolicy",
+        "iam:GetRolePolicy",
+        "iam:DeleteUserPolicy",
+        "s3:PutBucketPublicAccessBlock"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
-
-}
-
-}
-
-\]
-
-}
-
 "@
 
-\# Define permissions policy document
-
-\$permissions_policy_document = @"
-
-{
-
-"Statement": \[
-
-{
-
-"Sid": "SentinelActionsPermissions",
-
-"Effect": "Allow",
-
-"Action": \[
-
-"iam:GetUserPolicy",
-
-"iam:DeleteRolePolicy",
-
-"iam:PutUserPolicy",
-
-"iam:AttachUserPolicy",
-
-"iam:ListUserPolicies",
-
-"iam:PutRolePolicy",
-
-"iam:GetUser",
-
-"iam:DetachUserPolicy",
-
-"iam:GetRolePolicy",
-
-"iam:DeleteUserPolicy",
-
-"s3:PutBucketPublicAccessBlock"
-
-\],
-
-"Resource": "\*"
-
-}
-
-\]
-
-}
-
-"@
-
-\# Add client ID to OpenID Connect provider
-
-Write-Host "\`nAdding client ID to OIDC provider..." -ForegroundColor Cyan
-
+# Add client ID to OpenID Connect provider
+Write-Host "`nAdding client ID to OIDC provider..." -ForegroundColor Cyan
 try {
-
-\$output = aws iam add-client-id-to-open-id-connect-provider \`
-
---open-id-connect-provider-arn "arn:aws:iam::\$account_id:oidc-provider/\$ms_federated_endpoint/" \`
-
---client-id \$actions_audience 2\>&1
-
-if (\$LASTEXITCODE -ne 0) { throw \$output }
-
-Write-Host "✓ Client ID added successfully" -ForegroundColor Green
-
+    $output = aws iam add-client-id-to-open-id-connect-provider `
+        --open-id-connect-provider-arn "arn:aws:iam::$account_id:oidc-provider/$ms_federated_endpoint/" `
+        --client-id $actions_audience 2>&1
+    if ($LASTEXITCODE -ne 0) { throw $output }
+    Write-Host "✓ Client ID added successfully" -ForegroundColor Green
 } catch {
-
-Write-Host "ERROR: Failed to add client ID to OIDC provider" -ForegroundColor Red
-
-Write-Host "Details: \$(\$\_.Exception.Message)" -ForegroundColor Red
-
-exit 1
-
+    Write-Host "ERROR: Failed to add client ID to OIDC provider" -ForegroundColor Red
+    Write-Host "Details: $($_.Exception.Message)" -ForegroundColor Red
+    exit 1
 }
 
-\# Create or update IAM role
-
-Write-Host "\`nCreating/updating IAM role..." -ForegroundColor Cyan
-
+# Create or update IAM role
+Write-Host "`nCreating/updating IAM role..." -ForegroundColor Cyan
 try {
-
-\$output = aws iam create-role \`
-
---role-name \$role_name \`
-
---assume-role-policy-document \$trust_policy_document 2\>&1
-
-if (\$LASTEXITCODE -eq 0) {
-
-Write-Host "✓ Role created successfully" -ForegroundColor Green
-
-} else {
-
-throw \$output
-
+    $output = aws iam create-role `
+        --role-name $role_name `
+        --assume-role-policy-document $trust_policy_document 2>&1
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host "✓ Role created successfully" -ForegroundColor Green
+    } else {
+        throw $output
+    }
+} catch {
+    if ($_.Exception.Message -like "*EntityAlreadyExists*") {
+        Write-Host "Role already exists, updating assume role policy..." -ForegroundColor Yellow
+        try {
+            $output = aws iam update-assume-role-policy `
+                --role-name $role_name `
+                --policy-document $trust_policy_document 2>&1
+            if ($LASTEXITCODE -ne 0) { throw $output }
+            Write-Host "✓ Assume role policy updated" -ForegroundColor Green
+        } catch {
+            Write-Host "ERROR: Failed to update assume role policy" -ForegroundColor Red
+            Write-Host "Details: $($_.Exception.Message)" -ForegroundColor Red
+            exit 1
+        }
+    } else {
+        Write-Host "ERROR: Failed to create IAM role" -ForegroundColor Red
+        Write-Host "Details: $($_.Exception.Message)" -ForegroundColor Red
+        exit 1
+    }
 }
 
-} catch {
-
-if (\$\_.Exception.Message -like "\*EntityAlreadyExists\*") {
-
-Write-Host "Role already exists, updating assume role policy..." -ForegroundColor Yellow
-
+# Attach inline policy to role
+Write-Host "`nAttaching policy to role..." -ForegroundColor Cyan
 try {
-
-\$output = aws iam update-assume-role-policy \`
-
---role-name \$role_name \`
-
---policy-document \$trust_policy_document 2\>&1
-
-if (\$LASTEXITCODE -ne 0) { throw \$output }
-
-Write-Host "✓ Assume role policy updated" -ForegroundColor Green
-
+    $output = aws iam put-role-policy `
+        --role-name $role_name `
+        --policy-name $policy_name `
+        --policy-document $permissions_policy_document 2>&1
+    if ($LASTEXITCODE -ne 0) { throw $output }
+    Write-Host "✓ Policy attached successfully" -ForegroundColor Green
 } catch {
-
-Write-Host "ERROR: Failed to update assume role policy" -ForegroundColor Red
-
-Write-Host "Details: \$(\$\_.Exception.Message)" -ForegroundColor Red
-
-exit 1
-
+    Write-Host "ERROR: Failed to attach policy to role" -ForegroundColor Red
+    Write-Host "Details: $($_.Exception.Message)" -ForegroundColor Red
+    exit 1
 }
 
-} else {
-
-Write-Host "ERROR: Failed to create IAM role" -ForegroundColor Red
-
-Write-Host "Details: \$(\$\_.Exception.Message)" -ForegroundColor Red
-
-exit 1
-
-}
-
-}
-
-\# Attach inline policy to role
-
-Write-Host "\`nAttaching policy to role..." -ForegroundColor Cyan
-
-try {
-
-\$output = aws iam put-role-policy \`
-
---role-name \$role_name \`
-
---policy-name \$policy_name \`
-
---policy-document \$permissions_policy_document 2\>&1
-
-if (\$LASTEXITCODE -ne 0) { throw \$output }
-
-Write-Host "✓ Policy attached successfully" -ForegroundColor Green
-
-} catch {
-
-Write-Host "ERROR: Failed to attach policy to role" -ForegroundColor Red
-
-Write-Host "Details: \$(\$\_.Exception.Message)" -ForegroundColor Red
-
-exit 1
-
-}
-
-Write-Host "\`n========================================" -ForegroundColor Green
-
+Write-Host "`n========================================" -ForegroundColor Green
 Write-Host "Setup completed successfully!" -ForegroundColor Green
-
 Write-Host "========================================" -ForegroundColor Green
-
-Write-Host "Role ARN: arn:aws:iam::\$account_id:role/\$role_name" -ForegroundColor Cyan
+Write-Host "Role ARN: arn:aws:iam::$account_id:role/$role_name" -ForegroundColor Cyan
 ```
 
-------------------------------------------------------------------------
-
-\</Code Snippet\>
-
-------------------------------------------------------------------------
+---
 
 ## Additional Resources
 
-- [Connect Microsoft Sentinel to Amazon Web Services to ingest AWS service log data](https://learn.microsoft.com/en-us/azure/sentinel/connect-aws)
-
-- <https://learn.microsoft.com/en-us/azure/sentinel/data-connectors-reference#sentinel-data-connectors>
+- [Connect Microsoft Sentinel to Amazon Web Services to ingest AWS service log data](./connect-aws.md)
+- [Sentinel data connectors](./data-connectors-reference#sentinel-data-connectors)
