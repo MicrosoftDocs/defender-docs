@@ -25,6 +25,9 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## January 2026
 
+### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x
+Enabling Automatic Windows event-auditing configuration for sensors v3.x and related health alerts are being gradually rolled out to streamline deployment by automatically applying the required Windows event-auditing settings to new sensors and fixing misconfigurations on existing ones. Learn more [here](/deploy/configure-windows-event-collection?#configure-windows-event-auditing-with-the-defender-for-identity-sensor-v3x)
+
 |Version number|Updates|
 |---|---|
 |2.254|The sensor now supports a new DNS zone target for *.aatp.gcc.azure.com. Make sure your sensors in GCC can access this zone with your sensor dns prefix.|
@@ -74,22 +77,18 @@ New ADWS LDAP search activity is now available in the 'IdentityQueryEvents' tabl
 |---|---|
 |2.251|The enhanced ADWS LDAP and legacy password-based LDAP query methods now capture a broader range of unique events at scale. As a result, you might notice an increase in recorded activity.|
 
-### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x (Preview)
-
-Defender for Identity is slowly rolling out automatic Windows event auditing for sensors v3.x, streamlining deployment by applying required auditing settings to new sensors and fixing misconfigurations on existing ones. As it becomes available, you'll be able to enable automatic Windows event-auditing in the **Advanced settings** section in the Defender portal, or using the Graph API.
-
 ### Identity Inventory enhancements: Accounts tab, manual account linking and unlinking, and expanded remediation actions
 
 The following new features are now available in Microsoft Defender for Identity:
 
 **Accounts tab in Identity Inventory**:
 
-A new Accounts tab provides a consolidated view of all accounts associated with an identity, including accounts from Active Directory, Microsoft Entra ID, and supported third-party identity providers. For more information, see: [Link or Unlink an Account to an Identity (Preview)](link-unlink-account-to-identity.md)
+A new Accounts tab provides a consolidated view of all accounts associated with an identity, including accounts from Active Directory, Microsoft Entra ID, and supported third-party identity providers. For more information, see: [Manage related identities and accounts (Preview)](manage-related-identities-accounts.md)
 
 **Manual link and unlink of accounts**:
 
 You can now manually link or unlink accounts from an identity directly in the Accounts tab. This capability helps you correlate identity components from different directory sources and provides a complete identity context during investigations.
-For more information, see: [Link or Unlink an Account to an Identity (Preview)](link-unlink-account-to-identity.md).
+For more information, see: [Manage related identities and accounts (Preview)](manage-related-identities-accounts.md).
 
 **Identity-level remediation actions**:
 
