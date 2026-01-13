@@ -1500,7 +1500,6 @@
         - name: Code reachability analysis
           DisplayName: Code reachability analysis, reachable vulnerabilities
           href: episode-sixty.md
-          href: episode-sixty-one.md
         - name: Kubernetes gated deployment
           DisplayName: Kubernetes gated deployment, gated rules
           href: episode-sixty-two.md
