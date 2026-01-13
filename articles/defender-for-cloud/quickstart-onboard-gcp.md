@@ -2,7 +2,7 @@
 title: Connect your GCP project
 description: Defend your GCP resources by using Microsoft Defender for Cloud. Protect your workloads and enhance your cloud security with our comprehensive solution.
 ms.topic: install-set-up-deploy
-ms.date: 09/28/2025
+ms.date: 01/13/2026
 ms.custom: sfi-image-nochange
 ---
 
@@ -74,37 +74,43 @@ When you're connecting GCP projects to specific Azure subscriptions, consider th
 
 ## Connect your GCP project
 
-There are four parts to the onboarding process that take place when you create the security connection between your GCP project and Microsoft Defender for Cloud.
+1. Sign in to the [Azure portal](https://portal.azure.com).
+ 
+1. Go to **Microsoft Defender for Cloud**.
+ 
+1. Select **Environment settings** from the left menu.
+ 
+1. Select **Add environment** > **Google Cloud Platform**.
 
-### Project details
+    :::image type="content" source="media/quickstart-onboard-gcp/gcp-connector.png" alt-text="Screenshot that shows where the GCP connector option is located." lightbox="media/quickstart-onboard-gcp/gcp-connector.png":::
 
-In the first section, you need to add the basic properties of the connection between your GCP project and Defender for Cloud.
+1. Enter the following information
+    - Connector name.
+    - Select either **Organization** or **Single project**.
+    - Subscription.
+    - Resource group.
+    - Location.
+    - Scan interval: 4, 6, 12, or 24.
+    - (Organization only) Organization ID.
+    - (Optional - Organization only) Exclude project numbers.
+    - (Optional - Organization only) Exclude folder IDs.
+    - (Single project only) GCP project number.
+    - (Single project only) GCP project ID.
 
-:::image type="content" source="media/quickstart-onboard-gcp/single-project-details.png" alt-text="Screenshot of the organization details page of the GCP project onboarding process." lightbox="media/quickstart-onboard-gcp/single-project-details.png":::
+    > [!NOTE]
+    > Some data collectors run with fixed scan intervals and aren't affected by custom interval configurations. The following table shows the fixed scan intervals for each excluded data collector:
+    >
+    > | Data collector name | Scan interval |
+    > |--|--|
+    > | ComputeInstance <br> ArtifactRegistryRepositoryPolicy <br> ArtifactRegistryImage <br> ContainerCluster <br> ComputeInstanceGroup <br> ComputeZonalInstanceGroupInstance <br> ComputeRegionalInstanceGroupManager <br> ComputeZonalInstanceGroupManager <br> ComputeGlobalInstanceTemplate | 1 hour |
 
-Here you name your connector, select a subscription and resource group, which is used to create an ARM template resource that is called security connector. The security connector represents a configuration resource that holds the projects settings.
+1. Select **Next: Select plans**.
 
-You also select a location and add the organization ID for your project.
+1. Toggle plans to **On** or **Off** depending on your needs.
 
-You can also set an interval to scan the GCP environment every 4, 6, 12, or 24 hours.
+    :::image type="content" source="media/quickstart-onboard-gcp/select-plans.png" alt-text="Screenshot that shows toggles turned on for all plans." lightbox="media/quickstart-onboard-gcp/select-plans.png":::
 
-Some data collectors run with fixed scan intervals and aren't affected by custom interval configurations. The following table shows the fixed scan intervals for each excluded data collector:
-
-| Data collector name | Scan interval |
-|--|--|
-| ComputeInstance <br> ArtifactRegistryRepositoryPolicy <br> ArtifactRegistryImage <br> ContainerCluster <br> ComputeInstanceGroup <br> ComputeZonalInstanceGroupInstance <br> ComputeRegionalInstanceGroupManager <br> ComputeZonalInstanceGroupManager <br> ComputeGlobalInstanceTemplate | 1 hour |
-
-When you onboard an organization, you can also choose to exclude project numbers and folder IDs.
-
-### Select plans for your project
-
-After entering your organization's details, you'll then be able to select which plans to enable.
-
-:::image type="content" source="media/quickstart-onboard-gcp/select-plans-gcp-project.png" alt-text="Screenshot of the available plans you can enable for your GCP project." lightbox="media/quickstart-onboard-gcp/select-plans-gcp-project.png":::
-
-From here, you can decide which resources you want to protect based on the security value you want to receive.
-
-### Configure access for your project
+1. Select **Next: Configure access**.
 
 Once you selected the plans, you want to enable and the resources you want to protect you have to configure access between Defender for Cloud and your GCP project.
 
