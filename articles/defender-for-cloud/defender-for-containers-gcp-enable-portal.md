@@ -25,6 +25,8 @@ Use this guide if you want to:
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
+- A connected GCP project ([Connect your GCP project to Microsoft Defender for Cloud](quickstart-onboard-gcp.md#connect-your-gcp-project))
+
 GCP-specific requirements:
 
 - GCP project with appropriate permissions
@@ -33,69 +35,6 @@ GCP-specific requirements:
 - Service account with required IAM roles
 - Cloud Shell or gcloud CLI configured
 
-## Connect your GCP project
-
-Before you enable Defender for Containers, you must connect your GCP project to Microsoft Defender for Cloud.
-
-1. Sign in to the [Azure portal](https://portal.azure.com).
-
-1. Go to **Microsoft Defender for Cloud**.
-
-1. Select **Environment settings** from the left menu.
-
-1. Select **Add environment** > **Google Cloud Platform**.
-
-1. To create a GCP connector and configure the required permissions, see:[Connect your GCP project to Microsoft Defender for Cloud](quickstart-onboard-gcp.md#connect-your-gcp-project)
-
-## Enable Defender for Containers features
-
-1. In **Select plans**, toggle **Containers** to **On**.
-
-
-1. Select **Settings** to access the plan settings.
-
-    :::image type="content" source="media/defender-for-containers-enable-plan-gke/containers-settings-gke.png" alt-text="Screenshot of settings for the Containers plan in the Defender for Cloud environment settings." lightbox="media/defender-for-containers-enable-plan-gke/containers-settings-gke.png":::
-
-1. Choose your deployment approach:
-   - **Enable all components** (recommended): Enable all features for comprehensive protection
-   - **Enable specific components**: Select only the components you need
-
-   Available components:
-   - **Agentless discovery for Kubernetes** - Discovers all GKE clusters
-   - **Agentless container vulnerability assessment** - Scans registry images
-   - **Defender DaemonSet** - Runtime threat detection
-   - **Azure Policy for Kubernetes** - Security recommendations
-
-1. Select **Continue** and **Next: Configure access**.
-
-## Set up GCP permissions
-
-You can use either Google Cloud Shell (recommended) or a local terminal with gcloud configured.
-
-1. Log in to [Google Cloud Console](https://console.cloud.google.com/home/dashboard?project=123456&cloudshell=true).
-
-1. Select the Activate Cloud Shell icon (terminal icon).
-
-Google Cloud Shell opens in a terminal pane at the bottom of the console.
-
-1. Copy the setup script from the portal.
-
-1. Run the setup script to create the required service account and permissions:
-
-   ```bash
-   # The portal provides a script similar to this
-   bash defender-for-containers-setup.sh \
-       --project-id <project-id> \
-       --workload-identity-pool <pool-name>
-   ```
-
-1. The script creates:
-   - Service account with necessary IAM roles
-   - Workload identity federation
-   - API enablement
-
-
-1. Select **Next: Review and create**.
 
 ## Deploy all components
 
