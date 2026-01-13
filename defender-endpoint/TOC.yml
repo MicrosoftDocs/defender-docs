@@ -1025,7 +1025,7 @@
         - name: Review alerts
           href: review-alerts.md
         - name: Manage alerts
-          href: /defender-xdr/investigate-alerts?tabs=alerts
+          href: /defender-xdr/investigate-alerts
         - name: Investigate alerts
           href: investigate-alerts.md
         - name: Review and manage detected threats
