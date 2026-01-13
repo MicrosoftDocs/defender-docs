@@ -25,7 +25,7 @@ Use this guide if you want to:
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
-- A connected GCP project ([Connect your GCP project to Microsoft Defender for Cloud](quickstart-onboard-gcp.md#connect-your-gcp-project))
+- A connected GCP project. For more information, see:[Connect your GCP project to Microsoft Defender for Cloud](quickstart-onboard-gcp.md#connect-your-gcp-project)
 
 GCP-specific requirements:
 
