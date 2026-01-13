@@ -1004,7 +1004,7 @@
             - name: Overview
               href: defender-cli-overview.md
             - name: Install
-              href: install-defender-for-cloud-cli.md
+              href: defender-cli-install.md
             - name: Authentication
               href: defender-cli-authentication.md
             - name: Syntax

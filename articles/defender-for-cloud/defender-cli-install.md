@@ -16,15 +16,15 @@ This article explains how to download and install the Defender for Cloud CLI on 
 
 The Defender for Cloud CLI is distributed as a standalone executable. Download the binary that matches your operating system and CPU architecture.
 
-| Operating system | Architecture | Download |
+| Operating system | Architecture | Download URL |
 |---|---|---|
-| Windows | x64 (64-bit) | [Download for Windows x64](https://aka.ms/defender-cli_win-x64) |
-| Windows | x86 (32-bit) | [Download for Windows x86](https://aka.ms/defender-cli_win-x86) |
-| Windows | ARM64 | [Download for Windows ARM64](https://aka.ms/defender-cli_win-arm64) |
-| macOS | Apple silicon (M-series) | [Download for macOS ARM64](https://aka.ms/defender-cli_osx-arm64) |
-| macOS | Intel | [Download for macOS x64](https://aka.ms/defender-cli_osx-x64) |
-| Linux | x64 | [Download for Linux x64](https://aka.ms/defender-cli_linux-x64) |
-| Linux | ARM64 | [Download for Linux ARM64](https://aka.ms/defender-cli_linux-arm64) |
+| Windows | x64 (64-bit) | https://aka.ms/defender-cli_win-x64 |
+| Windows | x86 (32-bit) | https://aka.ms/defender-cli_win-x86 |
+| Windows | ARM64 | https://aka.ms/defender-cli_win-arm64 |
+| macOS | Apple silicon (M-series) | https://aka.ms/defender-cli_osx-arm64 |
+| macOS | Intel | https://aka.ms/defender-cli_osx-x64 |
+| Linux | x64 | https://aka.ms/defender-cli_linux-x64 |
+| Linux | ARM64 | https://aka.ms/defender-cli_linux-arm64 |
 
 ## Set execution permissions (Linux and macOS)
 

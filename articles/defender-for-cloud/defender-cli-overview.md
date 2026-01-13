@@ -60,6 +60,6 @@ If you're using the legacy Microsoft Security DevOps (MSDO) CLI, consider moving
 
 ## Next steps
 
-- [Install the Defender for Cloud CLI](install-defender-for-cloud-cli.md)
+- [Install the Defender for Cloud CLI](defender-cli-install.md)
 
 - [Configure Defender for Cloud CLI authentication](defender-cli-authentication.md)
