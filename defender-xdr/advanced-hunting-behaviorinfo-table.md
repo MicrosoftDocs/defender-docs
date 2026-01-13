@@ -39,13 +39,13 @@ The `BehaviorInfo` table in the [advanced hunting](advanced-hunting-overview.md)
 
 **Behaviors** are a type of data in Microsoft Defender XDR based on one or more raw events. Behaviors provide contextual insight into events and can, but not necessarily, indicate malicious activity. For more information, see the following articles:
 - [Investigate behaviors with advanced hunting](/defender-cloud-apps/behaviors)
-- [Translate raw security logs to behavioral insights using UEBA behaviors in Microsoft Sentinel](/azure/sentinel/sentinel-behaviors)
+- [Translate raw security logs to behavioral insights using UEBA behaviors in Microsoft Sentinel](/azure/sentinel/entity-behaviors-layer)
 
 This advanced hunting table is populated by records from both Defender for Cloud Apps and UEBA. If your organization doesn't deploy these services in Microsoft Defender XDR, queries that use the table won't work or return any results. For more information about how to deploy services in Defender XDR, see [Deploy supported services](deploy-supported-services.md).
 
 To make sure Defender for Cloud Apps and UEBA data populate the `BehaviorInfo` table, follow the instructions in the following articles:
 - [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#prerequisites)
-- [Enable the UEBA behaviors layer](/azure/sentinel/sentinel-behaviors#enable-the-ueba-behaviors-layer)
+- [Enable the UEBA behaviors layer](/azure/sentinel/entity-behaviors-layer#enable-the-ueba-behaviors-layer)
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
