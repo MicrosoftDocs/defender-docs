@@ -51,9 +51,8 @@ Before you enable Defender for Containers, you must connect your GCP project to 
 
 1. In **Select plans**, toggle **Containers** to **On**.
 
-    :::image type="content" source="media/tutorial-enable-containers-gcp/containers-on.png" alt-text="Screenshot of enabling Defender for Containers for a GCP connector." lightbox="media/tutorial-enable-containers-gcp/containers-on.png":::
 
-1. Select **Configure** to access the plan settings.
+1. Select **Settings** to access the plan settings.
 
     :::image type="content" source="media/defender-for-containers-enable-plan-gke/containers-settings-gke.png" alt-text="Screenshot of settings for the Containers plan in the Defender for Cloud environment settings." lightbox="media/defender-for-containers-enable-plan-gke/containers-settings-gke.png":::
 
@@ -95,13 +94,6 @@ Google Cloud Shell opens in a terminal pane at the bottom of the console.
    - Workload identity federation
    - API enablement
 
-1. Copy the service account email from the script output.
-
-    :::image type="content" source="media/defender-for-containers-enable-plan-gke/copy-button.png" alt-text="Screenshot that shows the location of the copy button.":::
-
-1. Return to Azure portal and paste the service account email.
-
-   :::image type="content" source="media/defender-for-kubernetes-intro/configure-access-gcp.png" alt-text="Screenshot showing GCP access configuration." lightbox="media/defender-for-kubernetes-intro/configure-access-gcp.png":::
 
 1. Select **Next: Review and create**.
 
