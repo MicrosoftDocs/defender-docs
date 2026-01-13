@@ -33,7 +33,7 @@ Create distribution profiles to distribute the following types of content across
 - [Automation rules](/azure/sentinel/create-manage-use-automation-rules)
 - [Workbooks](/azure/sentinel/monitor-your-data)
 
-## Requirements
+## Prerequisites
 
 The following table lists the requirements for using content distribution in the Microsoft Defender multitenant portal.
 
