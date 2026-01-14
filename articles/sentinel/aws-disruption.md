@@ -39,33 +39,33 @@ Before you begin, ensure the following:
 
 1. Attach the following policy to the role (replace \<YOUR_ACCOUNT_ID\> as needed):
 
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
+    ```json
     {
-      "Effect": "Allow",
-      "Action": [
-        "iam:UpdateLoginProfile",
-        "iam:DeactivateMFADevice",
-        "iam:DeleteAccessKey",
-        "iam:DeleteLoginProfile",
-        "iam:DeleteUser",
-        "iam:RemoveUserFromGroup",
-        "iam:ResetServiceSpecificCredential",
-        "iam:ResyncMFADevice",
-        "iam:RevokeSession",
-        "iam:DeleteUserPermissionsBoundary",
-        "iam:DeleteUserPolicy",
-        "iam:DetachUserPolicy"
-      ],
-      "Resource": "arn:aws:iam::<YOUR_ACCOUNT_ID>:user/*"
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Action": [
+            "iam:UpdateLoginProfile",
+            "iam:DeactivateMFADevice",
+            "iam:DeleteAccessKey",
+            "iam:DeleteLoginProfile",
+            "iam:DeleteUser",
+            "iam:RemoveUserFromGroup",
+            "iam:ResetServiceSpecificCredential",
+            "iam:ResyncMFADevice",
+            "iam:RevokeSession",
+            "iam:DeleteUserPermissionsBoundary",
+            "iam:DeleteUserPolicy",
+            "iam:DetachUserPolicy"
+          ],
+          "Resource": "arn:aws:iam::<YOUR_ACCOUNT_ID>:user/*"
+        }
+      ]
     }
-  ]
-}
-```
+    ```
 
-5. Name the role (e.g., SentinelAttackDisruptionRole) and create it.
+1. Name the role (e.g., SentinelAttackDisruptionRole) and create it.
 
 ### 1.2 Configure Trust Relationship
 
