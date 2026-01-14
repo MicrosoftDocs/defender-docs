@@ -118,7 +118,7 @@ In this demonstration article, you have two engine choices to test AMSI:
 
 1. Save the following JavaScript as `AMSI_jscript.js`:
 
-   ```javascript
+```javascript
 // Save the following file as AMSITest.js
 var result = eval("AMSI Test Sample: " + "7e72c3ce-861b-4339-8740-0ac1484c1386")
 WScript.Echo(result);
