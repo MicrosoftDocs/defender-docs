@@ -94,5 +94,5 @@ If you took corrective actions and the device status is still misconfigured, [op
 - [Client analyzer overview](overview-client-analyzer.md)
 - [Data collection for advanced troubleshooting on Windows](data-collection-analyzer.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
