@@ -4,7 +4,7 @@ description: Learn how to configure Microsoft Defender for Cloud plans for your 
 ms.topic: install-set-up-deploy
 ms.author: Elkrieger
 author: Elazark
-ms.date: 01/13/2026
+ms.date: 01/14/2026
 ms.custom: sfi-image-nochange
 ---
 
@@ -14,7 +14,7 @@ When you onboard your Google Cloud Platform (GCP) projects to Microsoft Defender
 
 ### [Defender CSPM](#tab/defender-cspm)
 
-Foundational CSPM is included for free with Defender for Cloud. It provides security posture management and threat protection for your GCP resources. However, to get the full value of Defender CSPM, you need to enable the Defender CSPM plan, which comes with additional costs. For more information about costs, see the [Defender for Cloud pricing page](defender-for-cloud-pricing.md).
+Foundational CSPM is included for free with Defender for Cloud. It provides security posture management and threat protection for your GCP resources. However, to get the full value of Defender CSPM, you need to enable the Defender CSPM plan, which comes with additional costs. For more information about costs, see the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/?msockid=37d5586afa3461fd27164e8bfbe16006).
 
 Learn more about [CSPM and the differences between the plans](concept-cloud-security-posture-management.md).
 

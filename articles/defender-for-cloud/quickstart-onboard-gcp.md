@@ -82,7 +82,7 @@ When you're connecting GCP projects to specific Azure subscriptions, consider th
  
 1. Go to **Environment settings** > **Add environment** > **Google Cloud Platform**.
 
-    :::image type="content" source="media/quickstart-onboard-gcp/gcp-connector.png" alt-text="Screenshot that shows where the GCP connector option is located." lightbox="media/quickstart-onboard-gcp/gcp-connector.png":::
+    :::image type="content" source="media/quickstart-onboard-gcp/connector.png" alt-text="Screenshot that shows where the GCP connector option is located." lightbox="media/quickstart-onboard-gcp/connector.png":::
 
 1. Enter the following information
     - Connector name.

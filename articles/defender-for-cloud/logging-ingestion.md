@@ -34,11 +34,17 @@ Select the deployment scenario that meets your requirement:
 
 To configure GCP Cloud Logging:
 
-1. Follow the [steps to connect your GCP project](#connect-your-gcp-project).
+1. 1. Sign in to the [Azure portal](https://portal.azure.com).
+ 
+1. Search for and select **Microsoft Defender for Cloud**.
+ 
+1. Go to **Environment settings**.
 
-1. On the **Select plans** tab, select **Settings** under the Monitoring coverage column.
+1. Select the relevant GCP connector.
 
-1. On the **Plan configuration** pane, turn the relevant toggles to **On**, selecting one of the following methods:
+1. Select **Settings** under the Monitoring coverage column.
+
+1. Toggle the switches to **On** selecting one of the following methods:
 
    1. Create a new GCP Cloud Logging configuration and provide a Pub/Sub subscription name.
 
@@ -56,7 +62,7 @@ To configure GCP Cloud Logging:
    
 1. Select **Save**.
 
-1. Continue with the next steps to [configure access](#connect-your-gcp-project).
+1. Continue from step 8 of the [Connect your GCP project](quickstart-onboard-gcp.md#connect-your-gcp-project) instructions.
 
 1. Review and generate the GCP connector to complete log ingestion onboarding into Defender for Cloud. 
 
