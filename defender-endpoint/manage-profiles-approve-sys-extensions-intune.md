@@ -48,14 +48,14 @@ Do the following procedure to approve the required system extensions.
 6. On the **Configuration settings** tab, select **Add settings**. In the **Settings picker** flyout that opens, do the following steps:
    1. In the search box, enter "allowed system extensions", and then select **Search**.
    2. In the **Browse by category** section, select the one and only search result: **System Configuration \> System Extensions**.
-   3. In the section that appears, select the check box next to **Allowed System Extensions**. A new **System configuration** section appears on the **Configuration settings** tab behind the **Settings picker** flyout. You might need to resize the browser windows to see it. Or you can close the **Settings picker** flyout.
+   3. In the new section that appears, select the check box next to **Allowed System Extensions**. A new **System configuration** section appears on the **Configuration settings** tab behind the **Settings picker** flyout. You might need to resize the browser windows to see it. Or you can close the **Settings picker** flyout.
    4. In the **Allowed Systems Extensions** section on the **Configuration settings** tab, select **+ Edit instance** the empty entry.
    5. In the **Configure instance** flyout that opens, configure the following settings:
       - **Allowed System Extensions**: Enter the following values, one per box:
         - `com.microsoft.wdav.epsext`
         - `com.microsoft.wdav.netext`
       - **Team identifier**: Enter `UBF8T346G9`.
-   6. Click **Save** on the **Configure instance** flyout.
+   6. Select **Save** on the **Configure instance** flyout.
 
    Back on the **Configuration settings** tab, the entry is now visible.
 
