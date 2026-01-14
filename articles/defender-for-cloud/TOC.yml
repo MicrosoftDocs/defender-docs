@@ -234,7 +234,7 @@
                     - name: Verify deployment
                       href: defender-for-containers-aws-verify.md
                     - name: Troubleshoot
-                      href: troubleshoot-defender-for-containers-aws-eks.md
+                      href: defender-for-containers-aws-troubleshoot.md
                     - name: Configure
                       href: defender-for-containers-aws-configure.md
                     - name: Remove

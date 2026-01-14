@@ -61,41 +61,6 @@ To verify that your Defender for Containers deployment is working correctly, you
 
 For detailed instructions on generating test alerts and simulating various threat scenarios, see [Kubernetes alerts simulation tool](alerts-containers.md#kubernetes-alerts-simulation-tool).
 
-## Common verification issues
-
-### Connector shows disconnected
-
-1. Verify CloudFormation stack completed successfully.
-1. Check IAM role has correct trust policy.
-1. Ensure you correctly entered the role ARN in Azure.
-
-### No security alerts
-
-If you don't see security alerts:
-
-1. Make sure audit logging is enabled on EKS clusters.
-1. Verify Defender sensor pods are running.
-1. Check that runtime protection is enabled in connector settings.
-1. Wait 5-10 minutes after generating test events.
-
-### Missing vulnerability scans
-
-For missing ECR scans:
-
-1. Verify ECR permissions in IAM role.
-1. Check that images are pushed recently.
-1. Ensure vulnerability assessment is enabled in connector.
-1. Wait up to 4 hours for initial scans.
-
-### Clusters not appearing
-
-If EKS clusters aren't showing:
-
-1. Verify clusters are tagged correctly (no exclusion tags).
-1. Check IAM role has `eks:ListClusters` permission.
-1. Ensure clusters are in the same AWS account.
-1. Wait 15-30 minutes for discovery.
-
 ## Related content
 
 - [Configure advanced settings](defender-for-containers-aws-configure.md)

@@ -143,6 +143,38 @@ To deploy the sensor only to selected EKS clusters:
 
 1. Follow the remediation steps for the selected clusters.
 
+### Configure ECR scanning for specific registries
+
+Defender for Containers doesn’t provide a per-registry selection in the Azure portal. 
+Vulnerability assessment for Amazon ECR is scoped by the AWS IAM permissions granted to the Defender for Cloud AWS connector.
+
+Only Amazon ECR registries that the connector role has permission to access are scanned.
+To limit scanning to specific registries, restrict the IAM permissions of the connector role to those registries only.
+
+### Deploy Azure Policy extension selectively
+
+The Azure Policy extension for Kubernetes is deployed through policy assignment and can be scoped to specific Arc-enabled EKS clusters.
+
+To deploy the policy extension selectively:
+1. Go to **Azure Policy**.
+1. Search for the policy definition **Configure Azure Policy extension on Arc-enabled Kubernetes**.
+1. Create an assignment and scope it to the required resource groups or Arc-enabled clusters only.
+
+Clusters outside the assignment scope won’t receive the Azure Policy extension.
+
+### Configure audit logging for specific clusters
+
+Kubernetes audit logging for Amazon EKS is configured in AWS and isn’t managed through Defender for Cloud.
+
+Audit logging can be enabled per EKS cluster and is required for agentless threat protection that relies on control-plane signals.
+
+To enable audit logging for a specific cluster:
+```bash
+aws eks update-cluster-config \
+  --name <cluster-name> \
+  --logging '{"clusterLogging":[{"types":["audit","authenticator"],"enabled":true}]}'
+```
+
 ## Configure plan components
 
 You can enable or disable specific Defender for Containers components:
@@ -196,15 +228,6 @@ kubectl describe pods -n kube-system -l app=microsoft-defender
 # - Permission denied: Verify RBAC settings
 # - Resource constraints: Check node resources
 ```
-
-## Best practices
-
-1. **Regular reviews**: Review configuration monthly.
-1. **Test changes**: Test configuration changes in non-production environments first.
-1. **Document settings**: Maintain documentation of custom configurations.
-1. **Monitor impact**: Watch for performance impact after changes.
-1. **Back up settings**: Export configurations before major changes.
-1. **Track exclusions**: Document why certain clusters or components are excluded.
 
 ## Related content
 
