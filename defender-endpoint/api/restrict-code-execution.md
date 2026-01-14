@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -19,11 +19,9 @@ ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
-
 ---
 
 # Restrict app execution API
-
 
 ## API description
 
@@ -32,7 +30,6 @@ Restrict execution of all applications on the device except a predefined set.
 ## Limitations
 
 Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
-
 
 ## Prerequisites
 
@@ -44,37 +41,36 @@ Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 
 When obtaining a token using user credentials:
 
-- The user needs to have at least the following role permission: 'Active remediation actions'. For more information, see: [Create and manage roles](../user-roles.md). 
+- The user needs to have at least the following role permission: 'Active remediation actions'. For more information, see: [Create and manage roles](../user-roles.md).
 - The user needs to have access to the device, based on device group settings. For more information, see: [Create and manage device groups](../machine-groups.md).
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Machine.RestrictExecution|'Restrict code execution'
-Delegated (work or school account)|Machine.RestrictExecution|'Restrict code execution'
-
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Machine.RestrictExecution|'Restrict code execution'|
+|Delegated (work or school account)|Machine.RestrictExecution|'Restrict code execution'|
 
 ## HTTP request
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/machines/{id}/restrictCodeExecution
+POST https://api.security.microsoft.com/api/machines/{id}/restrictCodeExecution
 ```
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
-Content-Type|string|application/json. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
+|Content-Type|string|application/json. **Required**.|
 
 ## Request body
 
 In the request body, supply a JSON object with the following parameters:
 
-Parameter|Type|Description
-:---|:---|:---
-Comment|String|Comment to associate with the action. **Required**.
+|Parameter|Type|Description|
+|---|---|---|
+|Comment|String|Comment to associate with the action. **Required**.|
 
 ## Response
 
@@ -89,7 +85,7 @@ If you send multiple API calls to restrict app execution for the same device, it
 Here is an example of the request.
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/restrictCodeExecution 
+POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/restrictCodeExecution
 ```
 
 ```json
@@ -97,4 +93,3 @@ POST https://api.securitycenter.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2
   "Comment": "Restrict code execution due to alert 1234"
 }
 ```
-
