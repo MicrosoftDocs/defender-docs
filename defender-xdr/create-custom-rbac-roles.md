@@ -65,12 +65,12 @@ The following steps describe how to create custom roles in the Microsoft Defende
 
 1. On the **Choose permissions** page, select each of the following as needed to configure permissions for that area:
 
-    - **Security operations**
-    - **Security posture**
-    - **Authorization and settings**
-    - **Data Operations** (Preview). Supported for the **Microsoft Sentinel data lake** data collection.
+    - **Security operations**: Permissions for roles that manage day-to-day operations and respond to incidents and advisories. 
+    - **Security posture**: Permissions for roles that manage the organization's security posture and perform Defender Vulnerability Management.
+    - **Authorization and settings**: Permissions for roles that modify the portal configurations such as authorization, security settings, and system settings.
+    - **Data operations** (Preview): Permissions for managing the organization's security data and controlling advanced analytics permissions. Supported for the **Microsoft Sentinel data lake** data collection.
 
-    Hover over the description column for each permission group for a detailed description of the permissions available in that group. 
+    Hover over the description column for each permission group for a detailed description of the permissions available in that group.
 
     An extra **Authorization and settings** side pane slides open for each permission group you select, where you can choose the specific permissions to assign to the role.
 
@@ -85,7 +85,7 @@ The following steps describe how to create custom roles in the Microsoft Defende
     >
     > If you assigned custom permissions and new permissions are added to this category, you'll need to reassign your roles with the new permissions if needed.
 
-1. Once you selected your permissions for any relevant permission group, select **Apply** and then **Next** to assign users and data sources.
+1. After you select your permissions for any relevant permission group, select **Apply** and then **Next** to assign users and data sources.
 
 1. On the **Assign users and data sources** page, select **Add assignment**.
 
@@ -94,6 +94,7 @@ The following steps describe how to create custom roles in the Microsoft Defende
         - **Assignment name**: Enter a descriptive name for the assignment.
         - **Employees**: Select Microsoft Entra security groups or individual users to assign users to the role.
         - **Data sources**: Select the **Data sources** drop down and then select the services where the assigned users will have the selected permissions. If you assigned read-only permissions for a single data source, such as Microsoft Defender for Endpoint, the assigned users can't read alerts in the other services, such as Microsoft Defender for Office 365 or Microsoft Defender for Identity.
+        - **Data collections**: Users assigned in this assignment can be granted permissions either across all available Sentinel workspaces or only to selected workspaces. For example, if a role with 'Security operations - read only permission' is created, one team may be assigned this role for US-Workspace and UK-Workspace, allowing them to access all alerts from these sources. Another assignment can be created for the same role, providing another team in the organization access to only UK-Workspace alerts from Sentinel UK-Workspace.
 
     1. Select **Include future data sources automatically** to include all other data sources supported by Microsoft Defender unified RBAC. If this option is selected, any future data sources that are added for unified RBAC support are also automatically added to the assignment.
 
