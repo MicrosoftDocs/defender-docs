@@ -8,11 +8,9 @@ ms.date: 01/13/2026
 ms.topic: how-to
 ---
 
-# Enable Attack Disruption Actions on AWS with Microsoft Sentinel (Preview)
+# Enable attack disruption actions on AWS with Microsoft Sentinel (preview)
 
-## Overview
-
-This article describes how to configure your AWS environment so that Microsoft Sentinel can take automated actions on a user that assumes a SAML role, or on an AWS IAM account when an alert is triggered. Attack disruption leverages high-confidence signals to contain compromised assets and limit the impact of attacks, including actions on identities in AWS.
+This article describes how to configure your AWS environment so that Microsoft Sentinel can take automated actions on a user that assumes a SAML role, or on an AWS IAM account when an alert is triggered. Attack disruption uses high-confidence signals to contain compromised assets and limit the impact of attacks, including actions on identities in AWS.
 
 ## Prerequisites
 
@@ -23,17 +21,17 @@ Before you begin, ensure the following:
 - The AWS Connector for Microsoft Sentinel is deployed and enabled
 - AWS CloudTrail logs are being ingested into Microsoft Sentinel
   See: [Connect Microsoft Sentinel to Amazon Web Services to ingest AWS service log data](./connect-aws.md)
-- Appropriate IAM roles and permissions are configured in AWS to allow Sentinel to perform actions on IAM accounts.
+- Appropriate IAM roles and permissions are configured in AWS to allow Microsoft Sentinel to perform actions on IAM accounts.
 
-## Step 1: Prepare AWS for Integration
+## Step 1: Prepare AWS for integration
 
-### 1.1 Create a Dedicated IAM Role for Sentinel
+### 1.1 Create a dedicated IAM role for Microsoft Sentinel
 
 1. In the AWS console, go to **IAM \> Roles**.
 
 1. Select **Create role**.
 
-1. Select **AWS service** as the trusted entity and choose **EC2** (you will update the trust relationship later).
+1. Select **AWS service** as the trusted entity and choose **EC2** (you'll update the trust relationship later).
 
 1. Attach the following policy to the role (replace \<YOUR_ACCOUNT_ID\> as needed):
 
@@ -63,15 +61,15 @@ Before you begin, ensure the following:
     }
     ```
 
-1. Name the role (e.g., SentinelAttackDisruptionRole) and create it.
+1. Name the role (for example, SentinelAttackDisruptionRole) and create it.
 
-### 1.2 Configure Trust Relationship
+### 1.2 Configure trust relationship
 
-1. In the IAM role you just created, go to the **Trust relationships** tab.
+1. In the IAM role you created, go to the **Trust relationships** tab.
 
 1. Select **Edit trust relationship**.
 
-1. Replace the trust policy with the following, specifying the Sentinel integration principal:
+1. Replace the trust policy with the following, specifying the Microsoft Sentinel integration principal (replace `<YOUR_AZURE_SUBSCRIPTION_ID>` with your actual Azure subscription ID):
 
 ```json
 {
@@ -89,15 +87,13 @@ Before you begin, ensure the following:
 }
 ```
 
-**Note**: Replace \<YOUR_AZURE_SUBSCRIPTION_ID\> with your actual Azure subscription ID.
-
 ## Step 2: Enable CloudTrail
 
 1. In the AWS console, go to **CloudTrail**.
 
-1. Ensure that a cloudtrail is enabled and logging is active for all regions.
+1. Ensure that a CloudTrail is enabled and logging is active for all regions.
 
-## Step 3: Deploy and Enable the AWS Connector in Sentinel
+## Step 3: Deploy and enable the AWS connector in Microsoft Sentinel
 
 1. In the Azure portal, go to **Microsoft Sentinel \> Data connectors**.
 
@@ -105,33 +101,33 @@ Before you begin, ensure the following:
 
 1. If you don't see the connector, install the Amazon Web Services solution from the Content Hub in Microsoft Sentinel.
 
-1. Follow the instructions in the [official documentation](./connect-aws.md) to set up your AWS environment and connect it to Sentinel.
+1. Follow the instructions in the [official documentation](./connect-aws.md) to set up your AWS environment and connect it to Microsoft Sentinel.
 
 1. Provide the IAM role ARN and SQS queue URL as required.
 
-## Step 4: Validate Integration
+## Step 4: Validate integration
 
-1. In Sentinel, confirm that the connector status is **Connected**.
+1. In Microsoft Sentinel, confirm that the connector status is **Connected**.
 
 1. Verify log ingestion and connector health using SentinelHealth logs and AWS SQS queue status.
 
-1. In AWS, check that CloudTrail and GuardDuty events are being sent to Sentinel.
+1. In AWS, check that CloudTrail and GuardDuty events are being sent to Microsoft Sentinel.
 
-## Step 5: Test the Integration
+## Step 5: Test the integration
 
-1. Trigger a test alert in AWS (e.g., simulated credential compromise).
+1. Trigger a test alert in AWS (for example, simulated credential compromise).
 
-1. Confirm that Sentinel can take the configured actions on the affected IAM account.
+1. Confirm that Microsoft Sentinel can take the configured actions on the affected IAM account.
 
-1. Review audit logs in AWS and Sentinel to verify successful execution.
+1. Review audit logs in AWS and Microsoft Sentinel to verify successful execution.
 
-## Step 6: Monitor and Maintain
+## Step 6: Monitor and maintain
 
 - Regularly review IAM role permissions and audit logs in AWS.
-- Update Sentinel analytic rules and automation playbooks as needed to reflect changes in your AWS environment.
-- Monitor alerts and response actions in the Sentinel portal.
+- Update Microsoft Sentinel analytic rules and automation playbooks as needed to reflect changes in your AWS environment.
+- Monitor alerts and response actions in the Microsoft Sentinel portal.
 
-The following scripts can automate the process for building the integration with Sentinel and AWS to enable attack disruption:
+The following scripts can automate the process for building the integration with Microsoft Sentinel and AWS to enable attack disruption:
 
 ### [Bash Script](#tab/bash)
 Save the following code snippet as a bash file and execute it.
@@ -221,7 +217,7 @@ aws iam put-role-policy --role-name $role_name --policy-name $policy_name --poli
 
 ### [PowerShell Script](#tab/powershell)
 
-For a powershell version of the script use the following code snippet
+For a PowerShell version of the script, use the following code snippet
 
 ```powershell
 # AWS Sentinel OIDC Setup Script
@@ -368,7 +364,7 @@ Write-Host "Role ARN: arn:aws:iam::$account_id:role/$role_name" -ForegroundColor
 
 ---
 
-## Additional Resources
+## Related content
 
 - [Connect Microsoft Sentinel to Amazon Web Services to ingest AWS service log data](./connect-aws.md)
-- [Sentinel data connectors](./data-connectors-reference.md#sentinel-data-connectors)
+- [Microsoft Sentinel data connectors](./data-connectors-reference.md#sentinel-data-connectors)
