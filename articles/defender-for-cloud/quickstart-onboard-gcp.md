@@ -30,13 +30,13 @@ The authentication process works as follows:
 
 :::image type="content" source="media/quickstart-onboard-gcp/authentication-process.png" alt-text="A diagram of the Defender for Cloud GCP connector authentication process." lightbox="media/quickstart-onboard-gcp/authentication-process.png":::
 
-1. Microsoft Defender for Cloud's CSPM service acquires a Microsoft Entra token. Microsoft Entra ID signs the token using the RS256 algorithm and is valid for 1 hour.
+1. Microsoft Defender for Cloud's CSPM service acquires a Microsoft Entra token. Microsoft Entra ID signs the token by using the RS256 algorithm. The token is valid for one hour.
 
-1. The Microsoft Entra token is exchanged with Google's STS token.
+1. The Microsoft Entra token is exchanged for Google's STS token.
 
-1. Google STS validates the token with the workload identity provider. The Microsoft Entra token is sent to Google's STS that validates the token with the workload identity provider. Audience validation then occurs and the token is signed. A Google STS token is then returned to Defender for Cloud's CSPM service.
+1. Google STS validates the token by using the workload identity provider. The Microsoft Entra token is sent to Google's STS that validates the token by using the workload identity provider. Audience validation then occurs and the token is signed. A Google STS token is then returned to Defender for Cloud's CSPM service.
 
-1. Defender for Cloud's CSPM service uses the Google STS token to impersonate the service account. Defender for Cloud's CSPM receives service account credentials that are used to scan the project.
+1. Defender for Cloud's CSPM service uses the Google STS token to impersonate the service account. Defender for Cloud's CSPM receives service account credentials that it uses to scan the project.
 
 ## Prerequisites
 
@@ -50,9 +50,9 @@ To complete the procedures in this article, you need:
 
 - Contributor level permission for the relevant Azure subscription.
 
-- If CIEM is enabled as part of Defender for CSPM, the user onboarding the connector also needs [Security Admin role and Application.ReadWrite.All permission](enable-permissions-management.md?source=recommendations#before-you-start) for your tenant.
+- If you enable CIEM as part of Defender for CSPM, the user onboarding the connector also needs [Security Admin role and Application.ReadWrite.All permission](enable-permissions-management.md?source=recommendations#before-you-start) for your tenant.
 
-- To ingest GCP Cloud Logging with Pub/Sub topics, ensure you meet the prerequisites based on your deployment choice:
+- To ingest GCP Cloud Logging by using Pub/Sub topics, ensure you meet the prerequisites based on your deployment choice:
 
    - If you create new Cloud Logging and Pub/Sub resources:
    
@@ -70,7 +70,7 @@ You can learn more about Defender for Cloud pricing on [the pricing page](https:
 
 When you're connecting GCP projects to specific Azure subscriptions, consider the [Google Cloud resource hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy#resource-hierarchy-detail) and these guidelines:
 
-- You can connect your GCP projects to Microsoft Defender for Cloud at the *project* level.
+- You connect your GCP projects to Microsoft Defender for Cloud at the *project* level.
 - You can connect multiple projects to one Azure subscription.
 - You can connect multiple projects to multiple Azure subscriptions.
 
@@ -137,9 +137,9 @@ When you're connecting GCP projects to specific Azure subscriptions, consider th
     > - `iamcredentials.googleapis.com`
     > - `compute.googleapis.com`
     >
-    > When onboarding at the organization level, these APIs must be enabled on the management project, even though they will be used to access resources across all projects within your organization.
+    > When you onboard at the organization level, enable these APIs on the management project, even though you use them to access resources across all projects within your organization.
     >
-    > If you don't enable these APIs at this time, you can enable them during the onboarding process by running the GCP Cloud Shell script.
+    > If you don't enable these APIs, you can enable them during the onboarding process by running the GCP Cloud Shell script.
 
 1. Select **Next: Review and generate**.
 
@@ -147,7 +147,7 @@ When you're connecting GCP projects to specific Azure subscriptions, consider th
 
 1. Select **Create**.
 
-After you create the connector, a scan starts on your GCP environment. New recommendations appear in Defender for Cloud after up to 6 hours. If you enabled autoprovisioning, Azure Arc and any enabled extensions are installed automatically for each newly detected resource.
+After you create the connector, a scan starts on your GCP environment. New recommendations appear in Defender for Cloud after up to six hours. If you enabled autoprovisioning, Azure Arc and any enabled extensions are installed automatically for each newly detected resource.
 
 ## View your current coverage
 

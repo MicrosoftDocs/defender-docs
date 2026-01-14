@@ -60,4 +60,7 @@ To configure GCP Cloud Logging:
 
 1. Review and generate the GCP connector to complete log ingestion onboarding into Defender for Cloud. 
 
-## Next steps
+## Next step
+
+> [!div class="nextstep"]
+> 
