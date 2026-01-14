@@ -21,7 +21,7 @@ appliesto:
 
 # Content distribution in multitenant management
 
-Content distribution in the Microsoft Defender multitenant portal helps you organize and manage content at scale across your tenants, based on categories like business groups or locations. Create distribution profiles to copy existing content, like custom detection rules, from the source tenant to the target tenants. The distributed content then runs on any relevant device or device groups that you set in the distribution profile scope.
+Content distribution in the Microsoft Defender multitenant portal helps you organize and manage content at scale across your tenants, based on categories like business groups or locations. Create distribution profiles to copy existing content, like custom detection rules, from the source tenant to the target tenants. The distributed content then runs in the target tenant in the selected scope.
 
 ## Supported content for distribution
 
@@ -29,9 +29,9 @@ Create distribution profiles to distribute the following types of content across
 
 - [Custom detection rules](/azure/sentinel/compare-analytics-rules-custom-detections)
 - [Endpoint security](/defender-endpoint/microsoft-defender-endpoint) policies, supported for Microsoft Defender for Endpoint customers only
-- [Analytics rules](/azure/sentinel/scheduled-rules-overview?)
-- [Automation rules](/azure/sentinel/create-manage-use-automation-rules)
-- [Workbooks](/azure/sentinel/monitor-your-data)
+- [Analytics rules](/azure/sentinel/scheduled-rules-overview?) for Microsoft Sentinel customers only
+- [Automation rules](/azure/sentinel/create-manage-use-automation-rules) for Microsoft Sentinel customers only
+- [Workbooks](/azure/sentinel/monitor-your-data) for Microsoft Sentinel customers only
 
 ## Prerequisites
 
@@ -39,8 +39,8 @@ The following table lists the requirements for using content distribution in the
 
 | Requirement | Description |
 |:---|:---|
-|**Licensing requirements** | Your organization must have a subscription to Microsoft 365 E5 or Office E5.|
-|**Permissions** | Users must be assigned the correct roles and permission at the individual tenant level to view and manage the associated data in multitenant management. <br/> Access to content distribution is granted through the Security settings (manage) or Security Data Basic (read) permission in [Microsoft 365 Defender Unified role-based access control (URBAC)](/defender-xdr/manage-rbac). By default, both of these roles are assigned to the **Security Administrator** and **Security Reader** Microsoft Entra built-in roles.|
+|**Licensing requirements** | Your organization must have a subscription to Microsoft 365 E5 or Office E5. To distribute Microsoft Sentinel content, you must have a Microsoft Sentinel subscription|
+|**Permissions** | Users must be assigned the correct roles and permission at the individual tenant level to view and manage the associated data in multitenant management. <br/> Access to content distribution is granted through the Security settings (manage) or Security Data Basic (read) permission in [Microsoft Defender XDR Unified role-based access control (URBAC)](/defender-xdr/manage-rbac). By default, both of these roles are assigned to the **Security Administrator** and **Security Reader** Microsoft Entra built-in roles.|
 |**Delegate access** |Delegated access via [Azure B2B](/entra/external-id/add-users-administrator) or [GDAP (CSP Parters only)](/microsoft-365/lighthouse/m365-lighthouse-setup-gdap) must be obtained for at least one other tenant.|
 
 ## Create distribution profiles
@@ -57,11 +57,11 @@ To create a new distribution profile:
    |**Assign tenants**     |    Select **Add tenant** to see a list of available tenants that you can add to your distribution profile, select the tenants you want to add, and then select **Add**.     |
    |**Select content type**     | Content types are all selected by default. Verify that the selection matches the content you want to distribute in this distribution profile.      |
    |**Custom detection rules**     | Relevant only if you'd selected **Custom detection rules** in the **Select content type** page. <br><br>1. Select **Add content**.<br>2. In the **Select detection rules** side pane, select the rules that you want to add to the distribution profile, and then select **Add to distribution profile**.    |
-   |**Endpoint security policies**     | Relevant only if you'd selected **Endpoint security policies** in the **Select content type page**. <br><br>1. Select **Add content**. <br>2. In the **Select security policies** side pane, select the policies that you want to add to the distribution profile, and then select **Add to distribution profile**.         |
+   |**Endpoint security policies**<br><br>**Analytics** or **Automation rules**<br><br>**Workbooks**      | 1. Select **Add content**. <br>2. Select the relevant that you want to add to the distribution profile, and then select **Add to distribution profile**.         |
 
-   At this point, you reach either the **Device groups** subpage or the **Endpoint security policies** subpage, where you define the devices or device groups that need to be in your tenant's scope. Distribution profiles support a single scope for the entire profile, or separate scopes per rule. 
+   At this point, you need to define your tenant's scope. Distribution profiles support a single scope for the entire profile, or separate scopes per content type. Scopes can be device groups, workspaces, or Microsoft Entra groups.
 
-   Select **Single scope** or **Scope per rule** to toggle between these options, and **Edit scope** to make changes as needed. 
+   Select **Single scope** or **Scope per content type** to toggle between these options, and **Edit scope** to make changes as needed.
 
 1. In the **Summary** tab, review the details of the distribution profile you created. If you want to sync all authorized tenants now, leave the **Sync all authorized tenants** option checked. If you want to sync later, uncheck it.
 
