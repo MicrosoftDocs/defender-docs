@@ -113,6 +113,17 @@ In this demonstration article, you have two engine choices to test AMSI:
     Source: Microsoft VBScript runtime error
    ```
 
+## Testing AMSI with Javascript
+
+
+1. Save the following JavaScript as `AMSI_jscript.js`:
+
+   ```javascript
+// Save the following file as AMSITest.js
+var result = eval("AMSI Test Sample: " + "7e72c3ce-861b-4339-8740-0ac1484c1386")
+WScript.Echo(result);
+   ```
+
 ### Verifying the test results
 
 In your protection history, you should be able to see the following information:
