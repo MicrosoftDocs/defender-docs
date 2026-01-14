@@ -240,9 +240,9 @@ Alert tuning rules support conditions based on *evidence types* such as files, p
 
 Alert tuning as general availability captures alerts only from Defender for Endpoint. However, in preview, alert tuning is also extended to other Microsoft Defender XDR services, including Defender for Office 365, Defender for Identity, Defender for Cloud Apps, Microsoft Entra ID Protection (Microsoft Entra IP), and others if they are available on your platform and plan.
 
-Microsoft Defender XDR includes certain built-in alert tuning rules. These rules help reduce noise from common benign activity. The built in rules suppress the alerts without affecting other features like AIR investigation and email notifications. If the AIR investigation detects malicious or suspicious activity, the new alert is reactivated.
+Microsoft Defender XDR includes built-in alert tuning rules (currently in Preview) that help reduce reporting noise from common benign activity. These built-in rules suppress alerts without affecting other features like AIR investigations and email notifications. If the AIR investigation detects malicious or suspicious activity, the new alert is reactivated.
 
-You can also create your own custom alert tuning rules to hide or resolve alerts automatically when certain conditions are met.
+You can also create your own custom alert tuning rules to hide or resolve alerts automatically when specific conditions are met.
 
 > [!CAUTION]
 > We recommend using alert tuning with caution, for scenarios where known, internal business applications or security tests trigger an expected activity and you don't want to see the alerts.
