@@ -11,13 +11,11 @@ ms.date: 12/15/2025
 
 When you enable Defender for Servers Plan 2 in Microsoft Defender for Cloud, you receive 500 MB of free data ingestion per node daily.
 
-- The 500 MB/day allowance applies to each machine for specific security data types collected by Defender for Cloud.
-- Defender for Cloud calculates data ingestion daily for each machine and workspace.
-- The total daily free limit equals the number of machines × 500 MB.
-- Defender for Cloud averages the allowance across all machines in the subscription each day.
-- You aren’t charged extra if the total remains within the daily free limit, even if some machines send 100 MB and others send 800 MB.
+- The total daily data allowance granted equals the number of machines × 500 MB.
+- The daily data allowance is applied at the subscription level, not per machine.
+- You aren’t charged for ingestion as long as the total data ingested across all machines in the subscription remains within the daily allowance, even if individual machines ingest more than 500 MB.
 - The benefit is applied to the Log Analytics workspace where the machine reports.
-- The benefit doesn't appear on your invoice because it has zero cost. You can see it in the product UI and in Microsoft Cost Management exports. Learn how to  [view your data allocation benefits](/azure/azure-monitor/fundamentals/cost-usage#view-data-allocation-benefits).
+- The benefit doesn't appear on your invoice because it has zero cost. You can see it in the product UI and in Microsoft Cost Management exports. Learn how to [view your data allocation benefits](/azure/azure-monitor/fundamentals/cost-usage#view-data-allocation-benefits).
 
 ## How the data ingestion benefit is applied
 
