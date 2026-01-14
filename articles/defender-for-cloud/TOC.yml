@@ -1500,6 +1500,9 @@
         - name: Code reachability analysis
           DisplayName: Code reachability analysis, reachable vulnerabilities
           href: episode-sixty.md
+        - name: Kubernetes lateral movement
+          DisplayName: Kubernetes lateral movement, Kubernetes RBAC, attack paths
+          href: episode-sixty-one.md
         - name: Agentless code scanning
           DisplayName: Agentless code scanning
           href: episode-sixty-three.md
