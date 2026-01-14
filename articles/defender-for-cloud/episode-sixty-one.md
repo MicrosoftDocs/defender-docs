@@ -32,4 +32,4 @@ ms.date: 03/17/2025
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Kubernetes gated deployment](episode-sixty-two.md)
+> [AWS connector](episode-one.md)
