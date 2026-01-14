@@ -6,14 +6,13 @@ ms.subservice: unified-security-operations
 ms.author: monaberdugo
 author: mberdugo
 ms.localizationpriority: medium
-manager: orspodek
+ms.reviewer: Tomas Beerthuis
 audience: ITPro
 ms.collection: 
 - m365-security
-- highpri
 - tier1
 ms.topic: concept-article
-ms.date: 07/31/2025
+ms.date: 1/14/2026
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
