@@ -66,7 +66,7 @@ Follow the steps below to use the standalone ClientAnalyzer binary
 1. Verify the download:
 
     ```bash
-    echo '042692269A7208AB30B4355A6FC1CD0A25FE59356D96CCD2E7F1F61DF9B4B85D XMDEClientAnalyzerBinary.zip' | sha256sum -c
+    echo '0C8F010D09557478E0CF626D439D5F7EAB1F6C7EEFF69FF1E98A7289520983E1 XMDEClientAnalyzerBinary.zip' | sha256sum -c
     ```
 
 1. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine.
@@ -146,7 +146,7 @@ To run this client analyzer follow these steps:
 1. Verify the download:
 
     ```bash
-    echo '9F29043CD3034DD4DF30B0EA25B37B5EE7BE5D81D5848CF047F9842B76C831EA XMDEClientAnalyzerPython.zip' | sha256sum -c
+    echo '62F92CD9D191063663FBAC7B29E1C967C8F9A30B9B769DA5E968FC4276C1F030 XMDEClientAnalyzerPython.zip' | sha256sum -c
     ```
 
 1. Extract the contents of `XMDEClientAnalyzer.zip` on the machine:
