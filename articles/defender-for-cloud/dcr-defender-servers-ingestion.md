@@ -53,14 +53,14 @@ Before you create a custom DCR, make sure:
 1. Select **+ Add data source**.
 
 1. For **Data source type**, select **Windows Event Logs** and choose **Basic** or **Custom**:        
-  - **Basic:**
-    - Under **Security**, select **Audit success** and/or **Audit failure** to send Windows Security events to the `SecurityEvent` table. 
-    - Optionally, select **Application** or **System** event logs to collect additional events. These events are sent to the `Event` table and are billed as regular ingestion. They aren’t covered by the Defender for Servers ingestion benefit.
-  - **Custom**:
-    - Enter an XPath query under **Use XPath queries to filter event logs and limit data collection**. 
-      For example, `Security!*[System[(EventID=4624 or EventID=4625 or EventID=4688)]]`
+    - **Basic:**
+        - Under **Security**, select **Audit success** and/or **Audit failure** to send Windows Security events to the `SecurityEvent` table. 
+        - If needed select **Application** or **System** event logs to collect additional events. These events are sent to the `Event` table and are billed as regular ingestion. They aren’t covered by the Defender for Servers ingestion benefit.
+    - **Custom**:
+        - Enter an XPath query under **Use XPath queries to filter event logs and limit data collection**. 
+          For example, `Security!*[System[(EventID=4624 or EventID=4625 or EventID=4688)]]`
 
-      :::image type="content" source="media/data-ingestion-benefit/add-data-source-window.png" alt-text="Add data source window in the Create Data Collection Rule wizard showing Windows Event Logs selected with Basic/Custom options.":::
+          :::image type="content" source="media/data-ingestion-benefit/add-data-source-window.png" alt-text="Add data source window in the Create Data Collection Rule wizard showing Windows Event Logs selected with Basic/Custom options.":::
 
 1. Select **Add**.
 
