@@ -1173,5 +1173,5 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 - Performance improvements & Product improvements
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
