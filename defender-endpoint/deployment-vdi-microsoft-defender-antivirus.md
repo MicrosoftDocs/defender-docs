@@ -4,8 +4,8 @@ description: Get an overview of how to configure Microsoft Defender Antivirus in
 ms.localizationpriority: medium
 ms.date: 10/20/2025
 ms.topic: how-to
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.custom: nextgen
 ms.reviewer: jesquive
 manager: bagol

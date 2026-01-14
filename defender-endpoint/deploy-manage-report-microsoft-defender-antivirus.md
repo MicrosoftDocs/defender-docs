@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 10/20/2025
 ms.topic: install-set-up-deploy
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.custom: nextgen
 ms.reviewer: pahuijbr
 manager: bagol

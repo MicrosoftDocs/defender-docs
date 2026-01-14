@@ -8,7 +8,7 @@ author: chrisda
 ms.author: chrisda
 manager: bagol
 ms.localizationpriority: medium
-ms.date: 11/10/2025
+ms.date: 01/08/2026
 audience: ITPro
 ms.collection:
   - m365-security
@@ -38,6 +38,12 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Endpoint](/defender-endpoint/whats-new-in-microsoft-defender-endpoint)
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
+
+## January 2026
+
+- **Block communication from sender email address and domains in Teams**: Admins can directly block malicious domains and email addresses from within the Microsoft Defender portal, seamlessly adding targeted entries to the Teams Admin Center (TAC) blocked domains and users list. This capability enables near real-time protection. When suspicious or abusive external organizations are identified, SOC teams can immediately block them, effectively halting new external chat messages, invites, and channel communications from those domains and senders while deleting existing ones.
+
+- **Expanding ZAP and Teams Admin quarantine to Plan 1**: Zero-hour-auto-purge (ZAP) and Teams Admin quarantine is available to Microsoft Defender for Plan 1 by default, bringing post-delivery protection layer.  
 
 ## October 2025
 
@@ -266,7 +272,7 @@ For more information on what's new with other Microsoft Defender security produc
 - **Anti-spoofing enhancement for internal domains and senders:**
   - For spoofing protection, the allowed senders or domains defined in the [anti-spam policy](anti-spam-policies-configure.md) and within user allowlists must now pass email authentication for the allowed messages to be honored. The change only affects messages that are considered to be internal (the sender or sender's domain is in an accepted domain in the organization). All other messages continue to be handled as they are today.
 
-- **Automatic redirection from Office action center to unified action center:** The action center in the Email & Collaboration section **Email & Collaboration** > **Review** > **Action center** <https://security.microsoft.com/threatincidents> is automatically redirected to **Actions & Submissions** \> **Action center** \> **History** <https://security.microsoft.com/action-center/history>.
+- **Automatic redirection from Office action center to unified action center:** The action center in the Email & Collaboration section **Email & collaboration** > **Review** > **Action center** <https://security.microsoft.com/threatincidents> is automatically redirected to **Actions & Submissions** \> **Action center** \> **History** <https://security.microsoft.com/action-center/history>.
 
 - **Automatic redirection from Office 365 Security & Compliance Center to Microsoft Defender portal:** Automatic redirection begins for users accessing the security solutions in Office 365 Security & Compliance center (protection.office.com) to the appropriate solutions in Microsoft Defender portal (security.microsoft.com). This change is for all security workflows like (for example, Alerts, Threat Management, and Reports).
 

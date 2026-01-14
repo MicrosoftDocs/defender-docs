@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.subservice: onboard
 f1.keywords:
 - NOCSH
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -132,6 +132,13 @@ As device discovery uses passive methods to discover devices in the network, any
 ## How frequent is the active probing?
 
 Devices will actively be probed when changes in device characteristics are observed to make sure the existing information is up to date (typically, devices probed no more than once in a three-week period)
+
+## Are non-onboarded devices removed after a period of time?
+
+A non-onboarded device remains in the Defender portal (for more than 180 days), if one of these conditions are met:
+
+- The device is discovered by an onboarded endpoint on the same network
+- The device is discovered by an OT sensor
 
 ## My security tool raised alert on UnicastScanner.ps1 / PSScript_{GUID}.ps1 or port scanning activity initiated by it. What should I do?
 

@@ -2,8 +2,8 @@
 title: Deploy and manage device control manually
 description: Learn how to use device control policies manually.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 ms.reviewer: joshbregman
 manager: bagol
 ms.localizationpriority: medium

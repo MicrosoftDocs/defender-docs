@@ -56,15 +56,15 @@ You can use [Group Policy](/windows/win32/srvnodes/group-policy?redirectedfrom=M
 
 1. On your Group Policy management machine, open the **Group Policy Management Console**, right-click the **Group Policy Object** (GPO) you want to configure and select **Edit**.
 
-2. Using the Group Policy Management Editor go to **Computer configuration**.
+1. Using the Group Policy Management Editor go to **Computer configuration**.
 
-3. Select **Administrative templates**.
+1. Select **Administrative templates**.
 
-4. Expand the tree to **Windows components** > **Microsoft Defender Antivirus**.
+1. Expand the tree to **Windows components** > **Microsoft Defender Antivirus**.
 
-5. Expand the section (referred to as **Location** in the table in this article) that contains the setting you want to configure, double-click the setting to open it, and make configuration changes.
+1. Expand the section (referred to as **Location** in the table in this article) that contains the setting you want to configure, double-click the setting to open it, and make configuration changes.
 
-6. [Deploy the updated GPO as you normally do](https://msdn.microsoft.com/library/ee663280(v=vs.85).aspx).
+1. [Deploy the updated GPO as you normally do](https://msdn.microsoft.com/library/ee663280(v=vs.85).aspx).
 
 ## Intune
 

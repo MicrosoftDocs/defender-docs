@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint on Linux
 ms.reviewer: gopkr, pahuijbr, megphapriya
 description: Describes how to install and use Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro

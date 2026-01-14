@@ -72,7 +72,7 @@ The configuration analyzer also checks the following non-policy settings:
 
 ## Use the configuration analyzer in the Microsoft Defender portal
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Configuration analyzer** in the **Templated policies** section. To go directly to the **Configuration analyzer** page, use <https://security.microsoft.com/configurationAnalyzer>.
+In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Configuration analyzer** in the **Templated policies** section. To go directly to the **Configuration analyzer** page, use <https://security.microsoft.com/configurationAnalyzer>.
 
 The **Configuration analyzer** page has three main tabs:
 

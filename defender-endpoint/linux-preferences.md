@@ -3,8 +3,8 @@ title: Configure security settings in Microsoft Defender for Endpoint on Linux
 ms.reviewer: gopkr, ardeshmukh
 description: Describes how to configure Microsoft Defender for Endpoint on Linux in enterprises.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 ms.date: 05/09/2025
 manager: bagol
@@ -1062,9 +1062,9 @@ When you run the `mdatp health` command for the first time, the value for the ta
   
 1. Open the configuration profile from the path `/etc/opt/microsoft/mdatp/managed/mdatp_managed.json`.
 
-2. Go down to the bottom of the file, where the `cloudService` block is located.
+1. Go down to the bottom of the file, where the `cloudService` block is located.
 
-3. Add the required tag or group ID as following example at the end of the closing curly bracket for the `cloudService`.
+1. Add the required tag or group ID as following example at the end of the closing curly bracket for the `cloudService`.
 
    ```JSON
    },

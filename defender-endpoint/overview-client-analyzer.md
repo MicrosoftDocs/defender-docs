@@ -4,8 +4,8 @@ description: Troubleshoot sensor health on devices to identify potential configu
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
 manager: bagol

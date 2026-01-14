@@ -3,8 +3,8 @@ title: Create indicators based on certificates
 ms.reviewer:
 description: Create indicators based on certificates that define the detection, prevention, and exclusion of entities.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -57,15 +57,15 @@ It's important to understand the following requirements before creating indicato
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Indicators** (under **Rules**).
 
-2. Select **Add indicator**.
+1. Select **Add indicator**.
 
-3. Specify the following details:
+1. Specify the following details:
 
    - **Indicator**: Specify the entity details and define the expiration of the indicator.
    - **Action**: Specify the action to be taken and provide a description.
    - **Scope**: Define the scope of the machine group.
 
-4. Review the details on the **Summary** tab, and then select **Save**.
+1. Review the details on the **Summary** tab, and then select **Save**.
 
 ## Related articles
 

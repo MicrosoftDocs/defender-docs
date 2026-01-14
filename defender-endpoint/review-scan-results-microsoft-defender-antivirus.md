@@ -3,8 +3,8 @@ title: Review the results of Microsoft Defender Antivirus scans
 description: Review the results of scans using Microsoft Endpoint Configuration Manager, Microsoft Intune, or the Windows Security app
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: yongrhee
 manager: bagol
 ms.custom: nextgen
@@ -41,7 +41,7 @@ To view the scan results using Microsoft Defender XDR Endpoint, follow the below
 
 1. Sign in to [Microsoft Defender portal](https://security.microsoft.com)
 
-2. Go to **Incidents & alerts** \> **Alerts**.
+1. Go to **Incidents & alerts** \> **Alerts**.
 
    You can view the scanned results under **Alerts**.
 
