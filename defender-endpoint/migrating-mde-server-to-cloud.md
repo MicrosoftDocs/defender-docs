@@ -112,5 +112,5 @@ In case you have devices running Windows Server 2012 R2 or Windows Server 2016, 
 - [Defender for Cloud: Remediate Defender for Endpoint misconfigurations (agentless)](/azure/defender-for-cloud/endpoint-detection-misconfiguration)
 - [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
