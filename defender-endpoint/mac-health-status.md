@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot agent health issues with Defender for Endpoint on macOS 
 description: Investigate macOS Defender agent health issues
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.reviewer: lianx; joshbregman
 manager: bagol
 ms.localizationpriority: medium

@@ -2,8 +2,8 @@
 title: How to schedule scans with Microsoft Defender for Endpoint on macOS
 description: Learn how to schedule an automatic scanning time for Microsoft Defender for Endpoint in macOS to better protect your organization's assets.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
 manager: bagol
 ms.localizationpriority: medium
@@ -145,7 +145,7 @@ The following code shows the schema you need to use to schedule scans according 
 </plist>
 ```
 
-2. Save the file as `com.microsoft.wdav.mobileconfig`.
+1. Save the file as `com.microsoft.wdav.mobileconfig`.
 
 #### For JamF and other 3rd-party MDMs
 
@@ -184,9 +184,9 @@ The following code shows the schema you need to use to schedule scans according 
 </plist> 
 ```
 
-2. Save the file as `com.microsoft.wdav.plist`.
+1. Save the file as `com.microsoft.wdav.plist`.
 
-3. Check that the scheduled scan is configured via a "Set Preference"
+1. Check that the scheduled scan is configured via a "Set Preference"
      
      ```
      mdatp health --details scheduled_scan
@@ -277,7 +277,7 @@ In the following example, an hourly quick scan will run every 6 hours, a daily q
 </plist> 
 ```
 
-2. Save the file as `com.microsoft.wdav.mobileconfig`.
+1. Save the file as `com.microsoft.wdav.mobileconfig`.
 
 #### For JamF and other 3rd-party MDMs
 
@@ -320,9 +320,9 @@ In the following example, an hourly quick scan will run every 6 hours, a daily q
 </plist> 
 ```
 
-2. Save the file as `com.microsoft.wdav.plist`.
+1. Save the file as `com.microsoft.wdav.plist`.
 
-3. Check that the scheduled scan is configured via a "Set Preference"
+1. Check that the scheduled scan is configured via a "Set Preference"
      
      ```
      mdatp health --details scheduled_scan

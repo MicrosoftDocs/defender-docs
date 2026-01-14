@@ -4,8 +4,8 @@ description: Learn how to use the client analyzer to collect data for complex tr
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
 manager: bagol

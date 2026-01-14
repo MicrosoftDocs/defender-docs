@@ -53,6 +53,7 @@ The following table lists the app governance templates supported to generate ale
 
 |Template name|Description|
 |---|---|
+|**Unused app**|Find apps that have not authenticated recently. This policy checks the following conditions: <ul><li>Last used: More than 90 days (customizable)</li></ul>|
 |**New app with high data usage**|Find newly registered apps that have uploaded or downloaded large amounts of data using Microsoft Graph and EWS APIs. This policy checks the following conditions: <ul><li>Registration age: Seven days or less (customizable)</li><li>Data usage: Greater than 1 GB in one day (customizable)</li></ul>|
 |**Increase in users**|Find apps with a sizable increase in the number of users. This policy checks the following conditions: <ul><li>Time range: Last 90 days</li><li>Increase in consenting users: At least 50% (customizable)</li></ul>|
 
@@ -78,7 +79,7 @@ The following table lists the app governance templates supported to generate ale
 
 Use a custom app policy when you need to do something not already done by one of the built-in templates.
 
-- To create a new custom app policy, first select **Create new policy** on the **Policies** page. On the **Choose App policy template page**, select the **Custom** category, the **Custom policy** template, and then select **Next**.
+1. To create a new custom app policy, first select **Create new policy** on the **Policies** page. On the **Choose App policy template page**, select the **Custom** category, the **Custom policy** template, and then select **Next**.
 
 1. On the **Name and description** page, configure the following settings:
    - Policy Name
@@ -125,6 +126,7 @@ Use a custom app policy when you need to do something not already done by one of
    |**Sensitivity labels accessed**|Select one or more sensitivity labels from the list|Apps that accessed data with specific sensitivity labels in the last 30 days.||
    |**Services accessed** (Graph only)|Exchange and/or OneDrive and/or SharePoint and/or Teams|Apps that have accessed OneDrive, SharePoint, or Exchange Online using Microsoft Graph and EWS APIs|Multiple selections allowed.|
    |**Error rate** (Graph only)|Error rate is greater than X% in the last seven days|Apps whose Graph API error rates in the last seven days are greater than a specified percentage||
+   |**Last used**|Within last X days|Apps that have not authenticated within a specified period from the current date||
    |**App origin**|External or Internal|Apps that originated within the tenant or registered in an external tenant||
    
       All of the specified conditions must be met for this app policy to generate an alert.
@@ -176,9 +178,9 @@ Policies for OAuth apps trigger alerts only on policies that are authorized by u
 
 3. You might want to set the policy based on the group memberships of the users who authorized the apps. For example, an admin can decide to set a policy that revokes uncommon apps if they ask for high permissions, only if the user who authorized the permissions is a member of the Administrators group.
 
-For example:
-
-![new OAuth app policy.](media/app-permissions-policy.png)
+   For example:
+    
+    ![new OAuth app policy.](media/app-permissions-policy.png)
 
 ### Anomaly detection policies for OAuth apps connected to Salesforce and Google Workspace
 
@@ -188,7 +190,6 @@ This section is only relevant for Salesforce and Google Workspace applications.
 
 > [!NOTE]
 > Anomaly detection policies are only available for OAuth apps that are authorized in your Microsoft Entra ID.
->
 > The severity of OAuth app anomaly detection policies can't be modified.
 
 The following table describes the out-of-the-box anomaly detection policies provided by Defender for Cloud Apps:

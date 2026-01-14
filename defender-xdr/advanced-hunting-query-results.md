@@ -36,7 +36,7 @@ While you can construct your [advanced hunting](advanced-hunting-overview.md) qu
 - [Export tables and charts](#export-tables-and-charts)
 - [Drill down to detailed entity information](#drill-down-from-query-results)
 - [Tweak your queries directly from the results](#tweak-your-queries-from-the-results)
-- [View timeline of events](#automatic-timeline-rendering-preview)
+- [View timeline of events](#automatic-timeline-rendering)
 
 ## View query results as a table or chart
 
@@ -174,28 +174,28 @@ Select the three dots to the right of any column in the **Inspect record** panel
 - Exclude the selected value from the query (`!=`)
 - Get more advanced operators for adding the value to your query, such as `contains`, `starts with`, and `ends with`
 
-:::image type="content" source="/defender/media/work-with-query-tweak-query.png" alt-text="Screenshot of the Action Type pane on the Inspect record page in the Microsoft Defender portal." lightbox="/defender/media/work-with-query-tweak-query.png":::
+:::image type="content" source="media/advanced-hunting-query-results/work-with-query-tweak-query.png" alt-text="Screenshot of the Action Type pane on the Inspect record page in the Microsoft Defender portal." lightbox="media/advanced-hunting-query-results/work-with-query-tweak-query.png":::
 
 ## Add items to Favorites
 
 You can add your frequently used schemas, functions, queries, and detection rules to the Favorites section of each tab in the advanced hunting page for quick access.
 
-:::image type="content" source="media/faves-1.png" alt-text="Screenshot of the advanced hunting page with the Favorites section highlighted." lightbox="media/faves-1.png":::
+:::image type="content" source="media/advanced-hunting-query-results/faves-1.png" alt-text="Screenshot of the advanced hunting page with the Favorites section highlighted." lightbox="media/advanced-hunting-query-results/faves-1.png":::
 
 For instance, to add `AlertInfo` to your **Favorites**, go to the **Schema** tab, and select the three dots to the right of the table and select **Add to favorites**. 
 
-:::image type="content" source="media/faves-2.png" alt-text="Screenshot of the Add to Favorites option in the advanced hunting page." lightbox="media/faves-2.png":::
+:::image type="content" source="media/advanced-hunting-query-results/faves-2.png" alt-text="Screenshot of the Add to Favorites option in the advanced hunting page." lightbox="media/advanced-hunting-query-results/faves-2.png":::
 
 A notification appears to inform you that the item was successfully added to Favorites.
 
-![Screenshot of notification that a new item was added to Favorites in advanced hunting.](media/faves-3.png)
+![Screenshot of notification that a new item was added to Favorites in advanced hunting.](media/advanced-hunting-query-results/faves-3.png)
 
 You can do the same for your saved functions, queries, and custom detections in their respective Favorites sections right under each tab (**Functions**, **Queries**, and **Detection Rules**).
 
 > [!NOTE]
 > Some tables in this article might not be available at Microsoft Defender for Endpoint. [Turn on Microsoft Defender XDR](m365d-enable.md) to hunt for threats using more data sources. You can move your advanced hunting workflows from Microsoft Defender for Endpoint to Microsoft Defender XDR by following the steps in [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).
 
-## Automatic timeline rendering (preview)
+## Automatic timeline rendering
 
 By default, a timeline appears above the advanced hunting results that displays event counts over time. The timeline is automatically rendered based on the `Timestamp` or `timeGenerated` column in the query results. It automatically updates when you apply filters and can help you quickly identify abnormal behavior and trends and focus on interesting results.
 
@@ -251,7 +251,7 @@ You can change the chart type of the timeline by selecting a different option fr
 - Column chart
 - Pie chart
 
-:::image type="content" source="/defender/media/advanced-hunting-column-chart.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with the results displayed in a column chart." lightbox="/defender/media/advanced-hunting-column-chart.png":::
+:::image type="content" source="media/advanced-hunting-query-results/advanced-hunting-column-chart.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with the results displayed in a column chart." lightbox="media/advanced-hunting-query-results/advanced-hunting-column-chart.png":::
 
 ### Rendering conditions
 

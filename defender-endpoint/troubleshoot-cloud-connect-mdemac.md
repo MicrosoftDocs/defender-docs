@@ -2,8 +2,8 @@
 title: Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on macOS
 description: This article describes how to troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on macOS
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
 ms.localizationpriority: medium
 manager: bagol
