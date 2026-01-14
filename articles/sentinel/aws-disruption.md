@@ -8,7 +8,7 @@ ms.date: 01/13/2026
 ms.topic: how-to
 ---
 
-# Enable Attack Disruption Actions on AWS with Microsoft Sentinel
+# Enable Attack Disruption Actions on AWS with Microsoft Sentinel (Preview)
 
 ## Overview
 
