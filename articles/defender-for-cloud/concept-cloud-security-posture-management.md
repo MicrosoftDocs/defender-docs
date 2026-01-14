@@ -47,7 +47,7 @@ For specific regional availability and government cloud support details, see the
 | [Agentless discovery for Kubernetes](concept-agentless-containers.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP |
 | [Agentless VM secrets scanning](secrets-scanning-servers.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP |
 | [Agentless VM vulnerability scanning](enable-agentless-scanning-vms.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP |
-| [AI security posture management](ai-security-posture.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS |
+| [AI security posture management](ai-security-posture.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP |
 | [API security posture management](api-security-posture-overview.md)| - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
 | [Attack path analysis](how-to-manage-attack-path.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP, Docker Hub, JFrog Artifactory |
 | [Azure Kubernetes Service security dashboard (Preview)](cluster-security-dashboard.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
