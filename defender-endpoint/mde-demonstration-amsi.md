@@ -11,7 +11,7 @@ audience: ITPro
 ms.collection: 
 - m365-security
 ms.topic: how-to
-ms.date: 10/20/2025
+ms.date: 01/14/2026
 search.appverid: met150
 ms.custom: 
 - partner-contribution
@@ -26,7 +26,7 @@ appliesto:
 
 Microsoft Defender for Endpoint utilizes the [Antimalware Scan Interface (AMSI)](/defender-endpoint/amsi-on-mdav) to enhance protection against fileless malware, dynamic script-based attacks, and other nontraditional cyber threats. In this article, we describe how to test the AMSI engine with a benign sample.
 
-## Prerequsites
+## Prerequisites
 
 - Microsoft Defender Antivirus (as primary) and these capabilities need to be enabled:
   - Real-Time Protection (RTP) 
@@ -113,7 +113,7 @@ In this demonstration article, you have two engine choices to test AMSI:
     Source: Microsoft VBScript runtime error
    ```
 
-## Testing AMSI with Javascript
+## Testing AMSI with JavaScript
 
 
 1. Save the following JavaScript as `AMSI_jscript.js`:
