@@ -69,4 +69,4 @@ To configure GCP Cloud Logging:
 ## Next step
 
 > [!div class="nextstep"]
-> 
+> [Security alerts and incidents](alerts-overview.md)
