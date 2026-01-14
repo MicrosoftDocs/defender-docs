@@ -25,8 +25,6 @@ Before you begin, ensure the following:
   See: [Connect Microsoft Sentinel to Amazon Web Services to ingest AWS service log data](./connect-aws.md)
 - Appropriate IAM roles and permissions are configured in AWS to allow Sentinel to perform actions on IAM accounts.
 
-------------------------------------------------------------------------
-
 ## Step 1: Prepare AWS for Integration
 
 ### 1.1 Create a Dedicated IAM Role for Sentinel
