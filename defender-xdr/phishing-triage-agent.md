@@ -106,15 +106,12 @@ Make sure you have the [permissions required](#permissions-required) and all [pr
 
 ### Begin setup
 
-You can access the Phishing Triage Agent setup wizard in two ways:
+Open the Phishing Triage Agent setup wizard in one of two ways:
 
+- From the Security Store in the Microsoft Defender portal, as explained in [Deploy AI agents in Microsoft Defender](../defender-xdr/security-copilot-agents-defender.md#discover-and-deploy-agents-in-the-microsoft-defender-portal).
 - From the **Incidents** queue in the Microsoft Defender portal, select **Set up agent**.
 
    :::image type="content" source="media/phishing-triage-agent/phishing-triage-setup-incident.png" alt-text="Screenshot of the incident queue with the Phishing Triage card where Set up agent is highlighted." lightbox="media/phishing-triage-agent/phishing-triage-setup-incident.png":::
-
-- Alternatively, select **System > Settings > Microsoft Defender XDR > Phishing Triage Agent > Overview > Set up** to start the process.
-
-   :::image type="content" source="media/phishing-triage-agent/phishing-triage-setup.png" alt-text="Screenshot of the Overview page for the Phishing Triage set up." lightbox="media/phishing-triage-agent/phishing-triage-setup.png":::  
 
 ### Assign the agent’s identity and permissions
 
