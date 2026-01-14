@@ -66,7 +66,7 @@
               href: quickstart-onboard-gcp.md
             - name: Configure GCP plans
               displayName: GCP, plans, configure
-              href: configure-gcp-plans.md
+              href: configure-google-plans.md
             - name: Ingest GCP logging
               displayName: GCP, logging, ingest
               href: logging-ingestion.md
