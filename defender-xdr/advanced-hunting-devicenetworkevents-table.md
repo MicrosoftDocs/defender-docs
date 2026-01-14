@@ -6,8 +6,8 @@ ms.service: defender-xdr
 ms.pagetype: security
 f1.keywords: 
   - NOCSH
-ms.author: dansimp
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro

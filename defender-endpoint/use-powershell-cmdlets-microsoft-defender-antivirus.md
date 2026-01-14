@@ -3,8 +3,8 @@ title: Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus
 description: In Windows 10 and Windows 11, you can use PowerShell cmdlets to run scans, update Security intelligence, and change settings in Microsoft Defender Antivirus.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.custom: nextgen
 ms.date: 10/20/2025
 ms.reviewer: yongrhee
@@ -50,8 +50,8 @@ PowerShell is typically installed under the folder `%SystemRoot%\system32\Window
 ## Use Microsoft Defender Antivirus PowerShell cmdlets
 
 1. In the Windows search bar, type **powershell**.
-2. Select **Windows PowerShell** from the results to open the interface.
-3. Enter the PowerShell command and any parameters.
+1. Select **Windows PowerShell** from the results to open the interface.
+1. Enter the PowerShell command and any parameters.
 
 > [!NOTE]
 > You may need to open PowerShell in administrator mode. Right-click the item in the Start menu, click **Run as administrator** and click **Yes** at the permissions prompt.

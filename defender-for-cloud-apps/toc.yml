@@ -420,7 +420,7 @@ items:
       href: app-governance-manage-alerts.md
   - name: Secure apps and other assets
     items:
-    - name: Secure apps accessing non-Graph APIs
+    - name: Secure apps accessing non-Graph APIs using app governance
       href: app-governance-secure-apps-access-non-graph-api.md
     - name: Secure apps with app hygiene features
       href: app-governance-secure-apps-app-hygiene-features.md
@@ -428,7 +428,7 @@ items:
       href: app-activity-threat-hunting.md
   - name: App governance FAQ
     href: app-governance-faq.yml
-- name: Protect AI agents
+- name: Protect AI agents (Preview)
   items:
   - name: Overview
     href: ai-agent-protection.md

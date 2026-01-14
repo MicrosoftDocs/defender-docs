@@ -5,7 +5,7 @@ search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: reference
 ms.author: lwainstein
-author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 ms.date: 04/04/2025
 manager: bagol

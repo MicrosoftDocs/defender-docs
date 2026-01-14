@@ -62,7 +62,7 @@ The rest of this article how to configure preset security policies.
 
 ## Use the Microsoft Defender portal to assign Standard and Strict preset security policies to users
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Preset Security Policies** in the **Templated policies** section. Or, to go directly to the **Preset security policies** page, use <https://security.microsoft.com/presetSecurityPolicies>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Preset Security Policies** in the **Templated policies** section. Or, to go directly to the **Preset security policies** page, use <https://security.microsoft.com/presetSecurityPolicies>.
 
 2. During your first visit to the **Preset security policies** page, it's likely that **Standard protection** and **Strict protection** are turned off :::image type="icon" source="media/scc-toggle-off.png" border="false":::.
 
@@ -195,7 +195,7 @@ To disable the **Standard protection** or **Strict protection** preset security 
 >
 > <u>The **Built-in protection** preset security policy doesn't affect recipients who are defined in the **Standard** or **Strict** preset security policies, or in custom Safe Links or Safe Attachments policies</u>. Therefore, we typically don't recommend exceptions to the **Built-in protection** preset security policy, unless you want to exclude users who aren't eligible for Safe Links and Safe Attachments protections (users who lack Defender for Office 365 licenses).
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Preset Security Policies** in the **Templated policies** section. Or, to go directly to the **Preset security policies** page, use <https://security.microsoft.com/presetSecurityPolicies>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Preset Security Policies** in the **Templated policies** section. Or, to go directly to the **Preset security policies** page, use <https://security.microsoft.com/presetSecurityPolicies>.
 
 2. On the **Preset security policies** page, select **Add exclusions (not recommended)** in the **Built-in protection** section.
 

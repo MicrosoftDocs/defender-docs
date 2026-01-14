@@ -12,7 +12,7 @@ This article describes the requirements for installing the Microsoft Defender fo
 
 ## Sensor version limitations 
 
-Before activating the Defender for Identity sensor v3.x, keep these limitations in mind before activating the sensor.
+Before activating the Defender for Identity sensor v3.x, keep these considerations in mind before activating the sensor.
 The Defender for Identity sensor v3.x:
 - Requires that Defender for Endpoint is deployed and that the Microsoft Defender Antivirus component is running in either active mode or passive mode.
  - Can't be activated on a server that has a Defender for Identity sensor V2.x already deployed.
@@ -23,7 +23,14 @@ The Defender for Identity sensor v3.x:
 
 Deploying Defender for Identity requires one of the following Microsoft 365 licenses:
 
-[!INCLUDE [licenses](../includes/licenses.md)]
+Enterprise Mobility + Security E5 (EMS E5/A5)
+Microsoft 365 E5 (Microsoft E5/A5/G5)
+Microsoft 365 E5/A5/G5/F5* Security
+Microsoft 365 F5 Security + Compliance*
+
+* Both F5 licenses require Microsoft 365 F1/F3 or Office 365 F3 and Enterprise Mobility + Security E3.
+
+You can purchase licenses in the Microsoft 365 portal, or with Cloud Solution Partner (CSP) licensing.
 
 For more information, see [Licensing and privacy FAQs](/defender-for-identity/technical-faq#licensing-and-privacy).
 
@@ -62,7 +69,7 @@ The following table describes memory requirements on the server used for the Def
 > [!IMPORTANT]
 > When running as a virtual machine, all memory must be allocated to the virtual machine at all times.
 
-## Configure RPC on V3.x sensors to support advanced identity detections
+## Configure RPC auditing on sensors v3.x to support advanced identity detections
 
 Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability on the machine, improving security visibility and unlocking additional identity detections. Once applied, the configuration is enforced on **existing and future devices** that match the rule criteria. The tag itself is visible in the Device Inventory, providing admins with transparency and auditing capabilities.
 
@@ -79,9 +86,9 @@ Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability o
    
    1. Set **rule conditions** using `Device name`, `Domain`, or `Device tag` to target the desired machines.
    
-   1. Ensure that the **Defender for Identity V3.x sensor** is already deployed on the selected devices.
+   1. Ensure that the **Defender for Identity sensor v3.x** is already deployed on the selected devices.
     
-   1. Matching should primarily target **domain controllers** with the V3.x sensor installed.
+   1. Matching should primarily target **domain controllers** with the sensor v3.x installed.
     
 1. **Add the tag** `Unified Sensor RPC Audit` to the selected devices.    
 
@@ -97,22 +104,14 @@ Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability o
 
 Learn more about Asset Management Rule [here](/defender-xdr/configure-asset-rules).
 
-## Configure Windows auditing
+## Configure Windows event auditing
+Defender for Identity uses Windows event log entries to detect specific activities. This data is used in various detection scenarios and can be used in advanced hunting queries. For optimal protection and monitoring, make sure that collection of windows events is properly configured.
 
-Defender for Identity detections rely on specific Windows Event Log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications.
+See [Configure Defender for Identity to collect Windows events automatically (Preview)](configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically-preview).
 
-Configure Windows event collection on your domain controller to support Defender for Identity detections. For more information, see [Event collection with Microsoft Defender for Identity](event-collection-overview.md) and [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
+If you do not select automatic Windows auditing configuration, you must [configure Windows event auditing manually](configure-windows-event-collection.md#configure-windows-event-collection-manually) or [using PowerShell](configure-windows-event-collection.md#configure-windows-event-collection-using-powershell). 
 
-You might want to use the Defender for Identity PowerShell module to configure the required settings. For example, the following command defines all settings for the domain, creates group policy objects, and links them.
-
-```powershell
-Set-MDIConfiguration -Mode Domain -Configuration All
-```
-For more information, see:
-- [DefenderForIdentity Module](/powershell/module/defenderforidentity/)
-- [Defender for Identity in the PowerShell Gallery](https://www.powershellgallery.com/packages/DefenderForIdentity/)
  
-
 ## Test your prerequisites
 
 We recommend running the [*Test-MdiReadiness.ps1*](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script to test and see if your environment has the necessary prerequisites.
@@ -120,4 +119,4 @@ We recommend running the [*Test-MdiReadiness.ps1*](https://github.com/microsoft/
 The *Test-MdiReadiness.ps1* script is also available from Microsoft Defender XDR, on the **Identities > Tools** page (Preview).
 
 ## Next step
-[Plan capacity for Microsoft Defender for Identity](capacity-planning.md)
+[Activate the Microsoft Defender for Identity sensor](activate-sensor.md)

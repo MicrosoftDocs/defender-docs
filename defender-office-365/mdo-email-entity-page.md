@@ -491,7 +491,7 @@ The following actions are available at the top of the Email entity page:
 ² You can preview or download email messages that are available in cloud mailboxes. Examples of when messages are no longer available in mailboxes include:
 
 - The message was dropped before delivery or delivery failed.
-- The message was _hard deleted_.
+- The message was _soft deleted_ or _hard deleted_.
 - The message has a delivery location of _On-prem/External_.
 - ZAP moved the message to quarantine.
 

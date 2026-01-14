@@ -4,8 +4,8 @@ description: Learn how to manage, configure, Microsoft Defender Antivirus perfor
 ms.service: defender-endpoint
 ms.localizationpriority: high
 ms.topic: how-to
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: pricci, yongrhee
 manager: bagol
 ms.custom: nextgen02

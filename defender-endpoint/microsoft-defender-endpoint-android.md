@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint on Android
 ms.reviewer: denishdonga
 description: Describes how to install and use Microsoft Defender for Endpoint on Android
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -56,7 +56,7 @@ This article describes how to install, configure, update, and use Defender for E
 
 - Intune Company Portal app should be downloaded from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) and installed for seamless onboarding. Device enrollment is required for Intune device compliance policies to be enforced.
 
-- Mobile phones and tablets running Android 8.0 and above. **(Note: Microsoft Defender is ending support for Android 8, 8.1 and 9 versions on April 30, 2025, after that device running on Android version < 10 won't be supported)**
+- Mobile phones and tablets running Android 10.0 and above. 
 
 **What does it mean devices running on unsupported Android version?** 
 

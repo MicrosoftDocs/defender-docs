@@ -2,8 +2,8 @@
 title: Investigate an IP address associated with an alert
 description: Use the investigation options to examine possible communication between devices and external IP addresses.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -62,8 +62,8 @@ The **Prevalence** section displays how many devices have connected to this IP a
 **Investigate an external IP:**
 
 1. Enter the IP address in the **Search** field.
-2. Select the IP suggestion box and open the IP side panel.
-3. Select **Enter**.
+1. Select the IP suggestion box and open the IP side panel.
+1. Select **Enter**.
 
 Details about the IP address are displayed, including: registration details (if available), prevalence of devices in the organization that communicated with this IP Address (during selectable time period), and the devices in the organization that were observed communicating with this IP address.
 

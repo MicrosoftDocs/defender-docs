@@ -6,8 +6,8 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
-ms.author: dansimp
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -21,7 +21,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 03/28/2025
+ms.date: 11/27/2025
 ---
 
 # DeviceTvmSecureConfigurationAssessment
@@ -48,8 +48,8 @@ For information on other tables in the advanced hunting schema, see [the advance
 | `ConfigurationCategory` | `string` | Category or grouping to which the configuration belongs: Application, OS, Network, Accounts, Security controls |
 | `ConfigurationSubcategory` | `string` | Subcategory or subgrouping to which the configuration belongs. In many cases,  string describes specific capabilities or features. |
 | `ConfigurationImpact` | `real` | Rated impact of the configuration to the overall configuration score (1-10) |
-| `IsCompliant` | `boolean` | Indicates whether the configuration or policy is properly configured <br /> * A value of 1 is Compliant<br /> * A value of 0 is Not Compliant|
-| `IsApplicable` | `boolean` | Indicates whether the configuration or policy applies to the device <br /> * A value of 1 is Applicable<br /> * A value of 0 is Not Applicable |
+| `IsCompliant` | `boolean` | Indicates whether the configuration or policy is properly configured <br /> * A value of True is Compliant<br /> * A value of False is Not Compliant|
+| `IsApplicable` | `boolean` | Indicates whether the configuration or policy applies to the device <br /> * A value of True is Applicable<br /> * A value of False is Not Applicable |
 | `Context` | `dynamic` | Additional contextual information about the configuration or policy |
 | `IsExpectedUserImpact` | `boolean` | Indicates whether there will be user impact if the configuration or policy is applied |
 

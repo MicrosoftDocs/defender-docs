@@ -2,8 +2,8 @@
 title: Troubleshoot onboarding issues related to Security Management for Microsoft Defender for Endpoint
 description: Troubleshoot issues that might arise during the onboarding of devices using Security Management for Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro

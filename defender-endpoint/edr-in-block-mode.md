@@ -1,8 +1,8 @@
 ﻿---
 title: Endpoint detection and response in block mode
 description: Learn about endpoint detection and response in block mode
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 manager: bagol
 ms.reviewer: pahuijbr, kausd
 audience: ITPro
@@ -98,13 +98,13 @@ You can use Group Policy to enable EDR in block mode.
 
 1. Right-click the Group Policy Object you want to configure, and then select **Edit**.
 
-2. In the **Group Policy Management Editor** go to **Computer configuration** and then select **Administrative templates**.
+1. In the **Group Policy Management Editor** go to **Computer configuration** and then select **Administrative templates**.
 
-3. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Features**.
+1. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Features**.
 
-4. Double-click **Enable EDR in block mode** and set the option to **Enabled**.
+1. Double-click **Enable EDR in block mode** and set the option to **Enabled**.
 
-5. Select **OK**. 
+1. Select **OK**. 
 
 ## Requirements for EDR in block mode
 
