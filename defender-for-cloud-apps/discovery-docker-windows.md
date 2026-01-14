@@ -1,7 +1,7 @@
 ---
 title: Configure automatic log upload using on-premises Docker on Windows | Microsoft Defender for Cloud Apps
 description: This article describes the process configuring automatic log upload for continuous reports in Defender for Cloud Apps using a Docker on Windows in an on-premises server.
-ms.date: 08/05/2024
+ms.date: 01/14/2026
 ms.topic: how-to
 ---
 # Configure automatic log upload using on-premises Docker on Windows
