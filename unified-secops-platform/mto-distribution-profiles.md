@@ -56,8 +56,7 @@ To create a new distribution profile:
    |**Details**     | Enter a name and optional description for your content distribution profile.        |
    |**Assign tenants**     |    Select **Add tenant** to see a list of available tenants that you can add to your distribution profile, select the tenants you want to add, and then select **Add**.     |
    |**Select content type**     | Content types are all selected by default. Verify that the selection matches the content you want to distribute in this distribution profile.      |
-   |**Custom detection rules**     | Relevant only if you'd selected **Custom detection rules** in the **Select content type** page. <br><br>1. Select **Add content**.<br>2. In the **Select detection rules** side pane, select the rules that you want to add to the distribution profile, and then select **Add to distribution profile**.    |
-   |**Endpoint security policies**<br><br>**Analytics** or **Automation rules**<br><br>**Workbooks**      | 1. Select **Add content**. <br>2. Select the relevant that you want to add to the distribution profile, and then select **Add to distribution profile**.         |
+   |**Custom detection rules**<br><br>**Endpoint security policies**<br><br>**Analytics** or **Automation rules**<br><br>**Workbooks**      | 1. Select **Add content**. <br>2. Select the relevant content that you want to add to the distribution profile, and then select **Add to distribution profile**.         |
 
    At this point, you need to define your tenant's scope. Distribution profiles support a single scope for the entire profile, or separate scopes per content type. Scopes can be device groups, workspaces, or Microsoft Entra groups.
 
