@@ -34,7 +34,7 @@ Select the deployment scenario that meets your requirement:
 
 To configure GCP Cloud Logging:
 
-1. 1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Sign in to the [Azure portal](https://portal.azure.com).
  
 1. Search for and select **Microsoft Defender for Cloud**.
  
