@@ -113,6 +113,8 @@ Open the Phishing Triage Agent setup wizard in one of two ways:
 
    :::image type="content" source="media/phishing-triage-agent/phishing-triage-setup-incident.png" alt-text="Screenshot of the incident queue with the Phishing Triage card where Set up agent is highlighted." lightbox="media/phishing-triage-agent/phishing-triage-setup-incident.png":::
 
+Follow the steps in the setup wizard, as described in the sections below.
+
 ### Assign the agent’s identity and permissions
 
 The setup wizard walks you through assigning the agent an identity and the permissions required to do its work. 
