@@ -113,7 +113,7 @@ In this demonstration article, you have two engine choices to test AMSI:
     Source: Microsoft VBScript runtime error
    ```
 
-## Testing AMSI with JavaScript
+### Testing AMSI with JavaScript
 
 
 1. Save the following JavaScript as `AMSI_jscript.js`:
