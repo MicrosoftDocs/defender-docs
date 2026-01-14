@@ -29,7 +29,7 @@ For updates about versions and features released six months ago or earlier, see 
 Enhanced RPC auditing is required for some Microsoft Defender for Identity advanced identity detections. A new health alert helps identify v3.x sensors where this configuration is either missing or incorrectly applied. The alert is being rolled out gradually to customers. For details, see /deploy/prerequisites-sensor-version-3?#configure-rpc-on-v3x-sensors-to-support-advanced-identity-detections
 
 ### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x (preview)
-We’re gradually rolling out automatic Windows event-auditing configuration for sensors v3.x, along with related health alerts. This update streamlines deployment by automatically applying the required auditing settings to new sensors and correcting misconfigurations on existing ones. For more information see [Configure automatic windows auditing](/deploy/configure-windows-event-collection?#configure-windows-event-auditing-with-the-defender-for-identity-sensor-v3x).
+We’re gradually rolling out automatic Windows event-auditing configuration for sensors v3.x, along with related health alerts. This update streamlines deployment by automatically applying the required auditing settings to new sensors and correcting misconfigurations on existing ones. For more information see [Configure automatic windows auditing](/deploy/configure-windows-event-collection#configure-windows-event-auditing-with-the-defender-for-identity-sensor-v3x-preview).
 
 |Version number|Updates|
 |---|---|
