@@ -78,11 +78,9 @@ When you're connecting GCP projects to specific Azure subscriptions, consider th
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
  
-1. Go to **Microsoft Defender for Cloud**.
+1. Search for and select **Microsoft Defender for Cloud**.
  
-1. Select **Environment settings** from the left menu.
- 
-1. Select **Add environment** > **Google Cloud Platform**.
+1. Go to **Environment settings** > **Add environment** > **Google Cloud Platform**.
 
     :::image type="content" source="media/quickstart-onboard-gcp/gcp-connector.png" alt-text="Screenshot that shows where the GCP connector option is located." lightbox="media/quickstart-onboard-gcp/gcp-connector.png":::
 

@@ -12,29 +12,30 @@ ms.custom: sfi-image-nochange
 
 When you onboard your Google Cloud Platform (GCP) projects to Microsoft Defender for Cloud, you can choose which plans to enable for your projects. Each plan provides different security features and capabilities. By default, all plans are **On**, but unnecessary plans can be turned off.
 
-Defender for Cloud offers the following plans for GCP projects:
-
-- [Defender Cloud Security Posture Management (CSPM)](#configure-the-defender-cspm-plan)
-- [Defender for Servers](#configure-the-defender-for-servers-plan)
-- [Defender for Databases](#configure-the-defender-for-databases-plan)
-- [Defender for Containers](#configure-the-defender-for-containers-plan)
-
 ### [Defender CSPM](#tab/defender-cspm)
 
-CSPM is included for free with Microsoft Defender for Cloud. It provides security posture management and threat protection for your GCP resources. However, to get the full value of Defender CSPM, you need to enable the Defender CSPM plan which does come with additional costs. Check out the [Defender for Cloud pricing page](defender-for-cloud-pricing.md) for more information about costs.
+Foundational CSPM is included for free with Microsoft Defender for Cloud. It provides security posture management and threat protection for your GCP resources. However, to get the full value of Defender CSPM, you need to enable the Defender CSPM plan which does come with additional costs. Check out the [Defender for Cloud pricing page](defender-for-cloud-pricing.md) for more information about costs.
 
 Learn more about [CSPM and the differences between the plans](concept-cloud-security-posture-management.md).
 
-The Defender CSPM plan, requires the following prerequisites:
+#### Prerequisites
 
 - The plan must be enabled by the **Subscription Owner**.
 - To enable Cloud Infrastructure Entitlement Management (CIEM) capabilities, the Entra ID account used for the onboarding process must have either the **Application Administrator** or **Cloud Application Administrator** directory role for your tenant (or equivalent administrator rights to create app registrations). This requirement is only necessary during the onboarding process.
 
+#### Configuration
+
 To configure the Defender CSPM plan:
 
-1. Follow the [steps to connect your GCP project](#connect-your-gcp-project).
+1. Sign in to the [Azure portal](https://portal.azure.com).
+ 
+1. Search for and select **Microsoft Defender for Cloud**.
+ 
+1. Go to **Environment settings**.
 
-1. On the **Select plans** tab, select **Configure**.
+1. Select the relevant GCP connector 
+
+1. Locate the Defender CSPM row and select **Configure**.
 
     :::image type="content" source="media/quickstart-onboard-gcp/view-configuration.png" alt-text="Screenshot that shows the link for configuring the Defender CSPM plan." lightbox="media/quickstart-onboard-gcp/view-configuration.png":::
 
