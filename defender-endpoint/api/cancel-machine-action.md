@@ -11,7 +11,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -22,14 +22,11 @@ appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
 
 # Cancel machine action API
 
-
-[!include[Prerelease information](../../includes/prerelease.md)]
-
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 ## API description
 
@@ -52,7 +49,7 @@ including how to choose permissions, see [Get started](apis-intro.md).
 ## HTTP request
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/machineactions/<machineactionid>/cancel
+POST https://api.security.microsoft.com/api/machineactions/<machineactionid>/cancel
 ```
 
 ## Request headers
@@ -80,7 +77,7 @@ Here's an example of the request.
 
 ```HTTP
 POST
-https://api.securitycenter.microsoft.com/api/machineactions/988cc94e-7a8f-4b28-ab65-54970c5d5018/cancel
+https://api.security.microsoft.com/api/machineactions/988cc94e-7a8f-4b28-ab65-54970c5d5018/cancel
 ```
 
 ```JSON
@@ -88,5 +85,3 @@ https://api.securitycenter.microsoft.com/api/machineactions/988cc94e-7a8f-4b28-a
     "Comment": "Machine action was canceled by automation"
 }
 ```
-
-

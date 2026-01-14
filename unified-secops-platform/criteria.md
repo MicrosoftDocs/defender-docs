@@ -5,8 +5,8 @@ description: Learn how Microsoft reviews software for privacy violations and oth
 ms.service: microsoft-defender
 ms.subservice: unified-security-operations
 ms.localizationpriority: medium
-ms.author: dansimp
-author: dansimp
+ms.author: pauloliveria
+author: poliveria
 manager: dansimp
 audience: ITPro
 ms.collection: 

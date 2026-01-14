@@ -46,10 +46,10 @@ If while trying to take an action during a live response session, you encounter 
     }
     ```
 
-2. Add the script to the live response library.
-3. Run the script with one parameter: the file path of the file to be copied.
-4. Navigate to your TEMP folder.
-5. Run the action you wanted to take on the copied file.
+1. Add the script to the live response library.
+1. Run the script with one parameter: the file path of the file to be copied.
+1. Navigate to your TEMP folder.
+1. Run the action you wanted to take on the copied file.
 
 ## Slow live response sessions or delays during initial connections
 
@@ -57,7 +57,7 @@ Live response uses Defender for Endpoint sensor registration with WNS service in
 
 1. WpnService (Windows Push Notifications System Service) isn't disabled.
 
-2. WpnService connectivity with WNS cloud isn't disabled via group policy or MDM setting. ['Turn off notifications network usage'](/windows/client-management/mdm/policy-csp-notifications) shouldn't be set to `1`.
+1. WpnService connectivity with WNS cloud isn't disabled via group policy or MDM setting. ['Turn off notifications network usage'](/windows/client-management/mdm/policy-csp-notifications) shouldn't be set to `1`.
 
 Refer to the following articles to fully understand the WpnService service behavior and requirements:
 

@@ -2,8 +2,8 @@
 title: Get incident API
 description: Learn how to use the Get incidents API to get a single incident in Microsoft Defender XDR.
 ms.service: defender-xdr
-ms.author: macapara
-author: mjcaparas
+ms.author: edbaynash
+author: EdB-MSFT
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro

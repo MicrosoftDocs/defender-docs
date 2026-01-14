@@ -17,14 +17,10 @@ ms.subservice: ngp
 ms.reviewer: mkaminska
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
-
+  - Microsoft Defender for Business
 ---
+
 # Device health, Sensor health & OS report
-
-
-- [Microsoft Defender for Business](/defender-business/mdb-overview)
-
-
 
 The Device Health report provides information about the devices in your organization. The report includes trending information showing the sensor health state, antivirus status, OS platforms, Windows 10 versions, and Microsoft Defender Antivirus update versions.
 
@@ -96,9 +92,9 @@ For example, to show data about Windows 10 devices with Active sensor health sta
 
 1. Under **Filters** > **Sensor health state** > **Active**.
 
-2. Then select **OS platforms** > **Windows 10**.
+1. Then select **OS platforms** > **Windows 10**.
 
-3. Select **Apply**.
+1. Select **Apply**.
 
 ### Sensor health card
 

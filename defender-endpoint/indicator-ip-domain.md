@@ -106,9 +106,9 @@ Here's an example of how that works:
 
 1. Suppose that a user attempts to access a website on their device. The site happens to be hosted on a dangerous domain, and it should be blocked by network protection.  
 
-2. The TCP/IP handshake commences. Before it completes, a `NetworkConnectionEvents` action is logged, and its `ActionType` is listed as `ConnectionSuccess`. However, as soon as the TCP/IP handshake process completes, network protection blocks access to the site. All of this happens quickly. A similar process occurs with [Microsoft Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview); it's after the handshake completes that a determination is made, and access to a site is either blocked or allowed.
+1. The TCP/IP handshake commences. Before it completes, a `NetworkConnectionEvents` action is logged, and its `ActionType` is listed as `ConnectionSuccess`. However, as soon as the TCP/IP handshake process completes, network protection blocks access to the site. All of this happens quickly. A similar process occurs with [Microsoft Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview); it's after the handshake completes that a determination is made, and access to a site is either blocked or allowed.
 
-3. In the Microsoft Defender portal, an alert is listed in the [alerts queue](alerts-queue.md). Details of that alert include both `NetworkConnectionEvents` and `AlertEvents`. You can see that the site was blocked, even though you also have a `NetworkConnectionEvents` item with the ActionType of `ConnectionSuccess`.
+1. In the Microsoft Defender portal, an alert is listed in the [alerts queue](alerts-queue.md). Details of that alert include both `NetworkConnectionEvents` and `AlertEvents`. You can see that the site was blocked, even though you also have a `NetworkConnectionEvents` item with the ActionType of `ConnectionSuccess`.
 
 ### Warn mode controls
 
@@ -135,9 +135,9 @@ In the case where multiple different action types are set on the same indicator 
 
 1. Allow
 
-2. Warn
+1. Warn
 
-3. Block
+1. Block
 
 "Allow" overrides "warn," which overrides "block", as follows: `Allow` > `Warn` > `Block`. Therefore, in the previous example, `Microsoft.com` would be allowed.
 
@@ -164,17 +164,17 @@ The result is that categories 1-4 are all blocked. This scenario is illustrated 
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Indicators** (under **Rules**).
 
-2. Select the **IP addresses or URLs/Domains** tab.
+1. Select the **IP addresses or URLs/Domains** tab.
 
-3. Select **Add item**.
+1. Select **Add item**.
 
-4. Specify the following details:
+1. Specify the following details:
 
    - **Indicator**: Specify the entity details and define the expiration of the indicator.
    - **Action**: Specify the action to be taken and provide a description.
    - **Scope**: Specify the machine group(s) that should enforce the indicator.
 
-5. Review the details in the **Summary** tab, then select **Save**.
+1. Review the details in the **Summary** tab, then select **Save**.
 
 > [!IMPORTANT]
 > It can take up to 48 hours after a policy is created for a URL or IP address to be blocked on a device. In most cases, blocks take effect in under two hours.

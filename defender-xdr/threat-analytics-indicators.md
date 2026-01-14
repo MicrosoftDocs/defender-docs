@@ -45,7 +45,7 @@ If you're a verified customer, you can immediately see the list of IOCs displaye
 
 Otherwise, the page informs you that access to indicators is restricted. 
 
-:::image type="content" source="/defender-xdr/media/ta-indicators/indicators-restricted.png" alt-text="Screenshot of a restricted Indicators tab in a threat analytics report." lightbox="/defender-xdr/media/ta-indicators/indicators-restricted.png":::
+:::image type="content" source="media/threat-analytics-indicators/indicators-restricted.png" alt-text="Screenshot of a restricted Indicators tab in a threat analytics report." lightbox="media/threat-analytics-indicators/indicators-restricted.png":::
 
 ## Unlock access to indicators
 To unlock the indicators section, follow these steps:
@@ -61,7 +61,7 @@ The verification process might take at least an hour. After the process complete
 
 If you still don't have access to the **Indicators** section after going through the verification process, contact the email address displayed on the page.
 
-:::image type="content" source="/defender-xdr/media/ta-indicators/indicators-contact.png" alt-text="Screenshot of a restricted Indicators tab in a threat analytics report showing the email address to contact." lightbox="/defender-xdr/media/ta-indicators/indicators-contact.png":::
+:::image type="content" source="media/threat-analytics-indicators/indicators-contact.png" alt-text="Screenshot of a restricted Indicators tab in a threat analytics report showing the email address to contact." lightbox="media/threat-analytics-indicators/indicators-contact.png":::
 
 ## See also
 

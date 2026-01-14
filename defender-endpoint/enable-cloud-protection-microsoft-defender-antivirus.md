@@ -82,9 +82,9 @@ For more information about the specific network-connectivity requirements to ens
 
 1. Go to the Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)) and sign in.
 
-2. Choose **Endpoint security** \> **Antivirus**.
+1. Choose **Endpoint security** \> **Antivirus**.
 
-3. In the **AV policies** section, either select an existing policy, or choose **+ Create Policy**. 
+1. In the **AV policies** section, either select an existing policy, or choose **+ Create Policy**. 
 
    | Task  | Steps  |
    |---------|---------|
@@ -98,16 +98,16 @@ For more information about the specific network-connectivity requirements to ens
 
 1. On your Group Policy management device, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure and select **Edit**.
 
-2. In the **Group Policy Management Editor**, go to **Computer configuration**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration**.
 
-3. Select **Administrative templates**.
+1. Select **Administrative templates**.
 
-4. Expand the tree to **Windows components** > **Microsoft Defender Antivirus > MAPS**
+1. Expand the tree to **Windows components** > **Microsoft Defender Antivirus > MAPS**
 
     > [!NOTE]
     > MAPS settings are equal to cloud-delivered protection.
 
-5. Double-click **Join Microsoft MAPS**. Ensure the option is turned on and set to **Basic MAPS** or **Advanced MAPS**. Select **OK**.
+1. Double-click **Join Microsoft MAPS**. Ensure the option is turned on and set to **Basic MAPS** or **Advanced MAPS**. Select **OK**.
 
     You can choose to send basic or additional information about detected software:
 
@@ -115,7 +115,7 @@ For more information about the specific network-connectivity requirements to ens
 
     - Advanced MAPS: In addition to basic information, advanced membership sends detailed information about malware and potentially unwanted software, including the full path to the software, and detailed information about how the software has affected your device.
 
-6. Double-click **Send file samples when further analysis is required**. Ensure that the first option is set to **Enabled** and that the other options are set to either:
+1. Double-click **Send file samples when further analysis is required**. Ensure that the first option is set to **Enabled** and that the other options are set to either:
 
    - **Send safe samples** (1)
    - **Send all samples** (3)
@@ -124,7 +124,7 @@ For more information about the specific network-connectivity requirements to ens
    > The **Send safe samples** (1) option means that most samples are sent automatically. Files that are likely to contain personal information prompt the user for additional confirmation.
    > Setting the option to **Always Prompt** (0) lowers the protection state of the device. Setting it to **Never send** (2) means that the [Block at First Sight](configure-block-at-first-sight-microsoft-defender-antivirus.md) feature of Microsoft Defender for Endpoint won't work.
 
-7. Select **OK**.
+1. Select **OK**.
 
 ## Use PowerShell cmdlets to turn on cloud protection
 
@@ -160,11 +160,11 @@ For more information about allowed parameters, see [Windows Defender WMIv2 APIs]
 
 1. Open the Windows Security app by selecting the shield icon in the task bar, or by searching the start menu for **Windows Security**.
 
-2. Select the **Virus & threat protection** tile (or the shield icon on the left menu bar), and then, under **Virus & threat protection settings**, select **Manage settings**.
+1. Select the **Virus & threat protection** tile (or the shield icon on the left menu bar), and then, under **Virus & threat protection settings**, select **Manage settings**.
 
    :::image type="content" source="/defender/media/wdav-protection-settings-wdsc.png" alt-text="The Virus & threat protection settings" lightbox="/defender/media/wdav-protection-settings-wdsc.png":::
 
-3. Confirm that **Cloud-based Protection** and **Automatic sample submission** are switched to **On**.
+1. Confirm that **Cloud-based Protection** and **Automatic sample submission** are switched to **On**.
 
    > [!NOTE]
    > If automatic sample submission has been configured with Group Policy, then the setting is greyed out and unavailable.

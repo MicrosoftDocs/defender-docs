@@ -38,7 +38,7 @@ If you're looking for compliance-related items, see [Microsoft Purview portal](/
 
 With the unified Defender XDR solution, you can stitch together the threat signals and determine the full scope of the threat, and how it currently affects the organization.
 
-:::image type="content" source="media/mdo-m36d-nav-collapsed.png" alt-text="A screenshot of the left navigation pane of the Microsoft 365 Defender portal." lightbox="media/mdo-m36d-nav-collapsed.png":::
+:::image type="content" source="media/microsoft-365-security-center-mdo/mdo-m36d-nav-collapsed.png" alt-text="A screenshot of the left navigation pane of the Microsoft 365 Defender portal." lightbox="media/microsoft-365-security-center-mdo/mdo-m36d-nav-collapsed.png":::
 
 Defender for Office 365 safeguards your organization against malicious threats posed by email messages, links (URLs), and collaboration tools. Most Defender for Office 365 specific features are available under the **Email & collaboration** node as described in the [Email & collaboration](#email--collaboration) section.
 
@@ -67,7 +67,7 @@ The **Home** page of the Defender portal shows important summary information (ca
 
 The following subsections describe the features that are available in the **Investigation & response** node in the Defender portal.
 
-:::image type="content" source="media/m365d-investigation-and-response-nav.png" alt-text="A screenshot showing the expanded Investigation & response node in the Defender portal." lightbox="media/m365d-investigation-and-response-nav.png":::
+:::image type="content" source="media/microsoft-365-security-center-mdo/m365d-investigation-and-response-nav.png" alt-text="A screenshot showing the expanded Investigation & response node in the Defender portal." lightbox="media/microsoft-365-security-center-mdo/m365d-investigation-and-response-nav.png":::
 
 #### Incidents & alerts
 
@@ -99,7 +99,7 @@ For more information, see [Admin submissions](/defender-office-365/submissions-a
 
 The following subsections describe the features that are available in the **Threat intelligence** node in the Defender portal in organizations with Defender for Office 365 Plan 2.
 
-:::image type="content" source="media/m365d-threat-intelligence-nav.png" alt-text="A screenshot showing the expanded Threat intelligence node in the Defender portal." lightbox="media/m365d-threat-intelligence-nav.png":::
+:::image type="content" source="media/microsoft-365-security-center-mdo/m365d-threat-intelligence-nav.png" alt-text="A screenshot showing the expanded Threat intelligence node in the Defender portal." lightbox="media/microsoft-365-security-center-mdo/m365d-threat-intelligence-nav.png":::
 
 #### Threat Analytics
 
@@ -181,7 +181,7 @@ Organizations with Defender for Office 365 Plan 1 can start a trial of Defender 
 
 The following subsections describe the features that are available in the **System** node in the Defender portal.
 
-:::image type="content" source="media/m365d-system-nav.png" alt-text="A screenshot showing the expanded System node in the Defender portal." lightbox="media/m365d-system-nav.png":::
+:::image type="content" source="media/microsoft-365-security-center-mdo/m365d-system-nav.png" alt-text="A screenshot showing the expanded System node in the Defender portal." lightbox="media/microsoft-365-security-center-mdo/m365d-system-nav.png":::
 
 #### Audit
 

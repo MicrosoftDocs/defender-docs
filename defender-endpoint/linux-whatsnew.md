@@ -6,7 +6,7 @@ ms.author: lwainstein
 author: limwainstein
 ms.reviewer: kumasumit, gopkr; mevasude
 ms.localizationpriority: medium
-ms.date: 11/25/2025
+ms.date: 12/24/2025
 manager: bagol
 audience: ITPro
 ms.collection:
@@ -41,7 +41,74 @@ This article is updated frequently to let you know what's new in the latest rele
 > [!NOTE]  
 > Defender for Endpoint on Linux is updated regularly. While security fixes are included as part of monthly releases, the fixes aren't always listed as a separate **Security Patch** item in these notes. If a release contains security-related updates, the updates are listed in this article under [Releases for Defender for Endpoint on Linux](#releases-for-defender-for-endpoint-on-linux) in the specific version section. For detailed information on Microsoft security updates, see the [Microsoft Security Update Guide](https://msrc.microsoft.com/update-guide).
 
+> [!NOTE]
+> Build numbers for Defender for Endpoint on Linux are not strictly sequential by month. A later release can have a lower build number if it originates from a different servicing branch. Always use the release date, not the numeric build value alone, to determine the most recent version. 
+
 ## Releases for Defender for Endpoint on Linux
+
+### January-2026 Build: 101.25102.0005 | Release version: 30.125102.0005.0
+
+|Build:             |**101.25102.0005**    |
+|-------------------|----------------------|
+|Released:          |**January 7, 2026**|
+|Published:         |**January 7, 2026**|
+|Expiry:            |**Sep 14, 2026**|
+|Release version:   |**30.125102.0005.0**|
+|Engine version:    |**1.1.25090.6000**|
+|Signature version: |**1.439.338.0**|
+
+#### What's new
+
+- Enhanced vulnerability detection for React components through improved telemetry. This includes support for identifying [(CVE-2025-55182)](https://github.com/advisories/GHSA-fv66-9v8q-g76r), providing more comprehensive security coverage for React-based applications.
+
+### December-2025 Build: 101.25092.0005 | Release version: 30.125092.0005.0
+
+|Build:             |**101.25092.0005**    |
+|-------------------|----------------------|
+|Released:          |**December 22, 2025**|
+|Published:         |**December 22, 2025**|
+|Expiry:            |**Sep 14, 2026**|
+|Release version:   |**30.125092.0005.0**|
+|Engine version:    |**1.1.25090.4000**|
+|Signature version: |**1.437.18.0**|
+
+#### What's new
+
+- Enhanced vulnerability detection for vulnerable React components through deeper component analysis and enhanced telemetry. This includes support for identifying [(CVE-2025-55182)](https://github.com/advisories/GHSA-fv66-9v8q-g76r), providing more complete security coverage for React-based applications.
+
+### December-2025 Build: 101.25092.0002 | Release version: 30.125092.0002.0
+
+|Build:             |**101.25092.0002**    |
+|-------------------|----------------------|
+|Released:          |**December 18, 2025**|
+|Published:         |**December 18, 2025**|
+|Expiry:            |**Aug 09, 2026**|
+|Release version:   |**30.125092.0002.0**|
+|Engine version:    |**1.1.25090.4000**|
+|Signature version: |**1.437.18.0**|
+
+#### What's new
+
+- Includes critical fix related to machine identifier ensuring every endpoint is accurately identified as a unique device.
+
+### November-2025 Build: 101.25102.0003 | Release version: 30.125102.0003.0
+
+|Build:             |**101.25102.0003**    |
+|-------------------|----------------------|
+|Released:          |**December 15, 2025**|
+|Published:         |**December 15, 2025**|
+|Expiry:            |**September 06, 2026**|
+|Release version:   |**30.125102.0003.0**|
+|Engine version:    |**1.1.25090.6000**|
+|Signature version: |**1.439.338.0**|
+
+#### What's new
+
+- Openssl library is upgraded to version 3.6.0
+
+- Libcurl library is upgraded to version 8.16.0
+
+- The default engine version has been updated to 1.1.25090.6000, and default signature version to 1.439.338.0.
 
 ### October-2025 Build: 101.25092.0001 | Release version: 30.125092.0001.0
 
@@ -51,10 +118,10 @@ This article is updated frequently to let you know what's new in the latest rele
 |Published:         |**November 05, 2025**|
 |Expiry:            |**July 10, 2026**|
 |Release version:   |**30.125092.0001.0**|
-|Engine version:    |**1.1.25090.6000**|
-|Signature version: |**1.439.558.0**|
+|Engine version:    |**1.1.25090.4000**|
+|Signature version: |**1.437.18.0**|
 
-What's new
+#### What's new
 
 - Added support for RHEL 10.
 
@@ -73,7 +140,7 @@ What's new
 |Engine version:    |**1.1.25070.4000**|
 |Signature version: |**1.435.242.0**|
 
-What's new
+#### What's new
 - Vulnerability detection for Langflow, an open-source Python framework for building AI workflows and agents, has been enhanced with dynamic detection using advanced telemetry and Python package scanning. This includes the detection of CVE-2025-3248 with a CVSS score of 9.8, ensuring comprehensive vulnerability coverage.
 
 - Client Analyzer is now bundled directly within the MDE package, eliminating the need for separate downloads. Both the binary and Python versions are included by default and can be found at /opt/microsoft/mdatp/tools/client_analyzer/. This ensures consistent availability across environments and streamlines troubleshooting for customers by making diagnostic tools readily accessible out-of-the-box.
@@ -91,7 +158,7 @@ What's new
 |Engine version:    |**1.1.25060.4000**|
 |Signature version: |**1.431.4.0**|
 
-What's new
+#### What's new
 - Fixed issue to generate unique machine identifiers for each onboarded device—especially useful when [deploying Microsoft Defender via Golden image](/defender-endpoint/linux-deploy-defender-for-endpoint-using-golden-images).
 
 - Other stability enhancements and bug fixes.
@@ -106,7 +173,7 @@ What's new
 |Engine version:    |**1.1.25040.4000**    |
 |Signature version: |**1.429.442.0**       |
 
-What's new
+#### What's new
 - Defender for Endpoint on Linux now supports installation to a custom location (preview). For more information, see [Enabling deployment of Microsoft Defender for Endpoint to a custom location (preview)](/defender-endpoint/linux-custom-location-installation). Support for this feature is being added to the installer script.
 - The `mdatp threat quarantine add` command now requires superuser (root) privileges.
 - Custom definition path can now be updated without stopping Defender for Endpoint. Previously, this required stopping the service, but with this release onwards, updates to the definition path can be made dynamically, improving operational efficiency and reducing downtime.
@@ -123,7 +190,7 @@ What's new
 |Engine version:    |**1.1.25020.4000**    |
 |Signature version: |**1.427.370.0**       |
 
-What's new
+#### What's new
 - Fixed issue to generate unique Machine identifiers to ensure each onboarded device is uniquely identified.
 - Other stability improvements and bug fixes.
 
@@ -137,7 +204,7 @@ What's new
 |Engine version:    |**1.1.25020.4000**    |
 |Signature version: |**1.427.370.0**       |
 
-What's new
+#### What's new
 - The Defender for Endpoint package rollout into production happens gradually. From the time the release notes are published, it might take up to a week for the package to be pushed to all production machines.
 - Removed external dependency of uuid-runtime from the Defender for Endpoint package
 - Other stability improvements and bug fixes
@@ -152,7 +219,7 @@ What's new
 |Engine version:    |**1.1.25020.4000**    |
 |Signature version: |**1.427.370.0**       |
 
-What's new
+#### What's new
 
 - Removed external dependency of MDE Netfilter and libpcre from MDE package
   
@@ -171,7 +238,7 @@ What's new
 |Engine version:    |**1.1.24090.13**      |
 |Signature version: |**1.421.226.0**       |
 
-What's new
+#### What's new
 
 - mdatp diagnostic ebpf-statistics command requires sudo privilege now
 
@@ -191,7 +258,7 @@ What's new
 |Engine version:    | **1.1.24090.13**     |
 |Signature version: | **1.421.226.0**      |
 
-What's new
+#### What's new
 
 - The MDATP package rollout into production will be done gradually. From the time the release notes are published, it might take up to a week for the package to be pushed to all production machines.
 
@@ -199,7 +266,7 @@ What's new
 
 - Other stability improvements and bug fixes.
 
-Known Issues
+##### Known Issues
 
 - There's a known issue where MDE is deleting the configuration file located at /etc/systemd/system/mdatp.service.d on each service start. As a workaround, customers can use the Immutable attribute that prevents the files from being modified or deleted.
 
@@ -246,7 +313,7 @@ Known Issues
 | Engine version:    | **1.1.24090.13**      |
 | Signature version: | **1.421.1681.0**      |
 
-What's new
+#### What's new
 
 - Fixed a bug that incorrectly reported the DefenderEngineVersion to the security portal.
 - The MDATP package `101.24112.0003` is rolling out gradually for each distribution.
