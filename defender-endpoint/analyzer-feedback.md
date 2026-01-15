@@ -28,7 +28,7 @@ If you have feedback or suggestions that would help us improve the Microsoft Def
 
 - In the Microsoft Defender portal at <https://security.microsoft.com>, select **Feedback** at the top of the page, and then fill out the information in the **Submit feedback to Microsoft** flyout that opens:
 
-  :::image type="content" source="media/defender-portal-feedback.png" alt-text="Screenshot of the Feedback icon at the top of the Microsoft Defender portal." lightbox="media/defender-portal-feedback.png" lightbox="media/defender-portal-feedback.png":::
+  :::image type="content" source="media/defender-portal-feedback.png" alt-text="Screenshot of the Feedback icon at the top of the Microsoft Defender portal." lightbox="media/defender-portal-feedback.png":::
 
   :::image type="content" source="media/defender-portal-submit-feedback.png" alt-text="Screenshot of the Submit feedback to Microsoft flyout in the Microsoft Defender portal." lightbox="media/defender-portal-submit-feedback.png":::
 
