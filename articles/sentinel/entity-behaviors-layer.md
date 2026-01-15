@@ -168,21 +168,22 @@ Behaviors simplify rule logic by providing normalized, high‑quality signals wi
 
   Behaviors also serve as reliable triggers for automation. Instead of creating alerts for non-risky activities, use behaviors to trigger automation - for example, to send an email or initiate verification.
 
-## Supported data sources
+## Supported data sources and behavior rules
 
 The list of supported data sources and vendors or services that send logs to these data sources is evolving.
 The UEBA behaviors layer automatically aggregates insights for all supported vendors based on the logs you collect.
 
 During public preview, the UEBA behaviors layer focuses on these non-Microsoft data sources that traditionally lack easy behavioral context in Microsoft Sentinel: 
 
-| Data source | Supported vendors, services, and logs | Connector |
-|-------------|---------------------------|-------|
-| [CommonSecurityLog](/azure/azure-monitor/reference/tables/commonsecuritylog) | <ul><li>Cyber Ark Vault</li><li>Palo Alto Threats</li></ul> |  |
-| [AWSCloudTrail](/azure/azure-monitor/reference/tables/awscloudtrail) | <ul><li>EC2</li><li>IAM</li><li>S3</li><li>EKS</li><li>Secrets Manager</li></ul> |<ul><li>[Amazon Web Services](../sentinel/data-connectors-reference.md#amazon-web-services)</li><li>[Amazon Web Services S3](../sentinel/data-connectors-reference.md#amazon-web-services-s3)</li></ul> |
-|[GCPAuditLogs](/azure/azure-monitor/reference/tables/gcpauditlogs) |<ul><li>Admin activity logs</li><li>Data access logs</li><li>Access transparency logs</li></ul>|[GCP Pub/Sub Audit Logs](../sentinel/data-connectors-reference.md#gcp-pubsub-audit-logs)|
+| Data source | Supported vendors, services, and logs | Connector | Behavior Rules |
+|-------------|---------------------------|-------|----------------|
+| [CommonSecurityLog](/azure/azure-monitor/reference/tables/commonsecuritylog) | <ul><li>Cyber Ark Vault</li><li>Palo Alto Threats</li></ul> |  | [CommonSecurityLog behaviors](https://github.com/Azure/Azure-Sentinel/blob/master/Sentinel%20Behaviors/Behaviors%20Rules/commonsecuritylog_behaviors.md) |
+| [AWSCloudTrail](/azure/azure-monitor/reference/tables/awscloudtrail) | <ul><li>EC2</li><li>IAM</li><li>S3</li><li>EKS</li><li>Secrets Manager</li></ul> |<ul><li>[Amazon Web Services](../sentinel/data-connectors-reference.md#amazon-web-services)</li><li>[Amazon Web Services S3](../sentinel/data-connectors-reference.md#amazon-web-services-s3)</li></ul> | [AWS CloudTrail behaviors](https://github.com/Azure/Azure-Sentinel/blob/master/Sentinel%20Behaviors/Behaviors%20Rules/aws_cloudtrail_behaviors.md) |
+|[GCPAuditLogs](/azure/azure-monitor/reference/tables/gcpauditlogs) |<ul><li>Admin activity logs</li><li>Data access logs</li><li>Access transparency logs</li></ul>|[GCP Pub/Sub Audit Logs](../sentinel/data-connectors-reference.md#gcp-pubsub-audit-logs)| [GCP Audit Logs behaviors](https://github.com/Azure/Azure-Sentinel/blob/master/Sentinel%20Behaviors/Behaviors%20Rules/gcp_auditlogs_behaviors.md) |
+
 
 > [!IMPORTANT]
-> These sources are separate from other UEBA capabilities and need to be enabled specifically. If you enabled AWSCloudTrail for UEBA behaviorAnalytics and Anomalies, you still need to enable it for behaviors.
+> These sources are separate from other UEBA capabilities and need to be enabled specifically. If you enabled AWSCloudTrail for UEBA Analytics and Anomalies, you still need to enable it separately for behaviors.
 
 
 ## Prerequisites
@@ -190,7 +191,7 @@ During public preview, the UEBA behaviors layer focuses on these non-Microsoft d
 To use the UEBA behaviors layer, you need:
 
 - A Microsoft Sentinel workspace that's onboarded to the Defender portal.
-- Ingest one or more of the [supported data sources](#supported-data-sources) into the Analytics tier. For more information about data tiers, see [Manage data tiers and retention in Microsoft Sentinel](../sentinel/manage-data-overview.md#how-data-tiers-and-retention-work).
+- Ingest one or more of the [supported data sources](#supported-data-sources-and-behavior-rules) into the Analytics tier. For more information about data tiers, see [Manage data tiers and retention in Microsoft Sentinel](../sentinel/manage-data-overview.md#how-data-tiers-and-retention-work).
 
 ## Permissions required 
 
@@ -286,7 +287,7 @@ For more information about Kusto Query Language (KQL), see [Kusto query language
 ### Troubleshooting 
 
 - **If behaviors aren't being generated**: Ensure supported data sources are actively sending logs to the Analytics tier, confirm the data source toggle is on, and wait 15–30 minutes after enabling.
-- **I see fewer behaviors than expected**: Our coverage of supported behavior types is partial and growing. The UEBA behaviors layer might also not be able to detect a behavior pattern if there are very few instances of a specific behavior type.
+- **I see fewer behaviors than expected**: Our coverage of supported behavior types is partial and growing. For more information, see [Supported data sources and behavior rules](#supported-data-sources-and-behavior-rules). The UEBA behaviors layer might also not be able to detect a behavior pattern if there are very few instances of a specific behavior type.
 - **Behavior counts**: A single behavior might represent tens or hundreds of raw events - this is designed to reduce noise.
      
 ## Limitations in public preview 
