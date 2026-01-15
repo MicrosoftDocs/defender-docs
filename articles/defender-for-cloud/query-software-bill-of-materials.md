@@ -1,13 +1,13 @@
 ---
-title: Query software bill of materials
+title: Query software bill of materials (SBOM)
 description: Learn how to query Software Bill of Materials (SBOM) results in Microsoft Defender for Cloud's Cloud Security Explorer.
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 01/11/2026
+ms.date: 01/15/2026
 ---
 
-# Query software bill of materials
+# Query software bill of materials (SBOM)
 
 Microsoft Defender for Cloud’s DevOps Security agentless scanning capabilities automatically generate a Software Bill of Materials (SBOM) for connected code repositories. When a scan finishes, the process publishes the repository and identified packages to the [cloud security graph](concept-attack-path.md#what-is-cloud-security-graph).
 
