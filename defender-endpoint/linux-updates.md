@@ -76,5 +76,5 @@ sudo apt-get install --only-upgrade mdatp
 
 To schedule an update of Microsoft Defender for Endpoint on Linux, see [Schedule an update for Microsoft Defender for Endpoint on Linux](linux-update-mde-linux.md).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
