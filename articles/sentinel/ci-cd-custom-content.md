@@ -5,7 +5,7 @@ description: This article explains custom Sentinel content like GitHub or Azure 
 author: mberdugo 
 ms.author: monaberdugo 
 ms.service: microsoft-sentinel
-ms.topic: conceptual
+ms.topic: article
 ms.date: 12/31/2024
 ms.custom:
   - template-concept
@@ -81,7 +81,7 @@ Although you can build templates from scratch, it's often easier to start from e
 | **Automation rules**| N/A                                                                                                                | [Export feature](/azure/sentinel/import-export-automation-rules#export-rules) or [PowerShell scripts](https://github.com/garybushey/MicrosoftSentinelAutomation/tree/main) | [Reference](/azure/templates/microsoft.securityinsights/2025-03-01/automationrules) | N/A                                                                                                    |
 | **Hunting queries**| [PowerShell script](https://github.com/SentinelCICD/RepositoriesSampleContent/blob/main/Hunting/ConvertHuntingQueryFromYamlToArm.ps1) | [Azure CLI commands](/cli/azure/monitor/log-analytics/workspace/saved-search?view=azure-cli-latest) | [Reference](/azure/templates/microsoft.operationalinsights/2020-08-01/workspaces/savedsearches) | [Sample Content](https://github.com/SentinelCICD/RepositoriesSampleContent)                           |
 | **Parsers**       | [ASIM PowerShell script](https://github.com/Azure/Azure-Sentinel/tree/master/ASIM/dev/ASimYaml2ARM)                 | [Azure CLI commands](/cli/azure/monitor/log-analytics/workspace/saved-search?view=azure-cli-latest) | [Reference](/azure/templates/microsoft.operationalinsights/2020-08-01/workspaces/savedsearches) | [Templates](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/ARM-Templates/ParserQuery)      |
-| **Playbooks**     | N/A                                                                                                                 | [PowerShell utility](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/Playbook-ARM-Template-Generator)       | [Reference](azure/logic-apps/logic-apps-azure-resource-manager-templates-overview) | N/A                                                                                                    |
+| **Playbooks**     | N/A                                                                                                                 | [PowerShell utility](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/Playbook-ARM-Template-Generator)       | [Reference](/azure/logic-apps/logic-apps-azure-resource-manager-templates-overview) | N/A                                                                                                    |
 | **Workbooks**     | N/A                                                                                                                 | [Exporting workbooks as ARM templates](/azure/azure-monitor/visualize/workbooks-automate#arm-template-for-deploying-a-workbook-template) | [Reference](/azure/azure-monitor/visualize/workbooks-automate#arm-template-for-deploying-a-workbook-template) | N/A                    |                                                                                
 
 
