@@ -207,5 +207,5 @@ If you have enabled cloud-delivered protection, Microsoft Defender Antivirus sen
 - [Manage updates for mobile devices and virtual machines (VMs)](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)
 - [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-windows.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
