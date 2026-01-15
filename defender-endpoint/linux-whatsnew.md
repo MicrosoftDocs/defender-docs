@@ -61,6 +61,8 @@ This article is updated frequently to let you know what's new in the latest rele
 
 - Enhanced vulnerability detection for React components through improved telemetry. This includes support for identifying [(CVE-2025-55182)](https://github.com/advisories/GHSA-fv66-9v8q-g76r), providing more comprehensive security coverage for React-based applications.
 
+- Agent process handling has been streamlined by removing the dedicated telemetryd_v2 process, resultiing in more efficient and consistent telemetry collection. This change applies to builds 101.25102.0005 and later. There is no impact to existing functionality, how data is collected, or customer configurations. All features and capabilities remain fully intact, and no action is required on customer side.
+
 ### December-2025 Build: 101.25092.0005 | Release version: 30.125092.0005.0
 
 |Build:             |**101.25092.0005**    |
