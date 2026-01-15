@@ -1010,6 +1010,8 @@
           items:
             - name: Overview
               href: defender-cli-overview.md
+            - name: Install
+              href: defender-cli-install.md
             - name: Authentication
               href: defender-cli-authentication.md
             - name: Syntax
