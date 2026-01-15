@@ -4,7 +4,7 @@ description: A description of what's new and changed in Microsoft Defender for C
 author: Elazark
 ms.author: elkrieger
 ms.topic: reference
-ms.date: 12/08/2025
+ms.date: 12/23/2025
 ms.custom: sfi-ga-nochange, sfi-image-nochange
 ---
 
@@ -786,7 +786,7 @@ November 18, 2024
 
 Today, we're excited to announce the General Availability of Critical Assets Protection in Microsoft Defender for Cloud. This feature enables security administrators to tag the "crown jewel" resources that are most critical to their organizations, allowing Defender for Cloud to provide them with the highest level of protection and prioritize security issues on these assets above all others. [Learn more about critical assets protection](critical-assets-protection.md).
 
-Alongside the General Availability release, we're also expending support for tagging Kubernetes and nonhuman identity resources.
+Alongside the General Availability release, we're also expanding support for tagging Kubernetes and nonhuman identity resources.
 
 ### Enhanced critical asset protection for containers
 

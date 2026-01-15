@@ -133,40 +133,40 @@ The following standards are available in Defender for Cloud:
 
 |Standards|Clouds|
 | -------- | -------- |
-|EU 2022 2555 (NIS2) 2022  |Azure, AWS, GCP|
-|EU General Data Protection Regulation (GDPR) 2016 679  |Azure, AWS, GCP|
-|NIST CSF v2.0  |Azure, AWS, GCP|
-|NIST 800 171 Rev3  |Azure, AWS, GCP|
-|NIST SP 800 53 R5.1.1  |Azure, AWS, GCP|
-|PCI DSS v4.0.1  |Azure, AWS, GCP|
-|CIS AWS Foundations v3.0.0  |AWS|
-|CIS Azure Foundations v2.1.0  |Azure|
-|CIS Controls v8.1  |Azure, AWS, GCP|
-|CIS GCP Foundations v3.0  |GCP|
+|EU 2022 2555 (NIS2) 2022  |Azure, AWS, GCP|
+|EU General Data Protection Regulation 2016 679  |Azure, AWS, GCP|
+|NIST CSF v2.0  |Azure, AWS, GCP|
+|NIST 800 171 Rev3  |Azure, AWS, GCP|
+|NIST SP 800 53 R5.1.1  |Azure, AWS, GCP|
+|PCI DSS v4.0.1  |Azure, AWS, GCP|
+|CIS AWS Foundations v3.0.0  |AWS|
+|CIS Azure Foundations v2.1.0  |Azure|
+|CIS Controls v8.1  |Azure, AWS, GCP|
+|CIS GCP Foundations v3.0  |GCP|
 |CIS Google Cloud Platform Foundation Benchmark|GCP|
 |CIS Azure Kubernetes Service (AKS) Benchmark|Azure|
 |CIS Amazon Elastic Kubernetes Service (EKS) Benchmark|AWS|
 |CIS Google Kubernetes Engine (GKE) Benchmark|GCP|
-|HITRUST CSF v11.3.0  |Azure, AWS, GCP|
-|SOC 2023  |Azure, AWS, GCP|
-|SWIFT Customer Security Controls Framework 2024  |Azure, AWS, GCP|
-|ISO IEC 27001:2022  |Azure, AWS, GCP|
-|ISO IEC 27002:2022  |Azure, AWS, GCP|
-|ISO IEC 27017:2015  |Azure, AWS, GCP|
-|Cybersecurity Maturity Model Certification (CMMC) Level 2 v2.0  |Azure, AWS, GCP|
-|AWS Well Architected Framework 2024  |AWS|
-|Canada Federal PBMM 3.2020  |Azure, AWS, GCP|
-|APRA CPS 234 2019  |Azure, AWS|
-|CSA Cloud Controls Matrix v4.0.12  |Azure, AWS, GCP|
-|Cyber Essentials v3.1  |Azure, AWS, GCP|
-|Criminal Justice Information Services Security Policy v5.9.5  |Azure, AWS, GCP|
-|FFIEC CAT 2017  |Azure, AWS, GCP|
-|Brazilian General Data Protection Law (LGPD) 2018  |Azure, AWS, GCP|
-|NZISM v3.7  |Azure, AWS, GCP|
-|Sarbanes Oxley Act 2022 (SOX)  |Azure, AWS, GCP|
-|NCSC Cyber Assurance Framework (CAF) v3.2  |Azure, AWS, GCP|
+|HITRUST CSF v11.3.0  |Azure, AWS, GCP|
+|SOC 2023  |Azure, AWS, GCP|
+|SWIFT Customer Security Controls Framework 2024  |Azure, AWS, GCP|
+|ISO IEC 27001:2022  |Azure, AWS, GCP|
+|ISO IEC 27002:2022  |Azure, AWS, GCP|
+|ISO IEC 27017:2015  |Azure, AWS, GCP|
+|Cybersecurity Maturity Model Certification (CMMC) Level 2 v2.0  |Azure, AWS, GCP|
+|AWS Well Architected Framework 2024  |AWS|
+|Canada Federal PBMM 3.2020  |Azure, AWS, GCP|
+|APRA CPS 234 2019  |Azure, AWS|
+|CSA Cloud Controls Matrix v4.0.12  |Azure, AWS, GCP|
+|Cyber Essentials v3.1  |Azure, AWS, GCP|
+|Criminal Justice Information Services Security Policy v5.9.5  |Azure, AWS, GCP|
+|FFIEC CAT 2017  |Azure, AWS, GCP|
+|Brazilian General Data Protection Law (LGPD) 2018  |Azure, AWS, GCP|
+|NZISM v3.7  |Azure, AWS, GCP|
+|Sarbanes Oxley Act 2022 (SOX)  |Azure, AWS, GCP|
+|NCSC Cyber Assurance Framework (CAF) v3.2  |Azure, AWS, GCP|
 |Australian Government ISM Protected|Azure|
-|FedRAMP ‘H’ & ‘M’|Azure|
+|FedRAMP 'H' & 'M'|Azure|
 |HIPAA|Azure|
 |RMIT Malaysia  |Azure|
 |SOC 2|Azure, GCP|

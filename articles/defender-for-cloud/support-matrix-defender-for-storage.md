@@ -19,12 +19,12 @@ This article lists the prerequisites and permissions required to [enable Microso
 
 - The following storage types are supported:
 
-  |Capability | Azure Blob Standard | Azure Blob Standard + Azure Files NFS | Azure Blob Premium v2 | Azure Page Blob | Azure Data Lake Storage Gen2 | Azure File Premium Provisioned v1 | Azure File Premium Provisioned v2 |
+  |Capability | Azure Blob Standard | Azure Blob Premium v2 | Azure Page Blob | Azure Data Lake Storage Gen 2 | Azure Blob (Standard + Premium) + NFS 3.0 | Azure File Standard (SMB) | Azure File Premium Provisioned v1/v2 (SMB) |
   |--|--|--|--|--|--|--|
-  | Activity Monitoring | Supported | Not supported | Supported | Supported | Supported | Supported | Supported |
-  | Sensitive Data Discovery | Supported | Not supported | Supported | Supported  | Supported | Not supported | Not supported |
-  | On-upload Malware Scanning | Supported | Supported only for blobs | Supported only for blobs | Not supported | Supported only for blobs | Not supported | Not supported |
-  | On-demand Malware Scanning | Supported | Supported | Supported | Not supported | Supported | Not supported | Not supported |
+  | Activity Monitoring | Supported | Supported | Supported | Supported | Not supported | Supported | Supported |
+  | Sensitive Data Discovery | Supported | Supported | Supported | Supported | Not supported | Supported | Not supported |
+  | On-upload Malware Scanning | Supported only for blobs | Supported only for blobs | Not supported | Supported only for blobs | Supported only for blobs | Not supported | Not supported |
+  | On-demand Malware Scanning | Supported | Supported | Not supported | Supported | Supported | Supported | Not supported |
   
 - Storage accounts that belong to a resource group with any of the following names are not supported: `App_Browsers`, `App_Code`, `App_Data`, `App_GlobalResources`, `App_LocalResources`, `App_Themes`, `App_WebReferences`, `Bin`.
 

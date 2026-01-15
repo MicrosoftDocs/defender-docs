@@ -80,13 +80,13 @@ Here's how scores are calculated.
 
 The equation for determining the score for a security control is:
 
-:::image type="content" source="./media/secure-score-security-controls/secure-score-equation-single-control.png" alt-text="Screenshot that shows the equation for calculating a security control score."lightbox="media/secure-score-security-controls/secure-score-equation-single-control.png":::
+:::image type="content" source="./media/secure-score-security-controls/secure-score-equation-single-control.png" alt-text="Screenshot that shows the equation for calculating a security control score." lightbox="media/secure-score-security-controls/secure-score-equation-single-control.png":::
 
 The current score for each control is a measure of the status of the resources within the control. Each individual security control contributes toward the secure score. Each resource that's affected by a recommendation within the control contributes toward the control's current score. The secure score doesn't include resources found in preview recommendations.
 
 In the following example, the maximum score of 6 is divided by 78 because that's the sum of the healthy and unhealthy resources. So, 6 / 78 = 0.0769. Multiplying that by the number of healthy resources (4) results in the current score: 0.0769 * 4 = 0.31.
 
-:::image type="content" source="./media/secure-score-security-controls/security-control-scoring-tooltips.png" alt-text="Screenshot of tooltips that show the values used in calculating the security control's current score."lightbox="media/secure-score-security-controls/security-control-scoring-tooltips.png":::
+:::image type="content" source="./media/secure-score-security-controls/security-control-scoring-tooltips.png" alt-text="Screenshot of tooltips that show the values used in calculating the security control's current score." lightbox="media/secure-score-security-controls/security-control-scoring-tooltips.png":::
 
 ### Single subscription or connector
 
@@ -96,7 +96,7 @@ The equation for determining the secure score for a single subscription or conne
 
 :::image type="content" source="./media/secure-score-security-controls/secure-score-example-single-sub.png" alt-text="Screenshot of a single-subscription secure score with all controls enabled." lightbox="media/secure-score-security-controls/secure-score-example-single-sub.png":::
 
-:::image type="content" source="./media/secure-score-security-controls/secure-score-example-single-sub-recs.png" alt-text="Screenshot that shows a list of controls and the potential score increase."lightbox="media/secure-score-security-controls/secure-score-example-single-sub-recs.png":::
+:::image type="content" source="./media/secure-score-security-controls/secure-score-example-single-sub-recs.png" alt-text="Screenshot that shows a list of controls and the potential score increase." lightbox="media/secure-score-security-controls/secure-score-example-single-sub-recs.png":::
 
 This equation is the same equation for a connector, with just the word *subscription* replaced by the word *connector*.
 
@@ -104,7 +104,7 @@ This equation is the same equation for a connector, with just the word *subscrip
 
 The equation for determining the secure score for multiple subscriptions and connectors is:
 
-:::image type="content" source="./media/secure-score-security-controls/secure-score-equation-multiple-subs.png" alt-text="Screenshot that shows the equation for calculating the secure score for multiple subscriptions."lightbox="media/secure-score-security-controls/secure-score-equation-multiple-subs.png":::
+:::image type="content" source="./media/secure-score-security-controls/secure-score-equation-multiple-subs.png" alt-text="Screenshot that shows the equation for calculating the secure score for multiple subscriptions." lightbox="media/secure-score-security-controls/secure-score-equation-multiple-subs.png":::
 
 The combined score for multiple subscriptions and connectors includes a *weight* for each subscription and connector. Defender for Cloud determines the relative weights for your subscriptions and connectors based on a linear weighting model using the combined number of healthy and unhealthy resources per subscription (excluding 'Not applicable' resources). The current score for each subscription and connector is calculated in the same way as for a single subscription or connector, and then its weight is applied (see equation). If a subscription or connector doesn't have any assessments (no healthy or unhealthy resources) for a given control, that control is excluded from the score calculation for that subscription or connector. In that case, neither the control's current nor maximum potential points contribute to that subscription's score. The aggregated secure score shown in the UI is not a simple arithmetic average of per-subscription percentages or per-control counts; it's a weighted sum across subscriptions. Therefore, the per-control resource numbers displayed in the UI can't be used to manually recompute the overall secure score across multiple subscriptions.
 
@@ -162,26 +162,26 @@ Your secure score is shown in the following locations in Defender for Cloud's Az
 
 - In a tile on Defender for Cloud's **Overview** (main dashboard):
 
-    :::image type="content" source="./media/secure-score-security-controls/score-on-main-dashboard.png" alt-text="The secure score on Defender for Cloud's dashboard":::
+    :::image type="content" source="./media/secure-score-security-controls/score-on-main-dashboard.png" alt-text="Screenshot of the secure score on Defender for Cloud's dashboard.":::
 
 - In the dedicated **Secure score** page you can see the secure score for your subscription and your management groups:
 
-    :::image type="content" source="./media/secure-score-security-controls/score-on-dedicated-dashboard.png" alt-text="The secure score for subscriptions on Defender for Cloud's secure score page" lightbox="media/secure-score-security-controls/score-on-dedicated-dashboard.png":::
+    :::image type="content" source="./media/secure-score-security-controls/score-on-dedicated-dashboard.png" alt-text="Screenshot of the secure score for subscriptions on Defender for Cloud's secure score page." lightbox="media/secure-score-security-controls/score-on-dedicated-dashboard.png":::
 
-    :::image type="content" source="./media/secure-score-security-controls/secure-score-management-groups.png" alt-text="The secure score for management groups on Defender for Cloud's secure score page"  lightbox="media/secure-score-security-controls/secure-score-management-groups.png":::
+    :::image type="content" source="./media/secure-score-security-controls/secure-score-management-groups.png" alt-text="Screenshot of the secure score for management groups on Defender for Cloud's secure score page."  lightbox="media/secure-score-security-controls/secure-score-management-groups.png":::
 
     > [!NOTE]
     > Any management groups for which you don't have sufficient permissions, will show their score as "Restricted."
 
 - At the top of the **Recommendations** page:
 
-    :::image type="content" source="./media/secure-score-security-controls/score-on-recommendations-page.png" alt-text="The secure score on Defender for Cloud's recommendations page"  lightbox="media/secure-score-security-controls/score-on-recommendations-page.png":::
+    :::image type="content" source="./media/secure-score-security-controls/score-on-recommendations-page.png" alt-text="Screenshot of the secure score on Defender for Cloud's recommendations page."  lightbox="media/secure-score-security-controls/score-on-recommendations-page.png":::
 
 ## Get your secure score from the REST API
 
 You can access your score via the secure score API. The API methods provide the flexibility to query the data and build your own reporting mechanism of your secure scores over time. For example, you can use the [Secure Scores API](/rest/api/defenderforcloud-composite/secure-scores?view=rest-defenderforcloud-composite-latest&preserve-view=true) to get the score for a specific subscription. In addition, you can use the [Secure Score Controls API](/rest/api/defenderforcloud-composite/secure-score-controls?view=rest-defenderforcloud-composite-latest&preserve-view=true) to list the security controls and the current score of your subscriptions.
 
-![Retrieving a single secure score via the API.](media/secure-score-security-controls/single-secure-score-via-api.png)
+![Screenshot that shows retrieving a single secure score via the API.](media/secure-score-security-controls/single-secure-score-via-api.png)
 
 For examples of tools built on top of the secure score API, see [the secure score area of our GitHub community](https://github.com/Azure/Azure-Security-Center/tree/master/Secure%20Score).
 
@@ -193,7 +193,7 @@ To access the secure score for multiple subscriptions with Azure Resource Graph:
 
 1. From the Azure portal, open **Azure Resource Graph Explorer**.
 
-    :::image type="content" source="./media/multi-factor-authentication-enforcement/opening-resource-graph-explorer.png" alt-text="Launching Azure Resource Graph Explorer recommendation page."  lightbox="media/multi-factor-authentication-enforcement/opening-resource-graph-explorer.png":::
+    :::image type="content" source="./media/multi-factor-authentication-enforcement/opening-resource-graph-explorer.png" alt-text="Screenshot of launching Azure Resource Graph Explorer recommendation page"  lightbox="media/multi-factor-authentication-enforcement/opening-resource-graph-explorer.png":::
 
 1. Enter your Kusto query (using the following examples for guidance).
 
@@ -223,7 +223,7 @@ To access the secure score for multiple subscriptions with Azure Resource Graph:
 
 Defender for Cloud's workbooks page includes a ready-made report for visually tracking the scores of your subscriptions, security controls, and more. Learn more in [Create rich, interactive reports of Defender for Cloud data](custom-dashboards-azure-workbooks.md).
 
-:::image type="content" source="media/custom-dashboards-azure-workbooks/secure-score-over-time-snip.png" alt-text="A section of the secure score over time report from Microsoft Defender for Cloud's workbooks gallery":::
+:::image type="content" source="media/custom-dashboards-azure-workbooks/secure-score-over-time-snip.png" alt-text="Screenshot of a section of the secure score over time report from Microsoft Defender for Cloud's workbooks gallery.":::
 
 ### Power BI Pro dashboards
 
@@ -238,7 +238,7 @@ The dashboard contains the following two reports to help you analyze your securi
 
 - **Secure Score Summary** - provides summarized data regarding your score progress. Use the "Secure score over time per subscription" chart to view changes in the score. If you notice a dramatic change in your score, check the "detected changes that might affect your secure score" table for possible changes that could have caused the change. This table presents deleted resources, newly deployed resources, or resources that their security status changed for one of the recommendations.
 
-:::image type="content" source="./media/secure-score-security-controls/power-bi-secure-score-dashboard.png" alt-text="The optional Secure Score Over Time Power BI dashboard for tracking your secure score over time and investigating changes.":::
+:::image type="content" source="./media/secure-score-security-controls/power-bi-secure-score-dashboard.png" alt-text="Screenshot of the optional Secure Score Over Time Power BI dashboard for tracking your secure score over time and investigating changes.":::
 
 ## Next steps
 
@@ -258,7 +258,7 @@ The dashboard contains the following two reports to help you analyze your securi
 
 ## Cloud secure score in the Defender portal
 
-The Cloud secure score (risk-based) is an assessment of your cloud security posture. The score allow you to objectively assess and monitor your cloud security posture and measure your risk mitigation efforts.
+The Cloud secure score (risk-based) is an assessment of your cloud security posture. The score allows you to objectively assess and monitor your cloud security posture and measure your risk mitigation efforts.
 
 The Cloud secure score introduces asset risk factors and asset criticality into the calculation, making the score more accurate and enabling smarter prioritization of high risk level recommendations.  
 
@@ -266,7 +266,7 @@ The Cloud secure score introduces asset risk factors and asset criticality into 
 
 The Cloud secure score is based on the number and risk level of open recommendations in Defender for cloud. To improve your score, focus on recommendations with higher risk levels, as they contribute the most to your score. 
 
-:::image type="content" source="./media/secure-score-security-controls/cloud-secure-score-flow.png" alt-text="Diagram of the new Cloud secure score calculation flow including asset risk factors and criticality.":::
+:::image type="content" source="./media/secure-score-security-controls/cloud-secure-score-flow.png" alt-text="Diagram of the new Cloud secure score calculation flow including asset risk factors and criticality":::
 
 ## Cloud secure score formula
 
@@ -289,7 +289,7 @@ To calculate the environmental score for a given organization at any scope, the 
 
 Secure scores are consolidated into a unified Microsoft Security experience, providing a single entry point to understand posture across identities, devices, cloud apps, data, and infrastructure. The Cloud secure score is the cloud posture component within that broader set.
 
-:::image type="content" source="media/secure-score-defender-portal/secure-score-landing-page.png" alt-text="Screenshot of secure score landing page" lightbox="media/secure-score-defender-portal/secure-score-landing-page.png":::
+:::image type="content" source="media/secure-score-defender-portal/secure-score-landing-page.png" alt-text="Screenshot of secure score landing page." lightbox="media/secure-score-defender-portal/secure-score-landing-page.png":::
 
 **Navigation paths to the Cloud secure score (Cloud initiative)**
 
@@ -319,7 +319,7 @@ Navigate to **Exposure Management** > **Initiatives** for a consolidated cloud s
    - Recommendations summary
    - Most common recommendations by criticality to focus remediation where it drives the largest score and risk reduction impact
 
-:::image type="content" source="media/secure-score-defender-portal/cloud-initiative-homepage.png" alt-text="Screenshot of cloud initiative homepage" lightbox="media/secure-score-defender-portal/cloud-initiative-homepage.png":::
+:::image type="content" source="media/secure-score-defender-portal/cloud-initiative-homepage.png" alt-text="Screenshot of cloud initiative homepage." lightbox="media/secure-score-defender-portal/cloud-initiative-homepage.png":::
 
 > [!NOTE]
 > The previous (classic) secure score is still available in the Azure portal using the classic view of recommendations. Navigation: Azure portal → Microsoft Defender for Cloud → Recommendations → Switch to classic view.
