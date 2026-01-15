@@ -84,5 +84,5 @@ Watch this video to learn how Microsoft Defender for Endpoint provides multiple 
 - [Create indicators based on certificates](indicator-certificates.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

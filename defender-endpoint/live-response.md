@@ -335,4 +335,4 @@ Select the **Command log** tab to see the commands used on the device during a s
 
 - [Live response command examples](live-response-command-examples.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

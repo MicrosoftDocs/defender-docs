@@ -476,5 +476,5 @@ In this case, only have one access rule policy, but if you have multiple, make s
 - [Deploy Device Control manually](mac-device-control-manual.md)
 - [macOS Device Control frequently asked questions (FAQ)](mac-device-control-faq.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
