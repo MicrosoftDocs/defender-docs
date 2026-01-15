@@ -237,6 +237,14 @@ This section provides best practices and troubleshooting tips for querying behav
 
 For more information about Kusto Query Language (KQL), see [Kusto query language overview](/kusto/query/?view=microsoft-sentinel).
 
+> [!IMPORTANT]
+> Table names differ slightly between Defender portal and in Sentinel workspace. 
+>
+> | **Context** | **Tables to use** | **Use cases** |
+> |-------------|-------------------|---------------|
+> | **Defender portal Advanced Hunting** | `BehaviorInfo`<br>`BehaviorEntities` | Detection rules, incident investigation, threat hunting in Defender portal |
+> | **Sentinel workspace** | `SentinelBehaviorInfo`<br>`SentinelBehaviorEntities` | Azure Monitor workbooks, ingestion monitoring, KQL queries in Sentinel workspace |
+
 - **Access behavior data in the Defender portal by querying BehaviorInfo and BehaviorEntities**
 
   - The `BehaviorInfo` table contains one record for each behavior instance to explain “what happened”. For more information about the table schemas, see [BehaviorInfo (Preview)](/defender-xdr/advanced-hunting-behaviorinfo-table).
