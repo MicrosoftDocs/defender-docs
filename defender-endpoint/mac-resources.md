@@ -218,5 +218,5 @@ When threats are detected, your security team can view detections and if necessa
 - [Microsoft Defender portal overview](/defender-xdr/microsoft-365-defender-portal)
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

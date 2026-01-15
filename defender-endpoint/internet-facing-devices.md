@@ -162,5 +162,5 @@ You can report an inaccuracy for a device with incorrect internet-facing informa
 
 - [Device inventory](machines-view-overview.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
