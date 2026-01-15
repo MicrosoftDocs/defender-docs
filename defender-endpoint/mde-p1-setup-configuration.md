@@ -413,5 +413,5 @@ Now that you've finished the setup and configuration process, your next step is 
 
 - [Get started with Defender for Endpoint Plan 1](mde-plan1-getting-started.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

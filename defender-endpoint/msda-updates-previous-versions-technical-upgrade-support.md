@@ -2094,5 +2094,4 @@ The versions listed in this section are no longer supported. To view current ver
 - Added support for Windows 10 RS1 or later OS install images.
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
