@@ -67,7 +67,7 @@ If you find content in a public repository where you aren't a contributor, first
 
 Microsoft Sentinel repositories support deployment of content you store as [Bicep files](../azure-resource-manager/bicep/overview.md) or [Azure Resource Manager (ARM) templates](../azure-resource-manager/templates/overview.md). We recommend using Bicep, which is more intuitive and makes it easier to describe Azure resources and Microsoft Sentinel content. 
 
-The template for each content type has a specific structure and parameter name, as documented in the [Sentinel resources template reference](/azure/templates/microsoft.securityinsights/allversions). For samples of each content type, see[RepositoriesSampleContent repository](https://github.com/SentinelCICD/RepositoriesSampleContent).
+The template for each content type has a specific structure and parameter name, as documented in the [Sentinel resources template reference](/azure/templates/microsoft.securityinsights/allversions). For samples of each content type, see [RepositoriesSampleContent repository](https://github.com/SentinelCICD/RepositoriesSampleContent).
 
 We've provided a sample repository with templates for each of the content types listed. The repo also demonstrates how to use advanced features of repository connections. For more information, see [Microsoft Sentinel CI/CD repositories sample](https://github.com/SentinelCICD/RepositoriesSampleContent). 
 
