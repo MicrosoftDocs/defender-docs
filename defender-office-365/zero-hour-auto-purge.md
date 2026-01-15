@@ -21,7 +21,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Zero-hour auto purge (ZAP) in all organizations with cloud mailboxes handles messages in mailboxes retroactively identified as spam, phishing, or malware.
 ms.service: defender-office-365
-ms.date: 12/16/2025
+ms.date: 01/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -128,8 +128,7 @@ ZAP doesn't quarantine messages that are in the process of [Dynamic Delivery](sa
 
 > [!TIP]
 > ZAP for Microsoft Teams is available in Defender for Office 365 Plan 1 or Plan 2 (included or purchased as an add-on). To configure ZAP for Teams protection, see [Microsoft Defender for Office 365 support for Microsoft Teams](mdo-support-teams-about.md).
-
-> [!NOTE]
+>
 > Currently, ZAP for Microsoft Teams isn't available in Microsoft 365 GCC, GCC High, or DoD.
 
 ### ZAP in Teams chats
