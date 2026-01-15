@@ -103,5 +103,4 @@ During an investigation, you can also view the **Security policies** tab in the 
 :::image type="content" source="./media/security-policies-list.png" alt-text="Security policies tab with list of policies":::
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

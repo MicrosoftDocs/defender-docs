@@ -120,5 +120,5 @@ By default, lists that have been configured in local group policy and the Window
 - [Microsoft Intune](/mem/intune/protect/advanced-threat-protection-configure)
 - [Microsoft Defender Antivirus in Windows](microsoft-defender-antivirus-windows.md)
 - [Configure end-user interaction with Microsoft Defender Antivirus](configure-local-policy-overrides-microsoft-defender-antivirus.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

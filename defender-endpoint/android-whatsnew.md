@@ -162,7 +162,6 @@ The current enterprise dashboard experience now features a tile view for your se
 | :::image type="content" source="media/android-whatsnew/android-tile-appsecurity.png" alt-text="Screenshot showing the app security tile."::: | **App security** <br/>The user can see whether any threats were found in apps installed on a user's device. |
 | :::image type="content" source="media/android-whatsnew/android-tile-globalsecureaccess.png" alt-text="Screenshot showing Global Secure Access status."::: | **Global secure access** <br/>The user can see current connection status. |
    
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
 ## See also
 

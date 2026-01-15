@@ -138,5 +138,5 @@ To verify that Dev Drive and Defender Performance Mode is enabled, follow these 
 
 [Set up a Dev Drive on Windows 11](/windows/dev-drive)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
