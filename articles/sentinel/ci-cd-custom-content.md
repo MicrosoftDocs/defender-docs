@@ -19,7 +19,7 @@ ms.collection: usx-security
 
 ---
 
-# Manage content as code with Microsoft Sentinel repositories (public preview)
+# Manage content as code with Microsoft Sentinel repositories (preview)
 
 Microsoft Sentinel repositories let you deploy and manage custom Sentinel content from an external source control repository for continuous integration/continuous delivery (CI/CD). This automation removes the need for manual processes to update and deploy your custom content across workspaces. A subset of content as code is *detections* as code (DaC). Microsoft Sentinel **Repositories** implements DaC as well.
 
