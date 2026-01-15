@@ -686,7 +686,6 @@ The Python version of the client analyzer accepts command line parameters to per
 
 - [Address false positives/negatives in Microsoft Defender for Endpoint](/defender-endpoint/defender-endpoint-false-positives-negatives)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
 
 
