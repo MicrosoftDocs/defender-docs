@@ -17,10 +17,10 @@ ms.date: 01/16/2026
 
 # Manage profiles and approve extensions using Intune
 
-  > [!NOTE]
-  > Intune policy support for macOS extensions was deprecated in the August 2024 service release (2048). Existing Intune policies with macOS extensions continue to work, but you can't create new policies with macOS extensions in Intune.
-  >
-  > Instead, use the settings catalog to create new Intune policies for macOS that configure the System Extension payload. For more information, see [Use the Intune settings catalog to configure settings](/intune/intune-service/configuration/settings-catalog).
+> [!NOTE]
+> Intune policy support for macOS extensions was deprecated in the August 2024 service release (2048). Existing Intune policies with macOS extensions continue to work, but you can't create new policies with macOS extensions in Intune.
+>
+> Instead, use the settings catalog to create new Intune policies for macOS that configure the System Extension payload. For more information, see [Use the Intune settings catalog to configure settings](/intune/intune-service/configuration/settings-catalog).
 
 This article describes how to use the Intune settings catalog to approve the required extensions for macOS policies.
 
