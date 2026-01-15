@@ -175,11 +175,11 @@ The UEBA behaviors layer automatically aggregates insights for all supported ven
 
 During public preview, the UEBA behaviors layer focuses on these non-Microsoft data sources that traditionally lack easy behavioral context in Microsoft Sentinel: 
 
-| Data source | Supported vendors, services, and logs | Connector | Behavior Rules |
+| Data source | Supported vendors, services, and logs | Connector | Behavior rules |
 |-------------|---------------------------|-------|----------------|
-| [CommonSecurityLog](/azure/azure-monitor/reference/tables/commonsecuritylog) | <ul><li>Cyber Ark Vault</li><li>Palo Alto Threats</li></ul> |  | [CommonSecurityLog behaviors](https://github.com/Azure/Azure-Sentinel/blob/master/Sentinel%20Behaviors/Behaviors%20Rules/commonsecuritylog_behaviors.md) |
-| [AWSCloudTrail](/azure/azure-monitor/reference/tables/awscloudtrail) | <ul><li>EC2</li><li>IAM</li><li>S3</li><li>EKS</li><li>Secrets Manager</li></ul> |<ul><li>[Amazon Web Services](../sentinel/data-connectors-reference.md#amazon-web-services)</li><li>[Amazon Web Services S3](../sentinel/data-connectors-reference.md#amazon-web-services-s3)</li></ul> | [AWS CloudTrail behaviors](https://github.com/Azure/Azure-Sentinel/blob/master/Sentinel%20Behaviors/Behaviors%20Rules/aws_cloudtrail_behaviors.md) |
-|[GCPAuditLogs](/azure/azure-monitor/reference/tables/gcpauditlogs) |<ul><li>Admin activity logs</li><li>Data access logs</li><li>Access transparency logs</li></ul>|[GCP Pub/Sub Audit Logs](../sentinel/data-connectors-reference.md#gcp-pubsub-audit-logs)| [GCP Audit Logs behaviors](https://github.com/Azure/Azure-Sentinel/blob/master/Sentinel%20Behaviors/Behaviors%20Rules/gcp_auditlogs_behaviors.md) |
+| [CommonSecurityLog](/azure/azure-monitor/reference/tables/commonsecuritylog) | <ul><li>Cyber Ark Vault</li><li>Palo Alto Threats</li></ul> |  | <ul><li>[CommonSecurityLog behaviors](https://github.com/Azure/Azure-Sentinel/blob/master/Sentinel%20Behaviors/Behaviors%20Rules/commonsecuritylog_behaviors.md)</li></ul> |
+| [AWSCloudTrail](/azure/azure-monitor/reference/tables/awscloudtrail) | <ul><li>EC2</li><li>IAM</li><li>S3</li><li>EKS</li><li>Secrets Manager</li></ul> |<ul><li>[Amazon Web Services](../sentinel/data-connectors-reference.md#amazon-web-services)</li><li>[Amazon Web Services S3](../sentinel/data-connectors-reference.md#amazon-web-services-s3)</li></ul> | <ul><li>[AWS CloudTrail behaviors](https://github.com/Azure/Azure-Sentinel/blob/master/Sentinel%20Behaviors/Behaviors%20Rules/aws_cloudtrail_behaviors.md)</li></ul> |
+|[GCPAuditLogs](/azure/azure-monitor/reference/tables/gcpauditlogs) |<ul><li>Admin activity logs</li><li>Data access logs</li><li>Access transparency logs</li></ul>|<ul><li>[GCP Pub/Sub Audit Logs](../sentinel/data-connectors-reference.md#gcp-pubsub-audit-logs)</li></ul>| <ul><li>[GCP Audit Logs behaviors](https://github.com/Azure/Azure-Sentinel/blob/master/Sentinel%20Behaviors/Behaviors%20Rules/gcp_auditlogs_behaviors.md)</li></ul> |
 
 
 > [!IMPORTANT]
@@ -233,17 +233,18 @@ Using the UEBA behaviors layer results in the following costs:
 
 ## Best practices and troubleshooting tips for querying behaviors
 
-This section provides best practices and troubleshooting tips for querying behaviors in the Defender portal and in your Sentinel workspace. For more practical examples of using behaviors, see [Use cases and examples](#use-cases-and-examples).
+This section provides best practices and troubleshooting tips for querying behaviors in the Defender portal and in your Sentinel workspace. 
 
-For more information about Kusto Query Language (KQL), see [Kusto query language overview](/kusto/query/?view=microsoft-sentinel).
-
-> [!IMPORTANT]
-> Table names differ slightly between Defender portal and in Sentinel workspace. 
+Table names differ slightly between Defender portal and in Sentinel workspace. In terms of schema, the tables are identical. In terms of data, the tables in Defender portal contain behaviors from all connected services (including Microsoft Defender for Cloud Apps and Microsoft Defender for Cloud, if applicable), whereas the tables in Sentinel workspace only contain behaviors generated from logs ingested into that specific Sentinel workspace.   
 >
 > | **Context** | **Tables to use** | **Use cases** |
 > |-------------|-------------------|---------------|
 > | **Defender portal Advanced Hunting** | `BehaviorInfo`<br>`BehaviorEntities` | Detection rules, incident investigation, threat hunting in Defender portal |
 > | **Sentinel workspace** | `SentinelBehaviorInfo`<br>`SentinelBehaviorEntities` | Azure Monitor workbooks, ingestion monitoring, KQL queries in Sentinel workspace |
+
+For more practical examples of using behaviors, see [Use cases and examples](#use-cases-and-examples).
+
+For more information about Kusto Query Language (KQL), see [Kusto query language overview](/kusto/query/?view=microsoft-sentinel).
 
 - **Access behavior data in the Defender portal by querying BehaviorInfo and BehaviorEntities**
 
