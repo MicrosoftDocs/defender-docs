@@ -12,7 +12,7 @@ ms.collection:
 - tier3
 ms.topic: how-to
 search.appverid: met150
-ms.date: 04/04/2025
+ms.date: 01/16/2026
 ---
 
 # Manage profiles and approve extensions using Intune
@@ -22,13 +22,11 @@ ms.date: 04/04/2025
   >
   > Instead, use the settings catalog to create new Intune policies for macOS that configure the System Extension payload. For more information, see [Use the Intune settings catalog to configure settings](/intune/intune-service/configuration/settings-catalog).
 
-This article describes the procedures to follow to manage profiles properly using the Intune management tool.
+This article describes how to use the Intune settings catalog to approve the required extensions for macOS policies.
 
-<a name='intune-system-extensions-policy'></a>
+## Intune system extensions policy
 
-## Intune policy
-
-Do the following procedure to approve the required system extensions.
+Do the following procedures to approve the required system extensions using the settings catalog.
 
 1. In the Microsoft Intune admin center at <https://intune.microsoft.com>, go to **Devices**.
 2. On the **Devices \| Overview** page, go to the **Manage devices** section \> **Configuration**. Or, to go directly to the **Devices \| Configuration** page, use <https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/configuration>.
@@ -43,33 +41,64 @@ Do the following procedure to approve the required system extensions.
    - **Name**: Enter a unique, descriptive name for the policy.
    - **Description**: Enter an optional description.
 
-   Select **Next**.
+   When you're finished on the **Create profile** tab, select **Next**.
 
-6. On the **Configuration settings** tab, select **Add settings**. In the **Settings picker** flyout that opens, do the following steps:
-   1. In the search box, enter "allowed system extensions", and then select **Search**.
-   2. In the **Browse by category** section, select the one and only search result: **System Configuration \> System Extensions**.
-   3. In the new section that appears, select the check box next to **Allowed System Extensions**. A new **System configuration** section appears on the **Configuration settings** tab behind the **Settings picker** flyout. You might need to resize the browser windows to see it. Or you can close the **Settings picker** flyout.
-   4. In the **Allowed Systems Extensions** section on the **Configuration settings** tab, select **+ Edit instance** the empty entry.
-   5. In the **Configure instance** flyout that opens, configure the following settings:
-      - **Allowed System Extensions**: Enter the following values, one per box:
-        - `com.microsoft.wdav.epsext`
-        - `com.microsoft.wdav.netext`
-      - **Team identifier**: Enter `UBF8T346G9`.
-   6. Select **Save** on the **Configure instance** flyout.
+6. On the **Configuration settings** tab, select **Add settings**.
 
-   Back on the **Configuration settings** tab, the entry is now visible.
+   In the **Settings picker** flyout that opens, do the following steps:
 
-   Select **Next**.
+   1. In the search box, enter "allowed system", and then select **Search**.
+   2. In the **Browse by category** section, select the one and only **System Configuration \> System Extensions** result.
+   3. In the new subcategory section that appears, select the check boxes next to both results:
+      - **Allowed System Extension Types**
+      - **Allowed System Extensions**
 
-7. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing scope tags. When you're finished, select **Next**.
+      A new **System configuration** \> **System Extensions** section with these subsections appears on the **Configuration settings** tab behind the **Settings picker** flyout. You might need to resize the browser window to see them. Or you can close the **Settings picker** flyout.
+
+      :::image type="content" source="media/intune-macos-settings-catalog-select.png" alt-text="Screenshot of the Configuration settings tab of the Create profile wizard with Allowed System Extension Types and Allowed System Extensions selected." lightbox="media/intune-macos-settings-catalog-select.png":::
+
+   4. On the **Configuration settings** tab in the **System configuration** \> **System Extensions** section, configure the following settings:
+      - **Allowed System Extensions** subsection:
+        1. Select **+ Edit instance** in the empty entry row.
+        2. In the **Configure instance** flyout that opens, configure the following settings:
+           - **Allowed System Extensions** (bundle identifiers): Enter the following values, one per box:
+             - `com.microsoft.wdav.epsext`
+             - `com.microsoft.wdav.netext`
+           - **Team identifier**: Enter `UBF8T346G9`.
+        3. Select **Save** on the **Configure instance** flyout.
+
+        :::image type="content" source="media/intune-macos-settings-catalog-allowed-system-extensions.png" alt-text="Screenshot of the Configure instance flyout with the required Allowed system extensions values entered." lightbox="media/intune-macos-settings-catalog-allowed-system-extensions.png":::
+
+      - **Allowed System Extension Types** subsection:
+        1. Select **+ Edit instance** in the empty entry row.
+        2. In the **Configure instance** flyout that opens, configure the following settings:
+           - **Allowed System Extension Types**: Enter the following values, one per box:
+             - `Network`
+             - `EndpointSecurity`
+           - **Team identifier**: Enter `UBF8T346G9`.
+        3. Select **Save** on the **Configure instance** flyout.
+
+        :::image type="content" source="media/intune-macos-settings-catalog-allowed-system-extension-types.png" alt-text="Screenshot of the Configure instance flyout with the required Allowed system extension types values entered." lightbox="media/intune-macos-settings-catalog-allowed-system-extension-types.png":::
+
+   The configured **Allowed System Extensions** and **Allowed System Extension Types** entries are available on the **Configuration settings** tab.
+
+   :::image type="content" source="media/intune-macos-settings-catalog-configured-settings.png" alt-text="Screenshot of the completed Configuration settings tab of the Create profile wizard with the required values for Allowed System Extension Types and Allowed System Extensions." lightbox="media/intune-macos-settings-catalog-configured-settings.png":::
+
+   When you're finished on the **Configuration settings** tab, select **Next**.
+
+7. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing [scope tags](/intune/intune-service/fundamentals/scope-tags).
+
+   When you're finished on the **Scope tags** tab, select **Next**.
 
 8. On the **Assignments** tab, configure the following settings:
    - **Included groups** section: Select one of the following options:
      - **Add groups**: Select one or more groups to include.
-     - **Add all users**: We recommend this value.
+     - **Add all users**
      - **Add all devices**
    - **Excluded groups**: Select **Add groups** to specify groups to exclude.
 
    When you're finished on the **Assignments** tab, select **Next**.
 
-9. On the **Review + create** tab, review the settings, select **Previous** or click on the appropriate tab to make changes, and then select **Create**.
+9. On the **Review + create** tab, review the settings, select **Previous** or click on the appropriate tab to make changes.
+
+   When you're finished on the **Review + create** tab, select **Create**.
