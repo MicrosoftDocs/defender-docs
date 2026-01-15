@@ -19,6 +19,9 @@ This article lists the security alerts you might get for AI services from Micros
 
 > [!NOTE]
 > Alerts from different sources might take different amounts of time to appear. For example, alerts that require analysis of network traffic might take longer to appear than alerts related to suspicious processes running on virtual machines.
+> 
+> [!NOTE]
+> For alerts that are in preview: [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)]
 
 ## AI services alerts
 
@@ -191,9 +194,6 @@ This article lists the security alerts you might get for AI services from Micros
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Reconnaissance
 
 **Severity**: Low
-
-> [!NOTE]
-> For alerts that are in preview: [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)]
 
 ## Next steps
 

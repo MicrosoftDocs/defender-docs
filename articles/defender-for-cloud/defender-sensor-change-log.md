@@ -7,9 +7,9 @@ ms.date: 05/08/2025
 ai-usage: ai-assisted
 ---
 
-# Sensor for Defender for Containers Changelog
+# Sensor for Defender for Containers release notes
 
-The Sensor for Microsoft Defender for Containers changelog provides a detailed version history of sensor updates. Each version includes new features, improvements, and fixes to enhance functionality. Use this changelog to stay informed about the latest updates and plan your deployments accordingly.
+The Sensor for Microsoft Defender for Containers release notes provides a detailed version history of sensor updates. Each version includes new features, improvements, and fixes to enhance functionality. Use this changelog to stay informed about the latest updates and plan your deployments accordingly.
 
 For more information about deploying the sensor in Defender for Containers, see [Configure Microsoft Defender for Containers components](defender-for-containers-enable.md).
 

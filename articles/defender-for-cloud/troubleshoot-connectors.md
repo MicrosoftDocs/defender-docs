@@ -4,7 +4,7 @@ description: This guide is for IT professionals, security analysts, and cloud ad
 author: Elazark
 ms.author: elkrieger
 ms.topic: concept-article
-ms.date: 06/18/2025
+ms.date: 01/06/2026
 ---
 
 # Troubleshoot connectors guide
@@ -35,6 +35,20 @@ Defender for Cloud uses connectors to collect monitoring data from Amazon Web Se
 - Wait at least 12 hours after creation of the AWS root account.
 - Make sure that EKS clusters are successfully connected to Azure Arc-enabled Kubernetes.
 - If you don't see AWS data in Defender for Cloud, make sure that the required AWS resources for sending data to Defender for Cloud exist in the AWS account.
+
+### CloudFormation error resolution table
+
+If you see an error when deploying the CloudFormation template, use the following table to help identify and resolve the issue.
+
+| Error | Suggested fix |
+|--|--|
+| Access denied | Ensure AWS user or role has proper IAM role.<br>• Check StackSet trust (Org access).<br>• Run script with proper IAM role. |
+| Already exists/Duplicate resource | Deploy template in one region first.<br>• Skip or conditionally create globals in others.<br>• Remove any leftover duplicate instances, then retry. |
+| Unsupported Lambda runtime | Template is outdated.<br>• Download latest template (updated runtime).<br>• Update stack or StackSet with new template.<br>• Verify Lambda uses new runtime. |
+| No Updates to be performed | No changes detected.<br>• Confirm you're using the new template.<br>• If not, get the current template.<br>• If yes and no changes needed, no action. |
+| StackSet won't start in portal and hangs | Deployment orchestration issue.<br> • Enable Org trusted access for CFN.<br>• Try manual StackSet update via AWS console or CLI.<br>• Use browser dev tools to catch hidden errors. |
+| Azure connector error | Azure or AWS config mismatch.<br>• Verify CloudFormation stack name and settings.<br>• Ensure management and member stacks deployed.<br>• Align names, then retry in portal. |
+| Other / Not sure / Still failing | Seek further help.<br> • Contact Microsoft Support with logs and details. |
 
 ### Connected to Sentinel first
 
