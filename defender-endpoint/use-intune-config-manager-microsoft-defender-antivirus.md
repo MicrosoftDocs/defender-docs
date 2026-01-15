@@ -629,5 +629,4 @@ This policy setting controls the level of intensity that Microsoft Defender Anti
 >
 > You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions.
 > See: [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
