@@ -91,6 +91,6 @@ You can run `mdatp health --help` on recent versions to list all supported featu
 - [What's new in Microsoft Defender for Endpoint on macOS](mac-whatsnew.md)
 - [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
 
