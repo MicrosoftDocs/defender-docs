@@ -85,7 +85,7 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 - Ubuntu 24.04 LTS
 - Ubuntu Pro 22.04
 - Ubuntu Pro 24.04
-- Debian 9 - 12
+- Debian 9 - 13
 - SUSE Linux Enterprise Server 12.x
 - SUSE Linux Enterprise Server 15.x
 - Oracle Linux 7.2 and higher
