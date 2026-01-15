@@ -32,7 +32,7 @@ This article provides a set of steps that you can follow to investigate, analyze
 
 Here's a workflow example for responding to incidents in the Microsoft Defender portal.
 
-:::image type="content" source="/defender/media/incidents-overview/incidents-example-workflow.png" alt-text="An example of an incident response workflow for the Microsoft Defender portal." lightbox="/defender/media/incidents-overview/incidents-example-workflow.png":::
+:::image type="content" source="media/plan-incident-response/incidents-example-workflow.png" alt-text="An example of an incident response workflow for the Microsoft Defender portal." lightbox="media/plan-incident-response/incidents-example-workflow.png":::
 
 On an ongoing basis, identify the highest priority incidents for analysis and resolution in the incident queue and get them ready for response. This is a combination of:
 

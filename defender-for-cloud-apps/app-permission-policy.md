@@ -1,12 +1,11 @@
 ---
 title: Create policies to control OAuth apps 
 description: This article provides instructions for creating and working with app permission policies in Microsoft Defender for Cloud Apps.
-ms.date: 05/29/2023
+ms.date: 12/16/2025
 ms.topic: how-to
 ---
+
 # Create policies to control OAuth apps
-
-
 
 In addition to the [existing investigation of OAuth apps](manage-app-permissions.md) connected to your environment, set permission policies so that you get automated notifications when an OAuth app meets certain criteria. For example, you can automatically be alerted when there are apps that require a high permission level and are authorized by more than 50 users.
 
@@ -22,24 +21,28 @@ Along with a built-in set of capabilities to detect anomalous app behavior and g
 
 ## Create a new OAuth app policy
 
-There are two ways to create a new OAuth app policy. The first way is under **Investigate** and the second is under **Control**.
+There are two ways to create a new OAuth app policy. The first way is under **Policy management** and the second is under **App governance**.
+
+If you have [preview features](/microsoft-365/security/defender/preview) and [app governance turned on](app-governance-get-started.md), select the **App governance** page instead.
 
 To create a new OAuth app policy:
 
-1. In the Microsoft Defender Portal, under **Cloud Apps**, select **OAuth apps**.
+1. In the Microsoft Defender Portal, under **Cloud Apps**, select **Policies** and then select **Policy management**.
 
-    If you have [preview features](/microsoft-365/security/defender/preview) and [app governance turned on](app-governance-get-started.md), select the **App governance** page instead.
+1. Select the **Threat detection** tab and then select **Create policy** followed by **OAuth app policy**.
+
+    :::image type="content" source="create-oauth-app-policies/create-oauth-policy.png" alt-text="Screenshot that shows how to create an OAUth app policy in the Microsoft Defender portal. " lightbox="create-oauth-app-policies/create-oauth-policy.png":::
+
+1. In the **Create OAuth app policy** page, enter a name and description for the policy.
+
+    :::image type="content" source="create-oauth-app-policies/oauth-app-policy.png" alt-text="Screenshot that shows where to enter the details for your new Oauth app policy." lightbox="create-oauth-app-policies/oauth-app-policy.png":::
 
 1. Filter the apps according to your needs. For example, you can view all apps that request **Permission** to **Modify calendars in your mailbox**.
 1. You can use the **Community use** filter to get information on whether allowing permission to this app is common, uncommon, or rare. This filter can be helpful if you have an app that's rare and requests permission that has a high severity level or requests permission from many users.
 1. Select the **New policy from search** button.
-    ![New policy from search.](media/app-permissions-filter.png)
+
 
 1. You can set the policy based on the group memberships of the users who authorized the apps. For example, an admin can decide to set a policy that revokes uncommon apps if they ask for high permissions, only if the user who authorized the permissions is a member of the **Administrators** group.
-
-Alternatively, you can also create the policy in the Microsoft Defender Portal, by going to **Cloud Apps**-<> **Policies** -> **Policy management**. Then select **Create policy** followed by **OAuth app policy**.
-
-   ![new OAuth app policy.](media/app-permissions-policy.png)
 
 > [!NOTE]
 > OAuth apps policies will trigger alerts only on policies that were authorized by users in the tenant.
@@ -63,7 +66,4 @@ In addition to OAuth app policies you can create, there are the following out-of
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Data protection policies](data-protection-policies.md)
-
-[!INCLUDE [Open support ticket](includes/support.md)]
+- [Data protection policies](data-protection-policies.md)

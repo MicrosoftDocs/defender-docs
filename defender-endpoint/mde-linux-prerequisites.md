@@ -83,7 +83,8 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 - Ubuntu 20.04 LTS
 - Ubuntu 22.04 LTS
 - Ubuntu 24.04 LTS
-- Ubuntu Pro
+- Ubuntu Pro 22.04
+- Ubuntu Pro 24.04
 - Debian 9 - 12
 - SUSE Linux Enterprise Server 12.x
 - SUSE Linux Enterprise Server 15.x
@@ -104,7 +105,8 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 - Ubuntu 20.04 LTS ARM64
 - Ubuntu 22.04 LTS ARM64
 - Ubuntu 24.04 LTS ARM64
-- Ubuntu Pro ARM64
+- Ubuntu Pro 22.04 ARM64
+- Ubuntu Pro 24.04 ARM64
 - CentOS Stream 8.x ARM64
 - CentOS Stream 9.x ARM64
 - CentOS Stream 10.x ARM64
@@ -158,12 +160,12 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 
 1. Prepare your environment, as described in Step 1 of the following article [Configure your network environment to ensure connectivity with Defender for Endpoint service](/defender-endpoint/configure-environment).
 
-2. Connect Defender for Endpoint on Linux through a proxy server by using the following discovery methods:
+1. Connect Defender for Endpoint on Linux through a proxy server by using the following discovery methods:
 
    - Transparent proxy
    - [Manual static proxy configuration](/defender-endpoint/linux-static-proxy-configuration#installation-time-configuration)
 
-3. Permit anonymous traffic in the previously listed URLs, if a proxy or firewall blocks traffic.
+1. Permit anonymous traffic in the previously listed URLs, if a proxy or firewall blocks traffic.
 
 > [!NOTE]
 > Configuration for transparent proxies isn't needed for Defender for Endpoint. See [Manual Static Proxy Configuration.](/defender-endpoint/linux-static-proxy-configuration)

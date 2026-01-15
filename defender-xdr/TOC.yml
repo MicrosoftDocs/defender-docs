@@ -250,7 +250,7 @@
             href: advanced-hunting-behaviorentities-table.md
           - name: BehaviorInfo
             href: advanced-hunting-behaviorinfo-table.md
-          - name: CampaignIno
+          - name: CampaignInfo
             href: advanced-hunting-campaigninfo-table.md            
           - name: CloudAppEvents
             href: advanced-hunting-cloudappevents-table.md
@@ -458,8 +458,6 @@
           href: security-copilot-in-microsoft-365-defender.md
         - name: Summarize incidents
           href: security-copilot-m365d-incident-summary.md
-        - name: Uncover threats
-          href: dynamic-threat-detection-agent.md
         - name: Run script analysis
           href: security-copilot-m365d-script-analysis.md
         - name: Analyze files
@@ -470,8 +468,6 @@
           href: security-copilot-defender-identity-summary.md                
         - name: Use guided responses
           href: security-copilot-m365d-guided-response.md
-        - name: Hunt for threats using natural language
-          href: advanced-hunting-security-copilot-threat-hunting-agent.md
         - name: Generate KQL queries
           href: advanced-hunting-security-copilot-query-assistant.md
         - name: Create incident reports
@@ -486,6 +482,10 @@
             href: phishing-triage-agent.md
           - name: Threat Intelligence Briefing Agent
             href: threat-intel-briefing-agent-defender.md
+          - name: Threat Hunting Agent
+            href: advanced-hunting-security-copilot-threat-hunting-agent.md
+          - name: Dynamic Threat Detection Agent
+            href: dynamic-threat-detection-agent.md
     - name: Enhance security operations
       items:
       - name: Security operations guide

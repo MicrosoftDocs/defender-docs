@@ -103,35 +103,34 @@ See [How to create and deploy antimalware policies: Exclusion settings](/configm
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure, and then select **Edit**.
 
-2. In the **Group Policy Management Editor** go to **Computer configuration**, and select **Administrative templates**.
+1. In the **Group Policy Management Editor** go to **Computer configuration**, and select **Administrative templates**.
 
-3. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Exclusions**.
+1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Exclusions**.
 
-4. Open the **Path Exclusions** setting for editing, and add your exclusions.
-
-    1. Set the option to **Enabled**.
-
-    2. Under the **Options** section, select **Show**.
-    
-    3. Specify each folder on its own line under the **Value name** column.
-    
-    4. If you're specifying a file, ensure that you enter a fully qualified path to the file, including the drive letter, folder path, file name, and extension.
-    
-    5. Enter **0** in the **Value** column.
-
-    6. Choose **OK**.
-
-5. Open the **Extension Exclusions** setting for editing and add your exclusions.
+1. Open the **Path Exclusions** setting for editing, and add your exclusions.
 
     1. Set the option to **Enabled**.
-    
-    2. Under the **Options** section, select **Show**.
-    
-    3. Enter each file extension on its own line under the **Value name** column.
-    
-    4. Enter **0** in the **Value** column.
 
-    5. Choose **OK**.
+    1. Under the **Options** section, select **Show**.
+    
+    1. Specify each folder on its own line under the **Value name** column.
+    
+    1. If you're specifying a file, ensure that you enter a fully qualified path to the file, including the drive letter, folder path, file name, and extension.
+    
+    1. Enter **0** in the **Value** column.
+
+    1. Choose **OK**.
+
+    1. Open the **Extension Exclusions** setting for editing and add your exclusions.
+
+    1. Set the option to **Enabled**.
+    
+    1. Under the **Options** section, select **Show**.
+    
+    1. Enter each file extension on its own line under the **Value name** column.
+    
+    1. Enter **0** in the **Value** column.
+    1. Choose **OK**.
 
 <a id="ps"></a>
 

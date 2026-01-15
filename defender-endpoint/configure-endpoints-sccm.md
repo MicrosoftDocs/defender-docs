@@ -83,35 +83,33 @@ Follow these steps to create a device collection that can be used to onboard end
 
     :::image type="content" source="media/configmgr-device-collections.png" alt-text="Screenshot of the Microsoft Configuration Manager wizard1.":::
 
-2. Select and hold (or right-click) **Device Collection** and select **Create Device Collection**.
+1. Select and hold (or right-click) **Device Collection** and select **Create Device Collection**.
 
     :::image type="content" source="media/configmgr-create-device-collection.png" alt-text="Screenshot of the Microsoft Configuration Manager wizard2.":::
 
-3. Provide a **Name** and **Limiting Collection**, then select **Next**.
+1. Provide a **Name** and **Limiting Collection**, then select **Next**.
 
     :::image type="content" source="media/configmgr-limiting-collection.png" alt-text="Screenshot of the Microsoft Configuration Manager wizard3.":::
 
-4. Select **Add Rule** and choose **Query Rule**.
+1. Select **Add Rule** and choose **Query Rule**.
 
     :::image type="content" source="media/configmgr-query-rule.png" alt-text="Screenshot of the Microsoft Configuration Manager wizard4." :::
 
-5. Select **Next** on the **Direct Membership Wizard** and then select **Edit Query Statement**.
-
+1. Select **Next** on the **Direct Membership Wizard** and then select **Edit Query Statement**.
     :::image type="content" source="media/configmgr-direct-membership.png" alt-text="Screenshot of the Microsoft Configuration Manager wizard5.":::
 
-6. Select **Criteria** and then choose the star icon.
+1. Select **Criteria** and then choose the star icon.
 
     :::image type="content" source="media/configmgr-criteria.png" alt-text="Screenshot of the Microsoft Configuration Manager wizard6.":::
 
-7. Keep criterion type as **simple value**, choose whereas **Operating System - build number**, operator as **is greater than or equal to** and value **14393**, and select **OK**.
-
+1. Keep criterion type as **simple value**, choose whereas **Operating System - build number**, operator as **is greater than or equal to** and value **14393**, and select **OK**.
     :::image type="content" source="media/configmgr-simple-value.png" alt-text="Screenshot of the Microsoft Configuration Manager wizard7.":::
 
-8. Select **Next** and **Close**.
+1. Select **Next** and **Close**.
 
     :::image type="content" source="media/configmgr-membership-rules.png" alt-text="Screenshot of the Microsoft Configuration Manager wizard8.":::
 
-9. Select **Next**.
+1. Select **Next**.
 
     :::image type="content" source="media/configmgr-confirm.png" alt-text="Screenshot of the Microsoft Configuration Manager wizard9.":::
 
@@ -237,9 +235,9 @@ If you use Microsoft Configuration Manager current branch, see [Create an offboa
     1. In the **Deployment method** field, select **System Center Configuration Manager 2012/2012 R2/1511/1602**.
     1. Select **Download package**, and save the .zip file.
 
-2. Extract the contents of the .zip file to a shared, read-only location that can be accessed by the network administrators who will deploy the package. You should have a file named *WindowsDefenderATPOffboardingScript_valid_until_YYYY-MM-DD.cmd*.
+1. Extract the contents of the .zip file to a shared, read-only location that can be accessed by the network administrators who will deploy the package. You should have a file named *WindowsDefenderATPOffboardingScript_valid_until_YYYY-MM-DD.cmd*.
 
-3. Deploy the package by following the steps in the [Packages and Programs in System Center 2012 R2 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg699369\(v=technet.10\)) article.
+1. Deploy the package by following the steps in the [Packages and Programs in System Center 2012 R2 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg699369\(v=technet.10\)) article.
 
    Choose a predefined device collection to deploy the package to.
 
@@ -254,17 +252,17 @@ If you're using System Center 2012 R2 Configuration Manager, monitoring consists
 
 1. Confirming the configuration package has been correctly deployed and is running (or has successfully run) on the devices in your network.
 
-2. Checking that the devices are compliant with the Defender for Endpoint service (this ensures the device can complete the onboarding process and can continue to report data to the service).
+1. Checking that the devices are compliant with the Defender for Endpoint service (this ensures the device can complete the onboarding process and can continue to report data to the service).
 
 ### Confirm the configuration package has been correctly deployed
 
 1. In the Configuration Manager console, click **Monitoring** at the bottom of the navigation pane.
 
-2. Select **Overview** and then **Deployments**.
+1. Select **Overview** and then **Deployments**.
 
-3. Select on the deployment with the package name.
+1. Select on the deployment with the package name.
 
-4. Review the status indicators under **Completion Statistics** and **Content Status**.
+1. Review the status indicators under **Completion Statistics** and **Content Status**.
 
     If there are failed deployments (devices with **Error**, **Requirements Not Met**, or **Failed statuses**), you may need to  troubleshoot the devices. For more information, see, [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md).
 

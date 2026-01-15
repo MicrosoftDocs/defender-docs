@@ -48,15 +48,15 @@ For details on configuring Microsoft Configuration Manager (current branch), see
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
 
-2. Right-click the Group Policy Object you want to configure, and then select **Edit**.
+1. Right-click the Group Policy Object you want to configure, and then select **Edit**.
 
-3. In the **Group Policy Management Editor** go to **Computer configuration** and select **Administrative templates**.
+1. In the **Group Policy Management Editor** go to **Computer configuration** and select **Administrative templates**.
 
-4. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus**, and then select a location (refer to [Settings and locations](#settings-and-locations) in this article).
+1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus**, and then select a location (refer to [Settings and locations](#settings-and-locations) in this article).
 
-5. Edit the policy object.
+1. Edit the policy object.
 
-6. Select **OK**, and repeat for any other settings.
+1. Select **OK**, and repeat for any other settings.
 
 ### Settings and locations
 
