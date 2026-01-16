@@ -24,6 +24,7 @@ appliesto:
 - Microsoft Defender for Cloud
 - Microsoft Defender for Cloud Apps
 - Microsoft Security Exposure Management
+- Microsoft Sentinel
 #customer intent: As a security administrator, I want to activate Microsoft Defender XDR Unified RBAC so that I can enforce permissions and assignments configured in my new custom roles or imported roles.
 ---
 

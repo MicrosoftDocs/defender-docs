@@ -29,7 +29,7 @@ This article provides information about new features and important product updat
 
 ### Microsoft Defender for Cloud permissions are now integrated with Microsoft Defender XDR unified RBAC (Preview)
 
-We’ve introduced Unified Role-Based Access Control (uRBAC) to simplify permission management across Defender for Cloud resources.
+We’ve introduced Unified Role-Based Access Control (URBAC) to simplify permission management across Defender for Cloud resources.
 
 Assign roles consistently across cloud scopes.
 Apply least-privilege principles with granular permissions.
