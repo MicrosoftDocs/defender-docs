@@ -43,7 +43,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 - **Block communication from sender email address and domains in Teams**: Admins can directly block [malicious domains and email addresses](tenant-allow-block-list-teams-domains-configure.md) from within the Microsoft Defender portal, seamlessly adding targeted entries to the Teams Admin Center (TAC) blocked domains and users list. This capability enables near real-time protection. When suspicious or abusive external organizations are identified, SOC teams can immediately block them, effectively halting new external chat messages, invites, and channel communications from those domains and senders while deleting existing ones.
 
-- **Expanding ZAP and Teams Admin quarantine to Plan 1**: [Zero-hour-auto-purge (ZAP)](zero-hour-auto-purge.md#zero-hour-auto-purge-zap-in-microsoft-teams) and [Teams Admin quarantine](quarantine-admin-manage-messages-files.md#use-the-microsoft-defender-portal-to-manage-microsoft-teams-quarantined-messages) is available to Microsoft Defender for Plan 1 by default, bringing post-delivery protection layer. 
+- **Expanding ZAP and Teams Admin quarantine to Plan 1**: [Zero-hour-auto-purge (ZAP)](zero-hour-auto-purge.md#zero-hour-auto-purge-zap-in-microsoft-teams) and [admin management of quarantined Teams messages](quarantine-admin-manage-messages-files.md#use-the-microsoft-defender-portal-to-manage-microsoft-teams-quarantined-messages) is available to Microsoft Defender for Plan 1 by default, bringing a post-delivery protection layer.
 
 ## October 2025
 
