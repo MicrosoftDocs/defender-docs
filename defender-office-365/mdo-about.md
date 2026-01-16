@@ -22,7 +22,7 @@ ms.custom:
 description: Is Microsoft Defender for Office 365 worth it? Let's find out.
 ms.service: defender-office-365
 adobe-target: true
-ms.date: 10/13/2025
+ms.date: 01/16/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -129,7 +129,9 @@ The extra features that you get in **Defender for Office 365 Plan 2** on top of 
 
 ## Defender for Office 365 Plan 1 vs. Plan 2 cheat sheet
 
-This quick-reference section summarizes the different capabilities between Defender for Office 365 Plan 1 and Plan 2 that aren't included in the default email protections for cloud mailboxes.
+This quick-reference section summarizes the different capabilities between Defender for Office 365 Plan 1 and Plan 2 for email that aren't included in the default email protections for cloud mailboxes.
+
+To check the different capabilities between Plan 1 and Plan 2 for Teams, see [Microsoft Defender for Office 365 support for Microsoft Teams](defender-office-365/mdo-support-teams-about.md#Microsoft-Defender-for-Office-365-support-for-Microsoft-Teams).
 
 |Defender for Office 365 Plan 1|Defender for Office 365 Plan 2|
 |---|---|

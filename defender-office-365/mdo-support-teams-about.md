@@ -16,7 +16,7 @@ ms.collection:
   - tier1
 description: Admins can learn about Microsoft Teams features in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 01/13/2026
+ms.date: 01/16/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -27,6 +27,22 @@ appliesto:
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
+
+
+  | Feature | All Teams Licenses | MDO P1 | MDO P2 |
+  |---------|:------------------:|:------:|:------:|
+  | Built-in virus protection (SharePoint, OneDrive, Teams) | :::image type="icon" source="media/feature_present_icon.png"::: | :::image type="icon" source="media/feature_present_icon.png"::: | :::image type="icon" source="media/feature_present_icon.png"::: |
+  | Near real-time URL warnings (up to 48 hrs post-delivery) | :::image type="icon" source="media/feature_present_icon.png"::: | :::image type="icon" source="media/feature_present_icon.png"::: | :::image type="icon" source="media/feature_present_icon.png"::: |
+  | Safe Links (time-of-click URL protection) | | :::image type="icon" source="media/feature_present_icon.png"::: | :::image type="icon" source="media/feature_present_icon.png"::: |
+  | Safe Attachments (time-of-click file protection) | | :::image type="icon" source="media/feature_present_icon.png"::: | :::image type="icon" source="media/feature_present_icon.png"::: |
+  | Tenant Allow/Block List (domains, URLs, files) | | :::image type="icon" source="media/feature_present_icon.png"::: | :::image type="icon" source="media/feature_present_icon.png"::: |
+  | Zero-hour Auto Purge (ZAP) for Teams | | :::image type="icon" source="media/feature_present_icon.png"::: | :::image type="icon" source="media/feature_present_icon.png"::: |
+  | Teams messages in quarantine (admin-managed) | | :::image type="icon" source="media/feature_present_icon.png"::: | :::image type="icon" source="media/feature_present_icon.png"::: |
+  | Teams Message Entity Panel | | :::image type="icon" source="media/feature_present_icon.png"::: | :::image type="icon" source="media/feature_present_icon.png"::: |
+  | User-reported Teams messages | | | :::image type="icon" source="media/feature_present_icon.png"::: |
+  | Remove users from Teams chat (admin remediation) | | | :::image type="icon" source="media/feature_present_icon.png"::: |
+  | Attack simulation training with Teams messages | | | :::image type="icon" source="media/feature_present_icon.png"::: |
+  | Advanced hunting on Teams messages | | | :::image type="icon" source="media/feature_present_icon.png"::: |
 
 With the increased use of collaboration tools like Microsoft Teams, the possibility of malicious attacks using chat messages has also increased.
 
