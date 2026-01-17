@@ -105,7 +105,7 @@ To take full advantage of attack surface reduction rules and reporting, we recom
 
 > [!NOTE]
 > There are multiple methods to configure attack surface reduction rules. Attack surface reduction rules can be configured using: Microsoft Intune, PowerShell, Group Policy, Microsoft Configuration Manager (ConfigMgr), Intune OMA-URI.
-> If you are using a different infrastructure configuration than what is listed for _Infrastructure requirements_, you can learn more about deploying attack surface reduction rules using other configurations here: [Enable attack surface reduction rules](enable-attack-surface-reduction.md).
+> If you are using a different infrastructure configuration than what is listed for _Infrastructure requirements_, you can learn more about deploying attack surface reduction rules using other configurations here: [Enable attack surface reduction rules](attack-surface-reduction-rules-enable.md).
 
 ### Attack surface reduction rules dependencies
 
@@ -168,9 +168,9 @@ Some rules don't work well if unsigned, internally developed application and scr
 
 [Overview of attack surface reduction](overview-attack-surface-reduction.md)
 
-[Use attack surface reduction rules to prevent malware infection](attack-surface-reduction.md)
+[Use attack surface reduction rules to prevent malware infection](attack-surface-reduction-rules-overview.md)
 
-[Enable attack surface reduction rules - alternate configurations](enable-attack-surface-reduction.md)
+[Enable attack surface reduction rules - alternate configurations](attack-surface-reduction-rules-enable.md)
 
 [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
 

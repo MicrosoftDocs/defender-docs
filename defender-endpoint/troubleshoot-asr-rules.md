@@ -68,8 +68,8 @@ Review [Troubleshoot attack surface reduction rules](/defender-endpoint/troubles
 
 ## Related articles
 
-- [Attack surface reduction rules](attack-surface-reduction.md)
-- [Enable attack surface reduction rules](enable-attack-surface-reduction.md)
+- [Attack surface reduction rules](attack-surface-reduction-rules-overview.md)
+- [Enable attack surface reduction rules](attack-surface-reduction-rules-enable.md)
 - [Evaluate attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
 
 - [Troubleshoot attack surface reduction rules](/defender-endpoint/troubleshoot-asr)

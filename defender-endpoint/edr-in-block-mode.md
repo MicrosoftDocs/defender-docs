@@ -43,7 +43,7 @@ This article describes EDR in block mode, which helps protect devices that are r
 > [!IMPORTANT]
 > EDR in block mode cannot provide all available protection when Microsoft Defender Antivirus real-time protection is in passive mode. Some capabilities that depend on Microsoft Defender Antivirus to be the active antivirus solution will not work, such as the following examples:
 > - Real-time protection, including on-access scanning, is not available when Microsoft Defender Antivirus is in passive mode. To learn more about real-time protection policy settings, see **[Enable and configure Microsoft Defender Antivirus always-on protection](configure-real-time-protection-microsoft-defender-antivirus.md)**.
-> - Features like **[network protection](network-protection.md)** and **[attack surface reduction rules](attack-surface-reduction.md)** and indicators (file hash, ip address, URL, and certificates) are only available when Microsoft Defender Antivirus is running in active mode.
+> - Features like **[network protection](network-protection.md)** and **[attack surface reduction rules](attack-surface-reduction-rules-overview.md)** and indicators (file hash, ip address, URL, and certificates) are only available when Microsoft Defender Antivirus is running in active mode.
 > It is expected that your non-Microsoft antivirus solution includes these capabilities.
    
 

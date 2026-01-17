@@ -34,7 +34,7 @@ When you're implementing attack surface reduction rules, move the first test rin
 
 ## Step 1: Transition attack surface reduction rules from Audit to Block
 
-1. After all exclusions are determined while in audit mode, start setting some attack surface reduction rules to "block" mode, starting with the rule that has the fewest triggered events. See [Enable attack surface reduction rules](enable-attack-surface-reduction.md).
+1. After all exclusions are determined while in audit mode, start setting some attack surface reduction rules to "block" mode, starting with the rule that has the fewest triggered events. See [Enable attack surface reduction rules](attack-surface-reduction-rules-enable.md).
 
 1. Review the reporting page in the Microsoft Defender portal; see [Threat protection report in Microsoft Defender for Endpoint](threat-protection-reports.md). Also review feedback from your champions.
 
@@ -45,7 +45,7 @@ When you're implementing attack surface reduction rules, move the first test rin
    > For problematic rules (rules creating too much noise), it's better to create exclusions than to turn off rules or switching back to Audit. You have to determine what is best for your environment.
 
 > [!TIP]
-> When available, take advantage of the Warn mode setting in rules to limit disruptions. Enabling attack surface reduction rules in Warn mode enables you to capture triggered events and view their potential disruptions, without actually blocking end-user access. Learn more: [Warn mode for users](attack-surface-reduction.md#warn-mode-for-users).
+> When available, take advantage of the Warn mode setting in rules to limit disruptions. Enabling attack surface reduction rules in Warn mode enables you to capture triggered events and view their potential disruptions, without actually blocking end-user access. Learn more: [Warn mode for users](attack-surface-reduction-rules-overview.md#warn-mode-for-users).
 
 ### How does Warn mode work?
 

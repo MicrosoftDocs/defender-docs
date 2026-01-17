@@ -105,7 +105,7 @@ sections:
           We recommend enabling every possible rule. However, there are some cases where you shouldn't enable a rule. For example, we don't recommend enabling the Block process creations originating from PSExec and WMI commands rule, if you're using Microsoft Endpoint Configuration Manager (or, System Center Configuration Manager - SCCM) to manage your endpoints.
 
           We highly recommend you that you read each rule-specific information and/or warnings, which are available in our
-          [public documentation](attack-surface-reduction.md).
+          [public documentation](attack-surface-reduction-rules-overview.md).
            Spanning across multiple pillars of protection, like Office, Credentials, Scripts, E-Mail, etc. All attack surface reduction rules, except for Block persistence through WMI event subscription, are supported on Windows 1709 and later:
 
           * [Block abuse of exploited vulnerable signed drivers](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers)
@@ -154,7 +154,7 @@ sections:
       - question: |
           Does attack surface reduction support file or folder exclusions that include system variables and wildcards in the path?
         answer: |
-          Yes. For more information on excluding files or folders from attack surface reduction rules, see [Excluding files and folders from attack surface reduction rules](enable-attack-surface-reduction.md#exclude-files-and-folders-from-attack-surface-reduction-rules) and for more information on using system variables and wildcards in excluded file paths, see[Configure and validate exclusions based on file extension and folder location](/windows/security/threat-protection/microsoft-defender-antivirus/configure-extension-file-exclusions-microsoft-defender-antivirus#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists).
+          Yes. For more information on excluding files or folders from attack surface reduction rules, see [Excluding files and folders from attack surface reduction rules](attack-surface-reduction-rules-enable.md#exclude-files-and-folders-from-attack-surface-reduction-rules) and for more information on using system variables and wildcards in excluded file paths, see[Configure and validate exclusions based on file extension and folder location](/windows/security/threat-protection/microsoft-defender-antivirus/configure-extension-file-exclusions-microsoft-defender-antivirus#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists).
 
       - question: |
           Do attack surface reduction rules cover all applications by default?
@@ -207,8 +207,8 @@ sections:
       - question: |
           See also
         answer: |
-          * [Attack surface reduction overview](attack-surface-reduction.md)
+          * [Attack surface reduction overview](attack-surface-reduction-rules-overview.md)
           * [Evaluate attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
           * [Attack surface reduction rules deployment Step 3: Implement attack surface reduction rules](attack-surface-reduction-rules-deployment-implement.md)
-          * [Enable attack surface reduction rules](enable-attack-surface-reduction.md)
+          * [Enable attack surface reduction rules](attack-surface-reduction-rules-enable.md)
           * [Compatibility of Microsoft Defender Antivirus with other antivirus/antimalware](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-compatibility)

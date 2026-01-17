@@ -29,7 +29,7 @@ The first and most immediate way is to check locally, on a Windows device, which
 
 Here are a few other sources of information that Windows offers, to troubleshoot attack surface reduction rules' impact and operation.
 
-When you use [attack surface reduction rules](attack-surface-reduction.md) you might run into issues, such as:
+When you use [attack surface reduction rules](attack-surface-reduction-rules-overview.md) you might run into issues, such as:
 
 - A rule blocks a file, process, or performs some other action that it shouldn't (false positive); or
 - A rule doesn't work as described, or doesn't block a file or process that it should (false negative).
@@ -48,7 +48,7 @@ Attack surface reduction rules only work on devices with the following condition
 - Devices are running Windows 10 Enterprise or later.
 - Devices are using Microsoft Defender Antivirus as the sole antivirus protection app. [Using any other antivirus app causes Microsoft Defender Antivirus to disable itself](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-compatibility).
 - [Real-time protection](/windows/security/threat-protection/microsoft-defender-antivirus/configure-real-time-protection-microsoft-defender-antivirus) is enabled.
-- Audit mode isn't enabled. Use Group Policy to set the rule to `Disabled` (value: `0`) as described in [Enable attack surface reduction rules](enable-attack-surface-reduction.md).
+- Audit mode isn't enabled. Use Group Policy to set the rule to `Disabled` (value: `0`) as described in [Enable attack surface reduction rules](attack-surface-reduction-rules-enable.md).
 
 If these prerequisites are met, proceed to the next step to test the rule in audit mode.
 
@@ -94,11 +94,11 @@ Get-MPPreference | Select-Object -ExpandProperty AttackSurfaceReductionRules_Act
 
 Follow these instructions in [Use the demo tool to see how attack surface reduction rules work](attack-surface-reduction-rules-deployment-test.md) to test the specific rule you're encountering problems with.
 
-1. Enable audit mode for the specific rule you want to test. Use Group Policy to set the rule to `Audit mode` (value: `2`) as described in [Enable attack surface reduction rules](enable-attack-surface-reduction.md). Audit mode allows the rule to report the file or process, but allows it to run.
+1. Enable audit mode for the specific rule you want to test. Use Group Policy to set the rule to `Audit mode` (value: `2`) as described in [Enable attack surface reduction rules](attack-surface-reduction-rules-enable.md). Audit mode allows the rule to report the file or process, but allows it to run.
 
 1. Perform the activity that is causing an issue. For example, open the file or run the process that should be blocked, but is allowed.
 
-1. [Review the attack surface reduction rule event logs](attack-surface-reduction.md) to see if the rule would block the file or process if the rule were set to `Enabled`.
+1. [Review the attack surface reduction rule event logs](attack-surface-reduction-rules-overview.md) to see if the rule would block the file or process if the rule were set to `Enabled`.
 
 If a rule isn't blocking a file or process that you're expecting it should block, first check to see if audit mode is enabled. Audit mode might be enabled for testing another feature, or by an automated PowerShell script, and might not be disabled after the tests were completed. 
 
@@ -183,8 +183,8 @@ The most relevant files are as follows:
 
 ## Related articles
 
-- [Attack surface reduction rules](attack-surface-reduction.md)
-- [Enable attack surface reduction rules](enable-attack-surface-reduction.md)
+- [Attack surface reduction rules](attack-surface-reduction-rules-overview.md)
+- [Enable attack surface reduction rules](attack-surface-reduction-rules-enable.md)
 - [Evaluate attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
 
 

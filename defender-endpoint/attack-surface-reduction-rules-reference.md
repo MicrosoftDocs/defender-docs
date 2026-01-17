@@ -255,8 +255,8 @@ This rule prevents an application from writing a vulnerable signed driver to dis
 The **Block abuse of exploited vulnerable signed drivers** rule doesn't block a driver already existing on the system from being loaded.
 
 > [!NOTE]
-> You can configure this rule using Intune OMA-URI. See [Intune OMA-URI](enable-attack-surface-reduction.md#custom-profile-in-intune-alternative-2) for configuring custom rules.
-> You can also configure this rule using [PowerShell](enable-attack-surface-reduction.md#powershell).
+> You can configure this rule using Intune OMA-URI. See [Intune OMA-URI](attack-surface-reduction-rules-enable.md#custom-profile-in-intune-alternative-2) for configuring custom rules.
+> You can also configure this rule using [PowerShell](attack-surface-reduction-rules-enable.md#powershell).
 > To have a driver examined, use this Web site to [Submit a driver for analysis](https://www.microsoft.com/en-us/wdsi/driversubmission).
 
 <!--The above link is the 'only link' that exists for having drivers examined. The 'en-us' component is required to make the link work. Any alterations to this link result in a 404.

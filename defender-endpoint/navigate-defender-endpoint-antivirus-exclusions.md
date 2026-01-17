@@ -171,7 +171,7 @@ The list of built-in exclusions in Windows is kept up to date as the threat land
 
 ### Attack surface reduction exclusions
 
-[Attack surface reduction rules](attack-surface-reduction.md) (also known as ASR rules) target certain software behaviors, such as:
+[Attack surface reduction rules](attack-surface-reduction-rules-overview.md) (also known as ASR rules) target certain software behaviors, such as:
 
 - Launching executable files and scripts that attempt to download or run files
 - Running scripts that seem to be obfuscated or otherwise suspicious

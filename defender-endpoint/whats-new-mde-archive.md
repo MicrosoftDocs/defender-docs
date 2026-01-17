@@ -251,7 +251,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## October 2018
 
-- [Attack surface reduction rules](attack-surface-reduction.md)<BR>All Attack surface reduction rules are now supported on Windows Server 2019.
+- [Attack surface reduction rules](attack-surface-reduction-rules-overview.md)<BR>All Attack surface reduction rules are now supported on Windows Server 2019.
 
 - [Controlled folder access](enable-controlled-folders.md)<BR> Controlled folder access is now supported on Windows Server 2019.
 
@@ -286,7 +286,7 @@ Threat Analytics is a set of interactive reports published by the Microsoft Defe
 
 - [Advanced Hunting](/defender-xdr/advanced-hunting-query-language)<BR>Query data using advanced hunting in Microsoft Defender for Endpoint.
 
-- [Attack surface reduction rules](attack-surface-reduction.md)<BR>The newly introduced attack surface reduction rules are:
+- [Attack surface reduction rules](attack-surface-reduction-rules-overview.md)<BR>The newly introduced attack surface reduction rules are:
 
   - Use advanced protection against ransomware
 

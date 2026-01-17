@@ -146,6 +146,6 @@ This article helps you to map common rules to Microsoft Defender for Endpoint.
 See also
 
 - [Attack surface reduction FAQ](attack-surface-reduction-faq.yml)
-- [Enable attack surface reduction rules](enable-attack-surface-reduction.md)
+- [Enable attack surface reduction rules](attack-surface-reduction-rules-enable.md)
 - [Evaluate attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
 

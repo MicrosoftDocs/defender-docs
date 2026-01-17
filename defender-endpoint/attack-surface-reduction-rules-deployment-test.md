@@ -265,7 +265,7 @@ To enable all the added attack surface reduction rules in audit mode, use the fo
 > [!TIP]
 > If you want to fully audit how attack surface reduction rules work in your organization, you need to use a management tool to deploy this setting to devices in your network.
 
-You can also use Group Policy, Intune, or mobile device management (MDM) configuration service providers (CSPs) to configure and deploy the setting. Learn more in the main [Attack surface reduction rules](attack-surface-reduction.md) article.
+You can also use Group Policy, Intune, or mobile device management (MDM) configuration service providers (CSPs) to configure and deploy the setting. Learn more in the main [Attack surface reduction rules](attack-surface-reduction-rules-overview.md) article.
 
 <a name='use-windows-event-viewer-review-as-an-alternative-to-the-attack-surface-reduction-rules-reporting-page-in-the-microsoft-365-defender-portal'></a>
 
