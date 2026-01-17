@@ -111,7 +111,7 @@ The following social engineering techniques are available:
 
 - **Link to Malware**<sup>\*</sup>: An attacker sends the recipient a message that contains a link to an attachment on a well-known file sharing site (for example, SharePoint or Dropbox). When the recipient clicks on the link, the attachment opens, and arbitrary code (for example, a macro) runs on the user's device to help the attacker install additional code or further entrench themselves.
 
-- **Drive-by-url**<sup>\*</sup>: An attacker sends the recipient a message that contains a link. When the recipient clicks on the link, they're taken to a website that tries to run background code. This background code attempts to gather information about the recipient or deploy arbitrary code on their device. Typically, the destination website is a well-known website that has been compromised or a clone of a well-known website. Familiarity with the website helps convince the user that the link is safe to click. This technique is also known as a _watering hole attack_.
+- **Drive-by URL**<sup>\*</sup>: An attacker sends the recipient a message that contains a link. When the recipient clicks on the link, they're taken to a website that tries to run background code. This background code attempts to gather information about the recipient or deploy arbitrary code on their device. Typically, the destination website is a well-known website that has been compromised or a clone of a well-known website. Familiarity with the website helps convince the user that the link is safe to click. This technique is also known as a _watering hole attack_.
 
 - **OAuth Consent Grant**<sup>\*</sup>: An attacker creates a malicious Azure Application that seeks to gain access to data. The application sends an email request that contains a link. When the recipient clicks on the link, the consent grant mechanism of the application asks for access to the data (for example, the user's Inbox).
 
@@ -211,7 +211,7 @@ The available reports and insights for Attack simulation training are described 
 
 ### Predicted compromise rate
 
-You often need to tailor a simulated phishing campaign for specific audiences. If the phishing message is too close to perfect, almost everyone will be fooled by it. If it's too suspicious, no will be fooled by it. And, the phishing messages that some users consider difficult to identify are considered easy to identify by other users. So how do you strike a balance?
+You often need to tailor a simulated phishing campaign for specific audiences. If the phishing message is too close to perfect, almost everyone will be fooled by it. If it's too suspicious, no one will be fooled by it. And, the phishing messages that some users consider difficult to identify are considered easy to identify by other users. So how do you strike a balance?
 
 The _predicted compromise rate (PCR)_ indicates the potential effectiveness when the payload is used in a simulation. PCR uses intelligent historical data across Microsoft 365 to predict the percentage of people who will be compromised by the payload. For example:
 
@@ -244,7 +244,7 @@ But, sometimes you don't want to wait for users to take correct or incorrect act
   > [Training modules](attack-simulation-training-training-modules.md) are used in Training campaigns, but you can also use Training modules when you [assign training](attack-simulation-training-simulations.md#assign-training) in regular simulations.
 
 - **How-to Guides in simulations**: Simulations based on the **How-to Guide** social engineering technique don't attempt to test users. A How-to guide is a lightweight learning experience that users can view directly in their Inbox. For example, the following built-in **How-to Guide** payloads are available, and you can create your own (including [copying and customizing an existing payload](attack-simulation-training-payloads.md#copy-payloads)):
-  - **Teaching guide: How to report phishing messages**
+  - **Teaching Guide: How to report phishing messages**
   - **Teaching Guide: How to recognize and report QR phishing messages**
 
 > [!TIP]
