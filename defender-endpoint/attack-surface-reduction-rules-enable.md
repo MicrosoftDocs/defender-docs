@@ -24,7 +24,7 @@ ms.date: 12/31/2025
 
 # Enable attack surface reduction rules
 
-[Attack surface reduction rules](attack-surface-reduction.md) help prevent actions that malware often abuses to compromise devices and networks. This article describes how to enable and configure attack surface reduction rules via:
+[Attack surface reduction rules](attack-surface-reduction-rules-overview.md) help prevent actions that malware often abuses to compromise devices and networks. This article describes how to enable and configure attack surface reduction rules via:
 
 - [Microsoft Intune](#intune)
 - [Mobile Device Management (MDM)](#mdm)
@@ -385,6 +385,6 @@ Example:
 
 - [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
 - [Evaluate attack surface reduction](attack-surface-reduction-rules-deployment-test.md)
-- [Attack surface reduction FAQ](attack-surface-reduction.md)
+- [Attack surface reduction FAQ](attack-surface-reduction-rules-overview.md)
 
 
