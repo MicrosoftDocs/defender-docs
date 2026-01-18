@@ -1,5 +1,5 @@
 ﻿---
-title: List library files 
+title: List library files
 description: Learn how to list live response library files.
 search.appverid: met150
 ms.service: defender-endpoint
@@ -10,7 +10,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -22,9 +22,9 @@ appliesto:
   - Microsoft Defender for Endpoint
 ---
 
-#  List library files 
+# List library files
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 ## API description
 
@@ -32,19 +32,16 @@ List live response library files.
 
 ## Limitations
 
-Rate limitations for this API are 100 calls per minute and 1,500 calls per
-    hour.
+Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
 
-One of the following permissions is required to call this API. To learn more,
-including how to choose permissions, see [Get
-started](apis-intro.md).
+One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Get started](apis-intro.md).
 
-|Permission type                       |      Permission          |  Permission display name | 
-|-----------------|--------|---------------------------|  
-| Application                        | Library.Manage | Manage live response library |
-| Delegated (work or school account) | Library.Manage | Manage live response library |
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Library.Manage|Manage live response library|
+|Delegated (work or school account)|Library.Manage|Manage live response library|
 
 ## HTTP request
 
@@ -54,20 +51,21 @@ GET https://api.security.microsoft.com/api/libraryfiles
 
 ## Request headers
 
-| Name         |      Type                     | Description
-|-----------------|--------|---------------------------|
-| Authorization   | String | Bearer {token}. Required. |
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. Required.|
 
 ## Request body
+
 Empty
 
-## Response 
-If successful, this method returns 200 - OK response code with a collection
-    of live response library file entities.
+## Response
+
+If successful, this method returns 200 - OK response code with a collection of live response library file entities.
 
 ## Example
 
-**Request**
+### Request example
 
 Here's an example of a request that gets all live response library files.
 
@@ -75,7 +73,7 @@ Here's an example of a request that gets all live response library files.
 GET https://api.security.microsoft.com/api/libraryfiles
 ```
 
-## Response example
+### Response example
 
 Here's an example of the response.
 
@@ -114,9 +112,6 @@ Content-type: application/json
     "createdBy": "admin",
     "hasParameters": false
     }
-]
+  ]
 }
 ```
-
-
-

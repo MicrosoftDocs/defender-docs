@@ -56,7 +56,7 @@ The following steps guide you on how to import roles into Microsoft Defender XDR
 
 5. Select the products you want to import roles from.
 
-    :::image type="content" source="/defender/media/defender/m365-defender-import-workloads.png" alt-text="Screenshot of the import workloads page" lightbox="/defender/media/defender/m365-defender-import-workloads.png":::
+    :::image type="content" source="media/import-rbac-roles/m365-defender-import-workloads.png" alt-text="Screenshot of the import workloads page" lightbox="media/import-rbac-roles/m365-defender-import-workloads.png":::
 
 6. Select **Next** to choose the roles to import. You can choose all roles or select specific roles from the list. Select the role name to review the permissions and assigned users or groups for that specific role.
 

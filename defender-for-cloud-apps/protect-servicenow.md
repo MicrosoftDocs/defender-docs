@@ -86,35 +86,28 @@ This article provides instructions for connecting Microsoft Defender for Cloud A
 ### Prerequisites
 
 Defender for Cloud Apps supports the following ServiceNow versions:
-
-:::row:::
-    :::column:::
-        - Eureka
-        - Fiji
-        - Geneva
-        - Helsinki
-        - Istanbul
-        - Jakarta
-        - Kingston
-        - London  
-        - Utah
-        - Yokohama
-    :::column-end:::
-    :::column:::
-        - Madrid
-        - New York
-        - Orlando
-        - Paris
-        - Quebec
-        - Rome
-        - San Diego
-        - Tokyo    
-        - Vancouver
-        - Washington
-        - Xanadu
-    :::column-end:::
-:::row-end:::
-
+- Eureka
+- Fiji
+- Geneva
+- Helsinki
+- Istanbul
+- Jakarta
+- Kingston
+- London
+- Madrid
+- New York
+- Orlando
+- Paris
+- Quebec
+- Rome
+- San Diego
+- Tokyo  
+- Utah
+- Vancouver
+- Washington
+- Xanadu
+- Yokohama
+- Zurich
 
 In order to connect ServiceNow with Defender for Cloud Apps, you must have the **Admin** role and make sure the ServiceNow instance supports API access. 
 

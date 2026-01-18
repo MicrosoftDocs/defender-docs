@@ -4,7 +4,7 @@ description: See recommendations for running Defender for Endpoint alongside oth
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 06/13/2025
-ms.topic: conceptual
+ms.topic: article
 author: KesemSharabi
 ms.author: kesharab
 ms.custom: 
