@@ -34,7 +34,7 @@ To see security posture recommendations for GitHub in Microsoft Secure Score, cr
 For example, recommendations for GitHub include:
 
 - *Enable multifactor authentication (MFA)*
-- *Enable single sign on (SSO)*
+- *Enable single sign-on (SSO)*
 - *Disable 'Allow members to change repository visibilities for this organization'*
 - *Disable 'members with admin permissions for repositories can delete or transfer repositories'*
 
@@ -47,7 +47,7 @@ For more information, see:
 
 ## Protect GitHub in real time
 
-Review our best practices for [securing and collaborating with external users](best-practices.md#secure-collaboration-with-external-users-by-enforcing-real-time-session-controls).
+Review our best practices for [securing and collaborating with guests](best-practices.md#secure-collaboration-with-external-users-by-enforcing-real-time-session-controls).
 
 ## Connect GitHub Enterprise Cloud to Microsoft Defender for Cloud Apps
 
@@ -76,10 +76,10 @@ These steps are independent of the [Configure GitHub Enterprise Cloud](#configur
 
 ### Configure GitHub Enterprise Cloud
 
-1. Copy your organization's sign in name. You'll need it later.
+1. Copy your organization's sign-in name. You'll need it later.
 
     > [!NOTE]
-    > The page will have a URL like `https://github.com/<your-organization>`. For example, if your organization's page is `https://github.com/sample-organization`, the organization's sign in name is *sample-organization*.
+    > The page will have a URL like `https://github.com/<your-organization>`. For example, if your organization's page is `https://github.com/sample-organization`, the organization's sign-in name is *sample-organization*.
 
 
 1. Create an OAuth App for Defender for Cloud Apps to connect your GitHub organization.
