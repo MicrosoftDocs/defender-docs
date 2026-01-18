@@ -84,5 +84,5 @@ Set the proxy in the managed configuration at `/etc/opt/microsoft/mdatp/managed/
 
 A management tool of choice can be used to deploy the above configuration. Please check [Set preferences for Microsoft Defender for Endpoint on Linux](./linux-preferences.md) for more details on managed configuration.
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

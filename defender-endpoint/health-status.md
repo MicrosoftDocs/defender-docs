@@ -78,4 +78,4 @@ mdatp health --details help
 
 You can run `mdatp health --help` on recent versions to list all supported features.
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
