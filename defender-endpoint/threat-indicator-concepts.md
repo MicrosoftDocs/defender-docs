@@ -58,5 +58,5 @@ IOCs have a many-to-one relationship with alert definitions such that an alert d
 - [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview)
 
 - [Overview of indicators](indicators-overview.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

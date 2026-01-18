@@ -312,5 +312,3 @@ KB4052623 is available for the following architectures:
 
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
-
