@@ -117,7 +117,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 >
 > - The first connection can take up to four hours to get all users and their activities.
 > - The activities displayed are the activities that were generated from the moment the connector is connected.
-> - Defender for Cloud Apps fetches activities from the Atlassian Access audit log. Other activities aren't fetched currently. See [Product Audit Logs](https://support.atlassian.com/security-and-access-policies/docs/track-organization-activities-from-the-audit-log/).
+> - Defender for Cloud Apps fetches activities from the Atlassian Access audit log. See [Product Audit Logs](https://support.atlassian.com/security-and-access-policies/docs/track-organization-activities-from-the-audit-log/).
 > - After the connector’s **Status** is marked as **Connected**, the connector is live and works.
 
 ### Revoke and renew API keys
