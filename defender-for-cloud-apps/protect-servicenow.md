@@ -161,7 +161,7 @@ For more information, see the [ServiceNow product documentation](https://docs.se
 
     :::image type="content" source="media/servicenow-app-connector-details-screenshot.png" alt-text="Screenshot of the ServiceNow App Connector Details Dialog.":::
    
-   - To find your ServiceNow User ID, in the ServiceNow portal, go to **Users** and then locate your name in the table.
+1. To find your ServiceNow User ID, in the ServiceNow portal, go to **Users** and then locate your name in the table.
      
 1. In the **OAuth Details** page, enter your **Client ID** and **Client Secret**. Select **Next**.
 
@@ -179,7 +179,6 @@ To connect ServiceNow with Defender for Cloud Apps, you must have admin-level pe
 
 1. Make sure the REST API plug-in is turned on.
 
-1. Follow the steps in the [Connect ServiceNow to Microsoft Defender for Cloud Apps](#connect-servicenow-to-microsoft-defender-for-cloud-apps-1) section above.
 
    
 ## Next steps
