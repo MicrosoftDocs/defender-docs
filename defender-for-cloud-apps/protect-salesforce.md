@@ -85,14 +85,13 @@ Review our best practices for [securing and collaborating with external users](b
 
 ## Connect Salesforce to Microsoft Defender for Cloud Apps
 
-This section provides instructions for connecting Microsoft  Defender for Cloud Apps to your existing Salesforce account using the app connector API. This connection gives you visibility into and control over Salesforce use.
-
-[!INCLUDE [security-posture-management-connector](includes/security-posture-management-connector.md)]
-
-
 ### Prerequisites 
 
 - For all integrations other than SSPM, make sure that Salesforce Shield is available for your Salesforce instance.
+
+This section provides instructions for connecting Microsoft  Defender for Cloud Apps to your existing Salesforce account using the app connector API. This connection gives you visibility into and control over Salesforce use.
+
+[!INCLUDE [security-posture-management-connector](includes/security-posture-management-connector.md)]
 
 1. In your Salesforce account, create a dedicated service admin account for Defender for Cloud Apps.
 
@@ -103,9 +102,9 @@ This section provides instructions for connecting Microsoft  Defender for Cloud 
  - Developer
  - Professional. REST API must be added to the Professional edition separately.
 
- 
 
-1.Create a new profile for the Defender for Cloud Apps service account. This profile will be used to configure the App connector.
+1. Create a new profile for the Defender for Cloud Apps service account. This profile will be used to configure the App connector.
+
 1. Make sure that the service account profile includes the following permissions:
 
     - **API Enabled**
