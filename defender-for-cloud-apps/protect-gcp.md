@@ -119,33 +119,33 @@ This procedure describes how to add the GCP connection details to connect Google
     > [!NOTE]
     > We recommended that you connect your Google Workspace instance to get unified user management and governance. This is the recommended even if you don't use any Google Workspace products and the GCP users are managed via the Google Workspace user management system.
 
-    **For a new connector**
+**For a new connector**
 
-    1. Select **+Connect an app**, followed by **Google Cloud Platform**.
+1. Select **+Connect an app**, followed by **Google Cloud Platform**.
 
-        :::image type="content" source="media/connect-gcp-add.png" alt-text="Screenshot that shows where to find the Google Cloud Platform app connector in the Defender portal." lightbox="media/connect-gcp-add.png":::
-
-
-    1. In the next window, provide a name for the connector, and then select **Next**.
-
-        :::image type="content" source="media/connect-gcp-name.png" alt-text="Screenshot that shows where to add the instance name in the Defender portal." lightbox="media/connect-gcp-name.png":::
+    :::image type="content" source="media/connect-gcp-add.png" alt-text="Screenshot that shows where to find the Google Cloud Platform app connector in the Defender portal." lightbox="media/connect-gcp-add.png":::
 
 
-    1. In the **Enter details** page, do the following, and then select **Submit**.
-        1. In the **Organization ID** box, enter the organization you made a note of earlier.
-        1. In the **Private key file** box, browse to the JSON file you downloaded earlier.
+1. In the next window, provide a name for the connector, and then select **Next**.
 
-        :::image type="content" source="media/connect-gcp-app-audit.png" alt-text="Screenshot that shows where to enter the organization ID and private key file in the Defender portal." lightbox="media/connect-gcp-app-audit.png":::
+    :::image type="content" source="media/connect-gcp-name.png" alt-text="Screenshot that shows where to add the instance name in the Defender portal." lightbox="media/connect-gcp-name.png":::
 
-    **For an existing connector**
 
-    1. In the list of connectors, on the row in which the GCP connector appears, select **Edit settings**.
+1. In the **Enter details** page, do the following, and then select **Submit**.
+    1. In the **Organization ID** box, enter the organization you made a note of earlier.
+    1. In the **Private key file** box, browse to the JSON file you downloaded earlier.
 
-    1. In the **Enter details** page, do the following, and then select **Submit**.
-        1. In the **Organization ID** box, enter the organization you made a note of earlier.
-        1. In the **Private key file** box, browse to the JSON file you downloaded earlier.
+    :::image type="content" source="media/connect-gcp-app-audit.png" alt-text="Screenshot that shows where to enter the organization ID and private key file in the Defender portal." lightbox="media/connect-gcp-app-audit.png":::
 
-        :::image type="content" source="media/connect-gcp-app-audit.png" alt-text="Screenshot that shows where to enter the organization ID and private key file in the Defender portal." lightbox="media/connect-gcp-app-audit.png":::
+**For an existing connector**
+
+1. In the list of connectors, on the row in which the GCP connector appears, select **Edit settings**.
+
+1. In the **Enter details** page, do the following, and then select **Submit**.
+    1. In the **Organization ID** box, enter the organization you made a note of earlier.
+    1. In the **Private key file** box, browse to the JSON file you downloaded earlier.
+
+    :::image type="content" source="media/connect-gcp-app-audit.png" alt-text="Screenshot that shows where to enter the organization ID and private key file in the Defender portal." lightbox="media/connect-gcp-app-audit.png":::
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**. Make sure the status of the connected App Connector is **Connected**.
 
