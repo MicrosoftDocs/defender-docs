@@ -77,11 +77,9 @@ You can connect GCP **Security auditing** to your Defender for Cloud Apps connec
 
 ### Configure Google Cloud Platform
 
-#### Create a dedicated GCP project
 
 1. Create a dedicated project in GCP under your organization to enable integration isolation and stability.
 
-#### Enable required APIs 
 
 1. Enable the **Cloud Logging API** and **Cloud Pub/Sub API** for the dedicated project.
 
