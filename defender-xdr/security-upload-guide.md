@@ -24,9 +24,9 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-[Microsoft Security Copilot](/security-copilot/microsoft-security-copilot) in the Microsoft Defender portal supports incident response teams in immediately resolving incidents with guided responses. Copilot in Defender uses AI and machine learning capabilities to contextualize an incident and learn from previous investigations to generate appropriate response actions.
+[Microsoft Security Copilot](/security-copilot/microsoft-security-copilot) in the Microsoft Defender portal provides guided responses to support the response team in resolving incidents. Copilot in Defender uses AI and machine learning to contextualize an incident and learn from previous investigations to generate appropriate response actions.
 
-This guide outlines how to upload your organization's specific guidelines to Microsoft Security Copilot to enhance the relevance and effectiveness of the guided response recommendations.
+This guide outlines how to upload your organization's specific guidelines to Microsoft Security Copilot to improve the guided response recommendations.
 
 ## Prerequisites
 

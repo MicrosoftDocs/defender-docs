@@ -174,21 +174,21 @@ Select the three dots to the right of any column in the **Inspect record** panel
 - Exclude the selected value from the query (`!=`)
 - Get more advanced operators for adding the value to your query, such as `contains`, `starts with`, and `ends with`
 
-:::image type="content" source="/defender/media/work-with-query-tweak-query.png" alt-text="Screenshot of the Action Type pane on the Inspect record page in the Microsoft Defender portal." lightbox="/defender/media/work-with-query-tweak-query.png":::
+:::image type="content" source="media/advanced-hunting-query-results/work-with-query-tweak-query.png" alt-text="Screenshot of the Action Type pane on the Inspect record page in the Microsoft Defender portal." lightbox="media/advanced-hunting-query-results/work-with-query-tweak-query.png":::
 
 ## Add items to Favorites
 
 You can add your frequently used schemas, functions, queries, and detection rules to the Favorites section of each tab in the advanced hunting page for quick access.
 
-:::image type="content" source="media/faves-1.png" alt-text="Screenshot of the advanced hunting page with the Favorites section highlighted." lightbox="media/faves-1.png":::
+:::image type="content" source="media/advanced-hunting-query-results/faves-1.png" alt-text="Screenshot of the advanced hunting page with the Favorites section highlighted." lightbox="media/advanced-hunting-query-results/faves-1.png":::
 
 For instance, to add `AlertInfo` to your **Favorites**, go to the **Schema** tab, and select the three dots to the right of the table and select **Add to favorites**. 
 
-:::image type="content" source="media/faves-2.png" alt-text="Screenshot of the Add to Favorites option in the advanced hunting page." lightbox="media/faves-2.png":::
+:::image type="content" source="media/advanced-hunting-query-results/faves-2.png" alt-text="Screenshot of the Add to Favorites option in the advanced hunting page." lightbox="media/advanced-hunting-query-results/faves-2.png":::
 
 A notification appears to inform you that the item was successfully added to Favorites.
 
-![Screenshot of notification that a new item was added to Favorites in advanced hunting.](media/faves-3.png)
+![Screenshot of notification that a new item was added to Favorites in advanced hunting.](media/advanced-hunting-query-results/faves-3.png)
 
 You can do the same for your saved functions, queries, and custom detections in their respective Favorites sections right under each tab (**Functions**, **Queries**, and **Detection Rules**).
 
@@ -251,7 +251,7 @@ You can change the chart type of the timeline by selecting a different option fr
 - Column chart
 - Pie chart
 
-:::image type="content" source="/defender/media/advanced-hunting-column-chart.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with the results displayed in a column chart." lightbox="/defender/media/advanced-hunting-column-chart.png":::
+:::image type="content" source="media/advanced-hunting-query-results/advanced-hunting-column-chart.png" alt-text="Screenshot of an advanced hunting query of 1,000 email events with the results displayed in a column chart." lightbox="media/advanced-hunting-query-results/advanced-hunting-column-chart.png":::
 
 ### Rendering conditions
 

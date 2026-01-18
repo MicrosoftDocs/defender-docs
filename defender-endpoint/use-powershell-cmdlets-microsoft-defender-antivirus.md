@@ -50,8 +50,8 @@ PowerShell is typically installed under the folder `%SystemRoot%\system32\Window
 ## Use Microsoft Defender Antivirus PowerShell cmdlets
 
 1. In the Windows search bar, type **powershell**.
-2. Select **Windows PowerShell** from the results to open the interface.
-3. Enter the PowerShell command and any parameters.
+1. Select **Windows PowerShell** from the results to open the interface.
+1. Enter the PowerShell command and any parameters.
 
 > [!NOTE]
 > You may need to open PowerShell in administrator mode. Right-click the item in the Start menu, click **Run as administrator** and click **Yes** at the permissions prompt.
@@ -97,5 +97,5 @@ Omit the `-online` parameter to get locally cached help.
 - [Reference topics for management and configuration tools](configuration-management-reference-microsoft-defender-antivirus.md)
 - [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-windows.md)
 - [Microsoft Defender Antivirus Cmdlets](/powershell/module/defender)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
