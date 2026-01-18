@@ -68,9 +68,6 @@ For more information, see:
 
 This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing NetDocuments using the App Connector APIs. This connection gives you visibility into and control over your organization's NetDocuments use.
 
-### Prerequisites
-
-- The NetDocuments user used for logging into NetDocuments must be a Full NetDocuments Repository Admin user.
 
 ### Configure NetDocuments
 
