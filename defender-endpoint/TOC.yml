@@ -536,6 +536,8 @@
           href: troubleshoot-live-response.md
         - name: Collect support logs using LiveAnalyzer
           href: troubleshoot-collect-support-log.md
+        - name: Run remote MDE Client Analyzer traces via live response
+          href: troubleshoot-remotely-with-client-analyzer.md
         - name: Troubleshoot Microsoft Defender Antivirus settings
           href: troubleshoot-settings.md
         - name: Troubleshoot Microsoft Defender Antivirus Security intelligence not getting updated
@@ -1025,7 +1027,7 @@
         - name: Review alerts
           href: review-alerts.md
         - name: Manage alerts
-          href: manage-alerts.md
+          href: /defender-xdr/investigate-alerts
         - name: Investigate alerts
           href: investigate-alerts.md
         - name: Review and manage detected threats

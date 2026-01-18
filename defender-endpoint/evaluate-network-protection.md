@@ -85,5 +85,5 @@ If network protection fails to detect, make sure that the following prerequisite
 
 - [Troubleshoot network protection](troubleshoot-np.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

@@ -95,5 +95,5 @@ For security reasons, the package used to Offboard devices expires seven days af
 - [Run a detection test on a newly onboarded Microsoft Defender for Endpoint device](run-detection-test.md)
 - [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

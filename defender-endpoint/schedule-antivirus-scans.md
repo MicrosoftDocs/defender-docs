@@ -72,7 +72,7 @@ Use the following table to choose a scan type. Also see [Microsoft Defender Anti
 
     1. **Daily Scan**: Runs once per day and can only be a **quick scan**.
 
-    2. **Weekly Scan**: Runs once per week and can be either a **quick scan** or a **full scan**.
+    1. **Weekly Scan**: Runs once per week and can be either a **quick scan** or a **full scan**.
 
 - By default, Microsoft Defender Antivirus checks for an update 15 minutes before the time of any scheduled scans. You can [manage the schedule for when protection updates should be downloaded and applied](manage-protection-update-schedule-microsoft-defender-antivirus.md) to override this default.
 
@@ -115,5 +115,5 @@ This optimization applies to machines running Windows 10 Anniversary Update (ver
 - [Microsoft Defender Antivirus scan considerations and best practices](mdav-scan-best-practices.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

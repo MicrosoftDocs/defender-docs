@@ -130,7 +130,7 @@ To learn more, see the following resources:
 
 - [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
 
 

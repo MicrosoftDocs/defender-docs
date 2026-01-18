@@ -157,5 +157,5 @@ If you're running a non-Microsoft anti-malware client and use Mobile Device Mana
 
 - [Onboard devices](onboard-configure.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
