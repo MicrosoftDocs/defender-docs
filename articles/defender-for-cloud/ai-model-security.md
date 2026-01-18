@@ -13,11 +13,11 @@ As more organizations adopt AI models for various applications, ensuring the sec
 
 To address this problem, Microsoft Defender for Cloud's Defender for AI plan supports AI model scanning. AI model scanning provides visibility and control over all AI models in use, so security teams can proactively detect unsafe or malicious artifacts. Security teams can ensure secure and transparent deployments and continuous monitoring for risks throughout the AI lifecycle.
 
-Defender for AI's Model Security enables organizations to automatically scan AI models for security risks such as malware, unsafe operators, and exposed secrets before they are deployed. Integrated into Azure ML and CI/CD pipelines, it provides real-time findings and remediation guidance to prevent unsafe models from reaching production.
+Defender for AI's Model Security enables organizations to automatically scan AI models for security risks such as malware, unsafe operators, and exposed secrets before they're deployed. Integrated into Azure Machine Learning and CI/CD pipelines, it provides real-time findings and remediation guidance to prevent unsafe models from reaching production.
 
 With AI model security:
 
-- Security teams can scan custom AI models uploaded to Azure ML workspaces and registries, including formats such as ONNX, Pickle, TorchScript, and others for threats like malware, unsafe operators, and exposed secrets.
+- Security teams can scan custom AI models uploaded to Azure Machine Learning workspaces and registries, including formats such as ONNX, Pickle, TorchScript, and others for threats like malware, unsafe operators, and exposed secrets.
 
 - Microsoft Defender for Cloud surfaces scan results, providing security teams with centralized visibility of security findings. These detailed insights include severity, remediation guidance, and model metadata to support effective triage and prioritization.
 
@@ -25,10 +25,10 @@ With AI model security:
 
 ## Prerequisites
 
-- You must have an Azure subscription that contains AI models registered in [Azure Machine Learning](/azure/machine-learning/quickstart-create-resources?view=azureml-api-2) (Azure ML) registries or workspaces.
+- You must have an Azure subscription that contains AI models registered in [Azure Machine Learning](/azure/machine-learning/quickstart-create-resources?view=azureml-api-2) (Azure Machine Learning) registries or workspaces.
 - [Enable the Defender for Cloud Security Posture Management plan](tutorial-enable-cspm-plan.md).
-- You must be able to [create an Azure ML registry](/azure/machine-learning/how-to-manage-registries?view=azureml-api-2&tabs=cli#create-a-registry) or have access to an existing Azure ML registry.
-- The ability to register models within the Azure ML registry for scanning.
+- You must be able to [create an Azure Machine Learning registry](/azure/machine-learning/how-to-manage-registries?view=azureml-api-2&tabs=cli#create-a-registry) or have access to an existing Azure Machine Learning registry.
+- The ability to register models within the Azure Machine Learning registry for scanning.
 - Required permissions: **Owner** or **Contributor** on the Azure Machine Learning resources.
 - Supported model file formats: `Pickle (.pkl)`, `HDF5 (.h5)`, `TorchScript (.pt)`, `ONNX (.onnx)`, `SafeTensors (.safetensors)`, `TensorFlow SavedModel / TFLite (FlatBuffers)`, `NumPy (.npy)`, `Arrow, MsgPack, dill, joblib`, `PMML, JSON, POJO, MOJO, GGUF`.
 - File size limit: 10 GB. Model files larger than 10 GB can't be scanned. 
@@ -45,7 +45,7 @@ With AI model security:
 
 1. Select **AI & Mls** > **AI models**.
 
-    :::image type="content" source="media/ai-models/ai-models.png" alt-text="Screenshot that shows where to select AI models from the drop down list in the Cloud Security Explorer." lightbox="media/ai-models/ai-models.png":::
+    :::image type="content" source="media/ai-models/ai-models.png" alt-text="Screenshot that shows where to select AI models from the drop-down list in the Cloud Security Explorer." lightbox="media/ai-models/ai-models.png":::
 
 1. Select **Done**.
 
@@ -89,9 +89,9 @@ The Defender portal **Assets** page provides a comprehensive view of all AI mode
 
     :::image type="content" source="media/ai-models/defender-ai-models.png" alt-text="Screenshot that shows how to navigate to the Defender portals asset page with all of the AI models presented." lightbox="media/ai-models/defender-ai-models.png":::
 
-1. Select an AI model with recommendations to view more details.
+1. Select an AI model with recommendations.
 
-    :::image type="content" source="media/ai-models/ai-models-recommendation.png" alt-text="Screenshot that shows AI models that have at least 1 recommendationaffecting them.":::
+    :::image type="content" source="media/ai-models/ai-models-recommendation.png" alt-text="Screenshot that shows AI models that have at least one recommendation affecting them.":::
 
 1. Select **Open asset page**.
 
