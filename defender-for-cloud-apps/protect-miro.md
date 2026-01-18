@@ -49,7 +49,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 **Prerequisites**:
 
-- A Miro account with an enterprise plan is a prerequisite for this connection. You must sign-in as a company admin to Miro. 
+- You must have a Miro account with an enterprise plan. 
 
 ### Configure Miro 
 
