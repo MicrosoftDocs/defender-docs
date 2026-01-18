@@ -55,7 +55,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 ### Prerequisites
 
-Before you connect Azure to Microsoft Defender for Cloud Apps, make sure that:
+Before you connect Azure to Microsoft Defender for Cloud Apps, make sure that the user connecting Azure has the **Security administrator** role in Azure Active Directory.
 
 - The user connecting Azure must have a **Security administrator** role in Azure Active Directory.
 
