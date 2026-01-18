@@ -1,5 +1,5 @@
 ---
-title: Integrate AWS CloudTrail logs with Microsoft Defender for Cloud (Preview)
+title: Integrate AWS CloudTrail logs
 description: Learn how to enable and validate AWS CloudTrail management event ingestion in Microsoft Defender for Cloud to enhance CIEM, configuration insights, and identity risk detection.
 author: ElazarK
 ms.author: elkrieger
@@ -7,7 +7,7 @@ ms.topic: how-to
 ms.date: 12/09/2025
 ---
 
-# Integrate AWS CloudTrail logs with Microsoft Defender for Cloud (Preview)
+# Integrate AWS CloudTrail logs (Preview)
 
 Microsoft Defender for Cloud can collect AWS CloudTrail management events to increase visibility into identity operations, permission changes, and other control-plane activity across your AWS environments.
 

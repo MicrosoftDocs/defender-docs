@@ -57,7 +57,7 @@
               href: quickstart-onboard-aws.md
             - name: Authentication architecture for AWS connectors
               href: concept-authentication-architecture-aws.md
-            - name: Integrate AWS CloudTrail logs (Preview)
+            - name: Integrate AWS CloudTrail logs
               href: integrate-cloud-trail.md
         - name: Connect GCP projects
           items:
@@ -69,7 +69,7 @@
             - name: Configure GCP plans
               displayName: GCP, plans, configure
               href: configure-google-plans.md
-            - name: Ingest GCP logging
+            - name: Integrate GCP logging
               displayName: GCP, logging, ingest
               href: logging-ingestion.md
         - name: Connect individual non-Azure machines

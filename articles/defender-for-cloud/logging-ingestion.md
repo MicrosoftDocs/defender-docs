@@ -1,5 +1,5 @@
 ---
-title: Ingest GCP logging
+title: Integrate GCP cloud logging
 description: Learn how to ingest Google Cloud Platform (GCP) Cloud Logging into Microsoft Defender for Cloud using Pub/Sub.
 ms.topic: install-set-up-deploy
 ms.author: Elkrieger
@@ -8,7 +8,7 @@ ms.date: 01/18/2026
 ms.custom: sfi-image-nochange
 ---
 
-# Ingest GCP cloud logging with Pub/Sub (Preview)
+# Integrate GCP cloud logging with Pub/Sub (Preview)
 
 Microsoft Defender for Cloud can collect activity logs from Google Cloud Platform (GCP) by ingesting Cloud Logging data through Pub/Sub. These logs provide activity context used by Cloud Infrastructure Entitlement Management (CIEM) in Defender for Cloud, including risk-based recommendations and attack path analysis across your Google Cloud environments.
 
