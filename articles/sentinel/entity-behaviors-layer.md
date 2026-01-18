@@ -168,14 +168,14 @@ Behaviors simplify rule logic by providing normalized, high‑quality signals wi
 
   Behaviors also serve as reliable triggers for automation. Instead of creating alerts for non-risky activities, use behaviors to trigger automation - for example, to send an email or initiate verification.
 
-## Supported data sources and behavior rules
+## Supported data sources and behaviors
 
 The list of supported data sources and vendors or services that send logs to these data sources is evolving.
 The UEBA behaviors layer automatically aggregates insights for all supported vendors based on the logs you collect.
 
 During public preview, the UEBA behaviors layer focuses on these non-Microsoft data sources that traditionally lack easy behavioral context in Microsoft Sentinel: 
 
-| Data source | Supported vendors, services, and logs | Connector | Behavior rules |
+| Data source | Supported vendors, services, and logs | Connector | Supported behaviors |
 |-------------|---------------------------|-------|----------------|
 | [CommonSecurityLog](/azure/azure-monitor/reference/tables/commonsecuritylog) | <ul><li>Cyber Ark Vault</li><li>Palo Alto Threats</li></ul> |  | <ul><li>[CommonSecurityLog behaviors](https://github.com/Azure/Azure-Sentinel/blob/master/Sentinel%20Behaviors/Behaviors%20Rules/commonsecuritylog_behaviors.md)</li></ul> |
 | [AWSCloudTrail](/azure/azure-monitor/reference/tables/awscloudtrail) | <ul><li>EC2</li><li>IAM</li><li>S3</li><li>EKS</li><li>Secrets Manager</li></ul> |<ul><li>[Amazon Web Services](../sentinel/data-connectors-reference.md#amazon-web-services)</li><li>[Amazon Web Services S3](../sentinel/data-connectors-reference.md#amazon-web-services-s3)</li></ul> | <ul><li>[AWS CloudTrail behaviors](https://github.com/Azure/Azure-Sentinel/blob/master/Sentinel%20Behaviors/Behaviors%20Rules/aws_cloudtrail_behaviors.md)</li></ul> |
@@ -296,7 +296,7 @@ For more information about Kusto Query Language (KQL), see [Kusto query language
 ### Troubleshooting 
 
 - **If behaviors aren't being generated**: Ensure supported data sources are actively sending logs to the Analytics tier, confirm the data source toggle is on, and wait 15–30 minutes after enabling.
-- **I see fewer behaviors than expected**: Our coverage of supported behavior types is partial and growing. For more information, see [Supported data sources and behavior rules](#supported-data-sources-and-behavior-rules). The UEBA behaviors layer might also not be able to detect a behavior pattern if there are very few instances of a specific behavior type.
+- **I see fewer behaviors than expected**: Our coverage of supported behavior types is partial and growing. For more information, see [Supported data sources and behaviors](#supported-data-sources-and-behavior-rules). The UEBA behaviors layer might also not be able to detect a behavior pattern if there are very few instances of a specific behavior type.
 - **Behavior counts**: A single behavior might represent tens or hundreds of raw events - this is designed to reduce noise.
      
 ## Limitations in public preview 
