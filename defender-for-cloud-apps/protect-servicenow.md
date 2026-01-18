@@ -141,7 +141,7 @@ For more information, see the [ServiceNow product documentation](https://docs.se
 1. Select the name of the OAuth that was defined, and change the **Refresh Token Lifespan** to **7,776,000 seconds** (90 days).
    
 1. Establish an internal procedure to ensure that the connection remains active.
-    1. Before the expected expiration of the refresh token, make sure to revoke the old refresh token.
+    1. Make sure to revoke the old refresh token before the expected expiration of the refresh token.
     1. In the Microsoft Defender Portal, edit the existing connector, using the same client ID and client secret. This will generate a new refresh token. 
 
     > [!NOTE]
