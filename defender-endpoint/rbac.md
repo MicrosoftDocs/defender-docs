@@ -81,5 +81,5 @@ Someone with a Defender for Endpoint Global Administrator role has unrestricted 
 - [RBAC roles](/defender-office-365/migrate-to-defender-for-office-365-onboard#rbac-roles)
 - [Create and manage device groups in Microsoft Defender for Endpoint](machine-groups.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
