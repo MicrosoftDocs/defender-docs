@@ -150,7 +150,7 @@ After connecting Salesforce, you'll receive Events as follows: Log in events and
 > Limiting API calls due to the limitation might slow down the rate at which data is ingested in Defender for Cloud Apps, but usually catches up over night.
 
 > [!NOTE]
-> If your Salesforce instance isn't in English, make sure to select the appropriate **language** attribute value for the integration service admin account.
+> If your Salesforce instance isn't in English, select the appropriate **language** attribute value for the integration service admin account.
 >
 > To change the language attribute, navigate to **Administration** -> **Users** -> **User** and open the integration system admin account. Now navigate to **Locale Settings** -> **Language** and select the desired language.
 
