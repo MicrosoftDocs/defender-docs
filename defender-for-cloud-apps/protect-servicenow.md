@@ -117,7 +117,7 @@ For more information, see the [ServiceNow product documentation](https://docs.se
 > [!TIP]
 > We recommend deploying ServiceNow  using OAuth app tokens, available for Fuji and later releases. For more information, see the relevant [ServiceNow documentation](https://docs.servicenow.com/bundle/paris-platform-administration/page/administer/security/concept/c_OAuthApplications.html#c_OAuthApplications).
 >
-> For earlier releases, a [legacy connection mode](#legacy-servicenow-connection) is available based on user/password. The username/password provided are only used for API token generation and aren't saved after the initial connection process.
+> For earlier releases, a [legacy connection mode](#legacy-servicenow-connection) is used that uses usernames and passwords The username and password provided are only used for API token generation and aren't saved after the initial connection process.
 >
 
 ### How to connect ServiceNow to Defender for Cloud Apps using OAuth
