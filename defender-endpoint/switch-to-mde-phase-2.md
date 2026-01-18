@@ -230,5 +230,5 @@ Device groups, device collections, and organizational units enable your security
 
 - [Proceed to Phase 3: Onboard to Defender for Endpoint](switch-to-mde-phase-3.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

@@ -132,4 +132,4 @@ To ensure machine-readable output for exporting with other data processing syste
 
 ### [Microsoft Defender Antivirus Performance Analyzer reference](/defender-endpoint/performance-analyzer-reference)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

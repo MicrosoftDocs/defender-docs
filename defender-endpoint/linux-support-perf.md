@@ -329,5 +329,5 @@ Configure Microsoft Defender for Endpoint on Linux with exclusions for the proce
 
 - [Investigate agent health issues](health-status.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -20,21 +20,24 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
 ---
 
 # List Investigations API
-
 
 ## API description
 
 Retrieves a collection of [Investigations](investigation.md).
 
-Supports [OData V4 queries](https://www.odata.org/documentation/).
+Supports [OData V4 queries](https://www.odata.org/documentation/). OData supported operators:
 
-The OData's `$filter` query is supported on: `startTime`, `id`, `state`, `machineId`, and `triggeringAlertId` properties.
-<br>```$stop``` with max value of 10,000 
-<br>```$skip```
+- `$filter` on the following properties:
+  - `startTime`
+  - `id`
+  - `state`
+  - `machineId`
+  - `triggeringAlertId`
+- `$stop` with max value of 10,000.
+- `$skip`
 
 See examples at [OData queries with Microsoft Defender for Endpoint](exposed-apis-odata-samples.md)
 
@@ -51,20 +54,20 @@ When obtaining a token using user credentials:
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md).
 
 |Permission type|Permission|Permission display name|
-|:---|:---|:---|
+|---|---|---|
 |Application|Alert.ReadWrite.All|`Read and write all alerts` |
 |Delegated (work or school account)|Alert.ReadWrite|`Read and write alerts` |
 
 ## HTTP request
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/investigations
+GET https://api.security.microsoft.com/api/investigations
 ```
 
 ## Request headers
 
 |Name|Type|Description|
-|:---|:---|:---|
+|---|---|---|
 |Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
@@ -82,7 +85,7 @@ If successful, this method returns 200, Ok response code with a collection of [I
 Here's an example of a request to get all investigations:
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/investigations
+GET https://api.security.microsoft.com/api/investigations
 ```
 
 ### Response example
@@ -91,7 +94,7 @@ Here's an example of the response:
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Investigations",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Investigations",
     "value": [
         {
             "id": "63017",
@@ -108,5 +111,3 @@ Here's an example of the response:
     ]
 }
 ```
-
-

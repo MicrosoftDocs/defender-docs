@@ -198,4 +198,4 @@ To collect a WPR trace using the command-line tool wpr.exe:
 
 - [Troubleshoot Microsoft Defender Antivirus performance issues with WPRUI](/defender-endpoint/troubleshoot-av-performance-issues-with-wprui)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
