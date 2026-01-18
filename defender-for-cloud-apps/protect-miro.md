@@ -57,7 +57,9 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 1. Create a new application in the developer team. 
 1. Copy the Client ID and Client secret. You'll need them later.
 1. Configure 'OAuth2.0' by setting the redirect URL to 'https://portal.cloudappsecurity.com/api/oauth/saga'.
-1. Grant the required permissions (‘auditlogs:read’ and ‘organization:read’) and select **Install app and get OAuth token**.
+1. Grant these required permissions, and then select **Install app and get OAuth token**.
+- ‘auditlogs:read’
+- ‘organization:read’
 
 ### Connect Microsoft Defender for Cloud Apps
 
