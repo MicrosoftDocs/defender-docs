@@ -114,9 +114,9 @@ The GCloud script creates all of the required resources on your GCP environment 
 - Service accounts
 - Project level policy bindings (service account has access only to the specific project)
 
-### Review and generate the connector for your project
-
-The final step for onboarding is to review all of your selections and to create the connector.
+1. Select **Next: Review and generate**.
+ 
+1. Review the information for accuracy.
 
 :::image type="content" source="media/quickstart-onboard-gcp/review-and-generate.png" alt-text="Screenshot of the review and generate screen with all of your selections listed." lightbox="media/quickstart-onboard-gcp/review-and-generate-big.png":::
 
@@ -132,10 +132,6 @@ The final step for onboarding is to review all of your selections and to create 
     > When you onboard at the organization level, enable these APIs on the management project, even though you use them to access resources across all projects within your organization.
     >
     > If you don't enable these APIs, you can enable them during the onboarding process by running the GCP Cloud Shell script.
-
-1. Select **Next: Review and generate**.
-
-1. Review the information for accuracy.
 
 1. Select **Create**.
 

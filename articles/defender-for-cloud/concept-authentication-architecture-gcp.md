@@ -78,5 +78,5 @@ This model ensures least-privilege access while enabling continuous security ass
 ## Related articles
 
 - [Connect your GCP project](quickstart-onboard-gcp.md)
-- [Integrate GCP Cloud Logging with Pub/Sub (Preview)](integrate-gcp-cloud-logging-pubsub.md)
+- [Integrate GCP Cloud Logging with Pub/Sub (Preview)](logging-ingestion.md)
 - [Troubleshoot multicloud connectors](troubleshoot-connectors.md)
