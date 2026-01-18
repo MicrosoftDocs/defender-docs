@@ -120,5 +120,5 @@ You can review all signals collected by Defender for Endpoint by turning on aggr
 
 To turn aggregated reporting on, go to **Settings > Endpoints > Advanced features**. Toggle on the **Aggregated reporting** feature. Learn more about [aggregated reporting in Defender for Endpoint](/defender-endpoint/aggregated-reporting).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

@@ -94,5 +94,5 @@ You'll be able to stop excluding a device at any time. Once devices are no longe
 ## See also
 
 - [Device inventory](machines-view-overview.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
