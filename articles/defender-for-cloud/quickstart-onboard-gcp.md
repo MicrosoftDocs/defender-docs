@@ -24,39 +24,35 @@ Learn more about [authentication architecture for GCP connectors](concept-authen
 
 ## Prerequisites
 
-To complete the procedures in this article, you need:
+Before you connect your GCP project, make sure you have:
 
 - A Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free one](https://azure.microsoft.com/pricing/free-trial/).
 
-- [Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) set up on your Azure subscription.
+- [Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) enabled on your Azure subscription.
 
-- Access to a GCP project.
+- Access to a GCP project or organization.
 
-- Contributor level permission for the relevant Azure subscription.
+- Contributor-level permission for the relevant Azure subscription.
 
-- If you enable CIEM as part of Defender for CSPM, the user onboarding the connector also needs [Security Admin role and Application.ReadWrite.All permission](enable-permissions-management.md?source=recommendations#before-you-start) for your tenant.
-
-- To ingest GCP Cloud Logging by using Pub/Sub topics, ensure you meet the prerequisites based on your deployment choice:
-
-   - If you create new Cloud Logging and Pub/Sub resources:
-   
-      - Permissions to create and manage Cloud Logging sinks, Pub/Sub topics, and subscriptions in GCP.
+- If you enable CIEM as part of Defender for CSPM, the user onboarding the connector also needs the [Security Admin role and Application.ReadWrite.All permission](enable-permissions-management.md?source=recommendations#before-you-start) for the tenant.
       
-      - IAM permissions to configure Pub/Sub and manage service accounts.
-      
-   - If you plan to use existing Cloud Logging and Pub/Sub resources:
-   
-      - Access to the existing Cloud Logging and Pub/Sub resources.
-      
-      - Understanding of your organization's existing log retention and Pub/Sub configurations.
-      
-You can learn more about Defender for Cloud pricing on [the pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
+## Cost considerations 
 
-When you're connecting GCP projects to specific Azure subscriptions, consider the [Google Cloud resource hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy#resource-hierarchy-detail) and these guidelines:
+Connecting GCP projects to Microsoft Defender for Cloud and enabling Defender plans can incur additional charges.
 
-- You connect your GCP projects to Microsoft Defender for Cloud at the *project* level.
-- You can connect multiple projects to one Azure subscription.
-- You can connect multiple projects to multiple Azure subscriptions.
+You can learn more about Defender for Cloud pricing on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+
+You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
+
+## GCP project and subscription mapping
+
+When connecting GCP projects to Azure subscriptions, consider the following:
+
+- GCP projects are connected to Microsoft Defender for Cloud at the project level.
+- You can connect multiple GCP projects to a single Azure subscription.
+- You can connect multiple GCP projects across multiple Azure subscriptions.
+
+Learn more about the [Google Cloud resource hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy#resource-hierarchy-detail).
 
 ## Connect your GCP project
 
@@ -68,7 +64,7 @@ When you're connecting GCP projects to specific Azure subscriptions, consider th
 
     :::image type="content" source="media/quickstart-onboard-gcp/connector.png" alt-text="Screenshot that shows where the GCP connector option is located." lightbox="media/quickstart-onboard-gcp/connector.png":::
 
-1. Enter the following information
+1. Enter the following information:
     - Connector name.
     - Select either **Organization** or **Single project**.
     - Subscription.
@@ -155,17 +151,17 @@ If an issue is present, you can select it to view a description of the problem a
 
 Learn more about [troubleshooting multicloud connectors](troubleshoot-connectors.md).
 
-## Enable GCP Cloud Logging ingestion (Preview)
-
-GCP Cloud Logging ingestion enhances identity and permission insights by adding activity context for Cloud Infrastructure Entitlement Management (CIEM) assessments, risk-based recommendations, and attack path analysis.
-
-Learn more about [ingesting GCP Cloud Logging with Pub/Sub (Preview)](ingest-gcp-logging.md).
-
 ## View your current coverage
 
 Defender for Cloud provides access to [workbooks](custom-dashboards-azure-workbooks.md) through [Azure workbooks](/azure/azure-monitor/visualize/workbooks-overview). Workbooks are customizable reports that provide insights into your security posture.
 
 The [coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) helps you understand your current coverage by showing which plans are enabled on your subscriptions and resources.
+
+## Enable GCP Cloud Logging ingestion (Preview)
+
+GCP Cloud Logging ingestion enhances identity and permission insights by adding activity context for Cloud Infrastructure Entitlement Management (CIEM) assessments, risk-based recommendations, and attack path analysis.
+
+Learn more about [ingesting GCP Cloud Logging with Pub/Sub (Preview)](logging-ingestion.md).
 
 ## Next steps
 

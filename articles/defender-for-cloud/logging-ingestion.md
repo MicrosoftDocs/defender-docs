@@ -4,27 +4,31 @@ description: Learn how to ingest Google Cloud Platform (GCP) Cloud Logging into 
 ms.topic: install-set-up-deploy
 ms.author: Elkrieger
 author: Elazark
-ms.date: 01/13/2026
+ms.date: 01/18/2026
 ms.custom: sfi-image-nochange
 ---
 
 # Ingest GCP cloud logging with Pub/Sub (Preview)
 
-Integrating Google Cloud Platform (GCP) Cloud Logging with Microsoft Defender for Cloud allows you to ingest activity logs from GCP, enhancing your ability to monitor, detect, and respond to security events across your Google Cloud environments. You can configure log ingestion either at the project level or centrally at the organization level. Data streamed from GCP Pub/Sub provides the necessary context for Cloud Infrastructure Entitlement Management (CIEM) in Defender for Cloud, dependent on the log activity, calculated risk-based recommendations, security posture insights, and attack path analysis.
+Microsoft Defender for Cloud can collect activity logs from Google Cloud Platform (GCP) by ingesting Cloud Logging data through Pub/Sub. These logs provide activity context used by Cloud Infrastructure Entitlement Management (CIEM) in Defender for Cloud, including risk-based recommendations and attack path analysis across your Google Cloud environments.
+
+GCP Cloud Logging ingestion is available for individual GCP projects and for GCP organizations that use centralized logging. Learn more about the [Google Cloud resource hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy#resource-hierarchy-detail).
 
 ## How GCP logging ingestion works
 
-Once configured, Defender for Cloud ingests and analyzes activity logs from Google Cloud to discover cloud identity and permissions insights, and CIEM recommendations.
+When GCP Cloud Logging ingestion is enabled, Defender for Cloud retrieves activity logs from Google Cloud and processes them to identify identity- and permission-related activity.
 
-Google Cloud records activity logs (including Admin Activity and Data Access logs) in [Cloud Logging](https://cloud.google.com/logging/docs). Logs are exported to the configured **Pub/Sub topic** using a Cloud Logging sink. The **Pub/Sub subscription** streams log messages to Defender for Cloud when new logs arrive.
+Google Cloud records activity logs (including Admin Activity and Data Access logs) in [Cloud Logging](https://cloud.google.com/logging/docs). Logs are exported to the configured Pub/Sub topic using a Cloud Logging sink. The Pub/Sub subscription streams log messages to Defender for Cloud when new logs arrive.
 
-Defender for Cloud pulls the logs from Pub/Sub, processes the activity events, and provides identity and permission insights as well as CIEM posture recommendations. Access between GCP and Defender for Cloud is secured via Google Cloud **IAM roles** and **service accounts** to ensure least-privilege operation.
+Defender for Cloud pulls activity events from Pub/Sub and processes them to generate identity and permission insights. Access between GCP and Defender for Cloud is secured using Google Cloud IAM roles and service accounts to support least-privilege access.
 
-Optionally, if **IAM Recommender** is enabled in your GCP environment, Defender for Cloud leverages its insights to enhance the accuracy of CIEM recommendations by identifying inactive and over-privileged roles.
+Optionally, if IAM Recommender is enabled in your GCP environment, Defender for Cloud leverages its insights to enhance the accuracy of CIEM recommendations by identifying inactive and over-privileged roles.
 
 ## Prerequisites
 
 Before enabling GCP Cloud Logging ingestion with Pub/Sub, ensure that your GCP environment has:
+
+- An existing GCP connector configured in Microsoft Defender for Cloud.
 
 - Access to the GCP project or organization where logs are generated.
 
@@ -34,19 +38,9 @@ Before enabling GCP Cloud Logging ingestion with Pub/Sub, ensure that your GCP e
 
 - IAM permissions to create or manage service accounts and assign required roles.
 
-- If using an existing Pub/Sub subscription, access to the existing Cloud Logging sink and Pub/Sub resources.
+- If using an existing Pub/Sub subscription, access to the existing Cloud Logging sink and Pub/Sub resources, and that these resources align with your organization’s log retention and Pub/Sub configuration.
 
-- An existing GCP connector configured in Microsoft Defender for Cloud.
-
-## Deploy GCP Cloud Logging ingestion
-
-Select the deployment scenario that meets your requirement:
-
-- __Project-Level__: Configure log ingestion for individual GCP projects.
-
-- __Organization-Level__: Centralize log ingestion across all projects within a GCP organization.
-
-### Deployment steps
+## Configure GCP Cloud Logging ingestion
 
 To configure GCP Cloud Logging:
 
