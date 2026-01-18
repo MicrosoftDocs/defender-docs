@@ -2,7 +2,7 @@
 title: Ai model security
 description: Learn about AI model security in Microsoft Defender for Cloud.
 ms.topic: concept-article
-ms.date: 01/12/2026
+ms.date: 01/18/2026
 ms.author: elkrieger
 author: Elazark
 ---
@@ -71,6 +71,8 @@ You can use the Cloud Security Explorer to locate AI models that have active sec
 
 1. Select **Search**.
 
-1. Select
+The Cloud Security Explorer displays all AI models in your environment that have active security findings. You can select view details to see more information about each selected model and the associated findings.
+
+Learn how to [build queries with cloud security explorer](how-to-manage-cloud-security-explorer.md).
 
 ## Next step
