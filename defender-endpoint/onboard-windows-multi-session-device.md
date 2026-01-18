@@ -146,5 +146,5 @@ Licensing requirements for Microsoft Defender for Endpoint can be found at: [Lic
 
 [Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment](deployment-vdi-microsoft-defender-antivirus.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

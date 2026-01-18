@@ -296,5 +296,5 @@ As mentioned in the video, Defender for Endpoint includes several attack surface
 | [Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md) | Provides steps to use audit mode to test attack surface reduction rules. |
 | [Web protection](web-protection-overview.md) | Web protection lets you secure your devices against web threats and helps you regulate unwanted content. |
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

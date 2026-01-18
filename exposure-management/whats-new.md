@@ -24,6 +24,16 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 >
 > `https://aka.ms/msem/rss`
 
+## January 2026
+
+### Cloud software inventory in vulnerability management (Preview)
+
+Cloud software inventory is available in preview in vulnerability management in the Microsoft Defender portal.
+
+This feature shows software in your cloud environment, application versions, assets where each software is installed, and related vulnerabilities. The software inventory helps you understand exposure, find vulnerable software, and prioritize vulnerability assessments.
+
+Learn more about [vulnerability management](/security-exposure-management/vulnerability-management-integration).
+
 ## November 2025
 
 ### Integration of Microsoft Defender for Cloud’s CSPM capabilities and Microsoft Defender Vulnerability Management into Exposure Management

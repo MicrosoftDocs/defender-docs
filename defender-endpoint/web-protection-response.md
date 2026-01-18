@@ -79,5 +79,5 @@ With web protection in Defender for Endpoint, your end users are prevented from 
 - [Web content filtering](web-content-filtering.md)
 - [Web threat protection](web-threat-protection.md)
 - [Monitor web security](web-protection-monitoring.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
