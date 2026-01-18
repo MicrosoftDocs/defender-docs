@@ -147,7 +147,7 @@ After connecting Salesforce, you'll receive Events as follows: Log in events and
 
 > [!NOTE]
 > Defender for Cloud Apps throttling is calculated solely on its own API calls with Salesforce, not with those of any other applications making API calls with Salesforce.
-> Limiting API calls due to the limitation might slow down the rate at which data is ingested in Defender for Cloud Apps, but usually catches up over night.
+>Limiting API calls due to throttling may temporarily slow data ingestion in Defender for Cloud Apps, but the process typically catches up overnight
 
 > [!NOTE]
 > If your Salesforce instance isn't in English, select the appropriate **language** attribute value for the integration service admin account.
