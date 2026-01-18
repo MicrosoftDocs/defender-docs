@@ -14,7 +14,7 @@ Microsoft Security Private Link allows workloads in your virtual network to conn
 With private endpoints, all security-related traffic from your workloads traverses the Microsoft backbone network without exposure to the public internet. This includes telemetry from Defender agents, sensors, add-ons, and extensions.
 
 > [!NOTE]
-> Microsoft Security Private Link isn't supported in sovereign cloud regions, such as Azure Government and Azure operated by 21Vianet (21Vianet).
+> Microsoft Security Private Link isn't supported in sovereign cloud regions, such as Azure Government and Azure operated by 21Vianet.
 
 ## Supported scenarios
 
