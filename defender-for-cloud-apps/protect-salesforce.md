@@ -114,7 +114,7 @@ This section provides instructions for connecting Microsoft  Defender for Cloud 
 1. If **Salesforce CRM Content** is active in your organization:
  - Grant Salesforce CRM Content access to the Defender for Cloud Apps service admin account.
  - Turn off **Lock sessions to the IP address from which they originated** for the service account profile.
- -  Turn on **Content Deliveries and Public Links**. 
+ - Turn on **Content Deliveries and Public Links**. 
 
 > [!NOTE]
 > The Content Deliveries feature needs to be enabled for Defender for Cloud Apps to query file sharing data. For more information, see [ContentDistribution](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contentdistribution.htm).
