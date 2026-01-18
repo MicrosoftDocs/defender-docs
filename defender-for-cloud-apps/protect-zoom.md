@@ -18,7 +18,7 @@ To see security posture recommendations for Zoom in Microsoft Secure Score, crea
 
 For example, recommendations for Zoom include: 
 
-- *Enable multi-factor authentication (MFA)*
+- *Enable multifactor authentication (MFA)*
 - Enable session timeout for web users
 - *Enforce end to end encryption in all Zoom meetings*
 
