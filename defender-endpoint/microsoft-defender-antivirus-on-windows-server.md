@@ -145,5 +145,5 @@ If a non-Microsoft antivirus product was installed on Windows Server, Microsoft 
 - [Troubleshoot performance issues related to real-time protection](troubleshoot-performance-issues.md)
 - [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

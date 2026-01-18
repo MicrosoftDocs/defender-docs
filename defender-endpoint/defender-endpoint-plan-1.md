@@ -193,4 +193,4 @@ To learn more, see [Defender for Endpoint APIs](api/management-apis.md).
 - [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
 - [Microsoft Defender for Endpoint - Mobile Threat Defense](mtd.md) (for iOS and Android devices)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -94,5 +94,5 @@ All remediation actions, whether pending or completed, are tracked in the [Actio
 - [PUA protection](/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus)
 - [Automated investigation and response in Microsoft Defender for Office 365](/defender-office-365/air-about)
 - [Automated investigation and response in Microsoft Defender XDR](/defender-xdr/m365d-autoir)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

@@ -133,5 +133,5 @@ This example shows that with behavioral blocking and containment capabilities, t
 - [See recent global threat activity](https://www.microsoft.com/wdsi/threats)
 
 - [Get an overview of Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
