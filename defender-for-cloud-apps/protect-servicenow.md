@@ -113,16 +113,15 @@ For more information, see the [ServiceNow product documentation](https://docs.se
 
 > [!TIP]
 > We recommend deploying ServiceNow  using OAuth app tokens, available for Fuji and later releases. For more information, see the relevant [ServiceNow documentation](https://docs.servicenow.com/bundle/paris-platform-administration/page/administer/security/concept/c_OAuthApplications.html#c_OAuthApplications).
->
-> For earlier releases, a [legacy connection mode](#legacy-servicenow-connection) is available based on user/password. The username/password provided are only used for API token generation and aren't saved after the initial connection process.
->
+
+
 
 ### How to connect ServiceNow to Defender for Cloud Apps using OAuth
 
 1. Sign in with an Admin account to your ServiceNow account.
 
    > [!NOTE]
-   > The username/password provided are only used for API token generation and aren't saved after the initial connection process.
+   > For earlier releases, a [legacy connection mode](#legacy-servicenow-connection) is available based on user/password. The username/password provided are only used for API token generation and aren't saved after the initial connection process.
 
 1. Create a new OAuth profile and then select  **Create an OAuth API endpoint for external clients**.
 1. Fill in the following **Application Registries New record** fields:
@@ -150,14 +149,13 @@ For more information, see the [ServiceNow product documentation](https://docs.se
 
 1. In the **App connectors** page, select **+Connect an app**, and then **ServiceNow**.
 
-    ![connect ServiceNow.](media/connect-servicenow.png "connect ServiceNow")
+    :::image type="content" source="media/connect-servicenow.png" alt-text="Screenshot that shows where to find the ServiceNow connector in the Defende rportal.":::
+
    
 1. In the next window, give the connection a name and select **Next**.
 1. In the **Enter details** page, select **Connect using OAuth token (recommended)**. Select **Next**.
 
-1. In the **Basic Details** page, add your ServiceNow user ID, password, and instance URL in the appropriate boxes. Select **Next**.
-
-    ![Screenshot of the ServiceNow App Connector Details Dialog.](media/servicenow-app-connector-details-screenshot.png)
+    :::image type="content" source="media/servicenow-app-connector-details-screenshot.png" alt-text="Screenshot of the ServiceNow App Connector Details Dialog.":::
    
    - To find your ServiceNow User ID, in the ServiceNow portal, go to **Users** and then locate your name in the table.
      
@@ -177,7 +175,7 @@ To connect ServiceNow with Defender for Cloud Apps, you must have admin-level pe
 
 1. Make sure the REST API plug-in is turned on.
 
-1. Follow the steps in the [Connect ServiceNow to Microsoft Defender for Cloud Apps (1)](#connect-servicenow-to-microsoft-defender-for-cloud-apps-1) section above.
+1. Follow the steps in the [Connect ServiceNow to Microsoft Defender for Cloud Apps](#connect-servicenow-to-microsoft-defender-for-cloud-apps-1) section above.
 
    
 ## Next steps
