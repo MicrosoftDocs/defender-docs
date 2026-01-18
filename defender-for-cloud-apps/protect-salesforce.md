@@ -107,13 +107,13 @@ This section provides instructions for connecting Microsoft  Defender for Cloud 
 
 1. Make sure that the service account profile includes the following permissions:
 
-    - **API Enabled**
-    - **View All Data**
-    - **Manage Salesforce CRM Content**
-    - **Manage Users**
-    - **[Query All Files](https://go.microsoft.com/fwlink/?linkid=2106480)**
-    - **Modify Metadata Through Metadata API Functions**
-    - **View Setup And Configuration**
+- **API Enabled**
+- **View All Data**
+- **Manage Salesforce CRM Content**
+- **Manage Users**
+- **[Query All Files](https://go.microsoft.com/fwlink/?linkid=2106480)**
+- **Modify Metadata Through Metadata API Functions**
+- **View Setup And Configuration**
 
 1. If **Salesforce CRM Content** is active in your organization:
  - Grant Salesforce CRM Content access to the Defender for Cloud Apps service admin account.
