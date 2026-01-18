@@ -286,4 +286,4 @@ Use the following steps to configure the Device tags:
 
 - [Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](android-intune.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
