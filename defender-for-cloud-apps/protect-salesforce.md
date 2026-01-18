@@ -93,27 +93,29 @@ This section provides instructions for connecting Microsoft  Defender for Cloud 
 
 [!INCLUDE [security-posture-management-connector](includes/security-posture-management-connector.md)]
 
+
 1. In your Salesforce account, create a dedicated service admin account for Defender for Cloud Apps.
 
 1. Make sure that the Salesforce account is assigned to one of the following editions, which support REST API access:
- - Performance
- - Enterprise
- - Unlimited
- - Developer
- - Professional. REST API must be added to the Professional edition separately.
 
+    - Performance
+    - Enterprise
+    - Unlimited
+    - Developer
+    - Professional. REST API must be added to the Professional edition separately.
+ 
 
 1. Create a new profile for the Defender for Cloud Apps service account. This profile will be used to configure the App connector.
 
 1. Make sure that the service account profile includes the following permissions:
 
-- **API Enabled**
-- **View All Data**
-- **Manage Salesforce CRM Content**
-- **Manage Users**
-- **[Query All Files](https://go.microsoft.com/fwlink/?linkid=2106480)**
-- **Modify Metadata Through Metadata API Functions**
-- **View Setup And Configuration**
+    - **API Enabled**
+    - **View All Data**
+    - **Manage Salesforce CRM Content**
+    - **Manage Users**
+    - **[Query All Files](https://go.microsoft.com/fwlink/?linkid=2106480)**
+    - **Modify Metadata Through Metadata API Functions**
+    - **View Setup And Configuration**
 
 1. If **Salesforce CRM Content** is active in your organization:
  - Grant Salesforce CRM Content access to the Defender for Cloud Apps service admin account.
