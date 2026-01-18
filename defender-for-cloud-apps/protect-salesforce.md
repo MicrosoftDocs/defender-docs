@@ -101,7 +101,7 @@ This section provides instructions for connecting Microsoft  Defender for Cloud 
     The **Professional** edition requires REST API access to be added separately.
 
 1. Create a new profile. This profile will be used for the Defender for Cloud Apps service account to set up the App connector.
-1. Verify that the service account profile includes the following permissions:
+1. Make sure that the service account profile includes the following permissions:
 
     - **API Enabled**
     - **View All Data**
