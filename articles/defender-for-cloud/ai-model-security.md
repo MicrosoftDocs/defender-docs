@@ -25,8 +25,7 @@ With AI model security:
 
 ## Prerequisites
 
-- You must have an Azure subscription that contains AI models registered in Azure Machine Learning (Azure ML) registries or workspaces.
-- Access to Defender for Cloud
+- You must have an Azure subscription that contains AI models registered in [Azure Machine Learning](/azure/machine-learning/quickstart-create-resources?view=azureml-api-2) (Azure ML) registries or workspaces.
 - [Enable the Defender for Cloud Security Posture Management plan](tutorial-enable-cspm-plan.md).
 - You must be able to [create an Azure ML registry](/azure/machine-learning/how-to-manage-registries?view=azureml-api-2&tabs=cli#create-a-registry) or have access to an existing Azure ML registry.
 - The ability to register models within the Azure ML registry for scanning.
@@ -34,16 +33,44 @@ With AI model security:
 - Supported model file formats: `Pickle (.pkl)`, `HDF5 (.h5)`, `TorchScript (.pt)`, `ONNX (.onnx)`, `SafeTensors (.safetensors)`, `TensorFlow SavedModel / TFLite (FlatBuffers)`, `NumPy (.npy)`, `Arrow, MsgPack, dill, joblib`, `PMML, JSON, POJO, MOJO, GGUF`.
 - File size limit: 10 GB. Model files larger than 10 GB can't be scanned. 
 
-## Upload and register a custom model
+## Locate all AI models in your environment
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-1. Search for and select **Azure Machine Learning**.
+1. Search for and select **Microsoft Defender for Cloud**.
 
-1. Select your registry.
+1. Select **Cloud Security Explorer**.
 
-1. Select **Continue**.
+1. Select **AI & Mls** > **AI models**.
 
-1. 
+    :::image type="content" source="media/ai-models/ai-models.png" alt-text="Screenshot that shows where to select AI models from the drop down list in the Cloud Security Explorer." lightbox="media/ai-models/ai-models.png":::
+
+1. Select **Done**.
+
+1. Select **+**.
+
+1. Select **Metadata** > **AI Model Metadata**.
+
+    :::image type="content" source="media/ai-models/ai-models-metadata.png" alt-text="Screenshot that shows how to select the 'AI Models Metadata' option." lightbox="media/ai-models/ai-models-metadata.png":::
+
+1. Select **Search**.
+
+The Cloud Security Explorer displays all AI models in your environment. You can select view details to see more information about each selected model.
+
+## Locate AI models with security findings
+
+You can use the Cloud Security Explorer to locate AI models that have active security findings that need to be addressed.
+
+1. Follow steps 1-7 from the [Locate all AI models in your environment](#locate-all-ai-models-in-your-environment) section.
+
+1. Select **+**.
+
+1. Select **Recommendations** > **All recommendations**.
+
+    :::image type="content" source="media/ai-models/all-recommendations.png" alt-text="Screenshot that shows how to select the 'All recommendations' option." lightbox="media/ai-models/all-recommendations.png":::
+
+1. Select **Search**.
+
+1. Select
 
 ## Next step
