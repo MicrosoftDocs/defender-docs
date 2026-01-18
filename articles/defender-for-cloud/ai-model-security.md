@@ -33,6 +33,8 @@ With AI model security:
 - Supported model file formats: `Pickle (.pkl)`, `HDF5 (.h5)`, `TorchScript (.pt)`, `ONNX (.onnx)`, `SafeTensors (.safetensors)`, `TensorFlow SavedModel / TFLite (FlatBuffers)`, `NumPy (.npy)`, `Arrow, MsgPack, dill, joblib`, `PMML, JSON, POJO, MOJO, GGUF`.
 - File size limit: 10 GB. Model files larger than 10 GB can't be scanned. 
 
+::: zone pivot="azure-portal"
+
 ## Locate all AI models in your environment
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
@@ -73,6 +75,35 @@ You can use the Cloud Security Explorer to locate AI models that have active sec
 
 The Cloud Security Explorer displays all AI models in your environment that have active security findings. You can select view details to see more information about each selected model and the associated findings.
 
-Learn how to [build queries with cloud security explorer](how-to-manage-cloud-security-explorer.md).
+::: zone-end
+
+::: zone pivot="defender-portal"
+
+## Locate all AI models in your environment
+
+The Defender portal Assets page provides a comprehensive view of all AI models in your environment.
+
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com/).
+
+1. Go to **Assets** > **Cloud** > **AI** > **AI models**.
+
+    :::image type="content" source="media/ai-models/defender-ai-models.png" alt-text="Screenshot that shows how to navigate to the Defender portals asset page with all of the AI models presented." lightbox="media/ai-models/defender-ai-models.png":::
+
+1. Select an AI model with recommendations to view more details.
+
+    :::image type="content" source="media/ai-models/ai-models-recommendation.png" alt-text="Screenshot that shows AI models that have at least 1 recommendationaffecting them.":::
+
+1. Select **Open asset page**.
+
+    :::image type="content" source="media/ai-models/asset-page.png" alt-text="Screenshot that shows where the 'Open assest page' button is located." lightbox="media/ai-models/asset-page.png":::
+
+1. Select **Security recommendations** > the relevant recommendation.
+ 
+1. Reveiew and remediate the security finding as needed.
+ 
+::: zone-end
 
 ## Next step
+
+> [!div class="nextstep"]
+> [Build queries with cloud security explorer](how-to-manage-cloud-security-explorer.md).
