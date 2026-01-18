@@ -10,7 +10,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -24,9 +24,7 @@ appliesto:
 
 # Run live response commands on a device
 
-
-[!include[Prerelease information](../../includes/prerelease.md)]
-
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 ## Prerequisites
 
@@ -34,30 +32,30 @@ Before you can initiate a session on a device, make sure you fulfill the followi
 
 ### Supported operating systems
 
-  - Windows 11
-  
-  - Windows 10
-    - [Version 1909](/windows/whats-new/whats-new-windows-10-version-1909) or later
-    - [Version 1903](/windows/whats-new/whats-new-windows-10-version-1903) with [KB4515384](https://support.microsoft.com/help/4515384/windows-10-update-kb4515384)
-    - [Version 1809 (RS 5)](/windows/whats-new/whats-new-windows-10-version-1809) with [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818)
-    - [Version 1803 (RS 4)](/windows/whats-new/whats-new-windows-10-version-1803) with [KB4537795](https://support.microsoft.com/help/4537795/windows-10-update-kb4537795)
-    - [Version 1709 (RS 3)](/windows/whats-new/whats-new-windows-10-version-1709) with [KB4537816](https://support.microsoft.com/help/4537816/windows-10-update-kb4537816)
+- Windows 11
 
-  - Windows Server 2019 - Only applicable for Public preview
-    - Version 1903 or (with [KB4515384](https://support.microsoft.com/help/4515384/windows-10-update-kb4515384)) later
-    - Version 1809 (with [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818))
-    
+- Windows 10
+- [Version 1909](/windows/whats-new/whats-new-windows-10-version-1909) or later
+  - [Version 1903](/windows/whats-new/whats-new-windows-10-version-1903) with [KB4515384](https://support.microsoft.com/help/4515384/windows-10-update-kb4515384)
+  - [Version 1809 (RS 5)](/windows/whats-new/whats-new-windows-10-version-1809) with [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818)
+  - [Version 1803 (RS 4)](/windows/whats-new/whats-new-windows-10-version-1803) with [KB4537795](https://support.microsoft.com/help/4537795/windows-10-update-kb4537795)
+  - [Version 1709 (RS 3)](/windows/whats-new/whats-new-windows-10-version-1709) with [KB4537816](https://support.microsoft.com/help/4537816/windows-10-update-kb4537816)
+
+- Windows Server 2019 - Only applicable for Public preview
+  - Version 1903 or (with [KB4515384](https://support.microsoft.com/help/4515384/windows-10-update-kb4515384)) later
+  - Version 1809 (with [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818))
+
 - Windows Server 2022 and later
 
 - Azure Stack HCI OS, version 23H2 and later
 
 - macOS [(requires other configuration profiles)](../microsoft-defender-endpoint-mac.md)
-      - 13 (Ventura)
-      - 12 (Monterey)
-      - 11 (Big Sur)
+  - 13 (Ventura)
+  - 12 (Monterey)
+  - 11 (Big Sur)
 
 - Linux servers
-      - [Supported Linux distributions](../mde-linux-prerequisites.md#supported-linux-distributions)
+  - [Supported Linux distributions](../mde-linux-prerequisites.md#supported-linux-distributions)
 
 ## API description
 
@@ -83,7 +81,6 @@ Runs a sequence of live response commands on a device
 
 - Live response actions initiated from the Device page aren't available in the `machineactions` API.
 
-
 ## Permissions
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Get started](apis-intro.md).
@@ -96,7 +93,7 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 
 ```HTTP
-POST https://api.securitycenter.microsoft.com/API/machines/{machine_id}/runliveresponse
+POST https://api.security.microsoft.com/API/machines/{machine_id}/runliveresponse
 ```
 
 ## Request headers
@@ -117,9 +114,9 @@ POST https://api.securitycenter.microsoft.com/API/machines/{machine_id}/runliver
 
 |Command Type|Parameters|Description|
 |---|---|---|
-|PutFile|Key: FileName <p> Value: \<file name\>|Puts a file from the library to the device. Files are saved in a working folder and are deleted when the device restarts by default. NOTE: Doesn't have a response result. |
-|RunScript|Key: ScriptName <br> Value: \<Script from library\> <p> Key: Args <br> Value: \<Script arguments\>|Runs a script from the library on a device. <p>  The Args parameter is passed to your script. <p> Time-outs after 10 minutes.|
-|GetFile|Key: Path <br> Value: \<File path\>|Collect file from a device. NOTE: Backslashes in path must be escaped.|
+|PutFile|Key: FileName <br/> Value: \<file name\>|Puts a file from the library to the device. Files are saved in a working folder and are deleted when the device restarts by default. NOTE: Doesn't have a response result.|
+|RunScript|Key: ScriptName <br/> Value: \<Script from library\> <br/> Key: Args <br/> Value: \<Script arguments\>|Runs a script from the library on a device. <br/> The Args parameter is passed to your script. <br/> Time-outs after 10 minutes.|
+|GetFile|Key: Path <br/> Value: \<File path\>|Collect file from a device. NOTE: Backslashes in path must be escaped.|
 
 ## Response
 
@@ -134,7 +131,7 @@ POST https://api.securitycenter.microsoft.com/API/machines/{machine_id}/runliver
 Here's an example of the request.
 
 ```HTTP
-POST https://api.securitycenter.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/runliveresponse
+POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/runliveresponse
 
 ```JSON
 {
@@ -181,7 +178,7 @@ Content-type: application/json
 
 ```JSON
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#MachineActions/$entity",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#MachineActions/$entity",
     "id": "{machine_action_id}",
     "type": "LiveResponse",
     "requestor": "analyst@microsoft.com",
@@ -228,5 +225,3 @@ Content-type: application/json
     ]
 }
 ```
-
-

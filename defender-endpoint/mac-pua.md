@@ -72,5 +72,5 @@ You're able to test PUA protection by going to [Potentially unwanted application
 
 - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

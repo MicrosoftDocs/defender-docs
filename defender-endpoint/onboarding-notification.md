@@ -207,5 +207,5 @@ You can split it to two queries:
 1. Take all devices last seen in the past hour and check first seen property for them (if the first seen property is on the past hour, the last seen must be there too).
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
