@@ -4,7 +4,7 @@ description: Learn about AI model security in Microsoft Defender for Cloud.
 ms.topic: concept-article
 ms.date: 01/18/2026
 ms.author: elkrieger
-author: Elazark
+zone_pivot_groups: defender-portal-experience
 ---
 
 # AI model security
@@ -25,9 +25,9 @@ With AI model security:
 
 ## Prerequisites
 
-- You must have an Azure subscription that contains AI models registered in [Azure Machine Learning](/azure/machine-learning/quickstart-create-resources?view=azureml-api-2) (Azure Machine Learning) registries or workspaces.
+- You must have an Azure subscription that contains AI models registered in [Azure Machine Learning](/azure/machine-learning/quickstart-create-resources) (Azure Machine Learning) registries or workspaces.
 - [Enable the Defender for Cloud Security Posture Management plan](tutorial-enable-cspm-plan.md).
-- You must be able to [create an Azure Machine Learning registry](/azure/machine-learning/how-to-manage-registries?view=azureml-api-2&tabs=cli#create-a-registry) or have access to an existing Azure Machine Learning registry.
+- You must be able to [create an Azure Machine Learning registry](/azure/machine-learning/how-to-manage-registries) or have access to an existing Azure Machine Learning registry.
 - The ability to register models within the Azure Machine Learning registry for scanning.
 - Required permissions: **Owner** or **Contributor** on the Azure Machine Learning resources.
 - Supported model file formats: `Pickle (.pkl)`, `HDF5 (.h5)`, `TorchScript (.pt)`, `ONNX (.onnx)`, `SafeTensors (.safetensors)`, `TensorFlow SavedModel / TFLite (FlatBuffers)`, `NumPy (.npy)`, `Arrow, MsgPack, dill, joblib`, `PMML, JSON, POJO, MOJO, GGUF`.
