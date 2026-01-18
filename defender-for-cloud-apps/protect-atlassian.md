@@ -99,7 +99,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
     >[!NOTE]
     > In Atlassian, domains are used to determine which user accounts can be managed by your organization. You won't see users and their activities if their domains aren't verified in the Atlassian configuration. 
-    > To verify domains in Atlassian see [Verify a domain to manage accounts](https://support.atlassian.com/user-management/docs/verify-a-domain-to-manage-accounts/).
+    > To verify domains in Atlassian, see [Verify a domain to manage accounts](https://support.atlassian.com/user-management/docs/verify-a-domain-to-manage-accounts/).
 
 ### Configure Defender for Cloud Apps
 
