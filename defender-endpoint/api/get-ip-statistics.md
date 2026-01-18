@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -24,6 +24,7 @@ appliesto:
 # Get IP statistics API
 
 ## API description
+
 Retrieves the statistics for the given IP.
 This statistic information is based on data from the past 30 days.
 
@@ -34,18 +35,16 @@ This statistic information is based on data from the past 30 days.
 
 ## Permissions
 
-
 When obtaining a token using user credentials:
-- The user needs to have at least the following role permission: 'View Data'. For more information, see [Create and manage roles](../user-roles.md).
 
+- The user needs to have at least the following role permission: 'View Data'. For more information, see [Create and manage roles](../user-roles.md).
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Ip.Read.All|'Read IP address profiles'
-Delegated (work or school account)|Ip.Read.All|'Read IP address profiles'
-
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Ip.Read.All|'Read IP address profiles'|
+|Delegated (work or school account)|Ip.Read.All|'Read IP address profiles'|
 
 ## HTTP request
 
@@ -55,15 +54,15 @@ GET /api/ips/{ip}/stats
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request URI parameters
 
-Name|Type|Description
-:---|:---|:---
-lookBackHours|Int32|Defines the hours we search back to get the statistics. Defaults to 30 days. **Optional**.
+|Name|Type|Description|
+|---|---|---|
+|lookBackHours|Int32|Defines the hours we search back to get the statistics. Defaults to 30 days. **Optional**.|
 
 ## Request body
 
@@ -102,7 +101,3 @@ Here's an example of the response.
 |Organization prevalence|The distinct count of devices that opened network connection to this IP.|
 |Org first seen|The first connection for this IP in the organization.|
 |Org last seen|The last connection for this IP in the organization.|
-
-
-
-

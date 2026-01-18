@@ -139,5 +139,5 @@ There are two more scenarios where Defender for Endpoint might request a file sa
 - [Microsoft Defender for Endpoint - Mobile Threat Defense](mtd.md)
 - [Configure remediation for Microsoft Defender Antivirus detections](configure-remediation-microsoft-defender-antivirus.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

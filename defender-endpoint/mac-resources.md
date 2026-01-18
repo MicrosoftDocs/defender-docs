@@ -127,7 +127,6 @@ Important tasks, such as controlling product settings and triggering on-demand s
 |Diagnostics|Generate diagnostic logs|`mdatp diagnostic create --path [directory]`|
 |Health|Check the product's health|`mdatp health`|
 |Health|Check for a specific product attribute|`mdatp health --field [attribute: healthy/licensed/engine_version...]`|
-|EDR|EDR list exclusions (root)| `mdatp edr exclusion list [processes|paths|extensions|all]` |
 |EDR|Set/Remove tag, only GROUP supported|`mdatp edr tag set --name GROUP --value [name]`|
 |EDR|Remove group tag from device|`mdatp edr tag remove --tag-name [name]`|
 |EDR|Add Group ID|`mdatp edr group-ids --group-id [group]`|
@@ -219,5 +218,5 @@ When threats are detected, your security team can view detections and if necessa
 - [Microsoft Defender portal overview](/defender-xdr/microsoft-365-defender-portal)
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
