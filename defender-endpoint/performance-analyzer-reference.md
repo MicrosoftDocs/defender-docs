@@ -453,4 +453,4 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

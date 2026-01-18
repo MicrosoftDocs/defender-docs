@@ -212,4 +212,4 @@ Use the time range filter at the top left of the page to select a time period. Y
 - [Respond to web threats](web-protection-response.md)
 - [Requirements for Network Protection](web-content-filtering.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

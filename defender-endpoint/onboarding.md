@@ -126,5 +126,5 @@ After onboarding the endpoints move on to the next step where you'll configure t
 
 - [Step 5 - Configure capabilities](onboard-configure.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
