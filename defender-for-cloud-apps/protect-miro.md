@@ -61,7 +61,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 ### Connect Microsoft Defender for Cloud Apps
 
-1. In the [Defender for Cloud Apps](https://portal.cloudAppSecurity.com) portal, navigate to Investigate >Connected apps.
+1. In the [Defender for Cloud Apps](https://portal.cloudAppSecurity.com) portal, navigate to Investigate > Connected apps.
 1. In the **App connectors** page, select **Connect an app**, and choose **Miro**.
 1. In the connection wizard, enter a name for Miro connection, and select **Connect Miro**.
 1. Enter the Client ID, Client secret and select Connect in Miro.
