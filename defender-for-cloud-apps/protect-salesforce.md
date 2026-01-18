@@ -89,12 +89,12 @@ This section provides instructions for connecting Microsoft  Defender for Cloud 
 
 [!INCLUDE [security-posture-management-connector](includes/security-posture-management-connector.md)]
 
-### How to connect Salesforce to Defender for Cloud Apps
 
-> [!NOTE]
-> Salesforce Shield should be available for your Salesforce instance as a prerequisite for this integration in all supported abilities except SSPM
+### Prerequisites 
 
-1. Create a dedicated service admin account for Defender for Cloud Apps.
+- For all integrations other than SSPM, make sure that Salesforce Shield is available for your Salesforce instance.
+
+1. In your Salesforce account, create a dedicated service admin account for Defender for Cloud Apps.
 
 1. Make sure that the Salesforce account is assigned to one of the following editions, which support REST API access:
  - Performance
@@ -103,7 +103,7 @@ This section provides instructions for connecting Microsoft  Defender for Cloud 
  - Developer
  - Professional. REST API must be added to the Professional edition separately.
 
-    The **Professional** edition requires REST API access to be added separately.
+ 
 
 1.Create a new profile for the Defender for Cloud Apps service account. This profile will be used to configure the App connector.
 1. Make sure that the service account profile includes the following permissions:
