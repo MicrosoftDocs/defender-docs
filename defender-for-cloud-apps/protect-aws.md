@@ -105,29 +105,29 @@ You can connect AWS **Security auditing** to Defender for Cloud Apps connections
 
 1. In the **App connectors** page, to provide the AWS connector credentials, do one of the following:
 
-    **For a new connector**  
+**For a new connector**  
 
-   1. Select the **+Connect an app**, followed by **Amazon Web Services**.
+1. Select the **+Connect an app**, followed by **Amazon Web Services**.
 
    :::image type="content" source="media/connect-aws.png" alt-text="Screenshot that shows where to find the +Connect an app button in the Microsoft Defender portal." lightbox="media/connect-aws.png":::
    
       
-    1. In the next window, provide a name for the connector, and then select **Next**.
+1. In the next window, provide a name for the connector, and then select **Next**.
 
     :::image type="content" source="media/connect-aws-name.png" alt-text="Screenshot that shows how to add the instance name for your new AWS connector. " lightbox="media/connect-aws-name.png":::
 
-    1. On the **Connect Amazon Web Services** page, select **Security auditing**, and then select **Next**.
+1. On the **Connect Amazon Web Services** page, select **Security auditing**, and then select **Next**.
 
-    1. On the **Security auditing page**, paste the **Access key** and **Secret key** from the .csv file into the relevant fields, and select **Next**.
+1. On the **Security auditing page**, paste the **Access key** and **Secret key** from the .csv file into the relevant fields, and select **Next**.
 
     :::image type="content" source="media/aws-connect-app-audit.png" alt-text="Screenshot that shows the AWS app security auditing page and where to enter the access key and secret key." lightbox="media/aws-connect-app-audit.png":::
 
-    **For an existing connector**
+**For an existing connector**
 
-   1. In the list of connectors, on the row in which the AWS connector appears, select **Edit settings**.
+1. In the list of connectors, on the row in which the AWS connector appears, select **Edit settings**.
 
       
-   1. On the **Instance name** and **Connect Amazon Web Services** pages, select **Next**. On the **Security auditing page**, paste the **Access key** and **Secret key** from the .csv file into the relevant fields, and select **Next**.
+1. On the **Instance name** and **Connect Amazon Web Services** pages, select **Next**. On the **Security auditing page**, paste the **Access key** and **Secret key** from the .csv file into the relevant fields, and select **Next**.
    
        
     :::image type="content" source="media/aws-connect-app-audit.png" alt-text="Screenshot that shows the AWS app security auditing page and where to enter the access key and secret key." lightbox="media/aws-connect-app-audit.png":::
