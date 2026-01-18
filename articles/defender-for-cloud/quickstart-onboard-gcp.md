@@ -114,7 +114,7 @@ The GCloud script creates all of the required resources on your GCP environment 
  
 1. Review the information for accuracy.
 
-:::image type="content" source="media/quickstart-onboard-gcp/review-and-generate.png" alt-text="Screenshot of the review and generate screen with all of your selections listed." lightbox="media/quickstart-onboard-gcp/review-and-generate-big.png":::
+   :::image type="content" source="media/quickstart-onboard-gcp/review-and-generate.png" alt-text="Screenshot of the review and generate screen with all of your selections listed." lightbox="media/quickstart-onboard-gcp/review-and-generate-big.png":::
 
     > [!NOTE]
     > The following APIs must be enabled on the project where you run the onboarding script to discover your GCP resources and allow the authentication process to occur:
@@ -162,8 +162,6 @@ The [coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) 
 GCP Cloud Logging ingestion enhances identity and permission insights by adding activity context for Cloud Infrastructure Entitlement Management (CIEM) assessments, risk-based recommendations, and attack path analysis.
 
 Learn more about [ingesting GCP Cloud Logging with Pub/Sub (Preview)](logging-ingestion.md).
-
-## Next steps
 
 ## Next steps
 
