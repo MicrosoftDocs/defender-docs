@@ -1036,6 +1036,9 @@
           href: iac-vulnerabilities.md
         - name: Review pull request annotations
           href: review-pull-request-annotations.md
+        - name: Query software bill of materials (SBOM)
+          displayName: software bill of materials, SBOM, query, DevOps
+          href: query-software-bill-of-materials.md
     - name: Common questions about DevOps security
       href: faq-defender-for-devops.yml
 
