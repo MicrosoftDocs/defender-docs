@@ -89,5 +89,5 @@ For example: *Multi-stage incident on multiple endpoints reported by multiple so
 - [Manage incidents](manage-incidents.md)
 - [Investigate incidents](investigate-incidents.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

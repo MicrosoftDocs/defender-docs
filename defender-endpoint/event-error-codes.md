@@ -217,5 +217,5 @@ You can use this table for more information on the Defender for Endpoint events 
 - [Client analyzer overview](overview-client-analyzer.md)
 - [Understand the analyzer HTML report](analyzer-report.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
