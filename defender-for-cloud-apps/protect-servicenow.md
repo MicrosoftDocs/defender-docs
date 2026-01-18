@@ -131,7 +131,7 @@ For more information, see the [ServiceNow product documentation](https://docs.se
 1. Fill in the following **Application Registries New record** fields:
    1. Enter a name for your OAuth profile, for example, CloudAppSecurity.
       
-   1. Copy the **Client ID**. You'll need to paste it into Defender for Cloud Apps to complete the connection.
+   1. Copy the **Client ID**. You'll need it later.
       
    1. In the **Client Secret** field, enter a string. If left empty, a random secret is generated automatically. Copy and save it for later.
       
