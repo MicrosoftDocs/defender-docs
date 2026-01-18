@@ -96,7 +96,12 @@ This section provides instructions for connecting Microsoft  Defender for Cloud 
 
 1. Create a dedicated service admin account for Defender for Cloud Apps.
 
-1. Check that the Salesforce account is assigned to an edition that supports REST API access: **Performance**, **Enterprise**, **Unlimited**, or **Developer**.
+1. Make sure that the Salesforce account is assigned to one of the following editions, which support REST API access:
+ - Performance
+ - Enterprise
+ - Unlimited
+ - Developer
+ - Professional. REST API must be added to the Professional edition separately.
 
     The **Professional** edition requires REST API access to be added separately.
 
