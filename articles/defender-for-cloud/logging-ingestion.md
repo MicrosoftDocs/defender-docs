@@ -22,6 +22,22 @@ Defender for Cloud pulls the logs from Pub/Sub, processes the activity events, a
 
 Optionally, if **IAM Recommender** is enabled in your GCP environment, Defender for Cloud leverages its insights to enhance the accuracy of CIEM recommendations by identifying inactive and over-privileged roles.
 
+## Prerequisites
+
+Before enabling GCP Cloud Logging ingestion with Pub/Sub, ensure that your GCP environment has:
+
+- Access to the GCP project or organization where logs are generated.
+
+- Permissions to create or manage Cloud Logging sinks.
+
+- Permissions to create and manage Pub/Sub topics and subscriptions.
+
+- IAM permissions to create or manage service accounts and assign required roles.
+
+- If using an existing Pub/Sub subscription, access to the existing Cloud Logging sink and Pub/Sub resources.
+
+- An existing GCP connector configured in Microsoft Defender for Cloud.
+
 ## Deploy GCP Cloud Logging ingestion
 
 Select the deployment scenario that meets your requirement:

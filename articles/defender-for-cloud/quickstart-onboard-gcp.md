@@ -137,6 +137,12 @@ The GCloud script creates all of the required resources on your GCP environment 
 
 After you create the connector, a scan starts on your GCP environment. New recommendations appear in Defender for Cloud after up to six hours. If you enabled autoprovisioning, Azure Arc and any enabled extensions are installed automatically for each newly detected resource.
 
+## Enable GCP Cloud Logging ingestion (Preview)
+
+GCP Cloud Logging ingestion enhances identity and permission insights by adding activity context for Cloud Infrastructure Entitlement Management (CIEM) assessments, risk-based recommendations, and attack path analysis.
+
+Learn more about [ingesting GCP Cloud Logging with Pub/Sub (Preview)](ingest-gcp-logging.md).
+
 ## View your current coverage
 
 Defender for Cloud provides access to [workbooks](custom-dashboards-azure-workbooks.md) through [Azure workbooks](/azure/azure-monitor/visualize/workbooks-overview). Workbooks are customizable reports that provide insights into your security posture.
