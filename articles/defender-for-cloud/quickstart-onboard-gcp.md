@@ -165,11 +165,10 @@ Learn more about [ingesting GCP Cloud Logging with Pub/Sub (Preview)](logging-in
 
 ## Next steps
 
-Connecting your GCP project is part of the multicloud experience available in Microsoft Defender for Cloud:
+## Next steps
 
-- [Assign access to workload owners](assign-access-to-workload.md).
-- [Protect all of your resources with Defender for Cloud](enable-all-plans.md).
-- Set up your [on-premises machines](quickstart-onboard-machines.md) and [AWS account](quickstart-onboard-aws.md).
-- [Troubleshoot your multicloud connectors](troubleshoot-connectors.md).
+- [Configure Defender for Cloud plans for your GCP projects](configure-google-plans.md).
+- Learn about the [authentication architecture for GCP connectors](concept-authentication-architecture-gcp.md).
+- [Ingest GCP Cloud Logging with Pub/Sub (Preview)](logging-ingestion.md).
 - [Resolve Domain Restricted Sharing policy](resolve-gcp-sharing-policy.md).
-- Get answers to [common questions](faq-general.yml) about connecting your GCP project.
+- [Troubleshoot multicloud connectors](troubleshoot-connectors.md).

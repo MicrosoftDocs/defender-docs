@@ -54,15 +54,6 @@ The authentication process works as follows:
 1. Defender for Cloud uses the Google STS token to impersonate the service account.
    The service account credentials are used to scan the GCP project or organization.
 
-old:
-1. Microsoft Defender for Cloud's CSPM service acquires a Microsoft Entra token. Microsoft Entra ID signs the token using the RS256 algorithm and is valid for 1 hour.
-
-1. The Microsoft Entra token is exchanged with Google's STS token.
-
-1. Google STS validates the token with the workload identity provider. The Microsoft Entra token is sent to Google's STS that validates the token with the workload identity provider. Audience validation then occurs and the token is signed. A Google STS token is then returned to Defender for Cloud's CSPM service.
-
-1. Defender for Cloud's CSPM service uses the Google STS token to impersonate the service account. Defender for Cloud's CSPM receives service account credentials that are used to scan the project.
-
 ## Service account impersonation and access scope
 
 After authentication completes, Defender for Cloud operates using impersonated service account credentials.
@@ -75,7 +66,7 @@ After authentication completes, Defender for Cloud operates using impersonated s
 
 This model ensures least-privilege access while enabling continuous security assessment.
 
-## Related articles
+## Related content
 
 - [Connect your GCP project](quickstart-onboard-gcp.md)
 - [Integrate GCP Cloud Logging with Pub/Sub (Preview)](logging-ingestion.md)
