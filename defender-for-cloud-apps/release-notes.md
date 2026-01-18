@@ -19,6 +19,13 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 
 For news about earlier releases, see [Archive of past updates for Microsoft Defender for Cloud Apps](release-note-archive.md).
+## January 2026
+
+### Workday connector updated to least-privilege permission model
+The Workday connector now requires only “View” permissions to function. We have removed the “Modify” permission requirement to better align with the principle of least privilege. 
+While existing configurations will continue to work, admins are encouraged to update the Workday account settings to remove these unnecessary rights as a security best practice. 
+
+For more information see: [How Defender for Cloud Apps helps protect your Workday environment](https://learn.microsoft.com/defender-cloud-apps/protect-workday).
 
 ## December 2025
 

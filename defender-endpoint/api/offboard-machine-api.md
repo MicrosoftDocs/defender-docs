@@ -7,7 +7,7 @@ author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -19,7 +19,6 @@ ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1 and Plan 2
-
 ---
 
 # Offboard machine API
@@ -57,8 +56,6 @@ One of the following permissions is required to call this API. To learn more, in
 |Application|`Machine.Offboard`|`Offboard machine`|
 |Delegated (work or school account)|`Machine.Offboard`|`Offboard machine`|
 
-
-
 ## HTTP request
 
 ```http
@@ -69,10 +66,10 @@ The machine ID can be found in the URL when you select the device. Generally, it
 
 ## Request headers
 
-Name|Type|Description
----|---|---
-Authorization|String|Bearer {token}. **Required**.
-Content-Type|string|application/json. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
+|Content-Type|string|application/json. **Required**.|
 
 ## Request body
 
@@ -101,4 +98,3 @@ POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e41
   "Comment": "Offboard machine by automation"
 }
 ```
-

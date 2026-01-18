@@ -11,11 +11,11 @@ ms.author: macapara
 author: mjcaparas
 ms.localizationpriority: medium
 manager: dansimp
-ms.date: 01/28/2021
+ms.date: 01/08/2026
 audience: ITPro
 ms.collection: M365-security-compliance 
 ms.topic: article
 ---
 
 > [!NOTE]
-> If you are a US Government customer, please use the URIs listed in [Microsoft Defender for Endpoint for US Government customers](/defender-endpoint/gov#api).
+> If you're a US Government customer, use the URIs listed in [Microsoft Defender for Endpoint for US Government customers](/defender-endpoint/gov#api).

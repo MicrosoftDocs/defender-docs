@@ -189,5 +189,5 @@ Mature and maintain your internal team's security capabilities to prevent, detec
 
 - [Configure managed service security provider integration](configure-mssp-support.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

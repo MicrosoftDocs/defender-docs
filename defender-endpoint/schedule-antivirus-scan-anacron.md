@@ -203,5 +203,4 @@ Use the following steps to schedule scans:
 - [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md)
 - [Configure security settings and policies for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
