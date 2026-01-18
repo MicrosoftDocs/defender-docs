@@ -9,19 +9,19 @@ author: Elazark
 
 # AI model security
 
-As more organizations adopt AI models for various applications, ensuring the security of these models becomes paramount. Security teams lack the visibility and control needed to assess the safety and compliance of AI models entering their environments, making it increasingly difficult to enforce internal standards. 
+As more organizations adopt AI models for various applications, ensuring the security of these models becomes paramount. Security teams need visibility and control to assess the safety and compliance of AI models entering their environments. Without these capabilities, it becomes increasingly difficult to enforce internal standards. 
 
-To address this issue Defender for Cloud's Defender for AI plan supports AI model scanning. AI model scanning provides visibility and control over all AI models in use, allowing security teams to proactively detect unsafe or malicious artifacts. The security teams can ensure secure and transparent deployments, and continuous monitoring for risks throughout the AI lifecycle.
+To address this problem, Microsoft Defender for Cloud's Defender for AI plan supports AI model scanning. AI model scanning provides visibility and control over all AI models in use, so security teams can proactively detect unsafe or malicious artifacts. Security teams can ensure secure and transparent deployments and continuous monitoring for risks throughout the AI lifecycle.
 
 Defender for AI's Model Security enables organizations to automatically scan AI models for security risks such as malware, unsafe operators, and exposed secrets before they are deployed. Integrated into Azure ML and CI/CD pipelines, it provides real-time findings and remediation guidance to prevent unsafe models from reaching production.
 
 With AI model security:
 
-- Security teams can scan custom AI models uploaded to Azure ML workspaces and registries including formats such as ONNX, Pickle, TorchScript, and others for threats like malware, unsafe operators, and exposed secrets.
+- Security teams can scan custom AI models uploaded to Azure ML workspaces and registries, including formats such as ONNX, Pickle, TorchScript, and others for threats like malware, unsafe operators, and exposed secrets.
 
-- Scan results are surfaced in Microsoft Defender for Cloud, providing security teams with centralized visibility of security findings. These detailed insights include severity, remediation guidance, and model metadata to support effective triage and prioritization.
+- Microsoft Defender for Cloud surfaces scan results, providing security teams with centralized visibility of security findings. These detailed insights include severity, remediation guidance, and model metadata to support effective triage and prioritization.
 
-- Developers can trigger model scans during build or release stages using CLI tools integrated into Azure DevOps or GitHub pipelines. This CI/CD integration for static scanning enables early detection of risks before models reach production.
+- Developers can trigger model scans during build or release stages by using CLI tools integrated into Azure DevOps or GitHub pipelines. This CI/CD integration for static scanning enables early detection of risks before models reach production.
 
 ## Prerequisites
 
@@ -57,11 +57,11 @@ With AI model security:
 
 1. Select **Search**.
 
-The Cloud Security Explorer displays all AI models in your environment. You can select view details to see more information about each selected model.
+The Cloud Security Explorer displays all AI models in your environment. You can select **view details** to see more information about each selected model.
 
 ## Locate AI models with security findings
 
-You can use the Cloud Security Explorer to locate AI models that have active security findings that need to be addressed.
+Use the Cloud Security Explorer to find AI models that have active security findings.
 
 1. Follow steps 1-7 from the [Locate all AI models in your environment](#locate-all-ai-models-in-your-environment) section.
 
@@ -73,7 +73,7 @@ You can use the Cloud Security Explorer to locate AI models that have active sec
 
 1. Select **Search**.
 
-The Cloud Security Explorer displays all AI models in your environment that have active security findings. You can select view details to see more information about each selected model and the associated findings.
+The Cloud Security Explorer displays all AI models in your environment that have active security findings. Select **view details** to see more information about each model and the associated findings.
 
 ::: zone-end
 
@@ -81,7 +81,7 @@ The Cloud Security Explorer displays all AI models in your environment that have
 
 ## Locate all AI models in your environment
 
-The Defender portal Assets page provides a comprehensive view of all AI models in your environment.
+The Defender portal **Assets** page provides a comprehensive view of all AI models in your environment.
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com/).
 
@@ -95,12 +95,14 @@ The Defender portal Assets page provides a comprehensive view of all AI models i
 
 1. Select **Open asset page**.
 
-    :::image type="content" source="media/ai-models/asset-page.png" alt-text="Screenshot that shows where the 'Open assest page' button is located." lightbox="media/ai-models/asset-page.png":::
+    :::image type="content" source="media/ai-models/asset-page.png" alt-text="Screenshot that shows where the 'Open asset page' button is located." lightbox="media/ai-models/asset-page.png":::
 
 1. Select **Security recommendations** > the relevant recommendation.
  
-1. Reveiew and remediate the security finding as needed.
+1. Review and remediate the security finding as needed.
  
+You can also manage the recommendation in the Azure portal. 
+
 ::: zone-end
 
 ## Next step
