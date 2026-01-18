@@ -83,7 +83,10 @@ This article provides instructions for connecting Microsoft Defender for Cloud A
 
 ### Prerequisites
 
-- In order to connect ServiceNow with Defender for Cloud Apps, you must have the Admin role. Your ServiceNow instance must support API access, and the admin account used to make the connection must have permissions to use the API.
+- In order to connect ServiceNow with Defender for Cloud Apps, 
+ - Your ServiceNow instance must support API access. 
+ - You must have an admin role.
+ - The admin account used to make the connection must have permissions to use the API.
 
 Defender for Cloud Apps supports the following ServiceNow versions:
 - Eureka
@@ -113,8 +116,9 @@ For more information, see the [ServiceNow product documentation](https://docs.se
 
 > [!TIP]
 > We recommend deploying ServiceNow  using OAuth app tokens, available for Fuji and later releases. For more information, see the relevant [ServiceNow documentation](https://docs.servicenow.com/bundle/paris-platform-administration/page/administer/security/concept/c_OAuthApplications.html#c_OAuthApplications).
-
-
+>
+> For earlier releases, a [legacy connection mode](#legacy-servicenow-connection) is used that uses usernames and passwords The username and password provided are only used for API token generation and aren't saved after the initial connection process.
+>
 
 ### How to connect ServiceNow to Defender for Cloud Apps using OAuth
 
@@ -127,7 +131,7 @@ For more information, see the [ServiceNow product documentation](https://docs.se
 1. Fill in the following **Application Registries New record** fields:
    1. Enter a name for your OAuth profile, for example, CloudAppSecurity.
       
-   1. Copy the **Client ID**. You'll need to paste it into Defender for Cloud Apps to complete the connection.
+   1. Copy the **Client ID**. You'll need it later.
       
    1. In the **Client Secret** field, enter a string. If left empty, a random secret is generated automatically. Copy and save it for later.
       
@@ -137,7 +141,7 @@ For more information, see the [ServiceNow product documentation](https://docs.se
 1. Select the name of the OAuth that was defined, and change the **Refresh Token Lifespan** to **7,776,000 seconds** (90 days).
    
 1. Establish an internal procedure to ensure that the connection remains active.
-    1. Before the expected expiration of the refresh token, make sure to revoke the old refresh token.
+    1. Make sure to revoke the old refresh token before the expected expiration of the refresh token.
     1. In the Microsoft Defender Portal, edit the existing connector, using the same client ID and client secret. This will generate a new refresh token. 
 
     > [!NOTE]
