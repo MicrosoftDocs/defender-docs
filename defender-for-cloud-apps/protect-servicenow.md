@@ -83,7 +83,10 @@ This article provides instructions for connecting Microsoft Defender for Cloud A
 
 ### Prerequisites
 
-- In order to connect ServiceNow with Defender for Cloud Apps, you must have the Admin role. Your ServiceNow instance must support API access, and the admin account used to make the connection must have permissions to use the API.
+- In order to connect ServiceNow with Defender for Cloud Apps, 
+ - Your ServiceNow instance must support API access. 
+ - You must have an admin role.
+ - The admin account used to make the connection must have permissions to use the API.
 
 Defender for Cloud Apps supports the following ServiceNow versions:
 - Eureka
