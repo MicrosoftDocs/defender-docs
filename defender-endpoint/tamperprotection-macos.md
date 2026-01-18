@@ -543,5 +543,4 @@ $ sudo grep -F '[{tamperProtection}]: Feature state:' /Library/Logs/Microsoft/md
 ```
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

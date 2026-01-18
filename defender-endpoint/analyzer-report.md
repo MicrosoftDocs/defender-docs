@@ -60,5 +60,3 @@ To include analyzer result files [when opening a support ticket](contact-support
 
 - [Troubleshoot sensor health using Microsoft Defender for Endpoint Client Analyzer](overview-client-analyzer.md)
 
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

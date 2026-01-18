@@ -383,4 +383,4 @@ $exploitGuardObject.Put()
 - [Evaluate network protection](evaluate-network-protection.md)
 - [Troubleshoot network protection](troubleshoot-np.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -76,5 +76,5 @@ Managed security service providers (MSSP) and independent software vendors (ISV)
 
 - [Technical partner opportunities](partner-integration.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

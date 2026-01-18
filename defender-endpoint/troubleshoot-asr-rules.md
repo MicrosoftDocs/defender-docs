@@ -74,6 +74,6 @@ Review [Troubleshoot attack surface reduction rules](/defender-endpoint/troubles
 
 - [Troubleshoot attack surface reduction rules](/defender-endpoint/troubleshoot-asr)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
 
