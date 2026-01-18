@@ -49,7 +49,7 @@ For more information about remediating threats from apps, see [Governing connect
 
 ## Protect Slack in real time
 
-Review our best practices for [securing and collaborating with external users](best-practices.md#secure-collaboration-with-external-users-by-enforcing-real-time-session-controls) and [blocking and protecting the download of sensitive data to unmanaged or risky devices](best-practices.md#block-and-protect-download-of-sensitive-data-to-unmanaged-or-risky-devices).
+Review our best practices for [securing and collaborating with guests](best-practices.md#secure-collaboration-with-external-users-by-enforcing-real-time-session-controls) and [blocking and protecting the download of sensitive data to unmanaged or risky devices](best-practices.md#block-and-protect-download-of-sensitive-data-to-unmanaged-or-risky-devices).
 
 
 ## Connect Slack to Microsoft Defender for Cloud Apps
