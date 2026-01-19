@@ -48,14 +48,20 @@ The Action center ([https://security.microsoft.com/action-center](https://securi
 You can release the contained assets, for example, enable a blocked user account or release a device from containment, from the action details pane. You can release the contained assets after you mitigate the risk and complete the investigation of an incident. For more information about the action center, see [Action center](m365d-action-center.md).
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
 
-## Track the current status of actions in the Incident page
+## Track the current status of automatic attack disruption actions in the Activities tab
 
-The Incident page provides a stateful list of actions and policies taken within incidents, which allows you to see the current status of all relevant actions and policies in your environment. This addresses the challenge of tracking ongoing and expired actions, especially in large environments with many incidents.
+The **Activities** tab in the **Incident** page allows you to view details related to a specific incident, including the date and time the activity started, the triggering alert, and more. 
+
+The **Policy status** column (Preview) in the activities list provides a stateful list of actions and policies taken within incidents, which allows you to see the current status of all relevant actions and policies in your environment. This addresses the challenge of tracking ongoing and expired actions, especially in large environments with many incidents.
 
 To view all automatic attack disruption actions taken as part of an incident:
 
-1. In the incident's **Activities** tab, filter by **Origin: This incident** and **Provider: Attack disruption**.
-1. Review the listed activities. The **Policy status** column shows the current status of the policy, for example, if the policy is applied between January 1 and January 10, 2026.
+1. In the incident's **Activities** tab, select the date filter, and filter by a custom time range as relevant to the actions you'd like to investigate. 
+1. Add the following filters:
+    - **Origin: This incident**
+    - **Provider: Attack disruption**. This filter also includes predictive shielding actions.
+    - **Policy status**: Select all options except for **Not applicable**.
+1. Review the listed activities. The **Policy status** column shows the current status of the policy for each activity, for example, a user was contained in the specified timeframe, but the policy is currently inactive. This means that the user is no longer contained.
 
 This view provides unique data on the activity and policy status in the selected timeframe. This data goes beyond Action center views, which provide a historical log of actions taken but do not reflect the current status of those actions.  
 
