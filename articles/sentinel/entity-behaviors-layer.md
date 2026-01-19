@@ -38,7 +38,7 @@ Behaviors are part of Microsoft Sentinel’s [User and Entity Behavior Analytics
 
 When you [enable the UEBA behaviors layer](#enable-the-ueba-behaviors-layer), Microsoft Sentinel processes supported security logs you collect into your Sentinel workspace in near real-time and summarizes two types of behavioral patterns:
 
-| **Behavior Type** | **Description** | **Examples** | **Use case** |
+| **Behavior type** | **Description** | **Examples** | **Use case** |
 |-------------------|-----------------|--------------|--------------|
 | **Aggregated behaviors** | Detect volume-based patterns by collecting related events over time windows | <ul><li>User accessed 50+ resources in 1 hour</li><li>Login attempts from 10+ different IP addresses</li></ul> | Convert high-volume logs into actionable security insights. This behavior type excels at identifying unusual activity levels. |
 | **Sequenced behaviors** | Identify multi-step patterns or complex attack chains that aren't obvious when you look at individual events | Access key created > used from new IP > privileged API calls | Detect sophisticated attack sequences and multi-stage threats. |
@@ -191,7 +191,7 @@ During public preview, the UEBA behaviors layer focuses on these non-Microsoft d
 To use the UEBA behaviors layer, you need:
 
 - A Microsoft Sentinel workspace that's onboarded to the Defender portal.
-- Ingest one or more of the [supported data sources](#supported-data-sources-and-behavior-rules) into the Analytics tier. For more information about data tiers, see [Manage data tiers and retention in Microsoft Sentinel](../sentinel/manage-data-overview.md#how-data-tiers-and-retention-work).
+- Ingest one or more of the [supported data sources](#supported-data-sources-and-behaviors) into the Analytics tier. For more information about data tiers, see [Manage data tiers and retention in Microsoft Sentinel](../sentinel/manage-data-overview.md#how-data-tiers-and-retention-work).
 
 ## Permissions required 
 
@@ -295,7 +295,7 @@ For more information about Kusto Query Language (KQL), see [Kusto query language
 ### Troubleshooting 
 
 - **If behaviors aren't being generated**: Ensure supported data sources are actively sending logs to the Analytics tier, confirm the data source toggle is on, and wait 15–30 minutes after enabling.
-- **I see fewer behaviors than expected**: Our coverage of supported behavior types is partial and growing. For more information, see [Supported data sources and behaviors](#supported-data-sources-and-behavior-rules). The UEBA behaviors layer might also not be able to detect a behavior pattern if there are very few instances of a specific behavior type.
+- **I see fewer behaviors than expected**: Our coverage of supported behavior types is partial and growing. For more information, see [Supported data sources and behaviors](#supported-data-sources-and-behaviors). The UEBA behaviors layer might also not be able to detect a behavior pattern if there are very few instances of a specific behavior type.
 - **Behavior counts**: A single behavior might represent tens or hundreds of raw events - this is designed to reduce noise.
      
 ## Limitations in public preview 
