@@ -74,7 +74,7 @@ After connecting your GKE clusters to Azure Arc:
 
     :::image type="content" source="media/defender-for-containers-enable-plan-gke/arc-enabled-kubernetes.png" alt-text="Screenshot that shows you where to find the arc-enabled Kubernetes clusters should have Defender extension installed recommendation." lightbox="media/defender-for-containers-enable-plan-gke/arc-enabled-kubernetes.png":::
 
-1. Select your GKE clusters.
+1. Select only the clusters where you want the sensor.
 
 1. Select **Fix** to deploy the sensor.
 
@@ -105,22 +105,6 @@ gcloud container clusters update <cluster-name> \
     --enable-cloud-logging \
     --logging=SYSTEM,WORKLOAD,API_SERVER
 ```
-
-## Deploy specific components (optional)
-
-If you need selective deployment or to fix issues with existing deployments:
-
-### Deploy Defender sensor to specific clusters
-
-To deploy the sensor to only selected GKE clusters:
-
-1. Connect only specific clusters to Azure Arc (not all clusters).
-
-1. Go to **Recommendations** and find "Arc-enabled Kubernetes clusters should have Defender extension installed".
-
-1. Select only the clusters where you want the sensor.
-
-1. Follow the remediation steps for the selected clusters.
 
 ### Enable vulnerability scanning only
 
