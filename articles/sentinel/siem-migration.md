@@ -50,7 +50,9 @@ You need a Splunk admin role to export all Splunk alerts. For more information, 
 
 ### [QRadar](#tab/qradar)
 
-Export your QRadar rule data as a CSV file, as explained here [Exporting rules - IBM Documentation](https://go.microsoft.com/fwlink/?linkid=2332524). Two notes regarding the export:
+Export your QRadar rule data as a CSV file, as explained here [Exporting rules - IBM Documentation](https://go.microsoft.com/fwlink/?linkid=2332524).
+
+Two notes regarding the export:
 
 1. The default export includes the alert rules, but not the building blocks that can carry important information. Clear any filter values for the *Rule or Building Block(BB)* to allow both the rules and the BBs to be exported.
 
