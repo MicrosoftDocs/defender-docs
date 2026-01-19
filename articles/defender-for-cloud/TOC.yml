@@ -212,6 +212,10 @@
               href: support-matrix-defender-for-containers.md
             - name: Defender for Containers permissions for EKS and GKE
               href: containers-permissions.md
+            - name: Overview by environment
+              href: defender-for-containers-overview-by-environment.md
+            - name: Enable via Azure portal
+              href: defender-for-containers-enable-portal-by-environment.md
             - name: Deploy Defender for Containers
               items:
                 - name: Defender for Containers deployment overview
