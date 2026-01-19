@@ -1,100 +1,74 @@
 ---
 title: Defender for Containers on Azure (AKS) - Overview
-description: Learn about Microsoft Defender for Containers capabilities for Azure Kubernetes Service (AKS) clusters.
+description: Learn about Microsoft Defender for Containers capabilities, architecture, and deployment options for Azure Kubernetes Service (AKS).
 ms.topic: overview
 ms.date: 12/09/2025
 ai-usage: ai-assisted
 ---
 
-# Defender for Containers on Azure (AKS) - overview
+# Defender for Containers on Azure (AKS) – overview
 
-Microsoft Defender for Containers provides enterprise-grade security for Azure Kubernetes Service (AKS) clusters. It offers comprehensive protection through vulnerability scanning, runtime threat detection, software supply chain capabilities, and security posture management—all natively integrated with Azure services.
+Microsoft Defender for Containers extends security monitoring and protection to Azure Kubernetes Service (AKS) clusters through Microsoft Defender for Cloud. It helps security and DevOps teams gain visibility into container image vulnerabilities, runtime activity, and Kubernetes configuration risks in Azure environments.
 
-## What is Defender for Containers?
+## Integration with Azure
 
-Defender for Containers is a cloud-native security solution that protects containerized applications throughout their lifecycle. For Azure environments, it provides seamless integration with ACR and AKS to deliver real-time protection, continuous security assessments, and actionable recommendations without requiring complex configurations or third-party tools.
+Defender for Containers integrates natively with Azure services to protect AKS clusters. When enabled on an Azure subscription, the solution:
 
-> [!TIP]
-> For a comprehensive overview of Defender for Containers capabilities across all environments, see [Overview of Microsoft Defender for Containers](defender-for-containers-introduction.md).
+- Discovers AKS clusters in the subscription
+- Deploys Defender for Containers components by using Azure-managed integrations
+- Assesses container images stored in Azure Container Registry (ACR) for vulnerabilities
+- Collects runtime security signals from AKS clusters
+- Generates security recommendations based on observed configuration and posture
+- Surfaces alerts that integrate with Microsoft security tooling
 
-The solution helps security and platform teams prevent vulnerabilities from reaching production, detect and respond to runtime threats, and maintain compliance with security standards—all through a unified experience in Microsoft Defender for Cloud.
-
-## How it works with Azure
-
-Defender for Containers leverages native Azure integrations to provide security without complexity. When you enable it on your subscription, the solution:
-
-- Automatically discovers all AKS clusters and container registries in your Azure subscriptions
-- Deploys a lightweight security sensor, natively integrated in AKS Resource Provider (RP), used for runtime threat protection and AKS deployment gating
-- Scans container images in Azure Container Registry (ACR) for vulnerabilities, automatically upon push to the registry and continually
-- Monitors runtime behavior by using Azure-native telemetry, in addition to data collected by the sensor
-- Provides security recommendations aligned with Azure security and industry best practices
-- Generates alerts that integrate with Microsoft XDR and Microsoft Sentinel
-
-This deep integration means you get comprehensive security without managing extra infrastructure, complex network configurations, or separate security tools.
+The integration is designed to operate using Azure-native capabilities and does not require inbound connectivity to AKS clusters.
 
 ## Key capabilities
 
-Defender for Containers provides security across four critical areas:
+Defender for Containers provides the following capabilities for AKS environments:
 
-| Capability | Description | Key Features |
-|------------|-------------|--------------|
-| **Vulnerability assessment** | Scans container images throughout their lifecycle - in registries, runtime environments, and CI/CD pipelines | • Registry scanning (ACR push and periodic)<br>• Runtime agentless scanning<br>• CLI tool for pipeline integration<br>• Support for Linux and Windows images<br>• CVSS scoring and detailed remediation |
-| **Runtime threat protection** | Monitors AKS clusters in real-time for malicious activities and anomalies<br>Investigation and response capabilities | • Kubernetes audit log analysis<br>• Container behavior monitoring and process analysis<br>• Network anomaly detection<br>• Drift protection<br>• Custom alerts<br>• Integration with Microsoft Sentinel and Microsoft XDR, including investigation and response features |
-| **Security posture management** | Evaluates cluster configurations against security benchmarks | • CIS Kubernetes Benchmark<br>• Azure Security Benchmark and industry best practices<br>• Custom compliance policies<br>• Automated remediation options |
-| **Gated deployment** | Prevents vulnerable or misconfigured workloads from reaching production | • Block deployments based on vulnerability severity<br>• Enforce security baselines for configurations<br>• Integration with Azure Policy and admission controllers<br>• DevOps pipeline gates |
+- **Container image vulnerability assessment** for images stored in Azure Container Registry (ACR)
+- **Threat detection and alerting** based on runtime signals collected from AKS nodes, workloads, and Kubernetes audit logs
+- **Security posture insights** for Kubernetes clusters and workloads, aligned with Kubernetes and Azure security best practices
 
-## Architecture overview
+> [!NOTE]
+> Available signals and detections depend on cluster configuration and enabled components.
+
+## Architecture for AKS
+
+The Defender for Containers architecture for AKS consists of Azure-managed and Kubernetes-native components:
+
+- **Defender Sensor**: Runs as a DaemonSet on AKS nodes and collects runtime telemetry and security signals.
+- **Azure Policy for Kubernetes**: Evaluates cluster and workload configurations to generate security posture recommendations.
+- **Azure Container Registry integration**: Enables vulnerability assessment for container images stored in ACR.
+- **Agentless discovery**: Uses Azure-native capabilities to discover and assess AKS cluster configurations.
+
+These components work together to provide visibility into security signals and posture without requiring inbound access to AKS clusters.
 
 For detailed architecture information, see [Container security architecture](defender-for-containers-architecture.md#architecture-for-each-kubernetes-environment).
 
-Defender for Containers on AKS uses lightweight, Azure-managed components:
-
-- **Defender sensor (DaemonSet):** Runs on AKS nodes, collects runtime telemetry (Kubernetes events, process, network) and sends it securely to Defender for Cloud.
-- **Azure Policy:** A web hook to Kubernetes admission control. Runs as a pod in the cluster. Provides the option to enforce configuration rules.
-- **ACR integration:** Push-triggered and periodic image scanning for Azure Container Registry.
-- **Agentless discovery:** Provides visibility into your Kubernetes clusters without requiring any agents, using Azure native capabilities to discover and assess cluster configurations.
-- **Agentless scanning for machines:** Periodic disk snapshots of Kubernetes nodes for an out-of-band, deep analysis of the operating system configuration and file system stored in the snapshot. Doesn't need any installed agents or network connectivity, and doesn't affect machine performance.
-- **Microsoft XDR integration:** Seamlessly integrates with Microsoft's extended detection and response platform for unified security operations and incident response.
-
-These components work together seamlessly, requiring no inbound connections to your clusters and leveraging Azure's native security infrastructure. Defender for Cloud supports Continuous Export to Microsoft Sentinel, Event Hubs, or Log Analytics for extended monitoring and analysis.
-
 ## Deployment options
 
-Defender for Containers supports flexible deployment approaches to match your operational preferences:
+You can enable Defender for Containers for AKS by using one of the following methods:
 
-- **[Azure portal deployment](defender-for-containers-azure-enable-portal.md)** - Guided, visual experience ideal for initial setup and management
-- **[Azure programmatic deployment](defender-for-containers-azure-enable-programmatically.md)** - Script-based deployment for automation scenarios
-
-Choose the approach that best aligns with your organization's DevOps practices and governance requirements.
-
-## Prerequisites
-
-Before deploying Defender for Containers on AKS, ensure you meet these requirements:
-
-- AKS clusters running Kubernetes 1.19 or later
-- Network connectivity for outbound HTTPS to Azure endpoints
-- By default, AKS clusters have unrestricted outbound (egress) internet access. Clusters with restricted egress must allow specific endpoints. See: [Microsoft Defender for Containers - Required FQDN/application rules](/azure/aks/outbound-rules-control-egress#microsoft-defender-for-containers)
-
-> [!NOTE]
-> For detailed prerequisites and setup instructions, see:
->
-> - [Enable all components via portal](defender-for-containers-azure-enable-portal.md#prerequisites)
-> - [Deploy programmatically](defender-for-containers-azure-enable-programmatically.md#prerequisites)
-
-## Pricing
-
-For current pricing and cost estimation, see [Microsoft Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+- **[Azure portal](defender-for-containers-azure-enable-portal.md)**: Guided setup for enabling Defender for Containers and configuring components.
+- **[Programmatic deployment](defender-for-containers-azure-enable-programmatically.md)**: Automation scenarios using Azure CLI, REST API, or Azure Policy.
 
 ## View your current coverage
 
-Defender for Cloud provides access to [workbooks](custom-dashboards-azure-workbooks.md) through [Azure workbooks](/azure/azure-monitor/visualize/workbooks-overview). Workbooks are customizable reports that provide insights into your security posture.
+Defender for Cloud provides access to [workbooks](custom-dashboards-azure-workbooks.md) through [Azure workbooks](/azure/azure-monitor/visualize/workbooks-overview). Workbooks are customizable reports that help you understand your security posture.
 
-The [coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) helps you understand your current coverage by showing which plans are enabled on your subscriptions and resources.
+The [coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) shows which Defender for Cloud plans and components are enabled across your subscriptions and connected environments.
 
-## Next steps
+## Pricing
 
-Ready to secure your AKS clusters? Choose your deployment path:
+Defender for Containers is billed as part of Microsoft Defender for Cloud. Pricing depends on the enabled components and the number of protected resources.
 
-- [Enable all components via portal](defender-for-containers-azure-enable-portal.md) - Recommended for comprehensive protection
-- [Deploy programmatically](defender-for-containers-azure-enable-programmatically.md) - For automation and DevOps scenarios
-- [Verify deployment](defender-for-containers-azure-verify.md) - Ensure all components are functioning correctly
+For pricing details, see [Microsoft Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+
+## Related content
+
+- [Defender for Containers on Amazon EKS](defender-for-containers-aws-overview.md)
+- [Defender for Containers on Google Kubernetes Engine (GKE)](defender-for-containers-gcp-overview.md)
+- [Enable Defender for Containers on AKS](defender-for-containers-azure-enable-portal.md)
+- [Verify Defender for Containers deployment on AKS](defender-for-containers-azure-verify)
