@@ -263,15 +263,19 @@ For more information about Kusto Query Language (KQL), see [Kusto query language
     :::image type="content" source="media/entity-behaviors-layer/query-behaviors-filter-microsoft-sentinel.png" alt-text="Screenshot of BehaviorInfo table filtered by ServiceSource column to the Microsoft Sentinel value." lightbox="media/entity-behaviors-layer/query-behaviors-filter-microsoft-sentinel.png":::
 
 
-- **Drill down from behaviors to raw logs**: Use the `AdditionalFields` column in `BehaviorInfo`, which contains references to the original event IDs in the `SupportingEvidence` field.
+- **Drill down from behaviors to raw logs** 
 
-    :::image type="content" source="media/entity-behaviors-layer/query-behaviors-drill-down-raw-logs.png" alt-text="Screenshot of BehaviorInfo table showing AdditionalFields column with references to event IDs and SupportingEvidence field for raw log queries." lightbox="media/entity-behaviors-layer/query-behaviors-drill-down-raw-logs.png":::
+  Use the `AdditionalFields` column in `BehaviorInfo`, which contains references to the original event IDs in the `SupportingEvidence` field.
+
+  :::image type="content" source="media/entity-behaviors-layer/query-behaviors-drill-down-raw-logs.png" alt-text="Screenshot of BehaviorInfo table showing AdditionalFields column with references to event IDs and SupportingEvidence field for raw log queries." lightbox="media/entity-behaviors-layer/query-behaviors-drill-down-raw-logs.png":::
 
   Run a query on the `SupportingEvidence` field value to find the raw logs that contributed to a behavior. 
 
   :::image type="content" source="media/entity-behaviors-layer/query-behaviors-supporting-evidence.png" alt-text="Screenshot showing a query on the SupportingEvidence field value and the query results that show the raw logs that contributed to a behavior." lightbox="media/entity-behaviors-layer/query-behaviors-supporting-evidence.png":::
 
-- **Join BehaviorInfo and BehaviorEntities**: Use the `BehaviorId` field to join `BehaviorInfo` with `BehaviorEntities`. 
+- **Join BehaviorInfo and BehaviorEntities**
+
+  Use the `BehaviorId` field to join `BehaviorInfo` with `BehaviorEntities`. 
 
   For example:
 
@@ -284,7 +288,7 @@ For more information about Kusto Query Language (KQL), see [Kusto query language
 
   This gives you each behavior and each entity involved in it. The `AccountUpn` or identifying information for the entity is in `BehaviorEntities`, whereas `BehaviorInfo` might refer to “User” or “Host” in the text.
 
-- **Monitor behavior data ingestion**: 
+- **Monitor behavior data ingestion** 
 
   To monitor behavior data ingestion, query the `Usage` table for entries related to `SentinelBehaviorInfo` and `SentinelBehaviorEntities`.
 
