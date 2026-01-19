@@ -48,6 +48,17 @@ The Action center ([https://security.microsoft.com/action-center](https://securi
 You can release the contained assets, for example, enable a blocked user account or release a device from containment, from the action details pane. You can release the contained assets after you mitigate the risk and complete the investigation of an incident. For more information about the action center, see [Action center](m365d-action-center.md).
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
 
+## Track the current status of actions in the Incident page
+
+The Incident page provides a stateful list of actions and policies taken within incidents, which allows you to see the current status of all relevant actions and policies in your environment. This addresses the challenge of tracking ongoing and expired actions, especially in large environments with many incidents.
+
+To view all automatic attack disruption actions taken as part of an incident:
+
+1. In the incident's **Activities** tab, filter by **Origin: This incident** and **Provider: Attack disruption**.
+1. Review the listed activities. The **Policy status** column shows the current status of the policy, for example, if the policy is applied between January 1 and January 10, 2026.
+
+This view provides unique data on the activity and policy status in the selected timeframe. This data goes beyond Action center views, which provide a historical log of actions taken but do not reflect the current status of those actions.  
+
 ## Track the actions in advanced hunting
 
 You can use specific queries in [advanced hunting](advanced-hunting-overview.md) to track contain device or user, and disable user account actions.
