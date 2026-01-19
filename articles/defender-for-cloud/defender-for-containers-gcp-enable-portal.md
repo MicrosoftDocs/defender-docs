@@ -72,13 +72,15 @@ After connecting your GKE clusters to Azure Arc:
 
 1. Search for "Arc-enabled Kubernetes clusters should have Defender extension installed".
 
-    :::image type="content" source="media/defender-for-containers-enable-plan-gke/arc-enabled-kubernetes.png" alt-text="Screenshot that shows you where to find the arc-enabled Kubernetes clusters should have Defender extension installed recommendation.":::
+    :::image type="content" source="media/defender-for-containers-enable-plan-gke/arc-enabled-kubernetes.png" alt-text="Screenshot that shows you where to find the arc-enabled Kubernetes clusters should have Defender extension installed recommendation." lightbox="media/defender-for-containers-enable-plan-gke/arc-enabled-kubernetes.png":::
 
 1. Select your GKE clusters.
 
 1. Select **Fix** to deploy the sensor.
 
-    :::image type="content" source="media/defender-for-containers-enable-plan-gke/fix-button.png" alt-text="Screenshot that shows the location of the Fix button.":::
+
+    :::image type="content" source="media/defender-for-containers-enable-plan-gke/arc-enabled-kubernetes-fix.png" alt-text="Screenshot that shows where to find the fix button in the Azure portal." lightbox="media/defender-for-containers-enable-plan-gke/arc-enabled-kubernetes-fix.png":::
+
 
 > [!NOTE]
 > You can also deploy the Defender sensor by using Helm for more control. For more information, see [Deploy Defender sensor using Helm](deploy-helm.md).
