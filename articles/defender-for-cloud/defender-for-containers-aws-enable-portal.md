@@ -114,48 +114,6 @@ After connecting your EKS clusters to Azure Arc, deploy the Defender sensor:
 > [!NOTE]
 > You can also deploy the Defender sensor by using Helm for more control over the deployment configuration. For Helm deployment instructions, see [Deploy Defender sensor using Helm](deploy-helm.md).
 
-### Configure ECR vulnerability scanning
-
-**Required if you enabled**: Registry access
-
-1. Go to your AWS connector settings.
-
-1. Select **Configure** next to the Containers plan.
-
-1. Verify **Registry access** is enabled.
-
-1. Images pushed to ECR are automatically scanned within 24 hours.
-
-### Enable audit logging
-
-**Required if you enabled**: Agentless threat protection
-
-Enable audit logging for each EKS cluster:
-
-```bash
-# Enable audit logs
-aws eks update-cluster-config \
-    --name <cluster-name> \
-    --logging '{"clusterLogging":[{"types":["audit","authenticator"],"enabled":true}]}'
-```
-
-## Verify deployment
-
-After deployment, verify that Defender for Containers is operating correctly.
-
-- Confirm the AWS connector shows as **Connected**.
-- Verify EKS clusters appear as **Connected** in Azure Arc.
-- Check that Defender sensor pods are running.
-
-Learn more about [verifying Defender for Containers deployment on AWS (EKS)](defender-for-containers-aws-verify.md).
-
-## Troubleshooting (move to verify)
-
-If you encounter issues during deployment or verification—such as missing clusters, disconnected components, or alerts not appearing—use the troubleshooting guide to identify common causes and resolution steps.
-
-Learn more about how to troubleshoot Defender for Containers on AWS (EKS) in
-[Troubleshoot Defender for Containers on AWS (EKS)](defender-for-containers-aws-troubleshoot.md).
-
 ## Next steps
 
 - [Configure advanced settings for EKS](defender-for-containers-aws-configure.md)

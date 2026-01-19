@@ -8,7 +8,7 @@ ai-usage: ai-assisted
 
 # Configure Defender for Containers on AWS
 
-After deploying Defender for Containers on your EKS clusters, configure various settings to customize the security coverage to meet your needs. This article also explains how to add or remove components after initial deployment.
+After you enable Defender for Containers for Amazon EKS, use this article to change which components are deployed, add missing components, or deploy components to specific clusters.
 
 ## Configuration areas
 
