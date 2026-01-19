@@ -54,7 +54,7 @@ The **Activities** tab in the **Incident** page allows you to view details relat
 
 The **Policy status** column (Preview) in the activities list provides a stateful list of actions and policies taken within incidents, which allows you to see the current status of all relevant actions and policies in your environment. This addresses the challenge of tracking ongoing and expired actions, especially in large environments with many incidents.
 
-To view all automatic attack disruption actions taken as part of an incident:
+To view all automatic attack disruption and predictive shielding actions taken as part of an incident:
 
 1. In the incident's **Activities** tab, select the date filter, and filter by a custom time range as relevant to the actions you'd like to investigate. 
 1. Add the following filters:
