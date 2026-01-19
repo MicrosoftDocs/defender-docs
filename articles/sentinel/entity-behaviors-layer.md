@@ -235,10 +235,10 @@ Using the UEBA behaviors layer results in the following costs:
 
 This section explains how to query behaviors from both the Defender portal and your Sentinel workspace. While the schemas are identical, the data scope differs:
 
-- In the Defender portal, the behavior tables include UEBA behaviors plus behaviors from connected Defender services, such as Microsoft Defender for Cloud Apps and Microsoft Defender for Cloud.
-- In the Sentinel workspace, the behavior tables include only UEBA behaviors generated from logs ingested into that specific workspace.
+- In the Defender portal, the behavior tables include UEBA behaviors ***and*** behaviors from connected Defender services, such as Microsoft Defender for Cloud Apps and Microsoft Defender for Cloud.
+- In the Sentinel workspace, the behavior tables include ***only*** UEBA behaviors generated from logs ingested into that specific workspace.
 
-This table summarizes the use cases and behavior tables to use for each environment:
+This table shows which behavior tables to use in each environment:
 
 | **Environment** | **Tables to use** | **Use cases** |
 |-------------|-------------------|---------------|
@@ -286,7 +286,7 @@ For more information about Kusto Query Language (KQL), see [Kusto query language
 
 - **Monitor behavior data ingestion**: 
 
-  To monitor data usage, query data ingestion into the `SentinelBehaviorInfo` and `SentinelBehaviorEntities` in the `Usage` table.
+  To monitor behavior data ingestion, query the `Usage` table for entries related to `SentinelBehaviorInfo` and `SentinelBehaviorEntities`.
 
 - **Create automation, workbooks, and detection rules based on behaviors**: 
   - Use the `BehaviorInfo` table as a data source for detection rules or automation playbooks in the Defender portal. For example, create a scheduled query rule that triggers when a specific behavior appears.
