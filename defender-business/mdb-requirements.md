@@ -4,7 +4,7 @@ description: Microsoft Defender for Business license, hardware, and software req
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: Admin
 ms.topic: overview
 ms.service: defender-business
@@ -53,7 +53,7 @@ The following table lists the basic requirements you need to configure and use D
 >    - If you don't have a Microsoft 365 subscription before you start your trial, Microsoft Entra ID will be provisioned for you during the activation process.
 >    - If you do have another Microsoft 365 subscription when you start your Defender for Business trial, you can use your existing Microsoft Entra service.
 >
-> 3. Security defaults are included in Defender for Business. If you prefer to use Conditional Access policies instead, you'll need Microsoft Entra ID P1 or P2 Plan 1 (included in [Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-overview)). To learn more, see [Multi-factor authentication](/Microsoft-365/business-premium/m365bp-turn-on-mfa).
+> 3. Security defaults are included in Defender for Business. If you prefer to use Conditional Access policies instead, you'll need Microsoft Entra ID P1 or P2 Plan 1 (included in [Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-overview)). To learn more, see [Multifactor authentication in Microsoft 365](/microsoft-365/admin/security-and-compliance/multi-factor-authentication-microsoft-365).
 
 ## Next steps
 

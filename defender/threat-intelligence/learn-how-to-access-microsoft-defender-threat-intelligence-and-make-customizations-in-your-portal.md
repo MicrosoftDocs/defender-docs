@@ -6,7 +6,7 @@ ms.author: aroland
 manager: dolmont
 ms.service: threat-intelligence 
 ms.topic: quickstart
-ms.date: 05/16/2025
+ms.date: 09/12/2025
 ms.custom: 
 - template-overview
 - cx-ti
@@ -15,6 +15,9 @@ ms.collection: essentials-get-started
 ---
 
 # Quickstart: Learn how to access Microsoft Defender Threat Intelligence and make customizations
+
+> [!IMPORTANT]
+> Microsoft Defender Threat Intelligence (Defender TI) will be discontinued and merged into Microsoft Defender for a powerful unified experience. Existing customers will continue to have full access to their current Defender TI experience until the product is retired on August 1, 2026. [Learn more](https://techcommunity.microsoft.com/blog/defenderthreatintelligence/mdti-is-converging-into-microsoft-sentinel-and-defender-xdr/4427991)
 
 This guide walks you through how to access Microsoft Threat Intelligence (Defender TI) from the Microsoft Defender portal, adjust the portal's theme to make it easier on your eyes when using it, and find sources for enrichment so you can see more results when gathering threat intelligence. 
 

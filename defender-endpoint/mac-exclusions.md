@@ -1,11 +1,11 @@
----
+﻿---
 title: Configure and validate exclusions for Microsoft Defender for Endpoint on macOS 
 description: Provide and validate exclusions for Microsoft Defender for Endpoint on macOS. Exclusions can be set for files, folders, and processes.
 ms.service: defender-endpoint
-author: emmwalshh
-ms.author: ewalsh
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: joshbregman
-manager: deniseb
+manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection:
@@ -16,18 +16,13 @@ ms.topic: how-to
 ms.subservice: macos
 search.appverid: met150
 ms.date: 04/16/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Configure and validate exclusions for Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 This article provides information on how to define exclusions that apply to on-demand scans, and real-time protection and monitoring. The exclusions described in this article don't apply to other Defender for Endpoint on macOS capabilities, including endpoint detection and response (EDR). Files that you exclude using the methods described in this article can still trigger EDR alerts and other detections.
 
@@ -97,24 +92,24 @@ File, folder, and process exclusions support the following wildcards:
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 
-2. Go to **Configuration management** > **Endpoint Security Policies** > **Create new Policy**.
+1. Go to **Configuration management** > **Endpoint Security Policies** > **Create new Policy**.
 
    - Select Platform: macOS
    - Select Template: Microsoft Defender Antivirus exclusions
 
-3. Select **Create Policy**.
+1. Select **Create Policy**.
 
-4. Enter a name and description and select **Next**.
+1. Enter a name and description and select **Next**.
 
-5. Expand **Antivirus engine**, and then select **Add**.
+1. Expand **Antivirus engine**, and then select **Add**.
 
-6. Select **Path** or **File extension** or **File name**.
+1. Select **Path** or **File extension** or **File name**.
 
-7. Select **Configure instance** and add the exclusions as needed. Then select **Next**.
+1. Select **Configure instance** and add the exclusions as needed. Then select **Next**.
 
-8. Assign the exclusion to a group and Select **Next**.
+1. Assign the exclusion to a group and Select **Next**.
 
-9. Select **Save**.
+1. Select **Save**.
 
 ### From the management console
 
@@ -126,7 +121,7 @@ For more information on how to configure exclusions from JAMF, Intune, or anothe
 
    :::image type="content" source="media/mdatp-37-exclusions.png" alt-text="The Manage exclusions page" lightbox="media/mdatp-37-exclusions.png":::
 
-2. Select the type of exclusion that you wish to add and follow the prompts.
+1. Select the type of exclusion that you wish to add and follow the prompts.
 
 ## Validate exclusions lists with the EICAR test file
 
@@ -170,4 +165,5 @@ For example, to add `EICAR-Test-File (not a virus)` (the threat name associated 
 mdatp threat allowed add --name "EICAR-Test-File (not a virus)"
 ```
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

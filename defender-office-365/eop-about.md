@@ -4,7 +4,7 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 ms.date: 07/21/2025
 audience: ITPro
 ms.topic: overview

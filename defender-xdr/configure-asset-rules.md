@@ -2,8 +2,8 @@
 title: Create dynamic rules for devices in asset rule management
 description: Use asset rule management in Microsoft Defender for Endpoint to configure dynamic tagging for devices.
 ms.service: defender-xdr
-ms.author: deniseb
-author: denisebmsft
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -38,9 +38,6 @@ You can create dynamic rules in the **Asset rule management** in the Microsoft D
 
 A rule can be based on device name, domain, OS platform, internet facing status, onboarding status and manual device tags. You can select or create a tag that will be applied based on the conditions you've set.
 
-> [!IMPORTANT]
-> Use of [dynamic device tagging](/defender-xdr/configure-asset-rules) capabilities in Defender for Endpoint to tag devices with `MDE-Management` isn't currently supported with security settings management. Devices tagged through this capability don't successfully enroll. This is currently under investigation.
-
 The following steps guide you on how to create a new dynamic rule in Microsoft Defender XDR:
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) as a user who can view and perform actions on all devices.
@@ -53,11 +50,11 @@ The following steps guide you on how to create a new dynamic rule in Microsoft D
 
 5. Select **Next** to choose the conditions you want to assign:
 
-   :::image type="content" source="/defender/media/defender/rule-conditions.png" alt-text="Screenshot of the Rule conditions page" lightbox="/defender/media/defender/rule-conditions.png":::
+   :::image type="content" source="media/configure-asset-rules/rule-conditions.png" alt-text="Screenshot of the Rule conditions page" lightbox="media/configure-asset-rules/rule-conditions.png":::
 
 6. Select **Next** and choose the tag to apply to this rule.
 
-   :::image type="content" source="/defender/media/defender/actions-to-apply.png" alt-text="Screenshot of the actions page" lightbox="/defender/media/defender/actions-to-apply.png":::
+   :::image type="content" source="media/configure-asset-rules/actions-to-apply.png" alt-text="Screenshot of the actions page" lightbox="media/configure-asset-rules/actions-to-apply.png":::
 
 7. Select **Next** to review and finish creating the rule and then select **Submit**.
 
@@ -79,10 +76,10 @@ To see tags on individual devices:
 
 3. Select **Manage tags**.
 
-   :::image type="content" source="/defender/media/defender/manage-machine-tags.png" alt-text="Screenshot of the machine tags page" lightbox="/defender/media/defender/manage-machine-tags.png":::
+   :::image type="content" source="media/configure-asset-rules/manage-machine-tags.png" alt-text="Screenshot of the machine tags page" lightbox="media/configure-asset-rules/manage-machine-tags.png":::
 
 ### Updating rules
 
 Dynamic tags and device values set by dynamic rules can't be manually updated. To edit, delete or turn off a rule, in the **Asset Rule Management** page select the rule and choose an action.
 
-:::image type="content" source="/defender/media/defender/update-rule.png" alt-text="Screenshot of the rule details page" lightbox="/defender/media/defender/update-rule.png":::
+:::image type="content" source="media/configure-asset-rules/update-rule.png" alt-text="Screenshot of the rule details page" lightbox="media/configure-asset-rules/update-rule.png":::

@@ -4,7 +4,7 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -19,7 +19,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn how to use Attack simulation training to run simulated phishing and password attacks in their Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2 organizations.
 ms.service: defender-office-365
-ms.date: 02/04/2025
+ms.date: 01/06/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -54,22 +54,22 @@ Watch this short video to learn more about Attack simulation training.
     - **Global Administrator**¹
     - **Security Administrator**
     - **Attack Simulation Administrator**²: Create and manage all aspects of attack simulation campaigns.
-    - **Attack Payload Author**²: Create attack payloads that an admin can initiate later.
-    - **Security Operator and Security Reader**³: View all aspects of attack simulation campaigns.
+    - **Attack Payload Author**³: Create attack payloads that an admin can initiate later.
+    - **Security Operator and Security Reader**⁴: View all aspects of attack simulation campaigns.
 
     > [!IMPORTANT]
-    > ¹ Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > ¹ Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
     >
     > ² Adding users to this role group in [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md) is currently unsupported.
     >
-    > Members of Attack Payload Author have the following limitations in attack simulation training:
+    > ³ Members of Attack Payload Author have the following limitations in attack simulation training:
     >
     > - They can't create or edit simulations, training campaigns, simulation automations, or payload automations.
     > - They can't change global settings.
     > - They can't change content (for example, notifications), but they can change payloads.
     > - They can't view tenant simulation reports, aggregate reports, simulation automation records, or payload automation records.
     >
-    > ³ Members of Security Operator and Security Reader have the following limitations in attack simulation training:
+    > ⁴ Members of Security Operator and Security Reader have the following limitations in attack simulation training:
     >
     > - They can't create or edit simulations, training campaigns, simulation automations, or payload automations.
     > - They can't change global settings.
@@ -80,12 +80,12 @@ Watch this short video to learn more about Attack simulation training.
 
 - There are no corresponding PowerShell cmdlets for Attack simulation training.
 
-- Attack simulation and training related data is stored with other customer data for Microsoft 365 services. For more information, see [Microsoft 365 data locations](/microsoft-365/enterprise/o365-data-locations). Attack simulation training is available in the following regions: APC, EUR, and NAM. Countries within these regions where Attack simulation training is available include ARE, AUS, BRA, CAN, CHE, DEU, ESP, FRA, GBR, IND, ISR, ITA, JPN, KOR, LAM, MEX, NOR, NZL, POL, QAT, SGP, SWE, TWN and ZAF.
+- Attack simulation and training related data is stored with other customer data for Microsoft 365 services. For more information, see [Microsoft 365 data locations](/microsoft-365/enterprise/o365-data-locations). Attack simulation training is available in the following regions: APC, EUR, and NAM. Countries within these regions where Attack simulation training is available include ARE, AUS, AUT, BRA, CAN, CHE, CHL, DEU, ESP, FRA, GBR, IDN, IND, ISR, ITA, JPN, KOR, LAM, MEX, MYS, NOR, NZL, POL, QAT, SGP, SWE, TWN and ZAF.
 
   > [!NOTE]
   > NOR, ZAF, ARE and DEU are the latest additions. All features except reported email telemetry are available in these regions. We're working to enable the features and we'll notify customers as soon as reported email telemetry becomes available.
 
-- Attack simulation training is available in Microsoft 365 GCC, GCC High and DoD environments, but certain advanced features aren't available in GCC High and DoD (for example, payload automation, recommended payloads, the predicted compromised rate). If your organization has Microsoft 365 G5, Office 365 G5 or Microsoft Defender for Office 365 (Plan 2) for Government, you can use Attack simulation training as described in this article. 
+- Attack simulation training is available in Microsoft 365 GCC, GCC High and DoD environments, but certain advanced features aren't available in GCC High and DoD (for example, payload automation, recommended payloads, the predicted compromised rate). If your organization has Microsoft 365 G5, Office 365 G5 or Microsoft Defender for Office 365 (Plan 2) for Government, you can use Attack simulation training as described in this article.
 
 > [!NOTE]
 > Attack simulation training offers a subset of capabilities to E3 customers as a trial. The trial offering contains the ability to use a Credential Harvest payload and the ability to select 'ISA Phishing' or 'Mass Market Phishing' training experiences. No other capabilities are part of the E3 trial offering.
@@ -123,50 +123,50 @@ The URLs that are used by Attack simulation training are listed in the following
 
 |&nbsp;|&nbsp;|&nbsp;|
 |---|---|---|
-|<https://www.attemplate.com>|<https://www.exportants.it>|<https://www.resetts.it>|
-|<https://www.bankmenia.com>|<https://www.exportants.org>|<https://www.resetts.org>|
-|<https://www.bankmenia.de>|<https://www.financerta.com>|<https://www.salarytoolint.com>|
-|<https://www.bankmenia.es>|<https://www.financerta.de>|<https://www.salarytoolint.net>|
-|<https://www.bankmenia.fr>|<https://www.financerta.es>|<https://www.securembly.com>|
-|<https://www.bankmenia.it>|<https://www.financerta.fr>|<https://www.securembly.de>|
-|<https://www.bankmenia.org>|<https://www.financerta.it>|<https://www.securembly.es>|
-|<https://www.banknown.de>|<https://www.financerta.org>|<https://www.securembly.fr>|
-|<https://www.banknown.es>|<https://www.financerts.com>|<https://www.securembly.it>|
-|<https://www.banknown.fr>|<https://www.financerts.de>|<https://www.securembly.org>|
-|<https://www.banknown.it>|<https://www.financerts.es>|<https://www.securetta.de>|
-|<https://www.banknown.org>|<https://www.financerts.fr>|<https://www.securetta.es>|
-|<https://www.browsersch.com>|<https://www.financerts.it>|<https://www.securetta.fr>|
-|<https://www.browsersch.de>|<https://www.financerts.org>|<https://www.securetta.it>|
-|<https://www.browsersch.es>|<https://www.hardwarecheck.net>|<https://www.shareholds.com>|
-|<https://www.browsersch.fr>|<https://www.hrsupportint.com>|<https://www.sharepointen.com>|
-|<https://www.browsersch.it>|<https://www.mcsharepoint.com>|<https://www.sharepointin.com>|
-|<https://www.browsersch.org>|<https://www.mesharepoint.com>|<https://www.sharepointle.com>|
-|<https://www.docdeliveryapp.com>|<https://www.officence.com>|<https://www.sharesbyte.com>|
-|<https://www.docdeliveryapp.net>|<https://www.officenced.com>|<https://www.sharession.com>|
-|<https://www.docstoreinternal.com>|<https://www.officences.com>|<https://www.sharestion.com>|
-|<https://www.docstoreinternal.net>|<https://www.officentry.com>|<https://www.supportin.de>|
-|<https://www.doctorican.de>|<https://www.officested.com>|<https://www.supportin.es>|
-|<https://www.doctorican.es>|<https://www.passwordle.de>|<https://www.supportin.fr>|
-|<https://www.doctorican.fr>|<https://www.passwordle.fr>|<https://www.supportin.it>|
-|<https://www.doctorican.it>|<https://www.passwordle.it>|<https://www.supportres.de>|
-|<https://www.doctorican.org>|<https://www.passwordle.org>|<https://www.supportres.es>|
-|<https://www.doctrical.com>|<https://www.payrolltooling.com>|<https://www.supportres.fr>|
-|<https://www.doctrical.de>|<https://www.payrolltooling.net>|<https://www.supportres.it>|
-|<https://www.doctrical.es>|<https://www.prizeably.com>|<https://www.supportres.org>|
-|<https://www.doctrical.fr>|<https://www.prizeably.de>|<https://www.techidal.com>|
-|<https://www.doctrical.it>|<https://www.prizeably.es>|<https://www.techidal.de>|
-|<https://www.doctrical.org>|<https://www.prizeably.fr>|<https://www.techidal.fr>|
-|<https://www.doctricant.com>|<https://www.prizeably.it>|<https://www.techidal.it>|
-|<https://www.doctrings.com>|<https://www.prizeably.org>|<https://www.techniel.de>|
-|<https://www.doctrings.de>|<https://www.prizegiveaway.net>|<https://www.techniel.es>|
-|<https://www.doctrings.es>|<https://www.prizegives.com>|<https://www.techniel.fr>|
-|<https://www.doctrings.fr>|<https://www.prizemons.com>|<https://www.techniel.it>|
-|<https://www.doctrings.it>|<https://www.prizesforall.com>|<https://www.templateau.com>|
-|<https://www.doctrings.org>|<https://www.prizewel.com>|<https://www.templatent.com>|
-|<https://www.exportants.com>|<https://www.prizewings.com>|<https://www.templatern.com>|
-|<https://www.exportants.de>|<https://www.resetts.de>|<https://www.windocyte.com>|
-|<https://www.exportants.es>|<https://www.resetts.es>||
-|<https://www.exportants.fr>|<https://www.resetts.fr>||
+|`https://www.attemplate.com`|`https://www.exportants.it`|`https://www.resetts.it`|
+|`https://www.bankmenia.com`|`https://www.exportants.org`|`https://www.resetts.org`|
+|`https://www.bankmenia.de`|`https://www.financerta.com`|`https://www.salarytoolint.com`|
+|`https://www.bankmenia.es`|`https://www.financerta.de`|`https://www.salarytoolint.net`|
+|`https://www.bankmenia.fr`|`https://www.financerta.es`|`https://www.securembly.com`|
+|`https://www.bankmenia.it`|`https://www.financerta.fr`|`https://www.securembly.de`|
+|`https://www.bankmenia.org`|`https://www.financerta.it`|`https://www.securembly.es`|
+|`https://www.banknown.de`|`https://www.financerta.org`|`https://www.securembly.fr`|
+|`https://www.banknown.es`|`https://www.financerts.com`|`https://www.securembly.it`|
+|`https://www.banknown.fr`|`https://www.financerts.de`|`https://www.securembly.org`|
+|`https://www.banknown.it`|`https://www.financerts.es`|`https://www.securetta.de`|
+|`https://www.banknown.org`|`https://www.financerts.fr`|`https://www.securetta.es`|
+|`https://www.browsersch.com`|`https://www.financerts.it`|`https://www.securetta.fr`|
+|`https://www.browsersch.de`|`https://www.financerts.org`|`https://www.securetta.it`|
+|`https://www.browsersch.es`|`https://www.hardwarecheck.net`|`https://www.shareholds.com`|
+|`https://www.browsersch.fr`|`https://www.hrsupportint.com`|`https://www.sharepointen.com`|
+|`https://www.browsersch.it`|`https://www.mcsharepoint.com`|`https://www.sharepointin.com`|
+|`https://www.browsersch.org`|`https://www.mesharepoint.com`|`https://www.sharepointle.com`|
+|`https://www.docdeliveryapp.com`|`https://www.officence.com`|`https://www.sharesbyte.com`|
+|`https://www.docdeliveryapp.net`|`https://www.officenced.com`|`https://www.sharession.com`|
+|`https://www.docstoreinternal.com`|`https://www.officences.com`|`https://www.sharestion.com`|
+|`https://www.docstoreinternal.net`|`https://www.officentry.com`|`https://www.supportin.de`|
+|`https://www.doctorican.de`|`https://www.officested.com`|`https://www.supportin.es`|
+|`https://www.doctorican.es`|`https://www.passwordle.de`|`https://www.supportin.fr`|
+|`https://www.doctorican.fr`|`https://www.passwordle.fr`|`https://www.supportin.it`|
+|`https://www.doctorican.it`|`https://www.passwordle.it`|`https://www.supportres.de`|
+|`https://www.doctorican.org`|`https://www.passwordle.org`|`https://www.supportres.es`|
+|`https://www.doctrical.com`|`https://www.payrolltooling.com`|`https://www.supportres.fr`|
+|`https://www.doctrical.de`|`https://www.payrolltooling.net`|`https://www.supportres.it`|
+|`https://www.doctrical.es`|`https://www.prizeably.com`|`https://www.supportres.org`|
+|`https://www.doctrical.fr`|`https://www.prizeably.de`|`https://www.techidal.com`|
+|`https://www.doctrical.it`|`https://www.prizeably.es`|`https://www.techidal.de`|
+|`https://www.doctrical.org`|`https://www.prizeably.fr`|`https://www.techidal.fr`|
+|`https://www.doctricant.com`|`https://www.prizeably.it`|`https://www.techidal.it`|
+|`https://www.doctrings.com`|`https://www.prizeably.org`|`https://www.techniel.de`|
+|`https://www.doctrings.de`|`https://www.prizegiveaway.net`|`https://www.techniel.es`|
+|`https://www.doctrings.es`|`https://www.prizegives.com`|`https://www.techniel.fr`|
+|`https://www.doctrings.fr`|`https://www.prizemons.com`|`https://www.techniel.it`|
+|`https://www.doctrings.it`|`https://www.prizesforall.com`|`https://www.templateau.com`|
+|`https://www.doctrings.org`|`https://www.prizewel.com`|`https://www.templatent.com`|
+|`https://www.exportants.com`|`https://www.prizewings.com`|`https://www.templatern.com`|
+|`https://www.exportants.de`|`https://www.resetts.de`|`https://www.windocyte.com`|
+|`https://www.exportants.es`|`https://www.resetts.es`||
+|`https://www.exportants.fr`|`https://www.resetts.fr`||
 
 > [!NOTE]
 > Check the availability of the simulated phishing URL in your supported web browsers before you use the URL in a phishing campaign. For more information, see [Phishing simulation URLs blocked by Google Safe Browsing](attack-simulation-training-faq.md#phishing-simulation-urls-blocked-by-google-safe-browsing).
@@ -180,12 +180,14 @@ The _landing page_ in the simulation is where users go when they open the payloa
 _End user notifications_ in the simulation send periodic reminders to users (for example, training assignment and reminder notifications). You can select from built-in notifications, custom notifications that you already created, or you can create new notifications to use during the creation of the simulation. To create notifications, see [End-user notifications for Attack simulation training](attack-simulation-training-end-user-notifications.md).
 
 > [!TIP]
-> _Simulation automations_ provide the following improvements over traditional simulations:
 >
-> - Simulation automations can include multiple social engineering techniques and related payloads (simulations contain only one).
-> - Simulation automations support automated scheduling options (more than just the start date and end date in simulations).
+> - _Simulation automations_ provide the following improvements over traditional simulations:
+>   - Simulation automations can include multiple social engineering techniques and related payloads (simulations contain only one).
+>   - Simulation automations support automated scheduling options (more than just the start date and end date in simulations).
 >
-> For more information, see [Simulation automations for Attack simulation training](attack-simulation-training-simulation-automations.md).
+>   For more information, see [Simulation automations for Attack simulation training](attack-simulation-training-simulation-automations.md).
+>
+> - To see which departments are more vulnerable to phishing simulations, create identical simulations or simulation automations scoped by department, and then use the [available reports](#reports-and-insights) to compare the results.
 
 ### Payloads
 
@@ -205,7 +207,7 @@ After you create and launch the simulation, you need to see how it's going. For 
 - Who did what to the simulated phishing message and the payload within it (delete, report, open the payload, enter credentials, etc.).
 - Who completed the assigned training.
 
-The available reports and insights for Attack simulation training are described in [Insights and reports for Attack simulation training](attack-simulation-training-insights.md).
+The available reports and insights for Attack simulation training are described in [Reports for Attack simulation training](attack-simulation-training-insights.md).
 
 ### Predicted compromise rate
 

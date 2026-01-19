@@ -4,7 +4,7 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
@@ -82,7 +82,7 @@ Recipient filters use conditions and exceptions to identify the internal recipie
 - **Users**: One or more mailboxes, mail users, or mail contacts in the organization.
 - **Groups**:
   - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
-  - The specified Microsoft 365 Groups.
+  - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
 - **Domains**: One or more of the configured [accepted domains](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) in Microsoft 365. The recipient's primary email address is in the specified domain.
 
 You can use a condition or exception only once, but the condition or exception can contain multiple values:

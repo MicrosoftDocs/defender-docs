@@ -1,41 +1,30 @@
----
-title: List library files 
+﻿---
+title: List library files
 description: Learn how to list live response library files.
 search.appverid: met150
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: deniseb
-author: denisebmsft
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-ms.date: 03/01/2025
+ms.date: 12/11/2025
+appliesto:
+  - Microsoft Defender for Endpoint
 ---
 
-#  List library files 
+# List library files
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-**Applies to:** 
-
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-[!include[Prerelease information](../../includes/prerelease.md)]
-
-- Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp?ocid=docs-wdatp-exposedapis-abovefoldlink) 
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 ## API description
 
@@ -43,19 +32,16 @@ List live response library files.
 
 ## Limitations
 
-1.  Rate limitations for this API are 100 calls per minute and 1,500 calls per
-    hour.
+Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
 
-One of the following permissions is required to call this API. To learn more,
-including how to choose permissions, see [Get
-started](apis-intro.md).
+One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Get started](apis-intro.md).
 
-|Permission type                       |      Permission          |  Permission display name | 
-|-----------------|--------|---------------------------|  
-| Application                        | Library.Manage | Manage live response library |
-| Delegated (work or school account) | Library.Manage | Manage live response library |
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Library.Manage|Manage live response library|
+|Delegated (work or school account)|Library.Manage|Manage live response library|
 
 ## HTTP request
 
@@ -65,20 +51,21 @@ GET https://api.security.microsoft.com/api/libraryfiles
 
 ## Request headers
 
-| Name         |      Type                     | Description
-|-----------------|--------|---------------------------|
-| Authorization   | String | Bearer {token}. Required. |
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. Required.|
 
 ## Request body
+
 Empty
 
-## Response 
-If successful, this method returns 200 - OK response code with a collection
-    of live response library file entities.
+## Response
+
+If successful, this method returns 200 - OK response code with a collection of live response library file entities.
 
 ## Example
 
-**Request**
+### Request example
 
 Here's an example of a request that gets all live response library files.
 
@@ -86,7 +73,7 @@ Here's an example of a request that gets all live response library files.
 GET https://api.security.microsoft.com/api/libraryfiles
 ```
 
-## Response example
+### Response example
 
 Here's an example of the response.
 
@@ -125,11 +112,6 @@ Content-type: application/json
     "createdBy": "admin",
     "hasParameters": false
     }
-]
+  ]
 }
 ```
-
-
-## Related article
-- [Run live response](run-live-response.md) 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

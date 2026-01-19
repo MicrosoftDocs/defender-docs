@@ -1,10 +1,10 @@
----
+﻿---
 title: Review detected threats using the Microsoft Defender for Endpoint Antivirus and Intune integration
 description: Use the Microsoft Defender for Endpoint Antivirus and Intune integration to view and manage threat detections.
 ms.service: defender-endpoint
-author: YongRhee-MSFT
-ms.author: yongrhee
-manager: deniseb
+author: KesemSharabi
+ms.author: kesharab
+manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection:
@@ -12,24 +12,20 @@ ms.collection:
 - tier2
 - mde-edr
 ms.topic: how-to
-ms.date: 06/21/2024
+ms.date: 10/20/2025
 ms.subservice: edr
 search.appverid: met150
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+
 ---
 
 # Microsoft Defender for Endpoint Antivirus and Intune integration
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+## Prerequisites
 
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
-
-**Platforms**
+### Supported operating systems
 
 - Windows
 - macOS
@@ -37,7 +33,7 @@ search.appverid: met150
 
 In the Microsoft Defender portal, you can view and manage threat detections using the following steps:
 
-1. Visit [Microsoft XDR portal](https://security.microsoft.com/) and sign-in.
+1. Visit the Microsoft Defender portal at [https://security.microsoft.com](https://security.microsoft.com) and sign-in.
 
     On the landing page, you see the **Devices with active malware** card with the following information:
 
@@ -47,7 +43,7 @@ In the Microsoft Defender portal, you can view and manage threat detections usin
 
     You can select **View Details** for more information.
 
-2. Once remediated, you see the following text being displayed:
+1. Once remediated, you see the following text being displayed:
 
     *Malware found on your devices have been remediated successfully*.
 
@@ -57,11 +53,11 @@ You can manage threat detections for any devices that are [enrolled in Microsoft
 
 1. Go to the Microsoft Intune admin center at [intune.microsoft.com](https://intune.microsoft.com) and sign-in.
 
-2. In the navigation pane, select **Endpoint security**.
+1. In the navigation pane, select **Endpoint security**.
 
-3. Under **Manage**, select **Antivirus**. You see tabs for **Summary**, **Unhealthy endpoints**, and **Active malware**.
+1. Under **Manage**, select **Antivirus**. You see tabs for **Summary**, **Unhealthy endpoints**, and **Active malware**.
 
-4. Review the information on the available tabs, and then take action as necessary.
+1. Review the information on the available tabs, and then take action as necessary.
 
     For example, when you can select a device that is listed under the **Active malware** tab, you can choose one action from the list of actions provided:
      - Restart
@@ -72,17 +68,17 @@ You can manage threat detections for any devices that are [enrolled in Microsoft
 
 ## FAQs
 
-#### In the Microsoft XDR portal > Devices with active malware > Devices with malware detections report, why does the Last update seem to be occurring today?
+#### In the Microsoft Defender portal > Devices with active malware > Devices with malware detections report, why does the Last update seem to be occurring today?
 
 To see when the malware was detected, you can take the following steps:
 
 1. Since this is an integration with Intune, visit [**Intune portal**](https://intune.microsoft.com) and select **Antivirus** and then select **Active malware** tab.
 
-2. Select **Export**.
+1. Select **Export**.
 
-3. On your device, go to Downloads, and extract the `Active malware_YYYY_MM_DD_THH_MM_SS.0123Z.csv.zip` file.
+1. On your device, go to Downloads, and extract the `Active malware_YYYY_MM_DD_THH_MM_SS.0123Z.csv.zip` file.
 
-4. Open the CSV and find the **LastStateChangeDateTime** column to see when malware was detected.
+1. Open the CSV and find the **LastStateChangeDateTime** column to see when malware was detected.
 
 #### In the devices with malware detections report, why can't I see any information about which malware was detected on the device.
 
@@ -128,3 +124,4 @@ The device has not been [retired](/mem/intune/remote-actions/devices-wipe) from 
 
 - [Alerts in Microsoft Defender for Endpoint](investigate-alerts.md)
 - [Alerts queue in Microsoft Defender XDR](alerts-queue-endpoint-detection-response.md)
+

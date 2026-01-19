@@ -3,10 +3,10 @@ title: Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint S
 ms.reviewer: yonghree
 description: Learn how to evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management (Endpoint security policies).
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
-manager: dolmont
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -169,9 +169,9 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 > Any of the rules might block behavior you find acceptable in your organization. In these cases, add the per-rule exclusions named "Attack Surface Reduction Only Exclusions." Additionally, change the rule from **Enabled** to **Audit** to prevent unwanted blocks.
 
 1. Select **Next**.
-2. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**.
-3. Select **Next**.
-4. On the **Review + create** tab, review your policy settings, and then select **Save**.
+1. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**.
+1. Select **Next**.
+1. On the **Review + create** tab, review your policy settings, and then select **Save**.
 
 #### Enable Tamper Protection
 

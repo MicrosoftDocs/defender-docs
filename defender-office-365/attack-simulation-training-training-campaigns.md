@@ -2,7 +2,7 @@
 title: Training campaigns in Attack simulation training
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.service: defender-office-365
@@ -12,7 +12,7 @@ ms.collection:
   - tier2
 description: Admins can learn how to create training campaigns in Attack simulation training in Microsoft Defender for Office 365 Plan 2.
 search.appverid: met150
-ms.date: 10/23/2024
+ms.date: 10/23/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -108,7 +108,10 @@ On the **Target users** page, select who receives the Training campaign. Use the
   - :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add users**: In the **Add users** flyout that opens, you find and select users and groups to include in the Training campaign. The following group types are supported:
     - Microsoft 365 Groups (static and dynamic)
     - Distribution groups (static only)
-    - Mail-enabled security groups (static only) 
+    - Mail-enabled security groups (static only)
+
+    > [!TIP]
+    > Currently, hidden membership groups aren't supported.
 
   The following search tools are available:
 

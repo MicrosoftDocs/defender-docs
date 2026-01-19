@@ -1,9 +1,9 @@
----
+﻿---
 title: Device control walkthroughs            
 description: Learn how to work with device control in Defender for Endpoint. 
-author: denisebmsft
-ms.author: deniseb
-manager: deniseb
+author: limwainstein
+ms.author: lwainstein
+manager: bagol
 ms.date: 01/24/2025
 ms.topic: overview
 ms.service: defender-endpoint
@@ -17,16 +17,15 @@ ms.custom:
 - partner-contribution
 ms.reviewer: joshbregman
 search.appverid: MET150
-f1.keywords: NOCSH 
----
+f1.keywords: NOCSH
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Device control walkthroughs
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business)
 
 This article describes different ways to see how device control works. Beginning with default settings, each section describes how to configure device control to achieve certain objectives.
 
@@ -197,3 +196,4 @@ Device control also supports group SIDs. Change the SID in the read-only policy 
 - [Deploy and manage device control with Intune](device-control-deploy-manage-intune.md)
 - [Deploy and manage device control with Group Policy](device-control-deploy-manage-gpo.md)
 - [View device control reports](device-control-report.md)
+

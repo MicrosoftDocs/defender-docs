@@ -4,7 +4,7 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.topic: overview
 search.appverid: 
@@ -158,7 +158,7 @@ Mailing lists (also known as discussion lists) are known to have problems with a
 For example, Gabriela Laureano (`glaureano@contoso.com`) is interested in bird watching, so she joins the mailing list `birdwatchers@fabrikam.com`, and sends the following message to the list:
 
 ```text
-From: "Gabriela Laureano" <glaureano@contoso.com> 
+From: "Gabriela Laureano" <glaureano@contoso.com>
 To: Birdwatcher's Discussion List <birdwatchers@fabrikam.com>
 Subject: Great viewing of blue jays at the top of Mt. Rainier this week
 

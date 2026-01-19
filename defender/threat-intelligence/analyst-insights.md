@@ -6,7 +6,7 @@ ms.author: aroland
 manager: dolmont
 ms.service: threat-intelligence
 ms.topic: overview
-ms.date: 01/15/2025
+ms.date: 09/12/2025
 ms.custom: 
 - template-overview
 - cx-ti
@@ -14,6 +14,9 @@ ms.custom:
 ---
 
 # Analyst insights
+
+> [!IMPORTANT]
+> Microsoft Defender Threat Intelligence (Defender TI) will be discontinued and merged into Microsoft Defender for a powerful unified experience. Existing customers will continue to have full access to their current Defender TI experience until the product is retired on August 1, 2026. [Learn more](https://techcommunity.microsoft.com/blog/defenderthreatintelligence/mdti-is-converging-into-microsoft-sentinel-and-defender-xdr/4427991)
 
 In Microsoft Defender Threat Intelligence (Defender TI), the **Analyst insights** section provides you with quick insights about an artifact that might help determine your next step in an investigation. This section lists any insights that apply to the artifact, and insights that don't apply for extra visibility. 
 

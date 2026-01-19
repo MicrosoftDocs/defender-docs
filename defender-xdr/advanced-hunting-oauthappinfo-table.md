@@ -6,8 +6,8 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -48,7 +48,7 @@ For information on other tables in the advanced hunting schema, see [the advance
 | Column name | Data type | Description |
 |-------------|-----------|-------------|
 | `ReportId` | `string` | Unique identifier for the record|
-| `Timestamp` | `string` | Date and time when the record was created|
+| `Timestamp` | `datetime` | Date and time when the record was created|
 | `OAuthAppId` | `string` | The unique  identifier for the app as assigned by Microsoft Entra ID|
 | `ServicePrincipalId` | `string` | The unique identifier for the service principal instance of the application in the tenant|
 | `AppName` | `string` | The application's display name as exposed by the associated service principal|
@@ -61,7 +61,7 @@ For information on other tables in the advanced hunting schema, see [the advance
 | `ConsentedUsersCount` | `integer` | Count of users who have consented to the app; this information is only available when the app isn't admin consented|
 | `IsAdminConsented` | `boolean` | Value is True if a user has provided admin consent to the app on behalf of all the users in the org, otherwise the value is False|
 | `AppOrigin` | `string` | Specifies whether the app is internal to the organization or registered in an external tenant|
-| `LastUsedTime` | `datetime` | Date and time when the app was last used|
+| `LastUsedTime` | `datetime` | Date and time when the app last signed in. Tracking of this data goes back to June, 2022| 
 | `AppOwnerTenantId` | `string` |Specifies the ID of the tenant where the app was registered|
 
 

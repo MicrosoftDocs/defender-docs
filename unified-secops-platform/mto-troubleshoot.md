@@ -2,9 +2,10 @@
 title: Troubleshoot issues in Microsoft Defender multitenant management
 description: Learn about issues in Microsoft Defender multitenant management and how to fix or troubleshoot them.
 search.appverid: met150
-ms.service: unified-secops-platform
-ms.author: diannegali
-author: diannegali
+ms.service: microsoft-defender
+ms.subservice: unified-security-operations
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

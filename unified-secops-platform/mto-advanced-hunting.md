@@ -2,9 +2,10 @@
 title: Advanced hunting in Microsoft Defender multitenant management
 description: Learn about advanced hunting in Microsoft Defender multitenant management
 search.appverid: met150
-ms.service: unified-secops-platform
-ms.author: bagol
-author: batamig
+ms.service: microsoft-defender
+ms.subservice: unified-security-operations
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: orspodek
 audience: ITPro
@@ -14,7 +15,7 @@ ms.collection:
 - tier1
 - usx-security
 ms.topic: article
-ms.date: 07/07/2025
+ms.date: 10/28/2025
 appliesto:
   - Microsoft Defender XDR
   - Microsoft Sentinel in the Microsoft Defender portal
@@ -58,9 +59,10 @@ You can run any query that you already have access to in the multitenant managem
    DeviceEvents
    | take 10
    | project TenantId = WorkspaceID
-
+   ```
+   
    Or, to query multiple workspaces in the same tenant, use a query similar to the following:
-
+   
    ```kusto
    Usage
    | union workspace("WorkpaceA").Usage
@@ -81,7 +83,7 @@ If you're using [Azure Lighthouse](/azure/lighthouse/overview) to grant your ten
 - **TenantA**: *WorkspaceA1*, *WorkspaceA2*
 - **TenantB**: *WorkspaceB1*, *WorkspaceB2*
 
-And you want to query across both *WorkspaceA1* and *WorkspaceB1*, select **TenantA** and **WorkspaceA1** in the **Tenant scope** selector. Then in your query, use the `workspace()` operator to call *WorkspaceB2*. For example:
+And if you want to query across both *WorkspaceA1* and *WorkspaceB1*, select **TenantA** and **WorkspaceA1** in the **Tenant scope** selector. Then in your query, use the `workspace()` operator to call *WorkspaceB2*. For example:
 
 ```kusto 
 union workspace("WorkspaceB2").Usage, Usage

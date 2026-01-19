@@ -7,7 +7,7 @@ f1.keywords:
   - Compromised account
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.collection:

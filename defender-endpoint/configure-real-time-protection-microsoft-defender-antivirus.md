@@ -1,33 +1,30 @@
----
+﻿---
 title: Enable and configure Microsoft Defender Antivirus always-on protection
 description: Enable and configure Microsoft Defender Antivirus real-time protection features such as behavior monitoring, heuristics, and machine learning.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: emmwalshh
-ms.author: ewalsh
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: yongrhee
 ms.topic: how-to
-ms.date: 06/27/2025
-manager: deniseb
+ms.date: 10/20/2025
+manager: bagol
 ms.custom: nextgen
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Enable and configure Microsoft Defender Antivirus always-on protection
 
-**Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
-
-**Platforms**
-- Windows
 
 Always-on protection consists of real-time protection, behavior monitoring, and heuristics to identify malware based on known suspicious and malicious activities. These activities include events, such as processes making unusual changes to existing files, modifying or creating automatic startup registry keys and startup locations (also known as autostart extensibility points, or ASEPs), and other changes to the file system or file structure. Always-on protection is an important part of your antivirus protection and should be enabled. 
 
@@ -35,15 +32,21 @@ Always-on protection consists of real-time protection, behavior monitoring, and 
 > [Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) helps keep always-on protection and other security settings from being changed. As a result, when tamper protection is enabled, any changes made to [tamper-protected settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on) are ignored. If you must make changes to a device and those changes are blocked by tamper protection, we recommend using [troubleshooting mode](enable-troubleshooting-mode.md) to temporarily disable tamper protection on the device. Note that after troubleshooting mode ends, any changes made to tamper-protected settings are reverted to their configured state.
 > If a file that contains a threat is placed in an Azure file share, it's not remediated when placed. A user has to open the file for it to be detected by real-time protection.
 
+## Prerequisites
+
+### Supported operating systems 
+
+- Windows
+
 ## Manage antivirus settings with Microsoft Intune
 
 You can use Intune to configure antivirus policies, and then apply those policies across devices in your organization. Antivirus policies help security admins focus on managing the discrete group of antivirus settings for managed devices. Each antivirus policy includes several profiles. Each profile contains only the settings that are relevant for Microsoft Defender Antivirus for macOS and Windows devices, or for the user experience in the Windows Security app on Windows devices. For more information, see [Antivirus policy for endpoint security in Intune](/mem/intune/protect/endpoint-security-antivirus-policy).
 
 1. Go to the [Intune admin center](https://intune.microsoft.com/) and sign in.
 
-2. In the navigation pane, choose **Endpoint security** and then, under **Manage**, choose **Antivirus**.
+1. In the navigation pane, choose **Endpoint security** and then, under **Manage**, choose **Antivirus**.
 
-3. Select an existing policy, or choose **+ Create Policy** to create a new policy. 
+1. Select an existing policy, or choose **+ Create Policy** to create a new policy. 
 
    | Task | What to do |
    |---|---|
@@ -69,37 +72,37 @@ You can use **Local Group Policy Editor** to enable and configure Microsoft Defe
 
     1. In your Windows 10 or Windows 11 taskbar search box, type **gpedit**.
 
-    2. Under **Best match**, select **Edit group policy** to launch **Local Group Policy Editor**.
+    1. Under **Best match**, select **Edit group policy** to launch **Local Group Policy Editor**.
     
        :::image type="content" source="media/gpedit-search.png" alt-text="The GPEdit taskbar search result in the Control panel" lightbox="media/gpedit-search.png":::
 
-2. In the left pane of **Local Group Policy Editor**, expand the tree to **Computer Configuration** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus**.
+1. In the left pane of **Local Group Policy Editor**, expand the tree to **Computer Configuration** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus**.
 
-3. Configure the Microsoft Defender Antivirus antimalware service policy setting.
+1. Configure the Microsoft Defender Antivirus antimalware service policy setting.
 
    In the **Microsoft Defender Antivirus** details pane on right, double-click **Allow antimalware service to start up with normal priority**, and set it to **Enabled**.
 
    Then select **OK**.
 
-4. Configure the Microsoft Defender Antivirus real-time protection policy settings, as follows:
+1. Configure the Microsoft Defender Antivirus real-time protection policy settings, as follows:
 
     1. In the **Microsoft Defender Antivirus** details pane, double-click **Real-time Protection**. Or, from the **Microsoft Defender Antivirus** tree on left pane, select **Real-time Protection**.
 
-    2. In the **Real-time Protection** details pane on right, double-click the policy setting as specified in [Real-time protection policy settings](#real-time-protection-policy-settings) (later in this article).
+    1. In the **Real-time Protection** details pane on right, double-click the policy setting as specified in [Real-time protection policy settings](#real-time-protection-policy-settings) (later in this article).
 
-    3. Configure the setting as appropriate, and select **OK**.
+    1. Configure the setting as appropriate, and select **OK**.
 
-    4. Repeat the previous steps for each setting in the table.
+    1. Repeat the previous steps for each setting in the table.
 
-5. Configure the Microsoft Defender Antivirus scanning policy setting, as follows:
+1. Configure the Microsoft Defender Antivirus scanning policy setting, as follows:
 
     1. From the **Microsoft Defender Antivirus** tree on left pane, select **Scan**.
     
-   2. In the **Scan** details pane on right, double-click **Turn on heuristics**, and set it to **Enabled**. 
+   1. In the **Scan** details pane on right, double-click **Turn on heuristics**, and set it to **Enabled**. 
 
-   3. Select **OK**.
+   1. Select **OK**.
 
-6. Close **Local Group Policy Editor**.
+1. Close **Local Group Policy Editor**.
 
 ### Real-time protection policy settings
 
@@ -114,17 +117,17 @@ For the most current settings, get the latest ADMX files in your central store. 
 
    1. In your Windows 10 or Windows 11 taskbar search box, type `gpedit`.
 
-   2. Under **Best match**, select **Edit group policy** to launch **Local Group Policy Editor**.
+   1. Under **Best match**, select **Edit group policy** to launch **Local Group Policy Editor**.
 
-2. In the left pane of **Local Group Policy Editor**, expand the tree to **Computer Configuration** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus** \> **Real-time Protection**.
+1. In the left pane of **Local Group Policy Editor**, expand the tree to **Computer Configuration** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus** \> **Real-time Protection**.
 
-3. In the **Real-time Protection** details pane on right, double-click **Turn off real-time protection**.
+1. In the **Real-time Protection** details pane on right, double-click **Turn off real-time protection**.
 
-4. In the **Turn off real-time protection** setting window, set the option to **Enabled**.
+1. In the **Turn off real-time protection** setting window, set the option to **Enabled**.
    
-5. select **OK**.
+1. select **OK**.
 
-6. Close **Local Group Policy Editor**.
+1. Close **Local Group Policy Editor**.
 
 ## See also
 
@@ -140,4 +143,5 @@ If you're looking for antivirus-related information for other platforms, see:
 - [Configure Defender for Endpoint on Android features](android-configure.md)
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

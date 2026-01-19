@@ -216,6 +216,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "defender-xdr/configure-deception.md",
+      "redirect_url": "/defender-xdr/automatic-attack-disruption",
+      "redirect_document_id": false
+    },
+  {
+      "source_path": "defender-xdr/deception-overview.md",
+      "redirect_url": "/defender-xdr/automatic-attack-disruption",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "defender-xdr/mto-endpoint-security-policy.md",
       "redirect_url": "/unified-secops-platform/mto-endpoint-security-policy",
       "redirect_document_id": false

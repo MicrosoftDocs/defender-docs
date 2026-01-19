@@ -2,16 +2,17 @@
 title: Threat Response in the Defender Portal
 description: Learn about the features that help respond to threats in the Microsoft Defender portal, ensuring comprehensive protection.
 search.appverid: met150
-ms.service: unified-secops-platform
-ms.author: bagol
-author: batamig
+ms.service: microsoft-defender
+ms.subservice: unified-security-operations
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 02/23/2025
 ms.collection:
 - M365-security-compliance
 - tier1
 - usx-security
-ms.topic: conceptual
+ms.topic: article
 appliesto:
   - Microsoft Defender XDR
   - Microsoft Sentinel in the Microsoft Defender portal

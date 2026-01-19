@@ -1,14 +1,14 @@
----
+﻿---
 title:  Run the client analyzer on Windows
 description: Learn how to run the Microsoft Defender for Endpoint Client Analyzer on Windows.
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: ewalsh
-author: emmwalshh
+ms.author: kesharab
+author: KesemSharabi
 ms.reviewer: younghree
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -18,13 +18,13 @@ ms.topic: how-to
 ms.subservice: ngp
 search.appverid: met150
 ms.date: 04/01/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Run the client analyzer on Windows
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 > [!TIP]
 > Watch this video to get an overview of the client analyzer: [Defender for Endpoint client analyzer overview](https://www.youtube.com/watch?v=GnqDsvYYL6w)
@@ -42,15 +42,15 @@ You can collect the Defender for Endpoint analyzer support logs remotely using [
 
 1. Download the [MDE Client Analyzer tool](https://aka.ms/mdatpanalyzer) or [MDE Client Analyzer tool (preview)](https://aka.ms/MDEClientAnalyzerPreview) to the Windows device you want to investigate. The file is saved to your Downloads folder by default.
 
-2. Extract the contents of `MDEClientAnalyzer.zip` to an available folder.
+1. Extract the contents of `MDEClientAnalyzer.zip` to an available folder.
 
-3. Open a command line with administrator permissions: 
+1. Open a command line with administrator permissions: 
 
    1. Go to **Start** and type **cmd**.
    
-   2. Right-click **Command prompt** and select **Run as administrator**.
+   1. Right-click **Command prompt** and select **Run as administrator**.
 
-4. Type the following command and then press **Enter**:
+1. Type the following command and then press **Enter**:
 
    ```cmd
    *DrivePath*\MDEClientAnalyzer.cmd
@@ -128,5 +128,6 @@ By default, the unpacked `MDEClientAnalyzerResult.zip` file contains the items l
 - [Data collection for advanced troubleshooting on Windows](data-collection-analyzer.md)
 - [Understand the analyzer HTML report](analyzer-report.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+
 
