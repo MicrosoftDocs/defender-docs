@@ -4,7 +4,7 @@ description: Review support requirements for container capabilities in Microsoft
 ms.topic: limits-and-quotas
 author: Elazark
 ms.author: elkrieger
-ms.date: 21/01/2026
+ms.date: 01/21/2026
 ms.custom: references_regions
 ---
 
