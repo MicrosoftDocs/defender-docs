@@ -19,7 +19,7 @@ Use the tabs below to follow the enablement steps for your Kubernetes environmen
 
 [!INCLUDE[defender-for-container-prerequisites-aks](includes/defender-for-container-prerequisites-aks.md)]
 
-## Enable Defender for Containers plan
+## Enable Defender for Containers
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
