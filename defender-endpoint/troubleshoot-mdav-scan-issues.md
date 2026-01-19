@@ -230,5 +230,5 @@ Get-WinEvent -LogName 'Microsoft-Windows-Windows Defender/Operational' | where i
 
 ## See also
 
-- [Configure scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md)
+- [About scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md)
 - [Exclusions overview](navigate-defender-endpoint-antivirus-exclusions.md)

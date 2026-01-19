@@ -14,19 +14,17 @@ ms.collection:
   - m365-security
   - tier1
   - highpri
-description: Describes the Teams message entity panel for Microsoft Teams in Microsoft Defender for Office 365 Plan 2, how it does post-breach work like ZAP and Safe Links and gives admins a single pane of glass on Teams chat and channel threats like suspicious URLs..
+description: Describes the Teams message entity panel for Microsoft Teams in Microsoft Defender for Office 365, how it does post-breach work like ZAP and Safe Links and gives admins a single pane of glass on Teams chat and channel threats like suspicious URLs..
 ms.service: defender-office-365
-ms.date: 10/27/2025
+ms.date: 01/13/2026
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
+ - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# The Teams message entity panel in Microsoft Defender for Office 365 Plan 2
+# The Teams message entity panel in Microsoft Defender for Office 365
 
-[!include[Prerelease information](../includes/prerelease.md)]
-
-Similar to the [The Email summary panel](mdo-email-entity-page.md#the-email-summary-panel) for email messages, Microsoft 365 organizations that have Microsoft Defender for Office 365 Plan 2 (add-on licenses or included in subscriptions like Microsoft 365 E5) have the _Microsoft Teams message entity panel_ in the Microsoft Defender portal. The Teams message entity panel is a details flyout includes all Microsoft Teams data about suspicious or malicious chats, channels, and group chats on a single, actionable panel.
+Similar to the [The Email summary panel](mdo-email-entity-page.md#the-email-summary-panel) for email messages, Microsoft 365 organizations that have Microsoft Defender for Office 365 Plan 1 or Plan 2 (add-on licenses or included in subscriptions like Microsoft 365 E5) have the _Microsoft Teams message entity panel_ in the Microsoft Defender portal. The Teams message entity panel is a details flyout includes all Microsoft Teams data about suspicious or malicious chats, channels, and group chats on a single, actionable panel.
 
 This article explains the information and actions on the Teams message entity panel.
 
@@ -151,6 +149,8 @@ Do the following steps in the **Take action** wizard:
    By default, all users in the chat are selected, including external users you can't remove from the chat. Verify the _internal_ users to remove from the chat are selected.
 
    When you're finished on the **Choose target entities** page, select **Next**.
+
+   :::image type="content" source="media/teams-message-entity-panel-choose-target-entities.png" alt-text="Screenshot of the Choose target entities page of the Take action wizard of the Teams message entity panel in the Microsoft Defender portal." lightbox="media/teams-message-entity-panel-choose-target-entities.png":::
 
 3. On the **Review and submit** page, review your previous selections.
 

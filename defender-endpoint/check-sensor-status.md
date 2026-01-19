@@ -53,4 +53,4 @@ You can view the device details when you click on a misconfigured or inactive de
 - [Client analyzer overview](overview-client-analyzer.md)
 - [Run the client analyzer on Windows](run-analyzer-windows.md)
 - [Data collection for advanced troubleshooting on Windows](data-collection-analyzer.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

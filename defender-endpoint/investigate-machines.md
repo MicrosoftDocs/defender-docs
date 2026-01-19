@@ -257,5 +257,5 @@ To gain an in-depth view of the device health report, you can go to **Reports > 
 - [Security recommendation](api/ti-indicator.md)
 - [Software inventory](/defender-vulnerability-management/tvm-software-inventory)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

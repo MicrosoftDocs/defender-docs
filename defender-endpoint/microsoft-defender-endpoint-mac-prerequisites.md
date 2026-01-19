@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier3
 - mde-macos
-ms.topic: conceptual
+ms.topic: article
 ms.subservice: macos
 search.appverid: met150
 ms.date: 06/19/2025
@@ -147,5 +147,5 @@ mdatp connectivity test
 - For more information about logging, uninstalling, or other articles, see [Resources for Microsoft Defender for Endpoint on macOS](mac-resources.md).
 - [Privacy for Microsoft Defender for Endpoint on macOS](mac-privacy.md).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
