@@ -7,7 +7,7 @@ author: dlanger
 manager: ornat-spodek
 ms.topic: how-to
 ms.service: exposure-management
-ms.date: 05/04/2025
+ms.date: 07/30/2025
 ---
 
 # Review security initiatives
@@ -19,6 +19,7 @@ ms.date: 05/04/2025
 - Learn about [initiatives](exposure-insights-overview.md#security-initiatives) before you start.
 - [Review prerequisites and permissions needed](prerequisites.md) for working with Security Exposure Management.
 - Initiatives that are in preview are marked accordingly. These preview initiatives are still in development, and are subject to change.
+- Note that with the integration of Defender for Cloud in the Defender portal, some legacy elements have been updated - for example, threat-based initiatives from the initiative catalog might have been temporarily removed and could return in future releases.
 
 ## View initiatives page
 
@@ -37,7 +38,7 @@ The initiatives page provides detailed insights into your security initiatives a
 
 :::image type="content" source="media/initiatives/filter-by-dg.png" alt-text="Screenshot of device group filter":::
 
-4. Choose the device groups relevant for you, and the iniatives data will be recalculated (only when related to Endpoints data).
+4. Choose the device groups relevant for you, and the initiatives data are recalculated (only when related to Endpoints data).
 
 :::image type="content" source="media/initiatives/filter-by-dg-pane.png" alt-text="Screenshot of the filter by device groups side pane.":::
 
@@ -87,7 +88,7 @@ The changes in your score provide you with useful feedback about how well you're
     1. If needed, filter for specific time points.
     1. Choose the time point and select to examine the percent effect on the initiative score and the reason for the change.
     1. Select a metric to explore the change's effect further, if applicable.
-    1. Open the **Changes to exposed assets** dropdown to view up to the top 100 changed assets. The status will indicate whether the asset exposure has been added or removed.
+    1. Open the **Changes to exposed assets** dropdown to view up to the top 100 changed assets. The status indicates whether the asset exposure has been added or removed.
 
 :::image type="content" source="media/exposure-insights-overview/initiatives-history-details-redcued.jpg" alt-text="Screenshot of history side panel" lightbox="media/initiatives/initiatives-history-details.png":::
 

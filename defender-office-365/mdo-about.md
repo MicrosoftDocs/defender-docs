@@ -22,7 +22,7 @@ ms.custom:
 description: Is Microsoft Defender for Office 365 worth it? Let's find out.
 ms.service: defender-office-365
 adobe-target: true
-ms.date: 10/13/2025
+ms.date: 01/16/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -129,11 +129,13 @@ The extra features that you get in **Defender for Office 365 Plan 2** on top of 
 
 ## Defender for Office 365 Plan 1 vs. Plan 2 cheat sheet
 
-This quick-reference section summarizes the different capabilities between Defender for Office 365 Plan 1 and Plan 2 that aren't included in the default email protections for cloud mailboxes.
+This quick-reference section summarizes the different capabilities between Defender for Office 365 Plan 1 and Plan 2 **for email** that aren't included in the default email protections for cloud mailboxes.
+
+To compare the different capabilities between Defender for Office 365 Plan 1 and Plan 2 **for Microsoft Teams**, see [Microsoft Defender for Office 365 support for Microsoft Teams](mdo-support-teams-about.md).
 
 |Defender for Office 365 Plan 1|Defender for Office 365 Plan 2|
 |---|---|
-|Prevent and detect capabilities: <ul><li>[Anti-phishing policies with impersonation protection and phishing email thresholds](anti-phishing-policies-about.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>[Safe Attachments](safe-attachments-about.md), including [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md)</li><li>[Safe Links](safe-links-about.md)</li><li>[Priority account protection](priority-accounts-turn-on-priority-account-protection.md)</li></ul> <br/> Investigate and respond capabilities: <ul><li>[Real-time detections](threat-explorer-real-time-detections-about.md)</li><li>[User tags, including Priority account](user-tags-about.md)</li><li>[The Email entity page](mdo-email-entity-page.md)</li></ul>|Everything in Defender for Office 365 Plan 1 <br/><br/> --- plus --- <br/><br/> Prevent and detect capabilities: <ul><li>[Attack simulation training](attack-simulation-training-simulations.md)</li></ul> <br/> Investigate and respond capabilities: <ul><li>[Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md)</li><li>[Threat Trackers](threat-trackers.md)</li><li>[AIR](air-about.md)</li><li>[Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview)</li><li>[Investigate incidents in Microsoft Defender XDR](/defender-xdr/investigate-incidents)</li><li>[Investigate alerts in Microsoft Defender XDR](/defender-xdr/investigate-alerts)</li></ul>|
+|Prevent and detect capabilities: <ul><li>[Anti-phishing policies with impersonation protection and phishing email thresholds](anti-phishing-policies-about.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>[Safe Attachments](safe-attachments-about.md), including [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md)</li><li>[Safe Links](safe-links-about.md)</li></ul> <br/> Investigate and respond capabilities: <ul><li>[Real-time detections](threat-explorer-real-time-detections-about.md)</li><li>[User tags, including Priority account](user-tags-about.md)</li><li>[The Email entity page](mdo-email-entity-page.md)</li></ul>|Everything in Defender for Office 365 Plan 1 <br/><br/> --- plus --- <br/><br/> Prevent and detect capabilities: <ul><li>[Attack simulation training](attack-simulation-training-simulations.md) </li><li>[Priority account protection](priority-accounts-turn-on-priority-account-protection.md)</li></ul> <br/> Investigate and respond capabilities: <ul><li>[Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md)</li><li>[Threat Trackers](threat-trackers.md)</li><li>[AIR](air-about.md)</li><li>[Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview)</li><li>[Investigate incidents in Microsoft Defender XDR](/defender-xdr/investigate-incidents)</li><li>[Investigate alerts in Microsoft Defender XDR](/defender-xdr/investigate-alerts)</li></ul>|
 
 - For more information, see [Feature availability across Defender for Office 365 plans](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#feature-availability).
 - [Safe Documents](safe-documents-in-e5-plus-security-about.md) is available to users with the Microsoft 365 A5 or Microsoft Defender Suite licenses (not included in Defender for Office 365 plans).

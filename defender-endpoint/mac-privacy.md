@@ -2,8 +2,8 @@
 title: Privacy for Microsoft Defender for Endpoint on macOS
 description: Privacy controls, how to configure policy settings that impact privacy and information about the diagnostic data collected in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
 manager: bagol
 ms.localizationpriority: medium
@@ -314,5 +314,5 @@ The following fields are collected:
 ## Resources
 
 - [Privacy at Microsoft](https://privacy.microsoft.com/)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

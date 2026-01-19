@@ -1,8 +1,8 @@
 ﻿---
 title: Behavioral blocking and containment
 description: Learn about behavioral blocking and containment capabilities at Microsoft Defender for Endpoint
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 manager: bagol
 ms.reviewer: shwetaj
 audience: ITPro
@@ -133,5 +133,5 @@ This example shows that with behavioral blocking and containment capabilities, t
 - [See recent global threat activity](https://www.microsoft.com/wdsi/threats)
 
 - [Get an overview of Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

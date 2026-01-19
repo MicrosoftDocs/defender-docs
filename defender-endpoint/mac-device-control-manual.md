@@ -2,8 +2,8 @@
 title: Deploy and manage device control manually
 description: Learn how to use device control policies manually.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 ms.reviewer: joshbregman
 manager: bagol
 ms.localizationpriority: medium
@@ -77,5 +77,5 @@ To clear the policy, use `mdatp config device-control policy reset`.
 - [Deploy and manage Device Control using Intune](mac-device-control-intune.md)
 - [Deploy and manage Device Control using JAMF](mac-device-control-jamf.md)
 - [macOS Device Control frequently asked questions (FAQ)](mac-device-control-faq.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

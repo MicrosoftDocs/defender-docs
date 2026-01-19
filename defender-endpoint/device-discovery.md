@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.subservice: onboard
 f1.keywords:
 - NOCSH
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -156,5 +156,4 @@ DeviceNetworkEvents
 - [Configure device discovery](configure-device-discovery.md)
 - [Device discovery FAQs](device-discovery-faq.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
