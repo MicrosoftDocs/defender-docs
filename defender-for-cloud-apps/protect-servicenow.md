@@ -153,7 +153,7 @@ For more information, see the [ServiceNow product documentation](https://docs.se
 
 1. In the **App connectors** page, select **+Connect an app**, and then **ServiceNow**.
 
-    :::image type="content" source="media/connect-servicenow.png" alt-text="Screenshot that shows where to find the ServiceNow connector in the Defende rportal.":::
+    :::image type="content" source="media/connect-servicenow.png" alt-text="Screenshot that shows where to find the ServiceNow connector in the Defender portal.":::
 
    
 1. In the next window, give the connection a name and select **Next**.
