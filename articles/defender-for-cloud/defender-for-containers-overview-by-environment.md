@@ -54,13 +54,6 @@ These components work together to provide visibility into security signals and p
 
 For detailed architecture information, see [Container security architecture](defender-for-containers-architecture.md#architecture-for-each-kubernetes-environment).
 
-## Deployment options
-
-You can enable Defender for Containers for AKS by using one of the following methods:
-
-- **Azure portal**
-- **Programmatic deployment**
-
 # [Amazon Elastic Kubernetes Service (EKS)](#tab/eks)
 
 Microsoft Defender for Containers extends enterprise-grade security to Amazon Elastic Kubernetes Service (EKS) clusters, helping security and DevOps teams gain visibility into container image vulnerabilities, runtime activity, and cluster configuration risks through Microsoft Defender for Cloud.
@@ -98,13 +91,6 @@ The Defender for Containers architecture for Amazon EKS consists of:
 - **Azure Policy extension for Kubernetes**
 
 These components work together to provide visibility into security signals and posture without requiring inbound connectivity.
-
-## Deployment options
-
-Enable Defender for Containers for Amazon EKS by using:
-
-- **Azure portal**
-- **Programmatic deployment**
 
 # [Google Kubernetes Engine (GKE)](#tab/gke)
 
@@ -145,20 +131,13 @@ The Defender for Containers architecture for GKE consists of:
 
 These components work together to provide visibility into security signals and posture without requiring inbound access to GKE clusters.
 
-## Deployment options
-
-You can enable Defender for Containers for GKE by using:
-
-- **Azure portal**
-- **Programmatic deployment**
-
 ---
 
 ## View your current coverage
 
-Defender for Cloud provides access to workbooks through Azure workbooks. Workbooks are customizable reports that help you understand your security posture.
+Defender for Cloud provides access to [workbooks](custom-dashboards-azure-workbooks.md) through [Azure workbooks](/azure/azure-monitor/visualize/workbooks-overview). Workbooks are customizable reports that help you understand your security posture.
 
-The coverage workbook shows which Defender for Cloud plans and components are enabled across your subscriptions and connected environments.
+The [coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) shows which Defender for Cloud plans and components are enabled across your subscriptions and connected environments.
 
 ## Pricing
 
