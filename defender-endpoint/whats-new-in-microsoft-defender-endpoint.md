@@ -33,7 +33,7 @@ Learn more:
 
 |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|
-|[View action status in the Activities tab](/defender-xdr/autoad-results#track-the-action-status-in-the-activities-tab) |Preview |You can now view the current status of automatic attack disruption and predictive shielding actions related to a specific incident. You view this data in the **Activities** tab of the incident page. The data applies to the [Contain user](respond-machine-alerts.md#contain-user), [GPO hardening](respond-machine-alerts.md#gpo-hardening), [Safeboot hardening](respond-machine-alerts.md#safeboot-hardening) response actions. |
+|[View action status in the Activities tab](/defender-xdr/autoad-results#track-the-action-status-in-the-activities-tab) |Preview |You can now view the current status of automatic attack disruption and predictive shielding actions related to a specific incident. You view this data in the **Activities** tab of the incident page. The data applies to the [Contain user](respond-machine-alerts.md#contain-user-from-the-network), [GPO hardening](respond-machine-alerts.md#gpo-hardening), [Safeboot hardening](respond-machine-alerts.md#safeboot-hardening) response actions. |
 
 ## December 2025
 
