@@ -72,7 +72,7 @@ After connecting your GKE clusters to Azure Arc:
 
 1. Search for "Arc-enabled Kubernetes clusters should have Defender extension installed".
 
-    :::image type="content" source="media/defender-for-containers-enable-plan-gke/recommendation-search.png" alt-text="Screenshot that shows searching for a recommendation." lightbox="media/defender-for-containers-enable-plan-gke/recommendation-search-expanded.png":::
+    :::image type="content" source="media/defender-for-containers-enable-plan-gke/arc-enabled-kubernetes.png" alt-text="Screenshot that shows you where to find the arc-enabled Kubernetes clusters should have Defender extension installed recommendation.":::
 
 1. Select your GKE clusters.
 
