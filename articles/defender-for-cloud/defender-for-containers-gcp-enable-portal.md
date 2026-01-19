@@ -30,26 +30,29 @@ This article explains how to enable Microsoft Defender for Containers for Google
 
 1. Select **Next: Select plans**.
 
-
 1. In **Select plans**, toggle **Containers** to **On**.
-
-    :::image type="content" source="media/tutorial-enable-containers-gcp/containers-on.png" alt-text="Screenshot of enabling Defender for Containers for a GCP connector." lightbox="media/tutorial-enable-containers-gcp/containers-on.png":::
 
 1. Select **Configure** to access the plan settings.
 
-    :::image type="content" source="media/defender-for-containers-enable-plan-gke/containers-settings-gke.png" alt-text="Screenshot of settings for the Containers plan in the Defender for Cloud environment settings." lightbox="media/defender-for-containers-enable-plan-gke/containers-settings-gke.png":::
+1. Toggle **On** the relevant Defender for Containers components:
 
 1. Choose your deployment approach:
-   - **Enable all components** (recommended): Enable all features for comprehensive protection
-   - **Enable specific components**: Select only the components you need
 
-   Available components:
-   - **Agentless discovery for Kubernetes** - Discovers all GKE clusters
-   - **Agentless container vulnerability assessment** - Scans registry images
-   - **Defender DaemonSet** - Runtime threat detection
-   - **Azure Policy for Kubernetes** - Security recommendations
+   - **Agentless discovery for Kubernetes**  
+     Discovers GKE clusters in the connected GCP project.
 
-1. Select **Continue** and **Next: Configure access**.
+   - **Agentless container vulnerability assessment**  
+     Enables vulnerability assessment for container images stored in Google Container Registry (GCR) and Artifact Registry.
+
+   - **Defender DaemonSet**  
+     Deploys the Defender sensor for runtime threat detection on GKE clusters.
+
+   - **Azure Policy for Kubernetes**  
+     Enables configuration and posture assessment for Kubernetes clusters and workloads.
+
+1. Select **Continue**.
+
+1. Select **Next: Configure access**.
 
 ## Set up GCP permissions
 
@@ -222,39 +225,6 @@ To exclude specific GKE clusters from automatic provisioning:
 >
 > - `ms_defender_container_exclude_sensors` = `true`
 > - `ms_defender_container_exclude_azurepolicy` = `true`
-
-## Best practices
-
-1. **Start with non-production**: Test on dev/test clusters first for selective deployment.
-1. **Enable all components**: Get comprehensive protection when possible.
-1. **Use Workload Identity**: Enhance security with Workload Identity.
-1. **Regular monitoring**: Check dashboard weekly for findings.
-1. **Image signing**: Implement Binary Authorization for production.
-1. **Document exclusions**: Track why certain clusters are excluded in selective deployments.
-1. **Deploy incrementally**: When using selective deployment, add one component at a time.
-1. **Monitor each step**: Verify each component before proceeding to the next.
-
-## Clean up resources
-
-To disable Defender for Containers, follow these steps:
-
-1. Go to **Environment settings**.
-
-1. Select your GCP connector.
-
-1. Choose one of the following options:
-   - Set **Containers** to **Off** to disable the plan.
-   - Delete the entire connector to remove all configurations.
-
-1. Clean up GCP resources:
-
-   ```bash
-   # Delete service account
-   gcloud iam service-accounts delete <service-account-email>
-   
-   # Disconnect clusters from Arc
-   az connectedk8s delete --name <cluster-name> --resource-group <rg>
-   ```
 
 ## Next steps
 
