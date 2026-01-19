@@ -378,6 +378,8 @@ Furthermore, after an identity is considered "contained", that user will be bloc
 
 :::image type="content" source="/defender/media/defender-endpoint/user-contain-lateral-move-block.png" alt-text="Shows a user contain lateral movement block event" lightbox="/defender/media/defender-endpoint/user-contain-lateral-move-block.png":::
 
+To view the current status of the contain user action and other actions, see [Track the action status in the Activities tab](autoattack-disruption-manage.md#track-the-action-status-in-the-activities-tab).
+
 ### Undo contain user actions
 
 > [!TIP]
@@ -413,6 +415,8 @@ To enrich predictive shielding actions, we recommend you use the Microsoft Defen
 
 After the action is applied, you can view the action impact in the incident graph, track the actions in the Action center, and investigate further using advanced hunting. For more information, see [Manage predictive shielding actions](/defender-xdr/shield-predict-threats-manage).
 
+To view the current status of the GPO hardening action and other actions, see [Track the action status in the Activities tab](autoattack-disruption-manage.md#track-the-action-status-in-the-activities-tab).
+
 ## Safeboot hardening
 
 As part of the [predictive shielding](/defender-xdr/shield-predict-threats) (Preview) feature, Defender for Endpoint automatically applies the Safeboot hardening action. Safeboot hardening helps protect devices from being compromised by enforcing stricter boot settings on devices that are predicted to be at high risk of compromise.
@@ -421,13 +425,15 @@ To enrich predictive shielding actions, we recommend you use the Microsoft Defen
 
 After the action is applied, you can view the action impact in the incident graph, track the actions in the Action center, and investigate further using advanced hunting. For more information, see [Manage predictive shielding actions](/defender-xdr/shield-predict-threats-manage).
 
+To view the current status of the Safeboot hardening action and other actions, see [Track the action status in the Activities tab](autoattack-disruption-manage.md#track-the-action-status-in-the-activities-tab).
+
 ## Consult a threat expert
 
 You can consult a Microsoft threat expert for more insights regarding a potentially compromised device or already compromised ones. Microsoft Threat Experts can be engaged directly from within the Microsoft Defender XDR for timely and accurate response. Experts provide insights not just regarding a potentially compromised device, but also to better understand complex threats, targeted attack notifications that you get, or if you need more information about the alerts, or a threat intelligence context that you see on your portal dashboard.
 
 See [Configure and manage Endpoint Attack Notifications](configure-microsoft-threat-experts.md) for details.
 
-## Check activity details in Action center
+## Check activity details and status
 
 The Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) provides information on actions that were taken on a device or file. You'll be able to view the following details:
 
@@ -439,6 +445,8 @@ The Action center ([https://security.microsoft.com/action-center](https://securi
 All other related details are also shown, for example, submission date/time, submitting user, and if the action succeeded or failed.
 
 :::image type="content" source="media/action-center-details.png" alt-text="The action center with information" lightbox="media/action-center-details.png":::
+
+The **Activities** tab in the **Incident** page shows the details and status of actions that were taken as part of the incident response. For more information, see [Track the action status in the Activities tab](autoattack-disruption-manage.md#track-the-action-status-in-the-activities-tab).
 
 ## See also
 
