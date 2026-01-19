@@ -315,7 +315,7 @@ Defender for Endpoint provides detailed reporting into events and blocks as part
 
 You can review the Windows event log to see events that are created when network protection blocks (or audits) access to a malicious IP or domain:
 
-1. [Create an XML query](/defender-endpoint/attack-surface-reduction-overview#copy-the-xml-directly).
+1. [Create an XML query](attack-surface-reduction-overview.md#copy-the-xml-directly).
 1. Select **OK**.
 
    This procedure creates a custom view that filters to only show the following events related to network protection:

@@ -98,8 +98,8 @@ DeviceLogonEvents
 * Ensure that your antivirus solution is configurable in its optimal protection state. For Microsoft Defender Antivirus, this includes:
   * [Real time protection](/defender-endpoint/configure-real-time-protection-microsoft-defender-antivirus) is enabled.
   * [Tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection) is enabled. In the Microsoft Defender portal, select **Settings > Endpoints > Advanced features > Tamper protection**.
-  * [Attack surface reduction](/defender-endpoint/attack-surface-reduction-rules-enable) rules are enabled.
-  * [Cloud protection](/defender-endpoint/attack-surface-reduction-rules-enable) is enabled.
+  * [Attack surface reduction rules](/defender-endpoint/enable-attack-surface-reduction) are enabled.
+  * [Cloud protection](/defender-endpoint/enable-cloud-protection-microsoft-defender-antivirus) is enabled.
 * Disable Exchange ActiveSync and OneDrive sync.
   * To disable Exchange ActiveSync for a mailbox, see [How to disable Exchange ActiveSync for users in Exchange Online](/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-exchange-activesync).
   * To disable other types of access to a mailbox, see:
