@@ -23,7 +23,7 @@ Use this guide if you want to:
 
 ## Prerequisites
 
- - A connected GCP project. For more information, see:[Connect your GCP project to Microsoft Defender for Cloud](quickstart-onboard-gcp.md#connect-your-gcp-project)
+ - A connected GCP project. For more information, see [Connect your GCP project to Microsoft Defender for Cloud](quickstart-onboard-gcp.md#connect-your-gcp-project)
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
@@ -181,31 +181,6 @@ To exclude specific GKE clusters from automatic provisioning:
 > - `ms_defender_container_exclude_azurepolicy` = `true`
 
 
-## Disable Defender for Containers
-
-To disable Defender for Containers, follow these steps:
-
-1. Go to **Environment settings**.
-
-1. Select your GCP connector.
-
-1. Choose one of the following options:
-   - Set **Containers** to **Off** to disable the plan.
-   - Delete the entire connector to remove all configurations.
-
-1. Clean up GCP resources:
-
-   ```bash
-   # Delete service account
-   gcloud iam service-accounts delete <service-account-email>
-   
-   # Disconnect clusters from Arc
-   az connectedk8s delete --name <cluster-name> --resource-group <rg>
-   ```
-
-## Next steps
+## Next step
 
 - [Verify deployment](defender-for-containers-gcp-verify.md)
-- [Configure advanced settings](defender-for-containers-gcp-configure.md)
-- [Deploy programmatically](defender-for-containers-gcp-enable-programmatically.md)
-- [Configure sensor deployed with Helm](deploy-helm.md)
