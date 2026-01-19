@@ -235,26 +235,23 @@ Using the UEBA behaviors layer results in the following costs:
 
 This section explains how to query behaviors from both the Defender portal and your Sentinel workspace. While the schemas are identical, the data scope differs:
 
-- The Defender portal tables include UEBA behaviors and behaviors from all connected Defender services, such as Microsoft Defender for Cloud Apps and Microsoft Defender for Cloud.
-- The Sentinel workspace tables include only UEBA behaviors, generated based on logs ingested into that specific Sentinel workspace.
+- In the Defender portal, the behavior tables include UEBA behaviors plus behaviors from connected Defender services, such as Microsoft Defender for Cloud Apps and Microsoft Defender for Cloud.
+- In the Sentinel workspace, the behavior tables include only UEBA behaviors generated from logs ingested into that specific workspace.
 
-This table summarizes the use cases and which behavior tables to use for each environment:
+This table summarizes the use cases and behavior tables to use for each environment:
 
 | **Environment** | **Tables to use** | **Use cases** |
 |-------------|-------------------|---------------|
-| **Defender portal Advanced Hunting** | `BehaviorInfo`<br>`BehaviorEntities` | Detection rules, incident investigation, threat hunting in Defender portal |
-| **Sentinel workspace** | `SentinelBehaviorInfo`<br>`SentinelBehaviorEntities` | Azure Monitor workbooks, ingestion monitoring, KQL queries in Sentinel workspace |
+| **Defender portal - Advanced Hunting** | [BehaviorInfo](/defender-xdr/advanced-hunting-behaviorinfo-table)<br>[BehaviorEntities](/defender-xdr/advanced-hunting-behaviorentities-table) | Detection rules, incident investigation, threat hunting in Defender portal |
+| **Sentinel workspace** | [SentinelBehaviorInfo](/azure-sentinel/sentinelbehaviorinfo-table)<br>[SentinelBehaviorEntities](/azure-sentinel/sentinelbehaviorentities-table) | Azure Monitor workbooks, ingestion monitoring, KQL queries in Sentinel workspace |
 
 For more practical examples of using behaviors, see [Use cases and examples](#use-cases-and-examples).
 
 For more information about Kusto Query Language (KQL), see [Kusto query language overview](/kusto/query/?view=microsoft-sentinel).
 
-- **Access behavior data in the Defender portal by querying BehaviorInfo and BehaviorEntities**
+- **Filter for UEBA behaviors in the Defender portal**
 
-  - The `BehaviorInfo` table contains one record for each behavior instance to explain “what happened”. For more information about the table schemas, see [BehaviorInfo (Preview)](/defender-xdr/advanced-hunting-behaviorinfo-table).
-  - The `BehaviorEntities` table lists the entities involved in each behavior. For more information about the table schema, [BehaviorEntities (Preview)](/defender-xdr/advanced-hunting-behaviorentities-table).
-
-  - **Filter for UEBA behaviors**: The `BehaviorInfo` and `BehaviorEntities` tables include all UEBA behaviors and might also include behaviors from Microsoft Defender services.
+   The `BehaviorInfo` and `BehaviorEntities` tables include all UEBA behaviors and might also include behaviors from Microsoft Defender services.
 
     To filter for behaviors from the Microsoft Sentinel UEBA behaviors layer, use the `ServiceSource` column. For example:
 
@@ -287,9 +284,9 @@ For more information about Kusto Query Language (KQL), see [Kusto query language
 
   This gives you each behavior and each entity involved in it. The `AccountUpn` or identifying information for the entity is in `BehaviorEntities`, whereas `BehaviorInfo` might refer to “User” or “Host” in the text.
 
-- **Where is behavior data stored in my Sentinel workspace?**: 
-  - In your Sentinel workspace, behavior data is stored in the `SentinelBehaviorInfo` and `SentinelBehaviorEntities` tables. For more information about the table schemas, see [SentinelBehaviorInfo](/azure/azure-monitor/reference/tables/sentinelbehaviorinfo) and [SentinelBehaviorEntities](/azure/azure-monitor/reference/tables/sentinelbehaviorentities).
-  - To monitor data usage, look for the table names `SentinelBehaviorInfo` and `SentinelBehaviorEntities` in the `Usage` table.
+- **Monitor behavior data ingestion**: 
+
+  To monitor data usage, query data ingestion into the `SentinelBehaviorInfo` and `SentinelBehaviorEntities` in the `Usage` table.
 
 - **Create automation, workbooks, and detection rules based on behaviors**: 
   - Use the `BehaviorInfo` table as a data source for detection rules or automation playbooks in the Defender portal. For example, create a scheduled query rule that triggers when a specific behavior appears.
