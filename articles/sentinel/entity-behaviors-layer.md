@@ -233,14 +233,14 @@ Using the UEBA behaviors layer results in the following costs:
 
 ## Best practices and troubleshooting tips for querying behaviors
 
-This section explains how to query behaviors from both the Defender portal and your Sentinel workspace. While the underlying schemas are identical, the data available differs:
+This section explains how to query behaviors from both the Defender portal and your Sentinel workspace. While the schemas are identical, the data scope differs:
 
-- The Defender portal tables include behaviors from all connected Defender services (such as Microsoft Defender for Cloud Apps and Microsoft Defender for Cloud).
-- The Sentinel workspace tables include only the behaviors generated from logs ingested into that specific Sentinel workspace.
+- The Defender portal tables include UEBA behaviors and behaviors from all connected Defender services, such as Microsoft Defender for Cloud Apps and Microsoft Defender for Cloud.
+- The Sentinel workspace tables include only UEBA behaviors, generated based on logs ingested into that specific Sentinel workspace.
 
-This table summarizes which behavior tables to use in each environment:
+This table summarizes the use cases and which behavior tables to use for each environment:
 
-| **Context** | **Tables to use** | **Use cases** |
+| **Environment** | **Tables to use** | **Use cases** |
 |-------------|-------------------|---------------|
 | **Defender portal Advanced Hunting** | `BehaviorInfo`<br>`BehaviorEntities` | Detection rules, incident investigation, threat hunting in Defender portal |
 | **Sentinel workspace** | `SentinelBehaviorInfo`<br>`SentinelBehaviorEntities` | Azure Monitor workbooks, ingestion monitoring, KQL queries in Sentinel workspace |
@@ -254,7 +254,7 @@ For more information about Kusto Query Language (KQL), see [Kusto query language
   - The `BehaviorInfo` table contains one record for each behavior instance to explain “what happened”. For more information about the table schemas, see [BehaviorInfo (Preview)](/defender-xdr/advanced-hunting-behaviorinfo-table).
   - The `BehaviorEntities` table lists the entities involved in each behavior. For more information about the table schema, [BehaviorEntities (Preview)](/defender-xdr/advanced-hunting-behaviorentities-table).
 
-  - **Unified view**: The `BehaviorInfo` and `BehaviorEntities` tables include all UEBA behaviors and might also include behaviors from Microsoft Defender for Cloud Apps and Microsoft Defender for Cloud, if you're collecting behaviors from these services.
+  - **Filter for UEBA behaviors**: The `BehaviorInfo` and `BehaviorEntities` tables include all UEBA behaviors and might also include behaviors from Microsoft Defender services.
 
     To filter for behaviors from the Microsoft Sentinel UEBA behaviors layer, use the `ServiceSource` column. For example:
 
