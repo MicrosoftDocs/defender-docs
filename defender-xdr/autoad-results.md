@@ -62,6 +62,8 @@ To view all automatic attack disruption and predictive shielding actions taken a
     - Add and apply the **Policy status** filter: Select all options except for **Not applicable**.
 1. Review the listed activities. The **Policy status** column shows the current status of the policy for each activity, for example, a user was contained in the specified timeframe, but the policy is currently inactive. This means that the user is no longer contained.
 
+    :::image type="content" source="media/autoad-results/activities-tab-status.png" alt-text="Screenshot of the Activities tab showing policy status." lightbox="media/autoad-results/activities-tab-status.png":::
+
 This view provides unique data on the activity and policy status in the selected timeframe. This data goes beyond Action center views, which provide a historical log of actions taken but do not reflect the current status of those actions.  
 
 ## Track the actions in advanced hunting
