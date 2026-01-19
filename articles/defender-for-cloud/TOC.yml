@@ -52,7 +52,6 @@
           displayName: enable, defender for cloud, activate, turn on, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender, free, trial, free trial
           href: connect-azure-subscription.md
         - name: Connect AWS accounts
-          displayName: hybrid, multicloud, multicloud, amazon, arc, AWS, accounts, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
           items:
             - name: Connect your AWS account
               href: quickstart-onboard-aws.md
@@ -61,8 +60,16 @@
             - name: Integrate AWS CloudTrail logs (Preview)
               href: integrate-cloud-trail.md
         - name: Connect GCP projects
-          displayName: hybrid, multicloud, multicloud, google, gcp, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
-          href: quickstart-onboard-gcp.md
+          items:
+            - name: Connect your GCP project
+              displayName: gcp, connect, onboard
+              href: quickstart-onboard-gcp.md
+            - name: Configure GCP plans
+              displayName: GCP, plans, configure
+              href: configure-google-plans.md
+            - name: Ingest GCP logging
+              displayName: GCP, logging, ingest
+              href: logging-ingestion.md
         - name: Connect individual non-Azure machines
           items:
             - name: Connect machines with Defender for Endpoint
@@ -1003,6 +1010,8 @@
           items:
             - name: Overview
               href: defender-cli-overview.md
+            - name: Install
+              href: defender-cli-install.md
             - name: Authentication
               href: defender-cli-authentication.md
             - name: Syntax
@@ -1025,6 +1034,9 @@
           href: iac-vulnerabilities.md
         - name: Review pull request annotations
           href: review-pull-request-annotations.md
+        - name: Query software bill of materials (SBOM)
+          displayName: software bill of materials, SBOM, query, DevOps
+          href: query-software-bill-of-materials.md
     - name: Common questions about DevOps security
       href: faq-defender-for-devops.yml
 
@@ -1497,6 +1509,15 @@
         - name: Integrate CLI with CI/CD pipelines
           DisplayName: Defender for Cloud CLI, CI/CD pipelines
           href: episode-fifty-nine.md
+        - name: Code reachability analysis
+          DisplayName: Code reachability analysis, reachable vulnerabilities
+          href: episode-sixty.md
+        - name: Kubernetes lateral movement
+          DisplayName: Kubernetes lateral movement, Kubernetes RBAC, attack paths
+          href: episode-sixty-one.md
+        - name: Kubernetes gated deployment
+          DisplayName: Kubernetes gated deployment, gated rules
+          href: episode-sixty-two.md
         - name: Agentless code scanning
           DisplayName: Agentless code scanning
           href: episode-sixty-three.md
