@@ -157,6 +157,7 @@ After connecting your EKS clusters to Azure Arc:
 1. Select **Configure** to access the plan settings.
 
 1. Toggle **On** the relevant Defender for Containers components:
+
    - **Agentless discovery for Kubernetes**
    - **Agentless container vulnerability assessment**
    - **Defender DaemonSet**
