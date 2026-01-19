@@ -131,7 +131,7 @@ After connecting your EKS clusters to Azure Arc:
 > [!NOTE]
 > You can also deploy the Defender sensor by using Helm for more control over the deployment configuration.
 
-# Google Kubernetes Engine (GKE) (#tab/gke)
+# [Google Kubernetes Engine (GKE)](#tab/gke)
 
 ## Prerequisites
 

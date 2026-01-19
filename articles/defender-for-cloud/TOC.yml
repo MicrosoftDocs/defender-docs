@@ -215,7 +215,7 @@
             - name: Overview by environment
               href: defender-for-containers-overview-by-environment.md
             - name: Enable via Azure portal
-              href: defender-for-containers-enable-portal-by-environment.md
+              href: defender-for-containers-enable-portal.md
             - name: Deploy Defender for Containers
               items:
                 - name: Defender for Containers deployment overview
