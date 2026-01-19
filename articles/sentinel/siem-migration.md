@@ -32,7 +32,7 @@ The SIEM Migration experience includes the following features:
 - <a href="/copilot/security/get-started-security-copilot" target="_blank">Security Copilot</a> enabled in your tenant with at least a [workspace operator role](/copilot/security/authentication#assign-security-copilot-access) assigned
 
 > [!NOTE]
-> Though you need [Security Copilot](https://securitycopilot.microsoft.com/) enabled in your tenant, it doesn't consume any SCUs so it doesn't incur additional costs. To ensure you don't incur any unintentional costs after you set it up, go to **Manage workspace** > **Usage monitoring**, set provisioned SCUs to zero, enable *use overage units when needed* and set the max limit to 1 unit per hour. With this setting, the SIEM Migration tool will not consume the overage SCUs, but those SCUs might be consumed by other Security Copilot features. If you want to ensure no other Security Copilot feature can run and consume the overage SCUs, follow the instructions in [Understand authentication in Microsoft Security Copilot](/copilot/security/authentication) to remove all users and groups from the *Security Copilot contributor role* except for the user that will run the SIEM Migration process.
+> Though you need [Security Copilot](https://securitycopilot.microsoft.com/) enabled in your tenant, it doesn't consume any SCUs so it doesn't incur additional costs. To ensure you don't incur any unintentional costs after you set it up, go to **Manage workspace** > **Usage monitoring**, set provisioned SCUs to zero, enable *use overage units when needed* and set the max limit to 1 unit per hour. With this setting, the SIEM Migration tool won't consume the overage SCUs, but those SCUs might be consumed by other Security Copilot features. If you want to ensure no other Security Copilot feature can run and consume the overage SCUs, follow the instructions in [Understand authentication in Microsoft Security Copilot](/copilot/security/authentication) to remove all users and groups from the *Security Copilot contributor role* except for the user that will run the SIEM Migration process.
 >
 > :::image type="content" source="./media/siem-migration/monitor-usage.png" alt-text="Screenshot of the Security Copilot usage monitoring settings.":::
 
@@ -52,9 +52,9 @@ You need a Splunk admin role to export all Splunk alerts. For more information, 
 
 Export your QRadar rule data as a CSV file, as explained here [Exporting rules - IBM Documentation](https://go.microsoft.com/fwlink/?linkid=2332524). Two notes regarding the export:
 
-1. The default export includes the alert rules, but not the building blocks which can carry important information. Clear any filter values for the *Rule or Building Block(BB)* to allow both the rules and the BBs to be exported.
+1. The default export includes the alert rules, but not the building blocks that can carry important information. Clear any filter values for the *Rule or Building Block(BB)* to allow both the rules and the BBs to be exported.
 
-1. Only include the following fields in your export to avoid duplications which can lead to QRadar application freeze:
+1. Only include the following fields in your export to avoid duplications that can lead to QRadar application freeze:
 
 "Rule name", "Type", "Rule enabled", "Notes", "Action details", "Response details", "Rule response: Event description", "Is rule", "Rule installed", "Rule response: Event name", "Rule: test definition", "Content extension name", "Content category"
 
@@ -74,9 +74,9 @@ After exporting the rules, do the following:
 
     :::image type="content" source="./media/siem-migration/migrate.png" alt-text="Screenshot of the Migrate from current SIEM option.":::
 
-1. Select the SIEM you are migrating from.
+1. Select the SIEM you're migrating from.
 
-    :::image type="content" source="./media/siem-migration/select-siem.png" alt-text="Screenshot of the UI asking the user to select the SIEM they are migrating from.":::
+    :::image type="content" source="./media/siem-migration/select-siem.png" alt-text="Screenshot of the UI asking the user to select the SIEM they're migrating from.":::
 
 1. Upload the configuration data that [you exported from your current SIEM](#export-detection-rules-from-your-current-siem) and select **Next**.
 
@@ -115,7 +115,7 @@ After exporting the rules, do the following:
     :::image type="content" source="./media/siem-migration/recommendation-card.png" alt-text="A screenshot of a recommendation card." lightbox="./media/siem-migration/recommendation-card.png":::
 
     The tool matches the Splunk rules to out-of-box Microsoft Sentinel data connectors and out-of-box Microsoft Sentinel detection rules.
-    The *connectors* tab shows the data connectors matched to the rules from your SIEM and the status (connected or not disconnected). If you want to use a connector that's not connected, you can connect from the connector tab. If a connector isn't installed, go to the Content hub and install the solution that contains the connector you want to use.
+    The *connectors* tab shows the data connectors matched to the rules from your SIEM and the status (connected or not disconnected). If the connector you want to use isn't already connected, you can connect from the connector tab. If a connector isn't installed, go to the Content hub and install the solution that contains the connector you want to use.
 
     :::image type="content" source="./media/siem-migration/connectors.png" alt-text="Screenshot of Microsoft Sentinel data connectors matched to Splunk or QRadar rules.":::
 
