@@ -82,9 +82,6 @@ After connecting your GKE clusters to Azure Arc:
     :::image type="content" source="media/defender-for-containers-enable-plan-gke/arc-enabled-kubernetes-fix.png" alt-text="Screenshot that shows where to find the fix button in the Azure portal." lightbox="media/defender-for-containers-enable-plan-gke/arc-enabled-kubernetes-fix.png":::
 
 
-> [!NOTE]
-> You can also deploy the Defender sensor by using Helm for more control. For more information, see [Deploy Defender sensor using Helm](deploy-helm.md).
-
 ### Configure container registry scanning
 
 For Google Container Registry (GCR) and Artifact Registry:
