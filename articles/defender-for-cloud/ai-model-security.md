@@ -1,19 +1,19 @@
 ---
-title: Ai model security
+title: Discover AI models
 description: Learn about AI model security in Microsoft Defender for Cloud.
 ms.topic: concept-article
-ms.date: 01/18/2026
+ms.date: 01/19/2026
 ms.author: elkrieger
 zone_pivot_groups: defender-portal-experience
 ---
 
 # AI model security
 
-As more organizations adopt AI models for various applications, ensuring the security of these models becomes paramount. Security teams need visibility and control to assess the safety and compliance of AI models entering their environments. Without these capabilities, it becomes increasingly difficult to enforce internal standards. 
+As Artificial Intelligence (AI) models are increasingly used across organizations to drive automation, insights, and intelligent decision‑making. These models are often embedded into application pipelines and production systems, often with broad access to data and infrastructure. Security teams need visibility and control to assess the safety and compliance of AI models entering their environments. Without these capabilities, it becomes increasingly difficult to enforce internal standards. 
 
-To address this problem, Microsoft Defender for Cloud's Defender for AI plan supports AI model scanning. AI model scanning provides visibility and control over all AI models in use, so security teams can proactively detect unsafe or malicious artifacts. Security teams can ensure secure and transparent deployments and continuous monitoring for risks throughout the AI lifecycle.
+Microsoft Defender for Cloud's Defender for AI security supports AI model scanning. AI model scanning provides proactive detection of unsafe or malicious artifacts and continuously monitors models for risk throughout the AI lifecycle.
 
-Defender for AI's Model Security enables organizations to automatically scan AI models for security risks such as malware, unsafe operators, and exposed secrets before they're deployed. Integrated into Azure Machine Learning and CI/CD pipelines, it provides real-time findings and remediation guidance to prevent unsafe models from reaching production.
+AI model security automatically y scan AI models for security risks such as embedded malware, unsafe operators, and exposed secrets before those models ever reach production. Integrated directly with Azure Machine Learning and CI/CD pipelines, the service surfaces real‑time findings and actionable remediation guidance, allowing teams to stop risky models early in the development process.
 
 With AI model security:
 
