@@ -34,22 +34,21 @@ Before you begin, make sure you have:
 
 1. In **Select plans**, toggle **Containers** to **On**.
 
-1. In **Monitoring coverage** select **Settings** to access the plan configuration options.
+1. Select **Configure** to access the plan configuration options.
 
 1. Toggle **On** the relevant Defender for Containers components:
 
-   - **Agentless threat protection**: Enables control plane threat detection based on Kubernetes audit logs.
+   - **Agentless discovery for Kubernetes**  
+     Discovers GKE clusters in the connected GCP project.
 
-     > [!NOTE]
-     > If you disable this setting, control plane threat detection is disabled.
+   - **Agentless container vulnerability assessment**  
+     Enables vulnerability assessment for container images stored in Google Container Registry (GCR) and Artifact Registry.
 
-   - **Auto provision Defender’s sensor for Azure Arc**: Deploys the Defender sensor for runtime threat detection. When this setting is enabled, you can also toggle on **Enable Defender Security Gating** for.
+   - **Defender DaemonSet**  
+     Deploys the Defender sensor for runtime threat detection on GKE clusters.
 
-   - **Auto provision Azure Policy extension for Azure Arc**: Enables configuration and posture assessment for Kubernetes clusters and workloads.
-
-   - **Kubernetes API access**: Enables API-based access required for cluster discovery and posture assessment.
-
-   - **Registry access**: Enables vulnerability assessment for container images stored in Amazon ECR.
+   - **Azure Policy for Kubernetes**  
+     Enables configuration and posture assessment for Kubernetes clusters and workloads.
 
 1. Select **Save**.
 

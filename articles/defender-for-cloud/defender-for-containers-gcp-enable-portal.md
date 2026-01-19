@@ -8,61 +8,28 @@ ai-usage: ai-assisted
 
 # Enable Defender for Containers on GCP (GKE) via portal
 
-This article shows you how to enable Microsoft Defender for Containers on your Google Kubernetes Engine (GKE) clusters through the Azure portal. You can choose to enable all security features at once for comprehensive protection, or selectively deploy specific components based on your requirements.
-
-## When to use this guide
-
-Use this guide if you want to:
-
-- Set up Defender for Containers on GCP for the first time
-- Enable all security features for comprehensive protection
-- Selectively deploy specific components
-- Fix or add missing components to an existing deployment
-- Deploy using a controlled, selective approach
-- Exclude certain clusters from protection
+This article explains how to enable Microsoft Defender for Containers for Google Kubernetes Engine (GKE) clusters by using the Azure portal.
 
 ## Prerequisites
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
-GCP-specific requirements:
+### GCP-specific requirements
 
-- GCP project with appropriate permissions
-- GKE clusters (version 1.19+)
-- Container images in Google Container Registry or Artifact Registry
-- Service account with required IAM roles
-- Cloud Shell or gcloud CLI configured
+- A GCP project connected to Microsoft Defender for Cloud. If you haven’t connected your project yet, see [Connect your GCP project to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
+
+- One or more GKE clusters running Kubernetes version 1.19 or later
 
 ## Create GCP connector
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Go to **Microsoft Defender for Cloud**.
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
-1. Select **Environment settings** from the left menu.
-
-1. Select **Add environment** > **Google Cloud Platform**.
-
-    :::image type="content" source="media/quickstart-onboard-gcp/add-gcp-project-environment-settings.png" alt-text="Screenshot showing how to connect a GCP project to Microsoft Defender for Cloud." lightbox="media/quickstart-onboard-gcp/add-gcp-project-environment-settings.png":::
-
-    :::image type="content" source="media/defender-for-kubernetes-intro/add-gcp-environment.png" alt-text="Screenshot showing adding GCP environment." lightbox="media/defender-for-kubernetes-intro/add-gcp-environment.png":::
-
-1. Select the relevant GCP connector if you have multiple:
-
-    :::image type="content" source="media/defender-for-containers-enable-plan-gke/relevant-connector.png" alt-text="Screenshot that shows an example GCP connector." lightbox="media/defender-for-containers-enable-plan-gke/relevant-connector-expanded.png":::
-
-## Configure connector details
-
-1. In the **Account details** section, enter:
-   - **Connector name**: A descriptive name for your GCP project
-   - **GCP project ID**: Your GCP project identifier
-   - **Resource group**: Select or create a resource group
-
-   :::image type="content" source="media/defender-for-kubernetes-intro/add-gcp-account-details.png" alt-text="Screenshot showing GCP account details configuration." lightbox="media/defender-for-kubernetes-intro/add-gcp-account-details.png":::
+1. Select the relevant GCP connector.
 
 1. Select **Next: Select plans**.
 
-## Enable Defender for Containers features
 
 1. In **Select plans**, toggle **Containers** to **On**.
 
