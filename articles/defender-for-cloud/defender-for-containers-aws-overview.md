@@ -51,11 +51,9 @@ These components work together to provide visibility into security signals and p
 
 Enable Defender for Containers for Amazon EKS by using one of the following methods:
 
-- **[Azure portal](defender-for-containers-aws-enable-portal.md)**: Guided setup for enabling Defender for Containers and required components.
+- **[Azure portal](defender-for-containers-aws-enable-portal.md)**: Guided portal-based setup for enabling Defender for Containers and configuring required components.
 
-- **[Programmatic deployment](defender-for-containers-aws-enable-programmatically.md)**: Automation and infrastructure-as-code scenarios using Azure CLI and REST APIs.
-
-After onboarding, some components, for example, the Defender sensor, can be deployed or managed using **[Helm](deploy-helm.md)** as part of your Kubernetes workflows.
+- **[Programmatic deployment](defender-for-containers-aws-enable-programmatically.md)**: Automation scenarios using Azure CLI.
 
 ## View your current coverage
 

@@ -8,93 +8,65 @@ ai-usage: ai-assisted
 
 # Defender for Containers on GCP (GKE) - overview
 
-Microsoft Defender for Containers extends enterprise-grade security to your Google Kubernetes Engine (GKE) clusters. It provides comprehensive protection through vulnerability scanning, runtime threat detection, software supply chain capabilities, and security posture management—all while maintaining the flexibility and scale that GCP customers expect.
+Microsoft Defender for Containers extends security monitoring and protection to Google Kubernetes Engine (GKE) clusters by integrating with Microsoft Defender for Cloud. It helps security and DevOps teams gain visibility into container image vulnerabilities, runtime activity, and Kubernetes configuration risks in GCP environments.
 
-## What is Defender for Containers on GCP?
+## Integration with GCP
 
-Defender for Containers on GCP is a cloud-native security solution that protects your GKE clusters and containerized workloads running in Google Cloud Platform. When you connect your GCP projects to Microsoft Defender for Cloud, you gain visibility and protection across your entire container estate, whether running in Azure, GCP, AWS, or on-premises.
+Defender for Containers integrates with Google Cloud through a secure GCP connector that connects your GCP projects to Microsoft Defender for Cloud. Once connected, the solution:
 
-The solution seamlessly integrates with GCP services like Google Container Registry (GCR), Artifact Registry, and GKE's native security features. It also provides Microsoft's advanced threat intelligence and security capabilities. This integration enables organizations to maintain consistent security policies and threat detection across their multicloud container deployments.
+- Discovers GKE clusters in connected GCP projects
+- Connects selected clusters to Azure Arc to enable Defender components
+- Deploys a Defender sensor to collect runtime security signals
+- Integrates with Google Container Registry (GCR) and Artifact Registry for container image vulnerability assessment
+- Generates security recommendations based on observed configuration and posture
+- Surfaces alerts for suspicious activity related to GKE workloads
 
-## How it works with GCP
-
-Defender for Containers uses a lightweight architecture that respects GCP's security model while providing comprehensive protection. When you create a GCP connector in Defender for Cloud, the solution automatically:
-
-- Discovers all GKE clusters in your connected GCP projects
-- Connects clusters to Azure Arc for centralized management and monitoring
-- Deploys a lightweight sensor as a DaemonSet for runtime protection
-- Integrates with GCR and Artifact Registry for vulnerability scanning
-- Collects GKE audit logs and metrics for security analysis
-- Provides security recommendations based on CIS GKE Benchmark
-
-This architecture ensures minimal performance impact on your workloads while maintaining GCP's security boundaries and compliance requirements.
+The integration is designed to work alongside native GCP security features and does not require inbound connectivity to your clusters.
 
 ## Key capabilities
 
-Defender for Containers delivers comprehensive security across four critical areas:
+Defender for Containers provides the following capabilities for GKE environments:
 
-| Capability | Description | Key Features |
-|------------|-------------|--------------|
-| **Vulnerability assessment** | Scans container images in GCR and Artifact Registry for known vulnerabilities | • Native integration with Google registries<br>• Support for private endpoints<br>• Automated scanning on push<br>• CVSS scoring with remediation guidance |
-| **Runtime threat protection** | Monitors GKE clusters in real-time for malicious activities and anomalies | • GKE audit log analysis<br>• Workload behavior monitoring<br>• Network anomaly detection<br>• Integration with Binary Authorization |
-| **Security posture management** | Evaluates cluster configurations against security benchmarks and best practices | • CIS GKE Benchmark assessment<br>• GKE-specific recommendations<br>• Workload Identity validation<br>• Pod Security Standards enforcement |
-| **Gated deployment** | Prevents vulnerable or misconfigured workloads from reaching production | • Block deployments based on vulnerability severity<br>• Enforce security baselines for configurations<br>• Integration with Azure Policy and admission controllers<br>• DevOps pipeline gates |
+- **Container image vulnerability assessment** for images stored in GCR and Artifact Registry
+- **Threat detection and alerting** based on runtime signals collected from GKE nodes, workloads, and Kubernetes audit logs
+- **Security posture insights** for Kubernetes clusters and workloads, aligned with Kubernetes and GKE security best practices
 
-## Architecture overview
+> [!NOTE]
+> Available signals and detections depend on cluster configuration and enabled data sources.
 
-The Defender for Containers architecture on GCP is designed for security and efficiency:
+## Architecture for GKE
 
-**GCP Connector**: Establishes secure connectivity between your GCP projects and Microsoft Defender for Cloud by using service account authentication or Workload Identity Federation.
+The Defender for Containers architecture for GKE consists of several integrated components:
 
-**Azure Arc for Kubernetes**: Provides a control plane for managing GKE clusters from Azure without requiring inbound connectivity.
+- **GCP Connector**: Connects GCP projects to Microsoft Defender for Cloud by using service account authentication and workload identity federation.
+- **Azure Arc–enabled Kubernetes**: Establishes a secure, outbound connection between GKE clusters and Azure and enables Defender components to be deployed as Arc extensions.
+- **Defender Sensor**: Runs as a DaemonSet on GKE nodes and collects runtime telemetry and security signals.
+- **Azure Policy extension for Kubernetes**: Evaluates cluster and workload configurations to generate security posture recommendations.
 
-**Defender Sensor**: Deployed as a DaemonSet on each GKE cluster, collects runtime telemetry and security events with minimal resource consumption.
-
-**Registry Integration**: Native integration with GCR and Artifact Registry enables vulnerability scanning without moving images or exposing credentials.
-
-**Cloud Logging Integration**: Leverages GKE audit logs and Cloud Logging for comprehensive security monitoring without duplicating data.
-
-These components work together to provide end-to-end security while respecting GCP's shared responsibility model and your existing security controls.
+These components work together to provide visibility into security signals and posture without requiring inbound access to GKE clusters.
 
 ## Deployment options
 
-Defender for Containers on GCP supports flexible deployment approaches:
+You can enable Defender for Containers for GKE by using one of the following methods:
 
-- **[Azure portal deployment](defender-for-containers-gcp-enable-portal.md)** - Guided experience with automated setup scripts
-- **[Programmatic deployment](defender-for-containers-gcp-enable-programmatically.md)** - Script-based deployment for automation scenarios
-
-Choose the deployment method that aligns with your GCP operational practices and security requirements.
-
-## Prerequisites
-
-Before deploying Defender for Containers on GKE:
-
-- Active Azure subscription with Defender for Cloud enabled
-- GCP project with Owner or Security Admin role
-- GKE clusters running version 1.19 or later
-- Enabled GCP APIs: Kubernetes Engine, Container Registry, Cloud Asset
-- Network connectivity from GKE to Azure endpoints
-
-> [!NOTE]
-> For detailed prerequisites and network requirements, see:
->
-> - [Enable all components via portal](defender-for-containers-gcp-enable-portal.md#prerequisites)
-> - [Deploy programmatically](defender-for-containers-gcp-enable-programmatically.md#prerequisites)
-
-## Pricing
-
-For current pricing, see [Microsoft Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+- **[Azure portal](defender-for-containers-gcp-enable-portal.md)**: Guided setup that allows you to enable all components or deploy specific components selectively.
+- **[Programmatic deployment](defender-for-containers-gcp-enable-programmatically.md)**: Automation scenarios using command-line tools and scripts.
 
 ## View your current coverage
 
-Defender for Cloud provides access to [workbooks](custom-dashboards-azure-workbooks.md) through [Azure workbooks](/azure/azure-monitor/visualize/workbooks-overview). Workbooks are customizable reports that provide insights into your security posture.
+Defender for Cloud provides access to [workbooks](custom-dashboards-azure-workbooks.md) through [Azure workbooks](/azure/azure-monitor/visualize/workbooks-overview). Workbooks are customizable reports that help you understand your security posture.
 
-The [coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) helps you understand your current coverage by showing which plans are enabled on your subscriptions and resources.
+The [coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) shows which Defender for Cloud plans and components are enabled across your subscriptions and connected environments.
 
-## Next steps
+## Pricing
 
-Ready to secure your GKE clusters? Choose your deployment path:
+Defender for Containers is billed as part of Microsoft Defender for Cloud. Pricing depends on the enabled components and the number of protected resources.
 
-- [Enable all components via portal](defender-for-containers-gcp-enable-portal.md) - Recommended for initial setup
-- [Deploy programmatically](defender-for-containers-gcp-enable-programmatically.md) - For automation and scale
-- [Verify deployment](defender-for-containers-gcp-verify.md) - Ensure components are working correctly
+For pricing details, see [Microsoft Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+
+## Related content
+
+- [Defender for Containers on Azure Kubernetes Service (AKS)](defender-for-containers-azure-overview.md)
+- [Defender for Containers on Amazon EKS](defender-for-containers-aws-overview.md)
+- [Enable Defender for Containers on GCP via portal](defender-for-containers-gcp-enable-portal.md)
+- [Deploy the Defender sensor using Helm](deploy-helm.md)

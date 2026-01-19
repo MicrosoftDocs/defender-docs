@@ -10,9 +10,6 @@ ai-usage: ai-assisted
 
 This article explains how to deploy Defender for Containers components on your Amazon EKS clusters by using command-line tools and automation methods.
 
-> [!TIP]
-> For a guided portal experience, see [Enable all components via portal](defender-for-containers-aws-enable-portal.md).
-
 ## Prerequisites
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
@@ -112,3 +109,4 @@ az k8s-extension create \
 - [Verify deployment](defender-for-containers-aws-verify.md)
 - [Configure Defender for Containers settings](defender-for-containers-aws-configure.md)
 - [Remove Defender for Containers](defender-for-containers-aws-remove.md)
+- [Troubleshoot Defender for Containers on AWS (EKS)](defender-for-containers-aws-troubleshoot.md)
