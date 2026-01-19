@@ -135,7 +135,7 @@ After connecting your EKS clusters to Azure Arc:
 
 ---
 
-# Google Kubernetes Engine (GKE)
+# Google Kubernetes Engine (GKE) (#tab/gke)
 
 ## Prerequisites
 
