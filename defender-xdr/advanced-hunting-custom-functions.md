@@ -35,7 +35,7 @@ ms.date: 12/16/2025
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-A function is a type of query in advanced hunting that you can use in other queries as if it's a command. By creating your own custom functions, you can reuse any query logic when you hunt in your environment.
+A function is a type of query in advanced hunting that you can use in other queries as if it were a command. By creating your own custom functions, you can reuse any query logic when you hunt in your environment.
 
 This article explains the different types of functions available in advanced hunting, and the steps for creating and using custom functions.
 
@@ -78,7 +78,7 @@ To create a function from the current query in the editor:
 1. Select **Save**.
 
 > [!IMPORTANT]
-> You can use custom functions created in advanced hunting in custom detection rules and advanced hunting queries. They're not supported in workbooks or analytics rules. 
+> You can use most of the custom functions you create in advanced hunting in custom detection rules and advanced hunting queries. However, if you create and save a custom function under **Shared functions** > **Sentinel workspace functions**, it works the same way as [custom functions imported from Microsoft Sentinel log analytics](#custom-functions-imported-from-microsoft-sentinel-log-analytics), so you can't use it in custom detection rules.
 
 ### Add parameters to your custom function
 
