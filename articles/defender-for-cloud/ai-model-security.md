@@ -15,13 +15,7 @@ Microsoft Defender for Cloud's Defender for AI security supports AI model scanni
 
 AI model security automatically y scan AI models for security risks such as embedded malware, unsafe operators, and exposed secrets before those models ever reach production. Integrated directly with Azure Machine Learning and CI/CD pipelines, the service surfaces real‑time findings and actionable remediation guidance, allowing teams to stop risky models early in the development process.
 
-With AI model security:
-
-- Security teams can scan custom AI models uploaded to Azure Machine Learning workspaces and registries, including formats such as ONNX, Pickle, TorchScript, and others for threats like malware, unsafe operators, and exposed secrets.
-
-- Microsoft Defender for Cloud surfaces scan results, providing security teams with centralized visibility of security findings. These detailed insights include severity, remediation guidance, and model metadata to support effective triage and prioritization.
-
-- Developers can trigger model scans during build or release stages by using CLI tools integrated into Azure DevOps or GitHub pipelines. This CI/CD integration for static scanning enables early detection of risks before models reach production.
+With AI model security, security teams can scan custom AI models uploaded to Azure Machine Learning workspaces and registries, to identify threats like embedded malware, unsafe operators, and exposed secrets. Defender for Clou presents the results, giving teams visibility into security findings along with severity ratings, remediation guidance, and relevant model metadata to support effective triage and prioritization. Developers can also trigger model scans during build or release stages by using CLI tools integrated with Azure DevOps or GitHub pipelines, enabling static scanning and early risk detection before models reach production.
 
 ## Prerequisites
 
