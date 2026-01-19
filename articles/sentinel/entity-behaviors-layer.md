@@ -233,14 +233,17 @@ Using the UEBA behaviors layer results in the following costs:
 
 ## Best practices and troubleshooting tips for querying behaviors
 
-This section provides best practices and troubleshooting tips for querying behaviors in the Defender portal and in your Sentinel workspace. 
+This section explains how to query behaviors from both the Defender portal and your Sentinel workspace. While the underlying schemas are identical, the data available differs:
 
-Table names differ slightly between Defender portal and in Sentinel workspace. In terms of schema, the tables are identical. In terms of data, the tables in Defender portal contain behaviors from all connected services (including Microsoft Defender for Cloud Apps and Microsoft Defender for Cloud, if applicable), whereas the tables in Sentinel workspace only contain behaviors generated from logs ingested into that specific Sentinel workspace.   
->
-> | **Context** | **Tables to use** | **Use cases** |
-> |-------------|-------------------|---------------|
-> | **Defender portal Advanced Hunting** | `BehaviorInfo`<br>`BehaviorEntities` | Detection rules, incident investigation, threat hunting in Defender portal |
-> | **Sentinel workspace** | `SentinelBehaviorInfo`<br>`SentinelBehaviorEntities` | Azure Monitor workbooks, ingestion monitoring, KQL queries in Sentinel workspace |
+- The Defender portal tables include behaviors from all connected Defender services (such as Microsoft Defender for Cloud Apps and Microsoft Defender for Cloud).
+- The Sentinel workspace tables include only the behaviors generated from logs ingested into that specific Sentinel workspace.
+
+This table summarizes which behavior tables to use in each environment:
+
+| **Context** | **Tables to use** | **Use cases** |
+|-------------|-------------------|---------------|
+| **Defender portal Advanced Hunting** | `BehaviorInfo`<br>`BehaviorEntities` | Detection rules, incident investigation, threat hunting in Defender portal |
+| **Sentinel workspace** | `SentinelBehaviorInfo`<br>`SentinelBehaviorEntities` | Azure Monitor workbooks, ingestion monitoring, KQL queries in Sentinel workspace |
 
 For more practical examples of using behaviors, see [Use cases and examples](#use-cases-and-examples).
 
@@ -291,7 +294,6 @@ For more information about Kusto Query Language (KQL), see [Kusto query language
 - **Create automation, workbooks, and detection rules based on behaviors**: 
   - Use the `BehaviorInfo` table as a data source for detection rules or automation playbooks in the Defender portal. For example, create a scheduled query rule that triggers when a specific behavior appears.
   - For [Azure Monitor workbooks](../sentinel/monitor-your-data.md) and any artifacts built directly on your Sentinel workspace, make sure to query the `SentinelBehaviorInfo` and `SentinelBehaviorEntities` tables in your Sentinel workspace.
-
 
 ### Troubleshooting 
 
