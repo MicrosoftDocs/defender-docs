@@ -56,7 +56,7 @@ Export your QRadar rule data as a CSV file, as explained here [Exporting rul
 
 1. Only include the following fields in your export to avoid duplications that can lead to QRadar application freeze:
 
-"Rule name", "Type", "Rule enabled", "Notes", "Action details", "Response details", "Rule response: Event description", "Is rule", "Rule installed", "Rule response: Event name", "Rule: test definition", "Content extension name", "Content category"
+   "Rule name", "Type", "Rule enabled", "Notes", "Action details", "Response details", "Rule response: Event description", "Is rule", "Rule installed", "Rule response: Event name", "Rule: test definition", "Content extension name", "Content category"
 
 ---
 
