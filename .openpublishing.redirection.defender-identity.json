@@ -1114,7 +1114,11 @@
       "source_path": "defender-for-identity/rotate-password-microsoft-entra-connect.md",
       "redirect_url": "/defender-for-identity/security-posture-assessments/hybrid-security",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/link-unlink-account-to-identity.md",
+      "redirect_url": "/defender-for-identity/manage-related-identities-accounts",
+      "redirect_document_id": false
     }
-
   ]
 }

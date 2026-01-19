@@ -253,4 +253,4 @@ Depending on what you're using, you might need to refer to the documentation for
 - [Common mistakes to avoid when defining exclusions](common-exclusion-mistakes-microsoft-defender-antivirus.md)
 - [Overview of indicators in Microsoft Defender for Endpoint](indicators-overview.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
