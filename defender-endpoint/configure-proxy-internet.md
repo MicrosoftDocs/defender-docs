@@ -3,8 +3,8 @@ title: Configure your devices to connect to the Defender for Endpoint service us
 description: Learn how to configure your devices to enable communication with the cloud service using a proxy.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -13,12 +13,12 @@ ms.collection:
 - tier1
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 07/01/2024
+ms.date: 11/09/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # STEP 2: Configure your devices to connect to the Defender for Endpoint service using a proxy
 
 
@@ -109,11 +109,11 @@ Configure the static proxy using the Group Policy available in Administrative Te
 
 1. **Administrative Templates > Windows Components > Microsoft Defender Antivirus > Define proxy server for connecting to the network**. 
 
-2. Set it to **Enabled** and define the proxy server. The URL must have either `http://` or `https://`. For supported versions for `https://`, see [Manage Microsoft Defender Antivirus updates](microsoft-defender-antivirus-updates.md).
+1. Set it to **Enabled** and define the proxy server. The URL must have either `http://` or `https://`. For supported versions for `https://`, see [Manage Microsoft Defender Antivirus updates](microsoft-defender-antivirus-updates.md).
 
    :::image type="content" source="media/proxy-server-mdav.png" alt-text="The proxy server for Microsoft Defender Antivirus" lightbox="media/proxy-server-mdav.png":::
 
-3. Under the registry key `HKLM\Software\Policies\Microsoft\Windows Defender`, the policy sets the registry value `ProxyServer` as `REG_SZ`. 
+1. Under the registry key `HKLM\Software\Policies\Microsoft\Windows Defender`, the policy sets the registry value `ProxyServer` as `REG_SZ`. 
 
    The registry value `ProxyServer` takes the following string format:
 
@@ -126,7 +126,9 @@ Configure the static proxy using the Group Policy available in Administrative Te
 >
 > For resiliency purposes and the real-time nature of cloud-delivered protection, Microsoft Defender Antivirus caches the last known working proxy. Ensure your proxy solution does not perform SSL inspection, as that breaks the secure cloud connection.
 >
-> Microsoft Defender Antivirus doesn't use the static proxy to connect to Windows Update or Microsoft Update for downloading updates. Instead, it uses a system-wide proxy if configured to use Windows Update, or the configured internal update source according to the [configured fallback order](manage-protection-updates-microsoft-defender-antivirus.md). If necessary, you can use **Administrative Templates > Windows Components > Microsoft Defender Antivirus > Define proxy auto-config (.pac)** for connecting to the network. If you need to set up advanced configurations with multiple proxies, use **Administrative Templates > Windows Components > Microsoft Defender Antivirus > Define addresses to bypass proxy server** and prevent Microsoft Defender Antivirus from using a proxy server for those destinations.
+> Microsoft Defender Antivirus doesn't use the static proxy to connect to Windows Update or Microsoft Update for downloading updates. Instead, it uses a system-wide proxy if configured to use Windows Update, or the configured internal update source according to the [configured fallback order](manage-protection-updates-microsoft-defender-antivirus.md).
+>
+> If necessary, you can use **Administrative Templates > Windows Components > Microsoft Defender Antivirus > Define proxy auto-config (.pac)** for connecting to the network. If you need to set up advanced configurations with multiple proxies, use **Administrative Templates > Windows Components > Microsoft Defender Antivirus > Define addresses to bypass proxy server** and prevent Microsoft Defender Antivirus from using a proxy server for those destinations.
 > 
 > You can use PowerShell with the `Set-MpPreference` cmdlet to configure these options: 
 >    - `ProxyBypass`
@@ -144,7 +146,7 @@ Use `netsh` to configure a system-wide static proxy.
    1. Go to **Start** and type `cmd`.
    1. Right-click **Command prompt** and select **Run as administrator**.
 
-2. Enter the following command and press **Enter**:
+1. Enter the following command and press **Enter**:
 
    ```cmd
    netsh winhttp set proxy <proxy>:<port>
@@ -152,7 +154,7 @@ Use `netsh` to configure a system-wide static proxy.
 
    For example: `netsh winhttp set proxy 10.0.0.6:8080`
 
-3. To reset the `winhttp` proxy, enter the following command and press **Enter**:
+1. To reset the `winhttp` proxy, enter the following command and press **Enter**:
 
    ```cmd
    netsh winhttp reset proxy
@@ -181,5 +183,5 @@ For devices running Windows 7, Windows 8.1, Windows Server 2008 R2, and servers 
 - [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
 - [Onboard devices without Internet access to Microsoft Defender for Endpoint](configure-environment.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint on macOS overview
 ms.reviewer: joshbregman
 description: An introduction and overview of Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -162,5 +162,5 @@ Starting with macOS 11 (Big Sur), Defender for Endpoint has been fully migrated 
 - [Privacy for Microsoft Defender for Endpoint on macOS](mac-privacy.md).
 - [Turn on Network protection for macOS](network-protection-macos.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

@@ -2,8 +2,8 @@
 title: Microsoft Defender for Endpoint on Android - Privacy information
 description: Privacy controls, how to configure policy settings that impact privacy and information about the diagnostic data collected in Microsoft Defender for Endpoint on Android.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -100,4 +100,4 @@ Optional data includes diagnostic data and feedback data. Optional diagnostic da
 
 - The user's email address, if they choose to provide it.
 - Feedback type (smile, frown, idea) and any feedback comments submitted by the user.
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

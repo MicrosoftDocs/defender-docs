@@ -70,9 +70,9 @@ The rest of this article describes how to remove the Report Message and Report P
     > [!IMPORTANT]
     > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
--  The Report Message and Report Phishing add-ins now use Nested app authentication. For more information, see [Nested app auth requirement set](/javascript/api/requirement-sets/common/nested-app-auth-requirement-sets) . If your Outlook client doesn't support the required NAA authentication, we suggest updating clients in the Microsoft admin center or advising users to use the built-in **Report** button.
+- The Report Message and Report Phishing add-ins now use Nested app authentication. For more information, see [Nested app auth requirement set](/javascript/api/requirement-sets/common/nested-app-auth-requirement-sets) . If your Outlook client doesn't support the required NAA authentication, we suggest updating clients in the Microsoft admin center or advising users to use the built-in **Report** button.
 
--  For organizational removals, the organization needs to be configured to use OAuth authentication. For more information, see [Determine if Centralized Deployment of add-ins works for your organization](/Microsoft-365/admin/manage/centralized-deployment-of-add-ins).
+- For organizational removals, the organization needs to be configured to use OAuth authentication. For more information, see [Determine if Centralized Deployment of add-ins works for your organization](/Microsoft-365/admin/manage/centralized-deployment-of-add-ins).
 
 - For more information on how to report a message using reporting in Outlook, see [Report false positives and false negatives in Outlook](submissions-outlook-report-messages.md).
 

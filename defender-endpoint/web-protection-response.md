@@ -2,8 +2,8 @@
 title: Respond to web threats in Microsoft Defender for Endpoint
 description: Respond to alerts related to malicious and unwanted websites. Understand how web threat protection informs end users through their web browsers and Windows notifications
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -79,5 +79,5 @@ With web protection in Defender for Endpoint, your end users are prevented from 
 - [Web content filtering](web-content-filtering.md)
 - [Web threat protection](web-threat-protection.md)
 - [Monitor web security](web-protection-monitoring.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

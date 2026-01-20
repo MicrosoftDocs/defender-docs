@@ -56,12 +56,12 @@ Follow these steps to search the audit log:
 
 1. Navigate to the [Microsoft Defender portal's Audit page](https://security.microsoft.com/auditlogsearch) or go to the [Purview compliance portal](https://purview.microsoft.com) and select **Audit**.
 
-   :::image type="content" source="/defender/media/defender/unified-audit-log-xdr.png" alt-text="Screenshot of the unified audit log page in Microsoft Defender XDR " lightbox="/defender/media/defender/unified-audit-log-xdr.png":::
+   :::image type="content" source="media/microsoft-xdr-auditing/unified-audit-log-xdr.png" alt-text="Screenshot of the unified audit log page in Microsoft Defender XDR " lightbox="media/microsoft-xdr-auditing/unified-audit-log-xdr.png":::
 
 2. On the **New Search** page, filter the activities, dates, and users you want to audit.
 3. Select **Search**
 
-   :::image type="content" source="/defender/media/defender/unified-audit-search.png" alt-text="Screenshot of the unified audit log search options in Microsoft Defender XDR " lightbox="/defender/media/defender/unified-audit-search.png":::
+   :::image type="content" source="media/microsoft-xdr-auditing/unified-audit-search.png" alt-text="Screenshot of the unified audit log search options in Microsoft Defender XDR " lightbox="media/microsoft-xdr-auditing/unified-audit-search.png":::
 
 4. Export your results to Excel for further analysis.
 

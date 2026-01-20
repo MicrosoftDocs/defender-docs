@@ -1,8 +1,8 @@
 ﻿---
 title: Advanced technologies at the core of Microsoft Defender Antivirus
 description: Microsoft Defender Antivirus engines and advanced technologies
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: yongrhee
 manager: bagol
 ms.service: defender-endpoint

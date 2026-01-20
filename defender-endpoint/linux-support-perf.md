@@ -2,8 +2,8 @@
 title: Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux
 description: Troubleshoot performance issues in Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
 ms.date: 02/04/2025
@@ -61,7 +61,7 @@ The following steps can be used to troubleshoot and mitigate these issues:
    > [!NOTE]
    > If the performance problem persists while real-time protection is off, the origin of the problem could be the endpoint detection and response (EDR) component as well. In this case, you need to add global exclusions from Antivirus and EDR. In this case, follow the steps in the section, [Troubleshoot performance issues using Hot Event Sources](#troubleshoot-performance-issues-using-hot-event-sources).
 
-2. To find the applications that are triggering the most scans, you can use real-time statistics gathered by Defender for Endpoint on Linux.
+1. To find the applications that are triggering the most scans, you can use real-time statistics gathered by Defender for Endpoint on Linux.
 
    > [!NOTE]
    > This feature is available in version 100.90.70 or newer.
@@ -99,7 +99,7 @@ The following steps can be used to troubleshoot and mitigate these issues:
 
    The output of this command shows all processes and their associated scan activity.
 
-3. Type the following commands:
+1. Type the following commands:
 
    ```bash
    mdatp diagnostic real-time-protection-statistics --sort --top 4
@@ -329,5 +329,5 @@ Configure Microsoft Defender for Endpoint on Linux with exclusions for the proce
 
 - [Investigate agent health issues](health-status.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

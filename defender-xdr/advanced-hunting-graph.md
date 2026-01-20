@@ -22,17 +22,14 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 search.appverid: met150
-ms.date: 09/30/2025
+ms.date: 12/01/2025
 
 ---
-# Hunt for threats using the hunting graph (Preview)
+# Hunt for threats using the hunting graph
 
-> [!IMPORTANT]
-> Some information relates to prereleased product that may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+The **hunting graph** provides visualization capabilities in [advanced hunting](advanced-hunting-overview.md) by rendering threat scenarios as interactive graphs. This feature allows security operations center (SOC) analysts, threat hunters, and security researchers to conduct threat hunting and incident response more easily and intuitively, improving their efficiency and ability to assess possible security issues. 
 
-The **hunting graph** provides visualization capabilities in [advanced hunting](advanced-hunting-overview.md) by rendering threat scenarios as interactive graphs. This feature allows security operations center (SOC) analysts, threat hunters, and security researchers conduct threat hunting and incident response easily and more intuitively, improving their efficiency and ability to assess possible security issues. 
-
-Analysts often rely on [Kusto Query Language](/azure/kusto/query/) (KQL) queries to uncover relationships between entities—an approach that could be both time-consuming and prone to oversights. Hunting graph makes exploration of security data simpler and faster by visualizing these relationships, letting you trace paths and possible choke points, as well as surface insights and take various actions based on the results that tabular queries might miss. 
+Analysts often rely on [Kusto Query Language](/azure/kusto/query/) (KQL) queries to uncover relationships between entities. This approach can be both time-consuming and prone to oversights. The hunting graph makes exploration of security data simpler and faster by visualizing these relationships. You can trace paths and possible choke points, as well as surface insights and take various actions based on the results that tabular queries might miss. 
 
 ## Get access
 
@@ -43,7 +40,7 @@ You must also have the following access or permissions:
 - [Microsoft Sentinel data lake](/azure/sentinel/datalake/sentinel-lake-overview)
 - At least [read-only](/security-exposure-management/prerequisites) access in Microsoft Security Exposure Management
 
-## Where to find hunting graph
+## Where to find the hunting graph
 
 You can find the **hunting graph** page by going to the left navigation bar in the Microsoft Defender portal and selecting **Investigation & response** > **Hunting** > **Advanced hunting**. 
 
@@ -55,9 +52,9 @@ A new hunting graph page appears as tab labeled **New hunt** in the advanced hun
 
 ## Hunting graph features
 
-The interactive graphs generated in the hunting graph are composed of **nodes** and **edges** to represent entities in your environment (for example, a device, user account, or IP address, among others) and their relationships or connection properties, respectively. [Learn more about graphs and visualizations in Microsoft Defender](understand-graph-icons.md)
+The interactive graphs that the hunting graph generates use **nodes** and **edges** to show entities in your environment, such as a device, user account, or IP address, and their relationships or connection properties. [Learn more about graphs and visualizations in Microsoft Defender](understand-graph-icons.md).
 
-The lower right-hand corner of the graph also has control buttons that let you **Zoom in** and **Zoom out**, and view the graph's **Layers**.
+The lower right corner of the graph has control buttons that let you **Zoom in** and **Zoom out**, and view the graph's **Layers**.
 
 :::image type="content" source="./media/advanced-hunting-graph/hunting-graph-render.png" alt-text="Screenshot of a rendered graph in the hunting graph page." lightbox="./media/advanced-hunting-graph/hunting-graph-render.png":::
 
@@ -65,9 +62,9 @@ The lower right-hand corner of the graph also has control buttons that let you *
 
 ### Use predefined scenarios in the hunting graph
 
-The hunting graph lets you search with predefined scenarios, which are prebuilt advanced hunting queries that could help you answer specific and common questions for specific use cases.
+The hunting graph lets you search with predefined scenarios. These scenarios are prebuilt advanced hunting queries that help you answer specific and common questions for specific use cases.
 
-To start hunting using a predefined scenario, on a new hunting graph page, select **Search with Predefined scenarios**. A side panel appears where you can then perform the following steps: 
+To start hunting with a predefined scenario, on a new hunting graph page, select **Search with Predefined scenarios**. A side panel appears where you can then perform the following steps: 
 
 1. [Select a scenario and enter the required inputs](#step-1-select-a-scenario-and-enter-scenario-inputs)
 1. [Apply filters on the graph](#step-2-apply-filters)
@@ -81,7 +78,7 @@ The following table describes the predefined scenarios in the hunting graph and 
 
 | **Scenario** | **Description** | **Inputs** |
 |---|---|---|
-| **Paths between two entities** | Provide two entities (nodes) to view the paths between them.<br><br>Use this scenario if you want to discover if there’s a path leading from one entity to another. |<ul><li>Start Entity<li>End Entity</ul>**Note:** Make sure to identify and input the correct start and end entities, as the generated graph will be directional. |
+| **Paths between two entities** | Provide two entities (nodes) to view the paths between them.<br><br>Use this scenario if you want to discover if there’s a path leading from one entity to another. |<ul><li>Start Entity<li>End Entity</ul>|
 | **Entities that have access to a key vault** | Provide a specific key vault to view paths from various entities (devices, virtual machines, containers, servers, and others) that have direct or indirect access to it.<br><br>Use this scenario in case of a breach, maintenance work, or assessment of the impact of entities that might have access to a sensitive asset like a key vault. | Target key vault |
 | **Users with access to sensitive data** | Provide any sensitive data storage of interest to view users that have access to it.<br><br>Use this scenario if you want to know which entities have access to sensitive data, especially in cases when an incident indicates unusual access to confidential files. | Target storage account |
 | **Critical users with access to storage accounts containing sensitive data** | This scenario identifies critical users with access to storage resources containing sensitive data.<br><br>Use this scenario to prevent, assess, and monitor unauthorized access, exposure risk, and breach impact based on the privileged users. | (None) |
@@ -89,6 +86,8 @@ The following table describes the predefined scenarios in the hunting graph and 
 | **Paths to a highly critical Kubernetes cluster** | Provide a Kubernetes cluster with high criticality to view users, virtual machines, and containers that have access to it.<br><br>Use this scenario to assess, analyze and prioritize handling of attack paths leading to highly critical Kubernetes cluster. | Target Kubernetes cluster |
 | **Identities with access to Azure DevOps repositories** | Provide an Azure DevOps (ADO) repository name to view users that have read and/or write access to said repository.<br><br>Use this scenario to identify entities with access to ADO repositories, which often contain sensitive assets and therefore valuable targets for threat actors. This scenario gives you visibility and lets you plan your response in case of a breach. | Target ADO repository |
 | **Identify nodes in the highest number of paths to SQL data stores** | This scenario identifies the nodes that appear in the highest number of paths leading to SQL data stores. The scenario discovers paths in the graph where users have roles or permissions to access the SQL data stores.<br><br>Use this scenario to gain visibility to stores that might contain sensitive information, assess the impact in case of a breach, and prepare your mitigation and response. | (None) |
+| **Attack paths to a critical asset** | View the potential routes through various nodes leading towards a target.<br>Use this scenario to examine potential lateral movement that could reach a critical asset through your network. | Target critical asset |
+| **Entity connections** | Find the direct connections of a given entity and analyze its relationships. | Source entity<br><br>**Note:** You can use any entity as the seeding node for the graph. The graph indicates incoming and outgoing connections. |
 
 :::image type="content" source="./media/advanced-hunting-graph/hunting-graph-select-scenario.png" alt-text="Screenshot of the predefined scenarios side panel highlighting the available options." lightbox="./media/advanced-hunting-graph/hunting-graph-select-scenario.png":::
 
@@ -96,7 +95,7 @@ The following table describes the predefined scenarios in the hunting graph and 
 
 #### Step 2: Apply filters
 
-You can add relevant filters to make the map view of your selected scenario more precise. For example, if you want to **Show only the shortest paths**, tick this option.
+You can add relevant filters to make the map view of your selected scenario more precise. For example, if you want to **Show only the shortest paths**, select this option.
 
 :::image type="content" source="./media/advanced-hunting-graph/hunting-graph-filter.png" alt-text="Screenshot of the predefined scenarios side panel highlighting the Show only the shortest paths filter." lightbox="./media/advanced-hunting-graph/hunting-graph-filter.png":::
 
@@ -113,6 +112,7 @@ To add a filter, select **Add filter** then the select any of the supported node
 | **Source Node** | equals |<ul><li>Is critical<li>Is vulnerable<li>Is exposed to the internet</ul> |
 | **Target Node** | equals |<ul><li>Has sensitive data<li>Has risk score<li>Is vulnerable</ul> |
 | **Edge Type** | equals |<ul><li>has permissions to<li>routes traffic to<li>affecting<li>member of<li>defines<li>can impersonate as<li>contains<li>can authenticate as<li>runs on<li>has role on<li>is running<li>used to create<li>maintains<li>frequently logged in by<li>has credentials of<li>defined in<li>can authenticate to<li>pushes<li>provisions</ul>|
+| **Edge direction** | equals |<ul><li>Incoming<li>Outgoing<li>Both</ul> |
 
 :::image type="content" source="./media/advanced-hunting-graph/hunting-graph-advanced-filters.png" alt-text="Screenshot of the predefined scenarios side panel highlighting the advanced filter section." lightbox="./media/advanced-hunting-graph/hunting-graph-advanced-filters.png":::
 

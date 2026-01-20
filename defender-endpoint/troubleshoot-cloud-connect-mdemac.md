@@ -2,8 +2,8 @@
 title: Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on macOS
 description: This article describes how to troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on macOS
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
 ms.localizationpriority: medium
 manager: bagol
@@ -79,5 +79,5 @@ The output from this command should be similar to:
 OK https://x.cp.wd.microsoft.com/api/report
 OK https://cdn.x.cp.wd.microsoft.com/ping
 ```
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

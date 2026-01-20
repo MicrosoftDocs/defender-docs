@@ -2,8 +2,8 @@
 title: Troubleshoot issues on Microsoft Defender for Endpoint on Android
 description: Troubleshoot issues for Microsoft Defender for Endpoint on Android
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: troubleshooting-general
 ms.subservice: android
 search.appverid: met150
-ms.date: 03/21/2025
+ms.date: 12/10/2025
 appliesto:
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2
@@ -113,73 +113,63 @@ The Android devices Battery Optimization screen opens automatically as part of t
 
    ![Image of Battery Optimization screen](media/android-support-signin/image.png)
 
-2. Tap on **Not optimized** and select **All Apps**
+1. Tap on **Not optimized** and select **All Apps**
 
    ![Image of Optimization dropdown menu](media/android-support-signin/image1.png)
 
    ![Image of All Apps option in the dropdown](media/android-support-signin/image2.png)
 
-3. Scroll down to find **Microsoft Defender** and tap on it
+1. Scroll down to find **Microsoft Defender** and tap on it
 
    ![Image of All Apps including Microsoft Defender](media/android-support-signin/image3.png)
 
-4. Select **Don't Optimize** option and tap on **Done**
-
+1. Select **Don't Optimize** option and tap on **Done**
    ![Image of the Microsoft Defender Optimize drop down](media/android-support-signin/image4.png)
 
-5. Navigate back to Defender
+1. Navigate back to Defender
 
-**Solution 2** (needed in case the Solution 1 does not work):
+**Solution 2** (needed in case the Solution 1 doesn't work):
 
-1. Install MDE app in personal profile. (Sign-in isn't required.)
-2. Open the Company Portal and tap on Settings.
-3. Go to the Battery Optimization section, tap on the **Turn Off** button, and then select on **Allow** to turn off Battery Optimization for the Company Portal.
-4. Again, go to the Battery Optimization section and tap on the **Turn On** button. The battery saver section opens.
-5. Find the Defender app and tap on it.
-6. Select **No Restriction**. Go back to the Defender app in work profile and tap on **Allow** button.  
-7. The application shouldn't be uninstalled from personal profile for this to work.
+1. Install the Microsoft Defender for Endpoint app in personal profile. (Sign-in isn't required.)
+1. Open the Company Portal and tap on Settings.
+1. Go to the Battery Optimization section, tap on the **Turn Off** button, and then select on **Allow** to turn off Battery Optimization for the Company Portal.
+1. Again, go to the Battery Optimization section and tap on the **Turn On** button. The battery saver section opens.
+1. Find the Defender app and tap on it.
+1. Select **No Restriction**. Go back to the Defender app in work profile and tap on **Allow** button.  
+1. The application shouldn't be uninstalled from personal profile for this to work.
 
-## Unable to use banking applications with MDE app
+## Unable to use certain third party applications along with the Microsoft Defender for Endpoint app (VPN)
 
-**Applies to:** Banking apps like iMobile Pay (ICICI), PNB ONE.
+**Applies to:** (Not limited) Apps handling banking, government services, or handling sensitive personal information
 
-**Cause:** Android allows apps in the personal profile to check if there's a VPN active on the device, even outside of the personal profile. The banking app checks that and blocks it in VPN work profiles only. The banking app doesn't work with any other VPN product.
+**Cause:** Some applications, such as those used for banking, government services, or handling sensitive personal information, may restrict access if a VPN is detected on your device. These restrictions are determined by the app developer as part of their implementation and even applies all VPNs *including third party on the device. Microsoft Defender doesn't control or enforce this behavior through its settings or policies.
 
-**Solution:**
-Users need to disable MDE VPN from the Settings page. The following steps can be used:
-
-1. Go to Settings on the mobile device.
-2. Search for VPN or open 'Network and Internet' and select on VPN.
-3. Select on Microsoft Defender and select Disconnect.
-
-Users should enable VPN when they're no longer using the banking app to ensure that their devices are protected.
-
-> [!NOTE]
-> This a temporary workaround. We are working on other alternatives to provide users more control over the VPN settings from within the app.
+**Workaround:**
+If an app doesn't function while a VPN is enabled or present in the work profile, you might need to disable the VPN or work profile when you use the app. 
+Users should enable VPN when they're no longer using the app to ensure that their devices are protected.
 
 ## Send in-app feedback
 
 If a user faces an issue, which isn't already addressed in the above sections or is unable to resolve using the listed steps, the user can provide **in-app feedback** along with **diagnostic data**. Our team can then investigate the logs to provide the right solution. Users can follow these steps to do the same:
 
-1. Open the **MDE application** on your device and select on the **profile icon** in the top-left corner.
+1. Open the **Microsoft Defender for Endpoint application** on your device and select the **profile icon** in the top-left corner.
 
-    :::image type="content" source="media/select-profile-icon-1.jpg" alt-text="The profile icon in the Microsoft Defender for Endpoint portal" lightbox="media/select-profile-icon-1.jpg":::
+    a. :::image type="content" source="media/select-profile-icon-1.jpg" alt-text="The profile icon in the Microsoft Defender for Endpoint portal" lightbox="media/select-profile-icon-1.jpg":::
 
-2. Select "Help & feedback".
+1. Select **Help & feedback**.
 
-    :::image type="content" source="media/selecthelpandfeedback2.png" alt-text="The Help & feedback option that can be selected in the Microsoft Defender for Endpoint portal" lightbox="media/selecthelpandfeedback2.png":::
+    a. :::image type="content" source="media/selecthelpandfeedback2.png" alt-text="The Help & feedback option that can be selected in the Microsoft Defender for Endpoint portal" lightbox="media/selecthelpandfeedback2.png":::
 
-3. Select "Send feedback to Microsoft".
+1. Select "Send feedback to Microsoft".
 
-    :::image type="content" alt-text="Select send feedback to Microsoft" source="media/send-feedback-to-microsoft-3.jpg":::
+    a. :::image type="content" alt-text="Select send feedback to Microsoft" source="media/send-feedback-to-microsoft-3.jpg":::
 
-4. Choose from the given options. To report an issue, select "I want to report an issue".
+1. Choose from the given options. To report an issue, select "I want to report an issue".
 
-    :::image type="content" source="media/report-issue-4.jpg" alt-text="The I want to report an issue option" lightbox="media/report-issue-4.jpg":::
+    a. :::image type="content" source="media/report-issue-4.jpg" alt-text="The I want to report an issue option" lightbox="media/report-issue-4.jpg":::
 
-5. Provide details of the issue that you're facing and check "Send diagnostic data". We recommend checking "Include your email address" so that the team can reach back to you with a solution or a follow-up.
+1. Provide details of the issue that you're facing and check "Send diagnostic data". We recommend checking "Include your email address" so that the team can reach back to you with a solution or a follow-up.
 
-    :::image type="content" source="media/finalsubmit5.png" alt-text="The pane on which you can add details and attach diagnostic data" lightbox="media/finalsubmit5.png":::
+    a. :::image type="content" source="media/finalsubmit5.png" alt-text="The pane on which you can add details and attach diagnostic data" lightbox="media/finalsubmit5.png":::
 
-6. Select on "Submit" to successfully send the feedback.
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+1. Select on "Submit" to successfully send the feedback.

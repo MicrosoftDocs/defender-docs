@@ -2,8 +2,8 @@
 title: Microsoft Defender Antivirus updates - Previous versions for technical upgrade support
 description: Understand the type of technical support offered for previous versions of Microsoft Defender Antivirus
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
 ms.date: 07/23/2025
@@ -2094,5 +2094,4 @@ The versions listed in this section are no longer supported. To view current ver
 - Added support for Windows 10 RS1 or later OS install images.
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

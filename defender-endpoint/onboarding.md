@@ -2,8 +2,8 @@
 title: Onboard devices to Microsoft Defender for Endpoint
 description: Learn how to onboard endpoints to Microsoft Defender for Endpoint service.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -37,15 +37,15 @@ If you're onboarding devices in the Microsoft Defender portal, follow these step
 
 1. Make sure to review the [Minimum requirements for Defender for Endpoint](minimum-requirements.md).
 
-2. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints**, and then, under **Device management**, select **Onboarding**.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **System** > **Settings** > **Endpoints**, and then, under **Device management**, select **Onboarding**.
 
    :::image type="content" source="media/mde-device-onboarding-ui.png" alt-text="Screenshot showing device onboarding in the Microsoft Defender portal for Defender for Endpoint.":::
 
-3. Under **Select operating system to start onboarding process**, select the operating system for the device.
+1. Under **Select operating system to start onboarding process**, select the operating system for the device.
 
-4. Under **Connectivity type**, select either **Streamlined** or **Standard**. (See [prerequisites for streamlined connectivity](/defender-endpoint/configure-device-connectivity#prerequisites).)
+1. Under **Connectivity type**, select either **Streamlined** or **Standard**. (See [prerequisites for streamlined connectivity](/defender-endpoint/configure-device-connectivity#prerequisites).)
 
-5. Under **Deployment method**, select an option. Then download the onboarding package (and installation package, as appropriate). For more information, see the following articles:
+1. Under **Deployment method**, select an option. Then download the onboarding package (and installation package, as appropriate). For more information, see the following articles:
 
    - [Onboard client devices running Windows or macOS to Microsoft Defender for Endpoint](onboard-client.md)
    - [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
@@ -126,5 +126,5 @@ After onboarding the endpoints move on to the next step where you'll configure t
 
 - [Step 5 - Configure capabilities](onboard-configure.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

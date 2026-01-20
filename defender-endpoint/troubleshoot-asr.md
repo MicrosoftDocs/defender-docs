@@ -4,8 +4,8 @@ description: Resources and sample code to troubleshoot issues with attack surfac
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 ms.date: 04/01/2025
 ms.reviewer:
 manager: bagol
@@ -17,15 +17,13 @@ ms.collection:
 - tier3
 - mde-asr
 search.appverid: met150
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 ---
 
 # Troubleshoot attack surface reduction rules
 
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 The first and most immediate way is to check locally, on a Windows device, which attack surface reduction rules are enabled (and their configuration) is by using the PowerShell cmdlets.
 
@@ -39,9 +37,9 @@ When you use [attack surface reduction rules](attack-surface-reduction.md) you m
 There are four steps to troubleshooting these problems:
 
 1. [Confirm prerequisites](#confirm-prerequisites).
-2. [Use audit mode to test the rule](#use-audit-mode-to-test-the-rule).
-3. [Add exclusions for the specified rule](#add-exclusions-for-a-false-positive) (for false positives).
-4. [Collect and submit support logs](#collect-microsoft-defender-anti-malware-protection-diagnostic-data-for-file-submissions).
+1. [Use audit mode to test the rule](#use-audit-mode-to-test-the-rule).
+1. [Add exclusions for the specified rule](#add-exclusions-for-a-false-positive) (for false positives).
+1. [Collect and submit support logs](#collect-microsoft-defender-anti-malware-protection-diagnostic-data-for-file-submissions).
 
 ## Confirm prerequisites
 
@@ -60,7 +58,7 @@ When setting up the attack surface reduction rules by using Group Policy, here a
 
 1. Make sure when adding the GUID for attack surface reduction rules, there are **no double quotes** (like this: "ASR Rules GUID") at the beginning or at the end of the GUID.
 
-2. Make sure that there are **no spaces** at the beginning or at the end when adding the GUID for attack surface reduction rules.
+1. Make sure that there are **no spaces** at the beginning or at the end when adding the GUID for attack surface reduction rules.
 
 ### Querying which rules are active
 
@@ -98,9 +96,9 @@ Follow these instructions in [Use the demo tool to see how attack surface reduct
 
 1. Enable audit mode for the specific rule you want to test. Use Group Policy to set the rule to `Audit mode` (value: `2`) as described in [Enable attack surface reduction rules](enable-attack-surface-reduction.md). Audit mode allows the rule to report the file or process, but allows it to run.
 
-2. Perform the activity that is causing an issue. For example, open the file or run the process that should be blocked, but is allowed.
+1. Perform the activity that is causing an issue. For example, open the file or run the process that should be blocked, but is allowed.
 
-3. [Review the attack surface reduction rule event logs](attack-surface-reduction.md) to see if the rule would block the file or process if the rule were set to `Enabled`.
+1. [Review the attack surface reduction rule event logs](attack-surface-reduction.md) to see if the rule would block the file or process if the rule were set to `Enabled`.
 
 If a rule isn't blocking a file or process that you're expecting it should block, first check to see if audit mode is enabled. Audit mode might be enabled for testing another feature, or by an automated PowerShell script, and might not be disabled after the tests were completed. 
 
@@ -139,12 +137,12 @@ When you report a problem with attack surface reduction rules, you're asked to c
 
 1. Download the [MDE Client Analyzer](/defender-endpoint/overview-client-analyzer).
 
-2. Run the MDE Client Analyzer using [Live Response or locally](/defender-endpoint/run-analyzer-windows).
+1. Run the MDE Client Analyzer using [Live Response or locally](/defender-endpoint/run-analyzer-windows).
 
    > [!TIP]
    > Ensure that log collection takes place during the reproduction attempt. Also, close any applications that aren't essential to reproducing the issue.
 
-3. Run the MDE Client Analyzer with the `-v` switches:
+1. Run the MDE Client Analyzer with the `-v` switches:
 
    ```powershell
    C:\Work\tools\MDEClientAnalyzer\MDEClientAnalyzer.cmd -v
@@ -158,13 +156,13 @@ When you report a problem with attack surface reduction rules, you're asked to c
    cd "c:\program files\Windows Defender"
    ```
 
-2. Run this command to generate the diagnostic logs:
+1. Run this command to generate the diagnostic logs:
 
    ```console
    mpcmdrun -getfiles
    ```
 
-3. By default, they're saved to `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab`. Attach the file to the submission form.
+1. By default, they're saved to `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab`. Attach the file to the submission form.
 
 
 You can also view rule events through the Microsoft Defender Antivirus dedicated command-line tool, called `*mpcmdrun.exe*`, that can be used to manage and configure, and automate tasks if needed.
@@ -189,4 +187,4 @@ The most relevant files are as follows:
 - [Enable attack surface reduction rules](enable-attack-surface-reduction.md)
 - [Evaluate attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

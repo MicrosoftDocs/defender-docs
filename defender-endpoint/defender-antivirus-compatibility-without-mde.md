@@ -1,8 +1,8 @@
 ---
 title: Microsoft Defender Antivirus and non-Microsoft antivirus/antimalware solutions Antivirus protection without Defender for Endpoint
 description: Microsoft Defender Antivirus and non-Microsoft antivirus/antimalware solutions Antivirus protection without Defender for Endpoint
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: article
@@ -117,6 +117,5 @@ Uninstall-WindowsFeature Windows-Defender-Gui
 
 - [Performance analyzer for Microsoft Defender Antivirus](/defender-endpoint/tune-performance-defender-antivirus)
 
-> [!TIP]
-> Do you want to learn more? Engage with the Microsoft Security community in our Tech Community: **[Microsoft Defender for Endpoint Tech Community](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/bd-p/MicrosoftDefenderATP)**. 
+
 

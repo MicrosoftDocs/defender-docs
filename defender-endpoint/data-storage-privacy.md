@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint data storage and privacy
 description: Learn about how Microsoft Defender for Endpoint handles privacy and data that it collects.
 keywords: Microsoft Defender for Endpoint, data storage and privacy, storage, privacy, licensing, geolocation, data retention, data
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: kesharab
+author: KesemSharabi
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
