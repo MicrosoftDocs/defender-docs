@@ -318,4 +318,4 @@ Select **Filter** to filter rules by **Standard protection** or **All**.
 - [Attack surface reduction \(ASR\) rules report](attack-surface-reduction-rules-report.md)
 - [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

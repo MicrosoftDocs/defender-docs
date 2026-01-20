@@ -346,4 +346,4 @@ You can use either of the following methods:
     $AgentCfg.ReloadConfiguration()
     ```
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
