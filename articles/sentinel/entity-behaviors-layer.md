@@ -193,13 +193,15 @@ During public preview, the UEBA behaviors layer focuses on these non-Microsoft d
 
 | Data source | Supported vendors, services, and logs | Connector | Supported behaviors |
 |-------------|---------------------------|-------|----------------|
-| [CommonSecurityLog](/azure/azure-monitor/reference/tables/commonsecuritylog) | <ul><li>Cyber Ark Vault</li><li>Palo Alto Threats</li></ul> |  | <ul><li>[CommonSecurityLog behaviors](https://github.com/Azure/Azure-Sentinel/blob/master/Sentinel%20Behaviors/Behaviors%20Rules/commonsecuritylog_behaviors.md)</li></ul> |
+| [CommonSecurityLog](/azure/azure-monitor/reference/tables/commonsecuritylog)<sup>1</sup> | <ul><li>Cyber Ark Vault</li><li>Palo Alto Threats</li></ul> | `CommonSecurityLog` stores logs from various vendors and services, not ingested using a specific connector.  | <ul><li>[CommonSecurityLog behaviors](https://github.com/Azure/Azure-Sentinel/blob/master/Sentinel%20Behaviors/Behaviors%20Rules/commonsecuritylog_behaviors.md)</li></ul> |
 | [AWSCloudTrail](/azure/azure-monitor/reference/tables/awscloudtrail) | <ul><li>EC2</li><li>IAM</li><li>S3</li><li>EKS</li><li>Secrets Manager</li></ul> |<ul><li>[Amazon Web Services](../sentinel/data-connectors-reference.md#amazon-web-services)</li><li>[Amazon Web Services S3](../sentinel/data-connectors-reference.md#amazon-web-services-s3)</li></ul> | <ul><li>[AWS CloudTrail behaviors](https://github.com/Azure/Azure-Sentinel/blob/master/Sentinel%20Behaviors/Behaviors%20Rules/aws_cloudtrail_behaviors.md)</li></ul> |
 |[GCPAuditLogs](/azure/azure-monitor/reference/tables/gcpauditlogs) |<ul><li>Admin activity logs</li><li>Data access logs</li><li>Access transparency logs</li></ul>|<ul><li>[GCP Pub/Sub Audit Logs](../sentinel/data-connectors-reference.md#gcp-pubsub-audit-logs)</li></ul>| <ul><li>[GCP Audit Logs behaviors](https://github.com/Azure/Azure-Sentinel/blob/master/Sentinel%20Behaviors/Behaviors%20Rules/gcp_auditlogs_behaviors.md)</li></ul> |
 
 
+<sup>1</sup> `CommonSecurityLog` can contain logs from many vendors. The UEBA behaviors layer only generates behaviors for **supported vendors and log types**. If the table receives logs from an unsupported vendor, you won't see any behaviors even though the data source is connected.
+
 > [!IMPORTANT]
-> These sources are separate from other UEBA capabilities and need to be enabled specifically. If you enabled AWSCloudTrail for UEBA Analytics and Anomalies, you still need to enable it separately for behaviors.
+> You must enable these sources separately from other UEBA capabilities. For example, if you enabled AWSCloudTrail for UEBA analytics and anomalies, you still need to enable it separately for behaviors.
 
 
 ## Prerequisites
