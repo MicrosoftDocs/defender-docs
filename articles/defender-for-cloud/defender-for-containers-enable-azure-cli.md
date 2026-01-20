@@ -9,7 +9,7 @@ ms.date: 11/27/2025
 
 # Enable Defender for Containers using Azure CLI
 
-This article explains how to enable and deploy Microsoft Defender for Containers components by using Azure CLI for different Kubernetes environments.
+This article explains how to enable Microsoft Defender for Containers and deploy its components by using Azure CLI for different Kubernetes environments.
 
 # [Azure Kubernetes Service (AKS)](#tab/aks)
 
@@ -32,7 +32,7 @@ For information about enabling Defender plans by using Azure CLI, REST API, or A
 
 When you enable the Defender for Containers plan, the Defender sensor is deployed on AKS clusters by default.
 
-If automatic provisioning is disabled, or if you need to deploy the sensor on a specific cluster, run the following commands.
+If automatic provisioning is disabled or you want to deploy the sensor on a specific cluster, run the following commands.
 
 To deploy the Defender sensor to a specific AKS cluster:
 
@@ -53,7 +53,7 @@ az aks update \
   --defender-config logAnalyticsWorkspaceResourceId=<workspace-resource-id>
 ```
 
-## Deploy the Azure Policy add-on
+## Deploy the Azure Policy extension
 
 Enable Azure Policy for Kubernetes to assess and enforce configuration best practices:
 
@@ -215,7 +215,7 @@ Verify that the Defender for Containers DaemonSet is deployed and running:
 kubectl get daemonsets -n kube-system
 ```
 
-Confirm that a Defender for Containers DaemonSet is listed and that the DESIRED, CURRENT, and READY columns show matching values.
+Confirm that a Defender for Containers DaemonSet is listed and that the **DESIRED**, **CURRENT**, and **READY** columns show matching values.
 
 # [Google Kubernetes Engine (GKE)](#tab/gke)
 
@@ -236,7 +236,7 @@ Verify that the Defender for Containers DaemonSet is deployed and running:
 kubectl get daemonsets -n kube-system
 ```
 
-Confirm that a Defender for Containers DaemonSet is listed and that the DESIRED, CURRENT, and READY columns show matching values.
+Confirm that a Defender for Containers DaemonSet is listed and that the **DESIRED**, **CURRENT**, and **READY** columns show matching values.
 
 ---
 
