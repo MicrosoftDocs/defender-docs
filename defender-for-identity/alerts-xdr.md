@@ -24,6 +24,7 @@ For more information, see [Security alerts in Microsoft Defender XDR](/microsoft
 Defender for Identity XDR security alerts are divided by category, or phase, as seen in a typical cyber-attack kill chain.
 
 Use the links in the following table to jump directly to the relevant category and review the alerts available for each category:
+
 - [Credential Access alerts](#credential-access-alerts)
 - [Defense Evasion alerts](#defense-evasion-alerts)
 - [Discovery alerts](#discovery-alerts)
