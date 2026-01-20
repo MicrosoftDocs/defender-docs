@@ -60,7 +60,7 @@ To view all automatic attack disruption and predictive shielding actions taken a
     - Select **30 Days** > **Custom range**, and select the relevant timeframe for the actions you want to investigate.
     - Add and apply the **Provider: Attack disruption** filter. This filter also includes predictive shielding actions.
     - Add and apply the **Policy status** filter: Select all options except for **Not applicable**.
-1. Review the listed activities. The **Policy status** column shows the current status of the policy for each activity, for example, a user was contained in the specified timeframe, but the policy is currently inactive. This means that the user is no longer contained.
+1. Review the listed activities. The **Policy status** column shows the current status of the policy for each activity. For example, a user was contained in the specified timeframe, but the policy is currently inactive. This means that the user is no longer contained.
 
     :::image type="content" source="media/autoad-results/activities-tab-status.png" alt-text="Screenshot of the Activities tab showing policy status." lightbox="media/autoad-results/activities-tab-status.png":::
 
