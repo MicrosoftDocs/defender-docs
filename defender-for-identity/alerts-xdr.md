@@ -1,7 +1,7 @@
 ﻿---
 title:  Microsoft Defender for Identity XDR security alerts
 description: This article provides a list of the XDR security alerts issued by Microsoft Defender for Identity.
-ms.date: 10/23/2025
+ms.date: 01/20/2026
 ms.topic: reference
 ms.reviewer: rlitinsky
 ---
