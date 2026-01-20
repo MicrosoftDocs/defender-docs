@@ -27,14 +27,18 @@ This article explains how the UEBA behaviors layer works, how to enable the beha
 
 ## How the UEBA behaviors layer works
 
-Behaviors are part of Microsoft Sentinel’s [User and Entity Behavior Analytics (UEBA)](../sentinel/identify-threats-with-entity-behavior-analytics.md) capabilities, providing normalized, contextualized activity summaries that complement anomaly detection and enrich investigations. This table shows how behaviors differ from anomalies and alerts:
+Behaviors are part of Microsoft Sentinel’s [User and Entity Behavior Analytics (UEBA)](../sentinel/identify-threats-with-entity-behavior-analytics.md) capabilities, providing normalized, contextualized activity summaries that complement anomaly detection and enrich investigations. 
 
+### Differences between behaviors, anomalies, and alerts
+This table shows how behaviors differ from anomalies and alerts:
 
 | **Capability**   | **What it represents** | **Purpose** |
 |---------------|-------------------------|-------------|
 | **Anomalies** | Patterns that deviate from established baselines | Highlight unusual or suspicious activity |
 | **Alerts**    | Signal a potential security issue requiring attention | Trigger incident response workflows |
 | **Behaviors** | Neutral, structured summaries of activity - normal or abnormal- based on time windows or triggers, enriched with MITRE ATT&CK mappings and entity roles | Provide context and clarity for investigations, hunting, and detection |
+
+### Behavior types and records
 
 When you [enable the UEBA behaviors layer](#enable-the-ueba-behaviors-layer), Microsoft Sentinel processes supported security logs you collect into your Sentinel workspace in near real-time and summarizes two types of behavioral patterns:
 
@@ -52,6 +56,8 @@ Each behavior record includes:
 - **MITRE ATT&CK mapping**: Every behavior is tagged with relevant MITRE tactics and techniques, providing industry-standard context at a glance. You don't just see *what* happened, but also *how it fits* in an attack framework or timeline.
 - **Entity relationship mapping**: Each behavior identifies involved entities (users, hosts, IP addresses) and their roles (actor, target, or other).
 
+### Behavior storage and tables
+
 The UEBA behaviors layer stores behavior records in two types of tables:
 
 - A *behavior information* table, which contains the behavior title, description, MITRE mappings, categories, and links to raw logs, and
@@ -60,6 +66,8 @@ The UEBA behaviors layer stores behavior records in two types of tables:
 These tables integrate seamlessly with your existing workflows for detection rules, investigations, and incident analysis. They process all types of security activity—not just suspicious events—and provide comprehensive visibility into both normal and anomalous behavior patterns.
 
 For information about using behaviors tables, see [Best practices and troubleshooting tips for querying behaviors](#best-practices-and-troubleshooting-tips-for-querying-behaviors).  
+
+### Data flow diagram
 
 This diagram illustrates how the UEBA behaviors layer transform raw logs into structured behavior records that enhance security operations:
 
