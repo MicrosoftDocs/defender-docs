@@ -1,5 +1,5 @@
 ---
-title: Enable Defender for Containers using Azure CLI by environment
+title: Enable Defender for Containers using Azure CLI
 description: Learn how to enable Microsoft Defender for Containers on AKS, Amazon EKS, and Google Kubernetes Engine clusters using Azure CLI.
 ms.topic: how-to
 ms.author: elkrieger
@@ -7,31 +7,34 @@ author: Elazark
 ms.date: 11/27/2025
 ---
 
-# Enable Defender for Containers using Azure CLI by environment
+# Enable Defender for Containers using Azure CLI
 
 This article explains how to enable and deploy Microsoft Defender for Containers components using Azure CLI for different Kubernetes environments. Defender for Containers is enabled and deployed differently depending on the Kubernetes platform. 
 
-Use the tabs below to follow the enablement steps for your Kubernetes environment by using Azure CLI.
-
 # [Azure Kubernetes Service (AKS)](#tab/aks)
 
-### Prerequisites
+## Prerequisites
 
 [!INCLUDE[defender-for-container-prerequisites-aks](includes/defender-for-container-prerequisites-aks.md)]
 
-- Azure CLI version 2.40.0 or later  
-- Contributor or Security Admin permissions on the subscription  
-- An existing AKS cluster  
+Additionally, make sure you have:
 
-### Enable the Defender for Containers plan
+- Azure CLI version 2.40.0 or later
+- Appropriate RBAC permissions (Contributor or Security Admin)
 
-Enable the Containers plan on your subscription before deploying components. You can enable the plan through the Azure portal, REST API, or Azure Policy.
+## Enable the Defender for Containers plan
 
-### Deploy the Defender sensor
+Enable the Defender for Containers plan on your subscription before continuing.
 
-When the Defender for Containers plan is enabled, the Defender sensor is deployed automatically by default.
+For information about enabling Defender plans by using Azure CLI, REST API, or Azure Policy, see [Enable Microsoft Defender for Cloud](connect-azure-subscription.md).
 
-To manually deploy the sensor to a specific AKS cluster:
+## Deploy the Defender sensor
+
+When you enable the Defender for Containers plan, the Defender sensor is deployed on AKS clusters by default.
+
+If automatic provisioning is disabled, or if you need to deploy the sensor on a specific cluster, run the following commands.
+
+To deploy the Defender sensor to a specific AKS cluster:
 
 ```azurecli
 az aks update \
@@ -40,7 +43,7 @@ az aks update \
   --enable-defender
 ```
 
-To deploy the sensor using a custom Log Analytics workspace:
+To deploy the Defender sensor using a custom Log Analytics workspace:
 
 ```azurecli
 az aks update \
@@ -61,35 +64,35 @@ az aks enable-addons \
   --resource-group <resource-group>
 ```
 
-### Amazon Elastic Kubernetes Service (EKS)
+# [Amazon Elastic Kubernetes Service (EKS)](#tab/eks)
 
-Use Azure CLI to deploy Defender for Containers components on Amazon EKS clusters.
-
-#### Prerequisites
+## Prerequisites
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
-Additionally, ensure you have:
+Additionally, make sure you have:
 
 - Azure CLI version 2.40.0 or later
 - AWS CLI configured with appropriate credentials
 - `kubectl` configured for your EKS clusters
 
-#### Enable Defender for Containers
+## Enable Defender for Containers
 
 Enable the Defender for Containers plan on your Azure subscription before continuing.
 
-#### Connect your AWS account
+For information about enabling Defender plans by using Azure CLI, REST API, or Azure Policy, see [Enable Microsoft Defender for Cloud](connect-azure-subscription.md).
+
+## Connect your AWS account
 
 Connect your AWS account to Microsoft Defender for Cloud. See [Connect your AWS account](quickstart-onboard-aws.md).
 
-#### Connect EKS clusters to Azure Arc
+## Connect EKS clusters to Azure Arc
 
-Connect each EKS cluster to Azure Arc. See [Connect an existing Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
+Connect each EKS cluster to Azure Arc. For instructions, see [Connect an existing Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
 
-#### Deploy the Defender sensor
+## Deploy the Defender sensor
 
-Deploy the Defender sensor extension on Arc-connected EKS clusters:
+After connecting your AWS account and EKS clusters to Azure Arc, deploy the Defender sensor extension.
 
 ```azurecli
 az k8s-extension create \
@@ -100,8 +103,7 @@ az k8s-extension create \
   --resource-group <resource-group> \
   --configuration-settings logAnalyticsWorkspaceResourceID=<workspace-resource-id>
 ```
-
-#### Deploy the Azure Policy extension
+## Deploy the Azure Policy extension
 
 ```azurecli
 az k8s-extension create \
@@ -112,11 +114,65 @@ az k8s-extension create \
   --resource-group <resource-group>
 ```
 
+# [Google Kubernetes Engine (GKE)](#tab/gke)
+
+## Prerequisites
+
+[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
+
+Additionally, ensure you have:
+
+- Azure CLI version 2.40.0 or later
+- gcloud CLI configured with appropriate credentials
+- `kubectl` configured for your GKE clusters
+
+## Enable Defender for Containers
+
+Enable the Defender for Containers plan on your Azure subscription before continuing.
+
+For information about enabling Defender plans by using Azure CLI, REST API, or Azure Policy, see [Enable Microsoft Defender for Cloud](connect-azure-subscription.md).
+
+## Connect your GCP project
+
+[Connect your GCP project to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
+
+## Connect GKE clusters to Azure Arc
+
+Connect each GKE cluster to Azure Arc before deploying Defender components.
+
+For instructions, see [Connect an existing Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
+
+## Deploy the Defender sensor
+
+```azurecli
+az k8s-extension create \
+  --name microsoft.azuredefender.kubernetes \
+  --extension-type microsoft.azuredefender.kubernetes \
+  --cluster-type connectedClusters \
+  --cluster-name <cluster-name> \
+  --resource-group <resource-group> \
+  --configuration-settings \
+    logAnalyticsWorkspaceResourceID="/subscriptions/<subscription-id>/resourceGroups/<workspace-rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>"
+```
+
+## Deploy the Azure Policy extension
+
+```azurecli
+az k8s-extension create \
+  --name azure-policy \
+  --extension-type Microsoft.PolicyInsights \
+  --cluster-type connectedClusters \
+  --cluster-name <cluster-name> \
+  --resource-group <resource-group>
+```
+
+---
+
 ## Verify deployment using Azure CLI
 
 Use the following steps to verify that Defender for Containers components were deployed successfully.
 
-### AKS verification
+# [Azure Kubernetes Service (AKS)](#tab/aks)
 
 Verify that the Defender sensor is enabled on an AKS cluster:
 
@@ -127,7 +183,9 @@ az aks show \
   --query "securityProfile.defender"
 ```
 
-Verify that Azure Policy is enabled:
+The output should show that `securityMonitoring.enabled` is set to `true`.
+
+Verify that Azure Policy add-on is enabled:
 
 ```azurecli
 az aks show \
@@ -136,7 +194,9 @@ az aks show \
   --query addonProfiles.azurepolicy
 ```
 
-### EKS verification
+The output should show `enabled: true`.
+
+# [Amazon Elastic Kubernetes Service (EKS)](#tab/eks)
 
 Verify that the EKS cluster is connected to Azure Arc:
 
@@ -147,13 +207,17 @@ az connectedk8s show \
   --query connectivityStatus
 ```
 
-Verify that the Defender sensor pods are running:
+The output should show `Connected`.
+
+Verify that the Defender sensor is running in the cluster. Pod names and labels may vary by version.
 
 ```bash
-kubectl get pods -n kube-system -l app=microsoft-defender
+kubectl get pods -n kube-system
 ```
 
-### GKE verification
+Confirm that a Defender for Containers DaemonSet is present and shows the desired number of pods as ready.
+
+# [GKE verification](#tab/gke)
 
 Verify that the GKE cluster is connected to Azure Arc:
 
@@ -164,11 +228,15 @@ az connectedk8s show \
   --query connectivityStatus
 ```
 
-Verify that the Defender sensor pods are running:
+The output should show `Connected`.
 
 ```bash
-kubectl get pods -n kube-system -l app=microsoft-defender
+kubectl get pods -n kube-system 
 ```
+
+Confirm that a Defender for Containers DaemonSet is present and shows the desired number of pods as ready.
+
+---
 
 ## Next steps
 
