@@ -13,13 +13,12 @@ ms.collection:
   - m365-security
   - usx-security
   - tier1
-  - sentinel-only
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 11/04/2025
+ms.date: 1/04/2026
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
