@@ -97,7 +97,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
     - **Expires on:** Set the expiration date as one year from the date of creation (this is the Atlassian maximum time for the expiration date).
 
 
-1. Copy the **Organization ID** and the **API key**. You'll need it later.
+1. Copy the **Organization ID** and the **API key**. You'll need them later.
 
     >[!NOTE]
     > In Atlassian, domains are used to determine which user accounts can be managed by your organization. You won't see users and their activities if their domains aren't verified in the Atlassian configuration. 
