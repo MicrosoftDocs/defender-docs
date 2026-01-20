@@ -1,15 +1,14 @@
 ---
 title: Protect your NetDocuments environment | Microsoft Defender for Cloud Apps
 description: This article provides information about the benefits of connecting your NetDocuments app to Defender for Cloud Apps using the API connector for visibility and control over use.
-ms.date: 12/12/2023
+ms.date: 11/27/2025
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
+
 # How Defender for Cloud Apps helps protect your NetDocuments environment
 
-
-
-As a productivity and collaboration cloud solution, NetDocuments holds sensitive information to your organization. Any abuse of NetDocuments by a malicious actor or any human error may expose your most critical assets and services to potential attacks.
+As a productivity and collaboration cloud solution, NetDocuments holds sensitive information to your organization. Any abuse of NetDocuments by a malicious actor or any human error might expose your most critical assets and services to potential attacks.
 
 Connecting NetDocuments to Defender for Cloud Apps gives you improved insights into your NetDocuments activities and provides threat detection for anomalous behavior.
 
@@ -37,7 +36,7 @@ Connecting NetDocuments to Defender for Cloud Apps gives you improved insights i
 | Activity  policy                   | Built a customized policy by the NetDocuments [Audit Log](https://support.netdocuments.com/hc/en-us/articles/205220260-Consolidated-Activity-Log) activities |
 
 >[!NOTE]
->Login/Logouts activities are not supported by NetDocuments.
+>Login/Logouts activities aren't supported by NetDocuments.
 
 For more information about creating policies, see [Create a policy](control-cloud-apps-with-policies.md#create-a-policy)
 .
@@ -69,23 +68,14 @@ For more information, see:
 
 This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing NetDocuments using the App Connector APIs. This connection gives you visibility into and control over your organization's NetDocuments use.
 
-### Prerequisites
-
-- The NetDocuments user used for logging into NetDocuments must be a Full NetDocuments Repository Admin user.
 
 ### Configure NetDocuments
 
 1. Sign in to your NetDocuments account with a Full NetDocuments Repository Admin user.
 
-1. Enter the **Information and Settings** section from the top-left corner.
+1. Copy your repository ID. You'll need it later.
 
-    ![Enter the NetDocuments information and settings section.](media/netdocuments-information-and-settings.png)
-
-1. In this page, you can find your repository ID. Copy and save it. You'll need it later.
-
-    ![Your NetDocuments repository ID.](media/netdocuments-repository-id.png)
-
-1. Record the URL of your account (it should be one of URLs in the following list). You'll need this information later.
+1. Copy your account URL. You'll need it later. Make sure that it matches one of the URLs listed in the table below.
 
     | Location       |              URL            |
     | -------------- | --------------------------- |
@@ -116,11 +106,8 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 ## Rate limits and limitations
 
 - The default rate limit is 100,000 requests per minute.
-- Login/Logouts activities are not supported by NetDocuments.
+- Login/Logouts activities aren't supported by NetDocuments.
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Control cloud apps with policies](control-cloud-apps-with-policies.md)
-
-[!INCLUDE [Open support ticket](includes/support.md)]
+- [Control cloud apps with policies](control-cloud-apps-with-policies.md)
