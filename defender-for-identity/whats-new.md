@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 11/30/2025
+ms.date: 01/20/2026
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality.
 ms.reviewer: AbbyMSFT
@@ -24,6 +24,9 @@ For more information, see also:
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
 ## January 2026
+
+### MDI alerts migrated to the unified Defender alerting experience
+As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, the following alerts were converted from the Microsoft Defender for Identity classic format to the MDI XDR alert format. Keep in mind that all alerts are based on detections from Defender for Identity sensors. See [Microsoft Defender for Identity XDR security alerts](alerts-xdr.md) for the full list of XDR alerts.
 
 ### New Health Alert: Sensor v3.x RPC Audit Misconfigured
 Enhanced RPC auditing is required for some Microsoft Defender for Identity advanced identity detections. A new health alert helps identify v3.x sensors where this configuration is either missing or incorrectly applied. The alert is being rolled out gradually to customers. For more information, see [Configure RPC on sensors v3.x](deploy/prerequisites-sensor-version-3.md#configure-rpc-auditing-on-sensors-v3x-to-support-advanced-identity-detections).
@@ -134,7 +137,7 @@ As part of the ongoing transition to a unified alerting experience across Micros
 |---|---|---|---|
 |Active Directory attributes Reconnaissance using LDAP|2210|[LDAP reconnaissance attributes in Active Directory](alerts-xdr.md#ldap-reconnaissance-attributes-in-active-directory)|xdr_LdapSensitiveAttributeReconnaissance|
 |User and IP address reconnaissance|2012|[Suspicious Server Message Block (SMB) enumeration from untrusted host](alerts-xdr.md#suspicious-server-message-block-smb-enumeration-from-untrusted-host)|xdr_SmbSessionEnumeration|
-|Account enumeration reconnaissance|2003|[Suspected account enumeration (Kerberos, NTLM, AD FS)](alerts-xdr.md#suspected-account-enumeration-kerberos-ntlm-adfs)|xdr_SuspectedAccountEnumeration|
+|Account enumeration reconnaissance|2003|[Suspected account enumeration (Kerberos, NTLM, AD FS)](alerts-xdr.md#suspected-account-enumeration-kerberos-ntlm-ad-fs)|xdr_SuspectedAccountEnumeration|
 |Suspected brute-force attack (LDAP)|2004|[Suspected brute-force attack on Lightweight Directory Access Protocol (LDAP) authentication](alerts-xdr.md#suspected-brute-force-attack-on-lightweight-directory-access-protocol-ldap-authentication)|xdr_LdapBindBruteforce|
 |||[Suspected password spray attack on Lightweight Directory Access Protocol (LDAP) authentication](alerts-xdr.md#suspected-password-spray-attack-on-lightweight-directory-access-protocol-ldap-authentication)|xdr_LdapBindBruteforce|
 |Suspicious network connection over Encrypting File System Remote Protocol|2416|[Suspicious network connection over Encrypting File System Remote Protocol](alerts-xdr.md#suspicious-network-connection-over-encrypting-file-system-remote-protocol)|xdr_SuspiciousConnectionOverEFSRPC|
