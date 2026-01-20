@@ -9,7 +9,7 @@ ms.date: 11/27/2025
 
 # Enable Defender for Containers using Azure CLI
 
-This article explains how to enable and deploy Microsoft Defender for Containers components using Azure CLI for different Kubernetes environments. Defender for Containers is enabled and deployed differently depending on the Kubernetes platform. 
+This article explains how to enable and deploy Microsoft Defender for Containers components by using Azure CLI for different Kubernetes environments.
 
 # [Azure Kubernetes Service (AKS)](#tab/aks)
 
@@ -209,15 +209,15 @@ az connectedk8s show \
 
 The output should show `Connected`.
 
-Verify that the Defender sensor is running in the cluster. Pod names and labels may vary by version.
+Verify that the Defender for Containers DaemonSet is deployed and running:
 
 ```bash
-kubectl get pods -n kube-system
+kubectl get daemonsets -n kube-system
 ```
 
-Confirm that a Defender for Containers DaemonSet is present and shows the desired number of pods as ready.
+Confirm that a Defender for Containers DaemonSet is listed and that the DESIRED, CURRENT, and READY columns show matching values.
 
-# [GKE verification](#tab/gke)
+# [Google Kubernetes Engine (GKE)](#tab/gke)
 
 Verify that the GKE cluster is connected to Azure Arc:
 
@@ -230,11 +230,13 @@ az connectedk8s show \
 
 The output should show `Connected`.
 
+Verify that the Defender for Containers DaemonSet is deployed and running:
+
 ```bash
-kubectl get pods -n kube-system 
+kubectl get daemonsets -n kube-system
 ```
 
-Confirm that a Defender for Containers DaemonSet is present and shows the desired number of pods as ready.
+Confirm that a Defender for Containers DaemonSet is listed and that the DESIRED, CURRENT, and READY columns show matching values.
 
 ---
 
