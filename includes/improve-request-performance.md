@@ -6,14 +6,14 @@ ms.author: itsela
 author: itsela-ms
 ms.localizationpriority: medium
 manager: dansimp
-ms.date: 08/24/2025
+ms.date: 01/08/2026
 audience: ITPro
 ms.collection: M365-security-compliance 
 ms.topic: article
 ---
 
 > [!TIP]
-> For better performance, use a server closer to your geolocation:
+> For better performance, instead of using api.security.microsoft.com, use a server closer to your geolocation:
 >
 > - us.api.security.microsoft.com
 > - eu.api.security.microsoft.com

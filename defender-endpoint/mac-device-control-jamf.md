@@ -87,5 +87,5 @@ A new device control property is now available to add to the user experience.
 - [Deploy and manage Device Control using Intune](mac-device-control-intune.md)
 - [macOS Device Control frequently asked questions (FAQ)](mac-device-control-faq.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

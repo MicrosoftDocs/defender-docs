@@ -85,5 +85,4 @@ In the following procedure, steps 1 and 2 are optional if you do not want to see
 To offboard an Android or iOS device, uninstall the Microsoft Defender app on the device.
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

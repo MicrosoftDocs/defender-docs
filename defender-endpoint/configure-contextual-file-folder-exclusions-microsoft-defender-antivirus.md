@@ -170,4 +170,4 @@ See [Configure and validate exclusions for Microsoft Defender Antivirus scans](c
 - [Exclusions overview](navigate-defender-endpoint-antivirus-exclusions.md)
 - [Common mistakes to avoid when defining exclusions](common-exclusion-mistakes-microsoft-defender-antivirus.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
