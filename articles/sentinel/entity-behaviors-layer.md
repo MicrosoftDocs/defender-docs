@@ -52,7 +52,14 @@ Each behavior record includes:
 - **MITRE ATT&CK mapping**: Every behavior is tagged with relevant MITRE tactics and techniques, providing industry-standard context at a glance. You don't just see *what* happened, but also *how it fits* in an attack framework or timeline.
 - **Entity relationship mapping**: Each behavior identifies involved entities (users, hosts, IP addresses) and their roles (actor, target, or other).
 
-The UEBA behaviors layer stores behavior records in two dedicated tables, integrating seamlessly with your existing workflows for detection rules, investigations, and incident analysis. It processes all types of security activity - not just suspicious events - and provides comprehensive visibility into both normal and anomalous behavior patterns. For information about using behaviors tables, see [Best practices and troubleshooting tips for querying behaviors](#best-practices-and-troubleshooting-tips-for-querying-behaviors).  
+The UEBA behaviors layer stores behavior records in two types of tables:
+
+- A *behavior information* table, which contains the behavior title, description, MITRE mappings, categories, and links to raw logs, and
+- A *behavior‑related entities* table, which lists all entities involved in the behavior and their roles.
+
+These tables integrate seamlessly with your existing workflows for detection rules, investigations, and incident analysis. They process all types of security activity—not just suspicious events—and provide comprehensive visibility into both normal and anomalous behavior patterns.
+
+For information about using behaviors tables, see [Best practices and troubleshooting tips for querying behaviors](#best-practices-and-troubleshooting-tips-for-querying-behaviors).  
 
 This diagram illustrates how the UEBA behaviors layer transform raw logs into structured behavior records that enhance security operations:
 
@@ -292,7 +299,8 @@ For more information about Kusto Query Language (KQL), see [Kusto query language
 
   To monitor behavior data ingestion, query the `Usage` table for entries related to `SentinelBehaviorInfo` and `SentinelBehaviorEntities`.
 
-- **Create automation, workbooks, and detection rules based on behaviors**: 
+- **Create automation, workbooks, and detection rules based on behaviors**
+
   - Use the `BehaviorInfo` table as a data source for detection rules or automation playbooks in the Defender portal. For example, create a scheduled query rule that triggers when a specific behavior appears.
   - For [Azure Monitor workbooks](../sentinel/monitor-your-data.md) and any artifacts built directly on your Sentinel workspace, make sure to query the `SentinelBehaviorInfo` and `SentinelBehaviorEntities` tables in your Sentinel workspace.
 
