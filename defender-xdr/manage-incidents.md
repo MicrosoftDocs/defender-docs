@@ -339,8 +339,8 @@ To generate analyst notes after investigation is finished, do the following:
     A banner appears with the date and time the generation started. The preparation process can take up to 20 minutes. You can leave the page and continue working elsewhere. You'll receive a notification when complete.
 
     A side panel appears with the status of the generation. If needed, you can stop the generation by selecting **Stop generating**.
-
-    :::image type="content" source="./media/manage-incidents/stop-generating.png" alt-text="Screenshot showing the side panel while it is in the process of generating analyst notes. There's a "Stop generating" button visible.":::
+<!---
+    :::image type="content" source="./media/manage-incidents/stop-generating.png" alt-text="Screenshot showing the side panel while it is in the process of generating analyst notes. There's a "Stop generating" button visible."::: --->
 
 1. When the generation is complete, go to the **Activities** tab. The analyst notes appear as a new line in the activity log. The line includes the date and time the notes were generated and who generated them.
 
