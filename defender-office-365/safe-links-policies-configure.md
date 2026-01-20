@@ -78,7 +78,7 @@ You configure Safe Links policies in the Microsoft Defender portal or in Exchang
 
 ## Use the Microsoft Defender portal to create Safe Links policies
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Safe Links** in the **Policies** section. Or, to go directly to the **Safe Links** page, use <https://security.microsoft.com/safelinksv2>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Safe Links** in the **Policies** section. Or, to go directly to the **Safe Links** page, use <https://security.microsoft.com/safelinksv2>.
 
 2. On the **Safe Links** page, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create** to start the new Safe Links policy wizard.
 
@@ -207,7 +207,7 @@ You configure Safe Links policies in the Microsoft Defender portal or in Exchang
 
 ## Use the Microsoft Defender portal to view Safe Links policy details
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Safe Links** in the **Policies** section. To go directly to the **Safe Links** page, use <https://security.microsoft.com/safelinksv2>.
+In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Safe Links** in the **Policies** section. To go directly to the **Safe Links** page, use <https://security.microsoft.com/safelinksv2>.
 
 On the **Safe Links** page, the following properties are displayed in the list of policies:
 
@@ -230,7 +230,7 @@ Select a policy by clicking anywhere in the row other than the check box next to
 
 ## Use the Microsoft Defender portal to take action on Safe Links policies
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Safe Links** in the **Policies** section. To go directly to the **Safe Links** page, use <https://security.microsoft.com/safealinksv2>.
+In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Safe Links** in the **Policies** section. To go directly to the **Safe Links** page, use <https://security.microsoft.com/safealinksv2>.
 
 2. On the **Safe Links** page, select the Safe Links policy by using either of the following methods:
 
@@ -406,7 +406,9 @@ This example creates a safe links rule to the previous examples, but the rule ap
 
 ```powershell
 $Data = Import-Csv -Path "C:\Data\SafeLinksDomains.csv"
+
 $SLDomains = $Data.Domains
+
 New-SafeLinksRule -Name "Contoso All" -SafeLinksPolicy "Contoso All" -RecipientDomainIs $SLDomains
 ```
 
@@ -507,7 +509,9 @@ This example adds the domains from the specified .csv as a condition to the safe
 
 ```powershell
 $Data = Import-Csv -Path "C:\Data\SafeLinksDomains.csv"
+
 $SLDomains = $Data.Domains
+
 Set-SafeLinksRule -Identity "Contoso All" -RecipientDomainIs $SLDomains
 ```
 

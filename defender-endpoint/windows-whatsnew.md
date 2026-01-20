@@ -4,7 +4,7 @@ description: Learn about the latest feature releases of Microsoft Defender for E
 search.appverid: met150
 ms.service: defender-endpoint
 ms.author: lwainstein
-author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 ms.date: 06/11/2025
 manager: bagol
@@ -220,5 +220,4 @@ All updates contain:
 - [What's new in Defender for Endpoint on iOS](ios-whatsnew.md)
 - [What's new in Defender for Endpoint on Linux](linux-whatsnew.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

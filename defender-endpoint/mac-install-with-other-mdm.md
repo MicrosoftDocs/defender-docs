@@ -3,8 +3,8 @@ title: Deployment with a different Mobile Device Management (MDM) system for Mic
 description: Install Microsoft Defender for Endpoint on macOS on other management solutions.
 ms.service: defender-endpoint
 ms.reviewer: joshbregman
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
@@ -170,5 +170,5 @@ It can miss some errors, and it isn't aware of some design decisions that system
 ## Check installation status
 
 Run [Microsoft Defender for Endpoint](mac-install-with-jamf.md) on a client device to check the onboarding status.
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

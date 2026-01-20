@@ -2,8 +2,8 @@
 title: Protect macOS security settings with tamper protection
 description: Use tamper protection to prevent malicious apps from changing important macOS security settings.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -133,7 +133,7 @@ sudo mdatp config tamper-protection enforcement-level --value block
 > [!NOTE]
 > You must use managed configuration profile (deployed via MDM) on production devices. If a local admin changed tamper protection mode via a manual configuration, they can change it to a less restrictive mode at any time as well. If tamper protection mode was set via a managed profile, only a Security Administrator will be able to undo it.
 
-2. Verify the result.
+1. Verify the result.
 
 ```console
 healthy                                     : true
@@ -543,5 +543,4 @@ $ sudo grep -F '[{tamperProtection}]: Feature state:' /Library/Logs/Microsoft/md
 ```
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

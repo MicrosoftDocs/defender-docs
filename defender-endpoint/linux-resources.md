@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint on Linux resources
 ms.reviewer: gopkr, yujiao
 description: Describes resources for Microsoft Defender for Endpoint on Linux, including how to uninstall it, how to collect diagnostic logs, CLI commands, and known issues with the product.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: troubleshooting-general
 ms.subservice: linux
 search.appverid: met150
-ms.date: 05/02/2025
+ms.date: 12/14/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -133,7 +133,9 @@ The following table lists commands for some of the most common scenarios. Run `m
 |Endpoint Detection and Response|Set early preview |`mdatp edr early-preview [enabled\|disabled]`|
 |Endpoint Detection and Response|Set group-id|`mdatp edr group-ids --group-id [group-id]`|
 |Endpoint Detection and Response|Set / remove tag, only `GROUP` supported|`mdatp edr tag set --name GROUP --value [tag]`|
-|Endpoint Detection and Response|List exclusions (root)|`mdatp edr exclusion list [processes|paths|extensions|all]`|
+
+## Quarantine directory for Defender for Endpoint Linux
+The default directory for files quarantined by MDATP is `/var/opt/microsoft/mdatp/quarantine`. For best results, use the command `MDATP threat quarantine` to manage quarantined files, rather than moving or modifying files directly in the quarantine directory. Direct file operations aren't recommended - always use the CLI for safe and supported quarantine management.
 
 ## Uninstall Defender for Endpoint on Linux
 
@@ -145,15 +147,15 @@ To prevent decommissioned devices from showing up in your device inventory, and 
 
 1. Create a [device tag](/defender-endpoint/machine-tags), and name the tag `decommissioned`. Assign the tag to the Linux devices that you want to offboard from Defender for Endpoint.
 
-2. Create a [Device group](/defender-endpoint/machine-groups) and name it something like, `Decommissioned Linux`. Assign this tag to an appropriate user group.
+1. Create a [Device group](/defender-endpoint/machine-groups) and name it something like, `Decommissioned Linux`. Assign this tag to an appropriate user group.
    
-3. In the [Microsoft Defender portal](https://security.microsoft.com), in the navigation pane, select **Settings** > **Offboard**. In the **Select operating system to start offboarding process**, select **Linux Server**, and then select a deployment method.  
+1. In the [Microsoft Defender portal](https://security.microsoft.com), in the navigation pane, select **Settings** > **Offboard**. In the **Select operating system to start offboarding process**, select **Linux Server**, and then select a deployment method.  
 
    :::image type="content" source="media/offboard-linux.png" alt-text="Screenshot showing Offboarding page in the Microsoft Defender portal.":::
 
    Or, if you're using a non-Microsoft device management solution, disable integration with Defender for Endpoint.
 
-4. Uninstall Defender for Endpoint on the devices.
+1. Uninstall Defender for Endpoint on the devices.
 
 ### Manual uninstallation
 
@@ -169,5 +171,5 @@ To prevent decommissioned devices from showing up in your device inventory, and 
 - [Configure security settings in Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 - [Run the client analyzer on Linux](run-analyzer-linux.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

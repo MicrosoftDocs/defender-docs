@@ -196,11 +196,11 @@ Distribution groups can be created and defined directly in Exchange Online or sy
 
 4. For group type, select **Distribution**, and then click **Next**.
 
-   :::image type="content" source="/defender/media/mdo-eval/3-mdo-eval-pilot-group-type.png" alt-text="Screenshot of the Choose a group type section." lightbox="/defender/media/mdo-eval/3-mdo-eval-pilot-group-type.png":::
+   :::image type="content" source="media/pilot-deploy-defender-office-365/3-mdo-eval-pilot-group-type.png" alt-text="Screenshot of the Choose a group type section." lightbox="media/pilot-deploy-defender-office-365/3-mdo-eval-pilot-group-type.png":::
 
 5. Give the group a **Name** and optional **Description**, and then click Next.
 
-   :::image type="content" source="/defender/media/mdo-eval/4_mdo-eval-pilot-set-up-basics.png" alt-text="Screenshot of the Set up the basics section." lightbox="/defender/media/mdo-eval/4_mdo-eval-pilot-set-up-basics.png":::
+   :::image type="content" source="media/pilot-deploy-defender-office-365/4_mdo-eval-pilot-set-up-basics.png" alt-text="Screenshot of the Set up the basics section." lightbox="media/pilot-deploy-defender-office-365/4_mdo-eval-pilot-set-up-basics.png":::
 
 6. On the remaining pages, assign an owner, add members to the group, set the email address, join-depart restrictions, and other settings.
 

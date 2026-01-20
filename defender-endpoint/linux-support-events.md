@@ -2,8 +2,8 @@
 title: Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux
 description: Troubleshoot missing events or alerts issues in Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
 manager: bagol
@@ -59,7 +59,7 @@ Microsoft Defender for Endpoint utilized `audit` framework from linux to track n
             └─16671 /opt/microsoft/mdatp/sbin/mdatp_audisp_plugin -d
     ```
 
-2. If `auditd` is marked as stopped, start it.
+1. If `auditd` is marked as stopped, start it.
 
     ```bash
     service auditd start
@@ -91,5 +91,5 @@ List the filesystems on the machine with:
 df -Th
 ```
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.topic: how-to
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.custom: nextgen
 ms.date: 01/09/2025
 ms.reviewer: joshbregman
@@ -253,4 +253,4 @@ Depending on what you're using, you might need to refer to the documentation for
 - [Common mistakes to avoid when defining exclusions](common-exclusion-mistakes-microsoft-defender-antivirus.md)
 - [Overview of indicators in Microsoft Defender for Endpoint](indicators-overview.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

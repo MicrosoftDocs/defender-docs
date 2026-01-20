@@ -4,8 +4,8 @@ description: Businesses of all sizes can use this guide to evaluate and test the
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: article
-author: batamig
-ms.author: bagol
+author: KesemSharabi
+ms.author: kesharab
 ms.reviewer: yongrhee
 manager: bagol
 ms.custom: nextgen
@@ -78,5 +78,5 @@ You can also download a PowerShell that will enable all the settings described i
 
 - [Deploy Microsoft Defender Antivirus](deploy-manage-report-microsoft-defender-antivirus.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
