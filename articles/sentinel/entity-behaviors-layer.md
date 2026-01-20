@@ -224,7 +224,7 @@ For more information about unified RBAC in the Defender portal, see [Microsoft D
 
 ## Enable the UEBA behaviors layer 
 
-To start aggregating UEBA behaviors, make sure to connect at least one supported data source. The UEBA behaviors layer only aggregates behaviors when supported data sources are connected and actively sending logs to the Analytics tier.
+To start aggregating UEBA behaviors, **make sure to connect at least one supported data source**. The UEBA behaviors layer only aggregates behaviors when supported data sources are connected and actively sending logs to the Analytics tier.
 
 To enable the UEBA behaviors layer in your workspace:
 
