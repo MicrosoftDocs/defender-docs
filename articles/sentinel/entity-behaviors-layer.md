@@ -263,7 +263,7 @@ This table shows which behavior tables to use in each environment:
 | **Environment** | **Tables to use** | **Use cases** |
 |-------------|-------------------|---------------|
 | **Defender portal - Advanced Hunting** | [BehaviorInfo](/defender-xdr/advanced-hunting-behaviorinfo-table)<br>[BehaviorEntities](/defender-xdr/advanced-hunting-behaviorentities-table) | Detection rules, incident investigation, threat hunting in Defender portal |
-| **Sentinel workspace** | [SentinelBehaviorInfo](/azure-sentinel/sentinelbehaviorinfo-table)<br>[SentinelBehaviorEntities](/azure-sentinel/sentinelbehaviorentities-table) | Azure Monitor workbooks, ingestion monitoring, KQL queries in Sentinel workspace |
+| **Sentinel workspace** | [SentinelBehaviorInfo](/azure/azure-monitor/reference/tables/sentinelbehaviorinfo)<br>[SentinelBehaviorEntities](/azure/azure-monitor/reference/tables/sentinelbehaviorentities) | Azure Monitor workbooks, ingestion monitoring, KQL queries in Sentinel workspace |
 
 For more practical examples of using behaviors, see [Use cases and examples](#use-cases-and-examples).
 
@@ -328,7 +328,7 @@ For more information about Kusto Query Language (KQL), see [Kusto query language
 These limitations apply during the public preview of the UEBA behaviors layer:
 
 - You can enable behaviors on a single Sentinel workspace per tenant.
-- The UEBA behaviors layer generates behaviors for a limited set of [supported data sources and vendors or services](#supported-data-sources). 
+- The UEBA behaviors layer generates behaviors for a limited set of [supported data sources and vendors or services](#supported-data-sources-and-behaviors). 
 - The UEBA behaviors layer doesn't currently capture every possible action or attack technique, even for supported sources. Some events might not produce corresponding behaviors. Don't assume that the absence of a behavior means no activity occurred. Always review raw logs if you suspect something might be missing. 
 - Behaviors aim to reduce noise by aggregating and sequencing events, but you might still see too many behavior records. We welcome your feedback on specific behavior types to help improve coverage and relevance.
 - Behaviors aren't alerts or anomalies. They're neutral observations, not classified as malicious or benign. The presence of a behavior means “this happened,” not “this is a threat.” Anomaly detection remains separate in UEBA. Use judgment or combine behaviors with UEBA anomaly data to identify noteworthy patterns.
