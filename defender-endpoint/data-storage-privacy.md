@@ -116,22 +116,12 @@ Defender for Endpoint (including Defender Vulnerability Management) shares data,
 
 Data visibility refers to what you see in the Microsoft Defender portal. If a device or specific software on the device stops reporting signals, Microsoft Defender Vulnerability Management stops showing related device or software vulnerabilities after **30 consecutive days**.
 
-### Device visibility
+The following table describes how Defender Vulnerability Management retains and displays data for different scenarios:
 
-As described in [Inactive devices in Microsoft Defender for Endpoint](fix-unhealthy-sensors.md#inactive-devices), an inactive device isn't necessarily flagged because of an issue. The following actions can cause a device to be categorized as inactive:
-
-- The device wasn't used for more than seven days.
-- The device was reinstalled or renamed. The previous device entity remains and is marked as **Inactive**.
-- The device was off-boarded from Microsoft Defender for Endpoint. After seven days, the health state of the device changes to **Inactive**.
-- The device didn't signals to Microsoft Defender for Endpoint for more than seven days.
-
-    Defender Vulnerability Management continues to display the last vulnerability snapshot of the inactive device for **up to 30 days** from the time the device stopped reporting. **After 30 days**, the device is marked as **Inactive** and associated vulnerabilities for the device are no longer shown in the Defender portal.
-
-Defender for Endpoint might retain the data of inactive devices for compliance and forensics (typically up to 180 days). For more information, see [Data retention in Microsoft Defender for Endpoint](/defender-endpoint/data-storage-privacy#data-retention).
-
-### Software visibility
-
-If specific software on an **active** device stops sending signals **for 30 consecutive days**, Microsoft Defender Vulnerability Management assumes the software was removed or is inactive. Microsoft Defender Vulnerability Management stops flagging software vulnerabilities for the software on the device in the Defender portal.
+|Retention scenario|Description|Learn more|
+|---|---|---|
+|Inactive devices|A device can be listed as inactive for several reasons: stopped sending sensor data for at least seven days, was offboarded from Defender for Endpoint at least seven days ago, or has network connectivity issues. Defender Vulnerability Management continues to display the last vulnerability snapshot for **up to 30 days** from the time the device stopped reporting. **After 30 days**, the device is marked as **Inactive** and associated vulnerabilities are no longer shown in the Defender portal. Data for inactive devices is retained for up to 180 days for compliance and forensics. You can manually exclude devices in the device inventory to prevent confusion in your vulnerability data.|[Inactive devices in Microsoft Defender for Endpoint](fix-unhealthy-sensors.md#inactive-devices) <br/>[Exclude devices](/defender-endpoint/exclude-devices)|
+|Uninstalled or inactive software|If specific software on an **active** device stops sending signals **for 30 consecutive days**, Defender Vulnerability Management assumes the software was removed or is inactive. Defender Vulnerability Management automatically stops flagging software vulnerabilities for the software on the device in the Defender portal.|[Software inventory](tvm-software-inventory.md)|
 
 > [!NOTE]
 > For more information related to privacy in Defender Vulnerability Management and other products and services like Microsoft Defender Antivirus and Windows, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/p/?linkid=827576).
