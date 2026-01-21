@@ -8,8 +8,8 @@ ms.localizationpriority: medium
 ms.date: 03/26/2025
 audience: ITPro
 ms.topic: concept-article
-author: KesemSharabi
-ms.author: kesharab
+author: limwainstein
+ms.author: lwainstein
 ms.custom:
 - nextgen
 - admindeeplinkDEFENDER
