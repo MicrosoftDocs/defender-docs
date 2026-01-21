@@ -87,5 +87,5 @@ For more information, see [Add or remove group members using Microsoft Entra ID]
 - [Assign Microsoft Entra roles to users](/entra/identity/role-based-access-control/manage-roles-portal)
 - [Manage portal access using RBAC](rbac.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

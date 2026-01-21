@@ -288,5 +288,5 @@ You can sort the entries by clicking on an available column header. Select :::im
 
 [Investigate devices in the Microsoft Defender for Endpoint Devices list](investigate-machines.md).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

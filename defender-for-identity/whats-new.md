@@ -25,6 +25,16 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## January 2026
 
+### New Health Alert: Sensor v3.x RPC Audit Misconfigured
+Enhanced RPC auditing is required for some Microsoft Defender for Identity advanced identity detections. A new health alert helps identify v3.x sensors where this configuration is either missing or incorrectly applied. The alert is being rolled out gradually to customers. For more information, see [Configure RPC on sensors v3.x](deploy/prerequisites-sensor-version-3.md#configure-rpc-auditing-on-sensors-v3x-to-support-advanced-identity-detections).
+
+### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x (preview)
+We’re gradually rolling out automatic Windows event-auditing configuration for sensors v3.x, along with related health alerts. This update streamlines deployment by automatically applying the required auditing settings to new sensors and correcting misconfigurations on existing ones. For more information see [Configure automatic windows auditing](deploy/configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically-preview).
+
+|Version number|Updates|
+|---|---|
+|2.254|The sensor now supports a new DNS zone target for *.aatp.gcc.azure.com. Make sure your sensors in GCC can access this zone with your sensor dns prefix.|
+
 ### New security posture assessment: Identify service accounts in privileged groups
 
 This identity security posture assessment lists Active Directory service accounts with direct or nested membership in privileged groups.
@@ -61,8 +71,8 @@ New ADWS LDAP search activity is now available in the 'IdentityQueryEvents' tabl
 
 |Version number|Updates|
 |---|---|
-|2.252|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
 |2.253|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
+|2.252|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
 
 ## November 2025
 
@@ -70,30 +80,26 @@ New ADWS LDAP search activity is now available in the 'IdentityQueryEvents' tabl
 |---|---|
 |2.251|The enhanced ADWS LDAP and legacy password-based LDAP query methods now capture a broader range of unique events at scale. As a result, you might notice an increase in recorded activity.|
 
-### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x (Preview)
-
-Defender for Identity is slowly rolling out automatic Windows event auditing for sensors v3.x, streamlining deployment by applying required auditing settings to new sensors and fixing misconfigurations on existing ones. As it becomes available, you'll be able to enable automatic Windows event-auditing in the **Advanced settings** section in the Defender portal, or using the Graph API.
-
 ### Identity Inventory enhancements: Accounts tab, manual account linking and unlinking, and expanded remediation actions
 
 The following new features are now available in Microsoft Defender for Identity:
 
 **Accounts tab in Identity Inventory**:
 
-A new Accounts tab provides a consolidated view of all accounts associated with an identity, including accounts from Active Directory, Microsoft Entra ID, and supported third-party identity providers. For more information, see: [Link or Unlink an Account to an Identity (Preview)](link-unlink-account-to-identity.md)
+A new Accounts tab provides a consolidated view of all accounts associated with an identity, including accounts from Active Directory, Microsoft Entra ID, and supported third-party identity providers. For more information, see: [Manage related identities and accounts (Preview)](manage-related-identities-accounts.md)
 
 **Manual link and unlink of accounts**:
 
 You can now manually link or unlink accounts from an identity directly in the Accounts tab. This capability helps you correlate identity components from different directory sources and provides a complete identity context during investigations.
-For more information, see: [Link or Unlink an Account to an Identity (Preview)](link-unlink-account-to-identity.md).
+For more information, see: [Manage related identities and accounts (Preview)](manage-related-identities-accounts.md).
 
 **Identity-level remediation actions**:
 
 You can now perform remediation actions such as disabling accounts or resetting passwords on one or more accounts linked to an identity. For more information, see: [Remediation actions](remediation-actions.md#roles-and-permissions).
 
-### New security posture assessment: Change password for on-prem account with potentially leaked credentials (Preview)
+### New security posture assessment: Change password for on-premises account with potentially leaked credentials (Preview)
 
-The new security posture assessment lists users whose valid credentials have been leaked. For more information, see: [Change password for on-prem account with potentially leaked credentials (Preview)](/defender-for-identity/security-posture-assessments/accounts#change-password-for-on-prem-account-with-potentially-leaked-credentials-preview)
+The new security posture assessment lists users whose valid credentials have been leaked. For more information, see: [Change password for on-premises account with potentially leaked credentials (Preview)](/defender-for-identity/security-posture-assessments/accounts#change-password-for-on-prem-account-with-potentially-leaked-credentials-preview)
 
 ### Microsoft Defender for Identity sensor version updates
 

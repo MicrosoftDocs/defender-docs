@@ -47,8 +47,11 @@ Restrictions are typically applied by adding the restriction type to the file or
 |:---|:---|:---|
 | File/folder  | `PathType`  | `file` <br/> `folder` |
 | Scan type | `ScanType` | `quick` <br/> `full` |
-| Scan trigger | `ScanTrigger` | `OnDemand` <br/> `OnAccess` <br/> Behavior monitoring |
+| Scan trigger | `ScanTrigger` | `OnDemand` <br/> `OnAccess` <br/> `BM` (Behavior monitoring)|
 | Process | `Process` | `<path>` |
+
+> [!IMPORTANT]
+> TypeName and value keywords are case sensitive.
 
 ### Requirements
 
@@ -167,4 +170,4 @@ See [Configure and validate exclusions for Microsoft Defender Antivirus scans](c
 - [Exclusions overview](navigate-defender-endpoint-antivirus-exclusions.md)
 - [Common mistakes to avoid when defining exclusions](common-exclusion-mistakes-microsoft-defender-antivirus.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

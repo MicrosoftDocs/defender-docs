@@ -383,7 +383,7 @@
            href: submissions-report-messages-files-to-microsoft.md
          - name: Admin submissions
            href: submissions-admin.md
-         - name: Enable the Report Message and Report Phishing add-ins
+         - name: Transition from the Report Message and Report Phishing add-ins
            href: submissions-users-report-message-add-in-configure.md
          - name: Report phishing and suspicious emails in Outlook for admins
            href: submissions-outlook-report-messages.md

@@ -184,4 +184,3 @@ These are the features and known gaps for [Mobile Threat Defense (Microsoft Defe
 > - Report inaccuracy
 > - Request CVE support
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

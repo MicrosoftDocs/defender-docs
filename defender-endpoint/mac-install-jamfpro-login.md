@@ -41,5 +41,5 @@ appliesto:
 
 [Setup the device groups in Jamf Pro](mac-jamfpro-device-groups.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
