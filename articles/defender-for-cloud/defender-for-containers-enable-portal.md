@@ -51,8 +51,6 @@ This article explains how to enable Microsoft Defender for Containers and deploy
 
 Use the Azure portal to verify that Defender for Containers components were deployed successfully.
 
-# [Azure Kubernetes Service (AKS)](#tab/aks)
-
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
 1. Select the relevant Azure subscription.
