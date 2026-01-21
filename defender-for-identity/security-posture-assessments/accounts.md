@@ -162,11 +162,14 @@ If the KRBTGT account's password is compromised, an attacker can use its hash to
 1. Take appropriate action on those accounts by resetting their password **twice** to invalidate the Golden Ticket attack. 
 
 > [!NOTE]
-> The krbtgt Kerberos account in all Active Directory domains supports key storage in all Kerberos Key Distribution Centers (KDC). To renew the Kerberos keys for TGT encryption, periodically change the krbtgt account password. 
-> You can use [one of these scripts](https://github.com/microsoft/New-KrbtgtKeys.ps1)to reset the password. 
-Reset the password twice, waiting at least 10 hours between resets. This wait time is enforced by the script and aligns with best practices to avoid Kerberos authentication issues.
+> The **krbtgt** Kerberos account in all Active Directory domains supports key storage in all Kerberos Key Distribution Centers (KDCs). To renew the Kerberos keys for TGT encryption, periodically change the **krbtgt** account password.  
+>  
+> We recommend resetting the password twice, waiting at least 10 hours between resets. This process invalidates  existing Kerberos tickets to help prevent Golden Ticket attacks.  
+>  
+> For the official and supported procedure, see [Reset the krbtgt password](https://learn.microsoft.com/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-the-krbtgt-password).
 
-## Change password for on-prem account with potentially leaked credentials (Preview)
+
+## Change password for on-premises account with potentially leaked credentials (Preview)
 
 **Description**
 

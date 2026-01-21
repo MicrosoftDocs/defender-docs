@@ -1,8 +1,8 @@
 ﻿---
 title: Behavior monitoring in Microsoft Defender Antivirus
 description: Learn about Behavior monitoring in Microsoft Defender Antivirus and Defender for Endpoint.
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.reviewer: yongrhee
 manager: bagol
 audience: ITPro

@@ -183,5 +183,5 @@ For devices running Windows 7, Windows 8.1, Windows Server 2008 R2, and servers 
 - [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
 - [Onboard devices without Internet access to Microsoft Defender for Endpoint](configure-environment.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

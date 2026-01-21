@@ -1,4 +1,4 @@
-﻿---
+---
 title: Migrate to Microsoft Defender for Endpoint - Setup
 description: Move to Defender for Endpoint. Review the setup process, which includes installing Microsoft Defender Antivirus.
 ms.service: defender-endpoint
@@ -111,7 +111,6 @@ For Linux servers, the following table lists processes to exclude in your non-Mi
 | `wdavdaemon unprivileged`<br/> Antivirus engine  | `/opt/microsoft/mdatp/sbin/` |
 | `crashpad_handler`<br/>Collects crash dumps  | `/opt/microsoft/mdatp/sbin/` |
 | `mdatp` <br/>Command line utility| `/opt/microsoft/mdatp/sbin/Wdavdaemonclient`  |
-| `telemetryd_v2`<br/>Telemetry daemon for EDR | `/opt/microsoft/mdatp/sbin/` |
 | `mde_netfilter` <br/>Packet filter for Network protection, also used for response capabilities | `/opt/microsoft/mde_netfilter/sbin` |
 
 ---
@@ -230,5 +229,5 @@ Device groups, device collections, and organizational units enable your security
 
 - [Proceed to Phase 3: Onboard to Defender for Endpoint](switch-to-mde-phase-3.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

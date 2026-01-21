@@ -2,8 +2,8 @@
 title: Investigate entities on devices using live response in Microsoft Defender for Endpoint
 description: Access a device using a secure remote shell connection to do investigative work and take immediate response actions on a device in real time.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -321,7 +321,7 @@ Select the **Command log** tab to see the commands used on the device during a s
 
 ## Limitations
 
-- Live response sessions are limited to 25 live response sessions at a time.
+- Live response sessions are limited to 50 live response sessions at a time.
 - Live response session inactive timeout value is 30 minutes.
 - Individual live response commands have a time limit of 10 minutes, with the exception of `getfile`, `findfile`, and `run`, which have a limit of 30 minutes.
 - A user can initiate up to five concurrent sessions.
@@ -335,4 +335,4 @@ Select the **Command log** tab to see the commands used on the device during a s
 
 - [Live response command examples](live-response-command-examples.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

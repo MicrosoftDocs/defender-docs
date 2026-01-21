@@ -2,8 +2,8 @@
 title: Export information gathering assessment
 description: Returns a table with an entry for every unique combination of DeviceId, DeviceName, Additional fields.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro

@@ -20,6 +20,7 @@ description: Learn about the Microsoft Defender for Office 365 for US Government
 ms.service: defender-office-365
 adobe-target: true
 ms.date: 01/21/2026
+
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -51,3 +52,4 @@ To access Defender for Office 365 for US Government offerings, use the following
 |GCC|`security.microsoft.com`|
 |GCC High|`security.microsoft.us`|
 |DoD|`security.apps.mil`|
+

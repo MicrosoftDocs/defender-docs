@@ -55,5 +55,5 @@ You can deploy the mobileconfig file through [**https://intune.microsoft.com/**]
 - [Deploy and manage Device Control using jamf](mac-device-control-jamf.md)
 - [macOS Device Control frequently asked questions (FAQ)](mac-device-control-faq.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

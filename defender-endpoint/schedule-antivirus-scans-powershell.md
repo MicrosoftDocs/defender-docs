@@ -3,8 +3,8 @@ title: Schedule antivirus scans using PowerShell
 description: Schedule antivirus scans using PowerShell
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
 ms.date: 12/16/2025
 ms.reviewer: pauhijbr, ksarens
@@ -175,4 +175,4 @@ Scheduled full scans to complete remediation use the following parameters:
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
