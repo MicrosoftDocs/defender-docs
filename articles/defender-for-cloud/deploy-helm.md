@@ -3,7 +3,7 @@ title: Install Defender for Containers sensor Using Helm
 description: Learn how to install the Microsoft Defender for Containers sensor on Kubernetes clusters using Helm.
 author: Elazark
 ms.topic: how-to
-ms.date: 12/11/2025
+ms.date: 01/21/2026
 ms.author: elkrieger
 ai-usage: ai-assisted
 ---
@@ -67,7 +67,7 @@ az extension update --name aks-preview
 
 - Remove any **conflicting policies**. These policy assignments cause the available version of the sensor to be deployed on your cluster. 
     - Locate the ID for the conflicting policy `64def556-fbad-4622-930e-72d1d5589bf5` in the [list of policy definitions for your subscription](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyMenuBlade/~/Definitions).
-    - Run the [delete_conflicting_policies.sh](https://gist.github.com/matannov/a1830a8333cb7804704ad148edc5c904) script to remove conflicting policies by using the Azure CLI.
+    - Run the [delete_conflicting_policies.sh](https://github.com/microsoft/Microsoft-Defender-For-Containers/blob/main/scripts/delete_conflicting_policies.sh) script to remove conflicting policies by using the Azure CLI.
     - Run the script with the command:
 
     ```azurecli   
@@ -79,15 +79,17 @@ az extension update --name aks-preview
 
 #### Installation
 
-Use the [install_defender_sensor_aks.sh](https://gist.github.com/matannov/8a68d2101bc57af461913f7547891d94) script to install the Defender for Containers sensor and remove any existing deployment.
+Use the [install_defender_sensor_aks.sh](https://github.com/microsoft/Microsoft-Defender-For-Containers/blob/main/scripts/install_defender_sensor_aks.sh) script to install the Defender for Containers sensor and remove any existing deployment.
 
 Run the script with the command:
     
 ```azurecli
-install_defender_sensor_aks.sh <CLUSTER_AZURE_RESOURCE_ID> <RELEASE_TRAIN> <VERSION>
+install_defender_sensor_aks.sh --id <CLUSTER_AZURE_RESOURCE_ID> --release_train <RELEASE_TRAIN> --version <VERSION> [--antimalware]
 ```
 
 Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, and `<VERSION>` with your own values. Use `public` for the public preview releases (0.9.x), or 'private' for the preview release (0.10.x). For `<VERSION>`, use `latest` or a specific semantic version.
+
+The flag `--antimalware`, enables antimalware scanning.
 
 > [!NOTE]
 > This script sets a new `kubeconfig` context and might create a Log Analytics workspace in your Azure account.
@@ -111,28 +113,28 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
     ```
      In this example, replace the placeholder text `<connector-name>`, `<resource-group-name>`, and `<subscription-id>` with your values.
 
-In the following command, replace the placeholder text `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<VERSION>`, `<DISTRIBUTION>`, and `<ARC_CLUSTER_RESOURCE_ID>` with your own values. Please note that ARC_CLUSTER_RESOURCE_ID is an optional parameter and only should be used for existing clusters who use the Defender for Containers arc extension, which will cause the arc-managed deployment to be removed preventing 2 conflicting deployments from being enabled at the same time.
-
-For `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`:
-
 ## Installation
 
-1. Use the [install_defender_sensor_mc.sh](https://gist.github.com/matannov/00c0bc43f63280f5cf30736b38a54678) script to install the Defender for Containers sensor and remove any existing deployment.
+1. Use the [install_defender_sensor_mc.sh](https://github.com/microsoft/Microsoft-Defender-For-Containers/blob/main/scripts/install_defender_sensor_mc.sh) script to install the Defender for Containers sensor and remove any existing deployment.
 
 1. Set the `kubeconfig` context to the target cluster by using the command:
 
     ```azurecli
-    install_defender_sensor_mc.sh <SECURITY_CONNECTOR_AZURE_RESOURCE_ID> <RELEASE_TRAIN> <VERSION> <DISTRIBUTION> [<ARC_CLUSTER_RESOURCE_ID>]
+    install_defender_sensor_mc.sh --id <SECURITY_CONNECTOR_AZURE_RESOURCE_ID> --release_train <RELEASE_TRAIN> --version <VERSION> --distribution <DISTRIBUTION> [--antimalware]
     ```
 
-    Replace the placeholder text `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<VERSION>`, `<DISTRIBUTION>`, and `<ARC_CLUSTER_RESOURCE_ID>` with your own values.
-    
-    - `ARC_CLUSTER_RESOURCE_ID` is an optional parameter. Use it only for existing clusters that use the Defender for Containers arc extension and want to provision the sensor via Helm or use arc cluster and want to provision the sensor via Helm.
+    Replace the placeholder text `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<VERSION>`, and `<DISTRIBUTION>` with your own values.
+
+    Use 'public' for the public preview releases (0.9.x). For `<VERSION>`, use `latest` or a specific semantic version. For `<DISTRIBUTION>`, use `eks` or `gke`.
+
+    The flag `--antimalware`, enables antimalware scanning.
      
     - Replace `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>` with your Azure resource ID
 
     > [!NOTE]
     > This script might create a Log Analytics workspace in your Azure account.
+    >
+    > This script tests for an arc managed deployment of the Defender for Containers Sensor. If one exists, the script will remove it prior to deploying the sensor with helm.
 
     - Replace `<VERSION>` with:
         - `public` for the public preview releases (0.9.x).
