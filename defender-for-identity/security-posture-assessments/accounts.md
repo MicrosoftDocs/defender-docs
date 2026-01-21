@@ -169,7 +169,7 @@ If the KRBTGT account's password is compromised, an attacker can use its hash to
 > For the official and supported procedure, see [Reset the krbtgt password](https://learn.microsoft.com/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-the-krbtgt-password).
 
 
-## Change password for on-prem account with potentially leaked credentials (Preview)
+## Change password for on-premises account with potentially leaked credentials (Preview)
 
 **Description**
 
