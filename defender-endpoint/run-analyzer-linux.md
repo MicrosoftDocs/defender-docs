@@ -1,8 +1,8 @@
 ﻿---
 title: Run the client analyzer on Linux
 description: Run the Defender for Endpoint client analyzer on Linux
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 manager: bagol
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
