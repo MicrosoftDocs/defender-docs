@@ -89,7 +89,7 @@ install_defender_sensor_aks.sh --id <CLUSTER_AZURE_RESOURCE_ID> --release_train 
 
 Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, and `<VERSION>` with your own values. Use `public` for the public preview releases (0.9.x), or 'private' for the preview release (0.10.x). For `<VERSION>`, use `latest` or a specific semantic version.
 
-The flag `--antimalware`, enables antimalware scanning.
+The flag `--antimalware` enables antimalware scanning.
 
 > [!NOTE]
 > This script sets a new `kubeconfig` context and might create a Log Analytics workspace in your Azure account.
@@ -127,19 +127,19 @@ The flag `--antimalware`, enables antimalware scanning.
 
     Use 'public' for the public preview releases (0.9.x). For `<VERSION>`, use `latest` or a specific semantic version. For `<DISTRIBUTION>`, use `eks` or `gke`.
 
-    The flag `--antimalware`, enables antimalware scanning.
+    The flag `--antimalware` enables antimalware scanning.
      
-    - Replace `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>` with your Azure resource ID
+    - Replace `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>` with your Azure resource ID.
 
     > [!NOTE]
     > This script might create a Log Analytics workspace in your Azure account.
     >
-    > This script tests for an arc managed deployment of the Defender for Containers Sensor. If one exists, the script will remove it prior to deploying the sensor with helm.
+    > This script tests for an arc managed deployment of the Defender for Containers Sensor. If one exists, the script removes it prior to deploying the sensor by using helm.
 
     - Replace `<VERSION>` with:
         - `public` for the public preview releases (0.9.x).
           Or,
-        - `latest` for the most recent version
+        - `latest` for the most recent version.
           Or, 
         - A specific semantic version.
 
@@ -150,7 +150,7 @@ The flag `--antimalware`, enables antimalware scanning.
 
 ### Verify the installation
 
-Verify that the success of the installation with the command:
+Verify that the installation succeeded by using the command:
 
 ```bash
 helm list --namespace mdc
@@ -163,7 +163,7 @@ The installation is successful if the `STATUS` field displays **deployed**.
 > [!IMPORTANT]
 > For Helm installations:
 > 
-> - **Subscription Support Warning**: When rules are created, your selected subscription might show as `not supported for Gated deployment`. This status occurs because you installed the Defender for Containers components by using Helm rather than through the dashboard's automatic installation.
+> - **Subscription Support Warning**: When you create rules, your selected subscription might show as `not supported for Gated deployment`. This status occurs because you installed the Defender for Containers components by using Helm rather than through the dashboard's automatic installation.
 >  - **Skip Auto-Installation**: If you're prompted to enable gating in the third tab of the security rule edit window, make sure to select **Skip**. This option enables autoinstallation, which conflicts with your existing Helm deployment.
 > 
 >     :::image type="content" source="media/deploy-helm/edit-vulnerability-assessment-rule.png" alt-text="Screenshot showing the third tab of the security rule edit window." lightbox="media/deploy-helm/edit-vulnerability-assessment-rule.png":::
@@ -183,7 +183,7 @@ Define security rules to control what can be deployed into your Kubernetes clust
 ## Handle existing recommendations
 
 > [!IMPORTANT]
-> If the sensor was setup with Helm, **ignore** existing recommendations.
+> If you set up the sensor by using Helm, **ignore** existing recommendations.
 
 Depending on your deployment type, select the relevant recommendation to view any existing recommendations in the Azure portal:
 
