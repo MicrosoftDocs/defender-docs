@@ -25,7 +25,7 @@ appliesto:
 
 # Understand attack surface reduction in Microsoft Defender for Endpoint
 
-_Attack surfaces_ are the places where your organization is vulnerable to cyberthreats and attacks. Microsoft Defender for Endpoint includes several capabilities to help reduce your attack surfaces:
+_Attack surfaces_ are the places where your organization is vulnerable to threats and attacks. Microsoft Defender for Endpoint includes several capabilities to help reduce your attack surfaces:
 
 - [Microsoft Defender Application Guard for Microsoft Edge](/windows/security/application-security/application-isolation/microsoft-defender-application-guard/md-app-guard-overview): Admins specify trusted web sites, cloud resources, and internal networks. When a user opens an untrusted site in Microsoft Edge, the browser opens the site in an isolated Hyper-V-enabled container.
 - [Attack surface reduction rules for Windows](attack-surface-reduction-rules-overview.md): Admins configure rules that block risky software behavior in supported versions of Windows.
