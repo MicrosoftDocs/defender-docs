@@ -27,7 +27,7 @@ appliesto:
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-This article provides information about data storage and privacy for Microsoft Defender for Endpoint, including Microsoft Defender Vulnerability Management.
+This article provides information about data storage and privacy for Microsoft Defender for Endpoint, including [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management).
 
 > [!NOTE]
 > This article explains the data storage and privacy details related to Defender for Endpoint (including Defender Vulnerability Management) and Defender for Business. For more information related to Defender for Endpoint and other products and services like Microsoft Defender Antivirus and Windows, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=827576).
@@ -121,7 +121,7 @@ The following table describes how Defender Vulnerability Management retains and 
 |Retention scenario|Description|Learn more|
 |---|---|---|
 |Inactive devices|A device can be listed as inactive for several reasons: stopped sending sensor data for at least seven days, was offboarded from Defender for Endpoint at least seven days ago, or has network connectivity issues. Defender Vulnerability Management continues to display the last vulnerability snapshot for **up to 30 days** from the time the device stopped reporting. **After 30 days**, the device is marked as **Inactive** and associated vulnerabilities are no longer shown in the Defender portal. Data for inactive devices is retained for up to 180 days for compliance and forensics. You can manually exclude devices in the device inventory to prevent confusion in your vulnerability data.|[Inactive devices in Microsoft Defender for Endpoint](fix-unhealthy-sensors.md#inactive-devices) <br/>[Exclude devices](/defender-endpoint/exclude-devices)|
-|Uninstalled or inactive software|If specific software on an **active** device stops sending signals **for 30 consecutive days**, Defender Vulnerability Management assumes the software was removed or is inactive. Defender Vulnerability Management automatically stops flagging software vulnerabilities for the software on the device in the Defender portal.|[Software inventory](tvm-software-inventory.md)|
+|Uninstalled or inactive software|If specific software on an **active** device stops sending signals **for 30 consecutive days**, Defender Vulnerability Management assumes the software was removed or is inactive. Defender Vulnerability Management automatically stops flagging software vulnerabilities for the software on the device in the Defender portal.|[Software inventory](/defender-vulnerability-management/tvm-software-inventory)|
 
 > [!NOTE]
 > For more information related to privacy in Defender Vulnerability Management and other products and services like Microsoft Defender Antivirus and Windows, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/p/?linkid=827576).
