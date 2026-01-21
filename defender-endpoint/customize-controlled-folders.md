@@ -4,8 +4,8 @@ description: Add other folders that should be protected by controlled folder acc
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: KesemSharabi
-ms.author: kesharab
+author: paulinbar
+ms.author: painbar
 ms.reviewer: dbodorin, vladiso, nixanm, anvascon
 manager: bagol
 ms.subservice: asr

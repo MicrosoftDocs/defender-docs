@@ -2,8 +2,8 @@
 title: Supported Microsoft Defender for Endpoint capabilities by platform
 description: Get to know the Microsoft Defender for Endpoint capabilities supported for Windows 10 devices, servers, and non-Windows devices.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
 manager: bagol

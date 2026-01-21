@@ -2,8 +2,8 @@
 title: List Investigations API
 description: Use this API to create calls related to get Investigations collection.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
