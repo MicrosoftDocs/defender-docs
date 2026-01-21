@@ -340,7 +340,7 @@ To generate analyst notes after investigation is finished, do the following:
 
 1. In the **Activities** tab, there's a new line in the activity log indicating that the generation is in progress. You might have to refresh the screen to see it. Select the line to open the side panel with the status of the generation. If needed, you can stop the generation by selecting **Stop generating**.
 
-    :::image type="content" source="./media/manage-incidents/stop-generating.png" alt-text="Screenshot showing the side panel while it is in the process of generating analyst notes. There's a Stop generating button visible.":::
+    :::image type="content" source="./media/manage-incidents/stop-generating.png" alt-text="Screenshot showing the side panel while it is in the process of generating analyst notes. There's a Stop generating button visible. lightbox="./media/manage-incidents/stop-generating.png":::
 
 1. When the generation is complete, go to the **Activities** tab. The analyst notes appear as a new line in the activity log. The line includes the date and time the notes were generated and who generated them.
 
@@ -350,7 +350,7 @@ To generate analyst notes after investigation is finished, do the following:
 
    The generated log has a disclaimer saying that it was AI generated. Select **Edit Copilot generated content** to review and modify the notes as needed. When you save the edited notes, the disclaimer is removed.
 
-   :::image type="content" source="./media/manage-incidents/analyst-notes.png" alt-text="Screenshot of the generated analyst notes from the incident page in the Microsoft Defender portal." lightbox="./media/manage-incidents/analyst-notes.png":::
+   :::image type="content" source="./media/manage-incidents/analyst-notes.png" alt-text="Screenshot of the generated analyst notes from the incident page in the Microsoft Defender portal.":::
 
    You can also give feedback on the generated notes to help improve the feature.
 
