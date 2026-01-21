@@ -117,7 +117,7 @@ Also, when certain attack surface reduction rules are triggered, alerts are gene
 
 Notifications and any alerts that are generated can be viewed in the [Microsoft Defender portal](https://security.microsoft.com).
 
-For specific details about notification and alert functionality, see: [Per rule alert and notification details](attack-surface-reduction-rules-reference.md#per-asr-rule-alert-and-notification-details), in the article **Attack surface reduction rules reference**.
+For specific details about notification and alert functionality, see: [Per rule alert and notification details](attack-surface-reduction-rules-reference.md#alert-and-notification-support-for-asr-rules), in the article **Attack surface reduction rules reference**.
 
 ## Advanced hunting and attack surface reduction events
 

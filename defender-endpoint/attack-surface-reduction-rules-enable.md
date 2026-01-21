@@ -220,7 +220,7 @@ You can use Microsoft Intune OMA-URI to configure custom attack surface reductio
 
    1. In **Description**, type a brief description.
 
-   1. In **OMA-URI**, type or paste the specific OMA-URI link for the rule that you're adding. Refer to the MDM section in this article for the OMA-URI to use for this example rule. For attack surface reduction rule GUIDS, see [Per rule descriptions](attack-surface-reduction-rules-reference.md#per-rule-descriptions).
+   1. In **OMA-URI**, type or paste the specific OMA-URI link for the rule that you're adding. Refer to the MDM section in this article for the OMA-URI to use for this example rule. For attack surface reduction rule (ASR rule) GUIDs, see [Attack surface reduction rules](attack-surface-reduction-rules-reference.md#attack-surface-reduction-rules).
 
    1. In **Value**, type or paste the GUID value, the `\=` sign and the State value with no spaces (`GUID=StateValue`):
       - `0`: Disable (Disable the attack surface reduction rule)

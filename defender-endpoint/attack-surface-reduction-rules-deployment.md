@@ -55,7 +55,7 @@ As with any new, wide-scale implementation, which could potentially impact your 
 
 ## Important predeployment caveat
 
-We recommended that you enable the following three _standard protection rules_. See [Attack surface reduction rules by type](attack-surface-reduction-rules-reference.md#attack-surface-reduction-rules-by-type) for important details about the two types of attack surface reduction rules.
+We recommended that you enable the following three _standard protection rules_. See [Attack surface reduction rules by type](attack-surface-reduction-rules-reference.md#attack-surface-reduction-rules) for important details about the two types of attack surface reduction rules.
 
 - [Block credential stealing from the Windows local security authority subsystem (lsass.exe)](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
 - [Block abuse of exploited vulnerable signed drivers](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers)
@@ -73,7 +73,13 @@ During your initial preparation, it's vital to understand the capabilities of th
 > [!IMPORTANT]
 > This guide provides images and examples to help you decide how to configure attack surface reduction rules; these images and examples might not reflect the best configuration options for your environment.
 
-Before you start, review [Overview of attack surface reduction](overview-attack-surface-reduction.md), and [Demystifying attack surface reduction rules - Part 1](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/demystifying-attack-surface-reduction-rules-part-1/ba-p/1306420) for foundational information. To understand the areas of coverage and potential impact, familiarize yourself with the current set of attack surface reduction rules; see [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md). While you're familiarizing yourself with the attack surface reduction rules set, take note of the per-rule GUID mappings; see [Attack surface reduction rule to GUID matrix](attack-surface-reduction-rules-reference.md#asr-rule-to-guid-matrix).
+Before you start, review the following documentation:
+
+- **Foundational information**:
+  - [Overview of attack surface reduction](overview-attack-surface-reduction.md)
+  - [Demystifying attack surface reduction rules - Part 1](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/demystifying-attack-surface-reduction-rules-part-1/ba-p/1306420)
+- **ASR rule details**:
+  - [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md), which also includes the rule to GUID mapping.
 
 Attack surface reduction rules are only one capability of the attack surface reduction capabilities within Microsoft Defender for Endpoint. This document goes into more detail on deploying attack surface reduction rules effectively to stop advanced threats like human-operated ransomware and other threats.
 

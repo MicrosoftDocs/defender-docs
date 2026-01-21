@@ -33,7 +33,7 @@ Before you test or enable attack surface reduction rules, you should plan your d
 
 > [!IMPORTANT]
 >
-> While you're going through the process of planning, auditing, and enable attack surface reduction rules, it's recommended that you enable the following three _standard protection rules_. See [Attack surface reduction rules by type](attack-surface-reduction-rules-reference.md#attack-surface-reduction-rules-by-type) for important details about the two types of attack surface reduction rules.
+> While you're going through the process of planning, auditing, and enable attack surface reduction rules, it's recommended that you enable the following three _standard protection rules_. See [Attack surface reduction rules by type](attack-surface-reduction-rules-reference.md#attack-surface-reduction-rules) for important details about the two types of attack surface reduction rules.
 >
 > - [Block credential stealing from the Windows local security authority subsystem (lsass.exe)](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
 > - [Block abuse of exploited vulnerable signed drivers](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers)
