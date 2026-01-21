@@ -199,7 +199,7 @@ This section describes alerts indicating that a malicious actor might be attempt
 
 ## Command and Control alerts
 
-This section describes alerts activities when malicious actors communicate with systems they have already compromised in order to control them.
+This section describes alerts that indicate when a malicious actor might be trying communicate with systems they have already compromised in order to control them.
 
 | Security alert name | Severity | MITRE Technique | Detector ID |
 |---|---|---|---|
