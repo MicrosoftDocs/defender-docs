@@ -72,9 +72,6 @@ When looking at using Unified RBAC in managing your Microsoft Defender for Offic
 - [Email and collaboration permissions mapping](/defender-xdr/compare-rbac-roles#email--collaboration-permissions-mapping)
 - [Exchange Online permissions mapping](/defender-xdr/compare-rbac-roles#exchange-online-permissions-mapping)
 
->[!NOTE]
-> GDAP isn't currently supported for managing Defender for Office 365.
-
 #### Azure B2B
 
 Azure B2B invited guests aren't supported by experiences that were previously under Microsoft Exchange Online RBAC. Since Defender for Office 365 Unified RBAC leans on Exchange Online Admin APIs, actions performed in Defender for Office 365 have limitations. B2B guest admins might get errors when attempting to perform certain actions, such as:
