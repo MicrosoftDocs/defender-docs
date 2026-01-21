@@ -148,3 +148,4 @@ For pricing details, see [Microsoft Defender for Cloud pricing](https://azure.mi
 ## Next steps
 
 - [Enable Defender for Containers for your environment using the Azure Portal.](defender-for-containers-enable-portal.md)
+- [Enable Defender for Containers for your environment using the Azure CLI.](defender-for-containers-enable-azure-cli.md)

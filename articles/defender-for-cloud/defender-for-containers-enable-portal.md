@@ -49,6 +49,27 @@ Use the tabs below to follow the enablement steps for your Kubernetes environmen
 
 1. Review the configuration summary and select **Save**.
 
+## Verify deployment
+
+Use the Azure portal to verify that Defender for Containers components were deployed successfully.
+
+# [Azure Kubernetes Service (AKS)](#tab/aks)
+
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
+
+1. Select the relevant Azure subscription.
+
+1. Verify that **Containers** is set to **On**.
+
+1. Select **Settings** next to Containers and confirm the required components are enabled.
+
+1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
+
+1. Verify that recommendations for AKS clusters appear, such as:
+
+   - **Azure Kubernetes Service clusters should have Defender profile enabled**
+   - **Azure Policy for Kubernetes should be installed and enabled**
+
 # [Amazon Elastic Kubernetes Service (EKS)](#tab/eks)
 
 ## Prerequisites
@@ -131,6 +152,26 @@ After connecting your EKS clusters to Azure Arc:
 > [!NOTE]
 > You can also deploy the Defender sensor by using Helm for more control over the deployment configuration.
 
+## Verify deployment
+
+Use the Azure portal to verify that Defender for Containers components were deployed successfully.
+
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
+
+1. Select the relevant AWS connector.
+
+1. Verify that:
+
+   - Connection status shows **Connected**
+   - **Containers** plan is **On**
+   - Last sync time is recent
+
+1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
+
+1. Verify that EKS-related recommendations appear, such as:
+
+   - **EKS clusters should have Microsoft Defender’s extension for Azure Arc installed**
+
 # [Google Kubernetes Engine (GKE)](#tab/gke)
 
 ## Prerequisites
@@ -205,48 +246,7 @@ After connecting your GKE clusters to Azure Arc:
 > [!NOTE]
 > You can also deploy the Defender sensor by using Helm for more control over the deployment configuration.
 
----
-
-## Verify deployment in Azure portal
-
-Use the Azure portal to verify that Defender for Containers components were deployed successfully.
-
-# [Azure Kubernetes Service (AKS)](#tab/aks)
-
-1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
-
-1. Select the relevant Azure subscription.
-
-1. Verify that **Containers** is set to **On**.
-
-1. Select **Settings** next to Containers and confirm the required components are enabled.
-
-1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
-
-1. Verify that recommendations for AKS clusters appear, such as:
-
-   - **Azure Kubernetes Service clusters should have Defender profile enabled**
-   - **Azure Policy for Kubernetes should be installed and enabled**
-
-# [Amazon EKS](#tab/eks)
-
-1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
-
-1. Select the relevant AWS connector.
-
-1. Verify that:
-
-   - Connection status shows **Connected**
-   - **Containers** plan is **On**
-   - Last sync time is recent
-
-1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
-
-1. Verify that EKS-related recommendations appear, such as:
-
-   - **EKS clusters should have Microsoft Defender’s extension for Azure Arc installed**
-
-# [Google Kubernetes Engine (GKE)](#tab/gke)
+## Verify deployment
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
