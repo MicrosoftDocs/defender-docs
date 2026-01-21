@@ -13,7 +13,7 @@ ms.reviewer: LiorShapiraa
 > - Notifications are currently only supported by the Defender for Identity sensor version 2.x.
 > - Syslog notigications are being deprecated. Use these alternatives solutions to receive notifications:
 >   - [Microsoft Graph Security API](/graph/api/resources/security-api-overview?view=graph-rest-1.0)
->   - [Integrate your SIEM tools with Microsoft Defender XDR](https://learn.microsoft.com/en-us/defender-xdr/configure-siem-defender)
+>   - [Integrate your SIEM tools with Microsoft Defender XDR](/defender-xdr/configure-siem-defender)
 
 Microsoft Defender for Identity provides notifications for health issues and security alerts, either via email notifications or to a Syslog server.
 
