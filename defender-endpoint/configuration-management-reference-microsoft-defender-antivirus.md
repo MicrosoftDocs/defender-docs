@@ -3,8 +3,8 @@ title: Manage Microsoft Defender Antivirus in your business
 description: Learn how to use Group Policy, Configuration Manager, PowerShell, WMI, Intune, and the command line to manage Microsoft Defender Antivirus
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
 ms.date: 10/20/2025
 ms.reviewer: yongrhee
