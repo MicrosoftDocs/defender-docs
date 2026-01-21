@@ -46,7 +46,7 @@ While you can view alert details, investigate alert context, and triage and mana
         - [Alert statuses and triaging options](alerts.md#alert-statuses-and-triaging-options)
         - [Plan OT sites and zones](best-practices/plan-corporate-monitoring.md#plan-ot-sites-and-zones)
 - Alert options also differ depending on your location and user role. For more information, see [Azure user roles and permissions](roles-azure.md) and [On-premises users and roles](roles-on-premises.md).
-- When you view alerts in the alert list, some alerts may not correlate with alerts on specific sensors. For more information, see [Investigate alerts that don't correlate with specific sensors](respond-ot-alert.md#investigate-alerts-that-dont-correlate-with-specific-sensors).
+- When you view alerts in the alert list, some alerts may not correlate with alerts on specific sensors. For more information, see [Investigate alerts that don't correlate with specific sensors](respond-ot-alert.md#investigate-alerts-that-dont-correlate-with-a-specific-sensor).
 
 ## Aggregating alert violations
 

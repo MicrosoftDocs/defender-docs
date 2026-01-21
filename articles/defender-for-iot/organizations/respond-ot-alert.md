@@ -49,7 +49,8 @@ After updating the status, check the alert details page for the following detail
 
 - **Sensor information**. Review the **Sensor**, **SiteDisplayName**, and other sensor information to provide context about the sensor that triggered the alert. 
 
-    > [!NOTE] In some cases, the alerts displayed in the alert list might not correlate with specific sensors. For more information, see [Investigate alerts that don't correlate with specific sensors](#investigate-alerts-that-dont-correlate-with-specific-sensors).
+    > [!NOTE] 
+    > In some cases, the alerts displayed in the alert list might not correlate with specific sensors. For more information, see [Investigate alerts that don't correlate with specific sensors](#investigate-alerts-that-dont-correlate-with-a-specific-sensor).
 
 - **MITRE ATT&CK** tactics and techniques. Scroll down in the left pane to view all MITRE ATT&CK details. In addition to descriptions of the tactics and techniques, select the links to the MITRE ATT&CK site to learn more about each one.
 

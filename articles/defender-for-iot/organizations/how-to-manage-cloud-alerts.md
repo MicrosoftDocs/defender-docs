@@ -67,7 +67,7 @@ For more information, see [Azure user roles and permissions for Defender for IoT
 ### Considerations
 
 - If you're seeing more alerts than expected, you might want to create suppression rules to prevent alerts from being triggered for legitimate network activity. For more information, see [Suppress irrelevant alerts](how-to-accelerate-alert-incident-response.md#suppress-irrelevant-alerts).
-- When you view alerts in the alert list, some alerts may not correlate with alerts on specific sensors. For more information, see [Investigate alerts that don't correlate with specific sensors](respond-ot-alert.md#investigate-alerts-that-dont-correlate-with-specific-sensors).
+- When you view alerts in the alert list, some alerts may not correlate with alerts on specific sensors. For more information, see [Investigate alerts that don't correlate with specific sensors](respond-ot-alert.md#investigate-alerts-that-dont-correlate-with-a-specific-sensor).
 
 ### Filter alerts displayed
 
