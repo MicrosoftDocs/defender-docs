@@ -84,12 +84,21 @@ Use the [install_defender_sensor_aks.sh](https://github.com/microsoft/Microsoft-
 Run the script with the command:
     
 ```azurecli
-install_defender_sensor_aks.sh --id <CLUSTER_AZURE_RESOURCE_ID> --release_train <RELEASE_TRAIN> --version <VERSION> [--antimalware]
+install_defender_sensor_aks.sh --id <CLUSTER_AZURE_RESOURCE_ID> --version <VERSION> [--release_train <RELEASE_TRAIN>] [--antimalware]
 ```
 
-Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, and `<VERSION>` with your own values. Use `public` for the public preview releases (0.9.x), or 'private' for the preview release (0.10.x). For `<VERSION>`, use `latest` or a specific semantic version.
+Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, and `<VERSION>` with your own values. 
 
-The flag `--antimalware` enables antimalware scanning.
+- Replace `<VERSION>` with:
+  - `latest` for the most recent version.
+    Or, 
+  - A specific semantic version.
+    
+- Replace <RELEASE_TRAIN> with:
+
+  - 'stable' (default) or 'public' (for Public Preview)
+    
+- The flag --antimalware enables antimalware scanning.
 
 > [!NOTE]
 > This script sets a new `kubeconfig` context and might create a Log Analytics workspace in your Azure account.
@@ -119,33 +128,33 @@ The flag `--antimalware` enables antimalware scanning.
 
 1. Set the `kubeconfig` context to the target cluster by using the command:
 
-    ```azurecli
-    install_defender_sensor_mc.sh --id <SECURITY_CONNECTOR_AZURE_RESOURCE_ID> --release_train <RELEASE_TRAIN> --version <VERSION> --distribution <DISTRIBUTION> [--antimalware]
-    ```
-
+   ```azurecli
+   install_defender_sensor_mc.sh --id <SECURITY_CONNECTOR_AZURE_RESOURCE_ID> --version <VERSION> --distribution <DISTRIBUTION> [--release_train <RELEASE_TRAIN>] [--antimalware]
+   ```
+    
     Replace the placeholder text `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<VERSION>`, and `<DISTRIBUTION>` with your own values.
-
-    Use 'public' for the public preview releases (0.9.x). For `<VERSION>`, use `latest` or a specific semantic version. For `<DISTRIBUTION>`, use `eks` or `gke`.
-
-    The flag `--antimalware` enables antimalware scanning.
-     
-    - Replace `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>` with your Azure resource ID.
-
-    > [!NOTE]
+   
+   - Replace `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>` with the Azure resource ID of your security connector.
+      
+       > [!NOTE]
     > This script might create a Log Analytics workspace in your Azure account.
     >
     > This script tests for an arc managed deployment of the Defender for Containers Sensor. If one exists, the script removes it prior to deploying the sensor by using helm.
 
-    - Replace `<VERSION>` with:
-        - `public` for the public preview releases (0.9.x).
-          Or,
-        - `latest` for the most recent version.
-          Or, 
-        - A specific semantic version.
-
-    - Replace `<DISTRIBUTION>` with: 
-        - `eks` or `gke`.
-
+   - Replace `<VERSION>` with:
+    - `latest` for the most recent version.
+      Or, 
+      - A specific semantic version.
+            
+   - Replace `<DISTRIBUTION>` with: 
+      - `eks` or `gke` or `eksautomode`. 
+            
+   - Replace <RELEASE_TRAIN> with:
+      
+    - 'stable' (default) or 'public' (for Public Preview)
+        
+   - The flag --antimalware enables antimalware scanning.
+      
 ---
 
 ### Verify the installation
@@ -200,12 +209,13 @@ Depending on your deployment type, select the relevant recommendation to view an
 Run the following command to update an existing Helm-based deployment:
 
 ```bash
-helm upgrade microsoft-defender-for-containers-sensor \
-oci://mcr.microsoft.com/azuredefender/microsoft-defender-for-containers-sensor \
---devel \
+helm upgrade microsoft-defender-for-containers \
+oci://mcr.microsoft.com/azuredefender/microsoft-defender-for-containers \
+--version <version> \
 --reuse-values
 ```
 
 ## Related content
 
 - [Common questions about protecting containers](faq-defender-for-containers.yml)
+
