@@ -64,6 +64,32 @@ az aks enable-addons \
   --resource-group <resource-group>
 ```
 
+## Verify deployment
+
+Use the following steps to verify that Defender for Containers components were deployed successfully.
+
+### Verify that the Defender sensor is enabled on an AKS cluster
+
+```azurecli
+az aks show \
+  --name <aks-cluster-name> \
+  --resource-group <resource-group> \
+  --query "securityProfile.defender"
+```
+
+The output should show that `securityMonitoring.enabled` is set to `true`.
+
+### Verify that Azure Policy add-on is enabled
+
+```azurecli
+az aks show \
+  --name <aks-cluster-name> \
+  --resource-group <resource-group> \
+  --query addonProfiles.azurepolicy
+```
+
+The output should show `enabled: true`.
+
 # [Amazon Elastic Kubernetes Service (EKS)](#tab/eks)
 
 ## Prerequisites
@@ -113,6 +139,29 @@ az k8s-extension create \
   --cluster-name <cluster-name> \
   --resource-group <resource-group>
 ```
+
+## Verify deployment
+
+Use the following steps to verify that Defender for Containers components were deployed successfully.
+
+### Verify that the EKS cluster is connected to Azure Arc
+
+```azurecli
+az connectedk8s show \
+  --name <cluster-name> \
+  --resource-group <resource-group> \
+  --query connectivityStatus
+```
+
+The output should show `Connected`.
+
+### Verify that the Defender for Containers DaemonSet is deployed and running
+
+```bash
+kubectl get daemonsets -n kube-system
+```
+
+Confirm that a Defender for Containers DaemonSet is listed and that the **DESIRED**, **CURRENT**, and **READY** columns show matching values.
 
 # [Google Kubernetes Engine (GKE)](#tab/gke)
 
@@ -166,39 +215,11 @@ az k8s-extension create \
   --resource-group <resource-group>
 ```
 
----
-
-## Verify deployment using Azure CLI
+## Verify deployment
 
 Use the following steps to verify that Defender for Containers components were deployed successfully.
 
-# [Azure Kubernetes Service (AKS)](#tab/aks)
-
-Verify that the Defender sensor is enabled on an AKS cluster:
-
-```azurecli
-az aks show \
-  --name <aks-cluster-name> \
-  --resource-group <resource-group> \
-  --query "securityProfile.defender"
-```
-
-The output should show that `securityMonitoring.enabled` is set to `true`.
-
-Verify that Azure Policy add-on is enabled:
-
-```azurecli
-az aks show \
-  --name <aks-cluster-name> \
-  --resource-group <resource-group> \
-  --query addonProfiles.azurepolicy
-```
-
-The output should show `enabled: true`.
-
-# [Amazon Elastic Kubernetes Service (EKS)](#tab/eks)
-
-Verify that the EKS cluster is connected to Azure Arc:
+### Verify that the GKE cluster is connected to Azure Arc
 
 ```azurecli
 az connectedk8s show \
@@ -209,28 +230,7 @@ az connectedk8s show \
 
 The output should show `Connected`.
 
-Verify that the Defender for Containers DaemonSet is deployed and running:
-
-```bash
-kubectl get daemonsets -n kube-system
-```
-
-Confirm that a Defender for Containers DaemonSet is listed and that the **DESIRED**, **CURRENT**, and **READY** columns show matching values.
-
-# [Google Kubernetes Engine (GKE)](#tab/gke)
-
-Verify that the GKE cluster is connected to Azure Arc:
-
-```azurecli
-az connectedk8s show \
-  --name <cluster-name> \
-  --resource-group <resource-group> \
-  --query connectivityStatus
-```
-
-The output should show `Connected`.
-
-Verify that the Defender for Containers DaemonSet is deployed and running:
+### Verify that the Defender for Containers DaemonSet is deployed and running
 
 ```bash
 kubectl get daemonsets -n kube-system

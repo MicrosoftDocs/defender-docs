@@ -9,9 +9,7 @@ ms.date: 01/19/2026
 
 # Enable Defender for Containers using the Azure portal
 
-Microsoft Defender for Containers is enabled through Microsoft Defender for Cloud. The enablement process differs depending on where your Kubernetes clusters are running.
-
-Use the tabs below to follow the enablement steps for your Kubernetes environment.
+This article explains how to enable Microsoft Defender for Containers and deploy its components by using the Azure portal for different Kubernetes environments.
 
 # [Azure Kubernetes Service (AKS)](#tab/aks)
 
