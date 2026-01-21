@@ -166,7 +166,7 @@ If the KRBTGT account's password is compromised, an attacker can use its hash to
 >  
 > Microsoft recommends resetting the password **twice**, waiting at least **10 hours between resets**, to invalidate any existing Kerberos tickets and help prevent Golden Ticket attacks.  
 >  
-> For the official and supported procedure, see [Reset the krbtgt password](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-the-krbtgt-password)
+> For the official and supported procedure, see [Reset the krbtgt password](https://learn.microsoft.com/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-the-krbtgt-password).
 
 
 ## Change password for on-prem account with potentially leaked credentials (Preview)
