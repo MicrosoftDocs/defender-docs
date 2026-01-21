@@ -65,7 +65,7 @@ This article shows you how to perform various incident management tasks associat
 
 Most of these tasks are accessible from the **Manage incident** pane for an incident. You can reach this pane from any of several locations.
 
-Select **IIncidents & alerts > Incidents** on the quick launch of the Microsoft Defender portal.
+Select **Incidents & alerts > Incidents** on the quick launch of the Microsoft Defender portal.
 
 ### [From the incident queue](#tab/queue)
 
@@ -144,7 +144,7 @@ To save a link to the incident queue with the current filters applied, select **
 
 ### Assign or change incident severity
 
-The severity of an incident is determined by the highest severity of the alerts associated with it. The severity of an incident can be set to *high*, *medium*, *low*, or *informational*.
+The severity of an incident is set to the highest severity of the alerts associated with it. The severity of an incident can be set to *high*, *medium*, *low*, or *informational*.
 
 To manually assign or change the severity of an incident, take the following steps:
 
@@ -160,11 +160,11 @@ Custom tags add information to lend context to an incident. For example, a tag c
 
 1. Follow the instructions in the opening section to [Access the *Manage incident* pane](#access-the-manage-incident-pane).
 
-1. In the **Incident tags** field, begin typing the name of the tag you want to apply. As you type, a list of previously used and selected tags appears. If you see the tag you want to apply in the list, select it. 
+1. In the **Incident tags** field, begin typing the name of the tag you want to apply. As you type, a list of previously used and selected tags appears. If you see the tag you want to apply in the list, select it.
 
     :::image type="content" source="media/manage-incidents/create-incident-tag.png" alt-text="Screenshot showing how to create an incident tag in the Manage incidents pane.":::
 
-    If you typed a tag name that hasn't been used before, select the last entry in the list, which is the text you typed followed by "(Create new)."
+    If you type a tag name that was never used before, select the last entry in the list, which is the text you typed followed by "(Create new)."
 
     :::image type="content" source="media/manage-incidents/select-tag.png" alt-text="Screenshot showing how to select a tag to apply to an incident in the Manage incidents pane.":::
 
@@ -174,7 +174,7 @@ Custom tags add information to lend context to an incident. For example, a tag c
 
 1. Select **Save**.
 
-An incident can have system tags and/or custom tags with certain color backgrounds. Custom tags use the white background while system tags typically use red or black background colors. System tags identify the following in an incident:
+An incident can have system tags and/or custom tags with certain color backgrounds. Custom tags use the white background while system tags typically use red or black background colors. System tags identify the following information:
 
 - A **type of attack**, like credential phishing or BEC fraud
 - **Automatic actions**, like automatic investigation and response and automatic attack disruption
@@ -263,7 +263,7 @@ The following management tasks can be associated with auditing and reporting on 
 
 ### Edit the incident name
 
-Microsoft Defender automatically assigns a name based on alert attributes such as the number of endpoints affected, users affected, detection sources or categories. The incident name allows you to quickly understand the scope of the incident. For example: *Multi-stage incident on multiple endpoints reported by multiple sources.*
+Microsoft Defender automatically assigns a name based on alert attributes such as the number of endpoints affected, users affected, detection sources, or categories. The incident name allows you to quickly understand the scope of the incident. For example: *Multi-stage incident on multiple endpoints reported by multiple sources.*
 
 To edit the incident name, take the following steps:
 
@@ -299,9 +299,6 @@ When doing a postmortem of an incident, view the incident's **Activity log** to 
 
 You can also [add your own comments](#add-comments-to-an-incident) by selecting **Add comment** at the top of the Activities panel. The comment box accepts text and formatting, links, and images.
 
-> [!IMPORTANT]
-> Some information in this article relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-
 ### AI generated analyst notes
 
 When you finish investigating an incident, you can generate an automatic summary and analysis of the investigation.
@@ -330,13 +327,13 @@ To generate analyst notes, ensure the following prerequisites are met:
 
 #### Generate analyst notes
 
-To generate analyst notes after investigation is finished, do the following:
+To generate analyst notes after investigation is finished, take the following steps:
 
 1. From the incident page, go to the three dots on the top right and select **Generate analyst notes**.
 
     :::image type="content" source="./media/manage-incidents/generate-analyst-notes.png" alt-text="Screenshot highlighting the generate analyst notes option from the incident page in the Microsoft Defender portal.":::
 
-    A banner appears with the date and time the generation started. The preparation process can take up to 20 minutes. You can leave the page and continue working elsewhere. You'll receive a notification when complete.
+    A banner appears with the date and time the generation started. The preparation process can take up to 20 minutes. You can leave the page and continue working elsewhere. You receive a notification when it finishes.
 
 1. In the **Activities** tab, there's a new line in the activity log indicating that the generation is in progress. You might have to refresh the screen to see it. Select the line to open the side panel with the status of the generation. If needed, you can stop the generation by selecting **Stop generating**.
 
@@ -344,7 +341,7 @@ To generate analyst notes after investigation is finished, do the following:
 
 1. When the generation is complete, go to the **Activities** tab. The analyst notes appear as a new line in the activity log. The line includes the date and time the notes were generated and who generated them.
 
-    :::image type="content" source="./media/manage-incidents/activities-tab.png" alt-text="Screenshot highlighting the analyst notes in the first line of the activities tab from the incident page in the Microsoft Defender portal." lightbox="./media/manage-incidents/activities-tab.png":::
+    :::image type="content" source="./media/manage-incidents/activities-tab.png" alt-text="Screenshot highlighting the analyst notes in the frontline of the activities tab from the incident page in the Microsoft Defender portal." lightbox="./media/manage-incidents/activities-tab.png":::
 
    Select the line to open the side panel with the generated analyst notes.
 
@@ -356,7 +353,7 @@ To generate analyst notes after investigation is finished, do the following:
 
    :::image type="content" source="./media/manage-incidents/feedback.png" alt-text="Screenshot showing the feedback option for the generated analyst notes in the Microsoft Defender portal.":::
 
-- Optionally, you can post the note as a comment in the comments section of the incident summary. This is a good way to export it for other uses.
+- Optionally, you can post the note as a comment in the comments section of the incident summary. Posting in the comments is a good way to export it for other uses.
 
 - Only users with at least the same permissions as the analyst who generated the notes can view and edit them.
 
@@ -376,7 +373,7 @@ Here's an example of the exported PDF:
 
 :::image type="content" source="media/manage-incidents/export-results-small.png" alt-text="Screenshot of the exported PDF's first page." lightbox="media/manage-incidents/export-results.png":::
 
-If you have the [Copilot for Security](/security-copilot/microsoft-security-copilot) license, the exported PDF contains the following additional incident data:
+If you have the [Copilot for Security](/security-copilot/microsoft-security-copilot) license, the exported PDF also contains the following incident data:
 
 - [Incident summary](security-copilot-m365d-incident-summary.md)
 - [Incident report](security-copilot-m365d-create-incident-report.md)
@@ -395,7 +392,7 @@ To generate the PDF, perform the following steps:
 
    :::image type="content" source="media/manage-incidents/export-options.png" alt-text="Screenshot highlighting the export incident to PDF option.":::
 
-1. A status message indicating the current state of the download appears below the incident title. The export process may take a few minutes depending on the incident's complexity and the amount of data to be exported.
+1. A status message indicating the current state of the download appears below the incident title. The export process might take a few minutes depending on the incident's complexity and the amount of data to be exported.
 
    :::image type="content" source="media/manage-incidents/export-prepare-small.png" alt-text="Screenshot highlighting export message and status before download." lightbox="media/manage-incidents/export-prepare.png":::
 
