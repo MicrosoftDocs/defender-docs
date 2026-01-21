@@ -71,7 +71,7 @@ Your data is kept and is available to you while the license is under grace perio
 
 In the advanced hunting investigation experience, it's accessible via a query for 30 days.
 
-## Data retention for Defender Vulnerability Management inventory data
+### Data retention for Defender Vulnerability Management inventory data
 
 Inventory entries in Defender Vulnerability Management expire after **7 days** or **31 days** depending on the source as described in the following table:
 
