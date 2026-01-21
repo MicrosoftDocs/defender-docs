@@ -6,8 +6,8 @@ ms.service: defender-endpoint
 ms.subservice: reference
 f1.keywords:
 - NOCSH
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
