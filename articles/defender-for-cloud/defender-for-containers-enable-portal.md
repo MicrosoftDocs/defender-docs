@@ -41,11 +41,7 @@ This article explains how to enable Microsoft Defender for Containers and deploy
 
 1. Select **Continue**.
 
-1. Review the monitoring coverage page.
-
-1. Select **Continue**.
-
-1. Review the configuration summary and select **Save**.
+1. Select **Save**.
 
 ## Verify deployment
 
@@ -98,6 +94,8 @@ Use the Azure portal to verify that Defender for Containers components were depl
    - **Agentless container vulnerability assessment**
    - **Defender DaemonSet**
    - **Azure Policy for Kubernetes**
+
+1. Select **Continue**.
 
 1. Select **Save**.
 
@@ -203,6 +201,8 @@ Use the Azure portal to verify that Defender for Containers components were depl
 1. Select **Continue**.
 
 1. Select **Next: Configure access**.
+
+1. CHECK THE FOLLOWING:
 
 1. In the Azure portal, copy the setup script from the **Configure access** step.
 
