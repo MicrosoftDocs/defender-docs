@@ -78,7 +78,9 @@ To create a function from the current query in the editor:
 1. Select **Save**.
 
 > [!IMPORTANT]
-> You can use most of the custom functions you create in advanced hunting in custom detection rules and advanced hunting queries. However, if you create and save a custom function under **Shared functions** > **Sentinel workspace functions**, it works the same way as [custom functions imported from Microsoft Sentinel log analytics](#custom-functions-imported-from-microsoft-sentinel-log-analytics), so you can't use it in custom detection rules.
+> You can use custom functions you create in advanced hunting in custom detection rules and advanced hunting queries, as long as you don't save the function in a Microsoft Sentinel workspace.
+>
+>If you create a custom function and save it in a Microsoft Sentinel workspace, you can use it in workbooks and analytics rules on any Microsoft Sentinel content in this workspace, but not in custom detection rules.
 
 ### Add parameters to your custom function
 
