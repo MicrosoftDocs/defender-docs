@@ -179,7 +179,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 ##### What's new
 
-- `mdatp health --details edr` now includes AAD info
+- `mdatp health --details edr` now includes Azure Active Directory information
 - Bug and performance fixes
 
 ### Apr-2025 (Build: 101.25032.0006  | Release version: 20.125032.6.0)
