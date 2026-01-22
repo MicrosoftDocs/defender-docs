@@ -21,8 +21,6 @@ With AI model security, security teams can scan custom AI models uploaded to Azu
 
 - You must have an Azure subscription that contains AI models registered in [Azure Machine Learning](/azure/machine-learning/quickstart-create-resources) (Azure Machine Learning) registries or workspaces.
 - [Enable the Defender for Cloud Security Posture Management plan](tutorial-enable-cspm-plan.md).
-- You must be able to [create an Azure Machine Learning registry](/azure/machine-learning/how-to-manage-registries) or have access to an existing Azure Machine Learning registry.
-- The ability to register models within the Azure Machine Learning registry for scanning.
 - Required permissions: **Owner** or **Contributor** on the Azure Machine Learning resources.
 - Supported model file formats: `Pickle (.pkl)`, `HDF5 (.h5)`, `TorchScript (.pt)`, `ONNX (.onnx)`, `SafeTensors (.safetensors)`, `TensorFlow SavedModel / TFLite (FlatBuffers)`, `NumPy (.npy)`, `Arrow, MsgPack, dill, joblib`, `PMML, JSON, POJO, MOJO, GGUF`.
 - File size limit: 10 GB. Model files larger than 10 GB can't be scanned. 
