@@ -2,8 +2,8 @@
 title: Get scan definitions
 description: Learn how to use the Get all scan definition APIs
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
