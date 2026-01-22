@@ -1,8 +1,8 @@
 ﻿---
 title: Troubleshoot Microsoft Defender Antivirus service startup problems
 description: Learn how to troubleshoot Microsoft Defender Antivirus service startup problems.
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 manager: bagol
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
