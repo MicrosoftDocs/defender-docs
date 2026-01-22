@@ -254,7 +254,7 @@ This section describes how to modify your Active Directory Federation Services (
    
    1. Select the checkboxes to configure audit events for **Success** and **Failure**.  
 
-   ![Screenshot of the advanced auditing audit policy configuration.](../media/configure-windows-event-collection/image1.png)
+   ![Screenshot of the advanced auditing audit policy configuration.](/media/configure-windows-event-collection/image1.png)
    
 #### Configure Verbose logging for AD FS events
 
