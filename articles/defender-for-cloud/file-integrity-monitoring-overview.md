@@ -34,6 +34,16 @@ File integrity monitoring uses the Microsoft Defender for Endpoint agent and age
 - Collected file integrity monitoring data is part of the [500-MB benefit included in Defender for Servers Plan 2](data-ingestion-benefit.md).
 - File integrity monitoring gives information about file and resource changes. It includes the source of the change, account details, indication of who made the changes, and information about the initiating process.
 
+## Version requirements
+
+To ensure proper file integrity monitoring functionality, machines must run Microsoft Defender for Endpoint agent version **10.8799 or above**. This requirement is especially important for:
+
+- Legacy Windows machines (downlevel clients)
+- Environments transitioning from MMA or AMA-based FIM
+
+> [!IMPORTANT]
+> Due to a pipeline change in Microsoft Defender for Endpoint, users with existing FIM deployments on legacy Windows machines must update their MDE agent to version 10.8799 or above to continue receiving file integrity monitoring data.
+
 ### Migrate to the new version
 
 File integrity monitoring previously used the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)) or the Azure Monitor agent (AMA) to collect data. If you're using file integrity monitoring with one of these legacy methods, you can [migrate file integrity monitoring](migrate-file-integrity-monitoring.md) to use Defender for Endpoint.
