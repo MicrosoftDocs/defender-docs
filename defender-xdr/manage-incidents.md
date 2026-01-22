@@ -299,7 +299,7 @@ When doing a postmortem of an incident, view the incident's **Activity log** to 
 
 You can also [add your own comments](#add-comments-to-an-incident) by selecting **Add comment** at the top of the Activities panel. The comment box accepts text and formatting, links, and images.
 
-### AI generated analyst notes
+## AI generated analyst notes
 
 When you finish investigating an incident, you can generate an automatic summary and analysis of the investigation.
 
@@ -310,7 +310,7 @@ The analysis includes details such as:
 
 Use the output to train new analysts, conduct audits, support investigations, hand off work to teammates, or feed AI models and tools.
 
-#### Prerequisites for generating analyst notes
+### Prerequisites for generating analyst notes
 
 To generate analyst notes, ensure the following prerequisites are met:
 
@@ -328,7 +328,7 @@ To generate analyst notes, ensure the following prerequisites are met:
   - Security Data Read
   - Security Data Manage
 
-#### Generate analyst notes
+### Generate analyst notes
 
 To generate analyst notes after investigation is finished, take the following steps:
 
