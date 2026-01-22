@@ -49,5 +49,5 @@ You can view a list of all the suppression rules and manage them in one place. Y
 
 - [Manage alerts](manage-alerts.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

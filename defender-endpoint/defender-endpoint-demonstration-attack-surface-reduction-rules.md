@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint attack surface reduction rules demonstrat
 description: See how attack surface reduction rules block various known threat types.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: lwainstein
+author: limwainstein
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
 manager: bagol
@@ -212,5 +212,5 @@ Clean up **c:\demo** encryption by running the [encrypt/decrypt file](https://de
 
 [Microsoft Defender for Endpoint - demonstration scenarios](defender-endpoint-demonstrations.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

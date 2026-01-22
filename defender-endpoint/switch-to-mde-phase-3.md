@@ -159,5 +159,5 @@ To learn more, see [Device inventory](machines-view-overview.md).
 
 - [Configure your Defender for Endpoint settings](preferences-setup.md).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

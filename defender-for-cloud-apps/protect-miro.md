@@ -1,14 +1,12 @@
 ---
 title: Protect your Miro environment
 description: This article provides information about the benefits of connecting your Miro app to Defender for Cloud Apps using the API connector for visibility and control over use.
-ms.date: 12/06/2023
+ms.date: 01/01/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
 
 # How Defender for Cloud Apps helps protect your Miro environment
-
-
 
 Miro is an online workspace that enables distributed, cross-functional teams organize and collaborate on projects. Miro holds critical data of your organization, and this makes it a target for malicious actors. 
 
@@ -51,31 +49,31 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 **Prerequisites**:
 
-- A Miro account with an enterprise plan is a pre-requisite for this connection. You must sign-in as a company admin to Miro. 
+- You must have a Miro account with an enterprise plan. 
 
-**To connect Miro to Defender for Cloud Apps**:
+### Configure Miro 
 
 1. Sign into [Miro](https://miro.com/app/dashboard/) portal with a company admin account.
-2. Create a developer team from the portal. To create a developer team, navigate to **Company Settings > User & Team management > Teams > Create new team**.
-3. Give a descriptive name to the team and set the permissions to ‘Default’. Select ‘Create as a Developer Team’ and create the team.
-4. Create a new application in the newly created developer team. To create a new application, navigate to **Profile settings > Your apps** and click on **‘Create new app’**
-5. Give a name to the app, select the newly created developer team, and click on **Create app**.
-6. Copy the Client ID and Client secret for future reference. 
-7. Provide 'https://portal.cloudappsecurity.com/api/oauth/saga' as the 'Redirect URI for OAuth2.0'.
-8. Provide ‘auditlogs:read’ and ‘organization:read; permissions and click on **Install app and get OAuth token**.
-9. In the [Defender for Cloud Apps](https://portal.cloudAppSecurity.com) portal, navigate to Investigate >Connected apps.
-10. In the App connectors page, click on Connect an app and choose Miro. 
-11. Enter a name for Miro connection in the connection wizard and click on Connect Miro.
-12. Enter the Client ID, Client secret and click on Connect in Miro.
-13. Select the Miro team that you want to connect with Defender for Cloud Apps and click on Add again. Note that this Miro team is different from the developer team in which you created the app.
-14. Click on Test now to make sure the connection succeeded. Audit events will start flowing into Defender for Cloud apps from the time the connection is successfully established.
+1. Create a developer team with default permissions.
+1. Create a new application in the developer team and ensure the “Expire user authentication token” setting is checked.
+1. Copy the **Client ID** and **Client secret**. You'll need them later.
+1. Configure 'OAuth2.0' by setting the redirect URL to 'https://portal.cloudappsecurity.com/api/oauth/saga'.
+1. Grant these required permissions, and then select **Install app and get OAuth token**.
+- ‘auditlogs:read’
+- ‘organization:read’
 
-If you have any problems connecting the app, see [Troubleshooting App Connectors](/defender-cloud-apps/troubleshooting-api-connectors-using-error-messages).
+### Connect Microsoft Defender for Cloud Apps
+
+1. In the [Defender for Cloud Apps](https://portal.cloudAppSecurity.com) portal, navigate to Investigate > Connected apps.
+1. In the **App connectors** page, select **Connect an app**, and choose **Miro**.
+1. In the connection wizard, enter a name for Miro connection, and select **Connect Miro**.
+1. Enter the **Client ID, Client secret** and select **Connect in Miro**.
+1. Select the Miro team that you want to connect with Defender for Cloud Apps and select **Add** again. Note that this Miro team is different from the developer team in which you created the app.
+1. Select **Test now** to make sure the connection succeeded. Audit events start flowing into Defender for Cloud apps from the time the connection is successfully established.
+
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Control cloud apps with policies](control-cloud-apps-with-policies.md)
+- If you have any problems connecting the app, see [Troubleshooting App Connectors](/defender-cloud-apps/troubleshooting-api-connectors-using-error-messages).
+- [Control cloud apps with policies](control-cloud-apps-with-policies.md)
 
-
-[!INCLUDE [Open support ticket](includes/support.md)]
