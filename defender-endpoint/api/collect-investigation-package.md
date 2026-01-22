@@ -2,8 +2,8 @@
 title: Collect investigation package API
 description: Use this API to create calls related to the collecting an investigation package from a device.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
