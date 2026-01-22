@@ -56,20 +56,8 @@ You can now enable UEBA for supported data sources directly from the data connec
 
 This integration allows you to see which data sources feed into UEBA and enable that feed directly from the connector configuration.
 
-**Supported connectors:**
-
-- Amazon Web Services
-- Azure Activity
-- GCP Pub/Sub Audit Logs
-- Microsoft Defender XDR
-- Microsoft Entra ID
-- Okta Single Sign-On
-- Okta Single Sign-On (using Azure Functions)
-- Security Events via Legacy Agent
-
 For more information, see:
 
-- [Enable entity behavior analytics to detect advanced threats](enable-entity-behavior-analytics.md#enable-ueba-from-supported-connectors)
 - [Connect data sources to Microsoft Sentinel by using data connectors](configure-data-connector.md#enable-user-and-entity-behavior-analytics-ueba-from-supported-connectors)
 
 
