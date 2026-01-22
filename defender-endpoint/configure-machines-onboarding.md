@@ -73,5 +73,5 @@ For more information, [read about using Intune device configuration profiles to 
 - [Ensure your devices are configured properly](configure-machines.md)
 - [Increase compliance to the Defender for Endpoint security baseline](configure-machines-security-baseline.md)
 - [Optimize ASR rule deployment and detections](configure-machines-asr.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

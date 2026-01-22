@@ -4,8 +4,8 @@ description: Turn on cloud protection to benefit from fast and advanced protecti
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.date: 10/20/2025
 ms.reviewer: pahuijbr
 manager: bagol
@@ -187,5 +187,5 @@ For more information about allowed parameters, see [Windows Defender WMIv2 APIs]
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

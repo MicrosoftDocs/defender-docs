@@ -4,8 +4,8 @@ description: Configure what Microsoft Defender Antivirus should do when it detec
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.topic: how-to
 ms.custom: nextgen
 ms.date: 10/20/2025
@@ -112,5 +112,5 @@ You can also use the [`Set-MpPreference` PowerShell cmdlet](/powershell/module/d
 - [Configure Defender for Endpoint on Android features](android-configure.md)
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
