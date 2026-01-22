@@ -3,7 +3,7 @@ title: Install Defender for Containers sensor Using Helm
 description: Learn how to install the Microsoft Defender for Containers sensor on Kubernetes clusters using Helm.
 author: Elazark
 ms.topic: how-to
-ms.date: 01/21/2026
+ms.date: 01/22/2026
 ms.author: elkrieger
 ai-usage: ai-assisted
 ---
@@ -91,14 +91,13 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
 
 - Replace `<VERSION>` with:
   - `latest` for the most recent version.
-    Or, 
   - A specific semantic version.
     
 - Replace <RELEASE_TRAIN> with:
-
-  - 'stable' (default) or 'public' (for Public Preview)
+  - `stable` (default).
+  - `public` for the preview version.
     
-- The flag --antimalware enables antimalware scanning.
+- The flag `--antimalware` enables antimalware scanning.
 
 > [!NOTE]
 > This script sets a new `kubeconfig` context and might create a Log Analytics workspace in your Azure account.
@@ -134,26 +133,27 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
     
     Replace the placeholder text `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<VERSION>`, and `<DISTRIBUTION>` with your own values.
    
-   - Replace `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>` with the Azure resource ID of your security connector.
+  - Replace `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>` with the Azure resource ID of your security connector.
       
-       > [!NOTE]
+    > [!NOTE]
     > This script might create a Log Analytics workspace in your Azure account.
     >
     > This script tests for an arc managed deployment of the Defender for Containers Sensor. If one exists, the script removes it prior to deploying the sensor by using helm.
 
    - Replace `<VERSION>` with:
     - `latest` for the most recent version.
-      Or, 
-      - A specific semantic version.
+    - A specific semantic version.
             
    - Replace `<DISTRIBUTION>` with: 
-      - `eks` or `gke` or `eksautomode`. 
+      - `eks`
+      - `gke`
+      - `eksautomode`. 
             
    - Replace <RELEASE_TRAIN> with:
-      
-    - 'stable' (default) or 'public' (for Public Preview)
+      - `stable` (default).
+      - `public` for the preview version.
         
-   - The flag --antimalware enables antimalware scanning.
+   - The flag `--antimalware` enables antimalware scanning.
       
 ---
 
@@ -218,4 +218,3 @@ oci://mcr.microsoft.com/azuredefender/microsoft-defender-for-containers \
 ## Related content
 
 - [Common questions about protecting containers](faq-defender-for-containers.yml)
-
