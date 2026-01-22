@@ -46,12 +46,6 @@ Due to a pipeline change in Microsoft Defender for Endpoint (MDE), File Integrit
 - **Required version**: MDE agent 10.8799 or later
 - **Impact**: FIM monitoring will not function properly on versions below the minimum requirement
 
-**Action required:**
-
-Users with File Integrity Monitoring enabled on legacy Windows machines should update their MDE agent to version 10.8799 or above to continue receiving file integrity monitoring data. Use the [Defender for Servers dashboard workbook](https://aka.ms/DfServersDashboard) to verify agent versions across your environment.
-
-For Windows Server 2016 and Windows Server 2012 R2, you must update machines manually to the latest agent version by installing [KB 5005292 from the Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5005292).
-
 Learn more about [File Integrity Monitoring](file-integrity-monitoring-overview.md) and how to [enable File Integrity Monitoring](file-integrity-monitoring-enable-defender-endpoint.md).
 
 ## Microsoft Security Private Link (Preview)
