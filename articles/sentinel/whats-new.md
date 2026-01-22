@@ -50,8 +50,6 @@ This update expands [detection coverage for SAP BTP](../sentinel/sap/sap-btp-sec
 - **SAP Build Work Zone**: Identifies mass role deletions and unauthorized access to restricted portal resources.
 - **SAP BTP Audit Logging**: Detects audit log ingestion gaps and disruptions that reduce security visibility and enable stealthy activity.
 
-// ...existing code...
-
 ### Enable UEBA directly from data connector configuration (Preview)
 
 You can now enable UEBA for supported data sources directly from the data connector configuration page, reducing management time and preventing coverage gaps. When you enable new connectors, you can onboard the data source to UEBA without navigating to a separate configuration page.
