@@ -107,6 +107,7 @@ The python version of client analyzer is made available in two ways:
 > [!NOTE]
 > - The analyzer depends on a few extra PIP packages (`decorator`, `sh`, `distro`, `lxml`, and `psutil`) which are installed in the operating system when in root to produce the result output. If not installed, the analyzer attempts to fetch it from the [official repository for Python packages](https://pypi.org/search/?q=lxml).
 > - In addition, the tool currently requires Python version 3 or later to be installed on your device.
+> - Starting with **Client Analyzer for MDE Linux version 1.7.0**, support for running the Python-based client analyzer in a Python virtual environment (venv) is available. Using a virtual environment is optional and not required.
 > - If your device is behind a proxy, then you can pass the proxy server as an environment variable to the `mde_support_tool.sh` script. For example: `https_proxy=https://myproxy.contoso.com:8080 ./mde_support_tool.sh"`.
 
 > [!WARNING]
