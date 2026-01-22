@@ -308,7 +308,7 @@ The analysis includes details such as:
 - A high-level summary of the incident and investigation process including actions and activities done by the analyst.
 - Detailed step by step log and KQL queries run during the investigation process.
 
-Use the output to train new analysts, conduct audits, support investigations, or feed AI models and tools.
+Use the output to train new analysts, conduct audits, support investigations, hand off work to teammates, or feed AI models and tools.
 
 #### Prerequisites for generating analyst notes
 
@@ -320,7 +320,10 @@ To generate analyst notes, ensure the following prerequisites are met:
   1. Open **Advanced features**
   1. Find the *Opt-in to analyst notes* feature and toggle it to **On**
 
-- You have a Copilot license
+  :::image type="content" source="./media/manage-incidents/opt-in-analyst-notes.png" alt-text="Screenshot showing the Opt-in to analyst notes feature toggle in the Microsoft Defender portal.":::
+
+- Security Copilot license
+
 - You have one of the following permissions ([RBAC](./manage-rbac.md)).
   - Security Data Read
   - Security Data Manage
@@ -334,6 +337,8 @@ To generate analyst notes after investigation is finished, take the following st
     :::image type="content" source="./media/manage-incidents/generate-analyst-notes.png" alt-text="Screenshot highlighting the generate analyst notes option from the incident page in the Microsoft Defender portal.":::
 
     A banner appears with the date and time the generation started. The preparation process can take up to 20 minutes. You can leave the page and continue working elsewhere. You receive a notification when it finishes.
+
+   :::image type="content" source="./media/manage-incidents/notes-ready-notification.png" alt-text="Screenshot showing a notification that says the analyst notes are ready with a link to the activities tab.":::
 
 1. In the **Activities** tab, there's a new line in the activity log indicating that the generation is in progress. You might have to refresh the screen to see it. Select the line to open the side panel with the status of the generation. If needed, you can stop the generation by selecting **Stop generating**.
 
@@ -353,9 +358,9 @@ To generate analyst notes after investigation is finished, take the following st
 
    :::image type="content" source="./media/manage-incidents/feedback.png" alt-text="Screenshot showing the feedback option for the generated analyst notes in the Microsoft Defender portal.":::
 
-- Optionally, you can post the note as a comment in the comments section of the incident summary. Posting in the comments is a good way to export it for other uses.
+<!--- - You can post the note as a comment in the comments section of the incident summary. Posting in the comments is a good way to export it for other uses. --->
 
-- Only users with at least the same permissions as the analyst who generated the notes can view and edit them.
+- Only users with at least the same permissions and scopeas the analyst who generated the notes can view and edit them.
 
 ## Export incident data to PDF
 
