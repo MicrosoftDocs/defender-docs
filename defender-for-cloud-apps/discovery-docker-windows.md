@@ -10,7 +10,7 @@ You can configure automatic log upload for continuous reports in Defender for Cl
 
 ## Prerequisites
 
-- The Log Collector host server must have public network access.
+- Firewall log forwarding must be configured to send logs to the log collector host machine.
 
 - **Architecture specifications**:
 
