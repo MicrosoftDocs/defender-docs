@@ -102,8 +102,6 @@ Follow these steps to enable comprehensive protection for all your Arc-enabled c
 
 ### Deploy extensions to Arc-enabled clusters
 
-#### Option 1: Deploy via recommendations (recommended)
-
 1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
 
 1. Search for "Azure Arc-enabled Kubernetes clusters should have Defender extension installed".
@@ -118,24 +116,6 @@ Follow these steps to enable comprehensive protection for all your Arc-enabled c
     > Select the check box next to the cluster name, not the hyperlinked name itself.
 
 1. Select **Fix** to automatically deploy the extensions.
-
-   :::image type="content" source="media/defender-for-kubernetes-azure-arc/security-center-deploy-extension.gif" alt-text="Animated screenshot that shows deploying a Defender sensor for Azure Arc by using remediation in Defender for Cloud.":::
-
-#### Option 2: Deploy manually
-
-1. Go to your Arc-enabled Kubernetes cluster.
-
-1. Under **Settings**, select **Extensions**.
-
-1. Select **+ Add**.
-
-1. Install the **Microsoft Defender for Containers** extension:
-   1. Search for "Microsoft Defender"
-   1. Select the extension
-   1. Configure the Log Analytics workspace
-   1. Complete installation
-
-1. Repeat to install **Azure Policy for Kubernetes** extension if needed.
 
 ### Deploy the Defender sensor
 
