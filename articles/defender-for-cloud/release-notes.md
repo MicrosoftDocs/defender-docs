@@ -31,7 +31,28 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
+|January 22, 2026| Update | [File Integrity Monitoring requires MDE agent version 10.8799+ for legacy Windows machines](#file-integrity-monitoring-requires-mde-agent-version-108799-for-legacy-windows-machines) |
 |January 8, 2026| Preview | [Microsoft Security Private Link (Preview)](#microsoft-security-private-link-preview) |
+
+### File Integrity Monitoring requires MDE agent version 10.8799+ for legacy Windows machines
+
+January 22, 2026
+
+Due to a pipeline change in Microsoft Defender for Endpoint (MDE), File Integrity Monitoring now requires Microsoft Defender for Endpoint agent version 10.8799 or above for proper functionality on legacy Windows machines (downlevel clients).
+
+**Key details:**
+
+- **Affected systems**: Legacy Windows machines (Windows Server 2016, Windows Server 2012 R2, and other downlevel clients)
+- **Required version**: MDE agent 10.8799 or later
+- **Impact**: FIM monitoring will not function properly on versions below the minimum requirement
+
+**Action required:**
+
+Users with File Integrity Monitoring enabled on legacy Windows machines should update their MDE agent to version 10.8799 or above to continue receiving file integrity monitoring data. Use the [Defender for Servers dashboard workbook](https://aka.ms/DfServersDashboard) to verify agent versions across your environment.
+
+For Windows Server 2016 and Windows Server 2012 R2, you must update machines manually to the latest agent version by installing [KB 5005292 from the Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5005292).
+
+Learn more about [File Integrity Monitoring](file-integrity-monitoring-overview.md) and how to [enable File Integrity Monitoring](file-integrity-monitoring-enable-defender-endpoint.md).
 
 ## Microsoft Security Private Link (Preview)
 

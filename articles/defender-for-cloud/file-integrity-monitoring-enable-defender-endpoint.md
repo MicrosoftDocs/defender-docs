@@ -18,9 +18,9 @@ After you enable Defender for Servers Plan 2, follow the instructions in this ar
 > [!NOTE]
 >
 > - If you use a previous version of File Integrity Monitoring with the Log Analytics agent (Microsoft Monitoring agent (MMA)) or the Azure Monitor agent (AMA), you can [migrate to the new File Integrity Monitoring experience](migrate-file-integrity-monitoring.md).
-> - From June 2025 onwards, File Integrity Monitoring powered by Microsoft Defender for Endpoint requires a minimum version. [Update the agent](#verify-defender-for-endpoint-client-version) as needed.
->   - Windows: 10.8760 or later.
->   - Linux: 30.124082 or later.
+> - File Integrity Monitoring powered by Microsoft Defender for Endpoint requires a minimum agent version. [Update the agent](#verify-defender-for-endpoint-client-version) as needed.
+>   - **Windows (legacy machines/downlevel clients)**: 10.8799 or later.
+>   - **Linux**: 30.124082 or later.
 
 ## Prerequisites
 

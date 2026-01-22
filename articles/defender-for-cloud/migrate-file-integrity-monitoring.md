@@ -18,22 +18,7 @@ The previous version of file integrity monitoring used the Log Analytics agent (
 
 - You must enable Defender for Servers Plan 2 to use file integrity monitoring.
 - Migration is relevant if file integrity monitoring is currently enabled using MMA or AMA.
-- Machines protected by Defender for Servers Plan 2 must run the Microsoft Defender for Endpoint agent version **10.8799 or above**. This is particularly critical for legacy Windows machines (downlevel clients).
-- To check agent status and version on machines in your environment, [use this workbook](https://aka.ms/DfServersDashboard).
-
-## Important: Version requirements for legacy Windows machines
-
-Due to a recent pipeline change in Microsoft Defender for Endpoint, users migrating from MMA or AMA-based file integrity monitoring must ensure their MDE agent meets the minimum version requirement:
-
-- **Minimum required version**: 10.8799
-- **Affected systems**: Primarily legacy Windows machines (downlevel clients)
-- **Impact**: FIM monitoring will not function properly on versions below 10.8799
-
-### Checking and updating MDE agent version
-
-1. Use the [Defender for Servers dashboard workbook](https://aka.ms/DfServersDashboard) to verify agent versions across your environment
-2. For machines running older versions, update the MDE agent through your standard deployment method
-3. Verify FIM functionality resumes after the agent update
+- Machines protected by Defender for Servers Plan 2 must run the Microsoft Defender for Endpoint agent. To check agent status on machines in your environment, [use this workbook](https://aka.ms/DfServersDashboard) to do that.
 
 ## Migrate from MMA
 
