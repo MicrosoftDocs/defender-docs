@@ -2,7 +2,7 @@
 title: Discover AI models
 description: Learn about AI model security in Microsoft Defender for Cloud.
 ms.topic: concept-article
-ms.date: 01/19/2026
+ms.date: 01/22/2026
 ms.author: elkrieger
 zone_pivot_groups: defender-portal-experience
 ---
