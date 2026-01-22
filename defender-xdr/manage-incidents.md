@@ -320,7 +320,7 @@ To generate analyst notes, ensure the following prerequisites are met:
   1. Open **Advanced features**
   1. Find the *Opt-in to analyst notes* feature and toggle it to **On**
 
-  :::image type="content" source="./media/manage-incidents/opt-in-analyst-notes.png" alt-text="Screenshot showing the Opt-in to analyst notes feature toggle in the Microsoft Defender portal.":::
+  :::image type="content" source="./media/manage-incidents/opt-in-analyst-notes.png" alt-text="Screenshot showing the Opt-in to analyst notes feature toggle in the Microsoft Defender portal." lightbox="./media/manage-incidents/opt-in-analyst-notes.png":::
 
 - Security Copilot license
 
