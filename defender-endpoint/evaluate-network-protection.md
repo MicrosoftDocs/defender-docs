@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
 ms.topic: how-to
-author: KesemSharabi
-ms.author: kesharab
+author: limwainstein
+ms.author: lwainstein
 ms.reviewer: yongrhee
 manager: bagol
 ms.subservice: asr

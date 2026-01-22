@@ -3,8 +3,8 @@ title: Overview of management and APIs
 ms.reviewer:
 description: Learn about the management tools and API categories in Microsoft Defender for Endpoint
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
