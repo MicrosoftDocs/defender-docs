@@ -4,18 +4,11 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how to enable CIEM for better access control and security in your cloud infrastructure.
 ms.topic: how-to
-ms.date: 07/31/2025
+ms.date: 11/13/2025
 #customer intent: As a cloud administrator, I want to learn how to enable permissions (CIEM) in order to effectively manage user access and entitlements in my cloud infrastructure.
 ---
 
 # Enable cloud infrastructure entitlement management (CIEM)
-
-> [!NOTE]
-> Effective April 1, 2025, Microsoft Entra Permissions Management will no longer be available for purchase.
->
-> On November 1, 2025, Microsoft will retire and discontinue support for this product. Learn more about [the retirement of Microsoft Entra Permissions Management](https://aka.ms/mepmretire).
-> 
-> The deprecation of Microsoft Entra Permissions Management doesn't affect any existing CIEM capabilities in Microsoft Defender for Cloud. Learn more about [the future of CIEM in Microsoft Defender for Cloud](https://aka.ms/mdc-ciem).
 
 Microsoft Defender for Cloud provides a cloud infrastructure entitlement management (CIEM) security model that helps organizations manage and control user access and entitlements in their cloud infrastructure. CIEM is a critical component of the Cloud Native Application Protection Platform (CNAPP) solution that provides visibility into who or what has access to specific resources. It ensures that access rights adhere to the principle of least privilege (PoLP), where users or workload identities, such as apps and services, receive only the minimum levels of access necessary to perform their tasks. CIEM also helps organizations to monitor and manage permissions across multiple cloud environments, including Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP).
 

@@ -4,7 +4,7 @@ description: Get an overview of the Defender for Servers plan in Microsoft Defen
 ms.topic: concept-article
 ms.author: elkrieger
 author: Elazark
-ms.date: 11/02/2025
+ms.date: 09/10/2025
 # customer intent: I want to understand how the Defender for Servers plan in Defender for Cloud can help reduce security risk and protect against threats.
 ---
 
@@ -68,6 +68,7 @@ Plan features are summarized in the table.
 | [Machine secrets scanning (agentless)](concept-agentless-data-collection.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, and GCP |
 | [File integrity monitoring](file-integrity-monitoring-overview.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, and GCP <br><br> Only applicable to AWS and GCP machines onboarded with Azure ARC. |
 | [Just-in-time virtual machine access](just-in-time-access-overview.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure and AWS |
+| [Network map](protect-network-resources.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
 | [Free data ingestion (500 MB)](data-ingestion-benefit.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: |  |
 
 <sup><a name="footnote1"></a>1</sup> Software inventory discovery (provided by [Defender Vulnerability Management](/defender-vulnerability-management/tvm-software-inventory)) is integrated into Defender for Cloud. <br>

@@ -59,7 +59,7 @@ Conflicting rules are applied in scope order. For example, rules on a management
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Go to **Microsoft Defender for Cloud** > **Environment settings** > **Governance rules**.
+1. Go to **Microsoft Defender for Cloud** > **Management** > **Environment settings** > **Governance rules**.
 
 1. Select **Create governance rule**.
 
@@ -78,8 +78,12 @@ Conflicting rules are applied in scope order. For example, rules on a management
 
 1. Specify how the rule affects recommendations.
 
-   - **By severity**: The rule assigns the owner and due date to any recommendation in the subscription that has no owner or due date.
+   - **By severity**: The rule assigns the owner and due date to any recommendation in the subscription that has no owner or due date and that matches the specified severity levels.
+   - **By risk level**: The rule assigns an owner and due date to any recommendations that match the specified risk levels.
+   - **By recommendation category**: The rule assigns an owner and due date to any recommendations that match the specified recommendation category.
    - **By specific recommendations**: Select the specific built-in or custom recommendations that the rule applies to.
+
+   To apply the rule to already-generated recommendations, you can rerun the rule using the UI or API.
 
    :::image type="content" source="./media/governance-rules/create-rule-conditions.png" alt-text="Screenshot that shows the page where you add conditions for a governance rule." lightbox="media/governance-rules/create-rule-conditions.png":::
 
@@ -107,7 +111,7 @@ You can view the effect that governance rules have in your environment.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Go to **Microsoft Defender for Cloud** > **Environment settings** > **Governance rules**.
+1. Go to **Microsoft Defender for Cloud** >  **Management** > **Environment settings** > **Governance rules**.
 
 1. Review the governance rules. The default list shows all the governance rules that are applicable in your environment.
 
@@ -126,7 +130,7 @@ You can use a Governance report to see recommendations by rule and owner that ar
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Go to **Microsoft Defender for Cloud** > **Environment settings** > **Governance rules** > **Governance report**.
+1. Go to **Microsoft Defender for Cloud** >  **Management** > **Environment settings** > **Governance rules** > **Governance report**.
 
     :::image type="content" source="media/governance-rules/governance-report.png" alt-text="Screenshot that shows the Governance rules page where the Governance report button is located." lightbox="media/governance-rules/governance-report.png":::
 

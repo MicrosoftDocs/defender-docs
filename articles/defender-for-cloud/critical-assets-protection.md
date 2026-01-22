@@ -1,7 +1,7 @@
 ---
 title: Critical assets protection (Preview)
 description: Learn how to identify and protect your critical assets in Microsoft Defender for Cloud with Microsoft Security Exposure Management.
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 05/18/2025
 ms.custom: sfi-image-nochange
 ---

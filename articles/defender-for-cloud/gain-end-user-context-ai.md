@@ -34,6 +34,9 @@ For application context, pass the `applicationName` field, as a simple string.
 
 If a field’s name is misspelled, the Azure OpenAI API call will still result in success. 
 
+> [!NOTE]
+> The EndUserId is the Microsoft Entra ID (formerly Azure Active Directory) user object ID used to authenticate end-users within the generative AI application. Sensitive personal information should not be included in this field.
+
 ## UserSecurityContext schema
 
 The exact schema can be found in Azure OpenAI [REST API reference documentation](/azure/ai-services/openai/reference-preview). 

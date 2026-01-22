@@ -1,11 +1,11 @@
 ---
 title: Reference table for all compute security recommendations in Microsoft Defender for Cloud
 description: This article lists all Microsoft Defender for Cloud compute security recommendations that help you harden and protect your resources.
-author: dcurwin
+author: Elazark
 ms.service: defender-for-cloud
 ms.topic: reference
 ms.date: 05/18/2025
-ms.author: dacurwin
+ms.author: elkrieger
 ms.custom: generated
 ai-usage: ai-assisted
 ---
@@ -700,8 +700,7 @@ To learn more about the supported runtimes that this control checks for the supp
 
 ### Management ports of EC2 instances should be protected with just-in-time network access control
 
-**Description**: Microsoft Defender for Cloud identified some overly permissive inbound rules for management ports in your network. Enable just-in-time access control to protect your Instances from internet-based brute-force attacks. [Learn more](enable-just-in-time-access.md
-).
+**Description**: Microsoft Defender for Cloud identified some overly permissive inbound rules for management ports in your network. Enable just-in-time access control to protect your Instances from internet-based brute-force attacks. [Learn more](just-in-time-access-usage.yml).
 
 **Severity**: High
 

@@ -2,7 +2,7 @@
 title: Overview of partner integration
 description: Learn about The different partners that integrate with Defender for Cloud to enhance your security posture and protect your Azure resources.
 ms.topic: concept-article
-ms.date: 04/28/2025
+ms.date: 12/01/2025
 #customer intent: As a reader, I want to learn what partner solutions integrate with Defender for Cloud.
 ---
 
@@ -34,8 +34,8 @@ Software composition analysis (SCA) partners that are partnered with Defender fo
 
 | Partner name | Logo | Description | Documentation |
 |--|--|--|--|
-| Endor Labs | :::image type="icon" source="media/partner-integrations/endor-logo.png" border="false"::: | Endor Labs is a software supply chain security company that enhances application security by managing open-source software dependencies. Their platform helps organizations select, secure, and maintain these dependencies, streamlining the development process and reducing security risks. |  [Endor Labs Onboarding guide](https://www.endorlabs.com/lp/microsoft-defender-for-cloud) |
-| Mend.io | | Mend.io provides advanced Software Composition Analysis (SCA) and reachability analysis. Its integration with Microsoft Defender for Cloud helps prioritize and remediate open source vulnerabilities in cloud-native environments. | [Mend.io integration page](connect-mend-io.md) |
+| [Endor Labs](https://www.endorlabs.com/) | :::image type="icon" source="media/partner-integrations/endor-logo.png" border="false"::: | Endor Labs is a software supply chain security company that enhances application security by managing open-source software dependencies. Their platform helps organizations select, secure, and maintain these dependencies, streamlining the development process and reducing security risks. |  [Endor Labs Onboarding guide](https://www.endorlabs.com/lp/microsoft-defender-for-cloud) |
+| [Mend.io](https://www.mend.io/) | :::image type="icon" source="media/partner-integrations/mend-io-logo.png" border="false"::: | Mend.io delivers advanced application and AI security. Its integration with Microsoft Defender for Cloud provides a unified view of SCA and container vulnerabilities, while reducing noise by identifying unreachable code and container instances. | [Mend.io integration page](connect-mend-io.md) |
 
 ### API security testing integrations
 
@@ -77,7 +77,7 @@ The following table lists partners that provide integration with Defender for Cl
 | Vanta | :::image type="icon" source="media/partner-integrations/vanta-logo.png" border="false"::: | Vanta is a security and compliance automation platform that helps companies improve and demonstrate their security practices. It automates the process of obtaining and maintaining compliance certifications such as SOC 2, HIPAA, and ISO 27001. | [Vanta integration page](https://help.vanta.com/hc/en-us/articles/360050273571-Connecting-Vanta-Azure) |
 | Tenable |  | Tenable is a cybersecurity company that specializes in vulnerability management and exposure management solutions. It helps organizations identify, assess, and mitigate cyber risks across their entire digital infrastructure. | [Tenable integration page](https://www.tenable.com/partners/technology) |
 | TrendMicro |  | Trend Micro is a cybersecurity company that provides advanced threat protection and security solutions for businesses and consumers. It specializes in cloud and enterprise cybersecurity, offering services like attack surface management, extended detection and response (XDR), and data loss prevention. | [TrendMicro integration page](https://www.trendmicro.com/cloudoneconformity/knowledge-base/azure/SecurityCenter/) |
-| Caveonix |  | Caveonix is a cybersecurity company that provides an enterprise risk management platform. It automates cybersecurity, compliance, and governance processes, helping organizations manage risks and maintain regulatory compliance efficiently. | [Caveonix integration page](https://www.caveonix.com/integrations-and-frameworks) |
+| Caveonix |  | Caveonix is a cybersecurity company that provides an enterprise risk management platform. It automates cybersecurity, compliance, and governance processes, helping organizations manage risks and maintain regulatory compliance efficiently. | [Caveonix](https://cavhq.ai/resources?view=all) |
 | Permiso |  | Permiso is a cybersecurity company that specializes in identity-based cloud detection and response. It helps organizations monitor and secure identities across various environments, detecting suspicious or malicious activities to protect cloud infrastructures. | [Permiso integration page](https://permiso.io/integrations) |
 | Kondukto | :::image type="icon" source="media/partner-integrations/kondukto-logo.png" border="false"::: | Kondukto is a cybersecurity company that specializes in application security orchestration and posture management. It provides a platform that integrates security data, automates vulnerability remediation workflows, and helps manage risks with key security performance indicators. | [Kondukto integration page](https://kondukto.io/integrations?search=defender) |
 | Phoenix Security |  | Phoenix Security is a cybersecurity company that specializes in risk-based vulnerability management. It provides a platform that helps organizations identify, prioritize, and remediate vulnerabilities to minimize cyberattack risks. | [Phoenix integration page](https://kb.phoenix.security/?ht_kb=integration-with-azure-defender) |

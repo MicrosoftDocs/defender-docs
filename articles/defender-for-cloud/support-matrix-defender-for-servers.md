@@ -5,7 +5,7 @@ ms.topic: limits-and-quotas
 ms.custom: linux-related-content
 author: elazark
 ms.author: elkrieger
-ms.date: 11/17/2025
+ms.date: 12/22/2025
 ---
 
 # Defender for Servers support
@@ -116,9 +116,10 @@ The following table shows feature support for AWS and GCP machines.
 |--|:-:|
 | [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) | ✔ | ✔ |
 | [Virtual machine behavioral analytics (and security alerts)](alerts-reference.md) | ✔ | ✔ |
+| Control plane security alerts | - | - |
 | [Fileless security alerts](alerts-windows-machines.md) | ✔ | ✔ |
 | [Network-based security alerts](other-threat-protections.md#network-layer) | - | - |
-| [Just-in-time VM access](enable-just-in-time-access.md) | ✔ | - |
+| [Just-in-time VM access](just-in-time-access-usage.yml) | ✔ | - |
 | [File Integrity Monitoring](file-integrity-monitoring-overview.md) | ✔ | ✔ |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ |
 | [Docker host hardening](harden-docker-hosts.md) | ✔ | ✔ |

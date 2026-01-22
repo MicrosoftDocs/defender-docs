@@ -20,8 +20,8 @@ landingContent:
         links:
           - text: What is Defender for Cloud?
             url: defender-for-cloud-introduction.md
-          - text: Common questions about Defender for Cloud
-            url: faq-general.yml
+          - text: Defender for Cloud in the Defender portal
+            url: defender-portal/defender-for-cloud-defender-portal.md
           - text: What's new in Defender for Cloud?
             url: release-notes.md
           - text: Microsoft Defender for Cloud product page
@@ -50,7 +50,7 @@ landingContent:
             url: quickstart-onboard-machines.md
 
   # Card
-  - title: Protect workloads
+  - title: Workload protection
     linkLists:
       - linkListType: overview
         links:
@@ -84,7 +84,7 @@ landingContent:
             url: ai-threat-protection.md
 
   # Card
-  - title: Security Posture & Compliance
+  - title: Posture management
     linkLists:
       - linkListType: overview
         links:
@@ -95,11 +95,10 @@ landingContent:
           - text: Regulatory compliance 
             url: concept-regulatory-compliance-standards.md
           - text: Enable just-in-time access on VMs
-            url: enable-just-in-time-access.md
-
+            url: just-in-time-access-usage.yml
 
   # Card
-  - title: Threat Protection & Response
+  - title: Investigation & response
     linkLists:
       - linkListType: overview
         links:

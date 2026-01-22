@@ -87,7 +87,7 @@ Enable Microsoft Purview to access, process, and store prompt and response data�
 This capability helps your organization manage and monitor AI-generated data in alignment with enterprise policies and regulatory requirements.
 
 > [!NOTE]
-> Data security for Azure AI Services interactions is supported only for API calls that use Microsoft Entra ID authentication with a user-context token, or for API calls that explicitly include user context. To learn more, see [Gain end-user context for Azure AI API calls](gain-end-user-context-ai.md).
+> Data Security Policies for Azure AI Services interactions are supported only for API calls that use Microsoft Entra ID authentication with a user-context token, or for API calls that explicitly include user context. To learn more, see [Gain end-user context for Azure AI API calls](gain-end-user-context-ai.md). For all other authentication scenarios, user interactions captured in Purview show up only in Purview Audit and DSPM for AI Activity Explorer. 
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -105,6 +105,29 @@ This capability helps your organization manage and monitor AI-generated data i
 
 1. Select **Continue**.
 
+### **Troubleshooting**
+If you don't see user interactions for Entra ID authenticated users in Microsoft Purview Activity Explorer after turning on the toggle, follow these steps to troubleshoot:
+ 
+Run the following commands in Azure PowerShell
+1. Install the following Az modules (if needed):
+    ```PowerShell
+    Install-Module -Name Az -AllowClobber
+    Import-Module Az.Accounts
+    ```
+1. Connect to Azure PowerShell as a tenant admin : 
+     ```PowerShell
+     Connect-AzAccount -Tenant $yourTenantIdHere
+     ```        
+1. On the web page that opens, sign in using your tenant admin credentials.
+1. Verify that the Microsoft Purview service principal is in your tenant:
+     ```PowerShell
+     Get-AzADServicePrincipal -ApplicationId "9ec59623-ce40-4dc8-a635-ed0275b5d58a"
+     ```  
+1. If the service principal doesn't exist, add the Microsoft Purview app service principal to the tenant:
+    ```PowerShell
+    New-AzADServicePrincipal -ApplicationId "9ec59623-ce40-4dc8-a635-ed0275b5d58a"
+    ```  
+   
 ## Related content
 
 - [Add user and application context to AI alerts](gain-end-user-context-ai.md)

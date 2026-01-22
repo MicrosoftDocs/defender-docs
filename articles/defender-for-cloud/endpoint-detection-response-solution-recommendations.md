@@ -1,8 +1,8 @@
 ---
 title: Review and remediate endpoint detection and response recommendations (agentless)
 description: Identify and remediate security gaps in endpoint detection and response solutions on your virtual machine with Defender for Cloud recommendations.
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+ms.author: elkrieger
 ms.topic: how-to
 ms.date: 02/19/2025
 ai-usage: ai-assisted

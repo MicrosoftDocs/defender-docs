@@ -1,8 +1,8 @@
 ---
 title: Explore risks to sensitive data
 description: Learn how to use attack paths and security explorer to find and remediate sensitive data risks.
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.topic: how-to
 ms.date: 07/15/2025

@@ -1,8 +1,8 @@
 ---
 title: Overview - Data security posture management
 description: Explore how Microsoft Defender for Cloud enhances data security posture management across multicloud environments, ensuring comprehensive protection.
-ms.author: dacurwin
-author: dcurwin
+ms.author: elkrieger
+author: Elazark
 ms.service: defender-for-cloud
 ms.topic: concept-article
 ms.date: 02/05/2025

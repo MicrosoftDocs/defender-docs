@@ -18,7 +18,7 @@ Microsoft Defender for Resource Manager automatically monitors the resource mana
 
 **Microsoft Defender for Resource Manager** is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
-For cloud availability, see the [Defender for Cloud support matrices for Azure commercial/other clouds](support-matrix-cloud-environment.md).
+For cloud availability, see the [Defender for Cloud support matrices for Azure commercial/other clouds](support-matrix-defender-for-cloud.md).
 
 ## What are the benefits of Microsoft Defender for Resource Manager?
 

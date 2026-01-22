@@ -4,7 +4,7 @@ description: Learn how to view the data you exported with continuous export in A
 author: Elazark
 ms.author: Elkrieger
 ms.topic: how-to
-ms.date: 10/12/2025
+ms.date: 12/22/2025
 #customer intent: As a security analyst, I want to be able to view the exported data in Azure Monitor so that I can analyze and respond to security alerts and recommendations effectively.
 ---
 

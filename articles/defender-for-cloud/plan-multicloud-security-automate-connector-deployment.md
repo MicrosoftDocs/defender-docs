@@ -2,8 +2,8 @@
 title: Planning multicloud security automating connector deployment
 description: Learn about automating connector deployment when planning multicloud deployment with Microsoft Defender for Cloud.
 ms.topic: how-to
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+ms.author: elkrieger
 ms.date: 05/25/2025
 ---
 

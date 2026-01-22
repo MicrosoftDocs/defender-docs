@@ -2,8 +2,8 @@
 title: Understand Defender for Storage security threats and alerts 
 description: Learn about the security threats and alerts Microsoft Defender for Storage provides to detect and respond to potential security risks.
 ms.date: 07/15/2025
-author: dcurwin
-ms.author: dacurwin
+author: Elazark
+ms.author: elkrieger
 ms.topic: concept-article
 #customer intent: As a security professional, I want to understand the security threats and alerts in Microsoft Defender for Storage so that I can better protect my organization's data.
 ---
@@ -36,7 +36,7 @@ In addition to security threats, configuration errors might inadvertently expose
 
 To minimize the risk of security breaches and configuration errors, security teams employ a combination of posture management tools and workload protection tools. These tools ensure Azure Storage stays secure by providing visibility into early signs of breaches. They help prevent attacks and maintain secure configurations.
 
-Microsoft security researchers analyzed the attack surface of storage services. The potential security risks are described in the [threat matrix for cloud-based storage services](https://www.microsoft.com/security/blog/2021/04/08/threat-matrix-for-storage/), which are based on the [MITRE ATT&CK® framework](https://attack.mitre.org/techniques/enterprise/), a knowledge base for the tactics and techniques employed in cyber-attacks.
+Microsoft security researchers analyzed the attack surface of storage services. The potential security risks are described in the [threat matrix for cloud-based storage services](https://www.microsoft.com/security/blog/2021/04/08/threat-matrix-for-storage/), which are based on the [MITRE ATT&CK® framework](https://attack.mitre.org/techniques/enterprise/), a knowledge base for the tactics and techniques employed in cyber-attacks.
 
 For a comparison between malware scanning and hash reputation analysis, see [Understanding the differences between these methods](defender-for-storage-introduction.md#understand-the-differences-between-malware-scanning-and-hash-reputation-analysis).
 

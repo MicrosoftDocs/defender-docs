@@ -1,10 +1,11 @@
 ---
 title: Protecting your network resources
 description: This document addresses recommendations in Microsoft Defender for Cloud that help you protect your Azure network resources and stay in compliance with security policies.
-ms.topic: how-to
-ms.author: dacurwin
-author: dcurwin
-ms.date: 11/02/2025
+ms.topic: concept-article
+ms.author: elkrieger
+author: Elazark
+ms.date: 12/22/2025
+ms.custom: sfi-image-nochange
 ---
 # Protect network resources
 
@@ -26,7 +27,7 @@ The [inventory page](asset-inventory.md) shows your resources by type. Use the r
 
 1. Select the **Resource type** filter.
 
-1. Enter **Network**. 
+1. Enter **Network**.
 
     :::image type="content" source="./media/protect-network-resources/network-filters-inventory.png" alt-text="Screenshot that shows asset inventory network resource types." lightbox="./media/protect-network-resources/network-filters-inventory.png":::
 

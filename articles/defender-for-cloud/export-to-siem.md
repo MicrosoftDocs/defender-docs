@@ -2,8 +2,8 @@
 title: Stream alerts to monitoring solutions
 description: Learn how to stream your security alerts to Microsoft Sentinel, SIEMs, SOAR, or ITSM solutions.
 ms.topic: how-to
-ms.author: dacurwin
-author: dcurwin
+ms.author: elkrieger
+author: Elazark
 ms.date: 07/14/2025
 ---
 
@@ -175,7 +175,7 @@ You can use this API to stream alerts from your **entire tenant** (and data from
 - **Power BI** - [Connect to the Microsoft Graph Security API in Power BI Desktop](/power-bi/connect-data/desktop-connect-graph-security).
 - **ServiceNow** - [Install and configure the Microsoft Graph Security API application from the ServiceNow Store](https://docs.servicenow.com/bundle/sandiego-security-management/page/product/secops-integration-sir/secops-integration-ms-graph/task/ms-graph-install.html?cshalt=yes).
 - **QRadar** - [Use IBM's Device Support Module for Microsoft Defender for Cloud via Microsoft Graph API](https://www.ibm.com/support/knowledgecenter/SS42VS_DSM/com.ibm.dsm.doc/c_dsm_guide_ms_azure_security_center_overview.html).
-- **Palo Alto Networks**, **Anomali**, **Lookout**, **InSpark**, and more - [Use the Microsoft Graph Security API](https://www.microsoft.com/security/business/graph-security-api#office-MultiFeatureCarousel-09jr2ji).
+- **Palo Alto Networks**, **Anomali**, **Lookout**, **InSpark**, and more - [Use the Microsoft Graph Security API](/graph/security-concept-overview).
 
 > [!NOTE]
 > The preferred way to export alerts is through [Continuously export Microsoft Defender for Cloud data](continuous-export.md).

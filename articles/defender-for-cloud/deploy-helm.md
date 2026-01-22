@@ -1,10 +1,10 @@
 ---
 title: Install Defender for Containers sensor Using Helm
 description: Learn how to install and configure the Microsoft Defender for Containers sensor on AKS, EKS, and GKE clusters using Helm, including prerequisites, scripts, and troubleshooting steps.
-author: dcurwin
+author: Elazark
 ms.topic: how-to
-ms.date: 06/16/2025
-ms.author: dacurwin
+ms.date: 12/11/2025
+ms.author: elkrieger
 ai-usage: ai-assisted
 ---
 
@@ -42,8 +42,8 @@ Now you're ready to set up the Defender for Containers sensor with Helm.
 ## Step 2: Install the sensors Helm chart
 
 ### For AKS Automatic Only
-For AKS Automatic you'll need to run the following:
 
+Run the following command for AKS Automatic:
 
 ```bash
 # Update Azure CLI to the latest version 
@@ -100,7 +100,7 @@ Run the script with the command:
 install_defender_sensor_aks.sh <CLUSTER_AZURE_RESOURCE_ID> <RELEASE_TRAIN> <VERSION>
 ```
 
-In the following command, replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, and `<VERSION>` with your own values. Use 'public' for the public preview releases (0.9.x). For `<VERSION>`, use 'latest' or a specific semantic version.
+In the following command, replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, and `<VERSION>` with your own values. For `<RELEASE_TRAIN>`, use 'public' for the preview release (0.9.x), or 'private' for the preview release (0.10.x). For `<VERSION>`, use 'latest' or a specific semantic version.
 
 > [!NOTE]
 > This script sets a new kubeconfig context, and might create a Log Analytics workspace in your Azure account.
@@ -117,7 +117,8 @@ Set your kubeconfig context to the target cluster, and run the script with the c
 install_defender_sensor_mc.sh <SECURITY_CONNECTOR_AZURE_RESOURCE_ID> <RELEASE_TRAIN> <VERSION> <DISTRIBUTION> [<ARC_CLUSTER_RESOURCE_ID>]
 ```
 
-In the following command, replace the placeholder text `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<VERSION>`, `<DISTRIBUTION>`, and `<ARC_CLUSTER_RESOURCE_ID>` with your own values. Please note that ARC_CLUSTER_RESOURCE_ID is an optional parameter and only should be used for existing clusters who use the Defender for Containers arc extension and want to provision the sensor via Helm or use arc cluster and want to provision the sensor via Helm.  
+In the following command, replace the placeholder text `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<VERSION>`, `<DISTRIBUTION>`, and `<ARC_CLUSTER_RESOURCE_ID>` with your own values. Please note that ARC_CLUSTER_RESOURCE_ID is an optional parameter and only should be used for existing clusters who use the Defender for Containers arc extension, which will cause the arc-managed deployment to be removed preventing 2 conflicting deployments from being enabled at the same time.
+
 For `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`:
 
 - Set up a security connector for your AWS or GCP account
@@ -164,7 +165,7 @@ You can define security rules to control what is allowed to be deployed into you
 
 1. Navigate to the **Microsoft Defender for Cloud (MDC) Dashboard**.
 1. In the left navigation pane, select **Environment settings**.
-1. Click on the **Security rules** tile.
+1. Select the **Security rules** tile.
 
 ### Configuring vulnerability assessment rules
 
@@ -204,11 +205,9 @@ Run the following command to update an existing Helm-based deployment:
 helm upgrade microsoft-defender-for-containers-sensor \
 oci://mcr.microsoft.com/azuredefender/microsoft-defender-for-containers-sensor \
 --devel \
---reuse-values \
---namespace mdc
+--reuse-values
 ```
 
-
-## Next steps
+## Related content
 
 - [Common questions about protecting containers](faq-defender-for-containers.yml)
