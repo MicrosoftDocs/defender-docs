@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.custom: ignite-2023
 ms.author: elkrieger
 author: Elazark
-ms.date: 07/14/2025
+ms.date: 01/21/2026
 ---
 
 # Exempt resources from recommendations
@@ -24,8 +24,6 @@ For the scope you need, you can create an exemption rule to:
 - Mark **one or more resources** as "mitigated" or "risk accepted" for a specific recommendation.
 
 ## Before you start
-
-This feature is in preview. [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)] This is a premium Azure Policy capability offered at no extra cost for customers with Microsoft Defender for Cloud's enhanced security features enabled. For other users, charges might apply in the future.
 
 - You need the following permissions to make exemptions:
   - **Owner** or **Security Admin** to create an exemption.
