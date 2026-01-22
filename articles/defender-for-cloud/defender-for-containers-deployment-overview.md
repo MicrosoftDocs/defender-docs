@@ -79,7 +79,7 @@ Before deploying Defender for Containers, make sure you have:
 - Kubernetes cluster version 1.19 or later
 - Network connectivity to Azure services
 - For sensor-based capabilities: Sufficient cluster resources for Defender components - see [Defender sensor component details](defender-for-containers-architecture.md#defender-sensor-component-details)
-- [Enable an OpenId Connect (OIDC) issuer for your cluster](/azure/aks/use-oidc-issuer) (for AWS EKS and GCP GKE deployments).
+- [Enable an OpenId Connect (OIDC) issuer](/azure/aks/use-oidc-issuer) for your cluster.
 
 > [!NOTE]
 > Agentless capabilities don't require cluster resources or sensor deployment. For a detailed list of supported features, along with their availability and characteristics, see the [support matrix for Defender for Containers](support-matrix-defender-for-containers.md). The support matrix indicates whether each feature is agentless or sensor-based under the **Enablement method** column.
