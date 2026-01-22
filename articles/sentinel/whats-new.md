@@ -69,8 +69,8 @@ This integration allows you to see which data sources feed into UEBA and enable 
 
 For more information, see:
 
-- [Enable entity behavior analytics to detect advanced threats](enable-entity-behavior-analytics.md)
-- [Connect data sources to Microsoft Sentinel by using data connectors](connect-data-sources.md)
+- [Enable entity behavior analytics to detect advanced threats](enable-entity-behavior-analytics.md#enable-ueba-from-supported-connectors)
+- [Connect data sources to Microsoft Sentinel by using data connectors](configure-data-connector.md#enable-user-and-entity-behavior-analytics-ueba-from-supported-connectors)
 
 
 ## November 2025
