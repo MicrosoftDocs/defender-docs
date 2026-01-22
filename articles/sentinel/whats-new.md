@@ -4,7 +4,7 @@ description: Learn about the latest new features and announcement in Microsoft S
 author: guywi-ms
 ms.author: guywild
 ms.topic: concept-article
-ms.date: 09/28/2025
+ms.date: 01/22/2026
 #Customer intent: As a security team member, I want to stay updated on the latest features and enhancements in Microsoft Sentinel so that I can effectively manage and optimize my organization's security posture.
 ms.custom:
   - build-2025
@@ -49,6 +49,31 @@ This update expands [detection coverage for SAP BTP](../sentinel/sap/sap-btp-sec
 - **SAP Cloud Identity Service**: Monitors user deletions, privilege grants, and SAML/OIDC configuration changes that weaken authentication controls or create persistent access.
 - **SAP Build Work Zone**: Identifies mass role deletions and unauthorized access to restricted portal resources.
 - **SAP BTP Audit Logging**: Detects audit log ingestion gaps and disruptions that reduce security visibility and enable stealthy activity.
+
+// ...existing code...
+
+### Enable UEBA directly from data connector configuration (Preview)
+
+You can now enable UEBA for supported data sources directly from the data connector configuration page, reducing management time and preventing coverage gaps. When you enable new connectors, you can onboard the data source to UEBA without navigating to a separate configuration page.
+
+This integration allows you to see which data sources feed into UEBA and enable that feed directly from the connector configuration.
+
+**Supported connectors:**
+
+- Amazon Web Services
+- Azure Activity
+- GCP Pub/Sub Audit Logs
+- Microsoft Defender XDR
+- Microsoft Entra ID
+- Okta Single Sign-On
+- Okta Single Sign-On (using Azure Functions)
+- Security Events via Legacy Agent
+
+For more information, see:
+
+- [Enable entity behavior analytics to detect advanced threats](enable-entity-behavior-analytics.md)
+- [Connect data sources to Microsoft Sentinel by using data connectors](connect-data-sources.md)
+
 
 ## November 2025
 
