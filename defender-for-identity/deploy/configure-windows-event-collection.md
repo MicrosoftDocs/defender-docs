@@ -18,7 +18,7 @@ If auditing is configured properly, it has minimal effect on server performance.
 
 ## Before you begin
 
-Before you begin configuring windows event collection, we recommend that you run a PowerShell script to check your current cofiguration and generate a report of any adjustments you need to make:
+Before you begin configuring windows event collection, we recommend that you run a PowerShell script to check your current configuration and generate a report of any adjustments you need to make:
 
 1. Download the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).  
 1. Run the Defender for Identity `New-MDIConfigurationReport` PowerShell module to 
@@ -224,26 +224,38 @@ To configure domain object auditing:
 
 ### Configure auditing on AD FS
 
-To configure auditing on Active Directory Federation Services (AD FS):
+This section describes how to modify your Active Directory Federation Services (AD FS) Audit configurations for Defender for Identity.
+
+#### Object-level auditing on the AD FS configuration folder
 
 1. Go to the **Active Directory Users and Computers** console, and select the domain where you want to enable the logs.
 1. Go to **Program Data** > **Microsoft** > **ADFS**.
 
     ![Screenshot of a container for Active Directory Federation Services.](../media/adfs-container.png)
-
+   
 1. Right-click **ADFS** and select **Properties**.
 1. Go to the **Security** tab and select **Advanced** > **Advanced Security Settings**. Then go to the **Auditing** tab and select **Add** > **Select a principal**.
 1. Under **Enter the object name to select**, enter **Everyone**. Then select **Check Names** > **OK**.
 1. You then return to **Auditing Entry**. Make the following selections:
 
-    - For **Type**, select **All**.
-    - For **Applies to**, select **This object and all descendant objects**.
-    - Under **Permissions**, scroll down and select **Clear all**. Scroll up and select **Read all properties** and **Write all properties**.
-
+   - For **Type**, select **All**.
+   - For **Applies to**, select **This object and all descendant objects**.
+   - Under **Permissions**, scroll down and select **Clear all**. Scroll up and select **Read all properties** and **Write all properties**.
+      
     ![Screenshot of the auditing settings for Active Directory Federation Services.](../media/audit-adfs.png)
-
+   
 1. Select **OK**.
 
+#### Advanced audit policy configuration via Group Policy
+
+1. Create a group policy to apply to your Active Directory Federation Services (AD FS). Edit it and configure the following auditing settings:
+
+   1. Go to **Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Object Access\Audit Application Generated**.
+   
+   1. Select the checkboxes to configure audit events for **Success** and **Failure**.  
+
+   ![Screenshot of the advanced auditing audit policy configuration.](../media/configure-windows-event-collection/image1.png)
+   
 #### Configure Verbose logging for AD FS events
 
 Sensors running on AD FS servers must have the auditing level set to **Verbose** for relevant events. 
