@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: high
 ms.date: 10/20/2025
 ms.topic: overview
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.reviewer: mkaminska, yonghree, pahuijbr
 manager: bagol
 ms.custom: nextgen
@@ -164,5 +164,5 @@ It's important to keep Microsoft Defender Antivirus (or any antivirus/antimalwar
 - [Microsoft Defender Antivirus management and configuration](configuration-management-reference-microsoft-defender-antivirus.md)
 - [Evaluate Microsoft Defender Antivirus protection](evaluate-microsoft-defender-antivirus.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

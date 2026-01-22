@@ -289,4 +289,4 @@ For more information, see [Introduction to compliance settings in System Center 
 - [Onboard servers to Microsoft Defender for Endpoint](onboard-server.md)
 - [Onboard Windows and Mac client devices to Microsoft Defender for Endpoint](onboard-client.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

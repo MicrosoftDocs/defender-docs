@@ -90,7 +90,7 @@
     - name: Understand policy order
       href: mdb-policy-order.md
   - name: Maintain your environment
-    href: /Microsoft-365/business-premium/m365bp-mdb-maintain-environment?bc=%2defender-business%2Fbreadcrumb%2Ftoc.json&toc=%2Fdefender-business%2Ftoc.json
+    href: /microsoft-365/business-premium/m365bp-mdb-maintain-environment?bc=%2defender-business%2Fbreadcrumb%2Ftoc.json&toc=%2Fdefender-business%2Ftoc.json
   - name: Reference information
     items:
     - name: Security, privacy, and compliance

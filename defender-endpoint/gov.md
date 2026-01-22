@@ -3,11 +3,11 @@ title: Microsoft Defender for Endpoint for US Government customers
 description: Learn about the Microsoft Defender for Endpoint for US Government customers requirements and capabilities available
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: lwainstein
+author: limwainstein
 ms.reviewer: jesquive
 ms.localizationpriority: medium
-ms.date: 05/30/2025
+ms.date: 01/05/2026
 manager: bagol
 audience: ITPro
 ms.collection: 
@@ -109,7 +109,6 @@ The following OS versions are supported:
 
 The following OS versions are supported when using [Microsoft Defender for servers](/azure/security-center/security-center-wdatp):
 
-
 |OS version|GCC|GCC High|DoD|
 |:---|:---:|:---:|:---:|
 |Windows Server 2022 and later|:::image type="icon" source="media/svg/check-yes.svg" border="false":::|:::image type="icon" source="media/svg/check-yes.svg" border="false":::|:::image type="icon" source="media/svg/check-yes.svg" border="false":::|
@@ -127,11 +126,10 @@ If a proxy or firewall is blocking all traffic by default and allowing only spec
 
 The following downloadable spreadsheet lists the services and their associated URLs your network must be able to connect to. Verify there are no firewall or network-filtering rules that would deny access to these URLs, or create an *allow* rule specifically for them.
 
-
-| Spreadsheet of domains list  | Description  |
-|---------|---------|
-| Microsoft Defender for Endpoint Streamlined Connectivity URL list for Gov/GCC/DoD (Preview) | List of consolidated URLs for service locations, geographic locations, and OS for Gov/GCC/DoD customers. <br/><br/> [See the full list](streamlined-device-connectivity-urls-gov.md). |
-| Microsoft Defender for Endpoint Standard Connectivity URL list for Gov/GCC/DoD | Spreadsheet of specific DNS records for service locations, geographic locations, and OS for Gov/GCC/DoD customers. <br/><br/> [Download the spreadsheet here.](https://aka.ms/MDE-gov-urls) |
+|Spreadsheet of domains list|Description|
+|---|---|
+|Microsoft Defender for Endpoint Streamlined Connectivity URL list for Gov/GCC/DoD (Preview)|List of consolidated URLs for service locations, geographic locations, and OS for Gov/GCC/DoD customers. <br/><br/> [See the full list](streamlined-device-connectivity-urls-gov.md).|
+|Microsoft Defender for Endpoint Standard Connectivity URL list for Gov/GCC/DoD|Spreadsheet of specific DNS records for service locations, geographic locations, and OS for Gov/GCC/DoD customers. <br/><br/> [Download the spreadsheet here.](https://aka.ms/MDE-gov-urls)|
 
 For more information, see [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md).
 
@@ -142,8 +140,7 @@ For more information, see [Configure device proxy and Internet connectivity sett
 
 ## API
 
-Instead of the public URIs listed in our [API documentation](/defender-vulnerability-management/tvm-supported-os), you need to use the following URIs:
-
+Instead of the public URIs listed in our [API documentation](api/exposed-apis-list.md), you need to use the following URIs:
 
 |Endpoint type|GCC|GCC High & DoD|
 |---|---|---|
@@ -162,7 +159,6 @@ These are the known gaps:
 |Microsoft Threat Experts|:::image type="icon" source="media/svg/check-no.svg" border="false":::|:::image type="icon" source="media/svg/check-no.svg" border="false":::|:::image type="icon" source="media/svg/check-no.svg" border="false":::|
 |Microsoft Defender for Endpoint Security Configuration Management|:::image type="icon" source="media/svg/check-yes.svg" border="false":::|:::image type="icon" source="media/svg/check-yes.svg" border="false":::|:::image type="icon" source="media/svg/check-yes.svg" border="false":::|
 |Microsoft Defender for IoT enterprise IoT security|:::image type="icon" source="media/svg/check-no.svg" border="false":::|:::image type="icon" source="media/svg/check-no.svg" border="false":::|:::image type="icon" source="media/svg/check-no.svg" border="false":::|
-
 
 > [!NOTE]
 > While Microsoft Secure Score is available for GCC, GCC High and DoD customers, there are some security recommendations that aren't available.
@@ -187,6 +183,4 @@ These are the features and known gaps for [Mobile Threat Defense (Microsoft Defe
 >
 > - Report inaccuracy
 > - Request CVE support
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

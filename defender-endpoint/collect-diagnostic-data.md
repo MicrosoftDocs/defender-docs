@@ -3,8 +3,8 @@ title: Collect diagnostic data of Microsoft Defender Antivirus
 description: Use a tool to collect data to troubleshoot Microsoft Defender Antivirus.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
 ms.date: 06/10/2025
 ms.reviewer: pahuijbr, yongrhee
@@ -125,5 +125,5 @@ You can also specify where the diagnostic `.cab` file is created using a Group P
 - [Troubleshoot Microsoft Defender Antivirus reporting](/mem/intune/protect/advanced-threat-protection-configure)
 - [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

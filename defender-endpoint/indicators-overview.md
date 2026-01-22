@@ -175,5 +175,5 @@ Customers might experience issues with alerts for IoCs. The following scenarios 
 - [Use partner integrated solutions](partner-applications.md)
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
