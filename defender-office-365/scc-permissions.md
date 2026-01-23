@@ -32,7 +32,7 @@ The [Microsoft Defender portal](/defender-xdr/microsoft-365-defender-portal), [M
 - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md)
 - [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac)
 - [Permissions in the Microsoft Purview portal](/purview/purview-portal)
-- [Permissions in the Microsoft Purview solutions](/purview/purview-permissions)
+- [Permissions in Microsoft Purview solutions](/purview/purview-permissions)
 - [Permissions in the Microsoft Purview governance portal](/purview/roles-permissions)
 
 These portals let you grant permissions to people who perform tasks like device management, data loss prevention, eDiscovery, retention, and so on. These people can perform only the tasks that you explicitly grant them access to. To access these portals, users need to be a global admin or a member of one or more role groups in Defender for Office 365 (**Email & collaboration** role groups) or Purview (**Microsoft Purview solutions** role groups). The [Microsoft Purview portal (preview)](/purview/purview-portal) provides access to data governance, data security, and risk and compliance solutions.
