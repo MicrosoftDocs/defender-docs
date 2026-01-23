@@ -176,7 +176,7 @@ Roles that aren't assigned to the Organization Management role group by default 
 |<sup>\*</sup>**Data Investigation Management**|Create, edit, delete, and control access to data investigation.|Compliance Administrator <br/><br/> Data Investigator|
 |<sup>\*</sup>**Data Map Reader**|Read actions on data map objects.|Compliance Administrator <br/><br/> Data Catalog Curators <br/><br/> Data Estate Insights Readers <br/><br/> Information Protection <br/><br/> Information Protection Admins <br/><br/> Information Protection Analysts <br/><br/> Information Protection Investigators|
 |<sup>\*</sup>**Data Map Writer**|Create, read, modify, and delete actions on data map objects and establish relationships between objects.|Data Catalog Curators|
-|<sup>\*</sup>**Data Security Investigations Admin**|Used to create and manage investigations, processes, and settings in Data Security Investigations.|Data Security Investigations Administrators|
+|<sup>\*</sup>**Data Security Investigations Admin**|Used to create and manage investigations, processes, and settings in Data Security Investigations.|Data Security Investigations Admins|
 |<sup>\*</sup>**Data Security Investigations Investigator**|Used to create and manage assigned investigations, processes, and settings in Data Security Investigations.|Data Security Investigations Investigators|
 |<sup>\*</sup>**Data Security Investigations Reviewer**|Used to review assigned investigations in Data Security Investigations.|Data Security Investigations Reviewers|
 |**Data Security AI Admin**|Role for editing Data Loss Prevention policies related to Copilot and viewing AI content in Data Security Posture Management. This role does not have access to read prompts and responses of AI interactions.|Data Security AI Admins|
