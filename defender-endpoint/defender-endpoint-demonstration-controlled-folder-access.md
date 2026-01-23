@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint Controlled folder access (CFA) demonstrat
 description: Demonstrates how Controlled Folder Access protects valuable data from malicious apps and threats, such as ransomware.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -147,5 +147,5 @@ About five seconds after executing the ransomware test file, you should see a no
 
 [Controlled folder access](/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard?ocid=wd-av-demo-cfa-bottom)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

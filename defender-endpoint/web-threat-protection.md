@@ -54,5 +54,5 @@ The legacy **Web protection** policy in Intune has been deprecated and web threa
 - [Monitor web security](web-protection-monitoring.md)
 - [Respond to web threats](web-protection-response.md)
 - [Network protection](network-protection.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

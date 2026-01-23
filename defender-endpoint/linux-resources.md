@@ -171,5 +171,5 @@ To prevent decommissioned devices from showing up in your device inventory, and 
 - [Configure security settings in Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 - [Run the client analyzer on Linux](run-analyzer-linux.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

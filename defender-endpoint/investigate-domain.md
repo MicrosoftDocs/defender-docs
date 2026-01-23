@@ -2,8 +2,8 @@
 title: Investigate domains and URLs associated with an alert
 description: Use the investigation options to see if devices and servers have been communicating with malicious domains.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -127,5 +127,5 @@ The Clicks tab provides a detailed view of all the clicks to the URL or domain o
 - [Investigate devices in the Microsoft Defender for Endpoint Devices list](investigate-machines.md)
 - [Investigate an IP address associated with a Microsoft Defender for Endpoint alert](investigate-ip.md)
 - [Investigate a user account in Microsoft Defender for Endpoint](investigate-user.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

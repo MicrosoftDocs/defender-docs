@@ -4,8 +4,8 @@ description: Set your level of cloud protection for Microsoft Defender Antivirus
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.reviewer: yongrhee
 ms.date: 10/20/2025
 manager: bagol
@@ -92,5 +92,5 @@ Cloud protection works together with Microsoft Defender Antivirus to deliver pro
 
 - [Turn on cloud protection in Microsoft Defender Antivirus](enable-cloud-protection-microsoft-defender-antivirus.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

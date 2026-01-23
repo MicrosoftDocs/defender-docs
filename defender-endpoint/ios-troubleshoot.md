@@ -145,5 +145,5 @@ If a user faces an issue that isn't already addressed in the above sections or i
    
    1. Sign back in to the app (applicable if user has signed out).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

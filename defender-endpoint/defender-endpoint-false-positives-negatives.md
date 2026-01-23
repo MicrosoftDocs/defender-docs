@@ -3,8 +3,8 @@ title: Address false positives/negatives in Microsoft Defender for Endpoint
 description: Learn how to handle false positives or false negatives in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: ngp
-ms.author: kesharab
-author: KesemSharabi
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
 ms.date: 10/20/2025
 manager: bagol
@@ -415,5 +415,5 @@ If you've worked through all the steps in this article and still need help, cont
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md) 
 - [Configure Defender for Endpoint on Android features](android-configure.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

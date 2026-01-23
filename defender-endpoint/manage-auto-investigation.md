@@ -2,8 +2,8 @@
 title: Review remediation actions following automated investigations
 description: Review and approve (or reject) remediation actions following an automated investigation.
 ms.service: defender-endpoint
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.localizationpriority: medium
 ms.date: 04/04/2025
 manager: bagol
@@ -159,5 +159,5 @@ All verdicts are tracked in the [Action center](auto-investigation-action-center
 ## See also
 
 - [Overview of automated investigations](automated-investigations.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

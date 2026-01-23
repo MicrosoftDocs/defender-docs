@@ -4,9 +4,9 @@ description: Learn how to configure and customize both standard and other Micros
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: KesemSharabi
+author: chrisda
 ms.topic: how-to
-ms.author: kesharab
+ms.author: chrisda
 ms.custom: nextgen
 ms.date: 10/20/2025
 ms.reviewer: yongrhee
@@ -138,5 +138,5 @@ To add custom contact information to endpoint notifications, see [Customize the 
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
