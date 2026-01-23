@@ -21,7 +21,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 12/16/2025
+ms.date: 01/23/2026
 ---
 
 # Use custom functions
