@@ -15,7 +15,7 @@ ms.collection:
 - tier3
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 11/17/2025
+ms.date: 01/24/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -23,9 +23,9 @@ appliesto:
 
 # Deploy Microsoft Defender endpoint security to Windows devices using the Defender deployment tool (preview)
 
-The Defender deployment tool is a lightweight, self-updating application designed to streamline onboarding for all Windows versions supported by the Defender endpoint security solution. The tool takes care of prerequisites, automates migrations from older solutions, and removes the need for complex onboarding scripts, separate downloads, and manual installations.
+The Defender deployment tool is a lightweight, self-updating application designed to streamline onboarding for [all Windows versions supported by the Defender endpoint security solution](./minimum-requirements.ms#windows-versions-supported-by-defender-for-endpoint). The tool takes care of prerequisites, automates migrations from older solutions, and removes the need for complex onboarding scripts, separate downloads, and manual installations, while providing onboarding visibility, customizability, and guardrails.
 
-Using the tool's user interface, administrators can double-click the tool and follow an interactive installation and onboarding sequence. For larger deployments, the tool provides automation options with advanced command-line parameters so that you can integrate with orchestration platforms or custom deployment tools, such as Group Policy, while leaving in place the experiences that are provided through other Microsoft solution integrations such as Intune and Defender for Cloud.
+Using the tool's user interface, administrators can double-click the tool and follow an interactive installation and onboarding sequence. For larger deployments, the tool provides automation options with advanced command-line parameters so that you can integrate with orchestration platforms or custom deployment tools, such as Group Policy, while leaving in place the experiences that are provided through other Microsoft solution integrations such as Intune and Defender for Cloud. Currently, the tool is its own onboarding methodology, and doesn't integrate with other onboarding methods.
 
 The features the tool supports include:
 
@@ -36,6 +36,8 @@ The features the tool supports include:
 - **Redundant installation avoidance**: If Defender is already present, the tool skips redundant installations.
 
 - **UI feedback**: The tool provides UI feedback with error descriptions instead of exit codes.
+
+- **Onboarding events** on the device timeline and in advanced hunting.
 
 - **Passive mode support**: On server operating systems and Windows 7, Defender Antivirus can be set to passive mode. This can be helpful when migrating from non-Microsoft antimalware solutions.
 
@@ -49,7 +51,13 @@ The features the tool supports include:
 
 - **Working without connectivity**: When connectivity is temporarily unavailable, offline onboarding and offboarding is possible.
 
-When the [interactive](#interactive-use), double-click experience is used, the tool automatically leverages the *WindowsDefenderATP.onboarding* file in the same directory. It will handle the installation of most prerequisite updates and the latest Defender components, and connect the device to the Defender services. If needed, the tool will ask you to reboot the device to finish installation after you sign in again.
+- **Deployment key entry**: To add guardrails to the onboarding process and prevent accidental onboarding, using the Defender deployment tool requires entering a key generated in the portal onboarding page.
+
+- **Custom expiry**: Defender deployment packages allow you to specify when you'd like them to expire, for any time up to a year, so that the package won't remain valid forever. This prevents adversaries from exploiting any old onboarding packages they might discover. Microsoft recommends making the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use.
+
+- **Ability to view deployment packages**: You can see key properties of your deployment packages in one place by navigating to **Settings** > **Endpoints** > **Deployment packages**. You can filter by active, expired, or hidden deployment packages.
+
+When the [interactive](#interactive-use), double-click experience is used, the tool automatically begins the onboarding process and will ask you to input the Defender deployment tool access key generated in the portal when you create your Defender deployment tool package in **Settings** > **Endpoints** > **Onboarding**. It will handle the installation of most prerequisite updates and the latest Defender components, and connect the device to the Defender services. If needed, the tool will ask you to reboot the device to finish installation after you sign in again.
 
 For more [advanced and large-scale deployments](#advanced-and-large-scale-deployments), the tool offers functionality to perform additional and orchestrated steps through command-line parameters or a configuration file.
 
