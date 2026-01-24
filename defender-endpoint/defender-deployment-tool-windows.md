@@ -57,11 +57,12 @@ The features the tool supports include:
 
 - **Ability to view deployment packages**: You can see key properties of your deployment packages in one place by navigating to **Settings** > **Endpoints** > **Deployment packages**. You can filter by active, expired, or hidden deployment packages.
 
-When the [interactive](#interactive-use), double-click experience is used, the tool automatically begins the onboarding process and will ask you to input the Defender deployment tool access key generated in the portal when you create your Defender deployment tool package in **Settings** > **Endpoints** > **Onboarding**. It will handle the installation of most prerequisite updates and the latest Defender components, and connect the device to the Defender services. If needed, the tool will ask you to reboot the device to finish installation after you sign in again.
+When the [interactive](#interactive-use), double-click experience is used, the tool automatically begins the onboarding process and will ask you to input the Defender deployment tool key generated in the portal when you create your Defender deployment tool package in **Settings** > **Endpoints** > **Onboarding**. It will handle the installation of most prerequisite updates and the latest Defender components, and connect the device to the Defender services. If needed, the tool will ask you to reboot the device to finish installation after you sign in again.
 
 For more [advanced and large-scale deployments](#advanced-and-large-scale-deployments), the tool offers functionality to perform additional and orchestrated steps through command-line parameters or a configuration file.
 
 To view the complete command reference after [downloading the tool](#download-the-tool), run: `DefenderDT.exe -?`.
+
 ## Supported operating systems
 
 The Defender deployment tool supports the following operating systems: Windows 7 SP1, Windows Server 2008 R2 SP1, Windows Server 2012 R2, 2016, 2019, 2022, 2025, Windows 10 (version 1809 and newer), and all versions of Windows 11.
@@ -111,7 +112,7 @@ SHA-2 update (KB4474419) released September 10, 2019. If you use Windows U
 
 1. In the Step 1 dropdown menu, choose **Windows (preview)**.
 
-1. Under **Deploy by downloading and applying packages or files**, select the **Download package** button. This downloads the Defender executable and the onboarding file package.
+1. Under **Deploy by downloading and applying packages or files**, select the **Onboard** button. This downloads a *.zip* file of the Defender deployment tool executable.
 
    :::image type="content" source="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package.png" alt-text="Screenshot showing the Download package button in the Microsoft Defender portal." lightbox="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package.png":::
 
@@ -130,11 +131,9 @@ To use the quick "double-click" default installation:
 
 1. Double-click the executable to launch it.
 
-1. In the dialog that appears, select **Continue**.
+1. In the dialog that appears, select **Continue**. On the next pag that appears, enter the Defender deployment key generated in the portal.
 
    :::image type="content" source="./media/defender-deployment-tool-windows/interactive-mode.png" alt-text="Screenshot illustrating running the Defender deployment tool in interactive mode.":::
-
-   The tool will look for the *WindowsDefenderATP.onboarding* file in the directory the tool is being run from and perform default installation and onboarding operations.
 
 ### Non-interactive use
 
