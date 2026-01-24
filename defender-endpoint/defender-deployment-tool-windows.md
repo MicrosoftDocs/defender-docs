@@ -23,7 +23,7 @@ appliesto:
 
 # Deploy Microsoft Defender endpoint security to Windows devices using the Defender deployment tool (preview)
 
-The Defender deployment tool is a lightweight, self-updating application designed to streamline onboarding for [all Windows versions supported by the Defender endpoint security solution](./minimum-requirements.ms#windows-versions-supported-by-defender-for-endpoint). The tool takes care of prerequisites, automates migrations from older solutions, and removes the need for complex onboarding scripts, separate downloads, and manual installations, while providing onboarding visibility, customizability, and guardrails.
+The Defender deployment tool is a lightweight, self-updating application designed to streamline onboarding for [all Windows versions supported by the Defender endpoint security solution](./minimum-requirements.md#windows-versions-supported-by-defender-for-endpoint). The tool takes care of prerequisites, automates migrations from older solutions, and removes the need for complex onboarding scripts, separate downloads, and manual installations, while providing onboarding visibility, customizability, and guardrails.
 
 Using the tool's user interface, administrators can double-click the tool and follow an interactive installation and onboarding sequence. For larger deployments, the tool provides automation options with advanced command-line parameters so that you can integrate with orchestration platforms or custom deployment tools, such as Group Policy, while leaving in place the experiences that are provided through other Microsoft solution integrations such as Intune and Defender for Cloud. Currently, the tool is its own onboarding methodology, and doesn't integrate with other onboarding methods.
 
