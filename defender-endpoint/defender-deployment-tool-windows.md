@@ -39,7 +39,7 @@ The features the tool supports include:
 
 - **Onboarding events** on the device timeline and in advanced hunting.
 
-- **Passive mode support**: On server operating systems and Windows 7, Defender Antivirus can be set to passive mode. This can be helpful when migrating from non-Microsoft antimalware solutions.
+- **Passive mode support**: On server operating systems and Windows 7, Defender Antivirus can be set to passive mode. This can be helpful when migrating from non-Microsoft anti-malware solutions.
 
 - **Automation**: The tool supports a wide range of command-line options.
 
@@ -49,7 +49,7 @@ The features the tool supports include:
 
 - **Configuration files**: You can generate reusable configuration files that make bulk deployments more efficient and less error-prone.
 
-- **Working without connectivity**: When connectivity is temporarily unavailable, offline onboarding and offboarding is possible.
+- **Working without connectivity**: When connectivity is temporarily unavailable, offline onboarding and offboarding are possible.
 
 - **Deployment key entry**: To add guardrails to the onboarding process and prevent accidental onboarding, using the Defender deployment tool requires entering a key generated in the portal onboarding page.
 
@@ -131,13 +131,13 @@ To use the quick "double-click" default installation:
 
 1. Double-click the executable to launch it.
 
-1. In the dialog that appears, select **Continue**. On the next pag that appears, enter the Defender deployment key generated in the portal.
+1. In the dialog that appears, select **Continue**. On the next page that appears, enter the Defender deployment key generated in the portal.
 
    :::image type="content" source="./media/defender-deployment-tool-windows/interactive-mode.png" alt-text="Screenshot illustrating running the Defender deployment tool in interactive mode.":::
 
 ### Non-interactive use
 
-You can also perform all the installation and onboarding operations manually through the command-line interface. In addition, the command-line interface supports a variety of other operations, such as running prerequisite checks:
+You can also perform all the installation and onboarding operations manually through the command-line interface. In addition, the command-line interface supports various other operations, such as running prerequisite checks:
 
 :::image type="content" source="./media/defender-deployment-tool-windows/command-line.png" alt-text="Screenshot illustrating running the Defender deployment tool in command-line mode.":::
 
@@ -306,13 +306,13 @@ General considerations and limitations, and additional considerations and limita
 
 - When the *-proxy* parameter is used, it only applies to Defender deployment tool operations. Despite the parameter description in the command-line help reference, it doesn't set proxy configuration in registry for Defender endpoint security to use after installation. Note that both the tool and Defender will use whatever proxy has been configured on a system-wide (Windows) level regardless. If you wish to specifically configure a proxy to use for the Defender endpoint security services on the machine (static proxy), and not system-wide, see [Configure your devices to connect to the Defender for Endpoint service using a proxy](./configure-proxy-internet.md).
 
-- On Windows Server 2016 and later, when the Defender Antivirus feature has been uninstalled or removed, you may encounter an error during the Enabling Feature 'Windows-Defender' step. This can be observed in the user interface, in the local log, under *Sequence completion* with exit code *710* and the error description *EnableFeatureFailed*. In the local log you'll also be able to find error 14081 with the description *0x3701 The referenced assembly could not be found*. This error is not indicative of an issue with the Defender Antivirus feature or source files, as those would typically be resolved by the onboarding tool. Open a support case for Windows Servers if you encounter this issue.
+- On Windows Server 2016 and later, when the Defender Antivirus feature has been uninstalled or removed, you might encounter an error during the Enabling Feature 'Windows-Defender' step. This can be observed in the user interface, in the local log, under *Sequence completion* with exit code *710* and the error description *EnableFeatureFailed*. In the local log, you'll also be able to find error 14081 with the description *0x3701 The referenced assembly could not be found*. This error isn't indicative of an issue with the Defender Antivirus feature or source files, as those would typically be resolved by the onboarding tool. Open a support case for Windows Servers if you encounter this issue.
 
 ### Known issues and limitations for Windows 7 SP1 and Windows Server 2008 R2 SP1
 
-- You may get alerts about *mpclient.dll*, *mpcommu.dll*, *mpsvc.dll*, *msmplics.dll*, and *sense1ds.dll* loaded by either *mpcmdrun.exe* or *mssense.exe*. These should resolve over time.
+- You might get alerts about *mpclient.dll*, *mpcommu.dll*, *mpsvc.dll*, *msmplics.dll*, and *sense1ds.dll* loaded by either *mpcmdrun.exe* or *mssense.exe*. These should resolve over time.
 
-- On Windows 7 SP1 and on Windows Server 2008 R2 SP1 with the Desktop Experience pack installed, you might see a notification from Action Center *Windows did not find antivirus software on this computer*. This is not indicative of a problem.
+- On Windows 7 SP1 and on Windows Server 2008 R2 SP1 with the Desktop Experience pack installed, you might see a notification from Action Center *Windows did not find antivirus software on this computer*. This isn't indicative of a problem.
 
 - The preview ("beta") version of the [client analyzer tool](https://aka.ms/betamdeanalyzer) can be used to collect logs and perform connectivity troubleshooting on Windows 7 SP1 and Windows Server 2008 R2 SP1. It requires PowerShell 5.1 or later to be installed.
 
@@ -322,7 +322,7 @@ General considerations and limitations, and additional considerations and limita
 
 - The Defender endpoint security solution will be installed to `C:\Program Files\Microsoft Defender for Endpoint`
 
-- Windows 7 devices may show up as *Server* in the portal until you update to the latest Sense version by applying KB5005292.
+- Windows 7 devices might show up as *Server* in the portal until you update to the latest Sense version by applying KB5005292.
 
 - You can put Defender Antivirus into passive mode on Windows 7 by passing the *-passive* parameter to the Defender deployment tool. However, it's currently not possible to switch to active mode afterwards by using the ForceDefenderPassiveMode registry key like on Windows server. To switch to active mode, it's necessary to offboard and uninstall, and then to run the Defender deployment tool again without the passive mode parameter.
 
