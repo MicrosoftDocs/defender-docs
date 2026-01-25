@@ -31,8 +31,6 @@ This article explains how to investigate these recommendations and view the reme
 
 ## Prerequisites
 
-## Prerequisites
-
 Before you start, make sure that: 
 
 - [Defender for Cloud](connect-azure-subscription.md) is enabled on your subscription with one of the following plans:
