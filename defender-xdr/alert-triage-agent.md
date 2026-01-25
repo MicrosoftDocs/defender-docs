@@ -40,21 +40,19 @@ The Alert Triage Agent follows a common triage model that applies across support
 - **Classify alerts:** Evaluate incoming alerts and determine whether they represent a true security concern or benign activity.
 - **Prioritize risk:** Help surface the alerts that require immediate attention by assessing context, severity signals, and supporting evidence.
 - **Enrich incidents with reasoning:** Add natural‑language explanations and supporting details to the associated incident so analysts can quickly understand why an alert was classified a certain way.
-- **Work alongside existing response workflows:** Complement existing investigation and response capabilities, such as automated investigation and response (AIR), rather than replacing them.
-- **Learn from feedback (available for applicable agents):** Incorporate analyst feedback to continuously improve future triage decisions while keeping humans in control.
+- **Integrate with existing response workflows:** Complement existing investigation and response capabilities, such as automated investigation and response (AIR), rather than replacing them.
+- **Learn from feedback:** Incorporate analyst feedback to continuously improve future triage decisions while keeping humans in control. This capability is currently available for phishing alerts only.
 
 This shared triage model ensures consistent behavior and transparency, regardless of the alert source or workload.
 
-## Supported Alert Triage Agents
-
-Alert triage is implemented through workload‑specific agents that share the same underlying model but operate on different alert contexts.
+## Supported workloads and alert types
 
 The Alert Triage Agent currently supports these alert types in Microsoft Defender:
 
-| Agent | Description | Workload |
+| Alert | Workload | Description |
 |:---|:---|:---|
-| [Phishing triage](phishing-triage-agent.md) | Optimized for user‑reported phishing alerts in Microsoft Defender for Office 365, this is the first generally available implementation of the Alert Triage Agent model. | Microsoft Defender for Office 365 |
-| **Container incident triage (Preview)** | Applies the alert triage model to container‑related security incidents, using workload‑specific signals and artifacts. | Microsoft Defender for Containers |
+| [Phishing triage](phishing-triage-agent.md) | Microsoft Defender for Office 365 | Optimized for user‑reported phishing alerts in Microsoft Defender for Office 365, this is the first generally available implementation of the Alert Triage Agent model. |
+| **Container incident triage (Preview)** | Microsoft Defender for Containers | Applies the alert triage model to container‑related security incidents, using workload‑specific signals and artifacts. |
 
 ## Prerequisites
 
