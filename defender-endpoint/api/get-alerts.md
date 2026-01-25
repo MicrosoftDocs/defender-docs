@@ -2,8 +2,8 @@
 title: List alerts API
 description: Learn how to use the List alerts API to retrieve a collection of alerts in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro

@@ -2,8 +2,8 @@
 title: Create an app to access Microsoft Defender for Endpoint without a user
 description: Learn how to grant a web app access to Microsoft Defender for Endpoint without a user.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.date: 09/08/2025
 ms.topic: how-to
 ms.subservice: reference
