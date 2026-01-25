@@ -175,15 +175,16 @@ These permissions are under the **Security operations** permissions group:
 
 :::image type="content" source="media/phishing-triage-agent/agent-permissions.png" alt-text="Screenshot of required permissions for Phishing Triage" lightbox="media/phishing-triage-agent/agent-permissions.png":::
 
-Make sure to grant the agent access to the Microsoft Defender for Office 365 data source.
-
-   :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/agent-permissions-sources.png" alt-text="Screenshot of required data sources for Phishing Triage" lightbox="/defender/media/agents-in-defender/phishing-triage/agent-permissions-sources.png":::
-
 To create a role:
 
 1. Ensure that the relevant Defender workloads are activated to allow the agent to effectively analyze alerts with comprehensive context. Follow the steps in [Activate URBAC settings](activate-defender-rbac.md).
 1. [Create a role](../defender-xdr/create-custom-rbac-roles.md#create-a-custom-role) with the required permissions or assign an existing role with these permissions to the agent.
-1. Assign the role to the agent. Make sure to grant the agent access to the Microsoft Defender for Office 365 data source.
+
+   Make sure to grant the agent access to all the [supported products](#supported-workloads-and-alert-types) you want to associate with the Alert Triage Agent.
+
+      :::image type="content" source="/defender-xdr/media/phishing-triage-agent/agent-permissions-sources.png" alt-text="Screenshot of required data sources for Phishing Triage" lightbox="/defender-xdr/media/phishing-triage-agent/agent-permissions-sources.png":::
+
+1. Assign the role to the agent. 
 
 > [!IMPORTANT]
 > After assigning the agent its permissions, ensure the user group monitoring the agent has equal or higher permissions to oversee its activity and output. To do this, compare the permissions of the user group to the agent in the Permissions page in the Microsoft Defender portal.
