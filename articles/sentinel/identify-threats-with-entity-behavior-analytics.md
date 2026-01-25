@@ -148,6 +148,7 @@ In this article, you learned about Microsoft Sentinel's entity behavior analytic
 - [Enable entity behavior analytics](./enable-entity-behavior-analytics.md) in Microsoft Sentinel.
 - [List of anomalies](anomalies-reference.md#ueba-anomalies) detected by the UEBA engine.
 - [Investigate incidents with UEBA data](investigate-with-ueba.md).
+- [See useful KQL queries](ueba-useful-queries.md) for the Anomalies table.
 - [Hunt for security threats](./hunting.md).
 
 For more information, see the [Microsoft Sentinel UEBA reference](ueba-reference.md).

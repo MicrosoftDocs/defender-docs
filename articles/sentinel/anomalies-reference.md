@@ -667,7 +667,6 @@ Microsoft Sentinel's customizable, machine learning-based anomalies can identify
 ## Next steps
 
 - Learn about [machine learning-generated anomalies](soc-ml-anomalies.md) in Microsoft Sentinel.
-
 - Learn how to [work with anomaly rules](work-with-anomaly-rules.md).
-
 - [Investigate incidents](investigate-cases.md) with Microsoft Sentinel.
+- See [useful KQL queries](ueba-useful-queries.md) for the Anomalies table.

@@ -151,3 +151,4 @@ In this document, you learned how to work with customizable anomaly detection an
 - Get some background information about [customizable anomalies](soc-ml-anomalies.md).
 - View the [available anomaly types](anomalies-reference.md) in Microsoft Sentinel.
 - Explore other [analytics rule types](detect-threats-built-in.md).
+- See [useful KQL queries](ueba-useful-queries.md) for the Anomalies table.
