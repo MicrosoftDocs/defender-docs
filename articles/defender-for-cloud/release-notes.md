@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 12/08/2025
+ms.date: 01/06/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -26,6 +26,24 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 4. In Category, specify whether the item is GA, Preview, Update, Deprecation, Upcoming update, Upcoming deprecation.-->
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
+
+## January 2026
+
+|Date | Category | Update|
+| -------- | -------- | -------- |
+|January 8, 2026| Preview | [Microsoft Security Private Link (Preview)](#microsoft-security-private-link-preview) |
+
+## Microsoft Security Private Link (Preview)
+
+January 8, 2026
+
+Microsoft Defender for Cloud is announcing Microsoft Security Private Link in Preview.
+
+Microsoft Security Private Link enables private connectivity between Defender for Cloud and your workloads. The connection is established by creating private endpoints in your virtual network, allowing Defender for Cloud traffic to remain on the Microsoft backbone network and avoid exposure to the public internet.
+
+Private endpoints are currently supported for the Defender for Containers plan.
+
+Learn more about [Microsoft Security Private Link for Microsoft Defender for Cloud](concept-private-links.md).
 
 ## December 2025
 
@@ -66,7 +84,7 @@ As part of the ongoing [deprecation of the Microsoft Entra Permissions Managemen
 |-------|--------|
 | Azure | Inactive identity recommendations now include read-level permission evaluation for improved fidelity. |
 | AWS | - CIEM evaluations now apply to all AWS users and roles whose permissions can be reliably assessed.<br>- SAML and SSO identities require [AWS CloudTrail Logs (Preview)](integrate-cloud-trail.md) to be enabled within the Defender CSPM plan.<br>- Serverless and compute identities are no longer included in CIEM’s inactivity logic, which may change recommendation counts. |
-| GCP | CIEM evaluations require [Cloud Logging ingestion (Preview)](quickstart-onboard-gcp.md#ingest-gcp-cloud-logging-with-pubsub-preview) to be enabled within the Defender CSPM plan. |
+| GCP | CIEM evaluations require [Cloud Logging ingestion (Preview)](logging-ingestion.md) to be enabled within the Defender CSPM plan. |
 
 The Permissions Creep Index (PCI) metric is being deprecated and will no longer appear in the Defender for Cloud recommendations. PCI is replaced by the improved activity-based CIEM logic, offering clearer guidance and more consistent identity risk insights.
 
@@ -471,7 +489,7 @@ GCP Cloud Logging ingestion is now available in preview, improving CIEM insights
 
 To maintain continuous CIEM recommendations for connected GCP environments, enable Cloud Logging ingestion using a new or existing Pub/Sub subscription.
 
-Learn more about [ingesting with GCP Cloud Logging](quickstart-onboard-gcp.md#ingest-gcp-cloud-logging-with-pubsub-preview).
+Learn more about [ingesting with GCP Cloud Logging](logging-ingestion.md).
 
 ### Deprecation notice: update outbound rules for Microsoft Defender for Containers 
 

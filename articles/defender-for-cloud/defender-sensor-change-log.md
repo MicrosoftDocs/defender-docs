@@ -7,9 +7,9 @@ ms.date: 05/08/2025
 ai-usage: ai-assisted
 ---
 
-# Sensor for Defender for Containers Changelog
+# Sensor for Defender for Containers release notes
 
-The Sensor for Microsoft Defender for Containers changelog provides a detailed version history of sensor updates. Each version includes new features, improvements, and fixes to enhance functionality. Use this changelog to stay informed about the latest updates and plan your deployments accordingly.
+The Sensor for Microsoft Defender for Containers release notes provides a detailed version history of sensor updates. Each version includes new features, improvements, and fixes to enhance functionality. Use this changelog to stay informed about the latest updates and plan your deployments accordingly.
 
 For more information about deploying the sensor in Defender for Containers, see [Configure Microsoft Defender for Containers components](defender-for-containers-enable.md).
 
@@ -97,7 +97,7 @@ The support policy here applies to all Helm-based and multicloud installations. 
 | -------- | -------- | -------- | -------- |
 |0.8| |Feb 2025|Feb 2027|
 |0.9|July 2025|Apr 2026|Apr 2027|
-|0.10|Jan 2026|Apr 2026|Apr 2027|
+|0.10|Feb 2026|Apr 2026|Apr 2027|
 |0.11|Apr 2026|Jul  2026|Jul 2027|
 
 Each stable (GA) version is supported for 12 months from its GA release date. After the 12-month window ends, the version is no longer supported. Customers should upgrade to the latest stable or Public release to maintain support and access new capabilities.
