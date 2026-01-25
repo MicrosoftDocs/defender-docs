@@ -10,7 +10,8 @@
          href: eop-about.md
        - name: What's new in Defender for Office 365
          href: defender-for-office-365-whats-new.md
-
+       - name: Microsoft Defender for Office 365 for US Government customers
+         href: mdo-gov.md
    - name: Get started
      items:
      - name: Get started with Microsoft Defender for Office 365
@@ -383,7 +384,7 @@
            href: submissions-report-messages-files-to-microsoft.md
          - name: Admin submissions
            href: submissions-admin.md
-         - name: Enable the Report Message and Report Phishing add-ins
+         - name: Transition from the Report Message and Report Phishing add-ins
            href: submissions-users-report-message-add-in-configure.md
          - name: Report phishing and suspicious emails in Outlook for admins
            href: submissions-outlook-report-messages.md

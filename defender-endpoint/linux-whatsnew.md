@@ -6,7 +6,7 @@ ms.author: lwainstein
 author: limwainstein
 ms.reviewer: kumasumit, gopkr; mevasude
 ms.localizationpriority: medium
-ms.date: 12/24/2025
+ms.date: 01/23/2025
 manager: bagol
 audience: ITPro
 ms.collection:
@@ -60,6 +60,10 @@ This article is updated frequently to let you know what's new in the latest rele
 #### What's new
 
 - Enhanced vulnerability detection for React components through improved telemetry. This includes support for identifying [(CVE-2025-55182)](https://github.com/advisories/GHSA-fv66-9v8q-g76r), providing more comprehensive security coverage for React-based applications.
+
+- Agent process handling has been streamlined by removing the dependency on telemetryd_v2, enabling more efficient and consistent telemetry collection. This change applies to builds 101.24062.0001 and later, with no impact on functionality, data collection, or customer configurations. All features remain intact, and no customer action is required.
+
+- Added support for Debian 13.
 
 ### December-2025 Build: 101.25092.0005 | Release version: 30.125092.0005.0
 
