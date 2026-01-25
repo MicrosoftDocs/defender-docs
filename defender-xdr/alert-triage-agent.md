@@ -27,59 +27,34 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-> [!IMPORTANT]
-> Alert Triage Agents are currently in PREVIEW.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+Alert Triage Agents are autonomous Microsoft Security Copilot agents that help security teams triage alerts at scale by applying consistent reasoning, prioritization, and enrichment across security workloads.
 
-The Alert Triage Agent is an autonomous Microsoft Security Copilot capability that helps security teams triage alerts at scale by applying consistent reasoning, prioritization, and enrichment across security workloads.
+Instead of relying on manual review or static rules, Alert Triage Agents evaluate alerts using AI‑driven reasoning, determine their relevance and risk, and record their conclusions directly in Microsoft Defender incidents. This reduces alert fatigue, accelerates response, and helps analysts focus on the alerts that matter most.
 
-Instead of relying on manual review or static rules, the Alert Triage Agent evaluates alerts using AI‑driven reasoning, determines their relevance and risk, and records its conclusions directly in Microsoft Defender incidents. This reduces alert fatigue, accelerates response, and helps analysts focus on the alerts that matter most.
+This article provides an overview of the Alert Triage Agent model, its benefits, and the Alert Triage Agents currently available in Microsoft Defender.
 
-## How the Alert Triage Agent works
+## How Alert Triage Agents work
 
-The Alert Triage Agent follows a common triage model that applies across supported alert types:
+Alert Triage Agents follow a common triage model that applies across supported alert types:
 
-- **Classify alerts:** Evaluates incoming alerts and determines whether they represent a true security concern or benign activity.
-- **Prioritize risk:** Helps surface the alerts that require immediate attention by assessing context, severity signals, and supporting evidence.
-- **Enrich incidents with reasoning:** Adds natural‑language explanations and supporting details to the associated incident so analysts can quickly understand why an alert was classified a certain way.
-- **Learn from feedback:** Incorporates analyst feedback to continuously improve future triage decisions while keeping humans in control.
-- **Work alongside existing response workflows:** The agent complements existing investigation and response capabilities, such as automated investigation and response (AIR), rather than replacing them.
+- **Classify alerts:** Evaluate incoming alerts and determine whether they represent a true security concern or benign activity.
+- **Prioritize risk:** Help surface the alerts that require immediate attention by assessing context, severity signals, and supporting evidence.
+- **Enrich incidents with reasoning:** Add natural‑language explanations and supporting details to the associated incident so analysts can quickly understand why an alert was classified a certain way.
+- **Work alongside existing response workflows:** Complement existing investigation and response capabilities, such as automated investigation and response (AIR), rather than replacing them.
+- **Learn from feedback (available for applicable agents):** Incorporate analyst feedback to continuously improve future triage decisions while keeping humans in control.
 
 This shared triage model ensures consistent behavior and transparency, regardless of the alert source or workload.
-
-## Foundational implementation: Phishing Triage Agent
-
-The [Phishing Triage Agent](phishing-triage-agent.md) is the first production implementation of the Alert Triage Agent model. It applies the same triage framework to user‑reported phishing alerts, using email‑specific signals such as message content, sender context, URLs, and attachments.
-
-By starting with phishing—a high‑volume, repetitive alert type—the Phishing Triage Agent demonstrates how the Alert Triage Agent model can:
-
-- Autonomously reduce noise at scale
-- Provide clear, explainable verdicts
-- Improve accuracy over time through feedback
-
-Other Alert Triage Agents build on this same model and extend it to additional alert types and workloads.
 
 ## Supported Alert Triage Agents
 
 Alert triage is implemented through workload‑specific agents that share the same underlying model but operate on different alert contexts.
 
-Examples include:
+The currently available Alert Triage Agents in Microsoft Defender are:
 
-- **Phishing Triage Agent:** Optimized for user‑reported phishing alerts in Microsoft Defender for Office 365. For detailed setup and usage, see [Phishing Triage Agent](phishing-triage-agent.md).
-- **Container Incident Triage Agent:** Applies the alert triage model to container‑related security incidents, using workload‑specific signals and artifacts.
-
-Additional Alert Triage Agents may be added over time as support expands to new alert types and workloads.
-
-## When to use the Alert Triage Agent
-
-Use Alert Triage Agents when you want to:
-
-- Reduce manual triage effort for high‑volume alerts
-- Improve consistency and transparency in alert handling
-- Accelerate analyst decision‑making without losing control
-- Scale security operations as alert volume grows
-
-Each Alert Triage Agent focuses on a specific alert domain, while sharing the same triage principles and user experience.
+| Agent | Description |
+|:---|:---|
+| [Phishing Triage Agent](phishing-triage-agent.md) | Optimized for user‑reported phishing alerts in Microsoft Defender for Office 365, this is the first generally available implementation of the Alert Triage Agent model. |
+| **Container Incident Triage Agent (Preview)** | Applies the alert triage model to container‑related security incidents, using workload‑specific signals and artifacts. |
 
 ## Prerequisites
 
