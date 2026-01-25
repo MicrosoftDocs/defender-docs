@@ -2,10 +2,9 @@
 title: Activate Microsoft Defender XDR Unified role-based access control (RBAC)
 description: Activate Microsoft Defender XDR unified role-based access control(RBAC) to enforce permissions and assignments configured in your new custom or imported roles.
 ms.service: defender-xdr
-ms.author: guywild
-author: guywi-ms
+ms.author: monaberdugo
+author: mberdugo
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
