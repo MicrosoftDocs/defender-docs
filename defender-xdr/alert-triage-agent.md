@@ -27,9 +27,9 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-The Alert Triage Agent is an autonomous Microsoft Security Copilot agent that helps security teams triage alerts at scale by applying consistent reasoning, prioritization, and enrichment across security workloads.
+The Alert Triage Agent is an autonomous Microsoft Security Copilot agent that helps security teams triage alerts at scale by applying consistent reasoning, prioritization, and enrichment across supported security workloads.
 
-Instead of relying on manual review or static rules, the Alert Triage Agent evaluates alerts using AI‑driven reasoning, determines their relevance and risk, and records its conclusions directly in Microsoft Defender incidents. This reduces alert fatigue, accelerates response, and helps analysts focus on the alerts that matter most.
+The Alert Triage Agent evaluates alerts using AI‑driven reasoning, determines their relevance and risk, and records its conclusions directly in Microsoft Defender incidents. This reduces alert fatigue, accelerates response, and helps analysts focus on the alerts that matter most.
 
 This article provides an overview of the Alert Triage Agent model, its benefits, and its alert triage capabilities.
 
@@ -39,9 +39,11 @@ The Alert Triage Agent follows a common triage model that applies across support
 
 - **Classify alerts:** Evaluate incoming alerts and determine whether they represent a true security concern or benign activity.
 - **Prioritize risk:** Help surface the alerts that require immediate attention by assessing context, severity signals, and supporting evidence.
-- **Enrich incidents with reasoning:** Add natural‑language explanations and supporting details to the associated incident so analysts can quickly understand why an alert was classified a certain way.
+- **Enrich incidents with reasoning:** Add natural‑language explanations and supporting details to the associated incident so analysts can quickly understand why an alert was classified.
 - **Integrate with existing response workflows:** Complement existing investigation and response capabilities, such as automated investigation and response (AIR), rather than replacing them.
-- **Learn from feedback:** Incorporate analyst feedback to continuously improve future triage decisions while keeping humans in control. This capability is currently available for phishing alerts only.
+- **Learn from feedback:** Incorporate analyst feedback to continuously improve future triage decisions while keeping humans in control. 
+
+   This capability is currently available for phishing alerts only.
 
 This shared triage model ensures consistent behavior and transparency, regardless of the alert source or workload.
 
