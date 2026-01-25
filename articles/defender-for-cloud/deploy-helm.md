@@ -168,10 +168,8 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
 Verify that the installation succeeded by using the command:
 
 ```bash
-helm list --namespace <Name>
+helm list --namespace mdc
 ```
-
-- Replace `<Name>` with `mdc` or `kube-system`.
 
 The installation is successful if the `STATUS` field displays **deployed**.
 
