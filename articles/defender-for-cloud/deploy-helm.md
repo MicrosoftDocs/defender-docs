@@ -48,7 +48,7 @@ Depending on your deployment type, follow the relevant instructions to install t
     az extension update --name aks-preview
     ```
 
-AKS and AKS Automatic:
+**AKS and AKS Automatic**:
 
 - Helm version 3.8 or later (the available version supports OCI)
 
