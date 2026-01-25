@@ -31,27 +31,29 @@ Implement all prerequisite requirements for the Defender for Containers sensor a
 
 Depending on your deployment type, follow the relevant instructions to install the Defender for Containers sensor by using Helm:
 
-### [AKS Automatic](#tab/aks-automatic)
-
-Run the following command for AKS Automatic:
-
-```bash
-# Update Azure CLI to the latest version 
-az upgrade 
-
-# If you don't have the AKS preview extension installed yet 
-az extension add --name aks-preview 
-
-# Update the AKS extension specifically 
-az extension update --name aks-preview
-```
-
-### [AKS](#tab/aks)
+### [AKS & AKS Automatic](#tab/aks)
 
 #### Prerequisites
 
+**AKS automatic Only**: Run the following command for AKS Automatic:
+
+    ```bash
+    # Update Azure CLI to the latest version 
+    az upgrade 
+    
+    # If you don't have the AKS preview extension installed yet 
+    az extension add --name aks-preview 
+    
+    # Update the AKS extension specifically 
+    az extension update --name aks-preview
+    ```
+
+AKS and AKS Automatic:
+
 - Helm version 3.8 or later (the available version supports OCI)
-- Resource group owner role for the target cluster (AKS) or security connector (EKS or GKE)
+
+- Resource group owner role for the target cluster.
+
 - Azure resource ID for the target cluster
 
   > [!NOTE]
@@ -105,6 +107,10 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
 ### [EKS and GKE](#tab/eks-and-gke)
 
 ## Prerequisites
+
+- Helm version 3.8 or later (the available version supports OCI)
+
+- Resource group owner role for the security connector.
 
 - Ensure the cluster account is connected to Microsoft Defender for Cloud. Learn how to [connect your AWS account](quickstart-onboard-aws.md) or [connect your GCP project](quickstart-onboard-gcp.md) to your Defender for Cloud.
 
