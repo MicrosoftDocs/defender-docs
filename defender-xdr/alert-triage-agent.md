@@ -27,15 +27,15 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Alert Triage Agents are autonomous Microsoft Security Copilot agents that help security teams triage alerts at scale by applying consistent reasoning, prioritization, and enrichment across security workloads.
+The Alert Triage Agent is an autonomous Microsoft Security Copilot agent that helps security teams triage alerts at scale by applying consistent reasoning, prioritization, and enrichment across security workloads.
 
-Instead of relying on manual review or static rules, Alert Triage Agents evaluate alerts using AI‑driven reasoning, determine their relevance and risk, and record their conclusions directly in Microsoft Defender incidents. This reduces alert fatigue, accelerates response, and helps analysts focus on the alerts that matter most.
+Instead of relying on manual review or static rules, the Alert Triage Agent evaluates alerts using AI‑driven reasoning, determines their relevance and risk, and records its conclusions directly in Microsoft Defender incidents. This reduces alert fatigue, accelerates response, and helps analysts focus on the alerts that matter most.
 
-This article provides an overview of the Alert Triage Agent model, its benefits, and the Alert Triage Agents currently available in Microsoft Defender.
+This article provides an overview of the Alert Triage Agent model, its benefits, and its alert triage capabilities.
 
 ## How Alert Triage Agents work
 
-Alert Triage Agents follow a common triage model that applies across supported alert types:
+The Alert Triage Agent follows a common triage model that applies across supported alert types:
 
 - **Classify alerts:** Evaluate incoming alerts and determine whether they represent a true security concern or benign activity.
 - **Prioritize risk:** Help surface the alerts that require immediate attention by assessing context, severity signals, and supporting evidence.
@@ -49,22 +49,23 @@ This shared triage model ensures consistent behavior and transparency, regardles
 
 Alert triage is implemented through workload‑specific agents that share the same underlying model but operate on different alert contexts.
 
-The currently available Alert Triage Agents in Microsoft Defender are:
+The Alert Triage Agent currently supports these alert types in Microsoft Defender:
 
-| Agent | Description |
-|:---|:---|
-| [Phishing Triage Agent](phishing-triage-agent.md) | Optimized for user‑reported phishing alerts in Microsoft Defender for Office 365, this is the first generally available implementation of the Alert Triage Agent model. |
-| **Container Incident Triage Agent (Preview)** | Applies the alert triage model to container‑related security incidents, using workload‑specific signals and artifacts. |
+| Agent | Description | Workload |
+|:---|:---|:---|
+| [Phishing triage](phishing-triage-agent.md) | Optimized for user‑reported phishing alerts in Microsoft Defender for Office 365, this is the first generally available implementation of the Alert Triage Agent model. | Microsoft Defender for Office 365 |
+| **Container incident triage (Preview)** | Applies the alert triage model to container‑related security incidents, using workload‑specific signals and artifacts. | Microsoft Defender for Containers |
 
 ## Prerequisites
 
-To run the Phishing Triage Agent in your environment, you need:
+To run the Alert Triage Agent in your environment, you need:
 
 |Components|Details|
 |:---|:---|
 |Products|- Security Copilot and provisioned capacity in Security Compute Units (SCU). See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) or check whether you're entitled to SCUs as part of the [Microsoft Security Copilot inclusion model](/copilot/security/security-copilot-inclusion)</br> - Microsoft Defender for Office 365 Plan 2 deployed |
 |Microsoft Defender required features|- Unified role-based access control (URBAC) enabled for Defender for Office 365. See [Activate URBAC settings](#activate-urbac-settings) for more information. </br> - Enable **Monitor reported messages in Outlook** in **User reported settings**. See [User reported settings](#configure-user-reported-settings) for more information </br> - The alert policy **Email reported by user as malware or phish** must be turned on. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information|
 | Plugins | The Phishing Triage Agent automatically activates these Security Copilot plugins: <br>- Microsoft Defender XDR<br>- Microsoft Threat Intelligence<br>- Phishing Triage Agent |
+
 ### Activate URBAC settings
 
 Activate the Defender for Office 365 workload in the Microsoft Defender XDR settings:
