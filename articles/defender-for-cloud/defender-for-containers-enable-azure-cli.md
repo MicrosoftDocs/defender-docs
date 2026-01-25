@@ -13,14 +13,19 @@ This article explains how to enable Microsoft Defender for Containers and deploy
 
 # [Azure Kubernetes Service (AKS)](#tab/aks)
 
-## Prerequisites
+## Network requirements
 
 [!INCLUDE[defender-for-container-prerequisites-aks](includes/defender-for-container-prerequisites-aks.md)]
 
-Additionally, make sure you have:
+## Prerequisites
 
-- Azure CLI version 2.40.0 or later
-- Appropriate RBAC permissions (Contributor or Security Admin)
+- Azure CLI version 2.40.0 or later. 
+
+- Appropriate RBAC permissions (Contributor or Security Admin).
+
+- AKS cluster supported by Defender for Containers. See the [support matrix](support-matrix-defender-for-containers.md).
+
+- [An OpenId Connect (OIDC) issuer](/azure/aks/use-oidc-issuer) enabled on your cluster.
 
 ## Enable the Defender for Containers plan
 
@@ -92,15 +97,21 @@ The output should show `enabled: true`.
 
 # [Amazon Elastic Kubernetes Service (EKS)](#tab/eks)
 
-## Prerequisites
+## Network requirements
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
-Additionally, make sure you have:
+## Prerequisites
 
-- Azure CLI version 2.40.0 or later
-- AWS CLI configured with appropriate credentials
-- `kubectl` configured for your EKS clusters
+- An AWS account with permissions to create and manage IAM roles and deploy CloudFormation stacks. Learn how to [connect your AWS account to Microsoft Defender for Cloud](quickstart-onboard-aws.md).
+
+- Azure CLI version 2.40.0 or later.
+
+- AWS CLI configured with appropriate credentials.
+
+- `kubectl` configured for your EKS clusters.
+
+- EKS clusters must be connectable to Azure Arc.
 
 ## Enable Defender for Containers
 
@@ -165,15 +176,21 @@ Confirm that a Defender for Containers DaemonSet is listed and that the **DESIRE
 
 # [Google Kubernetes Engine (GKE)](#tab/gke)
 
-## Prerequisites
+## Network requirements
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
-Additionally, ensure you have:
+## Prerequisites
 
-- Azure CLI version 2.40.0 or later
-- gcloud CLI configured with appropriate credentials
-- `kubectl` configured for your GKE clusters
+- A GCP project connected to Microsoft Defender for Cloud. If you haven’t connected your project yet, see [Connect your GCP project to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
+
+- Azure CLI version 2.40.0 or later.
+
+- gcloud CLI configured with appropriate credentials.
+
+- `kubectl` configured for your GKE clusters.
+
+- GKE clusters must be connectable to Azure Arc.
 
 ## Enable Defender for Containers
 

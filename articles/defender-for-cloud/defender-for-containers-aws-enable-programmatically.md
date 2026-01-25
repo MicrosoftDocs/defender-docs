@@ -14,11 +14,12 @@ This article explains how to deploy Defender for Containers components on your A
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
-Required tools:
+### Azure-specific requirements
 
 - Azure CLI (version 2.40.0 or later)
 - AWS CLI configured with appropriate credentials
 - `kubectl` configured for your EKS clusters
+- [An OpenId Connect (OIDC) issuer](/azure/aks/use-oidc-issuer) for your cluster.
 
 ## Enable Defender for Containers
 

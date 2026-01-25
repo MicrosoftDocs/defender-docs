@@ -13,9 +13,15 @@ This article explains how to enable Microsoft Defender for Containers and deploy
 
 # [Azure Kubernetes Service (AKS)](#tab/aks)
 
-## Prerequisites
+## Network requirements
 
 [!INCLUDE[defender-for-container-prerequisites-aks](includes/defender-for-container-prerequisites-aks.md)]
+
+### Azure-specific requirements
+
+- AKS cluster supported by Defender for Containers. See the [support matrix](support-matrix-defender-for-containers.md).
+
+- [An OpenId Connect (OIDC) issuer](/azure/aks/use-oidc-issuer) enabled on your cluster.
 
 ## Enable Defender for Containers
 
@@ -64,15 +70,19 @@ Use the Azure portal to verify that Defender for Containers components were depl
 
 # [Amazon Elastic Kubernetes Service (EKS)](#tab/eks)
 
-## Prerequisites
+## Network requirements
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
-### AWS-specific requirements
+## Prerequisites
 
-- An AWS account with permissions to create and manage IAM roles and deploy CloudFormation stacks
-- One or more Amazon EKS clusters running Kubernetes version 1.19 or later
-- Container images stored in Amazon ECR
+- An AWS account with permissions to create and manage IAM roles and deploy CloudFormation stacks. Learn how to [connect your AWS account to Microsoft Defender for Cloud](quickstart-onboard-aws.md).
+
+- One or more Amazon EKS clusters running Kubernetes version 1.19 or later.
+
+- Container images stored in Amazon ECR.
+
+- EKS clusters must be connectable to Azure Arc.
 
 ## Enable Defender for Containers
 
@@ -168,14 +178,17 @@ Use the Azure portal to verify that Defender for Containers components were depl
 
 # [Google Kubernetes Engine (GKE)](#tab/gke)
 
-## Prerequisites
+## Network requirements
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
-### GCP-specific requirements
+## Prerequisites
 
-- A GCP project connected to Microsoft Defender for Cloud
-- One or more GKE clusters running Kubernetes version 1.19 or later
+- A GCP project connected to Microsoft Defender for Cloud. If you haven’t connected your project yet, see [Connect your GCP project to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
+
+- One or more GKE clusters running Kubernetes version 1.19 or later.
+
+- GKE clusters must be connectable to Azure Arc.
 
 ## Enable Defender for Containers
 
