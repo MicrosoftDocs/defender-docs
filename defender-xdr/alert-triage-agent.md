@@ -55,7 +55,7 @@ The Alert Triage Agent currently supports these alert types in Microsoft Defende
 |:---|:---|:---|
 | **Phishing incidents** | Microsoft Defender for Office 365 | User‑reported phishing alerts. |
 | **Container incident triage (Preview)** | Microsoft Defender for Cloud |  |
-|
+| | Microsoft Defender for Identity |  |
 
 ## Prerequisites
 
@@ -70,7 +70,7 @@ To run the Alert Triage Agent in your environment, you need:
 ### Activate URBAC settings
 
 To ensures the agent has the necessary access to triage alerts, activate the URBAC settings for all of the [supported products](#supported-workloads-and-alert-types) you want to associate with the Alert Triage Agent.
- 
+
 For more information, see [Activate workloads in Microsoft Defender XDR settings](activate-defender-rbac.md#activate-in-microsoft-defender-xdr-settings).
 
 ### Configure user reported settings
