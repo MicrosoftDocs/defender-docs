@@ -220,7 +220,8 @@
                   href: defender-for-containers-enable-portal.md
                 - name: Enable via Azure CLI
                   href: defender-for-containers-enable-azure-cli.md
-                - name: Defender for Containers deployment overview
+                - name: Troubleshoot
+                  href: defender-for-containers-aws-troubleshoot.md                - name: Defender for Containers deployment overview
                   href: defender-for-containers-deployment-overview.md
                 - name: Azure (AKS)
                   items:
@@ -246,8 +247,6 @@
                       href: defender-for-containers-aws-enable-programmatically.md
                     - name: Verify deployment
                       href: defender-for-containers-aws-verify.md
-                    - name: Troubleshoot
-                      href: defender-for-containers-aws-troubleshoot.md
                     - name: Configure
                       href: defender-for-containers-aws-configure.md
                     - name: Remove
