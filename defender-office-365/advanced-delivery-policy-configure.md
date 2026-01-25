@@ -131,6 +131,8 @@ If your MX record doesn't point to Microsoft 365, the IP address in the `Authent
 
 > [!NOTE]
 >
+> - Currently, IPv6 addresses are supported only in PowerShell. To use PowerShell to configure non-Microsoft phishing simulations in the advanced delivery policy, see the [Use PowerShell to configure non-Microsoft phishing simulations](#use-powershell-to-configure-non-microsoft-phishing-simulations) section later in this article.
+>   
 > - Enhanced Filtering for Connectors doesn't work for non-Microsoft phishing simulations in the following in-and-out email routing scenario:
 >
 >   Internet \> Microsoft 365 \> on-premises environment or non-Microsoft security service \> back to Microsoft 365
@@ -398,7 +400,7 @@ Configuring a non-Microsoft phishing simulation in PowerShell is a multi-step pr
 1. Create the phishing simulation override policy.
 2. Create the phishing simulation override rule that specifies:
    - The policy that the rule applies to.
-   - The source IP address of the phishing simulation messages.
+   - The source IPv4 or IPv6 address of the phishing simulation messages.
 3. Optionally, identity the phishing simulation URLs in **non-email** phishing simulations (links in Teams messages or in Office documents) that shouldn't be treated as real threats at time of click.
 
 #### Step 1: Use PowerShell to create the phishing simulation override policy
@@ -423,7 +425,7 @@ New-ExoPhishSimOverrideRule -Name <ArbitraryTextValue> -Policy PhishSimOverrideP
 
 Regardless of the Name value you specify, the rule name is `_Exe:PhishSimOverr:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 6fed4b63-3563-495d-a481-b24a311f8329).
 
-A valid IP address entry is one of the following values:
+A valid IPv4 or IPv6 address entry is one of the following values:
 
 - Single IP: For example, 192.168.1.1.
 - IP range: For example, 192.168.0.1-192.168.0.254.
