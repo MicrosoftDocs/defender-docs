@@ -2,8 +2,8 @@
 title: Create alert from event API
 description: Learn how to use the Create alert API to create a new Alert on top of Event in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
