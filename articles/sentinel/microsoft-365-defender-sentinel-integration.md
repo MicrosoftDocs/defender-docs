@@ -1,8 +1,8 @@
 ---
 title: Microsoft Defender XDR integration with Microsoft Sentinel
 description: Learn how using Microsoft Defender XDR together with Microsoft Sentinel lets you use Microsoft Sentinel as your universal incidents queue.
-author: batamig
-ms.author: bagol
+author: guywi-ms
+ms.author: guywild
 ms.topic: conceptual
 ms.date: 10/25/2025
 appliesto:
