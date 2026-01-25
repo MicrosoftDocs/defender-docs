@@ -1,6 +1,6 @@
 ---
 title: Alert Triage Agent overview in Microsoft Defender
-description: Learn about the Alert Triage Agent, an autonomous Security Copilot capability that helps security teams triage alerts at scale using AI-driven reasoning, prioritization, and enrichment.
+description: Learn about Alert Triage Agents, autonomous agents in the Microsoft Defender ecosystem that help security teams triage alerts at scale using AI-driven reasoning, prioritization, and enrichment.
 ms.service: defender-xdr
 f1.keywords:
 - NOCSH
@@ -401,7 +401,7 @@ To remove the agent:
 
 ## Frequently asked questions
 
-Following are responses to commonly asked questions about Alert Triage Agents. For information about the agent's capabilities and requirements, see [How the Alert Triage Agent works](#how-the-alert-triage-agent-works) and [prerequisites](#prerequisites) sections of this article.
+Following are responses to commonly asked questions about Alert Triage Agents. For information about the agent's capabilities and requirements, see [How Alert Triage Agents work](#how-alert-triage-agents-work) and [prerequisites](#prerequisites) sections of this article.
 
 ### When is the agent triggered?
 
