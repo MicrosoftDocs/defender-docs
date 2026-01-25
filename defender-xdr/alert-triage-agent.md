@@ -51,7 +51,7 @@ This shared triage model ensures consistent behavior and transparency, regardles
 
 The Alert Triage Agent currently supports these alert types in Microsoft Defender:
 
-| Incident type | Workload | Alert type |
+| Incident type | Product | Alert type |
 |:---|:---|:---|
 | **Phishing incidents** | Microsoft Defender for Office 365 | User‑reported phishing alerts. |
 | **Container incident triage (Preview)** | Microsoft Defender for Cloud |  |
@@ -62,7 +62,7 @@ To run the Alert Triage Agent in your environment, you need:
 
 |Components|Details|
 |:---|:---|
-|Products|- Security Copilot and provisioned capacity in Security Compute Units (SCU). See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) or check whether you're entitled to SCUs as part of the [Microsoft Security Copilot inclusion model](/copilot/security/security-copilot-inclusion)</br> - Microsoft Defender for Office 365 Plan 2 deployed |
+|Products|- Security Copilot and provisioned capacity in Security Compute Units (SCU). See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) or check whether you're entitled to SCUs as part of the [Microsoft Security Copilot inclusion model](/copilot/security/security-copilot-inclusion)</br> - At least one of the [supported products](#supported-workloads-and-alert-types) deployed and configured. |
 |Microsoft Defender required features|- Unified role-based access control (URBAC) enabled for Defender for Office 365. See [Activate URBAC settings](#activate-urbac-settings) for more information. </br> - Enable **Monitor reported messages in Outlook** in **User reported settings**. See [User reported settings](#configure-user-reported-settings) for more information </br> - The alert policy **Email reported by user as malware or phish** must be turned on. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information|
 | Plugins | The Phishing Triage Agent automatically activates these Security Copilot plugins: <br>- Microsoft Defender XDR<br>- Microsoft Threat Intelligence<br>- Phishing Triage Agent |
 
