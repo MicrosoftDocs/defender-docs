@@ -35,7 +35,7 @@ Depending on your deployment type, follow the relevant instructions to install t
 
 #### Prerequisites
 
-**AKS automatic Only**: Run the following command for AKS Automatic:
+**AKS Automatic Only**: Run the following command for AKS Automatic:
 
     ```bash
     # Update Azure CLI to the latest version 
