@@ -221,7 +221,8 @@
                 - name: Enable via Azure CLI
                   href: defender-for-containers-enable-azure-cli.md
                 - name: Troubleshoot
-                  href: defender-for-containers-aws-troubleshoot.md                - name: Defender for Containers deployment overview
+                  href: defender-for-containers-aws-troubleshoot.md                
+                - name: Defender for Containers deployment overview
                   href: defender-for-containers-deployment-overview.md
                 - name: Azure (AKS)
                   items:
