@@ -52,7 +52,7 @@ To quickly access the schema reference, select the **View reference** action nex
 ## Learn the schema tables
 The following reference lists all the tables in the schema. Each table name links to a page describing the column names for that table. Table and column names are also listed in Microsoft Defender XDR as part of the schema representation on the advanced hunting screen.
 
-| Table name | Description | DCR support| Direct to lake ingest|
+| Table name | Description | DCR support | Lake-only ingestion |
 |------------|-------------|------------|----------------------|
 | **[AADSignInEventsBeta](advanced-hunting-aadsignineventsbeta-table.md)** | Microsoft Entra interactive and non-interactive sign-ins |	No|	No|
 | **[AADSpnSignInEventsBeta](advanced-hunting-aadspnsignineventsbeta-table.md)** | Microsoft Entra service principal and managed identity sign-ins |	No|	No|
