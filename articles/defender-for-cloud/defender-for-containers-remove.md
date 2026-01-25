@@ -123,7 +123,7 @@ If you no longer want Defender for Cloud to monitor your AWS account:
 
 1. Find your AWS connector.
 
-1. Select the **...** (more options) menu.
+1. Select the ellipsis (...).
 
 1. Select **Delete**.
 
