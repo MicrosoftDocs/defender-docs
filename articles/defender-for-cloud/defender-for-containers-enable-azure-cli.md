@@ -13,10 +13,6 @@ This article explains how to enable Microsoft Defender for Containers and deploy
 
 # [Azure Kubernetes Service (AKS)](#tab/aks)
 
-## Network requirements
-
-[!INCLUDE[defender-for-container-prerequisites-aks](includes/defender-for-container-prerequisites-aks.md)]
-
 ## Prerequisites
 
 - Azure CLI version 2.40.0 or later. 
@@ -26,6 +22,10 @@ This article explains how to enable Microsoft Defender for Containers and deploy
 - AKS cluster supported by Defender for Containers. See the [support matrix](support-matrix-defender-for-containers.md).
 
 - [An OpenId Connect (OIDC) issuer](/azure/aks/use-oidc-issuer) enabled on your cluster.
+
+## Network requirements
+
+[!INCLUDE[defender-for-container-prerequisites-aks](includes/defender-for-container-prerequisites-aks.md)]
 
 ## Enable the Defender for Containers plan
 
@@ -58,7 +58,7 @@ az aks update \
   --defender-config logAnalyticsWorkspaceResourceId=<workspace-resource-id>
 ```
 
-## Deploy the Azure Policy extension
+## Deploy the Azure Policy add-on
 
 Enable Azure Policy for Kubernetes to assess and enforce configuration best practices:
 
@@ -79,10 +79,10 @@ Use the following steps to verify that Defender for Containers components were d
 az aks show \
   --name <aks-cluster-name> \
   --resource-group <resource-group> \
-  --query "securityProfile.defender"
+  --query "securityProfile.defender.securityMonitoring.enabled"
 ```
 
-The output should show that `securityMonitoring.enabled` is set to `true`.
+The output should be `true`.
 
 ### Verify that Azure Policy add-on is enabled
 
@@ -97,10 +97,6 @@ The output should show `enabled: true`.
 
 # [Amazon Elastic Kubernetes Service (EKS)](#tab/eks)
 
-## Network requirements
-
-[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
-
 ## Prerequisites
 
 - An AWS account with permissions to create and manage IAM roles and deploy CloudFormation stacks. Learn how to [connect your AWS account to Microsoft Defender for Cloud](quickstart-onboard-aws.md).
@@ -112,6 +108,10 @@ The output should show `enabled: true`.
 - `kubectl` configured for your EKS clusters.
 
 - EKS clusters must be connectable to Azure Arc.
+
+## Network requirements
+
+[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
 ## Enable Defender for Containers
 
@@ -140,11 +140,12 @@ az k8s-extension create \
   --resource-group <resource-group> \
   --configuration-settings logAnalyticsWorkspaceResourceID=<workspace-resource-id>
 ```
+
 ## Deploy the Azure Policy extension
 
 ```azurecli
 az k8s-extension create \
-  --name azure-policy \
+  --name azurepolicy \
   --extension-type Microsoft.PolicyInsights \
   --cluster-type connectedClusters \
   --cluster-name <cluster-name> \
@@ -176,10 +177,6 @@ Confirm that a Defender for Containers DaemonSet is listed and that the **DESIRE
 
 # [Google Kubernetes Engine (GKE)](#tab/gke)
 
-## Network requirements
-
-[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
-
 ## Prerequisites
 
 - A GCP project connected to Microsoft Defender for Cloud. If you haven’t connected your project yet, see [Connect your GCP project to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
@@ -191,6 +188,10 @@ Confirm that a Defender for Containers DaemonSet is listed and that the **DESIRE
 - `kubectl` configured for your GKE clusters.
 
 - GKE clusters must be connectable to Azure Arc.
+
+## Network requirements
+
+[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
 
 ## Enable Defender for Containers
 
@@ -225,7 +226,7 @@ az k8s-extension create \
 
 ```azurecli
 az k8s-extension create \
-  --name azure-policy \
+  --name azurepolicy \
   --extension-type Microsoft.PolicyInsights \
   --cluster-type connectedClusters \
   --cluster-name <cluster-name> \
@@ -255,7 +256,96 @@ kubectl get daemonsets -n kube-system
 
 Confirm that a Defender for Containers DaemonSet is listed and that the **DESIRED**, **CURRENT**, and **READY** columns show matching values.
 
+# [Arc-enabled Kubernetes](#tab/arc)
+
+## Prerequisites
+
+- Azure CLI version 2.40.0 or later.
+- `kubectl` configured to access your cluster.
+- [Connect your Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster)
+
+## Network requirements
+
+[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
+
+## Connect your cluster to Azure Arc
+
+Connect your Kubernetes cluster to Azure Arc. For instructions, see [Connect your Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
+
+## Enable Defender for Containers
+
+Enable the Defender for Containers plan on your Azure subscription before continuing.
+
+For information about enabling Defender plans by using Azure CLI, REST API, or Azure Policy, see [Enable Microsoft Defender for Cloud](connect-azure-subscription.md).
+
+## Deploy the Defender sensor
+
+After enabling the plan and connecting your cluster to Azure Arc, deploy the Defender sensor extension:
+
+```azurecli
+az k8s-extension create \
+  --name microsoft.azuredefender.kubernetes \
+  --extension-type microsoft.azuredefender.kubernetes \
+  --cluster-type connectedClusters \
+  --cluster-name <cluster-name> \
+  --resource-group <resource-group> \
+  --configuration-settings logAnalyticsWorkspaceResourceID=<workspace-resource-id>
+```
+
+### Deploy the Azure Policy extension
+
+To enable Azure Policy for Kubernetes on Arc-enabled clusters:
+
+```azurecli
+az k8s-extension create \
+  --name azurepolicy \
+  --extension-type Microsoft.PolicyInsights \
+  --cluster-type connectedClusters \
+  --cluster-name <cluster-name> \
+  --resource-group <resource-group>
+```
+
+## Verify deployment
+
+### Verify that the cluster is connected to Azure Arc
+
+```azurecli
+az connectedk8s show \
+  --name <cluster-name> \
+  --resource-group <resource-group> \
+  --query connectivityStatus
+```
+
+The output should show `Connected`.
+
+### Verify that the Defender extension is installed
+
+```azurecli
+az k8s-extension show \
+  --name microsoft.azuredefender.kubernetes \
+  --cluster-type connectedClusters \
+  --cluster-name <cluster-name> \
+  --resource-group <resource-group> \
+  --query provisioningState
+```
+
+The output should show `Succeeded`.
+
+### Verify that the Defender sensor pods are running
+
+```bash
+kubectl get pods -n kube-system -l app=microsoft-defender
+```
+
+All pods should show a status of `Running`.
+
 ---
 
-## Next steps
+## Related content
+
+- [Enable Defender for Containers using the Azure portal](defender-for-containers-enable-portal.md)
+
+- - [Troubleshoot Defender for Containers on AWS (EKS)](defender-for-containers-aws-troubleshoot.md)
+
+- [Disable Microsoft Defender for Containers](defender-for-containers-remove.md)
 
