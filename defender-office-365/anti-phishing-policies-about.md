@@ -49,7 +49,7 @@ To configure anti-phishing policies, see the following articles:
 
 - [Configure anti-phishing policies (basic protection)](anti-phishing-policies-eop-configure.md)
 - [Configure anti-phishing policies in Defender for Office 365](anti-phishing-policies-mdo-configure.md)
-- **Recommended settings**: See [Recommended anti-phishing policy settings](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings).
+- **Recommended settings**: See [Recommended anti-phishing policy settings](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-for-all-cloud-mailboxes).
 
 [!INCLUDE [Security Analyzer setup guide](../includes/security-analyzer-setup-guide.md)]
 
@@ -164,7 +164,7 @@ The relationship between spoof intelligence and whether sender DMARC policies ar
 |**Spoof intelligence Off**|Implicit email authentication checks aren't used. <br/><br/> Explicit email authentication failures: <ul><li>DMARC policy `p=quarantine`: Use the **If the message is detected as spoof and DMARC policy is set as p=quarantine** action in the anti-phishing policy.</li><li>DMARC policy `p=reject`: Use the **If the message is detected as spoof and DMARC policy is set as p=reject** action in the anti-phishing policy.</li><li>DMARC policy `p=none`: The message isn't identified as spoofing by Microsoft 365, but other protection features in the filtering stack are still able to act on the message.</li></ul>|Implicit email authentication checks aren't used. <br/><br/> Explicit email authentication failures: <ul><li>DMARC policy `p=quarantine`: Messages are quarantined.</li><li>DMARC policy `p=reject`: Messages are quarantined.</li><li>DMARC policy `p=none`: Microsoft 365 takes no action based on DMARC, but other protection features in the filtering stack are still able to act on the message.|
 
 > [!NOTE]
-> If the MX record for the Microsoft 365 domain points to a non-Microsoft service or device that sits in front of Microsoft 365, the **Honor DMARC policy** setting is applied only if [Enhanced Filtering for Connectors](/Exchange/mail-flow-best-practices/use-connectors-to-configure/mail-flow/enhanced-filtering-for-connectors) is enabled for the connector that receives inbound messages.
+> If the MX record for the Microsoft 365 domain points to a non-Microsoft service or device that sits in front of Microsoft 365, the **Honor DMARC policy** setting is applied only if [Enhanced Filtering for Connectors](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) is enabled for the connector that receives inbound messages.
 >
 > Customers can override the **Honor DMARC policy** setting for specific email messages and/or senders using the following methods:
 >
