@@ -63,7 +63,6 @@ Make sure that the learning periods for the alerts listed below have been met be
 | [Security principal reconnaissance (LDAP) (External ID 2038)](alerts-mdi-classic.md#security-principal-reconnaissance-ldap) | 15 days per computer, starting from the day of the first event, observed from the machine |
 | [Suspected over-pass-the-hash attack (forced encryption type) (External ID 2008)](alerts-mdi-classic.md#suspected-over-pass-the-hash-attack-forced-encryption-type) | One month |
 | [Suspicious VPN connection (External ID 2025)](alerts-mdi-classic.md#suspicious-vpn-connection) | 30 days from the first VPN connection, and at least 5 VPN connections in the last 30 days, per user |
-| [Possible Okta session theft](alerts-xdr.md#possible-okta-session-theft) | Two weeks |
 
 ## Related content
 
