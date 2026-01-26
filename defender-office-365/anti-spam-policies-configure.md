@@ -158,7 +158,7 @@ You can configure anti-spam policies in the Microsoft Defender portal or in [Exc
    - **Retain spam in quarantine for this many days**: Specifies how long to keep the message in quarantine if you selected **Quarantine message** as the action for a spam filtering verdict. After the time period expires, the message is deleted, and isn't recoverable. A valid value is from 1 to 30 days.
 
      > [!TIP]
-     > The default value is 15 days in anti-spam policies that you create in PowerShell. The default value is 30 days in anti-spam policies that you create in the Microsoft Defender portal.
+     > The default value is 15 days in anti-spam policies that you create in PowerShell. The default value is 15 days in anti-spam policies that you create in the Microsoft Defender portal.
      >
      > This setting also controls how long messages that were quarantined by **anti-phishing** policies are retained. For more information, see [Quarantine retention](quarantine-about.md#quarantine-retention).
 
