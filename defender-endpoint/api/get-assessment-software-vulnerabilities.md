@@ -295,7 +295,7 @@ GET /api/machines/SoftwareVulnerabilitiesExport
 #### 2.6.1 Request example
 
 ```http
-GET https://api-us.securitycenter.microsoft.com/api/machines/SoftwareVulnerabilitiesExport
+GET https://api.security.microsoft.com/api/machines/SoftwareVulnerabilitiesExport
 ```
 
 #### 2.6.2 Response example
