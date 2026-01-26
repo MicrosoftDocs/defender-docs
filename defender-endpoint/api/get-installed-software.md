@@ -2,8 +2,8 @@
 title: Get installed software
 description: Retrieves a collection of installed software related to a given device ID.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
