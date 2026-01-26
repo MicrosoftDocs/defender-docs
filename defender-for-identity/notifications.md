@@ -11,7 +11,7 @@ ms.reviewer: LiorShapiraa
 
 > [!NOTE]
 > - Notifications are currently only supported by the Defender for Identity sensor version 2.x.
-> - Syslog notigications are being deprecated. Use these alternatives solutions to configure notifications:
+> - Syslog notifications are being deprecated. Use these alternatives solutions to configure notifications:
 >   - [Microsoft Graph Security API](/graph/api/resources/security-api-overview?view=graph-rest-1.0)
 >   - [Integrate your SIEM tools with Microsoft Defender XDR](/defender-xdr/configure-siem-defender)
 

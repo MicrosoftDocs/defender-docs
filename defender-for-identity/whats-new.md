@@ -25,8 +25,8 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## January 2026
 
-### Syslog notigications are being deprecated
-As part of the ongoing transition to a unified alerting experience across Microsoft Defender, syslog notifications are being deprectated due to their limited scope. We recommend that you use these alternatives solutions to make sure that notifications are enabled for all alert types.
+### Syslog notifications are being deprecated
+As part of the ongoing transition to a unified alerting experience across Microsoft Defender, syslog notifications are being deprecated due to their limited scope. We recommend that you use these alternatives solutions to make sure that notifications are enabled for all alert types.
 - [Microsoft Graph Security API](/graph/api/resources/security-api-overview?view=graph-rest-1.0)
 - [Integrate your SIEM tools with Microsoft Defender XDR](/defender-xdr/configure-siem-defender)
 
