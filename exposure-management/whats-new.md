@@ -6,7 +6,7 @@ author: dlanger
 manager: ornat-spodek
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 10/15/2025
+ms.date: 01/26/2026
 
 ---
 
@@ -25,6 +25,16 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 > `https://aka.ms/msem/rss`
 
 ## January 2026
+
+### New predefined classifications
+
+The following predefined **Device** classification rule was added to the critical assets list:
+
+| Classification | Description |
+| -------------- | ----------- |
+| WSUS Server | Centralized Windows update management service used to approve and distribute Microsoft software updates and security patches to Windows devices across an organization. Compromise could enable distribution of malicious updates or disruption of security patching, increasing exposure risk across managed Windows endpoints. |
+
+For more information, see [Predefined classifications](predefined-classification-rules-and-levels.md).
 
 ### Cloud software inventory in vulnerability management (Preview)
 
