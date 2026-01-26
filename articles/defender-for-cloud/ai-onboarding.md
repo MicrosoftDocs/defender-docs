@@ -7,9 +7,9 @@ ms.author: elkrieger
 author: Elazark
 ---
 
-# Enable threat protection for Microsoft Foundry
+# Enable threat protection for AI services
 
-Threat protection for Microsoft Foundry in Microsoft Defender for Cloud protects AI services on an Azure subscription by providing insights to threats that might affect your generative AI applications and agents.
+Threat protection for AI services in Microsoft Defender for Cloud protects Microsoft Foundry workloads on an Azure subscription by providing insights to threats that might affect your generative AI applications and agents.
 
 ## Prerequisites
 
@@ -19,9 +19,7 @@ Threat protection for Microsoft Foundry in Microsoft Defender for Cloud protects
 
 - [Enable Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
-## Enable threat protection for Microsoft Foundry
-
-Enable threat protection for AI services.
+## Enable threat protection for AI services
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
