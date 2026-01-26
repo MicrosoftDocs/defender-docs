@@ -218,7 +218,7 @@ Depending on your deployment type, select the relevant recommendation to view an
 
 ## Upgrade an existing Helm-based deployment
 
-With Helm-based deployment, sensor upgrades are customer-managed and are not applied automatically through Defender for Cloud.
+With Helm-based deployment, you manage sensor upgrades. Defender for Cloud doesn't automatically apply them.
 
 Run the following command to update an existing Helm-based deployment:
 
