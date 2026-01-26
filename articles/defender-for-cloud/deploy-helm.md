@@ -1,9 +1,9 @@
 ---
-title: Install Defender for Containers sensor Using Helm
+title: Install Defender for Containers sensor using Helm
 description: Learn how to install the Microsoft Defender for Containers sensor on Kubernetes clusters using Helm.
 author: Elazark
 ms.topic: how-to
-ms.date: 01/22/2026
+ms.date: 01/26/2026
 ms.author: elkrieger
 ai-usage: ai-assisted
 ---
@@ -11,6 +11,12 @@ ai-usage: ai-assisted
 # Install Defender for Containers sensor by using Helm
 
 This article describes how to install and configure the Microsoft Defender for Containers sensor on AKS, EKS, and GKE clusters by using Helm. You learn about prerequisites, enabling Defender for Containers, and step-by-step deployment instructions for different environments.
+
+Defender for Containers supports multiple deployment models for deploying the sensor, including automatic provisioning and Helm-based installation. Helm-based deployment provides greater control over sensor versioning and upgrade timing, but shifts some operational responsibility to the customer. when using Helm-based deployment, consider:
+
+- **Sensor upgrades**: With Helm-based deployment, customers manage sensor upgrades and upgrade timing. Automatic provisioning follows Microsoft-managed rollout schedules.
+
+- **Automatic installation flows**: When deploying the sensor using Helm, skip automatic installation prompts and recommendations in the Azure portal to avoid conflicts with the existing deployment.
 
 ## General prerequisites
 
@@ -211,6 +217,8 @@ Depending on your deployment type, select the relevant recommendation to view an
     :::image type="content" source="media/deploy-helm/recommendation-arc.png" alt-text="Screenshot of the Azure portal that shows the Defender extension recommendation for Arc-enabled Kubernetes clusters. The screenshot highlights the recommendation to install the Defender extension." lightbox="media/deploy-helm/recommendation-arc.png":::
 
 ## Upgrade an existing Helm-based deployment
+
+With Helm-based deployment, sensor upgrades are customer-managed and are not applied automatically through Defender for Cloud.
 
 Run the following command to update an existing Helm-based deployment:
 
