@@ -7,9 +7,9 @@ ms.author: elkrieger
 author: Elazark
 ---
 
-# Enable threat protection for AI services
+# Enable threat protection for Microsoft Foundry
 
-Threat protection for AI services in Microsoft Defender for Cloud protects AI services on an Azure subscription by providing insights to threats that might affect your generative AI applications.
+Threat protection for Microsoft Foundry in Microsoft Defender for Cloud protects AI services on an Azure subscription by providing insights to threats that might affect your generative AI applications and agents.
 
 ## Prerequisites
 
@@ -19,9 +19,7 @@ Threat protection for AI services in Microsoft Defender for Cloud protects AI se
 
 - [Enable Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
-- We recommend not opting out of prompt-based triggered alerts for [Azure OpenAI content filtering](/azure/ai-services/openai/concepts/content-filter). Opting out and removing that capability can affect Defender for Cloud's ability to monitor and detect such attacks.
-
-## Enable threat protection for AI services
+## Enable threat protection for Microsoft Foundry
 
 Enable threat protection for AI services.
 
@@ -39,7 +37,7 @@ Enable threat protection for AI services.
 
 ## Enable user prompt evidence
 
-With the AI services threat protection plan enabled, you can control whether alerts include suspicious segments directly from your user's prompts, or the model responses from your AI applications or resources. Enabling user prompt evidence helps you triage, classify alerts and your user's intentions.
+With the AI services threat protection plan enabled, you can control whether alerts include suspicious segments directly from your user's prompts, or the model responses from your AI applications or agents. Enabling user prompt evidence helps you triage, classify alerts and your user's intentions.
 
 User prompt evidence consists of prompts and model responses. Both are considered your data. Evidence is available through the Azure portal, Defender portal, and any attached partners integrations.
 
@@ -61,14 +59,14 @@ User prompt evidence consists of prompts and model responses. Both are considere
 
 1. Select **Continue**.
 
-### **Enable Data Security for Azure AI with Microsoft Purview**
+## **Enable Data Security for Microsoft Foundry with Microsoft Purview**
 
 > [!NOTE]
 > This feature requires a Microsoft Purview license, which isn't included with Microsoft Defender for Cloud's Defender for AI Services plan.
 >
 > To get started with Microsoft Purview DSPM for AI, see [Set up Microsoft Purview DSPM for AI](/purview/ai-microsoft-purview).
 
-Enable Microsoft Purview to access, process, and store prompt and response data—including associated metadata—from Azure AI Services. This integration supports key data security and compliance scenarios such as:
+Enable Microsoft Purview to access, process, and store prompt and response data—including associated metadata—from Microsoft Foundry. This integration supports key data security and compliance scenarios such as:
 
 - Sensitive information type (SIT) classification
 
@@ -87,8 +85,10 @@ Enable Microsoft Purview to access, process, and store prompt and response data�
 This capability helps your organization manage and monitor AI-generated data in alignment with enterprise policies and regulatory requirements.
 
 > [!NOTE]
-> Data Security Policies for Azure AI Services interactions are supported only for API calls that use Microsoft Entra ID authentication with a user-context token, or for API calls that explicitly include user context. To learn more, see [Gain end-user context for Azure AI API calls](gain-end-user-context-ai.md). For all other authentication scenarios, user interactions captured in Purview show up only in Purview Audit and DSPM for AI Activity Explorer. 
+> Microsoft Purview integration does **not** include data or context from Foundry agents. Support for Foundry agent integration is not available at this time and will be communicated in future updates if planned.
 
+> [!NOTE]
+> Data Security Policies for Microsoft Foundry interactions are supported only for API calls that use Microsoft Entra ID authentication with a user-context token, or for API calls that explicitly include user context. To learn more, see [Gain end-user context for Azure AI API calls](gain-end-user-context-ai.md). For all other authentication scenarios, user interactions captured in Purview show up only in Purview Audit and DSPM for AI Activity Explorer. 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
 1. Search for and select **Microsoft Defender for Cloud**.
@@ -133,3 +133,4 @@ Run the following commands in Azure PowerShell
 - [Add user and application context to AI alerts](gain-end-user-context-ai.md)
 - [Explore AI alerts](alerts-ai-workloads.md)
 - [Manage and respond to the security alerts](manage-respond-alerts.md)
+
