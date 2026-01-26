@@ -862,7 +862,7 @@ Your application sends the event structure:
     ```json
     {
       "name": "ContosoSecurityAlertsPushConnectorPolling",
-      "apiVersion": "2023-02-01-preview",
+      "apiVersion": "2024-09-01",
       "type": "Microsoft.SecurityInsights/dataConnectors",
       "kind": "Push",
       "properties": {
