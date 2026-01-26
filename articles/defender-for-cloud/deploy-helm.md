@@ -37,16 +37,16 @@ Depending on your deployment type, follow the relevant instructions to install t
 
 **AKS Automatic Only**: Run the following command for AKS Automatic:
 
-    ```bash
-    # Update Azure CLI to the latest version 
-    az upgrade 
+  ```bash
+  # Update Azure CLI to the latest version 
+  az upgrade 
     
-    # If you don't have the AKS preview extension installed yet 
-    az extension add --name aks-preview 
+  # If you don't have the AKS preview extension installed yet 
+  az extension add --name aks-preview 
     
-    # Update the AKS extension specifically 
-    az extension update --name aks-preview
-    ```
+  # Update the AKS extension specifically 
+  az extension update --name aks-preview
+  ```
 
 **AKS and AKS Automatic**:
 
@@ -67,7 +67,7 @@ Depending on your deployment type, follow the relevant instructions to install t
   >-o tsv
   >```
 
-- Remove any **conflicting policies**. These policy assignments cause the available version of the sensor to be deployed on your cluster. 
+- Remove any **conflicting policies**. These policy assignments cause the generally available version of the sensor to be deployed on your cluster.
     - Locate the ID for the conflicting policy `64def556-fbad-4622-930e-72d1d5589bf5` in the [list of policy definitions for your subscription](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyMenuBlade/~/Definitions).
     - Run the [delete_conflicting_policies.sh](https://github.com/microsoft/Microsoft-Defender-For-Containers/blob/main/scripts/delete_conflicting_policies.sh) script to remove conflicting policies by using the Azure CLI.
     - Run the script with the command:
@@ -95,7 +95,7 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
   - `latest` for the most recent version.
   - A specific semantic version.
     
-- Replace <RELEASE_TRAIN> with:
+- Replace `<RELEASE_TRAIN>` with:
   - `stable` (default).
   - `public` for the preview version.
     
@@ -147,8 +147,8 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
     > This script tests for an arc managed deployment of the Defender for Containers Sensor. If one exists, the script removes it prior to deploying the sensor by using helm.
 
    - Replace `<VERSION>` with:
-    - `latest` for the most recent version.
-    - A specific semantic version.
+      - `latest` for the most recent version.
+      - A specific semantic version.
             
    - Replace `<DISTRIBUTION>` with: 
       - `eks`
