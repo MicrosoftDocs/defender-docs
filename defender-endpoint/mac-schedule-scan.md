@@ -385,6 +385,5 @@ Use the following command:
 > Scheduled scans do not run at the scheduled time while the device is asleep. Instead, scheduled scans run when the device resumes from sleep mode.
 > If the device is turned off, the scan runs at the next scheduled scan time.
 
-> [!TIP]
-> Do you want to learn more? Engage with the Microsoft Security community in our Tech Community: [**Microsoft Defender for Endpoint Tech Community**](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/bd-p/MicrosoftDefenderATP).
+
 

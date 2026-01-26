@@ -3,8 +3,8 @@ title: Common mistakes to avoid when defining exclusions
 description: Avoid common mistakes when defining exclusions for Microsoft Defender Antivirus scans.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: yongrhee
 manager: bagol
@@ -202,5 +202,5 @@ See [Use wildcards in the file name and folder path or extension exclusion lists
 - [Configure and validate exclusions for Microsoft Defender for Endpoint on macOS](mac-exclusions.md)
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

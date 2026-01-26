@@ -1,8 +1,8 @@
 ﻿---
 title: AMSI demonstrations with Microsoft Defender for Endpoint
 description: Demonstration of AMSI detection by Microsoft Defender for Endpoint
-author: KesemSharabi
-ms.author: kesharab
+author: limwainstein
+ms.author: lwainstein
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
 ms.service: defender-endpoint
@@ -229,4 +229,3 @@ You can view detected threats by using the Event log or PowerShell.
 
 [Microsoft Defender for Endpoint - demonstration scenarios](defender-endpoint-demonstrations.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
