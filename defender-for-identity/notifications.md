@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity notifications
 description: Learn how to use and configure Microsoft Defender for Identity notifications in Microsoft Defender XDR.
-ms.date: 07/10/2025
+ms.date: 01/21/2026
 ms.topic: how-to
 #CustomerIntent: As a Defender for Identity user, I want to learn how to work with Defender for Identity notifications to make sure I'm up to date about events detected by Defender for Identity.
 ms.reviewer: LiorShapiraa
@@ -9,8 +9,11 @@ ms.reviewer: LiorShapiraa
 
 # Defender for Identity notifications in Microsoft Defender XDR
 
->[!NOTE]
->This feature is currently supported only by the Defender for Identity sensor version 2.x.
+> [!NOTE]
+> - Notifications are currently only supported by the Defender for Identity sensor version 2.x.
+> - Syslog notifications are being deprecated. Use these alternatives solutions to configure notifications:
+>   - [Microsoft Graph Security API](/graph/api/resources/security-api-overview?view=graph-rest-1.0)
+>   - [Integrate your SIEM tools with Microsoft Defender XDR](/defender-xdr/configure-siem-defender)
 
 Microsoft Defender for Identity provides notifications for health issues and security alerts, either via email notifications or to a Syslog server.
 
