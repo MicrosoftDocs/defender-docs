@@ -2,8 +2,8 @@
 title: Get scan history by session
 description: Learn how to use the get scan history by session api.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro

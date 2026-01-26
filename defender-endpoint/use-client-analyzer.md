@@ -3,8 +3,8 @@ title: Diagnose Defender for Endpoint issues with Client Analyzer
 ms.topic: article
 description: Understand how to Diagnose Defender for Endpoint issues with Client Analyzer so that you can send the right data to Microsoft support for troubleshooting.
 ms.service: defender-endpoint
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 audience: ITPro
 ms.collection: 
 - m365-security

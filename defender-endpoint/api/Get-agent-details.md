@@ -3,8 +3,8 @@ title: Get scan agent by ID
 description: Learn how to use the "Get-Agent-Details" API.
 keywords: apis, graph api, supported apis, agent details, definition
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro

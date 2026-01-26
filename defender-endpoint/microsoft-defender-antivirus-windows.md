@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: high
 ms.date: 10/20/2025
 ms.topic: overview
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.reviewer: mkaminska, yonghree, pahuijbr
 manager: bagol
 ms.custom: nextgen
@@ -157,6 +157,9 @@ It's important to keep Microsoft Defender Antivirus (or any antivirus/antimalwar
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
+
+>[!Note]
+>After installing the latest Microsoft Defender Antivirus platform or engine update, certain registry entries may not update automatically. To ensure the registry reflects the current version, administrators should manually verify and update the relevant keys using **Registry Editor (regedit)** or a supported deployment script.
 
 ## See also
 
