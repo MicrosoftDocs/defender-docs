@@ -12,11 +12,11 @@ ai-usage: ai-assisted
 
 This article describes how to install and configure the Microsoft Defender for Containers sensor on AKS, EKS, and GKE clusters by using Helm. You learn about prerequisites, enabling Defender for Containers, and step-by-step deployment instructions for different environments.
 
-Defender for Containers supports multiple deployment models for deploying the sensor, including automatic provisioning and Helm-based installation. Helm-based deployment provides greater control over sensor versioning and upgrade timing, but shifts some operational responsibility to the customer. when using Helm-based deployment, consider:
+Defender for Containers supports multiple deployment models for deploying the sensor, including automatic provisioning and Helm-based installation. Helm-based deployment provides greater control over sensor versioning and upgrade timing, but it shifts some operational responsibility to you. When using Helm-based deployment, consider:
 
-- **Sensor upgrades**: With Helm-based deployment, customers manage sensor upgrades and upgrade timing. Automatic provisioning follows Microsoft-managed rollout schedules.
+- **Sensor upgrades**: By using Helm-based deployment, you manage sensor upgrades and upgrade timing. Automatic provisioning follows Microsoft-managed rollout schedules.
 
-- **Automatic installation flows**: When deploying the sensor using Helm, skip automatic installation prompts and recommendations in the Azure portal to avoid conflicts with the existing deployment.
+- **Automatic installation flows**: When deploying the sensor by using Helm, skip automatic installation prompts and recommendations in the Azure portal to avoid conflicts with the existing deployment.
 
 ## General prerequisites
 
@@ -105,7 +105,7 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
   - `stable` (default).
   - `public` for the preview version.
     
-- The flag `--antimalware` enables antimalware scanning.
+- Use the `--antimalware` flag to enable antimalware scanning.
 
 > [!NOTE]
 > This script sets a new `kubeconfig` context and might create a Log Analytics workspace in your Azure account.
@@ -165,7 +165,7 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
       - `stable` (default).
       - `public` for the preview version.
         
-   - The flag `--antimalware` enables antimalware scanning.
+   - Use the `--antimalware` flag to enable antimalware scanning.
       
 ---
 
