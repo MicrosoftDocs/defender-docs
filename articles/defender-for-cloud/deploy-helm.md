@@ -131,7 +131,7 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
 
 1. Use the [install_defender_sensor_mc.sh](https://github.com/microsoft/Microsoft-Defender-For-Containers/blob/main/scripts/install_defender_sensor_mc.sh) script to install the Defender for Containers sensor and remove any existing deployment.
 
-1. Set the `kubeconfig` context to the target cluster by using the command:
+1. Set the `kubeconfig` context to the target cluster by using the following command:
 
    ```azurecli
    install_defender_sensor_mc.sh --id <SECURITY_CONNECTOR_AZURE_RESOURCE_ID> --version <VERSION> --distribution <DISTRIBUTION> [--release_train <RELEASE_TRAIN>] [--antimalware]
@@ -155,7 +155,7 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
       - `gke`
       - `eksautomode`. 
             
-   - Replace <RELEASE_TRAIN> with:
+   - Replace `<RELEASE_TRAIN>` with:
       - `stable` (default).
       - `public` for the preview version.
         
@@ -183,7 +183,7 @@ The installation is successful if the `STATUS` field displays **deployed**.
 > 
 >     :::image type="content" source="media/deploy-helm/edit-vulnerability-assessment-rule.png" alt-text="Screenshot showing the third tab of the security rule edit window." lightbox="media/deploy-helm/edit-vulnerability-assessment-rule.png":::
 
-Define security rules to control what can be deployed into your Kubernetes clusters. These rules help you block or audit container images based on security criteria, such as images with too many vulnerabilities. 
+Define security rules to control what you can deploy into your Kubernetes clusters. These rules help you block or audit container images based on security criteria, such as images with too many vulnerabilities. 
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
