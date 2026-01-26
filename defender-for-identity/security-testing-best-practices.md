@@ -1,7 +1,7 @@
 ---
 title: Offensive Security Testing for Microsoft Defender for Identity
 description: Learn about best practices for Offensive Security Testing for Microsoft Defender for Identity.
-ms.date: 01/22/2026
+ms.date: 01/26/2026
 ms.topic: article
 #customerIntent: To learn about the best practices for Offensive Security Testing for Microsoft Defender for Identity.
 ms.reviewer: martin77s
@@ -16,22 +16,25 @@ This article summarizes the best practices and items to review before you begin 
 Here are some common issues that can affect your offensive security testing:
 
 ### Infrastructure protection issues
+
 - **Incomplete infrastructure protection**: Deploy Microsoft Defender for Identity sensors on all domain controllers.
 - **Missing Microsoft Defender for Endpoint**: Endpoint protection adds detection capabilities for activities on identity infrastructure that may not be covered by identity-based detections alone.
 
 ### Detection accuracy issues
+
 - **Insufficient learning period**: The learning period for alerts is used to tune alert detections. Without this learning period, detections won't be as accurate.
 - **Using accounts with established admin patterns**: Avoid using users or computers that regularly run administrative tasks, as the system learns these as normal behavior. Instead, use:
   - **Existing computer**: Use a computer that doesn't regularly run admin or attack simulation activities.
   - **Existing standard user**: Use a user that doesn't regularly run admin or attack simulation activities.
 
 ### Configuration issues
+
 - **Network configuration mismatch**: Sensors running on VMware might experience Microsoft Defender for Identity health issues. See [VMware virtual machine sensor issue](troubleshooting-known-issues.md#vmware-virtual-machine-sensor-issue).
 - **Unhealthy Network Name Resolution (NNR)**: This issue can lead to problems with certain detections.
 - **Incomplete attack simulation**: Test with actual attack scenarios rather than single TTPs. Defender for Identity detections focus on complete attack stories. Performing only one segment of a kill chain without other steps yields incomplete results and decreased detection outcomes.
 - **Incompatible penetration testing tools**: Some tools might return false results. Cross-check relevant audit logs to confirm successful attacks.
 
-## Best practices checklist 
+## Best practices checklist
 
 |Recommendation |Description  |Links to Documentation for related tasks  |
 |---------|---------|---------|
