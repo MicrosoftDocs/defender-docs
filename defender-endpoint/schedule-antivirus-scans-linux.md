@@ -2,20 +2,20 @@
 title: Configure and run antivirus scans with Microsoft Defender for Endpoint on Linux
 description: Describes how to set up and run antivirus scans using Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.reviewer: gopkr; meghapriya; lakshmyav
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: linux
 search.appverid: met150
-ms.date: 05/08/2025
+ms.date: 01/27/2025
 ---
 
 # Configure and run antivirus scans with Microsoft Defender for Endpoint on Linux
