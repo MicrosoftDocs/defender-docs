@@ -64,6 +64,22 @@ Get-Help <cmdlet> -Online
 
 Omit the `-online` parameter to get locally cached help.
 
+### Common Microsoft Defender Antivirus PowerShell commands
+
+### Common Microsoft Defender Antivirus PowerShell cmdlets
+
+Microsoft Defender Antivirus can be configured using PowerShell cmdlets. These are task-based commands for configuration and management. Common cmdlets include:
+
+- `Get-MpComputerStatus` – Check Microsoft Defender Antivirus status and protection settings.
+- `Set-MpPreference` – Configure preferences, such as exclusions, scan schedules, and cloud-delivered protection.
+- `Update-MpSignature` – Update security intelligence.
+- `Start-MpScan` – Trigger quick, full, or custom scans.
+- `Get-MpThreat`or `Get-MpThreatDetection` – Review detected and remediated threats.
+
+For full syntax and parameter options, see:
+[Microsoft Defender Antivirus cmdlets](/powershell/module/defender)
+
+
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
