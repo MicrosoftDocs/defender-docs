@@ -97,7 +97,7 @@ The support policy here applies to all Helm-based and multicloud installations. 
 | -------- | -------- | -------- | -------- |
 |0.8| |Feb 2025|Feb 2027|
 |0.9|July 2025|Apr 2026|Apr 2027|
-|0.10|Jan 2026|Apr 2026|Apr 2027|
+|0.10|Feb 2026|Apr 2026|Apr 2027|
 |0.11|Apr 2026|Jul  2026|Jul 2027|
 
 Each stable (GA) version is supported for 12 months from its GA release date. After the 12-month window ends, the version is no longer supported. Customers should upgrade to the latest stable or Public release to maintain support and access new capabilities.

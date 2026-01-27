@@ -676,7 +676,9 @@ Configure a private endpoint connection to enable access to traffic coming only 
 ### Amazon Aurora clusters should have backtracking enabled
 
 **Description**: This control checks whether Amazon Aurora clusters have backtracking enabled.
-Backups help you to recover more quickly from a security incident. They also strengthen the resilience of your systems. Aurora backtracking reduces the time to recover a database to a point in time. It doesn't require a database restore to do so.
+
+Backups help you to recover more quickly from a security incident. They also ensure the recoverability of your systems. Aurora backtracking reduces the time to recover a database to a point in time. It doesn't require a database restore to do so.
+
 For more information about backtracking in Aurora, see [Backtracking an Aurora DB cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Managing.Backtrack.html) in the Amazon Aurora User Guide.
 
 **Severity**: Medium
@@ -730,7 +732,8 @@ Amazon Redshift audit logging provides additional information about connections 
 ### Amazon Redshift clusters should have automatic snapshots enabled
 
 **Description**: This control checks whether Amazon Redshift clusters have automated snapshots enabled. It also checks whether the snapshot retention period is greater than or equal to seven.
-Backups help you to recover more quickly from a security incident. They strengthen the resilience of your systems. Amazon Redshift takes periodic snapshots by default. This control checks whether automatic snapshots are enabled and retained for at least seven days. For more information about Amazon Redshift automated snapshots, see [Automated snapshots](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html#about-automated-snapshots) in the *Amazon Redshift Cluster Management Guide*.
+
+Backups help you to recover more quickly from a security incident. They ensure the recoverability of your systems. Amazon Redshift takes periodic snapshots by default. This control checks whether automatic snapshots are enabled and retained for at least seven days. For more information about Amazon Redshift automated snapshots, see [Automated snapshots](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html#about-automated-snapshots) in the *Amazon Redshift Cluster Management Guide*.
 
 **Severity**: Medium
 
@@ -920,8 +923,10 @@ HTTPS (TLS) can be used to help prevent potential attackers from using person-in
 ### DynamoDB tables should have point-in-time recovery enabled
 
 **Description**: This control checks whether point-in-time recovery (PITR) is enabled for an Amazon DynamoDB table.
- Backups help you to recover more quickly from a security incident. They also strengthen the resilience of your systems. DynamoDB point-in-time recovery automates backups for DynamoDB tables. It reduces the time to recover from accidental delete or write operations.
- DynamoDB tables that have PITR enabled can be restored to any point in time in the last 35 days.
+
+Backups help you to recover more quickly from a security incident. They also ensure the recoverability of your systems. DynamoDB point-in-time recovery automates backups for DynamoDB tables. It reduces the time to recover from accidental delete or write operations.
+
+DynamoDB tables that have PITR enabled can be restored to any point in time in the last 35 days.
 
 **Severity**: Medium
 
