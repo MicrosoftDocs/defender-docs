@@ -50,7 +50,7 @@ For more information, see [Investigate incidents in the Microsoft Defender porta
 
 We recommend running regular, proactive searches through user activity to create leads for further investigation.
 
-You can use the Microsoft Sentinel [User and Entity Behavior Analytics workbook](identify-threats-with-entity-behavior-analytics.md#hunting-queries-and-exploration-queries) to query your data, such as for:
+You can use the Microsoft Sentinel [User and Entity Behavior Analytics workbook](identify-threats-with-entity-behavior-analytics.md#leverage-ueba) to query your data, such as for:
 
 - **Top risky users**, with anomalies or attached incidents
 - **Data on specific users**, to determine whether subject has indeed been compromised, or whether there is an insider threat due to action deviating from the user's profile.
