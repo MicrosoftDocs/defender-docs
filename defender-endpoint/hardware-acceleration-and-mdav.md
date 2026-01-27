@@ -15,7 +15,7 @@ ms.collection:
 audience: ITPro
 ms.localizationpriority: medium
 ms.custom: partner-contribution
-ROBOTS: noindex,nofollow
+ROBOTS: NOINDEX, NOFOLLOW
 search.appverid: MET150
 f1 keywords: NOCSH
 appliesto:
