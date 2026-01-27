@@ -16,20 +16,24 @@ This article helps you troubleshoot common issues when deploying or operating Mi
 ### AWS connector shows as disconnected
 
 **Symptoms**
+
 - AWS connector status is **Disconnected**
 - No EKS clusters or ECR registries appear in inventory
 
 **What to check**
+
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 1. Select your AWS connector.
 1. Verify the connector status and last sync time.
 
 **Common causes**
+
 - CloudFormation stack failed or was deleted
 - Required IAM roles or policies were modified
 - Incorrect or missing CloudTrail SQS ARN
 
 **Resolution**
+
 - Redeploy the CloudFormation stack from the connector configuration.
 - Confirm the required IAM roles still exist in AWS.
 - Verify the CloudTrail SQS queue ARN is correctly entered in the connector settings.
@@ -39,15 +43,18 @@ This article helps you troubleshoot common issues when deploying or operating Mi
 ### EKS clusters aren’t discovered
 
 **Symptoms**
+
 - Connector is connected, but no EKS clusters appear
 - Inventory doesn’t list expected clusters
 
 **What to check**
+
 - Ensure **Kubernetes API access** is enabled in the Containers plan settings.
 - Verify the AWS regions selected during connector creation include your clusters.
 - Confirm the IAM role has permissions to list EKS clusters.
 
 **Resolution**
+
 - Update the AWS connector settings to include the correct regions.
 - Re-enable **Kubernetes API access** if it was disabled.
 - Wait up to 30 minutes for discovery to complete.
@@ -86,15 +93,18 @@ aws eks describe-cluster \
 ### Defender sensor pods aren’t running
 
 **Symptoms**
+
 - No Defender sensor pods appear on cluster nodes
 - Runtime alerts aren’t generated
 
 **What to check**
+
 - Ensure the EKS cluster is connected to Azure Arc.
 - Verify the Defender sensor extension is installed.
 - Check node resources and Kubernetes scheduling status.
 
 **Resolution**
+
 - Go to **Microsoft Defender for Cloud** > **Recommendations**.
 - Follow the remediation steps for installing the Defender extension on Arc-enabled clusters.
 - Check pod status:
@@ -136,7 +146,7 @@ aws eks describe-cluster \
 
 Use Azure CLI to check the extension status:
 
-```bash
+```azurecli
 az k8s-extension show \
   --cluster-name <cluster-name> \
   --resource-group <resource-group> \

@@ -1,5 +1,5 @@
 ---
-title: Remove Defender for Containers
+title: Disable and remove Defender for Containers
 description: Learn how to disable Microsoft Defender for Containers and remove its components for Kubernetes environments across Azure, AWS, Google Cloud, and Arc-enabled Kubernetes.
 ms.topic: how-to
 ms.author: elkrieger
@@ -7,7 +7,7 @@ author: ElazarK
 ms.date: 01/25/2026
 ---
 
-# Remove Defender for Containers
+# Disable and remove Defender for Containers
 
 This article explains how to disable Microsoft Defender for Containers and remove its components by environment.
 
@@ -95,6 +95,9 @@ az k8s-extension delete \
 ```
 
 ### Disconnect clusters from Azure Arc
+
+> [!NOTE]
+> Disconnecting a cluster from Azure Arc removes access to all Arc extensions, not only Defender for Containers.
 
 ```azurecli
 az connectedk8s delete \
@@ -189,6 +192,9 @@ az k8s-extension delete \
 
 ### Disconnect GKE clusters from Azure Arc
 
+> [!NOTE]
+> Disconnecting a cluster from Azure Arc removes access to all Arc extensions, not only Defender for Containers.
+
 ```azurecli
 az connectedk8s delete \
   --name <cluster-name> \
@@ -224,9 +230,9 @@ az connectedk8s delete \
 
 Remove these resources only if runtime threat protection for GKE was enabled and you no longer use Defender for Containers for that project.
 
-- Delete the Pub/Sub topic and subscription with prefix `MicrosoftDefender-`. See `gcloud pubsub topics delete` and `gcloud pubsub subscriptions delete`.
+- Delete the Pub/Sub topic and subscription with the prefix `MicrosoftDefender-`.
 
-- Delete the Cloud Logging sink. See `gcloud logging sinks delete`.
+- Delete the Cloud Logging sink that was created for Defender for Containers.
 
 ## Verify removal
 
@@ -287,6 +293,9 @@ az k8s-extension delete \
 ```
 
 ### Disconnect the cluster from Azure Arc (optional)
+
+> [!NOTE]
+> Disconnecting a cluster from Azure Arc removes access to all Arc extensions, not only Defender for Containers.
 
 ```azurecli
 az connectedk8s delete \

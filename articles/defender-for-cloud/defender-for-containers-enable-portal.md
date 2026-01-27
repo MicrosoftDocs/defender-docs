@@ -90,7 +90,7 @@ Use the Azure portal to verify that Defender for Containers components were depl
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
-1. Select the relevant AWS subscription.
+1. Select the relevant AWS connector.
 
 1. Select **Next: Select plans**.
 
@@ -215,8 +215,6 @@ Use the Azure portal to verify that Defender for Containers components were depl
 
 1. Select **Next: Configure access**.
 
-1. CHECK THE FOLLOWING:
-
 1. In the Azure portal, copy the setup script from the **Configure access** step.
 
 1. Open Google Cloud Shell or a local terminal with `gcloud` configured.
@@ -285,29 +283,13 @@ After connecting your GKE clusters to Azure Arc:
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
 
-## Connect your cluster to Azure Arc
-
-If your Kubernetes cluster isn’t already connected to Azure Arc:
+## Enable Defender for Containers
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Go to **Azure Arc**.
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
-1. Select **Kubernetes clusters**, then select **Add**.
-
-1. Select **Add a Kubernetes cluster with Azure Arc**.
-
-1. Follow the connection instructions in the portal and run the generated registration script on your cluster.
-
-1. Verify the cluster appears as **Connected**.
-
-## Enable Defender for Containers
-
-1. Go to **Microsoft Defender for Cloud**.
-
-1. Select **Environment settings**.
-
-1. Select the subscription that contains your Arc-enabled Kubernetes clusters.
+1. Select the relevant subscription that contains your Arc-enabled Kubernetes clusters.
 
 1. On the Defender plans page, find the **Containers** row and toggle the status to **On**.
 
@@ -351,6 +333,8 @@ If your Kubernetes cluster isn’t already connected to Azure Arc:
 ---
 
 ## Related content
+
+- [Defender for Containers deployment overview](defender-for-containers-deployment-overview.md)
 
 - [Enable Defender for Containers using the Azure CLI](defender-for-containers-enable-azure-cli.md)
 

@@ -222,7 +222,7 @@
                   href: defender-for-containers-enable-azure-cli.md
                 - name: Troubleshoot AWS
                   href: defender-for-containers-aws-troubleshoot.md
-                - name: Remove
+                - name: Disable Defender for Containers
                   href: defender-for-containers-remove.md                 
                 - name: Configure sensor deployed with Helm
                   href: deploy-helm.md

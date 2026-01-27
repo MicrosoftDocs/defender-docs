@@ -268,10 +268,6 @@ Confirm that a Defender for Containers DaemonSet is listed and that the **DESIRE
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
 
-## Connect your cluster to Azure Arc
-
-Connect your Kubernetes cluster to Azure Arc. For instructions, see [Connect your Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
-
 ## Enable Defender for Containers
 
 Enable the Defender for Containers plan on your Azure subscription before continuing.
@@ -285,7 +281,6 @@ After enabling the plan and connecting your cluster to Azure Arc, deploy the Def
 ```azurecli
 az k8s-extension create \
   --name microsoft.azuredefender.kubernetes \
-  --extension-type microsoft.azuredefender.kubernetes \
   --cluster-type connectedClusters \
   --cluster-name <cluster-name> \
   --resource-group <resource-group> \
@@ -343,9 +338,11 @@ All pods should show a status of `Running`.
 
 ## Related content
 
+- [Defender for Containers deployment overview](defender-for-containers-deployment-overview.md)
+
 - [Enable Defender for Containers using the Azure portal](defender-for-containers-enable-portal.md)
 
-- - [Troubleshoot Defender for Containers on AWS (EKS)](defender-for-containers-aws-troubleshoot.md)
+- [Troubleshoot Defender for Containers on AWS (EKS)](defender-for-containers-aws-troubleshoot.md)
 
 - [Disable Microsoft Defender for Containers](defender-for-containers-remove.md)
 
