@@ -102,7 +102,7 @@ If you'd rather use PowerShell to view, add, or remove trusted ARC sealers, conn
   Set-ArcConfig -Identity [TenantId\]Default -ArcTrustedSealers "Domain1","Domain2",..."DomainN"
   ```
 
-  The TenantId\ value isn't required in your own organization, only in delegated organizations. It's a GUID that's visible in many admin portal URLs in Microsoft 365 (the `tid=` value). For example, a32d39e2-3702-4ff5-9628-31358774c091.
+  The TenantId\ value isn't required in your own organization, only in delegated organizations. It's a GUID that's visible in many admin portal URLs in Microsoft 365 (the `tid=` value). For example, aaaabbbb-0000-cccc-1111-dddd2222eeee.
 
   This example configures "cohovineyard.com" and "tailspintoys.com" as the only trusted ARC sealers in the organization.
 

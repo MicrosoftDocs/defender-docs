@@ -31,7 +31,7 @@ In Defender for Business, you can manage devices as follows:
 
 ## View the list of onboarded devices
 
-:::image type="content" source="/defender/media/defender-business/mdb-device-inventory.png" alt-text="Screenshot of device inventory":::
+:::image type="content" source="media/mdb-device-inventory.png" alt-text="Screenshot of device inventory":::
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Assets** \> **Devices**. Or, to go directly to the **Device inventory** page, use <https://security.microsoft.com/machines>.
 2. On the **Device inventory** page, you can see the list of devices and view some information about them.
@@ -41,7 +41,7 @@ If no devices are listed, see [Onboard devices to Defender for Business](mdb-onb
 
 ## Take action on a device that has threat detections
 
-:::image type="content" source="/defender/media/defender-business/mdb-selected-device.png" alt-text="Screenshot of a selected device with details and actions available.":::
+:::image type="content" source="media/mdb-selected-device.png" alt-text="Screenshot of a selected device with details and actions available.":::
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Assets** \> **Devices**. Or, to go directly to the **Device inventory** page, use <https://security.microsoft.com/machines>.
 2. On the **Device inventory** page, select a device from the list.
@@ -80,18 +80,20 @@ Microsoft Defender Antivirus has one of the following states on devices:
   1. Uninstall the non-Microsoft antivirus/antimalware solution.
   2. Onboard the device to Defender for Business.
 
-### What to expect when threats are detected by Microsoft Defender Antivirus
+<a name="what-to-expect-when-threats-are-detected-by-microsoft-defender-antivirus"></a>
+
+### What to expect when Microsoft Defender Antivirus detects threats
 
 When Microsoft Defender Antivirus detects threat, the following things happen:
 
-- Users receive [notifications in Windows](https://support.microsoft.com/windows/8942c744-6198-fe56-4639-34320cf9444e).
+- Users receive [notifications in Windows](https://support.microsoft.com/windows/feeca47f-0baf-5680-16f0-8801db1a8466).
 - Detections are listed in the [Windows Security app](/windows/security/operating-system-security/system-security/windows-defender-security-center/windows-defender-security-center) on the **Protection history** page.
 - If you [secured your Windows devices](/microsoft-365/admin/security-and-compliance/m365bp-devices-enrollment), the threat detections and insights are available on the **Threats and antivirus** page in the Microsoft 365 admin center at <https://admin.microsoft.com/Adminportal/Home#/activethreats>.
 
   > [!TIP]
   > In Microsoft 365 Business Premium, if you have more than 800 devices [enrolled in Microsoft Intune](/intune/intune-service/fundamentals/deployment-guide-enroll), you're prompted to view threat detections and insights from Microsoft Intune instead of from the **Threats and antivirus** page.
 
-In most cases, users don't need to take any further action. As soon as a malicious file or program is detected on a device, Microsoft Defender Antivirus blocks it and prevents it from running. Plus, newly detected threats are added to the antivirus and antimalware engine so that other devices and users are also protected.
+In most cases, users don't need to take any further action. As soon as a malicious file or program is detected on a device, Microsoft Defender Antivirus blocks it and prevents it from running. Plus, newly detected threats are added to the antivirus and anti-malware engine so that other devices and users are also protected.
 
 If a user needs to take action (for example, approve the removal of a malicious file), the action is shown in the notification they receive. To learn more about actions that Microsoft Defender Antivirus takes on a user's behalf, or actions users might need to take, see [Protection History](https://support.microsoft.com/office/f1e5fd95-09b4-46d1-b8c7-1059a1e09708).
 

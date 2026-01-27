@@ -26,10 +26,10 @@ ms.suite: ems
 
 Advanced Threat Analytics (ATA) is an on-premises platform that helps protect your enterprise from multiple types of advanced targeted cyber attacks and insider threats.
 
-> [!NOTE]
-> **Support lifecycle**
+> [!IMPORTANT]
+> **Support Lifecycle**
 >
-> The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA Mainstream Support ended on January 12, 2021. Extended Support continues until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
+> Extended support for ATA ended in January 2026. To stay supported and benefit from enhanced identity security capabilities, migrate to [Microsoft Defender for Identity](/defender-for-identity/what-is). Note the licensing differences between the products.
 
 ## How ATA works
 

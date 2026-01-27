@@ -4,8 +4,8 @@ description: During and after an automated investigation, you can view the resul
 search.appverid: met150
 f1.keywords:
 - NOCSH
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.service: defender-endpoint
 ms.subservice: edr
 ms.localizationpriority: medium
