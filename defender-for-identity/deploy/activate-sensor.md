@@ -44,7 +44,8 @@ The process for activating the sensor depends on your configuration.
    
 1. When the activation is complete, a green success banner shows. In the banner, select **Click here to see the onboarded servers**. This takes you to the **Sensors** page, where you can check your sensor health.
 
-   [![Screenshot that shows sucesseful activation.](media/activate-sensor/activated-sensor.png)](media/activate-sensor/activated-sensor.png#lightbox)
+    :::image type="content" source="media/activated-sensor.png" alt-text="Screenshot that shows successful activation." lightbox="media/activated-sensor.png":::
+
    
 <!--## Onboard the domain controller 
 
