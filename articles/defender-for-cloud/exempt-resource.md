@@ -10,7 +10,10 @@ ms.date: 01/27/2026
 
 # Exempt resources from recommendations
 
-When you investigate security recommendations in Microsoft Defender for Cloud, you review the list of affected resources. Occasionally, you find a resource that shouldn't be in the list, or you find a recommendation that appears in a scope where it doesn't belong. For example, a resource might be remediated by a process that Defender for Cloud doesn't track, or a recommendation might not apply to a specific subscription. Your your organization might decide to accept the risks related to the specific resource or recommendation.
+> [Important]
+> This feature is in preview. [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)] This is a premium Azure Policy capability offered at no extra cost for customers with Microsoft Defender for Cloud's enhanced security features enabled. For other users, charges might apply in the future.
+
+When you investigate security recommendations in Microsoft Defender for Cloud, you review the list of affected resources. Occasionally, you find a resource that shouldn't be in the list, or you find a recommendation that appears in a scope where it doesn't belong. For example, a resource might be remediated by a process that Defender for Cloud doesn't track, or a recommendation might not apply to a specific subscription. Your organization might decide to accept the risks related to the specific resource or recommendation.
 
 In such cases, create an exemption rule to:
 
