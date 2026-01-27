@@ -5,12 +5,13 @@ author: guywi-ms
 ms.author: guywild
 ms.topic: reference
 ms.date: 01/27/2026
+
 # customer intent: As a security analyst, I want to understand how alerts differ when ingested through the XDR connector so that I can update my queries, analytic rules, and workbooks accordingly.
 ---
 
-# Alert schema differences: Legacy vs. XDR connector
+# Alert schema differences between legacy and XDR connectors
 
-Alerts ingested through legacy connectors differ from those ingested through the Extended Detection and Response (XDR) connector in Microsoft Sentinel. These differences can affect field mappings, derived field behavior, schema structure, and alert ingestion.
+This article explains the differences between alerts ingested through legacy connectors and alerts ingested through the Extended Detection and Response (XDR) connector in Microsoft Sentinel. These differences can affect field mappings, derived field behavior, schema structure, and alert ingestion.
 
 Schema changes might affect your existing queries, analytic rules, and workbooks. Review these differences before migrating to the XDR connector.
 
@@ -29,7 +30,7 @@ The CompromisedEntity field is handled differently across products when alerts a
 > [!NOTE]
 > In MDE alerts, CompromisedEntity is derived from the device where `"LeadingHost": true`. Some values might be missing until full population is available.
 
-In MDI alerts, CompromisedEntity does not represent a host or user and remains a fixed string.
+In MDI alerts, CompromisedEntity does not represent a host or user and is always the literal string `"CompromisedEntity"`.
 
 ## Field mapping changes
 
@@ -63,6 +64,7 @@ Some alerts available through legacy connectors aren't ingested through the XDR 
 |---------|--------------------|
 | Microsoft Defender for Cloud (MDC) | Informational severity alerts aren't ingested |
 | Microsoft Entra ID | By default, alerts below High severity are filtered. Customers can configure ingestion to include all severities. |
+| Microsoft Defender for Office (MDO) | Non-security alerts aren't ingested |
 
 ## Scoping behavior (Microsoft Defender for Cloud)
 
@@ -75,13 +77,11 @@ Microsoft Defender for Cloud alerts use different scoping when ingested through 
 > [!NOTE]
 > All MDC alerts are available in the primary workspace for the tenant. Alerts are scoped according to MDC subscription scopes within Defender XDR.
 
-## Microsoft Cloud App Security (MCAS)
+## Microsoft Defender for Cloud Apps
 
-The Microsoft Cloud App Security connector has no schema differences between the legacy and XDR connectors.
+The Microsoft Defender for Cloud Apps connector has no schema differences between the legacy and XDR connectors.
 
 ## What’s next
-
-To continue working with alerts in Microsoft Sentinel, see:
 
 - [Create and manage analytic rules](create-analytics-rules.md)
 - [Use workbooks in Microsoft Sentinel](monitor-your-data.md)
