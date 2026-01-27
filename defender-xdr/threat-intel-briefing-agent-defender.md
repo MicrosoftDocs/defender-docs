@@ -93,7 +93,7 @@ Before setting up an agent identity for the Threat Intelligence Briefing Agent, 
 
 - Tenant-level admin rights to register a service principal and assign roles.
 - Azure CLI installed and authenticated (az login). For more information, see [Get started with Azure CLI](/cli/azure/get-started-with-azure-cli).
-- Access to Defender XDR Unified RBAC or equivalent permissions management.
+- Access to Defender unified RBAC or equivalent permissions management.
 
 To set up an agent identity:
 1. **Create or reuse a least-privileged role**

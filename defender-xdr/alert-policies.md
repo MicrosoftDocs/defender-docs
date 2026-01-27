@@ -80,7 +80,7 @@ To view and create alert policies, in the [Microsoft Defender portal](https://se
   :::image type="content" source="media/alert-policies/policies-rules-page-small.png" alt-text="Highlighting Alert policy in the Policies and rules page":::
 
 > [!NOTE]
-> You have to be assigned the View-Only Manage Alerts role to view alert policies in the Microsoft Defender portal. You have to be assigned the Manage Alerts role to create and edit alert policies. For more information, see [Map Microsoft Defender XDR Unified role-based access control (RBAC) permissions](compare-rbac-roles.md).
+> You have to be assigned the View-Only Manage Alerts role to view alert policies in the Microsoft Defender portal. You have to be assigned the Manage Alerts role to create and edit alert policies. For more information, see [Map Microsoft Defender unified role-based access control (RBAC) permissions](compare-rbac-roles.md).
 
 An alert policy consists of the following settings and conditions.
 
