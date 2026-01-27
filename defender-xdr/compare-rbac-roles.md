@@ -1,5 +1,5 @@
 ---
-title: Map Microsoft Defender XDR Unified role-based access control (RBAC) permissions
+title: Map Microsoft Defender unified role-based access control (RBAC) permissions
 description: Compare permissions and access to Microsoft Defender XDR Security portal experiences using role-based access control (RBAC)
 ms.service: defender-xdr
 ms.author: monaberdugo
@@ -26,11 +26,11 @@ appliesto:
 - Microsoft Sentinel
 ---
 
-# Map existing RBAC permissions to Microsoft Defender XDR Unified RBAC permissions
+# Map existing RBAC permissions to Microsoft Defender unified RBAC permissions
 
-All permissions listed within the Microsoft Defender XDR Unified RBAC model align to existing permissions in the individual RBAC models. After you activate the Microsoft Defender XDR Unified RBAC model, the permissions and assignments configured in your imported roles replace the existing roles in the individual RBAC models.
+All permissions listed within the Microsoft Defender unified RBAC model align to existing permissions in the individual RBAC models. After you activate the Microsoft Defender unified RBAC model, the permissions and assignments configured in your imported roles replace the existing roles in the individual RBAC models.
 
-This article describes how existing roles and permissions in the available Microsoft Defender workloads and in Microsoft Entra ID map to the roles and permission in the Microsoft Defender XDR Unified RBAC model.
+This article describes how existing roles and permissions in the available Microsoft Defender workloads and in Microsoft Entra ID map to the roles and permission in the Microsoft Defender unified RBAC model.
 
 [!INCLUDE[Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -39,14 +39,14 @@ This article describes how existing roles and permissions in the available Micro
 
 <a name='map-microsoft-365-defender-unified-rbac-permissions-to-existing-rbac-permissions'></a>
 
-This article contains tables describing how to map your existing individual RBAC role defintions to the new Microsoft Defender XDR Unified RBAC permissions for the following products:
+This article contains tables describing how to map your existing individual RBAC role defintions to the new Microsoft Defender unified RBAC permissions for the following products:
 
 > [!IMPORTANT]
-> As of February 2025, the Microsoft Defender XDR Unified RBAC model is the default permissions model for new Microsoft Defender Endpoint organizations. New organizations can't export roles and permissions from the original permissions model. Existing organizations with roles and permissions assigned or exported before February maintain their current roles and permissions configuration.
+> As of February 2025, the Microsoft Defender unified RBAC model is the default permissions model for new Microsoft Defender Endpoint organizations. New organizations can't export roles and permissions from the original permissions model. Existing organizations with roles and permissions assigned or exported before February maintain their current roles and permissions configuration.
 >
-> As of March 2025, the Microsoft Defender XDR Unified RBAC model is the default permissions model for new Microsoft Defender for Identity organizations. New organizations can't export roles and permissions from the original permissions model. Existing organizations with roles and permissions assigned or exported before March maintain their current roles and permissions configuration.
+> As of March 2025, the Microsoft Defender unified RBAC model is the default permissions model for new Microsoft Defender for Identity organizations. New organizations can't export roles and permissions from the original permissions model. Existing organizations with roles and permissions assigned or exported before March maintain their current roles and permissions configuration.
 
-Use the tables in the following sections to learn more about how your existing individual RBAC role definitions map to your new Microsoft Defender XDR Unified RBAC roles:
+Use the tables in the following sections to learn more about how your existing individual RBAC role definitions map to your new Microsoft Defender unified RBAC roles:
 
 - [Microsoft Defender for Endpoint and Defender Vulnerability Management](#microsoft-defender-for-endpoint-and-defender-vulnerability-management)
 - [Microsoft Defender for Office 365](#microsoft-defender-for-office-365)
@@ -60,9 +60,9 @@ Use the tables in the following sections to learn more about how your existing i
 
 ## Microsoft Defender for Endpoint and Defender Vulnerability Management
 
-Use the following table to learn how your existing permissions for Microsoft Defender for Endpoint and Defender Vulnerability Management map to the new Microsoft Defender XDR Unified RBAC permissions:
+Use the following table to learn how your existing permissions for Microsoft Defender for Endpoint and Defender Vulnerability Management map to the new Microsoft Defender unified RBAC permissions:
 
-|Defender for Endpoint and Defender Vulnerability Management permissions|Microsoft Defender XDR Unified RBAC permission|
+|Defender for Endpoint and Defender Vulnerability Management permissions|Microsoft Defender unified RBAC permission|
 |---|---|---|
 |View data - Security operations|Security operations \ Security data \ Security data basics (read)|
 |View data - Defender Vulnerability Management|Security posture \ Posture management \ Vulnerability management (read)|
@@ -82,7 +82,7 @@ Use the following table to learn how your existing permissions for Microsoft Def
 
 ## Microsoft Defender for Office 365
 
-Use the following tables to learn how your existing email amd collaboration and protection-related Exchange Online permissions for Defender for Office 365 map to the new Microsoft Defender XDR Unified RBAC permissions:
+Use the following tables to learn how your existing email amd collaboration and protection-related Exchange Online permissions for Defender for Office 365 map to the new Microsoft Defender unified RBAC permissions:
 
 - [Email and collaboration permissions mapping](#email--collaboration-permissions-mapping)
 - [Exchange Online permissions mapping](#exchange-online-permissions-mapping)
@@ -91,7 +91,7 @@ Use the following tables to learn how your existing email amd collaboration and 
 
 You configured Email & collaboration permissions in the Defender portal at <https://security.microsoft.com/emailandcollabpermissions>.
 
-|Email & collaboration permission|Type|Microsoft Defender XDR Unified RBAC permission|
+|Email & collaboration permission|Type|Microsoft Defender unified RBAC permission|
 |---|---|---|
 |Global Reader|Role group|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) <br/> Security operations \ Security data \ Response (manage) <br/> Authorization and settings \ Security settings \ Core security settings (read) <br/> Authorization and settings \ System setting (read)|
 |Organization Management|Role group|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Security data \ Alerts (manage) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) <br/> Security operations \ Security data \ Response (manage) <br/> Security operations \ Security data \ Email advanced actions (manage) <br/> Security operations \ Security data \ Email quarantine (manage) <br/> Authorization and settings \ Authorization (Read and manage) <br/> Authorization and settings \ Security setting (All permissions) <br/> Authorization and settings \ System settings (Read and manage)|
@@ -111,7 +111,7 @@ You configured Email & collaboration permissions in the Defender portal at <http
 
 You configured protection-related Exchange Online permissions in the Exchange admin center (EAC) at <https://admin.exchange.microsoft.com/#/adminRoles>.
 
-|Exchange Online permission|Type|Microsoft Defender XDR Unified RBAC permission|
+|Exchange Online permission|Type|Microsoft Defender unified RBAC permission|
 |---|---|---|
 |Hygiene Management|Role group|Security operations \ Security data \ Email quarantine (manage) <br/> Authorization and settings \ Security settings \ Core security settings (manage) <br/> Authorization and settings \ Security settings \ Detection tuning (manage)|
 |Organization Management|Role group|Security operations \ Raw data (email & collaboration) \ Email & collaboration metadata (read) <br/> Authorization and settings \ Security settings \ Core security settings (manage) <br/> Authorization and settings \ Security settings \ Detection tuning (manage) <br/> Authorization and settings \ System settings (Read and manage)|
@@ -124,9 +124,9 @@ You configured protection-related Exchange Online permissions in the Exchange ad
 
 ## Microsoft Defender for Identity
 
-Use the following table to learn how your existing permissions for Microsoft Defender for Identity Management map to the new Microsoft Defender XDR Unified RBAC permissions:
+Use the following table to learn how your existing permissions for Microsoft Defender for Identity Management map to the new Microsoft Defender unified RBAC permissions:
 
-|Defender for Identity permission|Defender XDR Unified RBAC permission|
+|Defender for Identity permission|Defender unified RBAC permission|
 |---|---|
 |MDI admin|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Security data \ Alerts (manage) <br/> Authorization and settings \ Authorization (Read and manage) <br/> Authorization and settings \ Security setting (All permissions) <br/> Authorization and settings \ System settings (Read and manage)|
 |MDI user|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Security data \ Alerts (manage) <br/> Authorization and settings \ Security setting (All permissions) <br/> Authorization and settings \ System setting (read)|
@@ -148,7 +148,7 @@ Use the following table to learn how your existing permissions for Microsoft Def
 >
 >   For more information about permissions in app governance, see [App governance roles](/defender-cloud-apps/app-governance-get-started#roles).
 >
-> - [Activating Defender for Cloud Apps integration with Defender XDR Unified RBAC](activate-defender-rbac.md) has the following results:
+> - [Activating Defender for Cloud Apps integration with Defender unified RBAC](activate-defender-rbac.md) has the following results:
 >   - Microsoft Entra ID roles continue to function as normal.
 >   - The following [built-in scoped roles in Defender for Cloud Apps](/defender-cloud-apps/manage-admins#roles-and-permissions) are no longer supported:
 >     - **App/instance admin**
@@ -156,7 +156,7 @@ Use the following table to learn how your existing permissions for Microsoft Def
 >     - **Cloud Discovery global admin**
 >     - **Cloud Discovery report admin**
 
-|Defender for Cloud Apps permission|Defender XDR Unified RBAC permission|
+|Defender for Cloud Apps permission|Defender unified RBAC permission|
 |---|---|
 |Local Global administrator|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Security data \ Alerts (manage) <br/> Authorization and settings \ Authorization (all permissions) <br/> Authorization and settings \ Security settings (all permissions) <br/> Authorization and settings \ System settings (all permissions)|
 |Local Security operator|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Security data \ Alerts (manage) <br/> Authorization and settings \ Authorization (read) <br/> Authorization and settings \ Security setting (all permissions) <br/> Authorization and settings \ System setting (read)|
@@ -183,9 +183,9 @@ The following table lists the available uRBAC roles and their permissions.
 
 ## Microsoft Sentinel (Preview)
 
-Use the following table to learn how your existing permissions for Microsoft Sentinel map to the new Microsoft Defender XDR Unified RBAC permissions:
+Use the following table to learn how your existing permissions for Microsoft Sentinel map to the new Microsoft Defender unified RBAC permissions:
 
-|Sentinel permission|Defender XDR Unified RBAC permission|
+|Sentinel permission|Defender unified RBAC permission|
 |---|-----|
 |Sentinel Reader|Security operations \ Security data \ Security data basic (read)|
 |Sentinel Responder|Security operations \ Security data \ Security data basic (read) </br>Security operations \ Security data \ Alerts (manage) </br>Security operations \ Security data \ Response (manage)|
@@ -197,9 +197,9 @@ Use the following table to learn how your existing permissions for Microsoft Sen
 
 Users assigned with Microsoft Entra global roles might also have access to the [Microsoft Defender portal](https://security.microsoft.com).
 
-Use this table to learn about the permissions assigned by default for each workload (Defender for Endpoint, Defender Vulnerability Management, Defender for Office and Defender for Identity) in Microsoft Defender XDR Unified RBAC to each global Microsoft Entra role.
+Use this table to learn about the permissions assigned by default for each workload (Defender for Endpoint, Defender Vulnerability Management, Defender for Office and Defender for Identity) in Microsoft Defender unified RBAC to each global Microsoft Entra role.
 
-|Microsoft Entra role|Microsoft Defender XDR Unified RBAC assigned permissions for all workloads|Microsoft Defender XDR Unified RBAC assigned permissions – workload specific|
+|Microsoft Entra role|Microsoft Defender unified RBAC assigned permissions for all workloads|Microsoft Defender unified RBAC assigned permissions – workload specific|
 |---|---|---|
 |Global administrator|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Security data \ Alerts (manage) <br/> Security operations \ Security data \ Response (manage) <br/> Security posture \ Posture management \ Exposure Management (read) <br/> Security posture \ Posture management \ Exposure Management (manage) <br/> Authorization and settings \ Authorization (Read and manage) <br/> Authorization and settings \ Security settings (All permissions) <br/> Authorization and settings \ System settings (Read and manage) |_**Defender for Endpoint and Defender Vulnerability Management permissions only permissions**_ <br/> Security operations \ Basic live response (manage) <br/> Security operations \ Advanced live response (manage) <br/> Security operations  \ Security data \ File collection (manage) <br/> Security posture \ Posture management \ Vulnerability management (read) <br/> Security posture \ Posture management \ Exception handling (manage) <br/> Security posture \ Posture management \ Remediation handling (manage) <br/> Security posture \ Posture management \ Application handling (manage) <br/> Security posture \ Posture management \ Security baseline assessment (manage) <br/> <br/> _**Defender for Office only permissions**_ <br/> Security operations \ Security data \ Email quarantine (manage) <br/> Security operations \ Security data \ Email advanced actions (manage) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read)|
 |Security administrator|Same as Global administrator|Same as Global administrator|
@@ -216,9 +216,9 @@ Use this table to learn about the permissions assigned by default for each workl
 |Billing admin|not applicable|not applicable|
 
 > [!NOTE]
-> By activating the Microsoft Defender XDR Unified RBAC model, users with the Security Reader and Global Reader roles are granted read-only access to resources from workloads integrated into the model. However, accessing Microsoft Defender for Endpoint device data requires more configuration before Security Reader permissions take effect. For details, see the [Before you begin section](/defender-endpoint/rbac).
+> By activating the Microsoft Defender unified RBAC model, users with the Security Reader and Global Reader roles are granted read-only access to resources from workloads integrated into the model. However, accessing Microsoft Defender for Endpoint device data requires more configuration before Security Reader permissions take effect. For details, see the [Before you begin section](/defender-endpoint/rbac).
 
-### Sample permission mappings of Microsoft Sentinel built-in roles to Microsoft Defender XDR Unified RBAC roles
+### Sample permission mappings of Microsoft Sentinel built-in roles to Microsoft Defender unified RBAC roles
 
 These are examples of the permissions that can be assigned to the users based on their roles in Microsoft Sentinel. As Unified RBAC provides the option to have more granular permissions on Microsoft Defender XDR, you can utilize that granularity to separate certain Microsoft Defender XDR permissions on Tier level as well. For example, you can apply Live Response Basic to Tier 1, but Live Response Advanced permission to Tier 2.
 
@@ -243,6 +243,6 @@ If some users need only read access to Microsoft Sentinel SIEM raw data, they ca
 ## Next steps
 
 - [Import existing RBAC roles](import-rbac-roles.md)
-- [Activate Microsoft Defender XDR Unified RBAC](activate-defender-rbac.md)
+- [Activate Microsoft Defender unified RBAC](activate-defender-rbac.md)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

@@ -1,5 +1,5 @@
 ---
-title: Create custom roles with Microsoft Defender XDR Unified role-based access control (RBAC)
+title: Create custom roles with Microsoft Defender unified role-based access control (RBAC)
 description: Create custom roles in Microsoft Defender XDR Security portal role-based access control (RBAC)
 ms.service: defender-xdr
 ms.author: monaberdugo
@@ -25,12 +25,12 @@ appliesto:
 - Microsoft Security Exposure Management
 - Microsoft Defender for Cloud Apps
 - Microsoft Sentinel data lake
-#customer intent: As a security administrator, I want to create custom roles in Microsoft Defender XDR Unified RBAC so that I can manage permissions and access to Microsoft Defender portal experiences.
+#customer intent: As a security administrator, I want to create custom roles in Microsoft Defender unified RBAC so that I can manage permissions and access to Microsoft Defender portal experiences.
 ---
 
-# Create custom roles with Microsoft Defender XDR Unified RBAC
+# Create custom roles with Microsoft Defender unified RBAC
 
-This article describes how to create custom roles in Microsoft Defender XDR Unified role-based access control (RBAC). Microsoft Defender XDR Unified RBAC enables you to create custom roles with specific permissions and assign them to users or groups, allowing for granular control over access to Microsoft Defender portal experiences.
+This article describes how to create custom roles in Microsoft Defender unified role-based access control (RBAC). Microsoft Defender unified RBAC enables you to create custom roles with specific permissions and assign them to users or groups, allowing for granular control over access to Microsoft Defender portal experiences.
 
 Creating custom roles for [Microsoft Sentinel data lake](https://aka.ms/data-lake-overview) is supported in Preview.
 
@@ -38,10 +38,10 @@ Creating custom roles for [Microsoft Sentinel data lake](https://aka.ms/data-lak
 
 ## Prerequisites
 
-To create custom roles in Microsoft Defender XDR Unified RBAC, you must be assigned one of the following roles or permissions:
+To create custom roles in Microsoft Defender unified RBAC, you must be assigned one of the following roles or permissions:
 
 - Global Administrator or Security Administrator in Microsoft Entra ID.
-- All **Authorization** permissions assigned in Microsoft Defender XDR Unified RBAC.
+- All **Authorization** permissions assigned in Microsoft Defender unified RBAC.
 
 For more information on permissions, see [Permission prerequisites](manage-rbac.md#permissions-prerequisites).
 
@@ -76,7 +76,7 @@ The following steps describe how to create custom roles in the Microsoft Defende
 
     If you select **All read-only permissions**, or **All read and manage permissions**, any new permissions later added to these categories are also automatically assigned under this role.
 
-    For more information, see [Permissions in Microsoft Defender XDR Unified role-based access control (RBAC)](custom-permissions-details.md).
+    For more information, see [Permissions in Microsoft Defender unified role-based access control (RBAC)](custom-permissions-details.md).
 
 1. When you're done assigning permissions for each permission group, select **Apply** and then **Next** to continue on to the next permission group.
     
@@ -101,7 +101,7 @@ The following steps describe how to create custom roles in the Microsoft Defende
     1. In the **Data collections** area on the **Add assignments** side pane, the Microsoft Sentinel default data lake is listed by default. Select **Edit** to either remove access to the data lake, or define a custom data lake selection.
 
     > [!NOTE]
-    > In Microsoft Defender XDR Unified RBAC, you can create as many assignments as needed under the same role with same permissions. For example, you can have an assignment within a role that has access to all data sources and then a separate assignment for a team that only needs access to Endpoint alerts from the Defender for Endpoint data source. This enables maintaining the minimum number of roles.
+    > In Microsoft Defender unified RBAC, you can create as many assignments as needed under the same role with same permissions. For example, you can have an assignment within a role that has access to all data sources and then a separate assignment for a team that only needs access to Endpoint alerts from the Defender for Endpoint data source. This enables maintaining the minimum number of roles.
 
 1. Back on the **Assign users and data sources** page, select **Next** to review the role and assignment details. Select **Submit** to create the role.
 
@@ -141,7 +141,7 @@ To access and manage roles and permissions, without being a Global Administrator
 1. Select **Next** to review and finish creating the role and then select **Submit**.
 
 > [!NOTE]
-> For the Microsoft Defender XDR security portal to start enforcing the permissions and assignments configured in your new or imported roles, you need to activate the new Microsoft Defender XDR Unified RBAC model. For more information, see [Activate Microsoft Defender XDR Unified RBAC](activate-defender-rbac.md).
+> For the Microsoft Defender XDR security portal to start enforcing the permissions and assignments configured in your new or imported roles, you need to activate the new Microsoft Defender unified RBAC model. For more information, see [Activate Microsoft Defender unified RBAC](activate-defender-rbac.md).
 
 
 ## Configure scoped roles for Microsoft Defender for Identity
@@ -159,6 +159,6 @@ For more information, see: [Manage cloud scopes and unified role-based access co
 ## Next steps
 
 - [Import existing RBAC roles](import-rbac-roles.md)
-- [Activate Microsoft Defender XDR Unified RBAC](activate-defender-rbac.md)
+- [Activate Microsoft Defender unified RBAC](activate-defender-rbac.md)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
