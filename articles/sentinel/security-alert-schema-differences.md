@@ -1,74 +1,87 @@
 ---
 title: Alert schema differences: Legacy vs. XDR connector
-description: Learn about schema differences between alerts from legacy connectors and the XDR connector in Microsoft Sentinel.
+description: Learn how alert schema, field mappings, and ingestion behavior differ between legacy connectors and the XDR connector in Microsoft Sentinel.
 author: guywi-ms
 ms.author: guywild
 ms.topic: reference
-ms.date: 09/04/2025
-# customer intent: As a security analyst, I want to understand the schema differences between alerts from legacy connectors and the XDR connector in Microsoft Sentinel so that I can update my queries, analytic rules, and workbooks when migrating.
+ms.date: 01/27/2026
+# customer intent: As a security analyst, I want to understand how alerts differ when ingested through the XDR connector so that I can update my queries, analytic rules, and workbooks accordingly.
 ---
 
 # Alert schema differences: Legacy vs. XDR connector
 
-This page describes differences between alerts ingested through legacy connectors and the Extended Detection and Response (XDR) connector in Microsoft Sentinel. Schema changes might affect your existing queries, analytic rules, and workbooks. To migrate to the XDR connector, review these differences.
+Alerts ingested through legacy connectors differ from those ingested through the Extended Detection and Response (XDR) connector in Microsoft Sentinel. These differences can affect field mappings, derived field behavior, schema structure, and alert ingestion.
 
-To view the full alert schema, go to the [Security alert schema reference](./security-alert-schema.md).
+Schema changes might affect your existing queries, analytic rules, and workbooks. Review these differences before migrating to the XDR connector.
+
+For the full alert schema, see the [Security alert schema reference](security-alert-schema.md).
+
+## CompromisedEntity behavior
+
+The CompromisedEntity field is handled differently across products when alerts are ingested through the XDR connector.
+
+| Product | CompromisedEntity value in XDR alerts |
+|---------|----------------------------------------|
+| Microsoft Defender for Endpoint (MDE) | The device where `"LeadingHost": true` in the alert entities JSON |
+| Microsoft Entra ID (Identity Protection) | Always set to the user’s UPN |
+| Microsoft Defender for Identity (MDI) | Fixed string `"CompromisedEntity"` |
 
 > [!NOTE]
-> Fields marked as *Not available* don't appear in alerts ingested through the XDR connector. If your queries, analytic rules, or workbooks use these fields, they won’t return results and should be updated.
+> In MDE alerts, CompromisedEntity is derived from the device where `"LeadingHost": true`. Some values might be missing until full population is available.
 
+In MDI alerts, CompromisedEntity does not represent a host or user and remains a fixed string.
 
-## Microsoft Defender for Endpoint (MDE)
+## Field mapping changes
 
-| Legacy field/property                         | XDR behavior                  |
-|-----------------------------------------------|-------------------------------|
-| ExtendedProperties.MicrosoftDefenderAtp.Category | ExtendedProperties.Category (field renamed) |
-| CompromisedEntity                             | Not available                 |
-| MicrosoftDefenderAtp.Category                 | Not available                 |
+Some fields are renamed or use different value sets in alerts from the XDR connector.
 
----
+| Product | Legacy field/property | XDR behavior |
+|---------|-----------------------|--------------|
+| MDE | ExtendedProperties.MicrosoftDefenderAtp.Category | Mapped to `ExtendedProperties.Category` |
+| Microsoft Defender for Office (MDO) | ExtendedProperties.Status | Uses a different value set from legacy |
+| Microsoft Defender for Office (MDO) | ExtendedProperties.InvestigationName | Not available |
 
-## Microsoft Defender for Office (MDO)
+## Structural schema transformations (MDI)
 
-| Legacy field/property             | XDR behavior                                        |
-|----------------------------------|-----------------------------------------------------|
-| ExtendedProperties.InvestigationName | Not available                                     |
-| ExtendedProperties.Status        | Different value set from legacy     |
-| Nonsecurity alerts              | Not included (XDR ingests only security alerts)            |
+The standalone Microsoft Defender for Identity (MDI) connector sometimes used placeholder entities to store additional information. In the XDR connector, this information is folded into properties under `resourceAccessEvents[]`.
 
----
+| Legacy entity/property | XDR representation |
+|------------------------|-------------------|
+| ResourceAccessInfo.Time | `resourceAccessEvents[].AccessDateTime` |
+| ResourceAccessInfo.IpAddress | `resourceAccessEvents[].IpAddress` |
+| ResourceAccessInfo.ResourceIdentifier.AccountId | `resourceAccessEvents[].AccountId` |
+| ResourceAccessInfo.ResourceIdentifier.ResourceName | `resourceAccessEvents[].ResourceIdentifier` |
+| DomainResourceIdentifier | `resourceAccessEvents[].ResourceIdentifier` |
 
-## Azure Active Directory Identity Protection (AADIP)
+ResourceAccessInfo.ComputerId is no longer required and corresponds to the Host entity.
 
-| Legacy field/property | XDR behavior                                |
-|-----------------------|---------------------------------------------|
-| CompromisedEntity     | Not available                               |
-| Alerts                | Filtered (only high-risk alerts are ingested) |
+## Alert ingestion filtering
+
+Some alerts available through legacy connectors aren't ingested through the XDR connector.
+
+| Product | Filtering behavior |
+|---------|--------------------|
+| Microsoft Defender for Cloud (MDC) | Informational severity alerts aren't ingested |
+| Microsoft Entra ID | By default, alerts below High severity are filtered. Customers can configure ingestion to include all severities. |
+
+## Scoping behavior (Microsoft Defender for Cloud)
+
+Microsoft Defender for Cloud alerts use different scoping when ingested through the XDR connector.
+
+| Legacy connector scope | XDR connector scope |
+|------------------------|---------------------|
+| Subscription level | Tenant level |
+
+> [!NOTE]
+> All MDC alerts are available in the primary workspace for the tenant. Alerts are scoped according to MDC subscription scopes within Defender XDR.
 
 ## Microsoft Cloud App Security (MCAS)
 
 The Microsoft Cloud App Security connector has no schema differences between the legacy and XDR connectors.
 
-## Microsoft Defender for Identity (MDI)
-
-| Legacy field/property  | XDR behavior   |
-|------------------------|----------------|
-| CompromisedEntity      | Not available  |
-| ResourceAccessInfo     | Not available  |
-| DomainResourceIdentifier | Not available |
-
-## Microsoft Defender for Cloud (MDC)
-
-The Microsoft Defender for Cloud connector doesn't have field-level schema differences. 
-
-However, it uses different scoping in XDR:
-
-- **Legacy connector:** subscription level  
-- **XDR connector:** tenant level
-
 ## What’s next
 
-Next, explore how to update your rules and workbooks in Microsoft Sentinel:
+To continue working with alerts in Microsoft Sentinel, see:
 
-- [Create and manage analytic rules](./create-analytics-rules.md)  
-- [Use workbooks in Microsoft Sentinel](./monitor-your-data.md)   
+- [Create and manage analytic rules](create-analytics-rules.md)  
+- [Use workbooks in Microsoft Sentinel](monitor-your-data.md)
