@@ -215,69 +215,15 @@
             - name: Deploy Defender for Containers
               items:
                 - name: Overview by environment
-                  href: defender-for-containers-overview-by-environment.md
+                  href: defender-for-containers-overview.md
                 - name: Enable via Azure portal
                   href: defender-for-containers-enable-portal.md
                 - name: Enable via Azure CLI
                   href: defender-for-containers-enable-azure-cli.md
-                - name: Troubleshoot
-                  href: defender-for-containers-aws-troubleshoot.md                
-                - name: Defender for Containers deployment overview
-                  href: defender-for-containers-deployment-overview.md
-                - name: Azure (AKS)
-                  items:
-                    - name: Overview
-                      href: defender-for-containers-azure-overview.md
-                    - name: Enable via portal
-                      href: defender-for-containers-azure-enable-portal.md
-                    - name: Enable programmatically
-                      href: defender-for-containers-azure-enable-programmatically.md
-                    - name: Verify deployment
-                      href: defender-for-containers-azure-verify.md
-                    - name: Configure
-                      href: defender-for-containers-azure-configure.md
-                    - name: Remove
-                      href: defender-for-containers-azure-remove.md
-                - name: AWS (EKS)
-                  items:
-                    - name: Overview
-                      href: defender-for-containers-aws-overview.md
-                    - name: Enable via portal
-                      href: defender-for-containers-aws-enable-portal.md
-                    - name: Enable programmatically
-                      href: defender-for-containers-aws-enable-programmatically.md
-                    - name: Verify deployment
-                      href: defender-for-containers-aws-verify.md
-                    - name: Configure
-                      href: defender-for-containers-aws-configure.md
-                    - name: Remove
-                      href: defender-for-containers-aws-remove.md
-                - name: GCP (GKE)
-                  items:
-                    - name: Overview
-                      href: defender-for-containers-gcp-overview.md
-                    - name: Enable via portal
-                      href: defender-for-containers-gcp-enable-portal.md
-                    - name: Enable programmatically
-                      href: defender-for-containers-gcp-enable-programmatically.md
-                    - name: Verify deployment
-                      href: defender-for-containers-gcp-verify.md
-                    - name: Configure
-                      href: defender-for-containers-gcp-configure.md
-                    - name: Remove
-                      href: defender-for-containers-gcp-remove.md
-                - name: Arc-enabled Kubernetes (Preview)
-                  items:
-                    - name: Overview
-                      href: defender-for-containers-arc-overview.md
-                    - name: Enable via portal
-                      href: defender-for-containers-arc-enable-portal.md
-                    - name: Enable programmatically
-                      href: defender-for-containers-arc-enable-programmatically.md
-                    - name: Verify deployment
-                      href: defender-for-containers-arc-verify.md
-                    - name: Remove
-                      href: defender-for-containers-arc-remove.md
+                - name: Troubleshoot AWS
+                  href: defender-for-containers-aws-troubleshoot.md
+                - name: Remove
+                  href: defender-for-containers-remove.md                 
                 - name: Configure sensor deployed with Helm
                   href: deploy-helm.md
         - name: Protect key vaults with Defender for Key Vault
@@ -755,7 +701,7 @@
             href: enable-just-in-time-access.md
   - name: Defender for Containers
     items:
-      - name: Overview
+      - name: Introduction
         displayName: kubernetes, aks, acr, registries, k8s, arc, hybrid, on-premises,
           azure arc, multicloud, Hardening, Vulnerability assessment, Run-time
           protection

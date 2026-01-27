@@ -21,7 +21,7 @@ This article explains how to enable Microsoft Defender for Containers and deploy
 
 ## Network requirements
 
-[!INCLUDE[defender-for-container-prerequisites-aks](includes/defender-for-container-prerequisites-aks.md)]
+[!INCLUDE[defender-for-container-prerequisites-aks](includes/defender-for-containers-network-requirements-aks.md)]
 
 ## Enable Defender for Containers
 
@@ -82,7 +82,7 @@ Use the Azure portal to verify that Defender for Containers components were depl
 
 ## Network requirements
 
-[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
+[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
 
 ## Enable Defender for Containers
 
@@ -188,7 +188,7 @@ Use the Azure portal to verify that Defender for Containers components were depl
 
 ## Network requirements
 
-[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
+[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
 
 ## Enable Defender for Containers
 
@@ -283,7 +283,7 @@ After connecting your GKE clusters to Azure Arc:
 
 ## Network requirements
 
-[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-container-prerequisites-arc-eks-gke.md)]
+[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
 
 ## Connect your cluster to Azure Arc
 

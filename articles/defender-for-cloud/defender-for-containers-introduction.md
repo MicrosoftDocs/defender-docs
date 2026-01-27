@@ -1,5 +1,5 @@
 ---
-title: Overview of Microsoft Defender for Containers
+title: Introduction of Microsoft Defender for Containers
 description: Learn about Microsoft Defender for Containers, a cloud-native solution that secures your containerized assets across multicloud and on-premises environments.
 ms.topic: overview
 author: Elazark
@@ -8,7 +8,7 @@ ms.date: 05/13/2025
 #customer intent: As a security admin, I want to understand container security to protect my containerized assets.
 ---
 
-# Microsoft Defender for Containers overview
+# Microsoft Defender for Containers introduction
 
 Microsoft Defender for Containers is a cloud-native solution in Microsoft Defender for Cloud that helps you secure containerized environments across Azure, AWS, GCP, and on-premises Kubernetes. It provides security posture management, vulnerability assessment, and run-time threat protection for Kubernetes clusters, container images, and workloads.
 
@@ -97,5 +97,10 @@ Learn more about Defender for Containers in the following blogs:
 
 In this overview, you learned about the core elements of container security in Microsoft Defender for Cloud. To enable the plan, see:
 
-- [Enable Defender for Containers](defender-for-containers-enable.md)
+- [Defender for Containers deployment overview](defender-for-containers-overview.md)
+
+- [Enable Defender for Containers using the Azure portal](defender-for-containers-enable-portal.md)
+
+- [Enable Defender for Containers using the Azure CLI](defender-for-containers-enable-azure-cli.md)
+
 - Check out [common questions](faq-defender-for-containers.yml) about Defender for Containers.
