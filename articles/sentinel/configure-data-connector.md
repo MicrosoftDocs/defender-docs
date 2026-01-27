@@ -1,10 +1,10 @@
 ---
-title: Connect Data Sources to Microsoft Sentinel Using Data Connectors
+title: Connect data sources to Microsoft Sentinel by using data connectors
 description: Learn how to connect data sources to Microsoft Sentinel using data connectors for improved threat detection.
-author: batamig
+author: EdB-MSFT
 ms.topic: how-to
 ms.date: 07/09/2025
-ms.author: bagol
+ms.author: edbaynash
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
@@ -60,9 +60,9 @@ After you or someone in your organization installs the solution that includes th
   
 ### Configure data retention and tiering
    
-If you have onboarded to the Microsoft Sentinel data lake (preview), you can configure data retention and tiering for the data connector. The data lake consists of an analytics tier - your current Microsoft Sentinel workspaces, and a data lake tier where you can store data for up to 12 years. For more information on onboarding, see [Onboarding to Microsoft Sentinel data lake](datalake/sentinel-lake-onboarding.md). 
+If you have onboarded to the Microsoft Sentinel data lake, you can configure data retention and tiering for the data connector. The data lake consists of an analytics tier - your current Microsoft Sentinel workspaces, and a data lake tier where you can store data for up to 12 years. For more information on onboarding, see [Onboarding to Microsoft Sentinel data lake](datalake/sentinel-lake-onboarding.md). 
 
-When you enable a connector, by default the data is sent to the analytics tier and mirrored in the data lake tier. Configure data retention in each tier or send the data only to the data lake tier. Retention and tiering are managed from the connector setup pages, or using the **Table management** page in the Defender portal. For more information on table management and retention, see [Manage data tiers and retention in Microsoft Defender Portal (preview)](manage-data-overview.md). 
+When you enable a connector, by default the data is sent to the analytics tier and mirrored in the data lake tier. Configure data retention in each tier or send the data only to the data lake tier. Retention and tiering are managed from the connector setup pages, or using the **Table management** page in the Defender portal. For more information on table management and retention, see [Manage data tiers and retention in Microsoft Defender Portal](manage-data-overview.md). 
 
 Once you have set up your connector, configure data retention and tiering using the following steps:
 
@@ -90,12 +90,18 @@ After you configure the data connector, it might take some time for the data to 
 
    :::image type="content" source="media/configure-data-connector/connected-data-connector.png" alt-text="Screenshot of a data connector page with status connected and graph that shows the data received.":::
 
+## Enable User and Entity Behavior Analytics (UEBA) from supported connectors
+
+[User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](identify-threats-with-entity-behavior-analytics.md) analyzes logs and alerts from connected data sources to build baseline behavioral profiles of your organization's entities—such as users, hosts, IP addresses, and applications. Using machine learning, UEBA identifies anomalous activity that may indicate a compromised asset.
+
+[!INCLUDE [data-connector-behavior-analytics](includes/data-connector-behavior-analytics.md)] 
+
 ## Find your data
 
 After you enable the connector successfully, the connector begins to stream data to the table schemas related to the data types you configured.
 
 In the Defender portal, query data in the **Advanced hunting** page, or in the Azure portal, query data in the **Logs** page.  
-Navigate to **Data lake explorer** , **KQL queries** to query data in the data lake. For more information, see [KQL and the Microsoft Sentinel data lake (preview)](datalake/kql-overview.md).
+Navigate to **Data lake explorer** , **KQL queries** to query data in the data lake. For more information, see [KQL and the Microsoft Sentinel data lake](datalake/kql-overview.md).
 
 ## Find support for a data connector
 
@@ -115,8 +121,8 @@ For more information about solutions and data connectors in Microsoft Sentinel, 
 - [Microsoft Sentinel data connectors](connect-data-sources.md)
 - [Find your Microsoft Sentinel data connector](data-connectors-reference.md)
 - [Connect Microsoft Sentinel to Azure, Windows, Microsoft, and Amazon services](connect-azure-windows-microsoft-services.md)
-- [What is Microsoft Sentinel data lake (preview)?](datalake/sentinel-lake-overview.md)
-- [Onboarding to Microsoft Sentinel data lake (preview)](datalake/sentinel-lake-onboarding.md)
-- [Manage data tiers and retention in Microsoft Defender Portal (preview)](manage-data-overview.md). 
-- [KQL and the Microsoft Sentinel data lake (preview)](datalake/kql-overview.md)
-- [Jupyter notebooks and the Microsoft Sentinel data lake (preview)](datalake/notebooks-overview.md)
+- [What is Microsoft Sentinel data lake?](datalake/sentinel-lake-overview.md)
+- [Onboarding to Microsoft Sentinel data lake](datalake/sentinel-lake-onboarding.md)
+- [Manage data tiers and retention in Microsoft Defender Portal](manage-data-overview.md). 
+- [KQL and the Microsoft Sentinel data lake](datalake/kql-overview.md)
+- [Jupyter notebooks and the Microsoft Sentinel data lake](datalake/notebooks-overview.md)
