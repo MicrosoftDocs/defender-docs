@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 01/20/2026
+ms.date: 11/30/2025
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality.
 ms.reviewer: AbbyMSFT
@@ -25,14 +25,6 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## January 2026
 
-### MDI alerts migrated to the unified Defender alerting experience
-As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, some alerts were converted from the Microsoft Defender for Identity classic format to the MDI XDR alert format. Keep in mind that all alerts are based on detections from Defender for Identity sensors. See [Microsoft Defender for Identity XDR security alerts](alerts-xdr.md) for the full list of XDR alerts.
-
-### Syslog notifications are being deprecated
-As part of the ongoing transition to a unified alerting experience across Microsoft Defender, syslog notifications are being deprecated due to their limited scope. We recommend that you use these alternatives solutions to make sure that notifications are enabled for all alert types.
-- [Microsoft Graph Security API](/graph/api/resources/security-api-overview?view=graph-rest-1.0)
-- [Integrate your SIEM tools with Microsoft Defender XDR](/defender-xdr/configure-siem-defender)
-
 ### New Health Alert: Sensor v3.x RPC Audit Misconfigured
 Enhanced RPC auditing is required for some Microsoft Defender for Identity advanced identity detections. A new health alert helps identify v3.x sensors where this configuration is either missing or incorrectly applied. The alert is being rolled out gradually to customers. For more information, see [Configure RPC on sensors v3.x](deploy/prerequisites-sensor-version-3.md#configure-rpc-auditing-on-sensors-v3x-to-support-advanced-identity-detections).
 
@@ -54,7 +46,8 @@ For more information, see:[Security posture assessment: Identify service account
 
 ### New security posture assessment: Locate accounts in built-in Operator Groups
 
-This identity security posture assessment lists Active Directory accounts that are members of built-in Operator Groups, including direct and indirect membership.
+
+This identity security posture assessment lists Active Directory accounts that are members of built-in Operator Groups, including direct and indirect membership. 
 
 You can use this assessment to review legacy or unnecessary operator access and take action when elevated access isn’t required.
 
@@ -139,11 +132,12 @@ As part of the ongoing transition to a unified alerting experience across Micros
 
 |Classic Alert Title|External ID|XDR Alert Name|Detector ID|
 |---|---|---|---|
-|Active Directory attributes Reconnaissance using LDAP|2210|[LDAP reconnaissance attributes in Active Directory](alerts-xdr.md#ldap-reconnaissance-attributes-in-active-directory)|xdr_LdapSensitiveAttributeReconnaissance|
-|User and IP address reconnaissance|2012|[Suspicious Server Message Block (SMB) enumeration from untrusted host](alerts-xdr.md#suspicious-server-message-block-smb-enumeration-from-untrusted-host)|xdr_SmbSessionEnumeration|
-|Account enumeration reconnaissance|2003|[Suspected account enumeration (Kerberos, NTLM, AD FS)](alerts-xdr.md#suspected-account-enumeration-kerberos-ntlm-ad-fs)|xdr_SuspectedAccountEnumeration|
-|Suspected brute-force attack (LDAP)|2004|[Suspected brute-force attack on Lightweight Directory Access Protocol (LDAP) authentication](alerts-xdr.md#suspected-brute-force-attack-on-lightweight-directory-access-protocol-ldap-authentication)|xdr_LdapBindBruteforce|
-|||[Suspected password spray attack on Lightweight Directory Access Protocol (LDAP) authentication](alerts-xdr.md#suspected-password-spray-attack-on-lightweight-directory-access-protocol-ldap-authentication)|xdr_LdapBindBruteforce|
+|Active Directory attributes Reconnaissance using LDAP|2210|[Active Directory attributes Reconnaissance using LDAP](alerts-xdr.md#active-directory-attributes-reconnaissance-ldap)|xdr_LdapSensitiveAttributeRecon|
+|User and IP address reconnaissance|2012|[User and IP address reconnaissance (SMB)](alerts-xdr.md#user-and-ip-address-reconnaissance-smb)|xdr_SmbSessionEnumeration|
+|Account enumeration reconnaissance|2003|[Account enumeration reconnaissance in AD FS](alerts-xdr.md#account-enumeration-reconnaissance-in-ad-fs)|xdr_AccountEnumerationHintSecurityAlertAdfs|
+|||[Account enumeration reconnaissance in Kerberos](alerts-xdr.md#account-enumeration-reconnaissance-in-kerberos)|xdr_AccountEnumerationHintSecurityAlertKerberos|
+|||[Account enumeration reconnaissance in NTLM](alerts-xdr.md#account-enumeration-reconnaissance-in-ntlm)|xdr_AccountEnumerationHintSecurityAlertNtlm|
+|Suspected brute-force attack (LDAP)|2004|[Suspected brute-force attack (LDAP)](alerts-xdr.md#suspected-brute-force-attack-ldap)|xdr_LdapBindBruteForce|
 |Suspicious network connection over Encrypting File System Remote Protocol|2416|[Suspicious network connection over Encrypting File System Remote Protocol](alerts-xdr.md#suspicious-network-connection-over-encrypting-file-system-remote-protocol)|xdr_SuspiciousConnectionOverEFSRPC|
 
 ### Additional security value in the Defender for Identity sensor v3.x
