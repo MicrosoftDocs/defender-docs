@@ -58,6 +58,9 @@ az aks update \
   --defender-config logAnalyticsWorkspaceResourceId=<workspace-resource-id>
 ```
 
+Replace `<workspace-resource-id>` with the full Log Analytics workspace resource ID. 
+For example, `/subscriptions/<subscription-id>/resourceGroups/<workspace-rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>`.
+
 ## Deploy the Azure Policy add-on
 
 Enable Azure Policy for Kubernetes to assess and enforce configuration best practices:
@@ -141,6 +144,9 @@ az k8s-extension create \
   --configuration-settings logAnalyticsWorkspaceResourceID=<workspace-resource-id>
 ```
 
+Replace `<workspace-resource-id>` with the full Log Analytics workspace resource ID. 
+For example, `/subscriptions/<subscription-id>/resourceGroups/<workspace-rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>`.
+
 ## Deploy the Azure Policy extension
 
 ```azurecli
@@ -219,8 +225,11 @@ az k8s-extension create \
   --cluster-name <cluster-name> \
   --resource-group <resource-group> \
   --configuration-settings \
-    logAnalyticsWorkspaceResourceID="/subscriptions/<subscription-id>/resourceGroups/<workspace-rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>"
+    logAnalyticsWorkspaceResourceID=<workspace-resource-id>
 ```
+
+Replace `<workspace-resource-id>` with the full Log Analytics workspace resource ID. 
+For example, `/subscriptions/<subscription-id>/resourceGroups/<workspace-rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>`.
 
 ## Deploy the Azure Policy extension
 
@@ -281,11 +290,15 @@ After enabling the plan and connecting your cluster to Azure Arc, deploy the Def
 ```azurecli
 az k8s-extension create \
   --name microsoft.azuredefender.kubernetes \
+  --extension-type microsoft.azuredefender.kubernetes \
   --cluster-type connectedClusters \
   --cluster-name <cluster-name> \
   --resource-group <resource-group> \
   --configuration-settings logAnalyticsWorkspaceResourceID=<workspace-resource-id>
 ```
+
+Replace `<workspace-resource-id>` with the full Log Analytics workspace resource ID. 
+For example, `/subscriptions/<subscription-id>/resourceGroups/<workspace-rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>`.
 
 ### Deploy the Azure Policy extension
 
