@@ -97,7 +97,7 @@ Learn more about Defender for Containers in the following blogs:
 
 In this overview, you learned about the core elements of container security in Microsoft Defender for Cloud. To enable the plan, see:
 
-- [Defender for Containers deployment overview](defender-for-containers-overview.md)
+- [Defender for Containers deployment overview](defender-for-containers-deployment-overview.md)
 
 - [Enable Defender for Containers using the Azure portal](defender-for-containers-enable-portal.md)
 
