@@ -64,7 +64,6 @@ Get-Help <cmdlet> -Online
 
 Omit the `-online` parameter to get locally cached help.
 
-### Common Microsoft Defender Antivirus PowerShell commands
 
 ### Common Microsoft Defender Antivirus PowerShell cmdlets
 
