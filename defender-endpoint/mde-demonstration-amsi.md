@@ -44,6 +44,7 @@ In this demonstration article, you have two engine choices to test AMSI:
 
 - PowerShell
 - VBScript
+- JavaScript
 
 ### Test AMSI with PowerShell
 
@@ -123,6 +124,20 @@ In this demonstration article, you have two engine choices to test AMSI:
 var result = eval("AMSI Test Sample: " + "7e72c3ce-861b-4339-8740-0ac1484c1386")
 WScript.Echo(result);
    ```
+
+1. On your Windows Device, open Command Prompt as an administrator.
+1. Type `cscript AMSITest.js`, and then press **Enter**.
+The result should be as follows:
+
+
+```javascript
+C:\tools>cscript amsitest.js
+Microsoft (R) Windows Script Host Version 10.0
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+CScript Error: Loading script "C:\test\amsitest.js" failed (Operation did not complete successfully because the file contains a virus or potentially unwanted software. ).
+```
+
 
 ### Verifying the test results
 
