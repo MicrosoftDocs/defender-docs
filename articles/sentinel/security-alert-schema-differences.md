@@ -30,7 +30,7 @@ The CompromisedEntity field is handled differently across products when alerts a
 > [!NOTE]
 > In MDE alerts, CompromisedEntity is derived from the device where `"LeadingHost": true`. Some values might be missing until full population is available.
 
-In MDI alerts, CompromisedEntity does not represent a host or user and is always the literal string `"CompromisedEntity"`.
+In MDI alerts, CompromisedEntity doesn't represent a host or user and is always the literal string `"CompromisedEntity"`.
 
 ## Field mapping changes
 
