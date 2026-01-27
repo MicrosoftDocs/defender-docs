@@ -43,7 +43,7 @@ Defender for Containers provides the following capabilities for AKS environments
 
 ## Architecture for AKS
 
-The Defender for Containers architecture for AKS consists of Azure-managed and Kubernetes-native components:
+The Defender for Containers architecture for AKS consists of Azure-managed and Kubernetes-native componenats:
 
 - **Defender Sensor**
 - **Azure Policy for Kubernetes**
