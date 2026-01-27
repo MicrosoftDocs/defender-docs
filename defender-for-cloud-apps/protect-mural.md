@@ -1,7 +1,7 @@
 ---
 title: Protect your Mural environment | Microsoft Defender for Cloud Apps
 description: This article provides information about the benefits of connecting your Mural app to Defender for Cloud Apps using the API connector for visibility and control over use.
-ms.date: 05/06/2024
+ms.date: 01/07/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
@@ -48,26 +48,25 @@ For more information about remediating threats from apps, see [Governing connect
 
 This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing Mural account using the App Connector APIs. This connection gives you visibility into and control over Mural usage. 
 
-**Prerequisites**:
+### Prerequisites
 
-- A Mural enterprise account is a pre-requisite for this connection. You must be signed-in as an admin to Mural.
+- A Mural enterprise account. 
+- You must be signed-in as an admin to Mural.
 
-**To connect Mural to Defender for Cloud Apps**:
+### To connect Mural to Defender for Cloud Apps
 
-1.	Sign into your [Mural](https://app.mural.co/) account and select your account icon > **Manage Company > Development > API keys > Create API key**.
-1.	Select all checkboxes and then select **Create API Key** and then **Copy Key**.
+1.	Sign into your [Mural](https://app.mural.co/) account.
+1.	Create an API Key and then copy the key.
 1.	In the Microsoft Defender portal, select **Settings > Cloud Apps > Connected Apps > App Connectors > Connect an app > Mural**.
 1.	In the connection wizard, enter your instance name, and then select **Next**.
-1.	Paste the API key you'd copied from the Mural portal and then select **Submit**.
+1.	Paste the API key you copied from the Mural portal and then select **Submit**.
 
 Once the connection is successfully established, Defender for Cloud Apps starts fetching Mural audit logs. Since Mural's API logs are delayed by 48 hours, the audit log ingestion to Defender for Cloud Apps is similarly delayed.
 
-If you have any problems connecting the app, see [Troubleshooting App Connectors](/defender-cloud-apps/troubleshooting-api-connectors-using-error-messages).
+
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Control cloud apps with policies](control-cloud-apps-with-policies.md)
+- If you have any problems connecting the app, see [Troubleshooting App Connectors](/defender-cloud-apps/troubleshooting-api-connectors-using-error-messages).
 
-
-[!INCLUDE [Open support ticket](includes/support.md)]
+- [Control cloud apps with policies](control-cloud-apps-with-policies.md)

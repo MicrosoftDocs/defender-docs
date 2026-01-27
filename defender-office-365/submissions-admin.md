@@ -639,7 +639,7 @@ The next sections in the details flyout are related to Teams submissions:
   - **Submitted by**
   - **Submission status**
 
-The rest of the details flyout contains the **Message details**, **Sender**, **Participants**, **Channel details**, and **URLs** sections that are part of the _Teams message entity panel_. For more information, see [The Teams message entity panel in Microsoft Defender for Office 365 Plan 2](teams-message-entity-panel.md).
+The rest of the details flyout contains the **Message details**, **Sender**, **Participants**, **Channel details**, and **URLs** sections that are part of the _Teams message entity panel_. For more information, see [The Teams message entity panel in Microsoft Defender for Office 365](teams-message-entity-panel.md).
 
 > [!TIP]
 > To remove users from Teams chats, see [Remove users from Teams chats in the Teams message entity panel](teams-message-entity-panel.md#remove-users-from-teams-chats-in-the-teams-message-entity-panel).
@@ -1118,7 +1118,7 @@ The next sections in the details flyout are related to user reported Teams submi
   - **Phish simulation**: The value is **Yes** or **No**.
   - **Converted to admin submission**: The value is **Yes** or **No**. For more information, see [View converted admin submissions](#view-converted-admin-submissions).
 
-The rest of the details flyout contains the **Message details**, **Sender**, **Participants**, **Channel details**, and **URLs** sections that are part of the _Teams message entity panel_. For more information, see [The Teams message entity panel in Microsoft Defender for Office 365 Plan 2](teams-message-entity-panel.md).
+The rest of the details flyout contains the **Message details**, **Sender**, **Participants**, **Channel details**, and **URLs** sections that are part of the _Teams message entity panel_. For more information, see [The Teams message entity panel in Microsoft Defender for Office 365](teams-message-entity-panel.md).
 
 > [!TIP]
 > To remove users from Teams chats, see [Remove users from Teams chats in the Teams message entity panel](teams-message-entity-panel.md#remove-users-from-teams-chats-in-the-teams-message-entity-panel).

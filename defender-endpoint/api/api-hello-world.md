@@ -3,8 +3,8 @@ title: Hello World for Microsoft Defender for Endpoint API
 ms.reviewer:
 description: Create a practice 'Hello world'-style API call to the Microsoft Defender for Endpoint API.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -16,25 +16,20 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 03/21/2025
+ms.date: 01/08/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
 ---
+
 # Microsoft Defender for Endpoint API - Hello World
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
+[!INCLUDE [Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
-
+[!INCLUDE [Improve request performance](../../includes/improve-request-performance.md)]
 
 ## Get Alerts using a simple PowerShell script
 
@@ -120,7 +115,7 @@ Done! You've successfully registered an application!
    $appId = '' ### Paste your Application ID here
    $appSecret = '' ### Paste your Application secret here
 
-   $resourceAppIdUri = 'https://api.securitycenter.microsoft.com'
+   $resourceAppIdUri = 'https://api.security.microsoft.com/'
    $oAuthUri = "https://login.microsoftonline.com/$TenantId/oauth2/token"
    $authBody = [Ordered] @{
        resource = "$resourceAppIdUri"
@@ -159,7 +154,7 @@ Done! You've successfully registered an application!
 
   # The URL contains the type of query and the time filter we create above
   # Read more about [other query options and filters](get-alerts.md).
-  $url = "https://api.securitycenter.microsoft.com/api/alerts?`$filter=alertCreationTime ge $dateTime"
+  $url = "https://api.security.microsoft.com/api/alerts?`$filter=alertCreationTime ge $dateTime"
 
   # Set the WebRequest headers
   $headers = @{
@@ -199,4 +194,3 @@ You're all done! You have successfully:
 - [Access Microsoft Defender for Endpoint with user context](exposed-apis-create-app-nativeapp.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

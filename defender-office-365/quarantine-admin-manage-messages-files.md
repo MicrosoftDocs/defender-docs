@@ -787,7 +787,7 @@ The next section in the details flyout is related to quarantined Teams messages:
   - **Policy name**: The value is **Teams Protection Policy**.
   - **Quarantine policy**
 
-The rest of the details flyout contains the **Message details**, **Sender**, **Participants**, **Channel details**, and **URLs** sections that are part of the _Teams message entity panel_. For more information, see [The Teams message entity panel in Microsoft Defender for Office 365 Plan 2](teams-message-entity-panel.md).
+The rest of the details flyout contains the **Message details**, **Sender**, **Participants**, **Channel details**, and **URLs** sections that are part of the _Teams message entity panel_. For more information, see [The Teams message entity panel in Microsoft Defender for Office 365](teams-message-entity-panel.md).
 
 When you're finished in the details flyout, select **Close**.
 

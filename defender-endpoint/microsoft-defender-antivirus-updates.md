@@ -6,8 +6,8 @@ ms.localizationpriority: high
 ms.date: 10/20/2025
 audience: ITPro
 ms.topic: reference
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.subservice: ngp
 search.appverid: met150
 appliesto:
@@ -74,7 +74,7 @@ Updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
-### November-2025 (Platform: 4.18.25110.6 | Engine: 1.25110.1)
+### November-2025 (Platform: 4.18.25110.6 | Engine: 1.1.25110.1)
 
 - Security intelligence update version: **1.443.6.0**
 - Release date:  **December 11, 2025 (Engine) / December 17, 2025 (Platform)**
@@ -295,4 +295,3 @@ After a new package version is released, support for the previous two versions i
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -2,12 +2,12 @@
 title: Indicator resource type
 description: Specify the entity details and define the expiration of the indicator using Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -19,16 +19,14 @@ ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
 
 # Indicator resource type
 
-
 ## Properties
 
-|Property|Type|Description |
-|---|---|--|
+|Property|Type|Description|
+|---|---|---|
 |id|String|Identity of the [Indicator](ti-indicator.md) entity.|
 |indicatorValue|String|The value of the [Indicator](ti-indicator.md).|
 |indicatorType|Enum|Type of the indicator. Possible values are: `FileSha1`, `FileSha256`, `FileMd5`, `CertificateThumbprint`, `IpAddress`, `DomainName`, and `Url`.|
@@ -89,5 +87,3 @@ For more information on the description of the response action types, see [Creat
     "rbacGroupNames": ["team1"]
 }
 ```
-
-

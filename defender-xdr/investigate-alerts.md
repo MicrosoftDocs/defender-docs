@@ -7,7 +7,7 @@ f1.keywords:
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: deniseb
+manager: orspodek
 audience: ITPro
 ms.collection:
 - m365-security
@@ -18,7 +18,7 @@ ms.topic: how-to
 search.appverid:
 - MOE150
 - met150
-ms.date: 6/04/2025
+ms.date: 01/23/2026
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -145,6 +145,7 @@ Microsoft Defender XDR alerts come from solutions like Microsoft Defender for En
 | Microsoft Defender for Cloud | `dc{GUID}` |
 | Microsoft Sentinel | `sn{GUID}` |
 | Microsoft Purview Insider Risk Management | `ir{GUID}` |
+| Microsoft Security Copilot | `sc{GUID}` |
 
 > [!NOTE]
 > If you have provisioned access to Microsoft Purview Insider Risk Management, you can view and manage insider risk management alerts and hunt for insider risk management events in the Microsoft Defender portal. For more information, see [Investigate insider risk threats in the Microsoft Defender portal](irm-investigate-alerts-defender.md).
@@ -228,6 +229,8 @@ The **Recommendations** tab provides next-step actions and advice for investigat
 
 :::image type="content" source="media/investigate-alerts/alerts-ss-alerts-recommendations-example.png" lightbox="media/investigate-alerts/alerts-ss-alerts-recommendations-example.png" alt-text="Screenshot of an example of alert recommendations":::
 
+[!INCLUDE [Built-in alert tuning rules](../includes/built-in-alert-tuning-rules.md)]
+
 ## Tune an alert
 
 As a security operations center (SOC) analyst, one of the top issues is triaging the sheer number of alerts that are triggered daily. An analyst's time is valuable, wanting to focus only on high severity and high priority alerts. Meanwhile, analysts are also required to triage and resolve lower priority alerts, which tend to be a manual process.
@@ -237,6 +240,10 @@ Alert tuning, previously known as *alert suppression*, provides the ability to t
 Alert tuning rules support conditions based on *evidence types* such as files, processes, scheduled tasks, and other types of evidence that trigger alerts. After creating an alert tuning rule, apply it to the selected alert or any alert type that meets the defined conditions to tune the alert.
 
 Alert tuning as general availability captures alerts only from Defender for Endpoint. However, in preview, alert tuning is also extended to other Microsoft Defender XDR services, including Defender for Office 365, Defender for Identity, Defender for Cloud Apps, Microsoft Entra ID Protection (Microsoft Entra IP), and others if they are available on your platform and plan.
+
+Microsoft Defender XDR includes built-in alert tuning rules (currently in Preview) that help reduce reporting noise from common benign activity. These built-in rules suppress alerts without affecting other features like AIR investigations and email notifications. If the AIR investigation detects malicious or suspicious activity, the new alert is reactivated.
+
+You can also create your own custom alert tuning rules to hide or resolve alerts automatically when specific conditions are met.
 
 > [!CAUTION]
 > We recommend using alert tuning with caution, for scenarios where known, internal business applications or security tests trigger an expected activity and you don't want to see the alerts.
@@ -308,7 +315,6 @@ After creating your alert tuning rule from an alert details page, in the **Succe
 1. Add a file to the **Select evidence (IOC) to allow** list. By default, the file that triggered the alert is already selected.
 1. Define a scope for the **Select scope to apply to** value. By default, the scope that applies to your alert is selected.
 1. Select **Save** to add the file to an allow list and prevent it from being blocked.
--->
 
 ## Resolve an alert
 
@@ -340,6 +346,14 @@ To create the automation, you'll need an API token before you can connect Power 
 Watch this short video to learn how automation works efficiently to create a smooth workflow and how to connect Power Automate to Defender for Cloud Apps.
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=01afebcb-850c-4a6f-abb4-692188ac6de7]
+
+
+## Use Dynamic Threat Detection Agent to triage alerts
+
+[Microsoft Security Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md) includes the Dynamic Threat Detection Agent, an always on, adaptive backend service that uncovers hidden threats across Defender and Microsoft Sentinel environments. It uses AI to identify gaps and uncover false negatives by correlating alerts, events, anomalies, and threat intelligence. When the agent identifies a gap, it generates a dynamic alert with the full context in the alert details, including natural language explanations, mapped [MITRE ATT&CK techniques](https://attack.mitre.org/), and tailored remediation steps.
+
+For more information, see [Microsoft Security Copilot Dynamic Threat Detection Agent](dynamic-threat-detection-agent.md).
+
 
 ## Next steps
 

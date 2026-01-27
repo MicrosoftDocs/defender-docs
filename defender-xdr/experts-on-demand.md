@@ -41,7 +41,7 @@ Select **Ask Defender Experts** directly inside the Microsoft 365 security porta
 - Gain clarity into suspicious devices, alerts, or incidents and take next steps if faced with an advanced attacker
 - Determine risks and available protections related to threat actors, campaigns, or emerging attacker techniques
 
- :::image type="content" source="media/ask-defender-expert-dialog.png" alt-text="Screenshot of the Ask Defender Experts dialog box." lightbox="media/ask-defender-expert-dialog.png":::
+ :::image type="content" source="media/experts-on-demand/ask-defender-expert-dialog.png" alt-text="Screenshot of the Ask Defender Experts dialog box." lightbox="media/experts-on-demand/ask-defender-expert-dialog.png":::
 
 ## Required permissions for using Ask Defender Experts
 
@@ -87,13 +87,13 @@ The option to **Ask Defender Experts** is available in several places throughout
 
 You can view responses to inquiries submitted to Ask Defender Experts from up to six months ago by navigating to **Reports** > **Defender Experts messages**. You can also ask follow-up questions or reply with more information to Defender Experts from this page.
 
-:::image type="content" source="media/inportal-managed-response.png" alt-text="Screenshot of in-portal managed response." lightbox="media/inportal-managed-response.png":::
+:::image type="content" source="media/experts-on-demand/inportal-managed-response.png" alt-text="Screenshot of in-portal managed response." lightbox="media/experts-on-demand/inportal-managed-response.png":::
 
 ### Email
 
 If you included contact email addresses when submitting your inquiry, they'll receive an email notification when a response from Defender Experts is posted.
 
-:::image type="content" source="media/email-based-managed-response.png" alt-text="Screenshot of email based managed response." lightbox="media/email-based-managed-response.png":::
+:::image type="content" source="media/experts-on-demand/email-based-managed-response.png" alt-text="Screenshot of email based managed response." lightbox="media/experts-on-demand/email-based-managed-response.png":::
 
 ## Sample questions you can ask from Defender Experts
 

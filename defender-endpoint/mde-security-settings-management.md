@@ -1,33 +1,31 @@
 ﻿---
 title: Manage Microsoft Defender Antivirus by using Defender for Endpoint Security Settings Management
 description: Learn how to use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.reviewer: yongrhee
 manager: bagol
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.topic: how-to
 ms.date: 10/20/2025
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 - mde-ngp
 search.appverid: met150
 ms.localizationpriority: medium
-ms.custom: 
+ms.custom:
 - nextgen
 - partner-contribution
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus
 
-
-This article describes how to manage Microsoft Defender Antivirus security policies on devices with Defender for Endpoint Security Settings Management (in the [Microsoft Defender portal](https://security.microsoft.com)). 
-
+This article describes how to manage Microsoft Defender Antivirus security policies on devices with Defender for Endpoint Security Settings Management (in the [Microsoft Defender portal](https://security.microsoft.com)).
 
 > [!NOTE]
 > The **Endpoint Security Policies** page in the Microsoft Defender portal is available only for [users with the Security Administrator role assigned](assign-portal-access.md). Any other user role, such as Security Reader, can't access the portal. When a user has the required permissions to view policies in the Microsoft Defender portal, the data is presented based on Intune permissions. If the user is in the scope for Intune role-based access control, it applies to the list of policies presented in the Microsoft Defender portal. We recommend granting security administrators with the [Intune built-in role, "Endpoint Security Manager"](/mem/intune/fundamentals/role-based-access-control#built-in-roles) to effectively align the level of permissions between Intune and the Microsoft Defender portal.
@@ -55,7 +53,7 @@ The following list provides a brief description of each endpoint security policy
 
 ## Prerequisites
 
-Review the prerequisites [here](/mem/intune/protect/mde-security-integration). 
+Review the prerequisites [here](/mem/intune/protect/mde-security-integration).
 
 ### Supported operating systems
 
@@ -64,28 +62,27 @@ Review the prerequisites [here](/mem/intune/protect/mde-security-integration).
 - macOS
 - Linux
 
-
 ## Create an endpoint security policy
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) using an account with at least the Security Administrator role assigned.
 
-2. Select **Endpoints** > **Configuration management** > **Endpoint security policies** and then select **Create new Policy**. 
+1. Select **Endpoints** > **Configuration management** > **Endpoint security policies** and then select **Create new Policy**.
 
-3. Select a platform from the dropdown list.
+1. Select a platform from the dropdown list.
 
-4. Select a template, then select **Create policy**.
+1. Select a template, then select **Create policy**.
 
-5. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
+1. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
 
-6. On the **Settings** page, expand each group of settings, and configure the settings you want to manage with this profile.
+1. On the **Settings** page, expand each group of settings, and configure the settings you want to manage with this profile.
 
    When you're done configuring settings, select **Next**.
 
-7. On the **Assignments** page, select the groups that receive this profile.
+1. On the **Assignments** page, select the groups that receive this profile.
 
-   Select **Next**.
+1. Select **Next**.
 
-8. On the **Review + create** page, when you're done, select **Save**. The new profile is displayed in the list when you select the policy type for the profile you created.
+1. On the **Review + create** page, when you're done, select **Save**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
 > [!NOTE]
 > To edit the scope tags, you'll need to go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -93,15 +90,15 @@ Review the prerequisites [here](/mem/intune/protect/mde-security-integration).
 ## To edit an endpoint security policy
 
 1. Select the new policy, and then select **Edit**.
- 
-2. Select **Settings** to expand a list of the configuration settings in the policy. You can't modify the settings from this view, but you can review how they're configured.
 
-3. To modify the policy, select **Edit** for each category where you want to make a change:
+1. Select **Settings** to expand a list of the configuration settings in the policy. You can't modify the settings from this view, but you can review how they're configured.
+
+1. To modify the policy, select **Edit** for each category where you want to make a change:
    - Basics
    - Settings
    - Assignments
 
-4. After you've made changes, select **Save** to save your edits.  Edits to one category must be saved before you can introduce edits to more categories.
+1. After you've made changes, select **Save** to save your edits.  Edits to one category must be saved before you can introduce edits to more categories.
 
 ## Verify endpoint security policies
 
@@ -177,7 +174,7 @@ For more information, see [Configure Microsoft Defender Antivirus scanning optio
 > [!NOTE]
 > `InternalDefinitionUpdateServer` is WSUS with Microsoft Defender Antivirus updates allowed.
 > `MicrosoftUpdateServer` is Microsoft Update (formerly Windows Update).
-> `MMPC` is Microsoft Defender security intelligence center (WDSI formerly Microsoft Malware Protection Center) https://www.microsoft.com/en-us/wdsi/definitions.
+> `MMPC` is Microsoft Defender security intelligence center (WDSI formerly Microsoft Malware Protection Center) <https://www.microsoft.com/wdsi/definitions>.
 
 For more information, see the following articles:
 
@@ -196,7 +193,7 @@ For more information, see [Manage the gradual rollout process for Microsoft Defe
 
 |Description|Setting|
 |---|---|
-| Platform Updates Channel |Not configured|
+|Platform Updates Channel |Not configured|
 
 For more information, see [Manage the gradual rollout process for Microsoft Defender updates](/defender-endpoint/manage-gradual-rollout).
 
@@ -213,7 +210,6 @@ For more information, see [Manage the gradual rollout process for Microsoft Defe
 | Enable Low CPU Priority | Disabled (Default)|
 | Disable Catchup Full Scan | Enabled (Default)|
 | Disable Catchup Quick Scan | Enabled (Default)|
-
 
 ***Daily Quick Scan***
 
@@ -232,7 +228,6 @@ For more information, see [Manage the gradual rollout process for Microsoft Defe
 | Scan Parameter | Quick scan (Default) |
 | Schedule Scan Day | Windows Clients: Wednesday <br/> Windows Servers: Saturday |
 | Schedule Scan Time | Windows Clients: 1020 <br/> Windows Servers: 60|
-
 
 > [!NOTE]
 > In this example, a quick scan runs for Windows clients on Wednesday's at 5:00 PM. (1020).
@@ -300,31 +295,31 @@ For more information, see [Use network protection to help prevent connections to
 
 1. When you're done configuring settings, select **Next**.
 
-2. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**.
+1. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**.
 
-3. Select **Next**.
+1. Select **Next**.
 
-4. On the **Review + create** tab, review your policy settings, and then select **Save**.
-
+1. On the **Review + create** tab, review your policy settings, and then select **Save**.
+1. 
 ### Attack Surface Reduction rules
 
 To enable Attack Surface Reduction (ASR) rules using the endpoint security policies, perform the following steps:
 
 1. Sign in to [Microsoft Defender XDR](https://sip.security.microsoft.com/).
 
-2. Go to **Endpoints > Configuration management > Endpoint security policies > Windows policies > Create new policy**.
+1. Go to **Endpoints > Configuration management > Endpoint security policies > Windows policies > Create new policy**.
 
-3. Select **Windows 10, Windows 11, and Windows Server** from the **Select Platform** drop-down list.
+1. Select **Windows 10, Windows 11, and Windows Server** from the **Select Platform** drop-down list.
 
-4. Select **Attack Surface Reduction Rules** from the **Select Template** drop-down list.
+1. Select **Attack Surface Reduction Rules** from the **Select Template** drop-down list.
 
-5. Select **Create policy**.
+1. Select **Create policy**.
 
-6. On the **Basics** page, enter a name and description for the profile; then, choose **Next**.
+1. On the **Basics** page, enter a name and description for the profile; then, choose **Next**.
 
-7. On the **Configuration settings** page, expand the groups of settings and configure the settings that you want to manage with this profile.
+1. On the **Configuration settings** page, expand the groups of settings and configure the settings that you want to manage with this profile.
 
-8. Set the policies based on the following recommended settings:
+1. Set the policies based on the following recommended settings:
 
    |Description|Setting|
    |---|---|
@@ -354,36 +349,35 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 
    For more information, see [Attack surface reduction rules deployment overview](/defender-endpoint/attack-surface-reduction-rules-deployment).
 
-9. Select **Next**.
+1. Select **Next**.
 
-10. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**.
+1. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**.
 
-11. Select **Next**.
+1. Select **Next**.
 
-12. On the **Review + create** tab, review your policy settings, and then select **Save**.
-
+1. On the **Review + create** tab, review your policy settings, and then select **Save**.
 
 #### Enable Tamper Protection
 
 1. Sign in to [Microsoft Defender XDR](https://sip.security.microsoft.com/).
 
-2. Go to **Endpoints > Configuration management > Endpoint security policies > Windows policies > Create new policy**.
+1. Go to **Endpoints > Configuration management > Endpoint security policies > Windows policies > Create new policy**.
 
-3. Select **Windows 10, Windows 11, and Windows Server** from the **Select Platform** drop-down list.
+1. Select **Windows 10, Windows 11, and Windows Server** from the **Select Platform** drop-down list.
 
-4. Select **Security Experience** from the **Select Template** drop-down list.
+1. Select **Security Experience** from the **Select Template** drop-down list.
 
-5. Select **Create policy**. The **Create a new policy** page appears.
+1. Select **Create policy**. The **Create a new policy** page appears.
 
-6. On the **Basics** page, enter a name and description for the profile in the **Name** and **Description** fields, respectively.
+1. On the **Basics** page, enter a name and description for the profile in the **Name** and **Description** fields, respectively.
 
-7. Select **Next**.
+1. Select **Next**.
 
-8. On the **Configuration settings** page, expand the groups of settings.
+1. On the **Configuration settings** page, expand the groups of settings.
 
-9. From these groups, select the settings that you want to manage with this profile.
+1. From these groups, select the settings that you want to manage with this profile.
 
-10. Set the policies for the chosen groups of settings by configuring them as described in the following table:
+1. Set the policies for the chosen groups of settings by configuring them as described in the following table:
 
      |Description| Setting|
      | -------- | -------- |
@@ -395,10 +389,11 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 
 It's important to check that the Cloud Protection network connectivity is working during your penetration testing.
 
-Open Command Prompt as an administrator, and then run the following command: 
+Open Command Prompt as an administrator, and then run the following command:
 
-```powershell
+```dos
 cd "C:\Program Files\Windows Defender"
+
 MpCmdRun.exe -ValidateMapsConnection
 ```
 
@@ -454,5 +449,3 @@ To report False Negatives (FNs), see the following articles:
 - [Troubleshoot performance issues related to real-time protection](/defender-endpoint/troubleshoot-performance-issues)
 - [Run the client analyzer on Windows](/defender-endpoint/run-analyzer-windows)
 - [Performance analyzer for Microsoft Defender Antivirus](/defender-endpoint/tune-performance-defender-antivirus)
-
-
