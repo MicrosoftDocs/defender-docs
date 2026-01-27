@@ -2,8 +2,8 @@
 title: Get missing KBs by software ID
 description: Retrieves missing security updates by software ID
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro

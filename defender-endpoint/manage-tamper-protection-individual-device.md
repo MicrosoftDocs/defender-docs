@@ -61,5 +61,5 @@ If you're a home user, or you aren't subject to settings managed by a security t
 - [Protect security settings with tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md)
 - [Troubleshoot problems with tamper protection](troubleshoot-problems-with-tamper-protection.yml)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

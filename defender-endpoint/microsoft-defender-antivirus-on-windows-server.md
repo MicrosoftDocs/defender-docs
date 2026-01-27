@@ -4,8 +4,8 @@ description: Learn how to enable and configure Microsoft Defender Antivirus on W
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.reviewer: pahuijbr
 manager: bagol
 ms.topic: how-to
@@ -145,5 +145,5 @@ If a non-Microsoft antivirus product was installed on Windows Server, Microsoft 
 - [Troubleshoot performance issues related to real-time protection](troubleshoot-performance-issues.md)
 - [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

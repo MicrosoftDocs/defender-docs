@@ -25,8 +25,15 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## January 2026
 
-### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x
-Enabling Automatic Windows event-auditing configuration for sensors v3.x and related health alerts are being gradually rolled out to streamline deployment by automatically applying the required Windows event-auditing settings to new sensors and fixing misconfigurations on existing ones. Learn more [here](/deploy/configure-windows-event-collection?#configure-windows-event-auditing-with-the-defender-for-identity-sensor-v3x)
+
+### MDI alerts migrated to the unified Defender alerting experience
+As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, some alerts were converted from the Microsoft Defender for Identity classic format to the MDI XDR alert format. Keep in mind that all alerts are based on detections from Defender for Identity sensors. See [Microsoft Defender for Identity XDR security alerts](alerts-xdr.md) for the full list of XDR alerts.
+
+### New Health Alert: Sensor v3.x RPC Audit Misconfigured
+Enhanced RPC auditing is required for some Microsoft Defender for Identity advanced identity detections. A new health alert helps identify v3.x sensors where this configuration is either missing or incorrectly applied. The alert is being rolled out gradually to customers. For more information, see [Configure RPC on sensors v3.x](deploy/prerequisites-sensor-version-3.md#configure-rpc-auditing-on-sensors-v3x-to-support-advanced-identity-detections).
+
+### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x (preview)
+We’re gradually rolling out automatic Windows event-auditing configuration for sensors v3.x, along with related health alerts. This update streamlines deployment by automatically applying the required auditing settings to new sensors and correcting misconfigurations on existing ones. For more information see [Configure automatic windows auditing](deploy/configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically-preview).
 
 |Version number|Updates|
 |---|---|
@@ -129,12 +136,11 @@ As part of the ongoing transition to a unified alerting experience across Micros
 
 |Classic Alert Title|External ID|XDR Alert Name|Detector ID|
 |---|---|---|---|
-|Active Directory attributes Reconnaissance using LDAP|2210|[Active Directory attributes Reconnaissance using LDAP](alerts-xdr.md#active-directory-attributes-reconnaissance-ldap)|xdr_LdapSensitiveAttributeRecon|
-|User and IP address reconnaissance|2012|[User and IP address reconnaissance (SMB)](alerts-xdr.md#user-and-ip-address-reconnaissance-smb)|xdr_SmbSessionEnumeration|
-|Account enumeration reconnaissance|2003|[Account enumeration reconnaissance in AD FS](alerts-xdr.md#account-enumeration-reconnaissance-in-ad-fs)|xdr_AccountEnumerationHintSecurityAlertAdfs|
-|||[Account enumeration reconnaissance in Kerberos](alerts-xdr.md#account-enumeration-reconnaissance-in-kerberos)|xdr_AccountEnumerationHintSecurityAlertKerberos|
-|||[Account enumeration reconnaissance in NTLM](alerts-xdr.md#account-enumeration-reconnaissance-in-ntlm)|xdr_AccountEnumerationHintSecurityAlertNtlm|
-|Suspected brute-force attack (LDAP)|2004|[Suspected brute-force attack (LDAP)](alerts-xdr.md#suspected-brute-force-attack-ldap)|xdr_LdapBindBruteForce|
+|Active Directory attributes Reconnaissance using LDAP|2210|[LDAP reconnaissance attributes in Active Directory](alerts-xdr.md#ldap-reconnaissance-attributes-in-active-directory)|xdr_LdapSensitiveAttributeReconnaissance|
+|User and IP address reconnaissance|2012|[Suspicious Server Message Block (SMB) enumeration from untrusted host](alerts-xdr.md#suspicious-server-message-block-smb-enumeration-from-untrusted-host)|xdr_SmbSessionEnumeration|
+|Account enumeration reconnaissance|2003|[Suspected account enumeration (Kerberos, NTLM, AD FS)](alerts-xdr.md#suspected-account-enumeration-kerberos-ntlm-ad-fs)|xdr_SuspectedAccountEnumeration|
+|Suspected brute-force attack (LDAP)|2004|[Suspected brute-force attack on Lightweight Directory Access Protocol (LDAP) authentication](alerts-xdr.md#suspected-brute-force-attack-on-lightweight-directory-access-protocol-ldap-authentication)|xdr_LdapBindBruteforce|
+|||[Suspected password spray attack on Lightweight Directory Access Protocol (LDAP) authentication](alerts-xdr.md#suspected-password-spray-attack-on-lightweight-directory-access-protocol-ldap-authentication)|xdr_LdapBindBruteforce|
 |Suspicious network connection over Encrypting File System Remote Protocol|2416|[Suspicious network connection over Encrypting File System Remote Protocol](alerts-xdr.md#suspicious-network-connection-over-encrypting-file-system-remote-protocol)|xdr_SuspiciousConnectionOverEFSRPC|
 
 ### Additional security value in the Defender for Identity sensor v3.x
