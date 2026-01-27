@@ -2,8 +2,8 @@
 title: Software methods and properties
 description: Retrieves top recent alerts.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro

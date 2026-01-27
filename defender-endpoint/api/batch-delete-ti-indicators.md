@@ -4,8 +4,8 @@ description: Learn how to use the Batch Delete Indicators API to delete indicato
 ms.service: defender-endpoint
 ms.subservice: reference
 ms.reviewer: itsela
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 ms.collection:

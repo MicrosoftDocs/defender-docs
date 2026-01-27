@@ -2,8 +2,8 @@
 title: List exposure score by device group
 description: Retrieves a list of exposure scores by device group.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
