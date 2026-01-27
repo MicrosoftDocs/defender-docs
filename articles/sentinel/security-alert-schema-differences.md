@@ -83,5 +83,5 @@ The Microsoft Cloud App Security connector has no schema differences between the
 
 To continue working with alerts in Microsoft Sentinel, see:
 
-- [Create and manage analytic rules](create-analytics-rules.md)  
+- [Create and manage analytic rules](create-analytics-rules.md)
 - [Use workbooks in Microsoft Sentinel](monitor-your-data.md)
