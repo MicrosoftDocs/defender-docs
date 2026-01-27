@@ -233,7 +233,7 @@ Workbooks are available in the Defender portal under **Microsoft Sentinel > Thre
 - [Microsoft Sentinel data lake permissions integrated with Microsoft Defender XDR unified RBAC](#microsoft-sentinel-data-lake-permissions-integrated-with-microsoft-defender-xdr-unified-rbac)
 - [For new customers only: Automatic onboarding and redirection to the Microsoft Defender portal](#for-new-customers-only-automatic-onboarding-and-redirection-to-the-microsoft-defender-portal)
 - [No limit on the number of workspaces you can onboard to the Defender portal](#no-limit-on-the-number-of-workspaces-you-can-onboard-to-the-defender-portal)
-- [Microsoft Sentinel in the Azure portal to be retired July 2026](#microsoft-sentinel-in-the-azure-portal-to-be-retired-july-2026)
+- [Microsoft Sentinel in the Azure portal to be retired April 2027](#microsoft-sentinel-in-the-azure-portal-to-be-retired-april-2027)
 
 ### Microsoft Sentinel data lake
 
@@ -304,7 +304,7 @@ For more information, see:
 - [Multiple Microsoft Sentinel workspaces in the Defender portal](workspaces-defender-portal.md)
 - [Extend Microsoft Sentinel across workspaces and tenants](extend-sentinel-across-workspaces-tenants.md)
 
-### Microsoft Sentinel in the Azure portal to be retired July 2026
+### Microsoft Sentinel in the Azure portal to be retired April 2027
 
 [!INCLUDE [sentinel-azure-deprecation](includes/sentinel-azure-deprecation.md)]
 
