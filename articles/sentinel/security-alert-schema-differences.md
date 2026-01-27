@@ -54,7 +54,7 @@ The standalone Microsoft Defender for Identity (MDI) connector sometimes used pl
 | ResourceAccessInfo.ResourceIdentifier.ResourceName | `resourceAccessEvents[].ResourceIdentifier` |
 | DomainResourceIdentifier | `resourceAccessEvents[].ResourceIdentifier` |
 
-ResourceAccessInfo.ComputerId is no longer required and corresponds to the Host entity.
+ResourceAccessInfo.ComputerId is no longer required because it is identical to the Host entity.
 
 ## Alert ingestion filtering
 
