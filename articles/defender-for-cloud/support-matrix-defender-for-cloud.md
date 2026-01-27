@@ -73,7 +73,6 @@ In the support table, **NA** indicates that the feature isn't available.
 |**FOUNDATIONAL CSPM FEATURES (FREE)** | | ||
 | [Asset inventory](asset-inventory.md) | GA | GA | GA |
 | [Security recommendations](security-policy-concept.md) based on the [Microsoft Cloud Security Benchmark](concept-regulatory-compliance.md)  | GA | GA | GA |
-| [Recommendation exemptions](exempt-resource.md) | Preview | NA | NA |
 | [Secure score](secure-score-security-controls.md) | GA | GA | GA |
 | [DevOps security posture](concept-devops-environment-posture-management-overview.md) | Preview | NA | NA |
 | **DEFENDER Cloud Security Posture Management (CSPM) FEATURES** | | | |
