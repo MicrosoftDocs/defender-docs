@@ -10,14 +10,20 @@ ms.reviewer: rlitinsky
 
 This article describes the requirements for installing the Microsoft Defender for Identity sensor v3.x.
 
-## Sensor version limitations 
+## Before you begin
 
-Before activating the Defender for Identity sensor v3.x, keep these considerations in mind before activating the sensor.
-The Defender for Identity sensor v3.x:
-- Requires that Defender for Endpoint is deployed and that the Microsoft Defender Antivirus component is running in either active mode or passive mode.
- - Can't be activated on a server that has a Defender for Identity sensor V2.x already deployed.
- - Doesn't currently support VPN integration.
- - Doesn't currently support ExpressRoute.
+Before activating the Defender for Identity sensor v3.x, keep in mind that the server on which you are activating the sensor:
+
+- Must have Defender for Endpoint deployed
+- Must have a Microsoft Defender Antivirus component running in either active or passive mode.
+- Can't have a Defender for Identity sensor V2.x already deployed.
+
+## Sensor version limitations
+
+Before activating the Defender for Identity sensor v3.x, keep in mind that v3.x:
+
+- Doesn't currently support VPN integration.
+- Doesn't currently support ExpressRoute.
 
 ## Licensing requirements
 
@@ -28,11 +34,9 @@ Microsoft 365 E5 (Microsoft E5/A5/G5)
 Microsoft 365 E5/A5/G5/F5* Security
 Microsoft 365 F5 Security + Compliance*
 
-* Both F5 licenses require Microsoft 365 F1/F3 or Office 365 F3 and Enterprise Mobility + Security E3.
+- Both F5 licenses require Microsoft 365 F1/F3 or Office 365 F3 and Enterprise Mobility + Security E3.
 
-You can purchase licenses in the Microsoft 365 portal, or with Cloud Solution Partner (CSP) licensing.
-
-For more information, see [Licensing and privacy FAQs](/defender-for-identity/technical-faq#licensing-and-privacy).
+You can purchase licenses in the Microsoft 365 portal, or with Cloud Solution Partner (CSP) licensing. For more information, see [Licensing and privacy FAQs](/defender-for-identity/technical-faq#licensing-and-privacy).
 
 ## Roles and permissions
 
@@ -54,9 +58,10 @@ The following table summarizes the server requirements and recommendations for t
 |Connectivity|Requires a Microsoft Defender for Endpoint deployment. If Microsoft Defender for Endpoint is installed on the domain controller, there are no additional connectivity requirements.   |
 |Server time synchronization|The servers and domain controllers onto which the sensor is installed must have time synchronized to within five minutes of each other.|
 |ExpressRoute|This version of the sensor doesn't support ExpressRoute. If your environment uses ExpressRoute,  we recommend [deploying the Defender for Identity sensor v2.x](install-sensor.md).|
-|Identity and response actions|The sensor doesn't require credentials to be provided in the portal. Even if credentials are entered, the sensor uses the **Local System identity** on the server to query Active Directory and perform response actions. If a **Group Managed Service Account (gMSA)** is configured for response actions, the response actions are disabled. |
+|Identity and response actions| - The sensor uses the Local System identity on the server to query Active Directory and perform response actions. The local system identity is used even if if credentials are entered in the portal. If a **Group Managed Service Account (gMSA)** is configured for response actions, the response actions are disabled.<br> - In environments that use both v2 and v3 sensors, use local system accounts for all of your sensors. |
 
 ### Dynamic memory requirements
+The new sensor is capped at 30% CPU utilization and 1.5 GB of memory usage. The resource caps significantly improve coexistence by preventing the sensor from overusing CPU or memory. However, if Falcon Identity already consumes substantial system resources, the Domain Controller may still experience performance strain. The sensor v3.x is more efficient than the v2 version, making coexistence much more feasible—as long as the DC is properly sized and maintained.
 
 The following table describes memory requirements on the server used for the Defender for Identity sensor, depending on the type of virtualization you're using:
 
@@ -71,9 +76,7 @@ The following table describes memory requirements on the server used for the Def
 
 ## Configure RPC auditing on sensors v3.x to support advanced identity detections
 
-Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability on the machine, improving security visibility and unlocking additional identity detections. Once applied, the configuration is enforced on **existing and future devices** that match the rule criteria. The tag itself is visible in the Device Inventory, providing admins with transparency and auditing capabilities.
-
-**Steps to apply the configuration:**
+Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability on the machine, improving security visibility and unlocking additional identity detections. Once applied, the configuration is enforced on **existing and future devices** that match the rule criteria. You can see the tag is visible in the Device Inventory for transparency and auditing capabilities.
 
 1. In the **Microsoft Defender portal**, navigate to: **System > Settings > Microsoft Defender XDR > Asset Rule Management**.
 1. Select **Create a new rule**.
@@ -82,19 +85,16 @@ Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability o
 
 1. In the side panel:
 
-   1. Enter a **Rule name** and **Description**.
-   
-   1. Set **rule conditions** using `Device name`, `Domain`, or `Device tag` to target the desired machines.
-   
-   1. Ensure that the **Defender for Identity sensor v3.x** is already deployed on the selected devices.
-    
-   1. Matching should primarily target **domain controllers** with the sensor v3.x installed.
-    
-1. **Add the tag** `Unified Sensor RPC Audit` to the selected devices.    
+   1. Enter a **Rule name** and **Description**.   
+   1. Set **rule conditions** using `Device name`, `Domain`, or `Device tag` to target the desired machines.Target domain controllers with the sensor v3.x installed.
+   1. Make sure that the **Defender for Identity sensor v3.x** is already deployed on the selected devices.
+
+1. Add the **Unified Sensor RPC Audit** tag to the selected devices.
 
     ![Screenshot that shows the config tag.](media/prerequisites-sensor-version-3/tag.png)
 
-1. Select **Next** to review and finish creating the rule and then select **Submit**.
+1. Select **Next** to review and finish creating the rule, and then select **Submit**. Allow up to one hour for the rule to take effect.
+
 
 ### Updating rules
    Offboarding a device from this configuration can be done **only** from **deleting the asset rule** or **modifying the rule conditions** so the device no longer matches.

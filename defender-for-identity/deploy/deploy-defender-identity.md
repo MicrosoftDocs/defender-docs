@@ -16,9 +16,10 @@ We recommend installing Defender for Identity sensors on all domain controllers,
 
 ## Select your deployment method
 
-Once you've completed the steps to prepare your environment, and assigned roles and permissions for Defender for Identity, create a plan for onboarding. 
+Once you've completed the steps to prepare your environment, and assigned roles and permissions for Defender for Identity, create a plan for onboarding.
+Identify your architecture and your requirements, and then use the table below to select the appropriate deployment for the servers in your environment.
 
-Identify your architecture and your requirements, and then use the table below to select the appropriate deployment for the servers in your environment. 
+:::image type="content" source="media/deploy-defender-identity/mdi-sensor-deployment-decision.png" alt-text="A graphic showing the decision tree explaining how to decide which sensor to deploy.":::
 
 |Server configuration   |Server Operating System  |Recommended deployment |
 |---------|---------|---------|
@@ -28,8 +29,10 @@ Identify your architecture and your requirements, and then use the table below t
 |[Active Directory Certificate Services (AD CS)](active-directory-federation-services.md)     |  Windows Server 2016 or later        |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)      |
 |[Microsoft Entra Connect](active-directory-federation-services.md)|  Windows Server 2016 or later     |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)     |
 
+Before activating the Defender for Identity sensor v3.x, keep in mind that v3.x:
 
-Once you've evaluated your infrastructure and requirements, follow the instructions for deploying the sensor based on the version you need.
+  - Doesn't currently support VPN integration.
+  - Doesn't currently support ExpressRoute.
 
 ## Next steps
 - [Prepare your environment](prerequisites-sensor-version-2.md).
