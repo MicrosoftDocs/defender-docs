@@ -6,8 +6,8 @@ ms.subservice: ngp
 ms.localizationpriority: medium
 ms.date: 10/20/2025
 ms.topic: how-to
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.custom: 
 - nextgen
 - partner-contribution

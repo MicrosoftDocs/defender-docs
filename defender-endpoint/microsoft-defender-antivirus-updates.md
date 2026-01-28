@@ -6,8 +6,8 @@ ms.localizationpriority: high
 ms.date: 10/20/2025
 audience: ITPro
 ms.topic: reference
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.subservice: ngp
 search.appverid: met150
 appliesto:

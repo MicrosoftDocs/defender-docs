@@ -55,7 +55,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 1. Sign into [Miro](https://miro.com/app/dashboard/) portal with a company admin account.
 1. Create a developer team with default permissions.
-1. Create a new application in the developer team. 
+1. Create a new application in the developer team and ensure the “Expire user authentication token” setting is checked.
 1. Copy the **Client ID** and **Client secret**. You'll need them later.
 1. Configure 'OAuth2.0' by setting the redirect URL to 'https://portal.cloudappsecurity.com/api/oauth/saga'.
 1. Grant these required permissions, and then select **Install app and get OAuth token**.

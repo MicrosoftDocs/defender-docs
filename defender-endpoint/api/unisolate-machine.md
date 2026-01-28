@@ -2,8 +2,8 @@
 title: Release device from isolation API
 description: Use this API to create calls related to release a device from isolation.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
