@@ -1,17 +1,14 @@
 ---
 title: Link/Unlink an account to an identity
 description: This article explains how to link or unlink accounts to and from identities in Microsoft Defender for Identity, including legacy, orphaned, or unused accounts.
-ms.date: 01/07/2026
+ms.date: 01/28/2026
 ms.topic: how-to
 ms.service: microsoft-defender-for-identity
 ms.reviewer: Almog Omrad
 #customer intent: As a SOC analyst, I want to view all accounts linked to an identity so that I can gain a complete and accurate understanding of the identity's footprint across the organization, validate accounts correlated are correct, and remove any unused, legacy, or orphaned accounts from the identity.
 ---
 
-# Manage related identities and accounts in Microsoft Defender for Identity (Preview)
-
-> [!NOTE]
-> The features described in this article are currently in Preview, aren't available in all organizations, and are subject to change.
+# Manage related identities and accounts in Microsoft Defender for Identity 
 
 In enterprise environments, identities are often fragmented. A single user might have multiple accounts across systems, including personal, privileged, legacy, cloud-based, or orphaned accounts. These accounts can cover on-premises Active Directory, Microsoft Entra ID, or non-Microsoft identity providers such as Okta and Ping.
 
@@ -92,7 +89,6 @@ Use the procedures in this article to manually link accounts to identities, and 
 
 - The selected accounts are linked or unlinked immediately.
 - The system updates the identity context and refreshes the account list.
-- All actions are recorded in the [unified audit system](/purview/audit-solutions-overview), including the justification and the user who did the linking or unlinking.
 
 ## See also
 
