@@ -45,6 +45,7 @@ This table includes supported versions released in for all supported platforms i
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|macOS  |101.25122.0006  |January 2026 |- Release version: 20.125122.6.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--january-2026--101251220006) |
 |Android |1.0.8412.0101  |December 2025 |- Build: 1.0.8412.0101<br>- Released: December 15, 2025 |[Release details and updates](#android--december-2025--1084120101) |
 |Android |1.0.8321.0101  |December 2025 |- Build: 1.0.8321.0101<br>- Released: December 2, 2025 |[Release details and updates](#android--december-2025--1083210101) |
 |macOS  |101.25102.0019  |December 2025 |- Release version: 20.125102.19.0<br>- Engine version: 1.1.25090.2000<br>- Signature version: 1.435.600.0 |[Release details and updates](#macos--december-2025--101251020019) |
@@ -144,6 +145,20 @@ This table includes supported versions released in for all supported platforms i
 ## macOS versions
 
 See the list of [macOS known issues](#known-issues).
+
+### macOS | January 2026 | 101.25122.0006
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+| -------- | -------- |-------- |
+|20.125122.6.0 |1.1.25100.4000 |1.439.74.0 |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|---------------|
+| General | Bug and performance fixes. |
 
 ### macOS | December 2025 | 101.25102.0019
 
