@@ -4,7 +4,7 @@ description: Understand current limitations and known issues when using Microsof
 author: dlanger
 ms.author: dlanger
 ms.topic: reference
-ms.date: 11/10/2025
+ms.date: 01/28/2026
 ms.service: defender-for-cloud
 ---
 
