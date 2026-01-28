@@ -9,9 +9,9 @@ ms.date: 01/28/2026
 
 # Exempt resources at scale
 
-Defender for Cloud presents a list of affected resources to be investigated through recommendations. Occasionally, a resource might appear that doesn't need to be included, or a recommendation appears in a scope where it's not relevant.
+Microsoft Defender for Cloud presents a list of affected resources to investigate through recommendations. Occasionally, a resource doesn't need to be included, or a recommendation appears in a scope where it's not relevant.
 
-For example, Defender for Cloud might not track the process that remediates a resource, or a specific subscription might not require a recommendation. Organizations might accept the risks for specified resources or recommendations. In these cases, exemptions can be created at scale to:
+For example, Defender for Cloud might not track the process that remediates a resource, or a specific subscription might not require a recommendation. Organizations might accept the risks for specified resources or recommendations. In these cases, create exemptions at scale to:
 
 - Prevent a resource from being listed as unhealthy or affecting the secure score by excluding it. Defender for Cloud marks it as "not applicable" and displays the selected justification.
 
@@ -24,13 +24,13 @@ For example, Defender for Cloud might not track the process that remediates a re
 
 ## Create exemptions at scale
 
-To tailor your security posture, you can create exemptions for recommendations that aren't applicable or already mitigated. 
+To tailor your security posture, create exemptions for recommendations that aren't applicable or are already mitigated. 
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Search for and select **Microsoft Defender for Cloud**.
 
-1. Navigate to **Environment settings** > **Exemptions**.
+1. Go to **Environment settings** > **Exemptions**.
 
     :::image type="content" source="media/exempt-resources-at-scale/exemptions.png" alt-text="Screenshot that shows where the exemptions button is located on the environment settings screen." lightbox="media/exempt-resources-at-scale/exemptions.png":::
 
@@ -40,9 +40,9 @@ To tailor your security posture, you can create exemptions for recommendations t
 
     :::image type="content" source="media/exempt-resources-at-scale/create-exemption.png" alt-text="Screenshot that shows the exemption creation screen." lightbox="media/exempt-resources-at-scale/create-exemption.png":::
 
-1. Select a Cloud platform.
+1. Select a cloud platform.
 
-1. Select, either a Management group, subscription or resource (per subscription).
+1. Select a management group, subscription, or resource (per subscription).
 
 1. Select a category, <br>
 
@@ -70,7 +70,7 @@ To tailor your security posture, you can create exemptions for recommendations t
 
 The exemption is created and applied to the selected resources or recommendations.
 
-If you want to view or manage existing exemptions, you can return to the **Exemptions** page in the Defender for Cloud menu and select the three dot button **...** next to the exemption you want to manage. From there, you can edit or delete the exemption as needed.
+To view or manage existing exemptions, return to the **Exemptions** page in the Defender for Cloud menu. Select the three dot button **...** next to the exemption you want to manage. From there, you can edit or delete the exemption as needed.
 
 ## Next step
 
