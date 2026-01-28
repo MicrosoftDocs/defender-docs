@@ -45,6 +45,10 @@ Whether a detected message is quarantined by default depends on the following fa
   - High confidence phishing detections by [anti-spam policies](anti-spam-policies-configure.md).
 - Whether you're using the Standard and/or Strict [preset security policies](preset-security-policies.md). The Strict profile quarantines more types of detections than the Standard profile.
 
+> [!IMPORTANT]
+> Quarantine can't be completely turned off in Microsoft 365. Some message types, such as malware and high-confidence phishing, are always quarantined for security reasons.
+> However, administrators can reduce how often messages are quarantined by modifying anti-spam and anti-phishing policies, disabling preset security policies (Standard or Strict), or changing actions to deliver messages to the Junk Email folder instead of quarantine.
+
 <sup>\*</sup> Malware filtering is skipped on SecOps mailboxes that are identified in the advanced delivery policy. For more information, see [Configure the advanced delivery policy for non-Microsoft phishing simulations and email delivery to SecOps mailboxes](advanced-delivery-policy-configure.md).
 
 The default actions for email protection features in Microsoft 365, including preset security policies, are described in the feature tables in [Recommended email and collaboration threat policy settings for cloud organizations](recommended-settings-for-eop-and-office365.md).
