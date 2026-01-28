@@ -2,8 +2,8 @@
 title: Live response command examples
 description: Learn to run basic or advanced live response commands for Microsoft Defender for Endpoint, and see examples on how they're used.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro

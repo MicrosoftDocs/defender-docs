@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot Microsoft Defender Antivirus performance issues with WPRUI
 description: Troubleshoot Microsoft Defender Antivirus performance issues with WPRUI
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: troubleshooting-general
