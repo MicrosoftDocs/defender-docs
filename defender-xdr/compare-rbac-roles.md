@@ -191,7 +191,7 @@ Use the following table to learn how your existing permissions for Microsoft Sen
 |Sentinel Responder|Security operations \ Security data \ Security data basic (read) </br>Security operations \ Security data \ Alerts (manage) </br>Security operations \ Security data \ Response (manage)|
 |Sentinel Contributor|Security operations \ Security data \ Security data basic (read) </br>Security operations \ Security data \ Alerts (manage)  </br>Security operations \ Security data \ Response (manage) </br>Authorization and settings \ Detection tuning (manage)|
 
-**Not supported:** The following roles aren't available in unified RBAC and must be managed in the Azure portal: Microsoft Sentinel Playbook Operator, Automation Contributor, and Workbook Contributor.
+The following roles aren't available in unified RBAC and must be managed in the Azure portal: Microsoft Sentinel Playbook Operator, Automation Contributor, and Workbook Contributor.
 
 
 
