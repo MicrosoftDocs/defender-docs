@@ -8,18 +8,18 @@ ms.reviewer: rlitinsky
 
 # Microsoft Defender for Identity deployment overview
 
-Defender for Identity uses sensors to collect signals from your on-premises identity infrastructure to detect threats. This article explains the Microsoft Defender for Identity deployment process.
+Defender for Identity uses sensors to collect signals from your on-premises identity infrastructure to detect threats. This article explains the Defender for Identity deployment process.
 
-Defender for Identity detects threats like privilege escalation or high-risk lateral movement and reports on easily exploited identity issues like unconstrained Kerberos delegation for correction by the security team.
+Defender for Identity detects threats like privilege escalation or high-risk lateral movement, and reports on easily exploited identity issues like unconstrained Kerberos delegation for correction by the security team.
 
-We recommend installing Defender for Identity sensors on all domain controllers, including read-only domain controllers (RODCs). If you have an AD FS, AD CS, or a Microsoft Entra Connect farm or cluster in your environment, install the sensor on each server.
+We recommend installing Defender for Identity sensors on all domain controllers, including read-only domain controllers (RODCs). If you have an AD FS, AD CS, or Microsoft Entra Connect farm or cluster in your environment, install the sensor on each server.
 
 ## Select your deployment method
 
-Once you've completed the steps to prepare your environment, and assigned roles and permissions for Defender for Identity, create a plan for onboarding.
-Identify your architecture and your requirements, and then use the table below to select the appropriate deployment for the servers in your environment.
+After you complete the steps to prepare your environment and assign roles and permissions for Defender for Identity, create a plan for onboarding.
+Identify your architecture and requirements, and then use the following table to select the appropriate deployment for the servers in your environment.
 
-:::image type="content" source="media/deploy-defender-identity/sensor-deployment-decision.png" alt-text="A graphic showing the decision tree explaining how to decide which sensor to deploy.":::
+:::image type="content" source="media/deploy-defender-identity/sensor-deployment-decision.png" alt-text="Diagram that shows the decision tree for choosing which sensor to deploy.":::
 
 |Server configuration   |Server Operating System  |Recommended deployment |
 |---------|---------|---------|
@@ -29,11 +29,11 @@ Identify your architecture and your requirements, and then use the table below t
 |[Active Directory Certificate Services (AD CS)](active-directory-federation-services.md)     |  Windows Server 2016 or later        |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)      |
 |[Microsoft Entra Connect](active-directory-federation-services.md)|  Windows Server 2016 or later     |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)     |
 
-Before activating the Defender for Identity sensor v3.x, keep in mind that v3.x:
+Before you activate the Defender for Identity sensor v3.x, keep in mind that v3.x:
 
-  - Doesn't currently support VPN integration.
-  - Doesn't currently support ExpressRoute.
+  - Doesn't support VPN integration.
+  - Doesn't support ExpressRoute.
 
 ## Next steps
-- [Prepare your environment](prerequisites-sensor-version-2.md).
-- Set up [Microsoft Defender for Identity role groups](../role-groups.md).
+- [Prepare your environment](prerequisites-sensor-version-2.md)
+- [Set up Microsoft Defender for Identity role groups](../role-groups.md)
