@@ -2,8 +2,8 @@
 title: Investigate domains and URLs associated with an alert
 description: Use the investigation options to see if devices and servers have been communicating with malicious domains.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -121,7 +121,7 @@ The Clicks tab provides a detailed view of all the clicks to the URL or domain o
 ## Related articles
 
 - [View and organize the Microsoft Defender for Endpoint Alerts queue](alerts-queue.md)
-- [Manage Microsoft Defender for Endpoint alerts](manage-alerts.md)
+- [Manage Microsoft Defender for Endpoint alerts](/defender-xdr/investigate-alerts?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#manage-alerts)
 - [Investigate Microsoft Defender for Endpoint alerts](investigate-alerts.md)
 - [Investigate a file associated with a Microsoft Defender for Endpoint alert](investigate-files.md)
 - [Investigate devices in the Microsoft Defender for Endpoint Devices list](investigate-machines.md)

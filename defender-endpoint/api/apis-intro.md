@@ -4,8 +4,8 @@ ms.reviewer:
 description: Learn how you can use APIs to automate workflows and innovate based on Microsoft Defender for Endpoint capabilities
 ms.service: defender-endpoint
 ms.subservice: reference
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 ms.date: 11/11/2025
 manager: bagol

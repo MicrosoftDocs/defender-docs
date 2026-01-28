@@ -1,15 +1,15 @@
 ---
 title: Run the client analyzer on macOS
 description: Learn how to use the Defender for Endpoint Client Analyzer on Mac to identify health or performance issue causes.
-ms.author: kesharab
-author: KesemSharabi
+ms.author: chrisda
+author: chrisda
 manager: bagol
 ms.reviewer: joshbregman
 ms.service: defender-endpoint
 ms.subservice: macos
 ms.localizationpriority: medium
 ms.topic: troubleshooting-general
-ms.date: 12/31/2025
+ms.date: 01/25/2025
 ms.custom: partner-contribution
 ms.collection:
 - m365-security
@@ -37,7 +37,7 @@ If you're experiencing reliability or device health issues with Microsoft Defend
    If you're using a terminal, download the tool by running the following command:
 
    ```bash
-   wget --quiet -O XMDEClientAnalyzerBinary.zip "https://go.microsoft.com/fwlink/?linkid=2297517"
+   curl -s -L -o XMDEClientAnalyzerBinary.zip "https://go.microsoft.com/fwlink/?linkid=2297517"
    ```
 
 1. Verify the download.
@@ -91,7 +91,7 @@ The tool currently requires Python version 3 or later to be installed on your de
    If you're using a terminal, download the tool by running the following command:
 
    ```bash
-   wget --quiet -O XMDEClientAnalyzer.zip https://aka.ms/XMDEClientAnalyzer
+   curl -L -o XMDEClientAnalyzer.zip https://aka.ms/XMDEClientAnalyzer
    ```
 
 1. Verify the download by running one of the following commands:
