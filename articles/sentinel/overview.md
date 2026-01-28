@@ -5,7 +5,7 @@ author: guywi-ms
 ms.author: guywild
 ms.topic: overview
 ms.service: microsoft-sentinel
-ms.date: 09/14/2025
+ms.date: 01/28/2026
 ms.custom: sfi-image-nochange
 
 # Customer intent: As a business decision-maker evaluating SIEM/SOAR solutions, I want a summary of Microsoft Sentinel’s cloud-native capabilities so I can determine whether it meets my organization’s security, compliance, and operational requirements and plan adoption or migration.
