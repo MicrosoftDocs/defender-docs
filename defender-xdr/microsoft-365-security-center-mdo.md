@@ -46,7 +46,7 @@ Defender for Office 365 safeguards your organization against malicious threats p
 
 > [!TIP]
 >
-> - Defender for Office 365 includes all the functionality in Exchange Online Protection (EOP). For more information about EOP, see [Exchange Online Protection overview](/defender-office-365/eop-about).
+> - Defender for Office 365 includes the built-in security features for all cloud mailboxes. For more information, see [Built-in security features for all cloud mailboxes](/defender-office-365/eop-about).
 >
 > - What you see or don't see in the Defender portal depends on your subscription (for example, Microsoft 365 E5 vs. an add-on or standalone Defender for Office 365 Plan 2 subscription).
 >
