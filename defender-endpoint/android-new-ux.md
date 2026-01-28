@@ -46,7 +46,7 @@ A new **Send logs to Microsoft** option has been added directly to the left navi
 
 :::image type="content" source="./media/android-new-ux/one-click-feedback-android.png" alt-text="Screenshots showing how to send logs directly to Microsoft from the Microsoft Defender mobile app options menu." border="false":::
 
- ## Key changes - September 2025
+## Key changes - September 2025
 
 We're pleased to introduce the new Onboarding screens that come up when the user starts onboarding after sign-in.
 
@@ -83,6 +83,30 @@ These are the following screens that have been shifted from old Enterprise scree
 #### Microsoft Defender Vulnerability Management consent screen
 
 :::image type="content" source="media/android-new-ux/discover-vulnerable-apps-consent-screen-light.png" alt-text="Discover vulnerable apps consent screen in light mode." border="false":::
+
+## May 2025
+
+### Alerts for activities related to open wireless connection and certificates are now detected as events
+
+Starting May 19, 2025, security operations center (SOC) analysts can now view the following as events instead of alerts:
+
+- Connecting or disconnecting to open wireless networks
+- Download/installation/removal of self-signed certificates
+
+These events can be viewed in the Timeline tab of a device page. For more information, see [Network protection](android-configure.md#network-protection).
+
+## April 2025
+
+### Deploy Defender for Endpoint prerelease builds on Android devices using Google Play preproduction tracks
+
+#### Set up a secure environment to test prerelease builds of Defender for Endpoint on Android
+
+Learn the steps on how to set up your environment for prerelease testing of Defender for Endpoint on Android. These steps are for Android devices that are onboarded to Microsoft Defender for Endpoint through the following methods:
+
+- Android Enterprise scenarios
+- Mobile Application Management (MAM) enrollment scenarios
+
+For more information, see [Deploy Defender for Endpoint prerelease builds on Android devices using Google Play preproduction tracks](mobile-pretest-android.md).
 
 ## Key changes - March 2025
  
@@ -139,3 +163,53 @@ We updated all the subordinating screens associated with the feature
 We added a new section to show **multiple alerts** together on dashboard.
 
 :::image type="content" source="media/mde-android-alerts.png" alt-text="Screensot showing the new updates to the alerts feature on the MDE Android app." lightbox="media/mde-android-alerts.png":::
+
+## February 2025
+
+### Defender for Endpoint on Android now supports Android 10 as the minimum version
+
+Defender for Endpoint is ending support for Android 8, 8.1, and 9 on April 30, 2025. Moving forward, only devices running Android 10 and later are supported.
+
+How does this change affect your organization's users?
+
+* **New Users**: The application will no longer be available for new installations on devices running below Android 10. When users with Android versions below 10 attempt to download the Microsoft Defender app, Google Play store will notify them that the device is incompatible.
+* **Existing users**: The Microsoft Defender app continues to function for existing users on Android 8, 8.1, and 9 versions, but they don't receive updates from the Google Play store as they don't meet the minimum SDK version requirements. Therefore, any new updates on the app aren't available to users running an Android version prior to version 10.
+
+After discontinuing support for deprecated versions, Microsoft no longer addresses bugs or provides maintenance for unsupported operating system versions. Any issues occurring on devices running Android version prior to version 10 won't be investigated.
+
+This change is planned to go live on April 30, 2025. No explicit admin or end-user action is required.
+
+## Key changes - January 2025
+
+### Upgrading your experience: Upcoming enhancements you should know about
+
+**Key changes**:
+
+We're pleased to introduce the new dashboard for our enterprise users, which has been designed to be more user-friendly and accessible. The updated dashboard structure now includes recommendation cards for alerts and feature tiles.
+
+Recommendation cards prominently display any active alerts, ensuring you stay informed. Additionally, features are now presented in the form of tiles, enhancing ease of use and navigation.
+
+The following screenshot is an example of what the user sees in their dashboard:
+
+:::image type="content" source="media/android-whatsnew/android-dashboard-screen.png" alt-text="Screenshot showing the user's dashboard in the Microsoft Defender app.":::
+
+**Recommendation cards for alerts**:
+
+The structure of the dashboard has been updated to include a recommendation card that contains active alerts (if any). In case there are multiple alerts, resolving the top alert brings forward the next one. Recommendation cards have been implemented to provide a more cohesive user experience. These cards are designed to display important alerts and notifications prominently on the dashboard, as shown in the following table:
+
+| Card | Description |
+|---|---|
+| :::image type="content" source="media/android-whatsnew/android-connection-unsecured.png" alt-text="Screenshot of recommendation to connect to a secure network."::: | **Network protection** <br/>The user is advised to switch to a secure network. |
+| :::image type="content" source="media/android-whatsnew/android-allow-vpn.png" alt-text="Screenshot showing a recommendation to set up a VPN connection."::: | **VPN option** <br/>The user is prompted to set up a VPN connection on their device. |
+| :::image type="content" source="media/android-whatsnew/android-threat-found.png" alt-text="Screenshot showing a recommendation to take action on a detected threat."::: | **Malware detection** <br/>The user is prompted to take action on a detected threat. |
+
+**Feature tiles**:
+
+The current enterprise dashboard experience now features a tile view for your security team. The following table describes tiles your security team might see.
+
+| Tile | Description |
+|---|---|
+| :::image type="content" source="media/android-whatsnew/android-tile-networkprotection.png" alt-text="Screenshot showing the network protection tile for security administrators."::: | **Network protection** <br/>The user can see whether a connection is secured or unsecured. |
+| :::image type="content" source="media/android-whatsnew/android-tile-webprotection.png" alt-text="Screenshot of a tile that shows whether web protection is enabled on a device."::: | **Web protection** <br/>The user can see whether web protection is enabled on a user's device. |
+| :::image type="content" source="media/android-whatsnew/android-tile-appsecurity.png" alt-text="Screenshot showing the app security tile."::: | **App security** <br/>The user can see whether any threats were found in apps installed on a user's device. |
+| :::image type="content" source="media/android-whatsnew/android-tile-globalsecureaccess.png" alt-text="Screenshot showing Global Secure Access status."::: | **Global secure access** <br/>The user can see current connection status. |
