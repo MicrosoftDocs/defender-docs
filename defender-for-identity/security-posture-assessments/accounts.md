@@ -18,8 +18,7 @@ description: Lists all Microsoft Defender for Identity security posture assessme
 
 **Description**
 
-
-Lists any user accounts in Active Directory that are stale, meaning they haven't logged in at all during the past 90 days.
+This recommendation lists any user accounts in Active Directory that are stale, meaning they haven't logged in at all during the past 90 days.
 
 Excluded accounts:
 
