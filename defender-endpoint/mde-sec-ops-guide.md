@@ -181,7 +181,7 @@ These tasks are seen as maintenance for your security posture and are critical f
 
 - **Review alerts suppression**
 
-    Periodically review any alert suppression rules that have been created to confirm they're still required and valid. See [Review alerts suppression](manage-alerts.md).
+    Periodically review any alert suppression rules that have been created to confirm they're still required and valid. See [Review alerts suppression](/defender-xdr/investigate-alerts?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#built-in-alert-tuning-rules).
 
 ## Troubleshooting
 
