@@ -4,8 +4,8 @@ description: You can exclude files from scans if they've been opened by a specif
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.topic: how-to
 ms.custom: nextgen
 ms.reviewer: yongrhee
@@ -104,16 +104,16 @@ See [How to create and deploy anti-malware policies: Exclusion settings](/config
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)). Right-click the Group Policy Object you want to configure and select **Edit**.
 
-2. In the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
 
-3. Expand the tree to **Windows components \> Microsoft Defender Antivirus \> Exclusions**.
+1. Expand the tree to **Windows components \> Microsoft Defender Antivirus \> Exclusions**.
 
-4. Double-click **Process Exclusions** and add the exclusions:
+1. Double-click **Process Exclusions** and add the exclusions:
     1. Set the option to **Enabled**.
-    2. Under the **Options** section, select **Show...**.
-    3. Enter each process on its own line under the **Value name** column. See the example table for the different types of process exclusions. Enter **0** in the **Value** column for all processes.
+    1. Under the **Options** section, select **Show...**.
+    1. Enter each process on its own line under the **Value name** column. See the example table for the different types of process exclusions. Enter **0** in the **Value** column for all processes.
 
-5. Select **OK**.
+1. Select **OK**.
 
 ### Use PowerShell cmdlets to exclude files that have been opened by specified processes from scans
 
@@ -220,5 +220,4 @@ For more information on how to use PowerShell with Microsoft Defender Antivirus,
 - [Customize, initiate, and review the results of Microsoft Defender Antivirus scans and remediation](customize-run-review-remediate-scans-microsoft-defender-antivirus.md)
 - [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-windows.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

@@ -20,7 +20,7 @@ description: Admins can learn about the roles and role groups in Microsoft Defen
 ms.custom: 
 - seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 02/20/2025
+ms.date: 01/23/2026
 ---
 
 # Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview
@@ -32,7 +32,7 @@ The [Microsoft Defender portal](/defender-xdr/microsoft-365-defender-portal), [M
 - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md)
 - [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac)
 - [Permissions in the Microsoft Purview portal](/purview/purview-portal)
-- [Permissions in the Microsoft Purview portal](/purview/purview-permissions)
+- [Permissions in Microsoft Purview solutions](/purview/purview-permissions)
 - [Permissions in the Microsoft Purview governance portal](/purview/roles-permissions)
 
 These portals let you grant permissions to people who perform tasks like device management, data loss prevention, eDiscovery, retention, and so on. These people can perform only the tasks that you explicitly grant them access to. To access these portals, users need to be a global admin or a member of one or more role groups in Defender for Office 365 (**Email & collaboration** role groups) or Purview (**Microsoft Purview solutions** role groups). The [Microsoft Purview portal (preview)](/purview/purview-portal) provides access to data governance, data security, and risk and compliance solutions.
@@ -59,7 +59,7 @@ Managing permissions in Defender for Office 365 or Microsoft Purview gives users
 
 |Role group|Description|Default roles assigned|
 |---|---|---|
-|**AI Administrators**|In addition to the capabilities listed for this role in [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference#ai-administrator), use this group to assign read-only permissions to users for Data Security Posture Management for AI.|AI Administrator|
+|**AI Administrators**|In addition to the capabilities listed for this role in [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference#ai-administrator), use this group to assign read-only permissions to users for Data Security Posture Management for AI (classic) and AI-related data in the preview version of Data Security Posture Management.|AI Administrator|
 |**Attack Simulator Administrators**|Don't use this role group. Use the [Attack Simulation Administrator](/entra/identity/role-based-access-control/permissions-reference#attack-simulation-administrator) role in Microsoft Entra ID.|Attack Simulator Admin|
 |**Attack Simulator Payload Authors**|Don't use this role group. Use the [Attack Payload Author](/entra/identity/role-based-access-control/permissions-reference#attack-payload-author) role in Microsoft Entra ID.|Attack Simulator Payload Author|
 |**Audit Manager**|Manage Audit log settings and Search, View, and Export Audit logs.|Audit Logs <br/><br/> View-Only Audit Logs|
@@ -76,7 +76,7 @@ Managing permissions in Defender for Office 365 or Microsoft Purview gives users
 |**Compliance Manager Assessors**|Create assessments, implement improvement actions, and update test status for improvement actions.|Compliance Manager Assessment <br/><br/> Compliance Manager Contribution <br/><br/> Compliance Manager Reader <br/><br/> Data Connector Admin|
 |**Compliance Manager Contributors**|Create assessments and perform work to implement improvement actions.|Compliance Manager Contribution <br/><br/> Compliance Manager Reader <br/><br/> Data Connector Admin|
 |**Compliance Manager Readers**|View all Compliance Manager content except for administrator functions.|Compliance Manager Reader|
-|**Content Explorer Content Viewer**|View the contents of files in content explorer, and the prompts and response in Data Security Posture Management for AI.|Data Classification Content Viewer|
+|**Content Explorer Content Viewer**|View the contents of files in content explorer, and the prompts and response in Data Security Posture Management for AI (classic) and the preview version of Data Security Posture Management.|Data Classification Content Viewer|
 |**Content Explorer List Viewer**|View all items in content explorer in list format only.|Data Classification List Viewer|
 |**Data Catalog Curators**|Perform create, read, modify, and delete actions on catalog data objects and establish relationships between objects.|Data Map Reader <br/><br/> Data Map Writer|
 |**Data Estate Insights Admins**|Provides admin access to all insights reports across platforms and providers.|Data Map Reader <br/><br/> Insights Reader <br/><br/> Insights Writer|
@@ -84,11 +84,11 @@ Managing permissions in Defender for Office 365 or Microsoft Purview gives users
 |**Data Governance**|Grants access to data governance roles within Microsoft Purview.|Data Governance Administrator|
 |**Data Investigator**|Perform searches on mailboxes, SharePoint sites, and OneDrive locations.|Communication <br/><br/> Compliance Search <br/><br/> Custodian <br/><br/> Data Investigation Management <br/><br/> Export <br/><br/> Preview <br/><br/> Review <br/><br/> RMS Decrypt <br/><br/> Search And Purge|
 |**Data Security AI Admins**|Use this group to assign editing capabilities for Data Loss Prevention policies related to Copilot and viewing AI content in Data Security Posture Management. Review the role description for access details.|Data Security AI Admin|
-|**Data Security AI Content Viewers**|Use this group to assign read-only permissions to users in Data Security Posture Management for AI to view prompts and responses of interactions in AI apps.|Data Security AI Content Viewer|
-|**Data Security AI Viewers**|Use this group to assign read-only permissions to users for Data Security Posture Management for AI.|Data Security AI Viewer|
-|**Data Security Investigations Administrators**|Administrators for Data Security Investigations that can create and manage all investigations, processes, and settings.|Case Management <br/><br/> Compliance Search <br/><br/> Data Security Investigations Admin <br/><br/> Export <br/><br/> Preview <br/><br/> Review|
-|**Data Security Investigations investigators**|Investigators for Data Security Investigations that can create and manage assigned investigations, processes, and settings.|Case Management <br/><br/> Compliance Search <br/><br/> Data Security Investigations Investigator <br/><br/> Export <br/><br/> Preview <br/><br/> Review|
-|**Data Security Investigations Reviewers**|Reviwers for Data Security Investigations that can create and manage all assigned investigations.|Data Security Investigations Reviewer <br/><br/> Export <br/><br/> Preview <br/><br/> Review|
+|**Data Security AI Content Viewers**|Use this group to assign read-only permissions to users in Data Security Posture Management for AI (classic) and the preview version of Data Security Posture Management to view prompts and responses of interactions in AI apps.|Data Security AI Content Viewer|
+|**Data Security AI Viewers**|Use this group to assign read-only permissions to users for Data Security Posture Management for AI (classic) and the preview version of Data Security Posture Management.|Data Security AI Viewer|
+|**Data Security Investigations Admins**|Administrators for Data Security Investigations that can create and manage all investigations, processes, and settings.|Case Management <br/><br/> Compliance Search <br/><br/> Data Security Investigations Admin <br/><br/> Export <br/><br/> Preview <br/><br/> Review|
+|**Data Security Investigations Investigators**|Investigators for Data Security Investigations that can create and manage assigned investigations, processes, and settings.|Case Management <br/><br/> Compliance Search <br/><br/> Data Security Investigations Investigator <br/><br/> Export <br/><br/> Preview <br/><br/> Review|
+|**Data Security Investigations Reviewers**|Reviewers for Data Security Investigations that can create and manage all assigned investigations.|Data Security Investigations Reviewer <br/><br/> Export <br/><br/> Preview <br/><br/> Review|
 |**Data Security Management**|View all Data Security Posture Management insights, use Copilot for Security, and manage Microsoft Purview data security solutions (Data Loss Prevention, Information Protection, and Insider Risk Management).|Case Management <br/><br/> Custodian <br/><br/> Data Classification Content Download <br/><br/> Data Classification Content Viewer <br/><br/> Data Classification List Viewer <br/><br/>Data Connector Admin <br/><br/> Data Map Reader <br/><br/> Data Security Viewer <br/><br/> Information Protection Admin <br/><br/> Information Protection Analyst <br/><br/> Information Protection Investigator <br/><br/> Information Protection Reader <br/><br/> Insider Risk Management Admin <br/><br/> Insider Risk Management Analysis <br/><br/> Insider Risk Management Approval <br/><br/> Insider Risk Management Audit <br/><br/> Insider Risk Management Investigation <br/><br/> Insider Risk Management Reports Administrator <br/><br/> Insider Risk Management Sessions <br/><br/> Insights Reader <br/><br/> Purview Agent Analysis <br/><br/> Purview Evaluation Administrator <br/><br/> Review <br/><br/> Scan Reader <br/><br/> Source Reader <br/><br/> View-Only Case|
 |**Data Security Viewers**|View Data Security Posture Management (DSPM) dashboard insights and use Copilot for Security to view detailed information.|Data Security Viewer|
 |**Data Source Administrators**|Manage data sources and data scans.|Credential Reader <br/><br/> Credential Writer <br/><br/> Scan Reader <br/><br/> Scan Writer <br/><br/> Source Reader <br/><br/> Source Writer|
@@ -144,7 +144,7 @@ Roles that aren't assigned to the Organization Management role group by default 
 |---|---|---|
 |**Admin Unit Extension Manager**||Compliance Administrator <br/><br/> Organization Management <br/><br/> Purview Administrators|
 |<sup>\*</sup>**Attack Simulator Admin**|Don't use this role. Use the [Attack Simulation Administrator](/entra/identity/role-based-access-control/permissions-reference#attack-simulation-administrator) role in Microsoft Entra ID.|Attack Simulator Administrators|
-|**AI Administrator**|In addition to the capabilities listed for this role in [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference#ai-administrator), use this role for read-only access to all pages in Data Security Posture Management for AI. This role does not have access to read prompts and responses of AI interactions.|AI Administrators|
+|**AI Administrator**|In addition to the capabilities listed for this role in [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference#ai-administrator), use this role for read-only access to all pages in Data Security Posture Management for AI (classic) and for read-only access to AI-related data in the preview version of Data Security Posture Management. This role does not have access to read prompts and responses of AI interactions.|AI Administrators|
 |**Attack Simulator Payload Author**||Don't use this role. Use the [Attack Payload Author](/entra/identity/role-based-access-control/permissions-reference#attack-payload-author) role in Microsoft Entra ID.|
 |**Data Map Reader**||Data Estate Insights Admins <br/><br/> Privacy Management <br/><br/> Privacy Management Administrators <br/><br/> Privacy Management Analysts <br/><br/> Privacy Management Contributors <br/><br/> Privacy Management Investigators <br/><br/> Privacy Management Viewers|
 |<sup>\*</sup>**Attack Simulator Payload Author**|Don't use this role in the portals. Use the corresponding role in Microsoft Entra ID.|Attack Simulator Payload Authors|
@@ -176,13 +176,13 @@ Roles that aren't assigned to the Organization Management role group by default 
 |<sup>\*</sup>**Data Investigation Management**|Create, edit, delete, and control access to data investigation.|Compliance Administrator <br/><br/> Data Investigator|
 |<sup>\*</sup>**Data Map Reader**|Read actions on data map objects.|Compliance Administrator <br/><br/> Data Catalog Curators <br/><br/> Data Estate Insights Readers <br/><br/> Information Protection <br/><br/> Information Protection Admins <br/><br/> Information Protection Analysts <br/><br/> Information Protection Investigators|
 |<sup>\*</sup>**Data Map Writer**|Create, read, modify, and delete actions on data map objects and establish relationships between objects.|Data Catalog Curators|
-|<sup>\*</sup>**Data Security Investigations Admin**|Used to create and manage investigations, processes, and settings in Data Security Investigations.|Data Security Investigations Administrators|
+|<sup>\*</sup>**Data Security Investigations Admin**|Used to create and manage investigations, processes, and settings in Data Security Investigations.|Data Security Investigations Admins|
 |<sup>\*</sup>**Data Security Investigations Investigator**|Used to create and manage assigned investigations, processes, and settings in Data Security Investigations.|Data Security Investigations Investigators|
 |<sup>\*</sup>**Data Security Investigations Reviewer**|Used to review assigned investigations in Data Security Investigations.|Data Security Investigations Reviewers|
 |**Data Security AI Admin**|Role for editing Data Loss Prevention policies related to Copilot and viewing AI content in Data Security Posture Management. This role does not have access to read prompts and responses of AI interactions.|Data Security AI Admins|
-|**Data Security AI Content Viewer**|Role for read-only access to prompts and responses of AI interactions in Data Security Posture Management for AI.|Data Security AI Content Viewers|
-|**Data Security AI Viewer**|Role for read-only access to all pages in Data Security Posture Management for AI. This role does not have access to read prompts and responses of AI interactions.|Data Security AI Viewers|
-|**Data Security Viewer**|View access to Data Security Posture Management dashboard insights. Allows users to use Copilot for Security to view details.|Data Security Management|
+|**Data Security AI Content Viewer**|Role for read-only access to prompts and responses of AI interactions in Data Security Posture Management for AI (classic) and the preview version of Data Security Posture Management.|Data Security AI Content Viewers|
+|**Data Security AI Viewer**|Role for read-only access to all pages in Data Security Posture Management for AI (classic) and AI-related data in the preview version of Data Security Posture Management. This role does not have access to read prompts and responses of AI interactions.|Data Security AI Viewers|
+|**Data Security Viewer**|View access to Data Security Posture Management insights. Allows users to use Security Copilot to view details and run prompts.|Data Security Management|
 |**Device Management**|View and edit settings and reports for device management features.|Compliance Administrator <br/><br/> Compliance Data Administrator <br/><br/> Organization Management <br/><br/> Security Administrator|
 |<sup>\*</sup>**Disposition Management**|Control permissions for accessing Manual Disposition in the Defender and compliance portals.|Compliance Administrator <br/><br/> Compliance Data Administrator <br/><br/> Records Management|
 |**DLP Compliance Management**|View and edit settings and reports for data loss prevention (DLP) policies.|Compliance Administrator <br/><br/> Compliance Data Administrator <br/><br/> Organization Management <br/><br/> Security Administrator|

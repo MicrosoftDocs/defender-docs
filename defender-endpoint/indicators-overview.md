@@ -52,7 +52,7 @@ You can use IP and URL/Domain indicators to manage site access.
 
 To block connections to an IP address, type the IPv4 address in dotted-quad form (for example, `8.8.8.8`). For IPv6 addresses, specify all eight segments (for example, `2001:4860:4860:0:0:0:0:8888`). Note that wildcards and ranges aren't supported.
 
-To block connections to a domain and any of its subdomains, specify the domain (for example, `contoso.com`). This indicator matches `contoso.com` as well as `sub.contoso.com` and `anything.sub.example.com`.
+To block connections to a domain and any of its subdomains, specify the domain (for example, `contoso.com`). This indicator matches `contoso.com` as well as `sub.contoso.com` and `anything.sub.contoso.com`.
 
 To block a specific URL path, specify the URL path (for example, `https://contoso.com/block`). This indicator matches resources under the `/block` path on `contoso.com`. Note that HTTPS URL paths will only be matched in Microsoft Edge; HTTP URL paths can be matched in any browser.
 
@@ -68,9 +68,9 @@ Here's an example of how that works:
 
 1. Suppose that a user attempts to access a website on their device. The site happens to be hosted on a dangerous domain, and it should be blocked by network protection.  
 
-2. The three-way handshake via TCP/IP commences. Before it completes, a `NetworkConnectionEvents` action is logged, and its `ActionType` is listed as `ConnectionSuccess`. However, as soon as the three-way handshake process completes, network protection blocks access to the site. All of this happens quickly. A similar process occurs with [Microsoft Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview); it's when the three-way handshake completes that a determination is made, and access to a site is either blocked or allowed.
+1. The three-way handshake via TCP/IP commences. Before it completes, a `NetworkConnectionEvents` action is logged, and its `ActionType` is listed as `ConnectionSuccess`. However, as soon as the three-way handshake process completes, network protection blocks access to the site. All of this happens quickly. A similar process occurs with [Microsoft Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview); it's when the three-way handshake completes that a determination is made, and access to a site is either blocked or allowed.
 
-3. In the Microsoft Defender portal, an alert is listed in the [alerts queue](alerts-queue.md). Details of that alert include both `NetworkConnectionEvents` and `AlertEvents`. You can see that the site was blocked, even though you also have a `NetworkConnectionEvents` item with the ActionType of `ConnectionSuccess`.
+1. In the Microsoft Defender portal, an alert is listed in the [alerts queue](alerts-queue.md). Details of that alert include both `NetworkConnectionEvents` and `AlertEvents`. You can see that the site was blocked, even though you also have a `NetworkConnectionEvents` item with the ActionType of `ConnectionSuccess`.
 
 #### File hash indicators
 
@@ -175,5 +175,5 @@ Customers might experience issues with alerts for IoCs. The following scenarios 
 - [Use partner integrated solutions](partner-applications.md)
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
