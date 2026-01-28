@@ -134,5 +134,3 @@ One of the tools that you can use is the Performance Monitor (perfmon). You can 
 
 - [Proceed to set up Defender for Endpoint](switch-to-mde-phase-2.md).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
-

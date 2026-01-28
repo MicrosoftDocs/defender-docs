@@ -130,5 +130,5 @@ For information on how to configure Defender for Endpoint on Android features, s
 
 - [Mobile Application Management (MAM) basics](/mem/intune/apps/app-management#mobile-application-management-mam-basics)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

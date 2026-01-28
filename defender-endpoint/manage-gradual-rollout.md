@@ -4,8 +4,8 @@ description: Learn about the gradual update process and controls.
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
 manager: bagol
@@ -141,5 +141,5 @@ For details on how to use these tools, see [Create a custom gradual rollout proc
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

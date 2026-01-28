@@ -250,5 +250,5 @@ On January 25, 2022, we announced the general availability of Vulnerability mana
 - With this version, we're announcing support for iPadOS/iPad devices.
 - Bug fixes.
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
