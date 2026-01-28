@@ -105,7 +105,7 @@ Storage.Files_GeoAnomaly)
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Initial Access
 
-**Severity**: High/Medium/Low
+**Severity**: Informational
 
 ### **Unusual unauthenticated access to a storage container**
 
@@ -125,6 +125,8 @@ Storage.Files_GeoAnomaly)
 Storage.Files_MalwareHashReputation)
 
 **Description**: Indicates that a blob containing potential malware has been uploaded to a blob container or a file share in a storage account. This alert is based on hash reputation analysis leveraging the power of Microsoft threat intelligence, which includes hashes for viruses, trojans, spyware and ransomware. Potential causes might include an intentional malware upload by an attacker, or an unintentional upload of a potentially malicious blob by a legitimate user.
+
+Note: The alert will not be sent if the same hash alert was already sent by the Anti-Malware engine. That is, if a file with the same hash was already reported as malicious by the Anti-Malware engine, it will not be reported again for the same hash by the Defender for Storage - ATP Malware Hash Reputation Alert.
 
 **Applies to**: Azure Blob Storage, Azure Files (Only for transactions over REST API)
 
@@ -319,7 +321,7 @@ Storage.Blob_GeoAnomaly.Sensitive
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Initial Access
 
-**Severity**: Medium
+**Severity**: Informational
 
 ### **The access level of a sensitive storage blob container was changed to allow unauthenticated public access**
 
