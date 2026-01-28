@@ -194,6 +194,11 @@
       "source_path": "defender-vulnerability-management/retention-logic-mdvm.md",
       "redirect_url": "/defender-endpoint/data-storage-privacy",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management.md",
+      "redirect_url": "/defender-endpoint/whats-new-in-microsoft-defender-endpoint",
+      "redirect_document_id": false
     } 
          
   ]
