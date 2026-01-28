@@ -3,8 +3,8 @@ title: Overview of endpoint detection and response capabilities
 ms.reviewer: 
 description: Learn about the endpoint detection and response capabilities in Microsoft Defender for Endpoint
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -50,4 +50,4 @@ The response capabilities give you the power to promptly remediate threats by ac
 - [Alerts queue](alerts-queue.md)
 - [Devices list](machines-view-overview.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

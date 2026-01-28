@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint APIs connection to Power BI
 ms.reviewer: yongrhee
 description: Create a Power Business Intelligence (BI) report on top of Microsoft Defender for Endpoint APIs.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -16,21 +16,16 @@ ms.topic: how-to
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 03/21/2025
+ms.date: 01/08/2026
 appliesto:
   - Microsoft Defender for Endpoint
-
 ---
+
 # Create custom reports using Power BI
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
+[!INCLUDE [Improve request performance](../../includes/improve-request-performance.md)]
 
 In this section, you learn to create a Power BI report on top of Defender for Endpoint APIs.
 
@@ -50,14 +45,14 @@ The first example demonstrates how to connect Power BI to Advanced Hunting API, 
 
 4. Copy the code snippet below and paste it in the editor:
 
-   ```
+   ```dax
        let
            AdvancedHuntingQuery = "DeviceEvents | where ActionType contains 'Anti' | limit 20",
-   
-           HuntingUrl = "https://api.securitycenter.microsoft.com/api/advancedqueries",
-   
+
+           HuntingUrl = "https://api.security.microsoft.com/api/advancedqueries",
+
            Response = Json.Document(Web.Contents(HuntingUrl, [Query=[key=AdvancedHuntingQuery]])),
-   
+
            TypeMap = #table(
                { "Type", "PowerBiType" },
                {
@@ -78,13 +73,13 @@ The first example demonstrates how to connect Power BI to Advanced Hunting API, 
                    { "SByte",    Logical.Type },
                    { "Guid",     Text.Type }
                }),
-   
+
            Schema = Table.FromRecords(Response[Schema]),
            TypedSchema = Table.Join(Table.SelectColumns(Schema, {"Name", "Type"}), {"Type"}, TypeMap , {"Type"}),
            Results = Response[Results],
            Rows = Table.FromRecords(Results, Schema[Name]),
            Table = Table.TransformColumnTypes(Rows, Table.ToList(TypedSchema, (c) => {c{0}, c{2}}))
-   
+
        in Table
    ```
 
@@ -108,7 +103,7 @@ Now the results of your query appear as a table and you can start to build visua
 
 ## Connect Power BI to OData APIs
 
-The only difference from the previous example and this example is the query inside the editor. 
+The only difference from the previous example and this example is the query inside the editor.
 
 1. Open Microsoft Power BI.
 
@@ -122,12 +117,12 @@ The only difference from the previous example and this example is the query insi
 
 4. Copy the following code, and paste it in the editor to pull all **Machine Actions** from your organization:
 
-   ```
+   ```dax
        let
 
            Query = "MachineActions",
 
-           Source = OData.Feed("https://api.securitycenter.microsoft.com/api/" & Query, null, [Implementation="2.0", MoreColumns=true])
+           Source = OData.Feed("https://api.security.microsoft.com/api/" & Query, null, [Implementation="2.0", MoreColumns=true])
        in
            Source
    ```
@@ -138,15 +133,8 @@ The only difference from the previous example and this example is the query insi
 
 See the [Power BI report templates](https://github.com/microsoft/MicrosoftDefenderATP-PowerBI).
 
-## Sample reports
-
-View the [Microsoft Defender for Endpoint Power BI report samples](/samples/browse/?products=mdatp).
-
 ## Related articles
 
 - [Defender for Endpoint APIs](apis-intro.md)
 - [Advanced Hunting API](run-advanced-query-api.md)
 - [Using OData Queries](exposed-apis-odata-samples.md)
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

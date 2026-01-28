@@ -4,8 +4,8 @@ ms.reviewer:
 description: Use Microsoft Defender for Endpoint Flow connector to create a flow that will be triggered anytime a new event occurs on your tenant.
 ms.service: defender-endpoint
 ms.subservice: reference
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -38,11 +38,11 @@ The following example demonstrates how to create a Flow that is triggered anytim
 
 1. Log in to [Microsoft Power Automate](https://make.powerautomate.com).
 
-2. Go to **My flows** \> **New** \> **Automated-from blank**.
+1. Go to **My flows** \> **New** \> **Automated-from blank**.
 
-    :::image type="content" source="media/api-flow-1.png" alt-text="The New flow pane under My flows menu item in the Microsoft Defender 365 portal" lightbox="media/api-flow-1.png":::
+    a. :::image type="content" source="media/api-flow-1.png" alt-text="The New flow pane under My flows menu item in the Microsoft Defender 365 portal" lightbox="media/api-flow-1.png":::
 
-3. Choose a name for your Flow, search for "Microsoft Defender ATP Triggers" as the trigger, and then select the new Alerts trigger.
+1. Choose a name for your Flow, search for "Microsoft Defender ATP Triggers" as the trigger, and then select the new Alerts trigger.
 
     :::image type="content" source="media/api-flow-2.png" alt-text=" The Choose your flow's trigger section in the Microsoft Defender 365 portal" lightbox="media/api-flow-2.png" :::
 
@@ -58,9 +58,9 @@ The following example demonstrates how to create a Flow that is triggered anytim
 
 1. Choose **Microsoft Defender ATP** for the new step.
 
-2. Choose **Alerts - Get single alert API**.
+1. Choose **Alerts - Get single alert API**.
 
-3. Set the **Alert ID** from the last step as **Input**.
+1. Set the **Alert ID** from the last step as **Input**.
 
     :::image type="content" source="media/api-flow-4.png" alt-text="The Alerts pane"  lightbox="media/api-flow-4.png":::
 
@@ -68,19 +68,18 @@ The following example demonstrates how to create a Flow that is triggered anytim
 
 1. Add **Condition** as a new step.
 
-2. Check if the Alert severity **is equal to** High.
+1. Check if the Alert severity **is equal to** High.
 
    If yes, add the **Microsoft Defender ATP - Isolate machine** action with the Machine ID and a comment.
 
     :::image type="content" source="media/api-flow-5.png" alt-text="The Actions pane"  lightbox="media/api-flow-5.png":::
 
-3. Add a new step for emailing about the Alert and the Isolation. There are multiple email connectors that are easy to use, such as Outlook or Gmail.
+1. Add a new step for emailing about the Alert and the Isolation. There are multiple email connectors that are easy to use, such as Outlook or Gmail.
 
-4. Save your flow.
+1. Save your flow.
 
     You can also create a **scheduled** flow that runs Advanced Hunting queries and much more!
 
 ## Related topic
 
 - [Microsoft Defender for Endpoint APIs](/defender-vulnerability-management/tvm-supported-os)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

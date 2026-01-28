@@ -2,12 +2,12 @@
 title: Indicator resource type
 description: Specify the entity details and define the expiration of the indicator using Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -15,36 +15,18 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # Indicator resource type
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
-
-- See the corresponding [Indicators page](https://securitycenter.windows.com/preferences2/custom_ti_indicators/files) in the portal.
-
-Method|Return Type|Description
-:---|:---|:---
-[List Indicators](get-ti-indicators-collection.md)|[Indicator](ti-indicator.md) Collection|List [Indicator](ti-indicator.md) entities.
-[Submit Indicator](post-ti-indicator.md)|[Indicator](ti-indicator.md)|Submit or update [Indicator](ti-indicator.md) entity.
-[Import Indicators](import-ti-indicators.md)|[Indicator](ti-indicator.md) Collection|Submit or update [Indicators](ti-indicator.md) entities.
-[Delete Indicator](delete-ti-indicator-by-id.md)|No Content|Deletes [Indicator](ti-indicator.md) entity.
 
 ## Properties
 
-|Property|Type|Description |
-|---|---|--|
+|Property|Type|Description|
+|---|---|---|
 |id|String|Identity of the [Indicator](ti-indicator.md) entity.|
 |indicatorValue|String|The value of the [Indicator](ti-indicator.md).|
 |indicatorType|Enum|Type of the indicator. Possible values are: `FileSha1`, `FileSha256`, `FileMd5`, `CertificateThumbprint`, `IpAddress`, `DomainName`, and `Url`.|
@@ -105,10 +87,3 @@ For more information on the description of the response action types, see [Creat
     "rbacGroupNames": ["team1"]
 }
 ```
-
-## See also
-
-- [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](../defender-endpoint-antivirus-exclusions.md)
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

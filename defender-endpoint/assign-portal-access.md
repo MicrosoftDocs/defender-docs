@@ -4,8 +4,8 @@ description: Assign read and write or read only access to the Microsoft Defender
 search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -50,5 +50,5 @@ If you have basic permissions, you can switch to Role-based access control (RBAC
 - [Create and manage device groups](machine-groups.md)
 - [Zero Trust with Microsoft Defender for Endpoint](zero-trust-with-microsoft-defender-endpoint.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

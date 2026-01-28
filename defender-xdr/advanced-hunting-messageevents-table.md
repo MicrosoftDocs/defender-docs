@@ -21,7 +21,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 08/13/2025
+ms.date: 11/18/2025
 ---
 
 # MessageEvents
@@ -63,6 +63,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `DeliveryAction` | `string` |Delivery action of the message: Delivered, Blocked|
 | `DeliveryLocation` | `string` |Location of the message at the time of delivery|
 | `ReportId` | `string` |Unique identifier for the event|
+| `SafetyTip` | `string` |The safety tip that has been added on a message, if any|
 
 
 

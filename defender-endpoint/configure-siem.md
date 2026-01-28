@@ -3,8 +3,8 @@ title: Migrate from the MDE SIEM API to the Microsoft Defender XDR alerts API
 description: Learn how to ingest incidents and alerts, and integrate SIEM tools.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -129,5 +129,5 @@ For more information, see:
 - [Hello World example (describes how to register an application in Microsoft Entra ID)](api/api-hello-world.md)
 - [Get access with application context](api/exposed-apis-create-app-webapp.md)
 - [Microsoft Defender XDR SIEM integration](/defender-xdr/configure-siem-defender)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

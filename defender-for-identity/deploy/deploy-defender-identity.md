@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity Deployment Overview
 description: Learn how to deploy Microsoft Defender for Identity from the Microsoft Defender portal.
-ms.date: 06/30/2025
+ms.date: 01/22/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ---
@@ -22,18 +22,12 @@ Identify your architecture and your requirements, and then use the table below t
 
 |Server configuration   |Server Operating System  |Recommended deployment |
 |---------|---------|---------|
-|Domain controller     | Windows Server 2019 or later with the [June 2025 Cumulative Update](https://support.microsoft.com/en-us/topic/june-10-2025-kb5060526-os-build-20348-3807-4e9453c4-6602-48ea-b349-689cd66dfdb9) or later.<br> * **See Note**.|[Defender for Identity sensor v3.x](prerequisites-sensor-version-3.md)<br> * **See Note**.        |
+|Domain controller     | Windows Server 2019 or later with the [June 2025 Cumulative Update](https://support.microsoft.com/en-us/topic/june-10-2025-kb5060526-os-build-20348-3807-4e9453c4-6602-48ea-b349-689cd66dfdb9) or later.<br> |[Defender for Identity sensor v3.x](prerequisites-sensor-version-3.md)<br>        |
 |Domain controller      |Windows Server 2016 or later         |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)         |
 |[Active Directory Federation Services (AD FS)](active-directory-federation-services.md)     |    Windows Server 2016 or later      |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)      |
 |[Active Directory Certificate Services (AD CS)](active-directory-federation-services.md)     |  Windows Server 2016 or later        |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)      |
-|[Entra Connect](active-directory-federation-services.md)|  Windows Server 2016 or later     |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)     |
+|[Microsoft Entra Connect](active-directory-federation-services.md)|  Windows Server 2016 or later     |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)     |
 
-> [!NOTE]
-> The Defender for Identity sensor version 3.x is still in preview and has some limited functionality compared to version 2.x. Keep these limitations in mind before activating the sensor.
-> The Defender for Identity sensor v3.x:
-> - Requires that Defender for Endpoint is deployed
-> - Doesn't currently support VPN integration
-> - Doesn't currently support ExpressRoute
 
 Once you've evaluated your infrastructure and requirements, follow the instructions for deploying the sensor based on the version you need.
 

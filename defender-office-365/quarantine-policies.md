@@ -66,7 +66,7 @@ You create and assign quarantine policies in the Microsoft Defender portal or in
 
 ## Step 1: Create quarantine policies in the Microsoft Defender portal
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & Rules** \> **Threat policies** \> **Quarantine policy** in the **Rules** section. Or, to go directly to the **Quarantine policy** page, use <https://security.microsoft.com/quarantinePolicies>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Quarantine policy** in the **Rules** section. Or, to go directly to the **Quarantine policy** page, use <https://security.microsoft.com/quarantinePolicies>.
 
    :::image type="content" source="media/mdo-quarantine-policy-page.png" alt-text="Quarantine policy page in the Microsoft Defender portal." lightbox="media/mdo-quarantine-policy-page.png":::
 

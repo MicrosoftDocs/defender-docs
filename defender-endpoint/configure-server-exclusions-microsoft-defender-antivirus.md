@@ -7,8 +7,8 @@ ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.date: 10/20/2025
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.topic: install-set-up-deploy
 ms.custom: nextgen
 ms.collection: 
@@ -348,11 +348,11 @@ You can disable the automatic exclusion lists with Group Policy, PowerShell cmdl
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725752(v=ws.11)). Right-click the Group Policy Object you want to configure, and then select **Edit**.
 
-2. In the **Group Policy Management Editor** go to **Computer configuration**, and then select **Administrative templates**.
+1. In the **Group Policy Management Editor** go to **Computer configuration**, and then select **Administrative templates**.
 
-3. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Exclusions**.
+1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Exclusions**.
 
-4. Double-click **Turn off Auto Exclusions**, and set the option to **Enabled**. Then select **OK**.
+1. Double-click **Turn off Auto Exclusions**, and set the option to **Enabled**. Then select **OK**.
 
 ### Use PowerShell cmdlets to disable the auto-exclusions list on Windows Server
 
@@ -395,5 +395,5 @@ If necessary, you can add or remove custom exclusions. To do that, see the follo
 - [Onboard client devices running Windows or macOS to Microsoft Defender for Endpoint](onboard-client.md)
 - [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

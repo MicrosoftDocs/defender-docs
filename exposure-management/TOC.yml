@@ -67,7 +67,11 @@
         - name: Overview
           href: work-attack-paths-overview.md
         - name: Review attack paths
-          href: review-attack-paths.md    
+          href: review-attack-paths.md
+    - name: Vulnerability management
+      items:
+        - name: Vulnerability management integration with Exposure Management
+          href: vulnerability-management-integration.md
     - name: Manage exposure with security insights
       items:
         - name: Overview
@@ -84,7 +88,7 @@
         - name: Review security recommendations
           href: security-recommendations.md
         - name: Explore security events
-          href: security-events.md 
+          href: security-events.md
     - name: Microsoft Defender XDR docs
       items: 
        - name: Microsoft Defender XDR

@@ -3,8 +3,8 @@ title: Troubleshooting mode scenarios in Microsoft Defender for Endpoint
 description: Use the Microsoft Defender for Endpoint troubleshooting mode to address various antivirus issues.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: chrisda
+author: chrisda
 ms.reviewer: pricci
 ms.localizationpriority: medium
 manager: bagol
@@ -40,23 +40,23 @@ If you want to install an application but receive an error message that Microsof
 
 1. Request the security admin to turn on troubleshooting mode. You get a Windows Security notification once the troubleshooting mode starts.  
 
-2. Connect to the device (using Terminal Services for example) with local admin permissions.  
+1. Connect to the device (using Terminal Services for example) with local admin permissions.  
 
-3. Start [Process Monitor](troubleshoot-av-performance-issues-with-procmon.md), and see the steps described in [Troubleshoot performance issues related to real-time protection](troubleshoot-performance-issues.md).  
+1. Start [Process Monitor](troubleshoot-av-performance-issues-with-procmon.md), and see the steps described in [Troubleshoot performance issues related to real-time protection](troubleshoot-performance-issues.md).  
 
-4. Go to **Windows security** > **Threat & virus protection** > **Manage settings** > **Tamper protection** > **Off**.
+1. Go to **Windows security** > **Threat & virus protection** > **Manage settings** > **Tamper protection** > **Off**.
 
    Alternately, during troubleshooting mode, you can use the PowerShell command `Set-MPPreference -DisableTamperProtection $true` on Windows devices.
 
    To check the state of [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md), you can use the [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus) PowerShell cmdlet. In the list of results, look for `IsTamperProtected` or `RealTimeProtectionEnabled`. (A value of *true* means tamper protection is enabled.)
 
-5. Launch an elevated PowerShell command prompt, and toggle off [real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md). 
+1. Launch an elevated PowerShell command prompt, and toggle off [real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md). 
 
     - Run `Get-MpComputerStatus` to check the status of real-time protection.
     - Run `Set-MpPreference -DisableRealtimeMonitoring $true` to turn off real-time protection.
     - Run `Get-MpComputerStatus` again to verify status.
 
-6. Try installing the application.
+1. Try installing the application.
 
 ## Scenario 2: High CPU usage due to Windows Defender (MsMpEng.exe)
 
@@ -64,19 +64,19 @@ Sometimes during a scheduled scan, MsMpEng.exe can consume high CPU.
 
 1. Go to **Task Manager** > **Details** tab to confirm that `MsMpEng.exe` is the reason behind the high CPU usage. Also check to see if a scheduled scan is currently underway.
 
-2. Run [Process Monitor](troubleshoot-av-performance-issues-with-procmon.md) (ProcMon) during the CPU spike for around five minutes, and then review the ProcMon log for clues. 
+1. Run [Process Monitor](troubleshoot-av-performance-issues-with-procmon.md) (ProcMon) during the CPU spike for around five minutes, and then review the ProcMon log for clues. 
 
-3. When the root cause is determined, turn on troubleshooting mode. 
+1. When the root cause is determined, turn on troubleshooting mode. 
 
-4. Sign into the device, and launch an elevated PowerShell command prompt. 
+1. Sign into the device, and launch an elevated PowerShell command prompt. 
 
-5. Add process/file/folder/extension exclusions based on ProcMon findings using one of the following commands (the path, extension, and process exclusions mentioned in this article are examples only): 
+1. Add process/file/folder/extension exclusions based on ProcMon findings using one of the following commands (the path, extension, and process exclusions mentioned in this article are examples only): 
 
     `Set-mppreference -ExclusionPath` (for example, `C:\DB\DataFiles`) 
     `Set-mppreference –ExclusionExtension` (for example, `.dbx`) 
     `Set-mppreference –ExclusionProcess` (for example, `C:\DB\Bin\Convertdb.exe`) 
 
-6. After adding the exclusion, check to see if the CPU usage has dropped. 
+1. After adding the exclusion, check to see if the CPU usage has dropped. 
 
 For more information on `Set-MpPreference` cmdlet configuration preferences for Microsoft Defender Antivirus scans and updates, see [Set-MpPreference](/powershell/module/defender/set-mppreference). 
 
@@ -86,19 +86,19 @@ When Microsoft Defender Antivirus [real-time protection](configure-real-time-pro
 
 1. Request security admin to turn on troubleshooting mode on the device. 
 
-2. To disable real-time protection for this scenario, first turn off [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md). You can use the PowerShell command `Set-MPPreference -DisableTamperProtection $true` on Windows devices. 
+1. To disable real-time protection for this scenario, first turn off [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md). You can use the PowerShell command `Set-MPPreference -DisableTamperProtection $true` on Windows devices. 
 
    To check the state of tamper protection, you can use the [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus) PowerShell cmdlet. In the list of results, look for `IsTamperProtected` or `RealTimeProtectionEnabled`. (A value of *true* means tamper protection is enabled.)
 
    For more information, see [Protect security settings with tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md). 
 
-3. Once tamper protection is disabled, sign into the device. 
+1. Once tamper protection is disabled, sign into the device. 
 
-4. Launch an elevated PowerShell command prompt, and run the following command: 
+1. Launch an elevated PowerShell command prompt, and run the following command: 
 
    `Set-mppreference -DisableRealtimeMonitoring $true` 
 
-5. After disabling [real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md), check to see if the application is slow. 
+1. After disabling [real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md), check to see if the application is slow. 
 
 ## Scenario 4: Microsoft Office plugin blocked by Attack Surface Reduction
 
@@ -106,11 +106,11 @@ Attack surface reduction isn't allowing Microsoft Office plugin to work properly
 
 1. Turn on troubleshooting mode, and sign into the device. 
 
-2. Launch an elevated PowerShell command prompt, and run the following command: 
+1. Launch an elevated PowerShell command prompt, and run the following command: 
 
    `Set-MpPreference -AttackSurfaceReductionRules_Ids D4F940AB-401B-4EFC-AADC-AD5F3C50688A -AttackSurfaceReductionRules_Actions Disabled` 
 
-3. After disabling the ASR Rule, confirm that the Microsoft Office plugin now works.
+1. After disabling the ASR Rule, confirm that the Microsoft Office plugin now works.
 
 For more information, see [Overview of attack surface reduction](overview-attack-surface-reduction.md). 
 
@@ -120,11 +120,11 @@ Network Protection is blocking Microsoft domain, preventing users from accessing
 
 1. Turn on troubleshooting mode, and sign into the device. 
 
-2. Launch an elevated PowerShell command prompt, and run the following command: 
+1. Launch an elevated PowerShell command prompt, and run the following command: 
 
    `Set-MpPreference -EnableNetworkProtection Disabled` 
 
-3. After disabling Network Protection, check to see if the domain is now allowed. 
+1. After disabling Network Protection, check to see if the domain is now allowed. 
 
 For more information, see [Use network protection to help prevent connections to bad sites](network-protection.md). 
 
@@ -136,5 +136,5 @@ For more information, see [Use network protection to help prevent connections to
 - [Set-MpPreference](/powershell/module/defender/set-mppreference)
 - [Get an overview of Microsoft Defender for Endpoint](/defender-endpoint/)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

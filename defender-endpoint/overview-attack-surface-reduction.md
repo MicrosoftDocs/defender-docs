@@ -3,8 +3,8 @@ title: Understand and use attack surface reduction
 ms.reviewer: niwelton, joshbregman
 description: Learn about the attack surface reduction capabilities of Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -40,33 +40,33 @@ To configure attack surface reduction in your environment, follow these steps:
 
 1. [Enable hardware-based isolation for Microsoft Edge](/windows/security/threat-protection/microsoft-defender-application-guard/install-md-app-guard).
 
-2. [Enable attack surface reduction rules](attack-surface-reduction-rules-deployment.md).
+1. [Enable attack surface reduction rules](attack-surface-reduction-rules-deployment.md).
 
-3. Enable application control.
+1. Enable application control.
 
    1. Review base policies in Windows. See [Example Base Policies](/windows/security/threat-protection/windows-defender-application-control/example-wdac-base-policies).
 
-   2. See the [Windows Defender Application Control design guide](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-design-guide).
+   1. See the [Windows Defender Application Control design guide](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-design-guide).
 
-   3. Refer to [Deploying Windows Defender Application Control (WDAC) policies](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide).
+   1. Refer to [Deploying Windows Defender Application Control (WDAC) policies](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide).
 
-4. [Enable controlled folder access](enable-controlled-folders.md).
+1. [Enable controlled folder access](enable-controlled-folders.md).
 
-5. Enable [device control](device-control-overview.md).
+1. Enable [device control](device-control-overview.md).
 
-6. [Turn on network protection](enable-network-protection.md).
+1. [Turn on network protection](enable-network-protection.md).
 
-7. Enable [Web protection](web-protection-overview.md).
+1. Enable [Web protection](web-protection-overview.md).
 
-8. [Enable exploit protection](enable-exploit-protection.md).
+1. [Enable exploit protection](enable-exploit-protection.md).
 
-9. Set up your network firewall.
+1. Set up your network firewall.
 
    1. Get an overview of [Windows Firewall with advanced security](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security).
 
-   2. Use the [Windows Firewall design guide](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-design-guide) to decide how you want to design your firewall policies.
+   1. Use the [Windows Firewall design guide](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-design-guide) to decide how you want to design your firewall policies.
 
-   3. Use the [Windows Firewall deployment guide](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide) to set up your organization's firewall with advanced security.
+   1. Use the [Windows Firewall deployment guide](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide) to set up your organization's firewall with advanced security.
 
 > [!TIP]
 > In most cases, when you configure attack surface reduction capabilities, you can choose from among several methods:
@@ -138,18 +138,18 @@ You can also manually navigate to the event area that corresponds to the feature
    - Attack surface reduction events custom view: *asr-events.xml*
    - Network/ protection events custom view: *np-events.xml*
 
-2. Type **event viewer** in the Start menu and open **Event Viewer**.
+1. Type **event viewer** in the Start menu and open **Event Viewer**.
 
 1. Select **Action** > **Import Custom View...**
 
       > [!div class="mx-imgBorder"]
    > ![Animation highlighting Import custom view on the left of the Even viewer window.](media/events-import.gif)
    
-4. Navigate to where you extracted the XML file for the custom view you want and select it.
+1. Navigate to where you extracted the XML file for the custom view you want and select it.
 
-5. Select **Open**.
+1. Select **Open**.
 
-6. It creates a custom view that filters to only show the events related to that feature.
+1. It creates a custom view that filters to only show the events related to that feature.
 
 #### Copy the XML directly
 
@@ -160,11 +160,11 @@ You can also manually navigate to the event area that corresponds to the feature
       > [!div class="mx-imgBorder"]
    > ![Animation highlighting the create custom view option on the Event viewer window.](media/events-import.gif)
    
-3. Go to the XML tab and select **Edit query manually**. You see a warning that you can't edit the query using the **Filter** tab if you use the XML option. Select **Yes**.
+1. Go to the XML tab and select **Edit query manually**. You see a warning that you can't edit the query using the **Filter** tab if you use the XML option. Select **Yes**.
 
-4. Paste the XML code for the feature you want to filter events from into the XML section.
+1. Paste the XML code for the feature you want to filter events from into the XML section.
 
-5. Select **OK**. Specify a name for your filter. This action creates a custom view that filters to only show the events related to that feature.
+1. Select **OK**. Specify a name for your filter. This action creates a custom view that filters to only show the events related to that feature.
 
 #### XML for attack surface reduction rule events
 
@@ -227,7 +227,7 @@ You can access these events in Windows Event viewer:
 
 1. Open the **Start** menu and type **event viewer**, and then select the **Event Viewer** result.
 
-2. Expand **Applications and Services Logs > Microsoft > Windows** and then go to the folder listed under **Provider/source** in the table below.
+1. Expand **Applications and Services Logs > Microsoft > Windows** and then go to the folder listed under **Provider/source** in the table below.
 
 1. Double-click on the sub item to see events. Scroll through the events to find the one you're looking.
 
@@ -296,5 +296,5 @@ As mentioned in the video, Defender for Endpoint includes several attack surface
 | [Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md) | Provides steps to use audit mode to test attack surface reduction rules. |
 | [Web protection](web-protection-overview.md) | Web protection lets you secure your devices against web threats and helps you regulate unwanted content. |
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

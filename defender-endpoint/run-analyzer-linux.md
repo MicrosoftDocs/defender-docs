@@ -1,8 +1,8 @@
 ﻿---
 title: Run the client analyzer on Linux
 description: Run the Defender for Endpoint client analyzer on Linux
-author: paulinbar
-ms.author: painbar
+author: chrisda
+ms.author: chrisda
 manager: bagol
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
@@ -21,12 +21,9 @@ f1.keywords: NOCSH
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # Run the client analyzer on Linux
-
-
-
 
 If you have issues with Microsoft Defender for Endpoint on Linux and need support, you might be asked to provide the output from the Client Analyzer tool. It is a diagnostic tool which help administrators and support teams troubleshoot issues with Microsoft Defender for Endpoint. It collects detailed information about installation, configuration, service health, logs, connectivity status, etc. This tool is primarily used for checking system health, validating configurations, and helping troubleshoot potential issues.
 
@@ -51,7 +48,7 @@ To run this client analyzer follow these steps:
     ```bash
     cd /opt/microsoft/mdatp/tools/client_analyzer/binary
     ```
-2. Run the tool as _root_ to generate a diagnostic package:
+1. Run the tool as _root_ to generate a diagnostic package:
 
    ```bash
    sudo ./MDESupportTool -d
@@ -66,35 +63,35 @@ Follow the steps below to use the standalone ClientAnalyzer binary
     wget --quiet -O XMDEClientAnalyzerBinary.zip "https://go.microsoft.com/fwlink/?linkid=2336125"
     ```
 
-2. Verify the download:
+1. Verify the download:
 
     ```bash
-    echo '042692269A7208AB30B4355A6FC1CD0A25FE59356D96CCD2E7F1F61DF9B4B85D XMDEClientAnalyzerBinary.zip' | sha256sum -c
+    echo '0C8F010D09557478E0CF626D439D5F7EAB1F6C7EEFF69FF1E98A7289520983E1 XMDEClientAnalyzerBinary.zip' | sha256sum -c
     ```
 
-3. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine.
+1. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine.
 
     ```bash
     unzip -q XMDEClientAnalyzerBinary.zip -d XMDEClientAnalyzerBinary
     ```
 
-4. Change the directory:
+1. Change the directory:
 
     ```bash
     cd XMDEClientAnalyzerBinary
     ```
 
-5. Two new zip files are produced:
+1. Two new zip files are produced:
 
    - **SupportToolLinuxamd64Binary.zip**: For x86 Linux devices
    - **SupportToolLinuxarm64Binary.zip**: For ARM Linux devices
 
-6. Unzip the sepecific zip based on your Linux OS architecture. For example, we use here the `SupportToolLinuxamd64Binary.zip` file.
+1. Unzip the sepecific zip based on your Linux OS architecture. For example, we use here the `SupportToolLinuxamd64Binary.zip` file.
 
      ```bash
      unzip -q SupportToolLinuxamd64Binary.zip
      ```
-7. Run the tool as _root_ to generate a diagnostic package:
+1. Run the tool as _root_ to generate a diagnostic package:
 
    ```bash
    sudo ./MDESupportTool -d
@@ -110,6 +107,7 @@ The python version of client analyzer is made available in two ways:
 > [!NOTE]
 > - The analyzer depends on a few extra PIP packages (`decorator`, `sh`, `distro`, `lxml`, and `psutil`) which are installed in the operating system when in root to produce the result output. If not installed, the analyzer attempts to fetch it from the [official repository for Python packages](https://pypi.org/search/?q=lxml).
 > - In addition, the tool currently requires Python version 3 or later to be installed on your device.
+> - Starting with **Client Analyzer for MDE Linux version 1.7.0**, support for running the Python-based client analyzer in a Python virtual environment (venv) is available. Using a virtual environment is optional and not required.
 > - If your device is behind a proxy, then you can pass the proxy server as an environment variable to the `mde_support_tool.sh` script. For example: `https_proxy=https://myproxy.contoso.com:8080 ./mde_support_tool.sh"`.
 
 > [!WARNING]
@@ -127,12 +125,12 @@ To run this client analyzer follow these steps:
     ```bash
     cd /opt/microsoft/mdatp/tools/client_analyzer/python
     ```
-2. Run as a root user to install required dependencies.
+1. Run as a root user to install required dependencies.
 
     ```bash
     sudo ./mde_support_tool.sh
     ```
-3. To collect the diagnostic package and generate the result archive file, run again as root.
+1. To collect the diagnostic package and generate the result archive file, run again as root.
 
     ```bash
     sudo ./mde_support_tool.sh -d
@@ -146,37 +144,37 @@ To run this client analyzer follow these steps:
     wget --quiet -O XMDEClientAnalyzerPython.zip "https://go.microsoft.com/fwlink/?linkid=2336046"
     ```
 
-2. Verify the download:
+1. Verify the download:
 
     ```bash
-    echo '9F29043CD3034DD4DF30B0EA25B37B5EE7BE5D81D5848CF047F9842B76C831EA XMDEClientAnalyzerPython.zip' | sha256sum -c
+    echo '62F92CD9D191063663FBAC7B29E1C967C8F9A30B9B769DA5E968FC4276C1F030 XMDEClientAnalyzerPython.zip' | sha256sum -c
     ```
 
-3. Extract the contents of `XMDEClientAnalyzer.zip` on the machine:
+1. Extract the contents of `XMDEClientAnalyzer.zip` on the machine:
 
     ```bash
     unzip -q XMDEClientAnalyzerPython.zip -d XMDEClientAnalyzerPython
     ```
 
-4. Change the directory:
+1. Change the directory:
 
     ```bash
     cd XMDEClientAnalyzerPython
     ```
 
-5. Give the tool executable permission:
+1. Give the tool executable permission:
 
     ```bash
     chmod a+x mde_support_tool.sh
     ```
 
-6. Run as a nonroot user to install required dependencies:
+1. Run as a nonroot user to install required dependencies:
 
     ```bash
     ./mde_support_tool.sh
     ```
 
-7. To collect the diagnostic package and generate the result archive file, run again as root:
+1. To collect the diagnostic package and generate the result archive file, run again as root:
 
     ```bash
     sudo ./mde_support_tool.sh -d
@@ -594,13 +592,13 @@ The following script performs the first six steps of the [Running the Python ver
 
 1. Initiate a [Live Response session](live-response.md#initiate-a-live-response-session-on-a-device) on the machine you want to investigate.
 
-2. Select **Upload file to library**.
+1. Select **Upload file to library**.
 
-3. Select **Choose file**.
+1. Select **Choose file**.
 
-4. Select the downloaded file named `InstallXMDEClientAnalyzer.sh`, and then select **Confirm**.
+1. Select the downloaded file named `InstallXMDEClientAnalyzer.sh`, and then select **Confirm**.
 
-5. While still in the LiveResponse session, use the following commands to install the analyzer:
+1. While still in the LiveResponse session, use the following commands to install the analyzer:
 
    ```console
    run InstallXMDEClientAnalyzer.sh
@@ -654,13 +652,13 @@ The Python version of the client analyzer accepts command line parameters to per
 
 1. Initiate a [Live Response session](live-response.md#initiate-a-live-response-session-on-a-device) on the machine you want to investigate. 
 
-2. Select **Upload file to library**.
+1. Select **Upload file to library**.
 
-3. Select **Choose file**.
+1. Select **Choose file**.
 
-4. Select the downloaded file named `MDESupportTool.sh`, and then select **Confirm**.
+1. Select the downloaded file named `MDESupportTool.sh`, and then select **Confirm**.
 
-5. While still in the live response session, use the following commands to run the analyzer and collect the resulting file:
+1. While still in the live response session, use the following commands to run the analyzer and collect the resulting file:
 
    ```
    run MDESupportTool.sh -parameters "--bypass-disclaimer -d"
@@ -689,7 +687,6 @@ The Python version of the client analyzer accepts command line parameters to per
 
 - [Address false positives/negatives in Microsoft Defender for Endpoint](/defender-endpoint/defender-endpoint-false-positives-negatives)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
 
 

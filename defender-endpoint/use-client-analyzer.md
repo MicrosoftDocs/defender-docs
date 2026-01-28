@@ -1,10 +1,10 @@
 ---
 title: Diagnose Defender for Endpoint issues with Client Analyzer
-ms.topic: conceptual
+ms.topic: article
 description: Understand how to Diagnose Defender for Endpoint issues with Client Analyzer so that you can send the right data to Microsoft support for troubleshooting.
 ms.service: defender-endpoint
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -52,6 +52,6 @@ Follow the steps in this section to collect data for the issues you've identifie
 
     If you used a flag that includes a timespan, such as `-a`, `-e`, or `-v`, you're asked to specify the duration of the log collection.
 
-2. Once the log collection starts, reproduce the issue so that the issue's data is captured while the logs are being collected.
+1. Once the log collection starts, reproduce the issue so that the issue's data is captured while the logs are being collected.
 
-3. To stop the log collection press Press `q`.
+1. To stop the log collection press Press `q`.

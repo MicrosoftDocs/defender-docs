@@ -4,8 +4,8 @@ ms.reviewer:
 description: View and manage the alerts surfaced in Microsoft Defender XDR
 keywords:
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -40,4 +40,4 @@ Topic|Description
 [Investigate a domain](investigate-domain.md)|Investigate a domain to see if devices and servers in your network have been communicating with a known malicious domain.
 [Investigate a user account](investigate-user.md)|Identify user accounts with the most active alerts and investigate cases of potential compromised credentials.
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -5,8 +5,8 @@ search.appverid: met150
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: bagol
-author: batamig
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -16,29 +16,15 @@ ms.collection:
 - mde-edr
 ms.topic: reference
 ms.subservice: edr
-ms.date: 06/03/2021
+ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint
 ---
 
-#  Live response library methods and properties
+#  Live response library properties
 
 [!include[Prerelease information](../includes/prerelease.md)]
 
-- Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp?ocid=docs-wdatp-exposedapis-abovefoldlink) 
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../includes/improve-request-performance.md)]
-
-
-## Methods
-
-| **Method**          | **Return Type**         | **Description**                         |
-|---------------------|-------------------------|-----------------------------------------|
-| List library files  | Library file collection | List library file entities              |
-| Upload to library   | Library file entity     | Upload a file to live response library |
-| Delete from library | No content              | Delete library file entity              |
 
 ## Properties
 
@@ -46,4 +32,3 @@ appliesto:
 |--------------|----------------------------------|--------------------------------------------------------|
 | Commands     | Live Response command collection | Array of Command objects. See [live response commands](live-response.md#live-response-commands). |
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

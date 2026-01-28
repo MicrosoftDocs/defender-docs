@@ -97,10 +97,14 @@ items:
       href: integrate-microsoft-and-pam-services.md
 - name: Manage
   items:
+  - name: Manage related identities and accounts
+    href: manage-related-identities-accounts.md
   - name: View the ITDR dashboard
     href: dashboard.md
   - name: View and manage health issues
     href: health-alerts.md
+  - name: Best practices for security testing
+    href: security-testing-best-practices.md
   - name: Defender for Identity reports
     href: reports.md
   - name: Settings

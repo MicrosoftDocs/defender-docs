@@ -1,8 +1,8 @@
 ---
 title:  Managing exclusions reference
 description: This article describes various ways to manage exclusions for Defender for Endpoint and Microsoft Defender Antivirus
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
 ms.service: defender-endpoint
 ms.subservice: onboard
