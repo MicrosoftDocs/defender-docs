@@ -28,7 +28,7 @@ Defender for Containers integrates natively with Azure services to protect AKS c
 - Generates security recommendations based on observed configuration and posture
 - Surfaces alerts that integrate with Microsoft security tooling
 
-The integration is designed to operate using Azure-native capabilities and does not require inbound connectivity to AKS clusters.
+The integration is designed to operate using Azure-native capabilities and doesn't require inbound connectivity to AKS clusters.
 
 ## Key capabilities
 
@@ -43,7 +43,7 @@ Defender for Containers provides the following capabilities for AKS environments
 
 ## Architecture for AKS
 
-The Defender for Containers architecture for AKS consists of Azure-managed and Kubernetes-native componenats:
+The Defender for Containers architecture for AKS consists of Azure-managed and Kubernetes-native components:
 
 - **Defender Sensor**
 - **Azure Policy for Kubernetes**
@@ -109,7 +109,7 @@ Defender for Containers integrates with Google Cloud through a secure GCP connec
 - Generates security recommendations
 - Surfaces alerts for suspicious activity
 
-The integration is designed to work alongside native GCP security features and does not require inbound connectivity.
+The integration is designed to work alongside native GCP security features and doesn't require inbound connectivity.
 
 ## Key capabilities
 
@@ -151,7 +151,7 @@ Defender for Containers integrates with Arc-enabled Kubernetes clusters by using
 - Evaluates cluster and workload configurations
 - Generates security recommendations and alerts in Defender for Cloud
 
-The integration does not require inbound connectivity to the Kubernetes cluster. Communication is initiated from the cluster to Azure through the Azure Arc agents.
+The integration doesn't require inbound connectivity to the Kubernetes cluster. Communication is initiated from the cluster to Azure through the Azure Arc agents.
 
 > [!NOTE]
 > Arc-enabled Kubernetes is required to deploy Defender for Containers components to Kubernetes clusters that aren’t running in Azure.
@@ -196,6 +196,6 @@ For pricing details, see [Microsoft Defender for Cloud pricing](https://azure.mi
 
 ## Next steps
 
-- [Enable Defender for Containers using the Azure Portal](defender-for-containers-enable-portal.md)
+- [Enable Defender for Containers using the Azure portal](defender-for-containers-enable-portal.md)
 
 - [Enable Defender for Containers using the Azure CLI](defender-for-containers-enable-azure-cli.md)
