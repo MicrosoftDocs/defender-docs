@@ -27,7 +27,7 @@ When creating your custom roles, make sure that you apply the permissions listed
 |**Users**                               | - `Security operations/Security data /Security data basics (Read)`<br/>- `Authorization and settings/System settings/Read`<br/>- `Authorization and settings/Security settings/Read`<br/>- `Security operations/Security data/Alerts (manage)`<br/>- `microsoft.xdr/configuration/security/manage` |
 |**Viewers**                            | - `Security operations/Security data /Security data basics (Read)`<br/>- `Authorization and settings / System settings (Read and manage)` <br>- `Authorization and settings / Security setting (All permissions)` |
 
-For more information, see [Custom roles in role-based access control for Microsoft Defender XDR](/microsoft-365/security/defender/custom-roles) and [Create custom roles with Microsoft Defender XDR Unified RBAC](/microsoft-365/security/defender/create-custom-rbac-roles).
+For more information, see [Custom roles in role-based access control for Microsoft Defender XDR](/microsoft-365/security/defender/custom-roles) and [Create custom roles with Microsoft Defender unified RBAC](/microsoft-365/security/defender/create-custom-rbac-roles).
 
 > [!NOTE]
 > Information included from the [Defender for Cloud Apps activity log](classic-mcas-integration.md#activities) may still contain Defender for Identity data. This content adheres to existing Defender for Cloud Apps permissions.

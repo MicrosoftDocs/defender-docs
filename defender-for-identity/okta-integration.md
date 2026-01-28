@@ -38,7 +38,7 @@ To configure the Okta connector in Microsoft Defender for Identity, your account
     - Security Operator
     - Security Admin
 
-- **Defender XDR Unified RBAC permission:**
+- **Defender unified RBAC permission:**
 
     - Core security settings (manage)
 
