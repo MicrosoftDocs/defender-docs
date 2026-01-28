@@ -4,8 +4,8 @@ ms.reviewer: tdoucette, sunasing, denishdonga
 description: Overview of Mobile Threat Defense in Microsoft Defender for Endpoint
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: kesharab
-author: KesemSharabi
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 ms.date: 01/09/2026
 manager: bagol
@@ -173,5 +173,5 @@ Need help with deploying or configuring Defender for Endpoint on Android & iOS? 
 - [Microsoft Defender for Endpoint on iOS](microsoft-defender-endpoint-ios.md)
 - Stay informed about upcoming releases by reading our [announcements](https://aka.ms/mdeblog).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

@@ -3,8 +3,8 @@ title: Behavior Monitoring demonstration
 description: Behavior Monitoring demonstration
 ms.service: defender-endpoint
 ms.subservice: ngp
-author: KesemSharabi
-ms.author: kesharab
+author: limwainstein
+ms.author: lwainstein
 ms.reviewer: yonghree
 ms.localizationpriority: medium
 manager: bagol

@@ -50,5 +50,5 @@ If you have basic permissions, you can switch to Role-based access control (RBAC
 - [Create and manage device groups](machine-groups.md)
 - [Zero Trust with Microsoft Defender for Endpoint](zero-trust-with-microsoft-defender-endpoint.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

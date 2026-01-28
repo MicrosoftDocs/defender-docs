@@ -4,8 +4,8 @@ description: Enable behavior-based, heuristic, and real-time protection in Micro
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.topic: install-set-up-deploy
 ms.custom: nextgen
 ms.reviewer: yongrhee
@@ -64,5 +64,5 @@ See [Use next-gen Microsoft Defender Antivirus technologies through cloud protec
 ## See also
 
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

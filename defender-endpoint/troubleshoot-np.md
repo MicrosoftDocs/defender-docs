@@ -4,8 +4,8 @@ description: Resources and sample code to troubleshoot issues with Network prote
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.reviewer: oogunrinde, yongrhee
 manager: bagol
 ms.subservice: asr
@@ -154,5 +154,5 @@ You can configure the registry key by using PowerShell, Microsoft Configuration 
 - [Enable network protection](enable-network-protection.md)
 - [Address false positives/negatives in Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
