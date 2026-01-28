@@ -39,11 +39,11 @@ This article explains how to enable Microsoft Defender for Containers and deploy
 
 1. Toggle **On** or **Off** the relevant Defender for Containers components:
 
-   - **Agentless scanning for machines**
-   - **Defender sensor**
-   - **Azure Policy**
-   - **Kubernetes API access**
-   - **Registry access**
+    - **Agentless scanning for machines**?
+    - **Defender sensor**?
+    - **Azure Policy**?
+    - **Kubernetes API access**?
+    - **Registry access**?
 
 1. Select **Continue**.
 
@@ -65,8 +65,8 @@ Use the Azure portal to verify that Defender for Containers components were depl
 
 1. Verify that recommendations for AKS clusters appear, such as:
 
-   - **Azure Kubernetes Service clusters should have Defender profile enabled**
-   - **Azure Policy for Kubernetes should be installed and enabled**
+    - **Azure Kubernetes Service clusters should have Defender profile enabled**
+    - **Azure Policy for Kubernetes should be installed and enabled**
 
 # [Amazon Elastic Kubernetes Service (EKS)](#tab/eks)
 
@@ -100,10 +100,13 @@ Use the Azure portal to verify that Defender for Containers components were depl
 
 1. Toggle **On** the relevant Defender for Containers components:
 
-   - **Agentless discovery for Kubernetes**
-   - **Agentless container vulnerability assessment**
-   - **Defender DaemonSet**
-   - **Azure Policy for Kubernetes**
+    - **Agentless threat protection**
+        - If enabled, set the retention period for your audit logs
+    - **Auto provision Defender's sensor for Azure Arc**
+    - **Auto provision Azure Policy extension for Azure Arc**
+    - **Kubernetes API access**
+    - **Registry access**
+        - If needed, enable security fidings
 
 1. Select **Continue**.
 
@@ -119,7 +122,7 @@ Grant control plane permissions by using one of the following methods.
 
 **Option 1: Use the Python script**
 
-Run the Python script provided in the onboarding repository to add the Defender for Cloud role
+Run the [Python script](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Onboarding/AWS/ReadMe.md) provided in the onboarding repository to add the Defender for Cloud role
 `MDCContainersAgentlessDiscoveryK8sRole` to the `aws-auth` ConfigMap.
 
 **Option 2: Use eksctl**
@@ -166,9 +169,9 @@ Use the Azure portal to verify that Defender for Containers components were depl
 
 1. Verify that:
 
-   - Connection status shows **Connected**
-   - **Containers** plan is **On**
-   - Last sync time is recent
+    - Connection status shows **Connected**
+    - **Containers** plan is **On**
+    - Last sync time is recent
 
 1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
 
@@ -206,10 +209,13 @@ Use the Azure portal to verify that Defender for Containers components were depl
 
 1. Toggle **On** the relevant Defender for Containers components:
 
-   - **Agentless discovery for Kubernetes**
-   - **Agentless container vulnerability assessment**
-   - **Defender DaemonSet**
-   - **Azure Policy for Kubernetes**
+    - **Agentless threat protection**
+    - **Auto provision Defender's sensor for Azure Arc**
+        - If needed, enable Defender Security Gating
+    - **Auto provision Azure Policy extension for Azure Arc**
+    - **Kubernetes API access**
+    - **Registry access**
+        - If needed, enable security fidings
 
 1. Select **Continue**.
 
@@ -261,16 +267,16 @@ After connecting your GKE clusters to Azure Arc:
 
 1. Verify that:
 
-   - Connection status shows **Connected**
-   - **Containers** plan is **On**
-   - Last sync time is recent
+    - Connection status shows **Connected**
+    - **Containers** plan is **On**
+    - Last sync time is recent
 
 1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
 
 1. Verify that GKE-related recommendations appear, such as:
 
-   - **GKE clusters should be connected to Azure Arc**
-   - **Arc-enabled Kubernetes clusters should have Defender extension installed**
+    - **GKE clusters should be connected to Azure Arc**
+    - **Arc-enabled Kubernetes clusters should have Defender extension installed**
 
 # [Arc-enabled Kubernetes](#tab/arc)
 
@@ -297,10 +303,10 @@ After connecting your GKE clusters to Azure Arc:
 
 1. Toggle **On** the relevant Defender for Containers components:
 
-   - **Agentless discovery for Kubernetes**
-   - **Agentless container vulnerability assessment**
-   - **Defender DaemonSet**
-   - **Azure Policy for Kubernetes**
+    - Place holder
+    - Place holder
+    - Place holder
+    - Place holder
 
 1. Select **Continue**, and then select **Save**.
 
@@ -325,8 +331,8 @@ After connecting your GKE clusters to Azure Arc:
 
 1. Verify the extension status shows **Succeeded** for:
 
-   - **Microsoft Defender for Containers**
-   - **Azure Policy for Kubernetes** (if deployed)
+    - **Microsoft Defender for Containers**
+    - **Azure Policy for Kubernetes** (if deployed)
 
 1. Go to **Microsoft Defender for Cloud** > **Recommendations** and verify Arc-related recommendations appear for your clusters.
 

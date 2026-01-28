@@ -323,9 +323,8 @@ kubectl get pods -n kube-system -l app=microsoft-defender
 
 No resources should be returned.
 
+---
 
+## Related content
 
-
-
-
-
+- [Defender for Containers deployment overview](defender-for-containers-deployment-overview.md)

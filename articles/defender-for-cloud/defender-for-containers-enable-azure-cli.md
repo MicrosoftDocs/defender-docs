@@ -55,7 +55,7 @@ az aks update \
   --resource-group <resource-group> \
   --name <aks-cluster-name> \
   --enable-defender \
-  --defender-config logAnalyticsWorkspaceResourceId=<workspace-resource-id>
+  --defender-config logAnalyticsWorkspaceResourceID=<workspace-resource-id>
 ```
 
 Replace `<workspace-resource-id>` with the full Log Analytics workspace resource ID. 
