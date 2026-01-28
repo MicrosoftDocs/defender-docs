@@ -2,12 +2,12 @@
 title: Get user-related alerts API
 description: Retrieve a collection of alerts related to a given user ID using Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -19,11 +19,9 @@ ms.date: 11/16/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
-
 ---
 
 # Get user-related alerts API
-
 
 ## API description
 
@@ -42,13 +40,12 @@ When obtaining a token using user credentials:
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Alert.Read.All|'Read all alerts'
-Application|Alert.ReadWrite.All|'Read and write all alerts'
-Delegated (work or school account) | Alert.Read | 'Read alerts'
-Delegated (work or school account) | Alert.ReadWrite | 'Read and write alerts'
-
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Alert.Read.All|'Read all alerts'|
+|Application|Alert.ReadWrite.All|'Read and write all alerts'|
+|Delegated (work or school account)|Alert.Read|'Read alerts'|
+|Delegated (work or school account)|Alert.ReadWrite|'Read and write alerts'|
 
 ## HTTP request
 
@@ -60,9 +57,9 @@ GET /api/users/{id}/alerts
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization | String | Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -79,6 +76,5 @@ If successful and user exists - 200 OK. If the user doesn't exist - 200 OK with 
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/users/user1/alerts
+GET https://api.security.microsoft.com/api/users/user1/alerts
 ```
-

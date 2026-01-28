@@ -7,8 +7,8 @@ ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.date: 10/20/2025
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.topic: install-set-up-deploy
 ms.custom: nextgen
 ms.collection: 
@@ -395,5 +395,5 @@ If necessary, you can add or remove custom exclusions. To do that, see the follo
 - [Onboard client devices running Windows or macOS to Microsoft Defender for Endpoint](onboard-client.md)
 - [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

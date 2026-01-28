@@ -210,4 +210,4 @@ sudo mdatp log level set --level info
 - [Create indicators](indicators-overview.md)
 - [Web content filtering](web-content-filtering.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

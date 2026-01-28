@@ -209,22 +209,25 @@ In order to preview new features and provide early feedback, it's recommended th
 
 6. Install the Microsoft GPG public key:
 
-   - For Debian 11/Ubuntu 22.04 and earlier, run the following command.
+   - For Debian 11/Ubuntu 22.04 and earlier, run the following commands.
  
       ```bash
       curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null
+      sudo chmod o+r /etc/apt/trusted.gpg.d/microsoft.gpg
       ```
 
-   - For Debian 12, Ubuntu 24.04 and later, run the following command.
+   - For Debian 12, Ubuntu 24.04 and later, run the following commands.
 
       ```bash
       curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg > /dev/null
+      sudo chmod o+r /usr/share/keyrings/microsoft-prod.gpg
       ```
 
-   - For Debian 13 and later, run the following command.
+   - For Debian 13 and later, run the following commands.
 
       ```bash
       curl -sSL https://packages.microsoft.com/keys/microsoft-2025.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg > /dev/null
+      sudo chmod o+r /usr/share/keyrings/microsoft-prod.gpg
       ```
 
 7. Install the HTTPS driver if not already installed:

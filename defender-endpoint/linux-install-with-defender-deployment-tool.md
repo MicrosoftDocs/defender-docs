@@ -62,11 +62,11 @@ The Defender deployment tool enforces the following set of prerequisites checks,
 1. From a command prompt, extract the contents of the archive:
 
    ```bash
-   unzip WindowsDefenderATPOnboardingPackage.zip
+   unzip LinuxDefenderDeploymentTool.zip
    ```
 
    ```console
-   Archive: WindowsDefenderATPOnboardingPackage.zip
+   Archive: LinuxDefenderDeploymentTool.zip
    inflating: defender_deployment_tool.sh
    ```
 

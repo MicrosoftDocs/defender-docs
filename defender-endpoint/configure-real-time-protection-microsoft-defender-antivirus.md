@@ -4,8 +4,8 @@ description: Enable and configure Microsoft Defender Antivirus real-time protect
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.reviewer: yongrhee
 ms.topic: how-to
 ms.date: 10/20/2025
@@ -143,5 +143,5 @@ If you're looking for antivirus-related information for other platforms, see:
 - [Configure Defender for Endpoint on Android features](android-configure.md)
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

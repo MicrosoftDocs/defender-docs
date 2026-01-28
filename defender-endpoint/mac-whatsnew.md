@@ -68,6 +68,18 @@ This feature enables organizations to configure offline updates for security int
 
 Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md) and [Behavior Monitoring GA announcement blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/behavior-monitoring-is-now-generally-available-for-microsoft-defender-for-endpoi/4415697)
 
+### Jan-2026 (Build: 101.25122.0006  | Release version: 20.125122.6.0)
+
+| Build:             | **101.25122.0006** |
+|--------------------|--------------------|
+| Release version:   | **20.125122.6.0**  |
+| Engine version:    | **1.1.25100.4000** |
+| Signature version: | **1.439.74.0**     |
+
+##### What's new
+
+- Bug and performance fixes
+
 ### Dec-2025 (Build: 101.25102.0019  | Release version: 20.125102.19.0)
 
 | Build:             | **101.25102.0019** |
@@ -167,7 +179,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 ##### What's new
 
-- `mdatp health --details edr` now includes AAD info
+- `mdatp health --details edr` now includes Azure Active Directory information
 - Bug and performance fixes
 
 ### Apr-2025 (Build: 101.25032.0006  | Release version: 20.125032.6.0)
@@ -1173,5 +1185,5 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 - Performance improvements & Product improvements
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
