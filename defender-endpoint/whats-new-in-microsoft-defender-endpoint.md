@@ -28,6 +28,12 @@ Learn more:
 - [Microsoft Defender for Endpoint supported versions](microsoft-defender-endpoint-versions.md)
 - [Preview features](/defender-xdr/preview)
 
+## January 2026
+
+|Platform  |Feature  |Preview/GA  |Description  |
+|----------|---------|------------|-------------|
+|All |[Device vulnerabilities report](tvm-vulnerable-devices-report.md) enhancements |Preview |To simplify and streamline the Device vulnerabilities report experience, the Vulnerable devices report now includes the following changes and enhancements: The **Vulnerable devices by Windows 10/11 version over time** section has been removed, the report's filters have been simplified to only include the **Device group** filter, and the report's history is now limited to the last 30 days. Note: These changes are not yet visible to government cloud customers and will be visible in late January 2026. |
+
 ## December 2025
 
 |Platform  |Feature  |Preview/GA  |Description  |
