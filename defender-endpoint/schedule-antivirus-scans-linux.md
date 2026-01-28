@@ -85,9 +85,9 @@ The following articles describe how to schedule antivirus scans using crontab or
 
 The following screenshots show how to trigger an antivirus scan on a device from the Defender portal:
 
-:::image type="content" source="./media/schedule-antivirus-scans-linux/run-antivirus-scan.png" alt-text="Screenshot showing where to access the run antivirus scan option." lightbox="./media/schedule-antivirus-scans-linux/run-antivirus-scan.png":::
+:::image type="content" source="./media/schedule-anti-virus-scans-linux/run-anti-virus-scan.png" alt-text="Screenshot showing where to access the run antivirus scan option." lightbox="./media/schedule-anti-virus-scans-linux/run-antivirus-scan.png":::
 
-:::image type="content" source="./media/schedule-antivirus-scans-linux/choose-scan-type.png" alt-text="Screenshot how to choose type of antivirus scan to run.":::
+:::image type="content" source="./media/schedule-anti-virus-scans-linux/choose-scan-type.png" alt-text="Screenshot how to choose type of antivirus scan to run.":::
 
 ## Performance optimizations for antivirus scans
 
