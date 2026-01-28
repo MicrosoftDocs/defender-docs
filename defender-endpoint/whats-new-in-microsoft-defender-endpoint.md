@@ -36,6 +36,8 @@ Learn more:
 |Android |Build 1.0.8321.0101 |GA |Build 1.0.8321.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#android--december-2025--1083210101). |
 |macOS |Build 101.25102.0019 |GA |Release version 20.125102.19.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#macos--december-2025--101251020019). |
 |All |[Triage collection](/azure/sentinel/datalake/sentinel-mcp-triage-tool) |Preview |Use triage collection to prioritize incidents and hunt threats with the Sentinel Model Context Protocol (MCP) server.|
+|All |New Microsoft Secure Score recommendations |Preview |Microsoft Secure Score now includes new recommendations to help organizations proactively prevent common endpoint attack techniques: **Disable Remote Registry service on Windows** (prevents remote access to the Windows registry, reducing attack surface and blocking unauthorized configuration changes, privilege escalation, and lateral movement), and **Disable NTLM authentication for Windows workstations** (helps prevent credential theft and lateral movement attacks by removing support for an outdated and insecure protocol). |
+|All |[CVE exceptions](/defender-vulnerability-management/tvm-exception-overview#types-of-exceptions) |GA |CVE exceptions are now generally available, and also support the **False positive** justification and the `status` field as part of the response for the `GET /api/vulnerabilities` request. [Learn more](/defender-endpoint/api/get-all-vulnerabilities). |
 
 ## November 2025
 
@@ -50,6 +52,9 @@ Learn more:
 |All |[Custom data collection](custom-data-collection.md) |Preview |Custom data collection enables organizations to expand and customize telemetry collection beyond default configurations to support specialized threat hunting and security monitoring needs. |
 | Windows, Linux | Defender deployment tool<br/>- [for Windows devices](./defender-deployment-tool-windows.md)<br/>- [for Linux devices](./linux-install-with-defender-deployment-tool.md) |Preview | The new Defender deployment tool is a lightweight, self-updating application that streamlines onboarding devices to the Defender endpoint security solution. The tool takes care of prerequisites, automates migrations from older solutions, and removes the need for complex onboarding scripts, separate downloads, and manual installations. It currently supports Windows and Linux devices. |
 | Windows | [Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security) |Preview | A Defender for endpoint security solution is now available for legacy Windows 7 SP1 and Windows Server 2008 R2 SP1 devices. The solution provides advanced protection capabilities and improved functionality for these devices compared to other solutions. The new solution is available using the new [Defender deployment tool](./defender-deployment-tool-windows.md). |
+|All |Vulnerability Management section moved under Exposure management |Preview |The **Vulnerability Management** section in the Microsoft Defender portal is now located under **Exposure management**. This change is part of the vulnerability management integration to Microsoft Security Exposure Management, which significantly expands the scope and capabilities of the platform. [Learn more](/defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management#microsoft-defender-vulnerability-management-and-microsoft-security-exposure-management-integration). |
+|All |New Microsoft Secure Score recommendations |GA |Microsoft Secure Score now includes new recommendations to help organizations proactively prevent common endpoint attack techniques: **Require LDAP client signing** and **Require LDAP server signing** (help ensure integrity of directory requests so attackers can't tamper with or manipulate group memberships or permissions in transit), **Encrypt LDAP client traffic** (prevents exposure of credentials and sensitive user information by enforcing encrypted communication instead of clear-text LDAP), and **Enforce LDAP channel binding** (prevents man-in-the-middle relay attacks by ensuring the authentication is cryptographically tied to the TLS session). |
+|All |Microsoft Secure Score recommendations |GA |These Microsoft Secure Score recommendations are now generally available: **Block web shell creation on servers**, **Block use of copied or impersonated system tools**, and **Block rebooting a machine in Safe Mode**. |
 
 ## October 2025
 
@@ -64,6 +69,8 @@ Learn more:
 |All |[Streamlined connectivity support for US government environments (GCC, GCC High, DoD)](configure-device-connectivity.md) |Preview |Defender for Endpoint now supports streamlined connectivity for US government cloud environments. This enhancement simplifies onboarding by reducing the number of required service endpoints and improves reliability across restricted networks. For more information, see the [required connectivity settings](gov.md#required-connectivity-settings). |
 |All |Isolation exclusions |GA |The [Isolation exclusions](isolation-exclusions.md) feature is now generally available. Isolation exclusions allow designated processes or endpoints to bypass the restrictions of network isolation, ensuring essential functions continue while limiting broader network exposure. |
 |Linux |Build 101.25092.0001 |GA |Release version 30.125092.0001.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#linux--october-2025--101250920001). |
+|All |[CVE exceptions](/defender-vulnerability-management/tvm-exception-overview#types-of-exceptions) |Preview |You can now use **CVE exceptions** to exclude specific Common Vulnerabilities and Exposures (CVEs) from analysis in your environment. CVE exceptions allow you to control what type of data is relevant to your organization and to selectively exclude certain data from your remediation efforts. For more information, see [Exceptions in Microsoft Defender Vulnerability Management](/defender-vulnerability-management/tvm-exception-overview) and [Create, view, and manage exceptions](/defender-vulnerability-management/tvm-exception). |
+|All |New Microsoft Secure Score recommendations |Preview |Microsoft Secure Score now includes new recommendations to help organizations proactively prevent common endpoint attack techniques: **Block web shell creation on servers** (reduces the risk of web-based persistence and remote code execution attacks), **Block use of copied or impersonated system tools** (helps prevent attacker misuse of legitimate administrative utilities for lateral movement or privilege escalation), and **Block rebooting a machine in Safe Mode** (helps defend against attackers who attempt to disable endpoint protection or persist through reboots). |
 
 ## September 2025
 
@@ -79,20 +86,20 @@ Learn more:
 
 ## August 2025
 
-|Platform  |Preview/GA  |Features  |
-|---------|------------|---------|
-|Android |GA |Build 1.0.8018.0103 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#android--august-2025--1080180103). |
-|macOS |GA |Build 101.25062.0006, Release version 20.125062.6.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#macos--august-2025--101250620006). |
-|Windows Antivirus |GA |Platform 4.18.25080.5 and Engine 1.1.25080.5 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#windows-antivirus--august-2025--platform-418250805--engine-11250805). |
-| macOS | GA |Defender for Endpoint can now monitor process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system.<br><br>Learn more:<br> - [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md)<br>- [Behavior Monitoring GA announcement blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/behavior-monitoring-is-now-generally-available-for-microsoft-defender-for-endpoi/4415697) |
-| Linux | GA |Build 101.25062.0003, Release version 30.125062.0003.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#linux--august-2025--101250620003). |
-|iOS |GA |Build 1.1.68140102 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#ios--august-2025--1168140102). |
+|Platform  |Feature  |Preview/GA  |Description  |
+|----------|---------|------------|-------------|
+|Android |Build 1.0.8018.0103 |GA |Build 1.0.8018.0103 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#android--august-2025--1080180103). |
+|macOS |Build 101.25062.0006 |GA |Release version 20.125062.6.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#macos--august-2025--101250620006). |
+|Windows Antivirus |Platform 4.18.25080.5 / Engine 1.1.25080.5 |GA |Platform 4.18.25080.5 and Engine 1.1.25080.5 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#windows-antivirus--august-2025--platform-418250805--engine-11250805). |
+|macOS |[Behavior Monitoring](behavior-monitor-macos.md) |GA |Defender for Endpoint can now monitor process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. Learn more: [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md) and [Behavior Monitoring GA announcement blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/behavior-monitoring-is-now-generally-available-for-microsoft-defender-for-endpoi/4415697). |
+|Linux |Build 101.25062.0003 |GA |Release version 30.125062.0003.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#linux--august-2025--101250620003). |
+|iOS |Build 1.1.68140102 |GA |Build 1.1.68140102 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#ios--august-2025--1168140102). |
 
 ## July 2025
 
-|Platform  |Preview/GA  |Features  |
-|---------|------------|---------|
-|Android |GA |Build 1.0.7901.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#android--july-2025--1079010101). |
-|macOS |GA |Build 101.25062.0005, Release version 20.125062.5.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#macos--july-2025--101250620005). |
-|Linux |GA |Build 101.25052.0007, Release version 30.125052.0007.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#linux--july-2025--101250520007). |
-|iOS |GA |Build 1.1.67040101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#ios--july-2025--1167040101). |
+|Platform  |Feature  |Preview/GA  |Description  |
+|----------|---------|------------|-------------|
+|Android |Build 1.0.7901.0101 |GA |Build 1.0.7901.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#android--july-2025--1079010101). |
+|macOS |Build 101.25062.0005 |GA |Release version 20.125062.5.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#macos--july-2025--101250620005). |
+|Linux |Build 101.25052.0007 |GA |Release version 30.125052.0007.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#linux--july-2025--101250520007). |
+|iOS |Build 1.1.67040101 |GA |Build 1.1.67040101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#ios--july-2025--1167040101). |
