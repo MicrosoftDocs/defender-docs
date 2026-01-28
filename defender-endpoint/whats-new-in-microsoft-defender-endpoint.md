@@ -32,6 +32,7 @@ Learn more:
 
 |Platform  |Feature  |Preview/GA  |Description  |
 |----------|---------|------------|-------------|
+|Linux |Build 101.25102.0005 |GA |Release version 30.125102.0005.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#linux--january-2026--101251020005). |
 |macOS |Build 101.25122.0006 |GA |Release version 20.125122.6.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#macos--january-2026--101251220006). |
 |All |[Device vulnerabilities report](tvm-vulnerable-devices-report.md) enhancements |Preview |To simplify and streamline the Device vulnerabilities report experience, the Vulnerable devices report now includes the following changes and enhancements:<br><br>- The **Vulnerable devices by Windows 10/11 version over time** section has been removed.<br>- The report's filters have been simplified to only include the **Device group** filter.<br>- The report's history is now limited to the last 30 days.<br><br> **Note**: These changes are not yet visible to government cloud customers and will be visible in late January 2026. |
 
@@ -39,6 +40,8 @@ Learn more:
 
 |Platform  |Feature  |Preview/GA  |Description  |
 |----------|---------|------------|-------------|
+|Linux |Build 101.25092.0005 |GA |Release version 30.125092.0005.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#linux--december-2025--101250920005). |
+|Linux |Build 101.25092.0002 |GA |Release version 30.125092.0002.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#linux--december-2025--101250920002). |
 |Android |Build 1.0.8412.0101 |GA |Build 1.0.8412.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#android--december-2025--1084120101). |
 |Android |Build 1.0.8321.0101 |GA |Build 1.0.8321.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#android--december-2025--1083210101). |
 |macOS |Build 101.25102.0019 |GA |Release version 20.125102.19.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#macos--december-2025--101251020019). |
@@ -50,6 +53,7 @@ Learn more:
 
 |Platform  |Feature  |Preview/GA  |Description  |
 |----------|---------|------------|-------------|
+|Linux |Build 101.25102.0003 |GA |Release version 30.125102.0003.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#linux--november-2025--101251020003). |
 |Windows Antivirus |Platform 4.18.25110.6 / Engine 1.1.25110.1 |GA |Platform 4.18.25110.6 and Engine 1.1.25110.1 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#windows-antivirus--november-2025--platform-418251106--engine-11251101). |
 |Android |Build 1.0.8315.0101 |GA |Build 1.0.8315.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#android--november-2025--1083150101). |
 |Android |Build 1.0.8303.0101 |GA |Build 1.0.8303.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#android--november-2025--1083030101). |

@@ -46,9 +46,13 @@ This table includes supported versions released in for all supported platforms i
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
 |macOS  |101.25122.0006  |January 2026 |- Release version: 20.125122.6.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--january-2026--101251220006) |
+|Linux  |101.25102.0005  |January 2026 |- Release version: 30.125102.0005.0<br>- Engine version: 1.1.25090.6000<br>- Signature version: 1.439.338.0 |[Release details and updates](#linux--january-2026--101251020005) |
+|Linux  |101.25092.0005  |December 2025 |- Release version: 30.125092.0005.0<br>- Engine version: 1.1.25090.4000<br>- Signature version: 1.437.18.0 |[Release details and updates](#linux--december-2025--101250920005) |
+|Linux  |101.25092.0002  |December 2025 |- Release version: 30.125092.0002.0<br>- Engine version: 1.1.25090.4000<br>- Signature version: 1.437.18.0 |[Release details and updates](#linux--december-2025--101250920002) |
 |Android |1.0.8412.0101  |December 2025 |- Build: 1.0.8412.0101<br>- Released: December 15, 2025 |[Release details and updates](#android--december-2025--1084120101) |
 |Android |1.0.8321.0101  |December 2025 |- Build: 1.0.8321.0101<br>- Released: December 2, 2025 |[Release details and updates](#android--december-2025--1083210101) |
 |macOS  |101.25102.0019  |December 2025 |- Release version: 20.125102.19.0<br>- Engine version: 1.1.25090.2000<br>- Signature version: 1.435.600.0 |[Release details and updates](#macos--december-2025--101251020019) |
+|Linux  |101.25102.0003  |November 2025 |- Release version: 30.125102.0003.0<br>- Engine version: 1.1.25090.6000<br>- Signature version: 1.439.338.0 |[Release details and updates](#linux--november-2025--101251020003) |
 |Windows Antivirus |4.18.25110.6  |November 2025 |- Platform: 4.18.25110.6<br>- Engine: 1.1.25110.1<br>- Security intelligence: 1.443.6.0 |[Release details and updates](#windows-antivirus--november-2025--platform-418251106--engine-11251101) |
 |iOS |1.1.70290103 |November 2025 |- Build: 1.1.70290103<br>- Released: November 6, 2025 |[Release details and updates](#ios--november-2025--1170290103) |
 |Android |1.0.8315.0101  |November 2025 |- Build: 1.0.8315.0101<br>- Released: November 17, 2025 |[Release details and updates](#android--november-2025--1083150101) |
@@ -248,6 +252,66 @@ See the list of [macOS known issues](#known-issues).
 | General | Bug and performance fixes. |
 
 ## Linux versions
+
+### Linux | January 2026 | 101.25102.0005
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+| -------- | -------- |-------- |
+|30.125102.0005.0 |1.1.25090.6000 |1.439.338.0 |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|---------------|
+| Vulnerability detection | Enhanced vulnerability detection for React components through improved telemetry. This includes support for identifying [(CVE-2025-55182)](https://github.com/advisories/GHSA-fv66-9v8q-g76r), providing more comprehensive security coverage for React-based applications. |
+| Agent optimization | Agent process handling has been streamlined by removing the dependency on telemetryd_v2, enabling more efficient and consistent telemetry collection. This change applies to builds 101.24062.0001 and later, with no impact on functionality, data collection, or customer configurations. All features remain intact, and no customer action is required. |
+| Platform support | Added support for Debian 13. |
+
+### Linux | December 2025 | 101.25092.0005
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+| -------- | -------- |-------- |
+|30.125092.0005.0 |1.1.25090.4000 |1.437.18.0 |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|---------------|
+| Vulnerability detection | Enhanced vulnerability detection for vulnerable React components through deeper component analysis and enhanced telemetry. This includes support for identifying [(CVE-2025-55182)](https://github.com/advisories/GHSA-fv66-9v8q-g76r), providing more complete security coverage for React-based applications. |
+
+### Linux | December 2025 | 101.25092.0002
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+| -------- | -------- |-------- |
+|30.125092.0002.0 |1.1.25090.4000 |1.437.18.0 |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|---------------|
+| Critical fix | Includes critical fix related to machine identifier ensuring every endpoint is accurately identified as a unique device. |
+
+### Linux | November 2025 | 101.25102.0003
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+| -------- | -------- |-------- |
+|30.125102.0003.0 |1.1.25090.6000 |1.439.338.0 |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|---------------|
+| Library updates | Openssl library is upgraded to version 3.6.0 |
+| Library updates | Libcurl library is upgraded to version 8.16.0 |
+| Engine updates | The default engine version has been updated to 1.1.25090.6000, and default signature version to 1.439.338.0. |
 
 ### Linux | October 2025 | 101.25092.0001
 
