@@ -1,6 +1,6 @@
 ---
-title: Alert schema differences: Legacy vs. XDR connector
-description: Learn how alert schema, field mappings, and ingestion behavior differ between legacy connectors and the XDR connector in Microsoft Sentinel.
+title: Alert schema differences: Standalone vs. XDR connector
+description: Learn how alert schema, field mappings, and ingestion behavior differ between standalone connectors and the XDR connector in Microsoft Sentinel.
 author: guywi-ms
 ms.author: guywild
 ms.topic: reference
@@ -9,11 +9,11 @@ ms.date: 01/27/2026
 # customer intent: As a security analyst, I want to understand how alerts differ when ingested through the XDR connector so that I can update my queries, analytic rules, and workbooks accordingly.
 ---
 
-# Alert schema differences between legacy and XDR connectors
+# Alert schema differences between standalone and XDR connectors
 
-This article explains the differences between alerts ingested through legacy connectors and alerts ingested through the Extended Detection and Response (XDR) connector in Microsoft Sentinel. These differences can affect field mappings, derived field behavior, schema structure, and alert ingestion.
+This article explains the differences between alerts ingested through standalone connectors and alerts ingested through the Extended Detection and Response (XDR) connector in Microsoft Sentinel. 
 
-Schema changes might affect your existing queries, analytic rules, and workbooks. Review these differences before migrating to the XDR connector.
+These differences can affect field mappings, derived field behavior, schema structure, and alert ingestion, which might impact your existing queries, analytic rules, and workbooks. Review these differences before migrating to the XDR connector. 
 
 For the full alert schema, see the [Security alert schema reference](security-alert-schema.md).
 
@@ -58,19 +58,18 @@ ResourceAccessInfo.ComputerId is no longer required because it is identical to t
 
 ## Alert ingestion filtering
 
-Some alerts available through legacy connectors aren't ingested through the XDR connector.
+Some alerts available through standalone connectors aren't ingested through the XDR connector.
 
 | Product | Filtering behavior |
 |---------|--------------------|
 | Microsoft Defender for Cloud (MDC) | Informational severity alerts aren't ingested |
 | Microsoft Entra ID | By default, alerts below High severity are filtered. Customers can configure ingestion to include all severities. |
-| Microsoft Defender for Office (MDO) | Non-security alerts aren't ingested |
 
 ## Scoping behavior (Microsoft Defender for Cloud)
 
 Microsoft Defender for Cloud alerts use different scoping when ingested through the XDR connector.
 
-| Legacy connector scope | XDR connector scope |
+| Standalone connector scope | XDR connector scope |
 |------------------------|---------------------|
 | Subscription level | Tenant level |
 
