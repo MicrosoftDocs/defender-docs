@@ -4,7 +4,7 @@ description: Learn how to create exemptions for how policies are applied to reso
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
-ms.date: 08/13/2025
+ms.date: 01/28/2026
 ---
 
 # Exempt resources at scale
@@ -19,7 +19,7 @@ For example, Defender for Cloud might not track the process that remediates a re
 
 - Prevent a recommendation or resource from being listed as unhealthy. Apply the rule to the required scope and mark the item as "mitigated" or "risk accepted".
 
-[!INCLUDE [exempt-resource](/includes/exempt-resource.md)]
+[!INCLUDE [exempt-resource](./includes/exempt-resource.md)]
 
 
 ## Create exemptions at scale
