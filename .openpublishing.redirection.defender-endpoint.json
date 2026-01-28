@@ -199,7 +199,12 @@
       "source_path": "defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management.md",
       "redirect_url": "/defender-endpoint/whats-new-in-microsoft-defender-endpoint",
       "redirect_document_id": false
-    } 
+    },
+    {
+      "source_path": "defender-endpoint/android-whatsnew.md",
+      "redirect_url": "/defender-endpoint/whats-new-in-microsoft-defender-endpoint",
+      "redirect_document_id": false
+    }
          
   ]
 }
