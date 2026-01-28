@@ -405,13 +405,13 @@ The following actions are available at the top of the Email summary panel for Th
 - Add the users to the **Data Investigator** or **eDiscovery Manager** role groups.
 - [Create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
 
-² You can preview or download email messages that are available in cloud mailboxes. Examples of when messages are no longer available in mailboxes include:
+² You can preview or download email messages that are available in cloud mailboxes and quarantine. Examples of when messages are no longer available in mailboxes include:
 
 - The message was dropped before delivery or delivery failed.
 - The message was _soft deleted_ (deleted from the Deleted items folder, which moves the message to the Recoverable Items\Deletions folder).
 - ZAP moved the message to quarantine.
 
-³ **Download email** isn't available for messages that were quarantined. Instead, [download a password protected copy of the message from quarantine](quarantine-admin-manage-messages-files.md#download-email-from-quarantine).
+³ **Download email** for quarantined messages is available with password protection. You can also [download a password protected copy of the message from quarantine](quarantine-admin-manage-messages-files.md#download-email-from-quarantine).
 
 ⁴ **Go hunt** is available only in Threat Explorer. It isn't available in Real-time detections.
 

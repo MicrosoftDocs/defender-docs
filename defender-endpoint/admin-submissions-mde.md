@@ -2,12 +2,12 @@
 title: Submit files in Microsoft Defender for Endpoint
 description: Learn how to use the unified submissions feature in Microsoft Defender XDR to submit suspicious emails, URLs, email attachments, and files to Microsoft for scanning.
 search.appverid: met150
-ms.date: 05/06/2024
+ms.date: 12/24/2025
 appliesto:
   - Microsoft Defender for Endpoint
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
@@ -19,7 +19,6 @@ ms.custom: FPFN
 ---
 
 # Submit files in Microsoft Defender for Endpoint
-
 
 In Microsoft Defender for Endpoint, admins can use the unified submissions feature to submit files and file hashes (SHAs) to Microsoft for review. The unified submissions experience is a one-stop shop for submitting emails, URLs, email attachments, and files in one, easy-to-use submission experience. Admins can use the Microsoft Defender portal or the Microsoft Defender for Endpoint Alert page to submit suspicious files.
 
@@ -42,15 +41,15 @@ For more information about how you can submit spam, phish, URLs, and email attac
 
 ## Submit a file or file hash to Microsoft from the Defender portal
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Investigation & response** \> **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
-2. On the **Submissions** page, select the **Files** tab.
+1. On the **Submissions** page, select the **Files** tab.
 
-3. On the **Files** tab, select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Add new submission**.
+1. On the **Files** tab, select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Add new submission**.
 
-   :::image type="content" source="/defender/media/unified-admin-submission-new.png" alt-text="Screenshot showing how to add a new submission.":::
+1. :::image type="content" source="/defender/media/unified-admin-submission-new.png" alt-text="Screenshot showing how to add a new submission.":::
 
-4. In the **Submit items to Microsoft for review** flyout that opens, select **Files** or **File hash** from the **Select the submission type** dropdown list.
+1. In the **Submit items to Microsoft for review** flyout that opens, select **Files** or **File hash** from the **Select the submission type** dropdown list.
 
    - If you selected **Files**, configure the following options:
      - Select **Browse files**. In the dialog that opens, find and select the file, and then select **Open**. Repeat this step as many times as necessary. To remove an entry from the flyout, select :::image type="icon" source="/defender/media/m365-cc-sc-close-icon.png" border="false"::: next to the entry.
@@ -88,17 +87,17 @@ To view the details of the submission, select the submission by clicking anywher
 
 ## Report items to Microsoft from the Alerts page in the Defender portal
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Incidents & alerts** \> **Alerts**. Or, to go directly to the **Alerts** page, use <https://security.microsoft.com/alerts>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Investigation & response** \> **Incidents & alerts** \> **Alerts**. Or, to go directly to the **Alerts** page, use <https://security.microsoft.com/alerts>.
 
-2. On the **Alerts** page, find the alert that contains the file you want to report. For example, you can select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**, and then select **Service sources** \> **Microsoft Defender for Endpoint**.
+1. On the **Alerts** page, find the alert that contains the file you want to report. For example, you can select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**, and then select **Service/detection sources** \> **Microsoft Defender for Endpoint**.
 
-3. Select the alert from the list by clicking anywhere in the row other than the check box next to the **Alert name** value.
+1. Select the alert from the list by clicking anywhere in the row other than the check box next to the **Alert name** value.
 
-4. In the details flyout that opens, select :::image type="icon" source="/defender/media/m365-cc-sc-more-actions-icon.png" border="false"::: \> **Submit items to Microsoft for review**.
+1. In the details flyout that opens, select :::image type="icon" source="/defender/media/m365-cc-sc-more-actions-icon.png" border="false"::: \> **Submit items to Microsoft for review**.
 
-   :::image type="content" source="/defender/media/unified-admin-submission-alerts-queue.png" alt-text="Screenshot showing how to submit items from an alerts queue.":::
+    a. :::image type="content" source="/defender/media/unified-admin-submission-alerts-queue.png" alt-text="Screenshot showing how to submit items from an alerts queue.":::
 
-5. The options that are available in the **Submit items to Microsoft for review** flyout that opens are basically same as described in the previous section.
+1. The options that are available in the **Submit items to Microsoft for review** flyout that opens are basically same as described in the previous section.
 
    The only difference is an **Include alert story** option that you can select to attach a JSON file that helps Microsoft investigate the submission.
 
@@ -114,4 +113,4 @@ The submission is available on the **Files** tab of the **Submissions** page at 
 - [Microsoft Defender for Endpoint in Microsoft Defender XDR](/defender-xdr/microsoft-365-security-center-mde)
 - [Address false positives/negatives](defender-endpoint-false-positives-negatives.md)
 - [View and organize alerts queue in Microsoft Defender for Endpoint](alerts-queue.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
 ms.topic: how-to
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 ms.reviewer: yongrhee
 manager: bagol
 ms.subservice: asr
@@ -34,7 +34,7 @@ Enable network protection in audit mode to see which IP addresses and domains mi
 
 1. Type **powershell** in the Start menu, right-click **Windows PowerShell** and select **Run as administrator**.
 
-2. Run the following cmdlet:
+1. Run the following cmdlet:
 
     ```PowerShell
     Set-MpPreference -EnableNetworkProtection AuditMode
@@ -44,7 +44,7 @@ Enable network protection in audit mode to see which IP addresses and domains mi
 
 1. Open Internet Explorer, Google Chrome, or any other browser of your choice.
 
-2. Go to [https://smartscreentestratings2.net](https://smartscreentestratings2.net).
+1. Go to [https://smartscreentestratings2.net](https://smartscreentestratings2.net).
 
     The network connection is allowed and a test message displays.
     
@@ -69,11 +69,11 @@ If network protection fails to detect, make sure that the following prerequisite
 
 1. Microsoft Defender Antivirus is the primary antivirus app (active mode)
 
-2. [Behavior Monitoring is enabled](behavior-monitor.md)
+1. [Behavior Monitoring is enabled](behavior-monitor.md)
 
-3. [Cloud Protection is enabled](enable-cloud-protection-microsoft-defender-antivirus.md)
+1. [Cloud Protection is enabled](enable-cloud-protection-microsoft-defender-antivirus.md)
 
-4. [Cloud Protection network connectivity is functional](configure-network-connections-microsoft-defender-antivirus.md)
+1. [Cloud Protection network connectivity is functional](configure-network-connections-microsoft-defender-antivirus.md)
 
 ## Related articles
 
@@ -85,5 +85,5 @@ If network protection fails to detect, make sure that the following prerequisite
 
 - [Troubleshoot network protection](troubleshoot-np.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

@@ -3,8 +3,8 @@ title: Manage security operations cases natively in the Microsoft Defender porta
 description: Learn about the case management capabilities in the Defender portal for managing and standardizing unified security operations.
 search.appverid: met150
 ms.service: unified-secops-platform
-ms.author: yelevin
-author: yelevin
+ms.author: monaberdugo
+author: mberdugo
 ms.localizationpriority: medium
 ms.date: 05/04/2025
 audience: ITPro
@@ -171,11 +171,11 @@ To add an attachment to a comment:
 1. Select the file you want to attach from your computer.
 1. Select **Send** to save the comment.
 
-  :::image type="content" source="media/cases-overview/attach-file-to-comment-send.png" alt-text="Screenshot showing the Send button to save the comment.":::
+   :::image type="content" source="media/cases-overview/attach-file-to-comment-send.png" alt-text="Screenshot showing the Send button to save the comment.":::
 
-- To attach a screenshot to your comment, paste it into the text editor.
-- To delete an attached file from the comment, select the bin icon while hovering over it.
-
+   - To attach a screenshot to your comment, paste it into the text editor.
+   - To delete an attached file from the comment, select the bin icon while hovering over it.
+    
 ### Delete Case (preview)
 
 To delete a case:

@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 11/02/2025
+ms.date: 11/17/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -25,39 +25,51 @@ appliesto:
 
 Defender for Endpoint extends support to include down-level operating systems, providing advanced attack detection and investigation capabilities on supported Windows versions.
 
-To onboard down-level Windows client endpoints to Defender for Endpoint, you need to:
+To onboard down-level Windows client endpoints to Defender for Endpoint, you can:
 
-- [Configure and update System Center Endpoint Protection clients](#configure-and-update-system-center-endpoint-protection-clients)
-- [Install and configure Microsoft Monitoring Agent (MMA) to report sensor data](#install-and-configure-microsoft-monitoring-agent-mma)
+- [Use the Defender deployment tool to deploy Defender endpoint security](#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security)
 
-For Windows Server 2008 R2 SP1, you have the option of [onboarding through Microsoft Defender for Cloud](#onboard-windows-servers-through-microsoft-defender-for-cloud).
+   or
 
-> [!NOTE]
-> Defender for Endpoint standalone server license is required, per node, in order to onboard a Windows server through Microsoft Monitoring Agent (Option 1). Alternatively, a Microsoft Defender for servers license is required, per node, in order to onboard a Windows server through Microsoft Defender for Cloud (Option 2), see [Supported features available in Microsoft Defender for Cloud](/azure/defender-for-cloud/supported-machines-endpoint-solutions-clouds-servers).
+- [Install and configure Microsoft Monitoring Agent (MMA)](#install-and-configure-microsoft-monitoring-agent-mma) and [Configure and update System Center Endpoint Protection (SCEP) clients](#configure-and-update-system-center-endpoint-protection-clients)
 
 > [!TIP]
 > After onboarding the device, you can choose to run a detection test to verify that it's properly onboarded to the service. For more information, see [Run a detection test on a newly onboarded Defender for Endpoint endpoint](run-detection-test.md).
 
-## Prerequisites
+## Supported operating systems
 
+**Defender endpoint security solution**
 
-### Supported operating systems
-
-- Windows 7 SP1 Enterprise
 - Windows 7 SP1 Pro
-- Windows 8.1 Pro
-- Windows 8.1 Enterprise
+- Windows 7 SP1 Enterprise
 - Windows Server 2008 R2 SP1
 
-## Configure and update System Center Endpoint Protection clients
+**MMA/SCEP**
 
-Defender for Endpoint integrates with System Center Endpoint Protection to provide visibility to malware detections and to stop propagation of an attack in your organization by banning potentially malicious files or suspected malware.
+- Windows 7 SP1 Pro
+- Windows 7 SP1 Enterprise
+- Windows 8.1 Pro
+- Windows 8.1
+- Windows Server 2008 R2 SP1
 
-The following steps are required to enable this integration:
+## Use the Defender deployment tool to deploy Defender endpoint security
 
-- Install the [January 2017 anti-malware platform update for Endpoint Protection clients](https://support.microsoft.com/help/3209361/january-2017-anti-malware-platform-update-for-endpoint-protection-clie)
-- Configure the SCEP client Cloud Protection Service membership to the **Advanced** setting
-- Configure your network to allow connections to the Microsoft Defender Antivirus cloud. For more information, see [Configure and validate Microsoft Defender Antivirus network connections](configure-network-connections-microsoft-defender-antivirus.md)
+A Microsoft Defender for endpoint security solution (preview) is available for legacy Windows 7 SP1 and Windows Server 2008 R2 SP1 devices. The solution provides advanced protection capabilities and improved functionality for those devices compared to other solutions. The following table outlines the solution's currently supported functionality.
+
+| Feature | Functionality |
+|---------|---------------|
+| Advanced Hunting | Hunt across events with Kusto Query Language |
+| Antivirus in Passive Mode | Allows for coexistence with non-Microsoft anti-malware solutions. |
+| Custom file indicators | Allow, block, quarantine files based on hash or certificate information |
+| Device and file response capabilities | Isolate device, block and get files, collect investigation packages, run antivirus scan<br><br>Note: other response capabilities aren't supported |
+| Next-generation protection | Defender Antivirus with real-time behavior monitoring, cloud-delivered, and definition-based malware blocking and remediation. Scheduled and manually triggered scans.<br><br>Note: Network Protection, Attack Surface Reduction Rules, Controlled Folder Access, and related functionality including IP and URL indicators aren't supported. |
+| Operating system and software vulnerability assessments | Defender Vulnerability Management provides insights into vulnerabilities for Windows and installed software.<br><br>Note: The following functionality isn't available for Windows 7 SP1 and Windows Server 2008 R2:<br>- Security configuration assessment<br>- "Pending reboot" experience<br>- Premium capabilities: security baseline assessment, browser extensions, certificate and application blocking |
+| Security Settings Management | Policy enforcement for Defender Antivirus capabilities. Note that only settings for available features will take effect. |
+| Sense detection sensor | Rich detection events for use in device timeline, hunting, and to generate alerts based on indicators of compromise and attack. |
+| Attack Disruption: contain device/IP | Automated attack disruption to shut down attacks leveraging lateral movement. |
+| (Automatic) updates | Regular updates for anti-malware and detection components. |
+
+The solution can be downloaded and installed using the [Defender deployment tool](./defender-deployment-tool-windows.md), a lightweight, self-updating application that streamlines onboarding for all Windows versions supported by Defender for Endpoint. The deployment tool takes care of prerequisites, automates migrations from older solutions, and removes the need for complex onboarding scripts, separate downloads, and manual installations. For information about the tool and how to use it, see [Deploy Microsoft Defender endpoint security to Windows devices using the Defender deployment tool (preview)](./defender-deployment-tool-windows.md).
 
 ## Install and configure Microsoft Monitoring Agent (MMA)
 
@@ -76,12 +88,12 @@ Review the following details to verify minimum system requirements:
 
 - Install the [Update for customer experience and diagnostic telemetry](https://support.microsoft.com/help/3080149/update-for-customer-experience-and-diagnostic-telemetry)
 
-- Install [Microsoft .Net Framework 4.5.2 or later](https://www.microsoft.com/en-US/download/details.aspx?id=42642)
+- Install [Microsoft .NET Framework 4.5.2 or later](https://www.microsoft.com/en-US/download/details.aspx?id=42642)
 
     > [!NOTE]
     > Installation of .NET 4.5 might require you to restart your computer after installation.
 
-- Meet the Azure Log Analytics agent minimum system requirements. For more information, see [Collect data from computers in you environment with Log Analytics](/azure/log-analytics/log-analytics-concept-hybrid#prerequisites)
+- Meet the Azure Log Analytics agent minimum system requirements. For more information, see [Collect data from computers in your environment with Log Analytics](/azure/log-analytics/log-analytics-concept-hybrid#prerequisites)
 
 ### Installation steps
 
@@ -90,12 +102,12 @@ Review the following details to verify minimum system requirements:
    > [!NOTE]
    > Due to the [deprecation of SHA-1 support by the MMA agent](/azure/azure-monitor/agents/agent-windows#sha-2-code-signing-support-requirement), the MMA agent needs to be version 10.20.18029 or newer.
 
-2. Obtain the workspace ID:
+1. Obtain the workspace ID:
    - In the Defender for Endpoint navigation pane, select **Settings > Device management > Onboarding**.
    - Select the operating system.
    - Copy the workspace ID and workspace key.
 
-3. Using the Workspace ID and Workspace key choose any of the following installation methods to install the agent:
+1. Using the Workspace ID and Workspace key choose any of the following installation methods to install the agent:
     - [Manually install the agent using setup](/previous-versions/azure/azure-monitor/agents/agent-windows?tabs=setup-wizard#install-the-agent).
 
       On the **Agent Setup Options** page, select **Connect the agent to Azure Log Analytics (OMS)**
@@ -106,9 +118,19 @@ Review the following details to verify minimum system requirements:
    > [!NOTE]
    > If you're a [US Government customer](gov.md), under "Azure Cloud", you need to choose "Azure US Government" if using the setup wizard, or if using a command line or a script - set the "OPINSIGHTS_WORKSPACE_AZURE_CLOUD_TYPE" parameter to 1.
 
-4. If you're using a proxy to connect to the Internet see the Configure proxy and Internet connectivity settings section.
+1. If you're using a proxy to connect to the Internet see the Configure proxy and Internet connectivity settings section.
 
 Once completed, you should see onboarded endpoints in the portal within an hour.
+
+## Configure and update System Center Endpoint Protection clients
+
+Defender for Endpoint integrates with System Center Endpoint Protection to provide visibility to malware detections and to stop propagation of an attack in your organization by banning potentially malicious files or suspected malware.
+
+The following steps are required to enable this integration:
+
+- Install the [January 2017 anti-malware platform update for Endpoint Protection clients](https://support.microsoft.com/help/3209361/january-2017-anti-malware-platform-update-for-endpoint-protection-clie)
+- Configure the SCEP client Cloud Protection Service membership to the **Advanced** setting
+- Configure your network to allow connections to the Microsoft Defender Antivirus cloud. For more information, see [Configure and validate Microsoft Defender Antivirus network connections](configure-network-connections-microsoft-defender-antivirus.md) 
 
 ## Configure proxy and Internet connectivity settings
 
@@ -126,11 +148,11 @@ Once completed, you should see onboarded Windows servers in the portal within an
 
 1. In the Microsoft Defender XDR navigation pane, select **Settings** > **Endpoints** > **Device management** > **Onboarding**.
 
-2. Select **Windows Server 2008 R2 SP1** as the operating system.
+1. Select **Windows Server 2008 R2 SP1** as the operating system.
 
-3. Click **Onboard Servers in Microsoft Defender for Cloud**.
+1. Select **Onboard Servers in Microsoft Defender for Cloud**.
 
-4. Follow the onboarding instructions in [Microsoft Defender for Endpoint with Microsoft Defender for Cloud](/azure/security-center/security-center-wdatp) and If you're using Azure ARC, follow the onboarding instructions in [Enabling the Microsoft Defender for Endpoint integration](/azure/security-center/security-center-wdatp#enabling-the-microsoft-defender-for-endpoint-integration).
+1. Follow the onboarding instructions in [Microsoft Defender for Endpoint with Microsoft Defender for Cloud](/azure/security-center/security-center-wdatp) and If you're using Azure ARC, follow the onboarding instructions in [Enabling the Microsoft Defender for Endpoint integration](/azure/security-center/security-center-wdatp#enabling-the-microsoft-defender-for-endpoint-integration).
 
 After completing the onboarding steps, you'll need to [Configure and update System Center Endpoint Protection clients](#configure-and-update-system-center-endpoint-protection-clients).
 
@@ -192,7 +214,7 @@ Follow the steps in [Run a detection test on a newly onboarded device](run-detec
     > [!NOTE]
     > This article assumes you're using x64-based servers (MMA Agent .exe x64 New SHA-2 compliant version).
 
-**Step 2: Create a file name DeployMMA.cmd (using notepad)**
+**Step 2: Create a file named DeployMMA.cmd (using notepad)**
 Add the following lines to the cmd file. Note that you'll need your WORKSPACE ID and KEY.
 
 The following command is an example. Replace the following values:
@@ -248,7 +270,7 @@ For Windows Server 2008 R2 you'll need (and it will only copy down) the followin
 
 Once this is done, you'll need to create a start-up script policy:
 
-:::image type="content" source="media/startupprops.png" alt-text="Screenshot of the start up properties." lightbox="media/startupprops.png":::
+:::image type="content" source="media/startupprops.png" alt-text="Screenshot of the startup properties." lightbox="media/startupprops.png":::
 
 The name of the file to run here's c:\windows\MMA\DeployMMA.cmd.
 Once the server is restarted as part of the start-up process it will install the Update for customer experience and diagnostic telemetry KB, and then install the MMA Agent, while setting the Workspace ID and Key, and the server will be onboarded.
@@ -257,13 +279,13 @@ You could also use an **immediate task** to run the deployMMA.cmd if you don't w
 
 This could be done in two phases. First create **the files and the folder in** GPO - Give the system time to ensure the GPO has been applied, and all the servers have the install files. Then, add the immediate task. This will achieve the same result without requiring a reboot.
 
-As the Script has an exit method and won't re-run if the MMA is installed, you could also use a daily scheduled task to achieve the same result. Similar to a Configuration Manager compliance policy it will check daily to ensure the MMA is present.
+As the Script has an exit method and won't rerun if the MMA is installed, you could also use a daily scheduled task to achieve the same result. Similar to a Configuration Manager compliance policy, it will check daily to ensure the MMA is present.
 
 :::image type="content" source="media/schtask.png" alt-text="Screenshot of the schedule task." lightbox="media/schtask.png":::
 
 :::image type="content" source="media/newtaskprops.png" alt-text="Screenshot of the new task properties." lightbox="media/newtaskprops.png":::
 
-:::image type="content" source="media/deploymmadowmload.png" alt-text="Screenshot of the deploy mma download properties." lightbox="media/deploymmadowmload.png":::
+:::image type="content" source="media/deploymmadowmload.png" alt-text="Screenshot of the deployed mma download properties." lightbox="media/deploymmadowmload.png":::
 
 :::image type="content" source="media/tasksch.png" alt-text="Screenshot of the task scheduler." lightbox="media/tasksch.png":::
 
@@ -283,7 +305,7 @@ You have two options to offboard Windows endpoints from the service:
 - Remove the Defender for Endpoint workspace configuration
 
 > [!NOTE]
-> Offboarding causes the Windows endpoint to stop sending sensor data to the portal but data from the endpoint, including reference to any alerts it has had will be retained for up to 6 months.
+> Offboarding causes the Windows endpoint to stop sending sensor data to the portal but data from the endpoint, including reference to any alerts it has had will be retained for up to six months.
 
 ### Uninstall the MMA agent
 
@@ -301,7 +323,7 @@ You can use either of the following methods:
 
 1. In the **Microsoft Monitoring Agent Properties**, select the **Azure Log Analytics (OMS)** tab.
 
-2. Select the Defender for Endpoint workspace, and click **Remove**.
+1. Select the Defender for Endpoint workspace, and select **Remove**.
 
     :::image type="content" source="media/atp-mma.png" alt-text="Screenshot of the Workspaces pane." lightbox="media/atp-mma.png":::
 
@@ -312,7 +334,7 @@ You can use either of the following methods:
    1. In the navigation pane, select **Settings** > **Onboarding**.
    1. Select the relevant operating system and get your Workspace ID.
 
-2. Open an elevated PowerShell and run the following command. Use the Workspace ID you obtained and replacing `WorkspaceID`:
+1. Open an elevated PowerShell and run the following command. Use the Workspace ID you obtained and replacing `WorkspaceID`:
 
     ```powershell
     $AgentCfg = New-Object -ComObject AgentConfigManager.MgmtSvcCfg
@@ -323,5 +345,5 @@ You can use either of the following methods:
     # Reload the configuration and apply changes
     $AgentCfg.ReloadConfiguration()
     ```
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

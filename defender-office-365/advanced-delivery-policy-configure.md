@@ -18,7 +18,7 @@ description: Admins can learn how to use the advanced delivery policy in Microso
 ms.service: defender-office-365
 ms.date: 07/02/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -71,7 +71,7 @@ Messages identified by the advanced delivery policy aren't security threats, so 
 
 ## Use the Microsoft Defender portal to configure SecOps mailboxes in the advanced delivery policy
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
 
    On the **Advanced delivery** page, verify that the **SecOps mailbox** tab is selected.
 
@@ -99,7 +99,7 @@ Back on the **SecOps mailbox** tab, the SecOps mailbox entries that you configur
 
 ## Use the Microsoft Defender portal to modify or remove SecOps mailboxes in the advanced delivery policy
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
 
    On the **Advanced delivery** page, verify that the **SecOps mailbox** tab is selected.
 
@@ -131,6 +131,8 @@ If your MX record doesn't point to Microsoft 365, the IP address in the `Authent
 
 > [!NOTE]
 >
+> - Currently, IPv6 addresses are supported only in PowerShell. To use PowerShell to configure non-Microsoft phishing simulations in the advanced delivery policy, see the [Use PowerShell to configure non-Microsoft phishing simulations](#use-powershell-to-configure-non-microsoft-phishing-simulations) section later in this article.
+>   
 > - Enhanced Filtering for Connectors doesn't work for non-Microsoft phishing simulations in the following in-and-out email routing scenario:
 >
 >   Internet \> Microsoft 365 \> on-premises environment or non-Microsoft security service \> back to Microsoft 365
@@ -148,7 +150,7 @@ If your MX record doesn't point to Microsoft 365, the IP address in the `Authent
 >
 > - Adding phishing simulation URLs to the **Do not rewrite the following URLs in email** section in Safe Links policies might result in unwanted alerts for URL clicks. Phishing simulation URLs in email messages are automatically allowed both during mail flow and at time of click.
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
 
    On the **Advanced delivery** page, select the **Phishing simulation** tab.
 
@@ -213,7 +215,7 @@ Back on the **Phishing simulation** tab, the non-Microsoft phishing simulation e
 
 ## Use the Microsoft Defender portal to modify or remove non-Microsoft phishing simulations in the advanced delivery policy
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
 
    On the **Advanced delivery** page, select the **Phishing simulation** tab.
 
@@ -398,7 +400,7 @@ Configuring a non-Microsoft phishing simulation in PowerShell is a multi-step pr
 1. Create the phishing simulation override policy.
 2. Create the phishing simulation override rule that specifies:
    - The policy that the rule applies to.
-   - The source IP address of the phishing simulation messages.
+   - The source IPv4 or IPv6 address of the phishing simulation messages.
 3. Optionally, identity the phishing simulation URLs in **non-email** phishing simulations (links in Teams messages or in Office documents) that shouldn't be treated as real threats at time of click.
 
 #### Step 1: Use PowerShell to create the phishing simulation override policy
@@ -423,7 +425,7 @@ New-ExoPhishSimOverrideRule -Name <ArbitraryTextValue> -Policy PhishSimOverrideP
 
 Regardless of the Name value you specify, the rule name is `_Exe:PhishSimOverr:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 6fed4b63-3563-495d-a481-b24a311f8329).
 
-A valid IP address entry is one of the following values:
+A valid IPv4 or IPv6 address entry is one of the following values:
 
 - Single IP: For example, 192.168.1.1.
 - IP range: For example, 192.168.0.1-192.168.0.254.

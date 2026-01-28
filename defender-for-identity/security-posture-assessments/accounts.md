@@ -2,7 +2,7 @@
 title: 'Accounts security posture assessment'
 ms.service: microsoft-defender-for-identity
 ms.topic: article
-ms.date: 09/15/2025
+ms.date: 11/11/2025
 ms.reviewer: LiorShapiraa
 description: Lists all Microsoft Defender for Identity security posture assessments for Active Directory accounts, with detailed impacts and remediation steps to help improve your Secure Score.
 ---
@@ -11,11 +11,9 @@ description: Lists all Microsoft Defender for Identity security posture assessme
 
 
 > [!NOTE]
-> While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
->
+> While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status might still take time until it's marked as **Completed**.
 
-
-## Identify service accounts in privileged groups 
+## Identify service accounts in privileged groups
 
 
 **Description**
@@ -23,7 +21,7 @@ description: Lists all Microsoft Defender for Identity security posture assessme
 Lists Active Directory service accounts within your environment that are members of privileged groups, including direct and nested membership.
 
 
-**Impact**
+**User impact**
 
 Service accounts often have long-lived credentials and are used by applications, scripts, or automated tasks. When these accounts are members of highly privileged groups (for example, Domain Admins or Enterprise Admins), they increase the organization’s attack surface. Compromise of one of these accounts can grant an attacker broad administrative access to critical systems and data. Additionally, because service accounts aren't tied to a specific user and often lack interactive monitoring, malicious activity performed under these accounts might go unnoticed, delaying detection and response.
 
@@ -66,9 +64,9 @@ For example:
 Lists Active Directory accounts (users, service accounts, and groups) that are members of built-in operator groups such as Server Operators, Backup Operators, Print Operators or Account Operators, including direct and indirect membership. These groups grant elevated privileges that can be used to compromise domain controllers or sensitive servers.
 
 
-**Impact**
+**User impact**
 
-Operator groups provide broad control over servers, files, and system operations. Members of these groups can perform administrative actions such as stopping critical services, modifying files, or restoring data which can be exploited to escalate privileges or gain persistence. Because these groups are rarely needed in modern environments, leaving accounts in them unnecessarily increases the risk of privilege abuse or lateral movement.
+Operator groups provide broad control over servers, files, and system operations. Members of these groups can perform administrative actions such as stopping critical services, modifying files, or restoring data, which can be exploited to escalate privileges or gain persistence. Because these groups are rarely needed in modern environments, leaving accounts in them unnecessarily increases the risk of privilege abuse or lateral movement.
 
 
 **Implementation**
@@ -87,14 +85,13 @@ For example:
 - If operator group membership is essential for a specific administrative function, monitor the account, restrict it to required hosts, and review it regularly  periodically to confirm ongoing necessity.
 
 
-
 ## Accounts with non-default Primary Group ID
 
 **Description**
 
 This recommendation lists all computers and users accounts whose primaryGroupId (PGID) attribute isn't the default for domain users and computers in Active Directory.
 
-**Impact**
+**User impact**
 
 The primaryGroupId attribute of a user or computer account grants implicit membership to a group. Membership through this attribute doesn't appear in the list of group members in some interfaces. This attribute might be used as an attempt to hide group membership. It might be a stealthy way for an attacker to escalate privileges without triggering normal auditing for group membership changes. 
 
@@ -153,7 +150,7 @@ To achieve the full score, remediate all exposed entities.
 
 This recommendation lists any krbtgt account within your environment with password last set over 180 days ago.
 
-**Impact**
+**User impact**
 
 The krbtgt account in Active Directory is a built-in account used by the Kerberos authentication service. It encrypts and signs all Kerberos tickets, enabling secure authentication within the domain. The account can't be deleted, and securing it's crucial, as compromise could allow attackers to forge authentication tickets.  
 If the KRBTGT account's password is compromised, an attacker can use its hash to generate valid Kerberos authentication tickets, allowing them to perform Golden Ticket attacks and gain access to any resource in the AD domain. Since Kerberos relies on the KRBTGT password to sign all tickets, closely monitoring and regularly changing this password is essential to mitigating the risk of such attacks.
@@ -165,8 +162,32 @@ If the KRBTGT account's password is compromised, an attacker can use its hash to
 1. Take appropriate action on those accounts by resetting their password **twice** to invalidate the Golden Ticket attack. 
 
 > [!NOTE]
-> The krbtgt Kerberos account in all Active Directory domains supports key storage in all Kerberos Key Distribution Centers (KDC). To renew the Kerberos keys for TGT encryption, periodically change the krbtgt account password. It's recommended to use the [Microsoft-provided script.](https://github.com/microsoft/New-KrbtgtKeys.ps1)  
-> When resetting the password twice, wait at least 10 hours between resets to avoid Kerberos authentication issues. This wait time is enforced by the script and aligns with best practices.
+> The **krbtgt** Kerberos account in all Active Directory domains supports key storage in all Kerberos Key Distribution Centers (KDCs). To renew the Kerberos keys for TGT encryption, periodically change the **krbtgt** account password.  
+>  
+> We recommend resetting the password twice, waiting at least 10 hours between resets. This process invalidates  existing Kerberos tickets to help prevent Golden Ticket attacks.  
+>  
+> For the official and supported procedure, see [Reset the krbtgt password](https://learn.microsoft.com/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-the-krbtgt-password).
+
+
+## Change password for on-premises account with potentially leaked credentials (Preview)
+
+**Description**
+
+This report lists users whose valid credentials have been leaked. When cybercriminals compromise valid passwords of legitimate users, the criminals often share those credentials. This is done by posting them publicly on the dark web or paste sites or by trading or selling the credentials on the black market. The Microsoft leaked credentials service acquires username/password pairs by monitoring public and dark web sites and by working with  Researchers Law enforcement Security teams at Microsoft Other trusted sources.
+
+**User impact**
+
+When the service acquires user credentials from the dark web, paste sites or the above sources an account with compromised credentials can be exploited by malicious actors to gain unauthorized access.
+
+**Implementation**
+
+1.	Review the recommended action at [https://security.microsoft.com/securescore?viewid=actions](https://security.microsoft.com/securescore?viewid=actions) for **Change password for accounts with potentially leaked credentials**. 
+1.	Review the list of exposed entities to discover which of your account passwords were leaked.
+1.	Take appropriate actions on those entities by removing the service account:
+    1. Open the Active Directory Users and Computers (ADUC) console and sign in with an administrator account.
+    2. Navigate to the organizational unit (OU) where the user account is located.
+    3. Find and select the user account that needs a password change.
+    4. Right-click on the user account, select **Reset Password**, enter the new password, and confirm it.
 
 
 ## Change password of built-in domain Administrator account
@@ -175,11 +196,11 @@ If the KRBTGT account's password is compromised, an attacker can use its hash to
 
 This recommendation lists any built-in domain Administrator accounts within your environment with password last set over 180 days ago. 
 
-**Impact**
+**User impact**
 
 The built-in domain Administrator account is a default, highly privileged AD account with full control over the domain. It can't be deleted, has unrestricted access, and is critical for managing the domain's resources.
 
-Regularly updating the built-in Administrator account's password is essential due to its high privileges, which make it a prime target for attackers. If compromised, it can grant unauthorized control over the domain. Since this account is often unused and its password may not be updated frequently, regular changes reduce exposure and enhance security. 
+Regularly updating the built-in Administrator account's password is essential due to its high privileges, which make it a prime target for attackers. If compromised, it can grant unauthorized control over the domain. Since this account is often unused and its password might not be updated frequently, regular changes reduce exposure and enhance security. 
 
 **Implementation**
 
@@ -202,7 +223,7 @@ However, **Sensitive** accounts can also become *dormant* if they aren't used fo
 
 For more information, see [Defender for Identity entity tags in Microsoft Defender XDR](../entity-tags.md#default-sensitive-entities).
 
-**Impact**
+**User impact**
 
 Organizations that fail to secure their dormant user accounts leave the door unlocked to their sensitive data safe.
 
@@ -225,13 +246,11 @@ It doesn't matter if the cause is employee turnover or resource mismanagement -s
 
 **Description**
 
-
 Accounts with the DCSync permission can initiate domain replication. Attackers can potentially exploit domain replication to gain unauthorized access, manipulate domain data, or compromise the integrity and availability of your Active Directory environment.
 
 It's crucial to carefully manage and restrict the membership of this group to ensure the security and integrity of your domain replication process.
 
 **Implementation**
-
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for **Remove non-admin accounts with DCSync permissions**.
 
@@ -244,6 +263,27 @@ It's crucial to carefully manage and restrict the membership of this group to en
 
 To achieve the maximum score, remediate all exposed entities.
 
+You can access Active Directory Users and Computers by signing in to your domain controller.
+To remove DCSync permissions from a non-admin account:
+
+1. Open Active Directory Users and Computers.
+
+1. Turn on Advanced Features.
+This is required to display the Security tab on domain objects.
+
+1. Open Domain properties, select your domain name (for example, contoso.local), and then select Properties.
+
+1. Select the Security tab.
+
+1. Select the target user or group and then select the non-admin user or service account that shouldn't have these permissions.
+
+1. Uncheck replication permissions. Scroll through the "Permissions for [User]" list uncheck the following permissions if they're selected:
+
+    - Replicating Directory Changes
+    - Replicating Directory Changes All
+
+1. Select Apply, and then select OK.
+
 
 ## Ensure privileged accounts are not delegated
 
@@ -251,7 +291,7 @@ To achieve the maximum score, remediate all exposed entities.
 
 This recommendation lists all privileged accounts that don't have the "not delegated" setting enabled, highlighting those potentially exposed to delegation-related risks. Privileged accounts are accounts that are being members of a privileged group such as Domain admins, Schema admins, and so on. 
 
-**Impact**
+**User impact**
 
 If the sensitive flag is disabled, attackers could exploit Kerberos delegation to misuse privileged account credentials, leading to unauthorized access, lateral movement, and potential network-wide security breaches. Setting the sensitive flag on privileged user accounts prevent users from gaining access to the account and manipulating system settings.   
 For device accounts, setting them to "not delegated" is important to prevent it from being used in any delegation scenario, ensuring that credentials on this machine can't be forwarded to access other services.
@@ -288,7 +328,7 @@ The safest approach is to use a PowerShell script to configure the device to pre
 
 This security assessment monitors your traffic for any entities exposing credentials in clear text and alerts you to the current exposure risks (most impacted entities) in your organization with suggested remediation.
 
-**Impact**
+**User impact**
 
 Entities exposing credentials in clear text are risky not only for the exposed entity in question, but for your entire organization.
 
@@ -320,14 +360,14 @@ Microsoft's "Local Administrator Password Solution" (LAPS) provides management o
 
 This security assessment supports [legacy Microsoft LAPS](https://www.microsoft.com/en-us/download/details.aspx?id=46899) and [Windows LAPS](/windows-server/identity/laps/laps-overview).
 
-**Impact**
+**User impact**
 
 LAPS provides a solution to the issue of using a common local account with an identical password on every computer in a domain. LAPS resolves this issue by setting a different, rotated random password for the common local administrator account on every computer in the domain.
 
 LAPS simplifies password management while helping customers implement more recommended defenses against cyberattacks. In particular, the solution mitigates the risk of lateral escalation that results when customers use the same administrative local account and password combination on their computers. LAPS stores the password for each computer's local administrator account in AD, secured in a confidential attribute in the computer's corresponding AD object. The computer can update its own password data in AD, and domain administrators can grant read access to authorized users or groups, such as workstation helpdesk administrators.
 
 > [!NOTE]
-> In some cases, [Microsoft Entra hybrid joined](/azure/active-directory/devices/concept-hybrid-join) machines may still appear in the security posture assessment even if LAPS is configured in Microsoft Entra ID. This can be due to how the policy is applied or how the device reports its state.
+> In some cases, [Microsoft Entra hybrid joined](/azure/active-directory/devices/concept-hybrid-join) machines might still appear in the security posture assessment even if LAPS is configured in Microsoft Entra ID. This can be due to how the policy is applied or how the device reports its state.
 > If this occurs, we suggest reviewing the LAPS configuration in Microsoft Entra ID to confirm everything is set up as expected. You can find more details [here](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/windows-local-administrator-password-solution-with-microsoft-entra-id-now-genera/3911999).
 
 **Implementation**
@@ -401,7 +441,7 @@ To address this security assessment, follow these steps:
 
 This recommendation lists Active Directory service accounts detected as stale within the past 90 days. 
 
-**Impact**
+**User impact**
 
 Unused service accounts create significant security risks, as some of them can carry elevated privileges. If attackers gain access, the result can be substantial damage. Stale service accounts might retain high or legacy permissions. When compromised, they provide attackers with discreet entry points into critical systems, granting far more access than a standard user account.
 
@@ -440,7 +480,7 @@ For more information about lateral movement paths, see:
 - [Understand and investigate Lateral Movement Paths (LMPs) with Microsoft Defender for Identity](../understand-lateral-movement-paths.md)
 - [MITRE ATT&CK Lateral Movement](https://attack.mitre.org/tactics/TA0008/)
 
-**Impact**
+**User impact**
 
 Organizations that fail to secure their **sensitive** accounts leave the door unlocked for malicious actors.
 
@@ -465,7 +505,7 @@ For example, the riskiest paths are more readily visible to attackers and, if co
 
 Kerberos delegation is a delegation setting that allows applications to request end-user access credentials to access resources on behalf of the originating user.
 
-**Impact**
+**User impact**
 
 Unsecure Kerberos delegation gives an entity the ability to impersonate you to any other chosen service. For example, imagine you have an IIS website, and the application pool account is configured with unconstrained delegation. The IIS website site also has Windows Authentication enabled, allowing native Kerberos authentication, and the site uses a back-end SQL Server for business data. With your Domain Admin account, you browse to the IIS website and authenticate to it. The website, using unconstrained delegation can get a service ticket from a domain controller to the SQL service, and do so in your name.
 
@@ -506,7 +546,7 @@ Restricts which services this account can impersonate.
 
 **Resource-based constrained delegation (RBCD)**
 
-Resource-based constrained delegation restricts which entities can impersonate this account.  Resource-based KCD is configured using PowerShell. 
+Resource-based constrained delegation restricts which entities can impersonate this account. Resource-based KCD is configured using PowerShell. 
 
 1. You can use the [Set-ADComputer](/powershell/module/activedirectory/set-adcomputer) or [Set-ADUser](/powershell/module/activedirectory/set-aduser) cmdlets, depending on whether the impersonating account is a computer account or a user account / service account.
 
@@ -518,11 +558,11 @@ Resource-based constrained delegation restricts which entities can impersonate t
 
 **Description**
 
-SID History is an attribute that supports [migration scenarios](/previous-versions/windows/it-pro/windows-server-2003/cc779590(v=ws.10)). Every user account has an associated [Security IDentifier (SID)](/windows/win32/secauthz/security-identifiers) which is used to track the security principal and the access the account has when connecting to resources. SID History enables access for another account to effectively be cloned to another and is extremely useful to ensure users retain access when moved (migrated) from one domain to another.
+SID History is an attribute that supports [migration scenarios](/previous-versions/windows/it-pro/windows-server-2003/cc779590(v=ws.10)). Every user account has an associated [Security IDentifier (SID)](/windows/win32/secauthz/security-identifiers) which is used to track the security principal and the access the account has when connecting to resources. SID History enables access for another account to effectively be cloned to another and is useful to ensure users retain access when moved (migrated) from one domain to another.
 
 The assessment checks for accounts with SID History attributes which Microsoft Defender for Identity profiles to be risky.
 
-**Impact**
+**User impact**
 
 Organizations that fail to secure their account attributes leave the door unlocked for malicious actors.
 
@@ -556,7 +596,7 @@ For example, a non-sensitive account in a domain can contain the Enterprise Admi
 
 Microsoft Defender for Identity continuously monitors your environment to identify accounts with attribute values that expose a security risk, and reports on these accounts to assist you in protecting your environment.
 
-**Impact**
+**User impact**
 
 Organizations that fail to secure their account attributes leave the door unlocked for malicious actors.
 
@@ -596,4 +636,4 @@ For example, if the **PasswordNotRequired** attribute is enabled, an attacker ca
 ## Next steps
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
-- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](https://aka.ms/MDIcommunity)

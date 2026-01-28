@@ -16,9 +16,9 @@ ms.collection:
 ms.custom: seo-marvel-apr2020
 description: "Admins can learn how to use the Submissions page in the Microsoft Defender portal to submit messages, URLs, and email attachments to Microsoft for analysis. Reasons for submission include: legitimate messages that were blocked, suspicious messages that were allowed, suspected phishing email, spam, malware, and other potentially harmful messages."
 ms.service: defender-office-365
-ms.date: 09/11/2025
+ms.date: 10/27/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -556,9 +556,6 @@ When you're finished in the details flyout, select **Close**.
 
 ### View Teams admin submissions to Microsoft in Defender for Office 365 Plan 2
 
-> [!TIP]
-> [Submission of Teams message to Microsoft](submissions-teams.md) is currently in Preview, isn't available in all organizations, and is subject to change.
-
 In the Defender portal at <https://security.microsoft.com>, go to the **Submissions** page at **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
 On the **Submissions** page, select the **Teams messages** tab.
@@ -642,7 +639,10 @@ The next sections in the details flyout are related to Teams submissions:
   - **Submitted by**
   - **Submission status**
 
-The rest of the details flyout contains the **Message details**, **Sender**, **Participants**, **Channel details**, and **URLs** sections that are part of the _Teams message entity panel_. For more information, see [The Teams mMessage entity panel in Microsoft Defender for Office 365 Plan 2](teams-message-entity-panel.md).
+The rest of the details flyout contains the **Message details**, **Sender**, **Participants**, **Channel details**, and **URLs** sections that are part of the _Teams message entity panel_. For more information, see [The Teams message entity panel in Microsoft Defender for Office 365](teams-message-entity-panel.md).
+
+> [!TIP]
+> To remove users from Teams chats, see [Remove users from Teams chats in the Teams message entity panel](teams-message-entity-panel.md#remove-users-from-teams-chats-in-the-teams-message-entity-panel).
 
 When you're finished in the details flyout, select **Close**.
 
@@ -850,6 +850,9 @@ For more information about how Microsoft processes submissions, see [Learn more 
 If an override or policy configuration was found, the result should be available in several minutes. If there wasn't a problem in email authentication or delivery wasn't affected by an override or policy, the detonation and feedback from graders could take up to a day.
 
 > [!NOTE]
+>
+> In Defender for Office 365 Plan 2, we introduced agentic AI grading for admin and user reported phishing messages. The agentic grading system has multiple layers: a machine learning grader model, agentic grading, and human graders. If machine learning returns a verdict with high confidence, this verdict is shown for the submission result. If not, the message goes to agentic grading for additional analysis/response. After that, the message goes to a human grader for final review if required.
+>
 > AI-powered Submissions Response capability introduces generative AI explanations for admin email submissions to Microsoft. For more information, see [Submission result definitions](submissions-result-definitions.md).
 
 ### Dispute the result for submissions to Microsoft
@@ -954,9 +957,7 @@ For email messages, admins can see what users are reporting on the **User report
 - User reported messages that are sent to Microsoft only or to Microsoft and the [reporting mailbox](submissions-user-reported-messages-custom-mailbox.md) appear on the **User reported** tab.
 - User reported messages that are sent only to the reporting mailbox appear on the **User reported** tab with the **Result** value **Not Submitted to Microsoft**. Admins should report these messages to Microsoft for analysis.
 
-In organizations with Microsoft Defender for Office 365 Plan 2 (add-on licenses or included in subscriptions like Microsoft 365 E5), admins can also see [user reported messages in Microsoft Teams in Defender for Office 365 Plan 2](submissions-teams.md) (currently in Preview).
-
-In organizations with Defender for Office 365 Plan 2 (add-For [user reported messages in Microsoft Teams in Defender for Office 365 Plan 2](submissions-teams.md) (currently in Preview)
+In organizations with Microsoft Defender for Office 365 Plan 2 (add-on licenses or included in subscriptions like Microsoft 365 E5), admins can also see [user reported messages in Microsoft Teams in Defender for Office 365 Plan 2](submissions-teams.md).
 
 In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
@@ -1117,9 +1118,11 @@ The next sections in the details flyout are related to user reported Teams submi
   - **Phish simulation**: The value is **Yes** or **No**.
   - **Converted to admin submission**: The value is **Yes** or **No**. For more information, see [View converted admin submissions](#view-converted-admin-submissions).
 
-The rest of the details flyout contains the **Message details**, **Sender**, **Participants**, **Channel details**, and **URLs** sections that are part of the _Teams message entity panel_. For more information, see [The Teams mMessage entity panel in Microsoft Defender for Office 365 Plan 2](teams-message-entity-panel.md).
+The rest of the details flyout contains the **Message details**, **Sender**, **Participants**, **Channel details**, and **URLs** sections that are part of the _Teams message entity panel_. For more information, see [The Teams message entity panel in Microsoft Defender for Office 365](teams-message-entity-panel.md).
 
 > [!TIP]
+> To remove users from Teams chats, see [Remove users from Teams chats in the Teams message entity panel](teams-message-entity-panel.md#remove-users-from-teams-chats-in-the-teams-message-entity-panel).
+>
 > If the **Result** value is **Phish simulation**, the details flyout might contain the following information only:
 >
 > - **Result details** section

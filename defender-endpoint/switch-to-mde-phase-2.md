@@ -1,10 +1,10 @@
-﻿---
+---
 title: Migrate to Microsoft Defender for Endpoint - Setup
 description: Move to Defender for Endpoint. Review the setup process, which includes installing Microsoft Defender Antivirus.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 ms.date: 05/08/2025
 manager: bagol
@@ -35,9 +35,9 @@ appliesto:
 **Welcome to the Setup phase of [migrating to Defender for Endpoint](switch-to-mde-overview.md#the-migration-process)**. This phase includes the following steps:
 
 1. Reinstall/enable Microsoft Defender Antivirus on your endpoints.
-2. Add Defender for Endpoint to the exclusion list for your existing solution.
-3. Configure Defender for Endpoint Plan 1 or Plan 2.
-4. Set up your device groups, device collections, and organizational units.
+1. Add Defender for Endpoint to the exclusion list for your existing solution.
+1. Configure Defender for Endpoint Plan 1 or Plan 2.
+1. Set up your device groups, device collections, and organizational units.
 
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
@@ -83,7 +83,7 @@ The specific exclusions to configure depend on which version of Windows your end
 
 | OS | Exclusions |
 |--|--|
-| Windows 11<br/>Windows 10, version 1803 or later (See Windows 10 release information)<br/>Windows 10, version 1703 or 1709 with KB4493441 installed<br/>Windows Server 2025 <br/> Azure Stack HCI OS, version 23H2 and later <br/>Windows Server 2022<br/>Windows Server 2019<br/>Windows Server, version 1803<br/>Windows Server 2016 running the modern unified solution<br/>Windows Server 2012 R2 running the modern unified solution | **EDR exclusions**: <br/>`C:\Program Files\Windows Defender Advanced Threat Protection\MsSense.exe`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\SenseCncProxy.exe`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\SenseSampleUploader.exe`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\SenseIR.exe`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\SenseCM.exe`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\SenseNdr.exe`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\Classification\SenseCE.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\DataCollection`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\SenseTVM.exe` <br/><br/> **Antivirus exclusions**:<br/>`C:\Program Files\Windows Defender\MsMpEng.exe`<br/>`C:\Program Files\Windows Defender\NisSrv.exe`<br/>`C:\Program Files\Windows Defender\ConfigSecurityPolicy.exe`<br/>`C:\Program Files\Windows Defender\MpCmdRun.exe`<br/>`C:\Program Files\Windows Defender\MpDefenderCoreService.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MsMpEng.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\NisSrv.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\ConfigSecurityPolicy.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MpCopyAccelerator.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MpCmdRun.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MpDefenderCoreService.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\mpextms.exe` <br/><br/> **Endpoint Data Loss Prevention (Endpoint DLP) exclusions**:<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MpDlpService.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MpDlpCmd.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MipDlp.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\DlpUserAgent.exe`|
+| Windows 11<br/>Windows 10, version 1803 or later (See Windows 10 release information)<br/>Windows 10, version 1703 or 1709 with KB4493441 installed<br/>Windows Server 2025 <br/> Azure Stack HCI OS, version 23H2 and later <br/>Windows Server 2022<br/>Windows Server 2019<br/>Windows Server, version 1803<br/>Windows Server 2016 running the modern unified solution<br/>Windows Server 2012 R2 running the modern unified solution | **EDR exclusions**: <br/>`C:\Program Files\Windows Defender Advanced Threat Protection\MsSense.exe`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\SenseCncProxy.exe`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\SenseSampleUploader.exe`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\SenseIR.exe`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\SenseCM.exe`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\SenseNdr.exe`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\Classification\SenseCE.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\DataCollection`<br/>`C:\Program Files\Windows Defender Advanced Threat Protection\SenseTVM.exe` <br/><br/> **Registry path**:<br/>`HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection\*` <br/><br/> **Antivirus exclusions**:<br/>`C:\Program Files\Windows Defender\MsMpEng.exe`<br/>`C:\Program Files\Windows Defender\NisSrv.exe`<br/>`C:\Program Files\Windows Defender\ConfigSecurityPolicy.exe`<br/>`C:\Program Files\Windows Defender\MpCmdRun.exe`<br/>`C:\Program Files\Windows Defender\MpDefenderCoreService.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MsMpEng.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\NisSrv.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\ConfigSecurityPolicy.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MpCopyAccelerator.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MpCmdRun.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MpDefenderCoreService.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\mpextms.exe` <br/><br/> **Endpoint Data Loss Prevention (Endpoint DLP) exclusions**:<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MpDlpService.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MpDlpCmd.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\MipDlp.exe`<br/>`C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.*\DlpUserAgent.exe`|
 | Windows Server 2016 or Windows Server 2012 R2 running the [modern unified solution](/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Fswitch-to-mde-phase-2.md/main/76b249d7-f914-4c03-3eaf-48aa43b2fa4a/onboard-server.md) | The following **additional** exclusions are required after updating the Sense EDR component using [KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac): <br/>`C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Platform\*\MsSense.exe` <br/>`C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Platform\*\SenseCnCProxy.exe` <br/>`C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Platform\*\SenseIR.exe` <br/>`C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Platform\*\SenseCE.exe` <br/>`C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Platform\*\SenseSampleUploader.exe` <br/>`C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Platform\*\SenseCM.exe` <br/>`C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\DataCollection`<br/> `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Platform\*\SenseTVM.exe`|
 | [Windows 8.1](/windows/release-health/status-windows-8.1-and-windows-server-2012-r2) [Windows 7](/windows/release-health/status-windows-7-and-windows-server-2008-r2-sp1) [Windows Server 2008 R2 SP1](/windows/release-health/status-windows-7-and-windows-server-2008-r2-sp1) | `C:\Program Files\Microsoft Monitoring Agent\Agent\Health Service State\Monitoring Host Temporary Files 6\45\MsSenseS.exe` <br/>( Monitoring Host Temporary Files 6\45 can be different numbered subfolders.) <br/>`C:\Program Files\Microsoft Monitoring Agent\Agent\AgentControlPanel.exe`<br/> `C:\Program Files\Microsoft Monitoring Agent\Agent\HealthService.exe`<br/>`C:\Program Files\Microsoft Monitoring Agent\Agent\HSLockdown.exe`<br/>`C:\Program Files\Microsoft Monitoring Agent\Agent\MOMPerfSnapshotHelper.exe`<br/>`C:\Program Files\Microsoft Monitoring Agent\Agent\MonitoringHost.exe`<br/>`C:\Program Files\Microsoft Monitoring Agent\Agent\TestCloudConnection.exe` |
 
@@ -111,7 +111,6 @@ For Linux servers, the following table lists processes to exclude in your non-Mi
 | `wdavdaemon unprivileged`<br/> Antivirus engine  | `/opt/microsoft/mdatp/sbin/` |
 | `crashpad_handler`<br/>Collects crash dumps  | `/opt/microsoft/mdatp/sbin/` |
 | `mdatp` <br/>Command line utility| `/opt/microsoft/mdatp/sbin/Wdavdaemonclient`  |
-| `telemetryd_v2`<br/>Telemetry daemon for EDR | `/opt/microsoft/mdatp/sbin/` |
 | `mde_netfilter` <br/>Packet filter for Network protection, also used for response capabilities | `/opt/microsoft/mde_netfilter/sbin` |
 
 ---
@@ -135,37 +134,35 @@ This article describes how to configure your Defender for Endpoint capabilities 
    | :::image type="content" source="media/mde-hangon-provisioning.png" alt-text="Screenshot showing message that says hang on because MDE isn't provisioned yet." lightbox="media/mde-hangon-provisioning.png"::: | Defender for Endpoint isn't finished provisioning yet. You might have to wait a little while for the process to finish. |
    | :::image type="content" source="media/device-inventory-empty.png" alt-text="Screenshot showing device inventory page with no device onboarded yet." lightbox="media/device-inventory-empty.png"::: | Defender for Endpoint is provisioned. In this case, proceed to the next step. |
 
-2. Turn on [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md). We recommend turning tamper protection on for your whole organization. You can do this task in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)).
+1. Turn on [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md). We recommend turning tamper protection on for your whole organization. You can do this task in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)).
 
    1. In the Microsoft Defender portal, choose **Settings** > **Endpoints**.
 
-   2. Go to **General** > **Advanced features**, and then set the toggle for tamper protection to **On**.
+   1. Go to **General** > **Advanced features**, and then set the toggle for tamper protection to **On**.
 
-   3. Select **Save**.
+   1. Select **Save**.
 
    [Learn more about tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md).
 
-3. If you're using either [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) or [Microsoft Endpoint Configuration Manager](/mem/endpoint-manager-overview) to onboard devices and configure device policies, set up integration with Defender for Endpoint by following these steps: <br/>
+1. If you're using either [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) or [Microsoft Endpoint Configuration Manager](/mem/endpoint-manager-overview) to onboard devices and configure device policies, set up integration with Defender for Endpoint by following these steps: <br/>
 
-   1. In the Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)), go to **Endpoint security**.
+    1. In the Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)), go to **Endpoint security**.
 
-   2. Under **Setup**, choose **Microsoft Defender for Endpoint**.
+    1. Under **Setup**, choose **Microsoft Defender for Endpoint**.
 
-   3. Under **Endpoint Security Profile Settings**, set the toggle for **Allow Microsoft Defender for Endpoint to enforce Endpoint Security Configurations** to **On**.
+    1. Under **Endpoint Security Profile Settings**, set the toggle for **Allow Microsoft Defender for Endpoint to enforce Endpoint Security Configurations** to **On**.
+    1. Near the top of the screen, select **Save**.
 
-   4. Near the top of the screen, select **Save**.
+    1. In the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), choose **Settings** > **Endpoints**.
 
-   5. In the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), choose **Settings** > **Endpoints**.
+    1. Scroll down to **Configuration management**, and select **Enforcement scope**. 
 
-   6. Scroll down to **Configuration management**, and select **Enforcement scope**. 
+    1. Set the toggle for **Use MDE to enforce security configuration settings from MEM** to **On**, and then select the options for both Windows client and Windows Server devices. 
 
-   7. Set the toggle for **Use MDE to enforce security configuration settings from MEM** to **On**, and then select the options for both Windows client and Windows Server devices. 
+    1. If you're planning to use Configuration Manager, set the toggle for **Manage Security settings using Configuration Manager** to **On**. (If you need help with this step, see [Coexistence with Microsoft Endpoint Configuration Manager](/mem/intune/protect/mde-security-integration#co-existence-with-microsoft-endpoint-configuration-manager).)
+    1. Scroll down and select **Save**.
 
-   8. If you're planning to use Configuration Manager, set the toggle for **Manage Security settings using Configuration Manager** to **On**. (If you need help with this step, see [Coexistence with Microsoft Endpoint Configuration Manager](/mem/intune/protect/mde-security-integration#co-existence-with-microsoft-endpoint-configuration-manager).)
-
-   9. Scroll down and select **Save**.
-
-4. Configure your initial [attack surface reduction capabilities](overview-attack-surface-reduction.md). At a minimum, enable the standard protection rules that are listed in the following table right away:
+1. Configure your initial [attack surface reduction capabilities](overview-attack-surface-reduction.md). At a minimum, enable the standard protection rules that are listed in the following table right away:
 
    | Standard protection rules | Configuration methods |
    |:---|:---|
@@ -173,7 +170,7 @@ This article describes how to configure your Defender for Endpoint capabilities 
 
    [Learn more about attack surface reduction capabilities](overview-attack-surface-reduction.md).
 
-5. Configure your [next-generation protection capabilities](next-generation-protection.md).
+1. Configure your [next-generation protection capabilities](next-generation-protection.md).
 
    | Capability | Configuration methods |
    |---|---|
@@ -184,9 +181,9 @@ This article describes how to configure your Defender for Endpoint capabilities 
 
    *If you have Defender for Endpoint Plan 1, your initial setup and configuration is complete. If you have Defender for Endpoint Plan 2, continue through steps 6-7.*
 
-6. Configure your endpoint detection and response (EDR) policies in the Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)). To get help with this task, see [Create EDR policies](/mem/intune/protect/endpoint-security-edr-policy#create-edr-policies).
+1. Configure your endpoint detection and response (EDR) policies in the Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)). To get help with this task, see [Create EDR policies](/mem/intune/protect/endpoint-security-edr-policy#create-edr-policies).
 
-7. Configure your automated investigation and remediation capabilities in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). To get help with this task, see [Configure automated investigation and remediation capabilities in Microsoft Defender for Endpoint](configure-automated-investigations-remediation.md).
+1. Configure your automated investigation and remediation capabilities in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). To get help with this task, see [Configure automated investigation and remediation capabilities in Microsoft Defender for Endpoint](configure-automated-investigations-remediation.md).
 
    *At this point, initial setup and configuration of Defender for Endpoint Plan 2 is complete.*
 
@@ -232,5 +229,5 @@ Device groups, device collections, and organizational units enable your security
 
 - [Proceed to Phase 3: Onboard to Defender for Endpoint](switch-to-mde-phase-3.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

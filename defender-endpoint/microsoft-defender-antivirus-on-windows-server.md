@@ -4,8 +4,8 @@ description: Learn how to enable and configure Microsoft Defender Antivirus on W
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.reviewer: pahuijbr
 manager: bagol
 ms.topic: how-to
@@ -121,15 +121,15 @@ If a non-Microsoft antivirus product was installed on Windows Server, Microsoft 
 
 1. Check the status of Microsoft Defender Antivirus by following the guidance in [Verify Microsoft Defender Antivirus is running](#verify-microsoft-defender-antivirus-is-running) (in this article).
 
-2. If necessary, set Microsoft Defender Antivirus to active mode manually by following these steps:
+1. If necessary, set Microsoft Defender Antivirus to active mode manually by following these steps:
 
-   1. On your Windows Server device, open Registry Editor as an administrator.
+    a. On your Windows Server device, open Registry Editor as an administrator.
 
-   2. Go to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`.
+    a. Go to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`.
 
-   3. Set or define a `REG_DWORD` entry called `ForceDefenderPassiveMode`, and set its value to `0`.
+    a. Set or define a `REG_DWORD` entry called `ForceDefenderPassiveMode`, and set its value to `0`.
 
-   4. Reboot the device.
+    a. Reboot the device.
 
 > [!TIP]
 > If you still need help, see the following troubleshooting items:
@@ -145,5 +145,5 @@ If a non-Microsoft antivirus product was installed on Windows Server, Microsoft 
 - [Troubleshoot performance issues related to real-time protection](troubleshoot-performance-issues.md)
 - [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

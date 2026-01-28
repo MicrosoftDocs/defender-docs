@@ -1,8 +1,8 @@
 ---
 title: Microsoft Defender Antivirus Performance Analyzer reference
 description: Microsoft Defender Antivirus Performance Analyzer reference
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: troubleshooting
@@ -453,4 +453,4 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

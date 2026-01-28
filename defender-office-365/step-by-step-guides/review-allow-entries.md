@@ -66,7 +66,7 @@ This query looks for emails that were overridden by IP, without any detection th
 
 ```kusto
 EmailEvents
-| where OrgLevelAction == "Allow" and ThreatTypes != ""
+| where OrgLevelAction == "Allow" and ThreatTypes == ""
 |summarize count() by SenderIPv4
 | top 10 by count_
 ```
@@ -77,7 +77,7 @@ This query looks for emails that were overridden by sending domain without any d
 
 ```kusto
 EmailEvents
-| where OrgLevelAction == "Allow" and ThreatTypes != ""
+| where OrgLevelAction == "Allow" and ThreatTypes == ""
 |summarize count() by SenderFromDomain
 | top 10 by count_
 ```
@@ -88,7 +88,7 @@ This query looks for emails that were overridden by sending address without any 
 
 ```kusto
 EmailEvents
-| where OrgLevelAction == "Allow" and ThreatTypes != ""
+| where OrgLevelAction == "Allow" and ThreatTypes == ""
 |summarize count() by SenderFromAddress
 | top 10 by count_
 ```

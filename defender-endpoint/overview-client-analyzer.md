@@ -4,8 +4,8 @@ description: Troubleshoot sensor health on devices to identify potential configu
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: bagol
-author: batamig
+ms.author: chrisda
+author: chrisda
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
 manager: bagol
@@ -67,5 +67,5 @@ For more information about our privacy statement, see [Microsoft Privacy Stateme
   > [!NOTE]
   > On Windows devices, if you use the attack surface reduction rule [Block process creations originating from PSExec and WMI commands](attack-surface-reduction-rules-reference.md#block-process-creations-originating-from-psexec-and-wmi-commands), you might want to temporarily [configure an exclusion to the ASR rule](enable-attack-surface-reduction.md#exclude-files-and-folders-from-attack-surface-reduction-rules). Optionally, you can set the rule to **audit** or you can disable the rule. Making these configurations allow the analyzer to run connectivity checks to cloud without being blocked.
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

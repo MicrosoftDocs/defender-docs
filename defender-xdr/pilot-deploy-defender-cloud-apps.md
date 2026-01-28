@@ -5,7 +5,7 @@ search.appverid: met150
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
-ms.author: bcarter
+ms.author: dansimp
 author: brendacarter
 ms.date: 03/14/2025
 ms.localizationpriority: medium

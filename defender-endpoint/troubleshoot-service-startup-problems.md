@@ -1,13 +1,13 @@
 ﻿---
 title: Troubleshoot Microsoft Defender Antivirus service startup problems
 description: Learn how to troubleshoot Microsoft Defender Antivirus service startup problems.
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 manager: bagol
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: troubleshooting-general
-ms.date: 01/18/2025
+ms.date: 01/08/2026
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.collection: # Useful for querying on a set of strategic or high-priority content.
@@ -19,10 +19,9 @@ appliesto:
   - Microsoft Defender for Business
   - Microsoft Defender for Individuals
   - Microsoft Defender Antivirus
-
 ---
-# Troubleshoot Microsoft Defender Antivirus service startup problems
 
+# Troubleshoot Microsoft Defender Antivirus service startup problems
 
 In the following screenshot, **Virus & threat protection** displays a red cross, where it says **Threat service has stopped. Restart it now**.
 
@@ -50,10 +49,10 @@ The *Windows Defender – Operational* event log might display the following eve
 
 ### Event 5007
 
-The configuration of Microsoft Defender Antivirus has changed. If you expected this event, review the settings, as it may be the result of malware.
+The configuration of Microsoft Defender Antivirus changed. If you expected this event, review the settings, as it might be the result of malware.
 
 |Old value|New value|
-|---------|---------|
+|---|---|
 |`HKLM\SOFTWARE\Microsoft\Windows Defender\Diagnostics\RolledbackPlatformHealthData = <OVERALL>:<BAD>, <AGE>:<36>, <DIRTY_SHUTDOWNS>:<22>`|`Default\Diagnostics\RolledbackPlatformHealthData = 0`|
 |`Default\ServiceStartStates = 0x0`|`HKLM\SOFTWARE\Microsoft\Windows Defender\ServiceStartStates = 0x1`|
 |`HKLM\SOFTWARE\Microsoft\Windows Defender\ServiceStartStates = 0x1`|`Default\ServiceStartStates = 0x0`|
@@ -68,11 +67,11 @@ Microsoft Defender Antivirus Real-time Protection scanning for malware and other
 
 ## Resolution
 
-Follow these steps to resolve the issue:
+To resolve the issue, do the following steps:
 
 1. Check the services and filter drivers for Microsoft Defender Antivirus.
 
-   Run the following PowerShell command as an administrator.
+   Run the following command in an elevated PowerShell window (a PowerShell window you opened by selecting **Run as administrator**):
 
    ```powershell
    Get-Service WinDefend, WdBoot, WdFilter, WdNisSvc, WdNisDrv, SecurityHealthService, wscsvc | Format-Table -Auto DisplayName, Name, StartType, Status
@@ -88,39 +87,53 @@ Follow these steps to resolve the issue:
    |Microsoft Defender Antivirus Service|WinDefend|Automatic|Running|If stopped, check steps 3, 6, 7.|
    |wscsvc|Security Center|Automatic|Running||
 
-1. Download and run the [Microsoft Safety Scanner](safety-scanner-download.md) to rule out any malware.
+2. Download and run the [Microsoft Safety Scanner](safety-scanner-download.md) to rule out any malware.
 
-1. If you're using Microsoft Defender Antivirus as your primary antivirus, make sure to uninstall third-party antivirus software.
+3. If you're using Microsoft Defender Antivirus as your primary antivirus, make sure to uninstall non-Microsoft antivirus software.
 
-1. Remove the **Security Intelligence** and **engine**.
+4. Remove the **Security Intelligence** and **engine**.
 
-   Run the following PowerShell command as an administrator.
+   Run the following command in an elevated Windows Command Prompt (a **Command Prompt** window you opened by selecting **Run as administrator**):
 
-    ```powershell
-    & "${env:ProgramFiles}\Windows Defender\MpCmdRun.exe" -RemoveDefinitions -All
+    ```dos
+    for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n') do if not defined _done "%ProgramData%\Microsoft\Windows Defender\Platform\%d\MpCmdRun.exe" -RemoveDefinitions -All
     ```
 
-1. Reset the **Platform**.
+5. Backup Microsoft Defender Antivirus policies.
 
-   Run the following PowerShell command as an administrator.
-
-    ```powershell
-    & "${env:ProgramFiles}\Windows Defender\MpCmdRun.exe" -ResetPlatform
-    ```
-
-1. Backup Microsoft Defender Antivirus policies.
-
-   Run the following PowerShell commands as an administrator.
+   Run the following command in an elevated PowerShell window:
 
     ```powershell
-    New-Item -Path "C:\temp" -ItemType Directory
-
-    Invoke-Command {reg export 'HKLM\SOFTWARE\Policies\Microsoft\Windows Defender' C:\Temp\MDAV\_backup.reg
+    New-Item -Path "C:\DefenderTemp" -ItemType Directory; Invoke-Command {reg export 'HKLM\SOFTWARE\Policies\Microsoft\Windows Defender' C:\DefenderTemp\_DefenderAVBackup.reg}
     ```
 
-1. Delete any policies that are set for Microsoft Defender Antivirus.
+6. "Reset" Microsoft Defender Antivirus. Microsoft Defender Antivirus is built into Windows 10 and Windows 11, so you can't remove it.
 
-    Run the following PowerShell command as an administrator.
+   Run the following commands in an elevated Windows Command Prompt:
+
+   - **Windows 10 or later**:
+
+     1. &nbsp;
+
+        ```dos
+        DISM /Online /Cleanup-Image /RestoreHealth
+        ```
+
+        or
+
+        ```dos
+         DISM /Online /Cleanup-Image /RestoreHealth /Source:<SourcePath> /LimitAccess
+        ```
+
+     2. &nbsp;
+
+        ```dos
+        sfc /scannow
+        ```
+
+7. Delete any policies that are set for Microsoft Defender Antivirus.
+
+    Run the following command in an elevated PowerShell window:
 
     ```powershell
     Remove-Item -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender' -Force
@@ -128,25 +141,16 @@ Follow these steps to resolve the issue:
 
     For more information, see: [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md).
 
-1. Re-enable Microsoft Defender Antivirus.
+8. Update Security Intelligence.
 
-    Run the following PowerShell command as an administrator.
+   Run the following commands in an elevated Windows Command Prompt:
 
-    ```powershell
-    & "${env:ProgramFiles}\Windows Defender\MpCmdRun.exe" -WdEnable
+    ```dos
+    for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n') do if not defined _done "%ProgramData%\Microsoft\Windows Defender\Platform\%d\MpCmdRun.exe" -SignatureUpdate -MMPC
     ```
 
-1. Update Security Intelligence.
-
-    Run the following PowerShell command as an administrator.
-
-    ```powershell
-    & "${env:ProgramFiles}\Windows Defender\MpCmdRun.exe" -SignatureUpdate -MMPC
-    ```
-
-1. Make sure that **Tamper Protection** is enabled.
+9. Verify **Tamper Protection** is enabled.
 
     :::image type="content" source="media/tamper-protection.png" alt-text="Screenshot of Tamper Protection is enabled.":::
 
-1. Run **Microsoft Update**.
-
+10. Run **Microsoft Update**.

@@ -2,12 +2,12 @@
 title: Take response actions on a file in Microsoft Defender for Endpoint
 description: Take response actions on file-related alerts by stopping and quarantining a file or blocking a file and checking activity details.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 - mde-edr
@@ -17,14 +17,11 @@ search.appverid: met150
 ms.date: 03/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # Take response actions on a file
 
-
 [!include[Prerelease information](../includes/prerelease.md)]
-
-
 
 Quickly respond to detected attacks by stopping and quarantining files or blocking a file. After taking action on files, you can check on activity details in the Action center.
 
@@ -34,7 +31,7 @@ Response actions run along the top of the file page, and include:
 
 - Stop and quarantine file
 - Manage indicator
-- Download file 
+- Download file
 - Collect file
 - Ask Defender Experts
 - Manual actions
@@ -89,11 +86,11 @@ This action takes effect on devices with Windows 10, version 1703 or later, and 
    > The stop and quarantine file action is limited to a maximum of 1000 devices. To stop a file on a larger number of devices, see [Add indicator to block or allow file](#add-indicator-to-block-or-allow-a-file).<br>
    >  The Stop and quarantine action has a maximum timeout period of 3 days. If the targeted device remains offline for longer than this period after the action is initiated, the action will not be delivered to that device.<br> To ensure the file remains blocked beyond the timeout or after the action completes, it's recommended to create an indicator to block the file explicitly.
 
-2. Go to the top bar and select **Stop and Quarantine File**.
+1. Go to the top bar and select **Stop and Quarantine File**.
 
    :::image type="content" source="media/atp-stop-quarantine-file.png" alt-text="The stop and quarantine file action" lightbox="media/atp-stop-quarantine-file.png":::
 
-3. Specify a reason, then select **Confirm**.
+1. Specify a reason, then select **Confirm**.
 
    :::image type="content" source="media/atp-stop-quarantine.png" alt-text="The stop and quarantine file page" lightbox="media/atp-stop-quarantine.png":::
 
@@ -106,7 +103,7 @@ This action takes effect on devices with Windows 10, version 1703 or later, and 
    - **Failed** - Shows the number of devices where the action failed and details about the failure.
    - **Pending** - Shows the number of devices where the file is yet to be stopped and quarantined from. This can take time for cases when the device is offline or not connected to the network.
 
-4. Select any of the status indicators to view more information about the action. For example, select **Failed** to see where the action failed.
+1. Select any of the status indicators to view more information about the action. For example, select **Failed** to see where the action failed.
 
 #### Notification on device user
 
@@ -128,7 +125,7 @@ You can roll back and remove a file from quarantine if you've determined that it
 
    1. Right-click **Command prompt** and select **Run as administrator**.
 
-2. Enter the following command, and press **Enter**:
+1. Enter the following command, and press **Enter**:
 
    ```dos
    "%ProgramFiles%\Windows Defender\MpCmdRun.exe" -Restore -Name EUS:Win32/CustomEnterpriseBlock -All
@@ -150,25 +147,17 @@ By default, you should be able to download files that are in quarantine.
 
 The **Download file** button can have the following states:
 
-- **Active** - You are able to collect the file. 
+- **Active** - You are able to collect the file.
 
-- **Disabled** - If the button is grayed out or disabled during an active collection attempt, you might not have appropriate RBAC permissions to collect files.
-
-  The following permissions are required:
-
-  For Microsoft Defender XDR Unified role-based access control (RBAC):
-
-     - Add file collection permission in Microsoft Defender XDR Unified (RBAC)
- 
-  For Microsoft Defender for Endpoint role-based access control (RBAC):
-
-    For Portable Executable file (.exe, .sys, .dll, and others)
-    - Security Administrator or Advanced live response or Alerts 
-
-    Non-Portable Executable file (.txt, .docx, and others) 
-    - Security Administrator or Advanced live response
-    - Tenants with [role-based access (RBAC) permissions](/defender-xdr/manage-rbac) enabled
-
+- **Disabled** - If the button is grayed out or disabled during an active collection attempt, you might not have appropriate RBAC permissions to collect files. The following permissions are required:
+  - Microsoft Defender XDR Unified role-based access control (RBAC):
+    - Add file collection permission in Microsoft Defender XDR Unified (RBAC)
+  - Microsoft Defender for Endpoint role-based access control (RBAC):
+    - Portable Executable files (.exe, .sys, .dll, and others):
+      - Security Administrator or Advanced live response or Alerts
+    - Non-Portable Executable file (.txt, .docx, and others):
+      - Security Administrator or Advanced live response
+      - Tenants with [role-based access (RBAC) permissions](/defender-xdr/manage-rbac) enabled
 
 :::image type="content" source="media/atp-download-file-action.png" alt-text="The download file action" lightbox="media/atp-download-file-action.png":::
 
@@ -206,21 +195,19 @@ If a file isn't already stored by Microsoft Defender for Endpoint, you can't dow
 
 The **Collect file** button can have the following states:
 
-- **Active** - You are able to collect the file. 
+- **Active** - You are able to collect the file.
 
-- **Disabled** - If the button is grayed out or disabled during an active collection attempt, you might not have appropriate RBAC permissions to collect files. 
+- **Disabled** - If the button is grayed out or disabled during an active collection attempt, you might not have appropriate RBAC permissions to collect files.
 
-
-    The following permissions are required: 
+    The following permissions are required:
 
     For Portable Executable file (.exe, .sys, .dll, and others)
-    - Security Administrator or Advanced live response or Alerts 
+    - Security Administrator or Advanced live response or Alerts
 
-    Non-Portable Executable file (.txt, .docx, and others) 
+    Non-Portable Executable file (.txt, .docx, and others)
     - Security Administrator or Advanced live response
 
-
-If a file hasn't been seen in the organization in the past 30 days, **Collect file** is disabled. 
+If a file hasn't been seen in the organization in the past 30 days, **Collect file** is disabled.
 
 > [!IMPORTANT]
 > A file that was quarantined as a potential network threat might not be recoverable. If a user attempts to restore the file after quarantine, that file might not be accessible. This can be due to the system no longer having network credentials to access the file. Typically, this is a result of a temporary log on to a system or shared folder and the access tokens expired.
@@ -316,7 +303,7 @@ You can also submit a sample through the [Microsoft Defender portal](https://www
 
    > [!NOTE]
    > Only PE files are supported, including _.exe_ and _.dll_ files. Additionally, Windows App Store Executables are unsupported.
-   
+
       A progress bar is displayed and provides information on the different stages of the analysis. You can then view the report when the analysis is done.
 
 > [!NOTE]
@@ -334,7 +321,7 @@ You can view the comprehensive report that provides details on the following sec
 The details provided can help you investigate if there are indications of a potential attack.
 
 1. Select the file you submitted for deep analysis.
-2. Select the **Deep analysis** tab. If there are any previous reports, the report summary appears in this tab.
+1. Select the **Deep analysis** tab. If there are any previous reports, the report summary appears in this tab.
 
    :::image type="content" source="media/analysis-results-nothing500.png" alt-text="The deep analysis report showing detailed information across a number of categories" lightbox="media/analysis-results-nothing500.png":::
 
@@ -344,11 +331,11 @@ If you come across a problem when trying to submit a file, try each of the follo
 
 1. Ensure that the file in question is a PE file. PE files typically have _.exe_ or _.dll_ extensions (executable programs or applications).
 
-2. Ensure the service has access to the file, that it still exists, and hasn't been corrupted or modified.
+1. Ensure the service has access to the file, that it still exists, and hasn't been corrupted or modified.
 
-3. Wait a short while and try to submit the file again. The queue may be full, or there was a temporary connection or communication error.
+1. Wait a short while and try to submit the file again. The queue may be full, or there was a temporary connection or communication error.
 
-4. If the sample collection policy isn't configured, then the default behavior is to allow sample collection. If it's configured, then verify the policy setting allows sample collection before submitting the file again. When sample collection is configured, then check the following registry value:
+1. If the sample collection policy isn't configured, then the default behavior is to allow sample collection. If it's configured, then verify the policy setting allows sample collection before submitting the file again. When sample collection is configured, then check the following registry value:
 
     ```text
     Path: HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection
@@ -359,15 +346,13 @@ If you come across a problem when trying to submit a file, try each of the follo
       Value = 1 - allow sample collection
     ```
 
-5. Change the organizational unit through the Group Policy. For more information, see [Configure with Group Policy](configure-endpoints-gp.md).
+1. Change the organizational unit through the Group Policy. For more information, see [Configure with Group Policy](configure-endpoints-gp.md).
 
-6. If these steps don't resolve the issue, contact support.
+1. If these steps don't resolve the issue, contact support.
 
 ## Related articles
 
 - [Take response actions on a device](respond-machine-alerts.md)
 - [Investigate files](investigate-files.md)
 - [Manual response actions in Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md#manual-response-actions)
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

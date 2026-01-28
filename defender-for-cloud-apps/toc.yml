@@ -420,7 +420,7 @@ items:
       href: app-governance-manage-alerts.md
   - name: Secure apps and other assets
     items:
-    - name: Secure apps accessing non-Graph APIs
+    - name: Secure apps accessing non-Graph APIs using app governance
       href: app-governance-secure-apps-access-non-graph-api.md
     - name: Secure apps with app hygiene features
       href: app-governance-secure-apps-app-hygiene-features.md
@@ -428,9 +428,13 @@ items:
       href: app-activity-threat-hunting.md
   - name: App governance FAQ
     href: app-governance-faq.yml
-- name: AI agents
+- name: Protect AI agents (Preview)
   items:
-  - name: Protect Copilot Studio agents in real time
+  - name: Overview
+    href: ai-agent-protection.md
+  - name: Enable the AI agent inventory
+    href: ai-agent-inventory.md
+  - name: Enable real-time protection for AI agents
     href: real-time-agent-protection-during-runtime.md
 - name: View and manage applications
   items:
@@ -554,8 +558,6 @@ items:
     href: https://security.microsoft.com
   - name: How to buy Defender for Cloud Apps
     href: https://www.microsoft.com/security/business/cloud-apps-defender
-  - name: Support and troubleshooting
-    href: support-and-ts.md
   - name: External integrations
     href: additional-integrations.md
   - name: Watch our webinars

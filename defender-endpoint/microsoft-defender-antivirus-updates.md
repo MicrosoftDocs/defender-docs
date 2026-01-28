@@ -6,8 +6,8 @@ ms.localizationpriority: high
 ms.date: 10/20/2025
 audience: ITPro
 ms.topic: reference
-author: limwainstein
-ms.author: lwainstein
+author: chrisda
+ms.author: chrisda
 ms.subservice: ngp
 search.appverid: met150
 appliesto:
@@ -73,6 +73,41 @@ Updates contain:
 - Performance improvements
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
+
+### November-2025 (Platform: 4.18.25110.6 | Engine: 1.1.25110.1)
+
+- Security intelligence update version: **1.443.6.0**
+- Release date:  **December 11, 2025 (Engine) / December 17, 2025 (Platform)**
+- Platform: **4.18.25110.6**
+- Engine: **1.1.25110.1**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+- Performance improvements when querying WMI due to Behavior Monitor detections.
+- Fixed potential hang in PowerShell on Server 2016 due to Defender Filter Driver.
+- Resolved an application compatibility issue due to a loopback with SMB1 enabled.
+- Fixed issue with ASR path exclusion requiring additional "\" characters to function appropriately.
+- Resolved high I/O issue with NisSrv.exe due to high volume of network logging events.
+- Fixed error in threat enumeration causing repeated failure notifications every 15 minutes in SCCM.
+- Improved drive mapping enumeration for devices with many drives which resulted in false positive detections for ASR rules.
+- Fixed a crash with Defender related to long scan times causing the service to hang in Windows Server 2019.
+
+### October-2025 (Platform: 4.18.25100.9008 | Engine: 1.1.25100.9002)
+
+- Security intelligence update version: **1.441.131.0**
+- Release date: **November 6, 2025 (Engine) / November 17, 2025 (Platform)**
+- Platform: **4.18.25100.9008**
+- Engine: **1.1.25100.9002**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+- **Fixed Network Inspection Service stability issue**: The service now correctly restarts when memory usage exceeds the threshold, which prevents the service from getting stuck in a faulty or pending state. 
+- **Reduced startup delay for Antimalware Service**: Improved Defender service startup time by removing its dependency on Core Service startup. This change improves overall system startup performance.
+- **Fixed crash in Defender settings on x86 devices**: Corrected an issue that caused the system to crash when applying Defender configuration settings on 32-bit machines.
+- **Fixed Defender startup issue**: The platform no longer crashes when processing invalid Attack Surface Reduction rule exclusions.
+- **Reduced system resource usage**: Defender no longer generates excessive Data Loss Prevention (DLP) logs that caused high disk activity, improving overall performance and stability.
 
 ### September-2025 (Platform: 4.18.25090.3009 | Engine: 1.1.25090.3001)
 
@@ -260,4 +295,3 @@ After a new package version is released, support for the previous two versions i
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
