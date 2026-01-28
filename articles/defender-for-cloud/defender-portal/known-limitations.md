@@ -25,7 +25,7 @@ These are the known limitations during the preview release of Defender for Cloud
 - Event timeline widget is no longer in the navigation bar accessible via dashboard widgets.
 - Exposure Management experiences (recommendations, initiatives, attack path, etc.) aren't visible to users with MDI scoping. Until this issue is resolved, it's advisable, where feasible, to grant users full access to Exposure Management, including nonscoped MDI data.
 - This is currently not supported in Government clouds.
-
+- Identity‑scoped recommendations ignore domain/tenant and device‑group filters: Identity-based recommendations in the Identity Security initiative are scoped to identity objects rather than devices. As a result, domain or tenant filters may not fully exclude identities from other domains (such as acquired environments), and device‑group filters do not apply. These filters appear in the UI but are disabled for identity‑scoped views, and changing them does not affect results.
 ## Opt-In
 
 Access and permissions are managed using cloud scopes instead of device groups.
