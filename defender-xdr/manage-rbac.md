@@ -79,7 +79,11 @@ This section provides useful information on what you need to know before you sta
 
 - The Microsoft Defender XDR security solution continues to respect existing Microsoft Entra global roles when you activate the Microsoft Defender unified RBAC model for some or all of your workloads, that is, Security Administrators retain assigned administrator privileges.
 
-- To activate a Microsoft Sentinel workspace in Unified RBAC, you must be at least an Entra ID Security Administrator. Alternatively, you can have the following combination of roles: Azure Subscription Owner or Azure User Access Administrator AND Sentinel Contributor.
+- To activate a Microsoft Sentinel workspace in unified RBAC, you need:
+  - Security Administrator role in Microsoft Entra ID
+  - AND one of the following:
+    - Subscription Owner, OR
+    - User Access Administrator + Sentinel Contributor on the workspace
 
 > [!IMPORTANT]
 > Global Administrator is a highly privileged role that should be limited to scenarios when you can't use an existing role.
