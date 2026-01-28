@@ -7,7 +7,7 @@ f1.keywords:
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: deniseb
+manager: orspodek
 audience: ITPro
 ms.collection:
 - m365-security
@@ -18,7 +18,7 @@ ms.topic: how-to
 search.appverid:
 - MOE150
 - met150
-ms.date: 12/22/2025
+ms.date: 01/23/2026
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -145,6 +145,7 @@ Microsoft Defender XDR alerts come from solutions like Microsoft Defender for En
 | Microsoft Defender for Cloud | `dc{GUID}` |
 | Microsoft Sentinel | `sn{GUID}` |
 | Microsoft Purview Insider Risk Management | `ir{GUID}` |
+| Microsoft Security Copilot | `sc{GUID}` |
 
 > [!NOTE]
 > If you have provisioned access to Microsoft Purview Insider Risk Management, you can view and manage insider risk management alerts and hunt for insider risk management events in the Microsoft Defender portal. For more information, see [Investigate insider risk threats in the Microsoft Defender portal](irm-investigate-alerts-defender.md).
