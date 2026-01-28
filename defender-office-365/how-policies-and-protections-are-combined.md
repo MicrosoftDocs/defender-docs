@@ -19,7 +19,7 @@ ms.service: defender-office-365
 search.appverid: met150
 ms.date: 09/12/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -99,7 +99,7 @@ To make sure that recipients get the protection settings that you want, use the 
 
 ## Appendix
 
-It's important to understand how user allows and blocks, organization allows and blocks, and filtering stack verdicts in the default email protections for cloud mailboxes and in Defender for Office 365 complement or contradict each other.
+It's important to understand how user allows and blocks, organization allows and blocks, and filtering stack verdicts in [the built-in security features for all cloud mailboxes](eop-about.md) and in Defender for Office 365 complement or contradict each other.
 
 - For information about filtering stacks and how they're combined, see [Step-by-step threat protection in Microsoft Defender for Office 365](protection-stack-microsoft-defender-for-office365.md).
 - After the filtering stack determines a verdict, only then are organization policies and their configured actions evaluated.
