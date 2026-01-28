@@ -31,17 +31,16 @@ The Identities inventory page includes the following tabs:
 There are several options you can choose from to customize the identities list view. On the top navigation you can:
 
 - Add or remove columns.
-
 - Apply filters.
-
 - Search for an identity by name or full UPN, SID, and Object ID. 
-
 - Export the list to a CSV file.
+
+> [!NOTE]
+> When you export the identities list to a CSV file, only the first 5,000 identities are included.
 
 - Copy list link with the included filters configured. 
 
-> [!NOTE]
-> When exporting the identities list to a CSV file, a maximum of 5,000 identities are displayed.
+
 
 :::image type="content" source="media/identity-inventory/inventory-page.png" alt-text="Screenshot of the identity inventory page in the Microsoft Defender portal.":::
 
@@ -52,11 +51,13 @@ In the [Microsoft Defender portal](https://security.microsoft.com), go to **Asse
 
 ### Identity inventory insights 
 
-- The __Classify critical assets__ card allows you to define identity groups as business critical. For more information, see [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management). 
+The top section of the Identity inventory page provides you with quick insights into your identity landscape through the following cards:
 
-- **Highly privileged identities** card helps you investigate in Advanced hunting all sensitive accounts in your organization, including Microsoft Entra ID security administrators and Global admin users.
+- The **Classify critical assets** card allows you to define identity groups as business critical. For more information, see [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management). 
 
-- **Critical Active Directory service accounts** card helps you quickly identify all Active Directory accounts designated as critical, making it easier to focus on identities most at risk.
+- The **Highly privileged identities** card helps you investigate in Advanced hunting all sensitive accounts in your organization, including Microsoft Entra ID security administrators and Global admin users.
+
+- The **Critical Active Directory service accounts** card helps you quickly identify all Active Directory accounts designated as critical, making it easier to focus on identities most at risk.
 
 At the top of the page, the following identities counts are available:
 
@@ -90,31 +91,19 @@ The **Identities** list offers a consolidated view of identities across Active D
 
 Nondefault columns: Email, Microsoft Entra ID risk level, and Cloud ID. 
 
-> [!TIP]
-> To see all columns, you likely need to do one or more of the following steps:
-> - Horizontally scroll in your web browser.
-> - Narrow the width of appropriate columns.
-> - Zoom out in your web browser.
 
 ### Sort and filter the Identities list
 
 You can apply the following filters to limit the list of identities and get a more focused view:
 
 - Domain
-
 - Type
-
 - Source
-
 - Tags
-
 - Criticality level
-
 - Account status
 
 Sort option applies to Display name, Domain, and Created time columns.
-
-
 
 ### Related Articles
 
