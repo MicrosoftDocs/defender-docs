@@ -348,5 +348,5 @@ class remove_mdatp {
 - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
 - [Install Defender for Endpoint on Linux to a custom path](linux-custom-location-installation.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

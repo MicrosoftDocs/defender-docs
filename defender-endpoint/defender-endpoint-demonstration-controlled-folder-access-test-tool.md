@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint Controlled folder access (CFA) demonstrat
 description: See how malicious apps and threats are evaluated and countered by Microsoft Defender Antivirus.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 ms.reviewer: yongrhee
@@ -89,5 +89,5 @@ Set-MpPreference -EnableControlledFolderAccess Disabled
 
 ## See also
 [Controlled folder access](/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
