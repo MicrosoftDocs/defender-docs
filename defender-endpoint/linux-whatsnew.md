@@ -6,7 +6,7 @@ ms.author: lwainstein
 author: limwainstein
 ms.reviewer: kumasumit, gopkr; mevasude
 ms.localizationpriority: medium
-ms.date: 12/24/2025
+ms.date: 01/23/2025
 manager: bagol
 audience: ITPro
 ms.collection:
@@ -41,7 +41,29 @@ This article is updated frequently to let you know what's new in the latest rele
 > [!NOTE]  
 > Defender for Endpoint on Linux is updated regularly. While security fixes are included as part of monthly releases, the fixes aren't always listed as a separate **Security Patch** item in these notes. If a release contains security-related updates, the updates are listed in this article under [Releases for Defender for Endpoint on Linux](#releases-for-defender-for-endpoint-on-linux) in the specific version section. For detailed information on Microsoft security updates, see the [Microsoft Security Update Guide](https://msrc.microsoft.com/update-guide).
 
+> [!NOTE]
+> Build numbers for Defender for Endpoint on Linux are not strictly sequential by month. A later release can have a lower build number if it originates from a different servicing branch. Always use the release date, not the numeric build value alone, to determine the most recent version. 
+
 ## Releases for Defender for Endpoint on Linux
+
+### January-2026 Build: 101.25102.0005 | Release version: 30.125102.0005.0
+
+|Build:             |**101.25102.0005**    |
+|-------------------|----------------------|
+|Released:          |**January 7, 2026**|
+|Published:         |**January 7, 2026**|
+|Expiry:            |**Sep 14, 2026**|
+|Release version:   |**30.125102.0005.0**|
+|Engine version:    |**1.1.25090.6000**|
+|Signature version: |**1.439.338.0**|
+
+#### What's new
+
+- Enhanced vulnerability detection for React components through improved telemetry. This includes support for identifying [(CVE-2025-55182)](https://github.com/advisories/GHSA-fv66-9v8q-g76r), providing more comprehensive security coverage for React-based applications.
+
+- Agent process handling has been streamlined by removing the dependency on telemetryd_v2, enabling more efficient and consistent telemetry collection. This change applies to builds 101.24062.0001 and later, with no impact on functionality, data collection, or customer configurations. All features remain intact, and no customer action is required.
+
+- Added support for Debian 13.
 
 ### December-2025 Build: 101.25092.0005 | Release version: 30.125092.0005.0
 
@@ -51,8 +73,8 @@ This article is updated frequently to let you know what's new in the latest rele
 |Published:         |**December 22, 2025**|
 |Expiry:            |**Sep 14, 2026**|
 |Release version:   |**30.125092.0005.0**|
-|Engine version:    |**1.1.25110.3001**|
-|Signature version: |**1.443.272.0**|
+|Engine version:    |**1.1.25090.4000**|
+|Signature version: |**1.437.18.0**|
 
 #### What's new
 
@@ -66,8 +88,8 @@ This article is updated frequently to let you know what's new in the latest rele
 |Published:         |**December 18, 2025**|
 |Expiry:            |**Aug 09, 2026**|
 |Release version:   |**30.125092.0002.0**|
-|Engine version:    |**1.1.25110.3001**|
-|Signature version: |**1.443.189.0**|
+|Engine version:    |**1.1.25090.4000**|
+|Signature version: |**1.437.18.0**|
 
 #### What's new
 
@@ -81,8 +103,8 @@ This article is updated frequently to let you know what's new in the latest rele
 |Published:         |**December 15, 2025**|
 |Expiry:            |**September 06, 2026**|
 |Release version:   |**30.125102.0003.0**|
-|Engine version:    |**1.1.25110.3001**|
-|Signature version: |**1.443.15.0**|
+|Engine version:    |**1.1.25090.6000**|
+|Signature version: |**1.439.338.0**|
 
 #### What's new
 
@@ -100,8 +122,8 @@ This article is updated frequently to let you know what's new in the latest rele
 |Published:         |**November 05, 2025**|
 |Expiry:            |**July 10, 2026**|
 |Release version:   |**30.125092.0001.0**|
-|Engine version:    |**1.1.25090.6000**|
-|Signature version: |**1.439.558.0**|
+|Engine version:    |**1.1.25090.4000**|
+|Signature version: |**1.437.18.0**|
 
 #### What's new
 

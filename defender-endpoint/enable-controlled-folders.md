@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.topic: how-to
 ms.localizationpriority: medium
 audience: ITPro
-author: KesemSharabi
-ms.author: kesharab
+author: paulinbar
+ms.author: painbar
 ms.reviewer: sugamar; moeghasemi
 manager: bagol
 ms.subservice: asr
@@ -15,32 +15,43 @@ ms.collection:
 - tier3
 - mde-asr
 search.appverid: met150
-ms.date: 12/16/2025
+ms.date: 01/05/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
-
 ---
 
 # Enable controlled folder access
 
-[Controlled folder access](controlled-folders.md) helps you protect valuable data from malicious apps and threats, such as ransomware. Controlled folder access is included with Windows 10, Windows 11, and Windows Server 2019. Controlled folder access is also included as part of the [modern, unified solution for Windows Server 2012R2 and 2016](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
+[Controlled folder access](controlled-folders.md) helps you protect valuable data from malicious apps and threats, such as ransomware. Controlled folder access is available in the following operating systems:
 
-You can enable controlled folder access by using any of these methods:
+- Included in Windows 10 or later.
+- Included in Windows Server 2019 or later.
+- Available in Windows Server 2016 and Windows Server 2012 R2 as part of the [modern, unified Microsoft Defender for Endpoint solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
 
-- [Enable controlled folder access](#enable-controlled-folder-access)
-- [Enable controlled folder access](#enable-controlled-folder-access)
+You can enable controlled folder access by using any of the following methods described in this article:
+
+- [Enable controlled folder access in the Microsoft Intune admin center](#enable-controlled-folder-access-in-the-microsoft-intune-admin-center)
   - [Mobile Device Management (MDM)](#mobile-device-management-mdm)
   - [Microsoft Configuration Manager](#microsoft-configuration-manager)
   - [Group Policy](#group-policy)
   - [PowerShell](#powershell)
-  
+
+> [!TIP]
+> Exclusions don't work if you're using [data loss prevention (DLP)](/purview/dlp-learn-about-dlp). Do the following steps to investigate:
+>
+> 1. Download and install the [Defender for Endpoint client analyzer](run-analyzer-windows.md).
+> 2. Run a trace for at least five minutes.
+> 3. In the resulting `MDEClientAnalyzerResult.zip` output file, extract the contents of the `EventLogs` folder, and search for instances of `DLP EA` in the available `.evtx` log files.
+
 ## Prerequisites
 
 ### Supported operating systems
 
-**Windows**:
+- Windows
+
+## Enable controlled folder access in the Microsoft Intune admin center
 
 1. In the Microsoft Intune admin center at <https://intune.microsoft.com>, go to **Endpoint security** \> **Manage** \> **Attack surface reduction**. Or, to go directly to the **Endpoint security \| Attack surface reduction** page, use <https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/SecurityManagementMenu/~/asr>.
 
@@ -142,4 +153,4 @@ For detailed syntax and parameter information, see [EnableControlledFolderAccess
 - [Customize controlled folder access](customize-controlled-folders.md)
 - [Evaluate Microsoft Defender for Endpoint](evaluate-mde.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

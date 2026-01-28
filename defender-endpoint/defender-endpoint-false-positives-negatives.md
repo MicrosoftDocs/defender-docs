@@ -3,8 +3,8 @@ title: Address false positives/negatives in Microsoft Defender for Endpoint
 description: Learn how to handle false positives or false negatives in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: ngp
-ms.author: kesharab
-author: KesemSharabi
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
 ms.date: 10/20/2025
 manager: bagol
@@ -92,7 +92,7 @@ Alerts can be classified as false positives or true positives in the Microsoft D
 1. In the **Manage alert** section, in the **Classification** field, classify the alert (True positive, Informational, expected activity, or False positive).
 
 > [!TIP]
-> For more information about suppressing alerts, see [Manage Defender for Endpoint alerts](manage-alerts.md). And, if your organization is using a security information and event management (SIEM) server, make sure to define a suppression rule there, too.
+> For more information about suppressing alerts, see [Manage Defender for Endpoint alerts](/defender-xdr/investigate-alerts?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#manage-alerts). And, if your organization is using a security information and event management (SIEM) server, make sure to define a suppression rule there, too.
 
 ### Suppress an alert
 
@@ -107,7 +107,7 @@ If you have alerts that are either false positives or that are true positives bu
 1. Specify all the settings for your suppression rule, and then choose **Save**.
 
 > [!TIP]
-> Need help with suppression rules? See [Suppress an alert and create a new suppression rule](manage-alerts.md#suppress-an-alert-and-create-a-new-suppression-rule).
+> Need help with suppression rules? See [Suppress an alert and create a new suppression rule](/defender-xdr/investigate-alerts?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#built-in-alert-tuning-rules).
 
 ## Part 2: Review remediation actions
 
@@ -415,5 +415,5 @@ If you've worked through all the steps in this article and still need help, cont
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md) 
 - [Configure Defender for Endpoint on Android features](android-configure.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

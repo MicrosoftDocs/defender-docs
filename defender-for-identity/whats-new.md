@@ -23,6 +23,41 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## January 2026
+
+
+### MDI alerts migrated to the unified Defender alerting experience
+As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, some alerts were converted from the Microsoft Defender for Identity classic format to the MDI XDR alert format. Keep in mind that all alerts are based on detections from Defender for Identity sensors. See [Microsoft Defender for Identity XDR security alerts](alerts-xdr.md) for the full list of XDR alerts.
+
+### New Health Alert: Sensor v3.x RPC Audit Misconfigured
+Enhanced RPC auditing is required for some Microsoft Defender for Identity advanced identity detections. A new health alert helps identify v3.x sensors where this configuration is either missing or incorrectly applied. The alert is being rolled out gradually to customers. For more information, see [Configure RPC on sensors v3.x](deploy/prerequisites-sensor-version-3.md#configure-rpc-auditing-on-sensors-v3x-to-support-advanced-identity-detections).
+
+### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x (preview)
+We’re gradually rolling out automatic Windows event-auditing configuration for sensors v3.x, along with related health alerts. This update streamlines deployment by automatically applying the required auditing settings to new sensors and correcting misconfigurations on existing ones. For more information see [Configure automatic windows auditing](deploy/configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically-preview).
+
+|Version number|Updates|
+|---|---|
+|2.254|The sensor now supports a new DNS zone target for *.aatp.gcc.azure.com. Make sure your sensors in GCC can access this zone with your sensor dns prefix.|
+
+### New security posture assessment: Identify service accounts in privileged groups
+
+This identity security posture assessment lists Active Directory service accounts with direct or nested membership in privileged groups.
+
+You can use this assessment to identify service accounts with elevated permissions and take action when privileged access isn’t required.
+
+For more information, see:[Security posture assessment: Identify service accounts in privileged groups](security-posture-assessments/accounts.md#identify-service-accounts-in-privileged-groups)
+
+
+### New security posture assessment: Locate accounts in built-in Operator Groups
+
+
+This identity security posture assessment lists Active Directory accounts that are members of built-in Operator Groups, including direct and indirect membership. 
+
+You can use this assessment to review legacy or unnecessary operator access and take action when elevated access isn’t required.
+
+For more information, see:[Security posture assessment: Locate accounts in built-in Operator Groups](security-posture-assessments/accounts.md#locate-accounts-in-built-in-operator-groups)
+
+
 ## December 2025
 
 ### New properties for 'sensorCandidate' resource type in Graph-API (preview)
@@ -40,8 +75,8 @@ New ADWS LDAP search activity is now available in the 'IdentityQueryEvents' tabl
 
 |Version number|Updates|
 |---|---|
-|2.252|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
 |2.253|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
+|2.252|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
 
 ## November 2025
 
@@ -49,30 +84,26 @@ New ADWS LDAP search activity is now available in the 'IdentityQueryEvents' tabl
 |---|---|
 |2.251|The enhanced ADWS LDAP and legacy password-based LDAP query methods now capture a broader range of unique events at scale. As a result, you might notice an increase in recorded activity.|
 
-### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x (Preview)
-
-Defender for Identity is slowly rolling out automatic Windows event auditing for sensors v3.x, streamlining deployment by applying required auditing settings to new sensors and fixing misconfigurations on existing ones. As it becomes available, you will be able to enable automatic Windows event-auditing in the **Advanced settings** section in the Defender portal, or using the Graph API.
-
 ### Identity Inventory enhancements: Accounts tab, manual account linking and unlinking, and expanded remediation actions
 
 The following new features are now available in Microsoft Defender for Identity:
 
 **Accounts tab in Identity Inventory**:
 
-A new Accounts tab provides a consolidated view of all accounts associated with an identity, including accounts from Active Directory, Microsoft Entra ID, and supported third-party identity providers. For more information, see: [Link or Unlink an Account to an Identity (Preview)](link-unlink-account-to-identity.md)
+A new Accounts tab provides a consolidated view of all accounts associated with an identity, including accounts from Active Directory, Microsoft Entra ID, and supported third-party identity providers. For more information, see: [Manage related identities and accounts (Preview)](manage-related-identities-accounts.md)
 
 **Manual link and unlink of accounts**:
 
 You can now manually link or unlink accounts from an identity directly in the Accounts tab. This capability helps you correlate identity components from different directory sources and provides a complete identity context during investigations.
-For more information, see: [Link or Unlink an Account to an Identity (Preview)](link-unlink-account-to-identity.md).
+For more information, see: [Manage related identities and accounts (Preview)](manage-related-identities-accounts.md).
 
 **Identity-level remediation actions**:
 
 You can now perform remediation actions such as disabling accounts or resetting passwords on one or more accounts linked to an identity. For more information, see: [Remediation actions](remediation-actions.md#roles-and-permissions).
 
-### New security posture assessment: Change password for on-prem account with potentially leaked credentials (Preview)
+### New security posture assessment: Change password for on-premises account with potentially leaked credentials (Preview)
 
-The new security posture assessment lists users whose valid credentials have been leaked. For more information, see: [Change password for on-prem account with potentially leaked credentials (Preview)](/defender-for-identity/security-posture-assessments/accounts#change-password-for-on-prem-account-with-potentially-leaked-credentials-preview)
+The new security posture assessment lists users whose valid credentials have been leaked. For more information, see: [Change password for on-premises account with potentially leaked credentials (Preview)](/defender-for-identity/security-posture-assessments/accounts#change-password-for-on-prem-account-with-potentially-leaked-credentials-preview)
 
 ### Microsoft Defender for Identity sensor version updates
 
@@ -105,12 +136,11 @@ As part of the ongoing transition to a unified alerting experience across Micros
 
 |Classic Alert Title|External ID|XDR Alert Name|Detector ID|
 |---|---|---|---|
-|Active Directory attributes Reconnaissance using LDAP|2210|[Active Directory attributes Reconnaissance using LDAP](alerts-xdr.md#active-directory-attributes-reconnaissance-ldap)|xdr_LdapSensitiveAttributeRecon|
-|User and IP address reconnaissance|2012|[User and IP address reconnaissance (SMB)](alerts-xdr.md#user-and-ip-address-reconnaissance-smb)|xdr_SmbSessionEnumeration|
-|Account enumeration reconnaissance|2003|[Account enumeration reconnaissance in AD FS](alerts-xdr.md#account-enumeration-reconnaissance-in-ad-fs)|xdr_AccountEnumerationHintSecurityAlertAdfs|
-|||[Account enumeration reconnaissance in Kerberos](alerts-xdr.md#account-enumeration-reconnaissance-in-kerberos)|xdr_AccountEnumerationHintSecurityAlertKerberos|
-|||[Account enumeration reconnaissance in NTLM](alerts-xdr.md#account-enumeration-reconnaissance-in-ntlm)|xdr_AccountEnumerationHintSecurityAlertNtlm|
-|Suspected brute-force attack (LDAP)|2004|[Suspected brute-force attack (LDAP)](alerts-xdr.md#suspected-brute-force-attack-ldap)|xdr_LdapBindBruteForce|
+|Active Directory attributes Reconnaissance using LDAP|2210|[LDAP reconnaissance attributes in Active Directory](alerts-xdr.md#ldap-reconnaissance-attributes-in-active-directory)|xdr_LdapSensitiveAttributeReconnaissance|
+|User and IP address reconnaissance|2012|[Suspicious Server Message Block (SMB) enumeration from untrusted host](alerts-xdr.md#suspicious-server-message-block-smb-enumeration-from-untrusted-host)|xdr_SmbSessionEnumeration|
+|Account enumeration reconnaissance|2003|[Suspected account enumeration (Kerberos, NTLM, AD FS)](alerts-xdr.md#suspected-account-enumeration-kerberos-ntlm-ad-fs)|xdr_SuspectedAccountEnumeration|
+|Suspected brute-force attack (LDAP)|2004|[Suspected brute-force attack on Lightweight Directory Access Protocol (LDAP) authentication](alerts-xdr.md#suspected-brute-force-attack-on-lightweight-directory-access-protocol-ldap-authentication)|xdr_LdapBindBruteforce|
+|||[Suspected password spray attack on Lightweight Directory Access Protocol (LDAP) authentication](alerts-xdr.md#suspected-password-spray-attack-on-lightweight-directory-access-protocol-ldap-authentication)|xdr_LdapBindBruteforce|
 |Suspicious network connection over Encrypting File System Remote Protocol|2416|[Suspicious network connection over Encrypting File System Remote Protocol](alerts-xdr.md#suspicious-network-connection-over-encrypting-file-system-remote-protocol)|xdr_SuspiciousConnectionOverEFSRPC|
 
 ### Additional security value in the Defender for Identity sensor v3.x

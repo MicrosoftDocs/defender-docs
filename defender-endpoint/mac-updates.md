@@ -281,5 +281,5 @@ For more information, see: [Configuring Preferences for Microsoft AutoUpdate (MA
 ## Resources
 
 - [msupdate reference](/deployoffice/mac/update-office-for-mac-using-msupdate)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
