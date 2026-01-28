@@ -224,8 +224,7 @@ az k8s-extension create \
   --cluster-type connectedClusters \
   --cluster-name <cluster-name> \
   --resource-group <resource-group> \
-  --configuration-settings \
-    logAnalyticsWorkspaceResourceID=<workspace-resource-id>
+  --configuration-settings logAnalyticsWorkspaceResourceID=<workspace-resource-id>
 ```
 
 Replace `<workspace-resource-id>` with the full Log Analytics workspace resource ID. 

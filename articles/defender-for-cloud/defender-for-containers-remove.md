@@ -230,7 +230,7 @@ az connectedk8s delete \
 
 Remove these resources only if runtime threat protection for GKE was enabled and you no longer use Defender for Containers for that project.
 
-- Delete the Pub/Sub topic and subscription with the prefix `MicrosoftDefender-`.
+- Delete the Pub/Sub topic and subscription that use the `MicrosoftDefender-` prefix.
 
 - Delete the Cloud Logging sink that was created for Defender for Containers.
 

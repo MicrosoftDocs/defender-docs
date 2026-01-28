@@ -158,7 +158,7 @@ az k8s-extension show \
 
 If the extension is stuck or failed, delete and redeploy it:
 
-```bash
+```azurecli
 az k8s-extension delete \
   --cluster-name <cluster-name> \
   --resource-group <resource-group> \
