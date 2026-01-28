@@ -52,7 +52,7 @@ You can use IP and URL/Domain indicators to manage site access.
 
 To block connections to an IP address, type the IPv4 address in dotted-quad form (for example, `8.8.8.8`). For IPv6 addresses, specify all eight segments (for example, `2001:4860:4860:0:0:0:0:8888`). Note that wildcards and ranges aren't supported.
 
-To block connections to a domain and any of its subdomains, specify the domain (for example, `contoso.com`). This indicator matches `contoso.com` as well as `sub.contoso.com` and `anything.sub.example.com`.
+To block connections to a domain and any of its subdomains, specify the domain (for example, `contoso.com`). This indicator matches `contoso.com` as well as `sub.contoso.com` and `anything.sub.contoso.com`.
 
 To block a specific URL path, specify the URL path (for example, `https://contoso.com/block`). This indicator matches resources under the `/block` path on `contoso.com`. Note that HTTPS URL paths will only be matched in Microsoft Edge; HTTP URL paths can be matched in any browser.
 
