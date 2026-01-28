@@ -5,7 +5,7 @@ author: EdB-MSFT
 ms.service: microsoft-sentinel
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 12/18/2025
+ms.date: 01/28/2026
 # customer intent: As a security engineer or ISV partner, I want to understand how CCF Push connectors work and how to build one so I can send real-time data from my application to Microsoft Sentinel.
 ---
 
