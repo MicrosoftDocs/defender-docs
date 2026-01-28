@@ -85,9 +85,6 @@ This section provides useful information on what you need to know before you sta
     - Subscription Owner, OR
     - User Access Administrator + Sentinel Contributor on the workspace
 
-> [!IMPORTANT]
-> Global Administrator is a highly privileged role that should be limited to scenarios when you can't use an existing role.
-
 ### Migration of existing roles and permissions
 
 The new Microsoft Defender unified RBAC model provides easy migration of the existing permissions in the individual supported unified RBAC models to the new RBAC model.
