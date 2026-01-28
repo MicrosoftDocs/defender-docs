@@ -30,7 +30,8 @@ For updates about versions and features released six months ago or earlier, see 
 - **Accounts tab in Identity Inventory**: The new **Accounts** tab provides a consolidated view of all accounts associated with an identity, including accounts from Active Directory, Microsoft Entra ID, and supported third-party identity providers. For more information, see [Manage related identities and accounts](manage-related-identities-accounts.md).
 - **Manually link and unlink accounts**: Manually link or unlink accounts from an identity directly in the **Accounts** tab. This capability helps you correlate identity components from different directory sources and provides a complete identity context during investigations. For more information, see [Manage related identities and accounts](manage-related-identities-accounts.md).
 - **Identity-level remediation actions**: You can now perform remediation actions such as disabling accounts or resetting passwords on one or more accounts linked to an identity. For more information, see [Remediation actions](remediation-actions.md#roles-and-permissions).
-- **New advanced hunting table**: Advanced hunting in Microsoft Defender now includes the **IdentityAccountInfo** table. This table provides account information from various sources, including Microsoft Entra ID, and links to the identity that owns the account.
+- **New advanced hunting table**: Advanced hunting in Microsoft Defender now includes the **[IdentityAccountInfo](
+/defender-xdr/advanced-hunting-identityaccountinfo-table)** table. This table provides account information from various sources, including Microsoft Entra ID, and links to the identity that owns the account.
 
 
 ### MDI alerts migrated to the unified Defender alerting experience
