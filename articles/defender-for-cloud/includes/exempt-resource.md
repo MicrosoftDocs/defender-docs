@@ -1,0 +1,1 @@
+- Resource exemption is limited to 5,000 resources per subscription. If you add more than 5,000 exemptions per subscription, you might experience load issues on the exemption page.

@@ -19,6 +19,8 @@ For example, Defender for Cloud might not track the process that remediates a re
 
 - Prevent a recommendation or resource from being listed as unhealthy. Apply the rule to the required scope and mark the item as "mitigated" or "risk accepted".
 
+[!INCLUDE [exempt-resource](/includes/exempt-resource.md)]
+
 
 ## Create exemptions at scale
 

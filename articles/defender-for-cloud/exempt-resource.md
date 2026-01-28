@@ -26,7 +26,7 @@ For each scope, create an exemption rule to:
 - Mark a specific **recommendation** as **Mitigated** or **Risk accepted** for one or more subscriptions, or for a management group.
 - Mark **one or more resources** as **Mitigated** or **Risk accepted** for a specific recommendation.
 
-- Resource exemption is limited to 5,000 resources per subscription. If you add more than 5,000 exemptions per subscription, you might experience load issues on the exemption page.
+[!INCLUDE [exempt-resource](/includes/exempt-resource.md)]
 
 ## Before you start
 
