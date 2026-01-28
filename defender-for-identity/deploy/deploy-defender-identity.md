@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity Deployment Overview
 description: Learn how to deploy Microsoft Defender for Identity from the Microsoft Defender portal.
-ms.date: 01/22/2026
+ms.date: 01/28/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ---
@@ -23,17 +23,18 @@ Identify your architecture and requirements, and then use the following table to
 
 |Server configuration   |Server Operating System  |Recommended deployment |
 |---------|---------|---------|
-|Domain controller     | Windows Server 2019 or later with the [June 2025 Cumulative Update](https://support.microsoft.com/en-us/topic/june-10-2025-kb5060526-os-build-20348-3807-4e9453c4-6602-48ea-b349-689cd66dfdb9) or later.<br> |[Defender for Identity sensor v3.x](prerequisites-sensor-version-3.md)<br>        |
-|Domain controller      |Windows Server 2016 or later         |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)         |
-|[Active Directory Federation Services (AD FS)](active-directory-federation-services.md)     |    Windows Server 2016 or later      |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)      |
-|[Active Directory Certificate Services (AD CS)](active-directory-federation-services.md)     |  Windows Server 2016 or later        |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)      |
-|[Microsoft Entra Connect](active-directory-federation-services.md)|  Windows Server 2016 or later     |[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)     |
+|Domain controller     | Windows Server 2019 or later with the [June 2025 or later Cumulative Update](https://support.microsoft.com/topic/june-10-2025-kb5060526-os-build-20348-3807-4e9453c4-6602-48ea-b349-689cd66dfdb9)|[Defender for Identity sensor v3.x](prerequisites-sensor-version-3.md)|
+|Domain controller      |Windows Server 2016 or later|[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)         |
+|[Active Directory Federation Services (AD FS)](active-directory-federation-services.md)|Windows Server 2016 or later|[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)|
+|[Active Directory Certificate Services (AD CS)](active-directory-federation-services.md)|Windows Server 2016 or later|[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)|
+|[Microsoft Entra Connect](active-directory-federation-services.md)|Windows Server 2016 or later|[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)|
 
 Before you activate the Defender for Identity sensor v3.x, keep in mind that v3.x:
 
-  - Doesn't support VPN integration.
-  - Doesn't support ExpressRoute.
+- Doesn't support VPN integration.
+- Doesn't support ExpressRoute.
 
 ## Next steps
-- [Prepare your environment](prerequisites-sensor-version-2.md)
-- [Set up Microsoft Defender for Identity role groups](../role-groups.md)
+
+- [Prepare your environment for sensor v2](prerequisites-sensor-version-2.md)
+- [Prepare your environment for sensor v3](prerequisites-sensor-version-3.md)

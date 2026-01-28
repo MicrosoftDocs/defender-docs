@@ -31,14 +31,12 @@ Before activating the Defender for Identity sensor v3.x, make sure that the serv
 
 Deploying Defender for Identity requires one of the following Microsoft 365 licenses:
 
-Enterprise Mobility + Security E5 (EMS E5/A5)
-Microsoft 365 E5 (Microsoft E5/A5/G5)
-Microsoft 365 E5/A5/G5/F5* Security
-Microsoft 365 F5 Security + Compliance*
+- Enterprise Mobility + Security E5 (EMS E5/A5)
+- Microsoft 365 E5 (Microsoft E5/A5/G5)
+- Microsoft 365 E5/A5/G5/F5* Security
+- Microsoft 365 F5 Security + Compliance*
 
-- Both F5 licenses require Microsoft 365 F1/F3 or Office 365 F3 and Enterprise Mobility + Security E3.
-
-Purchase licenses in the Microsoft 365 portal or through Cloud Solution Partner (CSP) licensing. For more information, see [Licensing and privacy FAQs](/defender-for-identity/technical-faq#licensing-and-privacy).
+Both F5 licenses require Microsoft 365 F1/F3 or Office 365 F3 and Enterprise Mobility + Security E3. Purchase licenses in the Microsoft 365 portal or through Cloud Solution Partner (CSP) licensing. For more information, see [Licensing and privacy FAQs](/defender-for-identity/technical-faq#licensing-and-privacy).
 
 ## Roles and permissions
 
@@ -49,7 +47,6 @@ Purchase licenses in the Microsoft 365 portal or through Cloud Solution Partner 
   - `Security settings (All permissions)`
 
 ### Memory requirements
-The new sensor is capped at 30% CPU utilization and 1.5 GB of memory usage. The resource caps significantly improve coexistence by preventing the sensor from overusing CPU or memory. However, if Falcon Identity already consumes substantial system resources, the Domain Controller might still experience performance strain. The sensor v3.x is more efficient than the v2 version, making coexistence much more feasible—as long as the DC is properly sized and maintained.
 
 The following table describes memory requirements on the server used for the Defender for Identity sensor, depending on the type of virtualization you're using:
 
@@ -61,6 +58,8 @@ The following table describes memory requirements on the server used for the Def
 
 > [!IMPORTANT]
 > When running as a virtual machine, allocate all memory to the virtual machine at all times.
+
+Version 3 of the sensor prevents the sensor from overusing CPU or memory by limiting CPU utilization at 30% , and memory usage to 1.5 GB. However, if Falcon Identity already uses substantial system resources, the domain controller might still experience performance strain.
 
 ## Configure RPC auditing
 
@@ -85,6 +84,7 @@ Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability o
 
 
 ### Update rules
+
    To offboard a device from this configuration, delete the asset rule or modify the rule conditions so the device no longer matches.
 
 > [!NOTE]
@@ -93,6 +93,7 @@ Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability o
 Learn more about [asset management rules](/defender-xdr/configure-asset-rules).
 
 ## Configure Windows event auditing
+
 Defender for Identity uses Windows event log entries to detect specific activities. This data is used in various detection scenarios and can be used in advanced hunting queries. For optimal protection and monitoring, make sure that collection of windows events is properly configured.
 
 See [Configure Defender for Identity to collect Windows events automatically (Preview)](configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically-preview).
@@ -106,7 +107,7 @@ We recommend that you make sure these items are properly configured for optimal 
 - For optimal performance, set the **Power Option** of the machine running the Defender for Identity sensor to **High Performance**.
 - The servers and domain controllers onto which the sensor is installed must have time synchronized to within five minutes of each other.
 - The sensor uses the Local System identity on the server to query Active Directory and perform response actions. The local system identity is used even if if credentials are entered in the portal. If a **Group Managed Service Account (gMSA)** is configured for response actions, the response actions are disabled.<br> - In environments that use both v2 and v3 sensors, use local system accounts for all of your sensors.
-- 
+
 ## Test your prerequisites
 
 We recommend running the [*Test-MdiReadiness.ps1*](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script to test and see if your environment has the necessary prerequisites.
@@ -114,4 +115,5 @@ We recommend running the [*Test-MdiReadiness.ps1*](https://github.com/microsoft/
 The *Test-MdiReadiness.ps1* script is also available from Microsoft Defender XDR, on the **Identities > Tools** page (Preview).
 
 ## Next step
+
 [Activate the Microsoft Defender for Identity sensor](activate-sensor.md)
