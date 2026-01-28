@@ -47,7 +47,7 @@ There are several options you can choose from to customize the identities list v
 
 ### Navigate to the Identity inventory page
 
-In the Microsoft Defender portal at [https://security.microsoft.com](https://security.microsoft.com), go to **Assets** > **Identities**. Or, to navigate directly to the [identity inventory](/defender-for-identity/identity-inventory) page.
+In the [Microsoft Defender portal](https://security.microsoft.com), go to **Assets** > **Identities**. 
 
 
 ### Identity inventory insights 
