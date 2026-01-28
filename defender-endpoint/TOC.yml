@@ -804,7 +804,7 @@
         href: schedule-antivirus-scans.md
         items:
         - name: Configure scheduled quick or full Microsoft Defender Antivirus scans on Linux
-          href: schedule-antivirus-scans-linux.md
+          href: schedule-anti-virus-scans-linux.md
           displayName: Linux, Scan, MDE
         - name: Schedule scans using Group Policy
           href: schedule-antivirus-scans-group-policy.md
