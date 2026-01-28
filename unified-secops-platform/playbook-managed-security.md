@@ -67,14 +67,14 @@ Some advanced scenarios using automation rules and playbooks might still require
 
 #### Unified RBAC
 
-When looking at using Unified RBAC in managing your Microsoft Defender for Office 365 customers, you must have Defender for Office 365 Plan 2 license. For more information, see:
+When looking at using unified RBAC in managing your Microsoft Defender for Office 365 customers, you must have Defender for Office 365 Plan 2 license. For more information, see:
 
 - [Email and collaboration permissions mapping](/defender-xdr/compare-rbac-roles#email--collaboration-permissions-mapping)
 - [Exchange Online permissions mapping](/defender-xdr/compare-rbac-roles#exchange-online-permissions-mapping)
 
 #### Azure B2B
 
-Azure B2B invited guests aren't supported by experiences that were previously under Microsoft Exchange Online RBAC. Since Defender for Office 365 Unified RBAC leans on Exchange Online Admin APIs, actions performed in Defender for Office 365 have limitations. B2B guest admins might get errors when attempting to perform certain actions, such as:
+Azure B2B invited guests aren't supported by experiences that were previously under Microsoft Exchange Online RBAC. Since Defender for Office 365 unified RBAC leans on Exchange Online Admin APIs, actions performed in Defender for Office 365 have limitations. B2B guest admins might get errors when attempting to perform certain actions, such as:
 
 - Managing spam and phishing policies
 - Managing TABL
@@ -146,7 +146,7 @@ After setting establishing delegated access, the next step is to set up granular
 
 [Unified RBAC](/defender-xdr/manage-rbac) to provides centralized permissions management for several Defender solutions. You not a required to transition to the unified experience, but it does simplify the delegation of Defender permissions. Your Microsoft Sentinel permissions will continue to work as expected in the unified experience, with or without URBAC. Instructions on how to enable Defender URBAC can be found here [Activate Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/activate-defender-rbac)
 
-The minimal required permissions for an analyst to view Microsoft Sentinel data is to delegate permissions for the Azure RBAC **Sentinel Reader** role. These permissions are also applied to the unified portal. Without these permissions, the Microsoft Sentinel navigation menu is not available on the unified portal, despite the analyst having access to the Defender portal. Microsoft Sentinel permissions will not provide access to Microsoft Defender XDR incidents/data, and you will need appropriate Unified RBAC or global Entra ID roles to see those incidents/data.
+The minimal required permissions for an analyst to view Microsoft Sentinel data is to delegate permissions for the Azure RBAC **Sentinel Reader** role. These permissions are also applied to the unified portal. Without these permissions, the Microsoft Sentinel navigation menu is not available on the unified portal, despite the analyst having access to the Defender portal. Microsoft Sentinel permissions will not provide access to Microsoft Defender XDR incidents/data, and you will need appropriate unified RBAC or global Entra ID roles to see those incidents/data.
 
 Refer to the permissions  mentioned in [Connect Microsoft Sentinel to the Microsoft Defender portal Prerequisites](/defender-xdr/microsoft-sentinel-onboard#microsoft-sentinel-prerequisites) for specific Microsoft Sentinel roles.
 
@@ -188,7 +188,7 @@ Additional permission might be required for the analyst to triage and investigat
 Please refer here: [Import roles to Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/import-rbac-roles) to import roles to get you quickly started with URBAC, or here [Create custom roles with Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/create-custom-rbac-roles#create-a-custom-role) to create custom roles.
 
 
-For sample role assignments for different SOC roles, see the [Sample permission mappings of Microsoft Sentinel built-in roles to Microsoft Defender XDR Unified RBAC roles](/defender-xdr/compare-rbac-roles.md#sample-permission-mappings-of-microsoft-sentinel-built-in-roles-to-microsoft-defender-xdr-unified-rbac-roles) --->
+For sample role assignments for different SOC roles, see the [Sample permission mappings of Microsoft Sentinel built-in roles to Microsoft Defender unified RBAC roles](/defender-xdr/compare-rbac-roles.md#sample-permission-mappings-of-microsoft-sentinel-built-in-roles-to-microsoft-defender-xdr-unified-rbac-roles) --->
 
 For sample role assignments for different SOC roles, see the [Sample permission mappings of Microsoft Sentinel built-in roles to Microsoft Defender unified RBAC roles](/defender-xdr/compare-rbac-roles).
 
