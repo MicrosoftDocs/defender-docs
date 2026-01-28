@@ -20,16 +20,12 @@ ms.date: 01/28/2025
 
 # Configure and run antivirus scans with Microsoft Defender for Endpoint on Linux
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+Microsoft Defender for Endpoint on Linux offers robust antivirus scanning capabilities to help identify and mitigate malicious files on your system. You can run these scans on-demand or schedule them at regular intervals, ensuring continuous protection and peace of mind.
 
 **Applies to:**
 
 - [Microsoft Defender for Servers Plan 1 and Plan 2](/azure/defender-for-cloud/defender-for-servers-overview#defender-for-servers-plans)
 - [Microsoft Defender for Endpoint Servers](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/microsoft-defender-endpoint?activetab=pivot:overviewtab)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
-
-Microsoft Defender for Endpoint on Linux offers robust antivirus scanning capabilities to help identify and mitigate malicious files on your system. You can run these scans on-demand or schedule them at regular intervals, ensuring continuous protection and peace of mind.
 
 ## Scans performed by Defender for Endpoint on Linux
 
@@ -47,11 +43,9 @@ The following table describes each type of scan:
 
 > [!Note]
 > For optimal performance, we recommend using quick scans to secure your devices.
-
-> [!Note]
+>
 > Based on the enforcement level configured, MDE will take remediation actions accordingly when a scan detects a malicious file. For more information, see [Enforcement level for Microsoft Defender Antivirus](./linux-preferences.md#enforcement-level-for-microsoft-defender-antivirus).
-
-> [!Note]
+>
 > If multiple scans are initiated, they get queued one after the other.
 
 ## How to Run Antivirus Scans using Defender for Endpoint on Linux
