@@ -22,8 +22,7 @@ This recommendation lists any user accounts in Active Directory that are stale, 
 
 Excluded accounts:
 
-- Service accounts (covered by a separate posture recommendation).
-
+- Service accounts
 - Disabled or deleted accounts.
 
 **User impact**
