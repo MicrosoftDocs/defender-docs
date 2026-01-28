@@ -24,7 +24,7 @@ appliesto:
 # AMSI demonstrations with Microsoft Defender for Endpoint
 
 
-Microsoft Defender for Endpoint utilizes the [Antimalware Scan Interface (AMSI)](/defender-endpoint/amsi-on-mdav) to enhance protection against fileless malware, dynamic script-based attacks, and other nontraditional cyber threats. In this article, we describe how to test the AMSI engine with a benign sample.
+Microsoft Defender for Endpoint uses the [Antimalware Scan Interface (AMSI)](/defender-endpoint/amsi-on-mdav) to provide better protection against fileless malware, dynamic script-based attacks, and other nontraditional cyber threats. This article explains how to test the AMSI engine by using a benign sample.
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ Microsoft Defender for Endpoint utilizes the [Antimalware Scan Interface (AMSI)]
 
 ## Testing AMSI with Defender for Endpoint
 
-In this demonstration article, you have two engine choices to test AMSI:
+In this demonstration article, you can choose from three engines to test AMSI:
 
 - PowerShell
 - VBScript
@@ -92,7 +92,7 @@ In this demonstration article, you have two engine choices to test AMSI:
    WScript.Echo result
    ```
    
-1. On your Windows Device, open Command Prompt as an administrator.
+1. On your Windows device, open Command Prompt as an administrator.
 
 1. Type `wscript AMSI_vbscript.vbs`, and then press **Enter**.
 
@@ -120,13 +120,13 @@ In this demonstration article, you have two engine choices to test AMSI:
 1. Save the following JavaScript as `AMSI_jscript.js`:
 
     ```javascript
-    // Save the following file as AMSITest.js
+    // Save the following file as AMSI_jscript.js
     var result = eval("AMSI Test Sample: " + "7e72c3ce-861b-4339-8740-0ac1484c1386")
     WScript.Echo(result);
    ```
 
-1. On your Windows Device, open Command Prompt as an administrator.
-1. Type `cscript AMSITest.js`, and then press **Enter**.
+1. On your Windows device, open Command Prompt as an administrator.
+1. Type `cscript AMSI_jscript.js`, and then select **Enter**.
 The result should be as follows:
 
     ```javascript
@@ -138,9 +138,10 @@ The result should be as follows:
 
 ### Verifying the test results
 
-In your protection history, you should be able to see the following information:
+In your protection history, you should see the following information:
 
-```vbscript
+
+```text
 Threat blocked
 
 Detected: Virus: Win32/MpTest!amsi
@@ -159,6 +160,10 @@ or
 
 amsi: C:\Users\Admin\Desktop\AMSI_vbscript.vbs
 
+or
+
+amsi: C:\Users\Admin\Desktop\AMSI_jscript.js
+
 and/or you might see:
 
 Threat blocked
@@ -171,6 +176,7 @@ This threat or app was cleaned or quarantined before it became active on your de
 
 Details: This program is dangerous and replicates by infecting other files
 ```
+
 
 ### Get the list of Microsoft Defender Antivirus threats
 
