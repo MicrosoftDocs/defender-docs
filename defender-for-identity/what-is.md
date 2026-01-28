@@ -1,7 +1,7 @@
 ---
 title: What is Microsoft Defender for Identity?
 description: This article describes the Microsoft Defender for Identity service and the sorts of suspicious activities Defender for Identity can detect.
-ms.date: 08/27/2024
+ms.date: 01/25/2026
 ms.topic: overview
 #customer intent: As a Microsoft Defender for Identity customer or potential customer, I want to understand the main use case scenarios for Defender for Identity so that I can best use my Microsoft Defender XDR deployment.
 ms.reviewer: AbbyMSFT
@@ -9,20 +9,21 @@ ms.reviewer: AbbyMSFT
 
 # What is Microsoft Defender for Identity?
 
-Microsoft Defender for Identity is a cloud-based security solution that helps secure your identity monitoring across your organization. 
+Microsoft Defender for Identity is a cloud-based security solution that helps secure your identity monitoring across your organization. Defender for Identity is fully integrated into the Microsoft Defender portal, leveraging signals from both on-premises Active Directory and cloud identities to help you better identify, detect, and investigate advanced threats directed at your organization. 
 
-Defender for Identity is fully integrated with Microsoft Defender XDR, and leverages signals from both on-premises Active Directory and cloud identities to help you better identify, detect, and investigate advanced threats directed at your organization.
+In the Defender portal, identity signals are correlated with data from endpoints, email, and cloud apps, combining identity-based alerts with related alerts from other Defender workloads into unified incidents.
 
-Deploy Defender for Identity to help your SecOp teams deliver a modern identity threat detection (ITDR) solution across hybrid environments, including:
+Deploy Defender for Identity to help your SecOp teams deliver a modern identity threat detection solution across hybrid environments, including:
 
-- **Prevent breaches**, using proactive identity security posture assessments
-- **Detect threats**, using real-time analytics and data intelligence
-- **Investigate suspicious activities**, using clear, actionable incident information
+- **Preventing breaches**, using proactive identity security posture assessments
+- **Detecting threats**, using real-time analytics and data intelligence
+- **Investigating suspicious activities**, using clear, actionable incident information
 - **Respond to attacks**, using automatic response to compromised identities
 
-Defender for Identity was formerly known as Azure Advanced Threat Protection (Azure ATP).
-
-[!INCLUDE [automatic-redirect](../includes/automatic-redirect.md)]
+> [!IMPORTANT]
+> Defender for Identity was formerly known as Azure Advanced Threat Protection (Azure ATP). The service was rebranded but provides the same core identity threat detection capabilities, now with [enhanced integration into the Microsoft Defender](/defender-xdr/microsoft-365-security-center-mdi) for comprehensive security monitoring. 
+> 
+> Customers using the classic Defender for Identity portal are now [automatically redirected](https://techcommunity.microsoft.com/t5/microsoft-365-defender-blog/leveraging-the-convergence-of-microsoft-defender-for-identity-in/ba-p/3856321) to [Microsoft Defender XDR](https://security.microsoft.com), with no option to revert back to the classic portal.
 
 ## Protect user identities and reduce the attack surface
 
