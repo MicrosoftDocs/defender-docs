@@ -118,6 +118,8 @@ End users also need to take steps to install Microsoft Defender for Endpoint on 
 - Users have the required licenses for the managed app and have the app installed.
 
 ### End-user onboarding
+> [!NOTE]
+> End-user onboarding can be done directly by downloading or launching the Defender app. Onboarding is enabled by Default when no policies are set explicitly.
 
 1. Sign in to a managed application, for example, Outlook. The device is registered and the application protection policy is synchronized to the device. The application protection policy recognizes the device's health state.
 
@@ -279,6 +281,16 @@ Use the following steps to configure the Device tags:
 
 > [!NOTE]
 > The Defender app needs to be opened for tags to be synced with Intune and passed to Security Portal. It may take up to 18 hours for tags to reflect in the portal.
+
+## Disable End-User Onboarding 
+
+Defender for Endpoint on Android is enabled by default in MAM mode. In order to prevent end users from downloading & setting up Defender on unenrolled devices, DefenderMAMConfigs key can be set to 0 to block onboarding. Use the following steps to configure the Disable onboarding:
+
+1. In Microsoft Intune admin center, go to **Apps > App configuration policies > Add > Managed apps**.
+1. Give the policy a **name**.
+1. Select **Microsoft Defender for Endpoint** in public apps.
+1. On the Settings page, select **Use configuration designer** and add **DefenderMAMConfigs** key and set the value as 0.
+2. Click Next and assign this policy to targeted devices and users.
 
 ## Related topics
 
