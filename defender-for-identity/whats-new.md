@@ -25,6 +25,10 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## January 2026
 
+### General availablity of manual linking and unlink of accounts
+
+You can now manually link or unlink accounts from an identity directly in the Accounts tab. This capability helps you correlate identity components from different directory sources and provides a complete identity context during investigations.
+For more information, see: [Manage related identities and accounts](manage-related-identities-accounts.md).
 
 ### MDI alerts migrated to the unified Defender alerting experience
 As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, some alerts were converted from the Microsoft Defender for Identity classic format to the MDI XDR alert format. Keep in mind that all alerts are based on detections from Defender for Identity sensors. See [Microsoft Defender for Identity XDR security alerts](alerts-xdr.md) for the full list of XDR alerts.
@@ -47,9 +51,7 @@ You can use this assessment to identify service accounts with elevated permissio
 
 For more information, see:[Security posture assessment: Identify service accounts in privileged groups](security-posture-assessments/accounts.md#identify-service-accounts-in-privileged-groups)
 
-
 ### New security posture assessment: Locate accounts in built-in Operator Groups
-
 
 This identity security posture assessment lists Active Directory accounts that are members of built-in Operator Groups, including direct and indirect membership. 
 
@@ -95,7 +97,7 @@ A new Accounts tab provides a consolidated view of all accounts associated with 
 **Manual link and unlink of accounts**:
 
 You can now manually link or unlink accounts from an identity directly in the Accounts tab. This capability helps you correlate identity components from different directory sources and provides a complete identity context during investigations.
-For more information, see: [Manage related identities and accounts (Preview)](manage-related-identities-accounts.md).
+For more information, see: [Manage related identities and accounts](manage-related-identities-accounts.md).
 
 **Identity-level remediation actions**:
 
