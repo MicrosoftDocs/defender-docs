@@ -1,5 +1,5 @@
 ---
-title: Alert schema differences: Standalone vs. XDR connector
+title: Alert schema differences between standalone and XDR connectors
 description: Learn how alert schema, field mappings, and ingestion behavior differ between standalone connectors and the XDR connector in Microsoft Sentinel.
 author: guywi-ms
 ms.author: guywild
@@ -9,7 +9,7 @@ ms.date: 01/27/2026
 # customer intent: As a security analyst, I want to understand how alerts differ when ingested through the XDR connector so that I can update my queries, analytic rules, and workbooks accordingly.
 ---
 
-# Alert schema differences between standalone and XDR connectors
+# Alert schema differences: Standalone vs. XDR connector
 
 This article explains the differences between alerts ingested through standalone connectors and alerts ingested through the Extended Detection and Response (XDR) connector in Microsoft Sentinel. 
 
@@ -28,7 +28,7 @@ The CompromisedEntity field is handled differently across products when alerts a
 | Microsoft Defender for Identity (MDI) | Fixed string `"CompromisedEntity"` |
 
 > [!NOTE]
-> In MDE alerts, CompromisedEntity is derived from the device where `"LeadingHost": true`. Some values might be missing until full population is available.
+> In MDE alerts, CompromisedEntity is derived from the device where `"LeadingHost": true`. In some alerts, this field might not be populated.
 
 In MDI alerts, CompromisedEntity doesn't represent a host or user and is always the literal string `"CompromisedEntity"`.
 
