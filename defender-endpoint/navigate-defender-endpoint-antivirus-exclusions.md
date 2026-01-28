@@ -64,7 +64,7 @@ If you're getting alerts in the Microsoft Defender portal for tools or processes
 
 To learn more, see the following articles:
 
-- [Suppress alerts](manage-alerts.md#suppress-alerts)
+- [Suppress alerts](/defender-xdr/investigate-alerts?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#built-in-alert-tuning-rules)
 - [Tech Community Blog: Introducing the new alert suppression experience](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/introducing-the-new-alert-suppression-experience/ba-p/3562719) (for Defender for Endpoint)
 
 ## Types of exclusions
