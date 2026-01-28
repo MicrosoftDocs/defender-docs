@@ -5,11 +5,11 @@ metadata:
   ms.service: defender-endpoint
   ms.localizationpriority: medium
   ms.topic: faq
-  author: emmwalshh
-  ms.author: ewalsh
+  author: limwainstein
+  ms.author: lwainstein
   ms.custom: nextgen
   ms.reviewer: yongrhee
-  manager: deniseb
+  manager: bagol
   ms.subservice: ngp
   ms.collection: 
   - m365-security

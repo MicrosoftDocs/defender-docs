@@ -1,44 +1,41 @@
----
+﻿---
 title: Microsoft Defender Antivirus compatibility with other security products
 description: Learn about Microsoft Defender Antivirus with other security products and the operating systems.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 06/16/2025
+ms.date: 10/20/2025
 ms.topic: how-to
-author: emmwalshh
-ms.author: ewalsh
+author: chrisda
+ms.author: chrisda
 ms.custom: 
 - nextgen
 - partner-contribution
 ms.reviewer: pahuijbr, dmcwee, yongrhee
-manager: deniseb
+manager: bagol
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Microsoft Defender Antivirus compatibility with other security products
 
-**Applies to:**
+## Prerequisites
 
-- Microsoft Defender Antivirus
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
-**Platforms**
+### Supported operating systems
 
 - Windows
-
-Microsoft Defender Antivirus is available on endpoints running the following versions of Windows:
-
 - Windows 11
 - Windows 10 
 - Windows Server 2016 and later 
 - Windows Server, version 1803, or later
 - Azure Stack HCI OS, version 23H2 and later
+
 
 Microsoft Defender Antivirus is also available for older versions of Windows under certain conditions.
 
@@ -49,6 +46,8 @@ Microsoft Defender Antivirus is also available for older versions of Windows und
 - On [consumer devices on Windows 8.1](/previous-versions/windows/it-pro/windows-8.1-and-8/dn344918(v=ws.11)#BKMK_WindowsDefender), Windows Defender is available (although it doesn't provide enterprise-level management).
 
 If you're using non-Microsoft antivirus/antimalware software, you might be able to run Microsoft Defender Antivirus alongside the other antivirus solution. This article describes what happens with Microsoft Defender Antivirus and non-Microsoft antivirus/antimalware software, with and without [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md).
+
+
 
 ## Antivirus protection without Defender for Endpoint
 
@@ -187,19 +186,19 @@ Defender for Endpoint affects whether Microsoft Defender Antivirus can run in pa
    |Endpoint DLP is disabled|Disabled <br/><br/> Doesn't provide any antivirus real-time protection blocking or enforcement. | Disabled <br/><br/> Doesn't provide any antivirus Behavior Monitoring blocking or enforcement.|
    |Endpoint DLP is enabled|Enabled for DLP specific functionalities <br/><br/> Doesn't provide any antivirus real-time protection blocking or enforcement. <br/><br/>Make sure to add Microsoft Defender Antivirus and Microsoft Defender for Endpoint binaries to the exclusion list of the non-Microsoft antivirus or EDR solution. | Enabled for DLP specific functionalities <br/><br/> Doesn't provide any antivirus Behavior Monitoring blocking or enforcement.|
 
-2. When Microsoft Defender Antivirus is in passive mode, scans aren't scheduled. If scans *are* scheduled in your configuration, the schedule is ignored. Unless:
+1. When Microsoft Defender Antivirus is in passive mode, scans aren't scheduled. If scans *are* scheduled in your configuration, the schedule is ignored. Unless:
 
    1. "Start the scheduled scan only when computer is on but not in use" is set to "Not configured or enabled". A Windows Task Scheduler is created unless you set "Start the scheduled scan only when computer is on but not in use" to disabled.
    
-   2. "Turn on catch-up quick scan" is set to "Not configured or enabled". Every 30 days (default number of days) a quick catchup scan continues to occur unless "Turn on catch-up quick scan" is set to disabled. Scan tasks that are set up in Windows Task Scheduler continue to run according to their schedule. If you have scheduled tasks, you can remove them, if preferred.
+   1. "Turn on catch-up quick scan" is set to "Not configured or enabled". Every 30 days (default number of days) a quick catchup scan continues to occur unless "Turn on catch-up quick scan" is set to disabled. Scan tasks that are set up in Windows Task Scheduler continue to run according to their schedule. If you have scheduled tasks, you can remove them, if preferred.
    
-   3. "Turn on scan after security intelligence update" is set to "Not configured or enabled". By default, a quick scan occurs after a "Security Intelligence Update" unless you set "Turn on scan after security intelligence update" to disabled.
+   1. "Turn on scan after security intelligence update" is set to "Not configured or enabled". By default, a quick scan occurs after a "Security Intelligence Update" unless you set "Turn on scan after security intelligence update" to disabled.
    
-3. When Microsoft Defender Antivirus is in passive mode, it doesn't remediate threats. However, [Endpoint detection and response (EDR) in block mode](edr-in-block-mode.md) can remediate threats. In this case, you might see alerts showing Microsoft Defender Antivirus as a source, even when Microsoft Defender Antivirus is in passive mode.
+1. When Microsoft Defender Antivirus is in passive mode, it doesn't remediate threats. However, [Endpoint detection and response (EDR) in block mode](edr-in-block-mode.md) can remediate threats. In this case, you might see alerts showing Microsoft Defender Antivirus as a source, even when Microsoft Defender Antivirus is in passive mode.
 
-4. The security intelligence update cadence is controlled by Windows Update settings only. Defender-specific update schedulers (daily/weekly at specific time, interval-based) settings only work when Microsoft Defender Antivirus is in active mode. They're ignored in passive mode.
+1. The security intelligence update cadence is controlled by Windows Update settings only. Defender-specific update schedulers (daily/weekly at specific time, interval-based) settings only work when Microsoft Defender Antivirus is in active mode. They're ignored in passive mode.
 
-5. When Microsoft Defender Antivirus is in passive mode, web content filtering only works with the Microsoft Edge browser. 
+1. When Microsoft Defender Antivirus is in passive mode, web content filtering only works with the Microsoft Edge browser. 
 
 > [!IMPORTANT]
 > - [Endpoint data loss prevention](/microsoft-365/compliance/endpoint-dlp-learn-about) protection continues to operate normally when Microsoft Defender Antivirus is in either active or passive mode.
@@ -228,19 +227,19 @@ You can use one of several methods to confirm the state of Microsoft Defender An
 
 1. On a Windows device, open the Windows Security app.
 
-2. Select **Virus & threat protection**.
+1. Select **Virus & threat protection**.
 
-3. Under **Who's protecting me?** select **Manage providers**.
+1. Under **Who's protecting me?** select **Manage providers**.
 
-4. On the **Security providers** page, under **Antivirus**, you should see **Microsoft Defender Antivirus is turned on**.
+1. On the **Security providers** page, under **Antivirus**, you should see **Microsoft Defender Antivirus is turned on**.
 
 ### Use Task Manager to confirm that Microsoft Defender Antivirus is running
 
 1. On a Windows device, open the Task Manager app.
 
-2. Select the **Details** tab.
+1. Select the **Details** tab.
 
-3. Look for `MsMpEng.exe` in the list.
+1. Look for `MsMpEng.exe` in the list.
 
 ### Use Windows PowerShell to confirm that Microsoft Defender Antivirus is running
 
@@ -249,9 +248,9 @@ You can use one of several methods to confirm the state of Microsoft Defender An
 
 1. On a Windows device, open Windows PowerShell. 
 
-2. Run the following PowerShell cmdlet: `Get-Process`.
+1. Run the following PowerShell cmdlet: `Get-Process`.
 
-3. Review the results. You should see **MsMpEng.exe** if Microsoft Defender Antivirus is enabled.
+1. Review the results. You should see **MsMpEng.exe** if Microsoft Defender Antivirus is enabled.
 
 ### Use Windows PowerShell to confirm that antivirus protection is running
 
@@ -260,9 +259,9 @@ You can use one of several methods to confirm the state of Microsoft Defender An
 
 1. On a Windows device, open Windows PowerShell.
 
-2. Run following PowerShell cmdlet: `Get-MpComputerStatus | select AMRunningMode`.
+1. Run following PowerShell cmdlet: `Get-MpComputerStatus | select AMRunningMode`.
 
-3. Review the results. You should see **Normal**, **Passive**, or **EDR Block Mode** if antivirus protection is enabled on the endpoint. 
+1. Review the results. You should see **Normal**, **Passive**, or **EDR Block Mode** if antivirus protection is enabled on the endpoint. 
 
 ## More details about Microsoft Defender Antivirus states
 
@@ -308,5 +307,5 @@ If you're looking for Antivirus related information for other platforms, see:
 - [EDR in block mode](edr-in-block-mode.md)
 - [Learn about Endpoint data loss prevention](/microsoft-365/compliance/endpoint-dlp-learn-about)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

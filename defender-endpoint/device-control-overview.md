@@ -1,9 +1,9 @@
----
+﻿---
 title: Device control in Microsoft Defender for Endpoint
 description: Get an overview of device control, including removable storage access control and device installation policies in Defender for Endpoint.
-author: denisebmsft
-ms.author: deniseb
-manager: deniseb
+author: limwainstein
+ms.author: lwainstein
+manager: bagol
 ms.date: 08/28/2024
 ms.topic: overview
 ms.service: defender-endpoint
@@ -18,15 +18,14 @@ ms.custom:
 ms.reviewer: joshbregman
 search.appverid: MET150
 f1.keywords: NOCSH
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Device control in Microsoft Defender for Endpoint
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business)
 
 Device control capabilities in Microsoft Defender for Endpoint enable your security team to control whether users can install and use peripheral devices, like removable storage (USB thumb drives, CDs, disks, etc.), printers, Bluetooth devices, or other devices with their computers. Your security team can configure device control policies to configure rules like these:
 
@@ -118,7 +117,7 @@ When a device installation restrictions are configured and a device is installed
 
 ### Control access to removable media using device control
 
-Device control for Defender for Endpoint provides finer grain access control to a subset of USB devices. Device control can only restrict access to Windows Portal Devices, Removable Media, CD/DVDs and Printers.
+Device control for Defender for Endpoint provides finer grain access control to a subset of USB devices. Device control can only restrict access to Windows Portable Devices, Removable Media, CD/DVDs and Printers.
 
 > [!NOTE]
 > On Windows, the term *removable media devices* does not mean any USB device. Not **all** USB devices are *removable media devices*. In order to be considered a *removable media device* and therefore in scope of MDE device control, the device **must** create a disk (such as `E:` ) in Windows. Device control can restrict access to the device and files on that device by defining policies.
@@ -241,3 +240,4 @@ Currently, device control is not supported on servers.
 - [Device control walkthroughs](device-control-walkthroughs.md)
 - [Learn about Device control policies](device-control-policies.md)
 - [View device control reports](device-control-report.md)
+

@@ -1,14 +1,14 @@
 ---
 title: Troubleshoot Microsoft Defender Antivirus performance issues with WPRUI
 description: Troubleshoot Microsoft Defender Antivirus performance issues with WPRUI
-author: emmwalshh
-ms.author: ewalsh
+author: chrisda
+ms.author: chrisda
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: troubleshooting-general
 ms.date: 01/08/2025
 ms.subservice: ngp
-manager: deniseb
+manager: bagol
 ms.localizationpriority: medium 
 f1.keywords: NOCSH 
 audience: ITPro
@@ -198,4 +198,4 @@ To collect a WPR trace using the command-line tool wpr.exe:
 
 - [Troubleshoot Microsoft Defender Antivirus performance issues with WPRUI](/defender-endpoint/troubleshoot-av-performance-issues-with-wprui)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

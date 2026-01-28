@@ -1,12 +1,12 @@
----
+﻿---
 title: Migrate to Microsoft Defender for Endpoint - Prepare
 description: Get ready to move to Microsoft Defender for Endpoint. Update your devices and configure your network connections.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
   - m365-security
@@ -20,14 +20,13 @@ ms.custom:
 ms.date: 04/17/2025
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho, yongrhee
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Migrate to Microsoft Defender for Endpoint - Phase 1: Prepare
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 | ![Phase 1: Prepare.](media/phase-diagrams/prepare.png#lightbox)<br/>Phase 1: Prepare | [![Phase 2: Set up](media/phase-diagrams/setup.png#lightbox)](switch-to-mde-phase-2.md)<br/>[Phase 2: Set up](switch-to-mde-phase-2.md) | [![Phase 3: Onboard](media/phase-diagrams/onboard.png#lightbox)](switch-to-mde-phase-3.md)<br/>[Phase 3: Onboard](switch-to-mde-phase-3.md) |
 |--|--|--|
@@ -38,10 +37,10 @@ search.appverid: met150
 This migration phase includes the following steps:
 
 1. Get and deploy updates across your organization's devices.
-2. Get Microsoft Defender for Endpoint Plan 1 or Plan 2.
-3. Grant access to the Microsoft Defender portal.
-4. Review more information about device proxy and internet connectivity settings.
-5. Capture performance baseline data from the endpoint. 
+1. Get Microsoft Defender for Endpoint Plan 1 or Plan 2.
+1. Grant access to the Microsoft Defender portal.
+1. Review more information about device proxy and internet connectivity settings.
+1. Capture performance baseline data from the endpoint. 
 
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
@@ -71,11 +70,11 @@ Now that you've updated your organization's devices, the next step is to get Def
 
 1. Buy or try Defender for Endpoint today. [Start a free trial or request a quote](https://aka.ms/mdatp). Microsoft 365 E3 includes Defender for Endpoint Plan 1, and Microsoft 365 E5 includes Defender for Endpoint Plan 2.
 
-2. Verify that your licenses are properly provisioned. [Check your license state](production-deployment.md#check-your-license-state).
+1. Verify that your licenses are properly provisioned. [Check your license state](production-deployment.md#check-your-license-state).
 
-3. Set up your dedicated cloud instance of Defender for Endpoint. See [Defender for Endpoint setup: Tenant configuration](production-deployment.md#tenant-configuration).
+1. Set up your dedicated cloud instance of Defender for Endpoint. See [Defender for Endpoint setup: Tenant configuration](production-deployment.md#tenant-configuration).
 
-4. If any devices in your organization use a proxy to access the internet, follow the guidance in [Defender for Endpoint setup: Network configuration](production-deployment.md#network-configuration).
+1. If any devices in your organization use a proxy to access the internet, follow the guidance in [Defender for Endpoint setup: Network configuration](production-deployment.md#network-configuration).
 
 At this point, you're ready to grant access to your security administrators and security operators to use the [Microsoft Defender portal](https://security.microsoft.com).
 
@@ -89,7 +88,7 @@ Permissions to the Microsoft Defender portal can be granted by using either basi
 
 1. Plan the roles and permissions for your security administrators and security operators. See [Role-based access control](prepare-deployment.md#role-based-access-control).
 
-2. Set up and configure RBAC. We recommend using [Intune](/mem/intune/fundamentals/what-is-intune) to configure RBAC, especially if your organization is using a combination of Windows, macOS, iOS, and Android devices. See [setting up RBAC using Intune](/mem/intune/fundamentals/role-based-access-control).
+1. Set up and configure RBAC. We recommend using [Intune](/mem/intune/fundamentals/what-is-intune) to configure RBAC, especially if your organization is using a combination of Windows, macOS, iOS, and Android devices. See [setting up RBAC using Intune](/mem/intune/fundamentals/role-based-access-control).
 
     If your organization requires a method other than Intune, choose one of the following options:
 
@@ -97,7 +96,7 @@ Permissions to the Microsoft Defender portal can be granted by using either basi
     - [Advanced Group Policy Management](/microsoft-desktop-optimization-pack/agpm)
     - [Windows Admin Center](/windows-server/manage/windows-admin-center/overview)
 
-3. Grant your security team access to the Microsoft Defender portal. Need help? See [Manage portal access using RBAC](rbac.md).
+1. Grant your security team access to the Microsoft Defender portal. Need help? See [Manage portal access using RBAC](rbac.md).
 
 > [!IMPORTANT]
 > Starting February 16, 2025, new Microsoft Defender for Endpoint customers will only have access to the Unified Role-Based Access Control (URBAC).
@@ -109,10 +108,10 @@ To enable communication between your devices and Defender for Endpoint, you migh
 
 |Subscription| Operating systems |Resources|
 |---|---|---|
-|[Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)|[Windows 11](/windows/whats-new/windows-11-overview)<br/>[Windows 10](/windows/release-health/release-information)<br/>Windows Server 2025<br/> [Windows Server 2022](/windows-server/get-started/whats-new-in-windows-server-2022) <br/> [Windows Server 2019](/windows/release-health/status-windows-10-1809-and-windows-server-2019) <br/>  [Windows Server 1803, or later](/windows-server/get-started/whats-new-in-windows-server-1803) <br/> [Windows Server 2016](/windows-server/get-started/whats-new-in-windows-server-2016)\*<br/>[Windows Server 2012 R2](/windows/release-health/status-windows-8.1-and-windows-server-2012-r2)\* <br/> Azure Stack HCI OS, version 23H2 and later. |[Configure and validate Microsoft Defender Antivirus network connections](configure-network-connections-microsoft-defender-antivirus.md)|
+|[Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)|[Windows 11](/windows/whats-new/windows-11-overview)<br/>[Windows 10](/windows/release-health/release-information) <br/>  [Windows Server 1803, or later](/windows-server/get-started/whats-new-in-windows-server-1803) <br/> [Windows Server 2016 and later](/windows-server/get-started/whats-new-in-windows-server-2016)\*<br/>[Windows Server 2012 R2](/windows/release-health/status-windows-8.1-and-windows-server-2012-r2)\* <br/> Azure Stack HCI OS, version 23H2 and later. |[Configure and validate Microsoft Defender Antivirus network connections](configure-network-connections-microsoft-defender-antivirus.md)|
 |[Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)|macOS (see [System requirements](microsoft-defender-endpoint-mac-prerequisites.md))|[Defender for Endpoint on macOS: Network connections](microsoft-defender-endpoint-mac-prerequisites.md#network-connectivity)|
 |[Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)|Linux  (see [System requirements](/defender-endpoint/mde-linux-prerequisites))|[Verify that devices can connect to Defender for Endpoint cloud services](mde-linux-prerequisites.md#verify-if-devices-can-connect-to-defender-for-endpoint-cloud-services)|
-|[Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)|[Windows 11](/windows/whats-new/windows-11-overview)<br/>[Windows 10](/windows/release-health/release-information)<br/>Windows Server 2025 <br/> Azure Stack HCI OS, version 23H2 and later. (beginning in February 2025 and rolling out over the next several weeks)<br/>[Windows Server 2022](/windows-server/get-started/whats-new-in-windows-server-2022) <br/>[Windows Server 2019](/windows/release-health/status-windows-10-1809-and-windows-server-2019)  <br/>[Windows Server 1803, or later](/windows-server/get-started/whats-new-in-windows-server-1803)  <br/>[Windows Server 2016](/windows/release-health/status-windows-10-1607-and-windows-server-2016)\* <br/>[Windows Server 2012 R2](/windows/release-health/status-windows-8.1-and-windows-server-2012-r2)\* |[Configure machine proxy and internet connectivity settings](configure-proxy-internet.md)|
+|[Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)|[Windows 11](/windows/whats-new/windows-11-overview)<br/>[Windows 10](/windows/release-health/release-information) <br/> Azure Stack HCI OS, version 23H2 and later. (beginning in February 2025 and rolling out over the next several weeks) <br/>[Windows Server 1803, or later](/windows-server/get-started/whats-new-in-windows-server-1803)  <br/>[Windows Server 2016 and later](/windows/release-health/status-windows-10-1607-and-windows-server-2016) <br/>[Windows Server 2012 R2](/windows/release-health/status-windows-8.1-and-windows-server-2012-r2) |[Configure machine proxy and internet connectivity settings](configure-proxy-internet.md)|
 |[Defender for Endpoint Plan 2](microsoft-defender-endpoint.md) |[Windows Server 2008 R2 SP1](/windows/release-health/status-windows-7-and-windows-server-2008-r2-sp1) <br/>[Windows 8.1](/windows/release-health/status-windows-8.1-and-windows-server-2012-r2)<br/>[Windows 7 SP1](/windows/release-health/status-windows-7-and-windows-server-2008-r2-sp1)|[Configure proxy and internet connectivity settings](onboard-downlevel.md#configure-proxy-and-internet-connectivity-settings)|
 |[Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)|macOS (see [System requirements](microsoft-defender-endpoint-mac.md))|[Defender for Endpoint on macOS: Network connections](microsoft-defender-endpoint-mac-prerequisites.md#network-connectivity)|
 
@@ -135,4 +134,3 @@ One of the tools that you can use is the Performance Monitor (perfmon). You can 
 
 - [Proceed to set up Defender for Endpoint](switch-to-mde-phase-2.md).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

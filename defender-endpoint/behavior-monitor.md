@@ -1,10 +1,10 @@
----
+﻿---
 title: Behavior monitoring in Microsoft Defender Antivirus
 description: Learn about Behavior monitoring in Microsoft Defender Antivirus and Defender for Endpoint.
-author: emmwalshh
-ms.author: ewalsh
+author: chrisda
+ms.author: chrisda
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.topic: article
 ms.service: defender-endpoint
@@ -12,17 +12,15 @@ ms.subservice: ngp
 ms.localizationpriority: medium
 ms.date: 04/29/2025
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender for Individuals
 
+---
 # Behavior monitoring in Microsoft Defender Antivirus
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals?msockid=0f1c3b9963366db31ba02e78621b6c1e#Overview)
-- Microsoft Defender Antivirus
 
 Behavior monitoring is a critical detection and protection functionality of Microsoft Defender Antivirus.
 
@@ -32,7 +30,7 @@ Monitors process behavior to detect and analyze potential threats based on the b
    - Continuously observe processes, file system activities, and interactions within the system.
    - Defender Antivirus can identify patterns associated with malware or other threats. For example, it looks for processes making unusual changes to existing files, modifying or creating automatic startup registry (ASEP) keys, and other alterations to the file system or structure.
 
-2. Dynamic Approach:
+1. Dynamic Approach:
 
 - Unlike static, signature-based detection, behavior monitoring adapts to new and evolving threats.
 
@@ -152,3 +150,4 @@ If you're still encountering high CPU usage issues, contact Microsoft support an
 If behavior monitoring isn't causing the issue, use [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md) to collect log information. Collect two different logs using `a -c` and `a -a`. Have this information ready when you contact Microsoft support.
 
 For more information, see [Data collection for advanced troubleshooting on Windows](data-collection-analyzer.md).
+

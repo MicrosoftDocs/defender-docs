@@ -8,9 +8,9 @@ ms.subservice: reference
 ms.mktglfcycl: secure
 ms.sitesec: library
 ms.localizationpriority: medium
-ms.author: ewalsh
-author: emmwalshh
-manager: deniseb
+ms.author: bagol
+author: batamig
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -18,7 +18,7 @@ ms.collection:
 ms.topic: get-started
 search.appverid: met150
 ms.date: 04/04/2025
-
+#customer intent: As an IT or security operations engineer responsible for endpoint recovery, I want a simple, trusted tool I can download and run to detect and removemalware so I can quickly restore infected devices and validate remediation.
 ---
 
 # Microsoft Safety Scanner Download
@@ -49,8 +49,8 @@ Safety Scanner helps remove malicious software from computers running Windows 11
 ## How to run a scan
 
 1. Download this tool and open it.
-2. Select the type of scan that you want to run and start the scan.
-3. Review the scan results displayed on screen. For detailed detection results, view the log at **%SYSTEMROOT%\debug\msert.log**.
+1. Select the type of scan that you want to run and start the scan.
+1. Review the scan results displayed on screen. For detailed detection results, view the log at **%SYSTEMROOT%\debug\msert.log**.
 
 To remove this tool, delete the executable file (msert.exe by default).
 

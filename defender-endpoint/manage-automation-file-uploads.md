@@ -1,11 +1,11 @@
----
+﻿---
 title: Manage automation file uploads
 description: Enable content analysis and configure the file extension and email attachment extensions that will be submitted for analysis
 ms.service: defender-endpoint
-ms.author: diannegali
-author: diannegali
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -13,18 +13,13 @@ ms.collection:
 ms.topic: how-to
 search.appverid: met150
 ms.date: 06/25/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Manage automation file uploads
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Enable the content analysis capability so that certain files and email attachments can automatically be uploaded to the cloud for additional inspection in Automated investigation.
 
@@ -44,16 +39,21 @@ For example, if you add *exe* and *bat* as file or attachment extension names, t
 
 1. Sign in to the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139) using an account with the Security administrator or Global administrator role assigned.
 
-2. In the navigation pane, select **Settings** \> **Endpoints** \> **Rules** \> **Automation uploads**.
+1. In the navigation pane, select **Settings** \> **Endpoints** \> **Rules** \> **Automation uploads**.
 
-2. Toggle the content analysis setting between **On** and **Off**.
+1. Toggle the content analysis setting between **On** and **Off**.
 
-3. Configure the following extension names and separate extension names with a comma:
+1. Configure the following extension names and separate extension names with a comma:
 
    - **File extension names** - Suspicious files except email attachments will be submitted for additional inspection
+
+> [!NOTE]
+> By default you will see several extension names are automatically filled. One of them is **_double quotes (")_**, this will include files that don't have any file extensions at all.
+
 
 ## Related topics
 
 - [Manage automation folder exclusions](manage-automation-folder-exclusions.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

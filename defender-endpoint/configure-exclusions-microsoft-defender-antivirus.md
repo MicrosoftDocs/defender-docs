@@ -1,14 +1,14 @@
----
+﻿---
 title: Configure custom exclusions for Microsoft Defender Antivirus
 description: You can exclude files (including files modified by specified processes) and folders from Microsoft Defender Antivirus scans.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 03/06/2025
-author: emmwalshh
-ms.author: ewalsh
+ms.date: 10/20/2025
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: ksarens
-manager: deniseb
+manager: bagol
 ms.subservice: ngp
 ms.audience: ITPro
 ms.topic: how-to
@@ -17,18 +17,13 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Configure custom exclusions for Microsoft Defender Antivirus
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
-- Microsoft Defender Antivirus
-
-**Platforms**
-- Windows
 
 In general, you shouldn't need to define exclusions for Microsoft Defender Antivirus. However, if necessary, you can exclude files, folders, processes, and process-opened files from Microsoft Defender Antivirus scans. These types of exclusions are known as custom exclusions. This article describes how to define custom exclusions for Microsoft Defender Antivirus with Microsoft Intune and includes links to other resources for more information.
 
@@ -36,6 +31,12 @@ Custom exclusions apply to [scheduled scans](schedule-antivirus-scans.md), [on-d
 
 > [!TIP]
 > For a detailed overview of suppressions, submissions, and exclusions across Microsoft Defender Antivirus and Defender for Endpoint, see [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md).
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Hide the antivirus exclusions from users and/or local administrators
 
@@ -70,9 +71,9 @@ If you're using another tool, such as Configuration Manager or Group Policy, or 
 
 1. In the [Microsoft Intune admin center](https://intune.microsoft.com), choose **Endpoint security** \> **Antivirus**, and then select an existing policy. (If you don't have an existing policy, or you want to create a new policy, skip to [Create a new antivirus policy with exclusions in Intune](#create-a-new-antivirus-policy-with-exclusions-in-intune).)
 
-2. Choose **Properties**, and next to **Configuration settings**, choose **Edit**.
+1. Choose **Properties**, and next to **Configuration settings**, choose **Edit**.
 
-3. Expand **Microsoft Defender Antivirus Exclusions** and then specify your exclusions.
+1. Expand **Microsoft Defender Antivirus Exclusions** and then specify your exclusions.
 
    - **Excluded Extensions** are exclusions that you define by file type extension. These extensions apply to any file name that has the defined extension without the file path or folder. Separate each file type in the list, with one file type per line. For more information, see [ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#excludedextensions).
 
@@ -80,19 +81,19 @@ If you're using another tool, such as Configuration Manager or Group Policy, or 
 
    - **Excluded Processes** are exclusions for files that are opened by certain processes. Separate each file type in the list, with one file type per line. These exclusions aren't for the actual processes. To exclude processes, you can use file and folder exclusions. For more information, see [ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#excludedprocesses).
 
-4. Choose **Review + save**, and then choose **Save**.
+1. Choose **Review + save**, and then choose **Save**.
 
 #### Create a new antivirus policy with exclusions in Intune
 
 1. In the [Microsoft Intune admin center](https://intune.microsoft.com), choose **Endpoint security** \> **Antivirus** \> **+ Create Policy**.
 
-2. Select a platform (such as **Windows 10, Windows 11, and Windows Server**).
+1. Select a platform (such as **Windows 10, Windows 11, and Windows Server**).
 
-3. For **Profile**, select **Microsoft Defender Antivirus exclusions**, and then choose **Create**.
+1. For **Profile**, select **Microsoft Defender Antivirus exclusions**, and then choose **Create**.
 
-4. On the **Create profile** step, specify a name and description for the profile, and then choose **Next**.
+1. On the **Create profile** step, specify a name and description for the profile, and then choose **Next**.
 
-5. On the **Configuration settings** tab, specify your antivirus exclusions, and then choose **Next**.
+1. On the **Configuration settings** tab, specify your antivirus exclusions, and then choose **Next**.
 
    - **Excluded Extensions** are exclusions that you define by file type extension. These extensions apply to any file name that has the defined extension without the file path or folder. Separate each file type in the list with a `|` character. For example, `lib|obj`. For more information, see [ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#excludedextensions).
 
@@ -100,11 +101,11 @@ If you're using another tool, such as Configuration Manager or Group Policy, or 
    
    - **Excluded Processes** are exclusions for files that are opened by certain processes. Separate each file type in the list, with one file type per line. These exclusions aren't for the actual processes. To exclude processes, you can use file and folder exclusions. For more information, see [ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#excludedprocesses).
 
-6. On the **Scope tags** tab, if you're using scope tags in your organization, specify scope tags for the policy you're creating. (See [Scope tags](/mem/intune/fundamentals/scope-tags).)
+1. On the **Scope tags** tab, if you're using scope tags in your organization, specify scope tags for the policy you're creating. (See [Scope tags](/mem/intune/fundamentals/scope-tags).)
 
-7. On the **Assignments** tab, specify the users and groups to whom your policy should be applied, and then choose **Next**. (If you need help with assignments, see [Assign user and device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-assign).)
+1. On the **Assignments** tab, specify the users and groups to whom your policy should be applied, and then choose **Next**. (If you need help with assignments, see [Assign user and device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-assign).)
 
-8. On the **Review + create** tab, review the settings, and then choose **Create**.
+1. On the **Review + create** tab, review the settings, and then choose **Create**.
 
 ## Important points about exclusions
 
@@ -140,4 +141,4 @@ If exclusions can't be removed for the Exchange processes and folders, keep in m
 - [Configure and validate exclusions for Microsoft Defender for Endpoint on Linux](linux-exclusions.md)
 - [Configure and validate exclusions for Microsoft Defender for Endpoint on macOS](mac-exclusions.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

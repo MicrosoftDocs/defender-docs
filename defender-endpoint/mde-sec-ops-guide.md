@@ -1,15 +1,15 @@
----
+﻿---
 title: Security Operations Guide for Defender for Endpoint
 ms.reviewer: joshbregman, mattcall, pahuijbr, hayhov
-manager: deniseb
+manager: bagol
 description: A prescriptive playbook for SecOps personnel to manage Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 03/26/2025
 audience: ITPro
 ms.topic: concept-article
-author: emmwalshh
-ms.author: ewalsh
+author: limwainstein
+ms.author: lwainstein
 ms.custom:
 - nextgen
 - admindeeplinkDEFENDER
@@ -19,15 +19,14 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Microsoft Defender for Endpoint Security Operations Guide
 
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 This article gives an overview of the requirements and tasks for successfully operating Microsoft Defender for Endpoint in your organization. These tasks help your security operations center (SOC) effectively detect and respond to Microsoft Defender for Endpoint detected security threats.
 
@@ -182,7 +181,7 @@ These tasks are seen as maintenance for your security posture and are critical f
 
 - **Review alerts suppression**
 
-    Periodically review any alert suppression rules that have been created to confirm they're still required and valid. See [Review alerts suppression](manage-alerts.md).
+    Periodically review any alert suppression rules that have been created to confirm they're still required and valid. See [Review alerts suppression](/defender-xdr/investigate-alerts?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#built-in-alert-tuning-rules).
 
 ## Troubleshooting
 
@@ -195,4 +194,5 @@ The following articles provide guidance to troubleshoot and fix errors that you 
 - [Troubleshoot attack surface reduction issues](troubleshoot-asr.md)
 - [Troubleshoot onboarding issues](troubleshoot-onboarding.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+
