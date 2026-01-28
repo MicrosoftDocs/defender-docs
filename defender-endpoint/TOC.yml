@@ -35,18 +35,10 @@
     - name: What's new in Defender for Endpoint
       href: whats-new-in-microsoft-defender-endpoint.md
       items: 
-      - name: MsSense versions (Windows)
-        href: windows-whatsnew.md
-      - name: Defender for Endpoint on macOS releases
-        href: mac-whatsnew.md
-      - name: Defender for Endpoint on Linux releases
-        href: linux-whatsnew.md
-      - name: What's new in Defender for Endpoint on Android
-        href: android-whatsnew.md
-      - name: What's new in Defender for Endpoint on iOS
-        href: ios-whatsnew.md
-      - name: Previous Defender for Endpoint releases (archive)
-        href: whats-new-mde-archive.md
+      - name: What's new
+        href: whats-new-in-microsoft-defender-endpoint.md
+      - name: Monthly versions (all platforms)
+        href: microsoft-defender-endpoint-versions.md
     - name: Trial user guide - Defender for Endpoint
       href: defender-endpoint-trial-user-guide.md
     - name: Pilot and deploy Defender for Endpoint
