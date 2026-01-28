@@ -98,5 +98,5 @@ See: [Create a deployment plan for Windows](/windows/deployment/update/create-de
 [Operationalize attack surface reduction rules](attack-surface-reduction-rules-deployment-operationalize.md)
 
 [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

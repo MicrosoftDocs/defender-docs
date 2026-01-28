@@ -18,7 +18,7 @@ ms.collection:
   - highpri
   - tier1
 ms.topic: install-set-up-deploy
-ms.date: 04/22/2025
+ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender XDR
 #customer intent: To learn how to pilot and deploy Microsoft Defender for Office 365 in your production Microsoft 365 tenant. 
@@ -94,7 +94,7 @@ The following table describes this illustration.
 | Call-out | Description |
 |---|---|
 | 1 | The host server for the external sender typically performs a public DNS lookup for an MX record, which provides the target server to relay the message. This referral can either be Exchange Online (EXO) directly or an SMTP gateway configured to relay against EXO. |
-| 2 | Exchange Online Protection negotiates and validates the inbound connection and inspects the message headers and content to determine what extra policies, tagging, or processing is required. |
+| 2 | [The built-in security features for all cloud mailboxes](/defender-office-365/eop-about) negotiate and validate the inbound connection and inspects the message headers and content to determine what extra policies, tagging, or processing is required. |
 | 3 | Exchange Online integrates with Microsoft Defender for Office 365 to offer more advanced threat protection, mitigation, and remediation. |
 | 4  |A message that isn't malicious, blocked, or quarantined is processed and delivered to the recipient in EXO where user preferences related to junk mail, mailbox rules, or other settings are evaluated and triggered. |
 | 5 | Integration with on-premises Active Directory can be enabled using Microsoft Entra Connect to synchronize and provision mail-enabled objects and accounts to Microsoft Entra ID and ultimately Exchange Online. |
@@ -106,7 +106,7 @@ On-premises integration is common but optional. If your environment is cloud-onl
 A successful Defender for Office 365 evaluation or production pilot requires the following prerequisites:
 
 - All your recipient mailboxes are currently in Exchange Online.
-- Your public MX record resolves directly to EOP or a third-party Simple Mail Transfer Protocol (SMTP) gateway that then relays inbound external email directly to EOP.
+- Your public MX record resolves directly to Microsoft 365 or a third-party Simple Mail Transfer Protocol (SMTP) gateway that then relays inbound external email directly to Microsoft 365.
 - Your primary email domain is configured as *authoritative* in Exchange Online.
 - You successfully deployed and configured *Directory-Based Edge Blocking* (DBEB) as appropriate. For more information, see [Use Directory-Based Edge Blocking to reject messages sent to invalid recipients](/exchange/mail-flow-best-practices/use-directory-based-edge-blocking).
 
@@ -117,13 +117,13 @@ A successful Defender for Office 365 evaluation or production pilot requires the
 
 ## Step 1: Audit and verify the public MX record
 
-To effectively evaluate Microsoft Defender for Office 365, it's important that inbound external email is relayed through the Exchange Online Protection (EOP) instance associated with your tenant.
+To effectively evaluate Microsoft Defender for Office 365, it's important that inbound external email is relayed through [the built-in security features for all cloud mailboxes](/defender-office-365/eop-about).
 
 1. In the M365 Admin Portal at <https://admin.microsoft.com>, expand *...Show all* if necessary, expand *Settings*, and then select **Domains**. Or, to go directly to the *Domains* page, use <https://admin.microsoft.com/Adminportal/Home#/Domains>.
 2. On the *Domains* page, select your verified email domain by clicking anywhere on the entry other than the check box.
-3. In the domain details flyout that opens, select the **DNS records** tab. Make note of the MX record that's generated and assigned to your EOP tenant.
+3. In the domain details flyout that opens, select the **DNS records** tab. Make note of the MX record that's generated and assigned to your tenant.
 4. Access your external (public) DNS zone and check the primary MX record associated with your email domain:
-    - *If your public MX record currently matches the assigned EOP address (for example, contoso-com.mail.protection.outlook.com) then no further routing changes should be required*.
+    - *If your public MX record currently matches the assigned address (for example, contoso-com.mail.protection.outlook.com) then no further routing changes should be required*.
     - If your public MX record currently resolves to a third-party or on-premises SMTP gateway, then additional routing configurations may be required.
     - If your public MX record currently resolves to on-premises Exchange, then you may still be in a hybrid model where some recipient mailboxes haven't yet been migrated to EXO.
 
@@ -196,11 +196,11 @@ Distribution groups can be created and defined directly in Exchange Online or sy
 
 4. For group type, select **Distribution**, and then click **Next**.
 
-   :::image type="content" source="/defender/media/mdo-eval/3-mdo-eval-pilot-group-type.png" alt-text="Screenshot of the Choose a group type section." lightbox="/defender/media/mdo-eval/3-mdo-eval-pilot-group-type.png":::
+   :::image type="content" source="media/pilot-deploy-defender-office-365/3-mdo-eval-pilot-group-type.png" alt-text="Screenshot of the Choose a group type section." lightbox="media/pilot-deploy-defender-office-365/3-mdo-eval-pilot-group-type.png":::
 
 5. Give the group a **Name** and optional **Description**, and then click Next.
 
-   :::image type="content" source="/defender/media/mdo-eval/4_mdo-eval-pilot-set-up-basics.png" alt-text="Screenshot of the Set up the basics section." lightbox="/defender/media/mdo-eval/4_mdo-eval-pilot-set-up-basics.png":::
+   :::image type="content" source="media/pilot-deploy-defender-office-365/4_mdo-eval-pilot-set-up-basics.png" alt-text="Screenshot of the Set up the basics section." lightbox="media/pilot-deploy-defender-office-365/4_mdo-eval-pilot-set-up-basics.png":::
 
 6. On the remaining pages, assign an owner, add members to the group, set the email address, join-depart restrictions, and other settings.
 
@@ -220,7 +220,7 @@ Some capabilities are *not yet* configured. You have the following options for c
 
   Also, keep in mind that preset security policies are *always* applied before custom policies. So, if you want to create and use any custom policies, you'll need to exclude users in those custom policies from preset security policies.
 
-- **Configure *custom* protection policies**: If you prefer to configure the environment yourself, compare the default, Standard, and Strict settings in [Recommended settings for EOP and Microsoft Defender for Office 365 security](/defender-office-365/recommended-settings-for-eop-and-office365). Keep a spreadsheet of where your custom build deviates.
+- **Configure *custom* protection policies**: If you prefer to configure the environment yourself, compare the default, Standard, and Strict settings in [Recommended email and collaboration threat policy settings for cloud organizations](/defender-office-365/recommended-settings-for-eop-and-office365). Keep a spreadsheet of where your custom build deviates.
 
   You can also use the [Configuration analyzer](/defender-office-365/configuration-analyzer-for-security-policies) to compare the settings in your custom policies to the Standard and Strict values.
 
@@ -228,11 +228,11 @@ For detailed information about choosing preset security policies vs. custom poli
 
 ### Assign preset security policies
 
-We recommend you begin with the *preset security policies* in EOP and Defender for Office 365 fast by assigning them to specific pilot users or defined groups as part of your evaluation. Preset policies offer a baseline **Standard** protection template or a more aggressive **Strict** protection template, which can be assigned independently.
+We recommend you begin with the *preset security policies* by assigning them to specific pilot users or defined groups as part of your evaluation. Preset policies offer a baseline **Standard** protection template or a more aggressive **Strict** protection template, which can be assigned independently.
 
-For example, an EOP condition for pilot evaluations could be applied if the recipients are *members* of a defined *EOP Standard Protection* group, and then managed by adding accounts to, or removing account from, the group.
+For example, you could apply a condition for [the built-in security features for all cloud mailboxes](/defender-office-365/eop-about) for pilot evaluations if the recipients are *members* of a defined *Built-in Standard Protection* group. You identify who gets or doesn't get the protection by managing the group membership.
 
-Likewise, a Defender for Office 365 condition for pilot evaluations could be applied if the recipients are *members* of a defined *Defender for Office 365 Standard Protection* group and then managed by adding or removing accounts via the group.
+Likewise, a you could apply a Defender for Office 365 condition for pilot evaluations if the recipients are *members* of a defined *Defender for Office 365 Standard Protection* group. You identify who gets or doesn't get the protection by managing the group membership.
 
 For complete instructions, see [Use the Microsoft Defender portal to assign Standard and Strict preset security policies to users](/defender-office-365/preset-security-policies#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users).
 

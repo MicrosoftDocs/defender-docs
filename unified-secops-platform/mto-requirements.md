@@ -3,8 +3,8 @@ title: Set up Microsoft Defender multitenant management
 description: Learn what steps you need to take to get started with multitenant management for Microsoft Defender XDR and Microsoft Sentinel in the Defender portal.
 ms.service: microsoft-defender
 ms.subservice: unified-security-operations
-ms.author: deniseb
-author: denisebmsft
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -40,7 +40,7 @@ The following table lists the basic requirements you need to use multitenant man
 |:---|:---|
 | Microsoft Defender XDR prerequisites | Verify you meet the [Microsoft Defender XDR prerequisites](/defender-xdr/prerequisites)|
 | Microsoft Defender XDR for US Government customers | Check if you have the following applicable [licensing requirements](/defender-xdr/usgov#licensing-requirements)|
-| Multitenant access | To view and manage the data you have access to in multitenant management, you need to ensure you have the necessary access. <br><br>- **For Microsoft Defender data**, you must have either: <br>- [Granular delegated admin privileges (GDAP)](/partner-center/gdap-introduction)<br/>- [Microsoft Entra B2B authentication](/azure/active-directory/external-identities/what-is-b2b)<br><br>- **For Microsoft Sentinel data**, you must have Azure Lighthouse to gain access to Microsoft Sentinel in other tenants' workspaces. GDAP isn't supported for Microsoft Sentinel data, so you must also have [Microsoft Entra B2B authentication](/azure/active-directory/external-identities/what-is-b2b). <br><br> To learn more about how to synchronize multiple B2B users across tenants, see [Configure cross-tenant synchronization](/azure/active-directory/multi-tenant-organizations/cross-tenant-synchronization-configure).|
+| Multitenant access | To view and manage the data you have access to in multitenant management, you need to ensure you have the necessary access. <br><br>**For Microsoft Defender data**, you must have either: <br>- [Granular delegated admin privileges (GDAP)](/partner-center/gdap-introduction)<br/>- [Microsoft Entra B2B authentication](/azure/active-directory/external-identities/what-is-b2b)<br><br>**To run cross-tenant queries on Microsoft Sentinel data**, you must set up [Azure Lighthouse](/azure/lighthouse/overview). For example, to run cross-workspace queries with the `workspace()` operator in advanced hunting and analytics rules.|
 | Permissions | Users must be assigned the correct roles and permissions at the individual tenant level, in order to view and manage the associated data in multitenant management. To learn more, see: <br/><br/> - [Manage access to Microsoft Defender XDR with Microsoft Entra global roles](/defender-xdr/m365d-permissions) <br/> - [Custom roles in role-based access control for Microsoft Defender XDR](/defender-xdr/custom-roles)<br/><br/> To learn how to grant permissions for multiple users at scale, see [What is entitlement management](/azure/active-directory/governance/entitlement-management-overview).|
 | Security information and event management (SIEM) data (Optional) |To include SIEM data with the extended detection and response (XDR) data, one or more tenants must include a Microsoft Sentinel workspace onboarded to Microsoft Defender. For more information, see [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md).<br/><br/>The Defender portal allows you to connect to one primary workspace and multiple secondary workspaces for Microsoft Sentinel. For more information, see [Multiple Microsoft Sentinel workspaces in the Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2310579).<br/><br/> Access to Microsoft Sentinel data is available through [Microsoft Entra B2B authentication](/azure/active-directory/external-identities/what-is-b2b). Microsoft Sentinel doesn't support [granular delegated admin privileges (GDAP)](/partner-center/gdap-introduction) at this time. |
 

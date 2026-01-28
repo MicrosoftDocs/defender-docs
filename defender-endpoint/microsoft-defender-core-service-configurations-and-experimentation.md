@@ -3,8 +3,8 @@ title: Microsoft Defender Core service configurations and experimentation
 description: Understand the interaction between Microsoft Defender Core Service and the Experimentation and Configuration Service (ECS). 
 search.appverid: met150
 ms.service: defender-endpoint
-author: KesemSharabi
-ms.author: kesharab
+author: paulinbar
+ms.author: painbar
 ms.reviewer: yongrhee
 manager: bagol
 ms.localizationpriority: medium

@@ -536,6 +536,8 @@
           href: troubleshoot-live-response.md
         - name: Collect support logs using LiveAnalyzer
           href: troubleshoot-collect-support-log.md
+        - name: Run remote MDE Client Analyzer traces via live response
+          href: troubleshoot-remotely-with-client-analyzer.md
         - name: Troubleshoot Microsoft Defender Antivirus settings
           href: troubleshoot-settings.md
         - name: Troubleshoot Microsoft Defender Antivirus Security intelligence not getting updated
@@ -615,13 +617,8 @@
       - name: Device discovery FAQ
         href: device-discovery-faq.md  
 
-    - name: Authenticated scans
-      items:
-      - name: Network devices
-        href: network-devices.md
-      - name: Windows authenticated scan
-        href: /defender-vulnerability-management/windows-authenticated-scan
-
+    - name: Authenticated network scans
+      href: network-devices.md
     - name: Devices
       items:
       - name: Device inventory
@@ -803,7 +800,7 @@
         href: configure-real-time-protection-microsoft-defender-antivirus.md
       - name: Configure remediation for Microsoft Defender Antivirus detections
         href: configure-remediation-microsoft-defender-antivirus.md
-      - name: Configure Microsoft Defender Antivirus scans
+      - name: About scheduled Microsoft Defender Antivirus scans
         href: schedule-antivirus-scans.md
         items:
         - name: Schedule scans using Intune
@@ -984,8 +981,6 @@
         href: sandbox-mdav.md
       - name: Early Launch Antimalware (ELAM) and Microsoft Defender Antivirus
         href: elam-on-mdav.md
-      - name: Hardware acceleration and Microsoft Defender Antivirus
-        href:  hardware-acceleration-and-mdav.md
         
     - name: Address false positives/negatives in Microsoft Defender for Endpoint
       href: defender-endpoint-false-positives-negatives.md
@@ -1030,7 +1025,7 @@
         - name: Review alerts
           href: review-alerts.md
         - name: Manage alerts
-          href: manage-alerts.md
+          href: /defender-xdr/investigate-alerts?toc=/defender-endpoint/TOC.json&bc=/defender-endpoint/breadcrumb/toc.json
         - name: Investigate alerts
           href: investigate-alerts.md
         - name: Review and manage detected threats
@@ -1621,6 +1616,10 @@
          href: malware/worms-malware.md
     - name: Understand threat intelligence concepts
       href: threat-indicator-concepts.md
+    - name: Release notes archive
+      items:
+        - name: Android
+          href: release-notes-archive-android.md
       
   - name: Microsoft Defender XDR docs
     items:

@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Cloud Apps
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Cloud Apps.
-ms.date: 11/25/2025
+ms.date: 01/05/2026
 ms.topic: overview
 ---
 
@@ -19,13 +19,31 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 
 For news about earlier releases, see [Archive of past updates for Microsoft Defender for Cloud Apps](release-note-archive.md).
+## January 2026
+
+### Workday connector updated to least-privilege permission model
+The Workday connector now requires only “View” permissions to function. We have removed the “Modify” permission requirement to better align with the principle of least privilege. 
+While existing configurations will continue to work, admins are encouraged to update the Workday account settings to remove these unnecessary rights as a security best practice. 
+
+For more information see: [How Defender for Cloud Apps helps protect your Workday environment](https://learn.microsoft.com/defender-cloud-apps/protect-workday).
+
+## December 2025
+
+### Microsoft Defender for Cloud Apps permissions are now integrated with Microsoft Defender XDR Unified RBAC
+[Integration of Microsoft Defender for Cloud Apps permissions with Microsoft Defender XDR Unified RBAC](https://learn.microsoft.com/defender-xdr/whats-new-in-microsoft-defender-urbac#microsoft-defender-for-cloud-apps-permissions-are-now-integrated-with-microsoft-defender-xdr-unified-rbac) is now available worldwide. 
+For more information, see [Map Microsoft Defender for Cloud Apps permissions to the Microsoft Defender XDR Unified RBAC permissions](https://learn.microsoft.com/defender-xdr/compare-rbac-roles#map-microsoft-defender-xdr-unified-rbac-permissions-to-existing-rbac-permissions). To activate the Defender for Cloud Apps workload, see [Activate Microsoft Defender XDR Unified RBAC](https://learn.microsoft.com/defender-xdr/activate-defender-rbac).
+
+
+### Increased availability of App governance unused app insights feature (Preview)
+
+The Microsoft Defender for Cloud Apps app governance unused app insights feature helps administrators identify and manage unused Microsoft 365-connected OAuth apps, enforce policy-based governance, and use advanced hunting queries for better security. This feature is now available for most commercial cloud customers. For more information, see [Secure apps with app hygiene features](app-governance-secure-apps-app-hygiene-features.md).
 
 ## November 2025
 
 ### AI Agent Protection (Preview)
 Microsoft Defender delivers comprehensive protection for AI agents, combining proactive exposure management with advanced threat detection. It automatically discovers AI agents created in Microsoft Copilot Studio and Azure AI Foundry, collects audit logs, continuously monitors for suspicious activity, and integrates detections and alerts into the XDR Incidents and Alerts experience with a dedicated Agent entity.
 
-  - **Copilot Studio AI agents**
+- **Copilot Studio AI agents**
 
     Defender ingests data from Copilot Studio agents into Advanced Hunting, enabling you to create custom queries and proactively hunt for threats. It also provides real-time protection by monitoring agent runtime and blocking harmful or suspicious actions, fully integrated with XDR incidents and alerts.
 
@@ -57,14 +75,14 @@ To support ongoing security enhancements and maintain service availability, Micr
 To avoid service disruption, take action by **August 25, 2025**, and update your firewall configuration as follows:
 
 Allow outbound traffic on port 443 to the following IP ranges:
-  - `51.54.53.136/29`
+- `51.54.53.136/29`
   - `51.54.114.160/29`
   - `62.11.173.176/29`
 
 If you're using Azure service tags, add `AzureFrontDoor.MicrosoftSecurity` to your firewall allowlist.
 
 Add the following endpoint to your firewall allowlist on port 443:
-  - `discoveryresources-cdn-prod.cloudappsecurity.com`
+- `discoveryresources-cdn-prod.cloudappsecurity.com`
 
 For the full list of required IP addresses and endpoints, see [Network requirements](network-requirements.md#portal-access).
 
