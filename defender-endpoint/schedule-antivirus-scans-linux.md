@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: linux
 search.appverid: met150
-ms.date: 01/27/2025
+ms.date: 01/28/2025
 ---
 
 # Configure and run antivirus scans with Microsoft Defender for Endpoint on Linux
@@ -24,8 +24,7 @@ ms.date: 01/27/2025
 
 **Applies to:**
 
-- [Microsoft Defender for Servers Plan 1](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/microsoft-defender-endpoint?activetab=pivot:overviewtab)
-- [Microsoft Defender for Servers Plan 2](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/microsoft-defender-endpoint?activetab=pivot:overviewtab)
+- [Microsoft Defender for Servers Plan 1 and Plan 2](/azure/defender-for-cloud/defender-for-servers-overview#defender-for-servers-plans)
 - [Microsoft Defennder for Endpoint Servers](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/microsoft-defender-endpoint?activetab=pivot:overviewtab)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
@@ -87,9 +86,9 @@ The following articles describe how to schedule antivirus scans using crontab or
 
 The following screenshots show how to trigger an antivirus scan on a device from the Microsoft Defender portal:
 
-![scan-1](https://github.com/user-attachments/assets/f4b74beb-a469-42b0-bc85-d4ae213c5397)
+:::image type="content" source="./media/schedule-antivirus-scans-linux/run-antivirus-scan.png" alt-text="Screenshot showing where to access the run antivirus scan option." lightbox="./media/schedule-antivirus-scans-linux/run-antivirus-scan.png":::
 
-![scan-2](https://github.com/user-attachments/assets/f5d12421-0b72-455d-9db3-c97a1643e0c7)
+:::image type="content" source="./media/schedule-antivirus-scans-linux/choose-scan-type.png" alt-text="Screenshot how to choose type of antivirus scan to run.":::
 
 ## Performance optimizations for antivirus scans
 
