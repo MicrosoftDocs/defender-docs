@@ -136,4 +136,4 @@ To set up device control on Windows, use [attack surface reduction rules in Defe
 
 To set up device control on Mac, use Intune or Jamf. See [Device Control for macOS](mac-device-control-overview.md).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

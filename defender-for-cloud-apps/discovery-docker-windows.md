@@ -1,7 +1,7 @@
 ---
 title: Configure automatic log upload using on-premises Docker on Windows | Microsoft Defender for Cloud Apps
 description: This article describes the process configuring automatic log upload for continuous reports in Defender for Cloud Apps using a Docker on Windows in an on-premises server.
-ms.date: 08/05/2024
+ms.date: 01/14/2026
 ms.topic: how-to
 ---
 # Configure automatic log upload using on-premises Docker on Windows
@@ -9,6 +9,8 @@ ms.topic: how-to
 You can configure automatic log upload for continuous reports in Defender for Cloud Apps using a Docker on Windows.
 
 ## Prerequisites
+
+- Firewall log forwarding must be configured to send logs to the log collector host machine.
 
 - **Architecture specifications**:
 
@@ -30,8 +32,8 @@ You can configure automatic log upload for continuous reports in Defender for Cl
 >
 > * Enterprise customers with more than 250 users or more than $10 million USD in annual revenue require a paid subscription to use Docker Desktop for Windows. For more information, see [Docker subscription overview](https://docs.docker.com/subscription/).
 > * A user must be signed in for Docker to collect logs. We recommend advising your Docker users to disconnect without signing out.
-> * Docker for Windows is not officially supported in VMWare virtualization scenarios.
-> * Docker for Windows is not officially supported in nested virtualization scenarios. If you still plan to use nested virtualization, refer to [Docker's official guide](https://docs.docker.com/docker-for-windows/troubleshoot/#running-docker-desktop-in-nested-virtualization-scenarios).
+> * Docker for Windows isn't officially supported in VMWare virtualization scenarios.
+> * Docker for Windows isn't officially supported in nested virtualization scenarios. If you still plan to use nested virtualization, refer to [Docker's official guide](https://docs.docker.com/docker-for-windows/troubleshoot/#running-docker-desktop-in-nested-virtualization-scenarios).
 > * For information about additional configuration and implementation considerations for Docker for Windows, see [Install Docker Desktop on Windows](https://docs.docker.com/desktop/windows/install/).
 
 
@@ -110,7 +112,7 @@ The following steps describe the deployment in Windows. The deployment steps for
 1. Run the following command to download the Windows Docker installer PowerShell script file: 
 
     ```powershell
-   Invoke-WebRequest https://discoveryresources-cdn-prod.cloudappsecurity.com/prod-1/public-files/LogCollectorInstaller.ps1 -OutFile (Join-Path $Env:Temp LogCollectorInstaller.ps1) 
+   Invoke-WebRequest https://discoveryresources-cdn-prod.cloudappsecurity.com/prod1/public-files/LogCollectorInstaller.ps1 -OutFile (Join-Path $Env:Temp LogCollectorInstaller.ps1) 
     ```
 
     To validate that the installer is signed by Microsoft, see [Validate installer signature](#optional---validate-installer-signature).

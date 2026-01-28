@@ -316,5 +316,5 @@ When upgrading your operating system to a new major version, you must first unin
 - [Install Defender for Endpoint on Linux to a custom path](linux-custom-location-installation.md)
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

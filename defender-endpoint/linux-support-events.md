@@ -91,5 +91,5 @@ List the filesystems on the machine with:
 df -Th
 ```
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

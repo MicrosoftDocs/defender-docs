@@ -3,8 +3,8 @@ title: Run and customize scheduled and on-demand scans
 description: Customize and initiate Microsoft Defender Antivirus scans on endpoints across your network
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
 ms.date: 03/26/2025
 ms.reviewer: yongrhee
@@ -36,5 +36,5 @@ Article | Description
 [About scheduled scans](schedule-antivirus-scans.md) | Learn about recurring (scheduled) scans, including when they should run and whether they run as full or quick scans
 [Configure and run scans](run-scan-microsoft-defender-antivirus.md) | Run and configure on-demand scans using PowerShell, Windows Management Instrumentation, or individually on endpoints with the Windows Security app
 [Review scan results](review-scan-results-microsoft-defender-antivirus.md) | Review the results of scans using  Microsoft Endpoint Configuration Manager, Microsoft Intune, or the Windows Security app
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
