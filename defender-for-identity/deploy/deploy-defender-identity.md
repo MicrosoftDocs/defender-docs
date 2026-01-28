@@ -19,7 +19,7 @@ We recommend installing Defender for Identity sensors on all domain controllers,
 Once you've completed the steps to prepare your environment, and assigned roles and permissions for Defender for Identity, create a plan for onboarding.
 Identify your architecture and your requirements, and then use the table below to select the appropriate deployment for the servers in your environment.
 
-:::image type="content" source="media/deploy-defender-identity/mdi-sensor-deployment-decision.png" alt-text="A graphic showing the decision tree explaining how to decide which sensor to deploy.":::
+:::image type="content" source="media/deploy-defender-identity/sensor-deployment-decision.png" alt-text="A graphic showing the decision tree explaining how to decide which sensor to deploy.":::
 
 |Server configuration   |Server Operating System  |Recommended deployment |
 |---------|---------|---------|

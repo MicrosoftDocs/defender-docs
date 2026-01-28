@@ -42,6 +42,7 @@ You can purchase licenses in the Microsoft 365 portal, or with Cloud Solution Pa
 
 - To create your Defender for Identity workspace, you need a Microsoft Entra ID tenant.
 - You must either be a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference), or have the following [Unified RBAC](../role-groups.md#unified-role-based-access-control-rbac) permissions:
+
     - `System settings (Read and manage)`
     - `Security settings (All permissions)`
 
