@@ -21,7 +21,7 @@ description: What are best practices for email and collaboration security settin
 ms.service: defender-office-365
 ms.date: 10/06/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -30,7 +30,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Although all organizations with cloud mailboxes include default email protections, Microsoft Defender for Office 365 is the primary email and collaboration security solution for Microsoft 365.
+Although all organizations with cloud mailboxes include [built-in security features](eop-about.md), Microsoft Defender for Office 365 is the primary email and collaboration security solution for Microsoft 365.
 
 We recommend two security levels: **Standard** and **Strict**. Although customer environments and needs are different, these levels of filtering help keep unwanted email out of user mailboxes in most situations.
 
@@ -56,9 +56,11 @@ This article describes the default threat policy settings, and also the recommen
 
 <a name='eop-anti-malware-policy-settings'></a>
 
-## Default email protections for cloud mailboxes
+<a name='default-email-protections-for-cloud-mailboxes'></a>
 
-The default email protections described in this section are available in all organizations with cloud mailboxes. We recommend the Standard or Strict configurations as described in the tables in the following subsections.
+## Built-in security features for all cloud mailboxes
+
+The [the built-in security features](eop-about.md) in this section are available in all organizations with cloud mailboxes. We recommend the Standard or Strict configurations as described in the tables in the following subsections.
 
 ### Anti-malware policy settings
 
@@ -184,7 +186,7 @@ For more information about the default sending limits in the service, see [Sendi
 
 ### Anti-phishing policy settings for all cloud mailboxes
 
-The anti-phishing policy settings described in this section are part of the default email protections included in all organizations with cloud mailboxes. For more information about these settings, see [Spoof settings](anti-phishing-policies-about.md#spoof-settings). To configure these settings, see [Configure anti-phishing policies for all cloud mailboxes](anti-phishing-policies-eop-configure.md).
+The anti-phishing policy settings described in this section are part of [the built-in security features](eop-about.md) included in all organizations with cloud mailboxes. For more information about these settings, see [Spoof settings](anti-phishing-policies-about.md#spoof-settings). To configure these settings, see [Configure anti-phishing policies for all cloud mailboxes](anti-phishing-policies-eop-configure.md).
 
 The spoof settings are inter-related, but the **Show first contact safety tip** setting has no dependency on spoof settings.
 
@@ -344,7 +346,7 @@ In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-
 |**URL & click protection settings**||||||
 |**Email**|||||The settings in this section affect URL rewriting and time of click protection in email messages.|
 |**On: Safe Links checks a list of known, malicious links when users click links in email. URLs are rewritten by default.** (_EnableSafeLinksForEmail_)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)||
-|**Apply Safe Links to email messages sent within the organization** (_EnableForInternalSenders_)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)||
+|**Apply Safe Links to email messages sent within the organization** (_EnableForInternalSenders_)|Selected (`$true`)|Not Selected (`$false`)|Selected (`$true`)|Selected (`$true`)||
 |**Apply real-time URL scanning for suspicious links and links that point to files** (_ScanUrls_)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)||
 |**Wait for URL scanning to complete before delivering the message** (_DeliverMessageAfterScan_)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)||
 |**Do not rewrite URLs, do checks via Safe Links API only** (_DisableURLRewrite_)|Selected (`$false`)<sup>\*</sup>|Selected (`$true`)|Not selected (`$false`)|Not selected (`$false`)|<sup>\*</sup> In new policies created in the Defender portal, this setting is selected by default. In new policies created in PowerShell, the default value is `$false`.|
@@ -362,7 +364,7 @@ In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-
 
 ### Microsoft Teams protection settings in Microsoft Defender for Office 365
 
-For more information about Microsoft Teams protection, see [Microsoft Defender for Office 365 Plan 2 support for Microsoft Teams](mdo-support-teams-about.md).
+For more information about Microsoft Teams protection, see [Microsoft Defender for Office 365 support for Microsoft Teams](mdo-support-teams-about.md).
 
 In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), you use the [New-TeamsProtectionPolicy](/powershell/module/exchangepowershell/new-teamsprotectionpolicy) and [Set-TeamsProtectionPolicy](/powershell/module/exchangepowershell/set-teamsprotectionpolicy) cmdlets for Microsoft Teams protection settings.
 

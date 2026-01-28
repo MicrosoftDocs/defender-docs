@@ -53,8 +53,8 @@ To resolve the risk found on a device, you need to return the device to a compli
 There are three ways to address a risk:
 
 1. Use Manual or automated remediation.
-2. Resolve active alerts on the device. This removes the risk from the device.
-3. You can remove the device from the active policies and consequently, Conditional Access won't be applied on the device.
+1. Resolve active alerts on the device. This removes the risk from the device.
+1. You can remove the device from the active policies and consequently, Conditional Access won't be applied on the device.
 
 Manual remediation requires a secops admin to investigate an alert and address the risk seen on the device. The automated remediation is configured through configuration settings provided in the following section, [Configure Conditional Access](configure-conditional-access.md).
 
@@ -63,12 +63,12 @@ When the risk is removed either through manual or automated remediation, the dev
 The following example sequence of events explains Conditional Access in action:
 
 1. A user opens a malicious file and Defender for Endpoint flags the device as high risk.
-2. The high risk assessment is passed along to Intune. In parallel, an automated investigation is initiated to remediate the identified threat. A manual remediation can also be done to remediate the identified threat.
-3. Based on the policy created in Intune, the device is marked as not compliant. The assessment is then communicated to Microsoft Entra ID by the Intune Conditional Access policy. In Microsoft Entra ID, the corresponding policy is applied to block access to applications.
-4. The manual or automated investigation and remediation is completed and the threat is removed. Defender for Endpoint sees that there's no risk on the device and Intune assesses the device to be in a compliant state. Microsoft Entra ID applies the policy, which allows access to applications.
-5. Users can now access applications.
+1. The high risk assessment is passed along to Intune. In parallel, an automated investigation is initiated to remediate the identified threat. A manual remediation can also be done to remediate the identified threat.
+1. Based on the policy created in Intune, the device is marked as not compliant. The assessment is then communicated to Microsoft Entra ID by the Intune Conditional Access policy. In Microsoft Entra ID, the corresponding policy is applied to block access to applications.
+1. The manual or automated investigation and remediation is completed and the threat is removed. Defender for Endpoint sees that there's no risk on the device and Intune assesses the device to be in a compliant state. Microsoft Entra ID applies the policy, which allows access to applications.
+1. Users can now access applications.
 
 ## Related topic
 
 - [Configure Conditional Access in Microsoft Defender for Endpoint](configure-conditional-access.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

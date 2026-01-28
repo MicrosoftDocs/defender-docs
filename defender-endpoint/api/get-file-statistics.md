@@ -2,12 +2,12 @@
 title: Get file statistics API
 description: Learn how to use the Get file statistics API to retrieve the statistics for the given file in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -19,7 +19,6 @@ ms.date: 11/12/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
 
 # Get file statistics API
@@ -41,10 +40,10 @@ When obtaining a token using user credentials:
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|File.Read.All|'Read file profiles'
-Delegated (work or school account)|File.Read.All|'Read file profiles'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|File.Read.All|'Read file profiles'|
+|Delegated (work or school account)|File.Read.All|'Read file profiles'|
 
 ## HTTP request
 
@@ -54,15 +53,15 @@ GET /api/files/{id}/stats
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request URI parameters
 
-Name|Type|Description
-:---|:---|:---
-lookBackHours|Int32|Defines the hours we search back to get the statistics. Defaults to 30 days. **Optional**.
+|Name|Type|Description|
+|---|---|---|
+|lookBackHours|Int32|Defines the hours we search back to get the statistics. Defaults to 30 days. **Optional**.|
 
 ## Request body
 
@@ -101,4 +100,3 @@ Here's an example of the response.
     ]
 }
 ```
-

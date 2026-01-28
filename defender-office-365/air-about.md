@@ -79,6 +79,8 @@ During and after each automated investigation, the SecOps team can do the follow
 - [View the results details of an investigation](air-view-investigation-results.md#view-investigation-details-from-air-in-defender-for-office-365-plan-2)
 - [Review and approve actions as a result of an investigation](air-review-approve-pending-completed-actions.md)
 
+[!INCLUDE [Built-in alert tuning rules](../includes/built-in-alert-tuning-rules.md)]
+
 ## Required permissions and licensing for AIR
 
 You need to be assigned permissions to use AIR. You have the following options:
