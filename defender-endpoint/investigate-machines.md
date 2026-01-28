@@ -248,7 +248,7 @@ To gain an in-depth view of the device health report, you can go to **Reports > 
 ## Related articles
 
 - [View and organize the Microsoft Defender for Endpoint Alerts queue](alerts-queue.md)
-- [Manage Microsoft Defender for Endpoint alerts](manage-alerts.md)
+- [Manage Microsoft Defender for Endpoint alerts](/defender-xdr/investigate-alerts?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#manage-alerts)
 - [Investigate Microsoft Defender for Endpoint alerts](investigate-alerts.md)
 - [Investigate a file associated with a Defender for Endpoint alert](investigate-files.md)
 - [Investigate an IP address associated with a Defender for Endpoint alert](investigate-ip.md)
