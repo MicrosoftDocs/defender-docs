@@ -23,7 +23,7 @@ This article provides information about new features and important product updat
 
 ### Microsoft Defender for Cloud Apps permissions are now integrated with Microsoft Defender unified RBAC
 
-[Integration of Microsoft Defender for Cloud Apps permissions with Microsoft Defender unified RBAC](#microsoft-defender-for-cloud-apps-permissions-are-now-integrated-with-microsoft-defender-xdr-unified-rbac-preview) is now available worldwide.
+[Integration of Microsoft Defender for Cloud Apps permissions with Microsoft Defender unified RBAC](#microsoft-defender-for-cloud-apps-permissions-are-now-integrated-with-microsoft-defender-unified-rbac-preview) is now available worldwide.
 
 ## November 2025
 
