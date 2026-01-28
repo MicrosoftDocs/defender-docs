@@ -10,7 +10,8 @@
          href: eop-about.md
        - name: What's new in Defender for Office 365
          href: defender-for-office-365-whats-new.md
-
+       - name: Microsoft Defender for Office 365 for US Government customers
+         href: mdo-gov.md
    - name: Get started
      items:
      - name: Get started with Microsoft Defender for Office 365

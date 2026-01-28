@@ -1,8 +1,8 @@
 ﻿---
 title: Integrate Microsoft Defender for Endpoint with other Microsoft solutions
 description: Learn how Microsoft Defender for Endpoint integrates with other Microsoft solutions, including Microsoft Defender for Identity and Microsoft Defender for Cloud.
-author: KesemSharabi
-ms.author: kesharab
+author: limwainstein
+ms.author: lwainstein
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
