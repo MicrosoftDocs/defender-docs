@@ -54,6 +54,9 @@ This article describes how to install, configure, update, and use Defender for E
 
 ### System requirements
 
+> [!NOTE]
+> - Support for Android 10 devices to be deprecated by end of March 2026
+
 - Intune Company Portal app should be downloaded from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) and installed for seamless onboarding. Device enrollment is required for Intune device compliance policies to be enforced.
 
 - Mobile phones and tablets running Android 10.0 and above. 
