@@ -38,7 +38,7 @@ Deploying Defender for Identity requires one of the following Microsoft 365 lice
 
 Both F5 licenses require Microsoft 365 F1/F3 or Office 365 F3 and Enterprise Mobility + Security E3. Purchase licenses in the Microsoft 365 portal or through Cloud Solution Partner (CSP) licensing. For more information, see [Licensing and privacy FAQs](/defender-for-identity/technical-faq#licensing-and-privacy).
 
-## Roles and permissions
+## Role and permissions requirements
 
 - To create your Defender for Identity workspace, you need a Microsoft Entra ID tenant.
 - You must either be a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference), or have the following [Unified RBAC](../role-groups.md#unified-role-based-access-control-rbac) permissions:
@@ -46,7 +46,7 @@ Both F5 licenses require Microsoft 365 F1/F3 or Office 365 F3 and Enterprise Mob
   - `System settings (Read and manage)`
   - `Security settings (All permissions)`
 
-### Memory requirements
+## Memory requirements
 
 The following table describes memory requirements on the server used for the Defender for Identity sensor, depending on the type of virtualization you're using:
 
@@ -63,7 +63,7 @@ Version 3 of the sensor prevents the sensor from overusing CPU or memory by limi
 
 ## Configure RPC auditing
 
-Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability on the machine, improving security visibility and unlocking additional identity detections. Once applied, the configuration is enforced on **existing and future devices** that match the rule criteria. The tag is visible in the Device Inventory for transparency and auditing capabilities.
+Applying the **Unified Sensor RPC Audit** tag to a device improves security visibility and unlocks additional identity detections. Once applied, the configuration is enforced on all existing and future devices that match the rule criteria. The tag is visible in the Device Inventory for transparency and auditing capabilities.
 
 1. In the **Microsoft Defender portal**, navigate to: **System > Settings > Microsoft Defender XDR > Asset Rule Management**.
 1. Select **Create a new rule**.
@@ -72,9 +72,9 @@ Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability o
 
 1. In the side panel:
 
-   1. Enter a **Rule name** and **Description**.   
-1. Set **rule conditions** using `Device name`, `Domain`, or `Device tag` to target the desired machines. Target domain controllers with the sensor v3.x installed.
-   1. Make sure that the **Defender for Identity sensor v3.x** is already deployed on the selected devices.
+    1. Enter a **Rule name** and **Description**.   
+    1. Set **rule conditions** using `Device name`, `Domain`, or `Device tag` to target the desired machines. Target domain controllers with the sensor v3.x installed.
+    1. Make sure that the **Defender for Identity sensor v3.x** is already deployed on the selected devices.
 
 1. Add the **Unified Sensor RPC Audit** tag to the selected devices.
 
@@ -82,10 +82,9 @@ Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability o
 
 1. Select **Next** to review and finish creating the rule, and then select **Submit**. The rule might take up to one hour to take effect.
 
+### Remove RPC auditing from a device
 
-### Update rules
-
-   To offboard a device from this configuration, delete the asset rule or modify the rule conditions so the device no longer matches.
+To offboard a device from this configuration, delete the asset rule or modify the rule conditions so the device no longer matches.
 
 > [!NOTE]
 > It might take up to one hour for changes to be reflected in the portal.
@@ -100,13 +99,14 @@ See [Configure Defender for Identity to collect Windows events automatically (Pr
 
 If you do not select automatic Windows auditing configuration, you must [configure Windows event auditing manually](configure-windows-event-collection.md#configure-windows-event-collection-manually) or [using PowerShell](configure-windows-event-collection.md#configure-windows-event-collection-using-powershell). 
 
-## Recommended configurations
+## Recommended configurations for optimal performance
 
 We recommend that you make sure these items are properly configured for optimal performance.
 
-- For optimal performance, set the **Power Option** of the machine running the Defender for Identity sensor to **High Performance**.
-- The servers and domain controllers onto which the sensor is installed must have time synchronized to within five minutes of each other.
-- The sensor uses the Local System identity on the server to query Active Directory and perform response actions. The local system identity is used even if if credentials are entered in the portal. If a **Group Managed Service Account (gMSA)** is configured for response actions, the response actions are disabled.<br> - In environments that use both v2 and v3 sensors, use local system accounts for all of your sensors.
+- Set the **Power Option** of the machine running the Defender for Identity sensor to **High Performance**.
+- Synchronize the time on servers and domain controllers where you install the sensor to within five minutes of each other.
+- In environments that use both v2 and v3 sensors, use local system accounts for all of your sensors.
+- The sensor uses the Local System identity on the server to query Active Directory and perform response actions. The local system identity is used even if if credentials are entered in the portal. If a **Group Managed Service Account (gMSA)** is configured for response actions, the response actions are disabled.
 
 ## Test your prerequisites
 
