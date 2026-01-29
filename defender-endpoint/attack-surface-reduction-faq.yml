@@ -53,7 +53,7 @@ sections:
       - question: |
           What are the currently supported attack surface reduction rules?
         answer: |
-          Attack surface reduction currently supports all of the rules below.
+          Attack surface reduction supports all of the rules below.
 
       - question: |
           What rules to enable? All, or can I turn on individual rules?
