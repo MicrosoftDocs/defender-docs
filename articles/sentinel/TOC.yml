@@ -809,7 +809,7 @@
           href: manage-table-tiers-retention.md
           displayName: table management, tiers, retention, tables
         - name: What to ingest into the data lake?
-          href: datalake/what-to-inget-to-data-lake.md
+          href: datalake/what-to-ingest-to-data-lake.md
           displayName: data lake ingestion 
 
 - name: SOC optimizations

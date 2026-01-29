@@ -1,5 +1,5 @@
 ---
-title: What to ingest into the data lake
+title: Which logs should you ingest into the data lake
 description: How to choose which log sources to ingest into your Microsoft Sentinel data lake.
 ms.topic: conceptual
 ms.date: 01/29/2026
@@ -7,31 +7,34 @@ author: EdB-MSFT
 ms.author: edbaynash
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-graph
+
+# Customer intent: As a security architect, I want to decide which log sources belong in the Sentinel data lake so that I balance cost and visibility.
+
 ---
 
 
 
-# What to ingest into the data lake
+# Which logs should you ingest into the data lake?
 
-After onboarding to Microsoft Sentinel data lake, you can decide which logs to ingest into the data lake.
+After onboarding to Microsoft Sentinel data lake, decide which logs to ingest into the data lake.
 
-The analytics tier in Sentinel provides real-time  analysis and alerting capabilities using log data ingested into Sentinel workspaces. The analytics tier supports the following use cases:
-+ **Real-time detection and correlation**: Immediate alerting on critical events, such as endpoints, identity, cloud security, perimeter.
+The analytics tier in Sentinel provides real-time analysis and alerting capabilities by using log data ingested into Sentinel workspaces. The analytics tier supports the following use cases:
++ **Real-time detection and correlation**: Immediate alerting on critical events such as endpoints, identity, cloud security, perimeter.
 + **Rapid investigation**: Live searches for active incidents and threat responses.
 + **High-fidelity, actionable logs**: Focus on sources with direct security value, such as EDR signals, privileged access, authentication, threat alerts.
 
-The data lake tier in Sentinel provides large-scale, long term storage and advanced analytics capabilities. The data lake supports the following use cases:
-+ **High-volume, lower-priority logs**: Sources that are valuable for deep forensics, analysis of past incidents to understand attack vectors and impacts, or periodic hunts but costly to keep the analytics tier. 
+The data lake tier in Sentinel provides large-scale, long-term storage and advanced analytics capabilities. The data lake supports the following use cases:
++ **High-volume, lower-priority logs**: Sources that are valuable for deep forensics, analysis of past incidents to understand attack vectors and impacts, or periodic hunts but are costly to keep in the analytics tier.
 + **Analytics and threat hunting**: Cross-log searching, long-term trend analysis, and proactive exploration of historical data to identify hidden threats and patterns.
-+ **Batch analytics and summarization**: Use Spark, KQL, or similar tools to enrich, correlate, or summarize data before forwarding only the high-risk signals to the analytics tier for active monitoring.
++ **Batch analytics and summarization**: Use Spark, KQL, or similar tools to enrich, correlate, or summarize data before forwarding only high-risk signals to the analytics tier.
 + **Advanced analytics and machine learning**: Use big data techniques to uncover complex relationships and trends.
 
-Depending on your organization's security needs, you may choose to ingest different log sources into the data 
-lake. Store high volume logs that are less critical for real-time detection but valuable for deep analysis and forensics in the lake and retain only high-value logs in the analytics tier.
+Depending on your organization's security needs, you might choose to ingest different log sources into the data 
+lake. Store high-volume logs that are less critical for real-time detection but valuable for deep analysis and forensics in the lake, and retain only high-value logs in the analytics tier.  
 
-The following table provides guidance on common log source types, their typical log volume, and their value for different security use cases. Use this information to help determine which log sources to ingest into your data lake based on your organization's specific needs and priorities.
+Use the following table to prioritize which sources belong in the data lake versus the analytics tier.
 
-| Log source type                                    | Typical Log Volume |Value for real-time threat detection/alerting | Value for threat hunting | Value for incident investigation/forensics | Ingest to data lake |
+| Log source type                                    | Typical log volume | Value for real-time threat detection and alerting | Value for threat hunting | Value for incident investigation and forensics | Ingest to data lake |
 |-------------------------------------------------|--------------------|-------------------------------------|----------------|-----------------------------------|-----------------------|
 | AAA (TACACS/Radius)                             | Medium             | High                                | High           | High                              | Yes                   |
 | Active Directory (on-premises)                      | High               | High                                | High           | High                              | No                    |
@@ -93,3 +96,10 @@ The following table provides guidance on common log source types, their typical 
 | Windows Server Events                           | High               | High                                | High           | High                              | No                    |
 | XDR Source Logs (Defender: Office, Identity, Endpoint, CloudApp) | Medium | High | High | High | No |
 | Zoom Meeting Logs                               | Low-Medium         | Low                                 | Low            | Medium                            | Yes                   |
+
+
+## Related articles
+
+- [Manage data tiers and retention in Microsoft Sentinel](../manage-data-overview.md)
+- [Configure table settings in Microsoft Sentinel](../manage-table-tiers-retention.md)
+- [Set up connectors for the Microsoft Sentinel data lake](../datalake/sentinel-lake-connectors.md)
