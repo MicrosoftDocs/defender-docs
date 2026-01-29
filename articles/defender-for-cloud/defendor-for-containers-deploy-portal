@@ -7,7 +7,7 @@ author: Elazark
 ms.date: 01/29/2026
 ---
 
-# Deploy Defender sensor and Azure Policy to clusters using security recommendations
+# Deploy Defender sensor and Policy to clusters using security recommendations
 
 This article explains how to deploy the Microsoft Defender for Containers sensor and Azure Policy for Kubernetes to clusters by remediating security recommendations after you [enable the Defender for Containers plan in Microsoft Defender for Cloud](defender-for-containers-enable-portal.md).
 

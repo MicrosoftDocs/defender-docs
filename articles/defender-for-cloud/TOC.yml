@@ -210,22 +210,24 @@
             - name: Support matrices for Containers
               displayName: Containers, features availability, environment information
               href: support-matrix-defender-for-containers.md
+            - name: Overview by environment
+              href: defender-for-containers-deployment-overview.md
             - name: Defender for Containers permissions for EKS and GKE
               href: containers-permissions.md
-            - name: Deploy Defender for Containers
+            - name: Enable Defender for Containers
+              href: defender-for-containers-enable-portal.md
+            - name: Deploy cluster components
               items:
-                - name: Overview by environment
-                  href: defender-for-containers-deployment-overview.md
-                - name: Enable via Azure portal
-                  href: defender-for-containers-enable-portal.md
-                - name: Enable via Azure CLI
-                  href: defender-for-containers-enable-azure-cli.md
-                - name: Troubleshoot AWS
-                  href: defender-for-containers-aws-troubleshoot.md
-                - name: Disable Defender for Containers
-                  href: defender-for-containers-remove.md                 
-                - name: Configure sensor deployed with Helm
+                - name: Deploy using security recommendations
+                  href: defender-for-containers-deploy-portal.md
+                - name: Deploy using Azure CLI
+                  href: defender-for-containers-deploy-azure-cli.md
+                - name: Deploy using Helm (advanced)
                   href: deploy-helm.md
+            - name: Troubleshoot Defender for Containers on AWS (EKS)
+              href: defender-for-containers-aws-troubleshoot.md
+            - name: Disable Defender for Containers
+              href: defender-for-containers-remove.md                 
         - name: Protect key vaults with Defender for Key Vault
           displayName: enable, key, vault, key vault
           href: tutorial-enable-key-vault-plan.md
