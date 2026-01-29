@@ -11,9 +11,7 @@ ms.date: 01/19/2026
 
 This article explains how to enable the Microsoft Defender for Containers plan in Microsoft Defender for Cloud.
 
-Enabling the plan activates container protection for supported Kubernetes environments across Azure, AWS, and Google Cloud. Defender for Cloud deploys required components automatically or through security recommendations.
-
-For clusters that aren't running in Azure, Defender for Cloud uses Azure Arc–enabled Kubernetes to deploy sensors and policy extensions.
+Enabling the plan activates container protection for supported Kubernetes environments across Azure, AWS, and Google Cloud. 
 
 # [Azure Kubernetes Service (AKS)](#tab/aks)
 
@@ -114,20 +112,20 @@ Use the Azure portal to verify that Defender for Containers components were depl
 
 1. Select **Save**.
 
-## Deploy Defender for Containers components
+## Grant control plane permissions
 
-### Grant control plane permissions
+Control plane permissions must be configured if you enabled Agentless discovery for Kubernetes. Grant permissions by using one of the following methods:
 
-**Required if you enabled**: Agentless discovery for Kubernetes
+### Option 1: Use the Python script
 
-Grant control plane permissions by using one of the following methods.
+Run the [Python onboarding repository script](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Onboarding/AWS/ReadMe.md) to automatically add the required role mapping to your cluster.
 
-**Option 1: Use the Python script**
-
-Run the [Python script](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Onboarding/AWS/ReadMe.md) provided in the onboarding repository to add the Defender for Cloud role
+This script adds the Defender for Cloud role
 `MDCContainersAgentlessDiscoveryK8sRole` to the `aws-auth` ConfigMap.
 
-**Option 2: Use eksctl**
+### Option 2: Use eksctl
+
+You can manually create the IAM identity mapping:
 
 ```bash
 eksctl create iamidentitymapping \
@@ -137,29 +135,6 @@ eksctl create iamidentitymapping \
   --group system:masters \
   --no-duplicate-arns
 ```
-
-## Connect EKS clusters to Azure Arc
-
-**Required if you enabled**: Defender DaemonSet or Azure Policy for Kubernetes
-
-1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
-
-1. Look for the recommendation **EKS clusters should have Microsoft Defender's extension for Azure Arc installed**.
-
-1. Follow the remediation steps to connect your clusters.
-
-## Deploy the Defender sensor
-
-After connecting your EKS clusters to Azure Arc:
-
-1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
-
-1. Look for recommendations related to installing the Defender extension.
-
-1. Follow the remediation steps to deploy the sensor.
-
-> [!NOTE]
-> You can also deploy the Defender sensor by using Helm for more control over the deployment configuration.
 
 ## Verify deployment
 
@@ -221,43 +196,9 @@ Use the Azure portal to verify that Defender for Containers components were depl
 
 1. Select **Next: Configure access**.
 
-1. In the Azure portal, copy the setup script from the **Configure access** step.
+1. Select **Next: Review and create**.
 
-1. Open Google Cloud Shell or a local terminal with `gcloud` configured.
-
-1. Run the setup script. The script:
-    - Creates a service account and assigns the required IAM roles
-    - Configures workload identity federation between GCP and Azure
-    - Enables the required Google Cloud APIs
-
-1. Copy the service account email from the script output.
-
-1. Return to the Azure portal and paste the service account email.
-
-1. Select **Next: Review and create**, then select **Save**.
-
-## Deploy Defender for Containers components
-
-### Connect GKE clusters to Azure Arc
-
-1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
-
-1. Look for the recommendation **GKE clusters should be connected to Azure Arc**.
-
-1. Follow the remediation steps to connect your clusters.
-
-### Deploy the Defender sensor
-
-After connecting your GKE clusters to Azure Arc:
-
-1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
-
-1. Look for the recommendation **Arc-enabled Kubernetes clusters should have Defender extension installed**.
-
-1. Select the clusters and follow the remediation steps to deploy the sensor.
-
-> [!NOTE]
-> You can also deploy the Defender sensor by using Helm for more control over the deployment configuration.
+1. Select **Save**.
 
 ## Verify deployment
 
@@ -277,64 +218,6 @@ After connecting your GKE clusters to Azure Arc:
 
     - **GKE clusters should be connected to Azure Arc**
     - **Arc-enabled Kubernetes clusters should have Defender extension installed**
-
-# [Arc-enabled Kubernetes](#tab/arc)
-
-## Prerequisites
-
-- An Arc-enabled Kubernetes cluster (Kubernetes version 1.19 or later).
-- The cluster is connected to Azure Arc. See [Connect an existing Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
-
-## Network requirements
-
-[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
-
-## Enable Defender for Containers
-
-1. Sign in to the [Azure portal](https://portal.azure.com).
-
-1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
-
-1. Select the relevant subscription that contains your Arc-enabled Kubernetes clusters.
-
-1. On the Defender plans page, find the **Containers** row and toggle the status to **On**.
-
-1. Select **Settings** in the Containers plan row.
-
-1. Toggle **On** the relevant Defender for Containers components:
-
-    - Place holder
-    - Place holder
-    - Place holder
-    - Place holder
-
-1. Select **Continue**, and then select **Save**.
-
-## Deploy Defender components to Arc-enabled clusters
-
-1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
-
-1. Search for **Azure Arc-enabled Kubernetes clusters should have Defender extension installed**.
-
-1. Select the recommendation, select your clusters, and then follow the remediation steps to deploy the extensions.
-
-> [!IMPORTANT]
-> Select the check box next to the cluster name, not the linked cluster name itself.
-
-## Verify deployment
-
-1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
-
-1. Select the subscription that contains your Arc-enabled clusters and verify that **Containers** is set to **On**.
-
-1. Go to your Arc-enabled Kubernetes cluster, then select **Extensions**.
-
-1. Verify the extension status shows **Succeeded** for:
-
-    - **Microsoft Defender for Containers**
-    - **Azure Policy for Kubernetes** (if deployed)
-
-1. Go to **Microsoft Defender for Cloud** > **Recommendations** and verify Arc-related recommendations appear for your clusters.
 
 ---
 

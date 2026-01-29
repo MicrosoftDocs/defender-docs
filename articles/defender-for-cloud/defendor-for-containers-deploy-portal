@@ -106,9 +106,6 @@ For GKE clusters, Defender uses Azure Arc–enabled Kubernetes to deploy the Def
 
 - [Defender for Containers enabled on your GCP connector](defender-for-containers-enable-portal.md?tab=eks). 
 
-> [!NOTE] 
-> Some recommendations require Defender for Cloud to access the Kubernetes control plane. If you see a recommendation related to Kubernetes API access and you haven’t configured it yet, [configure plane permissions](defender-for-containers-control-plane.md).
-
 ## Deploy components
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
