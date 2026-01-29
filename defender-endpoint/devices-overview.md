@@ -33,7 +33,7 @@ Devices in Microsoft Defender for Endpoint include any endpoint that reports sec
 Devices appear in your inventory through two primary methods:
 
 - **Onboarding**: Devices you explicitly onboard to Defender for Endpoint with the full agent installed
-- **Discovery**: Devices automatically discovered on your network through the device discovery feature
+- **Discovery**: Devices automatically discovered on your network
 
 ## The device lifecycle
 
@@ -100,9 +100,8 @@ Use these pages to manage devices in Microsoft Defender for Endpoint:
 - **[Custom data collection](custom-data-collection.md)**: Collect specialized telemetry from specific device groups
 - **[Create custom data collection rules](create-custom-data-collection-rules.md)**: Configure rules to collect custom telemetry
 
-### Device discovery and onboarding
+### Device onboarding and health
 
-- **[Device discovery overview](device-discovery.md)**: Automatically discover devices on your network
 - **[Onboarding devices](onboarding.md)**: Deploy the Defender for Endpoint agent to devices
 
 ### Device health and troubleshooting
@@ -116,4 +115,3 @@ Start with the device inventory to see all devices in your environment:
 
 - [View your device inventory](machines-view-overview.md)
 - [Onboard devices to Defender for Endpoint](onboarding.md)
-- [Configure device discovery](configure-device-discovery.md)

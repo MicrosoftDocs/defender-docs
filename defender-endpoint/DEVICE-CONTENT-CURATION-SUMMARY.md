@@ -183,7 +183,7 @@ The new structure maps directly to the user journey:
 | Journey Step | Primary Page | Supporting Pages |
 |--------------|-------------|------------------|
 | **Start: Understand Devices** | `devices-overview.md` | n/a |
-| **1. Discover** | `machines-view-overview.md` | Device discovery, Onboarding docs |
+| **1. Discover** | `machines-view-overview.md` | Onboarding docs |
 | **2. Scope** | `manage-device-scope-relevance.md` | n/a |
 | **3. Classify** | `machine-tags.md` (existing) | Asset Rule Management docs |
 | **4. Act** | `targeting-devices.md` | `custom-data-collection.md`, `create-custom-data-collection-rules.md` |
