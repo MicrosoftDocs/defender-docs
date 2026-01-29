@@ -105,8 +105,7 @@ We recommend that you make sure these items are properly configured for optimal 
 
 - Set the **Power Option** of the machine running the Defender for Identity sensor to **High Performance**.
 - Synchronize the time on servers and domain controllers where you install the sensor to within five minutes of each other.
-- In environments that use both v2 and v3 sensors, use local system accounts for all of your sensors.
-- The sensor uses the Local System identity on the server to query Active Directory and perform response actions. The local system identity is used even if if credentials are entered in the portal. If a **Group Managed Service Account (gMSA)** is configured for response actions, the response actions are disabled.
+- This sensor uses the local system identity of the server for Active Directory and response actions. If you had Group Managed Service Account (gMSA) configured for an earlier version of the sensor, make sure to remove gMSA. If gMSA is enabled, the response actions will not work. In environments that use both v2 and v3 sensors, use local system accounts for all of your sensors.
 
 ## Test your prerequisites
 
