@@ -148,6 +148,15 @@ The following tables list, per cloud app, which abilities are supported with App
 | [Zendesk](protect-zendesk.md)  |  |  |  |  | Preview |
 | [Zoom](protect-zoom.md)   |  |  |  |   |
 
+## Prerequisites
+
+- When working with the [Microsoft 365 connector](protect-office-365.md), you'll need a license for each service where you want to view security recommendations. For example, to view recommendations for Microsoft Forms, you'll need a license that supports Forms.
+
+- For some apps, it may be necessary to allow list IP addresses to enable Defender for Cloud Apps to collect logs and provide access for the Defender for Cloud Apps console. For more information, see [Network requirements](network-requirements.md).
+
+> [!NOTE]
+> To get updates when URLs and IP addresses are changed, subscribe to the RSS as explained in: [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
+
 ## Enable app connectors
 
 To enable an app connector for the first time, you must configure an API connection for the specific cloud app you want to connect. Microsoft Defender for Cloud Apps doesn't provide a single universal enablement flow for all apps.
@@ -163,15 +172,6 @@ Each cloud app has its own enablement process based on the APIs it supports.
 
 > [!NOTE]
 > This article provides an overview of app connectors. Detailed steps for enabling connectors are documented in individual connector guides for each supported app.
-
-## Prerequisites
-
-- When working with the [Microsoft 365 connector](protect-office-365.md), you'll need a license for each service where you want to view security recommendations. For example, to view recommendations for Microsoft Forms, you'll need a license that supports Forms.
-
-- For some apps, it may be necessary to allow list IP addresses to enable Defender for Cloud Apps to collect logs and provide access for the Defender for Cloud Apps console. For more information, see [Network requirements](network-requirements.md).
-
-> [!NOTE]
-> To get updates when URLs and IP addresses are changed, subscribe to the RSS as explained in: [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 
 ### ExpressRoute
 
