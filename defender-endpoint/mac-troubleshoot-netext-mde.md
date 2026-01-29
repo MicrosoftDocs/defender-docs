@@ -209,4 +209,4 @@ If you have Defender for Endpoint installed on your macOS device, you can remove
 
 ## See also
 
-[What's new in Microsoft Defender for Endpoint on Mac](mac-whatsnew.md)
+[What's new in Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-versions.md#macos-versions)
