@@ -106,7 +106,7 @@ The value of this setting is meaningful only if message reporting is turned on i
 
 For more information about user reported message settings in the Defender portal, see [User reported settings](submissions-user-reported-messages-custom-mailbox.md).
 
-<a name="how-users-report-messages-in-teams"></a>
+<a name='how-users-report-messages-in-teams'></a>
 
 ## How users report messages in Teams
 

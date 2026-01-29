@@ -4,8 +4,8 @@ description: During and after an automated investigation, you can view the resul
 search.appverid: met150
 f1.keywords:
 - NOCSH
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.service: defender-endpoint
 ms.subservice: edr
 ms.localizationpriority: medium
@@ -140,5 +140,5 @@ To provide more context about how investigation states show up, the following ta
 
 - [Review remediation actions following an automated investigation](manage-auto-investigation.md)
 - [View and organize the Microsoft Defender for Endpoint Incidents queue](view-incidents-queue.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

@@ -3,8 +3,8 @@ title: Configure the Microsoft Defender Antivirus cloud block time-out period
 description: You can configure how long Microsoft Defender Antivirus blocks a file from running while waiting for a cloud determination.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: yongrhee
 manager: bagol
@@ -96,5 +96,5 @@ You can use Group Policy to specify an extended time out for cloud checks.
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md) 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

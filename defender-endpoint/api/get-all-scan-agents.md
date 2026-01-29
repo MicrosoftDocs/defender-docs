@@ -2,12 +2,12 @@
 title: Get all scan agents
 description: Learn how to use the Get all scan agents API
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -19,14 +19,11 @@ ms.date: 11/10/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender Vulnerability Management
-
 ---
 
 # Get all scan agents
 
-
-[!Include[Prerelease information](../../includes/prerelease.md)]
-
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 ## API description
 
@@ -40,10 +37,10 @@ Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md).
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Machine.Read.All| Read all scan information.
-Delegated (work or school account)|Machine.Read.All|Read all scan information.
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Machine.Read.All|Read all scan information.|
+|Delegated (work or school account)|Machine.Read.All|Read all scan information.|
 
 When obtaining a token using user credentials, to view data, the user needs to have at least the following role permission: `ViewData` or `TvmViewData` (See [Create and manage roles](../user-roles.md))
 
@@ -55,9 +52,9 @@ GET /api/DeviceAuthenticatedScanAgents
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -74,7 +71,7 @@ If successful, this method returns 200 - OK response code with a list of authent
 Here's an example of the request.
 
 ```http
-https://api-us.securitycenter.microsoft.com/api/DeviceAuthenticatedScanAgents
+https://api.security.microsoft.com/api/DeviceAuthenticatedScanAgents
 ```
 
 ### Response example
@@ -83,7 +80,7 @@ Here's an example of the response.
 
 ```json
 {
-    "@odata.context": "https://api-us.securitycenter.microsoft.com/api/$metadata#DeviceAuthenticatedScanAgents",
+    "@odata.context": "https://api..security.microsoft.com/api/$metadata#DeviceAuthenticatedScanAgents",
     "value": [
         {
             "id": "47df41a0c-asad-4fd6d3-bbea-a93dbc0bfcaa_4edd75b2407a5b64d704b4e53d74f15",
@@ -108,5 +105,3 @@ Here's an example of the response.
     ]
 }
 ```
-
-

@@ -67,9 +67,9 @@ The Workday account used for connecting to Defender for Cloud Apps must be a mem
 
 | Functional area | Domain Security policy | Subdomain Security policy | Report/Task Permissions | Integration Permissions |
 | --- | --- | --- | --- | --- |
-| System | Set Up: Tenant Setup – General | Set Up: Tenant Setup –  Security | View, Modify | Get, Put |
-| System | Set Up: Tenant Setup – General | Set Up: Tenant Setup –  System | Modify | None |
-| System | Security Administration | | View, Modify | Get, Put |
+| System | Set Up: Tenant Setup – General | Set Up: Tenant Setup –  Security | View | Get, Put |
+| System | Set Up: Tenant Setup – General | Set Up: Tenant Setup –  System | View | None |
+| System | Security Administration | | View | Get, Put |
 | System | System auditing | | View | Get |
 | Staffing | Worker Data: Staffing | Worker Data: Public Worker Reports | View | Get |
 

@@ -3,8 +3,8 @@ title: Configure automated investigation and remediation capabilities
 description: Set up your automated investigation and remediation capabilities in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: edr
-author: KesemSharabi
-ms.author: kesharab
+author: paulinbar
+ms.author: painbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -56,5 +56,5 @@ If you're using Defender for Endpoint, you can specify an automation level so th
 
 - [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 - [Automation levels in automated investigation and remediation](automation-levels.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

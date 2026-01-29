@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 01/05/2026
 ms.topic: how-to
-author: KesemSharabi
-ms.author: kesharab
+author: paulinbar
+ms.author: painbar
 ms.reviewer: tdoucett
 manager: bagol
 ms.subservice: asr
@@ -383,4 +383,4 @@ $exploitGuardObject.Put()
 - [Evaluate network protection](evaluate-network-protection.md)
 - [Troubleshoot network protection](troubleshoot-np.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -18,7 +18,7 @@ description: Admins can learn how to view, create, modify, and delete anti-spam 
 ms.service: defender-office-365
 ms.date: 07/02/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -155,11 +155,9 @@ You can configure anti-spam policies in the Microsoft Defender portal or in [Exc
      - **All phishing and high confidence spam messages**
      - **All phishing and spam messages**
 
-   - **Retain spam in quarantine for this many days**: Specifies how long to keep the message in quarantine if you selected **Quarantine message** as the action for a spam filtering verdict. After the time period expires, the message is deleted, and isn't recoverable. A valid value is from 1 to 30 days.
+   - **Retain spam in quarantine for this many days**: Specifies how long to keep the message in quarantine if you selected **Quarantine message** as the action for a spam filtering verdict. After the time period expires, the message is deleted, and isn't recoverable. A valid value is from 1 to 30 days. The default value is 15 days.
 
      > [!TIP]
-     > The default value is 15 days in anti-spam policies that you create in PowerShell. The default value is 30 days in anti-spam policies that you create in the Microsoft Defender portal.
-     >
      > This setting also controls how long messages that were quarantined by **anti-phishing** policies are retained. For more information, see [Quarantine retention](quarantine-about.md#quarantine-retention).
 
    - **Add this X-header text**: This box is required and available only if you selected **Add X-header** as the action for a spam filtering verdict. The specified value is the _name_ of the new header field. The header field _value_ is always `This message appears to be spam`.

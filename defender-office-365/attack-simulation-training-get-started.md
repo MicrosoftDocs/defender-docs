@@ -54,22 +54,22 @@ Watch this short video to learn more about Attack simulation training.
     - **Global Administrator**¹
     - **Security Administrator**
     - **Attack Simulation Administrator**²: Create and manage all aspects of attack simulation campaigns.
-    - **Attack Payload Author**²: Create attack payloads that an admin can initiate later.
-    - **Security Operator and Security Reader**³: View all aspects of attack simulation campaigns.
+    - **Attack Payload Author**³: Create attack payloads that an admin can initiate later.
+    - **Security Operator and Security Reader**⁴: View all aspects of attack simulation campaigns.
 
     > [!IMPORTANT]
     > ¹ Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
     >
     > ² Adding users to this role group in [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md) is currently unsupported.
     >
-    > Members of Attack Payload Author have the following limitations in attack simulation training:
+    > ³ Members of Attack Payload Author have the following limitations in attack simulation training:
     >
     > - They can't create or edit simulations, training campaigns, simulation automations, or payload automations.
     > - They can't change global settings.
     > - They can't change content (for example, notifications), but they can change payloads.
     > - They can't view tenant simulation reports, aggregate reports, simulation automation records, or payload automation records.
     >
-    > ³ Members of Security Operator and Security Reader have the following limitations in attack simulation training:
+    > ⁴ Members of Security Operator and Security Reader have the following limitations in attack simulation training:
     >
     > - They can't create or edit simulations, training campaigns, simulation automations, or payload automations.
     > - They can't change global settings.
@@ -180,12 +180,14 @@ The _landing page_ in the simulation is where users go when they open the payloa
 _End user notifications_ in the simulation send periodic reminders to users (for example, training assignment and reminder notifications). You can select from built-in notifications, custom notifications that you already created, or you can create new notifications to use during the creation of the simulation. To create notifications, see [End-user notifications for Attack simulation training](attack-simulation-training-end-user-notifications.md).
 
 > [!TIP]
-> _Simulation automations_ provide the following improvements over traditional simulations:
 >
-> - Simulation automations can include multiple social engineering techniques and related payloads (simulations contain only one).
-> - Simulation automations support automated scheduling options (more than just the start date and end date in simulations).
+> - _Simulation automations_ provide the following improvements over traditional simulations:
+>   - Simulation automations can include multiple social engineering techniques and related payloads (simulations contain only one).
+>   - Simulation automations support automated scheduling options (more than just the start date and end date in simulations).
 >
-> For more information, see [Simulation automations for Attack simulation training](attack-simulation-training-simulation-automations.md).
+>   For more information, see [Simulation automations for Attack simulation training](attack-simulation-training-simulation-automations.md).
+>
+> - To see which departments are more vulnerable to phishing simulations, create identical simulations or simulation automations scoped by department, and then use the [available reports](#reports-and-insights) to compare the results.
 
 ### Payloads
 
@@ -205,7 +207,7 @@ After you create and launch the simulation, you need to see how it's going. For 
 - Who did what to the simulated phishing message and the payload within it (delete, report, open the payload, enter credentials, etc.).
 - Who completed the assigned training.
 
-The available reports and insights for Attack simulation training are described in [Insights and reports for Attack simulation training](attack-simulation-training-insights.md).
+The available reports and insights for Attack simulation training are described in [Reports for Attack simulation training](attack-simulation-training-insights.md).
 
 ### Predicted compromise rate
 

@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.date: 10/20/2025
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.topic: how-to
 ms.custom: nextgen
 ms.reviewer: thdoucet
@@ -387,5 +387,5 @@ You can also copy the string into a blank text file and attempt to save it with 
 - [Configure Microsoft Defender Antivirus exclusions on Windows Server](configure-server-exclusions-microsoft-defender-antivirus.md)
 - [Common mistakes to avoid when defining exclusions](common-exclusion-mistakes-microsoft-defender-antivirus.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
