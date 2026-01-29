@@ -16,7 +16,7 @@ ms.custom:
 - cx-ti
 - cx-dex
 search.appverid: met150
-ms.date: 01/17/2025
+ms.date: 01/29/2026
 ---
 
 # Understanding Managed response
