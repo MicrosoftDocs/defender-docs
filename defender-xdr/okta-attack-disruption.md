@@ -75,14 +75,14 @@ To create the integration, need to extract two values from your Okta configurati
 
 1. Fill in the following values, then select **Create**:
 
-   1. Integration name
-   1. Description
-   1. Base API URL: Enter your full Okta domain starting with `https://`
-   1. Authentication method: Select API Key
+   1. **Integration name**
+   1. **Description**
+   1. **Base API URL**: Enter your full Okta domain starting with `https://`
+   1. **Authentication method**: Select API Key
   
-      1. API key name
-      1. API key: Enter `SSWS <API-Key>`, replacing `<API-Key>` with the value of the API token you generated in Okta. There should be a space between `SSWS` and your API Key. For more information see the [Okta documentation for API Key usage](https://developer.okta.com/docs/reference/core-okta-api/#authentication)
-      1. API key identifier: Leave empty
+      1. **API key name**
+      1. **API key**: Enter `SSWS <API-Key>`, replacing `<API-Key>` with the value of the API token you generated in Okta. There should be a space between `SSWS` and your API Key. For more information see the [Okta documentation for API Key usage](https://developer.okta.com/docs/reference/core-okta-api/#authentication)
+      1. **API key identifier**: Leave empty
       1. Enable the **Send SPI key in header** switch.
 
    :::image type="content" source="./media/okta-attack-disruption/integration-details.png" alt-text="Screenshot of the integration details form with fields for Integration name, Description, Base API URL, and Authentication method." lightbox="./media/integration-details.png":::
