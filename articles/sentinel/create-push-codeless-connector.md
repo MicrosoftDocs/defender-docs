@@ -63,7 +63,7 @@ In the push model, your application sends data directly to Microsoft Sentinel:
 
 ### The push data flow
 
-The CCF push data flow consists of four main steps:
+The CCF push data flow consists of five main steps:
 
 1. You deploy the connector in Microsoft Sentinel.
 
