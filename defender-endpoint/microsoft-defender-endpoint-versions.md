@@ -482,7 +482,7 @@ If an end user encounters a prompt for Defender for Endpoint on macOS processes 
 
 | Feature area | Update summary |
 |--------------|---------------|
-| User experience | Improved user feedback experience and added landscape mode UI support for the Defender app. |
+| User experience | Improved user feedback experience and added landscape mode UI support for the Defender app. [Learn more](android-new-ux.md#november-2025) |
 | Telemetry | Additional telemetry features to improve app performance monitoring and detect specific scenarios, such as entering landscape mode or invalid authentication attempts. |
 | Configuration | Fixed the bug where feedback sending wasn't disabled in Defender app despite 'Control Feedback Sending' key being disabled (set as 0) in Intune app configuration. |
 
@@ -512,7 +512,7 @@ If an end user encounters a prompt for Defender for Endpoint on macOS processes 
 
 | Feature area | Update summary |
 |--------------|---------------|
-| User experience | Improved UX experience for the onboarding screens. |
+| User experience | Improved UX experience for the onboarding screens. [Learn more](android-new-ux.md#october-2025) |
 | Global Secure Access | Kerberos SSO support on Android (GA): Kerberos SSO experience for users on Android devices with Global Secure Access is now supported. Users need to install and configure a third-party SSO client. |
 | General | Performance Improvement and bug fixes. |
 
@@ -557,7 +557,11 @@ If an end user encounters a prompt for Defender for Endpoint on macOS processes 
 
 | Feature area | Update summary |
 |--------------|---------------|
-| User experience | UX Improvement for home page and tiles screens. |
+| User experience | UX Improvement for home page and tiles screens. [Learn more](android-new-ux.md#march-2025) |
+
+## UX improvements
+
+See the full list of [Android UX improvements](android-new-ux.md).
 
 ## iOS versions
 

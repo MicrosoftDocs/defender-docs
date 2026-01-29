@@ -24,13 +24,12 @@ As part of our ongoing commitment to deliver exceptional user experiences, we're
 
 The new enhancements are designed to improve usability, streamline navigation, and ensure our app meets the evolving needs of our users.
 
-## Key changes - November 2025
+## November 2025
 
 In this release, we've made it easier for users to share feedback, including logs, to the Microsoft Defender team. The changes include:
 
 - [A new bottom pane that makes it easier for users to share feedback and logs](#bottom-pane-experience)
 - [A new **Send logs to Microsoft** option that enables users to quickly send logs to Microsoft](#one-click-send-logs-experience)
-
 
 ### Bottom pane experience
 
@@ -46,7 +45,7 @@ A new **Send logs to Microsoft** option has been added directly to the left navi
 
 :::image type="content" source="./media/android-new-ux/one-click-feedback-android.png" alt-text="Screenshots showing how to send logs directly to Microsoft from the Microsoft Defender mobile app options menu." border="false":::
 
-## Key changes - September 2025
+## October 2025
 
 We're pleased to introduce the new Onboarding screens that come up when the user starts onboarding after sign-in.
 
@@ -108,7 +107,7 @@ Learn the steps on how to set up your environment for prerelease testing of Defe
 
 For more information, see [Deploy Defender for Endpoint prerelease builds on Android devices using Google Play preproduction tracks](mobile-pretest-android.md).
 
-## Key changes - March 2025
+## March 2025
  
 We're pleased to introduce the Device Protection feature card for our enterprise users which includes **App Security**, **Web Protection**, **Security History** features are designed to be more user-friendly and accessible.
 
