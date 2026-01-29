@@ -22,7 +22,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 12/02/2025
+ms.date: 01/30/2026
 ---
 
 # Create custom detection rules
