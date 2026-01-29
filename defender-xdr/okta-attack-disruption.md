@@ -85,7 +85,7 @@ To create the integration, need to extract two values from your Okta configurati
       1. **API key identifier**: Leave empty
       1. Enable the **Send SPI key in header** switch.
 
-   :::image type="content" source="./media/okta-attack-disruption/integration-details.png" alt-text="Screenshot of the integration details form with fields for Integration name, Description, Base API URL, and Authentication method." lightbox="./media/integration-details.png":::
+   :::image type="content" source="./media/okta-attack-disruption/integration-details.png" alt-text="Screenshot of the integration details form with fields for Integration name, Description, Base API URL, and Authentication method." lightbox="./media/okta-attack-disruption/integration-details.png":::
 
 ## Related content
 
