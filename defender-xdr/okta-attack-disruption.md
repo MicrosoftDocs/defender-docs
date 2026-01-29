@@ -67,7 +67,7 @@ To create the integration, need to extract two values from your Okta configurati
 
 ### Step 2: Create the integration from the Defender portal
 
-1. Login to the [defender portal](https://security.microsoft.com/)
+1. Log in to the [Defender portal](https://security.microsoft.com/)
 1. Navigate **Microsoft Sentinel** -> **Configuration** -> **Next Gen Automation**.
 1. In the **Integrations profiles** tab, select **+Create** to create a new integration.
 
@@ -81,7 +81,7 @@ To create the integration, need to extract two values from your Okta configurati
    1. **Authentication method**: Select API Key
   
       1. **API key name**
-      1. **API key**: Enter `SSWS <API-Key>`, replacing `<API-Key>` with the value of the API token you generated in Okta. There should be a space between `SSWS` and your API Key. For more information see the [Okta documentation for API Key usage](https://developer.okta.com/docs/reference/core-okta-api/#authentication)
+      1. **API key**: Enter `SSWS <API-Key>`, replacing `<API-Key>` with the value of the API token you generated in Okta. There should be a space between `SSWS` and your API Key. For more information, see the [Okta documentation for API Key usage](https://developer.okta.com/docs/reference/core-okta-api/#authentication)
       1. **API key identifier**: Leave empty
       1. Enable the **Send SPI key in header** switch.
 
