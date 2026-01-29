@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: article
-ms.date: 01/30/2026
+ms.date: 01/29/2026
 search.appverid: met150
 ---
 
