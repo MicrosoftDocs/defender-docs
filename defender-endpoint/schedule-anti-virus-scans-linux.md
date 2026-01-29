@@ -22,15 +22,13 @@ ms.date: 01/29/2025
 
 Microsoft Defender for Endpoint on Linux offers robust antivirus scanning capabilities to help identify and mitigate malicious files on your system. You can run these scans on-demand or schedule them at regular intervals, ensuring continuous protection and peace of mind. Three ways of running the scans are supported:
 
-- Command line interface (CLI) (on-demand scans)
-- crontab / anacron (scheduled scans)
-- Through the Microsoft Defender portal
+- [Command line interface (CLI) (on-demand scans)](#run-scans-via-command-line-interface-on-demand-scans)
+- [crontab / anacron (scheduled scans)](#run-scans-via-crontab--anacron-scheduled-scans)
+- [Through the Microsoft Defender portal](#run-scans-via-the-defender-portal)
 
+## Prerequisites
 
-**Applies to:**
-
-- Microsoft Defender for Servers Plan 1 and Plan 2
-- Microsoft Defender for Endpoint Servers
+To use antivirus scanning features, your Linux devices must meet the [prerequisites for Defender for Endpoint on Linux](./mde-linux-prerequisites.md).
 
 ## Supported scan types
 
