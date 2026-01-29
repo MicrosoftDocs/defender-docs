@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn about the different tools available in the Agent creation collection in Microsoft Sentinel 
 author: poliveria
 ms.topic: how-to
-ms.date: 01/29/2026
+ms.date: 01/30/2026
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 
