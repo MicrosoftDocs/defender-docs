@@ -179,7 +179,22 @@
       "source_path": "defender-vulnerability-management/windows-authenticated-scan.md",
       "redirect_url": "/defender-endpoint/network-devices",
       "redirect_document_id": false
-    }  
+    },
+    {
+      "source_path": "defender-endpoint/manage-alerts.md",
+      "redirect_url": "/defender-xdr/investigate-alerts#manage-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-vulnerability-management/data-storage-privacy.md",
+      "redirect_url": "/defender-endpoint/data-storage-privacy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-vulnerability-management/retention-logic-mdvm.md",
+      "redirect_url": "/defender-endpoint/data-storage-privacy",
+      "redirect_document_id": false
+    } 
          
   ]
 }

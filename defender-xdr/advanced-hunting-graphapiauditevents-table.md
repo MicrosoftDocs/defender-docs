@@ -18,7 +18,7 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: reference
-ms.date: 12/26/2025
+ms.date: 01/13/2026
 ---
 
 # GraphApiAuditEvents (Preview)
@@ -55,6 +55,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `UniqueTokenIdentifier` | `string` | Unique identifier embedded in every access token and ID token that were issued |
 | `TargetWorkload` | `string` | The target workload (for example, Microsoft.Exchange, Microsoft.SharePoint) the API call was made to |
 | `ServicePrincipalId` | `string` | The identifier for the Service Principal making the request |
+| `ResponseSize` | `int` | The size of the response in bytes |
 
 ## Related articles
 

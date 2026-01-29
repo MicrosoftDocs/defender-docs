@@ -7,7 +7,7 @@ author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - mde-macos
@@ -15,8 +15,8 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
 ms.subservice: edr
 search.appverid: met150
-ms.date: 04/30/2025
-appliesto: 
+ms.date: 01/15/2026
+appliesto:
     - Microsoft Defender for Endpoint Plan 2
     - Microsoft Defender for Business
 
@@ -35,31 +35,32 @@ Endpoint detection and response for Endpoint provide advanced attack detections 
 
 ### Windows
 
-1. Open a Command Prompt window.
+> [!TIP]
+> The Windows device must be listening for requests on TCP port 80 for the following commands to work. You can verify by running the following PowerShell command: `Test-NetConnection 127.0.0.1 -Port 80`.
 
-1. At the prompt, copy and run the following command. The Command Prompt window closes automatically.
+In a Command Prompt window, run the following commands:
 
-   ```powershell
-   powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden $ErrorActionPreference= 'silentlycontinue';(New-Object System.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe', 'C:\\test-WDATP-test\\invoice.exe');Start-Process 'C:\\test-WDATP-test\\invoice.exe'
-   ```
+```dos
+powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden $ErrorActionPreference='silentlycontinue';(New-Object System.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe', 'C:\\test-WDATP-test\\invoice.exe');Start-Process 'C:\\test-WDATP-test\\invoice.exe'
+```
 
-1. If successful, the detection test is marked as completed and a new alert appears within a few minutes.
+If successful, the detection test is marked as completed and a new alert appears within a few minutes.
 
 ### Linux
 
-1. Download [script file](https://aka.ms/MDE-Linux-EDR-DIY) to an onboarded Linux server. 
+1. Download [script file](https://aka.ms/MDE-Linux-EDR-DIY) to an onboarded Linux server.
 
    ```bash
    curl -o ~/Downloads/MDE-Linux-EDR-DIY.zip -L https://aka.ms/MDE-Linux-EDR-DIY
    ```
 
-1. Extract the zipped folder. 
+1. Extract the zipped folder.
 
    ```bash
    unzip ~/Downloads/MDE-Linux-EDR-DIY.zip
    ```
 
-1. Run the following command to give the script executable permission: 
+1. Run the following command to give the script executable permission:
 
    ```bash
    chmod +x ./mde_linux_edr_diy.sh
@@ -72,7 +73,7 @@ Endpoint detection and response for Endpoint provide advanced attack detections 
    ```
 
    After a few minutes, a detection should be raised in the [Microsoft Defender portal](https://security.microsoft.com). Look at the alert details, machine timeline, and perform your typical investigation steps.
- 
+
 ### macOS
 
 1. In your browser, Microsoft Edge for Mac or Safari, download *MDATP macOS DIY.zip* from [https://aka.ms/mdatpmacosdiy](https://aka.ms/mdatpmacosdiy) and extract the zipped folder.
@@ -122,7 +123,6 @@ Endpoint detection and response for Endpoint provide advanced attack detections 
     :::image type="content" source="media/b8db76c2-c368-49ad-970f-dcb87534d9be.png" alt-text="Screenshot that shows a macOS EDR test alert that shows severity, category, detection source, and a collapsed menu of actions":::
 
     The macOS EDR test alert shows severity, category, detection source, and a collapsed menu of actions. Look at the alert details and the device timeline, and perform the regular investigation steps.
-
 
 ## Next steps
 
