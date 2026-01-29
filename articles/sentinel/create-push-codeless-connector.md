@@ -511,10 +511,10 @@ Example:
 }
 ```
 
-[!IMPORTANT]
-- The `connectorDefinitionName` must exactly match the connector definition's `id`.
-- The `streamName` must match the stream declared in your DCR.
-- This resource is automatically created during deployment when users select the **DeployPushConnector** button.
+> [!IMPORTANT]
+> - The `connectorDefinitionName` must exactly match the connector definition's `id`.
+> - The `streamName` must match the stream declared in your DCR.
+> - This resource is automatically created during deployment when users select the **DeployPushConnector** button.
 
 
 
