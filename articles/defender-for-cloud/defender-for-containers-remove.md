@@ -1,6 +1,6 @@
 ---
 title: Disable and remove Defender for Containers
-description: Learn how to disable Microsoft Defender for Containers and remove its components for Kubernetes environments across Azure, AWS, Google Cloud, and Arc-enabled Kubernetes.
+description: Learn how to disable Microsoft Defender for Containers and remove its components for Kubernetes environments running on Azure, AWS, and Google Cloud.
 ms.topic: how-to
 ms.author: elkrieger
 author: ElazarK
@@ -71,6 +71,8 @@ The output should show `pricingTier` as `Free`.
 # [Amazon Elastic Kubernetes Service (EKS)](#tab/eks)
 
 ## Remove Defender extensions from EKS clusters
+
+Defender for Containers deploys components to EKS clusters by using Azure Arc–enabled Kubernetes. The following steps remove those Arc extensions.
 
 ### Remove the Defender extension
 
@@ -168,6 +170,8 @@ No resources should be returned.
 
 ## Remove Defender components from GKE clusters
 
+Defender for Containers deploys components to GKE clusters by using Azure Arc–enabled Kubernetes. The following steps remove those Azure Arc extensions.
+
 ### Remove the Defender extension
 
 ```azurecli
@@ -253,75 +257,6 @@ No resources should be returned.
 1. Verify the GCP connector is removed or shows **Containers** as disabled.
 
 1. Check that no GKE-related recommendations appear.
-
-# [Arc-enabled Kubernetes](#tab/arc)
-
-## Disable Defender for Containers plan
-
-1. Sign in to the [Azure portal](https://portal.azure.com).
-
-1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
-
-1. Select the subscription that contains your Arc-enabled Kubernetes clusters.
-
-1. In the Defender plans page, toggle **Containers** to **Off**.
-
-1. Select **Save**.
-
-## Remove Defender extensions from Arc-enabled clusters
-
-### Remove the Defender extension
-
-```azurecli
-az k8s-extension delete \
-  --name microsoft.azuredefender.kubernetes \
-  --cluster-type connectedClusters \
-  --cluster-name <cluster-name> \
-  --resource-group <resource-group> \
-  --yes
-```
-
-### Remove the Azure Policy extension (if installed)
-
-```azurecli
-az k8s-extension delete \
-  --name azurepolicy \
-  --cluster-type connectedClusters \
-  --cluster-name <cluster-name> \
-  --resource-group <resource-group> \
-  --yes
-```
-
-### Disconnect the cluster from Azure Arc (optional)
-
-> [!NOTE]
-> Disconnecting a cluster from Azure Arc removes access to all Arc extensions, not only Defender for Containers.
-
-```azurecli
-az connectedk8s delete \
-  --name <cluster-name> \
-  --resource-group <resource-group> \
-  --yes
-```
-
-## Verify removal
-
-### Check Azure resources
-
-```azurecli
-az k8s-extension list \
-  --cluster-type connectedClusters \
-  --cluster-name <cluster-name> \
-  --resource-group <resource-group>
-```
-
-### Check cluster pods
-
-```bash
-kubectl get pods -n kube-system -l app=microsoft-defender
-```
-
-No resources should be returned.
 
 ---
 
