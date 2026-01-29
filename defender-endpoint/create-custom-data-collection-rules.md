@@ -26,41 +26,114 @@ appliesto:
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
-[Custom data collection (Preview)](custom-data-collection.md) enables organizations to expand and customize telemetry collection beyond default configurations to support specialized threat hunting and security monitoring needs.
-
-Custom data collection rules allow you to define specific events and analyze the data to enhance your security visibility and threat hunting operations. Custom data collection rules are based on tailored filters for event properties such as folder paths, process names, and network connections.
-
 This article shows you how to create and manage custom data collection rules in the Microsoft Defender portal.
 
-## Create custom data collection rules
+> [!TIP]
+> Before creating custom collection rules, review [Custom data collection](custom-data-collection.md) to understand when and why to use this feature.
 
-### Prerequisites
+## Prerequisites
 
-To use custom data collection, check that you have the following prerequisites:
+Ensure you have:
 
-- A Microsoft Defender for Endpoint P2 license.
-- A connected [Microsoft Sentinel workspace](/azure/sentinel/quickstart-onboard): required for custom data storage and querying. You can currently only connect one Sentinel workspace per Defender for Endpoint tenant for custom data collection.
-    > [!NOTE]
-    > Even if you have a connected Microsoft Sentinel workspace, you still need to select the workspace when creating a custom data collection rule. For more information, see [Create rules](create-custom-data-collection-rules.md#create-rules).
-- Dynamic tags configured in [Asset Rule Management](/defender-xdr/configure-asset-rules) for device targeting. To use a tag for custom data collection, the tag should be run at least once.
+- **Microsoft Defender for Endpoint Plan 2** license
+- **Connected Microsoft Sentinel workspace** (required for custom data storage)
+- **Dynamic tags** configured in [Asset Rule Management](/defender-xdr/configure-asset-rules) and run at least once
+- **Supported operating systems**:
+  - Windows 10 and 11 (minimum client version 10.8805; Windows 10 requires ESU enrollment)
+  - Windows Server 2019 and later
 
-### Supported operating systems
-
-- **Windows 10 and 11** with a minimum Defender for Endpoint client version of 10.8805.
-    - Windows 10 requires enrollment in [Extended Security Updates (ESU) program](/windows/whats-new/extended-security-updates).
-- **Windows Server 2019** and later.
+> [!IMPORTANT]
+> Even if you have a connected Microsoft Sentinel workspace, you must select the workspace when creating custom data collection rules.
 
 ### Performance and limits
 
-- Each collection rule can capture up to 25,000 events per device within a 24-hour rolling window. Once the device reaches the limit, telemetry for the specific rule on the specific device stops until the window resets.
-    - If the device reaches the threshold early in the cycle, it can take up to 24 hours for telemetry to resume. For example, if the device reaches the limit one hour after the window resets, telemetry resumes after 23 hours.
-    - If the device reaches the threshold near the end of the window, the delay is shorter. For example, if the device reaches the limit two hours before the window resets, telemetry resumes after two hours.
-- Rule deployment typically takes 20 minutes to one hour.
-- Custom collection operates alongside default Defender for Endpoint configuration without interference.
+- Each rule can capture up to **25,000 events per device per 24-hour rolling window**
+- When a device reaches the threshold, telemetry for that rule stops until the window resets
+- Rule deployment typically takes 20 minutes to 1 hour
+- Custom collection operates alongside default configuration without interference
 
 ### Data costs
 
-Custom data collection is included with Microsoft Defender for Endpoint P2 licensing. However, data ingestion into Microsoft Sentinel workspaces incurs charges based on your Sentinel billing arrangement.
+- Custom data collection is included with Microsoft Defender for Endpoint P2
+- **Data ingestion into Microsoft Sentinel incurs charges** based on your Sentinel billing
+- Target collection to specific device groups to control costs
+
+## Common use cases and examples
+
+Before creating rules, consider these common scenarios:
+
+### Use case 1: Monitor critical application folder
+
+**Scenario**: Track all file activity in a folder containing sensitive financial data
+
+**Rule configuration**:
+- **Table**: DeviceCustomFileEvents
+- **Action**: FileCreated, FileModified, FileDeleted
+- **Condition**: FolderPath contains "\\\\FinanceApp\\\\Data\\\\"
+- **Target**: Dynamic tag "Finance-Servers"
+
+**Security value**: Detect unauthorized access, data exfiltration attempts, or ransomware activity targeting sensitive data.
+
+### Use case 2: Detect lateral movement
+
+**Scenario**: Monitor remote connections to domain controllers for lateral movement indicators
+
+**Rule configuration**:
+- **Table**: DeviceCustomNetworkEvents
+- **Action**: ConnectionSuccess
+- **Condition**: RemotePort equals "445" OR RemotePort equals "3389"
+- **Target**: Dynamic tag "Domain-Controllers"
+
+**Security value**: Identify suspicious authentication attempts and remote desktop connections that may indicate lateral movement.
+
+### Use case 3: Track PowerShell execution on admin workstations
+
+**Scenario**: Collect all PowerShell script executions for security analysis
+
+**Rule configuration**:
+- **Table**: DeviceCustomScriptEvents
+- **Action**: ScriptRun
+- **Condition**: FileName equals "powershell.exe"
+- **Target**: Dynamic tag "Admin-Workstations"
+
+**Security value**: Detect fileless malware, malicious scripts, or unauthorized automation on privileged systems.
+
+### Use case 4: Monitor DLL injection
+
+**Scenario**: Track suspicious DLL loads into critical processes
+
+**Rule configuration**:
+- **Table**: DeviceCustomImageLoadEvents
+- **Action**: ImageLoad
+- **Condition**: InitiatingProcessFileName equals "lsass.exe" OR InitiatingProcessFileName equals "explorer.exe"
+- **Target**: Dynamic tag "Sensitive-Workstations"
+
+**Security value**: Identify code injection techniques used by malware or attackers for privilege escalation or persistence.
+
+## Security considerations
+
+Before creating rules, understand these security implications:
+
+### Rule scope impact
+
+- **Overly broad rules** generate large data volumes, increasing costs and making analysis difficult
+- **Too narrow rules** may miss important security events
+- **Balance specificity** with coverage by iterating and refining rules based on initial results
+
+### Performance considerations
+
+- Each device has a 25,000 event per rule per day limit
+- Reaching the limit early stops collection for up to 24 hours
+- Target rules carefully to devices where monitoring is essential
+- Use multiple focused rules rather than one overly broad rule
+
+### Testing strategy
+
+1. Start with a small pilot group (5-10 devices) using a specific dynamic tag
+2. Monitor data volume and event quality for 24-48 hours
+3. Refine conditions based on initial results
+4. Gradually expand to larger device groups
+5. Review cost and performance metrics regularly
 
 ### Create rules
 
@@ -106,21 +179,87 @@ It can take up to an hour for the rule to be deployed to the targeted devices.
 
 ## Monitor and troubleshoot
 
-If rules aren't working as expected:
+### Verify rule deployment
 
-- Create a broad rule to collect events in an unexpected use case. For example, create a rule that collects all network events where `port not equals 0`.
-- Apply individual filters and tags to isolate issues.
-- If a device isn't responding after you enable the feature, reboot the device.
+To check if a rule is collecting data from a specific device, query the custom event tables:
 
-Review these considerations when monitoring and troubleshooting custom data collection rules:
+```kusto
+search in (DeviceCustomFileEvents, DeviceCustomScriptEvents, DeviceCustomNetworkEvents, DeviceCustomProcessEvents, DeviceCustomImageLoadEvents) "your_device_id"
+| where DeviceId == "your_device_id"
+| summarize EventCount = count() by RuleName, RuleLastModificationTime, $table
+| order by RuleLastModificationTime desc
+```
 
-- Endpoint detection and response (EDR) exclusions may override custom collection rules.
-- Dynamic tags update approximately every hour. Check the **Custom collection** > **Last run time** column for the status.
+### Common issues and solutions
 
-## Edit, delete, and enable or disable custom data collection rules
+| Issue | Possible cause | Solution |
+|-------|---------------|----------|
+| No events collected | Rule not yet deployed | Wait up to 1 hour for deployment; check rule status |
+| No events collected | Device not targeted correctly | Verify dynamic tag is applied to device and tag rule has run |
+| Events stopped collecting | 25,000 event limit reached | Review rule conditions to make them more specific; wait for 24-hour window to reset |
+| Unexpected devices collecting data | Dynamic tag applied broadly | Review tag rules in Asset Rule Management; refine targeting |
+| Rule not visible on device | Device doesn't meet OS requirements | Check client version and OS version meet minimum requirements |
 
-- To edit a rule, navigate to **Settings** > **Endpoints** > **Rules** > **Custom Collection**, select the rule you want to edit, and select **Edit**.
-- To disable or enable a rule, select the rule you want to modify, and select or clear the **Enable** check-box under the rule description. When you disable a rule,data collection for that rule stops on all targeted devices.
-- To delete a rule, select the rule you want to delete, and select **Delete**. When you delete a rule, the rule is permanently removed from the system.
+### Monitoring considerations
+
+- **EDR exclusions** may prevent custom collection on excluded paths or processes
+- **Dynamic tags update approximately every hour**—check **Last run time** in Asset Rule Management
+- **Device reboots** may be required if custom collection isn't initializing after feature enablement
+
+### Collect all events for a table
+
+To collect all events from a specific table (for testing or comprehensive monitoring):
+
+1. Create a rule with the desired table
+2. Select all available actions
+3. Add a condition that's always true, such as:
+   - For network events: `RemotePort not equals 0`
+   - For file events: `FileName not equals ""`
+   - For process events: `ProcessCommandLine not equals ""`
+4. Target to a small pilot group first due to high data volume
+
+> [!WARNING]
+> Collecting all events generates very large data volumes and can quickly reach the 25,000 event per device limit. Use comprehensive collection only for testing or specific investigative purposes on a small number of devices.
+
+## Manage rules
+
+### Edit a rule
+
+1. Navigate to **Settings** > **Endpoints** > **Rules** > **Custom Collection**
+2. Select the rule you want to edit
+3. Select **Edit**
+4. Modify rule settings as needed
+5. Select **Submit**
+
+Changes take effect on targeted devices within 20 minutes to 1 hour.
+
+### Disable or enable a rule
+
+1. In **Custom Collection**, select the rule
+2. Select or clear the **Enable** checkbox under the rule description
+
+When you disable a rule, data collection stops on all targeted devices immediately (within the next agent check-in).
+
+### Delete a rule
+
+1. In **Custom Collection**, select the rule
+2. Select **Delete**
+3. Confirm deletion
+
+> [!IMPORTANT]
+> Deleting a rule is permanent and cannot be undone. Historical data in Microsoft Sentinel remains available, but new collection stops immediately.
+
+## Next steps
+
+- **[Custom data collection overview](custom-data-collection.md)**: Review capabilities and when to use custom collection
+- **[Targeting devices](targeting-devices.md)**: Learn how tags enable device targeting at scale
+- **[Create and manage device tags](machine-tags.md)**: Configure dynamic tags for custom collection rules
+- **[Advanced hunting](/defender-xdr/advanced-hunting-overview)**: Query custom event tables in Microsoft Sentinel
+
+## See also
+
+- [Configure asset rules](/defender-xdr/configure-asset-rules)
+- [Microsoft Sentinel workspace connection](/azure/sentinel/quickstart-onboard)
+- [Advanced hunting schema tables](/defender-xdr/advanced-hunting-schema-tables)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

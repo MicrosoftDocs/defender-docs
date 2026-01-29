@@ -23,12 +23,28 @@ appliesto:
 
 # Device inventory
 
-The **Device inventory** shows a list of the devices in your network where alerts were generated. By default, the queue displays devices seen in the last 30 days. At a glance, you see information such as domain, risk level, OS platform, and other details for easy identification of devices most at risk.
+The **Device inventory** is the authoritative source of truth for all devices visible to Microsoft Defender for Endpoint. It shows devices that are onboarded (with the full agent installed) and devices discovered on your network through device discovery. 
+
+Use the device inventory to:
+
+- **Assess risk**: Identify devices with active alerts, high exposure, or security configuration issues
+- **Track onboarding**: Monitor which devices are onboarded vs. discovered but not yet protected
+- **Investigate incidents**: Start investigations from devices involved in security alerts
+- **Manage device lifecycle**: See device health, last seen time, and sensor status
 
 > [!NOTE]
 > The device inventory is available in Microsoft Defender XDR services. The available information might differ depending on your license. To get the most complete set of capabilities, use [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md).
 >
 > Risk Level, which can influence enforcement of Conditional Access and other security policies in Microsoft Intune, is now available for Windows devices.
+
+## Device lifecycle in Defender for Endpoint
+
+Managing devices follows a predictable lifecycle:
+
+1. **Discover**: Devices appear through onboarding or network discovery → *You are here: Device inventory*
+2. **Scope**: Decide which devices are relevant → [Manage device scope and relevance](manage-device-scope-relevance.md)
+3. **Classify**: Add tags for business context → [Create and manage device tags](machine-tags.md)
+4. **Act**: Target devices for security actions → [Targeting devices](targeting-devices.md)
 
 There are several options you can choose from to customize the devices list view. On the top navigation you can:
 
@@ -136,7 +152,7 @@ The available device properties to use as filters vary based on the device inven
 |**Device role**|All|The specific role of the device within the organization. For detailed descriptions of each role, see [Predefined classifications](/security-exposure-management/predefined-classification-rules-and-levels).|
 |**Device value**|All|The assigned value of the device. The available values are **High** and **Low**.|
 |**Discovery sources**|All|The source reporting on the device.|
-|**Exclusion state**|All|The available values are **Not excluded** and **Excluded**. For more information, see [Exclude devices](exclude-devices.md).|
+|**Exclusion state**|All|Whether the device is excluded from vulnerability management. See [Manage device scope and relevance](manage-device-scope-relevance.md).|
 |**Exposure level**|All|The exposure level of the device based on pending security recommendations. The available values are: <br/>- **High** <br/> - **Medium** <br/> - **Low**: Devices are less vulnerable to exploitation. <br/>- **No data available**: Possible causes for this value include: <br/> - The device is inactive (stopped reporting for more than 30 days). - The OS on the device isn't supported. For more information, see [minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md). - The agent software on the device is stale (unlikely).|
 |**First seen**|All tabs except **Network devices**|How long ago the device was first seen on the network or when it was first reported by the Microsoft Defender for Endpoint sensor. The available values are **Last 7 days** or **Over 7 days ago**.|
 |**Group**|**All devices**, **Computers & mobile**, **Network devices**|Device groups. Enter a value in the box.|
@@ -151,8 +167,8 @@ The available device properties to use as filters vary based on the device inven
 |**Risk level**|All|The overall risk assessment of the device based on a combination of factors, including the type and severity of active alerts on the device. The available values are: - **High** - **Medium** - **Low** - **Informational** - **No known risk** Resolving active alerts, approving remediation activities, and suppressing subsequent alerts can lower the risk level.|
 |**Sensor health state**|**All devices**, **Computers & mobile** |The available values for onboarded devices are: <br/> - **Active**: Devices that are actively reporting sensor data to the service. <br/> - **Inactive**: Devices that stopped sending signals for more than seven days. <br/> - **Misconfigured**: Devices with impaired communications or devices that can't send sensor data. For more information on how to address issues on misconfigured devices, see, [Fix unhealthy sensors](fix-unhealthy-sensors.md).|
 |**Site**|**All devices**, **IoT/OT**|Used for Defender for IoT [site security](/defender-for-iot/site-security-overview) (requires a Defender for IoT license).|
-|**Tags**|All|The grouping and tagging that you added to individual devices. For more information, see [Create and manage device tags](machine-tags.md).|
-|**Transient device**|All|The available values are **No** and **Yes**. By default, transient devices are filtered to reduce inventory noise. For more information, see [Identifying transient devices](transient-device-tagging.md).|
+|**Tags**|All|Tags added to devices for organization and targeting. See [Create and manage device tags](machine-tags.md).|
+|**Transient device**|All|Devices that appear intermittently on the network. By default, transient devices are filtered out. See [Manage device scope and relevance](manage-device-scope-relevance.md).|
 |**Vendor**|**All devices**|The vendor of the device. Enter a value or select from the available values.|
 |**Windows version**|**Computers & mobile**|The version of Windows. The **OS version** filter is also available.  <br/><br/>The value **Future version** for this property is caused by one of the following scenarios:<br/>- A prerelease build of a future Windows release <br/>- The build has no version name.<br/>- The build version name isn't yet supported<br/><br/>The full OS version is visible on the device details page.|
 
@@ -284,9 +300,20 @@ You can sort the entries by clicking on an available column header. Select :::im
 > [!TIP]
 > The API, UI, export, and AH interfaces all draw from a single authoritative data source. However, because each is powered by separate backend systems with different update frequencies, slight variations may appear across views—especially in short-term queries or recently reactivated devices. Each interface is optimized for its specific use case: export for large data retrieval, UI for fast interactive tasks like tag management, and AH for tracking device update history over time.
 
+## Next steps
+
+Now that you understand your device inventory, continue through the device lifecycle:
+
+- **[Manage device scope and relevance](manage-device-scope-relevance.md)**: Control which devices are relevant to your security operations
+- **[Create and manage device tags](machine-tags.md)**: Add business context and organize devices into groups
+- **[Targeting devices](targeting-devices.md)**: Use tags to apply security actions at scale
+- **[Investigate devices](investigate-machines.md)**: Deep-dive into specific devices for incident response
+
 ## Related articles
 
-[Investigate devices in the Microsoft Defender for Endpoint Devices list](investigate-machines.md).
+- [Devices in Microsoft Defender for Endpoint](devices-overview.md)
+- [Fix unhealthy sensors](fix-unhealthy-sensors.md)
+- [Device health reports](device-health-microsoft-defender-antivirus-health.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
