@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn how to use Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools or your own custom tool in Microsoft Foundry 
 author: poliveria
 ms.topic: how-to
-ms.date: 01/29/2026
+ms.date: 01/30/2026
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 
