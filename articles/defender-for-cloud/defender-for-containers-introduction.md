@@ -99,8 +99,8 @@ In this overview, you learned about the core elements of container security in M
 
 - [Defender for Containers deployment overview](defender-for-containers-deployment-overview.md)
 
-- [Enable Defender for Containers using the Azure portal](defender-for-containers-enable-portal.md)
+- [Enable Defender for Containers in Microsoft Defender for Cloud](defender-for-containers-enable-portal.md)
 
-- [Enable Defender for Containers using the Azure CLI](defender-for-containers-enable-azure-cli.md)
+- [Deploy Defender for Containers components using the Azure CLI](defender-for-containers-deploy-azure-cli.md)
 
 - Check out [common questions](faq-defender-for-containers.yml) about Defender for Containers.

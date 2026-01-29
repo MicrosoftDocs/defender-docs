@@ -1,15 +1,19 @@
 ---
-title: Enable Defender for Containers using the Azure portal
-description: Learn how to enable Microsoft Defender for Containers for Kubernetes environments across Azure, AWS, and Google Cloud by using the Azure portal.
+title: Enable Defender for Containers in Microsoft Defender for Cloud
+description: Learn how to enable Microsoft Defender for Containers for Kubernetes environments across Azure, AWS, and Google Cloud.
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
 ms.date: 01/19/2026
 ---
 
-# Enable Defender for Containers using the Azure portal
+# Enable Defender for Containers in Microsoft Defender for Cloud
 
-This article explains how to enable Microsoft Defender for Containers and deploy its components by using the Azure portal for different Kubernetes environments.
+This article explains how to enable the Microsoft Defender for Containers plan in Microsoft Defender for Cloud.
+
+Enabling the plan activates container protection for supported Kubernetes environments across Azure, AWS, and Google Cloud. Defender for Cloud deploys required components automatically or through security recommendations.
+
+For clusters that aren't running in Azure, Defender for Cloud uses Azure Arc–enabled Kubernetes to deploy sensors and policy extensions.
 
 # [Azure Kubernetes Service (AKS)](#tab/aks)
 
@@ -78,8 +82,6 @@ Use the Azure portal to verify that Defender for Containers components were depl
 
 - Container images stored in Amazon ECR.
 
-- EKS clusters must be connectable to Azure Arc.
-
 ## Network requirements
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
@@ -106,7 +108,7 @@ Use the Azure portal to verify that Defender for Containers components were depl
     - **Auto provision Azure Policy extension for Azure Arc**
     - **Kubernetes API access**
     - **Registry access**
-        - If needed, enable security fidings
+        - If enabled, optionally enable security fidings
 
 1. Select **Continue**.
 
@@ -186,8 +188,6 @@ Use the Azure portal to verify that Defender for Containers components were depl
 - A GCP project connected to Microsoft Defender for Cloud. If you haven’t connected your project yet, see [Connect your GCP project to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
 
 - One or more GKE clusters running Kubernetes version 1.19 or later.
-
-- GKE clusters must be connectable to Azure Arc.
 
 ## Network requirements
 
@@ -342,7 +342,7 @@ After connecting your GKE clusters to Azure Arc:
 
 - [Defender for Containers deployment overview](defender-for-containers-deployment-overview.md)
 
-- [Enable Defender for Containers using the Azure CLI](defender-for-containers-enable-azure-cli.md)
+- [Deploy Defender for Containers components using Azure CLI](defender-for-containers-deploy-azure-cli.md)
 
 - [Troubleshoot Defender for Containers on AWS (EKS)](defender-for-containers-aws-troubleshoot.md)
 

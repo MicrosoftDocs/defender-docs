@@ -211,6 +211,6 @@ After deletion, redeploy the extension by following the remediation steps in **M
 
 ## Related content
 
-- [Enable Defender for Containers using the Azure portal](defender-for-containers-enable-portal.md)
+- [Enable Defender for Containers in Microsoft Defender for Cloud](defender-for-containers-enable-portal.md)
 
-- [Enable Defender for Containers using the Azure CLI](defender-for-containers-enable-azure-cli.md)
+- [Deploy Defender for Containers components using Azure CLI](defender-for-containers-deploy-azure-cli.md)

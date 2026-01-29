@@ -1,19 +1,23 @@
 ---
-title: Enable Defender for Containers using Azure CLI
-description: Learn how to enable Microsoft Defender for Containers on AKS, Amazon EKS, and Google Kubernetes Engine clusters using Azure CLI.
+title: Deploy Defender sensor and Azure Policy to clusters using Azure CLI
+description: Learn how to deploy Microsoft Defender for Containers sensors and Azure Policy components to AKS, Amazon EKS, and Google Kubernetes Engine clusters by using Azure CLI.
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
 ms.date: 11/27/2025
 ---
 
-# Enable Defender for Containers using Azure CLI
+# Deploy Defender sensor and policy to clusters using Azure CLI
 
-This article explains how to enable Microsoft Defender for Containers and deploy its components by using Azure CLI for different Kubernetes environments.
+This article explains how to deploy the Microsoft Defender for Containers sensor and Azure Policy for Kubernetes to clusters by using Azure CLI after [enabling the Defender for Containers plan in Microsoft Defender for Cloud](defender-for-containers-enable-portal.md).
+
+For clusters that aren’t running in Azure Kubernetes Service (AKS), Defender for Cloud uses Azure Arc–enabled Kubernetes to deploy the required extensions.
 
 # [Azure Kubernetes Service (AKS)](#tab/aks)
 
 ## Prerequisites
+
+- [Defender for Containers enabled on your Azure subcription](defender-for-containers-enable-portal.md?tab=aks).
 
 - Azure CLI version 2.40.0 or later. 
 
@@ -27,17 +31,9 @@ This article explains how to enable Microsoft Defender for Containers and deploy
 
 [!INCLUDE[defender-for-container-prerequisites-aks](includes/defender-for-containers-network-requirements-aks.md)]
 
-## Enable the Defender for Containers plan
-
-Enable the Defender for Containers plan on your subscription before continuing.
-
-For information about enabling Defender plans by using Azure CLI, REST API, or Azure Policy, see [Enable Microsoft Defender for Cloud](connect-azure-subscription.md).
-
 ## Deploy the Defender sensor
 
-When you enable the Defender for Containers plan, the Defender sensor is deployed on AKS clusters by default.
-
-If automatic provisioning is disabled or you want to deploy the sensor on a specific cluster, run the following commands.
+If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](#verify-deployment) before running these commands.
 
 To deploy the Defender sensor to a specific AKS cluster:
 
@@ -102,11 +98,9 @@ The output should show `enabled: true`.
 
 ## Prerequisites
 
-- An AWS account with permissions to create and manage IAM roles and deploy CloudFormation stacks. Learn how to [connect your AWS account to Microsoft Defender for Cloud](quickstart-onboard-aws.md).
+- [Defender for Containers enabled on your AWS connector](defender-for-containers-enable-portal.md?tab=eks). 
 
 - Azure CLI version 2.40.0 or later.
-
-- AWS CLI configured with appropriate credentials.
 
 - `kubectl` configured for your EKS clusters.
 
@@ -116,15 +110,11 @@ The output should show `enabled: true`.
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
 
-## Enable Defender for Containers -> move to prerquisite
-
-Enable the Defender for Containers plan on your Azure subscription before continuing.
-
-For information about enabling Defender plans by using Azure CLI, REST API, or Azure Policy, see [Enable Microsoft Defender for Cloud](connect-azure-subscription.md).
-
 ## Deploy the Defender sensor
 
-After connecting your AWS account and EKS clusters to Azure Arc, deploy the Defender sensor extension.
+For EKS clusters, Defender components are deployed as Azure Arc Kubernetes extensions when you deploy them manually using Azure CLI.
+
+If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](#verify-deployment) before running these commands.
 
 ```azurecli
 az k8s-extension create \
@@ -165,6 +155,19 @@ az connectedk8s show \
 
 The output should show `Connected`.
 
+### Verify that Defender and Azure Policy extensions are installed
+
+```azurecli
+az k8s-extension list \
+  --cluster-type connectedClusters \
+  --cluster-name <cluster-name> \
+  --resource-group <resource-group>
+```
+
+Confirm that the following extensions are listed with `provisioningState` set to `Succeeded`:
+- `microsoft.azuredefender.kubernetes`
+- `azurepolicy`
+
 ### Verify that the Defender for Containers DaemonSet is deployed and running
 
 ```bash
@@ -177,37 +180,23 @@ Confirm that a Defender for Containers DaemonSet is listed and that the **DESIRE
 
 ## Prerequisites
 
-- A GCP project connected to Microsoft Defender for Cloud. If you haven’t connected your project yet, see [Connect your GCP project to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
+- [Defender for Containers enabled on your GCP connector](defender-for-containers-enable-portal.md?tab=gke). 
 
 - Azure CLI version 2.40.0 or later.
 
-- gcloud CLI configured with appropriate credentials.
-
 - `kubectl` configured for your GKE clusters.
 
-- GKE clusters must be connectable to Azure Arc.
+- [GKE clusters connected to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
 
 ## Network requirements
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
 
-## Enable Defender for Containers
-
-Enable the Defender for Containers plan on your Azure subscription before continuing.
-
-For information about enabling Defender plans by using Azure CLI, REST API, or Azure Policy, see [Enable Microsoft Defender for Cloud](connect-azure-subscription.md).
-
-## Connect your GCP project
-
-[Connect your GCP project to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
-
-## Connect GKE clusters to Azure Arc
-
-Connect each GKE cluster to Azure Arc before deploying Defender components.
-
-For instructions, see [Connect an existing Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
-
 ## Deploy the Defender sensor
+
+For GKE clusters, Defender components are deployed as Azure Arc Kubernetes extensions when you deploy them manually using Azure CLI.
+
+If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](#verify-deployment) before running these commands.
 
 ```azurecli
 az k8s-extension create \
@@ -248,6 +237,19 @@ az connectedk8s show \
 
 The output should show `Connected`.
 
+### Verify that Defender and Azure Policy extensions are installed
+
+```azurecli
+az k8s-extension list \
+  --cluster-type connectedClusters \
+  --cluster-name <cluster-name> \
+  --resource-group <resource-group>
+```
+
+Confirm that the following extensions are listed with `provisioningState` set to `Succeeded`:
+- `microsoft.azuredefender.kubernetes`
+- `azurepolicy`
+
 ### Verify that the Defender for Containers DaemonSet is deployed and running
 
 ```bash
@@ -262,7 +264,7 @@ Confirm that a Defender for Containers DaemonSet is listed and that the **DESIRE
 
 - [Defender for Containers deployment overview](defender-for-containers-deployment-overview.md)
 
-- [Enable Defender for Containers using the Azure portal](defender-for-containers-enable-portal.md)
+- [Enable Defender for Containers](defender-for-containers-enable-portal.md)
 
 - [Troubleshoot Defender for Containers on AWS (EKS)](defender-for-containers-aws-troubleshoot.md)
 
