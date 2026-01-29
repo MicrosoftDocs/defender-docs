@@ -105,7 +105,7 @@ Custom tools let you build deterministic workflows by prescribing exactly what d
 
 1. Add the following values:
     - **Name:** Enter a friendly name for your tool
-    - **Remote MCP server endpoint:** Paste the endpoint you copied from your custom tool collection; it should the following format:
+    - **Remote MCP server endpoint:** Paste the endpoint you copied from your custom tool collection; it should have the following format:
         ```
         https://sentinel.microsoft.com/mcp/custom/<name of your custom collection>
         ```
