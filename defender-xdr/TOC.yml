@@ -486,6 +486,14 @@
             href: advanced-hunting-security-copilot-threat-hunting-agent.md
           - name: Dynamic Threat Detection Agent
             href: dynamic-threat-detection-agent.md
+    - name: Identity Security
+      items:
+      - name: Identity Security overview
+        href: identity-security.md
+      - name: Identity inventory
+        href: /defender-for-identity/identity-inventory.mdtoc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+      - name: AI agent inventory
+        href: ai-agent-inventory.md
     - name: Enhance security operations
       items:
       - name: Security operations guide
