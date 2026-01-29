@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
 ms.topic: concept-article
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: yongrhee
 manager: bagol
@@ -68,5 +68,5 @@ Although you can use a non-Microsoft antivirus solution with Microsoft Defender 
 [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
 
 [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

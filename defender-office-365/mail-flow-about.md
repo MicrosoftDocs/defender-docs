@@ -19,7 +19,7 @@ ms.collection:
 search.appverid: met150
 ms.date: 07/09/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -28,7 +28,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In all organizations with cloud mailboxes, all messages sent to your organization pass through the [default email protections for cloud mailboxes](eop-about.md) before users see them. You have options about how to route messages before they're routed to user mailboxes.
+In all organizations with cloud mailboxes, all messages sent to your organization pass through [the built-in security features for all cloud mailboxes](eop-about.md) before users see them. You have options about how to route messages before they're routed to user mailboxes.
 
 ## Working with messages and message access options
 
@@ -44,7 +44,7 @@ Microsoft 365 offers flexibility in how your messages are routed. The following 
 
 - [Enhanced Filtering for Connectors](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) describes how to configure connectors if your internet mail is routed to a service or device before delivery to Microsoft 365.
 
-- In hybrid environments where Exchange Online Protection (EOP) provides cloud protection of on-premises Exchange mailboxes, you need to configure Exchange mail flow rules (also known as transport rules) in your on-premises Exchange organization to recognize the spam filtering verdicts from the cloud. For details, see [Deliver cloud-detected spam to the Junk Email folder in on-premises mailboxes](/exchange/standalone-eop/configure-eop-spam-protection-hybrid).
+- In environments where the built-in security features for all cloud mailboxes protect on-premises Exchange mailboxes, you need to configure Exchange mail flow rules (also known as transport rules) in your on-premises Exchange organization to recognize the spam filtering verdicts from the cloud. For details, see [Deliver cloud-detected spam to the Junk Email folder in on-premises mailboxes](/exchange/standalone-eop/configure-eop-spam-protection-hybrid).
 
   If you don't  want to move messages to each user's Junk Email folder, you can choose another action by editing the default anti-spam policy or custom anti-spam policies. For more information, see [Actions in anti-spam policies](anti-spam-protection-about.md#actions-in-anti-spam-policies).
 
@@ -74,7 +74,7 @@ After you opt in, the source email server must meet both of the following requir
 
   > 450 4.7.26 Service unavailable, message sent over IPv6 [2a01:111:f200:2004::240] must pass either SPF or DKIM validation.
 
-Anonymous email from IPv6 sources goes through the default email protections for cloud mailboxes and Microsoft Defender for Office 365.
+Anonymous email from IPv6 sources goes through [the built-in security features for all cloud mailboxes](eop-about.md) and Microsoft Defender for Office 365.
 
 ## Mail flow delivery FAQ
 

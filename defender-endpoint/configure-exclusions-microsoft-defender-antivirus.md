@@ -4,8 +4,8 @@ description: You can exclude files (including files modified by specified proces
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 10/20/2025
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: ksarens
 manager: bagol
@@ -141,5 +141,4 @@ If exclusions can't be removed for the Exchange processes and folders, keep in m
 - [Configure and validate exclusions for Microsoft Defender for Endpoint on Linux](linux-exclusions.md)
 - [Configure and validate exclusions for Microsoft Defender for Endpoint on macOS](mac-exclusions.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

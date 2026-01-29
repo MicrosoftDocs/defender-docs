@@ -5,6 +5,8 @@ ms.service: defender-endpoint
 ms.subservice: onboard
 ms.author: lwainstein
 author: limwainstein
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro

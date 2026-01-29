@@ -19,6 +19,7 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: how-to
+ms.update-cycle: 180-days
 ms.date: 12/12/2025
 appliesto:
 - Microsoft Defender

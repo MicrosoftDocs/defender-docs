@@ -423,5 +423,5 @@ mdatp threat allowed add --name "EICAR-Test-File (not a virus)"
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

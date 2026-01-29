@@ -2,8 +2,8 @@
 title: Find device information by internal IP API
 description: Use this API to create calls related to finding a device entry around a specific timestamp by internal IP.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 
 ms.localizationpriority: medium
 manager: bagol

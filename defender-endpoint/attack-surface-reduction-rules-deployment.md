@@ -206,5 +206,5 @@ Some rules don't work well if unsigned, internally developed application and scr
 
 [Attack surface reduction rules exclusions](https://security.microsoft.com/asr?viewid=exclusions)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

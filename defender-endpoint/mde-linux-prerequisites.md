@@ -1,4 +1,4 @@
-﻿---
+---
 title: Prerequisites for Microsoft Defender for Endpoint on Linux
 ms.reviewer: gopkr, pahuijbr, megphapriya
 description: Describes the requirements needed to install and use Microsoft Defender for Endpoint on Linux.
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: article
 ms.subservice: linux
 search.appverid: met150
-ms.date: 12/10/2025
+ms.date: 01/23/2025
 ---
 
 # Prerequisites for Microsoft Defender for Endpoint on Linux
@@ -85,7 +85,7 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 - Ubuntu 24.04 LTS
 - Ubuntu Pro 22.04
 - Ubuntu Pro 24.04
-- Debian 9 - 12
+- Debian 9 - 13
 - SUSE Linux Enterprise Server 12.x
 - SUSE Linux Enterprise Server 15.x
 - Oracle Linux 7.2 and higher
@@ -230,5 +230,4 @@ If you experience any installation issues, self-troubleshooting resources are av
 - [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md)
 - [Install Defender for Endpoint on Linux to a custom path](linux-custom-location-installation.md)
 
-> [!TIP]
-> Do you want to learn more? Engage with the Microsoft Security community in our Tech Community: [Microsoft Defender for Endpoint Tech Community](https://techcommunity.microsoft.com/category/microsoft-defender-for-endpoint/discussions/microsoftdefenderatp)
+

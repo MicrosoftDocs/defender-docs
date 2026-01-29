@@ -18,6 +18,7 @@ ms.topic: article
 search.appverid:
 - MOE150
 - MET150
+ms.update-cycle: 180-days
 ms.date: 01/08/2026
 appliesto:
 - Microsoft Defender XDR

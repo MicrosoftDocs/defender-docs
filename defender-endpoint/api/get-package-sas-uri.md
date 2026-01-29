@@ -2,8 +2,8 @@
 title: Get package SAS URI API
 description: Use this API to get a URI that allows downloading an investigation package.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro

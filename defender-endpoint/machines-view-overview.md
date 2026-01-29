@@ -315,5 +315,5 @@ Now that you understand your device inventory, continue through the device lifec
 - [Fix unhealthy sensors](fix-unhealthy-sensors.md)
 - [Device health reports](device-health-microsoft-defender-antivirus-health.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

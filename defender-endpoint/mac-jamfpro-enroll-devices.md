@@ -2,8 +2,8 @@
 title: Enroll Microsoft Defender for Endpoint on macOS devices into Jamf Pro
 description: Enroll Microsoft Defender for Endpoint on macOS devices into Jamf Pro
 ms.service: defender-endpoint
-author: KesemSharabi
-ms.author: kesharab
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
 manager: bagol
 ms.localizationpriority: medium
@@ -99,5 +99,5 @@ For a complete list, see [About Computer Enrollment](https://docs.jamf.com/9.9/c
 
    :::image type="content" source="media/jamfpro-mdm-profile.png" alt-text="The Jamf Pro enrollment6" lightbox="media/jamfpro-mdm-profile.png":::
    
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
