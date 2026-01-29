@@ -25,6 +25,14 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## January 2026
 
+### Identity inventory enhancements are now generally available
+
+- **Accounts tab in Identity Inventory**: The new **Accounts** tab provides a consolidated view of all accounts associated with an identity, including accounts from Active Directory, Microsoft Entra ID, and supported non-Microsoft identity providers. For more information, see [Manage related identities and accounts](manage-related-identities-accounts.md).
+- **Manually link and unlink accounts**: Manually link or unlink accounts from an identity directly in the **Accounts** tab. This capability helps you correlate identity components from different directory sources and provides a complete identity context during investigations. For more information, see [Manage related identities and accounts](manage-related-identities-accounts.md).
+- **Identity-level remediation actions**: You can now perform remediation actions such as disabling accounts or resetting passwords on one or more accounts linked to an identity. For more information, see [Remediation actions](remediation-actions.md#roles-and-permissions).
+- **New advanced hunting table**: Advanced hunting in Microsoft Defender now includes the **[IdentityAccountInfo](
+/defender-xdr/advanced-hunting-identityaccountinfo-table)** table. This table provides account information from various sources, including Microsoft Entra ID, and links to the identity that owns the account.
+
 
 ### New security posture assessment: Remove stale Active Directory accounts
 
@@ -60,9 +68,7 @@ You can use this assessment to identify service accounts with elevated permissio
 
 For more information, see:[Security posture assessment: Identify service accounts in privileged groups](security-posture-assessments/accounts.md#identify-service-accounts-in-privileged-groups)
 
-
 ### New security posture assessment: Locate accounts in built-in Operator Groups
-
 
 This identity security posture assessment lists Active Directory accounts that are members of built-in Operator Groups, including direct and indirect membership. 
 
@@ -103,12 +109,12 @@ The following new features are now available in Microsoft Defender for Identity:
 
 **Accounts tab in Identity Inventory**:
 
-A new Accounts tab provides a consolidated view of all accounts associated with an identity, including accounts from Active Directory, Microsoft Entra ID, and supported third-party identity providers. For more information, see: [Manage related identities and accounts (Preview)](manage-related-identities-accounts.md)
+A new Accounts tab provides a consolidated view of all accounts associated with an identity, including accounts from Active Directory, Microsoft Entra ID, and supported non-Microsoft identity providers. For more information, see: [Manage related identities and accounts (Preview)](manage-related-identities-accounts.md)
 
 **Manual link and unlink of accounts**:
 
 You can now manually link or unlink accounts from an identity directly in the Accounts tab. This capability helps you correlate identity components from different directory sources and provides a complete identity context during investigations.
-For more information, see: [Manage related identities and accounts (Preview)](manage-related-identities-accounts.md).
+For more information, see: [Manage related identities and accounts](manage-related-identities-accounts.md).
 
 **Identity-level remediation actions**:
 
@@ -116,7 +122,7 @@ You can now perform remediation actions such as disabling accounts or resetting 
 
 ### New security posture assessment: Change password for on-premises account with potentially leaked credentials (Preview)
 
-The new security posture assessment lists users whose valid credentials have been leaked. For more information, see: [Change password for on-premises account with potentially leaked credentials (Preview)](/defender-for-identity/security-posture-assessments/accounts#change-password-for-on-prem-account-with-potentially-leaked-credentials-preview)
+The new security posture assessment lists users whose valid credentials were leaked. For more information, see: [Change password for on-premises account with potentially leaked credentials (Preview)](/defender-for-identity/security-posture-assessments/accounts#change-password-for-on-prem-account-with-potentially-leaked-credentials-preview)
 
 ### Microsoft Defender for Identity sensor version updates
 
@@ -139,7 +145,7 @@ The [Microsoft Defender for Identity sensor v3.x](/defender-for-identity/deploy/
 
 |Version number|Updates|
 |---|---|
-|2.249|The improved event log query method now captures a broader range of unique events at scale. As a result, you might notice an increase in captured activities. This update also delivers additional security enhancements and performance improvements.|
+|2.249|The improved event log query method now captures a broader range of unique events at scale. As a result, you might notice an increase in captured activities. This update also delivers other security enhancements and performance improvements.|
 
 ## September 2025
 
@@ -162,7 +168,7 @@ Apply the **Unified sensor RPC audit** tag to your Defender for Identity sensor 
 
 ### Identity posture recommendations view on the identity page (preview)
 
-We've added a new tab on the Identity profile page that contains all active identity-related identity security posture assessments (ISPMs). This feature consolidates all identity-specific security posture assessments into a single contextual view, helping security teams quickly spot weaknesses and takes targeted actions.
+A new tab on the Identity profile page contains all active identity-related identity security posture assessments (ISPMs). This page consolidates all identity-specific security posture assessments into a single contextual view, helping security teams quickly spot weaknesses and take targeted actions.
 For more information, see [Investigate users in Microsoft Defender XDR](/microsoft-365/security/defender/investigate-users).
 
 ### New Regional Availability: United Arab Emirates
@@ -204,9 +210,9 @@ The improvements will gradually take effect across the following detections:
 - Suspicious modification of Resource Based Constrained Delegation by a machine account
 - Remote code execution attempt
 
-### Unified connectors is now available for Okta Single Sign-On connectors (Preview)
+### Unified connectors is now available for Okta single sign-on connectors (Preview)
 
-Microsoft Defender for Identity supports the [Unified connectors](/azure/sentinel/unified-connector) experience, starting with the Okta Single Sign-On connector. This enables Defender for Identity to collect Okta system logs once and share them across supported Microsoft security products, reducing API usage and improving connector efficiency.
+Microsoft Defender for Identity supports the [Unified connectors](/azure/sentinel/unified-connector) experience, starting with the Okta single sign-on connector. The unified connector enables Defender for Identity to collect Okta system logs once and share them across supported Microsoft security products, reducing API usage and improving connector efficiency.
 
 For more information, see: [Connect Okta to Microsoft Defender for Identity (Preview)](okta-integration.md)
 
@@ -222,7 +228,7 @@ For UEBA tenants without a Microsoft Defender for Identity license, synchronizat
 
 ### New security assessment: Remove inactive service accounts
 
-Microsoft Defender for Identity now includes a new security assessment that helps you identify and remove inactive service accounts in your organization. This assessment lists Active Directory service accounts that have been inactive for the past 90 days, to help you mitigate security risks associated with unused accounts.
+Microsoft Defender for Identity now includes a new security assessment that helps you identify and remove inactive service accounts in your organization. This assessment lists Active Directory service accounts that were inactive for the past 90 days, to help you mitigate security risks associated with unused accounts.
 
 For more information, see: Security Assessment: [Remove Inactive Service Accounts (Preview)](/defender-for-identity/remove-inactive-service-account).
 
@@ -265,7 +271,7 @@ The Identity Threat Detection and Response (ITDR) deployment health widget now p
 
 ### Time limit added to Recommended test mode
 
-Recommended test mode configuration on the [Adjust alert thresholds page](/defender-for-identity/advanced-settings), now requires you to set an expiration time (up to 60 days) when enabling it. The end time is shown next to the toggle while test mode is active. For customers who already have Recommended test mode enabled, a 60-day expiration is automatically applied.
+Recommended test mode configuration on the [Adjust alert thresholds page](/defender-for-identity/advanced-settings), now requires you to set an expiration time (up to 60 days) when enabling it. The end time is shown next to the toggle while test mode is active. For customers who have already enabled Recommended test mode, a 60-day expiration is automatically applied.
 
 ### Identity scoping is now available in Governance environments
 
@@ -295,7 +301,7 @@ MDI scoping is now available as part of XDR User Role-Based Access Control (URBA
 
 Scoping by Active Directory domains helps:
 
-- Optimize performance: Focus monitoring on critical assets and reduce noise from non-essential data.
+- Optimize performance: Focus monitoring on critical assets and reduce noise from nonessential data.
 
 - Enhance visibility control: Tailor MDI coverage to specific domains and user groups.
 
@@ -376,7 +382,7 @@ This update provides:
 
 - Automatic identification of Group Managed Service Accounts, Managed Service Accounts, and user accounts operating as service accounts.
 
-- A centralized Service Accounts inventory, displaying key attributes like account type, authentication type, unique connections, last log-on, service class and criticality.
+- A centralized Service Accounts inventory, displaying key attributes like account type, authentication type, unique connections, last sign in, service class and criticality.
 
 - A Service Account details page, including an overview, a timeline of activities, alerts, and a new connections tab.
 
@@ -389,7 +395,7 @@ The updated Identities Inventory page now includes the following tabs:
 
 - Identities: A consolidated view of identities across Active Directory, Microsoft Entra ID. This Identities tab highlights key details, including identity types, and user's information.
 
-- Cloud application accounts: Displays a list of cloud application accounts, including those from application connectors and third-party sources (original available in the previous version based on Microsoft Defender for Cloud Apps).
+- Cloud application accounts: Displays a list of cloud application accounts, including those from application connectors and non-Microsoft sources (original available in the previous version based on Microsoft Defender for Cloud Apps).
 
 For more information, see [Identity inventory details](/defender-for-identity/identity-inventory).
 
@@ -581,7 +587,7 @@ With this data, customers can now easily create their own [custom detection rule
 
 Access Microsoft Defender portal -> Hunting -> Advanced Hunting.
 
-Now, you can copy our recommended query as provided below, and select on "Create detection rule". Our provided query also tracks failed logon attempts, which might generate information unrelated to a potential attack. Therefore, feel free to customize the query to suit your specific requirements.
+Now, you can copy our recommended query as provided below, and select on "Create detection rule". Our provided query also tracks failed sign in attempts, which might generate information unrelated to a potential attack. Therefore, feel free to customize the query to suit your specific requirements.
 
 ```kusto
 IdentityLogonEvents
