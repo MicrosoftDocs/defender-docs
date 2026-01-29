@@ -21,7 +21,7 @@ For the full alert schema, see the [Security alert schema reference](security-al
 
 The CompromisedEntity field is handled differently across products when alerts are ingested through the XDR connector.
 
-| Product | CompromisedEntity value in XDR alerts |
+| Product | CompromisedEntity equivalent value in XDR alerts |
 |---------|----------------------------------------|
 | Microsoft Defender for Endpoint (MDE) | The device where `"LeadingHost": true` in the alert entities JSON |
 | Microsoft Entra ID (Identity Protection) | Always set to the user’s UPN |
@@ -54,7 +54,7 @@ The standalone Microsoft Defender for Identity (MDI) connector sometimes used pl
 | ResourceAccessInfo.ResourceIdentifier.ResourceName | `resourceAccessEvents[].ResourceIdentifier` |
 | DomainResourceIdentifier | `resourceAccessEvents[].ResourceIdentifier` |
 
-ResourceAccessInfo.ComputerId is no longer required because it is identical to the Host entity.
+ResourceAccessInfo.ComputerId is no longer required because it is identical to the Host entity that ResourceAccessInfo is defined in.
 
 ## Alert ingestion filtering
 
@@ -63,7 +63,7 @@ Some alerts available through standalone connectors aren't ingested through the 
 | Product | Filtering behavior |
 |---------|--------------------|
 | Microsoft Defender for Cloud (MDC) | Informational severity alerts aren't ingested |
-| Microsoft Entra ID | By default, alerts below High severity are filtered. Customers can configure ingestion to include all severities. |
+| Microsoft Entra ID | By default, alerts below High severity aren't ingested. Customers can configure ingestion to include all severities. |
 
 ## Scoping behavior (Microsoft Defender for Cloud)
 
@@ -76,11 +76,7 @@ Microsoft Defender for Cloud alerts use different scoping when ingested through 
 > [!NOTE]
 > All MDC alerts are available in the primary workspace for the tenant. Alerts are scoped according to MDC subscription scopes within Defender XDR.
 
-## Microsoft Defender for Cloud Apps
-
-The Microsoft Defender for Cloud Apps connector has no schema differences between the legacy and XDR connectors.
-
-## What’s next
+## Next steps
 
 - [Create and manage analytic rules](create-analytics-rules.md)
 - [Use workbooks in Microsoft Sentinel](monitor-your-data.md)
