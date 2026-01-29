@@ -1,5 +1,5 @@
 ---
-title: Which logs should you ingest into the data lake
+title: Which logs should you ingest into the Microsoft Sentinel data lake
 description: How to choose which log sources to ingest into your Microsoft Sentinel data lake.
 ms.topic: conceptual
 ms.date: 01/29/2026
