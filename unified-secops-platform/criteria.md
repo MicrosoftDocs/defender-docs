@@ -75,7 +75,7 @@ Microsoft classifies most malware into one of the following categories:
 
 Microsoft believes that you should have control over your Windows experience. Software running on Windows should keep you in control of your device through informed choices and accessible controls. Microsoft identifies software behaviors that ensure you stay in control. Microsoft classifies software that doesn't fully demonstrate these behaviors as "unwanted software".
 
-#### Lack of choice
+### Lack of choice
 
 You must be notified about what is happening on your device, including what software does and whether it's active.
 
@@ -105,7 +105,7 @@ Software that stores or transmits your activities or data must:
 
 - Give you notice and get consent to do so. Software shouldn't include an option that configures it to hide activities associated with storing or transmitting your data.
 
-#### Lack of control
+### Lack of control
 
 You must be able to control software on your device. You must be able to start, stop, or otherwise revoke authorization to software.
 
@@ -121,7 +121,7 @@ Software that exhibits lack of control might:
 
 Software that changes your browsing experience must only use the browser's supported extensibility model for installation, execution, disabling, or removal. Browsers that don't provide supported extensibility models are considered nonextensible and shouldn't be modified.
 
-#### Installation and removal
+### Installation and removal
 
 You must be able to start, stop, or otherwise revoke authorization given to software. Software should get your consent before installing, and it must provide a clear and straightforward way for you to install, uninstall, or disable it.
 
@@ -133,7 +133,7 @@ Software that delivers a *poor removal experience* might:
 
 - Fail to use standard install or uninstall features, such as **Add or Remove Programs**.
 
-#### Advertising and advertisements
+### Advertising and advertisements
 
 Software that promotes a product or service outside of the software itself can interfere with your computing experience. You should have clear choice and control when installing software that presents advertisements.
 
@@ -157,7 +157,7 @@ Advertisements shown to you must:
 
 - Not invoke a file download.
 
-#### Consumer opinion
+### Consumer opinion
 
 Microsoft maintains a worldwide network of analysts and intelligence systems where you can [submit software for analysis](https://www.microsoft.com/wdsi/filesubmission). Your participation helps Microsoft identify new malware quickly. After analysis, Microsoft creates security intelligence for software that meets the described criteria. This security intelligence identifies the software as malware and is available to all users through Microsoft Defender Antivirus and other Microsoft anti-malware solutions.
 
