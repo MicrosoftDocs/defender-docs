@@ -20,6 +20,10 @@ The listed features were released in the last six months. For information about 
 
 ## January 2026
 
+### Updated date: Microsoft Sentinel in the Azure portal to be retired March 2027 
+
+[!INCLUDE [sentinel-azure-deprecation](includes/sentinel-azure-deprecation.md)]
+
 ### UEBA behaviors layer aggregates actionable insights from raw logs in near-real time (Preview)
 
 Microsoft Sentinel introduces a UEBA behaviors layer that transforms high-volume, low-level security logs into clear, human-readable behavioral insights in the Defender portal. This AI-powered capability aggregates and sequences raw events from supported data sources into normalized behaviors that explain "who did what to whom" with MITRE ATT&CK context.
@@ -233,7 +237,7 @@ Workbooks are available in the Defender portal under **Microsoft Sentinel > Thre
 - [Microsoft Sentinel data lake permissions integrated with Microsoft Defender XDR unified RBAC](#microsoft-sentinel-data-lake-permissions-integrated-with-microsoft-defender-xdr-unified-rbac)
 - [For new customers only: Automatic onboarding and redirection to the Microsoft Defender portal](#for-new-customers-only-automatic-onboarding-and-redirection-to-the-microsoft-defender-portal)
 - [No limit on the number of workspaces you can onboard to the Defender portal](#no-limit-on-the-number-of-workspaces-you-can-onboard-to-the-defender-portal)
-- [Microsoft Sentinel in the Azure portal to be retired March 2027](#microsoft-sentinel-in-the-azure-portal-to-be-retired-march-2027)
+- [Microsoft Sentinel in the Azure portal to be retired July 2026](#microsoft-sentinel-in-the-azure-portal-to-be-retired-july-2026)
 
 ### Microsoft Sentinel data lake
 
@@ -304,9 +308,20 @@ For more information, see:
 - [Multiple Microsoft Sentinel workspaces in the Defender portal](workspaces-defender-portal.md)
 - [Extend Microsoft Sentinel across workspaces and tenants](extend-sentinel-across-workspaces-tenants.md)
 
-### Microsoft Sentinel in the Azure portal to be retired March 2027
+### Microsoft Sentinel in the Azure portal to be retired July 2026
 
-[!INCLUDE [sentinel-azure-deprecation](includes/sentinel-azure-deprecation.md)]
+Microsoft Sentinel is [generally available in the Microsoft Defender portal](../microsoft-sentinel-defender-portal.md), including for customers without Microsoft Defender XDR or an E5 license. This means that you can use Microsoft Sentinel in the Defender portal even if you aren't using other Microsoft Defender services.
+
+Starting in **July 2026**, Microsoft Sentinel will be supported in the Defender portal only, and any remaining customers using the Azure portal will be automatically redirected.
+
+If you're currently using Microsoft Sentinel in the Azure portal, we recommend that you start planning your transition to the Defender portal now to ensure a smooth transition and take full advantage of the [unified security operations experience offered by Microsoft Defender](/unified-secops-platform/overview-unified-security).
+
+For more information, see:
+
+- [Microsoft Sentinel in the Microsoft Defender portal](../microsoft-sentinel-defender-portal.md)
+- [Transition your Microsoft Sentinel environment to the Defender portal](../move-to-defender.md)
+- [Planning your move to Microsoft Defender portal for all Microsoft Sentinel customers](https://techcommunity.microsoft.com/blog/microsoft-security-blog/planning-your-move-to-microsoft-defender-portal-for-all-microsoft-sentinel-custo/4428613) (blog)
+
 
 ## June 2025
 
