@@ -54,16 +54,16 @@ The following table describes memory requirements on the server used for the Def
 |------------|-------------|
 |Hyper-V|Ensure that **Enable Dynamic Memory** isn't enabled for the VM.|
 |VMware|Ensure that the amount of memory configured and the reserved memory are the same, or select the **Reserve all guest memory (All locked)** option in the VM settings.|
-|Other virtualization host|Refer to the vendor-supplied documentation on how to ensure that memory is fully allocated to the VM at all times.|
+|Other virtualization host|Refer to the vendor-supplied documentation on how to ensure that memory is always fully allocated to the VMs.|
 
 > [!IMPORTANT]
-> When running as a virtual machine, allocate all memory to the virtual machine at all times.
+> When running as a virtual machine, always allocate all memory to the virtual machine.
 
-Version 3 of the sensor prevents the sensor from overusing CPU or memory by limiting CPU utilization at 30% , and memory usage to 1.5 GB. However, if Falcon Identity already uses substantial system resources, the domain controller might still experience performance strain.
+Version 3 of the sensor prevents the sensor from overusing CPU or memory by limiting CPU utilization at 30%, and memory usage to 1.5 GB. However, if Falcon Identity already uses substantial system resources, the domain controller might still experience performance strain.
 
 ## Configure RPC auditing
 
-Applying the **Unified Sensor RPC Audit** tag to a device improves security visibility and unlocks additional identity detections. Once applied, the configuration is enforced on all existing and future devices that match the rule criteria. The tag is visible in the Device Inventory for transparency and auditing capabilities.
+Applying the **Unified Sensor RPC Audit** tag to a device improves security visibility and unlocks more identity detections. Once applied, the configuration is enforced on all existing and future devices that match the rule criteria. The tag is visible in the Device Inventory for transparency and auditing capabilities.
 
 1. In the **Microsoft Defender portal**, navigate to: **System > Settings > Microsoft Defender XDR > Asset Rule Management**.
 1. Select **Create a new rule**.
@@ -97,7 +97,7 @@ Defender for Identity uses Windows event log entries to detect specific activiti
 
 See [Configure Defender for Identity to collect Windows events automatically (Preview)](configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically-preview).
 
-If you do not select automatic Windows auditing configuration, you must [configure Windows event auditing manually](configure-windows-event-collection.md#configure-windows-event-collection-manually) or [using PowerShell](configure-windows-event-collection.md#configure-windows-event-collection-using-powershell). 
+If you don't select automatic Windows auditing configuration, you must [configure Windows event auditing manually](configure-windows-event-collection.md#configure-windows-event-collection-manually) or [using PowerShell](configure-windows-event-collection.md#configure-windows-event-collection-using-powershell). 
 
 ## Recommended configurations for optimal performance
 
@@ -105,7 +105,7 @@ We recommend that you make sure these items are properly configured for optimal 
 
 - Set the **Power Option** of the machine running the Defender for Identity sensor to **High Performance**.
 - Synchronize the time on servers and domain controllers where you install the sensor to within five minutes of each other.
-- This sensor uses the local system identity of the server for Active Directory and response actions. If you had Group Managed Service Account (gMSA) configured for an earlier version of the sensor, make sure to remove gMSA. If gMSA is enabled, the response actions will not work. In environments that use both v2 and v3 sensors, use local system accounts for all of your sensors.
+- This sensor uses the local system identity of the server for Active Directory and response actions. If you had Group Managed Service Account (gMSA) configured for an earlier version of the sensor, make sure to remove gMSA. If gMSA is enabled, the response actions won't work. In environments that use both v2 and v3 sensors, use local system accounts for all of your sensors.
 
 ## Test your prerequisites
 
