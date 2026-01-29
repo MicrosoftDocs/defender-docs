@@ -198,6 +198,9 @@ See the following table for a list of events recorded by the service.
 
 Microsoft Defender for Endpoint events also appear in the System event log.
 
+> [!NOTE]
+> The Event Viewer UI can vary by Windows version. The steps in this article reflect a recent version of Windows 11.
+
 To open the System event log:
 
 1. Select **Start** on the Windows menu, type **Event Viewer**, and press **Enter**  to open the Event Viewer.
