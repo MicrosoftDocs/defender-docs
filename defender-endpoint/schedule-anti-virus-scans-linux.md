@@ -32,7 +32,7 @@ To use antivirus scanning features, your Linux devices must meet the [prerequisi
 
 ## Supported scan types
 
-With Defender for Endpoint on Linux, you can perform three types of on-demand scans on individual devices: quick scan, full scan, and custom scan.
+With Defender for Endpoint on Linux, you can perform three types of on-demand scans on individual devices: *quick scan*, *full scan*, and *custom scan*.
 
 These scans start right away, letting you specify parameters such as the location or type of scan. They also honor any configured  [antivirus exclusions](./linux-exclusions.md), ensuring that excluded files and folders aren't scanned.
 
@@ -94,7 +94,7 @@ For detailed instructions on configuring the above settings using CLI or managed
 
 ## Best practices
 
-Starting from version 101.23062.0001, Defender for Endpoint on Linux operates in `passive` mode by default, meaning real-time protection is turned off. To maintain security, it's recommended to use scheduled scans as needed.
+Starting from version 101.23062.0001, Defender for Endpoint on Linux operates in passive mode by default, meaning real-time protection is turned off. To maintain security, it's recommended to use scheduled scans as needed.
 
 Once you've installed Defender for Endpoint on Linux, it's a good practice to run a full scan. This helps identify and address any potential threats that might be present on your system.
 
