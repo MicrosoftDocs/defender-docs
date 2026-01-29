@@ -15,48 +15,45 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: linux
 search.appverid: met150
-ms.date: 01/28/2025
+ms.date: 01/29/2025
 ---
 
 # Configure and run antivirus scans with Microsoft Defender for Endpoint on Linux
 
-Microsoft Defender for Endpoint on Linux offers robust antivirus scanning capabilities to help identify and mitigate malicious files on your system. You can run these scans on-demand or schedule them at regular intervals, ensuring continuous protection and peace of mind.
+Microsoft Defender for Endpoint on Linux offers robust antivirus scanning capabilities to help identify and mitigate malicious files on your system. You can run these scans on-demand or schedule them at regular intervals, ensuring continuous protection and peace of mind. Three ways of running the scans are supported:
+
+- Command line interface (CLI) (on-demand scans)
+- crontab / anacron (scheduled scans)
+- Through the Microsoft Defender portal
+
 
 **Applies to:**
 
-- [Microsoft Defender for Servers Plan 1 and Plan 2](/azure/defender-for-cloud/defender-for-servers-overview#defender-for-servers-plans)
-- [Microsoft Defender for Endpoint Servers](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/microsoft-defender-endpoint?activetab=pivot:overviewtab)
+- Microsoft Defender for Servers Plan 1 and Plan 2
+- Microsoft Defender for Endpoint Servers
 
-## Scans performed by Defender for Endpoint on Linux
+## Supported scan types
 
 With Defender for Endpoint on Linux, you can perform three types of on-demand scans on individual devices: quick scan, full scan, and custom scan.
 
-These scans start right away, letting you specify parameters like the location or type of scan. They also honor any configured  [antivirus exclusions](./linux-exclusions.md), ensuring that excluded files and folders aren't scanned.
+These scans start right away, letting you specify parameters such as the location or type of scan. They also honor any configured  [antivirus exclusions](./linux-exclusions.md), ensuring that excluded files and folders aren't scanned.
 
 The following table describes each type of scan:
 
 |Scan type|Description|
 |--|--|
-|**Quick scan (recommended)**| A quick scan examines locations where malware is likely to be registered and executed, such as startup scripts, cron jobs, and system service directories (for example, `/etc/rc.local`, `/etc/init.d/`, and `systemd` service files). It also checks common directories where malware could reside, such as `/tmp`, `/var`, etc. This is subject to change based on various factors like threat landscape or evolving malware techniques.|
-|**Full scan**| A full scan scans all files and folders within `/`. <br><br> A full scan with Microsoft Defender for Endpoint on Linux can take several hours or even days to complete. The duration depends on the volume and type of data being scanned, and the availability of CPU resources. |
-|**Custom scan**| A custom scan runs on files and folders specified with the `--path` parameter. <br><br> By default, custom scans in Microsoft Defender for Endpoint on Linux ignore files and folders specified in the antivirus exclusions. However, you can override this behavior by using the `--ignore-exclusions` flag, to ensure the excluded files and folders are scanned during a custom scan. |
+|**Quick scan (recommended)**| A quick scan examines locations where malware is likely to be registered and executed, such as startup scripts, cron jobs, and system service directories (for example, `/etc/rc.local`, `/etc/init.d/`, and `systemd` service files). It also checks common directories where malware could reside, such as `/tmp`, `/var`, etc. This is subject to change based on various factors such as threat landscape or evolving malware techniques.|
+|**Full scan**| A full scan scans all files and folders within `/`. <br><br> A full scan with Defender for Endpoint on Linux can take several hours or even days to complete. The duration depends on the volume and type of data being scanned and the availability of CPU resources. |
+|**Custom scan**| A custom scan runs on files and folders specified with the `--path` parameter. <br><br> By default, custom scans in Defender for Endpoint on Linux ignore files and folders specified in the antivirus exclusions. However, you can override this behavior by using the `--ignore-exclusions` flag, to ensure the excluded files and folders are scanned during a custom scan. |
 
 > [!Note]
 > For optimal performance, we recommend using quick scans to secure your devices.
 >
-> Based on the enforcement level configured, MDE will take remediation actions accordingly when a scan detects a malicious file. For more information, see [Enforcement level for Microsoft Defender Antivirus](./linux-preferences.md#enforcement-level-for-microsoft-defender-antivirus).
+> Based on the enforcement level configured, Defender for Endpoint takes remediation actions accordingly when a scan detects a malicious file. For more information, see [Enforcement level for Microsoft Defender Antivirus](./linux-preferences.md#enforcement-level-for-microsoft-defender-antivirus).
 >
 > If multiple scans are initiated, they get queued one after the other.
 
-## How to Run Antivirus Scans using Defender for Endpoint on Linux
-
-You can run antivirus scans on Linux using Defender for Endpoint in three ways:
-
-1. Command line interface (CLI) (on-demand scans)
-2. crontab / anacron (scheduled scans)
-3. Microsoft Defender portal
-
-### Command line interface (CLI) (on-demand scans)
+## Run scans via command line interface (on-demand scans)
 
 The following commands can be used to run quick, full, or custom scans:
 
@@ -68,14 +65,14 @@ The following commands can be used to run quick, full, or custom scans:
 | Cancel an ongoing on-demand scan | `mdatp scan cancel` |
 | List the completed / canceled on-demand scans | `mdatp scan list` |
 
-### Crontab / anacron (scheduled scans)
+## Run scans via crontab / anacron (scheduled scans)
 
 The following articles describe how to schedule antivirus scans using crontab or anacron:
 
 - [Schedule an antivirus scan using crontab with Microsoft Defender for Endpoint on Linux](./schedule-antivirus-scan-crontab.md)
 - [Schedule an antivirus scan using Anacron with Microsoft Defender for Endpoint on Linux](./schedule-antivirus-scan-anacron.md)
 
-### Defender portal
+## Run scans via the Defender portal
 
 The following screenshots show how to trigger an antivirus scan on a device from the Defender portal:
 
@@ -83,7 +80,7 @@ The following screenshots show how to trigger an antivirus scan on a device from
 
 :::image type="content" source="./media/schedule-anti-virus-scans-linux/choose-anti-virus-scan-type.png" alt-text="Screenshot how to choose type of antivirus scan to run.":::
 
-## Performance optimizations for antivirus scans
+## Performance optimizations
 
 Running antivirus scans on your device is crucial for maintaining security, but it's important to balance this with the impact on device performance. Naturally, running a full scan on a device with extensive and complex content results in higher system resource usage and longer completion times.
 
@@ -97,10 +94,10 @@ Various antivirus settings and configurations can influence both performance and
 
 For detailed instructions on configuring the above settings using CLI or managed JSON, see [Configure security settings in Microsoft Defender for Endpoint on Linux](./linux-preferences.md#antivirus-engine-preferences).
 
-## Best practices for antivirus scans
+## Best practices
 
 Starting from version 101.23062.0001, Defender for Endpoint on Linux operates in `passive` mode by default, meaning real-time protection is turned off. To maintain security, it's recommended to use scheduled scans as needed.
 
-Once you've installed Defender for Endpoint on Linux, it's a good practice to run a full scan. This helps in identifying and addressing any potential threats that might be present on your system.
+Once you've installed Defender for Endpoint on Linux, it's a good practice to run a full scan. This helps identify and address any potential threats that might be present on your system.
 
-For continuous protection, incorporate quick scans into your regular, scheduled scans. Quick scans offer comprehensive coverage for malware that starts with the system and kernel-level threats, all while maintaining minimal impact on your device's performance.
+For continuous protection, incorporate quick scans into your regular scheduled scans. Quick scans offer comprehensive coverage for malware that starts with the system and kernel-level threats, all while maintaining minimal impact on your device's performance.
