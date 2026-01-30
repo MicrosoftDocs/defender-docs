@@ -99,3 +99,7 @@ Starting from version 101.23062.0001, Defender for Endpoint on Linux operates in
 Once you've installed Defender for Endpoint on Linux, it's a good practice to run a full scan. This helps identify and address any potential threats that might be present on your system.
 
 For continuous protection, incorporate quick scans into your regular scheduled scans. Quick scans offer comprehensive coverage for malware that starts with the system and kernel-level threats, all while maintaining minimal impact on your device's performance.
+
+## Related content
+
+- 
