@@ -25,10 +25,25 @@ appliesto:
 
 # Understand attack surface reduction in Microsoft Defender for Endpoint
 
-_Attack surfaces_ are the places where your organization is vulnerable to threats and attacks. Microsoft Defender for Endpoint includes several capabilities to help reduce your attack surfaces:
+_Attack surfaces_ are the places where your organization is vulnerable to threats and attacks. Microsoft Defender for Endpoint includes several capabilities to help reduce your attack surface:
+
+- [Attack surface reduction (ASR) rules for Windows](attack-surface-reduction-rules-overview.md): Configure and deploy ASR rules to block risky app behavior in supported versions of Windows.
+  - [Controlled folder access](controlled-folders.md): Allow only specified trusted apps to access specified protected folders on Windows devices. In Defender for Endpoint, you configure controlled folder access in ASR rule policies.
+
+- [Device control](device-control-overview.md): Allow or prevent connection by specified types of devices to Windows and macOS devices.
+
+- [Network protection](network-protection.md): Prevents access to known dangerous sites.
+
+- [Web protection](web-protection-overview.md): Secure devices against web threats and regulate unwanted content.
+
+- [Exploit protection](exploit-protection.md): Apply exploit mitigation techniques to processes and apps in supported versions of Windows.
 
 - [Microsoft Defender Application Guard for Microsoft Edge](/windows/security/application-security/application-isolation/microsoft-defender-application-guard/md-app-guard-overview): Admins specify trusted web sites, cloud resources, and internal networks. When a user opens an untrusted site in Microsoft Edge, the browser opens the site in an isolated Hyper-V-enabled container.
-- [Attack surface reduction rules for Windows](attack-surface-reduction-rules-overview.md): Admins configure rules that block risky software behavior in supported versions of Windows.
+
+
+only allowing trusted apps to access protected folders. Protected folders are specified when controlled folder access is configured. Typically, commonly used folders, such as those used for documents, pictures, downloads, and so on, are included in the list of controlled folders.
+
+Controlled folder access works with a list of trusted apps. Apps that are included in the list of trusted software work as expected. Apps that aren't included in the list are prevented from making any changes to files inside protected folders.
 
 ## Prerequisites
 
