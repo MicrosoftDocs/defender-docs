@@ -22,10 +22,9 @@ search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
-# Test attack surface reduction rules
 
+# Test attack surface reduction rules
 
 Testing Microsoft Defender for Endpoint attack surface reduction rules helps you determine if rules impede line-of-business operations before you enable rules. By starting with a small, controlled group, you can limit potential work disruptions as you expand your deployment across your organization.
 
