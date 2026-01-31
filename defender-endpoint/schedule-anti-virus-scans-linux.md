@@ -84,6 +84,8 @@ To trigger an antivirus scan on a device from the Defender portal:
 
 1. Under **Select scan type**, select the radio button for the desired scan type: **Quick Scan** or **Full Scan**.
 
+   :::image type="content" source="./media/schedule-anti-virus-scans-linux/choose-anti-virus-scan-type.png" alt-text="Screenshot how to choose type of antivirus scan to run.":::
+
 1. Add a comment.
 
 1. Select **Confirm**.
