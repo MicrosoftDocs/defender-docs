@@ -24,7 +24,7 @@ Microsoft Defender for Endpoint on Linux offers robust antivirus scanning capabi
 
 - [Command line interface (CLI) (on-demand scans)](#run-scans-via-command-line-interface-on-demand-scans)
 - [crontab / anacron (scheduled scans)](#run-scans-via-crontab--anacron-scheduled-scans)
-- [Through the Microsoft Defender portal](#run-scans-via-the-defender-portal)
+- [Through the Microsoft Defender portal (on-demand scans)](#run-scans-via-the-defender-portal)
 
 ## Prerequisites
 
@@ -51,7 +51,7 @@ The following table describes each type of scan:
 >
 > If multiple scans are initiated, they get queued one after the other.
 
-## Run scans via command line interface (on-demand scans)
+## Run on-demand scans via CLI
 
 The following commands can be used to run quick, full, or custom scans:
 
@@ -63,20 +63,30 @@ The following commands can be used to run quick, full, or custom scans:
 | Cancel an ongoing on-demand scan | `mdatp scan cancel` |
 | List the completed / canceled on-demand scans | `mdatp scan list` |
 
-## Run scans via crontab / anacron (scheduled scans)
+## Run scheduledscans via crontab/anacron
 
 The following articles describe how to schedule antivirus scans using crontab or anacron:
 
 - [Schedule an antivirus scan using crontab with Microsoft Defender for Endpoint on Linux](./schedule-antivirus-scan-crontab.md)
 - [Schedule an antivirus scan using Anacron with Microsoft Defender for Endpoint on Linux](./schedule-antivirus-scan-anacron.md)
 
-## Run scans via the Defender portal
+## Run on-demand scans via the Defender portal
 
-The following screenshots show how to trigger an antivirus scan on a device from the Defender portal:
+To trigger an antivirus scan on a device from the Defender portal:
 
-:::image type="content" source="./media/schedule-anti-virus-scans-linux/run-anti-virus-scan.png" alt-text="Screenshot showing where to access the run antivirus scan option." lightbox="./media/schedule-anti-virus-scans-linux/run-anti-virus-scan.png":::
+1. Go to the Microsoft Defender portal (https://security.microsoft.com) and sign-in.
 
-:::image type="content" source="./media/schedule-anti-virus-scans-linux/choose-anti-virus-scan-type.png" alt-text="Screenshot how to choose type of antivirus scan to run.":::
+1. Navigate to **Assets** > **Devices**, and select the device you want to scan.
+
+1. On the device's page, select More options (**...**), and then select **Run Antivirus Scan**.
+
+   :::image type="content" source="./media/schedule-anti-virus-scans-linux/run-anti-virus-scan.png" alt-text="Screenshot showing where to access the run antivirus scan option." lightbox="./media/schedule-anti-virus-scans-linux/run-anti-virus-scan.png":::
+
+1. Under **Select scan type**, select the radio button for the desired scan type: **Quick Scan** or **Full Scan**.
+
+1. Add a comment.
+
+1. Select **Confirm**.
 
 ## Performance optimizations
 
@@ -102,4 +112,7 @@ For continuous protection, incorporate quick scans into your regular scheduled s
 
 ## Related content
 
-- 
+- [About scheduled quick or full Microsoft Defender Antivirus scans](./schedule-antivirus-scans.md)
+- [Configure and run on-demand Microsoft Defender Antivirus scans](./run-scan-defender-antiviruis.md)
+- [Schedule an antivirus scan using crontab with Microsoft Defender for Endpoint on Linux](./schedule-antivirus-scan-crontab.md)
+- [Schedule an antivirus scan using Anacron with Microsoft Defender for Endpoint on Linux](./schedule-antivirus-scan-anacron.md)
