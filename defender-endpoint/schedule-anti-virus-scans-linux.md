@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: linux
 search.appverid: met150
-ms.date: 01/29/2025
+ms.date: 01/31/2025
 ---
 
 # Configure and run antivirus scans with Microsoft Defender for Endpoint on Linux
@@ -29,6 +29,8 @@ Microsoft Defender for Endpoint on Linux offers robust antivirus scanning capabi
 ## Prerequisites
 
 To use antivirus scanning features, your Linux devices must meet the [prerequisites for Defender for Endpoint on Linux](./mde-linux-prerequisites.md).
+
+The principal running the scan must have at least a Security Operator or Security Administrator role.
 
 ## Supported scan types
 
