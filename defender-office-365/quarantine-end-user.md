@@ -250,7 +250,7 @@ After you select the quarantined message, the available actions are described in
 >
 > A quarantine policy can allow you to release a message or request the release of a message, but both options aren't available for the same message. A quarantine policy can also prevent you from releasing or requesting the release of quarantined messages.
 >
-> If the Release button is greyed out, this is expected behavior. Some quarantined messages can’t be released by users based on the quarantine reason or assigned quarantine policy. In these cases, you can only request release or an admin must release the message.
+> If the Release button is greyed out, this is an expected behavior. Some quarantined messages can't be released by users, based on the quarantine reason or assigned quarantine policy. In such cases, you can only request release, or an admin must release the message.
 
 This action isn't available for released email messages (the **Release status** value is **Released**).
 
