@@ -113,6 +113,6 @@ For continuous protection, incorporate quick scans into your regular scheduled s
 ## Related content
 
 - [About scheduled quick or full Microsoft Defender Antivirus scans](./schedule-antivirus-scans.md)
-- [Configure and run on-demand Microsoft Defender Antivirus scans](./run-scan-defender-antiviruis.md)
+- [Configure and run on-demand Microsoft Defender Antivirus scans](./run-scan-defender-antivirus.md)
 - [Schedule an antivirus scan using crontab with Microsoft Defender for Endpoint on Linux](./schedule-antivirus-scan-crontab.md)
 - [Schedule an antivirus scan using Anacron with Microsoft Defender for Endpoint on Linux](./schedule-antivirus-scan-anacron.md)
