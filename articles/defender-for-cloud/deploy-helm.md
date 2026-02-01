@@ -73,14 +73,18 @@ Depending on your deployment type, follow the relevant instructions to install t
   >-o tsv
   >```
 
-- Run the [delete_conflicting_policies.sh](https://github.com/microsoft/Microsoft-Defender-For-Containers/blob/main/scripts/delete_conflicting_policies.sh) script with Azure CLI, to remove the policy assignment ID `64def556-fbad-4622-930e-72d1d5589bf5`. This policy causes a conflict with the generally available (GA) version sensor deployed on your cluster. Learn more about the policy in the [list of policy definitions for your subscription](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyMenuBlade/~/Definitions).
+- The policy assignment ID `64def556-fbad-4622-930e-72d1d5589bf5` causes a conflict with the generally available (GA) version of the sensor deployed on your cluster and needs to be removed. Learn more about the policy in the [list of policy definitions for your subscription](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyMenuBlade/~/Definitions). This can be accomplished in of the following ways:
+ 
+   - Run the [delete_conflicting_policies.sh](https://github.com/microsoft/Microsoft-Defender-For-Containers/blob/main/scripts/delete_conflicting_policies.sh) script with Azure CLI.
 
-   Run the script with the command:
+      Or,
 
-   ```azurecli   
-   delete_conflicting_policies.sh <CLUSTER_AZURE_RESOURCE_ID>
-   ```
-   This script removes resource group and subscription level policies for setting up the genreally available (GA) version of Defender for Containers. It can affect clusters other than the one you're configuring.
+   - Run the following command:
+
+      ```azurecli   
+      delete_conflicting_policies.sh <CLUSTER_AZURE_RESOURCE_ID>
+      ```
+      This command removes resource group and subscription level policies for setting up the genreally available (GA) version of Defender for Containers. It can affect clusters other than the one you're configuring.
 
 #### Installation
 
