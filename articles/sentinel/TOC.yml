@@ -341,18 +341,19 @@
           href: false-positives.md
         - name: User and Entity Behavior Analytics (UEBA)
           items:
-            - name: Overview
+            - name: UEBA overview
               href: identify-threats-with-entity-behavior-analytics.md
+              displayName: User and Entity Behavior Analytics
             - name: Enable UEBA
               href: enable-entity-behavior-analytics.md
             - name: Investigate with UEBA
               href: investigate-with-ueba.md
-            - name: Aggregate behavioral insights from raw logs
-              href: entity-behaviors-layer.md
             - name: Useful UEBA queries
               href: ueba-useful-queries.md
             - name: UEBA reference
               href: ueba-reference.md
+            - name: Aggregate behavioral insights from raw logs
+              href: entity-behaviors-layer.md
     - name: Hunt for threats
       items:
         - name: Overview
