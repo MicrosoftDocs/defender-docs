@@ -73,7 +73,7 @@ Depending on your deployment type, follow the relevant instructions to install t
   >-o tsv
   >```
 
-- Certain deployments may have policy assignments that can cause the generally available version of the Sensor to deploy. We recommend checking for and removing the conflicting policies before proceeding with the installation:
+- Your environment may have policy assignments that can cause the generally available version of the Sensor to deploy. We recommend checking for and removing the conflicting policies before proceeding with the installation:
 
    The policy assignment ID is `64def556-fbad-4622-930e-72d1d5589bf5`. 
 
