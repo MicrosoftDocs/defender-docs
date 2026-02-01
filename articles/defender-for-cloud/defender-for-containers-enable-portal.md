@@ -111,30 +111,6 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 
 1. Select **Save**.
 
-## Grant control plane permissions
-
-If you enabled Agentless discovery for Kubernetes, you need to configure control plane permissions. Grant permissions using one of the following methods:
-
-### Option 1: Use the Python script
-
-Run the [Python onboarding repository script](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Onboarding/AWS/ReadMe.md) to automatically add the required role mapping to your cluster.
-
-This script adds the Defender for Cloud role
-`MDCContainersAgentlessDiscoveryK8sRole` to the `aws-auth` ConfigMap.
-
-### Option 2: Use eksctl
-
-You can manually create the IAM identity mapping:
-
-```bash
-eksctl create iamidentitymapping \
-  --cluster my-cluster \
-  --region region-code \
-  --arn arn:aws:iam::account:role/MDCContainersAgentlessDiscoveryK8sRole \
-  --group system:masters \
-  --no-duplicate-arns
-```
-
 ## Verify the plan is enabled
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.

@@ -106,6 +106,9 @@ For GKE clusters, Defender uses Azure Arc–enabled Kubernetes to deploy the Def
 
 - [Defender for Containers enabled on your GCP connector](defender-for-containers-enable-portal.md?tab=eks). 
 
+> [!NOTE] 
+> Some recommendations require Defender for Cloud to access the Kubernetes control plane. If you see a recommendation related to Kubernetes API access and you haven’t configured it yet, [configure plane permissions](defender-for-containers-control-plane.md).
+
 ## Deploy components
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
@@ -131,6 +134,48 @@ For GKE clusters, Defender uses Azure Arc–enabled Kubernetes to deploy the Def
 1. In **Microsoft Defender for Cloud** > **Recommendations**, confirm the recommendation becomes **Healthy**.
 
 2. Open the Arc-enabled cluster resource.
+
+3. Select **Extensions** and verify:
+
+   - **Microsoft Defender for Containers** status is **Succeeded**
+   - **Azure Policy for Kubernetes** status is **Succeeded** (if enabled)
+
+# [Arc-enabled Kubernetes](#tab/arc)
+
+For Kubernetes clusters connected to Azure using Azure Arc that aren’t running in Azure Kubernetes Service (AKS), Amazon EKS, or Google Kubernetes Engine (GKE), Defender for Cloud deploys components as Azure Arc Kubernetes extensions when you remediate security recommendations.
+
+## Prerequisites
+
+- [Defender for Containers enabled on your Azure subscription](defender-for-containers-enable-portal.md?tab=aks).
+
+> [!NOTE]
+> Some recommendations require Defender for Cloud to access the Kubernetes control plane. If you see a recommendation related to Kubernetes API access and you haven’t configured it yet, [configure control plane permissions](defender-for-containers-control-plane.md).
+
+## Deploy components
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+2. Go to **Microsoft Defender for Cloud** > **Recommendations**.
+
+3. Look for recommendations such as:
+
+   - **Arc-enabled Kubernetes clusters should have Defender extension installed**
+   - **Arc-enabled Kubernetes clusters should have Azure Policy extension installed**
+
+4. Select the recommendation.
+
+5. Select the affected clusters.
+
+6. Follow the remediation steps to:
+
+   - Install the **Microsoft Defender for Containers** extension  
+   - Install the **Azure Policy for Kubernetes** extension (if applicable)
+
+## Verify deployment
+
+1. Go to **Microsoft Defender for Cloud** > **Recommendations** and confirm the recommendation becomes **Healthy**.
+
+2. Open the Arc-enabled cluster resource in Azure.
 
 3. Select **Extensions** and verify:
 
