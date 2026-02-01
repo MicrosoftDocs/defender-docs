@@ -55,30 +55,29 @@ UEBA evaluates actions performed by users, hosts, and IP addresses in context, i
 
 Analysts can query the [BehaviorAnalytics](#behavioranalytics-table) and [Anomalies](#anomalies-table) tables to investigate risk scores and suspicious activity. Enriched entity profiles provide additional context that helps speed up triage and response. Integrating UEBA insights into workbooks, incident workflows, and hunting queries helps maximize their value across the SOC.
 
-To query the BehaviorAnalytics, IdentityInfo, Anomalies, and UserPeerAnalytics tables, install the UEBA solution, which includes dozens of ready-to-use queries. For an overview of each table, see [UEBA tables](#ueba-tables-in-sentinel). For schema details, see the [UEBA reference](ueba-reference.md), and for runnable examples, see [sample KQL queries](ueba-useful-queries.md).
+To query the `BehaviorAnalytics`, `IdentityInfo`, `Anomalies`, and `UserPeerAnalytics` tables, install the UEBA solution, which includes dozens of ready-to-use queries. 
 
-## UEBA tables in Sentinel
+## Understand UEBA tables and scoring
+
+This section provides an overview of each of the UEBA tables. For schema details, see the [UEBA reference](ueba-reference.md), and for runnable examples, see [sample KQL queries](ueba-useful-queries.md).
 
 ### IdentityInfo table
 
-The IdentityInfo table provides detailed entity profiles, such as users, devices, and groups. These profiles are essential for understanding user behavior within the system.
+The `IdentityInfo` table provides detailed profiles of entities, such as users, devices, and groups. These profiles are essential for understanding user behavior within the system.
 
-Microsoft Sentinel builds user profiles by using entity information from Microsoft Entra ID and, optionally, your on-premises Active Directory. When you enable UEBA, Sentinel synchronizes data from Entra ID, which you can access through the IdentityInfo table.
-
-- **In Microsoft Sentinel (Azure portal)**: Query the IdentityInfo table in Log Analytics from the Logs page.
-- **In Microsoft Defender portal**: Use Advanced Hunting to query the same table.
+Microsoft Sentinel builds user profiles by using entity information from Microsoft Entra ID and, optionally, your on-premises Active Directory. When you enable UEBA, Sentinel synchronizes data from Entra ID, which you can access through the `IdentityInfo` table.
 
 You can also integrate on-premises Active Directory user entity information by using Microsoft Defender for Identity.
 
 ### UserPeerAnalytics table
 
-The peers table lists dynamically calculated peer groups to establish behavioral baselines for comparison.
+The `UserPeerAnalytics` table lists dynamically calculated peer groups to establish behavioral baselines for comparison.
 
 User peer metadata provides critical context for threat detection, incident investigation, and threat hunting. By analyzing the normal activities of a user's peers, security analysts can determine whether a user's behavior deviates from typical patterns.
 
-Microsoft Sentinel calculates and ranks a user's peers based on factors such as Microsoft Entra security group membership, mailing lists, and other associations. The top 20 ranked peers are stored in the UserPeerAnalytics table.
+Microsoft Sentinel determines and ranks a user's peers based on factors such as Microsoft Entra security group membership, mailing lists, and other associations. The top 20 ranked peers are stored in the `UserPeerAnalytics` table.
 
-The following screenshot illustrates the schema of the UserPeerAnalytics table and shows the eight highest-ranked peers for the user Kendall Collins. Sentinel uses the TF-IDF (term frequency–inverse document frequency) algorithm to normalize weights when calculating peer ranks. Smaller groups carry higher weight.
+The following screenshot illustrates the schema of the `UserPeerAnalytics` table and shows the eight highest-ranked peers for the user Kendall Collins. Sentinel uses the TF-IDF (term frequency–inverse document frequency) algorithm to normalize weights when calculating peer ranks. Smaller groups carry higher weight.
 
 :::image type="content" source="./media/identify-threats-with-entity-behavior-analytics/user-peers-metadata.png" alt-text="Screen shot of user peers metadata table" lightbox="./media/identify-threats-with-entity-behavior-analytics/user-peers-metadata.png":::
 
@@ -94,9 +93,9 @@ For more information on UEBA tables, see [UEBA enrichments reference](ueba-refer
 
 For more information on the schema and tables, see [UEBA data sources](ueba-reference.md#ueba-data-sources).
 
-## Understanding UEBA scoring in Microsoft Sentinel
+### UEBA scoring
 
-Microsoft Sentinel's User and Entity Behavior Analytics (UEBA) provides two distinct scoring mechanisms to help security teams prioritize investigations and detect anomalies effectively:
+Microsoft Sentinel's UEBA provides two distinct scoring mechanisms to help security teams prioritize investigations and detect anomalies effectively:
 
 ### Investigation priority score
 
