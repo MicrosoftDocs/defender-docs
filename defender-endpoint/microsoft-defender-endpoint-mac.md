@@ -65,10 +65,8 @@ There are several methods and deployment tools that you can use to install and c
 
 > [!NOTE]
 > Uninstalling and reinstalling Microsoft Defender is **not required** when performing an in-place upgrade of macOS.
-> For certain macOS releases, Apple introduces new security or configuration requirements that require administrators to deploy additional configuration profiles via MDM. When this applies, the required changes are documented on the [What’s new](https://learn.microsoft.com/en-us/defender-endpoint/mac-whatsnew?view=o365-worldwide#known-issues) page.
-> We recommend reviewing the latest What’s new updates to confirm whether any additional configuration is needed for your environment. 
-
-
+> For certain macOS releases, Apple introduces new security or configuration requirements that require administrators to deploy additional configuration profiles via MDM. When this applies, the required changes are documented on the [What’s new](mac-whatsnew.md#known-issues) page.
+> We recommend reviewing the latest What’s new updates to confirm whether any additional configuration is needed for your environment.
 
 ### System requirements
 
