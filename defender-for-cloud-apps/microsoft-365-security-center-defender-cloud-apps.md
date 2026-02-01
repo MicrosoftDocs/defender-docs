@@ -5,9 +5,8 @@ ms.service: defender-xdr
 ms.localizationpriority: medium
 f1.keywords:
 - NOCSH
-ms.author: bagol
-author: batamig
-manager: raynew
+ms.author: abbyweisberg 
+author: AbbyMSFT
 ms.date: 02/01/2026
 audience: ITPro
 ms.topic: article
