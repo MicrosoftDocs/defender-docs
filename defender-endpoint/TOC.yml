@@ -367,6 +367,8 @@
             href: configure-vulnerability-email-notifications.md
           - name: Configure advanced features
             href: advanced-features.md
+          - name: Configure library management for live response
+            href: configure-libraries-live-response.md
 
         - name: Permissions
           items:
