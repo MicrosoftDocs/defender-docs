@@ -1,5 +1,5 @@
 ﻿---
-title: Configure libraries for live response in Microsoft Defender for Endpoint
+title: Configure library management for live response in Microsoft Defender for Endpoint
 description: Use Microsoft Defender for Endpoint to configure libraries for live response.
 ms.service: defender-endpoint
 ms.author: lwainstein
@@ -19,55 +19,53 @@ appliesto:
   - Microsoft Defender for Business
 ---
 
-# Configure libraries for live response in Microsoft Defender for Endpoint
+# Configure the live response library in Microsoft Defender for Endpoint
 
-Configure Microsoft Defender for Endpoint to use libraries for live response. This feature enables you to identify a group of individuals who will immediately be informed and can act on the notifications based on the event. The vulnerability information comes from [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management).
+The **Library management** page in the Microsoft Defender portal allows you to manage files used during live response sessions on your endpoints. You can also add, view, and delete files in the library, instead of uploading them during a live response session.
 
-This option allows you to manage the libraries that are used during live response sessions on your endpoints. You can also add libraries in this view, instead of uploading them during a live response session. This can help streamline the live response process and ensure that the necessary libraries are readily available when needed.
-
-You can also update, or remove libraries as needed to ensure that your live response capabilities are up to date and effective.
+This article describes how to view, add, and manage libraries for live response.
 
 For more information about live response, see [Investigate entities on devices using live response](live-response.md).
 
-## View libraries
+## View files in the library
 
-To view the list of libraries available for live response:
+To view the list of files available for live response:
 
-1. In the Microsoft Defender portal, go to **Settings** > **Endpoints** > **Library management**.
-1. Review the following information for each library:
-   - **Name**: The name of the library.
-   - **Type**: The type of library (for example, PowerShell or Python).
-   - **Created by**: The user who uploaded the library.
-   - **Creation date**: The date the library was uploaded.
-   - **Updated by**: The user who last updated the library.
-   - **Last updated date**: The date the library was last updated.
-   - **Has parameters**: Indicates whether the library has parameters that can be configured during a live response session.
-   - **Parameters description**: A description of the parameters for the library.
+1. In the Microsoft Defender portal, navigate to **Settings** > **Endpoints** > **Library management**.
+1. Review the following information for each file:
+   - **Name**: The name of the file.
+   - **Type**: The type of file (for example, PowerShell or Python).
+   - **Created by**: The user who uploaded the file.
+   - **Creation date**: The date the file was uploaded.
+   - **Updated by**: The user who last updated the file.
+   - **Last updated date**: The date the file was last updated.
+   - **Has parameters**: Indicates whether the file has parameters that can be configured during a live response session.
+   - **Parameters description**: A description of the parameters for the file.
 
-## Add libraries
+## Add files to the library
 
-To add a new library for live response:
+To add a new file for live response:
 
 1. In the **Library management** page, select **Upload**.
 1. In the **Upload file to library** page, select **Upload file to library** on the right.
 
     The file name is displayed in the **File content** field.
 
-1. In the **File description** field, optionally type a description for the library.
+1. In the **File description** field, optionally type a description for the file.
 1. If you're uploading an updated version of an existing file, select **Overwrite file**. This replaces the existing file with the new version.
-1. To add a description for the parameters of the library, select **File parameters**, and in the **Parameters description** field, type a description.
-1. Select **Submit** to upload the library.
+1. To add a description for the parameters of the file, select **File parameters**, and in the **Parameters description** field, type a description.
+1. Select **Submit** to upload the file.
 
-    The library is visible in the list of libraries. You can now use this library during live response sessions.
+    The file is visible in the list of files. You can now use this file during live response sessions.
 
-## Manage libraries
+## Manage files in the library
 
-To manage existing libraries for live response, select one of the following options from the top menu:
+To manage existing files for live response, select one of the following options from the top menu:
 
-- **Upload**: [Upload a new library](#add-libraries) or an updated version of an existing library.
-- **Refresh**: Refresh the list of libraries to see the most up-to-date information.
-- **View details**: View detailed information about a selected library, including its parameters and usage history.
-- **View file**: View the contents of a selected library.
-- **Download**: Download a selected library to your local device.
-- **Delete**: Remove a selected library from the list.
-- **Filter**: Filter the list of libraries based on specific criteria, such as type or creation date. 
+- **Upload**: [Upload a new file](#add-files-to-the-library) or an updated version of an existing file.
+- **Refresh**: Refresh the list of files to see the most up-to-date information.
+- **View details**: View detailed information about a selected file, including its parameters and usage history.
+- **View file**: View the contents of a selected file.
+- **Download**: Download a selected file to your local device.
+- **Delete**: Remove a selected file from the list.
+- **Filter**: Filter the list of files based on specific criteria, such as type or creation date.
