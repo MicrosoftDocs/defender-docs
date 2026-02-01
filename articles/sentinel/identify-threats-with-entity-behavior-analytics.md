@@ -19,7 +19,7 @@ ms.custom: sfi-image-nochange
 
 [!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
 
-This article explains what Microsoft Sentinel User and Entity Behavior Analytics (UEBA) is, how it works, how to onboard to it, and how to use UEBA to surface and investigate anomalies and enhance your threat detection capabilities.
+This article explains what Microsoft Sentinel User and Entity Behavior Analytics (UEBA) is, how it works, how to onboard to it, and how to use UEBA to detect and investigate anomalies and enhance your threat detection capabilities.
 
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 
@@ -37,60 +37,25 @@ The following diagram illustrates how UEBA processes data from connected sources
 
 :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-architecture.png" alt-text="Diagram showing UEBA architecture, illustrating how data flows from connected sources through behavioral modeling to produce risk scores." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-architecture.png":::
 
-## Enable UEBA
 
-To enable UEBA in Microsoft Sentinel, follow the steps outlined in [Enable entity behavior analytics](enable-entity-behavior-analytics.md). This guide walks you through configuring UEBA, connecting relevant data sources, and accessing entity profiles to start detecting behavioral anomalies across your environment.
+## Enable UEBA to create behavior profiles and detect anomalies
 
-## Leverage UEBA
+Enable UEBA in Microsoft Sentinel - as described in [Enable entity behavior analytics](enable-entity-behavior-analytics.md) - and connect key data sources, such as Microsoft Entra ID, Defender for Identity, and Office 365. 
 
-To effectively leverage UEBA in Microsoft Sentinel, security teams should enable UEBA in the Sentinel or Microsoft Defender portal and ensure key data sources - such as Microsoft Entra ID, Defender for Identity, and Office 365 - are connected. Once enabled, UEBA automatically builds behavioral baselines and peer comparisons for users and entities, detecting anomalies that may indicate insider threats, compromised accounts, or lateral movement.
+UEBA automatically builds behavioral baselines and peer comparisons for users and entities, detecting anomalies that may indicate insider threats, compromised accounts, or lateral movement.
 
-Actions performed by a user (or a host, or an address) are evaluated contextually, where a "true" outcome indicates an identified anomaly:
+UEBA evaluates actions performed by users, hosts, and IP addresses in context, identifying anomalous behavior based on multiple dimensions, including:
 
-- across geographical locations, devices, and environments
-- across time and frequency horizons (compared to user's own history)
-- as compared to peers' behavior
-- as compared to organization's behavior
+- Deviations across geographical locations, devices, and environments  
+- Changes over time and activity frequency compared to the entity’s historical behavior  
+- Differences compared to peer groups  
+- Deviations from organization-wide behavior patterns  
 
 :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/context.png" alt-text="Entity context":::
 
-Analysts can use the [BehaviorAnalytics](#behavioranalytics-table) and [Anomalies](#anomalies-table) tables to query risk scores and investigate suspicious activity, while enriched entity profiles provide context for faster triage and response. Integrating UEBA insights into workbooks, incident workflows, and hunting queries helps maximize its value across the SOC.
+Analysts can query the [BehaviorAnalytics](#behavioranalytics-table) and [Anomalies](#anomalies-table) tables to investigate risk scores and suspicious activity. Enriched entity profiles provide additional context that helps speed up triage and response. Integrating UEBA insights into workbooks, incident workflows, and hunting queries helps maximize their value across the SOC.
 
-To query the BehaviorAnalytics, IdentityInfo, Anomalies, and UserPeerAnalytics tables, you can install the UEBA solution, which includes dozens of useful queries that you can use. See [UEBA tables](#ueba-tables-in-sentinel) to learn about each table. For schema details, see the [UEBA reference](ueba-reference.md), and for runnable examples, see [sample KQL queries](ueba-useful-queries.md).
-
-##  UEBA experiences in the Defender portal empower analysts and streamline workflows
-
-By surfacing anomalies in investigation graphs and user pages, and prompting analysts to incorporate anomaly data in hunting queries, UEBA facilitates faster threat detection, smarter prioritization, and more efficient incident response. 
-
-This section outlines the key UEBA analyst experiences available in the Defender portal when you enable UEBA.
-
-### UEBA insights in user investigations
-
-Analysts can quickly assess user risk using UEBA context displayed in side panels and the Overview tab on all user pages. When unusual behavior is detected, the portal automatically tags users with **UEBA anomalies** helping prioritize investigations based on recent activity. For more information, see [User entity page in Microsoft Defender](https://aka.ms/ueba-entity-details).
-
-Each user page includes a **Top UEBA anomalies** section, showing the top three anomalies from the past 30 days, along with direct links to pre-built anomaly queries and the Sentinel events timeline for deeper analysis.
-
-:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-user-investigations.png" alt-text="Screenshot that shows the overview tab of the User page for a user with UEBA anomalies in the past 30 days." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-user-investigations.png":::
-
-### Built-in user anomaly queries in incident investigations
-
-During incident investigations, analysts can launch built-in queries directly from incident graphs to retrieve all user anomalies related to the case.
-
-:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-incident-investigations.png" alt-text="Screenshot that shows an incident graph, highlighting the Go hunt All user anomalies option, which allows analysts to quickly find all anomalies related to the user." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-incident-investigations.png":::
-
-For more information, see [Investigate incidents in the Microsoft Defender portal](https://aka.ms/ueba-go-hunt).
-
-### Enrich Advanced Hunting queries and custom detections with UEBA data
-
-When analysts write Advanced Hunting or custom detection queries using UEBA-related tables, the Defender portal displays a banner that prompts them to join the **Anomalies** table. This helps enrich investigations with behavioral insights and strengthens the overall analysis.
-
-:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-advanced-hunting.png" alt-text="Screenshot that shows the Advanced Hunting page with a banner that prompts the analyst to join the Anomalies table and enrich their analysis with behavioral insights." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-advanced-hunting.png":::
-
-For more information, see: 
-- [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
-- [KQL join operator](/kusto/query/join-operator?view=microsoft-sentinel).
-- [UEBA data sources](ueba-reference.md#ueba-data-sources).
-- [Anomalies detected by the Microsoft Sentinel machine learning engine](anomalies-reference.md).
+To query the BehaviorAnalytics, IdentityInfo, Anomalies, and UserPeerAnalytics tables, install the UEBA solution, which includes dozens of ready-to-use queries. For an overview of each table, see [UEBA tables](#ueba-tables-in-sentinel). For schema details, see the [UEBA reference](ueba-reference.md), and for runnable examples, see [sample KQL queries](ueba-useful-queries.md).
 
 ## UEBA tables in Sentinel
 
@@ -175,6 +140,40 @@ A user performs an Azure operation for the first time:
 ### Correlation
 
 While these scores serve different purposes, you can expect some correlation. High anomaly scores often align with high investigation priority, but not always. Each score provides unique insight for layered detection.
+
+##  UEBA experiences in the Defender portal empower analysts and streamline workflows
+
+By surfacing anomalies in investigation graphs and user pages, and prompting analysts to incorporate anomaly data in hunting queries, UEBA facilitates faster threat detection, smarter prioritization, and more efficient incident response. 
+
+This section outlines the key UEBA analyst experiences available in the Defender portal when you enable UEBA.
+
+### UEBA insights in user investigations
+
+Analysts can quickly assess user risk using UEBA context displayed in side panels and the Overview tab on all user pages. When unusual behavior is detected, the portal automatically tags users with **UEBA anomalies** helping prioritize investigations based on recent activity. For more information, see [User entity page in Microsoft Defender](https://aka.ms/ueba-entity-details).
+
+Each user page includes a **Top UEBA anomalies** section, showing the top three anomalies from the past 30 days, along with direct links to pre-built anomaly queries and the Sentinel events timeline for deeper analysis.
+
+:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-user-investigations.png" alt-text="Screenshot that shows the overview tab of the User page for a user with UEBA anomalies in the past 30 days." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-user-investigations.png":::
+
+### Built-in user anomaly queries in incident investigations
+
+During incident investigations, analysts can launch built-in queries directly from incident graphs to retrieve all user anomalies related to the case.
+
+:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-incident-investigations.png" alt-text="Screenshot that shows an incident graph, highlighting the Go hunt All user anomalies option, which allows analysts to quickly find all anomalies related to the user." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-incident-investigations.png":::
+
+For more information, see [Investigate incidents in the Microsoft Defender portal](https://aka.ms/ueba-go-hunt).
+
+### Enrich Advanced Hunting queries and custom detections with UEBA data
+
+When analysts write Advanced Hunting or custom detection queries using UEBA-related tables, the Defender portal displays a banner that prompts them to join the **Anomalies** table. This helps enrich investigations with behavioral insights and strengthens the overall analysis.
+
+:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-advanced-hunting.png" alt-text="Screenshot that shows the Advanced Hunting page with a banner that prompts the analyst to join the Anomalies table and enrich their analysis with behavioral insights." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-advanced-hunting.png":::
+
+For more information, see: 
+- [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
+- [KQL join operator](/kusto/query/join-operator?view=microsoft-sentinel).
+- [UEBA data sources](ueba-reference.md#ueba-data-sources).
+- [Anomalies detected by the Microsoft Sentinel machine learning engine](anomalies-reference.md).
 
 ## Aggregate behavior insights with the UEBA behaviors layer (Preview)
 
