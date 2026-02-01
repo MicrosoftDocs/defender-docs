@@ -130,10 +130,10 @@ In this demonstration article, you can choose from three engines to test AMSI:
 The result should be as follows:
 
     ```javascript
-    C:\tools>cscript amsitest.js
+    C:\tools>cscript AMSI_jscript.js
     Microsoft (R) Windows Script Host Version 10.0
     Copyright (C) Microsoft Corporation. All rights reserved.
-    CScript Error: Loading script "C:\test\amsitest.js" failed (Operation did not complete successfully because the file contains a virus or potentially unwanted software. ).
+    CScript Error: Loading script "C:\test\AMSI_jscript.js" failed (Operation did not complete successfully because the file contains a virus or potentially unwanted software. ).
     ```
 
 ### Verifying the test results
