@@ -607,24 +607,20 @@
       - name: Overview
         href: device-discovery.md
       - name: Manage device discovery
-        href: configure-device-discovery.md
-      - name: Review and assess devices
-        href: assess-devices.md        
+        href: configure-device-discovery.md            
 
       - name: Discover network devices (network scans)
         href: network-devices.md
-      - name: Troubleshoot
-        href: troubleshoot-device-discovery-network-scans.md
+      - name: Device discovery FAQ
+        href: device-discovery-faq.md
     - name: Devices
-      items:
-      - name: Overview
-        href: devices-overview.md
+      items:      
       - name: Device inventory
         href: machines-view-overview.md
-      - name: Manage device scope and relevance
-        href: manage-device-scope-relevance.md
-      - name: Manage device group and tags
-        href: machine-tags.md
+      - name: Exclude devices
+        href: exclude-devices.md
+      - name: Identify transient devices
+        href: transient-device-tagging.md
       - name: Targeting devices
         href: targeting-devices.md
       - name: Collect custom device data
@@ -637,6 +633,8 @@
         href: internet-facing-devices.md
       - name: Device timeline
         href: device-timeline-event-flag.md
+      - name: Manage device groups and tags
+        href: machine-tags.md
 
     - name: Tamper resiliency
       href: tamper-resiliency.md

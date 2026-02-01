@@ -31,7 +31,7 @@ appliesto:
 List live response library files.
 
 > [!TIP]
-> You can also view and manage live response files from the [Library management](configure-libraries-live-response.md) page in the Microsoft Defender portal.
+> You can also view and manage live response files from the [Library management](../configure-libraries-live-response.md) page in the Microsoft Defender portal.
 
 ## Limitations
 
