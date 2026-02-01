@@ -1,6 +1,6 @@
 ---
 title: Enable Defender for Containers in Microsoft Defender for Cloud
-description: Learn how to enable Microsoft Defender for Containers for Kubernetes environments across Azure, AWS, and Google Cloud.
+description: Learn how to enable the Microsoft Defender for Containers plan in Microsoft Defender for Cloud for Azure subscriptions, AWS connectors, and GCP connectors.
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
@@ -11,21 +11,19 @@ ms.date: 01/19/2026
 
 This article explains how to enable the Microsoft Defender for Containers plan in Microsoft Defender for Cloud.
 
-Enabling the plan activates container protection for supported Kubernetes environments across Azure, AWS, and Google Cloud. 
-
 # [Azure Kubernetes Service (AKS)](#tab/aks)
 
 ## Prerequisites
 
 - AKS cluster supported by Defender for Containers. See the [support matrix](support-matrix-defender-for-containers.md).
 
-- [An OpenId Connect (OIDC) issuer](/azure/aks/use-oidc-issuer) enabled on your cluster.
+- [An OpenId Connect (OIDC) issuer](/azure/aks/use-oidc-issuer) enabled on your cluster. -> check with eyal if this is a prerequisite for deploying with cli or really for enable
 
 ## Network requirements
 
 [!INCLUDE[defender-for-container-prerequisites-aks](includes/defender-for-containers-network-requirements-aks.md)]
 
-## Enable Defender for Containers
+## Enable the Defender for Containers plan
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -51,9 +49,7 @@ Enabling the plan activates container protection for supported Kubernetes enviro
 
 1. Select **Save**.
 
-## Verify deployment
-
-Use the Azure portal to verify that Defender for Containers components were deployed successfully.
+## Verify the plan is enabled
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
@@ -78,13 +74,13 @@ Use the Azure portal to verify that Defender for Containers components were depl
 
 - One or more Amazon EKS clusters running Kubernetes version 1.19 or later.
 
-- Container images stored in Amazon ECR.
+- Container images stored in Amazon ECR. -> check this too
 
 ## Network requirements
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
 
-## Enable Defender for Containers
+## Enable the Defender for Containers plan
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -107,6 +103,8 @@ Use the Azure portal to verify that Defender for Containers components were depl
     - **Kubernetes API access**
     - **Registry access**
         - If enabled, optionally enable security fidings
+    
+    These settings enable Defender capabilities for your AWS environment. Cluster components and Azure Arc extensions are deployed separately.
 
 1. Select **Continue**.
 
@@ -114,7 +112,7 @@ Use the Azure portal to verify that Defender for Containers components were depl
 
 ## Grant control plane permissions
 
-Control plane permissions must be configured if you enabled Agentless discovery for Kubernetes. Grant permissions by using one of the following methods:
+If you enabled Agentless discovery for Kubernetes, you need to configure control plane permissions. Grant permissions using one of the following methods:
 
 ### Option 1: Use the Python script
 
@@ -136,9 +134,7 @@ eksctl create iamidentitymapping \
   --no-duplicate-arns
 ```
 
-## Verify deployment
-
-Use the Azure portal to verify that Defender for Containers components were deployed successfully.
+## Verify the plan is enabled
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
@@ -168,7 +164,7 @@ Use the Azure portal to verify that Defender for Containers components were depl
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
 
-## Enable Defender for Containers
+## Enable the Defender for Containers plan
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -200,7 +196,7 @@ Use the Azure portal to verify that Defender for Containers components were depl
 
 1. Select **Save**.
 
-## Verify deployment
+## Verify the plan is enabled
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
