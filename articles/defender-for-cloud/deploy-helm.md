@@ -74,7 +74,7 @@ Depending on your deployment type, follow the relevant instructions to install t
   >```
 
 - Remove any **conflicting policies**. These policy assignments cause the generally available version of the sensor to be deployed on your cluster.
-    - Locate the ID for the conflicting policy `64def556-fbad-4622-930e-72d1d5589bf5` in the [list of policy definitions for your subscription](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyMenuBlade/~/Definitions).
+    - The conflicting policy ID is `64def556-fbad-4622-930e-72d1d5589bf5`. Learne more about the policy in the [list of policy definitions for your subscription](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyMenuBlade/~/Definitions).
     - Run the [delete_conflicting_policies.sh](https://github.com/microsoft/Microsoft-Defender-For-Containers/blob/main/scripts/delete_conflicting_policies.sh) script to remove conflicting policies by using the Azure CLI.
     - Run the script with the command:
 
