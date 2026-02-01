@@ -81,9 +81,7 @@ Depending on your deployment type, follow the relevant instructions to install t
     ```azurecli   
     delete_conflicting_policies.sh <CLUSTER_AZURE_RESOURCE_ID>
     ```
-    
-    > [!NOTE]
-    > This script removes resource group and subscription level policies for setting up the GA version of Defender for Containers. It can affect clusters other than the one you're configuring.
+This script removes resource group and subscription level policies for setting up the genreally available (GA) version of Defender for Containers. It can affect clusters other than the one you're configuring.
 
 #### Installation
 
