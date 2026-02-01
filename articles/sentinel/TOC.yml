@@ -323,10 +323,6 @@
               displayName: data classification, entities
             - name: Entity pages
               href: entity-pages.md
-            - name: User and entity behavior analytics (UEBA)
-              href: identify-threats-with-entity-behavior-analytics.md
-            - name: Aggregate behavioral insights from raw logs 
-              href: entity-behaviors-layer.md 
             - name: Create custom entity activities
               href: customize-entity-activities.md
         - name: Watchlists
@@ -343,6 +339,20 @@
           href: monitor-key-vault-honeytokens.md
         - name: Handle false positives
           href: false-positives.md
+        - name: User and Entity Behavior Analytics (UEBA)
+          items:
+            - name: Overview
+              href: identify-threats-with-entity-behavior-analytics.md
+            - name: Enable UEBA
+              href: enable-entity-behavior-analytics.md
+            - name: Investigate with UEBA
+              href: investigate-with-ueba.md
+            - name: Aggregate behavioral insights from raw logs
+              href: entity-behaviors-layer.md
+            - name: Useful UEBA queries
+              href: ueba-useful-queries.md
+            - name: UEBA reference
+              href: ueba-reference.md
     - name: Hunt for threats
       items:
         - name: Overview
@@ -412,8 +422,6 @@
               displayName: close incidents, search incidents, comment on incidents
             - name: Investigate incidents in depth
               href: investigate-incidents.md
-            - name: Tutorial - Investigate with UEBA
-              href: investigate-with-ueba.md
             - name: Relate alerts to incidents
               href: relate-alerts-to-incidents.md
             - name: Create incidents manually
