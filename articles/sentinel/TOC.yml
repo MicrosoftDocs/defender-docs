@@ -316,6 +316,21 @@
               href: /defender-xdr/custom-detection-rules?toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json
             - name: Manage detection rules
               href: /defender-xdr/custom-detection-manage?toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json
+        - name: User and Entity Behavior Analytics (UEBA)
+          items:
+            - name: UEBA overview
+              href: identify-threats-with-entity-behavior-analytics.md
+              displayName: User and Entity Behavior Analytics
+            - name: Enable UEBA
+              href: enable-entity-behavior-analytics.md
+            - name: Investigate with UEBA
+              href: investigate-with-ueba.md
+            - name: Useful UEBA queries
+              href: ueba-useful-queries.md
+            - name: UEBA reference
+              href: ueba-reference.md
+            - name: Aggregate behavioral insights from raw logs
+              href: entity-behaviors-layer.md
         - name: Data classification with entities
           items:
             - name: Overview
@@ -339,21 +354,6 @@
           href: monitor-key-vault-honeytokens.md
         - name: Handle false positives
           href: false-positives.md
-        - name: User and Entity Behavior Analytics (UEBA)
-          items:
-            - name: UEBA overview
-              href: identify-threats-with-entity-behavior-analytics.md
-              displayName: User and Entity Behavior Analytics
-            - name: Enable UEBA
-              href: enable-entity-behavior-analytics.md
-            - name: Investigate with UEBA
-              href: investigate-with-ueba.md
-            - name: Useful UEBA queries
-              href: ueba-useful-queries.md
-            - name: UEBA reference
-              href: ueba-reference.md
-            - name: Aggregate behavioral insights from raw logs
-              href: entity-behaviors-layer.md
     - name: Hunt for threats
       items:
         - name: Overview
