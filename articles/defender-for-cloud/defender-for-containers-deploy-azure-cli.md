@@ -102,7 +102,7 @@ The output should show `enabled: true`.
 
 - Azure CLI version 2.40.0 or later.
 
-- `kubectl` configured for your EKS clusters.
+- `kubectl` configured to access your EKS cluster.
 
 - The EKS cluster is [connected to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
 
@@ -184,7 +184,7 @@ Confirm that a Defender for Containers DaemonSet is listed and that the **DESIRE
 
 - Azure CLI version 2.40.0 or later.
 
-- `kubectl` configured for your GKE clusters.
+- `kubectl` configured to access your GKE cluster.
 
 - The GKE cluster is [connected to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
 
@@ -263,9 +263,12 @@ Confirm that a Defender for Containers DaemonSet is listed and that the **DESIRE
 ## Prerequisites
 
 - [Defender for Containers enabled on your Azure subscription](defender-for-containers-enable-portal.md?tab=aks).
+
 - Azure CLI version 2.40.0 or later.
-- `kubectl` configured to access your cluster.
-- The cluster is connected to Azure Arc. See [Connect your Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
+
+- `kubectl` configured to access your ARC cluster.
+
+- The cluster is [connected to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
 
 ## Network requirements
 
