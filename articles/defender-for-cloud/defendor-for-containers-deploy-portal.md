@@ -25,6 +25,10 @@ For AKS clusters, recommendations activate built-in AKS security capabilities, i
 
 - [Defender for Containers enabled on your Azure subcription](defender-for-containers-enable-portal.md?tab=aks).
 
+## Network requirements
+
+[!INCLUDE[defender-for-container-prerequisites-aks](includes/defender-for-containers-network-requirements-aks.md)]
+
 ## Deploy components
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
@@ -64,6 +68,10 @@ For EKS clusters, Defender uses Azure Arc–enabled Kubernetes to deploy the Def
 
 > [!NOTE] 
 > Some recommendations require Defender for Cloud to access the Kubernetes control plane. If you see a recommendation related to Kubernetes API access and you haven’t configured it yet, [configure plane permissions](defender-for-containers-control-plane.md).
+
+## Network requirements
+
+[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
 
 ## Deploy components
 
@@ -106,8 +114,9 @@ For GKE clusters, Defender uses Azure Arc–enabled Kubernetes to deploy the Def
 
 - [Defender for Containers enabled on your GCP connector](defender-for-containers-enable-portal.md?tab=eks). 
 
-> [!NOTE] 
-> Some recommendations require Defender for Cloud to access the Kubernetes control plane. If you see a recommendation related to Kubernetes API access and you haven’t configured it yet, [configure plane permissions](defender-for-containers-control-plane.md).
+## Network requirements
+
+[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
 
 ## Deploy components
 
@@ -148,8 +157,9 @@ For Kubernetes clusters connected to Azure using Azure Arc that aren’t running
 
 - [Defender for Containers enabled on your Azure subscription](defender-for-containers-enable-portal.md?tab=aks).
 
-> [!NOTE]
-> Some recommendations require Defender for Cloud to access the Kubernetes control plane. If you see a recommendation related to Kubernetes API access and you haven’t configured it yet, [configure control plane permissions](defender-for-containers-control-plane.md).
+## Network requirements
+
+[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
 
 ## Deploy components
 

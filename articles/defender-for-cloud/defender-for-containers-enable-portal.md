@@ -20,10 +20,6 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 
 - AKS cluster supported by Defender for Containers. See the [support matrix](support-matrix-defender-for-containers.md).
 
-## Network requirements
-
-[!INCLUDE[defender-for-container-prerequisites-aks](includes/defender-for-containers-network-requirements-aks.md)]
-
 ## Enable the Defender for Containers plan
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
@@ -76,10 +72,6 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 - One or more Amazon EKS clusters running Kubernetes version 1.19 or later.
 
 - Container images stored in Amazon ECR. -> check this too
-
-## Network requirements
-
-[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
 
 ## Enable the Defender for Containers plan
 
@@ -136,10 +128,6 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 - A GCP project connected to Microsoft Defender for Cloud. If you haven’t connected your project yet, see [Connect your GCP project to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
 
 - One or more GKE clusters running Kubernetes version 1.19 or later.
-
-## Network requirements
-
-[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
 
 ## Enable the Defender for Containers plan
 
