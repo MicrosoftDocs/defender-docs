@@ -64,6 +64,7 @@ For more information on the description of the response action types, see [Creat
 >
 > The prior response actions (AlertAndBlock, and Alert) will be supported until January 2022. After this date, all customers must be use one of the action types listed in this section.
 
+
 ## Json representation
 
 ```json
