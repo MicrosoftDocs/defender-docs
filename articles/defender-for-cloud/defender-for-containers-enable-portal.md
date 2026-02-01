@@ -13,11 +13,12 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 
 # [Azure Kubernetes Service (AKS)](#tab/aks)
 
+> [NOTE!]
+> Enabling the Containers plan on an Azure subscription also applies to Kubernetes clusters connected to Azure through Azure Arc.
+
 ## Prerequisites
 
 - AKS cluster supported by Defender for Containers. See the [support matrix](support-matrix-defender-for-containers.md).
-
-- [An OpenId Connect (OIDC) issuer](/azure/aks/use-oidc-issuer) enabled on your cluster. -> check with eyal if this is a prerequisite for deploying with cli or really for enable
 
 ## Network requirements
 

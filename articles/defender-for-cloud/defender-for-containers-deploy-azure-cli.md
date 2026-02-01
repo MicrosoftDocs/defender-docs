@@ -104,7 +104,7 @@ The output should show `enabled: true`.
 
 - `kubectl` configured for your EKS clusters.
 
-- [EKS clusters connected to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
+- The EKS cluster is [connected to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
 
 ## Network requirements
 
@@ -186,7 +186,7 @@ Confirm that a Defender for Containers DaemonSet is listed and that the **DESIRE
 
 - `kubectl` configured for your GKE clusters.
 
-- [GKE clusters connected to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
+- The GKE cluster is [connected to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
 
 ## Network requirements
 
@@ -257,6 +257,83 @@ kubectl get daemonsets -n kube-system
 ```
 
 Confirm that a Defender for Containers DaemonSet is listed and that the **DESIRED**, **CURRENT**, and **READY** columns show matching values.
+
+# [Arc-enabled Kubernetes](#tab/arc)
+
+## Prerequisites
+
+- [Defender for Containers enabled on your Azure subscription](defender-for-containers-enable-portal.md?tab=aks).
+- Azure CLI version 2.40.0 or later.
+- `kubectl` configured to access your cluster.
+- The cluster is connected to Azure Arc. See [Connect your Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
+
+## Network requirements
+
+[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
+
+## Deploy the Defender sensor
+
+For Arc-enabled Kubernetes clusters, Defender components are deployed as Azure Arc Kubernetes extensions.
+
+If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](#verify-deployment) before running these commands.
+
+```azurecli
+az k8s-extension create \
+  --name microsoft.azuredefender.kubernetes \
+  --extension-type microsoft.azuredefender.kubernetes \
+  --cluster-type connectedClusters \
+  --cluster-name <cluster-name> \
+  --resource-group <resource-group> \
+  --configuration-settings logAnalyticsWorkspaceResourceID=<workspace-resource-id>
+```
+
+Replace `<workspace-resource-id>` with the full Log Analytics workspace resource ID.  
+For example, `/subscriptions/<subscription-id>/resourceGroups/<workspace-rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>`.
+
+## Deploy the Azure Policy extension
+
+```azurecli
+az k8s-extension create \
+  --name azurepolicy \
+  --extension-type Microsoft.PolicyInsights \
+  --cluster-type connectedClusters \
+  --cluster-name <cluster-name> \
+  --resource-group <resource-group>
+```
+
+## Verify deployment
+
+Use the following steps to verify that Defender for Containers components were deployed successfully.
+
+### Verify that the cluster is connected to Azure Arc
+
+```azurecli
+az connectedk8s show \
+  --name <cluster-name> \
+  --resource-group <resource-group> \
+  --query connectivityStatus
+```
+
+The output should show `Connected`.
+
+### Verify that Defender and Azure Policy extensions are installed
+
+```azurecli
+az k8s-extension list \
+  --cluster-type connectedClusters \
+  --cluster-name <cluster-name> \
+  --resource-group <resource-group>
+```
+
+Confirm that the following extensions are listed with `provisioningState` set to `Succeeded`:
+- `microsoft.azuredefender.kubernetes`
+- `azurepolicy`
+
+### Verify that the Defender sensor DaemonSet is running
+
+```bash
+kubectl get daemonsets -n kube-system
+```
 
 ---
 
