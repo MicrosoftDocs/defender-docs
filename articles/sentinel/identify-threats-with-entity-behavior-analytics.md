@@ -97,50 +97,28 @@ For more information on the schema and tables, see [UEBA data sources](ueba-refe
 
 Microsoft Sentinel's UEBA provides two distinct scoring mechanisms to help security teams prioritize investigations and detect anomalies effectively:
 
-### Investigation priority score
-
-- **Where it appears:** BehaviorAnalytics table
-- **Purpose:** Indicates how unusual a single event is, based on profile-driven logic.
-- **How it's calculated:**
-  - **Entity Anomaly Score:** Measures rarity of entities involved, such as user, device, country, ISP, and user agent. First-time or uncommon entities receive higher scores.
-  - **Time Series Score:** Detects abnormal patterns over time, such as spikes in failed log-ons or unexpected group membership changes.
-- **Range:** 0–10 (0 = benign, 10 = highly anomalous)
-- **Key characteristics:**
-  - Near real-time calculation for flexible investigation at the event level.
-  - Profile-based approach might be less precise but enables quick triage of individual events.
-
-### Anomaly score
-
-- **Where it appears:** Anomalies table
-- **Purpose:** Reflects holistic anomalous behavior across multiple events by using machine learning.
-- **How it's calculated:** AI/ML anomaly detector, trained on your workspace's telemetry.
-- **Range:** 0–1 (0 = benign, 1 = highly anomalous)
-- **Key characteristics:**
-  - Batch processing for detecting complex behavioral deviations.
-  - Captures scenarios where a group of related activities signals risk, even if individual events seem normal.
-
-### How they differ
-
-**Investigation priority score:**
-- Event-level, profile-based, near real-time
-- Best for quick triage and drilling into single events
-
-**Anomaly score:**
-- Behavior-level, ML-driven, context-aware
-- Best for identifying patterns and aggregated anomalies over time
+| Aspect | Investigation priority score | Anomaly score |
+|--------|------------------------------|---------------|
+| **Table** | `BehaviorAnalytics` | `Anomalies` |
+| **Purpose** | Indicates how unusual a single event is, based on profile-driven logic | Reflects holistic anomalous behavior across multiple events using machine learning |
+| **How it's calculated** | **Entity Anomaly Score:** Measures rarity of entities (user, device, country, ISP, user agent). First-time or uncommon entities receive higher scores. <br><br>**Time Series Score:** Detects abnormal patterns over time, such as spikes in failed sign-ins or unexpected group membership changes. | AI/ML anomaly detector trained on your workspace's telemetry |
+| **Range** | 0–10 (0 = benign, 10 = highly anomalous) | 0–1 (0 = benign, 1 = highly anomalous) |
+| **Processing** | Near real-time, event-level | Batch processing, behavior-level |
+| **Trade-offs** | Profile-based; may be less precise but enables quick triage | More precise but requires batch processing; less immediate |
+| **Best for** | Quick triage and drilling into single events | Identifying patterns and aggregated anomalies over time |
 
 ### Example scenario
 
 A user performs an Azure operation for the first time:
 
 - **Investigation priority score:** High, because it's a first-time event.
-- **Anomaly Score:** Low, because occasional first-time Azure actions are common and not inherently risky.
+- **Anomaly score:** Low, because occasional first-time Azure actions are common and not inherently risky.
 
 ### Correlation
 
 While these scores serve different purposes, you can expect some correlation. High anomaly scores often align with high investigation priority, but not always. Each score provides unique insight for layered detection.
 
-##  UEBA experiences in the Defender portal empower analysts and streamline workflows
+## UEBA experiences in the Defender portal empower analysts and streamline workflows
 
 By surfacing anomalies in investigation graphs and user pages, and prompting analysts to incorporate anomaly data in hunting queries, UEBA facilitates faster threat detection, smarter prioritization, and more efficient incident response. 
 
