@@ -8,13 +8,13 @@ ms.reviewer: rlitinsky
 
 # Configure Windows event auditing
 
-This article describes how to configure windows event auditing.
+This article describes how to configure Windows event auditing.
 
-Defender for Identity uses Windows event log entries to detect specific activities. This data is used in various detection scenarios and can be used in advanced hunting queries. For optimal protection and monitoring, make sure that collection of windows events is properly configured.
+Defender for Identity uses Windows event log entries to detect specific activities. This data is used in various detection scenarios and can be used in advanced hunting queries. For optimal protection and monitoring, make sure that collection of Windows events is properly configured.
 
-Defender for Identity generates health alerts when it detects incorrect windows event auditing configurations. For more information, see [Microsoft Defender for Identity health alerts](../health-alerts.md).
+Defender for Identity generates health alerts when it detects incorrect Windows event auditing configurations. For more information, see [Microsoft Defender for Identity health alerts](../health-alerts.md).
 
-If auditing is configured properly, it has minimal effect on server performance.
+If you configure auditing properly, it has minimal effect on server performance.
 
 ## Before you begin
 
@@ -47,11 +47,11 @@ Before you begin configuring windows event collection, we recommend that you run
 ## Configure Defender for Identity to collect Windows events automatically (Preview)
 
 > [!NOTE]
-> Automatic windows event auditing is supported for domain controllers that use the Defender for Identity sensor version 3.x.
+> Automatic Windows event auditing is supported for domain controllers that use the Defender for Identity sensor version 3.x.
 
-Automatic windows auditing performs all configuration tasks automatically:
+Automatic Windows auditing performs all configuration tasks automatically:
 
-- Checks current windows event auditing configuration.
+- Checks current Windows event auditing configuration.
 - Identifies any gaps in the configuration.
 - The sensor applies any necessary changes, including all of the steps in the manual configuration:
     - **Directory services advanced auditing**: Adds audit entries to the domain root object's System Access Control List (SACL) to enable required directory service auditing.
@@ -64,14 +64,14 @@ Automatic windows auditing performs all configuration tasks automatically:
 - Runs once every 24 hours.
 
 > [!NOTE]
-> - If you don't turn on automatic Windows auditing, you **must** configure Windows event auditing either [manually](#configure-windows-event-collection-manually) or using [PowerShell](#configure-windows-event-collection-using-powershell).
+> - If you don't turn on automatic Windows auditing, you **must** configure Windows event auditing either [manually](#configure-windows-event-collection-manually) or by using [PowerShell](#configure-windows-event-collection-using-powershell).
 > - GPO settings can conflict with local settings set by the sensor. 
 
-### Turn on automatic windows auditing:
+### Turn on automatic Windows auditing
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings**, and then **Identities**.
 1. In the **General** section, select **Advanced features**.
-1. Turn on **Automatic Windows auditing configuration**.​
+1. Turn on **Automatic Windows auditing configuration**.
 
 ## Configure Windows event collection manually
 
@@ -85,7 +85,7 @@ This section includes instructions for manually configuring Windows event collec
 
 ### Configure auditing on domain controllers
 
-To configure auditing on a domain controller, you must:
+To configure auditing on a domain controller, complete the following steps:
 
 - [Configure Directory Services Advanced Auditing](#configure-directory-services-advanced-auditing)
 - [Configure NTLM auditing](#configure-ntlm-auditing)
@@ -104,7 +104,7 @@ This section describes how to modify your domain controller's Advanced Audit Pol
     > [!NOTE]
     > Use the Default Domain Controllers policy or a dedicated GPO to set these policies.
 
-1. In the window that opens, go to **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings**. Depending on the policy you want to enable, do the following:
+1. Go to **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings**. Depending on the policy you want to enable, do the following:
 
     1. Go to **Advanced Audit Policy Configuration** > **Audit Policies**.
 
@@ -125,7 +125,7 @@ This section describes how to modify your domain controller's Advanced Audit Pol
         | **DS Access** | **Audit Directory Service Access** | 4662 - For this event, you must also [configure domain object auditing](#configure-domain-object-auditing).  |
 
         > [!NOTE]
-        > <a name=failure>*</a> These subcategories don't support failure events. However, we recommend adding them for auditing purposes in case they're implemented in the future. For more information, see [Audit Computer Account Management](/windows/security/threat-protection/auditing/audit-computer-account-management), [Audit Security Group Management](/windows/security/threat-protection/auditing/audit-security-group-management), and [Audit Security System Extension](/windows/security/threat-protection/auditing/audit-security-system-extension).
+        > <a name=failure>*</a> These subcategories don't support failure events. We recommend adding them for auditing purposes in case they're implemented in the future. For more information, see [Audit Computer Account Management](/windows/security/threat-protection/auditing/audit-computer-account-management), [Audit Security Group Management](/windows/security/threat-protection/auditing/audit-security-group-management), and [Audit Security System Extension](/windows/security/threat-protection/auditing/audit-security-system-extension).
 
         For example, to configure **Audit Security Group Management**, under **Account Management**, double-click **Audit Security Group Management**, and then select **Configure the following audit events** for both **Success** and **Failure** events.
 
@@ -148,7 +148,7 @@ For more information, see the [auditpol reference documentation](/windows-server
 When a Defender for Identity sensor parses Windows event 8004, Defender for Identity NTLM authentication activities are enriched with the server-accessed data. This section describes the extra configuration steps that you need for auditing Windows event 8004.
 
 > [!NOTE]
-> Domain group policies to collect Windows event 8004 should be applied *only* to domain controllers.
+> Apply domain group policies to collect Windows event 8004 *only* to domain controllers.
 
 To configure NTLM auditing:
 
@@ -162,7 +162,7 @@ To configure NTLM auditing:
     | **Network security: Restrict NTLM: Audit NTLM authentication in this domain** | Enable all |
     | **Network security: Restrict NTLM: Audit Incoming NTLM Traffic** | Enable auditing for all accounts |
 
-For example, to configure **Outgoing NTLM traffic to remote servers**, under **Security Options**, double-click **Network security: Restrict NTLM: Outgoing NTLM traffic to remote servers**, and then select **Audit all**.
+1. To configure **Outgoing NTLM traffic to remote servers**, under **Security Options**, double-click **Network security: Restrict NTLM: Outgoing NTLM traffic to remote servers**, and then select **Audit all**.
 
 :::image type="content" source="../media/advanced-audit-policy-check-step-3.png" alt-text="Screenshot of the audit configuration for outgoing NTLM traffic to remote servers." border="false":::
 
@@ -220,12 +220,12 @@ To configure domain object auditing:
 
 > [!NOTE]
 >
-> - You can assign auditing permissions on **All descendant objects**, using only the object types detailed in the last step.
+> - You can assign auditing permissions to **All descendant objects**, using only the object types detailed in the last step.
 > - The **msDS-DelegatedManagedServiceAccount** class is relevant only for domains running at least one Windows Server 2025 domain controller.
 
 ### Configure auditing on AD FS
 
-This section describes how to modify your Active Directory Federation Services (AD FS) Audit configurations for Defender for Identity.
+This section describes how to modify your Active Directory Federation Services (AD FS) audit configurations for Defender for Identity.
 
 #### Object-level auditing on the AD FS configuration folder
 
@@ -238,7 +238,7 @@ This section describes how to modify your Active Directory Federation Services (
 1. Right-click **ADFS** and select **Properties**.
 1. Go to the **Security** tab and select **Advanced** > **Advanced Security Settings**. Then go to the **Auditing** tab and select **Add** > **Select a principal**.
 1. Under **Enter the object name to select**, enter **Everyone**. Then select **Check Names** > **OK**.
-1. You then return to **Auditing Entry**. Make the following selections:
+1. Return to **Auditing Entry**. Make the following selections:
 
    - For **Type**, select **All**.
    - For **Applies to**, select **This object and all descendant objects**.
@@ -251,7 +251,8 @@ This section describes how to modify your Active Directory Federation Services (
 
 #### Configure a Group Policy for event auditing
 
-1. Create a group policy to apply to your Active Directory Federation Services (AD FS). Edit it and configure the following auditing settings:
+1. Create a group policy to apply to your Active Directory Federation Services (AD FS). 
+1. Configure the following auditing settings:
 
    1. Go to **Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Object Access\Audit Application Generated**.
    
@@ -302,13 +303,14 @@ If you're working with a dedicated server that has Active Directory Certificate 
         :::image type="content" source="../media/configure-windows-event-collection/auditing.png" alt-text="Screenshot of the Auditing tab for certificate authority properties.":::
 
 > [!NOTE]
-> Configuring **Start and Stop Active Directory Certificate Services** event auditing might cause restart delays when you're dealing with a large AD CS database. Consider removing irrelevant entries from the database. Alternatively, refrain from enabling this specific type of event.
+> Configuring **Start and Stop Active Directory Certificate Services** event auditing might cause restart delays when you're dealing with a large AD CS database. Consider removing irrelevant entries from the database. Alternatively, don't enable this specific type of event.
 
 ### Configure auditing on Microsoft Entra Connect
 
 To configure auditing on Microsoft Entra Connect servers:
 
-- Create a group policy to apply to your Microsoft Entra Connect servers. Edit it and configure the following auditing settings:
+1. Create a group policy to apply to your Microsoft Entra Connect servers. 
+1. Edit the group policy and configure the following auditing settings:
 
    1. Go to **Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Logon/Logoff\Audit Logon**.
 
@@ -318,11 +320,12 @@ To configure auditing on Microsoft Entra Connect servers:
 
 ### Configure auditing on the configuration container<a name="enable-auditing-on-an-exchange-object"></a>
 
-The configuration container audit is required only for environments that currently have or previously had Microsoft Exchange, as these environments have an Exchange container located within the domain's Configuration section.
+You need the configuration container audit only for environments that currently have or previously had Microsoft Exchange. These environments have an Exchange container located within the domain's Configuration section.
 
-1. Open the ADSI Edit tool. Select **Start** > **Run**, enter `ADSIEdit.msc`, and then select **OK**.
-1. On the **Action** menu, select **Connect to**.
-1. In the **Connection Settings** dialog, under **Select a well known Naming Context**, select **Configuration** > **OK**.
+1. Open the ADSI Edit tool. 
+1. Select **Start** > **Run**, enter `ADSIEdit.msc`, and then select **OK**.
+1. In the **Action** menu, select **Connect to**.
+1. Go to **Connection Settings** > **Select a well known Naming Context**, > **Configuration** and select **OK**.
 1. Expand the **Configuration** container to show the **Configuration** node, which begins with **"CN=Configuration,DC=..."**.
 
     :::image type="content" source="../media/cn-configuration.png" alt-text="Screenshot of selections for opening properties for the CN Configuration node.":::
@@ -336,7 +339,7 @@ The configuration container audit is required only for environments that current
 1. In **Advanced Security Settings**, select the **Auditing** tab, and then select **Add**.
 1. Choose **Select a principal**.
 1. Under **Enter the object name to select**, enter **Everyone**. Then select **Check Names** > **OK**.
-1. You then return to **Auditing Entry**. Make the following selections:
+1. Return to **Auditing Entry**. Make the following selections:
     - For **Type**, select **All**.
     - For **Applies to**, select **This object and all descendant objects**.
     - Under **Permissions**, scroll down and select **Clear all**. Scroll up and select **Write all properties**.
@@ -351,7 +354,7 @@ For more information, see the [Defender for Identity PowerShell reference](/powe
 - [Set-MDIConfiguration](/powershell/module/defenderforidentity/set-mdiconfiguration)
 - [Get-MDIConfiguration](/powershell/module/defenderforidentity/get-mdiconfiguration)
 
-The following commands describe how to modify your domain controller's Advanced Audit Policy settings as needed for Defender for Identity by using PowerShell.
+The following commands show how to modify your domain controller's Advanced Audit Policy settings for Defender for Identity by using PowerShell.
 
 **To view your audit policies**:
 
@@ -386,7 +389,7 @@ Set-MDIConfiguration -Mode Domain -Configuration All
 
 ## Update legacy configurations
 
-Defender for Identity no longer requires logging 1,644 events. If you have either of the following settings enabled, you can remove them from the registry.
+Defender for Identity no longer requires logging 1,644 events. If you enabled either of the following settings, remove them from the registry.
 
 ```reg
 Windows Registry Editor Version 5.00
