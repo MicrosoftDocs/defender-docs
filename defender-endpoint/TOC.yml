@@ -621,8 +621,6 @@
         href: exclude-devices.md
       - name: Identify transient devices
         href: transient-device-tagging.md
-      - name: Targeting devices
-        href: targeting-devices.md
       - name: Collect custom device data
         items:
         - name: Overview
