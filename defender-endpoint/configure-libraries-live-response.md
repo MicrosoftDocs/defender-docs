@@ -42,7 +42,7 @@ To view the list of files available for live response:
    - **Has parameters**: Indicates whether the file has parameters that can be configured during a live response session.
    - **Parameters description**: A description of the parameters for the file.
 
-## Add files to the library
+## Upload files to the library
 
 To add a new file for live response:
 
@@ -62,7 +62,7 @@ To add a new file for live response:
 
 To manage existing files for live response, select one of the following options from the top menu:
 
-- **Upload**: [Upload a new file](#add-files-to-the-library) or an updated version of an existing file.
+- **Upload**: [Upload a new file](#upload-files-to-the-library) or an updated version of an existing file.
 - **Refresh**: Refresh the list of files to see the most up-to-date information.
 - **View details**: View detailed information about a selected file, including its parameters and usage history.
 - **View file**: View the contents of a selected file.
