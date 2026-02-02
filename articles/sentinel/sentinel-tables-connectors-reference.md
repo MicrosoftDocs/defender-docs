@@ -13,6 +13,6 @@ ms.date: 02/02/2026
 
 # Microsoft Sentinel tables and associated connectors
 
-The following table lists tables ingested into Microsoft Sentinel via data connectors, and the connectors that ingest them. Select the table name to view its schema and reference data.
+The following table lists the tables ingested into Microsoft Sentinel via data connectors, and the connectors that ingest them. Select the table name or the connector name for more information.
 
 [!INCLUDE [sentinel-tables-connectors-table](./includes/sentinel-tables-connectors.md)]
