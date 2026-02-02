@@ -66,7 +66,7 @@ To manage existing files for live response, select one of the following options 
 - **Refresh**: Refresh the list of files to see the most up-to-date information.
 - **View details**: View detailed information about a selected file, including its parameters and usage history.
 
-    :::image type="content" source="media/library-management-file-details" alt-text="Library management page - view details for a file":::
+    :::image type="content" source="media/library-management-file-details.png" alt-text="Library management page - view details for a file":::
 
 - **View file**: View the contents of a selected file.
 - **Download**: Download a selected file to your local device.
