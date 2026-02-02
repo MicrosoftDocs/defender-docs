@@ -2,7 +2,7 @@
 title: Alerts and incidents in Microsoft Defender XDR for Microsoft Defender for Cloud
 description: Learn about the benefits of receiving Microsoft Defender for Cloud's alerts in Microsoft Defender XDR 
 ms.topic: concept-article
-ms.date: 03/25/2025
+ms.date: 01/28/2026
 ai-usage: ai-assisted
 #customer intent: As a security professional, I want to understand the benefits of integrating Microsoft Defender for Cloud alerts with Microsoft Defender XDR.
 ---
@@ -92,13 +92,7 @@ Microsoft Sentinel customers who are [integrating Microsoft Defender XDR inciden
 
     If necessary, [use automation rules](/azure/sentinel/create-manage-use-automation-rules) to close noisy incidents, or use the [built-in tuning capabilities in the Defender portal](/defender-xdr/investigate-alerts#tune-an-alert) to suppress certain alerts.
 
-If you integrated your Microsoft Defender XDR incidents into Microsoft Sentinel and want to keep the subscription-based settings and avoid tenant-based syncing, opt out of syncing incidents and alerts from Microsoft Defender XDR:
-
-1. In the Microsoft Defender portal, go to **Settings > Microsoft Defender XDR**.
-
-1. In **Alert service settings**, look for Microsoft Defender for Cloud alerts.
-
-1. Select **No alerts** to turn off all Defender for Cloud alerts. Selecting this option stops the ingestion of new Defender for Cloud alerts to Microsoft Defender XDR. Alerts previously ingested remain in an alert or incident page.
+If you integrated your Microsoft Defender XDR incidents into Microsoft Sentinel and want to keep the subscription-based settings and avoid tenant-based syncing, opt out of syncing incidents and alerts from Microsoft Defender XDR.
 
 For more information, see:
 
