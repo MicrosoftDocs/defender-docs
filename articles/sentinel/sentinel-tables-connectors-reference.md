@@ -3,7 +3,7 @@ title: Microsoft Sentinel tables and associated connectors
 description: This article lists the tables ingested into Microsoft Sentinel via data connectors, and the connectors that ingest them.
 ms.service: microsoft-sentinel  
 author: EdB-MSFT
-ms.author: edbayansh
+ms.author: edbaynash
 ms.topic: reference
 ms.date: 02/02/2026    
 
