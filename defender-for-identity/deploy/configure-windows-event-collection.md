@@ -177,23 +177,23 @@ To configure domain object auditing:
 1. Select the **View** menu, and then select **Advanced Features**.
 1. Right-click the domain and select **Properties**.
 
-    ![Screenshot of selections for opening container properties.](../media/container-properties.png)
+    :::image type="content" source="../media/configure-windows-event-collection/container-properties.png" alt-text="Screenshot of selections for opening container properties.":::
 
 1. Go to the **Security** tab, and then select **Advanced**.
 
-    ![Screenshot of the dialog for opening advanced security properties.](../media/security-advanced.png)
+    :::image type="content" source="../media/configure-windows-event-collection/security-advanced.png" alt-text="Screenshot of the dialog for opening advanced security properties.":::
 
 1. In **Advanced Security Settings**, select the **Auditing** tab, and then select **Add**.
 
-    ![Screenshot of the Auditing tab in the Advanced Security Settings dialog.](../media/auditing-tab.png)
+    :::image type="content" source="../media/configure-windows-event-collection/auditing-tab.png" alt-text="Screenshot of the Auditing tab in the Advanced Security Settings dialog.":::
 
 1. Choose **Select a principal**.
 
-    ![Screenshot of the button for selecting a principal.](../media/select-a-principal.png)
+    :::image type="content" source="../media/configure-windows-event-collection/select-a-principal.png" alt-text="Screenshot of the button for selecting a principal.":::
 
 1. Under **Enter the object name to select**, enter **Everyone**. Then select **Check Names** > **OK**.
 
-    ![Screenshot of entering an object name of Everyone.](../media/select-everyone.png)
+    :::image type="content" source="../media/configure-windows-event-collection/select-everyone.png" alt-text="Screenshot of entering an object name of Everyone.":::
 
 1. Go back to **Auditing Entry**, and make the following selections:
 
@@ -207,7 +207,7 @@ To configure domain object auditing:
 
     1. Clear the selection for the **List contents**, **Read all properties**, and **Read permissions** permissions, and then select **OK**. This step sets all the **Properties** settings to **Write**.
 
-        ![Screenshot of selecting permissions.](../media/select-permissions.png)
+        :::image type="content" source="../media/configure-windows-event-collection/select-permissions.png" alt-text="Screenshot of selecting permissions.":::
 
         Now, all relevant changes to directory services appear as 4,662 events when they're triggered.
 
@@ -232,7 +232,8 @@ This section describes how to modify your Active Directory Federation Services (
 1. Go to the **Active Directory Users and Computers** console, and select the domain where you want to enable the logs.
 1. Go to **Program Data** > **Microsoft** > **ADFS**.
 
-    ![Screenshot of a container for Active Directory Federation Services.](../media/adfs-container.png)
+    :::image type="content" source="../media/configure-windows-event-collection/adfs-container.png" alt-text="Screenshot of a container for Active Directory Federation Services.":::
+
    
 1. Right-click **ADFS** and select **Properties**.
 1. Go to the **Security** tab and select **Advanced** > **Advanced Security Settings**. Then go to the **Auditing** tab and select **Add** > **Select a principal**.
@@ -243,7 +244,8 @@ This section describes how to modify your Active Directory Federation Services (
    - For **Applies to**, select **This object and all descendant objects**.
    - Under **Permissions**, scroll down and select **Clear all**. Scroll up and select **Read all properties** and **Write all properties**.
       
-    ![Screenshot of the auditing settings for Active Directory Federation Services.](../media/audit-adfs.png)
+    :::image type="content" source="../media/configure-windows-event-collection/audit-adfs.png" alt-text="Screenshot of the auditing settings for Active Directory Federation Services.":::
+    
    
 1. Select **OK**.
 
@@ -255,7 +257,8 @@ This section describes how to modify your Active Directory Federation Services (
    
    1. Select the checkboxes to configure audit events for **Success** and **Failure**.  
 
-   ![Screenshot of the advanced auditing audit policy configuration.](/media/configure-windows-event-collection/image1.png)
+   :::image type="content" source="media/configure-windows-event-collection/group-policy-management-editor.png" alt-text="Screenshot of the advanced auditing audit policy configuration.":::
+
    
 #### Configure Verbose logging for AD FS events
 
@@ -311,7 +314,7 @@ To configure auditing on Microsoft Entra Connect servers:
 
    1. Select the checkboxes to configure audit events for **Success** and **Failure**.
 
-![Screenshot of the Group Policy Management Editor.](media/configure-windows-event-collection/image.png)
+    :::image type="content" source="media/configure-windows-event-collection/success-and-failure.png" alt-text="Screenshot of the Group Policy Management Editor.":::
 
 ### Configure auditing on the configuration container<a name="enable-auditing-on-an-exchange-object"></a>
 
@@ -326,7 +329,8 @@ The configuration container audit is required only for environments that current
 
 1. Right-click the **Configuration** node and select **Properties**.
 
-    ![Screenshot of selections for opening properties for the Configuration node.](../media/configuration-properties.png)
+    :::image type="content" source="../media/configuration-properties.png" alt-text="Screenshot of selections for opening properties for the Configuration node.":::
+    
 
 1. Select the **Security** tab, and then select **Advanced**.
 1. In **Advanced Security Settings**, select the **Auditing** tab, and then select **Add**.
@@ -337,7 +341,8 @@ The configuration container audit is required only for environments that current
     - For **Applies to**, select **This object and all descendant objects**.
     - Under **Permissions**, scroll down and select **Clear all**. Scroll up and select **Write all properties**.
 
-    ![Screenshot of the auditing settings for the Configuration container.](../media/audit-configuration.png)
+    :::image type="content" source="../media/audit-configuration.png" alt-text="Screenshot of the auditing settings for the Configuration container.":::
+    
 1. Select **OK**.
 
 ## Configure Windows event collection using PowerShell
