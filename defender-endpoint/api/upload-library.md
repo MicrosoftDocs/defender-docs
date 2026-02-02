@@ -31,7 +31,7 @@ appliesto:
 Upload file to live response library.
 
 > [!TIP]
-> You can upload live response files from the [Library management](../configure-libraries-live-response.md) page in the Microsoft Defender portal.
+> You can also upload live response files from the [Library management](../configure-libraries-live-response.md) page in the Microsoft Defender portal.
 
 ## Limitations
 
