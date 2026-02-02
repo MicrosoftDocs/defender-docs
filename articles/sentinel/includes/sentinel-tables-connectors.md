@@ -8,7 +8,7 @@ ms.date: 02/02/2026
 
 
 
-|Table|Connectors|Supports DCR|Is Lake Allowed|
+|Table|Connectors|Supports DCR|Lake-only ingestion supported|
 |---|---|---|---|
 |[AADManagedIdentitySignInLogs](/azure/azure-monitor/reference/tables/AADManagedIdentitySignInLogs)|[Microsoft Entra ID](/azure/sentinel/data-connectors-reference#microsoft-entra-id)|Yes|Yes|
 |[AADNonInteractiveUserSignInLogs](/azure/azure-monitor/reference/tables/AADNonInteractiveUserSignInLogs)|[Microsoft Entra ID](/azure/sentinel/data-connectors-reference#microsoft-entra-id)|Yes|Yes|
@@ -368,7 +368,7 @@ ms.date: 02/02/2026
 |ProofPointTAPMessagesBlockedV2_CL|[Proofpoint TAP (via Codeless Connector Platform)](/azure/sentinel/data-connectors-reference#proofpoint-tap-via-codeless-connector-platform)|Yes|Yes|
 |ProofPointTAPMessagesDeliveredV2_CL|[Proofpoint TAP (via Codeless Connector Platform)](/azure/sentinel/data-connectors-reference#proofpoint-tap-via-codeless-connector-platform)|Yes|Yes|
 |[PurviewDataSensitivityLogs](/azure/azure-monitor/reference/tables/PurviewDataSensitivityLogs)|[Microsoft Purview](/azure/sentinel/data-connectors-reference#microsoft-purview)|Yes|Yes|
-|QscoutAppEvents_CL|[QscoutAppEventsConnector](/azure/sentinel/data-connectors-reference#qscoutappeventsconnector)|No|No|
+|QscoutAppEvents_CL|[QscoutAppEventsConnector (via Codeless Connector Framework)](/azure/sentinel/data-connectors-reference#qscoutappeventsconnector-via-codeless-connector-framework)|No|No|
 |QualysHostDetectionV3_CL|[Qualys Vulnerability Management (via Codeless Connector Framework)](/azure/sentinel/data-connectors-reference#qualys-vulnerability-management-via-codeless-connector-framework)|Yes|Yes|
 |QualysKB_CL|[Qualys VM KnowledgeBase (using Azure Functions)](/azure/sentinel/data-connectors-reference#qualys-vm-knowledgebase-using-azure-functions)|Yes|Yes|
 |RadiflowEvent|[Radiflow iSID via AMA](/azure/sentinel/data-connectors-reference#radiflow-isid-via-ama)|No|No|
