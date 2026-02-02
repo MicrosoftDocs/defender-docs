@@ -99,7 +99,7 @@ This section describes how to modify your domain controller's Advanced Audit Pol
 1. Open the Group Policy Management Editor from **Server Manager** > **Tools** > **Group Policy Management**.
 1. Expand **Domain Controllers Organizational Units**, right-click **Default Domain Controllers Policy**, and then select **Edit**.
 
-    ![Screenshot of the pane for editing the default policy for domain controllers.](../media/advanced-audit-policy-check-step-1.png)
+    :::image type="content" source="../media/configure-windows-event-collection/advanced-audit-policy-check-step-1.png" alt-text="Screenshot of the pane for editing the default policy for domain controllers.":::
 
     > [!NOTE]
     > Use the Default Domain Controllers policy or a dedicated GPO to set these policies.
@@ -108,7 +108,8 @@ This section describes how to modify your domain controller's Advanced Audit Pol
 
     1. Go to **Advanced Audit Policy Configuration** > **Audit Policies**.
 
-        ![Screenshot of selections for opening audit policies.](../media/advanced-audit-policy-check-step-2.png)
+        :::image type="content" source="../media/configure-windows-event-collection/advanced-audit-policy-check-step-2.png" alt-text="Screenshot of selections for opening an audit policy.":::
+
 
     1. Under **Audit Policies**, edit each of the following policies and select **Configure the following audit events** for both **Success** and **Failure** events.
 
@@ -128,7 +129,7 @@ This section describes how to modify your domain controller's Advanced Audit Pol
 
         For example, to configure **Audit Security Group Management**, under **Account Management**, double-click **Audit Security Group Management**, and then select **Configure the following audit events** for both **Success** and **Failure** events.
 
-        ![Screenshot of the Audit Security Group Management Properties dialog.](../media/advanced-audit-policy-check-step-4.png)
+        :::image type="content" source="../media/configure-windows-event-collection/advanced-audit-policy-check-step-4.png" alt-text="Screenshot of the audit security group management properties log.":::
 
 1. From an elevated command prompt, enter `gpupdate`.
 1. After you apply the policy via GPO, confirm that the new events appear in the Event Viewer, under **Windows Logs** > **Security**.
@@ -246,7 +247,7 @@ This section describes how to modify your Active Directory Federation Services (
    
 1. Select **OK**.
 
-#### Advanced audit policy configuration via Group Policy
+#### Configure a Group Policy for event auditing
 
 1. Create a group policy to apply to your Active Directory Federation Services (AD FS). Edit it and configure the following auditing settings:
 
