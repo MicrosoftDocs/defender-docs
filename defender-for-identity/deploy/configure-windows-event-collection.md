@@ -332,7 +332,7 @@ You need the configuration container audit only for environments that currently 
 
 1. Right-click the **Configuration** node and select **Properties**.
 
-    :::image type="content" source="../media/configuration-properties.png" alt-text="Screenshot of selections for opening properties for the Configuration node.":::
+    :::image type="content" source="../media/configure-windows-event-collection/configuration-properties.png" alt-text="Screenshot of selections for opening properties for the Configuration node.":::
     
 
 1. Select the **Security** tab, and then select **Advanced**.
@@ -344,7 +344,7 @@ You need the configuration container audit only for environments that currently 
     - For **Applies to**, select **This object and all descendant objects**.
     - Under **Permissions**, scroll down and select **Clear all**. Scroll up and select **Write all properties**.
 
-    :::image type="content" source="../media/audit-configuration.png" alt-text="Screenshot of the auditing settings for the Configuration container.":::
+    :::image type="content" source="../media/configure-windows-event-collection/audit-configuration.png" alt-text="Screenshot of the auditing settings for the Configuration container.":::
     
 1. Select **OK**.
 
