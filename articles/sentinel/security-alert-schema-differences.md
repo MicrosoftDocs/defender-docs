@@ -11,9 +11,11 @@ ms.date: 01/27/2026
 
 # Alert schema differences: Standalone vs. XDR connector
 
-This article explains the differences between alerts ingested through standalone connectors and alerts ingested through the Extended Detection and Response (XDR) connector in Microsoft Sentinel. 
+This article explains the differences between alerts ingested through standalone connectors and alerts ingested through the Extended Detection and Response (XDR) connector in Microsoft Sentinel.
 
-These differences can affect field mappings, derived field behavior, schema structure, and alert ingestion, which might impact your existing queries, analytic rules, and workbooks. Review these differences before migrating to the XDR connector. 
+Standalone connectors ingest alerts directly from the original security products, whereas the XDR connector ingests alerts through the Microsoft Defender XDR pipeline.
+
+These differences can affect field mappings, derived field behavior, schema structure, and alert ingestion, which might impact your existing queries, analytic rules, and workbooks. Review these differences before migrating to the XDR connector.
 
 For the full alert schema, see the [Security alert schema reference](security-alert-schema.md).
 
@@ -44,7 +46,7 @@ Some fields are renamed or use different value sets in alerts from the XDR conne
 
 ## Structural schema transformations (MDI)
 
-The standalone Microsoft Defender for Identity (MDI) connector sometimes used placeholder entities to store additional information. In the XDR connector, this information is folded into properties under `resourceAccessEvents[]`.
+The standalone Microsoft Defender for Identity (MDI) connector sometimes used placeholder entities to store additional information. In the XDR connector, this information is folded into properties under the `resourceAccessEvents` collection.
 
 | Legacy entity/property | XDR representation |
 |------------------------|-------------------|
@@ -63,7 +65,7 @@ Some alerts available through standalone connectors aren't ingested through the 
 | Product | Filtering behavior |
 |---------|--------------------|
 | Microsoft Defender for Cloud (MDC) | Informational severity alerts aren't ingested |
-| Microsoft Entra ID | By default, alerts below High severity aren't ingested. Customers can configure ingestion to include all severities. |
+| Microsoft Entra ID | By default, alerts below High severity aren't ingested; customers can configure ingestion to include all severities |
 
 ## Scoping behavior (Microsoft Defender for Cloud)
 
