@@ -13,9 +13,6 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 
 # [Azure Kubernetes Service (AKS)](#tab/aks)
 
-> [NOTE!]
-> Enabling the Containers plan on an Azure subscription also applies to Kubernetes clusters connected to Azure through Azure Arc.
-
 ## Prerequisites
 
 - AKS cluster supported by Defender for Containers. See the [support matrix](support-matrix-defender-for-containers.md).
@@ -179,6 +176,54 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 
     - **GKE clusters should be connected to Azure Arc**
     - **Arc-enabled Kubernetes clusters should have Defender extension installed**
+
+# [Azure Arc–enabled Kubernetes (Preview)](#tab/arc)
+
+## Prerequisites
+
+To enable Defender for Containers on an Azure Arc-enabled Kubernetes cluster, make sure that you cluster is:
+
+- [Connected to Azure using Azure Arc–enabled Kubernetes](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
+
+- Supported by Defender for Containers. See the [support matrix](support-matrix-defender-for-containers.md).
+
+## Enable the Defender for Containers plan
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+2. Go to **Microsoft Defender for Cloud** > **Environment settings**.
+
+3. Select the **Azure subscription** that contains the Azure Arc–enabled Kubernetes cluster resource.
+
+4. On the Defender plans page, find the **Containers** row and toggle the status to **On**.
+
+5. Select **Settings** in the Containers plan row.
+
+6. Toggle **On** the relevant Defender for Containers components:
+
+    - **Agentless threat protection**
+    - **Auto provision Defender's sensor for Azure Arc**
+    - **Auto provision Azure Policy extension for Azure Arc**
+    - **Kubernetes API access**
+    - **Registry access**
+
+7. Select **Continue**.
+
+8. Select **Save**.
+
+## Verify the plan is enabled
+
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
+
+2. Select the relevant Azure subscription.
+
+3. Verify that **Containers** is set to **On**.
+
+4. Go to **Microsoft Defender for Cloud** > **Recommendations**.
+
+5. Verify that recommendations for Arc-enabled Kubernetes clusters appear, such as:
+
+   - **Azure Arc-enabled Kubernetes clusters should have the Defender extension installed**
 
 ---
 

@@ -20,18 +20,22 @@ Defender for Containers supports multiple deployment models for deploying the se
 
 ## General prerequisites
 
-Implement all prerequisite requirements for the Defender for Containers sensor as described in the [Defender sensor network requirements](defender-for-containers-enable.md?tabs=aks-deploy-portal%2Ck8s-deploy-asc%2Ck8s-verify-asc%2Ck8s-remove-arc%2Caks-removeprofile-api&pivots=defender-for-container-aks%23network-requirements).
-
-- Enable Defender for Containers in the target subscription or security connector:
-    - Azure subscription: [Enable Defender for Containers on AKS via portal](defender-for-containers-azure-enable-portal.md)
-    - Amazon Web Services (AWS): [Enable Defender for Containers on AWS (EKS) via portal](defender-for-containers-aws-enable-portal.md)
-    - Google Cloud Project (GCP): [Enable Defender for Containers on GCP (GKE) via portal](defender-for-containers-gcp-enable-portal.md)
-    - Arc-enabled Kubernetes (ARC): [Enable Defender for Containers on Arc-enabled Kubernetes via portal](defender-for-containers-arc-enable-portal.md)
+- [Enable Defender for Containers in the target subscription or security connector](defender-for-containers-enable-portal.md).
 
 - Ensure the following components of the Defender for containers plan are enabled:
    - Defender sensor
    - Security findings
    - Registry access
+
+## Network requirements
+
+The Defender for Containers sensor requires outbound connectivity to Microsoft Defender for Cloud. 
+
+- **AKS clusters**:  
+  [!INCLUDE[defender-for-container-prerequisites-aks](includes/defender-for-containers-network-requirements-aks.md)]
+
+- **EKS, GKE, and Arc-enabled Kubernetes clusters**:  
+  [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
 
 ## Install the sensors Helm chart
 
