@@ -187,8 +187,7 @@ You can sort the entries by clicking on an available column header. Select :::im
   - **Exclusion state**
   - **Device role**<sup>*</sup>
   - **Managed by**<sup>*</sup>: Valid values are: **Intune**, **ConfigMgr**, **MDE**, or **Unknown**.
-  - **Managed by status**<sup>*</sup>: Status values from the **Managed by** authority. For example, **Success**. This field will have the ‘Unknown’ status for devices that are not managed by MDE (i.e. Intune, ConfigMgr, etc.)
-    
+  - **Managed by status**<sup>*</sup>: Status values from the **Managed by** authority. For example, **Success**. This field has the status **Unknown** for devices that aren't managed by Defender for Endpoint (for example, Intune or ConfigMgr).
   - **Mitigation status**<sup>*</sup>
   - **Cloud platforms**<sup>*</sup>
 
