@@ -60,15 +60,14 @@ To add a new file for live response:
 
 ## Manage files in the library
 
-To manage existing files for live response, select one of the following options from the top menu:
+The following options are available for managing existing files in the library:
 
-- **Upload**: [Upload a new file](#upload-files-to-the-library) or an updated version of an existing file.
-- **Refresh**: Refresh the list of files to see the most up-to-date information.
-- **View details**: View detailed information about a selected file, including its parameters and usage history.
-
-    :::image type="content" source="media/library-management-file-details.png" alt-text="Library management page - view details for a file":::
-
-- **View file**: View the contents of a selected file. When you view a file, you can select **Download** to download the file, or **Analyze**, to open Copilot script analysis. The analysis provides a description of the actions the script takes, and more information, including the methods used and output.
-- **Download**: Download a selected file to your local device.
-- **Delete**: Remove a selected file from the list.
-- **Filter**: Filter the list of files based on specific criteria, such as type or creation date.
+| Option | Description | Available from |
+|--------|-------------|----------------|
+| **Upload** | [Upload a new file](#upload-files-to-the-library) or an updated version of an existing file. | Top menu |
+| **Refresh** | Refresh the list of files to see the most up-to-date information. | Top menu |
+| **View details** | View detailed information about a selected file, including its parameters and usage history. :::image type="content" source="media/library-management-file-details.png" alt-text="Library management page - view details for a file"::: | Top menu, Right-click menu |
+| **View file** | View the contents of a selected file. When you view a file, you can select **Download** to download the file, or **Analyze** to open Copilot script analysis. The analysis provides a description of the actions the script takes, and more information, including the methods used and output. | Top menu, Right-click menu |
+| **Download** | Download a selected file to your local device. | Top menu, Right-click menu |
+| **Delete** | Remove a selected file from the list. | Top menu, Right-click menu |
+| **Filter** | Filter the list of files based on specific criteria, such as type or creation date. | Top menu |
