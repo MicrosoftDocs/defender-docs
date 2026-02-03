@@ -250,7 +250,7 @@ This section describes how to modify your Active Directory Federation Services (
 
 #### Configure a Group Policy for event auditing
 
-1. Create a group policy to apply to your Active Directory Federation Services (AD FS). 
+1. Create a group policy to apply to your Active Directory Federation Services (AD FS).
 1. Configure the following auditing settings:
 
    1. Go to **Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Object Access\Audit Application Generated**.
