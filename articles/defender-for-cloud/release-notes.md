@@ -41,7 +41,6 @@ Microsoft Defender for Cloud now includes threat protection for AI agents built 
 
 This release further expands Defender’s AI threat protection coverage, helping organizations secure a broader range of AI platforms. 
 
-> [!NOTE]
 > *Threat protection for AI agents is currently free of charge and does not consume tokens. However, pricing and usage terms may change at any time.* 
 
 Learn more about [Threat Protection for AI Agents with Microsoft Defender for Cloud](/azure/defender-for-cloud/alerts-ai-workloads).  
