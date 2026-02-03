@@ -62,11 +62,13 @@ To add a new file for live response:
 
     The file is visible in the list of files. You can now use this file during live response sessions.
 
-## View and analyze files
+## View file details
 
 To view a file's details, right-click the file and select **View details**. A detailed pane opens, displaying information about the file, including its parameters and usage history.
 
 :::image type="content" source="media/configure-libraries-live-response/library-management-view-all-files.png" alt-text="Library management page - main view":::
+
+## View and analyze files
 
 To view and analyze a file:
 
@@ -85,7 +87,7 @@ The following options are available for managing existing files in the library:
 |--------|-------------|----------------|
 | **Upload** | [Upload a new file](#upload-files) or an updated version of an existing file. | Top menu |
 | **Refresh** | Refresh the list of files to see the most up-to-date information. | Top menu |
-| **View details** | [View detailed information](#view-and-analyze-files) about a selected file.  | Top menu, right-click menu |
+| **View details** | [View detailed information](#view-file-details) about a selected file.  | Top menu, right-click menu |
 | **View file** | [View the file's contents](#view-and-analyze-files). | Top menu, right-click menu |
 | **Analyze** | [Analyze a file](#view-and-analyze-files) to get a description of the actions the script takes. | View file window |
 | **Download** | Download a selected file to your local device. | Top menu, right-click menu, view file window |
