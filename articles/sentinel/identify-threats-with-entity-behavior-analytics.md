@@ -136,12 +136,12 @@ For more information, see:
 
 ## Aggregate behavior insights with the UEBA behaviors layer (Preview)
 
-As Microsoft Sentinel collects logs from supported data sources, the behaviors layer uses AI to transform raw security logs into structured, contextualized behavioral insights. While UEBA builds baseline profiles to detect anomalous activity, the behaviors layer aggregates related events into meaningful behaviors that explain "who did what to whom."
+Enable the behaviors to aggregate data from high-volume raw security logs into structured, contextualized behavioral insights. While UEBA builds baseline profiles to detect anomalous activity, the behaviors layer aggregates related events into clear, meaningful behaviors that explain "who did what to whom."
 
 The behaviors layer enriches raw logs with:
+- **Natural language explanations** that make complex activities immediately understandable
 - **MITRE ATT&CK mappings** that align behaviors with known tactics and techniques
 - **Entity role identification** that clarifies the actors and targets involved
-- **Natural language explanations** that make complex activities immediately understandable
 
 By converting fragmented logs into coherent behavior objects, the behaviors layer accelerates threat hunting, simplifies detection authoring, and provides richer context for UEBA anomaly detection. Together, these capabilities help analysts quickly understand not just *that* something anomalous happened, but *what* happened and *why* it matters.
 
