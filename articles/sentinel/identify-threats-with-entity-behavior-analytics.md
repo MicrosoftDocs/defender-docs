@@ -105,12 +105,14 @@ Microsoft Sentinel's UEBA provides two distinct scoring mechanisms to help secur
 | Aspect | Investigation priority score | Anomaly score |
 |--------|------------------------------|---------------|
 | **Table** | `BehaviorAnalytics` | `Anomalies` |
-| **Purpose** | Indicates how unusual a single event is, based on profile-driven logic | Reflects holistic anomalous behavior across multiple events using machine learning |
-| **How it's calculated** | **Entity Anomaly Score:** Measures rarity of entities (user, device, country, ISP, user agent). First-time or uncommon entities receive higher scores. <br><br>**Time Series Score:** Detects abnormal patterns over time, such as spikes in failed sign-ins or unexpected group membership changes. | AI/ML anomaly detector trained on your workspace's telemetry |
+| **Field** | `InvestigationPriority` | `AnomalyScore` |
 | **Range** | 0–10 (0 = benign, 10 = highly anomalous) | 0–1 (0 = benign, 1 = highly anomalous) |
+| **Indicator of** | How unusual a single event is, based on profile-driven logic | Holistic anomalous behavior across multiple events using machine learning |
+| **Used for** | Quick triage and drilling into single events | Identifying patterns and aggregated anomalies over time |
+| **How it's calculated** | Combines **Entity Anomaly Score** (rarity of entities like user, device, country) with **Time Series Score** (abnormal patterns over time, such as spikes in failed sign-ins). | AI/ML anomaly detector trained on your workspace's telemetry |
 | **Processing** | Near real-time, event-level | Batch processing, behavior-level |
-| **Trade-offs** | Profile-based; may be less precise but enables quick triage | More precise but requires batch processing; less immediate |
-| **Best for** | Quick triage and drilling into single events | Identifying patterns and aggregated anomalies over time |
+| **Trade-offs** | Profile-based; may be less precise but enables quick triage | More precise but requires batch processing; higher latency |
+
 
 ### Example scenario
 
