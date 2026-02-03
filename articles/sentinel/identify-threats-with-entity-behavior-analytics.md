@@ -36,7 +36,7 @@ UEBA is natively integrated into Microsoft Sentinel and the Microsoft Defender p
 >[!NOTE]
 > UEBA is a probabilistic, behavior‑based capability. It highlights anomalous activity and risk rather than generating deterministic alerts.
 
-This diagram shows how UEBA processes data from connected sources to detect anomalies and assign risk scores:
+This diagram shows which data gets processed when you enable UEBA and how UEBA detects anomalies and assign [risk scores](#ueba-scoring) to prioritize investigations:
 
 :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-architecture.png" alt-text="Diagram showing UEBA architecture, illustrating how data flows from connected sources through behavioral modeling to produce risk scores." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-architecture.png":::
 
