@@ -198,6 +198,9 @@ This article lists the security alerts you might get for AI from Microsoft Defen
 ## Alerts for AI agents
 
 
+> [!NOTE]
+> The following alerts support Microsoft Foundry Agent service. For more information, please refer to [AI Threat Protection overview.](/azure/defender-for-cloud/ai-threat-protection)
+
 ### (Preview) A Jailbreak attempt on your Azure AI agent was detected by Prompt Shields 
 
 (AI.Azure_Agentic_Jailbreak) 
