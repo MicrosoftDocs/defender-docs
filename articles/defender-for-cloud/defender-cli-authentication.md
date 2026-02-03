@@ -10,11 +10,14 @@ ms.topic: concept-article
 
 # Defender for Cloud CLI authentication
 
-Defender for Cloud CLI supports two authentication methods to align with enterprise security practices: connector-based authentication for Azure DevOps, which handles authentication automatically, and token-based authentication, which provides flexibility across different build systems and local environments.
+Defender for Cloud CLI supports two authentication methods to align with enterprise security practices: connector-based authentication for Azure DevOps and GitHub, which handles authentication automatically, and token-based authentication, which provides flexibility across different build systems and local environments.
 
-## Connector Based (ADO only)
-Connector‑based authentication integrates Azure DevOps directly with Microsoft Defender for Cloud through a secure connector. Once the connection is established, authentication is managed automatically, removing the need to store or inject tokens in your pipelines.  
-This method is the preferred authentication method for Azure DevOps. [Learn how to create a connector](quickstart-onboard-devops.md).
+## Connector Based (ADO and GitHub)
+
+Connector‑based authentication integrates Azure DevOps and GitHub directly with Microsoft Defender for Cloud through a secure connector. Once the connection is established, authentication is managed automatically, removing the need to store or inject tokens in your pipelines.  
+This method is the preferred authentication method for Azure DevOps and GitHub. Learn how to create a connector: 
+* [Learn how to create an ADO connector](quickstart-onboard-devops.md)
+* [Learn how to create a GitHub connector](quickstart-onboard-github.md)
 
 ## Token Based
 

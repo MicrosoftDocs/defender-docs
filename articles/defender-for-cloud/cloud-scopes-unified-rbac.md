@@ -17,7 +17,7 @@ zone_pivot_groups: defender-portal-experience
 > This capability is currently in preview.   
 > For details about current gaps and restrictions, see [Known limitations](defender-portal/known-limitations.md).
 
-Cloud scopes and unified role-based access control (unified RBAC) in the Microsoft Defender portal let you segment multicloud resources (Azure, AWS, GCP and connected DevOps / registry sources) into meaningful groupings and apply least‑privilege access consistently. They provide:
+Cloud scopes and unified role-based access control (unified RBAC) in the Microsoft Defender portal let you segment multicloud resources (Azure, AWS, GCP, and connected DevOps/registry sources) into meaningful groupings and apply least‑privilege access consistently. They provide:
 - Centralized, product-wide security permissions management
 - Granular scoping across heterogeneous cloud environments
 - Persistent filtering across inventory, posture, vulnerabilities, and exposure management
@@ -54,7 +54,7 @@ Cloud scopes are tenant-level logical groupings of heterogeneous cloud environme
 Key properties:
 
 - Multicloud & multi–data source: A single scope can mix Azure + AWS + GCP + DevOps/org registry sources.
-- Non-hierarchical & flexible: Membership is an explicit list; it doesn’t inherit from Azure management groups or AWS organizations.
+- Nonhierarchical & flexible: Membership is an explicit list; it doesn’t inherit from Azure management groups or AWS organizations.
 - Many‑to‑many: An environment can belong to multiple scopes; a scope can contain unlimited environments.
 - Manual membership control: Newly connected environments aren’t auto-added—preventing accidental privilege expansion.
 - Consistent filter surface: Once selected, a scope persists as you navigate supported Defender portal experiences.
@@ -83,10 +83,10 @@ Relationship to unified RBAC:
 
 Planning guidance:
 
-1. Start coarse (major org / region boundaries).
-1. Validate operational ownership and review cadence.
-1. Introduce finer scopes only when risk, confidentiality, or compliance requires it.
-1. Document purpose and owner for each scope to support lifecycle and audit.
+- Start coarse (major org / region boundaries).
+- Validate operational ownership and review cadence.
+- Introduce finer scopes only when risk, confidentiality, or compliance requires it.
+- Document purpose and owner for each scope to support lifecycle and audit.
 
 ## Prerequisites
 
@@ -95,8 +95,6 @@ Planning guidance:
 - Connected cloud / DevOps / registry environments
 
 ## 1. Create cloud scopes
-
-Navigation: **Settings > Permissions > Microsoft XDR Roles > Scopes > Cloud scopes**.
 
 Characteristics:
 
@@ -107,62 +105,71 @@ Characteristics:
 
 ### Create a scope (wizard)
 
-1. Select **Create new cloud scope**.
-   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-1.png" alt-text="Create scope action." lightbox="media/cloud-scopes-unified-rbac/create-scope-1.png":::
+Follow these steps to create a cloud scope.
+
+Navigation: In the [Defender portal](https://security.microsoft.com/), go to **System > Permissions > Microsoft Defender XDR > Scopes**.
+
+1. Select **Add cloud scope**.
+   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-1.png" alt-text="Screenshot of Permissions and Roles page with 'Add cloud scope' button highlighted." lightbox="media/cloud-scopes-unified-rbac/create-scope-1.png":::
 2. Enter name and description.  
-   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-2.png" alt-text="Scope name and description." lightbox="media/cloud-scopes-unified-rbac/create-scope-2.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-2.png" alt-text="Screenshot of cloud scope creation step, where you input scope name and description." lightbox="media/cloud-scopes-unified-rbac/create-scope-2.png":::
 3. Select environment primitives (individually or via filters).  
-   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-3.png" alt-text="Select environment primitives." lightbox="media/cloud-scopes-unified-rbac/create-scope-3.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-3.png" alt-text="Screenshot of selecting environment primitives." lightbox="media/cloud-scopes-unified-rbac/create-scope-3.png":::
 4. Review and finish.  
-   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-4.png" alt-text="Review scope configuration." lightbox="media/cloud-scopes-unified-rbac/create-scope-4.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/create-scope-4.png" alt-text="Screenshot of review cloud scope configuration screen." lightbox="media/cloud-scopes-unified-rbac/create-scope-4.png":::
 
 ## 2. Activate cloud scopes (one-time)
 
-Before scopes can be used in role assignments, run the activation wizard if prompted. This:
+Before scopes can be used in role assignments, they must be activated using a wizard. Doing so:
 
-1. Enumerates existing unified RBAC roles referencing Microsoft Defender for Cloud data sources
-1. Lets you map those roles to chosen cloud scopes
-1. Highlights manage / sensitive permissions (for example: response actions)
-1 Finalizes activation (irreversible; future changes are through normal management)
+* Enumerates existing unified RBAC roles referencing Microsoft Defender for Cloud data sources
+* Lets you map those roles to chosen cloud scopes
+* Highlights manage / sensitive permissions (for example: response actions)
+* Finalizes activation (irreversible; future changes are through normal management)
+
+Guidelines:
+
+* Create at least one scope if none exists
+* Review which roles include manage-level permissions (these extend VM-related capabilities)
+* Approve to complete activation
 
 If no device groups or unified RBAC roles exist yet, the wizard may be skipped until needed.
 
 ### Activation & bulk assignment wizard
 
-:::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-1.png" alt-text="Activation wizard start." lightbox="media/cloud-scopes-unified-rbac/activate-scope-1.png":::
-:::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-2.png" alt-text="Role-to-scope assignment." lightbox="media/cloud-scopes-unified-rbac/activate-scope-2.png":::
-:::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-3.png" alt-text="Activation approval." lightbox="media/cloud-scopes-unified-rbac/activate-scope-3.png":::
-
-Guidelines:
-
-- Create at least one scope if none exist
-- Review which roles include manage-level permissions (these extend VM-related capabilities)
-- Approve to complete activation
+1. When prompted by a banner, select **Activate cloud scopes** to run the wizard.
+   :::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-1.png" alt-text="Screenshot of a banner at the top of the Permissions and roles screen with the 'Activate cloud scopes' button highlighted. Selecting it will launch the wizard." lightbox="media/cloud-scopes-unified-rbac/activate-scope-1.png":::
+1. Set permissions for roles assigned through cloud scopes.
+   :::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-2.png" alt-text="Screenshot of the role-to-scope assignment screen." lightbox="media/cloud-scopes-unified-rbac/activate-scope-2.png":::
+1. Finish activating cloud scopes assignment.
+   :::image type="content" source="media/cloud-scopes-unified-rbac/activate-scope-3.png" alt-text="Screenshot of the activation approval screen." lightbox="media/cloud-scopes-unified-rbac/activate-scope-3.png":::
 
 ## 3. Define unified RBAC roles and assignments
 
-Navigation: **Settings > Permissions > Microsoft XDR Roles > Roles**.
+Follow these steps to activate the role wizard to define unified RBAC roles and assignments.
 
-Permission groups (select one or both):
+Navigation: In the [Defender portal](https://security.microsoft.com/), go to **System > Permissions > Microsoft Defender XDR > Roles**.
 
-1. **Security operations** – incidents, alerts, and cloud inventory
-1. **Security posture** – recommendations, vulnerability management, security score, exposure/posture features
+1. Select **Create custom role**.
+1. Choose a role name and description.
+1. Choose permission groups (select one or both):
+   * **Security operations**: incidents, alerts, and cloud inventory
+   * **Security posture**: recommendations, vulnerability management, security score, exposure / posture features
+   :::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-1.png" alt-text="Screenshot of the role creation permissions step." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-1.png":::
+1. Add an assignment. 
+   * Assign users/groups
+   * Select data sources: All / MDC / Exposure Management (XSPM)
+   * Select scope option:
+     - All cloud scopes
+     - Custom (pick specific scopes)
+     
+   > [!NOTE]
+   > For posture access, include data source: Exposure Management (XSPM). Some Microsoft Defender for Cloud features surface within Exposure Management views.
 
-> [!NOTE]
-> For posture access, include data source: Exposure Management (XSPM). Some Microsoft Defender for Cloud features surface within Exposure Management views.
+   :::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-2.png" alt-text="Screenshot of the assign users and data source selection screen, with the 'Create assignment' button highlighted." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-2.png":::
+   :::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-3.png" alt-text="Screenshot of the scope selection screen, where you can choose which cloud scopes to include." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-3.png":::
 
-During the role wizard:
-
-- Choose permission groups
-- Select data sources: All / MDC / Exposure Management (XSPM)
-- Assign users / groups
-- Select scope option:
-  - All cloud scopes
-  - Custom (pick specific scopes)
-
-:::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-1.png" alt-text="Role creation permissions step." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-1.png":::
-:::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-2.png" alt-text="Data source selection." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-2.png":::
-:::image type="content" source="media/cloud-scopes-unified-rbac/unified-rbac-permissions-3.png" alt-text="Scope selection." lightbox="media/cloud-scopes-unified-rbac/unified-rbac-permissions-3.png":::
+1. Review and finish.
 
 ## 4. Use scope and environment filters
 
@@ -184,13 +191,17 @@ Behavior:
 - Device group filtering applies where device-centric data is relevant
 - Mixed experiences apply scope category contextually (for example: Recommendations: device groups affect Devices tab; cloud scopes affect Cloud tab)
 
-:::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-1.png" alt-text="Scope filter UI." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-1.png":::
-:::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-2.png" alt-text="Contextual filtering behavior." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-2.png":::
-:::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-3.png" alt-text="Authorized scope list." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-3.png":::
+To access the Scope filter:
 
-### Environments filter
+1. Navigate to the [Defender for Cloud Overview dashboard](https://security.microsoft.com/cloud-overview).
+1. Select **Scope filter**.
+   :::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-1.png" alt-text="Screenshot of the Defender for Cloud Overview dashboard, with the 'Scope filter' action link highlighted." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-1.png":::
+1. Apply your desired filters.
+   :::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-2.png" alt-text="Screenshot of contextual filtering behavior for scopes filter." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-2.png":::
 
-Purpose: deep investigation, mitigation, remediation focus.
+### Environment filter
+
+Purpose: This filter enables deep investigation, mitigation, and remediation focus.
 
 Characteristics:
 
@@ -202,7 +213,13 @@ Characteristics:
   - Scope first, then environment (subset refine)
   - Environment first, then scope (scope selection overrides previous set)
 
-:::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-4.png" alt-text="Environments filter." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-4.png":::
+To access the Environment filter:
+
+1. Navigate to the [Defender for Cloud Overview dashboard](https://security.microsoft.com/cloud-overview).
+1. Select **Environment filter**.
+   :::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-3.png" alt-text="Screenshot of the Defender for Cloud Overview dashboard, with the 'Environment Filter' action link highlighted." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-3.png":::
+1. Apply your desired filters.
+   :::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-4.png" alt-text="Screenshot of the environments filter selection screen." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-4.png":::
 
 ## 5. Ongoing management
 
@@ -272,9 +289,9 @@ These appear in inventory, attack paths, maps, and related exposure experiences 
 
 Cloud scopes improve operational alignment across business units by allowing administrators to group resources according to business value, function, or organizational structure. This targeted grouping enables tailored access control and visibility, ensuring that each business unit receives the specific permissions and oversight it requires. As a result, teams can operate efficiently within their designated environments, while administrators maintain clear boundaries and flexibility when managing multicloud resources. This approach streamlines operations and supports strategic objectives across the organization.
 
-**Q: What is unified RBAC in the Defender Portal?**
+**Q: What is unified RBAC in the Defender portal?**
 
-Unified role-based access control (Unified role-based access control) is a centralized permissions model in the Defender Portal that allows administrators to manage user access across multiple security solutions. It is distinct from Azure role-based access control and requires separate configuration.
+Unified role-based access control (Unified role-based access control) is a centralized permissions model in the Defender portal that allows administrators to manage user access across multiple security solutions. It is distinct from Azure role-based access control and requires separate configuration.
 
 **Q: What are Cloud scopes?**
 
@@ -308,11 +325,11 @@ Only Global Admins have full management rights.
 
 - Assign roles to specific cloud scopes
 - Permissions are scoped to the selected environments
-- Unified role-based access control is not transferable from Azure; it must be configured separately in the Defender Portal
+- Unified role-based access control is not transferable from Azure; it must be configured separately in the Defender portal
 
 **Q: How does unified RBAC differ from Azure RBAC in terms of permission granularity?**
 
-Unified role-based access control in the Defender Portal offers a permissions model that is distinct from Azure role-based access control, particularly in terms of permission granularity. While Azure role-based access control provides role assignments at the Azure resource level and is managed through Azure's centralized access control, unified role-based access control is configured separately within the Defender Portal and allows administrators to define permissions specifically for security-related resources and actions across multiple Defender solutions. This enables more targeted control within the Defender environment, such as assigning roles to specific cloud scopes or environments, rather than relying on broader Azure resource group or subscription boundaries. As a result, unified role-based access control grants administrators the flexibility to tailor security permissions with finer granularity for users who need access to Defender capabilities, independent of their Azure role-based access control roles.
+Unified role-based access control in the Defender portal offers a permissions model that is distinct from Azure role-based access control, particularly in terms of permission granularity. While Azure role-based access control provides role assignments at the Azure resource level and is managed through Azure's centralized access control, unified role-based access control is configured separately within the Defender portal and allows administrators to define permissions specifically for security-related resources and actions across multiple Defender solutions. This enables more targeted control within the Defender environment, such as assigning roles to specific cloud scopes or environments, rather than relying on broader Azure resource group or subscription boundaries. As a result, unified role-based access control grants administrators the flexibility to tailor security permissions with finer granularity for users who need access to Defender capabilities, independent of their Azure role-based access control roles.
 
 **Q: What are the implications of assigning roles across multiple cloud scopes?**
 

@@ -12,9 +12,9 @@ zone_pivot_groups: defender-portal-experience
 
 # Identify and remediate attack paths
 
-Defender for Cloud uses a [proprietary algorithm to locate potential attack paths](concept-attack-path.md#what-is-an-attack-path) specific to your multicloud environment. Defender for Cloud focuses on real, externally-driven and exploitable threats rather than broad scenarios. The algorithm detects attack paths that begin outside your organization and progress to business-critical targets, helping you cut through the noise and act faster.
+Defender for Cloud uses a [proprietary algorithm to locate potential attack paths](concept-attack-path.md#what-is-an-attack-path) specific to your multicloud environment. Defender for Cloud focuses on real, externally driven and exploitable threats rather than broad scenarios. The algorithm detects attack paths that begin outside your organization and progress to business-critical targets, helping you cut through the noise and act faster.
 
-You can use attack path analysis to address security issues that pose immediate threats and have the greatest potential for exploitation in your environment. Defender for Cloud analyzes which security issues are part of externally-exposed attack paths that attackers could use to breach your environment. It also highlights the security recommendations you need to resolve to mitigate these issues.
+You can use attack path analysis to address security issues that pose immediate threats and have the greatest potential for exploitation in your environment. Defender for Cloud analyzes which security issues are part of externally exposed attack paths that attackers could use to breach your environment. It also highlights the security recommendations you need to resolve to mitigate these issues.
 
 By default attack paths are organized by risk level. The risk level is determined by a context-aware risk-prioritization engine that considers the risk factors of each resource. Learn more about how Defender for Cloud [prioritizes security recommendations](risk-prioritization.md).
 
@@ -37,7 +37,7 @@ By default attack paths are organized by risk level. The risk level is determine
 - **Required roles and permissions**: Security Reader, Security Admin, Reader, Contributor, or Owner.
 
 > [!NOTE]
-> You may see an empty Attack Path page, as attack paths now focus on real, externally-driven and exploitable threats rather than broad scenarios. This helps reduce noise and prioritize imminent risks.
+> You may see an empty Attack Path page, as attack paths now focus on real, externally driven and exploitable threats rather than broad scenarios. This helps reduce noise and prioritize imminent risks.
 
 **To view attack paths that are related to containers**:
 
@@ -103,8 +103,8 @@ The attack path page shows you an overview of all of your attack paths. You can 
     
     :::image type="content" source="media/how-to-manage-attack-path/attack-path-overview-defender-portal.png" alt-text="Screenshot showing attack path overview in the Defender portal." lightbox="media/how-to-manage-attack-path/attack-path-overview-defender-portal.png":::
 
-> [!NOTE]
-> In the Defender portal, attack path analysis is part of the broader Exposure Management capabilities, providing enhanced integration with other Microsoft security solutions and unified incident correlation.
+    > [!NOTE]
+    > In the Defender portal, attack path analysis is part of the broader Exposure Management capabilities, providing enhanced integration with other Microsoft security solutions and unified incident correlation.
 
 1. Select the **Attack paths** tab.
 
@@ -142,6 +142,9 @@ The attack path page shows you an overview of all of your attack paths. You can 
     :::image type="content" source="media/how-to-manage-attack-path/attack-path-recommendations-defender-portal.png" alt-text="Screenshot that shows where to select recommendations in the Defender portal." lightbox="media/how-to-manage-attack-path/attack-path-recommendations-defender-portal.png":::
 
 1. Select a recommendation.
+
+1. [Remediate the recommendation](implement-security-recommendations.md).
+
    Once you're done with your investigation of an attack path and you review all of the associated findings and recommendations, you can start to remediate the attack path.
 
 1. [Remediate the recommendation](implement-security-recommendations.md).

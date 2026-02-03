@@ -25,14 +25,11 @@ Scan container images for vulnerabilities by using Microsoft Defender Vulnerabil
 defender scan image <image-name> [--defender-output <path>]
 ```
 
-### Parameters
+### Options
 | Name                         | Required | Type   | Description                                                  |
 | ---------------------------- | -------- | ------ | ------------------------------------------------------------ |
 | \<image-name\>               | Yes      | String | The container image reference (for example, my-image:latest, registry.azurecr.io/app:v1). |
-| \-\-defender-output          | No       | String | Path to write aggregated SARIF output file.                  |
-| \-\-mdvm-OutputFile          | No       | String | Path to write Microsoft Container Security Scanner SARIF output file. |
-| \-\-mdvm-result-summary-type | No       | String | Specifies whether and how to print findings to the console.  |
-| \-\-help                     | No       | Flag   | Help Instructions with options and examples.                  |
+| \-\-defender-output          | No       | String | Path to write aggregated SARIF output file.                  | 
 
 ### Examples
 

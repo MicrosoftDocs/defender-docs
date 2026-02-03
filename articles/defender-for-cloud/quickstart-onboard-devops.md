@@ -37,6 +37,13 @@ To complete this quickstart, you need:
 > [!NOTE]
 > **Security Reader** role can be applied on the Resource Group/Azure DevOps connector scope to avoid setting highly privileged permissions on a Subscription level for read access of DevOps security posture assessments.
 
+> [!NOTE]
+> The Azure DevOps connector is created under the `Microsoft.Security/securityConnectors` resource type.  
+>  
+> Defender for DevOps also uses additional resources under the `Microsoft.Security` resource provider (for example, security assessments).  
+>  
+> For governance scenarios that use tenant-level policy exemptions, scope exemptions to `Microsoft.Security/*` to ensure full Defender for DevOps functionality.
+
 ## Connect your Azure DevOps organization
 
 > [!NOTE]

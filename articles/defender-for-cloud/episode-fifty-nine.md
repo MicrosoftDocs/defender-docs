@@ -17,7 +17,7 @@ ms.date: 10/05/2025
 
 ## Recommended resources
 
-- [Learn more](https://msft.it/6052Uj0dr).
+- [Learn more](/azure/defender-for-cloud/ci-cd-pipeline-scanning-with-defender-cli).
 - Learn more about [Microsoft Security](https://msft.it/6002T9HQY).
 - Subscribe to [Microsoft Security on YouTube](https://www.youtube.com/playlist?list=PL3ZTgFEc7LysiX4PfHhdJPR7S8mGO14YS).
 
@@ -31,4 +31,4 @@ ms.date: 10/05/2025
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [New AWS connector in Microsoft Defender for Cloud](episode-one.md)
+> [Code reachability analysis](episode-sixty.md)
