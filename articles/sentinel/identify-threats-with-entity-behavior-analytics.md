@@ -125,6 +125,7 @@ For more information, see [Investigate incidents in the Microsoft Defender porta
 ### Enrich Advanced Hunting queries and custom detections with UEBA data
 
 When analysts write Advanced Hunting or custom detection queries using UEBA-related tables, the Microsoft Defender portal displays a banner that prompts them to join the **Anomalies** table. This enriches investigations with behavioral insights and strengthens the overall analysis.
+
 :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-advanced-hunting.png" alt-text="Screenshot that shows the Advanced Hunting page with a banner that prompts the analyst to join the Anomalies table and enrich their analysis with behavioral insights." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-advanced-hunting.png":::
 
 For more information, see: 
@@ -144,7 +145,7 @@ The behaviors layer enriches raw logs with:
 
 By converting fragmented logs into coherent behavior objects, the behaviors layer accelerates threat hunting, simplifies detection authoring, and provides richer context for UEBA anomaly detection. Together, these capabilities help analysts quickly understand not just *that* something anomalous happened, but *what* happened and *why* it matters.
 
-For more information, see [Translate raw security logs to behavioral insights using UEBA behaviors in Microsoft Sentinel (Preview)](../sentinel/entity-behaviors-layer.md).
+For more information, see [Translate raw security logs to behavioral insights using UEBA behaviors in Microsoft Sentinel (Preview)](entity-behaviors-layer.md).
 
 ## Next steps
 In this article, you learned about Microsoft Sentinel's entity behavior analytics capabilities. For practical guidance on implementation, and to use the insights you've gained, see:
