@@ -34,13 +34,13 @@ For updates about versions and features released six months ago or earlier, see 
 /defender-xdr/advanced-hunting-identityaccountinfo-table)** table. This table provides account information from various sources, including Microsoft Entra ID, and links to the identity that owns the account.
 
 
-### New security posture assessment: Remove stale Active Directory accounts
+### New security posture assessment: Remove stale Active Directory accounts (Preview)
 
 This identity security posture assessment lists any user accounts in Active Directory that are stale, meaning they haven't logged in at all during the past 90 days.
 
 For more information, see: [Security posture assessment: Remove stale Active Directory accounts](security-posture-assessments/accounts.md#remove-stale-active-directory-accounts)
 
-### New security posture assessment: Microsoft Entra ID privileged user accounts that are also privileged in Active Directory
+### New security posture assessment: Microsoft Entra ID privileged user accounts that are also privileged in Active Directory (Preview)
 
 This identity security posture assessment lists Microsoft Entra ID privileged user accounts that also have privileged roles in Active Directory.
 
