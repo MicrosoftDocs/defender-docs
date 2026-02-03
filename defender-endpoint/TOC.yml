@@ -102,37 +102,40 @@
  
   - name: Operationalize Microsoft Defender for Endpoint
     items:
-      - name: Deploy Defender for Endpoint
-        items:
-        - name: Overview
-          href: mde-planning-guide.md
-        - name: Step 1 - Prepare for deployment
-          href: production-deployment.md
-        - name: Step 2 - Assign roles and permissions
-          href: prepare-deployment.md
-        - name: Step 3 - Identify your architecture and select a deployment method
-          href: deployment-strategy.md
-        - name: Step 4 - Onboard devices to Defender for Endpoint
-          href: onboarding.md
-        - name: Step 5 - Configure Defender for Endpoint capabilities
-          href: onboard-configure.md
+    - name: Deploy Defender for Endpoint
+      items:
+      - name: Overview
+        href: mde-planning-guide.md
+      - name: Step 1 - Prepare for deployment          
+        href: production-deployment.md
+      - name: Step 2 - Assign roles and permissions
+        href: prepare-deployment.md
+      - name: Step 3 - Identify your architecture and select a deployment method
+        href: deployment-strategy.md
+      - name: Step 4 - Onboard devices to Defender for Endpoint
+        href: onboarding.md
+      - name: Step 5 - Configure Defender for Endpoint capabilities
+        href: onboard-configure.md
 
-      - name: Onboard and configure devices
+    - name: Onboard and configure devices
+      items:
+      - name: Configure service connections
         items:
-        - name: Configure service connections
-          items:
-            - name: Step 1 - Configure your network environment 
-              href: configure-environment.md
-            - name: Step 2 - Configure device proxy and Internet settings
-              href: configure-proxy-internet.md
-            - name: Step 3 - Verify client connectivity to service URLs
-              href: verify-connectivity.md        
-            - name: Onboard devices using streamlined method
-              href: configure-device-connectivity.md            
-            - name: Migrate devices to streamlined method
-              href: migrate-devices-streamlined.md
-            - name: Enable access to service URLs - US government            
-              href: streamlined-device-connectivity-urls-gov.md                       
+        - name: Step 1 - Configure your network environment 
+          href: configure-environment.md
+        - name: Step 2 - Configure device proxy and Internet settings
+          href: configure-proxy-internet.md
+        - name: Step 3 - Verify client connectivity to service URLs
+          href: verify-connectivity.md        
+        - name: Onboard devices using streamlined method
+          href: configure-device-connectivity.md            
+        - name: Migrate devices to streamlined method
+          href: migrate-devices-streamlined.md
+        - name: Enable access to service URLs - US government            
+          href: streamlined-device-connectivity-urls-gov.md                       
+
+      - name: Defender for Endpoint on Windows
+        items:
         - name: Onboard client devices
           items:
           - name: Onboard Windows devices using the Defender deployment tool
@@ -156,109 +159,110 @@
           - name: Onboard previous versions of Windows
             href: onboard-downlevel.md
 
-        - name: Onboard server devices
-          items:
-          - name: Onboard servers through Defender for Endpoint's experience
-            href: onboard-server.md
-          - name: Onboard Windows devices using Configuration Manager
-            href: configure-endpoints-sccm.md
-          - name: Onboard Windows devices using Group Policy
-            href: configure-endpoints-gp.md
-          - name: Onboard Windows devices using a local script
-            href: configure-endpoints-script.md
-          - name: Onboard non-persistent virtual desktop infrastructure (VDI) devices
-            href: configure-endpoints-vdi.md
-          - name: Direct onboarding with Defender for Cloud
-            href: /azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
-          - name: Defender for Endpoint on Windows Server with SAP
-            href: mde-sap-windows-server.md
-          - name: Deployment guidance for Defender for Endpoint on Linux for SAP
-            href: mde-linux-deployment-on-sap.md
-          - name: Use custom detection rules to protect SAPXPG
-            href: mde-sap-custom-detection-rules.md
+          - name: Onboard server devices
+            items:
+            - name: Onboard servers through Defender for Endpoint's experience
+              href: onboard-server.md
+            - name: Onboard Windows devices using Configuration Manager
+              href: configure-endpoints-sccm.md
+            - name: Onboard Windows devices using Group Policy
+              href: configure-endpoints-gp.md
+            - name: Onboard Windows devices using a local script
+              href: configure-endpoints-script.md
+            - name: Onboard non-persistent virtual desktop infrastructure (VDI) devices
+              href: configure-endpoints-vdi.md
+            - name: Direct onboarding with Defender for Cloud
+              href: /azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
+            - name: Defender for Endpoint on Windows Server with SAP
+              href: mde-sap-windows-server.md
+            - name: Deployment guidance for Defender for Endpoint on Linux for SAP
+              href: mde-linux-deployment-on-sap.md
+            - name: Use custom detection rules to protect SAPXPG
+              href: mde-sap-custom-detection-rules.md
 
-        - name: Defender for Endpoint on macOS
+      - name: Defender for Endpoint on macOS
+        items:
+        - name: Deploy Defender for Endpoint on macOS
           items:
-          - name: Deploy Defender for Endpoint on macOS
+          - name: Microsoft Defender for Endpoint Prerequisites on macOS
+            href: microsoft-defender-endpoint-mac-prerequisites.md
+          - name: Deployment with Microsoft Intune
+            href: mac-install-with-intune.md
+          - name: JAMF Pro-based deployment
             items:
-            - name: Microsoft Defender for Endpoint Prerequisites on macOS
-              href: microsoft-defender-endpoint-mac-prerequisites.md
-            - name: Deployment with Microsoft Intune
-              href: mac-install-with-intune.md
-            - name: JAMF Pro-based deployment
-              items:
-              - name: Deploying Microsoft Defender for Endpoint on macOS using Jamf Pro
-                href: mac-install-with-jamf.md
-              - name: Log in to Jamf Pro
-                href: mac-install-jamfpro-login.md
-              - name: Set up device groups
-                href: mac-jamfpro-device-groups.md
-              - name: Set up policies
-                href: mac-jamfpro-policies.md
-              - name: Enroll devices
-                href: mac-jamfpro-enroll-devices.md        
-            - name: Deployment with other Mobile Device Management (MDM) systems
-              href: mac-install-with-other-mdm.md
-            - name: Manual deployment
-              href: mac-install-manually.md
-          - name: Configure Defender for Endpoint on macOS
+          - name: Deploying Microsoft Defender for Endpoint on macOS using Jamf Pro
+            href: mac-install-with-jamf.md
+          - name: Log in to Jamf Pro
+            href: mac-install-jamfpro-login.md
+          - name: Set up device groups
+            href: mac-jamfpro-device-groups.md
+          - name: Set up policies
+            href: mac-jamfpro-policies.md
+          - name: Enroll devices
+            href: mac-jamfpro-enroll-devices.md        
+          - name: Deployment with other Mobile Device Management (MDM) systems
+            href: mac-install-with-other-mdm.md
+          - name: Manual deployment
+            href: mac-install-manually.md
+        - name: Configure Defender for Endpoint on macOS
+          items:
+          - name: Configure and validate exclusions on Mac
+            href: mac-exclusions.md
+          - name: Set preferences on Mac
+            href: mac-preferences.md 
+          - name: Detect and block potentially unwanted applications on Mac
+            href: mac-pua.md
+          - name: Protect macOS security settings using tamper protection
+            href: tamperprotection-macos.md
+          - name: Configure offline security intelligence updates on Mac
+            href: mac-support-offline-security-intelligence-update.md
+          - name: Device control
             items:
-              - name: Configure and validate exclusions on Mac
-                href: mac-exclusions.md
-              - name: Set preferences on Mac
-                href: mac-preferences.md 
-              - name: Detect and block potentially unwanted applications on Mac
-                href: mac-pua.md
-              - name: Protect macOS security settings using tamper protection
-                href: tamperprotection-macos.md
-              - name: Configure offline security intelligence updates on Mac
-                href: mac-support-offline-security-intelligence-update.md
-              - name: Device control
-                items:
-                - name: Device control overview on Mac
-                  href: mac-device-control-overview.md
-                - name: JAMF examples
-                  href: mac-device-control-jamf.md
-                - name: Intune examples
-                  href: mac-device-control-intune.md
-                - name: macOS Device Control frequently asked questions (FAQ)
-                  href: mac-device-control-faq.md
-              - name: Schedule scans on Mac
-                href: mac-schedule-scan.md
-          - name: Update Defender for Endpoint on macOS
-            href: mac-updates.md
-          - name: Privacy for Microsoft Defender for Endpoint on macOS
-            href: mac-privacy.md
-          - name: Resources for Microsoft Defender for Endpoint on macOS
-            href: mac-resources.md
-          - name: Troubleshoot Microsoft Defender for Endpoint on macOS
+            - name: Device control overview on Mac
+              href: mac-device-control-overview.md
+            - name: JAMF examples
+              href: mac-device-control-jamf.md
+            - name: Intune examples
+              href: mac-device-control-intune.md
+            - name: macOS Device Control frequently asked questions (FAQ)
+              href: mac-device-control-faq.md
+          - name: Schedule scans on Mac
+            href: mac-schedule-scan.md
+        - name: Update Defender for Endpoint on macOS
+          href: mac-updates.md
+        - name: Privacy for Microsoft Defender for Endpoint on macOS
+          href: mac-privacy.md
+        - name: Resources for Microsoft Defender for Endpoint on macOS
+          href: mac-resources.md
+        - name: Troubleshoot Microsoft Defender for Endpoint on macOS
+          items:
+          - name: Troubleshoot agent health issues
+            href: mac-health-status.md
+          - name: Troubleshooting mode on macOS
+            href: mac-troubleshoot-mode.md
+          - name: Troubleshoot macOS installation issues
+            href: mac-support-install.md
+          - name: Troubleshoot macOS configuration
+            href: mac-support-configuration.md
+          - name: Troubleshoot macOS performance issues overview
+            href: mac-support-perf-overview.md
+            displayName: Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS
+          - name: Troubleshoot performance issues
+            href: mac-support-perf.md
+          - name: Troubleshoot cloud connectivity
+            href: troubleshoot-cloud-connect-mdemac.md
+          - name: Troubleshoot license issues
+            href: mac-support-license.md
+          - name: Troubleshoot system extention issues
             items:
-            - name: Troubleshoot agent health issues
-              href: mac-health-status.md
-            - name: Troubleshooting mode on macOS
-              href: mac-troubleshoot-mode.md
-            - name: Troubleshoot macOS installation issues
-              href: mac-support-install.md
-            - name: Troubleshoot macOS configuration
-              href: mac-support-configuration.md
-            - name: Troubleshoot macOS performance issues overview
-              href: mac-support-perf-overview.md
-              displayName: Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS
-            - name: Troubleshoot performance issues
-              href: mac-support-perf.md
-            - name: Troubleshoot cloud connectivity
-              href: troubleshoot-cloud-connect-mdemac.md
-            - name: Troubleshoot license issues
-              href: mac-support-license.md
             - name: Troubleshoot system extention issues
               href: mac-support-sys-ext.md
-              items:
-              - name: Intune
-                href: manage-profiles-approve-sys-extensions-intune.md
-              - name: JamF
-                href: manage-sys-extensions-using-jamf.md
-              - name: Manual deployment
-                href: manage-sys-extensions-manual-deployment.md
+            - name: Intune
+              href: manage-profiles-approve-sys-extensions-intune.md
+            - name: JamF
+              href: manage-sys-extensions-using-jamf.md
+            - name: Manual deployment
+              href: manage-sys-extensions-manual-deployment.md
            
         - name: Defender for Endpoint on Linux
           items:
