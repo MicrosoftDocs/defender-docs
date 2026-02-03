@@ -31,7 +31,7 @@ For more information about live response, see [Investigate entities on devices u
 
 The **Library management** page shows a list of files used during live response sessions on your endpoints.
 
-:::image type="content" source="media/configure-libraries-live-response/library-management-view-all-files.png" alt-text="Library management page - view details for a file":::
+:::image type="content" source="media/configure-libraries-live-response/library-management-view-all-files.png" alt-text="Library management page - view details for a file" lightbox="media/configure-libraries-live-response/library-management-view-all-files.png":::
 
 To view the list of files available for live response:
 
@@ -77,7 +77,7 @@ To view and analyze a file:
     
     The analysis provides a description of the actions the script takes, and more information, including the methods used and output. Select the chat icon at the bottom right to ask questions and further analyze the file.
 
-    :::image type="content" source="media/configure-libraries-live-response/library-management-view-analyze-file.png" alt-text="Library management page - view and analyze a file":::
+    :::image type="content" source="media/configure-libraries-live-response/library-management-view-analyze-file.png" alt-text="Library management page - view and analyze a file" lightbox="media/configure-libraries-live-response/library-management-view-analyze-file.png":::
 
 ## Manage files
 
