@@ -17,8 +17,6 @@ For clusters that aren’t running in Azure Kubernetes Service (AKS), Defender f
 
 # [Azure Kubernetes Service (AKS)](#tab/aks)
 
-## What Defender deploys
-
 For AKS clusters, recommendations activate built-in AKS security capabilities, including the Defender profile and Azure Policy add-on.
 
 ## Prerequisites
@@ -66,8 +64,8 @@ For EKS clusters, Defender uses Azure Arc–enabled Kubernetes to deploy the Def
 
 - [Defender for Containers enabled on your AWS connector](defender-for-containers-enable-portal.md?tab=eks). 
 
-> [!NOTE] 
-> Some recommendations require Defender for Cloud to access the Kubernetes control plane. If you see a recommendation related to Kubernetes API access and you haven’t configured it yet, [configure plane permissions](defender-for-containers-control-plane.md).
+- [Review and configure required AWS permissions and control plane access for Defender for Containers capabilities](defender-for-containers-aws-permissions.md).
+
 
 ## Network requirements
 

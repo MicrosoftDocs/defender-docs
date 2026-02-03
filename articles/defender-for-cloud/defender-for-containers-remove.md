@@ -11,12 +11,27 @@ ms.date: 01/25/2026
 
 This article explains how to disable Microsoft Defender for Containers and remove its components by environment.
 
-Disabling the plan doesn't delete historical security data stored in Microsoft Defender for Cloud or Log Analytics workspaces.
+Turning off the Defender for Containers plan or disabling automatic provisioning stops future deployments, but doesn't uninstall Defender components that are already deployed to clusters. Those components are removed separately.
 
 > [!IMPORTANT]
 > Removing Defender for Containers stops protection for your clusters. Make sure you have alternative security measures in place before you proceed.
 
+> [!IMPORTANT]
+> Disabling the plan doesn't delete historical security data stored in Microsoft Defender for Cloud or Log Analytics workspaces.
+
 # [Azure Kubernetes Service (AKS)](#tab/aks)
+
+## What stops working after removal
+
+After you remove Defender for Containers components from an AKS cluster:
+
+- Runtime threat detection based on Defender sensor telemetry stops.
+
+- Kubernetes security recommendations related to Azure Policy for Kubernetes stop updating.
+
+- Alerts based on AKS runtime signals and Kubernetes audit data stop being generated.
+
+- New container image vulnerability findings for images in Azure Container Registry (ACR) are no longer generated for this environment.
 
 ## Disable Defender for Containers plan
 
@@ -69,6 +84,20 @@ az security pricing show --name 'Containers'
 The output should show `pricingTier` as `Free`.
 
 # [Amazon Elastic Kubernetes Service (EKS)](#tab/eks)
+
+## What stops working after removal
+
+After you remove Defender for Containers components from an EKS cluster:
+
+- Runtime threat detection from the Defender sensor deployed through Azure Arc stops.
+
+- Kubernetes security recommendations for that cluster stop updating.
+
+- Alerts based on Kubernetes runtime and audit signals stop being generated.
+
+- Container image vulnerability findings for images in Amazon ECR stop updating for this environment.
+
+- Agentless discovery and control plane–based detections stop if related AWS-side permissions and integrations are removed.
 
 ## Remove Defender extensions from EKS clusters
 
@@ -168,9 +197,17 @@ No resources should be returned.
 
 # [Google Kubernetes Engine (GKE)](#tab/gke)
 
-## Remove Defender components from GKE clusters
+## What stops working after removal
 
-Defender for Containers deploys components to GKE clusters by using Azure Arc–enabled Kubernetes. The following steps remove those Azure Arc extensions.
+After you remove Defender for Containers components from a GKE cluster:
+
+- Runtime threat detection from the Defender sensor deployed through Azure Arc stops.
+
+- Kubernetes security recommendations for that cluster stop updating.
+
+- Alerts based on Kubernetes runtime and audit signals stop being generated.
+
+- Container image vulnerability findings for images in Google Container Registry or Artifact Registry stop updating for this environment.
 
 ### Remove the Defender extension
 
@@ -257,6 +294,88 @@ No resources should be returned.
 1. Verify the GCP connector is removed or shows **Containers** as disabled.
 
 1. Check that no GKE-related recommendations appear.
+
+# [Arc-enabled Kubernetes (Preview)](#tab/arc)
+
+## What stops working after removal
+
+After you remove Defender for Containers components from an Arc-enabled Kubernetes cluster:
+
+- Runtime threat detection from the Defender sensor stops.
+
+- Kubernetes security recommendations for that cluster stop updating.
+
+- Alerts based on Kubernetes runtime and audit signals stop being generated.
+
+- Azure Policy–based configuration assessments for Kubernetes workloads stop if the Azure Policy extension is removed.
+
+## Disable Defender for Containers plan
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
+
+1. Select the subscription that contains your Arc-enabled Kubernetes clusters.
+
+1. In the Defender plans page, toggle **Containers** to **Off**.
+
+1. Select **Save**.
+
+## Remove Defender extensions from Arc-enabled clusters
+
+### Remove the Defender extension
+
+```azurecli
+az k8s-extension delete \
+  --name microsoft.azuredefender.kubernetes \
+  --cluster-type connectedClusters \
+  --cluster-name <cluster-name> \
+  --resource-group <resource-group> \
+  --yes
+```
+
+### Remove the Azure Policy extension (if installed)
+
+```azurecli
+az k8s-extension delete \
+  --name azurepolicy \
+  --cluster-type connectedClusters \
+  --cluster-name <cluster-name> \
+  --resource-group <resource-group> \
+  --yes
+```
+
+### Disconnect the cluster from Azure Arc (optional)
+
+> [!NOTE]
+> Disconnecting a cluster from Azure Arc removes access to all Arc extensions, not only Defender for Containers.
+
+```azurecli
+az connectedk8s delete \
+  --name <cluster-name> \
+  --resource-group <resource-group> \
+  --yes
+```
+
+## Verify removal
+
+### Check Azure resources
+
+```azurecli
+az k8s-extension list \
+  --cluster-type connectedClusters \
+  --cluster-name <cluster-name> \
+  --resource-group <resource-group>
+```
+
+### Check cluster pods
+
+```bash
+kubectl get pods -n kube-system -l app=microsoft-defender
+```
+
+
+No resources should be returned.
 
 ---
 

@@ -94,7 +94,8 @@ This article explains how to enable the Microsoft Defender for Containers plan i
     - **Registry access**
         - If enabled, optionally enable security fidings
     
-    These settings enable Defender capabilities for your AWS environment. Cluster components and Azure Arc extensions are deployed separately.
+    > [!IMPORTANT]  
+    > Agentless discovery for Kubernetes, control plane threat detection, and registry access require additional AWS-side permissions and Kubernetes control plane access. If you enable any of these components, [configure the required AWS permissions](defender-for-containers-aws-permissions.md).
 
 1. Select **Continue**.
 
