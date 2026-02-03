@@ -14,7 +14,7 @@ description: Lists all Microsoft Defender for Identity security posture assessme
 > While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status might still take time until it's marked as **Completed**.
 
 
-## Remove stale Active Directory accounts
+## Remove stale Active Directory accounts (Preview)
 
 **Description**
 
@@ -41,7 +41,7 @@ Stale accounts pose a security risk because they provide potential targets for a
 1. Remove accounts for former employees to prevent unauthorized access.
 
 
-##  Microsoft Entra ID privileged user accounts that are also privileged in Active Directory
+##  Microsoft Entra ID privileged user accounts that are also privileged in Active Directory (Preview)
 
 
 **Description**
@@ -73,7 +73,7 @@ For example:
 - If dual privileges are required for critical operations, enable MFA, monitor logins closely, and review memberships regularly.
 
 
-## Identify service accounts in privileged groups
+## Identify service accounts in privileged groups (Preview)
 
 
 **Description**
