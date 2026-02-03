@@ -31,31 +31,30 @@ Microsoft Sentinel UEBA uses machine learning to build dynamic behavioral profil
 
 Microsoft Sentinel ingests data from connected sources, applies behavioral modeling to detect deviations, and uses peer group analysis and blast radius evaluation to assess the impact. UEBA assigns risk scores to anomalous behaviors and entities based on severity and context, which enables faster, smarter threat detection and response.
 
+This diagram shows which data gets processed when you enable UEBA and how UEBA detects anomalies and assign [risk scores](#ueba-scoring) to prioritize investigations:
+
+:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-architecture.png" alt-text="Diagram showing UEBA architecture, illustrating how data flows from connected sources through behavioral modeling to produce risk scores." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-architecture.png":::
+
+UEBA automatically builds behavioral baselines and peer comparisons for users and entities, detecting anomalies that may indicate insider threats, compromised accounts, or lateral movement.
+
+UEBA evaluates actions performed by users, hosts, and IP addresses in context, identifying anomalous behavior based on multiple dimensions, including:
+
+- Deviations across geographical locations, devices, and environments  
+- Changes over time and activity frequency compared to the entity’s historical behavior  
+- Differences compared to peer groups  
+- Deviations from organization-wide behavior patterns  
+
+:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/context.png" alt-text="Entity context":::
+
 UEBA is natively integrated into Microsoft Sentinel and the Microsoft Defender portal, providing a seamless experience for security operations teams and embedded experiences that enhance threat investigation and response.
 
 >[!NOTE]
 > UEBA is a probabilistic, behavior‑based capability. It highlights anomalous activity and risk rather than generating deterministic alerts.
 
-This diagram shows which data gets processed when you enable UEBA and how UEBA detects anomalies and assign [risk scores](#ueba-scoring) to prioritize investigations:
-
-:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-architecture.png" alt-text="Diagram showing UEBA architecture, illustrating how data flows from connected sources through behavioral modeling to produce risk scores." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-architecture.png":::
-
-
 ## Enable UEBA to create behavior profiles and detect anomalies
 
 1. Enable UEBA in Microsoft Sentinel and connect key data sources, such as Microsoft Entra ID, Defender for Identity, and Office 365. For more information, see [Enable entity behavior analytics](enable-entity-behavior-analytics.md).
-
-    UEBA automatically builds behavioral baselines and peer comparisons for users and entities, detecting anomalies that may indicate insider threats, compromised accounts, or lateral movement.
-
-    UEBA evaluates actions performed by users, hosts, and IP addresses in context, identifying anomalous behavior based on multiple dimensions, including:
-
-    - Deviations across geographical locations, devices, and environments  
-    - Changes over time and activity frequency compared to the entity’s historical behavior  
-    - Differences compared to peer groups  
-    - Deviations from organization-wide behavior patterns  
-
-    :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/context.png" alt-text="Entity context":::
-
+   
 1. Install the UEBA solution, which includes dozens of ready-to-use queries to query the `BehaviorAnalytics`, `IdentityInfo`, `Anomalies`, and `UserPeerAnalytics` tables. 
 
     Query the [BehaviorAnalytics](#behavioranalytics-table) and [Anomalies](#anomalies-table) tables to investigate risk scores and suspicious activity. Enriched entity profiles provide additional context that helps speed up triage and response. 
