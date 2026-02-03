@@ -1,5 +1,5 @@
 ---
-title: Alert schema differences between standalone and XDR connectors
+title: Microsoft Sentinel alert schema differences between standalone and XDR connectors
 description: Learn how alert schema, field mappings, and ingestion behavior differ between standalone connectors and the XDR connector in Microsoft Sentinel.
 author: guywi-ms
 ms.author: guywild
@@ -13,7 +13,7 @@ ms.date: 01/27/2026
 
 This article explains the differences between alerts ingested through standalone connectors and alerts ingested through the Extended Detection and Response (XDR) connector in Microsoft Sentinel.
 
-Standalone connectors ingest alerts directly from the original security products, whereas the XDR connector ingests alerts through the Microsoft Defender XDR pipeline.
+Standalone connectors ingest alerts directly from the original security products, whereas the XDR connector ingests alerts through the Microsoft Defender XDR pipeline. This includes connectors such as Microsoft Defender for Office 365, Microsoft Defender for Endpoint, Microsoft Defender for Identity, Information Rights Management (IRM), Data Loss Prevention (DLP), Microsoft Defender for Cloud (MDC), and Microsoft Defender for Cloud Apps (MDA).
 
 These differences can affect field mappings, derived field behavior, schema structure, and alert ingestion, which might impact your existing queries, analytic rules, and workbooks. Review these differences before migrating to the XDR connector.
 
