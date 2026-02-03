@@ -14,6 +14,9 @@ ms.date: 02/02/2026
 > The following table lists the data connectors that are available in the Microsoft Sentinel Content hub. The connectors are supported by the product vendor. For support, see the link in the **Supported by** column in the following table.
 
 
+> [!TIP]
+> For a list of tables ingested into Microsoft Sentinel and the connectors that ingest them, see [Microsoft Sentinel tables and associated connectors](sentinel-tables-connectors-reference.md).
+
 
 <a name="1password-serverless"></a><details><summary>**1Password (Serverless)**</summary>
 
