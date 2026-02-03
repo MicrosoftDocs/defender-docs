@@ -66,7 +66,7 @@ To add a new file for live response:
 
 To view a file's details, right-click the file and select **View details**. A detailed pane opens, displaying information about the file, including its parameters and usage history.
 
-:::image type="content" source="media/configure-libraries-live-response/library-management-file-details.png" alt-text="Library management page - view details for a file":::
+:::image type="content" source="media/configure-libraries-live-response/library-management-view-all-files.png" alt-text="Library management page - main view":::
 
 To view and analyze a file:
 
@@ -75,7 +75,7 @@ To view and analyze a file:
     
     The analysis provides a description of the actions the script takes, and more information, including the methods used and output. Select the chat icon at the bottom right to ask questions and further analyze the file.
 
-    :::image type="content" source="media/configure-libraries-live-response/library-management-view-analyze-files.png" alt-text="Library management page - view details for a file":::
+    :::image type="content" source="media/configure-libraries-live-response/library-management-view-analyze-file.png" alt-text="Library management page - view and analyze a file":::
 
 ## Manage files
 
