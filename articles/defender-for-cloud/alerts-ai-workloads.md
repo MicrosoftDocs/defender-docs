@@ -197,7 +197,6 @@ This article lists the security alerts you might get for AI from Microsoft Defen
 
 ## Alerts for AI agents
 
-> [!NOTE]
 
 ### (Preview) A Jailbreak attempt on your Azure AI agent was detected by Prompt Shields 
 
