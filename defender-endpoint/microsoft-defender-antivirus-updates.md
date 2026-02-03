@@ -126,34 +126,6 @@ Updates contain:
 - **Fixed Defender startup issue**: The platform no longer crashes when processing invalid Attack Surface Reduction rule exclusions.
 - **Reduced system resource usage**: Defender no longer generates excessive Data Loss Prevention (DLP) logs that caused high disk activity, improving overall performance and stability.
 
-### September-2025 (Platform: 4.18.25090.3009 | Engine: 1.1.25090.3001)
-
-- Security intelligence update version: **1.439.345.0**
-- Release date:  **October 8, 2025 (Engine) / October 21, 2025 (Platform)**
-
-- Platform: **4.18.25090.3009**
-- Engine: **1.1.25090.3001**
-- Support phase: **Security and Critical Updates**
-
-#### What's new
-
-- **Improved service startup behavior**: The core service now only restarts when necessary, for example, during a successful platform update. This change allows the organization to avoid unnecessary restarts when the service is already running correctly.
-- **Improved stability for RPC services**: Added input validation across multiple RPC endpoints to prevent crashes caused by malformed data, which addresses a reported security vulnerability.
-- **Fixed threat exclusion handling**: Resolved an issue where severity-based exclusions could cause the engine to misidentify threats, potentially skipping high severity detections.
-- **Restored performance optimization for network file access**: Fixed a regression that caused slowdowns during file operations, like robocopy to network shares. The fix included reintroducing the logic to skip unnecessary checks on non-local files when Controlled Folder Access is enabled.
-
-### August-2025 (Platform: 4.18.25080.5 | Engine: 1.1.25080.5)
-
-- Security intelligence update version: **1.437.1.0**
-- Release date:  **September 16, 2025 (Engine) / September 17, 2025 (Platform)**
-- Platform: **4.18.25080.5**
-- Engine: **1.1.25080.5**
-- Support phase: **Security and Critical Updates**
-
-#### What's new
-
-Improved Defender update reliability by allowing non-admin processes to trigger shared signature updates, reducing unnecessary privilege requirements.
-
 ### Previous version updates: Technical upgrade support only
 
 After a new package version is released, support for the previous two versions is reduced to technical upgrade support only. For more information about previous versions, see [Microsoft Defender Antivirus updates: Previous versions for technical upgrade support](msda-updates-previous-versions-technical-upgrade-support.md).
