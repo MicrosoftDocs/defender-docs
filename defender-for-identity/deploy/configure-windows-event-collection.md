@@ -21,9 +21,7 @@ If you configure auditing properly, it has minimal effect on server performance.
 Before you begin configuring windows event collection, we recommend that you run a PowerShell script to check your current configuration and generate a report of any adjustments you need to make:
 
 1. Download the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).  
-1. Run the Defender for Identity `New-MDIConfigurationReport` PowerShell module to 
-
-    Use this format to generate the report:
+1. Run the Defender for Identity `New-MDIConfigurationReport` PowerShell module to generate a report of your current Windows event auditing configuration.
 
     ```powershell
         New-MDIConfigurationReport -Path "C:\Reports" -Mode Domain -Identity "DOMAIN\ServiceAccountName" -OpenHtmlReport
@@ -42,6 +40,7 @@ Before you begin configuring windows event collection, we recommend that you run
     ```
 
     For more information, see: [New-MDIConfigurationReport](/powershell/module/defenderforidentity/new-mdiconfigurationreport?view=defenderforidentity-latest&preserve-view=true).
+
 1. Review the report and make any necessary adjustments before configuring windows event collection.
 
 ## Configure Defender for Identity to collect Windows events automatically (Preview)
@@ -127,7 +126,7 @@ This section describes how to modify your domain controller's Advanced Audit Pol
         > [!NOTE]
         > <a name=failure>*</a> These subcategories don't support failure events. We recommend adding them for auditing purposes in case they're implemented in the future. For more information, see [Audit Computer Account Management](/windows/security/threat-protection/auditing/audit-computer-account-management), [Audit Security Group Management](/windows/security/threat-protection/auditing/audit-security-group-management), and [Audit Security System Extension](/windows/security/threat-protection/auditing/audit-security-system-extension).
 
-        For example, to configure **Audit Security Group Management**, under **Account Management**, double-click **Audit Security Group Management**, and then select **Configure the following audit events** for both **Success** and **Failure** events.
+    1. To configure **Audit Security Group Management**, under **Account Management**, double-click **Audit Security Group Management**, and then select **Configure the following audit events** for both **Success** and **Failure** events.
 
         :::image type="content" source="../media/configure-windows-event-collection/advanced-audit-policy-check-step-4.png" alt-text="Screenshot of the audit security group management properties log.":::
 
@@ -145,7 +144,7 @@ For more information, see the [auditpol reference documentation](/windows-server
 
 #### Configure NTLM auditing
 
-When a Defender for Identity sensor parses Windows event 8004, Defender for Identity NTLM authentication activities are enriched with the server-accessed data. This section describes the extra configuration steps that you need for auditing Windows event 8004.
+When a Defender for Identity sensor parses Windows event 8004, Defender for Identity NTLM authentication activities are enriched with the server-accessed data. This section describes the configuration steps that you need for auditing Windows event 8004.
 
 > [!NOTE]
 > Apply domain group policies to collect Windows event 8004 *only* to domain controllers.
