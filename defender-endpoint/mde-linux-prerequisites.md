@@ -181,7 +181,7 @@ For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Micro
 
 ## External package dependency
 
-To use the [Isolate devices from the network](https://learn.microsoft.com/en-us/defender-endpoint/respond-machine-alerts#isolate-devices-from-the-network) functionality, the following prerequisites must be enabled:
+To use the [Isolate devices from the network](./respond-machine-alerts.md#isolate-devices-from-the-network) functionality, the following prerequisites must be enabled:
 - `iptables`
 - `ip6tables`
 - Linux kernel with `CONFIG_NETFILTER`, `CONFIG_IP_NF_IPTABLES`, and `CONFIG_IP_NF_MATCH_OWNER` for kernel version lower than 5.x and `CONFIG_NETFILTER_XT_MATCH_OWNER` from 5.x kernel.
@@ -195,14 +195,14 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 
 There are several methods and tools that you can use to deploy Microsoft Defender for Endpoint on Linux (applicable to AMD64 and ARM64 Linux servers):
 
-- [Deployment tool based deployment (Recommended)](https://learn.microsoft.com/en-us/defender-endpoint/linux-install-with-defender-deployment-tool)
+- [Deployment tool based deployment (Recommended)](./linux-install-with-defender-deployment-tool.md)
 - [Installer script based deployment](/defender-endpoint/linux-installer-script)
 - [Ansible based deployment](/defender-endpoint/linux-install-with-ansible)
 - [Chef based deployment](/defender-endpoint/linux-deploy-defender-for-endpoint-with-chef)
 - [Puppet based deployment](/defender-endpoint/linux-install-with-puppet)
 - [SaltStack based deployment](/defender-endpoint/linux-install-with-saltack)
-- [Golden Image based deployment](https://learn.microsoft.com/en-us/defender-endpoint/linux-deploy-defender-for-endpoint-using-golden-images)
-- [Deployment to a custom location](https://learn.microsoft.com/en-us/defender-endpoint/linux-custom-location-installation)
+- [Golden Image based deployment](/defender-endpoint/linux-deploy-defender-for-endpoint-using-golden-images)
+- [Deployment to a custom location](/defender-endpoint/linux-custom-location-installation)
 - [Manual deployment](/defender-endpoint/linux-install-manually)
 - [Direct onboarding with Defender for Cloud](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
 - [Guidance for Defender for Endpoint on Linux Server with SAP](/defender-endpoint/mde-linux-deployment-on-sap)
