@@ -63,7 +63,7 @@ Filter and ingest logs in text-file format from network or security applications
 > The following table lists the data connectors that are available in the Microsoft Sentinel Content hub. The connectors are supported by the product vendor. For support, see the **Supported by** link.
 
 > [!TIP]
-> For a list of tables ingested into Microsoft Sentinel and the connectors that ingest them, see [Microsoft Sentinel tables and associated connectors](sentinel-tables-connectors-reference).
+> For a list of tables ingested into Microsoft Sentinel and the connectors that ingest them, see [Microsoft Sentinel tables and associated connectors](sentinel-tables-connectors-reference.md).
 
 
 [!INCLUDE [connector-details](includes/connector-details.md)]
