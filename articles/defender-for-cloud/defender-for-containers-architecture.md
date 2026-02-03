@@ -18,10 +18,7 @@ Defender for Containers uses a different design for each Kubernetes environment.
 
 - **Google Kubernetes Engine (GKE) in a connected Google Cloud Platform (GCP) project** - Google’s managed environment for deploying, managing, and scaling applications using GCP infrastructure.
 
-- **An unmanaged Kubernetes distribution** (using Azure Arc-enabled Kubernetes) - Cloud Native Computing Foundation (CNCF) certified Kubernetes clusters hosted on-premises or on IaaS.
-
-> [!NOTE]
-> Defender for Containers support for Arc-enabled Kubernetes clusters (AWS EKS and GCP GKE) is a preview feature.
+- **An unmanaged Kubernetes distribution** using Azure Arc-enabled Kubernetes (Preview) - Cloud Native Computing Foundation (CNCF) certified Kubernetes clusters hosted on-premises or on IaaS.
 
 To protect your Kubernetes containers, Defender for Containers receives and analyzes:
 

@@ -104,6 +104,20 @@ For EKS clusters, Defender uses Azure Arc–enabled Kubernetes to deploy the Def
    - **Microsoft Defender for Containers** status is **Succeeded**
    - **Azure Policy for Kubernetes** status is **Succeeded** (if enabled)
 
+## Manage the Defender extension from the Arc-enabled Kubernetes resource (optional)
+
+You can also inspect and manage the Defender for Containers extension directly from the Azure Arc-enabled Kubernetes resource:
+
+1. In the Azure portal, open **Azure Arc**.
+
+1. Select **Kubernetes clusters**, then select your cluster.
+
+1. Select **Extensions**.
+
+1. Verify that **Microsoft Defender for Containers** shows **Succeeded**.
+
+1. Select the extension to view its status and configuration.
+
 ---
 
 # [Google Kubernetes Engine (GKE)](#tab/gke)
@@ -149,6 +163,20 @@ For GKE clusters, Defender uses Azure Arc–enabled Kubernetes to deploy the Def
    - **Microsoft Defender for Containers** status is **Succeeded**
    - **Azure Policy for Kubernetes** status is **Succeeded** (if enabled)
 
+## Manage the Defender extension from the Arc-enabled Kubernetes resource (optional)
+
+You can also inspect and manage the Defender for Containers extension directly from the Azure Arc-enabled Kubernetes resource:
+
+1. In the Azure portal, open **Azure Arc**.
+
+1. Select **Kubernetes clusters**, then select your cluster.
+
+1. Select **Extensions**.
+
+1. Verify that **Microsoft Defender for Containers** shows **Succeeded**.
+
+1. Select the extension to view its status and configuration.
+
 # [Arc-enabled Kubernetes](#tab/arc)
 
 For Kubernetes clusters connected to Azure using Azure Arc that aren’t running in Azure Kubernetes Service (AKS), Amazon EKS, or Google Kubernetes Engine (GKE), Defender for Cloud deploys components as Azure Arc Kubernetes extensions when you remediate security recommendations.
@@ -191,6 +219,20 @@ For Kubernetes clusters connected to Azure using Azure Arc that aren’t running
 
    - **Microsoft Defender for Containers** status is **Succeeded**
    - **Azure Policy for Kubernetes** status is **Succeeded** (if enabled)
+
+## Manage the Defender extension from the Arc-enabled Kubernetes resource (optional)
+
+You can also inspect and manage the Defender for Containers extension directly from the Azure Arc-enabled Kubernetes resource:
+
+1. In the Azure portal, open **Azure Arc**.
+
+1. Select **Kubernetes clusters**, then select your cluster.
+
+1. Select **Extensions**.
+
+1. Verify that **Microsoft Defender for Containers** shows **Succeeded**.
+
+1. Select the extension to view its status and configuration.
 
 ---
 
