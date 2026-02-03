@@ -100,7 +100,7 @@ For more information on UEBA tables, see [UEBA enrichments reference](ueba-refer
 
 ### UEBA scoring
 
-Microsoft Sentinel's UEBA provides two distinct scoring mechanisms to help security teams prioritize investigations and detect anomalies effectively:
+Microsoft Sentinel's UEBA provides two scores to help security teams prioritize investigations and detect anomalies effectively:
 
 | Aspect | Investigation priority score | Anomaly score |
 |--------|------------------------------|---------------|
@@ -113,15 +113,10 @@ Microsoft Sentinel's UEBA provides two distinct scoring mechanisms to help secur
 | **Processing** | Near real-time, event-level | Batch processing, behavior-level |
 | **Trade-offs** | Profile-based; may be less precise but enables quick triage | More precise but requires batch processing; higher latency |
 
-
-### Example scenario
-
-A user performs an Azure operation for the first time:
+For example, when a user performs an Azure operation for the first time:
 
 - **Investigation priority score:** High, because it's a first-time event.
 - **Anomaly score:** Low, because occasional first-time Azure actions are common and not inherently risky.
-
-### Correlation
 
 While these scores serve different purposes, you can expect some correlation. High anomaly scores often align with high investigation priority, but not always. Each score provides unique insight for layered detection.
 
