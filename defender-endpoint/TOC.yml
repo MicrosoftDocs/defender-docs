@@ -159,26 +159,26 @@
           - name: Onboard previous versions of Windows
             href: onboard-downlevel.md
 
-          - name: Onboard server devices
-            items:
-            - name: Onboard servers through Defender for Endpoint's experience
-              href: onboard-server.md
-            - name: Onboard Windows devices using Configuration Manager
-              href: configure-endpoints-sccm.md
-            - name: Onboard Windows devices using Group Policy
-              href: configure-endpoints-gp.md
-            - name: Onboard Windows devices using a local script
-              href: configure-endpoints-script.md
-            - name: Onboard non-persistent virtual desktop infrastructure (VDI) devices
-              href: configure-endpoints-vdi.md
-            - name: Direct onboarding with Defender for Cloud
-              href: /azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
-            - name: Defender for Endpoint on Windows Server with SAP
-              href: mde-sap-windows-server.md
-            - name: Deployment guidance for Defender for Endpoint on Linux for SAP
-              href: mde-linux-deployment-on-sap.md
-            - name: Use custom detection rules to protect SAPXPG
-              href: mde-sap-custom-detection-rules.md
+        - name: Onboard server devices
+          items:
+          - name: Onboard servers through Defender for Endpoint's experience
+            href: onboard-server.md
+          - name: Onboard Windows devices using Configuration Manager
+            href: configure-endpoints-sccm.md
+          - name: Onboard Windows devices using Group Policy
+            href: configure-endpoints-gp.md
+          - name: Onboard Windows devices using a local script
+            href: configure-endpoints-script.md
+          - name: Onboard non-persistent virtual desktop infrastructure (VDI) devices
+            href: configure-endpoints-vdi.md
+          - name: Direct onboarding with Defender for Cloud
+            href: /azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
+          - name: Defender for Endpoint on Windows Server with SAP
+            href: mde-sap-windows-server.md
+          - name: Deployment guidance for Defender for Endpoint on Linux for SAP
+            href: mde-linux-deployment-on-sap.md
+          - name: Use custom detection rules to protect SAPXPG
+            href: mde-sap-custom-detection-rules.md
 
       - name: Defender for Endpoint on macOS
         items:
