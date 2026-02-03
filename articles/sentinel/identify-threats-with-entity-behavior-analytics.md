@@ -86,7 +86,7 @@ UEBA provides two scores to help security teams prioritize investigations and de
 |--------|------------------------------|---------------|
 | **Table** | `BehaviorAnalytics` | `Anomalies` |
 | **Field** | `InvestigationPriority` | `AnomalyScore` |
-| **Range** | 0–10 (0 = benign, 10 = highly anomalous) | 0–1 (0 = benign, 1 = highly anomalous) |
+| **Range** | 0–10<br>(0 = benign, 10 = highly anomalous) | 0–1<br>(0 = benign, 1 = highly anomalous) |
 | **Indicator of** | How unusual a single event is, based on profile-driven logic | Holistic anomalous behavior across multiple events using machine learning |
 | **Used for** | Quick triage and drilling into single events | Identifying patterns and aggregated anomalies over time |
 | **How it's calculated** | Combines **Entity Anomaly Score** (rarity of entities like user, device, country) with **Time Series Score** (abnormal patterns over time, such as spikes in failed sign-ins). | AI/ML anomaly detector trained on your workspace's telemetry |
