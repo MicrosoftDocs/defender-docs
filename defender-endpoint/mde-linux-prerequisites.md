@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: article
 ms.subservice: linux
 search.appverid: met150
-ms.date: 01/23/2025
+ms.date: 02/03/2026
 ---
 
 # Prerequisites for Microsoft Defender for Endpoint on Linux
