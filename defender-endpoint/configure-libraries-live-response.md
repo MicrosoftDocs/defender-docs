@@ -31,7 +31,7 @@ For more information about live response, see [Investigate entities on devices u
 
 The **Library management** page shows a list of files used during live response sessions on your endpoints.
 
-:::image type="content" source="media/configure-libraries-live-response/library-management-view-analyze-files.png" alt-text="Library management page - view details for a file":::
+:::image type="content" source="media/configure-libraries-live-response/library-management-view-all-files.png" alt-text="Library management page - view details for a file":::
 
 To view the list of files available for live response:
 
@@ -66,7 +66,7 @@ To add a new file for live response:
 
 To view a file's details, right-click the file and select **View details**. A detailed pane opens, displaying information about the file, including its parameters and usage history.
 
-:::image type="content" source="media/configure-libraries-live-response/library-management-view-all-files.png" alt-text="Library management page - main view":::
+:::image type="content" source="media/configure-libraries-live-response/library-management-file-details.png" alt-text="Library management page - main view":::
 
 ## View and analyze files
 
