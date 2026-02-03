@@ -1051,7 +1051,7 @@
         - name: Remediate EDR solutions (agentless)
           displayName: defender for endpoint, endpoint, edr
           href: endpoint-detection-response-solution-recommendations.md   
-        - name: Remediate Defender for Endpoint misconfigurations
+        - name: Investigate Defender for Endpoint misconfigurations
           href: endpoint-detection-misconfiguration.md
         - name: Remediate machine vulnerabilities
           displayName: qualys, va, rapid7, vulnerability
