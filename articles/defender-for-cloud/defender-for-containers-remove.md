@@ -67,13 +67,13 @@ az aks disable-addons \
 
 ## Verify removal
 
-### Check component removal
+### Check AKS cluster pods
 
 ```bash
-kubectl get pods -n kube-system -l app=microsoft-defender
+kubectl get pods -n mdc
 ```
 
-No resources should be returned after successful removal.
+No resources should be returned.
 
 ### Verify plan status
 
@@ -178,7 +178,7 @@ Remove these resources only if runtime threat protection for EKS was enabled and
 
 ## Verify removal
 
-### Check Azure resources
+### Check Azure Arc extensions
 
 ```azurecli
 az k8s-extension list \
@@ -187,10 +187,12 @@ az k8s-extension list \
   --resource-group <resource-group>
 ```
 
-### Check EKS clusters
+Confirm that `microsoft.azuredefender.kubernetes` is not listed.
+
+### Check EKS cluster pods
 
 ```bash
-kubectl get pods -n kube-system -l app=microsoft-defender
+kubectl get pods -n mdc
 ```
 
 No resources should be returned.
@@ -277,15 +279,26 @@ Remove these resources only if runtime threat protection for GKE was enabled and
 
 ## Verify removal
 
-### Check GKE cluster
+### Check Azure Arc extensions
+
+```azurecli
+az k8s-extension list \
+  --cluster-type connectedClusters \
+  --cluster-name <cluster-name> \
+  --resource-group <resource-group>
+```
+
+Confirm that `microsoft.azuredefender.kubernetes` is not listed.
+
+### Check GKE cluster pods
 
 ```bash
-kubectl get pods -n kube-system -l app=microsoft-defender
+kubectl get pods -n mdc
 ```
 
 No resources should be returned.
 
-## Check Azure portal
+### Check Azure portal
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -359,7 +372,7 @@ az connectedk8s delete \
 
 ## Verify removal
 
-### Check Azure resources
+### Check Azure Arc extensions
 
 ```azurecli
 az k8s-extension list \
@@ -368,12 +381,13 @@ az k8s-extension list \
   --resource-group <resource-group>
 ```
 
-### Check cluster pods
+Confirm that `microsoft.azuredefender.kubernetes` is not listed.
+
+### Check Arc-enabled cluster pods
 
 ```bash
-kubectl get pods -n kube-system -l app=microsoft-defender
+kubectl get pods -n mdc
 ```
-
 
 No resources should be returned.
 

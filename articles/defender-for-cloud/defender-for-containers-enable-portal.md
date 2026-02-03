@@ -33,17 +33,28 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 
 1. Toggle **On** or **Off** the relevant Defender for Containers components:
 
-    - **Agentless scanning for machines**?
-    - **Defender sensor**?
-    - **Azure Policy**?
-    - **Kubernetes API access**?
-    - **Registry access**?
+    - **Agentless scanning for machines**  
+      Performs agentless vulnerability and secret scanning on Kubernetes nodes.
+    
+    - **Defender sensor**  
+      Deploys the Defender sensor to cluster nodes to collect runtime security telemetry used for threat detection.
+    
+    - **Azure Policy**  
+      Deploys the Azure Policy for Kubernetes add-on to enable Kubernetes security posture assessments and related security recommendations.
+    
+    - **Kubernetes API access**  
+      Allows Defender for Cloud to access the Kubernetes API for cluster inventory, configuration analysis, and capabilities that rely on Kubernetes metadata.
+    
+    - **Registry access**  
+      Enables agentless vulnerability assessment for container images stored in connected registries.
 
 1. Select **Continue**.
 
 1. Select **Save**.
 
 ## Verify the plan is enabled
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
@@ -68,7 +79,7 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 
 - One or more Amazon EKS clusters running Kubernetes version 1.19 or later.
 
-- Container images stored in Amazon ECR. -> check this too
+- Container images stored in Amazon ECR. (inbal B) 
 
 ## Enable the Defender for Containers plan
 
@@ -86,22 +97,31 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 
 1. Toggle **On** the relevant Defender for Containers components:
 
-    - **Agentless threat protection**
-        - If enabled, set the retention period for your audit logs
-    - **Auto provision Defender's sensor for Azure Arc**
-    - **Auto provision Azure Policy extension for Azure Arc**
-    - **Kubernetes API access**
-    - **Registry access**
-        - If enabled, optionally enable security fidings
+    - **Agentless threat protection**  
+      Collects Kubernetes control plane audit logs and analyzes them for control plane threat detections. Logs are routed through AWS services (such as CloudWatch, S3, Kinesis, and SQS).
+        - If enabled, set the audit log retention period (in days) to control how long control plane audit logs are stored.
+    
+    - **Auto provision Defender's sensor for Azure Arc**  
+      Deploys the Defender sensor as an Azure Arc Kubernetes extension. The sensor runs as a DaemonSet on cluster nodes and provides runtime threat detection based on node and workload telemetry.
+    
+    - **Auto provision Azure Policy extension for Azure Arc**  
+      Deploys the Azure Policy extension to the cluster to enable Kubernetes security posture assessments and related security recommendations.
+    
+    - **Kubernetes API access**  
+      Allows Defender for Cloud to access the Kubernetes API server for cluster inventory, configuration analysis, and capabilities that rely on Kubernetes metadata and state.
+    
+    - **Registry access**  
+      Enables agentless vulnerability assessment for container images stored in Amazon ECR.
+        - **Security findings:** Generates findings and links them to container images when new images are pushed or existing images are updated.
     
     > [!IMPORTANT]  
-    > Agentless discovery for Kubernetes, control plane threat detection, and registry access require additional AWS-side permissions and Kubernetes control plane access. If you enable any of these components, [configure the required AWS permissions](defender-for-containers-aws-permissions.md).
-
-1. Select **Continue**.
+    > Agentless discovery for Kubernetes, control plane threat detection, and registry access require [additional AWS-side permissions and Kubernetes control plane access](defender-for-containers-aws-permissions.md).
 
 1. Select **Save**.
 
 ## Verify the plan is enabled
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
@@ -143,23 +163,29 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 
 1. Toggle **On** the relevant Defender for Containers components:
 
-    - **Agentless threat protection**
-    - **Auto provision Defender's sensor for Azure Arc**
-        - If needed, enable Defender Security Gating
-    - **Auto provision Azure Policy extension for Azure Arc**
-    - **Kubernetes API access**
-    - **Registry access**
-        - If needed, enable security fidings
-
-1. Select **Continue**.
-
-1. Select **Next: Configure access**.
-
-1. Select **Next: Review and create**.
+    - **Agentless threat protection**  
+      Collects Kubernetes control plane audit logs and analyzes them for control plane threat detections. Logs are exported from GKE to your Google Cloud project.
+    
+    - **Auto provision Defender's sensor for Azure Arc**  
+      Deploys the Defender sensor as an Azure Arc Kubernetes extension. The sensor runs as a DaemonSet on cluster nodes and provides runtime threat detection based on node and workload telemetry.
+        - **Enable Defender Security Gating**  
+        Adds an admission control layer that evaluates deployments against security policies before workloads run in the cluster.
+    
+    - **Auto provision Azure Policy extension for Azure Arc**  
+      Deploys the Azure Policy extension to the cluster to enable Kubernetes security posture assessments and related security recommendations.
+    
+    - **Kubernetes API access**  
+      Allows Defender for Cloud to access the Kubernetes API server for cluster inventory, configuration analysis, and capabilities that rely on Kubernetes metadata and cluster state.
+    
+    - **Registry access**  
+      Enables agentless vulnerability assessment for container images stored in Google Container Registry (GCR) and Artifact Registry.
+        - **Security findings:** Generates findings and links them to container images when new images are pushed or existing images are updated.
 
 1. Select **Save**.
 
 ## Verify the plan is enabled
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
@@ -192,15 +218,15 @@ To enable Defender for Containers on an Azure Arc-enabled Kubernetes cluster, ma
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-2. Go to **Microsoft Defender for Cloud** > **Environment settings**.
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
-3. Select the **Azure subscription** that contains the Azure Arc–enabled Kubernetes cluster resource.
+1. Select the **Azure subscription** that contains the Azure Arc–enabled Kubernetes cluster resource.
 
-4. On the Defender plans page, find the **Containers** row and toggle the status to **On**.
+1. On the Defender plans page, find the **Containers** row and toggle the status to **On**.
 
-5. Select **Settings** in the Containers plan row.
+1. Select **Settings** in the Containers plan row.
 
-6. Toggle **On** the relevant Defender for Containers components:
+1. Toggle **On** the relevant Defender for Containers components:
 
     - **Agentless threat protection**
     - **Auto provision Defender's sensor for Azure Arc**
@@ -208,21 +234,21 @@ To enable Defender for Containers on an Azure Arc-enabled Kubernetes cluster, ma
     - **Kubernetes API access**
     - **Registry access**
 
-7. Select **Continue**.
-
-8. Select **Save**.
+1. Select **Save**.
 
 ## Verify the plan is enabled
 
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
-2. Select the relevant Azure subscription.
+1. Select the relevant Azure subscription.
 
-3. Verify that **Containers** is set to **On**.
+1. Verify that **Containers** is set to **On**.
 
-4. Go to **Microsoft Defender for Cloud** > **Recommendations**.
+1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
 
-5. Verify that recommendations for Arc-enabled Kubernetes clusters appear, such as:
+1. Verify that recommendations for Arc-enabled Kubernetes clusters appear, such as:
 
    - **Azure Arc-enabled Kubernetes clusters should have the Defender extension installed**
 

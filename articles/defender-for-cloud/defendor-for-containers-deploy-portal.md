@@ -123,7 +123,7 @@ For GKE clusters, Defender uses Azure Arc–enabled Kubernetes to deploy the Def
 
 ## Prerequisites
 
-- [Defender for Containers enabled on your GCP connector](defender-for-containers-enable-portal.md?tab=eks). 
+- [Defender for Containers enabled on your GCP connector](defender-for-containers-enable-portal.md?tab=gke). 
 
 ## Network requirements
 
