@@ -55,6 +55,9 @@ Beginning with Windows 10, version 1703 and later, Microsoft Defender Antivirus 
 
 :::image type="content" source="/defender/media/wdav-wdsc-defs.png" alt-text="Security intelligence version number" lightbox="/defender/media/wdav-wdsc-defs.png":::
 
+> [!NOTE]
+> The *security intelligence version* shown in the Windows Security app is the same as what was previously referred to as the *definition version* of Microsoft Defender Antivirus.
+
 1. Open the Windows Security app by searching the start menu for *Security*, and then selecting **Windows Security**.
 
 1. Select the **Virus & threat protection** tile (or the shield icon on the left menu bar).
