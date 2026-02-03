@@ -39,6 +39,7 @@ The Cloud Overview dashboard is the landing page for Microsoft Defender for Clou
 
 You can access the Cloud Overview dashboard from the left navigation bar in the Microsoft Defender portal:
 
+1. Sign in to the [Defender portal](https://security.microsoft.com).
 1. Navigate to **Cloud security** > **Overview**
 
 ## Top controls
@@ -86,7 +87,7 @@ Track how your security posture and threat detection evolve.
 
 :::image type="content" source="media/defender-portal-dashboard/security-posture.png" alt-text="Screenshot of cloud overview dashboard security posture trends.":::
 
-**Threat Detection**: View alert trends by severity.
+**Threat Detection**: View security alert trends by severity.
 
 :::image type="content" source="media/defender-portal-dashboard/threat-detection.png" alt-text="Screenshot of cloud overview dashboard threat detection trends.":::
 
@@ -98,10 +99,11 @@ Each tile in this section surfaces insights from Microsoft’s CNAPP (Cloud-Nati
 
 Workloads include:
 
-- Virtual Machines (VMs)
-- Containers
-- APIs
+- Compute (including Virtual Machines)
 - Data
+- Containers
+- AI
+- APIs
 - DevOps
 - CIEM
 
