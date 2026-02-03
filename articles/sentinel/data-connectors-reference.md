@@ -57,7 +57,14 @@ Filter and ingest logs in text-file format from network or security applications
 - [Custom Logs via AMA data connector - Configure data ingestion to Microsoft Sentinel from specific applications](/azure/sentinel/unified-connector-custom-device)
 
 
-[comment]: <> (DataConnector includes end)
+##  Sentinel data connectors
+
+> [!NOTE]
+> The following table lists the data connectors that are available in the Microsoft Sentinel Content hub. The connectors are supported by the product vendor. For support, see the **Supported by** link.
+
+> [!TIP]
+> For a list of tables ingested into Microsoft Sentinel and the connectors that ingest them, see [Microsoft Sentinel tables and associated connectors](sentinel-tables-connectors-reference).
+
 
 [!INCLUDE [connector-details](includes/connector-details.md)]
 
