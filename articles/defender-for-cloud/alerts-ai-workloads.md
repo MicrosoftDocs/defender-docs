@@ -198,7 +198,6 @@ This article lists the security alerts you might get for AI from Microsoft Defen
 ## Alerts for AI agents
 
 > [!NOTE]
-> *Threat protection for Microsoft Foundry agents is currently free of charge and does not consume tokens. However, pricing and usage terms may change at any time.* 
 
 ### (Preview) A Jailbreak attempt on your Azure AI agent was detected by Prompt Shields 
 
