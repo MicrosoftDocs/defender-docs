@@ -9,7 +9,7 @@ ms.author: elkrieger
 author: Elazark
 ---
 
-# Alerts for AI
+# Alerts for AI services
 
 This article lists the security alerts you might get for AI from Microsoft Defender for Cloud and any Microsoft Defender plans you enabled. The alerts shown in your environment depend on the resources and services you're protecting, and your customized configuration. 
 
@@ -23,7 +23,7 @@ This article lists the security alerts you might get for AI from Microsoft Defen
 > [!NOTE]
 > For alerts that are in preview: [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)]
 
-## Alerts for AI
+## Alerts for AI applications
 
 ### Detected credential theft attempts on an Azure AI model deployment
 
