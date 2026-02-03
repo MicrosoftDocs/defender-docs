@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Defender XDR
 ---
 
-# Enable attack disruption actions in Okta
+# Enable attack disruption actions in Okta (preview)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -30,34 +30,19 @@ Before you begin, make sure the following prerequisites are met:
 
 ### Okta requirements
 
-- **Okta license**: Your Okta environment must have one of the following licenses:
-  - Developer
-  - Enterprise
-
-- **Okta roles**: The API key has the same permissions as the user that generates it, so you need to have admin or super admin permissions to create the API token.
+You have an Okta account with admin privileges and a developer or enterprise license.
 
 ### Microsoft requirements
 
-- **Subscription**: One of the following subscriptions:
-  - Microsoft Defender XDR
-  - Microsoft Sentinel
-  - Microsoft Defender for Identity
-
-- **Microsoft Entra or Defender XDR roles**: Your account must have one of the following access configurations assigned to configure the Okta connector:
-  - **Microsoft Entra roles**: Security Operator or Security Admin
-  - **Defender XDR Unified RBAC permission**: Core security settings (manage)
-
-- **Roles for remediation actions**: To perform remediation actions on Okta identities, you need a custom role with **Response (manage)** permissions, or one of the following Microsoft Entra roles:
-  - Security Operator
-  - Security Administrator
-  - Global Administrator
+- Your Microsoft Sentinel analytic workspace is connected to the unified security operations portal
+- The Okta connector for Microsoft Sentinel is deployed and enabled. During public preview, only the Okta single sign-in connector is supported.
 
 ## Step 1: Create the Okta integration
 
-To create the integration, need to extract two values from your Okta configuration:
+To create the integration from an Okta account with admin privileges, follow these steps:
 
-- [Okta domain](https://developer.okta.com/docs/guides/find-your-domain/main/#find-your-okta-domain)
-- [Okta API key](https://help.okta.com/en-us/content/topics/security/api.htm#create-okta-api-token)
+1. [Find your Okta domain](https://developer.okta.com/docs/guides/find-your-domain/main/#find-your-okta-domain)
+1. [Create an Okta API key](https://help.okta.com/en-us/content/topics/security/api.htm#create-okta-api-token)
 
   - Provide a friendly name for your token
   - Make sure to keep the generated token value to be used later when creating the integration.
