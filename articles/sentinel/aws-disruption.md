@@ -10,11 +10,11 @@ ms.topic: how-to
 
 # Enable attack disruption actions on AWS with Microsoft Sentinel (preview)
 
-This article describes how to configure your AWS environment so that Microsoft Sentinel can take automated actions on a user that assumes a SAML role, or on an AWS IAM account when an alert is triggered. Attack disruption uses high-confidence signals to contain compromised assets and limit the impact of attacks, including actions on identities in AWS.
+This article describes how to configure your AWS environment so that Microsoft Sentinel can take automated actions on a user that assumes a SAML role, or on an AWS IAM account when an alert is triggered. Attack disruption uses high-confidence signals to contain compromised assets and limit the damage from attacks, including actions on identities in AWS.
 
 ## Prerequisites
 
-Before you begin, ensure the following:
+Before you begin, you need the following prerequisites in place:
 
 - You have an active AWS account with administrative privileges.
 - Your Microsoft Sentinel analytic workspace is connected to the unified security operations portal.
@@ -29,7 +29,7 @@ Before you begin, ensure the following:
 
 1. [Create a new IAM role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html) in the AWS Management Console.
 
-- Select **AWS service** as the trusted entity and choose **EC2** (you'll update the trust relationship later).
+- Select **AWS service** as the trusted entity and choose **EC2** (you'll update the trust relationship [next](#12-configure-trust-relationship)).
 
 - Attach the following policy to the role (replace \<YOUR_ACCOUNT_ID\> as needed):
 
