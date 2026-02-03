@@ -24,7 +24,6 @@ Features released earlier than nine months ago are described in the [What's new 
 
 |Service area  |Updates  |
 |---------|---------|
-| **OT networks** | Sensor version 25.2.2 is now available. See [release details and updates](release-notes.md#version-2522). |
 | **OT networks** | - [New sensor health message - NTP server not configured](sensor-health-messages.md) |
 
 ## December 2025
