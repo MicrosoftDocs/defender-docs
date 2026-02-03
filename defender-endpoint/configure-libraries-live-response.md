@@ -21,13 +21,17 @@ appliesto:
 
 # Configure the live response library in Microsoft Defender for Endpoint
 
-The **Library management** page in the Microsoft Defender portal allows you to manage files used during live response sessions on your endpoints. You can also add, view, and delete files in the library, instead of uploading them during a live response session.
+The **Library management** page in the Microsoft Defender portal allows you to manage files used during Microsoft Defender for Endpoint live response sessions. You can also add, view, and delete files in the library, instead of uploading them during a live response session.
 
 This article describes how to view, add, and manage libraries for live response.
 
 For more information about live response, see [Investigate entities on devices using live response](live-response.md).
 
 ## View the list of files
+
+The **Library management** page shows a list of files used during live response sessions on your endpoints.
+
+:::image type="content" source="media/configure-libraries-live-response/library-management-view-analyze-files.png" alt-text="Library management page - view details for a file":::
 
 To view the list of files available for live response:
 
@@ -82,7 +86,7 @@ The following options are available for managing existing files in the library:
 | **Upload** | [Upload a new file](#upload-files) or an updated version of an existing file. | Top menu |
 | **Refresh** | Refresh the list of files to see the most up-to-date information. | Top menu |
 | **View details** | [View detailed information](#view-and-analyze-files) about a selected file.  | Top menu, right-click menu |
-| **View file** | [View and analyze a file](#view-and-analyze-files). | Top menu, right-click menu |
+| **View file** | [View the file's contents](#view-and-analyze-files). | Top menu, right-click menu |
 | **Analyze** | [Analyze a file](#view-and-analyze-files) to get a description of the actions the script takes. | View file window |
 | **Download** | Download a selected file to your local device. | Top menu, right-click menu, view file window |
 | **Delete** | Remove a selected file from the list. | Top menu, right-click menu |
