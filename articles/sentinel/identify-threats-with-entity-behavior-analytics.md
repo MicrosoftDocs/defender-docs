@@ -93,9 +93,9 @@ UEBA provides two scores to help security teams prioritize investigations and de
 | **Range** | 0–10<br>(0 = benign, 10 = highly anomalous) | 0–1<br>(0 = benign, 1 = highly anomalous) |
 | **Indicator of** | How unusual a single event is, based on profile-driven logic | Holistic anomalous behavior across multiple events using machine learning |
 | **Used for** | Quick triage and drilling into single events | Identifying patterns and aggregated anomalies over time |
-| **How it's calculated** | Combines **Entity Anomaly Score** (rarity of entities like user, device, country) with **Time Series Score** (abnormal patterns over time, such as spikes in failed sign-ins). | AI/ML anomaly detector trained on your workspace's telemetry |
 | **Processing** | Near real-time, event-level | Batch processing, behavior-level |
-| **Trade-offs** | Profile-based; may be less precise but enables quick triage | More precise but requires batch processing; higher latency |
+| **How it's calculated** | Combines **Entity Anomaly Score** (rarity of entities like user, device, country) with **Time Series Score** (abnormal patterns over time, such as spikes in failed sign-ins). | AI/ML anomaly detector trained on your workspace's telemetry |
+
 
 For example, when a user performs an Azure operation for the first time:
 
