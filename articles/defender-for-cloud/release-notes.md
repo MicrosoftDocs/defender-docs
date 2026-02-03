@@ -33,7 +33,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | -------- | -------- | -------- |
 |February 3, 2026| Preview |[Threat protection for AI agents (Preview)]()|
 
-## Threat protection for AI agents (Preview)
+### Threat protection for AI agents (Preview)
 
 February 2, 2026 
 
