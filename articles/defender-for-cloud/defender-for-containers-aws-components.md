@@ -1,27 +1,21 @@
 ---
-title: Configure AWS requirements for Defender for Containers
-description: Learn how to configure required AWS settings after enabling Microsoft Defender for Containers on your AWS connector so Defender for Cloud can collect Kubernetes, registry, and control plane security data.
+title: Configure AWS settings for Defender for Containers components
+description: Learn how to configure required AWS settings for Microsoft Defender for Containers components, including control plane access, audit logging, and registry scanning.
 ms.topic: how-to
 ms.date: 02/01/2026
 ms.author: elkrieger
 author: Elazark
 ---
 
-# Configure AWS requirements for Defender for Containers
+# Configure AWS settings for Defender for Containers components
 
-After you [enable Microsoft Defender for Containers on your AWS connector](defender-for-containers-enable-portal.md?tab=eks) in Microsoft Defender for Cloud, you must configure the following AWS-side settings so Defender for Cloud can collect the required data.
+Some Microsoft Defender for Containers components depend on AWS configuration outside of Microsoft Defender for Cloud. After you [enable the Containers plan on your AWS connector](defender-for-containers-enable-portal.md?tab=eks), configure the relevant AWS settings so Defender for Cloud can collect the data required for those components.
 
-## Configure ECR vulnerability scanning
+This configuration is relevant if you enabled one or more of the following Defender for Containers components:
 
-**Required if you enabled:** Registry access
-
-1. Go to your **AWS connector** settings in Microsoft Defender for Cloud.
-
-2. Select **Configure** next to the **Containers** plan.
-
-3. Verify **Registry access** is enabled.
-
-4. Images pushed to **Amazon ECR** are automatically scanned within 24 hours.
+- Agentless threat protection
+- Kubernetes API access
+- Registry access
 
 ## Enable audit logging
 
@@ -66,3 +60,18 @@ eksctl create iamidentitymapping \
   --group system:masters \
   --no-duplicate-arns
 ```
+## Configure ECR vulnerability scanning
+
+**Required if you enabled:** Registry access
+
+1. Go to your **AWS connector** settings in Microsoft Defender for Cloud.
+
+1. Select **Configure** next to the **Containers** plan.
+
+1. Verify **Registry access** is enabled.
+
+1. Images pushed to **Amazon ECR** are automatically scanned within 24 hours.
+
+## Related content
+
+- [Enable Defender for Containers in Microsoft Defender for Cloud](defender-for-containers-enable-portal.md)

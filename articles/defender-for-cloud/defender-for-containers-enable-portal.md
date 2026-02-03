@@ -110,8 +110,7 @@ This article explains how to enable the Microsoft Defender for Containers plan i
     - **Kubernetes API access**  
       Allows Defender for Cloud to access the Kubernetes API server for cluster inventory, configuration analysis, and capabilities that rely on Kubernetes metadata and state.
     
-    - **Registry access**  
-      Enables agentless vulnerability assessment for container images stored in Amazon ECR.
+    - **Registry access** — Enables agentless vulnerability assessment for container images in Amazon ECR. Images pushed to ECR are scanned automatically (typically within 24 hours).
         - **Security findings:** Generates findings and links them to container images when new images are pushed or existing images are updated.
     
     > [!IMPORTANT]  

@@ -106,7 +106,7 @@ The output should show `enabled: true`.
 
 - The EKS cluster is [connected to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
 
-- [Review and, if needed, configure required AWS permissions and control plane access for Defender for Containers capabilities](defender-for-containers-aws-permissions.md).
+- If you have enabled agentless discovery for Kubernetes, control plane threat detection, or registry access, [configure the required AWS settings](defender-for-containers-aws-components.md).
 
 ## Network requirements
 

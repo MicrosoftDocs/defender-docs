@@ -64,7 +64,7 @@ For EKS clusters, Defender uses Azure Arc–enabled Kubernetes to deploy the Def
 
 - [Defender for Containers enabled on your AWS connector](defender-for-containers-enable-portal.md?tab=eks). 
 
-- [Review and, if needed, configure required AWS permissions and control plane access for Defender for Containers capabilities](defender-for-containers-aws-permissions.md).
+- If you have enabled agentless discovery for Kubernetes, control plane threat detection, or registry access, [configure the required AWS settings](defender-for-containers-aws-components.md).
 
 ## Network requirements
 
