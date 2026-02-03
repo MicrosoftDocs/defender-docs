@@ -19,24 +19,24 @@ ms.custom: sfi-image-nochange
 
 [!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
 
+Detecting anomalous behavior within an organization is often complex and time-consuming. Microsoft Sentinel's User and Entity Behavior Analytics (UEBA) simplifies this challenge by continuously learning from your data to surface meaningful anomalies that help analysts detect and investigate potential threats more effectively.
+
 This article explains what Microsoft Sentinel User and Entity Behavior Analytics (UEBA) is, how it works, how to onboard to it, and how to use UEBA to detect and investigate anomalies to enhance your threat detection capabilities.
 
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 
-## What is UEBA?
+## How UEBA works
 
-User and Entity Behavior Analytics in Microsoft Sentinel uses machine learning to build dynamic behavioral profiles for users, hosts, IP addresses, applications, and other entities. It detects anomalies by comparing current activity to established baselines, helping security teams identify threats such as compromised accounts, insider attacks, and lateral movement. UEBA is natively integrated into Microsoft Sentinel and the Microsoft Defender portal, providing a seamless experience for security operations teams.
+Microsoft Sentinel UEBA uses machine learning to build dynamic behavioral profiles for users, hosts, IP addresses, applications, and other entities. It detects anomalies by comparing current activity to established baselines, helping security teams identify threats such as **compromised accounts**, **insider attacks**, and **lateral movement**. 
 
-## Why is UEBA important?
+Microsoft Sentinel ingests data from connected sources, applies behavioral modeling to detect deviations, and uses peer group analysis and blast radius evaluation to assess the impact. UEBA assigns risk scores to anomalous behaviors and entities based on severity and context, which enables faster, smarter threat detection and response.
 
-Detecting anomalous behavior within an organization is often complex and time-consuming. Microsoft Sentinel's User and Entity Behavior Analytics (UEBA) simplifies this challenge by using machine learning to build dynamic behavioral baselines and peer comparisons across your environment. Rather than just collecting logs, UEBA continuously learns from your data to surface meaningful anomalies that help analysts detect and investigate potential threats more effectively.
-
-Traditional security tools rely on static rules and signatures, which can miss subtle or emerging threats. UEBA addresses this gap by identifying unknown risks, reducing alert fatigue, and providing rich context by correlating activity across users, devices, and locations. Sentinel ingests data from connected sources, applies behavioral modeling to detect deviations, and uses peer group analysis and blast radius evaluation to assess the impact. UEBA assigns risk scores to anomalous behaviors and entities based on severity and context, which enables faster, smarter threat detection and response.
+UEBA is natively integrated into Microsoft Sentinel and the Microsoft Defender portal, providing a seamless experience for security operations teams and embedded experiences that enhance threat investigation and response.
 
 >[!NOTE]
 > UEBA is a probabilistic, behavior‑based capability. It highlights anomalous activity and risk rather than generating deterministic alerts.
 
-The following diagram illustrates how UEBA processes data from connected sources to detect anomalies and assign risk scores:
+This diagram shows how UEBA processes data from connected sources to detect anomalies and assign risk scores:
 
 :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-architecture.png" alt-text="Diagram showing UEBA architecture, illustrating how data flows from connected sources through behavioral modeling to produce risk scores." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-architecture.png":::
 
