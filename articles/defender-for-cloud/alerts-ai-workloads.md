@@ -9,9 +9,9 @@ ms.author: elkrieger
 author: Elazark
 ---
 
-# Alerts for AI services
+# Alerts for AI
 
-This article lists the security alerts you might get for AI services from Microsoft Defender for Cloud and any Microsoft Defender plans you enabled. The alerts shown in your environment depend on the resources and services you're protecting, and your customized configuration. 
+This article lists the security alerts you might get for AI from Microsoft Defender for Cloud and any Microsoft Defender plans you enabled. The alerts shown in your environment depend on the resources and services you're protecting, and your customized configuration. 
 
 [Learn how to respond to these alerts](manage-respond-alerts.md).
 
@@ -23,7 +23,7 @@ This article lists the security alerts you might get for AI services from Micros
 > [!NOTE]
 > For alerts that are in preview: [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)]
 
-## AI services alerts
+## Alerts for AI
 
 ### Detected credential theft attempts on an Azure AI model deployment
 
@@ -194,6 +194,129 @@ This article lists the security alerts you might get for AI services from Micros
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Reconnaissance
 
 **Severity**: Low
+
+## Alerts for AI agents
+
+
+### (Preview) A Jailbreak attempt on your Azure AI agent was detected by Prompt Shields 
+
+(AI.Azure_Agentic_Jailbreak) 
+
+**Description**: The Jailbreak alert, carried out using a direct prompt injection technique, is designed to notify the SOC there was an attempt to manipulate the system prompt to bypass the generative AI’s safeguards, potentially accessing sensitive data or privileged functions. It indicated that such attempts were detected by Azure Responsible AI Content Safety (also known as Prompt Shields) but weren't blocked due to content filtering settings or due to low confidence. 
+
+**[MITRE tactics](/azure/defender-for-cloud/alerts-reference)**: Privilege Escalation, Defense Evasion 
+
+**Severity**: Medium 
+
+### (Preview) A Jailbreak attempt on your Azure AI agent was blocked by Prompt Shields 
+
+(Azure_Agentic_BlockedJailbreak) 
+
+**Description**: The Jailbreak alert, carried out using a direct prompt injection technique, is designed to notify the SOC there was an attempt to manipulate the system prompt to bypass the generative AI’s safeguards, potentially accessing sensitive data or privileged functions. It indicated that such attempts were blocked by Azure Responsible AI Content Safety (also known as Prompt Shields), ensuring the integrity of the AI resources and the data security. 
+
+**[MITRE tactics](/azure/defender-for-cloud/alerts-reference)**: Privilege Escalation, Defense Evasion 
+
+**Severity**: Medium 
+
+### (Preview) An ASCII smuggling attempt was detected on an AI agent
+
+(AI.Azure_Agentic_ASCIISmuggling) 
+
+**Description**: ASCII smuggling technique allows an attacker to send invisible instructions to an AI model. These attacks are commonly attributed to indirect prompt injections, where the malicious threat actor is passing hidden instructions to bypass the application and model guardrails. These attacks are usually applied without the user's knowledge given their lack of visibility in the text and can compromise the application tools or connected data sets. 
+
+**[MITRE tactics](/azure/defender-for-cloud/alerts-reference)**: Impact 
+
+**Severity**: High 
+
+### (Preview) A user phishing attempt was detected on an AI agent 
+
+(AI.Azure_Agentic_MaliciousUrl.UserPrompt) 
+
+**Description**: This alert indicates a URL used for phishing attack was sent by a user to an AI agent. The content typically lures visitors into entering their corporate credentials or financial information into a legitimate looking website. Sending this to an AI agent might be for the purpose of corrupting it, poisoning the data sources it has access to, or gaining access to employees or other customers via the agent tools. 
+
+**[MITRE tactics](/azure/defender-for-cloud/alerts-reference)**: Collection 
+
+**Severity**: High 
+
+### (Preview) A suspicious IP access was detected on an AI agent 
+
+(AI.Azure_Agentic_AccessFromSuspiciousIP) 
+
+**Description**: An IP address accessing one of your AI agents was identified by Microsoft Threat Intelligence as having a high probability of being a threat. While observing malicious Internet traffic, this IP came up as involved in attacking other online targets. 
+
+[MITRE tactics](/azure/defender-for-cloud/alerts-reference): Execution 
+
+Severity: High 
+
+### (Preview) An anonymized IP access was detected on an AI agent
+
+(AI.Azure_Agentic_AccessFromAnonymizedIP) 
+
+**Description**: An IP address from the Tor network accessed by one of the AI agents. Tor is a network that allows people to access the Internet while keeping their real IP hidden. Though there are legitimate uses, it is frequently used by attackers to hide their identity when they target people's systems online. 
+
+**[MITRE tactics](/azure/defender-for-cloud/alerts-reference)**: Execution 
+
+**Severity**: High 
+
+### (Preview) A suspicious user-agent access was detected on an AI agent
+
+(AI.Azure_Agentic_AccessFromSuspiciousUserAgent) 
+
+**Description**: The user agent of a request accessing one of your AI agents contained anomalous values indicative of an attempt to abuse or manipulate the agent. The suspicious user agent in question has been mapped by Microsoft threat intelligence as suspected of malicious intent and hence your resources were likely compromised. 
+
+**[MITRE tactics](/azure/defender-for-cloud/alerts-reference)**: Execution, Reconnaissance, Initial access 
+
+**Severity**: Medium 
+
+### (Preview) A malicious URL detected in AI agent response 
+
+(AI.Azure_Agentic_MaliciousUrl.ModelResponse) 
+
+**Description**: This alert indicates a corruption of an AI agent developed by the organization, as it has actively shared a known malicious URL used for phishing with a user. The URL originated within the agent itself, the AI model, the tools, or the data the agent can access. 
+
+**[MITRE tactics](/azure/defender-for-cloud/alerts-reference)**: Impact (Defacement)  
+
+**Severity**: High 
+
+### (Preview) A malicious URL was detected in an AI agent’s tool response 
+
+(AI.Azure_Agentic_MaliciousUrl.ToolOutput) 
+
+**Description**: This alert indicates a corruption of an AI agent developed by the organization, as it has actively shared a known malicious URL used for phishing with a user. The URL originated within the tools the agent can access. 
+
+**[MITRE tactics](/azure/defender-for-cloud/alerts-reference)**: Impact 
+
+**Severity**: High
+
+### (Preview) Suspected wallet attack - volume anomaly
+
+(AI.Azure_Agentic_DOWVolumeAnomaly) 
+
+ **Description**: Wallet attacks are a family of attacks common for AI resources that consist of threat actors excessively engage with an AI resource directly or through an application in hopes of causing the organization large financial damages. This detection tracks high volumes of requests and responses by the resource that are inconsistent with its historical usage patterns. 
+
+**[MITRE tactics](/azure/defender-for-cloud/alerts-reference)**: Impact 
+
+**Severity**: Medium 
+
+### (Preview) AI agent instruction prompt leak detected
+
+(AI.Azure_Agentic_InstructionLeakage) 
+
+**Description**: A threat actor attempted to extract system-level instructions from your AI agent, including hidden prompts, policies, or internal configurations. Exposure of this information can compromise security controls and facilitate follow-on attacks such as prompt injection, jailbreaks, or misuse of the model. 
+
+**[MITRE tactics](/azure/defender-for-cloud/alerts-reference)**: Impact 
+
+**Severity**: Low 
+
+### (Preview) AI agent Reconnaissance Attempt Detected  
+
+(AI.Azure_Agentic_LLMReconaissance) 
+
+**Description:** A threat actor is interacting with your Agent in a way that resembles reconnaissance behavior, including attempts to extract system instructions, Agent capabilities, or bypass safety guardrails. These prompts may precede attempted prompt injection or jailbreak attacks. 
+
+**[MITRE tactics](/azure/defender-for-cloud/alerts-reference):** Reconnaissance 
+
+**Severity:** Low 
 
 ## Next steps
 
