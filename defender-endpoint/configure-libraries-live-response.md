@@ -68,7 +68,7 @@ To manage existing files for live response, select one of the following options 
 
     :::image type="content" source="media/library-management-file-details.png" alt-text="Library management page - view details for a file":::
 
-- **View file**: View the contents of a selected file.
+- **View file**: View the contents of a selected file. When you view a file, you can select **Download** to download the file, or **Analyze**, to open Copilot script analysis. The analysis provides a description of the actions the script takes, and more information, including the methods used and output.
 - **Download**: Download a selected file to your local device.
 - **Delete**: Remove a selected file from the list.
 - **Filter**: Filter the list of files based on specific criteria, such as type or creation date.
