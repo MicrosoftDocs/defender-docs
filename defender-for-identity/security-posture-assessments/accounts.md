@@ -73,7 +73,7 @@ For example:
 - If dual privileges are required for critical operations, enable MFA, monitor logins closely, and review memberships regularly.
 
 
-## Identify service accounts in privileged groups (Preview)
+## Identify service accounts in privileged groups
 
 
 **Description**

@@ -38,13 +38,13 @@ For updates about versions and features released six months ago or earlier, see 
 
 This identity security posture assessment lists any user accounts in Active Directory that are stale, meaning they haven't logged in at all during the past 90 days.
 
-For more information, see: [Security posture assessment: Remove stale Active Directory accounts](security-posture-assessments/accounts.md#remove-stale-active-directory-accounts)
+For more information, see: [Security posture assessment: Remove stale Active Directory accounts](security-posture-assessments/accounts.md#remove-stale-active-directory-accounts-preview)
 
 ### New security posture assessment: Microsoft Entra ID privileged user accounts that are also privileged in Active Directory (Preview)
 
 This identity security posture assessment lists Microsoft Entra ID privileged user accounts that also have privileged roles in Active Directory.
 
-For more information, see: [Security posture assessment: Microsoft Entra ID privileged user accounts that are also privileged in Active Directory](security-posture-assessments/accounts.md#microsoft-entra-id-privileged-user-accounts-that-are-also-privileged-in-active-directory)
+For more information, see: [Security posture assessment: Microsoft Entra ID privileged user accounts that are also privileged in Active Directory](security-posture-assessments/accounts.md#microsoft-entra-id-privileged-user-accounts-that-are-also-privileged-in-active-directory-preview)
 
 
 ### MDI alerts migrated to the unified Defender alerting experience
