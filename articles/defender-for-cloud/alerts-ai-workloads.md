@@ -23,7 +23,7 @@ This article lists the security alerts you might get for AI from Microsoft Defen
 > [!NOTE]
 > For alerts that are in preview: [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)]
 
-## Alerts for AI services
+## Alerts for AI
 
 ### Detected credential theft attempts on an Azure AI model deployment
 
