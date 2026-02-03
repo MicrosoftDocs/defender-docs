@@ -27,7 +27,7 @@ This article describes how to view, add, and manage libraries for live response.
 
 For more information about live response, see [Investigate entities on devices using live response](live-response.md).
 
-## View files in the library
+## View the list of files
 
 To view the list of files available for live response:
 
@@ -42,7 +42,7 @@ To view the list of files available for live response:
    - **Has parameters**: Indicates whether the file has parameters that can be configured during a live response session.
    - **Parameters description**: A description of the parameters for the file.
 
-## Upload files to the library
+## Upload files
 
 To add a new file for live response:
 
@@ -58,16 +58,30 @@ To add a new file for live response:
 
     The file is visible in the list of files. You can now use this file during live response sessions.
 
-## Manage files in the library
+## View and analyze files
+
+To view a file's details, right-click the file and select **View details**. A detailed pane opens, displaying information about the file, including its parameters and usage history.
+
+:::image type="content" source="media/configure-libraries-live-response/library-management-file-details.png" alt-text="Library management page - view details for a file":::
+
+To view and analyze a file:
+
+1. Right-click the file and select **View file** or double-click the file row.
+1. Select **Download** to download the file, or **Analyze** to open Copilot script analysis.
+    
+    The analysis provides a description of the actions the script takes, and more information, including the methods used and output.
+
+## Manage files
 
 The following options are available for managing existing files in the library:
 
 | Option | Description | Available from |
 |--------|-------------|----------------|
-| **Upload** | [Upload a new file](#upload-files-to-the-library) or an updated version of an existing file. | Top menu |
+| **Upload** | [Upload a new file](#upload-files) or an updated version of an existing file. | Top menu |
 | **Refresh** | Refresh the list of files to see the most up-to-date information. | Top menu |
-| **View details** | View detailed information about a selected file, including its parameters and usage history. :::image type="content" source="media/library-management-file-details.png" alt-text="Library management page - view details for a file"::: | Top menu, Right-click menu |
-| **View file** | View the contents of a selected file. When you view a file, you can select **Download** to download the file, or **Analyze** to open Copilot script analysis. The analysis provides a description of the actions the script takes, and more information, including the methods used and output. | Top menu, Right-click menu |
-| **Download** | Download a selected file to your local device. | Top menu, Right-click menu |
-| **Delete** | Remove a selected file from the list. | Top menu, Right-click menu |
+| **View details** | [View detailed information](#view-and-analyze-files) about a selected file.  | Top menu, right-click menu |
+| **View file** | [View and analyze a file](#view-and-analyze-files). | Top menu, right-click menu |
+| **Analyze** | [Analyze a file](#view-and-analyze-files) to get a description of the actions the script takes. | View file window |
+| **Download** | Download a selected file to your local device. | Top menu, right-click menu, view file window |
+| **Delete** | Remove a selected file from the list. | Top menu, right-click menu |
 | **Filter** | Filter the list of files based on specific criteria, such as type or creation date. | Top menu |
