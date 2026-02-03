@@ -74,6 +74,23 @@ Updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
+### January-2025 (Engine: 1.1.26010.xxxx)
+
+- Security intelligence update version: **x.x.x.xxxx**
+- Release date:  **February 3, 2026 (Engine)**
+- Engine: **1.1.26010.xxxx**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+- Improved performance for Control Folder Access (CFA) when protected folders don't include network folders.
+- Fixed proxy issue in the MdeNpDiag utility in the MDEClientAnalyzer support tool.
+- Fixed an issue where syntax errors for contextual exclusions could lead to an engine crash.
+- Fixed policy incompatibility that prevented unblocking engine updates.
+- Fixed regression in the registry service path for the Core service.
+- Improved detection in `OLEstream` objects.
+- Fixed race condition during service initialization to read Tamper protection status.
+
 ### November-2025 (Platform: 4.18.25110.6 | Engine: 1.1.25110.1)
 
 - Security intelligence update version: **1.443.6.0**
