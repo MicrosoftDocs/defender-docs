@@ -24,21 +24,21 @@ Features released earlier than nine months ago are described in the [What's new 
 
 |Service area  |Updates  |
 |---------|---------|
-| **OT networks** | - [New sensor health message - NTP server not configured](sensor-health-messages.md) |
+| **OT networks** | [New sensor health message - NTP server not configured](sensor-health-messages.md) |
 
 ## December 2025
 
 |Service area  |Updates  |
 |---------|---------|
 | **OT networks** | Sensor version 25.2.1 is now available. See [release details and updates](release-notes.md#version-2521). |
-| **OT networks** | - [New sensor health message - No connection to NTP](sensor-health-messages.md) |
+| **OT networks** | [New sensor health message - No connection to NTP](sensor-health-messages.md) |
 
 ## September 2025
 
 |Service area  |Updates  |
 |---------|---------|
 | **OT networks** | Sensor version 25.2.0 is now available. See [release details and updates](release-notes.md#version-2520). |
-| **OT networks** | - [New sensor health messages](#new-sensor-health-messages) |
+| **OT networks** | [New sensor health messages](#new-sensor-health-messages) |
 
 ### New sensor health messages
 
