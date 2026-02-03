@@ -27,6 +27,18 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## February 2026
+
+|Date | Category | Update|
+| -------- | -------- | -------- |
+|February 3, 2026| GA | [Scanning support for Minimus container images](#scanning-support-for-minimus-container-images) |
+
+### Scanning support for Minimus container images
+
+February 3, 2026
+
+Microsoft Defender for Cloud's vulnerability scanner, powered by Microsoft Defender Vulnerability Management, is extending its scanning coverage to Minimus container images, and identify vulnerabilities in Minimus Images to validate that they're shipping the most secure builds possible. As additional image types are being scanned, your bill might increase. For all supported distributions, see [Registries and images support for vulnerability assessment](support-matrix-defender-for-containers.md#registries-and-images-support-for-vulnerability-assessment).
+
 ## January 2026
 
 |Date | Category | Update|
