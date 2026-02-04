@@ -19,19 +19,17 @@ To learn about Microsoft Defender for Endpoint features that aren't version-spec
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-## Article audience and scope
-
 This page is intended primarily for Microsoft Defender for Endpoint enterprise customers who have purchased a license regularly deploy, maintain, or validate Defender for Endpoint across their organization. Enterprise customers can use this page to find supported versions, component updates, and platform requirements as part of installing and operating MDE in enterprise environments.
 
 For users running Microsoft Defender Antivirus on their endpoints, this article also includes information about the latest supported versions of Microsoft Defender Antivirus. Additional sections and supported OSs apply to enterprise scenarios only.
 
-## Find version information in this article
+## Article audience and scope
 
-This article includes information on supported versions released for all supported operating systems in the past 6 months. Find specific information:
-
-- [Find information about all supported versions](#all-supported-versions): This table includes all supported versions released in the past 6 months, with links to detailed release notes for each version.
-- [Find information about supported operating systems](#operating-system-information): This section includes general notes about the supported operating systems.
-- [Find versions per OS]: See specific versions for [Windows](#windows-versions), [macOS](#macos-versions), [Linux](#linux-versions), [Android](#android-versions), [iOS](#ios-versions), and [Microsoft Defender Antivirus](#microsoft-defender-antivirus-versions).
+|Information |Audience |Scope |
+|-----------|---------|-------|
+|[Find information about all supported versions](#all-supported-versions) | Enterprise customers | Supported versions released in the past 6 months for all supported operating systems. |
+|[Find information about supported operating systems](#operating-system-information) | Enterprise customers | General notes about supported operating systems. |
+|[Find versions per OS] | Enterprise customers and users running Microsoft Defender Antivirus | Specific versions for [Windows](#windows-versions), [macOS](#macos-versions), [Linux](#linux-versions), [Android](#android-versions), [iOS](#ios-versions), and [Microsoft Defender Antivirus](#microsoft-defender-antivirus-versions). |
 
 ## All supported versions
 
