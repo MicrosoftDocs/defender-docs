@@ -27,15 +27,9 @@ This article explains what Microsoft Sentinel User and Entity Behavior Analytics
 
 ## How UEBA works
 
-Microsoft Sentinel UEBA uses machine learning to build dynamic behavioral profiles for users, hosts, IP addresses, applications, and other entities. It detects anomalies by comparing current activity to established baselines, helping security teams identify threats such as **compromised accounts**, **insider attacks**, and **lateral movement**. 
+Microsoft Sentinel UEBA uses machine learning to build dynamic behavioral profiles for users, hosts, IP addresses, applications, and other entities. It then detects anomalies by comparing current activity to established baselines, helping security teams identify threats such as **compromised accounts**, **insider attacks**, and **lateral movement**. 
 
-Microsoft Sentinel ingests data from connected sources, applies behavioral modeling to detect deviations, and uses peer group analysis and blast radius evaluation to assess the impact. UEBA assigns risk scores to anomalous behaviors, taking into account the associated entities, severity, and context, which enables faster, smarter threat detection and response.
-
-This diagram shows which data gets processed when you enable UEBA and how UEBA detects anomalies and assigns [risk scores](#ueba-scoring) to prioritize investigations:
-
-:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-architecture.png" alt-text="Diagram showing UEBA architecture, illustrating how data flows from connected sources through behavioral modeling to produce risk scores." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-architecture.png":::
-
-UEBA evaluates actions in context across multiple behavioral dimensions, including:
+As Microsoft Sentinel ingests data from connected sources, UEBA applies behavioral modeling to detect deviations, and uses peer group analysis and blast radius evaluation to assess the impact. UEBA assigns [risk scores](#ueba-scoring) to anomalous behaviors, taking into account the associated entities, severity, and context, including:
 
 - Deviations across geographical locations, devices, and environments  
 - Changes over time and activity frequency compared to the entity’s historical behavior  
@@ -44,6 +38,12 @@ UEBA evaluates actions in context across multiple behavioral dimensions, includi
 
 :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/context.png" alt-text="Entity context":::
 
+This diagram shows which data gets processed when you enable UEBA and how UEBA detects anomalies and assigns [risk scores](#ueba-scoring) to prioritize investigations:
+
+:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-architecture.png" alt-text="Diagram showing UEBA architecture, illustrating how data flows from connected sources through behavioral modeling to produce risk scores." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-architecture.png":::
+
+For more information about UEBA tables, see [Investigate anomalies with UEBA data](#investigate-anomalies-with-ueba-data). 
+
 UEBA is natively integrated into Microsoft Sentinel and the Microsoft Defender portal, providing a seamless experience for security operations teams and embedded experiences that enhance threat investigation and response.
 
 >[!IMPORTANT]
@@ -51,15 +51,17 @@ UEBA is natively integrated into Microsoft Sentinel and the Microsoft Defender p
 
 ## Enable UEBA to create behavior profiles and detect anomalies
 
+To fully benefit from UEBA's advanced threat detection capabilities: 
+
 1. Enable UEBA in Microsoft Sentinel and connect key data sources, such as Microsoft Entra ID, Defender for Identity, and Office 365. For more information, see [Enable entity behavior analytics](enable-entity-behavior-analytics.md).
    
-1. Install the UEBA solution, which includes dozens of ready-to-use queries to query the `BehaviorAnalytics`, `IdentityInfo`, `Anomalies`, and `UserPeerAnalytics` tables. 
+1. Install the UEBA Essentials solution, which includes dozens of ready-to-use on the `BehaviorAnalytics`, `IdentityInfo`, `Anomalies`, and `UserPeerAnalytics` tables. For more information about installing Microsoft Sentinel solutions, see [Install or update Microsoft Sentinel solutions](sentinel-solutions-deploy.md#install-or-update-content). 
 
-    [Query the tables to investigate](#investigate-anomalies-with-ueba-data) risk scores and suspicious activity. Enriched entity profiles provide additional context that helps speed up triage and response. 
+    [Query the tables to investigate](#investigate-anomalies-with-ueba-data) risk scores and suspicious activity.  
   
 1. Integrate UEBA insights into workbooks, incident workflows, and hunting queries to maximize their value across the SOC.
 
-    [UEBA experiences are natively integrated into the Microsoft Defender portal](#embedded-ueba-experiences-in-the-microsoft-defender-portal), providing a seamless experience for security operations teams. Analysts can view UEBA anomalies directly within user investigations, incident graphs, and advanced hunting queries.
+1. Use [UEBA experiences in the Microsoft Defender portal](#embedded-ueba-experiences-in-the-microsoft-defender-portal), which provide a seamless experience for security operations teams. Analysts can view UEBA anomalies directly within user investigations, incident graphs, and advanced hunting queries.
 
 ## Investigate anomalies with UEBA data
 
