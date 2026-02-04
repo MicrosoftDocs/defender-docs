@@ -163,7 +163,7 @@ To enable an app connector for the first time, configure an API connection for t
 
 
 1. In the Microsoft Defender portal, go to **Cloud Apps** > **Connected apps**.
-2. Select **Connect an app** (or **Add a new connector**).
+2. Select **Connect an app** or **Add a new connector**.
 3. Choose the cloud app you want to connect.
 4. Follow the instructions in the corresponding app-specific API connector guide. These instructions include the required permissions and authentication steps.
 
