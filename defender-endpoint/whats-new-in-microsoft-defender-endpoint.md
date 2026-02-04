@@ -103,12 +103,3 @@ Learn more:
 |macOS |[Behavior Monitoring](behavior-monitor-macos.md) |GA |Defender for Endpoint can now monitor process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. Learn more: [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md) and [Behavior Monitoring GA announcement blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/behavior-monitoring-is-now-generally-available-for-microsoft-defender-for-endpoi/4415697). |
 |Linux |Build 101.25062.0003 |GA |Release version 30.125062.0003.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#linux--august-2025--101250620003). |
 |iOS |Build 1.1.68140102 |GA |Build 1.1.68140102 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#ios--august-2025--1168140102). |
-
-## July 2025
-
-|Platform  |Feature  |Preview/GA  |Description  |
-|----------|---------|------------|-------------|
-|Android |Build 1.0.7901.0101 |GA |Build 1.0.7901.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#android--july-2025--1079010101). |
-|macOS |Build 101.25062.0005 |GA |Release version 20.125062.5.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#macos--july-2025--101250620005). |
-|Linux |Build 101.25052.0007 |GA |Release version 30.125052.0007.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#linux--july-2025--101250520007). |
-|iOS |Build 1.1.67040101 |GA |Build 1.1.67040101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#ios--july-2025--1167040101). |
