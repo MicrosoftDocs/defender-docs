@@ -44,6 +44,7 @@ This table includes supported versions released in for all supported platforms i
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|macOS |101.25122.0007  |January 2026 |- Release version: 20.125122.7.0<br>- Engine version: 1.1.25100.3000<br>- Signature version: 1.443.820.0 |[Release details and updates](#macos--january-2026--101251220007) |
 |macOS  |101.25122.0006  |January 2026 |- Release version: 20.125122.6.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--january-2026--101251220006) |
 |Linux  |101.25102.0005  |January 2026 |- Release version: 30.125102.0005.0<br>- Engine version: 1.1.25090.6000<br>- Signature version: 1.439.338.0 |[Release details and updates](#linux--january-2026--101251020005) |
 |Linux  |101.25092.0005  |December 2025 |- Release version: 30.125092.0005.0<br>- Engine version: 1.1.25090.4000<br>- Signature version: 1.437.18.0 |[Release details and updates](#linux--december-2025--101250920005) |
@@ -161,6 +162,18 @@ This table includes supported versions released in for all supported platforms i
 ## macOS versions
 
 See the list of [macOS known issues](#known-issues).
+
+### macOS | January 2026 | 101.25122.0007
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+| -------- | -------- |-------- |
+|20.125122.7.0 |1.1.25100.4000 |1.439.74.0 |
+
+## Enhancements and features
+
+Bug and performance fixes
 
 ### macOS | January 2026 | 101.25122.0006
 
