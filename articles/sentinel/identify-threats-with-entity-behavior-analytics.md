@@ -36,7 +36,7 @@ As Microsoft Sentinel ingests data from connected sources, UEBA applies behavior
 
 :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/context.png" alt-text="Entity context":::
 
-This diagram shows which data gets processed when you enable UEBA and how UEBA detects anomalies and assigns [risk scores](#ueba-scoring) to prioritize investigations:
+This diagram shows how you enable UEBA and how UEBA detects anomalies and assigns [risk scores](#ueba-scoring) to prioritize investigations:
 
 :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-architecture.png" alt-text="Diagram showing UEBA architecture, illustrating how data flows from connected sources through behavioral modeling to produce risk scores." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-architecture.png":::
 
@@ -53,7 +53,7 @@ To fully benefit from UEBA's advanced threat detection capabilities:
 
 1. Enable UEBA in Microsoft Sentinel and connect key data sources, such as Microsoft Entra ID, Defender for Identity, and Office 365. For more information, see [Enable entity behavior analytics](enable-entity-behavior-analytics.md).
    
-1. Install the UEBA Essentials solution, which includes dozens of ready-to-use on the `BehaviorAnalytics`, `IdentityInfo`, `Anomalies`, and `UserPeerAnalytics` tables. For more information about installing Microsoft Sentinel solutions, see [Install or update Microsoft Sentinel solutions](sentinel-solutions-deploy.md#install-or-update-content). 
+1. Install the UEBA Essentials solution, which includes dozens of ready-to-use queries on the `BehaviorAnalytics`, `IdentityInfo`, `Anomalies`, and `UserPeerAnalytics` tables. For more information about installing Microsoft Sentinel solutions, see [Install or update Microsoft Sentinel solutions](sentinel-solutions-deploy.md#install-or-update-content). 
 
     [Query the tables to investigate](#investigate-anomalies-with-ueba-data) risk scores and suspicious activity.  
   
@@ -140,7 +140,7 @@ For more information, see:
 
 ## Aggregate behavior insights with the UEBA behaviors layer (Preview)
 
-Enable the behaviors to aggregate data from high-volume raw security logs into structured, contextualized behavioral insights. While UEBA builds baseline profiles to detect anomalous activity, the behaviors layer aggregates related events into clear, meaningful behaviors that explain "who did what to whom."
+While UEBA builds baseline profiles to detect anomalous activity, the new UEBA behaviors layer aggregates related events from high-volume raw security logs into clear, structured, meaningful behaviors that explain "who did what to whom" at a glance.
 
 The behaviors layer enriches raw logs with:
 - **Natural language explanations** that make complex activities immediately understandable
