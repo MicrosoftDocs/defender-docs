@@ -69,12 +69,12 @@ Microsoft Sentinel stores UEBA insights across several tables, each optimized fo
 
 | Table | Purpose | Key details |
 |-------|---------|-------------|
-| `IdentityInfo` | Detailed profiles of entities (users, devices, groups) | Built from Microsoft Entra ID and optionally on-premises Active Directory via Defender for Identity. Essential for understanding user behavior. |
-| `UserPeerAnalytics` | Dynamically calculated peer groups for behavioral baselines | Ranks top 20 peers based on security group membership, mailing lists, and other associations. Uses TF-IDF algorithm (smaller groups carry higher weight). |
+| `IdentityInfo` | Detailed profiles of entities (users, devices, groups) | Built from Microsoft Entra ID and optionally on-premises Active Directory through Microsoft Defender for Identity. Essential for understanding user behavior. |
+| `UserPeerAnalytics` | Dynamically calculated peer groups for behavioral baselines | Ranks top 20 peers based on security group membership, mailing lists, and other associations. Uses TF-IDF (term frequency–inverse document frequency) algorithm (smaller groups carry higher weight). |
 | `BehaviorAnalytics` | Enriched behavioral data with geolocation and threat intelligence | Contains deviations from baseline with prioritization scores. Data depends on enabled connectors (Entra ID, AWS, GCP, Okta, etc.). |
 | `Anomalies` | Events identified as anomalous | Supports detection and investigation workflows. |
 
-This screenshot shows an example of data in the `UserPeerAnalytics` table with the eight highest-ranked peers for the user Kendall Collins. Sentinel uses the TF-IDF (term frequency–inverse document frequency) algorithm to normalize weights when calculating peer ranks. Smaller groups carry higher weight.
+This screenshot shows an example of data in the `UserPeerAnalytics` table with the eight highest-ranked peers for the user Kendall Collins. Sentinel uses the TF-IDF algorithm to normalize weights when calculating peer ranks. Smaller groups carry higher weight.
 
 :::image type="content" source="./media/identify-threats-with-entity-behavior-analytics/user-peers-metadata.png" alt-text="Screen shot of user peers metadata table" lightbox="./media/identify-threats-with-entity-behavior-analytics/user-peers-metadata.png":::
 
