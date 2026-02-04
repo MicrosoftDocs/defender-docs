@@ -169,7 +169,6 @@ To enable an app connector for the first time, configure an API connection for t
 
 Each cloud app has its own enablement process based on the APIs it supports.
 
-> This article provides an overview of app connectors. Detailed steps for enabling connectors are documented in individual connector guides for each supported app.
 
 ### ExpressRoute
 
