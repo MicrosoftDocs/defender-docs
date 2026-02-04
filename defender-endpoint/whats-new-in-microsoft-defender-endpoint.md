@@ -34,7 +34,7 @@ Learn more:
 |----------|---------|------------|-------------|
 |Linux |Build 101.25102.0005 |GA |Release version 30.125102.0005.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#linux--january-2026--101251020005). |
 |macOS |Build 101.25122.0006 |GA |Release version 20.125122.6.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#macos--january-2026--101251220006). |
-|All |[Device vulnerabilities report](tvm-vulnerable-devices-report.md) enhancements |Preview |To simplify and streamline the Device vulnerabilities report experience, the Vulnerable devices report now includes the following changes and enhancements:<br><br>- The **Vulnerable devices by Windows 10/11 version over time** section has been removed.<br>- The report's filters have been simplified to only include the **Device group** filter.<br>- The report's history is now limited to the last 30 days.<br><br> **Note**: These changes are not yet visible to government cloud customers and will be visible in late January 2026. |
+|All |[Device vulnerabilities report](/defender-vulnerability-management/tvm-vulnerable-devices-report) enhancements |Preview |To simplify and streamline the Device vulnerabilities report experience, the Vulnerable devices report now includes the following changes and enhancements:<br><br>- The **Vulnerable devices by Windows 10/11 version over time** section has been removed.<br>- The report's filters have been simplified to only include the **Device group** filter.<br>- The report's history is now limited to the last 30 days.<br><br> **Note**: These changes are not yet visible to government cloud customers and will be visible in late January 2026. |
 
 ## December 2025
 
