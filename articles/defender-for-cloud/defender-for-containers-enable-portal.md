@@ -115,7 +115,7 @@ This article explains how to enable the Microsoft Defender for Containers plan i
         - **Security findings:** Generates findings and links them to container images when new images are pushed or existing images are updated.
     
     > [!IMPORTANT]  
-    > If you enable agentless threat protection, Kubernetes API access, or registry access, [configure the required external settings](defender-for-containers-external-requirements.md?tab=eks) so Defender for Cloud can collect the data those components rely on.
+    > If you enable agentless threat protection, Kubernetes API access, or registry access, [configure the required external settings](defender-for-containers-configure-external-requirements.md?tab=eks) so Defender for Cloud can collect the data those components rely on.
 
 1. Select **Save**.
 
@@ -182,7 +182,7 @@ This article explains how to enable the Microsoft Defender for Containers plan i
         - **Security findings:** Generates findings and links them to container images when new images are pushed or existing images are updated.
 
     > [!IMPORTANT]  
-    > If you enable agentless threat protection or registry access, [configure the required external settings](defender-for-containers-external-requirements.md?tab=gke) so Defender for Cloud can collect the data those components rely on.
+    > If you enable agentless threat protection or registry access, [configure the required external settings](defender-for-containers-configure-external-requirements.md?tab=gke) so Defender for Cloud can collect the data those components rely on.
 
 1. Select **Save**.
 

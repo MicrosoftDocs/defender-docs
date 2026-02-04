@@ -64,7 +64,7 @@ For EKS clusters, Defender uses Azure Arc–enabled Kubernetes to deploy the Def
 
 - [Defender for Containers enabled on your AWS connector](defender-for-containers-enable-portal.md?tab=eks). 
 
-- If you've enabled agentless threat protection, Kubernetes API access, or registry access, [configure the required external settings](defender-for-containers-external-requirements.md?tab=eks).
+- If you've enabled agentless threat protection, Kubernetes API access, or registry access, [configure the required external settings](defender-for-containers-configure-external-requirements.md?tab=eks).
 
 ## Network requirements
 
@@ -125,7 +125,7 @@ For GKE clusters, Defender uses Azure Arc–enabled Kubernetes to deploy the Def
 
 - [Defender for Containers enabled on your GCP connector](defender-for-containers-enable-portal.md?tab=gke). 
 
-- If you've enabled agentless threat protection or registry access, [configure the required external settings](defender-for-containers-external-requirements.md?tab=gke).
+- If you've enabled agentless threat protection or registry access, [configure the required external settings](defender-for-containers-configure-external-requirements.md?tab=gke).
 
 ## Network requirements
 

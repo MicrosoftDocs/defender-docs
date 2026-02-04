@@ -106,7 +106,7 @@ The output should show `enabled: true`.
 
 - The EKS cluster is [connected to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
 
-- - If you've enabled agentless threat protection, Kubernetes API access, or registry access, [configure the required external settings](defender-for-containers-external-requirements.md?tab=eks).
+- - If you've enabled agentless threat protection, Kubernetes API access, or registry access, [configure the required external settings](defender-for-containers-configure-external-requirements.md?tab=eks).
 
 ## Network requirements
 
@@ -190,7 +190,7 @@ Confirm that a Defender for Containers DaemonSet is listed and that the **DESIRE
 
 - The GKE cluster is [connected to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
 
-- If you've enabled agentless threat protection or registry access, [configure the required external settings](defender-for-containers-external-requirements.md?tab=gke).
+- If you've enabled agentless threat protection or registry access, [configure the required external settings](defender-for-containers-configure-external-requirements.md?tab=gke).
 
 ## Network requirements
 
