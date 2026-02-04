@@ -46,7 +46,7 @@ Stale accounts pose a security risk because they provide potential targets for a
 
 **Description**
 
-This recommendation lists any user accounts that have privileged roles in Entra ID (such as Global Administrator) and are also members of highly privileged Active Directory groups (for example, Domain Admins, Enterprise Admins). These dual-privileged accounts significantly increase the organization’s attack surface.
+This recommendation lists any user accounts that have privileged roles in Microsoft Entra ID (such as Global Administrator) and are also members of highly privileged Active Directory groups (for example, Domain Admins, Enterprise Admins). These dual-privileged accounts significantly increase the organization’s attack surface.
  
 > [!NOTE]
 > Guest users, external identities, and accounts not synchronized to Microsoft Entra ID are excluded from this report. Only accounts that are enabled and hold privileges in both Entra ID and Active Directory are included.
@@ -54,7 +54,7 @@ This recommendation lists any user accounts that have privileged roles in Entra 
 
 **User impact**
 
-Accounts with privileges in both Entra ID and Active Directory can be leveraged by attackers to gain full control over both cloud and on-premises environments. Compromise of a single account may allow lateral movement, privilege escalation, and access to sensitive resources across hybrid environments. Dual-privileged accounts are high-value targets and can accelerate attacks if not properly managed.
+Accounts with privileges in both Microsoft Entra ID and Active Directory can be leveraged by attackers to gain full control over both cloud and on-premises environments. Compromise of a single account might allow lateral movement, privilege escalation, and access to sensitive resources across hybrid environments. Dual-privileged accounts are high-value targets and can accelerate attacks if not properly managed.
 
 **Implementation**
 
@@ -618,7 +618,7 @@ Resource-based constrained delegation restricts which entities can impersonate t
 
 **Description**
 
-SID History is an attribute that supports [migration scenarios](/previous-versions/windows/it-pro/windows-server-2003/cc779590(v=ws.10)). Every user account has an associated [Security IDentifier (SID)](/windows/win32/secauthz/security-identifiers) which is used to track the security principal and the access the account has when connecting to resources. SID History enables access for another account to effectively be cloned to another and is useful to ensure users retain access when moved (migrated) from one domain to another.
+SID History is an attribute that supports [migration scenarios](/previous-versions/windows/it-pro/windows-server-2003/cc779590(v=ws.10)). Every user account has an associated [Security Identifier (SID)](/windows/win32/secauthz/security-identifiers) which is used to track the security principal and the access the account has when connecting to resources. SID History enables access for another account to effectively be cloned to another and is useful to ensure users retain access when moved (migrated) from one domain to another.
 
 The assessment checks for accounts with SID History attributes which Microsoft Defender for Identity profiles to be risky.
 
@@ -628,7 +628,7 @@ Organizations that fail to secure their account attributes leave the door unlock
 
 Malicious actors, much like thieves, often look for the easiest and quietest way into any environment. Accounts configured with an unsecure SID History attribute are windows of opportunities for attackers and can expose risks.
 
-For example, a non-sensitive account in a domain can contain the Enterprise Admin SID in its SID History from another domain in the Active Directory forest, thus "elevating" access for the user account to an effective Domain Admin in all domains in the forest. Also, if you have a forest trust without SID Filtering enabled (also called Quarantine), it's possible to inject a SID from another forest and it will be added to the user token when authenticated and used for access evaluations.
+For example, a non-sensitive account in a domain can contain the Enterprise Admin SID in its SID History from another domain in the Active Directory forest, thus "elevating" access for the user account to an effective Domain Admin in all domains in the forest. If you have a forest trust without SID Filtering enabled (also called Quarantine), it's possible to inject a SID from another forest and it will be added to the user token when authenticated and used for access evaluations.
 
 **Implementation**
 
