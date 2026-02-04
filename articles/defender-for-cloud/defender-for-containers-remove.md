@@ -308,7 +308,7 @@ No resources should be returned.
 
 1. Check that no GKE-related recommendations appear.
 
-# [Arc-enabled Kubernetes (Preview)](#tab/arc)
+# [Arc-enabled Kubernetes](#tab/arc)
 
 ## What stops working after removal
 

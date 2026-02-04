@@ -207,7 +207,7 @@ This article explains how to enable the Microsoft Defender for Containers plan i
     - **GKE clusters should be connected to Azure Arc**
     - **Arc-enabled Kubernetes clusters should have Defender extension installed**
 
-# [Azure Arc–enabled Kubernetes (Preview)](#tab/arc)
+# [Azure Arc–enabled Kubernetes](#tab/arc)
 
 ## Prerequisites
 
@@ -231,11 +231,20 @@ To enable Defender for Containers on an Azure Arc-enabled Kubernetes cluster, ma
 
 1. Toggle **On** the relevant Defender for Containers components:
 
-    - **Agentless threat protection**
-    - **Auto provision Defender's sensor for Azure Arc**
-    - **Auto provision Azure Policy extension for Azure Arc**
-    - **Kubernetes API access**
-    - **Registry access**
+    - **Agentless scanning for machines**  
+      Performs agentless vulnerability and secret scanning on Kubernetes nodes.
+    
+    - **Defender sensor**  
+      Deploys the Defender sensor to cluster nodes to collect runtime security telemetry used for threat detection.
+    
+    - **Azure Policy**  
+      Deploys the Azure Policy for Kubernetes add-on to enable Kubernetes security posture assessments and related security recommendations.
+    
+    - **Kubernetes API access**  
+      Allows Defender for Cloud to access the Kubernetes API for cluster inventory, configuration analysis, and capabilities that rely on Kubernetes metadata.
+    
+    - **Registry access**  
+      Enables agentless vulnerability assessment for container images stored in connected registries.
 
 1. Select **Save**.
 
