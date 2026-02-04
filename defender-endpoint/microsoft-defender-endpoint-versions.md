@@ -19,25 +19,19 @@ To learn about Microsoft Defender for Endpoint features that aren't version-spec
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+## Article audience and scope
+
+This page is intended primarily for Microsoft Defender for Endpoint enterprise customers who have purchased a license regularly deploy, maintain, or validate Defender for Endpoint across their organization. Enterprise customers can use this page to find supported versions, component updates, and platform requirements as part of installing and operating MDE in enterprise environments.
+
+For users running Microsoft Defender Antivirus on their endpoints, this article also includes information about the latest supported versions of Microsoft Defender Antivirus. Additional sections and supported OSs apply to enterprise scenarios only.
+
 ## Find version information in this article
 
 This article includes information on supported versions released for all supported operating systems in the past 6 months. Find specific information:
 
-- [Operating system information](#operating-system-information): General notes about the supported operating systems.
-- [All supported versions](#all-supported-versions): A table of all supported versions released in the past 6 months, with links to detailed release notes for each version.
-- Versions per OS: See specific versions for [Windows](#windows-versions), [macOS](#macos-versions), [Linux](#linux-versions), [Android](#android-versions), [iOS](#ios-versions), and [Microsoft Defender Antivirus](#microsoft-defender-antivirus-versions).
-
-## Operating system information
-
-| OS |Note| Learn more |
-|---------|---------|---------|
-| Windows | This article covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. You can also check the file information section in the monthly cumulative rollup updates in the following articles | - [Windows 11 release information](/windows/release-health/windows11-release-information)<br>- [Windows 10 updates](https://support.microsoft.com/topic/windows-10-update-history-8127c2c6-6edf-4fdf-8b9f-0f7be1ef3562)<br> - [Windows Server 2022 updates](https://support.microsoft.com/topic/windows-server-2022-update-history-e1caa597-00c5-4ab9-9f3e-8212fe80b2ee)<br>- [Windows Server 2019 updates](https://support.microsoft.com/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059)<br>- [Windows Server 2025 updates](https://support.microsoft.com/en-us/topic/windows-server-2025-update-history-10f58da7-e57b-4a9d-9c16-9f1dcd72d7d7) |
-| Windows | Keeping Microsoft Defender Antivirus up to date is critical to assure your devices are protected against new malware and attack techniques. Update your antivirus protection, even if Microsoft Defender Antivirus is running in [passive mode](microsoft-defender-antivirus-compatibility.md). | - [Information about Microsoft Defender Antivirus updates and support](microsoft-defender-antivirus-updates.md)<br>- [Microsoft Defender Antivirus supported versions](#microsoft-defender-antivirus-versions) |
-| macOS | For a list of known issues, see [macOS known issues](#known-issues). |
-| macOS   | To share feedback, open Defender for Endpoint on macOS and go to **Help > Send feedback**. | |
-| macOS |To get latest features, configure your device for the Beta channel (formerly Insider-Fast) device. | |
-| macOS |- Defender for Endpoint supports version 15.0.1 or newer.<br>- macOS 11 (Big Sur) and 12 (Monterey) are no longer supported. | |
-| Linux | Defender for Endpoint on Linux is updated regularly. While security fixes are included as part of monthly releases, the fixes aren't always listed as a separate **Security Patch** item in these notes. If a release contains security-related updates, the updates are listed in this article in the specific version section. | For detailed information on Microsoft security updates, see the [Microsoft Security Update Guide](https://msrc.microsoft.com/update-guide). |
+- [Find information about all supported versions](#all-supported-versions): This table includes all supported versions released in the past 6 months, with links to detailed release notes for each version.
+- [Find information about supported operating systems](#operating-system-information): This section includes general notes about the supported operating systems.
+- [Find versions per OS]: See specific versions for [Windows](#windows-versions), [macOS](#macos-versions), [Linux](#linux-versions), [Android](#android-versions), [iOS](#ios-versions), and [Microsoft Defender Antivirus](#microsoft-defender-antivirus-versions).
 
 ## All supported versions
 
@@ -103,6 +97,18 @@ This table includes supported versions released in for all supported platforms i
 |Windows |10.8760.27617.1006  |July 2024 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#windows--july-2024--108760276171006) |
 |Linux  |101.25042.0003  |June 2025 |- Release version: 30.125042.0003.0<br>- Engine version: 1.1.25020.4000<br>- Signature version: 1.427.370.0 |[Release details and updates](#linux--june-2025--101250420003) |
 |Windows |10.8797.25857.1000  |May 2025 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#windows--may-2025--108797258571000) |
+
+## Operating system information
+
+| OS |Note| Learn more |
+|---------|---------|---------|
+| Windows | This article covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. You can also check the file information section in the monthly cumulative rollup updates in the following articles | - [Windows 11 release information](/windows/release-health/windows11-release-information)<br>- [Windows 10 updates](https://support.microsoft.com/topic/windows-10-update-history-8127c2c6-6edf-4fdf-8b9f-0f7be1ef3562)<br> - [Windows Server 2022 updates](https://support.microsoft.com/topic/windows-server-2022-update-history-e1caa597-00c5-4ab9-9f3e-8212fe80b2ee)<br>- [Windows Server 2019 updates](https://support.microsoft.com/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059)<br>- [Windows Server 2025 updates](https://support.microsoft.com/en-us/topic/windows-server-2025-update-history-10f58da7-e57b-4a9d-9c16-9f1dcd72d7d7) |
+| Windows | Keeping Microsoft Defender Antivirus up to date is critical to assure your devices are protected against new malware and attack techniques. Update your antivirus protection, even if Microsoft Defender Antivirus is running in [passive mode](microsoft-defender-antivirus-compatibility.md). | - [Information about Microsoft Defender Antivirus updates and support](microsoft-defender-antivirus-updates.md)<br>- [Microsoft Defender Antivirus supported versions](#microsoft-defender-antivirus-versions) |
+| macOS | For a list of known issues, see [macOS known issues](#known-issues). |
+| macOS   | To share feedback, open Defender for Endpoint on macOS and go to **Help > Send feedback**. | |
+| macOS |To get latest features, configure your device for the Beta channel (formerly Insider-Fast) device. | |
+| macOS |- Defender for Endpoint supports version 15.0.1 or newer.<br>- macOS 11 (Big Sur) and 12 (Monterey) are no longer supported. | |
+| Linux | Defender for Endpoint on Linux is updated regularly. While security fixes are included as part of monthly releases, the fixes aren't always listed as a separate **Security Patch** item in these notes. If a release contains security-related updates, the updates are listed in this article in the specific version section. | For detailed information on Microsoft security updates, see the [Microsoft Security Update Guide](https://msrc.microsoft.com/update-guide). |
 
 ## Windows versions
 
