@@ -17,8 +17,6 @@ ms.custom: sfi-image-nochange
 
 # Advanced threat detection with User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel
 
-[!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
-
 Detecting anomalous behavior within an organization is often complex and time-consuming. Microsoft Sentinel's User and Entity Behavior Analytics (UEBA) simplifies this challenge by continuously learning from your data to surface meaningful anomalies that help analysts detect and investigate potential threats more effectively.
 
 This article explains what Microsoft Sentinel User and Entity Behavior Analytics (UEBA) is, how it works, how to onboard to it, and how to use UEBA to detect and investigate anomalies to enhance your threat detection capabilities.
