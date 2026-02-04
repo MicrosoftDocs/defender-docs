@@ -23,8 +23,6 @@ Detecting anomalous behavior within an organization is often complex and time-co
 
 This article explains what Microsoft Sentinel User and Entity Behavior Analytics (UEBA) is, how it works, how to onboard to it, and how to use UEBA to detect and investigate anomalies to enhance your threat detection capabilities.
 
-[!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
-
 ## How UEBA works
 
 Microsoft Sentinel UEBA uses machine learning to build dynamic behavioral profiles for users, hosts, IP addresses, applications, and other entities. It then detects anomalies by comparing current activity to established baselines, helping security teams identify threats such as **compromised accounts**, **insider attacks**, and **lateral movement**. 
