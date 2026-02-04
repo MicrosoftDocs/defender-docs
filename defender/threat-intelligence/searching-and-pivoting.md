@@ -1,9 +1,10 @@
 --- 
 title: 'Searching and pivoting with Microsoft Defender Threat Intelligence (Defender TI)'
 description: 'Learn how to search and pivot across internet data sets, threat articles, vulnerability articles, and projects using Microsoft Defender Threat Intelligence (Defender TI).'
-author: alexroland24
-ms.author: aroland
-manager: dolmont
+author: poliveria
+ms.author: pauloliveria
+manager: orspodek
+ms.reviewer: aroland
 ms.service: threat-intelligence 
 ms.topic: how-to 
 ms.date: 09/12/2025

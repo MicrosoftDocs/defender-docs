@@ -3,10 +3,11 @@ title: Use Microsoft Security Copilot for threat intelligence
 description: Learn about Security Copilot embedded experience in Microsoft Defender for Microsoft Defender Threat Intelligence.
 keywords: security copilot, threat intelligence, defender threat intelligence, defender ti, Security Copilot, embedded experience, vulnerability impact assessment, threat actor profile, plugins, Microsoft plugins
 ms.service: defender-xdr
-ms.author: pauloliveria
 author: poliveria
+ms.author: pauloliveria
+manager: orspodek
+ms.reviewer: aroland
 ms.localizationpriority: medium
-manager: dolmont
 audience: ITPro
 ms.collection: 
   - Tier1

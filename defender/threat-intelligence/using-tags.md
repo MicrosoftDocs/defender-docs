@@ -1,9 +1,10 @@
 --- 
 title: 'Using tags in Microsoft Defender Threat Intelligence (Defender TI)'
 description: 'Learn about the tag types and how to add, modify, delete, and search custom tags in Microsoft Defender Threat Intelligence (Defender TI).'
-author: alexroland24
-ms.author: aroland
-manager: dolmont
+author: poliveria
+ms.author: pauloliveria
+manager: orspodek
+ms.reviewer: aroland
 ms.service: threat-intelligence
 ms.topic: how-to
 ms.date: 09/12/2025

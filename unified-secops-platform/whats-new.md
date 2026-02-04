@@ -4,11 +4,11 @@ description: Lists the new features and functionality available for Microsoft un
 search.appverid: met150
 ms.service: microsoft-defender
 ms.subservice: unified-security-operations
-ms.author: guywild
 author: guywi-ms
+ms.author: guywild
+manager: orspodek
 ms.localizationpriority: medium
 ms.date: 01/30/2026
-manager: orspodek
 audience: ITPro
 ms.collection:
 - M365-security-compliance

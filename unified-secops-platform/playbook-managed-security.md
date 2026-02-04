@@ -3,6 +3,7 @@ title: Microsoft Defender portal implementation guide for Managed Security Servi
 description: Implementation guide for partners and SOC architects implementing Microsoft Defender portal with multitenant management capabilities.
 author: guywi-ms
 ms.author: guywild
+manager: orspodek
 ms.date: 12/20/2025
 ms.service: microsoft-defender
 ms.subservice: unified-security-operations

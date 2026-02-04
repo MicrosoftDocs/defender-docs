@@ -1,9 +1,9 @@
 ---
 title: What is Microsoft Security Exposure Management?
 description: Learn how Microsoft Security Exposure Management enhances and extends security posture management.
-author: dlanger
+author: deblanger
 ms.author: dlanger
-manager: ornat-spodek
+manager: orspodek
 ms.topic: overview
 ms.service: exposure-management
 ms.date: 07/30/2025

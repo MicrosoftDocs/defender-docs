@@ -4,8 +4,9 @@ description: Learn about the features that help detect threats in the Microsoft 
 search.appverid: met150
 ms.service: microsoft-defender
 ms.subservice: unified-security-operations
-ms.author: monaberdugo
 author: mberdugo
+ms.author: monaberdugo
+manager: orspodek
 ms.localizationpriority: medium
 ms.date: 11/22/2024
 audience: ITPro

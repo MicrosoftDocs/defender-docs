@@ -4,8 +4,9 @@ description: Learn how to use the Microsoft Defender multitenant portal to manag
 search.appverid: met150
 ms.service: microsoft-defender
 ms.subservice: unified-security-operations
-ms.author: monaberdugo
 author: mberdugo
+ms.author: monaberdugo
+manager: orspodek
 ms.localizationpriority: medium
 ms.date: 05/07/2025
 audience: ITPro

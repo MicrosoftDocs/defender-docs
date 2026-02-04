@@ -4,8 +4,9 @@ description: Provides an overview of security posture management and risk reduct
 search.appverid: met150
 ms.service: microsoft-defender
 ms.subservice: unified-security-operations
-ms.author: dlanger
 author: dlanger
+ms.author: deblanger
+manager: orspodek
 ms.localizationpriority: medium
 ms.date: 02/05/2025
 audience: ITPro

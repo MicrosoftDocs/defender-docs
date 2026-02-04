@@ -4,10 +4,10 @@ description: Learn about the tenant list in Microsoft Defender multitenant manag
 search.appverid: met150
 ms.service: microsoft-defender
 ms.subservice: unified-security-operations
-ms.author: guywild
-author: guywi-ms
+author: guywild
+ms.author: guywi-ms
+manager: orspodek
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection: 
   - m365-security

@@ -1,14 +1,14 @@
 ---
 title: Uncover adversaries with threat intelligence across the Defender portal
-ms.reviewer: 
 description: Learn about threat intelligence features across the Microsoft Defender portal.
 search.appverid: met150
 ms.service: microsoft-defender
 ms.subservice: unified-security-operations
-ms.author: pauloliveria
 author: poliveria
+ms.author: pauloliveria
+manager: orspodek
+ms.reviewer: 
 ms.localizationpriority: medium
-manager: dolmont
 audience: ITPro
 ms.collection:
 - M365-security-compliance

@@ -4,8 +4,9 @@ description: Learn about the services and features available with Microsoft Defe
 search.appverid: met150
 ms.service: microsoft-defender
 ms.subservice: unified-security-operations
-ms.author: guywild
 author: guywi-ms
+ms.author: guywild
+manager: orspodek
 ms.localizationpriority: medium
 ms.date: 10/31/2025
 audience: ITPro
@@ -22,7 +23,7 @@ ms.topic: concept-article
 
 Microsoft Defender XDR unifies and coordinates threat protection across a broad range of assets, including devices and endpoints, identities, email, Microsoft 365 services, and SaaS apps.
 
-Defender XDR consolidates threat signals and data across assets, so that you can monitor and manage security threats from a single location in the [Microsoft Defender portal](https://security.microsoft.com). 
+Defender XDR consolidates threat signals and data across assets, so that you can monitor and manage security threats from a single location in the [Microsoft Defender portal](https://security.microsoft.com).
 
 
 Defender XDR combines multiple Microsoft security services.

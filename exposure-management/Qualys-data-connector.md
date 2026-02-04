@@ -1,9 +1,9 @@
 ---
 title: Integrate Qualys data connector in Microsoft Security Exposure Management
 description: Learn how to the Qualys data connector in Microsoft Security Exposure Management.
+author: deblanger
 ms.author: dlanger
-author: dlanger
-manager: rayne-wiselman
+manager: orspodek
 ms.topic: overview
 ms.service: exposure-management
 ms.date: 09/24/2024

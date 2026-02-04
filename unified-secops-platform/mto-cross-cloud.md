@@ -2,10 +2,10 @@
 title: Manage tenants in other Microsoft cloud environments
 description: Overview of cross-cloud management for other Microsoft clouds in multitenant management in Microsoft Defender XDR.
 ms.service: defender-xdr
-ms.author: guywild
-author: guywi-ms
+author: guywild
+ms.author: guywi-ms
+manager: orspodek
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
