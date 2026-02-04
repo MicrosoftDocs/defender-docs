@@ -563,7 +563,7 @@ If an end user encounters a prompt for Defender for Endpoint on macOS processes 
 |--------------|---------------|
 | User experience | UX Improvement for home page and tiles screens. [Learn more](android-new-ux.md#march-2025) |
 
-## UX improvements
+### UX improvements
 
 See the full list of [Android UX improvements](android-new-ux.md).
 
