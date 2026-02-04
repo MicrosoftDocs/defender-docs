@@ -16,6 +16,31 @@ The DHCP information model is used to describe events reported by a DHCP server,
 
 For more information, see [Normalization and the Advanced Security Information Model (ASIM)](normalization.md).
 
+## Parsers
+
+For more information about ASIM parsers, see the [ASIM parsers overview](normalization-parsers-overview.md).
+
+### Filtering parser parameters
+
+The DHCP parsers support [filtering parameters](normalization-about-parsers.md#optimizing-parsing-using-parameters). While these parameters are optional, they can improve your query performance.
+
+The following filtering parameters are available:
+
+| Name     | Type      | Description |
+|----------|-----------|-------------|
+| **starttime** | datetime | Filter only DHCP events that occurred at or after this time. This parameter filters on the `TimeGenerated` field, which is the standard designator for the time of the event, regardless of the parser-specific mapping of the EventStartTime and EventEndTime fields. |
+| **endtime** | datetime | Filter only DHCP events that occurred at or before this time. This parameter filters on the `TimeGenerated` field, which is the standard designator for the time of the event, regardless of the parser-specific mapping of the EventStartTime and EventEndTime fields. |
+| **srcipaddr_has_any_prefix** | dynamic | Filter only DHCP events where the source IP address prefix matches any of the listed values. Prefixes should end with a `.`, for example: `10.0.`. |
+| **srchostname_has_any** | dynamic | Filter only DHCP events where the source hostname has any of the listed values. |
+| **srcusername_has_any** | dynamic | Filter only DHCP events where the source username has any of the listed values. |
+| **eventresult** | string | Filter only DHCP events with a specific event result. Use `*` to include all results. |
+
+For example, to filter only DHCP events from a specific IP address range in the last day, use:
+
+```kusto
+_Im_DhcpEvent (srcipaddr_has_any_prefix=dynamic(['10.0.']), starttime = ago(1d), endtime=now())
+```
+
 ## Schema overview
 
 The ASIM DHCP schema represents DHCP server activity, including serving requests for DHCP IP address leased from client systems and updating a DNS server with the leases granted.
@@ -135,15 +160,15 @@ The source system is the system that requests a DHCP lease
 | **RuleNumber** | Optional | int | The number of the rule associated with the alert.<br><br>e.g. `123456` |
 | **RuleName** | Optional | string | The name or ID of the rule associated with the alert.<br><br>e.g. `Server PSEXEC Execution via Remote Access` |
 | **ThreatId** | Optional | string | The ID of the threat or malware identified in the alert.<br><br> e.g. `1234567891011121314` |
-| **ThreatName** | Optional | string | The name of the threat or malware identified in the alert.<br><br> e.g. `Init.exe` |
-| **ThreatFirstReportedTime** | Optional | Date/Time | Date and time when the threat was first reported.<br><br> e.g. `2024-09-19T10:12:10.0000000Z` |
-| **ThreatLastReportedTime** | Optional | Date/Time | Date and time when the threat was last reported.<br><br> e.g. `2024-09-19T10:12:10.0000000Z` |
 | **ThreatCategory** | Optional | String | 	The category of the threat or malware identified in the alert.<br><br>Supported values are: `Malware`, `Ransomware`, `Trojan`, `Virus`, `Worm`, `Adware`, `Spyware`, `Rootkit`, `Cryptominor`, `Phishing`, `Spam`, `MaliciousUrl`, `Spoofing`, `Security Policy Violation`, `Unknown` |
-| **ThreatIsActive** | Optional | bool | Indicates whether the threat is currently active.<br><br>Supported values are: `True`, `False` |
-| **ThreatRiskLevel** | Optional | RiskLevel (Integer) | The risk level associated with the threat. The level should be a number between 0 and 100.<br><br>Note: The value might be provided in the source record by using a different scale, which should be normalized to this scale. The original value should be stored in ThreatRiskLevelOriginal. |
-| **ThreatOriginalRiskLevel** | Optional | string | The risk level as reported by the originating system. |
+| **ThreatName** | Optional | string | The name of the threat or malware identified in the alert.<br><br> e.g. `Init.exe` |
 | **ThreatConfidence** | Optional | ConfidenceLevel (Integer) | The confidence level of the threat identified, normalized to a value between 0 and a 100. |
 | **ThreatOriginalConfidence** | Optional | string | The confidence level as reported by the originating system. |
+| **ThreatRiskLevel** | Optional | RiskLevel (Integer) | The risk level associated with the threat. The level should be a number between 0 and 100.<br><br>Note: The value might be provided in the source record by using a different scale, which should be normalized to this scale. The original value should be stored in ThreatRiskLevelOriginal. |
+| **ThreatOriginalRiskLevel** | Optional | string | The risk level as reported by the originating system. |
+| **ThreatIsActive** | Optional | bool | Indicates whether the threat is currently active.<br><br>Supported values are: `True`, `False` |
+| **ThreatFirstReportedTime** | Optional | Date/Time | Date and time when the threat was first reported.<br><br> e.g. `2024-09-19T10:12:10.0000000Z` |
+| **ThreatLastReportedTime** | Optional | Date/Time | Date and time when the threat was last reported.<br><br> e.g. `2024-09-19T10:12:10.0000000Z` |
 
 
 ### Schema updates

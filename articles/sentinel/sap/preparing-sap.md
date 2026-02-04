@@ -164,6 +164,9 @@ For more information, see [Database Collector in Background Processing](https://
     - SAP Process Integration Runtime
     - Cloud Foundry Runtime
 
+> [!NOTE]
+> This solution considers only SAP Cloud Integration in the Cloud Foundry environment.
+
 1. Create an instance of Cloud Foundry Runtime, and then also create a Cloud Foundry space.
 
 1. Create an instance of SAP Integration Suite.

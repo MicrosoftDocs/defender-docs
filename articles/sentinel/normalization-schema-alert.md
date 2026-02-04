@@ -26,9 +26,7 @@ For more information about ASIM parsers, see the [ASIM parsers overview](normali
 
 ### Unifying Parsers
 
-To use parsers that unify all ASIM out-of-the-box parsers and ensure that your analysis runs across all the configured sources, use the `_Im_AlertEvent` filtering parser or the `_ASim_AlertEvent` parameter-less parser. You can also use workspace-deployed `imAlertEvent` and `ASimAlertEvent` parsers by deploying them from the [Microsoft Sentinel GitHub repository](https://aka.ms/DeployASIM).
-
-For more information, see [built-in ASIM parsers and workspace-deployed parsers](normalization-parsers-overview.md#built-in-asim-parsers-and-workspace-deployed-parsers).
+To use parsers that unify all ASIM out-of-the-box parsers and ensure that your analysis runs across all the configured sources, use the `_Im_AlertEvent` parser.
 
 ### Out-of-the-box, Source-specific Parsers
 
@@ -48,8 +46,8 @@ The Alert parsers support various [filtering parameters](normalization-about-par
 
 | Name | Type | Description |
 |------|------|-------------|
-| **starttime** | datetime | Filter only alerts that started at or after this time. |
-| **endtime** | datetime | Filter only alerts that started at or before this time. |
+| **starttime** | datetime | Filter only alerts that started at or after this time. This parameter filters on the `TimeGenerated` field, which is the standard designator for the time of the event, regardless of the parser-specific mapping of the EventStartTime and EventEndTime fields. |
+| **endtime** | datetime | Filter only alerts that started at or before this time. This parameter filters on the `TimeGenerated` field, which is the standard designator for the time of the event, regardless of the parser-specific mapping of the EventStartTime and EventEndTime fields. |
 | **ipaddr_has_any_prefix** | dynamic | Filter only alerts for which the **'DvcIpAddr'** field is in one of the listed values. |
 | **hostname_has_any** | dynamic | Filter only alerts for which the **'DvcHostname'** field is in one of the listed values. |
 | **username_has_any** | dynamic | Filter only alerts for which the **'Username'** field is in one of the listed values. |
@@ -161,7 +159,7 @@ This section defines fields related to the identification and classification of 
 | **OriginalUserType** | Optional | string | The user type as reported by the reporting device. |
 | **UserSessionId** | Optional | string | The unique ID of the user's session associated with the alert.<br><br>e.g. `a1bc2de3-fh4i-j5kl-6mn7-op8qr9st0u` |
 | **UserScopeId** | Optional | string | The scope ID, such as Microsoft Entra Directory ID, in which UserId and Username are defined.<br><br>e.g. `a1bc2de3-fh4i-j5kl-6mn7-op8qrs` |
-| **UserScope** | Optional | string | The scope, such as Microsoft Entra tenant, in which UserId and Username are defined. or more information and list of allowed values, see [UserScope](normalization-entity-user.md#userscope) in the [Schema Overview article](normalization-about-schemas.md).<br><br>e.g. `Contoso Directory` |
+| **UserScope** | Optional | string | The scope, such as Microsoft Entra tenant, in which UserId and Username are defined. For more information and list of allowed values, see [UserScope](normalization-entity-user.md#userscope) in the [Schema Overview article](normalization-about-schemas.md).<br><br>e.g. `Contoso Directory` |
 
 ### Process Fields
 
@@ -181,7 +179,7 @@ This section enables you to capture details related to a file entity involved in
 | Field | Class | Type | Description |
 |-------|-------|------|-------------|
 | **FileName** | Optional | string | Name of the file associated with the alert, without path or a location.<br><br>e.g. `Notepad.exe` |
-| **FilePath** | Optional | string | he full, normalized path of the target file, including the folder or location, the file name, and the extension.<br><br>e.g. `C:\Windows\System32\notepad.exe` |
+| **FilePath** | Optional | string | The full, normalized path of the target file, including the folder or location, the file name, and the extension.<br><br>e.g. `C:\Windows\System32\notepad.exe` |
 | **FileSHA1** | Optional | string | SHA1 hash of the file.<br><br>e.g. `j5kl6mn7op8qr9st0uv1` |
 | **FileSHA256** | Optional | string | SHA256 hash of the file.<br><br>e.g. `a1bc2de3fh4ij5kl6mn7op8qrs2de3` |
 | **FileMD5** | Optional | string | MD5 hash of the file.<br><br>e.g. `j5kl6mn7op8qr9st0uv1wx2yz3ab4c` |

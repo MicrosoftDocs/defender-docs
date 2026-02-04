@@ -49,9 +49,7 @@ For more information about ASIM parsers, see the [ASIM parsers overview](normali
 
 ### Unifying parsers
 
-To use parsers that unify all ASIM out-of-the-box parsers, and ensure that your analysis runs across all the configured sources, use the `_Im_WebSession` filtering parser or the `_ASim_WebSession` parameter-less parser.
-
-You can also use workspace-deployed `ImWebSession` and `ASimWebSession` parsers by deploying them from the [Microsoft Sentinel GitHub repository](https://aka.ms/DeployASIM). For more information, see [built-in ASIM parsers and workspace-deployed parsers](normalization-parsers-overview.md#built-in-asim-parsers-and-workspace-deployed-parsers).
+To use parsers that unify all ASIM out-of-the-box parsers, and ensure that your analysis runs across all the configured sources, use the `_Im_WebSession` parser.
 
 ### Out-of-the-box, source-specific parsers
 
@@ -71,8 +69,8 @@ The following filtering parameters are available:
 
 | Name     | Type      | Description |
 |----------|-----------|-------------|
-| **starttime** | datetime | Filter only Web sessions that **started** at or after this time. |
-| **endtime** | datetime | Filter only Web sessions that **started** running at or before this time. |
+| **starttime** | datetime | Filter only Web sessions that **started** at or after this time. This parameter filters on the `TimeGenerated` field, which is the standard designator for the time of the event, regardless of the parser-specific mapping of the EventStartTime and EventEndTime fields. |
+| **endtime** | datetime | Filter only Web sessions that **started** running at or before this time. This parameter filters on the `TimeGenerated` field, which is the standard designator for the time of the event, regardless of the parser-specific mapping of the EventStartTime and EventEndTime fields. |
 | **srcipaddr_has_any_prefix** | dynamic | Filter only Web sessions for which the [source IP address field](normalization-schema-network.md#srcipaddr) prefix is in one of the listed values. The list of values can include IP addresses and IP address prefixes. Prefixes should end with a `.`, for example: `10.0.`. The length of the list is limited to 10,000 items.|
 | **ipaddr_has_any_prefix** | dynamic | Filter only network sessions for which the [destination IP address field](normalization-schema-network.md#dstipaddr) or [source IP address field](normalization-schema-network.md#srcipaddr) prefix is in one of the listed values. Prefixes should end with a `.`, for example: `10.0.`. The length of the list is limited to 10,000 items.<br><br>The field [ASimMatchingIpAddr](normalization-schema-network.md#asimmatchingipaddr) is set with the one of the values `SrcIpAddr`, `DstIpAddr`, or `Both` to reflect the matching fields or fields. |
 | **url_has_any** | dynamic | Filter only Web sessions for which the [URL field](#url) has any of the values listed. The parser may ignore the schema of the URL passed as a parameter, if the source does not report it. If specified, and the session is not a web session, no result will be returned. The length of the list is limited to 10,000 items.|  
