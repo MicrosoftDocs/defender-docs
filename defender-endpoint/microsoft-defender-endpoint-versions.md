@@ -23,7 +23,7 @@ This page is intended primarily for Microsoft Defender for Endpoint enterprise c
 
 For users running Microsoft Defender Antivirus on their endpoints, this article also includes information about the latest supported versions of Microsoft Defender Antivirus. Additional sections and supported OSs apply to enterprise scenarios only.
 
-## Article audience and scope
+## Find the information you need in this article
 
 |Information |Audience |Scope |
 |-----------|---------|-------|
