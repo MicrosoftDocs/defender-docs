@@ -28,8 +28,13 @@ For users running Microsoft Defender Antivirus on their endpoints, this article 
 |Information |Audience |Scope |
 |-----------|---------|-------|
 |[Find information about all supported versions](#all-supported-versions) | Enterprise customers | Supported versions released in the past 6 months for all supported operating systems. |
-|[Find information about supported operating systems](#operating-system-information) | Enterprise customers | General notes about supported operating systems. |
-|[Find versions per OS] | Enterprise customers and users running Microsoft Defender Antivirus | Specific versions for [Windows](#windows-versions), [macOS](#macos-versions), [Linux](#linux-versions), [Android](#android-versions), [iOS](#ios-versions), and [Microsoft Defender Antivirus](#microsoft-defender-antivirus-versions). |
+|[Review important information about supported operating systems](#operating-system-information) | Enterprise customers | General notes about supported operating systems. |
+|[Find Windows versions](#windows-versions) | Enterprise customers |Specific Windows versions released in the past 6 months, with related features and updates. |
+|[Find Linux versions](#linux-versions) | Enterprise customers |Specific Linux versions released in the past 6 months, with related features and updates. |
+|[Find macOS versions](#macos-versions) | Enterprise customers |Specific macOS versions released in the past 6 months, with related features and updates. |
+|[Find Android versions](#android-versions) | Enterprise customers |Specific Android versions released in the past 6 months, with related features and updates. |
+|[Find iOS versions](#ios-versions) | Enterprise customers |Specific iOS versions released in the past 6 months, with related features and updates. |
+|[Find Microsoft Defender Antivirus versions](#microsoft-defender-antivirus-versions) | Users running Microsoft Defender Antivirus on their endpoints |Specific Microsoft Defender Antivirus versions released in the past 6 months, with related features and updates. |
 
 ## All supported versions
 
@@ -107,6 +112,7 @@ This table includes supported versions released in for all supported platforms i
 | macOS |To get latest features, configure your device for the Beta channel (formerly Insider-Fast) device. | |
 | macOS |- Defender for Endpoint supports version 15.0.1 or newer.<br>- macOS 11 (Big Sur) and 12 (Monterey) are no longer supported. | |
 | Linux | Defender for Endpoint on Linux is updated regularly. While security fixes are included as part of monthly releases, the fixes aren't always listed as a separate **Security Patch** item in these notes. If a release contains security-related updates, the updates are listed in this article in the specific version section. | For detailed information on Microsoft security updates, see the [Microsoft Security Update Guide](https://msrc.microsoft.com/update-guide). |
+| Linux | **Important**: Starting with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology. This change allows for better performance, reduced resource consumption, and overall improved stability. eBPF support is available since August 2023, and is fully integrated into all updates of Defender for Endpoint on Linux (version `101.23082.0006` and later). We strongly encourage you to adopt the eBPF build, as it provides significant enhancements over Auditd. If eBPF isn't supported on your machines, or if there are specific requirements to remain on Auditd, you have the following options:<br><br>- Continue to use Defender for Endpoint on Linux build `101.24072.0000` with Auditd. This build continues to be supported for several months, so you have time to plan and execute your migration to eBPF.<br>- If you are on versions later than `101.24072.0000`, Defender for Endpoint on Linux relies on `netlink` as a backup supplementary event provider. If a fallback occurs, all operations continue to flow seamlessly.<br>- Review your current Defender for Endpoint on Linux deployment, and begin planning your migration to the eBPF-supported build. For more information on eBPF and how it works, see [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-ebpf).<br><br> | If you have any concerns or need assistance during this transition, contact support. |
 
 ## Windows versions
 
