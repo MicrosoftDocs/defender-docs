@@ -2,17 +2,10 @@
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: include
-ms.date: 02/02/2026
+ms.date: 02/04/2026
 
 # This file is auto-generated . Do not edit manually. Changes will be overwritten.
 ---
-
-##  Sentinel data connectors
-
-
-> [!NOTE]
-> The following table lists the data connectors that are available in the Microsoft Sentinel Content hub. The connectors are supported by the product vendor. For support, see the link in the **Supported by** column in the following table.
-
 
 
 <a name="1password-serverless"></a><details><summary>**1Password (Serverless)**</summary>
@@ -2604,7 +2597,7 @@ The [GitHub](https://www.github.com) webhook data connector provides the capabil
 
  ---
    
-<a name="github-enterprise-audit-log-via-codeless-connector-framework-preview"></a><details><summary>**GitHub Enterprise Audit Log (via Codeless Connector Framework) (Preview)**</summary>
+<a name="github-enterprise-audit-log-via-codeless-connector-framework"></a><details><summary>**GitHub Enterprise Audit Log (via Codeless Connector Framework)**</summary>
 
 **Supported by:** [Microsoft Corporation](https://azure.microsoft.com/support/options/)
 
@@ -5958,6 +5951,24 @@ The connector supports integration with Veeam Backup & Replication, Veeam ONE an
 
 - **Microsoft.Web/sites permissions**: Read and write permissions to Azure Functions to create a Function App is required. For more information, see [Azure Functions](/azure/azure-functions/).
 - **Veeam Infrastructure Access**: Access to Veeam Backup & Replication REST API and Veeam ONE monitoring platform is required. This includes proper authentication credentials and network connectivity.<br><br>
+</details> 
+
+ ---
+   
+<a name="versaseccms"></a><details><summary>**VersasecCms**</summary>
+
+**Supported by:** [Versasec Support](https://support.versasec.com/)
+
+The VersasecCms data connector allows ingesting logs into Microsoft Sentinel.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`VersasecCmsSysLogs_CL`|No|No|
+|`VersasecCmsErrorLogs_CL`|No|No|
+
+**Data collection rule support:** Not currently supported<br><br>
 </details> 
 
  ---
