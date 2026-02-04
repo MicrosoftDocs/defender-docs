@@ -159,7 +159,7 @@ The following tables list, per cloud app, which abilities are supported with App
 
 ## Enable app connectors
 
-To enable an app connector for the first time, you must configure an API connection for the specific cloud app you want to connect. Microsoft Defender for Cloud Apps doesn't provide a single universal enablement flow for all apps.
+To enable an app connector for the first time, configure an API connection for the specific cloud app you want to connect. See the individual connector guides for each app for detailed instructions.
 
 ### To get started
 
