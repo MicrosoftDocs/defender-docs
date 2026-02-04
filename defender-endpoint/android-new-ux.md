@@ -190,6 +190,8 @@ Recommendation cards prominently display any active alerts, ensuring you stay in
 
 The following screenshot is an example of what the user sees in their dashboard:
 
+:::image type="content" source="media/mde-android-dash-changes.png" alt-text="test":::
+
 :::image type="content" source="media/android-new-ux/android-dashboard-screen.png" alt-text="Screenshot showing the user's dashboard in the Microsoft Defender app.":::
 
 **Recommendation cards for alerts**:
@@ -211,4 +213,3 @@ The current enterprise dashboard experience now features a tile view for your se
 | :::image type="content" source="media/android-new-ux/android-tile-networkprotection.png" alt-text="Screenshot showing the network protection tile for security administrators."::: | **Network protection** <br/>The user can see whether a connection is secured or unsecured. |
 | :::image type="content" source="media/android-new-ux/android-tile-webprotection.png" alt-text="Screenshot of a tile that shows whether web protection is enabled on a device."::: | **Web protection** <br/>The user can see whether web protection is enabled on a user's device. |
 | :::image type="content" source="media/android-new-ux/android-tile-appsecurity.png" alt-text="Screenshot showing the app security tile."::: | **App security** <br/>The user can see whether any threats were found in apps installed on a user's device. |
-| :::image type="content" source="media/android-new-ux/android-tile-globalsecureaccess.png" alt-text="Screenshot showing Global Secure Access status."::: | **Global secure access** <br/>The user can see current connection status. |
