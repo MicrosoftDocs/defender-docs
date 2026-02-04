@@ -75,13 +75,9 @@ This table includes supported versions released in for all supported platforms i
 |Android |1.0.8018.0103  |August 2025 |- Build: 1.0.8018.0103<br>- Released: August 19, 2025 |[Release details and updates](#android--august-2025--1080180103) |
 |macOS  |101.25062.0006  |August 2025 |- Release version: 20.125062.6.0<br>- Engine version: 1.1.25070.3000<br>- Signature version: 1.435.357.0 |[Release details and updates](#macos--august-2025--101250620006) |
 |Linux  |101.25062.0003  |August 2025 |- Release version: 30.125062.0003.0<br>- Engine version: 1.1.25040.4000<br>- Signature version: 1.429.442.0 |[Release details and updates](#linux--august-2025--101250620003) |
-|Windows Antivirus |4.18.25080.5  |August 2025 |- Platform: 4.18.25080.5<br>- Engine: 1.1.25080.5<br>- Security intelligence: 1.437.1.0 |[Release details and updates](#windows-antivirus--august-2025--platform-418250805--engine-11250805) |
 |iOS |1.1.67040101  |July 2025 |- Build: 1.1.67040101<br>- Released: July 8, 2025 |[Release details and updates](#ios--july-2025--1167040101) |
 |Android |1.0.7901.0101  |July 2025 |- Build: 1.0.7901.0101<br>- Released: July 10, 2025 |[Release details and updates](#android--july-2025--1079010101) |
-|macOS  |101.25062.0005  |July 2025 |- Release version: 20.125062.5.0<br>- Engine version: 1.1.25040.3000<br>- Signature version: 1.427.248.0 |[Release details and updates](#macos--july-2025--101250620005) |
-|Linux  |101.25052.0007  |July 2025 |- Release version: 30.125052.0007.0<br>- Engine version: 1.1.25020.4000<br>- Signature version: 1.427.370.0 |[Release details and updates](#linux--july-2025--101250520007) |
 |Windows |10.8760.27617.1006  |July 2024 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#windows--july-2024--108760276171006) |
-|Linux  |101.25042.0003  |June 2025 |- Release version: 30.125042.0003.0<br>- Engine version: 1.1.25020.4000<br>- Signature version: 1.427.370.0 |[Release details and updates](#linux--june-2025--101250420003) |
 |Windows |10.8797.25857.1000  |May 2025 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#windows--may-2025--108797258571000) |
 |Android |1.0.8217.0101  |October 2025 |- Build: 1.0.8217.0101<br>- Released: October 28, 2025 |[Release details and updates](#android--october-2025--1082170101) |
 |Android |1.0.8201.0101  |October 2025 |- Build: 1.0.8201.0101<br>- Released: October 2, 2025 |[Release details and updates](#android--october-2025--1082010101) |
@@ -106,7 +102,7 @@ This table includes supported versions released in for all supported platforms i
 |---------|---------|---------|
 | Windows | This article covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. You can also check the file information section in the monthly cumulative rollup updates in the following articles | - [Windows 11 release information](/windows/release-health/windows11-release-information)<br>- [Windows 10 updates](https://support.microsoft.com/topic/windows-10-update-history-8127c2c6-6edf-4fdf-8b9f-0f7be1ef3562)<br> - [Windows Server 2022 updates](https://support.microsoft.com/topic/windows-server-2022-update-history-e1caa597-00c5-4ab9-9f3e-8212fe80b2ee)<br>- [Windows Server 2019 updates](https://support.microsoft.com/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059)<br>- [Windows Server 2025 updates](https://support.microsoft.com/en-us/topic/windows-server-2025-update-history-10f58da7-e57b-4a9d-9c16-9f1dcd72d7d7) |
 | Windows | Keeping Microsoft Defender Antivirus up to date is critical to assure your devices are protected against new malware and attack techniques. Update your antivirus protection, even if Microsoft Defender Antivirus is running in [passive mode](microsoft-defender-antivirus-compatibility.md). | - [Information about Microsoft Defender Antivirus updates and support](microsoft-defender-antivirus-updates.md)<br>- [Microsoft Defender Antivirus supported versions](#microsoft-defender-antivirus-versions) |
-| macOS | For a list of known issues, see [macOS known issues](#known-issues). |
+| macOS | For a list of known issues, see [macOS known issues](#macos-known-issues). |
 | macOS   | To share feedback, open Defender for Endpoint on macOS and go to **Help > Send feedback**. | |
 | macOS |To get latest features, configure your device for the Beta channel (formerly Insider-Fast) device. | |
 | macOS |- Defender for Endpoint supports version 15.0.1 or newer.<br>- macOS 11 (Big Sur) and 12 (Monterey) are no longer supported. | |
@@ -157,7 +153,7 @@ This table includes supported versions released in for all supported platforms i
 
 ## macOS versions
 
-See the list of [macOS known issues](#known-issues).
+See the list of [macOS known issues](#macos-known-issues).
 
 ### macOS | January 2026 | 101.25122.0007
 
@@ -269,6 +265,22 @@ Bug and performance fixes
 | Feature area | Update summary |
 |--------------|---------------|
 | General | Bug and performance fixes. |
+
+### macOS known issues
+
+- In version 2506 (101.25062.0005), attempts to upgrade Microsoft Defender for Endpoint on macOS consistently failed.  Other versions of Defender are not impacted. To overcome this issue, there is a supported workaround for supported macOS versions and beta versions of macOS 26.  The instructions for the workaround can be found [here](https://github.com/microsoft/mdatp-xplat/tree/master/macos/upgrade_from_2506_helper).
+
+- Apple fixed an issue on macOS [Ventura upgrade](https://developer.apple.com/documentation/macos-release-notes/macos-13_1-release-notes) and macOS [Sonoma upgrade](https://developer.apple.com/documentation/macos-release-notes/macos-14-release-notes) with the latest OS update. The issue impacts Defender for Endpoint security extensions, and might result in losing Full Disk Access Authorization, impacting the ability of Defender for Endpoint to function properly.
+
+- In [macOS Sonoma 14.3.1](https://developer.apple.com/documentation/macos-release-notes/macos-14_3-release-notes), Apple made a change to the handling of Bluetooth devices that impacts Defender for Endpoint device control's ability to intercept and block access to Bluetooth devices.  At this time, the recommended mitigation is to use a version of macOS earlier than 14.3.1.
+
+- In macOS Sequoia (version 15.0), if you have Network Protection enabled, you might see crashes of the network extension (NetExt). This issue results in intermittent network connectivity issues for end users. Upgrade to macOS Sequoia version 15.1 or newer.
+
+- On macOS Sequoia (Version 15.0 - 15.1.1), users might encounter prompts about incoming network connections from applications when the native firewall is active.  
+
+   ![Screenshot showing prompts about incoming network connections](media/mac-whatsnew/image.png)
+  
+If an end user encounters a prompt for Defender for Endpoint on macOS processes such as `wdavdaemon_enterprise` or `Microsoft Defender Helper`, the end user can safely choose the **Deny** option. This selection doesn't affect Defender for Endpoint's functionality.  Enterprises can also add *Microsoft Defender* to allow [incoming connections](https://support.apple.com/en-ca/guide/deployment/dep8d306275f/web). This issue is fixed in macOS Sequoia 15.2.
 
 ## Linux versions
 
@@ -396,22 +408,6 @@ Bug and performance fixes
 | Configuration | Custom definition path can now be updated without stopping Defender for Endpoint, improving operational efficiency and reducing downtime. |
 | Compatibility | Running Defender for Endpoint on Linux alongside Fapolicyd is now supported on RHEL and Fedora-based distributions, enabling both antivirus and EDR functionality to operate without conflict. |
 | General | Other stability enhancements and bug fixes. |
-
-### Linux known issues
-
-- In version 2506 (101.25062.0005), attempts to upgrade Microsoft Defender for Endpoint on macOS consistently failed.  Other versions of Defender are not impacted. To overcome this issue, there is a supported workaround for supported macOS versions and beta versions of macOS 26.  The instructions for the workaround can be found [here](https://github.com/microsoft/mdatp-xplat/tree/master/macos/upgrade_from_2506_helper).
-
-- Apple fixed an issue on macOS [Ventura upgrade](https://developer.apple.com/documentation/macos-release-notes/macos-13_1-release-notes) and macOS [Sonoma upgrade](https://developer.apple.com/documentation/macos-release-notes/macos-14-release-notes) with the latest OS update. The issue impacts Defender for Endpoint security extensions, and might result in losing Full Disk Access Authorization, impacting the ability of Defender for Endpoint to function properly.
-
-- In [macOS Sonoma 14.3.1](https://developer.apple.com/documentation/macos-release-notes/macos-14_3-release-notes), Apple made a change to the handling of Bluetooth devices that impacts Defender for Endpoint device control's ability to intercept and block access to Bluetooth devices.  At this time, the recommended mitigation is to use a version of macOS earlier than 14.3.1.
-
-- In macOS Sequoia (version 15.0), if you have Network Protection enabled, you might see crashes of the network extension (NetExt). This issue results in intermittent network connectivity issues for end users. Upgrade to macOS Sequoia version 15.1 or newer.
-
-- On macOS Sequoia (Version 15.0 - 15.1.1), users might encounter prompts about incoming network connections from applications when the native firewall is active.  
-
-   ![Screenshot showing prompts about incoming network connections](media/mac-whatsnew/image.png)
-  
-If an end user encounters a prompt for Defender for Endpoint on macOS processes such as `wdavdaemon_enterprise` or `Microsoft Defender Helper`, the end user can safely choose the **Deny** option. This selection doesn't affect Defender for Endpoint's functionality.  Enterprises can also add *Microsoft Defender* to allow [incoming connections](https://support.apple.com/en-ca/guide/deployment/dep8d306275f/web). This issue is fixed in macOS Sequoia 15.2.
 
 ## Android versions
 
