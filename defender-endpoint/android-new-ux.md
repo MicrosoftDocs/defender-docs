@@ -190,7 +190,7 @@ Recommendation cards prominently display any active alerts, ensuring you stay in
 
 The following screenshot is an example of what the user sees in their dashboard:
 
-:::image type="content" source="media/mde-android-dash-changes.png" alt-text="test":::
+:::image type="content" source="media/android-new-ux/mde-android-dash-changes.png" alt-text="test":::
 
 :::image type="content" source="media/android-new-ux/android-dashboard-screen.png" alt-text="Screenshot showing the user's dashboard in the Microsoft Defender app.":::
 
