@@ -196,7 +196,7 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 There are several methods and tools that you can use to deploy Microsoft Defender for Endpoint on Linux (applicable to AMD64 and ARM64 Linux servers):
 
  > [!NOTE] 
- > Ot is recommended to use the [Deployment Tool based deployment](https://learn.microsoft.com/defender-endpoint/linux-install-with-defender-deployment-tool) method,  as it simplifies the onboarding process, reduces manual tasks, and supports a wide range of deployment scenarios, including new installations, upgrades, and uninstalls. Please refer to the documentation for more details.
+ > It is recommended to use [Deployment Tool based deployment](/defender-endpoint/linux-install-with-defender-deployment-tool),  as it simplifies the onboarding process, reduces manual tasks, and supports a wide range of deployment scenarios, including new installations, upgrades, and uninstalls. Please refer to the [documentation](/defender-endpoint/linux-install-with-defender-deployment-tool) for details.
 
 - [Deployment tool based deployment (Recommended)](./linux-install-with-defender-deployment-tool.md)
 - [Installer script based deployment](/defender-endpoint/linux-installer-script)
