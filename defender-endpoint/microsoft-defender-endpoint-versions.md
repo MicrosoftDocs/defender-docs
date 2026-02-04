@@ -19,9 +19,11 @@ To learn about Microsoft Defender for Endpoint features that aren't version-spec
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-This page is intended primarily for Microsoft Defender for Endpoint enterprise customers who have purchased a license regularly deploy, maintain, or validate Defender for Endpoint across their organization. Enterprise customers can use this page to find supported versions, component updates, and platform requirements as part of installing and operating MDE in enterprise environments.
+This page is intended primarily for Microsoft Defender for Endpoint enterprise customers who have purchased a license and regularly deploy, maintain, or validate Defender for Endpoint across their organization. Enterprise customers can use this page to find supported versions, component updates, and platform requirements as part of installing and operating MDE in enterprise environments.
 
 For users running Microsoft Defender Antivirus on their endpoints, this article also includes information about the latest supported versions of Microsoft Defender Antivirus. Additional sections and supported OSs apply to enterprise scenarios only.
+
+For more information on Defender for Endpoint plans and licenses, see the [Microsoft 365 licensing guidance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 
 ## Find the information you need in this article
 
