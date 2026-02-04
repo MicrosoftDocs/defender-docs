@@ -590,7 +590,7 @@ The `exclusionSettings` section of the configuration profile is used to configur
 |**Comments**|See the following sections for a description of the dictionary contents.|
 
 > [!NOTE] 
-> Already configured antivirus exclusions under (`antivirusEngine`) in managed JSON continues to function as is with no impact. All new [exclusions](linux-exclusions.md) including antivirus exclusions can be added under this new section (`exclusionSettings`). This section is outside the (`antivirusEngine`) tag as its dedicated solely for configuring all types of exclusions that will come in future. You can also continue to use (`antivirusEngine`) for configuring antivirus exclusions.
+> Already configured antivirus exclusions under (`antivirusEngine`) in managed JSON continues to function as is with no impact. Antivirus exclusions can be defined in either the (`exclusionSettings`) section or the (`antivirusEngine`) section, based upon preference or compatibility needs. All other exclusion types should be added in the (`exclusionSettings`) section, which is designed to centrally host all exclusion types.
 
 ### Merge policy
 
