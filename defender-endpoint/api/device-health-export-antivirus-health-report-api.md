@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-ms.date: 11/11/2025
+ms.date: 02/05/2026
 manager: bagol
 audience: ITPro
 ms.collection:
@@ -93,7 +93,7 @@ One of the following permissions is required to call this API. To learn more, in
 |Application|Machine.Read.All|'Read all machine profiles'|
 |Delegated (work or school account)|Machine.Read|'Read machine information'|
 
-If you need to call the API without a user (Service-to-Service), refer to the official documentation: [Create an app to access Microsoft Defender for Endpoint without a user](https://learn.microsoft.com/en-us/defender-endpoint/api/exposed-apis-create-app-webapp?tabs=PowerShell#get-an-access-token).
+If you need to call the API without a user (Service-to-Service), refer to the official documentation: [Create an app to access Microsoft Defender for Endpoint without a user](/defender-endpoint/api/exposed-apis-create-app-webapp?tabs=PowerShell#get-an-access-token).
 
 Use the script below to ensure the scope is correctly defined for the Device Health in Defender for Endpoint API.
 
@@ -101,7 +101,7 @@ Use the script below to ensure the scope is correctly defined for the Device Hea
 # This script acquires the App Context Token and stores it in the variable $token for later use.
 # Paste your Tenant ID, App ID, and App Secret (App key) into the quotes below.
 
-$tenantId    = '' ### Paste your tenant ID here
+$tenantId    = '' ### Paste your Tenant ID here
 $appId       = '' ### Paste your Application ID here
 $appSecret   = '' ### Paste your Application key here
 
