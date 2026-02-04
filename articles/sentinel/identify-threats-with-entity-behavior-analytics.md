@@ -24,7 +24,7 @@ Detecting anomalous behavior inside your organization is complex and slow. Micro
 
 This article explains how Microsoft Sentinel UEBA works and how to use UEBA to surface and investigate anomalies and enhance your threat detection capabilities.
 
-> [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
+[!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 
 All the benefits of UEBA are available in the Microsoft Defender portal.
 
