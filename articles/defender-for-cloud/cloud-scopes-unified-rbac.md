@@ -353,8 +353,11 @@ Cloud scopes can be leveraged to reflect your organizational hierarchy and struc
 ## Cloud scopes and unified RBAC (Azure portal view)
 
 Full lifecycle management (creation, membership, advanced filtering, multicloud assignments) is performed in the Microsoft Defender portal. In the Azure portal you can still:
+
 - View Azure RBAC assignments at subscription / resource group levels
 - Manage classic Azure access for platform resources
+
+For more information see, [User roles and permissions](permissions.md).
 
 For end-to-end cloud scopes and unified RBAC administration, use the Defender portal.
 
