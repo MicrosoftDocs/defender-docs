@@ -1005,6 +1005,8 @@
           href: data-source-schema-reference.md
         - name: Security alert schema reference
           href: security-alert-schema.md
+        - name: Standalone vs XDR alert schema reference
+          href: security-alert-schema-differences.md
         - name: CEF log field mapping
           href: cef-name-mapping.md
         - name: Windows security event sets
