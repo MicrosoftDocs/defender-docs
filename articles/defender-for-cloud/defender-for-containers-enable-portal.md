@@ -110,11 +110,12 @@ This article explains how to enable the Microsoft Defender for Containers plan i
     - **Kubernetes API access**  
       Allows Defender for Cloud to access the Kubernetes API server for cluster inventory, configuration analysis, and capabilities that rely on Kubernetes metadata and state.
     
-    - **Registry access** — Enables agentless vulnerability assessment for container images in Amazon ECR. Images pushed to ECR are scanned automatically (typically within 24 hours).
+    - **Registry access** 
+      Enables agentless vulnerability assessment for container images in Amazon ECR. Images pushed to ECR are scanned automatically (typically within 24 hours).
         - **Security findings:** Generates findings and links them to container images when new images are pushed or existing images are updated.
     
     > [!IMPORTANT]  
-    > Agentless discovery for Kubernetes, control plane threat detection, and registry access require [additional AWS-side permissions and Kubernetes control plane access](defender-for-containers-aws-permissions.md).
+    > If you enable agentless threat protection, Kubernetes API access, or registry access, [configure the required external settings](defender-for-containers-external-requirements.md?tab=eks) so Defender for Cloud can collect the data those components rely on.
 
 1. Select **Save**.
 
@@ -179,6 +180,9 @@ This article explains how to enable the Microsoft Defender for Containers plan i
     - **Registry access**  
       Enables agentless vulnerability assessment for container images stored in Google Container Registry (GCR) and Artifact Registry.
         - **Security findings:** Generates findings and links them to container images when new images are pushed or existing images are updated.
+
+    > [!IMPORTANT]  
+    > If you enable agentless threat protection or registry access, [configure the required external settings](defender-for-containers-external-requirements.md?tab=gke) so Defender for Cloud can collect the data those components rely on.
 
 1. Select **Save**.
 

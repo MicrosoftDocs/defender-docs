@@ -64,7 +64,7 @@ For EKS clusters, Defender uses Azure Arc–enabled Kubernetes to deploy the Def
 
 - [Defender for Containers enabled on your AWS connector](defender-for-containers-enable-portal.md?tab=eks). 
 
-- If you have enabled agentless discovery for Kubernetes, control plane threat detection, or registry access, [configure the required AWS settings](defender-for-containers-aws-components.md).
+- If you've enabled agentless threat protection, Kubernetes API access, or registry access, [configure the required external settings](defender-for-containers-external-requirements.md?tab=eks).
 
 ## Network requirements
 
@@ -125,9 +125,47 @@ For GKE clusters, Defender uses Azure Arc–enabled Kubernetes to deploy the Def
 
 - [Defender for Containers enabled on your GCP connector](defender-for-containers-enable-portal.md?tab=gke). 
 
+- If you've enabled agentless threat protection or registry access, [configure the required external settings](defender-for-containers-external-requirements.md?tab=gke).
+
 ## Network requirements
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
+
+### Private GKE clusters
+
+Private GKE clusters must allow outbound HTTPS (TCP 443) access to Microsoft Defender for Cloud endpoints.
+
+If required, configure firewall rules to allow egress from cluster nodes:
+
+```bash
+gcloud compute firewall-rules create allow-azure-defender \
+    --allow tcp:443 \
+    --source-ranges <cluster-cidr> \
+    --target-tags <node-tags>
+```
+
+## Cluster-specific considerations
+
+### Standard GKE clusters
+
+No special configuration is required. Follow the default deployment steps.
+
+### GKE Autopilot clusters
+
+For Autopilot clusters:
+
+- The Defender sensor automatically adjusts resource requests.
+- No manual configuration is needed for resource limits.
+
+## Exclude clusters from automatic provisioning
+
+To exclude specific GKE clusters from automatic provisioning, add labels to the cluster in Google Cloud:
+
+- **Exclude Defender sensor:**  
+  `ms_defender_container_exclude_agents = true`
+
+- **Exclude agentless deployment:**  
+  `ms_defender_container_exclude_agentless = true`
 
 ## Deploy components
 
@@ -185,6 +223,16 @@ For Kubernetes clusters connected to Azure using Azure Arc that aren’t running
 ## Network requirements
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
+
+## Exclude Arc-enabled clusters from automatic provisioning
+
+For clusters connected through Azure Arc, you can exclude Defender components by using Azure tags on the Arc-enabled Kubernetes resource:
+
+- **Exclude Defender sensor:**  
+  `ms_defender_container_exclude_sensors = true`
+
+- **Exclude Azure Policy extension:**  
+  `ms_defender_container_exclude_azurepolicy = true`
 
 ## Deploy components
 

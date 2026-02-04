@@ -1,19 +1,23 @@
 ---
-title: Configure AWS settings for Defender for Containers components
-description: Learn how to configure required AWS settings for Microsoft Defender for Containers components, including control plane access, audit logging, and registry scanning.
+title: Configure external requirements for Defender for Containers components
+description: Learn how to configure cloud and Kubernetes settings required for certain Microsoft Defender for Containers components to function, including audit logging, control plane access, and registry scanning.
 ms.topic: how-to
 ms.date: 02/01/2026
 ms.author: elkrieger
 author: Elazark
 ---
 
-# Configure AWS settings for Defender for Containers components
+# Configure external requirements for Defender for Containers components
 
-Some Microsoft Defender for Containers components depend on AWS configuration outside of Microsoft Defender for Cloud. After you [enable the Containers plan on your AWS connector](defender-for-containers-enable-portal.md?tab=eks), configure the relevant AWS settings so Defender for Cloud can collect the data required for those components.
+Some Microsoft Defender for Containers components rely on cloud-provider or Kubernetes configuration that isn't performed automatically when you enable the Containers plan. 
+
+After you [enable the Containers plan on your connector](defender-for-containers-enable-portal.md), configure the settings in this article for any components you enabled so Defender for Cloud can collect the required data.
+
+# [Amazon Elastic Kubernetes Service (EKS)](#tab/eks)
 
 This configuration is relevant if you enabled one or more of the following Defender for Containers components:
 
-- Agentless threat protection
+- Agentless threat protection  
 - Kubernetes API access
 - Registry access
 
@@ -33,7 +37,7 @@ aws eks update-cluster-config \
 
 ## Configure Kubernetes control plane access 
 
-**Required if you enabled:** Agentless discovery for Kubernetes
+**Required if you enabled:** Kubernetes API access
 
 Defender for Cloud requires access to the Kubernetes API server. You must map the role `MDCContainersAgentlessDiscoveryK8sRole` into the EKS cluster.
 
@@ -60,7 +64,7 @@ eksctl create iamidentitymapping \
   --group system:masters \
   --no-duplicate-arns
 ```
-## Configure ECR vulnerability scanning
+## Configure ECR vulnerability scanning (agentless)
 
 **Required if you enabled:** Registry access
 
@@ -71,6 +75,37 @@ eksctl create iamidentitymapping \
 1. Verify **Registry access** is enabled.
 
 1. Images pushed to **Amazon ECR** are automatically scanned within 24 hours.
+
+# [Google Kubernetes Engine (GKE)](#tab/gke)
+
+This configuration is relevant if you enabled one or more of the following Defender for Containers components:
+
+- Agentless threat protection
+- Registry access
+
+## Enable Kubernetes audit logging 
+
+**Required if you enabled:** Agentless threat protection
+
+Enable audit logging for each GKE cluster:
+
+```bash
+gcloud container clusters update <cluster-name> \
+  --zone <zone> \
+  --enable-cloud-logging \
+  --logging=SYSTEM,WORKLOAD,API_SERVER
+```
+
+## Configure container registry scanning
+
+**Required if you enabled:** Registry access
+
+1. Go to your GCP connector settings in Defender for Cloud.
+2. Select **Configure** next to the **Containers** plan.
+3. Verify agentless container vulnerability assessment is enabled.
+4. Images pushed to Google Container Registry (GCR) or Artifact Registry are scanned automatically.
+
+---
 
 ## Related content
 

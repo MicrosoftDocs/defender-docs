@@ -31,11 +31,26 @@ Defender for Containers supports multiple deployment models for deploying the se
 
 The Defender for Containers sensor requires outbound connectivity to Microsoft Defender for Cloud. 
 
-- **AKS clusters**:  
-  [!INCLUDE[defender-for-container-prerequisites-aks](includes/defender-for-containers-network-requirements-aks.md)]
+### AKS clusters
 
-- **EKS, GKE, and Arc-enabled Kubernetes clusters**:  
-  [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
+[!INCLUDE[defender-for-container-prerequisites-aks](includes/defender-for-containers-network-requirements-aks.md)]
+
+### EKS, GKE, and Arc-enabled Kubernetes clusters
+
+[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
+  
+#### Private GKE clusters
+
+Private GKE clusters must allow outbound HTTPS (TCP 443) access to Microsoft Defender for Cloud endpoints.
+
+If required, configure firewall rules to allow egress from cluster nodes:
+
+```bash
+gcloud compute firewall-rules create allow-azure-defender \
+    --allow tcp:443 \
+    --source-ranges <cluster-cidr> \
+    --target-tags <node-tags>
+```
 
 ## Install the sensors Helm chart
 

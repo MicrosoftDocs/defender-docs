@@ -216,8 +216,8 @@
               href: containers-permissions.md
             - name: Enable Defender for Containers
               href: defender-for-containers-enable-portal.md
-            - name: Configure AWS settings for Defender for Containers components
-              href: defender-for-containers-aws-components.md
+            - name: Configure external requirements for components
+              href: defender-for-containers-configure-external-requirements.md
             - name: Deploy cluster components
               items:
                 - name: Deploy using security recommendations
