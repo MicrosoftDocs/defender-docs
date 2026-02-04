@@ -38,10 +38,15 @@ For updates about versions and features released six months ago or earlier, see 
 As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, some alerts were converted from the Microsoft Defender for Identity classic format to the MDI XDR alert format. Keep in mind that all alerts are based on detections from Defender for Identity sensors. See [Microsoft Defender for Identity XDR security alerts](alerts-xdr.md) for the full list of XDR alerts.
 
 ### New Health Alert: Sensor v3.x RPC Audit Misconfigured
-Enhanced RPC auditing is required for some Microsoft Defender for Identity advanced identity detections. A new health alert helps identify v3.x sensors where this configuration is either missing or incorrectly applied. The alert is being rolled out gradually to customers. For more information, see [Configure RPC on sensors v3.x](deploy/prerequisites-sensor-version-3.md#configure-rpc-auditing-on-sensors-v3x-to-support-advanced-identity-detections).
+Enhanced RPC auditing is required for some Microsoft Defender for Identity advanced identity detections. A new health alert helps identify v3.x sensors where this configuration is either missing or incorrectly applied. The alert is being rolled out gradually to customers. For more information, see [Configure RPC on sensors v3.x](deploy/prerequisites-sensor-version-3.md#configure-rpc-auditing).
 
 ### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x (preview)
-We’re gradually rolling out automatic Windows event-auditing configuration for sensors v3.x, along with related health alerts. This update streamlines deployment by automatically applying the required auditing settings to new sensors and correcting misconfigurations on existing ones. For more information, see [Configure automatic windows auditing](deploy/configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically-preview).
+We’re gradually rolling out automatic Windows event-auditing configuration for sensors v3.x, along with related health alerts. Automatic Windows event-auditing streamlines deployment by automatically applying the required auditing settings to new sensors and correcting misconfigurations on existing ones. 
+This update may identify existing auditing configuration gaps that were not previously detected. 
+To ensure consistent protection, we recommend that you make sure all servers with the v3 sensors are configured with:
+- the latest Windows cumulative update 
+- Automatic Windows event auditing enabled 
+For more information, see [Configure automatic windows auditing](deploy/configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically-preview).
 
 |Version number|Updates|
 |---|---|
@@ -62,7 +67,6 @@ This identity security posture assessment lists Active Directory accounts that a
 You can use this assessment to review legacy or unnecessary operator access and take action when elevated access isn’t required.
 
 For more information, see:[Security posture assessment: Locate accounts in built-in Operator Groups](security-posture-assessments/accounts.md#locate-accounts-in-built-in-operator-groups)
-
 
 ## December 2025
 
