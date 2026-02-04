@@ -15,7 +15,7 @@ ms.collection:
 - tier3
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 11/17/2025
+ms.date: 02/05/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -157,7 +157,7 @@ The following examples illustrate how to use the tool.
    ```
 - Use a *WindowsDefenderATP.onboarding* file in the same directory as the tool to run the default onboarding sequence, connect through and configure a proxy to use, and, if a reboot is required, initiate it without asking. Don't show the console window.
 
-     ```
+   ```
    DefenderDT.exe -Proxy:192.168.0.255:8080 -AllowReboot -Quiet
    ```
 
