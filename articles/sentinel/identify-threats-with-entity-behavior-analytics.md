@@ -34,11 +34,13 @@ As Microsoft Sentinel ingests data from connected sources, UEBA applies behavior
 
 :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/context.png" alt-text="Entity context":::
 
-This diagram shows how you enable UEBA and how UEBA detects anomalies and assigns [risk scores](#ueba-scoring) to prioritize investigations:
+This diagram shows how you enable UEBA, and how UEBA detects anomalies and assigns [risk scores](#ueba-scoring) to prioritize investigations:
 
 :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-architecture.png" alt-text="Diagram showing UEBA architecture, illustrating how data flows from connected sources through behavioral modeling to produce risk scores." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-architecture.png":::
 
 For more information about UEBA tables, see [Investigate anomalies with UEBA data](#investigate-anomalies-with-ueba-data). 
+
+For more information about which anomalies UEBA detects, see [Anomalies detected by the Microsoft Sentinel machine learning engine](anomalies-reference.md#ueba-anomalies).
 
 UEBA is natively integrated into Microsoft Sentinel and the Microsoft Defender portal, providing a seamless experience for security operations teams and embedded experiences that enhance threat investigation and response.
 
@@ -61,7 +63,7 @@ To fully benefit from UEBA's advanced threat detection capabilities:
 
 ## Investigate anomalies with UEBA data
 
-This section provides an overview of the data in each of the UEBA tables. For schema details, see the [UEBA reference](ueba-reference.md), and for runnable examples, see [sample KQL queries](ueba-useful-queries.md).
+This section provides an overview of the data in each of the UEBA tables. 
 
 ### UEBA tables
 
@@ -69,16 +71,19 @@ Microsoft Sentinel stores UEBA insights across several tables, each optimized fo
 
 | Table | Purpose | Key details |
 |-------|---------|-------------|
-| `IdentityInfo` | Detailed profiles of entities (users, devices, groups) | Built from Microsoft Entra ID and optionally on-premises Active Directory through Microsoft Defender for Identity. Essential for understanding user behavior. |
-| `UserPeerAnalytics` | Dynamically calculated peer groups for behavioral baselines | Ranks top 20 peers based on security group membership, mailing lists, and other associations. Uses TF-IDF (term frequency–inverse document frequency) algorithm (smaller groups carry higher weight). |
-| `BehaviorAnalytics` | Enriched behavioral data with geolocation and threat intelligence | Contains deviations from baseline with prioritization scores. Data depends on enabled connectors (Entra ID, AWS, GCP, Okta, etc.). |
-| `Anomalies` | Events identified as anomalous | Supports detection and investigation workflows. |
+| [IdentityInfo](ueba-reference.md#identityinfo-table) | Detailed profiles of entities (users, devices, groups) | Built from Microsoft Entra ID and optionally on-premises Active Directory through Microsoft Defender for Identity. Essential for understanding user behavior. |
+| [UserPeerAnalytics](ueba-reference.md#userpeeranalytics-table) | Dynamically calculated peer groups for behavioral baselines | Ranks top 20 peers based on security group membership, mailing lists, and other associations. Uses TF-IDF (term frequency–inverse document frequency) algorithm (smaller groups carry higher weight). |
+| [BehaviorAnalytics](ueba-reference.md#behavioranalytics-table) | Enriched behavioral data with geolocation and threat intelligence | Contains deviations from baseline with prioritization scores. Data depends on enabled connectors (Entra ID, AWS, GCP, Okta, and so on). |
+| [Anomalies](ueba-reference.md#anomalies-table) | Events identified as anomalous | Supports detection and investigation workflows. |
 
 This screenshot shows an example of data in the `UserPeerAnalytics` table with the eight highest-ranked peers for the user Kendall Collins. Sentinel uses the TF-IDF algorithm to normalize weights when calculating peer ranks. Smaller groups carry higher weight.
 
 :::image type="content" source="./media/identify-threats-with-entity-behavior-analytics/user-peers-metadata.png" alt-text="Screen shot of user peers metadata table" lightbox="./media/identify-threats-with-entity-behavior-analytics/user-peers-metadata.png":::
 
-For more information, see [UEBA enrichments reference](ueba-reference.md) and [Anomalies detected by the Microsoft Sentinel machine learning engine](anomalies-reference.md).
+For more detailed information about UEBA data and how to use it, see:
+- [UEBA reference](ueba-reference.md) for a detailed reference of all UEBA-related tables and fields.
+- [Useful UEBA queries](ueba-useful-queries.md) for practical examples of how to use UEBA data in your investigations.
+- [Anomalies detected by the Microsoft Sentinel machine learning engine](anomalies-reference.md) for a list of anomalies that UEBA detects.
 
 ### UEBA scoring
 
@@ -156,5 +161,5 @@ In this article, you learned about Microsoft Sentinel's entity behavior analytic
 - [List of anomalies](anomalies-reference.md#ueba-anomalies) detected by the UEBA engine.
 - [Investigate incidents with UEBA data](investigate-with-ueba.md).
 - [UEBA reference](ueba-reference.md).
-- [Sample KQL queries](ueba-useful-queries.md).
+- [Useful UEBA queries](ueba-useful-queries.md).
 - [Hunt for security threats](./hunting.md).
