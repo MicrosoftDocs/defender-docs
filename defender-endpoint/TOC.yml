@@ -56,49 +56,6 @@
       href: /defender-xdr/preview
     - name: Data storage and privacy
       href: data-storage-privacy.md
-
-  - name: Microsoft Defender for Endpoint demonstrations and evaluation
-    items:
-    - name: Evaluate Microsoft Defender Antivirus
-      href: evaluate-microsoft-defender-antivirus.md
-      items:
-      - name: Guidance for pen testing and BAS scenarios
-        href: guidance-for-pen-testing-and-bas.md
-      - name: Evaluate Microsoft Defender Antivirus using PowerShell
-        href: microsoft-defender-antivirus-using-powershell.md
-      - name: Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management
-        href: evaluate-mda-using-mde-security-settings-management.md
-      - name: Evaluate Microsoft Defender Antivirus using Group Policy 
-        href: evaluate-mdav-using-gp.md  
-    - name: Demonstration scenarios
-      href: defender-endpoint-demonstrations.md
-      items:
-      - name: AMSI demonstrations
-        href: mde-demonstration-amsi.md
-      - name: Antimalware validation demonstration
-        href: validate-antimalware.md
-      - name: Attack surface reduction rules demonstration
-        href: defender-endpoint-demonstration-attack-surface-reduction-rules.md
-      - name: App reputation demonstration
-        href: defender-endpoint-demonstration-app-reputation.md
-      - name: Behavior monitoring demonstration
-        href: demonstration-behavior-monitoring.md
-      - name: Cloud-delivered protection
-        href: defender-endpoint-demonstration-cloud-delivered-protection.md
-      - name: Controlled folder access (block script) demonstration
-        href: defender-endpoint-demonstration-controlled-folder-access-test-tool.md
-      - name: Controlled folder access (block ransomware) demonstration
-        href: defender-endpoint-demonstration-controlled-folder-access.md
-      - name: EDR detections demonstration
-        href: edr-detection.md
-      - name: Exploit protection demonstration
-        href: defender-endpoint-demonstration-exploit-protection.md
-      - name: Network protection demonstration
-        href: defender-endpoint-demonstration-network-protection.md
-      - name: Potentially unwanted applications demonstration
-        href: defender-endpoint-demonstration-potentially-unwanted-applications.md
-      - name: URL reputation demonstrations
-        href: defender-endpoint-demonstration-smartscreen-url-reputation.md
  
   - name: Deployment and onboarding
     items:
@@ -1625,7 +1582,50 @@
       items:
         - name: Android
           href: release-notes-archive-android.md
-      
+
+  - name: Read team testing
+    items:
+    - name: Evaluate Microsoft Defender Antivirus
+      href: evaluate-microsoft-defender-antivirus.md
+      items:
+      - name: Guidance for pen testing and BAS scenarios
+        href: guidance-for-pen-testing-and-bas.md
+      - name: Evaluate Microsoft Defender Antivirus using PowerShell
+        href: microsoft-defender-antivirus-using-powershell.md
+      - name: Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management
+        href: evaluate-mda-using-mde-security-settings-management.md
+      - name: Evaluate Microsoft Defender Antivirus using Group Policy 
+        href: evaluate-mdav-using-gp.md  
+    - name: Demonstration scenarios
+      href: defender-endpoint-demonstrations.md
+      items:
+      - name: AMSI demonstrations
+        href: mde-demonstration-amsi.md
+      - name: Antimalware validation demonstration
+        href: validate-antimalware.md
+      - name: Attack surface reduction rules demonstration
+        href: defender-endpoint-demonstration-attack-surface-reduction-rules.md
+      - name: App reputation demonstration
+        href: defender-endpoint-demonstration-app-reputation.md
+      - name: Behavior monitoring demonstration
+        href: demonstration-behavior-monitoring.md
+      - name: Cloud-delivered protection
+        href: defender-endpoint-demonstration-cloud-delivered-protection.md
+      - name: Controlled folder access (block script) demonstration
+        href: defender-endpoint-demonstration-controlled-folder-access-test-tool.md
+      - name: Controlled folder access (block ransomware) demonstration
+        href: defender-endpoint-demonstration-controlled-folder-access.md
+      - name: EDR detections demonstration
+        href: edr-detection.md
+      - name: Exploit protection demonstration
+        href: defender-endpoint-demonstration-exploit-protection.md
+      - name: Network protection demonstration
+        href: defender-endpoint-demonstration-network-protection.md
+      - name: Potentially unwanted applications demonstration
+        href: defender-endpoint-demonstration-potentially-unwanted-applications.md
+      - name: URL reputation demonstrations
+        href: defender-endpoint-demonstration-smartscreen-url-reputation.md
+
   - name: Microsoft Defender XDR docs
     items:
     - name: Microsoft Defender XDR
