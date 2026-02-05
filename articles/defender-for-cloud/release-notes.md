@@ -52,7 +52,7 @@ SQL Vulnerability Assessment (VA) findings can now be viewed as individual recom
 
 In this experience, each SQL VA rule is represented as a separate recommendation associated with the affected SQL database resource. This change affects how findings are displayed and managed in Recommendations.
 
-The legacy subassessment experience remains available during the transition period.
+The server-level (aggregated) experience remains available during the transition, with a side by side view. (edit)
 
 This experience doesn’t affect SQL VA scanning logic, rules, APIs, or pricing.
 
