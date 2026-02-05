@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.custom: ignite-2023
 ms.author: elkrieger
 author: Elazark
-ms.date: 01/28/2026
+ms.date: 02/05/2026
 ---
 
 # Exempt resources from recommendations

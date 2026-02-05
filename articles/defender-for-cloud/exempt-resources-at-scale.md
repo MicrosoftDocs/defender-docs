@@ -4,7 +4,7 @@ description: Learn how to create exemptions for how policies are applied to reso
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
-ms.date: 01/28/2026
+ms.date: 02/05/2026
 ---
 
 # Exempt resources at scale
