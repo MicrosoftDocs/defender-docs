@@ -26,8 +26,13 @@ jobs:
           PR_NUMBER: ${{ github.event.pull_request.number }}
           REPO: ${{ github.repository }}
         run: |
-          VERSION="1.0.0"
+          VERSION="1.0.1"
           echo "Auto Approve Workflow Version: $VERSION"
+          
+          if [ -z "$APP_USER_TOKEN" ]; then
+            echo "ERROR: APP_USER_TOKEN secret is not set!"
+          fi
+          echo "APP_USER_TOKEN is configured."
           
           # Find CODEOWNERS file
           CODEOWNERS_FILE=""
