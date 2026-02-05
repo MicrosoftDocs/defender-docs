@@ -31,16 +31,41 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date| Category|Update|
 | -------- | -------- | -------- |
-|February 3, 2026| Preview |[Threat protection for AI agents (Preview)]()|
+|February 3, 2026| Preview |[Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview)|
+|February 9, 2026| Preview |[Update to SQL Vulnerability Assessment findings (Preview)]
 
-### Threat protection for AI agents (Preview)
+## Assessment-based experience for VA findings in Microsoft Defender for SQL (Preview)
+
+SQL Vulnerability Assessment (VA) findings can now be viewed as individual recommendations in Microsoft Defender for Cloud.
+
+Each SQL VA rule will now appear as a separate recommendation associated with the affected SQL database resource. This change affects how SQL VA findings are displayed and managed in Recommendations.
+
+The legacy subassment experience will remain available during the transition period
+
+This new experience does not affect SQL VA scanning logic, rules, APIs, and pricing.
+
+Learn how to view and remediate SQL VA findings using the experiences in [Find and fix vulnerabilities in your Azure SQL databases](sql-azure-vulnerability-assessment-find.md).
+
+## Assessment-based experience for SQL Vulnerability Assessment findings (Preview)
+
+SQL Vulnerability Assessment (VA) findings can now be viewed as individual recommendations in Microsoft Defender for SQL.
+
+In this experience, each SQL VA rule is represented as a separate recommendation associated with the affected SQL database resource. This change affects how findings are displayed and managed in Recommendations.
+
+The legacy subassessment experience remains available during the transition period.
+
+This experience doesn’t affect SQL VA scanning logic, rules, APIs, or pricing.
+
+Learn more about [viewing and remediating SQL VA findings using the assessment-based experience](sql-azure-vulnerability-assessment-find.md).
+
+
+## Threat protection for AI agents (Preview)
 
 February 2, 2026 
 
 Microsoft Defender for Cloud now includes threat protection for AI agents built with Foundry, available in public preview as part of the Defender for AI Services plan. This new capability delivers advanced security from development through runtime, addressing high-impact, actionable threats aligned with OWASP guidance for LLM and agentic AI systems. 
 
 This release further expands Defender’s AI threat protection coverage, helping organizations secure a broader range of AI platforms. 
-
 
 Learn more about [Threat Protection for AI Agents with Microsoft Defender for Cloud](/azure/defender-for-cloud/alerts-ai-workloads).  
 
