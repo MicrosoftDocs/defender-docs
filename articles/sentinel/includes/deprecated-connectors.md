@@ -1,19 +1,11 @@
 ---
 author: EdB-MSFT
-ms.author: edbayansh
+ms.author: edbaynash
 ms.topic: include
-ms.date: 01/14/2026
+ms.date: 02/05/2026
 
 # This file is auto-generated . Do not edit manually. Changes will be overwritten.
 ---
-
-## Deprecated Sentinel data connectors
-
-
-> [!NOTE]
-> The following table lists the deprecated and legacy data connectors. Deprecated connectors are no longer supported.
-
-
 
 <a name="deprecated-github-enterprise-audit-log"></a><details><summary>**[Deprecated] GitHub Enterprise Audit Log**</summary>
 
@@ -109,7 +101,7 @@ Deprecated, use the 'ESI-Opt' dataconnectors. You can stream all Exchange Audit 
 **Prerequisites:**
 
 - Azure Log Analytics will be deprecated, to collect data from non-Azure VMs, Azure Arc is recommended. [Learn more](/azure/azure-monitor/agents/azure-monitor-agent-install?tabs=ARMAgentPowerShell,PowerShellWindows,PowerShellWindowsArc,CLIWindows,CLIWindowsArc)
-- **Detailled documentation**: >**NOTE:** Detailled documentation on Installation procedure and usage can be found [here](https://aka.ms/MicrosoftExchangeSecurityGithub)<br><br>
+- **Detailed documentation**: >**NOTE:** Detailed documentation on Installation procedure and usage can be found [here](https://aka.ms/MicrosoftExchangeSecurityGithub)<br><br>
 </details> 
 
  ---

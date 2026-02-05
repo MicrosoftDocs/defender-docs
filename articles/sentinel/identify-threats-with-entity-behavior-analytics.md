@@ -3,8 +3,8 @@ title: Advanced threat detection with User and Entity Behavior Analytics (UEBA) 
 description: Create behavioral baselines for entities (users, hostnames, IP addresses) and use them to detect anomalous behavior and identify zero-day advanced persistent threats (APT).
 author: guywi-ms
 ms.author: guywild
-ms.topic: conceptual
-ms.date: 10/16/2024
+ms.topic: article
+ms.date: 12/15/2025
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
@@ -115,9 +115,13 @@ By surfacing anomalies in investigation graphs and user pages, and prompting ana
 
 This section outlines the key UEBA analyst experiences available in the Microsoft Defender portal.
 
+### UEBA home page widget 
+
+The Defender portal home page includes a UEBA widget where analysts can immediately have visibility into anomalous user behavior and therefore accelerate threat detection workflows. If the tenant isn't onboarded yet to UEBA, this widget also provides security admins quick access to the onboarding process. 
+
 ### UEBA insights in user investigations
 
-Analysts can quickly assess user risk using UEBA context displayed in side panels and the **Overview** tab on all user pages. When unusual behavior is detected, the portal automatically tags users with **UEBA anomalies**, helping prioritize investigations based on recent activity. For more information, see [User entity page in Microsoft Defender](https://aka.ms/ueba-entity-details).
+Analysts can quickly assess user risk using UEBA context displayed in side panels and the **Overview** tab on all user pages. When unusual behavior is detected, the portal automatically tags users with **UEBA anomalies** helping prioritize investigations based on recent activity. For more information, see [User entity page in Microsoft Defender](https://aka.ms/ueba-entity-details).
 
 Each user page includes a **Top UEBA anomalies** section, showing the top three anomalies from the past 30 days, along with direct links to pre-built anomaly queries and the Sentinel events timeline for deeper analysis.
 
@@ -131,7 +135,7 @@ During incident investigations, analysts can launch built-in queries directly fr
 
 For more information, see [Investigate incidents in the Microsoft Defender portal](https://aka.ms/ueba-go-hunt).
 
-### Enrich Advanced Hunting queries and custom detections with UEBA data
+### Enrich advanced hunting queries and custom detections with UEBA data
 
 When analysts write Advanced Hunting or custom detection queries using UEBA-related tables, the Microsoft Defender portal displays a banner that prompts them to join the **Anomalies** table. This enriches investigations with behavioral insights and strengthens the overall analysis.
 
