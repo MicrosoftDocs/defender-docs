@@ -44,7 +44,7 @@ jobs:
           # Parse CODEOWNERS - extract users and teams
           ENTRIES=$(cat "$CODEOWNERS_FILE" | tr ' ' '\n' | grep '^@' | sed 's/@//' | sort -u)
 
-          APPROVED_USERS="shsagir"
+          APPROVED_USERS=""
 
           for entry in $ENTRIES; do
             if [[ "$entry" == *"/"* ]]; then
@@ -61,19 +61,12 @@ jobs:
               HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
               BODY=$(echo "$RESPONSE" | sed '$d')
               
-              echo "API Response Code: $HTTP_CODE"
-              
               if [ "$HTTP_CODE" = "200" ]; then
                 TEAM_MEMBERS=$(echo "$BODY" | jq -r '.[].login' 2>/dev/null || echo "")
                 if [ -n "$TEAM_MEMBERS" ]; then
-                  echo "Team members found: $TEAM_MEMBERS"
+                  echo "Team members from $ORG/$TEAM: $TEAM_MEMBERS"
                   APPROVED_USERS="$APPROVED_USERS $TEAM_MEMBERS"
-                else
-                  echo "No members found in team response"
                 fi
-              else
-                echo "Failed to fetch team members. Response:"
-                echo "$BODY" | head -20
               fi
             else
               # This is an individual user
