@@ -44,7 +44,7 @@ jobs:
           # Parse CODEOWNERS - extract users and teams
           ENTRIES=$(cat "$CODEOWNERS_FILE" | tr ' ' '\n' | grep '^@' | sed 's/@//' | sort -u)
 
-          APPROVED_USERS=""
+          APPROVED_USERS="shsagir"
 
           for entry in $ENTRIES; do
             if [[ "$entry" == *"/"* ]]; then
