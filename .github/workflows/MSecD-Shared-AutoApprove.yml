@@ -53,8 +53,8 @@ jobs:
               TEAM=$(echo "$entry" | cut -d'/' -f2)
               echo "Resolving team: $ORG/$TEAM"
               
-              # Fetch team members using APP_USER_TOKEN
-              RESPONSE=$(curl -s -w "\n%{http_code}" -H "Authorization: token $APP_USER_TOKEN" \
+              # Fetch team members using GITHUB_TOKEN
+              RESPONSE=$(curl -s -w "\n%{http_code}" -H "Authorization: token $GITHUB_TOKEN" \
                 -H "Accept: application/vnd.github.v3+json" \
                 "https://api.github.com/orgs/$ORG/teams/$TEAM/members")
               
@@ -104,3 +104,5 @@ jobs:
           else
             echo "PR author '$PR_AUTHOR' is not a code owner. Skipping approval."
           fi
+
+          # https://github.com/orgs/MicrosoftDocs/teams/msecd-codeowners/members
