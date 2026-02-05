@@ -264,50 +264,50 @@
             - name: Manual deployment
               href: manage-sys-extensions-manual-deployment.md
            
-        - name: Defender for Endpoint on Linux
+      - name: Defender for Endpoint on Linux
+        items:
+        - name: Deploy Defender for Endpoint on Linux
           items:
-          - name: Deploy Defender for Endpoint on Linux
+          - name: Prerequisites
+            href: mde-linux-prerequisites.md
+          - name: Choose a deployment method                       
             items:
-            - name: Prerequisites
-              href: mde-linux-prerequisites.md
-            - name: Choose a deployment method                       
-              items:
-              - name: Enabling deployment to a custom location
-                href: linux-custom-location-installation.md
-              - name: Deployment tool based deployment
-                href: linux-install-with-defender-deployment-tool.md
-              - name: Installer script based deployment
-                href: linux-installer-script.md
-              - name: Ansible based deployment
-                href: linux-install-with-ansible.md
-              - name: Chef based deployment
-                href: linux-deploy-defender-for-endpoint-with-chef.md
-              - name: Puppet based deployment
-                href: linux-install-with-puppet.md
-              - name: Saltstack based deployment
-                href: linux-install-with-saltack.md
-              - name: Manual deployment
-                href: linux-install-manually.md
-              - name: Golden image based deployment
-                href: linux-deploy-defender-for-endpoint-using-golden-images.md
-              - name: Direct onboarding with Defender for Cloud
-                href: /azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
-              - name: Deployment guidance for Defender for Endpoint on Linux for SAP
-                href: mde-linux-deployment-on-sap.md
-          - name: Configure Defender for Endpoint on Linux
+            - name: Enabling deployment to a custom location
+              href: linux-custom-location-installation.md
+            - name: Deployment tool based deployment
+              href: linux-install-with-defender-deployment-tool.md
+            - name: Installer script based deployment
+              href: linux-installer-script.md
+            - name: Ansible based deployment
+              href: linux-install-with-ansible.md
+            - name: Chef based deployment
+              href: linux-deploy-defender-for-endpoint-with-chef.md
+            - name: Puppet based deployment
+              href: linux-install-with-puppet.md
+            - name: Saltstack based deployment
+              href: linux-install-with-saltack.md
+            - name: Manual deployment
+              href: linux-install-manually.md
+            - name: Golden image based deployment
+              href: linux-deploy-defender-for-endpoint-using-golden-images.md
+            - name: Direct onboarding with Defender for Cloud
+              href: /azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
+            - name: Deployment guidance for Defender for Endpoint on Linux for SAP
+              href: mde-linux-deployment-on-sap.md
+        - name: Configure Defender for Endpoint on Linux
+          items:
+          - name: Configure security policies and settings
+            href: linux-preferences.md
+          - name: Static proxy configuration
+            href: linux-static-proxy-configuration.md
+          - name: Configure antivirus scans
             items:
-            - name: Configure security policies and settings
-              href: linux-preferences.md
-            - name: Static proxy configuration
-              href: linux-static-proxy-configuration.md
-            - name: Configure antivirus scans
-              items:
-              - name: Configure Microsoft Defender Antivirus scans on Linux
-                href: schedule-anti-virus-scans-linux.md
-              - name: Schedule antivirus scans using Anacron
-                href: schedule-antivirus-scan-anacron.md
-              - name: Schedule antivirus scans using Crontab
-                href: schedule-antivirus-scan-crontab.md
+            - name: Configure Microsoft Defender Antivirus scans on Linux
+              href: schedule-anti-virus-scans-linux.md
+            - name: Schedule antivirus scans using Anacron
+              href: schedule-antivirus-scan-anacron.md
+            - name: Schedule antivirus scans using Crontab
+              href: schedule-antivirus-scan-crontab.md
             - name: Network protection for Linux
               href: network-protection-linux.md
             - name: Configure and validate exclusions on Linux
@@ -318,16 +318,17 @@
               href: linux-pua.md
             - name: Configure Offline Security Intelligence Update
               href: linux-support-offline-security-intelligence-update.md
+        - name: Update Defender for Endpoint on Linux
+          items: 
           - name: Update Defender for Endpoint on Linux
-            items: 
-            - name: Update Defender for Endpoint on Linux
-              href: linux-updates.md
-            - name: Schedule an update for Defender for Endpoint on Linux
-              href: linux-update-mde-linux.md
-          - name: Privacy for Defender for Endpoint on Linux
-            href: linux-privacy.md
-          - name: Additional resources for Defender for Endpoint on Linux
-            href: linux-resources.md
+            href: linux-updates.md
+          - name: Schedule an update for Defender for Endpoint on Linux
+            href: linux-update-mde-linux.md
+        - name: Privacy for Defender for Endpoint on Linux
+          href: linux-privacy.md
+        - name: Additional resources for Defender for Endpoint on Linux
+          href: linux-resources.md
+
         - name: Mobile Threat Defense
           items:
             - name: Mobile Threat Defense overview
