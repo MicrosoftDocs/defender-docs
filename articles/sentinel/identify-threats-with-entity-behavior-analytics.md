@@ -44,9 +44,6 @@ For more information about which anomalies UEBA detects, see [Anomalies detected
 
 UEBA is natively integrated into Microsoft Sentinel and the Microsoft Defender portal, providing a seamless experience for security operations teams and embedded experiences that enhance threat investigation and response.
 
->[!IMPORTANT]
-> UEBA is a probabilistic, behavior‑based capability. It highlights anomalous activity and risk rather than generating deterministic alerts.
-
 ## Enable UEBA to create behavior profiles and detect anomalies
 
 To fully benefit from UEBA's advanced threat detection capabilities: 
