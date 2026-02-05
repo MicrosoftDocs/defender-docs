@@ -64,9 +64,13 @@ jobs:
               if [ "$HTTP_CODE" = "200" ]; then
                 TEAM_MEMBERS=$(echo "$BODY" | jq -r '.[].login' 2>/dev/null || echo "")
                 if [ -n "$TEAM_MEMBERS" ]; then
-                  echo "Team members from $ORG/$TEAM: $TEAM_MEMBERS"
+                  echo "Team members: $TEAM_MEMBERS"
                   APPROVED_USERS="$APPROVED_USERS $TEAM_MEMBERS"
+                else
+                  echo "No members found"
                 fi
+              else
+                echo "Failed to fetch team members for $ORG/$TEAM. HTTP Status: $HTTP_CODE"
               fi
             else
               # This is an individual user
