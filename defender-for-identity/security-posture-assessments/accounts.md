@@ -49,7 +49,7 @@ Stale accounts pose a security risk because they provide potential targets for a
 This recommendation lists any user accounts that have privileged roles in Microsoft Entra ID (such as Global Administrator) and are also members of highly privileged Active Directory groups (for example, Domain Admins, Enterprise Admins). These dual-privileged accounts significantly increase the organization’s attack surface.
  
 > [!NOTE]
-> Guest users, external identities, and accounts not synchronized to Microsoft Entra ID are excluded from this report. Only accounts that are enabled and hold privileges in both Entra ID and Active Directory are included.
+> Guests, external identities, and accounts not synchronized to Microsoft Entra ID are excluded from this report. Only accounts that are enabled and hold privileges in both Entra ID and Active Directory are included.
 
 
 **User impact**

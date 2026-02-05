@@ -90,7 +90,7 @@ For more information, see:[Security posture assessment: Locate accounts in built
 |domainName|String|The domain name of the sensor.|
 |senseClientVersion|String|The version of the Defender for Identity sensor client.|
 
-This capability is currently in preview and available in API Beta version. Learn more [here](/graph/api/resources/security-sensorcandidate?view=graph-rest-beta&preserve-view=true)
+This capability is currently in preview and available in API Preview version. Learn more [here](/graph/api/resources/security-sensorcandidate?view=graph-rest-beta&preserve-view=true)
 
 ### ADWS LDAP search in Advanced Hunting
 
@@ -136,7 +136,7 @@ The new security posture assessment lists users whose valid credentials were lea
 
 ### Expansion of identity scoping: Support for Organizational units (Preview)
 
-In addition to the GA release of scoping by Active Directory domains a few months ago, you can now scope by **Organizational Units (OUs)** as part of XDR User Role-Based Access Control (URBAC). This enhancement provides even more granular control over which entities and resources are included in security analysis.
+In addition to the GA release of scoping by Active Directory domains a few months ago, you can now scope by **Organizational Units (OUs)** as part of XDR User Role-based access control (URBAC). This enhancement provides even more granular control over which entities and resources are included in security analysis.
 
 For more information, see [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
 
@@ -182,7 +182,7 @@ Defender for Identity data centers are now also deployed in the United Arab Emir
 ### New API support for the Defender for Identity sensor v3.x (Preview)
 
 We're excited to announce the availability of a new Graph-based API for managing the Defender for Identity sensor v3.x server actions.
-This capability is currently in preview and available in API Beta version.
+This capability is currently in preview and available in API Preview version.
 
 This API allows customers to:
 
@@ -301,7 +301,7 @@ For more information, see:
 
 ### Scoped access by Active Directory domain now supported (Preview)
 
-MDI scoping is now available as part of XDR User Role-Based Access Control (URBAC). Organizations can now define and refine the scope of MDI monitoring, providing granular control over which entities and resources are included in security analysis.
+MDI scoping is now available as part of XDR User Role-based access control (URBAC). Organizations can now define and refine the scope of MDI monitoring, providing granular control over which entities and resources are included in security analysis.
 
 Scoping by Active Directory domains helps:
 
