@@ -51,17 +51,15 @@ UEBA is natively integrated into Microsoft Sentinel and the Microsoft Defender p
 
 To fully benefit from UEBA's advanced threat detection capabilities: 
 
-1. Enable UEBA in Microsoft Sentinel and connect key data sources, such as Microsoft Entra ID, Defender for Identity, and Office 365. For more information, see [Enable entity behavior analytics](enable-entity-behavior-analytics.md).
+1. **Enable UEBA in Microsoft Sentinel and connect key data sources**, such as Microsoft Entra ID, Defender for Identity, and Office 365. For more information, see [Enable entity behavior analytics](enable-entity-behavior-analytics.md).
    
-1. Install the UEBA Essentials solution, which includes dozens of ready-to-use queries on the `BehaviorAnalytics`, `IdentityInfo`, `Anomalies`, and `UserPeerAnalytics` tables. For more information about installing Microsoft Sentinel solutions, see [Install or update Microsoft Sentinel solutions](sentinel-solutions-deploy.md#install-or-update-content). 
+1. **Install the UEBA Essentials solution**, which includes dozens of ready-to-use queries on the `BehaviorAnalytics`, `IdentityInfo`, `Anomalies`, and `UserPeerAnalytics` tables. For more information about installing Microsoft Sentinel solutions, see [Install or update Microsoft Sentinel solutions](sentinel-solutions-deploy.md#install-or-update-content). 
 
     [Query the tables to investigate](#investigate-anomalies-with-ueba-data) risk scores and suspicious activity.  
   
-1. Integrate UEBA insights into workbooks, incident workflows, and hunting queries to maximize their value across the SOC.
+1. **Integrate UEBA insights** into workbooks, incident workflows, and hunting queries to maximize their value across the SOC.
 
-1. Use [UEBA experiences in the Microsoft Defender portal](#embedded-ueba-experiences-in-the-microsoft-defender-portal), which provide a seamless experience for security operations teams. Analysts can view UEBA anomalies directly within user investigations, incident graphs, and advanced hunting queries.
-
-## Investigate anomalies with UEBA data
+## Investigate anomalies using UEBA data
 
 This section provides an overview of the data in each of the UEBA tables. 
 
@@ -113,7 +111,7 @@ For example, when a user performs an Azure operation for the first time:
 
 While these scores serve different purposes, you can expect some correlation. High anomaly scores often align with high investigation priority, but not always. Each score provides unique insight for layered detection.
 
-## Embedded UEBA experiences in the Microsoft Defender portal 
+## UEBA experiences in the Microsoft Defender portal 
 
 By surfacing anomalies in investigation graphs and user pages, and prompting analysts to incorporate anomaly data in hunting queries, UEBA facilitates faster threat detection, smarter prioritization, and more efficient incident response. 
 
@@ -122,6 +120,9 @@ This section outlines the key UEBA analyst experiences available in the Microsof
 ### UEBA home page widget 
 
 The Defender portal home page includes a UEBA widget where analysts can immediately have visibility into anomalous user behavior and therefore accelerate threat detection workflows. If the tenant isn't onboarded yet to UEBA, this widget also provides security admins quick access to the onboarding process. 
+
+:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-widget.png" alt-text="Screenshot of the UEBA widget displaying recent user anomalies and a prompt to onboard if the tenant is not yet configured." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-widget.png":::
+
 
 ### UEBA insights in user investigations
 
