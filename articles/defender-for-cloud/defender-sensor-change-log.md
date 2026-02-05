@@ -21,6 +21,14 @@ To see the version of the sensor run:
 
 ### Sensor v0.8 (relevant to all AKS supported versions and Arc for K8s)
 
+**Sensor v0.8.47 – GA**
+
+- **Released:** February 2026
+
+- **What's included:**
+
+  - Performance Improvements 
+    
 **Sensor v0.8.42 – GA**
 
 - **Released:** December 2025
@@ -53,6 +61,14 @@ To see the version of the sensor run:
 
 ### Sensor v0.9 (deployed by Helm or Arc for K8s in Preview mode)
 
+**Sensor v0.9.50 – Preview**
+
+- **Released:** February 2026
+
+- **What's included:**
+
+  - Performance Improvements 
+    
 **Sensor v0.9.49 – Preview**
 
 - **Released:** December 2025
