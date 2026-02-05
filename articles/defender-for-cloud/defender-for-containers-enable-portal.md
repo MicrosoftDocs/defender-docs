@@ -211,7 +211,7 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 
 ## Prerequisites
 
-To enable Defender for Containers on an Azure Arc-enabled Kubernetes cluster, make sure that you cluster is:
+To enable Defender for Containers on an Azure Arc-enabled Kubernetes cluster, make sure that it is:
 
 - [Connected to Azure using Azure Arc–enabled Kubernetes](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
 
