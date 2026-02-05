@@ -1,0 +1,1 @@
+Set up your Azure Storage Connector to stream logs to Microsoft Sentinel
