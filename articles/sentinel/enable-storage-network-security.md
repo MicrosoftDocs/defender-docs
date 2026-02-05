@@ -42,7 +42,7 @@ To enable network security on the storage resources integrated with your Azure S
    - **Profile name**: Enter a profile name or accept the default.
 1. Select **Review + create** and then **Create**.
 
-   :::image type="content" source="./media/enable-storage-network-security/create-network-security-perimiter.png" lightbox="./media/enable-storage-network-security/ alt-text="A screenshot showing the creation of a Network Security Perimeter in the Azure portal.":::
+   :::image type="content" source="./media/enable-storage-network-security/create-network-security-perimiter.png" lightbox="./media/enable-storage-network-security/create-network-security-perimiter.png" alt-text="A screenshot showing the creation of a Network Security Perimeter in the Azure portal.":::
 
 ### Associate the Storage Account with the Network Security Perimeter
 1. Open your newly created Network Security Perimeter resource.
@@ -109,7 +109,7 @@ Event Grid delivery doesn't originate from fixed public IPs. The NSP validates d
 1. Select **Profiles** and then select the profile associated with your storage account
 1. Select **Inbound access rules** and then select **Add**
 
-   :::image type="content" source="./media/enable-storage-network-security/inbound-access-rules.png" lightbox="./media/enable-storage-network-security/inbound-access-rules.png" alt-text="A screenshot showing the creation of an inbound access rule to allow a subscription in the Azure portal.":::
+   :::image type="content" source="./media/enable-storage-network-security/inbound-access-rules.png" lightbox="./media/enable-storage-network-security/inbound-access-rules.png" alt-text="A screenshot showing the Inbound access rules page in the Azure portal.":::
 
 1. Enter a **Rule name**, for example `Allow-Subscription`
 1. Select *Subscription* from the **Source type** drop-down
@@ -138,7 +138,7 @@ Event Grid delivery doesn't originate from fixed public IPs. The NSP validates d
 > [!IMPORTANT]
 > Remove the quotes from the IP ranges and ensure that there's no trailing comma on the last entry before pasting them into the **Allowed Sources** field.
 
-:::image type="content" source="./media/enable-storage-network-security/scuba-ipv4-addresses.png" lightbox="./media/enable-storage-network-security/scuba-ipv4-addresses.png" alt-text="A screenshot showing the creation of an inbound access rule to allow a subscription in the Azure portal.":::
+:::image type="content" source="./media/enable-storage-network-security/scuba-ipv4-addresses.png" lightbox="./media/enable-storage-network-security/scuba-ipv4-addresses.png" alt-text="A screenshot showing a part of the ServiceTags_Public.json file with the Scuba service tag and IPv4 ranges highlighted.":::
 
 
 ### Validate and enforce
@@ -175,7 +175,7 @@ Setting the storage account to **Secured by Perimeter** ensures that all traffic
 3. Set **Secured by Perimeter (Most restricted)**
 4. Select **Save**
 
-:::image type="content" source="./media/enable-storage-network-security/set-storage-networing.png" lightbox="./media/enable-storage-network-security/set-storage-networking.png" alt-text="A screenshot showing how to set a storage account to 'Secured by Perimeter' in the Azure portal.":::
+:::image type="content" source="./media/enable-storage-network-security/set-storage-networking.png" lightbox="./media/enable-storage-network-security/set-storage-networking.png" alt-text="A screenshot showing how to set a storage account to 'Secured by Perimeter' in the Azure portal.":::
 
 
 ## Next steps
