@@ -20,7 +20,7 @@ jobs:
 
       - name: Check if author is a code owner and approve
         env:
-          APP_USER_TOKEN: ${{ secrets.APP_USER_TOKEN }}
+          MSECD_READTEAM_TOKEN: ${{ secrets.MSECD_READTEAM_TOKEN }}
           GITHUB_TOKEN: ${{ github.token }}
           PR_AUTHOR: ${{ github.actor }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
@@ -29,10 +29,11 @@ jobs:
           VERSION="1.0.1"
           echo "Auto Approve Workflow Version: $VERSION"
           
-          if [ -z "$APP_USER_TOKEN" ]; then
-            echo "ERROR: APP_USER_TOKEN secret is not set!"
+          if [ -z "$MSECD_READTEAM_TOKEN" ]; then
+            echo "ERROR: MSECD_READTEAM_TOKEN secret is not set!"
+          else
+            echo "MSECD_READTEAM_TOKEN is configured."
           fi
-          echo "APP_USER_TOKEN is configured."
           
           # Find CODEOWNERS file
           CODEOWNERS_FILE=""
@@ -61,8 +62,8 @@ jobs:
               TEAM=$(echo "$entry" | cut -d'/' -f2)
               echo "Resolving team: $ORG/$TEAM"
               
-              # Fetch team members using APP_USER_TOKEN
-              RESPONSE=$(curl -s -w "\n%{http_code}" -H "Authorization: token $APP_USER_TOKEN" \
+              # Fetch team members using MSECD_READTEAM_TOKEN
+              RESPONSE=$(curl -s -w "\n%{http_code}" -H "Authorization: token $MSECD_READTEAM_TOKEN" \
                 "https://api.github.com/orgs/$ORG/teams/$TEAM/members")
               
               HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
