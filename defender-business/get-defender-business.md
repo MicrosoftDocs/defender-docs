@@ -20,7 +20,7 @@ ms.collection:
 
 # Get Microsoft Defender for Business
 
-This article describes how to get Microsoft Defender for Business.
+This article describes how to get Microsoft Defender for Business. [test edit]
 
 Defender for Business is an endpoint security solution designed especially for small and medium-sized businesses with up to 300 users. For more information, see [Microsoft Defender for Business](mdb-overview.md).
 
