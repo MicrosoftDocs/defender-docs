@@ -436,36 +436,36 @@
           - name: Safe deployment practices
             href: mde-sdp-strategy.md
 
-      - name: Defender for Endpoint Security Operations Guide 
-        href: mde-sec-ops-guide.md
-      - name: Troubleshoot
+    - name: Defender for Endpoint Security Operations Guide 
+      href: mde-sec-ops-guide.md
+    - name: Troubleshoot
+      items:
+      - name: Troubleshoot antivirus scan issues
+        href: troubleshoot-mdav-scan-issues.md
+      - name: Troubleshoot onboarding issues
         items:
-        - name: Troubleshoot antivirus scan issues
-          href: troubleshoot-mdav-scan-issues.md
-        - name: Troubleshoot onboarding issues
-          items:
-          - name: Troubleshoot issues during onboarding
-            href: troubleshoot-onboarding.md
-          - name: Troubleshoot subscription and portal access issues
-            href: troubleshoot-onboarding-error-messages.md
-          - name: Troubleshoot security configuration management onboarding issues
-            href: troubleshoot-security-config-mgt.md
-          - name: Troubleshoot problems with tamper protection
-            href: troubleshoot-problems-with-tamper-protection.yml
-          - name: Troubleshooting migration issues
-            href: switch-to-mde-troubleshooting.md
-        - name: Troubleshoot sensor state
-          items:
-          - name: Check sensor state
-            href: check-sensor-status.md
-          - name: Fix unhealthy sensors
-            href: fix-unhealthy-sensors.md
-          - name: Inactive devices
-            href: fix-unhealthy-sensors.md#inactive-devices
-          - name: Misconfigured devices
-            href: fix-unhealthy-sensors.md#misconfigured-devices
-          - name: Review sensor events and errors on machines using Event Viewer
-            href: event-error-codes.md
+        - name: Troubleshoot issues during onboarding
+          href: troubleshoot-onboarding.md
+        - name: Troubleshoot subscription and portal access issues
+          href: troubleshoot-onboarding-error-messages.md
+        - name: Troubleshoot security configuration management onboarding issues
+          href: troubleshoot-security-config-mgt.md
+        - name: Troubleshoot problems with tamper protection
+          href: troubleshoot-problems-with-tamper-protection.yml
+        - name: Troubleshooting migration issues
+          href: switch-to-mde-troubleshooting.md
+      - name: Troubleshoot sensor state
+        items:
+        - name: Check sensor state
+          href: check-sensor-status.md
+        - name: Fix unhealthy sensors
+          href: fix-unhealthy-sensors.md
+        - name: Inactive devices
+          href: fix-unhealthy-sensors.md#inactive-devices
+        - name: Misconfigured devices
+          href: fix-unhealthy-sensors.md#misconfigured-devices
+        - name: Review sensor events and errors on machines using Event Viewer
+          href: event-error-codes.md
 
         - name: Troubleshoot Microsoft Defender for Endpoint on macOS
           items:
