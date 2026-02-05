@@ -101,7 +101,7 @@ jobs:
           if [ "$IS_APPROVED" = true ]; then
             echo "PR author '$PR_AUTHOR' is a code owner. Approving PR..."
             curl -s -X POST \
-              -H "Authorization: token $GITHUB_TOKEN" \
+              -H "Authorization: token $MSECD_READTEAM_TOKEN" \
               -H "Accept: application/vnd.github.v3+json" \
               "https://api.github.com/repos/$REPO/pulls/$PR_NUMBER/reviews" \
               -d '{"event":"APPROVE","body":"Auto-approved: PR author is a code owner."}'
