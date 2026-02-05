@@ -57,13 +57,22 @@ jobs:
               echo "Resolving team: $ORG/$TEAM"
               
               # Fetch team members using APP_USER_TOKEN
-              TEAM_MEMBERS=$(curl -s -H "Authorization: token $APP_USER_TOKEN" \
-                "https://api.github.com/orgs/$ORG/teams/$TEAM/members" | \
-                jq -r '.[].login' 2>/dev/null || echo "")
+              RESPONSE=$(curl -s -w "\n%{http_code}" -H "Authorization: token $APP_USER_TOKEN" \
+                "https://api.github.com/orgs/$ORG/teams/$TEAM/members")
               
-              if [ -n "$TEAM_MEMBERS" ]; then
-                echo "Team members from $ORG/$TEAM: $TEAM_MEMBERS"
-                APPROVED_USERS="$APPROVED_USERS $TEAM_MEMBERS"
+              HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
+              BODY=$(echo "$RESPONSE" | sed '$d')
+              
+              if [ "$HTTP_CODE" = "200" ]; then
+                TEAM_MEMBERS=$(echo "$BODY" | jq -r '.[].login' 2>/dev/null || echo "")
+                if [ -n "$TEAM_MEMBERS" ]; then
+                  echo "Team members: $TEAM_MEMBERS"
+                  APPROVED_USERS="$APPROVED_USERS $TEAM_MEMBERS"
+                else
+                  echo "No members found in team response."
+                fi
+              else
+                echo "Failed to fetch team members. HTTP Status: $HTTP_CODE"
               fi
             else
               # This is an individual user
