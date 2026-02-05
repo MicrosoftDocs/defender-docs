@@ -49,15 +49,11 @@ To create your first Azure Storage Blob connector, follow these steps:
 
 ## Troubleshooting
 
-For information on troubleshooting Azure Storage Blob connector issues, see the following resources:
-
-- Verify that the Event Grid system topic subscription is correctly configured to push blob created events to the storage queue.
-- Confirm that the service principal has the required roles assigned on the storage account (blob read and queue contribute).
-- Check the Data Collection Rule (DCR) configuration to ensure the stream name, data collection endpoint, and immutable ID are correct.
-- Review the connector health status in Microsoft Sentinel for any ingestion errors.
+For information on troubleshooting Azure Storage Blob connector issues, see [Troubleshoot Azure Storage Blob connector issues](azure-storage-blob-connector-troubleshoot.md).
 
 ## Related content
 
 - [Azure Storage Blob connectors API reference](data-connection-rules-reference-azure-storage.md)
 - [Create a codeless connector for Microsoft Sentinel](create-codeless-connector.md)
-- [Enable network security on connector integrated storage resources](enable-storage-network-security-how-to.md)
+- [Enable network security on connector integrated storage resources](enable-storage-network-security.md)
+- [Troubleshoot Azure Storage Blob connector issues](azure-storage-blob-connector-troubleshoot.md)
