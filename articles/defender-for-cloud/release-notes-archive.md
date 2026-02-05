@@ -2794,7 +2794,7 @@ Express configuration for vulnerability assessments in Defender for SQL is now G
 
 Check out this [blog](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/defender-for-sql-vulnerability-assessment-updates/ba-p/3837732) to learn more about express configuration.
 
-You can learn the differences between [express and classic configuration](sql-azure-vulnerability-assessment-overview.md#what-are-the-express-and-classic-configurations).
+You can learn the differences between [express and classic configuration](sql-azure-vulnerability-assessment-overview.md#sql-vulnerability-assessment-models).
 
 ### More scopes added to existing Azure DevOps Connectors
 
