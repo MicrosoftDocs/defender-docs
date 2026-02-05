@@ -26,6 +26,9 @@ jobs:
           PR_NUMBER: ${{ github.event.pull_request.number }}
           REPO: ${{ github.repository }}
         run: |
+          VERSION="1.0.0"
+          echo "Auto Approve Workflow Version: $VERSION"
+          
           # Find CODEOWNERS file
           CODEOWNERS_FILE=""
           for path in "CODEOWNERS" ".github/CODEOWNERS" "docs/CODEOWNERS"; do
