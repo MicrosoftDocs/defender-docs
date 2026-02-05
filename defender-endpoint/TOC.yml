@@ -1583,7 +1583,7 @@
         - name: Android
           href: release-notes-archive-android.md
 
-  - name: Read team testing
+  - name: Red team testing
     items:
     - name: Evaluate Microsoft Defender Antivirus
       href: evaluate-microsoft-defender-antivirus.md
