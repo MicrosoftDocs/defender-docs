@@ -75,6 +75,8 @@ Microsoft Sentinel stores UEBA insights across several tables, each optimized fo
 | [UserPeerAnalytics](ueba-reference.md#userpeeranalytics-table) | Dynamically calculated peer groups for behavioral baselines | Ranks top 20 peers based on security group membership, mailing lists, and other associations. Uses TF-IDF (term frequency–inverse document frequency) algorithm (smaller groups carry higher weight). |
 | [BehaviorAnalytics](ueba-reference.md#behavioranalytics-table) | Enriched behavioral data with geolocation and threat intelligence | Contains deviations from baseline with prioritization scores. Data depends on enabled connectors (Entra ID, AWS, GCP, Okta, and so on). |
 | [Anomalies](ueba-reference.md#anomalies-table) | Events identified as anomalous | Supports detection and investigation workflows. |
+| [SentinelBehaviorEntities](entity-behaviors-layer.md#best-practices-and-troubleshooting-tips-for-querying-behaviors) (Preview) | Aggregated behavior objects  | Translates raw security logs into structured "who did what to whom" summaries with natural language explanations and MITRE ATT&CK mappings. |
+| [SentinelBehaviorInfo](entity-behaviors-layer.md#best-practices-and-troubleshooting-tips-for-querying-behaviors) (Preview) | Behavior metadata and definitions | Contains behavior type definitions, descriptions, and associated tactics/techniques. |
 
 This screenshot shows an example of data in the `UserPeerAnalytics` table with the eight highest-ranked peers for the user Kendall Collins. Sentinel uses the TF-IDF algorithm to normalize weights when calculating peer ranks. Smaller groups carry higher weight.
 
