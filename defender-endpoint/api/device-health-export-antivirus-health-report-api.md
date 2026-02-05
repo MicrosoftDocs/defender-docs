@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-ms.date: 11/11/2025
+ms.date: 02/05/2026
 manager: bagol
 audience: ITPro
 ms.collection:
@@ -92,6 +92,40 @@ One of the following permissions is required to call this API. To learn more, in
 |---|---|---|
 |Application|Machine.Read.All|'Read all machine profiles'|
 |Delegated (work or school account)|Machine.Read|'Read machine information'|
+
+If you need to call the API without a user (Service-to-Service), refer to the official documentation: [Create an app to access Microsoft Defender for Endpoint without a user](/defender-endpoint/api/exposed-apis-create-app-webapp?tabs=PowerShell#get-an-access-token).
+
+Use the script below to ensure the scope is correctly defined for the Device Health in Defender for Endpoint API.
+
+```powershell
+# This script acquires the App Context Token and stores it in the variable $token for later use.
+# Paste your Tenant ID, App ID, and App Secret (App key) into the quotes below.
+
+$tenantId    = '' ### Paste your Tenant ID here
+$appId       = '' ### Paste your Application ID here
+$appSecret   = '' ### Paste your Application key here
+
+# Corrected Source App ID URI
+$sourceAppIdUri = '[https://api.securitycenter.microsoft.com/.default](https://api.securitycenter.microsoft.com/.default)'
+$oAuthUri       = "[https://login.microsoftonline.com/$tenantId/oauth2/v2.0/token](https://login.microsoftonline.com/$tenantId/oauth2/v2.0/token)"
+
+$authBody = [Ordered] @{
+    scope         = "$sourceAppIdUri"
+    client_id     = "$appId"
+    client_secret = "$appSecret"
+    grant_type    = 'client_credentials'
+}
+
+$authResponse = Invoke-RestMethod -Method Post -Uri $oAuthUri -Body $authBody -ErrorAction Stop
+$token = $authResponse.access_token
+
+# Output the token
+$token
+```
+
+> [!IMPORTANT]
+> If permission is defined under **WindowsDefenderATP**, the scope must be set to:
+> `https://api.securitycenter.microsoft.com/.default`
 
 ### 1.3 URL (HTTP request)
 
