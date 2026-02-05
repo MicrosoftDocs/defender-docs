@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-ms.date: 01/30/2026
+ms.date: 02/04/2026
 manager: orspodek
 audience: ITPro
 ms.collection:
@@ -32,12 +32,17 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+## February 2026
+
+- (GA) The [`IdentityAccountInfo`](advanced-hunting-identityaccountinfo-table.md) table in advanced hunting is now generally available. This table contains information about account information from various sources, including Microsoft Entra ID. It also includes information and link to the identity that owns the account.
+
 ## January 2026
 - (Preview) Custom detections rules in Microsoft Defender now support Near Real-Time (NRT) configuration on [Microsoft Sentinel data](custom-detection-rules.md#tables-that-support-continuous-nrt-frequency).
 - (Preview) In advanced hunting, if the query result exceeds the 64-MB size limit, the portal now returns the maximum number of records it can within this limit and displays a message indicating that the displayed results are partial due to size constraints. [Learn more](advanced-hunting-overview.md#quotas-and-usage-parameters)
 - (Preview) The [`BehaviorInfo`](advanced-hunting-behaviorinfo-table.md) and [`BehaviorEntities`](advanced-hunting-behaviorentities-table.md) tables in advanced hunting now include additional columns and information about behavior data types and alerts from User and Entity Behavior Analytics (UEBA), providing more insights on the relationships between identified behaviors and entities. [Learn more about UEBA behaviors](/azure/sentinel/entity-behaviors-layer)
 
 ## December 2025
+
 - (Preview) Microsoft Security Copilot in Microsoft Defender now includes the Dynamic Threat Detection Agent, an always-on, adaptive backend service that uncovers hidden threats across Defender and Microsoft Sentinel environments. [Learn more](dynamic-threat-detection-agent.md)
 - (GA) The [Microsoft Security Copilot Threat Intelligence Briefing Agent in Microsoft Defender](threat-intel-briefing-agent-defender.md) is now generally available. It generates threat intelligence briefings based on the latest threat actor activity and both internal and external vulnerability information in a matter of minutes, helping security teams save time by creating customized, relevant reports.
 - (Preview) Microsoft Security Copilot in Microsoft Defender now lets you to hunt for threats using natural language with the [Threat Hunting Agent](advanced-hunting-security-copilot-threat-hunting-agent.md). This agent delivers a complete, conversational threat hunting experience by not only generates queries but also interpreting results, surfacing insights, and guiding you through full hunting sessions. 
@@ -48,14 +53,16 @@ You can also get product updates and important notifications through the [messag
 - (GA) Advanced hunting now supports custom functions that use tabular parameters. With tabular parameters, you can pass entire tables as inputs. This approach lets you build more modular, reusable, and expressive logic across your hunting queries. [Learn more](advanced-hunting-custom-functions.md#create-custom-functions-with-tabular-parameters) 
 
 ## November 2025
+
 - Microsoft Sentinel customers using the Defender portal, or the Azure portal with the Microsoft Sentinel Defender XDR data connector, now also benefit from Microsoft Threat Intelligence alerts that highlight activity from nation-state actors, major ransomware campaigns, and fraudulent operations. To view these alert types, you must have the **Security Administrator** or **Global Administrator** role. The **Service Source**, **Detection Source**, and **Product Name** values for these alerts are listed as *Microsoft Threat Intelligence*.   For more information, see [Incidents and alerts in the Microsoft Defender portal](incidents-overview.md).
 - (Preview) Defender XDR now includes the **predictive shielding** capability, which uses predictive analytics and real-time insights to dynamically infer risk, anticipate attacker progression, and harden your environment before threats materialize. [Learn more](shield-predict-threats.md)
 - (Preview) A new **Restrict pod access** response action is now available when [investigating container threats](investigate-respond-container-threats.md) in the Defender portal. This response action blocks sensitive interfaces that allow lateral movement and privilege escalation. 
-- (Preview) The [`IdentityAccountInfo`](advanced-hunting-identityaccountinfo-table.md) table in advanced hunting is now available for preview. This table contains information about account information from various sources, including Microsoft Entra ID. It also includes information and link to the identity that owns the account. 
+- (Preview) The [`IdentityAccountInfo`](advanced-hunting-identityaccountinfo-table.md) table in advanced hunting is now available for preview. This table contains information about account information from various sources, including Microsoft Entra ID. It also includes information and link to the identity that owns the account.
 - (Preview) Threat analytics now has an **Indicators** tab that provides a list of all indicators of compromise (IOCs) associated with a threat. Microsoft researchers update these IOCs in real time as they find new evidence related to the threat. This information helps your security operations center (SOC) and threat intelligence analysts with remediation and proactive hunting. [Learn more](threat-analytics-indicators.md)
 - (Preview) The overview section of [threat analytics](threat-analytics.md) now includes additional details about a threat, such as alias, origin, and related intelligence, providing you with more insights on what the threat is and how it might impact your organization.
 
 ## October 2025
+
 - [Microsoft Defender Experts for XDR reports](reports-xdr.md) now include a **Trends** tab that provides you with the monthly volume of investigated and resolved incidents for the last six months. The tab visualizes the data according to the incidents' severity, MITRE tactic, and threat type. This section gives you insight into how Defender Experts are tangibly improving your security operations by showing important operational metrics on a month-over-month basis.
 - [Microsoft Defender Experts for Hunting reports](defender-experts-report.md) now include an **Emerging threats** section that details the proactive, hypothesis-based hunts Defender Experts conducted in your environment. Each report also now includes investigation summaries for nearly every hunt that Defender Experts conduct in your environment, regardless of whether they identified a confirmed threat.
 
