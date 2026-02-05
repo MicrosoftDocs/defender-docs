@@ -198,6 +198,24 @@ To exclude specific GKE clusters from automatic provisioning, add labels to the 
    - **Microsoft Defender for Containers** status is **Succeeded**
    - **Azure Policy for Kubernetes** status is **Succeeded** (if enabled)
 
+### Verify that the Defender sensor is running in the cluster
+
+You can validate that the Defender sensor DaemonSet was deployed successfully:
+
+```bash
+kubectl get pods -n kube-system
+```
+
+Look for pods related to Microsoft Defender for Containers.
+
+You can also verify the DaemonSet status:
+
+```bash
+kubectl get ds -n kube-system
+```
+
+The Defender sensor DaemonSet should show the desired and ready pod counts matching the number of cluster nodes.
+
 ## Manage the Defender extension from the Arc-enabled Kubernetes resource (optional)
 
 You can also inspect and manage the Defender for Containers extension directly from the Azure Arc-enabled Kubernetes resource:
@@ -256,16 +274,38 @@ For clusters connected through Azure Arc, you can exclude Defender components by
 
 ## Verify deployment
 
+### Verify recommendation health in Defender for Cloud
+
 1. Go to **Microsoft Defender for Cloud** > **Recommendations** and confirm the recommendation becomes **Healthy**.
 
-2. Open the Arc-enabled cluster resource in Azure.
+### Verify extension installation in Azure
 
-3. Select **Extensions** and verify:
+1. Open the Arc-enabled cluster resource in Azure.
+
+1. Select **Extensions** and verify:
 
    - **Microsoft Defender for Containers** status is **Succeeded**
    - **Azure Policy for Kubernetes** status is **Succeeded** (if enabled)
 
-## Manage the Defender extension from the Arc-enabled Kubernetes resource (optional)
+### Verify that the Defender sensor is running in the cluster
+
+You can validate that the Defender sensor DaemonSet was deployed successfully:
+
+```bash
+kubectl get pods -n kube-system
+```
+
+Look for pods related to Microsoft Defender for Containers.
+
+You can also verify the DaemonSet status:
+
+```bash
+kubectl get ds -n kube-system
+```
+
+The Defender sensor DaemonSet should show the desired and ready pod counts matching the number of cluster nodes.
+
+### Manage the Defender extension from the Arc-enabled Kubernetes resource (optional)
 
 You can also inspect and manage the Defender for Containers extension directly from the Azure Arc-enabled Kubernetes resource:
 
