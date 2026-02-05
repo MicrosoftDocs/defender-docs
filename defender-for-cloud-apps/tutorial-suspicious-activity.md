@@ -22,7 +22,7 @@ To fully realize the benefits of these detections, make sure you configure the f
 |**[Proxy log](proxy-intro-aad.md)**       | Activities from your [conditional access app control apps](tutorial-proxy.md#phase-1-monitor-user-activities-for-anomalies).        |
 
 
-You can fine-tune the following policies by setting filters, dynamic thresholds (UEBA) to help train their detection models, and suppressions to reduce common false positive detections:
+You can fine-tune the following policies by setting filters and dynamic thresholds (UEBA) to help train their detection models. You can also set suppressions to reduce common false positive detections:
 
 - Anomaly detection
 - Cloud discovery anomaly detection
@@ -53,7 +53,7 @@ Because IP address information is crucial for almost all investigations, [config
 
 ### Review out-of-the-box anomaly detection alerts
 
-Defender for Cloud Apps includes a set of anomaly detection alerts to identify different security scenarios. The solution automatically enables these detections, and they start to profile user activity and generate alerts as soon as you connect the relevant [app connectors](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md).
+Defender for Cloud Apps includes a set of anomaly detection alerts to identify different security scenarios. The solution automatically enables these detections. They start to profile user activity and generate alerts as soon as you connect the relevant [app connectors](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md).
 
 Start by familiarizing yourself with the [different detection policies](control-cloud-apps-with-policies.md). Prioritize the top scenarios that you think are most relevant for your organization, and tune the policies accordingly.
 
@@ -87,7 +87,7 @@ For a full list of detections and what they do, see [Anomaly detection policies]
     - **Attack simulations**  
     Many organizations use a user or a group to constantly simulate attacks. Obviously, it doesn't make sense to constantly receive alerts from these users' activities. Therefore, you can configure your policies to exclude these users or groups. This choice also helps the machine learning models identify these users and fine-tune their dynamic thresholds accordingly.
     - **Targeted detections**  
-        You might want to investigate a specific group of VIP users such as members of an administrator or CXO group. In this scenario, you can create a policy for the activities you want to detect and choose to only include the set of users or groups you're interested.
+        You might want to investigate a specific group of VIP users such as members of an administrator or CXO group. In this case, create a policy for the activities you want to detect and choose to only include the set of users or groups you're interested in.
 
 1. **Tune anomalous sign-in detections**
 
@@ -143,7 +143,7 @@ To prevent alert fatigue, set the **daily alert limit**.
 > Since December 15, 2022, Microsoft deprecated the Alerts/SMS (text messages) feature.
 > If you want to receive text alerts, use Microsoft Power Automate for custom alert automation. For more information, see [Integrate with Microsoft Power Automate for custom alert automation](flow-integration.md).
 
-Choose the format and medium that best suits your needs for receiving alerts. To get immediate alerts at any time of the day, choose to receive them through email.
+Choose the format and medium that best suit your needs for receiving alerts. To get immediate alerts at any time of the day, choose to receive them through email.
 
 You might also want the ability to analyze alerts in the context of other alerts triggered by other products in your organization. This analysis gives you a holistic view of a potential threat. For example, you might want to correlate between cloud-based and on-premises events to see if there's any other mitigating evidence that confirms an attack.
 
@@ -162,4 +162,4 @@ Create the automation playbooks you require and set it as the policy's alert to 
 
 After configuring your policies and alerts, start to investigate and remediate any suspicious activities detected in your organization. For example, you might want to look into activities that indicate that a [user is compromised](tutorial-ueba.md#identify).
 
-To optimize your protection, set up automatic remediation actions to minimize the risk to your organization. Our policies allow you to apply [governance actions](governance-actions.md) in conjunction with the alerts so that the risk to your organization is reduced even before you start investigating. The policy type determines the available actions, including actions such as suspending a user or blocking access to the requested resource.
+To optimize your protection, set up automatic remediation actions to minimize the risk to your organization. The policies allow you to apply [governance actions](governance-actions.md) in conjunction with the alerts so that the risk to your organization is reduced even before you start investigating. The policy type determines the available actions, including actions such as suspending a user or blocking access to the requested resource.
