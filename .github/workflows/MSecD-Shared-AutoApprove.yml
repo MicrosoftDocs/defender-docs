@@ -56,24 +56,14 @@ jobs:
               TEAM=$(echo "$entry" | cut -d'/' -f2)
               echo "Resolving team: $ORG/$TEAM"
               
-              # Fetch team members using GITHUB_TOKEN
-              RESPONSE=$(curl -s -w "\n%{http_code}" -H "Authorization: token $GITHUB_TOKEN" \
-                -H "Accept: application/vnd.github.v3+json" \
-                "https://api.github.com/orgs/$ORG/teams/$TEAM/members")
+              # Fetch team members using APP_USER_TOKEN
+              TEAM_MEMBERS=$(curl -s -H "Authorization: token $APP_USER_TOKEN" \
+                "https://api.github.com/orgs/$ORG/teams/$TEAM/members" | \
+                jq -r '.[].login' 2>/dev/null || echo "")
               
-              HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
-              BODY=$(echo "$RESPONSE" | sed '$d')
-              
-              if [ "$HTTP_CODE" = "200" ]; then
-                TEAM_MEMBERS=$(echo "$BODY" | jq -r '.[].login' 2>/dev/null || echo "")
-                if [ -n "$TEAM_MEMBERS" ]; then
-                  echo "Team members: $TEAM_MEMBERS"
-                  APPROVED_USERS="$APPROVED_USERS $TEAM_MEMBERS"
-                else
-                  echo "No members found"
-                fi
-              else
-                echo "Failed to fetch team members for $ORG/$TEAM. HTTP Status: $HTTP_CODE"
+              if [ -n "$TEAM_MEMBERS" ]; then
+                echo "Team members from $ORG/$TEAM: $TEAM_MEMBERS"
+                APPROVED_USERS="$APPROVED_USERS $TEAM_MEMBERS"
               fi
             else
               # This is an individual user
