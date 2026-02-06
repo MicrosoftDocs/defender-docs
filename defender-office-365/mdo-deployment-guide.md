@@ -282,6 +282,9 @@ The important parts of user message reporting are:
 - The built-in **Report** button in Outlook on the web (formerly known as Outlook Web App or OWA).
 - Non-Microsoft reporting tools that use the [supported message submission format](submissions-user-reported-messages-custom-mailbox.md#message-submission-format-for-non-microsoft-reporting-tools).
 
+  > [!TIP]
+  > In [attack simulation training in Defender for Office 365 Plan 2](attack-simulation-training-get-started.md), simulation messages reported by non-Microsoft tools aren't captured in attack simulation reports.
+
 - **Where do user reported messages go?**: You have the following options:
   - To a designated reporting mailbox and to Microsoft (this value is the default).
   - To a designated reporting mailbox only.

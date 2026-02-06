@@ -309,6 +309,9 @@ This section describes the information in the simulation report for regular simu
 
 The **Simulation impact** section on **Report** tab** for a simulation shows the number and percentage of **Compromised users** and **Users who reported** the message.
 
+> [!TIP]
+> Simulation messages reported by non-Microsoft tools aren't captured in attack simulation reports.
+
 If you hover over a section in the chart, the actual numbers for each category are shown.
 
 Select **View compromised users** to go to the [Users tab](attack-simulation-training-simulations.md#users-tab) tab in the report where the results are filtered by **Compromised: Yes**.
@@ -412,6 +415,8 @@ When you export information from the reports, the CSV file contains more informa
 
 > [!TIP]
 > For maximum information, verify that all available columns in the report are visible before you export.
+>
+> Simulation messages reported by non-Microsoft tools aren't captured in attack simulation reports.
 
 |Field Name|Description|
 |---|---|
