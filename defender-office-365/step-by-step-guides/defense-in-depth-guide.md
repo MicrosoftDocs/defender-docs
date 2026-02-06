@@ -15,7 +15,7 @@ ms.collection:
 - tier3
 ms.topic: how-to
 search.appverid: met150
-ms.date: 02/24/2025
+ms.date: 02/26/2026
 ---
 
 # Getting the best security value from Microsoft Defender for Office 365 when you have non-Microsoft email filtering
