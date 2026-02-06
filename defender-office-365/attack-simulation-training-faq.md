@@ -168,6 +168,8 @@ If you own the sender domain, the undelivered simulation report is returned in a
 >
 > - Simulation data recording starts a few minutes after the simulation is launched and after users begin interacting with the simulation messages. There's no fixed start time. Events are still captured after the simulation ends.
 >
+> - Ensure users report simulation messages using Microsoft‑supported reporting methods such as the native Report Phishing add‑in. Reports submitted through third‑party buttons are not captured in AST reports
+>
 > - After December 2025 as described in Message Center post [MC1166864](https://admin.microsoft.com/AdminPortal/Home?#/MessageCenter/:/messages/MC1166864), user interaction signals are captured consistently until the simulation ends. For example:
 >   - Compromise
 >   - Report
