@@ -91,7 +91,7 @@ The following information details how to get the most out of your investment, br
 - You can configure user reported settings to allow users to report good or bad messages to Microsoft, to a designated reporting mailbox (to integrate with current security workflows) or both using the built-in **Report** button in [supported versions of Outlook](../submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) or using [supported non-Microsoft solutions](../submissions-user-reported-messages-custom-mailbox.md#options-for-non-microsoft-reporting-tools). Admins can use the **User reported** tab on the **Submissions** page to triage false positives and false negative user reported messages.
 
   > [!TIP]
-  > In [attack simulation training in Defender for Office 365 Plan 2](attack-simulation-training-get-started.md), simulation messages reported by non-Microsoft tools aren't captured in attack simulation reports.
+  > In [attack simulation training in Defender for Office 365 Plan 2](../attack-simulation-training-get-started.md), simulation messages reported by non-Microsoft tools aren't captured in attack simulation reports.
 
   **Read more here:** [User reported settings](../submissions-user-reported-messages-custom-mailbox.md) and [Report phishing and suspicious emails in Outlook for admins](../submissions-outlook-report-messages.md)
 
