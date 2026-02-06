@@ -21,7 +21,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 11/17/2025
+ms.date: 02/05/2026
 ---
 
 # Understand the advanced hunting schema
@@ -52,7 +52,7 @@ To quickly access the schema reference, select the **View reference** action nex
 ## Learn the schema tables
 The following reference lists all the tables in the schema. Each table name links to a page describing the column names for that table. Table and column names are also listed in Microsoft Defender XDR as part of the schema representation on the advanced hunting screen.
 
-| Table name | Description | DCR support | Lake-only ingestion |
+| Table name | Description | DCR support | Lake-only ingestion supported |
 |------------|-------------|------------|----------------------|
 | **[AADSignInEventsBeta](advanced-hunting-aadsignineventsbeta-table.md)** | Microsoft Entra interactive and non-interactive sign-ins |	No|	No|
 | **[AADSpnSignInEventsBeta](advanced-hunting-aadspnsignineventsbeta-table.md)** | Microsoft Entra service principal and managed identity sign-ins |	No|	No|
