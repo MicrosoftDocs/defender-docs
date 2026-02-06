@@ -260,16 +260,17 @@ Specifies the enforcement preference of antivirus engine. There are three values
 
 - **Real-time** (`real_time`): Real-time protection (scan files as they're modified) is enabled.
 
-- **On-demand** (`on_demand`): Files are scanned only on demand.
-  - Real-time protection is turned off.
+- **On-demand** (`on_demand`): Files are scanned only on demand:
+  - Real-time protection is off.
   - Definition updates occur only when a scan starts, even if `automaticDefinitionUpdateEnabled` is set to `true` in on-demand mode.
 
-- **Passive** (`passive`): Runs the antivirus engine in passive mode.
-  - Real-time protection is turned off: Microsoft Defender Antivirus doesn't remediate threats.
-  - On-demand scanning is turned on: Still use the scan capabilities on the endpoint.
-  - Automatic threat remediation is turned off: No files are moved and your security administrator is expected to take required action.
-  - Security intelligence updates are turned on: Alerts are available in the security administrator's organization.
-  - Definition updates occur only when a scan starts, even if `automaticDefinitionUpdateEnabled` is set to `true` in passive mode.
+- **Passive** (`passive`): Runs the antivirus engine in passive mode:
+  - Real-time protection is off. Microsoft Defender Antivirus doesn't remediate threats.
+  - On-demand scanning is on. Scan capabilities are still available on the device.
+  - Automatic threat remediation is off. No files are moved and your security administrator is expected to take required action.
+  - Security intelligence updates are on. Alerts are available in the security administrator's organization.
+  - Definition updates occur only when a scan starts, even if `automaticDefinitionUpdateEnabled` is set to `true`.
+  - [Endpoint detection and response (EDR)](overview-endpoint-detection-response.md) is on. The output of the `mdatp health` command on the device shows `engine not loaded` for the `engine_load_version` property. The engine is related to antivirus, not EDR.
 
 > [!NOTE]
 >
@@ -804,7 +805,7 @@ Specifies whether Defender for Endpoint scans network socket events. For example
 The *cloudService* entry in the configuration profile configures the cloud-driven protection feature.
 
 > [!NOTE]
-> Cloud-delivered protection is applicable with any Enforcement level settings (real time, on_demand, passive).
+> Cloud-delivered protection is applicable with any Enforcement level settings (`real_time`, `on_demand`, or `passive`).
 
 |Description|JSON Value|Microsoft Defender portal value|
 |---|---|---|
@@ -880,7 +881,7 @@ Specifies whether security intelligence updates are installed automatically.
 |**Data type**|Boolean|Drop down|
 |**Possible values**|`true` (default) <br/>`false`|`Not configured`<br/>`Disabled`<br/>`Enabled` (Default)|
 
-Depending on the enforcement level, the automatic security intelligence updates are installed differently. In RTP mode, updates are installed periodically. In Passive/ On-Demand mode, updates are installed before every scan.
+Depending on the enforcement level, the automatic security intelligence updates are installed differently. In RTP mode, updates are installed periodically. In Passive or On-Demand mode, updates are installed before every scan.
 
 ### Advanced optional features
 
