@@ -1,0 +1,384 @@
+---
+title: Generate playbooks using AI in Microsoft Sentinel
+description: Generate playbooks through natural language conversations directly in the Defender portal.
+author: mberdugo
+ms.author: monaberdugo
+ms.reviewer: Shiran Shuster Zur
+ms.topic: how-to
+ms.date: 01/13/2026
+ms.service: microsoft-sentinel
+appliesto:
+    - Microsoft Sentinel in the Microsoft Defender portal
+ms.collection: usx-security
+#Customer intent: As a security analyst, I want to generate playbooks using AI so that I can quickly create automation workflows without extensive coding knowledge.
+
+---
+
+# Generate playbooks using AI in Microsoft Sentinel (preview)
+
+Generated Playbooks are code-based automation workflows co-authored through a conversational experience with Cline, an AI coding agent. You describe automation logic in natural language, and the system generates validated, code-based playbooks with complete documentation and visual flow diagrams. This experience is powered by an embedded Visual Studio Code environment within the Defender portal, so you can author and refine playbooks without leaving the portal. Generated playbooks use USX alert data as input and dynamically generate the required API calls, as long as you configure the integration for the target provider.
+
+This article describes how to generate playbooks by using AI, configure required integrations, and deploy your automation workflows.
+
+> [!IMPORTANT]
+> Generated Playbooks are currently in preview. This feature requires Security Copilot to be enabled in your tenant, though Security Compute Units (SCUs) aren't billed during the preview period.
+
+Playbook generation provides the following capabilities:
+
+- **Co-author with AI**: Build playbooks through natural language conversations with Cline, an AI coding agent hosted in a VS Code environment embedded in the Defender portal. Once the playbook is generated, you can test it by providing a real alert as input.
+- **Automatic documentation**: Generate comprehensive playbook documentation and visual flow diagrams automatically
+- **Third-party integrations**: Connect external tools and APIs seamlessly through integration profiles
+- **Broad alert coverage**: Apply automation to alerts from Microsoft Sentinel, Microsoft Defender, and XDR platforms
+
+An embedded Visual Studio Code environment within the Microsoft Defender portal powers the experience. You can author and refine playbooks without leaving the portal.
+
+## Prerequisites
+
+Before you can use the playbook generator, ensure you meet the following requirements:
+
+### Environment requirements
+
+- **Security Copilot**: Your tenant must be Security Copilot enabled with SCUs available. You won't be billed for SCUs, but their availability is a technical requirement.
+
+- **Microsoft Sentinel workspace**: Your tenant must have a Sentinel workspace onboarded to Microsoft Defender.
+
+- **Data sharing preferences**: In Security Copilot, enable the first slider, *Allow Microsoft to capture data from Security Copilot to validate product performance using human review*, in Customer Data Sharing preferences. For more information, see [Privacy and data security in Microsoft Security Copilot](/security-copilot/privacy-data-security).
+
+### Required roles and permissions
+
+To use the new Automation experience and create generated playbooks, you need the following permissions:
+
+- **To author Automation Rules**: Ask a security admin to grant you the **Microsoft Sentinel Contributor** role on the relevant Workspaces or Resource Groups containing them in Azure. See [Microsoft Entra built-in roles](/azure/sentinel/roles#built-in-azure-roles-for-microsoft-sentinel)
+
+- **To author generated Playbooks:** Ask a security admin to grant you the **Security Administrator** role in Microsoft Entra in Azure. See [Microsoft Entra built-in roles - Microsoft Entra ID \| Microsoft Learn](/entra/identity/role-based-access-control/permissions-reference#security-administrator)
+
+> [!NOTE]
+> Permissions might take up to two hours to take effect after assignment.
+
+### Recommended: Configure a dedicated Security Copilot workspace
+
+If you don't already have a dedicated Security Copilot workspace configured to use a US-based capacity for AI-generated playbooks, it's recommended to create one.
+
+1. In [Security Copilot](https://securitycopilot.microsoft.com), go to **Owner** > **Manage workspaces**.
+
+1. Select **+ New workspace**.
+
+   :::image type="content" source="./media/generate-playbook/new-workspace.png" alt-text="Screenshot of manage workspace screen with Create new workspace button in the top right.":::
+
+1. In the **Create a new workspace** dialog:
+
+   1. Enter the workspace name exactly as: `soarnl-workspace`
+
+   1. Enable privacy flags:
+      - Select **Allow Microsoft to capture data to validate product performance**
+      - Select **Allow Microsoft to capture and review data to build and validate Microsoft's security AI model**
+
+   1. Accept the Terms and Conditions.
+
+   1. Under **Capacity**, select **Create a new capacity**.
+
+      :::image type="content" source="./media/generate-playbook/create-new-capacity.png" alt-text="Screenshot of Create new workspace dialog with Create a new capacity link highlighted.":::
+
+1. Configure the new capacity:
+
+   In the **Create a Security capacity** dialog:
+
+   1. Choose your Azure subscription, resource group, and capacity name.
+
+   1. Set **Prompt evaluation location** to **United States** or **Europe**.
+
+   1. Clear the checkbox: **If this location has too much traffic, allow Copilot to evaluate prompts anywhere in the world**.
+
+   1. Select your preferred capacity region (for example, **US East**).
+
+   1. Adjust compute units and overage settings as needed.
+
+   1. Select **Create**.
+
+1. After creating the capacity, make sure it's selected for the `soarnl-workspace` and the workspace shows the US capacity.
+
+:::image type="content" source="./media/generate-playbook/create-capacity.png" alt-text="Screenshot of the new capacity details.":::
+
+Generated playbooks automatically use this workspace if available.
+
+## Key concepts
+
+### Integration profiles
+
+Integration profiles are secure configurations that allow generated playbooks to interact with external APIs. Each integration includes:
+
+- Base URL
+- Authentication method
+- Required credentials
+
+Manage integration profiles centrally in the Defender portal under the **Automation** tab. Before creating a playbook, ensure you configure all required integrations.
+
+### Enhanced alert trigger
+
+The Enhanced Alert Trigger extends automation capabilities beyond the standard alert trigger by providing:
+
+- **Broader coverage**: Target alerts across Microsoft Sentinel, Microsoft Defender, and XDR platforms
+- **Tenant-level application**: Ensure consistency across multiple workspaces
+- **Advanced conditions**: Define granular criteria for triggering automation
+
+This trigger mechanism enables automatic execution of generated playbooks across your security ecosystem.
+
+## Generate a new playbook
+
+### Step 1. Switch to the New experience
+
+From the Microsoft Defender portal, go to **Microsoft Sentinel** > **Configuration**.
+
+### Step 2. Create a Graph API integration profile and add any other required integrations you want to utilize
+
+1. In the Azure portal, go to **Microsoft Entra ID** > **Manage** > **App registrations**.
+
+1. Select **New registration**.
+
+   :::image type="content" source="./media/generate-playbook/new-registration.png" alt-text="Screenshot of the New registration page in Microsoft Entra ID.":::
+
+1. After the registration finishes, select the app registration and go to **Overview**.
+
+1. Copy the **Application (client) ID** and **Directory (tenant) ID**. Save these values for later use.
+
+1. Go to **Manage** > **Certificates & secrets** > **Client secrets**.
+
+1. Select **New client secret**, provide a name and expiration date, and then select **Add**.
+
+   :::image type="content" source="./media/generate-playbook/client-secrets.png" alt-text="Screenshot of the New client secret page in Microsoft Entra ID.":::
+
+1. Immediately copy the client secret **Value** and store it securely. You can't retrieve this value again.
+
+<!---
+#### Configure API permissions
+
+1. In the Azure portal, go to **Microsoft Entra ID** > **App registrations** > select your Graph app.
+
+1. Select **API permissions** > **Add a permission** > **Microsoft Graph**.
+
+1. Select **Application permissions**.
+
+1. Search for and select **SecurityAlert.Read.All**.
+
+1. Select **Add permissions**.
+
+1. Select **Grant admin consent for [tenant]** and confirm.
+
+1. Verify that **SecurityAlert.Read.All** is listed under **Microsoft Graph / Application** with status **Granted for [tenant]**.
+--->
+#### Create the integration profile
+
+1. In the Microsoft Defender portal, go to **Microsoft Sentinel** > **Configuration** > **Automation**.
+
+1. Select the **Integration Profiles** tab.
+
+1. Select **Create** and provide the following information:
+
+   | Field | Value |
+   |-------|-------|
+   | **Integration name** | Any descriptive name, for example, "Graph Integration" |
+   | **Description** | Short description, for example, "Integration with Microsoft Graph APIs" |
+   | **Base API URL** | `https://graph.microsoft.com` |
+   | **Authentication method** | **OAuth2** |
+   | **Client ID** | Paste the Application (client) ID you copied earlier |
+   | **Client secret** | Paste the client secret Value you copied earlier |
+   | **Token endpoint** | `https://login.microsoftonline.com/{TENANT_ID}/oauth2/v2.0/token` <br>(Replace {TENANT_ID} with your Directory (tenant) ID) |
+   | **Scopes** | `https://graph.microsoft.com/.default` |
+
+   :::image type="content" source="./media/generate-playbook/integration-profile.png" alt-text="Screenshot of the Integration Profile creation page in Microsoft Sentinel.":::
+
+1. Verify under **Microsoft Graph / Application** that **SecurityAlert.Read.All** is listed and the Status is **Granted for \<tenant\>**.
+
+  :::image type="content" source="./media/generate-playbook/api-permissions.png" alt-text="Screenshot of API permissions in Microsoft Entra ID.":::
+
+### Create additional integration profiles
+
+Configure integration profiles for any other third-party services your playbooks use. Each integration requires:
+
+- A unique name and description
+- The service's base API URL
+- An authentication method (OAuth2 Client Credentials, API Key, AWS Auth, User and Password, Bearer/JWT, or Hawk)
+- Appropriate credentials for the selected authentication method
+
+> [!NOTE]
+> You can't change the API URL and authentication method after creation. You can only edit the integration name and description.
+
+### Step 3. Generate your playbook
+
+1. Select the **Playbooks** tab.
+
+1. Select **Create** > **Generated Playbook**.
+1. Enter a name for your playbook and select **Continue**.
+
+   An embedded Visual Studio Code environment opens with Cline, your AI coding agent.
+
+:::image type="content" source="./media/generate-playbook/playbook-name.png" alt-text="Screenshot of the embedded Visual Studio Code environment with Cline, the AI coding agent.":::
+
+#### Work with Cline in Plan mode
+
+When the editor opens, Cline starts in **Plan mode**. In this mode, you describe your automation requirements and Cline generates a plan for review.
+
+1. In the chat interface, describe your playbook requirements in detail. Be explicit about:
+   - What triggers the playbook
+   - What data to process
+   - What actions to perform
+   - What conditions to evaluate
+   - Expected outcomes
+
+   **Example**: "Create a playbook that triggers on phishing alerts. Extract the sender email address, check if the user exists in our directory, and if so, temporarily disable their account and notify the security team."
+
+1. If Cline requests approval to fetch documentation URLs, approve the request. This approval allows Cline to access relevant API documentation to generate accurate code.
+
+:::image type="content" source="./media/generate-playbook/approval-request.png" alt-text="Screenshot of the approval request dialog in the embedded Visual Studio Code environment.":::
+
+1. Cline analyzes your request and might:
+   - Ask clarifying questions
+   - Request API documentation if it cannot be accessed via web search
+   - Notify you of missing integration profiles
+   - Generate a preliminary plan and flow diagram
+
+1. If Cline identifies missing integration profiles:
+
+   1. Select **Add integration**.
+
+   1. Create the missing integration profiles in the **Integration Profiles** tab.
+
+   1. Return to edit the playbook to continue.
+
+#### Review and approve the plan
+
+1. Review Cline's generated plan and flow diagram carefully.
+
+1. If you need changes, describe the modifications in the chat. Cline revises the plan accordingly.
+
+1. When satisfied with the plan, follow Cline's instructions and switch to **Act mode**.
+
+:::image type="content" source="./media/generate-playbook/act-mode.png" alt-text="Screenshot of the embedded Visual Studio Code environment in Act mode with Cline, the AI coding agent.":::
+
+#### Generate the playbook in Act mode
+
+1. After switching to Act mode, Cline generates:
+   - The complete playbook code in Python
+   - Code validation
+   - Comprehensive documentation, including a visual flow diagram and description of the playbook in natural language
+
+1. Cline asks the user for an Alert ID to run a test of the playbook. Before executing the test, Cline outlines the changes that will be applied to the environment and requests the user’s approval to proceed.
+
+1. Cline might request approval for code generation. To enable automatic generation without approval prompts, select the **Edit** checkbox under **Auto-approve**.
+
+:::image type="content" source="./media/generate-playbook/auto-approve.png" alt-text="Screenshot of the Auto-approve checkbox in the embedded Visual Studio Code environment.":::
+
+   > [!NOTE]
+   > Selecting **Save** in the chat saves the current step and confirms your approval. It doesn't save the entire playbook.
+
+#### Validate and save your playbook
+
+1. Manually review the generated code and documentation to ensure correctness.
+
+1. To preview the documentation in Markdown format:
+   - **Windows/Linux**: Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd>
+   - **macOS**: Press <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd>
+
+1. Select **Save** at the bottom-left of the editor.
+
+   The playbook is created in a disabled state.
+
+1. Close the editor when finished.
+
+:::image type="content" source="./media/generate-playbook/preview.png" alt-text="Screenshot of the preview of an alert notification created with Cline, the AI coding agent.":::
+
+> [!TIP]
+> Save your work frequently. Cline sessions expire after 90 minutes. If needed, re-enter the editor to start a new session.
+
+## Enable and deploy your playbook
+
+After creation, your generated playbook requires activation and an alert trigger to begin automating responses.
+
+### Enable the playbook
+
+1. In the **Automation** page, select the **Active Playbooks** tab.
+
+1. Locate your newly created playbook.
+
+1. Switch the playbook status to **Activate**.
+
+### Create an enhanced alert trigger
+
+1. Go to the **Automation Rules** tab.
+
+1. Select **Create** to define a new rule with extended trigger.
+
+1. Set up the trigger conditions:
+
+   | Setting        | Description |
+   |----------------|-------------|
+   | **Conditions** | Define criteria such as alert title, severity, provider, or other attributes |
+   | **Workspaces** | Select the workspace(s) where this rule applies. Workspaces requiring additional permissions appear grayed out |
+   | **Actions**    | Select **Run Playbook** and choose your enabled playbook |
+
+1. Select **Save**.
+
+Your generated playbook now automatically runs when alerts that match your specified conditions are generated.
+
+> [!TIP]
+> Enhanced Alert Triggers work at the tenant level. You can apply automation across multiple workspaces and alert sources for comprehensive coverage.
+
+## Monitor playbook execution
+
+To view execution details for your generated playbook:
+
+1. Go to the incident page that contains the relevant alert.
+
+1. Select the **Activities** tab.
+
+1. Find the row labeled **run playbook** to view the execution status and details.
+
+> [!NOTE]
+> You can view the automation rule run results in the **incidents activity** tab, but not in the Sentinel Health Table.
+
+## Limitations
+
+Be aware of the following limitations when working with generated playbooks:
+
+### Playbook limitations
+
+- **Language support**: Only Python is supported for playbook authoring
+
+- **Input constraints**: Playbooks currently accept alerts as the sole input type
+
+- **System stub code**: Each playbook includes system-generated stub code required for execution. Modifying this code will break the workflow
+
+- **Concurrent editing**: A single user can edit only one playbook at a time. However, multiple users can edit different playbooks simultaneously
+
+- **Session timeouts**: Cline sessions expire after 90 minutes. Save your work and re-enter to start a new session if needed
+
+- **Library support**: External libraries are not currently supported
+
+- **Code validation**: No automatic code validation is provided. Users must manually verify correctness
+
+### Integration profiles limitations
+
+- **Integration limitations**: Microsoft Graph and Azure Resource Manager integrations are not enabled by default and must be manually created
+
+- **Authentication methods**: Available methods include OAuth2 Client Credentials, API Key, AWS Auth, User and Password, Bearer/JWT Authentication, and Hawk
+
+- **Integration configuration**: The API URL and authentication method cannot be changed after creation
+
+### Automation rule alert trigger limitations
+
+- **Trigger limitations**: Enhanced Alert Trigger rules do not support priority ordering or expiration dates
+
+- **Available actions**: Currently, the only available action is triggering generated Playbooks
+
+- **Workspace permissions** – You must explicitly specify the workspaces where you have permissions; the trigger will not apply to workspaces you cannot access.
+
+- **Separate rule tables** – Enhanced Alert Trigger rules live alongside Standard Alert Trigger rules in a separate Automation Rules table. Currently, there is no automatic migration of Standard Alert Trigger rules.
+
+- **Run result visibility** – Automation rule run results are **not written to the Sentinel Health Table**. However, you can view the runs and their outcomes in the **Activity tab of the Incident** that contains the targeted alert.
+
+## Related content
+
+- [Create and manage Microsoft Sentinel playbooks](create-playbooks.md)
+- [Automate and run Microsoft Sentinel playbooks](run-playbooks.md)
+- [Authenticate playbooks to Microsoft Sentinel](authenticate-playbooks-to-sentinel.md)
+- [Privacy and data security in Microsoft Security Copilot](/security-copilot/privacy-data-security)
