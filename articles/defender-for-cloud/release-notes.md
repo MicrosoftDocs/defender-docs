@@ -31,22 +31,24 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date| Category|Update|
 | -------- | -------- | -------- |
-|February 8, 2026| Documentation |[Code to runtime documentation for GitHub Advanced Security](#code-to-runtime-documentation-for-github-advanced-security)|
+|February 8, 2026| Preview |[Code to runtime for GitHub Advanced Security (Preview)](#code-to-runtime-for-github-advanced-security-preview)|
 |February 3, 2026| Preview |[Threat protection for AI agents (Preview)]()|
 
-### Code to runtime documentation for GitHub Advanced Security
+### Code to runtime for GitHub Advanced Security (Preview)
 
 February 8, 2026
 
-New comprehensive documentation is now available for the Code to runtime feature in GitHub Advanced Security integration with Microsoft Defender for Cloud. This documentation provides detailed guidance on:
+Microsoft Defender for Cloud now provides Code to runtime capabilities for GitHub Advanced Security integration, enabling end-to-end visibility across the software development lifecycle (SDLC). This feature helps security teams trace runtime security issues back to their source code origins and understand the full blast radius of vulnerabilities.
 
-- End-to-end visibility across the software development lifecycle (SDLC)
-- Tracing security issues from runtime back to source code
-- Understanding blast radius of security issues
-- Implementing effective remediation workflows
-- Coordination between security and engineering teams
+**Key capabilities:**
 
-The documentation covers prerequisites, feature overview, SDLC chain navigation, impact assessment, and provides example workflows to help organizations implement code-to-cloud security practices.
+- **SDLC Chain Visibility**: Track security issues from source code through pipelines, registries, to runtime environments
+- **Blast Radius Analysis**: Understand how many assets are affected by a single code change across clusters and namespaces  
+- **Runtime-to-Source Tracing**: Navigate backwards from runtime recommendations to identify the original source of security issues
+- **Actionable Remediation**: Fix issues at the source to prevent recurring regressions rather than addressing only runtime symptoms
+- **Team Coordination**: Streamlined workflows for assigning ownership, creating GitHub issues, and applying exemptions at appropriate SDLC stages
+
+This feature requires Defender CSPM or Defender for Containers plans along with GitHub Connector, Azure DevOps connector, or Defender CLI integration. Code to runtime is currently supported for container vulnerability assessment recommendations.
 
 Learn more about [Code to runtime - trace and fix cloud security issues at the source](code-to-runtime-mapping.md).
 
