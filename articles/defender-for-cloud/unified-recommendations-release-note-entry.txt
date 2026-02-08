@@ -1,0 +1,32 @@
+|February 18, 2026| Update | [Unified recommendations experience in Azure portal](#unified-recommendations-experience-in-azure-portal)|
+
+### Unified recommendations experience in Azure portal
+
+February 18, 2026
+
+Microsoft Defender for Cloud has introduced a unified recommendations experience that streamlines posture management and enables risk-based prioritization across all security findings. This update removes the legacy distinction between "recommendations" and "sub-assessments," presenting all security findings—misconfigurations, vulnerabilities, secrets, identity issues, and more—through a single, consistent model.
+
+::: zone pivot="azure-portal"
+
+**Key improvements:**
+
+- **Unified model**: All security findings are now represented as first-class recommendations with clear risk context
+- **Enhanced prioritization**: Risk-based prioritization across all security findings types
+- **Consistent governance**: Unified remediation guidance and governance controls for all recommendations
+- **Streamlined experience**: Simplified navigation eliminates the need to distinguish between different finding types
+
+**What changed:**
+
+Previously, security findings were split between assessments (recommendations) and sub-assessments (nested within assessments). The new unified experience presents each security issue as an individual recommendation, providing better granular control and clearer visibility into your security posture.
+
+Learn more about [security recommendations in Defender for Cloud](review-security-recommendations.md?pivots=azure-portal).
+
+::: zone-end
+
+::: zone pivot="defender-portal"
+
+The unified recommendations experience is available in both the Azure portal and Defender portal, providing consistent security findings management across both interfaces.
+
+Learn more about [security recommendations in the Defender portal](review-security-recommendations.md?pivots=defender-portal).
+
+::: zone-end
