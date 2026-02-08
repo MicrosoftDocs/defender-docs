@@ -55,7 +55,7 @@ Enhanced RPC auditing is required for some Microsoft Defender for Identity advan
 
 ### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x (preview)
 We’re gradually rolling out automatic Windows event-auditing configuration for sensors v3.x, along with related health alerts. Automatic Windows event-auditing streamlines deployment by automatically applying the required auditing settings to new sensors and correcting misconfigurations on existing ones. 
-This update may identify existing auditing configuration gaps that were not previously detected. 
+This update might identify existing auditing configuration gaps that weren't previously detected. 
 To ensure consistent protection, we recommend that you make sure all servers with the v3 sensors are configured with:
 - the latest Windows cumulative update 
 - Automatic Windows event auditing enabled 
@@ -63,7 +63,7 @@ For more information, see [Configure automatic windows auditing](deploy/configur
 
 |Version number|Updates|
 |---|---|
-|2.254|The sensor now supports a new DNS zone target for *.aatp.gcc.azure.com. Make sure your sensors in GCC can access this zone with your sensor dns prefix.|
+|2.254|The sensor now supports a new DNS zone target for *.aatp.gcc.azure.com. Make sure your sensors in GCC can access this zone with your sensor DNS prefix.|
 
 ### New security posture assessment: Identify service accounts in privileged groups
 
@@ -90,7 +90,7 @@ For more information, see:[Security posture assessment: Locate accounts in built
 |domainName|String|The domain name of the sensor.|
 |senseClientVersion|String|The version of the Defender for Identity sensor client.|
 
-This capability is currently in preview and available in API Preview version. Learn more [here](/graph/api/resources/security-sensorcandidate?view=graph-rest-beta&preserve-view=true)
+This capability is currently in preview and available in API preview version. Learn more [here](/graph/api/resources/security-sensorcandidate?view=graph-rest-beta&preserve-view=true)
 
 ### ADWS LDAP search in Advanced Hunting
 
@@ -136,7 +136,7 @@ The new security posture assessment lists users whose valid credentials were lea
 
 ### Expansion of identity scoping: Support for Organizational units (Preview)
 
-In addition to the GA release of scoping by Active Directory domains a few months ago, you can now scope by **Organizational Units (OUs)** as part of XDR User Role-based access control (URBAC). This enhancement provides even more granular control over which entities and resources are included in security analysis.
+In addition to the GA release of scoping by Active Directory domains a few months ago, you can now scope by **Organizational Units (OUs)** as part of XDR User role-based access control (URBAC). This enhancement provides even more granular control over which entities and resources are included in security analysis.
 
 For more information, see [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
 
@@ -172,7 +172,7 @@ Apply the **Unified sensor RPC audit** tag to your Defender for Identity sensor 
 
 ### Identity posture recommendations view on the identity page (preview)
 
-A new tab on the Identity profile page contains all active identity-related identity security posture assessments (ISPMs). This page consolidates all identity-specific security posture assessments into a single contextual view, helping security teams quickly spot weaknesses and take targeted actions.
+A new tab on the Identity profile page contains all active identity-related identity security posture assessments (ISPMs). This page consolidates all identity-specific security posture assessments into a single contextual view, helping security teams quickly spot weaknesses, and take targeted actions.
 For more information, see [Investigate users in Microsoft Defender XDR](/microsoft-365/security/defender/investigate-users).
 
 ### New Regional Availability: United Arab Emirates
@@ -182,7 +182,7 @@ Defender for Identity data centers are now also deployed in the United Arab Emir
 ### New API support for the Defender for Identity sensor v3.x (Preview)
 
 We're excited to announce the availability of a new Graph-based API for managing the Defender for Identity sensor v3.x server actions.
-This capability is currently in preview and available in API Preview version.
+This capability is currently in preview and available in API preview version.
 
 This API allows customers to:
 
@@ -214,7 +214,7 @@ The improvements will gradually take effect across the following detections:
 - Suspicious modification of Resource Based Constrained Delegation by a machine account
 - Remote code execution attempt
 
-### Unified connectors is now available for Okta single sign-on connectors (Preview)
+### Unified connectors are now available for Okta single sign-on connectors (Preview)
 
 Microsoft Defender for Identity supports the [Unified connectors](/azure/sentinel/unified-connector) experience, starting with the Okta single sign-on connector. The unified connector enables Defender for Identity to collect Okta system logs once and share them across supported Microsoft security products, reducing API usage and improving connector efficiency.
 
@@ -240,7 +240,7 @@ For more information, see: Security Assessment: [Remove Inactive Service Account
 
 We're excited to announce a new Graph-based API for initiating and managing remediation actions in Microsoft Defender for Identity.
 
-This capability is currently in preview and available in API Beta version.
+This capability is currently in preview and available in API preview version.
 
 For more information, see [Managing response actions through Graph API](/graph/api/resources/security-identityaccounts?view=graph-rest-beta&preserve-view=true).
 
