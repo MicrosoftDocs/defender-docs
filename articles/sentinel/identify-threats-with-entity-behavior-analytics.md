@@ -162,6 +162,11 @@ By converting fragmented logs into coherent behavior objects, the behaviors laye
 
 For more information, see [Translate raw security logs to behavioral insights using UEBA behaviors in Microsoft Sentinel (Preview)](entity-behaviors-layer.md).
 
+## Pricing model
+
+UEBA is included with Microsoft Sentinel at no extra cost. UEBA data is stored in Log Analytics tables and follows standard Microsoft Sentinel pricing. For more information, see [Microsoft Sentinel pricing](https://www.microsoft.com/security/pricing/microsoft-sentinel/).
+
+
 ## Next steps
 In this article, you learned about Microsoft Sentinel's entity behavior analytics capabilities. For practical guidance on implementation, and to use the insights you've gained, see:
 
@@ -169,5 +174,4 @@ In this article, you learned about Microsoft Sentinel's entity behavior analytic
 - [List of anomalies](anomalies-reference.md#ueba-anomalies) detected by the UEBA engine.
 - [Investigate incidents with UEBA data](investigate-with-ueba.md).
 - [UEBA reference](ueba-reference.md).
-- [Useful UEBA queries](ueba-useful-queries.md).
 - [Hunt for security threats](./hunting.md).
