@@ -31,7 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date| Category|Update|
 | -------- | -------- | -------- |
-|February 18, 2026| Preview |[Unified Recommendations experience in Azure portal](#unified-recommendations-experience-in-azure-portal)|
+|February 18, 2026| Preview |[Unified Recommendations experience in Azure portal](#unified-recommendations-experience-in-azure-portal-preview)|
 |February 3, 2026| Preview |[Threat protection for AI agents (Preview)]()|
 
 ### Unified Recommendations experience in Azure portal (Preview)
