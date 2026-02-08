@@ -32,7 +32,21 @@ In the [Anomalies](/azure/azure-monitor/reference/tables/anomalies) table:
 > - Domain generation algorithm (DGA) on DNS domains
 > - Potential domain generation algorithm (DGA) on next-level DNS Domains
 
-[!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
+## Compare UEBA and machine learning-based anomalies
+
+UEBA and machine learning (ML) -based anomalies are complementary approaches to anomaly detection. Both populate the `Anomalies` table but serve different purposes:
+
+| Aspect | UEBA anomalies | ML anomaly detection rules |
+|--------|----------------|----------------------------|
+| **Focus** | *Who* is behaving unusually | *What* activity is unusual |
+| **Detection approach** | Entity-focused behavioral baselines compared against historical activity, peer behavior, and organization-wide patterns | Customizable rule templates using statistical and ML models trained on specific data patterns |
+| **Baseline source** | Each entity's own history, peer group, and organization | Training period (typically 7-21 days) on specific event types |
+| **Customization** | Enabled/disabled using UEBA settings | Tunable thresholds and parameters using the analytics rule UI |
+| **Examples** | Anomalous sign-in, anomalous account creation, anomalous privilege modification | Attempted brute force, excessive downloads, network beaconing |
+
+For more information, see:
+- [UEBA overview](identify-threats-with-entity-behavior-analytics.md)
+- [Customizable ML anomaly detection rules](soc-ml-anomalies.md)
 
 ## UEBA anomalies
 
@@ -669,4 +683,3 @@ Microsoft Sentinel's customizable, machine learning-based anomalies can identify
 - Learn about [machine learning-generated anomalies](soc-ml-anomalies.md) in Microsoft Sentinel.
 - Learn how to [work with anomaly rules](work-with-anomaly-rules.md).
 - [Investigate incidents](investigate-cases.md) with Microsoft Sentinel.
-- See [useful KQL queries](ueba-useful-queries.md) for the Anomalies table.

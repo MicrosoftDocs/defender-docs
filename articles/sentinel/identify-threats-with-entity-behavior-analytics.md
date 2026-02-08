@@ -38,7 +38,7 @@ This diagram shows how you enable UEBA, and how UEBA detects anomalies and assig
 
 :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-architecture.png" alt-text="Diagram showing UEBA architecture, illustrating how data flows from connected sources through behavioral modeling to produce risk scores." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-architecture.png":::
 
-For more information about UEBA tables, see [Investigate anomalies with UEBA data](#investigate-anomalies-with-ueba-data). 
+For more information about UEBA tables, see [Investigate anomalies using UEBA data](#investigate-anomalies-using-ueba-data). 
 
 For more information about which anomalies UEBA detects, see [Anomalies detected by the Microsoft Sentinel machine learning engine](anomalies-reference.md#ueba-anomalies).
 
@@ -71,9 +71,9 @@ Microsoft Sentinel stores UEBA insights across several tables, each optimized fo
 | Table | Purpose | Key details |
 |-------|---------|-------------|
 | [IdentityInfo](ueba-reference.md#identityinfo-table) | Detailed profiles of entities (users, devices, groups) | Built from Microsoft Entra ID and optionally on-premises Active Directory through Microsoft Defender for Identity. Essential for understanding user behavior. |
-| [UserPeerAnalytics](ueba-reference.md#userpeeranalytics-table) | Dynamically calculated peer groups for behavioral baselines | Ranks top 20 peers based on security group membership, mailing lists, and other associations. Uses TF-IDF (term frequency–inverse document frequency) algorithm (smaller groups carry higher weight). |
-| [BehaviorAnalytics](ueba-reference.md#behavioranalytics-table) | Enriched behavioral data with geolocation and threat intelligence | Contains deviations from baseline with prioritization scores. Data depends on enabled connectors (Entra ID, AWS, GCP, Okta, and so on). |
-| [Anomalies](ueba-reference.md#anomalies-table) | Events identified as anomalous | Supports detection and investigation workflows. |
+| [BehaviorAnalytics](/azure/azure-monitor/reference/tables/behavioranalytics) | Enriched behavioral data with geolocation and threat intelligence | Contains deviations from baseline with prioritization scores. Data depends on enabled connectors (Entra ID, AWS, GCP, Okta, and so on). |
+| [UserPeerAnalytics](/azure/azure-monitor/reference/tables/userpeeranalytics) | Dynamically calculated peer groups for behavioral baselines | Ranks top 20 peers based on security group membership, mailing lists, and other associations. Uses TF-IDF (term frequency–inverse document frequency) algorithm (smaller groups carry higher weight). |
+| [Anomalies](/azure/azure-monitor/reference/tables/anomalies) | Events identified as anomalous | Supports detection and investigation workflows. |
 | [SentinelBehaviorInfo](/azure/azure-monitor/reference/tables/sentinelbehaviorinfo) (Preview) | Summary of behaviors identified in raw logs | Translates raw security logs into structured "who did what to whom" summaries with natural language explanations and MITRE ATT&CK mappings.  |
 | [SentinelBehaviorEntities](/azure/azure-monitor/reference/tables/sentinelbehaviorentities) (Preview) | Profiles of entities involved in identified behaviors | Information about entities - such as files, processes, devices, and users - involved in detected behaviors. |
 
@@ -83,7 +83,6 @@ This screenshot shows an example of data in the `UserPeerAnalytics` table with t
 
 For more detailed information about UEBA data and how to use it, see:
 - [UEBA reference](ueba-reference.md) for a detailed reference of all UEBA-related tables and fields.
-- [Useful UEBA queries](ueba-useful-queries.md) for practical examples of how to use UEBA data in your investigations.
 - [Anomalies detected by the Microsoft Sentinel machine learning engine](anomalies-reference.md) for a list of anomalies that UEBA detects.
 
 ### UEBA scoring
@@ -178,6 +177,6 @@ For practical guidance on UEBA implementation and usage, see:
 
 For training resources, see:
 
-- [Identify threats with Behavioral Analytics - Microsoft Learn module](https://learn.microsoft.com/training/modules/use-entity-behavior-analytics-azure-sentinel)
+- [Identify threats with Behavioral Analytics - Microsoft Learn module](/training/modules/use-entity-behavior-analytics-azure-sentinel)
 - [UEBA and New Data Sources for UEBA Analytics and Anomalies - webinar](https://www.youtube.com/watch?v=rekJwHjKLWg)
 - [Expanding Microsoft Sentinel UEBA – Ninja show](https://www.youtube.com/watch?v=R0PnVy-vp_4)
