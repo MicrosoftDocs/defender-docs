@@ -564,8 +564,6 @@ items:
     href: additional-integrations.md
   - name: Watch our webinars
     href: webinars.md
-  - name: Release note archive
-    href: release-note-archive.md
 - name: Microsoft Defender XDR Docs
   items:
   - name: Microsoft Defender XDR
