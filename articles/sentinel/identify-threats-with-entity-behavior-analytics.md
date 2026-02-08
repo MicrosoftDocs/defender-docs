@@ -168,10 +168,16 @@ UEBA is included with Microsoft Sentinel at no extra cost. UEBA data is stored i
 
 
 ## Next steps
-In this article, you learned about Microsoft Sentinel's entity behavior analytics capabilities. For practical guidance on implementation, and to use the insights you've gained, see:
+For practical guidance on UEBA implementation and usage, see:
 
 - [Enable entity behavior analytics](./enable-entity-behavior-analytics.md) in Microsoft Sentinel.
-- [List of anomalies](anomalies-reference.md#ueba-anomalies) detected by the UEBA engine.
 - [Investigate incidents with UEBA data](investigate-with-ueba.md).
+- [List of UEBA anomalies](anomalies-reference.md#ueba-anomalies) detected by the UEBA engine.
 - [UEBA reference](ueba-reference.md).
 - [Hunt for security threats](./hunting.md).
+
+For training resources, see:
+
+- [Identify threats with Behavioral Analytics - Microsoft Learn module](https://learn.microsoft.com/training/modules/use-entity-behavior-analytics-azure-sentinel)
+- [UEBA and New Data Sources for UEBA Analytics and Anomalies - webinar](https://www.youtube.com/watch?v=rekJwHjKLWg)
+- [Expanding Microsoft Sentinel UEBA – Ninja show](https://www.youtube.com/watch?v=R0PnVy-vp_4)
