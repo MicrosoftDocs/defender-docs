@@ -38,9 +38,9 @@ When SDLC context is available, the recommendation page shows:
 - Cards representing each SDLC stage
 - Links to deeper views and remediation actions
 
-    :::image type="content" source="media/code-to-runtime-mapping/c2r-context.png" alt-text="Screenshot of recommendations page with Code to Runtime context banner." lightbox="media/code-to-runtime-mapping/c2r-context.png":::
+    :::image type="content" source="media/code-to-runtime-mapping/code-to-runtime-context-banner.png" alt-text="Screenshot of recommendations page with Code to Runtime context banner." lightbox="media/code-to-runtime-mapping/code-to-runtime-context-banner.png":::
 
-    :::image type="content" source="media/code-to-runtime-mapping/c2r-context-runtime.png" alt-text="Screenshot of recommendations page with the SDLC chain." lightbox="media/code-to-runtime-mapping/c2r-context-runtime.png":::
+    :::image type="content" source="media/code-to-runtime-mapping/code-to-runtime-sdlc-chain.png" alt-text="Screenshot of recommendations page with the SDLC chain." lightbox="media/code-to-runtime-mapping/code-to-runtime-sdlc-chain.png":::
 
 ## How Code to runtime builds end-to-end context
 
