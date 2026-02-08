@@ -62,7 +62,7 @@ For more information on the description of the response action types, see [Creat
 
 > [!NOTE]
 >
-> The prior response actions (AlertAndBlock, and Alert) will be supported until January 2022. After this date, all customers must be use one of the action types listed in this section.
+> AlertAndBlock and Alert are legacy response actions that were supported only until January 2022.
 
 
 ## Json representation
@@ -72,7 +72,7 @@ For more information on the description of the response action types, see [Creat
     "id": "994",
     "indicatorValue": "881c0f10c75e64ec39d257a131fcd531f47dd2cff2070ae94baa347d375126fd",
     "indicatorType": "FileSha256",
-    "action": "AlertAndBlock",
+    "action": "BlockAndRemediate",
     "application": null,
     "source": "user@contoso.onmicrosoft.com",
     "sourceType": "User",
