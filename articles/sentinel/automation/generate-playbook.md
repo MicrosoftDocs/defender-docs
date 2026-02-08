@@ -16,7 +16,7 @@ ms.collection: usx-security
 
 # Generate playbooks using AI in Microsoft Sentinel (preview)
 
-Generated Playbooks are code-based automation workflows co-authored through a conversational experience with Cline, an AI coding agent. You describe automation logic in natural language, and the system generates validated, code-based playbooks with complete documentation and visual flow diagrams. This experience is powered by an embedded Visual Studio Code environment within the Defender portal, so you can author and refine playbooks without leaving the portal. Generated playbooks use USX alert data as input and dynamically generate the required API calls, as long as you configure the integration for the target provider.
+Generated Playbooks are code-based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. You describe automation logic in natural language, and the system generates validated, code-based playbooks with complete documentation and visual flow diagrams. This experience is powered by an embedded Visual Studio Code environment within the Defender portal, so you can author and refine playbooks without leaving the portal. Generated playbooks use USX alert data as input and dynamically generate the required API calls, as long as you configure the integration for the target provider.
 
 This article describes how to generate playbooks by using AI, configure required integrations, and deploy your automation workflows.
 
@@ -38,9 +38,9 @@ Before you can use the playbook generator, ensure you meet the following require
 
 ### Environment requirements
 
-- **Security Copilot**: Your tenant must be Security Copilot enabled with SCUs available. You won't be billed for SCUs, but their availability is a technical requirement.
+- **Security Copilot**: Your tenant must be Security Copilot enabled with SCUs available. You aren't billed for SCUs, but their availability is a technical requirement.
 
-- **Microsoft Sentinel workspace**: Your tenant must have a Sentinel workspace onboarded to Microsoft Defender.
+- **Microsoft Sentinel workspace**: Your tenant must have a Microsoft Sentinel workspace onboarded to Microsoft Defender.
 
 - **Data sharing preferences**: In Security Copilot, enable the first slider, *Allow Microsoft to capture data from Security Copilot to validate product performance using human review*, in Customer Data Sharing preferences. For more information, see [Privacy and data security in Microsoft Security Copilot](/security-copilot/privacy-data-security).
 
@@ -57,7 +57,7 @@ To use the new Automation experience and create generated playbooks, you need th
 
 ### Recommended: Configure a dedicated Security Copilot workspace
 
-If you don't already have a dedicated Security Copilot workspace configured to use a US-based capacity for AI-generated playbooks, it's recommended to create one.
+If you don't already have a dedicated Security Copilot workspace configured to use a US-based capacity for AI-generated playbooks, we recommended you create one.
 
 1. In [Security Copilot](https://securitycopilot.microsoft.com), go to **Owner** > **Manage workspaces**.
 
@@ -95,7 +95,7 @@ If you don't already have a dedicated Security Copilot workspace configured to u
 
    1. Select **Create**.
 
-1. After creating the capacity, make sure it's selected for the `soarnl-workspace` and the workspace shows the US capacity.
+1. After creating the capacity, make sure to select it for the `soarnl-workspace`, and that the workspace shows the US capacity.
 
 :::image type="content" source="./media/generate-playbook/create-capacity.png" alt-text="Screenshot of the new capacity details.":::
 
@@ -225,7 +225,7 @@ When the editor opens, Cline starts in **Plan mode**. In this mode, you describe
    - What conditions to evaluate
    - Expected outcomes
 
-   **Example**: "Create a playbook that triggers on phishing alerts. Extract the sender email address, check if the user exists in our directory, and if so, temporarily disable their account and notify the security team."
+   **Example**: "Create a playbook that triggers on phishing alerts. Extract the sender email address. Check if the user exists in our directory, and if so, temporarily disable their account and notify the security team."
 
 1. If Cline requests approval to fetch documentation URLs, approve the request. This approval allows Cline to access relevant API documentation to generate accurate code.
 
@@ -233,7 +233,7 @@ When the editor opens, Cline starts in **Plan mode**. In this mode, you describe
 
 1. Cline analyzes your request and might:
    - Ask clarifying questions
-   - Request API documentation if it cannot be accessed via web search
+   - Request API documentation if it can't be accessed via web search
    - Notify you of missing integration profiles
    - Generate a preliminary plan and flow diagram
 
@@ -262,18 +262,18 @@ When the editor opens, Cline starts in **Plan mode**. In this mode, you describe
    - Code validation
    - Comprehensive documentation, including a visual flow diagram and description of the playbook in natural language
 
-1. Cline asks the user for an Alert ID to run a test of the playbook. Before executing the test, Cline outlines the changes that will be applied to the environment and requests the user’s approval to proceed.
+1. Cline asks the user for an Alert ID to run a test of the playbook. Before it executes the test, Cline outlines the changes that will be applied to the environment and requests the user’s approval to proceed.
 
 1. Cline might request approval for code generation. To enable automatic generation without approval prompts, select the **Edit** checkbox under **Auto-approve**.
 
-:::image type="content" source="./media/generate-playbook/auto-approve.png" alt-text="Screenshot of the Auto-approve checkbox in the embedded Visual Studio Code environment.":::
+:::image type="content" source="./media/generate-playbook/auto-approve.png" alt-text="Screenshot of the Autoapprove checkbox in the embedded Visual Studio Code environment.":::
 
    > [!NOTE]
    > Selecting **Save** in the chat saves the current step and confirms your approval. It doesn't save the entire playbook.
 
 #### Validate and save your playbook
 
-1. Manually review the generated code and documentation to ensure correctness.
+1. To ensure correctness, manually review the generated code and documentation.
 
 1. To preview the documentation in Markdown format:
    - **Windows/Linux**: Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd>
@@ -288,7 +288,7 @@ When the editor opens, Cline starts in **Plan mode**. In this mode, you describe
 :::image type="content" source="./media/generate-playbook/preview.png" alt-text="Screenshot of the preview of an alert notification created with Cline, the AI coding agent.":::
 
 > [!TIP]
-> Save your work frequently. Cline sessions expire after 90 minutes. If needed, re-enter the editor to start a new session.
+> Save your work frequently. Cline sessions expire after 90 minutes. If needed, reenter the editor to start a new session.
 
 ## Enable and deploy your playbook
 
@@ -313,7 +313,7 @@ After creation, your generated playbook requires activation and an alert trigger
    | Setting        | Description |
    |----------------|-------------|
    | **Conditions** | Define criteria such as alert title, severity, provider, or other attributes |
-   | **Workspaces** | Select the workspace(s) where this rule applies. Workspaces requiring additional permissions appear grayed out |
+   | **Workspaces** | Select one or more workspaces where this rule applies. Workspaces requiring additional permissions appear grayed out |
    | **Actions**    | Select **Run Playbook** and choose your enabled playbook |
 
 1. Select **Save**.
@@ -334,7 +334,7 @@ To view execution details for your generated playbook:
 1. Find the row labeled **run playbook** to view the execution status and details.
 
 > [!NOTE]
-> You can view the automation rule run results in the **incidents activity** tab, but not in the Sentinel Health Table.
+> You can view the automation rule run results in the **incidents activity** tab, but not in the Microsoft Sentinel Health Table.
 
 ## Limitations
 
@@ -346,33 +346,33 @@ Be aware of the following limitations when working with generated playbooks:
 
 - **Input constraints**: Playbooks currently accept alerts as the sole input type
 
-- **System stub code**: Each playbook includes system-generated stub code required for execution. Modifying this code will break the workflow
+- **System stub code**: Each playbook includes system-generated stub code required for execution. Modifying this code breaks the workflow
 
 - **Concurrent editing**: A single user can edit only one playbook at a time. However, multiple users can edit different playbooks simultaneously
 
-- **Session timeouts**: Cline sessions expire after 90 minutes. Save your work and re-enter to start a new session if needed
+- **Session timeouts**: Cline sessions expire after 90 minutes. Save your work and reenter to start a new session if needed
 
-- **Library support**: External libraries are not currently supported
+- **Library support**: External libraries aren't currently supported
 
 - **Code validation**: No automatic code validation is provided. Users must manually verify correctness
 
 ### Integration profiles limitations
 
-- **Integration limitations**: Microsoft Graph and Azure Resource Manager integrations are not enabled by default and must be manually created
+- **Integration limitations**: Microsoft Graph and Azure Resource Manager integrations aren't enabled by default and must be manually created
 
 - **Authentication methods**: Available methods include OAuth2 Client Credentials, API Key, AWS Auth, User and Password, Bearer/JWT Authentication, and Hawk
 
-- **Integration configuration**: The API URL and authentication method cannot be changed after creation
+- **Integration configuration**: The API URL and authentication method can't be changed after creation
 
 ### Automation rule alert trigger limitations
 
-- **Trigger limitations**: Enhanced Alert Trigger rules do not support priority ordering or expiration dates
+- **Trigger limitations**: Enhanced Alert Trigger rules don't support priority ordering or expiration dates
 
 - **Available actions**: Currently, the only available action is triggering generated Playbooks
 
-- **Workspace permissions** – You must explicitly specify the workspaces where you have permissions; the trigger will not apply to workspaces you cannot access.
+- **Workspace permissions** – You must explicitly specify the workspaces where you have permissions; the trigger doesn't apply to workspaces you can't access.
 
-- **Separate rule tables** – Enhanced Alert Trigger rules live alongside Standard Alert Trigger rules in a separate Automation Rules table. Currently, there is no automatic migration of Standard Alert Trigger rules.
+- **Separate rule tables** – Enhanced Alert Trigger rules live alongside Standard Alert Trigger rules in a separate Automation Rules table. Currently, there's no automatic migration of Standard Alert Trigger rules.
 
 - **Run result visibility** – Automation rule run results are **not written to the Sentinel Health Table**. However, you can view the runs and their outcomes in the **Activity tab of the Incident** that contains the targeted alert.
 
