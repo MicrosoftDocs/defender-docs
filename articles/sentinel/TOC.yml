@@ -323,11 +323,11 @@
               displayName: User and Entity Behavior Analytics
             - name: Enable UEBA
               href: enable-entity-behavior-analytics.md
-            - name: Investigate with UEBA
+            - name: UEBA investigation examples
               href: investigate-with-ueba.md
             - name: Aggregate behavioral insights from raw logs
               href: entity-behaviors-layer.md
-            - name: UEBA reference
+            - name: UEBA data sources and table schemas
               href: ueba-reference.md
         - name: Data classification with entities
           items:

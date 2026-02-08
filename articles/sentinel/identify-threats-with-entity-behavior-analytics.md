@@ -52,7 +52,7 @@ To fully benefit from UEBA's advanced threat detection capabilities:
 
 1. **Install the UEBA Essentials solution**, a collection of dozens of pre-built hunting queries curated and maintained by Microsoft security experts. The solution includes multi-cloud anomaly detection queries across Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and Okta. Installing the solution helps you get started quickly with threat hunting and investigations using UEBA data, instead of building these detection capabilities from scratch.
 
-  For information about installing Microsoft Sentinel solutions, see [Install or update Microsoft Sentinel solutions](sentinel-solutions-deploy.md#install-or-update-content). 
+    For information about installing Microsoft Sentinel solutions, see [Install or update Microsoft Sentinel solutions](sentinel-solutions-deploy.md#install-or-update-content). 
   
 1. **Integrate UEBA insights** into workbooks, incident workflows, and hunting queries to maximize their value across your SOC workflows.
 

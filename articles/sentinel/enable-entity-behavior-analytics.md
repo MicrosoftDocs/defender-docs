@@ -136,9 +136,10 @@ The UEBA behaviors layer generates enriched summaries of activity observed acros
 
 For more information about the UEBA behaviors layer and how to enable it, see [Enable the UEBA behaviors layer in Microsoft Sentinel](../sentinel/entity-behaviors-layer.md). 
 
+
 ## Next steps
 
-In this article, you learned how to enable and configure User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel. For more information about UEBA:
+Learn how to investigate UEBA anomalies and use UEBA data in your investigations:
 
-> [!div class="nextstepaction"]
->>[Identify threats with UEBA](./identify-threats-with-entity-behavior-analytics.md)
+- [Investigate incidents with UEBA data](investigate-with-ueba.md)
+- [UEBA data sources and table schemas](ueba-reference.md)
