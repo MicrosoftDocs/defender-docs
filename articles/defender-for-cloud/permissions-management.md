@@ -53,8 +53,6 @@ Reduce identity-related risk by receiving proactive guidance via recommendations
 
 - Enforcing MFA and strong password policies for IAM users
 
-- Add any other relevant examples
-
 ### Lateral movement detections
 
 Defender for Cloud correlates identity risks with attack path analysis, surfacing lateral movement opportunities that originate from overprivileged identities or misconfigurations. For example, an attacker could compromise a service principal with excessive rights to move laterally from a compromised resource to a sensitive database. This context allows security teams to prioritize high-impact identity issues that might otherwise go unnoticed.
