@@ -34,29 +34,21 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |February 3, 2026| Preview |[Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview)|
 |February 9, 2026| Preview |[Update to SQL Vulnerability Assessment findings (Preview)]
 
-## Assessment-based experience for VA findings in Microsoft Defender for SQL (Preview)
-
-SQL Vulnerability Assessment (VA) findings can now be viewed as individual recommendations in Microsoft Defender for Cloud.
-
-Each SQL VA rule will now appear as a separate recommendation associated with the affected SQL database resource. This change affects how SQL VA findings are displayed and managed in Recommendations.
-
-The legacy subassment experience will remain available during the transition period
-
-This new experience does not affect SQL VA scanning logic, rules, APIs, and pricing.
-
-Learn how to view and remediate SQL VA findings using the experiences in [Find and fix vulnerabilities in your Azure SQL databases](sql-azure-vulnerability-assessment-find.md).
-
-## Assessment-based experience for SQL Vulnerability Assessment findings (Preview)
+## Database-level recommendations experience for SQL Vulnerability Assessment findings (Preview)
 
 SQL Vulnerability Assessment (VA) findings can now be viewed as individual recommendations in Microsoft Defender for SQL.
 
 In this experience, each SQL VA rule is represented as a separate recommendation associated with the affected SQL database resource. This change affects how findings are displayed and managed in Recommendations.
 
-The server-level (aggregated) experience remains available during the transition, with a side by side view. (edit)
-
 This experience doesn’t affect SQL VA scanning logic, rules, APIs, or pricing.
 
-Learn more about [viewing and remediating SQL VA findings using the assessment-based experience](sql-azure-vulnerability-assessment-find.md).
+Reviewing and remediating SQL VA findings using the assessment-based experience is available using the following portal experiences:
+- [Use the Azure portal](sql-azure-vulnerability-assessment-new.md#database-level-recommendations-experience).
+- [Use the Defender portal](sql-azure-vulnerability-assessment-new.md#review-and-remediate-vulnerabilities-defender-portal)
+
+The previous server-level (aggregated) experience remains available with this new release.
+
+
 
 
 ## Threat protection for AI agents (Preview)
