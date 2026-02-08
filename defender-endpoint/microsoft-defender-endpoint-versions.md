@@ -19,7 +19,7 @@ To learn about Microsoft Defender for Endpoint features that aren't version-spec
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-This page is intended primarily for Microsoft Defender for Endpoint enterprise customers who have purchased a license and regularly deploy, maintain, or validate Defender for Endpoint across their organization. Enterprise customers can use this page to find supported versions, component updates, and platform requirements as part of installing and operating MDE in enterprise environments.
+This page is intended primarily for Microsoft Defender for Endpoint customers who have purchased a license and regularly deploy, maintain, or validate Defender for Endpoint across their organization. These customers can use this page to find supported versions, component updates, and platform requirements as part of installing and operating MDE in enterprise environments.
 
 For users running Microsoft Defender Antivirus on their endpoints, this article also includes information about the latest supported versions of Microsoft Defender Antivirus. Additional sections and supported OSs apply to enterprise scenarios only.
 
@@ -29,13 +29,13 @@ For more information on Defender for Endpoint plans and licenses, see the [Micro
 
 |Information |Audience |Scope |
 |-----------|---------|-------|
-|[Find information about all supported versions](#all-supported-versions) | Enterprise customers | Supported versions released in the past 6 months for all supported operating systems. |
-|[Review important information about supported operating systems](#operating-system-information) | Enterprise customers | General notes about supported operating systems. |
-|[Find Windows versions](#windows-versions) | Enterprise customers |Specific Windows versions released in the past 6 months, with related features and updates. |
-|[Find Linux versions](#linux-versions) | Enterprise customers |Specific Linux versions released in the past 6 months, with related features and updates. |
-|[Find macOS versions](#macos-versions) | Enterprise customers |Specific macOS versions released in the past 6 months, with related features and updates. |
-|[Find Android versions](#android-versions) | Enterprise customers |Specific Android versions released in the past 6 months, with related features and updates. |
-|[Find iOS versions](#ios-versions) | Enterprise customers |Specific iOS versions released in the past 6 months, with related features and updates. |
+|[Find information about all supported versions](#all-supported-versions) | Licensed customers | Supported versions released in the past 6 months for all supported operating systems. |
+|[Review important information about supported operating systems](#operating-system-information) | Licensed customers | General notes about supported operating systems. |
+|[Find Windows versions](#windows-versions) | Licensed customers |Specific Windows versions released in the past 6 months, with related features and updates. |
+|[Find Linux versions](#linux-versions) | Licensed customers |Specific Linux versions released in the past 6 months, with related features and updates. |
+|[Find macOS versions](#macos-versions) | Licensed customers |Specific macOS versions released in the past 6 months, with related features and updates. |
+|[Find Android versions](#android-versions) | Licensed customers |Specific Android versions released in the past 6 months, with related features and updates. |
+|[Find iOS versions](#ios-versions) | Licensed customers |Specific iOS versions released in the past 6 months, with related features and updates. |
 |[Find Microsoft Defender Antivirus versions](#microsoft-defender-antivirus-versions) | Users running Microsoft Defender Antivirus on their endpoints |Specific Microsoft Defender Antivirus versions released in the past 6 months, with related features and updates. |
 
 ## All supported versions
