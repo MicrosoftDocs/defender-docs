@@ -1524,6 +1524,12 @@
         - name: Storage aggregated logs
           DisplayName: Storage aggregated logs, Advanced Hunting, CloudStorageAggregatedEvents
           href: episode-sixty-four.md
+        - name: Malware automated remediation
+          DisplayName: Malware automated remediation, Defender for Storage, malware remediation
+          href: episode-sixty-five.md
+        - name: New secure score
+          DisplayName: secure score, security posture, recommendations
+          href: episode-sixty-six.md
     - name: Microsoft Defender for IoT documentation
       href: /azure/defender-for-iot/
     - name: Azure security documentation
