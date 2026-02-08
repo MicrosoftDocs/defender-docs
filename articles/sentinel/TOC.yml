@@ -1025,10 +1025,10 @@
           href: data-connection-rules-reference-gcp.md
         - name: Azure Storage Blob data connector reference
           href: data-connection-rules-reference-azure-storage.md
+        - name: Enable network security for Azure Storage Blob data connector
+          href: enable-storage-network-security.md
         - name: Troubleshoot Azure Storage Blob connector issues
           href: azure-storage-blob-connector-troubleshoot.md  
-        - name: AWS data connectors API reference
-          href: data-connection-rules-reference-aws.md  
         - name: Sample API requests for creating Data Collection Rules (DCRs)
           href: api-dcr-reference.md
         - name: Microsoft Purview Information Protection reference
