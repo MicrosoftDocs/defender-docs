@@ -993,6 +993,8 @@
           href: github-advanced-security-overview.md
         - name: Deploy GitHub Advanced Security integration
           href: github-advanced-security-deploy.md
+        - name: Code to runtime - trace and fix cloud security issues at the source
+          href: code-to-runtime-mapping.md
     - name: Onboard
       items:
         - name: Connect Azure DevOps environments
