@@ -16,10 +16,6 @@ In Microsoft Defender for Cloud, resources and workloads are assessed against bu
 
 Defender for Cloud uses a dynamic engine that proactively assesses the risks in your environment. It considers the potential for exploitation and the potential business effect on your organization. The engine prioritizes security recommendations based on the risk factors of each resource. The context of the environment determines these risk factors.
 
-## Prerequisites
-
-Recommendations are included with Defender for Cloud, but you can't see [risk prioritization](risk-prioritization.md) unless you enable Defender CSPM on your environment.
-
 > [!NOTE]
 > In the portal, some recommendations that previously appeared as a single aggregated item now display as multiple individual recommendations. This change reflects a shift from grouping related findings under one recommendation to listing each recommendation separately.
 >
@@ -29,6 +25,10 @@ Recommendations are included with Defender for Cloud, but you can't see [risk pr
 > - Secure Score currently applies to the parent recommendation only, not to each individual item.
 >
 > If you see both formats or recommendations with a Preview tag, this condition is expected during the transition. The goal is to improve clarity and allow you to act on specific recommendations more easily.
+
+## Prerequisites
+
+Recommendations are included with Defender for Cloud, but you can't see [risk prioritization](risk-prioritization.md) unless you enable Defender CSPM on your environment.
 
 ## Review the recommendations page
 
@@ -78,8 +78,7 @@ When you select a recommendation row, a side panel opens displaying:
 
 #### Resource views
 
-> [!NOTE]
-> In addition to Group by title, the Azure portal supports Group by resource. This groups all findings for the same asset in one place, which is helpful when a single owner is responsible for an asset and should receive all of its findings together.
+In addition to **Group by title**, the Azure portal supports **Group by resource**. This groups all findings for the same asset in one place, which is helpful when a single owner is responsible for an asset and should receive all of its findings together.
 
 #### Recommendation title view
 
