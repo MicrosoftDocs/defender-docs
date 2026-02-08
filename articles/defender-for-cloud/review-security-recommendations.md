@@ -4,7 +4,7 @@ description: Learn how to review security recommendations in Microsoft Defender 
 ms.topic: how-to
 author: dlanger
 ms.author: dlanger
-ms.date: 12/29/2025
+ms.date: 02/08/2026
 ms.custom: sfi-image-nochange
 zone_pivot_groups: defender-portal-experience
 #customer intent: As a security analyst, I want to learn how to review security recommendations in Microsoft Defender for Cloud so that I can improve the security posture of my environments.
@@ -20,6 +20,16 @@ Defender for Cloud uses a dynamic engine that proactively assesses the risks in 
 
 Recommendations are included with Defender for Cloud, but you can't see [risk prioritization](risk-prioritization.md) unless you enable Defender CSPM on your environment.
 
+> [!NOTE]
+> In the portal, some recommendations that previously appeared as a single aggregated item now display as multiple individual recommendations. This change reflects a shift from grouping related findings under one recommendation to listing each recommendation separately.
+>
+> - You might see a longer list of recommendations compared to before. Combined findings (such as vulnerabilities, exposed secrets, or misconfigurations) now appear as individual recommendations rather than nested under a parent recommendation.
+> - The old grouped recommendations still appear side by side with the new format for now, but they're eventually deprecated.
+> - These recommendations are marked as Preview. This tag indicates that the recommendation is in an early state and doesn't affect Secure Score yet.
+> - Secure Score currently applies to the parent recommendation only, not to each individual item.
+>
+> If you see both formats or recommendations with a Preview tag, this condition is expected during the transition. The goal is to improve clarity and allow you to act on specific recommendations more easily.
+
 ## Review the recommendations page
 
 ::: zone pivot="azure-portal"
@@ -30,7 +40,66 @@ Review recommendations and make sure all the details are correct before you reso
 
 1. Go to **Defender for Cloud** > **Recommendations**.
 
+1. Apply filters such as:
+   - **Exposed asset**: Filter by assets with exposure to threats.
+   - **Asset risk factors**: Filter by specific risk conditions.
+   - **Environment**: Filter by Azure, AWS, or GCP.
+   - **Workload**: Filter by specific workload types.
+   - **Recommendation maturity**: Filter by recommendation readiness level.
+
+1. In the left-hand side of the page, you can choose to view recommendations by security category:
+   - **All recommendations**: Complete list of security recommendations.
+   - **Misconfigurations**: Configuration-related security issues.
+   - **Vulnerabilities**: Software vulnerabilities requiring patches.
+   - **Exposed Secrets**: Credentials and secrets that might be compromised.
+
+   > [!NOTE]
+   > When you select a security category filter, both the recommendations list and the summary cards update to reflect only the recommendations in that category.
+
 1. Select a recommendation.
+
+### Recommendation views
+
+The Azure portal provides three distinct ways to view and interact with recommendations:
+
+#### Findings view
+
+This view displays a list of all recommendations organized by individual assets, ordered by risk level. Each row represents a single recommendation affecting a specific resource.
+
+When you select a recommendation row, a side panel opens displaying:
+
+- **Overview**: General information about the recommendation, including its description, details of the exposed asset, and other relevant recommendation specifics
+- **Remediation steps**: Actionable guidance to resolve the security issue
+- **Map preview**: Displays all related attack paths passing through the asset, aggregated by target node type. You can:
+  - Select an aggregated path to reveal all associated attack and additional paths
+  - Select a specific path to view its detailed visualization
+- **Related initiatives**: Security initiatives and compliance frameworks associated with the recommendation
+- Additional tabs might appear for specific recommendations with relevant contextual information
+
+#### Resource views
+
+> [!NOTE]
+> In addition to Group by title, the Azure portal supports Group by resource. This groups all findings for the same asset in one place, which is helpful when a single owner is responsible for an asset and should receive all of its findings together.
+
+#### Recommendation title view
+
+This view aggregates recommendations by title, showing a consolidated list ordered by risk level. Each row represents all instances of a particular recommendation across your environment.
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Go to **Defender for Cloud** > **Recommendations**.
+
+1. Select **Group by title**.
+
+    :::image type="content" source="media/review-security-recommendations/group-by-title.png" alt-text="Screenshot of the recommendations page that shows the location of the Group by title toggle." lightbox="media/review-security-recommendations/group-by-title.png":::
+
+When you select an aggregated recommendation row, a side panel opens displaying:
+
+- **Overview**: General information including the recommendation description, risk level distribution across affected resources, governance status, and other relevant details
+- **Remediation steps**: Actionable guidance to resolve the security issue
+- **Exposed assets**: A list of all resources affected by this recommendation
+- **Related initiatives**: Security initiatives and compliance frameworks associated with the recommendation
+- Additional tabs might appear for specific recommendations with relevant contextual information
 
 ::: zone-end
 
@@ -103,6 +172,10 @@ When you select an aggregated recommendation row, a side panel opens displaying:
 - **Related initiatives**: Security initiatives and compliance frameworks associated with the recommendation
 - Additional tabs might appear for specific recommendations with relevant contextual information
 
+#### Recommendation per resource view
+
+In addition to Group by title, the portal supports Group by resource. This groups all findings for the same asset in one place, which is helpful when a single owner is responsible for an asset and should receive all of its findings together.
+
 :::image type="content" source="media/review-security-recommendations/defender-portal-recommendation-side-pane.png" alt-text="Screenshot of recommendations side pane." lightbox="media/review-security-recommendations/defender-portal-recommendation-side-pane.png":::
 
 Alternative access paths to recommendations:
@@ -117,15 +190,17 @@ Alternative access paths to recommendations:
 > - **Azure Policy resources**: Some resources that come from Azure Policy might not show up in the Defender portal. During preview, the portal only displays resources that have security context and contribute to meaningful security insights.
 > - Resources tied to free subscriptions don't currently appear in the Defender portal.
 
-## Understanding risk prioritization in Defender portal
+::: zone-end
 
-The Exposure Management experience in the Defender portal provides advanced risk prioritization capabilities that help security teams focus on the most critical threats. Microsoft Defender for Cloud's dynamic risk assessment engine evaluates the risks in your environment while considering the potential for exploitation and the potential business impact to your organization.
+## Understanding risk prioritization in the portal
 
-The recommendations in the Defender portal are automatically prioritized based on effective risk, which takes into account multiple contextual factors about each resource and its environment. This risk-based approach ensures that security teams can address the most critical security issues first, making remediation efforts more efficient and effective.
+The Exposure Management experience in the portal provides advanced risk prioritization capabilities that help security teams focus on the most critical threats. Microsoft Defender for Cloud's dynamic risk assessment engine evaluates the risks in your environment while considering the potential for exploitation and the potential business impact to your organization.
+
+The recommendations in the portal are automatically prioritized based on effective risk, which takes into account multiple contextual factors about each resource and its environment. This risk-based approach ensures that security teams can address the most critical security issues first, making remediation efforts more efficient and effective.
 
 ### Risk-based filtering and prioritization
 
-The Defender portal offers advanced filtering capabilities that allow you to focus on recommendations based on risk factors:
+The portal offers advanced filtering capabilities that allow you to focus on recommendations based on risk factors:
 
 - **Exposed assets**: Filter by resources that have direct exposure to threats, such as internet-facing resources or resources with vulnerable configurations.
 - **Asset risk factors**: Target specific risk conditions like data sensitivity, lateral movement potential, or critical infrastructure exposure.
@@ -142,9 +217,9 @@ The unified Exposure Management experience calculates risk levels by using a con
 - **Attack surface**: The resource's exposure to potential threats.
 - **Choke point analysis**: Whether the resource serves as a critical junction in potential attack paths.
 
-### Risk levels in Defender portal
+### Risk levels in the portal
 
-The Defender portal classifies recommendations into five risk levels:
+The portal classifies recommendations into five risk levels:
 
 - **Critical**: The most severe security problems with immediate exploitability and high business impact that require urgent attention.
 - **High**: Significant security risks that should be addressed promptly but may not require immediate action
@@ -154,15 +229,13 @@ The Defender portal classifies recommendations into five risk levels:
 
 ### Enhanced recommendation details
 
-Each recommendation in the Defender portal provides comprehensive risk context:
+Each recommendation in the portal provides comprehensive risk context:
 
 - **Risk assessment summary**: Overall risk calculation and contributing factors.
 - **Attack surface mapping**: Visual representation of how the resource relates to potential attack scenarios.
 - **Initiative correlation**: Connection to broader security initiatives and compliance frameworks.
 - **CVE associations**: Links to relevant Common Vulnerabilities and Exposures when applicable.
 - **Historical context**: Trends and changes in risk levels over time.
-
-::: zone-end
 
 On the recommendation page, review the following details:
 
@@ -198,6 +271,9 @@ You can interact with recommendations in multiple ways. If an option isn't avail
    - **Recommendation owner and set due date**: If you enable a [governance rule](governance-rules.md) for the recommendation, you can assign an owner and due date.
    - **Exempt**: You can exempt resources from the recommendation or disable specific findings by using disable rules.
    - **Workflow automation**: Set a logic app to trigger with the recommendation.
+   
+   >[!NOTE]
+   >With the new individual recommendation format, governance works at the finding level. You can assign owners and due dates to specific findings, and you can use governance rules with resource tags (for example, Team: DataPlatform) to automatically route recommendations to the correct owner or queue.
 
    :::image type="content" source="media/review-security-recommendations/recommendation-take-action.png" alt-text="Screenshot that shows what you can see in the recommendation when you select the Take action tab." lightbox="media/review-security-recommendations/recommendation-take-action.png":::
 
@@ -223,6 +299,9 @@ You can interact with recommendations in multiple ways. If an option isn't avail
 
 1. [Remediate the recommendation](implement-security-recommendations.md).
 
+>[!NOTE]
+>During the preview transition, you may see Preview and New version indicators on certain recommendations. These tags distinguish new individual items from legacy grouped ones shown side by side. Use filters to limit the view to one format when needed.
+
 ::: zone-end
 
 ::: zone pivot="defender-portal"
@@ -241,16 +320,6 @@ Separate views exist for issue types:
 
 For each view, you see the **Cloud Secure Score**, **Score history**, **Recommendation by risk level**, and how the risk is calculated.
 
-> [!NOTE]
-> In the Defender portal, some recommendations that previously appeared as a single aggregated item now display as multiple individual recommendations. This change reflects a shift from grouping related findings under one recommendation to listing each recommendation separately.
->
-> - You might see a longer list of recommendations compared to before. Combined findings (such as vulnerabilities, exposed secrets, or misconfigurations) now appear as individual recommendations rather than nested under a parent recommendation.
-> - The old grouped recommendations still appear side by side with the new format for now, but they're eventually deprecated.
-> - These recommendations are marked as Preview. This tag indicates that the recommendation is in an early state and doesn't affect Secure Score yet.
-> - Secure Score currently applies to the parent recommendation only, not to each individual item.
->
-> If you see both formats or recommendations with a Preview tag, this condition is expected during the transition. The goal is to improve clarity and allow you to act on specific recommendations more easily.
-
 By integrating Defender for Cloud in the Defender portal, you can also access enhanced cloud recommendations through the unified interface.
 
 Key improvements in the cloud recommendations experience include:
@@ -266,18 +335,6 @@ The unified experience ensures that cloud security recommendations are contextua
 
 ::: zone pivot="azure-portal"
 
-## Group recommendations by title
-
-You can group recommendations by title by using the Defender for Cloud recommendation page. This feature is useful when you want to remediate a recommendation that affects multiple resources due to a specific security issue.
-
-1. Sign in to the [Azure portal](https://portal.azure.com/).
-
-1. Go to **Defender for Cloud** > **Recommendations**.
-
-1. Select **Group by title**.
-
-    :::image type="content" source="media/review-security-recommendations/group-by-title.png" alt-text="Screenshot of the recommendations page that shows the location of the Group by title toggle." lightbox="media/review-security-recommendations/group-by-title.png":::
-
 ## Manage your assigned recommendations
 
 Defender for Cloud supports governance rules for recommendations. You can assign a recommendation owner or a due date. You can help ensure accountability by using governance rules, which also support a service-level agreement (SLA) for recommendations.
@@ -285,6 +342,9 @@ Defender for Cloud supports governance rules for recommendations. You can assign
 - Recommendations appear as **On time** until their due date passes. Then they change to **Overdue**.
 - When a recommendation isn't classified as **Overdue**, it doesn't affect your Microsoft Secure Score.
 - You can also apply a grace period so that overdue recommendations don't affect your Secure Score.
+
+>[!NOTE]
+>During the preview period, new individual recommendations are marked **Preview** and do not affect risk based Secure Score until the format reaches GA. Legacy GA items continue to impact score as before.
 
 Learn more about how to configure [governance rules](governance-rules.md).
 
@@ -347,6 +407,9 @@ You can use [Azure Resource Graph](/azure/governance/resource-graph/) to write a
    :::image type="content" source="./media/review-security-recommendations/run-query.png" alt-text="Screenshot of Azure Resource Graph Explorer that shows the results for the recommendation from the previous screenshot." lightbox="media/review-security-recommendations/run-query.png":::
 
 1. Review the results.
+
+>[!NOTE]
+>If your dashboards or automations currently rely on Sub Assessment APIs or queries, plan to migrate to the Assessment APIs / securityFindings equivalents for the individual recommendation format. During the side by side period, you might see duplicate data (legacy grouped + new individual). Use **Preview/New** version UI tags or API filters to focus on one format and avoid double counting. The Open query entry point can help you generate updated queries from the portal.
 
 :::zone-end
 
