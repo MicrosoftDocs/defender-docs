@@ -27,12 +27,12 @@ appliesto:
 
 |Property|Type|Description|
 |---|---|---|
-|id|String|Identity of the [Indicator](ti-indicator.md) entity.|
+|ID|String|Identity of the [Indicator](ti-indicator.md) entity.|
 |indicatorValue|String|The value of the [Indicator](ti-indicator.md).|
 |indicatorType|Enum|Type of the indicator. Possible values are: `FileSha1`, `FileSha256`, `FileMd5`, `CertificateThumbprint`, `IpAddress`, `DomainName`, and `Url`.|
 |application|String|The application associated with the indicator.|
 |action|Enum|The action that is taken if the indicator is discovered in the organization. Possible values are: `Warn`, `Block`, `Audit`, `Alert`, `AlertAndBlock`, `BlockAndRemediate`, and `Allowed`.|
-|externalID|String|Id the customer can submit in the request for custom correlation.|
+|externalID|String|ID the customer can submit in the request for custom correlation.|
 |sourceType|Enum|`User` in case the Indicator created by a user (for example, from the portal), `AadApp` in case it submitted using automated application via the API.|
 |createdBySource|string|The name of the user/application that submitted the indicator.|
 |createdBy|String|Unique identity of the user/application that submitted the indicator.|
