@@ -36,14 +36,13 @@ To enable network security on the storage resources integrated with your Azure S
 1. In the Azure portal, search for *Network Security Perimeters*
 
 1. Select **Create**.
-1. Configure the following fields:
-   - **Subscription** and **Resource group**.
-   - **Name**, for example `storageblob-connectors-nsp`
-   - **Region**. The region must be the same region as the storage account.
-   - **Profile name**: Enter a profile name or accept the default.
+1. Select a **Subscription** and **Resource group**.
+1. Enter **Name**, for example `storageblob-connectors-nsp`
+1. Select a **Region**. The region must be the same region as the storage account.
+1. Enter a **Profile name** or accept the default. The profile defines the set of rules that are applied to associated resources. You can have multiple profiles within a single NSP to apply different rules to different resources if required.
 1. Select **Review + create** and then **Create**.
 
-   :::image type="content" source="./media/enable-storage-network-security/create-network-security-perimiter.png" lightbox="./media/enable-storage-network-security/create-network-security-perimiter.png" alt-text="A screenshot showing the creation of a Network Security Perimeter in the Azure portal.":::
+   :::image type="content" source="./media/enable-storage-network-security/create-network-security-perimeter.png" lightbox="./media/enable-storage-network-security/create-network-security-perimeter.png" alt-text="A screenshot showing the creation of a Network Security Perimeter in the Azure portal.":::
 
 ### Associate the Storage Account with the Network Security Perimeter
 1. Open your newly created Network Security Perimeter resource
@@ -54,7 +53,7 @@ To enable network security on the storage resources integrated with your Azure S
 1. Search for and add your storage account, then select **Select**.
 1. Select **Associate**. 
 
-Access mode is set to **Transition** by default, allowing you to validate the configuration before enforcing restrictions.
+The access mode is set to **Transition** by default, allowing you to validate the configuration before enforcing restrictions.
 
    :::image type="content" source="./media/enable-storage-network-security/associate-resources.png" lightbox="./media/enable-storage-network-security/associate-resources.png" alt-text="A screenshot showing how to associate a storage account with the Network Security Perimeter in the Azure portal.":::
 

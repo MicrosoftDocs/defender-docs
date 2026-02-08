@@ -203,4 +203,4 @@ For more information, see [Create data connector REST API example](/rest/api/sec
 
 - [Set up your Azure Storage connector to stream logs to Microsoft Sentinel](setup-azure-storage-connector.md)
 - [Create a codeless connector for Microsoft Sentinel](create-codeless-connector.md)
-- [Enable network security on connector integrated storage resources](enable-storage-network-security-how-to.md)
+- [Enable network security on connector integrated storage resources](enable-storage-network-security.md)
