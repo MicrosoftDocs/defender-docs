@@ -107,7 +107,7 @@ For example, when a user performs an Azure operation for the first time:
 
 While these scores serve different purposes, you can expect some correlation. High anomaly scores often align with high investigation priority, but not always. Each score provides unique insight for layered detection.
 
-## UEBA experiences in the Microsoft Defender portal 
+## Use embedded UEBA experiences in the Defender portal
 
 By surfacing anomalies in investigation graphs and user pages, and prompting analysts to incorporate anomaly data in hunting queries, UEBA facilitates faster threat detection, smarter prioritization, and more efficient incident response. 
 
