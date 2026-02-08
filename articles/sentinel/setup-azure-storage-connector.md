@@ -4,7 +4,7 @@ description: Learn how to set up the Azure Storage Blob connector to ingest logs
 author: EdB-MSFT
 ms.author: edbaynash
 ms.reviewer: edbaynash
-ms.date: 02/05/2026
+ms.date: 02/08/2026
 ms.topic: how-to
 ms.service: microsoft-sentinel
 
@@ -14,42 +14,50 @@ ms.service: microsoft-sentinel
 
 # Set up your Azure Storage connector to stream logs to Microsoft Sentinel
 
-The Azure Storage Blob connector simplifies the process of collecting logs from Azure Storage. This connector enables ISVs and users to build scalable connectors on top of integrations with Azure Storage through the fully managed Codeless Connector Framework (CCF) solution.
+The Azure Storage Blob connector simplifies collecting logs from Azure Storage. It lets ISVs and users build scalable connectors on top of Azure Storage integrations through the fully managed Codeless Connector Framework (CCF).
 
-This article describes the underlying resources used to facilitate the connector and provides step-by-step instructions for creating your first Azure Storage connector.
+This article summarizes the connector resources and provides steps to create and validate your first Azure Storage connector.
 
 ## Prerequisites
 
-Before you begin, ensure you have the following:
+Before you begin, ensure you have:
 
-- An Azure Data Lake Storage Gen 2 account (supports blobs and queues) with a container created for the data.
-- A Microsoft Sentinel workspace with the required permissions to create data connectors.
-- Permissions to create and manage Event Grid system topics and subscriptions on the storage account.
+- An Azure Storage account with hierarchical namespace enabled (Azure Data Lake Storage Gen2) and a container that holds the log files.
+- A Microsoft Sentinel workspace with a Microsoft Sentinel Contributor or higher role to create data connectors.
+- Owner or EventGrid Contributor role permissions on the storage account to create Event Grid system topics and subscriptions. 
+
+> [!NOTE]
+> Make sure the **Microsoft.EventGrid** resource provider is registered in the subscription that contains the storage account.
 
 ## Connector resource overview
 
-The Azure Storage Blob connector uses a queue-based blob-pointer model to subscribe to blob created events in your storage account. An Event Grid system topic subscription listens for blob creation activity and pushes events based on a configurable filtering criterion to the Azure Storage queue. This allows multiple connector instances to ingest from the same Azure Storage container while scoping the files based on separate folder directories and file patterns. This filtering can be controlled through the portal or the connector ARM template to scope the blob prefix and suffix patterns.
+The Azure Storage Blob connector uses a queue-based blob-pointer model to subscribe to blob-created events in your storage account. An Event Grid system topic subscription listens for blob creation activity and pushes events, based on configurable filtering criteria, to an Azure Storage queue. Multiple connector instances can ingest from the same container while scoping files by folder and file pattern. You can control filtering through the portal or the connector ARM template by setting blob prefix and suffix patterns.
 
 :::image type="content" source="./media/setup-azure-storage-connector/overview-diagram.png" lightbox="./media/setup-azure-storage-connector/overview-diagram.png" alt-text="A diagram showing the Azure Storage Blob connector architecture, including blob created events, Event Grid, storage queue, and Microsoft Sentinel ingestion flow.":::
 
 The Microsoft Sentinel connector:
 
-- Polls the Azure Storage queue frequently for messages, filtering to blob created events.
-- Fetches the files from the Azure Storage Blob container based on the path specified in the queue message.
-- On successful forwarding to the destination, deletes the queue message.
+- Polls the Azure Storage queue for blob-created messages.
+- Fetches files from the Azure Storage Blob container based on the path in the queue message.
+- Deletes the queue message after successful forwarding.
 
-To authenticate with the Azure Storage Blob container and queue, the connector uses a service principal accessible to the connector's application. For details on the application per Azure environment, see the [Azure Storage Blob connectors API reference](data-connection-rules-reference-azure-storage.md). We strongly recommend that you use the automation in the ARM template to validate that the service principal exists and apply necessary role-based access to the storage account.
+The connector authenticates to the Storage Account by using a service principal accessible to the connector application. For the application IDs per cloud and the full template schema, see the [Azure Storage Blob connectors API reference](data-connection-rules-reference-azure-storage.md). Use the ARM template automation to verify that the service principal exists and to apply the required role assignments on the storage account.
 
 ## Create an Azure Storage Blob connector
 
-To create your first Azure Storage Blob connector, follow these steps:
+1. Review and adapt the example ARM template in the [Azure Storage Blob connectors API reference](data-connection-rules-reference-azure-storage.md#build-the-azure-storage-blob-ccf-data-connector). Set the container name, queue name (if not auto-created), blob prefix/suffix filters, and destination table mapping.
+2. Deploy the template by following [Create a codeless connector for Microsoft Sentinel](create-codeless-connector.md#data-connection-rules). Ensure the deployment scope matches the storage account and Microsoft Sentinel workspace.
+3. After deployment, confirm the connector instance is created in Microsoft Sentinel and that the Event Grid subscription status is **Healthy**.
 
-1. Review and update the example template included in the [Azure Storage Blob connectors API reference](data-connection-rules-reference-azure-storage.md#build-the-azure-storage-blob-ccf-data-connector).
-1. Follow the steps in [Create a codeless connector for Microsoft Sentinel](create-codeless-connector.md#data-connection-rules) to deploy the connector using the template.
+## Validate the connector
+
+- Upload a sample file that matches your prefix/suffix filter and confirm that queue messages are created and consumed.
+- Verify ingestion in the target table in Microsoft Sentinel and check for errors in the connector health blade.
+- If you use network restrictions, confirm that the connector-managed resources can reach the blob and queue endpoints.
 
 ## Troubleshooting
 
-For information on troubleshooting Azure Storage Blob connector issues, see [Troubleshoot Azure Storage Blob connector issues](azure-storage-blob-connector-troubleshoot.md).
+For troubleshooting steps, see [Troubleshoot Azure Storage Blob connector issues](azure-storage-blob-connector-troubleshoot.md).
 
 ## Related content
 
