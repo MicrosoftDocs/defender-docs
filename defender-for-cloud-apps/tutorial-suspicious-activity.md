@@ -1,5 +1,5 @@
 ---
-title: Detect suspicious user activity with UEBA 
+title: Detect suspicious user activity using UEBA
 description: This tutorial describes the process for tuning user activity detections in Microsoft Defender for Cloud Apps.
 ms.date: 02/05/2026
 ms.topic: tutorial
@@ -9,18 +9,17 @@ ms.topic: tutorial
 
 Microsoft Defender for Cloud Apps provides detections across the attack kill chain for compromised users, insider threats, exfiltration, ransomware, and more. This solution combines multiple detection methods, including anomaly, behavioral analytics (UEBA), and rule-based activity detections, to provide a broad view of how your users use apps in your environment.
 
-The impact of a user altering your cloud environment can be significant and directly affect your ability to run your business. For instance, key corporate resources like the servers running your public website or service that you're providing to customers can be compromised.
+The effect of a user changing your cloud environment can be significant and directly affect your ability to run your business. For instance, key corporate resources like the servers running your public website or service that you're providing to customers can be compromised.
 
 Defender for Cloud Apps captures data from several sources. It analyzes the data to extract app and user activities in your organization, giving your security analysts visibility into cloud use. The collected data is correlated, standardized, and enriched with threat intelligence, location, and many other details to provide an accurate, consistent view of suspicious activities.
 
-To fully realize the benefits of these detections, make sure you configure the following sources:
+To fully realize the benefits of these detections, make sure you set up the following sources:
 
 |Source  |Description  |
 |---------|---------|
 |**[Activity log](activity-filters.md)**       | Activities from your [API connected apps](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md).        |
 |**[Discovery log](tutorial-shadow-it.md)**       | Activities extracted from firewall and proxy traffic logs that you forward to Defender for Cloud Apps. The logs are analyzed against the [cloud app catalog](risk-score.md), ranked, and scored based on more than 90 risk factors.        |
 |**[Proxy log](proxy-intro-aad.md)**       | Activities from your [conditional access app control apps](tutorial-proxy.md#phase-1-monitor-user-activities-for-anomalies).        |
-
 
 You can fine-tune the following policies by setting filters and dynamic thresholds (UEBA) to help train their detection models. You can also set suppressions to reduce common false positive detections:
 
@@ -43,17 +42,16 @@ Learn how to tune user activity detections to identify true compromises and redu
 
 ### Prerequisites
 
-- Configure IP ranges so that you can use them to fine-tune any type of suspicious user activity detection policies.
+- Set up IP ranges so that you can use them to fine-tune any type of suspicious user activity detection policies.
 
-
-Because IP address information is crucial for almost all investigations, [configuring known IP addresses](ip-tags.md) helps the machine learning algorithms identify known locations and consider them as part of the machine learning models. For example, adding the IP address range of your VPN helps the model to correctly classify this IP range and automatically exclude it from impossible travel detections because the VPN location doesn't represent the true location of that user.
+[Setting up known IP addresses](ip-tags.md) helps the machine learning algorithms identify known locations and consider them as part of the machine learning models. For example, adding the IP address range of your VPN helps the model to correctly classify this IP range and automatically exclude it from impossible travel detections because the VPN location doesn't represent the true location of that user.
 
 > [!NOTE]  
-> Configured IP ranges aren't limited to detections and are used throughout Defender for Cloud Apps in areas such as activities in the activity log, Conditional Access, and more. Keep this usage in mind when configuring the ranges. For example, identifying your physical office IP addresses allows you to customize the way you view and investigate logs and alerts.
+> IP ranges aren't limited to detections and are used throughout Defender for Cloud Apps in areas like activities in the activity log, Conditional Access, and more. Keep this usage in mind when setting up the ranges. For example, identifying your physical office IP addresses lets you customize the way you view and investigate logs and alerts.
 
-### Review out-of-the-box anomaly detection alerts
+### Review anomaly detection alerts
 
-Defender for Cloud Apps includes a set of anomaly detection alerts to identify different security scenarios. The solution automatically enables these detections. They start to profile user activity and generate alerts as soon as you connect the relevant [app connectors](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md).
+Defender for Cloud Apps includes a set of anomaly detection alerts to identify different security scenarios. The solution automatically turns on these detections. They start to profile user activity and generate alerts as soon as you connect the relevant [app connectors](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md).
 
 Start by familiarizing yourself with the [different detection policies](control-cloud-apps-with-policies.md). Prioritize the top scenarios that you think are most relevant for your organization, and tune the policies accordingly.
 
@@ -61,12 +59,11 @@ Start by familiarizing yourself with the [different detection policies](control-
 
 Defender for Cloud Apps includes several built-in anomaly detection policies that are preconfigured for common security use cases. Popular detections include:
 
-
 |Detection |Description  |
 |---------|---------|
 |**Impossible travel**       | Activities from the same user in different locations within a period that's shorter than the expected travel time between the two locations.        |
 |**Activity from infrequent country/region**      |Activity from a location that wasn't recently or never visited by the user.         |
-|**Malware detection**     | Scans files in your cloud apps and runs suspicious files through Microsoft's threat intelligence engine to determine whether they're associated with known malware.        |
+|**Malware detection**     | Scans files in your cloud apps and runs suspicious files through Microsoft's threat intelligence engine to check whether they're associated with known malware.        |
 |**Ransomware activity**      | File uploads to the cloud that might be infected with ransomware.        |
 |**Activity from suspicious IP addresses**      | Activity from an IP address that Microsoft Threat Intelligence identified as risky.        |
 |**Suspicious inbox forwarding**       | Detects suspicious inbox forwarding rules set on a user's inbox.         |
@@ -78,16 +75,14 @@ For a full list of detections and what they do, see [Anomaly detection policies]
 > [!NOTE]
 > Some anomaly detections primarily focus on detecting problematic security scenarios, while others help identify and investigate anomalous user behavior that might not necessarily indicate a compromise. For such detections, you can use "behaviors," which is available in the Microsoft Defender XDR advanced hunting experience. For more information, see [Behaviors](behaviors.md).
 
-
-
 1. **Scope policies to specific users or groups**
 
     Scoping policies to specific users can help reduce noise from alerts that aren't relevant to your organization. You can [configure each policy to include or exclude specific users and groups](anomaly-detection-policy.md#scope-anomaly-detection-policies), such as in the following examples:
 
     - **Attack simulations**  
-    Many organizations use a user or a group to constantly simulate attacks. Obviously, it doesn't make sense to constantly receive alerts from these users' activities. Therefore, you can configure your policies to exclude these users or groups. This choice also helps the machine learning models identify these users and fine-tune their dynamic thresholds accordingly.
+    Many organizations use a user or a group to constantly simulate attacks. It doesn't make sense to constantly receive alerts from these users' activities. Set up your policies to exclude these users or groups. This choice also helps the machine learning models identify these users and fine-tune their dynamic thresholds accordingly.
     - **Targeted detections**  
-        You might want to investigate a specific group of VIP users such as members of an administrator or CXO group. In this case, create a policy for the activities you want to detect and choose to only include the set of users or groups you're interested in.
+        You might want to investigate a specific group of VIP users like members of an admin or CXO group. In this case, create a policy for the activities you want to detect and choose to only include the set of users or groups you're interested in.
 
 1. **Tune anomalous sign-in detections**
 
@@ -120,18 +115,18 @@ Fine-tune the built-in policies or create your own policies to help you identify
 Set the usage filters to control the baseline, scope, and activity period for detecting anomalous behavior. For example, you might want to receive alerts for anomalous activities relating to executive-level employees.
 
 1. **Tune alert sensitivity**  
-To prevent alert fatigue, configure the sensitivity of alerts. Use the sensitivity slider to control the number of high-risk alerts sent per 1,000 users per week. Higher sensitivities require less variance to be considered an anomaly and generate more alerts. In general, set low sensitivity for users who don't have access to confidential data.
+To prevent alert fatigue, set up the sensitivity of alerts. Use the sensitivity slider to control the number of high-risk alerts sent per 1,000 users per week. Higher sensitivities require less variance to be considered an anomaly and generate more alerts. In general, set low sensitivity for users who don't have use to confidential data.
 
 ## Phase 4: Tune rule-based detection (activity) policies
 
 [Rule-based detection policies](user-activity-policies.md) complement anomaly detection policies with organization-specific requirements. Create rule-based policies by using one of the Activity policy templates.
 
-1. Go to **Control** > **Templates** and set the **Type** filter to **Activity policy**. [Configure them](activity-filters-queries.md) to detect behaviors that aren't normal for your environment. 
+1. Go to **Control** > **Templates** and set the **Type** filter to **Activity policy**. [Set up activity filters](activity-filters-queries.md) to detect behaviors that aren't normal for your environment. 
 
 For example, for organizations that don't have any presence in a particular country/region, it might make sense to create a policy that detects the anomalous activities from that country/region and alert on them. For others, who have large branches in that country/region, activities from that country/region are normal and it doesn't make sense to detect such activities.
 
 1. **Tune activity volume**  
-Choose the volume of activity required before the detection raises an alert. Using the country/region example, if you have no presence in a country/region, even a single activity is significant and warrants an alert. However, a single sign-in failure could be human error and only of interest if there are many failures in a short period.
+Choose the volume of activity required before the detection raises an alert. Using the country/region example, if you have no presence in a country/region, even a single activity is significant and warrants an alert. A single sign-in failure could be human error and only of interest if there are many failures in a short period.
 1. **Tune [activity filters](activity-filters-queries.md)**  
 Set the filters you require to detect the type of activity you want to alert on. For example, to detect activity from a country/region, use the **Location** parameter.
 1. **Tune alerts**  
@@ -147,19 +142,17 @@ Choose the format and medium that best suit your needs for receiving alerts. To 
 
 You might also want the ability to analyze alerts in the context of other alerts triggered by other products in your organization. This analysis gives you a holistic view of a potential threat. For example, you might want to correlate between cloud-based and on-premises events to see if there's any other mitigating evidence that confirms an attack.
 
-Additionally, you can trigger custom alert automation by using the integration with [Microsoft Power Automate](flow-integration.md). For example, you can set up a playbook automatically, create an issue in [ServiceNow](/connectors/service-now/), or send an approval email to execute a custom governance action when an alert is triggered.
+Additionally, you can trigger custom alert automation by using the integration with [Microsoft Power Automate](flow-integration.md). For example, you can set up a playbook automatically, create an issue in [ServiceNow](/connectors/service-now/), or send an approval email to run a custom governance action when an alert is triggered.
 
 Use the following guidelines to configure your alerts:
 
 1. **Email**  
 Choose this option to receive alerts by email.
-1. **SIEM**  
+1. **SIEM**
 Several SIEM integration options exist, including [Microsoft Sentinel](siem-sentinel.md), [Microsoft Graph Security API](/graph/security-integration#list-of-connectors-from-microsoft), and other [generic SIEMs](siem.md). Choose the integration that best meets your requirements.
 1. **Power Automate automation**  
 Create the automation playbooks you require and set it as the policy's alert to Power Automate action.
 
 ## Phase 6: Investigate and remediate
 
-After configuring your policies and alerts, start to investigate and remediate any suspicious activities detected in your organization. For example, you might want to look into activities that indicate that a [user is compromised](tutorial-ueba.md#identify).
-
-To optimize your protection, set up automatic remediation actions to minimize the risk to your organization. The policies allow you to apply [governance actions](governance-actions.md) in conjunction with the alerts so that the risk to your organization is reduced even before you start investigating. The policy type determines the available actions, including actions such as suspending a user or blocking access to the requested resource.
+To optimize your protection, set up automatic remediation actions to minimize the risk to your organization. The policies let you apply [governance actions](governance-actions.md) in conjunction with the alerts so that the risk to your organization is reduced even before you start investigating. The policy type determines the available actions, including actions like pausing a user or blocking access to the requested resource.
