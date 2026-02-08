@@ -49,12 +49,12 @@ UEBA is natively integrated into Microsoft Sentinel and the Microsoft Defender p
 To fully benefit from UEBA's advanced threat detection capabilities: 
 
 1. **Enable UEBA in Microsoft Sentinel and connect key data sources**, such as Microsoft Entra ID, Defender for Identity, and Office 365. For more information, see [Enable entity behavior analytics](enable-entity-behavior-analytics.md).
-   
-1. **Install the UEBA Essentials solution**, which includes dozens of ready-to-use queries on the `BehaviorAnalytics`, `IdentityInfo`, `Anomalies`, and `UserPeerAnalytics` tables. For more information about installing Microsoft Sentinel solutions, see [Install or update Microsoft Sentinel solutions](sentinel-solutions-deploy.md#install-or-update-content). 
 
-    [Query the tables to investigate](#investigate-anomalies-with-ueba-data) risk scores and suspicious activity.  
+1. **Install the UEBA Essentials solution**, a collection of dozens of pre-built hunting queries curated and maintained by Microsoft security experts. The solution includes multi-cloud anomaly detection queries across Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and Okta. Installing the solution helps you get started quickly with threat hunting and investigations using UEBA data, instead of building these detection capabilities from scratch.
+
+  For information about installing Microsoft Sentinel solutions, see [Install or update Microsoft Sentinel solutions](sentinel-solutions-deploy.md#install-or-update-content). 
   
-1. **Integrate UEBA insights** into workbooks, incident workflows, and hunting queries to maximize their value across the SOC.
+1. **Integrate UEBA insights** into workbooks, incident workflows, and hunting queries to maximize their value across your SOC workflows.
 
 ## Investigate anomalies using UEBA data
 

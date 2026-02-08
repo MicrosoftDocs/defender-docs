@@ -325,8 +325,6 @@
               href: enable-entity-behavior-analytics.md
             - name: Investigate with UEBA
               href: investigate-with-ueba.md
-            - name: Query UEBA data using UEBA essentials solution
-              href: ueba-useful-queries.md
             - name: Aggregate behavioral insights from raw logs
               href: entity-behaviors-layer.md
             - name: UEBA reference
