@@ -20,7 +20,7 @@ description: Admins can learn how to view and manage quarantined messages for al
 ms.service: defender-office-365
 ms.date: 12/15/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 #customer intent: As a Microsoft 365 admin, I need guidance to view, release, and manage quarantined messages and files so I can respond to threats and false positives.
@@ -30,7 +30,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In all organizations with cloud mailboxes, quarantine holds potentially dangerous or unwanted messages detected by the default email protections for cloud mailboxes. Admins can view, release, and delete all types of quarantined messages and files for all users.
+In all organizations with cloud mailboxes, quarantine holds potentially dangerous or unwanted messages detected by [the built-in security features for all cloud mailboxes](eop-about.md). Admins can view, release, and delete all types of quarantined messages and files for all users.
 
 Admins in Microsoft 365 organizations with Defender for Office 365 (included or in an add-on subscription) can also manage files quarantined by [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md) and Microsoft Teams messages [quarantined by zero-hour auto purge (ZAP)](zero-hour-auto-purge.md#zero-hour-auto-purge-zap-in-microsoft-teams).
 
