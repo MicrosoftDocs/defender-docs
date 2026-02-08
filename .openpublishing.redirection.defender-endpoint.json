@@ -224,6 +224,11 @@
       "source_path": "defender-endpoint/whats-new-mde-archive.md",
       "redirect_url": "/defender-endpoint/whats-new-in-microsoft-defender-endpoint",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/ios-whatsnew.md",
+      "redirect_url": "/defender-endpoint/whats-new-in-microsoft-defender-endpoint",
+      "redirect_document_id": false
     }         
   ]
 }
