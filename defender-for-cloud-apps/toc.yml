@@ -550,6 +550,8 @@ items:
         href: api-files-list.md
       - name: Fetch File
         href: api-files-fetch.md
+  - name: What's new archive
+    href: /defender-for-cloud-apps/release-note-archive.md
 - name: Resources
   items:
   - name: Licensing datasheet
