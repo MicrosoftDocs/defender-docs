@@ -25,20 +25,7 @@ For users running Microsoft Defender Antivirus on their endpoints, this article 
 
 For more information on Defender for Endpoint plans and licenses, see the [Microsoft 365 licensing guidance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 
-## Find the information you need in this article
-
-|Information |Audience |Scope |
-|-----------|---------|-------|
-|[Find information about all supported versions](#all-supported-versions) | Licensed customers | Supported versions released in the past 6 months for all supported operating systems. |
-|[Review important information about supported operating systems](#operating-system-information) | Licensed customers | General notes about supported operating systems. |
-|[Find Windows versions](#windows-versions) | Licensed customers |Specific Windows versions released in the past 6 months, with related features and updates. |
-|[Find Linux versions](#linux-versions) | Licensed customers |Specific Linux versions released in the past 6 months, with related features and updates. |
-|[Find macOS versions](#macos-versions) | Licensed customers |Specific macOS versions released in the past 6 months, with related features and updates. |
-|[Find Android versions](#android-versions) | Licensed customers |Specific Android versions released in the past 6 months, with related features and updates. |
-|[Find iOS versions](#ios-versions) | Licensed customers |Specific iOS versions released in the past 6 months, with related features and updates. |
-|[Find Microsoft Defender Antivirus versions](#microsoft-defender-antivirus-versions) | Users running Microsoft Defender Antivirus on their endpoints |Specific Microsoft Defender Antivirus versions released in the past 6 months, with related features and updates. |
-
-## All supported versions
+## All supported versions by date
 
 This table includes supported versions released in for all supported platforms in the past 6 months. Each release includes a link to the full release details section.
 
@@ -163,7 +150,7 @@ See the list of [macOS known issues](#macos-known-issues).
 | -------- | -------- |-------- |
 |20.125122.7.0 |1.1.25100.4000 |1.439.74.0 |
 
-## Enhancements and features
+#### Enhancements and features
 
 Bug and performance fixes
 
