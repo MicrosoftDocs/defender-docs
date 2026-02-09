@@ -6,7 +6,6 @@ f1.keywords:
 author: mberdugo
 ms.author: monaberdugo
 ms.localizationpriority: high
-search.appverid: ""
 ms.collection: 
 - m365-security
 - m365solution-getstarted

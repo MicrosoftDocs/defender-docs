@@ -4,7 +4,6 @@ description: Implementation guide for partners and SOC architects implementing M
 author: guywi-ms
 ms.author: guywild
 audience: ""
-ms.localizationpriority: ""
 search.appverid: ""
 ms.date: 12/20/2025
 ms.topic: concept-article
