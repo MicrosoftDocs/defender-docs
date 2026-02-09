@@ -885,6 +885,9 @@
         - name: Investigate Defender for SQL security alerts
           displayName: SQL, SQL servers, defender, machines
           href: defender-for-sql-alerts.md
+        - name: Simulate alerts for SQL servers on machines
+          displayName: SQL, SQL servers, defender, machines
+          href: simulate-alerts-sql-machines.md
         - name: Find and remediate vulnerabilities
           href: sql-azure-vulnerability-assessment-find.md
         - name: Consume and export scan results
