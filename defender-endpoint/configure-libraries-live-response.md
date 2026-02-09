@@ -74,8 +74,11 @@ To view and analyze a file:
 
 1. Right-click the file and select **View file** or double-click the file row.
 1. Select **Download** to download the file, or **Analyze** to open Copilot script analysis.
+
+    > [!NOTE]
+    > You need a Copilot license to analyze the files. If you don't have this license, you can view the files.
     
-    The analysis provides a description of the actions the script takes, and more information, including the methods used and output. Select the chat icon at the bottom right to ask questions and further analyze the file.
+    The analysis provides a description of the actions the script takes, and more information, including the methods used and output.
 
     :::image type="content" source="media/configure-libraries-live-response/library-management-view-analyze-file.png" alt-text="Library management page - view and analyze a file" lightbox="media/configure-libraries-live-response/library-management-view-analyze-file.png":::
 
