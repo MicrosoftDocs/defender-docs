@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 01/06/2026
+ms.date: 02/09/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -31,8 +31,9 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date| Category|Update|
 | -------- | -------- | -------- |
-|February 3, 2026| Preview |[Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview)|
-|February 9, 2026| Preview |[Database-level recommendations experience for SQL Vulnerability Assessment findings (Preview)](#database-level-recommendations-experience-for-sql-vulnerability-assessment-preview)|
+|February 3, 2026| Preview |[Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview) |
+|February 9, 2026| GA | [Simulate alerts for SQL servers on machines](#simulate-alerts-for-sql-servers-on-machines) |
+|February 9, 2026| Preview | [Database-level recommendations experience for SQL Vulnerability Assessment findings (Preview)](#database-level-recommendations-experience-for-sql-vulnerability-assessment-preview) |
 
 ## Database-level recommendations experience for SQL Vulnerability Assessment (Preview)
 
@@ -54,6 +55,16 @@ During public preview, the new database-level assessments don’t affect Secure 
 The SQL [vulnerability assessment rules reference](sql-azure-vulnerability-assessment-rules.md#assessment-identifiers-for-sql-vulnerability-assessment-rules-preview) has been updated to include the new database-level recommendation names and assessment identifiers.
 
 The existing server-level (aggregated) experience remains available during preview and will be deprecated after the general availability of the new experience.
+
+## Simulate alerts for SQL servers on machines
+
+February 9, 2026
+
+Microsoft Defender for Cloud’s SQL simulated alerts is now generally available. Simulated alerts allow security teams safely validate SQL protection, detections, and automated response workflows without introducing real risk. 
+
+Simulated alerts generates realistic alerts with full SQL and machine context on Azure VMs or Arc‑connected machines, enabling end‑to‑end testing of playbooks and SOC readiness. All alerts are produced locally using a safe script extension, with no external payloads or impact to production resources.
+
+Learn how to [simulate alerts for SQL servers on machines](simulate-alerts-sql-machines.md).
 
 ## Threat protection for AI agents (Preview)
 
