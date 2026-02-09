@@ -17,7 +17,7 @@ These are the known limitations during the preview release of Defender for Cloud
 
 ## General
 
-- The new cloud features in the Defender portal are currently only supported in public / commercial clouds.
+- The new cloud features in the Defender portal are currently only supported in public/commercial clouds.
 - Over time data available from the moment the tenant was selected to public preview enablement.
 - Deleted resources might still appear in the Azure portal because it currently reflects the last known state. We're actively working to align the Azure portal with the Defender portal and a fix is in progress to ensure deleted resources are no longer displayed.
 - Resources tied to subscriptions with Foundational CSPM (free tier) are currently not displayed.
