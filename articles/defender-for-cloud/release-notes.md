@@ -43,7 +43,7 @@ In this experience, each SQL VA rule is represented as a separate recommendation
 This experience doesn’t affect SQL VA scanning logic, rules, APIs, or pricing.
 
 Reviewing and remediating SQL VA findings using the assessment-based experience is available using the following portal experiences:
-- [Use the Azure portal](sql-azure-vulnerability-assessment-new.md#database-level-recommendations-experience).
+- [Use the Azure portal](sql-azure-vulnerability-assessment-new.md#review-and-remediate-vulnerabilities-azure-portal).
 - [Use the Defender portal](sql-azure-vulnerability-assessment-new.md#review-and-remediate-vulnerabilities-defender-portal)
 
 The previous server-level (aggregated) experience remains available with this new release.
