@@ -32,7 +32,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |Date| Category|Update|
 | -------- | -------- | -------- |
 | February 9, 2026 | GA | [Simulate alerts for SQL servers on machines](#simulate-alerts-for-sql-servers-on-machines) |
-| February 3, 2026| Preview | [Threat protection for AI agents (Preview)](#threat-protection-for-ai-agents-preview) |
+| February 3, 2026| Preview | [Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview) |
 
 ### Simulate alerts for SQL servers on machines
 
