@@ -48,8 +48,9 @@ Reviewing and remediating SQL VA findings using the assessment-based experience 
 
 The previous server-level (aggregated) experience remains available with this new release.
 
+The SQL vulnerability assessment rules reference was updated to reflect the database-level recommendations experience.
 
-
+For the complete list of rules, see [SQL vulnerability assessment rules reference](sql-azure-vulnerability-assessment-rules.md#assessment-identifiers-for-sql-vulnerability-assessment-rules-preview).
 
 ## Threat protection for AI agents (Preview)
 
