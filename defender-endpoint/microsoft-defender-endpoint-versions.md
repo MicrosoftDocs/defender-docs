@@ -88,7 +88,8 @@ This table includes supported versions released in for all supported platforms i
 This section covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. You can also check the file information section in the monthly cumulative rollup updates in the following articles: 
 
 - [Windows 11 release information](/windows/release-health/windows11-release-information)
-- [Windows 10 updates](https://support.microsoft.com/topic/windows-10-update-history-8127c2c6-6edf-4fdf-8b9f-0f7be1ef3562)<br> - [Windows Server 2022 updates](https://support.microsoft.com/topic/windows-server-2022-update-history-e1caa597-00c5-4ab9-9f3e-8212fe80b2ee)
+- [Windows 10 updates](https://support.microsoft.com/topic/windows-10-update-history-8127c2c6-6edf-4fdf-8b9f-0f7be1ef3562)
+- [Windows Server 2022 updates](https://support.microsoft.com/topic/windows-server-2022-update-history-e1caa597-00c5-4ab9-9f3e-8212fe80b2ee)
 - [Windows Server 2019 updates](https://support.microsoft.com/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059)
 - [Windows Server 2025 updates](https://support.microsoft.com/en-us/topic/windows-server-2025-update-history-10f58da7-e57b-4a9d-9c16-9f1dcd72d7d7)
 
@@ -275,6 +276,8 @@ Defender for Endpoint on Linux is updated regularly. While security fixes are in
 
 For detailed information on Microsoft security updates, see the [Microsoft Security Update Guide](https://msrc.microsoft.com/update-guide).
 
+For the latest UX improvements, see [Linux UX improvements](linux-new-ux.md).
+
 > [!IMPORTANT]
 >
 > Starting with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology. This change allows for better performance, reduced resource consumption, and overall improved stability. eBPF support is available since August 2023, and is fully integrated into all updates of Defender for Endpoint on Linux (version `101.23082.0006` and later). We strongly encourage you to adopt the eBPF build, as it provides significant enhancements over Auditd. If eBPF isn't supported on your machines, or if there are specific requirements to remain on Auditd, you have the following options:
@@ -282,6 +285,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 > - Continue to use Defender for Endpoint on Linux build `101.24072.0000` with Auditd. This build continues to be supported for several months, so you have time to plan and execute your migration to eBPF.
 > - If you are on versions later than `101.24072.0000`, Defender for Endpoint on Linux relies on `netlink` as a backup supplementary event provider. If a fallback occurs, all operations continue to flow seamlessly.
 > - Review your current Defender for Endpoint on Linux deployment, and begin planning your migration to the eBPF-supported build. For more information on eBPF and how it works, see [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-ebpf).
+>
 > If you have any concerns or need assistance during this transition, contact support.
 
 ### Linux | January 2026 | 101.25102.0005
@@ -410,6 +414,8 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 | General | Other stability enhancements and bug fixes. |
 
 ## Android versions
+
+See the full list of [Android UX improvements](android-new-ux.md).
 
 ### Android | December 2025 | 1.0.8412.0101
 
@@ -543,10 +549,6 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 | Feature area | Update summary |
 |--------------|---------------|
 | User experience | UX Improvement for home page and tiles screens. [Learn more](android-new-ux.md#march-2025) |
-
-### Android UX improvements
-
-See the full list of [Android UX improvements](android-new-ux.md).
 
 ## iOS versions
 
