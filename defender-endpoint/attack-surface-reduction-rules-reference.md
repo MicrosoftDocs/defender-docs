@@ -1,4 +1,4 @@
-﻿---
+---
 title: Attack surface reduction rules reference
 description: Lists details about Microsoft Defender for Endpoint attack surface reduction rules on a per-rule basis.
 ms.service: defender-endpoint
@@ -215,7 +215,7 @@ For rules with the "Rule State" specified:
 |Block untrusted and unsigned processes that run from USB|b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4|
 |Block use of copied or impersonated system tools|c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb|
 |Block Webshell creation for Servers|a8f5898e-1dc8-49a9-9878-85004b8a61e6|
-|Block Win32 API calls from Office macros|92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b|
+|Block Win32 API calls from Office macros|aaaabbbb-0000-cccc-1111-dddd2222eeee|
 |Use advanced protection against ransomware|c1db55ab-c21a-4637-bb3f-a12568109d35|
 
 <sup>\*</sup> Currently, this ASR rule might not be available in the Intune Attack Surface Reduction policy configuration due to a known backend issue. But, the rule still exists and is available through other methods. For example, Microsoft Defender for Endpoint security settings management, Configuration Service Provider (CSP), [Add-MpPreference](/powershell/module/defender/add-mppreference), or existing Intune ASR policy configuration in rules created before the issue).
@@ -662,7 +662,7 @@ Intune name: `Win32 imports from Office macro code`
 
 Configuration Manager name: `Block Win32 API calls from Office macros`
 
-GUID: `92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b`
+GUID: `aaaabbbb-0000-cccc-1111-dddd2222eeee`
 
 Advanced hunting action type:
 
@@ -709,5 +709,3 @@ Dependencies: Microsoft Defender Antivirus, Cloud Protection
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 
 - [Troubleshoot attack surface reduction rules](/defender-endpoint/troubleshoot-asr)
-
-

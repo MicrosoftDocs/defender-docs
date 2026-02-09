@@ -122,10 +122,10 @@ In the following example, the "DigiCert Global Root G2" certificate is for comme
 
 ```powershell
 # Certificate for commercial customers
-Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "df3c24f9bfd666761b268073fe06d1cc8d4f82a4"} | fl
+Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00"} | fl
 
 # Certificate for US Government GCC High customers
-Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "a8985d3a65e5e5c4b2d7d66d40c6dd2fb19c5436"} | fl
+Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "BB22CC33DD44EE55FF66AA77BB88CC99DD00EE11"} | fl
 ```
 
 Output for certificate for commercial customers certificate:
@@ -133,7 +133,7 @@ Output for certificate for commercial customers certificate:
 ```Output
 Subject      : CN=DigiCert Global Root G2, OU=www.digicert.com, O=DigiCert Inc, C=US
 Issuer       : CN=DigiCert Global Root G2, OU=www.digicert.com, O=DigiCert Inc, C=US
-Thumbprint   : DF3C24F9BFD666761B268073FE06D1CC8D4F82A4
+Thumbprint   : AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00
 FriendlyName : DigiCert Global Root G2
 NotBefore    : 01/08/2013 15:00:00
 NotAfter     : 15/01/2038 14:00:00
@@ -145,7 +145,7 @@ Output for certificate for US Government GCC High customers:
 ```Output
 Subject      : CN=DigiCert Global Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
 Issuer       : CN=DigiCert Global Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
-Thumbprint   : A8985D3A65E5E5C4B2D7D66D40C6DD2FB19C5436
+Thumbprint   : BB22CC33DD44EE55FF66AA77BB88CC99DD00EE11
 FriendlyName : DigiCert
 NotBefore    : 11/9/2006 4:00:00 PM
 NotAfter     : 11/9/2031 4:00:00 PM
@@ -343,7 +343,7 @@ If during the sensor installation you receive the following error: **ApplyIntern
 ``2021-01-19 03:45:00.0000 Error CommunicationWebClient+\<SendWithRetryAsync\>d__9`1``
 ApplyInternal failed two way SSL connection to service.
 The issue can be caused by a proxy with SSL inspection enabled.
-[_workspaceApplicationSensorApiEndpoint=Unspecified/contoso.atp.azure.com:443 Thumbprint=7C039DA47E81E51F3DA3DF3DA7B5E1899B5B4AD0]`
+[_workspaceApplicationSensorApiEndpoint=Unspecified/contoso.atp.azure.com:443 Thumbprint=CC33DD44EE55FF66AA77BB88CC99DD00EE11FF22]`
 
 **Cause:**
 

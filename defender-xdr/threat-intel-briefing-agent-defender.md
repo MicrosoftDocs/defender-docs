@@ -119,12 +119,12 @@ To set up an agent identity:
       -H "Authorization: Bearer $TOKEN" \
       -H "Content-Type: application/json" \
       -d '{
-         "appId": "43d7b169-1d9e-4d32-8cd8-06c5974ed90c"
+         "appId": "00001111-aaaa-2222-bbbb-3333cccc4444"
       }'
    ```
    **Optional:** Validate that the service principal was created:
    ```azurecli-interactive
-   curl -X GET "https://graph.microsoft.com/v1.0/servicePrincipals?$filter=appId eq '43d7b169-1d9e-4d32-8cd8-06c5974ed90c'" \
+   curl -X GET "https://graph.microsoft.com/v1.0/servicePrincipals?$filter=appId eq '00001111-aaaa-2222-bbbb-3333cccc4444'" \
      -H "Authorization: Bearer $TOKEN"
    ```
 
