@@ -31,9 +31,9 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date| Category|Update|
 | -------- | -------- | -------- |
-|February 3, 2026| Preview |[Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview) |
-|February 9, 2026| GA | [Simulate alerts for SQL servers on machines](#simulate-alerts-for-sql-servers-on-machines) |
 |February 9, 2026| Preview | [Database-level recommendations experience for SQL Vulnerability Assessment findings (Preview)](#database-level-recommendations-experience-for-sql-vulnerability-assessment-preview) |
+|February 9, 2026| GA | [Simulate alerts for SQL servers on machines](#simulate-alerts-for-sql-servers-on-machines) |
+|February 3, 2026| Preview | [Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview) |
 
 ## Database-level recommendations experience for SQL Vulnerability Assessment (Preview)
 
@@ -43,18 +43,23 @@ Microsoft Defender for SQL is introducing a database-level recommendations exper
 
 This update applies to SQL VA across all supported database types (PaaS and IaaS), including both classic and express configurations, and is available in the following portal experiences:
 
-- [Azure portal](sql-azure-vulnerability-assessment-new.md#review-and-remediate-vulnerabilities-azure-portal).
-- [Defender portal](sql-azure-vulnerability-assessment-new.md#review-and-remediate-vulnerabilities-defender-portal)
+- [Azure portal](sql-azure-vulnerability-assessment-find.md#review-and-remediate-vulnerabilities-azure-portal)
+- [Defender portal](sql-azure-vulnerability-assessment-find.md#review-and-remediate-vulnerabilities-defender-portal)
 
-In this experience, each SQL Vulnerability Assessment rule generates a separate assessment for each affected database, instead of aggregating findings at the server or instance level. Findings are displayed and managed in **Recommendations**.
+In this experience, each SQL Vulnerability Assessment rule generates a separate assessment for each affected database. There assessments are displayed and managed as recommendations in the Defender for Cloud **Recommendations** page. 
 
-The database-level experience keeps the same security capabilities and doesn’t affect SQL VA scanning logic, rules, queries, scan schedules, APIs, or pricing. It changes only how findings are presented and managed.
+In the previous model, findings were aggregated at the server or instance level and surfaced under the following recommendations:
+
+- SQL databases should have vulnerability findings resolved
+- SQL servers on machines should have vulnerability findings resolved
+
+The database-level experience keeps the same security capabilities and doesn’t affect SQL VA scanning logic, rules, queries, scan schedules, APIs, or pricing. It only provides another way to consume and manage findings that's consistent with all Defender for Cloud recommendations.
 
 During public preview, the new database-level assessments don’t affect Secure Score in the Azure portal but do contribute to Secure Score in the Defender portal.
 
 The SQL [vulnerability assessment rules reference](sql-azure-vulnerability-assessment-rules.md) has been updated to include the new database-level recommendation names and assessment identifiers.
 
-The existing server-level (aggregated) experience remains available during preview and will be deprecated after the general availability of the new experience.
+The existing server-level (aggregated) experience remains available during preview.
 
 ## Simulate alerts for SQL servers on machines
 
