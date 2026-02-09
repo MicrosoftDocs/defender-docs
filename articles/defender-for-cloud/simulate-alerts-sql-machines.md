@@ -26,8 +26,7 @@ The simulation runs locally on the machine through the Custom Script Extension w
 ## Prerequisites
 
 - [Enable SQL Servers on Machines plan for Defender for Databases](defender-for-sql-usage.md).
-- [Verify that the target machine is successfully protected](verify-machine-protection.md).
-- The SQL VM or Arc-connected machines are successfully protected.
+- [Ensure that the target machine, whether a SQL VM or Arc‑connected machine, is successfully protected.](verify-machine-protection.md).
 - Must have the following role and permission: 
     - **Create an ARM deployment and to write VM extensions**: Security Admin or Contributor in the target subscription.
     - Contributor permission and Resource Policy contributor to the resource `Microsoft.Compute/virtualMachines/write` and `Microsoft.Resources/deployments/*`.
