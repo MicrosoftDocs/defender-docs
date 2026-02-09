@@ -64,7 +64,7 @@ defender scan sbom <target> [--sbom-format <format>]
 | ---------------------------- | -------- | ------ | ------------------------------------------------------------ |
 | \<target\>                   | Yes      | String | The container image reference or filesystem (for example, `my-image:latest`, `/home/src/`). |
 | \-\-sbom-format              | No       | String | SBOM output format. Default: `cyclonedx1.6-json` | 
-| \-\-output                   | No       | String | Output path for generated SBOM file (default: sbom-finding-<timestamp>.json) | 
+| \-\-output                   | No       | String | Output path for generated SBOM file (default: `sbom-finding-<timestamp>.json`) | 
 
 #### Valid format options:
 - `cyclonedx1.4-json`, `cyclonedx1.4-xml`
