@@ -2,9 +2,9 @@
 title: Integration FAQ for Defender portal
 description: Frequently asked questions about integrating and using Microsoft Defender for Cloud in the Defender portal, including migration, compatibility, and feature questions.
 author: dlanger
-ms.author: dlanger
+ms.author: DebLanger
 ms.topic: faq
-ms.date: 11/12/2025
+ms.date: 02/09/2026
 ms.service: defender-for-cloud
 ---
 
