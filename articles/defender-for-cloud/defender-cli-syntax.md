@@ -8,9 +8,17 @@ ms.date: 11/06/2025
 ms.topic: concept-article
 ---
 
-# Defender for Cloud CLI syntax
+# Defender for Cloud CLI Reference
 
 The Defender for Cloud CLI provides commands to scan container images for security vulnerabilities and export results in standard formats. This article describes the syntax, parameters, and usage examples for the image and SBOM scan commands.
+
+## CLI Options
+
+Option | Required | Type   | Description                                                  
+--- | --- | --- | --- 
+`--output-formats` | No | String | Option: HTML
+`--defender-output` | No | String | Sets the path to the output file [default: `pwd`]
+`--defender-break` | No | Bool | Exit with a non-zero code if critical issues are found                  
 
 ## Image Scan
 
@@ -26,7 +34,7 @@ defender scan image <image-name> [--defender-output <path>]
 | Name                         | Required | Type   | Description                                                  |
 | ---------------------------- | -------- | ------ | ------------------------------------------------------------ |
 | \<image-name\>               | Yes      | String | The container image reference (for example, `my-image:latest`, `registry.azurecr.io/app:v1`). |
-| \-\-defender-output          | No       | String | Path to write aggregated SARIF output file.                  | 
+
 
 ### Examples
 
@@ -56,6 +64,7 @@ defender scan sbom <target> [--sbom-format <format>]
 | ---------------------------- | -------- | ------ | ------------------------------------------------------------ |
 | \<target\>                   | Yes      | String | The container image reference or filesystem (for example, `my-image:latest`, `/home/src/`). |
 | \-\-sbom-format              | No       | String | SBOM output format. Default: `cyclonedx1.6-json` | 
+| \-\-output                   | No       | String | Output path for generated SBOM file (default: `sbom-finding-<timestamp>.json`) | 
 
 #### Valid format options:
 - `cyclonedx1.4-json`, `cyclonedx1.4-xml`
