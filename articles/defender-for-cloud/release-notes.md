@@ -50,7 +50,7 @@ In this experience, each SQL Vulnerability Assessment rule generates a separate 
 
 The database-level experience keeps the same security capabilities and doesn’t affect SQL VA scanning logic, rules, queries, scan schedules, APIs, or pricing. It changes only how findings are presented and managed.
 
-During public preview, the new database-level assessments don’t affect Secure Score in the Azure portal but do contribute to Cloud Secure Score in the Defender portal.
+During public preview, the new database-level assessments don’t affect Secure Score in the Azure portal but do contribute to Secure Score in the Defender portal.
 
 The SQL [vulnerability assessment rules reference](sql-azure-vulnerability-assessment-rules.md) has been updated to include the new database-level recommendation names and assessment identifiers.
 
