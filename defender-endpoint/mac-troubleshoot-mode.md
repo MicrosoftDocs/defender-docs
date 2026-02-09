@@ -156,12 +156,10 @@ DeviceEvents
 
 If you can't enable troubleshooting mode, do the following troubleshooting steps on the target Mac:
 
-- Verify the app version by running the following commands:
+- Verify the app version by running the following command:
 
   ```terminal
   mdatp health --field app_version
-
-  mdatp health --field edr_client_version
   ```
 
   As previously mentioned, you need Platform Update version: [101.23122.0005](mac-whatsnew.md#jan-2024-build-101231220005---release-version-2012312250) or newer.
