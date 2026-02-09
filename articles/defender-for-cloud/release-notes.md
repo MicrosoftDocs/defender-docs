@@ -32,25 +32,22 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |Date| Category|Update|
 | -------- | -------- | -------- |
 |February 3, 2026| Preview |[Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview)|
-|February 9, 2026| Preview |[Update to SQL Vulnerability Assessment findings (Preview)]
+|February 9, 2026| Preview |[Database-level recommendations experience for SQL Vulnerability Assessment findings (Preview)](#database-level-recommendations-experience-for-sql-vulnerability-assessment-preview)|
 
-## Database-level recommendations experience for SQL Vulnerability Assessment findings (Preview)
+## Database-level recommendations experience for SQL Vulnerability Assessment (Preview)
 
-SQL Vulnerability Assessment (VA) findings can now be viewed as individual recommendations in Microsoft Defender for SQL.
+Defender for SQL has added a database-level recommendations experience for SQL Vulnerability Assessment, in preview.
 
-In this experience, each SQL VA rule is represented as a separate recommendation associated with the affected SQL database resource. This change affects how findings are displayed and managed in Recommendations.
+In this new experience, each SQL Vulnerability Assessment rule is represented as a separate recommendation associated with the affected SQL database resource. This change affects how findings are displayed and managed in recommendations, and is available using the following portal experiences:
 
-This experience doesn’t affect SQL VA scanning logic, rules, APIs, or pricing.
-
-Reviewing and remediating SQL VA findings using the assessment-based experience is available using the following portal experiences:
 - [Use the Azure portal](sql-azure-vulnerability-assessment-new.md#review-and-remediate-vulnerabilities-azure-portal).
 - [Use the Defender portal](sql-azure-vulnerability-assessment-new.md#review-and-remediate-vulnerabilities-defender-portal)
 
+The SQL [vulnerability assessment rules reference](sql-azure-vulnerability-assessment-rules.md#assessment-identifiers-for-sql-vulnerability-assessment-rules-preview).
+
 The previous server-level (aggregated) experience remains available with this new release.
 
-The SQL vulnerability assessment rules reference was updated to reflect the database-level recommendations experience.
-
-For the complete list of rules, see [SQL vulnerability assessment rules reference](sql-azure-vulnerability-assessment-rules.md#assessment-identifiers-for-sql-vulnerability-assessment-rules-preview).
+This experience doesn’t affect SQL VA scanning logic, rules, APIs, or pricing.
 
 ## Threat protection for AI agents (Preview)
 
