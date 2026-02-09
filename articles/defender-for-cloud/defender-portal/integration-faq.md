@@ -21,7 +21,10 @@ This article answers frequently asked questions about using Microsoft Defender f
 ### Who is eligible to test the new MDC capabilities in the Defender portal?
 
 The expansion of MDC into the Defender portal is available for billed MDC customers with at least one Defender for Cloud plan enabled. 
-Note: Once the opt-in is selected, it takes up to 24 hours for the data to populate. 
+Note: Once the opt-in is selected, it takes up to 24 hours for the data to populate.
+
+> [!NOTE]
+> The new cloud features in the Defender portal are currently only supported in public and commercial clouds.
 
 ### What environments are supported with this expansion in the Defender portal?  
 
