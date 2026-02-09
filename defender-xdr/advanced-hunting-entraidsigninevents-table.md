@@ -52,7 +52,7 @@ For information on other tables in the advanced hunting schema, see the [advance
 |`AccountDisplayName`|`string`|Name displayed in the address book entry for the account user. This is usually a combination of the given name, middle initial, and surname of the user.|
 |`AccountObjectId`|`string`|Unique identifier for the account in Microsoft Entra ID|
 |`AccountUpn`|`string`|User principal name (UPN) of the account|
-|`IsConfidentialClient`|`boolean`|User principal name (UPN) of the account|
+|`IsConfidentialClient`|`boolean`|Indicates if the sign in was done via confidential client applications|
 |`IsExternalUser`|`int`|Indicates if the user that signed in is external. Possible values: -1 (not set), 0 (not external), 1 (external).|
 |`IsGuestUser`|`boolean`|Indicates if the sign in was done via confidential client applications|
 |`AlternateSignInName`|`string`|On-premises user principal name (UPN) of the user signing in to Microsoft Entra ID|
