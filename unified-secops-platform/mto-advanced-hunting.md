@@ -2,13 +2,9 @@
 title: Advanced hunting in Microsoft Defender multitenant management
 description: Learn about advanced hunting in Microsoft Defender multitenant management
 search.appverid: met150
-ms.service: microsoft-defender
-ms.subservice: unified-security-operations
 author: poliveria
 ms.author: pauloliveria
-manager: orspodek
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - highpri

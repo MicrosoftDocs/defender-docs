@@ -42,6 +42,10 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "audience": "ITPro",
+      "manager": "orspodek",
+      "ms.service": "microsoft-defender",
+      "ms.subservice": "unified-security-operations",
       "breadcrumb_path": "~/breadcrumb/toc.yml",
       "feedback_system": "Standard",
       "feedback_product_url": "https://techcommunity.microsoft.com/t5/security-compliance-and-identity/ct-p/MicrosoftSecurityandCompliance",

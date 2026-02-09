@@ -1,13 +1,9 @@
 ---
 title: Set up Microsoft Defender multitenant management
 description: Learn what steps you need to take to get started with multitenant management for Microsoft Defender XDR and Microsoft Sentinel in the Defender portal.
-ms.service: microsoft-defender
-ms.subservice: unified-security-operations
 author: guywild
 ms.author: guywi-ms
-manager: orspodek
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - highpri

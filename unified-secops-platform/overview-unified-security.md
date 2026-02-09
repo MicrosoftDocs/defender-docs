@@ -2,14 +2,10 @@
 title: "What Are Unified Security Operations in the Microsoft Defender Portal?"
 description: Provides an overview of features and functionality in the Microsoft Defender portal for unified security operations.
 search.appverid: met150
-ms.service: microsoft-defender
-ms.subservice: unified-security-operations
 author: guywi-ms
 ms.author: guywild
-manager: orspodek
 ms.localizationpriority: medium
 ms.date: 11/15/2024
-audience: ITPro
 ms.collection:
 - M365-security-compliance
 - tier1

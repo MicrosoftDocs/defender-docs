@@ -2,14 +2,10 @@
 title: Threat detection in the Microsoft Defender portal
 description: Learn about the features that help detect threats in the Microsoft unified security platform
 search.appverid: met150
-ms.service: microsoft-defender
-ms.subservice: unified-security-operations
 author: mberdugo
 ms.author: monaberdugo
-manager: orspodek
 ms.localizationpriority: medium
 ms.date: 11/22/2024
-audience: ITPro
 ms.collection:
 - M365-security-compliance
 - tier1
