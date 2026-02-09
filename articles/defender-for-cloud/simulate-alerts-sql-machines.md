@@ -14,8 +14,8 @@ The simulation injects telemetry records on target machines (Azure Virtual Machi
 
 You can simulate the following security scenarios:
 
-- Brute force login
-- Login from suspicious application
+- Brute force authentication
+- Authentication from suspicious application
 - SQL injection
 - Principal anomaly
 - Shell external source anomaly
@@ -37,9 +37,9 @@ The simulation runs locally on the machine through the Custom Script Extension w
 
 ## Simulate alerts
 
-The SqlAlertSimulationClient extracts template parameters from the target resource, including subscription, resource group, machine name, location, and the presence of the Defender extension. 
+The `SqlAlertSimulationClient` extracts template parameters from the target resource, including subscription, resource group, machine name, location, and the presence of the Defender extension. 
 
-SqlAlertSimulationClient builds an Azure Resource Manager (ARM) template that deploys or re-uses a custom script extension on the machine. The extension runs a PowerShell command that invokes the Defender for SQL simulate helper with the requested attack parameters. The helper generates alert telemetry that flows into Defender for Cloud, triggering alerts that downstream automation and mobilization connectors can consume.
+`SqlAlertSimulationClient` builds an Azure Resource Manager (ARM) template that deploys or re-uses a custom script extension on the machine. The extension runs a PowerShell command that invokes the Defender for SQL simulate helper with the requested attack parameters. The helper generates alert telemetry that flows into Defender for Cloud, triggering alerts that downstream automation and mobilization connectors can consume.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -61,7 +61,7 @@ SqlAlertSimulationClient builds an Azure Resource Manager (ARM) template that de
 
     :::image type="content" source="media/simulate-alerts-sql-machines/select-alert-type.png" alt-text="Screenshot that shows the different types of alerts that can be selected." lightbox="media/simulate-alerts-sql-machines/select-alert-type.png":::
 
-1. Enter the required information for the selected alert type. For example, username and password for login attacks.
+1. Enter the required information for the selected alert type. For example, username and password for authentication attacks.
 
 1. Select **Simulate Alert**.
 
@@ -69,7 +69,7 @@ The alert appears after a few minutes and you can use it to validate your securi
 
 ## Verify that the alert is generated
 
-Once an alert is simulated, you can verify that it was generated successfully.
+After you simulate an alert, verify that the alert is generated.
 
 1. In the Azure portal, search for and select **Azure SQL**.
 
