@@ -34,18 +34,36 @@ For updates about versions and features released six months ago or earlier, see 
 /defender-xdr/advanced-hunting-identityaccountinfo-table)** table. This table provides account information from various sources, including Microsoft Entra ID, and links to the identity that owns the account.
 
 
+### New security posture assessment: Remove stale Active Directory accounts (Preview)
+
+This identity security posture assessment lists any user accounts in Active Directory that are stale, meaning they haven't logged in at all during the past 90 days.
+
+For more information, see: [Security posture assessment: Remove stale Active Directory accounts](security-posture-assessments/accounts.md#remove-stale-active-directory-accounts-preview)
+
+### New security posture assessment: Microsoft Entra ID privileged user accounts that are also privileged in Active Directory (Preview)
+
+This identity security posture assessment lists Microsoft Entra ID privileged user accounts that also have privileged roles in Active Directory.
+
+For more information, see: [Security posture assessment: Microsoft Entra ID privileged user accounts that are also privileged in Active Directory](security-posture-assessments/accounts.md#microsoft-entra-id-privileged-user-accounts-that-are-also-privileged-in-active-directory-preview)
+
+
 ### MDI alerts migrated to the unified Defender alerting experience
-As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, some alerts were converted from the Microsoft Defender for Identity classic format to the MDI XDR alert format. Keep in mind that all alerts are based on detections from Defender for Identity sensors. See [Microsoft Defender for Identity XDR security alerts](alerts-xdr.md) for the full list of XDR alerts.
+As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, some alerts were converted from the Microsoft Defender for Identity classic format to the MDI XDR alert format. Keep in mind that all alerts are based on detections from Defender for Identity sensors. See [Microsoft Defender for Identity XDR security alerts](alerts-xdr.md) for the full list of Microsoft Defender alerts.
 
 ### New Health Alert: Sensor v3.x RPC Audit Misconfigured
 Enhanced RPC auditing is required for some Microsoft Defender for Identity advanced identity detections. A new health alert helps identify v3.x sensors where this configuration is either missing or incorrectly applied. The alert is being rolled out gradually to customers. For more information, see [Configure RPC on sensors v3.x](deploy/prerequisites-sensor-version-3.md#configure-rpc-auditing).
 
 ### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x (preview)
-We’re gradually rolling out automatic Windows event-auditing configuration for sensors v3.x, along with related health alerts. This update streamlines deployment by automatically applying the required auditing settings to new sensors and correcting misconfigurations on existing ones. For more information, see [Configure automatic windows auditing](deploy/configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically-preview).
+We’re gradually rolling out automatic Windows event-auditing configuration for sensors v3.x, along with related health alerts. Automatic Windows event-auditing streamlines deployment by automatically applying the required auditing settings to new sensors and correcting misconfigurations on existing ones. 
+This update might identify existing auditing configuration gaps that weren't previously detected. 
+To ensure consistent protection, we recommend that you make sure all servers with the v3 sensors are configured with:
+- the latest Windows cumulative update 
+- Automatic Windows event auditing enabled 
+For more information, see [Configure automatic windows auditing](deploy/configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically-preview).
 
 |Version number|Updates|
 |---|---|
-|2.254|The sensor now supports a new DNS zone target for *.aatp.gcc.azure.com. Make sure your sensors in GCC can access this zone with your sensor dns prefix.|
+|2.254|The sensor now supports a new DNS zone target for *.aatp.gcc.azure.com. Make sure your sensors in GCC can access this zone with your sensor DNS prefix.|
 
 ### New security posture assessment: Identify service accounts in privileged groups
 
@@ -72,7 +90,7 @@ For more information, see:[Security posture assessment: Locate accounts in built
 |domainName|String|The domain name of the sensor.|
 |senseClientVersion|String|The version of the Defender for Identity sensor client.|
 
-This capability is currently in preview and available in API Beta version. Learn more [here](/graph/api/resources/security-sensorcandidate?view=graph-rest-beta&preserve-view=true)
+This capability is currently in preview and available in API preview version. Learn more [here](/graph/api/resources/security-sensorcandidate?view=graph-rest-beta&preserve-view=true)
 
 ### ADWS LDAP search in Advanced Hunting
 
@@ -118,7 +136,7 @@ The new security posture assessment lists users whose valid credentials were lea
 
 ### Expansion of identity scoping: Support for Organizational units (Preview)
 
-In addition to the GA release of scoping by Active Directory domains a few months ago, you can now scope by **Organizational Units (OUs)** as part of XDR User Role-Based Access Control (URBAC). This enhancement provides even more granular control over which entities and resources are included in security analysis.
+In addition to the GA release of scoping by Active Directory domains a few months ago, you can now scope by **Organizational Units (OUs)** as part of XDR user role-based access control (URBAC). This enhancement provides even more granular control over which entities and resources are included in security analysis.
 
 For more information, see [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
 
@@ -164,7 +182,7 @@ Defender for Identity data centers are now also deployed in the United Arab Emir
 ### New API support for the Defender for Identity sensor v3.x (Preview)
 
 We're excited to announce the availability of a new Graph-based API for managing the Defender for Identity sensor v3.x server actions.
-This capability is currently in preview and available in API Beta version.
+This capability is currently in preview and available in API preview version.
 
 This API allows customers to:
 
@@ -196,7 +214,7 @@ The improvements will gradually take effect across the following detections:
 - Suspicious modification of Resource Based Constrained Delegation by a machine account
 - Remote code execution attempt
 
-### Unified connectors is now available for Okta single sign-on connectors (Preview)
+### Unified connectors are now available for Okta single sign-on connectors (Preview)
 
 Microsoft Defender for Identity supports the [Unified connectors](/azure/sentinel/unified-connector) experience, starting with the Okta single sign-on connector. The unified connector enables Defender for Identity to collect Okta system logs once and share them across supported Microsoft security products, reducing API usage and improving connector efficiency.
 
@@ -222,7 +240,7 @@ For more information, see: Security Assessment: [Remove Inactive Service Account
 
 We're excited to announce a new Graph-based API for initiating and managing remediation actions in Microsoft Defender for Identity.
 
-This capability is currently in preview and available in API Beta version.
+This capability is currently in preview and available in API preview version.
 
 For more information, see [Managing response actions through Graph API](/graph/api/resources/security-identityaccounts?view=graph-rest-beta&preserve-view=true).
 
@@ -283,7 +301,7 @@ For more information, see:
 
 ### Scoped access by Active Directory domain now supported (Preview)
 
-MDI scoping is now available as part of XDR User Role-Based Access Control (URBAC). Organizations can now define and refine the scope of MDI monitoring, providing granular control over which entities and resources are included in security analysis.
+MDI scoping is now available as part of XDR User Role-based access control (URBAC). Organizations can now define and refine the scope of MDI monitoring, providing granular control over which entities and resources are included in security analysis.
 
 Scoping by Active Directory domains helps:
 
