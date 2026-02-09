@@ -2,7 +2,7 @@
 title: Simulate alerts for SQL servers on machines
 description: Learn how to simulate alerts for SQL servers on machines in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 01/18/2026
+ms.date: 02/09/2026
 #customer intent: As a security administrator, I want to simulate alerts for SQL servers on machines to test my security monitoring setup.
 ---
 
