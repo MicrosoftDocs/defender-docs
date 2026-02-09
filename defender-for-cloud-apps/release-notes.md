@@ -19,6 +19,7 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 
 For news about earlier releases, see [Archive of past updates for Microsoft Defender for Cloud Apps](release-note-archive.md).
+
 ## January 2026
 
 ### Workday connector updated to least-privilege permission model
@@ -52,6 +53,15 @@ Microsoft Defender delivers comprehensive protection for AI agents, combining pr
     Defender monitors agents for misconfigurations and vulnerabilities, identifies potential attack paths, and delivers actionable security recommendations through Exposure Management to strengthen your AI security posture.
 
 For more information, see [Protect your AI agents (Preview)](ai-agent-inventory.md).
+
+## September 2025 
+
+### Real time protection during agent runtime for Microsoft Copilot Studio AI agents (Preview)
+
+Microsoft Defender offers real-time protection during runtime for AI agents built with Microsoft Copilot Studio. This capability automatically blocks the agent’s response during runtime if a suspicious behavior like a prompt injection attack is detected, and notifies security teams with a detailed alert in the Microsoft Defender portal.
+
+For more information, see [Real-time protection during agent runtime for Microsoft Copilot Studio AI agents (Preview)](real-time-agent-protection-during-runtime.md).
+
 
 
 ## Next steps
