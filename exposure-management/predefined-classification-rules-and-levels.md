@@ -1,11 +1,7 @@
 ---
 title: Criticality Levels for Classifications
 description: Lists of all the current criticality levels for classifications in Microsoft Security Exposure Management.
-author: deblanger
-ms.author: dlanger
-manager: orspodek
 ms.topic: reference
-ms.service: exposure-management
 ms.date: 01/26/2026
 ---
 

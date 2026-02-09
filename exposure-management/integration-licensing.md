@@ -1,11 +1,7 @@
 ---
 title: Integration and Licensing for Microsoft Security Exposure Management
 description: Learn about integration capabilities, licensing options, and how to get started with Microsoft Security Exposure Management.
-author: deblanger
-ms.author: dlanger
-manager: orspodek
 ms.topic: overview
-ms.service: exposure-management
 ms.date: 02/24/2025
 ---
 

@@ -1,11 +1,7 @@
 ---
 title: Start using Microsoft Security Exposure Management
 description: This article describes how to start using the Microsoft Security Exposure Management dashboard
-author: deblanger
-ms.author: dlanger
-manager: orspodek
 ms.topic: overview
-ms.service: exposure-management
 ms.date: 11/04/2025
 ---
 

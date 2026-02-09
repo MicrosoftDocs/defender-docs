@@ -1,11 +1,7 @@
 ---
 title: Integrate ServiceNow data connector in Microsoft Security Exposure Management
 description: Learn how to the ServiceNow data connector in Microsoft Security Exposure Management.
-author: deblanger
-ms.author: dlanger
-manager: orspodek
 ms.topic: overview
-ms.service: exposure-management
 ms.date: 10/23/2025
 ---
 

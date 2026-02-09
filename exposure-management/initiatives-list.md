@@ -1,11 +1,7 @@
 ---
 title: Security initiatives in Microsoft Security Exposure Management
 description: Catalog of security Initiatives in Microsoft Security Exposure Management.
-author: deblanger
-ms.author: dlanger
-manager: orspodek
 ms.topic: reference
-ms.service: exposure-management
 ms.date: 05/26/2025
 ---
 
