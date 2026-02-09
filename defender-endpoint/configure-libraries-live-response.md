@@ -1,5 +1,5 @@
 ﻿---
-title: Configure library management for live response in Microsoft Defender for Endpoint
+title: Manage the live response file library in Microsoft Defender for Endpoint
 description: Use Microsoft Defender for Endpoint to configure libraries for live response.
 ms.service: defender-endpoint
 ms.author: lwainstein
@@ -19,7 +19,7 @@ appliesto:
   - Microsoft Defender for Business
 ---
 
-# Configure the live response library in Microsoft Defender for Endpoint
+# Manage the live response file library in Microsoft Defender for Endpoint
 
 The **Library management** page in the Microsoft Defender portal allows you to manage files used during Microsoft Defender for Endpoint live response sessions. You can also add, view, and delete files in the library, instead of uploading them during a live response session.
 
@@ -38,7 +38,7 @@ To view the list of files available for live response:
 1. In the Microsoft Defender portal, navigate to **Settings** > **Endpoints** > **Library management**.
 1. Review the following information for each file:
    - **Name**: The name of the file.
-   - **Type**: The type of file (for example, PowerShell or Python).
+   - **Type**: The file extension.
    - **Created by**: The user who uploaded the file.
    - **Creation date**: The date the file was uploaded.
    - **Updated by**: The user who last updated the file.
@@ -50,7 +50,7 @@ To view the list of files available for live response:
 
 To add a new file for live response:
 
-1. In the **Library management** page, select **Upload**.
+1. Select **Upload** from the menu.
 1. In the **Upload file to library** page, select **Upload file to library** on the right.
 
     The file name is displayed in the **File content** field.
@@ -64,7 +64,7 @@ To add a new file for live response:
 
 ## View file details
 
-To view a file's details, right-click the file and select **View details**. A detailed pane opens, displaying information about the file, including its parameters and usage history.
+To view a file's details, select **View details** from the menu, or right-click the file, and select **View details**. A detailed pane opens, displaying information about the file, including its parameters and usage history.
 
 :::image type="content" source="media/configure-libraries-live-response/library-management-file-details.png" alt-text="Library management page - main view":::
 
