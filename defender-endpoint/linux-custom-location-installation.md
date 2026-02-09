@@ -59,9 +59,16 @@ Before deploying Defender for Endpoint to a custom location, be sure the followi
 
 This section describes the additional steps required for deploying Defender for Endpoint to a custom location, using various supported methods.
 
+> [!NOTE] 
+ > It is recommended to use [Deployment Tool based deployment](/defender-endpoint/linux-install-with-defender-deployment-tool),  as it simplifies the onboarding process, reduces manual tasks, and supports a wide range of deployment scenarios, including new installations, upgrades, and uninstalls. Please refer to the [documentation](/defender-endpoint/linux-install-with-defender-deployment-tool) for details.
+
+- **Defender deployment tool (Recommended)**
+   
+  The recommended method is to run the `defender_deployment_tool.sh` script with the `--install-path /your/custom/path` option at the time of installation. For details, see the [Deployment tool based deployment](https://learn.microsoft.com/en-us/defender-endpoint/linux-install-with-defender-deployment-tool)
+
 - **Installer script**:
 
-  The recommended method is to run the `mde_installer.sh` script with the `--install-path /your/custom/path` option at the time of installation. For details, see the [installer script deployment guide](linux-installer-script.md).
+  Run the `mde_installer.sh` script with the `--install-path /your/custom/path` option at the time of installation. For details, see the [installer script deployment guide](linux-installer-script.md).
 
 - **Third-party automation tools**:
 
@@ -182,6 +189,7 @@ lrwxrwxrwx 1 root root ... /opt/microsoft/mdatp -> /var/tmp/TestInstall/microsof
 - [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md)
 
 - Deployment methods:
+   - [Deployment tool based deployment](https://learn.microsoft.com/en-us/defender-endpoint/linux-install-with-defender-deployment-tool)
    - [Installer script based deployment](linux-installer-script.md) 
    - [Ansible based deployment](linux-install-with-ansible.md)
    - [Chef based deployment](linux-deploy-defender-for-endpoint-with-chef.md)
