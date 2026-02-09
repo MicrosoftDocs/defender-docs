@@ -1,8 +1,8 @@
 ---
 title: Manage tenants with Microsoft Defender multitenant management
 description: Learn about the tenant list in Microsoft Defender multitenant management
-author: guywild
-ms.author: guywi-ms
+author: guywi-ms
+ms.author: guywild
 ms.collection: 
   - m365-security
   - highpri

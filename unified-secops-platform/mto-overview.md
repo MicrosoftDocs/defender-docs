@@ -1,8 +1,8 @@
 ---
 title: Microsoft Defender multitenant management
 description: Learn about multitenant management for Microsoft Defender XDR and Microsoft Sentinel in the Microsoft Defender portal.
-author: guywild
-ms.author: guywi-ms
+author: guywi-ms
+ms.author: guywild
 search.appverid: ""
 ms.collection: 
 - m365-security

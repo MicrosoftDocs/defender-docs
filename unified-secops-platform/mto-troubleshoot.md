@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot issues in Microsoft Defender multitenant management
 description: Learn about issues in Microsoft Defender multitenant management and how to fix or troubleshoot them.
-author: guywild
-ms.author: guywi-ms
+author: guywi-ms
+ms.author: guywild
 ms.collection: 
   - m365-security
   - highpri

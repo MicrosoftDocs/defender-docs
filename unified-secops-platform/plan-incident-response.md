@@ -6,8 +6,8 @@ ms.subservice: ""
 search.appverid: ""
 f1.keywords:
   - NOCSH
-author: guywild
-ms.author: guywi-ms
+author: guywi-ms
+ms.author: guywild
 ms.collection:
   - m365-security
   - tier1

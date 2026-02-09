@@ -4,8 +4,8 @@ description: Overview of cross-cloud management for other Microsoft clouds in mu
 ms.service: defender-xdr
 ms.subservice: ""
 search.appverid: ""
-author: guywild
-ms.author: guywi-ms
+author: guywi-ms
+ms.author: guywild
 ms.collection: 
 - m365-security
 - highpri
