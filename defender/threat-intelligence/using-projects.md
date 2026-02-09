@@ -1,11 +1,6 @@
 --- 
 title: 'Using Projects in Microsoft Defender Threat Intelligence (Defender TI)'
 description: 'Learn how to manage projects using Microsoft Defender Threat Intelligence (Defender TI).'
-author: poliveria
-ms.author: pauloliveria
-manager: orspodek
-ms.reviewer: aroland
-ms.service: threat-intelligence 
 ms.topic: how-to 
 ms.date: 09/12/2025
 ms.custom: 
