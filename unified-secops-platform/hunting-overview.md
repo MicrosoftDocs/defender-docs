@@ -1,10 +1,8 @@
 ---
 title: Threat hunting features across the Microsoft Defender portal
 description: Learn about threat hunting features across the Microsoft Defender portal
-search.appverid: met150
 author: mberdugo
 ms.author: monaberdugo
-ms.localizationpriority: medium
 ms.date: 11/23/2024
 ms.collection:
 - M365-security-compliance

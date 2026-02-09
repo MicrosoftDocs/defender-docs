@@ -1,10 +1,8 @@
 ---
 title: "Enhancing your organization's security posture"
 description: Provides an overview of security posture management and risk reduction in the Microsoft Defender portal.
-search.appverid: met150
-author: dlanger
-ms.author: deblanger
-ms.localizationpriority: medium
+author: deblanger
+ms.author: dlanger
 ms.date: 02/05/2025
 ms.collection:
 - M365-security-compliance

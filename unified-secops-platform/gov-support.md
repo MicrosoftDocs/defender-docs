@@ -4,6 +4,8 @@ description: Learn about support in the Microsoft Defender portal for US Governm
 author: guywi-ms
 ms.author: guywild
 audience: ""
+ms.localizationpriority: ""
+search.appverid: ""
 ms.topic: concept-article #Don't change.
 ms.date: 06/22/2025
 ms.collection:

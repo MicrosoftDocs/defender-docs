@@ -4,6 +4,8 @@ description: Plan to deploy unified security operations in the Microsoft Defende
 author: guywi-ms
 ms.author: guywild
 audience: ""
+ms.localizationpriority: ""
+search.appverid: ""
 ms.topic: concept-article #Don't change.
 ms.date: 07/16/2025
 ms.collection:

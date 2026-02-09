@@ -3,7 +3,7 @@ title: Endpoint security policies in multitenant management
 description: Learn how to manage endpoint security policies for Defender XDR multi-tenant management in the Microsoft Defender portal.
 author: guywi-ms
 ms.author: guywild
-ms.localizationpriority: medium
+search.appverid: ""
 ms.collection: 
   - m365-security
   - highpri

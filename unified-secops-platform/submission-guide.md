@@ -1,7 +1,6 @@
 ---
 title: Submit files for analysis by Microsoft
 description: Learn how to submit files to Microsoft for malware analysis, how to track your submissions, and dispute detections.
-ms.localizationpriority: medium
 author: poliveria
 ms.author: pauloliveria
 ms.reviewer:
@@ -9,7 +8,6 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: faq
-search.appverid: met150
 ms.date: 05/10/2024
 ---
 

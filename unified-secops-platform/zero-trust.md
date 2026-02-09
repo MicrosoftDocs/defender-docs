@@ -4,6 +4,8 @@ description: Learn how implementing unified security operations in the Defender 
 author: guywi-ms
 ms.author: guywild
 audience: ""
+ms.localizationpriority: ""
+search.appverid: ""
 ms.topic: concept-article #Don't change.
 ms.date: 01/16/2025
 ms.collection:

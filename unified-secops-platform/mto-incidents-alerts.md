@@ -1,10 +1,8 @@
 ---
 title: View and manage incidents and alerts in Microsoft Defender multitenant management
 description: Learn about incidents and alerts in Microsoft Defender multitenant management
-search.appverid: met150
 author: guywild
 ms.author: guywi-ms
-ms.localizationpriority: medium
 ms.collection: 
   - m365-security
   - highpri

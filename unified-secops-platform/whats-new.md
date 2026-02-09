@@ -1,10 +1,8 @@
 ---
 title: "What's new for Microsoft's unified security operations?"
 description: Lists the new features and functionality available for Microsoft unified security operations.
-search.appverid: met150
 author: guywi-ms
 ms.author: guywild
-ms.localizationpriority: medium
 ms.date: 01/30/2026
 ms.collection:
 - M365-security-compliance

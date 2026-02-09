@@ -4,6 +4,8 @@ description: Deploy Microsoft Defender portal services for unified security oper
 author: guywi-ms
 ms.author: guywild
 audience: ""
+ms.localizationpriority: ""
+search.appverid: ""
 ms.topic: how-to #Don't change.
 ms.date: 03/17/2025
 ms.collection:

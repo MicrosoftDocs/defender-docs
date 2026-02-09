@@ -3,7 +3,6 @@ title: How Microsoft names threat actors
 description: Learn how Microsoft names threat actors and how to use the naming convention to identify associated intelligence.
 ms.mktglfcycl: secure
 ms.sitesec: library
-ms.localizationpriority: medium
 author: guywild
 ms.author: guywi-ms
 ms.reviewer:
@@ -13,7 +12,6 @@ ms.collection:
 ms.custom:
 - cx-ti
 ms.topic: article
-search.appverid: met150
 ms.date: 01/15/2026
 ---
 

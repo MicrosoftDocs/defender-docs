@@ -8,8 +8,10 @@ description: A multi-tenant identity inventory
 author: guywi-ms
 ms.author: guywild
 audience: ""
+ms.localizationpriority: ""
 ms.service: microsoft-defender-for-identity
 ms.subservice: ""
+search.appverid: ""
 ms.topic: article
 ms.date: 06/29/2025
 ---
