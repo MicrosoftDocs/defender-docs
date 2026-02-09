@@ -1,6 +1,6 @@
 ---
 title: New secure score
-description: Learn about malware automated remediation in Defender for Storage.
+description: Learn about the newest version of the secure score in Defender for Cloud.
 ms.topic: reference
 ms.date: 02/08/2026
 ---
