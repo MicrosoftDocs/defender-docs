@@ -528,6 +528,7 @@
               displayName: security, recommendations, owner, azure, resource, graph, azure resource graph, csv report
               href: review-security-recommendations.md
             - name: Review resources exempted from recommendations
+              displayName: review, exemptions, exempted, resources, recommendation, exempt
               href: review-exemptions.md
             - name: Assign a recommendation to an active user
               displayName: assign, recommendation, user, owner
@@ -549,10 +550,10 @@
             - name: Manage MCSB recommendations
               href: manage-mcsb.md
             - name: Exempt resources from recommendations
-              displayName: disable, resource, exempt, recommendation
+              displayName: disable, resource, exempt, recommendation, exemptions, exempted, resources
               href: exempt-resource.md
             - name: Exempt resources at scale
-              displayName: policy, resource, exemptions, create, exempt, at scale, resources, compliance
+              displayName: policy, resource, exemptions, create, exempt, at scale, resources, compliance, exempt
               href: exempt-resources-at-scale.md
         - name: Built-in security protections
           items:
@@ -884,6 +885,9 @@
         - name: Investigate Defender for SQL security alerts
           displayName: SQL, SQL servers, defender, machines
           href: defender-for-sql-alerts.md
+        - name: Simulate alerts for SQL servers on machines
+          displayName: SQL, SQL servers, defender, machines
+          href: simulate-alerts-sql-machines.md
         - name: Find and remediate vulnerabilities
           href: sql-azure-vulnerability-assessment-find.md
         - name: Consume and export scan results
