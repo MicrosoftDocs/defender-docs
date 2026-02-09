@@ -36,7 +36,9 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ## Database-level recommendations experience for SQL Vulnerability Assessment (Preview)
 
-Defender for SQL has added a database-level recommendations experience for SQL Vulnerability Assessment, in preview.
+February 9, 2026
+
+Microsoft Defender for SQL is introducing a database-level recommendations experience for SQL Vulnerability Assessment in Preview.
 
 In this new experience, each SQL Vulnerability Assessment rule is represented as a separate recommendation associated with the affected SQL database resource. This change affects how findings are displayed and managed in recommendations, and is available using the following portal experiences:
 
