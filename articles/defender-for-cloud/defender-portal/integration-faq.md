@@ -24,7 +24,7 @@ The expansion of MDC into the Defender portal is available for billed MDC custom
 Note: Once the opt-in is selected, it takes up to 24 hours for the data to populate.
 
 > [!NOTE]
-> The new cloud features in the Defender portal are currently only supported in public / commercial clouds.
+> The new cloud features in the Defender portal are currently only supported in public/commercial clouds.
 
 ### What environments are supported with this expansion in the Defender portal?  
 
