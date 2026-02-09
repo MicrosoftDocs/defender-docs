@@ -528,6 +528,7 @@
               displayName: security, recommendations, owner, azure, resource, graph, azure resource graph, csv report
               href: review-security-recommendations.md
             - name: Review resources exempted from recommendations
+              displayName: review, exemptions, exempted, resources, recommendation, exempt
               href: review-exemptions.md
             - name: Assign a recommendation to an active user
               displayName: assign, recommendation, user, owner
@@ -549,10 +550,10 @@
             - name: Manage MCSB recommendations
               href: manage-mcsb.md
             - name: Exempt resources from recommendations
-              displayName: disable, resource, exempt, recommendation
+              displayName: disable, resource, exempt, recommendation, exemptions, exempted, resources
               href: exempt-resource.md
             - name: Exempt resources at scale
-              displayName: policy, resource, exemptions, create, exempt, at scale, resources, compliance
+              displayName: policy, resource, exemptions, create, exempt, at scale, resources, compliance, exempt
               href: exempt-resources-at-scale.md
         - name: Built-in security protections
           items:
@@ -1054,7 +1055,7 @@
         - name: Remediate EDR solutions (agentless)
           displayName: defender for endpoint, endpoint, edr
           href: endpoint-detection-response-solution-recommendations.md   
-        - name: Remediate Defender for Endpoint misconfigurations
+        - name: Investigate Defender for Endpoint misconfigurations
           href: endpoint-detection-misconfiguration.md
         - name: Remediate machine vulnerabilities
           displayName: qualys, va, rapid7, vulnerability

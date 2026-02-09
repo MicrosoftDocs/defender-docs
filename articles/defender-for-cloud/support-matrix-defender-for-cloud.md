@@ -4,7 +4,7 @@ description: Learn about the Azure cloud environments where Defender for Cloud c
 ms.topic: limits-and-quotas
 author: Elazark
 ms.author: elkrieger
-ms.date: 05/01/2025
+ms.date: 01/27/2026
 ---
 
 # Support matrices for Defender for Cloud
@@ -59,22 +59,22 @@ In the support table, **NA** indicates that the feature isn't available.
 |**Feature/Plan** | **Azure** | **Azure Government** | **Microsoft Azure operated by 21Vianet**<sup>[3](#footnote3)</sup>|
 |--- | --- | --- | --- |
 |**GENERAL FEATURES** | | ||
-|[Continuous data export](continuous-export.md) | GA | GA | NA |
-|[Response automation with Azure Logic Apps](./workflow-automations.md) | GA | GA | NA |
-|[Security alerts](alerts-overview.md)<br/> Generated when one or more Defender for Cloud plans is enabled. | GA | GA | NA |
-|[Alert email notifications](configure-email-notifications.md) | GA | GA | NA |
-|[Alert suppression rules](alerts-suppression-rules.md) | GA | GA | NA |
-|[Alert bi-directional synchronization with Microsoft Sentinel](/azure/sentinel/connect-azure-security-center) | GA | GA | NA |
-|[Azure Workbooks integration for reporting](custom-dashboards-azure-workbooks.md) | GA | GA | GA |
-|[Automatic component/agent/extension provisioning](monitoring-components.md) | GA | GA | GA |
+| [Alert bi-directional synchronization with Microsoft Sentinel](/azure/sentinel/connect-azure-security-center) | GA | GA | NA |
+| [Alert email notifications](configure-email-notifications.md) | GA | GA | NA |
+| [Alert suppression rules](alerts-suppression-rules.md) | GA | GA | NA |
+| [Automatic component/agent/extension provisioning](monitoring-components.md) | GA | GA | GA |
+| [Azure Workbooks integration for reporting](custom-dashboards-azure-workbooks.md) | GA | GA | GA |
+| [Continuous data export](continuous-export.md) | GA | GA | NA |
+| [Exempt resources from recommendations](exempt-resource.md) | Preview | NA | NA |
+| [Response automation with Azure Logic Apps](./workflow-automations.md) | GA | GA | NA |
+| [Security alerts](alerts-overview.md)<br/> Generated when one or more Defender for Cloud plans is enabled. | GA | GA | NA |
 |**FOUNDATIONAL Cloud Security Posture Management (CSPM) FEATURES (FREE)** | | ||
-|[Copilot in Defender for Cloud](copilot-security-in-defender-for-cloud.md) | GA | NA | NA |
+| [Copilot in Defender for Cloud](copilot-security-in-defender-for-cloud.md) | GA | NA | NA |
 |**FOUNDATIONAL CSPM FEATURES (FREE)** | | ||
-|[Asset inventory](asset-inventory.md) | GA | GA | GA |
-|[Security recommendations](security-policy-concept.md) based on the [Microsoft Cloud Security Benchmark](concept-regulatory-compliance.md)  | GA | GA | GA |
-|[Recommendation exemptions](exempt-resource.md) | Preview | NA | NA |
-|[Secure score](secure-score-security-controls.md) | GA | GA | GA |
-|[DevOps security posture](concept-devops-environment-posture-management-overview.md) | Preview | NA | NA |
+| [Asset inventory](asset-inventory.md) | GA | GA | GA |
+| [Security recommendations](security-policy-concept.md) based on the [Microsoft Cloud Security Benchmark](concept-regulatory-compliance.md)  | GA | GA | GA |
+| [Secure score](secure-score-security-controls.md) | GA | GA | GA |
+| [DevOps security posture](concept-devops-environment-posture-management-overview.md) | Preview | NA | NA |
 | **DEFENDER Cloud Security Posture Management (CSPM) FEATURES** | | | |
 | [Data and AI security dashboard](data-aware-security-dashboard-overview.md) | GA | NA | NA |
 | [Attack path](concept-attack-path.md) | GA | NA | NA |
