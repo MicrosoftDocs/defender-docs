@@ -52,7 +52,7 @@ The database-level experience keeps the same security capabilities and doesn’t
 
 During public preview, the new database-level assessments don’t affect Secure Score in the Azure portal but do contribute to Cloud Secure Score in the Defender portal.
 
-The SQL [vulnerability assessment rules reference](sql-azure-vulnerability-assessment-rules.md#assessment-identifiers-for-sql-vulnerability-assessment-rules-preview) has been updated to include the new database-level recommendation names and assessment identifiers.
+The SQL [vulnerability assessment rules reference](sql-azure-vulnerability-assessment-rules.md) has been updated to include the new database-level recommendation names and assessment identifiers.
 
 The existing server-level (aggregated) experience remains available during preview and will be deprecated after the general availability of the new experience.
 
