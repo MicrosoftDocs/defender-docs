@@ -4,10 +4,15 @@ permissions:
   pull-requests: write
   contents: read
 
-on: [pull_request_target]
+on:
+  pull_request_target:
+  issue_comment:
+    types:
+      - created
+      - edited
 
 jobs:
   require-writer-review:
-    if: github.repository_owner == 'MicrosoftDocs'
+    if: github.repository_owner == 'MicrosoftDocs' && (github.event_name != 'issue_comment' || github.event.issue.pull_request)
     uses: MicrosoftDocs/defender-docs/.github/workflows/MSecD-Shared-RequireWriterReview.yml@workflows-test
     secrets: inherit
