@@ -45,7 +45,7 @@ jobs:
           
           # Use hardcoded team
           ORG="MicrosoftDocs"
-          TEAM="msec-docs-team"
+          TEAM="msecd-org"
           echo "Resolving team: $ORG/$TEAM"
           
           # Fetch team members using MSECD_READTEAM_TOKEN
