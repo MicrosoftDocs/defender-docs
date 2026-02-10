@@ -35,7 +35,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | February 9, 2026 | GA | [Simulate alerts for SQL servers on machines](#simulate-alerts-for-sql-servers-on-machines) |
 | February 3, 2026| Preview | [Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview) |
 
-### Scanning support for Minimus container images and Photon OS
+### Scanning support for Minimus and Photon OS container images
 
 February 10, 2026
 
