@@ -13,8 +13,7 @@ jobs:
       - name: Check if author is a team member and add hold-off comment
         env:
           MSECD_READTEAM_TOKEN: ${{ secrets.MSECD_READTEAM_TOKEN }}
-          PR_AUTHOR: ${{ github.actor }}
-          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_NUMBER: ${{ github.event.pull_request.number || github.event.issue.number }}
           REPO: ${{ github.repository }}
         run: |
           VERSION="1.2.0"
@@ -27,6 +26,13 @@ jobs:
             echo "MSECD_READTEAM_TOKEN is configured."
           fi
           
+          PR_AUTHOR=$(curl -s -H "Authorization: token $MSECD_READTEAM_TOKEN" \
+            "https://api.github.com/repos/$REPO/pulls/$PR_NUMBER" | jq -r '.user.login // empty')
+          if [ -z "$PR_AUTHOR" ]; then
+            echo "ERROR: Unable to resolve PR author."
+            exit 1
+          fi
+
           # Check if last PRMerger command is #sign-off
           echo "Checking last PRMerger command..."
           COMMENTS=$(curl -s -H "Authorization: token $MSECD_READTEAM_TOKEN" \
