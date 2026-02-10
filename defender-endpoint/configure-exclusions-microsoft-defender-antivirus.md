@@ -127,7 +127,7 @@ Back on the **Summary** tab of the **Endpoint security \| Antivirus** page, the 
 
 <a name='manage-antivirus-exclusions-in-intune-for-existing-policies'></a>
 
-### Modify exclusions in Microsoft Defender antivirus exclusion policies in Intune
+## Modify exclusions in Microsoft Defender antivirus exclusion policies in Intune
 
 To modify an existing AV policy in Microsoft Intune that uses the Microsoft Defender Antivirus Exclusions profile, do the following steps:
 
