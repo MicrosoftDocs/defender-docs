@@ -1,4 +1,4 @@
-name: Add Hold-off Comment
+name: Require Writer Review
 
 permissions:
   pull-requests: write
