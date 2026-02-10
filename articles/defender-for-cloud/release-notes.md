@@ -41,11 +41,11 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | February 9, 2026 | GA | [Simulate alerts for SQL servers on machines](#simulate-alerts-for-sql-servers-on-machines) |
 | February 3, 2026| Preview | [Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview) |
 
-### Scanning support for Minimus amd Photon OS container images
+### Scanning support for Minimus and Photon OS for container images
 
 February 10, 2026
 
-Microsoft Defender for Cloud's vulnerability scanner, powered by Microsoft Defender Vulnerability Management, is extending its scanning coverage to Minimus and Photon OS container images, and identify vulnerabilities in images to validate that they're shipping the most secure builds possible. As additional image types are being scanned, your bill might increase. For all supported distributions, see [Registries and images support for vulnerability assessment](support-matrix-defender-for-containers.md#registries-and-images-support-for-vulnerability-assessment).
+Microsoft Defender for Cloud's vulnerability scanner, powered by Microsoft Defender Vulnerability Management, is extending its scanning coverage to Minimus and Photon operating systems. These help support identification of vulnerabilities in images to validate that you're shipping the most secure builds possible. As additional image types are being scanned, your bill might increase. For all supported distributions, see [Registries and images support for vulnerability assessment](support-matrix-defender-for-containers.md#registries-and-images-support-for-vulnerability-assessment).
 
 ### Simulate alerts for SQL servers on machines
 
