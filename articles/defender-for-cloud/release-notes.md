@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 01/06/2026
+ms.date: 02/09/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -31,13 +31,42 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-|February 3, 2026| GA | [Scanning support for Minimus container images](#scanning-support-for-minimus-container-images) |
 
-### Scanning support for Minimus container images
 
-February 3, 2026
+## February 2026
 
-Microsoft Defender for Cloud's vulnerability scanner, powered by Microsoft Defender Vulnerability Management, is extending its scanning coverage to Minimus container images, and identify vulnerabilities in Minimus Images to validate that they're shipping the most secure builds possible. As additional image types are being scanned, your bill might increase. For all supported distributions, see [Registries and images support for vulnerability assessment](support-matrix-defender-for-containers.md#registries-and-images-support-for-vulnerability-assessment).
+|Date| Category|Update|
+| -------- | -------- | -------- |
+| February 10, 2026| GA | [Scanning support for Minimus and Photon OS container images](#scanning-support-for-minimus-and-photon-os-container-images) |
+| February 9, 2026 | GA | [Simulate alerts for SQL servers on machines](#simulate-alerts-for-sql-servers-on-machines) |
+| February 3, 2026| Preview | [Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview) |
+
+### Scanning support for Minimus amd Photon OS container images
+
+February 10, 2026
+
+Microsoft Defender for Cloud's vulnerability scanner, powered by Microsoft Defender Vulnerability Management, is extending its scanning coverage to Minimus and Photon OS container images, and identify vulnerabilities in images to validate that they're shipping the most secure builds possible. As additional image types are being scanned, your bill might increase. For all supported distributions, see [Registries and images support for vulnerability assessment](support-matrix-defender-for-containers.md#registries-and-images-support-for-vulnerability-assessment).
+
+### Simulate alerts for SQL servers on machines
+
+February 9, 2026
+
+Microsoft Defender for Cloud’s SQL simulated alerts is now generally available. Simulated alerts allow security teams safely validate SQL protection, detections, and automated response workflows without introducing real risk. 
+
+Simulated alerts generates realistic alerts with full SQL and machine context on Azure VMs or Arc‑connected machines, enabling end‑to‑end testing of playbooks and SOC readiness. All alerts are produced locally using a safe script extension, with no external payloads or impact to production resources.
+
+Learn how to [simulate alerts for SQL servers on machines](simulate-alerts-sql-machines.md).
+
+### Threat protection for AI agents (Preview)
+
+February 2, 2026 
+
+Microsoft Defender for Cloud now includes threat protection for AI agents built with Foundry, available in public preview as part of the Defender for AI Services plan. This new capability delivers advanced security from development through runtime, addressing high-impact, actionable threats aligned with OWASP guidance for LLM and agentic AI systems. 
+
+This release further expands Defender’s AI threat protection coverage, helping organizations secure a broader range of AI platforms. 
+
+
+Learn more about [Threat Protection for AI Agents with Microsoft Defender for Cloud](/azure/defender-for-cloud/alerts-ai-workloads).  
 
 ## January 2026
 

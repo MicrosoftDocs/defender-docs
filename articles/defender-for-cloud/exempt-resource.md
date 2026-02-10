@@ -5,13 +5,13 @@ ms.topic: how-to
 ms.custom: ignite-2023
 ms.author: elkrieger
 author: Elazark
-ms.date: 01/27/2026
+ms.date: 02/05/2026
 ---
 
 # Exempt resources from recommendations
 
 > [!IMPORTANT]
-> This feature is in preview. [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)] This is a premium Azure Policy capability offered at no extra cost for customers with Microsoft Defender for Cloud's enhanced security features enabled. For other users, charges might apply in the future.
+> This feature is in preview. [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)] This premium Azure Policy capability is offered at no extra cost for customers with Microsoft Defender for Cloud's enhanced security features enabled. For other users, charges might apply in the future.
 
 When you investigate security recommendations in Microsoft Defender for Cloud, you review the list of affected resources. Occasionally, you find a resource that shouldn't be in the list, or you find a recommendation that appears in a scope where it doesn't belong. For example, a resource might be remediated by a process that Defender for Cloud doesn't track, or a recommendation might not apply to a specific subscription. Your organization might decide to accept the risks related to the specific resource or recommendation.
 
@@ -24,18 +24,21 @@ In such cases, create an exemption rule to:
 For each scope, create an exemption rule to:
 
 - Mark a specific **recommendation** as **Mitigated** or **Risk accepted** for one or more subscriptions, or for a management group.
+
 - Mark **one or more resources** as **Mitigated** or **Risk accepted** for a specific recommendation.
+
+[!INCLUDE [exempt-resource](./includes/exempt-resource.md)]
 
 ## Before you start
 
- You need the following permissions to create exemptions:
+ To create exemptions, you need the following permissions:
   - **Owner** or **Security Admin** on the scope where you create the exemption.
   - To create a rule, you need permissions to edit policies in Azure Policy. [Learn more](/azure/governance/policy/overview#azure-rbac-permissions-in-azure-policy).
 
 - You can create exemptions for recommendations that belong to Defender for Cloud's default [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) initiative or to other built-in regulatory standards.
 
-> [!NOTE]  
-> Defender for Cloud exemptions rely on the Microsoft Cloud Security Benchmark (MCSB) initiative to evaluate and retrieve the compliance state of resources in the Defender for Cloud portal. If the MCSB initiative isn't assigned, the portal works only partially and some resources might not appear.
+    > [!NOTE]  
+    > Defender for Cloud exemptions rely on the Microsoft Cloud Security Benchmark (MCSB) initiative to evaluate and retrieve the compliance state of resources in the Defender for Cloud portal. If the MCSB initiative isn't assigned, the portal works only partially and some resources might not appear.
 
 - Some recommendations in the Microsoft Cloud Security Benchmark (MCSB) don't support exemptions. You can find a list of these recommendations in [the exemptions FAQ](faq-general.yml).
 

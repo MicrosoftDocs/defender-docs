@@ -89,6 +89,7 @@ To keep track of how users exempt resources from recommendations, we created an 
 - Locate the ARM template in the [Microsoft Defender for Cloud GitHub repository](https://github.com/Azure/Azure-Security-Center/tree/master/Workflow%20automation/Notify-ResourceExemption).
 - [Use this automated process](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Security-Center%2Fmaster%2FWorkflow%2520automation%2FNotify-ResourceExemption%2Fazuredeploy.json) to deploy all components.
 
-## Related content
+## Next step
 
-- [Review security recommendations](review-security-recommendations.md)
+> [!div class="nextstep"]
+> [Review security recommendations](review-security-recommendations.md)
