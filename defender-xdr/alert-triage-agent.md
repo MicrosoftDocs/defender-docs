@@ -33,7 +33,7 @@ The Alert Triage Agent evaluates alerts using AI‑driven reasoning, determines 
 
 This article provides an overview of the Alert Triage Agent model, its benefits, and its alert triage capabilities.
 
-## How the Alert Triage Agent work
+## How the Alert Triage Agent works
 
 The Alert Triage Agent follows a common triage model that applies across supported alert types:
 
