@@ -60,7 +60,7 @@ Before you create a custom DCR, make sure:
         - Enter an XPath query under **Use XPath queries to filter event logs and limit data collection**. 
           For example, `Security!*[System[(EventID=4624 or EventID=4625 or EventID=4688)]]`
 
-          :::image type="content" source="media/data-ingestion-benefit/add-data-source-window.png" alt-text="Add data source window in the Create Data Collection Rule wizard showing Windows Event Logs selected with Basic/Custom options.":::
+          :::image type="content" source="media/data-ingestion-benefit/add-data-source-window.png" alt-text="Screenshot of the Add data source window in the Create Data Collection Rule wizard showing Windows Event Logs selected with Basic/Custom options.":::
 
 1. Select **Add**.
 
