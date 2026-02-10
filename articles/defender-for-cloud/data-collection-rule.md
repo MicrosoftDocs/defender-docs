@@ -38,9 +38,9 @@ Before you create a custom DCR, make sure:
 
 1. Select the region. The region must match the region of the Log Analytics workspace(s) you’ll send to.
 
-  - Under **Platform type**, select **Windows** to collect Windows Security events for the `SecurityEvent` ingestion benefit. *(Choose **Linux** or **All** if you also need those logs.)*
+   - Under **Platform type**, select **Windows** to collect Windows Security events for the `SecurityEvent` ingestion benefit. *(Choose **Linux** or **All** if you also need those logs.)*
 
-  - Under **Data Collection Endpoint**, leave **\<none\>** unless you're using a Data Collection Endpoint for Private Link or another advanced network setup.
+   - Under **Data Collection Endpoint**, leave **\<none\>** unless you're using a Data Collection Endpoint for Private Link or another advanced network setup.
 
 1. Select **Next : Resources >**.
 
