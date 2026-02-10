@@ -8,25 +8,24 @@ ms.topic: reference
 ms.date: 9/30/2024
 ms.author: edbaynash
 
-
-
 #Customer intent: As a security engineer, I want to reference paging, authentication and payload options to create and configure RestApiPoller data connectors using the Codeless Connector Framework so that I can integrate a specific data source into Microsoft Sentinel without writing custom code.
 
 ---
 
 # RestApiPoller data connector reference for the Codeless Connector Framework
 
-To create a `RestApiPoller` data connector with the Codeless Connector Framework (CCF), use this reference as a supplement to the [Microsoft Sentinel REST API for Data Connectors](/rest/api/securityinsights/data-connectors) docs.
+You can create a `RestApiPoller` data connector with the Codeless Connector Framework (CCF) by using this article as a supplement to the [Microsoft Sentinel REST API for Data Connectors](/rest/api/securityinsights/data-connectors) docs.
 
-Each `dataConnector` represents a specific *connection* of a Microsoft Sentinel data connector. One data connector might have multiple connections, which fetch data from different endpoints. The JSON configuration built using this reference document is used to complete the deployment template for the CCF data connector. 
+Each data connector represents a specific *connection* of a Microsoft Sentinel data connector. One data connector might have multiple connections, which fetch data from different endpoints. The JSON configuration built using this reference document is used to complete the deployment template for the CCF data connector.
 
 For more information, see [Create a codeless connector for Microsoft Sentinel](create-codeless-connector.md#create-the-deployment-template).
 
-## Data Connectors - Create or update 
+## Create or update data connectors
 
 Reference the [Create or Update](/rest/api/securityinsights/data-connectors/create-or-update) operation in the REST API docs to find the latest stable or preview API version. The difference between the *create* and the *update* operation is the update requires the **etag** value.
 
 **PUT** method
+
 ```http
 https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroupName}}/providers/Microsoft.OperationalInsights/workspaces/{{workspaceName}}/providers/Microsoft.SecurityInsights/dataConnectors/{{dataConnectorId}}?api-version={{apiVersion}}
 ```
@@ -83,13 +82,14 @@ The request body for a `RestApiPoller` CCF data connector has the following stru
 ## Authentication configuration
 
 The CCF supports the following authentication types:
+
 - [Basic](#basic-auth)
 - [APIKey](#apikey)
 - [OAuth2](#oauth2)
 - [JWT](#jwt)
 
 > [!NOTE]
-> CCF OAuth2 implementation does not support client certificate credentials.
+> CCF OAuth2 implementation doesn't support client certificate credentials.
 
 As a best practice, use parameters in the auth section instead of hard-coding credentials. For more information, see [Secure confidential input](create-codeless-connector.md#secure-confidential-input).
 
@@ -104,7 +104,8 @@ To enable the credentials to be entered from the UI, the `connectorUIConfig` sec
 | UserName | True | string |
 | Password | True | string |
 
-Example Basic auth using parameters defined in `connectorUIconfig`:
+Example basic auth using parameters defined in `connectorUIconfig`:
+
 ```json
 "auth": {
     "type": "Basic",
@@ -123,6 +124,7 @@ Example Basic auth using parameters defined in `connectorUIconfig`:
 | **IsApiKeyInPostPayload** | | boolean | send secret in POST body instead of header | `false` |
 
 APIKey auth examples:
+
 ```json
 "auth": {
     "type": "APIKey",
@@ -131,6 +133,7 @@ APIKey auth examples:
     "ApiKeyIdentifier": "Bearer"
 }
 ``` 
+
 This example results in the secret defined from user input sent in the following header: **X-MyApp-Auth-Header: Bearer `apikey`**
 
 ```json
@@ -139,6 +142,7 @@ This example results in the secret defined from user input sent in the following
     "ApiKey": "123123123",
 }
 ```
+
 This example uses the default values and results in the following header: **Authorization: token 123123123**
 
 ```json
@@ -148,6 +152,7 @@ This example uses the default values and results in the following header: **Auth
     "ApiKeyName": ""
 }
 ```
+
 Since the `ApiKeyName` is explicitly set to `""`, the result is the following header: **Authorization: 123123123**
 
 #### OAuth2
@@ -196,6 +201,7 @@ OAuth2 `authorization_code` grant type
     "grantType": "authorization_code"
 }
 ```
+
 Example:
 OAuth2 `client_credentials` grant type
 
@@ -219,7 +225,8 @@ OAuth2 `client_credentials` grant type
 
 JSON Web Token (JWT) authentication supports obtaining tokens via username/password credentials and using them for API requests.
 
-**Basic Example:**
+##### Basic Example
+
 ```json
 "auth": {
     "type": "JwtToken",
@@ -236,7 +243,9 @@ JSON Web Token (JWT) authentication supports obtaining tokens via username/passw
     "JwtTokenJsonPath": "$.access_token"
 }
 ```
-**Credentials in POST Body (default):**
+
+##### Credentials in POST Body (default)
+
 ```json
 "auth": {
     "type": "JwtToken",
@@ -258,7 +267,9 @@ JSON Web Token (JWT) authentication supports obtaining tokens via username/passw
     "JwtTokenJsonPath": "$.access_token"
 }
 ```
-**Credentials in Headers (Basic Auth):**
+
+##### Credentials in headers (basic auth)
+
 ```json
 "auth": {
     "type": "JwtToken",
@@ -280,7 +291,9 @@ JSON Web Token (JWT) authentication supports obtaining tokens via username/passw
     "RequestTimeoutInSeconds": 30
 }
 ```
-**Credentials in Headers (User token):**
+
+##### Credentials in headers (user token)
+
 ```json
 "auth": {
     "type": "JwtToken",
@@ -295,7 +308,8 @@ JSON Web Token (JWT) authentication supports obtaining tokens via username/passw
     "JwtTokenJsonPath": "$.systemToken"
 }
 ```
-__Authentication Flow:__
+
+Authentication Flow:
 
 1. Send credentials to `TokenEndpoint` to obtain JWT token
 
@@ -328,7 +342,7 @@ __Authentication Flow:__
 | **Headers**                   |           | Object   | Custom headers to include when sending the request to the token endpoint |
 | **RequestTimeoutInSeconds**   |           | Integer  | Request timeout in seconds. Default: `100`, Max `180` |
 
-__Authentication Flow:__
+Authentication Flow:
 
 1. Send credentials to `TokenEndpoint` to obtain JWT token
 
@@ -339,12 +353,11 @@ __Authentication Flow:__
 
 3. Use token in subsequent API requests with `ApiKeyName` header
 
->[!NOTE]
->__Limitations:__
+> [!NOTE]
+> Limitations
 > - Requires username/password authentication for token acquisition
 > - Does not support API key-based token requests
-> - Custom header authentication (without username/password) is not supported
-___
+> - Custom header authentication (without username/password) is not supported.
 
 ## Request configuration
 
@@ -365,14 +378,14 @@ The request section defines how the CCF data connector sends requests to your da
 | **QueryParameters** |  | Object | Key value pairs that define the request query parameters. |
 | **StartTimeAttributeName** | True when `EndTimeAttributeName` is set | String | Defines the query parameter name for query start time. See [example](#starttimeattributename-example). |
 | **EndTimeAttributeName** | True when `StartTimeAttributeName` is set | String | Defines the query parameter name for query end time. |
-| **QueryTimeIntervalAttributeName** |  | String | If the endpoint requires a specialized format for querying the data on a time frame, then use this property with the `QueryTimeIntervalPrepend` and the `QueryTimeIntervalDelimiter` parameters. See [example](#querytimeintervalattributename-example). | 
+| **QueryTimeIntervalAttributeName** |  | String | If the endpoint requires a specialized format for querying the data on a time frame, then use this property with the `QueryTimeIntervalPrepend` and the `QueryTimeIntervalDelimiter` parameters. See [example](#querytimeintervalattributename-example). |
 | **QueryTimeIntervalPrepend** | True when `QueryTimeIntervalAttributeName` is set | String | See `QueryTimeIntervalAttributeName` |
 | **QueryTimeIntervalDelimiter** |  True when `QueryTimeIntervalAttributeName` is set | String | See `QueryTimeIntervalAttributeName` |
-| **QueryParametersTemplate** |  | String | Query template to use when passing parameters in advanced scenarios.<br>br>For example: `"queryParametersTemplate": "{'cid': 1234567, 'cmd': 'reporting', 'format': 'siem', 'data': { 'from': '{_QueryWindowStartTime}', 'to': '{_QueryWindowEndTime}'}, '{_APIKeyName}': '{_APIKey}'}"` | 
+| **QueryParametersTemplate** |  | String | Query template to use when passing parameters in advanced scenarios.<br>br>For example: `"queryParametersTemplate": "{'cid': 1234567, 'cmd': 'reporting', 'format': 'siem', 'data': { 'from': '{_QueryWindowStartTime}', 'to': '{_QueryWindowEndTime}'}, '{_APIKeyName}': '{_APIKey}'}"` |
 
 When the API requires complex parameters, use the `queryParameters` or `queryParametersTemplate` which include some built-in variables.
 
-| built-in variable | for use in `queryParameters` | for use in `queryParametersTemplate` |
+| Built-in variable | For use in `queryParameters` | For use in `queryParametersTemplate` |
 | ---- | ---- | ---- |
 | `_QueryWindowStartTime` | yes | yes |
 | `_QueryWindowEndTime` | yes | yes |
@@ -382,7 +395,8 @@ When the API requires complex parameters, use the `queryParameters` or `queryPar
 ### StartTimeAttributeName example
 
 Consider this example:
-- `StartTimeAttributeName` = `from` 
+
+- `StartTimeAttributeName` = `from`
 - `EndTimeAttributeName` = `until`
 - `ApiEndpoint` = `https://www.example.com`
 
@@ -391,6 +405,7 @@ The query sent to the remote server is: `https://www.example.com?from={QueryTime
 ### QueryTimeIntervalAttributeName example
 
 Consider this example:
+
 - `QueryTimeIntervalAttributeName` = `interval`
 - `QueryTimeIntervalPrepend` = `time:`
 - `QueryTimeIntervalDelimiter` = `..`
@@ -401,7 +416,9 @@ The query sent to the remote server is: `https://www.example.com?interval=time:{
 ### RateLimitConfig example
 
 Consider this example:
+
 - `ApiEndpoint` = `https://www.example.com`
+
 ```json
 "rateLimitConfig": {
   "evaluation": {
@@ -429,6 +446,7 @@ Consider this example:
   }
 }
 ```
+
 When the response includes rate limit headers, the connector can use this information to adjust its request rate.
 
 ### Request examples using Microsoft Graph as data source API
@@ -452,6 +470,7 @@ This example queries messages with a filter query parameter. For more informatio
   "QueryTimeIntervalDelimiter": " and receivedDateTime lt "
 }
 ```
+
 The previous example sends a `GET` request to `https://graph.microsoft.com/v1.0/me/messages?filter=receivedDateTime gt {time of request} and receivedDateTime lt 2019-09-01T17:00:00.0000000`. The timestamp updates for each `queryWindowInMin` time.
 
 The same results are achieved with this example:
@@ -568,7 +587,7 @@ When the data source can't send the entire response payload all at once, the CCF
 |----|----|
 | <ul><li>[LinkHeader](#configure-linkheader-or-persistentlinkheader)</li><li>[PersistentLinkHeader](#configure-linkheader-or-persistentlinkheader)</li><li>[NextPageUrl](#configure-nextpageurl)</li></ul> | Does the API response have links to next and previous pages? |
 | <ul><li>[NextPageToken](#configure-nextpagetoken-or-persistenttoken)</li><li>[PersistentToken](#configure-nextpagetoken-or-persistenttoken)</li> | Does the API response have a token or cursor for the next and previous pages? |
-| <ul><li>[Offset](#configure-offset)</li></ul> | Does the API response support a parameter for the number of objects to skip when paging? | 
+| <ul><li>[Offset](#configure-offset)</li></ul> | Does the API response support a parameter for the number of objects to skip when paging? |
 | <ul><li>[CountBasedPaging](#configure-countbasedpaging)</li></ul> | Does the API response support a parameter for the number of objects to return? |
 
 #### Configure LinkHeader or PersistentLinkHeader
@@ -687,6 +706,7 @@ Examples:
 | **PagingQueryParamOnly** | False | Boolean | If set to true, will omit all other query parameters except paging query parameters. |
 
 Example:
+
 ```json
 "paging": {
   "pagingType": "Offset", 
