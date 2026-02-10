@@ -61,6 +61,18 @@ The components and roles fall under two removal-type categories:
 1. Toggle **Containers** to **Off**.
 1. Select **Save**.
 
+### Clean up GCP resources
+
+
+```bash
+# Delete service account
+   gcloud iam service-accounts delete <service-account-email>
+   
+   # Disconnect clusters from Arc
+   az connectedk8s delete --name <cluster-name> --resource-group <rg>
+```
+
+
 ## Remove Defender components from GKE clusters
 
 ### Remove the Defender extension

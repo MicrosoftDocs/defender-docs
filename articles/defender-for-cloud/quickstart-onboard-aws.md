@@ -167,7 +167,7 @@ Learn more about [enabling Defender CSPM](tutorial-enable-cspm-plan.md).
 
 1. Select **Create**.
 
-Defender for Cloud starts scanning your AWS resources. Security recommendations appear within a few hours. After onboarding, you can monitor AWS posture, alerts, and resource inventory in Defender for Cloud. For more information, see [monitoring connected AWS resources](monitor-connected-aws-resources.md).
+Defender for Cloud starts scanning your AWS resources. Security recommendations appear within a few hours. After onboarding, you can monitor AWS posture, alerts, and resource inventory in Defender for Cloud.
 
 ## Validate connector health
 
@@ -266,7 +266,6 @@ Check out the following blogs:
 
 - [Assign access to workload owners](assign-access-to-workload.md).
 - [Protect all of your resources with Defender for Cloud](enable-all-plans.md).
-- [Monitor connected AWS resources](monitor-connected-aws-resources.md).
 - Set up your [on-premises machines](quickstart-onboard-machines.md) and [GCP projects](quickstart-onboard-gcp.md).
 - Get answers to [common questions](faq-general.yml) about onboarding your AWS account.
 - [Troubleshoot your multicloud connectors](troubleshoot-connectors.md).

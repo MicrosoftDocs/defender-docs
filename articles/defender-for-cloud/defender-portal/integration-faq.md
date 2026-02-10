@@ -2,9 +2,9 @@
 title: Integration FAQ for Defender portal
 description: Frequently asked questions about integrating and using Microsoft Defender for Cloud in the Defender portal, including migration, compatibility, and feature questions.
 author: dlanger
-ms.author: dlanger
+ms.author: DebLanger
 ms.topic: faq
-ms.date: 11/12/2025
+ms.date: 02/09/2026
 ms.service: defender-for-cloud
 ---
 
@@ -21,7 +21,10 @@ This article answers frequently asked questions about using Microsoft Defender f
 ### Who is eligible to test the new MDC capabilities in the Defender portal?
 
 The expansion of MDC into the Defender portal is available for billed MDC customers with at least one Defender for Cloud plan enabled. 
-Note: Once the opt-in is selected, it takes up to 24 hours for the data to populate. 
+Note: Once the opt-in is selected, it takes up to 24 hours for the data to populate.
+
+> [!NOTE]
+> The new cloud features in the Defender portal are currently only supported in public/commercial clouds.
 
 ### What environments are supported with this expansion in the Defender portal?  
 

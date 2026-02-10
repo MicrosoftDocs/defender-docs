@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 01/06/2026
+ms.date: 02/09/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -31,26 +31,56 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date| Category|Update|
 | -------- | -------- | -------- |
-|February 18, 2026| Preview |[Unified Recommendations experience in Azure portal](#unified-recommendations-experience-in-azure-portal-preview)|
-|February 3, 2026| Preview |[Threat protection for AI agents (Preview)]()|
+|February 18, 2026| Preview |[New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview)|
+| February 9, 2026 | GA | [Simulate alerts for SQL servers on machines](#simulate-alerts-for-sql-servers-on-machines) |
+| February 3, 2026| Preview | [Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview) |
 
-### Unified Recommendations experience in Azure portal (Preview)
+### New individual recommendations format in Azure portal (Preview)
 
 February 18, 2026
 
-Microsoft Defender for Cloud is introducing a unified Recommendations experience in the Azure portal that presents all security findings through a single, consistent model. This change transforms how security findings are represented, moving from grouped recommendations to individual recommendations for better clarity and risk-based prioritization.
+Microsoft Defender for Cloud is converting grouped recommendations into individual recommendations in the Azure portal. This change reflects a shift from grouping related findings under one recommendation to listing each recommendation separately.
 
-With the unified experience, each security issue is now represented as an individual recommendation.
+**What's changing**
 
-**Key benefits**
+You might see a longer list of recommendations than before. Combined findings (such as vulnerabilities, exposed secrets, or misconfigurations) now show as individual recommendations rather than nested under a parent recommendation.
 
-- **Unified model**: All security findings - misconfigurations, vulnerabilities, secrets, identity issues, and more - are presented through a single, consistent model
-- **Clear risk context**: Each recommendation provides comprehensive risk information and prioritization
-- **Enhanced remediation guidance**: Detailed, actionable guidance for addressing each security finding
-- **Improved governance**: Better control and tracking capabilities for individual security issues
-- **Scalable experience**: More efficient security queue management across cloud, devices, and identity workloads
+The grouped recommendations will still show side by side with the new format for now, but they will be deprecated soon.
 
-The unified recommendations experience is designed to streamline posture management and enable more effective risk-based prioritization across your entire security landscape.
+The new individual recommendations are marked as **Preview** with additional **New version** tag. These tags indicate that the recommendation is in an early state and doesn't affect Secure Score yet, as well as allowing you to filter the recommendations by it.
+
+You can now manage exemptions at scale instead of for each recommendation.
+
+**Benefits**
+
+1. **Smart and accurate prioritization**
+
+   Each finding (such as vulnerabilities, exposed secrets, or misconfigurations) is now scored and prioritized individually, so you can focus on what actually reduces risk fastest.
+
+2. **Actionable context per finding**
+
+   Each recommendation gives clear risk context and remediation guidance, making it easier to understand what's wrong, why it matters, and how to fix it.
+
+3. **Better governance & tracking**
+
+   You apply targeted exemptions and measure security progress accurately.
+
+> [!NOTE]
+> Seeing both formats or recommendations with a **Preview** tag is expected during the transition. The goal is to improve clarity and allow you to act on specific recommendations more easily.
+
+Learn more about [reviewing security recommendations](review-security-recommendations.md).
+
+### Simulate alerts for SQL servers on machines
+
+February 9, 2026
+
+Microsoft Defender for Cloud’s SQL simulated alerts is now generally available. Simulated alerts allow security teams safely validate SQL protection, detections, and automated response workflows without introducing real risk. 
+
+Simulated alerts generates realistic alerts with full SQL and machine context on Azure VMs or Arc‑connected machines, enabling end‑to‑end testing of playbooks and SOC readiness. All alerts are produced locally using a safe script extension, with no external payloads or impact to production resources.
+
+Learn how to [simulate alerts for SQL servers on machines](simulate-alerts-sql-machines.md).
+
+
 
 ### Threat protection for AI agents (Preview)
 
