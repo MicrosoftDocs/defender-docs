@@ -24,6 +24,20 @@ Defender for Cloud pulls activity events from Pub/Sub and processes them to gene
 
 Optionally, if IAM Recommender is enabled in your GCP environment, Defender for Cloud leverages its insights to enhance the accuracy of CIEM recommendations by identifying inactive and over-privileged roles.
 
+### Historical data hydration
+
+When GCP Cloud Logging ingestion is enabled, Defender for Cloud performs a one-time historical data collection process (hydration).
+
+As part of the onboarding workflow:
+
+- A dedicated storage bucket is created in the GCP environment.
+- Defender for Cloud retrieves up to 90 days of available historical Cloud Audit Logs using Google Cloud copy activity.
+- The historical data is processed to generate identity and permission insights.
+
+This process enables CIEM recommendations and attack path analysis to use historical activity data immediately after onboarding.
+
+After hydration completes, ongoing activity logs continue to be ingested through Pub/Sub streaming.
+
 ## Prerequisites
 
 Before enabling GCP Cloud Logging ingestion with Pub/Sub, ensure that your GCP environment has:
@@ -65,10 +79,11 @@ To configure GCP Cloud Logging:
       
    1. Use your existing Cloud Logging configuration by manually providing your existing Pub/Sub subscription name.
    
-   :::image type="content" source="media/quickstart-onboard-gcp/cloud-logging-manual-details.png" alt-text="Screenshot with the Manually provide GCP Cloud Logging details option selected." lightbox="media/quickstart-onboard-gcp/cloud-logging-manual-details.png":::
+      > [!IMPORTANT]
+      > If you use an existing Cloud Logging sink, ensure that the sink filter exports Cloud Audit Logs (such as Admin Activity and Data Access log types) to the specified Pub/Sub topic.  
+      > If the required Cloud Audit log types aren't included in the filter, ingestion won't provide full identity and permission activity coverage.
 
-    > [!NOTE]
-    > Access configuration for GCP can be completed using either GCP Cloud Shell or Terraform, depending on your organization’s deployment workflows.
+      :::image type="content" source="media/quickstart-onboard-gcp/cloud-logging-manual-details.png" alt-text="Screenshot with the Manually provide GCP Cloud Logging details option selected." lightbox="media/quickstart-onboard-gcp/cloud-logging-manual-details.png":::
    
 1. Select **Save**.
 
