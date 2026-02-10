@@ -11,6 +11,14 @@ DevOps security exposes security findings as annotations in Pull Requests (PR). 
 
 With Microsoft Defender for Cloud, you can configure PR annotations in Azure DevOps. You can get PR annotations in GitHub if you're a GitHub Advanced Security customer.
 
+> [!NOTE]
+> Pull request annotations, also known as merge request annotations (GitLab), aren't supported in GitLab projects that are connected to Defender for Cloud DevOps.
+>
+> Defender for Cloud will present security findings for any connected GitLab repositories. However, GitLab merge requests don't show these findings as inline annotations.
+> 
+> GitHub supports pull request annotations when you enable GitHub Advanced Security.
+
+
 ## What are pull request annotations
 
 Pull request annotations are comments that are added to a pull request in GitHub or Azure DevOps. These annotations provide feedback on the code changes made and identified security issues in the pull request and help reviewers understand the changes that are made.
