@@ -2,11 +2,6 @@ name: Require Writer Review
 
 on:
   workflow_call:
-    inputs:
-      token:
-        required: true
-        type: string
-        description: 'GitHub App token for API access'
 
 jobs:
   add-hold-off-comment:
@@ -17,7 +12,7 @@ jobs:
     steps:
       - name: Check if author is a team member and add hold-off comment
         env:
-          APP_TOKEN: ${{ inputs.token }}
+          MSECD_READTEAM_TOKEN: ${{ secrets.MSECD_READTEAM_TOKEN }}
           PR_AUTHOR: ${{ github.actor }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           REPO: ${{ github.repository }}
@@ -25,16 +20,16 @@ jobs:
           VERSION="1.2.0"
           echo "Hold-off Comment Workflow Version: $VERSION"
           
-          if [ -z "$APP_TOKEN" ]; then
-            echo "ERROR: APP_TOKEN is not set!"
+          if [ -z "$MSECD_READTEAM_TOKEN" ]; then
+            echo "ERROR: MSECD_READTEAM_TOKEN is not set!"
             exit 1
           else
-            echo "GitHub App token is configured."
+            echo "MSECD_READTEAM_TOKEN is configured."
           fi
           
           # Check if last PRMerger command is #sign-off
           echo "Checking last PRMerger command..."
-          COMMENTS=$(curl -s -H "Authorization: token $APP_TOKEN" \
+          COMMENTS=$(curl -s -H "Authorization: token $MSECD_READTEAM_TOKEN" \
             "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments?per_page=100")
           
           LAST_COMMAND=$(echo "$COMMENTS" | jq -r '.[] | select(.body | contains("#")) | .body' | \
@@ -54,8 +49,8 @@ jobs:
           TEAM="msecd-org"
           echo "Resolving team: $ORG/$TEAM"
           
-          # Fetch team members using GitHub App token
-          RESPONSE=$(curl -s -w "\n%{http_code}" -H "Authorization: token $APP_TOKEN" \
+          # Fetch team members using MSECD_READTEAM_TOKEN
+          RESPONSE=$(curl -s -w "\n%{http_code}" -H "Authorization: token $MSECD_READTEAM_TOKEN" \
             "https://api.github.com/orgs/$ORG/teams/$TEAM/members")
           
           HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
@@ -92,7 +87,7 @@ jobs:
             COMMENT_BODY="#hold-off\nThis PR requires a writer review before merging.\nThe review process typically takes 2-3 business days. For urgent requests, please contact the page's author or assigned team."
             
             curl -s -X POST \
-              -H "Authorization: token $APP_TOKEN" \
+              -H "Authorization: token $MSECD_READTEAM_TOKEN" \
               -H "Accept: application/vnd.github.v3+json" \
               "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments" \
               -d "{\"body\":\"$COMMENT_BODY\"}"

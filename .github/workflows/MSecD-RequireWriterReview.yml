@@ -7,22 +7,7 @@ permissions:
 on: [pull_request_target]
 
 jobs:
-  generate-token:
-    if: github.repository_owner == 'MicrosoftDocs'
-    runs-on: ubuntu-latest
-    outputs:
-      token: ${{ steps.app-token.outputs.token }}
-    steps:
-      - name: Generate GitHub App token
-        id: app-token
-        uses: actions/create-github-app-token@v1
-        with:
-          app-id: ${{ secrets.MSECD_APP_ID }}
-          private-key: ${{ secrets.MSECD_APP_SECRET }}
-
   require-writer-review:
-    needs: generate-token
+    if: github.repository_owner == 'MicrosoftDocs'
     uses: MicrosoftDocs/defender-docs/.github/workflows/MSecD-Shared-RequireWriterReview.yml@workflows-test
-    with:
-      token: ${{ needs.generate-token.outputs.token }}
     secrets: inherit
