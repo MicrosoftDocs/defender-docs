@@ -78,7 +78,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 ##### What's new
 
-- [Mac DLP] Disable dynamic stop in discovery component by default
+- Mitigation for a possible EDLP performance issue related to MDM profile behavior
 
 ### Jan-2026 (Build: 101.25122.0007  | Release version: 20.125122.7.0)
 
