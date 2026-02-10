@@ -31,17 +31,44 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date| Category|Update|
 | -------- | -------- | -------- |
-| February 10, 2026| GA | [Scanning support for Minimus and Photon OS container images](#scanning-support-for-minimus-and-photon-os-container-images) |
-| February 9, 2026 | GA | [Simulate alerts for SQL servers on machines](#simulate-alerts-for-sql-servers-on-machines) |
-| February 3, 2026| Preview | [Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview) |
+|February 10, 2026| Preview | [Database-level recommendations experience for SQL Vulnerability Assessment findings (Preview)](#database-level-recommendations-experience-for-sql-vulnerability-assessment-preview) |
+|February 10, 2026| GA | [Scanning support for Minimus and Photon OS container images](#scanning-support-for-minimus-and-photon-os-container-images) |
+|February 9, 2026| GA | [Simulate alerts for SQL servers on machines](#simulate-alerts-for-sql-servers-on-machines) |
+|February 3, 2026| Preview | [Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview) |
 
-### Scanning support for Minimus and Photon OS container images
+## Database-level recommendations experience for SQL Vulnerability Assessment (Preview)
+
+February 10, 2026
+
+Microsoft Defender for SQL is introducing a database-level recommendations experience for SQL Vulnerability Assessment in preview.
+
+This update applies to SQL VA across all supported database types (PaaS and IaaS), including both classic and express configurations, and is available in the following portal experiences:
+
+- [Azure portal](sql-azure-vulnerability-assessment-find.md#review-and-remediate-vulnerabilities-azure-portal)
+- [Defender portal](sql-azure-vulnerability-assessment-find.md#review-and-remediate-vulnerabilities-defender-portal)
+
+In this experience, each SQL Vulnerability Assessment rule generates a separate assessment for each affected database. Assessments are displayed and managed as recommendations in the Defender for Cloud **Recommendations** page. 
+
+In the previous model, findings were aggregated at the server or instance level and surfaced under the following recommendations:
+
+- SQL databases should have vulnerability findings resolved
+- SQL servers on machines should have vulnerability findings resolved
+
+The database-level experience keeps the same security capabilities and doesn’t affect SQL VA scanning logic, rules, queries, scan schedules, APIs, or pricing. It only provides another way to consume and manage findings that's consistent with all Defender for Cloud recommendations.
+
+During preview, the new database-level assessments don’t affect Secure Score in the Azure portal but do contribute to Secure Score in the Defender portal.
+
+The SQL [vulnerability assessment rules reference](sql-azure-vulnerability-assessment-rules.md) has been updated to include the new database-level recommendation names and assessment identifiers.
+
+The existing server-level (aggregated) experience remains available during preview.
+
+## Scanning support for Minimus and Photon OS container images
 
 February 10, 2026
 
 Microsoft Defender for Cloud's vulnerability scanner, powered by Microsoft Defender Vulnerability Management, is extending its scanning coverage to Minimus and Photon OS container images, and identify vulnerabilities in Minimus Images and Photos OS to validate that they're shipping the most secure builds possible.  As additional image types are being scanned, your bill might increase. For all supported distributions, see [Registries and images support for vulnerability assessment](support-matrix-defender-for-containers.md#registries-and-images-support-for-vulnerability-assessment).
 
-### Simulate alerts for SQL servers on machines
+## Simulate alerts for SQL servers on machines
 
 February 9, 2026
 
@@ -51,14 +78,13 @@ Simulated alerts generates realistic alerts with full SQL and machine context on
 
 Learn how to [simulate alerts for SQL servers on machines](simulate-alerts-sql-machines.md).
 
-### Threat protection for AI agents (Preview)
+## Threat protection for AI agents (Preview)
 
 February 2, 2026 
 
-Microsoft Defender for Cloud now includes threat protection for AI agents built with Foundry, available in public preview as part of the Defender for AI Services plan. This new capability delivers advanced security from development through runtime, addressing high-impact, actionable threats aligned with OWASP guidance for LLM and agentic AI systems. 
+Microsoft Defender for Cloud now includes threat protection for AI agents built with Foundry, available in preview as part of the Defender for AI Services plan. This new capability delivers advanced security from development through runtime, addressing high-impact, actionable threats aligned with OWASP guidance for LLM and agentic AI systems. 
 
 This release further expands Defender’s AI threat protection coverage, helping organizations secure a broader range of AI platforms. 
-
 
 Learn more about [Threat Protection for AI Agents with Microsoft Defender for Cloud](/azure/defender-for-cloud/alerts-ai-workloads).  
 
@@ -129,7 +155,7 @@ Learn more about [permissions management in Defender for Cloud](permissions-mana
 
 December 1, 2025
 
-Defender for Cloud's integration with Endor labs is now generally available.
+Defender for Cloud's integration with Endor Labs is now generally available.
 
 Defender for Cloud's integration with Endor Labs enhances vulnerability analysis by using reachability-based Software Composition Analysis (SCA), which shows exploitable vulnerabilities from code to runtime.
 
@@ -188,7 +214,7 @@ Learn more about [Serverless protection](serverless-protection.md).
 
 November 26, 2025
 
-Announcing the public preview of the native integration between Microsoft Defender for Cloud (MDC) and GitHub Advanced Security (GHAS).
+Announcing the preview of the native integration between Microsoft Defender for Cloud (MDC) and GitHub Advanced Security (GHAS).
 
 This integration helps organizations secure code to cloud and accelerate fixing security issues in their software portfolio. It uses agentic remediation from GitHub Advanced Security’s security campaigns and autofix agent with Microsoft Defender for Cloud runtime context-based vulnerability prioritization. The result is fewer distractions, faster fixes, better collaboration, and secure code to cloud. 
 
@@ -298,7 +324,7 @@ With this change, you get:
 
 In the Defender portal, only the new model is available. In the Azure portal, the new experience is in preview alongside the current model. This unified approach eliminates the need to treat aggregated recommendations differently, they’re now regular recommendations like all others. For more information, see [Security recommendations](review-security-recommendations.md?pivots=defender-portal).
 
-**Risk-based Cloud Secure Score** - The new Cloud Secure Score introduces a new score formula, that allows you to objectively assess and monitor your cloud security posture. The Cloud Secure Score is based on asset risk factors and asset criticality, making the score more accurate and enabling smarter prioritization of high risk level recommendations. The new Cloud Secure Score is available only in the Defender portal. The classic Secure Score is still available in Azure portal. For more information, see [Cloud Secure Score](secure-score-security-controls.md?pivots=defender-portal).
+**Risk-based Cloud Secure Score** - The new Cloud Secure Score introduces a new score formula that allows you to objectively assess and monitor your cloud security posture. The Cloud Secure Score is based on asset risk factors and asset criticality, making the score more accurate and enabling smarter prioritization of high risk level recommendations. The new Cloud Secure Score is available only in the Defender portal. The classic Secure Score is still available in Azure portal. For more information, see [Cloud Secure Score](secure-score-security-controls.md?pivots=defender-portal).
 
 For more information, see [Defender for Cloud in the Defender portal](defender-portal/defender-for-cloud-defender-portal.md)
 
@@ -512,7 +538,7 @@ Learn more about [regulatory compliance standards in Microsoft Defender for Clou
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-|October 31, 2025|Public Preview |[GCP Cloud Logging Ingestion (Preview)](#gcp-cloud-logging-ingestion-preview)|
+|October 31, 2025| Preview |[GCP Cloud Logging Ingestion (Preview)](#gcp-cloud-logging-ingestion-preview)|
 |October 23, 2025 |Deprecation Notice | [Update Outbound Rules for Microsoft Defender for Containers](#deprecation-notice-update-outbound-rules-for-microsoft-defender-for-containers) |
 |October 23, 2025 | Update | [GitHub Application Permissions Update](#github-application-permissions-update)|
 
@@ -570,7 +596,7 @@ The permission is narrowly scoped, aligning with least privilege principles to s
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-|September 16, 2025 | Public Preview | [Malware automated remediation in Defender for Storage (Preview)](#malware-automated-remediation-in-defender-for-storage-preview)|
+|September 16, 2025 | Preview | [Malware automated remediation in Defender for Storage (Preview)](#malware-automated-remediation-in-defender-for-storage-preview)|
 |September 15, 2025 | Update | [New refined attack paths](#new-refined-attack-paths) |
 |September 14, 2025| Preview |[Trusted IPs support for internet-exposure analysis](#trusted-ips-support-for-internet-exposure-analysis)|
 |September 14, 2025| GA | [Exposure width for internet-exposure analysis](#exposure-width-for-internet-exposure-analysis)|
@@ -580,7 +606,7 @@ The permission is narrowly scoped, aligning with least privilege principles to s
 
 September 16, 2025
 
-Malware automated remediation in Defender for Storage malware scanning is now available in public preview. 
+Malware automated remediation in Defender for Storage malware scanning is now available in preview. 
 
 With this new capability, malicious blobs detected during on-upload or on-demand scanning can be automatically soft-deleted. This ensures harmful content is quarantined while still recoverable for further investigation. 
 
@@ -708,7 +734,7 @@ Microsoft Defender for Cloud's **Regulatory Compliance** is expanding its suppor
 3. **Korean Information Security Management System for Public Cloud (k-ISMS-P)**
 4. **Center for Internet Security (CIS) Microsoft Azure Foundations Benchmark v3.0**
 
-These frameworks are now available in **public preview** and can be enabled via the **Regulatory Compliance dashboard** in Microsoft Defender for Cloud.
+These frameworks are now available in preview and can be enabled via the **Regulatory Compliance dashboard** in Microsoft Defender for Cloud.
 
 For more information, see: [Regulatory compliance standards in Microsoft Defender for Cloud](/azure/defender-for-cloud/concept-regulatory-compliance-standards).
 
