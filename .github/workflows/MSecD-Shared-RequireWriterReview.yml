@@ -1,4 +1,4 @@
-name: Add Hold-off Comment (Reusable)
+name: Require Writer Review
 
 on:
   workflow_call:
