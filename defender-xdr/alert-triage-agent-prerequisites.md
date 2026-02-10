@@ -68,7 +68,7 @@ This table outlines the permissions required to perform various actions related 
 
 | **User action**                                              | **Permission required**                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| View  agent results and teach agent through feedback | **Security Copilot (read)**, **Security data basics (read)**, **Alerts  (manage)**, **Email & collaboration metadata (read)**,  and **Email & collaboration content (read)** under the **Security  operations** permissions group in the Defender portal, scoped to the Microsoft Defender for Office 365 data source. For more information, see [Phishing Triage Agent required permissions](#phishing-triage-agent-required-permissions). |
+| View agent results and teach agent through feedback | View agent results and provide feedback you need the same permissions as the agent, or higher. For more information, see [Alert Triage Agent required permissions](alert-triage-agent-setup.md#alert-triage-agent-required-permissions). |
 | View  agent settings                                         | **Security  Copilot (read)** and **Security data  basics (read)** under the **Security operations** permissions  group in the Defender portal<br>OR<br>**Security Administrator** in Microsoft Entra ID |
 | View  feedback page | **Security  Copilot (read)**, **Security data basics  (read)**, and **Email & collaboration metadata (read)** under  the **Security operations** permissions group in the Defender  portal<br>OR<br>**Security Administrator** in Microsoft Entra ID |
 | Manage  agent settings (set up, pause, remove the agent, and manage agent identity) | **Security  Administrator** in Microsoft Entra ID            |
@@ -76,33 +76,6 @@ This table outlines the permissions required to perform various actions related 
 
 For more information about unified RBAC in the Defender portal, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
-## Phishing Triage Agent required permissions
-
-The agent identity needs these permissions to access emails, analyze their content, and manage alerts:
-
-- **Security data basics (read):** Used to access basic security data, such as alerts and incidents.
-- **Alerts (manage):** Used to classify the alert and monitor the alert's state, preventing override of the alert status.
-- **Security Copilot (read):** Used to access Security Copilot capabilities.
-- **Email & collaboration metadata (read):** Used to access metadata for user reported emails.
-- **Email & collaboration content (read):** Used to read the content of user reported emails needed to do the analysis.
-
-These permissions are under the **Security operations** permissions group:
-
-:::image type="content" source="media/phishing-triage-agent/agent-permissions.png" alt-text="Screenshot of required permissions for Phishing Triage" lightbox="media/phishing-triage-agent/agent-permissions.png":::
-
-To create a role:
-
-1. Ensure that the relevant Defender workloads are activated to allow the agent to effectively analyze alerts with comprehensive context. Follow the steps in [Activate URBAC settings](activate-defender-rbac.md).
-1. [Create a role](../defender-xdr/create-custom-rbac-roles.md#create-a-custom-role) with the required permissions or assign an existing role with these permissions to the agent.
-
-   Make sure to grant the agent access to all the [supported products](alert-triage-agent-overview.md#supported-workloads-and-alert-types) you want to associate with the Alert Triage Agent.
-
-      :::image type="content" source="/defender-xdr/media/phishing-triage-agent/agent-permissions-sources.png" alt-text="Screenshot of required data sources for Phishing Triage" lightbox="/defender-xdr/media/phishing-triage-agent/agent-permissions-sources.png":::
-
-1. Assign the role to the agent. 
-
-> [!IMPORTANT]
-> After assigning the agent its permissions, ensure the user group monitoring the agent has equal or higher permissions to oversee its activity and output. To do this, compare the permissions of the user group to the agent in the Permissions page in the Microsoft Defender portal.
 
 ## Next steps
 

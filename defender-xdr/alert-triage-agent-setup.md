@@ -33,9 +33,9 @@ This article walks you through the complete setup process for the Alert Triage A
 
 Make sure you have the [permissions required](alert-triage-agent-prerequisites.md#permissions-required) and all [prerequisites](alert-triage-agent-prerequisites.md#prerequisites) are met before setting up the agent.
 
-## Begin setup
+## Launch the setup wizard
 
-Open the Phishing Triage Agent setup wizard in one of two ways:
+Open the Alert Triage Agent setup wizard in one of two ways:
 
 - From the Security Store in the Microsoft Defender portal, as explained in [Deploy AI agents in Microsoft Defender](../defender-xdr/security-copilot-agents-defender.md#discover-and-deploy-agents-in-the-microsoft-defender-portal).
 - From the **Incidents** queue in the Microsoft Defender portal, select **Set up agent**.
@@ -85,6 +85,35 @@ In alignment with [the principle of least privileges](/entra/identity-platform/s
 - If you use an existing user account, you need to [assign the required permissions](alert-triage-agent-prerequisites.md#phishing-triage-agent-required-permissions) to that identity before assigning the agent identity during setup - you can't do this from the setup wizard.
 
    :::image type="content" source="media/phishing-triage-agent/setup-assign-user.PNG" alt-text="Screenshot of the Connect with an existing user accout screen in the Phishing Triage Agent setup wizard" lightbox="media/phishing-triage-agent/setup-assign-user.PNG":::
+
+##### Alert Triage Agent required permissions
+
+The Alert Triage Agent requires specific permissions to access the necessary data and perform its triage functions. The required permissions depend on the alert types and associated products you want the agent to work with.
+
+This table summarizes the required permissions and data scopes for each alert type:
+
+| Alert type | Permissions | Data scopes |
+|:---|:---|:---|
+| **Phishing** | Security Copilot (read), Security data basics (read), Alerts (manage), Email & collaboration metadata (read), Email & collaboration content (read) | Microsoft Defender for Office 365 |
+| **Container (Preview)** | Security Copilot (read), Security data basics (read), Alerts (manage) | Microsoft Defender for Cloud |
+
+These permissions are under the **Security operations** permissions group:
+
+:::image type="content" source="media/phishing-triage-agent/agent-permissions.png" alt-text="Screenshot of required permissions for Alert Triage" lightbox="media/phishing-triage-agent/agent-permissions.png":::
+
+To create a role:
+
+1. Ensure that the relevant Defender workloads are activated to allow the agent to effectively analyze alerts with comprehensive context. Follow the steps in [Activate URBAC settings](activate-defender-rbac.md).
+1. [Create a role](../defender-xdr/create-custom-rbac-roles.md#create-a-custom-role) with the required permissions or assign an existing role with these permissions to the agent.
+
+    Make sure to grant the agent access to all the [supported products](#supported-workloads-and-alert-types) you want to associate with the Alert Triage Agent.
+
+        :::image type="content" source="/defender-xdr/media/phishing-triage-agent/agent-permissions-sources.png" alt-text="Screenshot of required data sources for Phishing Triage" lightbox="/defender-xdr/media/phishing-triage-agent/agent-permissions-sources.png":::
+
+1. Assign the role to the agent. 
+
+> [!IMPORTANT]
+> After assigning the agent its permissions, ensure the user group monitoring the agent has equal or higher permissions to oversee its activity and output. To do this, compare the permissions of the user group to the agent in the Permissions page in the Microsoft Defender portal.
 
 ## Complete setup
 
