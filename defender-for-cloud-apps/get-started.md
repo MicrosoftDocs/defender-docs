@@ -12,7 +12,7 @@ This quickstart describes how to start working with Microsoft Defender for Cloud
 Defender for Cloud Apps can help you use the benefits of cloud applications while maintaining control of your corporate resources. Defender for Cloud Apps improves your visibility into cloud activity and helps increase protection over your corporate data.
 
 > [!TIP]
-> As a companion to this article, we recommend using the [Microsoft Defender for Cloud Apps automated setup guide](https://go.microsoft.com/fwlink/?linkid=2251562) when signed in to the Microsoft 365 admin center. This guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup portal]( https://go.microsoft.com/fwlink/?linkid=2251561).
+> As a companion to this article, we recommend using the [Microsoft Defender for Cloud Apps automated setup guide](https://go.microsoft.com/fwlink/?linkid=2251562) when signed in to the Microsoft 365 admin center. This guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the Microsoft 365 setup portal.
 
 ## Prerequisites
 
