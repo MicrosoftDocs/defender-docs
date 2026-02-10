@@ -82,7 +82,7 @@
             - name: Set up the free data ingestion benefit
               href: data-ingestion-benefit.md
             - name: Customize security event ingestion with Data Collection Rules (DCRs)
-              href: articles/defender-for-cloud/data-collection-rules-defender-servers-ingestion.md
+              href: articles/defender-for-cloud/data-collection-rule.md
             - name: Modify plan settings
               displayName: Defender for Servers, monitoring coverage, Log analytics, agentless scanning, Vulnerability assessment, Endpoint protection
               href: configure-servers-coverage.md

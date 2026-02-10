@@ -79,4 +79,4 @@ To get the 500 MB/day data ingestion benefit, enable Defender for Servers Plan 2
 
 ## Related content
 
-- [Use Data Collection Rules to customize how Defender for Servers data is ingested](data-collection-rules-defender-servers-ingestion.md)
+- [Use Data Collection Rules to customize how Defender for Servers data is ingested](data-collection-rule.md)
