@@ -33,7 +33,7 @@ jobs:
             "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments?per_page=100")
           
           LAST_COMMAND=$(echo "$COMMENTS" | jq -r '.[] | select(.body | contains("#")) | .body' | \
-            grep -E '^#[a-zA-Z-]+' | tail -n1)
+            grep -E '^#[a-zA-Z-]+' | tail -n1 | tr '[:upper:]' '[:lower:]')
           
           echo "Last PRMerger command found: $LAST_COMMAND"
           
