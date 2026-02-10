@@ -161,7 +161,7 @@ In alignment with [the principle of least privileges](/entra/identity-platform/s
 
    :::image type="content" source="media/phishing-triage-agent/setup-assign-user.PNG" alt-text="Screenshot of the Connect with an existing user accout screen in the Phishing Triage Agent setup wizard" lightbox="media/phishing-triage-agent/setup-assign-user.PNG":::
 
-##### Phishing Triage Agent required permissions
+##### Alert Triage Agent required permissions
 
 The agent identity needs these permissions to access emails, analyze their content, and manage alerts:
 
@@ -171,9 +171,18 @@ The agent identity needs these permissions to access emails, analyze their conte
 - **Email & collaboration metadata (read):** Used to access metadata for user reported emails.
 - **Email & collaboration content (read):** Used to read the content of user reported emails needed to do the analysis.
 
+This table summarizes the required permissions and data scopes for each alert type:
+
+| Alert type | Permissions | Data scopes |
+|:---|:---|:---|
+| **Phishing** | Security Copilot (read), Security data basics (read), Alerts (manage), Email & collaboration metadata (read), Email & collaboration content (read) | Microsoft Defender for Office 365 |
+| **Container (Preview)** | Security Copilot (read), Security data basics (read), Alerts (manage) | Microsoft Defender for Cloud |
+| **Identity (Preview)** | Security Copilot (read), Security data basics (read), Alerts (manage) | Microsoft Defender for Identity |
+
+
 These permissions are under the **Security operations** permissions group:
 
-:::image type="content" source="media/phishing-triage-agent/agent-permissions.png" alt-text="Screenshot of required permissions for Phishing Triage" lightbox="media/phishing-triage-agent/agent-permissions.png":::
+:::image type="content" source="media/phishing-triage-agent/agent-permissions.png" alt-text="Screenshot of required permissions for Alert Triage" lightbox="media/phishing-triage-agent/agent-permissions.png":::
 
 To create a role:
 
