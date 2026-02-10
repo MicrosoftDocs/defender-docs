@@ -1,0 +1,96 @@
+name: Add Hold-off Comment (Reusable)
+
+on:
+  workflow_call:
+
+jobs:
+  add-hold-off-comment:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Check if author is a team member and add hold-off comment
+        env:
+          MSECD_READTEAM_TOKEN: ${{ secrets.MSECD_READTEAM_TOKEN }}
+          PR_AUTHOR: ${{ github.actor }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          VERSION="1.1.0"
+          echo "Hold-off Comment Workflow Version: $VERSION"
+          
+          if [ -z "$MSECD_READTEAM_TOKEN" ]; then
+            echo "ERROR: MSECD_READTEAM_TOKEN secret is not set!"
+          else
+            echo "MSECD_READTEAM_TOKEN is configured."
+          fi
+          
+          # Check if last PRMerger command is #sign-off
+          echo "Checking last PRMerger command..."
+          COMMENTS=$(curl -s -H "Authorization: token $MSECD_READTEAM_TOKEN" \
+            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments?per_page=100")
+          
+          LAST_COMMAND=$(echo "$COMMENTS" | jq -r '.[] | select(.body | contains("#")) | .body' | \
+            grep -E '^#[a-zA-Z-]+' | tail -n1)
+          
+          echo "Last PRMerger command found: $LAST_COMMAND"
+          
+          if [ "$LAST_COMMAND" != "#sign-off" ]; then
+            echo "Last command is not #sign-off. Skipping workflow."
+            exit 0
+          fi
+          
+          echo "Last command is #sign-off. Continuing workflow."
+          
+          # Use hardcoded team
+          ORG="MicrosoftDocs"
+          TEAM="msec-docs-team"
+          echo "Resolving team: $ORG/$TEAM"
+          
+          # Fetch team members using MSECD_READTEAM_TOKEN
+          RESPONSE=$(curl -s -w "\n%{http_code}" -H "Authorization: token $MSECD_READTEAM_TOKEN" \
+            "https://api.github.com/orgs/$ORG/teams/$TEAM/members")
+          
+          HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
+          BODY=$(echo "$RESPONSE" | sed '$d')
+          
+          TEAM_MEMBERS=""
+          
+          if [ "$HTTP_CODE" = "200" ]; then
+            MEMBERS=$(echo "$BODY" | jq -r '.[].login' 2>/dev/null || echo "")
+            if [ -n "$MEMBERS" ]; then
+              echo "Team members: $MEMBERS"
+              TEAM_MEMBERS="$MEMBERS"
+            else
+              echo "No members found in team response."
+            fi
+          else
+            echo "Failed to fetch team members. HTTP Status: $HTTP_CODE"
+          fi
+
+          # Remove duplicates and check if PR author is a team member
+          TEAM_MEMBERS=$(echo "$TEAM_MEMBERS" | tr ' ' '\n' | sort -u | tr '\n' ' ')
+          echo "Team members: $TEAM_MEMBERS"
+
+          IS_TEAM_MEMBER=false
+          for user in $TEAM_MEMBERS; do
+            if [ "$user" == "$PR_AUTHOR" ]; then
+              IS_TEAM_MEMBER=true
+              break
+            fi
+          done
+
+          if [ "$IS_TEAM_MEMBER" = false ]; then
+            echo "PR author '$PR_AUTHOR' is not a team member. Adding hold-off comment..."
+            COMMENT_BODY="#hold-off\nThis PR requires a writer review before merging.\nThe review process typically takes 2-3 business days. For urgent requests, please contact the page's author or assigned team."
+            
+            curl -s -X POST \
+              -H "Authorization: token $MSECD_READTEAM_TOKEN" \
+              -H "Accept: application/vnd.github.v3+json" \
+              "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments" \
+              -d "{\"body\":\"$COMMENT_BODY\"}"
+            echo "Hold-off comment added successfully."
+          else
+            echo "PR author '$PR_AUTHOR' is a team member. Skipping comment."
+          fi
