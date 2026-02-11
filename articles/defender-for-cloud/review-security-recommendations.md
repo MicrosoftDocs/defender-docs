@@ -14,7 +14,7 @@ zone_pivot_groups: defender-portal-experience
 
 In Microsoft Defender for Cloud, resources and workloads are assessed against built-in and custom security policies and regulatory compliance frameworks, which you apply in your cloud environments (Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and more). Based on those assessments, security recommendations provide practical steps to remediate security problems and improve your security posture.
 
-Defender for Cloud uses a dynamic engine that proactively assesses the risks in your environment. It considers the potential for exploitation and the potential business effect on your organization. The engine prioritizes security recommendations based on the risk factors of each resource. The context of the environment determines these risk factors.
+For detailed information about security recommendations, including risk factors, prioritization, and classification, see [Security recommendations](security-recommendations.md).
 
 > [!NOTE]
 > In the portal, some recommendations that previously appeared as a single aggregated item now display as multiple individual recommendations. This change reflects a shift from grouping related findings under one recommendation to listing each recommendation separately.
@@ -52,6 +52,8 @@ Review recommendations and make sure all the details are correct before you reso
    - **Misconfigurations**: Configuration-related security issues.
    - **Vulnerabilities**: Software vulnerabilities requiring patches.
    - **Exposed Secrets**: Credentials and secrets that might be compromised.
+   
+These category tabs can help you focus your view by security category so that you can choose to see everything at once or drill down into specific areas.
 
    > [!NOTE]
    > When you select a security category filter, both the recommendations list and the summary cards update to reflect only the recommendations in that category.
@@ -66,6 +68,8 @@ The Azure portal provides three distinct ways to view and interact with recommen
 
 This view displays a list of all recommendations organized by individual assets, ordered by risk level. Each row represents a single recommendation affecting a specific resource.
 
+:::image type="content" source="media/review-security-recommendations/review-by-findings.png" alt-text="Screenshot of Azure portal Findings view showing a list of critical storage account recommendations by resource." lightbox="media/review-security-recommendations/review-by-findings.png":::
+
 When you select a recommendation row, a side panel opens displaying:
 
 - **Overview**: General information about the recommendation, including its description, details of the exposed asset, and other relevant recommendation specifics
@@ -79,6 +83,8 @@ When you select a recommendation row, a side panel opens displaying:
 #### Resource views
 
 In addition to **Group by title**, the Azure portal supports **Group by resource**. This groups all findings for the same asset in one place, which is helpful when a single owner is responsible for an asset and should receive all of its findings together.
+
+:::image type="content" source="media/review-security-recommendations/review-by-resource.png" alt-text="Screenshot of Azure security portal grouped by resource, showing critical findings, risk levels, recommendations, and owner columns." lightbox="media/review-security-recommendations/review-by-resource.png":::
 
 #### Recommendation title view
 
@@ -191,66 +197,6 @@ Alternative access paths to recommendations:
 
 ::: zone-end
 
-## Understanding risk prioritization in the portal
-
-The Exposure Management experience in the portal provides advanced risk prioritization capabilities that help security teams focus on the most critical threats. Microsoft Defender for Cloud's dynamic risk assessment engine evaluates the risks in your environment while considering the potential for exploitation and the potential business impact to your organization.
-
-The recommendations in the portal are automatically prioritized based on effective risk, which takes into account multiple contextual factors about each resource and its environment. This risk-based approach ensures that security teams can address the most critical security issues first, making remediation efforts more efficient and effective.
-
-### Risk-based filtering and prioritization
-
-The portal offers advanced filtering capabilities that allow you to focus on recommendations based on risk factors:
-
-- **Exposed assets**: Filter by resources that have direct exposure to threats, such as internet-facing resources or resources with vulnerable configurations.
-- **Asset risk factors**: Target specific risk conditions like data sensitivity, lateral movement potential, or critical infrastructure exposure.
-- **Risk level breakdown**: View recommendations categorized by Critical, High, Medium, and Low risk levels.
-- **Attack path integration**: Focus on recommendations that are part of identified attack paths.
-
-### Risk calculation in Exposure Management
-
-The unified Exposure Management experience calculates risk levels by using a context-aware engine that considers:
-
-- **Environmental context**: Resource configuration, network topology, and security posture.
-- **Exploitability factors**: How easily an attacker could exploit the vulnerability.
-- **Business impact**: The potential consequences if the security issue were exploited.
-- **Attack surface**: The resource's exposure to potential threats.
-- **Choke point analysis**: Whether the resource serves as a critical junction in potential attack paths.
-
-### Risk levels in the portal
-
-The portal classifies recommendations into five risk levels:
-
-- **Critical**: The most severe security problems with immediate exploitability and high business impact that require urgent attention.
-- **High**: Significant security risks that should be addressed promptly but may not require immediate action
-- **Medium**: Moderate security issues that can be addressed as part of regular security maintenance
-- **Low**: Minor security issues that can be addressed at your convenience during routine operations
-- **Not evaluated**: Recommendations that aren't risk-assessed, typically due to resource coverage limitations.
-
-### Enhanced recommendation details
-
-Each recommendation in the portal provides comprehensive risk context:
-
-- **Risk assessment summary**: Overall risk calculation and contributing factors.
-- **Attack surface mapping**: Visual representation of how the resource relates to potential attack scenarios.
-- **Initiative correlation**: Connection to broader security initiatives and compliance frameworks.
-- **CVE associations**: Links to relevant Common Vulnerabilities and Exposures when applicable.
-- **Historical context**: Trends and changes in risk levels over time.
-
-On the recommendation page, review the following details:
-
-   - **Risk level**: The vulnerability and business effect of the underlying security problem, considering the environmental resource context like internet exposure, sensitive data, lateral movement, and more.
-   - **Risk factors**: Environmental factors of the resource affected by the recommendation, which influences the vulnerability and business effect of the underlying security problem. Examples of risk factors include internet exposure, sensitive data, and lateral movement potential.
-   - **Resource**: The name of the affected resource.
-   - **Status**: The status of the recommendation, like unassigned, on time, or overdue.
-   - **Description**: A brief description of the security problem.
-   - **Attack paths**: The number of attack paths.
-   - **Scope**: The affected subscription or resource.
-   - **Freshness**: The freshness interval of the recommendation.
-   - **Last change date**: The date when this recommendation was last changed.
-   - **Severity**: The severity of the recommendation: **High**, **Medium**, or **Low**. More details are provided later in this article.
-   - **Owner**: The person assigned to the recommendation.
-   - **Due date**: The assigned due date for resolving the recommendation.
-   - **Tactics & techniques**: The tactics and techniques mapped to MITRE ATT&CK.
 
 ## Explore a recommendation
 
@@ -331,6 +277,8 @@ Key improvements in the cloud recommendations experience include:
 The unified experience ensures that cloud security recommendations are contextualized within the broader security landscape, enabling more informed decision-making and efficient remediation workflows.
 
 ::: zone-end
+
+For more information about understanding risk levels, recommendation classification, and detailed explanations of recommendation dashboard fields, see [Security recommendations](security-recommendations.md).
 
 ::: zone pivot="azure-portal"
 
