@@ -55,7 +55,7 @@ Before AWS issues temporary credentials, it performs several checks:
 
 AWS grants access only when all validation rules succeed.
 
-## Related articles
+## Related content
 
 - [Connect your AWS account](quickstart-onboard-aws.md)
 - [Troubleshoot multicloud connectors](troubleshoot-connectors.md)
