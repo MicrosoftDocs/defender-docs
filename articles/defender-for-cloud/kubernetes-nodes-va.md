@@ -16,9 +16,13 @@ Vulnerability assessment of the nodes must be [enabled by turning on the **Agent
 
 ## Review the Kubernetes node vulnerability recommendations
 
-If vulnerabilities are found for a Kubernetes node, a recommendation is generated for the customer to review. To review Kubernetes node recommendations for remediation in the Azure portal:
+If vulnerabilities are found for a Kubernetes node, a recommendation is generated for the customer to review. To review Kubernetes node recommendations for remediation:
 
-1. Select **Recommendations** from the **Defender for Cloud** menu.
+1. Sign in to the [Azure portal](https://portal.azure.com).
+ 
+1. Search for and select **Microsoft Defender for Cloud**.
+ 
+1. From the navigation menu, under **General**, select **Recommendations**.
 :::image type="content" source="media/kubernetes-nodes-va/recommendations-list.png" alt-text="Screenshot of selecting the recommendations submenu of the Defender for Cloud pane." lightbox="media/kubernetes-nodes-va/recommendations-list.png":::
 
 1. Select the **AKS nodes should have vulnerability findings resolved** recommendation.
