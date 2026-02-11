@@ -68,7 +68,7 @@ You can now manage exemptions at scale instead of for each recommendation.
 > [!NOTE]
 > The old grouped recommendations still appear side by side with the new format for now, but they will be deprecated soon.
 
-Learn more about [reviewing security recommendations](review-security-recommendations.md).
+Learn more about [reviewing security recommendations](review-security-recommendations.md) and [transitioning from grouped to individual recommendations](transition-grouped-individual-recommendations.md).
 
 ### Simulate alerts for SQL servers on machines
 

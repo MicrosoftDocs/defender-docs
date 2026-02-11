@@ -24,7 +24,7 @@ For detailed information about security recommendations, including risk factors,
 > - These recommendations are marked as Preview. This tag indicates that the recommendation is in an early state and doesn't affect Secure Score yet.
 > - Secure Score currently applies to the parent recommendation only, not to each individual item.
 >
-> If you see both formats or recommendations with a Preview tag, this condition is expected during the transition. The goal is to improve clarity and allow you to act on specific recommendations more easily.
+> If you see both formats or recommendations with a Preview tag, this condition is expected during the transition. The goal is to improve clarity and allow you to act on specific recommendations more easily. For more information, see [Transition from grouped to individual recommendations](transition-grouped-individual-recommendations.md).
 
 ## Prerequisites
 
@@ -362,4 +362,5 @@ You can use [Azure Resource Graph](/azure/governance/resource-graph/) to write a
 
 ## Related content
 
+- [Transition from grouped to individual recommendations](transition-grouped-individual-recommendations.md)
 - [Remediate security recommendations](implement-security-recommendations.md)
