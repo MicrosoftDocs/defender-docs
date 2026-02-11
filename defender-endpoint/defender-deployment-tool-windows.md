@@ -122,7 +122,7 @@ To use the quick "double-click" default installation:
 
 1. In the dialog that appears, select **Continue**. On the next page that appears, enter the Defender deployment key generated in the portal.
 
-   :::image type="content" source="./media/defender-deployment-tool-windows/interactive-mode.png" alt-text="Screenshot illustrating running the Defender deployment tool in interactive mode.":::
+   :::image type="content" source="./media/defender-deployment-tool-windows/interactive-mode.png" alt-text="Screenshot illustrating running the Defender deployment tool in interactive mode." lightbox="./media/defender-deployment-tool-windows/interactive-mode.png":::
 
 ### Non-interactive use
 
