@@ -4,27 +4,40 @@ description: Learn how to take advantage of the data ingestion benefit in Micros
 ms.topic: how-to
 ms.author: elkrieger
 author: elazark
-ms.date: 04/08/2025
-ai-usage: ai-assisted
+ms.date: 12/15/2025
 ---
 
 # Use the data ingestion benefit
 
-When you enable Defender for Servers Plan 2 in Microsoft Defender for Cloud, you take advantage of 500 MB of free data ingestion daily. Here's how it works.
+When you enable Defender for Servers Plan 2 in Microsoft Defender for Cloud, you receive 500 MB of free data ingestion per node daily.
 
-- Defender for Servers Plan 2 provides an allowance of 500 MB per node daily for specific security data types directly collected by Defender for Cloud.
-- Data ingestion is calculated per machine, per reported workspace, and daily.
-- The total daily free limit equals [number of machines] x 500 MB.
-- The allowance is a daily rate averaged across all machines.
-- You don't get charged extra if the total doesn't exceed your daily free limit, even if some machines send 100 MB and others send 800 MB.
-- The benefit is granted to the Log Analytics workspace where the machine reports.
-- The benefit might not appear on your invoice, since it has zero cost. The benefit is visible in the product and in exports from Microsoft Cost Management. Learn how to  [view your data allocation benefits](/azure/azure-monitor/fundamentals/cost-usage#view-data-allocation-benefits).
+- The total daily data allowance granted equals the number of machines × 500 MB.
+- The daily data allowance is calculated across all machines in a subscription, not enforced per machine.
+- You aren’t charged for ingestion as long as the total data ingested across all machines in the subscription remains within the daily allowance, even if individual machines ingest more than 500 MB.
+- The benefit is applied to the Log Analytics workspace where the machine reports.
+- The benefit doesn't appear on your invoice because it has zero cost. You can see it in the product UI and in Microsoft Cost Management exports. Learn how to [view your data allocation benefits](/azure/azure-monitor/fundamentals/cost-usage#view-data-allocation-benefits).
+
+## How the data ingestion benefit is applied
+
+When Defender for Servers Plan 2 is enabled on a Log Analytics workspace, the 500 MB/day data ingestion benefit is applied automatically to eligible security tables when data is ingested into them.
+
+> [!NOTE]
+> The 500 MB/day benefit is applied based on the workspace billing model:
+>
+> - **Microsoft Sentinel classic meters**: Applies to Log Analytics ingestion only.
+> - **Microsoft Sentinel simplified (unified) meters**: The benefit applies to Sentinel ingestion.
+
 
 ## Prerequisites
 
-- Every machine running the Azure Monitor agent (AMA) in a subscription with Defender for Servers Plan 2 enabled gets the benefit.
-- Every workspace where machines report must have Defender for Servers Plan 2 enabled.
-- Every machine reporting to more than one workspace gets the benefit granted to only one of them.
+To use the 500 MB/day data-ingestion benefit, make sure:
+
+- Azure Monitor Agent (AMA) is installed on every machine in a subscription that has Defender for Servers Plan 2 enabled.
+
+- Defender for Servers Plan 2 is enabled on each Log Analytics workspace where these machines report.  
+
+> [!NOTE]
+> If a machine reports to more than one workspace, Defender for Cloud applies the 500 MB/day benefit to only one workspace.
 
 The following subset of  [security data types](/azure/azure-monitor/reference/tables-category#security) are supported for the benefit:
 
@@ -40,68 +53,16 @@ The following subset of  [security data types](/azure/azure-monitor/reference/ta
 - [WindowsEvent](/azure/azure-monitor/reference/tables/windowsevent?branch=main)
 - [LinuxAuditLog](/azure/azure-monitor/reference/tables/linuxauditlog)
 
-### Create a custom Data Collection Rule (DCR) for Security Events (500 MB/day benefit)
-
-Security Events are free, up to **500 MB per server per day**, but only when they reach the **SecurityEvent** table.  A DCR must therefore use the **Microsoft-SecurityEvent** stream to ensure compliance with the data ingestion benefit.
-
-#### Quick steps to create a DCR
-
-1. Go to the [Azure portal](https://portal.azure.com) ▸ *Monitor* ▸ **Data Collection Rules** ▸ **+ Create**.
-2. **Add data source**  
-   - *Type*: **Windows event logs**  
-   - *Log name*: `Security`  
-   - *Stream*: **`Microsoft-SecurityEvent`**  
-   - *(Optional)* filter with XPath, for example:
-
-     ```xpath
-     *[System[(EventID=4624 or EventID=4625 or EventID=4688)]]
-     ```
-
-3. **Destination** ▸ Select the Log Analytics workspace that has **Defender for Servers Plan 2** enabled.
-4. **Review + create** ▸ **Assign** the rule to Windows machines running the Azure Monitor Agent (AMA).
-
-#### Sample JSON fragment
-
-```json
-{
-  "dataSources": {
-    "windowsEventLogs": [
-      {
-        "name": "SecurityEvents",
-        "streams": ["Microsoft-SecurityEvent"],
-        "xPathQueries": [
-          "*[System[(EventID=4624 or EventID=4625 or EventID=4688)]]"
-        ]
-      }
-    ]
-  },
-  "destinations": {
-    "logAnalytics": [
-      { "workspaceId": "<workspace-id>" }
-    ]
-  }
-}
-```
-
-#### Compliance checklist
-
-| Requirement | Why it matters |
-|-------------|----------------|
-| **`Microsoft-SecurityEvent`** stream in the DCR | Routes data to the **SecurityEvent** table covered by the allowance. |
-| **Security solution enabled on workspace** | Ensures the ingestion benefit is applied (same as Defender for Servers Plan 2). |
-| **Defender for Servers Plan 2** | Grants the daily 500 MB allowance per node. |
-| **Azure Monitor Agent (AMA)** installed | Required to apply custom DCRs. |
-
-#### Deploy at scale
-
-Automate creation and assignment of a compliant DCR across subscriptions with the Azure Policy initiative [Deploy AMA DCR for Security Events collection](
-https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Policy/Deploy%20AMA%20DCR%20for%20Security%20Events%20collection).
+> [!NOTE]
+> Although `WindowsEvent` is listed, only security events from the `Microsoft-SecurityEvent` stream that go to the `SecurityEvent` table qualify for the 500 MB/day allowance. Application, System, or other event log channels are not covered and are billed as regular ingestion.
 
 ## Configure a workspace
 
-Azure Monitor describes how to [create a Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace).
+Follow Azure Monitor instructions to [create a Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace).
 
-## Enable Defender for Servers Plan 2 on the workspace
+## Enable Defender for Servers Plan 2
+
+To get the 500 MB/day data ingestion benefit, enable Defender for Servers Plan 2 on the Log Analytics workspace.
 
 1. In the [Azure portal](https://portal.azure.com), search for and select **Microsoft Defender for Cloud**.
 
@@ -109,9 +70,13 @@ Azure Monitor describes how to [create a Log Analytics workspace](/azure/azure-m
 
 1. Select the relevant workspace.
 
-1. Toggle the servers plan to **On**, and then select **Save**.
+1. Toggle on the servers plan, then select **Save**.
 
     :::image type="content" source="media/tutorial-enable-servers-plan/enable-workspace-servers.png" alt-text="Screenshot that shows the plan enablement page at the Log Analytics workspace level." lightbox="media/tutorial-enable-servers-plan/enable-workspace-servers.png":::
 
 > [!NOTE]
-> If you want to disable Defender for Servers Plan 2, you explicitly disable the plan on any Log Analytics workspace with it enabled.
+> To disable Defender for Servers Plan 2, turn it off on each Log Analytics workspace where it's enabled.
+
+## Related content
+
+- [Use Data Collection Rules to customize how Defender for Servers data is ingested](data-collection-rule.md)
