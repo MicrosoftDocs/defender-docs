@@ -66,7 +66,7 @@ You can now manage exemptions at scale instead of for each recommendation.
    You apply targeted exemptions and measure security progress accurately.
 
 > [!NOTE]
-> Seeing both formats or recommendations with a **Preview** tag is expected during the transition. The goal is to improve clarity and allow you to act on specific recommendations more easily.
+> The old grouped recommendations still appear side by side with the new format for now, but they will be deprecated soon.
 
 Learn more about [reviewing security recommendations](review-security-recommendations.md).
 
