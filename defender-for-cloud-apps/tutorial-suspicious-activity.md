@@ -48,7 +48,7 @@ Learn how to tune user activity detections to identify true compromises and redu
 [Setting up known IP addresses](ip-tags.md) helps machine learning algorithms identify known locations and consider them as part of the machine learning models. For example, adding the IP address range of your VPN helps the model to correctly classify this IP range and automatically exclude it from impossible travel detections because the VPN location doesn't represent the true location of that user.
 
 > [!NOTE]  
-> Defender for Cloud Apps uses IP ranges throughout the service, not just for detections. These ranges are used in the activity log, Conditional Access, and more. For example, identifying your physical office IP addresses lets you customize the way you view and investigate logs and alerts.
+> Defender for Cloud Apps uses IP ranges across the service, not only for detections. IP ranges are used in the activity log, Conditional Access, and more. For example, identifying your physical office IP addresses lets you customize the way you view and investigate logs and alerts.
 
 ### Review anomaly detection alerts
 
@@ -58,7 +58,7 @@ Start by familiarizing yourself with the [different detection policies](control-
 
 ## Phase 2: Tune anomaly detection policies
 
-Defender for Cloud Apps includes several built-in anomaly detection policies that are preconfigured for common security use cases. Popular detections include:
+Defender for Cloud Apps includes several built-in [anomaly detection policies](anomaly-detection-policy.md#anomaly-detection-policies) that are preconfigured for common security use cases. Popular detections include:
 
 |Detection |Description  |
 |---------|---------|
@@ -71,10 +71,8 @@ Defender for Cloud Apps includes several built-in anomaly detection policies tha
 |**Unusual multiple file download activities**      |Detects multiple file download activities in a single session with respect to the baseline learned, which could indicate an attempted breach.         |
 |**Unusual administrative activities**      |Detects multiple administrative activities in a single session with respect to the baseline learned, which could indicate an attempted breach.         |
 
-For a full list of detections, see [Anomaly detection policies](anomaly-detection-policy.md#anomaly-detection-policies).
-
 > [!NOTE]
-> Some anomaly detections primarily focus on detecting problematic security scenarios, while others help identify and investigate anomalous user behavior that might not necessarily indicate a compromise. For such detections, you can use "behaviors," which is available in the Microsoft Defender XDR advanced hunting experience. For more information, see [Behaviors](behaviors.md).
+> Some anomaly detections focus on detecting problematic security scenarios, while others help identify and investigate anomalous user behavior that might not necessarily indicate a compromise. For such detections, you can use [Behaviors](behaviors.md) which is available in the Microsoft Defender XDR advanced hunting experience.
 
 1. **Scope policies to specific users or groups**
 
@@ -121,10 +119,9 @@ To reduce unnecessary alerts, set up the sensitivity of alerts. Use the sensitiv
 
 [Rule-based detection policies](user-activity-policies.md) complement anomaly detection policies with organization-specific requirements. Create rule-based policies using one of the Activity policy templates.
 
-1. Go to **Control** > **Templates** and set the **Type** filter to **Activity policy**. [Set up activity filters](activity-filters-queries.md) to detect behaviors that aren't normal for your environment. 
-
 If your organization doesn't have any presence in a particular country or region, create a policy that detects the anomalous activities from that location. For organizations with large branches in that country or region, such activities are normal and it doesn't make sense to detect such activities.
 
+1. Go to **Control** > **Templates** and set the **Type** filter to **Activity policy**. [Set up activity filters](activity-filters-queries.md) to detect behaviors that aren't normal for your environment. 
 1. **Tune activity volume**  
 Choose the volume of activity required before the detection raises an alert. If your organization has no presence in a country or region, even a single activity is significant and warrants an alert. A single sign-in failure could be human error and only of interest if there are many failures in a short period.
 1. **Tune [activity filters](activity-filters-queries.md)**  
