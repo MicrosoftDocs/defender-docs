@@ -4,7 +4,7 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how Defender for Cloud prioritizes security recommendations and mitigates risks to protect your environment.
 ms.topic: concept-article
-ms.date: 07/15/2025
+ms.date: 02/11/2026
 ai-usage: ai-assisted
 #customer intent: As a security analyst, I want to understand how Defender for Cloud prioritizes security risks so that I can effectively protect my environment.
 ---
@@ -23,10 +23,7 @@ If your environment isn't protected by the Defender CSPM plan, the columns with 
 
 ## How to use risk prioritization
 
-To learn how to use risk prioritization effectively in your security operations, including detailed explanations of risk factors, risk calculation methodology, and risk levels, see:
-
-- **For Azure portal users**: [Review security recommendations - Understanding risk prioritization](security-recommendations.md?pivots=azure-portal#understanding-risk-prioritization)
-- **For Defender portal users**: [Review security recommendations - Understanding risk prioritization in the portal](review-security-recommendations.md?pivots=defender-portal#understanding-risk-prioritization-in-the-portal)
+To learn how to use risk prioritization effectively in your security operations, including detailed explanations of risk factors, risk calculation methodology, and risk levels, see [Security recommendations](security-recommendations.md).
 
 These comprehensive guides include:
 
@@ -35,6 +32,10 @@ These comprehensive guides include:
 - Risk level classifications (Critical, High, Medium, Low, Not evaluated)
 - Recommendations dashboard details and filtering options
 - Integration with attack path analysis
+
+For portal-specific guidance:
+- **For Azure portal users**: [Review security recommendations - Understanding risk prioritization](security-recommendations.md?pivots=azure-portal#understanding-risk-prioritization)
+- **For Defender portal users**: [Review security recommendations - Defender portal](review-security-recommendations.md?pivots=defender-portal)
 
 ## Related content
 
