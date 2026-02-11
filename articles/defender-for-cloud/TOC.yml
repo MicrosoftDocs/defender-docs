@@ -65,7 +65,7 @@
               displayName: gcp, connect, onboard
               href: quickstart-onboard-gcp.md
             - name: Authentication architecture for GCP connectors
-              href: concept-authentication-architecture-gcp.md
+              href: authentication-architecture-google-cloud.md
             - name: Configure GCP plans
               displayName: GCP, plans, configure
               href: configure-google-plans.md

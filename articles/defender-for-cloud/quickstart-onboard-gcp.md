@@ -20,7 +20,7 @@ Microsoft Defender for Cloud uses federated authentication to securely access GC
 
 During onboarding, Defender for Cloud establishes trust with Google Cloud using workload identity federation and service account impersonation. Access is scoped to the connected project or organization and limited to the permissions required by the enabled Defender plans.
 
-Learn more about [authentication architecture for GCP connectors](concept-authentication-architecture-gcp.md).
+Learn more about [authentication architecture for GCP connectors](authentication-architecture-google-cloud.md).
 
 ## Prerequisites
 
@@ -166,7 +166,7 @@ Learn more about [ingesting GCP Cloud Logging with Pub/Sub (Preview)](logging-in
 ## Next steps
 
 - [Configure Defender for Cloud plans for your GCP projects](configure-google-plans.md).
-- Learn about the [authentication architecture for GCP connectors](concept-authentication-architecture-gcp.md).
+- Learn about the [authentication architecture for GCP connectors](authentication-architecture-google-cloud.md).
 - [Ingest GCP Cloud Logging with Pub/Sub (Preview)](logging-ingestion.md).
 - [Resolve Domain Restricted Sharing policy](resolve-gcp-sharing-policy.md).
 - [Troubleshoot multicloud connectors](troubleshoot-connectors.md).

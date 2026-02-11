@@ -4,7 +4,7 @@ description: Learn how Microsoft Defender for Cloud authenticates to Google Clou
 ms.topic: article
 author: Elazark
 ms.author: elkrieger
-ms.date: 12/24/2025
+ms.date: 02/11/2026
 ms.custom: sfi-image-nochange
 ---
 
@@ -49,7 +49,7 @@ The authentication process works as follows:
 1. The Microsoft Entra token is exchanged with Google's Security Token Service (STS).
 
 1. Google STS validates the token with the workload identity provider. 
-   Audience validation is performed, and the token is signed. A Google STS token is then returned to Defender for Cloud's CSPM service.
+   Audience validation is performed, and the token is signed. A Google STS token is then returned to Defender for Cloud.
 
 1. Defender for Cloud uses the Google STS token to impersonate the service account.
    The service account credentials are used to scan the GCP project or organization.
