@@ -10,10 +10,9 @@ jobs:
       contents: read
       pull-requests: write
     steps:
-      - name: Check if comment author is a team member and add hold-off comment
+      - name: Check if command author is a team member and add hold-off comment
         env:
           MSECD_READTEAM_TOKEN: ${{ secrets.MSECD_READTEAM_TOKEN }}
-          COMMENT_AUTHOR: ${{ github.event.comment.user.login || github.actor }}
           PR_NUMBER: ${{ github.event.pull_request.number || github.event.issue.number }}
           REPO: ${{ github.repository }}
         run: |
@@ -32,17 +31,26 @@ jobs:
           COMMENTS=$(curl -s -H "Authorization: token $MSECD_READTEAM_TOKEN" \
             "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments?per_page=100")
           
-          LAST_COMMAND=$(echo "$COMMENTS" | jq -r '.[] | select(.body | contains("#")) | .body' | \
-            grep -E '^#[a-zA-Z-]+' | tail -n1 | tr '[:upper:]' '[:lower:]')
+          COMMAND_LINES=$(echo "$COMMENTS" | jq -r '.[] | .user.login as $u | .body | split("\n")[] | select(test("^#[A-Za-z-]+")) | "\($u)|\(.)"')
+          LAST_COMMAND_LINE=$(echo "$COMMAND_LINES" | tail -n1)
+          COMMAND_AUTHOR=${LAST_COMMAND_LINE%%|*}
+          COMMAND_TEXT=${LAST_COMMAND_LINE#*|}
+          LAST_COMMAND=$(echo "$COMMAND_TEXT" | tr '[:upper:]' '[:lower:]')
           
           echo "Last PRMerger command found: $LAST_COMMAND"
+          echo "Last PRMerger command author: $COMMAND_AUTHOR"
           
-          if [ "$LAST_COMMAND" != "#sign-off" ]; then
+          if [ -z "$LAST_COMMAND" ] || [ "$LAST_COMMAND" != "#sign-off" ]; then
             echo "Last command is not #sign-off. Skipping workflow."
             exit 0
           fi
+
+          if [ -z "$COMMAND_AUTHOR" ]; then
+            echo "ERROR: Unable to resolve command author."
+            exit 1
+          fi
           
-          echo "Last command is #sign-off. Continuing workflow."
+          echo "Last command is #sign-off by the command author. Continuing workflow."
           
           # Use hardcoded team
           ORG="MicrosoftDocs"
@@ -70,20 +78,20 @@ jobs:
             echo "Failed to fetch team members. HTTP Status: $HTTP_CODE"
           fi
 
-          # Remove duplicates and check if comment author is a team member
+          # Remove duplicates and check if command author is a team member
           TEAM_MEMBERS=$(echo "$TEAM_MEMBERS" | tr ' ' '\n' | sort -u | tr '\n' ' ')
           echo "Team members: $TEAM_MEMBERS"
 
           IS_TEAM_MEMBER=false
           for user in $TEAM_MEMBERS; do
-            if [ "$user" == "$COMMENT_AUTHOR" ]; then
+            if [ "$user" == "$COMMAND_AUTHOR" ]; then
               IS_TEAM_MEMBER=true
               break
             fi
           done
 
           if [ "$IS_TEAM_MEMBER" = false ]; then
-            echo "Comment author '$COMMENT_AUTHOR' is not a team member. Adding hold-off comment..."
+            echo "Command author '$COMMAND_AUTHOR' is not a team member. Adding hold-off comment..."
             COMMENT_BODY="#hold-off\nThis PR requires a writer review before merging.\nThe review process typically takes 2-3 business days. For urgent requests, please contact the page's author or assigned team."
             
             curl -s -X POST \
@@ -93,5 +101,5 @@ jobs:
               -d "{\"body\":\"$COMMENT_BODY\"}"
             echo "Hold-off comment added successfully."
           else
-            echo "Comment author '$COMMENT_AUTHOR' is a team member. Skipping comment."
+            echo "Command author '$COMMAND_AUTHOR' is a team member. Skipping comment."
           fi
