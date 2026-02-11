@@ -84,3 +84,43 @@ defender scan sbom my-image:latest
 ```bash
 defender scan sbom /home/src --sbom-format cyclonedx1.6-xml
 ```
+
+## Download the Defender CLI
+
+Download the CLI binary for your operating system.
+
+Windows (PowerShell):
+
+```powershell
+curl.exe -L -o defender.exe https://cli.dfd.security.azure.com/public/latest/Defender_win-x64.exe 
+```
+
+Linux (Bash):
+
+```bash
+curl -fsSL -o defender 
+https://cli.dfd.security.azure.com/public/latest/Defender_linux-x64 
+chmod +x defender 
+```
+
+## Run the CLI to Scan AI Models 
+
+With environment variables set and the CLI downloaded, you can scan AI models. 
+
+Windows (PowerShell): 
+
+```powershell
+.\defender.exe scan model "<PATH TO MODEL OR HUGGINGFACE URL>" 
+```
+
+Linux (bash): 
+
+```bash
+./defender scan model "<PATH TO MODEL OR HUGGINGFACE URL>" 
+```
+
+Optional: To specify the output location for SARIF results, add: 
+
+```bash
+--modelscanner-Output <OUTPUT PATH> 
+```
