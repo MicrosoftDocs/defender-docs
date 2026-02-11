@@ -38,7 +38,7 @@ To view the list of files available for live response:
 1. In the Microsoft Defender portal, navigate to **Settings** > **Endpoints** > **Library management**.
 1. Review the following information for each file:
    - **Name**: The name of the file.
-   - **Type**: The file extension.
+   - **Type**: The file extension, representing the file type.
    - **Created by**: The user who uploaded the file.
    - **Creation date**: The date the file was uploaded.
    - **Updated by**: The user who last updated the file.
@@ -76,7 +76,7 @@ To view and analyze a file:
 1. Select **Download** to download the file, or **Analyze** to open Copilot script analysis.
 
     > [!NOTE]
-    > You need a Copilot license to analyze the files. If you don't have this license, you can only view files.
+    > You need a [Microsoft Security Copilot license](/security/pricing/microsoft-security-copilot) to analyze the files. If you don't have this license, you can only view files.
     
     The analysis provides a description of the actions the script takes, and more information, including the methods used and output.
 
