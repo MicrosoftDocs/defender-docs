@@ -34,7 +34,7 @@ These comprehensive guides include:
 - Integration with attack path analysis
 
 For portal-specific guidance:
-- **For Azure portal users**: [Review security recommendations - Understanding risk prioritization](security-recommendations.md?pivots=azure-portal#understanding-risk-prioritization)
+- **For Azure portal users**: [Review security recommendations - Azure portal](security-recommendations.md?pivots=azure-portal)
 - **For Defender portal users**: [Review security recommendations - Defender portal](review-security-recommendations.md?pivots=defender-portal)
 
 ## Related content

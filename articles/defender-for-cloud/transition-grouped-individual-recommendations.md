@@ -41,7 +41,7 @@ The primary behavioral difference is granularity. Grouped recommendations provid
 
 ---
 
-## Best practice: Adopting individual recommendations
+## Adopting individual recommendations
 
 **Best practice:** Start using individual recommendations as your primary model for investigation and remediation.
 
@@ -51,7 +51,7 @@ The primary behavioral difference is granularity. Grouped recommendations provid
 - Recommendation volume may increase
 - Prioritization becomes risk-based at the individual finding level
 
-### What customers should do now
+### Where to start
 
 - Begin reviewing and triaging **individual recommendations** for day-to-day security work
 - Use individual recommendations to drive investigation, remediation, ownership, and exemptions
@@ -71,7 +71,7 @@ The primary behavioral difference is granularity. Grouped recommendations provid
 
 ---
 
-## Best practice: Managing the side-by-side experience
+## Managing the side-by-side experience
 
 During the transition, both recommendation models may appear simultaneously.
 
@@ -99,7 +99,7 @@ During the transition, both recommendation models may appear simultaneously.
 
 ---
 
-## Best practice: Secure Score during the transition
+## Secure Score during the transition
 
 Secure Score behavior does not yet fully align with the individual recommendation model.
 
@@ -124,7 +124,7 @@ Secure Score behavior does not yet fully align with the individual recommendatio
 
 ---
 
-## Best practice: Investigating and prioritizing at scale
+## Investigating and prioritizing at scale
 
 Individual recommendations introduce increased granularity. Effective filtering and aggregation are required to operate at scale.
 
@@ -165,7 +165,7 @@ Choose the aggregation that matches the task:
 
 ---
 
-## What customers should do now
+## What you should do now
 
 - Begin adopting **individual recommendations** for investigation and remediation
 - Define a clear internal operating model for the transition period
