@@ -343,38 +343,30 @@ Be aware of the following limitations when working with generated playbooks:
 ### Playbook limitations
 
 - **Language support**: Only Python is supported for playbook authoring
-
 - **Input constraints**: Playbooks currently accept alerts as the sole input type
-
 - **System stub code**: Each playbook includes system-generated stub code required for execution. Modifying this code breaks the workflow
-
 - **Concurrent editing**: A single user can edit only one playbook at a time. However, multiple users can edit different playbooks simultaneously
-
 - **Session timeouts**: Cline sessions expire after 90 minutes. Save your work and reenter to start a new session if needed
-
 - **Library support**: External libraries aren't currently supported
-
 - **Code validation**: No automatic code validation is provided. Users must manually verify correctness
+- **Maximum number of playbooks**: You can create up to 100 playbooks per tenant
+- **Maximum playbook size**: Each playbook can have up to 5,000 lines
 
 ### Integration profiles limitations
 
 - **Integration limitations**: Microsoft Graph and Azure Resource Manager integrations aren't enabled by default and must be manually created
-
 - **Authentication methods**: Available methods include OAuth2 Client Credentials, API Key, AWS Auth, User and Password, Bearer/JWT Authentication, and Hawk
-
 - **Integration configuration**: The API URL and authentication method can't be changed after creation
 
 ### Automation rule alert trigger limitations
 
 - **Trigger limitations**: Enhanced Alert Trigger rules don't support priority ordering or expiration dates
-
 - **Available actions**: Currently, the only available action is triggering generated Playbooks
-
 - **Workspace permissions** – You must explicitly specify the workspaces where you have permissions; the trigger doesn't apply to workspaces you can't access.
-
 - **Separate rule tables** – Enhanced Alert Trigger rules live alongside Standard Alert Trigger rules in a separate Automation Rules table. Currently, there's no automatic migration of Standard Alert Trigger rules.
-
 - **Run result visibility** – Automation rule run results are **not written to the Sentinel Health Table**. However, you can view the runs and their outcomes in the **Activity tab of the Incident** that contains the targeted alert.
+- The maximum number of active automation rules you can create is 500 per tenant.
+- You can execute one action per rule.
 
 ## Related content
 
