@@ -2,7 +2,7 @@
 title: Discover AI models
 description: Learn about AI model security in Microsoft Defender for Cloud.
 ms.topic: concept-article
-ms.date: 01/22/2026
+ms.date: 02/11/2026
 ms.author: elkrieger
 zone_pivot_groups: defender-portal-experience
 ---
@@ -21,6 +21,7 @@ With AI model security, security teams can scan custom AI models uploaded to Azu
 
 - You must have an Azure subscription that contains AI models registered in [Azure Machine Learning](/azure/machine-learning/quickstart-create-resources) (Azure Machine Learning) registries or workspaces.
 - [Enable the Defender for Cloud Security Posture Management plan](tutorial-enable-cspm-plan.md).
+- You must [enable threat protection for AI services](ai-onboarding.md) and the [AI model security](ai-onboarding.md#enable-ai-model-security) component of the plan.
 - Required permissions: **Owner** or **Contributor** on the Azure Machine Learning resources.
 - Supported model file formats: `Pickle (.pkl)`, `HDF5 (.h5)`, `TorchScript (.pt)`, `ONNX (.onnx)`, `SafeTensors (.safetensors)`, `TensorFlow SavedModel / TFLite (FlatBuffers)`, `NumPy (.npy)`, `Arrow, MsgPack, dill, joblib`, `PMML, JSON, POJO, MOJO, GGUF`.
 - File size limit: 10 GB. Model files larger than 10 GB can't be scanned. 
