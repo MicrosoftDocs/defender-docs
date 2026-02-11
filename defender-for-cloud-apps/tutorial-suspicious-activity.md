@@ -63,7 +63,7 @@ Defender for Cloud Apps includes several built-in anomaly detection policies tha
 |Detection |Description  |
 |---------|---------|
 |**Impossible travel**       | Activities from the same user in different locations within a period that's shorter than the expected travel time between the two locations.|
-|**Activity from infrequent country/region**      |Activity from a location that wasn't recently or never visited by the user.         |
+|**Activity from infrequent country**      |Activity from a location that wasn't recently or never visited by the user.         |
 |**Malware detection**     | Scans files in your cloud apps and runs suspicious files through Microsoft's threat intelligence engine to check whether they're associated with known malware.        |
 |**Ransomware activity**      | File uploads to the cloud that might be infected with ransomware.        |
 |**Activity from suspicious IP addresses**      | Activity from an IP address that Microsoft Threat Intelligence identified as risky.        |
