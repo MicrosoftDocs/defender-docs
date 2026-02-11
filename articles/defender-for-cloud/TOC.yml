@@ -531,6 +531,9 @@
             - name: Review security recommendations
               displayName: security, recommendations, owner, azure, resource, graph, azure resource graph, csv report
               href: review-security-recommendations.md
+            - name: Transition from grouped to individual recommendations
+              displayName: grouped, individual, recommendations, transition, legacy, dynamic, best practices
+              href: transition-grouped-individual-recommendations.md
             - name: Review resources exempted from recommendations
               displayName: review, exemptions, exempted, resources, recommendation, exempt
               href: review-exemptions.md
