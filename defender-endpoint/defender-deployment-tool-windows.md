@@ -15,7 +15,7 @@ ms.collection:
 - tier3
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 01/24/2025
+ms.date: 02/05/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -151,7 +151,7 @@ The following examples illustrate how to use the tool.
    ```
    DefenderDT.exe -Quiet
    ```
-- Use a *WindowsDefenderATP.onboarding* file in the same directory as the tool to run the default onboarding sequence, connect via a proxy, and, if a reboot is required, initiate it without asking. Don't show the console window.
+- Use a *WindowsDefenderATP.onboarding* file in the same directory as the tool to run the default onboarding sequence, connect through and configure a proxy to use, and, if a reboot is required, initiate it without asking. Don't show the console window.
 
    ```
    DefenderDT.exe -Proxy:192.168.0.255:8080 -AllowReboot -Quiet
@@ -291,9 +291,7 @@ General considerations and limitations, and additional considerations and limita
 
 ### General considerations and limitations
 
-- When you're using the interactive experience, and a reboot is required to complete the sequence, you must sign in again after the reboot to resume. Otherwise the device won't be fully onboarded.
-
-- When the *-proxy* parameter is used, it only applies to Defender deployment tool operations. Despite the parameter description in the command-line help reference, it doesn't set proxy configuration in registry for Defender endpoint security to use after installation. Note that both the tool and Defender will use whatever proxy has been configured on a system-wide (Windows) level regardless. If you wish to specifically configure a proxy to use for the Defender endpoint security services on the machine (static proxy), and not system-wide, see [Configure your devices to connect to the Defender for Endpoint service using a proxy](./configure-proxy-internet.md).
+- When you're using the interactive experience, and a reboot is required to complete the sequence, you must sign in again after the reboot to resume. Otherwise, the device won't be fully onboarded.
 
 - On Windows Server 2016 and later, when the Defender Antivirus feature has been uninstalled or removed, you might encounter an error during the Enabling Feature 'Windows-Defender' step. This can be observed in the user interface, in the local log, under *Sequence completion* with exit code *710* and the error description *EnableFeatureFailed*. In the local log, you'll also be able to find error 14081 with the description *0x3701 The referenced assembly could not be found*. This error isn't indicative of an issue with the Defender Antivirus feature or source files, as those would typically be resolved by the onboarding tool. Open a support case for Windows Servers if you encounter this issue.
 
@@ -310,8 +308,6 @@ General considerations and limitations, and additional considerations and limita
 - Configuration via Group Policy is supported using a central store with updated group policy templates on a domain controller. For local group policy configuration, templates (*WindowsDefender.admx*/*WindowsDefender.adml*) will need to be manually updated to a newer version (Windows 11) if you wish to use the local group policy editor to apply settings.
 
 - The Defender endpoint security solution will be installed to `C:\Program Files\Microsoft Defender for Endpoint`
-
-- Windows 7 devices might show up as *Server* in the portal until you update to the latest Sense version by applying KB5005292.
 
 - You can put Defender Antivirus into passive mode on Windows 7 by passing the *-passive* parameter to the Defender deployment tool. However, it's currently not possible to switch to active mode afterwards by using the ForceDefenderPassiveMode registry key like on Windows server. To switch to active mode, it's necessary to offboard and uninstall, and then to run the Defender deployment tool again without the passive mode parameter.
 
