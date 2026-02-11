@@ -48,6 +48,131 @@ The primary behavioral difference is granularity. Grouped recommendations provid
 ### What is changing
 
 - Each finding appears as a separate recommendation
+- Recommendation volume may increase
+- Prioritization becomes risk-based at the individual finding level
+
+### What customers should do now
+
+- Begin reviewing and triaging **individual recommendations** for day-to-day security work
+- Use individual recommendations to drive investigation, remediation, ownership, and exemptions
+- Expect a more detailed and actionable queue compared to grouped recommendations
+
+### How to treat grouped recommendations during the transition
+
+- Continue to use grouped recommendations for scenarios that depend on Secure Score
+- Avoid duplicating remediation work across both models
+- Treat grouped recommendations as a temporary reporting construct rather than a primary investigation tool
+
+### What to expect in daily operations
+
+- Increased visibility into discrete issues
+- More precise prioritization of high-risk findings
+- Additional filtering and aggregation may be required to keep views manageable
+
+---
+
+## Best practice: Managing the side-by-side experience
+
+During the transition, both recommendation models may appear simultaneously.
+
+**Best practice:** Actively control which model your teams work with to reduce confusion and duplicate effort.
+
+### Keeping views manageable
+
+- Use recommendation tags to filter your experience:
+  - **New version** for individual recommendations
+  - **Set for deprecation** for grouped recommendations
+- Filter views based on the model your team is currently using
+- Avoid leaving both models unfiltered unless explicitly required
+
+### Avoiding duplicate or conflicting work
+
+- Assign a clear operating model per team or workload
+- Do not remediate the same issue through both grouped and individual recommendations
+- Use grouped recommendations primarily for score tracking, not investigation
+
+### Aligning teams during the transition
+
+- Communicate which recommendation model is authoritative for remediation
+- Document temporary operating guidelines for the transition period
+- Revisit workflows as alignment between models becomes available
+
+---
+
+## Best practice: Secure Score during the transition
+
+Secure Score behavior does not yet fully align with the individual recommendation model.
+
+### What Secure Score reflects today
+
+- Secure Score currently applies only to **grouped (GA) recommendations**
+- Remediating grouped recommendations affects Secure Score
+- Individual recommendations do not currently contribute to Secure Score
+
+### How to interpret Secure Score changes
+
+- Secure Score may not reflect remediation performed through individual recommendations
+- A stable or unchanged score does not necessarily indicate unchanged risk
+
+### Balancing risk reduction and compliance reporting
+
+**Best practice:**
+
+- Use **individual recommendations** for investigation and risk reduction
+- Continue monitoring **Secure Score** for compliance and reporting needs
+- Treat score alignment as transitional until full posture calculation alignment is available
+
+---
+
+## Best practice: Investigating and prioritizing at scale
+
+Individual recommendations introduce increased granularity. Effective filtering and aggregation are required to operate at scale.
+
+### Handling increased recommendation volume
+
+- Start investigations within the security category most relevant to your team's ownership or risk domain
+- Use categories to reduce noise and focus effort
+
+Available categories include:
+
+- **All** – Full posture view
+- **Misconfigurations** – Configuration-based risks
+- **Vulnerabilities** – Software and platform vulnerabilities
+- **Secrets** – Exposed keys and secrets
+
+### Prioritizing high-impact issues
+
+**Best practice:** Make **Critical** and **High** risk levels your default operating view.
+
+- Filter recommendations by risk level
+- Address high-impact issues first to reduce risk quickly
+
+### Using aggregation views effectively
+
+Aggregated views help align remediation to your workflow:
+
+- **View by title**
+  - Groups the same recommendation type together
+  - Suitable for bulk remediation across multiple resources
+- **View by resource**
+  - Shows all findings on a single asset
+  - Suitable for asset-level investigation or isolating high-risk machines
+
+Choose the aggregation that matches the task:
+
+- Widespread issue remediation: **View by title**
+- Asset investigation: **View by resource**
+
+---
+
+## What customers should do now
+
+- Begin adopting **individual recommendations** for investigation and remediation
+- Define a clear internal operating model for the transition period
+- Use filters and tags to limit views to the model your team is actively using
+- Continue using **grouped recommendations** for Secure Score tracking where required
+- Prioritize Critical and High risk individual recommendations in daily operations
+- Use aggregation views to scale remediation and investigation efficiently
 
 ## Next steps
 
