@@ -32,7 +32,7 @@ The following table summarizes the behavioral and operational differences betwee
 |------|----------------------------------|--------------------------------------|
 | Availability | Available in the Azure portal | Available in Azure and Defender portals |
 | Structure | Aggregates multiple findings under a single parent recommendation (for example, multiple virtual machine vulnerabilities rolled up into one recommendation) | Flat structure where each finding appears as a separate recommendation |
-| Management scope | Managed, exempted, and tracked at the grouped recommendation level | Managed, exempted, and tracked per finding |
+| Management scope | Managed, exempted, and tracked at the grouped recommendation level | Managed and tracked per finding ([governance](governance-rules.md)), exempted, and export |
 | Prioritization behavior | Prioritization is applied at the grouped level | Prioritization is applied at the individual finding level |
 | Secure Score impact | Currently contributes to Secure Score | Currently does not affect Secure Score |
 | Lifecycle status | Set for deprecation during the transition period | Represents the posture model that Defender for Cloud is moving toward |
@@ -43,7 +43,17 @@ The primary behavioral difference is granularity. Grouped recommendations provid
 
 ## Adopting individual recommendations
 
-**Best practice:** Start using individual recommendations as your primary model for investigation and remediation.
+**Best practice:** Start using individual recommendations as your primary model for investigation and remediation. Grouped recommendations will be set to deprecation soon.
+
+The new individual recommendations are now the best‑practice posture model in Defender for Cloud. They provide clear benefits:
+
+- Granular & accurate prioritization – Each finding is scored individually, helping you focus on what reduces risk fastest.
+
+- Improved clarity & governance – Ownership, exemptions, and workflows can be applied at the right level (per finding).
+
+- Consistency across Defender (MDC, MDE, MDI) – A single, unified model going forward.
+
+- Future‑proof – This is the model that will continue to evolve and be fully supported.
 
 ### What is changing
 
@@ -56,18 +66,6 @@ The primary behavioral difference is granularity. Grouped recommendations provid
 - Begin reviewing and triaging **individual recommendations** for day-to-day security work
 - Use individual recommendations to drive investigation, remediation, ownership, and exemptions
 - Expect a more detailed and actionable queue compared to grouped recommendations
-
-### How to treat grouped recommendations during the transition
-
-- Continue to use grouped recommendations for scenarios that depend on Secure Score
-- Avoid duplicating remediation work across both models
-- Treat grouped recommendations as a temporary reporting construct rather than a primary investigation tool
-
-### What to expect in daily operations
-
-- Increased visibility into discrete issues
-- More precise prioritization of high-risk findings
-- Additional filtering and aggregation may be required to keep views manageable
 
 ---
 
@@ -85,18 +83,6 @@ During the transition, both recommendation models may appear simultaneously.
 - Filter views based on the model your team is currently using
 - Avoid leaving both models unfiltered unless explicitly required
 
-### Avoiding duplicate or conflicting work
-
-- Assign a clear operating model per team or workload
-- Do not remediate the same issue through both grouped and individual recommendations
-- Use grouped recommendations primarily for score tracking, not investigation
-
-### Aligning teams during the transition
-
-- Communicate which recommendation model is authoritative for remediation
-- Document temporary operating guidelines for the transition period
-- Revisit workflows as alignment between models becomes available
-
 ---
 
 ## Secure Score during the transition
@@ -109,13 +95,6 @@ Secure Score behavior does not yet fully align with the individual recommendatio
 - Remediating grouped recommendations affects Secure Score
 - Individual recommendations do not currently contribute to Secure Score
 
-### How to interpret Secure Score changes
-
-- Secure Score may not reflect remediation performed through individual recommendations
-- A stable or unchanged score does not necessarily indicate unchanged risk
-
-### Balancing risk reduction and compliance reporting
-
 **Best practice:**
 
 - Use **individual recommendations** for investigation and risk reduction
@@ -126,9 +105,9 @@ Secure Score behavior does not yet fully align with the individual recommendatio
 
 ## Investigating and prioritizing at scale
 
-Individual recommendations introduce increased granularity. Effective filtering and aggregation are required to operate at scale.
+Individual recommendations introduce increased granularity. To help you focus on the issues that matter most and handle the increased granularity of individual recommendations, Defender for Cloud provides several tools and views designed to assist you with effective investigation.
 
-### Handling increased recommendation volume
+### Category tabs
 
 - Start investigations within the security category most relevant to your team's ownership or risk domain
 - Use categories to reduce noise and focus effort
@@ -152,10 +131,10 @@ Available categories include:
 Aggregated views help align remediation to your workflow:
 
 - **View by title**
-  - Groups the same recommendation type together
+  - Show all assets for a single recommendation
   - Suitable for bulk remediation across multiple resources
 - **View by resource**
-  - Shows all findings on a single asset
+  - Shows all recommendations for a single asset
   - Suitable for asset-level investigation or isolating high-risk machines
 
 Choose the aggregation that matches the task:
@@ -170,8 +149,7 @@ Choose the aggregation that matches the task:
 - Begin adopting **individual recommendations** for investigation and remediation
 - Define a clear internal operating model for the transition period
 - Use filters and tags to limit views to the model your team is actively using
-- Continue using **grouped recommendations** for Secure Score tracking where required
-- Prioritize Critical and High risk individual recommendations in daily operations
+- Prioritize **Critical** and **High** risk individual recommendations in daily operations
 - Use aggregation views to scale remediation and investigation efficiently
 
 ## Next steps
