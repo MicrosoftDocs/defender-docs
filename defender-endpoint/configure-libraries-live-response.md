@@ -76,7 +76,7 @@ To view and analyze a file:
 1. Select **Download** to download the file, or **Analyze** to open Copilot script analysis.
 
     > [!NOTE]
-    > You need a [Microsoft Security Copilot license](/security/pricing/microsoft-security-copilot) to analyze the files. If you don't have this license, you can only view files.
+    > You need a [Microsoft Security Copilot license](https://www.microsoft.com/security/pricing/microsoft-security-copilot) to analyze the files. If you don't have this license, you can only view files.
     
     The analysis provides a description of the actions the script takes, and more information, including the methods used and output.
 
