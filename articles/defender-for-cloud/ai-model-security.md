@@ -9,13 +9,13 @@ zone_pivot_groups: defender-portal-experience
 
 # AI model security
 
-As organizations increasingly use Artificial Intelligence (AI) models to drive automation, insights, and intelligent decision-making, security teams need visibility and control to assess the safety and compliance of AI models entering their environments. These models often have broad access to data and infrastructure. Without these capabilities, it becomes increasingly difficult to enforce internal standards. 
+As organizations increasingly use artificial intelligence (AI) models to drive automation, insights, and intelligent decision-making, security teams need visibility and control to assess the safety and compliance of AI models entering their environments. These models often have broad access to data and infrastructure. Without these capabilities, it becomes increasingly difficult to enforce internal standards. 
 
 Microsoft Defender for Cloud's Defender for AI security supports AI model scanning. AI model scanning provides proactive detection of unsafe or malicious artifacts and continuously monitors models for risk throughout the AI lifecycle.
 
 AI model security automatically scans AI models for security risks such as embedded malware, unsafe operators, and exposed secrets before those models reach production. Integrated directly with Azure Machine Learning and CI/CD pipelines, the service surfaces real-time findings and actionable remediation guidance, so teams can stop risky models early in the development process.
 
-With AI model security, security teams can scan custom AI models uploaded to Azure Machine Learning workspaces and registries, to identify threats like embedded malware, unsafe operators, and exposed secrets. Defender for Cloud presents the results, giving teams visibility into security findings along with severity ratings, remediation guidance, and relevant model metadata to support effective triage and prioritization. Developers can also trigger model scans during build or release stages by using CLI tools integrated with Azure DevOps or GitHub pipelines, enabling static scanning and early risk detection before models reach production.
+By using AI model security, security teams can scan custom AI models uploaded to Azure Machine Learning workspaces and registries to identify threats like embedded malware, unsafe operators, and exposed secrets. Defender for Cloud presents the results, giving teams visibility into security findings along with severity ratings, remediation guidance, and relevant model metadata to support effective triage and prioritization. Developers can also trigger model scans during build or release stages by using CLI tools integrated with Azure DevOps or GitHub pipelines, enabling static scanning and early risk detection before models reach production.
 
 ## Prerequisites
 
@@ -24,7 +24,8 @@ With AI model security, security teams can scan custom AI models uploaded to Azu
 - You must [enable threat protection for AI services](ai-onboarding.md) and the [AI model security](ai-onboarding.md#enable-ai-model-security) component of the plan.
 - Required permissions: **Owner** or **Contributor** on the Azure Machine Learning resources.
 - Supported model file formats: `Pickle (.pkl)`, `HDF5 (.h5)`, `TorchScript (.pt)`, `ONNX (.onnx)`, `SafeTensors (.safetensors)`, `TensorFlow SavedModel / TFLite (FlatBuffers)`, `NumPy (.npy)`, `Arrow, MsgPack, dill, joblib`, `PMML, JSON, POJO, MOJO, GGUF`.
-- File size limit: 10 GB. Model files larger than 10 GB can't be scanned. 
+- File size limit: 10 GB. Model files larger than 10 GB can't be scanned.
+- The scan occurs once a week.
 
 ::: zone pivot="azure-portal"
 
