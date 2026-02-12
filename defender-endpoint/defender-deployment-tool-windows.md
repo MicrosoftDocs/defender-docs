@@ -107,14 +107,16 @@ SHA-2 update (KB4474419) released September 10, 2019. If you use Windows U
 
 1. The **Generate Defender deployment tool with an access key** page appears.
 
-   :::image type="content" source="./media/defender-deployment-tool-windows/configure-deployment-package.png" alt-text="Screenshot showing the how to configure a new deployment package." lightbox="./media/defender-deployment-tool-windows/configure-deployment-package.png":::
-
    * Provide a name for the package. Be sure to create a name that is unique and descriptive.
    * Set an expiration date for the package. You can set the expiration date for any time up to a year. It is recommended to make the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use.
+   * When you've done configuring the package, select **Generate**.
 
-1. When you've done configuring the package, select **Generate**.
+   :::image type="content" source="./media/defender-deployment-tool-windows/configure-deployment-package.png" alt-text="Screenshot showing the how to configure a new deployment package." lightbox="./media/defender-deployment-tool-windows/configure-deployment-package.png":::
 
-1. When the package is ready, you'll see a page that has the package access key and a download button, similar to the following image. Copy the key and save it, as it will be needed with the deployment tool. After you've copied the key and saved it, select **Download deployment tool**. This downloads a *.zip* file of the Defender deployment tool executable.
+1. When the package is ready, you'll see a page that has the package access key and a download button, similar to the following image.
+
+   * Copy the key and save it, as it will be needed with the deployment tool.
+   * After you've copied the key and saved it, select **Download deployment tool**. This downloads a *.zip* file of the Defender deployment tool executable.
 
    :::image type="content" source="./media/defender-deployment-tool-windows/deployment-package-download-page.png" alt-text="Screenshot showing the key that is generated for the deployment tool package." lightbox="./media/defender-deployment-tool-windows/deployment-package-download-page.png":::
 
@@ -135,13 +137,15 @@ To use the quick "double-click" default installation:
 
 1. In the dialog that appears, select **Continue**.
 
-1. In the next dialog that appears, enter the Defender deployment tool key and then select **Continue**.
-
    :::image type="content" source="./media/defender-deployment-tool-windows/double-click-mode.png" alt-text="Screenshot illustrating running the Defender deployment tool in double-click mode." lightbox="./media/defender-deployment-tool-windows/double-click-mode.png":::
 
-1. On the next page that appears, enter the Defender deployment key generated in the portal.
+1. In the next dialog that appears, enter the Defender deployment tool key and then select **Continue**.
 
    :::image type="content" source="./media/defender-deployment-tool-windows/interactive-mode.png" alt-text="Screenshot illustrating running the Defender deployment tool in interactive mode." lightbox="./media/defender-deployment-tool-windows/interactive-mode.png":::
+
+1. Wait until installation is complete, and then select **OK**. No device reboot is required.
+
+   :::image type="content" source="./media/defender-deployment-tool-windows/onboarding-complete-message.png" alt-text="Screenshot showing the message indicating that onboarding is complete.":::
 
 ### Non-interactive use
 
