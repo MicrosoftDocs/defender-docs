@@ -16,7 +16,7 @@ ms.collection: usx-security
 
 # Generate playbooks using AI in Microsoft Sentinel (preview)
 
-Generated Playbooks are code-based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. You describe automation logic in natural language, and the system generates validated, code-based playbooks with complete documentation and visual flow diagrams. This experience is powered by an embedded Visual Studio Code environment within the Defender portal, so you can author and refine playbooks without leaving the portal. Generated playbooks use USX alert data as input and dynamically generate the required API calls, as long as you configure the integration for the target provider.
+The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. You describe automation logic in natural language, and the system generates validated, code-based playbooks with complete documentation and visual flow diagrams. This experience is powered by an embedded Visual Studio Code environment within the Defender portal, so you can author and refine playbooks without leaving the portal. Generated playbooks use USX alert data as input and dynamically generate the required API calls, as long as you configure the integration for the target provider.
 
 This article describes how to generate playbooks by using AI, configure required integrations, and deploy your automation workflows.
 
@@ -25,7 +25,8 @@ This article describes how to generate playbooks by using AI, configure required
 
 Playbook generation provides the following capabilities:
 
-- **Co-author with AI**: Build playbooks through natural language conversations with Cline, an AI coding agent hosted in a VS Code environment embedded in the Defender portal. Once the playbook is generated, you can test it by providing a real alert as input.
+- **Co-author with AI**: Build playbooks through natural language conversations with Cline, an AI coding agent hosted in a VS Code environment embedded in the Defender portal.
+- **Testing**: Once the playbook is generated, you can test it by providing a real alert as input.
 - **Automatic documentation**: Generate comprehensive playbook documentation and visual flow diagrams automatically
 - **Third-party integrations**: Connect external tools and APIs seamlessly through integration profiles
 - **Broad alert coverage**: Apply automation to alerts from Microsoft Sentinel, Microsoft Defender, and XDR platforms
@@ -34,36 +35,32 @@ An embedded Visual Studio Code environment within the Microsoft Defender portal 
 
 ## Prerequisites
 
-Before you can use the playbook generator, ensure you meet the following requirements:
+You don't need prior coding experience to generate a playbook, but familarity with tools like VSCode and Entra ID app registration is helpful.
+
+You also must meet the following requirements:
 
 ### Environment requirements
 
-- **Security Copilot**: Your tenant must be Security Copilot enabled with SCUs available. You aren't billed for SCUs, but their availability is a technical requirement.
+- **Security Copilot**: Your tenant must be [Security Copilot enabled with SCUs available](/copilot/security/get-started-security-copilot#option-1-recommended-provision-capacity-through-security-copilot). You aren't billed for SCUs, but their availability is a technical requirement.
 
-- **Microsoft Sentinel workspace**: Your tenant must have a Microsoft Sentinel workspace onboarded to Microsoft Defender.
+- **Microsoft Sentinel workspace**: Your tenant must have a Microsoft Sentinel workspace onboarded to Microsoft Defender. To create a new workspace, see [Create a workspace](/copilot/security/manage-workspaces#create-a-workspace).
 
 - **Data sharing preferences**: In Security Copilot, enable the first slider, *Allow Microsoft to capture data from Security Copilot to validate product performance using human review*, in Customer Data Sharing preferences. For more information, see [Privacy and data security in Microsoft Security Copilot](/security-copilot/privacy-data-security).
 
 ### Required roles and permissions
 
-To use the new Automation experience and create generated playbooks, you need the following permissions:
+To use playbook generator, you need the following permissions:
 
-- **To author Automation Rules**: Ask a security admin to grant you the **Microsoft Sentinel Contributor** role on the relevant Workspaces or Resource Groups containing them in Azure. See [Microsoft Entra built-in roles](/azure/sentinel/roles#built-in-azure-roles-for-microsoft-sentinel)
+- **To author Automation Rules**: You need the **Microsoft Sentinel Contributor** role on the relevant Workspaces or Resource Groups containing them in Azure. See [Microsoft Entra built-in roles](/azure/sentinel/roles#built-in-azure-roles-for-microsoft-sentinel)
 
-- **To author generated Playbooks:** Ask a security admin to grant you the **Security Administrator** role in Microsoft Entra in Azure. See [Microsoft Entra built-in roles - Microsoft Entra ID \| Microsoft Learn](/entra/identity/role-based-access-control/permissions-reference#security-administrator)
+- **To author generated Playbooks:**, you need the **Security Administrator** role in Microsoft Entra in Azure. See [Microsoft Entra built-in roles - Microsoft Entra ID \| Microsoft Learn](/entra/identity/role-based-access-control/permissions-reference#security-administrator)
 
 > [!NOTE]
 > Permissions might take up to two hours to take effect after assignment.
 
 ### Recommended: Configure a dedicated Security Copilot workspace
 
-If you don't already have a dedicated Security Copilot workspace configured to use a US-based capacity for AI-generated playbooks, we recommended you create one.
-
-1. In [Security Copilot](https://securitycopilot.microsoft.com), go to **Owner** > **Manage workspaces**.
-
-1. Select **+ New workspace**.
-
-   :::image type="content" source="./media/generate-playbook/new-workspace.png" alt-text="Screenshot of manage workspace screen with Create new workspace button in the top right.":::
+If you don't already have a dedicated Security Copilot workspace configured to use a US-based capacity for AI-generated playbooks, we recommended you [create one](/copilot/security/manage-workspaces#create-a-workspace).
 
 1. In the **Create a new workspace** dialog:
 
@@ -101,6 +98,8 @@ If you don't already have a dedicated Security Copilot workspace configured to u
 
 Generated playbooks automatically use this workspace if available.
 
+<!--- - Detection Tuning role in Microsoft Defender portal.  What is this???? --->
+
 ## Key concepts
 
 ### Integration profiles
@@ -111,7 +110,10 @@ Integration profiles are secure configurations that allow generated playbooks to
 - Authentication method
 - Required credentials
 
+The playbook generator uses the integration to execute API calls. If the integration is missing, it prompts you to create one before proceeding with playbook generation.
 Manage integration profiles centrally in the Defender portal under the **Automation** tab. Before creating a playbook, ensure you configure all required integrations.
+
+To add integration, select **Integration** from the Automation tab, or use the **Add integration** link on top of the VS Code page. You can't edit the URL of existing integration links. Create a new integration link if needed, and delete the old one.
 
 ### Enhanced alert trigger
 
@@ -125,11 +127,7 @@ This trigger mechanism enables automatic execution of generated playbooks across
 
 ## Generate a new playbook
 
-### Step 1. Switch to the New experience
-
-From the Microsoft Defender portal, go to **Microsoft Sentinel** > **Configuration**.
-
-### Step 2. Create a Graph API integration profile and add any other required integrations you want to utilize
+### Step 1. Create a Graph API integration profile and add any other required integrations you want to utilize
 
 1. In the Azure portal, go to **Microsoft Entra ID** > **Manage** > **App registrations**.
 
@@ -203,23 +201,23 @@ Configure integration profiles for any other third-party services your playbooks
 > [!NOTE]
 > You can't change the API URL and authentication method after creation. You can only edit the integration name and description.
 
-### Step 3. Generate your playbook
+### Step 2. Generate your playbook
 
 1. Select the **Playbooks** tab.
 
-1. Select **Create** > **Generated Playbook**.
+1. Select **Create** > **Playbook Generator**.
 1. Enter a name for your playbook and select **Continue**.
 
-   An embedded Visual Studio Code environment opens with Cline, your AI coding agent.
+   An embedded Visual Studio Code environment opens with Cline.
 
-:::image type="content" source="./media/generate-playbook/playbook-name.png" alt-text="Screenshot of the embedded Visual Studio Code environment with Cline, the AI coding agent.":::
+:::image type="content" source="./media/generate-playbook/playbook-name.png" alt-text="Screenshot of the embedded Visual Studio Code environment with the playbook generator.":::
 
-#### Work with Cline in Plan mode
+#### Work in Plan mode
 
-When the editor opens, Cline starts in **Plan mode**. In this mode, you describe your automation requirements and Cline generates a plan for review.
+When the editor opens, the experience starts in **Plan mode**. In this mode, you describe your automation requirements and the playbook generator generates a plan for review.
 
 1. In the chat interface, describe your playbook requirements in detail. Be explicit about:
-   - What triggers the playbook
+
    - What data to process
    - What actions to perform
    - What conditions to evaluate
@@ -227,17 +225,17 @@ When the editor opens, Cline starts in **Plan mode**. In this mode, you describe
 
    **Example**: "Create a playbook that triggers on phishing alerts. Extract the sender email address. Check if the user exists in our directory, and if so, temporarily disable their account and notify the security team."
 
-1. If Cline requests approval to fetch documentation URLs, approve the request. This approval allows Cline to access relevant API documentation to generate accurate code.
+1. If the playbook generator requests approval to fetch documentation URLs, approve the request. This approval allows the playbook generator to access relevant API documentation to generate accurate code.
 
 :::image type="content" source="./media/generate-playbook/approval-request.png" alt-text="Screenshot of the approval request dialog in the embedded Visual Studio Code environment.":::
 
-1. Cline analyzes your request and might:
+1. The playbook generator analyzes your request and might:
    - Ask clarifying questions
    - Request API documentation if it can't be accessed via web search
    - Notify you of missing integration profiles
    - Generate a preliminary plan and flow diagram
 
-1. If Cline identifies missing integration profiles:
+1. If the playbook generator identifies missing integration profiles:
 
    1. Select **Add integration**.
 
@@ -247,24 +245,24 @@ When the editor opens, Cline starts in **Plan mode**. In this mode, you describe
 
 #### Review and approve the plan
 
-1. Review Cline's generated plan and flow diagram carefully.
+1. Review the generated plan and flow diagram carefully.
 
-1. If you need changes, describe the modifications in the chat. Cline revises the plan accordingly.
+1. If you need changes, describe the modifications in the chat. The playbook generator revises the plan accordingly.
 
-1. When satisfied with the plan, follow Cline's instructions and switch to **Act mode**.
+1. When satisfied with the plan, follow instructions and switch to **Act mode**.
 
-:::image type="content" source="./media/generate-playbook/act-mode.png" alt-text="Screenshot of the embedded Visual Studio Code environment in Act mode with Cline, the AI coding agent.":::
+:::image type="content" source="./media/generate-playbook/act-mode.png" alt-text="Screenshot of the embedded Visual Studio Code environment in Act mode with the playbook generator.":::
 
 #### Generate the playbook in Act mode
 
-1. After switching to Act mode, Cline generates:
+1. After switching to Act mode, the playbook generator delivers:
    - The complete playbook code in Python
    - Code validation
    - Comprehensive documentation, including a visual flow diagram and description of the playbook in natural language
 
-1. Cline asks the user for an Alert ID to run a test of the playbook. Before it executes the test, Cline outlines the changes that will be applied to the environment and requests the user’s approval to proceed.
+1. The playbook generator asks the user for an Alert ID to run a test of the playbook. Before it executes the test, the playbook generator outlines the changes that will be applied to the environment and requests the user’s approval to proceed.
 
-1. Cline might request approval for code generation. To enable automatic generation without approval prompts, select the **Edit** checkbox under **Auto-approve**.
+1. The tool might request approval for code generation. To enable automatic generation without approval prompts, select the **Edit** checkbox under **Auto-approve**.
 
 :::image type="content" source="./media/generate-playbook/auto-approve.png" alt-text="Screenshot of the Autoapprove checkbox in the embedded Visual Studio Code environment.":::
 
@@ -285,10 +283,10 @@ When the editor opens, Cline starts in **Plan mode**. In this mode, you describe
 
 1. Close the editor when finished.
 
-:::image type="content" source="./media/generate-playbook/preview.png" alt-text="Screenshot of the preview of an alert notification created with Cline, the AI coding agent.":::
+:::image type="content" source="./media/generate-playbook/preview.png" alt-text="Screenshot of the preview of an alert notification created with the playbook generator.":::
 
 > [!TIP]
-> Save your work frequently. Cline sessions expire after 90 minutes. If needed, reenter the editor to start a new session.
+> Save your work frequently. Sessions expire after 90 minutes. If needed, reenter the editor to start a new session.
 
 ## Enable and deploy your playbook
 
