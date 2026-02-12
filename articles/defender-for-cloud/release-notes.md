@@ -27,6 +27,64 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## March 2026
+
+|Date| Category|Update|
+| -------- | -------- | -------- |
+| March 15, 2026 | Deprecation | [Deprecation of grouped container vulnerability recommendations](#deprecation-of-grouped-container-vulnerability-recommendations) |
+
+### Deprecation of grouped container vulnerability recommendations
+
+As part of the transition to individual recommendations, Microsoft Defender for Cloud is deprecating existing grouped container vulnerability recommendations. This change enables more granular visibility, prioritization, and governance of container security findings.
+
+Grouped recommendations previously aggregated multiple findings under a single recommendation. These findings are now surfaced as individual recommendations, created per software update, vulnerability, secret, or issue type.
+
+During the transition period, grouped and individual recommendations may appear side by side. Grouped recommendations are on a deprecation path and will be removed in phases.
+
+The following grouped container vulnerability recommendations will be deprecated on March 15. 2026:
+
+**Container recommendations**
+
+- [Preview] Containers running in Azure should have vulnerability findings resolved
+- [Preview] Containers running in AWS should have vulnerability findings resolved
+- [Preview] Containers running in GCP should have vulnerability findings resolved
+
+**Container image recommendations**
+
+- [Preview] Container images in Azure registry should have vulnerability findings resolved
+- [Preview] Container images in AWS registry should have vulnerability findings resolved
+- [Preview] Container images in GCP registry should have vulnerability findings resolved
+
+Customers should update any queries, automation, governance rules, or workflows that rely on grouped recommendation keys to use individual recommendations and security categories instead.
+
+When querying individual recommendations, the same logic can be applied across cloud providers by adjusting the `Source` value.
+
+**Example: Container vulnerability recommendations (Dynamic VA)**
+
+The following query identifies container vulnerability recommendations for containers running in Azure. To target containers running in AWS or GCP, change the `Source` value to `"AWS"` or `"GCP"`.
+
+```kusto
+securityresources
+| where type == "microsoft.security/assessments"
+| where properties.metadata.recommendationCategory == "SoftwareUpdate"
+| where properties.resourceDetails.ResourceType == "K8s-container"
+| where properties.resourceDetails.Source == "Azure"
+```
+
+**Example: Container image vulnerability recommendations**
+
+The following query identifies container image vulnerability recommendations in Azure container registries. To target AWS or GCP registries, update the `Source` value accordingly.
+
+```kusto
+securityresources
+| where type == "microsoft.security/assessments"
+| where properties.metadata.recommendationCategory == "SoftwareUpdate"
+| where properties.resourceDetails.ResourceType == ".containerimage"
+| where properties.resourceDetails.Source == "Azure"
+```
+
+Learn more about [security recommendations](review-security-recommendations.md) and [What's new in recommendations and alerts](release-notes-recommendations-alerts.md).
+
 ## February 2026
 
 |Date| Category|Update|
