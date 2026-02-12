@@ -56,8 +56,8 @@ The Alert Triage Agent currently supports these alert types in Microsoft Defende
 
 | Incident type | Product | Alert type |
 |:---|:---|:---|
-| **Phishing incidents** | Microsoft Defender for Office 365 | User‑reported phishing alerts. |
-| **Container incident triage (Preview)** | Microsoft Defender for Cloud |  |
+| **Phishing incidents** | Microsoft Defender for Office 365 | Email and collaboration alerts, including phishing. |
+| **Container incident triage (Preview)** | Microsoft Defender for Cloud | Cloud alerts, including containers. |
 
 ## Agent trigger and flow
 

@@ -28,7 +28,6 @@ appliesto:
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 This article provides answers to commonly asked questions about the Alert Triage Agent. For information about the agent's capabilities and requirements, see [Alert Triage Agent overview](alert-triage-agent-overview.md) and [permissions and prerequisites](alert-triage-agent-prerequisites.md).
-
 ## General information
 
 ### When is the agent triggered?
