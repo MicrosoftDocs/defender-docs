@@ -8,7 +8,9 @@ ms.reviewer: rlitinsky
 
 # Microsoft Defender for Identity health issues
 
-The Microsoft Defender for Identity **Health Issues** page lists any current health issues for your Defender for Identity deployment and sensors, alerting you to any problems in your Defender for Identity deployment.
+The Microsoft Defender for Identity Health Issues page lists issues affecting your Defender for Identity deployment and sensors, alerting you to detected problems. Issues may result from configuration or environmental factors.
+
+We recommend configuring [automatic Windows event auditing](deploy/configure-windows-event-collection.md) to prevent issues related to Windows event collection.
 
 ## Health issues page
 
