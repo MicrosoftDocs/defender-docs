@@ -31,11 +31,65 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date| Category|Update|
 | -------- | -------- | -------- |
+|February 15, 2026 | Deprecation | [Deprecation of preview of container and container images vulnerability recommendations](#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations) |
 |February 15, 2026| Preview |[New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview)|
 |February 10, 2026| Preview | [Database-level recommendations experience for SQL Vulnerability Assessment findings (Preview)](#database-level-recommendations-experience-for-sql-vulnerability-assessment-preview) |
 |February 10, 2026| GA | [Scanning support for Minimus and Photon OS container images](#scanning-support-for-minimus-and-photon-os-container-images) |
 |February 9, 2026| GA | [Simulate alerts for SQL servers on machines](#simulate-alerts-for-sql-servers-on-machines) |
 |February 3, 2026| Preview | [Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview) |
+
+
+### Deprecation of preview of container and container images vulnerability recommendations
+
+As part of the transition to individual recommendations, Microsoft Defender for Cloud is deprecating existing grouped container vulnerability recommendations. This change enables more granular visibility, prioritization, and governance of container security findings.
+
+Grouped recommendations previously aggregated multiple findings under a single recommendation. These findings are now surfaced as individual recommendations, created per software update, vulnerability, secret, or issue type.
+
+During the transition period, grouped and individual recommendations may appear side by side. Grouped recommendations are on a deprecation path and will be removed in phases.
+
+The following grouped container vulnerability recommendations will be deprecated on March 15. 2026:
+
+**Container recommendations**
+
+- [Preview] Containers running in Azure should have vulnerability findings resolved
+- [Preview] Containers running in AWS should have vulnerability findings resolved
+- [Preview] Containers running in GCP should have vulnerability findings resolved
+
+**Container image recommendations**
+
+- [Preview] Container images in Azure registry should have vulnerability findings resolved
+- [Preview] Container images in AWS registry should have vulnerability findings resolved
+- [Preview] Container images in GCP registry should have vulnerability findings resolved
+
+Customers should update any queries, automation, governance rules, or workflows that rely on grouped recommendation keys to use individual recommendations and security categories instead.
+
+When querying individual recommendations, the same logic can be applied across cloud providers by adjusting the `Source` value.
+
+**Example: Container vulnerability recommendations**
+
+The following query allows customers to identify the new individual container vulnerability recommendations for containers running in Azure. To target containers running in AWS or GCP, change the `Source` value to `"AWS"` or `"GCP"`.
+
+```kusto
+securityresources
+| where type == "microsoft.security/assessments"
+| where properties.metadata.recommendationCategory == "SoftwareUpdate"
+| where properties.resourceDetails.ResourceType == "K8s-container"
+| where properties.resourceDetails.Source == "Azure"
+```
+
+**Example: Container image vulnerability recommendations**
+
+The following query allows customers to identify the new individual container image vulnerability recommendations in Azure container registries. To target AWS or GCP registries, update the `Source` value accordingly.
+
+```kusto
+securityresources
+| where type == "microsoft.security/assessments"
+| where properties.metadata.recommendationCategory == "SoftwareUpdate"
+| where properties.resourceDetails.ResourceType == ".containerimage"
+| where properties.resourceDetails.Source == "Azure"
+```
+
+Learn more about [security recommendations](review-security-recommendations.md) and [New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview).
 
 ### New individual recommendations format in Azure portal (Preview)
 
