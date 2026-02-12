@@ -117,20 +117,19 @@ To create a role:
 
 ## Complete setup
 
-After assigning the identity and permissions, the setup wizard will guide you through the final configuration steps. Once complete, the Alert Triage Agent will be active and ready to begin triaging alerts automatically.
+After assigning the identity and permissions, the setup wizard guides you through the final configuration steps. Once complete, the Alert Triage Agent is active and ready to begin triaging alerts automatically.
 
-The agent will:
-- Automatically activate the required Security Copilot plugins
-- Begin monitoring for relevant alerts
-- Start processing alerts according to its triage model
+The agent:
+- Automatically activates the required Security Copilot plugins.
+- Begins monitoring for relevant and processes alerts.
 
 ## Verify setup
 
 After setup is complete, you can verify the agent is working correctly by:
 
-1. Checking the agent status in the **Security Copilot > Agents** section
-2. Monitoring the incident queue for agent activity
-3. Reviewing agent metrics on the Alert Triage Agent dashboard
+- Checking the agent status by selecting **Security Copilot > Agents** from the Microsoft Defender portal menu.
+- Monitoring the incident queue for agent activity.
+- Reviewing agent metrics on the Alert Triage Agent dashboard.
 
 ## Next steps
 
