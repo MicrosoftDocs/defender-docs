@@ -4,7 +4,7 @@ description: Discover how to scan container images for security risks using Micr
 #customer intent: As a DevOps engineer, I want to scan container images for vulnerabilities so that I can ensure the security of my deployments.
 author: Elazark
 ms.author: elkrieger
-ms.date: 11/06/2025
+ms.date: 02/12/2026
 ms.topic: concept-article
 ---
 
@@ -85,42 +85,47 @@ defender scan sbom my-image:latest
 defender scan sbom /home/src --sbom-format cyclonedx1.6-xml
 ```
 
-## Download the Defender CLI
+## AI Model Scan
 
-Download the CLI binary for your operating system.
+Use the `defender scan model` command to scan AI models for security risks including malware, unsafe operators, and exposed secrets. This command supports models stored locally or in cloud registries such as Hugging Face, and common formats including Pickle (`.pkl`), ONNX (`.onnx`), TorchScript (`.pt`), TensorFlow, and SafeTensors.
 
-Windows (PowerShell):
-
-```powershell
-curl.exe -L -o defender.exe https://cli.dfd.security.azure.com/public/latest/Defender_win-x64.exe 
-```
-
-Linux (Bash):
+### Usage
 
 ```bash
-curl -fsSL -o defender 
-https://cli.dfd.security.azure.com/public/latest/Defender_linux-x64 
-chmod +x defender 
+defender scan model <target> [--modelscanner-Output <path>]
 ```
 
-## Run the CLI to Scan AI Models 
+### Options
 
-With environment variables set and the CLI downloaded, you can scan AI models. 
+| Name                         | Required | Type   | Description                                                  |
+| ---------------------------- | -------- | ------ | ------------------------------------------------------------ |
+| \<target\>                   | Yes      | String | The path to a local model file or directory, or a Hugging Face model URL (for example, `./models/my-model.pkl`, `https://huggingface.co/org/model`). |
+| \-\-modelscanner-Output      | No       | String | Output path for SARIF scan results.                          |
 
-Windows (PowerShell): 
+### Supported model formats
 
-```powershell
-.\defender.exe scan model "<PATH TO MODEL OR HUGGINGFACE URL>" 
-```
+- Pickle (`.pkl`)
+- ONNX (`.onnx`)
+- TorchScript (`.pt`)
+- TensorFlow (`.tf`, `.pb`)
+- SafeTensors (`.safetensors`)
 
-Linux (bash): 
+### Examples
+
+#### Scan a local model
 
 ```bash
-./defender scan model "<PATH TO MODEL OR HUGGINGFACE URL>" 
+defender scan model ./models/my-model.pkl
 ```
 
-Optional: To specify the output location for SARIF results, add: 
+#### Scan a Hugging Face model
 
 ```bash
---modelscanner-Output <OUTPUT PATH> 
+defender scan model "https://huggingface.co/org/model-name"
+```
+
+#### Scan and export SARIF results
+
+```bash
+defender scan model ./models/my-model.onnx --modelscanner-Output results.sarif
 ```

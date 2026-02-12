@@ -155,6 +155,8 @@ By integrating directly with Azure Machine Learning workspaces, registries, and 
 
 1. Toggle AI model security to **On**.
 
+    :::image type="content" source="media/ai-onboarding/model-security.png" alt-text="Screenshot that shows where the toggle for AI model security is located." lightbox="media/ai-onboarding/model-security.png":::
+
 1. Select **Continue**.
 
 ## Related content
