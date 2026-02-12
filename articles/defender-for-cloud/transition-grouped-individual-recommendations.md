@@ -3,8 +3,8 @@ title: Transition from grouped to individual recommendations in Defender for Clo
 description: Learn about the transition from grouped (legacy) to individual (dynamic) recommendations in Microsoft Defender for Cloud, including operational impacts and best practices.
 ms.topic: conceptual
 author: dlanger
-ms.author: dlanger
-ms.date: 02/11/2026
+ms.author: DebLanger
+ms.date: 02/12/2026
 ms.custom: sfi-image-nochange
 #customer intent: As a security administrator, I want to understand the transition from grouped to individual recommendations so that I can adapt my workflows and maintain effective security posture management.
 ---
@@ -15,12 +15,12 @@ ms.custom: sfi-image-nochange
 
 Defender for Cloud is evolving its posture management model. During this transition, customers may see **two recommendation models side by side**:
 
-- **Grouped (legacy) recommendations**
-- **Individual (dynamic) recommendations**
+- **Grouped recommendations (also known as sub-assessment)**
+- **Individual recommendations**
 
-This change affects how recommendations are presented, prioritized, and managed. It can temporarily increase the number of visible recommendations, change prioritization behavior, and create Secure Score interpretation challenges. This article explains what is changing, why both models currently exist, and how to operate effectively during the transition period.
+This change improves the way grouped recommendations are presented, prioritized, and managed. This article explains what is changing, and outlines the recommended best practices to operate effectively during the transition period.
 
-Operationally, customers should expect workflow adjustments while both models are available. The goal is to move toward individual recommendations as the primary working model while maintaining continuity for compliance and reporting.
+Operationally, customers should expect workflow adjustments while both models are available.
 
 ---
 
@@ -28,10 +28,10 @@ Operationally, customers should expect workflow adjustments while both models ar
 
 The following table summarizes the behavioral and operational differences between grouped (legacy) and individual (dynamic) recommendations.
 
-| Aspect | Grouped (legacy) recommendations | Individual (dynamic) recommendations |
+| Aspect | Grouped recommendations (also known as Sub-assessment) | Individual recommendations |
 |------|----------------------------------|--------------------------------------|
 | Availability | Available in the Azure portal | Available in Azure and Defender portals |
-| Structure | Aggregates multiple findings under a single parent recommendation (for example, multiple virtual machine vulnerabilities rolled up into one recommendation) | Flat structure where each finding appears as a separate recommendation |
+| Structure | Aggregates multiple findings under a single parent recommendation (for example, multiple virtual machine vulnerabilities rolled up into one recommendation) | Flat list where each finding appears as a separate recommendation |
 | Management scope | Managed, exempted, and tracked at the grouped recommendation level | Managed and tracked per finding ([governance](governance-rules.md)), exempted, and export |
 | Prioritization behavior | Prioritization is applied at the grouped level | Prioritization is applied at the individual finding level |
 | Secure Score impact | Currently contributes to Secure Score | Currently does not affect Secure Score |
