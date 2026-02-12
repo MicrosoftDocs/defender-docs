@@ -31,7 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date| Category|Update|
 | -------- | -------- | -------- |
-|February 18, 2026| Preview |[New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview)|
+|February 15, 2026| Preview |[New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview)|
 |February 10, 2026| Preview | [Database-level recommendations experience for SQL Vulnerability Assessment findings (Preview)](#database-level-recommendations-experience-for-sql-vulnerability-assessment-preview) |
 |February 10, 2026| GA | [Scanning support for Minimus and Photon OS container images](#scanning-support-for-minimus-and-photon-os-container-images) |
 |February 9, 2026| GA | [Simulate alerts for SQL servers on machines](#simulate-alerts-for-sql-servers-on-machines) |
@@ -39,7 +39,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ### New individual recommendations format in Azure portal (Preview)
 
-February 18, 2026
+February 15, 2026
 
 Microsoft Defender for Cloud is converting grouped recommendations into individual recommendations in the Azure portal. This change reflects a shift from grouping related findings under one recommendation to listing each recommendation separately.
 

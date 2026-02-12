@@ -220,11 +220,7 @@ You can interact with recommendations in multiple ways. If an option isn't avail
    >[!NOTE]
    >With the new individual recommendation format, governance works at the finding level. You can assign owners and due dates to specific findings, and you can use governance rules with resource tags (for example, Team: DataPlatform) to automatically route recommendations to the correct owner or queue.
 
-   :::image type="content" source="media/review-security-recommendations/recommendation-take-action.png" alt-text="Screenshot that shows what you can see in the recommendation when you select the Take action tab." lightbox="media/review-security-recommendations/recommendation-take-action.png":::
-
-1. In **Findings**, review affiliated findings by severity.
-
-   :::image type="content" source="media/review-security-recommendations/recommendation-findings.png" alt-text="Screenshot that shows the findings tab in a recommendation, including all the attack paths for that recommendation." lightbox="media/review-security-recommendations/recommendation-findings.png":::
+:::image type="content" source="media/review-security-recommendations/take-action.png" alt-text="" lightbox="media/review-security-recommendations/take-action.png":::
 
 1. In **Graph**, view and investigate all the context that's used for risk prioritization, including [attack paths](how-to-manage-attack-path.md). You can select a node in an attack path to view the details of the selected node.
 
