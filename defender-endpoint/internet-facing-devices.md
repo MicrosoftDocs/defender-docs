@@ -14,75 +14,82 @@ ms.collection:
 ms.topic: how-to
 search.appverid: met150
 ms.date: 07/31/2024
+ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
 ---
 
-# Internet-facing devices
+# Identify internet-facing devices
 
-As threat actors continuously scan the web to detect exposed devices they can exploit to gain a foothold in internal corporate networks, mapping your organization's external attack surface is a key part of your security posture management. Devices that can be connected to or are approachable from the outside pose a threat to your organization.
-
-Microsoft Defender for Endpoint automatically identifies and flags onboarded, exposed, internet-facing devices in the [Microsoft Defender portal](https://security.microsoft.com/). This critical information provides increased visibility into an organization's external attack surface and insights into asset exploitability.
+Internet-facing devices can be connected to or reached from the outside, posing a significant threat to your organization. Mapping your organization's external attack surface is a key part of security posture management. Microsoft Defender for Endpoint automatically identifies and flags onboarded, exposed, internet-facing devices in the [Microsoft Defender portal](https://security.microsoft.com/).
 
 > [!NOTE]
 > Currently, only Windows devices onboarded to Microsoft Defender for Endpoint can be identified as internet-facing. Support for other platforms will be available in upcoming releases.
 
-## Devices flagged as internet-facing
+## How devices are flagged as internet-facing
 
-Devices that are successfully connected through TCP or identified as host reachable through UDP will be flagged as internet-facing in the [Microsoft Defender portal](https://security.microsoft.com). Defender for Endpoint uses different data sources to identify the devices to flag:
+Devices that are successfully connected through TCP or identified as host reachable through UDP are flagged as internet-facing. Defender for Endpoint uses two data sources:
 
-- External scans are used to identify which devices are approachable from the outside.
-- Device network connections, captured as part of Defender for Endpoint signals, help to identify external incoming connections that reach internal devices.
+| Data source | Description |
+|-------------|-------------|
+| **External scans** | Identify which devices are approachable from the outside |
+| **Device network connections** | Captured as part of Defender for Endpoint signals to identify external incoming connections that reach internal devices |
 
-Devices can be flagged as internet-facing when a configured firewall policy (host firewall rule or enterprise firewall rule) allows inbound internet communication.
-
-Understanding your firewall policy, and your devices that are intentionally internet-facing as opposed to those that may compromise your organization, provides critical information when it comes to mapping your external attack surface.
+Devices can be flagged when a configured firewall policy (host firewall rule or enterprise firewall rule) allows inbound internet communication. Understanding your firewall policy and distinguishing devices that are intentionally internet-facing from those that may compromise your organization provides critical information for mapping your external attack surface.
 
 ## View internet-facing devices
 
-For each onboarded device identified as internet-facing, the internet facing tag appears in the **Tags** column in the device inventory in the Microsoft Defender portal. To view internet-facing devices:
+To view internet-facing devices in the Microsoft Defender portal:
 
 1. Go to **Assets** \> **Device** in the [Microsoft Defender portal](https://security.microsoft.com/machines/).
 
    :::image type="content" source="/defender/media/defender-endpoint/internet-facing-tag.png" alt-text="Screenshot of the internet-facing tag" lightbox="/defender/media/defender-endpoint/internet-facing-tag.png":::
 
-Hover over the internet-facing tag to see why it was applied, possible reasons are:
+1. Look for devices with the **internet facing** tag in the **Tags** column.
 
-- This device was detected by an external scan
-- This device received external incoming communication
+1. Hover over the tag to see why it was applied:
+   - This device was detected by an external scan
+   - This device received external incoming communication
 
-At the top of the page, you can view a counter that shows the number of devices that have been identified as internet-facing and are potentially less secure.
+At the top of the page, you can view a counter that shows the number of devices identified as internet-facing and potentially less secure.
 
-You can use filters to focus in on internet-facing devices and investigate the risk they may introduce into your organization.
+### Filter for internet-facing devices
+
+Use filters to focus on internet-facing devices and investigate the risk they may introduce:
 
    :::image type="content" source="/defender/media/defender-endpoint/internet-facing-filter.png" alt-text="Screenshot of the internet-facing filter" lightbox="/defender/media/defender-endpoint/internet-facing-filter.png":::
 
-The internet-facing device tag also appears in Microsoft Defender Vulnerability Management. This allows you to filter for internet-facing devices from the [weaknesses](/defender-vulnerability-management/tvm-weaknesses) and the [security recommendations](/defender-vulnerability-management/tvm-security-recommendation) pages in the Microsoft Defender portal. 
+The internet-facing device tag also appears in Microsoft Defender Vulnerability Management, allowing you to filter for internet-facing devices from the [weaknesses](/defender-vulnerability-management/tvm-weaknesses) and [security recommendations](/defender-vulnerability-management/tvm-security-recommendation) pages in the Microsoft Defender portal.
 
    :::image type="content" source="/defender/media/defender-endpoint/internet-facing-weaknesses.png" alt-text="Screenshot of the internet-facing weaknesses" lightbox="/defender/media/defender-endpoint/internet-facing-weaknesses.png":::
 
 > [!NOTE]
 > If no new events for a device occur for 48 hours, the Internet-facing tag is removed and it will no longer be visible in the Microsoft Defender portal.
 
-## Investigate your internet-facing devices
+## Investigate internet-facing devices
 
-To learn more about an internet-facing device, select the device in the device inventory to open its flyout pane:
+To view detailed information about an internet-facing device, select the device in the device inventory to open its flyout pane:
 
    :::image type="content" source="/defender/media/defender-endpoint/internet-facing-details.png" alt-text="Screenshot of the internet facing device details page" lightbox="/defender/media/defender-endpoint/internet-facing-details.png":::
 
-This pane includes details on whether the device was detected by a Microsoft external scan or received an external incoming communication. The external network interface address and port fields provide details on the external IP and port that were scanned at the time this device was identified as internet facing.
+The flyout includes:
 
-The local network interface address and port for this device, along with the last time the device was identified as internet facing are also shown.
+| Information | Description |
+|-------------|-------------|
+| **Detection method** | Whether the device was detected by a Microsoft external scan or received an external incoming communication |
+| **External network interface** | External IP address and port that were scanned when the device was identified as internet facing |
+| **Local network interface** | Local network interface address and port for this device |
+| **Last seen** | The last time the device was identified as internet facing |
 
-## Use advanced hunting
+### Use advanced hunting queries
 
-Use advanced hunting queries to gain visibility and insights into the internet-facing devices in your organization, for example:
+Use advanced hunting queries to gain visibility and insights into internet-facing devices in your organization.
 
-### Get all internet facing devices
+#### Get all internet facing devices
 
-Use this query to find all devices that are internet facing.
+Use this query to find all devices that are internet facing:
 
 ```kusto
 // Find all devices that are internet-facing
@@ -94,51 +101,26 @@ DeviceInfo
 | summarize arg_max(Timestamp, *) by DeviceId
 ```
 
-This query returns the following fields for each internet-facing device with their aggregated evidence in the "AdditionalFields" column.
+This query returns the following fields for each internet-facing device:
 
-- **InternetFacingReason**: Whether the device was detected by an external scan or received incoming communication from the internet
-- **InternetFacingLocalIp**: The local IP address of the internet facing interface
-- **InternetFacingLocalPort**: The local port where internet facing communication was observed
-- **InternetFacingPublicScannedIp**: The public IP address that was externally scanned
-- **InternetFacingPublicScannedPort**: The internet facing port that was externally scanned
-- **InternetFacingTransportProtocol**: The transport protocol used (TCP/UDP)
+| Field | Description |
+|-------|-------------|
+| **InternetFacingReason** | Whether the device was detected by an external scan or received incoming communication from the internet |
+| **InternetFacingLocalIp** | The local IP address of the internet facing interface |
+| **InternetFacingLocalPort** | The local port where internet facing communication was observed |
+| **InternetFacingPublicScannedIp** | The public IP address that was externally scanned |
+| **InternetFacingPublicScannedPort** | The internet facing port that was externally scanned |
+| **InternetFacingTransportProtocol** | The transport protocol used (TCP/UDP) |
 
-### Get information on inbound connections
+#### Get information on inbound connections
 
-For TCP connections, you can gain further insights into applications or services identified as listening on a device by querying [DeviceNetworkEvents](/defender-xdr/advanced-hunting-devicenetworkevents-table).
+For TCP connections, gain insights into applications or services identified as listening on a device by querying [DeviceNetworkEvents](/defender-xdr/advanced-hunting-devicenetworkevents-table).
 
-Use the following query for devices tagged with the reason **This device received external incoming communication**:
-
-```kusto
-// Use this function to obtain the device incoming communication from public IP addresses
-// Input:
-// DeviceId - the device ID that you want to investigate.
-// The function will return the last 7 days of data.
-InboundExternalNetworkEvents("<DeviceId>")
-```
-
->[!Note]
-> Process related information is only available for TCP connections.
-
-Use the following query for devices tagged with the reason **This device was detected by an external scan**:
-
-```kusto
-DeviceNetworkEvents
-| where Timestamp > ago(7d)
-| where DeviceId == ""
-| where Protocol == "Tcp"
-| where ActionType == "InboundInternetScanInspected"
-```
-
-For UDP connections, gain insights into devices that were identified as host reachable but may not have established a connection (for example, as a result of the host firewall policy) using the following query:
-
-```kusto
-DeviceNetworkEvents
-| where Timestamp > ago(7d)
-| where DeviceId == ""
-| where Protocol == "Udp"
-| where ActionType == "InboundInternetScanInspected"
-```
+| Scenario | Query | Notes |
+|----------|-------|-------|
+| **Device received external incoming communication** | `InboundExternalNetworkEvents("<DeviceId>")` | Returns the last 7 days of device incoming communication from public IP addresses. Replace `<DeviceId>` with the device ID you want to investigate. Process-related information is only available for TCP connections. |
+| **Device detected by external scan (TCP)** | `DeviceNetworkEvents`<br>`\| where Timestamp > ago(7d)`<br>`\| where DeviceId == ""`<br>`\| where Protocol == "Tcp"`<br>`\| where ActionType == "InboundInternetScanInspected"` | Use for devices tagged with **This device was detected by an external scan**. Replace the empty `DeviceId` value with the device ID you want to investigate. |
+| **Device detected by external scan (UDP)** | `DeviceNetworkEvents`<br>`\| where Timestamp > ago(7d)`<br>`\| where DeviceId == ""`<br>`\| where Protocol == "Udp"`<br>`\| where ActionType == "InboundInternetScanInspected"` | Identifies devices that were host reachable but may not have established a connection (for example, as a result of the host firewall policy). Replace the empty `DeviceId` value with the device ID you want to investigate. |
 
 If the above queries fail to provide the relevant connections, you can use socket collection methods to retrieve the source process. To learn more about different tools and capabilities available to do this, see:
 
@@ -148,19 +130,20 @@ If the above queries fail to provide the relevant connections, you can use socke
 
 ## Report inaccuracy
 
-You can report an inaccuracy for a device with incorrect internet-facing information. For the internet-facing device:
+If a device has incorrect internet-facing information, you can report an inaccuracy:
 
-1. Open the device flyout from the Device inventory page
-1. Select **Report device inaccuracy**
-1. In the **What part is inaccurate** dropdown, select **Device information**
-1. For **Which information is inaccurate** select the **internet facing classification** checkbox from the dropdown
-1. Fill in the requested details about what the correct information should be
-1. Provide an email address (optional)
-1. Select **Submit Report**
+1. Open the device flyout from the Device inventory page.
+1. Select **Report device inaccuracy**.
+1. In the **What part is inaccurate** dropdown, select **Device information**.
+1. For **Which information is inaccurate** select the **internet facing classification** checkbox from the dropdown.
+1. Fill in the requested details about what the correct information should be.
+1. Provide an email address (optional).
+1. Select **Submit Report**.
 
-## See also
+## Related articles
 
-- [Device inventory](machines-view-overview.md)
+- [Explore devices in the device inventory](machines-view-overview.md)
+- [Investigate devices in the Defender for Endpoint Devices list](investigate-machines.md)
 
 
 

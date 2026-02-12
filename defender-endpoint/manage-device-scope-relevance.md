@@ -13,6 +13,7 @@ ms.collection:
 ms.topic: how-to
 search.appverid: met150
 ms.date: 01/29/2026
+ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

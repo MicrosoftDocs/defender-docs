@@ -1,6 +1,6 @@
 ﻿---
-title: Microsoft Defender for Endpoint device timeline
-description: Use Microsoft Defender for Endpoint device timeline and timeline event flags.
+title: Review device timeline in Microsoft Defender for Endpoint
+description: Use the device timeline to review events, flag important activities, and investigate anomalous behavior on devices.
 keywords: Defender for Endpoint device timeline, event flags
 ms.service: defender-endpoint
 ms.author: lwainstein
@@ -12,46 +12,45 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: article
+ms.topic: how-to
 ms.subservice: edr
 search.appverid: met150
 ms.date: 03/26/2025
+ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
-# Microsoft Defender for Endpoint device timeline
+# Review device timeline in Microsoft Defender for Endpoint
 
-The Defender for Endpoint device timeline helps you research and investigate anomalous behavior on your devices more quickly. You can explore specific events and endpoints to review potential attacks in your organization. You can review specific times of each event, set flags to follow up for potentially connected events, and filter to specific date ranges.
+The device timeline provides a chronological view of events and associated alerts observed on a device, helping you investigate anomalous behavior and potential attacks. You can explore specific events, review MITRE ATT&CK techniques, use process trees, and flag events for follow-up.
 
-- Custom time range picker:
+## Access the device timeline
 
-    :::image type="content" source="media/custom-time-range.png" alt-text="Screenshot of the custom time range.":::
+1. Navigate to the device page from:
+   - **Device inventory** (**Assets** > **Devices**)
+   - An alert in the **Alerts queue**
+   - An incident in **Incidents & alerts**
+2. Select the **Timeline** tab
 
-- Process tree experience – event side panel:
+## Key timeline capabilities
 
-    :::image type="content" source="media/event-side-panel.png" alt-text="Screenshot of the event side panel." lightbox="media/event-side-panel.png":::
+The device timeline includes several features to help you investigate events efficiently:
 
-   
-- All MITRE techniques are shown when there's more than one related technique:
+| Feature | Description | How to use |
+|---------|-------------|------------|
+| **Custom time range picker** | Select specific date ranges to focus your investigation | Select the date range picker at the top of the timeline |
+| **Process tree view** | Visualize parent-child relationships between processes | Select an event to open the side panel with process tree |
+| **MITRE ATT&CK techniques** | View all related MITRE techniques for events | Techniques appear as bold text with blue icons; select to see details |
+| **User page integration** | See which user accounts are associated with events | Select user names in events to navigate to user investigation page |
+| **Visible filters** | See which filters are currently applied to the timeline | Active filters appear at the top of the timeline |
+| **Event flagging** | Mark important events for follow-up during investigation | Select the flag icon next to an event |
 
-    :::image type="content" source="media/new-timeline-mitre-techniques.png" alt-text="Screenshot of all MITRE techniques. " lightbox="media/new-timeline-mitre-techniques.png":::
+:::image type="content" source="media/custom-time-range.png" alt-text="Screenshot of the custom time range.":::
 
-- Timeline events are linked to the new user page:
+:::image type="content" source="media/event-side-panel.png" alt-text="Screenshot of the event side panel." lightbox="media/event-side-panel.png":::
 
-    :::image type="content" source="media/new-timeline-user.png" alt-text="Screenshot of timeline events linked to the new user page." lightbox="media/new-timeline-user.png":::
-
-    :::image type="content" source="media/new-timeline-user-details.png" alt-text="Screenshot of timeline events linked to the new user page 2." lightbox="media/new-timeline-user-details.png":::
-
-- Defined filters are now visible at the top of the timeline: 
-
-    :::image type="content" source="media/new-timeline-highlight.png" alt-text="Screenshot of defined filters." lightbox="media/new-timeline-highlight.png":::
-
-## Techniques in the device timeline
-
-You can gain more insight in an investigation by analyzing the events that happened on a specific device. First, select the device of interest from the [Devices list](machines-view-overview.md). On the device page, you can select the **Timeline** tab to view all the events that occurred on the device.
-
-### Understand techniques in the timeline
+:::image type="content" source="media/new-timeline-mitre-techniques.png" alt-text="Screenshot of all MITRE techniques." lightbox="media/new-timeline-mitre-techniques.png":::
 
 > [!IMPORTANT]
 > Some information relates to a prereleased product feature in public preview which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.

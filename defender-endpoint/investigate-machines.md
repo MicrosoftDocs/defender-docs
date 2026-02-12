@@ -1,6 +1,6 @@
 ﻿---
-title: Investigate devices in the Defender for Endpoint Devices list
-description: Investigate affected devices by reviewing alerts, network connection information, adding device tags and groups, and checking the service health.
+title: Investigate devices in Microsoft Defender for Endpoint
+description: Learn how to investigate devices by reviewing alerts, timelines, network connections, and security assessments in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
@@ -15,32 +15,48 @@ ms.topic: concept-article
 ms.subservice: edr
 search.appverid: met150
 ms.date: 05/28/2025
+ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
-# Investigate devices in the Microsoft Defender for Endpoint Devices list
+# Investigate devices in Microsoft Defender for Endpoint
 
+When a security alert is raised or suspicious activity is detected, investigating the affected device is critical to understanding the scope of potential threats. Microsoft Defender for Endpoint provides comprehensive tools to investigate devices, including device timelines, network connections, security assessments, and identification of internet-facing devices.
 
-Investigate the details of an alert raised on a specific device to identify other behaviors or events that might be related to the alert or the potential scope of the breach.
+This article explains the device investigation process and the tools available to security analysts.
+
+This article explains the device investigation process and the tools available to security analysts.
+
+## Overview of device investigation
+
+Device investigation in Microsoft Defender for Endpoint follows a systematic approach to understand security threats:
+
+| Investigation stage | What to do | Tools to use |
+|---------------------|------------|--------------|
+| **1. Access device details** | Navigate to the device from alerts queue, device inventory, or search | Device inventory, Alerts queue, Global search |
+| **2. Review device overview** | Check active alerts, logged-on users, security assessment, and device health | Device overview tab, Active alerts card |
+| **3. Analyze timeline** | Review chronological events, identify suspicious activity, and correlate events | Device timeline, Event filters, Process trees |
+| **4. Investigate alerts and incidents** | Review associated incidents, alert severity, and investigation state | Incidents and alerts tab |
+| **5. Assess security posture** | Review security recommendations, discovered vulnerabilities, and missing updates | Security recommendations, Discovered vulnerabilities, Missing KBs |
+| **6. Check network exposure** | Identify if device is internet-facing and review external connections | Internet-facing tag, Network events in timeline |
+| **7. Take response actions** | Isolate device, restrict app execution, collect investigation package, or run antivirus scan | Response actions menu |
+
+## Ways to access device investigation
+
+You can access device investigation pages from multiple locations in the Microsoft Defender portal:
+
+| Location | How to access | When to use |
+|----------|---------------|-------------|
+| **Device inventory** | Go to **Assets** > **Devices** and select a device | Starting point for proactive device reviews or when you know the device name |
+| **Alerts queue** | Go to **Incidents & alerts** > **Alerts** and select the device name from an alert | When investigating a specific alert and need device context |
+| **Incidents** | Go to **Incidents & alerts** > **Incidents**, select an incident, then select a device from the incident graph | During incident response when multiple devices may be affected |
+| **Global search** | Use the search box at the top of the portal and select **Device** from dropdown | Quick access when you know the device name or IP address |
+| **File details** | Navigate to a file details page and select devices where the file was observed | When tracking file-based threats across multiple devices |
+| **IP address or domain details** | Navigate to IP or domain details and select devices that communicated with it | When investigating network-based threats or C2 communications |
 
 > [!NOTE]
 > As part of the investigation or response process, you can collect an investigation package from a device. Here's how: [Collect investigation package from devices](respond-machine-alerts.md#collect-investigation-package-from-devices).
-
-You can select on affected devices whenever you see them in the portal to open a detailed report about that device. Affected devices are identified in the following areas:
-
-- [Devices list](investigate-machines.md)
-- [Alerts queue](alerts-queue.md)
-- Any individual alert
-- Any individual file details view
-- Any IP address or domain details view
-
-When you investigate a specific device, you see:
-
-- Device details
-- Response actions
-- Tabs (overview, alerts, timeline, security recommendations, software inventory, discovered vulnerabilities, missing KBs)
-- Cards (active alerts, logged on users, security assessment, device health status)
 
 :::image type="content" source="media/specific-device.png" alt-text="The device view" lightbox="media/specific-device.png":::
 
@@ -244,6 +260,17 @@ To gain an in-depth view of the device health report, you can go to **Reports > 
 > The date and time for Defender Antivirus mode is currently not available.
 
 :::image type="content" source="media/device-health-status.png"  alt-text="The device health status card" lightbox="media/device-health-status.png":::
+
+## Next steps in device investigation
+
+After reviewing the device overview and basic information, continue your investigation with these advanced capabilities:
+
+| Investigation task | What it provides | When to use | Learn more |
+|--------------------|------------------|-------------|------------|
+| **Review device timeline** | Chronological view of all events on the device with MITRE ATT&CK techniques, process trees, and event correlations | • Understand sequence of events during an incident<br>• Identify persistence mechanisms<br>• Track lateral movement activities<br>• Correlate related security events | [Review device timeline](device-timeline-event-flag.md) |
+| **Identify internet-facing devices** | Visibility into which devices are exposed to the internet and may be vulnerable to external attacks | • Assess external attack surface<br>• Prioritize patching for exposed devices<br>• Understand which devices attackers can reach<br>• Review firewall policies for internet-facing systems | [Internet-facing devices](internet-facing-devices.md) |
+| **Collect investigation package** | Comprehensive forensic data collection for deep analysis | • Need detailed forensic evidence<br>• Escalating to advanced threat hunting team<br>• Preparing for legal or compliance requirements | [Collect investigation package](respond-machine-alerts.md#collect-investigation-package-from-devices) |
+| **Take response actions** | Isolate device, restrict app execution, run antivirus scan, or initiate automated investigation | • Contain an active threat<br>• Prevent lateral movement<br>• Remediate detected malware<br>• Collect real-time forensic data | [Take response actions on a device](respond-machine-alerts.md) |
 
 ## Related articles
 
