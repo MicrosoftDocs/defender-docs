@@ -2,7 +2,7 @@
 title: Enable threat protection for AI services
 description: Learn how to enable threat protection for AI services on your Azure subscription for Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
-ms.date: 02/11/2026
+ms.date: 02/12/2026
 ms.author: elkrieger
 author: Elazark
 ---
@@ -41,7 +41,7 @@ With the AI services threat protection plan enabled, you can control whether the
 
 - **[Data security for AI interactions](#enable-data-security-for-microsoft-foundry-with-microsoft-purview)**: allows Microsoft Purview to access and analyze prompts, responses, and related metadata to provide data security and compliance capabilities such as SIT classification, auditing, insider risk, communication compliance, and eDiscovery. It is a paid Purview feature and is not included in the Defender for AI Services plan.
 
-- **AI model security**: provides a unified view of all models in Azure Machine Learning registries and automatically checks for security risks like serialization vulnerabilities, malware, and missing scans. By identifying misconfigurations and integrating with Defender for Cloud and developer workflows, it ensures models remain secure, compliant, and production‑ready.
+- **[AI model security](#enable-ai-model-security)**: provides a unified view of all models in Azure Machine Learning registries and automatically checks for security risks like serialization vulnerabilities, malware, and missing scans. By identifying misconfigurations and integrating with Defender for Cloud and developer workflows, it ensures models remain secure, compliant, and production‑ready.
 
 ### Enable suspicious prompt evidence
 
