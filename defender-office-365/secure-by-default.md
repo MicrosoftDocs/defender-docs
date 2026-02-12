@@ -5,7 +5,7 @@ f1.keywords:
 author: chrisda
 ms.author: chrisda
 manager: bagol
-ms.date: 12/18/2025
+ms.date: 02/03/2026
 audience: ITPro
 ms.topic: concept-article
 ms.localizationpriority: medium
@@ -75,9 +75,10 @@ You should only consider using overrides in the following scenarios:
 
 - Phishing simulations: Simulated attacks can help you identify vulnerable users before a real attack impacts your organization. To prevent phishing simulation messages from being filtered, see [Configure non-Microsoft phishing simulations in the advanced delivery policy](advanced-delivery-policy-configure.md#use-the-microsoft-defender-portal-to-configure-non-microsoft-phishing-simulations-in-the-advanced-delivery-policy).
 - Security/SecOps mailboxes: Dedicated mailboxes used by security teams to get unfiltered messages (both good and bad). Teams can then review to see if they contain malicious content. For more information, see [Configure SecOps mailboxes in the advanced delivery policy](advanced-delivery-policy-configure.md#use-the-microsoft-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy).
-- Non-Microsoft filters: Secure by default applies only when the MX record for your domain points to Microsoft 365 (for example, contoso.mail.protection.outlook.com). If the MX record for your domain points to a non-Microsoft service or device, the following scenarios can result in the delivery of messages detected as high confidence phishing by anti-spam policies:
+- Non-Microsoft filters: Secure by default applies only when the MX record for your domain points to Microsoft 365 (for example, contoso.mail.protection.outlook.com). If the MX record for your domain points to a non-Microsoft service or device, policies including but not limited to the following scenarios can result in the delivery of messages detected as high confidence phishing by anti-spam policies:
   - [Exchange mail flow rules to bypass spam filtering](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
   - Senders identified in the [Safe Senders list](configure-junk-email-settings-on-exo-mailboxes.md) in user mailboxes.
   - [Allow entries in the Tenant Allow/Block List](tenant-allow-block-list-about.md#allow-entries-in-the-tenant-allowblock-list).
   - Senders identified in the [allowed senders list and allowed domains list in anti-spam policies](anti-spam-protection-about.md#allow-and-block-lists-in-anti-spam-policies).
+  - Source IP addresses allowed by the [connection filter policy](connection-filter-policies-configure.md).
 - False positives: To temporarily allow certain messages that Microsoft 365 blocked, use [admin submissions](submissions-admin.md#report-good-email-to-microsoft). By default, allow entries for domains and email addresses, files, and URLs exist for 30 days. During those 30 days, Microsoft learns from the allow entries and removes them or automatically extends them. By default, allow entries for spoofed senders never expire.
