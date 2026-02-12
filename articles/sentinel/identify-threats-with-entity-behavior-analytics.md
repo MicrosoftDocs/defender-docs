@@ -25,16 +25,20 @@ This article explains what Microsoft Sentinel User and Entity Behavior Analytics
 
 Microsoft Sentinel UEBA uses machine learning to build dynamic behavioral profiles for users, hosts, IP addresses, applications, and other entities. It then detects anomalies by comparing current activity to established baselines, helping security teams identify threats such as **compromised accounts**, **insider attacks**, and **lateral movement**. 
 
-As Microsoft Sentinel ingests data from connected sources, UEBA applies behavioral modeling to detect deviations, and uses peer group analysis and blast radius evaluation to assess the impact. UEBA assigns [risk scores](#ueba-scoring) to anomalous behaviors, taking into account the associated entities, severity, and context, including:
+As Microsoft Sentinel ingests data from connected sources, UEBA applies: 
+- **Behavioral modeling** to detect deviations
+- **Peer group analysis** and **blast radius evaluation** to assess the impact of anomalous activity
+
+:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/context.png" alt-text="Entity context":::
+
+UEBA assigns [risk scores](#ueba-scoring) to anomalous behaviors, taking into account the associated entities, severity of the anomaly, and context, including:
 
 - Deviations across geographical locations, devices, and environments  
 - Changes over time and activity frequency compared to the entity’s historical behavior  
 - Differences compared to peer groups  
 - Deviations from organization-wide behavior patterns  
 
-:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/context.png" alt-text="Entity context":::
-
-This diagram shows how you enable UEBA, and how UEBA detects anomalies and assigns [risk scores](#ueba-scoring) to prioritize investigations:
+This diagram shows how you enable UEBA, and how UEBA analyzes data and assigns [risk scores](#ueba-scoring) to prioritize investigations:
 
 :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-architecture.png" alt-text="Diagram showing UEBA architecture, illustrating how data flows from connected sources through behavioral modeling to produce risk scores." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-architecture.png":::
 
