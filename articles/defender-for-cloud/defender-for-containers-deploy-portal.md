@@ -110,9 +110,9 @@ For EKS clusters, Defender uses Azure Arc–enabled Kubernetes to deploy the Def
 ### Verify that the Defender sensor is running in the cluster
 
 ```bash
-kubectl get ds microsoft-defender-collector-ds -n kube-system
+kubectl get pods -n kube-system -l app=microsoft-defender
 ```
-Confirm that one pod is running per node.
+Confirm that the number of running pods matches the number of cluster nodes.
 
 You can also verify the DaemonSet status:
 
@@ -136,7 +136,21 @@ You can also inspect and manage the Defender for Containers extension directly f
 
 1. Select the extension to view its status and configuration.
 
----
+### Configure namespace exclusions (optional)
+
+To exclude specific namespaces from Defender sensor monitoring:
+
+1. In the Azure portal, open the Arc-enabled Kubernetes cluster.
+
+1. Select **Extensions**.
+
+1. Select **Microsoft Defender for Containers**.
+
+1. Select **Manage**.
+
+1. Configure namespace exclusions as needed.
+
+1. Select **Save**.
 
 # [Google Kubernetes Engine (GKE)](#tab/gke)
 
@@ -228,9 +242,9 @@ To exclude specific GKE clusters from automatic provisioning, add labels to the 
 ### Verify that the Defender sensor is running in the cluster
 
 ```bash
-kubectl get ds microsoft-defender-collector-ds -n kube-system
+kubectl get pods -n kube-system -l app=microsoft-defender
 ```
-Confirm that one pod is running per node.
+Confirm that the number of running pods matches the number of cluster nodes.
 
 You can also verify the DaemonSet status:
 
@@ -253,6 +267,22 @@ You can also inspect and manage the Defender for Containers extension directly f
 1. Verify that **Microsoft Defender for Containers** shows **Succeeded**.
 
 1. Select the extension to view its status and configuration.
+
+### Configure namespace exclusions (optional)
+
+To exclude specific namespaces from Defender sensor monitoring:
+
+1. In the Azure portal, open the Arc-enabled Kubernetes cluster.
+
+1. Select **Extensions**.
+
+1. Select **Microsoft Defender for Containers**.
+
+1. Select **Manage**.
+
+1. Configure namespace exclusions as needed.
+
+1. Select **Save**.
 
 # [Arc-enabled Kubernetes](#tab/arc)
 
@@ -316,9 +346,9 @@ For clusters connected through Azure Arc, you can exclude Defender components by
 ### Verify that the Defender sensor is running in the cluster
 
 ```bash
-kubectl get ds microsoft-defender-collector-ds -n kube-system
+kubectl get pods -n kube-system -l app=microsoft-defender
 ```
-Confirm that one pod is running per node.
+Confirm that the number of running pods matches the number of cluster nodes.
 
 You can also verify the DaemonSet status:
 
@@ -341,6 +371,22 @@ You can also inspect and manage the Defender for Containers extension directly f
 1. Verify that **Microsoft Defender for Containers** shows **Succeeded**.
 
 1. Select the extension to view its status and configuration.
+
+### Configure namespace exclusions (optional)
+
+To exclude specific namespaces from Defender sensor monitoring:
+
+1. In the Azure portal, open the Arc-enabled Kubernetes cluster.
+
+1. Select **Extensions**.
+
+1. Select **Microsoft Defender for Containers**.
+
+1. Select **Manage**.
+
+1. Configure namespace exclusions as needed.
+
+1. Select **Save**.
 
 ---
 

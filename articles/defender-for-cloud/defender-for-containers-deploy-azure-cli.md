@@ -173,9 +173,9 @@ Confirm that the following extensions are listed with `provisioningState` set to
 ### Verify that the Defender sensor is running in the cluster
 
 ```bash
-kubectl get ds microsoft-defender-collector-ds -n kube-system
+kubectl get pods -n kube-system -l app=microsoft-defender
 ```
-Confirm that one pod is running per node.
+Confirm that the number of running pods matches the number of cluster nodes.
 
 You can also verify the DaemonSet status:
 
@@ -305,9 +305,9 @@ Confirm that the following extensions are listed with `provisioningState` set to
 ### Verify that the Defender sensor is running in the cluster
 
 ```bash
-kubectl get ds microsoft-defender-collector-ds -n kube-system
+kubectl get pods -n kube-system -l app=microsoft-defender
 ```
-Confirm that one pod is running per node.
+Confirm that the number of running pods matches the number of cluster nodes.
 
 You can also verify the DaemonSet status:
 
@@ -404,9 +404,9 @@ Confirm that the following extensions are listed with `provisioningState` set to
 ### Verify that the Defender sensor is running in the cluster
 
 ```bash
-kubectl get ds microsoft-defender-collector-ds -n kube-system
+kubectl get pods -n kube-system -l app=microsoft-defender
 ```
-Confirm that one pod is running per node.
+Confirm that the number of running pods matches the number of cluster nodes.
 
 You can also verify the DaemonSet status:
 
