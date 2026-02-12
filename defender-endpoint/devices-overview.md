@@ -13,6 +13,7 @@ ms.collection:
 ms.topic: overview
 search.appverid: met150
 ms.date: 01/29/2026
+ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -35,83 +36,32 @@ Devices appear in your inventory through two primary methods:
 - **Onboarding**: Devices you explicitly onboard to Defender for Endpoint with the full agent installed
 - **Discovery**: Devices automatically discovered on your network
 
-## The device lifecycle
+## The device lifecycle and journey
 
-Managing devices in Defender for Endpoint follows a predictable lifecycle:
+Managing devices in Defender for Endpoint follows a predictable lifecycle. The following table outlines the key stages, tasks, roles involved, and related documentation:
 
-### 1. Discover devices
+| Stage | Tasks | Roles involved | Learn more |
+|-------|-------|----------------|------------|
+| **Discover and onboard devices** | • Discover devices on your network<br>• Onboard devices with the Defender for Endpoint agent<br>• View devices in the device inventory<br>• Assess risk levels and exposure scores | Security Administrator<br>IT Operations | [Explore devices in the device inventory](machines-view-overview.md)<br>[Onboard devices](onboarding.md)<br>[Configure device discovery](configure-device-discovery.md) |
+| **Manage scope and relevance** | • Filter out transient devices (automatic)<br>• Exclude devices from vulnerability management (manual)<br>• Determine which devices require security attention | Security Administrator | [Manage device scope and relevance](manage-device-scope-relevance.md) |
+| **Classify and organize with tags and exclusions** | • Add manual tags to individual devices<br>• Create dynamic tags using rules<br>• Organize devices into meaningful groups<br>• Apply tags for business context | Security Administrator<br>Security Analyst | [Create and manage device tags](machine-tags.md) |
+| **Target devices for security actions** | • Use device groups for role-based access<br>• Collect custom telemetry from device groups<br>• Apply automation rules to tagged devices<br>• Deploy security policies to device groups | Security Administrator<br>Security Analyst | [Target devices with device groups and tags](targeting-devices.md)<br>[Custom data collection](custom-data-collection.md) |
+| **Investigate devices** | • Review device timelines<br>• Investigate alerts and incidents<br>• Identify internet-facing devices<br>• Hunt for threats across device groups<br>• Take response actions | Security Analyst<br>Security Administrator | [Investigate devices](investigate-machines.md)<br>[Review device timeline](device-timeline-event-flag.md)<br>[Identify internet-facing devices](internet-facing-devices.md) |
+| **Monitor and maintain** | • Monitor device health status<br>• Fix unhealthy sensors<br>• Review sensor health reports<br>• Track onboarding status | IT Operations<br>Security Administrator | [Fix unhealthy sensors](fix-unhealthy-sensors.md)<br>[Device health reports](device-health-microsoft-defender-antivirus-health.md) |
 
-Devices appear in your inventory as they're onboarded or discovered on your network. The [device inventory](machines-view-overview.md) shows all devices that Defender for Endpoint can see, including their risk levels, exposure scores, and health status.
+## Device targeting
 
-**Start here**: [Device inventory](machines-view-overview.md)
+Device targeting uses device tags to identify which devices should receive specific security actions. Rather than managing devices individually, targeting lets you organize devices into meaningful groups and apply configurations, policies, or data collection rules at scale.
 
-### 2. Manage scope and relevance
+### Security actions powered by targeting
 
-Not all discovered devices require the same level of attention. You'll need to determine which devices are relevant to your security operations and which represent noise in your inventory.
+Device tags and groups enable you to apply security operations across multiple areas:
 
-- **Automatic filtering**: Transient devices (like temporary guest devices) are automatically tagged to reduce noise
-- **Manual exclusion**: Remove specific devices from vulnerability management exposure calculations when they're out of scope
-
-**Next step**: [Manage device scope and relevance](manage-device-scope-relevance.md)
-
-### 3. Classify and organize with tags
-
-Tags let you add business context to devices and organize them into meaningful groups. Tags are essential for targeting security actions, investigations, and automation.
-
-- **Manual tags**: Add custom labels to individual devices
-- **Dynamic tags**: Automatically apply tags based on device properties using rules
-
-**Add context**: [Create and manage device tags](machine-tags.md)
-
-### 4. Target devices for actions
-
-Once devices are organized with tags, you can use those tags to target specific device groups for security actions:
-
-- **Investigations**: Filter alerts and events by device groups
-- **Custom data collection**: Collect specialized telemetry from specific device sets
-- **Automation rules**: Apply automated response actions to tagged devices
-- **Security policies**: Deploy configurations to device groups
-
-**Take action**: [Targeting devices in Microsoft Defender for Endpoint](targeting-devices.md)
-
-## Roles and responsibilities
-
-Different roles interact with devices in different ways:
-
-| Role | Primary tasks | Key pages |
-|------|--------------|-----------|
-| **Security Administrator** | Onboard devices, configure discovery, manage device groups, set up targeting rules | Device inventory, Manage scope & relevance, Device tags |
-| **Security Analyst** | Investigate alerts, assess device risk, respond to incidents, hunt for threats | Device inventory, Device pages, Advanced hunting |
-| **IT Operations** | Maintain device health, troubleshoot sensor issues, manage device lifecycle | Device inventory, Sensor health reports |
-
-## Navigation hub
-
-Use these pages to manage devices in Microsoft Defender for Endpoint:
-
-### Core device management
-
-- **[Device inventory](machines-view-overview.md)**: View all devices, assess risk and exposure, sort and filter your inventory
-- **[Manage device scope and relevance](manage-device-scope-relevance.md)**: Control which devices are relevant to your security operations
-- **[Create and manage device tags](machine-tags.md)**: Add business context and organize devices into groups
-
-### Advanced capabilities
-
-- **[Targeting devices](targeting-devices.md)**: Understand how device tags enable security actions at scale
-- **[Custom data collection](custom-data-collection.md)**: Collect specialized telemetry from specific device groups
-- **[Create custom data collection rules](create-custom-data-collection-rules.md)**: Configure rules to collect custom telemetry
-
-### Device onboarding and health
-
-- **[Onboarding devices](onboarding.md)**: Deploy the Defender for Endpoint agent to devices
-
-### Device health and troubleshooting
-
-- **[Fix unhealthy sensors](fix-unhealthy-sensors.md)**: Resolve device health issues
-- **[Device health reports](device-health-microsoft-defender-antivirus-health.md)**: Monitor antivirus and sensor health across devices
-
-## Next steps
-
-Start with the device inventory to see all devices in your environment:
-
-- [View your device inventory](machines-view-overview.md)
-- [Onboard devices to Defender for Endpoint](onboarding.md)
+| Security action | Description | Scenarios | Learn more |
+|-----------------|-------------|-----------|------------|
+| **Investigations and threat hunting** | Filter alerts and scope investigations to specific device groups | • Investigate all "Finance-Department" devices for suspicious activity<br>• Hunt for threats across "Windows-Servers" in a specific region<br>• Track devices involved in a compromise using incident tags | [Advanced hunting](/defender-xdr/advanced-hunting-overview) |
+| **Custom data collection** | Collect specialized telemetry from devices with dynamic tags | • Collect file events from "Database-Servers"<br>• Capture network connections from "Developer-Workstations"<br>• Monitor script execution on "Administrative-Systems" | [Custom data collection](custom-data-collection.md)<br>[Create custom data collection rules](create-custom-data-collection-rules.md) |
+| **Automation rules** | Apply automated response actions to device categories | • Auto-isolate "Public-Kiosk" devices if malware is detected<br>• Run forensic collection on "Critical-Servers" during incidents<br>• Restrict "BYOD-Devices" from sensitive resources | [Automated investigation and response](/defender-xdr/m365d-configure-auto-investigation-response) |
+| **Device groups for role-based access** | Control which security analysts can see and act on specific devices | • Finance Security Team manages only "Finance-Department" devices<br>• Regional teams manage devices in their geographic locations<br>• Junior analysts access only "Non-Production" device groups | [Create and manage device groups](machine-groups.md) |
+| **Attack surface reduction rules** | Deploy different security controls to different device types | • Strict blocking rules on "Internet-Facing-Servers"<br>• Audit mode on "Development-Machines"<br>• Standard baseline for general user workstations | [Attack surface reduction rules](/defender-endpoint/attack-surface-reduction-rules-deployment) |
+| **Conditional Access policies** | Enforce access controls based on device security posture and tags | • Require MFA for "High-Risk-Devices"<br>• Block "Non-Compliant-Devices" from corporate resources<br>• Allow "Managed-BYOD" limited access to approved services | [Conditional Access with Intune](/mem/intune/protect/advanced-threat-protection) |
