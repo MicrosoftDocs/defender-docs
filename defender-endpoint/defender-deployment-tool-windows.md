@@ -50,7 +50,7 @@ When the [interactive](#interactive-use), double-click experience is used, the t
 
 For more [advanced and large-scale deployments](#advanced-and-large-scale-deployments), the tool offers functionality to perform additional and orchestrated steps through command-line parameters or a configuration file.
 
-To view the complete command reference after [downloading the tool](#download-the-tool), run: `DefenderDT.exe -?`.
+To view the complete command reference after [downloading the tool](#generate-and-download-a-new-onboarding-package), run: `DefenderDT.exe -?`.
 
 ## Supported operating systems
 
@@ -116,7 +116,7 @@ SHA-2 update (KB4474419) released September 10, 2019. If you use Windows U
 
 1. When the package is ready, you'll see a page that has the package access key and a download button, similar to the following image.
 
-   :::image type="content" source="./media/defender-deployment-tool-windows/deployment-package-download-page.png" alt-text="Screenshot showing the how to configure a new deployment package." lightbox="./media/defender-deployment-tool-windows/deployment-package-download-page.png:::
+   :::image type="content" source="./media/defender-deployment-tool-windows/deployment-package-download-page.png" alt-text="Screenshot showing the how to configure a new deployment package." lightbox="./media/defender-deployment-tool-windows/deployment-package-download-page.png":::
 
    Copy the key and save it, as it will be needed with the deployment tool.
 
