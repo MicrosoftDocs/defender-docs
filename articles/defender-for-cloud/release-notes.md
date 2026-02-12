@@ -33,7 +33,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | -------- | -------- | -------- |
 | March 15, 2026 | Deprecation | [Deprecation of grouped container vulnerability recommendations](#deprecation-of-grouped-container-vulnerability-recommendations) |
 
-### Deprecation of grouped container vulnerability recommendations
+### Deprecation of preview of container and container images vulnerability recommendations
 
 As part of the transition to individual recommendations, Microsoft Defender for Cloud is deprecating existing grouped container vulnerability recommendations. This change enables more granular visibility, prioritization, and governance of container security findings.
 
@@ -59,9 +59,9 @@ Customers should update any queries, automation, governance rules, or workflows 
 
 When querying individual recommendations, the same logic can be applied across cloud providers by adjusting the `Source` value.
 
-**Example: Container vulnerability recommendations (Dynamic VA)**
+**Example: Container vulnerability recommendations**
 
-The following query identifies container vulnerability recommendations for containers running in Azure. To target containers running in AWS or GCP, change the `Source` value to `"AWS"` or `"GCP"`.
+The following query allows customers to identify the new individual container vulnerability recommendations for containers running in Azure. To target containers running in AWS or GCP, change the `Source` value to `"AWS"` or `"GCP"`.
 
 ```kusto
 securityresources
@@ -73,7 +73,7 @@ securityresources
 
 **Example: Container image vulnerability recommendations**
 
-The following query identifies container image vulnerability recommendations in Azure container registries. To target AWS or GCP registries, update the `Source` value accordingly.
+The following query allows customers to identify the new individual container image vulnerability recommendations in Azure container registries. To target AWS or GCP registries, update the `Source` value accordingly.
 
 ```kusto
 securityresources
