@@ -95,8 +95,7 @@ Authenticated scans use SNMP (read-only) and support both SNMPv2 and SNMPv3. The
 
 Once the network devices are discovered and classified, security administrators can receive the latest security recommendations and review recently discovered vulnerabilities on network devices deployed across their organizations.
 
-> [!NOTE]
-> The Windows authenticated scan is deprecated from December 18, 2025. For more information, see [Windows authenticated scan deprecation FAQs](/defender-vulnerability-management/defender-vulnerability-management-faq#windows-authenticated-scan-deprecation-faqs).
+To address the challenge of gaining enough visibility to locate, identify, and secure your complete OT/IOT asset inventory Defender for Endpoint supports the following integration:
 
 For information on how to initiate network scans, see [Set up authenticated network scans](network-devices.md).
 

@@ -298,6 +298,8 @@
               href: linux-static-proxy-configuration.md
             - name: Configure antivirus scans
               items:
+              - name: Configure Microsoft Defender Antivirus scans on Linux
+                href: schedule-anti-virus-scans-linux.md
               - name: Schedule antivirus scans using Anacron
                 href: schedule-antivirus-scan-anacron.md
               - name: Schedule antivirus scans using Crontab
@@ -799,8 +801,6 @@
       - name: About scheduled Microsoft Defender Antivirus scans
         href: schedule-antivirus-scans.md
         items:
-        - name: Schedule scans using Intune
-          href: schedule-antivirus-scans-intune.md
         - name: Schedule scans using Group Policy
           href: schedule-antivirus-scans-group-policy.md
         - name: Schedule scans using PowerShell
