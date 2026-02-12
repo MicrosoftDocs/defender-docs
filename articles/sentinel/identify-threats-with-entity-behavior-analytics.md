@@ -108,7 +108,7 @@ For example, when a user performs an Azure operation for the first time:
 
 While these scores serve different purposes, you can expect some correlation. High anomaly scores often align with high investigation priority, but not always. Each score provides unique insight for layered detection.
 
-## Use embedded UEBA experiences in the Defender portal
+## Use embedded UEBA experiences in Defender portal to accelerate workflows
 
 By surfacing anomalies in investigation graphs and user pages, and prompting analysts to incorporate anomaly data in hunting queries, UEBA facilitates faster threat detection, smarter prioritization, and more efficient incident response. 
 
@@ -116,7 +116,7 @@ This section outlines the key UEBA analyst experiences available in the Microsof
 
 ### UEBA home page widget 
 
-The Defender portal home page includes a UEBA widget where analysts can immediately have visibility into anomalous user behavior and therefore accelerate threat detection workflows. If the tenant isn't onboarded yet to UEBA, this widget also provides security admins quick access to the onboarding process. 
+The Defender portal home page includes a UEBA widget where analysts immediately have visibility into anomalous user behavior and therefore accelerate threat detection workflows. If the tenant isn't onboarded yet to UEBA, this widget also provides security admins quick access to the onboarding process. 
 
 :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-widget.png" alt-text="Screenshot of the UEBA widget displaying recent user anomalies and a prompt to onboard if the tenant is not yet configured." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-widget.png":::
 
