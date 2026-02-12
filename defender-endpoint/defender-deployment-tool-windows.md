@@ -71,7 +71,7 @@ There are prerequisites that pertain to all supported Windows and Windows Server
 
 - Access to the domain *definitionupdates.microsoft.com*. The tool is downloaded and updated from this domain. Since the files it downloads are hosted on a content distribution platform, there will be no static or predictable IP ranges associated with it – unlike for other Defender cloud services.
 
-- While the tool will check for connectivity against your specific tenant before proceeding, other connectivity requirements, such as access to the consolidated *\*.endpoint.security.microsoft.com/*\*, apply to (additional) functionality you might want to use with the product. See [Configure your network environment to ensure connectivity with the Defender for Endpoint service](./configure-environment.md).
+- While the tool checks for connectivity against your specific tenant before proceeding, other connectivity requirements, such as access to the consolidated *\*.endpoint.security.microsoft.com/*\*, apply to (additional) functionality you might want to use with the product. See [Configure your network environment to ensure connectivity with the Defender for Endpoint service](./configure-environment.md).
 
 ### Additional prerequisites for Windows 7 SP1 and Windows Server 2008 R2 SP1
 
@@ -80,17 +80,17 @@ There are prerequisites that pertain to all supported Windows and Windows Server
 - For the Defender deployment tool to run on Windows 7 SP1 or Windows Server 2008 R2 SP1, at a minimum, the update KB4474419 for [SHA2 code signing](https://support.microsoft.com/topic/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus-64d1c82d-31ee-c273-3930-69a4cde8e64f) must be installed.
 
 
-   - Servicing stack update (SSU) ([KB4490628](https://support.microsoft.com/help/4490628)). If you use Windows Update, the required SSU will be offered to you automatically. 
+   - Servicing stack update (SSU) ([KB4490628](https://support.microsoft.com/help/4490628)). If you use Windows Update, the required SSU is offered to you automatically. 
 
-   - SHA-2 update ([KB4474419](https://support.microsoft.com/help/4474419)) released September 10, 2019. If you use Windows Update, the required SHA-2 update will be offered to you automatically. 
+   - SHA-2 update ([KB4474419](https://support.microsoft.com/help/4474419)) released September 10, 2019. If you use Windows Update, the required SHA-2 update is offered to you automatically. 
 
 - On Server 2008 R2 SP1 devices, .NET 3.5 or a higher version of the .NET framework must also be installed.
 
 R2 SP1, at a minimum, the updates for SHA2 code signing must be installed: 
 
-Servicing stack update (SSU) (KB4490628). If you use Windows Update, the required SSU will be offered to you automatically. 
+Servicing stack update (SSU) (KB4490628). If you use Windows Update, the required SSU is offered to you automatically. 
 
-SHA-2 update (KB4474419) released September 10, 2019. If you use Windows Update, the required SHA-2 update will be offered to you automatically. 
+SHA-2 update (KB4474419) released September 10, 2019. If you use Windows Update, the required SHA-2 update is offered to you automatically. 
 
 > [!NOTE]
 > For Windows 7 SP1, Windows Server 2008 R2, and Windows Server 2012, the Defender endpoint security solution that will be installed is currently in public preview. For more information about Defender endpoint security for Windows 7 SP1 and Windows Server 2008 R2 devices, see [Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security).
@@ -109,9 +109,9 @@ SHA-2 update (KB4474419) released September 10, 2019. If you use Windows U
 
    :::image type="content" source="./media/defender-deployment-tool-windows/configure-deployment-package.png" alt-text="Screenshot showing the how to configure a new deployment package." lightbox="./media/defender-deployment-tool-windows/configure-deployment-package.png":::
 
-   * Provide a name for the package. Be sure to create a name that is unique and descriptive.
+   * Provide a name for the package. Be sure to create a name that's unique and descriptive.
 
-   * Set an expiration date for the package. You can set the expiration date for any time up to a year. It is recommended to make the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use.
+   * Set an expiration date for the package. You can set the expiration date for any time up to a year. It's recommended to make the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use.
    
    * When you're done configuring the package, select **Generate**.
 
