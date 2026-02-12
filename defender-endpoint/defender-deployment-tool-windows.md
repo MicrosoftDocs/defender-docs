@@ -114,21 +114,12 @@ SHA-2 update (KB4474419) released September 10, 2019. If you use Windows U
 
 1. When you've done configuring the package, select **Generate**.
 
-1. When the package is ready, you'll see a page that has the package access key and a download button, similar to the following image.
+1. When the package is ready, you'll see a page that has the package access key and a download button, similar to the following image. Copy the key and save it, as it will be needed with the deployment tool. After you've copied the key and saved it, select **Download deployment tool**. This downloads a *.zip* file of the Defender deployment tool executable.
 
    :::image type="content" source="./media/defender-deployment-tool-windows/deployment-package-download-page.png" alt-text="Screenshot showing the key that is generated for the deployment tool package." lightbox="./media/defender-deployment-tool-windows/deployment-package-download-page.png":::
 
-   Copy the key and save it, as it will be needed with the deployment tool.
-
-   > [!NOTE]
-   > It is important to copy the key at this point because you will not be able to access it again.
-
-   After you've copied the key and saved it, select **Download deployment tool**. This downloads a *.zip* file of the Defender deployment tool executable.
-
-   :::image type="content" source="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package.png" alt-text="Screenshot showing the Download package button in the Microsoft Defender portal." lightbox="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package.png":::
-
-   > [!NOTE] 
-   > For offboarding, select **Offboarding** in the **Device management** section, choose **Windows 10 and 11** in the Step 1 dropdown menu, and then select the **Download package** button. This downloads the offboarding file package only - it doesn't download the Defender deployment tool executable, as that is the same for both onboarding and offboarding.
+> [!NOTE] 
+> For offboarding, select **Offboarding** in the **Device management** section, choose **Windows 10 and 11** in the Step 1 dropdown menu, and then select the **Download package** button. This downloads the offboarding file package only - it doesn't download the Defender deployment tool executable, as that is the same for both onboarding and offboarding.
 
 ## Deploy Defender endpoint security on devices
 
