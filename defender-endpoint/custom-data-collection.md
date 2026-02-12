@@ -18,6 +18,7 @@ search.appverid:
   - MOE150
   - MET150
 ms.date: 11/12/2025
+ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint
 ---
@@ -30,39 +31,30 @@ Custom data collection (Preview) enables organizations to expand telemetry colle
 
 ## Why use custom data collection?
 
-Microsoft Defender for Endpoint collects extensive telemetry by default, but some security scenarios require additional, specialized data:
+Microsoft Defender for Endpoint collects extensive telemetry by default, but some security scenarios require additional, specialized data. Use custom data collection when you need targeted visibility for threat hunting, application monitoring, compliance evidence, or incident response without the cost and noise of collecting all events.
 
-### When default telemetry isn't enough
+### When to use custom data collection
 
-Use custom data collection when you need to:
+| Scenario | Use when | Example | Security value |
+|----------|----------|---------|----------------|
+| **Threat hunting** | You need to search for specific attack patterns across your environment | Collect all PowerShell script executions from administrative workstations to detect malicious scripts | Detect fileless malware, malicious scripts, or unauthorized automation on privileged systems |
+| **Application monitoring** | You need to track security-relevant events for custom applications | Monitor file access patterns for a proprietary financial application | Identify unauthorized access, data exfiltration attempts, or compliance violations for line-of-business apps |
+| **Compliance evidence** | You need to capture detailed audit logs required by regulations | Collect all file modifications in folders containing sensitive data | Meet regulatory requirements (PCI-DSS, HIPAA, GDPR) with detailed forensic audit trails |
+| **Incident response** | You need to gather forensic data during active investigations | Temporarily collect all network connections from potentially compromised servers | Capture detailed evidence for investigation, identify lateral movement, and support remediation efforts |
+| **Lateral movement detection** | You need to monitor for specific indicators of lateral movement | Track remote connections and authentication events across domain controllers | Detect attackers moving between systems using stolen credentials or remote access tools |
 
-- **Hunt for specific threat patterns**: Collect detailed events for known indicators of compromise or threat actor techniques
-- **Monitor line-of-business applications**: Track security-relevant activity for custom applications not covered by standard telemetry
-- **Meet compliance requirements**: Gather evidence required by industry regulations or internal policies
-- **Investigate specialized environments**: Monitor critical systems with enhanced granularity during incident response
-- **Detect custom attack techniques**: Capture telemetry for threats unique to your organization or industry
+### Benefits of custom data collection
 
-### Security value
-
-Custom data collection provides:
-
-- **Targeted visibility**: Collect only the events you need, reducing noise and cost
-- **Flexible hunting**: Build custom queries on specialized telemetry in Microsoft Sentinel
-- **Evidence collection**: Capture detailed forensic data for investigations and compliance
-- **Scalable monitoring**: Target collection to specific device groups using tags
+| Benefit | Description |
+|---------|-------------|
+| **Targeted visibility** | Collect only the events you need, reducing noise and controlling data ingestion costs in Microsoft Sentinel |
+| **Flexible hunting** | Build custom queries on specialized telemetry in Microsoft Sentinel for deep threat hunting and investigation |
+| **Evidence collection** | Capture detailed forensic data for investigations, compliance audits, and incident response |
+| **Scalable monitoring** | Target collection to specific device groups using dynamic tags, ensuring collection stays current as your environment changes |
+| **Cost control** | Avoid collecting unnecessary data by using specific filters and device targeting |
 
 > [!IMPORTANT]
-> Custom data collection requires device targeting using dynamic tags. You must configure dynamic tags in Asset Rule Management before creating custom collection rules. See [Targeting devices](targeting-devices.md) and [Create and manage device tags](machine-tags.md).
-
-## When to use custom data collection
-
-| Scenario | Description | Example |
-|----------|-------------|---------|
-| **Threat hunting** | Search for specific attack patterns across your environment | Collect all PowerShell script executions from administrative workstations to detect malicious scripts |
-| **Application monitoring** | Track security-relevant events for custom applications | Monitor file access patterns for a proprietary financial application |
-| **Compliance evidence** | Capture detailed audit logs required by regulations | Collect all file modifications in folders containing sensitive data |
-| **Incident response** | Gather forensic data during active investigations | Temporarily collect all network connections from potentially compromised servers |
-| **Lateral movement detection** | Monitor for specific indicators of lateral movement | Track remote connections and authentication events across domain controllers |
+> Custom data collection requires device targeting using dynamic tags. You must configure dynamic tags in Asset Rule Management before creating custom collection rules. See [Target devices with device groups and tags](targeting-devices.md) and [Create and manage device tags](machine-tags.md).
 
 ## How custom data collection works
 
@@ -97,67 +89,30 @@ For detailed schema information, see [Advanced hunting schema tables](/defender-
 
 ## Prerequisites and requirements
 
-Before using custom data collection, ensure you have:
+Before using custom data collection, ensure you meet the following requirements:
 
-### Required licenses and connections
+| Requirement category | Details |
+|---------------------|---------|
+| **Licenses** | • Microsoft Defender for Endpoint Plan 2 license |
+| **Microsoft Sentinel workspace** | • Connected Microsoft Sentinel workspace for custom data storage and querying<br>• Must select workspace when creating custom data collection rules<br>• Currently limited to one Sentinel workspace per tenant for custom data collection |
+| **Device targeting** | • Dynamic tags configured in [Asset Rule Management](/defender-xdr/configure-asset-rules)<br>• Dynamic tags must be run at least once before use in custom collection rules<br>• Manual (static) tags are not supported for custom data collection |
+| **Operating systems** | • Windows 10 and 11 (minimum client version 10.8805)<br>  - Windows 10 requires enrollment in the Extended Security Updates (ESU) program<br>• Windows Server 2019 and later |
+| **Cost considerations** | • Custom data collection is included with Microsoft Defender for Endpoint P2 licensing<br>• **Data ingestion into Microsoft Sentinel incurs charges** based on your Sentinel billing arrangement<br>• Target collection carefully to specific device groups to control data volume and costs |
+| **Performance limits** | • Each rule can capture up to **25,000 events per device per 24-hour rolling window**<br>• When a device reaches the threshold, telemetry for that specific rule stops until the window resets<br>• Multiple rules can be active simultaneously, each with its own limit<br>• Rule deployment typically takes 20 minutes to 1 hour |
 
-- **Microsoft Defender for Endpoint Plan 2** license
-- **Connected Microsoft Sentinel workspace** for custom data storage and querying
-  - Even if you already have a connected Sentinel workspace, you must select it when creating custom data collection rules
-  - Currently limited to one Sentinel workspace per tenant for custom data collection
-
-### Device targeting requirements
-
-- **Dynamic tags** configured in [Asset Rule Management](/defender-xdr/configure-asset-rules)
-- Dynamic tags must be run at least once before use in custom collection rules
-- Manual (static) tags are not supported for custom data collection
-
-See [Create custom data collection rules](create-custom-data-collection-rules.md#prerequisites) for complete prerequisites.
-
-### Supported operating systems
-
-- Windows 10 and 11 (minimum client version 10.8805)
-  - Windows 10 requires enrollment in the Extended Security Updates (ESU) program
-- Windows Server 2019 and later
-
-## Data costs and performance
-
-### Cost considerations
-
-- Custom data collection is included with Microsoft Defender for Endpoint P2 licensing
-- **Data ingestion into Microsoft Sentinel incurs charges** based on your Sentinel billing arrangement
-- Target collection carefully to specific device groups to control data volume and costs
-
-### Performance limits
-
-- Each rule can capture up to **25,000 events per device per 24-hour rolling window**
-- When a device reaches the threshold, telemetry for that specific rule stops until the window resets
-- Multiple rules can be active simultaneously, each with its own limit
-- Rule deployment typically takes 20 minutes to 1 hour
+See [Create custom data collection rules](create-custom-data-collection-rules.md#prerequisites) for complete prerequisites and setup instructions.
 
 ## Frequently asked questions
 
-### Does custom data collection affect the default Defender for Endpoint configuration?
-
-No, custom data collection rules work alongside the Defender for Endpoint default configuration without interference.
-
-### Is a Microsoft Sentinel workspace required?
-
-Yes, you need a connected Microsoft Sentinel workspace to create and use custom data collection rules. You must also select the workspace when creating rules.
-
-### Why are dynamic tags required?
-
-Dynamic tags ensure device targeting stays current as your environment changes. Manual tags don't update automatically, which could result in outdated collection targeting. Dynamic tags are also required for integration with Asset Rule Management.
-
-### How can I tell if a rule is active on a device?
-
-Query the relevant custom event table for the device to see collected events. For example:
-
-```kusto
-search in (DeviceCustomFileEvents, DeviceCustomScriptEvents, DeviceCustomNetworkEvents) "your_device_id"
-| where DeviceId == "your_device_id"
-| summarize count() by RuleName, RuleLastModificationTime, $table
-```
+| Question | Answer |
+|----------|--------|
+| **Does custom data collection affect the default Defender for Endpoint configuration?** | No, custom data collection rules work alongside the Defender for Endpoint default configuration without interference. Custom collection doesn't replace or modify standard telemetry—it adds to it. |
+| **Is a Microsoft Sentinel workspace required?** | Yes, you need a connected Microsoft Sentinel workspace to create and use custom data collection rules. You must also select the workspace when creating rules. |
+| **Why are dynamic tags required?** | Dynamic tags ensure device targeting stays current as your environment changes. Manual tags don't update automatically, which could result in outdated collection targeting. Dynamic tags are also required for integration with Asset Rule Management. |
+| **How can I tell if a rule is active on a device?** | Query the relevant custom event table for the device to see collected events. For example:<br><br>`search in (DeviceCustomFileEvents, DeviceCustomScriptEvents, DeviceCustomNetworkEvents) "your_device_id"`<br>`\| where DeviceId == "your_device_id"`<br>`\| summarize count() by RuleName, RuleLastModificationTime, $table` |
+| **What happens when a device reaches the 25,000 event limit?** | Telemetry collection for that specific rule stops until the 24-hour rolling window resets. Other rules on the device continue to collect events. Refine your rule conditions to make them more specific and reduce event volume. |
+| **Can I use manual tags for custom data collection?** | No, only dynamic tags are supported. Dynamic tags automatically update as device properties change, ensuring collection targeting stays accurate. |
+| **How long does it take for a rule to deploy to devices?** | Rule deployment typically takes 20 minutes to 1 hour. Verify deployment by querying the custom event tables for data from targeted devices. |
 
 ## Next steps
 

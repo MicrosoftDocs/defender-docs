@@ -1,6 +1,6 @@
 ---
-title: Targeting devices in Microsoft Defender for Endpoint
-description: Understand how device tags enable security actions at scale in Microsoft Defender for Endpoint
+title: Target devices with device groups and tags in Microsoft Defender for Endpoint
+description: Understand how device tags and device groups enable security actions at scale in Microsoft Defender for Endpoint
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
@@ -13,16 +13,17 @@ ms.collection:
 ms.topic: concept-article
 search.appverid: met150
 ms.date: 01/29/2026
+ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 ---
 
-# Targeting devices in Microsoft Defender for Endpoint
+# Target devices with device groups and tags
 
 Device targeting is how you apply security actions to specific groups of devices in your environment. Rather than managing devices individually, targeting lets you organize devices into meaningful groups and apply configurations, policies, or data collection rules at scale.
 
-This article explains how device tags enable targeting and how targeting powers key security capabilities in Microsoft Defender for Endpoint.
+This article explains how device tags and device groups enable targeting and how targeting powers key security capabilities in Microsoft Defender for Endpoint.
 
 ## What is device targeting?
 
@@ -40,47 +41,69 @@ Device tags → Device groups → Security actions
 
 ## Why targeting matters
 
-Without targeting:
-- Security teams manage devices individually (doesn't scale)
-- Configurations apply to all devices or none (no granularity)
-- Investigating specific device groups requires complex queries
+| Without targeting | With targeting |
+|-------------------|----------------|
+| Security teams manage devices individually (doesn't scale) | Manage hundreds of devices as a single group |
+| Configurations apply to all devices or none (no granularity) | Apply different security postures to different device types |
+| Investigating specific device groups requires complex queries | Quickly scope investigations, rules, and automation to relevant devices |
 
-With targeting:
-- Manage hundreds of devices as a single group
-- Apply different security postures to different device types
-- Quickly scope investigations, rules, and automation to relevant devices
+## Use manual or dynamic tags
 
-## How tags enable targeting
+Tags are the foundation of device targeting in Defender for Endpoint. There are two types of tags, each suited for different scenarios:
 
-Tags are the foundation of device targeting in Defender for Endpoint. There are two types:
+| Tag type | Description | Use when | Benefits | Limitations |
+|----------|-------------|----------|----------|-------------|
+| **Manual tags** | Custom labels you apply directly to individual devices through the portal or API | • Tagging specific devices for investigation<br>• Small group organization<br>• Temporary classifications during incident response | • Quick to apply<br>• No setup required<br>• Flexible for ad-hoc needs | • Doesn't scale well<br>• Requires manual updates<br>• Not supported for custom data collection or some automation scenarios |
+| **Dynamic tags** | Automatically apply to devices based on rules you define; update as device properties change | • Large-scale automatic tagging<br>• Custom data collection targeting<br>• Maintaining accurate device groups<br>• Automation rules | • Scales to thousands of devices<br>• Always current<br>• Required for custom data collection<br>• Supports advanced automation | • Requires initial setup<br>• Updates approximately every hour<br>• Needs Asset Rule Management configuration |
 
-### Manual tags
-
-Manual tags are custom labels you apply directly to individual devices. Use manual tags for:
-
-- **One-off device marking**: Flag specific devices for investigation
-- **Small group organization**: Tag a handful of devices with special requirements
-- **Temporary classifications**: Mark devices during incident response
-
-**Example**: Tag devices involved in an active investigation with "Investigation-2026-01" to easily track them.
-
-### Dynamic tags
-
-Dynamic tags automatically apply to devices based on rules you define. Dynamic tags update as device properties change. Use dynamic tags for:
-
-- **Large-scale organization**: Automatically tag devices by location, department, or function
-- **Maintaining accuracy**: Tags stay current as devices change
-- **Custom data collection**: Target telemetry collection to specific device groups
-- **Automation rules**: Apply automated responses to device categories
-
-**Example**: Create a rule that automatically tags all devices in the "Domain Controllers" role with "Critical-Infrastructure".
+**Example use cases**:
+- **Manual tags**: Tag devices involved in an active investigation with "Investigation-2026-01" to easily track them
+- **Dynamic tags**: Automatically tag all devices in the "Domain Controllers" role with "Critical-Infrastructure"
 
 > [!IMPORTANT]
 > Many advanced Defender for Endpoint capabilities, including custom data collection, require dynamic tags. Manual tags are not supported for these scenarios.
 
 For detailed information on creating and managing both tag types, see [Create and manage device tags](machine-tags.md).
 
-## Security actions powered by targeting
+## Device groups for role-based access
+
+Device groups allow you to organize devices and control which security teams can access and manage them. Device groups are built using device tags and enable distributed security operations with proper governance.
+
+### What are device groups?
+
+In an enterprise scenario, security operation teams are typically assigned a set of devices. These devices are grouped together based on attributes such as their domains, computer names, or designated tags.
+
+Device groups enable you to:
+
+- **Limit access** to related alerts and data to specific Microsoft Entra user groups with assigned RBAC roles
+- **Configure different auto-remediation settings** for different sets of devices
+- **Assign specific remediation levels** to apply during automated investigations
+- **Filter investigations** by specific device groups using the **Group** filter in the device inventory
+
+### Create device groups
+
+When you create a device group, you'll:
+
+- Set the automated remediation level for that group (No automated response, Semi-require approval for various folders, or Full remediation)
+- Specify the matching rule that determines which devices belong to the group based on device name, domain, tags, and OS platform
+- Select the Microsoft Entra user groups that should have access to the device group
+- Rank the device group relative to other groups
+
+> [!NOTE]
+> A device group is accessible to all users if you don't assign any Microsoft Entra groups to it. If a device matches multiple groups, it's added only to the highest ranked device group.
+
+For detailed instructions on creating and managing device groups, see [Create and manage device groups](machine-groups.md).
+
+### Device groups vs. device tags
+
+| Aspect | Device tags | Device groups |
+|--------|-------------|---------------|
+| **Purpose** | Label devices with business context | Control access and apply security policies |
+| **Creation** | Manual or dynamic rules | Created in Defender portal using tags as criteria |
+| **Access control** | No access control | Limits access to specific user groups (RBAC) |
+| **Remediation settings** | No remediation settings | Configure automated remediation levels |
+| **Use for** | Filtering, searching, targeting actions | Role-based access, distributed security operations |
+| **Visibility** | All users see all tagged devices | Users only see devices in their assigned groups |
 
 Device targeting enables security operations across multiple areas:
 

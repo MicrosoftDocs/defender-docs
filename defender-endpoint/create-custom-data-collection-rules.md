@@ -18,6 +18,7 @@ search.appverid:
   - MOE150
   - MET150
 ms.date: 11/12/2025
+ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint
 ---
@@ -35,12 +36,12 @@ This article shows you how to create and manage custom data collection rules in 
 
 Ensure you have:
 
-- **Microsoft Defender for Endpoint Plan 2** license
-- **Connected Microsoft Sentinel workspace** (required for custom data storage)
-- **Dynamic tags** configured in [Asset Rule Management](/defender-xdr/configure-asset-rules) and run at least once
-- **Supported operating systems**:
-  - Windows 10 and 11 (minimum client version 10.8805; Windows 10 requires ESU enrollment)
-  - Windows Server 2019 and later
+| Requirement | Details |
+|-------------|---------|
+| **License** | Microsoft Defender for Endpoint Plan 2 |
+| **Microsoft Sentinel workspace** | Connected Microsoft Sentinel workspace (required for custom data storage) |
+| **Dynamic tags** | Configured in [Asset Rule Management](/defender-xdr/configure-asset-rules) and run at least once |
+| **Supported operating systems** | • Windows 10 and 11 (minimum client version 10.8805; Windows 10 requires ESU enrollment)<br>• Windows Server 2019 and later |
 
 > [!IMPORTANT]
 > Even if you have a connected Microsoft Sentinel workspace, you must select the workspace when creating custom data collection rules.
@@ -52,88 +53,22 @@ Ensure you have:
 - Rule deployment typically takes 20 minutes to 1 hour
 - Custom collection operates alongside default configuration without interference
 
+### Security considerations
+
+Consider these security implications before creating rules:
+
+| Consideration | Details | Recommendation |
+|---------------|---------|----------------|
+| **Rule scope impact** | Overly broad rules generate large data volumes, increasing costs and making analysis difficult | Balance specificity with coverage by iterating and refining rules based on initial results |
+| **Too narrow rules** | May miss important security events | Test with pilot groups and monitor for gaps in coverage |
+| **Performance considerations** | Each device has a 25,000 event per rule per day limit | Use multiple focused rules rather than one overly broad rule; target rules carefully to devices where monitoring is essential |
+| **Testing strategy** | Deploying rules without testing can lead to unexpected costs or missed events | 1. Start with a small pilot group (5-10 devices)<br>2. Monitor data volume and event quality for 24-48 hours<br>3. Refine conditions based on results<br>4. Gradually expand to larger device groups<br>5. Review cost and performance metrics regularly |
+
 ### Data costs
 
 - Custom data collection is included with Microsoft Defender for Endpoint P2
 - **Data ingestion into Microsoft Sentinel incurs charges** based on your Sentinel billing
 - Target collection to specific device groups to control costs
-
-## Common use cases and examples
-
-Before creating rules, consider these common scenarios:
-
-### Use case 1: Monitor critical application folder
-
-**Scenario**: Track all file activity in a folder containing sensitive financial data
-
-**Rule configuration**:
-- **Table**: DeviceCustomFileEvents
-- **Action**: FileCreated, FileModified, FileDeleted
-- **Condition**: FolderPath contains "\\\\FinanceApp\\\\Data\\\\"
-- **Target**: Dynamic tag "Finance-Servers"
-
-**Security value**: Detect unauthorized access, data exfiltration attempts, or ransomware activity targeting sensitive data.
-
-### Use case 2: Detect lateral movement
-
-**Scenario**: Monitor remote connections to domain controllers for lateral movement indicators
-
-**Rule configuration**:
-- **Table**: DeviceCustomNetworkEvents
-- **Action**: ConnectionSuccess
-- **Condition**: RemotePort equals "445" OR RemotePort equals "3389"
-- **Target**: Dynamic tag "Domain-Controllers"
-
-**Security value**: Identify suspicious authentication attempts and remote desktop connections that may indicate lateral movement.
-
-### Use case 3: Track PowerShell execution on admin workstations
-
-**Scenario**: Collect all PowerShell script executions for security analysis
-
-**Rule configuration**:
-- **Table**: DeviceCustomScriptEvents
-- **Action**: ScriptRun
-- **Condition**: FileName equals "powershell.exe"
-- **Target**: Dynamic tag "Admin-Workstations"
-
-**Security value**: Detect fileless malware, malicious scripts, or unauthorized automation on privileged systems.
-
-### Use case 4: Monitor DLL injection
-
-**Scenario**: Track suspicious DLL loads into critical processes
-
-**Rule configuration**:
-- **Table**: DeviceCustomImageLoadEvents
-- **Action**: ImageLoad
-- **Condition**: InitiatingProcessFileName equals "lsass.exe" OR InitiatingProcessFileName equals "explorer.exe"
-- **Target**: Dynamic tag "Sensitive-Workstations"
-
-**Security value**: Identify code injection techniques used by malware or attackers for privilege escalation or persistence.
-
-## Security considerations
-
-Before creating rules, understand these security implications:
-
-### Rule scope impact
-
-- **Overly broad rules** generate large data volumes, increasing costs and making analysis difficult
-- **Too narrow rules** may miss important security events
-- **Balance specificity** with coverage by iterating and refining rules based on initial results
-
-### Performance considerations
-
-- Each device has a 25,000 event per rule per day limit
-- Reaching the limit early stops collection for up to 24 hours
-- Target rules carefully to devices where monitoring is essential
-- Use multiple focused rules rather than one overly broad rule
-
-### Testing strategy
-
-1. Start with a small pilot group (5-10 devices) using a specific dynamic tag
-2. Monitor data volume and event quality for 24-48 hours
-3. Refine conditions based on initial results
-4. Gradually expand to larger device groups
-5. Review cost and performance metrics regularly
 
 ### Create rules
 
@@ -179,9 +114,11 @@ It can take up to an hour for the rule to be deployed to the targeted devices.
 
 ## Monitor and troubleshoot
 
+After deploying custom data collection rules, monitor their performance and troubleshoot any issues.
+
 ### Verify rule deployment
 
-To check if a rule is collecting data from a specific device, query the custom event tables:
+To check if a rule is collecting data from a specific device, query the custom event tables in advanced hunting:
 
 ```kusto
 search in (DeviceCustomFileEvents, DeviceCustomScriptEvents, DeviceCustomNetworkEvents, DeviceCustomProcessEvents, DeviceCustomImageLoadEvents) "your_device_id"
@@ -194,19 +131,21 @@ search in (DeviceCustomFileEvents, DeviceCustomScriptEvents, DeviceCustomNetwork
 
 | Issue | Possible cause | Solution |
 |-------|---------------|----------|
-| No events collected | Rule not yet deployed | Wait up to 1 hour for deployment; check rule status |
-| No events collected | Device not targeted correctly | Verify dynamic tag is applied to device and tag rule has run |
+| No events collected | Rule not yet deployed | Wait up to 1 hour for deployment; check rule status in the portal |
+| No events collected | Device not targeted correctly | Verify dynamic tag is applied to device and tag rule has run in Asset Rule Management |
 | Events stopped collecting | 25,000 event limit reached | Review rule conditions to make them more specific; wait for 24-hour window to reset |
-| Unexpected devices collecting data | Dynamic tag applied broadly | Review tag rules in Asset Rule Management; refine targeting |
-| Rule not visible on device | Device doesn't meet OS requirements | Check client version and OS version meet minimum requirements |
+| Unexpected devices collecting data | Dynamic tag applied broadly | Review tag rules in Asset Rule Management; refine targeting criteria |
+| Rule not visible on device | Device doesn't meet OS requirements | Check client version and OS version meet minimum requirements (Windows 10/11 version 10.8805+, Windows Server 2019+) |
+| Custom collection not initializing | EDR exclusions may prevent collection | Check for EDR exclusions on target paths or processes; device reboots may be required if custom collection isn't initializing |
+| Tags not updating | Dynamic tags haven't run recently | Dynamic tags update approximately every hour—check **Last run time** in Asset Rule Management |
 
-### Monitoring considerations
+### Monitor rule performance
 
-- **EDR exclusions** may prevent custom collection on excluded paths or processes
-- **Dynamic tags update approximately every hour**—check **Last run time** in Asset Rule Management
-- **Device reboots** may be required if custom collection isn't initializing after feature enablement
+- **Check event volume**: Query custom event tables to see how many events each rule is collecting
+- **Review collection status**: Monitor whether devices are approaching the 25,000 event per rule per day limit
+- **Validate targeting**: Ensure rules are deploying to the correct devices based on your dynamic tags
 
-### Collect all events for a table
+### Collect all events for testing
 
 To collect all events from a specific table (for testing or comprehensive monitoring):
 
@@ -225,24 +164,24 @@ To collect all events from a specific table (for testing or comprehensive monito
 
 ### Edit a rule
 
-1. Navigate to **Settings** > **Endpoints** > **Rules** > **Custom Collection**
+1. Navigate to **Settings** > **Endpoints** > **Rules** > **Custom Data Collection**
 2. Select the rule you want to edit
 3. Select **Edit**
-4. Modify rule settings as needed
+4. Modify rule settings as needed (name, description, table, actions, conditions, or device targeting)
 5. Select **Submit**
 
 Changes take effect on targeted devices within 20 minutes to 1 hour.
 
-### Disable or enable a rule
+### Enable or disable a rule
 
-1. In **Custom Collection**, select the rule
+1. In **Custom Data Collection**, select the rule
 2. Select or clear the **Enable** checkbox under the rule description
 
-When you disable a rule, data collection stops on all targeted devices immediately (within the next agent check-in).
+When you disable a rule, data collection stops on all targeted devices within the next agent check-in (typically within minutes to 1 hour).
 
 ### Delete a rule
 
-1. In **Custom Collection**, select the rule
+1. In **Custom Data Collection**, select the rule
 2. Select **Delete**
 3. Confirm deletion
 
