@@ -62,15 +62,9 @@ To fully benefit from UEBA's advanced threat detection capabilities:
 
 ## Investigate anomalies using UEBA data
 
-This section provides an overview of the data in each of the UEBA tables. 
-
-### UEBA tables
-
 Microsoft Sentinel stores UEBA insights across several tables, each optimized for a different purpose. Analysts commonly correlate data across these tables to investigate anomalous behavior end to end.
 
-> [!NOTE]
-> The [UEBA behaviors layer](#aggregate-behavior-insights-with-the-ueba-behaviors-layer-preview) is a separate capability that you enable independently from UEBA. The `SentinelBehaviorInfo` and `SentinelBehaviorEntities` tables are only created in your workspace if you enable the behaviors layer.
-
+This table provides an overview of the data in each of the UEBA tables: 
 
 | Table | Purpose | Key details |
 |-------|---------|-------------|
@@ -80,6 +74,9 @@ Microsoft Sentinel stores UEBA insights across several tables, each optimized fo
 | [Anomalies](/azure/azure-monitor/reference/tables/anomalies) | Events identified as anomalous | Supports detection and investigation workflows. |
 | [SentinelBehaviorInfo](/azure/azure-monitor/reference/tables/sentinelbehaviorinfo) (Preview) | Summary of behaviors identified in raw logs | Translates raw security logs into structured "who did what to whom" summaries with natural language explanations and MITRE ATT&CK mappings.  |
 | [SentinelBehaviorEntities](/azure/azure-monitor/reference/tables/sentinelbehaviorentities) (Preview) | Profiles of entities involved in identified behaviors | Information about entities - such as files, processes, devices, and users - involved in detected behaviors. |
+
+> [!NOTE]
+> The [UEBA behaviors layer](#aggregate-behavior-insights-with-the-ueba-behaviors-layer-preview) is a separate capability that you enable independently from UEBA. The `SentinelBehaviorInfo` and `SentinelBehaviorEntities` tables are only created in your workspace if you enable the behaviors layer.
 
 This screenshot shows an example of data in the `UserPeerAnalytics` table with the eight highest-ranked peers for the user Kendall Collins. Sentinel uses the TF-IDF algorithm to normalize weights when calculating peer ranks. Smaller groups carry higher weight.
 
