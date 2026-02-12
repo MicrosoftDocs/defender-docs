@@ -20,7 +20,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn about email quarantine in Microsoft 365 that holds potentially dangerous or unwanted messages.
 ms.service: defender-office-365
-ms.date: 01/26/2026
+ms.date: 02/02/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -36,6 +36,8 @@ In all organizations with cloud mailboxes, quarantine is available to hold poten
 
 > [!NOTE]
 > In Microsoft 365 operated by 21Vianet in China, quarantine isn't currently available in the Microsoft Defender portal. Quarantine is available only in the classic Exchange admin center (classic EAC).
+>
+> You can't completely turn off quarantine in Microsoft 365. Malware and high-confidence phishing messages are always quarantined to protect the service. Admin can reduce quarantined messages by changing actions to deliver messages to the Junk Email folder instead of quarantinemod in anti-spam polices and anti-phishing policies.
 
 Whether a detected message is quarantined by default depends on the following factors:
 
