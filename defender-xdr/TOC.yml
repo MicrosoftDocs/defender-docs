@@ -478,7 +478,7 @@
           items:
           - name: Overview
             href: security-copilot-agents-defender.md          
-          - name: Alert Triage Agent
+          - name: Alert Triage Agent (Preview)
             items:
             - name: Overview
               href: alert-triage-agent-overview.md

@@ -23,7 +23,7 @@ appliesto:
 #customer intent: As a security analyst, I want to learn about the Alert Triage Agent in Microsoft Defender so that I can understand its capabilities and benefits for triaging security incidents at scale.
 ---
 
-# Alert Triage Agent overview
+# Alert Triage Agent overview (Preview)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -32,6 +32,9 @@ The Alert Triage Agent is an autonomous Microsoft Security Copilot agent that he
 The Alert Triage Agent evaluates alerts using AI‑driven reasoning, determines their relevance and risk, and records its conclusions directly in Microsoft Defender incidents. This reduces alert fatigue, accelerates response, and helps analysts focus on the alerts that matter most.
 
 This article provides an overview of the Alert Triage Agent model, its benefits, and its alert triage capabilities.
+
+> [!NOTE]
+> The Alert Triage Agent is currently in preview. It builds on the same capabilities as the [Phishing Triage Agent](phishing-triage-agent.md), which is generally available and has proven highly successful with customers. The Alert Triage Agent extends the same underlying technology to support additional alert types beyond phishing.
 
 ## How the Alert Triage Agent works
 
