@@ -148,7 +148,7 @@ To use the quick "double-click" default installation:
 
 1. Wait until installation is complete, and then select **OK**. No device reboot is required.
 
-   :::image type="content" source="./media/defender-deployment-tool-windows/onboarding-process-completed-message.png" alt-text="Screenshot showing the message indicating that onboarding is complete.":::
+   :::image type="content" source="./media/defender-deployment-tool-windows/onboarding-complete.png" alt-text="Screenshot showing the message indicating that onboarding is complete.":::
 
 ### Non-interactive use
 
