@@ -93,9 +93,9 @@ You can temporarily pause the agent's activities and resume them as needed:
 
 When paused, the agent will not process new alerts, but existing incident data remains unchanged.
 
-## View and manage feedback to the agent
+## View and manage feedback to the agent (Microsoft Defender for Office 365 alerts)
 
-The Alert Triage Agent learns from user-submitted feedback and improves its performance over time. It stores applicable feedback in its memory as lessons. You can view and manage feedback for the Alert Triage Agent on the **Agent feedback** page.
+For phishing alerts that come from Microsoft Defender for Office 365 alerts, the Alert Triage Agent learns from user-submitted feedback and improves its performance over time. It stores applicable feedback in its memory as lessons. You can view and manage feedback for the Alert Triage Agent on the **Agent feedback** page.
 
 This page provides a comprehensive list of all feedback submitted to the agent. You can review key details for each piece of feedback, including:
 
