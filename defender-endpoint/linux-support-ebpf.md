@@ -194,7 +194,7 @@ Top syscall ids:
 87 : 3
 ```
 
-In the previous output, you can see that stress-ng is the top process generating large number of events and might result into performance issues. Most likely stress-ng is generating the system call with ID 82. You can create a ticket with Microsoft to get this process excluded. In future as part of upcoming enhancements, you have more control to apply such exclusions at your end.
+In the previous output, you can see that stress-ng is the top process generating large number of events and might result into performance issues. Most likely stress-ng is generating the system call with ID 82. You can create a ticket with Microsoft to get this process excluded.
 
 Exclusions applied to AuditD can't be migrated or copied to eBPF. Common concerns such as noisy logs, kernel panic, noisy syscalls are already taken care of by eBPF internally. In case you want to add any further exclusions, then reach out to Microsoft to get the necessary exclusions applied.
 

@@ -13,8 +13,7 @@ ms.collection:
 - tier2
 ms.topic: how-to
 search.appverid: met150
-ms.date: 12/18/2025
-ai-usage: ai-assisted
+ms.date: 02/03/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -198,7 +197,7 @@ Now that you understand how to explore the device inventory, continue through th
   - **Exclusion state**
   - **Device role**<sup>*</sup>
   - **Managed by**<sup>*</sup>: Valid values are: **Intune**, **ConfigMgr**, **MDE**, or **Unknown**.
-  - **Managed by status**<sup>*</sup>: Status values from the **Managed by** authority. For example, **Success**.
+  - **Managed by status**<sup>*</sup>: Status values from the **Managed by** authority. For example, **Success**. This field has the status **Unknown** for devices that aren't managed by Defender for Endpoint (for example, Intune or ConfigMgr).
   - **Mitigation status**<sup>*</sup>
   - **Cloud platforms**<sup>*</sup>
 
@@ -228,7 +227,7 @@ Now that you understand how to explore the device inventory, continue through th
   - **Device role**<sup>*</sup>
   - **Managed by**<sup>*</sup>
   - **Managed by**<sup>*</sup>: Valid values are: **Intune**, **ConfigMgr**, **MDE**, or **Unknown**.
-  - **Managed by status**<sup>*</sup>: Status values from the **Managed by** authority. For example, **Success**.
+  - **Managed by status**<sup>*</sup>: Status values from the **Managed by** authority. For example, **Success**. This field has the status **Unknown** for devices that aren't managed by Defender for Endpoint (for example, Intune or ConfigMgr).
   - **Cloud platforms**<sup>*</sup>
 
 - **Network devices** tab:
