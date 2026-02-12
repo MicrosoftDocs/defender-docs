@@ -7,7 +7,7 @@ author: Elazark
 ms.date: 11/27/2025
 ---
 
-# Deploy Defender sensor and policy to clusters using Azure CLI
+# Deploy Defender sensor and Azure Policy to clusters using Azure CLI
 
 This article explains how to deploy the Microsoft Defender for Containers sensor and Azure Policy for Kubernetes to clusters by using Azure CLI after [enabling the Defender for Containers plan in Microsoft Defender for Cloud](defender-for-containers-enable-portal.md).
 
@@ -17,7 +17,7 @@ For clusters that aren’t running in Azure Kubernetes Service (AKS), Defender f
 
 ## Prerequisites
 
-- [Defender for Containers enabled on your Azure subcription](defender-for-containers-enable-portal.md?tab=aks).
+- [Defender for Containers enabled on your Azure subscription](defender-for-containers-enable-portal.md?tab=aks).
 
 - Azure CLI version 2.40.0 or later. 
 
@@ -106,7 +106,7 @@ The output should show `enabled: true`.
 
 - The EKS cluster is [connected to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
 
-- - If you've enabled agentless threat protection, Kubernetes API access, or registry access, [configure the required external settings](defender-for-containers-configure-external-requirements.md?tab=eks).
+- If you've enabled agentless threat protection, Kubernetes API access, or registry access, [configure the required external settings](defender-for-containers-configure-external-requirements.md?tab=eks).
 
 ## Network requirements
 
@@ -170,13 +170,20 @@ Confirm that the following extensions are listed with `provisioningState` set to
 - `microsoft.azuredefender.kubernetes`
 - `azurepolicy`
 
-### Verify that the Defender for Containers DaemonSet is deployed and running
+### Verify that the Defender sensor is running in the cluster
 
 ```bash
-kubectl get daemonsets -n kube-system
+kubectl get ds microsoft-defender-collector-ds -n kube-system
+```
+Confirm that one pod is running per node.
+
+You can also verify the DaemonSet status:
+
+```bash
+kubectl get ds microsoft-defender-collector-ds -n kube-system
 ```
 
-Confirm that a Defender for Containers DaemonSet is listed and that the **DESIRED**, **CURRENT**, and **READY** columns show matching values.
+The **DESIRED**, **CURRENT**, and **READY** values should match the number of cluster nodes.
 
 # [Google Kubernetes Engine (GKE)](#tab/gke)
 
@@ -295,13 +302,20 @@ Confirm that the following extensions are listed with `provisioningState` set to
 - `microsoft.azuredefender.kubernetes`
 - `azurepolicy`
 
-### Verify that the Defender for Containers DaemonSet is deployed and running
+### Verify that the Defender sensor is running in the cluster
 
 ```bash
-kubectl get daemonsets -n kube-system
+kubectl get ds microsoft-defender-collector-ds -n kube-system
+```
+Confirm that one pod is running per node.
+
+You can also verify the DaemonSet status:
+
+```bash
+kubectl get ds microsoft-defender-collector-ds -n kube-system
 ```
 
-Confirm that a Defender for Containers DaemonSet is listed and that the **DESIRED**, **CURRENT**, and **READY** columns show matching values.
+The **DESIRED**, **CURRENT**, and **READY** values should match the number of cluster nodes.
 
 # [Arc-enabled Kubernetes](#tab/arc)
 
@@ -387,11 +401,20 @@ Confirm that the following extensions are listed with `provisioningState` set to
 - `microsoft.azuredefender.kubernetes`
 - `azurepolicy`
 
-### Verify that the Defender sensor DaemonSet is running
+### Verify that the Defender sensor is running in the cluster
 
 ```bash
-kubectl get daemonsets -n kube-system
+kubectl get ds microsoft-defender-collector-ds -n kube-system
 ```
+Confirm that one pod is running per node.
+
+You can also verify the DaemonSet status:
+
+```bash
+kubectl get ds microsoft-defender-collector-ds -n kube-system
+```
+
+The **DESIRED**, **CURRENT**, and **READY** values should match the number of cluster nodes.
 
 ---
 
