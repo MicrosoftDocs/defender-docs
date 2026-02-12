@@ -1,25 +1,27 @@
 ---
-title: Remediate Defender for Endpoint misconfiguration issues in Microsoft Defender for Cloud
-description: Identify and remediate Defender for Endpoint misconfigurations in Defender for Cloud
+title: Investigate Defender for Endpoint misconfiguration recommendations (agentless)
+description: Learn how to investigate Defender for Endpoint misconfiguration recommendations detected by Microsoft Defender for Cloud.
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
 ms.date: 02/19/2025
 ai-usage: ai-assisted
-#customer intent: As a user, I want to learn how to review and remediate endpoint detection and response recommendations in order to ensure the security of my virtual machine.
+#customer intent: As a user, I want to learn how to review endpoint detection and response configuration recommendations in order to ensure the security of my virtual machine.
 ---
 
-# Remediate Defender for Endpoint misconfigurations (agentless)
+# Investigate Defender for Endpoint misconfiguration recommendations (agentless)
 
-Microsoft Defender for Cloud integrates natively with [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) to provide endpoint detection and response (EDR) capabilities for machines connected to Defender for Cloud.
+Microsoft Defender for Cloud integrates with [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) to identify endpoint detection and response configuration issues for machines.
 
-As part of these [integrated EDR capabilities](integration-defender-for-endpoint.md), Defender for Cloud agentlessly scans machines to assess whether they're running an EDR solution. In addition, for machines using Defender for Endpoint as an EDR, Defender for Servers agentlessly scans the machines with security checks that assess whether Defender for Endpoint is configured correctly. Checks include:
+As part of these [integrated capabilities](integration-defender-for-endpoint.md), Defender for Cloud uses agentless scanning to evaluate whether Defender for Endpoint is configured correctly on protected machines. Examples of these checks include:
 
 - `Both full and quick scans are out of 7 days`
 - `Signature out of date`
 - `Anti-virus is off or partially configured`
 
-When misconfigurations are found, Defender for Cloud makes recommendations to fix them. This article describes how to remediate those recommendations.
+When misconfigurations are found, Defender for Cloud generates recommendations. Remediation actions are completed in Microsoft Defender for Endpoint or on the affected machine. 
+
+This article explains how to investigate these recommendations and view the remediation guidance provided for each finding.
 
 > [!NOTE]
 >
@@ -29,15 +31,21 @@ When misconfigurations are found, Defender for Cloud makes recommendations to fi
 
 ## Prerequisites
 
-**Requirement** | **Details**
---- | ---
-**Plan** | [Defender for Cloud](connect-azure-subscription.md) must be available in the Azure subscription and one of these plans must be enabled:<br/><br/>- [Defender for Servers Plan 2](tutorial-enable-servers-plan.md)<br/>- [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md)
-**Agentless scanning** | [Agentless scanning for machines](concept-agentless-data-collection.md) must be turned on. It's enabled by default in the plans, but if you need to turn it on manually, [follow these instructions](enable-agentless-scanning-vms.md).
-**Machines** | Defender for Endpoint must be running as the EDR solution on VMs.
+Before you start, make sure that: 
+
+- [Defender for Cloud](connect-azure-subscription.md) is enabled on your subscription with one of the following plans:
+    - [Defender for Servers Plan 2](tutorial-enable-servers-plan.md)
+    - [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md)
+- [Agentless scanning for machines](concept-agentless-data-collection.md) is enabled. If needed, you can [enable it manually](enable-agentless-scanning-vms.md).
+- Defender for Endpoint is running as the EDR solution on the virtual machines.
 
 ## Investigate misconfiguration recommendations
 
-1. In **Defender for Cloud** > **Recommendations**.
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Search for and select **Defender for Cloud**.
+
+1. In the Defender for Cloud menu, select **Recommendations**.
 
 1. Search for and select one of the following recommendations:
 
@@ -47,23 +55,24 @@ When misconfigurations are found, Defender for Cloud makes recommendations to fi
 
     :::image type="content" source="media/endpoint-detection-response/configurable-solutions.png" alt-text="Screenshot that shows the recommendations that configure your endpoint detection and solution and remediate misconfigurations." lightbox="media/endpoint-detection-response/configurable-solutions.png":::
 
-1. Select each of the security checks to review the affected resources.
+1. Select a security check to review the affected resources.
 
     :::image type="content" source="media/endpoint-detection-response/affected-resources.png" alt-text="Screenshot that shows a selected security check and the affected resources." lightbox="media/endpoint-detection-response/affected-resources.png":::
 
-1. Expand the **Affected resources** section
+1. Expand **Affected resources**.
 
      :::image type="content" source="media/endpoint-detection-response/affected-resources-section.png" alt-text="Screenshot that shows you where you need to select on screen to expand the affected resources section.":::
 
 1. Review the resource findings.
     :::image type="content" source="media/endpoint-detection-response/resources-findings.png" alt-text="Screenshot that shows the findings of an affected unhealthy resource." lightbox="media/endpoint-detection-response/resources-findings.png":::
 
-1. Drill into the security check, and follow the remediation steps.
+1. Drill into the security check to view the remediation steps provided with the recommendation, and complete the remediation in Defender for Endpoint or on the affected machine.
 
     :::image type="content" source="media/endpoint-detection-response/security-check-remediation.png" alt-text="Screenshot that shows the additional details section.":::
 
-After the process is completed, it can take up to 24 hours until your machine appears in the **Healthy resources** tab.
+After remediation is completed, it can take up to 24 hours for the machine to appear in the **Healthy resources** tab.
 
 ## Related content
 
-[Verify](endpoint-detection-response.md) that machines have an EDR solution configured.
+- [Verify that machines have an EDR solution configured](endpoint-detection-response.md)
+- [Implement security recommendations](implement-security-recommendations.md)
