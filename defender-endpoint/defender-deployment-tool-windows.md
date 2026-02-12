@@ -109,11 +109,11 @@ SHA-2 update (KB4474419) released September 10, 2019. If you use Windows U
 
    :::image type="content" source="./media/defender-deployment-tool-windows/configure-deployment-package.png" alt-text="Screenshot showing the how to configure a new deployment package." lightbox="./media/defender-deployment-tool-windows/configure-deployment-package.png":::
 
-   Provide a name for the package. Be sure to create a name that is unique and descriptive.
+   * Provide a name for the package. Be sure to create a name that is unique and descriptive.
 
-   Set an expiration date for the package. You can set the expiration date for any time up to a year. It is recommended to make the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use.
+   * Set an expiration date for the package. You can set the expiration date for any time up to a year. It is recommended to make the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use.
    
-   When you've done configuring the package, select **Generate**.
+   * When you've done configuring the package, select **Generate**.
 
 1. When the package is ready, you'll see a page that has the package access key and a download button, similar to the following image.
 
