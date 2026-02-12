@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "advanced-threat-analytics/ata-privacy-compliance.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/ata-privacy-compliance.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/manage-telemetry-settings.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/manage-telemetry-settings",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "advanced-threat-analytics/ATA-versions.md",
       "redirect_url": "/previous-versions/advanced-threat-analytics/ATA-versions",
       "redirect_document_id": false
