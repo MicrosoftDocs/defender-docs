@@ -116,7 +116,7 @@ SHA-2 update (KB4474419) released September 10, 2019. If you use Windows U
 
 1. When the package is ready, you'll see a page that has the package access key and a download button, similar to the following image.
 
-   :::image type="content" source="./media/defender-deployment-tool-windows/deployment-package-download-page.png" alt-text="Screenshot showing the how to configure a new deployment package." lightbox="./media/defender-deployment-tool-windows/deployment-package-download-page.png":::
+   :::image type="content" source="./media/defender-deployment-tool-windows/deployment-package-download-page.png" alt-text="Screenshot showing the key that is generated for the deployment tool package." lightbox="./media/defender-deployment-tool-windows/deployment-package-download-page.png":::
 
    Copy the key and save it, as it will be needed with the deployment tool.
 
@@ -143,6 +143,10 @@ To use the quick "double-click" default installation:
 1. Double-click the executable to launch it.
 
 1. In the dialog that appears, select **Continue**.
+
+1. In the next dialog that appears, enter the Defender deployment tool key and then select **Continue**.
+
+   :::image type="content" source="./media/defender-deployment-tool-windows/double-click-mode.png" alt-text="Screenshot illustrating running the Defender deployment tool in double-click mode." lightbox="./media/defender-deployment-tool-windows/double-click-mode.png":::
 
 1. On the next page that appears, enter the Defender deployment key generated in the portal.
 
