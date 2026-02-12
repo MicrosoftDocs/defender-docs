@@ -87,8 +87,7 @@ The following table describes the behavior analytics data displayed on each [ent
 > - The first, in **bold**, is the "friendly name" of the enrichment.
 > - The second *(in italics and parentheses)* is the field name of the enrichment as stored in the [**Behavior Analytics table**](#behavioranalytics-table).
 
-<details>
-<summary><h4>UsersInsights field</h4></summary>
+<details><summary><h4>UsersInsights field</h4></summary>
 
 The following table describes the enrichments featured in the **UsersInsights** dynamic field in the BehaviorAnalytics table:
 
@@ -105,8 +104,7 @@ The following table describes the enrichments featured in the **UsersInsights** 
 
 </details>
 
-<details>
-<summary><h4>DevicesInsights field</h4></summary>
+<details><summary><h4>DevicesInsights field</h4></summary>
 
 The following table describes the enrichments featured in the **DevicesInsights** dynamic field in the BehaviorAnalytics table:
 
@@ -124,8 +122,7 @@ The following table describes the enrichments featured in the **DevicesInsights*
 
 </details>
 
-<details>
-<summary><h4>ActivityInsights field</h4></summary>
+<details><summary><h4>ActivityInsights field</h4></summary>
 
 The following tables describe the enrichments featured in the **ActivityInsights** dynamic field in the BehaviorAnalytics table:
 
