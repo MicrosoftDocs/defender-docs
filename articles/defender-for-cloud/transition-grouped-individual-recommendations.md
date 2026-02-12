@@ -1,6 +1,6 @@
 ---
 title: Transition from grouped to individual recommendations in Defender for Cloud
-description: Learn about the transition from grouped (legacy) to individual (dynamic) recommendations in Microsoft Defender for Cloud, including operational impacts and best practices.
+description: Learn about the transition from grouped to individual recommendations in Microsoft Defender for Cloud, including operational impacts and best practices.
 ms.topic: conceptual
 author: dlanger
 ms.author: DebLanger
@@ -18,17 +18,18 @@ Defender for Cloud is evolving its posture management model. During this transit
 - **Grouped recommendations (also known as sub-assessment)**
 - **Individual recommendations**
 
-This change improves the way grouped recommendations are presented, prioritized, and managed. This article explains what is changing, and outlines the recommended best practices to operate effectively during the transition period.
+This change improves the way grouped recommendations are presented, prioritized, and managed. 
 
 Operationally, customers should expect workflow adjustments while both models are available.
 
+This article explains what is changing, and outlines the recommended best practices to operate effectively during the transition period.
 ---
 
 ## Grouped vs. individual recommendations
 
-The following table summarizes the behavioral and operational differences between grouped (legacy) and individual (dynamic) recommendations.
+The following table summarizes the behavioral and operational differences between grouped and individual recommendations.
 
-| Aspect | Grouped recommendations (also known as Sub-assessment) | Individual recommendations |
+| Aspect | Grouped recommendations | Individual recommendations |
 |------|----------------------------------|--------------------------------------|
 | Availability | Available in the Azure portal | Available in Azure and Defender portals |
 | Structure | Aggregates multiple findings under a single parent recommendation (for example, multiple virtual machine vulnerabilities rolled up into one recommendation) | Flat list where each finding appears as a separate recommendation |
@@ -83,6 +84,7 @@ During the transition, both recommendation models may appear simultaneously.
 - Filter views based on the model your team is currently using
 - Avoid leaving both models unfiltered unless explicitly required
 
+:::image type="content" source="media/transition-grouped-individual-recommendations/recommendations-tags.png" alt-text="Screenshot of recommendation tags interface showing options for 'New version' and 'Set for deprecation' to filter recommendations." lightbox="media/transition-grouped-individual-recommendations/recommendations-tags.png":::
 ---
 
 ## Secure Score during the transition
@@ -143,6 +145,18 @@ Choose the aggregation that matches the task:
 - Asset investigation: **View by resource**
 
 ---
+
+## How to manage the new individual recommendations
+
+With the transition to **individual recommendations**, all Microsoft Defender for Cloud experiences continue to support **Governance rules**, **Continuous export**, and **Exemptions**. The main change is how these actions are scoped.
+
+Individual recommendations are created per software update, secret, or issue type. Because they are generated dynamically, actions are no longer applied to a single static recommendation. Instead, management actions are now applied at the **security category** level, which provides a stable way to manage both existing and newly created recommendations.
+
+Governance rules, Continuous export, and Exemptions continue to work as they do today, but instead of targeting a grouped recommendation key, you now target a **security category**. Each category automatically includes all current and future individual recommendations of that type.
+
+The updated management experience is available in **Environment settings**, under **Governance rules** and **Exemption rules**, where you can apply ownership, automation, or exemptions consistently across an entire category of individual recommendations.
+
+:::image type="content" source="media/transition-grouped-individual-recommendations/recommendation-categories.png" alt-text="Screenshot of available recommendation categories." lightbox="media/transition-grouped-individual-recommendations/recommendation-categories.png":::
 
 ## What you should do now
 

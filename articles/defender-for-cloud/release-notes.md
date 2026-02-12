@@ -47,7 +47,7 @@ Microsoft Defender for Cloud is converting grouped recommendations into individu
 
 You might see a longer list of recommendations than before. Combined findings (such as vulnerabilities, exposed secrets, or misconfigurations) now show as individual recommendations rather than nested under a parent recommendation.
 
-The grouped recommendations will still show side by side with the new format for now, but they will be deprecated soon.
+The grouped recommendations will still show side by side with the new format for now, but they will be deprecated in several months.
 
 The new individual recommendations are marked as **Preview** with additional **New version** tag. These tags indicate that the recommendation is in an early state and doesn't affect Secure Score yet, as well as allowing you to filter the recommendations by it.
 
@@ -68,9 +68,13 @@ You can now manage exemptions at scale instead of for each recommendation.
    You apply targeted exemptions and measure security progress accurately.
 
 > [!NOTE]
-> The old grouped recommendations still appear side by side with the new format for now, but they will be deprecated soon.
+> The grouped recommendations still appear side by side with the new format for now, but they will be deprecated in several months.
 
-Learn more about [reviewing security recommendations](review-security-recommendations.md). Learn more about best practices for [transitioning from grouped to individual recommendations](transition-grouped-individual-recommendations.md).
+>[!Important]
+>To suport with the transition, you can learn more about best practices for [transitioning from grouped to individual recommendations](transition-grouped-individual-recommendations.md).
+
+Learn more about [reviewing security recommendations](review-security-recommendations.md).
+
 
 
 ### Database-level recommendations experience for SQL Vulnerability Assessment (Preview)

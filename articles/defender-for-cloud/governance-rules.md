@@ -83,6 +83,7 @@ Conflicting rules are applied in scope order. For example, rules on a management
    - **By recommendation category**: The rule assigns an owner and due date to any recommendations that match the specified recommendation category.
      >[!NOTE]  
      >The recommendations category to implement governance rules is for use with the new individual recommendation format.
+     >:::image type="content" source="media/governance-rules/recommendation-categories.png" alt-text="Screenshot of the list of recommendation categories." lightbox="media/governance-rules/recommendation-categories.png":::
    - **By specific recommendations**: Select the specific built-in or custom recommendations that the rule applies to.
 
    To apply the rule to already-generated recommendations, you can rerun the rule using the UI or API.

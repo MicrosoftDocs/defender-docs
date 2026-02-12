@@ -64,11 +64,11 @@ These category tabs can help you focus your view by security category so that yo
 
 The Azure portal provides three distinct ways to view and interact with recommendations:
 
-#### Findings view
+#### Flat list view
 
 This view displays a list of all recommendations organized by individual assets, ordered by risk level. Each row represents a single recommendation affecting a specific resource.
 
-:::image type="content" source="media/review-security-recommendations/review-by-findings.png" alt-text="Screenshot of Azure portal Findings view showing a list of critical storage account recommendations by resource." lightbox="media/review-security-recommendations/review-by-findings.png":::
+:::image type="content" source="media/review-security-recommendations/review-by-findings.png" alt-text="Screenshot of Azure portal Flat list view showing a list of critical storage account recommendations by resource." lightbox="media/review-security-recommendations/review-by-findings.png":::
 
 When you select a recommendation row, a side panel opens displaying:
 
@@ -245,7 +245,8 @@ You can interact with recommendations in multiple ways. If an option isn't avail
 1. [Remediate the recommendation](implement-security-recommendations.md).
 
 >[!NOTE]
->During the preview transition, you may see Preview and New version indicators on certain recommendations. These tags distinguish new individual items from legacy grouped ones shown side by side. Use filters to limit the view to one format when needed.
+>During the preview transition, you may see Preview and New version indicators on certain recommendations. These tags distinguish new individual items from grouped ones shown side by side. Use filters to limit the view to one format when needed.
+>:::image type="content" source="media/transition-grouped-individual-recommendations/recommendations-tags.png" alt-text="Screenshot of recommendation tags interface showing options for 'New version' and 'Set for deprecation' to filter recommendations." lightbox="media/transition-grouped-individual-recommendations/recommendations-tags.png":::
 
 ::: zone-end
 
