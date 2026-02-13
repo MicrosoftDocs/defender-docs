@@ -2,12 +2,12 @@
 title: Recommendation methods and properties
 description: Retrieves the top recent alerts.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -19,13 +19,11 @@ ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
-
 ---
 
 # Recommendation resource type
 
-
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 ## Properties
 
@@ -58,6 +56,3 @@ appliesto:
 |nonProductivityImpactedAssets|Long|Number of devices that aren't affected|
 |relatedComponent|String|Related software component|
 |exposedCriticalDevices|Numeric|The sum of critical devices in all levels of criticality except "not critical" for a particular recommendation|
-
-
-

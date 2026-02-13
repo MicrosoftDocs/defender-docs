@@ -3,7 +3,7 @@ title: Host firewall reporting in Microsoft Defender for Endpoint
 description: Host and view firewall reporting in Microsoft Defender portal.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 05/08/2025
+ms.date: 12/18/2025
 audience: ITPro
 ms.topic: concept-article
 author: batamig
@@ -21,61 +21,66 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
+
 # Host firewall reporting in Microsoft Defender for Endpoint
 
-
-If you're a Global or security administrator, you can now host firewall reporting to the [Microsoft Defender portal](https://security.microsoft.com). This feature enables you to view Windows firewall reporting from a centralized location.
+Firewall reporting in the [Microsoft Defender portal](https://security.microsoft.com) enables you to view Windows firewall reporting from a centralized location.
 
 ## What do you need to know before you begin?
+
+- You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Firewall** page, use <https://security.microsoft.com/firewall>.
+
+- You need to be assigned permissions before you can do the procedures in this article. In [Microsoft Entra ID](/entra/identity/role-based-access-control/manage-roles-portal) you need to be a member of the **Global Administrator**<sup>\*</sup> or **Security Administrator** roles.
+
+  > [!IMPORTANT]
+  > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 - Your devices must be running Windows 10 or later, or Windows Server 2012 R2 or later. For Windows Server 2012 R2 and Windows Server 2016 to appear in firewall reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
 
 - To onboard devices to the Microsoft Defender for Endpoint service, see [onboarding guidance](onboard-configure.md).
 
 - For the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139) to start receiving data, you must enable **Audit Events** for Windows Defender Firewall with Advanced Security. See the following articles:
-
   - [Audit Filtering Platform Packet Drop](/windows/security/threat-protection/auditing/audit-filtering-platform-packet-drop)
   - [Audit Filtering Platform Connection](/windows/security/threat-protection/auditing/audit-filtering-platform-connection)
 
 - Enable these events by using Group Policy Object Editor, Local Security Policy, or the auditpol.exe commands. For more information, see [documentation about auditing and logging](/windows/win32/fwp/auditing-and-logging). The two PowerShell commands are as follows:
+  - `auditpol /set /subcategory:"Filtering Platform Packet Drop" /failure:enable`
+  - `auditpol /set /subcategory:"Filtering Platform Connection" /failure:enable`
 
-    - `auditpol /set /subcategory:"Filtering Platform Packet Drop" /failure:enable`
-    - `auditpol /set /subcategory:"Filtering Platform Connection" /failure:enable`
+  Here's an example query:
 
-   Here's an example query:
+  ```powershell
+  param (
+      [switch]$remediate
+  )
+  try {
 
-   ```powershell
-   param (
-       [switch]$remediate
-   )
-   try {
+      $categories = "Filtering Platform Packet Drop,Filtering Platform Connection"
+      $current = auditpol /get /subcategory:"$($categories)" /r | ConvertFrom-Csv    
+      if ($current."Inclusion Setting" -ne "failure") {
+          if ($remediate.IsPresent) {
+              Write-Host "Remediating. No Auditing Enabled. $($current | ForEach-Object {$_.Subcategory + ":" + $_.'Inclusion Setting' + ";"})"
+              $output = auditpol /set /subcategory:"$($categories)" /failure:enable
+              if($output -eq "The command was successfully executed.") {
+                  Write-Host "$($output)"
+                  exit 0
+              }
+              else {
+                  Write-Host "$($output)"
+                  exit 1
+              }
+          }
+          else {
+              Write-Host "Remediation Needed. $($current | ForEach-Object {$_.Subcategory + ":" + $_.'Inclusion Setting' + ";"})."
+              exit 1
+          }
+      }
 
-       $categories = "Filtering Platform Packet Drop,Filtering Platform Connection"
-       $current = auditpol /get /subcategory:"$($categories)" /r | ConvertFrom-Csv    
-       if ($current."Inclusion Setting" -ne "failure") {
-           if ($remediate.IsPresent) {
-               Write-Host "Remediating. No Auditing Enabled. $($current | ForEach-Object {$_.Subcategory + ":" + $_.'Inclusion Setting' + ";"})"
-               $output = auditpol /set /subcategory:"$($categories)" /failure:enable
-               if($output -eq "The command was successfully executed.") {
-                   Write-Host "$($output)"
-                   exit 0
-               }
-               else {
-                   Write-Host "$($output)"
-                   exit 1
-               }
-           }
-           else {
-               Write-Host "Remediation Needed. $($current | ForEach-Object {$_.Subcategory + ":" + $_.'Inclusion Setting' + ";"})."
-               exit 1
-           }
-       }
-
-   }
-   catch {
-       throw $_
-   } 
-   ```
+  }
+  catch {
+      throw $_
+  } 
+  ```
 
 ## The process
 
@@ -83,16 +88,16 @@ If you're a Global or security administrator, you can now host firewall reportin
 > Make sure to follow the instructions from previous the section and properly configure your devices to participate in the preview program.
 
 - After events are enabled, Microsoft Defender for Endpoint begins to monitor data, which includes: 
-   - Remote IP
-   - Remote Port
-   - Local Port
-   - Local IP
-   - Computer Name
-   - Process across inbound and outbound connections
+  - Remote IP
+  - Remote Port
+  - Local Port
+  - Local IP
+  - Computer Name
+  - Process across inbound and outbound connections
 
 - Admins can now see Windows host firewall activity [here](https://security.microsoft.com/firewall). Additional reporting can be facilitated by downloading the [Custom Reporting script](https://github.com/microsoft/MDATP-PowerBI-Templates/tree/master/Firewall) to monitor the Windows Defender Firewall activities using Power BI.
 
-   - It can take up to 12 hours before the data is reflected.
+  It can take up to 12 hours before the data is reflected.
 
 ## Supported scenarios
 
@@ -102,11 +107,9 @@ If you're a Global or security administrator, you can now host firewall reportin
 
 ### Firewall reporting
 
-Here are some examples of the firewall report pages. Here you'll find a summary of inbound, outbound, and application activity. You can access this page directly by going to <https://security.microsoft.com/firewall>.
+Here are some examples of the firewall report pages in the [Microsoft Defender portal](https://security.microsoft.com). The **Firewall** page contains the **Inbound**, **Outbound**, and **App** tabs. You access this page at **Reports** \> **Endpoints** section \> **Firewall** or directly at <https://security.microsoft.com/firewall>.
 
 :::image type="content" source="media/host-firewall-reporting-page.png" alt-text="The Host firewall reporting page" lightbox="media/host-firewall-reporting-page.png":::
-
-These reports can also be accessed by going to **Reports** > **Security Report** > **Devices** (section) located at the bottom of the **Firewall Blocked Inbound Connections** card.
 
 ### From "Computers with a blocked connection" to device
 
@@ -136,5 +139,4 @@ The query can now be executed, and all related Firewall events from the last 30 
 
 For more reporting, or custom changes, the query can be exported into Power BI for further analysis. Custom reporting can be facilitated by downloading the [Custom Reporting script](https://github.com/microsoft/MDATP-PowerBI-Templates/tree/master/Firewall) to monitor the Windows Defender Firewall activities using Power BI.
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

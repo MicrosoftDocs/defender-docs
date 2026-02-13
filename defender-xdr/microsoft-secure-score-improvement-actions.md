@@ -37,7 +37,7 @@ To help you find the information you need more quickly, Microsoft recommended ac
 
 In the Microsoft Secure Score overview page, view how points are split between these groups and what points are available. You can also get an all-up view of the total score, historical trend of your secure score with benchmark comparisons, and prioritized recommended actions that can be taken to improve your score.
 
-:::image type="content" source="/defender/media/secure-score/secure-score-home-page.png" alt-text="The Secure Score homepage in the Microsoft Defender portal" lightbox="/defender/media/secure-score/secure-score-home-page.png":::
+:::image type="content" source="media/secure-score-home-page.png" alt-text="The Secure Score homepage in the Microsoft Defender portal" lightbox="media/secure-score-home-page.png":::
 
 ## Check your current score
 
@@ -53,7 +53,7 @@ The following are scores you can add to your view of your overall score to give 
 
 This view is what it will look like if you've included all possible score views:
 
-:::image type="content" source="/defender/media/secure-score/secure-score-achievable.png" alt-text="Your secure score including planned score, current license score, and achievable score in the Microsoft Defender portal" lightbox="/defender/media/secure-score/secure-score-achievable.png":::
+:::image type="content" source="media/microsoft-secure-score-improvement-actions/secure-score-achievable.png" alt-text="Your secure score including planned score, current license score, and achievable score in the Microsoft Defender portal" lightbox="media/microsoft-secure-score-improvement-actions/secure-score-achievable.png":::
 
 ## Take action to improve your score
 
@@ -69,7 +69,7 @@ Ranking is based on the number of points left to achieve, implementation difficu
 
 When you select a specific recommended action, a full page flyout appears.
 
-:::image type="content" source="/defender/media/secure-score/secure-score-improvement-action-details.png" alt-text="Screenshot that shows the flyout of a recommended action in the Microsoft Defender portal." lightbox="/defender/media/secure-score/secure-score-improvement-action-details.png":::
+:::image type="content" source="media/microsoft-secure-score-improvement-actions/secure-score-improvement-action-details.png" alt-text="Screenshot that shows the flyout of a recommended action in the Microsoft Defender portal." lightbox="media/microsoft-secure-score-improvement-actions/secure-score-improvement-action-details.png":::
 
 To complete the action, you have a few options:
 

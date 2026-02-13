@@ -57,10 +57,10 @@ Custom data collection supports the following event tables.
 This is the typical data flow for custom data collection:
 
 1. Define collection rules in the Microsoft Defender portal with specific filters and device targets.
-2. Rules are transmitted to targeted endpoints, typically within 20 minutes to one hour.
-3. Endpoints collect events matching your rule criteria alongside default telemetry.
-4. Custom event data flows to your connected Microsoft Sentinel workspace.
-5. Query custom data using the supported event tables to learn about specific activities on your endpoints.
+1. Rules are transmitted to targeted endpoints, typically within 20 minutes to one hour.
+1. Endpoints collect events matching your rule criteria alongside default telemetry.
+1. Custom event data flows to your connected Microsoft Sentinel workspace.
+1. Query custom data using the supported event tables to learn about specific activities on your endpoints.
 
 ## Frequently asked questions
 
@@ -71,6 +71,8 @@ No, custom data collection rules live side-by-side with the Defender for Endpoin
 ### Is a Microsoft Sentinel workspace required?
 
 Yes, you need a connected Microsoft Sentinel workspace to create custom data collection rules. For more information, see the [prerequisites](create-custom-data-collection-rules.md#prerequisites).
+
+You also need to select the Microsoft Sentinel workspace when creating a custom data collection rule. For more information, see [Create rules](create-custom-data-collection-rules.md#create-rules).
 
 ### How can I know if a rule has reached the endpoint?
 
