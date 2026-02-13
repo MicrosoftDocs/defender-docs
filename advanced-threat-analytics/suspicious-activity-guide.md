@@ -524,7 +524,7 @@ To determine whether the activity is a WannaCry attack, perform the following st
 
 1. If no attack tools are found, check if the source computer is running an application that implements its own NTLM or SMB stack.
 
-1. If not, check if caused by WannaCry by running a WannaCry scanner script, for example [this scanner](https://github.com/apkjet/TrustlookWannaCryToolkit/tree/master/scanner) against the source computer involved in the suspicious activity. If the scanner finds that the machine as infected or vulnerable, work on patching the machine and removing the malware and blocking it from the network.
+1. If not, check if caused by WannaCry by running a WannaCry scanner script, for example [this scanner](https://github.com/ioscarry/TrustlookWannaCryToolkit/tree/master/scanner) against the source computer involved in the suspicious activity. If the scanner finds that the machine as infected or vulnerable, work on patching the machine and removing the malware and blocking it from the network.
 
 1. If the script didn't find that the machine is infected or vulnerable, then it could still be infected but SMBv1 might have been disabled or the machine has been patched, which would affect the scanning tool.
 
