@@ -83,7 +83,7 @@ For more information, see:
 
 ## Review threat detection data
 
-**Where**: In the Microsoft Defender XDR Portal, select:
+**Where**: In the [Microsoft Defender portal](https://security.microsoft.com), select:
 
 - **Incidents & alerts**
 - **Cloud apps > Policies > Policy management > Threat Detection**
@@ -107,7 +107,7 @@ Make sure to create the threat protection policies needed by your organization, 
 
 ## Review application governance
 
-**Where**: In the Microsoft Defender XDR Portal, select:
+**Where**: In the [Microsoft Defender portal](https://security.microsoft.com), select:
 
 - **Incidents & alerts**
 - **Incidents & alerts / App governance**
@@ -126,7 +126,7 @@ For more information, see:
 
 ### Check app governance overview page 
 
-**Where**: In the Microsoft Defender XDR Portal, select:
+**Where**: In the [Microsoft Defender portal](https://security.microsoft.com), select:
 
 - **Incidents & alerts**
 - **Cloud apps > App governance > Overview**
@@ -152,7 +152,7 @@ For more information, see:
 
 ### Review OAuth app data
 
-**Where**: In the Microsoft Defender XDR Portal, select:
+**Where**: In the [Microsoft Defender portal](https://security.microsoft.com), select:
 
 - **Incidents & alerts**
 - **Cloud apps > App governance > Microsoft 365**
@@ -169,7 +169,7 @@ For more information, see:
 
 ### Create and manage app governance policies
 
-**Where**: In the Microsoft Defender XDR Portal, select **Cloud apps > App governance > Policies**
+**Where**: In the [Microsoft Defender portal](https://security.microsoft.com), select **Cloud apps > App governance > Policies**
 
 **Persona**: Security administrators
 
@@ -182,7 +182,7 @@ For more information, see:
 
 ## Review Conditional Access app control
 
-**Where**: In the Microsoft Defender XDR Portal, select:
+**Where**: In the [Microsoft Defender portal](https://security.microsoft.com), select:
 
 - **Incidents & alerts**
 - **Cloud apps > Policies > Policy Management > Conditional Access**
@@ -212,7 +212,7 @@ For more information, see [Review alerts and incidents](#review-alerts-and-incid
 
 ## Review shadow IT - cloud discovery
 
-**Where**: In the Microsoft Defender XDR Portal, select:
+**Where**: In the [Microsoft Defender portal](https://security.microsoft.com), select:
 
 - **Incidents & alerts**
 - **Cloud apps > Cloud discovery / Cloud app catalog**
@@ -245,7 +245,7 @@ For more information, see [Discovered app filters and queries in Microsoft Defen
 
 ## Review the cloud discovery dashboard
 
-**Where**: In the Microsoft Defender XDR Portal, select **Cloud apps > Cloud discovery > Dashboard**.
+**Where**: In the [Microsoft Defender portal](https://security.microsoft.com), select **Cloud apps > Cloud discovery > Dashboard**.
 
 **Persona**: Security and Compliance administrators, SOC analysts
 
@@ -277,7 +277,7 @@ For more information, see:
 
 ## Review information protection
 
-**Where**: In the Microsoft Defender XDR Portal, select:
+**Where**: In the [Microsoft Defender portal](https://security.microsoft.com), select:
 
 - **Incidents & alerts**
 - **Cloud apps > Files**

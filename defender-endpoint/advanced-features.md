@@ -2,8 +2,8 @@
 title: Configure advanced features in Microsoft Defender for Endpoint
 description: Turn on advanced features such as block file in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
 manager: bagol
@@ -14,15 +14,12 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 02/25/2025
+ms.date: 10/31/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
 # Configure advanced features in Defender for Endpoint
-
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 Depending on the Microsoft security products that you use, some advanced features might be available for you to integrate Defender for Endpoint with.
@@ -31,11 +28,11 @@ Depending on the Microsoft security products that you use, some advanced feature
 
 1. Go to the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139) and sign in. 
 
-2. In the navigation pane, select **Settings** \> **Endpoints** \> **Advanced features**.
+1. In the navigation pane, select **Settings** \> **Endpoints** \> **Advanced features**.
 
-3. Select the advanced feature you want to configure and toggle the setting between **On** and **Off**.
+1. Select the advanced feature you want to configure and toggle the setting between **On** and **Off**.
 
-4. Select **Save preferences**.
+1. Select **Save preferences**.
 
 Use the following advanced features to get better protected from potentially malicious files and gain better insight during security investigations.
 
@@ -73,13 +70,13 @@ To turn **Allow or block** files on:
 
 1. In the Microsoft Defender portal, in the navigation pane, select **Settings** \> **Endpoints** \> **General** \> **Advanced features** \> **Allow or block file**.
 
-2. Toggle the setting between **On** and **Off**.
+1. Toggle the setting between **On** and **Off**.
  
-    :::image type="content" source="/defender/media/alloworblockfile.png" alt-text="The Endpoints screen" lightbox="/defender/media/alloworblockfile.png":::
+    a. :::image type="content" source="/defender/media/alloworblockfile.png" alt-text="The Endpoints screen" lightbox="/defender/media/alloworblockfile.png":::
 
-3. Select **Save preferences** at the bottom of the page.
+1. Select **Save preferences** at the bottom of the page.
 
-After turning on this feature, you can [block files](respond-file-alerts.md#allow-or-block-file) via the **Add Indicator** tab on a file's profile page.
+1. After turning on this feature, you can [block files](respond-file-alerts.md#allow-or-block-file) via the **Add Indicator** tab on a file's profile page.
 
 ## Hide potential duplicate device records
 
@@ -168,9 +165,9 @@ For more information about role assignments, see [Create and manage roles](user-
 
 Enabling this feature allows you to run unsigned scripts in a live response session.
 
-## Deception
+## Automatic attack disruption
 
-Deception enables your security team to manage and deploy lures and decoys to catch attackers in your environment. After you turn this on, go to Rules > Deception rules to run deception campaigns. See [Manage the deception capability in Microsoft Defender XDR](/defender-xdr/deception-overview).
+Automatic attack disruption disrupts attacks by automatically containing compromised assets that the attacker is using. It limits lateral movement early on, thereby reducing the overall impact of an attack, both on the associated costs and on  loss of productivity. At the same time, it leaves security operations teams in complete control of investigating, remediating, and bringing assets back online. For more information, see [Automatic attack disruption in Microsoft Defender XDR](/defender-xdr/automatic-attack-disruption).
 
 ## Share endpoint alerts with Microsoft Compliance Center
 
@@ -215,5 +212,4 @@ For proactive hunting across the full scope of Microsoft Defender XDR, including
 - [Update data retention settings](preferences-setup.md)
 - [Configure alert notifications](/defender-xdr/configure-email-notifications)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

@@ -3,8 +3,8 @@ title: Privacy information - Microsoft Defender for Endpoint on iOS
 ms.reviewer:
 description: Describes privacy information for Microsoft Defender for Endpoint on iOS
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -79,5 +79,5 @@ Feedback Data is collected through in-app feedback provided by the user.
 - Feedback type (smile, frown, idea) and any feedback comments submitted by the user.
 
 For more information, see [More on Privacy](https://aka.ms/mdatpiosprivacystatement).
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

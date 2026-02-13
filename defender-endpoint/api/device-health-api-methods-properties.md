@@ -1,45 +1,38 @@
 ﻿---
 title: Microsoft Defender Antivirus export device antivirus health details API methods and properties
-description: "Learn how to export a list of Microsoft Defender Antivirus device health details." 
+description: "Learn how to export a list of Microsoft Defender Antivirus device health details."
 ms.service: defender-endpoint
-ms.author: bagol 
-author: batamig
-ms.localizationpriority: medium 
-ms.date: 03/21/2025
-manager: bagol 
+ms.author: painbar
+author: paulinbar
+ms.localizationpriority: medium
+ms.date: 11/11/2025
+manager: bagol
 ms.reviewr: mkaminska
-audience: ITPro 
+audience: ITPro
 ms.collection:
  - m365-security
  - must-keep
  - tier3
-ms.topic: reference 
+ms.topic: reference
 ms.subservice: reference
-ms.custom: api 
+ms.custom: api
 search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
 ---
+
 # Export device antivirus health details API methods and properties
 
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
-
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 ## Export device antivirus health details API description
 
 Retrieves a list of Microsoft Defender Antivirus device health details. This API has different API calls (methods) to get different types of data. Because the amount of data can be large, there are two ways it can be retrieved:
 
-- **JSON response**  The API pulls all data in your organization as JSON responses. This method is best for _small organizations with less than 100-K devices_. The response is paginated, so you can use the \@odata.nextLink field from the response to fetch the next results.
+- **JSON**  The API pulls all data in your organization as JSON responses. This method is best for _small organizations with less than 100-K devices_. The response is paginated, so you can use the \@odata.nextLink field from the response to fetch the next results.
 
-- **via files** This API solution enables pulling larger amounts of data faster and more reliably, and is recommended for large organizations who have more than 100,000 devices. This API pulls all data in your organization as download files. The response contains URLs to download all the data from Azure Storage. This API enables you to download all your data from Azure Storage as follows:
+- **Files** This API solution enables pulling larger amounts of data faster and more reliably, and is recommended for large organizations who have more than 100,000 devices. This API pulls all data in your organization as download files. The response contains URLs to download all the data from Azure Storage. This API enables you to download all your data from Azure Storage as follows:
 
    1. Call the API to get a list of download URLs with all your organization data.
 
@@ -47,10 +40,11 @@ Retrieves a list of Microsoft Defender Antivirus device health details. This API
 
 Data that is collected using either `JSON response` or by using files is a snapshot of the current state. This data doesn't contain historical data. To collect historical data, you must save the data in your own data storage.
 
-> [!IMPORTANT]
-> For Windows Server 2012 R2 and Windows Server 2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](../onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
->
-> For information about using the **Device health and antivirus compliance** reporting tool in the Microsoft Defender portal, see: [Device health and antivirus report in Microsoft Defender for Endpoint](../device-health-reports.md).
+For information about using the **Device health and antivirus compliance** reporting tool in the Microsoft Defender portal, see: [Device health and antivirus report in Microsoft Defender for Endpoint](../device-health-reports.md).
+
+### Prerequisites
+
+- For Windows Server 2012 R2 and Windows Server 2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](../onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
 
 ### 1.1 Export device antivirus health details API methods
 
@@ -105,26 +99,15 @@ Data that is collected using either `JSON response` or by using files is a snaps
 > [!IMPORTANT]
 > Information in this section relates to prereleased product which can be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-> [!NOTE]
-> - The files are gzip-compressed and in multiline `.json` format.
-> - The download URLs are only valid for 3 hours; otherwise you can use the parameter.
-> - For maximum download speed of your data, you can make sure you're downloading from the same Azure region that your data resides.
-> - Each record uses approximately 1KB of data. You should take this into account when choosing the correct `pageSize` parameter.
-> - More columns might be returned in the response. These columns are temporary and might be removed, so use only the documented columns.
+In each of the export files, there's a property called `DeviceGatheredInfo`, which contains antivirus data. Each of its attributes can provide you with information on the device's health and its status.
+
+- The files are gzip-compressed and in multiline `.json` format.
+- The download URLs are only valid for 3 hours; otherwise you can use the parameter.
+- For maximum download speed of your data, you can make sure you're downloading from the same Azure region that your data resides.
+- Each record uses approximately 1KB of data. You should take this into account when choosing the correct `pageSize` parameter.
+- More columns might be returned in the response. These columns are temporary and might be removed, so use only the documented columns.
 
 | Property (ID) | Data type | Description | Example of a returned value |
 |---|---|---|---|
 | Export files | array[string] | A list of download URLs for files holding the current snapshot of the organization. | ["https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"] |
 | GeneratedTime | String | The time that the export was generated. | 2022-05-20T08:00:00Z |
-
-> [!NOTE]
-> In each of the export files, there's a property called `DeviceGatheredInfo`, which contains antivirus data. Each of its attributes can provide you with information on the device's health and its status.
-
-## See also
-
-[Export device antivirus health report](device-health-export-antivirus-health-report-api.md)
-
-[Device health and compliance reporting](../device-health-reports.md)
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

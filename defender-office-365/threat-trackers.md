@@ -39,7 +39,7 @@ To use Threat trackers, you need to be assigned permissions. You have the follow
 - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md):
   - _Create, save, and modify Threat Explorer queries_: Membership in the **Organization Management** or **Security Administrator** role groups.
   - _Read-only access to Threat Explorer queries on the Threat tracker page_: Membership in the **Security Reader** or **Global Reader** role groups.
-- [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
+- [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
   - _Create, save, and modify Threat Explorer queries_: Membership in the **Global Administrator**<sup>\*</sup> or **Security Administrator** roles.
   - _Read-only access to Threat Explorer queries on the Threat tracker page_: Membership in the **Security Reader** or **Global Reader** roles.
 

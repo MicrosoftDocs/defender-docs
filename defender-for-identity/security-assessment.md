@@ -30,11 +30,12 @@ Microsoft Secure Score is a measurement of an organization's security posture, w
 
 Defender for Identity security posture assessments have five key categories. Each category addresses specific identity security risks and provides remediation guidance.
 
-- **Hybrid security**: Identifies misconfigurations in environments that integrate on-premises (e.g., Active Directory) and cloud-based identity providers (e.g., Entra ID, Okta). Assesses risks related to synchronization, authentication, and authorization across platforms.
+- **Hybrid security**: Identifies misconfigurations in environments that integrate on-premises (e.g., Active Directory) and cloud-based identity providers (e.g., Microsoft Entra ID, Okta). Assesses risks related to synchronization, authentication, and authorization across platforms.
 - **Identity infrastructure**: Detects misconfigurations and vulnerabilities in core identity components, including domain controllers.
 - **Certificates**: Assesses Active Directory Certificate Services (AD CS) for security gaps, such as misconfigured certificate templates or weak certificate authority settings. Identifying and addressing these issues helps prevent unauthorized access that could arise from certificate-related vulnerabilities.
 - **Group policy**: Analyzes Group Policy configurations to identify settings that might allow privilege escalation or unauthorized lateral movement within the network. Ensuring secure Group Policy settings helps maintain proper access controls and system configurations.
 - **Accounts**: Reviews users, devices, and groups to pinpoint security risks such as weak passwords, inactive accounts, or improper permissions.
+- **Cloud identities**: Evaluates cloud identity configurations in Okta accounts for security gaps, such as missing MFA settings or privileged Okta accounts, and provides remediation guidance.
 
 ## Access Defender for Identity security posture assessments
 
@@ -45,7 +46,7 @@ Defender for Identity security posture assessments have five key categories. Eac
 >
 > Hybrid security recommendations will be available only if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services.  
 >
-> For more information, see [Configuring sensors for AD FS, AD CS and Entra Connect.](https://aka.ms/DeployMdiSensorOnYourIdentityInfrastructure)
+> For more information, see [Configuring sensors for AD FS, AD CS and Microsoft Entra Connect.](https://aka.ms/DeployMdiSensorOnYourIdentityInfrastructure)
 
 **To access identity security posture assessments**:
 

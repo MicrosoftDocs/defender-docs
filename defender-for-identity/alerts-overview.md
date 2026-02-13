@@ -19,7 +19,7 @@ The Identity alerts page gives you cross-domain signal enrichment and automated 
 
 Alerts originating from Defender for Identity trigger [Microsoft Defender XDR automated investigation and response (AIR)](/microsoft-365/security/defender/m365d-autoir) capabilities, including automatically remediating alerts and the mitigation of tools and processes that can contribute to the suspicious activity.
 
-Microsoft Defender for Identity alerts currently appear in two different layouts in the Microsoft Defender XDR portal. While the alert views may show different information, all alerts are based on detections from Defender for Identity sensors. The differences in layout and information shown are part of an ongoing transition to a unified alerting experience across Microsoft Defender products.
+Microsoft Defender for Identity alerts currently appear in two different layouts in the Microsoft Defender portal. While the alert views may show different information, all alerts are based on detections from Defender for Identity sensors. The differences in layout and information shown are part of an ongoing transition to a unified alerting experience across Microsoft Defender products.
 
 To learn more about how to understand the structure, and common components of all Defender for Identity security alerts, see [View and manage alerts](understanding-security-alerts.md).
 

@@ -2,8 +2,8 @@
 title: macOS Device control policies frequently asked questions (FAQ)
 description: Get answers to common questions about device control policies using JAMF or Intune.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 ms.reviewer: joshbregman
 manager: bagol
 ms.localizationpriority: medium
@@ -23,8 +23,6 @@ appliesto:
 
 ---
 # macOS Device Control policies frequently asked questions (FAQ)
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 This article provides answers to frequently asked questions about Device Control capabilities in Microsoft Defender for Endpoint.
@@ -52,5 +50,5 @@ Answer 2: Run _mdatp device-control policy groups list_ to see all the iOS group
 - [Device Control for macOS](mac-device-control-overview.md)
 - [Deploy and manage Device Control using Intune](mac-device-control-intune.md)
 - [Deploy and manage Device Control using jamf](mac-device-control-jamf.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

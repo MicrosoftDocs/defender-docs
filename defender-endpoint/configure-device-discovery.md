@@ -16,19 +16,24 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
 search.appverid: met150
-ms.date: 02/24/2025
+ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
 # Configure device discovery in Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 Device discovery can be configured to be on standard or basic mode. Use the standard option to actively find devices in your network, which helps improve the discovery of endpoints and provide richer device classification.
 
-You can customize the list of devices that are used to perform standard discovery. You can either enable standard discovery on all the onboarded devices that also support this capability (currently for devices running Windows 10 and later, or Windows Server 2019 and later). Or, you can select a subset of devices by specifying their device tags.
+You can customize the list of devices that are used to perform standard discovery. You can either enable standard discovery on all the onboarded devices that also support this capability, or you can select a subset of devices by specifying their device tags.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows 10 and later
+- Windows Server 2019 and later.
 
 ## Set up device discovery
 
@@ -38,7 +43,7 @@ Navigate to **Settings** > **Device discovery**
 
 1. If you want to configure Basic as the discovery mode to use on your onboarded devices, select **Basic** and then select **Save**.
 
-2. If you've selected to use Standard discovery, select which devices to use for active probing: all devices or on a subset by specifying their device tags, and then select **Save**
+1. If you've selected to use Standard discovery, select which devices to use for active probing: all devices or on a subset by specifying their device tags, and then select **Save**
 
 > [!NOTE]
 > Standard discovery uses various PowerShell scripts to actively probe devices in the network. Those PowerShell scripts are Microsoft signed and are executed from the following location: `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\*.ps`. For example, `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\UnicastScannerV1.1.0.ps1`.
@@ -76,13 +81,13 @@ Choosing the initial discovery classification means to apply the default system-
 
 1. Select **Settings > Device discovery**.
 
-2. Select **Monitored networks**.
+1. Select **Monitored networks**.
 
-3. View the list of networks.
+1. View the list of networks.
 
-4. Select the three dots next to the network name.
+1. Select the three dots next to the network name.
 
-5. Choose whether you want to monitor, ignore, or use the initial discovery classification.
+1. Choose whether you want to monitor, ignore, or use the initial discovery classification.
 
    > [!WARNING]
    >
@@ -90,7 +95,7 @@ Choosing the initial discovery classification means to apply the default system-
    > - Choosing to ignore a network stops monitoring and discovering devices in that network. Devices that were already discovered won't be removed from the inventory, but are no longer updated, and details are retained until the data retention period of the Defender for Endpoint expires.
    > - Before choosing to monitor non-corporate networks, you must ensure you have permission to do so. <br>
 
-6. Confirm that you want to make the change.
+1. Confirm that you want to make the change.
 
 ## Explore devices in the network
 
@@ -122,5 +127,5 @@ DeviceInfo
 - [Device discovery overview](device-discovery.md)
 - [Device discovery FAQs](device-discovery-faq.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.subservice: onboard
 f1.keywords:
 - NOCSH
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -24,8 +24,6 @@ appliesto:
 
 ---
 # Device discovery overview
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 Protecting your environment requires taking inventory of the devices that are in your network. However, mapping devices in a network can often be expensive, challenging, and time-consuming.
@@ -91,7 +89,7 @@ For more information, see [Network devices](network-devices.md).
 
 ## Device discovery integration
 
-To address the challenge of gaining enough visibility to locate, identify, and secure your complete OT/IOT asset inventory Defender for Endpoint now supports the following integration:
+To address the challenge of gaining enough visibility to locate, identify, and secure your complete OT/IOT asset inventory Defender for Endpoint supports the following integration:
 
 - **Microsoft Defender for IoT**: This integration combines Defender for Endpoint's device discovery capabilities with Microsoft Defender for IoT in the Microsoft Defender portal to secure:
 
@@ -158,5 +156,4 @@ DeviceNetworkEvents
 - [Configure device discovery](configure-device-discovery.md)
 - [Device discovery FAQs](device-discovery-faq.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

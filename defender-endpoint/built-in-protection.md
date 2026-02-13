@@ -2,8 +2,8 @@
 title: Built-in protection helps guard against ransomware
 description: Learn how built-in protection protects against ransomware as part of Microsoft Defender for Endpoint.
 search.appverid: MET150
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 manager: bagol 
 audience: IT Pro
 ms.topic: overview
@@ -54,11 +54,11 @@ You can opt out of built-in protection by specifying your own security settings.
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 
-2. Go to **Settings** > **Endpoints** > **Advanced features**.
+1. Go to **Settings** > **Endpoints** > **Advanced features**.
 
-3. Set **Tamper protection** to **On** (if it's not already on), and then select **Save preferences**. *Don't leave this page yet*.
+1. Set **Tamper protection** to **On** (if it's not already on), and then select **Save preferences**. *Don't leave this page yet*.
 
-4. Set **Tamper protection** to **Off**, and then select **Save preferences**.
+1. Set **Tamper protection** to **Off**, and then select **Save preferences**.
 
 ## Can I change built-in protection settings?
 
@@ -77,5 +77,5 @@ Built-in protection is a set of default settings. Your security team isn't requi
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

@@ -1,8 +1,8 @@
 ﻿---
 title: Hardware acceleration and Microsoft Defender Antivirus.
 description: How Microsoft Defender Antivirus incorporates hardware acceleration and Microsoft Defender Antivirus.
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 manager: bagol
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
@@ -15,15 +15,18 @@ ms.collection:
 audience: ITPro
 ms.localizationpriority: medium
 ms.custom: partner-contribution
+ROBOTS: NOINDEX, NOFOLLOW
 search.appverid: MET150
 f1 keywords: NOCSH
 appliesto:
   - Microsoft Defender for Individuals
   - Microsoft Defender Antivirus
-
 ---
+
 # Hardware acceleration and Microsoft Defender Antivirus
 
+> [!NOTE]
+> The features described in this article are currently in Preview, aren't available in all organizations, and are subject to change.
 
 **Platforms:**
 
@@ -40,11 +43,11 @@ appliesto:
 
 This table shows the Intel TDT technologies Microsoft collaborated with Intel on to provide security while also balancing performance:
 
-|Available since |Intel TDT technology | Intel Threat Detection Technology (TDT) available on|
-|:---|:---|:---|
-|2018|Intel TDT – Accelerated Memory Scanning (AMS)|Intel integrated graphic sixth Gen Core (circa 2015) or newer family of processors, running on laptops, tablets, and desktop systems.|
-|2021|Intel TDT - Cryptojacking detector| Intel sixth Gen Core (circa 2015) or newer family of processors, running on laptops, tablets, and desktop systems.|
-|2022|Intel TDT - Ransomware detector| Intel eighth Gen Core or newer family of processors.|
+|Available since|Intel TDT technology|Intel Threat Detection Technology (TDT) available on|
+|---|---|---|
+|2018|Intel TDT - Accelerated Memory Scanning (AMS)|Intel integrated graphic sixth Gen Core (circa 2015) or newer family of processors, running on laptops, tablets, and desktop systems.|
+|2021|Intel TDT - Cryptojacking detector|Intel sixth Gen Core (circa 2015) or newer family of processors, running on laptops, tablets, and desktop systems.|
+|2022|Intel TDT - Ransomware detector|Intel eighth Gen Core or newer family of processors.|
 
 **Intel Threat Detection Technology (TDT) - Accelerated Memory Scanning (AMS):** Introduced extra memory scanning capabilities to detect fileless attacks that are expensive on the Central Processing Unit (CPU), and then offload them to the integrated Graphics Processor Unit (integrated GPU). Two benefits are:
 
@@ -70,4 +73,3 @@ The regular Microsoft Defender Antivirus Event ID **1116**.
 ## Related articles
 
 - [Defending against ransomware with Microsoft Defender for Endpoint and Intel TDT: A Case Study](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/defending-against-ransomware-with-microsoft-defender-for/ba-p/3243941).
-

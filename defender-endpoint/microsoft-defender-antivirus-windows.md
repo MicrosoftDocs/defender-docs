@@ -3,10 +3,10 @@ title: Microsoft Defender Antivirus in Windows Overview
 description: Learn how to manage, configure, and use Microsoft Defender Antivirus, built-in antimalware and antivirus protection.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 06/16/2025
+ms.date: 10/20/2025
 ms.topic: overview
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.reviewer: mkaminska, yonghree, pahuijbr
 manager: bagol
 ms.custom: nextgen
@@ -24,15 +24,17 @@ appliesto:
 # Microsoft Defender Antivirus in Windows Overview
 
 
-**Platforms**
-
-- Windows
-
 Microsoft Defender Antivirus is available in Windows 10 and Windows 11, and in versions of Windows Server.
 
 Microsoft Defender Antivirus is a major component of your next-generation protection in Microsoft Defender for Endpoint. This protection brings together machine learning, big-data analysis, in-depth threat resistance research, and the Microsoft cloud infrastructure to protect devices (or endpoints) in your organization. Microsoft Defender Antivirus is built into Windows, and it works with Microsoft Defender for Endpoint to provide protection on your device and in the cloud.
 
 [!INCLUDE [MDE automated setup guide](../includes/security-analyzer-setup-guide.md)]
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Microsoft Defender Antivirus capabilities
 
@@ -99,9 +101,9 @@ You can use one of several methods, such as the Windows Security app or Windows 
 
 1. On your Windows device, select the **Start** menu, and begin typing `Security`. Then open the Windows Security app in the results.
 
-2. Select **Virus & threat protection**.
+1. Select **Virus & threat protection**.
 
-3. Under **Who's protecting me?**, choose **Manage Providers**.
+1. Under **Who's protecting me?**, choose **Manage Providers**.
 
 You'll see the name of your antivirus/antimalware solution on the security providers page.
 
@@ -109,9 +111,9 @@ You'll see the name of your antivirus/antimalware solution on the security provi
 
 1. Select the **Start** menu, and begin typing `PowerShell`. Then open Windows PowerShell in the results.
 
-2. Type `Get-MpComputerStatus`.
+1. Type `Get-MpComputerStatus`.
 
-3. In the list of results, look at the **AMRunningMode** row.
+1. In the list of results, look at the **AMRunningMode** row.
 
    - **Normal** means Microsoft Defender Antivirus is running in active mode.
 
@@ -156,11 +158,14 @@ It's important to keep Microsoft Defender Antivirus (or any antivirus/antimalwar
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
+>[!Note]
+>After installing the latest Microsoft Defender Antivirus platform or engine update, certain registry entries may not update automatically. To ensure the registry reflects the current version, administrators should manually verify and update the relevant keys using **Registry Editor (regedit)** or a supported deployment script.
+
 ## See also
 
 - [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)
 - [Microsoft Defender Antivirus management and configuration](configuration-management-reference-microsoft-defender-antivirus.md)
 - [Evaluate Microsoft Defender Antivirus protection](evaluate-microsoft-defender-antivirus.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
