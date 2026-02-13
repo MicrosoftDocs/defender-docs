@@ -1,8 +1,8 @@
 ---
 title: Address unwanted behaviors in Microsoft Defender for Endpoint with exclusions, indicators, and other techniques            
 description: Learn how to use exclusions, indicators, and other techniques to address unwanted behaviors in Microsoft Defender for Endpoint.
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 manager: bagol 
 ms.date: 11/14/2024
 ms.topic: how-to
@@ -128,11 +128,11 @@ In this scenario, a legitimate app is detected and identified as malicious by an
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Reports**. Under **Reports**, select **Security report**.
 
-2. Scroll down to devices to find your attack surface reduction cards. For more information, see [attack surface reduction rules report](attack-surface-reduction-rules-report.md).
+1. Scroll down to devices to find your attack surface reduction cards. For more information, see [attack surface reduction rules report](attack-surface-reduction-rules-report.md).
 
-3. Use the information to identify the files and folder locations to be excluded.
+1. Use the information to identify the files and folder locations to be excluded.
 
-4. Add exclusions. See [Configure and validate exclusions based on file extension and folder location](configure-extension-file-exclusions-microsoft-defender-antivirus.md). 
+1. Add exclusions. See [Configure and validate exclusions based on file extension and folder location](configure-extension-file-exclusions-microsoft-defender-antivirus.md). 
 
 ### Word templates that contain macros that launch other apps are blocked
 
@@ -144,11 +144,11 @@ In this scenario, whenever a user opens documents that were created by using Mic
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Reports**. Under **Reports**, select **Security report**.
 
-2. Scroll down to devices to find your attack surface reduction cards. For more information, see [attack surface reduction rules report](attack-surface-reduction-rules-report.md).
+1. Scroll down to devices to find your attack surface reduction cards. For more information, see [attack surface reduction rules report](attack-surface-reduction-rules-report.md).
 
-3. Use the information to identify the files and folder locations to be excluded.
+1. Use the information to identify the files and folder locations to be excluded.
 
-4. Add exclusions. See [Configure and validate exclusions based on file extension and folder location](configure-extension-file-exclusions-microsoft-defender-antivirus.md). 
+1. Add exclusions. See [Configure and validate exclusions based on file extension and folder location](configure-extension-file-exclusions-microsoft-defender-antivirus.md). 
 
 ## See also
 

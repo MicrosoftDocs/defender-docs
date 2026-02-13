@@ -22,12 +22,8 @@ appliesto:
 ---
 # Configure general Defender for Endpoint settings
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
-
-
-Use the **Settings > Endpoints** menu to modify general settings, advanced features, enable the preview experience, email notifications, and the custom threat intelligence feature.
+Use the **System > Settings > Endpoints** menu to modify general settings, advanced features, enable the preview experience, email notifications, and the custom threat intelligence feature.
 
 ## In this section
 
@@ -39,5 +35,5 @@ APIs | Enable the threat intel and SIEM integration.
 Rules | Configure suppressions rules and automation settings.
 Device management | Onboard and offboard devices.
 Network assessments | Choose devices to be scanned regularly and added to the device inventory.
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

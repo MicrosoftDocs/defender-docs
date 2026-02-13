@@ -2,8 +2,8 @@
 title: Ring deployment using Intune and Microsoft Update (MU)
 description: Microsoft Defender Antivirus is an enterprise endpoint security platform that helps defend against advanced persistent threats. This article provides information about how to use a ring deployment method to update your Microsoft Defender Antivirus clients using Intune and Microsoft Update (MU).
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: chrisda
+author: chrisda
 ms.reviewer: yongrhee
 ms.localizationpriority: high
 manager: bagol
@@ -22,9 +22,8 @@ appliesto:
   - Microsoft Defender Antivirus
 
 ---
-# Microsoft Defender Antivirus ring deployment using Intune and direct internet access for Microsoft Update
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+# Microsoft Defender Antivirus ring deployment using Intune and direct internet access for Microsoft Update
 
 Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats.
 

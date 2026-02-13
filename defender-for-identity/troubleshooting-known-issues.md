@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting known issues
 description: Describes how you can troubleshoot issues in Microsoft Defender for Identity.
-ms.date: 05/08/2025
+ms.date: 02/04/2026
 ms.topic: troubleshooting
 ms.reviewer: rlitinsky
 ---
@@ -199,13 +199,13 @@ For Windows Operating systems 2008R2 and 2012, the Defender for Identity sensor 
 
 Suggested possible workarounds:
 
-- If hyper threading is on, turn it off. This may reduce the number of logical cores enough to avoid needing to run in **Multiprocessor Group** mode.
+- If hyper threading is on, turn it off. This might reduce the number of logical cores enough to avoid needing to run in **Multiprocessor Group** mode.
 
-- If your machine has less than 64 logical cores and is running on an HP host, you may be able to change the **NUMA Group Size Optimization** BIOS setting from the default of **Clustered** to **Flat**.
+- If your machine has less than 64 logical cores and is running on an HP host, you might be able to change the **NUMA Group Size Optimization** BIOS setting from the default of **Clustered** to **Flat**.
 
 ## VMware virtual machine sensor issue
 
-If you have a Defender for Identity sensor on VMware virtual machines, you might receive one or both of the following health alerts **Some network traffic is not being analyzed** and **Network configuration mismatch for sensors running on VMware**. This can happen because of a configuration mismatch in VMware.
+If you have a Defender for Identity sensor on VMware virtual machines, you might receive one or both of the following health alerts **Some network traffic is not being analyzed** and **Network configuration mismatch for sensors running on VMware**. This can happen because of a configuration mismatch in VMware Guest OS NIC and [MDI Sensor requirements](deploy/prerequisites-sensor-version-2.md#sensor-requirements-and-recommendations).
 
 To resolve the issue:
 
@@ -252,7 +252,7 @@ The domain controller doesn't have permissions to retrieve the password of the g
 
 **Resolution 1**:
 
-Validate that the computer running the sensor has been granted permissions to retrieve the password of the gMSA account. For more information, see [Grant permissions to retrieve the gMSA account's password](deploy/create-directory-service-account-gmsa.md#prerequisites-grant-permissions-to-retrieve-the-gmsa-accounts-password).
+Validate that the computer running the sensor has been granted permissions to retrieve the password of the gMSA account. For more information, see [Grant permissions to retrieve the gMSA account's password](deploy/create-directory-service-account-gmsa.md#prerequisites).
 
 ### Cause 2
 
@@ -291,7 +291,7 @@ The gMSA configured for this domain controller or AD FS / AD CS server doesn't h
 
 **Resolution:**
 
-Add the gMSA to the **Performance Monitor Users** group on the server.
+Add the gMSA to the **Performance Log Users** group on the server.
 
 ## Report downloads can't contain more than 300,000 entries
 
@@ -470,9 +470,9 @@ The issue can come up when a Defender for Identity workspace license expires and
 
 **Cause:**
 
-Updating Microsoft Entra Connect may cause the Entra Connect sensor to lose previously configured database permissions. To investigate, check the Microsoft Defender logs for relevant indicators. Refer to [Troubleshooting Microsoft Defender for Identity sensor using the Defender for Identity logs](troubleshooting-using-logs.md) for log locations and further details.
+Updating Microsoft Entra Connect might cause the Entra Connect sensor to lose previously configured database permissions. To investigate, check the Microsoft Defender logs for relevant indicators. Refer to [Troubleshooting Microsoft Defender for Identity sensor using the Defender for Identity logs](troubleshooting-using-logs.md) for log locations and further details.
 
-Sample logs that may indicate the issue:
+Sample logs that might indicate the issue:
 
 `GetEntraConnectGlobalSettingsAsync GetEntraConnectGlobalSettingsAsync failed. Exception - The EXECUTE permission was denied on the object 'mms_get_globalsettings', database Contoso', schema 'dbo'`
 
@@ -480,7 +480,7 @@ Sample logs that may indicate the issue:
 
 **Resolution:**
 
-If permissions need to be reconfigured, please follow the steps outlined in this [guide](deploy/active-directory-federation-services.md).
+If permissions need to be reconfigured, follow the steps outlined in this [guide](deploy/active-directory-federation-services.md).
 
 ## Next steps
 

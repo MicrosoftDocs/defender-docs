@@ -4,8 +4,8 @@ description: Investigate incidents on various assets from correlated signals of 
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: edbaynash
-author: EdB-MSFT
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -16,7 +16,7 @@ ms.topic: article
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 09/21/2025
+ms.date: 10/26/2025
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -34,18 +34,14 @@ Within an incident, you analyze the alerts, understand what they mean, and colla
 
 Before diving into the details, take a look at the properties and the entire attack story of the incident.
 
-You can start by selecting the incident from the check mark column. Here's an example.
+You can start by selecting the incident row, but not selecting the incident name. A summary pane opens with key information about the incident, including the priority assessment, the factors influencing the priority score, the incident's details, recommended actions, and related threats. Use the up and down arrows at the top of the pane to navigate to the previous or next incident in the incident queue.
 
-:::image type="content" source="./media/investigate-incidents/incidents-ss-incident-select.png" alt-text="Selecting an incident in the Microsoft Defender portal" lightbox="./media/investigate-incidents/incidents-ss-incident-select.png":::
-
-When you do, a summary pane opens with key information about the incident, like the incident's details, recommended actions, and related threats. Here's an example.
-
-:::image type="content" source="./media/investigate-incidents/incident-pane-small.png" alt-text="The pane that displays the summary details for an incident in the Microsoft Defender portal." lightbox="./media/investigate-incidents/incident-pane.png":::
+:::image type="content" source="./media/investigate-incidents/incident-side-panel.png" alt-text="Selecting an incident in the Microsoft Defender portal" lightbox="./media/investigate-incidents/incident-side-panel.png":::
 
 From here, you can select **Open incident page**. This opens the main page for the incident where you'll find the full attack story information and tabs for alerts, devices, users, investigations, and evidence. You can also open the main page for an incident by selecting the incident name from the incident queue.
 
 > [!NOTE]
-> Users with provisioned access to Microsoft Security Copilot will see the Copilot pane on the right side of the screen when they open an incident. Copilot provides real-time insights and recommendations to help you investigate and respond to incidents. For more information, see [Microsoft Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md).
+> Users with provisioned access to Microsoft Security Copilot see the Copilot pane on the right side of the screen when they open an incident. Copilot provides real-time insights and recommendations to help you investigate and respond to incidents. For more information, see [Microsoft Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md).
 
 ## Attack story
 
@@ -66,7 +62,7 @@ The incident alert page has these sections:
 
 - Alert properties in the right pane (state, details, description, and others)
 
-Note that not every alert will have all of the listed subsections in the **Alert story** section.
+Not every alert has all of the listed subsections in the **Alert story** section.
 
 The graph shows the full scope of the attack, how the attack spread through your network over time, where it started, and how far the attacker went. It connects the different suspicious entities that are part of the attack with their related assets such as users, devices, and mailboxes.
 
@@ -80,7 +76,7 @@ From the graph, you can:
 
   :::image type="content" source="./media/investigate-incidents/review-entity-details-attack-story.gif" alt-text="Screenshot that shows the review of the entity details on the attack story graph page.":::
 
-- Highlight the alerts based on the entity to which they are related.
+- Highlight the alerts based on the entity to which they're related.
 
 - Hunt for entity information of a device, file, IP address, URL, user, email, mailbox, or cloud resource.
 
@@ -91,17 +87,18 @@ The ***go hunt*** action takes advantage of the [advanced hunting](advanced-hunt
   - See all available queries – the option returns all available queries for the entity type you're investigating.
   - All Activity – the query returns all activities associated with an entity, providing you with a comprehensive view of the incident's context.
   - Related Alerts – the query searches for and returns all security alerts involving a specific entity, ensuring you don't miss any information.
+  - All User anomalies (Preview) – the query returns all anomalies associated with the user from the past 30 days, helping you identify unusual behavior that might be relevant to the incident. Available only for user entities if you have enabled [Microsoft Sentinel User and Entity Behavior Analytics (UEBA)](/azure/sentinel/identify-threats-with-entity-behavior-analytics).
 
-:::image type="content" source="./media/investigate-incidents/fig1-gohunt-attackstory.png" alt-text="Selecting the go hunt option on a device in an attack story" lightbox="./media/investigate-incidents/fig1-gohunt-attackstory.png":::
+:::image type="content" source="./media/investigate-incidents/gohunt-attackstory.png" alt-text="Screenshot where the Go Hunt option is selected on a device in an attack story." lightbox="./media/investigate-incidents/gohunt-attackstory.png":::
 
-The resulting logs or alerts can be linked to an incident by selecting a results and then selecting *Link to incident*.
+The resulting logs or alerts can be linked to an incident by selecting a result and then selecting *Link to incident*.
 
 :::image type="content" source="./media/investigate-incidents/fig2-gohunt-attackstory.png" alt-text="Highlighting the link to incident option in go hunt query results" lightbox="./media/investigate-incidents/fig2-gohunt-attackstory.png":::
 
 If the incident or related alerts were the result of an analytics rule you've set, you can also select ***Run query*** to see other related results.
 
 > [!IMPORTANT]
-> Some information in this article relates to a prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+> Some information in this article relates to a pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 ### Blast radius analysis
 
@@ -113,10 +110,11 @@ Blast radius analysis is an advanced graph visualization integrated into inciden
 The blast radius graph provides a unique unified view of both prebreach and post-breach information on the incident page. During an incident investigation, analysts can see the current impact of a breach and the possible future impact in one consolidated graph. Because it's integrated into the incident graph, the blast radius graph helps security teams better understand the scope of the security incident quicker and enhance their defensive measures to reduce the likelihood of widespread damage. Blast radius analysis helps analysts better assess the risk to highly regarded targets, and understand the business impact.
 
 The following prerequisites are required to use the blast radius graph:
+
 +	You must be onboarded to Microsoft Sentinel data lake. For more information, see [Onboarding to Microsoft Sentinel data lake and graph](/azure/sentinel/datalake/sentinel-lake-onboarding).
 +	Exposure management (read) permission or higher. For more information, see [Manage permissions with Microsoft Defender XDR Unified role-based access control (RBAC)](/security-exposure-management/prerequisites#manage-permissions-with-microsoft-defender-xdr-unified-role-based-access-control-rbac).
 > [!IMPORTANT]
-> Attack paths and blast radius features are calculated based on the organization’s available environment data. The value in the graph increases as more data is available for its calculation. If no further workloads are enabled or critical assets aren't fully defined,blast radius graphs won't fully represent your environmental risks. For more information on defining critical assets, see [Review and classify critical assets](/security-exposure-management/classify-critical-assets).
+> Attack paths and blast radius features are calculated based on the organization’s available environment data. The value in the graph increases as more data is available for its calculation. If no further workloads are enabled or critical assets aren't fully defined, blast radius graphs won't fully represent your environmental risks. For more information on defining critical assets, see [Review and classify critical assets](/security-exposure-management/classify-critical-assets).
 
 The following table summarizes the blast radius analysis use cases for different user roles:
 
@@ -135,14 +133,14 @@ Select a node to open the context menu, then select **View blast radius**.  To v
 
 :::image type="content" source="./media/investigate-incidents/blast-radius.png" lightbox="./media/investigate-incidents/blast-radius.png" alt-text="Screenshot showing the blast radius context menu item." :::
 
-A new graph view loads showing the 8 top-rated attack paths. A full list of the paths is visible on the right side panel when selecting **View full blast radius list** above the graph. From the list of reachable targets, you can further explore the path by selecting one of the listed targets. The right panel shows the potential path from the entry point to this target.  Some nodes may not have paths associated with them.
+A new graph view loads showing the 8 top-rated attack paths. A full list of the paths is visible on the right side panel when selecting **View full blast radius list** above the graph. From the list of reachable targets, you can further explore the path by selecting one of the listed targets. The right panel shows the potential path from the entry point to this target. Some nodes may not have paths associated with them.
 
 :::image type="content" source="./media/investigate-incidents/blast-radius-graph.png" lightbox="./media/investigate-incidents/blast-radius-graph.png" alt-text="Screenshot showing the blast radius graph." :::
 
 For an explanation of the icons used for nodes and edges in the blast radius graph, see [Understanding graphs and visualizations in Microsoft Defender](understand-graph-icons.md).
 
 
-Select **View blast radius list** to see a list of target assets.  Select a target asset from the list to view its details and potential attack paths. Selecting the badges in connections shows more details about the connection.
+Select **View blast radius list** to see a list of target assets. Select a target asset from the list to view its details and potential attack paths. Selecting the badges in connections shows more details about the connection.
 
 When paths lead to grouped targets of the same types, to view discrete paths to targets, select the grouped icons. A right-side panel opens showing all the targets in the group. Selecting the check box on the left and selecting the **Expand** button on top displays each target and its paths separately.
 
@@ -164,8 +162,6 @@ The following limitations apply to the blast radius graph:
 - **Known attack vectors:** The graph relies on known attack vectors. If attackers find a new lateral movement or new technique that has yet to be modeled, it won't be shown in the blast radius graph.
 - **User scopes:** The graph displayed is based on the allowed scopes for the viewing user. Only nodes and edges that are scoped for the user based on the defined RBAC and scoping settings are visible on the graph. Paths containing out of scope nodes or edges aren't visible.
 - **Island nodes:** Nonconnected nodes may appear on the graph due to changes that may occur between the time the data is collected and the calculation of the blast radius.
- 
-
 
 ### Incident details
 
@@ -187,15 +183,11 @@ On the **Alerts** tab, you can view the alert queue for alerts related to the in
 - The source of the alerts (Microsoft Defender for Identity, Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Defender for Cloud Apps, and the app governance add-on).
 - The reason they were linked together.
 
-Here's an example.
-
 :::image type="content" source="./media/investigate-incidents/incident-page-alerts-small.png" alt-text="The Alerts pane for an incident in the Microsoft Defender portal" lightbox="./media/investigate-incidents/incident-page-alerts.png":::
 
 By default, the alerts are ordered chronologically to allow you to see how the attack played out over time. When you select an alert within an incident, Microsoft Defender XDR displays the alert information specific to the context of the overall incident.
 
 You can see the events of the alert, which other triggered alerts caused the current alert, and all the affected entities and activities involved in the attack, including devices, files, users, cloud apps, and mailboxes.
-
-Here's an example.
 
 :::image type="content" source="./media/investigate-incidents/incident-alert-page-small.png" alt-text="The details of an alert within an incident in the Microsoft Defender portal." lightbox="./media/investigate-incidents/incident-alert-page.png":::
 
@@ -204,23 +196,31 @@ Learn how to use the alert queue and alert pages in [investigate alerts](investi
 > [!NOTE]
 > If you have provisioned access to Microsoft Purview Insider Risk Management, you can view and manage insider risk management alerts and hunt for insider risk management events in the Microsoft Defender portal. For more information, see [Investigate insider risk threats in the Microsoft Defender portal](irm-investigate-alerts-defender.md).
 
+## Activities
+
+The **Activities** tab displays a unified timeline of all manual and automated actions that occur within an incident. You can filter by _origin_, _category_, _provider_, _trigger_, _activity status_, _policy status_, _type_, _target name_, _target type_, or _performed by_. You can also access this information as a side panel in the [activity log](./manage-incidents.md#view-the-activity-log-of-an-incident).
+
+With the Activities tab, analysts can triage and investigate incidents. This includes identifing key steps taken by humans and automated systems, verifying recent changes (such as tags, merges, severity updates), reviewing comments and handovers, as well as inspecting detailed metadata in side panels and following automated workflows launched by automation rules, playbooks, or agents.
+
+:::image type="content" source="./media/investigate-incidents/incident-activities-tab.png" alt-text="Screenshot of an incident with the Activities tab opened." lightbox="./media/investigate-incidents/incident-activities-tab.png":::
+
 ## Assets
 
-Easily view and manage all your assets in one place with the new **Assets** tab. This unified view includes Devices, Users, Mailboxes and Apps. 
+Easily view and manage all your assets in one place with the **Assets** tab. This unified view includes Devices, Users, Mailboxes and Apps.
 
 The Assets tab displays the total number of assets beside its name. A list of different categories with the number of assets within that category is presented when selecting the Assets tab.
 
-:::image type="content" source="./media/investigate-incidents/incident-assetstab-small.png" alt-text="The Assets page for an incident in the Microsoft Defender portal" lightbox="./media/investigate-incidents/incident-assetstab.png":::
+:::image type="content" source="./media/investigate-incidents/incident-assets-tab-small.png" alt-text="The Assets page for an incident in the Microsoft Defender portal" lightbox="./media/investigate-incidents/incident-assets-tab.png":::
 
 ### Devices
 
-The **Devices** view lists all the devices related to the incident. Here's an example.
+The **Devices** view lists all the devices related to the incident.
 
 :::image type="content" source="./media/investigate-incidents/incident-devices2.png" alt-text="The Devices page for an incident in the Microsoft Defender portal" lightbox="./media/investigate-incidents/incident-devices2.png":::
 
 Selecting a device from the list opens a bar that allows you to manage the selected device. You can quickly export, manage tags, initiate automated investigation, and more. 
 
-You can select the check mark for a device to see details of the device, directory data, active alerts, and logged on users. Select the name of the device to see device details in the Defender for Endpoint device inventory. Here's an example.
+You can select the check mark for a device to see details of the device, directory data, active alerts, and logged on users. Select the name of the device to see device details in the Defender for Endpoint device inventory.
 
 :::image type="content" source="./media/investigate-incidents/incident-devicebar.png" alt-text="The Devices options in the Assets page in the Microsoft Defender portal." lightbox="./media/investigate-incidents/incident-devicebar.png":::
 
@@ -228,7 +228,7 @@ From the device page, you can gather additional information about the device, su
 
 ### Users
 
-The **Users** view lists all the users that have been identified to be part of or related to the incident. Here's an example.
+The **Users** view lists all the users that have been identified to be part of or related to the incident.
 
 :::image type="content" source="./media/investigate-incidents/incident-users2.png" alt-text="The Users page in the Microsoft Defender portal." lightbox="./media/investigate-incidents/incident-users2.png":::
 
@@ -238,7 +238,7 @@ Learn how to view additional user information and manage the users of an inciden
 
 ### Mailboxes
 
-The **Mailboxes** view lists all the mailboxes that have been identified to be part of or related to the incident. Here's an example.
+The **Mailboxes** view lists all the mailboxes that have been identified to be part of or related to the incident.
 
 :::image type="content" source="./media/investigate-incidents/incident-mailboxes2.png" alt-text="The Mailboxes page for an incident in the Microsoft Defender portal." lightbox="./media/investigate-incidents/incident-mailboxes2.png":::
 
@@ -246,7 +246,7 @@ You can select the check mark for a mailbox to see a list of active alerts. Sele
 
 ### Apps
 
-The **Apps** view lists all the apps identified to be part of or related to the incident. Here's an example.
+The **Apps** view lists all the apps identified to be part of or related to the incident.
 
 :::image type="content" source="./media/investigate-incidents/incident-apps.png" alt-text="The Apps page for an incident in the Microsoft Defender portal." lightbox="./media/investigate-incidents/incident-apps.png":::
 
@@ -254,7 +254,7 @@ You can select the check mark for an app to see a list of active alerts. Select 
 
 ### Cloud resources
 
-The **Cloud resources** view lists all the cloud resources identified to be part of or related to the incident. Here's an example.
+The **Cloud resources** view lists all the cloud resources identified to be part of or related to the incident.
 
 :::image type="content" source="./media/investigate-incidents/incident-assets-cloudresource-small.png" alt-text="The Cloud resources page for an incident in the Microsoft Defender portal." lightbox="./media/investigate-incidents/incident-assets-cloudresource.png":::
 
@@ -280,7 +280,7 @@ For more information, see [Automated investigation and response in Microsoft Def
 
 ## Evidence and Response
 
-The **Evidence and Response** tab shows all the supported events and suspicious entities in the alerts in the incident. Here's an example.
+The **Evidence and Response** tab shows all the supported events and suspicious entities in the alerts in the incident.
 
 :::image type="content" source="./media/investigate-incidents/incidents-evidenceresponse-small.png" alt-text="The Evidence and Response page for an incident in the Microsoft Defender portal" lightbox="./media/investigate-incidents/incidents-evidenceresponse.png":::
 
@@ -290,7 +290,7 @@ Each of the analyzed entities is marked with a verdict (Malicious, Suspicious, C
 
 ### Approve or reject remediation actions
 
-For incidents with a remediation status of **Pending approval**, you can approve or reject a remediation action, open in Explorer, or Go hunt from within Evidence and Response tab. Here's an example.
+For incidents with a remediation status of **Pending approval**, you can approve or reject a remediation action, open in Explorer, or Go hunt from within Evidence and Response tab.
 
 :::image type="content" source="./media/investigate-incidents/evidence-approve-small.png" alt-text="The Approve\Reject option in the Evidence and Response management pane for an incident in the Microsoft Defender portal." lightbox="./media/investigate-incidents/evidence-approve.png":::
 
@@ -312,7 +312,7 @@ Information is organized in these sections.
 
 ## Similar incidents
 
-Some incidents might have similar incidents listed on the **Similar incidents** page. This section shows incidents that have similar alerts, entities, and other properties. This can help you understand the scope of the attack and identify other incidents that might be related. Here's an example.
+Some incidents might have similar incidents listed on the **Similar incidents** page. This section shows incidents that have similar alerts, entities, and other properties. This can help you understand the scope of the attack and identify other incidents that might be related.
 
 :::image type="content" source="./media/investigate-incidents/incident-similartab-small.png" alt-text="Screenshot that shows the Similar incidents tab for an incident in the Microsoft Defender portal." lightbox="./media/investigate-incidents/incident-similartab.png":::
 

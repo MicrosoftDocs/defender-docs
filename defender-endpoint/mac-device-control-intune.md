@@ -2,8 +2,8 @@
 title: Deploy and manage Device Control using Intune 
 description: Learn how to deploy and manage device control policies using Intune.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 ms.reviewer: joshbregman
 manager: bagol
 ms.localizationpriority: medium
@@ -23,11 +23,6 @@ appliesto:
 
 ---
 # Deploy and manage Device Control using Intune
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-
 
 
 Microsoft Defender for Endpoint Device Control feature enables you to audit, allow, or prevent the read, write, or execute access to removable storage, and allows you to manage iOS and Portable device and Bluetooth media with or without exclusions.
@@ -60,5 +55,5 @@ You can deploy the mobileconfig file through [**https://intune.microsoft.com/**]
 - [Deploy and manage Device Control using jamf](mac-device-control-jamf.md)
 - [macOS Device Control frequently asked questions (FAQ)](mac-device-control-faq.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

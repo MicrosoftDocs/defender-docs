@@ -20,10 +20,8 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
+
 # Create and manage device tags
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 Add tags on devices to create a logical group affiliation. Device tags support proper mapping of the network, enabling you to attach different tags to capture context and to enable dynamic list creation as part of an incident. Tags can be used as a filter in the **Device inventory** view, or to group devices. For more information on device grouping, see [Create and manage device groups](machine-groups.md).
 
@@ -68,11 +66,11 @@ Device tagging is supported on the following operating systems:
 
      You can also get to the alert page through the file and IP views.
 
-2. Select **Manage tags** from the row of Response actions.
+1. Select **Manage tags** from the row of Response actions.
 
     :::image type="content" source="media/manage-tags-option.png" alt-text="Image of manage tags button" lightbox="media/manage-tags-option.png":::
 
-3. Type to find or create tags
+1. Type to find or create tags
 
     :::image type="content" source="media/create-new-tag.png" alt-text="Adding tags on device1" lightbox="media/create-new-tag.png":::
 
@@ -168,5 +166,5 @@ You can use Microsoft Intune to define and apply tag for mobile devices. You can
 - **For iOS**, follow the guidance in [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md).
 - **For Android**, follow the guidance on [Configure Defender for Endpoint on Android features](android-configure.md).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

@@ -3,8 +3,8 @@ title: Manage Microsoft Defender Antivirus in your business
 description: Learn how to use Group Policy, Configuration Manager, PowerShell, WMI, Intune, and the command line to manage Microsoft Defender Antivirus
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
 ms.date: 10/20/2025
 ms.reviewer: yongrhee
@@ -23,7 +23,6 @@ appliesto:
 ---
 # Manage Microsoft Defender Antivirus in your business
 
-
 > [!TIP]
 > For the best experience, please choose 1 method for configuring the Microsoft Defender Antivirus policies.
 
@@ -39,7 +38,6 @@ You can manage and configure Microsoft Defender Antivirus with the following too
 - The [Microsoft Malware Protection Command Line Utility](./command-line-arguments-microsoft-defender-antivirus.md) (referred to as the *mpcmdrun.exe* utility)
 
 ## Prerequisites
-
 
 ### Supported operating systems
 
@@ -68,5 +66,4 @@ If running high CPU in Antimalware Service Executable | Microsoft Defender Antiv
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

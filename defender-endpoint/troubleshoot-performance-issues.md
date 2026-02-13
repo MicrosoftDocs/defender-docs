@@ -3,8 +3,8 @@ title: Troubleshoot performance issues
 description: Troubleshoot high CPU usage related to the real-time protection service in Microsoft Defender for Endpoint.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 ms.date: 10/20/2025
@@ -19,9 +19,8 @@ appliesto:
   - Microsoft Defender Antivirus
 
 ---
-# Troubleshoot performance issues related to real-time protection
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+# Troubleshoot performance issues related to real-time protection
 
 If your system is having high CPU usage or performance issues related to the Microsoft Defender Antivirus (Anti-malware Service Executable, MsMpEng.exe, Microsoft Defender Antivirus).
 
@@ -82,5 +81,5 @@ We recommend that software vendors follow the various guidelines in [Partnering 
 - [Configure and validate exclusions for Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md)
 - [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

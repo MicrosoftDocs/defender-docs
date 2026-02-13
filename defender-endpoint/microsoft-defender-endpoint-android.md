@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint on Android
 ms.reviewer: denishdonga
 description: Describes how to install and use Microsoft Defender for Endpoint on Android
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -14,17 +14,13 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: android
 search.appverid: met150
-ms.date: 06/10/2025
+ms.date: 01/31/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ---
 # Microsoft Defender for Endpoint on Android
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 
 This article describes how to install, configure, update, and use Defender for Endpoint on Android.
@@ -58,9 +54,12 @@ This article describes how to install, configure, update, and use Defender for E
 
 ### System requirements
 
+> [!NOTE]
+> - Support for Android 10 devices will be deprecated at the end of March 2026.
+
 - Intune Company Portal app should be downloaded from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) and installed for seamless onboarding. Device enrollment is required for Intune device compliance policies to be enforced.
 
-- Mobile phones and tablets running Android 8.0 and above. **(Note: Microsoft Defender is ending support for Android 8, 8.1 and 9 versions on April 30, 2025, after that device running on Android version < 10 won't be supported)**
+- Mobile phones and tablets running Android 10.0 and above. 
 
 **What does it mean devices running on unsupported Android version?** 
 
@@ -134,5 +133,5 @@ For information on how to configure Defender for Endpoint on Android features, s
 
 - [Mobile Application Management (MAM) basics](/mem/intune/apps/app-management#mobile-application-management-mam-basics)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

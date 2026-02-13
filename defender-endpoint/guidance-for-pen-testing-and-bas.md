@@ -4,8 +4,8 @@ description: This article provides guidance for conducting penetration testing a
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.reviewer: yongrhee
 manager: bagol
 ms.custom: nextgen
@@ -121,8 +121,8 @@ It's crucial to report to Microsoft as soon as possible. The advanced hunting te
    - **MDSI portal**: Go to the [MDSI portal](https://www.microsoft.com/en-us/wdsi), and then select **Submit files**. Follow the guidance on the page.
    - **The Microsoft Defender portal**: See [Use admin submission for submitting files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde).
 
-2. After you upload the files, note the `Submission ID` for your sample submission (for example, `7c6c214b-17d4-4703-860b-7f1e9da03f7f`).
+1. After you upload the files, note the `Submission ID` for your sample submission (for example, `7c6c214b-17d4-4703-860b-7f1e9da03f7f`).
 
-3. Wait for an update. After Microsoft receives the sample, the file is investigated, and a determination is made. If Microsoft determines that the sample file is malicious, we take corrective action to prevent the malware from going undetected.
+1. Wait for an update. After Microsoft receives the sample, the file is investigated, and a determination is made. If Microsoft determines that the sample file is malicious, we take corrective action to prevent the malware from going undetected.
 
    If you have questions, [contact support](/defender-endpoint/contact-support).

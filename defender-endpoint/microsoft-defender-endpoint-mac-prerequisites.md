@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint on macOS Prerequisites
 ms.reviewer: joshbregman
 description: Learn how to install, and configure Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier3
 - mde-macos
-ms.topic: conceptual
+ms.topic: article
 ms.subservice: macos
 search.appverid: met150
 ms.date: 06/19/2025
@@ -25,11 +25,8 @@ appliesto:
 ---
 # Microsoft Defender for Endpoint on macOS prerequisites
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 This article lists the prerequisites for installing and configuring Microsoft Defender for Endpoint on macOS. It also includes links to additional resources for more information.
-
-
 
 
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
@@ -150,5 +147,5 @@ mdatp connectivity test
 - For more information about logging, uninstalling, or other articles, see [Resources for Microsoft Defender for Endpoint on macOS](mac-resources.md).
 - [Privacy for Microsoft Defender for Endpoint on macOS](mac-privacy.md).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

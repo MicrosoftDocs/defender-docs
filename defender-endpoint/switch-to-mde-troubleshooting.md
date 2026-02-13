@@ -2,8 +2,8 @@
 title: Troubleshooting issues when moving to Microsoft Defender for Endpoint
 description: Learn how to troubleshoot issues when you migrate to Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -35,7 +35,7 @@ When you migrate to Defender for Endpoint, you begin with your non-Microsoft ant
 To resolve this issue, take the following steps:
 
 1. [Add Microsoft Defender for Endpoint to the exclusion list](#add-microsoft-defender-for-endpoint-to-the-exclusion-list).
-2. [Set Microsoft Defender Antivirus to passive mode manually](#set-microsoft-defender-antivirus-to-passive-mode-manually).
+1. [Set Microsoft Defender Antivirus to passive mode manually](#set-microsoft-defender-antivirus-to-passive-mode-manually).
 
 ### Add Microsoft Defender for Endpoint to the exclusion list
 
@@ -79,11 +79,11 @@ If Microsoft Defender Antivirus is stuck in passive mode, set it to active mode 
 
 1. On your Windows device, open Registry Editor as an administrator.
 
-2. Go to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`.
+1. Go to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`.
 
-3. Set or define a **REG_DWORD** entry called `ForceDefenderPassiveMode`, and set its value to `0`.
+1. Set or define a **REG_DWORD** entry called `ForceDefenderPassiveMode`, and set its value to `0`.
 
-4. Reboot the device.
+1. Reboot the device.
 
 > [!IMPORTANT]
 > If you're still having trouble setting Microsoft Defender Antivirus to active mode after following this procedure, [contact support](/Microsoft-365/admin/get-help-support).
@@ -94,14 +94,14 @@ If you're using a non-Microsoft antivirus/antimalware solution on Windows Server
 
 1. As a local administrator on the server, open Command Prompt.
 
-2. Run the following command: `MpCmdRun.exe -wdenable`
+1. Run the following command: `MpCmdRun.exe -wdenable`
 
-3. Restart the device.
+1. Restart the device.
 
 ## See also
 
 - [Microsoft Defender Antivirus compatibility with other security products](microsoft-defender-antivirus-compatibility.md)
 - [Onboarding tools and methods for Windows and Mac devices in Defender for Endpoint](onboard-client.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

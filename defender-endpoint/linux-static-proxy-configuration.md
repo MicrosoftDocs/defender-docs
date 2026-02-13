@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint on Linux static proxy discovery
 ms.reviewer: gopkr
 description: Describes how to configure Microsoft Defender for Endpoint on Linux, for static proxy discovery.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -22,10 +22,6 @@ appliesto:
 
 ---
 # Configure Microsoft Defender for Endpoint on Linux for static proxy discovery
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 
 Microsoft Defender for Endpoint can discover a proxy server using the `HTTPS_PROXY` environment variable. This setting must be configured **both** at installation time and after the product has been installed.
@@ -88,5 +84,5 @@ Set the proxy in the managed configuration at `/etc/opt/microsoft/mdatp/managed/
 
 A management tool of choice can be used to deploy the above configuration. Please check [Set preferences for Microsoft Defender for Endpoint on Linux](./linux-preferences.md) for more details on managed configuration.
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

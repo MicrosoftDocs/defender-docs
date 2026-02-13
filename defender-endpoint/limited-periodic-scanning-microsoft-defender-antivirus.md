@@ -4,8 +4,8 @@ description: Limited periodic scanning lets you use Microsoft Defender Antivirus
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
 ms.date: 10/20/2025
 ms.reviewer: yongrhee
@@ -25,7 +25,6 @@ appliesto:
 ---
 # Use limited periodic scanning in Microsoft Defender Antivirus
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 > [!NOTE]  
 > **Microsoft does not support using this feature in Enterprise environments.** This feature only uses a limited subset of the Microsoft Defender Antivirus capabilities to detect malware, and can't detect most malware and potentially unwanted software. Management of the feature isn't supported, the feature can't be enabled or disabled through policies, and reporting capabilities are limited. Microsoft recommends that enterprise organizations choose a primary antivirus/antimalware solution, and use it exclusively. 
@@ -62,5 +61,5 @@ Underneath the name of a non-Microsoft antivirus product, a link appears as **Mi
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

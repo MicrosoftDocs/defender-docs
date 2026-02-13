@@ -2,12 +2,12 @@
 title: List software by recommendation
 description: Retrieves a security recommendation related to a specific software.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -15,24 +15,14 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 08/11/2021
+ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint
-
 ---
+
 # List software by recommendation
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
-
-
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 Retrieves a security recommendation related to a specific software.
 
@@ -40,10 +30,10 @@ Retrieves a security recommendation related to a specific software.
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md) for details.
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Software.Read.All|'Read Threat and Vulnerability Management Software information'
-Delegated (work or school account)|SecurityRecommendation.Read|'Read Threat and Vulnerability Management security recommendation information'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Software.Read.All|'Read Threat and Vulnerability Management Software information'|
+|Delegated (work or school account)|SecurityRecommendation.Read|'Read Threat and Vulnerability Management security recommendation information'|
 
 ## HTTP request
 
@@ -53,9 +43,9 @@ GET /api/recommendations/{id}/software
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -69,10 +59,10 @@ If successful, this method returns 200 OK with the software associated with the 
 
 ### Request example
 
-Here is an example of the request.
+Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/recommendations/va-_-google-_-chrome/software 
+GET https://api.security.microsoft.com/api/recommendations/va-_-google-_-chrome/software
 ```
 
 ### Response example
@@ -81,7 +71,7 @@ Here is an example of the response.
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Analytics.Contracts.PublicAPI.PublicProductDto",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Analytics.Contracts.PublicAPI.PublicProductDto",
     "id": "google-_-chrome",
     "name": "chrome",
     "vendor": "google",
@@ -92,10 +82,3 @@ Here is an example of the response.
     "impactScore": 3.94418621
 }
 ```
-
-## Related topics
-
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Defender Vulnerability Management security recommendation](/defender-vulnerability-management/tvm-security-recommendation)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-
