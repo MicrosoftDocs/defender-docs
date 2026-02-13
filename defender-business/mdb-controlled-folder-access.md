@@ -23,7 +23,7 @@ Controlled folder access allows only trusted apps to access protected folders on
 
 ## Set up controlled folder access
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Attack surface reduction**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/p/?linkid=2109431), go to **Endpoint security** \> **Attack surface reduction**.
 
 2. Select an existing policy, or choose **Create policy** to create a new policy.
 

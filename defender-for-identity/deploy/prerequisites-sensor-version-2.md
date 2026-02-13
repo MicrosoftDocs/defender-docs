@@ -45,7 +45,7 @@ The following table summarizes the server requirements and recommendations for t
 |---------|---------|
 |Specifications  |  Make sure to install Defender for Identity on Windows version 2016 or higher, on a domain controller server with a minimum of:<br><br>- two cores<br>- 6 GB of RAM<br>- 6 GB of disk space required, 10 GB recommended, including space for Defender for Identity binaries and logs <br><br>Defender for Identity supports read-only domain controllers (RODC).     |
 |Performance   | For optimal performance, set the **Power Option** of the machine running the Defender for Identity sensor to **High Performance**.        |
-|Network interface configuration | If you're using VMware virtual machines, make sure the virtual machine's NIC configuration has Large Send Offload (LSO) disabled. See [VMware virtual machine sensor issue](../troubleshooting-known-issues.md#vmware-virtual-machine-sensor-issue) for more details.|
+|Network interface configuration | If you're using VMware virtual machines, make sure the virtual machine's NIC configuration has Large Send Offload (LSO) disabled. For more information, see [VMware virtual machine sensor issue](../troubleshooting-known-issues.md#vmware-virtual-machine-sensor-issue) for more details.|
 |Maintenance window|   We recommend scheduling a maintenance window for your domain controllers, as a restart might be required if the installation runs and a restart is already pending, or if .NET Framework needs to be installed. <br><br>If .NET Framework version 4.7 or later isn't already found on the system, .NET Framework version 4.7 is installed, and might require a restart.      |
 |AD FS federation servers     |In AD FS environments, Defender for Identity sensors are supported only on the federation servers. They're not required on Web Application Proxy (WAP) servers.       |
 |Microsoft Entra Connect servers     |For Microsoft Entra Connect servers, you need to install the sensors on both active and staging servers.       |
@@ -62,20 +62,23 @@ Windows Server 2012 and Windows Server 2012 R2 reached extended end of support o
 
 ### Required ports
 
+To enable the Defender for Identity sensor to communicate with the cloud service, allow outbound HTTPS traffic to your workspace sensor API URL in the following format: `https://<your-workspace-name>sensorapi.atp.azure.com`. For example, if your workspace name is "Contoso", allow traffic to `https://contoso-corpsensorapi.atp.azure.com`.
+
+
 |Protocol   |Transport         |Port         |From       |To   |Notes|
 |------------|---------|---------|-------|--------------|------|
 |Internet ports       | | | | |  |
 |SSL (\*.atp.azure.com)   |TCP      |443 |Defender for Identity sensor|Defender for Identity cloud service|Alternately, [configure access through a proxy](configure-proxy.md).|
 |Internal ports          | | | | |  |
 |DNS     |TCP and UDP           |53  |Defender for Identity sensor|DNS Servers           |
-|Netlogon  <br>(SMB, CIFS, SAM-R)|TCP/UDP  |445 |Defender for Identity sensor|All devices on the network (DCs, ADFS, ADCS, and Entra Connect)|  |
+|Netlogon  <br>(SMB, CIFS)|TCP/UDP  |445 |Defender for Identity sensor|All devices on the network (DCs, ADFS, ADCS, and Entra Connect)|  |
 |RADIUS         |UDP      |1813|RADIUS         |Defender for Identity sensor      |  |
 |Localhost port    | | | | |Required for the sensor service updater. By default, *localhost* to *localhost* traffic is allowed unless a custom firewall policy blocks it.|
 |SSL|TCP      |444 |Sensor service|Sensor updater service            |   |
 |Network Name Resolution (NNR) ports    | | | | |To resolve IP addresses to computer names, we recommend opening all ports listed. However, only one port is required. |
-|NTLM over RPC |TCP      |Port 135         |Defender for Identity sensor|All devices on network (DCs, ADFS, ADCS, and Entra Connect)|  |
-|NetBIOS        |UDP      |137 |Defender for Identity sensor|All devices on network (DCs, ADFS, ADCS, and Entra Connect)|  |
-|RDP      |TCP      |3389 |Defender for Identity sensor|All devices on network (DCs, ADFS, ADCS, and Entra Connect)|Only the first packet of **Client hello** queries the DNS server using reverse DNS lookup of the IP address (UDP 53)|
+|NTLM over RPC |TCP      |Port 135         |Defender for Identity sensor|All devices on network (DCs, ADFS, ADCS, and Microsoft Entra Connect)|  |
+|NetBIOS        |UDP      |137 |Defender for Identity sensor|All devices on network (DCs, ADFS, ADCS, and Microsoft Entra Connect)|  |
+|RDP      |TCP      |3389 |Defender for Identity sensor|All devices on network (DCs, ADFS, ADCS, and Microsoft Entra Connect)|Only the first packet of **Client hello** queries the DNS server using reverse DNS lookup of the IP address (UDP 53)|
 
 If you're working with [multiple forests](multi-forest.md), make sure that the following ports are opened on any machine where a Defender for Identity sensor is installed:
 

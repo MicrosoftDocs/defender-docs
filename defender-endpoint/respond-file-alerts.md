@@ -2,12 +2,12 @@
 title: Take response actions on a file in Microsoft Defender for Endpoint
 description: Take response actions on file-related alerts by stopping and quarantining a file or blocking a file and checking activity details.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 - mde-edr
@@ -17,14 +17,11 @@ search.appverid: met150
 ms.date: 03/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # Take response actions on a file
 
-
 [!include[Prerelease information](../includes/prerelease.md)]
-
-
 
 Quickly respond to detected attacks by stopping and quarantining files or blocking a file. After taking action on files, you can check on activity details in the Action center.
 
@@ -34,7 +31,7 @@ Response actions run along the top of the file page, and include:
 
 - Stop and quarantine file
 - Manage indicator
-- Download file 
+- Download file
 - Collect file
 - Ask Defender Experts
 - Manual actions
@@ -150,25 +147,17 @@ By default, you should be able to download files that are in quarantine.
 
 The **Download file** button can have the following states:
 
-- **Active** - You are able to collect the file. 
+- **Active** - You are able to collect the file.
 
-- **Disabled** - If the button is grayed out or disabled during an active collection attempt, you might not have appropriate RBAC permissions to collect files.
-
-  The following permissions are required:
-
-  For Microsoft Defender XDR Unified role-based access control (RBAC):
-
-     - Add file collection permission in Microsoft Defender XDR Unified (RBAC)
- 
-  For Microsoft Defender for Endpoint role-based access control (RBAC):
-
-    For Portable Executable file (.exe, .sys, .dll, and others)
-    - Security Administrator or Advanced live response or Alerts 
-
-    Non-Portable Executable file (.txt, .docx, and others) 
-    - Security Administrator or Advanced live response
-    - Tenants with [role-based access (RBAC) permissions](/defender-xdr/manage-rbac) enabled
-
+- **Disabled** - If the button is grayed out or disabled during an active collection attempt, you might not have appropriate RBAC permissions to collect files. The following permissions are required:
+  - Microsoft Defender XDR Unified role-based access control (RBAC):
+    - Add file collection permission in Microsoft Defender XDR Unified (RBAC)
+  - Microsoft Defender for Endpoint role-based access control (RBAC):
+    - Portable Executable files (.exe, .sys, .dll, and others):
+      - Security Administrator or Advanced live response or Alerts
+    - Non-Portable Executable file (.txt, .docx, and others):
+      - Security Administrator or Advanced live response
+      - Tenants with [role-based access (RBAC) permissions](/defender-xdr/manage-rbac) enabled
 
 :::image type="content" source="media/atp-download-file-action.png" alt-text="The download file action" lightbox="media/atp-download-file-action.png":::
 
@@ -206,21 +195,19 @@ If a file isn't already stored by Microsoft Defender for Endpoint, you can't dow
 
 The **Collect file** button can have the following states:
 
-- **Active** - You are able to collect the file. 
+- **Active** - You are able to collect the file.
 
-- **Disabled** - If the button is grayed out or disabled during an active collection attempt, you might not have appropriate RBAC permissions to collect files. 
+- **Disabled** - If the button is grayed out or disabled during an active collection attempt, you might not have appropriate RBAC permissions to collect files.
 
-
-    The following permissions are required: 
+    The following permissions are required:
 
     For Portable Executable file (.exe, .sys, .dll, and others)
-    - Security Administrator or Advanced live response or Alerts 
+    - Security Administrator or Advanced live response or Alerts
 
-    Non-Portable Executable file (.txt, .docx, and others) 
+    Non-Portable Executable file (.txt, .docx, and others)
     - Security Administrator or Advanced live response
 
-
-If a file hasn't been seen in the organization in the past 30 days, **Collect file** is disabled. 
+If a file hasn't been seen in the organization in the past 30 days, **Collect file** is disabled.
 
 > [!IMPORTANT]
 > A file that was quarantined as a potential network threat might not be recoverable. If a user attempts to restore the file after quarantine, that file might not be accessible. This can be due to the system no longer having network credentials to access the file. Typically, this is a result of a temporary log on to a system or shared folder and the access tokens expired.
@@ -234,7 +221,7 @@ Prevent further propagation of an attack in your organization by banning potenti
 > - This feature is available if your organization uses Microsoft Defender Antivirus and Cloud-delivered protection is enabled. For more information, see [Manage cloud-delivered protection](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus).
 >
 > - The Antimalware client version must be 4.18.1901.x or later.
-> - This feature is designed to prevent suspected malware (or potentially malicious files) from being downloaded from the web. It currently supports portable executable (PE) files, including _.exe_ and _.dll_ files. The coverage will be extended over time.
+> - This feature is designed to prevent suspected malware (or potentially malicious files) from being downloaded from the web. It supports portable executable (PE) files, including _.exe_ and _.dll_ files. The coverage will be extended over time.
 > - This response action is available for devices on Windows 10, version 1703 or later, and Windows 11.
 > - The allow or block function cannot be done on files if the file's classification exists on the device's cache prior to the allow or block action.
 
@@ -277,7 +264,7 @@ All other related details are also shown, such as submission date/time, submitti
 Cyber security investigations are typically triggered by an alert. Alerts are related to one or more observed files that are often new or unknown. Selecting a file takes you to the file view where you can see the file's metadata. To enrich the data related to the file, you can submit the file for deep analysis.
 
 The Deep analysis feature executes a file in a secure, fully instrumented cloud environment. Deep analysis results show the file's activities, observed behaviors, and associated artifacts, such as dropped files, registry modifications, and communication with IPs.
-Deep analysis currently supports extensive analysis of portable executable (PE) files (including _.exe_ and _.dll_ files).
+Deep analysis supports extensive analysis of portable executable (PE) files (including _.exe_ and _.dll_ files).
 
 Deep analysis of a file takes several minutes. Once the file analysis is complete, the Deep Analysis tab updates to display a summary and the date and time of the latest available results.
 
@@ -316,7 +303,7 @@ You can also submit a sample through the [Microsoft Defender portal](https://www
 
    > [!NOTE]
    > Only PE files are supported, including _.exe_ and _.dll_ files. Additionally, Windows App Store Executables are unsupported.
-   
+
       A progress bar is displayed and provides information on the different stages of the analysis. You can then view the report when the analysis is done.
 
 > [!NOTE]
@@ -368,6 +355,4 @@ If you come across a problem when trying to submit a file, try each of the follo
 - [Take response actions on a device](respond-machine-alerts.md)
 - [Investigate files](investigate-files.md)
 - [Manual response actions in Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md#manual-response-actions)
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

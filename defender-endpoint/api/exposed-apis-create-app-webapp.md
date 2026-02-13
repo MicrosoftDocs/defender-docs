@@ -2,9 +2,9 @@
 title: Create an app to access Microsoft Defender for Endpoint without a user
 description: Learn how to grant a web app access to Microsoft Defender for Endpoint without a user.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
-ms.date: 09/08/2025
+ms.author: painbar
+author: paulinbar
+ms.date: 02/03/2026
 ms.topic: how-to
 ms.subservice: reference
 ms.appliesTo: Microsoft Defender for Business and Microsoft Defender for Endpoint Plans 1 and 2
@@ -100,7 +100,7 @@ $tenantId = '' ### Paste your tenant ID here
 $appId = '' ### Paste your Application ID here
 $appSecret = '' ### Paste your Application key here
 
-$sourceAppIdUri = 'https://api.security.microsoft.com/.default'
+$sourceAppIdUri = 'https://api.securitycenter.microsoft.com/.default'
 $oAuthUri = "https://login.microsoftonline.com/$TenantId/oauth2/v2.0/token"
 $authBody = [Ordered] @{
     scope = "$sourceAppIdUri"
@@ -130,7 +130,7 @@ The following procedure assumes that Curl for Windows is already installed on yo
 4. Run the following command:
 
    ```console
-   curl -i -X POST -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=%CLIENT_ID%" -d "scope=https://api.security.microsoft.com/.default" -d "client_secret=%CLIENT_SECRET%" "https://login.microsoftonline.com/%TENANT_ID%/oauth2/v2.0/token" -k
+   curl -i -X POST -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=%CLIENT_ID%" -d "scope=https://api.securitycenter.microsoft.com/.default" -d "client_secret=%CLIENT_SECRET%" "https://login.microsoftonline.com/%TENANT_ID%/oauth2/v2.0/token" -k
    ```
 
    The answer resembles the following code snippet:

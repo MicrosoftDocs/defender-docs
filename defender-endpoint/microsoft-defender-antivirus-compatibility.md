@@ -6,8 +6,8 @@ ms.subservice: ngp
 ms.localizationpriority: medium
 ms.date: 10/20/2025
 ms.topic: how-to
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.custom: 
 - nextgen
 - partner-contribution
@@ -307,6 +307,5 @@ If you're looking for Antivirus related information for other platforms, see:
 - [EDR in block mode](edr-in-block-mode.md)
 - [Learn about Endpoint data loss prevention](/microsoft-365/compliance/endpoint-dlp-learn-about)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
 
