@@ -2,12 +2,12 @@
 title: Get domain-related alerts API
 description: Learn how to use the Get domain-related alerts API to retrieve alerts related to a given domain address in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -40,10 +40,10 @@ A response includes only alerts, associated with devices, that the user has acce
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Alert.ReadWrite.All|'Read and write all alerts'
-Delegated (work or school account)|Alert.ReadWrite|'Read and write alerts'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Alert.ReadWrite.All|'Read and write all alerts'|
+|Delegated (work or school account)|Alert.ReadWrite|'Read and write alerts'|
 
 ## HTTP request
 
@@ -72,6 +72,5 @@ If successful and domain exists - 200 OK with list of [alert](alerts.md) entitie
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/domains/client.wns.windows.com/alerts
+GET https://api.security.microsoft.com/api/domains/client.wns.windows.com/alerts
 ```
-

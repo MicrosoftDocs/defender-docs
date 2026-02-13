@@ -180,15 +180,15 @@ Select the three dots to the right of any column in the **Inspect record** panel
 
 You can add your frequently used schemas, functions, queries, and detection rules to the Favorites section of each tab in the advanced hunting page for quick access.
 
-:::image type="content" source="media/faves-1.png" alt-text="Screenshot of the advanced hunting page with the Favorites section highlighted." lightbox="media/faves-1.png":::
+:::image type="content" source="media/advanced-hunting-query-results/faves-1.png" alt-text="Screenshot of the advanced hunting page with the Favorites section highlighted." lightbox="media/advanced-hunting-query-results/faves-1.png":::
 
 For instance, to add `AlertInfo` to your **Favorites**, go to the **Schema** tab, and select the three dots to the right of the table and select **Add to favorites**. 
 
-:::image type="content" source="media/faves-2.png" alt-text="Screenshot of the Add to Favorites option in the advanced hunting page." lightbox="media/faves-2.png":::
+:::image type="content" source="media/advanced-hunting-query-results/faves-2.png" alt-text="Screenshot of the Add to Favorites option in the advanced hunting page." lightbox="media/advanced-hunting-query-results/faves-2.png":::
 
 A notification appears to inform you that the item was successfully added to Favorites.
 
-![Screenshot of notification that a new item was added to Favorites in advanced hunting.](media/faves-3.png)
+![Screenshot of notification that a new item was added to Favorites in advanced hunting.](media/advanced-hunting-query-results/faves-3.png)
 
 You can do the same for your saved functions, queries, and custom detections in their respective Favorites sections right under each tab (**Functions**, **Queries**, and **Detection Rules**).
 

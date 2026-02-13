@@ -2,12 +2,12 @@
 title: Get IP related alerts API
 description: Retrieve a collection of alerts related to a given IP address using Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -24,13 +24,12 @@ appliesto:
 # Get IP related alerts API
 
 ## API description
-Retrieves a collection of alerts related to a given IP address.
 
+Retrieves a collection of alerts related to a given IP address.
 
 ## Limitations
 
 Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
-
 
 ## Permissions
 
@@ -42,12 +41,11 @@ When obtaining a token using user credentials:
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Defender for Endpoint APIs](apis-intro.md).
 
 |Permission type|Permission|Permission display name|
-|:---|:---|:---|
+|---|---|---|
 |Application|Alert.Read.All|`Read all alerts`|
 |Application|Alert.ReadWrite.All|`Read and write all alerts`|
 |Delegated (work or school account) | Alert.Read | `Read alerts`|
 |Delegated (work or school account) | Alert.ReadWrite | `Read and write alerts`|
-
 
 ## HTTP request
 
@@ -57,9 +55,9 @@ GET /api/ips/{ip}/alerts
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization | String | Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -77,6 +75,5 @@ If the IP address is invalid, it returns HTTP 400.
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/ips/10.209.67.177/alerts
+GET https://api.security.microsoft.com/api/ips/10.209.67.177/alerts
 ```
-

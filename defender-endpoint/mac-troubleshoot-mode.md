@@ -60,16 +60,16 @@ During troubleshooting mode, you can't:
 ## Enable troubleshooting mode on macOS
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com/), and sign in.
-2. Navigate to the device page you would like to turn on troubleshooting mode. Then, select the ellipses(...) and select **Turn on troubleshooting mode**.
+1. Navigate to the device page you would like to turn on troubleshooting mode. Then, select the ellipses(...) and select **Turn on troubleshooting mode**.
 
    :::image type="content" source="media/troubleshooting-mode-on-mac.png" alt-text="Screenshot displaying the screenshot of the troubleshooting mode on mac.":::
 
    > [!NOTE]
    > The **Turn on troubleshooting mode** option is available on all devices, even if the device does not meet the prerequisites for troubleshooting mode. For more information, see the [Problems with troubleshooting mode](#problems-with-troubleshooting-mode) section later in this article.
 
-3. Read the information displayed on the pane and once you're ready, select **Submit** to confirm that you want to turn on troubleshooting mode for that device.
-4. You'll see *It might take a few minutes for the change to take effect* text being displayed. During this time, when you select the ellipses again, you'll see the **Turn On Troubleshooting mode is pending** option grayed-out.
-5. Once complete, the device page shows that the device is now in troubleshooting mode.
+1. Read the information displayed on the pane and once you're ready, select **Submit** to confirm that you want to turn on troubleshooting mode for that device.
+1. You'll see *It might take a few minutes for the change to take effect* text being displayed. During this time, when you select the ellipses again, you'll see the **Turn On Troubleshooting mode is pending** option grayed-out.
+1. Once complete, the device page shows that the device is now in troubleshooting mode.
 
    If the end-user is logged-in on the macOS device, they'll see the following text:
 
@@ -77,7 +77,7 @@ During troubleshooting mode, you can't:
 
    Select **OK**.
 
-6. Once enabled, you can test the different command line options that are togglable in the troubleshooting mode (TS Mode).
+1. Once enabled, you can test the different command line options that are togglable in the troubleshooting mode (TS Mode).
 
    For example, when you use `mdatp config real-time-protection --value disabled` command to disable real time protection, you'll be prompted to enter your password. Select **OK** after entering your password.
 
@@ -156,12 +156,10 @@ DeviceEvents
 
 If you can't enable troubleshooting mode, do the following troubleshooting steps on the target Mac:
 
-- Verify the app version by running the following commands:
+- Verify the app version by running the following command:
 
   ```terminal
   mdatp health --field app_version
-
-  mdatp health --field edr_client_version
   ```
 
   As previously mentioned, you need Platform Update version: [101.23122.0005](mac-whatsnew.md#jan-2024-build-101231220005---release-version-2012312250) or newer.
@@ -210,4 +208,4 @@ sudo mdatp log level set --level info
 - [Create indicators](indicators-overview.md)
 - [Web content filtering](web-content-filtering.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

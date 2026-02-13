@@ -491,7 +491,7 @@ The following actions are available at the top of the Email entity page:
 ² You can preview or download email messages that are available in cloud mailboxes. Examples of when messages are no longer available in mailboxes include:
 
 - The message was dropped before delivery or delivery failed.
-- The message was _hard deleted_.
+- The message was _soft deleted_ or _hard deleted_.
 - The message has a delivery location of _On-prem/External_.
 - ZAP moved the message to quarantine.
 
@@ -499,7 +499,7 @@ The following actions are available at the top of the Email entity page:
 
 ## The Email summary panel
 
-The _Email summary panel_ is the email details flyout that's available in many features in the default email protections for cloud mailboxes and in Defender for Office 365. The Email summary panel contains standardized summary information about the email message taken from the full details that are available on the Email entity page in Defender for Office 365.
+The _Email summary panel_ is the email details flyout that's available in many features in [the built-in security features for all cloud mailboxes](eop-about.md) and in Defender for Office 365. The Email summary panel contains standardized summary information about the email message taken from the full details that are available on the Email entity page in Defender for Office 365.
 
 Where to find the Email summary panel is described in the [Where to find the Email entity page](#where-to-find-the-email-entity-page) section earlier in this article. The rest of this section describes the information that's available on the Email summary panel across all features.
 

@@ -117,22 +117,21 @@ We updated all the subordinating screens associated with the feature
 
    :::image type="content" source="media/mde-android-web-protection-after.png" alt-text="Screensot showing the web protection feature on the MDE Android app." lightbox="media/mde-android-web-protection-after.png":::
 
-2. **App Security** and **App Scanning**:
+1. **App Security** and **App Scanning**:
     
    :::image type="content" source="media/mde-android-app-security-and-app-scanning.png" alt-text="Screensot showing the app security feature on the MDE Android app." lightbox="media/mde-android-app-security-and-app-scanning.png":::
 
-3. **Threat found**:
+1. **Threat found**:
 
    The following image highlights the 'Threat Found' feature, showcasing its functionality both before and after the recent update.
 
    :::image type="content" source="media/mde-android-threat-found.png" alt-text="Screensot showing the threat found feature on the MDE Android app." lightbox="media/mde-android-threat-found.png":::
    
-4. **Uninstall threat**:
+1. **Uninstall threat**:
 
    :::image type="content" source="media/mde-android-uninstall.png" alt-text="Screensot showing the new uninstall threat feature on the MDE Android app." lightbox="media/mde-android-uninstall.png":::
 
-5. **Security History**:
-
+1. **Security History**:
    :::image type="content" source="media/mde-android-security-history.png" alt-text="Screensot showing the uninstall threat feature on the MDE Android app." lightbox="media/mde-android-security-history.png":::
 
 ### Alerts
