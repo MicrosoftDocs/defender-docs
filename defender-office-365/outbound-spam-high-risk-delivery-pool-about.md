@@ -2,9 +2,9 @@
 title: Outbound delivery pools
 f1.keywords: 
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: concept-article
 ms.localizationpriority: medium
@@ -18,7 +18,7 @@ description: Learn how the delivery pools are used to protect the reputation of 
 ms.service: defender-office-365
 ms.date: 11/3/2023
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -85,6 +85,6 @@ If the MX record for your domain points to a non-Microsoft service or an on-prem
 As an Exchange Service Administrator or Global Administrator<sup>\*</sup>, you might want to find out which outbound pool was used to send a message from Microsoft 365 to an external recipient.
 
 > [!IMPORTANT]
-> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 To do so, you can [use Message trace](/exchange/monitoring/trace-an-email-message/message-trace-modern-eac) and look for the `OutboundIpPoolName` property in the output. This property contains a friendly name value for the outbound pool that was used.

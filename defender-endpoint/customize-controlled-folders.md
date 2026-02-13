@@ -1,13 +1,13 @@
----
+﻿---
 title: Customize controlled folder access
 description: Add other folders that should be protected by controlled folder access, or allow apps that are incorrectly blocking changes to important files.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: denisebmsft
-ms.author: deniseb
+author: paulinbar
+ms.author: painbar
 ms.reviewer: dbodorin, vladiso, nixanm, anvascon
-manager: deniseb
+manager: bagol
 ms.subservice: asr
 ms.topic: how-to
 ms.collection: 
@@ -16,30 +16,17 @@ ms.collection:
 - mde-asr
 search.appverid: met150
 ms.date: 03/04/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Customize controlled folder access
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
-
-**Platforms**
-- Windows
-
 > [!TIP]
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+> Controlled folder access helps you protect valuable data from malicious apps and threats, such as ransomware. Controlled folder access is supported on:
 
-Controlled folder access helps you protect valuable data from malicious apps and threats, such as ransomware. Controlled folder access is supported on:
-
-- Windows 11
-- Windows 10
-- Windows Server 2025
-- Windows Server 2022
-- Windows Server 2019
 
 > [!IMPORTANT]
 > Controlled folder access is not supported on Linux servers.
@@ -52,6 +39,16 @@ This article describes how to customize controlled folder access capabilities, a
 
 > [!IMPORTANT]
 > Controlled folder access monitors apps for activities that are detected as malicious. Sometimes, legitimate apps are blocked from making changes to your files. If controlled folder access impacts your organization's productivity, you might consider running this feature in [audit mode](overview-attack-surface-reduction.md) to fully assess the impact.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+- Windows 11
+- Windows 10
+- Windows Server 2019 and later
+- Azure Stack HCI OS, version 23H2 and later
 
 ## Protect additional folders
 
@@ -67,40 +64,40 @@ You can use the Windows Security app, Group Policy, PowerShell cmdlets, or mobil
 
 1. Open the Windows Security app by selecting the shield icon in the task bar, or by searching for *security* in the Start menu.
 
-2. Select **Virus & threat protection**, and then scroll down to the **Ransomware protection** section.
+1. Select **Virus & threat protection**, and then scroll down to the **Ransomware protection** section.
 
-3. Select **Manage ransomware protection** to open the **Ransomware protection** pane.
+1. Select **Manage ransomware protection** to open the **Ransomware protection** pane.
 
-4. Under the **Controlled folder access** section, select **Protected folders**.
+1. Under the **Controlled folder access** section, select **Protected folders**.
 
-5. Choose **Yes** on the **User Access Control** prompt. The **Protected folders** pane displays.
+1. Choose **Yes** on the **User Access Control** prompt. The **Protected folders** pane displays.
 
-6. Select **Add a protected folder** and follow the prompts to add folders.
+1. Select **Add a protected folder** and follow the prompts to add folders.
 
 ### Use Group Policy to protect additional folders
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)?preserve=true). 
 
-2. Right-click the Group Policy Object you want to configure, and then select **Edit**.
+1. Right-click the Group Policy Object you want to configure, and then select **Edit**.
 
-3. In your **Group Policy Management Editor**, go to **Computer configuration** \> **Policies** \> **Administrative templates**.
+1. In your **Group Policy Management Editor**, go to **Computer configuration** \> **Policies** \> **Administrative templates**.
 
-4. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Windows Defender Exploit Guard** \> **Controlled folder access**. <br/>**NOTE**: On older versions of Windows, you might see **Windows Defender Antivirus** instead of **Microsoft Defender Antivirus**.
+1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Windows Defender Exploit Guard** \> **Controlled folder access**. <br/>**NOTE**: On older versions of Windows, you might see **Windows Defender Antivirus** instead of **Microsoft Defender Antivirus**.
 
-5. Double-click **Configured protected folders**, and then set the option to **Enabled**. Select **Show**, and specify each folder that you want to protect.
+1. Double-click **Configured protected folders**, and then set the option to **Enabled**. Select **Show**, and specify each folder that you want to protect.
 
-6. Deploy your Group Policy Object as you usually do.
+1. Deploy your Group Policy Object as you usually do.
 
 ### Use PowerShell to protect additional folders
 
 1. Type **PowerShell** in the Start menu, right-click **Windows PowerShell** and select **Run as administrator**
 
-2. Type the following PowerShell cmdlet, replacing `<the folder to be protected>` with the folder's path (such as `"c:\apps\"`):
+1. Type the following PowerShell cmdlet, replacing `<the folder to be protected>` with the folder's path (such as `"c:\apps\"`):
 
     ```PowerShell
     Add-MpPreference -ControlledFolderAccessProtectedFolders "<the folder to be protected>"
     ```
-3. Repeat step 2 for each folder that you want to protect. Folders that are protected are visible in the Windows Security app.
+1. Repeat step 2 for each folder that you want to protect. Folders that are protected are visible in the Windows Security app.
 
    :::image type="content" source="media/cfa-allow-folder-ps.png" alt-text="The PowerShell window with cmdlet shown" lightbox="media/cfa-allow-folder-ps.png":::
 
@@ -126,11 +123,11 @@ An allowed application or service only has write access to a controlled folder a
 
 1. Open the Windows Security app by searching the start menu for **Security**.
 
-2. Select the **Virus & threat protection** tile (or the shield icon on the left menu bar) and then select **Manage ransomware protection**.
+1. Select the **Virus & threat protection** tile (or the shield icon on the left menu bar) and then select **Manage ransomware protection**.
 
-3. Under the **Controlled folder access** section, select **Allow an app through Controlled folder access**
+1. Under the **Controlled folder access** section, select **Allow an app through Controlled folder access**.
 
-4. Select **Add an allowed app** and follow the prompts to add apps.
+1. Select **Add an allowed app** and follow the prompts to add apps.
 
    :::image type="content" source="media/cfa-allow-app.png" alt-text="The Add an allowed app button" lightbox="media/cfa-allow-app.png":::
 
@@ -138,18 +135,18 @@ An allowed application or service only has write access to a controlled folder a
 
 1. On your Group Policy management device, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)?preserve=true), right-click the Group Policy Object you want to configure and select **Edit**.
 
-2. In the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
 
-3. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Windows Defender Exploit Guard** \> **Controlled folder access**.
+1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Windows Defender Exploit Guard** \> **Controlled folder access**.
 
-4. Double-click the **Configure allowed applications** setting and then set the option to **Enabled**. Select **Show**.
+1. Double-click the **Configure allowed applications** setting and then set the option to **Enabled**. Select **Show**.
 
-5.  Add the full path to the executable in **Value name**. Set **Value** to `0`. For example, to allow the Command Prompt set **Value name** as `C:\Windows\System32\cmd.exe`. **Value** should be set to `0`.
+    a. Add the full path to the executable in **Value name**. Set **Value** to `0`. For example, to allow the Command Prompt set **Value name** as `C:\Windows\System32\cmd.exe`. **Value** should be set to `0`.
 
 ### Use PowerShell to allow specific apps
 
-1. Type **PowerShell** in the Start menu, right-click **Windows PowerShell** and then select **Run as administrator**
-2. Enter the following cmdlet:
+1. Type **PowerShell** in the Start menu, right-click **Windows PowerShell** and then select **Run as administrator**.
+1. Enter the following cmdlet:
 
     ```PowerShell
     Add-MpPreference -ControlledFolderAccessAllowedApplications "<the app that should be allowed, including the path>"
@@ -177,7 +174,7 @@ Use the [./Vendor/MSFT/Policy/Config/Defender/ControlledFolderAccessAllowedAppli
 Microsoft Defender for Endpoint certificate and file indicators can allow signed executable files to access protected folders. For implementation details, see [Create indicators based on certificates](indicator-certificates.md).
 
 > [!Note]
-> This does no apply to scripting engines, including Powershell
+> This does not apply to scripting engines, including Powershell.
 
 ## Customize the notification
 
@@ -188,4 +185,5 @@ For more information about customizing the notification when a rule is triggered
 - [Protect important folders with controlled folder access](controlled-folders.md)
 - [Enable controlled folder access](enable-controlled-folders.md)
 - [Enable attack surface reduction rules](enable-attack-surface-reduction.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

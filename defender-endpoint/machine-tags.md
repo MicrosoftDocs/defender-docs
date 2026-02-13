@@ -1,11 +1,11 @@
----
+﻿---
 title: Create and manage device tags
 description: Use device tags to group devices to capture context and enable dynamic list creation as part of an incident
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: bagol
+author: batamig
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -15,19 +15,13 @@ ms.custom: api
 ms.subservice: reference
 search.appverid: met150
 ms.date: 02/27/2023
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+
 ---
 
 # Create and manage device tags
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Add tags on devices to create a logical group affiliation. Device tags support proper mapping of the network, enabling you to attach different tags to capture context and to enable dynamic list creation as part of an incident. Tags can be used as a filter in the **Device inventory** view, or to group devices. For more information on device grouping, see [Create and manage device groups](machine-groups.md).
 
@@ -49,6 +43,19 @@ You can add tags on devices using the following ways:
 
 To add device tags using API, see [Add or remove device tags API](api/add-or-remove-machine-tags.md).
 
+## Supported operating systems
+
+Device tagging is supported on the following operating systems:
+
+ - Windows 11
+ - Windows 10, version 1709 or later
+ - Windows Server, version 1803 or later
+ - Windows Server 2016
+ - Windows Server 2012 R2
+ - Windows Server 2008 R2 SP1
+ - Windows 8.1
+ - Windows 7 SP1
+
 ## Add device tags using the portal
 
 1. Select the device that you want to manage tags on. You can select or search for a device from any of the following views:
@@ -59,11 +66,11 @@ To add device tags using API, see [Add or remove device tags API](api/add-or-rem
 
      You can also get to the alert page through the file and IP views.
 
-2. Select **Manage tags** from the row of Response actions.
+1. Select **Manage tags** from the row of Response actions.
 
     :::image type="content" source="media/manage-tags-option.png" alt-text="Image of manage tags button" lightbox="media/manage-tags-option.png":::
 
-3. Type to find or create tags
+1. Type to find or create tags
 
     :::image type="content" source="media/create-new-tag.png" alt-text="Adding tags on device1" lightbox="media/create-new-tag.png":::
 
@@ -86,18 +93,6 @@ You can create and manage rules that automatically assign and remove tags from d
 - [Asset rule management - Dynamic rules for devices](/defender-xdr/configure-asset-rules)
 
 ## Add device tags by setting a registry key value
-
-> [!NOTE]
-> Applicable only on the following devices:
->
-> - Windows 11
-> - Windows 10, version 1709 or later
-> - Windows Server, version 1803 or later
-> - Windows Server 2016
-> - Windows Server 2012 R2
-> - Windows Server 2008 R2 SP1
-> - Windows 8.1
-> - Windows 7 SP1
 
 > [!NOTE]
 > The maximum number of characters that can be set in a tag is 200.
@@ -171,4 +166,5 @@ You can use Microsoft Intune to define and apply tag for mobile devices. You can
 - **For iOS**, follow the guidance in [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md).
 - **For Android**, follow the guidance on [Configure Defender for Endpoint on Android features](android-configure.md).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

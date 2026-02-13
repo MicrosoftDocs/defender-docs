@@ -1,8 +1,8 @@
 ---
 title:  Managing exclusions reference
 description: This article describes various ways to manage exclusions for Defender for Endpoint and Microsoft Defender Antivirus
-author: denisebmsft
-ms.author: deniseb
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
 ms.service: defender-endpoint
 ms.subservice: onboard
@@ -78,8 +78,8 @@ Many exclusions can be managed in the [Microsoft Intune admin center](https://go
 
 **Learn More**:
 
-- [Create a new antivirus policy with exclusions in Intune](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus#create-a-new-antivirus-policy-with-exclusions-in-intune)
-- [Manage antivirus exclusions in Intune (for existing policies)](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus#manage-antivirus-exclusions-in-intune-for-existing-policies)
+- [Create Microsoft Defender antivirus exclusion policies in Intune](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus#create-microsoft-defender-antivirus-exclusion-policies-in-intune)
+- [Modify exclusions in Microsoft Defender antivirus exclusion policies in Intune](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus#modify-exclusions-in-microsoft-defender-antivirus-exclusion-policies-in-intune))
 - [Configure attack surface reduction per-rule exclusions](/defender-endpoint/attack-surface-reduction-rules-deployment-test#configure-attack-surface-reduction-per-rule-exclusions)
 
 ### MDM CSP
@@ -122,7 +122,7 @@ Use `Set-MpPreference` or `Get-MpPreference` in the [Defender PowerShell Module]
 | Custom antivirus exclusions - Process | **Windows components** > **Microsoft Defender Antivirus** > **Exclusions** > **Process Exclusions** | See [Use Group Policy to exclude files that have been opened by specified processes from scans](/defender-endpoint/configure-process-opened-file-exclusions-microsoft-defender-antivirus#use-group-policy-to-exclude-files-that-have-been-opened-by-specified-processes-from-scans) |
 | Attack Surface Reduction only exclusions | **Windows components** > **Microsoft Defender Antivirus** > **Microsoft Defender Exploit Guard** > **Attack Surface Reduction** > **Exclude files and paths from Attack Surface Reduction rules** | See [Group Policy](/defender-endpoint/enable-attack-surface-reduction#group-policy) |
 | Attack surface reduction rule per rule exclusion | **Windows components > Microsoft Defender Antivirus > Microsoft Defender Exploit Guard > Attack surface reduction > Apply a list of exclusions to specific Attack Surface Reduction (ASR) rules**|See [Group Policy ](/defender-endpoint/enable-attack-surface-reduction#group-policy)|
-| Automatic antivirus exclusions | **Windows components** > **Microsoft Defender Antivirus** > **Exclusions** > **Enabled** | See [Use Group Policy to disable the autoexclusions list on Windows Server 2016, Windows Server 2019, Windows Server 2022, and Windows Server 2025](/defender-endpoint/configure-server-exclusions-microsoft-defender-antivirus#use-group-policy-to-disable-the-auto-exclusions-list-on-windows-server-2016-windows-server-2019-and-windows-server-2022) |
+| Automatic antivirus exclusions | **Windows components** > **Microsoft Defender Antivirus** > **Exclusions** > **Enabled** | See [Use Group Policy to disable the autoexclusions list on Windows Server 2016, Windows Server 2019, Windows Server 2022, and Windows Server 2025Azure Stack HCI OS, version 23H2 and later.](/defender-endpoint/configure-server-exclusions-microsoft-defender-antivirus#use-group-policy-to-disable-the-auto-exclusions-list-on-windows-server-2016-windows-server-2019-and-windows-server-2022) |
 | Automation folder exclusions | Not supported ||
 | Controlled Folder Access exclusions | **Windows components** > **Microsoft Defender Antivirus** > **Windows Defender Exploit Guard** > **Controlled folder access** > **Configure allowed applications** | See [Use group policy to allow specific apps](/defender-endpoint/customize-controlled-folders#use-group-policy-to-allow-specific-apps) |
 

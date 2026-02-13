@@ -7,8 +7,9 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
+manager: bagol
 ms.localizationpriority: medium
-manager: deniseb
+
 audience: ITPro
 ms.collection:
   - m365-security
@@ -40,7 +41,7 @@ Defender for Office 365 is the primary component of the **Assume breach** princi
 
 |Protection level|Description|
 |---|---|
-|Default email protections in all organizations with cloud mailboxes|Prevent broad, volume-based, known attacks.|
+|The built-in security features for all cloud mailboxes|Prevent broad, volume-based, known attacks.|
 |Defender for Office 365 P1|Protects email and collaboration from zero-day malware, phish, and business email compromise.|
 |Defender for Office 365 P2|Adds post-breach investigation, hunting, and response, as well as automation, and simulation (for training).|
 

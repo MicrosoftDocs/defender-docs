@@ -2,9 +2,9 @@
 title: Threat classification in Defender for Office 365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium

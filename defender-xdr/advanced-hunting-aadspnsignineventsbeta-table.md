@@ -1,15 +1,15 @@
 ---
 title: AADSpnSignInEventsBeta table in the advanced hunting schema
-description: Learn about information associated with Microsoft Entra service principal and managed identity sign-in events table.
+description: Learn about information associated with the Beta Microsoft Entra service principal and managed identity sign-in events table.
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -21,14 +21,18 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 03/28/2025
+ms.date: 11/04/2025
 ---
 
 # AADSpnSignInEventsBeta
 
+> [!IMPORTANT]
+> On December 9, 2025, the `AADSpnSignInEventsBeta` table will be replaced by [`EntraIdSpnSignInEvents`](advanced-hunting-entraidspnsigninevents-table.md). This change will be made to remove the former's preview status and to align it with the existing product branding.
+>
+> The `EntraIdSpnSignInEvents` table is already available. To ensure a smooth transition, make sure that you update your queries that use the `AADSpnSignInEventsBeta` table to use `EntraIdSpnSignInEvents` before the previously mentioned date. 
 
 > [!IMPORTANT]
-> The `AADSpnSignInEventsBeta` table is currently in beta and is being offered on a short-term basis to allow you to hunt through Microsoft Entra sign-in events. Customers need to have a Microsoft Entra ID P2 license to collect and view activities for this table. Microsoft will eventually move all sign-in schema information to the `IdentityLogonEvents` table.
+> The `AADSpnSignInEventsBeta` table is currently in beta and is being offered on a short-term basis to allow you to hunt through Microsoft Entra sign-in events. Customers need to have a Microsoft Entra ID P2 license to collect and view activities for this table.
 
 The `AADSpnSignInEventsBeta` table in the advanced hunting schema contains information about Microsoft Entra service principal and managed identity sign-ins. You can learn more about the different kinds of sign-ins in [Microsoft Entra sign-in activity reports - preview](/azure/active-directory/reports-monitoring/concept-all-sign-ins).
 
@@ -36,7 +40,7 @@ Use this reference to construct queries that return information from the table.
 
 For information on other tables in the advanced hunting schema, see [the advanced hunting reference](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-reference).
 
-<br>
+<br/>
 
 ****
 
@@ -54,7 +58,7 @@ For information on other tables in the advanced hunting schema, see [the advance
 |`ResourceId`|`string`|Unique identifier of the resource accessed|
 |`ResourceTenantId`|`string`|Unique identifier of the tenant of the resource accessed|
 |`IPAddress`|`string`|IP address assigned to the endpoint and used during related network communications|
-|`Country`|`string`|Two-letter code indicating the country where the client IP address is geolocated|
+|`Country`|`string`|Two-letter code indicating the country/region where the client IP address is geolocated|
 |`State`|`string`|State where the sign-in occurred, if available|
 |`City`|`string`|City where the account user is located|
 |`Latitude`|`string`|The north to south coordinates of the sign-in location|

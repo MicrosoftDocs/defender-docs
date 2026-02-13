@@ -1,10 +1,10 @@
----
+﻿---
 title: Device control policies in Microsoft Defender for Endpoint
 description: Learn about Device control policies in Defender for Endpoint
-author: denisebmsft
-ms.author: deniseb
-manager: deniseb
-ms.date: 02/05/2025
+author: limwainstein
+ms.author: lwainstein
+manager: bagol
+ms.date: 10/23/2025
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -18,15 +18,14 @@ ms.custom:
 ms.reviewer: joshbregman, ksarens
 search.appverid: MET150
 f1.keywords: NOCSH
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+---
 # Device control policies in Microsoft Defender for Endpoint
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business)
 
 This article describes device control policies, rules, entries, groups, and advanced conditions. Essentially, device control policies define access for a set of devices. The devices that are in scope are determined by a list of included device groups and a list of excluded device groups. A policy applies if the device is in all of the included device groups and none of the excluded device groups. If no policies apply, then the default enforcement is applied.
 
@@ -188,7 +187,7 @@ Device control policies define access (called an entry) for a set of devices. En
 
 | Entry setting | Options |
 |---|---|
-| AccessMask | Applies the action only if the access operations match the access mask -  The access mask is the bit-wise OR of the access values:<br><br>  1 - Device Read<br>2 - Device Write<br>4 - Device Execute<br>8 - File Read<br>16 - File Write<br>32 - File Execute<br>64 - Print<br><br>For example:<br>Device Read, Write, and Execute = 7 (1+2+4)<br>Device Read, Disk Read = 9 (1+8)<br>|
+| AccessMask | Applies the action only if the access operations match the access mask -  The access mask is the bit-wise OR of the access values:<br><br>1 - Device Read - Allows inspection of device-level metadata and mounting. Allows ability to view files.<br>2 - Device Write -  Grants ability to format or reconfigure the device.<br>4 - Device Execute - Allows renaming the USB in Explorer (a form of execution at the system level).<br>8 - File Read - Enables viewing and browsing of stored content on the external device.<br>16 - File Write - Permits editing, copying, or deleting files and folders on the external device.<br>32 - File Execute - Enables launching of executable content from the external device.<br>64 - Print<br><br>For example:<br>Device Read, Write, and Execute = 7 (1+2+4)<br>Device Read, Disk Read = 9 (1+8)<br>|
 | Action | Allow <br/> Deny <br/> AuditAllow <br/> AuditDeny |
 | Notification | None (default) <br/> An event is generated <br/> The user receives notification <br/> |
 
@@ -728,3 +727,4 @@ The group is then referenced as parameters in an entry, as illustrated in the fo
 - [Deploy and manage device control in Microsoft Defender for Endpoint with Microsoft Intune](device-control-deploy-manage-intune.md)
 - [Deploy and manage device control in Microsoft Defender for Endpoint using Group Policy](device-control-deploy-manage-gpo.md)
 - [Device Control for macOS](mac-device-control-overview.md)
+

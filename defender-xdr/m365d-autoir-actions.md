@@ -5,8 +5,8 @@ search.appverid: met150
 ms.service: defender-xdr
 f1.keywords: 
 - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 04/28/2025
 manager: deniseb
@@ -50,7 +50,7 @@ It's important to approve (or reject) pending actions as soon as possible so tha
 
 3. In the Action center, on the **Pending** tab, select an item in the list. Its flyout pane opens. Here's an example.
 
-   :::image type="content" source="/defender/media/air-actioncenter-itemselected.png" alt-text="The options to approve or reject an action" lightbox="/defender/media/air-actioncenter-itemselected.png":::
+   :::image type="content" source="media/air-actioncenter-itemselected.png" alt-text="The options to approve or reject an action" lightbox="media/air-actioncenter-itemselected.png":::
 
 4. Review the information in the flyout pane, and then take one of the following steps:
    - Select **Open investigation page** to view more details about the investigation.
@@ -68,6 +68,9 @@ If you've determined that a device or a file is not a threat, you can undo remed
 | Action source | Supported Actions |
 |:---|:---|
 | - Automated investigation <br/>- Microsoft Defender Antivirus <br/>- Manual response actions | - Isolate device <br/>- Contain device <br/>- Contain user <br/>- Restrict code execution <br/>- Quarantine a file <br/>- Remove a registry key <br/>- Stop a service <br/>- Disable a driver <br/>- Remove a scheduled task |
+
+> [!NOTE]
+> Only Security Administrators and Global Administrators are allowed access to undo operations such as File Quarantine.
 
 ### Undo one remediation action
 

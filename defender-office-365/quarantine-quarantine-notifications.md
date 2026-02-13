@@ -2,9 +2,9 @@
 title: Quarantine notifications in Microsoft 365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: Admin
 ms.topic: article
 ms.localizationpriority: medium
@@ -22,7 +22,7 @@ description: Admins can learn about notifications for quarantined messages in Mi
 ms.service: defender-office-365
 ms.date: 07/08/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -89,7 +89,7 @@ The actions that are available for messages in the quarantine notification depen
 - **Request release**: Available for messages quarantined by features using a quarantine policy with the **Limited access** permission group or the individual **Allow recipients to request a message to be released from quarantine** (_PermissionToRequestRelease_) permission. For example, custom quarantine policies.
 
   Selecting the action opens an informational web page that acknowledges the request to release the message from quarantine (**The message release request has been initiated. The tenant admin will determine if the request should be approved or denied.**). The **Release status** value of the message on the **Email** tab of the **Quarantine** page is **Release requested**.
-  
+
   By default, release requests are sent to members of the hidden TenantAdmins role group (all users with admin privileges) as configured in the **User requested to release a quarantined message** alert policy on the **Alert policy** page in the Defender portal at <https://security.microsoft.com/alertpoliciesv2>.
 
 - **Block Sender**: Available for messages quarantined by features using a custom quarantine policy with the **Block sender** (_PermissionToBlockSender_) permission.

@@ -1,12 +1,12 @@
 ---
 title: How to search the audit logs for actions performed by Defender Experts
 ms.reviewer:
-description: As a tenant administrator, you can use Microsoft Purview to search the audit logs for the actions Microsoft Defender Experts did in your tenant to perform their investigations
+description: As a tenant administrator, you can use Microsoft Purview to search the audit logs for the actions Microsoft Defender Experts did in your tenant to perform their investigations.
 ms.service: defender-experts-for-xdr
-ms.author: vpattnaik
-author: vpattnai
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection:
   - m365-security
@@ -17,14 +17,15 @@ ms.custom:
 - cx-ti
 - cx-dex
 search.appverid: met150
-ms.date: 01/14/2025
+ms.date: 08/01/2025
 ---
 
 # Auditing
 
 **Applies to:**
 
-- [Microsoft Defender XDR](microsoft-365-defender.md)
+- [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
+- Microsoft Defender Experts for Servers
 
 As a tenant administrator, you can use Microsoft Purview to search the audit logs for the times Microsoft Defender Experts signed into your tenant and the actions they did there to perform their investigations. You can also search the audit logs for the changes done by your tenant administrators to the Defender Experts settings.
 
@@ -40,7 +41,7 @@ Auditing is automatically turned on in the Microsoft Defender portal. Features t
 3. Select the **Workload** and **Record type** from the list shown in the following table to further narrow your search.
 4. Select **Search** to list the audit logs related to actions taken by our experts in your tenant.
 
-:::image type="content" source="/defender/media/xdr/audit.png" alt-text="Partial screenshot of Microsoft Purview portal Defender New search page." lightbox="/defender/media/xdr/audit.png":::
+:::image type="content" source="media/auditing/audit.png" alt-text="Partial screenshot of Microsoft Purview portal Defender New search page." lightbox="media/auditing/audit.png":::
 
 | Action performed by Defender Experts | Workload | Record type |
 |--------------|-----|-----------|
@@ -50,7 +51,7 @@ Auditing is automatically turned on in the Microsoft Defender portal. Features t
 |Make changes to indicators in Microsoft Defender for Endpoint|MicrosoftDefenderForEndpoint|MSDEIndicatorsSettings|
 |Perform device remediation actions in Microsoft Defender for Endpoint|MicrosoftDefenderForEndpoint|MSDEResponseActions|
 
-:::image type="content" source="/defender/media/xdr/audit-2.png" alt-text="Partial screenshot of a sample audit log related to Defender Experts." lightbox="/defender/media/xdr/audit-2.png":::
+:::image type="content" source="media/auditing/audit-2.png" alt-text="Partial screenshot of a sample audit log related to Defender Experts." lightbox="media/auditing/audit-2.png":::
 
 ## Search the audit logs for actions performed by your administrators in the Defender Experts settings
 
@@ -59,7 +60,7 @@ Auditing is automatically turned on in the Microsoft Defender portal. Features t
 3. Under **Workload**, choose _MicrosoftDefenderExperts_.
 4. Select **Search** to list the audit logs related to actions taken by your tenant administrators to the Defender Experts settings.
 
-:::image type="content" source="/defender/media/xdr/audit-3.png" alt-text="Partial screenshot of Microsoft Purview portal Defender New search page showing the Workload field selected to MicrosoftDefenderExperts." lightbox="/defender/media/xdr/audit-3.png":::
+:::image type="content" source="media/auditing/audit-3.png" alt-text="Partial screenshot of Microsoft Purview portal Defender New search page showing the Workload field selected to MicrosoftDefenderExperts." lightbox="media/auditing/audit-3.png":::
 
 ## Search the audit logs using a PowerShell script
 

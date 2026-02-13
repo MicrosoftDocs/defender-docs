@@ -4,8 +4,8 @@ description: Learn how to manage custom roles for Microsoft Defender XDR in the 
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 04/25/2025
 manager: deniseb
