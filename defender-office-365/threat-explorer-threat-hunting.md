@@ -2,9 +2,9 @@
 title: Threat hunting in Threat Explorer and Real-time detections
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.date: 05/19/2025
@@ -53,7 +53,7 @@ The following information is available in this article:
 > For email scenarios using Threat Explorer and Real-time detections, see the following articles:
 >
 > - [Email security with Threat Explorer and Real-time detections in Microsoft Defender for Office 365](threat-explorer-email-security.md)
-> - [Investigate malicious email that was delivered in Microsoft 365](threat-explorer-investigate-delivered-malicious-email.md)
+> - [Investigate malicious email that was delivered](threat-explorer-investigate-delivered-malicious-email.md)
 >
 > If you're hunting for attacks based on malicious URLs embedded within QR codes, the **URL Source** filter value **QR code** in the **All email**, **Malware**, and **Phish** views in Threat Explorer or Real-time detections allows you to search for email message with URLs extracted from QR codes.
 
@@ -434,7 +434,7 @@ The **Email** tab (view) for the details area of the **All email**, **Malware**,
 For specific scenarios, see the following articles:
 
 - [Email security with Threat Explorer and Real-time detections in Microsoft Defender for Office 365](threat-explorer-email-security.md)
-- [Investigate malicious email that was delivered in Microsoft 365](threat-explorer-investigate-delivered-malicious-email.md)
+- [Investigate malicious email that was delivered](threat-explorer-investigate-delivered-malicious-email.md)
 
 ### More ways to use Threat Explorer and Real-time detections
 

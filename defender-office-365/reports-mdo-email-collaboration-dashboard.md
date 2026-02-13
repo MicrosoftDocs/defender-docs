@@ -2,9 +2,9 @@
 title: Defender for Office 365 Overview dashboard
 f1.keywords:
   - CSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: ITPro
 ms.topic: concept-article
 ms.localizationpriority: medium
@@ -18,7 +18,7 @@ ms.collection:
 description: Admins can learn about the information on the Microsoft Defender for Office 365 Overview dashboard in the Microsoft Defender portal.
 ms.custom:
 ms.service: defender-office-365
-ms.date: 6/27/2025
+ms.date: 08/01/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -33,12 +33,11 @@ The information on the **Overview** page is organized into the following areas:
 - [Defender for Office 365 summary](#defender-for-office-365-summary)
 - [Optimize section](#optimize-section)
 - [Risky allows section](#risky-allows-section)
-- [Compare solutions section](#compare-solutions-section)
 - [Insights section](#insights-section)
 
 For the permissions required to view the dashboard and reports, see [What permissions are needed to view these reports?](reports-email-security.md#what-permissions-are-needed-to-view-these-reports).
 
-By default, the data on the page is shown for the last 30 days. But, you can show data for the last 60 days or the last 90 days by selecting the **Last 30 days** drop down at the top of the page.
+By default, the data on the page is shown for the last 30 days.
 
 :::image type="content" source="media/email-collab-overview.png" alt-text="Screenshot of the Email and collaboration overview report page in the Microsoft Defender portal." lightbox="media/email-collab-overview.png":::
 
@@ -56,17 +55,18 @@ The graph on the **Phish / Malware Efficacy** card visually represents the prote
 
 - **Pre-delivery**: Items detected before they reach the recipient's mailbox.
 - **Post-delivery**: Items removed after the item was delivered to the recipient's mailbox via [zero-hour auto purge (ZAP)](zero-hour-auto-purge.md).
-- **Uncaught**: Delivered items that ZAP identified but couldn't remove. For example:
+- **Uncaught**: Delivered items that ZAP identified but failed to remove. For example:
   - Admin deletions or remediations.
+  - ZAP being disabled for the specific mailboxes.
   - [Admin submissions](submissions-admin.md) to Microsoft identifying the message as malware or phishing.
   - User deletions.
   - Non-Microsoft security provider deletions.
 
-The percentage value is the number of messages in each category divided by the total number of malicious malware and phishing email during the review period you selected at the top of the page (30 days (default), 60 days, or 90 days).
+The percentage value is the number of messages in each category divided by the total number of malicious malware and phishing email during the review period selected.
 
 Hover over a category in the chart to see the number of messages in each category for the review period. Hover over the percentage to see the total number of messages
 
-:::image type="content" source="media/email-collab-overview-mdo-efficacy.png" alt-text="Screenshot of the Efficacy card in the Defender for Office 365 section of the Email & collaboration overview report page." lightbox="media/email-collab-overview-mdo-efficacy.png":::
+:::image type="content" source="media/email-collab-overview-mdo-efficacy.png" alt-text="Screenshot of the Phish / Malware Efficacy card in the Defender for Office 365 section of the Email & collaboration overview report page." lightbox="media/email-collab-overview-mdo-efficacy.png":::
 
 > [!TIP]
 >
@@ -80,7 +80,7 @@ Hover over a category in the chart to see the number of messages in each categor
 
 <!--- https://go.microsoft.com/fwlink/?linkid=2323912 --->
 
-The graph on the **Threat detections** card shows the number of messages detected by the following technologies during the review period you selected at the top of the page (30 days (default), 60 days, or 90 days):
+The graph on the **Threat detections** card shows the number of messages detected by the following technologies during the review period selected.
 
 - **Malware**: The breakdown of detection technologies is available in the **Threat protection status** report under [View data by Email \> Malware and Chart breakdown by Detection Technology](reports-email-security.md#view-data-by-email--malware-and-chart-breakdown-by-detection-technology).
 
@@ -131,18 +131,14 @@ Hover over a category in the chart to see the number of **Onboarded** priority a
 
 The graph on the **Policy recommendations** card shows the number of users directly protected by [Safe Links](safe-links-about.md) and [Safe Attachments](safe-attachments-about.md) policies as a percentage of the total number of users (the value 100% means everyone is protected). The numbers are taken from whether the following recommended actions in [Microsoft Secure Score](/defender-xdr/microsoft-secure-score) have the **Status** value `Completed`:
 
-- <u>Safe Links</u>:
-  - **Ensure Safe Links for Office applications is enabled**
-  - **Create Safe Links policies for email messages**
-- <u>Safe Attachments</u>:
-  - **Turn on Safe Attachments in block mode**
-  - **Ensure Safe Attachments policy is enabled**
+- <u>Safe Links</u>: **Create Safe Links policies for email messages**
+- <u>Safe Attachments</u>: **Ensure Safe Attachments policy is enabled**
 
 Hover over a category in the chart to see the number of **Impacted users** (the total number of users in the organization) and **Protected users** (users protected by Safe Links or Safe Attachment policies as defined by the recommended actions in Microsoft Secure Score).
 
 **Notes**:
 
-- The [Built-in protection](preset-security-policies.md#preset-security-policies-in-eop-and-microsoft-defender-for-office-365) preset security policy gives a basic level of Safe Links and Safe Attachments protection to all users by default (and you can [exclude recipients](preset-security-policies.md#use-the-microsoft-defender-portal-to-add-exclusions-to-the-built-in-protection-preset-security-policy)).
+- The [Built-in protection](preset-security-policies.md) preset security policy gives a basic level of Safe Links and Safe Attachments protection to all users by default (and you can [exclude recipients](preset-security-policies.md#use-the-microsoft-defender-portal-to-add-exclusions-to-the-built-in-protection-preset-security-policy)).
 - Users get a higher level of Safe Links and Safe Attachments protection from either of the following settings:
   - [Turn on the Standard or Strict preset security policies](preset-security-policies.md#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users), and make sure the users are included in **Defender for Office 365 protection**.
   - Create custom [Safe Links policies](safe-links-policies-configure.md#use-the-microsoft-defender-portal-to-create-safe-links-policies) or [Safe Attachment policies](safe-attachments-policies-configure.md#use-the-microsoft-defender-portal-to-create-safe-attachments-policies) with the users as members.
@@ -173,7 +169,7 @@ The **Tenant allow types** card shows a table with the types of allow entries in
   - [File hash](tenant-allow-block-list-files-configure.md#create-allow-entries-for-files)
   - [Sender](tenant-allow-block-list-email-spoof-configure.md#create-allow-entries-for-domains-and-email-addresses)
   - [IP allow](tenant-allow-block-list-ip-addresses-configure.md#create-allow-entries-for-ipv6-addresses)
-- **Messages allowed** column: The number of messages allowed for the review period you selected at the top of the page (30 days (default), 60 days, or 90 days).
+- **Messages allowed** column: The number of messages allowed for the review period selected.
 
 :::image type="content" source="media/email-collab-overview-risky-allows-tenant-allow-types.png" alt-text="Screenshot of the Tenant allow types card in the Risky allows section of the Email & collaboration overview report page." lightbox="media/email-collab-overview-risky-allows-tenant-allow-types.png":::
 
@@ -184,47 +180,11 @@ The **Tenant allow types** card shows a table with the types of allow entries in
 The **Exchange transport rules** card shows the mail flow rules (also known as transport rules) that allowed messages that would otherwise be blocked:
 
 - **Rule ID**
-- **Messages allowed**: The number of messages allowed during the review period you selected at the top of the page (30 days (default), 60 days, or 90 days).
+- **Messages allowed**: The number of messages allowed during the review period selected.
 
 Select **Review rules** to go to the **Rules** page in the Exchange admin center (EAC) at <https://admin.cloud.microsoft/exchange#/transportrules>.
 
 :::image type="content" source="media/email-collab-overview-risky-allows-etrs.png" alt-text="Screenshot of the Exchange transport rules card in the Risky allows section of the Email & collaboration overview report page." lightbox="media/email-collab-overview-risky-allows-etrs.png":::
-
-## Compare solutions section
-
-The information in the **Compare solutions** section is described in the following subsections.
-
-### Email detections card
-
-<!--- https://go.microsoft.com/fwlink/?linkid=2323918--->
-
-The graph on the **Email detections** shows Microsoft and non-Microsoft detections as part of [ICES Vendor Ecosystem integration](mdo-ices-vendor-ecosystem.md):
-
-- **Defender mail flow detections**
-- **Defender post-delivery detections**
-- **Non-Microsoft post-delivery detections**
-- **Duplicate detections Duplicate post-delivery detections**
-
-Hover over a category in the chart to see the number of messages in each category for the review period you selected at the top of the page (30 days (default), 60 days, or 90 days).
-
-:::image type="content" source="media/email-collab-overview-compare-solutions-email-detections.png" alt-text="Screenshot of the Email detections card in the Compare solutions section of the Email & collaboration overview report page." lightbox="media/email-collab-overview-compare-solutions-email-detections.png":::
-
-### Non-Microsoft detections card
-
-<!--- https://go.microsoft.com/fwlink/?linkid=2324014 --->
-
-The graphs on the **Non-Microsoft detections** show the following information for non-Microsoft detections as part of  [ICES Vendor Ecosystem integration](mdo-ices-vendor-ecosystem.md):
-
-- **Post delivery detections** graph:
-  - **Malware**
-  - **Phish**
-  - **Spam**
-
-  Hover over a category in the chart to see the number of messages in each category for the review period you selected at the top of the page (30 days (default), 60 days, or 90 days).
-
-- **Efficacy** graph: Shows the unique detections by the non-Microsoft service as a percentage of the total detections by Defender for Office 365.
-
-:::image type="content" source="media/email-collab-overview-compare-solutions-non-microsoft.png" alt-text="Screenshot of the Non-Microsoft detections card in the Compare solutions section of the Email & collaboration overview report page." lightbox="media/email-collab-overview-compare-solutions-non-microsoft.png":::
 
 ## Insights section
 
@@ -232,7 +192,7 @@ The information in the **Insights** section is described in the following subsec
 
 ### Top trending attacks card
 
-The graph on the **Top trending attacks** card shows the most encountered phishing attack types by volume for the review period you selected at the top of the page (30 days (default), 60 days, or 90 days).
+The graph on the **Top trending attacks** card shows the most encountered phishing attack types by volume for the review period selected.
 
 Threat classification in Defender for Office 365 uses advanced technologies such as large language models (LLMs), small language models (SLMs), and machine learning (ML) models to automatically detect and classify email-based threats.
 
@@ -248,7 +208,7 @@ The **Emerging threats** card shows any notable campaigns observed by Microsoft 
 
 <!--- https://go.microsoft.com/fwlink/?linkid=2324014 --->
 
-The graph on the **Microsoft 365 Secure Email Gateway performance** card compares the effectiveness of Defender for Office 365 against other secure email gateways. To ensure fairness, the number of missed messages is normalized per 1,000 active users.
+The graph on the **Microsoft 365 Secure Email Gateway performance** card compares the effectiveness of Defender for Office 365 against other secure email gateways. To ensure fairness, the number of missed phish and malware messages is normalized per 1,000 active users.
 
 :::image type="content" source="media/email-collab-overview-insights-m365-secure-email-gateway.png" alt-text="Screenshot of the Microsoft 365 Secure Email Gateway performance card in the Insights section of the Email & collaboration overview report page." lightbox="media/email-collab-overview-insights-m365-secure-email-gateway.png":::
 
@@ -257,90 +217,50 @@ The graph on the **Microsoft 365 Secure Email Gateway performance** card compare
 Organizations with Defender for Office 365 Plan 2 can use the following query in [advanced hunting](/defender-xdr/advanced-hunting-overview) to generate the same data on the [**Phish / Malware Efficacy** card](#phish--malware-efficacy-card).
 
 > [!NOTE]
-> The numbers might differ slightly due to the different refresh rates for advanced hunting vs. reporting data.
+> The numbers might differ slightly due to the different refresh and expiry rates for advanced hunting vs. reporting data.
 
 ```kusto
-// This query by default will take the last 30 days of data. 
-// The query and calculation can be tweaked to meet individual needs, and will update over time to get incrementally more accurate. 
-// Ben Harris - Microsoft Defender for Office 365 PM. 
-let _startTime = ago(30d); 
-let _endTime = now(); 
-// Get all mailflow detected as clean at time of delivery 
-let EmailEventsClean = materialize( 
-    EmailEvents 
-    | where Timestamp between (_startTime .. _endTime) and EmailDirection == "Inbound" 
-    | where ThreatTypes !contains "Phish" and ThreatTypes !contains "Malware" 
-    | project NetworkMessageId,ThreatTypes 
-); 
-// Get all mailflow detected as phish or malware at time of delivery 
-let EmailEventsThreats = materialize( 
-    EmailEvents 
-    | where Timestamp between (_startTime .. _endTime) and EmailDirection == "Inbound" 
-    | where ThreatTypes contains "Phish" or ThreatTypes contains "Malware" 
-    | extend MDO_detection = parse_json(DetectionMethods) 
-    | extend FirstDetection = iif(isempty(MDO_detection), "Clean", tostring(bag_keys(MDO_detection)[0])) 
-    | extend FirstSubcategory = iif(FirstDetection != "Clean" and array_length(MDO_detection[FirstDetection]) > 0, strcat(FirstDetection, ": ", tostring(MDO_detection[FirstDetection][0])), "No Detection (clean)") 
-    | project NetworkMessageId,FirstDetection,FirstSubcategory,MDO_detection,ThreatTypes 
-); 
-// Get all post delivery ZAP / Redelivery events, and arg_max them to ensure we have the latest verdict to work with for each 
-let EmailPostDeliveryFiltered = materialize( 
-    EmailPostDeliveryEvents 
-    | where Timestamp between (_startTime .. datetime_add('day', 7, _endTime)) 
-    | where ActionType in ("Malware ZAP","Phish ZAP","Redelivery") 
-    | extend Key = strcat(NetworkMessageId , "-", RecipientEmailAddress) 
-    | summarize arg_max(Timestamp, *) by Key 
-    | project Action,ActionType,ActionResult,ThreatTypes,NetworkMessageId 
-); 
-// Optional - get all admin submissions for malware or phish, so we can also count these in the miss bucket. 
-let CloudAppEventsFiltered = materialize( 
-    CloudAppEvents 
-    | where Timestamp between (_startTime .. datetime_add('day', 7, _endTime)) 
-    | where ActionType == "AdminSubmissionSubmitted" 
-    | extend SubmissionType = tostring(parse_json(RawEventData).SubmissionType) 
-    | extend NetworkMessageId = tostring(parse_json(RawEventData).ObjectId) 
-    | where SubmissionType in ("1", "2") 
-    | project SubmissionType,NetworkMessageId 
-); 
-// get the number of threats caught in mailflow 
-let Mal_Phish_Mailflow = toscalar( 
-    EmailEventsThreats 
-    | summarize count() 
-); 
-// get the number of threats caught in mailflow which turned out to be false positives (FPs) so we can correct the calculation 
-let FP_ZAP = toscalar( 
-    EmailPostDeliveryFiltered 
-    | where ThreatTypes !contains "Phish" and ThreatTypes !contains "Malware" and ActionType == "Redelivery" 
-    | join kind=leftsemi (EmailEventsThreats) on NetworkMessageId 
-    | summarize count() 
-); 
-// get the number of threats successfully cleaned up post delivery, ignoring where administrative policy stopped action 
-let FN_ZAP_Successful = toscalar( 
-    EmailPostDeliveryFiltered 
-    | where ActionType in ("Malware ZAP","Phish ZAP") and ActionResult in ("Success","AdminPolicy") 
-    | join kind=leftsemi (EmailEventsClean) on NetworkMessageId 
-    | summarize count() 
-); 
-// get the number of threats unsuccessfully cleaned up post delivery. 
-let FN_ZAP_Unsuccessful = toscalar( 
-    EmailPostDeliveryFiltered 
-    | where ActionType in ("Malware ZAP","Phish ZAP") and ActionResult !in ("Success","AdminPolicy") 
-    | join kind=leftsemi (EmailEventsClean) on NetworkMessageId 
-    | summarize count() 
-); 
-// join the administrative submissions to clean mailflow to find the additional miss 
-let FN_Admin_Submissions = toscalar( 
-    CloudAppEventsFiltered 
-    | join kind=rightsemi (EmailEventsClean) on NetworkMessageId 
-    | summarize count() 
-    ); 
-    // print each result, and run the calculation to work out effectiveness at time of delivery and post delivery. 
-union withsource=Table 
-    (print StatisticName="Mal/Phish Mailflow totals - Minus FPs", Value=toreal(Mal_Phish_Mailflow) - toreal(FP_ZAP)), 
-    (print StatisticName="Admin Mal/Phish FNs Submitted", Value=toreal(FN_Admin_Submissions)), 
-    (print StatisticName="Mal/Phish FPs Reverse Zapped", Value=toreal(FP_ZAP)), 
-    (print StatisticName="Mal / Phish Successfully Zapped", Value=toreal(FN_ZAP_Successful)), 
-    (print StatisticName="Mal / Phish UN-Successfully Zapped", Value=toreal(FN_ZAP_Unsuccessful)), 
-    (print StatisticName="Effectiveness Post Delivery", Value=abs(round(((toreal(FN_Admin_Submissions)+toreal(FN_ZAP_Unsuccessful))/(toreal(Mal_Phish_Mailflow)+toreal(FN_ZAP_Successful)+toreal(FN_ZAP_Unsuccessful)+toreal(FN_Admin_Submissions)-toreal(FP_ZAP))*100-100),2))), 
-    (print StatisticName="Effectiveness Pre-Delivery", Value=abs(round(((toreal(FN_Admin_Submissions)+toreal(FN_ZAP_Unsuccessful)+toreal(FN_ZAP_Successful))/(toreal(Mal_Phish_Mailflow)+toreal(FN_ZAP_Successful)+toreal(FN_ZAP_Unsuccessful)+toreal(FN_Admin_Submissions)-toreal(FP_ZAP))*100-100),2))) 
+let _startTime = ago(30d);
+let _endTime = now();
+let PreDelivery = toscalar(
+    EmailEvents
+    | where Timestamp between (_startTime .. _endTime)
+        and EmailDirection == "Inbound"
+        and (ThreatTypes contains "Phish" or ThreatTypes contains "Malware")
+    | where not(DeliveryAction == "Blocked" and DeliveryLocation in ("Dropped","Failed"))
+    | extend MDO_detection = parse_json(DetectionMethods)
+    | extend FirstDetection = iif(isempty(MDO_detection), "Clean", tostring(bag_keys(MDO_detection)[0]))
+    | extend FirstSubcategory = iif(FirstDetection != "Clean" and array_length(MDO_detection[FirstDetection]) > 0, strcat(FirstDetection, ": ", tostring(MDO_detection[FirstDetection][0])), "No Detection (clean)")
+    | summarize PreDelivery = count()
+);
+let PostDelivery = toscalar(
+    EmailPostDeliveryEvents
+    | where Timestamp between (_startTime .. _endTime)
+        and ActionType in ("Malware ZAP","Phish ZAP")
+        and ActionResult in ("Success","UserTriaged")
+    | summarize PostDelivery = count()
+);
+let Uncaught = toscalar(
+    EmailPostDeliveryEvents
+    | where Timestamp between (_startTime .. _endTime)
+        and ActionType in ("Malware ZAP","Phish ZAP")
+        and ActionResult !in ("Success", "UserTriaged")
+    | summarize Uncaught = count()
+);
+let PreDeliveryReal = toreal(PreDelivery);
+let PostDeliveryReal = toreal(PostDelivery);
+let UncaughtReal = toreal(Uncaught);
+let Effectiveness = round(
+    iif(
+        (PreDeliveryReal + PostDeliveryReal + UncaughtReal) == 0,
+        0.0,
+        ((PreDeliveryReal + PostDeliveryReal) / (PreDeliveryReal + PostDeliveryReal + UncaughtReal)) * 100.0
+    ), 2
+);
+union
+    (print StatisticName = "Pre-Delivery Catch", Value = PreDeliveryReal),
+    (print StatisticName = "Post-Delivery Catch", Value = PostDeliveryReal),
+    (print StatisticName = "Failed ZAP / Miss or Uncaught", Value = UncaughtReal),
+    (print StatisticName = "Phish / Malware Efficacy", Value = Effectiveness)
 | project StatisticName, Value
 ```

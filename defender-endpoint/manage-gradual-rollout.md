@@ -1,14 +1,14 @@
----
+﻿---
 title: Manage the gradual rollout process for Microsoft Defender updates
 description: Learn about the gradual update process and controls.
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -16,23 +16,15 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 10/07/2024
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
+
 ---
 
 # Manage the gradual rollout process for Microsoft Defender updates
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
-
-**Platforms**
-
-- Windows
 
 It's important to ensure that client components are up to date to deliver critical protection capabilities and prevent attacks.
 
@@ -47,15 +39,22 @@ Updates are released monthly using a gradual release process. This process helps
 > [!NOTE]
 > For more information on how to control daily security intelligence updates, see [Schedule Microsoft Defender Antivirus protection updates](manage-protection-update-schedule-microsoft-defender-antivirus.md). Updates ensure that next-generation protection can defend against new threats, even if cloud-delivered protection is not available to the endpoint.
 
+## Prerequisites
+
+
+### Supported operating systems
+
+- Windows
+
 ## Microsoft gradual rollout model
 
 The following gradual rollout model is followed for monthly Defender updates:
 
 1. The first release goes out to Beta channel subscribers.
 
-2. After validation, feedback, and fixes, we start the gradual rollout process in a throttled way and to Preview channel subscribers first.
+1. After validation, feedback, and fixes, we start the gradual rollout process in a throttled way and to Preview channel subscribers first.
 
-3. We then proceed to release the update to the rest of the global population, scaling out from 10-100%.
+1. We then proceed to release the update to the rest of the global population, scaling out from 10-100%.
 
 Our engineers continuously monitor impact and escalate any issues to create a fix as needed.
 
@@ -110,12 +109,11 @@ For environments where there's a need for a more controlled gradual rollout of a
 
 1. Participate in the Windows Insider program or assign a group of devices to the Beta Channel.
 
-2. Designate a pilot group that opts in to Preview Channel, typically validation environments, to receive new updates early.
+1. Designate a pilot group that opts in to Preview Channel, typically validation environments, to receive new updates early.
 
-3. Designate a group of machines that receive updates later during the gradual rollout from Staged channel. Typically, this group would be a representative ~10% of the population.
+1. Designate a group of machines that receive updates later during the gradual rollout from Staged channel. Typically, this group would be a representative ~10% of the population.
 
-4. Designate a group of machines that receive updates after the gradual release cycle completes. These are typically important production systems.
-
+1. Designate a group of machines that receive updates after the gradual release cycle completes. These are typically important production systems.
 For the remainder of devices, the default setting is to receive new updates as they arrive during the Microsoft gradual rollout process and no further configuration is required.
 
 Adopting this model:
@@ -143,4 +141,5 @@ For details on how to use these tools, see [Create a custom gradual rollout proc
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

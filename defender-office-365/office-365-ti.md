@@ -4,7 +4,7 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: bagol
 ms.date: 10/10/2023
 audience: Admin
 ms.topic: overview
@@ -110,7 +110,7 @@ Microsoft Defender for Office 365 uses role-based access control. Permissions ar
 |View email preview/download .eml of ANY email in Explorer|One of the following: <ul><li>**Security Administrator**</li><li>**Security Reader**</li></ul> <br/> These roles can be assigned in either Microsoft Entra ID (<https://portal.azure.com>) or the Microsoft 365 admin center (<https://admin.microsoft.com>).|
 
 > [!IMPORTANT]
-> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## Next steps
 
