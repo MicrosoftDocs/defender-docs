@@ -19,6 +19,7 @@ search.appverid:
   - MOE150
   - MET150
 ms.date: 11/18/2024
+ms.update-cycle: 180-days
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -68,7 +69,7 @@ To summarize an incident:
 
 1. The incident summary card loads on the Copilot pane. Review the generated summary on the card. Review the summary and use the information to guide your investigation and response to the incident.
  
-   :::image type="content" source="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png" alt-text="Screenshot that shows the incident summary card on the Copilot pane as seen in the Microsoft Defender incident page." lightbox="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png":::
+   :::image type="content" source="media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png" alt-text="Screenshot that shows the incident summary card on the Copilot pane as seen in the Microsoft Defender incident page." lightbox="media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png":::
 
    > [!TIP]
    > You can navigate to a file, IP, or URL page from the Copilot results pane by clicking on the evidence in the results.
@@ -77,11 +78,42 @@ To summarize an incident:
 
    Select a suggested prompt to get more insights about the specific assets involved in the incident, such as device summaries, identity summaries, and related threat intelligence. 
 
-   :::image type="content" source="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary-see-prompts.png" lightbox="/defender/media/copilot-in-defender/incident-summary/copilot-defender-incident-summary-see-prompts-large.png" alt-text="Screenshot that shows the Copilot suggested prompts on the incident summary card.":::
+   :::image type="content" source="media/security-copilot-m365d-incident-summary/copilot-defender-incident-summary-see-prompts.png" lightbox="media/security-copilot-m365d-incident-summary/copilot-defender-incident-summary-see-prompts-large.png" alt-text="Screenshot that shows the Copilot suggested prompts on the incident summary card.":::
 
 1. Select the **More actions** ellipsis (...) at the top of the incident summary card to copy or regenerate the summary, or view the summary in the Security Copilot portal. Selecting **Open in Security Copilot** opens a new tab to the Security Copilot standalone portal where you can input prompts and access other plugins.
 
-   :::image type="content" source="/defender/media/copilot-in-defender/incident-summary/incident-summary-options.png" alt-text="Screenshot that shows the actions available on the incident summary card.":::
+   :::image type="content" source="media/security-copilot-m365d-incident-summary/incident-summary-options.png" alt-text="Screenshot that shows the actions available on the incident summary card.":::
+
+### Manage Copilot incident summaries settings (preview)
+
+By default, Copilot generates a summary for each incident the user opens, but you can change this setting to display incident summaries only in specific instances. You can choose to have summaries generated:
+
+- Always (for every incident opened)
+- Based on the severity level of the incident
+- On demand only
+
+To change the settings for Copilot incident summaries in Microsoft Sentinel, follow these steps:
+
+1. Go to **System** > **Settings** > **Copilot in Defender** in the Microsoft Sentinel navigation pane.
+
+    :::image type="content" source="media/security-copilot-m365d-incident-summary/copilot-settings.png" alt-text="Screenshot that shows the Copilot settings page in Microsoft Sentinel.":::
+
+1. Under **Preferences**, select **Incident Summary generation**.
+1. Select either **Auto-generate** or **Generate on demand**, depending on your preference.
+1. If you select **Auto-generate**, choose between **Always** or **Incident severity**. If you select **Incident severity**, choose the *minimum* severity level for which you want Copilot to generate incident summaries automatically.
+
+    :::image type="content" source="media/security-copilot-m365d-incident-summary/copilot-settings-preferences.png" alt-text="Screenshot that shows the Copilot settings preferences page in Microsoft Sentinel.":::
+
+1. Select **Save**.
+
+- When you select **Incident severity**, an estimate of the number of incidents of each severity level reviewed per day is displayed, along with the estimated SCU consumption.
+
+    :::image type="content" source="./media/security-copilot-m365d-incident-summary/incident-severity.png" alt-text="Screenshot that shows the approximate number of incidents of each severity level.":::
+
+- Copilot saves generated incident summaries for a week. If you select an incident whose summary is in the cache, and the incident hasn't changed significantly, the summary is automatically redisplayed at no cost regardless of the setting.
+- To generate a summary on demand for an incident that's not automatically generated, select the **Generate** button.
+
+    :::image type="content" source="media/security-copilot-m365d-incident-summary/generate-summary.png" alt-text="Screenshot that shows the Generate summary button on the incident page.":::
 
 ## Sample incident summary prompt
 
@@ -94,7 +126,7 @@ In the Security Copilot standalone portal, you can use the following prompt to g
 
 ## Provide feedback
 
-Microsoft highly encourages you to provide feedback to Copilot, as it's crucial for a capability's continuous improvement. You can provide feedback on the summary by selecting the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards](/defender/media/copilot-in-defender/copilot-defender-feedback.png) found on the bottom of the Copilot pane.
+Microsoft highly encourages you to provide feedback to Copilot, as it's crucial for a capability's continuous improvement. You can provide feedback on the summary by selecting the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards](media/copilot-in-defender/copilot-defender-feedback.png) found on the bottom of the Copilot pane.
 
 ## See also
 

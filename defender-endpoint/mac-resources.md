@@ -2,8 +2,8 @@
 title: Resources for Microsoft Defender for Endpoint on macOS
 description: Resources for Microsoft Defender for Endpoint on macOS, including how to uninstall it, how to collect diagnostic logs, CLI commands, and known issues with the product.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
 manager: bagol
 ms.localizationpriority: medium
@@ -23,9 +23,6 @@ appliesto:
 ---
 # Resources for Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 
 ## Collecting diagnostic information
@@ -42,9 +39,9 @@ If you can reproduce a problem, increase the logging level, run the system for s
    Log level configured successfully
    ```
 
-2. Reproduce the problem.
+1. Reproduce the problem.
 
-3. Run `sudo mdatp diagnostic create` to back up the Microsoft Defender for Endpoint logs. The files are stored inside a `.zip` archive. This command also prints the file path to the backup after the operation succeeds.
+1. Run `sudo mdatp diagnostic create` to back up the Microsoft Defender for Endpoint logs. The files are stored inside a `.zip` archive. This command also prints the file path to the backup after the operation succeeds.
 
    > [!TIP]
    > By default, diagnostic logs are saved to `/Library/Application Support/Microsoft/Defender/wdavdiag/`. To change the directory where diagnostic logs are saved, pass `--path [directory]` to the below command, replacing `[directory]` with the desired directory.
@@ -57,7 +54,7 @@ If you can reproduce a problem, increase the logging level, run the system for s
    Diagnostic file created: "/Library/Application Support/Microsoft/Defender/wdavdiag/932e68a8-8f2e-4ad0-a7f2-65eb97c0de01.zip"
    ```
 
-4. Restore logging level.
+1. Restore logging level.
 
    ```bash
    mdatp log level set --level info
@@ -130,7 +127,6 @@ Important tasks, such as controlling product settings and triggering on-demand s
 |Diagnostics|Generate diagnostic logs|`mdatp diagnostic create --path [directory]`|
 |Health|Check the product's health|`mdatp health`|
 |Health|Check for a specific product attribute|`mdatp health --field [attribute: healthy/licensed/engine_version...]`|
-|EDR|EDR list exclusions (root)| `mdatp edr exclusion list [processes|paths|extensions|all]` |
 |EDR|Set/Remove tag, only GROUP supported|`mdatp edr tag set --name GROUP --value [name]`|
 |EDR|Remove group tag from device|`mdatp edr tag remove --tag-name [name]`|
 |EDR|Add Group ID|`mdatp edr group-ids --group-id [group]`|
@@ -222,5 +218,5 @@ When threats are detected, your security team can view detections and if necessa
 - [Microsoft Defender portal overview](/defender-xdr/microsoft-365-defender-portal)
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

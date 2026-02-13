@@ -2,8 +2,8 @@
 title: Overview of Microsoft Defender for Endpoint Plan 1
 description: Get an overview of Defender for Endpoint Plan 1. Learn about the features and capabilities included in this endpoint protection subscription.
 search.appverid: MET150 
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 manager: bagol 
 audience: ITPro
 ms.topic: overview
@@ -193,4 +193,4 @@ To learn more, see [Defender for Endpoint APIs](api/management-apis.md).
 - [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
 - [Microsoft Defender for Endpoint - Mobile Threat Defense](mtd.md) (for iOS and Android devices)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

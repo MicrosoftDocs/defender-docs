@@ -1,8 +1,8 @@
 ---
 title: Schedule antivirus scans using Microsoft Intune
 description: Schedule antivirus scans using Intune
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: how-to
@@ -12,48 +12,46 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
-ms.date: 04/30/2025
+ms.date: 10/20/2025
 ms.subservice: ngp
 ms.localizationpriority: medium
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender Antivirus
 ---
 
 # Schedule antivirus scans using Microsoft Intune
 
-**Applies to:**
+This article describes how to configure scheduled scans using Microsoft Intune. To learn more about scheduling scans and about scan types, see [About scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md).
 
-- [Microsoft Defender XDR](/defender-xdr)
+## Prerequisites
 
-- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
-
-- Microsoft Defender for Business
-- Microsoft Defender Antivirus
-
-**Platforms**
+### Supported operating systems
 
 - Windows
 - Windows Server
-
-This article describes how to configure scheduled scans using Microsoft Intune. To learn more about scheduling scans and about scan types, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md). 
 
 ## Configure antivirus scans using Intune
 
 1. In the [Intune admin center](https://intune.microsoft.com/), go to **Endpoint security** > **Antivirus** > **Create Policy**. For **Platform**, select **Windows**, and for **Profile**, select **Microsoft Defender Antivirus**. Then select **Create**.
 
-2. On the **Basics** page, specify a name and description for the policy, and then choose **Next**.
+1. On the **Basics** page, specify a name and description for the policy, and then choose **Next**.
 
-3. On the **Configuration settings** page, expand each group of settings, and configure the settings you want to manage with this policy. For more information about these settings, see [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender).
+1. On the **Configuration settings** page, expand each group of settings, and configure the settings you want to manage with this policy. For more information about these settings, see [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender).
 
-   When you're done configuring settings, select **Next**.
+1. When you're done configuring settings, select **Next**.
 
-4. On the **Scope tags** page, you can either use the default setting, or search for scope tags to assign to the policy. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](/intune/intune-service/fundamentals/scope-tags). 
+1. On the **Scope tags** page, you can either use the default setting, or search for scope tags to assign to the policy. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](/intune/intune-service/fundamentals/scope-tags). 
 
-   When you're done specifying scope tags, select **Next**.
+1. When you're done specifying scope tags, select **Next**.
 
-5. On the **Assignments** page, select the users or groups to receive this policy. For more information, see [Assign policies in Microsoft Intune](/intune/intune-service/configuration/device-profile-assign). 
+1. On the **Assignments** page, select the users or groups to receive this policy. For more information, see [Assign policies in Microsoft Intune](/intune/intune-service/configuration/device-profile-assign). 
 
-   When you're done Then select **Next**.
+1. When you're done Then select **Next**.
 
-6. On the **Review + create**, review your settings. When you select **Save**, your changes are saved, and the policy is created and applied. 
+1. On the **Review + create**, review your settings. When you select **Save**, your changes are saved, and the policy is created and applied. 
 
 For more information: [Antivirus policy for endpoint security in Intune ](/intune/intune-service/protect/endpoint-security-antivirus-policy)
 

@@ -2,8 +2,8 @@
 title: List devices by software
 description: Retrieve a list of devices that has this software installed.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,25 +15,16 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 03/01/2025
+ms.date: 11/16/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
 ---
+
 # List devices by software
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
-
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 Retrieve a list of device references that has this software installed.
 
@@ -41,10 +32,10 @@ Retrieve a list of device references that has this software installed.
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md) for details.
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Software.Read.All|'Read Threat and Vulnerability Management Software information'
-Delegated (work or school account)|Software.Read|'Read Threat and Vulnerability Management Software information'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Software.Read.All|'Read Threat and Vulnerability Management Software information'|
+|Delegated (work or school account)|Software.Read|'Read Threat and Vulnerability Management Software information'|
 
 ## HTTP request
 
@@ -54,9 +45,9 @@ GET /api/Software/{Id}/machineReferences
 
 ## Request headers
 
-|Name|Type|Description
+|Name|Type|Description|
 |---|---|---|
-|Authorization|String|Bearer {token}.**Required**.
+|Authorization|String|Bearer {token}.**Required**.|
 
 ## Request body
 
@@ -70,20 +61,20 @@ If successful, this method returns 200 OK and a list of devices with the softwar
 
 ### Request example
 
-Here is an example of the request.
+Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/Software/microsoft-_-edge/machineReferences
+GET https://api.security.microsoft.com/api/Software/microsoft-_-edge/machineReferences
 ```
 
 ### Response example
 
-Here is an example of the response.
+Here`s an example of the response.
 
 ```json
 
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#MachineReferences",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#MachineReferences",
     "value": [
         {
             "id": "7c7e1896fa39efb0a32a2cf421d837af1b9bf762",
@@ -101,11 +92,3 @@ Here is an example of the response.
     ]
 }
 ```
-
-## Related topics
-
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Defender Vulnerability Management software inventory](/defender-vulnerability-management/tvm-software-inventory)
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
 ms.topic: install-set-up-deploy
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.custom: nextgen
 ms.reviewer: thdoucet
 manager: bagol
@@ -15,18 +15,21 @@ ms.collection:
 - tier3
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 02/10/2025
+ms.date: 11/17/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ---
+
 # Onboard Windows devices in Azure Virtual Desktop
 
 6 minutes to read
 
 
 Microsoft Defender for Endpoint supports monitoring both VDI and Azure Virtual Desktop sessions. Depending on your organization's needs, you might need to implement VDI or Azure Virtual Desktop sessions to help your employees access corporate data and apps from an unmanaged device, remote location, or similar scenario. With Microsoft Defender for Endpoint, you can monitor these virtual machines for anomalous activity.
+
+[!INCLUDE [Microsoft Defender deployment tool preview](./includes/defender-deployment-tool-preview.md)]
 
 ## Before you begin
 
@@ -76,22 +79,21 @@ This scenario uses a centrally located script and runs it using a domain-based g
     1. In the **Deployment method** field, select VDI onboarding scripts for non-persistent endpoints.
     1. Click **Download package** and save the .zip file.
 
-2. Extract the contents of the .zip file to a shared, read-only location that can be accessed by the device. You should have a folder called **OptionalParamsPolicy** and the files **WindowsDefenderATPOnboardingScript.cmd** and **Onboard-NonPersistentMachine.ps1**.
+1. Extract the contents of the .zip file to a shared, read-only location that can be accessed by the device. You should have a folder called **OptionalParamsPolicy** and the files **WindowsDefenderATPOnboardingScript.cmd** and **Onboard-NonPersistentMachine.ps1**.
 
 ##### Use Group Policy management console to run the script when the virtual machine starts
 
 1. Open the Group Policy Management Console (GPMC), right-click the Group Policy Object (GPO) you want to configure and click **Edit**.
 
-2. In the Group Policy Management Editor, go to **Computer configuration** \> **Preferences** \> **Control panel settings**.
+1. In the Group Policy Management Editor, go to **Computer configuration** \> **Preferences** \> **Control panel settings**.
 
-3. Right-click **Scheduled tasks**, click **New**, and then click **Immediate Task** (At least Windows 7).
+1. Right-click **Scheduled tasks**, click **New**, and then click **Immediate Task** (At least Windows 7).
 
-4. In the Task window that opens, go to the **General** tab. Under **Security options** click **Change User or Group** and type SYSTEM. Click **Check Names** and then click OK. NT AUTHORITY\SYSTEM appears as the user account the task will run as.
+1. In the Task window that opens, go to the **General** tab. Under **Security options** click **Change User or Group** and type SYSTEM. Click **Check Names** and then click OK. NT AUTHORITY\SYSTEM appears as the user account the task will run as.
 
-5. Select **Run whether user is logged on or not** and check the **Run with highest privileges** check box.
+1. Select **Run whether user is logged on or not** and check the **Run with highest privileges** check box.
 
-6. Go to the **Actions** tab and click **New**. Ensure that **Start a program** is selected in the Action field. Enter the following:
-
+1. Go to the **Actions** tab and click **New**. Ensure that **Start a program** is selected in the Action field. Enter the following:
    `Action = "Start a program"`
 
    `Program/Script = C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe`
@@ -134,7 +136,7 @@ When using Windows Enterprise multi-session, per our security best practices the
 - Microsoft Defender Suite
 - Microsoft 365 E5
 
-Licensing requirements for Microsoft Defender for Endpoint can be found at: [Licensing requirements](minimum-requirements.md#licensing-requirements).
+Licensing requirements for Microsoft Defender for Endpoint can be found at: [Licensing requirements](minimum-requirements.md).
 
 #### Related Links
 
@@ -144,5 +146,5 @@ Licensing requirements for Microsoft Defender for Endpoint can be found at: [Lic
 
 [Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment](deployment-vdi-microsoft-defender-antivirus.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

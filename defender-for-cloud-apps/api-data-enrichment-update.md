@@ -11,7 +11,7 @@ ms.topic: reference
 Run the POST request to update an existing IP address range.
 
 > [!IMPORTANT]
-> This endpoint is not built for partial updates. All required parameters must be passed and any optional parameters will get an empty value if not passed.
+> This endpoint isn't built for partial updates. All required parameters must be passed and any optional parameters will get an empty value if not passed.
 
 ## HTTP request
 
@@ -24,16 +24,16 @@ POST /api/v1/subnet/<ip_range_id>/update_rule/
 | Parameter | Type | Description |
 | --- | --- | --- |
 | name | string | The unique name of the range |
-| category | int | The id of the range category. Providing a category helps you easily recognize activities from interesting IP addresses. Possible values include:<br /><br />**1**: Corporate<br />**2**: Administrative<br />**3**: Risky<br />**4**: VPN<br />**5**: Cloud provider<br />**6**: Other |
+| category | int | The ID of the range category. Providing a category helps you easily recognize activities from interesting IP addresses. Possible values include:<br /><br />**1**: Corporate<br />**2**: Administrative<br />**3**: Risky<br />**4**: VPN<br />**5**: Cloud provider<br />**6**: Other |
 | subnets | list | An array of masks as strings (IPv4 / IPv6) |
 | organization (Optional) | string | The registered ISP |
-| tags (Optional) | list | An array of new or existing objects including the tag name, id, description, name template, and tenant id |
+| tags (Optional) | list | An array of new or existing objects including the tag name, ID, description, name template, and tenant ID |
 
 ## Example
 
 ### Request
 
-Here is an example of the request.
+Here's an example of the request.
 
 ```rest
 curl -XPOST -H "Authorization:Token <your_token_key>" -H "Content-Type: application/json" "https://<tenant_id>.<tenant_region>.portal.cloudappsecurity.com/api/v1/subnet/<ip_range_id>/update_rule/" -d '{
@@ -50,4 +50,4 @@ curl -XPOST -H "Authorization:Token <your_token_key>" -H "Content-Type: applicat
 }'
 ```
 
-[!INCLUDE [Open support ticket](includes/support.md)]
+If you run into any problems, we're here to help. To get assistance or support for your product issue, please [open a support ticket](/defender-xdr/contact-defender-support).

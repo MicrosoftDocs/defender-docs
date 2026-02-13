@@ -21,6 +21,7 @@ ms.date: 06/17/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+#customer intent: As an admin, I need an overview of Safe Attachments so I can choose policies that protect users from malicious attachments while minimizing delivery delays.
 ---
 
 # Safe Attachments in Microsoft Defender for Office 365
@@ -61,7 +62,7 @@ This section describes the settings in Safe Attachments policies:
   - **Users**: One or more mailboxes, mail users, or mail contacts in the organization.
   - **Groups**:
     - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
-    - The specified Microsoft 365 Groups.
+    - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
   - **Domains**: One or more of the configured [accepted domains](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) in Microsoft 365. The recipient's primary email address is in the specified domain.
 
   You can use a condition or exception only once, but the condition or exception can contain multiple values:

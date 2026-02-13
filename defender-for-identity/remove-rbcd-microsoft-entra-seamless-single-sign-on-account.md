@@ -6,7 +6,6 @@ ms.author: rlitinsky
 ms.service: microsoft-defender-for-identity
 ms.topic: article
 ms.date:     08/22/2024
-ms.subservice: ''
 ms.reviewer: LiorShapiraa
 ---
 

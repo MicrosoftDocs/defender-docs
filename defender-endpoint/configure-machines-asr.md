@@ -2,8 +2,8 @@
 title: Optimize ASR rule deployment and detections
 description: Optimize your attack surface reduction rules to identify and prevent typical malware exploits.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -22,10 +22,6 @@ appliesto:
 
 ---
 # Optimize ASR rule deployment and detections
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 
 [Attack surface reduction rules](./attack-surface-reduction.md) identify and prevent typical malware exploits. They control when and how potentially malicious code can run. For example, they can prevent JavaScript or VBScript from launching a downloaded executable, block Win32 API calls from Office macros, and block processes that run from USB drives.
@@ -56,5 +52,5 @@ For more information about ASR rule deployment in the [Microsoft Defender portal
 - [Ensure your devices are configured properly](configure-machines.md)
 - [Get devices onboarded to Microsoft Defender for Endpoint](configure-machines-onboarding.md)
 - [Monitor compliance to the Microsoft Defender for Endpoint security baseline](configure-machines-security-baseline.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

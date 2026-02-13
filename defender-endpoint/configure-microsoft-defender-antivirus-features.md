@@ -4,8 +4,8 @@ description: You can configure Microsoft Defender Antivirus features with Intune
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.topic: install-set-up-deploy
 ms.custom: nextgen
 ms.reviewer: yongrhee
@@ -15,7 +15,7 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
-ms.date: 03/26/2025
+ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -24,9 +24,10 @@ appliesto:
 ---
 # Configure Microsoft Defender Antivirus features
 
+## Prerequisites
 
+### Supported operating systems
 
-**Platforms**
 - Windows
 
 You can configure Microsoft Defender Antivirus with a number of tools, such as:
@@ -77,5 +78,5 @@ The following broad categories of features can be configured:
 >
 > You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions. See: [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

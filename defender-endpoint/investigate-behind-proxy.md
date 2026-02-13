@@ -2,8 +2,8 @@
 title: Investigate connection events that occur behind forward proxies
 description: Learn how to use advanced HTTP level monitoring through network protection in Microsoft Defender for Endpoint, which surfaces a real target, instead of a proxy.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -21,10 +21,6 @@ appliesto:
 
 ---
 # Investigate connection events that occur behind forward proxies
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 
 Defender for Endpoint supports network connection monitoring from different levels of the network stack. A challenging case is when the network uses a forward proxy as a gateway to the Internet.
@@ -88,5 +84,5 @@ DeviceNetworkEvents
 ## Related articles
 
 - [Applying network protection with GP - policy CSP](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

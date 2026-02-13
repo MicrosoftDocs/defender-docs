@@ -3,8 +3,8 @@ title: Monitoring web browsing security in Microsoft Defender for Endpoint
 description: Use web protection in Microsoft Defender for Endpoint to monitor web browsing security
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -21,10 +21,6 @@ appliesto:
 
 ---
 # Monitor web browsing security
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 
 Web protection lets you monitor your organization's web browsing security through reports under **Reports > Web protection** in the Microsoft Defender portal. The report contains cards that provide web threat detection statistics.
@@ -66,5 +62,5 @@ Select a domain to view the list of devices that have attempted to access URLs i
 - [Web content filtering](web-content-filtering.md)
 - [Web threat protection](web-threat-protection.md)
 - [Respond to web threats](web-protection-response.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

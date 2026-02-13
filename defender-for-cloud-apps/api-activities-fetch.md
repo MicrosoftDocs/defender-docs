@@ -26,7 +26,7 @@ GET /api/v1/activities/<pk>/
 
 ### Request
 
-Here is an example of the request.
+Here's an example of the request.
 
 ```rest
 curl -XGET -H "Authorization:Token <your_token_key>" "https://<tenant_id>.<tenant_region>.portal.cloudappsecurity.com/api/v1/activities/<pk>/"
@@ -42,4 +42,4 @@ Returns the specified activity in JSON format.
 }
 ```
 
-[!INCLUDE [Open support ticket](includes/support.md)]
+If you run into any problems, we're here to help. To get assistance or support for your product issue, [open a support ticket](/defender-xdr/contact-defender-support).

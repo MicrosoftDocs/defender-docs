@@ -20,8 +20,6 @@ appliesto:
 ---
 # Integration with Microsoft Defender for Cloud
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 Microsoft Defender for Endpoint can integrate with Microsoft Defender for Cloud to provide a comprehensive Windows server protection solution. With this integration, Microsoft Defender for Cloud can use the power of Defender for Endpoint to provide improved threat detection for Windows Servers.
 
@@ -48,5 +46,5 @@ The following capabilities are included in this integration:
 - [Onboard previous versions of Windows](onboard-downlevel.md)
 - [Onboard Windows Server 2012 R2, 2016, SAC version 1803, and 2019](onboard-server.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

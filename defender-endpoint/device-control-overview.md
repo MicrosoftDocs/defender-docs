@@ -1,8 +1,8 @@
 ﻿---
 title: Device control in Microsoft Defender for Endpoint
 description: Get an overview of device control, including removable storage access control and device installation policies in Defender for Endpoint.
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 manager: bagol
 ms.date: 08/28/2024
 ms.topic: overview
@@ -117,7 +117,7 @@ When a device installation restrictions are configured and a device is installed
 
 ### Control access to removable media using device control
 
-Device control for Defender for Endpoint provides finer grain access control to a subset of USB devices. Device control can only restrict access to Windows Portal Devices, Removable Media, CD/DVDs and Printers.
+Device control for Defender for Endpoint provides finer grain access control to a subset of USB devices. Device control can only restrict access to Windows Portable Devices, Removable Media, CD/DVDs and Printers.
 
 > [!NOTE]
 > On Windows, the term *removable media devices* does not mean any USB device. Not **all** USB devices are *removable media devices*. In order to be considered a *removable media device* and therefore in scope of MDE device control, the device **must** create a disk (such as `E:` ) in Windows. Device control can restrict access to the device and files on that device by defining policies.

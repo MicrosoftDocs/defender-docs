@@ -21,7 +21,7 @@ ms.custom:
 ms.service: defender-office-365
 ms.date: 07/08/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -61,7 +61,7 @@ Reports replaced, moved, or deprecated are described in the following table.
 |**Spam detection report** <br><br> Get-MailTrafficReport <br> Get-MailDetailSpamReport|[Threat protection status report: View data by Email \> Spam](#view-data-by-email--spam-and-chart-breakdown-by-detection-technology) <br><br> [Get-MailTrafficATPReport](/powershell/module/exchangepowershell/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchangepowershell/get-maildetailatpreport)|MC250529|October 2021|
 |Get-AdvancedThreatProtectionDocumentReport <br><br> Get-AdvancedThreatProtectionDocumentDetail|[Get-ContentMalwareMdoAggregateReport](/powershell/module/exchangepowershell/get-contentmalwaremdoaggregatereport) <br><br> [Get-ContentMalwareMdoDetailReport](/powershell/module/exchangepowershell/get-contentmalwaremdodetailreport)|MC343433|May 2022|
 |**Exchange transport rule report** <br><br> [Get-MailTrafficPolicyReport](/powershell/module/exchangepowershell/get-mailtrafficpolicyreport) <br> [Get-MailDetailTransportRuleReport](/powershell/module/exchangepowershell/get-maildetailtransportrulereport)|[Exchange transport rule report in the EAC](/exchange/monitoring/mail-flow-reports/mfr-exchange-transport-rule-report) <br><br> [Get-MailTrafficPolicyReport](/powershell/module/exchangepowershell/get-mailtrafficpolicyreport) <br> [Get-MailDetailTransportRuleReport](/powershell/module/exchangepowershell/get-maildetailtransportrulereport)|MC316157|April 2022|
-|Get-MailTrafficTopReport|[Top senders and recipient report](reports-email-security.md#top-senders-and-recipients-report) <br><br> [Get-MailTrafficSummaryReport](/powershell/module/exchangepowershell/get-mailtrafficsummaryreport) <br><br> **Note**: There's no replacement for the encryption reporting capabilities in Get-MailTrafficTopReport.|MC315742|April 2022|
+|Get-MailTrafficTopReport|[Top senders and recipient report](reports-email-security.md#top-senders-and-recipients-report) <br><br> [Get-MailTrafficSummaryReport](/powershell/module/exchangepowershell/get-mailtrafficsummaryreport) <br><br> [Microsoft Purview Reports overview](/purview/purview-reports)|MC315742|April 2022|
 
 ## Compromised users report
 
@@ -455,7 +455,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 
 - **Date (UTC)** **Start date** and **End date**.
 - **Detection**: The same values as in the chart.
-- **Protected by**: **MDO** (Defender for Office 365) and **EOP**.
+- **Protected by**: **MDO** (Defender for Office 365) and **EOP** ([the built-in security features for all cloud mailboxes](eop-about.md)).
 - **Tag**: Leave the value **All** or remove it, double-click in the empty box, and then select **Priority account**. For more information about user tags, see [User tags](user-tags-about.md).
 - **Direction**: Leave the value **All** or remove it, double-click in the empty box, and then select **Inbound**, **Outbound**, or **Intra-org**.
 - **Domain**: Leave the value **All** or remove it, double-click in the empty box, and then select an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
@@ -523,7 +523,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 - **Detection**: The same values as in the chart.
 - **Priority account protection**: **Yes** and **No**. For more information, see [Configure and review priority account protection in Microsoft Defender for Office 365](priority-accounts-turn-on-priority-account-protection.md).
 - **Evaluation**: **Yes** or **No**.
-- **Protected by**: **MDO** (Defender for Office 365) and **EOP**
+- **Protected by**: **MDO** (Defender for Office 365) and **EOP** ([the built-in security features for all cloud mailboxes](eop-about.md)).
 - **Direction**: Leave the value **All** or remove it, double-click in the empty box, and then select **Inbound**, **Outbound**, or **Intra-org**.
 - **Tag**: Leave the value **All** or remove it, double-click in the empty box, and then select **Priority account**. For more information about user tags, see [User tags](user-tags-about.md).
 - **Domain**: Leave the value **All** or remove it, double-click in the empty box, and then select an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
@@ -658,7 +658,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 - **Detection**: The same values as in the chart.
 - **Priority account protection**: **Yes** and **No**. For more information, see [Configure and review Priority accounts in Microsoft Defender for Office 365](priority-accounts-turn-on-priority-account-protection.md).
 - **Evaluation**: **Yes** or **No**.
-- **Protected by**: **MDO** (Defender for Office 365) and **EOP**
+- **Protected by**: **MDO** (Defender for Office 365) and **EOP** ([the built-in security features for all cloud mailboxes](eop-about.md)).
 - **Direction**: Leave the value **All** or remove it, double-click in the empty box, and then select **Inbound**, **Outbound**, or **Intra-org**.
 - **Tag**: Leave the value **All** or remove it, double-click in the empty box, and then select **Priority account**. For more information about user tags, see [User tags](user-tags-about.md).
 - **Domain**: Leave the value **All** or remove it, double-click in the empty box, and then select an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
@@ -719,7 +719,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 - **Detection**: Detection technology values as previously described in this article and at [Detection technologies](/office/office-365-management-api/office-365-management-activity-api-schema#detection-technologies).
 - **Priority account protection**: **Yes** and **No**. For more information, see [Configure and review Priority accounts in Microsoft Defender for Office 365](priority-accounts-turn-on-priority-account-protection.md).
 - **Evaluation**: **Yes** or **No**.
-- **Protected by**: **MDO** (Defender for Office 365) and **EOP**
+- **Protected by**: **MDO** (Defender for Office 365) and **EOP** ([the built-in security features for all cloud mailboxes](eop-about.md)).
 - **Direction**: Leave the value **All** or remove it, double-click in the empty box, and then select **Inbound**, **Outbound**, or **Intra-org**.
 - **Tag**: Leave the value **All** or remove it, double-click in the empty box, and then select **Priority account**. For more information about user tags, see [User tags](user-tags-about.md).
 - **Domain**: Leave the value **All** or remove it, double-click in the empty box, and then select an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
@@ -806,7 +806,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 - **Threat classification**: Leave the value **All** or remove it, double-click in the empty box, and then select an available value.
 - **Priority account protection**: **Yes** and **No**. For more information, see [Configure and review priority account protection in Microsoft Defender for Office 365](priority-accounts-turn-on-priority-account-protection.md).
 - **Evaluation**: **Yes** or **No**.
-- **Protected by**: **MDO** (Defender for Office 365) and **EOP**
+- **Protected by**: **MDO** (Defender for Office 365) and **EOP** ([the built-in security features for all cloud mailboxes](eop-about.md)).
 - **Direction**: Leave the value **All** or remove it, double-click in the empty box, and then select **Inbound**, **Outbound**, or **Intra-org**.
 - **Tag**: Leave the value **All** or remove it, double-click in the empty box, and then select **Priority account**. For more information about user tags, see [User tags](user-tags-about.md).
 - **Domain**: Leave the value **All** or remove it, double-click in the empty box, and then select an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
@@ -868,7 +868,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 
 - **Date (UTC)** **Start date** and **End date**
 - **Detection**: Detection technology values as previously described in this article and at [Detection technologies](/office/office-365-management-api/office-365-management-activity-api-schema#detection-technologies).
-- **Protected by**: **MDO** (Defender for Office 365) and **EOP**
+- **Protected by**: **MDO** (Defender for Office 365) and **EOP** ([the built-in security features for all cloud mailboxes](eop-about.md)).
 - **Direction**: Leave the value **All** or remove it, double-click in the empty box, and then select **Inbound**, **Outbound**, or **Intra-org**.
 - **Tag**: Leave the value **All** or remove it, double-click in the empty box, and then select **Priority account**. For more information about user tags, see [User tags](user-tags-about.md).
 - **Domain**: Leave the value **All** or remove it, double-click in the empty box, and then select an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
@@ -1068,7 +1068,6 @@ Select **View details** to go to the **Top senders and recipients** page. Or, to
 
 - **Microsoft 365 organizations without Defender for Office 365**: <https://security.microsoft.com/reports/TopSenderRecipient>
 - **Microsoft 365 organizations with Defender for Office 365 (included or in an add-on subscription)**: <https://security.microsoft.com/reports/TopSenderRecipientsATP>
-
 
 On the **Top senders and recipients** page, a larger version of the pie chart is displayed. The following charts are available:
 

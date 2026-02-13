@@ -66,4 +66,4 @@ Once an admin has been granted the appropriate permission to view private activi
 > When you export activities with the **Show private activities** option selected, the activities inside the export are still private, and no activity details are exposed.
 >  
 
-[!INCLUDE [Open support ticket](includes/support.md)]
+If you run into any problems, we're here to help. To get assistance or support for your product issue, please [open a support ticket](/defender-xdr/contact-defender-support)

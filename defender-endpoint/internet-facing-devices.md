@@ -3,8 +3,8 @@ title: Identify internet-facing devices in Microsoft Defender for Endpoint
 description: Identify internet-facing devices in the device inventory list
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -18,12 +18,9 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
 ---
+
 # Internet-facing devices
-
-
-
 
 As threat actors continuously scan the web to detect exposed devices they can exploit to gain a foothold in internal corporate networks, mapping your organization's external attack surface is a key part of your security posture management. Devices that can be connected to or are approachable from the outside pose a threat to your organization.
 
@@ -154,16 +151,16 @@ If the above queries fail to provide the relevant connections, you can use socke
 You can report an inaccuracy for a device with incorrect internet-facing information. For the internet-facing device:
 
 1. Open the device flyout from the Device inventory page
-2. Select **Report device inaccuracy**
-3. In the **What part is inaccurate** dropdown, select **Device information**
-4. For **Which information is inaccurate** select the **internet facing classification** checkbox from the dropdown
-5. Fill in the requested details about what the correct information should be
-6. Provide an email address (optional)
-7. Select **Submit Report**
+1. Select **Report device inaccuracy**
+1. In the **What part is inaccurate** dropdown, select **Device information**
+1. For **Which information is inaccurate** select the **internet facing classification** checkbox from the dropdown
+1. Fill in the requested details about what the correct information should be
+1. Provide an email address (optional)
+1. Select **Submit Report**
 
 ## See also
 
 - [Device inventory](machines-view-overview.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

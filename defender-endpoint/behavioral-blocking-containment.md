@@ -1,8 +1,8 @@
 ﻿---
 title: Behavioral blocking and containment
 description: Learn about behavioral blocking and containment capabilities at Microsoft Defender for Endpoint
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 manager: bagol
 ms.reviewer: shwetaj
 audience: ITPro
@@ -15,17 +15,13 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 04/25/2025
+ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 ---
+
 # Behavioral blocking and containment
-
-
-**Platforms**
-- Windows
-
 
 
 ## Overview
@@ -47,6 +43,13 @@ With these capabilities, more threats can be prevented or blocked, even if they 
 The following image shows an example of an alert that was triggered by behavioral blocking and containment capabilities:
 
 :::image type="content" source="media/blocked-behav-alert.png" alt-text="The Alerts page with an alert through behavioral blocking and containment" lightbox="media/blocked-behav-alert.png":::
+
+
+## Prerequisites
+
+### Supported operating systems 
+
+- Windows
 
 ## Components of behavioral blocking and containment
 
@@ -130,5 +133,5 @@ This example shows that with behavioral blocking and containment capabilities, t
 - [See recent global threat activity](https://www.microsoft.com/wdsi/threats)
 
 - [Get an overview of Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
