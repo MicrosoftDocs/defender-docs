@@ -28,6 +28,34 @@ Microsoft regularly releases [security intelligence updates and product updates 
 
 ## Engine and platform updates
 
+### September-2025 (Platform: 4.18.25090.3009 | Engine: 1.1.25090.3001)
+
+- Security intelligence update version: **1.439.345.0**
+- Release date:  **October 8, 2025 (Engine) / October 21, 2025 (Platform)**
+
+- Platform: **4.18.25090.3009**
+- Engine: **1.1.25090.3001**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+- **Improved service startup behavior**: The core service now only restarts when necessary, for example, during a successful platform update. This change allows the organization to avoid unnecessary restarts when the service is already running correctly.
+- **Improved stability for RPC services**: Added input validation across multiple RPC endpoints to prevent crashes caused by malformed data, which addresses a reported security vulnerability.
+- **Fixed threat exclusion handling**: Resolved an issue where severity-based exclusions could cause the engine to misidentify threats, potentially skipping high severity detections.
+- **Restored performance optimization for network file access**: Fixed a regression that caused slowdowns during file operations, like robocopy to network shares. The fix included reintroducing the logic to skip unnecessary checks on non-local files when Controlled Folder Access is enabled.
+
+### August-2025 (Platform: 4.18.25080.5 | Engine: 1.1.25080.5)
+
+- Security intelligence update version: **1.437.1.0**
+- Release date:  **September 16, 2025 (Engine) / September 17, 2025 (Platform)**
+- Platform: **4.18.25080.5**
+- Engine: **1.1.25080.5**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+Improved Defender update reliability by allowing non-admin processes to trigger shared signature updates, reducing unnecessary privilege requirements.
+
 ### July-2025 (Platform: 4.18.25070.5 | Engine: 1.1.25070.4)
 
 - Security intelligence update version: **1.435.11.0**
