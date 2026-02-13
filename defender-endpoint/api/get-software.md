@@ -2,12 +2,12 @@
 title: List software
 description: Retrieves a list of software inventory
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -26,21 +26,26 @@ appliesto:
 ## API description
 
 Retrieves the organization software inventory.
-<br>Supports [OData V4 queries](https://www.odata.org/documentation/).
-<br>OData supported operators:
-<br>```$filter``` on:  ```id```, ```name```, and ```vendor``` properties.
-<br>```$top``` with max value of 10,000.
-<br>```$skip```.
-<br>See examples at [OData queries with Microsoft Defender for Endpoint](exposed-apis-odata-samples.md).
+
+Supports [OData V4 queries](https://www.odata.org/documentation/). OData supported operators:
+
+- `$filter` on the following properties:
+  - `id`
+  - `name`
+  - `vendor`
+- `$top` with max value of 10,000.
+- `$skip`
+
+See examples at [OData queries with Microsoft Defender for Endpoint](exposed-apis-odata-samples.md).
 
 ## Permissions
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md) for details.
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Software.Read.All|'Read Threat and Vulnerability Management Software information'
-Delegated (work or school account)|Software.Read|'Read Threat and Vulnerability Management Software information'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Software.Read.All|'Read Threat and Vulnerability Management Software information'|
+|Delegated (work or school account)|Software.Read|'Read Threat and Vulnerability Management Software information'|
 
 ## HTTP request
 
@@ -50,9 +55,9 @@ GET /api/Software
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -94,6 +99,3 @@ Here's an example of the response.
         ]
 }
 ```
-
-
-

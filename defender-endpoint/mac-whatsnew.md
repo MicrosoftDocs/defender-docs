@@ -68,13 +68,61 @@ This feature enables organizations to configure offline updates for security int
 
 Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md) and [Behavior Monitoring GA announcement blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/behavior-monitoring-is-now-generally-available-for-microsoft-defender-for-endpoi/4415697)
 
+### Feb-2026 (Build: 101.25122.0008 | Release version: 20.125122.8.0)
+
+| Build:             | **101.25122.0008** |
+|--------------------|--------------------|
+| Release version:   | **20.125122.8.0**  |
+| Engine version:    | **1.1.25100.4000** |
+| Signature version: | **1.439.74.0**     |
+
+##### What's new
+
+- Mitigation for a possible EDLP performance issue related to MDM profile behavior
+
+### Jan-2026 (Build: 101.25122.0007  | Release version: 20.125122.7.0)
+
+| Build:             | **101.25122.0007** |
+|--------------------|--------------------|
+| Release version:   | **20.125122.7.0**  |
+| Engine version:    | **1.1.25110.3000** |
+| Signature version: | **1.443.820.0**    |
+
+##### What's new
+
+- Bug and performance fixes
+
+### Jan-2026 (Build: 101.25122.0006  | Release version: 20.125122.6.0)
+
+| Build:             | **101.25122.0006** |
+|--------------------|--------------------|
+| Release version:   | **20.125122.6.0**  |
+| Engine version:    | **1.1.25100.4000** |
+| Signature version: | **1.439.74.0**     |
+
+##### What's new
+
+- Bug and performance fixes
+
+### Dec-2025 (Build: 101.25102.0019  | Release version: 20.125102.19.0)
+
+| Build:             | **101.25102.0019** |
+|--------------------|--------------------|
+| Release version:   | **20.125102.19.0** |
+| Engine version:    | **1.1.25090.2000** |
+| Signature version: | **1.435.600.0**    |
+
+##### What's new
+
+- [CVE-2025-55182 (React2Shell)](https://www.microsoft.com/en-us/security/blog/2025/12/15/defending-against-the-cve-2025-55182-react2shell-vulnerability-in-react-server-components/?msockid=30fe85b32a9c6d12269c90ef2e9c6f88) - Microsoft Defender Vulnerability Management (MDVM) can now surface devices that may be impacted by this vulnerability.  Please refer to the [blog post](https://www.microsoft.com/en-us/security/blog/2025/12/15/defending-against-the-cve-2025-55182-react2shell-vulnerability-in-react-server-components/?msockid=30fe85b32a9c6d12269c90ef2e9c6f88) for details.
+
 ### Nov-2025 (Build: 101.25102.0016 | Release version: 20.125102.16.0)
 
-| Build: | **101.25102.0016** |
-|--------------------|-----------------------|
-| Release version: | **20.125102.16.0** |
-| Engine version: | **1.1.25090.2000** |
-| Signature version: | **1.435.600.0** |
+| Build:             | **101.25102.0016** |
+|--------------------|--------------------|
+| Release version:   | **20.125102.16.0** |
+| Engine version:    | **1.1.25090.2000** |
+| Signature version: | **1.435.600.0**    |
 
 ##### What's new
 
@@ -83,11 +131,11 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 ### Oct-2025 (Build: 101.25082.0006  | Release version: 20.125082.6.0)
 
-| Build:             | **101.25082.0006**         |
-|--------------------|-----------------------|
-| Release version:   | **20.125082.6.0** |
-| Engine version:    | **1.1.25070.3000**       |
-| Signature version: | **1.437.276.0**      |
+| Build:             | **101.25082.0006** |
+|--------------------|--------------------|
+| Release version:   | **20.125082.6.0**  |
+| Engine version:    | **1.1.25070.3000** |
+| Signature version: | **1.437.276.0**    |
 
 ##### What's new
 
@@ -95,11 +143,11 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 ### Sep-2025 (Build: 101.25072.0011  | Release version: 20.125072.11.0)
 
-| Build:             | **101.25072.0011**         |
+| Build:             | **101.25072.0011**    |
 |--------------------|-----------------------|
-| Release version:   | **20.125072.11.0** |
-| Engine version:    | **1.1.25070.3000**       |
-| Signature version: | **1.429.309.0**      |
+| Release version:   | **20.125072.11.0**    |
+| Engine version:    | **1.1.25070.3000**    |
+| Signature version: | **1.429.309.0**       |
 
 ##### What's new
 
@@ -155,7 +203,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 ##### What's new
 
-- `mdatp health --details edr` now includes AAD info
+- `mdatp health --details edr` now includes Azure Active Directory information
 - Bug and performance fixes
 
 ### Apr-2025 (Build: 101.25032.0006  | Release version: 20.125032.6.0)
@@ -1161,5 +1209,5 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 - Performance improvements & Product improvements
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
