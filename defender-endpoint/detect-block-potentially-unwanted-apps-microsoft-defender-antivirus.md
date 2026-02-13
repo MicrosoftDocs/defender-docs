@@ -3,8 +3,8 @@ title: Block potentially unwanted applications with Microsoft Defender Antivirus
 description: Enable the potentially unwanted application (PUA) antivirus feature to block unwanted software such as adware.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
 audience: ITPro
 ms.reviewer: yongrhee, mimilone, julih
@@ -16,7 +16,7 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
-ms.date: 06/10/2025
+ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -28,23 +28,6 @@ appliesto:
 # Detect and block potentially unwanted applications
 
 
-**Platforms**
-
-- Windows
-
-Microsoft Defender Antivirus is available in the following editions/versions of Windows and Windows Server:
-
-- Windows Server 2016 and later
-- Windows Server, version 1803 or later
-- Windows Server 2012 R2 (Requires Microsoft Defender for Endpoint)
-- Windows 11
-- Windows 10
-- Windows 8.1
-- Azure Stack HCI OS, version 23H2 and later
-
-For macOS, see [Detect and block potentially unwanted applications with Defender for Endpoint on macOS](/defender-endpoint/mac-pua).
-
-For Linux, see [Detect and block potentially unwanted applications with Defender for Endpoint on Linux](/defender-endpoint/linux-pua).
 
 ## What are potentially unwanted applications?
 
@@ -65,6 +48,21 @@ Potentially unwanted applications can increase the risk of your network being in
 
 [!Include [defender-endpoint-setup-guide.md](../includes/mde-automated-setup-guide.md)]
 
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+- Windows Server 2016 and later
+- Windows Server, version 1803 or later
+- Windows Server 2012 R2 (Requires Microsoft Defender for Endpoint)
+- Windows 11
+- Windows 10
+- Windows 8.1
+- Azure Stack HCI OS, version 23H2 and later
+- For macOS, see [Detect and block potentially unwanted applications with Defender for Endpoint on macOS](/defender-endpoint/mac-pua).
+- For Linux, see [Detect and block potentially unwanted applications with Defender for Endpoint on Linux](/defender-endpoint/linux-pua).
+
 ## Microsoft Edge
 
 The [new Microsoft Edge](https://support.microsoft.com/microsoft-edge/get-to-know-microsoft-edge-3f4bb0ff-58de-2188-55c0-f560b7e20bea), which is Chromium-based, blocks potentially unwanted application downloads and associated resource URLs. This feature is provided via [Microsoft Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview).
@@ -75,9 +73,9 @@ Although potentially unwanted application protection in Microsoft Edge (Chromium
 
 1. In your Microsoft Edge browser, select the ellipses, and then choose **Settings**.
 
-2. Select **Privacy, search, and services**.
+1. Select **Privacy, search, and services**.
 
-3. Under the **Security** section, turn on **Block potentially unwanted apps**.
+1. Under the **Security** section, turn on **Block potentially unwanted apps**.
 
 > [!TIP]
 > If you're running Microsoft Edge (Chromium-based), you can safely explore the URL-blocking feature of PUA protection by testing it out on one of our [Microsoft Defender SmartScreen demo pages](https://demo.smartscreen.msft.net/).
@@ -158,19 +156,19 @@ For System Center 2012 Configuration Manager, see [How to Deploy Potentially Unw
 
 1. Download and install [the latest Administrative templates for Windows 11](https://www.bing.com/search?q=administrative+template+download+windows+11&FORM=R5FD)
 
-2. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
+1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
 
-3. Select the Group Policy Object you want to configure, and then choose **Edit**.
+1. Select the Group Policy Object you want to configure, and then choose **Edit**.
 
-4. In the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
 
-5. Expand the tree to **Windows Components** \> **Microsoft Defender Antivirus**.
+1. Expand the tree to **Windows Components** \> **Microsoft Defender Antivirus**.
 
-6. Double-click **Configure detection for potentially unwanted applications**, and set it to **Enabled**.
+1. Double-click **Configure detection for potentially unwanted applications**, and set it to **Enabled**.
 
-7. In **Options**, select **Block** to block potentially unwanted applications, or select **Audit Mode** to test how the setting works in your environment. Select **OK**.
+1. In **Options**, select **Block** to block potentially unwanted applications, or select **Audit Mode** to test how the setting works in your environment. Select **OK**.
 
-8. Deploy your Group Policy object as you usually do.
+1. Deploy your Group Policy object as you usually do.
 
 ### Use PowerShell cmdlets to configure PUA protection
 
@@ -272,5 +270,5 @@ For more information, see [Configure and validate exclusions based on file exten
 - [Configure Defender for Endpoint on Android features](android-configure.md)
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

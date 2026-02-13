@@ -2,8 +2,8 @@
 title: Troubleshoot onboarding issues and error messages
 description: Troubleshoot onboarding issues and error message while completing setup of Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -20,8 +20,6 @@ appliesto:
 
 ---
 # Troubleshoot subscription and portal access issues
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 This page provides detailed steps to troubleshoot issues that might occur when setting up your Microsoft Defender for Endpoint service.
@@ -84,5 +82,5 @@ If you encounter issues with accessing the portal, missing data, or restricted a
 - `https://secure.aadcdn.microsoftonline-p.com`
 - `https://security.microsoft.com`
 - `https://static2.sharepointonline.com`
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

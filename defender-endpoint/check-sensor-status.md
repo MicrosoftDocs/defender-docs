@@ -3,8 +3,8 @@ title: Check the device health at Microsoft Defender for Endpoint
 description: Check the sensor health on devices to identify which ones are misconfigured, inactive, or aren't reporting sensor data.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -20,9 +20,6 @@ search.appverid: met150
 ---
 
 # Check service health at Microsoft Defender for Endpoint
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 
 The **Device health** tile provides information on the individual device's ability to provide sensor data and communicate with the Defender for Endpoint service. It reports how many devices require attention and helps you identify problematic devices and take action to correct known issues.
@@ -56,4 +53,4 @@ You can view the device details when you click on a misconfigured or inactive de
 - [Client analyzer overview](overview-client-analyzer.md)
 - [Run the client analyzer on Windows](run-analyzer-windows.md)
 - [Data collection for advanced troubleshooting on Windows](data-collection-analyzer.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

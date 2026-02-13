@@ -10,7 +10,7 @@ ms.reviewer: anandd512
 # Secure apps with app hygiene features
 
 > [!NOTE]
-> Management of unused apps, unused credentials, and expiring credentials will only be available to app governance customers with Microsoft Entra Workload ID Premium. For more information, see [What are workload identities?](/azure/active-directory/workload-identities/workload-identities-overview)
+> Management of unused credentials and expiring credentials is available to app governance customers with a Microsoft Entra Workload ID Premium license. For more information, see [What are workload identities?](/azure/active-directory/workload-identities/workload-identities-overview)
 
 Have you ever wanted to see the apps that your organization owns but isn't using, but didn't know how to? Or clean up unused or expiring credentials more easily? Microsoft Entra ID includes recommendations to help you identify such apps, and the **App governance** page in Microsoft Defender provides an app hygiene feature suite that includes controls and insights on unused apps, unused credentials, and expiring credentials. 
 

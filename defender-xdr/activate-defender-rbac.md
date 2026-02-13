@@ -57,14 +57,14 @@ Sign in to the [Microsoft Defender portal](https://security.microsoft.com). In t
 
 You can activate your workloads in two ways from the Permissions and roles page:
 
-:::image type="content" source="/defender/media/defender/m365-defender-rbac-activate-workloads1.png" alt-text="Screenshot of the activate workloads page" lightbox="/defender/media/defender/m365-defender-rbac-activate-workloads1.png":::
+:::image type="content" source="media/activate-defender-rbac/m365-defender-rbac-activate-workloads1.png" alt-text="Screenshot of the activate workloads page" lightbox="media/activate-defender-rbac/m365-defender-rbac-activate-workloads1.png":::
 
 1. **Activate workloads**
 
 - Select **Activate workloads** on the banner above the list of roles to go directly to the **Activate workloads** screen.
 - You must activate each workload one by one. Once you select the individual toggle, you activate (or deactivate) that workload.
 
-:::image type="content" source="/defender/media/defender/defender-activate-workloads.png" alt-text="Screenshot of the page where you can choose workloads to activate.":::
+:::image type="content" source="media/activate-defender-rbac/defender-activate-workloads.png" alt-text="Screenshot of the page where you can choose workloads to activate.":::
 
    > [!NOTE]
    > The **Activate workloads** button is only available when there's it at least one workload that's not active for Microsoft Defender XDR Unified RBAC.
@@ -108,7 +108,7 @@ You have now successfully activated (or deactivated) that workload.
 
 ## Deactivate Microsoft Defender XDR Unified RBAC
 
-You can deactivate Microsoft Defender XDR Unified RBAC and revert to the individual RBAC models from Microsoft Defender for Endpoint, Microsoft Defender for Identity, and Microsoft Defender for Office 365 (Exchange Online Protection).
+You can deactivate Microsoft Defender XDR Unified RBAC and revert to the individual RBAC models from Microsoft Defender for Endpoint, Microsoft Defender for Identity, and Microsoft Defender for Office 365 (which includes [the built-in security features for all cloud mailboxes](/defender-office-365/eop-about)).
 
 To deactivate the workloads, repeat the steps in the previous section and select the workloads you want to deactivate. The status is set to **Not Active**.
 

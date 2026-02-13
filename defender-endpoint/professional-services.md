@@ -3,8 +3,8 @@ title: Professional services supported by Microsoft Defender XDR
 description: See the list of professional services that Microsoft Defender XDR can integrate with.
 ms.service: defender-endpoint
 ms.subservice: reference
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -189,5 +189,5 @@ Mature and maintain your internal team's security capabilities to prevent, detec
 
 - [Configure managed service security provider integration](configure-mssp-support.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

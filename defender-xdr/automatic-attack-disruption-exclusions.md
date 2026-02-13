@@ -55,11 +55,11 @@ To exclude assets from automated responses in automatic attack disruption, follo
 
 2. To exclude a user account, select **Add user exclusion**. A flyout pane appears.
 
-   :::image type="content" source="/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-identity-add-small.png" alt-text="Identities page in the automated response settings for attack disruption" lightbox="/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-identity-add.png":::
+   :::image type="content" source="media/automatic-attack-disruption-exclusions/attack-disrupt-exclude-identity-add-small.png" alt-text="Identities page in the automated response settings for attack disruption" lightbox="media/automatic-attack-disruption-exclusions/attack-disrupt-exclude-identity-add.png":::
 
 3. In the flyout pane, enter the user account names in the **Select users** box and select the user accounts you want to exclude.
 
-   :::image type="content" source="/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-identity-flyout-small.png" alt-text="Flyout pane when adding and selecting users to exclude in the automated response settings for attack disruption" lightbox="/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-identity-flyout.png":::
+   :::image type="content" source="media/automatic-attack-disruption-exclusions/attack-disrupt-exclude-identity-flyout-small.png" alt-text="Flyout pane when adding and selecting users to exclude in the automated response settings for attack disruption" lightbox="media/automatic-attack-disruption-exclusions/attack-disrupt-exclude-identity-flyout.png":::
 
 4. Select **Exclude users** to save the exclusion.
 
@@ -72,7 +72,7 @@ To exclude assets from automated responses in automatic attack disruption, follo
 
 2. In the **Device groups** tab, choose a device group by selecting the checkbox next to the group name from the list to configure attack disruption automation settings.
 
-   :::image type="content" source="/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-device-select-small.png" alt-text="Device groups tab in the automated response settings for attack disruption" lightbox="/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-device-select.png":::
+   :::image type="content" source="media/automatic-attack-disruption-exclusions/attack-disrupt-exclude-device-select-small.png" alt-text="Device groups tab in the automated response settings for attack disruption" lightbox="media/automatic-attack-disruption-exclusions/attack-disrupt-exclude-device-select.png":::
 
 3. In the flyout pane, select the appropriate automation level for the device group. You can choose from any of the following automation levels appropriate for your device group:
    - **Full - remediate threats automatically**: Automatically contain devices when a threat is detected.
@@ -81,7 +81,7 @@ To exclude assets from automated responses in automatic attack disruption, follo
    - **Semi - require approval for all folders**: Automatically investigate devices when an alert is received. All  remediation actions require approval.
    - **No automated response**: No automated investigation or response is taken for devices in this group.
 
-   :::image type="content" source="/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-device-flyout-small.png" alt-text="Flyout pane when configuring automation levels for a device group" lightbox="/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-device-flyout.png":::
+   :::image type="content" source="media/automatic-attack-disruption-exclusions/attack-disrupt-exclude-device-flyout-small.png" alt-text="Flyout pane when configuring automation levels for a device group" lightbox="media/automatic-attack-disruption-exclusions/attack-disrupt-exclude-device-flyout.png":::
 
 4. Select **Save** to save the automation level for the device group.
 
@@ -94,11 +94,11 @@ To exclude assets from automated responses in automatic attack disruption, follo
 
 2. In the **IPs** tab, select **Exclude IP** to exclude an IP address.
 
-   :::image type="content" source="/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-ip-add-small.png" alt-text="IPs tab in the automated response settings for attack disruption" lightbox="/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-ip-add.png":::
+   :::image type="content" source="media/automatic-attack-disruption-exclusions/attack-disrupt-exclude-ip-add-small.png" alt-text="IPs tab in the automated response settings for attack disruption" lightbox="media/automatic-attack-disruption-exclusions/attack-disrupt-exclude-ip-add.png":::
 
 3. In the flyout pane, enter the IP address/IP range/IP subnet you want to exclude. You can add multiple IP addresses and IP subnets by separating them with a comma.
 
-   :::image type="content" source="/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-ip-flyout-small.png" alt-text="Flyout pane when adding IP addresses to exclude in the automated response settings for attack disruption" lightbox="/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-ip-flyout.png":::
+   :::image type="content" source="media/automatic-attack-disruption-exclusions/attack-disrupt-exclude-ip-flyout-small.png" alt-text="Flyout pane when adding IP addresses to exclude in the automated response settings for attack disruption" lightbox="media/automatic-attack-disruption-exclusions/attack-disrupt-exclude-ip-flyout.png":::
 
 4. Add a name and note for the exclusion. Select **Create** to save the exclusion.
 
@@ -108,11 +108,11 @@ To remove an exclusion:
 
 - Go to the **Identities** page. Select the user account you want to remove from the list and then select **Remove**.
 
-:::image type="content" source="/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-user-remove.png" alt-text="Highlighting the removal option when removing an excluded user in the Identities page of attack disruption automation settings":::
+:::image type="content" source="media/automatic-attack-disruption-exclusions/attack-disrupt-exclude-user-remove.png" alt-text="Highlighting the removal option when removing an excluded user in the Identities page of attack disruption automation settings":::
 
 - Go to the **Devices** page and navigate to the **IPs** tab. Select the IP address you want to remove from the list and then select **Remove exclusion**.
 
-:::image type="content" source="/defender/media/automatic-attack-disruption/exclusions/attack-disrupt-exclude-ip-remove.png" alt-text="Highlighting the removal option when removing an excluded IP in the IP tab of attack disruption automation settings":::
+:::image type="content" source="media/automatic-attack-disruption-exclusions/attack-disrupt-exclude-ip-remove.png" alt-text="Highlighting the removal option when removing an excluded IP in the IP tab of attack disruption automation settings":::
 
 - Device group exclusions can be configured in the **Device groups** tab. Select the device group you want to configure from the list and choose the appropriate exclusion from the flyout pane. Select **Save** to save the exclusion.
 

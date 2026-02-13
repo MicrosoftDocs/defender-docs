@@ -2,8 +2,8 @@
 title: Production ring deployment using Group Policy and network share
 description: Microsoft Defender Antivirus is an enterprise endpoint security platform that helps defend against advanced persistent threats. This article provides information about how to use a ring deployment method to update your Microsoft Defender Antivirus clients using Group Policy over a network share.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: chrisda
+author: chrisda
 ms.reviewer: yongrhee
 ms.localizationpriority: high
 manager: bagol
@@ -15,36 +15,30 @@ ms.custom: intro-overview
 ms.topic: install-set-up-deploy
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 03/12/2025
+ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 
 ---
+
 # Microsoft Defender Antivirus production ring deployment using Group Policy and network share
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Platforms**
-
-- Windows
-- Windows Server
-
-
 
 Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats.
 
 > [!TIP]
-> Microsoft Defender for Endpoint is available in two plans, Defender for Endpoint Plan 1 and Plan 2. A new Microsoft Defender Vulnerability Management add-on is now available for Plan 2.
-
-## Introduction
+> A new Microsoft Defender Vulnerability Management add-on is now available for Microsoft Defender for Endpoint Plan 2.
 
 This article describes how to deploy Microsoft Defender Antivirus in rings using Group Policy and Network share (also known as UNC path, SMB, CIFS).
 
 ## Prerequisites
 
 Review the _read me_ article at [Readme](https://github.com/microsoft/defender-updatecontrols/blob/main/README.md)
+
+### Supported operating systems
+
+- Windows
+- Windows Server
 
 1. Download the latest Windows Defender .admx and .adml.
 
@@ -75,18 +69,18 @@ Set up a network file share (UNC/mapped drive) to download security intelligence
     MD C:\Tool\PS-Scripts\
     ```
 
-2. Create the folder to which you will save the signature updates.
+1. Create the folder to which you will save the signature updates.
 
     ```console
     MD C:\Temp\TempSigs\x64
     MD C:\Temp\TempSigs\x86
     ```
 
-3. Set up a PowerShell script, `CopySignatures.ps1`
+1. Set up a PowerShell script, `CopySignatures.ps1`
 
    Copy-Item -Path "\\SourceServer\Sourcefolder"  -Destination "\\TargetServer\Targetfolder"
 
-4. Use the command line to set up the scheduled task.
+1. Use the command line to set up the scheduled task.
 
    > [!NOTE]
    > There are two types of updates: full and delta.
@@ -134,7 +128,7 @@ Set up a network file share (UNC/mapped drive) to download security intelligence
    > [!NOTE]
    > When the scheduled tasks are created, you can find these in the Task Scheduler under `Microsoft\Windows\Windows Defender`.
 
-5. Run each task manually and verify that you have data (`mpam-d.exe`, `mpam-fe.exe`, and `nis_full.exe`) in the following folders (you might have chosen different locations):
+1. Run each task manually and verify that you have data (`mpam-d.exe`, `mpam-fe.exe`, and `nis_full.exe`) in the following folders (you might have chosen different locations):
 
    - `C:\Temp\TempSigs\x86`
    - `C:\Temp\TempSigs\x64`
@@ -154,12 +148,12 @@ Set up a network file share (UNC/mapped drive) to download security intelligence
     > [!NOTE]
     > Issues could also be due to execution policy.
 
-6. Create a share pointing to `C:\Temp\TempSigs` (e.g., `\\server\updates`).
+1. Create a share pointing to `C:\Temp\TempSigs` (e.g., `\\server\updates`).
 
     > [!NOTE]
     > At a minimum, authenticated users must have "Read" access. This requirement also applies to domain computers, the share, and NTFS (security).
 
-7. Set the share location in the policy to the share.
+1. Set the share location in the policy to the share.
 
     > [!NOTE]
     > Do not add the x64 (or x86) folder in the path. The mpcmdrun.exe process adds it automatically.

@@ -1,8 +1,8 @@
 ---
 title:  Managing exclusions reference
 description: This article describes various ways to manage exclusions for Defender for Endpoint and Microsoft Defender Antivirus
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
 ms.service: defender-endpoint
 ms.subservice: onboard
@@ -78,8 +78,8 @@ Many exclusions can be managed in the [Microsoft Intune admin center](https://go
 
 **Learn More**:
 
-- [Create a new antivirus policy with exclusions in Intune](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus#create-a-new-antivirus-policy-with-exclusions-in-intune)
-- [Manage antivirus exclusions in Intune (for existing policies)](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus#manage-antivirus-exclusions-in-intune-for-existing-policies)
+- [Create Microsoft Defender antivirus exclusion policies in Intune](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus#create-microsoft-defender-antivirus-exclusion-policies-in-intune)
+- [Modify exclusions in Microsoft Defender antivirus exclusion policies in Intune](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus#modify-exclusions-in-microsoft-defender-antivirus-exclusion-policies-in-intune))
 - [Configure attack surface reduction per-rule exclusions](/defender-endpoint/attack-surface-reduction-rules-deployment-test#configure-attack-surface-reduction-per-rule-exclusions)
 
 ### MDM CSP

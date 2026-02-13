@@ -2,8 +2,8 @@
 title: Privacy for Microsoft Defender for Endpoint on Linux
 description: Privacy controls, how to configure policy settings that impact privacy and information about the diagnostic data that is collected in Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
 manager: bagol
@@ -22,10 +22,6 @@ appliesto:
 
 ---
 # Privacy for Microsoft Defender for Endpoint on Linux
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 
 Microsoft is committed to provide you with the information and controls you need to make choices about how your data is collected and used when you're using Defender for Endpoint on Linux.
@@ -305,5 +301,5 @@ The following fields are collected:
 ## Resources
 
 - [Privacy at Microsoft](https://privacy.microsoft.com/)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
