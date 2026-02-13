@@ -4,7 +4,7 @@ f1.keywords:
 - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.topic: concept-article
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ search.appverid:
 ms.collection:
 - m365-security
 - tier2
-description: Learn how to integrate automated investigation and response with a custom or third-party reporting solution.
+description: Learn how to integrate automated investigation and response with a custom or non-Microsoft reporting solution.
 ms.date: 07/10/2024
 ms.custom: 
 - air
@@ -24,13 +24,13 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Custom or third-party reporting solutions for Microsoft Defender for Office 365 Plan 2
+# Custom or non-Microsoft reporting solutions for Microsoft Defender for Office 365 Plan 2
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 Automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2 returns detailed information about the results. For more information, see [Details and results of automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2](air-view-investigation-results.md).
 
-However, some Microsoft 365 organizations use custom or third-party reporting solutions. Those organizations can use the **Office 365 Management Activity APIs** to integrate information from AIR into other reporting solutions.
+However, some Microsoft 365 organizations use custom or non-Microsoft reporting solutions. Those organizations can use the **Office 365 Management Activity APIs** to integrate information from AIR into other reporting solutions.
 
 |Resource|Description|
 |:---|:---|

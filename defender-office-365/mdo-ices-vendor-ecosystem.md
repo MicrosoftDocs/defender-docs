@@ -3,7 +3,7 @@ title: Defender for Office 365 ICES Vendor Ecosystem Integration Guide
 description: Understand how the ICES Vendor Ecosystem enables Microsoft Defender for Office 365 to integrate with trusted non-Microsoft email security vendors.
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 ms.reviewer: aylamckorkle
 f1.keywords:
   - NOCSH
@@ -43,21 +43,22 @@ The rest of this article describes the operation, goals, and deployment consider
 
 > [!TIP]
 > Currently, specific API details aren't available.
+
 ## Get Started
 
 1. **Check license eligibility**: Verify your organization has Defender for Office 365 Plan 2 or Microsoft 365 E5 licenses. For more information about Defender for Office 365 Plan 2, see [Defender for Office 365 Plan 2 capabilities](mdo-about.md#defender-for-office-365-plan-2-capabilities).
 
-2. **Select an approved third-party security vendor**:
+2. **Select an approved non-Microsoft security vendor**:
    - Darktrace/EMAIL
    - KnowBe4 Defend Platform
 
-3. **Enable integration**: After you onboard to the third-party security vendor, their solution is seamlessly and automatically incorporated into your security architecture.
+3. **Enable integration**: After you onboard to the non-Microsoft security vendor, their solution is seamlessly and automatically incorporated into your security architecture.
 
 4. **Monitor and manage**: Use the unified dashboards and quarantine in Defender for Office 365 to monitor threat activity and take action.
 
 ## How integration works
 
-Integration enables the third-party vendor to pass details on a specific message via a private Microsoft Graph API. For example:
+Integration enables the non-Microsoft vendor to pass details on a specific message via a private Microsoft Graph API. For example:
 
 - Verdict.
 - Confidence level.
@@ -80,19 +81,20 @@ You can see the results of this integration in multiple unified experiences as d
 
 ## Configure your policies
 
-To ensure optimal protection and consistent behavior across integrated solutions, it's essential to configure security policies appropriately in both Defender for Office 365 and any participating third-party vendor platforms.
+To ensure optimal protection and consistent behavior across integrated solutions, it's essential to configure threat policies appropriately in both Defender for Office 365 and any participating non-Microsoft vendor platforms.
 
 ### Defender for Office 365 policy recommendations
 
 Microsoft recommends enabling the **Standard** and/or **Strict** [preset security policies](preset-security-policies.md) for all users in your organization. These presets are designed to provide a baseline of protection aligned with current threat intelligence and best practices.
 
 > [!TIP]
-> For more information about preset security policies vs. custom policies, see [Determine your protection policy strategy](mdo-deployment-guide.md#determine-your-protection-policy-strategy).
+> For more information about preset security policies vs. custom threat policies, see [Determine your threat policy strategy](mdo-deployment-guide.md#determine-your-protection-policy-strategy).
 >
-> If you plan on using custom protection policies instead of preset security policies, you need to periodically use the [Configuration analyzer](configuration-analyzer-for-security-policies.md) to identify and remediate deviations from recommended policy baselines.
-### Policy alignment with third-party vendors
+> If you plan on using custom threat policies instead of preset security policies, you need to periodically use the [Configuration analyzer](configuration-analyzer-for-security-policies.md) to identify and remediate deviations from recommended policy baselines.
 
-To maintain consistent message handling and threat response across the ecosystem, it's critical to align policy configurations between Defender for Office 365 and the integrated third-party vendor. This alignment ensures messages exhibit predictable behavior and are surfaced appropriately in unified dashboards and quarantine views.
+### Policy alignment with non-Microsoft vendors
+
+To maintain consistent message handling and threat response across the ecosystem, it's critical to align policy configurations between Defender for Office 365 and the integrated non-Microsoft vendor. This alignment ensures messages exhibit predictable behavior and are surfaced appropriately in unified dashboards and quarantine views.
 
 After you establish policy alignment, you can manage the remainder of the integration lifecycle directly within the Defender portal. For example:
 
@@ -106,11 +108,11 @@ The Defender portal provides a comprehensive and integrated experience for manag
 
 ### Quarantine
 
-Messages quarantined by third-party vendors are surfaced within the [quarantine](/defender-office-365/quarantine-about) experience. Security teams can search, preview, release, report, and take remediation actions on these messages using the same workflows as Defender for Office 365 detections. This unified view reduces operational complexity and ensures consistent handling of threats across the email security stack.
+Messages quarantined by non-Microsoft vendors are surfaced within the [quarantine](/defender-office-365/quarantine-about) experience. Security teams can search, preview, release, report, and take remediation actions on these messages using the same workflows as Defender for Office 365 detections. This unified view reduces operational complexity and ensures consistent handling of threats across the email security stack.
 
 ### Threat Explorer
 
-[Threat Explorer (Explorer)](/defender-office-365/threat-explorer-real-time-detections-about) provides real-time visibility into email threats across the organization. Messages processed by third-party vendors and surfaced through the ecosystem are included in Explorer views. This integration enables security analysts to investigate campaigns, trace message delivery paths, and correlate threat signals across detection sources.
+[Threat Explorer (Explorer)](/defender-office-365/threat-explorer-real-time-detections-about) provides real-time visibility into email threats across the organization. Messages processed by non-Microsoft vendors and surfaced through the ecosystem are included in Explorer views. This integration enables security analysts to investigate campaigns, trace message delivery paths, and correlate threat signals across detection sources.
 
 ### The Email entity page
 
@@ -125,34 +127,34 @@ For messages processed by ecosystem partners, the page includes vendor-specific 
 
 ### Advanced Hunting
 
-Security teams can use [Advanced Hunting](/defender-xdr/advanced-hunting-overview) capabilities in Defender for Office 365 to query and correlate data across native and third-party vendor detections. Vendor-submitted messages are represented in the [EmailEvents](/defender-xdr/advanced-hunting-emailevents-table) and [EmailPostDeliveryEvents](/defender-xdr/advanced-hunting-emailpostdeliveryevents-table) tables. Extended schema support is available for partner-specific attributes, including vendor-specific threat details.
+Security teams can use [Advanced Hunting](/defender-xdr/advanced-hunting-overview) capabilities in Defender for Office 365 to query and correlate data across native and non-Microsoft vendor detections. Vendor-submitted messages are represented in the [EmailEvents](/defender-xdr/advanced-hunting-emailevents-table) and [EmailPostDeliveryEvents](/defender-xdr/advanced-hunting-emailpostdeliveryevents-table) tables. Extended schema support is available for partner-specific attributes, including vendor-specific threat details.
 
-Use this example query to see third-party vendor detections in Advanced Hunting:
+Use this example query to see non-Microsoft vendor detections in Advanced Hunting:
 
 ```kusto
 EmailEvents
 | where Timestamp > ago(7d)
-//List email detected by a third-party vendor
+//List email detected by a non-Microsoft vendor
 | where DetectionMethods contains "Thirdparty"
-| project NetworkMessageId, RecipientEmailAddress, ThreatTypes, DetectionMethods, AdditionalFields, LatestDeliveryLocation 
+| project NetworkMessageId, RecipientEmailAddress, ThreatTypes, DetectionMethods, AdditionalFields, LatestDeliveryLocation
 ```
 
 ## Reports
 
-The Microsoft 365 Defender portal provides a centralized reporting experience that consolidates information from both Defender for Office 365 and integrated third-party vendors. This unified view enables security teams to assess the effectiveness of their entire email security stack in one place.
+The Microsoft 365 Defender portal provides a centralized reporting experience that consolidates information from both Defender for Office 365 and integrated non-Microsoft vendors. This unified view enables security teams to assess the effectiveness of their entire email security stack in one place.
 
 The following dashboards display this information:
 
 - **Email Detections**:
-  - *Defender mailflow detections*: Messages Defender for Office 365 detected during mail flow. These unique messages were undetected by the third-party vendor.
-  - *Defender post-delivery detections*: Messages Defender for Office 365 detected after delivery via [zero-hour auto purge (ZAP)](zero-hour-auto-purge.md). These unique messages were undetected by the third-party vendor.
-  - *Non-Microsoft post-delivery detection*: Messages the third-party vendor detected.
-  - *Duplicate detections*: Messages Defender for Office 365 detected during mail flow where the third-party vendor also delivered a verdict.
-  - *Duplicate post-delivery detections*: Messages Defender for Office 365 detected after delivery via ZAP where the third-party vendor also delivered a verdict.
+  - *Defender mailflow detections*: Messages Defender for Office 365 detected during mail flow. These unique messages were undetected by the non-Microsoft vendor.
+  - *Defender post-delivery detections*: Messages Defender for Office 365 detected after delivery via [zero-hour auto purge (ZAP)](zero-hour-auto-purge.md). These unique messages were undetected by the non-Microsoft vendor.
+  - *Non-Microsoft post-delivery detection*: Messages the non-Microsoft vendor detected.
+  - *Duplicate detections*: Messages Defender for Office 365 detected during mail flow where the non-Microsoft vendor also delivered a verdict.
+  - *Duplicate post-delivery detections*: Messages Defender for Office 365 detected after delivery via ZAP where the non-Microsoft vendor also delivered a verdict.
 
 - **Non-Microsoft detections**:
-  - *Post-delivery detections*: Shows the verdict types on messages provided by the third-party vendor. This report is a breakdown of the *Non-Microsoft post-delivery detections* field in the **Email detections** report.
-  - *Efficacy*: Calculates the unique Non-Microsoft post-delivery detections over the total Defender for Office detections. This shows the added value from your third-party solution.
+  - *Post-delivery detections*: Shows the verdict types on messages provided by the non-Microsoft vendor. This report is a breakdown of the *Non-Microsoft post-delivery detections* field in the **Email detections** report.
+  - *Efficacy*: Calculates the unique Non-Microsoft post-delivery detections over the total Defender for Office detections. This shows the added value from your non-Microsoft solution.
 
 ## Frequently asked questions
 
@@ -160,9 +162,9 @@ The following dashboards display this information:
 
 A: Integration with multiple ICES/CAPES vendors is available as long as they're part of the ICES Vendor Ecosystem partnership.
 
-The integration works the same: each third-party vendor can provide verdicts on messages in your organization. You can see the third-party detections and identify the third-party vendor responsible for the detection within the Defender portal experiences.
+The integration works the same: each non-Microsoft vendor can provide verdicts on messages in your organization. You can see the non-Microsoft detections and identify the non-Microsoft vendor responsible for the detection within the Defender portal experiences.
 
-If multiple third-party vendors send verdicts on the same message, the verdicts and explanations are logged. The [highest (most serious) verdict](#q-which-verdict-takes-precedence) between the third-party vendors determines the action taken on the message.
+If multiple non-Microsoft vendors send verdicts on the same message, the verdicts and explanations are logged. The [highest (most serious) verdict](#q-which-verdict-takes-precedence) between the non-Microsoft vendors determines the action taken on the message.
 
 ### Q: Which verdict takes precedence?
 
@@ -177,17 +179,17 @@ A: The highest verdict takes precedence using the following order (from most ser
 7. Junk
 8. Clean or Not spam
 
-### Q: What if I use a different third-party vendor?
+### Q: What if I use a different non-Microsoft vendor?
 
 A: Currently, ICES Vendor Ecosystem integration is available only for Darktrace and KnowBe4. If you use a different ICES/CAPES vendor, you can't take advantage of this integration.
 
-### Q: Is there a charge for the third-party verdict data and actions by Defender for Office 365 policies?
+### Q: Is there a charge for the non-Microsoft verdict data and actions by Defender for Office 365 policies?
 
 A: No, there's no charge for the integration. The integration and Graph API support are included as part of your Defender for Office 365 Plan 2 licenses.
 
 ### Q: Why don't I see the Detection Totals and Post-delivery activities by non-Microsoft solution reports?**
 
-A: The reports only show if you have activity from one of the authorized third-party vendors in the past 90 days.
+A: The reports only show if you have activity from one of the authorized non-Microsoft vendors in the past 90 days.
 
 ## Feedback and Support
 

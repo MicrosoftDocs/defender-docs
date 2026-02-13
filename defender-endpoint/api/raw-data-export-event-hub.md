@@ -1,13 +1,13 @@
----
+﻿---
 title: Stream Microsoft Defender for Endpoint events to Azure Event Hubs
 description: Learn how to configure Microsoft Defender for Endpoint to stream Advanced Hunting events to your Event Hubs.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -16,21 +16,17 @@ ms.subservice: reference
 ms.custom: api
 search.appverid: met150
 ms.date: 06/28/2024
+appliesto:
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Endpoint Plan 1
 ---
 
 # Configure Microsoft Defender for Endpoint to stream Advanced Hunting events to your Azure Event Hubs
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
-
 > [!NOTE]
 > For the full data streaming experience available, please visit [Stream Microsoft Defender XDR events | Microsoft Learn](/defender-xdr/streaming-api).
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## Before you begin
 
@@ -60,7 +56,7 @@ ms.date: 06/28/2024
 
    In order to get your **Event Hubs resource ID**, go to your Azure Event Hubs namespace page on [Azure](https://ms.portal.azure.com/) > properties tab \> copy the text under **Resource ID**:
 
-   :::image type="content" source="../media/event-hub-resource-id.png" alt-text="The Event Hubs resource Id-1" lightbox="../media/event-hub-resource-id.png":::
+   :::image type="content" source="/defender-xdr/media/streaming-api-event-hub/event-hub-resource-id.png" alt-text="The Event Hubs resource Id-1" lightbox="/defender-xdr/media/streaming-api-event-hub/event-hub-resource-id.png":::
 
 7. Choose the events you want to stream and select **Save**.
 
@@ -88,7 +84,7 @@ ms.date: 06/28/2024
 
 - In Advanced Hunting, the **DeviceInfo** table has a column named **MachineGroup** which contains the group of the device. Here, every event is decorated with this column as well. For more information, see [Device Groups](../machine-groups.md).
     > [!NOTE]
-    > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.  
+    > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
 ## Data types mapping
 
@@ -101,7 +97,7 @@ To get the data types for event properties, do the following:
    ```kusto
    {EventType}
    | getschema
-   | project ColumnName, ColumnType 
+   | project ColumnName, ColumnType
    ```
 
 - Here's an example for Device Info event:

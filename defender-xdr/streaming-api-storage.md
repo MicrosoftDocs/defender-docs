@@ -3,8 +3,8 @@ title: Stream Microsoft Defender XDR events to your Storage account
 description: Learn how to configure Microsoft Defender XDR to stream Advanced Hunting events to your Storage account.
 search.appverid: met150
 ms.service: defender-xdr
-ms.author: macapara
-author: mjcaparas
+ms.author: edbaynash
+author: EdB-MSFT
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -76,7 +76,7 @@ Once the storage account is created, you need to define the user who is signing 
 
 - A blob container is created for each event type:
 
-  :::image type="content" source="/defender-endpoint/media/storage-account-event-schema.png" alt-text="Example of a blob container" lightbox="/defender-endpoint/media/storage-account-event-schema.png":::
+  :::image type="content" source="media/streaming-api-storage/storage-account-event-schema.png" alt-text="Example of a blob container" lightbox="media/streaming-api-storage/storage-account-event-schema.png":::
 
 - The schema of each row in a blob is the following JSON:
 

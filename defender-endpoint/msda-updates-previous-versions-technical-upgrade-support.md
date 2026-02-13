@@ -1,13 +1,13 @@
----
+﻿---
 title: Microsoft Defender Antivirus updates - Previous versions for technical upgrade support
 description: Understand the type of technical support offered for previous versions of Microsoft Defender Antivirus
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
-ms.date: 06/23/2025
-manager: deniseb
+ms.date: 07/23/2025
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -16,18 +16,153 @@ ms.collection:
 ms.topic: reference
 ms.subservice: ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Microsoft Defender Antivirus updates - Previous versions for technical upgrade support only
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 Microsoft regularly releases [security intelligence updates and product updates for Microsoft Defender Antivirus](microsoft-defender-antivirus-updates.md). It's important to keep Microsoft Defender Antivirus up to date. When a new package version is released, support for the previous two versions reduces to technical support only. Versions that are older than the previous two versions are listed in this article and are provided for technical upgrade support only.
 
 ## Engine and platform updates
+
+### September-2025 (Platform: 4.18.25090.3009 | Engine: 1.1.25090.3001)
+
+- Security intelligence update version: **1.439.345.0**
+- Release date:  **October 8, 2025 (Engine) / October 21, 2025 (Platform)**
+
+- Platform: **4.18.25090.3009**
+- Engine: **1.1.25090.3001**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+- **Improved service startup behavior**: The core service now only restarts when necessary, for example, during a successful platform update. This change allows the organization to avoid unnecessary restarts when the service is already running correctly.
+- **Improved stability for RPC services**: Added input validation across multiple RPC endpoints to prevent crashes caused by malformed data, which addresses a reported security vulnerability.
+- **Fixed threat exclusion handling**: Resolved an issue where severity-based exclusions could cause the engine to misidentify threats, potentially skipping high severity detections.
+- **Restored performance optimization for network file access**: Fixed a regression that caused slowdowns during file operations, like robocopy to network shares. The fix included reintroducing the logic to skip unnecessary checks on non-local files when Controlled Folder Access is enabled.
+
+### August-2025 (Platform: 4.18.25080.5 | Engine: 1.1.25080.5)
+
+- Security intelligence update version: **1.437.1.0**
+- Release date:  **September 16, 2025 (Engine) / September 17, 2025 (Platform)**
+- Platform: **4.18.25080.5**
+- Engine: **1.1.25080.5**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+Improved Defender update reliability by allowing non-admin processes to trigger shared signature updates, reducing unnecessary privilege requirements.
+
+### July-2025 (Platform: 4.18.25070.5 | Engine: 1.1.25070.4)
+
+- Security intelligence update version: **1.435.11.0**
+
+- Release date:  **August 5, 2025 (Engine) / August 6, 2025 (Platform)**
+
+- Platform: **4.18.25070.5**
+
+- Engine: **1.1.25070.4**
+
+- Support phase: **Technical upgrade support (only)**
+
+What's new
+
+- Enhanced Passive Mode Scanning Behavior When Microsoft Defender is in Passive mode, an Antivirus scan will not occur after a signature update , unless specifically set in the policy setting DisableScanOnUpdate.
+- Improved Tamper Protection Handling Optimized the configuration process for Tamper Protection in multi-threaded environments to ensure more reliable behavior.
+- Digital Signature Verification Performance Boost Enhanced the efficiency of digital signature verification to improve overall system performance.
+- Refined ASR Rule Exclusion Processing Refined exclusion processing and resolved false positives for the Attack Surface Reduction (ASR) rule: Block Office applications from injecting code into other processes.
+
+
+### June-2025 (Platform: 4.18.25060.7 | Engine: 1.1.25060.6)
+
+- Security intelligence update version: **1.433.2.0**
+
+- Release date:  **July 22, 2025 (Engine)** / **July 22, 2025 (Platform)**
+
+- Platform: **4.18.25060.7**
+
+- Engine: **1.1.25060.6**
+
+- Support phase: **Technical upgrade support (only)**
+
+What's new
+
+- Added filtering to improve scan stability and prevent engine crashes
+- Additional performance improvements to prevent concurrent scans. This change ensures that if a quick or full scan is already running, no additional quick or full scan scans are initiated from `MpCmdRun` or Powershell (`Start-Scan`).
+- Resolved the issue where subfolder exclusions were not being honored in Microsoft Defender Antivirus scans related to non-Microsoft SIEM solutions. This fix ensures that specified subfolders are now correctly excluded from scans, preventing unnecessary detections and improving overall system performance.
+
+### May-2025 (Platform: 4.18.25050.5 | Engine: 1.1.25050.6)
+
+- Security intelligence update version: **1.431.19.0**
+
+- Release date:  **June 13, 2025 (Engine)** / **June 13, 2025 (Platform)**
+
+- Platform: **4.18.25050.5**
+
+- Engine: **1.1.25050.6**
+
+- Support phase: **Technical upgrade support (only)**
+
+What's new
+
+- Windows multisession SKUs are now properly classified as client SKUs for signature versioning
+- `EnableDynamicSignatureDroppedEventReporting` configuration is now available in Intune (see [Event ID 2011](/defender-endpoint/troubleshoot-microsoft-defender-antivirus#event-id-2011))
+- The display name and description is now displayed correctly for the [device control](/defender-endpoint/device-control-overview) filter driver in Windows services
+- Improved performance for kernel driver
+- Improvements to [network protection](/defender-endpoint/network-protection#overview-of-network-protection) performance related to packet loss during high network utilization
+- Reliability improvements to network protection during service shutdown
+- Enriched [Event ID 1000](/defender-endpoint/troubleshoot-microsoft-defender-antivirus#event-id-1000) to include `ScanOnlyIfIdle` and scan priority
+- Improved device control Windows Portal Device (WPD) device discovery in File explorer. (For more information about device control, see [Device control policy samples and scenarios](/defender-endpoint/device-control-overview#device-control-policy-samples-and-scenarios).)
+- Resolved discrepancy in [device health reports](/defender-endpoint/device-health-reports) between signature publish and signature install date and time
+- Performance improvements when scanning files/folders with extended attributes
+- Reliability improvement in the Defender kernel driver to avoid crashing when there's excessive disk input/output
+- Added exponential backoff support to Core Service 1DS manager telemetry module to address memory consumption and DNS flooding issues
+
+### April-2025 (Platform: 4.18.25040.2 | Engine: 1.1.25040.1)
+
+- Security intelligence update version: **1.429.3.0**
+
+- Release date:  **May 14, 2025 (Engine)** / **May 22, 2025 (Platform)**
+
+- Platform: **4.18.25040.2**
+
+- Engine: **1.1.25040.1**
+
+- Support phase: **Technical upgrade support (only)**
+
+What's new
+
+- Fixed TVM Block where we failed to block a trusted file
+- Fixed Microsoft Defender platform update timestamp to reflect the actual update time.
+- The [1002 event](/defender-endpoint/troubleshoot-microsoft-defender-antivirus#event-id-1002) (An anti-malware scan was stopped before it finished) now includes details of the stop reason.
+- Added more details to the [1000 event](/defender-endpoint/troubleshoot-microsoft-defender-antivirus#event-id-1000) (Scan started), like scan trigger and scan on idle.
+- Improved attack surface reduction file processing to correctly handle ["allow" Indicators of Compromise](/defender-endpoint/indicators-overview) (IoCs).
+- Improvement in health reporting for machines that are rebooted or hibernated.
+- Improved performance for [Smart App Control](/windows/apps/develop/smart-app-control/overview) (SAC) trusted file handling.
+- Improved [device control](/defender-endpoint/device-control-overview) logic for offline printers.
+
+### March-2025 (Platform: 4.18.25030.2 | Engine 1.1.25030.1)
+
+- Security intelligence update version: **1.427.3.0**
+- Release date: **April 1, 2025** (Engine) / **April 9, 2025** (Platform)
+- Platform: **4.18.25030.2**
+- Engine: **1.1.25030.1**
+- Support phase: **Technical upgrade support (only)**
+
+#### What's new
+
+- Improved caching of [device control settings](device-control-policies.md) to improve reliability in occasionally connected environments. 
+- Performance improvement in on-access scans of files in network locations.
+- Fixed the Defender service description to match the latest installed version.
+- Improved Defender engine update logic when the update is included in a custom image.
+- Fix in health reporting where signature update data might have been incorrect.
+- Fixed reporting issue with [controlled folder access](controlled-folders.md) (CFA) protected folders using the PowerShell cmdlet [Get-MpPreference](/powershell/module/defender/get-mppreference) when CFA is disabled.
+- Improved performance when scanning UPX-packed files (Ultimate Packer for eXecutables) and updated the validation process to verify the integrity of the packed file itself.
+- Added support for distinguishing regular cloud allow signatures from clean [Indicators of Compromise](indicators-overview.md) (IoC) in [attack surface reduction](attack-surface-reduction.md) (ASR).
+
 
 ### February-2025 (Platform 4.18.25020.1009 | Engine: 1.1.25020.1007)
 
@@ -1987,4 +2122,4 @@ The versions listed in this section are no longer supported. To view current ver
 - Added support for Windows 10 RS1 or later OS install images.
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -1,14 +1,14 @@
----
+﻿---
 title: Schedule antivirus scans using Group Policy
 description: Use Group Policy to set up antivirus scans
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: emmwalshh
-ms.author: ewalsh
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
-ms.date: 04/29/2025
+ms.date: 10/20/2025
 ms.reviewer: pauhijbr, ksarens
-manager: deniseb
+manager: bagol
 ms.subservice: ngp
 ms.topic: how-to
 ms.collection: 
@@ -16,32 +16,33 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Schedule antivirus scans using Group Policy
 
-**Applies to:**
+This article describes how to configure scheduled scans using Group Policy. To learn more about scheduling scans and about scan types, see [About scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md).
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
+## Prerequisites
 
-**Platforms**
+### Supported operating systems
+
 - Windows
-
-This article describes how to configure scheduled scans using Group Policy. To learn more about scheduling scans and about scan types, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md). 
 
 ## Configure antivirus scans using Group Policy
 
 1. On your Group Policy management machine, in the Group Policy Editor, go to **Computer configuration** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus** \> **Scan**.
 
-2. Right-click the Group Policy Object you want to configure, and then select **Edit**.
+1. Right-click the Group Policy Object you want to configure, and then select **Edit**.
 
-3. Specify the settings for the Group Policy Object, and then select **OK**. 
+1. Specify the settings for the Group Policy Object, and then select **OK**. 
 
 1. Repeat steps for each setting you want to configure.
 
-5. Deploy your Group Policy Object as you normally do. If you need help with Group Policy Objects, see [Create a Group Policy Object](/windows/security/threat-protection/windows-firewall/create-a-group-policy-object).
+1. Deploy your Group Policy Object as you normally do. If you need help with Group Policy Objects, see [Create a Group Policy Object](/windows/security/threat-protection/windows-firewall/create-a-group-policy-object).
 
 > [!NOTE]
 > When configuring scheduled scans, the setting **Start the scheduled scan only when computer is on but not in use** (which is enabled by default) can affect the expected scheduled time by requiring the machine to be idle first.
@@ -144,4 +145,5 @@ For more information, see the [Manage when protection updates should be download
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

@@ -3,7 +3,7 @@ title:       Understanding detection technology within the email entity page in 
 description: Guide to understanding the detection technology shown on the Email entity page in Microsoft Defender for Office 365. What the detection technologies mean, how they're triggered, and how to resolve false positives (see the admin submission video).
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: bagol
 ms.service: microsoft-365-security
 ms.topic: how-to
 ms.date: 06/19/2025
@@ -47,7 +47,7 @@ To resolve false positives like the ones listed in the following table, you shou
 |Mail bombing|A distributed denial of service (DDoS) attack that typically subscribes recipients to a large number of legitimate newsletters and services. The resulting volume of incoming email within minutes intends to overwhelm the recipient's mailbox and email security systems, and acts as a precursor to malware, ransomware, or data exfiltration.||
 |Mailbox intelligence impersonation|Sender detected as impersonating an address in the user's personal sender map.|[Mailbox intelligence impersonation protection](../anti-phishing-policies-about.md)|
 |Mixed analysis detection|Multiple filters contributed to the verdict for this message.||
-|Spoof DMARC|The message failed DMARC authentication.|[How Microsoft 365 handles inbound email that fails DMARC](../email-authentication-dmarc-configure.md)|
+|Spoof DMARC|The message failed DMARC authentication.|[Set up DMARC to validate the From address domain for cloud senders](../email-authentication-dmarc-configure.md)|
 |Spoof external domain|Spoof intelligence detected email spoofing of a domain that is external to your organization.||
 |Spoof intra-org|Spoof intelligence detected email spoofing of a user or domain that is internal to your organization.||
 |URL detonation|Safe Links detected a malicious URL in the message during detonation within a sandbox.||

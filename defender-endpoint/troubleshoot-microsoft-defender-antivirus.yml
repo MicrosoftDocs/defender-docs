@@ -2,15 +2,15 @@
 metadata:
   title: Microsoft Defender Antivirus event IDs and error codes
   description: Look up the causes and solutions for Microsoft Defender Antivirus event IDs and errors.
-  author: emmwalshh
-  ms.author: ewalsh
+  author: batamig
+  ms.author: bagol
   ms.reviewer: yongrhee
   ms.service: defender-endpoint
   ms.topic: troubleshooting
   ms.date: 06/10/2025
   ms.localizationpriority: medium
   ms.custom: nextgen
-  manager: deniseb
+  manager: bagol
   ms.subservice: ngp
   ms.collection:
   - m365-security
@@ -36,15 +36,12 @@ sections:
      - question: How do I view a Microsoft Defender Antivirus event?
        answer: |
 
-          1. Open **Event Viewer**.
+          Events are available in **Windows Defender** \> **Operational** in the **Applications and Services Logs** in **Event Viewer**:
 
-          2. In the console tree, expand **Applications and Services Logs** > **Microsoft** > **Windows** > **Windows Defender**.
-
-          3. Double-click on **Operational**.
-
-          4. In the details pane, view the list of individual events to find your event.
-
-          5. Select the event to see specific details about an event in the lower pane, under the **General** and **Details** tabs.
+          1. Open **Event Viewer** by pressing the Windows logo key + R, typing `eventvwr.msc`, and then selecting **OK**.
+          2. Go to **Applications and Services Logs** \> **Microsoft** \> **Windows** \> **Windows Defender** \> **Operational**.
+          3. Find the event in the list. **Find** and **Filter are available in the **Actions** pane.
+          4. Select the event from the list. The details pane contains the **General** and **Details** tabs.
 
      - question: Event ID 1000
        answer: |
@@ -886,9 +883,9 @@ sections:
 
           - BM state: Behavior Monitoring state (Enabled or Disabled)
 
-          - Antivirus signature age: Antivirus signature age (in days)
+          - Antivirus signature age: Antivirus signature age (in days). Calculated as the time starting from the Security Intelligence Update (SIU) release date, to the current date. Before a signature is updated for the first time, it'll display an age of 65535 days.
 
-          - Antispyware signature age: Antispyware signature age (in days)
+          - Antispyware signature age: Antispyware signature age (in days). Timestamp reflecting the Security Intelligence Update (SIU) release date (not the local installation time). Before the timestamp is updated for the first time, its value is null.
 
           - Last quick scan age: Last quick scan age (in days)
 

@@ -1,33 +1,27 @@
----
+﻿---
 title: What's new in Microsoft Defender for Endpoint - Before 2023
 description: See what features were available for Microsoft Defender for Endpoint in the releases before 2023.
 search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: reference
-ms.author: ewalsh
-author: emmwalshh
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 ms.date: 04/04/2025
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
 - tier1
 ms.topic: whats-new
----
+appliesto:
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # What's new in Microsoft Defender for Endpoint - Before 2023
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
-- [Microsoft 365 Defender](/defender-xdr)
 
 The following features were in preview or generally available (GA) in Microsoft Defender for Endpoint prior to the calendar year 2023.
 
@@ -115,7 +109,6 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Mobile Network Protection in Microsoft Defender for Endpoint on Android & iOS now in Public Preview](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/mobile-network-protection-in-microsoft-defender-for-endpoint-on/ba-p/3559121)<br>Microsoft offers a mobile network protection feature in Defender for Endpoint that helps organizations identify, assess, and remediate endpoint weaknesses with the help of robust threat intelligence. We're delighted to announce that users can now benefit from this new feature on both Android and iOS platforms that have Microsoft Defender for Endpoint.
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
 ## October 2021
 
@@ -323,3 +316,4 @@ Threat Analytics is a set of interactive reports published by the Microsoft Defe
 - [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)<BR>Microsoft Defender Antivirus now shares detection status between Microsoft 365 services and interoperates with Microsoft Defender for Endpoint. For more information, see [Use next-gen technologies in Microsoft Defender Antivirus through cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md).
 
 - Block at first sight can now block nonportable executable files (such as JS, VBS, or macros) and executable files. For more information, see [Enable block at first sight](configure-block-at-first-sight-microsoft-defender-antivirus.md).
+
