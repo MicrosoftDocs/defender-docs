@@ -1,12 +1,12 @@
----
+﻿---
 title: Manage indicators
 ms.reviewer:
 description: Manage indicators for a file hash, IP address, URLs, or domains that define the detection, prevention, and exclusion of entities.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -16,22 +16,20 @@ ms.topic: how-to
 ms.subservice: asr
 search.appverid: met150
 ms.date: 10/28/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Manage indicators
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Indicators** (under **Rules**).
 
-2. Select the tab of the entity type you'd like to manage.
+1. Select the tab of the entity type you'd like to manage.
 
-3. Update the details of the indicator and select **Save** or select the **Delete** button if you'd like to remove the entity from the list.
+1. Update the details of the indicator and select **Save** or select the **Delete** button if you'd like to remove the entity from the list.
 
 ## Import a list of IoCs
 
@@ -41,13 +39,13 @@ Download the sample CSV to know the supported column attributes.
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Indicators** (under **Rules**).
 
-2. Select the tab of the entity type you'd like to import indicators for.
+1. Select the tab of the entity type you'd like to import indicators for.
 
-3. Select **Import** \> **Choose file**.
+1. Select **Import** \> **Choose file**.
 
-4. Select **Import**. Repeat for all the files you'd like to import.
+1. Select **Import**. Repeat for all the files you'd like to import.
 
-5. Select **Done**.
+1. Select **Done**.
 
 > [!NOTE]
 > Only 500 indicators can be uploaded for each batch. 
@@ -86,4 +84,5 @@ Watch this video to learn how Microsoft Defender for Endpoint provides multiple 
 - [Create indicators based on certificates](indicator-certificates.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

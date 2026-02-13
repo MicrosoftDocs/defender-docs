@@ -1,12 +1,12 @@
----
+﻿---
 title: Microsoft Defender for Endpoint on macOS overview
 ms.reviewer: joshbregman
 description: An introduction and overview of Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: emmwalshh
-ms.author: ewalsh
+author: paulinbar
+ms.author: painbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -16,22 +16,19 @@ ms.topic: install-set-up-deploy
 ms.subservice: macos
 search.appverid: met150
 ms.date: 07/01/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender for Individuals
 
+---
 # Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+
 
 This article provides an overview of Microsoft Defender for Endpoint on macOS, including its capabilities and features. It also includes links to additional resources for more information.
 
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/en-us/microsoft-365/microsoft-defender-for-individuals?msockid=0f1c3b9963366db31ba02e78621b6c1e#Overview)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 This article describes how to install, configure, update, and use Defender for Endpoint on Mac.
  
@@ -66,14 +63,19 @@ There are several methods and deployment tools that you can use to install and c
   - [Other MDM products](mac-install-with-other-mdm.md)
 - [Manual deployment](mac-install-manually.md) via command line.
 
+> [!NOTE]
+> Uninstalling and reinstalling Microsoft Defender is **not required** when performing an in-place upgrade of macOS.
+> For certain macOS releases, Apple introduces new security or configuration requirements that require administrators to deploy additional configuration profiles via MDM. When this applies, the required changes are documented on the [What’s new](mac-whatsnew.md#known-issues) page.
+> We recommend reviewing the latest What’s new updates to confirm whether any additional configuration is needed for your environment.
+
 ### System requirements
 
 These three most recent major releases of macOS are supported.
 
+- 26 (Tahoe)
+
 - 15.0.1 (Sequoia)
 - 14 (Sonoma)
-- 13 (Ventura)
-
 - Supported processors: x64 and ARM64 (Mx processors)
 
 - Disk space: 1GB
@@ -90,7 +92,7 @@ After you've enabled the service, you might need to configure your network or fi
 Defender for Endpoint on Mac requires one of the following Microsoft Volume Licensing offers:
 
 - Microsoft 365 E5
-- Microsoft 365 E5 Security
+- Microsoft Defender Suite
 - Microsoft 365 A5
 - Windows 10 Enterprise E5
 - Microsoft 365 Business Premium
@@ -165,4 +167,5 @@ Starting with macOS 11 (Big Sur), Defender for Endpoint has been fully migrated 
 - [Privacy for Microsoft Defender for Endpoint on macOS](mac-privacy.md).
 - [Turn on Network protection for macOS](network-protection-macos.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

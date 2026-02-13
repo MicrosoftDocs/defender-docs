@@ -2,9 +2,9 @@
 title: Migrate from a non-Microsoft protection service to Microsoft Defender for Office 365
 f1.keywords:
   - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
+manager: bagol
 audience: Admin
 ms.topic: upgrade-and-migration-article
 ms.localizationpriority: medium
@@ -55,8 +55,8 @@ The high-level migration steps are illustrated in the following diagram. The act
 > [!TIP]
 > For information about configuring protection for Microsoft Teams, see the following articles:
 >
-> - [Microsoft Defender for Office 365 Plan 2 support for Microsoft Teams](mdo-support-teams-about.md)
-> - [Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365 Plan 2](mdo-support-teams-quick-configure.md)
+> - [Microsoft Defender for Office 365 support for Microsoft Teams](mdo-support-teams-about.md)
+> - [Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365](mdo-support-teams-quick-configure.md)
 > - [Security Operations Guide for Teams protection in Microsoft Defender for Office 365](mdo-support-teams-sec-ops-guide.md)
 
 ## Why use the steps in this guide?

@@ -2,11 +2,11 @@
 title: Deploy Microsoft Defender for Endpoint on Linux manually
 description: Describes how to deploy Microsoft Defender for Endpoint on Linux manually from the command line.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -15,12 +15,11 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 05/01/2025
+ms.date: 11/03/2025
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux manually
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -28,7 +27,7 @@ ms.date: 05/01/2025
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=&country=us)
 
-You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using various tools and methods. This article describes how to deploy Defender for Endpoint on Linux manually. To use another method, refer to the [See also](#see-also) section. 
+You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using various tools and methods. This article describes how to deploy Defender for Endpoint on Linux manually. To use another method, refer to the [Related content section](#related-content). 
 
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
@@ -42,6 +41,7 @@ A successful deployment requires the completion of all of the following tasks:
   - [SLES and variants](#sles-and-variants-1)
   - [Ubuntu and Debian systems](#ubuntu-and-debian-systems)
   - [Mariner](#mariner)
+- [Preinstall setup for custom location installation](#preinstall-setup-for-custom-location-installation)
 - [Application installation](#application-installation)
   - [RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)](#rhel-and-variants-centos-fedora-oracle-linux-amazon-linux-2-rocky-and-alma)
   - [SLES and variants](#sles-and-variants)
@@ -94,6 +94,9 @@ In order to preview new features and provide early feedback, it's recommended th
    
    > [!NOTE]
    > For your distribution and version, identify the closest entry for it (by major, then minor) under `https://packages.microsoft.com/config/rhel/`.
+
+   > [!TIP]
+   > Online Kernel patching tools, such as Ksplice or similar, can lead to unpredictable OS stability if Defender for Endpoint is running. It's recommended to temporarily stop the Defender for Endpoint daemon before performing online Kernel patching. After the Kernel is updated, Defender for Endpoint on Linux can be safely restarted. This action is especially important for systems running Oracle Linux.
 
 3. In the following commands, replace *[version]* and *[channel]* with the information you've identified:
 
@@ -206,16 +209,31 @@ In order to preview new features and provide early feedback, it's recommended th
 
 6. Install the Microsoft GPG public key:
 
-   - For Debian 11/Ubuntu 22.04 and earlier, run the following command.
+   - For Debian 11/Ubuntu 22.04 and earlier, run the following commands.
  
       ```bash
       curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null
+      sudo chmod o+r /etc/apt/trusted.gpg.d/microsoft.gpg
       ```
 
-   - For Debian 12/Ubuntu 24.04 and later, run the following command.
+   - For Debian 12, Ubuntu 24.04 and later, run the following commands.
 
       ```bash
       curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg > /dev/null
+      sudo chmod o+r /usr/share/keyrings/microsoft-prod.gpg
+      ```
+
+   - For Debian 13 and later, run the following commands.
+
+      ```bash
+      curl -sSL https://packages.microsoft.com/keys/microsoft-2025.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg > /dev/null
+      sudo chmod o+r /usr/share/keyrings/microsoft-prod.gpg
+      ```
+      
+   - For Debian 13 and later, run the following command.
+
+      ```bash
+      curl -sSL https://packages.microsoft.com/keys/microsoft-2025.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg > /dev/null
       ```
 
 7. Install the HTTPS driver if not already installed:
@@ -256,6 +274,13 @@ In order to preview new features and provide early feedback, it's recommended th
    sudo dnf install mariner-repos-extras-preview
    sudo dnf config-manager --enable mariner-official-extras-preview
    ```
+
+## Preinstall setup for custom location installation
+
+These steps are applicable only if Defender is to be installed in a custom location.
+For detailed instructions on installing Microsoft Defender for Endpoint to a custom location, see [Manual installation: preinstallation setup](linux-custom-location-installation.md#manual-installation-preinstallation-setup).
+
+For details on installing to a custom location, refer: [Enabling deployment of Defender for Endpoint on Linux to a custom location](linux-custom-location-installation.md).
 
 ## Application installation
 
@@ -403,8 +428,7 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
 
    > [!NOTE]
    > To run this command, you must have `python` or `python3` installed on the device depending on the distro and version. If needed, see [Step-by-step Instructions for Installing Python on Linux](https://opensource.com/article/20/4/install-python-linux).
-   > 
-   > To onboard a device that was previously offboard, you must remove the mdatp_offboard.json file located at /etc/opt/microsoft/mdatp.
+   
    
    If you're running RHEL 8.x or Ubuntu 20.04 or higher, you need to use `python3`. Run the following command:
    
@@ -483,29 +507,9 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
       
    1. Look at the alert details, machine timeline, and perform your typical investigation steps.
       
-## Defender for Endpoint package external package dependencies
+## External package dependencies
 
-The following external package dependencies exist for the `mdatp` package:
-
-- The mdatp RPM package requires `glibc >= 2.17`
-- For DEBIAN the mdatp package requires `libc6 >= 2.23`
-- For Mariner the mdatp package requires `attr`,  `diffutils`, `libacl`, `libattr`, `libselinux-utils`, `selinux-policy`, `policycoreutils`
-
-> [!NOTE]
-> Beginning with version `101.24082.0004`, Defender for Endpoint on Linux no longer supports the `Auditd` event provider. We're transitioning completely to the more efficient eBPF technology.
-> If eBPF isn't supported on your machines, or if there are specific requirements to remain on Auditd, and your machines are using Defender for Endpoint on Linux version `101.24072.0001` or lower, the following other dependencies on the auditd package exist for mdatp:
-> - The mdatp RPM package requires `audit`, `semanage`.
-> - For DEBIAN, the mdatp package requires `auditd`.
-> - For Mariner, the mdatp package requires `audit`.
-> For version older than `101.25032.0000`:
-> - RPM package needs: `mde-netfilter`, `pcre`
-> - DEBIAN package needs: `mde-netfilter`, `libpcre3`
-> - The `mde-netfilter` package also has the following package dependencies:
-    - For DEBIAN, the mde-netfilter package requires `libnetfilter-queue1` and `libglib2.0-0`
-    - For RPM, the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
-> Beginning with version `101.25042.0003`, uuid-runtime is no longer required as an external-dependency.
-
-If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the prerequisite dependencies.
+For information, see [Prerequisites for Microsoft Defender for Endpoint on Linux: External package dependency](./mde-linux-prerequisites.md#external-package-dependency).
 
 ## Troubleshoot installation issues
 
@@ -513,13 +517,13 @@ If you experience any installation issues, for self-troubleshooting, follow thes
 
 1. For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](linux-resources.md#log-installation-issues).
 
-2. For information about common installation issues, see [Installation issues](/defender-endpoint/linux-support-install).
+1. For information about common installation issues, see [Installation issues](/defender-endpoint/linux-support-install).
 
-3. If health of the device is `false`, see [Defender for Endpoint agent health issues](/defender-endpoint/health-status).
+1. If health of the device is `false`, see [Defender for Endpoint agent health issues](/defender-endpoint/health-status).
 
-4. For product performance issues, see [Troubleshoot performance issues](/defender-endpoint/linux-support-perf).
+1. For product performance issues, see [Troubleshoot performance issues](/defender-endpoint/linux-support-perf).
 
-5. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](/defender-endpoint/linux-support-connectivity).
+1. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](/defender-endpoint/linux-support-connectivity).
 
 To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](/defender-endpoint/overview-client-analyzer).
 
@@ -533,13 +537,13 @@ For example, to change channel from Insiders-Fast to Production, do the followin
    sudo yum remove mdatp
    ```
 
-2. Disable the Defender for Endpoint on Linux Insiders-Fast channel
+1. Disable the Defender for Endpoint on Linux Insiders-Fast channel
 
    ```bash
    sudo yum-config-manager --disable packages-microsoft-com-fast-prod
    ```
 
-3. Reinstall Microsoft Defender for Endpoint on Linux using the `Production channel`, and onboard the device in the [Microsoft Defender portal](https://security.microsoft.com). 
+1. Reinstall Microsoft Defender for Endpoint on Linux using the `Production channel`, and onboard the device in the [Microsoft Defender portal](https://security.microsoft.com). 
 
 ## How to configure policies for Defender for Endpoint on Linux
 
@@ -557,7 +561,7 @@ For manual uninstallation, execute the following command for your Linux distribu
 - `sudo apt purge mdatp` for Ubuntu and Debian systems.
 - `sudo dnf remove mdatp` for Mariner
 
-## See also
+## Related content
 
 - [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md)
 
@@ -569,5 +573,6 @@ For manual uninstallation, execute the following command for your Linux distribu
    - [Saltstack based deployment](linux-install-with-saltack.md)
    - [Connect your non-Azure machines to Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
    - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
+   - [Install Defender for Endpoint on Linux to a custom location](linux-custom-location-installation.md)
 
 [!INCLUDE [Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

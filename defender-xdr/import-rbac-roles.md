@@ -2,8 +2,8 @@
 title: Import roles to Microsoft Defender XDR Unified role-based access control (RBAC)
 description: Create custom Microsoft Defender XDR Security portal role-based access control (RBAC)
 ms.service: defender-xdr
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -56,7 +56,7 @@ The following steps guide you on how to import roles into Microsoft Defender XDR
 
 5. Select the products you want to import roles from.
 
-    :::image type="content" source="/defender/media/defender/m365-defender-import-workloads.png" alt-text="Screenshot of the import workloads page" lightbox="/defender/media/defender/m365-defender-import-workloads.png":::
+    :::image type="content" source="media/import-rbac-roles/m365-defender-import-workloads.png" alt-text="Screenshot of the import workloads page" lightbox="media/import-rbac-roles/m365-defender-import-workloads.png":::
 
 6. Select **Next** to choose the roles to import. You can choose all roles or select specific roles from the list. Select the role name to review the permissions and assigned users or groups for that specific role.
 

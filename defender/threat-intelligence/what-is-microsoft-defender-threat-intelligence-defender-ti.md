@@ -7,7 +7,7 @@ manager: dolmont
 ms.service: threat-intelligence 
 ms.collection: essentials-overview
 ms.topic: overview
-ms.date: 01/15/2025
+ms.date: 09/12/2025
 ms.custom: 
 - template-overview
 - cx-ti
@@ -15,6 +15,9 @@ ms.custom:
 ---
 
 # What is Microsoft Defender Threat Intelligence (Defender TI)?
+
+> [!IMPORTANT]
+> Microsoft Defender Threat Intelligence (Defender TI) will be discontinued and merged into Microsoft Defender for a powerful unified experience. Existing customers will continue to have full access to their current Defender TI experience until the product is retired on August 1, 2026. [Learn more](https://techcommunity.microsoft.com/blog/defenderthreatintelligence/mdti-is-converging-into-microsoft-sentinel-and-defender-xdr/4427991)
 
 Microsoft Defender Threat Intelligence (Defender TI) is a platform that streamlines triage, incident response, threat hunting, vulnerability management, and threat intelligence analyst workflows when conducting threat infrastructure analysis and gathering threat intelligence. With security organizations actioning an ever-increasing amount of intelligence and alerts within their environment, having a threat analysis an intelligence platform that allows for accurate and timely assessments of alerting is important.
 

@@ -1,31 +1,28 @@
----
+﻿---
 title: Configure your network environment to ensure connectivity with Defender for Endpoint service
 description: Learn how to configure your network environment to connect with the Defender for Endpoint service.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 06/11/2025
----
+ms.date: 10/19/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # STEP 1: Configure your network environment to ensure connectivity with Defender for Endpoint service
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+[!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
 Before you onboard devices to Defender for Endpoint, make sure your network is configured to connect to the service, by allowing outbound connection and bypassings HTTPS inspection for the service URLs. The first step of this process involves adding URLs to the allowed domains list if your proxy server or firewall rules prevent access to Defender for Endpoint. This article also includes information about proxy and firewall requirements for older versions of Windows client and Windows Server.
 
@@ -36,13 +33,14 @@ Before you onboard devices to Defender for Endpoint, make sure your network is c
 
 ## Enable access to Microsoft Defender for Endpoint service URLs in the proxy server
 
-The following downloadable spreadsheet lists the services and their associated URLs that devices in your network must be able to connect to. Ensure there are no firewall or network filtering rules to deny access for these URLs. Optionally, you might need to create an *allow* rule specifically for them.
+The following URL lists specify the services and their associated URLs that devices in your network must be able to connect to. Ensure there are no firewall or network filtering rules to deny access for these URLs. Optionally, you might need to create an *allow* rule specifically for them.
 
-|Spreadsheet of domains list| Description|
+|Domains list| Description|
 |--|--|
-| Microsoft Defender for Endpoint consolidated URL list (Streamlined) | Spreadsheet of consolidated URLs. <br/>[Download the spreadsheet here](https://aka.ms/MDE-streamlined-urls).<br><br> **Applicable OS:** <br/>For complete list, see [streamlined connectivity](configure-device-connectivity.md#prerequisites). <br>- Windows 10 1809+<br>- Windows 11<br>- Windows Server 2022 or later<br>- Windows Server 2019<br>- Windows Server 2012 R2, Windows Server 2016 running [Defender for Endpoint modern unified solution](onboard-server.md) (requires installation through MSI). <br>- macOS supported versions running 101.23102.* +  <br/>- Linux supported versions running 101.23102.* + <br><br> **Minimum component versions:**<br/>- anti-malware client: 4.18.2211.5<br/>- Engine: 1.1.19900.2<br/>- Security intelligence: 1.391.345.0<br/> - Xplat version: 101.23102.* +<br/>- Sensor/ KB version: >10.8040.*/ March 8, 2022+<br><br>If you're moving previously onboarded devices to the streamlined approach, see [Migrating device connectivity](migrate-devices-streamlined.md)<br><br>Windows 10 versions 1607, 1703, 1709, 1803 (RS1-RS4) are supported through the streamlined onboarding package but require a longer URL list (see updated URL sheet). These versions don't support reonboarding (must be fully offboarded first). <br><br>Devices running on Windows 7, Windows 8.1, Windows Server 2008 R2 MMA, Servers not upgraded to Unified Agent (MMA) must continue using MMA onboarding method.  
+| Microsoft Defender for Endpoint consolidated URL list (Streamlined) | Spreadsheet of consolidated URLs. <br/>[Download the spreadsheet here](https://aka.ms/MDE-streamlined-urls).<br><br> **Applicable OS:** <br/>For complete list, see [streamlined connectivity](configure-device-connectivity.md#prerequisites). <br>- Windows 10 1809+<br>- Windows 11<br>- Windows Server 2022 or later<br>- Windows Server 2019<br>- Windows Server 2012 R2, Windows Server 2016 running [Defender for Endpoint modern unified solution](onboard-server.md) (requires installation through MSI). <br>- macOS supported versions running 101.23102.* +  <br/>- Linux supported versions running 101.23102.* + <br><br> **Minimum component versions:**<br/>- anti-malware client: 4.18.2211.5<br/>- Engine: 1.1.19900.2<br/>- Security intelligence: 1.391.345.0<br/> - Xplat version: 101.23102.* +<br/>- Sensor/ KB version: >10.8040.*/ March 8, 2022+<br><br>If you're moving previously onboarded devices to the streamlined approach, see [Migrating device connectivity](migrate-devices-streamlined.md)<br><br>Windows 10 versions 1607, 1703, 1709, 1803 (RS1-RS4) are supported through the streamlined onboarding package but require a longer URL list (see updated URL sheet). These versions don't support reonboarding (must be fully offboarded first). <br><br>Devices running on Windows 7, Windows 8.1, Windows Server 2008 R2 MMA, Servers not upgraded to Unified Agent (MMA) must continue using MMA onboarding method. |
+| Microsoft Defender for Endpoint consolidated URL list for Gov/GCC/DoD (Streamlined) - Preview | List of consolidated URLs for service locations, geographic locations, and OS for Gov/GCC/DoD customers <br/>[See the URL list](streamlined-device-connectivity-urls-gov.md).<br><br> **Applicable OS:** <br/>For complete list, see [streamlined connectivity].(configure-device-connectivity.md#prerequisites). <br>- Windows 10 1809+<br>- Windows 11<br>- Windows Server 2022 or later<br>- Windows Server 2019<br>- Windows Server 2012 R2, Windows Server 2016 running [Defender for Endpoint modern unified solution](onboard-server.md) (requires installation through MSI). <br>- macOS supported versions running 101.23102.* +  <br/>- Linux supported versions running 101.23102.* + <br><br> **Minimum component versions:**<br/>- anti-malware client: 4.18.2211.5<br/>- Engine: 1.1.19900.2<br/>- Security intelligence: 1.391.345.0<br/> - Xplat version: 101.23102.* +<br/>- Sensor/ KB version: >10.8040.*/ March 8, 2022+<br><br>If you're moving previously onboarded devices to the streamlined approach, see [Migrating device connectivity](migrate-devices-streamlined.md)<br><br>Windows 10 versions 1607, 1703, 1709, 1803 (RS1-RS4) are supported through the streamlined onboarding package but require a longer URL list (see updated URL sheet). These versions don't support reonboarding (must be fully offboarded first). <br><br>Devices running on Windows 7, Windows 8.1, Windows Server 2008 R2 MMA, Servers not upgraded to Unified Agent (MMA) must continue using MMA onboarding method. | 
 |Microsoft Defender for Endpoint URL list for commercial customers (Standard)| Spreadsheet of specific DNS records for service locations, geographic locations, and OS for commercial customers. <p> [Download the spreadsheet here.](https://aka.ms/MDE-standard-urls) <p> Microsoft Defender for Endpoint Plan 1 and Plan 2 share the same proxy service URLs. In your firewall, open all the URLs where the geography column is WW. For rows where the geography column isn't WW, open the URLs to your specific data location. To verify your data location setting, see [Verify data storage location and update data retention settings for Microsoft Defender for Endpoint](preferences-setup.md). Don't exclude the URL `*.blob.core.windows.net` from any kind of network inspection. Instead, exclude only the blob URLs that are specific to MDE and listed in the spreadsheet of domains list.
-| Microsoft Defender for Endpoint URL list for Gov/GCC/DoD | Spreadsheet of specific DNS records for service locations, geographic locations, and OS for Gov/GCC/DoD customers. <br> [Download the spreadsheet here.](https://aka.ms/MDE-gov-urls) |
+| Microsoft Defender for Endpoint URL list for Gov/GCC/DoD (Standard) | Spreadsheet of specific DNS records for service locations, geographic locations, and OS for Gov/GCC/DoD customers. <br> [Download the spreadsheet here.](https://aka.ms/MDE-gov-urls) |
 
 > [!IMPORTANT]
 > - Connections are made from the context of the operating system or the Defender client services and as such, proxies shouldn't require authentication for these destinations or perform inspection (HTTPS scanning / SSL inspection) that breaks the secure channel.

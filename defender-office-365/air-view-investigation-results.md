@@ -4,7 +4,7 @@ f1.keywords:
 - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
@@ -42,7 +42,7 @@ In Microsoft 365 organizations with [Microsoft Defender for Office 365 Plan 2](m
   - The email quantity value shown on the email clusters flyout.
 
   The following email count values reflect email messages that were received after the initial analysis of the investigation:
-  
+
   - The email count shown at the bottom of the **Email** tab of the email clusters flyout.
   - The email count shown in Explorer (Threat Explorer)
 
@@ -232,7 +232,7 @@ The graph pane contains a visual representation of the elements and activities i
   - **No threats found** :::image type="icon" source="media/mdo-investigations-result-no-threats-found-icon.png" border="false":::
 
   - **Partially investigated** :::image type="icon" source="media/mdo-investigations-result-partially-investigate-icon.png" border="false":::
-  
+
     Some findings might require review. Use the **Evidence** and **Entities** tabs to manually investigate and remediate any potential issues.
 
   - **Partially remediated** :::image type="icon" source="media/mdo-investigations-result-partially-remediated-icon.png" border="false":::
@@ -349,7 +349,7 @@ On the investigation details page, the **Entities** tab shows details about the 
 
 The **Entities** tab is organized by a view selection pane (a summary view and a view for each entity type) and a corresponding details table for that view:
 
-- **Evidence summary** view: This is the default view.
+- **Evidence summary** view: This view is the default.
 
   You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
 
