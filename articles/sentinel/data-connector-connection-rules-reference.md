@@ -114,7 +114,7 @@ Example basic auth using parameters defined in `connectorUIconfig`:
 }
 ```
 
-#### APIKey
+#### API key
 
 | Field | Required | Type | Description | Default value |
 | ---- | ---- | ---- | ---- | ---- |
@@ -157,13 +157,13 @@ Since `ApiKeyName` is explicitly set to `""`, the result is the following header
 
 #### OAuth2
 
-The Codeless Connector Framework supports OAuth 2.0 authorization code grant and client credentials. The Authorization Code grant type is used by confidential and public clients to exchange an authorization code for an access token.
+The Codeless Connector Framework supports OAuth 2.0 authorization code grant and client credentials. The **Authorization Code** grant type is used by confidential and public clients to exchange an authorization code for an access token.
 
 After the user returns to the client via the redirect URL, the application will get the authorization code from the URL and use it to request an access token.
 
 |Field | Required | Type | Description |
 | ---- | ---- | ---- | ---- | 
-| `ClientId` | True	| String | The client id |
+| `ClientId` | True	| String | The client ID |
 | `ClientSecret`	| True | String | The client secret |
 | `AuthorizationCode` | True when grantType = `authorization_code` |	String | If the grant type is `authorization_code` this field value is the authorization code returned from the auth serve. |
 | `Scope` | True for `authorization_code` grant type<br> optional for `client_credentials` grant type| String | A space-separated list of scopes for user consent. For more information, see [OAuth2 scopes and permissions](/entra/identity-platform/scopes-oidc). |
@@ -385,7 +385,7 @@ The request section defines how the CCF data connector sends requests to your da
 | `QueryTimeIntervalDelimiter` |  True when `QueryTimeIntervalAttributeName` is set. | String | See `QueryTimeIntervalAttributeName`. |
 | `QueryParametersTemplate` |  | String | Query template to use when passing parameters in advanced scenarios.<br>br>For example: `"queryParametersTemplate": "{'cid': 1234567, 'cmd': 'reporting', 'format': 'siem', 'data': { 'from': '{_QueryWindowStartTime}', 'to': '{_QueryWindowEndTime}'}, '{_APIKeyName}': '{_APIKey}'}"`. |
 
-When the API requires complex parameters, use the `queryParameters` or `queryParametersTemplate` which include some built-in variables.
+When the API requires complex parameters, use the `queryParameters` or `queryParametersTemplate`, which include some built-in variables.
 
 | Built-in variable | For use in `queryParameters` | For use in `queryParametersTemplate` |
 | ---- | ---- | ---- |
@@ -514,7 +514,7 @@ Example:
 }
 ```
 
-This sends a `GET` request to `https://graph.microsoft.com/me/calendarView?startDateTime=2019-09-01T09:00:00.0000000&endDateTime=2019-09-01T17:00:00.0000000`
+This option sends a `GET` request to `https://graph.microsoft.com/me/calendarView?startDateTime=2019-09-01T09:00:00.0000000&endDateTime=2019-09-01T17:00:00.0000000`
 
 For complex queries, use `QueryParametersTemplate`. This example sends a `POST` request with parameters in the body:
 
@@ -602,7 +602,7 @@ The most common paging type is when a server data source API provides URLs to th
 `PersistentLinkHeader` paging has the same properties as `LinkHeader`, except the link header persists in backend storage. This option enables paging links across query windows. For example, some APIs don't support query start times or end times. Instead, they support a server side *cursor*. Persistent page types can be used to remember the server side *cursor*. For more information, see [What is a cursor?](/office/client-developer/access/desktop-database-reference/what-is-a-cursor).
 
 > [!NOTE]
-> There can be only one query running for the connector with PersistentLinkHeader to avoid race conditions on the server side *cursor*. This might affect latency.
+> There can be only one query running for the connector with `PersistentLinkHeader` to avoid race conditions on the server side *cursor*. This might affect latency.
 
 | Field | Required | Type | Description |
 |----|----|----|----|
