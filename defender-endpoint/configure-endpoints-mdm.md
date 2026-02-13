@@ -1,11 +1,11 @@
----
+﻿---
 title: Onboard Windows devices to Defender for Endpoint using Intune 
 description: Use Microsoft Intune to deploy the configuration package on devices so that they're onboarded to the Defender for Endpoint service.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
+manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -14,19 +14,15 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 10/31/2024
----
+ms.date: 11/17/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Onboard Windows devices to Defender for Endpoint using Intune 
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+[!INCLUDE [Microsoft Defender deployment tool preview](./includes/defender-deployment-tool-preview.md)]
 
 You can use mobile device management (MDM) solutions to configure Windows 10 devices. Defender for Endpoint supports MDMs by providing OMA-URIs to create policies to manage devices.
 
@@ -65,17 +61,17 @@ For security reasons, the package used to Offboard devices expires seven days af
 
 1. Get the offboarding package from the [Microsoft Defender portal](https://security.microsoft.com) as follows:
 
-   1. In the navigation pane, select **Settings** \> **Endpoints** \> **Device management** \> **Offboarding**.
+    1. In the navigation pane, select **Settings** \> **Endpoints** \> **Device management** \> **Offboarding**.
 
-   2. Select **Windows 10 or Windows 11** as the operating system.
+    1. Select **Windows 10 or Windows 11** as the operating system.
 
-   3. In the **Deployment method** field, select **Mobile Device Management / Microsoft Intune**.
+    1. In the **Deployment method** field, select **Mobile Device Management / Microsoft Intune**.
 
-   4. Select **Download package**, and save the .zip file.
+    1. Select **Download package**, and save the .zip file.
 
-2. Extract the contents of the `.zip` file to a shared, read-only location that can be accessed by the network administrators who'll deploy the package. You should have a file named `WindowsDefenderATP_valid_until_YYYY-MM-DD.offboarding`.
+1. Extract the contents of the `.zip` file to a shared, read-only location that can be accessed by the network administrators who'll deploy the package. You should have a file named `WindowsDefenderATP_valid_until_YYYY-MM-DD.offboarding`.
 
-3. In the [Microsoft Intune admin center](https://intune.microsoft.com), you can use a custom configuration policy or an EDR policy.
+1. In the [Microsoft Intune admin center](https://intune.microsoft.com), you can use a custom configuration policy or an EDR policy.
 
    | Method | Procedure |
    |---|---|
@@ -99,4 +95,5 @@ For security reasons, the package used to Offboard devices expires seven days af
 - [Run a detection test on a newly onboarded Microsoft Defender for Endpoint device](run-detection-test.md)
 - [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

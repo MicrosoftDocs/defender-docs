@@ -5,12 +5,12 @@ ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.topic: how-to
-author: emmwalshh
-ms.author: ewalsh
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
 ms.date: 01/09/2025
 ms.reviewer: joshbregman
-manager: deniseb
+manager: bagol
 ms.collection: 
 - m365-security
 - tier2
@@ -20,7 +20,7 @@ search.appverid: met150
 
 # Exclusions overview 
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+
 
 [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) and [Defender for Business](/defender-business/mdb-overview) includes a wide range of capabilities to prevent, detect, investigate, and respond to advanced cyberthreats. Microsoft preconfigures the product to perform well on the operating system that it's installed. No other changes should be needed. Despite preconfigured settings, sometimes unexpected behaviors occur. Here are some examples:
 
@@ -64,7 +64,7 @@ If you're getting alerts in the Microsoft Defender portal for tools or processes
 
 To learn more, see the following articles:
 
-- [Suppress alerts](manage-alerts.md#suppress-alerts)
+- [Suppress alerts](/defender-xdr/investigate-alerts?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#built-in-alert-tuning-rules)
 - [Tech Community Blog: Introducing the new alert suppression experience](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/introducing-the-new-alert-suppression-experience/ba-p/3562719) (for Defender for Endpoint)
 
 ## Types of exclusions
@@ -161,7 +161,7 @@ For more information, see [Automatic server role exclusions](configure-server-ex
 
 Examples include:
 
-- `%windir%\SoftwareDistribution\Datastore\*\Datastore.edb` 
+- `%windir%\SoftwareDistribution\Datastore\Datastore.edb` 
 - `%allusersprofile%\NTUser.pol`
 - Windows Update files
 - Windows Security files 
@@ -253,4 +253,4 @@ Depending on what you're using, you might need to refer to the documentation for
 - [Common mistakes to avoid when defining exclusions](common-exclusion-mistakes-microsoft-defender-antivirus.md)
 - [Overview of indicators in Microsoft Defender for Endpoint](indicators-overview.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

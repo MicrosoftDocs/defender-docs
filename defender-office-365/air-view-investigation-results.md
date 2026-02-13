@@ -4,7 +4,7 @@ f1.keywords:
 - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
@@ -42,7 +42,7 @@ In Microsoft 365 organizations with [Microsoft Defender for Office 365 Plan 2](m
   - The email quantity value shown on the email clusters flyout.
 
   The following email count values reflect email messages that were received after the initial analysis of the investigation:
-  
+
   - The email count shown at the bottom of the **Email** tab of the email clusters flyout.
   - The email count shown in Explorer (Threat Explorer)
 
@@ -232,7 +232,7 @@ The graph pane contains a visual representation of the elements and activities i
   - **No threats found** :::image type="icon" source="media/mdo-investigations-result-no-threats-found-icon.png" border="false":::
 
   - **Partially investigated** :::image type="icon" source="media/mdo-investigations-result-partially-investigate-icon.png" border="false":::
-  
+
     Some findings might require review. Use the **Evidence** and **Entities** tabs to manually investigate and remediate any potential issues.
 
   - **Partially remediated** :::image type="icon" source="media/mdo-investigations-result-partially-remediated-icon.png" border="false":::

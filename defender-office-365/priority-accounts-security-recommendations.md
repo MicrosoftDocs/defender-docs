@@ -4,7 +4,7 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
+manager: bagol
 audience: Admin
 ms.topic: solution-overview
 ms.localizationpriority: medium
@@ -67,7 +67,7 @@ For instructions, see [Step 1. Increase sign-in security for remote workers with
 
 ## Use Strict preset security policies for priority accounts
 
-Priority users require more stringent actions for the default email protections for cloud mailboxes and the protections in Defender for Office 365.
+Priority users require more stringent actions for [the built-in security features for all cloud mailboxes](eop-about.md) and the protections in Defender for Office 365.
 
 For example, instead of delivering messages that were classified as spam to the Junk Email folder, you should quarantine those same messages intended for priority accounts.
 

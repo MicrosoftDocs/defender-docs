@@ -1,42 +1,43 @@
----
+﻿---
 title: Evaluate Microsoft Defender Antivirus using Group Policy
 description: Use this guide to evaluate and test the protection offered by Microsoft Defender Antivirus using Group Policy.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: emmwalshh
-ms.author: ewalsh
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
-ms.date: 02/12/2025
+ms.date: 10/20/2025
 ms.reviewer: yongrhee
-manager: deniseb
+manager: bagol
 ms.subservice: ngp
 ms.collection:
 - m365-security
 - tier2
 - mde-ngp
 search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Evaluate Microsoft Defender Antivirus using Group Policy
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender Antivirus
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
-**Platforms**:
-
-- Windows
 
 In Windows 10 or newer and Windows Server 2016 or newer, you can use next-generation protection features offered by Microsoft Defender Antivirus (MDAV) and Microsoft Defender Exploit Guard (Microsoft Defender EG).
 
 This article explains how to enable and test the key protection features in Microsoft Defender AV and Microsoft Defender EG and provides you with guidance and links to more information.
 
-This article describes configuration options in Windows 10 or newer and Windows Server 2016 or newer.
+This article describes configuration options in Windows 10 or newer and Windows Server 2016 or later.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+- Windows 10
+- Windows 2016 and later
 
 ## Use Microsoft Defender Antivirus using Group Policy to enable the features
 
@@ -50,7 +51,7 @@ This guide provides the Microsoft Defender Antivirus Group Policy that configure
    > 1. The Windows one works with the Windows Servers.
    > 1. Even if you're running a Windows 10 or Windows Server 2016, get the latest administrative templates for Windows 11 or newer.
 
-2. Create a 'Central Store' to host the latest .admx and .adml templates.
+1. Create a 'Central Store' to host the latest .admx and .adml templates.
 
    For more information, see [Create and manage Central Store - Windows Client](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#the-central-store).
 
@@ -58,21 +59,20 @@ This guide provides the Microsoft Defender Antivirus Group Policy that configure
 
    1. Create a new OU block policy inheritance.
 
-   2. Open Group policy Management Console (GPMC.msc).
+   1. Open Group policy Management Console (GPMC.msc).
 
-   3. Go to **Group Policy Objects** and create a new Group Policy.
+   1. Go to **Group Policy Objects** and create a new Group Policy.
 
-   4. Right-click the new policy created and select **Edit**.
-
-   5. Navigate to **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus**.
+   1. Right-click the new policy created and select **Edit**.
+   1. Navigate to **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus**.
 
    or
 
    If joined to a workgroup
 
-   6. Open Group Policy Editor MMC (GPEdit.msc).
+   1. Open Group Policy Editor MMC (GPEdit.msc).
 
-   7. Navigate to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus**.
+   1. Navigate to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus**.
 
 ## MDAV and Potentially Unwanted Applications (PUA)
 
@@ -230,7 +230,7 @@ Assign the policies to the OU where the test machines are located.
 
 #### Enable Tamper Protection
 
-In the Microsoft XDR portal (security.microsoft.com), go to **Settings** > **Endpoints** > **Advanced features** > **Tamper Protection** > **On**.
+In the Microsoft Defender portal at [https://security.microsoft.com](https://security.microsoft.com), go to **Settings** > **Endpoints** > **Advanced features** > **Tamper Protection** > **On**.
 
 For more information, see [How do I configure or manage tamper protection?](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection).
 
@@ -304,3 +304,4 @@ If your settings aren't applied properly, find out if there are conflicting poli
 
 If you need to open a Microsoft support case:
 [Contact Microsoft Defender for Endpoint support](contact-support.md).
+
