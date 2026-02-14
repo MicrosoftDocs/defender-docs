@@ -361,7 +361,7 @@ Authentication flow:
    > - Doesn't support API key-based token requests.
    > - Custom header authentication (without username and password) isn't supported.
 
-## Request configuration
+## Request configuration 
 
 The request section defines how the CCF data connector sends requests to your data source (for example, the API endpoint and how often to poll that endpoint).
 
