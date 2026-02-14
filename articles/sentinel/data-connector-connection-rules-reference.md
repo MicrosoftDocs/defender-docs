@@ -119,7 +119,7 @@ Example basic auth using parameters defined in `connectorUIconfig`:
 | Field | Required | Type | Description | Default value |
 | ---- | ---- | ---- | ---- | ---- |
 | `ApiKey` | True | string | User secret key | |
-| `ApiKeyName` | | string | Name of the URI header that contains the `ApiKey` value. | `Authorization` |
+| `ApiKeyName` | | string | Name of the URI header that contains the `ApiKey` value. | `Authorization` | 
 | `ApiKeyIdentifier` | | string | String value to prepend the token. | `token` |
 | `IsApiKeyInPostPayload` | | boolean | Send secret in `POST` body instead of header. | `false` |
 
