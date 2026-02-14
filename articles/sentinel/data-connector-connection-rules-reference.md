@@ -24,7 +24,7 @@ For more information, see [Create a codeless connector for Microsoft Sentinel](c
 
 Find the latest stable or preview API version by referencing the [`create` or `update`](/rest/api/securityinsights/data-connectors/create-or-update) operations in the REST API docs. The difference between the `create` and `update` operations is that `update` requires the `etag` value.
 
-**PUT** method:
+PUT method:
 
 ```http
 https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroupName}}/providers/Microsoft.OperationalInsights/workspaces/{{workspaceName}}/providers/Microsoft.SecurityInsights/dataConnectors/{{dataConnectorId}}?api-version={{apiVersion}}
