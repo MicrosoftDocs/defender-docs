@@ -87,7 +87,7 @@ The following table describes the behavior analytics data displayed on each [ent
 > - The first, in **bold**, is the "friendly name" of the enrichment.
 > - The second *(in italics and parentheses)* is the field name of the enrichment as stored in the [**Behavior Analytics table**](#behavioranalytics-table).
 
-<details><summary><h4 style="display:inline">UsersInsights field</h4></summary>
+#### UsersInsights field
 
 The following table describes the enrichments featured in the **UsersInsights** dynamic field in the BehaviorAnalytics table:
 
@@ -102,9 +102,7 @@ The following table describes the enrichments featured in the **UsersInsights** 
 | **Is new account**<br>*(IsNewAccount)* | The account was created within the past 30 days. | True, False |
 | **On premises SID**<br>*(OnPremisesSID)* | The on-premises SID of the user related to the action. | S-1-5-21-1112946627-1321165628-2437342228-1103 |
 
-</details>
-
-<details><summary><h4 style="display:inline">DevicesInsights field</h4></summary>
+#### DevicesInsights field
 
 The following table describes the enrichments featured in the **DevicesInsights** dynamic field in the BehaviorAnalytics table:
 
@@ -120,9 +118,7 @@ The following table describes the enrichments featured in the **DevicesInsights*
 | **User agent**<br>*(UserAgent)* | The user agent used in the action. | Microsoft Azure Graph Client Library 1.0,<br>​Swagger-Codegen/1.4.0.0/csharp,<br>EvoSTS |
 | **User agent family**<br>*(UserAgentFamily)* | The user agent family used in the action. | Chrome, Microsoft Edge, Firefox |
 
-</details>
-
-<details><summary><h4 style="display:inline">ActivityInsights field</h4></summary>
+#### ActivityInsights field
 
 The following tables describe the enrichments featured in the **ActivityInsights** dynamic field in the BehaviorAnalytics table:
 
