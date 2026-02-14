@@ -321,7 +321,7 @@ Authentication flow:
 
 3. Use token in subsequent API requests with the `ApiKeyName` header.
 
-**Properties:**
+Properties:
 
 |Field |Required |Type |Description	|
 | ---- | ---- | ---- | ---- |
@@ -343,7 +343,7 @@ Authentication flow:
 | `Headers`                   |           | Object   | Custom headers to include when sending the request to the token endpoint. |
 | `RequestTimeoutInSeconds`   |           | Integer  | Request timeout in seconds. Default: `100`, Max `180`. |
 
-Authentication Flow:
+Authentication flow:
 
 1. Send credentials to `TokenEndpoint` to obtain JWT token
 
@@ -354,12 +354,12 @@ Authentication Flow:
 
 3. Use token in subsequent API requests with `ApiKeyName` header.
 
-> [!NOTE]
-> Limitations
->
-> - Requires username and password authentication for token acquisition.
-> - Doesn't support API key-based token requests.
-> - Custom header authentication (without username and password) isn't supported.
+   > [!NOTE]
+   > Limitations
+   >
+   > - Requires username and password authentication for token acquisition.
+   > - Doesn't support API key-based token requests.
+   > - Custom header authentication (without username and password) isn't supported.
 
 ## Request configuration
 
