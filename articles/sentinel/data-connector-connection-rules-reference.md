@@ -16,7 +16,7 @@ ms.author: edbaynash
 
 You can create a `RestApiPoller` data connector with the Codeless Connector Framework (CCF) by using this article as a supplement to the [Microsoft Sentinel REST API for data connectors](/rest/api/securityinsights/data-connectors) docs.
 
-Each data connector represents a specific *connection* of a Microsoft Sentinel data connector. One data connector might have multiple connections, which fetch data from different endpoints. You can complete the deployment template for the CCF data connector by using the JSON configuration that you build with this article.
+Each data connector represents a specific *connection* of a Microsoft Sentinel data connector. One data connector might have multiple connections, which fetch data from different endpoints. You can complete the deployment template for the CCF data connector by using the JSON configuration that you build with this article. 
 
 For more information, see [Create a codeless connector for Microsoft Sentinel](create-codeless-connector.md#create-the-deployment-template).
 
