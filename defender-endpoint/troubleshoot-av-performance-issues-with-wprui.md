@@ -33,7 +33,7 @@ Windows Performance Recorder (WPR) is a powerful recording tool that creates Eve
 
 WPR is part of the Windows Assessment and Deployment Kit (Windows ADK) and can be downloaded from [Download and install the Windows ADK](/windows-hardware/get-started/adk-install). You can also download it as part of the Windows 10 Software Development Kit at [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk/).
 
-Alternatively, follow the steps in [Capture performance logs using the WPR UI](/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Ftroubleshoot-performance-issues.md/main/ae28f1cf-14bc-fb9c-5f0c-873a683e907c/?branch=main&branchFallbackFrom=main%2C), or use the command-line tool *wpr.exe* [Capture performance logs using the WPR CLI](/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Ftroubleshoot-performance-issues.md/main/ae28f1cf-14bc-fb9c-5f0c-873a683e907c/?branch=main&branchFallbackFrom=main%2C). Both are available in Windows 8 and later versions.
+Alternatively, follow the steps in [Capture performance logs using the WPR UI](/defender-endpoint/troubleshoot-av-performance-issues-with-wprui), or use the command-line tool *wpr.exe* [Capture performance logs using the WPR CLI](/defender-endpoint/troubleshoot-av-performance-issues-with-wprui). Both are available in Windows 8 and later versions.
 
 There are two ways to capture the Windows Performance Recorder (WPRUI) trace:
 
