@@ -31,10 +31,19 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date| Category|Update|
 | -------- | -------- | -------- |
-|February 10, 2026| Preview | [Database-level recommendations experience for SQL Vulnerability Assessment findings (Preview)](#database-level-recommendations-experience-for-sql-vulnerability-assessment-preview) |
-|February 10, 2026| GA | [Scanning support for Minimus and Photon OS container images](#scanning-support-for-minimus-and-photon-os-container-images) |
-|February 9, 2026| GA | [Simulate alerts for SQL servers on machines](#simulate-alerts-for-sql-servers-on-machines) |
-|February 3, 2026| Preview | [Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview) |
+| February 20, 2026 | Preview | [Container runtime antimalware detection and prevention (Preview)](#container-runtime-antimalware-detection-and-prevention-preview) |
+| February 10, 2026| Preview | [Database-level recommendations experience for SQL Vulnerability Assessment findings (Preview)](#database-level-recommendations-experience-for-sql-vulnerability-assessment-preview) |
+| February 10, 2026| GA | [Scanning support for Minimus and Photon OS container images](#scanning-support-for-minimus-and-photon-os-container-images) |
+| February 9, 2026| GA | [Simulate alerts for SQL servers on machines](#simulate-alerts-for-sql-servers-on-machines) |
+| February 3, 2026| Preview | [Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview) |
+
+### Container runtime antimalware detection and prevention (Preview)
+
+February 20, 2026
+
+Microsoft Defender for Cloud is announcing container runtime anti-malware detection and prevention in preview. This new feature provides real-time detection and prevention of malware in containerized workloads across Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), and Google Kubernetes Engine (GKE) environments. With this release, you can create anti-malware rules to define conditions for generating alerts and blocking malware, helping you protect your clusters from threats while minimizing false positives.
+
+Learn more about [antimalware detection and prevention](anti-malware.md).
 
 ## Database-level recommendations experience for SQL Vulnerability Assessment (Preview)
 
