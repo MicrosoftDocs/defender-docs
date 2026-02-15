@@ -242,7 +242,7 @@ You have now created an ephemeral graph in the notebook.
     builder.query(query2).show()
     ```
 
-   :::image type="content" source="media/create-custom-graphs/graph-visualization2.png" lightbox="media/create-custom-graphs/graph-visualization2.png" alt-text="A screenshot showing the visualization of a graph and detail side-panel in Visual Studio Code.":::
+   :::image type="content" source="media/create-custom-graphs/graph-visualization-details.png" lightbox="media/create-custom-graphs/graph-visualization-details.png" alt-text="A screenshot showing the visualization of a graph and detail side-panel in Visual Studio Code.":::
 
 
 ### Materialize a graph in your tenant
