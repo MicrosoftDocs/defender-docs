@@ -101,10 +101,41 @@ gcloud container clusters update <cluster-name> \
 **Required if you enabled:** Registry access
 
 1. Go to your GCP connector settings in Defender for Cloud.
-2. Select **Configure** next to the **Containers** plan.
-3. Verify agentless container vulnerability assessment is enabled.
-4. Images pushed to Google Container Registry (GCR) or Artifact Registry are scanned automatically.
 
+1. Select **Configure** next to the **Containers** plan.
+
+1. Verify agentless container vulnerability assessment is enabled.
+
+1. Images pushed to Google Container Registry (GCR) or Artifact Registry are scanned automatically.
+
+# [Arc-enabled Kubernetes](#tab/arc)
+
+## Configure registry access for private registries
+
+**Required if you enabled:** Registry access and your images are stored in a private registry that requires credentials.
+
+If your cluster needs credentials to pull images, create a Kubernetes secret that stores the registry credentials.
+
+1. Sign in to the cluster context:
+
+   ```bash
+   kubectl config current-context
+   ```
+1. Create a Docker registry secret:
+
+   ```bash
+   kubectl create secret docker-registry regcred \
+     --namespace mdc \
+     --docker-server=<registry-url> \
+     --docker-username=<username> \
+     --docker-password=<password>
+   ```
+1. Verify the secret exists:
+
+   ```bash
+   kubectl get secret regcred -n mdc
+   ```
+   
 ---
 
 ## Related content
