@@ -37,7 +37,7 @@ This section provides instructions for connecting Microsoft Defender for Identit
 
 ### Create a custom CyberArk Identity role
 
-1. Log in to CyberArk Identity console as a system administrator.
+1. Sign in to CyberArk Identity console as a system administrator.
 1. Navigate to **Identity Administration > Core Services > Roles**
 1. Select **Add Role**.
 1. Add an appropriate name for the custom role.
@@ -49,7 +49,7 @@ This section provides instructions for connecting Microsoft Defender for Identit
 
 To support ongoing API access, create a new user and assign the custom role.
 
-1. Log in to CyberArk Identity console as a system administrator 
+1. Sign in to CyberArk Identity console as a system administrator 
 1. Navigate to **Identity Administration > Core Services > Users** 
 1. Select **Add User** 
 1. Enter the **Login Name** and **Display Name** and select **Is OAuth confidential client**
