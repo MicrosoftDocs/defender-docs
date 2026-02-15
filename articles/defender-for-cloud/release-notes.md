@@ -31,8 +31,8 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date| Category|Update|
 | -------- | -------- | -------- |
-|February 15, 2026 | Deprecation | [Deprecation of preview of container and container images vulnerability recommendations](#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations) |
-|February 15, 2026| Preview |[New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview)|
+|February 17, 2026 | Deprecation | [Deprecation of preview of container and container images vulnerability recommendations](#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations) |
+|February 17, 2026| Preview |[New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview)|
 |February 10, 2026| Preview | [Database-level recommendations experience for SQL Vulnerability Assessment findings (Preview)](#database-level-recommendations-experience-for-sql-vulnerability-assessment-preview) |
 |February 10, 2026| GA | [Scanning support for Minimus and Photon OS container images](#scanning-support-for-minimus-and-photon-os-container-images) |
 |February 9, 2026| GA | [Simulate alerts for SQL servers on machines](#simulate-alerts-for-sql-servers-on-machines) |
@@ -40,6 +40,8 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 
 ### Deprecation of preview of container and container images vulnerability recommendations
+
+February 17, 2026
 
 As part of the transition to individual recommendations, Microsoft Defender for Cloud is deprecating existing grouped container vulnerability recommendations. This change enables more granular visibility, prioritization, and governance of container security findings.
 
@@ -93,7 +95,7 @@ Learn more about [security recommendations](review-security-recommendations.md) 
 
 ### New individual recommendations format in Azure portal (Preview)
 
-February 15, 2026
+February 17, 2026
 
 Microsoft Defender for Cloud is converting grouped recommendations into individual recommendations in the Azure portal. This change reflects a shift from grouping related findings under one recommendation to listing each recommendation separately.
 
@@ -128,8 +130,6 @@ You can now manage exemptions at scale instead of for each recommendation.
 >To suport with the transition, you can learn more about best practices for [transitioning from grouped to individual recommendations](transition-grouped-individual-recommendations.md).
 
 Learn more about [reviewing security recommendations](review-security-recommendations.md).
-
-
 
 ### Database-level recommendations experience for SQL Vulnerability Assessment (Preview)
 
