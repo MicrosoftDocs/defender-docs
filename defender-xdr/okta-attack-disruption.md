@@ -35,7 +35,10 @@ You have an Okta account with admin privileges and a developer or enterprise lic
 ### Microsoft requirements
 
 - Your Microsoft Sentinel analytic workspace is connected to the unified security operations portal
-- The Okta connector for Microsoft Sentinel is deployed and enabled. During public preview, only the Okta single sign-in connector is supported.
+- The Okta connector for Microsoft Sentinel is deployed and enabled.
+
+> [!NOTE]
+> During public preview, only the Okta single sign-in connector is supported.
 
 ## Step 1: Create the Okta integration
 
@@ -50,10 +53,10 @@ To create the integration from an Okta account with admin privileges, follow the
 > [!NOTE]
 > This token is a secret that allows connecting to your Okta environment and performing actions. Don't share its value or save it in any visible or public location.
 
-### Step 2: Create the integration from the Defender portal
+## Step 2: Create the integration from the Defender portal
 
 1. Log in to the [Defender portal](https://security.microsoft.com/)
-1. Navigate **Microsoft Sentinel** -> **Configuration** -> **Next Gen Automation**.
+1. Navigate **Microsoft Sentinel** -> **Configuration** -> **Automation**.
 1. In the **Integrations profiles** tab, select **+Create** to create a new integration.
 
     :::image type="content" source="./media/okta-attack-disruption/create-new-integration.png" alt-text="Screenshot of the Integrations profile tab in the Automation page with the Create button highlighted.":::
