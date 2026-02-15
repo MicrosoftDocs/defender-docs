@@ -214,10 +214,10 @@
             - name: Support matrices for Containers
               displayName: Containers, features availability, environment information
               href: support-matrix-defender-for-containers.md
-            - name: Architecture overview
-              href: defender-for-containers-architecture.md
             - name: Overview by environment
               href: defender-for-containers-deployment-overview.md
+            - name: Architecture overview
+              href: defender-for-containers-architecture.md
             - name: Defender for Containers permissions for EKS and GKE
               href: containers-permissions.md
             - name: Enable Defender for Containers
@@ -232,8 +232,8 @@
                   href: defender-for-containers-deploy-azure-cli.md
                 - name: Deploy using Helm (advanced)
                   href: deploy-helm.md
-            - name: Troubleshoot Defender for Containers on AWS (EKS)
-              href: defender-for-containers-aws-troubleshoot.md
+            - name: Troubleshoot Defender for Containers
+              href: defender-for-containers-troubleshoot.md
             - name: Disable Defender for Containers
               href: defender-for-containers-remove.md                 
         - name: Protect key vaults with Defender for Key Vault

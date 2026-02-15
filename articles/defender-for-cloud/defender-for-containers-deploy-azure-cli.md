@@ -35,6 +35,8 @@ For clusters that aren’t running in Azure Kubernetes Service (AKS), Defender f
 
 If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](#verify-deployment) before running these commands.
 
+### [Azure CLI](#tab/aks-cli)
+
 To deploy the Defender sensor to a specific AKS cluster:
 
 ```azurecli
@@ -56,6 +58,39 @@ az aks update \
 
 Replace `<workspace-resource-id>` with the full Log Analytics workspace resource ID. 
 For example, `/subscriptions/<subscription-id>/resourceGroups/<workspace-rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>`.
+
+### [ARM template](#tab/aks-arm)
+
+Deploy the following ARM template to enable the Defender sensor on an AKS cluster:
+
+```json
+{
+  "$schema": "[https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#](https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#)",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "clusterName": { "type": "string" },
+    "location": { "type": "string" },
+    "workspaceResourceId": { "type": "string" }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.ContainerService/managedClusters",
+      "apiVersion": "2023-01-01",
+      "name": "[parameters('clusterName')]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "securityProfile": {
+          "defender": {
+            "logAnalyticsWorkspaceResourceId": "[parameters('workspaceResourceId')]",
+            "securityMonitoring": { "enabled": true }
+          }
+        }
+      }
+    }
+  ]
+}
+
+```
 
 ## Deploy the Azure Policy add-on
 
@@ -228,6 +263,9 @@ For Autopilot clusters:
 
 - The Defender sensor automatically adjusts resource requests.
 - No manual configuration is needed for resource limits.
+
+> [!IMPORTANT]
+> In GKE Autopilot clusters, resource requests and limits for the Defender sensor can't be manually configured. Resource management is controlled by GKE Autopilot and can't be overridden.
 
 ## Exclude clusters from automatic provisioning
 

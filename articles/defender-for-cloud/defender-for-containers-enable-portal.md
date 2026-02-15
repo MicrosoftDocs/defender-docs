@@ -79,8 +79,6 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 
 - One or more Amazon EKS clusters running Kubernetes version 1.19 or later.
 
-- Container images stored in Amazon ECR. (inbal B) 
-
 ## Enable the Defender for Containers plan
 
 1. Sign in to the [Azure portal](https://portal.azure.com).

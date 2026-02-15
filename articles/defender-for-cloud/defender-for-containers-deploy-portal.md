@@ -192,6 +192,9 @@ For Autopilot clusters:
 - The Defender sensor automatically adjusts resource requests.
 - No manual configuration is needed for resource limits.
 
+> [!IMPORTANT]
+> In GKE Autopilot clusters, resource requests and limits for the Defender sensor can't be manually configured. Resource management is controlled by GKE Autopilot and can't be overridden.
+
 ## Exclude clusters from automatic provisioning
 
 To exclude specific GKE clusters from automatic provisioning, add labels to the cluster in Google Cloud:
