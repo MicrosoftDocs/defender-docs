@@ -35,14 +35,6 @@ aws eks update-cluster-config \
   --logging '{"clusterLogging":[{"types":["audit","authenticator"],"enabled":true}]}'
 ```
 
-> [!IMPORTANT]
-> Agentless threat protection requires a properly configured log delivery pipeline, including an Amazon SQS queue. If the SQS queue ARN isn't configured or permissions aren't correctly granted, the AWS connector can show as **Connected**, but no control plane alerts are generated.
->
-> Ensure that:
-> - An SQS queue exists for log notifications.
-> - The required IAM permissions are granted.
-> - The correct SQS ARN is configured in the AWS connector settings.
-
 ## Configure Kubernetes control plane access 
 
 **Required if you enabled:** Kubernetes API access
