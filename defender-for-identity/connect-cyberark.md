@@ -63,12 +63,14 @@ To support ongoing API access, create a new user and assign the custom role.
 
 1. Sign in to the [Microsoft Defender Portal](https://security.microsoft.com)
 1. Go to **System > Data Management > Data Connectors**
+
+    :::image type="content" source="media/connect-cyberark/data-connector-cyberark.png" alt-text="Screenshot that shows where to find the data connector for CyberArk in the Microsoft Defender portal." lightbox="media/connect-cyberark/data-connector-cyberark.png":::
 1. Select **Catalog > CyberArk Identity**
 1. Click on **Connect a connector**, and then:  
     1. Enter a name for your connector. 
     1. Enter your CyberArk identity endpoint URL.
     1. Enter your CyberArk Identity Privilege Cloud service endpoint.
-    1. Enter the username and password for the Oauth user. Include the complete username and the CyberArk domain. For example: CyberArkMDIOauth@cyberark.cloud.<numberid>.
+    1. Enter the username and password for the Oauth user. Include the complete username and the CyberArk domain. 
 
 1. Click **Next** 
 1. Select **Protection Types > Identity**, and click **Next** 
