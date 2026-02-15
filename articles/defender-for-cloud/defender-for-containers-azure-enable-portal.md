@@ -137,8 +137,9 @@ You can exclude specific AKS clusters from automatic provisioning by applying ta
 
 1. Under **Overview**, select **Tags**.
 
-1. Add one of these tags:
-   - For Defender sensor: `ms_defender_container_exclude_sensors` = `true`
+1. Add this tag:
+
+- For Defender sensor: `ms_defender_container_exclude_sensors` = `true`
       
 ## Monitor ongoing security
 
