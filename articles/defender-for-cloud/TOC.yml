@@ -57,17 +57,19 @@
               href: quickstart-onboard-aws.md
             - name: Authentication architecture for AWS connectors
               href: concept-authentication-architecture-aws.md
-            - name: Integrate AWS CloudTrail logs (Preview)
+            - name: Integrate AWS CloudTrail logs
               href: integrate-cloud-trail.md
         - name: Connect GCP projects
           items:
             - name: Connect your GCP project
               displayName: gcp, connect, onboard
               href: quickstart-onboard-gcp.md
+            - name: Authentication architecture for GCP connectors
+              href: authentication-architecture-google-cloud.md
             - name: Configure GCP plans
               displayName: GCP, plans, configure
               href: configure-google-plans.md
-            - name: Ingest GCP logging
+            - name: Integrate GCP logging
               displayName: GCP, logging, ingest
               href: logging-ingestion.md
         - name: Connect individual non-Azure machines
@@ -101,6 +103,8 @@
               href: tutorial-enable-servers-plan.md
             - name: Set up the free data ingestion benefit
               href: data-ingestion-benefit.md
+            - name: Use a custom Data Collection Rule for Defender for Servers ingestion
+              href: data-collection-rule.md
             - name: Modify plan settings
               displayName: Defender for Servers, monitoring coverage, Log analytics, agentless scanning, Vulnerability assessment, Endpoint protection
               href: configure-servers-coverage.md
@@ -528,6 +532,7 @@
               displayName: security, recommendations, owner, azure, resource, graph, azure resource graph, csv report
               href: review-security-recommendations.md
             - name: Review resources exempted from recommendations
+              displayName: review, exemptions, exempted, resources, recommendation, exempt
               href: review-exemptions.md
             - name: Assign a recommendation to an active user
               displayName: assign, recommendation, user, owner
@@ -549,10 +554,10 @@
             - name: Manage MCSB recommendations
               href: manage-mcsb.md
             - name: Exempt resources from recommendations
-              displayName: disable, resource, exempt, recommendation
+              displayName: disable, resource, exempt, recommendation, exemptions, exempted, resources
               href: exempt-resource.md
             - name: Exempt resources at scale
-              displayName: policy, resource, exemptions, create, exempt, at scale, resources, compliance
+              displayName: policy, resource, exemptions, create, exempt, at scale, resources, compliance, exempt
               href: exempt-resources-at-scale.md
         - name: Built-in security protections
           items:
@@ -887,7 +892,10 @@
         - name: Investigate Defender for SQL security alerts
           displayName: SQL, SQL servers, defender, machines
           href: defender-for-sql-alerts.md
-        - name: Find and remediate vulnerabilities
+        - name: Simulate alerts for SQL servers on machines
+          displayName: SQL, SQL servers, defender, machines
+          href: simulate-alerts-sql-machines.md
+        - name: Review and remediate vulnerabilities
           href: sql-azure-vulnerability-assessment-find.md
         - name: Consume and export scan results
           href: defender-for-sql-scan-results.md
@@ -1054,7 +1062,7 @@
         - name: Remediate EDR solutions (agentless)
           displayName: defender for endpoint, endpoint, edr
           href: endpoint-detection-response-solution-recommendations.md   
-        - name: Remediate Defender for Endpoint misconfigurations
+        - name: Investigate Defender for Endpoint misconfigurations
           href: endpoint-detection-misconfiguration.md
         - name: Remediate machine vulnerabilities
           displayName: qualys, va, rapid7, vulnerability
@@ -1527,6 +1535,12 @@
         - name: Storage aggregated logs
           DisplayName: Storage aggregated logs, Advanced Hunting, CloudStorageAggregatedEvents
           href: episode-sixty-four.md
+        - name: Malware automated remediation
+          DisplayName: Malware automated remediation, Defender for Storage, malware remediation
+          href: episode-sixty-five.md
+        - name: New secure score
+          DisplayName: secure score, security posture, recommendations
+          href: episode-sixty-six.md
     - name: Microsoft Defender for IoT documentation
       href: /azure/defender-for-iot/
     - name: Azure security documentation
