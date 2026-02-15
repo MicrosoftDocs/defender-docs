@@ -229,15 +229,20 @@ For Autopilot clusters:
 - The Defender sensor automatically adjusts resource requests.
 - No manual configuration is needed for resource limits.
 
-## Exclude Arc-enabled clusters from automatic provisioning
+## Exclude clusters from automatic provisioning
 
-For clusters connected through Azure Arc, you can exclude Defender components by using Azure tags on the Arc-enabled Kubernetes resource:
+To exclude specific GKE clusters from automatic provisioning, add labels to the cluster in Google Cloud:
 
 - **Exclude Defender sensor:**  
-  `ms_defender_container_exclude_sensors = true`
+  `ms_defender_container_exclude_agents = true`
 
-- **Exclude Azure Policy extension:**  
-  `ms_defender_container_exclude_azurepolicy = true`
+- **Exclude agentless deployment:**  
+  `ms_defender_container_exclude_agentless = true`
+
+> [!NOTE]
+> For clusters connected through Azure Arc, you can use Azure tags instead:
+> - `ms_defender_container_exclude_sensors = true`
+> - `ms_defender_container_exclude_azurepolicy = true`
 
 ## Deploy the Defender sensor
 
