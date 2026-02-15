@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 02/10/2026
+ms.date: 02/15/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -47,7 +47,7 @@ Grouped recommendations previously aggregated multiple findings under a single r
 
 During the transition period, grouped and individual recommendations may appear side by side. Grouped recommendations are on a deprecation path and will be removed in phases.
 
-The following grouped container vulnerability recommendations will be deprecated on March 17, 2026:
+The following grouped container vulnerability recommendations will be deprecated on March 19, 2026:
 
 **Container recommendations**
 
