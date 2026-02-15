@@ -579,7 +579,7 @@ The most common paging type is when a server data source API provides URLs to th
 - the `Link` HTTP response header
 - or a JSON path to retrieve the link from the response body. 
 
-`PersistentLinkHeader` paging has the same properties as `LinkHeader`, except the link header persists in backend storage. This option enables paging links across query windows. For example, some APIs don't support query start times or end times. Instead, they support a server side *cursor*. Persistent page types can be used to remember the server side *cursor*. For more information, see [What is a cursor?](/office/client-developer/access/desktop-database-reference/what-is-a-cursor).
+`PersistentLinkHeader` paging has the same properties as `LinkHeader`, except the link header persists in backend storage. This option enables paging links across query windows. For example, some APIs don't support query start times or end times. Instead, they support a server side *cursor*. Persistent page types can be used to remember the server side *cursor*. For more information, see [What is a cursor?](/office/client-developer/access/desktop-database-reference/what-is-a-cursor)
 
 > [!NOTE]
 > There can be only one query running for the connector with PersistentLinkHeader to avoid race conditions on the server side *cursor*. This may affect latency.
