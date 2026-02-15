@@ -72,14 +72,14 @@ To support ongoing API access, create a new user and assign the custom role.
     1. Enter your CyberArk Identity Privilege Cloud service endpoint.
     1. Enter the username and password for the Oauth user. Include the complete username and the CyberArk domain. 
 
-    :::image type="content" source="media/connect-cyberark/cyberark-connector-details.png" alt-text="Screenshot that shows where to enter your CyberArk connector details in the Defender pirtal." lightbox="media/connect-cyberark/cyberark-connector-details.png":::
+    :::image type="content" source="media/connect-cyberark/cyberark-connector-details.png" alt-text="Screenshot that shows where to enter your CyberArk connector details in the Defender portal." lightbox="media/connect-cyberark/cyberark-connector-details.png":::
 
 1. Select **Next** 
 1. Select **Protection Types > Identity**, and select **Next** 
 1. Review the information and select **Connect**.
 1. Verify that the CyberArk Identity connector appears in the **My Connector** table as **Connection Status: Ok**.
 
-    :::image type="content" source="media/connect-cyberark/my-connectors-status.png" alt-text="Screenshot that shows your CyberARk conenctor status in the Defender portal." lightbox="media/connect-cyberark/my-connectors-status.png":::
+    :::image type="content" source="media/connect-cyberark/my-connectors-status.png" alt-text="Screenshot that shows your CyberARk connector status in the Defender portal." lightbox="media/connect-cyberark/my-connectors-status.png":::
 
 1. To setup **Actions**, go to **Microsoft Sentinel > Configuration > Next Gen Automation**. 
 1. Select on **Integration profile** and create one for CyberArk with the same credentials.
