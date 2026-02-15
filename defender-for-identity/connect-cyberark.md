@@ -84,7 +84,7 @@ To support ongoing API access, create a new user and assign the custom role.
 1. To setup **Actions**, go to **Microsoft Sentinel > Configuration > Next Gen Automation**. 
 1. Click on **Integration profile** and create one for CyberArk with the same credentials.
 
-:::image type="content" source="media/connect-cyberark/add-integration-profile.png" alt-text="Screenshot that shows how to add an integration profile in the Defender portal." lightbox="media/connect-cyberark/add-integration-profile.png":::
+    :::image type="content" source="media/connect-cyberark/add-integration-profile.png" alt-text="Screenshot that shows how to add an integration profile in the Defender portal." lightbox="media/connect-cyberark/add-integration-profile.png":::
 
 ## Related articles
 
