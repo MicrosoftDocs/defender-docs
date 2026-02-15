@@ -1,6 +1,6 @@
 ---
 title: Custom graphs in Microsoft Sentinel- Overview
-description: Learn how to create and manage custom graphs in Microsoft Sentinel to model attack patterns, investigate threats, and run advanced graph algorithms.
+description: An overview of custom graphs in Microsoft Sentinel 
 author: EdB-MSFT
 ms.author: edbaynash
 ms.date: 12/09/2025
@@ -10,32 +10,13 @@ ms.subservice: sentinel-graph
 
 #customer intent: As a security researcher, I want to create custom graphs in my tenant so that I can continuously monitor and detect systemic threats.
 
-
-
-
-
-Sourin Paul
-
-11/14/2025
-
-DRAFT – Do NOT publish
-
-
-
-- Note: Do not publish documentation in production. These will be shared with customers as PDF and hosted internally in **aka.ms/customgraphs (TBD)**
-
-# Summary 
-
-*\[Content for\] In Microsoft Sentinel graph overview (*[link](https://learn.microsoft.com/en-us/azure/sentinel/datalake/sentinel-graph-overview?tabs=defender)*)-\>(after Pricing) add a new section called “Custom Graphs in Microsoft Sentinel”*
 ---
 
-
-
-# Custom Graph Overview
+# Custom Graph overview
 
 Custom graphs in Microsoft Sentinel extend the graph platform capabilities of Microsoft Sentinel. Defenders and security researchers can now create and customize new graphs, visualize interconnected assets, activities, or threat intelligence across multiple sources and from their suite of security tools.
 
-Using the Jupyter notebooks in Microsoft Sentinel Visual Studio Code extension, you can do the following:
+Use the Jupyter pyspark notebooks in the Microsoft Sentinel Visual Studio Code extension to create custom graphs with your Microsoft Sentinel data. Work with the graph builder Python library to define nodes and edges, and use Graph Query Language (GQL) to query and analyze your graphs. Materialize your custom graphs in your tenant for continuous monitoring and detection of systemic threats, and leverage built-in graph algorithms for deeper insights.
 
 | Step | Description |
 |------|-------------|
@@ -45,4 +26,7 @@ Using the Jupyter notebooks in Microsoft Sentinel Visual Studio Code extension, 
 
 
 
-**\<Drawing\>**
+
+## Permissions required to create and query custom graphs
+
+

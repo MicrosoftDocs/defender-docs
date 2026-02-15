@@ -11,17 +11,17 @@ ms.subservice: sentinel-graph
 #customer intent: As a security researcher, I want to create custom graphs in my tenant so that I can continuously monitor and detect systemic threats.
 ---
 
-## Get started with custom graphs in Microsoft Sentinel
+# Get started with custom graphs in Microsoft Sentinel
 
 Custom graphs in Microsoft Sentinel enable security researchers and analysts to create tailored graph representations of their security data. By building custom graphs, you can model specific attack patterns, investigate threats, and run advanced graph algorithms to uncover hidden relationships within your digital environment. This guide walks you through the steps to create and manage custom graphs by using Jupyter notebooks in the Microsoft Sentinel Visual Studio Code extension.
 
-### Prerequisites
+## Prerequisites
 
-#### Onboard to Microsoft Sentinel graph
+### Onboard to Microsoft Sentinel graph
 
 To create custom graphs, you must be onboarded to Microsoft Sentinel data lake. For more information, see [Onboard to Microsoft Sentinel data lake](sentinel-lake-onboard-defender.md).
 
-#### Permissions
+### Permissions
 
 To interact with custom graphs, you need the following XDR permissions in Sentinel data lake. The following table lists the permission requirements for common graph operations:
 
@@ -31,9 +31,9 @@ To interact with custom graphs, you need the following XDR permissions in Sentin
 | Materialize a graph in tenant | Use one of the following Microsoft Entra ID roles:<br>[Security operator](/entra/identity/role-based-access-control/permissions-reference#security-operator)<br>[Security administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator)<br>[Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) |
 | Query a materialized graph | Use a [custom Microsoft Defender XDR unified RBAC role with *security data basics (read)*](/defender-xdr/custom-permissions-details) permissions over the Microsoft Sentinel data collection. |
 
-Microsoft Entra ID roles provide broad access across all workspaces in the data lake. For more information, see [Roles and permissions in Microsoft Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/roles#roles-and-permissions-for-the-microsoft-sentinel-data-lake).
+Microsoft Entra ID roles provide broad access across all workspaces in the data lake. For more information, see [Roles and permissions in Microsoft Sentinel](../roles#roles-and-permissions-for-the-microsoft-sentinel-data-lake.md).
 
-#### Install Visual Studio Code and the Microsoft Sentinel extension 
+### Install Visual Studio Code and the Microsoft Sentinel extension 
 
 Create custom graphs by using Jupyter notebooks in the Microsoft Sentinel Visual Studio Code extension. For more information, see [Install Visual Studio Code and the Microsoft Sentinel extension ](notebooks.md#install-visual-studio-code-and-the-microsoft-sentinel-extension)
   
@@ -242,7 +242,7 @@ You have now created an ephemeral graph in the notebook.
     builder.query(query2).show()
     ```
 
-   :::image type="content" source="media/custom-graphs/graph-visualization2.png" lightbox="media/custom-graphs/graph-visualization2.png" alt-text="A screenshot showing the visualization of a graph in Visual Studio Code.":::
+   :::image type="content" source="media/custom-graphs/graph-visualization2.png" lightbox="media/custom-graphs/graph-visualization2.png" alt-text="A screenshot showing the visualization of a graph and detail side-panel in Visual Studio Code.":::
 
 
 ### Materialize a graph in your tenant
@@ -277,13 +277,13 @@ After you create an ephemeral graph, you can persist it by storing the graph in 
 
 1.  In Microsoft Sentinel extension, select **Graphs** -\> **Custom Graphs** -\> and your materialized graph.
 
-:::image type="content" source="media/custom-graphs/configure-graph-job.png" alt-text="A screenshot of a computer AI-generated content may be incorrect.":::
+:::image type="content" source="media/custom-graphs/configure-graph-job.png" lightbox="media/custom-graphs/configure-graph-job.png" alt-text="A screenshot showing the create graph job page in Visual Studio Code.":::
 
 1. From the list of graphs, select your materialized graph to view its details.
 1. Select the **Job Details** tab to view the status of the graph job, including last run time, next run time, and any errors encountered during the build process.
 1. Select **Run Now** to manually trigger a graph build outside of the scheduled times. The **Status** changes to **Queued**, then "In Progress" while the graph is being built.
 
-    :::image type="content" source="media/custom-graphs/graph-job-details.png" alt-text="A screenshot of a computer AI-generated content may be incorrect.":::
+    :::image type="content" source="media/custom-graphs/graph-job-details.png" lightbox="media/custom-graphs/graph-job-details.png" alt-text="A screenshot showing the graph job details tab in Visual Studio Code.":::
 
 1. When the graph build is complete, the **Status** updates to **Succeeded**. Select the **Graph Details** tab to view information about the graph. The **Status** shows **Ready** when the graph is successfully built and stored in your tenant.
 
