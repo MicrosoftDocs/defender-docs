@@ -39,7 +39,7 @@ This section provides instructions for connecting Microsoft Defender for Identit
 
 1. Login to CyberArk Identity console as a system administrator.
 1. Navigate to **Identity Administration > Core Services > Roles**
-1. Select Add Role.
+1. Select **Add Role**.
 1. Add an appropriate name for the custom role.
 1. Click **Save**.
 1. Select Administrative Rights and add rights for User Management.
