@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 02/10/2026
+ms.date: 02/15/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -29,14 +29,14 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ## February 2026
 
-|Date| Category|Update|
+| Date | Category | Update |
 | -------- | -------- | -------- |
-|February 10, 2026| Preview | [Database-level recommendations experience for SQL Vulnerability Assessment findings (Preview)](#database-level-recommendations-experience-for-sql-vulnerability-assessment-preview) |
-|February 10, 2026| GA | [Scanning support for Minimus and Photon OS container images](#scanning-support-for-minimus-and-photon-os-container-images) |
-|February 9, 2026| GA | [Simulate alerts for SQL servers on machines](#simulate-alerts-for-sql-servers-on-machines) |
-|February 3, 2026| Preview | [Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview) |
+| February 10, 2026 | Preview | [Database-level recommendations experience for SQL Vulnerability Assessment findings (Preview)](#database-level-recommendations-experience-for-sql-vulnerability-assessment-preview) |
+| February 10, 2026 | GA | [Scanning support for Minimus and Photon OS container images](#scanning-support-for-minimus-and-photon-os-container-images) |
+| February 9, 2026 | GA | [Simulate alerts for SQL servers on machines](#simulate-alerts-for-sql-servers-on-machines) |
+| February 3, 2026 | Preview | [Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview) |
 
-## Database-level recommendations experience for SQL Vulnerability Assessment (Preview)
+### Database-level recommendations experience for SQL Vulnerability Assessment (Preview)
 
 February 10, 2026
 
@@ -62,13 +62,13 @@ The SQL [vulnerability assessment rules reference](sql-azure-vulnerability-asses
 
 The existing server-level (aggregated) experience remains available during preview.
 
-## Scanning support for Minimus and Photon OS container images
+### Scanning support for Minimus and Photon OS container images
 
 February 10, 2026
 
 Microsoft Defender for Cloud's vulnerability scanner, powered by Microsoft Defender Vulnerability Management, is extending its scanning coverage to Minimus and Photon OS container images, and identify vulnerabilities in Minimus Images and Photos OS to validate that they're shipping the most secure builds possible.  As additional image types are being scanned, your bill might increase. For all supported distributions, see [Registries and images support for vulnerability assessment](support-matrix-defender-for-containers.md#registries-and-images-support-for-vulnerability-assessment).
 
-## Simulate alerts for SQL servers on machines
+### Simulate alerts for SQL servers on machines
 
 February 9, 2026
 
@@ -78,7 +78,7 @@ Simulated alerts generates realistic alerts with full SQL and machine context on
 
 Learn how to [simulate alerts for SQL servers on machines](simulate-alerts-sql-machines.md).
 
-## Threat protection for AI agents (Preview)
+### Threat protection for AI agents (Preview)
 
 February 2, 2026 
 
@@ -94,7 +94,7 @@ Learn more about [Threat Protection for AI Agents with Microsoft Defender for Cl
 | -------- | -------- | -------- |
 |January 8, 2026| Preview | [Microsoft Security Private Link (Preview)](#microsoft-security-private-link-preview) |
 
-## Microsoft Security Private Link (Preview)
+### Microsoft Security Private Link (Preview)
 
 January 8, 2026
 
