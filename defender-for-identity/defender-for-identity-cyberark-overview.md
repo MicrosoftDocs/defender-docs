@@ -18,10 +18,10 @@ After you connect CyberArk Identity, Microsoft Defender for Identity provides th
 
 | Capability | Description |
 |------------|------------|
-| View CyberArk accounts in the identity inventory | Adds CyberArk Identity users into the identity inventory and correlates them with identities from on-premises Active Directory and Microsoft Entra ID. |
-| Improve CyberArk security posture | Evaluates CyberArk Identity accounts for security risks such as stale privileged accounts and excessive privileged role assignments, and generates posture recommendations. Example recommendations include: <br> - Change password for CyberArk Identity privileged User accounts<br>- Remove stale CyberArk Identity privileged accounts <br>- Limit the number of CyberArk Identity accounts with system admin role <br>- High number of CyberArk Identity accounts with a privileged role assigned |
-| Use advanced hunting to investigate CyberArk activity | Captures CyberArk Identity inventory and event.The [IdentityInfo](/defender-xdr/advanced-hunting-identityinfo-table) table includes account metadata such as privilege level, group membership, and identity source. |
-| Take remediation actions | If an identity is determined to be at risk, the following remediation actions can be taken from within the Defender portal: <br>- Disable user in CyberArk Identity <br> - Activate user in CyberArk Identity  |
+| View CyberArk accounts in the identity inventory | Adds CyberArk Identity users into the identity inventory and correlates them with identities from on-premises, Active Directory and Microsoft Entra ID. |
+| Improve CyberArk security posture | Evaluates CyberArk Identity accounts for security risks such as stale privileged accounts and excessive privileged role assignments, and generates posture recommendations. Example recommendations include: <br> - Change password for CyberArk Identity privileged user accounts<br>- Remove stale CyberArk Identity privileged accounts <br>- Limit the number of CyberArk Identity accounts with system admin role <br>- High number of CyberArk Identity accounts with a privileged role assigned |
+| Use advanced hunting to investigate CyberArk activity | Captures CyberArk Identity inventory and events. The [IdentityInfo](/defender-xdr/advanced-hunting-identityinfo-table) table includes account metadata such as privilege level, group membership, and identity source. |
+| Take remediation actions | If an identity is determined to be at risk, the following remediation actions can be taken from within the MicrosoftDefender portal: <br>- Disable user in CyberArk Identity <br> - Activate user in CyberArk Identity  |
 
 ## Next steps
 
