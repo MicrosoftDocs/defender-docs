@@ -47,7 +47,7 @@ Grouped recommendations previously aggregated multiple findings under a single r
 
 During the transition period, grouped and individual recommendations may appear side by side. Grouped recommendations are on a deprecation path and will be removed in phases.
 
-The following grouped container vulnerability recommendations will be deprecated on March 15. 2026:
+The following grouped container vulnerability recommendations will be deprecated on March 17, 2026:
 
 **Container recommendations**
 
