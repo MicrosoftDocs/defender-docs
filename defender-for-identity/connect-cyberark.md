@@ -49,10 +49,10 @@ This section provides instructions for connecting Microsoft Defender for Identit
 
 To support ongoing API access, create a new user and assign the custom role.
 
-1. Sign in to CyberArk Identity console as a system administrator 
-1. Navigate to **Identity Administration > Core Services > Users** 
-1. Select **Add User** 
-1. Enter the **Login Name** and **Display Name** and select **Is OAuth confidential client**
+1. Sign in to CyberArk Identity console as a system administrator.
+1. Navigate to **Identity Administration > Core Services > Users**.
+1. Select **Add User**.
+1. Enter the **Login Name** and **Display Name** and select **Is OAuth confidential client**.
 1. Copy the username and password. You'll need these credentials later. 
 1. Select **Create User**.
 1. Navigate to the previously created custom role 
@@ -61,11 +61,11 @@ To support ongoing API access, create a new user and assign the custom role.
 
 ### Connect CyberArk Identity to Defender for Identity 
 
-1. Sign in to the [Microsoft Defender Portal](https://security.microsoft.com)
-1. Go to **System > Data Management > Data Connectors**
+1. Sign in to the [Microsoft Defender Portal](https://security.microsoft.com).
+1. Go to **System > Data Management > Data Connectors**.
 
     :::image type="content" source="media/connect-cyberark/data-connector-cyberark.png" alt-text="Screenshot that shows where to find the data connector for CyberArk in the Microsoft Defender portal." lightbox="media/connect-cyberark/data-connector-cyberark.png":::
-1. Select **Catalog > CyberArk Identity**
+1. Select **Catalog > CyberArk Identity**.
 1. Select on **Connect a connector**, and then:  
     1. Enter a name for your connector. 
     1. Enter your CyberArk identity endpoint URL.
@@ -74,8 +74,8 @@ To support ongoing API access, create a new user and assign the custom role.
 
     :::image type="content" source="media/connect-cyberark/cyberark-connector-details.png" alt-text="Screenshot that shows where to enter your CyberArk connector details in the Defender portal." lightbox="media/connect-cyberark/cyberark-connector-details.png":::
 
-1. Select **Next** 
-1. Select **Protection Types > Identity**, and select **Next** 
+1. Select **Next**. 
+1. Select **Protection Types > Identity**, and select **Next**. 
 1. Review the information and select **Connect**.
 1. Verify that the CyberArk Identity connector appears in the **My Connector** table as **Connection Status: Ok**.
 
