@@ -70,7 +70,7 @@ To begin using Microsoft Sentinel graph in Microsoft Purview:
 ---
 
 
-# Custom graphs in Microsoft Sentinel
+## Custom graphs in Microsoft Sentinel
 
 Custom graphs in Microsoft Sentinel let security teams model complex attack patterns, visualize relationships across data sources, and use advanced analytics for proactive threat detection and investigation. Custom graphs combine security telemetry from the Sentinel data lake so you build customized security graphs that model new attack patterns and investigate emerging threats in your environment.
 
@@ -83,9 +83,6 @@ With custom graphs you can:
 
 For more information see [Custom graph overview](custom-graphs-overview.md).
 
-> [!IMPORTANT]
->
-> Custom graphs in Microsoft Sentinel are currently in preview. The information in this article relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 ## Pricing
 
