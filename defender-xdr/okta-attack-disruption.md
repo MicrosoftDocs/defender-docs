@@ -10,7 +10,7 @@ ms.collection:
   - m365-security
   - tier2
 ms.topic: how-to
-ms.date: 01/29/2026
+ms.date: 02/15/2026
 ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender XDR
