@@ -93,7 +93,13 @@ Binary drift rules define what behavior is considered suspicious, what to alert 
 
 Within 30 minutes, the sensors on the protected clusters update by using the new policy.
 
-## Edit a rule
+## Manage a rule
+
+Binary drift policies are flexible and customizable, allowing you to manage and adjust them as needed. You can edit rules to refine their conditions or actions, duplicate rules to create similar ones with minor changes, or delete rules that are no longer necessary. Regularly reviewing and managing your rules ensures that your binary drift detection and blocking policies remain effective and aligned with your security needs.
+
+### [Edit rule](#tab/edit-rule)
+
+Rules can be edited to refine their conditions or actions. This flexibility allows you to adjust your policies based on the alerts you receive and your review of them, ensuring that they effectively balance security needs with operational efficiency.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -109,9 +115,9 @@ Within 30 minutes, the sensors on the protected clusters update by using the new
 
 Within 30 minutes, the sensors on the protected clusters update by using the new policy.
 
-## Duplicate a rule
+### [Duplicate rule](#tab/duplicate-rule)
 
-This option is useful if you want to create a similar rule with only minor changes.
+Rules can be duplicated to create similar ones with minor changes. This option is useful if you want to create a new rule that is similar to an existing one, allowing you to save time and maintain consistency in your policies.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -127,7 +133,9 @@ This option is useful if you want to create a similar rule with only minor chang
 
 Within 30 minutes, the sensors on the protected clusters update by using the new policy.
 
-## Delete a rule 
+### [Delete rule](#tab/delete-rule) 
+
+Rules can be deleted when they are no longer necessary or if they generate too many false positives. Regularly reviewing and cleaning up your rules helps maintain the effectiveness of your binary drift detection and blocking policies.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -142,6 +150,8 @@ Within 30 minutes, the sensors on the protected clusters update by using the new
 1. Select **Save**.
 
 Within 30 minutes, the sensors on the protected clusters update by using the new policy.
+
+---
 
 ## Additional information
 
