@@ -604,6 +604,8 @@
           href: datalake/graph-builder-api-reference.md
         - name: Sentinel graph builder API reference2
           href: datalake/graph-builder-api-reference2.md
+        - name: GQL reference for Sentinel custom graph
+          href: datalake/gql-reference-for-sentinel-custom-graph.md
     - name: Microsoft Sentinel MCP server
       items:
         - name: Microsoft Sentinel MCP server overview

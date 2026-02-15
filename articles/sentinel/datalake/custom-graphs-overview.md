@@ -54,7 +54,7 @@ Materialized custom graphs help detect the gradual buildup of privilege overlapâ
 For example, a developer might have access to a staging environment and, through group membership changes, gradually gain access to production resources. Individually, each change seems innocuous. However, when visualized in a graph over time, defenders can see the emerging connections and intervene before a compromise escalates.
 
 
- ## Building custom graphs in Microsoft Sentinel
+## Building custom graphs in Microsoft Sentinel
 
 Use the Jupyter pyspark notebooks in the Microsoft Sentinel Visual Studio Code extension to create custom graphs with your Microsoft Sentinel data. Work with the [graph builder Python library](./graph-builder-api-reference.md) to define nodes and edges, and use [Graph Query Language (GQL)](./graph-query-language.md) to query and analyze your graphs. Materialize your custom graphs in your tenant for continuous monitoring and detection of systemic threats, and leverage built-in graph algorithms for deeper insights.
 
