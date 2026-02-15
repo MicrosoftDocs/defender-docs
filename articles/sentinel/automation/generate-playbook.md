@@ -243,6 +243,8 @@ When the editor opens, the experience starts in **Plan mode**. In this mode, you
 
    1. Return to edit the playbook to continue.
 
+For another example of a prompt and the generated plan, see this [example](#example-use-case).
+
 #### Review and approve the plan
 
 1. Review the generated plan and flow diagram carefully.
@@ -333,6 +335,30 @@ To view execution details for your generated playbook:
 
 > [!NOTE]
 > You can view the automation rule run results in the **incidents activity** tab, but not in the Microsoft Sentinel Health Table.
+
+## Example use case
+
+initial_prompt: Create a playbook that enriches alert URL entities with VirusTotal
+      data and adds the results as a comment to the related incident.
+    intent: null
+  data:
+    integrations_ref: null
+    knowledge_base_ref:
+    - Triggered when a Microsoft Sentinel alert is received via webhook subscription.
+    - The playbook processes URL entities that are associated with the alert.
+    - A VirusTotal API key parameter must be available to query the VirusTotal URL
+      Report API.
+    - For each URL, the playbook evaluates the VirusTotal field response_code to determine
+      if a valid report exists.
+    - If response_code equals 1, the playbook adds a comment to the related incident
+      containing the URL and the number of VirusTotal positives.
+    - If response_code is not 1 for a URL, the playbook skips adding a comment for
+      that URL and continues with any remaining URLs.
+    - If no URL entities are present in the alert, no VirusTotal queries are performed
+      and no comments are added.
+    - The final state is that the related incident may contain one or more comments,
+      each summarizing VirusTotal findings for specific alert URLs where valid reports
+      exist.
 
 ## Limitations
 
