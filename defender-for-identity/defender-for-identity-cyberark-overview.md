@@ -9,7 +9,7 @@ ms.reviewer: himanch
 
 # How Microsoft Defender for Identity protects your CyberArk accounts
 
-As organizations increasingly adopt hybrid and multi-cloud environments, securing identities across platforms becomes critical. 
+As organizations increasingly adopt hybrid and multicloud environments, securing identities across platforms becomes critical. 
 
 When you connect CyberArk Identity with Microsoft Defender for Identity (MDI), you can detect, investigate, and respond to identity-based threats across both cloud and on-premises infrastructures.
 
