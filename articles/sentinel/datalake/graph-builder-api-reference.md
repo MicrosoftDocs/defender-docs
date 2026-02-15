@@ -1,7 +1,7 @@
 ---
 title: Microsoft Sentinel Graph Builder API reference
 description: Comprehensive API reference for building and querying security graphs using the Sentinel Graph Provider.
-author: edbaynash
+author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: reference
 ms.date: 01/11/2026
@@ -1191,8 +1191,8 @@ The Graph Builder API also provides REST endpoints for managing and querying cus
 ### List graphs
 List all custom graphs available from your tenant.
 
-**HTTP Method**: GET 
-**URL**: https://api.securityplatform.microsoft.com/graphs/custom-graph-instances 
+**HTTP Method**: `GET`
+**URL**: `https://api.securityplatform.microsoft.com/graphs/custom-graph-instances `
 
 
 **Request Body**
@@ -1310,8 +1310,3 @@ Request Body Format *
 - **200 OK** - Query executed successfully 
 
 
-## Related content
-
-- [Microsoft Sentinel notebooks](notebooks-hunt.md)
-- [Investigate incidents in Microsoft Sentinel](investigate-incidents.md)
-- [Hunt for threats with Microsoft Sentinel](hunting.md)

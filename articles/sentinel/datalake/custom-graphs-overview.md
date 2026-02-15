@@ -66,4 +66,4 @@ The following table summarizes the steps to build custom graphs in Microsoft Sen
 | **2. Materialize custom graphs in tenant** | - Materialize a ephemeral graph in your tenant for continued detection and collaboration.<br>- Use Sentinel jobs to tailor how often you want to refresh a materialized graph with Lake data.<br>- Query and visualize materialized graphs in the Sentinel VSCE extension. |
 | **3. Run advanced graph algorithms** | - Use built-in support for Graph Frames analytics and graph traversal functions.<br>- Leverage purpose-built Sentinel graph algorithms for common security use cases. |
 
-For detailed instructions on how to build custom graphs in Microsoft Sentinel, see [Custom graphs in Microsoft Sentinel](./custom-graphs.md).
+For detailed instructions on how to build custom graphs in Microsoft Sentinel, see [Custom graphs in Microsoft Sentinel](./create-custom-graphs.md).
