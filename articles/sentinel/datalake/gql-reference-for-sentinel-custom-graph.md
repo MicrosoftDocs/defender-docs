@@ -46,7 +46,7 @@ Edge patterns define how nodes connect to each other:
 ```gql 
 -[e]->                  -- Directed outgoing edge, any label 
 -[e:works_at]->         -- Directed edge, works_at label
--[e:knows\|likes]-->    -- knows OR likes edge
+-[e:knows|likes]-->    -- knows OR likes edge
 <-[e]-                  -- Directed incoming edge
 -[e]-                   -- Undirected (any direction) 
 ```
@@ -65,9 +65,9 @@ Labels provide semantic meaning to nodes and edges. GQL supports complex label e
 
 ```gql
 :Person&amp;Company     -- Both Person AND Company labels 
-:Person\|Company        -- Person OR Company labels
+:Person|Company        -- Person OR Company labels
 :!Company               -- NOT Company label
-:(Person\|!Company)&City -- Complex expressions with parentheses 
+:(Person|!Company)&City -- Complex expressions with parentheses 
 ```
 ### Operators
 
@@ -88,7 +88,7 @@ Path patterns describe multi-hop relationships in your graph:
 (a)-[e1]->;(b)-[e2]->(c)     -- 2-hop path 
 (a)-[e]->;{2,4}(b)              -- 2 to 4 hops
 (a)-[e]->{1,}(b)             -- 1 or more hops
-(a)-[:knows\|likes]->;{1,3}(b)  -- 1-3 hops via knows/likes 
+(a)-[:knows|likes]->;{1,3}(b)  -- 1-3 hops via knows/likes 
 p=()-[:works_at]->()         -- Binding a path variable 
 ```
 
@@ -296,7 +296,7 @@ The following table lists the core GQL functions and operators, and examples.
 | STARTS WITH | String starts with pattern | WHERE person.name STARTS WITH 'Tom' |
 | ENDS WITH | String ends with pattern | WHERE person.name ENDS WITH 'Hanks' |
 | CONTAINS | String contains pattern | WHERE person.name CONTAINS 'Tom' |
-| \|\| | String concatenation | RETURN n.firstName \|\| ' ' \|\| n.lastName |
+| || | String concatenation | RETURN n.firstName || ' ' || n.lastName |
 | TRIM() | Remove whitespace from both ends | RETURN TRIM(' abc ') |
 
 
@@ -317,13 +317,13 @@ Use these strategies to optimize GQL query performance in production environment
 
 - Use specific label filters to reduce the search space: MATCH (start:SpecificType) instead of MATCH (start)
 
-- Limit variable length paths with reasonable bounds: MATCH (a)-\[\]-\>{1,3}(b) instead of unbounded paths
+- Limit variable length paths with reasonable bounds: MATCH (a)-[]->{1,3}(b) instead of unbounded paths
 
 - Apply WHERE clauses early to filter results before expensive operations.
 
-**Use COUNT(\*) for existence checks**:
+**Use COUNT(*) for existence checks**:
 
-If you only need to check if a pattern exists, use COUNT(\*) instead of returning full results.
+If you only need to check if a pattern exists, use COUNT(*) instead of returning full results.
 
 ```gql
 MATCH (user:User)-[:SUSPICIOUS_ACTIVITY]->(target)
