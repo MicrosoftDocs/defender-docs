@@ -45,15 +45,14 @@ For updates about versions and features released six months ago or earlier, see 
 
 As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, the following alerts were converted from the Microsoft Defender for Identity classic format to the MDI XDR alert format.
 
-
-* [Pass-the-Ticket (PtT) attack (Preview)](defender-for-identity/alerts-xdr.md#pass-the-ticket-ptt-attack-preview)
-* [Suspicious sign-in observed from Entra ID sync application to an uncommon resource app](defender-for-identity/alerts-xdr.md#suspicious-sign-in-observed-from-entra-id-sync-application-to-an-uncommon-resource-app)
-* [Possible Active Directory Certificate Services enumeration](defender-for-identity/alerts-xdr.md#possible-active-directory-certificate-services-enumeration)
-* [Suspicious sign-in observed to Entra ID sync application using an uncommon user agent]defender-for-identity/alerts-xdr.md#-suspicious-sign-in-observed-to-entra-id-sync-application-using-an-uncommon-user-agent)
-* [Possible Active Directory enumeration via ADWS](defender-for-identity/alerts-xdr.md#possible-active-directory-enumeration-via-adws)
-* [Possible OAuth code theft detected through consent abuse](defender-for-identity/alerts-xdr.md#-possible-oauth-code-theft-detected-through-consent-abuse)
-* [Suspicious NTLM authentication](defender-for-identity/alerts-xdr.md#-suspicious-ntlm-authentication)
-* [Possible adversary-in-the-middle (AiTM) attack detected (ConsentFix)](defender-for-identity/alerts-xdr.md#possible-adversary-in-the-middle-aitm-attack-detected-consentfix)
+* [Pass-the-Ticket (PtT) attack (Preview)](alerts-xdr.md#pass-the-ticket-ptt-attack-preview)
+* [Suspicious sign-in observed from Entra ID sync application to an uncommon resource app](alerts-xdr.md#suspicious-sign-in-observed-from-entra-id-sync-application-to-an-uncommon-resource-app)
+* [Possible Active Directory Certificate Services enumeration](alerts-xdr.md#possible-active-directory-certificate-services-enumeration)
+* [Suspicious sign-in observed to Entra ID sync application using an uncommon user agent](alerts-xdr.md#-suspicious-sign-in-observed-to-entra-id-sync-application-using-an-uncommon-user-agent)
+* [Possible Active Directory enumeration via ADWS](alerts-xdr.md#possible-active-directory-enumeration-via-adws)
+* [Possible OAuth code theft detected through consent abuse](alerts-xdr.md#-possible-oauth-code-theft-detected-through-consent-abuse)
+* [Suspicious NTLM authentication](alerts-xdr.md#-suspicious-ntlm-authentication)
+* [Possible adversary-in-the-middle (AiTM) attack detected (ConsentFix)](alerts-xdr.md#possible-adversary-in-the-middle-aitm-attack-detected-consentfix)
 
 
 All alerts are based on detections from Defender for Identity sensors. For the full list of Microsoft Defender alerts see [Microsoft Defender for Identity XDR security alerts](alerts-xdr.md) .
