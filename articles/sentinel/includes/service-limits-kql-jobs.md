@@ -17,3 +17,4 @@ The following table lists the service parameters and limits for KQL jobs in the 
 | Number of output tables per job     | 1                   |
 | Query scope                         | Multiple workspaces |
 | Query time range                    | Up to 12 years      |
+
