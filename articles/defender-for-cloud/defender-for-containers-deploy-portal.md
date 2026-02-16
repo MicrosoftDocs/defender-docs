@@ -11,7 +11,11 @@ ms.date: 01/29/2026
 
 This article explains how to deploy the Microsoft Defender for Containers sensor and Azure Policy for Kubernetes to clusters by remediating security recommendations after you [enable the Defender for Containers plan in Microsoft Defender for Cloud](defender-for-containers-enable-portal.md).
 
-For clusters that aren’t running in Azure Kubernetes Service (AKS), Defender for Cloud uses Azure Arc–enabled Kubernetes to deploy the required extensions.
+For clusters that aren’t running in Azure Kubernetes Service (AKS), Defender for Cloud uses Azure Arc-enabled Kubernetes to deploy the required extensions.
+
+## Exclude the Defender sensor from automatic provisioning
+
+[!INCLUDE[Exclude the Defender sensor](includes/defender-for-containers-exclude-sensor.md)]
 
 ---
 
@@ -58,7 +62,7 @@ For AKS clusters, recommendations activate built-in AKS security capabilities, i
 
 # [Amazon Elastic Kubernetes Service (EKS)](#tab/eks)
 
-For EKS clusters, Defender uses Azure Arc–enabled Kubernetes to deploy the Defender sensor and Azure Policy extensions.
+For EKS clusters, Defender uses Azure Arc-enabled Kubernetes to deploy the Defender sensor and Azure Policy extensions.
 
 ## Prerequisites
 
@@ -89,38 +93,6 @@ For EKS clusters, Defender uses Azure Arc–enabled Kubernetes to deploy the Def
    - Connect clusters to Azure Arc (if not already connected)
    - Install the Defender extension
    - Install the Azure Policy extension (if applicable)
-
-## Verify deployment
-
-### Verify recommendation health in Defender for Cloud
-
-1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
-
-1. Confirm that the relevant recommendation status changes to **Healthy**.
-
-### Verify extension installation in Azure
-
-1. Open the Arc-enabled cluster resource in Azure.
-
-1. Select **Extensions** and verify:
-
-   - **Microsoft Defender for Containers** status is **Succeeded**
-   - **Azure Policy for Kubernetes** status is **Succeeded** (if enabled)
-
-### Verify that the Defender sensor is running in the cluster
-
-```bash
-kubectl get pods -n kube-system -l app=microsoft-defender
-```
-Confirm that the number of running pods matches the number of cluster nodes.
-
-You can also verify the DaemonSet status:
-
-```bash
-kubectl get ds microsoft-defender-collector-ds -n kube-system
-```
-
-The **DESIRED**, **CURRENT**, and **READY** values should match the number of cluster nodes.
 
 ## Manage the Defender extension from the Arc-enabled Kubernetes resource (optional)
 
@@ -154,7 +126,7 @@ To exclude specific namespaces from Defender sensor monitoring:
 
 # [Google Kubernetes Engine (GKE)](#tab/gke)
 
-For GKE clusters, Defender uses Azure Arc–enabled Kubernetes to deploy the Defender sensor and Azure Policy extensions.
+For GKE clusters, Defender uses Azure Arc-enabled Kubernetes to deploy the Defender sensor and Azure Policy extensions.
 
 ## Prerequisites
 
@@ -195,67 +167,25 @@ For Autopilot clusters:
 > [!IMPORTANT]
 > In GKE Autopilot clusters, resource requests and limits for the Defender sensor can't be manually configured. Resource management is controlled by GKE Autopilot and can't be overridden.
 
-## Exclude clusters from automatic provisioning
-
-To exclude specific GKE clusters from automatic provisioning, add labels to the cluster in Google Cloud:
-
-- **Exclude Defender sensor:**  
-  `ms_defender_container_exclude_agents = true`
-
-- **Exclude agentless deployment:**  
-  `ms_defender_container_exclude_agentless = true`
-
 ## Deploy components
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-2. Go to **Microsoft Defender for Cloud** > **Recommendations**.
+1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
 
-3. Look for recommendations such as:
+1. Look for recommendations such as:
 
    - **GKE clusters should be connected to Azure Arc**
    - **Arc-enabled Kubernetes clusters should have Defender extension installed**
 
-4. Select the recommendation.
+1. Select the recommendation.
 
-5. Select the GKE clusters.
+1. Select the GKE clusters.
 
-6. Follow the remediation steps to:
+1. Follow the remediation steps to:
    - Connect clusters to Azure Arc (if required)
    - Install the Defender extension
    - Install the Azure Policy extension (if applicable)
-
-## Verify deployment
-
-### Verify recommendation health in Defender for Cloud
-
-1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
-
-1. Confirm that the relevant recommendation status changes to **Healthy**.
-
-### Verify extension installation in Azure
-
-1. Open the Arc-enabled cluster resource in Azure.
-
-1. Select **Extensions** and verify:
-
-   - **Microsoft Defender for Containers** status is **Succeeded**
-   - **Azure Policy for Kubernetes** status is **Succeeded** (if enabled)
-
-### Verify that the Defender sensor is running in the cluster
-
-```bash
-kubectl get pods -n kube-system -l app=microsoft-defender
-```
-Confirm that the number of running pods matches the number of cluster nodes.
-
-You can also verify the DaemonSet status:
-
-```bash
-kubectl get ds microsoft-defender-collector-ds -n kube-system
-```
-
-The **DESIRED**, **CURRENT**, and **READY** values should match the number of cluster nodes.
 
 ## Manage the Defender extension from the Arc-enabled Kubernetes resource (optional)
 
@@ -299,16 +229,6 @@ For Kubernetes clusters connected to Azure using Azure Arc that aren’t running
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
 
-## Exclude Arc-enabled clusters from automatic provisioning
-
-For clusters connected through Azure Arc, you can exclude Defender components by using Azure tags on the Arc-enabled Kubernetes resource:
-
-- **Exclude Defender sensor:**  
-  `ms_defender_container_exclude_sensors = true`
-
-- **Exclude Azure Policy extension:**  
-  `ms_defender_container_exclude_azurepolicy = true`
-
 ## Deploy components
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
@@ -328,38 +248,6 @@ For clusters connected through Azure Arc, you can exclude Defender components by
 
    - Install the **Microsoft Defender for Containers** extension  
    - Install the **Azure Policy for Kubernetes** extension (if applicable)
-
-## Verify deployment
-
-### Verify recommendation health in Defender for Cloud
-
-1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
-
-1. Confirm that the relevant recommendation status changes to **Healthy**.
-
-### Verify extension installation in Azure
-
-1. Open the Arc-enabled cluster resource in Azure.
-
-1. Select **Extensions** and verify:
-
-   - **Microsoft Defender for Containers** status is **Succeeded**
-   - **Azure Policy for Kubernetes** status is **Succeeded** (if enabled)
-
-### Verify that the Defender sensor is running in the cluster
-
-```bash
-kubectl get pods -n kube-system -l app=microsoft-defender
-```
-Confirm that the number of running pods matches the number of cluster nodes.
-
-You can also verify the DaemonSet status:
-
-```bash
-kubectl get ds microsoft-defender-collector-ds -n kube-system
-```
-
-The **DESIRED**, **CURRENT**, and **READY** values should match the number of cluster nodes.
 
 ### Manage the Defender extension from the Arc-enabled Kubernetes resource (optional)
 
@@ -392,6 +280,47 @@ To exclude specific namespaces from Defender sensor monitoring:
 1. Select **Save**.
 
 ---
+
+## Verify Defender for Containers deployment
+
+After remediating the recommendation, verify that Defender components are running correctly.
+
+### Verify recommendation health
+
+1. In the Azure portal, go to **Microsoft Defender for Cloud** > **Recommendations**.
+
+1. Confirm that the relevant recommendation status changes to **Healthy**.
+
+### Verify extension installation (Arc-enabled clusters)
+
+For EKS, GKE, and Arc-enabled Kubernetes clusters:
+
+1. Open the Arc-enabled Kubernetes resource in Azure.
+
+1. Select **Extensions**.
+
+1. Confirm that:
+
+   - **Microsoft Defender for Containers** shows **Succeeded**.
+
+   - **Azure Policy for Kubernetes** shows **Succeeded** (if enabled).
+
+### Verify Defender sensor pods
+
+1. Run the following command:
+
+   ```bash
+   kubectl get pods -n kube-system -l app=microsoft-defender
+   ```
+1. Confirm that the Defender sensor pods are in a `Running` state.
+
+1. (Optional) Verify the DaemonSet:
+
+   ```bash
+   kubectl get ds microsoft-defender-collector-ds -n kube-system
+   ```
+
+Confirm that the **DESIRED**, **CURRENT**, and **READY** values match the number of cluster nodes.
 
 ## Related content
 

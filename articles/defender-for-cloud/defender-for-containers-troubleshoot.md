@@ -31,7 +31,8 @@ This article provides troubleshooting guidance for common deployment and operati
 
 ### Vulnerability scan issues
 
-- **No scan results for images in ACR** - **Registry Access:** Confirm the **Registry access** toggle is set to **On** in your subscription's Containers plan settings.
+- **No scan results for images in ACR** 
+  - **Registry Access:** Confirm the **Registry access** toggle is set to **On** in your subscription's Containers plan settings.
   - **Image push:** Vulnerability scans are triggered by a push to the registry. If no recent push has occurred, the scan may not be present.
   - **Supported OS:** Verify the image uses a supported Linux or Windows distribution for scanning.
 
@@ -53,7 +54,7 @@ This article provides troubleshooting guidance for common deployment and operati
   - **Audit logging:** Audit logs must be enabled for each cluster. Run:
     `aws eks update-cluster-config --name <cluster-name> --logging '{"clusterLogging":[{"types":["audit","authenticator"],"enabled":true}]}'`
   - **SQS Configuration:** Verify that CloudTrail is correctly sending logs to the SQS queue used by the connector. Check for bolded SQS ARN accuracy in the connector settings.
-  
+
 # [Google Kubernetes Engine (GKE)](#tab/gke)
 
 ### Posture and Discovery
@@ -91,7 +92,8 @@ This article provides troubleshooting guidance for common deployment and operati
 
 - **Defender sensor pod "ImagePullBackOff"**
   - **Symptoms:** Pods fail to start with an image pull error.
-  - **Resolution:** - **MCR Connectivity:** Verify nodes can reach `mcr.microsoft.com` to pull the **Defender sensor** image.
+  - **Resolution:**
+    - **MCR Connectivity:** Verify nodes can reach `mcr.microsoft.com` to pull the **Defender sensor** image.
     - **Namespace conflicts:** Ensure no other security solutions or admission controllers are interfering with the `kube-system` or `mdc` namespaces.
 
 ---

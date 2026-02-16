@@ -167,7 +167,7 @@ Enable Microsoft Defender for Cloud containers protection (Defender for Containe
 
 #### Plan configurations
 
-- **Defender Sensor** – Deploys the Defender for Containers agent on the cluster. This sensor is required for runtime threat protection and gated deployment capabilities.
+- **Defender sensor** – Deploys the Defender for Containers agent on the cluster. This sensor is required for runtime threat protection and gated deployment capabilities.
 
 - **Kubernetes API access** – Required for vulnerability assessment, misconfigurations, compliance assessment, and runtime threat protection.
 

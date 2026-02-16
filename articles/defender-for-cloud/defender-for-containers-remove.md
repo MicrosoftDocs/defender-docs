@@ -101,7 +101,7 @@ After you remove Defender for Containers components from an EKS cluster:
 
 ## Remove Defender extensions from EKS clusters
 
-Defender for Containers deploys components to EKS clusters by using Azure Arc–enabled Kubernetes. The following steps remove those Arc extensions.
+Defender for Containers deploys components to EKS clusters by using Azure Arc-enabled Kubernetes. The following steps remove those Arc extensions.
 
 ### Remove the Defender extension
 
