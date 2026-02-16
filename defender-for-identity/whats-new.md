@@ -45,14 +45,14 @@ For updates about versions and features released six months ago or earlier, see 
 
 As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, the following alerts were converted from the Microsoft Defender for Identity classic format to the MDI XDR alert format.
 
-- [Pass-the-Ticket (PtT) attack (Preview)](/defender-for-identity/alerts-xdr.md#lateral-movement-alerts)
-- [Suspicious sign-in observed from Entra ID sync application to an uncommon resource app](/defender-for-identity/alerts-xdr.md#initial-access-alerts)
-- [Possible Active Directory Certificate Services enumeration](/defender-for-identity/alerts-xdr.md#discovery-alerts)
-- [Suspicious sign-in observed to Entra ID sync application using an uncommon user agent](/defender-for-identity/alerts-xdr.md#initial-access-alerts)
-- [Possible Active Directory enumeration via ADWS](/defender-for-identity/alerts-xdr.md#discovery-alerts)
-- [Possible OAuth code theft detected through consent abuse](/defender-for-identity/alerts-xdr.md#r#discovery-alerts)
-- [Suspicious NTLM authentication](/defender-for-identity/alerts-xdr.md#credential-access-alerts)
-- [Possible adversary-in-the-middle (AiTM) attack detected (ConsentFix)](/defender-for-identity/alerts-xdr.md#possible-adversary-in-the-middle-aitm-attack-detected-consentfix)
+- [Pass-the-Ticket (PtT) attack (Preview)](defender-for-identity/alerts-xdr.md#lateral-movement-alerts)
+- [Suspicious sign-in observed from Entra ID sync application to an uncommon resource app](defender-for-identity/alerts-xdr.md#initial-access-alerts)
+- [Possible Active Directory Certificate Services enumeration](defender-for-identity/alerts-xdr.md#discovery-alerts)
+- [Suspicious sign-in observed to Entra ID sync application using an uncommon user agent](defender-for-identity/alerts-xdr.md#initial-access-alerts)
+- [Possible Active Directory enumeration via ADWS](defender-for-identity/alerts-xdr.md#discovery-alerts)
+- [Possible OAuth code theft detected through consent abuse](defender-for-identity/alerts-xdr.md#discovery-alerts)
+- [Suspicious NTLM authentication](defender-for-identity/alerts-xdr.md#credential-access-alerts)
+- [Possible adversary-in-the-middle (AiTM) attack detected (ConsentFix)](defender-for-identity/alerts-xdr.md#possible-adversary-in-the-middle-aitm-attack-detected-consentfix)
 
 
 All alerts are based on detections from Defender for Identity sensors. For the full list of Microsoft Defender alerts see [Microsoft Defender for Identity XDR security alerts](alerts-xdr.md) .
