@@ -1,6 +1,6 @@
 ---
 title: Microsoft Defender coverage and maturity dashboard
-description: Learn how to use the Coverage & Maturity dashboard in Microsoft Defender to understand identity protection posture across on-premises, cloud, SaaS, and partner environments.
+description: Learn how to use the Coverage and maturity dashboard in Microsoft Defender to understand identity protection posture across on-premises, cloud, SaaS, and partner environments.
 ms.date: 02/16/2026
 ms.topic: how-to
 ms.author: abbyweisberg
@@ -10,9 +10,9 @@ ai-usage: ai-assisted
 ms.service: defender-xdr
 ---
 
-# Work with the Coverage & Maturity dashboard
+# Work with the Coverage and maturity dashboard
 
-The Coverage & Maturity dashboard provides a unified view of how well your identities are protected across the entire organization, including on-premises, cloud identity providers (IdPs), SaaS applications, and partner integrations.
+The Coverage and maturity dashboard provides a unified view of how well your identities are protected across the entire organization, including on-premises, cloud identity providers (IdPs), SaaS applications, and partner integrations.
 
 Use the dashboard to understand your current protection posture, identify gaps, and take clear actions to increase identity coverage and reduce risk.
 
@@ -24,7 +24,7 @@ The dashboard provides:
 
 ## Prerequisites
 
-To access the Coverage & Maturity dashboard, you need:
+To access the Coverage and maturity dashboard, you need:
 
 - A Microsoft Defender for Cloud Apps or Microsoft Defender for Identity license.
 - A user role with at least [Security Reader](/azure/active-directory/roles/permissions-reference#security-reader) permissions.
@@ -38,7 +38,7 @@ To access the dashboard, sign into Microsoft Defender and select **Identities > 
 
 ## Maturity score
 
-The maturity score, called the Identity Resiliency Index, shows how much of your identity infrastructure is covered by Microsoft Defender protections. The score consists of a maturity tier label and a visual progress bar with color progression (red to yellow to green).
+The maturity score shows how much of your identity infrastructure is protected by Microsoft Defender protections. The score consists of a maturity tier label and a visual progress bar with color progression (red to yellow to green).
 
 The maturity tiers are:
 
@@ -74,7 +74,7 @@ When you resolve all three displayed tasks, the section updates to show the next
 
 ## Review coverage cards
 
-The dashboard displays one coverage card for each identity domain: on-premises identities, SaaS identities, Entra ID identities, and PIM / PAM & IdPs. The cards you see depend on your environment and licensing. If you can enable coverage for a domain, the card provides a link to configure it.
+The dashboard displays one coverage card for each identity domain: on-premises identities, SaaS identities, Entra ID identities, and PIM / PAM and IdPs. The cards you see depend on your environment and licensing. If you can enable coverage for a domain, the card provides a link to configure it.
 
 Select anywhere on the card to open the side panel with details.
 
@@ -132,17 +132,17 @@ The Entra ID identities card shows the following information:
 | **Identity count** | Total Entra ID identities. Select to go to the identity inventory page with filter. |
 | **Deployment gaps** | Number of unresolved deployment gaps |
 
-### PIM / PAM & IdPs card
+### PIM / PAM and IdPs card
 
 When you connect identity providers and privileged access management solutions, you get a unified view for investigation across all identity providers. You can track user accounts across those providers, investigate activities in Advanced Hunting, and take remediation actions directly on identity provider accounts.
 
-The PIM / PAM & IdPs card shows the following information:
+The PIM / PAM and IdPs card shows the following information:
 
 | Item | Description |
 |---|---|
 | **Protection score** | Percentage of IdP providers deployed out of IdP providers discovered in use. Supported IdPs: Okta, PingOne, CyberArk Identity, SailPoint. |
-| **Coverage breakdown** | X IdPs installed / Y IdPs in use. Additional breakdown: Number of partners deployed. Supported PIM & PAM partners: BeyondTrust, Silverfort, Delinea, CyberArk. A tooltip describes the partner names. |
-| **Identity count** | Total PIM / PAM & IdPs identities. Select to go to the identity inventory page with filter. |
+| **Coverage breakdown** | X IdPs installed / Y IdPs in use. Additional breakdown: Number of partners deployed. Supported PIM and PAM partners: BeyondTrust, Silverfort, Delinea, CyberArk. A tooltip describes the partner names. |
+| **Identity count** | Total PIM / PAM and IdPs identities. Select to go to the identity inventory page with filter. |
 | **Deployment gaps** | Number of unresolved deployment gaps |
 
 
