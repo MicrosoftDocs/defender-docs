@@ -56,6 +56,10 @@ Select **Learn more** on the maturity score widget to open a side panel that exp
 - A list of all protection improvement tasks with the number of deployment gaps from all source cards.
 - A link to documentation.
 
+### Maturity score calculation
+
+The maturity score uses a weighted matrix of environment coverage and identity type depth. It distributes 100 points across critical domains. When you achieve full coverage across all identity types and environments, your maturity score reaches 100% and the dashboard displays "Fully licensed, fully deployed."
+
 ## Take recommended actions
 
 The recommended actions displays three action cards. Each action card includes a description, time estimate, and a **Take Action** button. The portal generates these actions based on the deployment gaps it identifies in the coverage cards.
@@ -141,9 +145,7 @@ The PIM / PAM & IdPs card shows the following information:
 | **Identity count** | Total PIM / PAM & IdPs identities. Select to go to the identity inventory page with filter. |
 | **Deployment gaps** | Number of unresolved deployment gaps |
 
-## Maturity score calculation
 
-The maturity score uses a weighted matrix of environment coverage and identity type depth. It distributes 100 points across critical domains. When you achieve full coverage across all identity types and environments, your maturity score reaches 100% and the dashboard displays "Fully licensed, fully deployed."
 
 ## Next steps
 
