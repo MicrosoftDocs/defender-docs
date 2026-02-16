@@ -108,7 +108,7 @@ Results are stored for 24 hours and can be accessed multiple times. You can expo
 
 :::image type="content" source="media/kql-queries/fetch-async-query-results.png" lightbox="media/kql-queries/fetch-async-query-results.png" alt-text="A screenshot showing the results of an async query in the KQL query editor.":::
 
-
+[!INCLUDE [Service limits for KQL async queries](../includes/service-limits-kql-async-queries.md)]
 
 ## Jobs
 
