@@ -3,8 +3,11 @@ title: Microsoft Defender coverage and maturity dashboard
 description: Learn how to use the Coverage & Maturity dashboard in Microsoft Defender to understand identity protection posture across on-premises, cloud, SaaS, and partner environments.
 ms.date: 02/16/2026
 ms.topic: how-to
+ms.author: abbyweisberg
+author: AbbyMSFT
 ms.reviewer: maelgami
 ai-usage: ai-assisted
+ms.service: Microsoft Defender
 ---
 
 # Work with the Coverage & Maturity dashboard

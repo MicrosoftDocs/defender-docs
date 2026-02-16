@@ -4,6 +4,9 @@ description: Learn how to enhance your organization's identity security.
 ms.topic: overview
 ms.date: 01/29/2026
 ms.reviewer: AbbyMSFT
+ms.author: abbyweisberg
+author: AbbyMSFT
+ms.service: Microsoft Defender
 ---
 
 # Identity Security
