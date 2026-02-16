@@ -112,18 +112,21 @@ Use the [install_defender_sensor_aks.sh](https://github.com/microsoft/Microsoft-
 Run the script with the command:
     
 ```azurecli
-install_defender_sensor_aks.sh --id <CLUSTER_AZURE_RESOURCE_ID> --version <VERSION> [--release_train <RELEASE_TRAIN>] [--antimalware]
-```
+install_defender_sensor_aks.sh --id <CLUSTER_AZURE_RESOURCE_ID> --version <VERSION> [--release_train <RELEASE_TRAIN>] [--namespace <NAMESPACE>] [--antimalware]
 
-Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, and `<VERSION>` with your own values. 
+Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<NAMESPACE>`, and `<VERSION>` with your own values:
 
 - Replace `<VERSION>` with:
-  - `latest` for the most recent version.
-  - A specific semantic version.
-    
+    - `latest` for the most recent version.
+    - A specific semantic version.
+
 - Replace `<RELEASE_TRAIN>` with:
-  - `stable` (default).
-  - `public` for the preview version.
+    - `stable` (default).
+    - `public` for the preview version.
+
+- Replace `<NAMESPACE>`:
+    - Use `kube-system` if you are deploying to AKS Automatic.
+    - Do not provide this parameter for standard AKS deployments (the script defaults to `mdc`).
     
 - Use the `--antimalware` flag to enable antimalware scanning.
 
@@ -191,10 +194,17 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
 
 ### Verify the installation
 
-Verify that the installation succeeded by using the command:
+Verify that the installation succeeded by using the appropriate command for your environment's namespace:
+
+# For standard AKS, EKS, and GKE
 
 ```bash
 helm list --namespace mdc
+```
+
+# For AKS Automatic
+```bash
+helm list --namespace kube-system
 ```
 
 The installation is successful if the `STATUS` field displays **deployed**.

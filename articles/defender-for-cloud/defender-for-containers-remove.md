@@ -70,7 +70,7 @@ az aks disable-addons \
 ### Check AKS cluster pods
 
 ```bash
-kubectl get pods -n mdc
+kubectl get pods -A | grep defender
 ```
 
 No resources should be returned.
@@ -176,6 +176,21 @@ Remove these resources only if runtime threat protection for EKS was enabled and
 > [!NOTE]
 > These resources are created per cluster. If you remove them while runtime protection is still enabled, data collection can stop.
 
+## Remove AWS IAM roles and identity providers (optional)
+
+If you are completely offboarding your AWS account from Microsoft Defender for Cloud, you can manually delete the IAM roles and identity providers that were created during onboarding. 
+
+Use the AWS console or CLI to delete the following roles if they exist:
+* `MDCContainersImageAssessmentRole`
+* `MDCContainersK8sRole`
+* `MDCContainersK8sDataCollectionRole`
+* `MDCContainersK8sCloudWatchToKinesisRole`
+* `MDCContainersK8sKinesisToS3RoleName`
+* `MDCContainersAgentlessDiscoveryK8sRole`
+
+> [!WARNING]
+> Only delete the `ASCDefendersOIDCIdentityProvider` OpenID Connect provider if you are removing **all** Defender for Cloud components from this AWS account. Deleting this shared component will affect other Defender for Cloud plans.
+
 ## Verify removal
 
 ### Check Azure Arc extensions
@@ -276,6 +291,24 @@ Remove these resources only if runtime threat protection for GKE was enabled and
 - Delete the Pub/Sub topic and subscription that use the `MicrosoftDefender-` prefix.
 
 - Delete the Cloud Logging sink that was created for Defender for Containers.
+
+## Remove GCP service accounts and roles (optional)
+
+If you are completely offboarding your GCP project from Microsoft Defender for Cloud, you can manually delete the service accounts and roles created during onboarding.
+
+Use the Google Cloud console or gcloud CLI to delete the following service accounts:
+* `ms-defender-containers`
+* `ms-defender-containers-stream`
+* `mdc-containers-k8s-operator`
+* `mdc-containers-artifact-assess`
+
+Delete the following custom roles:
+* `MicrosoftDefenderContainersDataCollectionRole`
+* `MicrosoftDefenderContainersRole`
+* `MDCGkeClusterWriteRole`
+
+> [!WARNING]
+> Only delete the `containers` and `containers-streams` OIDC workload identity pool providers if you are removing **all** Defender for Cloud components. These are shared components. Additionally, ensure no other non-Defender services are using the `logging.googleapis.com` API before disabling it.
 
 ## Verify removal
 

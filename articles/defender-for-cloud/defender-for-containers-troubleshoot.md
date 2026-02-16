@@ -15,7 +15,7 @@ This article provides troubleshooting guidance for common deployment and operati
 
 ### Common deployment issues
 
-- **Defender profile installation fails**
+- **Defender sensor installation fails**
   - **Symptoms:** `kubectl get pods -n kube-system -l app=microsoft-defender` shows **Defender sensor** pods in `Pending`, `CrashLoopBackOff`, or `Error`.
   - **Resolution:**
     - **Insufficient resources:** Check node capacity. Use `kubectl top nodes` to verify if nodes have enough CPU and memory to schedule the sensor.

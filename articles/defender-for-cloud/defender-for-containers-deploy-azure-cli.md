@@ -35,7 +35,7 @@ For clusters that aren’t running in Azure Kubernetes Service (AKS), Defender f
 
 If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](#verify-deployment) before running these commands.
 
-If you deploy AKS using infrastructure-as-code (IaC), you can also [deploy the Defender sensor using an ARM template](#deploy-using-azure-resource-manager-arm).
+### Option 1: Deploy using Azure CLI
 
 To deploy the Defender sensor to a specific AKS cluster:
 
@@ -59,9 +59,9 @@ az aks update \
 Replace `<workspace-resource-id>` with the full Log Analytics workspace resource ID. 
 For example, `/subscriptions/<subscription-id>/resourceGroups/<workspace-rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>`.
 
-### Deploy using Azure Resource Manager (ARM)
+### Option 2: Deploy using Azure Resource Manager (ARM)
 
-Alternitavely, you can deploy the following ARM template to enable the Defender sensor on an AKS cluster:
+For teams using Infrastructure-as-Code (IaC) for AKS deployment, you can enable the Defender sensor by adding the `securityProfile` block to your ARM template.
 
 ```json
 {
