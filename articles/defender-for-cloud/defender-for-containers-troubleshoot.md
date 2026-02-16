@@ -15,15 +15,19 @@ This article provides troubleshooting guidance for common deployment and operati
 
 ### Common deployment issues
 
-- **Sensor pods not running** – **Symptoms:** `kubectl get pods -n kube-system -l app=microsoft-defender` shows pods in `Pending`, `CrashLoopBackOff`, or `Error`.
-  - **Insufficient resources:** Check node capacity. Use `kubectl top nodes` to verify if nodes have enough CPU and memory to schedule the DaemonSet.
-  - **Network egress:** Verify your cluster firewall or NSG allows outbound traffic to the [required FQDNs](defender-for-containers-azure-overview.md#prerequisites). 
-  - **Taints and Tolerations:** Ensure node taints aren't preventing the Defender pods from scheduling on specific node pools.
+- **Defender profile installation fails**
+  - **Symptoms:** `kubectl get pods -n kube-system -l app=microsoft-defender` shows **Defender sensor** pods in `Pending`, `CrashLoopBackOff`, or `Error`.
+  - **Resolution:**
+    - **Insufficient resources:** Check node capacity. Use `kubectl top nodes` to verify if nodes have enough CPU and memory to schedule the sensor.
+    - **Network egress:** Verify your cluster firewall or NSG allows outbound traffic to the [required FQDNs](defender-for-containers-azure-overview.md#prerequisites). 
+    - **Taints and Tolerations:** Ensure node taints aren't preventing the pods from scheduling on specific node pools.
 
-- **Missing recommendations** – **Symptoms:** Clusters show as "Healthy" but specific recommendations like "AKS clusters should have Defender profile enabled" are missing.
-  - **Wait time:** Assessment scans can take up to 24 hours to reflect in the Defender for Cloud dashboard.
-  - **Exclusion tags:** Check if the resource has the tag `ms_defender_container_exclude_sensors` = `true`.
-  - **Policy Add-on:** Ensure the Azure Policy add-on is installed; without it, configuration-based recommendations will not trigger.
+- **Missing recommendations**
+  - **Symptoms:** Clusters show as "Healthy" but specific recommendations like "AKS clusters should have **Defender profile** enabled" are missing.
+  - **Resolution:**
+    - **Wait time:** Assessment scans can take up to 24 hours to reflect in the dashboard.
+    - **Exclusion tags:** Check if the resource has the tag `ms_defender_container_exclude_sensors` = `true`.
+    - **Policy Add-on:** Ensure the Azure Policy add-on is installed; without it, configuration-based recommendations will not trigger.
 
 ### Vulnerability scan issues
 
@@ -68,7 +72,7 @@ This article provides troubleshooting guidance for common deployment and operati
   - **Registry access:** Confirm this component is enabled in the GCP connector settings.
   - **Audit log scoping:** Ensure GCP audit logging is configured for `SYSTEM`, `WORKLOAD`, and `API_SERVER`. Avoid enabling additional log types unless required by your organization to prevent unnecessary logging costs.
 
-# [Azure Arc–enabled Kubernetes](#tab/arc)
+# [Arc-enabled Kubernetes](#tab/arc)
 
 ### Arc Connectivity
 
@@ -85,9 +89,10 @@ This article provides troubleshooting guidance for common deployment and operati
   - **Reinstallation:** If the extension remains stuck, delete and recreate it via CLI:
     `az k8s-extension delete --cluster-name <name> --resource-group <rg> --cluster-type connectedClusters --name microsoft.azuredefender.kubernetes`
 
-- **Sensor pod "ImagePullBackOff"**
-  - **MCR Connectivity:** Verify nodes can reach `mcr.microsoft.com` to pull the security sensor image.
-  - **Namespace conflicts:** Ensure no other security solutions or admission controllers are interfering with the `kube-system` or `mdc` namespaces.
+- **Defender sensor pod "ImagePullBackOff"**
+  - **Symptoms:** Pods fail to start with an image pull error.
+  - **Resolution:** - **MCR Connectivity:** Verify nodes can reach `mcr.microsoft.com` to pull the **Defender sensor** image.
+    - **Namespace conflicts:** Ensure no other security solutions or admission controllers are interfering with the `kube-system` or `mdc` namespaces.
 
 ---
 
