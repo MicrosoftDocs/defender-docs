@@ -85,7 +85,7 @@ To add the entity analyzer tool by using an existing logic app:
             ```
             {
             "entityType": "User",
-            "userId": "[Microsoft Entra object ID]"
+            "userId": "[Microsoft Entra object ID or User Prinicpal Name]"
             }
             ```
         You can enter these properties either manually or as dynamic values from previous actions.
@@ -103,10 +103,9 @@ Every logic app connector requires an authentication connection. This new action
 
 Running multiple instances of the entity analyzer at the same time can increase latency for each run. This issue is especially important when you use a **For each** loop in your entity analyzer logic apps, because it can queue multiple analyses at once (for example, multiple users in an incident, multiple incidents triggered at once). 
 
-To prevent timeouts from too many analyses running at once, turn on the **Concurrency control** in the **For each** action. Start by setting the **Degree of parallelism** to `5` and then adjust it as needed based on how the analyzer runs in your organization.
+To prevent timeouts from too many analyses running at once and to avoid hitting the entity analyzer's [preview thresholds](sentinel-mcp-billing.md#microsoft-sentinel-entity-analyzer-tool-1), turn on the **Concurrency control** in the **For each** action. Start by setting the **Degree of parallelism** to `5` and then adjust it as needed based on how often the logic app is triggered in your organization. 
 
 :::image type="content" source="media/sentinel-mcp/logic-app-concurrency.png" alt-text="Screenshot of the logic app loop settings." lightbox="media/sentinel-mcp/logic-app-concurrency.png":::
-
 
 For more information about loops, see [Add loops to repeat actions in workflows for Azure Logic Apps](../../logic-apps/logic-apps-control-flow-loops.md).
 
