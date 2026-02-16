@@ -3,7 +3,7 @@ title: Turn on network protection
 description: Enable network protection with Group Policy, PowerShell, or Mobile Device Management and Configuration Manager.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 01/05/2026
+ms.date: 02/16/2026
 ms.topic: how-to
 author: paulinbar
 ms.author: painbar
@@ -131,7 +131,7 @@ To enable network protection, you can use any of the methods described in this a
 
 3. On the **Microsoft Defender for Endpoint Security Baseline \| Profiles** page, select **Create policy**.
 
-4. On the **Create profile** flyout that opens, select **Create**.
+4. On the **Create a profile** flyout that opens, select **Create**.
 
 5. The **Create profile** wizard opens. On the **Basics** tab, configure the following settings:
    - **Name**: Enter a unique, descriptive name for the policy.
@@ -142,7 +142,8 @@ To enable network protection, you can use any of the methods described in this a
 6. On the **Configuration settings** tab, expand **Defender** and then select one of the following values for **Enable network protection**:
    - **Disabled**
    - **Enabled (block mode)**
-   - **Enable Network Protection**
+   - **Enabled (audit mode)**
+   - **Not configured**
 
    Select **Next**.
 
@@ -178,9 +179,10 @@ To enable network protection, you can use any of the methods described in this a
    Select **Next**.
 
 5. On the **Configuration settings** tab, select one of the following values for **Enable network protection**:
-   - **Disabled**
+   - **Not configured**
+   - **Disabled (Default)**
    - **Enabled (block mode)**
-   - **Enable Network Protection**
+   - **Enabled (audit mode)**
 
    Select **Next**.
 
@@ -218,7 +220,7 @@ To enable network protection, you can use any of the methods described in this a
 
 5. On the **Configuration settings** tab, select **Microsoft Defender Exploit Guard** > **Network filtering**.
 
-   Change the **Network protection** value from **Not configured** to **Audit** (for testing and observation) or **Enable**.
+   Change the **Network protection** value from **Not configured** to **Disable**, **Enable**, or **Audit** (for testing and observation).
 
    Select **Next**.
 
