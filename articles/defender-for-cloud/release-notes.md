@@ -31,10 +31,11 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| February 10, 2026 | Preview | [Database-level recommendations experience for SQL Vulnerability Assessment findings (Preview)](#database-level-recommendations-experience-for-sql-vulnerability-assessment-preview) |
-| February 10, 2026 | GA | [Scanning support for Minimus and Photon OS container images](#scanning-support-for-minimus-and-photon-os-container-images) |
-| February 9, 2026 | GA | [Simulate alerts for SQL servers on machines](#simulate-alerts-for-sql-servers-on-machines) |
-| February 3, 2026 | Preview | [Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview) |
+|February 10, 2026| Preview | [Database-level recommendations experience for SQL Vulnerability Assessment findings (Preview)](#database-level-recommendations-experience-for-sql-vulnerability-assessment-preview) |
+|February 10, 2026| GA | [Scanning support for Minimus and Photon OS container images](#scanning-support-for-minimus-and-photon-os-container-images) |
+|February 9, 2026| GA | [Simulate alerts for SQL servers on machines](#simulate-alerts-for-sql-servers-on-machines) |
+|February 2, 2026| GA | [Updated CIEM recommendation logic](#updated-ciem-recommendation-logic) |
+|February 2, 2026| Preview | [Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview) |
 
 ### Database-level recommendations experience for SQL Vulnerability Assessment (Preview)
 
@@ -78,7 +79,33 @@ Simulated alerts generates realistic alerts with full SQL and machine context on
 
 Learn how to [simulate alerts for SQL servers on machines](simulate-alerts-sql-machines.md).
 
-### Threat protection for AI agents (Preview)
+## Updated CIEM recommendation logic  
+
+February 2, 2026
+
+Cloud Infrastructure Entitlement Management (CIEM) recommendations are now available as a native capability in Microsoft Defender for Cloud across Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP).
+
+This update changes how inactive identities and over-permissioned roles are evaluated and improves recommendation accuracy. It may affect existing recommendation results.
+
+### Key changes
+
+- Inactive identity detection now evaluates unused role assignments instead of sign-in activity.
+- The inactivity lookback window is extended to 90 days (previously 45 days).
+- Identities created within the past 90 days aren’t evaluated as inactive.
+- The Permissions Creep Index (PCI) metric is deprecated and no longer appears in recommendations.
+- CIEM onboarding no longer requires elevated high-risk permissions.
+
+### Cloud-specific considerations
+
+| Cloud | Details |
+|--------|---------|
+| **Azure** | Inactive identity recommendations include evaluation of read-level permissions. |
+| **AWS** | CIEM evaluates AWS users and roles whose permissions can be reliably assessed. SAML and SSO identities require [AWS CloudTrail Logs (Preview)](integrate-cloud-trail.md) to be enabled in the Defender CSPM plan. Serverless and compute identities are excluded from CIEM inactivity evaluation, which might affect recommendation counts. |
+| **GCP** | CIEM evaluation requires [Cloud Logging ingestion (Preview)](logging-ingestion.md) to be enabled in the Defender CSPM plan. |
+
+Learn more about [permissions management in Defender for Cloud](permissions-management.md).
+
+## Threat protection for AI agents (Preview)
 
 February 2, 2026 
 
