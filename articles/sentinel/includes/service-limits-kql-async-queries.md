@@ -5,7 +5,7 @@ ms.topic: include
 ms.date: 02/16/2026
 ---
 
-## Service parameters and limits for KQL Async queries
+## Service parameters and limits for KQL async queries
 
 
 The following table lists the service parameters and limits for KQL async queries in the Microsoft Sentinel data lake.
