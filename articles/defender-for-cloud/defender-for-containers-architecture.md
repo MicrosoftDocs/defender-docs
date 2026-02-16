@@ -8,7 +8,7 @@ ms.date: 02/16/2026
 # customer intent: As a developer, I want to understand the container security architecture of Microsoft Defender for Containers so that I can implement it effectively.
 ---
 
-# Defender for Containers architecture (new)
+# Defender for Containers architecture
 
 Defender for Containers uses a different architecture depending on the Kubernetes environment:
 
@@ -51,7 +51,7 @@ For more information about implementation details such as supported operating sy
 
 # [**Azure (AKS)**](#tab/defender-for-container-arch-aks)
 
-### Architecture diagram
+### Architecture components
 
 When Defender for Cloud protects a cluster hosted in Azure Kubernetes Service, it collects Kubernetes audit log data natively through Azure infrastructure without requiring additional agents or configuration. To get the full protection offered by Microsoft Defender for Containers, you need these components:
 
@@ -107,7 +107,7 @@ When you enable the agentless discovery for Kubernetes extension, the following 
 
 # [**On-premises / IaaS (Arc)**](#tab/defender-for-container-arch-arc)
 
-### Architecture diagram
+### Architecture components
 
 To get full protection from Microsoft Defender for Containers, you need these components:
 
@@ -122,7 +122,7 @@ To get full protection from Microsoft Defender for Containers, you need these co
 
 # [**AWS (EKS)**](#tab/defender-for-container-arch-eks)
 
-### Architecture diagram
+### Architecture components
 
 When Defender for Cloud protects a cluster hosted in Elastic Kubernetes Service, it collects audit log data without using an agent. To get the full protection offered by Microsoft Defender for Containers, you need these components:
 
@@ -152,7 +152,7 @@ When you enable the agentless discovery for Kubernetes extension, the following 
 
 # [**GCP (GKE)**](#tab/defender-for-container-gke)
 
-### Architecture diagram
+### Architecture components
 
 When Defender for Cloud protects a cluster hosted in Google Kubernetes Engine, it collects audit log data without using an agent. To get full protection from Microsoft Defender for Containers, you need these components:
 

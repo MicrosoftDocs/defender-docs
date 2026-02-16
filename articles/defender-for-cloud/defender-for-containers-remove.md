@@ -45,7 +45,7 @@ After you remove Defender for Containers components from an AKS cluster:
 
 1. Select **Save**.
 
-## Remove Defender components from clusters
+## Remove Defender extensions from AKS clusters
 
 ### Remove the Defender for Containers profile from the AKS cluster
 
@@ -225,6 +225,8 @@ After you remove Defender for Containers components from a GKE cluster:
 - Alerts based on Kubernetes runtime and audit signals stop being generated.
 
 - Container image vulnerability findings for images in Google Container Registry or Artifact Registry stop updating for this environment.
+
+## Remove Defender extensions from GKE clusters
 
 ### Remove the Defender extension
 
