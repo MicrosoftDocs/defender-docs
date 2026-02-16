@@ -44,13 +44,11 @@ In order for your session policy to work, you must also have a Microsoft Entra I
 This procedure describes how to create a new session policy in Defender for Cloud Apps.
 
 1. In Microsoft Defender XDR, select the **Cloud Apps > Policies > Policy management > Conditional Access** tab.
-
 1. Select **Create policy** > **Session policy**. For example:
 
     ![Screenshot of the Create a Conditional Access policy page.](media/create-policy-from-conditional-access-tab.png)
    
 1. On the **Create session policy** page, start by either selecting a template from the **Policy template** dropdown, or by entering all details manually.
-
 1. <a name="type"></a>Enter the following basic information for your policy. If you're using a template, much of the content is already filled in for you.
 
     |Name  |Description  |
@@ -84,7 +82,6 @@ This procedure describes how to create a new session policy in Defender for Clou
 1. Configure extra options available for any specific session control types. 
 
     For example, if you selected **Block activities**, select **Use content inspection** to inspect the activity content, and then configure your settings as needed. In this case, you may want to inspect for text that includes specific expressions, such as a social security number.
-
 1.  If you selected **Control file download (with inspection)** or **Control file upload (with inspection)**, configure the **Files matching all of the following** settings.
 
     1. Configure one of the following file filters:
@@ -146,7 +143,6 @@ If you encounter errors or issues, use the admin toolbar to gather resources suc
 **To check for updates in Microsoft Defender XDR**:
 
 1. In the [Microsoft Defender Portal](https://security.microsoft.com), under **Cloud Apps**, go to **Policies**, then select **Policy management**. 
-
 1. Select the policy you've created to view the policy report. A session policy match should appear shortly.
 
 The policy report shows which sign-ins were redirected to Microsoft Defender for Cloud Apps for session control, as well as any other actions, such as which files were downloaded or blocked from the monitored sessions.
@@ -171,16 +167,13 @@ Conditional Access App Control records the traffic logs of every user session th
 To export Cloud discovery logs from the cloud discovery dashboard:
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **Conditional Access App Control**.
-
 1. Above the table, select the export button. For example:
 
     :::image type="content" source="media/activity-filters/export-button.png" alt-text="Screenshot that shows the export button.":::
 
    
 1. Select the range of the report and select **Export**. This process may take some time.
-
 1. To download the exported log after the report is ready, in the Microsoft Defender Portal go to **Reports** -> **Cloud Apps** and then **Exported reports**.
-
 1. In the table, select the relevant report from the list of **Conditional Access App Control traffic logs** and select **Download**. For example:
 
     ![Screenshot of the download button.](media/download-button.png)
@@ -318,6 +311,3 @@ For more information, see:
 - [Troubleshooting access and session controls](troubleshooting-proxy.md)
 - [Tutorial: Block download of sensitive information with Conditional Access App Control](use-case-proxy-block-session-aad.md)
 - [Blocking downloads on unmanaged devices using session controls](use-case-proxy-block-session-aad.md)
-- [Conditional Access App Control webinar](webinars.md#on-demand-webinars)
-
-[!INCLUDE [Open support ticket](includes/support.md)]
