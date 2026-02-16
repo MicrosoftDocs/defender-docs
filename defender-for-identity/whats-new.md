@@ -45,7 +45,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, the following alerts were converted from the Microsoft Defender for Identity classic format to the MDI XDR alert format.
 
-- [Pass-the-Ticket (PtT) attack (Preview)](/defender-for-identity/alerts-xdr.md#-pass-the-ticket-ptt-attack-preview)
+- [Pass-the-Ticket (PtT) attack (Preview)](/defender-for-identity/alerts-xdr.md#lateral-movement-alerts)
 - [Suspicious sign-in observed from Entra ID sync application to an uncommon resource app](/defender-for-identity/alerts-xdr.md#initial-access-alerts)
 - [Possible Active Directory Certificate Services enumeration](/defender-for-identity/alerts-xdr.md#discovery-alerts)
 - [Suspicious sign-in observed to Entra ID sync application using an uncommon user agent](/defender-for-identity/alerts-xdr.md#initial-access-alerts)
