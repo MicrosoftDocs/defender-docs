@@ -13,7 +13,7 @@ ms.author: edbaynash
 ---  
 
 
-## Microsoft Sentinel data lake service parameters and limits
+# Microsoft Sentinel data lake service parameters and limits
 
 The following service parameters and limits apply to the Microsoft Sentinel data lake service.
 
