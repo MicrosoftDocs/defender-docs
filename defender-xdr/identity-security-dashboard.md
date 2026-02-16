@@ -7,7 +7,7 @@ ms.author: abbyweisberg
 author: AbbyMSFT
 ms.reviewer: maelgami
 ai-usage: ai-assisted
-ms.service: Microsoft Defender
+ms.service: defender-xdr
 ---
 
 # Work with the Coverage & Maturity dashboard
@@ -58,23 +58,13 @@ Select **Learn more** on the maturity score widget to open a side panel that exp
 
 ## Take recommended actions
 
-The recommended actions section appears directly below the maturity score and displays three contextual action cards. Each action card includes a description, time estimate, and a **Take Action** button. The portal sources these actions from the deployment gaps it identifies across the coverage cards.
+The recommended actions displays three action cards. Each action card includes a description, time estimate, and a **Take Action** button. The portal generates these actions based on the deployment gaps it identifies in the coverage cards.
 
 The portal sorts gaps by impact, highest first. The priority order for deployment gaps is:
 
 1. On-premises sensor deployment, Entra ID connector, and App Governance.
 1. SaaS app connectors.
 1. IdP / PAM / PIM integrations.
-
-The effort and impact for each gap type are:
-
-| Gap type | Effort | Impact |
-|---|---|---|
-| Entra ID tasks | Low | High |
-| SaaS app connectors | Low | Medium |
-| On-premises sensor configuration | Low | Low |
-| Legacy sensor configuration | Medium | Low |
-| IdP and partner configuration | Low | Medium |
 
 When you resolve all three displayed tasks, the section updates to show the next three deployment gaps. When no deployment gaps remain, the section indicates that your environment is fully protected.
 

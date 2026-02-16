@@ -6,7 +6,7 @@ ms.date: 01/29/2026
 ms.reviewer: AbbyMSFT
 ms.author: abbyweisberg
 author: AbbyMSFT
-ms.service: Microsoft Defender
+ms.service: defender-xdr
 ---
 
 # Identity Security
@@ -21,7 +21,7 @@ Defender identity security includes the following capabilities:
 
 - **Unified identity inventory**: Consolidates identity accounts and their relationships across on-premises Active Directory, Entra ID, SaaS applications, and third-party identity providers into a single view. This enables you to see all identities in your organization regardless of where they're managed.
 
-- **Coverage & Maturity dashboard**: Shows your current identity protection posture with a maturity score that indicates how well your identities are protected. The dashboard identifies deployment gaps and provides recommended actions to improve coverage. For more information, see [Work with the Coverage & Maturity dashboard](identity-security-dashboard.md).
+- **Coverage & maturity dashboard**: Shows your current identity protection posture with a maturity score that indicates how well your identities are protected. The dashboard identifies deployment gaps and provides recommended actions to improve coverage. For more information, see [Work with the Coverage & Maturity dashboard](identity-security-dashboard.md).
 
 - **Identity risk score**: Aggregates signals from Microsoft Defender for Identity, Microsoft Entra ID Protection, and other sources into a unified risk score. This score drives policy enforcement through Conditional Access and enables automated threat response.
 
