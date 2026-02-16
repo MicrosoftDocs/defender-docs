@@ -41,7 +41,7 @@ Defender for Containers provides the following capabilities for AKS environments
 > [!NOTE]
 > Available signals and detections depend on cluster configuration and enabled components.
 
-## Architecture for AKS
+## Architecture components
 
 The Defender for Containers architecture for AKS consists of Azure-managed and Kubernetes-native components:
 
@@ -56,7 +56,7 @@ Learn more about [container security architecture](defender-for-containers-archi
 
 # [Amazon Elastic Kubernetes Service (EKS)](#tab/eks)
 
-Microsoft Defender for Containers extends enterprise-grade security to Amazon Elastic Kubernetes Service (EKS) clusters, helping security and DevOps teams gain visibility into container image vulnerabilities, runtime activity, and cluster configuration risks through Microsoft Defender for Cloud.
+Microsoft Defender for Containers extends security monitoring and protection to Amazon Elastic Kubernetes Service (EKS) clusters to provide visibility into container image vulnerabilities, runtime activity, and cluster configuration risks through Microsoft Defender for Cloud.
 
 ## Integration with AWS
 
@@ -81,7 +81,7 @@ Defender for Containers provides the following capabilities for Amazon EKS envir
 > [!NOTE]
 > Available signals and detections depend on cluster configuration and enabled data sources.
 
-## Architecture for Amazon EKS
+## Architecture components
 
 The Defender for Containers architecture for Amazon EKS consists of:
 
@@ -122,7 +122,7 @@ Defender for Containers provides the following capabilities for GKE environments
 > [!NOTE]
 > Available signals and detections depend on cluster configuration and enabled data sources.
 
-## Architecture for GKE
+## Architecture components
 
 The Defender for Containers architecture for GKE consists of:
 
@@ -167,7 +167,7 @@ Defender for Containers provides the following capabilities for Arc-enabled Kube
 > [!NOTE]
 > Available signals, detections, and posture assessments depend on enabled components and cluster configuration.
 
-## Architecture for Arc-enabled Kubernetes
+## Architecture components
 
 The Defender for Containers architecture for Arc-enabled Kubernetes consists of:
 
@@ -181,6 +181,36 @@ These components are deployed and managed through Azure Arc and are scoped to th
 Learn more about [container security architecture](defender-for-containers-architecture.md#architecture-for-each-kubernetes-environment).
 
 ---
+
+## Deployment flow
+
+Deploying Defender for Containers includes the following phases:
+
+1. **Connect the environment**
+
+   - **AKS:** Enable the Defender for Containers plan on the subscription.
+   - **AWS:** Configure the AWS connector to connect your AWS account to Microsoft Defender for Cloud.
+   - **GCP:** Configure the GCP connector to connect your GCP projects to Microsoft Defender for Cloud.
+   - **Non-Azure clusters:** Connect the Kubernetes cluster to Azure Arc.
+
+1. **Enable the Defender for Containers plan**
+
+   Enabling the plan activates runtime protection, vulnerability assessment, and security posture capabilities for the connected environment.
+
+1. **Deploy required components**
+
+   Depending on the environment, Defender for Containers deploys the required components:
+
+   - Native AKS integrations
+   - Azure Arc extensions
+   - Defender sensor (if applicable)
+
+1. **Verify coverage and signals**
+
+   After deployment, verify that components and capabilities are active:
+
+   - Review the coverage workbook to confirm enabled plans and components.
+   - Check the Recommendations and Alerts pages in Defender for Cloud to validate signal ingestion.
 
 ## View your current coverage
 
