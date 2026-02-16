@@ -25,7 +25,7 @@ If vulnerabilities are found for a Kubernetes node, a recommendation is generate
 1. From the navigation menu, under **General**, select **Recommendations**.
 :::image type="content" source="media/kubernetes-nodes-va/recommendations-list.png" alt-text="Screenshot of selecting the recommendations submenu of the Defender for Cloud pane." lightbox="media/kubernetes-nodes-va/recommendations-list.png":::
 
-1. Select the **"AKS nodes should have vulnerability findings resolved"** recommendation.
+1. Select the `AKS nodes should have vulnerability findings resolved` recommendation.
 :::image type="content" source="media/kubernetes-nodes-va/recommendations-list-select-nodes-va.png" alt-text="Screenshot showing the selection of the nodes recommendation line." lightbox="media/kubernetes-nodes-va/recommendations-list-select-nodes-va.png":::
 
 1. The full details of the Kubernetes node recommendation are shown. Along with a full description of the vulnerability, other details such as the name of the affected Kubernetes node pool and its cluster are presented.
