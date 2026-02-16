@@ -51,9 +51,9 @@ This article provides troubleshooting guidance for common deployment and operati
 
 - **No control plane alerts generated**
   - **Audit logging:** Audit logs must be enabled for each cluster. Run:
-    `aws eks update-cluster-config --name <cluster-name> --logging '{"clusterLogging":[{"types":["audit"],"enabled":true}]}'`
+    `aws eks update-cluster-config --name <cluster-name> --logging '{"clusterLogging":[{"types":["audit","authenticator"],"enabled":true}]}'`
   - **SQS Configuration:** Verify that CloudTrail is correctly sending logs to the SQS queue used by the connector. Check for bolded SQS ARN accuracy in the connector settings.
-
+  
 # [Google Kubernetes Engine (GKE)](#tab/gke)
 
 ### Posture and Discovery
