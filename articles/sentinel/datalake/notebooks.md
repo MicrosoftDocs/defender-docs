@@ -77,6 +77,15 @@ After installing the Microsoft Sentinel extension, you can start exploring data 
  
    :::image type="content" source="./media/notebooks/select-account.png" lightbox="./media/notebooks/select-account.png" alt-text="A screenshot showing the account selection list at the top of the page."::: 
 
+    If you have multiple accounts associated with your login you can switch between accounts without having to authenticate again by selecting the account name at the bottom left of the Visual Studio Code window.
+
+   > [!NOTE] 
+   > Switching accounts disconnect any pyspark sessions that are currently active. 
+
+
+    :::image type="content" source="./media/notebooks/account-picker.png" lightbox="./media/notebooks/account-picker.png" alt-text="A screenshot showing how to switch accounts in Visual Studio Code.":::
+  
+
 ### View data lake tables and jobs
 
 Once you sign in, the Sentinel extension displays a list of **Lake tables** and **Jobs** in the left pane. The tables are grouped by the database and category. Select a table to see the column definitions.
