@@ -37,9 +37,8 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |February 10, 2026| GA | [Scanning support for Minimus and Photon OS container images](#scanning-support-for-minimus-and-photon-os-container-images) |
 |February 9, 2026| GA | [Simulate alerts for SQL servers on machines](#simulate-alerts-for-sql-servers-on-machines) |
 |February 2, 2026| GA | [Updated CIEM recommendation logic](#updated-ciem-recommendation-logic) |
-|February 2, 2026| Preview | [Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview) |
+|February 2, 2026| Preview | [Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview) |
 
-#
 ### Deprecation of preview of container and container images vulnerability recommendations
 
 February 17, 2026
@@ -158,7 +157,7 @@ The SQL [vulnerability assessment rules reference](sql-azure-vulnerability-asses
 
 The existing server-level (aggregated) experience remains available during preview.
 
-## Scanning support for Minimus and Photon OS container images
+### Scanning support for Minimus and Photon OS container images
 
 February 10, 2026
 
@@ -174,7 +173,7 @@ Simulated alerts generates realistic alerts with full SQL and machine context on
 
 Learn how to [simulate alerts for SQL servers on machines](simulate-alerts-sql-machines.md).
 
-## Updated CIEM recommendation logic  
+### Updated CIEM recommendation logic  
 
 February 2, 2026
 
@@ -182,7 +181,7 @@ Cloud Infrastructure Entitlement Management (CIEM) recommendations are now avail
 
 This update changes how inactive identities and over-permissioned roles are evaluated and improves recommendation accuracy. It may affect existing recommendation results.
 
-### Key changes
+#### Key changes
 
 - Inactive identity detection now evaluates unused role assignments instead of sign-in activity.
 - The inactivity lookback window is extended to 90 days (previously 45 days).
@@ -190,7 +189,7 @@ This update changes how inactive identities and over-permissioned roles are eval
 - The Permissions Creep Index (PCI) metric is deprecated and no longer appears in recommendations.
 - CIEM onboarding no longer requires elevated high-risk permissions.
 
-### Cloud-specific considerations
+#### Cloud-specific considerations
 
 | Cloud | Details |
 |--------|---------|

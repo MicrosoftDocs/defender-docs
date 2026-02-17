@@ -4,7 +4,7 @@ description: Learn how to review security recommendations in Microsoft Defender 
 ms.topic: how-to
 author: dlanger
 ms.author: dlanger
-ms.date: 02/08/2026
+ms.date: 02/17/2026
 ms.custom: sfi-image-nochange
 zone_pivot_groups: defender-portal-experience
 #customer intent: As a security analyst, I want to learn how to review security recommendations in Microsoft Defender for Cloud so that I can improve the security posture of my environments.
@@ -220,7 +220,7 @@ You can interact with recommendations in multiple ways. If an option isn't avail
    >[!NOTE]
    >With the new individual recommendation format, governance works at the finding level. You can assign owners and due dates to specific findings, and you can use governance rules with resource tags (for example, Team: DataPlatform) to automatically route recommendations to the correct owner or queue.
 
-:::image type="content" source="media/review-security-recommendations/take-action.png" alt-text="" lightbox="media/review-security-recommendations/take-action.png":::
+:::image type="content" source="media/review-security-recommendations/take-action.png" alt-text="Screenshot showing the Take action tab with options for Remediate, Assign owner and due date, Exempt, and Workflow automation." lightbox="media/review-security-recommendations/take-action.png":::
 
 1. In **Graph**, view and investigate all the context that's used for risk prioritization, including [attack paths](how-to-manage-attack-path.md). You can select a node in an attack path to view the details of the selected node.
 

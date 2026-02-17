@@ -4,7 +4,7 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how Defender for Cloud prioritizes security recommendations and mitigates risks to protect your environment.
 ms.topic: concept-article
-ms.date: 02/11/2026
+ms.date: 02/17/2026
 ai-usage: ai-assisted
 #customer intent: As a security analyst, I want to understand how Defender for Cloud prioritizes security risks so that I can effectively protect my environment.
 ---
@@ -34,6 +34,7 @@ These comprehensive guides include:
 - Integration with attack path analysis
 
 For portal-specific guidance:
+
 - **For Azure portal users**: [Review security recommendations - Azure portal](security-recommendations.md?pivots=azure-portal)
 - **For Defender portal users**: [Review security recommendations - Defender portal](review-security-recommendations.md?pivots=defender-portal)
 
