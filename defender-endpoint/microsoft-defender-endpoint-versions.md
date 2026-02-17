@@ -636,8 +636,11 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 | -------- | -------- | -------- |
 | Platform | 4.18.25110.6 | December 17, 2025 |
 | Engine | 1.1.25110.1 | December 11, 2025 |
-| Security intelligence | 1.443.6.0 | December 17, 2025 |
+| Security intelligence<sup>1</sup> | 1.443.6.0 | December 17, 2025 |
 | Support phase | Security and Critical Updates | - |
+
+<sup>1</sup>This version of security intelligence is the version relevant to this engine release. Newer versions of security intelligence are released regularly. For more information, see [
+Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates).
 
 #### Enhancements and features
 
@@ -660,8 +663,11 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 | -------- | -------- | -------- |
 | Platform | 4.18.25100.9008 | November 17, 2025 |
 | Engine | 1.1.25100.9002 | November 6, 2025 |
-| Security intelligence | 1.441.131.0 | November 17, 2025 |
+| Security intelligence<sup>1</sup> | 1.441.131.0 | November 17, 2025 |
 | Support phase | Security and Critical Updates | - |
+
+<sup>1</sup>This version of security intelligence is the version relevant to this engine release. Newer versions of security intelligence are released regularly. For more information, see [
+Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates).
 
 #### Enhancements and features
 
@@ -688,8 +694,11 @@ Learn more:
 | -------- | -------- | -------- |
 | Platform | 4.18.25090.3009 | October 21, 2025 |
 | Engine | 1.1.25090.3001 | October 8, 2025 |
-| Security intelligence | 1.439.345.0 | October 21, 2025 |
+| Security intelligence<sup>1</sup> | 1.439.345.0 | October 21, 2025 |
 | Support phase | Security and Critical Updates | - |
+
+<sup>1</sup>This version of security intelligence is the version relevant to this engine release. Newer versions of security intelligence are released regularly. For more information, see [
+Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates).
 
 #### Enhancements and features
 
