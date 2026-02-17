@@ -562,8 +562,6 @@ items:
     href: https://www.microsoft.com/security/business/cloud-apps-defender
   - name: External integrations
     href: additional-integrations.md
-  - name: Watch our webinars
-    href: webinars.md
 - name: Microsoft Defender XDR Docs
   items:
   - name: Microsoft Defender XDR
