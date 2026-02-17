@@ -133,7 +133,7 @@ To enable network protection, you can use any of the methods described in this a
 
 4. On the **Create a profile** flyout that opens, select **Create**.
 
-5. The **Create profile** wizard opens. On the **Basics** tab, configure the following settings:
+5. The **Create a profile** wizard opens. On the **Basics** tab, configure the following settings:
    - **Name**: Enter a unique, descriptive name for the policy.
    - **Description**: Enter an optional description.
 
