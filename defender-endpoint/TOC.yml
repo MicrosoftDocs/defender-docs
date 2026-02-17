@@ -34,9 +34,10 @@
           href: mde-plan1-getting-started.md        
     - name: What's new
       items:
-        - name: What's new (new features)
+        - name: New features
           href: whats-new-in-microsoft-defender-endpoint.md
-        - name: Supported versions
+          displayName: What's new in Microsoft Defender for Endpoint
+        - name: Release notes
           href: microsoft-defender-endpoint-versions.md
     - name: Trial user guide - Defender for Endpoint
       href: defender-endpoint-trial-user-guide.md
