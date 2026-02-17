@@ -30,22 +30,52 @@ To protect your Kubernetes containers, Defender for Containers receives and anal
 - Workload configuration from Azure Policy
 - Security signals and events from the node level
 
-### Deployment models
+## Deployment models
 
 While automatic provisioning is the standard deployment method (using native AKS integrations or Azure Arc extensions), you can also deploy the Defender sensor manually using Helm charts. Helm-based deployment is supported across AKS, EKS, and GKE environments, providing more control over sensor versioning and updates for environments that use Infrastructure as Code (IaC) or GitOps practices.
 
-### Agentless vs. sensor-based capabilities
+## How Defender for Containers connects to your environment
 
-Defender for Containers provides a mix of agentless and sensor-based capabilities. 
+Microsoft Defender for Containers uses multiple connectivity paths to collect security signals and provide protection across container registries and Kubernetes environments. The required connectivity depends on the enabled features and the environment in which your containers run.
 
-- **Agentless capabilities:** Features like registry image scanning, Kubernetes API discovery, and control plane threat detection operate completely out-of-band without requiring any installed components in your cluster.
+Implementation details vary between Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), Google Kubernetes Engine (GKE), and Arc-enabled Kubernetes clusters.
 
-- **Sensor-based capabilities:** Features like runtime threat detection and node-level network/process monitoring require the lightweight Defender sensor (DaemonSet) to be deployed on your cluster nodes.
+Learn more about network requirements, permissions, and supported configurations in [Network access and permissions reference for Defender for Containers](defender-for-containers-network-access.md).
 
-### Network requirements
-All Defender for Containers components use outbound-only connectivity to communicate with Microsoft Defender for Cloud services. No inbound connections to your clusters are required for any capability.
+### Capability model overview
 
-For more information about implementation details such as supported operating systems, feature availability, and outbound proxy, see [Defender for Containers feature availability](support-matrix-defender-for-containers.md).
+The following table summarizes how key Defender for Containers capabilities are implemented and whether they require deployment of in-cluster components:
+
+| Capability | Agentless | Requires in-cluster components |
+|------------|------------|--------------------------------|
+| Image vulnerability assessment | Yes | No |
+| Kubernetes posture assessment | Yes | No |
+| Runtime threat detection | No | Yes (Defender sensor) |
+| Control plane threat detection | Yes | No |
+
+### Connection to container registries
+
+Image vulnerability assessment is triggered when images are pushed to supported registries and periodically based on registry configuration. Defender for Cloud reads image metadata and image layers required for vulnerability analysis. In supported scenarios, vulnerability assessment results can be published back to the registry without modifying the original container image. These capabilities don’t require any components to be deployed in your Kubernetes clusters.
+
+### Connection to Kubernetes clusters
+
+Microsoft Defender for Cloud connects to the Kubernetes API endpoint to discover clusters, collect configuration data, and perform posture and risk analysis. Depending on the enabled features and environment, this connectivity can require read access to cluster metadata and, in some scenarios, limited write operations to configure required access bindings or extensions.
+
+### Runtime data sent from Kubernetes clusters
+
+Kubernetes clusters send runtime security data from worker nodes to the Microsoft Defender for Cloud backend. This data is collected by Defender for Containers components running in the cluster and sent outbound for analysis. This connectivity path supports runtime threat detection and other sensor-based capabilities.
+
+### Connection to cloud provider APIs
+
+Microsoft Defender for Cloud connects to cloud provider APIs to discover resources and perform security analysis as part of the cloud environment connection process. This connectivity path is established when you connect your cloud environment to Microsoft Defender for Cloud. 
+
+### Kubernetes audit logs sent from cloud infrastructure
+
+Cloud infrastructure sends Kubernetes audit logs to Microsoft Defender for Cloud for control plane threat detection and security analysis. The method used to collect and send audit logs depends on the cloud provider and environment in which the Kubernetes clusters run.
+
+### Proxy and private connectivity support
+
+Defender for Containers components support outbound connectivity through customer-configured proxies and private connectivity configurations. For detailed network configuration guidance, see the network reference documentation.
 
 ## Architecture for each Kubernetes environment
 

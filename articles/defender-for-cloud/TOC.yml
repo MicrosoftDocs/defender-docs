@@ -218,6 +218,8 @@
               href: defender-for-containers-deployment-overview.md
             - name: Architecture overview
               href: defender-for-containers-architecture.md
+            - name: Network access and permissions
+              href: defender-for-containers-network-access.md            
             - name: Defender for Containers permissions for EKS and GKE
               href: containers-permissions.md
             - name: Enable Defender for Containers
