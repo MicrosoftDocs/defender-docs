@@ -75,8 +75,6 @@ Security insights are never too late to prevent the next attack and remediate da
 > [!TIP]
 > When no potential lateral movement path activity is detected for an entity in the past 48 hours, choose **Select a date** and check for previous potential lateral movement paths.
 
-> [!IMPORTANT]
-> For instructions on how to set your clients and servers to allow Defender for Identity to perform the SAM-R operations needed for lateral movement path detection, see [Configure Microsoft Defender for Identity to make remote calls to SAM](deploy/remote-calls-sam.md).
 
 ## Investigate lateral movement paths
 
@@ -92,7 +90,6 @@ There are multiple ways to use and investigate LMPs. In the Microsoft Defender p
 
 ## Next steps
 
-- [Configure Microsoft Defender for Identity to make remote calls to SAM](deploy/remote-calls-sam.md)
 - [Security assessment: Riskiest lateral movement paths (LMP)](/defender-for-identity/security-assessment-riskiest-lmp)
 - [Working with security alerts](manage-security-alerts.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

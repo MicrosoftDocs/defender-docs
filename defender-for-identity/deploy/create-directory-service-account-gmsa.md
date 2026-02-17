@@ -169,7 +169,4 @@ To connect your sensors with your Active Directory domains, configure Directory 
 
 For more information, see [Sensor failed to retrieve the gMSA credentials](../troubleshooting-known-issues.md#sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials).
 
-## Next step
 
-> [!div class="step-by-step"]
-> [Configure SAM-R to enable lateral movement path detection in Microsoft Defender for Identity »](remote-calls-sam.md)

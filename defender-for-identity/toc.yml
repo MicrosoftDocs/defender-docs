@@ -54,8 +54,6 @@ items:
             displayName: Directory Service Account, DSA
           - name: Configure a DSA with a gMSA
             href: deploy/create-directory-service-account-gmsa.md
-        - name: Configure remote calls to SAM
-          href: deploy/remote-calls-sam.md
         - name: Configure action accounts
           href: deploy/manage-action-accounts.md
         - name: Deploy a standalone sensor
