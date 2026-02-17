@@ -22,7 +22,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 01/30/2026
+ms.date: 02/17/2026
 ---
 
 # Create custom detection rules
@@ -258,7 +258,7 @@ Identify the columns in your query results where you expect to find the main aff
 
 You can select only one column for each entity type (mailbox, user, or device). You can't select columns that aren't returned by your query.
 
-##### Expanded entity mapping (Preview)
+##### Expanded entity mapping
 
 You can link a wide range of entity types to your alerts. Linking more entities helps the correlation engine group alerts to the same incidents and to correlate incidents together. If you're a Microsoft Sentinel customer, this also means that you can map any entity from your third-party data sources that are ingested into Microsoft Sentinel.
 
