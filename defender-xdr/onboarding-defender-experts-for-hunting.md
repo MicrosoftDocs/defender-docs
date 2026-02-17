@@ -50,7 +50,7 @@ Defender Experts for Hunting lets you set up **Notification contacts**. These co
     You can designate the call priority of your incident notification contacts. In an event of a critical incident, Microsoft reaches out to the primary contact first by using the phone number you provided, and then the backup contact if needed. 
 - **Service review notification contacts** – These contacts are persons or teams that Microsoft can engage with for service updates, reports, and opportunities for feedback.
 
-Set up your notification contacts in the setup wizard when you first onboard to the service, or go to **Settings** > **Defender Experts** > **Notification contacts** in the Microsoft Defender portal.
+Set up your notification contacts in the setup wizard when you first onboard to the service, or go to **System** > **Settings** > **Defender Experts** > **Notification contacts** in the Microsoft Defender portal.
 
 ## Receive Defender Experts Notifications
 
