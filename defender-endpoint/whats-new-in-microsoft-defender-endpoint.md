@@ -42,6 +42,12 @@ Learn more about [Preview features](/defender-xdr/preview).
 |macOS |Build 101.25122.0006 |GA |Release version 20.125122.6.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#macos--january-2026--101251220006). |
 |All (vulnerability management) |[Device vulnerabilities report](/defender-vulnerability-management/tvm-vulnerable-devices-report) enhancements |Preview |To simplify and streamline the Device vulnerabilities report experience, the Vulnerable devices report now includes several changes and enhancements ([learn more](#february-2026)).<br><br>**Note**: These changes are not yet visible to government cloud customers. |
 
+## February 2026
+
+|Feature  |Preview/GA  |Description  |
+|---------|------------|-------------|
+|[Library management for live response](configure-libraries-live-response.md) |Preview |You can now view and manage files and scripts used during live response sessions in the Microsoft Defender portal. With this enhancement, you get a centralized view of all uploaded files and their properties, and can upload, view and delete files outside the live response session. |
+
 ## December 2025
 
 |Platform  |Feature  |Preview/GA  |Description  |
