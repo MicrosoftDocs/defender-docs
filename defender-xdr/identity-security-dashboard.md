@@ -12,15 +12,22 @@ ms.service: defender-xdr
 
 # Work with the Coverage and maturity dashboard
 
-The Coverage and maturity dashboard provides a unified view of how well your identities are protected across the entire organization, including on-premises, cloud identity providers (IdPs), SaaS applications, and partner integrations.
+The Coverage and maturity dashboard provides a unified view of how well identities are protected across your organization, including on-premises environments, cloud identity providers (IdPs), SaaS applications, and partner integrations.
 
-Use the dashboard to understand your current protection posture, identify gaps, and take clear actions to increase identity coverage and reduce risk.
+The dashboard supports both:
 
-The dashboard provides:
+- high-level visibility and progress tracking
+- guided gap prioritization and protection improvements
 
-- **A single, consolidated view of identity protection across all sources.** See how identities are protected across cloud providers, SaaS apps, partners, and on-premises environments.
-- **Clear visibility into protection gaps.** Each widget quantifies the number of protected versus unprotected identities and highlights where you need to deploy sensors, connect IdPs, configure apps, or enable integrations.
-- **Actionable next steps.** The dashboard guides you on exactly what to do next, with time estimates and a direct path to fix configuration or deploy missing components.
+Use the dashboard to understand your overall identity protection posture at a glance. It shows your current coverage and maturity across identity sources, helping you track progress over time using maturity indicators and security scores at both an organizational and per-source level.
+
+For teams focused on strengthening identity protection, the dashboard highlights protection gaps by source and helps prioritize actions. It identifies where coverage is missing or incomplete and guides you to the most impactful next steps to improve protection and reduce risk.
+
+In one consolidated view, you can:
+
+- See coverage, maturity, and progress across cloud providers, SaaS apps, partner integrations, and on-premises environments.
+- Clearly identify protection gaps by source, including unprotected identities and areas where sensors need to be deployed, IdPs connected, applications configured, or integrations enabled.
+- Follow actionable, prioritized recommendations that include effort estimates and direct links to remediation, helping teams focus first on the changes that deliver the greatest security impact.
 
 ## Prerequisites
 
@@ -34,118 +41,109 @@ To access the Coverage and maturity dashboard, you need:
 
 ## Access the dashboard
 
-To access the dashboard, sign into Microsoft Defender and select **Identities > Coverage and maturity**.
+To access the dashboard, sign in to Microsoft Defender and select **Identities > Coverage and maturity**.
 
-## Maturity score
+## Maturity level
 
-The maturity score shows how much of your identity infrastructure is protected by Microsoft Defender protections. The score consists of a maturity tier label and a visual progress bar with color progression (red to yellow to green).
+The maturity level widget shows your organization's overall identity security coverage in Microsoft Defender. It indicates how mature and comprehensive your identity security posture is, including how well your identity ecosystem is monitored, integrated, and secured. The widget is tailored specifically to your environment, showing you how comprehensive your protection is and where you have gaps that can leave you vulnerable to attacks.
 
 The maturity tiers are:
 
-| Score range | Tier name | Customer state | Meaning |
-|---|---|---|---|
-| 0-39 | **Connected** | Initial deployment | You connected your environments and gained visibility, but protection is partial. Only one environment is connected. |
-| 40-69 | **Protected** | Operational | You deployed sensors and SaaS connectors. Key assets are covered, but gaps in non-human or PIM/PAM/IdP remain. |
-| 70-89 | **Fortified** | Advanced | You have high coverage across hybrid and multicloud. You're tackling advanced use cases like agentic identities. |
-| 90-100 | **Resilient** | Fully mature | You achieved full coverage of all identity types across all environments. |
+| Tier name | Customer state | Description |
+| --- | --- | --- |
+| Connected | Initial deployment | You connected your environments and gained visibility, but protection is partial. Only one environment is connected. |
+| Protected | Operational | You deployed sensors and SaaS connectors. Key assets are covered, but gaps in non-human or PIM/PAM/IdP remain. |
+| Fortified | Advanced | You have high coverage across hybrid and multicloud environments. You're tackling advanced use cases like agentic and non-human identities. |
+| Resilient | Fully mature | You achieved full coverage of all identity types across all environments. |
 
-Select **Learn more** on the maturity score widget to open a side panel that explains how the maturity score works. The side panel shows:
+Select **Learn more** on the maturity score widget for documentation that explains how the maturity score works.
 
-- Your current maturity level with a progress bar.
-- The top three upcoming tasks with name, time estimate, and call-to-action button.
-- A list of all protection improvement tasks with the number of deployment gaps from all source cards.
-- A link to documentation.
+### Maturity level calculation
 
-### Maturity score calculation
+The level is calculated from the individual coverage scores of each identity source in your organization.
 
 The maturity score uses a weighted matrix of environment coverage and identity type depth. It distributes 100 points across critical domains. When you achieve full coverage across all identity types and environments, your maturity score reaches 100% and the dashboard displays "Fully licensed, fully deployed."
 
-## Take recommended actions
+## Top setup tasks
 
-The recommended actions displays three action cards. Each action card includes a description, time estimate, and a **Take Action** button. The portal generates these actions based on the deployment gaps it identifies in the coverage cards.
+The **Top setup tasks** section lists the five most impactful deployment gaps across your identity-related sources. Each task includes its **impact**, your **personal maturity score**, and the **estimated effort** required to complete it.
 
-The portal sorts gaps by impact, highest first. The priority order for deployment gaps is:
+The dashboard prioritizes deployment gaps by impact, from highest to lowest, to help you maximize security improvements while minimizing effort. Tasks that deliver the greatest impact with the least effort are ranked higher.
 
-1. On-premises sensor deployment, Entra ID connector, and App Governance.
-1. SaaS app connectors.
-1. IdP / PAM / PIM integrations.
+The priority order for deployment gaps is:
 
-When you resolve all three displayed tasks, the section updates to show the next three deployment gaps. When no deployment gaps remain, the section indicates that your environment is fully protected.
+- On-premises sensor deployment, Entra ID connector, and App Governance
+- SaaS app connectors
+- IdP, PAM, and PIM integrations
 
-## Review coverage cards
+When you select a task, you go directly to the relevant location in the Microsoft Defender portal, where you can complete or fix the task. A green checkmark appears when you complete a task successfully.
+
+After you complete all five tasks, the card refreshes automatically and displays the next five highest-priority tasks, based on remaining deployment gaps and their impact and effort.
+
+If the dashboard detects no deployment gaps, the section indicates that your environment is fully protected.
+
+## Coverage sources
 
 The dashboard displays one coverage card for each identity domain: on-premises identities, SaaS identities, Entra ID identities, and PIM / PAM and IdPs. The cards you see depend on your environment and licensing. If you can enable coverage for a domain, the card provides a link to configure it.
 
-Select anywhere on the card to open the side panel with details.
-
 Each card includes:
 
-- The name of the identity domain.
-- **Protection score**: Color-coded indicator reflecting the domain's protection logic.
-- **Coverage breakdown**: Displays the format *X protected / Y total*. For example, "12 apps connected / 36 apps in use." If the deployment count increases, the percentage turns green. If the deployment count decreases, the percentage turns red.
-- **Identity count**: Total number of identities in this domain. Select the identity count to go to the identity inventory page with the relevant filter applied.
-- **Number of deployment gaps**: Count of unresolved gaps.
+- The total number of identities in this domain. Select the identity count to go to the identity inventory page with the relevant filter applied.
+- The coverage score. The percentage of completed tasks that to connect all of the identities detected in your environment.
+- The active connections, shown as *X protected / Y total*. For example, "12 apps connected / 36 apps in use."
+- Actions required, the number of unresolved gaps.
+- The **Review and improve coverage** button. Select to see the list of gaps for this identity domain.
+
+### Entra ID identities card
+
+When you connect Microsoft Entra ID, the card provides risk insights based on Entra ID Protection. You can search Entra sign‑in events by using advanced hunting, correlate identities across environments, and receive security posture recommendations for Entra identities. The integration also enhances detections for OAuth applications and Entra ID accounts.
+
+The Entra ID identities card shows the following information:
+
+| Item | Description |
+| --- | --- |
+| Coverage score | The percentage of completed tasks that are connected to secure your Entra identities. |
+| Actions required | Number of unresolved deployment gaps. |
 
 ### On-premises identities card
 
 When you activate sensors on your on-premises infrastructure, you get enhanced threat detections for Active Directory identities, identity security posture recommendations, automated attack disruption by using Defender XDR, and direct remediation actions on Active Directory identities.
 
-The on-premises identities card shows the following information:
+The on-premises identities card shows:
 
 | Item | Description |
-|---|---|
-| **Protection score** | Percentage of servers with MDI sensors activated out of total servers discovered. |
-| **Coverage breakdown** | X servers activated / Y servers in use |
-| **Identity count** | Total on-premises identities. Select to go to the identity inventory page with filter. |
-| **Deployment gaps** | Number of unresolved deployment gaps |
+| --- | --- |
+| Protection score | The percentage of active sensors out of discovered sensors. |
+| Active servers | X servers activated / Y servers in use. |
+| Actions required | Number of unresolved deployment gaps. |
 
 If any sensors have an unhealthy deployment, the card displays a notification. Select the notification to go to the **Health issues** page.
 
 ### SaaS identities card
 
-When you connect SaaS applications, you can track user accounts across SaaS apps, investigate user activities in Advanced Hunting, get security posture recommendations for SaaS configurations, and detect threats to OAuth applications.
+When you connect SaaS applications, you can track user accounts across SaaS apps, investigate user activities in advanced hunting, get security posture recommendations for SaaS configurations, and detect threats to OAuth applications.
 
-The SaaS identities card shows the following information:
+The SaaS identities card shows:
 
 | Item | Description |
-|---|---|
-| **Protection score** | Percentage of supported SaaS apps with connectors deployed out of supported SaaS apps discovered in use. |
-| **Coverage breakdown** | X supported apps installed / Y supported apps in use |
-| **Identity count** | Total SaaS identities. Select to navigate to the identity inventory page with filter. |
-| **Deployment gaps** | Number of unresolved deployment gaps |
+| --- | --- |
+| Protection score | The percentage of connected SaaS out of discovered SaaS. |
+| Active connectors | X supported apps installed / Y supported apps in use. |
+| Actions required | Number of unresolved deployment gaps. |
 
 If any app connectors have an unhealthy deployment, the card displays a notification. Select the notification to go to the **App connectors settings** page.
 
-### Entra ID identities card
-
-> [!NOTE]
-> This card only appears for customers with an Entra ID P2 license.
-
-By connecting Entra ID, you get risk insights based on Entra ID Protection, you can hunt for Entra sign-in events in Advanced Hunting, link identities across your environments, receive security posture recommendations for Entra identities, and improve detections for OAuth applications and Entra accounts.
-
-The Entra ID identities card shows the following information:
-
-| Item | Description |
-|---|---|
-| **Protection score** | Based on: Entra ID P2 license available (50%), Microsoft 365 connector for enhanced detections (25%), and service principals protection enabled (25%). |
-| **Coverage breakdown** | Microsoft 365 connector connected and App Governance enabled. |
-| **Identity count** | Total Entra ID identities. Select to go to the identity inventory page with filter. |
-| **Deployment gaps** | Number of unresolved deployment gaps |
-
 ### PIM / PAM and IdPs card
 
-When you connect identity providers and privileged access management solutions, you get a unified view for investigation across all identity providers. You can track user accounts across those providers, investigate activities in Advanced Hunting, and take remediation actions directly on identity provider accounts.
+When you connect identity providers (IdPs) and privileged access management (PAM) solutions, this card provides a unified view of those identity sources. You can correlate and track user accounts across connected providers, investigate identity‑related activities, and use advanced hunting to identify suspicious behavior. You can also take remediation actions directly on affected identity provider accounts.
 
 The PIM / PAM and IdPs card shows the following information:
 
 | Item | Description |
-|---|---|
-| **Protection score** | Percentage of IdP providers deployed out of IdP providers discovered in use. Supported IdPs: Okta, PingOne, CyberArk Identity, SailPoint. |
-| **Coverage breakdown** | X IdPs installed / Y IdPs in use. Additional breakdown: Number of partners deployed. Supported PIM and PAM partners: BeyondTrust, Silverfort, Delinea, CyberArk. A tooltip describes the partner names. |
-| **Identity count** | Total PIM / PAM and IdPs identities. Select to go to the identity inventory page with filter. |
-| **Deployment gaps** | Number of unresolved deployment gaps |
-
-
+| --- | --- |
+| Coverage score | The percentage of connected identity providers out of discovered identity providers. |
+| Active connectors | X supported connectors identity providers / Y supported identity providers in use. |
+| Actions required | Number of unresolved deployment gaps. |
 
 ## Next steps
 
