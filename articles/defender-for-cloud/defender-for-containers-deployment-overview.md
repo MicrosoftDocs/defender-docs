@@ -187,33 +187,38 @@ Learn more about [container security architecture](defender-for-containers-archi
 
 ## Deployment flow
 
-Deploying Defender for Containers includes the following phases:
+### Onboard the environment
 
-1. **Connect the environment**
+Connect the environment to Microsoft Defender for Cloud:
 
-   - **AKS:** Enable the Defender for Containers plan on the subscription.
-   - **AWS:** Configure the AWS connector to connect your AWS account to Microsoft Defender for Cloud.
-   - **GCP:** Configure the GCP connector to connect your GCP projects to Microsoft Defender for Cloud.
-   - **Non-Azure clusters:** Connect the Kubernetes cluster to Azure Arc.
+- **AKS:** No additional connector is required. AKS clusters are discovered automatically within the subscription.
+- **Amazon EKS:** [Connect your AWS account](quickstart-onboard-aws.md).
+- **Google Kubernetes Engine (GKE):** [Connect your GCP project](quickstart-onboard-gcp.md).
+- **Other Kubernetes distributions:** [Connect the cluster to Azure using Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
 
-1. **Enable the Defender for Containers plan**
+### Enable the Containers plan and select components
 
-   Enabling the plan activates runtime protection, vulnerability assessment, and security posture capabilities for the connected environment.
+Enable the Containers plan and turn on the components you need using the Azure portal.
 
-1. **Deploy required components**
+Learn how to [enable Defender for Containers on your environment](defender-for-containers-enable-portal.md).
 
-   Depending on the environment, Defender for Containers deploys the required components:
+### Configure external requirements
 
-   - Native AKS integrations
-   - Azure Arc extensions
-   - Defender sensor (if applicable)
+Some components require additional cloud-provider or Kubernetes configuration that isn’t performed automatically when you enable the plan.
 
-1. **Verify coverage and signals**
+Learn how to [configure external requirements for your components](defender-for-containers-configure-external-requirements.md).
 
-   After deployment, verify that components and capabilities are active:
+### Deploy cluster components
 
-   - Review the coverage workbook to confirm enabled plans and components.
-   - Check the Recommendations and Alerts pages in Defender for Cloud to validate signal ingestion.
+Depending on the Kubernetes environment and the components you enable, Defender for Containers deploys cluster-level components such as the Defender sensor or Azure Policy extension.
+
+You can deploy these components by using one of the following methods:
+
+- [Deploy Defender sensor and Azure Policy to clusters using security recommendations](defender-for-containers-deploy-recommendations.md)
+
+- [Deploy Defender sensor and Azure Policy to clusters using Azure CLI](defender-for-containers-deploy-azure-cli.md)
+
+- [Install Defender for Containers sensor by using Helm](deploy-helm.md)
 
 ## View your current coverage
 

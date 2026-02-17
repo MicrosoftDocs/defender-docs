@@ -214,13 +214,13 @@
             - name: Support matrices for Containers
               displayName: Containers, features availability, environment information
               href: support-matrix-defender-for-containers.md
-            - name: Overview by environment
+            - name: Deployment overview
               href: defender-for-containers-deployment-overview.md
             - name: Architecture overview
               href: defender-for-containers-architecture.md
             - name: Network access and permissions
               href: defender-for-containers-network-access.md            
-            - name: Defender for Containers permissions for EKS and GKE
+            - name: Cloud IAM permissions for AWS and GCP
               href: containers-permissions.md
             - name: Enable Defender for Containers
               href: defender-for-containers-enable-portal.md

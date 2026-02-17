@@ -1,15 +1,17 @@
 ---
-title: Permissions required by Defender for Containers for EKS and GKE support.
-description: This article lists the permissions required to use Defender for Containers extensions for EKS and GKE.
-ms.topic: limits-and-quotas
+title: Cloud IAM permissions for Defender for Containers on AWS and GCP
+description: Reference of cloud IAM roles and permissions required to onboard and operate Microsoft Defender for Containers in AWS (EKS) and Google Cloud (GKE) environments.
+ms.topic: reference
 ms.date: 03/06/2025
 ---
 
-# Permissions to install Defender for Containers components in AWS and GCP
+# Cloud IAM permissions for Defender for Containers on AWS and GCP
 
-This article lists the roles and permissions required to install Defender for Containers components in the AWS Elastic Kubernetes Service (EKS) and GCP Google Kubernetes Engine (GKE) environments.
+This article describes the cloud IAM roles and permissions required to onboard and operate Microsoft Defender for Containers in Amazon Elastic Kubernetes Service (EKS) and Google Kubernetes Engine (GKE) environments.
 
-## Required permissions
+These permissions apply to cloud connectors, Azure Arc provisioning, agentless threat protection, and registry integration features.
+
+## Permissions required by feature
 
 | Defender for Container feature                                                 | Component                                                    | Required Role                                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -137,15 +139,12 @@ The Azure Arc built-in role **Defender Kubernetes Agent Operator** to provision 
   
 ## Permissions granted in cloud environments
 
-Onboarding AWS and GCP cloud environments to Defender for Cloud through the Azure portal creates a connector to your desired cloud environment, and generates a script for you to run in the cloud environment to create the required roles and permissions. The script is created based on the settings you choose when going through the onboarding process.
-
-As part of the onboarding process, you choose between two permission types: **Default Access** and **Least Privileged Access**:
+When you onboard AWS or GCP environments to Microsoft Defender for Cloud, a deployment script is generated to create the required IAM roles based on the selected access model:
 
 - **Default Access** supports all current and future extensions of the selected Defender plans.
+- **Least Privileged Access** grants only the permissions required to support the currently enabled extensions.
 
-- **Least Privileged Access** option only grants the permissions necessary to support the current extensions.
-
-The following tables show the permissions granted to certain Defender for Containers roles, depending on the permission type you choose.
+The following tables show the permissions granted to Defender for Containers roles, depending on the selected access model.
 
 ### AWS default access
 

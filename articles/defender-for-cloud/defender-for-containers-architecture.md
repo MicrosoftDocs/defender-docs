@@ -20,9 +20,6 @@ Defender for Containers uses a different architecture depending on the Kubernete
 
 - **An unmanaged Kubernetes distribution** (using Azure Arc-enabled Kubernetes) - Cloud Native Computing Foundation (CNCF) certified Kubernetes clusters hosted on-premises or on IaaS.
 
-> [!NOTE]
-> Support for connecting Amazon EKS and Google GKE clusters through Azure Arc is currently in preview.
-
 To protect your Kubernetes containers, Defender for Containers receives and analyzes:
 
 - Audit logs and security events from the API server
@@ -32,7 +29,9 @@ To protect your Kubernetes containers, Defender for Containers receives and anal
 
 ## Deployment models
 
-While automatic provisioning is the standard deployment method (using native AKS integrations or Azure Arc extensions), you can also deploy the Defender sensor manually using Helm charts. Helm-based deployment is supported across AKS, EKS, and GKE environments, providing more control over sensor versioning and updates for environments that use Infrastructure as Code (IaC) or GitOps practices.
+Defender for Containers components can be deployed automatically when the Containers plan is enabled, using native AKS integrations or Azure Arc extensions for connected clusters.
+
+In environments that require additional control, the Defender sensor can also be deployed and managed manually using Helm, supporting Infrastructure as Code (IaC) and GitOps workflows.
 
 ## How Defender for Containers connects to your environment
 
@@ -44,7 +43,7 @@ Learn more about network requirements, permissions, and supported configurations
 
 ### Capability model overview
 
-The following table summarizes how key Defender for Containers capabilities are implemented and whether they require deployment of in-cluster components:
+The following table shows how key Defender for Containers capabilities are implemented and whether they require in-cluster components:
 
 | Capability | Agentless | Requires in-cluster components |
 |------------|------------|--------------------------------|
@@ -55,7 +54,7 @@ The following table summarizes how key Defender for Containers capabilities are 
 
 ### Connection to container registries
 
-Image vulnerability assessment is triggered when images are pushed to supported registries and periodically based on registry configuration. Defender for Cloud reads image metadata and image layers required for vulnerability analysis. In supported scenarios, vulnerability assessment results can be published back to the registry without modifying the original container image. These capabilities don’t require any components to be deployed in your Kubernetes clusters.
+Image vulnerability assessment is triggered when images are pushed to supported registries and periodically based on registry configuration. Defender for Cloud analyzes image metadata and layers required for vulnerability assessment. In supported scenarios, vulnerability assessment results can be published back to the registry without modifying the original container image. These capabilities don’t require any components to be deployed in your Kubernetes clusters.
 
 ### Connection to Kubernetes clusters
 
@@ -75,11 +74,11 @@ Cloud infrastructure sends Kubernetes audit logs to Microsoft Defender for Cloud
 
 ### Proxy and private connectivity support
 
-Defender for Containers components support outbound connectivity through customer-configured proxies and private connectivity configurations. For detailed network configuration guidance, see the network reference documentation.
+Defender for Containers components support outbound connectivity through configured proxies and private connectivity configurations.
 
 ## Architecture for each Kubernetes environment
 
-# [**Azure (AKS)**](#tab/defender-for-container-arch-aks)
+# [**Azure Kubernetes Service (AKS)**](#tab/aks)
 
 ### Architecture components
 
@@ -90,7 +89,7 @@ When Defender for Cloud protects a cluster hosted in Azure Kubernetes Service, i
 > [!NOTE]
 > When you configure the Defender sensor on an AKS cluster, it triggers a reconciliation process. This process happens as part of the Defender for Containers plan and is expected behavior.
 
-- **Azure Policy for Kubernetes**: A pod that extends the open-source [Gatekeeper v3](https://github.com/open-policy-agent/gatekeeper) and registers as a web hook to Kubernetes admission control. With this pod, you can apply at-scale enforcements and safeguards on your clusters in a centralized, consistent manner. The Azure Policy for Kubernetes pod is deployed as an AKS add-on and you only need to install it on one node in the cluster. It provides the option to enforce configuration rules. For more information, see [Protect your Kubernetes workloads](kubernetes-workload-protections.md) and [Understand Azure Policy for Kubernetes clusters](/azure/governance/policy/concepts/policy-for-kubernetes).
+- **Azure Policy for Kubernetes**: A pod that extends the open-source [Gatekeeper v3](https://github.com/open-policy-agent/gatekeeper) and registers as a web hook to Kubernetes admission control. With this pod, you can apply at-scale enforcements and safeguards on your clusters in a centralized, consistent manner. The Azure Policy for Kubernetes pod is deployed as an AKS add-on and you only need to install it on one node in the cluster. It provides the option to enforce configuration rules. Learn more about [Kubernetes workload protection](kubernetes-workload-protections.md) and [Azure Policy for Kubernetes](/azure/governance/policy/concepts/policy-for-kubernetes).
 - **ACR integration:** Push-triggered and periodic image scanning for Azure Container Registry, providing vulnerability assessment without requiring extra components.
 - **Agentless discovery:** Provides visibility into your Kubernetes clusters without requiring any agents, by using Azure native capabilities to discover and assess cluster configurations.
 - **Agentless scanning for machines:** Periodic disk snapshots of Kubernetes nodes for an out-of-band, deep analysis of the operating system configuration and file system. This feature doesn't need any installed agents or network connectivity, and it doesn't affect machine performance.
@@ -135,22 +134,7 @@ When you enable the agentless discovery for Kubernetes extension, the following 
 > [!NOTE]
 > The copied snapshot stays in the same region as the cluster.
 
-# [**On-premises / IaaS (Arc)**](#tab/defender-for-container-arch-arc)
-
-### Architecture components
-
-To get full protection from Microsoft Defender for Containers, you need these components:
-
-- **[Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview):** Connects your clusters to Azure and lets Defender for Cloud deploy security components as [Arc extensions](/azure/azure-arc/kubernetes/extensions).
-- **Defender sensor:** A lightweight DaemonSet deployed on each node that collects runtime telemetry (Kubernetes events, process, and network data) by using [eBPF technology](https://ebpf.io/) and Kubernetes audit logs for runtime threat protection. The sensor registers with a Log Analytics workspace and acts as a data pipeline. However, the audit log data isn't stored in the Log Analytics workspace. You deploy the Defender sensor as an Arc-enabled Kubernetes extension.
-- **Azure Policy for Kubernetes:** A pod that extends the open-source [Gatekeeper v3](https://github.com/open-policy-agent/gatekeeper) and registers as a web hook to Kubernetes admission control. With this pod, you can apply at-scale enforcements and safeguards on your clusters in a centralized, consistent manner. You only need to install it on one node in the cluster. It provides the option to enforce configuration rules. For more information, see [Protect your Kubernetes workloads](kubernetes-workload-protections.md) and [Understand Azure Policy for Kubernetes clusters](/azure/governance/policy/concepts/policy-for-kubernetes).
-
-> [!NOTE]
-> Defender for Containers support for Arc-enabled Kubernetes clusters is a preview feature.
-
-:::image type="content" source="./media/defender-for-containers/architecture-arc-cluster.png" alt-text="Diagram of high-level architecture of the interaction between Microsoft Defender for Containers, Azure Kubernetes Service, Azure Arc-enabled Kubernetes, and Azure Policy." lightbox="./media/defender-for-containers/architecture-arc-cluster.png":::
-
-# [**AWS (EKS)**](#tab/defender-for-container-arch-eks)
+# [**Amazon Elastic Kubernetes Service (EKS)**](#tab/defender-for-container-arch-eks)
 
 ### Architecture components
 
@@ -180,7 +164,7 @@ When you enable the agentless discovery for Kubernetes extension, the following 
 > [!NOTE]
 > The copied snapshot stays in the same region as the cluster.
 
-# [**GCP (GKE)**](#tab/defender-for-container-gke)
+# [**Google Kubernetes Engine (GKE)**](#tab/gke)
 
 ### Architecture components
 
@@ -209,6 +193,18 @@ When you enable the agentless discovery for Kubernetes extension, the following 
 
 > [!NOTE]
 > The copied snapshot stays in the same region as the cluster.
+
+# [**Azure Arc-enabled Kubernetes**](#tab/arc)
+
+### Architecture components
+
+To get full protection from Microsoft Defender for Containers, you need these components:
+
+- **[Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview):** Connects your clusters to Azure and lets Defender for Cloud deploy security components as [Arc extensions](/azure/azure-arc/kubernetes/extensions).
+- **Defender sensor:** A lightweight DaemonSet deployed on each node that collects runtime telemetry (Kubernetes events, process, and network data) by using [eBPF technology](https://ebpf.io/) and Kubernetes audit logs for runtime threat protection. The sensor registers with a Log Analytics workspace and acts as a data pipeline. However, the audit log data isn't stored in the Log Analytics workspace. You deploy the Defender sensor as an Arc-enabled Kubernetes extension.
+- **Azure Policy for Kubernetes:** A pod that extends the open-source [Gatekeeper v3](https://github.com/open-policy-agent/gatekeeper) and registers as a web hook to Kubernetes admission control. With this pod, you can apply at-scale enforcements and safeguards on your clusters in a centralized, consistent manner. You only need to install it on one node in the cluster. It provides the option to enforce configuration rules. Learn more about [Kubernetes workload protection](kubernetes-workload-protections.md) and [Azure Policy for Kubernetes](/azure/governance/policy/concepts/policy-for-kubernetes).
+
+:::image type="content" source="./media/defender-for-containers/architecture-arc-cluster.png" alt-text="Diagram of high-level architecture of the interaction between Microsoft Defender for Containers, Azure Kubernetes Service, Azure Arc-enabled Kubernetes, and Azure Policy." lightbox="./media/defender-for-containers/architecture-arc-cluster.png":::
 
 ---
 

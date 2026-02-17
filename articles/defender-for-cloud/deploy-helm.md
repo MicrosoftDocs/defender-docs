@@ -56,7 +56,7 @@ gcloud compute firewall-rules create allow-azure-defender \
 
 Depending on your deployment type, follow the relevant instructions to install the Defender for Containers sensor by using Helm:
 
-### [AKS & AKS Automatic](#tab/aks)
+# [AKS & AKS Automatic](#tab/aks)
 
 #### Prerequisites
 
@@ -113,6 +113,7 @@ Run the script with the command:
     
 ```azurecli
 install_defender_sensor_aks.sh --id <CLUSTER_AZURE_RESOURCE_ID> --version <VERSION> [--release_train <RELEASE_TRAIN>] [--namespace <NAMESPACE>] [--antimalware]
+```
 
 Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<NAMESPACE>`, and `<VERSION>` with your own values:
 
@@ -133,7 +134,7 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `
 > [!NOTE]
 > This script sets a new `kubeconfig` context and might create a Log Analytics workspace in your Azure account.
 
-### [EKS and GKE](#tab/eks-and-gke)
+# [EKS and GKE](#tab/eks-and-gke)
 
 ## Prerequisites
 
