@@ -639,8 +639,8 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 | Security intelligence<sup>1</sup> | 1.443.6.0 | December 17, 2025 |
 | Support phase | Security and Critical Updates | - |
 
-<sup>1</sup>This version of security intelligence is the version relevant to this engine release. Newer versions of security intelligence are released regularly. For more information, see [
-Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates).
+<sup>1</sup>The security intelligence version listed here is relevant to the listed engine release. Newer versions of security intelligence are released regularly. For more information, see
+[Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates).
 
 #### Enhancements and features
 
@@ -666,8 +666,8 @@ Security intelligence updates for Microsoft Defender Antivirus and other Microso
 | Security intelligence<sup>1</sup> | 1.441.131.0 | November 17, 2025 |
 | Support phase | Security and Critical Updates | - |
 
-<sup>1</sup>This version of security intelligence is the version relevant to this engine release. Newer versions of security intelligence are released regularly. For more information, see [
-Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates).
+<sup>1</sup>The security intelligence version listed here is relevant to the listed engine release. Newer versions of security intelligence are released regularly. For more information, see
+[Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates).
 
 #### Enhancements and features
 
@@ -697,8 +697,8 @@ Learn more:
 | Security intelligence<sup>1</sup> | 1.439.345.0 | October 21, 2025 |
 | Support phase | Security and Critical Updates | - |
 
-<sup>1</sup>This version of security intelligence is the version relevant to this engine release. Newer versions of security intelligence are released regularly. For more information, see [
-Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates).
+<sup>1</sup>The security intelligence version listed here is relevant to the listed engine release. Newer versions of security intelligence are released regularly. For more information, see
+[Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates).
 
 #### Enhancements and features
 
