@@ -26,17 +26,15 @@ appliesto:
 
 [!INCLUDE [MDE automated setup guide](../includes/security-analyzer-setup-guide.md)]
 
-## Why attack surface reduction rules are important
+Your organization's attack surface includes all the places where an attacker could compromise your devices or networks. Reducing your attack surface means protecting your organization's devices and network, which leaves attackers with fewer ways to perform attacks. Configuring attack surface reduction rules in Microsoft Defender for Endpoint can help!
 
-Your organization's attack surface includes all the places where an attacker could compromise your organization's devices or networks. Reducing your attack surface means protecting your organization's devices and network, which leaves attackers with fewer ways to perform attacks. Configuring attack surface reduction rules in Microsoft Defender for Endpoint can help!
+Attack surface reduction rules target specific software behavior, such as:
 
-Attack surface reduction rules target certain software behaviors, such as:
+- Launching executable files and scripts that attempt to download or run files.
+- Running obfuscated or otherwise suspicious scripts.
+- Doing things that apps don't normally do.
 
-- Launching executable files and scripts that attempt to download or run files
-- Running obfuscated or otherwise suspicious scripts
-- Performing behaviors that apps don't usually initiate during normal day-to-day work
-
-Such software behaviors are sometimes seen in legitimate applications. However, these behaviors are often considered risky because they're commonly abused by attackers through malware. Attack surface reduction rules can constrain software-based risky behaviors and help keep your organization safe.
+Although legitimate apps might sometimes do these actions, the behavior is considered risky because attackers use malware with this behavior. Attack surface reduction rules can constrain software-based risky behavior and help keep your organization safe.
 
 For a sequential, end-to-end process of how to manage attack surface reduction rules, see:
 
@@ -48,13 +46,23 @@ For a sequential, end-to-end process of how to manage attack surface reduction r
 
 ## Prerequisites
 
-### Supported operating systems 
+### Supported operating systems
 
 - Windows
 
-## Assess rules before deployment
+<a name='assess-rules-before-deployment'></a>
 
-You can assess how an attack surface reduction rule might affect your network by opening the security recommendation for that rule in [Microsoft Defender Vulnerability Management](/windows/security/threat-protection/).
+<a name='audit-mode-for-evaluation'></a>
+
+<a name='audit-mode'></a>
+
+## Assess and evaluate rules before deployment
+
+You can assess how an attack surface reduction rule might affect your network using the following methods:
+
+- **Security recommendations in [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)**: In Defender for Endpoint Plan 2 or with the Defender Vulnerability Management add-on, you can use the **Devices** tab of the **Recommendations** page in the Microsoft Defender portal at **Exposure management** \> **Recommendations** (directly at <https://security.microsoft.com/exposure-recommendations>). When you select an ASR rule, the details flyout shows allows you to check the  user impact to determine what percentage of your devices can accept a new policy enabling the rule in blocking mode without adversely affecting productivity.
+- 
+by opening the security recommendation for that rule in [Microsoft Defender Vulnerability Management](/windows/security/threat-protection/).
 
 :::image type="content" source="media/asrrecommendation.png" alt-text="The attack surface reduction recommendation" lightbox="media/asrrecommendation.png":::
 
