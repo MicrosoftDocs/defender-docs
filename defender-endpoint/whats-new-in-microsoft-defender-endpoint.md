@@ -1,5 +1,5 @@
 ﻿---
-title: What's new in Microsoft Defender for Endpoint
+title: New features in Microsoft Defender for Endpoint
 description: This article describes new features available in Microsoft Defender for Endpoint, including both Windows and cross-platform updates.
 ms.topic: whats-new
 ms.service: defender-endpoint
@@ -19,14 +19,13 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
-# What's new in Microsoft Defender for Endpoint
+# New features in Microsoft Defender for Endpoint
 
 This article describes Microsoft Defender for Endpoint features that are in preview or generally available (GA) in the latest release.
 
-Learn more:
+For recent releases of Microsoft Defender for Endpoint, including build numbers, improvements, and fixes, see [Microsoft Defender for Endpoint release notes](microsoft-defender-endpoint-versions.md).
 
-- [Microsoft Defender for Endpoint supported versions](microsoft-defender-endpoint-versions.md)
-- [Preview features](/defender-xdr/preview)
+Learn more about [Preview features](/defender-xdr/preview).
 
 ## February 2026
 
