@@ -827,7 +827,7 @@
                 href: enablement-guide-runtime-gated.md
               - name: Gated deployment for Infrastructure as Code
                 displayName: gated deployment, infrastructure as code, IaC
-                href: gated-deployment-infrastructure-as-code
+                href: gated-deployment-infrastructure-as-code.md
               - name: Troubleshooting
                 displayName: troubleshooting, gated deployment
                 href: troubleshooting-runtime-gated.md
