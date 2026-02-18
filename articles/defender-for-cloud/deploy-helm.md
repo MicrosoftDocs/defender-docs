@@ -28,7 +28,7 @@ Implement all prerequisite requirements for the Defender for Containers sensor a
     - Google Cloud Project (GCP): [Enable Defender for Containers on GCP (GKE) via portal](defender-for-containers-gcp-enable-portal.md)
     - Arc-enabled Kubernetes (ARC): [Enable Defender for Containers on Arc-enabled Kubernetes via portal](defender-for-containers-arc-enable-portal.md)
 
-- Ensure the following components of the Defender for containers plan are enabled:
+- Ensure the following components of the Defender for Containers plan are enabled:
    - Defender sensor
    - Security findings
    - Registry access
@@ -65,7 +65,7 @@ Depending on your deployment type, follow the relevant instructions to install t
   > [!NOTE]
   > To generate a list of your AKS clusters' Azure resource IDs, use the following command with a `<SUBSCRIPTION_ID>` and `<RESOURCE_GROUP>`:
   >
-  >```bash
+  >```azurecli
   >az aks list \
   >--subscription <SUBSCRIPTION_ID> \
   >--resource-group <RESOURCE_GROUP> \
@@ -81,7 +81,7 @@ Depending on your deployment type, follow the relevant instructions to install t
 
    Or, run the [delete_conflicting_policies.sh](https://github.com/microsoft/Microsoft-Defender-For-Containers/blob/main/scripts/delete_conflicting_policies.sh) script with the following command:
 
-   ```azurecli   
+   ```bash   
    delete_conflicting_policies.sh <CLUSTER_AZURE_RESOURCE_ID>
    ```
    This command removes resource group and subscription level policies for setting up the generally available (GA) version of Defender for Containers. It can affect clusters other than the one you're configuring.
@@ -92,21 +92,19 @@ Use the [install_defender_sensor_aks.sh](https://github.com/microsoft/Microsoft-
 
 Run the script with the command:
     
-```azurecli
-install_defender_sensor_aks.sh --id <CLUSTER_AZURE_RESOURCE_ID> --version <VERSION> [--release_train <RELEASE_TRAIN>] [--antimalware]
+```bash   
+install_defender_sensor_aks.sh --resource-id <CLUSTER_AZURE_RESOURCE_ID> [--version <VERSION>] [--namespace <NAMESPACE>]
 ```
 
-Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, and `<VERSION>` with your own values. 
+Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>` and optional parameters with your own values: 
 
+- Replace `<CLUSTER_AZURE_RESOURCE_ID>` with the Azure resource ID of your AKS cluster.
+    
 - Replace `<VERSION>` with:
   - `latest` for the most recent version.
   - A specific semantic version.
     
-- Replace `<RELEASE_TRAIN>` with:
-  - `stable` (default).
-  - `public` for the preview version.
-    
-- Use the `--antimalware` flag to enable antimalware scanning.
+- Replace `<NAMESPACE>` with `kube-system` if you are deploying to AKS Automatic.
 
 > [!NOTE]
 > This script sets a new `kubeconfig` context and might create a Log Analytics workspace in your Azure account.
@@ -124,7 +122,7 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
 - Run the [az resource show](/cli/azure/resource#az-resource-show) CLI command to get the security connector resource ID for the account your cluster belongs to.
 
     For example:
-     ```azurecli
+     ```bash
         az resource show \
         --name <connector-name> \
         --resource-group <resource-group-name> \
@@ -140,47 +138,52 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
 
 1. Set the `kubeconfig` context to the target cluster by using the following command:
 
-   ```azurecli
-   install_defender_sensor_mc.sh --id <SECURITY_CONNECTOR_AZURE_RESOURCE_ID> --version <VERSION> --distribution <DISTRIBUTION> [--release_train <RELEASE_TRAIN>] [--antimalware]
+   ```bash
+   install_defender_sensor_mc.sh --id <SECURITY_CONNECTOR_AZURE_RESOURCE_ID> --version <VERSION> --distribution <DISTRIBUTION>
    ```
     
-    Replace the placeholder text `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<VERSION>`, and `<DISTRIBUTION>` with your own values.
-   
-  - Replace `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>` with the Azure resource ID of your security connector.
-      
+    Replace the placeholder text `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`, `<VERSION>`, and `<DISTRIBUTION>` with your own values.
+
+    - Replace `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>` with the Azure resource ID of your security connector.
+
+    - Replace `<VERSION>` with:
+      - `latest` for the most recent version.
+      - A specific semantic version.
+    
+   - Replace `<DISTRIBUTION>` with:
+      - `eks`
+      - `gke`
+      - `eksautomode`
+
     > [!NOTE]
     > This script might create a Log Analytics workspace in your Azure account.
     >
-    > This script tests for an arc managed deployment of the Defender for Containers Sensor. If one exists, the script removes it prior to deploying the sensor by using helm.
-
-   - Replace `<VERSION>` with:
-      - `latest` for the most recent version.
-      - A specific semantic version.
-            
-   - Replace `<DISTRIBUTION>` with: 
-      - `eks`
-      - `gke`
-      - `eksautomode`. 
-            
-   - Replace `<RELEASE_TRAIN>` with:
-      - `stable` (default).
-      - `public` for the preview version.
-        
-   - Use the `--antimalware` flag to enable antimalware scanning.
+    > This script tests for an Arc-managed deployment of the Defender for Containers sensor. If one exists, the script removes it prior to deploying the sensor by using helm.
       
 ---
 
 ### Verify the installation
 
-Verify that the installation succeeded by using the command:
+Verify that the installation succeeded by using the relevant command:
+
+**For standard AKS, EKS, and GKE:**
 
 ```bash
 helm list --namespace mdc
 ```
 
+**For AKS Automatic:**
+
+```bash
+helm list --namespace kube-system
+```
+
 The installation is successful if the `STATUS` field displays **deployed**.
 
 ## Configure security rules for gated deployment
+
+> [!NOTE]
+> Kubernetes gated deployment is supported on AKS Automatic clusters only when the sensor is installed by using Helm in the `kube-system` namespace. Add-on deployment isn’t supported for this scenario.
 
 > [!IMPORTANT]
 > For Helm installations:

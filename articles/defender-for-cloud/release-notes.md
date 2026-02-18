@@ -27,6 +27,22 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## March 2026
+
+| Date | Category | Update |
+| -------- | -------- | -------- |
+|March 12, 2026| GA | [Kubernetes gated deployment support for AKS Automatic (GA)](#kubernetes-gated-deployment-support-for-aks-automatic-ga) |
+
+## Kubernetes gated deployment support for AKS Automatic (GA)
+
+March 12, 2026
+
+Kubernetes gated deployment is now generally available for AKS Automatic clusters.
+
+To use this capability, install the Defender for Containers sensor by using Helm in the `kube-system` namespace. Gated deployment isn't supported when the sensor is installed by using the AKS add-on deployment method.
+
+The [Helm installation scripts](deploy-helm.md) were updated to support deploying the sensor to the `kube-system` namespace on AKS Automatic clusters.
+
 ## February 2026
 
 | Date | Category | Update |
