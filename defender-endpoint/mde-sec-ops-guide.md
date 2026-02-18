@@ -1,4 +1,4 @@
-﻿---
+---
 title: Security Operations Guide for Defender for Endpoint
 ms.reviewer: joshbregman, mattcall, pahuijbr, hayhov
 manager: bagol
@@ -138,7 +138,7 @@ The Microsoft Defender Endpoint should be set up to support your regular securit
 Review the following articles to understand recently released updates:
 
 - [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint versions](microsoft-defender-endpoint-versions.md)
+- [Microsoft Defender for Endpoint versions](microsoft-defender-endpoint-releases.md)
 
 ### Security administration team
 

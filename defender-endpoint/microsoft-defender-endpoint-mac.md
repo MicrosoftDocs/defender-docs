@@ -1,4 +1,4 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint on macOS overview
 ms.reviewer: joshbregman
 description: An introduction and overview of Microsoft Defender for Endpoint on macOS.
@@ -38,7 +38,7 @@ This article describes how to install, configure, update, and use Defender for E
 
 [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md)
 
-[What's new in Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-versions.md#macos-versions)
+[What's new in Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-releases.md#macos-releases)
 
 > [!TIP]
 > If you have any feedback that you would like to share, submit it by opening Microsoft Defender for Endpoint on Mac on your device and navigating to **Help** \> **Send feedback**.

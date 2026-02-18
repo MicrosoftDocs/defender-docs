@@ -1,4 +1,4 @@
-﻿- name: Microsoft Defender for Endpoint
+- name: Microsoft Defender for Endpoint
   href: index.yml
   expanded: true
   items:
@@ -38,7 +38,7 @@
           href: whats-new-in-microsoft-defender-endpoint.md
           displayName: What's new in Microsoft Defender for Endpoint
         - name: Release notes
-          href: microsoft-defender-endpoint-versions.md
+          href: microsoft-defender-endpoint-releases.md
     - name: Trial user guide - Defender for Endpoint
       href: defender-endpoint-trial-user-guide.md
     - name: Pilot and deploy Defender for Endpoint

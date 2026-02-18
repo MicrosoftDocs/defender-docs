@@ -1,6 +1,6 @@
 ---
 title: Microsoft Defender for Endpoint release notes
-description: This article describes new releases and versions of Microsoft Defender for Endpoint on Windows, macOS, Linux, Android, and iOS.
+description: This article describes releases of Microsoft Defender for Endpoint on Windows, macOS, Linux, Android, and iOS.
 ms.topic: whats-new
 ms.service: defender-endpoint
 author: lwainstein
@@ -13,7 +13,7 @@ appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoi
 
 # Microsoft Defender for Endpoint release notes
 
-This article describes new releases and versions of Microsoft Defender for Endpoint across Windows, macOS, Linux, Android, and iOS in the past 6 months.
+This article describes releases of Microsoft Defender for Endpoint across Windows, macOS, Linux, Android, and iOS in the past 6 months.
 
 To learn about Microsoft Defender for Endpoint features that aren't version-specific, see [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md).
 
@@ -21,13 +21,13 @@ To learn about Microsoft Defender for Endpoint features that aren't version-spec
 
 ## Who should read this article
 
-This page is intended primarily for Microsoft Defender for Endpoint customers who have purchased a license and regularly deploy, maintain, or validate Defender for Endpoint across their organization. These customers can use this page to find supported versions, component updates, and platform requirements as part of installing and operating MDE in enterprise environments.
+This page is intended primarily for Microsoft Defender for Endpoint customers who have purchased a license and regularly deploy, maintain, or validate Defender for Endpoint across their organization. These customers can use this page to find supported releases, component updates, and platform requirements as part of installing and operating MDE in enterprise environments.
 
 For more information on Defender for Endpoint plans and licenses, see the [Microsoft 365 licensing guidance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 
-## All supported versions by date
+## All supported releases by date
 
-This table includes supported versions released in for all supported platforms in the past 6 months. Each release includes a link to the full release details section.
+This table includes supported releases for all supported platforms in the past 6 months. Each release includes a link to the full release details section.
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
@@ -82,7 +82,7 @@ This table includes supported versions released in for all supported platforms i
 |Windows |10.8760.27617.1006  |July 2024 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#windows--july-2024--108760276171006) |
 |Windows |10.8797.25857.1000  |May 2025 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#windows--may-2025--108797258571000) |
 
-## Windows versions
+## Windows releases
 
 This section covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. You can also check the file information section in the monthly cumulative rollup updates in the following articles: 
 
@@ -94,7 +94,7 @@ This section covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. 
 
 ### Windows | May 2025 | 10.8797.25857.1000
 
-#### Versions
+#### Release details
 
 | OS | KB |
 | -------- | -------- |
@@ -114,7 +114,7 @@ This section covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. 
 
 ### Windows | July 2024 | 10.8760.27617.1006
 
-#### Versions
+#### Release details
 
 | OS | KB |
 | -------- | -------- |
@@ -132,7 +132,7 @@ This section covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. 
 |-------------|---------------|
 | Data Loss Prevention (DLP) | Scoped classification (Know Your Data policy) and activity events across workloads; device group discovery and scoping for custom policy; OCR URL caching for improved image classification performance. |
 
-## macOS versions
+## macOS releases
 
 Defender for Endpoint supports macOS version 15.0.1 or newer. macOS 11 (Big Sur) and 12 (Monterey) are no longer supported.
 
@@ -144,7 +144,7 @@ For known issues, see [macOS known issues](#macos-known-issues).
 
 ### macOS | February 2026 | 101.25122.0008
 
-#### Versions
+#### Release details
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
@@ -154,7 +154,7 @@ For known issues, see [macOS known issues](#macos-known-issues).
 
 ### macOS | January 2026 | 101.25122.0007
 
-#### Versions
+#### Release details
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
@@ -166,7 +166,7 @@ Bug and performance fixes
 
 ### macOS | January 2026 | 101.25122.0006
 
-#### Versions
+#### Release details
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
@@ -180,7 +180,7 @@ Bug and performance fixes
 
 ### macOS | December 2025 | 101.25102.0019
 
-#### Versions
+#### Release details
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
@@ -194,7 +194,7 @@ Bug and performance fixes
 
 ### macOS | November 2025 | 101.25102.0016
 
-#### Versions
+#### Release details
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
@@ -208,7 +208,7 @@ Bug and performance fixes
 
 ### macOS | October 2025 | 101.25082.0006
 
-#### Versions
+#### Release details
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
@@ -222,7 +222,7 @@ Bug and performance fixes
 
 ### macOS | September 2025 | 101.25072.0011
 
-#### Versions
+#### Release details
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
@@ -239,7 +239,7 @@ Bug and performance fixes
 
 ### macOS | August 2025 | 101.25062.0006
 
-#### Versions
+#### Release details
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
@@ -251,7 +251,7 @@ Bug and performance fixes
 |--------------|---------------|
 | General | Bug and performance fixes. |
 
-#### Versions
+#### Release details
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
@@ -279,7 +279,7 @@ Bug and performance fixes
   
 If an end user encounters a prompt for Defender for Endpoint on macOS processes such as `wdavdaemon_enterprise` or `Microsoft Defender Helper`, the end user can safely choose the **Deny** option. This selection doesn't affect Defender for Endpoint's functionality.  Enterprises can also add *Microsoft Defender* to allow [incoming connections](https://support.apple.com/en-ca/guide/deployment/dep8d306275f/web). This issue is fixed in macOS Sequoia 15.2.
 
-## Linux versions
+## Linux releases
 
 Defender for Endpoint on Linux is updated regularly. While security fixes are included as part of monthly releases, the fixes aren't always listed as a separate **Security Patch** item in these notes. If a release contains security-related updates, the updates are listed in this article in the specific version section.
 
@@ -298,7 +298,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 ### Linux | January 2026 | 101.25102.0005
 
-#### Versions
+#### Release details
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
@@ -314,7 +314,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 ### Linux | December 2025 | 101.25092.0005
 
-#### Versions
+#### Release details
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
@@ -328,7 +328,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 ### Linux | December 2025 | 101.25092.0002
 
-#### Versions
+#### Release details
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
@@ -342,7 +342,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 ### Linux | November 2025 | 101.25102.0003
 
-#### Versions
+#### Release details
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
@@ -358,7 +358,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 ### Linux | October 2025 | 101.25092.0001
 
-#### Versions
+#### Release details
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
@@ -374,7 +374,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 ### Linux | September 2025 | 101.25082.0003 (Build 1)
 
-#### Versions
+#### Release details
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
@@ -390,7 +390,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 ### Linux | September 2025 | 101.25072.0003 (Build 2)
 
-#### Versions
+#### Release details
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
@@ -400,12 +400,12 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 | Feature area | Update summary |
 |--------------|---------------|
-| Device management | Fixed issue to generate unique machine identifiers for each onboarded device—especially useful when deploying Microsoft Defender via Golden image. |
+| Device management | Fixed issue to generate unique machine identifiers for each onboarded deviceâ€”especially useful when deploying Microsoft Defender via Golden image. |
 | General | Other stability enhancements and bug fixes. |
 
 ### Linux | August 2025 | 101.25062.0003
 
-#### Versions
+#### Release details
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
@@ -421,13 +421,13 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 | Compatibility | Running Defender for Endpoint on Linux alongside Fapolicyd is now supported on RHEL and Fedora-based distributions, enabling both antivirus and EDR functionality to operate without conflict. |
 | General | Other stability enhancements and bug fixes. |
 
-## Android versions
+## Android releases
 
 See the full list of [Android UX improvements](android-new-ux.md).
 
 ### Android | December 2025 | 1.0.8412.0101
 
-#### Versions
+#### Release details
 
 | Build | Release Date |
 | -------- | -------- |
@@ -441,7 +441,7 @@ See the full list of [Android UX improvements](android-new-ux.md).
 
 ### Android | December 2025 | 1.0.8321.0101
 
-#### Versions
+#### Release details
 
 | Build | Release Date |
 | -------- | -------- |
@@ -456,7 +456,7 @@ See the full list of [Android UX improvements](android-new-ux.md).
 
 ### Android | November 2025 | 1.0.8315.0101
 
-#### Versions
+#### Release details
 
 | Build | Release Date |
 | -------- | -------- |
@@ -471,7 +471,7 @@ See the full list of [Android UX improvements](android-new-ux.md).
 
 ### Android | November 2025 | 1.0.8303.0101
 
-#### Versions
+#### Release details
 
 | Build | Release Date |
 | -------- | -------- |
@@ -487,7 +487,7 @@ See the full list of [Android UX improvements](android-new-ux.md).
 
 ### Android | October 2025 | 1.0.8217.0101
 
-#### Versions
+#### Release details
 
 | Build | Release Date |
 | -------- | -------- |
@@ -501,7 +501,7 @@ See the full list of [Android UX improvements](android-new-ux.md).
 
 ### Android | October 2025 | 1.0.8201.0101
 
-#### Versions
+#### Release details
 
 | Build | Release Date |
 | -------- | -------- |
@@ -517,7 +517,7 @@ See the full list of [Android UX improvements](android-new-ux.md).
 
 ### Android | September 2025 | 1.0.8102.0101
 
-#### Versions
+#### Release details
 
 | Build | Release Date |
 | -------- | -------- |
@@ -532,7 +532,7 @@ See the full list of [Android UX improvements](android-new-ux.md).
 
 ### Android | August 2025 | 1.0.8018.0103
 
-#### Versions
+#### Release details
 
 | Build | Release Date |
 | -------- | -------- |
@@ -546,7 +546,7 @@ See the full list of [Android UX improvements](android-new-ux.md).
 
 ### Android | July 2025 | 1.0.7901.0101
 
-#### Versions
+#### Release details
 
 | Build | Release Date |
 | -------- | -------- |
@@ -558,13 +558,13 @@ See the full list of [Android UX improvements](android-new-ux.md).
 |--------------|---------------|
 | User experience | UX Improvement for home page and tiles screens. [Learn more](android-new-ux.md#march-2025) |
 
-## iOS versions
+## iOS releases
 
 For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 
 ### iOS | November 2025 | 1.1.70290103
 
-#### Versions
+#### Release details
 
 | Build | Release Date |
 |--------|--------------|
@@ -578,7 +578,7 @@ For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 
 ### iOS | October 2025 | 1.1.70230101, 1.1.69250104
 
-#### Versions
+#### Release details
 
 | Build | Release Date |
 |--------|--------------|
@@ -594,7 +594,7 @@ For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 
 ### iOS | September 2025 | 1.1.68200103
 
-#### Versions
+#### Release details
 
 | Build | Release Date |
 |--------|--------------|
@@ -608,7 +608,7 @@ For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 
 ### iOS | August 2025 | 1.1.68140102
 
-#### Versions
+#### Release details
 
 | Build | Release Date |
 |--------|--------------|
@@ -622,7 +622,7 @@ For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 
 ### iOS | July 2025 | 1.1.67040101
 
-#### Versions
+#### Release details
 
 | Build | Release Date |
 |--------|--------------|
@@ -634,13 +634,13 @@ For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 |--------------|---------------|
 | UX | UX Improvement. For more information, see [iOS UX Experience](/defender-endpoint/ios-new-ux). |
 
-## Microsoft Defender Antivirus versions
+## Microsoft Defender Antivirus releases
 
 For more information about Microsoft Defender Antivirus updates, see [Microsoft Defender Antivirus security intelligence product updates and support](microsoft-defender-antivirus-updates.md).
 
 ### Windows Antivirus | January 2026 | Platform 4.18.26010.5 | Engine 1.1.26010.1
 
-#### Versions
+#### Release details
 
 | Component | Version | Date |
 | -------- | -------- | -------- |
@@ -664,7 +664,7 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 
 ### Windows Antivirus | November 2025 | Platform 4.18.25110.6 | Engine 1.1.25110.1
 
-#### Versions
+#### Release details
 
 | Component | Version | Date |
 | -------- | -------- | -------- |
@@ -691,7 +691,7 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 
 ### Windows Antivirus | October 2025 | Platform 4.18.25100.9008 | Engine 1.1.25100.9002
 
-#### Versions
+#### Release details
 
 | Component | Version | Date |
 | -------- | -------- | -------- |

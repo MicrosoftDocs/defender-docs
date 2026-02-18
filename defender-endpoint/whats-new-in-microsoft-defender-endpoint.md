@@ -1,4 +1,4 @@
-﻿---
+---
 title: New features in Microsoft Defender for Endpoint
 description: This article describes new features available in Microsoft Defender for Endpoint, including both Windows and cross-platform updates.
 ms.topic: whats-new
@@ -23,7 +23,7 @@ appliesto:
 
 This article describes Microsoft Defender for Endpoint features that are in preview or generally available (GA), released in the past 6 months.
 
-For recent releases of Microsoft Defender for Endpoint, including build numbers, improvements, and fixes, see [Microsoft Defender for Endpoint release notes](microsoft-defender-endpoint-versions.md).
+For recent releases of Microsoft Defender for Endpoint, including build numbers, improvements, and fixes, see [Microsoft Defender for Endpoint release notes](microsoft-defender-endpoint-releases.md).
 
 Learn more about [Preview features](/defender-xdr/preview).
 
@@ -31,32 +31,32 @@ Learn more about [Preview features](/defender-xdr/preview).
 
 |Platform  |Feature  |Preview/GA  |Description  |
 |----------|---------|------------|-------------|
-|All |What's new and release notes documentation updates. |GA |To provide better visibility and access to new features, improvements, and fixes in Microsoft Defender for Endpoint, the What's new and OS-specific release notes have been updated with the following changes:<br>- The What's new page (this page) has been renamed to **New features in Microsoft Defender for Endpoint** and now includes both features and releases.<br>- The [Release notes page](microsoft-defender-endpoint-versions.md) now consolidates release details for all supported OSs, including Windows Antivirus. The page has been reorganized to group updates by platform and date, making it easier to find specific information.<br>- All previous release notes pages redirect to the consolidated release notes page, so bookmarks should still work. |
+|All |What's new and release notes documentation updates |GA |To provide better visibility and access to new features, improvements, and fixes in Microsoft Defender for Endpoint, the What's new and OS-specific release notes have been updated with the following changes:<br>- The What's new page (this page) has been renamed to **New features in Microsoft Defender for Endpoint** and now includes both features and links to latest release notes.<br>- The [Release notes page](microsoft-defender-endpoint-releases.md) now consolidates release details for all supported OSs, including Windows Antivirus. The page has been reorganized to group updates by platform and date, making it easier to find specific information.<br>- All previous release notes pages redirect to the consolidated release notes page. |
 |All |[Library management for live response](configure-libraries-live-response.md) |Preview |You can now view and manage files and scripts used during live response sessions in the Microsoft Defender portal. With this enhancement, you get a centralized view of all uploaded files and their properties, and can upload, view and delete files outside the live response session. |
 |All (vulnerability management) |Vulnerable components page renamed to [Software components](/defender-vulnerability-management/tvm-vulnerable-components) |GA |To reflect Defender Vulnerability Management's visibility into all software components identified in your organization, the **Vulnerable components** page has been renamed to **Software components**. |
 |All (vulnerability management) |GA |Improved Device Vulnerabilities report experience |To simplify and streamline the [Device vulnerabilities report](/defender-vulnerability-management/tvm-vulnerable-devices-report) experience, the Vulnerable devices report now includes the following changes and enhancements:<br>- The **Vulnerable devices by Windows 10/11 version over time** section has been removed.<br>- The report’s filters have been simplified to only include the **Device group** filter.<br>- The report’s history is now limited to the last 30 days.<br>- The report’s history is now limited to the last 30 days.<br><br>**Note**: These changes are now visible to government cloud customers, but aren't yet visible in air-gapped environments. This visibility will be added in the coming months. |
-|macOS |Build 101.25122.0008 |GA |Release version 20.125122.8.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#macos--february-2026--101251220008). |
-|Windows | Windows Defender Antivirus: Platform 4.18.26010.5 / Engine 1.1.26010.1 |GA |See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#windows-antivirus--january-2026--platform-418260105--engine-11260101). |
+|macOS |Build 101.25122.0008 |GA |Release version 20.125122.8.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--february-2026--101251220008). |
+|Windows | Windows Defender Antivirus: Platform 4.18.26010.5 / Engine 1.1.26010.1 |GA |See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#windows-antivirus--january-2026--platform-418260105--engine-11260101). |
 
 ## January 2026
 
 |Platform  |Feature  |Preview/GA  |Description  |
 |----------|---------|------------|-------------|
-|Linux |Build 101.25102.0005 |GA |Release version 30.125102.0005.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#linux--january-2026--101251020005). |
-|macOS |Build 101.25122.0007 |GA |Release version 20.125122.7.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#macos--january-2026--101251220007). |
-|macOS |Build 101.25122.0006 |GA |Release version 20.125122.6.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#macos--january-2026--101251220006). |
+|Linux |Build 101.25102.0005 |GA |Release version 30.125102.0005.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#linux--january-2026--101251020005). |
+|macOS |Build 101.25122.0007 |GA |Release version 20.125122.7.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--january-2026--101251220007). |
+|macOS |Build 101.25122.0006 |GA |Release version 20.125122.6.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--january-2026--101251220006). |
 |All (vulnerability management) |[Device vulnerabilities report](/defender-vulnerability-management/tvm-vulnerable-devices-report) enhancements |Preview |To simplify and streamline the Device vulnerabilities report experience, the Vulnerable devices report now includes several changes and enhancements ([learn more](#february-2026)).<br><br>**Note**: These changes are not yet visible to government cloud customers. |
 
 ## December 2025
 
 |Platform  |Feature  |Preview/GA  |Description  |
 |----------|---------|------------|-------------|
-|Linux |Build 101.25092.0005 |GA |Release version 30.125092.0005.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#linux--december-2025--101250920005). |
-|Linux |Build 101.25092.0002 |GA |Release version 30.125092.0002.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#linux--december-2025--101250920002). |
-|Android |Build 1.0.8412.0101 |GA |Build 1.0.8412.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#android--december-2025--1084120101). |
-|Android |Build 1.0.8321.0101 |GA |Build 1.0.8321.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#android--december-2025--1083210101). |
-|macOS |Build 101.25102.0019 |GA |Release version 20.125102.19.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#macos--december-2025--101251020019). |
-|Windows |Windows Defender Antivirus: Platform 4.18.25110.6 / Engine 1.1.25110.1 |GA |See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#windows-antivirus--november-2025--platform-418251106--engine-11251101). |
+|Linux |Build 101.25092.0005 |GA |Release version 30.125092.0005.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#linux--december-2025--101250920005). |
+|Linux |Build 101.25092.0002 |GA |Release version 30.125092.0002.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#linux--december-2025--101250920002). |
+|Android |Build 1.0.8412.0101 |GA |Build 1.0.8412.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#android--december-2025--1084120101). |
+|Android |Build 1.0.8321.0101 |GA |Build 1.0.8321.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#android--december-2025--1083210101). |
+|macOS |Build 101.25102.0019 |GA |Release version 20.125102.19.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--december-2025--101251020019). |
+|Windows |Windows Defender Antivirus: Platform 4.18.25110.6 / Engine 1.1.25110.1 |GA |See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#windows-antivirus--november-2025--platform-418251106--engine-11251101). |
 |All |[Triage collection](/azure/sentinel/datalake/sentinel-mcp-triage-tool) |Preview |Use triage collection to prioritize incidents and hunt threats with the Sentinel Model Context Protocol (MCP) server.|
 |All (vulnerability management) |New Microsoft Secure Score recommendations |Preview |Microsoft Secure Score now includes new recommendations to help organizations proactively prevent common endpoint attack techniques: - **Disable Remote Registry service on Windows**: Prevents remote access to the Windows registry, reducing attack surface and blocking unauthorized configuration changes, privilege escalation, and lateral movement.<br> - **Disable NTLM authentication for Windows workstations**: Helps prevent credential theft and lateral movement attacks by removing support for an outdated and insecure protocol. |
 |All (vulnerability management) |[CVE exceptions](/defender-vulnerability-management/tvm-exception-overview#types-of-exceptions) |GA |CVE exceptions are now generally available, and also support the **False positive** justification and the `status` field as part of the response for the `GET /api/vulnerabilities` request. [Learn more](/defender-endpoint/api/get-all-vulnerabilities). |
@@ -69,21 +69,21 @@ Learn more about [Preview features](/defender-xdr/preview).
 |All |[Custom data collection](custom-data-collection.md) |Preview |Custom data collection enables organizations to expand and customize telemetry collection beyond default configurations to support specialized threat hunting and security monitoring needs. |
 |Windows, Linux | Defender deployment tool<br/>- [for Windows devices](./defender-deployment-tool-windows.md)<br/>- [for Linux devices](./linux-install-with-defender-deployment-tool.md) | Preview | The new Defender deployment tool is a lightweight, self-updating application that streamlines onboarding devices to the Defender endpoint security solution. The tool takes care of prerequisites, automates migrations from older solutions, and removes the need for complex onboarding scripts, separate downloads, and manual installations. It supports Windows and Linux devices. |
 |Windows | [Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security) | Preview | A Defender for endpoint security solution is now available for legacy Windows 7 SP1 and Windows Server 2008 R2 SP1 devices. The solution provides advanced protection capabilities and improved functionality for these devices compared to other solutions. The new solution is available using the new [Defender deployment tool](./defender-deployment-tool-windows.md). |
-|Windows |Windows Defender Antivirus: Platform 4.18.25100.9008 / Engine 1.1.25100.9002 |GA | See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#windows-antivirus--october-2025--platform-418251009008--engine-11251009002). |
+|Windows |Windows Defender Antivirus: Platform 4.18.25100.9008 / Engine 1.1.25100.9002 |GA | See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#windows-antivirus--october-2025--platform-418251009008--engine-11251009002). |
 
 ## October 2025
 
 |Platform  |Feature  |Preview/GA  |Description  |
 |----------|---------|------------|-------------|
-|Android |Build 1.0.8217.0101 |GA |Build 1.0.8217.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#android--october-2025--1082170101). |
-|Android |Build 1.0.8201.0101 |GA |Build 1.0.8201.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#android--october-2025--1082010101). |
-|macOS |Build 101.25082.0006 |GA |Release version 20.125082.6.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#macos--october-2025--101250820006). |
-|iOS |Build 1.1.70230101 |GA |Build 1.1.70230101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#ios--october-2025--1170230101-1169250104). |
-|iOS |Build 1.1.69250104 |GA |Build 1.1.69250104 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#ios--october-2025--1170230101-1169250104). |
-|Windows Antivirus |Platform 4.18.25100.9008 / Engine 1.1.25100.9002 |GA |Platform 4.18.25100.9008 and Engine 1.1.25100.9002 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#windows-antivirus--october-2025--platform-418251009008--engine-11251009002). |
+|Android |Build 1.0.8217.0101 |GA |Build 1.0.8217.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#android--october-2025--1082170101). |
+|Android |Build 1.0.8201.0101 |GA |Build 1.0.8201.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#android--october-2025--1082010101). |
+|macOS |Build 101.25082.0006 |GA |Release version 20.125082.6.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--october-2025--101250820006). |
+|iOS |Build 1.1.70230101 |GA |Build 1.1.70230101 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#ios--october-2025--1170230101-1169250104). |
+|iOS |Build 1.1.69250104 |GA |Build 1.1.69250104 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#ios--october-2025--1170230101-1169250104). |
+|Windows Antivirus |Platform 4.18.25100.9008 / Engine 1.1.25100.9002 |GA |Platform 4.18.25100.9008 and Engine 1.1.25100.9002 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#windows-antivirus--october-2025--platform-418251009008--engine-11251009002). |
 |All |[Streamlined connectivity support for US government environments (GCC, GCC High, DoD)](configure-device-connectivity.md) |Preview |Defender for Endpoint now supports streamlined connectivity for US government cloud environments. This enhancement simplifies onboarding by reducing the number of required service endpoints and improves reliability across restricted networks. For more information, see the [required connectivity settings](gov.md#required-connectivity-settings). |
 |All |Isolation exclusions |GA |The [Isolation exclusions](isolation-exclusions.md) feature is now generally available. Isolation exclusions allow designated processes or endpoints to bypass the restrictions of network isolation, ensuring essential functions continue while limiting broader network exposure. |
-|Linux |Build 101.25092.0001 |GA |Release version 30.125092.0001.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#linux--october-2025--101250920001). |
+|Linux |Build 101.25092.0001 |GA |Release version 30.125092.0001.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#linux--october-2025--101250920001). |
 |All (vulnerability management) |[CVE exceptions](/defender-vulnerability-management/tvm-exception-overview#types-of-exceptions) |Preview |You can now use **CVE exceptions** to exclude specific Common Vulnerabilities and Exposures (CVEs) from analysis in your environment. CVE exceptions allow you to control what type of data is relevant to your organization and to selectively exclude certain data from your remediation efforts. For more information, see [Exceptions in Microsoft Defender Vulnerability Management](/defender-vulnerability-management/tvm-exception-overview) and [Create, view, and manage exceptions](/defender-vulnerability-management/tvm-exception). |
 |All |New Microsoft Secure Score recommendations |Preview |Microsoft Secure Score now includes new recommendations to help organizations proactively prevent common endpoint attack techniques:<br>- **Block web shell creation on servers** (reduces the risk of web-based persistence and remote code execution attacks)<br>- **Block use of copied or impersonated system tools** (helps prevent attacker misuse of legitimate administrative utilities for lateral movement or privilege escalation)<br>- **Block rebooting a machine in Safe Mode**: Helps defend against attackers who attempt to disable endpoint protection or persist through reboots. |
 
@@ -91,19 +91,19 @@ Learn more about [Preview features](/defender-xdr/preview).
 
 |Platform  |Feature  |Preview/GA  |Description  |
 |----------|---------|------------|-------------|
-|Android |Build 1.0.8102.0101 |GA |Build 1.0.8102.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#android--september-2025--1081020101). |
-|macOS |Build 101.25072.0011 |GA |Release version 20.125072.11.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#macos--september-2025--101250720011). |
+|Android |Build 1.0.8102.0101 |GA |Build 1.0.8102.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#android--september-2025--1081020101). |
+|macOS |Build 101.25072.0011 |GA |Release version 20.125072.11.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--september-2025--101250720011). |
 |macOS |[Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS](./mac-support-offline-security-intelligence-update.md) |GA |Enables organizations to update security intelligence (antivirus definitions/signatures) on macOS endpoints offline from a local mirror server. |
-|Linux |Build 101.25082.0003 |GA |Release version 30.125082.0003.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#linux--september-2025--101250820003-build-1). |
-|Linux |Build 101.25072.0003 |GA |Release version 30.125072.0003.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#linux--september-2025--101250720003-build-2). |
-|iOS |Build 1.1.68200103 |GA |Build 1.1.68200103 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#ios--september-2025--1168200103). |
+|Linux |Build 101.25082.0003 |GA |Release version 30.125082.0003.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#linux--september-2025--101250820003-build-1). |
+|Linux |Build 101.25072.0003 |GA |Release version 30.125072.0003.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#linux--september-2025--101250720003-build-2). |
+|iOS |Build 1.1.68200103 |GA |Build 1.1.68200103 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#ios--september-2025--1168200103). |
 
 ## August 2025
 
 |Platform  |Feature  |Preview/GA  |Description  |
 |----------|---------|------------|-------------|
-|Android |Build 1.0.8018.0103 |GA |Build 1.0.8018.0103 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#android--august-2025--1080180103). |
-|macOS |Build 101.25062.0006 |GA |Release version 20.125062.6.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#macos--august-2025--101250620006). |
+|Android |Build 1.0.8018.0103 |GA |Build 1.0.8018.0103 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#android--august-2025--1080180103). |
+|macOS |Build 101.25062.0006 |GA |Release version 20.125062.6.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--august-2025--101250620006). |
 |macOS |[Behavior Monitoring](behavior-monitor-macos.md) |GA |Defender for Endpoint can now monitor process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. Learn more: [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md) and [Behavior Monitoring GA announcement blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/behavior-monitoring-is-now-generally-available-for-microsoft-defender-for-endpoi/4415697). |
-|Linux |Build 101.25062.0003 |GA |Release version 30.125062.0003.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#linux--august-2025--101250620003). |
-|iOS |Build 1.1.68140102 |GA |Build 1.1.68140102 released: See [enhancements and features for this release](microsoft-defender-endpoint-versions.md#ios--august-2025--1168140102). |
+|Linux |Build 101.25062.0003 |GA |Release version 30.125062.0003.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#linux--august-2025--101250620003). |
+|iOS |Build 1.1.68140102 |GA |Build 1.1.68140102 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#ios--august-2025--1168140102). |

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Onboard servers through Microsoft Defender for Endpoint's onboarding experience
 description: Learn how to onboard servers running Windows Server or Linux to Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
@@ -140,7 +140,7 @@ You can choose from several deployment methods and tools to onboard servers, as 
 
 ### Update packages for Windows Server 2016 or Windows Server 2012 R2
 
-To receive regular product improvements and fixes for the Defender for Endpoint component, ensure Windows Update [KB5005292](https://go.microsoft.com/fwlink/?linkid=2168277) gets applied or approved. In addition, to keep protection components updated, see [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-endpoint-versions.md#microsoft-defender-antivirus-versions).
+To receive regular product improvements and fixes for the Defender for Endpoint component, ensure Windows Update [KB5005292](https://go.microsoft.com/fwlink/?linkid=2168277) gets applied or approved. In addition, to keep protection components updated, see [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-endpoint-releases.md#microsoft-defender-antivirus-releases).
 
 If you're using Windows Server Update Services (WSUS) and/or [Microsoft Configuration Manager](/mem/configmgr/core/understand/introduction), this new "Microsoft Defender for Endpoint update for EDR Sensor" is available under the category "Microsoft Defender for Endpoint."
 

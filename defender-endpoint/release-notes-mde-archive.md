@@ -1,4 +1,4 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint release notes - Archive
 description: Archived platform-specific build and version history for Microsoft Defender for Endpoint on Windows, macOS, and Linux.
 search.appverid: met150
@@ -23,7 +23,7 @@ appliesto:
 
 # Microsoft Defender for Endpoint release notes - Archive
 
-This page contains archived platform-specific build and version history for Microsoft Defender for Endpoint components. For current releases, see [Microsoft Defender for Endpoint release notes](microsoft-defender-endpoint-versions.md). For archived feature announcements, see [What's new in Microsoft Defender for Endpoint - Archive](whats-new-mde-archive.md).
+This page contains archived platform-specific build and version history for Microsoft Defender for Endpoint components. For current releases, see [Microsoft Defender for Endpoint release notes](microsoft-defender-endpoint-releases.md). For archived feature announcements, see [What's new in Microsoft Defender for Endpoint - Archive](whats-new-mde-archive.md).
 
 ## Windows releases
 
@@ -2760,7 +2760,7 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 
 ## Android releases
 
-All Android build entries from July 2025 onward are in the current [release notes](microsoft-defender-endpoint-versions.md). No older Android build entries are archived.
+All Android build entries from July 2025 onward are in the current [release notes](microsoft-defender-endpoint-releases.md). No older Android build entries are archived.
 
 ## iOS releases
 

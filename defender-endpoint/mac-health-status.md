@@ -88,5 +88,5 @@ You can run `mdatp health --help` on recent versions to list all supported featu
 
 ## See also
 
-- [What's new in Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-versions.md#macos-versions)
+- [What's new in Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-releases.md#macos-releases)
 - [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md)
