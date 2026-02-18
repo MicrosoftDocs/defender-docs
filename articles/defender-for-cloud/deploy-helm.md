@@ -3,7 +3,7 @@ title: Install Defender for Containers sensor using Helm
 description: Learn how to install the Microsoft Defender for Containers sensor on Kubernetes clusters using Helm.
 author: Elazark
 ms.topic: how-to
-ms.date: 02/01/2026
+ms.date: 02/18/2026
 ms.author: elkrieger
 ai-usage: ai-assisted
 ---
@@ -130,6 +130,11 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `
   > [!NOTE]
   > Don’t provide this parameter for standard AKS deployments. If not specified, the default namespace is `mdc`.
     
+- Replace `<NAMESPACE>` with `kube-system` if you are deploying to AKS Automatic.
+
+ > [!NOTE]
+ > Don’t provide this parameter for standard AKS deployments. If not specified, the default namespace is `mdc`.
+
 - Use the `--antimalware` flag to enable antimalware scanning.
 
 > [!NOTE]
