@@ -361,7 +361,7 @@ Confirm that the **DESIRED**, **CURRENT**, and **READY** values match the number
 
 - [Enable Defender for Containers](defender-for-containers-enable-portal.md)
 
-- [Troubleshoot Defender for Containers on AWS (EKS)](defender-for-containers-aws-troubleshoot.md)
+- [Troubleshoot Defender for Containers](defender-for-containers-troubleshoot.md)
 
 - [Disable Microsoft Defender for Containers](defender-for-containers-remove.md)
 

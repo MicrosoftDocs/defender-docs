@@ -270,6 +270,6 @@ To enable Defender for Containers on an Azure Arc-enabled Kubernetes cluster, ma
 
 - [Deploy Defender for Containers components using Azure CLI](defender-for-containers-deploy-azure-cli.md)
 
-- [Troubleshoot Defender for Containers on AWS (EKS)](defender-for-containers-aws-troubleshoot.md)
+- [Troubleshoot Defender for Containers](defender-for-containers-troubleshoot.md)
 
 - [Disable Microsoft Defender for Containers](defender-for-containers-remove.md)

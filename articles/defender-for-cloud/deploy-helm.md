@@ -62,7 +62,7 @@ Depending on your deployment type, follow the relevant instructions to install t
 
 **AKS Automatic Only**: Run the following command for AKS Automatic:
 
-  ```bash
+  ```azurecli
   # Update Azure CLI to the latest version 
   az upgrade 
     

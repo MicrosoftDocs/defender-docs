@@ -214,7 +214,7 @@ Depending on the Kubernetes environment and the components you enable, Defender 
 
 You can deploy these components by using one of the following methods:
 
-- [Deploy Defender sensor and Azure Policy to clusters using security recommendations](defender-for-containers-deploy-recommendations.md)
+- [Deploy Defender sensor and Azure Policy to clusters using security recommendations](defender-for-containers-deploy-portal.md)
 
 - [Deploy Defender sensor and Azure Policy to clusters using Azure CLI](defender-for-containers-deploy-azure-cli.md)
 
