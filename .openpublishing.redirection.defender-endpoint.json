@@ -219,15 +219,15 @@
       "source_path": "defender-endpoint/mac-whatsnew.md",
       "redirect_url": "/defender-endpoint/whats-new-in-microsoft-defender-endpoint",
       "redirect_document_id": false
-    },
+    },    
     {
-      "source_path": "defender-endpoint/whats-new-mde-archive.md",
+      "source_path": "defender-endpoint/ios-whatsnew.md",
       "redirect_url": "/defender-endpoint/whats-new-in-microsoft-defender-endpoint",
       "redirect_document_id": false
     },
     {
-      "source_path": "defender-endpoint/ios-whatsnew.md",
-      "redirect_url": "/defender-endpoint/whats-new-in-microsoft-defender-endpoint",
+      "source_path": "defender-endpoint/release-notes-archive-android.md",
+      "redirect_url": "/defender-endpoint/whats-new-mde-archive",
       "redirect_document_id": false
     }         
   ]
