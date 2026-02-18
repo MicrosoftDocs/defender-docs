@@ -29,6 +29,12 @@ Learn more:
 - [What's new in Microsoft Defender for Endpoint on other operating systems and services](#whats-new-in-defender-for-endpoint-on-other-operating-systems-and-services)
 - [Preview features](/defender-xdr/preview)
 
+## February 2026
+
+|Feature  |Preview/GA  |Description  |
+|---------|------------|-------------|
+|[Library management for live response](configure-libraries-live-response.md) |Preview |You can now view and manage files and scripts used during live response sessions in the Microsoft Defender portal. With this enhancement, you get a centralized view of all uploaded files and their properties, and can upload, view and delete files outside the live response session. |
+
 ## December 2025
 
 |Feature  |Preview/GA  |Description  |
