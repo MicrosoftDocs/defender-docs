@@ -76,7 +76,6 @@ This table includes supported releases for all supported platforms in the past 6
 |Linux  |101.25072.0003  |September 2025 |- Release version: 30.125072.0003.0<br>- Engine version: 1.1.25060.4000<br>- Signature version: 1.431.4.0 |[Release details and updates](#linux--september-2025--101250720003-build-2) |
 |macOS  |101.25072.0011  |September 2025 |- Release version: 20.125072.11.0<br>- Engine version: 1.1.25060.3000<br>- Signature version: 1.429.309.0 |[Release details and updates](#macos--september-2025--101250720011) |
 |Android |1.0.8018.0103  |August 2025 |- Build: 1.0.8018.0103<br>- Released: August 19, 2025 |[Release details and updates](#android--august-2025--1080180103) |
-|macOS  |101.25062.0006  |August 2025 |- Release version: 20.125062.6.0<br>- Engine version: 1.1.25070.3000<br>- Signature version: 1.435.357.0 |[Release details and updates](#macos--august-2025--101250620006) |
 |Linux  |101.25062.0003  |August 2025 |- Release version: 30.125062.0003.0<br>- Engine version: 1.1.25040.4000<br>- Signature version: 1.429.442.0 |[Release details and updates](#linux--august-2025--101250620003) |
 |Android |1.0.7901.0101  |July 2025 |- Build: 1.0.7901.0101<br>- Released: July 10, 2025 |[Release details and updates](#android--july-2025--1079010101) |
 |Windows |10.8760.27617.1006  |July 2024 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#windows--july-2024--108760276171006) |
@@ -236,32 +235,6 @@ Bug and performance fixes
 | Diagnostics | Improved diagnostic capabilities and error reporting. |
 | Data Loss Prevention (DLP) | Performance and diagnostic improvements for endpoint DLP. |
 | General | Bug fixes. |
-
-### macOS | August 2025 | 101.25062.0006
-
-#### Release details
-
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|20.125062.6.0 |1.1.25070.3000 |1.435.357.0 |
-
-#### Enhancements and features
-
-| Feature area | Update summary |
-|--------------|---------------|
-| General | Bug and performance fixes. |
-
-#### Release details
-
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|20.125062.5.0 |1.1.25040.3000 |1.427.248.0 |
-
-#### Enhancements and features
-
-| Feature area | Update summary |
-|--------------|---------------|
-| General | Bug and performance fixes. |
 
 ### macOS known issues
 

@@ -148,6 +148,20 @@ This page contains archived platform-specific build and version history for Micr
 
 ## macOS releases
 
+### macOS | August 2025 | 101.25062.0006
+
+#### Release details
+
+| Release version | Engine version | Signature version |
+| -------- | -------- |-------- |
+|20.125062.6.0 |1.1.25070.3000 |1.435.357.0 |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|---------------|
+| General | Bug and performance fixes. |
+
 ### Jul-2025 (Build: 101.25062.0005  | Release version: 20.125062.5.0)
 
 | Build:             | **101.25062.0005**   |
