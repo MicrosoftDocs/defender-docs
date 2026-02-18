@@ -34,6 +34,7 @@ Learn more:
 |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|
 |[Library management for live response](configure-libraries-live-response.md) |Preview |You can now view and manage files and scripts used during live response sessions in the Microsoft Defender portal. With this enhancement, you get a centralized view of all uploaded files and their properties, and can upload, view and delete files outside the live response session. |
+|[Effective settings page](investigate-machines.md#configuration-management---effective-settings) |GA |The **Effective settings** page under the device inventory **Configuration management** tab is now generally available. |
 
 ## December 2025
 
