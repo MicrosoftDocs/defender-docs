@@ -489,15 +489,25 @@
     - name: Identity Security
       items:
       - name: Identity Security overview
-        href: identity-security.md
-      - name: View the coverage and maturity dashboard
+        href: identity-security-overview.md
+      - name: View your identity coverage and maturity 
         href: identity-security-dashboard.md  
-      - name: View the identity dashboard
-        href: /defender-for-identity/dashboard.md
-      - name: View the identity inventory
-        href: /defender-for-identity/identity-inventory.mdtoc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-      - name: AI agent inventory
-        href: ai-agent-inventory.md
+      - name: View your identities
+        items:
+        - name: View the identity dashboard
+          href: /defender-for-identity/dashboard.md
+        - name: View the identity inventory
+          href: /defender-for-identity/identity-inventory.md?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+        - name: View human identities
+          href: /defender-for-identity/human-identities.md?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json  
+        - name: View non-human identities
+          href: /defender-for-identity/non-human-identities.md?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+        - name: View agentic identities
+          href: /defender-for-identity/agentic-identities.md?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json 
+      - name: Identity security posture assessments
+        href: identity-security-assessments.md
+      - name: Investigate and respond to identity threats
+        href: identity-security-investigate-respond.md
     - name: Enhance security operations
       items:
       - name: Security operations guide
