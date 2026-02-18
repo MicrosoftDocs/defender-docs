@@ -34,6 +34,7 @@ This table includes supported versions released in for all supported platforms i
 |macOS |101.25122.0008  |February 2026 |- Release version: 20.125122.8.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--february-2026--101251220008) |
 |macOS |101.25122.0007  |January 2026 |- Release version: 20.125122.7.0<br>- Engine version: 1.1.25100.3000<br>- Signature version: 1.443.820.0 |[Release details and updates](#macos--january-2026--101251220007) |
 |macOS  |101.25122.0006  |January 2026 |- Release version: 20.125122.6.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--january-2026--101251220006) |
+|Defender Antivirus (Windows) |Platform 4.18.26010.5 / Engine 1.1.26010.1 |January 2026 |- Platform: 4.18.26010.5<br>- Engine: 1.1.26010.1<br>- Security intelligence: 1.443.820.0 |[Release details and updates](#windows-antivirus--january-2026--platform-418260105--engine-11260101) |
 |Linux  |101.25102.0005  |January 2026 |- Release version: 30.125102.0005.0<br>- Engine version: 1.1.25090.6000<br>- Signature version: 1.439.338.0 |[Release details and updates](#linux--january-2026--101251020005) |
 |Linux  |101.25092.0005  |December 2025 |- Release version: 30.125092.0005.0<br>- Engine version: 1.1.25090.4000<br>- Signature version: 1.437.18.0 |[Release details and updates](#linux--december-2025--101250920005) |
 |Linux  |101.25092.0002  |December 2025 |- Release version: 30.125092.0002.0<br>- Engine version: 1.1.25090.4000<br>- Signature version: 1.437.18.0 |[Release details and updates](#linux--december-2025--101250920002) |
@@ -639,6 +640,30 @@ For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 ## Microsoft Defender Antivirus versions
 
 For more information about Microsoft Defender Antivirus updates, see [Microsoft Defender Antivirus security intelligence product updates and support](microsoft-defender-antivirus-updates.md).
+
+### Windows Antivirus | January 2026 | Platform 4.18.26010.5 | Engine 1.1.26010.1
+
+#### Versions
+
+| Component | Version | Date |
+| -------- | -------- | -------- |
+| Platform | 4.18.26010.5 | February 9, 2026 |
+| Engine | 1.1.26010.1 | February 3, 2026 |
+| Security intelligence<sup>1</sup> | 1.445.6.0 | February 9, 2026 |
+| Support phase | Security and Critical Updates | - |
+
+<sup>1</sup>The security intelligence version listed here is relevant to the listed engine release. Newer versions of security intelligence are released regularly. For more information, see
+[Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates).
+
+#### Enhancements and features
+
+- Improved performance for Control Folder Access (CFA) when protected folders don't include network folders.
+- Fixed proxy issue in the MdeNpDiag utility in the MDEClientAnalyzer support tool.
+- Fixed an issue where syntax errors for contextual exclusions could lead to an engine crash.
+- Fixed policy incompatibility that prevented unblocking engine updates.
+- Fixed regression in the registry service path for the Core service.
+- Improved detection in OLEstream objects.
+- Fixed race condition during service initialization to read Tamper protection status.
 
 ### Windows Antivirus | November 2025 | Platform 4.18.25110.6 | Engine 1.1.25110.1
 
