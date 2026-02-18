@@ -10,7 +10,7 @@ ms.topic: article
 ms.service: defender-xdr
 ---
 
-# What Is Identity Security
+# What Is Identity Security?
 
 Microsoft Defender identity security detects, investigates, and responds to threats that target digital identities. Because identities are a primary attack vector in enterprise breaches, identity security is a core part of modern security architecture. Defender monitors identity activity, analyzes behavior, and detects anomalies that indicate malicious activity. When threats are identified, it supports rapid response actions such as isolating accounts, enforcing authentication controls, and triggering automated remediation.
 
@@ -20,29 +20,34 @@ Defender protects identities across the organization through a single, integrate
 
 Defender identity security provides a set of capabilities that address both high-level posture management and in-depth threat investigation.
 
+### Comprehensive identity protection across all identity types
+
+Identity security protects human and non-human identities across Microsoft and non-Microsoft systems, including identities used by applications and automated agents:
+
+- **Non-human and application identity protection**: Discovers and protects service accounts, service principals, OAuth applications, cloud app identities, and agentic identities.
+- **Unified signal ingestion**: Ingests identity signals from Microsoft and non-Microsoft sources into the unified identity inventory to provide consistent visibility across all identity types.
+- **Non-Microsoft identity and PAM integration**: Extends protection to external identity providers and privileged access management (PAM) solutions.
+
 ### Coverage and maturity
 
-Identity security helps assess and improve identity protection across the environment:
+The coverage and maturity page helps assess and improve identity protection across the environment:
 
-- **Deployment and coverage overview**: Shows which identity sources are connected, which protections are enabled, and where gaps exist across Active Directory, Entra ID, SaaS applications, non-human identities, and third-party providers.
-- **Coverage insights and recommendations**: Identifies gaps and next actions across identity sources, Entra Conditional Access (CA) policies, SaaS applications, and NHIs.
-- **Maturity and posture scoring**: Presents identity protection maturity as a simple score to track progress and guide improvement.
+- **Maturity and coverage scoring**: Presents identity protection maturity as a simple score to track progress and guide improvement.
+- **Deployment and coverage insights**: Shows which identity sources are connected, which protections are enabled, and where gaps exist across Active Directory, Entra ID, SaaS applications, non-human identities, and third-party providers.
+- **Recommended Actions**: Identifies deployment gaps and next actions across identity sources, Entra Conditional Access (CA) policies, SaaS applications, and NHIs to provide optimum identity protection.
 
 ### Investigation and response
 
 Identity security provides integrated capabilities for detecting and responding to identity-based threats:
 
-- **Integrated identity alerts and incidents**: Identity detections appear directly in Microsoft Defender incidents and are tagged consistently for investigation alongside endpoint, email, and cloud threats.
+- **Unified identity inventory** The unified identity inventory consolidates identity accounts and relationships across on-premises Active Directory, Entra ID, SaaS applications, and third-party identity providers.
+
+  - Provides a single view of all identity types, including users and non-human identities.
+  - Supplies context for posture management, threat detection, and investigation.
+  - Enables analysts to pivot from incidents and alerts to identity relationships, permissions, and activity.
+
 - **Threat detection and hunting**: Identity detections are unified across Defender, with identity-focused queries available in advanced hunting.
 - **Attack disruption actions**: Active attacks can be contained by disabling compromised accounts, revoking sessions, isolating devices, and resetting credentials.
-
-### Unified identity inventory
-
-The unified identity inventory consolidates identity accounts and relationships across on-premises Active Directory, Entra ID, SaaS applications, and third-party identity providers.
-
-- Provides a single view of all identity types, including users and non-human identities.
-- Supplies context for posture management, threat detection, and investigation.
-- Enables analysts to pivot from incidents and alerts to identity relationships, permissions, and activity.
 
 ### Identity risk and Conditional Access insights
 
@@ -52,10 +57,3 @@ Defender integrates with Microsoft Entra to strengthen identity protection:
 - **Conditional Access coverage insights**: Identifies missing or weak CA policy coverage and provides recommendations during onboarding.
 - **Security Copilot integration**: Identity insights flow into Security Copilot to support faster triage and investigation.
 
-### Non-human and third-party identity protection
-
-Identity security extends beyond Microsoft-native systems:
-
-- **Non-human identity protection**: Discovers and protects service accounts, service principals, OAuth applications, and other NHIs.
-- **Third-party identity and PAM support**: Extends protection to providers such as Okta and PingOne and privileged access management (PAM) solutions including CyberArk and SailPoint.
-- **Non-Microsoft signal ingestion**: Identity connectors ingest non-microsoft signals into the unified identity inventory to provide consistent visibility across all identities.

@@ -10,9 +10,9 @@ ai-usage: ai-assisted
 ms.service: defender-xdr
 ---
 
-# Work with the Coverage and maturity dashboard
+# View your identity coverage and maturity
 
-The Coverage and maturity dashboard provides a unified view of how well identities are protected across your organization, including on-premises environments, cloud identity providers (IdPs), SaaS applications, and partner integrations.
+The Coverage and maturity page provides a unified view of how well identities are protected across your organization, including on-premises environments, cloud identity providers (IdPs), SaaS applications, and partner integrations.
 
 The dashboard supports both:
 
