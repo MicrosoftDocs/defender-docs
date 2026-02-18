@@ -30,6 +30,9 @@ appliesto:
 
 Upload file to live response library.
 
+> [!TIP]
+> You can also upload live response files from the [Library management](../configure-libraries-live-response.md) page in the Microsoft Defender portal.
+
 ## Limitations
 
 - File max size limitation is 20MB.
