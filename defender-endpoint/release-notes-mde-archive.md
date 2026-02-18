@@ -2758,5 +2758,61 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 - Extended `mdatp diagnostic create` with a new parameter (`--path [directory]`) that allows the diagnostic logs to be saved to a different directory
 - Performance improvements & bug fixes
 
----
+## Android releases
 
+All Android build entries from July 2025 onward are in the current [release notes](microsoft-defender-endpoint-versions.md). No older Android build entries are archived.
+
+## iOS releases
+
+### 1.1.28250101
+
+- **Integration with Tunnel** - Microsoft Defender for Endpoint on iOS can now integrate with Microsoft Tunnel, a VPN gateway solution to enable security and connectivity in a single app. For more information, see [Microsoft Tunnel Overview](/mem/intune/protect/microsoft-tunnel-overview).
+- **Zero-touch onboard for enrolled iOS devices** enrolled through Microsoft Intune is generally available. For more information, see [Zero touch onboarding of Microsoft Defender for Endpoint](ios-install.md#zero-touch-silent-onboarding-to-defender-for-endpoint).
+- Bug fixes.
+
+### 1.1.24210103
+
+- Resolved internet connectivity issues on supervised devices. For more information, see [Deploy Defender for Endpoint on enrolled iOS devices](ios-install.md).
+- Bug fixes.
+
+### 1.1.23250104
+
+- Performance optimizations - Test battery performance with this version and let us know your feedback.
+- **Zero-touch onboard for enrolled iOS devices** - With this version, the preview of Zero-touch onboards for devices enrolled through Microsoft Intune has been added. For more information, see [Zero-touch (Silent) onboarding of Microsoft Defender for Endpoint](ios-install.md#zero-touch-silent-onboarding-to-defender-for-endpoint).
+- **Privacy Controls** - Configure privacy controls for phish alert report. For more information, see [Configure iOS features](ios-configure-features.md).
+
+### 1.1.23010101
+
+- Bug fixes and performance improvements
+- Performance optimizations were made in this release. Test battery performance with this version and let us know your feedback.
+
+### 1.1.20240103
+
+- Device Health card - Device Health card notifies end-users about any pending software updates.
+- Usability enhancements - End-users can now disable the Defender for Endpoint VPN from the Microsoft Defender app itself. Prior to this update, end-users had to disable VPN only from the Settings app.
+- Bug fixes.
+
+### 1.1.20020101
+
+- UX Enhancements - Microsoft Defender for Endpoint has a new look.
+- Bug fixes.
+
+### 1.1.17240101
+
+- Support for Mobile Application Management (MAM) via Intune is generally available with this version. For more information, see [Microsoft Defender for Endpoint risk signals available for your App protection policies](https://techcommunity.microsoft.com/t5/intune-customer-success/microsoft-defender-for-endpoint-risk-signals-available-for-your/ba-p/2186322).
+- **Jailbreak Detection** is generally available. For more information, see [Setup Conditional Access Policy based on device risk signals](ios-configure-features.md#conditional-access-with-defender-for-endpoint-on-ios).
+- **Auto-setup of VPN profile** for enrolled devices via Microsoft Intune is generally available. For more information, see [Auto-Setup VPN profile for enrolled iOS devices](ios-install.md#auto-onboarding-of-vpn-profile-simplified-onboarding).
+- Bug fixes.
+
+### 1.1.15140101
+
+- **Jailbreak Detection** is in preview. For more information, see [Setup Conditional Access Policy based on device risk signals](ios-configure-features.md#conditional-access-with-defender-for-endpoint-on-ios).
+- **Auto-setup of VPN profile** is in preview for enrolled devices via Microsoft Intune. For more information, see [Auto-Setup VPN profile for enrolled iOS devices](ios-install.md#auto-onboarding-of-vpn-profile-simplified-onboarding).
+- The Microsoft Defender ATP product name has now been updated to Microsoft Defender for Endpoint in the app store.
+- Improved sign-in experience.
+- Bug fixes.
+
+### 1.1.15010101
+
+- With this version, we're announcing support for iPadOS/iPad devices.
+- Bug fixes.
