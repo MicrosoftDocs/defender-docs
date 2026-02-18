@@ -20,7 +20,7 @@ Defender protects identities across the organization through a single, integrate
 
 Defender identity security provides a set of capabilities that address both high-level posture management and in-depth threat investigation.
 
-### Comprehensive identity protection across all identity types
+### Identity protection for all identity types
 
 Identity security protects human and non-human identities across Microsoft and non-Microsoft systems, including identities used by applications and automated agents:
 
@@ -28,7 +28,7 @@ Identity security protects human and non-human identities across Microsoft and n
 - **Unified signal ingestion**: Ingests identity signals from Microsoft and non-Microsoft sources into the unified identity inventory to provide consistent visibility across all identity types.
 - **Non-Microsoft identity and PAM integration**: Extends protection to external identity providers and privileged access management (PAM) solutions.
 
-### Coverage and maturity
+### Insight into identity coverage and maturity
 
 The coverage and maturity page helps assess and improve identity protection across the environment:
 
@@ -36,7 +36,7 @@ The coverage and maturity page helps assess and improve identity protection acro
 - **Deployment and coverage insights**: Shows which identity sources are connected, which protections are enabled, and where gaps exist across Active Directory, Entra ID, SaaS applications, non-human identities, and third-party providers.
 - **Recommended Actions**: Identifies deployment gaps and next actions across identity sources, Entra Conditional Access (CA) policies, SaaS applications, and NHIs to provide optimum identity protection.
 
-### Investigation and response
+### Unified investigation and response capabilities
 
 Identity security provides integrated capabilities for detecting and responding to identity-based threats:
 
@@ -49,7 +49,7 @@ Identity security provides integrated capabilities for detecting and responding 
 - **Threat detection and hunting**: Identity detections are unified across Defender, with identity-focused queries available in advanced hunting.
 - **Attack disruption actions**: Active attacks can be contained by disabling compromised accounts, revoking sessions, isolating devices, and resetting credentials.
 
-### Identity risk and Conditional Access insights
+### Insight into identity risk and conditional access
 
 Defender integrates with Microsoft Entra to strengthen identity protection:
 
