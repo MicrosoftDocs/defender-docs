@@ -207,7 +207,7 @@ The readiness assessment has two parts:
 
 After you complete all the required tasks and met the onboarding targets in your readiness assessment, the monitoring phase of your Defender Experts for XDR service will start, where, for a few days, our experts start monitoring your environment closely to identify latent threats, sources of risk, and normal activity. As we get better understanding of your critical assets, we can streamline the service and fine-tune our responses.
 
-Once our experts begin to perform comprehensive response work on your behalf, you'll start receiving [notifications about incidents](managed-detection-and-response-xdr.md#incident-updates) that require remediation steps and targeted recommendations on critical incidents. You can also [chat with our experts](communicate-defender-experts-xdr.md) or your SDX's regarding important queries and regular business and security posture reviews. Additionally you can also [view real-time reports](reports-xdr.md) on the number of incidents we've investigated and resolved on your behalf.
+Once our experts begin to perform comprehensive response work on your behalf, you'll start receiving [notifications about incidents](managed-detection-and-response-xdr.md#incident-updates) that require remediation steps and targeted recommendations on critical incidents. You can also [chat with our experts](communicate-defender-experts-xdr.md) or your Security Delivery Experts (SDXs) regarding important queries and regular business and security posture reviews. Additionally you can also [view real-time reports](reports-xdr.md) on the number of incidents we've investigated and resolved on your behalf.
 
 ### Next step
 
