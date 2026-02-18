@@ -496,7 +496,7 @@
         items:
         - name: View the identity dashboard
           href: /defender-for-identity/dashboard.md?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-        - name: View the unified identity inventory
+        - name: View the identity inventory
           href: /defender-for-identity/identity-inventory.md?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
         - name: View human identities
           href: /defender-for-identity/human-identities.md?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json  
