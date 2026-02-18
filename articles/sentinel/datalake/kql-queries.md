@@ -3,12 +3,11 @@ title:  Run KQL queries against the Microsoft Sentinel data lake
 titleSuffix: Microsoft Security  
 description: Use the Defender portal's Data lake exploration KQL queries to query and interact with the Microsoft Sentinel data lake. Create, edit, and run KQL queries to explore your data lake resources
 author: EdB-MSFT  
-ms.service: microsoft-sentinel  
+ms.service: microsoft-sentinel
+ms.subservice: sentinel-platform  
 ms.topic: how-to
-ms.subservice: sentinel-graph
 ms.date: 12/10/2025
 ms.author: edbaynash  
-
 ms.collection: ms-security  
 ---  
  
