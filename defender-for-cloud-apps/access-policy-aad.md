@@ -132,6 +132,5 @@ For more information, see:
 - [Troubleshooting access and session controls](troubleshooting-proxy.md)
 - [Tutorial: Block download of sensitive information with conditional access app control](use-case-proxy-block-session-aad.md)
 - [Blocking downloads on unmanaged devices using session controls](use-case-proxy-block-session-aad.md)
-- [Conditional access app control webinar](webinars.md#on-demand-webinars)
 
 If you run into any problems, we're here to help. To get assistance or support for your product issue, please [open a support ticket](/defender-xdr/contact-defender-support)
