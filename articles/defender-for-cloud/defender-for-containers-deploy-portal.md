@@ -17,8 +17,6 @@ For clusters that aren’t running in Azure Kubernetes Service (AKS), Defender f
 
 [!INCLUDE[Exclude the Defender sensor](includes/defender-for-containers-exclude-sensor.md)]
 
----
-
 # [Azure Kubernetes Service (AKS)](#tab/aks)
 
 For AKS clusters, recommendations activate built-in AKS security capabilities, including the Defender profile and Azure Policy add-on.
@@ -57,8 +55,6 @@ For AKS clusters, recommendations activate built-in AKS security capabilities, i
 1. In the AKS cluster resource, verify:
    - Defender profile is enabled
    - Azure Policy add-on is installed
-
----
 
 # [Amazon Elastic Kubernetes Service (EKS)](#tab/eks)
 
