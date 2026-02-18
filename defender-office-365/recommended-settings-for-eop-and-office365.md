@@ -18,8 +18,9 @@ ms.collection:
   - highpri
   - tier1
 description: What are best practices for email and collaboration security settings in Microsoft 365? What are the current recommendations for standard protection? What should you use to be more strict? And what extras do you get if you also use Microsoft Defender for Office 365?
+ai-usage: ai-assisted
 ms.service: defender-office-365
-ms.date: 10/06/2025
+ms.date: 02/18/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -71,27 +72,28 @@ Quarantine policies define what users are able to do to quarantined messages, an
 The policy named AdminOnlyAccessPolicy enforces the historical capabilities of messages quarantined as malware as described in the table [in this article](quarantine-end-user.md).
 
 Users can't release their own messages quarantined as malware, regardless of how the quarantine policy is configured. If the policy is configured for users to release these quarantined messages, users are instead allowed to _request_ the release of these quarantined messages.
-
-|Security feature name|Default|Standard|Strict|Comment|
-|---|:---:|:---:|:---:|---|
-|**Protection settings**|||||
-|**Enable the common attachments filter** (_EnableFileFilter_)|Selected (`$true`)<sup>\*</sup>|Selected (`$true`)|Selected (`$true`)|For the list of file types in the common attachments filter, see [Common attachments filter in anti-malware policies](anti-malware-protection-about.md#common-attachments-filter-in-anti-malware-policies). <br/><br/> <sup>\*</sup> The common attachments filter is **on** by default in new anti-malware policies that you create in the Defender portal or in PowerShell, and in the default anti-malware policy in organizations created after December 1, 2023.|
-|Common attachment filter notifications: **When these file types are found** (_FileTypeAction_)|**Reject the message with a non-delivery report (NDR)** (`Reject`)|**Reject the message with a non-delivery report (NDR)** (`Reject`)|**Reject the message with a non-delivery report (NDR)** (`Reject`)||
-|**Enable zero-hour auto purge for malware** (_ZapEnabled_)|Selected (`$true`)|Selected (`$true`)|Selected (`$true`)||
-|**Quarantine policy** (_QuarantineTag_)|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy||
-|**Admin notifications**|||||
-|**Notify an admin about undelivered messages from internal senders** (_EnableInternalSenderAdminNotifications_ and _InternalSenderAdminAddress_)|Not selected (`$false`)|Not selected (`$false`)|Not selected (`$false`)|We have no specific recommendation for this setting.|
-|**Notify an admin about undelivered messages from external senders** (_EnableExternalSenderAdminNotifications_ and _ExternalSenderAdminAddress_)|Not selected (`$false`)|Not selected (`$false`)|Not selected (`$false`)|We have no specific recommendation for this setting.|
-|**Customize notifications**||||We have no specific recommendations for these settings.|
-|**Use customized notification text** (_CustomNotifications_)|Not selected (`$false`)|Not selected (`$false`)|Not selected (`$false`)||
-|**From name** (_CustomFromName_)|Blank|Blank|Blank||
-|**From address** (_CustomFromAddress_)|Blank|Blank|Blank||
-|**Customize notifications for messages from internal senders**||||These settings are used only if **Notify an admin about undelivered messages from internal senders** is selected.|
-|**Subject** (_CustomInternalSubject_)|Blank|Blank|Blank||
-|**Message** (_CustomInternalBody_)|Blank|Blank|Blank||
-|**Customize notifications for messages from external senders**||||These settings are used only if **Notify an admin about undelivered messages from external senders** is selected.|
-|**Subject** (_CustomExternalSubject_)|Blank|Blank|Blank||
-|**Message** (_CustomExternalBody_)|Blank|Blank|Blank||
+> [!div class="mx-tableFixed"]
+>
+> |Security feature name|Details|
+> |---|---|
+> |**Protection settings**||
+> |**Enable the common attachments filter** (_EnableFileFilter_)|<details><summary>Show recommendations</summary><br>**Default**: Selected (`$true`)<sup>\*</sup><br>**Standard**: Selected (`$true`)<br>**Strict**: Selected (`$true`)<br>**Comment**: For the list of file types in the common attachments filter, see [Common attachments filter in anti-malware policies](anti-malware-protection-about.md#common-attachments-filter-in-anti-malware-policies).<br><br> <sup>\*</sup> The common attachments filter is **on** by default in new anti-malware policies that you create in the Defender portal or in PowerShell, and in the default anti-malware policy in organizations created after December 1, 2023.</details>|
+> |Common attachment filter notifications: **When these file types are found** (_FileTypeAction_)|<details><summary>Show recommendations</summary><br>**Default**: **Reject the message with a non-delivery report (NDR)** (`Reject`)<br>**Standard**: **Reject the message with a non-delivery report (NDR)** (`Reject`)<br>**Strict**: **Reject the message with a non-delivery report (NDR)** (`Reject`)</details>|
+> |**Enable zero-hour auto purge for malware** (_ZapEnabled_)|<details><summary>Show recommendations</summary><br>**Default**: Selected (`$true`)<br>**Standard**: Selected (`$true`)<br>**Strict**: Selected (`$true`)</details>|
+> |**Quarantine policy** (_QuarantineTag_)|<details><summary>Show recommendations</summary><br>**Default**: AdminOnlyAccessPolicy<br>**Standard**: AdminOnlyAccessPolicy<br>**Strict**: AdminOnlyAccessPolicy</details>|
+> |**Admin notifications**||
+> |**Notify an admin about undelivered messages from internal senders** (_EnableInternalSenderAdminNotifications_ and _InternalSenderAdminAddress_)|<details><summary>Show recommendations</summary><br>**Default**: Not selected (`$false`)<br>**Standard**: Not selected (`$false`)<br>**Strict**: Not selected (`$false`)<br>**Comment**: We have no specific recommendation for this setting.</details>|
+> |**Notify an admin about undelivered messages from external senders** (_EnableExternalSenderAdminNotifications_ and _ExternalSenderAdminAddress_)|<details><summary>Show recommendations</summary><br>**Default**: Not selected (`$false`)<br>**Standard**: Not selected (`$false`)<br>**Strict**: Not selected (`$false`)<br>**Comment**: We have no specific recommendation for this setting.</details>|
+> |**Customize notifications**|<details><summary>Show details</summary><br>**Comment**: We have no specific recommendations for these settings.</details>|
+> |**Use customized notification text** (_CustomNotifications_)|<details><summary>Show recommendations</summary><br>**Default**: Not selected (`$false`)<br>**Standard**: Not selected (`$false`)<br>**Strict**: Not selected (`$false`)</details>|
+> |**From name** (_CustomFromName_)|<details><summary>Show recommendations</summary><br>**Default**: Blank<br>**Standard**: Blank<br>**Strict**: Blank</details>|
+> |**From address** (_CustomFromAddress_)|<details><summary>Show recommendations</summary><br>**Default**: Blank<br>**Standard**: Blank<br>**Strict**: Blank</details>|
+> |**Customize notifications for messages from internal senders**|<details><summary>Show details</summary><br>**Comment**: These settings are used only if **Notify an admin about undelivered messages from internal senders** is selected.</details>|
+> |**Subject** (_CustomInternalSubject_)|<details><summary>Show recommendations</summary><br>**Default**: Blank<br>**Standard**: Blank<br>**Strict**: Blank</details>|
+> |**Message** (_CustomInternalBody_)|<details><summary>Show recommendations</summary><br>**Default**: Blank<br>**Standard**: Blank<br>**Strict**: Blank</details>|
+> |**Customize notifications for messages from external senders**|<details><summary>Show details</summary><br>**Comment**: These settings are used only if **Notify an admin about undelivered messages from external senders** is selected.</details>|
+> |**Subject** (_CustomExternalSubject_)|<details><summary>Show recommendations</summary><br>**Default**: Blank<br>**Standard**: Blank<br>**Strict**: Blank</details>|
+> |**Message** (_CustomExternalBody_)|<details><summary>Show recommendations</summary><br>**Default**: Blank<br>**Standard**: Blank<br>**Strict**: Blank</details>|
 
 ### Anti-spam policy settings
 
