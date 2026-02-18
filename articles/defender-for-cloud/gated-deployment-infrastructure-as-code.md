@@ -18,7 +18,9 @@ The gated deployment agent requires read access to all of your Azure Container R
 
 - An Azure subscription with Microsoft Defender for Cloud enabled.
 - You must [enable gated deployment in Defender for Containers](enablement-guide-runtime-gated.md) with the defender sensor and registry access extensions turned on.
-- The Azure Kubernetes Service (AKS) cluster must have an OpenID Connect (OIDC) issuer enabled and an Azure Workload Identity enabled.
+- You must enable on your Azure Kubernetes Service (AKS) cluster: 
+    - [An OpenID Connect (OIDC) issuer](/azure/aks/use-oidc-issuer#create-an-aks-cluster-with-the-oidc-issuer). 
+    - [An Azure Workload Identity](/azure/aks/workload-identity-deploy-cluster?tabs=new-cluster).
 
 ## Deploy the gated agent
 
@@ -32,7 +34,11 @@ The gated deployment agent requires read access to all of your Azure Container R
     - **Subject**: The service account used by the gated deployment agent `system:serviceaccount:kube-system:defender-admission-controller-serviceaccount`.
     - **Audience**: api://AzureADTokenExchange
 
-1. Set the MSI’s objectId in the identities parameter under the security gating section of the managed cluster API configuration. This ensures the gated deployment agent can use the MSI at runtime.
+1. Under the [securityGating section of the managed cluster API configuration](https://learn.microsoft.com/azure/templates/microsoft.containerservice/managedclusters?pivots=deployment-language-arm-template#resource-format-1), set the [MSI’s objectId in the identities parameter](https://learn.microsoft.com/azure/templates/microsoft.containerservice/managedclusters?pivots=deployment-language-arm-template#managedclustersecurityprofiledefendersecuritygating-1) under the security gating section of the managed cluster API configuration. 
+
+    :::image type="content" source="media/gated-deployment-infrastructure-as-code/identities.png" alt-text="Screenshot that shows the section of the securityGating section of the managed cluster API configuration, where the code is located." lightbox="media/gated-deployment-infrastructure-as-code/identities.png":::
+
+    This ensures the gated deployment agent can use the MSI at runtime.
 
 ## Next step
 
