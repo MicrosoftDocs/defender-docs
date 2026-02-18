@@ -495,15 +495,15 @@
       - name: View your identities
         items:
         - name: View the identity dashboard
-          href: /defender-for-identity/dashboard.md?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+          href: /defender-for-identity/dashboard?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
         - name: View the identity inventory
-          href: /defender-for-identity/identity-inventory.md?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+          href: /defender-for-identity/identity-inventory?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
         - name: View human identities
-          href: /defender-for-identity/human-identities.md?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json  
+          href: /defender-for-identity/human-identities?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
         - name: View non-human identities
-          href: /defender-for-identity/non-human-identities.md?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+          href: /defender-for-identity/non-human-identities?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
         - name: View agentic identities
-          href: /defender-for-identity/agentic-identities.md?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json 
+          href: /defender-for-identity/agentic-identities?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json   
       - name: Identity security posture assessments
         href: ./identity-security/identity-security-assessments.md
       - name: Investigate and respond to identity threats
