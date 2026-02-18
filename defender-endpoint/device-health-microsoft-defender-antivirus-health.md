@@ -30,13 +30,20 @@ appliesto:
 The Device Health report provides information about the devices in your organization. The report includes trending information showing the antivirus status and Microsoft Defender Antivirus engine, intelligence, and platform versions.
 
 > [!IMPORTANT]
-> For devices to appear in Microsoft Defender Antivirus device health reports they must meet the following pre-requisites:  
+> For devices to appear **correctly** in Microsoft Defender Antivirus device health reports, they must meet the following prerequisites:  
 >
 > - Device is onboarded to Microsoft Defender for Endpoint
-> - OS: Windows 10, Windows 11, Windows Server 2012 R2/, 2016 R2/ 2019/2022 (non MMA), MacOS, Linux 
-> - Sense (MsSense.exe): **10.8210.** \*+.
+> - OS: Windows 10, Windows 11, Windows Server 2012 R2/, 2016 R2/ 2019/2022 (not onboarded via Microsoft Management Agent), MacOS, Linux
+> - Sense (MsSense.exe) version: **10.8210.** *+.
+>
+> **OS build dependency (Windows 10 2016 LTSB / 1607):**  
+> On older Windows editions, the Microsoft Defender for Endpoint sensor (MsSense.exe) version is **tied to the OS build and can't be upgraded independently**.  
+> - **Windows 10 2016 LTSB (1607)** uses **MsSense.exe 10.1407.\*** and cannot reach **10.8210+** without upgrading Windows to a newer build.  
+> - On these devices, Defender Antivirus health fields (for example **engine** or **platform** version) may appear as **"Unknown"** in the report. This is **expected behavior** when the Sense prerequisite isn't met.  
+> - To get complete Defender Antivirus health reporting, upgrade the device to a newer supported Windows build that includes a Sense version meeting the requirement.
 >
 > For Windows&nbsp;Server&nbsp;2012&nbsp;R2 and Windows&nbsp;Server&nbsp;2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
+``
 
 ## View device health cards
 
