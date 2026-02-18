@@ -81,7 +81,7 @@ Depending on your deployment type, follow the relevant instructions to install t
 
    Or, run the [delete_conflicting_policies.sh](https://github.com/microsoft/Microsoft-Defender-For-Containers/blob/main/scripts/delete_conflicting_policies.sh) script with the following command:
 
-   ```azurecli   
+   ```bash   
    delete_conflicting_policies.sh <CLUSTER_AZURE_RESOURCE_ID>
    ```
    This command removes resource group and subscription level policies for setting up the generally available (GA) version of Defender for Containers. It can affect clusters other than the one you're configuring.
@@ -92,7 +92,7 @@ Use the [install_defender_sensor_aks.sh](https://github.com/microsoft/Microsoft-
 
 Run the script with the command:
     
-```azurecli
+```bash
 install_defender_sensor_aks.sh --id <CLUSTER_AZURE_RESOURCE_ID> --version <VERSION> [--release_train <RELEASE_TRAIN>] [--namespace <NAMESPACE>] [--antimalware]
 ```
 
@@ -145,7 +145,7 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `
 
 1. Set the `kubeconfig` context to the target cluster by using the following command:
 
-   ```azurecli
+   ```bash
    install_defender_sensor_mc.sh --id <SECURITY_CONNECTOR_AZURE_RESOURCE_ID> --version <VERSION> --distribution <DISTRIBUTION> [--release_train <RELEASE_TRAIN>] [--antimalware]
    ```
     
