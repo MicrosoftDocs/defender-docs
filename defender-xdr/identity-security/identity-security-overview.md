@@ -7,6 +7,7 @@ ms.author: abbyweisberg
 ms.reviewer: maelgami
 ms.date: 02/18/2026
 ms.topic: article
+ms.service: defender-xdr
 ---
 
 # What Is Identity Security

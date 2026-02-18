@@ -489,13 +489,13 @@
     - name: Identity Security
       items:
       - name: Identity Security overview
-        href: identity-security-overview.md
+        href: ./identity-security/identity-security-overview.md
       - name: View your identity coverage and maturity 
-        href: identity-security-dashboard.md  
+        href: ./identity-security/identity-security-dashboard.md  
       - name: View your identities
         items:
         - name: View the identity dashboard
-          href: /defender-for-identity/dashboard.md
+          href: /defender-for-identity/dashboard.md?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
         - name: View the identity inventory
           href: /defender-for-identity/identity-inventory.md?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
         - name: View human identities
@@ -505,9 +505,9 @@
         - name: View agentic identities
           href: /defender-for-identity/agentic-identities.md?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json 
       - name: Identity security posture assessments
-        href: identity-security-assessments.md
+        href: ./identity-security/identity-security-assessments.md
       - name: Investigate and respond to identity threats
-        href: identity-security-investigate-respond.md
+        href: ./identity-security/identity-security-investigate-respond.md
     - name: Enhance security operations
       items:
       - name: Security operations guide
