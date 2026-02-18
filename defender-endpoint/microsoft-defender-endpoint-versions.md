@@ -31,6 +31,7 @@ This table includes supported versions released in for all supported platforms i
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|macOS |101.25122.0008  |February 2026 |- Release version: 20.125122.8.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--february-2026--101251220008) |
 |macOS |101.25122.0007  |January 2026 |- Release version: 20.125122.7.0<br>- Engine version: 1.1.25100.3000<br>- Signature version: 1.443.820.0 |[Release details and updates](#macos--january-2026--101251220007) |
 |macOS  |101.25122.0006  |January 2026 |- Release version: 20.125122.6.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--january-2026--101251220006) |
 |Linux  |101.25102.0005  |January 2026 |- Release version: 30.125102.0005.0<br>- Engine version: 1.1.25090.6000<br>- Signature version: 1.439.338.0 |[Release details and updates](#linux--january-2026--101251020005) |
@@ -135,13 +136,23 @@ This section covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. 
 
 ## macOS versions
 
-Defender for Endpoint supports version 15.0.1 or newer. macOS 11 (Big Sur) and 12 (Monterey) are no longer supported.
+Defender for Endpoint supports macOS version 15.0.1 or newer. macOS 11 (Big Sur) and 12 (Monterey) are no longer supported.
 
 To share feedback, open Defender for Endpoint on macOS and go to **Help > Send feedback**.
 
 To get latest features, configure your device for the Beta channel (formerly Insider-Fast) device.
 
 For known issues, see [macOS known issues](#macos-known-issues).
+
+### macOS | February 2026 | 101.25122.0008
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+| -------- | -------- |-------- |
+|20.125122.8.0 |1.1.25100.4000 |1.439.74.0 |
+
+#### Enhancements and features
 
 ### macOS | January 2026 | 101.25122.0007
 
