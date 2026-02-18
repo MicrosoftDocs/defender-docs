@@ -58,7 +58,7 @@ Depending on your deployment type, follow the relevant instructions to install t
 
 - Helm version 3.8 or later (the available version supports OCI)
 
-- Azure CLI must be [installed](/cli/azure/install-azure-cli?view=azure-cli-latest) and [logged in](/cli/azure/reference-index?view=azure-cli-latest) to an account with resource group owner role for the target cluster.
+- Azure CLI must be [installed](/cli/azure/install-azure-cli?view=azure-cli-latest&preserve-view=true) and [logged in](/cli/azure/reference-index?view=azure-cli-latest&preserve-view=true) to an account with resource group owner role for the target cluster.
 
 - Azure resource ID for the target cluster
 
@@ -122,7 +122,7 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `
 
 - Helm version 3.8 or later (the available version supports OCI)
 
-- Azure CLI must be [installed](/cli/azure/install-azure-cli?view=azure-cli-latest) and [logged in](/cli/azure/reference-index?view=azure-cli-latest) to an account with resource group owner role for the security connector.
+- Azure CLI must be [installed](/cli/azure/install-azure-cli?view=azure-cli-latest&preserve-view=true) and [logged in](/cli/azure/reference-index?view=azure-cli-latest&preserve-view=true) to an account with resource group owner role for the security connector.
 
 - Ensure the cluster account is connected to Microsoft Defender for Cloud. Learn how to [connect your AWS account](quickstart-onboard-aws.md) or [connect your GCP project](quickstart-onboard-gcp.md) to your Defender for Cloud.
 
