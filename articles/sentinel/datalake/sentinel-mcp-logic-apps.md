@@ -7,6 +7,7 @@ ms.topic: how-to
 ms.date: 12/12/2025
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
+ms.subservice: sentinel-platform
 
 #customer intent: As a security analyst, I want to build Azure Logic Apps using Microsoft Sentinel MCP tools.
 ---
