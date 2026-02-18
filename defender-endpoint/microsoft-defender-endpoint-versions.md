@@ -276,7 +276,6 @@ Defender for Endpoint on Linux is updated regularly. While security fixes are in
 
 For detailed information on Microsoft security updates, see the [Microsoft Security Update Guide](https://msrc.microsoft.com/update-guide).
 
-For the latest UX improvements, see [Linux UX improvements](linux-new-ux.md).
 
 > [!IMPORTANT]
 >
@@ -551,6 +550,8 @@ See the full list of [Android UX improvements](android-new-ux.md).
 | User experience | UX Improvement for home page and tiles screens. [Learn more](android-new-ux.md#march-2025) |
 
 ## iOS versions
+
+For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 
 ### iOS | November 2025 | 1.1.70290103
 
