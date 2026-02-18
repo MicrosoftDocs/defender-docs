@@ -43,7 +43,6 @@ The Device Health report provides information about the devices in your organiza
 > - To get complete Defender Antivirus health reporting, upgrade the device to a newer supported Windows build that includes a Sense version meeting the requirement.
 >
 > For Windows&nbsp;Server&nbsp;2012&nbsp;R2 and Windows&nbsp;Server&nbsp;2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
-``
 
 ## View device health cards
 
