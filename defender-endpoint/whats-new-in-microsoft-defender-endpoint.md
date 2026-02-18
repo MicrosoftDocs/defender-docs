@@ -21,7 +21,7 @@ appliesto:
 ---
 # New features in Microsoft Defender for Endpoint
 
-This article describes Microsoft Defender for Endpoint features that are in preview or generally available (GA) in the latest release.
+This article describes Microsoft Defender for Endpoint features that are in preview or generally available (GA), released in the past 6 months.
 
 For recent releases of Microsoft Defender for Endpoint, including build numbers, improvements, and fixes, see [Microsoft Defender for Endpoint release notes](microsoft-defender-endpoint-versions.md).
 
