@@ -3,7 +3,7 @@ title: Install Defender for Containers sensor using Helm
 description: Learn how to install the Microsoft Defender for Containers sensor on Kubernetes clusters using Helm.
 author: Elazark
 ms.topic: how-to
-ms.date: 02/01/2026
+ms.date: 02/18/2026
 ms.author: elkrieger
 ai-usage: ai-assisted
 ---
@@ -93,10 +93,10 @@ Use the [install_defender_sensor_aks.sh](https://github.com/microsoft/Microsoft-
 Run the script with the command:
     
 ```azurecli
-install_defender_sensor_aks.sh --id <CLUSTER_AZURE_RESOURCE_ID> --version <VERSION> [--release_train <RELEASE_TRAIN>] [--antimalware]
+install_defender_sensor_aks.sh --id <CLUSTER_AZURE_RESOURCE_ID> --version <VERSION> [--release_train <RELEASE_TRAIN>] [--namespace <NAMESPACE>] [--antimalware]
 ```
 
-Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, and `<VERSION>` with your own values. 
+Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<NAMESPACE>`, and `<VERSION>` with your own values: 
 
 - Replace `<VERSION>` with:
   - `latest` for the most recent version.
@@ -106,6 +106,11 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
   - `stable` (default).
   - `public` for the preview version.
     
+- Replace `<NAMESPACE>` with `kube-system` if you are deploying to AKS Automatic.
+
+ > [!NOTE]
+ > Don’t provide this parameter for standard AKS deployments. If not specified, the default namespace is `mdc`.
+
 - Use the `--antimalware` flag to enable antimalware scanning.
 
 > [!NOTE]
@@ -172,10 +177,18 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
 
 ### Verify the installation
 
-Verify that the installation succeeded by using the command:
+Verify that the installation succeeded by using the namespace you used during installation:
+
+**For standard AKS, EKS, and GKE**
 
 ```bash
 helm list --namespace mdc
+```
+
+**For AKS Automatic**
+
+```bash
+helm list --namespace kube-system
 ```
 
 The installation is successful if the `STATUS` field displays **deployed**.
