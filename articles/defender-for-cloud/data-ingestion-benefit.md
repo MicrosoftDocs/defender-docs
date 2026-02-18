@@ -51,7 +51,6 @@ The following subset of  [security data types](/azure/azure-monitor/reference/ta
 - [Update](/azure/azure-monitor/reference/tables/update) and [UpdateSummary](/azure/azure-monitor/reference/tables/updatesummary) when the Update Management solution isn't running in the workspace or solution targeting is enabled.
 - [MDCFileIntegrityMonitoringEvents](/azure/azure-monitor/reference/tables/mdcfileintegritymonitoringevents)
 - [WindowsEvent](/azure/azure-monitor/reference/tables/windowsevent?branch=main)
-- [LinuxAuditLog](/azure/azure-monitor/reference/tables/linuxauditlog)
 
 > [!NOTE]
 > Although `WindowsEvent` is listed, only security events from the `Microsoft-SecurityEvent` stream that go to the `SecurityEvent` table qualify for the 500 MB/day allowance. Application, System, or other event log channels are not covered and are billed as regular ingestion.
