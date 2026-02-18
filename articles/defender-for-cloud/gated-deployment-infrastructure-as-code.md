@@ -22,6 +22,13 @@ The gated deployment agent requires read access to all of your Azure Container R
     - [An OpenID Connect (OIDC) issuer](/azure/aks/use-oidc-issuer#create-an-aks-cluster-with-the-oidc-issuer). 
     - [An Azure Workload Identity](/azure/aks/workload-identity-deploy-cluster?tabs=new-cluster).
 
+> [!NOTE]
+> Security gating only needs to be installed once. The first time you enable the security gating toggle, it installs security gating.
+> After that, security gating is already installed. When the installation runs again, the system detects this and does nothing.
+> If you try to install it again through the API, it fails because security gating already exists.
+>
+> :::image type="content" source="media/gated-deployment-infrastructure-as-code/security-gating-on.png" alt-text="Screenshot that shows security gating is turned to on." lightbox="media/gated-deployment-infrastructure-as-code/security-gating-on.png":::
+
 ## Deploy the gated agent
 
 1. [Create a Managed Service Identity (MSI) that the gated deployment agent uses](/entra/identity/managed-identities-azure-resources/manage-user-assigned-managed-identities-azure-portal).
