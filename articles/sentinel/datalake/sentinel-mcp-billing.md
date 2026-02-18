@@ -7,6 +7,7 @@ ms.topic: concept-article
 ms.date: 12/09/2025
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
+ms.subservice: sentinel-platform
 ms.custom: references_regions
 
 #customer intent: As a security analyst, I want to understand Microsoft Sentinel MCP server pricing, limits, and availability 
