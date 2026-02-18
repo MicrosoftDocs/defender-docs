@@ -3,7 +3,7 @@ title: Install Defender for Containers sensor using Helm
 description: Learn how to install the Microsoft Defender for Containers sensor on Kubernetes clusters using Helm.
 author: Elazark
 ms.topic: how-to
-ms.date: 02/01/2026
+ms.date: 02/18/2026
 ms.author: elkrieger
 ai-usage: ai-assisted
 ---
@@ -58,7 +58,7 @@ Depending on your deployment type, follow the relevant instructions to install t
 
 - Helm version 3.8 or later (the available version supports OCI)
 
-- Azure CLI must be [installed](/cli/azure/install-azure-cli?view=azure-cli-latest) and [logged in](/cli/azure/reference-index?view=azure-cli-latest) to an account with resource group owner role for the target cluster.
+- Azure CLI must be [installed](/cli/azure/install-azure-cli?view=azure-cli-latest&preserve-view=true) and [logged in](/cli/azure/reference-index?view=azure-cli-latest&preserve-view=true) to an account with resource group owner role for the target cluster.
 
 - Azure resource ID for the target cluster
 
@@ -81,7 +81,7 @@ Depending on your deployment type, follow the relevant instructions to install t
 
    Or, run the [delete_conflicting_policies.sh](https://github.com/microsoft/Microsoft-Defender-For-Containers/blob/main/scripts/delete_conflicting_policies.sh) script with the following command:
 
-   ```azurecli   
+   ```bash   
    delete_conflicting_policies.sh <CLUSTER_AZURE_RESOURCE_ID>
    ```
    This command removes resource group and subscription level policies for setting up the generally available (GA) version of Defender for Containers. It can affect clusters other than the one you're configuring.
@@ -92,11 +92,11 @@ Use the [install_defender_sensor_aks.sh](https://github.com/microsoft/Microsoft-
 
 Run the script with the command:
     
-```azurecli
-install_defender_sensor_aks.sh --id <CLUSTER_AZURE_RESOURCE_ID> --version <VERSION> [--release_train <RELEASE_TRAIN>] [--antimalware]
+```bash
+install_defender_sensor_aks.sh --id <CLUSTER_AZURE_RESOURCE_ID> --version <VERSION> [--release_train <RELEASE_TRAIN>] [--namespace <NAMESPACE>] [--antimalware]
 ```
 
-Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, and `<VERSION>` with your own values. 
+Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<NAMESPACE>`, and `<VERSION>` with your own values: 
 
 - Replace `<VERSION>` with:
   - `latest` for the most recent version.
@@ -106,6 +106,11 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
   - `stable` (default).
   - `public` for the preview version.
     
+- Replace `<NAMESPACE>` with `kube-system` if you are deploying to AKS Automatic.
+
+ > [!NOTE]
+ > Don’t provide this parameter for standard AKS deployments. If not specified, the default namespace is `mdc`.
+
 - Use the `--antimalware` flag to enable antimalware scanning.
 
 > [!NOTE]
@@ -117,7 +122,7 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
 
 - Helm version 3.8 or later (the available version supports OCI)
 
-- Azure CLI must be [installed](/cli/azure/install-azure-cli?view=azure-cli-latest) and [logged in](/cli/azure/reference-index?view=azure-cli-latest) to an account with resource group owner role for the security connector.
+- Azure CLI must be [installed](/cli/azure/install-azure-cli?view=azure-cli-latest&preserve-view=true) and [logged in](/cli/azure/reference-index?view=azure-cli-latest&preserve-view=true) to an account with resource group owner role for the security connector.
 
 - Ensure the cluster account is connected to Microsoft Defender for Cloud. Learn how to [connect your AWS account](quickstart-onboard-aws.md) or [connect your GCP project](quickstart-onboard-gcp.md) to your Defender for Cloud.
 
@@ -140,7 +145,7 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
 
 1. Set the `kubeconfig` context to the target cluster by using the following command:
 
-   ```azurecli
+   ```bash
    install_defender_sensor_mc.sh --id <SECURITY_CONNECTOR_AZURE_RESOURCE_ID> --version <VERSION> --distribution <DISTRIBUTION> [--release_train <RELEASE_TRAIN>] [--antimalware]
    ```
     
@@ -172,10 +177,18 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, a
 
 ### Verify the installation
 
-Verify that the installation succeeded by using the command:
+Verify that the installation succeeded by using the namespace you used during installation:
+
+**For standard AKS, EKS, and GKE**
 
 ```bash
 helm list --namespace mdc
+```
+
+**For AKS Automatic**
+
+```bash
+helm list --namespace kube-system
 ```
 
 The installation is successful if the `STATUS` field displays **deployed**.
