@@ -1,12 +1,12 @@
 ---
-title: Connect CyberArk to Microsoft Defender for Identity (Preview)
-description: Learn how to connect your CyberArk app to Defender for Identity using the API connector.
+title: Connect CyberArk Identity to Microsoft Defender for Identity (Preview)
+description: Learn how to connect your CyberArk Identity app to Defender for Identity using the API connector.
 ms.date: 02/15/2026
 ms.topic: how-to
 ms. reviewer: Himanch
 ---
 
-# Connect CyberArk to Microsoft Defender for Identity (Preview)
+# Connect CyberArk Identity to Microsoft Defender for Identity (Preview)
 
 This section provides instructions for connecting Microsoft Defender for Identity to your existing CyberArk Identity account using the connector APIs. This connection gives you visibility into and control over CyberArk identities.  
 
