@@ -14,9 +14,8 @@ This section provides instructions for connecting Microsoft Defender for Identit
 
 Before connecting your CyberArk Identity to Microsoft Defender for Identity, make sure the following prerequisites are met:
 
-- **CyberArk roles**
-    - CyberArk Identity roles 
-    - The System Admin role is required to create Application.
+- **CyberArk identity roles**
+    - The System Admin role is required to create an application.
 
 **Microsoft Entra and Defender XDR role-based access options**
 
@@ -42,7 +41,7 @@ This section provides instructions for connecting Microsoft Defender for Identit
 1. Select **Add Role**.
 1. Add an appropriate name for the custom role.
 1. Select **Save**.
-1. Select**Administrative Rights** and add rights for **User Management**.
+1. Select **Administrative Rights** and add rights for **User Management**.
 1. Select **Save**.
 
 ### Create a CyberArk OAuth Confidential Client
@@ -52,7 +51,8 @@ To support ongoing API access, create a new user and assign the custom role.
 1. Sign in to CyberArk Identity console as a system administrator.
 1. Navigate to **Identity Administration > Core Services > Users**.
 1. Select **Add User**.
-1. Enter the **Login Name** and **Display Name** and select **Is OAuth confidential client**.
+1. Enter the **Login Name** and **Display Name**.
+1. Under **Status**, select **Is OAuth confidential client**.
 1. Copy the username and password. You'll need these credentials later. 
 1. Select **Create User**.
 1. Navigate to the previously created custom role 
@@ -68,7 +68,11 @@ To support ongoing API access, create a new user and assign the custom role.
 1. Select **Catalog > CyberArk Identity**.
 1. Select on **Connect a connector**, and then:  
     1. Enter a name for your connector. 
-    1. Enter your CyberArk identity endpoint URL.
+    1. To determine the CyberArk Identity endpoint URL:
+        1. In CyberArk Identity, select the signed-in user.
+        1. Select **About**.
+        1. Copy the **Identity ID** value.
+        1. Add `.id.cyberark.cloud` to the Identity ID. For example, `contoso.id.cyberark.cloud`.
     1. Enter your CyberArk Identity Privilege Cloud service endpoint.
     1. Enter the username and password for the Oauth user. Include the complete username and the CyberArk domain. 
 
