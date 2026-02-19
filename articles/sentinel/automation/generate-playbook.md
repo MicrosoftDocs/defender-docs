@@ -60,15 +60,14 @@ To use playbook generator, you need the following permissions:
 
 ### Recommended: Configure a dedicated Security Copilot workspace
 
-If you don't already have a dedicated Security Copilot workspace configured to use a US-based capacity for AI-generated playbooks, we recommended you [create one](/copilot/security/manage-workspaces#create-a-workspace).
+If you don't already have a dedicated Security Copilot workspace for AI-generated playbooks that's configured to use a US-based capacity and set in geo **US** or **Europe**, or allowing cross-region evaluation, we recommended you [create one](/copilot/security/manage-workspaces#create-a-workspace).
 
 1. In the **Create a new workspace** dialog:
 
-   1. Enter the workspace name exactly as: `soarnl-workspace`
+   1. Enable the following privacy flags:
 
-   1. Enable privacy flags:
-      - Select **Allow Microsoft to capture data to validate product performance**
-      - Select **Allow Microsoft to capture and review data to build and validate Microsoft's security AI model**
+      - **Allow Microsoft to capture data to validate product performance**
+      - **Allow Microsoft to capture and review data to build and validate Microsoft's security AI model**
 
    1. Accept the Terms and Conditions.
 
@@ -82,11 +81,9 @@ If you don't already have a dedicated Security Copilot workspace configured to u
 
    1. Choose your Azure subscription, resource group, and capacity name.
 
-   1. Set **Prompt evaluation location** to **United States** or **Europe**. If you are in a location other than these, set the toggle to allow cross regions.
+   1. Set **Prompt evaluation location** to **United States** or **Europe**. If you select a different location, check the box: **If this location has too much traffic, allow Copilot to evaluate prompts anywhere in the world**.
 
-   1. Check the box: **If this location has too much traffic, allow Copilot to evaluate prompts anywhere in the world**.
-
-   1. Adjust compute units and overage settings. The playbook generator doesn't consume Security Compute Units (SCUs), but you need to configure the capacity to meet the technical requirements for playbook generation.
+   1. Adjust compute units and allow overage settings. The playbook generator doesn't consume Security Compute Units (SCUs), but you need to configure the capacity to meet these technical requirements for playbook generation.
 
    1. Select **Create**.
 
@@ -196,7 +193,7 @@ Configure integration profiles for any other third-party services your playbooks
 > [!NOTE]
 > You can't change the API URL and authentication method after creation. You can only edit the integration name and description.
 
-### Step 2. Generate your playbook
+### Step 2. Create a generated playbook
 
 1. Select the **Playbooks** tab.
 
@@ -218,7 +215,7 @@ When the editor opens, the experience starts in **Plan mode**. In this mode, you
    - What conditions to evaluate
    - Expected outcomes
 
-   **Example**: "Create a playbook that triggers on phishing alerts. Extract the sender email address. Check if the user exists in our directory, and if so, temporarily disable their account and notify the security team."
+   **Example**: "Create a playbook that triggers on phishing alerts. Extract the sender email address. Check if the user exists in our directory, and if so, temporarily disable their account and notify the security team." For other examples of prompts, see the [Example use case](#example-use-case) section.
 
 1. If the playbook generator requests approval to fetch documentation URLs, approve the request. This approval allows the playbook generator to access relevant API documentation to generate accurate code.
 
@@ -232,13 +229,13 @@ When the editor opens, the experience starts in **Plan mode**. In this mode, you
 
 1. If the playbook generator identifies missing integration profiles:
 
-   1. Select **Add integration**.
+   1. Select **Save** and exit the VS Code environment.
 
    1. Create the missing integration profiles in the **Integration Profiles** tab.
 
    1. Return to edit the playbook to continue.
 
-For another example of a prompt and the generated plan, see this [example](#example-use-case).
+   :::image type="content" source="./media/generate-playbook/add-integration.png" alt-text="Screenshot showing missing integration profiles in the embedded Visual Studio Code environment.":::
 
 #### Review and approve the plan
 
@@ -264,7 +261,7 @@ For another example of a prompt and the generated plan, see this [example](#exam
 :::image type="content" source="./media/generate-playbook/auto-approve.png" alt-text="Screenshot of the Autoapprove checkbox in the embedded Visual Studio Code environment.":::
 
    > [!NOTE]
-   > Selecting **Save** in the chat saves the current step and confirms your approval. It doesn't save the entire playbook.
+   > Selecting **Save** in the chat saves the current step and confirms your approval. **It doesn't save the entire playbook**.
 
 #### Validate and save your playbook
 
@@ -346,13 +343,15 @@ Be aware of the following limitations when working with generated playbooks:
 
 - **Language support**: Only Python is supported for playbook authoring
 - **Input constraints**: Playbooks currently accept alerts as the sole input type
-- **System stub code**: Each playbook includes system-generated stub code required for execution. Modifying this code breaks the workflow
 - **Concurrent editing**: A single user can edit only one playbook at a time. However, multiple users can edit different playbooks simultaneously
-- **Session timeouts**: Cline sessions expire after 90 minutes. Save your work and reenter to start a new session if needed
+- **Session timeouts**: Sessions expire after 90 minutes. Save your work and reenter to start a new session if needed
 - **Library support**: External libraries aren't currently supported
 - **Code validation**: No automatic code validation is provided. Users must manually verify correctness
-- **Maximum number of playbooks**: You can create up to 100 playbooks per tenant
-- **Maximum playbook size**: Each playbook can have up to 5,000 lines
+- **Number of playbooks**: You can create up to 100 playbooks per tenant
+- **Playbook size**: Each playbook can have up to 5,000 lines
+- **Runtime**: Maximum runtime per playbook execution is 10 minutes
+- **Integrations**: Maximum number of integrations per tenant is 500.
+- **AI interactions**: Maximum of 8M tokens per day per tenant
 
 ### Integration profiles limitations
 
