@@ -1,5 +1,5 @@
 ---
-title: What's new in Microsoft Defender for Endpoint - Archive
+title: What's new in Microsoft Defender for Endpoint archive
 description: See what features were available for Microsoft Defender for Endpoint in past releases.
 search.appverid: met150
 ms.service: defender-endpoint
@@ -21,7 +21,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
-# What's new in Microsoft Defender for Endpoint - Archive
+# What's new in Microsoft Defender for Endpoint archive
 
 
 The following features were in preview or generally available (GA) in Microsoft Defender for Endpoint in past releases.

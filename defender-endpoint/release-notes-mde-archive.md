@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender for Endpoint release notes - Archive
+title: Microsoft Defender for Endpoint release notes archive
 description: Archived platform-specific build and version history for Microsoft Defender for Endpoint on Windows, macOS, and Linux.
 search.appverid: met150
 ms.service: defender-endpoint
@@ -21,9 +21,9 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 ---
 
-# Microsoft Defender for Endpoint release notes - Archive
+# Microsoft Defender for Endpoint release notes archive
 
-This page contains archived platform-specific build and version history for Microsoft Defender for Endpoint components. For current releases, see [Microsoft Defender for Endpoint release notes](microsoft-defender-endpoint-releases.md). For archived feature announcements, see [What's new in Microsoft Defender for Endpoint - Archive](whats-new-mde-archive.md).
+This page contains archived platform-specific build and version history for Microsoft Defender for Endpoint components. For current releases, see [Microsoft Defender for Endpoint release notes](microsoft-defender-endpoint-releases.md). For archived feature announcements, see [What's new in Microsoft Defender for Endpoint archive](whats-new-mde-archive.md).
 
 ## Windows releases
 
@@ -2771,10 +2771,6 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 - Added a new command-line switch (`--ignore-exclusions`) to ignore AV exclusions during custom scans (`mdatp scan custom`)
 - Extended `mdatp diagnostic create` with a new parameter (`--path [directory]`) that allows the diagnostic logs to be saved to a different directory
 - Performance improvements & bug fixes
-
-## Android releases
-
-All Android build entries from July 2025 onward are in the current [release notes](microsoft-defender-endpoint-releases.md). No older Android build entries are archived.
 
 ## iOS releases
 
