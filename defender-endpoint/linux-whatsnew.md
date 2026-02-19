@@ -46,6 +46,28 @@ This article is updated frequently to let you know what's new in the latest rele
 
 ## Releases for Defender for Endpoint on Linux
 
+### Febuary-2026 Build: 101.25122.0004 | Release version: 30.125122.0004.0
+
+|Build:             |**101.25122.0004**    |
+|-------------------|----------------------|
+|Released:          |**Febuary 16, 2026**|
+|Published:         |**Febuary 16, 2026**|
+|Expiry:            |**Oct 31, 2026**|
+|Release version:   |**30.125122.0004.0**|
+|Engine version:    |**1.1.25110.3002**|
+|Signature version: |**1.443.508.0**|
+
+#### What's new
+
+- Enhanced security controls for cloud‑delivered configurations to improve integrity and resilience during configuration retrieval and processing.
+- Microsoft Defender for Endpoint on Linux now connects to additional endpoints to retrieve internal configuration data. Ensure the following URLs are allowed in network configurations:
+    * https://config.edge.skype.com/config/v1 (default)
+    * https://config.ecs.dod.teams.microsoft.us/config/v1
+    * https://config.ecs.gov.teams.microsoft.us/config/v1
+    * https://gccmod.ecs.office.com/config/v1
+- Username information is now preserved for login events including non‑existent users. 
+- Improved validation logic for log file permissions to provide more accurate mdatp health status reporting.
+
 ### January-2026 Build: 101.25102.0005 | Release version: 30.125102.0005.0
 
 |Build:             |**101.25102.0005**    |
