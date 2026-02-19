@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 11/30/2025
+ms.date: 02/19/2026
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality.
 ms.reviewer: AbbyMSFT
@@ -33,17 +33,16 @@ For updates about versions and features released six months ago or earlier, see 
 - **New advanced hunting table**: Advanced hunting in Microsoft Defender now includes the **[IdentityAccountInfo](
 /defender-xdr/advanced-hunting-identityaccountinfo-table)** table. This table provides account information from various sources, including Microsoft Entra ID, and links to the identity that owns the account.
 
+### New security posture assessments:
 
-### New security posture assessment: Remove stale Active Directory accounts (Preview) and  Microsoft Entra ID privileged user accounts that are also privileged in Active Directory (Preview)
+- [Remove stale Active Directory accounts (Preview)](security-posture-assessments/accounts.md#remove-stale-active-directory-accounts-preview) lists any user accounts in Active Directory that are stale, meaning they haven't logged in at all during the past 90 days.
 
-- [Remove stale Active Directory accounts](security-posture-assessments/accounts.md#remove-stale-active-directory-accounts-preview) lists any user accounts in Active Directory that are stale, meaning they haven't logged in at all during the past 90 days.
+ - [Microsoft Entra ID privileged user accounts that are also privileged in Active Directory (Preview)](security-posture-assessments/accounts.md#microsoft-entra-id-privileged-user-accounts-that-are-also-privileged-in-active-directory-preview) lists Microsoft Entra ID privileged user accounts that also have privileged roles in Active Directory.
 
- - [Microsoft Entra ID privileged user accounts that are also privileged in Active Directory](security-posture-assessments/accounts.md#microsoft-entra-id-privileged-user-accounts-that-are-also-privileged-in-active-directory-preview) lists Microsoft Entra ID privileged user accounts that also have privileged roles in Active Directory.
+### Changes to Defender for Identity security alerts
+### New alerts
 
-
-### MDI alerts migrated to the unified Defender alerting experience
-
-As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, the following alerts were converted from the Microsoft Defender for Identity classic format to the MDI XDR alert format.
+These new alerts were added to the Defender for Identity security alerts:
 
 * [Pass-the-Ticket (PtT) attack (Preview)](alerts-xdr.md#pass-the-ticket-ptt-attack-preview)
 * [Suspicious sign-in observed from Entra ID sync application to an uncommon resource app](alerts-xdr.md#suspicious-sign-in-observed-from-entra-id-sync-application-to-an-uncommon-resource-app)
@@ -54,6 +53,13 @@ As part of the ongoing transition to a unified alerting experience across Micros
 * [Suspicious NTLM authentication](alerts-xdr.md#suspicious-ntlm-authentication)
 * [Possible adversary-in-the-middle (AiTM) attack detected (ConsentFix)](alerts-xdr.md#possible-adversary-in-the-middle-aitm-attack-detected-consentfix)
 
+### Migrated alerts
+
+As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, the following alerts were converted from the Microsoft Defender for Identity classic format to the MDI XDR alert format.
+
+* [Skipped MFA on remembered device from uncommon ISP sign-in](xdr_alerts.md#-skipped-mfa-on-remembered-device-from-uncommon-isp-sign-in): Description changed
+* [Possible Kerberoasting attack using a stealthy LDAP search](xdr_alerts.md#-possible-kerberoasting-attack-using-a-stealthy-ldap-search): Description changed
+* [Suspicious Kerberos authentication (TGT request using TGS-REQ)](xdr_alerts.md#-suspicious-kerberos-authentication-tgt-request-using-tgs-req): Description changed
 
 All alerts are based on detections from Defender for Identity sensors. For the full list of Microsoft Defender alerts see [Microsoft Defender for Identity XDR security alerts](alerts-xdr.md) .
 
