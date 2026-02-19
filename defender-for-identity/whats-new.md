@@ -27,11 +27,11 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### Identity inventory enhancements are now generally available
 
-- **Accounts tab in Identity Inventory**: The new **Accounts** tab provides a consolidated view of all accounts associated with an identity, including accounts from Active Directory, Microsoft Entra ID, and supported non-Microsoft identity providers. For more information, see [Manage related identities and accounts](manage-related-identities-accounts.md).
-- **Manually link and unlink accounts**: Manually link or unlink accounts from an identity directly in the **Accounts** tab. This capability helps you correlate identity components from different directory sources and provides a complete identity context during investigations. For more information, see [Manage related identities and accounts](manage-related-identities-accounts.md).
+- **Accounts tab in Identity Inventory**: The new **Accounts*- tab provides a consolidated view of all accounts associated with an identity, including accounts from Active Directory, Microsoft Entra ID, and supported non-Microsoft identity providers. For more information, see [Manage related identities and accounts](manage-related-identities-accounts.md).
+- **Manually link and unlink accounts**: Manually link or unlink accounts from an identity directly in the **Accounts*- tab. This capability helps you correlate identity components from different directory sources and provides a complete identity context during investigations. For more information, see [Manage related identities and accounts](manage-related-identities-accounts.md).
 - **Identity-level remediation actions**: You can now perform remediation actions such as disabling accounts or resetting passwords on one or more accounts linked to an identity. For more information, see [Remediation actions](remediation-actions.md#roles-and-permissions).
 - **New advanced hunting table**: Advanced hunting in Microsoft Defender now includes the **[IdentityAccountInfo](
-/defender-xdr/advanced-hunting-identityaccountinfo-table)** table. This table provides account information from various sources, including Microsoft Entra ID, and links to the identity that owns the account.
+/defender-xdr/advanced-hunting-identityaccountinfo-table)*- table. This table provides account information from various sources, including Microsoft Entra ID, and links to the identity that owns the account.
 
 ### New security posture assessments:
 
@@ -44,33 +44,35 @@ For updates about versions and features released six months ago or earlier, see 
 
 These new alerts were added to the Defender for Identity security alerts:
 
-* [Pass-the-Ticket (PtT) attack (Preview)](alerts-xdr.md#pass-the-ticket-ptt-attack-preview)
-* [Suspicious sign-in observed from Entra ID sync application to an uncommon resource app](alerts-xdr.md#suspicious-sign-in-observed-from-entra-id-sync-application-to-an-uncommon-resource-app)
-* [Possible Active Directory Certificate Services enumeration](alerts-xdr.md#possible-active-directory-certificate-services-enumeration)
-* [Suspicious sign-in observed to Entra ID sync application using an uncommon user agent](alerts-xdr.md#suspicious-sign-in-observed-to-entra-id-sync-application-using-an-uncommon-user-agent)
-* [Possible Active Directory enumeration via ADWS](alerts-xdr.md#possible-active-directory-enumeration-via-adws)
-* [Possible OAuth code theft detected through consent abuse](alerts-xdr.md#possible-oauth-code-theft-detected-through-consent-abuse)
-* [Suspicious NTLM authentication](alerts-xdr.md#suspicious-ntlm-authentication)
-* [Possible adversary-in-the-middle (AiTM) attack detected (ConsentFix)](alerts-xdr.md#possible-adversary-in-the-middle-aitm-attack-detected-consentfix)
+- [Pass-the-Ticket (PtT) attack (Preview)](alerts-xdr.md#pass-the-ticket-ptt-attack-preview)
+- [Suspicious sign-in observed from Entra ID sync application to an uncommon resource app](alerts-xdr.md#suspicious-sign-in-observed-from-entra-id-sync-application-to-an-uncommon-resource-app)
+- [Possible Active Directory Certificate Services enumeration](alerts-xdr.md#possible-active-directory-certificate-services-enumeration)
+- [Suspicious sign-in observed to Entra ID sync application using an uncommon user agent](alerts-xdr.md#suspicious-sign-in-observed-to-entra-id-sync-application-using-an-uncommon-user-agent)
+- [Possible Active Directory enumeration via ADWS](alerts-xdr.md#possible-active-directory-enumeration-via-adws)
+- [Possible OAuth code theft detected through consent abuse](alerts-xdr.md#possible-oauth-code-theft-detected-through-consent-abuse)
+- [Suspicious NTLM authentication](alerts-xdr.md#suspicious-ntlm-authentication)
+- [Possible adversary-in-the-middle (AiTM) attack detected (ConsentFix)](alerts-xdr.md#possible-adversary-in-the-middle-aitm-attack-detected-consentfix)
 
 ### Migrated alerts
 
 As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, the following alerts were converted from the Microsoft Defender for Identity classic format to the MDI XDR alert format.
 
-* [Skipped MFA on remembered device from uncommon ISP sign-in](xdr_alerts.md#-skipped-mfa-on-remembered-device-from-uncommon-isp-sign-in): Description changed
-* [Possible Kerberoasting attack using a stealthy LDAP search](xdr_alerts.md#-possible-kerberoasting-attack-using-a-stealthy-ldap-search): Description changed
-* [Suspicious Kerberos authentication (TGT request using TGS-REQ)](xdr_alerts.md#-suspicious-kerberos-authentication-tgt-request-using-tgs-req): Description changed
+- [Skipped MFA on remembered device from uncommon ISP sign-in](xdr_alerts.md#skipped-mfa-on-remembered-device-from-uncommon-isp-sign-in)
+- [Possible Kerberoasting attack using a stealthy LDAP search](xdr_alerts.md#possible-kerberoasting-attack-using-a-stealthy-ldap-search)
+- [Suspicious Kerberos authentication (TGT request using TGS-REQ)](xdr_alerts.md#suspicious-kerberos-authentication-tgt-request-using-tgs-req)
 
 All alerts are based on detections from Defender for Identity sensors. For the full list of Microsoft Defender alerts see [Microsoft Defender for Identity XDR security alerts](alerts-xdr.md) .
 
 ### New Health Alert: Sensor v3.x RPC Audit Misconfigured
 Enhanced RPC auditing is required for some Microsoft Defender for Identity advanced identity detections. A new health alert helps identify v3.x sensors where this configuration is either missing or incorrectly applied. The alert is being rolled out gradually to customers. For more information, see [Configure RPC on sensors v3.x](deploy/prerequisites-sensor-version-3.md#configure-rpc-auditing).
 
-### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x (preview)
-We’re gradually rolling out automatic Windows event-auditing configuration for sensors v3.x, along with related health alerts. Automatic Windows event-auditing streamlines deployment by automatically applying the required auditing settings to new sensors and correcting misconfigurations on existing ones. 
-This update might identify existing auditing configuration gaps that weren't previously detected. 
+### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x (Preview)
+
+We’re gradually rolling out automatic Windows event-auditing configuration for sensors v3.x, along with related health alerts. Automatic Windows event-auditing streamlines deployment by automatically applying the required auditing settings to new sensors and correcting misconfigurations on existing ones.
+This update might identify existing auditing configuration gaps that weren't previously detected.
 To ensure consistent protection, we recommend that you make sure all servers with the v3 sensors are configured with:
-- the latest Windows cumulative update 
+
+- The latest Windows cumulative update 
 - Automatic Windows event auditing enabled 
 For more information, see [Configure automatic windows auditing](deploy/configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically-preview).
 
@@ -149,7 +151,7 @@ The new security posture assessment lists users whose valid credentials were lea
 
 ### Expansion of identity scoping: Support for Organizational units (Preview)
 
-In addition to the GA release of scoping by Active Directory domains a few months ago, you can now scope by **Organizational Units (OUs)** as part of XDR user role-based access control (URBAC). This enhancement provides even more granular control over which entities and resources are included in security analysis.
+In addition to the GA release of scoping by Active Directory domains a few months ago, you can now scope by **Organizational Units (OUs)*- as part of XDR user role-based access control (URBAC). This enhancement provides even more granular control over which entities and resources are included in security analysis.
 
 For more information, see [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
 
@@ -181,7 +183,7 @@ As part of the ongoing transition to a unified alerting experience across Micros
 
 ### Additional security value in the Defender for Identity sensor v3.x
 
-Apply the **Unified sensor RPC audit** tag to your Defender for Identity sensor v3.x in the **Asset rule management** page for enhanced protection. Learn more [here](/defender-for-identity/deploy/prerequisites-sensor-version-3).
+Apply the **Unified sensor RPC audit*- tag to your Defender for Identity sensor v3.x in the **Asset rule management*- page for enhanced protection. Learn more [here](/defender-for-identity/deploy/prerequisites-sensor-version-3).
 
 ### Identity posture recommendations view on the identity page (preview)
 
