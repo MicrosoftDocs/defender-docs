@@ -124,13 +124,13 @@ The primary changes are as follows:
 
 The following image shows the main Dashboard screen that appears to the enterprise's users as per our latest rollout of enhancements to the application. The following image illustrates the previous and new version of the main dashboard.
 
-:::image type="content" source="media/android-new-ux/mde-android-dash-changes.png" alt-text="Screensot showing the Microsoft Defender for Endpoint Mobile Dashboard on Android devices before the new update." lightbox="media/android-new-ux/mde-android-dash-changes.png":::
+:::image type="content" source="media/android-new-ux/mde-android-dash-changes.png" alt-text="Screenshot showing the Microsoft Defender for Endpoint Mobile Dashboard on Android devices before the new update." lightbox="media/android-new-ux/mde-android-dash-changes.png":::
 
 ### List the features inside one Feature Card
 
 The **App Security** and **Web Protection** features are now consolidated under a single feature card titled **Device Protection**. Previously, each functionality had its own separate card on the Dashboard screen. The following image displays the new version of the **Device Protection** feature card.
 
-:::image type="content" source="media/android-new-ux/mde-android-list.png" alt-text="Screensot showing the Microsoft Defender for Endpoint Feature Card before the new updates." lightbox="media/android-new-ux/mde-android-list.png":::
+:::image type="content" source="media/android-new-ux/mde-android-list.png" alt-text="Screenshot showing the Microsoft Defender for Endpoint Feature Card before the new updates." lightbox="media/android-new-ux/mde-android-list.png":::
 
 ### Detailed feature experience
 
@@ -138,30 +138,31 @@ We updated all the subordinating screens associated with the feature
 
 1. **Web Protection**:
 
-   :::image type="content" source="media/android-new-ux/mde-android-web-protection-after.png" alt-text="Screensot showing the web protection feature on the MDE Android app." lightbox="media/android-new-ux/mde-android-web-protection-after.png":::
+   :::image type="content" source="media/android-new-ux/mde-android-web-protection-after.png" alt-text="Screenshot showing the web protection feature on the MDE Android app." lightbox="media/android-new-ux/mde-android-web-protection-after.png":::
 
 1. **App Security** and **App Scanning**:
 
-   :::image type="content" source="media/android-new-ux/mde-android-app-security-and-app-scanning.png" alt-text="Screensot showing the app security feature on the MDE Android app." lightbox="media/android-new-ux/mde-android-app-security-and-app-scanning.png":::
+   :::image type="content" source="media/android-new-ux/mde-android-app-security-and-app-scanning.png" alt-text="Screenshot showing the app security feature on the MDE Android app." lightbox="media/android-new-ux/mde-android-app-security-and-app-scanning.png":::
 
 1. **Threat found**:
 
    The following image highlights the 'Threat Found' feature, showcasing its functionality both before and after the recent update.
 
-   :::image type="content" source="media/android-new-ux/mde-android-threat-found.png" alt-text="Screensot showing the threat found feature on the MDE Android app." lightbox="media/android-new-ux/mde-android-threat-found.png":::
+   :::image type="content" source="media/android-new-ux/mde-android-threat-found.png" alt-text="Screenshot showing the threat found feature on the MDE Android app." lightbox="media/android-new-ux/mde-android-threat-found.png":::
    
 1. **Uninstall threat**:
 
-   :::image type="content" source="media/android-new-ux/mde-android-uninstall.png" alt-text="Screensot showing the new uninstall threat feature on the MDE Android app." lightbox="media/android-new-ux/mde-android-uninstall.png":::
+   :::image type="content" source="media/android-new-ux/mde-android-uninstall.png" alt-text="Screenshot showing the new uninstall threat feature on the MDE Android app." lightbox="media/android-new-ux/mde-android-uninstall.png":::
 
 1. **Security History**:
-   :::image type="content" source="media/android-new-ux/mde-android-security-history.png" alt-text="Screensot showing the uninstall threat feature on the MDE Android app." lightbox="media/android-new-ux/mde-android-security-history.png":::
+
+   :::image type="content" source="media/android-new-ux/mde-android-security-history.png" alt-text="Screenshot showing the security history feature on the MDE Android app." lightbox="media/android-new-ux/mde-android-security-history.png":::
 
 ### Alerts
 
 We added a new section to show **multiple alerts** together on dashboard.
 
-:::image type="content" source="media/android-new-ux/mde-android-alerts.png" alt-text="Screensot showing the new updates to the alerts feature on the MDE Android app." lightbox="media/android-new-ux/mde-android-alerts.png":::
+:::image type="content" source="media/android-new-ux/mde-android-alerts.png" alt-text="Screenshot showing the Security history section on the MDE Android app." lightbox="media/android-new-ux/mde-android-alerts.png":::
 
 ## February 2025
 
@@ -176,8 +177,6 @@ How does this change affect your organization's users?
 
 After discontinuing support for deprecated versions, Microsoft no longer addresses bugs or provides maintenance for unsupported operating system versions. Any issues occurring on devices running Android version prior to version 10 won't be investigated.
 
-This change is planned to go live on April 30, 2025. No explicit admin or end-user action is required.
-
 ## Key changes - January 2025
 
 ### Upgrading your experience: Upcoming enhancements you should know about
@@ -190,9 +189,7 @@ Recommendation cards prominently display any active alerts, ensuring you stay in
 
 The following screenshot is an example of what the user sees in their dashboard:
 
-:::image type="content" source="media/android-new-ux/mde-android-dash-changes.png" alt-text="test":::
-
-:::image type="content" source="media/android-new-ux/android-dashboard-screen.png" alt-text="Screenshot showing the user's dashboard in the Microsoft Defender app.":::
+:::image type="content" source="media/android-new-ux/mde-android-dash-changes.png" alt-text="Screenshot of the new dashboard structure - tiles and recommendation cards":::
 
 **Recommendation cards for alerts**:
 
