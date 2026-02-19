@@ -41,7 +41,7 @@ Defender Experts for XDR augments your SOC by combining automation and Microsoft
 - **Access expertise when you need it** - Extend your team's capacity with access to Defender Experts for assistance on an investigation
 - **Stay ahead of emerging threats** - Our experts proactively hunt for emerging threats in your environment, informed by unparalleled threat intelligence and visibility
 
-Apart from the constantly updated research and intelligence tailored for the threats currently seen across the various Microsoft Defender XDR signals, you also receive managed response from our security analysts and, if your service includes it, support from Microsoft's security-focused service delivery managers (SDMs). This service lets you enjoy the following capabilities:
+Apart from the constantly updated research and intelligence tailored for the threats currently seen across the various Microsoft Defender XDR signals, you also receive managed response from our security analysts and, if your service includes it, support from Microsoft's security-focused Security Delivery Experts (SDXs). This service lets you enjoy the following capabilities:
 
 - **Managed detection and response** - Expert analysts manage your Microsoft Defender XDR incident queue and handle triage and investigation on your behalf; they partner with you and your team to take action or guide you to respond to incidents
 - **Proactive threat hunting** - [Microsoft Defender Experts for Hunting](defender-experts-for-hunting.md) is built in to extend your team's threat hunting capabilities and prioritize significant threats
@@ -50,7 +50,7 @@ Apart from the constantly updated research and intelligence tailored for the thr
 - **Proactive check-ins for continuous security improvements** - Periodic check-ins with your named service delivery team to guide your Defender Experts for XDR experience and improve your security posture
 
 > [!NOTE] 
-> SDMs are included if your Defender Experts for XDR and Defender Experts for Servers services are licensed for 500 or more seats and/or cloud workloads.
+> SDXs are included if your Defender Experts for XDR and Defender Experts for Servers services are licensed for 500 or more seats and/or cloud workloads.
 
 [Read the Defender Experts for XDR ebook](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/Defender-Experts-for-XDR-eBook-Final.pdf) and maximize the benefits of this product suite. 
 

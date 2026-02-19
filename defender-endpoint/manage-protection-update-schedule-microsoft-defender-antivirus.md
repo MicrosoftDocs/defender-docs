@@ -90,7 +90,7 @@ Set-MpPreference -SignatureUpdateInterval
 
 See [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md)  and [Defender Antivirus cmdlets](/powershell/module/defender/) for more information on how to use PowerShell with Microsoft Defender Antivirus.
 
-## Use Windows Management Instruction (WMI) to schedule protection updates
+## Use Windows Management Instrumentation (WMI) to schedule protection updates
 
 Use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class for the following properties:
 
