@@ -7,7 +7,7 @@ ms.topic: overview
 ms.reviewer: AbbyMSFT
 ---
 
-# Microsoft Defender for Identity
+# Microsoft Defender for Identity Overview
 
 Microsoft Defender for Identity helps organizations detect, investigate, and respond to identity-based attacks across on-premises, cloud, and hybrid environments. Threat actors frequently target identities such as users, applications, and service accounts to gain access, escalate privileges, and maintain persistence.
 
