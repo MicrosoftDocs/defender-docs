@@ -35,8 +35,6 @@ Defender for Identity provides you with a clear view of your identity security p
 
 For example:
 
-- **Defender for Identity's *Lateral Movement Paths*** help you quickly understand exactly how an attacker can move laterally inside your organization. [Lateral movement paths](understand-lateral-movement-paths.md) can compromise sensitive accounts, and Defender for Identity helps you prevent those risks in advance.
-
 - **[Defender for Identity security assessments](security-assessment.md)**, available from [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score), provide extra insights to improve your organizational security posture and policies.
 
 
