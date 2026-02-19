@@ -52,9 +52,9 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## July 2025
 
-- Azure Stack HCI OS support (version 23H2 and later) â€” Preview. Added support for Azure Stack HCI OS, version 23H2 and later. Support for Azure Stack HCI OS is rolling out across commercial and government clouds.
+- Azure Stack HCI OS support (version 23H2 and later) - Preview. Added support for Azure Stack HCI OS, version 23H2 and later. Support for Azure Stack HCI OS is rolling out across commercial and government clouds.
 
-- [Microsoft Defender Core service](/defender-endpoint/microsoft-defender-core-service-overview) â€” GA. Microsoft Defender Core service helps with the stability and performance of Microsoft Defender Antivirus.
+- [Microsoft Defender Core service](/defender-endpoint/microsoft-defender-core-service-overview) - GA. Microsoft Defender Core service helps with the stability and performance of Microsoft Defender Antivirus.
 
 ## May 2025
 
@@ -64,11 +64,11 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## April 2025
 
-- [Contain IP addresses of undiscovered devices](respond-machine-alerts.md#contain-ip-addresses-of-undiscovered-devices) â€” Preview. Containing an IP address prevents attackers from spreading attacks to other noncompromised devices.
+- [Contain IP addresses of undiscovered devices](respond-machine-alerts.md#contain-ip-addresses-of-undiscovered-devices) - Preview. Containing an IP address prevents attackers from spreading attacks to other noncompromised devices.
 
-- Attack Surface Reduction (ASR) Rules â€” GA. Two new ASR rules are now generally available: Block rebooting machine in Safe Mode; Block use of copied or impersonated system tools.
+- Attack Surface Reduction (ASR) Rules - GA. Two new ASR rules are now generally available: Block rebooting machine in Safe Mode; Block use of copied or impersonated system tools.
 
-- **(Linux)** ARM64-based Linux server support â€” GA. Defender for Endpoint now supports ARM64-based Linux servers on Ubuntu, RHEL, Debian, SUSE Linux, Amazon Linux, and Oracle Linux. For more information, see [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md).
+- **(Linux)** ARM64-based Linux server support - GA. Defender for Endpoint now supports ARM64-based Linux servers on Ubuntu, RHEL, Debian, SUSE Linux, Amazon Linux, and Oracle Linux. For more information, see [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md).
 
 - **(Android)** Deploy Defender for Endpoint prerelease builds on Android devices using Google Play preproduction tracks. For more information, see [Deploy Defender for Endpoint prerelease builds on Android devices](mobile-pretest-android.md).
 
@@ -78,7 +78,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## February 2025
 
-- [Aggregated reporting in Microsoft Defender for Endpoint](aggregated-reporting.md) â€” GA. Aggregated reporting extends signal reporting intervals to significantly reduce the size of reported events while preserving essential event properties.
+- [Aggregated reporting in Microsoft Defender for Endpoint](aggregated-reporting.md) - GA. Aggregated reporting extends signal reporting intervals to significantly reduce the size of reported events while preserving essential event properties.
 
 - **(Android)** Defender for Endpoint on Android now supports Android 10 as the minimum version. Support for Android 8, 8.1, and 9 ends on April 30, 2025. Moving forward, only devices running Android 10 and later are supported.
 
@@ -98,7 +98,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## November-December 2024
 
-- New demonstration scenarios â€” GA. Five new demonstration scenarios are available: [AMSI demos](mde-demonstration-amsi.md), [Cloud protection demo](/defender-endpoint/defender-endpoint-demonstration-cloud-delivered-protection), [Controlled folder access (block ransomware) demo](/defender-endpoint/defender-endpoint-demonstration-controlled-folder-access), [Endpoint detection and response (EDR) detection test](/defender-endpoint/edr-detection), [URL reputation (SmartScreen) demo](/defender-endpoint/defender-endpoint-demonstration-smartscreen-url-reputation).
+- New demonstration scenarios - GA. Five new demonstration scenarios are available: [AMSI demos](mde-demonstration-amsi.md), [Cloud protection demo](/defender-endpoint/defender-endpoint-demonstration-cloud-delivered-protection), [Controlled folder access (block ransomware) demo](/defender-endpoint/defender-endpoint-demonstration-controlled-folder-access), [Endpoint detection and response (EDR) detection test](/defender-endpoint/edr-detection), [URL reputation (SmartScreen) demo](/defender-endpoint/defender-endpoint-demonstration-smartscreen-url-reputation).
 
 ## December 2024
 
@@ -113,9 +113,9 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## July 2024
 
-- Monitor OT devices in the device inventory â€” Preview. You can now monitor OT devices in addition to IoT devices in the device inventory, as part of the integration with [Microsoft Defender for IoT in the Defender portal](/defender-for-iot/device-discovery). For more information, see [Device inventory](machines-view-overview.md).
+- Monitor OT devices in the device inventory - Preview. You can now monitor OT devices in addition to IoT devices in the device inventory, as part of the integration with [Microsoft Defender for IoT in the Defender portal](/defender-for-iot/device-discovery). For more information, see [Device inventory](machines-view-overview.md).
 
-- Learning hub resources moved â€” GA. Learning hub resources have moved from the Microsoft Defender portal to [learn.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2273118).
+- Learning hub resources moved - GA. Learning hub resources have moved from the Microsoft Defender portal to [learn.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2273118).
 
 - **(iOS)** Device tagging is now generally available. Administrators can configure device tags through Intune via configuration policies and push them to user's devices. For more information, see [Configure Device Tagging](ios-configure-features.md#device-tagging).
 
@@ -213,16 +213,19 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - **(Android)** Microsoft Defender for Endpoint is now supported on Android Enterprise personal profile (BYOD only) with malware scanning, protection from phishing links, network protection, and vulnerability management, coupled with [privacy controls](android-configure.md#privacy-controls) to ensure user privacy on personal profile. For more information, see the [announcement](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-the-public-preview-of-defender-for-endpoint-personal/ba-p/3370979) and the [deployment guide](android-intune.md#set-up-microsoft-defender-in-personal-profile-on-android-enterprise-in-byod-mode).
 
+## January 2022
+
+- **(Android)** Vulnerability management on Android and iOS is now generally available. For more information, see [Announcing general availability of vulnerability management on Android and iOS](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-general-availability-of-vulnerability-management/ba-p/3071663).
+
+## November 2021
+
+- **(Android)** Permission changes for Microsoft Defender for Endpoint on Android 11 or later (build 1.0.3501.0301). Microsoft Defender for Endpoint requires [new storage permission](https://developer.android.com/training/data-storage/manage-all-files#all-files-access-google-play) for devices running Android 11 or later, as required by [Google API Level 30](https://developer.android.com/distribute/play-policies#APILevel30). Users must accept this permission after updating to build 1.0.3501.0301 or later to ensure app security functionality continues without disruption. If the permission is denied, app security is turned off on the device. For more information, see [Microsoft Defender for Endpoint on Android](microsoft-defender-endpoint-android.md).
 
 ## October 2021
 
 - [Updated onboarding and feature parity for Windows Server 2012 R2 and Windows Server 2016 (preview)](onboard-server.md)<br> The new unified solution package makes it easier to onboard servers by removing dependencies and installation steps. In addition, this unified solution package comes with many new feature improvements.
 
 - Windows 11 support added to Microsoft Defender for Endpoint and Microsoft 365 Defender.
-
-## November 2021
-
-- **(Android)** Permission changes for Microsoft Defender for Endpoint on Android 11 or later (build 1.0.3501.0301). Microsoft Defender for Endpoint requires [new storage permission](https://developer.android.com/training/data-storage/manage-all-files#all-files-access-google-play) for devices running Android 11 or later, as required by [Google API Level 30](https://developer.android.com/distribute/play-policies#APILevel30). Users must accept this permission after updating to build 1.0.3501.0301 or later to ensure app security functionality continues without disruption. If the permission is denied, app security is turned off on the device. For more information, see [Microsoft Defender for Endpoint on Android](microsoft-defender-endpoint-android.md).
 
 ## September 2021
 
@@ -241,10 +244,6 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - (Preview) [Web Content Filtering](web-content-filtering.md)<br>  Web content filtering is part of web protection capabilities in Microsoft Defender for Endpoint. It enables your organization to track and regulate access to websites based on their content categories. Many of these websites, while not malicious, might be problematic because of compliance regulations, bandwidth usage, or other concerns.
 
-## January 2022
-
-- **(Android)** Vulnerability management on Android and iOS is now generally available. For more information, see [Announcing general availability of vulnerability management on Android and iOS](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-general-availability-of-vulnerability-management/ba-p/3071663).
-
 ## June 2021
 
 - [Delta export software vulnerabilities assessment](api/get-assessment-methods-properties.md#31-methods) API <br> An addition to the [Export assessments of vulnerabilities and secure configurations](api/get-assessment-methods-properties.md) API collection. <br> Unlike the full software vulnerabilities assessment (JSON response) - which is used to obtain an entire snapshot of the software vulnerabilities assessment of your organization by device - the delta export API call is used to fetch only the changes that have happened between a selected date and the current date (the "delta" API call). Instead of getting a full export with a large amount of data every time, you'll only get specific information on new, fixed, and updated vulnerabilities. Delta export API call can also be used to calculate different KPIs such as "how many vulnerabilities were fixed" or "how many new vulnerabilities were added to an organization."
@@ -262,7 +261,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Mobile Application management support](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> This enhancement enables Microsoft Defender for Endpoint protect an organization's data within a managed application when Intune is being used to manage mobile applications. For more information about mobile application management, see [this documentation](/mem/intune/apps/mam-faq).
 
-- [Microsoft Tunnel VPN integration](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> Microsoft Tunnel VPN capabilities are now integrated with Microsoft Defender for Endpoint app for Android. This unification enables organizations to offer a simplified end-user experience with one security app â€“ offering both mobile threat defense and the ability to access on-prem resources from their mobile device â€“ while security and IT teams are able to maintain the same admin experiences they're familiar with.
+- [Microsoft Tunnel VPN integration](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> Microsoft Tunnel VPN capabilities are now integrated with Microsoft Defender for Endpoint app for Android. This unification enables organizations to offer a simplified end-user experience with one security app offering both mobile threat defense and the ability to access on-premises resources from their mobile device while security and IT teams are able to maintain the same admin experiences they're familiar with.
 
 - [Jailbreak detection on iOS](ios-configure-features.md#conditional-access-with-defender-for-endpoint-on-ios) <br> Jailbreak detection capability in Microsoft Defender for Endpoint on iOS is now generally available. This adds to the phishing protection that already exists. For more information, see [Setup Conditional Access Policy based on device risk signals](ios-configure-features.md#conditional-access-with-defender-for-endpoint-on-ios).
 
