@@ -142,6 +142,8 @@ For more information on how to use PowerShell with Microsoft Defender Antivirus,
 > The `SendSafeSamples` setting means that most samples are sent automatically. Files that are likely to contain personal information result in a prompt for the user to continue, and require confirmation.
 > The `NeverSend` and `AlwaysPrompt` settings lower the protection level of the device. Furthermore, the `NeverSend` setting means that the [Block at First Sight](configure-block-at-first-sight-microsoft-defender-antivirus.md) feature of Microsoft Defender for Endpoint won't work.
 
+<a name='use-windows-management-instruction-wmi-to-turn-on-cloud-protection'></a>
+
 ## Use Windows Management Instrumentation (WMI) to turn on cloud protection
 
 Use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/defender/set-msft-mppreference) class for the following properties:
