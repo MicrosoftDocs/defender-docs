@@ -59,7 +59,6 @@ This article is updated frequently to let you know what's new in the latest rele
 
 #### What's new
 
-- Enhanced security controls for cloud‑delivered configurations to improve integrity and resilience during configuration retrieval and processing.
 - Microsoft Defender for Endpoint on Linux now connects to additional endpoints to retrieve internal configuration data. Ensure the following URLs are allowed in network configurations:
     * https://config.edge.skype.com/config/v1 (default)
     * https://config.ecs.dod.teams.microsoft.us/config/v1
