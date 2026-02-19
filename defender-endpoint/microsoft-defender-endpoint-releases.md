@@ -54,7 +54,6 @@ This table includes supported releases for all supported platforms in the past 6
 |macOS  |101.25082.0006  |October 2025 |- Release version: 20.125082.6.0<br>- Engine version: 1.1.25070.3000<br>- Signature version: 1.437.276.0 |[Release details and updates](#macos--october-2025--101250820006) |
 |Linux  |101.25092.0001  |October 2025 |- Release version: 30.125092.0001.0<br>- Engine version: 1.1.25090.6000<br>- Signature version: 1.439.558.0 |[Release details and updates](#linux--october-2025--101250920001) |
 |Windows Antivirus |4.18.25100.9008  |October 2025 |- Platform: 4.18.25100.9008<br>- Engine: 1.1.25100.9002<br>- Security intelligence: 1.441.131.0 |[Release details and updates](#windows-antivirus--october-2025--platform-418251009008--engine-11251009002) |
-|Windows Antivirus |4.18.25090.3009  |September 2025 |- Platform: 4.18.25090.3009<br>- Engine: 1.1.25090.3001<br>- Security intelligence: 1.439.345.0 |[Release details and updates](#windows-antivirus--september-2025--platform-418250903009--engine-11250903001) |
 |iOS |1.1.68200103  |September 2025 |- Build: 1.1.68200103<br>- Released: September 4, 2025 |[Release details and updates](#ios--september-2025--1168200103) |
 |Android |1.0.8102.0101  |September 2025 |- Build: 1.0.8102.0101<br>- Released: September 4, 2025 |[Release details and updates](#android--september-2025--1081020101) |
 |Linux  |101.25082.0003  |September 2025 |- Release version: 30.125082.0003.0<br>- Engine version: 1.1.25070.4000<br>- Signature version: 1.435.242.0 |[Release details and updates](#linux--september-2025--101250820003-build-1) |
@@ -62,7 +61,6 @@ This table includes supported releases for all supported platforms in the past 6
 |macOS  |101.25072.0011  |September 2025 |- Release version: 20.125072.11.0<br>- Engine version: 1.1.25060.3000<br>- Signature version: 1.429.309.0 |[Release details and updates](#macos--september-2025--101250720011) |
 |iOS |1.1.68140102  |August 2025 |- Build: 1.1.68140102<br>- Released: August 19, 2025 |[Release details and updates](#ios--august-2025--1168140102) |
 |Android |1.0.8018.0103  |August 2025 |- Build: 1.0.8018.0103<br>- Released: August 19, 2025 |[Release details and updates](#android--august-2025--1080180103) |
-|macOS  |101.25062.0006  |August 2025 |- Release version: 20.125062.6.0<br>- Engine version: 1.1.25070.3000<br>- Signature version: 1.435.357.0 |[Release details and updates](#macos--august-2025--101250620006) |
 |Linux  |101.25062.0003  |August 2025 |- Release version: 30.125062.0003.0<br>- Engine version: 1.1.25040.4000<br>- Signature version: 1.429.442.0 |[Release details and updates](#linux--august-2025--101250620003) |
 |iOS |1.1.67040101  |July 2025 |- Build: 1.1.67040101<br>- Released: July 8, 2025 |[Release details and updates](#ios--july-2025--1167040101) |
 |Android |1.0.7901.0101  |July 2025 |- Build: 1.0.7901.0101<br>- Released: July 10, 2025 |[Release details and updates](#android--july-2025--1079010101) |
