@@ -31,7 +31,7 @@ sections:
         answer: |
           Yes. But the full set of attack surface reduction rules and features are available only with a Windows enterprise license.
 
-          Microsoft Defender Antivirus is the native anti-malware component of Windows. Attack surface reduction was introduced in the exploit guard features of Microsoft Defender Antivirus in Windows 10 version 1709. For more information, see [Attack surface reduction rules reference - Microsoft Defender Antivirus exclusions and attack surface reduction rules](attack-surface-reduction-rules-reference.md#microsoft-defender-antivirus-exclusions-and-asr-rules).
+          Microsoft Defender Antivirus is the native anti-malware component of Windows. Attack surface reduction was introduced in the exploit guard features of Microsoft Defender Antivirus in Windows 10 version 1709 (October 2017). For more information, see [Attack surface reduction rules reference - Microsoft Defender Antivirus exclusions and attack surface reduction rules](attack-surface-reduction-rules-reference.md#microsoft-defender-antivirus-exclusions-and-asr-rules).
 
           > [!TIP]
           > Some Microsoft Defender Antivirus exclusions also apply to attack surface reduction rule exclusions.
