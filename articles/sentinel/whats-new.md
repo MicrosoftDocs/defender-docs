@@ -18,13 +18,17 @@ The listed features were released in the last six months. For information about 
 
 [!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
 
+## February 2026
+
+- [Generate playbooks using AI in Microsoft Sentinel](generate-playbook.md) (preview): The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent.
+
 ## January 2026
 
 ### New Entity Behavior Analytics (UEBA) widget in the Defender portal home page (Preview)
 
 The Defender portal home page now includes a UEBA widget where analysts can immediately have visibility into anomalous user behavior and therefore accelerate threat detection workflows. For more information, see [How UEBA empowers analysts and streamlines workflows](identify-threats-with-entity-behavior-analytics.md#ueba-experiences-in-the-defender-portal-empower-analysts-and-streamline-workflows-preview).
 
-### Updated date: Microsoft Sentinel in the Azure portal to be retired March 2027 
+### Updated date: Microsoft Sentinel in the Azure portal to be retired March 2027
 
 [!INCLUDE [sentinel-azure-deprecation](includes/sentinel-azure-deprecation.md)]
 
@@ -56,7 +60,6 @@ You can now enable UEBA for supported data sources directly from the data connec
 This integration allows you to see which data sources feed into UEBA and enable that feed directly from the connector configuration.
 
 For more information, see [Connect data sources to Microsoft Sentinel by using data connectors](configure-data-connector.md#enable-user-and-entity-behavior-analytics-ueba-from-supported-connectors).
-
 
 ### New detections for Sentinel solution for SAP BTP
 

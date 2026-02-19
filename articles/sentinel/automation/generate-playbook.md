@@ -35,7 +35,7 @@ An embedded Visual Studio Code environment within the Microsoft Defender portal 
 
 ## Prerequisites
 
-You don't need prior coding experience to generate a playbook, but familarity with tools like VSCode and Entra ID app registration is helpful.
+You don't need prior coding experience to generate a playbook, but it helps to be familiar with tools like VSCode and Entra ID app registration.
 
 You also must meet the following requirements:
 
@@ -53,7 +53,7 @@ To use playbook generator, you need the following permissions:
 
 - **To author Automation Rules**: You need the **Microsoft Sentinel Contributor** role on the relevant Workspaces or Resource Groups containing them in Azure. See [Microsoft Entra built-in roles](/azure/sentinel/roles#built-in-azure-roles-for-microsoft-sentinel)
 
-- **To author generated Playbooks:**, you need the **Security Administrator** role in Microsoft Entra in Azure. See [Microsoft Entra built-in roles - Microsoft Entra ID \| Microsoft Learn](/entra/identity/role-based-access-control/permissions-reference#security-administrator)
+- **To use the playbook generator**: You need the **Detection tuning** role in Microsoft Entra in Azure. See [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference#security-administrator)
 
 > [!NOTE]
 > Permissions might take up to two hours to take effect after assignment.
@@ -82,23 +82,17 @@ If you don't already have a dedicated Security Copilot workspace configured to u
 
    1. Choose your Azure subscription, resource group, and capacity name.
 
-   1. Set **Prompt evaluation location** to **United States** or **Europe**.
+   1. Set **Prompt evaluation location** to **United States** or **Europe**. If you are in a location other than these, set the toggle to allow cross regions.
 
-   1. Clear the checkbox: **If this location has too much traffic, allow Copilot to evaluate prompts anywhere in the world**.
+   1. Check the box: **If this location has too much traffic, allow Copilot to evaluate prompts anywhere in the world**.
 
-   1. Select your preferred capacity region (for example, **US East**).
-
-   1. Adjust compute units and overage settings as needed.
+   1. Adjust compute units and overage settings. The playbook generator doesn't consume Security Compute Units (SCUs), but you need to configure the capacity to meet the technical requirements for playbook generation.
 
    1. Select **Create**.
 
-1. After creating the capacity, make sure to select it for the `soarnl-workspace`, and that the workspace shows the US capacity.
-
 :::image type="content" source="./media/generate-playbook/create-capacity.png" alt-text="Screenshot of the new capacity details.":::
 
-Generated playbooks automatically use this workspace if available.
-
-<!--- - Detection Tuning role in Microsoft Defender portal.  What is this???? --->
+Generated playbooks automatically use this workspace.
 
 ## Key concepts
 
@@ -164,6 +158,7 @@ This trigger mechanism enables automatic execution of generated playbooks across
 
 1. Verify that **SecurityAlert.Read.All** is listed under **Microsoft Graph / Application** with status **Granted for [tenant]**.
 --->
+
 #### Create the integration profile
 
 1. In the Microsoft Defender portal, go to **Microsoft Sentinel** > **Configuration** > **Automation**.
@@ -338,27 +333,10 @@ To view execution details for your generated playbook:
 
 ## Example use case
 
-initial_prompt: Create a playbook that enriches alert URL entities with VirusTotal
+The following are examples of prompts you can use to generate playbooks for common scenarios:
+
+- Create a playbook that enriches alert URL entities with VirusTotal
       data and adds the results as a comment to the related incident.
-    intent: null
-  data:
-    integrations_ref: null
-    knowledge_base_ref:
-    - Triggered when a Microsoft Sentinel alert is received via webhook subscription.
-    - The playbook processes URL entities that are associated with the alert.
-    - A VirusTotal API key parameter must be available to query the VirusTotal URL
-      Report API.
-    - For each URL, the playbook evaluates the VirusTotal field response_code to determine
-      if a valid report exists.
-    - If response_code equals 1, the playbook adds a comment to the related incident
-      containing the URL and the number of VirusTotal positives.
-    - If response_code is not 1 for a URL, the playbook skips adding a comment for
-      that URL and continues with any remaining URLs.
-    - If no URL entities are present in the alert, no VirusTotal queries are performed
-      and no comments are added.
-    - The final state is that the related incident may contain one or more comments,
-      each summarizing VirusTotal findings for specific alert URLs where valid reports
-      exist.
 
 ## Limitations
 
