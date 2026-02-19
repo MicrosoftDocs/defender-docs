@@ -34,7 +34,7 @@ This article shows you how to onboard to the Microsoft Defender Experts for Hunt
 
 If you're new to Microsoft Defender XDR and Defender Experts for Hunting:
 
-1. When you get your welcome email, select **Log into Microsoft Defender XDR**.
+1. When you receive your welcome email, select **Log into Microsoft Defender XDR**.
 1. Sign in if you already have a Microsoft account. If you don't have a Microsoft account, create one.
 1. The Microsoft Defender XDR quick tour introduces you to the security suite, where the capabilities are, and how important they are. Select **Take a quick tour**.
 1. Read the short descriptions about what the Microsoft Defender Experts service is and the capabilities it provides. Select **Next**. You see the welcome page:
@@ -50,7 +50,7 @@ Defender Experts for Hunting lets you set up **Notification contacts**. These co
     You can designate the call priority of your incident notification contacts. In an event of a critical incident, Microsoft reaches out to the primary contact first by using the phone number you provided, and then the backup contact if needed. 
 - **Service review notification contacts** – These contacts are persons or teams that Microsoft can engage with for service updates, reports, and opportunities for feedback.
 
-Set up your notification contacts in the setup wizard when you first onboard to the service, or go to **System** > **Settings** > **Defender Experts** > **Notification contacts** in the Microsoft Defender portal.
+Set up your notification contacts in the setup wizard when you first onboard to the service, or from the Microsoft Defender portal navigation menu by going to **System** > **Settings** > **Defender Experts** > **Notification contacts**.
 
 ## Receive Defender Experts Notifications
 
@@ -105,7 +105,7 @@ A sample Defender Experts Notification appears in your **Incidents** page with t
 
 1. In your Microsoft Defender XDR navigation pane, go to **Settings** > **Defender Experts** and then select **Sample notifications**.
 1. Select **Generate a sample notification**. A green status message appears, confirming that your sample notification is ready for review.
-1. Under **Recently generated Defender Experts Notification**, select a link from the list to view its corresponding generated sample notification. The most recent sample appears on the top of the list. Selecting a link redirects you to the **Incidents** page.
+1. Under **Recently generated Defender Experts Notification**, select a link from the list to view its corresponding generated sample notification. The most recent sample appears at the top of the list. Selecting a link redirects you to the **Incidents** page.
 
     :::image type="content" source="./media/onboarding-defender-experts-for-hunting/sample-den-links-dexh.png" alt-text="Screenshot of Sample DEN links." lightbox="./media/onboarding-defender-experts-for-hunting/sample-den-links-dexh.png":::
 
