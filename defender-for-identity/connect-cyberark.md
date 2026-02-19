@@ -15,7 +15,8 @@ This section provides instructions for connecting Microsoft Defender for Identit
 Before connecting your CyberArk Identity to Microsoft Defender for Identity, make sure the following prerequisites are met:
 
 **CyberArk Identity roles**
-    - The System Admin role is required to create an application.
+
+- The System Admin role is required to create an application.
 
 **Microsoft Entra and Defender XDR role-based access options**
 
