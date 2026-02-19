@@ -145,8 +145,8 @@ In order for Microsoft Defender Antivirus to run in passive mode, endpoints must
 - Windows Security Center Service must be enabled.
 
 > [!WARNING]
-> If the **Windows Security Center Service** is *disabled* on Windows Clients then Microsoft Defender Antivirus can't detect third-party antivirus installations and will stay **Active**.
-> This could lead to conflicts between the Microsoft Defender Antivirus and the third-party Antivirus, as both will attempt to provide active protection. This will impact performance and is not supported.
+> If the **Windows Security Center Service** is *disabled* on Windows Clients then Microsoft Defender Antivirus can't detect non-Microsoft antivirus installations and will stay **Active**.
+> This could lead to conflicts between the Microsoft Defender Antivirus and the non-Microsoft Antivirus, as both will attempt to provide active protection. This will impact performance and is not supported.
 
 > [!IMPORTANT]
 > - Microsoft Defender Antivirus is only available on devices running Windows 10 and 11, Windows Server 2012 R2 and later, Windows Server, version 1803 or newer, and Azure Stack HCI OS, version 23H2 and later.

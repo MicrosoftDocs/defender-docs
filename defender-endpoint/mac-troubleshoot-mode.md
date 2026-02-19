@@ -164,7 +164,7 @@ If you can't enable troubleshooting mode, do the following troubleshooting steps
 
   As previously mentioned, you need Platform Update version: 101.23122.0005 or newer.
 
-- Verify the device is enrolled and and active by running the following commands:
+- Verify the device is enrolled and active by running the following commands:
 
   ```terminal
   mdatp health --field edr_machine_id

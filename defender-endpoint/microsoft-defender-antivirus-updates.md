@@ -17,11 +17,11 @@ appliesto:
 
 # Microsoft Defender Antivirus security intelligence and product updates and support
 
-Keeping Microsoft Defender Antivirus up to date is critical to assure your devices are protected against new malware and attack techniques. Update your antivirus protection, even if Microsoft Defender Antivirus is running in [passive mode](microsoft-defender-antivirus-compatibility.md). You can find the lates engine, platform, and signature date in [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/en-us/wdsi/defenderupdates)
+Keeping Microsoft Defender Antivirus up to date is critical to assure your devices are protected against new malware and attack techniques. Update your antivirus protection, even if Microsoft Defender Antivirus is running in [passive mode](microsoft-defender-antivirus-compatibility.md). You can find the lates engine, platform, and signature date in [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/wdsi/defenderupdates).
 
 This article is aimed at **Windows** devices, and includes information about [security intelligence updates](#security-intelligence-updates) and [product updates](#product-updates).
 
-For a list of the latest **security intelligence and product versions**, see [Microsoft Defender for Endpoint supported releases](microsoft-defender-endpoint-releases.md#microsoft-defender-antivirus-releases)
+For a list of the latest **security intelligence and product versions**, see [Microsoft Defender for Endpoint supported releases](microsoft-defender-endpoint-releases.md#microsoft-defender-antivirus-releases).
 
 ## Security intelligence updates
 

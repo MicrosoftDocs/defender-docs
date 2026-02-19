@@ -382,7 +382,7 @@ This page contains archived platform-specific build and version history for Micr
 
    > [!NOTE]
    > You need to deploy a new MDM configuration profile for Defender to access Bluetooth.
-   > See details for [JAMF](mac-jamfpro-policies.md#step-10-grant-bluetooth-permissions) and [Intune](mac-install-with-intune.md#step-7-bluetooth-permissions)
+   > See details for [JAMF](mac-jamfpro-policies.md#step-10-grant-bluetooth-permissions) and [Intune](mac-install-with-intune.md#step-7-bluetooth-permissions).
 
 ### Mar-2024 (Build: 101.24012.0010  | Release version: 20.124012.10.0)
 
@@ -438,7 +438,7 @@ This page contains archived platform-specific build and version history for Micr
 > [!NOTE]
 > If you use Device Control v1, consider migrating to v2 (that includes all v1 functionality and more).
 > Device Control v1 will be considered deprecated in the nearest future.
-> To check, run the `[mdatp health --details device_control](mac-device-control-overview.md#status)` command, and inspect the `active` property, it shouldn't contain "v1".
+> To check, run the `[mdatp health --details device_control](mac-device-control-overview.md#status)` command, and inspect the `active` property. It shouldn't contain "v1".
 
 ### Oct-2023 (Build: 101.23082.0018  | Release version: 20.123082.18.0)
 
@@ -598,7 +598,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- Issue resolution: Upgrade fails if `\_mdatp` user a member of `\_lpadmin` group
+- Issue resolution: Upgrade fails if `\_mdatp` user is a member of `\_lpadmin` group
 
 > [!IMPORTANT]
 > This is a minimal recommended MDE version for macOS Ventura.
@@ -1253,9 +1253,9 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 > [!CAUTION]
 > macOS 10.15 (Catalina) contains new security and privacy enhancements. Beginning with this version, by default, applications aren't able to access certain locations on disk (such as Documents, Downloads, Desktop, etc.) without explicit consent. In the absence of this consent, Microsoft Defender for Endpoint isn't able to fully protect your device.
-> > The mechanism for granting this consent depends on how you deployed Microsoft Defender for Endpoint:
+> The mechanism for granting this consent depends on how you deployed Microsoft Defender for Endpoint:
 > - For manual deployments, see the updated instructions in the [Manual deployment article](mac-install-manually.md#allow-full-disk-access).
-- For managed deployments, see the updated instructions in the [JAMF-based deployment](mac-install-with-jamf.md) and [Microsoft Intune-based deployment](mac-install-with-intune.md#create-system-configuration-profiles) articles.
+> - For managed deployments, see the updated instructions in the [JAMF-based deployment](mac-install-with-jamf.md) and [Microsoft Intune-based deployment](mac-install-with-intune.md#create-system-configuration-profiles) articles.
 
 - Performance improvements & Product improvements
 
@@ -1766,7 +1766,7 @@ There are multiple fixes and new changes in this release:
 
 #### What's new
 
-- This new release is build over October 2023 release (101.23082.0009) with addition of following changes. There's no change for other customers and upgrading is optional.
+- This new release is built over October 2023 release (101.23082.0009) with addition of following changes. There's no change for other customers and upgrading is optional.
 
 - Fix for immutable mode of auditd when supplementary subsystem is ebpf:  In ebpf mode all mdatp audit rules should be cleaned after switching to ebpf and rebooting.  After the reboot, mdatp audit rules weren't cleaned due to which it was resulting in hang of the server.  The fix cleans these rules, user shouldn't see any mdatp rules loaded on reboot
 
@@ -1809,7 +1809,7 @@ sudo systemctl disable mdatp
 
 #### What's new
 
-- This new release is build over October 2023 release (`101.23082.0009`) with addition of new CA Certificates. There's no change for other customers and upgrading is optional. 
+- This new release is built over October 2023 release (`101.23082.0009`) with addition of new CA Certificates. There's no change for other customers and upgrading is optional. 
 
 #### Known issues
 
@@ -2238,7 +2238,7 @@ sudo systemctl disable mdatp
 
 #### What's new
 
-- This new release is build over March 2023 release (`101.98.05`) with a fix for Live response commands failing for one of our customers. There's no change for other customers and upgrade is optional. 
+- This new release is built over March 2023 release (`101.98.05`) with a fix for Live response commands failing for one of our customers. There's no change for other customers and upgrade is optional. 
     
 #### Known issues
 
