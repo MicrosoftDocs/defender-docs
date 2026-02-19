@@ -25,33 +25,25 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## January 2026
 
-### Identity inventory enhancements are now generally available
-
-- **Accounts tab in Identity Inventory**: The new **Accounts*- tab provides a consolidated view of all accounts associated with an identity, including accounts from Active Directory, Microsoft Entra ID, and supported non-Microsoft identity providers. For more information, see [Manage related identities and accounts](manage-related-identities-accounts.md).
-- **Manually link and unlink accounts**: Manually link or unlink accounts from an identity directly in the **Accounts*- tab. This capability helps you correlate identity components from different directory sources and provides a complete identity context during investigations. For more information, see [Manage related identities and accounts](manage-related-identities-accounts.md).
-- **Identity-level remediation actions**: You can now perform remediation actions such as disabling accounts or resetting passwords on one or more accounts linked to an identity. For more information, see [Remediation actions](remediation-actions.md#roles-and-permissions).
-- **New advanced hunting table**: Advanced hunting in Microsoft Defender now includes the **[IdentityAccountInfo](
-/defender-xdr/advanced-hunting-identityaccountinfo-table)*- table. This table provides account information from various sources, including Microsoft Entra ID, and links to the identity that owns the account.
-
-### New security posture assessments:
-
-- [Remove stale Active Directory accounts (Preview)](security-posture-assessments/accounts.md#remove-stale-active-directory-accounts-preview) lists any user accounts in Active Directory that are stale, meaning they haven't logged in at all during the past 90 days.
-
- - [Microsoft Entra ID privileged user accounts that are also privileged in Active Directory (Preview)](security-posture-assessments/accounts.md#microsoft-entra-id-privileged-user-accounts-that-are-also-privileged-in-active-directory-preview) lists Microsoft Entra ID privileged user accounts that also have privileged roles in Active Directory.
-
 ### Changes to Defender for Identity security alerts
+
 ### New alerts
 
 These new alerts were added to the Defender for Identity security alerts:
 
-- [Pass-the-Ticket (PtT) attack (Preview)](alerts-xdr.md#pass-the-ticket-ptt-attack-preview)
+**New alerts related to Entra ID**:
+
 - [Suspicious sign-in observed from Entra ID sync application to an uncommon resource app](alerts-xdr.md#suspicious-sign-in-observed-from-entra-id-sync-application-to-an-uncommon-resource-app)
-- [Possible Active Directory Certificate Services enumeration](alerts-xdr.md#possible-active-directory-certificate-services-enumeration)
 - [Suspicious sign-in observed to Entra ID sync application using an uncommon user agent](alerts-xdr.md#suspicious-sign-in-observed-to-entra-id-sync-application-using-an-uncommon-user-agent)
-- [Possible Active Directory enumeration via ADWS](alerts-xdr.md#possible-active-directory-enumeration-via-adws)
 - [Possible OAuth code theft detected through consent abuse](alerts-xdr.md#possible-oauth-code-theft-detected-through-consent-abuse)
-- [Suspicious NTLM authentication](alerts-xdr.md#suspicious-ntlm-authentication)
 - [Possible adversary-in-the-middle (AiTM) attack detected (ConsentFix)](alerts-xdr.md#possible-adversary-in-the-middle-aitm-attack-detected-consentfix)
+
+**New alerts related to Active Directory**:
+
+- [Pass-the-Ticket (PtT) attack (Preview)](alerts-xdr.md#pass-the-ticket-ptt-attack-preview)
+- [Possible Active Directory Certificate Services enumeration](alerts-xdr.md#possible-active-directory-certificate-services-enumeration)
+- [Possible Active Directory enumeration via ADWS](alerts-xdr.md#possible-active-directory-enumeration-via-adws)
+- [Suspicious NTLM authentication](alerts-xdr.md#suspicious-ntlm-authentication)
 
 ### Migrated alerts
 
@@ -62,6 +54,20 @@ As part of the ongoing transition to a unified alerting experience across Micros
 - [Suspicious Kerberos authentication (TGT request using TGS-REQ)](alerts-xdr.md#suspicious-kerberos-authentication-tgt-request-using-tgs-req)
 
 All alerts are based on detections from Defender for Identity sensors. For the full list of Microsoft Defender alerts see [Microsoft Defender for Identity XDR security alerts](alerts-xdr.md) .
+
+### Identity inventory enhancements are now generally available
+
+- **Accounts tab in Identity Inventory**: The new **Accounts*- tab provides a consolidated view of all accounts associated with an identity, including accounts from Active Directory, Microsoft Entra ID, and supported non-Microsoft identity providers. For more information, see [Manage related identities and accounts](manage-related-identities-accounts.md).
+- **Manually link and unlink accounts**: Manually link or unlink accounts from an identity directly in the **Accounts*- tab. This capability helps you correlate identity components from different directory sources and provides a complete identity context during investigations. For more information, see [Manage related identities and accounts](manage-related-identities-accounts.md).
+- **Identity-level remediation actions**: You can now perform remediation actions such as disabling accounts or resetting passwords on one or more accounts linked to an identity. For more information, see [Remediation actions](remediation-actions.md#roles-and-permissions).
+- **New advanced hunting table**: Advanced hunting in Microsoft Defender now includes the **[IdentityAccountInfo](
+/defender-xdr/advanced-hunting-identityaccountinfo-table)*- table. This table provides account information from various sources, including Microsoft Entra ID, and links to the identity that owns the account.
+
+### New security posture assessments
+
+- [Remove stale Active Directory accounts (Preview)](security-posture-assessments/accounts.md#remove-stale-active-directory-accounts-preview) lists any user accounts in Active Directory that are stale, meaning they haven't logged in at all during the past 90 days.
+
+ - [Microsoft Entra ID privileged user accounts that are also privileged in Active Directory (Preview)](security-posture-assessments/accounts.md#microsoft-entra-id-privileged-user-accounts-that-are-also-privileged-in-active-directory-preview) lists Microsoft Entra ID privileged user accounts that also have privileged roles in Active Directory.
 
 ### New Health Alert: Sensor v3.x RPC Audit Misconfigured
 Enhanced RPC auditing is required for some Microsoft Defender for Identity advanced identity detections. A new health alert helps identify v3.x sensors where this configuration is either missing or incorrectly applied. The alert is being rolled out gradually to customers. For more information, see [Configure RPC on sensors v3.x](deploy/prerequisites-sensor-version-3.md#configure-rpc-auditing).
