@@ -13,7 +13,7 @@ appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoi
 
 # Microsoft Defender for Endpoint release notes
 
-This article describes releases of Microsoft Defender for Endpoint across Windows, macOS, Linux, Android, and iOS in the past 6 months.
+This article describes releases of Microsoft Defender for Endpoint across Windows, macOS, Linux, Android, and iOS in the past six months.
 
 To learn about Microsoft Defender for Endpoint features that aren't version-specific, see [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md).
 
@@ -21,13 +21,13 @@ To learn about Microsoft Defender for Endpoint features that aren't version-spec
 
 ## Who should read this article
 
-This page is intended primarily for Microsoft Defender for Endpoint customers who have purchased a license and regularly deploy, maintain, or validate Defender for Endpoint across their organization. These customers can use this page to find supported releases, component updates, and platform requirements as part of installing and operating MDE in enterprise environments.
+This page is intended primarily for customers with a Microsoft Defender for Endpoint license who regularly deploy, maintain, or validate Defender for Endpoint across their organization. These customers can use this page to find supported releases, component updates, and platform requirements as part of installing and operating Defender for Endpoint in their environments.
 
 For more information on Defender for Endpoint plans and licenses, see the [Microsoft 365 licensing guidance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 
 ## All supported releases by date
 
-This table includes supported releases for all supported platforms in the past 6 months. Each release includes a link to the full release details section.
+This table includes supported releases for all supported platforms in the past six months. Each release includes a link to the full release details section.
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
@@ -175,7 +175,7 @@ Bug and performance fixes
 
 | Feature area | Update summary |
 |--------------|---------------|
-| Vulnerability Management | [CVE-2025-55182 (React2Shell)](https://www.microsoft.com/en-us/security/blog/2025/12/15/defending-against-the-cve-2025-55182-react2shell-vulnerability-in-react-server-components/?msockid=30fe85b32a9c6d12269c90ef2e9c6f88) - Microsoft Defender Vulnerability Management (MDVM) can now surface devices that may be impacted by this vulnerability. |
+| Vulnerability Management | [CVE-2025-55182 (React2Shell)](https://www.microsoft.com/en-us/security/blog/2025/12/15/defending-against-the-cve-2025-55182-react2shell-vulnerability-in-react-server-components/?msockid=30fe85b32a9c6d12269c90ef2e9c6f88) - Microsoft Defender Vulnerability Management (MDVM) can now surface devices that this vulnerability may affect. |
 
 ### macOS | November 2025 | 101.25102.0016
 
@@ -267,8 +267,8 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 | Feature area | Update summary |
 |--------------|---------------|
-| Vulnerability detection | Enhanced vulnerability detection for React components through improved telemetry. This includes support for identifying [(CVE-2025-55182)](https://github.com/advisories/GHSA-fv66-9v8q-g76r), providing more comprehensive security coverage for React-based applications. |
-| Agent optimization | Agent process handling has been streamlined by removing the dependency on telemetryd_v2, enabling more efficient and consistent telemetry collection. This change applies to builds 101.24062.0001 and later, with no impact on functionality, data collection, or customer configurations. All features remain intact, and no customer action is required. |
+| Vulnerability detection | Enhanced vulnerability detection for React components through improved telemetry. This feature includes support for identifying [(CVE-2025-55182)](https://github.com/advisories/GHSA-fv66-9v8q-g76r), providing more comprehensive security coverage for React-based applications. |
+| Agent optimization | Agent process handling is now streamlined by removing the dependency on telemetryd_v2, enabling more efficient and consistent telemetry collection. This change applies to builds 101.24062.0001 and later, with no impact on functionality, data collection, or customer configurations. All features remain intact, and no customer action is required. |
 | Platform support | Added support for Debian 13. |
 
 ### Linux | December 2025 | 101.25092.0005
@@ -313,7 +313,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 |--------------|---------------|
 | Library updates | Openssl library is upgraded to version 3.6.0 |
 | Library updates | Libcurl library is upgraded to version 8.16.0 |
-| Engine updates | The default engine version has been updated to 1.1.25090.6000, and default signature version to 1.439.338.0. |
+| Engine updates | The default engine version is now updated to 1.1.25090.6000, and the default signature version is now updated to 1.439.338.0. |
 
 ### Linux | October 2025 | 101.25092.0001
 
@@ -343,7 +343,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 | Feature area | Update summary |
 |--------------|---------------|
-| Vulnerability detection | Vulnerability detection for Langflow, an open-source Python framework for building AI workflows and agents, has been enhanced with dynamic detection using advanced telemetry and Python package scanning. This includes the detection of CVE-2025-3248 with a CVSS score of 9.8. |
+| Vulnerability detection | Vulnerability detection for Langflow, an open-source Python framework for building AI workflows and agents, is now enhanced with dynamic detection using advanced telemetry and Python package scanning. This feature includes the detection of CVE-2025-3248 with a CVSS score of 9.8. |
 | Diagnostics | Client Analyzer is now bundled directly within the MDE package, eliminating the need for separate downloads. Both the binary and Python versions are included by default and can be found at /opt/microsoft/mdatp/tools/client_analyzer/. |
 | General | Other quality and stability fixes. |
 
@@ -441,7 +441,7 @@ See the full list of [Android UX improvements](android-new-ux.md).
 | Feature area | Update summary |
 |--------------|---------------|
 | User experience | Improved user feedback experience and added landscape mode UI support for the Defender app. [Learn more](android-new-ux.md#november-2025) |
-| Telemetry | Additional telemetry features to improve app performance monitoring and detect specific scenarios, such as entering landscape mode or invalid authentication attempts. |
+| Telemetry | Telemetry features to improve app performance monitoring and detect specific scenarios, such as entering landscape mode or invalid authentication attempts. |
 | Configuration | Fixed the bug where feedback sending wasn't disabled in Defender app despite 'Control Feedback Sending' key being disabled (set as 0) in Intune app configuration. |
 
 ### Android | October 2025 | 1.0.8217.0101
@@ -486,7 +486,7 @@ See the full list of [Android UX improvements](android-new-ux.md).
 
 | Feature area | Update summary |
 |--------------|---------------|
-| Authentication | Resolved the sign-in loop issue for shared device mode. Now, if a user attempts to sign in on a shared device, which isn't supported by MDE Mobile, user will be redirected back to the sign-in page. |
+| Authentication | Resolved the sign-in loop issue for shared device mode. Now, if a user attempts to sign in on a shared device that doesn't support Defender for Endpoint on mobile, the user is redirected back to the sign-in page. |
 | Accessibility | Other accessibility bug fixes and performance improvements. |
 
 ### Android | August 2025 | 1.0.8018.0103
@@ -533,7 +533,7 @@ For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 
 | Feature area | Update summary |
 |--------------|---------------|
-| User feedback & Telemetry | An improved user feedback experience: See [Key Changes - November 2025](./ios-new-ux.md#key-changes---november-2025) for details. Added Landscape mode UI support for the Defender app. Additional telemetry features to improve app performance monitoring and detect specific scenarios, such as entering landscape mode or invalid authentication attempts. |
+| User feedback & Telemetry | An improved user feedback experience: See [Key Changes - November 2025](./ios-new-ux.md#key-changes---november-2025) for details. Added Landscape mode UI support for the Defender app. Added telemetry features to improve app performance monitoring and detect specific scenarios, such as entering landscape mode or invalid authentication attempts. |
 
 ### iOS | October 2025 | 1.1.70230101, 1.1.69250104
 
@@ -642,10 +642,10 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 | Performance | Performance improvements when querying WMI due to Behavior Monitor detections. |
 | PowerShell compatibility | Fixed potential hang in PowerShell on Server 2016 due to Defender Filter Driver. |
 | Application compatibility | Resolved an application compatibility issue due to a loopback with SMB1 enabled. |
-| Attack Surface Reduction | Fixed issue with ASR path exclusion requiring additional "\" characters to function appropriately. |
+| Attack Surface Reduction | Fixed issue with ASR path exclusion requiring extra "\" characters to function appropriately. |
 | Network Inspection | Resolved high I/O issue with NisSrv.exe due to high volume of network logging events. |
 | Threat enumeration | Fixed error in threat enumeration causing repeated failure notifications every 15 minutes in SCCM. |
-| Drive mapping | Improved drive mapping enumeration for devices with many drives which resulted in false positive detections for ASR rules. |
+| Drive mapping | Improved drive mapping enumeration for devices with many drives, which resulted in false positive detections for ASR rules. |
 | Service stability | Fixed a crash with Defender related to long scan times causing the service to hang in Windows Server 2019. |
 
 ### Windows Antivirus | October 2025 | Platform 4.18.25100.9008 | Engine 1.1.25100.9002
