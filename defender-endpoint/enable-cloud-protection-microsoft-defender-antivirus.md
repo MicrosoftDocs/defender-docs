@@ -67,7 +67,7 @@ You can turn Microsoft Defender Antivirus cloud protection on or off by using on
   - [Use Microsoft Intune to turn on cloud protection](#use-microsoft-intune-to-turn-on-cloud-protection)
   - [Use Group Policy to turn on cloud protection](#use-group-policy-to-turn-on-cloud-protection)
   - [Use PowerShell cmdlets to turn on cloud protection](#use-powershell-cmdlets-to-turn-on-cloud-protection)
-  - [Use Windows Management Instruction (WMI) to turn on cloud protection](#use-windows-management-instruction-wmi-to-turn-on-cloud-protection)
+  - [Use Windows Management Instrumentation (WMI) to turn on cloud protection](#use-windows-management-instruction-wmi-to-turn-on-cloud-protection)
   - [Turn on cloud protection on individual clients with the Windows Security app](#turn-on-cloud-protection-on-individual-clients-with-the-windows-security-app)
   - [See also](#see-also)
 
@@ -142,7 +142,7 @@ For more information on how to use PowerShell with Microsoft Defender Antivirus,
 > The `SendSafeSamples` setting means that most samples are sent automatically. Files that are likely to contain personal information result in a prompt for the user to continue, and require confirmation.
 > The `NeverSend` and `AlwaysPrompt` settings lower the protection level of the device. Furthermore, the `NeverSend` setting means that the [Block at First Sight](configure-block-at-first-sight-microsoft-defender-antivirus.md) feature of Microsoft Defender for Endpoint won't work.
 
-## Use Windows Management Instruction (WMI) to turn on cloud protection
+## Use Windows Management Instrumentation (WMI) to turn on cloud protection
 
 Use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/defender/set-msft-mppreference) class for the following properties:
 

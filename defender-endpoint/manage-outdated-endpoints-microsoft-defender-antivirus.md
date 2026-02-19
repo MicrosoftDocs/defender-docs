@@ -44,7 +44,7 @@ You can use one of several methods to set up catch-up protection updates:
 - [Configuration Manager](#use-configuration-manager-to-configure-catch-up-protection-updates)
 - [Group Policy](#use-group-policy-to-enable-and-configure-the-catch-up-update-feature)
 - [PowerShell cmdlets](#use-powershell-cmdlets-to-configure-catch-up-protection-updates)
-- [Windows Management Instruction (WMI)](#use-windows-management-instruction-wmi-to-configure-catch-up-protection-updates)
+- [Windows Management Instrumentation (WMI)](#use-windows-management-instruction-wmi-to-configure-catch-up-protection-updates)
 
 ### Use Configuration Manager to configure catch-up protection updates
 
@@ -86,7 +86,7 @@ For more information about using PowerShell with Microsoft Defender Antivirus, s
 - [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md)
 - [Defender Antivirus cmdlets](/powershell/module/defender/)
 
-### Use Windows Management Instruction (WMI) to configure catch-up protection updates
+### Use Windows Management Instrumentation (WMI) to configure catch-up protection updates
 
 Use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class for the following properties:
 
@@ -143,7 +143,7 @@ You can use one of several methods to set up catch-up scans:
 
 - [Group Policy](#use-group-policy-to-enable-and-configure-the-catch-up-scan-feature)
 - [Use PowerShell cmdlets to configure catch-up scans](#use-powershell-cmdlets-to-configure-catch-up-scans)
-- [Windows Management Instruction (WMI)](#use-windows-management-instruction-wmi-to-configure-catch-up-scans)
+- [Windows Management Instrumentation (WMI)](#use-windows-management-instruction-wmi-to-configure-catch-up-scans)
 - [Configuration Manager](#use-configuration-manager-to-configure-catch-up-scans)
 
 ### Use Group Policy to enable and configure the catch-up scan feature
@@ -181,7 +181,7 @@ For more information about using PowerShell with Microsoft Defender Antivirus, s
 - [Use PowerShell cmdlets to manage Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) 
 - [Defender Antivirus cmdlets](/powershell/module/defender/)
 
-### Use Windows Management Instruction (WMI) to configure catch-up scans
+### Use Windows Management Instrumentation (WMI) to configure catch-up scans
 
 Use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class for the following properties:
 

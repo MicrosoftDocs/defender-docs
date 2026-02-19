@@ -367,7 +367,7 @@ To learn more, see the following resources:
 - [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md).
 - [Use PowerShell with Microsoft Defender Antivirus](/powershell/module/defender/).
 
-### Use Windows Management Instruction (WMI) to disable the auto-exclusions list on Windows Server
+### Use Windows Management Instrumentation (WMI) to disable the auto-exclusions list on Windows Server
 
 Use the **Set** method of the [MSFT_MpPreference](/previous-versions/windows/desktop/defender/msft-mppreference) class for the following properties:
 
