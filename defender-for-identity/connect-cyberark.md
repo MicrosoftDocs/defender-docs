@@ -14,12 +14,12 @@ This section provides instructions for connecting Microsoft Defender for Identit
 
 Before connecting your CyberArk Identity to Microsoft Defender for Identity, make sure the following prerequisites are met:
 
-- **CyberArk identity roles**
+**CyberArk Identity roles**
     - The System Admin role is required to create an application.
 
 **Microsoft Entra and Defender XDR role-based access options**
 
-To configure the Okta connector in Microsoft Defender for Identity, your account must have either of the following access configurations assigned:
+To configure the CyberArk Identity connector in Microsoft Defender for Identity, your account must have either of the following access configurations assigned:
 
 - **Microsoft Entra roles:**
 
@@ -66,16 +66,16 @@ To support ongoing API access, create a new user and assign the custom role.
 
     :::image type="content" source="media/connect-cyberark/data-connector-cyberark.png" alt-text="Screenshot that shows where to find the data connector for CyberArk in the Microsoft Defender portal." lightbox="media/connect-cyberark/data-connector-cyberark.png":::
 1. Select **Catalog > CyberArk Identity**.
-1. Select on **Connect a connector**, and then:  
-    1. Enter a name for your connector. 
-    1. To determine the CyberArk Identity endpoint URL:
-        1. In CyberArk Identity, select the signed-in user.
-        1. Select **About**.
-        1. Copy the **Identity ID** value.
-        1. Add `.id.cyberark.cloud` to the Identity ID. For example, `contoso.id.cyberark.cloud`.
-    1. Enter your CyberArk Identity Privilege Cloud service endpoint.
-        1. In the CyberArk Identity Admin console, go to **Identity Administration > Settings > Integration** and locate the **PVWA URL**. Use the value after `https://`. For example,`contoso.privilegecloud.cyberark.cloud`
-    1. Enter the username and password for the Oauth user. Include the complete username and the CyberArk domain. 
+1. Select on **Connect a connector**  
+1. Enter a name for your connector. 
+1. To determine the CyberArk Identity endpoint URL:
+    1. In CyberArk Identity, select the signed-in user.
+    1. Select **About**.
+    1. Copy the **Identity ID** value.
+    1. Add `.id.cyberark.cloud` to the Identity ID. For example, `contoso.id.cyberark.cloud`.
+1. Enter your CyberArk Identity Privilege Cloud service endpoint.
+    1. In the CyberArk Identity Admin console, go to **Identity Administration > Settings > Integration** and locate the **PVWA URL**. Use the value after `https://`. For example,`contoso.privilegecloud.cyberark.cloud`
+1. Enter the username and password for the Oauth user. Include the complete username and the CyberArk domain. 
 
     :::image type="content" source="media/connect-cyberark/cyberark-connector-details.png" alt-text="Screenshot that shows where to enter your CyberArk connector details in the Defender portal." lightbox="media/connect-cyberark/cyberark-connector-details.png":::
 
