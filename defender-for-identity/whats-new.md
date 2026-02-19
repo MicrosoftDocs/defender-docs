@@ -57,9 +57,9 @@ These new alerts were added to the Defender for Identity security alerts:
 
 As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, the following alerts were converted from the Microsoft Defender for Identity classic format to the MDI XDR alert format.
 
-- [Skipped MFA on remembered device from uncommon ISP sign-in](xdr_alerts.md#skipped-mfa-on-remembered-device-from-uncommon-isp-sign-in)
-- [Possible Kerberoasting attack using a stealthy LDAP search](xdr_alerts.md#possible-kerberoasting-attack-using-a-stealthy-ldap-search)
-- [Suspicious Kerberos authentication (TGT request using TGS-REQ)](xdr_alerts.md#suspicious-kerberos-authentication-tgt-request-using-tgs-req)
+- [Skipped MFA on remembered device from uncommon ISP sign-in](alerts-xdr.md#skipped-mfa-on-remembered-device-from-uncommon-isp-sign-in)
+- [Possible Kerberoasting attack using a stealthy LDAP search](alerts-xdr.md#possible-kerberoasting-attack-using-a-stealthy-ldap-search)
+- [Suspicious Kerberos authentication (TGT request using TGS-REQ)](alerts-xdr.md#suspicious-kerberos-authentication-tgt-request-using-tgs-req)
 
 All alerts are based on detections from Defender for Identity sensors. For the full list of Microsoft Defender alerts see [Microsoft Defender for Identity XDR security alerts](alerts-xdr.md) .
 
