@@ -50,7 +50,6 @@ Before you begin, ensure the following:
             "iam:RemoveUserFromGroup",
             "iam:ResetServiceSpecificCredential",
             "iam:ResyncMFADevice",
-            "iam:RevokeSession",
             "iam:DeleteUserPermissionsBoundary",
             "iam:DeleteUserPolicy",
             "iam:DetachUserPolicy"
