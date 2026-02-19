@@ -322,7 +322,7 @@ Fileless threats use various tactics to stay hidden, to avoid being seen in the 
 
 > [!NOTE]
 >
-> - If you use Microsoft Configuration Manager, we recommend running this ASR rule in **Audit** mode for at least 60 days before you proceed to **Block** mode. Configuration Manager relies heavily on WMI.
+> - If you use Microsoft Configuration Manager, we recommend running this ASR rule in **Audit** mode for at least 60 days before you proceed to **Block** mode. The Configuration Manager client relies heavily on WMI.
 > - This ASR rule doesn't support file and folder exclusions.
 
 ### Other ASR rules
