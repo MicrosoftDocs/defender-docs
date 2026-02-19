@@ -4,7 +4,7 @@ description: Troubleshoot Azure Storage Blob connector issues in Microsoft Senti
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: troubleshooting
-ms.date: 02/05/2026
+ms.date: 02/19/2026
 ms.service: microsoft-sentinel
 
 #Customer intent: As a security engineer, I want to troubleshoot Azure Storage Blob connector issues so that I can ensure seamless log ingestion into Microsoft Sentinel.
@@ -67,7 +67,7 @@ Event Grid system topics facilitate blob created events from the source storage 
 1. Check the dead-letter queue (DLQ) configured for the connector. Messages that fail processing are moved to the DLQ. If the DLQ contains messages, review them for clues about the failure. For the DLQ URI, see the connector's `request.DlqUri` property in the [Azure Storage Blob connectors API reference](data-connection-rules-reference-azure-storage.md#request-configuration).
 
 
-:::image type="content" source="./media/azure-storage-blob-connector-troubleshoot/event-grid-subscription-metrics.png" lightbox="./media/azure-storage-blob-connector-troubleshoot/event-grid-subscription-metrics.png" alt-text="Screenshot of Event Grid system topic additional features tab.":::
+:::image type="content" source="./media/azure-storage-blob-connector-troubleshoot/event-grid-subscription-metrics.png" lightbox="./media/azure-storage-blob-connector-troubleshoot/event-grid-subscription-metrics.png" alt-text="Screenshot showing an Event Grid subscription metrics chart.":::
 
 ### Cause 3: The Azure Storage Blob connector permissions or networking policies aren't set properly
 
@@ -95,9 +95,10 @@ If the service principal and RBAC troubleshooting doesn't surface an issue, the 
 - If NSP is being used to protect the account, enable the [perimeter's diagnostic logs](/azure/private-link/network-security-perimeter-diagnostic-logs) to troubleshoot. NSP rules only apply to resources in **Enforced** access mode. Alternatively, **Transition** mode doesn't apply the rules on the resource while continuing to collect telemetry on traffic patterns. Review the profile associated with the storage account(s):
   - Check that inbound rules for the producer are in place. Check for blob write failures on the producer.
   - Check that inbound rules for the connector are in place per the [Enable network security](enable-storage-network-security.md) documentation. Verify that the `Scuba` service tag IP ranges are included in the NSP inbound rules.
-  - Check that inbound rules include a rule for the subscription of the storage account and Event Grid system topic. Ensure the Event Grid system topic subscription is using **System Assigned** managed identity-based delivery.
+  - Check that inbound rules include a rule for the subscription of the storage account and Event Grid system topic. 
+  - Ensure the Event Grid system topic subscription is using **System Assigned** managed identity-based delivery.
 
-:::image type="content" source="./media/azure-storage-blob-connector-troubleshoot/system-topic-managed-identity-type.png" lightbox="./media/azure-storage-blob-connector-troubleshoot/system-topic-managed-identity-type.png" alt-text="Screenshot of Network Security Perimeter rules showing inbound rules for the producer and connector, including Scuba service tag and subscription rule.":::
+  :::image type="content" source="./media/azure-storage-blob-connector-troubleshoot/system-topic-managed-identity-type.png" lightbox="./media/azure-storage-blob-connector-troubleshoot/system-topic-managed-identity-type.png" alt-text="Screenshot of Network Security Perimeter rules showing inbound rules for the producer and connector, including Scuba service tag and subscription rule.":::
 
 
 ### Cause 4: The queue message content or Azure Storage Blob data format is invalid
