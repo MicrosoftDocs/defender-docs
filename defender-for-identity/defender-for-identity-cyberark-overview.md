@@ -13,8 +13,6 @@ CyberArk Identity is a SaaS-based privileged access management (PAM) solution th
 
 When you connect CyberArk Identity with Microsoft Defender for Identity, identity data from CyberArk Identity is added to the identity inventory and correlated with identities from on-premises Active Directory and Microsoft Entra ID. Accounts that are managed by CyberArk Identity as PAM accounts are tagged in the inventory.
 
-This integration provides visibility into privileged identities and supports investigation of identity-based security events across cloud and on-premises environments.
-
 
 ## What you can do after connecting CyberArk Identity to Microsoft Defender for Identity
 
