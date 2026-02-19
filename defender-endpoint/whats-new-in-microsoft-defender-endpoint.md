@@ -47,6 +47,8 @@ Learn more about [Preview features](/defender-xdr/preview).
 |macOS |Build 101.25122.0007 |GA |Release version 20.125122.7.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--january-2026--101251220007). |
 |macOS |Build 101.25122.0006 |GA |Release version 20.125122.6.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--january-2026--101251220006). |
 |All (vulnerability management) |[Device vulnerabilities report](/defender-vulnerability-management/tvm-vulnerable-devices-report) enhancements |Preview |To simplify and streamline the Device vulnerabilities report experience, the Vulnerable devices report now includes several changes and enhancements ([learn more](#february-2026)).<br><br>**Note**: These changes are not yet visible to government cloud customers. |
+|[Library management for live response](configure-libraries-live-response.md) |Preview |You can now view and manage files and scripts used during live response sessions in the Microsoft Defender portal. With this enhancement, you get a centralized view of all uploaded files and their properties, and can upload, view and delete files outside the live response session. |
+|[Effective settings tab](investigate-machines.md#configuration-management---effective-settings) |GA |The **Effective settings** tab under the device inventory **Configuration management** tab is now generally available. In this tab, you can view the actual value and configuration source of each security setting on a device. This helps identify configuration attempts that didn't take effect and eliminates gaps where intended protections aren't enforced. |
 
 ## December 2025
 
