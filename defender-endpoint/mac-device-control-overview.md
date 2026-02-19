@@ -112,7 +112,7 @@ Here are the properties you can use when you create the groups, rules, and setti
 
 | Property name | Description | Options |
 |:---|:---|:---|
-| features | Feature specific configurations | You can set `disable` to false or true for following features: <br/>- `removableMedia`<br/>- `appleDevice`<br/>- `portableDevice`, including camera or PTP media<br/>- `bluetoothDevice`<br/><br/>The default is `true`, so if you don't configure this value, it doesn't apply, even if you create a custom policy for `removableMedia`, because it's disabled by default. |
+| features | Feature specific configurations | You can set `disable` to false or true for following features: <br/>- `removableMedia`<br/>- `appleDevice`<br/>- `portableDevice`, including camera or PTP media<br/>- `bluetoothDevice`<br/>- `genericDevice`<br/><br/>The default is `true`, so if you don't configure this value, it doesn't apply, even if you create a custom policy for `removableMedia`, because it's disabled by default. |
 | global | Set default enforcement  | You can set `defaultEnforcement` to<br/>- `allow` (_default_)<br/>- `deny` |
 | ux | You can set a hyperlink on notification. | `navigationTarget: string`. Example: `"http://www.microsoft.com"` |
 
@@ -143,6 +143,8 @@ Query type 2 is as follows:
 | `$type` | Identify the logical operation to perform on the subquery | not: logical negation of a query |
 | `query` | A subquery | **A query which will be negated.** |
 
+Note that queries can be nested. You can check [sample policies](https://github.com/microsoft/mdatp-devicecontrol/blob/ae2e00ee7f12e024f931357b6e5a22bf589c4053/macOS/policy/samples/deny_removable_media_sc_cards.json#L17-L43) to check out how to define more complex rules.
+
 ### Clause
 
 #### Clause properties
@@ -160,8 +162,13 @@ Query type 2 is as follows:
 | `vendorId` | Four digit hexadecimal string | Matches a device's vendor ID |
 | `productId` | Four digit hexadecimal string | Matches a device's product ID |
 | `serialNumber` | string | Matches a device's serial number. Doesn't match if the device doesn't have a serial number. |
+| `mediaSerialNumber` | integer | Serial number of a Secure Digital card (starting with 101.26021 versions) |
+| `mediaProductName` | string | Product name of a Secure Digital card (starting with 101.26021 versions) |
+| `mediaApplicationId` | string | Application id of a Secure Digital card (starting with 101.26021 versions) |
 | `encryption` | apfs | Match if a device is apfs-encrypted. |
 | `groupId` | UUID string | Match if a device is a member of another group. The value represents the UUID of the group to match against. <br> The group must be defined within the policy before the clause. |
+
+Note that `serialNumber` applies to devices plugged into a machine, and `mediaSerialNumber` (and other `media*` clauses) applies to a media (i.e. secure digital cards in a built in card reader) plugged into a device. `media*` clauses are introduced into product version 101.2601.* and not available in earlier versions.
 
 ### Access policy rule
 
@@ -467,7 +474,19 @@ In this case, only have one access rule policy, but if you have multiple, make s
 > [!WARNING]
 > Device Control on macOS doesn't prevent software developed on XCode from being transferred to an external device.
 
+## Generic Devices
 
+Generic devices are introduced in version 101.25122.*. They allow auditing of few classes of external devices:
+
+- USB
+- Displays
+
+To enable auditing of generic devices:
+- Enable `genericDevice` feature under settings in your policy.
+- Generic devices feature does not support any device specific rules for now. However, your policy must contain at least one rule to enable Device Control.
+- Make sure that `mdatp device-control policy preferences list` reports it as enabled
+- `mdatp device-control generic devices list` will list all your connected devices
+- Whenever a user plugs or unplugs a device, you will see an event in Advanced Hunting with action types "ExternalDeviceConnected" and "ExternalDeviceDisconnected"
 
 ## See also
 
