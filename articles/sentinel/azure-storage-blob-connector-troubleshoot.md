@@ -64,8 +64,6 @@ Event Grid system topics facilitate blob created events from the source storage 
 1. Review the filtering criteria specified under **Additional Features** to ensure it matches expected patterns.
 1. The Event Grid subscription's metrics should show events that match the blob created criteria. If the metrics indicate **Delivery Failed Events**, review the Event Grid's diagnostic logs and continue to the next section for policy-related issues.
 1. Check the storage queue metrics to confirm messages are arriving. In the Azure portal, navigate to the storage account, select **Queues**, and review the **Approximate Messages Count** for the connector queue. If the queue is empty but Event Grid shows successful deliveries, the connector might be consuming messages but failing to process the referenced blobs.
-1. Check the dead-letter queue (DLQ) configured for the connector. Messages that fail processing are moved to the DLQ. If the DLQ contains messages, review them for clues about the failure. For the DLQ URI, see the connector's `request.DlqUri` property in the [Azure Storage Blob connectors API reference](data-connection-rules-reference-azure-storage.md#request-configuration).
-
 
 :::image type="content" source="./media/azure-storage-blob-connector-troubleshoot/event-grid-subscription-metrics.png" lightbox="./media/azure-storage-blob-connector-troubleshoot/event-grid-subscription-metrics.png" alt-text="Screenshot showing an Event Grid subscription metrics chart.":::
 
@@ -117,7 +115,7 @@ The blob data format or queue message structure doesn't match the expected confi
     | distinct TimeGenerated, OperationName, SentinelResourceName, Status, Description
     ```
 
-1. If the health data references invalid data, verify that the format of the blobs uploaded to storage matches the serialization and compression model set in the connector's response configuration. The connector supports the following formats: **JSON**, **CSV**, **XML**, and **Parquet**. For compressed data, verify that the compression algorithm (`gzip`, `multi-gzip`, or `deflate`) matches the connector configuration. For more information, see the [response configuration](data-connection-rules-reference-azure-storage.md#response-configuration) in the API reference.
+1. If the health data references invalid data, verify that the format of the blobs uploaded to storage matches the serialization and compression model set in the connector's response configuration. The connector supports the following formats: **JSON**, **CSV**, **XML**, and **Parquet**. For more information, see the [response configuration](data-connection-rules-reference-azure-storage.md#response-configuration) in the API reference.
 1. Queue message format exceptions result from messages in the queue not aligning to the `EventGridSchema` for `BlobCreated` events. Check the Event Grid subscription's **Filters** section to confirm:
    - The filter is set to **Blob Created**.
    - The event schema is **EventGridSchema**.

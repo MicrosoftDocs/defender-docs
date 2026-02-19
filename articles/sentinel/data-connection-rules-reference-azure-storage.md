@@ -6,7 +6,7 @@ author: EdB-MSFT
 ms.author: edbaynash
 ms.reviewer: edbaynash
 ms.topic: reference
-ms.date: 02/05/2026
+ms.date: 02/19/2026
 ms.service: microsoft-sentinel
 
 ---
