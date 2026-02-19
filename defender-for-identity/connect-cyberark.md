@@ -74,6 +74,7 @@ To support ongoing API access, create a new user and assign the custom role.
         1. Copy the **Identity ID** value.
         1. Add `.id.cyberark.cloud` to the Identity ID. For example, `contoso.id.cyberark.cloud`.
     1. Enter your CyberArk Identity Privilege Cloud service endpoint.
+        1. In the CyberArk Identity Admin console, go to **Identity Administration > Settings > Integration** and locate the **PVWA URL**. Use the value after `https://`. For example,`contoso.privilegecloud.cyberark.cloud`
     1. Enter the username and password for the Oauth user. Include the complete username and the CyberArk domain. 
 
     :::image type="content" source="media/connect-cyberark/cyberark-connector-details.png" alt-text="Screenshot that shows where to enter your CyberArk connector details in the Defender portal." lightbox="media/connect-cyberark/cyberark-connector-details.png":::
