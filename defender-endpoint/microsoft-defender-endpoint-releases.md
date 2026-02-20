@@ -32,6 +32,7 @@ This table includes supported releases for all supported platforms in the past s
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
 |macOS |101.25122.0008  |February 2026 |- Release version: 20.125122.8.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--february-2026--101251220008) |
+|Linux  |101.25122.0004  |February 2026 |- Release version: 30.125122.0004.0<br>- Engine version: 1.1.25110.3002<br>- Signature version: 1.443.508.0 |[Release details and updates](#linux--february-2026--101251220004) |
 |macOS |101.25122.0007  |January 2026 |- Release version: 20.125122.7.0<br>- Engine version: 1.1.25100.3000<br>- Signature version: 1.443.820.0 |[Release details and updates](#macos--january-2026--101251220007) |
 |macOS  |101.25122.0006  |January 2026 |- Release version: 20.125122.6.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--january-2026--101251220006) |
 |Windows Antivirus |Platform 4.18.26010.5 / Engine 1.1.26010.1 |January 2026 |- Platform: 4.18.26010.5<br>- Engine: 1.1.26010.1<br>- Security intelligence: 1.443.820.0 |[Release details and updates](#windows-antivirus--january-2026--platform-418260105--engine-11260101) |
@@ -254,6 +255,22 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 > - Review your current Defender for Endpoint on Linux deployment, and begin planning your migration to the eBPF-supported build. For more information on eBPF and how it works, see [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-ebpf).
 >
 > If you have any concerns or need assistance during this transition, contact support.
+
+### Linux | February 2026 | 101.25122.0004
+
+#### Release details
+
+| Release version | Engine version | Signature version |
+| -------- | -------- |-------- |
+|30.125122.0004.0 |1.1.25110.3002 |1.443.508.0 |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|---------------|
+| Network configuration | Defender for Endpoint on Linux now connects to additional endpoints to retrieve internal configuration data. Ensure the following URLs are allowed in network configurations: `https://config.edge.skype.com/config/v1` (default), `https://config.ecs.dod.teams.microsoft.us/config/v1`, `https://config.ecs.gov.teams.microsoft.us/config/v1`, `https://gccmod.ecs.office.com/config/v1`. |
+| Identity | Username information is now preserved for login events including nonexistent users. |
+| Diagnostics | Improved validation logic for log file permissions to provide more accurate `mdatp health` status reporting. |
 
 ### Linux | January 2026 | 101.25102.0005
 
