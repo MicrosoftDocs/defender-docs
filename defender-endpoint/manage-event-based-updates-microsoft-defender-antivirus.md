@@ -101,7 +101,7 @@ Set-MpPreference -CheckForSignaturesBeforeRunningScan
 
 For more information, see [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Defender Antivirus cmdlets](/powershell/module/defender/index).
 
-### Use Windows Management Instruction (WMI) to check for protection updates before running a scan
+### Use Windows Management Instrumentation (WMI) to check for protection updates before running a scan
 
 Use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class for the following properties:
 
@@ -153,7 +153,7 @@ Set-MpPreference -SignatureDisableUpdateOnStartupWithoutEngine
 
 For more information, see [Use PowerShell cmdlets to manage Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Defender Antivirus cmdlets](/powershell/module/defender/index) for more information on how to use PowerShell with Microsoft Defender Antivirus.
 
-### Use Windows Management Instruction (WMI) to download updates when Microsoft Defender Antivirus is not present
+### Use Windows Management Instrumentation (WMI) to download updates when Microsoft Defender Antivirus is not present
 
 Use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class for the following properties:
 
