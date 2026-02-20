@@ -162,7 +162,7 @@ We updated all the subordinating screens associated with the feature
 
 We added a new section to show **multiple alerts** together on dashboard.
 
-:::image type="content" source="media/android-new-ux/mde-android-alerts.png" alt-text="Screenshot showing the Security history section on the MDE Android app." lightbox="media/android-new-ux/mde-android-alerts.png":::
+:::image type="content" source="media/android-new-ux/mde-android-alerts.png" alt-text="Screenshot showing the new updates to the alerts feature on the MDE Android app." lightbox="media/android-new-ux/mde-android-alerts.png":::
 
 ## February 2025
 
@@ -189,7 +189,7 @@ Recommendation cards prominently display any active alerts, ensuring you stay in
 
 The following screenshot is an example of what the user sees in their dashboard:
 
-:::image type="content" source="media/android-new-ux/mde-android-dash-changes.png" alt-text="Screenshot of the new dashboard structure - tiles and recommendation cards":::
+:::image type="content" source="media/android-new-ux/mde-android-dash-changes.png" alt-text="Screenshot of the new dashboard structure - tiles and recommendation cards.":::
 
 **Recommendation cards for alerts**:
 
