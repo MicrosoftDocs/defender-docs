@@ -179,13 +179,13 @@ You shouldn't exclude some processes from scans, because attackers might use the
 
 <a name='using-just-the-file-name-in-the-exclusion-list'></a>
 
-## Excluding files without a location
+## Files without a location in exclusions
 
-A malicious file might have the same name as a file you trust. To avoid excluding malicious files from scanning, don't exclude the file only. Instead, include the fully qualified path with the file.
+A malicious file might have the same name as a file you trust. To avoid excluding potentially malicious files from scanning, don't exclude the file only. Instead, include the fully qualified path with the file.
 
 For example, don't exclude `Filename.exe` from scanning. Exclude the complete path and file: `C:\Program Files\Contoso\Filename.exe`.
 
-## Using a single exclusion list for multiple server workloads
+## A single exclusion list for multiple server workloads
 
 Don't use a single exclusion list to define exclusions for multiple server workloads. Instead, split the exclusions into multiple lists for different apps or services.
 
@@ -193,7 +193,7 @@ For example, the use a different exclusion list for IIS than the exclusion list 
 
 <a name='using-incorrect-environment-variables-as-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists'></a>
 
-## Using incorrect environment variables as wildcards in exclusions
+## Incorrect environment variables as wildcards in exclusions
 
 Don't use **user** environment variables as wildcards in folder and process exclusions in Microsoft Defender Antivirus. Only use the following types of environment variables as wildcards:
 
