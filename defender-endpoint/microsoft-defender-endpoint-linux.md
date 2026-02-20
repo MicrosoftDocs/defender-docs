@@ -24,12 +24,10 @@ appliesto:
 
 # Microsoft Defender for Endpoint on Linux
 
-
-> [!TIP]
-> We're excited to share that Microsoft Defender for Endpoint on Linux now extends support to Arm64-based Linux servers. For more information, see [April 2025 updates](whats-new-in-microsoft-defender-endpoint.md#april-2025).
-
-
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
+> [!NOTE]
+> Defender for Endpoint supports ARM64-based Linux servers on Ubuntu, RHEL, Debian, SUSE Linux, Amazon Linux, and Oracle Linux. All product capabilities that are supported on AMD64 devices are now supported on ARM64-based Linux servers.
 
 ## What is Microsoft Defender for Endpoint on Linux?
 
