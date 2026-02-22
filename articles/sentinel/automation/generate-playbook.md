@@ -260,8 +260,8 @@ When the editor opens, the experience starts in **Plan mode**. In this mode, you
 
 :::image type="content" source="./media/generate-playbook/auto-approve.png" alt-text="Screenshot of the Autoapprove checkbox in the embedded Visual Studio Code environment.":::
 
-   > [!NOTE]
-   > Selecting **Save** in the chat saves the current step and confirms your approval. **It doesn't save the entire playbook**.
+   > [!TIP]
+   > When you select **Save** in the chat, it saves the current step and confirms your approval. **It doesn't save the entire playbook**.
 
 #### Validate and save your playbook
 
