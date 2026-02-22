@@ -118,7 +118,13 @@ This trigger mechanism enables automatic execution of generated playbooks across
 
 ## Generate a new playbook
 
-### Step 1. Create a Graph API integration profile and add any other required integrations you want to utilize
+### Step 1. Access the playbook generator
+
+1. In the navigation bar, go to **Microsoft Sentinel** > **Automation**
+1. Select the **+Create** button on the top right
+1. Select **Playbook Generator** from the dropdown menu
+
+### Step 2. Create a Graph API integration profile and add any other required integrations you want to utilize
 
 1. In the Azure portal, go to **Microsoft Entra ID** > **Manage** > **App registrations**.
 
@@ -193,9 +199,10 @@ Configure integration profiles for any other third-party services your playbooks
 > [!NOTE]
 > You can't change the API URL and authentication method after creation. You can only edit the integration name and description.
 
-### Step 2. Create a generated playbook
+### Step 3. Create a generated playbook
 
-1. From the navigation bar, go to **Microsoft Sentinel** > **Automation**.
+1. Select the **Playbooks** tab.
+
 1. Select **Create** > **Playbook Generator**.
 1. Enter a name for your playbook and select **Continue**.
 
