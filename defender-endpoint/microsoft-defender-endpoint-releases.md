@@ -138,6 +138,8 @@ For known issues, see [macOS known issues](#macos-known-issues).
 
 #### Enhancements and features
 
+Bug and performance fixes
+
 ### macOS | January 2026 | 101.25122.0007
 
 #### Release details
