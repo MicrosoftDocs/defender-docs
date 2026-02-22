@@ -25,7 +25,7 @@ If vulnerabilities are found for a Kubernetes node, a recommendation is generate
 1. From the navigation menu, under **General**, select **Recommendations**.
 :::image type="content" source="media/kubernetes-nodes-va/recommendations-list.png" alt-text="Screenshot of selecting the recommendations submenu of the Defender for Cloud pane." lightbox="media/kubernetes-nodes-va/recommendations-list.png":::
 
-1. Select the `AKS nodes should have vulnerability findings resolved` recommendation.
+1. Search for and select the `AKS nodes should have vulnerability findings resolved` recommendation.
 :::image type="content" source="media/kubernetes-nodes-va/recommendations-list-select-nodes-va.png" alt-text="Screenshot showing the selection of the nodes recommendation line." lightbox="media/kubernetes-nodes-va/recommendations-list-select-nodes-va.png":::
 
 1. The full details of the Kubernetes node recommendation are shown. Along with a full description of the vulnerability, other details such as the name of the affected Kubernetes node pool and its cluster are presented.
@@ -47,6 +47,15 @@ Kubernetes node vulnerabilities are remediated by updating the node pool VM imag
 > The cluster's Kubernetes version and the node pool VM image can be [set to auto-upgrade](/azure/aks/upgrade-cluster#configure-automatic-upgrades). These versions should be [regularly upgraded](/azure/aks/upgrade-cluster) to provide maximum security for you AKS resources.
 
 ### Upgrade the node pool VM image
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+ 
+1. Search for and select **Microsoft Defender for Cloud**.
+ 
+1. From the navigation menu, under **General**, select **Recommendations**.
+
+1. Search for and select the `AKS nodes should have vulnerability findings resolved` recommendation.
+:::image type="content" source="media/kubernetes-nodes-va/recommendations-list-select-nodes-va.png" alt-text="Screenshot showing the selection of the nodes recommendation line." lightbox="media/kubernetes-nodes-va/recommendations-list-select-nodes-va.png":::
 
 1. Select the **Fix** button in the recommendations pane.
 :::image type="content" source="media/kubernetes-nodes-va/recommendation-node-details-select-fix.png" alt-text="Screenshot showing the details of the recommendation for the Kubernetes node and the highlighted Fix button." lightbox="media/kubernetes-nodes-va/recommendation-node-details-select-fix.png":::
