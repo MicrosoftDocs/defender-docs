@@ -209,7 +209,7 @@ The **Manage alert** pane allows you to view or specify:
 > [!NOTE]
 > - In August 2022, previously supported alert determination values (`Apt` and `SecurityPersonnel`) were deprecated and are no longer available via the API.
 >
-> - One way of managing alerts it through the use of [tags](../defender-office-365/user-tags-about.md).
+> - One way of managing alerts it through the use of tags. The tagging capability for Microsoft Defender for Office 365 is currently in preview, rolling out incrementally.
 >
 > Currently, modified tag names are only applied to alerts created *after* the update. Alerts that were generated before the modification will not reflect the updated tag name.
 
