@@ -45,7 +45,7 @@ You also must meet the following requirements:
 
 - **Microsoft Sentinel workspace**: Your tenant must have a Microsoft Sentinel workspace onboarded to Microsoft Defender. To create a new workspace, see [Create a workspace](/copilot/security/manage-workspaces#create-a-workspace).
 
-- **Data sharing preferences**: In Security Copilot, enable the first slider, *Allow Microsoft to capture data from Security Copilot to validate product performance using human review*, in Customer Data Sharing preferences. For more information, see [Privacy and data security in Microsoft Security Copilot](/security-copilot/privacy-data-security).
+- **Recommended Data sharing preferences**: In Security Copilot, enable the first slider, *Allow Microsoft to capture data from Security Copilot to validate product performance using human review*, in Customer Data Sharing preferences. For more information, see [Privacy and data security in Microsoft Security Copilot](/security-copilot/privacy-data-security).
 
 ### Required roles and permissions
 
@@ -60,7 +60,7 @@ To use playbook generator, you need the following permissions:
 
 ### Recommended: Configure a dedicated Security Copilot workspace
 
-If you don't already have a dedicated Security Copilot workspace for AI-generated playbooks that's configured to use a US-based capacity and set in geo **US** or **Europe**, or allowing cross-region evaluation, we recommended you [create one](/copilot/security/manage-workspaces#create-a-workspace).
+If you don't already have a dedicated Security Copilot workspace for AI-generated playbooks that's set in geo **US** or **Europe**, or allowing cross-region evaluation, we recommended you [create one](/copilot/security/manage-workspaces#create-a-workspace).
 
 1. In the **Create a new workspace** dialog:
 
@@ -279,9 +279,6 @@ When the editor opens, the experience starts in **Plan mode**. In this mode, you
 
 :::image type="content" source="./media/generate-playbook/preview.png" alt-text="Screenshot of the preview of an alert notification created with the playbook generator.":::
 
-> [!TIP]
-> Save your work frequently. Sessions expire after 90 minutes. If needed, reenter the editor to start a new session.
-
 ## Enable and deploy your playbook
 
 After creation, your generated playbook requires activation and an alert trigger to begin automating responses.
@@ -344,7 +341,6 @@ Be aware of the following limitations when working with generated playbooks:
 - **Language support**: Only Python is supported for playbook authoring
 - **Input constraints**: Playbooks currently accept alerts as the sole input type
 - **Concurrent editing**: A single user can edit only one playbook at a time. However, multiple users can edit different playbooks simultaneously
-- **Session timeouts**: Sessions expire after 90 minutes. Save your work and reenter to start a new session if needed
 - **Library support**: External libraries aren't currently supported
 - **Code validation**: No automatic code validation is provided. Users must manually verify correctness
 - **Number of playbooks**: You can create up to 100 playbooks per tenant
@@ -362,7 +358,7 @@ Be aware of the following limitations when working with generated playbooks:
 ### Automation rule alert trigger limitations
 
 - **Trigger limitations**: Enhanced Alert Trigger rules don't support priority ordering or expiration dates
-- **Available actions**: Currently, the only available action is triggering generated Playbooks
+- **Available actions**: Currently, the only available actions are triggering generated Playbooks and updating action alerts
 - **Workspace permissions** – You must explicitly specify the workspaces where you have permissions; the trigger doesn't apply to workspaces you can't access.
 - **Separate rule tables** – Enhanced Alert Trigger rules live alongside Standard Alert Trigger rules in a separate Automation Rules table. Currently, there's no automatic migration of Standard Alert Trigger rules.
 - **Run result visibility** – Automation rule run results are **not written to the Sentinel Health Table**. However, you can view the runs and their outcomes in the **Activity tab of the Incident** that contains the targeted alert.
