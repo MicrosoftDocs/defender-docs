@@ -31,7 +31,8 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| February 20, 2026 | Preview | [Container runtime antimalware detection and blocking (Preview)](#container-runtime-antimalware-detection-and-blocking-preview) |
+| February 22, 2026 | Preview | [Container runtime antimalware detection and blocking (Preview)](#container-runtime-antimalware-detection-and-blocking-preview) |
+| February 22,2026 | Update - Preview | [Binary drift now supports blocking (Preview)](#binary-drift-now-supports-blocking-preview) |
 | February 10, 2026| Preview | [Database-level recommendations experience for SQL Vulnerability Assessment findings (Preview)](#database-level-recommendations-experience-for-sql-vulnerability-assessment-preview) |
 | February 10, 2026| GA | [Scanning support for Minimus and Photon OS container images](#scanning-support-for-minimus-and-photon-os-container-images) |
 | February 9, 2026| GA | [Simulate alerts for SQL servers on machines](#simulate-alerts-for-sql-servers-on-machines) |
@@ -46,6 +47,14 @@ February 20, 2026
 Microsoft Defender for Cloud is announcing container runtime anti-malware detection and prevention in preview. This feature provides real-time detection and prevention of malware in containerized workloads across Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), and Google Kubernetes Engine (GKE) environments. With this release, you can create anti-malware rules to define conditions for generating alerts and blocking malware, helping you protect your clusters from threats while minimizing false positives.
 
 Learn more about [antimalware detection and blocking](anti-malware.md).
+
+### Binary drift now supports blocking (Preview)
+
+February 22, 2026
+
+Binary drift now supports blocking in preview. With this update, you can configure binary drift policies to not only detect but also block unauthorized changes to container images at runtime. This enhancement helps prevent potential security breaches by stopping the execution of binaries within the containers that have been tampered with or contain unexpected modifications, providing an additional layer of protection for your containerized workloads.
+
+Learn more about [binary drift detection and blocking](binary-drift-detection.md).
 
 ### Database-level recommendations experience for SQL Vulnerability Assessment (Preview)
 
