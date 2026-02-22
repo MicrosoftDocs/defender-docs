@@ -2,8 +2,8 @@
 title: Deploy Microsoft Defender for Endpoint prerelease builds on Android devices using Google Play preproduction tracks
 description: Deploy Microsoft Defender for Endpoint prerelease builds on Android devices using Google Play preproduction tracks.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -30,7 +30,7 @@ Learn how to setup a secure environment to safely test prerelease versions of Mi
 This article provides step-by-step instructions on how to set up your environment for prerelease testing or custom APK deployment. These steps are for Android devices that are onboarded to Microsoft Defender for Endpoint through the following methods:
 
 - Android Enterprise scenarios
-- Mobile Application Mangement (MAM) enrollment scenarios
+- Mobile Application Management (MAM) enrollment scenarios
 
 ## Set up your testing environment in the Android Enterprise scenario
 
@@ -40,35 +40,34 @@ To set up your environment for prerelease testing, follow these steps:
 
    :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/icon-select-small.png" alt-text="Screenshot of Microsoft Intune admin center highlighting the org ID" lightbox="/defender-endpoint/media/mobile-pretest-android/icon-select.png":::
 
-2. Sync the managed Google Play app with Intune. See [Sync a Managed Google Play app with Intune](/intune/intune-service/apps/apps-add-android-for-work#sync-a-managed-google-play-app-with-intune) for more information. The sync steps look like the following:
+1. Sync the managed Google Play app with Intune. See [Sync a Managed Google Play app with Intune](/intune/intune-service/apps/apps-add-android-for-work#sync-a-managed-google-play-app-with-intune) for more information. The sync steps look like the following:
 
    :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/intune-sync.png" alt-text="Screenshot selecting an app for managed Play in the Microsoft Intune admin center":::
 
    :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/manage-sync.png" alt-text="Screenshot highlighting the Sync option in the Managed Play store":::
 
-3. Create a group in [Microsoft Intune Admin Center](https://intune.microsoft.com/).
+1. Create a group in [Microsoft Intune Admin Center](https://intune.microsoft.com/).
 
-4. In the portal, navigate to **Apps > All apps** and search for *Microsoft Defender: Antivirus*.
+1. In the portal, navigate to **Apps > All apps** and search for *Microsoft Defender: Antivirus*.
 
-5. In the **Properties** pane, select **Edit** beside **Assignments** and then add the user group under *Available for enrolled devices*.
+1. In the **Properties** pane, select **Edit** beside **Assignments** and then add the user group under *Available for enrolled devices*.
 
    :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/assignments-edit.png" alt-text="Screenshot highlighting the Microsoft Defender Antivirus properties":::
 
-6. In the **Edit application** list, select the added group to open the **Edit assignment** pane.
-
-7. In the Edit assignment pane, select **Included** as the mode. Then select **Custom testing track (number)** in the **Tracks** dropdown list. Then select default under **Update priority**.
+1. In the **Edit application** list, select the added group to open the **Edit assignment** pane.
+1. In the Edit assignment pane, select **Included** as the mode. Then select **Custom testing track (number)** in the **Tracks** dropdown list. Then select default under **Update priority**.
 
    :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/edit-assign-settings.png" alt-text="Screenshot of the required Edit assignment settings":::
 
-8. Select **Review + save** to review and save the details.
+1. Select **Review + save** to review and save the details.
 
 After the app is synced and assigned to a user group, the following steps are required for the members of the user group to test the prerelease build on the Android device:
 
 1. Open the Microsoft Intune Company Portal on the Android device and sign in with the user account that is part of the user group assigned to the prerelease build.
-2. In the device's managed section, open the **Play Store** app and search for *Microsoft Defender: Antivirus*.
-3. Select the app and then **Install** to install the prerelease build on the device.
-4. Open the app and sign in with the user account that is part of the user group assigned to the prerelease build.
-5. Follow the prompts to complete the onboarding process.
+1. In the device's managed section, open the **Play Store** app and search for *Microsoft Defender: Antivirus*.
+1. Select the app and then **Install** to install the prerelease build on the device.
+1. Open the app and sign in with the user account that is part of the user group assigned to the prerelease build.
+1. Follow the prompts to complete the onboarding process.
 
 ## Set up your testing environment in the MAM enrollment scenario
 
@@ -78,21 +77,21 @@ To set up your environment for prerelease testing, follow these steps:
 
    :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/group-name.png" alt-text="Screenshot of highlighting the Google group added to the list":::
 
-2. Contact Microsoft Support to provide the Google group name for your organization then wait for confirmation. Then, provide the [test link](https://play.google.com/apps/testing/com.microsoft.scmx?pli=1) where they can download the prerelease build to the members of the Google group.
+1. Contact Microsoft Support to provide the Google group name for your organization then wait for confirmation. Then, provide the [test link](https://play.google.com/apps/testing/com.microsoft.scmx?pli=1) where they can download the prerelease build to the members of the Google group.
 
-3. Users testing the prerelease build must sign in to the Google Play Store using the Google account that's part of the Google group.
+1. Users testing the prerelease build must sign in to the Google Play Store using the Google account that's part of the Google group.
 
-4. Search and download the prerelease build from the [test link](https://play.google.com/apps/testing/com.microsoft.scmx?pli=1). Users are then redirected to a *Welcome to the testing program* page and an install page for Microsoft Defender: Antivirus. Here are examples.
+1. Search and download the prerelease build from the [test link](https://play.google.com/apps/testing/com.microsoft.scmx?pli=1). Users are then redirected to a *Welcome to the testing program* page and an install page for Microsoft Defender: Antivirus. Here are examples.
 
    :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/welcome-test.png" alt-text="Screenshot of a Welcome page to test the prelease build of Microsoft Defender Antivirus":::
 
    :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/beta-app.png" alt-text="Screenshot of a prerelease version of Microsoft Defender Antivirus in the Google Play Store":::
 
-6. Sign in to the Defender app using the work/corporate account. Then follow the prompts to complete the onboarding process.
+1. Sign in to the Defender app using the work/corporate account. Then follow the prompts to complete the onboarding process.
 
    :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/defender-signin.png" alt-text="Screenshot of the Microsoft Defender Antivirus sign in page":::
 
-7. Once successfully onboarded, the app shows a label on top to indicate that the prerelease version is running. Here's an example.
+1. Once successfully onboarded, the app shows a label on top to indicate that the prerelease version is running. Here's an example.
 
    :::image type="content" source="/defender-endpoint/media/mobile-pretest-android/preview-build.png" alt-text="Screenshot of a prerelease version of Microsoft Defender Antivirus installed on a device":::
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Security Operations Guide for Defender for Endpoint
 ms.reviewer: joshbregman, mattcall, pahuijbr, hayhov
 manager: bagol
@@ -8,8 +8,8 @@ ms.localizationpriority: medium
 ms.date: 03/26/2025
 audience: ITPro
 ms.topic: concept-article
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 ms.custom:
 - nextgen
 - admindeeplinkDEFENDER
@@ -138,16 +138,7 @@ The Microsoft Defender Endpoint should be set up to support your regular securit
 Review the following articles to understand recently released updates:
 
 - [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md)
-
-- [What's new in Microsoft Defender for Endpoint on Windows](windows-whatsnew.md)
-
-- [What's new in Microsoft Defender for Endpoint on Mac](mac-whatsnew.md)
-
-- [What's new in Microsoft Defender for Endpoint on Linux](linux-whatsnew.md)
-
-- [What's new in Microsoft Defender for Endpoint on iOS](ios-whatsnew.md)
-
-- [What's new in Microsoft Defender for Endpoint on Android](android-whatsnew.md)
+- [Microsoft Defender for Endpoint versions](microsoft-defender-endpoint-releases.md)
 
 ### Security administration team
 
@@ -181,7 +172,7 @@ These tasks are seen as maintenance for your security posture and are critical f
 
 - **Review alerts suppression**
 
-    Periodically review any alert suppression rules that have been created to confirm they're still required and valid. See [Review alerts suppression](manage-alerts.md).
+    Periodically review any alert suppression rules that have been created to confirm they're still required and valid. See [Review alerts suppression](/defender-xdr/investigate-alerts?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#built-in-alert-tuning-rules).
 
 ## Troubleshooting
 
@@ -194,5 +185,5 @@ The following articles provide guidance to troubleshoot and fix errors that you 
 - [Troubleshoot attack surface reduction issues](troubleshoot-asr.md)
 - [Troubleshoot onboarding issues](troubleshoot-onboarding.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

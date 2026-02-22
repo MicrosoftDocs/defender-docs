@@ -4,8 +4,8 @@ description: Protect your network by preventing Linux users from accessing known
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 manager: bagol
 ms.subservice: linux
 ms.topic: overview
@@ -93,7 +93,7 @@ sudo python3 MicrosoftDefenderATPOnboardingLinuxServer.py
 
    <!--These links are purposely blocked; will trigger as broken link--->
 
-2. Inspect diagnostic logs
+1. Inspect diagnostic logs
 
    ```bash
    sudo mdatp log level set --level debug
@@ -141,9 +141,9 @@ Also, make sure that in **Microsoft Defender** \> **Settings** \> **Endpoints** 
 1. Learn how to [Protect your organization against web threats](web-threat-protection.md) using web threat protection.
    - Web threat protection is part of web protection in Microsoft Defender for Endpoint. It uses network protection to secure your devices against web threats.
 
-2. Run through the [Custom Indicators of Compromise](indicator-ip-domain.md) flow to get blocks on the Custom Indicator type.
+1. Run through the [Custom Indicators of Compromise](indicator-ip-domain.md) flow to get blocks on the Custom Indicator type.
 
-3. Explore [Web content filtering](web-content-filtering.md).
+1. Explore [Web content filtering](web-content-filtering.md).
 
    > [!NOTE]
    > If you're removing a policy or changing device groups at the same time, this might cause a delay in policy deployment.
@@ -151,7 +151,7 @@ Also, make sure that in **Microsoft Defender** \> **Settings** \> **Endpoints** 
    >
    > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
-4. [Integrate Microsoft Defender for Endpoint with Defender for Cloud Apps](/defender-cloud-apps/mde-integration) and your network protection-enabled macOS devices will have endpoint policy enforcement capabilities.
+1. [Integrate Microsoft Defender for Endpoint with Defender for Cloud Apps](/defender-cloud-apps/mde-integration) and your network protection-enabled macOS devices will have endpoint policy enforcement capabilities.
 
    > [!NOTE]
    > Discovery and other features are currently not supported on these platforms.
@@ -217,5 +217,5 @@ Within 10-15 minutes, these domains will be listed in Microsoft Defender XDR und
 - [Web content filtering](web-content-filtering.md)
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

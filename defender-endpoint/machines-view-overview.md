@@ -2,8 +2,8 @@
 title: Device inventory
 description: Learn about the available features that you can use from the Devices list such as sorting, filtering, and exporting the list to enhance investigations.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
 manager: bagol
@@ -13,15 +13,15 @@ ms.collection:
 - tier2
 ms.topic: article
 search.appverid: met150
-ms.date: 07/20/2025
+ms.date: 02/03/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Vulnerability Management
 
 ---
-# Device inventory
 
+# Device inventory
 
 The **Device inventory** shows a list of the devices in your network where alerts were generated. By default, the queue displays devices seen in the last 30 days. At a glance, you see information such as domain, risk level, OS platform, and other details for easy identification of devices most at risk.
 
@@ -158,122 +158,121 @@ The available device properties to use as filters vary based on the device inven
 
 ## Use columns to customize the device inventory views
 
-You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (*):
+You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (<sup>*</sup>):
 
 - **All devices** tab:
-
-  - **Name***
-  - **IP***
+  - **Name**<sup>*</sup>
+  - **IP**<sup>*</sup>
   - **MAC address**
-  - **Criticality level***
-  - **Device category***
-  - **Device role**
-  - **Device type***
+  - **Criticality level**<sup>*</sup>
+  - **Device category**<sup>*</sup>
+  - **Device type**<sup>*</sup>
   - **Device subtype**
   - **Vendor**
   - **Model**
-  - **Domain***
-  - **Device AAD id***
-  - **Risk level***
-  - **Exposure level***
-  - **OS platform***
+  - **Domain**<sup>*</sup>
+  - **Device AAD id**<sup>*</sup>
+  - **Risk level**<sup>*</sup>
+  - **Exposure level**<sup>*</sup>
+  - **OS platform**<sup>*</sup>
   - **OS distribution**
-  - **OS version***
-  - **Sensor health state***
-  - **Onboarding status***
+  - **OS version**<sup>*</sup>
+  - **Firmware version**
+  - **Sensor health state**<sup>*</sup>
+  - **Onboarding status**<sup>*</sup>
   - **Discovery sources**
   - **First seen**
-  - **Last device update***
-  - **Tags***
+  - **Last device update**<sup>*</sup>
+  - **Tags**<sup>*</sup>
   - **Exclusion state**
-  - **Managed by***
-  - **Managed by status***
-  - **Mitigation status***
-  - **Cloud platforms***
+  - **Device role**<sup>*</sup>
+  - **Managed by**<sup>*</sup>: Valid values are: **Intune**, **ConfigMgr**, **MDE**, or **Unknown**.
+  - **Managed by status**<sup>*</sup>: Status values from the **Managed by** authority. For example, **Success**. This field has the status **Unknown** for devices that aren't managed by Defender for Endpoint (for example, Intune or ConfigMgr).
+  - **Mitigation status**<sup>*</sup>
+  - **Cloud platforms**<sup>*</sup>
 
   Firmware information for OT devices is displayed in the **OS version** and **Model** columns.
 
 - **Computers & mobile** tab:
-
-  - **Name***
-  - **Domain***
-  - **Device AAD id***
-  - **Device role**
+  - **Name**<sup>*</sup>
+  - **Domain**<sup>*</sup>
+  - **Device AAD id**<sup>*</sup>
   - **Device type**
   - **Device subtype**
-  - **Risk level***
-  - **Exposure level***
-  - **OS platform***
+  - **Risk level**<sup>*</sup>
+  - **Exposure level**<sup>*</sup>
+  - **OS platform**<sup>*</sup>
   - **OS distribution**
-  - **Windows version***
+  - **Windows version**<sup>*</sup>
+  - **IP**
   - **MAC address**
-  - **Criticality level***
-  - **Sensor health state***
-  - **Onboarding status***
-  - **Discovery sources**
-  - **Last device update***
+  - **Criticality level**<sup>*</sup>
+  - **Sensor health state**<sup>*</sup>
+  - **Onboarding status**<sup>*</sup>
+  - **Discovery sources**<sup>*</sup>
+  - **Last device update**<sup>*</sup>
   - **First seen**
-  - **Tags***
+  - **Tags**<sup>*</sup>
   - **Exclusion state**
-  - **Managed by***
-  - **Managed by status***
-  - **Mitigation status***
-  - **Cloud platforms***
+  - **Device role**<sup>*</sup>
+  - **Managed by**<sup>*</sup>
+  - **Managed by**<sup>*</sup>: Valid values are: **Intune**, **ConfigMgr**, **MDE**, or **Unknown**.
+  - **Managed by status**<sup>*</sup>: Status values from the **Managed by** authority. For example, **Success**. This field has the status **Unknown** for devices that aren't managed by Defender for Endpoint (for example, Intune or ConfigMgr).
+  - **Cloud platforms**<sup>*</sup>
 
 - **Network devices** tab:
-
-  - **IP***
+  - **IP**<sup>*</sup>
   - **MAC address**
-  - **Vendor***
-  - **Model***
-  - **Name***
-  - **Discovery sources**
+  - **Vendor**<sup>*</sup>
+  - **Model**<sup>*</sup>
+  - **Name**<sup>*</sup>
   - **Domain**
   - **Device type**
   - **Device subtype**
-  - **Risk level***
-  - **Exposure level***
-  - **OS distribution***
-  - **OS version***
-  - **Last device update***
+  - **Discovery sources**<sup>*</sup>
+  - **Risk level**<sup>*</sup>
+  - **Exposure level**<sup>*</sup>
+  - **OS distribution**<sup>*</sup>
+  - **OS version**<sup>*</sup>
+  - **Last device update**<sup>*</sup>
   - **First seen**
-  - **Tags***
+  - **Tags**<sup>*</sup>
   - **Exclusion state**
 
 - **IoT/OT devices** tab:
-
-  - **IP***
-  - **MAC address***
-  - **Name***
-  - **Device type***
-  - **Device subtype***
-  - **Vendor***
-  - **Model***
-  - **Risk level***
-  - **Exposure level***
+  - **IP**<sup>*</sup>
+  - **MAC address**<sup>*</sup>
+  - **Name**<sup>*</sup>
+  - **Device type**<sup>*</sup>
+  - **Device subtype**<sup>*</sup>
+  - **Vendor**<sup>*</sup>
+  - **Model**<sup>*</sup>
+  - **Risk level**<sup>*</sup>
+  - **Exposure level**<sup>*</sup>
   - **Discovery sources**
-  - **OS distribution***
-  - **OS version***
+  - **OS distribution**<sup>*</sup>
+  - **OS version**<sup>*</sup>
+  - **Firmware version**
   - **First seen**
-  - **Last device update***
+  - **Last device update**<sup>*</sup>
   - **Domain**
-  - **Tags***
+  - **Tags**<sup>*</sup>
   - **Exclusion state**
 
 - **Uncategorized devices** tab:
-  - **Name***
-  - **Vendor***
-  - **IP***
-  - **Discovery sources**
+  - **Name**<sup>*</sup>
+  - **Vendor**<sup>*</sup>
+  - **IP**<sup>*</sup>
   - **MAC address**
   - **Risk level**
   - **Exposure level**
-  - **OS distribution***
-  - **OS version***
-  - **Last device update***
+  - **OS distribution**<sup>*</sup>
+  - **OS version**<sup>*</sup>
+  - **Last device update**<sup>*</sup>
   - **First seen**
-  - **Tags***
+  - **Tags**<sup>*</sup>
   - **Exclusion state**
+  - **Discovery sources**
 
 > [!TIP]
 > To see all columns, you likely need to do one or more of the following steps:
@@ -289,5 +288,5 @@ You can sort the entries by clicking on an available column header. Select :::im
 
 [Investigate devices in the Microsoft Defender for Endpoint Devices list](investigate-machines.md).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

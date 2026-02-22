@@ -2,8 +2,8 @@
 title: Investigate devices in the Defender for Endpoint Devices list
 description: Investigate affected devices by reviewing alerts, network connection information, adding device tags and groups, and checking the service health.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -248,7 +248,7 @@ To gain an in-depth view of the device health report, you can go to **Reports > 
 ## Related articles
 
 - [View and organize the Microsoft Defender for Endpoint Alerts queue](alerts-queue.md)
-- [Manage Microsoft Defender for Endpoint alerts](manage-alerts.md)
+- [Manage Microsoft Defender for Endpoint alerts](/defender-xdr/investigate-alerts?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#manage-alerts)
 - [Investigate Microsoft Defender for Endpoint alerts](investigate-alerts.md)
 - [Investigate a file associated with a Defender for Endpoint alert](investigate-files.md)
 - [Investigate an IP address associated with a Defender for Endpoint alert](investigate-ip.md)
@@ -257,5 +257,5 @@ To gain an in-depth view of the device health report, you can go to **Reports > 
 - [Security recommendation](api/ti-indicator.md)
 - [Software inventory](/defender-vulnerability-management/tvm-software-inventory)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

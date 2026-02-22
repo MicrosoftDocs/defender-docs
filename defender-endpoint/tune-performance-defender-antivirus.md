@@ -4,8 +4,8 @@ description: Describes the procedure to tune the performance of Microsoft Defend
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -80,11 +80,11 @@ To start recording system events, open PowerShell in administrator mode and perf
 
    where `-RecordTo` parameter specifies full path location in which the trace file is saved. For more cmdlet information, see [Microsoft Defender Antivirus cmdlets](/powershell/module/defender).
 
-2. If there are processes or services thought to be affecting performance, reproduce the situation by carrying out the relevant tasks.
+1. If there are processes or services thought to be affecting performance, reproduce the situation by carrying out the relevant tasks.
 
-3. Press **ENTER** to stop and save recording, or **Ctrl+C** to cancel recording.
+1. Press **ENTER** to stop and save recording, or **Ctrl+C** to cancel recording.
 
-4. Analyze the results using the performance analyzer's `Get-MpPerformanceReport` parameter. For example, on executing the command `Get-MpPerformanceReport -Path <recording.etl> -TopFiles 3 -TopScansPerFile 10`, the user is provided with a list of top-ten scans for the top three files affecting performance.
+1. Analyze the results using the performance analyzer's `Get-MpPerformanceReport` parameter. For example, on executing the command `Get-MpPerformanceReport -Path <recording.etl> -TopFiles 3 -TopScansPerFile 10`, the user is provided with a list of top-ten scans for the top three files affecting performance.
 
    For more information on command-line parameters and options, see the [New-MpPerformanceRecording](/powershell/module/defenderperformance/new-mpperformancerecording)   and [Get-MpPerformanceReport](/powershell/module/defenderperformance/get-mpperformancereport).
 
@@ -132,4 +132,4 @@ To ensure machine-readable output for exporting with other data processing syste
 
 ### [Microsoft Defender Antivirus Performance Analyzer reference](/defender-endpoint/performance-analyzer-reference)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

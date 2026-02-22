@@ -2,8 +2,8 @@
 title: Move alerts from one incident to another in the Microsoft Defender portal
 description: Learn how to detach an alert from an incident in the Microsoft Defender portal, to correct false and/or missed correlations, and attach the alert to another (new or existing) incident, so you can investigate and remediate security threats more effectively.
 ms.service: defender-xdr
-ms.author: raynew
-author: yelevin
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: raynew
 audience: ITPro
@@ -65,11 +65,15 @@ Also, on the details panel on an alert details page, the **Move alert to another
 
     :::image type="content" source="media/move-alert-to-another-incident/move-alert-to-existing-incident-save.png" alt-text="Screenshot of adding a comment explaining why moving an alert.":::
 
+1. Provide feedback explaining why you are moving the alert or alerts by selecting one of the predefined options. This step helps Microsoft improve alert correlation in the future.
+
 1. Select **Save** at the bottom of the panel to execute the move.
 
 ### Move alert or alerts to a new incident
 
-1. If you selected **Create a new incident**, all you need to do then is enter a comment explaining why you want to move the alerts.
+1. If you selected **Create a new incident**, enter a comment explaining why you want to move the alerts.
+
+1. Provide feedback explaining why you are moving the alert or alerts by selecting one of the predefined options. This step helps Microsoft improve alert correlation in the future.
 
 1. Select **Save** at the bottom of the panel to execute the move.
 

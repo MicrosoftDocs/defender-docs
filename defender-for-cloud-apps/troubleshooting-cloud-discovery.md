@@ -2,7 +2,7 @@
 title: Troubleshooting cloud discovery errors 
 description: This article provides a list of cloud discovery frequent errors and resolution recommendations for each.
 ms.date: 02/19/2025
-ms.topic: conceptual
+ms.topic: article
 ---
 # Troubleshooting cloud discovery errors
 
@@ -53,6 +53,8 @@ The [Log collector Diagnostic script](https://github.com/microsoft/Microsoft-Def
 |Issue|Resolution|
 |----|----|
 |Discovery data was uploaded and parsed successfully but the cloud discovery dashboard looks empty|The Dashboard might be filtered on data your logs don't have so there's no data to show. Try changing the filters in the cloud discovery dashboard to show different types of data to see the results.|
+
+The [Log collector Diagnostic script](https://github.com/microsoft/Microsoft-Defender-for-Cloud-Apps/tree/main/Sample%20scripts/Log-Collector-Diag-Script) automates the collection and compression of logs and diagnostic data for troubleshooting Log Collector containers on Linux (Docker/Podman) to improve workflow efficiency. If you need to contact support, run the script and share the generated log bundle for faster case resolution.
 
 ## Next steps
 

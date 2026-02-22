@@ -1,10 +1,10 @@
 ﻿---
 title: Automation levels in automated investigation and remediation
 description: Get an overview of automation levels and how they work in Microsoft Defender for Endpoint
-author: batamig
+author: chrisda
 ms.service: defender-endpoint
 ms.subservice: edr
-ms.author: bagol
+ms.author: chrisda
 ms.localizationpriority: medium
 ms.date: 04/04/2025
 manager: bagol
@@ -65,5 +65,5 @@ Automated investigation and remediation (AIR) capabilities in Microsoft Defender
 
 - [Configure automated investigation and remediation capabilities in Defender for Endpoint](configure-automated-investigations-remediation.md)
 - [Visit the Action Center](auto-investigation-action-center.md#the-unified-action-center)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

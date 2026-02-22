@@ -3,8 +3,8 @@ title: Create and manage roles for role-based access control
 description: Create roles and define the permissions assigned to the role as part of the role-based access control implementation in the Microsoft Defender XDR
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -40,19 +40,19 @@ The following steps guide you on how to create roles in the Microsoft Defender p
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) using account with the Security Administrator role assigned.
 
-2. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
+1. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
 
-3. Select **Add role**.
+1. Select **Add role**.
 
-4. Enter the role name, description, and permissions you'd like to assign to the role.
+1. Enter the role name, description, and permissions you'd like to assign to the role.
 
-5. Select **Next** to assign the role to a Microsoft Entra Security group.
+1. Select **Next** to assign the role to a Microsoft Entra Security group.
 
-6. Use the filter to select the Microsoft Entra group that you'd like to add to this role to.
+1. Use the filter to select the Microsoft Entra group that you'd like to add to this role to.
 
-7. **Save and close**.
+1. **Save and close**.
 
-8. Apply the configuration settings.
+1. Apply the configuration settings.
 
 > [!IMPORTANT]
 > After creating roles, you'll need to create a device group and provide access to the device group by assigning it to a role that you created.
@@ -101,25 +101,25 @@ For more information on the available commands, see [Investigate devices using L
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) using account with the Security administrator role assigned.
 
-2. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
+1. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
 
-3. Select the role you'd like to edit.
+1. Select the role you'd like to edit.
 
-4. Select **Edit**.
+1. Select **Edit**.
 
-5. Modify the details or the groups that are assigned to the role.
+1. Modify the details or the groups that are assigned to the role.
 
-6. Select **Save and close**.
+1. Select **Save and close**.
 
 ## Delete roles
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) using account with the Security Administrator role assigned.
 
-2. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
+1. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
 
-3. Select the role you'd like to delete.
+1. Select the role you'd like to delete.
 
-4. Select the drop-down button and select **Delete role**.
+1. Select the drop-down button and select **Delete role**.
 
 
 ## Related articles
@@ -128,5 +128,5 @@ For more information on the available commands, see [Investigate devices using L
 - [Assign user access](assign-portal-access.md)
 - [Create and manage device groups](machine-groups.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

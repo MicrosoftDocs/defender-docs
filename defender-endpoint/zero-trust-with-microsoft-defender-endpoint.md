@@ -5,8 +5,8 @@ search.appverid: met150
 ms.service: microsoft-365-zero-trust
 f1.keywords:
   - NOCSH
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 ms.date: 05/10/2024
 manager: bagol
@@ -73,4 +73,4 @@ For the steps to deploy Intune for Microsoft 365 with Zero Trust, see the [Manag
 For other Microsoft 365 capabilities that contribute to a strong Zero Trust strategy and architecture, see [Zero Trust deployment plan with Microsoft 365](/microsoft-365/security/microsoft-365-zero-trust).
 
 For an overview of Zero Trust for Microsoft Defender XDR services, see [Zero Trust with Microsoft Defender XDR](/defender-xdr/zero-trust-with-microsoft-365-defender).
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

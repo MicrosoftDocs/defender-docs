@@ -4,8 +4,8 @@ description: Learn how to assign, update the status,
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: deniseb
-author: yelevin
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -31,7 +31,7 @@ appliesto:
 
 Incident management is critical to ensuring that incidents are named, assigned, and tagged to optimize time in your incident workflow and more quickly contain and address threats.
 
-Manage your incidents from **Investigation & response > Incidents & alerts > Incidents** on the quick launch of the Microsoft Defender portal ([security.microsoft.com](https://security.microsoft.com)). Here's an example.
+To manage your incidents in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), use the quick launch and go to **Investigation & response > Incidents & alerts > Incidents**.
 
 :::image type="content" source="./media/manage-incidents/incidents-queue.png" alt-text="Screenshot showing the incident queue and quick launch pane in the Microsoft Defender portal." lightbox="./media/manage-incidents/incidents-queue.png":::
 
@@ -39,22 +39,22 @@ This article shows you how to perform various incident management tasks associat
 
 **[Incident triage:](#incident-triage)**
 
-- [Assign the incident to an owner](#assign-an-incident-to-an-owner).
-- [Assign or change severity](#assign-or-change-incident-severity).
-- [Add incident tags](#add-incident-tags).
-- [Change the incident status](#change-the-incident-status).
+- [Assign the incident to an owner](#assign-an-incident-to-an-owner)
+- [Assign or change severity](#assign-or-change-incident-severity)
+- [Add incident tags](#add-incident-tags)
+- [Change the incident status](#change-the-incident-status)
 
 **[Incident investigation and resolution:](#incident-investigation-and-resolution)**
 
-- [Resolve an incident](#resolve-an-incident).
-- [Specify an incident's classification](#specify-the-incidents-classification).
-- [Add comments to an incident](#add-comments-to-an-incident).
+- [Resolve an incident](#resolve-an-incident)
+- [Specify an incident's classification](#specify-the-incidents-classification)
+- [Add comments to an incident](#add-comments-to-an-incident)
 
 **[Incident logging and reporting:](#incident-logging-and-reporting)**
 
-- [Edit the incident name](#edit-the-incident-name).
-- Assess the activity audit and add comments in the [Activity log](#view-the-activity-log-of-an-incident).
-- [Export incident data to PDF](#export-incident-data-to-pdf).
+- [Edit the incident name](#edit-the-incident-name)
+- Assess the activity audit and add comments in the [Activity log](#view-the-activity-log-of-an-incident)
+- [Export incident data to PDF](#export-incident-data-to-pdf)
 
 > [!TIP]
 > **Defender Boxed**, a series of cards showcasing your organization's security successes, improvements, and response actions in the past six months/year, appears for a limited time during January and July of each year. Learn how you can share your [Defender Boxed](incident-queue.md#defender-boxed) highlights.
@@ -90,10 +90,10 @@ Most of these tasks are accessible from the **Manage incident** pane for an inci
 
 The following management tasks are closely associated with incident triage, though they can be performed at any time.
 
-- [Assign the incident to an owner](#assign-an-incident-to-an-owner).
-- [Assign or change severity](#assign-or-change-incident-severity).
-- [Add incident tags](#add-incident-tags).
-- [Change the incident status](#change-the-incident-status).
+- [Assign the incident to an owner](#assign-an-incident-to-an-owner)
+- [Assign or change severity](#assign-or-change-incident-severity)
+- [Add incident tags](#add-incident-tags)
+- [Change the incident status](#change-the-incident-status)
 
 ### Assign an incident to an owner
 
@@ -191,9 +191,9 @@ Incidents begin life with a status of **Active**. When you're working on an inci
 
 The following management tasks are closely associated with incident investigation and resolution, though they can be performed at any time.
 
-- [Resolve an incident](#resolve-an-incident).
-- [Specify an incident's classification](#specify-the-incidents-classification).
-- [Add comments to an incident](#add-comments-to-an-incident).
+- [Resolve an incident](#resolve-an-incident)
+- [Specify an incident's classification](#specify-the-incidents-classification)
+- [Add comments to an incident](#add-comments-to-an-incident)
 
 ### Resolve an incident
 
@@ -240,11 +240,11 @@ Classifying incidents and specifying their status and type helps tune Microsoft 
 
 Over the course of investigating and incident, add comments to record your activities, insights, and conclusions.
 
-1. Open the incident's activity log. From the incident page, or from the incident details panel on the incident queue page, select the three dots in the upper right corner, and from the resulting menu, select **Activity log**.
+1. Open the incident's activity log: from the incident page, or from the incident details panel on the incident queue page, select the three dots in the upper right corner, and from the resulting menu, select **Activities**.
 
     :::image type="content" source="media/manage-incidents/activity-log.png" alt-text="Screenshot showing how to access an incident's activity log." lightbox="media/manage-incidents/activity-log.png":::
 
-1. Type your comment in the text field. The comment field supports text and formatting, links, and images. Each comment is limited to 30,000 characters.
+1. Select **Add comment** at the top of the Activities pane. Type your comment in the text field. The comment field supports text and formatting, links, and images. Each comment is limited to 30,000 characters.
 
     :::image type="content" source="media/manage-incidents/add-comments.png" alt-text="Screenshot showing how to add a comment to an incident.":::
 
@@ -256,9 +256,9 @@ All comments are added to the historical events of the incident. You can see the
 
 The following management tasks can be associated with auditing and reporting on incident investigations, though they can be performed at any time.
 
-- [Edit the incident name](#edit-the-incident-name).
-- Assess the activity audit and add comments in the [Activity log](#view-the-activity-log-of-an-incident).
-- [Export incident data to PDF](#export-incident-data-to-pdf).
+- [Edit the incident name](#edit-the-incident-name)
+- Assess the activity audit and add comments in the [activity log](#view-the-activity-log-of-an-incident)
+- [Export incident data to PDF](#export-incident-data-to-pdf)
 
 ### Edit the incident name
 
@@ -280,19 +280,23 @@ To edit the incident name, take the following steps:
 
 ### View the activity log of an incident
 
-When doing a postmortem of an incident, view the incident's **Activity log** to see the history of actions performed on the incident (called "Audits") and any comments recorded. All changes made to the incident, whether by a user or by the system, are recorded in the activity log. 
+When doing a postmortem of an incident, view the incident's **Activity log** to see the history of actions performed on the incident (called "Audits") and any comments recorded. All changes made to the incident, whether by a user or by the system, are recorded in the activity log. For a more detailed view of all activities, access the [Activities tab](./investigate-incidents.md#activities) from the bottom of the activity log.
 
-1. Open the incident's activity log. From the incident page, or from the incident details panel on the incident queue page, select the three dots in the upper right corner, and from the resulting menu, select **Activity log**.
+#### Open an incident's activity log
 
-    :::image type="content" source="media/manage-incidents/activity-log.png" alt-text="Screenshot highlighting the activity log option from the incident page in the Microsoft Defender portal." lightbox="media/manage-incidents/activity-log.png":::
+1. From the incident page, or from the incident details panel on the incident queue page, select the three dots in the upper right corner, and from the resulting menu, select **Activities**.
 
-1. Filter the activities within the log by comments and actions. Select **Content: Audits, Comments** then select the content type to filter activities. Here's an example.
+    :::image type="content" source="./media/manage-incidents/activity-log.png" alt-text="Screenshot highlighting selecting the Activities option from the three-dot menu on the incidents page of the Microsoft Defender portal." lightbox="./media/manage-incidents/activity-log.png":::
 
-    :::image type="content" source="media/manage-incidents/filter-activity-log.png" alt-text="Screenshot highlighting the filter options within the activity log pane from the incident page in the Microsoft Defender portal." lightbox="media/manage-incidents/filter-activity-log.png":::
+1. You can filter the activities in the activity log by origin, category, provider, trigger, activity status, policy status, type, target name, target type, or performed by. Go to **Add filter**, select your desired filters, and select **Add**.
 
-1. Select **Apply**.
+    :::image type="content" source="./media/manage-incidents/activity-log-add-filters.png" alt-text="Screenshot highlighting the filter options within the activity log pane from the incident page in the Microsoft Defender portal." lightbox="./media/manage-incidents/activity-log-add-filters.png":::
 
-You can also [add your own comments](#add-comments-to-an-incident) using the comment box available within the activity log. The comment box accepts text and formatting, links, and images.
+1. Go to each filter's dropdown, select filter criteria, and select **Apply**.
+
+    :::image type="content" source="./media/manage-incidents/activity-log-filter-example.png" alt-text="Example of selecting a filter's dropdown menu, selecting criteria, and applying." lightbox="./media/manage-incidents/activity-log-filter-example.png":::
+
+You can also [add your own comments](#add-comments-to-an-incident) by selecting **Add comment** at the top of the Activities panel. The comment box accepts text and formatting, links, and images.
 
 > [!IMPORTANT]
 > Some information in this article relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.

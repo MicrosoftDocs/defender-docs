@@ -6,8 +6,8 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
-ms.author: dansimp
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -58,7 +58,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `AccountDisplayName` | `string` | Name of the account user displayed in the address book. Typically a combination of a given or first name, a middle initial, and a last name or surname. |
 | `DeviceName` | `string` | Fully qualified domain name (FQDN) of the device |
 | `DeviceType` | `string` | Type of device based on purpose and functionality, such as network device, workstation, server, mobile, gaming console, or printer |
-| `OSPlatform` | `string` | Platform of the operating system running on the device. This indicates specific operating systems, including variations within the same family, such as Windows 11, Windows 10 and Windows 7. |
+| `OSPlatform` | `string` | Platform of the operating system running on the device. This indicates specific operating systems, including variations within the same family, such as Windows 11, Windows 10, and Windows 7. |
 | `IPAddress` | `string` | IP address assigned to the endpoint and used during related network communications |
 | `Port` | `int` | TCP port used during communication |
 | `DestinationDeviceName` | `string` | Name of the device running the server application that processed the recorded action |

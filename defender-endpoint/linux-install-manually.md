@@ -209,16 +209,31 @@ In order to preview new features and provide early feedback, it's recommended th
 
 6. Install the Microsoft GPG public key:
 
-   - For Debian 11/Ubuntu 22.04 and earlier, run the following command.
+   - For Debian 11/Ubuntu 22.04 and earlier, run the following commands.
  
       ```bash
       curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null
+      sudo chmod o+r /etc/apt/trusted.gpg.d/microsoft.gpg
       ```
 
-   - For Debian 12/Ubuntu 24.04 and later, run the following command.
+   - For Debian 12, Ubuntu 24.04 and later, run the following commands.
 
       ```bash
       curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg > /dev/null
+      sudo chmod o+r /usr/share/keyrings/microsoft-prod.gpg
+      ```
+
+   - For Debian 13 and later, run the following commands.
+
+      ```bash
+      curl -sSL https://packages.microsoft.com/keys/microsoft-2025.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg > /dev/null
+      sudo chmod o+r /usr/share/keyrings/microsoft-prod.gpg
+      ```
+      
+   - For Debian 13 and later, run the following command.
+
+      ```bash
+      curl -sSL https://packages.microsoft.com/keys/microsoft-2025.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg > /dev/null
       ```
 
 7. Install the HTTPS driver if not already installed:
@@ -413,8 +428,7 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
 
    > [!NOTE]
    > To run this command, you must have `python` or `python3` installed on the device depending on the distro and version. If needed, see [Step-by-step Instructions for Installing Python on Linux](https://opensource.com/article/20/4/install-python-linux).
-   > 
-   > To onboard a device that was previously offboard, you must remove the mdatp_offboard.json file located at /etc/opt/microsoft/mdatp.
+   
    
    If you're running RHEL 8.x or Ubuntu 20.04 or higher, you need to use `python3`. Run the following command:
    
@@ -503,13 +517,13 @@ If you experience any installation issues, for self-troubleshooting, follow thes
 
 1. For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](linux-resources.md#log-installation-issues).
 
-2. For information about common installation issues, see [Installation issues](/defender-endpoint/linux-support-install).
+1. For information about common installation issues, see [Installation issues](/defender-endpoint/linux-support-install).
 
-3. If health of the device is `false`, see [Defender for Endpoint agent health issues](/defender-endpoint/health-status).
+1. If health of the device is `false`, see [Defender for Endpoint agent health issues](/defender-endpoint/health-status).
 
-4. For product performance issues, see [Troubleshoot performance issues](/defender-endpoint/linux-support-perf).
+1. For product performance issues, see [Troubleshoot performance issues](/defender-endpoint/linux-support-perf).
 
-5. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](/defender-endpoint/linux-support-connectivity).
+1. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](/defender-endpoint/linux-support-connectivity).
 
 To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](/defender-endpoint/overview-client-analyzer).
 
@@ -523,13 +537,13 @@ For example, to change channel from Insiders-Fast to Production, do the followin
    sudo yum remove mdatp
    ```
 
-2. Disable the Defender for Endpoint on Linux Insiders-Fast channel
+1. Disable the Defender for Endpoint on Linux Insiders-Fast channel
 
    ```bash
    sudo yum-config-manager --disable packages-microsoft-com-fast-prod
    ```
 
-3. Reinstall Microsoft Defender for Endpoint on Linux using the `Production channel`, and onboard the device in the [Microsoft Defender portal](https://security.microsoft.com). 
+1. Reinstall Microsoft Defender for Endpoint on Linux using the `Production channel`, and onboard the device in the [Microsoft Defender portal](https://security.microsoft.com). 
 
 ## How to configure policies for Defender for Endpoint on Linux
 

@@ -4,8 +4,8 @@ description: Learn how to analyze the Microsoft Defender for Endpoint Client Ana
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: bagol
-author: batamig
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -60,5 +60,3 @@ To include analyzer result files [when opening a support ticket](contact-support
 
 - [Troubleshoot sensor health using Microsoft Defender for Endpoint Client Analyzer](overview-client-analyzer.md)
 
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

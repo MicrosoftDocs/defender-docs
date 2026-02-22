@@ -4,8 +4,8 @@ description: Get an overview of how to configure Microsoft Defender Antivirus in
 ms.localizationpriority: medium
 ms.date: 10/20/2025
 ms.topic: how-to
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: jesquive
 manager: bagol
@@ -168,6 +168,9 @@ It's important to take advantage of the included threat protection capabilities 
 
 - Configure local administrator merge behavior for lists: `Disabled`
 
+> [!NOTE]
+> Setting this policy to **Disabled** prevents locally defined exclusions and lists from being merged with centrally managed policies. Only centrally managed policies (for example, Group Policy) are applied.
+
 - Control whether or not exclusions are visible to Local Admins: `Enabled`
 
 - Turn off routine remediation: `Disabled`
@@ -232,7 +235,7 @@ It's important to take advantage of the included threat protection capabilities 
 
 - Turn on catch-up full scan (Disable catch-up full scan): `Not configured`
 
-- Turn on catch-up quick scan (Disable catchup quick scan): `Not configured`
+- Turn on catch-up quick scan (Disable catch-up quick scan): `Not configured`
 
    > [!NOTE]
    > If you want to harden, you could change "Turn on catch-up quick scan" to `Enabled`, which helps when VMs are offline, and have missed two or more consecutive scheduled scans. But since it's running a scheduled scan, it uses additional CPU.
@@ -357,5 +360,5 @@ If you're looking for information about Defender for Endpoint on non-Windows pla
 - [Configure Defender for Endpoint on Android features](android-configure.md)
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

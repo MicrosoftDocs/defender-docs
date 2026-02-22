@@ -18,7 +18,8 @@ ms.topic: concept-article
 search.appverid:
 - MOE150
 - MET150
-ms.date: 11/18/2025
+ms.update-cycle: 180-days
+ms.date: 01/08/2026
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -62,7 +63,11 @@ To discover and deploy agents in the Microsoft Defender portal:
 
         You can manage centralized purchases for partner-published agents through public offers, or through private offers, as described in [How to Purchase SaaS Solutions (Private Offers)](/security/store/how-to-purchase-saas-solutions-private-offers).
 
-1. After purchasing the agent, select **Security Copilot > Security Store**, find your agent in the **Ready for setup** section, and then select **Set up** to begin agent setup.
+1. After purchasing the agent, select **Security Copilot > Agents**, find your agent in the **Ready for setup** section, and then select **Set up** to begin agent setup.
+
+    For more information on setting up, managing, and running partner-published agents, see [Manage Security Copilot agents](/copilot/security/agents-manage#set-up-for-partner-built-agents).
+
+    For more information on Microsoft Security Copilot agents, see [Microsoft Security Copilot agents in Microsoft Defender](#microsoft-security-copilot-agents-in-microsoft-defender).
 
     After setup, the agent appears in the **Agents in use** section.
 
@@ -91,10 +96,19 @@ The [Threat Intelligence Briefing Agent](threat-intel-briefing-agent-defender.md
 | Attribute | Description |
 |---|---|
 | Identity | Requires connection to an existing user account or creation of a new agent identity |
-| License | [Defender EASM Standard](https://www.microsoft.com/security/pricing/microsoft-defender-external-attack-surface-management?msockid=2f55df1fd6fd61f12ba8ca23d7976094) |
-| Permissions | **Required permissions:**<ul><li>Vulnerability Management (read)<li>Security Reader</ul>**Optional permissions:**<ul><li>Exposure Management (read)</ul> |
+| License | **Not Applicable** |
+| Permissions | **Required permissions:**<ul><li>Microsoft Defender for Endpoint<li>Security Reader</ul>**Optional permissions:**<ul><li>Exposure Management (read)</ul> |
 | Products | [Security Copilot](/copilot/security/get-started-security-copilot) | 
 | Plugins | The following plugins are required to run this agent:<ul><li>Microsoft Threat Intelligence<li>Microsoft Threat Intelligence agents</ul>The following plugin is optional but can add more context to the output:<ul><li>Microsoft Defender External Attack Surface Management</ul> |
 | Role-based access | The **Security Administrator** role is required to set up and manage the agent.<br><br>Users with the same permissions as the Threat Intelligence Briefing Agent can view the agent's activity and results. |
 | Trigger | Runs at the set time interval that you configured during setup, or manually when you want to run it |
 
+### Threat Hunting Agent
+
+The [Threat Hunting Agent](advanced-hunting-security-copilot-threat-hunting-agent.md) revolutionizes threat hunting by enabling you to investigate threats using natural language from start to finish. It not only generates KQL queries but also interprets results, surfaces insights, and guides you through full hunting sessions. These capabilities empower you to hunt threats faster, more accurately, and with greater confidence.
+
+:::image type="content" source="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-answer.png" alt-text="Screenshot of the Copilot pane in advanced hunting with the answer highlighted." lightbox="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-answer.png":::
+
+### Dynamic Threat Detection Agent
+
+The [Dynamic Threat Detection Agent](dynamic-threat-detection-agent.md) in the Defender portal is an always-on, adaptive backend service that uncovers hidden threats across Defender and Microsoft Sentinel environments. It uses AI to identify gaps and uncover false negatives by correlating alerts, events, anomalies, and threat intelligence. When the agent identifies a gap, it generates a dynamic alert with the full context in the alert details, including natural language explanations, mapped [MITRE ATT&CK techniques](https://attack.mitre.org/), and tailored remediation steps.

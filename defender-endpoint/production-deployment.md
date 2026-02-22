@@ -2,8 +2,8 @@
 title: Prepare to deploy Microsoft Defender for Endpoint
 description: Learn how to set up the deployment for Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -54,7 +54,7 @@ To gain access into which licenses are provisioned to your company, and to check
 
 1. From the **Partner portal**, select **Administer services** > **Office 365**.
 
-2. Selecting the **Partner portal** link opens the **Admin on behalf** option and gives you access to the customer admin center.
+1. Selecting the **Partner portal** link opens the **Admin on behalf** option and gives you access to the customer admin center.
 
    :::image type="content" source="media/atp-O365-admin-portal-customer.png" alt-text="The Office 365 admin portal" lightbox="media/atp-O365-admin-portal-customer.png":::
 
@@ -64,7 +64,7 @@ To provision Defender for Endpoint in your tenant, follow these steps:
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in. 
 
-2. In the navigation pane, select any of the following items:
+1. In the navigation pane, select any of the following items:
 
    - Under **Assets**, select **Devices**.
    - Under **Endpoints**, select an item, such as **Dashboard** or **Endpoint security policies**.
@@ -79,15 +79,15 @@ Ensure devices can connect to the Defender for Endpoint cloud services. The use 
 
 1. [Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
 
-2. [Configure your devices to connect to the Defender for Endpoint service using a proxy](configure-proxy-internet.md).
+1. [Configure your devices to connect to the Defender for Endpoint service using a proxy](configure-proxy-internet.md).
 
-3. [Verify client connectivity to Microsoft Defender for Endpoint service URLs](verify-connectivity.md).
+1. [Verify client connectivity to Microsoft Defender for Endpoint service URLs](verify-connectivity.md).
 
-In certain scenarios, you might want to allow traffic to IP addresses. Not all services are accessible in this way and you need to evaluate how to address this potential issue in your environment. For example, you might need to download updates to a central location and then distribute them. For more information, see Configure connectivity using static IP ranges](configure-device-connectivity.md#option-2-configure-connectivity-using-static-ip-ranges).
+In certain scenarios, you might want to allow traffic to IP addresses. Not all services are accessible in this way and you need to evaluate how to address this potential issue in your environment. For example, you might need to download updates to a central location and then distribute them. For more information, see [Configure connectivity using static IP ranges](./configure-device-connectivity.md#option-2-configure-connectivity-using-static-ip-ranges).
 
 ## Next step
 
 - Continue to [Step 2 - Assign roles and permissions](prepare-deployment.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

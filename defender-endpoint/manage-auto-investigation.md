@@ -2,8 +2,8 @@
 title: Review remediation actions following automated investigations
 description: Review and approve (or reject) remediation actions following an automated investigation.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.localizationpriority: medium
 ms.date: 04/04/2025
 manager: bagol
@@ -60,13 +60,13 @@ Whether taken automatically or upon approval, an automated investigation and rem
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
-2. In the navigation pane, choose **Action center**.
+1. In the navigation pane, choose **Action center**.
 
-3. Review the items on the **Pending** tab.
+1. Review the items on the **Pending** tab.
 
-4. Select an action to open its flyout pane.
+1. Select an action to open its flyout pane.
 
-5. In the flyout pane, review the information, and then take one of the following steps:
+1. In the flyout pane, review the information, and then take one of the following steps:
 
    - Select **Open investigation page** to view more details about the investigation.
    - Select **Approve** to initiate a pending action.
@@ -78,11 +78,11 @@ Whether taken automatically or upon approval, an automated investigation and rem
 For incidents with a remediation status of **Pending approval**, you can also approve or reject a remediation action from within the incident.
 
 1. In the navigation pane, go to **Incidents & alerts** \> **Incidents**.
-2. Filter on **Pending action** for the Automated investigation state (optional).
-3. Select an incident name to open its summary page.
-4. Select the **Evidence and Response** tab.
-5. Select an item in the list to open its flyout pane.
-6. Review the information, and then take one of the following steps:
+1. Filter on **Pending action** for the Automated investigation state (optional).
+1. Select an incident name to open its summary page.
+1. Select the **Evidence and Response** tab.
+1. Select an item in the list to open its flyout pane.
+1. Review the information, and then take one of the following steps:
    - Select the Approve pending action option to initiate a pending action.
    - Select the Reject pending action option to prevent a pending action from being taken.
 
@@ -92,11 +92,11 @@ For incidents with a remediation status of **Pending approval**, you can also ap
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
-2. In the navigation pane, choose **Action center**.
+1. In the navigation pane, choose **Action center**.
 
-3. Review the items on the **History** tab.
+1. Review the items on the **History** tab.
 
-4. Select an item to view more details about that remediation action.
+1. Select an item to view more details about that remediation action.
 
 ## Undo completed actions
 
@@ -118,17 +118,17 @@ If you've determined that a device or a file isn't a threat, you can undo remedi
 
 1. Go to the Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) and sign in.
 
-2. On the **History** tab, select the actions that you want to undo. Make sure to select items that have the same Action type. A flyout pane opens.
+1. On the **History** tab, select the actions that you want to undo. Make sure to select items that have the same Action type. A flyout pane opens.
 
-3. In the flyout pane, select **Undo**.
+1. In the flyout pane, select **Undo**.
 
 ### To remove a file from quarantine across multiple devices
 
 1. Go to the Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) and sign in.
 
-2. On the **History** tab, select an item that has the Action type **Quarantine file**.
+1. On the **History** tab, select an item that has the Action type **Quarantine file**.
 
-3. In the flyout pane, select **Apply to X more instances of this file**, and then select **Undo**.
+1. In the flyout pane, select **Apply to X more instances of this file**, and then select **Undo**.
 
 ## Automation levels, automated investigation results, and resulting actions
 
@@ -159,5 +159,5 @@ All verdicts are tracked in the [Action center](auto-investigation-action-center
 ## See also
 
 - [Overview of automated investigations](automated-investigations.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

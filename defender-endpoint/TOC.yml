@@ -1,4 +1,4 @@
-﻿- name: Microsoft Defender for Endpoint
+- name: Microsoft Defender for Endpoint
   href: index.yml
   expanded: true
   items:
@@ -31,22 +31,14 @@
         - name: Setup and configuration
           href: mde-p1-setup-configuration.md
         - name: Get started
-          href: mde-plan1-getting-started.md
-    - name: What's new in Defender for Endpoint
-      href: whats-new-in-microsoft-defender-endpoint.md
-      items: 
-      - name: MsSense versions (Windows)
-        href: windows-whatsnew.md
-      - name: Defender for Endpoint on macOS releases
-        href: mac-whatsnew.md
-      - name: Defender for Endpoint on Linux releases
-        href: linux-whatsnew.md
-      - name: What's new in Defender for Endpoint on Android
-        href: android-whatsnew.md
-      - name: What's new in Defender for Endpoint on iOS
-        href: ios-whatsnew.md
-      - name: Previous Defender for Endpoint releases (archive)
-        href: whats-new-mde-archive.md
+          href: mde-plan1-getting-started.md        
+    - name: What's new
+      items:
+        - name: New features
+          href: whats-new-in-microsoft-defender-endpoint.md
+          displayName: What's new in Microsoft Defender for Endpoint
+        - name: Release notes
+          href: microsoft-defender-endpoint-releases.md
     - name: Trial user guide - Defender for Endpoint
       href: defender-endpoint-trial-user-guide.md
     - name: Pilot and deploy Defender for Endpoint
@@ -298,6 +290,8 @@
               href: linux-static-proxy-configuration.md
             - name: Configure antivirus scans
               items:
+              - name: Configure Microsoft Defender Antivirus scans on Linux
+                href: schedule-anti-virus-scans-linux.md
               - name: Schedule antivirus scans using Anacron
                 href: schedule-antivirus-scan-anacron.md
               - name: Schedule antivirus scans using Crontab
@@ -367,6 +361,8 @@
             href: configure-vulnerability-email-notifications.md
           - name: Configure advanced features
             href: advanced-features.md
+          - name: Configure library management for live response
+            href: configure-libraries-live-response.md
 
         - name: Permissions
           items:
@@ -536,6 +532,8 @@
           href: troubleshoot-live-response.md
         - name: Collect support logs using LiveAnalyzer
           href: troubleshoot-collect-support-log.md
+        - name: Run remote MDE Client Analyzer traces via live response
+          href: troubleshoot-remotely-with-client-analyzer.md
         - name: Troubleshoot Microsoft Defender Antivirus settings
           href: troubleshoot-settings.md
         - name: Troubleshoot Microsoft Defender Antivirus Security intelligence not getting updated
@@ -596,39 +594,26 @@
 
   - name: Detect threats and protect endpoints
     items:
-    - name: Microsoft Defender Vulnerability Management
+    - name: Detect vulnerabilities
       href: /defender-vulnerability-management
-    - name: Device discovery
+    - name: Discover devices
       items:
-      - name: Device discovery overview
+      - name: Overview
         href: device-discovery.md
-      - name: Configure device discovery
-        href: configure-device-discovery.md
-      - name: Enterprise IoT security
-        items:
-        - name: Securing IoT devices in the enterprise
-          href: /azure/defender-for-iot/organizations/concept-enterprise/
-        - name: Enable Enterprise IoT security with Defender for Endpoint
-          href: /azure/defender-for-iot/organizations/eiot-defender-for-endpoint/
-        - name: Manage Defender for IoT plans
-          href: /azure/defender-for-iot/organizations/manage-subscriptions-enterprise/
-      - name: Device discovery FAQ
-        href: device-discovery-faq.md  
+      - name: Manage device discovery
+        href: configure-device-discovery.md            
 
-    - name: Authenticated scans
-      items:
-      - name: Network devices
+      - name: Discover network devices (network scans)
         href: network-devices.md
-      - name: Windows authenticated scan
-        href: /defender-vulnerability-management/windows-authenticated-scan
-
+      - name: Device discovery FAQ
+        href: device-discovery-faq.md
     - name: Devices
-      items:
+      items:      
       - name: Device inventory
         href: machines-view-overview.md
       - name: Exclude devices
         href: exclude-devices.md
-      - name: Identifying transient devices
+      - name: Identify transient devices
         href: transient-device-tagging.md
       - name: Collect custom device data
         items:
@@ -640,7 +625,7 @@
         href: internet-facing-devices.md
       - name: Device timeline
         href: device-timeline-event-flag.md
-      - name: Manage device group and tags
+      - name: Manage device groups and tags
         href: machine-tags.md
 
     - name: Tamper resiliency
@@ -803,11 +788,9 @@
         href: configure-real-time-protection-microsoft-defender-antivirus.md
       - name: Configure remediation for Microsoft Defender Antivirus detections
         href: configure-remediation-microsoft-defender-antivirus.md
-      - name: Configure Microsoft Defender Antivirus scans
+      - name: About scheduled Microsoft Defender Antivirus scans
         href: schedule-antivirus-scans.md
         items:
-        - name: Schedule scans using Intune
-          href: schedule-antivirus-scans-intune.md
         - name: Schedule scans using Group Policy
           href: schedule-antivirus-scans-group-policy.md
         - name: Schedule scans using PowerShell
@@ -984,8 +967,6 @@
         href: sandbox-mdav.md
       - name: Early Launch Antimalware (ELAM) and Microsoft Defender Antivirus
         href: elam-on-mdav.md
-      - name: Hardware acceleration and Microsoft Defender Antivirus
-        href:  hardware-acceleration-and-mdav.md
         
     - name: Address false positives/negatives in Microsoft Defender for Endpoint
       href: defender-endpoint-false-positives-negatives.md
@@ -1030,7 +1011,7 @@
         - name: Review alerts
           href: review-alerts.md
         - name: Manage alerts
-          href: manage-alerts.md
+          href: /defender-xdr/investigate-alerts?toc=/defender-endpoint/TOC.json&bc=/defender-endpoint/breadcrumb/toc.json
         - name: Investigate alerts
           href: investigate-alerts.md
         - name: Review and manage detected threats
@@ -1072,7 +1053,11 @@
           - name: Contain devices from the network
             href: respond-machine-alerts.md#contain-devices-from-the-network
           - name: Contain user from the network
-            href: respond-machine-alerts.md#contain-user-from-the-network          
+            href: respond-machine-alerts.md#contain-user-from-the-network
+          - name: Automatically apply GPO hardening (predictive shielding)
+            href: respond-machine-alerts.md#gpo-hardening
+          - name: Automatically apply Safeboot hardening (predictive shielding)
+            href: respond-machine-alerts.md#safeboot-hardening                     
           - name: Consult a threat expert
             href: respond-machine-alerts.md#consult-a-threat-expert
           - name: Check activity details in Action center
@@ -1203,7 +1188,7 @@
 
           - name: Alert
             items:
-            - name: Alert methods and properties
+            - name: Alert properties
               href: api/alerts.md
             - name: List alerts
               href: api/get-alerts.md
@@ -1241,7 +1226,7 @@
 
           - name: Authenticated scan
             items:
-            - name: Authenticated scan methods and properties
+            - name: Authenticated scan properties
               href: api/get-authenticated-scan-properties.md
             - name: Get all scan definitions
               href: api/get-all-scan-definitions.md
@@ -1265,7 +1250,7 @@
 
           - name: Automated investigation
             items:
-            - name: Investigation methods and properties
+            - name: Investigation properties
               href: api/investigation.md
             - name: List Investigation
               href: api/get-investigation-collection.md
@@ -1297,7 +1282,7 @@
 
           - name: File
             items:
-            - name: File methods and properties
+            - name: File properties
               href: api/files.md
             - name: Get file information
               href: api/get-file-information.md
@@ -1310,12 +1295,12 @@
 
           - name: Indicators
             items:
-            - name: Indicators methods and properties
+            - name: Indicators properties
               href: api/ti-indicator.md
             - name: List Indicators
               href: api/get-ti-indicators-collection.md
             - name: Submit Indicator
-              href: api/ti-indicator.md
+              href: api/post-ti-indicator.md
             - name: Import Indicator
               href: api/import-ti-indicators.md
             - name: Delete Indicator
@@ -1337,7 +1322,7 @@
 
           - name: Live response library
             items:
-            - name: Live response library methods and properties
+            - name: Live response library properties
               href: live-response-library-methods.md
             - name: List library files
               href: api/list-library-files.md
@@ -1348,7 +1333,7 @@
 
           - name: Machine
             items:
-            - name: Machine methods and properties
+            - name: Machine properties
               href: api/machine.md
             - name: List machines
               href: api/get-machines.md
@@ -1383,7 +1368,7 @@
 
           - name: Machine Action
             items:
-            - name: Machine Action methods and properties
+            - name: Machine Action properties
               href: api/machineaction.md
             - name: List Machine Actions
               href: api/get-machineactions-collection.md
@@ -1416,7 +1401,7 @@
 
           - name: Recommendation
             items:
-            - name: Recommendation methods and properties
+            - name: Recommendation properties
               href: api/recommendation.md
             - name: List all recommendations
               href: api/get-all-recommendations.md
@@ -1431,7 +1416,7 @@
 
           - name: Remediation activity
             items:
-            - name: Remediation activity methods and properties
+            - name: Remediation activity properties
               href: api/get-remediation-methods-properties.md
             - name: Get one remediation activity by ID
               href: api/get-remediation-one-activity.md
@@ -1442,7 +1427,7 @@
 
           - name: Score
             items:
-            - name: Score methods and properties
+            - name: Score properties
               href: api/score.md
             - name: List exposure score by machine group
               href: api/get-machine-group-exposure-score.md
@@ -1462,7 +1447,7 @@
 
           - name: Software
             items:
-            - name: Software methods and properties
+            - name: Software properties
               href: api/software.md
             - name: List software
               href: api/get-software.md
@@ -1478,8 +1463,6 @@
               href: api/get-missing-kbs-software.md
           - name: User
             items:
-            - name: User methods
-              href: api/user.md
             - name: Get user related alerts
               href: api/get-user-related-alerts.md
             - name: Get user related machines
@@ -1487,7 +1470,7 @@
 
           - name: Vulnerability
             items:
-            - name: Vulnerability methods and properties
+            - name: Vulnerability properties
               href: api/vulnerability.md
             - name: List vulnerabilities
               href: api/get-all-vulnerabilities.md
@@ -1619,7 +1602,12 @@
          href: malware/worms-malware.md
     - name: Understand threat intelligence concepts
       href: threat-indicator-concepts.md
-      
+    - name: Release notes archive      
+      items: 
+      - name: What's new archive
+        href: whats-new-mde-archive.md
+      - name: Release notes archive
+        href: release-notes-mde-archive.md
   - name: Microsoft Defender XDR docs
     items:
     - name: Microsoft Defender XDR

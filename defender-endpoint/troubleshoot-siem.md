@@ -3,8 +3,8 @@ title: Troubleshoot SIEM tool integration issues in Microsoft Defender for Endpo
 description: Troubleshoot issues that might arise when using SIEM tools with Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -37,17 +37,17 @@ If your client secret expires or if you've misplaced the copy provided when you 
 
 1. Log in to the [Azure management portal](https://portal.azure.com).
 
-2. Select **Microsoft Entra ID**.
+1. Select **Microsoft Entra ID**.
 
-3. Select your tenant.
+1. Select your tenant.
 
-4. Click **App registrations**. Then in the applications list, select the application.
+1. Click **App registrations**. Then in the applications list, select the application.
 
-5. Select **Certificates & Secrets** section, Click on New Client Secret, then provide a description and specify the validity duration.
+1. Select **Certificates & Secrets** section, Click on New Client Secret, then provide a description and specify the validity duration.
 
-6. Click **Save**. The key value is displayed.
+1. Click **Save**. The key value is displayed.
 
-7. Copy the value and save it in a safe place.
+1. Copy the value and save it in a safe place.
 
 ## Error when getting a refresh access token
 
@@ -55,18 +55,18 @@ If you encounter an error when trying to get a refresh token when using the thre
 
 1. Log in to the [Azure management portal](https://ms.portal.azure.com).
 
-2. Select **Microsoft Entra ID**.
+1. Select **Microsoft Entra ID**.
 
-3. Select your tenant.
+1. Select your tenant.
 
-4. Click **App Registrations**. Then in the applications list, select the application.
+1. Click **App Registrations**. Then in the applications list, select the application.
 
-5. Add the following URL:
+1. Add the following URL:
    - For the European Union: `https://winatpmanagement-eu.securitycenter.windows.com/UserAuthenticationCallback`
    - For the United Kingdom: `https://winatpmanagement-uk.securitycenter.windows.com/UserAuthenticationCallback`
    - For the United States:  `https://winatpmanagement-us.securitycenter.windows.com/UserAuthenticationCallback`.
 
-6. Click **Save**.
+1. Click **Save**.
 
 ## Error while enabling the SIEM connector application
 
@@ -79,5 +79,5 @@ If you encounter an error when trying to enable the SIEM connector application, 
 - [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview)
 
 - [Pull detections to your SIEM tools](configure-siem.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

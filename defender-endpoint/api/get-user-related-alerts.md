@@ -2,12 +2,12 @@
 title: Get user-related alerts API
 description: Retrieve a collection of alerts related to a given user ID using Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -15,22 +15,13 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 11/16/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
-
 ---
+
 # Get user-related alerts API
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## API description
 
@@ -38,26 +29,23 @@ Retrieves a collection of alerts related to a given user ID.
 
 ## Limitations
 
-1. Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
+Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
 
+When obtaining a token using user credentials:
+
+- The user needs to have at least the following role permission: 'View Data.' For more information, see: [Create and manage roles](../user-roles.md).
+- Response includes only alerts, associated with devices, that the user have access to, based on device group settings. For more information, see: [Create and manage device groups](../machine-groups.md).
+
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Alert.Read.All|'Read all alerts'
-Application|Alert.ReadWrite.All|'Read and write all alerts'
-Delegated (work or school account) | Alert.Read | 'Read alerts'
-Delegated (work or school account) | Alert.ReadWrite | 'Read and write alerts'
-
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - The user needs to have at least the following role permission: 'View Data.' For more information, see [Create and manage roles](../user-roles.md).
-> - Response includes only alerts, associated with devices, that the user have access to, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information)
->
-> Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2. 
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Alert.Read.All|'Read all alerts'|
+|Application|Alert.ReadWrite.All|'Read and write all alerts'|
+|Delegated (work or school account)|Alert.Read|'Read alerts'|
+|Delegated (work or school account)|Alert.ReadWrite|'Read and write alerts'|
 
 ## HTTP request
 
@@ -69,9 +57,9 @@ GET /api/users/{id}/alerts
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization | String | Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -88,7 +76,5 @@ If successful and user exists - 200 OK. If the user doesn't exist - 200 OK with 
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/users/user1/alerts
+GET https://api.security.microsoft.com/api/users/user1/alerts
 ```
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

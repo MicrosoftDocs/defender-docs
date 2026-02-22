@@ -4,8 +4,8 @@ description: Learn how to use the client analyzer to collect data for complex tr
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: bagol
-author: batamig
+ms.author: chrisda
+author: chrisda
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
 manager: bagol
@@ -76,5 +76,5 @@ That same flag can be used with `MDEClientAnalyzer.cmd` to avoid a prompt to the
 
 When using `MDEClientAnalyzer.cmd`, the script checks for privileges using `net session`, which requires the service `Server` to be running. If it's not, you'll get the error message _Script is running with insufficient privileges_. Run it with administrator privileges if ECHO is off.
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

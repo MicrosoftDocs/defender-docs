@@ -8,8 +8,8 @@ ms.localizationpriority: medium
 ms.date: 10/20/2025
 audience: ITPro
 ms.topic: how-to
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 ms.custom: 
 - nextgen
 - admindeeplinkDEFENDER
@@ -64,9 +64,9 @@ appliesto:
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 
-2. Choose **Settings** \> **Endpoints**.
+1. Choose **Settings** \> **Endpoints**.
 
-3. Go to **General** \> **Advanced features**, and then turn tamper protection on.
+1. Go to **General** \> **Advanced features**, and then turn tamper protection on.
 
 ## Important points to keep in mind
 
@@ -86,5 +86,5 @@ appliesto:
 - [What happens when tamper protection is turned on?](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on)
 - [Troubleshoot problems with tamper protection](troubleshoot-problems-with-tamper-protection.yml)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

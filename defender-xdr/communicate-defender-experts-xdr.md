@@ -40,7 +40,7 @@ When an incident requires your attention, such as the incidents our experts issu
 
 The **Chat** tab within the Microsoft Defender portal provides you with a space to engage with our experts and further understand the incident, our investigation, and the required actions we provided. You could ask about a malicious executable, malicious attachment, information about activity groups, advanced hunting queries, or any other information that would assist you with the incident resolution.
 
-:::image type="content" source="/defender/media/xdr/in-portal-xdr-chat.png" alt-text="Screenshot of managed response in-portal chat." lightbox="/defender/media/xdr/in-portal-xdr-chat.png":::
+:::image type="content" source="media/communicate-defender-experts-xdr/in-portal-xdr-chat.png" alt-text="Screenshot of managed response in-portal chat." lightbox="media/communicate-defender-experts-xdr/in-portal-xdr-chat.png":::
 
 ### Teams chat
 
@@ -48,7 +48,7 @@ Apart from using the in-portal chat, you can also engage in real-time chat conve
 
 Once you turn on chat on Teams, a new team named **Defender Experts team** is created and the Defender Experts Teams app is installed in it. Each incident that requires your attention is posted on this team's **Managed response** channel as a new post. To engage with our experts (for example, ask follow-up questions about the investigation summary or actions published by Defender Experts), use the **Reply** text bar and type your message. If you have issues setting up the Defender Experts channel or tagging @*Defender Experts*, see [troubleshooting Defender Experts app permissions in Microsoft Teams](../defender-xdr/teams-restrictions-dexapp.md).
 
-:::image type="content" source="/defender/media/xdr/teams-chat-managed-response-01.png" alt-text="Screenshot of managed response teams channel." lightbox="/defender/media/xdr/teams-chat-managed-response-01.png":::
+:::image type="content" source="media/communicate-defender-experts-xdr/teams-chat-managed-response-01.png" alt-text="Screenshot of managed response teams channel." lightbox="media/communicate-defender-experts-xdr/teams-chat-managed-response-01.png":::
 
 **Important reminders when using the Teams chat:**
 
@@ -80,14 +80,14 @@ In break-glass scenarios or matters that require immediate attention (for exampl
 
 While the previous scenarios involve our experts initiating communication with you, you can also request advanced threat expertise on demand by selecting **Ask Defender Experts** directly inside the Microsoft Defender portal. [Learn more](experts-on-demand.md)
 
-## Collaborating with your service delivery manager
+## Collaborating with your Security Delivery Expert (SDX)
 
-The service delivery manager (SDM) is responsible for managing the overall relationship for your organization with the Defender Experts for XDR service. They are your trusted advisor working along with XDR experts' team to help you protect your organization.
+The Security Delivery Expert (SDX) is responsible for managing the overall relationship for your organization with the Defender Experts for XDR service. They are your trusted advisor working along with XDR experts' team to help you protect your organization.
 
 > [!NOTE]
-> Service delivery managers are included if your Defender Experts for XDR service is licensed for 500 or more seats.
+> Security Delivery Experts are included if your Defender Experts for XDR service is licensed for 500 or more seats.
 
-The SDM provides the following services:
+The SDX provides the following services:
 
 - Service readiness support
   - Educate customers about the end-to-end service experience, from signup to regular operations and escalation process.
@@ -96,7 +96,7 @@ The SDM provides the following services:
   - Provide tailored service delivery content and reporting, including periodic business reviews.
   - Serve as a single point of contact for feedback and escalations related to Defender Experts Service.
 
-The SDM engages with your identified **service review contacts**. [Learn more about adding contact persons or groups for service review and delivery](get-started-xdr.md#tell-us-who-to-contact-for-important-matters)
+The SDX engages with your identified **service review contacts**. [Learn more about adding contact persons or groups for service review and delivery](get-started-xdr.md#tell-us-who-to-contact-for-important-matters)
 
 ### See also
 

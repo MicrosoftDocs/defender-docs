@@ -31,7 +31,7 @@ For Defender Experts for XDR reports instructions, check out this short video.
 
 > [!VIDEO https://www.youtube.com/embed/Ymm6g_Eis34]
 
-Microsoft Defender Experts for XDR includes an interactive, on-demand report that provides a clear summary of the work our expert analysts are doing on your behalf, aggregate information about your incident landscape, and granular details about specific incidents. Your service delivery manager (SDM) also uses the report to provide you with more context regarding the service during a monthly business review.
+Microsoft Defender Experts for XDR includes an interactive, on-demand report that provides a clear summary of the work our expert analysts are doing on your behalf, aggregate information about your incident landscape, and granular details about specific incidents. Your Security Delivery Expert (SDX) also uses the report to provide you with more context regarding the service during a monthly business review.
 
 :::image type="content" source="media/defender-xdr-report.png" alt-text="Screenshot of the Report overview tab in Defender Experts for XDR report." lightbox="media/defender-xdr-report.png":::
 
@@ -87,13 +87,13 @@ This section also displays a table with a list of incident titles and their corr
  
 The **Trends** tab of the report provides you with the monthly volume of investigated and resolved incidents for the last six months, visualized according to the incidents' severity, MITRE tactic, and threat type. The trends section gives you insight into how Defender Experts are tangibly improving your security operations by showing important operational metrics on a month-over-month basis.
 
-:::image type="content" source="media/xdr-report-trends.png" alt-text="Screenshot of the Trends tab in Defender Experts for XDR report." lightbox="media/xdr-report-trends.png":::
+:::image type="content" source="media/reports-xdr/xdr-report-trends.png" alt-text="Screenshot of the Trends tab in Defender Experts for XDR report." lightbox="media/reports-xdr/xdr-report-trends.png":::
 
 The visualizations are respectively displayed in the **Incidents by severity**, **Incidents by MITRE tactic**, and **Incidents by classification** sections. For each section, you can filter data according to the different incident types (true positive, false positive, and informational) by selecting their corresponding options in the **Select incident type** dropdown box. The **Incidents by severity** and **Incidents by MITRE tactic** sections also have the **View selected incidents** button, which you can select to get a filtered view of the incident queue based on the selections you made in each of these sections.
 
 The **Trends** tab also has the **Managed response task completion and efficiency** widget, which shows the monthly volume of managed response tasks your team completed each month, along with the median time it took your team to complete those tasks. This widget helps identify any spikes in your team's response efficacy and efficiency, which is increasingly important as attackers continue to decrease the time between initial access and lateral movement. 
 
-:::image type="content" source="media/xdr-report-manage-response-task.png" alt-text="Screenshot of the Managed response task completion and efficiency widget in Defender Experts for XDR report." lightbox="media/xdr-report-manage-response-task.png":::
+:::image type="content" source="media/reports-xdr/xdr-report-manage-response-task.png" alt-text="Screenshot of the Managed response task completion and efficiency widget in Defender Experts for XDR report." lightbox="media/reports-xdr/xdr-report-manage-response-task.png":::
 
 ## See also
 

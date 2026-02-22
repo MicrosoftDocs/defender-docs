@@ -5,8 +5,8 @@ search.appverid: met150
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -17,33 +17,26 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-ms.date: 04/17/2024
+ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint
-
 ---
+
 # Upload files to the live response library
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-[!include[Prerelease information](../../includes/prerelease.md)]
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp?ocid=docs-wdatp-exposedapis-abovefoldlink)
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 ## API description
 
 Upload file to live response library.
 
+> [!TIP]
+> You can also upload live response files from the [Library management](../configure-libraries-live-response.md) page in the Microsoft Defender portal.
+
 ## Limitations
 
-1. File max size limitation is 20MB.
-
-2. Rate limitations for this API are 100 calls per minute and 1500 calls per
+- File max size limitation is 20MB.
+- Rate limitations for this API are 100 calls per minute and 1500 calls per
     hour.
 
 ## Permissions
@@ -51,10 +44,10 @@ Upload file to live response library.
 One of the following permissions is required to call this API. To learn more,
 including how to choose permissions, see [Get started](apis-intro.md).
 
-| Permission type                    | Permission     | Permission display name        |
-|------------------------------------|----------------|--------------------------------|
-| Application                        | Library.Manage | Manage live response library |
-| Delegated (work or school account) | Library.Manage | Manage live response library |
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Library.Manage|Manage live response library|
+|Delegated (work or school account)|Library.Manage|Manage live response library|
 
 ## HTTP request
 
@@ -66,21 +59,21 @@ POST https://api.security.microsoft.com/api/libraryfiles
 
 ## Request headers
 
-|  Name   |    Type    |       Description                         |
-|-----------------|--------|--------------------------------|
-| Authorization   | String | Bearer\<token>. Required.      |
-| Content-Type    | string | multipart/form-data. Required. |
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer\<token>. Required.|
+|Content-Type|string|multipart/form-data. Required.|
 
 ## Request body
 
 In the request body, supply a form-data object with the following parameters:
 
-| Parameter         |     Type         |       Description                                        |
-|-----------------------|--------------|------------------------------------------------------------|
-| File                  | File content | The file to be uploaded to live response library.Required |
-| Description           | String       | Description of the file.                                  |
-| ParametersDescription | String       | (Optional) Parameters required for the script to run. Default value is an empty string.                |
-| OverrideIfExists      | Boolean      | (Optional) Whether to override the file if it already exists. Default value is an empty string.          |
+|Parameter|Type|Description|
+|---|---|---|
+|File|File content|The file to be uploaded to live response library.Required|
+|Description|String|Description of the file.|
+|ParametersDescription|String|(Optional) Parameters required for the script to run. Default value is an empty string.|
+|OverrideIfExists|Boolean|(Optional) Whether to override the file if it already exists. Default value is an empty string.|
 
 ## Response
 
@@ -103,9 +96,3 @@ curl -X POST https://api.security.microsoft.com/api/libraryfiles -H
 -F "HasParameters=true" -F "OverrideIfExists=true" -F "Description=test
 description"
 ```
-
-## Related topic
-
-- [Run live response](run-live-response.md) 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

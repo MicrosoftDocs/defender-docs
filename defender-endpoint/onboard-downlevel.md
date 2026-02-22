@@ -41,11 +41,13 @@ To onboard down-level Windows client endpoints to Defender for Endpoint, you can
 **Defender endpoint security solution**
 
 - Windows 7 SP1 Pro
+- Windows 7 SP1 Enterprise
 - Windows Server 2008 R2 SP1
 
 **MMA/SCEP**
 
 - Windows 7 SP1 Pro
+- Windows 7 SP1 Enterprise
 - Windows 8.1 Pro
 - Windows 8.1
 - Windows Server 2008 R2 SP1
@@ -91,7 +93,7 @@ Review the following details to verify minimum system requirements:
     > [!NOTE]
     > Installation of .NET 4.5 might require you to restart your computer after installation.
 
-- Meet the Azure Log Analytics agent minimum system requirements. For more information, see [Collect data from computers in you environment with Log Analytics](/azure/log-analytics/log-analytics-concept-hybrid#prerequisites)
+- Meet the Azure Log Analytics agent minimum system requirements. For more information, see [Collect data from computers in your environment with Log Analytics](/azure/log-analytics/log-analytics-concept-hybrid#prerequisites)
 
 ### Installation steps
 
@@ -100,12 +102,12 @@ Review the following details to verify minimum system requirements:
    > [!NOTE]
    > Due to the [deprecation of SHA-1 support by the MMA agent](/azure/azure-monitor/agents/agent-windows#sha-2-code-signing-support-requirement), the MMA agent needs to be version 10.20.18029 or newer.
 
-2. Obtain the workspace ID:
+1. Obtain the workspace ID:
    - In the Defender for Endpoint navigation pane, select **Settings > Device management > Onboarding**.
    - Select the operating system.
    - Copy the workspace ID and workspace key.
 
-3. Using the Workspace ID and Workspace key choose any of the following installation methods to install the agent:
+1. Using the Workspace ID and Workspace key choose any of the following installation methods to install the agent:
     - [Manually install the agent using setup](/previous-versions/azure/azure-monitor/agents/agent-windows?tabs=setup-wizard#install-the-agent).
 
       On the **Agent Setup Options** page, select **Connect the agent to Azure Log Analytics (OMS)**
@@ -116,7 +118,7 @@ Review the following details to verify minimum system requirements:
    > [!NOTE]
    > If you're a [US Government customer](gov.md), under "Azure Cloud", you need to choose "Azure US Government" if using the setup wizard, or if using a command line or a script - set the "OPINSIGHTS_WORKSPACE_AZURE_CLOUD_TYPE" parameter to 1.
 
-4. If you're using a proxy to connect to the Internet see the Configure proxy and Internet connectivity settings section.
+1. If you're using a proxy to connect to the Internet see the Configure proxy and Internet connectivity settings section.
 
 Once completed, you should see onboarded endpoints in the portal within an hour.
 
@@ -146,11 +148,11 @@ Once completed, you should see onboarded Windows servers in the portal within an
 
 1. In the Microsoft Defender XDR navigation pane, select **Settings** > **Endpoints** > **Device management** > **Onboarding**.
 
-2. Select **Windows Server 2008 R2 SP1** as the operating system.
+1. Select **Windows Server 2008 R2 SP1** as the operating system.
 
-3. Select **Onboard Servers in Microsoft Defender for Cloud**.
+1. Select **Onboard Servers in Microsoft Defender for Cloud**.
 
-4. Follow the onboarding instructions in [Microsoft Defender for Endpoint with Microsoft Defender for Cloud](/azure/security-center/security-center-wdatp) and If you're using Azure ARC, follow the onboarding instructions in [Enabling the Microsoft Defender for Endpoint integration](/azure/security-center/security-center-wdatp#enabling-the-microsoft-defender-for-endpoint-integration).
+1. Follow the onboarding instructions in [Microsoft Defender for Endpoint with Microsoft Defender for Cloud](/azure/security-center/security-center-wdatp) and If you're using Azure ARC, follow the onboarding instructions in [Enabling the Microsoft Defender for Endpoint integration](/azure/security-center/security-center-wdatp#enabling-the-microsoft-defender-for-endpoint-integration).
 
 After completing the onboarding steps, you'll need to [Configure and update System Center Endpoint Protection clients](#configure-and-update-system-center-endpoint-protection-clients).
 
@@ -212,7 +214,7 @@ Follow the steps in [Run a detection test on a newly onboarded device](run-detec
     > [!NOTE]
     > This article assumes you're using x64-based servers (MMA Agent .exe x64 New SHA-2 compliant version).
 
-**Step 2: Create a file name DeployMMA.cmd (using notepad)**
+**Step 2: Create a file named DeployMMA.cmd (using notepad)**
 Add the following lines to the cmd file. Note that you'll need your WORKSPACE ID and KEY.
 
 The following command is an example. Replace the following values:
@@ -321,7 +323,7 @@ You can use either of the following methods:
 
 1. In the **Microsoft Monitoring Agent Properties**, select the **Azure Log Analytics (OMS)** tab.
 
-2. Select the Defender for Endpoint workspace, and select **Remove**.
+1. Select the Defender for Endpoint workspace, and select **Remove**.
 
     :::image type="content" source="media/atp-mma.png" alt-text="Screenshot of the Workspaces pane." lightbox="media/atp-mma.png":::
 
@@ -332,7 +334,7 @@ You can use either of the following methods:
    1. In the navigation pane, select **Settings** > **Onboarding**.
    1. Select the relevant operating system and get your Workspace ID.
 
-2. Open an elevated PowerShell and run the following command. Use the Workspace ID you obtained and replacing `WorkspaceID`:
+1. Open an elevated PowerShell and run the following command. Use the Workspace ID you obtained and replacing `WorkspaceID`:
 
     ```powershell
     $AgentCfg = New-Object -ComObject AgentConfigManager.MgmtSvcCfg
@@ -344,4 +346,4 @@ You can use either of the following methods:
     $AgentCfg.ReloadConfiguration()
     ```
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

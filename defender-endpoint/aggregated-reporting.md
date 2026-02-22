@@ -2,8 +2,8 @@
 title: Aggregated reporting in Microsoft Defender for Endpoint
 description: Learn how you collect important telemetry in Microsoft Defender for Endpoint by turning on aggregated reporting.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -33,7 +33,6 @@ When aggregated reporting is turned on, you can query for a summary of all suppo
 The following requirements must be met before turning on aggregated reporting:
 
 - Permissions to enable advanced features
-
 
 ### Supported operating systems: 
 
@@ -75,13 +74,13 @@ Aggregated reporting supports the following event types:
 To query new data with aggregated reports:
 
 1. Go to **Investigation & response > Hunting > Custom detection rules**.
-2. Review and modify [existing rules and queries](/defender-xdr/custom-detection-rules) that might be affected by aggregated reporting.
-3. When necessary, create new custom rules to incorporate new action types.
-4. Go to the **Advanced Hunting** page and query the new data.
+1. Review and modify [existing rules and queries](/defender-xdr/custom-detection-rules) that might be affected by aggregated reporting.
+1. When necessary, create new custom rules to incorporate new action types.
+1. Go to the **Advanced Hunting** page and query the new data.
 
-   Here is an example of advanced hunting query results with aggregated reports.
+    Here is an example of advanced hunting query results with aggregated reports.
 
-   :::image type="content" source="/defender-endpoint/media/reports/aggregated-reporting/sample-results-aggregated-reports-small.png" alt-text="Screenshot of advanced hunting query results with aggregated reports." lightbox="/defender-endpoint/media/reports/aggregated-reporting/sample-results-aggregated-reports.png":::
+      :::image type="content" source="/defender-endpoint/media/reports/aggregated-reporting/sample-results-aggregated-reports-small.png" alt-text="Screenshot of advanced hunting query results with aggregated reports." lightbox="/defender-endpoint/media/reports/aggregated-reporting/sample-results-aggregated-reports.png":::
 
 ## Sample advanced hunting queries
 

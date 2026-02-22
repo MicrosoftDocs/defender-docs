@@ -2,8 +2,8 @@
 title: Trial user guide - Microsoft Defender for Endpoint
 description: Use this guide to get the most of your 90-day free trial. See how Defender for Endpoint can help prevent, detect, investigate, and respond to advanced threats.
 search.appverid: MET150 
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 manager: bagol 
 audience: ITPro
 ms.topic: how-to
@@ -61,11 +61,11 @@ This playbook is a simple guide to help you make the most of your free trial. Us
 ## Set up your trial
 
 1. [Confirm your license state](#step-1-confirm-your-license-state).
-2. [Set up role-based access control and grant permissions to your security team](#step-2-set-up-role-based-access-control-and-grant-permissions-to-your-security-team).
-3. [Visit the Microsoft Defender portal](#step-3-visit-the-microsoft-365-defender-portal).
-4. [Onboard endpoints using any of the supported management tools](#step-4-onboard-endpoints-using-any-of-the-supported-management-tools).
-5. [Configure capabilities](#step-5-configure-capabilities).
-6. [Visit the Microsoft Defender portal](#step-6-visit-the-microsoft-defender-portal).
+1. [Set up role-based access control and grant permissions to your security team](#step-2-set-up-role-based-access-control-and-grant-permissions-to-your-security-team).
+1. [Visit the Microsoft Defender portal](#step-3-visit-the-microsoft-365-defender-portal).
+1. [Onboard endpoints using any of the supported management tools](#step-4-onboard-endpoints-using-any-of-the-supported-management-tools).
+1. [Configure capabilities](#step-5-configure-capabilities).
+1. [Visit the Microsoft Defender portal](#step-6-visit-the-microsoft-defender-portal).
 
 ## Step 1: Confirm your license state
 
@@ -99,9 +99,9 @@ The Microsoft Defender portal ([https://security.microsoft.com](https://security
 
 1. [Review what to expect](/defender-xdr/microsoft-365-defender-portal) in the Microsoft Defender portal.
 
-2. Go to [https://security.microsoft.com](https://security.microsoft.com) and sign in.
+1. Go to [https://security.microsoft.com](https://security.microsoft.com) and sign in.
 
-3. In the navigation pane, see the **Endpoints** section to access your capabilities. 
+1. In the navigation pane, see the **Endpoints** section to access your capabilities. 
 
 ## Step 4: Onboard endpoints using any of the supported management tools 
 
@@ -109,7 +109,7 @@ This section outlines the general steps you to onboard devices (endpoints).
 
 1. [Watch this video](https://learn-video.azurefd.net/vod/player?id=2524ee5d-6a5f-482c-8f69-dc3792577c60) for a quick overview of the onboarding process and learn about the available tools and methods.
 
-2. Review your [device onboarding tool options](onboarding.md) and select the most appropriate option for your environment. 
+1. Review your [device onboarding tool options](onboarding.md) and select the most appropriate option for your environment. 
 
 ## Step 5: Configure capabilities 
 
@@ -132,4 +132,4 @@ The Microsoft Defender portal ([https://security.microsoft.com](https://security
 - [Microsoft Security technical content library](https://www.microsoft.com/security/content-library/Home/Index)
 - [Defender for Endpoint demonstration](https://cdx.transform.microsoft.com/experience-detail/d5eca65d-13a3-464d-9171-c24cf9dd6050)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -3,8 +3,8 @@ title: Behavior Monitoring demonstration
 description: Behavior Monitoring demonstration
 ms.service: defender-endpoint
 ms.subservice: ngp
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 ms.reviewer: yonghree
 ms.localizationpriority: medium
 manager: bagol
@@ -136,15 +136,15 @@ To demonstrate how Behavior Monitoring blocks a payload:
    sleep 5
    ```
 
-2. Save as `BM_test.sh`.
+1. Save as `BM_test.sh`.
 
-3. Run the following command to make the bash script executable:
+1. Run the following command to make the bash script executable:
 
    ```bash
    sudo chmod u+x BM_test.sh
    ```
 
-4. Run the bash script:
+1. Run the bash script:
 
    ```bash
    sudo bash BM_test.sh
