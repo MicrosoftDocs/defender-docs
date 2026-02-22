@@ -807,10 +807,10 @@
           - name: Common questions 
             href: common-questions-microsoft-defender-vulnerability-management.md
       - name: Antimalware
-        displayName: anti-malware, containers, antimalware
+        displayName: antimalware, containers,
         href: anti-malware.md
-      - name: Binary drift detection and block
-        displayName: k8s, containers, aks, block, binary, drift, detection
+      - name: Binary drift detection and blocking
+        displayName: k8s, containers, aks, block, binary, drift, detection, blocking
         href: binary-drift-detection.md
       - name: Kubernetes data plane hardening
         displayName: k8s, containers, aks
