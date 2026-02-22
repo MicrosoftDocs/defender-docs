@@ -826,10 +826,16 @@
               - name: Overview
                 href: runtime-gated-overview.md
               - name: Enable gated deployment
+                displayName: gated deployment, enable
                 href: enablement-guide-runtime-gated.md
+              - name: Gated deployment for Infrastructure as Code
+                displayName: gated deployment, infrastructure as code, IaC
+                href: gated-deployment-infrastructure-as-code.md
               - name: Troubleshooting
+                displayName: troubleshooting, gated deployment
                 href: troubleshooting-runtime-gated.md
               - name: Frequently asked questions
+                displayName: faq, frequently asked questions, gated deployment
                 href: faq-runtime-gated.md
       - name: Protect clusters with AKS Security Dashboard
         displayName: k8s, containers
