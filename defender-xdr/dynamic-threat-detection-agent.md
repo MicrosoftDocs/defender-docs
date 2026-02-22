@@ -26,13 +26,16 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+> [!Note]
+> Microsoft Security Copilot Dynamic Threat Detection Agent is currently in public preview. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+
 [Microsoft Security Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md) includes the Dynamic Threat Detection Agent, an always-on, adaptive backend service that uncovers hidden threats across Defender and Microsoft Sentinel environments. This article provides an overview of the agent, including steps to use it when investigating incidents and alerts.
 
 ## Overview
 
 Security teams often face the risk of false negatives—threats that go undetected by traditional, rule-based detection systems. The Dynamic Threat Detection Agent uses AI to identify gaps and uncover false negatives by correlating alerts, events, anomalies, and threat intelligence. When the agent identifies a gap, it generates a dynamic alert with the full context in the alert details, including natural language explanations, mapped [MITRE ATT&CK techniques](https://attack.mitre.org/), and tailored remediation steps.
 
-The Dynamic Threat Detection Agent is always on, operates seamlessly in the Defender backend, and requires no setup or onboarding. These features and capabilities empower organizations to detect and respond to threats with greater speed, accuracy, and confidence.
+The Dynamic Threat Detection Agent is always on, operates seamlessly in the Defender backend, and requires no setup or onboarding. These features and capabilities empower organizations to detect and respond to threats with greater speed, accuracy, and confidence. 
 
 ### Key benefits
 
@@ -47,7 +50,7 @@ Users with access to Security Copilot can use the Dynamic Threat Detection Agent
 
 ## Start using the Dynamic Threat Detection Agent
 
-Like the other [available tools and methods](incidents-overview.md#tools-and-methods-for-investigation-and-response) in the Defender portal for investigation and response, the Threat Detection Agent helps with triage, investigation, and resolution of incidents.
+Like the other [available tools and methods](incidents-overview.md#tools-and-methods-for-investigation-and-response) in the Defender portal for investigation and response, the Threat Detection Agent helps with triage, investigation, and resolution of incidents. 
 
 The Dynamic Threat Detection Agent runs automatically in the background. When it generates an alert, the alert shows up in your incidents and alerts queues with **Security Copilot** as the **Detection source**.
 
@@ -59,8 +62,8 @@ To view more details about the alert, select the alert title. The Dynamic Threat
 
 >[!IMPORTANT]
 >
-> - The Dynamic Threat Detection agent consumes Security Compute Units (SCUs) and needs to be [configured accordingly](/copilot/security/get-started-security-copilot#security-compute-units).
-> - The summary and recommended actions are AI-generated, so review and verify them for accuracy.
+>- The Dynamic Threat Detection Agent is free to use during public preview. It starts to consume [Security Compute Units (SCUs)](/copilot/security/get-started-security-copilot#security-compute-units) when it becomes generally available.
+>- The summary and recommended actions are AI-generated, so review and verify them for accuracy.
 
 ## Next steps
 
