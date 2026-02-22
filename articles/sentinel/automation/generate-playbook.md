@@ -195,8 +195,7 @@ Configure integration profiles for any other third-party services your playbooks
 
 ### Step 2. Create a generated playbook
 
-1. Select the **Playbooks** tab.
-
+1. From the navigation bar, go to **Microsoft Sentinel** > **Automation**.
 1. Select **Create** > **Playbook Generator**.
 1. Enter a name for your playbook and select **Continue**.
 
