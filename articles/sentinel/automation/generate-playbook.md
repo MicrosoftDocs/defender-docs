@@ -16,7 +16,7 @@ ms.collection: usx-security
 
 # Generate playbooks using AI in Microsoft Sentinel (preview)
 
-The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. You describe automation logic in natural language, and the system generates validated, code-based playbooks with complete documentation and visual flow diagrams. This experience is powered by an embedded Visual Studio Code environment within the Defender portal, so you can author and refine playbooks without leaving the portal. Generated playbooks use USX alert data as input and dynamically generate the required API calls, as long as you configure the integration for the target provider.
+The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. You describe automation logic in natural language, and the system generates validated, code-based playbooks with complete documentation and visual flow diagrams. This experience is powered by an embedded Visual Studio Code environment within the Defender portal, so you can author and refine playbooks without leaving the portal. Generated playbooks use alert data as input and dynamically generate the required API calls, as long as you configure the integration for the target provider.
 
 This article describes how to generate playbooks by using AI, configure required integrations, and deploy your automation workflows.
 
@@ -118,13 +118,7 @@ This trigger mechanism enables automatic execution of generated playbooks across
 
 ## Generate a new playbook
 
-### Step 1. Access the playbook generator
-
-1. In the navigation bar, go to **Microsoft Sentinel** > **Automation**
-1. Select the **+Create** button on the top right
-1. Select **Playbook Generator** from the dropdown menu
-
-### Step 2. Create a Graph API integration profile and add any other required integrations you want to utilize
+### Step 1. Create a Graph API integration profile and add any other required integrations you want to utilize
 
 1. In the Azure portal, go to **Microsoft Entra ID** > **Manage** > **App registrations**.
 
@@ -199,7 +193,7 @@ Configure integration profiles for any other third-party services your playbooks
 > [!NOTE]
 > You can't change the API URL and authentication method after creation. You can only edit the integration name and description.
 
-### Step 3. Create a generated playbook
+### Step 2. Create a generated playbook
 
 1. Select the **Playbooks** tab.
 
@@ -337,6 +331,7 @@ The following are examples of prompts you can use to generate playbooks for comm
 
 - Create a playbook that enriches alert URL entities with VirusTotal
       data and adds the results as a comment to the related incident.
+- Create a playbook that blocks an AWS IAM user, assigns the alert to John, and adds a remediation comment when a high severity alert includes an IAM user entity.
 
 ## Limitations
 
