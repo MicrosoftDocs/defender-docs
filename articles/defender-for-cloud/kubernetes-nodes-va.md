@@ -34,7 +34,7 @@ If vulnerabilities are found for a Kubernetes node, a recommendation is generate
 1. Select the **Findings** tab to view a list of CVEs relating to the Kubernetes node.
 :::image type="content" source="media/kubernetes-nodes-va/recommendation-node-details-findings.png" alt-text="Screenshot of selecting the findings tab to view a list of CVEs related to the Kubernetes node." lightbox="media/kubernetes-nodes-va/recommendation-node-details-findings.png":::
 
-1. Selecting one of the CVE lines opens a pane giving full details about the CVE and all the Kubernetes node resources that also have this vulnerability.
+1. Selecting one of the CVE lines opens a pane giving full details about the CVE and all the Kubernetes node resources that also have this vulnerability.  
 :::image type="content" source="media/kubernetes-nodes-va/recommendation-node-cve-detail.png" alt-text="Screenshot of the pane showing all the details of the CVE and Kubernetes node resources affected." lightbox="media/kubernetes-nodes-va/recommendation-node-cve-details.png":::
 
 In the details pane, the **Node pool instances** section shows the nodes to be affected by the remediation. The **More affected resources** shows other nodes that have the same CVE and should be remediated as well.
