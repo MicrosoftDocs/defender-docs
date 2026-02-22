@@ -144,7 +144,7 @@ For more information, see the following articles:
 - [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md)
 - [Defender Antivirus cmdlets](/powershell/module/defender/index)
 
-## Use Windows Management Instruction (WMI) to manage the update location
+## Use Windows Management Instrumentation (WMI) to manage the update location
 
 Use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class for the following properties:
 
