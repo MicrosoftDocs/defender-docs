@@ -1,7 +1,7 @@
 ---
 title: Kubernetes Nodes Vulnerability Assessment
 description: Learn about Defender for Containers vulnerability assessment for Kubernetes nodes.
-ms.date: 11/15/2024
+ms.date: 02/22/2026
 ms.topic: concept-article
 ms.custom: sfi-image-nochange
 ---
@@ -48,7 +48,7 @@ Kubernetes node vulnerabilities are remediated by updating the node pool VM imag
 
 ### Upgrade the node pool VM image
 
-1. Select the `Fix` button in the recommendations pane.
+1. Select the **Fix** button in the recommendations pane.
 :::image type="content" source="media/kubernetes-nodes-va/recommendation-node-details-select-fix.png" alt-text="Screenshot showing the details of the recommendation for the Kubernetes node and the highlighted Fix button." lightbox="media/kubernetes-nodes-va/recommendation-node-details-select-fix.png":::
 
 1. To upgrade the node pool VM image, select the **Update Image** button or select **Upgrade Kubernetes** to upgrade the cluster Kubernetes service version.
