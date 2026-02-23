@@ -36,7 +36,7 @@ In addition to security threats, configuration errors might inadvertently expose
 
 To minimize the risk of security breaches and configuration errors, security teams employ a combination of posture management tools and workload protection tools. These tools ensure Azure Storage stays secure by providing visibility into early signs of breaches. They help prevent attacks and maintain secure configurations.
 
-Microsoft security researchers analyzed the attack surface of storage services. The potential security risks are described in the [threat matrix for cloud-based storage services](https://www.microsoft.com/security/blog/2021/04/08/threat-matrix-for-storage/), which are based on the [MITRE ATT&CK® framework](https://attack.mitre.org/techniques/enterprise/), a knowledge base for the tactics and techniques employed in cyber-attacks.
+Microsoft security researchers analyzed the attack surface of storage services. The potential security risks are described in the [threat matrix for cloud-based storage services](https://www.microsoft.com/security/blog/2021/04/08/threat-matrix-for-storage/), which are based on the [MITRE ATT&CK® framework](https://attack.mitre.org/techniques/enterprise/), a knowledge base for the tactics and techniques employed in cyber-attacks.
 
 For a comparison between malware scanning and hash reputation analysis, see [Understanding the differences between these methods](defender-for-storage-introduction.md#understand-the-differences-between-malware-scanning-and-hash-reputation-analysis).
 
@@ -65,7 +65,7 @@ Security alerts include details of the suspicious activity, relevant investigati
 
 ## Accelerated threat detection with Storage aggregated logs
 
-Storage aggregated logs in Defender XDR's Avanced Hunting give security teams a powerful way to spot patterns and anomalies across large volumes of storage activity. Instead of analyzing raw events one by one, the new `CloudStorageAggregatedEvents` table delivers summarized insights, such as spikes in failed operations, unusual authentication types, or suspicious access from unexpected locations, helping teams quickly identify potential threats and prioritize investigations. This capability reduces noise, accelerates detection, and strengthens protection for cloud storage at scale. This capability is included only in the new Defender for Storage per-storage account plan. For the full schema and field details, see the [CloudStorageAggregatedEvents reference table.](/defender-xdr/advanced-hunting-cloudstorageaggregatedevents-table)
+Storage aggregated logs in Defender XDR's Advanced Hunting give security teams a powerful way to spot patterns and anomalies across large volumes of storage activity. Instead of analyzing raw events one by one, the new `CloudStorageAggregatedEvents` table delivers summarized insights, such as spikes in failed operations, unusual authentication types, or suspicious access from unexpected locations, helping teams quickly identify potential threats and prioritize investigations. This capability reduces noise, accelerates detection, and strengthens protection for cloud storage at scale. This capability is included only in the new Defender for Storage per-storage account plan. For the full schema and field details, see the [CloudStorageAggregatedEvents reference table.](/defender-xdr/advanced-hunting-cloudstorageaggregatedevents-table)
 
 ## Related content
 

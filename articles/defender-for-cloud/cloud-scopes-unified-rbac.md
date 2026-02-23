@@ -83,10 +83,10 @@ Relationship to unified RBAC:
 
 Planning guidance:
 
-1. Start coarse (major org / region boundaries).
-1. Validate operational ownership and review cadence.
-1. Introduce finer scopes only when risk, confidentiality, or compliance requires it.
-1. Document purpose and owner for each scope to support lifecycle and audit.
+- Start coarse (major org / region boundaries).
+- Validate operational ownership and review cadence.
+- Introduce finer scopes only when risk, confidentiality, or compliance requires it.
+- Document purpose and owner for each scope to support lifecycle and audit.
 
 ## Prerequisites
 
@@ -353,8 +353,11 @@ Cloud scopes can be leveraged to reflect your organizational hierarchy and struc
 ## Cloud scopes and unified RBAC (Azure portal view)
 
 Full lifecycle management (creation, membership, advanced filtering, multicloud assignments) is performed in the Microsoft Defender portal. In the Azure portal you can still:
+
 - View Azure RBAC assignments at subscription / resource group levels
 - Manage classic Azure access for platform resources
+
+For more information see, [User roles and permissions](permissions.md).
 
 For end-to-end cloud scopes and unified RBAC administration, use the Defender portal.
 

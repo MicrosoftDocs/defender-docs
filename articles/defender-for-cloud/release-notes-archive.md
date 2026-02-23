@@ -4,7 +4,7 @@ description: A description of what's new and changed in Microsoft Defender for C
 author: Elazark
 ms.author: elkrieger
 ms.topic: reference
-ms.date: 12/08/2025
+ms.date: 12/23/2025
 ms.custom: sfi-ga-nochange, sfi-image-nochange
 ---
 
@@ -786,7 +786,7 @@ November 18, 2024
 
 Today, we're excited to announce the General Availability of Critical Assets Protection in Microsoft Defender for Cloud. This feature enables security administrators to tag the "crown jewel" resources that are most critical to their organizations, allowing Defender for Cloud to provide them with the highest level of protection and prioritize security issues on these assets above all others. [Learn more about critical assets protection](critical-assets-protection.md).
 
-Alongside the General Availability release, we're also expending support for tagging Kubernetes and nonhuman identity resources.
+Alongside the General Availability release, we're also expanding support for tagging Kubernetes and nonhuman identity resources.
 
 ### Enhanced critical asset protection for containers
 
@@ -2794,7 +2794,7 @@ Express configuration for vulnerability assessments in Defender for SQL is now G
 
 Check out this [blog](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/defender-for-sql-vulnerability-assessment-updates/ba-p/3837732) to learn more about express configuration.
 
-You can learn the differences between [express and classic configuration](sql-azure-vulnerability-assessment-overview.md#what-are-the-express-and-classic-configurations).
+You can learn the differences between [express and classic configuration](sql-azure-vulnerability-assessment-overview.md#configuration-models).
 
 ### More scopes added to existing Azure DevOps Connectors
 
@@ -4889,7 +4889,7 @@ We've added two **preview** recommendations to deploy and maintain the endpoint 
 |[Endpoint protection health issues should be resolved on your machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/37a3689a-818e-4a0e-82ac-b1392b9bb000) |Resolve endpoint protection health issues on your virtual machines to protect them from latest threats and vulnerabilities. Azure Security Center supported endpoint protection solutions are documented [here](./supported-machines-endpoint-solutions-clouds-servers.md?tabs=features-windows). Endpoint protection assessment is documented [here](endpoint-protection-recommendations-technical.md).<br />(Related policy: [Monitor missing Endpoint Protection in Azure Security Center](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2faf6cd1bd-1635-48cb-bde7-5b15693900b9)) |Medium |
 
 > [!NOTE]
-> The recommendations show their freshness interval as 8 hours, but there are some scenarios in which this might take significantly longer. For example, when an on premises machine is deleted, it takes 24 hours for Security Center to identify the deletion. After that, the assessment will take up to 8 hours to return the information. In that specific situation therefore, it might take 32 hours for the machine to be removed from the list of affected resources.
+> The recommendations show their freshness interval as 8 hours, but there are some scenarios in which this might take significantly longer. For example, when an on-premises machine is deleted, it takes 24 hours for Security Center to identify the deletion. After that, the assessment will take up to 8 hours to return the information. In that specific situation therefore, it might take 32 hours for the machine to be removed from the list of affected resources.
 >
 > :::image type="content" source="media/release-notes/freshness-interval.png" alt-text="Freshness interval indicator for these two new Security Center recommendations":::
 
