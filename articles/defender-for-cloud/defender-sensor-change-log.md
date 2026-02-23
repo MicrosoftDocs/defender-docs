@@ -56,7 +56,7 @@ To see the version of the sensor run:
 - **Released:** December 2025
 - **What's included:**
     - Bug fixes and security enhancements
-  - Convert log analytics keys in defender helm chart to optional
+    - Convert log analytics keys in defender helm chart to optional
     
 **Sensor v0.9.44 – Preview**   
 - **Released:** November 2025  
