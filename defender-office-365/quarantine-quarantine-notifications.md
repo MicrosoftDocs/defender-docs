@@ -75,7 +75,7 @@ The actions that are available for messages in the quarantine notification depen
   Selecting the action takes you to the details flyout of the message in quarantine. It's the same result as going to the **Email** tab on the **Quarantine** page at <https://security.microsoft.com/quarantine?viewid=Email>, and selecting the message by clicking anywhere in the row other than the check box next to the first column. For more information, see [View quarantined message details](quarantine-end-user.md#view-quarantined-message-details).
 
   > [!TIP]
-  > The **Review message** button cannot be removed by modifying the [Quarantine policy permission details](quarantine-policies.md#quarantine-policy-permission-details).
+  > You can't use [quarantine policy permissions](quarantine-policies.md#quarantine-policy-permission-details) to remove the **Review message** button.
 
 - **Release**: Available for messages quarantined by features using a quarantine policy with the **Full access** permission group or the individual **Allow recipients to release a message from quarantine** (_PermissionToRelease_) permission. For example, DefaultFullAccessWithNotificationPolicy, NotificationEnabledPolicy, or custom quarantine policies.
 
