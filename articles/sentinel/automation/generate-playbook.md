@@ -35,7 +35,7 @@ An embedded Visual Studio Code environment within the Microsoft Defender portal 
 
 ## Prerequisites
 
-You don't need prior coding experience to generate a playbook, but it helps to be familiar with tools like VSCode and Entra ID app registration.
+You don't need prior coding experience to generate a playbook, but it helps to be familiar with tools like Visual Studio Code and Entra ID app registration.
 
 You also must meet the following requirements:
 
@@ -73,7 +73,7 @@ If you don't already have a dedicated Security Copilot workspace for AI-generate
 
    1. Under **Capacity**, select **Create a new capacity**.
 
-      :::image type="content" source="./media/generate-playbook/create-new-capacity.png" alt-text="Screenshot of Create new workspace dialog with Create a new capacity link highlighted.":::
+      :::image type="content" source="./media/generate-playbook/create-new-capacity.png" alt-text="Screenshot of Create new workspace dialog with Create a new capacity link highlighted." lightbox="./media/generate-playbook/create-new-capacity.png":::
 
 1. Configure the new capacity:
 
@@ -87,7 +87,7 @@ If you don't already have a dedicated Security Copilot workspace for AI-generate
 
    1. Select **Create**.
 
-:::image type="content" source="./media/generate-playbook/create-capacity.png" alt-text="Screenshot of the new capacity details.":::
+:::image type="content" source="./media/generate-playbook/create-capacity.png" alt-text="Screenshot of the new capacity details." lightbox="./media/generate-playbook/create-capacity.png":::
 
 Generated playbooks automatically use this workspace.
 
@@ -124,7 +124,7 @@ This trigger mechanism enables automatic execution of generated playbooks across
 
 1. Select **New registration**.
 
-   :::image type="content" source="./media/generate-playbook/new-registration.png" alt-text="Screenshot of the New registration page in Microsoft Entra ID.":::
+   :::image type="content" source="./media/generate-playbook/new-registration.png" alt-text="Screenshot of the New registration page in Microsoft Entra ID." lightbox="./media/generate-playbook/new-registration.png":::
 
 1. After the registration finishes, select the app registration and go to **Overview**.
 
@@ -134,7 +134,7 @@ This trigger mechanism enables automatic execution of generated playbooks across
 
 1. Select **New client secret**, provide a name and expiration date, and then select **Add**.
 
-   :::image type="content" source="./media/generate-playbook/client-secrets.png" alt-text="Screenshot of the New client secret page in Microsoft Entra ID.":::
+   :::image type="content" source="./media/generate-playbook/client-secrets.png" alt-text="Screenshot of the New client secret page in Microsoft Entra ID." lightbox="./media/generate-playbook/client-secrets.png":::
 
 1. Immediately copy the client secret **Value** and store it securely. You can't retrieve this value again.
 
@@ -175,11 +175,11 @@ This trigger mechanism enables automatic execution of generated playbooks across
    | **Token endpoint** | `https://login.microsoftonline.com/{TENANT_ID}/oauth2/v2.0/token` <br>(Replace {TENANT_ID} with your Directory (tenant) ID) |
    | **Scopes** | `https://graph.microsoft.com/.default` |
 
-   :::image type="content" source="./media/generate-playbook/integration-profile.png" alt-text="Screenshot of the Integration Profile creation page in Microsoft Sentinel.":::
+   :::image type="content" source="./media/generate-playbook/integration-profile.png" alt-text="Screenshot of the Integration Profile creation page in Microsoft Sentinel." lightbox="./media/generate-playbook/integration-profile.png":::
 
 1. Verify under **Microsoft Graph / Application** that **SecurityAlert.Read.All** is listed and the Status is **Granted for \<tenant\>**.
 
-  :::image type="content" source="./media/generate-playbook/api-permissions.png" alt-text="Screenshot of API permissions in Microsoft Entra ID.":::
+  :::image type="content" source="./media/generate-playbook/api-permissions.png" alt-text="Screenshot of API permissions in Microsoft Entra ID." lightbox="./media/generate-playbook/api-permissions.png":::
 
 ### Create additional integration profiles
 
@@ -202,7 +202,7 @@ Configure integration profiles for any other third-party services your playbooks
 
    An embedded Visual Studio Code environment opens with Cline.
 
-:::image type="content" source="./media/generate-playbook/playbook-name.png" alt-text="Screenshot of the embedded Visual Studio Code environment with the playbook generator.":::
+:::image type="content" source="./media/generate-playbook/playbook-name.png" alt-text="Screenshot of the embedded Visual Studio Code environment with the playbook generator." lightbox="./media/generate-playbook/playbook-name.png":::
 
 #### Work in Plan mode
 
@@ -219,7 +219,7 @@ When the editor opens, the experience starts in **Plan mode**. In this mode, you
 
 1. If the playbook generator requests approval to fetch documentation URLs, approve the request. This approval allows the playbook generator to access relevant API documentation to generate accurate code.
 
-:::image type="content" source="./media/generate-playbook/approval-request.png" alt-text="Screenshot of the approval request dialog in the embedded Visual Studio Code environment.":::
+:::image type="content" source="./media/generate-playbook/approval-request.png" alt-text="Screenshot of the approval request dialog in the embedded Visual Studio Code environment." lightbox="./media/generate-playbook/approval-request.png":::
 
 1. The playbook generator analyzes your request and might:
    - Ask clarifying questions
@@ -235,7 +235,7 @@ When the editor opens, the experience starts in **Plan mode**. In this mode, you
 
    1. Return to edit the playbook to continue.
 
-   :::image type="content" source="./media/generate-playbook/add-integration.png" alt-text="Screenshot showing missing integration profiles in the embedded Visual Studio Code environment.":::
+   :::image type="content" source="./media/generate-playbook/add-integration.png" alt-text="Screenshot showing missing integration profiles in the embedded Visual Studio Code environment." lightbox="./media/generate-playbook/add-integration.png":::
 
 #### Review and approve the plan
 
@@ -245,7 +245,7 @@ When the editor opens, the experience starts in **Plan mode**. In this mode, you
 
 1. When satisfied with the plan, follow instructions and switch to **Act mode**.
 
-:::image type="content" source="./media/generate-playbook/act-mode.png" alt-text="Screenshot of the embedded Visual Studio Code environment in Act mode with the playbook generator.":::
+:::image type="content" source="./media/generate-playbook/act-mode.png" alt-text="Screenshot of the embedded Visual Studio Code environment in Act mode with the playbook generator." lightbox="./media/generate-playbook/act-mode.png":::
 
 #### Generate the playbook in Act mode
 
@@ -258,7 +258,7 @@ When the editor opens, the experience starts in **Plan mode**. In this mode, you
 
 1. The tool might request approval for code generation. To enable automatic generation without approval prompts, select the **Edit** checkbox under **Auto-approve**.
 
-:::image type="content" source="./media/generate-playbook/auto-approve.png" alt-text="Screenshot of the Autoapprove checkbox in the embedded Visual Studio Code environment.":::
+:::image type="content" source="./media/generate-playbook/auto-approve.png" alt-text="Screenshot of the Autoapprove checkbox in the embedded Visual Studio Code environment." lightbox="./media/generate-playbook/auto-approve.png":::
 
    > [!TIP]
    > When you select **Save** in the chat, it saves the current step and confirms your approval. **It doesn't save the entire playbook**.
@@ -277,7 +277,7 @@ When the editor opens, the experience starts in **Plan mode**. In this mode, you
 
 1. Close the editor when finished.
 
-:::image type="content" source="./media/generate-playbook/preview.png" alt-text="Screenshot of the preview of an alert notification created with the playbook generator.":::
+:::image type="content" source="./media/generate-playbook/preview.png" alt-text="Screenshot of the preview of an alert notification created with the playbook generator." lightbox="./media/generate-playbook/preview.png":::
 
 ## Enable and deploy your playbook
 

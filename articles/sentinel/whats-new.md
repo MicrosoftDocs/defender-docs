@@ -20,7 +20,7 @@ The listed features were released in the last six months. For information about 
 
 ## February 2026
 
-- [Generate playbooks using AI in Microsoft Sentinel](./automation/generate-playbook.md) (preview): The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. For more information, see [the Playbook Generation blog post](https://aka.ms/PlaybookGenBlog).
+[Generate playbooks using AI in Microsoft Sentinel](./automation/generate-playbook.md) (preview): The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. For more information, see [the Playbook Generation blog post](https://aka.ms/PlaybookGenBlog).
 
 ## January 2026
 
@@ -76,7 +76,7 @@ This update expands [detection coverage for SAP BTP](../sentinel/sap/sap-btp-sec
 
 Microsoft Sentinel introduces new UEBA experiences in the Defender portal, bringing behavioral insights directly into key analyst workflows. These enhancements help analysts prioritize investigations and apply UEBA context more effectively. 
 
-#### Anomaly-focused user investigations
+#### Anomaly focused user investigations
 
 In the Defender portal, users with behavioral anomalies are automatically tagged with **UEBA Anomalies**, helping analysts quickly identify which users to prioritize.
 
@@ -85,7 +85,7 @@ Analysts can view the top three anomalies from the past 30 days in a dedicated T
 - User side panels accessible from various portal locations.
 - The **Overview** tab of user entity pages.
 
-This section also includes direct links to anomaly queries and the Sentinel events timeline, enabling deeper investigation and faster context gathering.
+This section also includes direct links to anomaly queries and the Microsoft Sentinel events timeline, enabling deeper investigation and faster context gathering.
 
 #### Drilldown to user anomalies from incident graphs
 
@@ -103,7 +103,7 @@ For more information, see [How UEBA empowers analysts and streamlines workflows]
 
 - [Agentless data connector](sap/prerequisites-for-deploying-sap-continuous-threat-monitoring.md) for Sentinel Solution for SAP now generally available. Learn more from our [Tech Community blog](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/microsoft-sentinel-for-sap-agentless-connector-ga/4464490).
 
-- Deprecation: Containerized SAP data connector will be out of support by September 30th 2026. [Migrate to our Agentless SAP data connector](sap/sap-agent-migrate.md) today. All new deployments only have the new agentless connector option which is billed at the same price.
+- Deprecation: Containerized SAP data connector will be out of support by September 30th 2026. [Migrate to our Agentless SAP data connector](sap/sap-agent-migrate.md) today. All new deployments only have the new agentless connector option that is billed at the same price.
 
 ### Call to action: update queries and automation by July 1, 2026 - standardized account entity naming in incidents and alerts
 
@@ -112,7 +112,7 @@ Microsoft Sentinel is updating how it identifies account entities in incidents a
 > [!IMPORTANT]
 > This change might affect your analytic rules, automation rules, playbooks, workbooks, hunting queries, and custom integrations.
 
-Sentinel will now select the most reliable account identifier using the following priority:
+Microsoft Sentinel will now select the most reliable account identifier using the following priority:
 
 1. **UPN prefix** – the part before “@” in a User Principal Name
    - Example: `john.doe@contoso.com` → `john.doe`
@@ -201,7 +201,7 @@ UEBA now supports anomaly detection using six new data sources:
 
   These sources provide deeper visibility into identity behavior across your Microsoft environment.
 
-  - **Microsoft Defender XDR device logon events**: Capture logon activity from endpoints, helping identify lateral movement, unusual access patterns, or compromised devices.
+  - **Microsoft Defender XDR device logon events**: Capture sign in activity from endpoints, helping identify lateral movement, unusual access patterns, or compromised devices.
   - **Microsoft Entra ID managed identity signin logs**: Track sign-ins by managed identities used in automation, such as scripts and services. This is crucial for spotting silent misuse of service identities.
   - **Microsoft Entra ID service principal signin logs**: Monitor sign-ins by service principals - often used by apps or scripts - to detect anomalies, such as unexpected access or privilege escalation.
 
