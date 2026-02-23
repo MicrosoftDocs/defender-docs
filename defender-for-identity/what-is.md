@@ -7,11 +7,11 @@ ms.topic: overview
 ms.reviewer: AbbyMSFT
 ---
 
-# Microsoft Defender for Identity Overview
+# Microsoft Defender for Identity overview
 
 Microsoft Defender for Identity helps organizations detect, investigate, and respond to identity-based attacks across on-premises, cloud, and hybrid environments. Threat actors frequently target identities such as users, applications, and service accounts to gain access, escalate privileges, and maintain persistence.
 
-Defender for Identity monitors identity signals from on-premises Active Directory and, Entra ID, other IAM solution (e.g. Okta) and identity infrastructure, combining behavioral analytics, threat intelligence, and known attack patterns to detect suspicious activity across the full identity attack lifecycle. Alerts are delivered with clear investigation context in the Microsoft Defender portal, enabling security teams to understand what happened, why it matters, and how to respond.
+Defender for Identity monitors identity signals from on-premises Active Directory and Microsoft Entra ID, other IAM solution (e.g. Okta) and identity infrastructure, combining behavioral analytics, threat intelligence, and known attack patterns to detect suspicious activity across the full identity attack lifecycle. Alerts are delivered with clear investigation context in the Microsoft Defender portal, enabling security teams to understand what happened, why it matters, and how to respond.
 
 ## Identity Threat Detection and Response (ITDR)
 
@@ -58,7 +58,7 @@ The following table shows how Defender for Identity detections align to key stag
 |----|----|
 | Reconnaissance | Identifies suspicious discovery activity, such as attempts to enumerate user names, group membership, IP addresses, and resources. |
 | Compromised credentials | Detects attempts to compromise credentials using techniques such as brute force, repeated failed authentications, and suspicious changes to user group membership. |
-| Lateral movement| Detects attempts to move laterally and expand control of sensitive identities and across different environments . |
+| Lateral movement| Detects attempts to move laterally and expand control of sensitive identities and across different environments. |
 | AD Domain dominance | Highlights behavior associated with full domain compromise, such as remote code execution on domain controllers, DCShadow, malicious domain controller replication, and Golden Ticket activity. |
 
 Attackers often begin with any accessible identity and then move laterally toward high value targets such as privileged accounts such as domain administrators, global admin, application admins and sensitive data. Defender for Identity helps identify these behaviors early by building behavioral profiles for users, devices, and accounts and detecting deviations that indicate attacker activity.
