@@ -170,7 +170,7 @@ Start-MpWDOScan
 
 See [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Defender Antivirus cmdlets](/powershell/module/defender/) for more information on how to use PowerShell with Microsoft Defender Antivirus.
 
-### Use Windows Management Instruction (WMI) to run an offline scan
+### Use Windows Management Instrumentation (WMI) to run an offline scan
 
 Use the [**MSFT_MpWDOScan**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class to run an offline scan.
 

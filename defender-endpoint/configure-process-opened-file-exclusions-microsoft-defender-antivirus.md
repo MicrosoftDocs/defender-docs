@@ -144,7 +144,7 @@ Add-MpPreference -ExclusionProcess "c:\internal\test.exe"
 
 For more information on how to use PowerShell with Microsoft Defender Antivirus, see Manage antivirus with PowerShell cmdlets and [Microsoft Defender Antivirus cmdlets](/powershell/module/defender).
 
-## Use Windows Management Instruction (WMI) to exclude files that have been opened by specified processes from scans
+## Use Windows Management Instrumentation (WMI) to exclude files that have been opened by specified processes from scans
 
 Use the [**Set**, **Add**, and **Remove** methods of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class for the following properties:
 
