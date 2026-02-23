@@ -268,6 +268,8 @@ This section describes how to modify your Active Directory Federation Services (
 1. Select the **Success audits** and **Failure audits** check boxes.
 1. Select **OK**.
 
+    :::image type="content" source="media/configure-windows-event-collection/federation-services-dialog.png" alt-text="Screenshot that shows the Federation service properties page." lightbox="media/configure-windows-event-collection/federation-services-dialog.png":::
+
    
 #### Configure Verbose logging for AD FS events
 
