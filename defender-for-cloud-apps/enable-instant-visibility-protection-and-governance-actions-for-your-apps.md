@@ -196,11 +196,6 @@ To re-enable connected apps:
 1. In the **Connected apps** page, in the relevant row, select the three dots and choose **Edit settings**. This starts the process to add a connector.
 1. Add the connector using the steps in the relevant API connector guide. For example, if you are re-enabling GitHub, use the steps in [Connect GitHub Enterprise Cloud to Microsoft Defender for Cloud Apps](protect-github.md#connect-github-enterprise-cloud-to-microsoft-defender-for-cloud-apps).
 
-## Related videos
-
-> [!div class="nextstepaction"]
-> [Connecting third-party apps webinar](webinars.md#on-demand-webinars)
-
 ## Next steps
 
 > [!div class="nextstepaction"]
