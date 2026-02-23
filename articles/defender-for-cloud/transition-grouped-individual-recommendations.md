@@ -87,7 +87,7 @@ During the transition, both recommendation models may appear simultaneously.
 - Filter views based on the model your team is currently using
 - Avoid leaving both models unfiltered unless explicitly required
 
-:::image type="content" source="media/transition-grouped-individual-recommendations/recommendations-tags.png" alt-text="Screenshot of recommendation tags interface showing options for 'New version' and 'Set for deprecation' to filter recommendations." lightbox="media/transition-grouped-individual-recommendations/recommendations-tags.png":::
+:::image type="content" source="media/transition-grouped-individual-recommendations/recommendations-tags.png" alt-text="Screenshot of recommendation tags interface showing options for 'New version' and 'Set for deprecation' to filter recommendations." lightbox="media/transition-grouped-individual-recommendations/recommendations-tags.png"
 ---
 
 ## Secure Score during the transition

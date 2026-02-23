@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 02/17/2026
+ms.date: 02/24/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -31,8 +31,8 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| February 28, 2026 | Deprecation | [Deprecation of preview of container and container images vulnerability recommendations](#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations) |
-| February 28, 2026| Preview |[New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview)|
+| February 24, 2026 | Deprecation | [Deprecation of preview of container and container images vulnerability recommendations](#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations) |
+| February 24, 2026 | Preview |[New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview)|
 | February 22, 2026 | Preview | [Container runtime antimalware detection and blocking (Preview)](#container-runtime-antimalware-detection-and-blocking-preview) |
 | February 22, 2026 | Update - Preview | [Binary drift now supports blocking (Preview)](#binary-drift-now-supports-blocking-preview) |
 | February 10, 2026| Preview | [Database-level recommendations experience for SQL Vulnerability Assessment findings (Preview)](#database-level-recommendations-experience-for-sql-vulnerability-assessment-preview) |
@@ -44,7 +44,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ### Deprecation of preview of container and container images vulnerability recommendations
 
-February 28, 2026
+February 24, 2026
 
 As part of the transition to individual recommendations, Microsoft Defender for Cloud is deprecating existing grouped container vulnerability recommendations. This change enables more granular visibility, prioritization, and governance of container security findings.
 
@@ -52,7 +52,7 @@ Grouped recommendations previously aggregated multiple findings under a single r
 
 During the transition period, grouped and individual recommendations may appear side by side. Grouped recommendations are on a deprecation path and will be removed in phases.
 
-The following grouped container vulnerability recommendations will be deprecated on March 19, 2026:
+The following grouped container vulnerability recommendations will be deprecated on March 25, 2026:
 
 **Container recommendations**
 
@@ -98,7 +98,7 @@ Learn more about [security recommendations](review-security-recommendations.md) 
 
 ### New individual recommendations format in Azure portal (Preview)
 
-February 28, 2026
+February 24, 2026
 
 Microsoft Defender for Cloud is converting grouped recommendations into individual recommendations in the Azure portal. This change reflects a shift from grouping related findings under one recommendation to listing each recommendation separately.
 
