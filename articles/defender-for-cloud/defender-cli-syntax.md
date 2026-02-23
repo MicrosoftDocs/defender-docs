@@ -14,8 +14,9 @@ The Defender for Cloud CLI provides commands to scan container images for securi
 
 ## CLI Options
 
-Option | Required | Type   | Description                                                  
+Option | Required | Type | Description                                                  
 --- | --- | --- | --- 
+`--defender-debug` | No | Bool | Output debug information to the console.
 `--output-formats` | No | String | Option: HTML
 `--defender-output` | No | String | Sets the path to the output file [default: `pwd`]
 `--defender-break` | No | Bool | Exit with a non-zero code if critical issues are found                  
