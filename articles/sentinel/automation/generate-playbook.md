@@ -5,7 +5,7 @@ author: mberdugo
 ms.author: monaberdugo
 ms.reviewer: Shiran Shuster Zur
 ms.topic: how-to
-ms.date: 01/13/2026
+ms.date: 02/13/2026
 ms.service: microsoft-sentinel
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
