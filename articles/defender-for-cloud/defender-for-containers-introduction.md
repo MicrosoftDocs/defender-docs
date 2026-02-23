@@ -4,7 +4,7 @@ description: Learn about Microsoft Defender for Containers, a cloud-native solut
 ms.topic: overview
 author: Elazark
 ms.author: elkrieger
-ms.date: 05/13/2025
+ms.date: 12/14/2025
 #customer intent: As a security admin, I want to understand container security to protect my containerized assets.
 ---
 
@@ -46,7 +46,11 @@ You can learn more by watching this video from the Defender for Cloud in the Fie
 
 ### Sensor-based capabilities
 
-**Binary drift detection** - Defender for Containers provides a sensor-based capability that alerts you about potential security threats by detecting unauthorized external processes within containers. You can define drift policies to specify conditions under which alerts should be generated, helping you distinguish between legitimate activities and potential threats. For more information, see [Binary drift protection (preview)](binary-drift-detection.md).
+**Anti-malware** - Defender for Containers provides a sensor-based capability that detects and alerts you to malicious activities within containers. This helps in identifying and mitigating potential security threats proactively. For more information, see [Anti-malware protection (preview)](anti-malware.md).
+
+**Binary drift detection** - Defender for Containers provides a sensor-based capability that alerts you about potential security threats by detecting unauthorized external processes within containers. You can define drift policies to specify conditions under which alerts should be generated, helping you distinguish between legitimate activities and potential threats. For more information, see [Binary drift protection](binary-drift-detection.md).
+
+**Binary drift blocking** - Defender for Containers provides a sensor-based capability that blocks unauthorized external processes within containers. You can define drift policies to specify conditions under which processes should be blocked, helping you prevent potential security threats. For more information, see [Binary drift protection](binary-drift-detection.md).
 
 **Kubernetes data plane hardening** - To protect the workloads of your Kubernetes containers with best practice recommendations, you can install the [Azure Policy for Kubernetes](/azure/governance/policy/concepts/policy-for-kubernetes). Learn more about [monitoring components](monitoring-components.md) for Defender for Cloud.
 

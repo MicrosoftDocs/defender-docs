@@ -10,69 +10,49 @@ ms.custom: sfi-image-nochange
 
 # Connect your GCP project to Microsoft Defender for Cloud
 
-Workloads commonly span multiple cloud platforms. Cloud security services must do the same. Microsoft Defender for Cloud helps protect workloads in Google Cloud Platform (GCP), but you need to set up the connection between them and Defender for Cloud.
+Microsoft Defender for Cloud provides security posture management and threat protection for workloads running in Google Cloud Platform (GCP).
 
-This screenshot shows GCP accounts displayed in the Defender for Cloud [overview dashboard](overview-page.md).
+This article shows you how to connect a GCP project or organization to Microsoft Defender for Cloud so Microsoft Defender for Cloud can discover resources, assess security posture, and surface security recommendations and alerts.
 
-:::image type="content" source="./media/quickstart-onboard-gcp/gcp-account-in-overview.png" alt-text="Screenshot that shows GCP projects listed on the overview dashboard in Defender for Cloud." lightbox="media/quickstart-onboard-gcp/gcp-account-in-overview.png":::
+## Authentication architecture
 
-## GCP authorization design
+Microsoft Defender for Cloud uses federated authentication to securely access GCP APIs without storing long-lived credentials.
 
-The authentication process between Microsoft Defender for Cloud and GCP is a federated authentication process.  
+During onboarding, Defender for Cloud establishes trust with Google Cloud using workload identity federation and service account impersonation. Access is scoped to the connected project or organization and limited to the permissions required by the enabled Defender plans.
 
-When you onboard to Defender for Cloud, the GCloud template is used to create the following resources as part of the authentication process:
-
-- Workload identity pool and providers
-
-- Service accounts and policy bindings
-
-The authentication process works as follows:
-
-:::image type="content" source="media/quickstart-onboard-gcp/authentication-process.png" alt-text="A diagram of the Defender for Cloud GCP connector authentication process." lightbox="media/quickstart-onboard-gcp/authentication-process.png":::
-
-1. Microsoft Defender for Cloud's CSPM service acquires a Microsoft Entra token. Microsoft Entra ID signs the token by using the RS256 algorithm. The token is valid for one hour.
-
-1. The Microsoft Entra token is exchanged for Google's STS token.
-
-1. Google STS validates the token by using the workload identity provider. The Microsoft Entra token is sent to Google's STS that validates the token by using the workload identity provider. Audience validation then occurs and the token is signed. A Google STS token is then returned to Defender for Cloud's CSPM service.
-
-1. Defender for Cloud's CSPM service uses the Google STS token to impersonate the service account. Defender for Cloud's CSPM receives service account credentials that it uses to scan the project.
+Learn more about [authentication architecture for GCP connectors](authentication-architecture-google-cloud.md).
 
 ## Prerequisites
 
-To complete the procedures in this article, you need:
+Before you connect your GCP project, make sure you have:
 
 - A Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free one](https://azure.microsoft.com/pricing/free-trial/).
 
-- [Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) set up on your Azure subscription.
+- [Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) enabled on your Azure subscription.
 
-- Access to a GCP project.
+- Access to a GCP project or organization.
 
-- Contributor level permission for the relevant Azure subscription.
+- Contributor-level permission for the relevant Azure subscription.
 
-- If you enable CIEM as part of Defender for CSPM, the user onboarding the connector also needs [Security Admin role and Application.ReadWrite.All permission](enable-permissions-management.md?source=recommendations#before-you-start) for your tenant.
-
-- To ingest GCP Cloud Logging by using Pub/Sub topics, ensure you meet the prerequisites based on your deployment choice:
-
-   - If you create new Cloud Logging and Pub/Sub resources:
-   
-      - Permissions to create and manage Cloud Logging sinks, Pub/Sub topics, and subscriptions in GCP.
+- If you enable CIEM as part of Defender for CSPM, the user onboarding the connector also needs the [Security Admin role and Application.ReadWrite.All permission](enable-permissions-management.md?source=recommendations#before-you-start) for the tenant.
       
-      - IAM permissions to configure Pub/Sub and manage service accounts.
-      
-   - If you plan to use existing Cloud Logging and Pub/Sub resources:
-   
-      - Access to the existing Cloud Logging and Pub/Sub resources.
-      
-      - Understanding of your organization's existing log retention and Pub/Sub configurations.
-      
-You can learn more about Defender for Cloud pricing on [the pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
+## Cost considerations 
 
-When you're connecting GCP projects to specific Azure subscriptions, consider the [Google Cloud resource hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy#resource-hierarchy-detail) and these guidelines:
+Connecting GCP projects to Microsoft Defender for Cloud and enabling Defender plans can incur additional charges.
 
-- You connect your GCP projects to Microsoft Defender for Cloud at the *project* level.
-- You can connect multiple projects to one Azure subscription.
-- You can connect multiple projects to multiple Azure subscriptions.
+You can learn more about Defender for Cloud pricing on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+
+You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
+
+## GCP project and subscription mapping
+
+When connecting GCP projects to Azure subscriptions, consider the following:
+
+- GCP projects are connected to Microsoft Defender for Cloud at the project level.
+- You can connect multiple GCP projects to a single Azure subscription.
+- You can connect multiple GCP projects across multiple Azure subscriptions.
+
+Learn more about the [Google Cloud resource hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy#resource-hierarchy-detail).
 
 ## Connect your GCP project
 
@@ -84,7 +64,7 @@ When you're connecting GCP projects to specific Azure subscriptions, consider th
 
     :::image type="content" source="media/quickstart-onboard-gcp/connector.png" alt-text="Screenshot that shows where the GCP connector option is located." lightbox="media/quickstart-onboard-gcp/connector.png":::
 
-1. Enter the following information
+1. Enter the following information:
     - Connector name.
     - Select either **Organization** or **Single project**.
     - Subscription.
@@ -121,12 +101,20 @@ When you're connecting GCP projects to specific Azure subscriptions, consider th
 
     :::image type="content" source="media/quickstart-onboard-gcp/add-gcp-project-configure-access.png" alt-text="Screenshot that shows deployment options and instructions for configuring access." lightbox="media/quickstart-onboard-gcp/add-gcp-project-configure-access.png":::
 
-    The script creates all of the required resources on your GCP environment so that Defender for Cloud can operate and provide the following security values:
+In this step, you can find the GCloud script that needs to be run on the GCP project that is going to onboarded. The GCloud script is generated based on the plans you selected to onboard.
 
-    - Workload identity pool
-    - Workload identity provider (per plan)
-    - Service accounts
-    - Project level policy bindings (service account has access only to the specific project)
+The GCloud script creates all of the required resources on your GCP environment so that Defender for Cloud can operate and provide the following security values:
+
+- Workload identity pool
+- Workload identity provider (per plan)
+- Service accounts
+- Project level policy bindings (service account has access only to the specific project)
+
+1. Select **Next: Review and generate**.
+ 
+1. Review the information for accuracy.
+
+   :::image type="content" source="media/quickstart-onboard-gcp/review-and-generate.png" alt-text="Screenshot of the review and generate screen with all of your selections listed." lightbox="media/quickstart-onboard-gcp/review-and-generate-big.png":::
 
     > [!NOTE]
     > The following APIs must be enabled on the project where you run the onboarding script to discover your GCP resources and allow the authentication process to occur:
@@ -141,13 +129,27 @@ When you're connecting GCP projects to specific Azure subscriptions, consider th
     >
     > If you don't enable these APIs, you can enable them during the onboarding process by running the GCP Cloud Shell script.
 
-1. Select **Next: Review and generate**.
-
-1. Review the information for accuracy.
-
 1. Select **Create**.
 
 After you create the connector, a scan starts on your GCP environment. New recommendations appear in Defender for Cloud after up to six hours. If you enabled autoprovisioning, Azure Arc and any enabled extensions are installed automatically for each newly detected resource.
+
+## Validate connector health
+
+To confirm that your GCP connector is operating correctly:
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Go to **Defender for Cloud** > **Environment settings**.
+
+1. Locate the GCP project and review the **Connectivity status** column to see whether the connection is healthy or has issues.
+
+1. Select the value shown in the **Connectivity status** column to view more details.
+
+The Environment details page lists any detected configuration or permission issues affecting the connection to the GCP project.
+
+If an issue is present, you can select it to view a description of the problem and the recommended remediation steps. In some cases, a remediation script is provided to help resolve the issue.
+
+Learn more about [troubleshooting multicloud connectors](troubleshoot-connectors.md).
 
 ## View your current coverage
 
@@ -155,13 +157,16 @@ Defender for Cloud provides access to [workbooks](custom-dashboards-azure-workbo
 
 The [coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) helps you understand your current coverage by showing which plans are enabled on your subscriptions and resources.
 
+## Enable GCP Cloud Logging ingestion (Preview)
+
+GCP Cloud Logging ingestion enhances identity and permission insights by adding activity context for Cloud Infrastructure Entitlement Management (CIEM) assessments, risk-based recommendations, and attack path analysis.
+
+Learn more about [ingesting GCP Cloud Logging with Pub/Sub (Preview)](logging-ingestion.md).
+
 ## Next steps
 
-Connecting your GCP project is part of the multicloud experience available in Microsoft Defender for Cloud:
-
-- [Assign access to workload owners](assign-access-to-workload.md).
-- [Protect all of your resources with Defender for Cloud](enable-all-plans.md).
-- Set up your [on-premises machines](quickstart-onboard-machines.md) and [AWS account](quickstart-onboard-aws.md).
-- [Troubleshoot your multicloud connectors](troubleshoot-connectors.md).
+- [Configure Defender for Cloud plans for your GCP projects](configure-google-plans.md).
+- Learn about the [authentication architecture for GCP connectors](authentication-architecture-google-cloud.md).
+- [Ingest GCP Cloud Logging with Pub/Sub (Preview)](logging-ingestion.md).
 - [Resolve Domain Restricted Sharing policy](resolve-gcp-sharing-policy.md).
-- Get answers to [common questions](faq-general.yml) about connecting your GCP project.
+- [Troubleshoot multicloud connectors](troubleshoot-connectors.md).
