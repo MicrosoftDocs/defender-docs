@@ -90,6 +90,28 @@ To configure auditing on a domain controller, complete the following steps:
 - [Configure NTLM auditing](#configure-ntlm-auditing)
 - [Configure Domain object auditing](#configure-domain-object-auditing)
 
+#### Object-level auditing on the AD FS configuration folder
+
+1. Go to the **Active Directory Users and Computers** console, and select the domain where you want to enable the logs.
+1. Go to **Program Data** > **Microsoft** > **ADFS**.
+
+    :::image type="content" source="../media/configure-windows-event-collection/adfs-container.png" alt-text="Screenshot of a container for Active Directory Federation Services.":::
+
+   
+1. Right-click **ADFS** and select **Properties**.
+1. Go to the **Security** tab and select **Advanced** > **Advanced Security Settings**. Then go to the **Auditing** tab and select **Add** > **Select a principal**.
+1. Under **Enter the object name to select**, enter **Everyone**. Then select **Check Names** > **OK**.
+1. Return to **Auditing Entry**. Make the following selections:
+
+   - For **Type**, select **All**.
+   - For **Applies to**, select **This object and all descendant objects**.
+   - Under **Permissions**, scroll down and select **Clear all**. Scroll up and select **Read all properties** and **Write all properties**.
+      
+    :::image type="content" source="../media/configure-windows-event-collection/audit-adfs.png" alt-text="Screenshot of the auditing settings for Active Directory Federation Services.":::
+    
+   
+1. Select **OK**.
+
 #### Configure Directory Services Advanced Auditing
 
 This section describes how to modify your domain controller's Advanced Audit Policy settings for Defender for Identity.
@@ -226,27 +248,6 @@ To configure domain object auditing:
 
 This section describes how to modify your Active Directory Federation Services (AD FS) audit configurations for Defender for Identity.
 
-#### Object-level auditing on the AD FS configuration folder
-
-1. Go to the **Active Directory Users and Computers** console, and select the domain where you want to enable the logs.
-1. Go to **Program Data** > **Microsoft** > **ADFS**.
-
-    :::image type="content" source="../media/configure-windows-event-collection/adfs-container.png" alt-text="Screenshot of a container for Active Directory Federation Services.":::
-
-   
-1. Right-click **ADFS** and select **Properties**.
-1. Go to the **Security** tab and select **Advanced** > **Advanced Security Settings**. Then go to the **Auditing** tab and select **Add** > **Select a principal**.
-1. Under **Enter the object name to select**, enter **Everyone**. Then select **Check Names** > **OK**.
-1. Return to **Auditing Entry**. Make the following selections:
-
-   - For **Type**, select **All**.
-   - For **Applies to**, select **This object and all descendant objects**.
-   - Under **Permissions**, scroll down and select **Clear all**. Scroll up and select **Read all properties** and **Write all properties**.
-      
-    :::image type="content" source="../media/configure-windows-event-collection/audit-adfs.png" alt-text="Screenshot of the auditing settings for Active Directory Federation Services.":::
-    
-   
-1. Select **OK**.
 
 #### Configure a Group Policy for event auditing
 
@@ -258,6 +259,14 @@ This section describes how to modify your Active Directory Federation Services (
    1. Select the checkboxes to configure audit events for **Success** and **Failure**.  
 
    :::image type="content" source="media/configure-windows-event-collection/group-policy-management-editor.png" alt-text="Screenshot of the advanced auditing audit policy configuration.":::
+
+### Configure AD FS event auditing in AD FS Management
+
+1. Select **Start** > **Programs** > **Administrative Tools** > **AD FS Management**.
+1. Go to **Actions** > **Edit Federation Service Properties**.
+1. Select the **Events** tab.
+1. Select the **Success audits** and **Failure audits** check boxes.
+1. Select **OK**.
 
    
 #### Configure Verbose logging for AD FS events
