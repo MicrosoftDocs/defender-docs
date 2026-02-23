@@ -49,7 +49,7 @@ From the **Overview** page, use the **Actions** menu to trigger [remediation act
 
 :::image type="content" source="media/investigate-users/identity-actions.png" alt-text="Screenshot of the identity page with the identity actions menu showing.":::
 
-### Overview tab
+## Overview tab
 
 The **Overview** tab provides a high‑level snapshot that helps analysts quickly assess risk and decide whether deeper investigation is required.
 
@@ -78,15 +78,15 @@ Additional details appear depending on enabled services and features. For exampl
 - (Preview) Environments with [Microsoft Purview Insider Risk Management](/purview/insider-risk-management-solution-overview) can see a user's insider risk severity and gain insights on a user's suspicious activities in the user page. Select the **insider risk severity** to see the risk insights about the user.
 - (Preview) Environments with [Microsoft Sentinel User and Entity Behavior Analytics (UEBA)](/azure/sentinel/identify-threats-with-entity-behavior-analytics), can see:
   - The user's top three UEBA anomalies from the last 30 days.
-  - Links to launch pre-built advanced hunting queries and view all anomalous behaviors related to the user on the [Sentinel events tab](#sentinel-events-tab).
+  - Links to launch pre-built advanced hunting queries and view all anomalous behaviors related to the user on the [Sentinel events tab](#microsoft-sentinel-events-tab).
 
-### Incidents and alerts tab
+## Incidents and alerts tab
 
 The **Incidents and alerts** tab lists all alerts and incidents involving the identity within the supported retention window. See the incidents page or the alerts page for a detailed description of the specific item.
 
 :::image type="content" source="media/investigate-users/identity-incidents-and-alerts.png" alt-text="Screenshot of the Incidents and alerts tab on the Identity page in Microsoft Defender.":::
 
-### Observed in organization tab
+## Observed in organization tab
 
 The **Observed in organization** tab shows where and how the identity appears across the environment, helping analysts understand blast radius and potential lateral movement.
 
@@ -99,7 +99,7 @@ This tab can include:
 | Locations | Locations observed for sign-ins |
 | Groups | Groups associated with the identity (when available) |
 
-#### Primary accounts
+### Primary accounts
 
 Each identity can include multiple related accounts from different identity providers. Microsoft Defender identifies one account as the primary account and uses that account’s profile values for identity-level fields, such as display name and job title.
 
@@ -107,7 +107,7 @@ The primary account is selected by Microsoft Defender based on internal correlat
 
 :::image type="content" source="media/investigate-users/identity-observed-in-organization.png" alt-text="Screenshot of the Observed in organization tab on the Identity page in Microsoft Defender.":::
 
-### Timeline tab
+## Timeline tab
 
 The **Timeline** tab provides a chronological view of identity related activity and alerts aggregated from integrated Microsoft security products, such as Microsoft Defender for Identity, Microsoft Defender for Endpoint, Microsoft Defender for Cloud Apps, and Microsoft Sentinel.
 
@@ -122,27 +122,27 @@ Analysts can:
 - Customize visible columns
 - Export timeline data to CSV (within supported limits)
 
-### Security recommendations tab
+## Security recommendations tab
 
 The **Security recommendations** tab displays identity related posture assessments identified through Identity Security Posture Management (ISPM). These recommendations highlight misconfigurations or risky settings across the identity’s accounts, and selecting a recommendation opens the details in Microsoft Secure Score for remediation guidance.
 
 :::image type="content" source="media/investigate-users/identity-posture-recommendations.png" alt-text="Screenshot of the Security recommendations tab on the Identity page in Microsoft Defender.":::
 
-### Attack paths tab
+## Attack paths tab
 
 The **Attack paths** tab visualizes potential lateral movement paths that involve the identity or lead to it. These insights help security teams understand exploitable relationships and reduce identity‑based attack surface.
 
-### Policies tab
+## Policies tab
 
 The **Policies** tab displays identity‑related security policies that are relevant to the identity based on its attributes, roles, and observed activity.
 
 This view provides investigation context by showing which policies apply to the identity and how they influence access or risk evaluation. Policies are managed elsewhere; this tab helps analysts correlate policy enforcement with sign‑ins, alerts, and investigation findings.
 
-### Microsoft Sentinel events tab
+## Microsoft Sentinel events tab
 
 When Microsoft Sentinel is connected to the Defender portal, this tab can show a Sentinel timeline for the identity. The timeline includes alerts associated with the identity, including alerts also shown on the **Incidents and alerts** tab and alerts created by Microsoft Sentinel. It also shows bookmarked hunts that reference the identity, activity events from external data sources, and unusual behaviors identified by Microsoft Sentinel anomaly rules.
 
-#### Insights
+### Insights
 
 The **Insights** section shows entity insights, which are investigation queries defined by Microsoft security researchers to help analysts investigate identities more efficiently. These insights automatically highlight key security signals such as sign‑in activity, group changes, and anomalous behavior, and present results as tables and visualizations. Insights are powered by Microsoft Sentinel and the data sources connected to it, including Microsoft Entra ID logs and Microsoft Sentinel UEBA when enabled.
 
