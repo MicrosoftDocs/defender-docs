@@ -1,6 +1,6 @@
 ---
 title: Investigate Identities
-description: Learn how to use the Identity page in Microsoft Defender to investigate user identities, review alerts, analyze activity timelines, and assess security risks across linked accounts.
+description: Learn how to use the Identity page in Microsoft Defender. Investigate user identities, review alerts, analyze activity timelines, and assess security risks across linked accounts.
 #customer intent: As a security analyst using Microsoft Defender, I want to understand how to use the Identity page so that I can investigate potentially compromised identities, assess risk, and correlate alerts across linked user accounts.
 author: AbbyMSFT
 ms.author: abbyweisberg
@@ -11,7 +11,7 @@ ms.service: microsoft-defender
 
 # Identity entity page in Microsoft Defender
 
-In Microsoft Defender, an **identity** represents a person or entity in your organization. Because users often have multiple accounts across providers such as on-premises Active Directory, Microsoft Entra ID, SaaS applications, and other IDPs, Defender correlates them into a single identity.
+In Microsoft Defender, an **identity** represents a person or entity in your organization. Users often have multiple accounts across providers such as on-premises Active Directory, Microsoft Entra ID, SaaS applications, and other IDPs. Defender correlates these accounts into a single identity.
 
 Each identity has a primary account. When multiple accounts are associated with an identity, Microsoft Defender designates one account as primary and uses it for identity-level profile details.
 
@@ -25,9 +25,9 @@ The **Identity** page consolidates identity details, observed activity, alerts, 
 - Activity log
 - Action center
 
-The Identity page is organized into a top section and a set of tabs. The top section shows identity context such as the org information and tags, and includes the **Actions** menu. Below that, use the tabs to review summary details, related alerts, and deeper investigation views.
+The Identity page is organized into a top section and a set of tabs. The top section shows identity context such as the org information and tags, and includes the **Actions** menu. Use the tabs to review summary details, related alerts, and deeper investigation views.
 
-- Org information: The identity’s job title, department and more.
+- Org information: The identity’s job title, department, and more.
 - Account tags: Active Directory tags associated with the identity
 
 The Identity page includes these tabs:
@@ -39,7 +39,7 @@ The Identity page includes these tabs:
 - Security recommendations
 - Attack paths
 - Policies
-- Microsoft Sentinel events (for Sentinel customers)
+- Microsoft Sentinel events (for Microsoft Sentinel customers)
 
 :::image type="content" source="media/investigate-users/identity-page.png" alt-text="Screenshot of the Identity page in Microsoft Defender portal." lightbox="media/investigate-users/identity-page.png":::
 
@@ -70,7 +70,7 @@ The Entity details panel summarizes key identity information and investigation s
 - Linked user accounts, devices, and group memberships
 - Related alerts and incidents, grouped by severity
 
-Additional details appear depending on enabled services and features. For example:
+Other details appear depending on enabled services and features. For example:
 
 - Environments with Microsoft Defender for Identity can see:
   - Active Directory account control flags, such as password‑never‑expires or account lock status
@@ -78,7 +78,7 @@ Additional details appear depending on enabled services and features. For exampl
 - (Preview) Environments with [Microsoft Purview Insider Risk Management](/purview/insider-risk-management-solution-overview) can see a user's insider risk severity and gain insights on a user's suspicious activities in the user page. Select the **insider risk severity** to see the risk insights about the user.
 - (Preview) Environments with [Microsoft Sentinel User and Entity Behavior Analytics (UEBA)](/azure/sentinel/identify-threats-with-entity-behavior-analytics), can see:
   - The user's top three UEBA anomalies from the last 30 days.
-  - Links to launch pre-built advanced hunting queries and view all anomalous behaviors related to the user on the [Sentinel events tab](#microsoft-sentinel-events-tab).
+  - Links to launch pre-built advanced hunting queries and view all anomalous behaviors related to the user on the [Microsoft Sentinel events tab](#microsoft-sentinel-events-tab).
 
 ## Incidents and alerts tab
 
@@ -94,7 +94,7 @@ This tab can include:
 
 | Section | Description |
 |----|----|
-| Accounts | All accounts associated with the identity across identity systems, including automatically and manually correlated accounts. Analysts can [manually link additional related accounts](/defender-for-identity/manage-related-identities-accounts). An indicator shows which account is the primary account. |
+| Accounts | All accounts associated with the identity across identity systems, including automatically and manually correlated accounts. Analysts can [manually link other related accounts](/defender-for-identity/manage-related-identities-accounts). An indicator shows which account is the primary account. |
 | Devices | Devices the identity signed into. This usually shows you recent activity, |
 | Locations | Locations observed for sign-ins |
 | Groups | Groups associated with the identity (when available) |
@@ -103,7 +103,7 @@ This tab can include:
 
 Each identity can include multiple related accounts from different identity providers. Microsoft Defender identifies one account as the primary account and uses that account’s profile values for identity-level fields, such as display name and job title.
 
-The primary account is selected by Microsoft Defender based on internal correlation logic.
+Microsoft Defender uses internal correlation logic to determine the primary account.
 
 :::image type="content" source="media/investigate-users/identity-observed-in-organization.png" alt-text="Screenshot of the Observed in organization tab on the Identity page in Microsoft Defender.":::
 
@@ -140,7 +140,7 @@ This view provides investigation context by showing which policies apply to the 
 
 ## Microsoft Sentinel events tab
 
-When Microsoft Sentinel is connected to the Defender portal, this tab can show a Sentinel timeline for the identity. The timeline includes alerts associated with the identity, including alerts also shown on the **Incidents and alerts** tab and alerts created by Microsoft Sentinel. It also shows bookmarked hunts that reference the identity, activity events from external data sources, and unusual behaviors identified by Microsoft Sentinel anomaly rules.
+When Microsoft Sentinel is connected to the Defender portal, this tab shows a Sentinel timeline for the identity. The timeline includes alerts associated with the identity, including alerts also shown on the **Incidents and alerts** tab and alerts created by Microsoft Sentinel. It also shows bookmarked hunts that reference the identity, activity events from external data sources, and unusual behaviors identified by Microsoft Sentinel anomaly rules.
 
 ### Insights
 
