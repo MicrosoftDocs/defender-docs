@@ -20,7 +20,7 @@ The listed features were released in the last six months. For information about 
 
 ## February 2026
 
-- [Generate playbooks using AI in Microsoft Sentinel](generate-playbook.md) (preview): The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. For more information, see [the Playbook Generation blog post](https://aka.ms/PlaybookGenBlog).
+- [Generate playbooks using AI in Microsoft Sentinel](./automation/generate-playbook.md) (preview): The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. For more information, see [the Playbook Generation blog post](https://aka.ms/PlaybookGenBlog).
 
 ## January 2026
 
