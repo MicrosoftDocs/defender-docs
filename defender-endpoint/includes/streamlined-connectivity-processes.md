@@ -43,6 +43,6 @@ For Linux servers, the following table lists processes to exclude in your non-Mi
 | `crashpad_handler`<br/>Collects crash dumps  | `/opt/microsoft/mdatp/sbin/` |
 | `mdatp` <br/>Command line utility| `/opt/microsoft/mdatp/sbin/Wdavdaemonclient`  |
 | `mde_netfilter` <br/>Packet filter for Network protection, also used for response capabilities | `/opt/microsoft/mde_netfilter/sbin` |
-|URLs that Defender for Endpoint hosts from version 2512 and later, used for internal configuration management.<br><br>- Default: `https://config.edge.skype.com/config/v1`<br>- DoD: `https://config.ecs.dod.teams.microsoft.us/config/v1`<br>- GCC High: `https://config.ecs.gov.teams.microsoft.us/config/v1`<br>- GCC Mod: `https://gccmod.ecs.office.com/config/v1` | N/A |
+|URLs that Defender for Endpoint accesses from [version 2512](/defender-endpoint/microsoft-defender-endpoint-releases.md#linux--february-2026--101251220004) and later, used for internal configuration management.<br><br>- Default: `https://config.edge.skype.com/config/v1`<br>- DoD: `https://config.ecs.dod.teams.microsoft.us/config/v1`<br>- GCC High: `https://config.ecs.gov.teams.microsoft.us/config/v1`<br>- GCC Mod: `https://gccmod.ecs.office.com/config/v1` | N/A |
 
 ---
