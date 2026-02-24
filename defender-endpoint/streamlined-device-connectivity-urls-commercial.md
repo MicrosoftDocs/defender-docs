@@ -187,4 +187,4 @@ Lists the URL endpoints required for administrative/security operations access t
 
 ## Microsoft Defender process exclusions
 
-[!INCLUDE [Microsoft Defender for Endpoint processes](/includes/streamlined-connectivity-processes.md)]
+[!INCLUDE [Microsoft Defender for Endpoint processes](includes/streamlined-connectivity-processes.md)]
