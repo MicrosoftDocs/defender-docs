@@ -28,4 +28,4 @@ After you connect CyberArk Identity, Microsoft Defender for Identity provides th
 
 ## Next steps
 
-- [Connect CyberArk Identity to Microsoft Defender for Identity](connect-cyberark.md)
+- [Connect CyberArk Identity to Microsoft Defender for Identity](connect-cyber-ark.md)

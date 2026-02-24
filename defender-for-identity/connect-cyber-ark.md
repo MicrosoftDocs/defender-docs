@@ -66,6 +66,7 @@ To support ongoing API access, create a new user and assign the custom role.
 1. Go to **System > Data Management > Data Connectors**.
 
     :::image type="content" source="media/connect-cyber-ark/data-connector-cyber-ark.png" alt-text="Screenshot that shows where to find the data connector for CyberArk in the Microsoft Defender portal." lightbox="media/connect-cyber-ark/data-connector-cyber-ark.png":::
+
 1. Select **Catalog > CyberArk Identity**.
 1. Select on **Connect a connector**  
 1. Enter a name for your connector. 
