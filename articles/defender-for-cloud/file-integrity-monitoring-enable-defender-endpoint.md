@@ -4,7 +4,7 @@ description: Learn how to enable File Integrity Monitoring when you collect data
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 06/25/2025
+ms.date: 02/24/2026
 ms.custom: sfi-image-nochange
 #customer intent: As a security administrator, I want to enable File Integrity Monitoring so that I can detect unauthorized changes to critical files.
 ---
@@ -19,7 +19,7 @@ After you enable Defender for Servers Plan 2, follow the instructions in this ar
 >
 > - If you use a previous version of File Integrity Monitoring with the Log Analytics agent (Microsoft Monitoring agent (MMA)) or the Azure Monitor agent (AMA), you can [migrate to the new File Integrity Monitoring experience](migrate-file-integrity-monitoring.md).
 > - File Integrity Monitoring powered by Microsoft Defender for Endpoint requires a minimum agent version. [Update the agent](#verify-defender-for-endpoint-client-version) as needed.
->   - **Windows (legacy machines/downlevel clients)**: 10.8799 or later.
+>   - **Windows (legacy machines/downlevel clients)**: Defender for Servers Windows client (MDE agent) version 10.8799 or later.
 >   - **Linux**: 30.124082 or later.
 
 ## Prerequisites

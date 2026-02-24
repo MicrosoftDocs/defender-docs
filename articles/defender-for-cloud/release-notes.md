@@ -45,12 +45,12 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 February 28, 2026
 
-Due to a pipeline change in Microsoft Defender for Endpoint (MDE), File Integrity Monitoring now requires Microsoft Defender for Endpoint agent version 10.8799 or above for proper functionality on legacy Windows machines (downlevel clients).
+Due to a pipeline change in Microsoft Defender for Endpoint (MDE), File Integrity Monitoring now requires the **Defender for Servers Windows client (Microsoft Defender for Endpoint agent) version 10.8799 or above** for proper functionality on legacy Windows machines (downlevel clients).
 
 **Key details:**
 
 - **Affected systems**: Legacy Windows machines (Windows Server 2016, Windows Server 2012 R2, and other downlevel clients)
-- **Required version**: MDE agent 10.8799 or later
+- **Required version**: Defender for Servers Windows client (MDE agent) 10.8799 or later
 - **Impact**: FIM monitoring will not function properly on versions below the minimum requirement
 
 Learn more about [File Integrity Monitoring](file-integrity-monitoring-overview.md) and how to [enable File Integrity Monitoring](file-integrity-monitoring-enable-defender-endpoint.md).
