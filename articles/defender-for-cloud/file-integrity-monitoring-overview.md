@@ -36,7 +36,7 @@ File integrity monitoring uses the Microsoft Defender for Endpoint agent and age
 
 ## Version requirements
 
-To ensure proper file integrity monitoring functionality, machines must run Microsoft Defender for Endpoint agent version **10.8799 or above**. This requirement is especially important for:
+To ensure proper file integrity monitoring functionality, machines must run the **Defender for Servers Windows client (Microsoft Defender for Endpoint agent) version 10.8799 or above**. This requirement is especially important for:
 
 - Legacy Windows machines (downlevel clients)
 - Environments transitioning from MMA or AMA-based FIM
@@ -44,9 +44,9 @@ To ensure proper file integrity monitoring functionality, machines must run Micr
 > [!IMPORTANT]
 > Due to a pipeline change in Microsoft Defender for Endpoint, users with existing FIM deployments on legacy Windows machines must update their MDE agent to version 10.8799 or above to continue receiving file integrity monitoring data.
 
-### Migrate to the new version
+### Migrate legacy AMA/MMA clients to MDE-based file integrity monitoring
 
-File integrity monitoring previously used the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)) or the Azure Monitor agent (AMA) to collect data. If you're using file integrity monitoring with one of these legacy methods, you can [migrate file integrity monitoring](migrate-file-integrity-monitoring.md) to use Defender for Endpoint.
+If you're currently using file integrity monitoring with legacy agent-based methods (Log Analytics agent/Microsoft Monitoring Agent (MMA) or Azure Monitor Agent (AMA)), you need to migrate to the MDE-based (Microsoft Defender for Endpoint) approach. This migration ensures continued functionality and access to enhanced capabilities. Learn how to [migrate file integrity monitoring](migrate-file-integrity-monitoring.md) from legacy AMA/MMA clients to the MDE-based solution.
 
 ## Configure file integrity monitoring
 
