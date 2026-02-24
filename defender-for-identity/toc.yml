@@ -90,9 +90,9 @@ items:
     - name: Microsoft Defender for Identity and CyberArk
       items:
         - name: Overview
-          href: defender-for-identity-cyberark-overview.md
+          href: defender-for-identity-cyber-ark-overview.md
         - name: Connect CyberArk to Microsoft Defender for Identity (Preview)
-          href: connect-cyberark.md
+          href: connect-cyber-ark.md
     - name: Microsoft Defender for Identity and Okta
       items:
       - name: Overview
