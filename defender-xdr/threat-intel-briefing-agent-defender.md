@@ -16,7 +16,7 @@ ms.collection:
 ms.topic: how-to
 search.appverid:
 - MET150
-ms.date: 01/06/2026
+ms.date: 02/15/2026
 appliesto:
 - Microsoft Defender XDR
 #customer intent: As a security analyst, I want to learn about the Threat Intelligence Briefing Agent in Microsoft Defender so that I can generate threat intelligence briefings efficiently.
@@ -36,6 +36,9 @@ The Microsoft Security Copilot Threat Intelligence Briefing Agent in Microsoft D
 The agent leverages dynamic automation and deep generative AI along with its wealth of threat intelligence knowledge and signals. When building the briefing, the agent dynamically chooses the next step based on the outcome of the previous step. This approach allows it to decide in real-time what threat intelligence to include and prioritize. The agent then translates this technical information into a digestible report that various audiences can consume.
 
 The Threat Intelligence Briefing Agent is best suited for customers who turn on Microsoft Defender for Endpoint and Microsoft Defender External Attack Surface, as the agent relies on signals and insights from these first-party integrations to deliver accurate and context-rich reports.
+
+Watch this video to see the Threat Intelligence Briefing Agent in action, from setup to generating your first briefing.
+> [!VIDEO  https://learn-video.azurefd.net/vod/player?id=07ffea67-4ebf-4f13-9a7e-dcc49bcaac93]
 
 ## Where to find the Threat Intelligence Briefing Agent
 
