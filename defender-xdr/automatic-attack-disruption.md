@@ -34,6 +34,9 @@ Automatic attack disruption limits lateral movement early on and reduces the ove
 
 This article provides an overview of automated attack disruption and includes links to the next steps and other resources.
 
+> [!TIP]
+> This article describes how attack disruption works. To configure these capabilities, see [Configure attack disruption capabilities](configure-attack-disruption.md) in Microsoft Defender XDR.
+
 ## How automatic attack disruption works
 
 Automatic attack disruption is designed to contain attacks in progress, limit the impact on an organization's assets, and provide more time for security teams to remediate the attack fully. Attack disruption uses the full breadth of our extended detection and response (XDR) signals, taking the entire attack into account to act at the incident level. This capability is unlike known protection methods such as prevention and blocking based on a single indicator of compromise.
@@ -49,17 +52,17 @@ Automatic attack disruption operates in three key stages:
 
 This game-changing capability limits a threat actor's progress early on and dramatically reduces the overall impact of an attack, from associated costs to loss of productivity.
 
-## Establishing high confidence when taking automatic action
+## How Defender XDR establishes confidence for automatic action
 
-We understand that taking automatic action sometimes comes with hesitation from security teams, given the potential impact it can have on an organization. Therefore, the automatic attack disruption capabilities in Defender XDR are designed to rely on high-fidelity signals. It also uses Defender XDR's incident correlation with millions of Defender product signals across email, identity, applications, documents, devices, networks, and files. Insights from the continuous investigation of thousands of incidents by Microsoft's security research team ensure that automatic attack disruption maintains a high signal-to-noise ratio (SNR).
+Security teams might hesitate when systems take automatic action because response actions can affect business operations. Automatic attack disruption addresses this concern by using high-fidelity signals and incident-level correlation across email, identity, applications, documents, devices, networks, and files.
 
-The confidence figures described for automatic attack disruption refer to detector precision, measured by SNR. In practice, this means Defender XDR evaluates each detector hit against a broad set of indicators to determine whether the result is a true positive or a false positive. This process combines machine learning outputs with cross-workload signal correlation and expert-led incident classification.
+Confidence in automatic attack disruption refers to detector precision, measured by signal-to-noise ratio (SNR). Defender XDR evaluates each detector hit against a broad set of indicators to classify true positives and false positives by combining machine learning outputs, cross-workload correlation, and expert-led incident classification.
 
-Detectors are released only after extended evaluation and validation. New detectors are assessed in audit mode over time, and only detectors that meet strict precision thresholds are gradually deployed in customer environments. Only detectors with at least 99% SNR are released, and automatic disruption eligibility requires a higher threshold of at least 99.9% SNR. In this context, "over 99% confidence" means high precision in classifying attack activity, not a guarantee that a disruption action can never affect legitimate activity.
+Defender validates detectors in audit mode before broad release and gradually deploys only detectors that meet strict quality requirements. This process aims to keep false positives low while maintaining effective disruption of active attacks.
 
-Investigations are integral to monitoring our signals and the attack threat landscape to ensure high-quality and accurate protection. Microsoft also continuously monitors disruption initiations to identify anomalies and review disruption impact.
+Microsoft security experts continuously review disruption activity, monitor anomalies, and assess impact to preserve high detection quality over time.
 
-## How attack disruption AI is built and validated
+## How attack disruption uses AI
 
 Attack disruption AI uses an ensemble of purpose-built models and detectors developed across the Microsoft Defender suite. These capabilities are trained and tuned using multiple data sources, including:
 
@@ -70,9 +73,6 @@ Attack disruption AI uses an ensemble of purpose-built models and detectors deve
 The platform uses multiple machine learning approaches, including graph models, boosted decision trees, neural networks, and dedicated small language models (SLMs), to improve detection quality and action precision.
 
 Model and detector quality is maintained through continuous engineering and validation cycles rather than a single static release point. Before broad rollout, new detectors go through rigorous pre-release validation and staged deployment. Ongoing quality is supported by expert review of AI decisions and 24x7 operational response coverage for anomalous behavior.
-
-> [!TIP]
-> This article describes how attack disruption works. To configure these capabilities, see [Configure attack disruption capabilities](configure-attack-disruption.md) in Microsoft Defender XDR.
 
 ## Automated response actions
 
@@ -91,9 +91,9 @@ Automatic attack disruption uses Microsoft-based XDR response actions. Examples 
 
 - [Contain user](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) - based on Microsoft Defender for Endpoint's capability, this response action automatically contains suspicious identities temporarily to help block any lateral movement and remote encryption related to incoming communication with Defender for Endpoint's onboarded devices.
 
-  User containment is enforced at the endpoint layer, not by disabling the account in the identity provider. This action limits attacker use of compromised identities on protected devices by restricting authentication-based access, file system access, and network communication paths used for attack progression.
+  User containment is enforced at the endpoint layer and does not disable the account in the identity provider. Defender for Endpoint blocks attacker use of compromised identities on protected devices and limits authentication-based access, file system access, and network communication paths.
 
-  This approach is designed to be granular, so protection can target attack-related activity while allowing normal business communication to continue where possible.
+  This action applies controls at a granular level, so Microsoft can target attack-related activity and preserve normal business communication where possible.
 
 For more information, see [remediation actions](m365d-remediation-actions.md) in Microsoft Defender XDR.
 
