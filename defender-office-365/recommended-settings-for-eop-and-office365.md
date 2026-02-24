@@ -84,14 +84,14 @@ Users can't release their own messages quarantined as malware, regardless of how
 > |**Admin notifications**||
 > |**Notify an admin about undelivered messages from internal senders** (_EnableInternalSenderAdminNotifications_ and _InternalSenderAdminAddress_)|<details><summary>Show details</summary><br>**Default**: Not selected (`$false`)<br>**Standard**: Not selected (`$false`)<br>**Strict**: Not selected (`$false`)<br>**Comment**: We have no specific recommendation for this setting.</details>|
 > |**Notify an admin about undelivered messages from external senders** (_EnableExternalSenderAdminNotifications_ and _ExternalSenderAdminAddress_)|<details><summary>Show details</summary><br>**Default**: Not selected (`$false`)<br>**Standard**: Not selected (`$false`)<br>**Strict**: Not selected (`$false`)<br>**Comment**: We have no specific recommendation for this setting.</details>|
-> |**Customize notifications**|<details><summary>Show details</summary><br>**Comment**: We have no specific recommendations for these settings.</details>|
+> |**Customize notifications**|**Comment**: We have no specific recommendations for these settings.|
 > |**Use customized notification text** (_CustomNotifications_)|<details><summary>Show details</summary><br>**Default**: Not selected (`$false`)<br>**Standard**: Not selected (`$false`)<br>**Strict**: Not selected (`$false`)</details>|
 > |**From name** (_CustomFromName_)|<details><summary>Show details</summary><br>**Default**: Blank<br>**Standard**: Blank<br>**Strict**: Blank</details>|
 > |**From address** (_CustomFromAddress_)|<details><summary>Show details</summary><br>**Default**: Blank<br>**Standard**: Blank<br>**Strict**: Blank</details>|
 > |**Customize notifications for messages from internal senders**|<details><summary>Show details</summary><br>**Comment**: These settings are used only if **Notify an admin about undelivered messages from internal senders** is selected.</details>|
 > |**Subject** (_CustomInternalSubject_)|<details><summary>Show details</summary><br>**Default**: Blank<br>**Standard**: Blank<br>**Strict**: Blank</details>|
 > |**Message** (_CustomInternalBody_)|<details><summary>Show details</summary><br>**Default**: Blank<br>**Standard**: Blank<br>**Strict**: Blank</details>|
-> |**Customize notifications for messages from external senders**|<details><summary>Show details</summary><br>**Comment**: These settings are used only if **Notify an admin about undelivered messages from external senders** is selected.</details>|
+> |**Customize notifications for messages from external senders**|**Comment**: These settings are used only if **Notify an admin about undelivered messages from external senders** is selected.|
 > |**Subject** (_CustomExternalSubject_)|<details><summary>Show details</summary><br>**Default**: Blank<br>**Standard**: Blank<br>**Strict**: Blank</details>|
 > |**Message** (_CustomExternalBody_)|<details><summary>Show details</summary><br>**Default**: Blank<br>**Standard**: Blank<br>**Strict**: Blank</details>|
 
@@ -255,7 +255,7 @@ For more information about this setting, see [Phishing email thresholds in anti-
 >
 > |Security feature name|Details|
 > |---|---|
-> |**Phishing email threshold** (_PhishThresholdLevel_)|<details><summary>Show details</summary><br>**Default**: **1 - Standard** (`1`)<br>**Standard**: **3 - More aggressive** (`3`)<br>**Strict**: **4 - Most aggressive** (`4`)</details>|
+> |**Phishing email threshold** (_PhishThresholdLevel_)|**Default**: **1 - Standard** (`1`)<br>**Standard**: **3 - More aggressive** (`3`)<br>**Strict**: **4 - Most aggressive** (`4`)|
 
 #### Impersonation settings in anti-phishing policies in Microsoft Defender for Office 365
 
@@ -364,16 +364,16 @@ In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-
 > |Security feature name|Details|
 > |---|---|
 > |**URL & click protection settings**||
-> |**Email**|<details><summary>Show details</summary><br>**Comment**: The settings in this section affect URL rewriting and time of click protection in email messages.</details>|
+> |**Email**|**Comment**: The settings in this section affect URL rewriting and time of click protection in email messages.|
 > |**On: Safe Links checks a list of known, malicious links when users click links in email. URLs are rewritten by default.** (_EnableSafeLinksForEmail_)|<details><summary>Show details</summary><br>**Default in custom**: Selected (`$true`)<br>**Built-in protection**: Selected (`$true`)<br>**Standard**: Selected (`$true`)<br>**Strict**: Selected (`$true`)</details>|
 > |**Apply Safe Links to email messages sent within the organization** (_EnableForInternalSenders_)|<details><summary>Show details</summary><br>**Default in custom**: Selected (`$true`)<br>**Built-in protection**: Not Selected (`$false`)<br>**Standard**: Selected (`$true`)<br>**Strict**: Selected (`$true`)</details>|
 > |**Apply real-time URL scanning for suspicious links and links that point to files** (_ScanUrls_)|<details><summary>Show details</summary><br>**Default in custom**: Selected (`$true`)<br>**Built-in protection**: Selected (`$true`)<br>**Standard**: Selected (`$true`)<br>**Strict**: Selected (`$true`)</details>|
 > |**Wait for URL scanning to complete before delivering the message** (_DeliverMessageAfterScan_)|<details><summary>Show details</summary><br>**Default in custom**: Selected (`$true`)<br>**Built-in protection**: Selected (`$true`)<br>**Standard**: Selected (`$true`)<br>**Strict**: Selected (`$true`)</details>|
 > |**Do not rewrite URLs, do checks via Safe Links API only** (_DisableURLRewrite_)|<details><summary>Show details</summary><br>**Default in custom**: Selected (`$false`)<sup>\*</sup><br>**Built-in protection**: Selected (`$true`)<br>**Standard**: Not selected (`$false`)<br>**Strict**: Not selected (`$false`)<br>**Comment**: <sup>\*</sup> In new policies created in the Defender portal, this setting is selected by default. In new policies created in PowerShell, the default value is `$false`.</details>|
 > |**Do not rewrite the following URLs in email** (_DoNotRewriteUrls_)|<details><summary>Show details</summary><br>**Default in custom**: Blank<br>**Built-in protection**: Blank<br>**Standard**: Blank<br>**Strict**: Blank<br>**Comment**: We have no specific recommendation for this setting.<br><br>**Note**: Safe Links doesn't scan or wrap entries in the "Don't rewrite the following URLs" list during mail flow. Report the URL as **I've confirmed it's clean** and then select **Allow this URL** to add an allow entry to the Tenant Allow/Block List so the URL isn't scanned or wrapped by Safe Links during mail flow _and_ at time of click. For instructions, see [Report good URLs to Microsoft](submissions-admin.md#report-good-urls-to-microsoft).</details>|
-> |**Teams**|<details><summary>Show details</summary><br>**Comment**: The setting in this section affects time of click protection in Microsoft Teams.</details>|
+> |**Teams**|**Comment**: The setting in this section affects time of click protection in Microsoft Teams.|
 > |**On: Safe Links checks a list of known, malicious links when users click links in Microsoft Teams. URLs are not rewritten.** (_EnableSafeLinksForTeams_)|<details><summary>Show details</summary><br>**Default in custom**: Selected (`$true`)<br>**Built-in protection**: Selected (`$true`)<br>**Standard**: Selected (`$true`)<br>**Strict**: Selected (`$true`)</details>|
-> |**Office 365 apps**|<details><summary>Show details</summary><br>**Comment**: The setting in this section affects time of click protection in Office apps.</details>|
+> |**Office 365 apps**|**Comment**: The setting in this section affects time of click protection in Office apps.|
 > |**On: Safe Links checks a list of known, malicious links when users click links in Microsoft Office apps. URLs are not rewritten.** (_EnableSafeLinksForOffice_)|<details><summary>Show details</summary><br>**Default in custom**: Selected (`$true`)<br>**Built-in protection**: Selected (`$true`)<br>**Standard**: Selected (`$true`)<br>**Strict**: Selected (`$true`)<br>**Comment**: Use Safe Links in supported Office 365 desktop and mobile (iOS and Android) apps. For more information, see [Safe Links settings for Office apps](safe-links-about.md#safe-links-settings-for-office-apps).</details>|
 > |**Click protection settings**||
 > |**Track user clicks** (_TrackClicks_)|<details><summary>Show details</summary><br>**Default in custom**: Selected (`$true`)<br>**Built-in protection**: Selected (`$true`)<br>**Standard**: Selected (`$true`)<br>**Strict**: Selected (`$true`)</details>|
