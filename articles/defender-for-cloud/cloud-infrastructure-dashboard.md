@@ -99,7 +99,7 @@ Each tile in this section surfaces insights from Microsoft’s CNAPP (Cloud-Nati
 
 Workloads include:
 
-- Compute (including Virtual Machines)
+- Compute (including virtual machines)
 - Data
 - Containers
 - AI
