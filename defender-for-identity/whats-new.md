@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 02/19/2026
+ms.date: 02/23/2026
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality.
 ms.reviewer: AbbyMSFT
@@ -22,6 +22,14 @@ For more information, see also:
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
+
+## February 2026
+
+### Defender for Identity sensor updates
+
+|Version number|Updates|
+|---|---|
+|2.255|This sensor update includes bug fixes.|
 
 ## January 2026
 
@@ -65,7 +73,11 @@ All alerts are based on detections from Defender for Identity sensors. For the f
 
 ### New security posture assessments
 
+<<<<<<< HEAD
 - [Remove stale Active Directory accounts (Preview)](security-posture-assessments/accounts.md#remove-stale-active-directory-accounts-preview) lists any user accounts in Active Directory that are stale, meaning they haven't logged in at all during the past 90 days. 
+=======
+- [Remove stale Active Directory accounts (Preview)](security-posture-assessments/accounts.md#remove-stale-active-directory-accounts-preview) lists any user accounts in Active Directory that are stale, meaning they haven't logged in at all during the past 90 days.
+>>>>>>> 93fa434563270613a3da3b6d4828f7739173cde2
 - [Microsoft Entra ID privileged user accounts that are also privileged in Active Directory (Preview)](security-posture-assessments/accounts.md#microsoft-entra-id-privileged-user-accounts-that-are-also-privileged-in-active-directory-preview) lists Microsoft Entra ID privileged user accounts that also have privileged roles in Active Directory.
 
 ### New Health Alert: Sensor v3.x RPC Audit Misconfigured
@@ -91,6 +103,8 @@ To ensure consistent protection, we recommend that you make sure all servers wit
 - The latest Windows cumulative update 
 - Automatic Windows event auditing enabled 
 For more information, see [Configure automatic windows auditing](deploy/configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically-preview).
+
+### Sensor updates
 
 |Version number|Updates|
 |---|---|
@@ -184,9 +198,9 @@ The [Microsoft Defender for Identity sensor v3.x](/defender-for-identity/deploy/
 
 ## September 2025
 
-### MDI alerts transitioned to the unified Defender alerting experience
+### Defender for Identity alerts transitioned to the unified Defender alerting experience
 
-As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, the following alerts were converted from the Microsoft Defender for Identity classic format to the MDI XDR alert format. Keep in mind that all alerts are based on detections from Defender for Identity sensors.
+As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, the following alerts were converted from the Microsoft Defender for Identity classic format to the the unified Defender alerting format. Keep in mind that all alerts are based on detections from Defender for Identity sensors.
 
 |Classic Alert Title|External ID|XDR Alert Name|Detector ID|
 |---|---|---|---|
@@ -250,53 +264,6 @@ The improvements will gradually take effect across the following detections:
 Microsoft Defender for Identity supports the [Unified connectors](/azure/sentinel/unified-connector) experience, starting with the Okta single sign-on connector. The unified connector enables Defender for Identity to collect Okta system logs once and share them across supported Microsoft security products, reducing API usage and improving connector efficiency.
 
 For more information, see: [Connect Okta to Microsoft Defender for Identity (Preview)](okta-integration.md)
-
-## August 2025
-
-### Microsoft Entra ID risk level is now available in near real time in Microsoft Defender for Identity (Preview)
-
-Microsoft Entra ID risk level is now available on the Identity Inventory assets page, the identity details page, and in the IdentityInfo table in Advanced Hunting, and includes the Microsoft Entra ID risk score. SOC analysts can use this data to correlate risky users with sensitive or highly privileged users, create custom detections based on current or historical user risk, and improve investigation context.
-
-Previously, Defender for Identity tenants received Microsoft Entra ID risk level in the IdentityInfo table through user and entity behavior analytics (UEBA). With this update, the Microsoft Entra ID risk level is now updated in near real time through Microsoft Defender for Identity.
-
-For UEBA tenants without a Microsoft Defender for Identity license, synchronization of Microsoft Entra ID risk level to the IdentityInfo table remains unchanged.
-
-### New security assessment: Remove inactive service accounts
-
-Microsoft Defender for Identity now includes a new security assessment that helps you identify and remove inactive service accounts in your organization. This assessment lists Active Directory service accounts that were inactive for the past 90 days, to help you mitigate security risks associated with unused accounts.
-
-For more information, see: Security Assessment: [Remove Inactive Service Accounts (Preview)](/defender-for-identity/remove-inactive-service-account).
-
-### New Graph based API for response actions (preview)
-
-We're excited to announce a new Graph-based API for initiating and managing remediation actions in Microsoft Defender for Identity.
-
-This capability is currently in preview and available in API Beta version.
-
-For more information, see [Managing response actions through Graph API](/graph/api/resources/security-identityaccounts?view=graph-rest-beta&preserve-view=true).
-
-### Identity scoping is now generally available (GA)
-
-Identity scoping is now generally available across all environments. Organizations can now define and refine the scope of MDI monitoring and gain granular control over which entities and resources are included in security analysis.
-
-For more information, see [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
-
-### New security posture assessment: Remove discoverable passwords in Active Directory account attributes (Preview)
-
-The new security posture assessment highlights unsecured Active Directory attributes that contain passwords or credential clues and recommends steps to remove them, helping reduce the risk of identity compromise.
-
-For more information, see: [Security Assessment: Remove discoverable passwords in Active Directory account attributes (Preview)](/defender-for-identity/security-posture-assessments/accounts#remove-discoverable-passwords-in-active-directory-account-attributes-preview)
-
-### Microsoft Defender for Identity sensor version updates
-
-|Version number|Updates|
-|---|---|
-|2.247|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
-|2.246|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
-
-### Detection update: Suspected Brute Force attack (Kerberos, NTLM)
-
-Improved detection logic to include scenarios where accounts were locked during attacks. As a result, the number of triggered alerts might increase.
 
 ## Next steps
 
