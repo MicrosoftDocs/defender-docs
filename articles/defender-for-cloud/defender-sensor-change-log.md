@@ -27,8 +27,7 @@ To see the version of the sensor run:
 
 - **What's included:**
 
-  - Defender for containers runtime Anti-Malware
-      Learn more about [Anti-malware detection and blocking](anti-malware.md)
+  - Defender for containers runtime anti-malware. Learn more about [anti-malware detection and blocking](anti-malware.md).
     
   - Binary drift blocking 
     
@@ -56,7 +55,7 @@ To see the version of the sensor run:
 - **Released:** December 2025
 - **What's included:**
     - Bug fixes and security enhancements
-    - Convert log analytics keys in defender helm chart to optional
+    - Convert log analytics keys in Defender helm chart to optional
     
 **Sensor v0.9.44 – Preview**   
 - **Released:** November 2025  
@@ -65,15 +64,20 @@ To see the version of the sensor run:
   - Added support for new Defender endpoints (requires outbound access to `*.cloud-defender.microsoft.com`).  
     Learn more in the [Defender for Containers setup guide](defender-for-containers-enable.md).
 
-**Sensor v0.8.30 – GA**  
-- **Released:** August 2025  
+**Sensor v0.9.17 – Preview**  
+- **Released:** June 2025  
 - **What's included:**
-  - Better memory efficiency and reduced CPU consumption  
+  - **Helm-based deployment support**  
+  Introduces a new method for deploying and managing the sensor using Helm.  
+  See: [Install Defender for Containers sensor using Helm](deploy-helm.md).  
+  - **DNS threat detections**  
+  Adds DNS-based detection capabilities using threat intelligence feeds.  
+  - Improved memory efficiency and reduced CPU consumption  
   - Bug fixes and security enhancements  
+    
+### Sensor v0.8 (relevant to all AKS supported versions and Arc for K8s)
 
-### Sensor v0.9 (deployed by Helm or Arc for K8s in Preview mode)
-
-**Sensor v0.9.50 – Preview**
+**Sensor v0.8.47 – GA**
 
 - **Released:** February 2026
 
@@ -81,40 +85,34 @@ To see the version of the sensor run:
 
   - Performance Improvements 
     
-**Sensor v0.9.49 – Preview**
+**Sensor v0.8.42 – GA**
 
 - **Released:** December 2025
 - **What's included:**
 
-  - Bug fixes 
-    
+  - Security enhancements 
+
   - Gating support for auto AKS
-    
-**Sensor v0.9.46 – Preview**
+
+**Sensor v0.8.40 – GA**
 
 - **Released:** December 2025
 - **What's included:**
+   - Bug fixes and security enhancements
+   - Improve latency for webhook calls in the API gating validation.
 
-  - Bug fixes and security enhancements
-  - Convert log analytics keys in defender helm chart to optional
-    
-**Sensor v0.9.44 – Preview**  
+**Sensor v0.8.39 – GA**  
 - **Released:** November 2025  
 - **What's included:**
   - Bug fixes and security enhancements  
+  - Gated deployment: Now globally available  
   - Added support for new Defender endpoints (requires outbound access to `*.cloud-defender.microsoft.com`).  
-    Learn more in the [Defender for Containers setup guide](defender-for-containers-enable.md).
+    Learn more about network requirements in the [Defender for Containers setup guide](defender-for-containers-enable.md).
 
-**Sensor v0.9.17 – Preview**  
-- **Released:** June 2025  
+**Sensor v0.8.30 – GA**  
+- **Released:** August 2025  
 - **What's included:**
-
-  - **Helm-based deployment support**  
-    Introduces a new method for deploying and managing the sensor using Helm.  
-    See: [Install Defender for Containers sensor using Helm](deploy-helm.md).  
-  - **DNS threat detections**  
-  Adds DNS-based detection capabilities using threat intelligence feeds.  
-  - Improved memory efficiency and reduced CPU consumption  
+  - Better memory efficiency and reduced CPU consumption  
   - Bug fixes and security enhancements  
     
 ## Defender for Containers – Sensor Support Policy
