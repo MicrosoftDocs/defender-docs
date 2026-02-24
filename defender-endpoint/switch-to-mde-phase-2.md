@@ -75,8 +75,6 @@ As you're making the switch to Defender for Endpoint, you might need to take cer
 
 This step of the setup process involves adding Defender for Endpoint to the exclusion list for your existing endpoint protection solution and any other security products your organization is using. Make sure to refer to your solution provider's documentation to add exclusions.
 
-Select the tab for information about exclusions for that operating system.
-
 [!INCLUDE [Microsoft Defender for Endpoint processes](includes/streamlined-connectivity-processes.md)]
 
 > [!IMPORTANT]
