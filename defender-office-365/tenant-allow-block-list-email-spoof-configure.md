@@ -585,7 +585,7 @@ A domain pair for a spoofed sender in the Tenant Allow/Block List uses the follo
   - The wildcard character (\*).
 
   > [!TIP]
-  > Spoofed sender entries that use use PTR record domains for the sending infrastructure don't work if PTR record resolutions fails for the domain. For those domains, use the IP address as the sending infrastructure (for example, 192.168.100.100/24).
+  > Spoofed sender entries that use PTR record domains for the sending infrastructure don't work if PTR record resolutions fails for the domain. For those domains, use the IP address as the sending infrastructure (for example, 192.168.100.100/24).
 
 Here are some examples of valid domain pairs to identify spoofed senders:
 
