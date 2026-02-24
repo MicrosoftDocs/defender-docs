@@ -24,8 +24,6 @@ appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoi
 
 This article includes a list of the standard connectivity URLs required to onboard and maintain devices in Microsoft Defender for Endpoint in commercial cloud environments.
 
-## Prerequisites
-
 ## Microsoft Defender URLs
 
 |Service|Geography|Category|Port|Endpoint/URL|Endpoint/URL Description|Required or Optional|Windows 10, 11; Server 2022, 2019, 2016 (Unified Agent); Server 2012 R2 (Unified Agent) |Windows 7, 8.1|Windows Server 2008 R2, 2012 R2, 2016 (MMA Based)|Mac|Linux|Comments|
