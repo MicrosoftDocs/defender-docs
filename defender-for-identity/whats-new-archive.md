@@ -892,7 +892,7 @@ In Microsoft Defender XDR, create rule conditions based on evidence types, and t
 Released April 23, 2023
 
 - New health alert for verifying that Directory Services Configuration Container Auditing is configured correctly, as described in the [health alerts page](health-alerts.md).
-- New workspaces for AD tenants mapped to New Zealand are created in the Australia East region. For the most current list of regional deployment, see [Defender for Identity components](architecture.md#defender-for-identity-components).
+- New workspaces for AD tenants mapped to New Zealand are created in the Australia East region.
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## March 2023
