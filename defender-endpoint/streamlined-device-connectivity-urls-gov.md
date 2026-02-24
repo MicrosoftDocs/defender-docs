@@ -116,4 +116,4 @@ See the prerequisites for [streamlined connectivity](configure-device-connectivi
 
 ## Microsoft Defender process exclusions
 
-[INCLUDE [Microsoft Defender for Endpoint processes](../includes/streamlined-connectivity-processes.md)]
+[INCLUDE [Microsoft Defender for Endpoint processes](/includes/streamlined-connectivity-processes.md)]
