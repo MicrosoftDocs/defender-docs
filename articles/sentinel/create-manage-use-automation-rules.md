@@ -215,7 +215,9 @@ To add one of these conditions based on an incident's tags, take the following s
 
 #### Conditions based on custom details
 
-You can set the value of a [custom detail surfaced in an incident](surface-custom-details-in-alerts.md) as a condition of an automation rule. Recall that custom details are data points in raw event log records that can be surfaced and displayed in alerts and the incidents generated from them. Use custom details to get to the actual relevant content in your alerts without having to dig through query results.
+You can set the value of a [custom detail surfaced in an incident](surface-custom-details-in-alerts.md) as a condition of an automation rule. Recall that custom details are data points in raw event log records that can be surfaced and displayed in alerts and the incidents generated from them. Use custom details to get to the actual relevant content in your alerts without having to dig through query results. 
+
+**Known limitation**: When using custom detail values, the **Does not contain** operator might fail to evaluate correctly when multiple (two or more) distinct values are present.
 
 **To add a condition based on a custom detail**:
 
@@ -243,8 +245,6 @@ Select **+ Add item condition**.
     :::image type="content" source="media/create-manage-use-automation-rules/custom-details-value-filled.png" alt-text="Screenshot of the custom detail value field filled in.":::
 
 In this example, if the incident has the custom detail *DestinationEmail*, and if the value of that detail is `pwned@bad-botnet.com`, the actions defined in the automation rule will run.
-
-**Known limitation**: When using custom detail values, the **Does not contain** operator might fail to evaluate correctly when multiple (two or more) distinct values are present.
 
 ### Add actions
 
