@@ -73,11 +73,7 @@ All alerts are based on detections from Defender for Identity sensors. For the f
 
 ### New security posture assessments
 
-<<<<<<< HEAD
-- [Remove stale Active Directory accounts (Preview)](security-posture-assessments/accounts.md#remove-stale-active-directory-accounts-preview) lists any user accounts in Active Directory that are stale, meaning they haven't logged in at all during the past 90 days. 
-=======
 - [Remove stale Active Directory accounts (Preview)](security-posture-assessments/accounts.md#remove-stale-active-directory-accounts-preview) lists any user accounts in Active Directory that are stale, meaning they haven't logged in at all during the past 90 days.
->>>>>>> 93fa434563270613a3da3b6d4828f7739173cde2
 - [Microsoft Entra ID privileged user accounts that are also privileged in Active Directory (Preview)](security-posture-assessments/accounts.md#microsoft-entra-id-privileged-user-accounts-that-are-also-privileged-in-active-directory-preview) lists Microsoft Entra ID privileged user accounts that also have privileged roles in Active Directory.
 
 ### New Health Alert: Sensor v3.x RPC Audit Misconfigured
