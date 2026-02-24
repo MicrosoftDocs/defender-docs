@@ -27,8 +27,7 @@ To see the version of the sensor run:
 
 - **What's included:**
 
-  - Defender for containers runtime anti-malware
-    Learn more about [anti-malware detection and blocking](anti-malware.md)
+  - Defender for containers runtime anti-malware. Learn more about [anti-malware detection and blocking](anti-malware.md).
     
   - Binary drift blocking 
     
