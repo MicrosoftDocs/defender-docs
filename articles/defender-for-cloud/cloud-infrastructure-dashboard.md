@@ -40,7 +40,7 @@ The Cloud Overview dashboard is the landing page for Microsoft Defender for Clou
 You can access the Cloud Overview dashboard from the left navigation bar in the Microsoft Defender portal:
 
 1. Sign in to the [Defender portal](https://security.microsoft.com).
-1. Navigate to **Cloud security** > **Overview**
+1. Go to **Cloud security** > **Overview**
 
 ## Top controls
 
