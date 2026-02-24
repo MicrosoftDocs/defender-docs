@@ -4,7 +4,7 @@ description: This article explains how to create and use automation rules in Mic
 ms.topic: how-to
 author: batamig
 ms.author: bagol
-ms.date: 10/16/2024
+ms.date: 02/24/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
@@ -243,6 +243,8 @@ Select **+ Add item condition**.
     :::image type="content" source="media/create-manage-use-automation-rules/custom-details-value-filled.png" alt-text="Screenshot of the custom detail value field filled in.":::
 
 In this example, if the incident has the custom detail *DestinationEmail*, and if the value of that detail is `pwned@bad-botnet.com`, the actions defined in the automation rule will run.
+
+**Known limitation**: When using custom detail values, the **Does not contain** operator might fail to evaluate correctly when multiple (two or more) distinct values are present.
 
 ### Add actions
 
