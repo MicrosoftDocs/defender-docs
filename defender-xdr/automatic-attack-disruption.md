@@ -1,6 +1,6 @@
 ---
-title: Automatic attack disruption in Microsoft Defender XDR
-description: Automatically contain assets controlled by attackers by using automatic attack disruption in Microsoft Defender XDR.
+title: Automatic attack disruption in Microsoft Defender
+description: Automatically contain assets controlled by attackers by using automatic attack disruption in Microsoft Defender.
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
@@ -24,18 +24,18 @@ appliesto:
   - Microsoft Defender XDR
 ---
 
-# Automatic attack disruption in Microsoft Defender XDR
+# Automatic attack disruption in Microsoft Defender
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Microsoft Defender XDR correlates millions of individual signals to identify active ransomware campaigns or other sophisticated attacks in the environment with high confidence. While an attack is in progress, Defender XDR disrupts the attack by automatically containing compromised assets that the attacker is using through automatic attack disruption.
+Microsoft Defender correlates millions of individual signals to identify active ransomware campaigns or other sophisticated attacks in the environment with high confidence. While an attack is in progress, Defender disrupts the attack by automatically containing compromised assets that the attacker is using through automatic attack disruption.
 
 Automatic attack disruption limits lateral movement early on and reduces the overall impact of an attack, from associated costs to loss of productivity. At the same time, it leaves security operations teams in complete control of investigating, remediating, and bringing assets back online.
 
 This article provides an overview of automated attack disruption and includes links to the next steps and other resources.
 
 > [!TIP]
-> This article describes how attack disruption works. To configure these capabilities, see [Configure attack disruption capabilities](configure-attack-disruption.md) in Microsoft Defender XDR.
+> This article describes how attack disruption works. To configure these capabilities, see [Configure attack disruption capabilities](configure-attack-disruption.md) in Microsoft Defender.
 
 ## How automatic attack disruption works
 
@@ -46,17 +46,17 @@ While many XDR and security orchestration, automation, and response (SOAR) platf
 
 Automatic attack disruption operates in three key stages:
 
-- It uses Defender XDR's ability to correlate signals from many different sources into a single, high-confidence incident through insights from endpoints, identities, email and collaboration tools, and SaaS apps.
+- It uses Microsoft Defender's ability to correlate signals from many different sources into a single, high-confidence incident through insights from endpoints, identities, email and collaboration tools, and SaaS apps.
 - It identifies assets controlled by the attacker and used to spread the attack.
 - It automatically takes response actions across relevant Microsoft Defender products to contain the attack in real-time by containing and disabling affected assets.
 
 This game-changing capability limits a threat actor's progress early on and dramatically reduces the overall impact of an attack, from associated costs to loss of productivity.
 
-## How Defender XDR establishes confidence for automatic action
+## How Defender establishes confidence for automatic action
 
 Security teams might hesitate when systems take automatic action because response actions can affect business operations. Automatic attack disruption addresses this concern by using high-fidelity signals and incident-level correlation across email, identity, applications, documents, devices, networks, and files.
 
-Confidence in automatic attack disruption refers to detector precision, measured by signal-to-noise ratio (SNR). Defender XDR evaluates each detector hit against a broad set of indicators to classify true positives and false positives by combining machine learning outputs, cross-workload correlation, and expert-led incident classification.
+Confidence in automatic attack disruption refers to detector precision, measured by signal-to-noise ratio (SNR). Defender evaluates each detector hit against a broad set of indicators to classify true positives and false positives by combining machine learning outputs, cross-workload correlation, and expert-led incident classification.
 
 Defender validates detectors in audit mode before broad release and gradually deploys only detectors that meet strict quality requirements. This process aims to keep false positives low while maintaining effective disruption of active attacks.
 
@@ -95,16 +95,16 @@ Automatic attack disruption uses Microsoft-based XDR response actions. Examples 
 
   This action applies controls at a granular level, so Microsoft can target attack-related activity and preserve normal business communication where possible.
 
-For more information, see [remediation actions](m365d-remediation-actions.md) in Microsoft Defender XDR.
+For more information, see [remediation actions](m365d-remediation-actions.md) in Microsoft Defender.
 
 ## Identify when an attack disruption happens in your environment
 
-The Defender XDR incident page will reflect the automatic attack disruption actions through the attack story and the status indicated by a yellow bar (Figure 1). The incident shows a dedicated disruption tag, highlight the status of the assets contained in the incident graph, and add an action to the Action Center.
+The Microsoft Defender incident page will reflect the automatic attack disruption actions through the attack story and the status indicated by a yellow bar (Figure 1). The incident shows a dedicated disruption tag, highlight the status of the assets contained in the incident graph, and add an action to the Action Center.
 
 :::image type="content" source="media/automatic-attack-disruption/Fig1-auto-attack-disruption.png" alt-text="Selecting an incident in the Microsoft Defender portal" lightbox="media/automatic-attack-disruption/Fig1-auto-attack-disruption.png":::
 *Figure 1. Incident view showing the yellow bar where automatic attack disruption took action*
 
-The Defender XDR user experience now includes additional visual cues to ensure visibility of these automatic actions. You can find them across the following experiences:
+The Microsoft Defender user experience now includes additional visual cues to ensure visibility of these automatic actions. You can find them across the following experiences:
 
 1. In the incident queue:
 
