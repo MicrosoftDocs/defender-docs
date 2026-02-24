@@ -77,7 +77,7 @@ This step of the setup process involves adding Defender for Endpoint to the excl
 
 Select the tab for information about exclusions for that operating system.
 
-[!INCLUDE [Microsoft Defender for Endpoint processes](/includes/streamlined-connectivity-processes.md)]
+[!INCLUDE [Microsoft Defender for Endpoint processes](includes/streamlined-connectivity-processes.md)]
 
 > [!IMPORTANT]
 > As a best practice, keep your organization's devices and endpoints up to date. Make sure to get the **[latest updates for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Fswitch-to-mde-phase-2.md/main/76b249d7-f914-4c03-3eaf-48aa43b2fa4a/microsoft-defender-antivirus-updates.md)**, and keep your organization's operating systems and productivity apps up to date.
