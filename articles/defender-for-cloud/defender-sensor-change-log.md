@@ -92,29 +92,28 @@ To see the version of the sensor run:
 - **What's included:**
 
   - Security enhancements 
-    
+
   - Gating support for auto AKS
-    
+
 **Sensor v0.8.40 – GA**
 
 - **Released:** December 2025
 - **What's included:**
+   - Bug fixes and security enhancements
+   - Improve latency for webhook calls in the API gating validation.
 
-  - Bug fixes and security enhancements
-  - Improve latency for webhook calls in the API gating validation.
-    
-**Sensor v0.8.39 – GA** 
+**Sensor v0.8.39 – GA**  
 - **Released:** November 2025  
 - **What's included:**
   - Bug fixes and security enhancements  
   - Gated deployment: Now globally available  
-  - Added support for new Defender endpoints (requires outbound access to `*.cloud-defender.microsoft.com`). Learn more about network requirements in the [Defender for Containers setup guide](defender-for-containers-enable.md).
-    
+  - Added support for new Defender endpoints (requires outbound access to `*.cloud-defender.microsoft.com`).  
+    Learn more about network requirements in the [Defender for Containers setup guide](defender-for-containers-enable.md).
+
 **Sensor v0.8.30 – GA**  
 - **Released:** August 2025  
 - **What's included:**
-
-  - Better memory efficiency and reduced CPU consumption
+  - Better memory efficiency and reduced CPU consumption  
   - Bug fixes and security enhancements  
     
 ## Defender for Containers – Sensor Support Policy
