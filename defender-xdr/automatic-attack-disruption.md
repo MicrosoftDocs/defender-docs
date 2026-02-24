@@ -91,7 +91,7 @@ Automatic attack disruption uses Microsoft-based XDR response actions. Examples 
 
 - [Contain user](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) - based on Microsoft Defender for Endpoint's capability, this response action automatically contains suspicious identities temporarily to help block any lateral movement and remote encryption related to incoming communication with Defender for Endpoint's onboarded devices.
 
-  User containment is enforced at the endpoint layer and does not disable the account in the identity provider. Defender for Endpoint blocks attacker use of compromised identities on protected devices and limits authentication-based access, file system access, and network communication paths.
+  Defender for Endpoint enforces user containment at the endpoint layer and doesn't disable the account in the identity provider. Defender for Endpoint blocks attacker use of compromised identities on protected devices and limits authentication-based access, file system access, and network communication paths.
 
   This action applies controls at a granular level, so Microsoft can target attack-related activity and preserve normal business communication where possible.
 

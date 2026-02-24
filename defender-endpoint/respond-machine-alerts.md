@@ -358,6 +358,9 @@ You can identify critical assets by the **critical asset** tag on the device or 
 
 When an identity in your network might be compromised, you must prevent that identity from accessing the network and different endpoints. Defender for Endpoint can contain an identity, blocking it from access, and helping prevent attacks-- specifically, ransomware. When an identity is contained, any supported Microsoft Defender for Endpoint onboarded device will block incoming traffic in specific protocols related to attacks (deny network logons, RPC, SMB, RDP), terminate ongoing remote sessions and logoff existing RDP connections (terminating the session itself including all its related processes), while enabling legitimate traffic. This action can significantly help to reduce the impact of an attack. When an identity is contained, security operations analysts have extra time to locate, identify and remediate the threat to the compromised identity. Once contained by automatic attack disruption, a user is automatically removed from containment in the next five days.
 
+> [!NOTE]
+> Defender for Endpoint enforces user containment at the endpoint layer and doesn't disable the account in the identity provider. Defender for Endpoint blocks attacker use of compromised identities on protected devices and limits authentication-based access, file system access, and network communication paths. This action applies controls at a granular level, so Microsoft can target attack-related activity and preserve normal business communication where possible.
+
 ### Contain user important notes
 
 - When the contain user action is triggered by [predictive shielding](/defender-xdr/shield-predict-threats) (Preview), the contain user action applies restrictions more selectively, with a focus on users identified as high risk through prediction logic. The contain user action in predictive shielding prevents new sessions rather than terminating existing ones.
