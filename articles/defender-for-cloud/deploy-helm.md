@@ -104,11 +104,8 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>` and optional paramete
   - `latest` for the most recent version.
   - A specific semantic version.
     
-- Replace `<NAMESPACE>` with `kube-system` if you are deploying to AKS Automatic.
+- For AKS Automatic clusters, replace `<NAMESPACE>` with `kube-system`. For standard AKS clusters, don’t specify the `--namespace` parameter. The default namespace is `mdc`.
   
-  > [!NOTE]
-  > Don’t provide this parameter for standard AKS deployments. If not specified, the default namespace is `mdc`.
-
 > [!NOTE]
 > This script sets a new `kubeconfig` context and might create a Log Analytics workspace in your Azure account.
 

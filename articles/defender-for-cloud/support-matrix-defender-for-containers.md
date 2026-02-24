@@ -254,7 +254,7 @@ The following table lists the features provided by Defender for Containers for t
 |--|--|--|--|--|--|--|--|
 | Gated deployment | Gated deployment of container images to your Kubernetes environment | AKS 1.31 or higher (including AKS Automatic)<sup>[1](#footnote1cssc)</sup> | GA | GA | Requires **Defender sensor**, **Security gating**, **Security findings**, and **Registry access**.| **Defender for Containers** | Commercial clouds |
 
-<sup><a name="footnote1cssc"></a>1</sup> For AKS Automatic clusters, Kubernetes gated deployment is supported only when the Defender sensor is installed by using Helm in the `kube-system` namespace. Add-on deployment isn’t supported for this scenario.
+<sup><a name="footnote1cssc"></a>1</sup> On AKS Automatic clusters, the Defender sensor must be installed by using Helm in the `kube-system` namespace. Installation in the `mdc` namespace and add-on deployment aren’t supported for gated deployment.
 
 ### [AWS](#tab/awscssc)
 
