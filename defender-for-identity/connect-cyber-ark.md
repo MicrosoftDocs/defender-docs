@@ -95,4 +95,4 @@ To support ongoing API access, create a new user and assign the custom role.
 
 ## Related articles
 
-- [How Microsoft Defender for Identity protects your CyberArk accounts](defender-for-identity-cyber-ark-overview.md)
+- [How Microsoft Defender for Identity protects your CyberArk identity accounts](defender-for-identity-cyber-ark-overview.md)
