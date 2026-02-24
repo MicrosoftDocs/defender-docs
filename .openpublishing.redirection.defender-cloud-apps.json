@@ -1025,5 +1025,15 @@
       "redirect_url": "/previous-versions/defender-cloud-apps/classic-support-and-ts",
       "redirect_document_id": false
     },
+    {
+      "source_path": "defender-for-cloud-apps/security-saas.md",
+      "redirect_url": "/defender-cloud-apps/posture-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-cloud-apps/webinars.md",
+      "redirect_url": "/defender-cloud-apps/",
+      "redirect_document_id": false
+    }
   ]
 }
