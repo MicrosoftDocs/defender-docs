@@ -72,7 +72,7 @@
     },
     {
       "source_path": "defender-endpoint/techniques-device-timeline.md",
-      "redirect_url": "/defender-endpoint/device-timeline-event-flag#techniques-in-the-device-timeline",
+      "redirect_url": "/defender-endpoint/investigate-machines#mitre-attck-techniques-in-the-device-timeline",
       "redirect_document_id": true
     },
     {
