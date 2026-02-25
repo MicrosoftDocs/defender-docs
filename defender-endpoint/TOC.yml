@@ -595,18 +595,22 @@
   - name: Detect threats and protect endpoints
     items:
     - name: Detect vulnerabilities
+    - name: Detect vulnerabilities
       href: /defender-vulnerability-management
     - name: Discover devices
-      items:
+    - name: Discover devices
+      items:      
       - name: Overview
         href: device-discovery.md
       - name: Manage device discovery
-        href: configure-device-discovery.md          
+        href: configure-device-discovery.md
+      - name: Review and assess devices
+        href: assess-devices.md       
 
-      - name: Discover network devices (network scans)
+      - name: Configure network authenticated scans
         href: network-devices.md
-      - name: Device discovery FAQ
-        href: device-discovery-faq.md
+      - name: Troubleshoot
+        href: troubleshoot-device-discovery-network-scans.md
     - name: Devices
       items:
       - name: Overview

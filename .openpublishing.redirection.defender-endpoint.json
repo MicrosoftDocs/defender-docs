@@ -229,6 +229,11 @@
       "source_path": "defender-endpoint/release-notes-archive-android.md",
       "redirect_url": "/defender-endpoint/whats-new-mde-archive",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/device-discovery-faq.md",
+      "redirect_url": "/defender-endpoint/device-discovery",
+      "redirect_document_id": false
     }         
   ]
 }
