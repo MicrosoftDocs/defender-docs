@@ -65,7 +65,7 @@ Integration into Microsoft browsers is controlled by the browser's SmartScreen s
 - Azure Stack HCI OS, version 23H2 and later
 - macOS
 - Linux
-- iOS 
+- iOS/iPadOS
 - Android
 
 ### Network Protection requirements
