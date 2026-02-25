@@ -30,7 +30,7 @@ Learn how to setup a secure environment to safely test prerelease versions of Mi
 This article provides step-by-step instructions on how to set up your environment for prerelease testing or custom APK deployment. These steps are for Android devices that are onboarded to Microsoft Defender for Endpoint through the following methods:
 
 - Android Enterprise scenarios
-- Mobile Application Mangement (MAM) enrollment scenarios
+- Mobile Application Management (MAM) enrollment scenarios
 
 ## Set up your testing environment in the Android Enterprise scenario
 

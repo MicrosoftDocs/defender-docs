@@ -129,7 +129,10 @@ The following table summarizes the blast radius analysis use cases for different
 
 After selecting an incident from the list in the **Incidents** page, a graph view is displayed showing the entities and assets involved in the incident.
 
-Select a node to open the context menu, then select **View blast radius**.  To view the blast radius of a single node in a group, use the **ungroup** toggle above the grid to present all nodes.
+Select a node to open the context menu, then select **View blast radius**. If no blast radius path was found the menu item shows **No blast radius found**.
+
+To view the blast radius of a single node in a group, use the **ungroup** toggle above the grid to present all nodes.  
+
 
 :::image type="content" source="./media/investigate-incidents/blast-radius.png" lightbox="./media/investigate-incidents/blast-radius.png" alt-text="Screenshot showing the blast radius context menu item." :::
 
