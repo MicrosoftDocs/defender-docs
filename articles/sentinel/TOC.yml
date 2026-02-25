@@ -752,8 +752,6 @@
           href: cisco-ftd-firewall.md
         - name: Google Cloud Platform connectors
           href: connect-google-cloud-platform.md
-        - name: Azure Storage Blob connector
-          href: setup-azure-storage-connector.md
         - name: Microsoft Entra
           href: connect-azure-active-directory.md
         - name: Azure Stack VMs
@@ -1011,6 +1009,8 @@
           href: sentinel-tables-connectors-reference.md
         - name: Security alert schema reference
           href: security-alert-schema.md
+        - name: Standalone vs XDR alert schema reference
+          href: security-alert-schema-differences.md
         - name: CEF log field mapping
           href: cef-name-mapping.md
         - name: Windows security event sets
@@ -1023,12 +1023,14 @@
           href: data-connector-connection-rules-reference.md
         - name: GCP data connectors API reference
           href: data-connection-rules-reference-gcp.md
-        - name: Azure Storage Blob data connector reference
-          href: data-connection-rules-reference-azure-storage.md
-        - name: Enable network security for Azure Storage Blob data connector
-          href: enable-storage-network-security.md
-        - name: Troubleshoot Azure Storage Blob connector issues
-          href: azure-storage-blob-connector-troubleshoot.md  
+        - name: Azure Storage Blob data connectors
+          items:
+            - name: Azure Storage Blob data connector reference
+              href: data-connection-rules-reference-azure-storage.md
+            - name: Enable network security for Azure Storage Blob data connector
+              href: enable-storage-network-security.md
+            - name: Troubleshoot Azure Storage Blob connector issues
+              href: azure-storage-blob-connector-troubleshoot.md  
         - name: Sample API requests for creating Data Collection Rules (DCRs)
           href: api-dcr-reference.md
         - name: Microsoft Purview Information Protection reference

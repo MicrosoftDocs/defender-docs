@@ -8,7 +8,6 @@ ms.reviewer: edbaynash
 ms.topic: reference
 ms.date: 02/19/2026
 ms.service: microsoft-sentinel
-ms.subservice: sentinel-siem
 
 ---
 
