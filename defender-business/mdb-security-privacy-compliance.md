@@ -21,7 +21,7 @@ ms.custom:
 
 # Security, privacy, and compliance in Microsoft Defender for Business
 
-At Microsoft, we're committed to security, privacy and compliance in Defender for Business. Your administrators and security teams can use the information in this article to see the steps we take to keep your organization and data secure.
+At Microsoft, we're committed to security, privacy, and compliance in Defender for Business. Your administrators and security teams can use the information in this article to see the steps we take to keep your organization and data secure.
 
 ## Security
 
@@ -52,5 +52,5 @@ For information about compliance in Defender for Business, see the [Microsoft Tr
 
 ## Related resources
 
-- [Small business Zero Trust guidance - Additional threat protection for Microsoft 365 Business Premium](/security/zero-trust/guidance-smb-partner#additional-threat-protection)
+- [Small business Zero Trust guidance - Threat protection for Microsoft 365 Business Premium](/security/zero-trust/guidance-smb-partner#additional-threat-protection)
 - [Privacy & data management overview](/compliance/assurance/assurance-privacy)

@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint for US Government customers
 description: Learn about the Microsoft Defender for Endpoint for US Government customers requirements and capabilities available
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: lwainstein
+author: limwainstein
 ms.reviewer: jesquive
 ms.localizationpriority: medium
 ms.date: 01/05/2026
@@ -184,4 +184,3 @@ These are the features and known gaps for [Mobile Threat Defense (Microsoft Defe
 > - Report inaccuracy
 > - Request CVE support
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

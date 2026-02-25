@@ -4,8 +4,8 @@ description: Manage the fallback order for how Microsoft Defender Antivirus rece
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.reviewer: pahuijbr
 manager: bagol
 ms.custom: nextgen
@@ -144,7 +144,7 @@ For more information, see the following articles:
 - [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md)
 - [Defender Antivirus cmdlets](/powershell/module/defender/index)
 
-## Use Windows Management Instruction (WMI) to manage the update location
+## Use Windows Management Instrumentation (WMI) to manage the update location
 
 Use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class for the following properties:
 
@@ -311,6 +311,4 @@ KB4052623 is available for the following architectures:
 - [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-windows.md)
 
 
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

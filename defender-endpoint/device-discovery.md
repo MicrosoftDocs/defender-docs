@@ -112,6 +112,8 @@ To override this setting, you can add networks to the monitored list. For more i
 
 ## Supported operating systems and protocols
 
+To address the challenge of gaining enough visibility to locate, identify, and secure your complete OT/IOT asset inventory Defender for Endpoint supports the following integration:
+
 ### Supported operating systems
 
 - Windows 10 version 1809 or later

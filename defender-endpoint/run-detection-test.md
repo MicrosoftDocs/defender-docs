@@ -55,4 +55,4 @@ Run the following PowerShell script on a newly onboarded device to verify that i
 - [Onboard servers](onboard-server.md)
 - [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

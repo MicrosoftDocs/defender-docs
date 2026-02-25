@@ -2,8 +2,8 @@
 title: List software version distribution
 description: Retrieves a list of your organization's software version distribution
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro

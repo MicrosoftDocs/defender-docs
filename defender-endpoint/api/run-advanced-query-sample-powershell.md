@@ -3,8 +3,8 @@ title: Advanced Hunting with PowerShell API Basics
 ms.reviewer:
 description: Learn the basics of querying the Microsoft Defender for Endpoint API, using PowerShell.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -58,7 +58,7 @@ $tenantId = '00000000-0000-0000-0000-000000000000' # Paste your own tenant ID he
 $appId = '11111111-1111-1111-1111-111111111111' # Paste your own app ID here
 $appSecret = '22222222-2222-2222-2222-222222222222' # Paste your own app secret here
 
-$resourceAppIdUri = 'https://api.security.microsoft.com'
+$resourceAppIdUri = 'https://api.securitycenter.microsoft.com'
 $oAuthUri = "https://login.microsoftonline.com/$TenantId/oauth2/token"
 $body = [Ordered] @{
     resource = "$resourceAppIdUri"

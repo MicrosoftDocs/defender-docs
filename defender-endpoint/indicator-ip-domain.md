@@ -65,7 +65,7 @@ Integration into Microsoft browsers is controlled by the browser's SmartScreen s
 - Azure Stack HCI OS, version 23H2 and later
 - macOS
 - Linux
-- iOS 
+- iOS/iPadOS
 - Android
 
 ### Network Protection requirements
@@ -187,5 +187,5 @@ The result is that categories 1-4 are all blocked. This scenario is illustrated 
 - [Manage indicators](indicator-manage.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

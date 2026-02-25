@@ -4,8 +4,8 @@ description: With Microsoft Defender Antivirus now included in the Windows Secur
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: yongrhee
 manager: bagol
@@ -54,6 +54,9 @@ Beginning with Windows 10, version 1703 and later, Microsoft Defender Antivirus 
 ## Review the security intelligence update version and download the latest updates in the Windows Security app
 
 :::image type="content" source="/defender/media/wdav-wdsc-defs.png" alt-text="Security intelligence version number" lightbox="/defender/media/wdav-wdsc-defs.png":::
+
+> [!NOTE]
+> The *security intelligence version* shown in the Windows Security app is the same as what was previously referred to as the *definition version* of Microsoft Defender Antivirus.
 
 1. Open the Windows Security app by searching the start menu for *Security*, and then selecting **Windows Security**.
 
@@ -130,7 +133,7 @@ To learn more, see the following resources:
 
 - [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
 
 

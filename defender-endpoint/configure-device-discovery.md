@@ -91,6 +91,12 @@ To manage monitored networks, in the device discovery settings, select **Monitor
 | **Ignore this network from monitoring** | Stops monitoring and discovering devices in the network. | Discovered devices remain in inventory but are no longer updated. Details are retained until the Defender for Endpoint data retention period expires. |
 | **Automatically monitor** | Automatically monitors a network that is identified as corporate. |  |
 
+> [!IMPORTANT]
+>
+> - Choosing to monitor a network that wasn't identified by Microsoft Defender for Endpoint as a corporate network can cause device discovery outside of your corporate network, and can, therefore, detect home or other noncorporate devices.
+> - Choosing to ignore a network stops monitoring and discovering devices in that network. Devices that were already discovered won't be removed from the inventory, but are no longer updated, and details are retained until the data retention period of the Defender for Endpoint expires.
+> - Before choosing to monitor non-corporate networks, you must ensure you have permission to do so.
+
 ### Filter network list
 
 To filter the network list, select **Filter**, select the **Network monitor state** filter, and select **Apply**. In the network list, select the **Network monitor state** filter, and select a state:
@@ -111,6 +117,33 @@ You can disable device discovery in the [Advanced features](advanced-features.md
 
 If you encounter issues with device discovery or authenticated network scans, see [Troubleshoot device discovery and authenticated network scans](troubleshoot-device-discovery-network-scans.md).
 
-## Next steps
+## Explore devices in the network
 
+You can use the following advanced hunting query to get more context about each network name described in the networks list. The query lists all the onboarded devices that were connected to a certain network within the last seven days.
+
+```kusto
+DeviceNetworkInfo
+| where Timestamp > ago(7d)
+| where ConnectedNetworks  != ""
+| extend ConnectedNetworksExp = parse_json(ConnectedNetworks)
+| mv-expand bagexpansion = array ConnectedNetworks=ConnectedNetworksExp
+| extend NetworkName = tostring(ConnectedNetworks ["Name"]), Description = tostring(ConnectedNetworks ["Description"]), NetworkCategory = tostring(ConnectedNetworks ["Category"])
+| where NetworkName == "<your network name here>"
+| summarize arg_max(Timestamp, *) by DeviceId
+```
+
+## Get information on device
+
+You can use the following advanced hunting query to get the latest complete information on a specific device.
+
+```kusto
+DeviceInfo
+| where DeviceName == "<device name here>" and isnotempty(OSPlatform)
+| summarize arg_max(Timestamp, *) by DeviceId
+```
+
+## See also
+
+- [Device discovery overview](device-discovery.md)
+- [Device discovery FAQs](device-discovery-faq.md)
 - [Review and assess devices](assess-devices.md)
