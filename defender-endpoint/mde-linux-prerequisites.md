@@ -199,5 +199,3 @@ If you experience any installation issues, self-troubleshooting resources are av
 - [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](linux-support-events.md)
 - [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md)
 - [Install Defender for Endpoint on Linux to a custom path](linux-custom-location-installation.md)
-
-
