@@ -20,7 +20,7 @@ ms.date: 02/26/2026
 
 # Prerequisites for Microsoft Defender for Endpoint on Linux
 
-This article lists the prerequisites for deploying and onboarding Defender for Endpoint on Linux. To help ensure a successful deployment, be sure to run a [prerequisite check](#verify-prerequisites) before onboarding your Linux server endpoints. The prerequisite check helps identify any potential issues that could impact the deployment process.
+This article lists the prerequisites for deploying and onboarding Defender for Endpoint on Linux servers.
 
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
