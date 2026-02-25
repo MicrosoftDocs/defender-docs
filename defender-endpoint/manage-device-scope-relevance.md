@@ -121,4 +121,4 @@ Once you stop exclusion, vulnerability data reappears in vulnerability managemen
 
 - [Create and manage device tags](machine-tags.md) to organize devices into meaningful groups
 - [View your device inventory](machines-view-overview.md) with appropriate filters applied
-- [Target devices for security actions](targeting-devices.md) using tags and device groups
+- [Target devices for security actions](machine-tags.md) using tags and device groups

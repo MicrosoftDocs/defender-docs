@@ -191,8 +191,7 @@ When you disable a rule, data collection stops on all targeted devices within th
 ## Next steps
 
 - **[Custom data collection overview](custom-data-collection.md)**: Review capabilities and when to use custom collection
-- **[Targeting devices](targeting-devices.md)**: Learn how tags enable device targeting at scale
-- **[Create and manage device tags](machine-tags.md)**: Configure dynamic tags for custom collection rules
+- **[Create and manage device tags and target devices](machine-tags.md)**: Learn how tags enable device targeting at scale
 - **[Advanced hunting](/defender-xdr/advanced-hunting-overview)**: Query custom event tables in Microsoft Sentinel
 
 ## See also

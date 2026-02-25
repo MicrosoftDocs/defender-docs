@@ -54,7 +54,7 @@ Microsoft Defender for Endpoint collects extensive telemetry by default, but som
 | **Cost control** | Avoid collecting unnecessary data by using specific filters and device targeting |
 
 > [!IMPORTANT]
-> Custom data collection requires device targeting using dynamic tags. You must configure dynamic tags in Asset Rule Management before creating custom collection rules. See [Target devices with device groups and tags](targeting-devices.md) and [Create and manage device tags](machine-tags.md).
+> Custom data collection requires device targeting using dynamic tags. You must configure dynamic tags in Asset Rule Management before creating custom collection rules. See [Create and manage device tags and target devices](machine-tags.md).
 
 ## How custom data collection works
 
@@ -117,8 +117,7 @@ See [Create custom data collection rules](create-custom-data-collection-rules.md
 ## Next steps
 
 - **[Create custom data collection rules](create-custom-data-collection-rules.md)**: Step-by-step instructions for creating and managing rules
-- **[Targeting devices](targeting-devices.md)**: Understand how device tags enable targeted collection
-- **[Create and manage device tags](machine-tags.md)**: Configure dynamic tags for device targeting
+- **[Create and manage device tags and target devices](machine-tags.md)**: Configure dynamic tags for device targeting
 
 ## See also
 

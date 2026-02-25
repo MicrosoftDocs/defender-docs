@@ -153,5 +153,5 @@ Now that you understand how to explore the device inventory, continue through th
 - **[Device inventory field reference](device-inventory-field-reference.md)**: Detailed descriptions for every column, filter, and field value
 - **[Manage device scope and relevance](manage-device-scope-relevance.md)**: Control which devices are relevant to your security operations
 - **[Create and manage device tags](machine-tags.md)**: Add business context and organize devices into groups
-- **[Target devices with device groups and tags](targeting-devices.md)**: Use tags to apply security actions at scale
+- **[Create and manage device tags and target devices](machine-tags.md)**: Use tags to apply security actions at scale
 - **[Investigate devices](investigate-machines.md)**: Deep-dive into specific devices for incident response

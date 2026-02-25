@@ -619,10 +619,8 @@
           href: device-inventory-field-reference.md
       - name: Manage device scope and relevance
         href: manage-device-scope-relevance.md
-      - name: Manage device group and tags
+      - name: Manage device tags and target devices
         href: machine-tags.md
-      - name: Targeting devices
-        href: targeting-devices.md
       - name: Collect custom device data
         items:
         - name: Overview

@@ -42,12 +42,8 @@ This branch implements a comprehensive content curation of the Microsoft Defende
 
 ---
 
-#### 3. `targeting-devices.md` - Targeting Devices in Microsoft Defender for Endpoint
-**Purpose**: Explains how device tags enable security actions at scale
-
-**Content**:
-- **What is targeting**: Tags → Groups → Actions flow
-- **Why targeting matters**: Scale, granularity, efficiency
+#### 3. `targeting-devices.md` - MERGED into `machine-tags.md`
+**Status**: Content merged into `machine-tags.md`. File now contains a redirect stub.
 - **How tags enable targeting**: Manual vs. dynamic tags explained
 - **Security actions powered by targeting**: 
   - Investigations and threat hunting
@@ -164,8 +160,8 @@ These pages should be deleted once the new content is approved:
 📄 machine-tags.md (EXISTING - to be refactored separately)
    └─ Will be expanded to emphasize dynamic tags and targeting role
 
-📄 targeting-devices.md (NEW)
-   └─ Connects tags to actions, explains security use cases
+📄 targeting-devices.md (MERGED into machine-tags.md)
+   └─ Content merged; file contains redirect stub
 
 📄 custom-data-collection.md (REFACTORED)
    └─ Focused on "why/when" decisions
@@ -186,7 +182,7 @@ The new structure maps directly to the user journey:
 | **1. Discover** | `machines-view-overview.md` | Onboarding docs |
 | **2. Scope** | `manage-device-scope-relevance.md` | n/a |
 | **3. Classify** | `machine-tags.md` (existing) | Asset Rule Management docs |
-| **4. Act** | `targeting-devices.md` | `custom-data-collection.md`, `create-custom-data-collection-rules.md` |
+| **4. Act** | `machine-tags.md` (merged) | `custom-data-collection.md`, `create-custom-data-collection-rules.md` |
 
 ---
 
@@ -255,7 +251,7 @@ The new structure maps directly to the user journey:
 ### New Files (4)
 - `defender-endpoint/devices-overview.md`
 - `defender-endpoint/manage-device-scope-relevance.md`
-- `defender-endpoint/targeting-devices.md`
+- `defender-endpoint/targeting-devices.md` (merged into `machine-tags.md`)
 - `defender-endpoint/DEVICE-CONTENT-CURATION-SUMMARY.md` (this file)
 
 ### Modified Files (3)
