@@ -12,7 +12,7 @@ ms.collection:
 - tier2
 ms.topic: overview
 search.appverid: met150
-ms.date: 01/29/2026
+ms.date: 02/25/2026
 ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -55,6 +55,39 @@ Managing devices in Defender for Endpoint follows a predictable lifecycle. The f
 ## Device targeting
 
 Device targeting uses device tags to identify which devices should receive specific security actions. Rather than managing devices individually, targeting lets you organize devices into meaningful groups and apply configurations, policies, or data collection rules at scale.
+
+### Tags vs. groups
+
+**Device tags** are labels you attach to devices — either manually or through dynamic rules — to capture business context such as department, location, or criticality. All users can see tagged devices. Tags alone don't control access or apply security policies; they provide the organizational foundation for targeting.
+
+**Device groups** build on tags to control which security teams can access and manage specific devices. When you create a device group, you define matching rules (often based on tags), set automated remediation levels, and assign Microsoft Entra user groups. Device groups enable role-based access control (RBAC) so that, for example, a regional security team sees only devices in their geography. For detailed instructions, see [Create and manage device groups](machine-groups.md).
+
+### Dynamic tags vs. manual tags
+
+**Manual tags** are custom labels you apply directly to individual devices through the portal or API. They're quick to set up and useful for ad-hoc needs like tagging devices during an active investigation. However, they don't scale well and require manual updates. Manual tags aren't supported for custom data collection or some automation scenarios.
+
+**Dynamic tags** are applied automatically based on rules you define in [Asset Rule Management](/defender-xdr/configure-asset-rules). They update as device properties change (approximately every hour), scale to thousands of devices, and are required for advanced capabilities like [custom data collection](custom-data-collection.md). Use dynamic tags whenever you need tags to stay current without manual effort.
+
+> [!IMPORTANT]
+> Many advanced Defender for Endpoint capabilities, including custom data collection, require dynamic tags. Manual tags aren't supported for these scenarios.
+
+### Targeting scenarios
+
+The following table summarizes common scenarios where device targeting drives security operations.
+
+| Scenario | Approach | Example |
+|----------|----------|---------|
+| **Scope investigations** | Tag devices by department or incident, then filter alerts and advanced hunting queries by tag. | Investigate all `Finance-Department` devices for suspicious lateral movement. |
+| **Collect specialized telemetry** | Create dynamic tags for target devices, then create custom data collection rules. Requires dynamic tags and a Microsoft Sentinel workspace. | Collect file access events from `Database-Servers` to monitor data access. |
+| **Automate response actions** | Define automated responses for device groups based on tags. | Auto-isolate `Public-Kiosk` devices when high-severity malware is detected. |
+| **Control analyst access (RBAC)** | Create device groups from tags and assign them to Microsoft Entra security teams. | Give the Finance Security Team access only to `Finance-Department` devices. |
+| **Deploy ASR rules by device type** | Apply different attack surface reduction policies to different tag-based groups. | Aggressive blocking on `Internet-Facing-Servers`; audit mode on `Development-Machines`. |
+| **Enforce Conditional Access** | Use device risk levels and group membership to inform access decisions. | Require MFA for `High-Risk-Devices` accessing sensitive applications. |
+| **Organize by geography** | Tag devices by region or site for distributed security operations. | EMEA security team monitors and responds to `Location-EMEA` devices. |
+| **Manage device lifecycle** | Tag devices by operational stage (Production, Staging, Decommissioning). | Apply full controls to Production; reduced monitoring for Decommissioning. |
+| **Pilot new security features** | Apply manual tags to a pilot group, deploy the feature in audit mode, then expand. | Tag 20 devices with `ASR-Pilot-2026`, test new rule, refine, then roll out broadly. |
+
+For step-by-step instructions on creating tags and device groups, see [Create and manage device tags and target devices](machine-tags.md).
 
 ### Security actions powered by targeting
 
