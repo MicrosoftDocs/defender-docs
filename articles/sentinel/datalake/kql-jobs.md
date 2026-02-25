@@ -6,7 +6,7 @@ author: EdB-MSFT
 ms.author: edbaynash  
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 11/19/2025
 ms.collection: ms-security  
 
