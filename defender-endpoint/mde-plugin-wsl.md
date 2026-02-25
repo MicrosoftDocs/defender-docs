@@ -30,7 +30,7 @@ Windows Subsystem for Linux (WSL) 2, which replaces the previous version of WSL 
 
 ## Prerequisites
 
-- WSL version `2.0.7.0` or later must be running with at least one active distro. Run `wsl --update` to make sure you are on the latest version. If `wsl -–version` shows a version older than `2.0.7.0`, run `wsl -–update –pre-release` to get the latest update.
+- WSL version `2.0.7.0` or later must be running with at least one active distro. Run `wsl --update` to make sure you are on the latest version. If `wsl -–version` shows a version older than `2.0.7.0`, run `wsl --update --pre-release` to get the latest update.
 
 - The Windows client device must be onboarded to Defender for Endpoint.
 
