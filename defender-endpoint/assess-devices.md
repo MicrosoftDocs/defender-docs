@@ -46,12 +46,12 @@ You can review the device inventory for discovered devices that aren't onboarded
 
 To assess these devices, navigate to the device inventory, and use the **Onboarding status** filter, with one of the following values:
 
-| Value              | Description  | Comments |
-|--------------------|---------------------------------------------------------------------------------------------------------------|----------|
-| Onboarded     | The endpoint is onboarded to Defender for Endpoint.                                                           |          |
-| Can be onboarded   | Defender for Endpoint discovers the device in the network and supports its operating system, but the device isn't onboarded. | - We highly recommend you onboard such devices.<br>- You may notice differences between the number of listed devices under **can be onboarded** in the device inventory, the **onboard to Microsoft Defender for Endpoint** security recommendation, and the **devices to onboard** dashboard widget. The security recommendation and the dashboard widget are for devices that are stable in the network, excluding ephemeral devices, guest devices, and others. The idea is to recommend on persistent devices that also impact the overall security score of the organization. |
-| Unsupported        | Defender for Endpoint discovers the endpoint, but doesn't support the device.                                 |          |
-| Insufficient info  | The system couldn't determine the supportability of the device. Enable standard discovery on more devices in the network to enrich the discovered attributes. |          |
+| Value              | Description  |
+|--------------------|---------------------------------------------------------------------------------------------------------------|
+| Onboarded     | The endpoint is onboarded to Defender for Endpoint.                                                           |
+| Can be onboarded   | Defender for Endpoint discovers the device in the network and supports its operating system, but the device isn't onboarded.<br><br>**Note**:<br>- We highly recommend you onboard such devices.<br>- You may notice differences between the number of listed devices under **can be onboarded** in the device inventory, the **onboard to Microsoft Defender for Endpoint** security recommendation, and the **devices to onboard** dashboard widget. The security recommendation and the dashboard widget are for devices that are stable in the network, excluding ephemeral devices, guest devices, and others. The idea is to recommend on persistent devices that also impact the overall security score of the organization. |
+| Unsupported        | Defender for Endpoint discovers the endpoint, but doesn't support the device.                                 |
+| Insufficient info  | The system couldn't determine the supportability of the device. Enable standard discovery on more devices in the network to enrich the discovered attributes. |
 
 ### Onboard unmanaged devices
 
