@@ -1,5 +1,5 @@
 ﻿---
-title: Device discovery overview
+title: Microsoft Defender for Endpoint device discovery overview
 description: Learn how to use endpoint discovery in Microsoft Defender XDR to find unmanaged devices in your network.
 ms.service: defender-endpoint
 ms.subservice: onboard
@@ -23,7 +23,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
-# Device discovery overview
+# Microsoft Defender for Endpoint device discovery overview
 
 In today's dynamic IT environments, many organizations struggle to get full visibility of all of their devices and assets. Device diversity, shadow IT, remote work, and rapid change create gaps that expose organizations to security risks.
 

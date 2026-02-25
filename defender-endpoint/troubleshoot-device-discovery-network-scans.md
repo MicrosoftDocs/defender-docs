@@ -21,7 +21,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
-# Troubleshoot device discovery and authenticated network scans in Defender for Endpoint
+# Troubleshoot device discovery and authenticated network scans in Microsoft Defender for Endpoint
 
 [Device discovery](device-discovery.md) allows you to improve your visibility into unmanaged devices, assess their security posture, and take appropriate actions to secure them.
 

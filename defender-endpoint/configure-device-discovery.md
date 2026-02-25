@@ -1,5 +1,5 @@
 ﻿---
-title: Configure device discovery in Defender for Endpoint
+title: Configure device discovery in Microsoft Defender for Endpoint
 description: Learn how to configure device discovery in Microsoft Defender XDR using basic or standard discovery
 ms.service: defender-endpoint
 ms.subservice: onboard
@@ -21,7 +21,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
-# Manage device discovery in Defender for Endpoint
+# Manage device discovery in Microsoft Defender for Endpoint
 
 [Device discovery](device-discovery.md) allows you to improve your visibility into unmanaged devices, assess their security posture, and take appropriate actions to secure them.
 
@@ -132,7 +132,7 @@ DeviceNetworkInfo
 | summarize arg_max(Timestamp, *) by DeviceId
 ```
 
-## Get information on device
+### Get information on device
 
 You can use the following advanced hunting query to get the latest complete information on a specific device.
 

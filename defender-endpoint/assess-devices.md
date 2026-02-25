@@ -1,5 +1,5 @@
 ﻿---
-title: Review and assess devices in Defender for Endpoint
+title: Review and assess devices in Microsoft Defender for Endpoint
 description: Learn how to review and assess devices discovered by device discovery.
 ms.service: defender-endpoint
 ms.subservice: onboard
@@ -21,11 +21,11 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
-# Review and assess devices in Defender for Endpoint
+# Review and assess devices in Microsoft Defender for Endpoint
 
 [Device discovery](device-discovery.md) allows you to improve your visibility into unmanaged devices, assess their security posture, and take appropriate actions to secure them.
 
-This article describes how to review and assess devices discovered by device discovery in Microsoft Defender for Endpoint. You also learn how to get data on devices that aren't onboarded to Defender for Endpoint, and how to query data on discovered devices.
+This article describes how to review and assess devices discovered by device discovery in Microsoft Defender for Endpoint. You also learn how to get data on devices that aren't onboarded to Microsoft Defender for Endpoint, and how to query data on discovered devices.
 
 ## Prerequisites
 
