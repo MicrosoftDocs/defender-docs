@@ -231,6 +231,12 @@ In order to preview new features and provide early feedback, it's recommended th
       curl -sSL https://packages.microsoft.com/keys/microsoft-2025.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg > /dev/null
       sudo chmod o+r /usr/share/keyrings/microsoft-prod.gpg
       ```
+      
+   - For Debian 13 and later, run the following command.
+
+      ```bash
+      curl -sSL https://packages.microsoft.com/keys/microsoft-2025.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg > /dev/null
+      ```
 
 7. Install the HTTPS driver if not already installed:
 
