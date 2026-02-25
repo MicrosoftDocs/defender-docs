@@ -110,8 +110,8 @@ You can create jobs to run on a schedule or one-time. When you create a job, you
 1. If you selected **Schedule**, enter the following details:
     1. Select the **Repeat frequency** from the drop-down. You can select **By minute**, **Hourly**, **Daily**, **Weekly**, or **Monthly**. 
     1. Set the **Repeat every** value for how often you want the job to run with respect to the selected frequency.
-    1. Under **Set schedule**, enter the **From** dates and time. The job start time in the **From** field must be at least 30 minutes after job creation. The job runs from this date and time according to the frequency select in the **Run every** dropdown.
-    1. Select the **To** date and time to specify when the job schedule finishes. If you want the schedule to continue indefinitely, select **Set job to run indefinitely**.
+    1. Under **Set schedule**, select a **From** date and enter a time. The job start time in the **From** field must be at least 30 minutes after job creation. The job runs from this date and time according to the frequency select in the **Run every** dropdown.
+    1. Select the **To** date, and enter a time to specify when the job schedule finishes. If you want the schedule to continue indefinitely, select **Set job to run indefinitely**.
 
     Job from and to times are set for the user's locale.
 
