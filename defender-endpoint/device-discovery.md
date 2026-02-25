@@ -187,15 +187,15 @@ To manage device discovery options, see [Manage device discovery](configure-devi
 | Vulnerability assessment | Yes | Assess vulnerabilities on discovered devices and get remediation guidance. For example, search for **SSH** to find recommendations on SSH vulnerabilities related to unmanaged devices. | **Exposure management > Recommendations** | [Vulnerability management overview](/defender-vulnerability-management/defender-vulnerability-management) |
 | Advanced hunting on discovered devices | Yes | Use advanced hunting queries to investigate discovered devices, their activities, and related threats. | **Advanced hunting** | [Use advanced hunting on discovered devices](assess-devices.md#use-advanced-hunting-on-discovered-devices) |
 
-For a list of supported device discovery capabilities by license, see [Supported Microsoft Defender for Endpoint capabilities by platform](supported-capabilities-by-platform.md#device-discovery-capabilities-by-license).
+### Device discovery capabilities and availability
 
-### Device discovery capabilities and licensing
+Device discovery enables organizations to identify managed and unmanaged devices across their network, including endpoints, network devices, and IoT/OT devices. All discovered devices appear in the device inventory, regardless of device type.
 
-Device discovery is available with Microsoft Defender for Endpoint Plan 2 and above. With this plan, organizations can identify managed and unmanaged devices across their network, including endpoints, network devices, and IoT/OT devices. All discovered devices are visible in the device inventory, regardless of device type.
+The core discovery experience—including device visibility and network authenticated scans—is consistent across supported Defender for Endpoint environments. Vulnerability assessment and security recommendations are provided for endpoint devices as part of the Defender Vulnerability Management experience.
 
-The core discovery experience, including device visibility and network authenticated scans, is consistent across Plan 2–based licenses. For customers with Defender for Endpoint Plan 2 only, vulnerability assessment and security recommendations apply to endpoint devices.
+When Defender for IoT is integrated, IoT and OT devices can also surface vulnerability assessment data and security recommendations, extending visibility beyond basic device inventory.
 
-When Defender for IoT is enabled (for example, with Microsoft 365 E5), IoT and OT devices also receive vulnerability assessment data and security recommendations, providing deeper security insights beyond basic inventory.
+For information about feature availability and licensing, see the [Microsoft Defender service description](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-defender-service-description).
 
 ## Next steps
 
