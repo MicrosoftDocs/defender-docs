@@ -77,7 +77,7 @@ After installing the Microsoft Sentinel extension, you can start exploring data 
  
    :::image type="content" source="./media/notebooks/select-account.png" lightbox="./media/notebooks/select-account.png" alt-text="A screenshot showing the account selection list at the top of the page."::: 
 
-    If you have multiple accounts associated with your login, you can switch between accounts without authenticating again. Select the account name at the bottom left of the Visual Studio Code window.
+    If you have multiple guest accounts associated with your login, you can seamlessly switch between accounts. To switch between accounts, select the account name at the bottom left of the Visual Studio Code window. Only one account can be selected at a time.
 
     :::image type="content" source="./media/notebooks/account-picker.png" lightbox="./media/notebooks/account-picker.png" alt-text="A screenshot showing how to switch accounts in Visual Studio Code.":::
   
