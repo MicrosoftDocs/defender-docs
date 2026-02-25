@@ -2,7 +2,7 @@
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: include
-ms.date: 02/05/2026
+ms.date: 02/09/2026
 
 # This file is auto-generated . Do not edit manually. Changes will be overwritten.
 ---
@@ -1824,6 +1824,27 @@ The [Cynerio](https://www.cynerio.com/) connector allows you to easily connect y
 
  ---
    
+<a name="cyren-threat-intelligence"></a><details><summary>**Cyren Threat Intelligence**</summary>
+
+**Supported by:** [Data443 Risk Mitigation, Inc.](https://www.data443.com/support)
+
+Ingest IP reputation and malware URL indicators from Cyren using the Common Connector Framework (CCF).
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`Cyren_Indicators_CL`|No|No|
+
+**Data collection rule support:** Not currently supported
+
+**Prerequisites:**
+
+- **Cyren JWT Tokens**: JWT tokens stored in Azure Key Vault or provided at deployment time.<br><br>
+</details> 
+
+ ---
+   
 <a name="darktrace-connector-for-microsoft-sentinel-rest-api"></a><details><summary>**Darktrace Connector for Microsoft Sentinel REST API**</summary>
 
 **Supported by:** [Darktrace](https://darktrace.com/contact)
@@ -1930,7 +1951,7 @@ When critical systems fail or security incidents happen, SIGNL4 bridges the ‘l
    
 <a name="digital-shadows-searchlight-using-azure-functions"></a><details><summary>**Digital Shadows Searchlight (using Azure Functions)**</summary>
 
-**Supported by:** [Digital Shadows](https://www.digitalshadows.com/contact-us/)
+**Supported by:** [Digital Shadows](https://contactout.com/company/digital-shadows-3384853)
 
 The Digital Shadows data connector provides ingestion of the incidents and alerts from Digital Shadows Searchlight into the Microsoft Sentinel using the REST API. The connector will provide the incidents and alerts information such that it helps to examine, diagnose and analyse the potential security risks and threats.
 
@@ -5533,6 +5554,27 @@ Syslog is an event logging protocol that is common to Linux. Applications will s
 |[`Syslog`](/azure/azure-monitor/reference/tables/Syslog)|Yes|Yes|
 
 **Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)<br><br>
+</details> 
+
+ ---
+   
+<a name="tacitred-compromised-credentials"></a><details><summary>**TacitRed Compromised Credentials**</summary>
+
+**Supported by:** [Data443 Risk Mitigation, Inc.](https://www.data443.com/support)
+
+Ingest compromised credential findings from TacitRed using the Common Connector Framework (CCF).
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`TacitRed_Findings_CL`|No|No|
+
+**Data collection rule support:** Not currently supported
+
+**Prerequisites:**
+
+- **TacitRed API Key**: API key stored in Azure Key Vault or provided at deployment time.<br><br>
 </details> 
 
  ---

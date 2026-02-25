@@ -522,6 +522,8 @@
               href: automation/use-playbook-templates.md
             - name: Create and manage playbooks
               href: automation/create-playbooks.md
+            - name: Generate playbooks using AI
+              href: automation/generate-playbook.md
             - name: Supported triggers and actions in playbooks
               href: automation/playbook-triggers-actions.md
             - name: Azure Logic Apps for Microsoft Sentinel playbooks
