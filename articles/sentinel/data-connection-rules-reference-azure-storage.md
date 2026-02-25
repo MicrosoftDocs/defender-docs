@@ -8,6 +8,7 @@ ms.reviewer: edbaynash
 ms.topic: reference
 ms.date: 02/19/2026
 ms.service: microsoft-sentinel
+ms.subservice: sentinel-siem
 
 ---
 
@@ -21,10 +22,8 @@ For more information, see [Create a codeless connector for Microsoft Sentinel](c
 
 ## Build the Azure Storage Blob CCF data connector
 
-Simplify the development of connecting your Azure Storage Blob data source with a sample Storage Blob CCF data connector deployment template.
+Simplify the development of connecting your Azure Storage Blob data source with a sample Storage Blob CCF data connector deployment template. For more information see [Connector StorageBlob CCF template](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/Templates/Connector_StorageBlob_CCF_template.json).
 
-<!-- TODO: Add link to example template when available -->
-<!-- [**Azure Storage Blob CCF example template**](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/Templates/Connector_StorageBlob_CCP_template.json) -->
 
 With most of the deployment template sections filled out, you only need to build the first two components, the output table and the DCR. For more information, see the [Output table definition](create-codeless-connector.md#output-table-definition) and [Data Collection Rule (DCR)](create-codeless-connector.md#data-collection-rule) sections.
 
