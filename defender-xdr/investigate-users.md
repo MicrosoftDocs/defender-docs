@@ -142,7 +142,7 @@ This view provides investigation context by showing which policies apply to the 
 
 When Microsoft Sentinel is connected to the Defender portal, this tab shows a Sentinel timeline for the identity. The timeline includes alerts associated with the identity, including alerts also shown on the **Incidents and alerts** tab and alerts created by Microsoft Sentinel. It also shows bookmarked hunts that reference the identity, activity events from external data sources, and unusual behaviors identified by Microsoft Sentinel anomaly rules.
 
-:::image type="content" source="media/investigate-users/identity-user-incident-sentinel-events.png" alt-text="Screenshot of the sentinel events tab on the Identity page in Microsoft Defender.":::
+:::image type="content" source="media/investigate-users/user-incident-sentinel-events.png" alt-text="Screenshot of the sentinel events tab on the Identity page in Microsoft Defender.":::
 
 ### Insights
 
