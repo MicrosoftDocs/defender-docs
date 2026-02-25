@@ -1,5 +1,5 @@
 ﻿---
-title: Configure device discovery in Defender for Endpoint
+title: Configure device discovery in Microsoft Defender for Endpoint
 description: Learn how to configure device discovery in Microsoft Defender XDR using basic or standard discovery
 ms.service: defender-endpoint
 ms.subservice: onboard
@@ -21,7 +21,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
-# Manage device discovery in Defender for Endpoint
+# Manage device discovery in Microsoft Defender for Endpoint
 
 [Device discovery](device-discovery.md) allows you to improve your visibility into unmanaged devices, assess their security posture, and take appropriate actions to secure them.
 
@@ -35,7 +35,7 @@ To set up device discovery:
 
 1. In the Microsoft Defender portal, navigate to **Settings** > **Device discovery**.
 
-1. If you've selected to use standard discovery, select which devices to use for active probing:
+1. If you've selected to use standard discovery, select which devices to use for active scanning:
     - Select **all devices (recommended)** to scan all devices.
     - Select **Select tags** to scan by device tags, and in the **Tags** page, select the tags. This option is useful to scan devices on a specific subnet.
 
@@ -48,14 +48,14 @@ To set up device discovery:
 
 To customize the list of devices used to perform standard discovery, do one of the following:
 
-- Enable standard discovery on all onboarded devices that that support device discovery.
+- Enable standard discovery on all onboarded devices that support device discovery.
 - Select a subset or subsets of your devices using device tags (see [Set up device discovery](configure-device-discovery.md#set-up-device-discovery)). In this case, all other devices run basic discovery only.
 
 ## Exclude devices from standard discovery
 
 You might want to exclude specific devices in your network from active scans, for example, devices used as honeypots for another security tool.
 
-Excluded devices might still be discovered by basic discovery, or through multicast discovery attempts. Defender for Endpoint passively discovers these devices, but doesn't actively probe them.
+Excluded devices might still be discovered by basic discovery, or through multicast discovery attempts. Defender for Endpoint passively discovers these devices, but doesn't actively scan them.
 
 To exclude a device:
 
@@ -68,7 +68,7 @@ The exclusion is visible in the **Exclusions** list. You can select an exclusion
 
 > [!NOTE]
 >
-> - Excluded devices might still reply to multicast discovery attempts in the network. These devices are discovered but aren't actively probed.
+> - Excluded devices might still reply to multicast discovery attempts in the network. These devices are discovered but aren't actively scanned.
 > - Because device discovery uses passive methods to discover devices in the network, any device that communicates with your onboarded devices in the corporate network can be discovered and listed in the inventory. You can exclude devices from active discovery only.
 
 ## View and manage monitored networks
@@ -91,6 +91,12 @@ To manage monitored networks, in the device discovery settings, select **Monitor
 | **Ignore this network from monitoring** | Stops monitoring and discovering devices in the network. | Discovered devices remain in inventory but are no longer updated. Details are retained until the Defender for Endpoint data retention period expires. |
 | **Automatically monitor** | Automatically monitors a network that is identified as corporate. |  |
 
+> [!IMPORTANT]
+>
+> - Choosing to monitor a network that wasn't identified by Microsoft Defender for Endpoint as a corporate network can cause device discovery outside of your corporate network, and can, therefore, detect home or other noncorporate devices.
+> - Choosing to ignore a network stops monitoring and discovering devices in that network. Devices that were already discovered won't be removed from the inventory, but are no longer updated, and details are retained until the data retention period of the Defender for Endpoint expires.
+> - Before choosing to monitor non-corporate networks, you must ensure you have permission to do so.
+
 ### Filter network list
 
 To filter the network list, select **Filter**, select the **Network monitor state** filter, and select **Apply**. In the network list, select the **Network monitor state** filter, and select a state:
@@ -111,6 +117,22 @@ You can disable device discovery in the [Advanced features](advanced-features.md
 
 If you encounter issues with device discovery or authenticated network scans, see [Troubleshoot device discovery and authenticated network scans](troubleshoot-device-discovery-network-scans.md).
 
-## Next steps
+### Filter network list
 
+To filter the network list, select **Filter**, select the **Network monitor state** filter, and select **Apply**. In the network list, select the **Network monitor state** filter, and select a state:
+
+- **Monitored**: Networks where device discovery is active.
+- **Ignored**: Networks where device discovery isn't active.
+- **All**: Shows both monitored and ignored networks.
+
+### Get information on device
+
+To review and assess non-onboarded devices, and to find other device details, see [Review and assess devices](assess-devices.md).
+
+## Disable device discovery
+
+You can disable device discovery in the [Advanced features](advanced-features.md) page. When you disable device discovery, Defender for Endpoint doesn't discover devices in your network, but **SenseNDR.exe** still runs on the onboarded devices.
+
+- [Device discovery overview](device-discovery.md)
+- [Device discovery FAQs](device-discovery-faq.md)
 - [Review and assess devices](assess-devices.md)

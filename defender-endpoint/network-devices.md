@@ -36,18 +36,11 @@ For more information, see [Authenticated network scans](device-discovery.md#auth
 
 To configure scan jobs, you need the **Manage security settings in Defender** permission. For more information, see [Create and manage roles for role-based access control](user-roles.md). 
 
-### Supported operating systems
+### Supported devices
 
-- Cisco IOS, IOS-XE, NX-OS
-- Fortinet FortiOS
-- Juniper JUNOS
-- HPE Aruba Networking ArubaOS, AOS-CX
-- HPE ArubaOS, Procurve Switch Software
-- Palo Alto Networks PAN-OS
+Any network device that responds to SNMPv2 or SNMPv3 queries can be discovered by authenticated network scans. We recommend that you configure all your network devices for scanning, regardless of vendor or operating system.
 
-We recommend that you configure all your network devices, even if they're not specified in this list.
-
-#### Supported Windows versions for the scanner
+### Supported Windows versions for the scanner
 
 The scanner is supported on Windows 10, version 1903 and Windows Server, version 1903 and later. For more information, see [Windows 10, version 1903 and Windows Server, version 1903](https://support.microsoft.com/topic/windows-10-update-history-e6058e7c-4116-38f1-b984-4fcacfba5e5d)
 
@@ -161,7 +154,3 @@ When the results are displayed, you can choose which devices to include in the p
 Newly discovered devices are displayed under the device inventory in the new **Network devices** tab. It might take up to two hours after adding a scanning job until the devices are updated.
 
 :::image type="content" source="/defender/media/defender-endpoint/network-devices-inventory.png" alt-text="Screenshot of the network device tab in the device inventory." lightbox="/defender/media/defender-endpoint/network-devices-inventory.png":::
-
-## Troubleshoot
-
-If you encounter issues when setting up authenticated network scans, see [Troubleshoot device discovery and authenticated network scans](troubleshoot-device-discovery-network-scans.md).
