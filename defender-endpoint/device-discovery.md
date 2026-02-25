@@ -191,7 +191,7 @@ To manage device discovery options, see [Manage device discovery](configure-devi
 
 Device discovery enables organizations to identify managed and unmanaged devices across their network, including endpoints, network devices, and IoT/OT devices. All discovered devices appear in the device inventory, regardless of device type.
 
-The core discovery experience, including device visibility and network authenticated scans, is consistent across supported Defender for Endpoint environments. Vulnerability assessment and security recommendations are provided for endpoint devices as part of the defender [vulnerability assessment capabilities](/defender-vulnerability-management/vulnerability-management-overview.md).
+The core discovery experience, including device visibility and network authenticated scans, is consistent across supported Defender for Endpoint environments. Vulnerability assessment and security recommendations are provided for endpoint devices as part of the defender [vulnerability assessment capabilities](/defender-vulnerability-management/defender-vulnerability-management.md).
 
 When Defender for IoT is integrated, IoT and OT devices can also surface vulnerability assessment data and security recommendations, extending visibility beyond basic device inventory.
 
