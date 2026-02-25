@@ -15,19 +15,12 @@ ms.collection:
 ms.topic: article
 ms.subservice: linux
 search.appverid: met150
-ms.date: 02/03/2026
+ms.date: 02/26/2026
 ---
 
 # Prerequisites for Microsoft Defender for Endpoint on Linux
 
-> [!TIP]
-> Microsoft Defender for Endpoint on Linux now extends support for Arm64-based Linux servers in GA.
-
-This article lists hardware and software requirements for Defender for Endpoint on Linux. For more information about Defender for Endpoint on Linux, such as what's included in this offering, see the following articles:
-
-- [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
-
-- [What's new in Defender for Endpoint on Linux](linux-whatsnew.md)
+This article lists the prerequisites for deploying and onboarding Defender for Endpoint on Linux. To help ensure a successful deployment, be sure to run a [prerequisite check](#verify-prerequisites) before onboarding your Linux server endpoints. The prerequisite check helps identify any potential issues that could impact the deployment process.
 
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
@@ -170,15 +163,9 @@ Ensure the following URLs are allowed in network configurations:
 
 For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-connectivity).
 
-## Verify prerequisites
+## Installation methods and tools
 
-
-## Installation instructions 
-
-There are several methods and tools that you can use to deploy Microsoft Defender for Endpoint on Linux (applicable to AMD64 and ARM64 Linux servers):
-
- > [!NOTE] 
- > It is recommended to use [Deployment Tool based deployment](/defender-endpoint/linux-install-with-defender-deployment-tool),  as it simplifies the onboarding process, reduces manual tasks, and supports a wide range of deployment scenarios, including new installations, upgrades, and uninstalls. Please refer to the [documentation](/defender-endpoint/linux-install-with-defender-deployment-tool) for details.
+There are several methods and tools that you can use to deploy Microsoft Defender for Endpoint on Linux (applicable to AMD64 and ARM64 Linux servers). It is recommended to use [Deployment Tool based deployment](/defender-endpoint/linux-install-with-defender-deployment-tool), as it simplifies the onboarding process, reduces manual tasks, and supports a wide range of deployment scenarios, including new installations, upgrades, and uninstalls. Please refer to the [documentation](/defender-endpoint/linux-install-with-defender-deployment-tool) for details.
 
 - [Deployment tool based deployment (Recommended)](./linux-install-with-defender-deployment-tool.md)
 - [Installer script based deployment](/defender-endpoint/linux-installer-script)
