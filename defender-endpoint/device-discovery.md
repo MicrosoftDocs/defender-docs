@@ -189,6 +189,14 @@ To manage device discovery options, see [Manage device discovery](configure-devi
 
 For a list of supported device discovery capabilities by license, see [Supported Microsoft Defender for Endpoint capabilities by platform](supported-capabilities-by-platform.md#device-discovery-capabilities-by-license).
 
+### Device discovery capabilities and licensing
+
+Device discovery is available with Microsoft Defender for Endpoint Plan 2 and above. With this plan, organizations can identify managed and unmanaged devices across their network, including endpoints, network devices, and IoT/OT devices. All discovered devices are visible in the device inventory, regardless of device type.
+
+The core discovery experience, including device visibility and network authenticated scans, is consistent across Plan 2–based licenses. For customers with Defender for Endpoint Plan 2 only, vulnerability assessment and security recommendations apply to endpoint devices.
+
+When Defender for IoT is enabled (for example, with Microsoft 365 E5), IoT and OT devices also receive vulnerability assessment data and security recommendations, providing deeper security insights beyond basic inventory.
+
 ## Next steps
 
 - [Configure device discovery](configure-device-discovery.md)
