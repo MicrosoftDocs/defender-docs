@@ -1,4 +1,4 @@
-﻿- name: Microsoft Defender for Endpoint
+- name: Microsoft Defender for Endpoint
   href: index.yml
   expanded: true
   items:
@@ -31,22 +31,14 @@
         - name: Setup and configuration
           href: mde-p1-setup-configuration.md
         - name: Get started
-          href: mde-plan1-getting-started.md
-    - name: What's new in Defender for Endpoint
-      href: whats-new-in-microsoft-defender-endpoint.md
-      items: 
-      - name: MsSense versions (Windows)
-        href: windows-whatsnew.md
-      - name: Defender for Endpoint on macOS releases
-        href: mac-whatsnew.md
-      - name: Defender for Endpoint on Linux releases
-        href: linux-whatsnew.md
-      - name: What's new in Defender for Endpoint on Android
-        href: android-whatsnew.md
-      - name: What's new in Defender for Endpoint on iOS
-        href: ios-whatsnew.md
-      - name: Previous Defender for Endpoint releases (archive)
-        href: whats-new-mde-archive.md
+          href: mde-plan1-getting-started.md        
+    - name: What's new
+      items:
+        - name: New features
+          href: whats-new-in-microsoft-defender-endpoint.md
+          displayName: What's new in Microsoft Defender for Endpoint
+        - name: Release notes
+          href: microsoft-defender-endpoint-releases.md
     - name: Trial user guide - Defender for Endpoint
       href: defender-endpoint-trial-user-guide.md
     - name: Pilot and deploy Defender for Endpoint
@@ -369,6 +361,8 @@
             href: configure-vulnerability-email-notifications.md
           - name: Configure advanced features
             href: advanced-features.md
+          - name: Configure library management for live response
+            href: configure-libraries-live-response.md
 
         - name: Permissions
           items:
@@ -607,14 +601,12 @@
       - name: Overview
         href: device-discovery.md
       - name: Manage device discovery
-        href: configure-device-discovery.md
-      - name: Review and assess devices
-        href: assess-devices.md        
+        href: configure-device-discovery.md          
 
       - name: Discover network devices (network scans)
         href: network-devices.md
-      - name: Troubleshoot
-        href: troubleshoot-device-discovery-network-scans.md
+      - name: Device discovery FAQ
+        href: device-discovery-faq.md
     - name: Devices
       items:
       - name: Overview
@@ -1616,11 +1608,12 @@
          href: malware/worms-malware.md
     - name: Understand threat intelligence concepts
       href: threat-indicator-concepts.md
-    - name: Release notes archive
-      items:
-        - name: Android
-          href: release-notes-archive-android.md
-      
+    - name: Release notes archive      
+      items: 
+      - name: What's new archive
+        href: whats-new-mde-archive.md
+      - name: Release notes archive
+        href: release-notes-mde-archive.md
   - name: Microsoft Defender XDR docs
     items:
     - name: Microsoft Defender XDR
