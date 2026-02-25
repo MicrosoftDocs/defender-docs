@@ -16,6 +16,53 @@ For information about the latest versions and features, see [What's new in Micro
 >
 >For the two months after June 15 2022, the sensor will continue to function. After this two-month period, starting August 15, 2022, the sensor will no longer function on Windows Server 2008 R2 platforms. More details can be found at: <https://aka.ms/mdi/2008r2>
 
+## August 2025
+
+### Microsoft Entra ID risk level is now available in near real time in Microsoft Defender for Identity (Preview)
+
+Microsoft Entra ID risk level is now available on the Identity Inventory assets page, the identity details page, and in the IdentityInfo table in Advanced Hunting, and includes the Microsoft Entra ID risk score. SOC analysts can use this data to correlate risky users with sensitive or highly privileged users, create custom detections based on current or historical user risk, and improve investigation context.
+
+Previously, Defender for Identity tenants received Microsoft Entra ID risk level in the IdentityInfo table through user and entity behavior analytics (UEBA). With this update, the Microsoft Entra ID risk level is now updated in near real time through Microsoft Defender for Identity.
+
+For UEBA tenants without a Microsoft Defender for Identity license, synchronization of Microsoft Entra ID risk level to the IdentityInfo table remains unchanged.
+
+### New security assessment: Remove inactive service accounts
+
+Microsoft Defender for Identity now includes a new security assessment that helps you identify and remove inactive service accounts in your organization. This assessment lists Active Directory service accounts that were inactive for the past 90 days, to help you mitigate security risks associated with unused accounts.
+
+For more information, see: Security Assessment: [Remove Inactive Service Accounts (Preview)](/defender-for-identity/remove-inactive-service-account).
+
+### New Graph based API for response actions (preview)
+
+We're excited to announce a new Graph-based API for initiating and managing remediation actions in Microsoft Defender for Identity.
+
+This capability is currently in preview and available in API Beta version.
+
+For more information, see [Managing response actions through Graph API](/graph/api/resources/security-identityaccounts?view=graph-rest-beta&preserve-view=true).
+
+### Identity scoping is now generally available (GA)
+
+Identity scoping is now generally available across all environments. Organizations can now define and refine the scope of MDI monitoring and gain granular control over which entities and resources are included in security analysis.
+
+For more information, see [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
+
+### New security posture assessment: Remove discoverable passwords in Active Directory account attributes (Preview)
+
+The new security posture assessment highlights unsecured Active Directory attributes that contain passwords or credential clues and recommends steps to remove them, helping reduce the risk of identity compromise.
+
+For more information, see: [Security Assessment: Remove discoverable passwords in Active Directory account attributes (Preview)](/defender-for-identity/security-posture-assessments/accounts#remove-discoverable-passwords-in-active-directory-account-attributes-preview)
+
+### Microsoft Defender for Identity sensor version updates
+
+|Version number|Updates|
+|---|---|
+|2.247|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
+|2.246|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
+
+### Detection update: Suspected Brute Force attack (Kerberos, NTLM)
+
+Improved detection logic to include scenarios where accounts were locked during attacks. As a result, the number of triggered alerts might increase.
+
 ## July 2025
 
 ### Expanded coverage in ITDR deployment health widget
@@ -845,7 +892,7 @@ In Microsoft Defender XDR, create rule conditions based on evidence types, and t
 Released April 23, 2023
 
 - New health alert for verifying that Directory Services Configuration Container Auditing is configured correctly, as described in the [health alerts page](health-alerts.md).
-- New workspaces for AD tenants mapped to New Zealand are created in the Australia East region. For the most current list of regional deployment, see [Defender for Identity components](architecture.md#defender-for-identity-components).
+- New workspaces for AD tenants mapped to New Zealand are created in the Australia East region.
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## March 2023

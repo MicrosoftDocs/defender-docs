@@ -119,7 +119,7 @@ mpcmdrun.exe -scan -scantype 1
 
 For more information on how to use the tool and other parameters, including starting a full scan or defining paths, see [Use the mpcmdrun.exe commandline tool to configure and manage Microsoft Defender Antivirus](command-line-arguments-microsoft-defender-antivirus.md).
 
-## Use Windows Management Instruction (WMI) to run a scan
+## Use Windows Management Instrumentation (WMI) to run a scan
 
 Use the [**Start** method](/previous-versions/windows/desktop/defender/start-msft-mpscan) of the **MSFT_MpScan** class.
 
