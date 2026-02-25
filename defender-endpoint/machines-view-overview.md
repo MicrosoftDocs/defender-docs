@@ -13,7 +13,8 @@ ms.collection:
 - tier2
 ms.topic: how-to
 search.appverid: met150
-ms.date: 02/03/2026
+ms.date: 02/25/2026
+ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -23,9 +24,29 @@ appliesto:
 
 # Explore devices in the device inventory
 
-The **Device inventory** is the authoritative source for all devices visible to Microsoft Defender for Endpoint. It shows devices that are onboarded (with the full agent installed) and devices discovered on your network through device discovery.
+The **Device inventory** is the authoritative source for all devices visible to Microsoft Defender for Endpoint. It shows devices that are onboarded (with the full agent installed) and devices discovered on your network through [device discovery](device-discovery.md).
 
-This article explains how to view, customize, and manage devices in your device inventory.
+This article explains how to view, customize, and manage devices in your device inventory. For detailed descriptions of every column, filter, and field value, see [Device inventory field reference](device-inventory-field-reference.md).
+
+## How devices appear in your inventory
+
+Devices appear in the inventory through two primary methods: onboarding and discovery. Understanding these methods helps you interpret the data you see and determine what action to take.
+
+### Onboarded devices
+
+Onboarded devices have the Defender for Endpoint sensor (agent) installed and actively report security telemetry. These devices show an **Onboarding status** of **Onboarded** and typically have an **Active** sensor health state. Because the agent is installed, Defender for Endpoint can collect detailed security data from these devices, including alerts, vulnerabilities, and software inventory. For more information, see [Onboard devices to Microsoft Defender for Endpoint](onboarding.md).
+
+### Discovered devices
+
+Discovered devices are endpoints, network devices, and IoT/OT assets that Defender for Endpoint identified on your network *without* an agent installed. Discovery happens automatically through onboarded endpoints that observe network traffic (basic discovery) or actively probe the environment (standard discovery). Discovered devices show an **Onboarding status** of **Can be onboarded**, **Unsupported**, or **Insufficient info**. For more information about how discovery works, see [Device discovery overview](device-discovery.md).
+
+### IoT and OT devices
+
+IoT and operational technology (OT) devices — such as printers, cameras, and industrial control systems — appear in the inventory when you enable [Microsoft Defender for IoT in the Defender portal](/defender-for-iot/microsoft-defender-iot). These devices appear on the **IoT/OT devices** tab and include extra fields like device type, subtype, vendor, and model.
+
+### Identify how a device was found
+
+The **Discovery sources** column tells you exactly how each device was found. Common values include **MDE** (found by the Defender for Endpoint sensor), **Microsoft Defender for IoT** (discovered by Defender for IoT), and other sources depending on your environment. Use this column to understand why a device appears in your inventory and whether it requires onboarding.
 
 ## View devices in the device inventory
 
@@ -76,7 +97,7 @@ Choose which columns to display in your device inventory view.
 |------|-------|
 | **Add or remove columns** | 1. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** at the top of the device inventory<br>2. Select or clear the checkboxes for columns you want to show or hide<br>3. The changes apply immediately to your view |
 | **View default columns** | The default columns (marked with <sup>*</sup>) vary by tab:<br>• **All devices**: Name, IP, MAC address, Criticality level, Device category, Device type, Domain, Device AAD id, Risk level, Exposure level, OS platform, OS version, Sensor health state, Onboarding status, Discovery sources, Last device update, Tags, Device role, Managed by, Managed by status, Mitigation status, Cloud platforms<br>• **Computers & mobile**: Name, Domain, Device AAD id, Risk level, Exposure level, OS platform, Windows version, Sensor health state, Onboarding status, Discovery sources, Last device update, Tags, Device role, Managed by, Managed by status, Cloud platforms, Criticality level<br>• **Network devices**: IP, MAC address, Vendor, Model, Name, Discovery sources, Risk level, Exposure level, OS distribution, OS version, Last device update, Tags<br>• **IoT/OT devices**: IP, MAC address, Name, Device type, Device subtype, Vendor, Model, Risk level, Exposure level, OS distribution, OS version, Last device update, Tags<br>• **Uncategorized devices**: Name, Vendor, IP, Risk level, Exposure level, OS distribution, OS version, Last device update, Tags |
-| **View all available columns** | Additional columns not shown by default include:<br>• Device subtype, Firmware version, First seen, Exclusion state, Device value, Discovery sources, Site (for IoT/OT devices), and others depending on the tab |
+| **View all available columns** | Additional columns not shown by default include:<br>• Device subtype, Firmware version, First seen, Exclusion state, Device value, Discovery sources, Site (for IoT/OT devices), and others depending on the tab<br><br>For a complete list of all columns with descriptions and possible values, see [Device inventory field reference](device-inventory-field-reference.md). |
 
 > [!TIP]
 > To see all columns, you likely need to do one or more of the following steps:
@@ -101,36 +122,36 @@ Use filters to narrow down the list of devices and focus on specific device cate
 >
 > To clear your filters, navigate to the top-right of the **Devices list** and select the  **Filter** icon. On the flight-out pane, select the **Clear all filters** button.
 
-The following table lists available filters by device inventory tab:
+The following table summarizes the available filters. For detailed descriptions, possible values, and guidance on when to use each filter, see [Device inventory field reference - Filters](device-inventory-field-reference.md#filters-reference).
 
-| Filter | Available on tabs | Description | Values |
-|--------|-------------------|-------------|--------|
-| **Cloud platforms** | All devices, Computers & mobile | The cloud platform that the device belongs to | Azure, AWS, GCP, Arc, None |
-| **Criticality level** | All devices, Computers & mobile | The criticality level assigned to the device | Very high (business critical asset), High, Medium, Low, None |
-| **Device category** | All devices | The category assigned to the device | BMS, Computers and Mobile, IoT, Medical, Network Device, OT, Unknown |
-| **Device subtype** | All devices, IoT/OT | The subtype assigned to the device | Enter a value or select an available value (for example, Video conference) |
-| **Device type** | All devices, IoT/OT | The type assigned to the device | Enter a value or select an available value (for example, Audio and Video) |
-| **Device role** | All | The specific role of the device within the organization | See [Predefined classifications](/security-exposure-management/predefined-classification-rules-and-levels) |
-| **Device value** | All | The assigned value of the device | High, Low |
-| **Discovery sources** | All | The source reporting on the device | Various discovery sources |
-| **Exclusion state** | All | Whether the device is excluded from vulnerability management | Not excluded, Excluded |
-| **Exposure level** | All | The exposure level based on pending security recommendations | High, Medium, Low (less vulnerable), No data available |
-| **First seen** | All tabs except Network devices | When the device was first seen on the network or reported by the sensor | Last 7 days, Over 7 days ago |
-| **Group** | All devices, Computers & mobile, Network devices | Device groups | Enter a value in the box |
-| **Internet facing** | All devices, Computers & mobile | Whether the device is internet facing | Yes, No |
-| **Managed by** | All devices, Computers & mobile | How the device is being managed | Intune, ConfigMgr, MDE, Unknown |
-| **Mitigation status** | All devices, Computers & mobile | The mitigation status of the device | Contained, Isolated |
-| **Model** | All devices | The model of the device | Enter a value or select from available values |
-| **Onboarding status** | All devices, Computers & mobile | Whether the device is onboarded in Defender for Endpoint | Onboarded, Can be onboarded, Unsupported, Insufficient info |
-| **OS distribution** | All devices, Computers & mobile | The distribution of the operating system | Windows 11, Windows 10, Windows Server, Linux, macOS, iOS, Android, Other |
-| **OS Platform** | All devices, Computers & mobile | The operating system on the device | Various OS platforms |
-| **Risk level** | All | The overall risk assessment of the device | High, Medium, Low, Informational, No known risk |
-| **Sensor health state** | All devices, Computers & mobile | The health state of the sensor for onboarded devices | Active, Inactive, Misconfigured |
-| **Site** | All devices, IoT/OT | Used for Defender for IoT site security (requires Defender for IoT license) | Various sites |
-| **Tags** | All | Tags added to devices for organization and targeting | Enter tag names |
-| **Transient device** | All | Devices that appear intermittently on the network | Yes, No |
-| **Vendor** | All devices | The vendor of the device | Enter a value or select from available values |
-| **Windows version** | Computers & mobile | The version of Windows | Various Windows versions |
+| Filter | Available on tabs |
+|--------|-------------------|
+| **Cloud platforms** | All devices, Computers & mobile |
+| **Criticality level** | All devices, Computers & mobile |
+| **Device category** | All devices |
+| **Device subtype** | All devices, IoT/OT |
+| **Device type** | All devices, IoT/OT |
+| **Device role** | All |
+| **Device value** | All |
+| **Discovery sources** | All |
+| **Exclusion state** | All |
+| **Exposure level** | All |
+| **First seen** | All tabs except Network devices |
+| **Group** | All devices, Computers & mobile, Network devices |
+| **Internet facing** | All devices, Computers & mobile |
+| **Managed by** | All devices, Computers & mobile |
+| **Mitigation status** | All devices, Computers & mobile |
+| **Model** | All devices |
+| **Onboarding status** | All devices, Computers & mobile |
+| **OS distribution** | All devices, Computers & mobile |
+| **OS Platform** | All devices, Computers & mobile |
+| **Risk level** | All |
+| **Sensor health state** | All devices, Computers & mobile |
+| **Site** | All devices, IoT/OT |
+| **Tags** | All |
+| **Transient device** | All |
+| **Vendor** | All devices |
+| **Windows version** | Computers & mobile |
 
 > [!NOTE]
 > The **Exposure level** filter value of **No data available** can occur when:
@@ -182,15 +203,7 @@ Use the device inventory to perform common security tasks.
 
 Now that you understand how to explore the device inventory, continue through the device lifecycle:
 
-- [Manage device scope and relevance](manage-device-scope-relevance.md): Control which devices are relevant to your security operations
-- [Create and manage device tags](machine-tags.md): Add business context and organize devices into groups
-- [Target devices with device groups and tags](targeting-devices.md): Use tags to apply security actions at scale
-- [Investigate devices](investigate-machines.md): Deep-dive into specific devices for incident response
-
-## Next steps
-
-Now that you understand your device inventory, continue through the device lifecycle:
-
+- **[Device inventory field reference](device-inventory-field-reference.md)**: Detailed descriptions for every column, filter, and field value
 - **[Manage device scope and relevance](manage-device-scope-relevance.md)**: Control which devices are relevant to your security operations
 - **[Create and manage device tags](machine-tags.md)**: Add business context and organize devices into groups
 - **[Target devices with device groups and tags](targeting-devices.md)**: Use tags to apply security actions at scale

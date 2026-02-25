@@ -621,6 +621,8 @@
         href: devices-overview.md
       - name: Device inventory
         href: machines-view-overview.md
+      - name: Device inventory field reference
+        href: device-inventory-field-reference.md
       - name: Manage device scope and relevance
         href: manage-device-scope-relevance.md
       - name: Manage device group and tags
