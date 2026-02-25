@@ -27,7 +27,7 @@ ms.date: 02/25/2026
 - [Microsoft Defender XDR](microsoft-365-defender.md)
 
 > [!IMPORTANT]
-> Microsoft Defender Experts for XDR is sold separately from other Microsoft Defender XDR products. Microsoft Defender XDR customers interested in purchasing Defender Experts for XDR as a standalone offering or the **Microsoft Defender Experts for Servers** add-on can complete the [customer interest form](https://aka.ms/IWantDefenderExperts).
+> Microsoft Defender Experts for XDR is sold separately from other Microsoft Defender XDR products. Microsoft Defender XDR customers interested in purchasing either Defender Experts for XDR as a standalone offering or the **Microsoft Defender Experts for Servers** add-on can complete the [customer interest form](https://aka.ms/IWantDefenderExperts).
 >
 >Defender Experts for XDR is also available as part of the **Microsoft Defender Experts Suite**. Customers interested in the suite can learn more on the [Defender Experts Suite service page](https://www.microsoft.com/security/services/) and [contact the Microsoft Security team](https://info.microsoft.com/ww-landing-microsoft-defender-contact-me.html) for follow-up.
 
