@@ -35,7 +35,7 @@ To set up device discovery:
 
 1. In the Microsoft Defender portal, navigate to **Settings** > **Device discovery**.
 
-1. If you've selected to use standard discovery, select which devices to use for active probing:
+1. If you've selected to use standard discovery, select which devices to use for active scanning:
     - Select **all devices (recommended)** to scan all devices.
     - Select **Select tags** to scan by device tags, and in the **Tags** page, select the tags. This option is useful to scan devices on a specific subnet.
 
@@ -48,14 +48,14 @@ To set up device discovery:
 
 To customize the list of devices used to perform standard discovery, do one of the following:
 
-- Enable standard discovery on all onboarded devices that that support device discovery.
+- Enable standard discovery on all onboarded devices that support device discovery.
 - Select a subset or subsets of your devices using device tags (see [Set up device discovery](configure-device-discovery.md#set-up-device-discovery)). In this case, all other devices run basic discovery only.
 
 ## Exclude devices from standard discovery
 
 You might want to exclude specific devices in your network from active scans, for example, devices used as honeypots for another security tool.
 
-Excluded devices might still be discovered by basic discovery, or through multicast discovery attempts. Defender for Endpoint passively discovers these devices, but doesn't actively probe them.
+Excluded devices might still be discovered by basic discovery, or through multicast discovery attempts. Defender for Endpoint passively discovers these devices, but doesn't actively scan them.
 
 To exclude a device:
 
@@ -68,7 +68,7 @@ The exclusion is visible in the **Exclusions** list. You can select an exclusion
 
 > [!NOTE]
 >
-> - Excluded devices might still reply to multicast discovery attempts in the network. These devices are discovered but aren't actively probed.
+> - Excluded devices might still reply to multicast discovery attempts in the network. These devices are discovered but aren't actively scanned.
 > - Because device discovery uses passive methods to discover devices in the network, any device that communicates with your onboarded devices in the corporate network can be discovered and listed in the inventory. You can exclude devices from active discovery only.
 
 ## View and manage monitored networks

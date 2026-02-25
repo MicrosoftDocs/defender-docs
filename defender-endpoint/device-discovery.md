@@ -70,20 +70,20 @@ You select the device discovery mode in the **System** > **Settings** > **Device
 
 | Mode | Description | How it works | Considerations and actions | Use cases and recommendations |
 |:------------------|:------------|:--------------|:--------------|:-----------------------------|
-| Standard scan (default) | Active scan that enriches device data and discovers more devices using network protocols and active probing. | - Uses common discovery protocols and multicast queries to find devices.<br>- Actively probes observed devices for more information.<br>- Probes devices when characteristics change, typically no more than once every three weeks. | - Active probing can generate up to 50KB of traffic between the onboarded device and the probed device per attempt.<br>- Standard discovery uses various PowerShell scripts to actively probe devices in the network. These PowerShell scripts are signed by Microsoft, and are executed from the following location: `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\*.ps`. For example, `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\UnicastScannerV1.1.0.ps1`.<br>- To customize which devices perform standard discovery, see [Control which devices perform standard discovery](configure-device-discovery.md#control-which-devices-perform-standard-discovery).<br>- To exclude targets from standard discovery, see [Exclude devices](configure-device-discovery.md#exclude-devices-from-standard-discovery). | - Highly recommended for building a reliable and coherent device inventory.<br>- In almost all cases, organizations should have no security concerns around enabling standard discovery. For more information, see [Security considerations for standard discovery](#security-considerations-for-standard-discovery). |
+| Standard scan (default) | Active scan that enriches device data and discovers more devices using network protocols and active scanning. | - Uses common discovery protocols and multicast queries to find devices.<br>- Actively scans observed devices for more information.<br>- Scans devices when characteristics change, typically no more than once every three weeks. | - Active scanning can generate up to 50KB of traffic between the onboarded device and the scanned device per attempt.<br>- Standard discovery uses various PowerShell scripts to actively scan devices in the network. These PowerShell scripts are signed by Microsoft, and are executed from the following location: `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\*.ps`. For example, `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\UnicastScannerV1.1.0.ps1`.<br>- To customize which devices perform standard discovery, see [Control which devices perform standard discovery](configure-device-discovery.md#control-which-devices-perform-standard-discovery).<br>- To exclude targets from standard discovery, see [Exclude devices](configure-device-discovery.md#exclude-devices-from-standard-discovery). | - Highly recommended for building a reliable and coherent device inventory.<br>- In almost all cases, organizations should have no security concerns around enabling standard discovery. For more information, see [Security considerations for standard discovery](#security-considerations-for-standard-discovery). |
 | Basic scan | Passive scan that collects network events and device information without sending probes. | - Passively collects events and extracts device information from all network traffic seen by onboarded devices.<br>- Uses the **SenseNDR.exe** binary for passive network data collection.<br>- No network traffic is initiated by the scan. |Because device discovery uses passive methods to discover devices in the network, any device that communicates with your onboarded devices in the corporate network can be discovered and listed in the inventory. You can exclude devices from standard (active) scans only. | - Recommended for sensitive/legacy networks.<br>- Provides limited visibility of unmanaged endpoints. |
 
 ### Security considerations for standard discovery
 
 When considering standard discovery, you may be wondering about the implications of probing, and specifically whether security tools might suspect such activity as malicious. In almost all cases, organizations should have no concerns around enabling standard discovery.  
 
-- Probing unmanaged devices is infrequent and lightweight: Each unmanaged device is typically probed no more than once every three weeks, generating less than 50KB of traffic per attempt. In contrast, malicious activity produces much more frequent and voluminous network traffic, which is easily detected by monitoring tools.
+- Probing unmanaged devices is infrequent and lightweight: Each unmanaged device is typically scanned no more than once every three weeks, generating less than 50KB of traffic per attempt. In contrast, malicious activity produces much more frequent and voluminous network traffic, which is easily detected by monitoring tools.
 
 - Active discovery is a standard Windows feature: Windows and many other platforms have long included active discovery to find nearby devices for functions like file sharing and printer discovery. Defender for Endpoint leverages these same methods, so network monitoring tools treat this activity as normal.
 
-- Only unmanaged devices are targeted: Device discovery intentionally avoids probing devices that are already onboarded with Defender for Endpoint. Only unmanaged or unknown devices are subject to active probing.
+- Only unmanaged devices are targeted: Device discovery intentionally avoids scanning devices that are already onboarded with Defender for Endpoint. Only unmanaged or unknown devices are subject to active scanning.
 
-- You can exclude specific devices or subnets: If you have network lures or sensitive devices, you can configure exclusions in Device Discovery settings. Excluded devices are not actively probed and are only discovered passively, similar to basic discovery mode.
+- You can exclude specific devices or subnets: If you have network lures or sensitive devices, you can configure exclusions in Device Discovery settings. Excluded devices are not actively scanned and are only discovered passively, similar to basic discovery mode.
 
 ### Authenticated network scans
 
@@ -106,7 +106,7 @@ Microsoft Defender for Endpoint analyzes a network and determines if it's a corp
 
 To identify a network as corporate, Defender for Endpoint correlates network identifiers across all of the tenant's clients. If most of the devices in the organization report that they're connected to the same network name, with the same default gateway and DHCP server address, Defender for Endpoint assumes that the network is a corporate network.
 
-Private network devices aren't listed in the inventory and aren't actively probed.
+Private network devices aren't listed in the inventory and aren't actively scanned.
 
 To override this setting, you can add networks to the monitored list. For more information, see [Select networks to monitor](configure-device-discovery.md#view-and-manage-monitored-networks).
 
@@ -178,11 +178,11 @@ To manage device discovery options, see [Manage device discovery](configure-devi
 | Feature/option | Default | What it includes or enables | Where to configure in the Defender portal  | More information |
 |----------------------------|:---------------:|-------------------------------------------------------------------------------|-----------------------------------------|------------------|
 | Basic discovery   | No   | Detects unmanaged endpoints, network devices, IoT assets via traffic. Can be used for sensitive/legacy networks. | **System** > **Settings** > **Device discovery** > **Discovery mode** > **Basic**      | [Discovery modes and scans](#discovery-modes-and-scans) |
-| Standard discovery | Yes  | Adds protocol-based probes for deeper device identification and richer inventory. Can be disabled (switch to **Basic** mode). | **System** > **Settings** > **Device discovery** > **Discovery mode** > **Standard discovery (recommended)**          |[Discovery modes and scans](#discovery-modes-and-scans)  |
+| Standard discovery | Yes  | Adds protocol-based scans for deeper device identification and richer inventory. Can be disabled (switch to **Basic** mode). | **System** > **Settings** > **Device discovery** > **Discovery mode** > **Standard discovery (recommended)**          |[Discovery modes and scans](#discovery-modes-and-scans)  |
 | Device inventory integration | Yes   | Unified view of onboarded and discovered devices. Filter, assess, and take action in inventory. | **Assets** > **Devices** | [Review devices that aren't onboarded](assess-devices.md#monitor-non-onboarded-devices-in-the-device-inventory) |
 | Network list management  | Yes | Monitors corporate networks, ignores non-corporate by default. Can monitor/ignore specific networks. | **System** > **Settings** > **Device discovery** > **Monitored networks**   |[Network list management](configure-device-discovery.md#view-and-manage-monitored-networks)  |
 | Exclusions  | No  | Exclude IPs or device groups from scans. | **System** > **Settings** > **Device discovery** > **Exclusions** |[Exclude devices](configure-device-discovery.md#exclude-devices-from-standard-discovery)  |
-| Network scans  | No  | - Discover and classify network infrastructure devices that cannot be onboarded.<br>- Schedule scans and define scan targets beyond the default subnet. | **System** > **Settings** > **Device discovery** > **Device discovery** > **Authenticated scans**  |[Set up authenticated network scans](network-devices.md)  |
+| Network authenticated scans  | No  | - Discover and classify network infrastructure devices that cannot be onboarded.<br>- Schedule scans and define scan targets beyond the default subnet. | **System** > **Settings** > **Device discovery** > **Device discovery** > **Authenticated scans**  |[Set up authenticated network scans](network-devices.md)  |
 | OT/IoT device discovery | No | Integrate with Defender for IoT to discover OT and enterprise IoT devices. | **System** > **Settings** > **Device discovery** > **Enterprise IoT** | [Onboard Defender for IoT in the Defender portal](/defender-for-iot/get-started) |
 | Vulnerability assessment | Yes | Assess vulnerabilities on discovered devices and get remediation guidance. For example, search for **SSH** to find recommendations on SSH vulnerabilities related to unmanaged devices. | **Exposure management > Recommendations** | [Vulnerability management overview](/defender-vulnerability-management/defender-vulnerability-management) |
 | Advanced hunting on discovered devices | Yes | Use advanced hunting queries to investigate discovered devices, their activities, and related threats. | **Advanced hunting** | [Use advanced hunting on discovered devices](assess-devices.md#use-advanced-hunting-on-discovered-devices) |
@@ -191,13 +191,14 @@ To manage device discovery options, see [Manage device discovery](configure-devi
 
 The following table summarizes device discovery capabilities by license:
 
-| License                        | Device discovery | Network scans | Enterprise IoT/OT integration | Vulnerability management | Advanced hunting |
-|---------------------------------|------------------|---------------|--------------------|-------------------------|------------------|
-| Defender for Endpoint Plan 2    | Yes              | Yes           | No                 | Yes                     | Yes              |
-| Defender for Endpoint Plan 2 + IoT | Yes           | Yes           | Yes                | Yes                     | Yes              |
-| Defender for IoT only           | No               | No            | Yes                | Yes                     | No               |
+| License                        | Device discovery | Network authenticated scans | Vulnerability management for endpoints | Vulnerability management for IoT/OT | Advanced hunting |
+|---------------------------------|:----------------:|:---------------------------:|:--------------------------------------:|:------------------------------------:|:----------------:|
+| Defender for Endpoint Plan 2    | Yes              | Yes                         | Yes                                    | No                                   | Yes              |
+| Microsoft 365 E5 Security / E5 | Yes              | Yes                         | Yes                                    | Yes                                  | Yes              |
+| Defender for Endpoint Plan 2 + Defender for IoT | Yes | Yes                      | Yes                                    | Yes                                  | Yes              |
 
-Some features (such as enterprise IoT vulnerability display) are controlled by toggles and may be off by default, depending on your license. Enabling these features may change the data shown in the inventory and UI.
+> [!NOTE]
+> All discovered devices (including IoT and OT devices) are shown in the device inventory for all Defender for Endpoint Plan 2 and above customers. The difference between Plan 2 and Plan 2 with a Defender for IoT license (equivalent to E5) is that vulnerability assessment data and security recommendations are also presented for IoT/OT devices when the IoT license is active.
 
 ## Next steps
 

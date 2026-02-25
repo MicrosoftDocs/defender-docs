@@ -63,5 +63,20 @@ The following table gives information about the supported Microsoft Defender for
 > - For Windows 7, Windows 8.1, and Windows Server 2008 R2, use [MMA](/defender-endpoint/onboard-downlevel#install-and-configure-microsoft-monitoring-agent-mma) for the EDR sensor and [System Center Endpoint Protection](/defender-endpoint/onboard-downlevel#configure-and-update-system-center-endpoint-protection-clients) (SCEP) for antivirus protection.
 > - For Windows 7 SP1 and Windows Server 2008 R2 SP1, you can also use [Microsoft Defender endpoint security solution (preview)](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security) supplied by the [Defender deployment tool (preview)](./defender-deployment-tool-windows.md). 
 
+## Device discovery capabilities by license
+
+Device discovery capabilities vary depending on your license. The following table summarizes what's available for each license tier.
+
+| License                        | Device discovery | Network authenticated scans | Vulnerability management for endpoints | Vulnerability management for IoT/OT | Advanced hunting |
+|---------------------------------|:----------------:|:---------------------------:|:--------------------------------------:|:------------------------------------:|:----------------:|
+| Defender for Endpoint Plan 2    | Yes              | Yes                         | Yes                                    | No                                   | Yes              |
+| Microsoft 365 E5 Security / E5 | Yes              | Yes                         | Yes                                    | Yes                                  | Yes              |
+| Defender for Endpoint Plan 2 + Defender for IoT | Yes | Yes                      | Yes                                    | Yes                                  | Yes              |
+
+> [!NOTE]
+> All discovered devices (including IoT and OT devices) are shown in the device inventory for all Defender for Endpoint Plan 2 and above customers. The difference between Plan 2 and Plan 2 with a Defender for IoT license (equivalent to E5) is that vulnerability assessment data and security recommendations are also presented for IoT/OT devices when the IoT license is active.
+
+For more information, see [Device discovery capabilities by license](device-discovery.md#device-discovery-capabilities-by-license).
+
 
 
