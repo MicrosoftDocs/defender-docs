@@ -187,18 +187,7 @@ To manage device discovery options, see [Manage device discovery](configure-devi
 | Vulnerability assessment | Yes | Assess vulnerabilities on discovered devices and get remediation guidance. For example, search for **SSH** to find recommendations on SSH vulnerabilities related to unmanaged devices. | **Exposure management > Recommendations** | [Vulnerability management overview](/defender-vulnerability-management/defender-vulnerability-management) |
 | Advanced hunting on discovered devices | Yes | Use advanced hunting queries to investigate discovered devices, their activities, and related threats. | **Advanced hunting** | [Use advanced hunting on discovered devices](assess-devices.md#use-advanced-hunting-on-discovered-devices) |
 
-## Device discovery capabilities by license
-
-The following table summarizes device discovery capabilities by license:
-
-| License                        | Device discovery | Authenticated network scans | Vulnerability management for endpoints | Vulnerability management for IoT/OT | Advanced hunting |
-|---------------------------------|:----------------:|:---------------------------:|:--------------------------------------:|:------------------------------------:|:----------------:|
-| Defender for Endpoint Plan 2    | Yes              | Yes                         | Yes                                    | No                                   | Yes              |
-| Microsoft 365 E5 Security / E5 | Yes              | Yes                         | Yes                                    | Yes                                  | Yes              |
-| Defender for Endpoint Plan 2 + Defender for IoT | Yes | Yes                      | Yes                                    | Yes                                  | Yes              |
-
-> [!NOTE]
-> All discovered devices (including IoT and OT devices) are shown in the device inventory for all Defender for Endpoint Plan 2 and above customers. The difference between Plan 2 and Plan 2 with a Defender for IoT license (equivalent to E5) is that vulnerability assessment data and security recommendations are also presented for IoT/OT devices when the IoT license is active.
+For a list of supported device discovery capabilities by license, see [Supported Microsoft Defender for Endpoint capabilities by platform](supported-capabilities-by-platform.md#device-discovery-capabilities-by-license).
 
 ## Next steps
 

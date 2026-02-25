@@ -22,8 +22,9 @@ appliesto:
 ---
 # Supported Microsoft Defender for Endpoint capabilities by platform
 
-
 Learn how to [Onboard devices and configure Microsoft Defender for Endpoint capabilities](onboard-configure.md).
+
+## Supported capabilities by platform
 
 The following table gives information about the supported Microsoft Defender for Endpoint capabilities by platform.
 
@@ -76,7 +77,4 @@ Device discovery capabilities vary depending on your license. The following tabl
 > [!NOTE]
 > All discovered devices (including IoT and OT devices) are shown in the device inventory for all Defender for Endpoint Plan 2 and above customers. The difference between Plan 2 and Plan 2 with a Defender for IoT license (equivalent to E5) is that vulnerability assessment data and security recommendations are also presented for IoT/OT devices when the IoT license is active.
 
-For more information, see [Device discovery capabilities by license](device-discovery.md#device-discovery-capabilities-by-license).
-
-
-
+For more information, see [Device discovery](device-discovery.md).
