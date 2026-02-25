@@ -193,7 +193,7 @@ Device discovery enables organizations to identify managed and unmanaged devices
 
 The core discovery experience, including device visibility and network authenticated scans, is consistent across supported Defender for Endpoint environments. Vulnerability assessment and security recommendations are provided for endpoint devices as part of the defender [vulnerability assessment capabilities](/defender-vulnerability-management/defender-vulnerability-management).
 
-When Defender for IoT is integrated, IoT and OT devices can also surface vulnerability assessment data and security recommendations, extending visibility beyond basic device inventory.
+When the Enterprise IoT Security license is enabled (either through Microsoft 365 E5 or via a standalone Enterprise IoT license), vulnerability assessment is available for discovered IoT devices, providing deeper risk visibility beyond basic inventory.
 
 For information about feature availability and licensing, see the [Microsoft Defender service description](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-defender-service-description).
 
