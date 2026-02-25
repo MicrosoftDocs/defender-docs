@@ -2,7 +2,7 @@
 title: Microsoft Sentinel skill-up training 
 description: This article walks you through a level 400 training to help you skill up on Microsoft Sentinel. The training comprises 21 modules that present relevant product documentation, blog posts, and other resources.
 author: rayne-wiselman
-ms.topic: conceptual
+ms.topic: tutorial
 ms.date: 05/16/2024
 ms.author: raynew
 ms.custom: fasttrack-edit
