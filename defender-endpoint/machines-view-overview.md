@@ -28,25 +28,7 @@ The **Device inventory** is the authoritative source for all devices visible to 
 
 This article explains how to view, customize, and manage devices in your device inventory. For detailed descriptions of every column, filter, and field value, see [Device inventory field reference](device-inventory-field-reference.md).
 
-## How devices appear in your inventory
-
-Devices appear in the inventory through two primary methods: onboarding and discovery. Understanding these methods helps you interpret the data you see and determine what action to take.
-
-### Onboarded devices
-
-Onboarded devices have the Defender for Endpoint sensor (agent) installed and actively report security telemetry. These devices show an **Onboarding status** of **Onboarded** and typically have an **Active** sensor health state. Because the agent is installed, Defender for Endpoint can collect detailed security data from these devices, including alerts, vulnerabilities, and software inventory. For more information, see [Onboard devices to Microsoft Defender for Endpoint](onboarding.md).
-
-### Discovered devices
-
-Discovered devices are endpoints, network devices, and IoT/OT assets that Defender for Endpoint identified on your network *without* an agent installed. Discovery happens automatically through onboarded endpoints that observe network traffic (basic discovery) or actively probe the environment (standard discovery). Discovered devices show an **Onboarding status** of **Can be onboarded**, **Unsupported**, or **Insufficient info**. For more information about how discovery works, see [Device discovery overview](device-discovery.md).
-
-### IoT and OT devices
-
-IoT and operational technology (OT) devices — such as printers, cameras, and industrial control systems — appear in the inventory when you enable [Microsoft Defender for IoT in the Defender portal](/defender-for-iot/microsoft-defender-iot). These devices appear on the **IoT/OT devices** tab and include extra fields like device type, subtype, vendor, and model.
-
-### Identify how a device was found
-
-The **Discovery sources** column tells you exactly how each device was found. Common values include **MDE** (found by the Defender for Endpoint sensor), **Microsoft Defender for IoT** (discovered by Defender for IoT), and other sources depending on your environment. Use this column to understand why a device appears in your inventory and whether it requires onboarding.
+To understand how devices appear in the inventory through onboarding and discovery, including IoT/OT devices and discovery sources, see [Devices in Microsoft Defender for Endpoint](devices-overview.md).
 
 ## View devices in the device inventory
 
@@ -54,7 +36,7 @@ Access the device inventory and review the devices in your environment.
 
 ### Navigate to the device inventory
 
-In the Defender portal at <https://security.microsoft.com>, go to **Assets** \> **Devices**. Or, to go directly to the **Device inventory** page, use <https://security.microsoft.com/machines>.
+In the Defender portal, go to **Assets** \> **Devices** or, to go directly to the **Device inventory** page, use <https://security.microsoft.com/machines>.
 
 ### Review device information and counts
 
@@ -65,12 +47,12 @@ The device inventory opens on the **All devices** tab. You can see information s
 >
 > Risk Level, which can influence enforcement of Conditional Access and other security policies in Microsoft Intune, is available for Windows devices.
 
-| What you can do | Details |
-|-----------------|---------|
-| **View device categories** | The device inventory has the following tabs:<br>• **All devices**: All devices in your environment<br>• **Computers & mobile**: Enterprise endpoints (workstations, servers, and mobile devices)<br>• **Network devices**: Routers and switches<br>• **IoT/OT devices**: Enterprise IoT devices (printers, cameras) and OT devices (industrial control systems)<br>• **Uncategorized devices**: Devices that couldn't be properly classified |
-| **Review device counts** | At the top of each tab, view these counts:<br>• **Total**: Total number of devices<br>• **Critical assets**: Number of business critical assets (**All devices** tab only)<br>• **High risk**: Devices identified as higher risk to your organization<br>• **High exposure**: Devices with high exposure<br>• **Not onboarded**: Devices not yet onboarded (**All devices** and **Computers & mobile** tabs only)<br>• **Newly discovered**: Newly discovered devices within the last 7 days (all tabs except **Computers & mobile**)<br><br>Use this information to prioritize devices for security posture improvements. |
-| **View special cards** | • **Classify critical assets**: Define device groups as business critical<br>• **Attack path warning**: Examine if any assets are part of an attack path (requires Microsoft Security Exposure Management) |
-| **Check device details** | For each device, view information including:<br>• Device name, domain, and device ID<br>• Risk level, exposure level, criticality level<br>• OS platform, distribution, and version<br>• Onboarding status and sensor health state<br>• Last device update and first seen time<br>• Tags, exclusion state, and device role<br>• Managed by (Intune, ConfigMgr, MDE, or Unknown)<br>• Mitigation status (Contained, Isolated)<br>• Cloud platforms (Azure, AWS, GCP, Arc, None)<br><br>For **Network devices** and **IoT/OT devices** tabs, also view vendor, model, device type, and device subtype. |
+When you open the device inventory, you can:
+
+- **View device categories**: Switch between tabs (All devices, Computers & mobile, Network devices, IoT/OT, Uncategorized) to focus on specific device types. For details on what each tab contains, see [Device categories](device-inventory-field-reference.md#device-categories).
+- **Review device counts**: Check the count pills at the top of each tab (total, critical assets, high risk, high exposure, not onboarded, newly discovered) to prioritize your work. For details, see [Device counts and cards](device-inventory-field-reference.md#device-counts-and-cards).
+- **View special cards**: Classify critical assets or check for attack path warnings. For details, see [Device counts and cards](device-inventory-field-reference.md#device-counts-and-cards).
+- **Check device details**: View columns like risk level, exposure level, onboarding status, sensor health, managed by, tags, and more for each device. For details on every column, see [Columns reference](device-inventory-field-reference.md#columns-reference).
 
 > [!NOTE]
 > Device discovery integration with [Microsoft Defender for IoT in the Defender portal (Preview)](/defender-for-iot/microsoft-defender-iot) is available to help locate, identify, and secure your complete OT/IOT asset inventory. Devices discovered with this integration appear on the **IoT/OT devices** tab.
@@ -93,11 +75,10 @@ Customize how you view devices in the inventory by adding or removing columns, a
 
 Choose which columns to display in your device inventory view.
 
-| Task | Steps |
-|------|-------|
-| **Add or remove columns** | 1. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** at the top of the device inventory<br>2. Select or clear the checkboxes for columns you want to show or hide<br>3. The changes apply immediately to your view |
-| **View default columns** | The default columns (marked with <sup>*</sup>) vary by tab:<br>• **All devices**: Name, IP, MAC address, Criticality level, Device category, Device type, Domain, Device AAD id, Risk level, Exposure level, OS platform, OS version, Sensor health state, Onboarding status, Discovery sources, Last device update, Tags, Device role, Managed by, Managed by status, Mitigation status, Cloud platforms<br>• **Computers & mobile**: Name, Domain, Device AAD id, Risk level, Exposure level, OS platform, Windows version, Sensor health state, Onboarding status, Discovery sources, Last device update, Tags, Device role, Managed by, Managed by status, Cloud platforms, Criticality level<br>• **Network devices**: IP, MAC address, Vendor, Model, Name, Discovery sources, Risk level, Exposure level, OS distribution, OS version, Last device update, Tags<br>• **IoT/OT devices**: IP, MAC address, Name, Device type, Device subtype, Vendor, Model, Risk level, Exposure level, OS distribution, OS version, Last device update, Tags<br>• **Uncategorized devices**: Name, Vendor, IP, Risk level, Exposure level, OS distribution, OS version, Last device update, Tags |
-| **View all available columns** | Additional columns not shown by default include:<br>• Device subtype, Firmware version, First seen, Exclusion state, Device value, Discovery sources, Site (for IoT/OT devices), and others depending on the tab<br><br>For a complete list of all columns with descriptions and possible values, see [Device inventory field reference](device-inventory-field-reference.md). |
+1. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** at the top of the device inventory.
+1. Select or clear the checkboxes for columns you want to show or hide. The changes apply immediately.
+
+Default columns vary by tab. For the full list of columns with descriptions, default status, and example values, see [Columns reference](device-inventory-field-reference.md#columns-reference).
 
 > [!TIP]
 > To see all columns, you likely need to do one or more of the following steps:
@@ -110,74 +91,40 @@ Choose which columns to display in your device inventory view.
 
 Use filters to narrow down the list of devices and focus on specific device categories.
 
-| Task | Steps |
-|------|-------|
-| **Open filters** | Select the **Filter** icon at the top-right of the device inventory. |
-| **Apply a filter** | 1. In the filter panel, select a filter category (for example, **Risk level**, **Onboarding status**, **Tags**)<br>2. Select or enter the values you want to filter by<br>3. Select **Apply** |
-| **Clear filters** | Select **Clear all filters** in the filter panel to remove all active filters. |
-| **View active filters** | Active filters appear as pills at the top of the device inventory. Select the **X** on a filter pill to remove that specific filter. |
+1. Select the **Filter** icon at the top-right of the device inventory.
+1. In the filter panel, select a filter category (for example, **Risk level**, **Onboarding status**, **Tags**).
+1. Select or enter the values you want to filter by.
+1. Select **Apply**. Active filters appear as pills at the top of the device inventory. Select the **X** on a pill to remove that specific filter, or select **Clear all filters** in the filter panel to reset.
 
 > [!NOTE]
 > If you're not seeing some devices, try clearing your filters.
 >
 > To clear your filters, navigate to the top-right of the **Devices list** and select the  **Filter** icon. On the flight-out pane, select the **Clear all filters** button.
 
-The following table summarizes the available filters. For detailed descriptions, possible values, and guidance on when to use each filter, see [Device inventory field reference - Filters](device-inventory-field-reference.md#filters-reference).
+Here are a few common filter scenarios to get you started:
 
-| Filter | Available on tabs |
-|--------|-------------------|
-| **Cloud platforms** | All devices, Computers & mobile |
-| **Criticality level** | All devices, Computers & mobile |
-| **Device category** | All devices |
-| **Device subtype** | All devices, IoT/OT |
-| **Device type** | All devices, IoT/OT |
-| **Device role** | All |
-| **Device value** | All |
-| **Discovery sources** | All |
-| **Exclusion state** | All |
-| **Exposure level** | All |
-| **First seen** | All tabs except Network devices |
-| **Group** | All devices, Computers & mobile, Network devices |
-| **Internet facing** | All devices, Computers & mobile |
-| **Managed by** | All devices, Computers & mobile |
-| **Mitigation status** | All devices, Computers & mobile |
-| **Model** | All devices |
-| **Onboarding status** | All devices, Computers & mobile |
-| **OS distribution** | All devices, Computers & mobile |
-| **OS Platform** | All devices, Computers & mobile |
-| **Risk level** | All |
-| **Sensor health state** | All devices, Computers & mobile |
-| **Site** | All devices, IoT/OT |
-| **Tags** | All |
-| **Transient device** | All |
-| **Vendor** | All devices |
-| **Windows version** | Computers & mobile |
+- Filter by **Risk level** > **High** to find devices that need immediate investigation.
+- Filter by **Onboarding status** > **Can be onboarded** to find discovered devices ready for agent deployment.
+- Filter by **Tags** to scope the view to a specific business group (for example, `Finance` or `HQ-Building-A`).
+- Filter by **Managed by** > **Unknown** to identify unmanaged devices.
 
-> [!NOTE]
-> The **Exposure level** filter value of **No data available** can occur when:
-> - The device is inactive (stopped reporting for more than 30 days)
-> - The OS on the device isn't supported (see [minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md))
-> - The agent software on the device is stale (unlikely)
+For the full list of available filters, possible values, and guidance on when to use each, see [Filters reference](device-inventory-field-reference.md#filters-reference).
 
 ### Sort devices
 
-| Task | Steps |
-|------|-------|
-| **Sort by column** | Select any column header to sort devices by that column in ascending or descending order. |
-| **Multi-column sorting** | Hold **Shift** and select multiple column headers to sort by multiple columns. |
+1. Select any column header to sort devices by that column. Select the header again to reverse the sort order.
+1. To sort by multiple columns, hold **Shift** and select additional column headers.
 
 ### Export device list
 
-| Task | Steps |
-|------|-------|
-| **Export to CSV** | 1. Select **Export** at the top of the device inventory<br>2. Wait for the export to complete (might take time for large organizations)<br>3. Download the CSV file containing all devices in your organization |
+1. Select **Export** at the top of the device inventory.
+1. Wait for the export to complete. For large organizations, this process might take time.
+1. Download the CSV file containing all devices in your organization.
 
 > [!NOTE]
-> If you export the devices list, it contains every device in your organization. It might take a significant amount of time to download, depending on how large your organization is.
->
-> When you export the devices list, the antivirus status shows as `Not-Supported`. For antivirus status, use the recently released [Microsoft Defender Antivirus health report](device-health-microsoft-defender-antivirus-health.md) instead. This report allows you to export even more details.
->
 > The exported CSV contains unfiltered data for all devices in the organization, regardless of any filters applied in the UI.
+>
+> Antivirus status shows as `Not-Supported` in the export. For antivirus status, use the [Microsoft Defender Antivirus health report](device-health-microsoft-defender-antivirus-health.md) instead.
 
 > [!TIP]
 > The API, UI, export, and AH interfaces all draw from a single authoritative data source. However, because each is powered by separate backend systems with different update frequencies, slight variations may appear across views—especially in short-term queries or recently reactivated devices. Each interface is optimized for its specific use case: export for large data retrieval, UI for fast interactive tasks like tag management, and AH for tracking device update history over time.

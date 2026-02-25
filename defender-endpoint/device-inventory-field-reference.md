@@ -37,6 +37,24 @@ The device inventory organizes devices into tabs based on their category. Each t
 | **IoT/OT devices** | Enterprise IoT devices and operational technology (OT) devices | Printers, IP cameras, HVAC controllers, PLCs, industrial control systems | Discovered by [Microsoft Defender for IoT](/defender-for-iot/microsoft-defender-iot) or classified by device fingerprinting |
 | **Uncategorized devices** | Devices that Defender for Endpoint discovered but couldn't classify into a specific category | Unknown devices that responded to discovery probes but lack enough identifying information | Default when discovery can't determine the device type |
 
+## Device counts and cards
+
+At the top of each device inventory tab, count pills summarize your device population at a glance.
+
+| Count | Description | Available on tabs |
+|-------|-------------|-------------------|
+| **Total** | Total number of devices on the current tab. | All tabs |
+| **Critical assets** | Number of devices classified as business critical through [Microsoft Security Exposure Management](/security-exposure-management/overview). | All devices only |
+| **High risk** | Devices with a **High** risk level based on active alerts and threat signals. | All tabs |
+| **High exposure** | Devices with a **High** exposure level based on unresolved security recommendations. | All tabs |
+| **Not onboarded** | Devices that don't have the Defender for Endpoint agent installed. | All devices, Computers & mobile |
+| **Newly discovered** | Devices first seen within the last 7 days. | All tabs except Computers & mobile |
+
+Below the counts, the inventory might display special cards:
+
+- **Classify critical assets**: Define device groups as business critical to prioritize protection. Configured through [Microsoft Security Exposure Management](/security-exposure-management/overview).
+- **Attack path warning**: Examine whether any assets are part of an attack path. Requires [Microsoft Security Exposure Management](/security-exposure-management/overview).
+
 ## Columns reference
 
 The following tables list all available columns, organized by tab. Columns marked with **Default** appear in the inventory view by default. You can add or remove columns using **Customize columns**.
