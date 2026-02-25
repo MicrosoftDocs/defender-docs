@@ -69,7 +69,7 @@ The following external package dependencies exist for the mdatp package:
 - The mdatp RPM package requires `glibc >= 2.17`.
 - For DEBIAN, the mdatp package requires `libc6 >= 2.23`.
 
-To use the [device isolation functionality](./respond-machine-alerts.md#isolate-devices-from-the-network), the following prerequisites must be enabled:
+To use [device isolation functionality](./respond-machine-alerts.md#isolate-devices-from-the-network), the following prerequisites must be enabled:
 
 - `iptables`
 - `ip6tables`

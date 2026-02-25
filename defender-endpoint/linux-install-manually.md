@@ -509,7 +509,7 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
       
 ## External package dependencies
 
-For information, see [Prerequisites for Microsoft Defender for Endpoint on Linux: External package dependency](./mde-linux-prerequisites.md#external-package-dependency).
+For information, see [Prerequisites for Microsoft Defender for Endpoint on Linux: External package dependency](./mde-linux-prerequisites.md#external-package-dependencies).
 
 ## Troubleshoot installation issues
 
