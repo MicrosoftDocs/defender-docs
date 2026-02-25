@@ -18,7 +18,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn how to view and manage quarantined messages for all users in Microsoft 365 organizations with cloud mailboxes. Admins in organizations with Microsoft Defender for Office 365 can also manage quarantined files in SharePoint, OneDrive, and Microsoft Teams.
 ms.service: defender-office-365
-ms.date: 12/15/2025
+ms.date: 02/23/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -34,7 +34,12 @@ In all organizations with cloud mailboxes, quarantine holds potentially dangerou
 
 Admins in Microsoft 365 organizations with Defender for Office 365 (included or in an add-on subscription) can also manage files quarantined by [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md) and Microsoft Teams messages [quarantined by zero-hour auto purge (ZAP)](zero-hour-auto-purge.md#zero-hour-auto-purge-zap-in-microsoft-teams).
 
-Users can manage most quarantined email messages based on the _quarantine policy_ for [supported email protection features](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features). For more information about quarantine policies, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
+Users can manage most quarantined email messages based on the _quarantine policy_ for [supported email protection features](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features). In particular, admins can use quarantine policies to configure:
+
+- Whether recipients are notified about quarantined messages.
+- The actions that recipients can take on their quarantined messages.
+
+For more information about quarantine policies, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
 
 Admins and users (depending on the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) for the organization) can report false positives to Microsoft from quarantine.
 

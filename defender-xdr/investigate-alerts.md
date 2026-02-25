@@ -234,9 +234,9 @@ The **Recommendations** tab provides next-step actions and advice for investigat
 
 ## Tune an alert
 
-As a security operations center (SOC) analyst, one of the top issues is triaging the sheer number of alerts that are triggered daily. While wanting to focus only on high severity and high priority alerts, analysts are also required to triage and resolve lower priority alerts, which tend to be a manual process.
 
-Alert tuning, previously known as *alert suppression*, provides the ability to tune and manage alerts in advance. This streamlines the alert queue and saves triage time by hiding or resolving alerts automatically, each time a certain expected organizational behavior occurs and rule conditions are met.
+As a security operations center (SOC) analyst, one of the top issues is triaging the sheer number of alerts that are triggered daily. While wanting to focus only on high severity and high priority alerts, analysts are also required to triage and resolve lower priority alerts, which tend to be a manual process.
+Alert tuning (previously *alert suppression*) lets you hide or resolve alerts automatically when expected organizational behavior occurs and rule conditions are met. This streamlines your alert queue and saves triage time.
 
 Alert tuning rules support conditions based on *evidence types* such as files, processes, scheduled tasks, and other types of evidence that trigger alerts. After creating an alert tuning rule, apply it to the selected alert or any alert type that meets the defined conditions to tune the alert.
 
@@ -249,8 +249,13 @@ This action is only applicable for Defender for Endpoint alerts.
 - **Resolve alert**: Automatically resolves the alert and related incidents. Matching alerts and their associated incidents are triggered with resolved status.
 - **Set as behavior**: Converts matching signals into behaviors. They won’t appear in the alert queue or trigger incidents. Data remains in *BehaviorInfo* and *BehaviorEntities* tables for hunting. This action isn't supported for Defender for Cloud or Microsoft Defender for Office 365 alerts.
 
+> [!NOTE]
+> Alert tuning is generally available for Defender for Endpoint. In preview, it extends to other Microsoft Defender XDR services, including Defender for Office 365, Defender for Identity, Defender for Cloud Apps, and Microsoft Entra ID Protection.
+
+Microsoft Defender XDR also includes built-in alert tuning rules (currently in Preview) that suppress alerts from common benign activity without affecting Automated Investigation and Response (AIR) investigations and email notifications.
+
 > [!CAUTION]
-> We recommend using alert tuning with caution, for scenarios where known, internal business applications or security tests trigger an expected activity and you don't want to see the alerts.
+> Use alert tuning with caution, for scenarios where known, internal business applications or security tests trigger expected activity.
 
 ### Create rule conditions to tune alerts
 
