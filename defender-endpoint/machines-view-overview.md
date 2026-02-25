@@ -39,17 +39,17 @@ In the Defender portal at <https://security.microsoft.com>, go to **Assets** \> 
 
 The device inventory opens on the **All devices** tab. You can see information such as device name, domain, risk level, exposure level, OS platform, criticality level, onboarding status, sensor health state, mitigation status, and other details for easy identification of devices most at risk.
 
+> [!NOTE]
+> The device inventory is available in Microsoft Defender services. The available information might differ depending on your license. To get the most complete set of capabilities, use [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md).
+>
+> Risk Level, which can influence enforcement of Conditional Access and other security policies in Microsoft Intune, is available for Windows devices.
+
 | What you can do | Details |
 |-----------------|---------|
 | **View device categories** | The device inventory has the following tabs:<br>• **All devices**: All devices in your environment<br>• **Computers & mobile**: Enterprise endpoints (workstations, servers, and mobile devices)<br>• **Network devices**: Routers and switches<br>• **IoT/OT devices**: Enterprise IoT devices (printers, cameras) and OT devices (industrial control systems)<br>• **Uncategorized devices**: Devices that couldn't be properly classified |
 | **Review device counts** | At the top of each tab, view these counts:<br>• **Total**: Total number of devices<br>• **Critical assets**: Number of business critical assets (**All devices** tab only)<br>• **High risk**: Devices identified as higher risk to your organization<br>• **High exposure**: Devices with high exposure<br>• **Not onboarded**: Devices not yet onboarded (**All devices** and **Computers & mobile** tabs only)<br>• **Newly discovered**: Newly discovered devices within the last 7 days (all tabs except **Computers & mobile**)<br><br>Use this information to prioritize devices for security posture improvements. |
 | **View special cards** | • **Classify critical assets**: Define device groups as business critical<br>• **Attack path warning**: Examine if any assets are part of an attack path (requires Microsoft Security Exposure Management) |
 | **Check device details** | For each device, view information including:<br>• Device name, domain, and device ID<br>• Risk level, exposure level, criticality level<br>• OS platform, distribution, and version<br>• Onboarding status and sensor health state<br>• Last device update and first seen time<br>• Tags, exclusion state, and device role<br>• Managed by (Intune, ConfigMgr, MDE, or Unknown)<br>• Mitigation status (Contained, Isolated)<br>• Cloud platforms (Azure, AWS, GCP, Arc, None)<br><br>For **Network devices** and **IoT/OT devices** tabs, also view vendor, model, device type, and device subtype. |
-
-> [!NOTE]
-> The device inventory is available in Microsoft Defender XDR services. The available information might differ depending on your license. To get the most complete set of capabilities, use [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md).
->
-> Risk Level, which can influence enforcement of Conditional Access and other security policies in Microsoft Intune, is now available for Windows devices.
 
 > [!NOTE]
 > Device discovery integration with [Microsoft Defender for IoT in the Defender portal (Preview)](/defender-for-iot/microsoft-defender-iot) is available to help locate, identify, and secure your complete OT/IOT asset inventory. Devices discovered with this integration appear on the **IoT/OT devices** tab.
@@ -187,127 +187,11 @@ Now that you understand how to explore the device inventory, continue through th
 - [Target devices with device groups and tags](targeting-devices.md): Use tags to apply security actions at scale
 - [Investigate devices](investigate-machines.md): Deep-dive into specific devices for incident response
 
-## Related articles
-
-- [Devices in Microsoft Defender for Endpoint](devices-overview.md)
-- [Fix unhealthy sensors](fix-unhealthy-sensors.md)
-- [Device health reports](device-health-microsoft-defender-antivirus-health.md)
-  - **Last device update**<sup>*</sup>
-  - **Tags**<sup>*</sup>
-  - **Exclusion state**
-  - **Device role**<sup>*</sup>
-  - **Managed by**<sup>*</sup>: Valid values are: **Intune**, **ConfigMgr**, **MDE**, or **Unknown**.
-  - **Managed by status**<sup>*</sup>: Status values from the **Managed by** authority. For example, **Success**. This field has the status **Unknown** for devices that aren't managed by Defender for Endpoint (for example, Intune or ConfigMgr).
-  - **Mitigation status**<sup>*</sup>
-  - **Cloud platforms**<sup>*</sup>
-
-  Firmware information for OT devices is displayed in the **OS version** and **Model** columns.
-
-- **Computers & mobile** tab:
-  - **Name**<sup>*</sup>
-  - **Domain**<sup>*</sup>
-  - **Device AAD id**<sup>*</sup>
-  - **Device type**
-  - **Device subtype**
-  - **Risk level**<sup>*</sup>
-  - **Exposure level**<sup>*</sup>
-  - **OS platform**<sup>*</sup>
-  - **OS distribution**
-  - **Windows version**<sup>*</sup>
-  - **IP**
-  - **MAC address**
-  - **Criticality level**<sup>*</sup>
-  - **Sensor health state**<sup>*</sup>
-  - **Onboarding status**<sup>*</sup>
-  - **Discovery sources**<sup>*</sup>
-  - **Last device update**<sup>*</sup>
-  - **First seen**
-  - **Tags**<sup>*</sup>
-  - **Exclusion state**
-  - **Device role**<sup>*</sup>
-  - **Managed by**<sup>*</sup>
-  - **Managed by**<sup>*</sup>: Valid values are: **Intune**, **ConfigMgr**, **MDE**, or **Unknown**.
-  - **Managed by status**<sup>*</sup>: Status values from the **Managed by** authority. For example, **Success**. This field has the status **Unknown** for devices that aren't managed by Defender for Endpoint (for example, Intune or ConfigMgr).
-  - **Cloud platforms**<sup>*</sup>
-
-- **Network devices** tab:
-  - **IP**<sup>*</sup>
-  - **MAC address**
-  - **Vendor**<sup>*</sup>
-  - **Model**<sup>*</sup>
-  - **Name**<sup>*</sup>
-  - **Domain**
-  - **Device type**
-  - **Device subtype**
-  - **Discovery sources**<sup>*</sup>
-  - **Risk level**<sup>*</sup>
-  - **Exposure level**<sup>*</sup>
-  - **OS distribution**<sup>*</sup>
-  - **OS version**<sup>*</sup>
-  - **Last device update**<sup>*</sup>
-  - **First seen**
-  - **Tags**<sup>*</sup>
-  - **Exclusion state**
-
-- **IoT/OT devices** tab:
-  - **IP**<sup>*</sup>
-  - **MAC address**<sup>*</sup>
-  - **Name**<sup>*</sup>
-  - **Device type**<sup>*</sup>
-  - **Device subtype**<sup>*</sup>
-  - **Vendor**<sup>*</sup>
-  - **Model**<sup>*</sup>
-  - **Risk level**<sup>*</sup>
-  - **Exposure level**<sup>*</sup>
-  - **Discovery sources**
-  - **OS distribution**<sup>*</sup>
-  - **OS version**<sup>*</sup>
-  - **Firmware version**
-  - **First seen**
-  - **Last device update**<sup>*</sup>
-  - **Domain**
-  - **Tags**<sup>*</sup>
-  - **Exclusion state**
-
-- **Uncategorized devices** tab:
-  - **Name**<sup>*</sup>
-  - **Vendor**<sup>*</sup>
-  - **IP**<sup>*</sup>
-  - **MAC address**
-  - **Risk level**
-  - **Exposure level**
-  - **OS distribution**<sup>*</sup>
-  - **OS version**<sup>*</sup>
-  - **Last device update**<sup>*</sup>
-  - **First seen**
-  - **Tags**<sup>*</sup>
-  - **Exclusion state**
-  - **Discovery sources**
-
-> [!TIP]
-> To see all columns, you likely need to do one or more of the following steps:
->
-> - Horizontally scroll in your web browser.
-> - Narrow the width of appropriate columns.
-> - Zoom out in your web browser.
-
-> [!TIP]
-> The API, UI, export, and AH interfaces all draw from a single authoritative data source. However, because each is powered by separate backend systems with different update frequencies, slight variations may appear across views—especially in short-term queries or recently reactivated devices. Each interface is optimized for its specific use case: export for large data retrieval, UI for fast interactive tasks like tag management, and AH for tracking device update history over time.
-
 ## Next steps
 
 Now that you understand your device inventory, continue through the device lifecycle:
 
 - **[Manage device scope and relevance](manage-device-scope-relevance.md)**: Control which devices are relevant to your security operations
 - **[Create and manage device tags](machine-tags.md)**: Add business context and organize devices into groups
-- **[Targeting devices](targeting-devices.md)**: Use tags to apply security actions at scale
+- **[Target devices with device groups and tags](targeting-devices.md)**: Use tags to apply security actions at scale
 - **[Investigate devices](investigate-machines.md)**: Deep-dive into specific devices for incident response
-
-## Related articles
-
-- [Devices in Microsoft Defender for Endpoint](devices-overview.md)
-- [Fix unhealthy sensors](fix-unhealthy-sensors.md)
-- [Device health reports](device-health-microsoft-defender-antivirus-health.md)
-
-
-
