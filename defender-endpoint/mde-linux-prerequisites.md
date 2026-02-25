@@ -55,19 +55,39 @@ For detailed licensing information, see [Product Terms: Microsoft Defender for E
 
 ## Software requirements
 
-- Linux server endpoints should be able to access the `*.endpoint.security.microsoft.com`. If necessary, [configure static proxy discovery](linux-static-proxy-configuration.md).
+
 - Linux server endpoints should have systemd (system manager) installed.
-- Administrative privileges on the Linux server endpoint are required for installation.
-- An appropriate role assigned in Defender for Endpoint. See [Role-based access control](/defender-endpoint/prepare-deployment#role-based-access-control).
 
 > [!NOTE] 
 > Linux distributions using system manager support both SystemV and Upstart.
 > The Microsoft Defender for Endpoint on Linux agent is independent from [Operation Management Suite (OMS) agent](/azure/azure-monitor/agents/azure-monitor-agent-overview#log-analytics-agent).
 > Microsoft Defender for Endpoint relies on its own independent telemetry pipeline.
 
+## Roles and permissions
+
+- Administrative privileges on the Linux server endpoint are required for installation.
+- An appropriate role assigned in Defender for Endpoint. See [Role-based access control](/defender-endpoint/prepare-deployment#role-based-access-control).
+
 ## Supported Linux distributions
 
+| Distribution | x64 (AMD64/EM64T) | ARM64 (GA) |
+|---|---|---|
+| RHEL | 7.2+, 8.x, 9.x, 10.x | 8.x, 9.x, 10.x |
+| CentOS | 7.2+, 8.x | — |
+| CentOS Stream | 8.x, 9.x, 10.x | 8.x, 9.x, 10.x |
+| Ubuntu LTS | 16.04–24.04 | 20.04, 22.04, 24.04 |
+| Ubuntu Pro | 22.04, 24.04 | 22.04, 24.04 |
+| Debian | 9–13 | 11, 12 |
+| SUSE Linux Enterprise Server | 12.x, 15.x | 15 (SP5, SP6) |
+| Oracle Linux | 7.2+, 8.x, 9.x | 8.x, 9.x |
+| Amazon Linux | 2, 2023 | 2, 2023 |
+| Fedora | 33–42 | — |
+| Rocky Linux | 8.7+, 9.2+ | — |
+| AlmaLinux | 8.4+, 9.2+ | — |
+| Mariner | 2 | — |
+
 The following Linux server distributions and x64 (AMD64/EM64T) versions are supported:
+
 
 - Red Hat Enterprise Linux 7.2 and higher
 - Red Hat Enterprise Linux 8.x
@@ -156,7 +176,18 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 > [!NOTE]
 > To scan NFS v3 mount points, make sure to set the `no_root_squash` export option. Without this option, scanning NFS v3 can potentially fail due to lack of permissions.
 
-## Verify if devices can connect to Defender for Endpoint cloud services
+## Network connectivity requirements
+
+Ensure the following URLs are allowed in network configurations:
+
+- `https://config.edge.skype.com/config/v1` (default)
+- `https://config.ecs.dod.teams.microsoft.us/config/v1`
+- `https://config.ecs.gov.teams.microsoft.us/config/v1`
+- `https://gccmod.ecs.office.com/config/v1`
+
+- Linux server endpoints should be able to access the `*.endpoint.security.microsoft.com`. If necessary, [configure static proxy discovery](linux-static-proxy-configuration.md).
+
+### Verify if devices can connect to Defender for Endpoint cloud services
 
 1. Prepare your environment, as described in Step 1 of the following article [Configure your network environment to ensure connectivity with Defender for Endpoint service](/defender-endpoint/configure-environment).
 
@@ -178,6 +209,8 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 > Adding your interception certificate to the global store doesn't enable interception.
 
 For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-connectivity).
+
+## Verify prerequisites
 
 ## External package dependency
 
