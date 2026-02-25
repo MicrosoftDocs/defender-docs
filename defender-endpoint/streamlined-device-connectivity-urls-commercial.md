@@ -130,6 +130,7 @@ This section lists the URL endpoint services required for older Windows devices.
 |Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|ussau1eastprod.blob.core.windows.net|Malware Sample Submission Storage|Required||
 |Microsoft Defender Antivirus|All|MAPS|443|*.wdcp.microsoft.com|MAPS - Used by Microsoft Defender Antivirus to provide cloud-delivered protection|Required||
 |Microsoft Defender Antivirus|All|MAPS|443|*.wd.microsoft.com|MAPS - Used by Microsoft Defender Antivirus to provide cloud-delivered protection|Required||
+|Microsoft Defender Antivirus|All|MAPS|443|*.wdcpalt.microsoft.com|MAPS - Used by Microsoft Defender Antivirus to provide cloud-delivered protection|Required||
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|automatedirstrprdcus.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|automatedirstrprdeus.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|automatedirstrprdcus3.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required||
