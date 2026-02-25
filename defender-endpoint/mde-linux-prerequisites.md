@@ -165,7 +165,9 @@ For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Micro
 
 ## Installation methods and tools
 
-There are several methods and tools that you can use to deploy Microsoft Defender for Endpoint on Linux (applicable to AMD64 and ARM64 Linux servers). It is recommended to use [Deployment Tool based deployment](/defender-endpoint/linux-install-with-defender-deployment-tool), as it simplifies the onboarding process, reduces manual tasks, and supports a wide range of deployment scenarios, including new installations, upgrades, and uninstalls. Please refer to the [documentation](/defender-endpoint/linux-install-with-defender-deployment-tool) for details.
+There are several methods and tools that you can use to deploy Microsoft Defender for Endpoint on [supported Linux servers](#supported-linux-distributions).
+
+It's recommended to use [Deployment Tool based deployment](/defender-endpoint/linux-install-with-defender-deployment-tool), as it simplifies the onboarding process, reduces manual tasks, and supports a wide range of deployment scenarios, including new installations, upgrades, and uninstalls. For more information, see [Deploy Microsoft Defender endpoint security to Linux devices using the Defender deployment tool (preview)](/defender-endpoint/linux-install-with-defender-deployment-tool).
 
 - [Deployment tool based deployment (Recommended)](./linux-install-with-defender-deployment-tool.md)
 - [Installer script based deployment](/defender-endpoint/linux-installer-script)
