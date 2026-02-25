@@ -55,13 +55,27 @@ For detailed licensing information, see [Product Terms: Microsoft Defender for E
 
 ## Software requirements
 
-
-- Linux server endpoints should have systemd (system manager) installed.
+Linux server endpoints should have systemd (system manager) installed.
 
 > [!NOTE] 
 > Linux distributions using system manager support both SystemV and Upstart.
 > The Microsoft Defender for Endpoint on Linux agent is independent from [Operation Management Suite (OMS) agent](/azure/azure-monitor/agents/azure-monitor-agent-overview#log-analytics-agent).
 > Microsoft Defender for Endpoint relies on its own independent telemetry pipeline.
+
+### External package dependencies
+
+The following external package dependencies exist for the mdatp package:
+
+- The mdatp RPM package requires `glibc >= 2.17`.
+- For DEBIAN, the mdatp package requires `libc6 >= 2.23`.
+
+To use the [device isolation functionality](./respond-machine-alerts.md#isolate-devices-from-the-network), the following prerequisites must be enabled:
+
+- `iptables`
+- `ip6tables`
+- Linux kernel with `CONFIG_NETFILTER`, `CONFIG_IP_NF_IPTABLES`, and `CONFIG_IP_NF_MATCH_OWNER` for kernel version lower than 5.x and `CONFIG_NETFILTER_XT_MATCH_OWNER` from 5.x kernel.
+
+If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the prerequisite dependencies.
 
 ## Roles and permissions
 
@@ -70,9 +84,11 @@ For detailed licensing information, see [Product Terms: Microsoft Defender for E
 
 ## Supported Linux distributions
 
+The following Linux server distributions are supported:
+
 | Distribution | x64 (AMD64/EM64T) | ARM64 (GA) |
 |---|---|---|
-| RHEL | 7.2+, 8.x, 9.x, 10.x | 8.x, 9.x, 10.x |
+| Red Hat Enterprise Linux | 7.2+, 8.x, 9.x, 10.x | 8.x, 9.x, 10.x |
 | CentOS | 7.2+, 8.x | — |
 | CentOS Stream | 8.x, 9.x, 10.x | 8.x, 9.x, 10.x |
 | Ubuntu LTS | 16.04–24.04 | 20.04, 22.04, 24.04 |
@@ -86,60 +102,6 @@ For detailed licensing information, see [Product Terms: Microsoft Defender for E
 | AlmaLinux | 8.4+, 9.2+ | — |
 | Mariner | 2 | — |
 
-The following Linux server distributions and x64 (AMD64/EM64T) versions are supported:
-
-
-- Red Hat Enterprise Linux 7.2 and higher
-- Red Hat Enterprise Linux 8.x
-- Red Hat Enterprise Linux 9.x
-- Red Hat Enterprise Linux 10.x
-- CentOS 7.2 and higher
-- CentOS 8.x
-- CentOS Stream 8.x
-- CentOS Stream 9.x
-- CentOS Stream 10.x
-- Ubuntu 16.04 LTS
-- Ubuntu 18.04 LTS
-- Ubuntu 20.04 LTS
-- Ubuntu 22.04 LTS
-- Ubuntu 24.04 LTS
-- Ubuntu Pro 22.04
-- Ubuntu Pro 24.04
-- Debian 9 - 13
-- SUSE Linux Enterprise Server 12.x
-- SUSE Linux Enterprise Server 15.x
-- Oracle Linux 7.2 and higher
-- Oracle Linux 8.x
-- Oracle Linux 9.x
-- Amazon Linux 2
-- Amazon Linux 2023
-- Fedora 33-42
-- Rocky 8.7 and higher
-- Rocky 9.2 and higher
-- Alma 8.4 and higher
-- Alma 9.2 and higher
-- Mariner 2
-
-**The following Linux server distributions on ARM64 are now GA:**
-
-- Ubuntu 20.04 LTS ARM64
-- Ubuntu 22.04 LTS ARM64
-- Ubuntu 24.04 LTS ARM64
-- Ubuntu Pro 22.04 ARM64
-- Ubuntu Pro 24.04 ARM64
-- CentOS Stream 8.x ARM64
-- CentOS Stream 9.x ARM64
-- CentOS Stream 10.x ARM64
-- Debian 11, 12 ARM64
-- Amazon Linux 2 ARM64
-- Amazon Linux 2023 ARM64
-- RHEL 8.x ARM64
-- RHEL 9.x ARM64
-- RHEL 10.x ARM64
-- Oracle Linux 8.x ARM64
-- Oracle Linux 9.x ARM64
-- SUSE Linux Enterprise Server 15 (SP5, SP6) ARM64
-
 > [!NOTE]
 > Distributions and versions that aren't explicitly listed above, and custom operating systems, are unsupported (even if they're derived from the officially supported distributions).
 > Microsoft Defender for Endpoint is kernel-version agnostic for all other supported distributions and versions. The minimal requirement for the kernel version is `3.10.0-327` or later.
@@ -149,8 +111,6 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 > If any applications use fanotify in blocking mode, they will appear in the conflicting_applications field of the mdatp health command output.
 > You can still safely take advantage of Defender for Endpoint on Linux by setting antivirus enforcement level to passive. See [Configure security settings in Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences).
 > **EXCEPTION:** The Linux `FAPolicyD` feature, which also uses Fanotify in blocking mode, is supported with Defender for Endpoint in active mode on RHEL and Fedora platforms, provided that mdatp health reports a healthy status. This exception is based on validated compatibility specific to these distributions.
->
-
 
 ## Supported filesystems for real-time protection and quick, full, and custom scans
 
@@ -212,17 +172,6 @@ For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Micro
 
 ## Verify prerequisites
 
-## External package dependency
-
-To use the [Isolate devices from the network](./respond-machine-alerts.md#isolate-devices-from-the-network) functionality, the following prerequisites must be enabled:
-- `iptables`
-- `ip6tables`
-- Linux kernel with `CONFIG_NETFILTER`, `CONFIG_IP_NF_IPTABLES`, and `CONFIG_IP_NF_MATCH_OWNER` for kernel version lower than 5.x and `CONFIG_NETFILTER_XT_MATCH_OWNER` from 5.x kernel.
-
-If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the prerequisite dependencies. The following external package dependencies exist for the mdatp package:
-
-- The mdatp RPM package requires `glibc >= 2.17`.
-- For DEBIAN the mdatp package requires `libc6 >= 2.23`.
 
 ## Installation instructions 
 
