@@ -5,7 +5,7 @@ description: Service limits for the Microsoft Sentinel data lake service.
 author: EdB-MSFT  
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: sentinel-graph
 ms.date: 07/09/2025
 ms.author: edbaynash  
