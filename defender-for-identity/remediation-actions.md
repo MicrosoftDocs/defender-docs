@@ -23,14 +23,25 @@ Watch the following video to learn more about remediation actions in Defender fo
 
 ## How remediation actions work
 
-Microsoft Defender for Identity remediation actions run in one of two ways.
+Remediation actions are authorized using RBAC and performed by the identity system managing the identity—Active Directory, Microsoft Entra ID, or a supported non-Microsoft identity provider (IDP).
 
-- **LocalSystem impersonation on the domain controller**: By default, the Defender for Identity sensor automatically runs actions by impersonating the LocalSystem account on the domain controller. You can change the default behavior by configuring the [group Managed Service Account (gMSA) scope and permissions](manage-action-accounts.md).
+### Active Directory
 
-- **Using an Entra ID, Active Directory or IDP user in an enterprise application**: For [manual attack disrupt actions](/defender-xdr/automatic-attack-disruption), Defender for Identity creates an enterprise application in Microsoft Entra ID. The enterprise application, Microsoft Defender for Identity, is created automatically in the tenant and is used only to execute remediation actions. When a user initiates an action from the Defender portal, the request is authorized based on the user’s roles and executed by the Defender for Identity application, enforcing role‑based access control (RBAC) and audit logging.
+- The remediation action is executed by the Defender for Identity sensor, impersonating the LocalSystem account on the domain controller.
+- The activity is logged in Active Directory and surfaced in Microsoft Defender audit logs.
 
-  - Enterprise application name: `Microsoft Defender for Identity`(legacy name: `Radius Aad Syncer`).
-  - Application ID: 60ca1954-583c-4d1f-86de-39d835f3e452
+### Microsoft Entra ID
+
+- Defender for Identity creates a Microsoft Entra ID enterprise application in the tenant used only to execute remediation actions.
+  - Enterprise application name: **Microsoft Defender for Identity**  
+  - Application ID: `60ca1954-583c-4d1f-86de-39d835f3e452`
+- The remediation action is executed by a user in the application, and authorized based on the user’s assigned roles.
+- The activity is recorded in Microsoft Entra ID and Microsoft Defender audit logs.
+
+### Non-Microsoft Identity Providers (IdPs)
+
+- The remediation action is executed using source IDP APIs and authorized using configured credentials (API keys, OAuth tokens, scopes).
+- The activity is logged by the source IdP and surfaced in Microsoft Defender.
 
 ## Prerequisites
 
