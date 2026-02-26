@@ -24,9 +24,11 @@ The listed features were released in the last six months. For information about 
 
 The UEBA behaviors layer in Microsoft Sentinel is now generally available, summarizing clear, human‑readable behavioral insights from high-volume, raw security logs. The behaviors layer aggregates and sequences related events into normalized behaviors, helping analysts more quickly understand who did what to whom without manually correlating raw logs. For more information, see [Translate raw security logs to behavioral insights using UEBA behaviors in Microsoft Sentinel](../sentinel/entity-behaviors-layer.md).
 
+Watch the [UEBA behaviors webinar](https://www.youtube.com/watch?v=SqbxmGdMP7c) for a full overview and demo of the UEBA behaviors layer.
+
 **New UEBA behaviors workbook**
 
-To help SOC teams get value from behaviors from day one, the Behaviors Workbook includes guided views and pre‑built, customizable analytics that turn rich behavioral data into actionable insights across three core SOC workflows:
+To help SOC teams get value from behaviors from day one, Microsoft Sentinel now provides the **behaviors workbook** as part of the UEBA essentials solution. The workbook offers guided views and pre‑built, customizable analytics that turn rich behavioral data into actionable insights across three core SOC workflows:
 
 - **Overview**: High‑level metrics and trends that give SOC managers and leadership quick situational awareness  
 - **Investigation**: Deep‑dive, entity‑centric timelines that help analysts accelerate incident response  
