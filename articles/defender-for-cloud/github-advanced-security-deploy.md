@@ -132,13 +132,15 @@ One of the risk factors that Defender for Cloud detects for this integration is 
 
 ### Step 3: Validate that your environment is ready
 
-Validation confirms that your environment is correctly configured to surface cloud to cloud recommendations and generate actionable results.
+Validation confirms that your environment is correctly configured to surface code to runtime recommendations and generate actionable results.
 
 During this step, Defender verifies that:
 
-- Build artifacts (such as container images) are being generated
+- Full code to runtime visibiity
+- Code repositories are being monitored and scanned
+- Build artifacts (such as container images) are being generated and deployed 
 - Scanning data is flowing from cloud workloads
-- The environment can correlate cloud findings back to code and repositories
+- The environment can correlate and trace from code to runtime and back
 
 > [!NOTE]
 > It can take up to 24 hours after the previous steps are applied to see the following results.
@@ -151,7 +153,7 @@ During this step, Defender verifies that:
    :::image type="content" source="media/github-advanced-security/validate-mdc-container-scan-results.jpg" alt-text="Screenshot of search results in the Cloud Security Explorer query builder, with filters set to GitHub repositories and container images." lightbox="media/github-advanced-security/validate-mdc-container-scan-results.jpg":::
 
   > [!NOTE]
-  > If no results are returned, it may indicate that artifacts are not yet generated, scanning is not configured, or permissions are missing.
+  > If no results are returned, it may indicate that artifacts are not yet generated, scanning is not configured, or permissions are missing. ADD LINK TO PERMISSIONS PAGE
 
 1. Validate that Defender for Cloud (in Azure Container Registry) scanned the container image and used it to create a container. In your query, add the conditions for your specific deployment.
 
@@ -208,7 +210,7 @@ To view the code-to-cloud recommendations:
 
    If you used the example repository, look for **Update brace-expansion recommendation**.
 
-1. Go to the **Remediation Insights** tab and view the code-to-cloud diagram. The diagram maps your running container to the container image in the code repository and to the code repository of the origin in GitHub.
+1. Go to the **Remediation Insights** tab and view the code to runtime diagram. The diagram maps your running container to the container image in the code repository and to the code repository of the origin in GitHub.
 
    When the campaign runs, Defender surfaces cloud to cloud recommendations that correlate cloud findings with code and build artifacts.
 
@@ -222,7 +224,7 @@ Security alerts appear as part of the recommendation evaluation flow. These aler
 
 1. Select the **Associated CVEs** tab. Notice that some CVE IDs have a **View on GitHub** link in the **Related GitHub Alerts** column.
 
-1. Select the link to open the relevant GHAS security alert.
+1. Select the link to open the relevant GHAS security alert. (You must have relevant permissions. Contact your administrator if you don't.)
 
 :::image type="content" source="media/github-advanced-security/associated-cves-tab-view.jpg" alt-text="Screenshot of the Associated CVEs tab that shows a link to a related GitHub alert." lightbox="media/github-advanced-security/associated-cves-tab-view.jpg":::
 
@@ -234,13 +236,15 @@ The GitHub issue is automatically generated with all the CVE IDs found in the sc
 
 From the recommendation view, you can explicitly generate a GitHub issue to track remediation work.
 
-1. Open the relevant cloud to cloud recommendation.
+1. Open the relevant code to runtime recommendation.
 1. Review the affected artifacts and risk details.
-1. Select Generate GitHub issue.
+1. Verify that there isn't already an issue assigned and you have the **Generate GitHub issue** enabled. If an issue was already created you will see the GitHub icon. 
+1. Select **Generate GitHub issue**.
 
 :::image type="content" source="media/github-advanced-security/github-issue-security-alert.jpg" alt-text="Screenshot of a GitHub issues list that shows three entries marked with security and vulnerability tags." lightbox="media/github-advanced-security/github-issue-security-alert.jpg":::
 
-When you assign the issue, the issue status is updated in the Defender for Cloud portal.
+When you assign the issue, the issue status is updated in the Defender for Cloud portal. 
+ADD THE INFO ABOUT FOLLOWING THE ISSUE AND THE ASSIGNMENT
 
 :::image type="content" source="media/github-advanced-security/github-issue-security-details.jpg" alt-text="Screenshot of a GitHub issue with security and vulnerability tags, including details like CVE IDs, runtime risk factors, and deployment info." lightbox="media/github-advanced-security/github-issue-security-details.jpg":::
 
