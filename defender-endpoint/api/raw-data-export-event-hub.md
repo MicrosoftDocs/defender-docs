@@ -85,6 +85,7 @@ appliesto:
 - In Advanced Hunting, the **DeviceInfo** table has a column named **MachineGroup** which contains the group of the device. Here, every event is decorated with this column as well. For more information, see [Device Groups](../machine-groups.md).
     > [!NOTE]
     > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
+    > Please note that the data size transferred to Event Hubs may exceed the size estimated using estimate_data_size() from Advanced Hunting in the Microsoft Defender portal.
 
 ## Data types mapping
 
