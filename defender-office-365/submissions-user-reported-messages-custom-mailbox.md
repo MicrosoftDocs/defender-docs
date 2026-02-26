@@ -296,8 +296,6 @@ When you're finished on the **User reported settings** page, select **Save**.
 
 Messages sent by non-Microsoft reporting tools to the reporting mailbox required specific formatting so they're correctly identified on the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>.
 
-Messages that don't follow the required formatting are always identified as phishing.
-
 To correctly identify why the original messages were reported, messages sent to the reporting mailbox must meet the following criteria:
 
 - The user reported message is unmodified and is included as an uncompressed .EML or .MSG attachment. Don't forward the original user reported message to the reporting mailbox.
@@ -316,7 +314,7 @@ To correctly identify why the original messages were reported, messages sent to 
    >
    > `X-Microsoft-Antispam-Message-Info` should be a valid header.
 
-- The Subject line (Envelope Title) of messages sent to the reporting mailbox must start with one of the following prefix values:
+- The Subject line (Envelope Title) of messages sent to the reporting mailbox should start with one of the following prefix values. Messages that do not meet this requirement are always identified as phishing:
   - `1|` or `Junk:`.
   - `2|` or `Not junk:`.
   - `3|` or `Phishing:`.
