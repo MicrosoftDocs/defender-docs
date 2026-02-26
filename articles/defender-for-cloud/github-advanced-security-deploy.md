@@ -1,7 +1,7 @@
 ---
 title: Deploy GitHub Advanced Security Integration with Microsoft Defender for Cloud
-description: Use this step-by-step guide to set up GitHub Advanced Security integration with Microsoft Defender for Cloud for code-to-cloud security.
-ms.date: 12/08/2025
+description: Use this step-by-step guide to set up GitHub Advanced Security integration with Microsoft Defender for Cloud for code-to-runtime security.
+ms.date: 02/26/2026
 ms.topic: how-to
 ms.author: dlanger
 author: DebLanger
@@ -17,7 +17,7 @@ By following this guide, you:
 - Set up your GitHub repository for Defender for Cloud coverage.
 - Create a runtime risk factor.
 - Test real use cases in Defender for Cloud.
-- Link code to cloud resources.
+- Link code to runtime resources.
 - Start a security campaign on GitHub. This campaign uses runtime context to prioritize GHAS security alerts.
 - Create GitHub issues from Defender for Cloud to start remediation.
 - Close the loop between engineering and security teams.
@@ -198,11 +198,11 @@ To create a scanning campaign, you must work at the GitHub organization level. T
 
 ### Step 5: Evaluate recommendations
 
-Use **code-to-cloud recommendations** and **security alerts** to understand the status of security issues. You can then assign the recommendation for resolution to the relevant engineering team with the help of the connection between Dependabot security alerts and matching common vulnerabilities and exposures (CVE) IDs in Defender for Cloud.
+Use **code-to-runtime recommendations** and **security alerts** to understand the status of security issues. You can then assign the recommendation for resolution to the relevant engineering team with the help of the connection between Dependabot security alerts and matching common vulnerabilities and exposures (CVE) IDs in Defender for Cloud.
 
-#### Code-to-cloud recommendations
+#### Code-to-runtime recommendations
 
-To view the code-to-cloud recommendations:
+To view the code-to-runtime recommendations:
 
 1. In the Defender for Cloud portal, go to the **Recommendations** tab.
 
@@ -240,7 +240,7 @@ From the recommendation view, you can explicitly generate a GitHub issue to trac
 1. Review the affected artifacts and risk details.
 1.**Validate whether a GitHub issue already exists** - If a GitHub issue already exists, a GitHub icon is displayed. Hover over the icon to view issue details.  
   If no issue exists and you have the required permissions, you can generate a new GitHub issue.
-1. Select **Generate GitHub issue**. From the code-to-cloud recommendation, generate a GitHub issue to track remediation work.  
+1. Select **Generate GitHub issue**. From the code-to-runtime recommendation, generate a GitHub issue to track remediation work.  
   The issue is created in the code repository of origin.
   > [!NOTE]
   > If the **Generate GitHub issue** option isn’t available, required GitHub or repository permissions may be missing.  
