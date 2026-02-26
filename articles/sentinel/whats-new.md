@@ -28,7 +28,7 @@ Watch the [UEBA behaviors webinar](https://www.youtube.com/watch?v=SqbxmGdMP7c) 
 
 **New UEBA behaviors workbook**
 
-To help SOC teams get value from behaviors from day one, Microsoft Sentinel now provides the **behaviors workbook** as part of the UEBA essentials solution. The workbook offers guided views and pre‑built, customizable analytics that turn rich behavioral data into actionable insights across three core SOC workflows:
+To help SOC teams get value from behaviors from day one, Microsoft Sentinel now provides the **behaviors workbook** as part of the UEBA essentials solution. The workbook offers guided views and prebuilt, customizable analytics that turn rich behavioral data into actionable insights across three core SOC workflows:
 
 - **Overview**: High‑level metrics and trends that give SOC managers and leadership quick situational awareness  
 - **Investigation**: Deep‑dive, entity‑centric timelines that help analysts accelerate incident response  

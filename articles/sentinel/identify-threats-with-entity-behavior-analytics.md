@@ -29,7 +29,7 @@ As Microsoft Sentinel ingests data from connected sources, UEBA applies:
 - **Behavioral modeling** to detect deviations
 - **Peer group analysis** and **blast radius evaluation** to assess the impact of anomalous activity
 
-:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/context.png" alt-text="Entity context":::
+:::image type="content" source="media/identify-threats-with-entity-behavior-analytics/context.png" alt-text="Diagram of concentric circles labeled User, Peers, and Organization, illustrating entity context in UEBA analysis.":::
 
 UEBA assigns [risk scores](#ueba-scoring) to anomalous behaviors, taking into account the associated entities, severity of the anomaly, and context, including:
 
@@ -80,7 +80,7 @@ This table provides an overview of the data in each of the UEBA tables:
 
 This screenshot shows an example of data in the `UserPeerAnalytics` table with the eight highest-ranked peers for the user Kendall Collins. Sentinel uses the TF-IDF algorithm to normalize weights when calculating peer ranks. Smaller groups carry higher weight.
 
-:::image type="content" source="./media/identify-threats-with-entity-behavior-analytics/user-peers-metadata.png" alt-text="Screen shot of user peers metadata table" lightbox="./media/identify-threats-with-entity-behavior-analytics/user-peers-metadata.png":::
+:::image type="content" source="./media/identify-threats-with-entity-behavior-analytics/user-peers-metadata.png" alt-text="Screenshot of user peers metadata table." lightbox="./media/identify-threats-with-entity-behavior-analytics/user-peers-metadata.png":::
 
 For more detailed information about UEBA data and how to use it, see:
 - [UEBA reference](ueba-reference.md) for a detailed reference of all UEBA-related tables and fields.
