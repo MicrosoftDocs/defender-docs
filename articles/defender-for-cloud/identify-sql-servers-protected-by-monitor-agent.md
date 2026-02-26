@@ -12,7 +12,7 @@ author: ElazarK
 
 Microsoft Defender for Cloud's Defender for SQL Server on Machines plan provides database security to protect SQL Server instances hosted on Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and on-premises machines. With the retirement of the Microsoft Monitoring Agent (MMA), on August 1,2024, the Defender for SQL Server on Machines plan requires meeting the [required perquisites](defender-for-sql-usage.md#prerequisites) and deploying Azure Arc on all non-Azure SQL Server instances.
 
-Once Azure Arc is deployed and following the [release on the updated agent](release-notes.md#update-to-defender-for-sql-servers-on-machines-plan), your SQL Server instances will migrate automatically and seamlessly to the updated agent. To ensure your SQL servers are correctly protected, we recommend the [installation of Azure Arc](quickstart-onboard-machines.md#connect-on-premises-machines-by-using-azure-arc).
+Once Azure Arc is deployed and following the [release on the updated agent](release-notes-archive.md#update-to-defender-for-sql-servers-on-machines-plan), your SQL Server instances will migrate automatically and seamlessly to the updated agent. To ensure your SQL servers are correctly protected, we recommend the [installation of Azure Arc](quickstart-onboard-machines.md#connect-on-premises-machines-by-using-azure-arc).
 
 > [!NOTE]
 >  This change might affect your pricing. For information regarding the plan pricing, review [Microsoft Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
@@ -48,7 +48,7 @@ You can identify SQL servers onboarded to the Defender for SQL Server on Machine
 
 ## Related content
 
-- [Upcoming changes to Defender for SQL servers on Machines plan](release-notes.md#update-to-defender-for-sql-servers-on-machines-plan)
+- [Upcoming changes to Defender for SQL servers on Machines plan](release-notes-archive.md#update-to-defender-for-sql-servers-on-machines-plan)
 - [Enable Defender for SQL Servers on Machines](defender-for-sql-usage.md)
 - [Verify SQL machine protection](verify-machine-protection.md)
 - [Troubleshoot Defender for SQL on Machines configuration](troubleshoot-sql-machines-guide.md)
