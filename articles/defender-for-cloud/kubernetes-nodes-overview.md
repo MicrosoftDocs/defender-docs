@@ -51,7 +51,6 @@ To enable agentless scanning for machines in the Defender for Containers plan in
 1. Sign in to the [Azure portal](https://portal.azure.com).
  
 1. Go to **Microsoft Defender for Cloud** > **Management** > **Environment settings**.
-1. In the navigation menu under **Management**, select **Environment settings**.
 
 1. (Optional) Select **Expand all**.
 
