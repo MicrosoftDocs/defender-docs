@@ -33,9 +33,9 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender for Endpoint|WW|CRL|80|www.microsoft.com/pkiops/*|Used when creating the SSL connection to MAPS for updating the CRL|Required|Yes|||Yes|Yes||
 |Microsoft Defender for Endpoint|WW|CRL|80|www.microsoft.com/pki/*|Used when creating the SSL connection to MAPS for updating the CRL|Required|Yes|||Yes|Yes||
 |Microsoft Defender for Endpoint|WW|Common|443|events.data.microsoft.com|Used by the Connected User Experiences and Telemetry component and connects to the Microsoft Data Management service|Required|Yes|||Yes|Yes||
-|Microsoft Defender for Endpoint|WW|Common|443|*.wns.windows.com|Windows Push Notification Services (WNS) - Live Response|Optional|Yes|||||Required for Live Response Performance (Direct Connection/Proxy bypass required)|
-|Microsoft Defender for Endpoint|WW|Common|443|login.microsoftonline.com|Windows Push Notification Services (WNS) - Live Response / Vulnerability assessment for network devices / Security Management for Microsoft Defender for Endpoint - Azure Registration|Optional|Yes|Yes|Yes|||Required for Live Response Performance (Direct Connection/Proxy bypass required). Required when using Security Management for Microsoft Defender for Endpoint|
-|Microsoft Defender for Endpoint|WW|Common|443|login.live.com|Windows Push Notification Services (WNS) - Live Response|Optional|Yes|||||Required for Live Response Performance (Direct Connection/Proxy bypass required)|
+|Microsoft Defender for Endpoint|WW|Common|443|*.wns.windows.com|Windows Push Notification Services (WNS) - Live Response|Optional|Yes|||||Required for Live Response Performance (Direct Connection or proxy bypass required)|
+|Microsoft Defender for Endpoint|WW|Common|443|login.microsoftonline.com|Windows Push Notification Services (WNS) - Live Response / Vulnerability assessment for network devices / Security Management for Microsoft Defender for Endpoint - Azure Registration|Optional|Yes|Yes|Yes|||Required for Live Response Performance (Direct Connection or proxy bypass required). Required when using Security Management for Microsoft Defender for Endpoint|
+|Microsoft Defender for Endpoint|WW|Common|443|login.live.com|Windows Push Notification Services (WNS) - Live Response|Optional|Yes|||||Required for Live Response Performance (Direct Connection or proxy bypass required)|
 |Microsoft Defender for Endpoint|WW|Common|443|settings-win.data.microsoft.com|Connected User Experiences and Telemetry Channel|Optional|Yes|||||Only required for Windows 10 1703 and below. Not required on Windows Server.|
 |Microsoft Defender for Endpoint|WW|Common (Mac/Linux)|443|x.cp.wd.microsoft.com|Used by Microsoft Defender Antivirus to provide cloud-delivered protection and security intelligence updates|Required||||Yes|Yes||
 |Microsoft Defender for Endpoint|WW|Common (Mac/Linux)|443|cdn.x.cp.wd.microsoft.com|Microsoft Defender Antivirus Content Delivery Network (CDN) - Security Intelligence updates|Required||||Yes|Yes||
@@ -121,16 +121,16 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender Antivirus|WW|MAPS|443|*.wd.microsoft.com|MAPS - Used by Microsoft Defender Antivirus to provide cloud-delivered protection|Required|Yes|Yes|Yes|Yes|Yes||
 |Microsoft Defender Antivirus|WW|Common|443|*.events.data.microsoft.com|Used by Microsoft Defender Antivirus to send Diagnostic Telemetry for Microsoft Defender Core Service|Required|Yes|No|Yes|No|No|To enhance your endpoint security experience, Microsoft is releasing the Microsoft Defender Core service to help with the stability and performance of Microsoft Defender Antivirus. Alternatively, to wildcard, can allow: us-mobile.events.data.microsoft.com/OneCollector/1.0 eu-mobile.events.data.microsoft.com/OneCollector/1.0 uk-mobile.events.data.microsoft.com/OneCollector/1.0 au-mobile.events.data.microsoft.com/OneCollector/1.0 mobile.events.data.microsoft.com/OneCollector/1.0|
 |Microsoft Defender Antivirus|WW|Common|443|*ecs.office.com/config/v1/MicrosoftWindowsDefenderClient|Used by Microsoft Defender Antivirus to download internal feature configurations (ECS) for Microsoft Defender Core service|Required|Yes|No|Yes|No|No|Microsoft Defender Core service is used to enhance stability and performance of Microsoft Defender Antivirus for customers.|
-|Microsoft Defender SmartScreen|WW|Reporting and Notifications|443|*.smartscreen-prod.microsoft.com|Used for Microsoft Defender SmartScreen protection, reporting, and notifications. MDAV Network Protection and custom URL indicators|Required|Yes|||Yes|Yes|Microsoft Defender SmartScreen reporting and notifications. Network Protection and custom URL indicators|
-|Microsoft Defender SmartScreen|WW|Reporting and Notifications|443|*.smartscreen.microsoft.com|Used for Microsoft Defender SmartScreen protection, reporting, and notifications. MDAV Network Protection and custom URL indicators|Required|Yes|||Yes|Yes|Microsoft Defender SmartScreen reporting and notifications. Network Protection and custom URL indicators|
+|Microsoft Defender SmartScreen|WW|Reporting and Notifications|443|*.smartscreen-prod.microsoft.com|Used for Microsoft Defender SmartScreen protection, reporting, and notifications. Microsoft Defender Antivirus Network Protection and custom URL indicators|Required|Yes|||Yes|Yes|Microsoft Defender SmartScreen reporting and notifications. Network Protection and custom URL indicators|
+|Microsoft Defender SmartScreen|WW|Reporting and Notifications|443|*.smartscreen.microsoft.com|Used for Microsoft Defender SmartScreen protection, reporting, and notifications. Microsoft Defender Antivirus Network Protection and custom URL indicators|Required|Yes|||Yes|Yes|Microsoft Defender SmartScreen reporting and notifications. Network Protection and custom URL indicators|
 |Microsoft Defender SmartScreen|WW|Reporting and Notifications|443|*.checkappexec.microsoft.com|Used for Microsoft Defender SmartScreen to check application execution for trusted apps|Optional|Yes|||||Microsoft Defender SmartScreen checking application execution for trusted apps|
 |Microsoft Defender SmartScreen|WW|Reporting and Notifications|443|*.urs.microsoft.com|Used for Microsoft Defender SmartScreen to check application execution for trusted apps|Optional|Yes|||||Microsoft Defender SmartScreen checking application execution for trusted apps|
-|Consolidated Defender for Endpoint services|WW|Streamlined connectivity new URL pattern|443|*.endpoint.security.microsoft.com|Used for streamlined connectivity URL consolidation as well as for future services|Required|Yes|No|Yes|Yes|Yes|Only required for streamlined connectivity initially. New services will also follow this new pattern.|
+|Consolidated Defender for Endpoint services|WW|Streamlined connectivity new URL pattern|443|*.endpoint.security.microsoft.com|Used for streamlined connectivity URL consolidation as well as for future services|Required|Yes|No|Yes|Yes|Yes|Only required for streamlined connectivity initially. New services also follow this new pattern.|
 
 ## Defender portal URLs
 
 > [!NOTE]
-> All URLS in this table are required to have access to the Microsoft Defender Security Center Portal URL.
+> All URLs in this table are required to have access to the Microsoft Defender Security Center Portal URL.
 
 |Service|Geography|URL|
 |---|---|---|
@@ -150,19 +150,19 @@ The processes in this section are exclusively for Microsoft Defender for Endpoin
 
 For more information on how to manage Windows connections, see [Manage connections from Windows 10 and Windows 11 operating system components to Microsoft services](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services).
 
-While this list will continue to be updated, Microsoft can't provide any guarantees on it being up-to-date with the latest product or OS changes. Customers should use this list as a baseline and conduct their testing before using it directly in production.
+While this list continue to be updated, Microsoft can't provide any guarantees on it being up-to-date with the latest product or OS changes. Customers should use this list as a baseline and conduct their testing before using it directly in production.
 
-## Windows 11, Windows 10, Windows Server 2022 and Windows Server 2019
+## Windows 11, Windows 10, Windows Server 2022, and Windows Server 2019
 
 |Process|Path|Comment|
 |-------|----|-------|
 |MpCmdRun.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus command-line utility|
-|MpDlpCmd.exe|C:\Program Files\Windows Defender|Microsoft Endpoint DLP command-line utility|
+|MpDlpCmd.exe|C:\Program Files\Windows Defender|Microsoft Endpoint Data Loss Prevention (DLP) command-line utility|
 |MsMpEng.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus service executable|
 |ConfigSecurityPolicy.exe|C:\Program Files\Windows Defender|Microsoft Security Client Policy Configuration Tool|
 |MpDefenderCoreService.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Core Service|
 |MpDlpService.exe|C:\Program Files\Windows Defender|Microsoft Purview Data Loss Prevention Service|
-|NisSrv.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network Realtime Inspection|
+|NisSrv.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network real-time Inspection|
 |MsSense.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint service executable|
 |SenseCnCProxy.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint communication module|
 |SenseIR.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense IR (Incident Response) module|
@@ -185,7 +185,7 @@ While this list will continue to be updated, Microsoft can't provide any guarant
 |MpCmdRun.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus command-line utility|
 |MsMpEng.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus service executable|
 |ConfigSecurityPolicy.exe|C:\Program Files\Windows Defender|Microsoft Security Client Policy Configuration Tool|
-|NisSrv.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network Realtime Inspection|
+|NisSrv.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network real-time Inspection|
 |SenseTVM.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense TVM (Threat Vulnerability Management)|
 
 ## Windows 8.1 and Windows Server 2016 (MMA Based)
@@ -198,9 +198,9 @@ While this list will continue to be updated, Microsoft can't provide any guarant
 |MpCmdRun.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus command-line utility (SCEP)|
 |MsMpEng.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus service executable (SCEP)|
 |ConfigSecurityPolicy.exe|C:\Program Files\Windows Defender|Microsoft Security Client Policy Configuration Tool (SCEP)|
-|NisSrv.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network Realtime Inspection (SCEP)|
+|NisSrv.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network real-time Inspection (SCEP)|
 
-## Windows 7 SP1, Windows Server 2012 R2 and Windows Server 2008 R2 (MMA Based)
+## Windows 7 SP1, Windows Server 2012 R2, and Windows Server 2008 R2 (MMA Based)
 
 |Process|Path|Comment|
 |-------|----|-------|
@@ -210,4 +210,4 @@ While this list will continue to be updated, Microsoft can't provide any guarant
 |MpCmdRun.exe|C:\Program Files\Microsoft Security Client|Microsoft Defender Antivirus command-line utility (SCEP)|
 |MsMpEng.exe|C:\Program Files\Microsoft Security Client|Microsoft Defender Antivirus service executable (SCEP)|
 |ConfigSecurityPolicy.exe|C:\Program Files\Microsoft Security Client|Microsoft Security Client Policy Configuration Tool (SCEP)|
-|NisSrv.exe|C:\Program Files\Microsoft Security Client|Microsoft Defender Antivirus Network Realtime Inspection (SCEP)|
+|NisSrv.exe|C:\Program Files\Microsoft Security Client|Microsoft Defender Antivirus Network real-time Inspection (SCEP)|

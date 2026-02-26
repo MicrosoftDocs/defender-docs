@@ -33,16 +33,16 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender for Endpoint|US Gov|CRL|80|www.microsoft.com/pkiops/*|Used when creating the SSL connection to MAPS for updating the CRL|Required|Yes|||Yes|Yes|
 |Microsoft Defender for Endpoint|US Gov|CRL|80|http://www.microsoft.com/pki/certs|Used when creating the SSL connection to MAPS for updating the CRL|Required|Yes|||Yes|Yes|
 |Microsoft Defender for Endpoint|US Gov|Common|	443|events.data.microsoft.com|Used by the Connected User Experiences and Telemetry component and connects to the Microsoft Data Management service|Required|Yes|||Yes|Yes|
-|Microsoft Defender for Endpoint|US Gov|Common|443|*.wns.windows.com|Windows Push Notification Services (WNS) - Live Response|Required|Yes|||||Required for Live Response Performance (Direct Connection/Proxy bypass required)|
-|Microsoft Defender for Endpoint|US Gov|Common|443|login.microsoftonline.com|Windows Push Notification Services (WNS) - Live Response|Required|Yes|||||Required for Live Response Performance (Direct Connection/Proxy bypass required)|
-|Microsoft Defender for Endpoint|US Gov|Common|443|login.live.com|Windows Push Notification Services (WNS) - Live Response|Required|Yes|||||Required for Live Response Performance (Direct Connection/Proxy bypass required)|
+|Microsoft Defender for Endpoint|US Gov|Common|443|*.wns.windows.com|Windows Push Notification Services (WNS) - Live Response|Required|Yes|||||Required for Live Response Performance (Direct Connection or proxy bypass required)|
+|Microsoft Defender for Endpoint|US Gov|Common|443|login.microsoftonline.com|Windows Push Notification Services (WNS) - Live Response|Required|Yes|||||Required for Live Response Performance (Direct Connection or proxy bypass required)|
+|Microsoft Defender for Endpoint|US Gov|Common|443|login.live.com|Windows Push Notification Services (WNS) - Live Response|Required|Yes|||||Required for Live Response Performance (Direct Connection or proxy bypass required)|
 |Microsoft Defender for Endpoint|US Gov|Common|443|settings-win.data.microsoft.com|Connected User Experiences and Telemetry Channel|Optional|Yes|||||Not required for Windows 10 1809 (RS5) and above / Windows 2019|
 |Microsoft Defender for Endpoint |US Gov|Common (Mac) (Linux)|443|cdn.x.cp.wd.microsoft.com|Microsoft Defender Antivirus Content Delivery Network (CDN) - Security Intelligence updates|Required||| Yes|Yes|
 |Microsoft Defender for Endpoint |US Gov|Common (Mac)|443|officecdn-microsoft-com.akamaized.net|Microsoft Office Content Delivery Network (CDN) -  Product Updates|Required|||Yes|Yes|
 |Microsoft Defender for Endpoint |US Gov|Microsoft Monitoring Agent (MMA)|443|*.ods.opinsights.azure.us|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes |Yes|||Refer to steps at https://aka.ms/mde_network_requirements to eliminate wildcards (*)|
 |Microsoft Defender for Endpoint |US Gov|Microsoft Monitoring Agent (MMA)|443|*.oms.opinsights.azure.us|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes|Yes|||Refer to steps at https://aka.ms/mde_network_requirements to eliminate wildcards (*)|
 |Microsoft Defender for Endpoint |US Gov|Microsoft Monitoring Agent (MMA)|443|*.blob.core.usgovcloudapi.net|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes|Yes|||Refer to steps at https://aka.ms/mde_network_requirements to eliminate wildcards (*)|
-|Microsoft Defender for Endpoint|GCC|Microsoft Defender for Endpoint GCC|443|unitedstates4.x.cp.wd.microsoft.us|Used by Microsoft Defender Antivirus to provide cloud-delivered protection and security intelligence updates|Required|||Yes|Yes||
+|Microsoft Defender for Endpoint|Government Community Cloud|Microsoft Defender for Endpoint GCC|443|unitedstates4.x.cp.wd.microsoft.us|Used by Microsoft Defender Antivirus to provide cloud-delivered protection and security intelligence updates|Required|||Yes|Yes||
 |Microsoft Defender for Endpoint|GCC|Microsoft Defender for Endpoint GCC|443|us4-v20.events.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data |Required|Yes|||Yes|Yes||
 |Microsoft Defender for Endpoint|GCC|Microsoft Defender for Endpoint GCC|443|winatp-gw-usmt.microsoft.com|Microsoft Defender for Endpoint Command and Control |Required|Yes|Yes|Yes|Yes|Yes|
 |Microsoft Defender for Endpoint|GCC|Microsoft Defender for Endpoint GCC|443|winatp-gw-usmv.microsoft.com|Microsoft Defender for Endpoint Command and Control |Required|Yes|Yes|Yes|Yes|Yes|
@@ -85,16 +85,16 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender Antivirus|GCC|MAPS|	443|unitedstates4.cp.wd.microsoft.us|MAPS - Used by Microsoft Defender Antivirus to provide cloud-delivered protection|Required|Yes|||||
 |Microsoft Defender Antivirus|GCC High|	MAPS|443|unitedstates1.cp.wd.microsoft.us|MAPS - Used by Microsoft Defender Antivirus to provide cloud-delivered protection|Required|Yes|||||
 |Microsoft Defender Antivirus|DoD|MAPS|	443|unitedstates2.cp.wd.microsoft.us|MAPS - Used by Microsoft Defender Antivirus to provide cloud-delivered protection|	Required|Yes|||||
-|Microsoft Defender SmartScreen|GCC|Reporting and Notifications|443|unitedstates4.ss.wd.microsoft.us|Used for Microsoft Defender SmartScreen protection, reporting, and notifications. MDAV Network Protection and custom URL indicators|Required|Yes|||Yes|Yes|Microsoft Defender SmartScreen reporting and notifications. Network Protection and custom URL indicators|
-|Microsoft Defender SmartScreen|GCC High|Reporting and Notifications|443|unitedstates1.ss.wd.microsoft.us|Used for Microsoft Defender SmartScreen protection, reporting, and notifications. MDAV Network Protection and custom URL indicators|Required|	Yes|||Yes|Yes|Microsoft Defender SmartScreen reporting and notifications. Network Protection and custom URL indicators|
-|Microsoft Defender SmartScreen|DoD|Reporting and Notifications|443|unitedstates2.ss.wd.microsoft.us|Used for Microsoft Defender SmartScreen protection, reporting, and notifications. MDAV Network Protection and custom URL indicators|Required|Yes|||Yes|Yes|Microsoft Defender SmartScreen reporting and notifications. Network Protection and custom URL indicators|
-|Consolidated Defender for Endpoint services|WW|Streamlined connectivity new URL pattern|443|*.endpoint.security.microsoft.com|	Used for streamlined connectivity URL consolidation as well as for future services|	Required|Yes|No|Yes|Yes|Yes|Only required for streamlined connectivity initially. New services will also follow this new pattern.|
+|Microsoft Defender SmartScreen|GCC|Reporting and Notifications|443|unitedstates4.ss.wd.microsoft.us|Used for Microsoft Defender SmartScreen protection, reporting, and notifications. Microsoft Defender Antivirus Network Protection and custom URL indicators|Required|Yes|||Yes|Yes|Microsoft Defender SmartScreen reporting and notifications. Network Protection and custom URL indicators|
+|Microsoft Defender SmartScreen|GCC High|Reporting and Notifications|443|unitedstates1.ss.wd.microsoft.us|Used for Microsoft Defender SmartScreen protection, reporting, and notifications. Microsoft Defender Antivirus Network Protection and custom URL indicators|Required|	Yes|||Yes|Yes|Microsoft Defender SmartScreen reporting and notifications. Network Protection and custom URL indicators|
+|Microsoft Defender SmartScreen|DoD|Reporting and Notifications|443|unitedstates2.ss.wd.microsoft.us|Used for Microsoft Defender SmartScreen protection, reporting, and notifications. Microsoft Defender Antivirus Network Protection and custom URL indicators|Required|Yes|||Yes|Yes|Microsoft Defender SmartScreen reporting and notifications. Network Protection and custom URL indicators|
+|Consolidated Defender for Endpoint services|WW|Streamlined connectivity new URL pattern|443|*.endpoint.security.microsoft.com|	Used for streamlined connectivity URL consolidation as well as for future services|	Required|Yes|No|Yes|Yes|Yes|Only required for streamlined connectivity initially. New services also follow this new pattern.|
 
 
 ## Security center URLs
 
 > [!NOTE]
-> All URLS in this table are required to have access to the Microsoft Defender Security Center Portal URL.
+> All URLs in this table are required to have access to the Microsoft Defender Security Center Portal URL.
 
 |Service|Geography|URL|
 |---|---|---|
@@ -119,14 +119,14 @@ The processes in this section are exclusively for Microsoft Defender for Endpoin
 
 For more information on how to manage Windows connections, see [Manage connections from Windows 10 and Windows 11 operating system components to Microsoft services](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services).
 
-While this list will continue to be updated, Microsoft cannot provide any guarantees on it being up-to-date with the latest product or OS changes. Customers should use this list as a baseline and conduct their testing before using it directly in production.
+While this list continues to be updated, Microsoft can't provide any guarantees on it being up-to-date with the latest product or OS changes. Customers should use this list as a baseline and conduct their testing before using it directly in production.
 
-## Windows 11, Windows 10, Windows Server 2022 and Windows Server 2019
+## Windows 11, Windows 10, Windows Server, 2022 and Windows Server 2019
 
 |Process|Path|Comment|
 |-------|----|-------|
 |MpCmdRun.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus command-line utility|
-|MpDlpCmd.exe|C:\Program Files\Windows Defender|Microsoft Endpoint DLP command-line utility|
+|MpDlpCmd.exe|C:\Program Files\Windows Defender|Microsoft Endpoint Data Loss Prevention (DLP) command-line utility|
 |MsMpEng.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus service executable|
 |ConfigSecurityPolicy.exe|C:\Program Files\Windows Defender|Microsoft Security Client Policy Configuration Tool|
 |NisSrv.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network Realtime Inspection|
@@ -167,7 +167,7 @@ While this list will continue to be updated, Microsoft cannot provide any guaran
 |C:\Program Files\Windows Defender|Microsoft Security Client Policy Configuration Tool|
 |C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network Realtime Inspection|
 
-## Windows 7 SP1, Windows Server 2012 R2 and Windows Server 2008 R2 (MMA Based)
+## Windows 7 SP1, Windows Server 2012 R2, and Windows Server 2008 R2 (MMA Based)
 
 |Path|Comment|
 |-|-|
