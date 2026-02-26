@@ -145,7 +145,7 @@
                 - name: Update Defender for SQL Servers on Machines plan configuration
                   displayName: SQL, SQL servers, defender, machines
                   href: update-sql-machine-configuration.md
-                - name: Identify SQL Servers protected by Microsoft Monitor Agent
+                - name: Identify SQL Servers protected by Microsoft Monitoring Agent
                   displayName: SQL, SQL servers, defender, machines, identify, Microsoft Monitoring Agent, MMA
                   href: identify-sql-servers-protected-by-monitor-agent.md
                 - name: Verify SQL machine protection
