@@ -6,7 +6,7 @@ ms.date: 02/26/2026
 ---
 
 > [!IMPORTANT]
-> If your organization uses Customer-Managed Keys (CMK) for data encryption, be aware that CMK isn't supported for data stored in the Microsoft Sentinel data lake. Sentinel workspaces applying CMK won't be accessible via data lake experiences.
+> If your organization uses Customer-Managed Keys (CMK) for data encryption, be aware that CMK isn't supported for data stored in the Microsoft Sentinel data lake. Sentinel workspaces applying CMK aren't accessible via data lake experiences.
 >
 >Any data ingested into the data lake, such as custom tables or transformed data is encrypted using Microsoft-managed keys.
 >
