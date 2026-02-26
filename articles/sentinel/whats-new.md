@@ -40,7 +40,7 @@ For more information about the workbook, see the [Microsoft Sentinel Behaviors W
 
 ### New Entity Behavior Analytics (UEBA) widget in the Defender portal home page (Preview)
 
-The Defender portal home page now includes a UEBA widget where analysts can immediately have visibility into anomalous user behavior and therefore accelerate threat detection workflows. For more information, see [How UEBA empowers analysts and streamlines workflows](identify-threats-with-entity-behavior-analytics.md#ueba-experiences-in-the-defender-portal-empower-analysts-and-streamline-workflows-preview).
+The Defender portal home page now includes a UEBA widget where analysts can immediately have visibility into anomalous user behavior and therefore accelerate threat detection workflows. For more information, see [How UEBA empowers analysts and streamlines workflows](identify-threats-with-entity-behavior-analytics.md#use-embedded-ueba-experiences-in-defender-portal).
 
 ### Updated date: Microsoft Sentinel in the Azure portal to be retired March 2027
 
@@ -111,7 +111,7 @@ Advanced hunting and custom detection experiences now include a contextual banne
 
 All features require UEBA to be enabled and are workspace-scoped to the currently selected workspace.
 
-For more information, see [How UEBA empowers analysts and streamlines workflows](identify-threats-with-entity-behavior-analytics.md#ueba-experiences-in-the-defender-portal-empower-analysts-and-streamline-workflows-preview).
+For more information, see [How UEBA empowers analysts and streamlines workflows](identify-threats-with-entity-behavior-analytics.md#use-embedded-ueba-experiences-in-defender-portal).
 
 ### SAP data connectors
 
