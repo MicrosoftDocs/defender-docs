@@ -63,24 +63,17 @@ The Azure Arc built-in role **Defender Kubernetes Agent Operator** to provision 
   - s3:*
 
 - AzureDefenderKubernetesScubaReaderRole (default role name: **MDCContainersK8sDataCollectionRole**):
-- sts:AssumeRole
-- sts:AssumeRoleWithWebIdentity
-- sqs:ReceiveMessage
-- sqs:DeleteMessage
-- s3:GetObject
-- s3:GetBucketLocation
-
 - AzureDefenderCloudWatchToKinesisRole (default role name: **MDCContainersK8sCloudWatchToKinesisRole**):
-- sts:AssumeRole
-- firehose:*
-
+  - sts:AssumeRole
+  - firehose:*
+    
 - AzureDefenderKinesisToS3Role (default role name: **MDCContainersK8sKinesisToS3Role**):
-- sts:AssumeRole
-- s3:AbortMultipartUpload
-- s3:GetBucketLocation
-- s3:GetObject
-- s3:ListBucket
-- s3:ListBucketMultipartUploads
+  - sts:AssumeRole
+  - s3:AbortMultipartUpload
+  - s3:GetBucketLocation
+  - s3:GetObject
+  - s3:ListBucket
+  - s3:ListBucketMultipartUploads
 - s3:PutObject
 
 - MDCContainersAgentlessDiscoveryK8sRole
