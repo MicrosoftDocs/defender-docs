@@ -137,11 +137,11 @@ Validation confirms that your environment is correctly configured to surface cod
 During this step, Defender verifies that:
 
 - Full code to runtime visibiity
-- Code repositories are being monitored and scanned
-- Build artifacts (such as container images) are being generated and deployed 
-- Scanning data is flowing from cloud workloads
-- The environment can correlate and trace from code to runtime and back
-
+- Source code repositories are continuously monitored by Microsoft Defender for Cloud for security vulnerabilities.
+- Build artifacts (such as container images) are scanned in container registries before deployment.
+- Runtime workloads deployed to Kubernetes clusters are monitored for security risks.
+- Defender for Cloud correlates and traces each artifact from code, through build and deployment, to runtime — and back.
+  
 > [!NOTE]
 > It can take up to 24 hours after the previous steps are applied to see the following results.
 
