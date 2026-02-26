@@ -20,6 +20,20 @@ The listed features were released in the last six months. For information about 
 
 ## February 2026
 
+### UEBA behaviors layer is now generally available
+
+The UEBA behaviors layer in Microsoft Sentinel is now generally available, summarizing clear, human‑readable behavioral insights from high-volume, raw security logs. The behaviors layer aggregates and sequences related events into normalized behaviors, helping analysts more quickly understand who did what to whom without manually correlating raw logs. For more information, see [Translate raw security logs to behavioral insights using UEBA behaviors in Microsoft Sentinel](../sentinel/entity-behaviors-layer.md).
+
+To help SOC teams get value from behaviors from day one, the Behaviors Workbook includes guided views and pre‑built, customizable analytics that turn rich behavioral data into actionable insights across three core SOC workflows:
+
+- **Overview**: High‑level metrics and trends that give SOC managers and leadership quick situational awareness  
+- **Investigation**: Deep‑dive, entity‑centric timelines that help analysts accelerate incident response  
+- **Hunting**: Proactive threat discovery for threat hunters using anomaly detection and attack‑chain analysis
+
+For more information about the workbook, see the [Microsoft Sentinel Behaviors Workbook blog post](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/introducing-the-microsoft-sentinel-ueba-behaviors-workbook/4448398).
+
+### 
+
 [Generate playbooks using AI in Microsoft Sentinel](./automation/generate-playbook.md) (preview): The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. For more information, see [the Playbook Generation blog post](https://aka.ms/PlaybookGenBlog).
 
 ## January 2026

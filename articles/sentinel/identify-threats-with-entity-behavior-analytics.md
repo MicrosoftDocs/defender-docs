@@ -72,11 +72,11 @@ This table provides an overview of the data in each of the UEBA tables:
 | [BehaviorAnalytics](/azure/azure-monitor/reference/tables/behavioranalytics) | Enriched behavioral data with geolocation and threat intelligence | Contains deviations from baseline with prioritization scores. Data depends on enabled connectors (Entra ID, AWS, GCP, Okta, and so on). |
 | [UserPeerAnalytics](/azure/azure-monitor/reference/tables/userpeeranalytics) | Dynamically calculated peer groups for behavioral baselines | Ranks top 20 peers based on security group membership, mailing lists, and other associations. Uses TF-IDF (term frequency–inverse document frequency) algorithm (smaller groups carry higher weight). |
 | [Anomalies](/azure/azure-monitor/reference/tables/anomalies) | Events identified as anomalous | Supports detection and investigation workflows. |
-| [SentinelBehaviorInfo](/azure/azure-monitor/reference/tables/sentinelbehaviorinfo) (Preview) | Summary of behaviors identified in raw logs | Translates raw security logs into structured "who did what to whom" summaries with natural language explanations and MITRE ATT&CK mappings.  |
-| [SentinelBehaviorEntities](/azure/azure-monitor/reference/tables/sentinelbehaviorentities) (Preview) | Profiles of entities involved in identified behaviors | Information about entities - such as files, processes, devices, and users - involved in detected behaviors. |
+| [SentinelBehaviorInfo](/azure/azure-monitor/reference/tables/sentinelbehaviorinfo) | Summary of behaviors identified in raw logs | Translates raw security logs into structured "who did what to whom" summaries with natural language explanations and MITRE ATT&CK mappings.  |
+| [SentinelBehaviorEntities](/azure/azure-monitor/reference/tables/sentinelbehaviorentities) | Profiles of entities involved in identified behaviors | Information about entities - such as files, processes, devices, and users - involved in detected behaviors. |
 
 > [!NOTE]
-> The [UEBA behaviors layer](#aggregate-behavior-insights-with-the-ueba-behaviors-layer-preview) is a separate capability that you enable independently from UEBA. The `SentinelBehaviorInfo` and `SentinelBehaviorEntities` tables are only created in your workspace if you enable the behaviors layer.
+> The [UEBA behaviors layer](#aggregate-behavior-insights-with-the-ueba-behaviors-layer) is a separate capability that you enable independently from UEBA. The `SentinelBehaviorInfo` and `SentinelBehaviorEntities` tables are only created in your workspace if you enable the behaviors layer.
 
 This screenshot shows an example of data in the `UserPeerAnalytics` table with the eight highest-ranked peers for the user Kendall Collins. Sentinel uses the TF-IDF algorithm to normalize weights when calculating peer ranks. Smaller groups carry higher weight.
 
@@ -123,7 +123,7 @@ The Defender portal home page includes a UEBA widget where analysts immediately 
 
 ### UEBA insights in user investigations
 
-Analysts can quickly assess user risk using UEBA context displayed in side panels and the **Overview** tab on all user pages. When unusual behavior is detected, the portal automatically tags users with **UEBA anomalies** helping prioritize investigations based on recent activity. For more information, see [User entity page in Microsoft Defender](https://aka.ms/ueba-entity-details).
+Analysts can quickly assess user risk using UEBA context displayed in side panels and the **Overview** tab on all user pages in the Defender portal. When unusual behavior is detected, the portal automatically tags users with **UEBA anomalies** helping prioritize investigations based on recent activity. For more information, see [User entity page in Microsoft Defender](https://aka.ms/ueba-entity-details).
 
 Each user page includes a **Top UEBA anomalies** section, showing the top three anomalies from the past 30 days, along with direct links to pre-built anomaly queries and the Sentinel events timeline for deeper analysis.
 
@@ -131,7 +131,7 @@ Each user page includes a **Top UEBA anomalies** section, showing the top three 
 
 ### Built-in user anomaly queries in incident investigations
 
-During incident investigations, analysts can launch built-in queries directly from incident graphs to retrieve all user anomalies related to the case.
+During incident investigations, analysts can launch built-in queries directly from incident graphs in the Defender portal to retrieve all user anomalies related to the case.
 
 :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-incident-investigations.png" alt-text="Screenshot that shows an incident graph, highlighting the Go hunt All user anomalies option, which allows analysts to quickly find all anomalies related to the user." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-incident-investigations.png":::
 
@@ -149,7 +149,7 @@ For more information, see:
 - [UEBA data sources](ueba-reference.md#ueba-data-sources).
 - [Anomalies detected by the Microsoft Sentinel machine learning engine](anomalies-reference.md).
 
-## Aggregate behavior insights with the UEBA behaviors layer (Preview)
+## Aggregate behavior insights with the UEBA behaviors layer
 
 While UEBA builds baseline profiles to detect anomalous activity, the new UEBA behaviors layer aggregates related events from high-volume raw security logs into clear, structured, meaningful behaviors that explain "who did what to whom" at a glance.
 
@@ -160,7 +160,7 @@ The behaviors layer enriches raw logs with:
 
 By converting fragmented logs into coherent behavior objects, the behaviors layer accelerates threat hunting, simplifies detection authoring, and provides richer context for UEBA anomaly detection. Together, these capabilities help analysts quickly understand not just *that* something anomalous happened, but *what* happened and *why* it matters.
 
-For more information, see [Translate raw security logs to behavioral insights using UEBA behaviors in Microsoft Sentinel (Preview)](entity-behaviors-layer.md).
+For more information, see [Translate raw security logs to behavioral insights using UEBA behaviors in Microsoft Sentinel](entity-behaviors-layer.md).
 
 ## Pricing model
 
