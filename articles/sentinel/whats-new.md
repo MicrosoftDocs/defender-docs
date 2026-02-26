@@ -20,13 +20,31 @@ The listed features were released in the last six months. For information about 
 
 ## February 2026
 
-[Generate playbooks using AI in Microsoft Sentinel](./automation/generate-playbook.md) (preview): The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. For more information, see [the Playbook Generation blog post](https://aka.ms/PlaybookGenBlog).
+### Microsoft Sentinel UEBA behaviors layer is now generally available
+
+The UEBA behaviors layer in Microsoft Sentinel is now generally available, summarizing clear, human‑readable behavioral insights from high-volume, raw security logs. The behaviors layer aggregates and sequences related events into normalized behaviors, helping analysts more quickly understand who did what to whom without manually correlating raw logs. For more information, see [Translate raw security logs to behavioral insights using UEBA behaviors in Microsoft Sentinel](../sentinel/entity-behaviors-layer.md).
+
+Watch the [UEBA behaviors webinar](https://www.youtube.com/watch?v=SqbxmGdMP7c) for a full overview and demo of the UEBA behaviors layer.
+
+**New UEBA behaviors workbook**
+
+To help SOC teams get value from behaviors from day one, Microsoft Sentinel now provides the **behaviors workbook** as part of the UEBA essentials solution. The workbook offers guided views and prebuilt, customizable analytics that turn rich behavioral data into actionable insights across three core SOC workflows:
+
+- **Overview**: High‑level metrics and trends that give SOC managers and leadership quick situational awareness  
+- **Investigation**: Deep‑dive, entity‑centric timelines that help analysts accelerate incident response  
+- **Hunting**: Proactive threat discovery for threat hunters using anomaly detection and attack‑chain analysis
+
+For more information about the workbook, see the [Microsoft Sentinel Behaviors Workbook blog post](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/introducing-the-microsoft-sentinel-ueba-behaviors-workbook/4448398).
+
+### Generate playbooks using AI in Microsoft Sentinel (preview)
+
+You can now [generate playbooks using AI in Microsoft Sentinel](./automation/generate-playbook.md). The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. For more information, see [the Playbook Generation blog post](https://aka.ms/PlaybookGenBlog).
 
 ## January 2026
 
 ### New Entity Behavior Analytics (UEBA) widget in the Defender portal home page (Preview)
 
-The Defender portal home page now includes a UEBA widget where analysts can immediately have visibility into anomalous user behavior and therefore accelerate threat detection workflows. For more information, see [How UEBA empowers analysts and streamlines workflows](identify-threats-with-entity-behavior-analytics.md#ueba-experiences-in-the-defender-portal-empower-analysts-and-streamline-workflows-preview).
+The Defender portal home page now includes a UEBA widget where analysts can immediately have visibility into anomalous user behavior and therefore accelerate threat detection workflows. For more information, see [How UEBA empowers analysts and streamlines workflows](identify-threats-with-entity-behavior-analytics.md#use-embedded-ueba-experiences-in-defender-portal).
 
 ### Updated date: Microsoft Sentinel in the Azure portal to be retired March 2027
 
@@ -97,7 +115,7 @@ Advanced hunting and custom detection experiences now include a contextual banne
 
 All features require UEBA to be enabled and are workspace-scoped to the currently selected workspace.
 
-For more information, see [How UEBA empowers analysts and streamlines workflows](identify-threats-with-entity-behavior-analytics.md#ueba-experiences-in-the-defender-portal-empower-analysts-and-streamline-workflows-preview).
+For more information, see [How UEBA empowers analysts and streamlines workflows](identify-threats-with-entity-behavior-analytics.md#use-embedded-ueba-experiences-in-defender-portal).
 
 ### SAP data connectors
 
