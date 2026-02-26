@@ -153,7 +153,7 @@ During this step, Defender verifies that:
    :::image type="content" source="media/github-advanced-security/validate-mdc-container-scan-results.jpg" alt-text="Screenshot of search results in the Cloud Security Explorer query builder, with filters set to GitHub repositories and container images." lightbox="media/github-advanced-security/validate-mdc-container-scan-results.jpg":::
 
   > [!NOTE]
-  > If no results are returned, it may indicate that artifacts are not yet generated, scanning is not configured, or permissions are missing. ADD LINK TO PERMISSIONS PAGE
+  > If no results are returned, it may indicate that artifacts are not yet generated, scanning is not configured, or permissions are missing. See [User roles and permissions](permissions.md) for more information.
 
 1. Validate that Defender for Cloud (in Azure Container Registry) scanned the container image and used it to create a container. In your query, add the conditions for your specific deployment.
 
@@ -238,13 +238,18 @@ From the recommendation view, you can explicitly generate a GitHub issue to trac
 
 1. Open the relevant code to runtime recommendation.
 1. Review the affected artifacts and risk details.
-1. Verify that there isn't already an issue assigned and you have the **Generate GitHub issue** enabled. If an issue was already created you will see the GitHub icon. 
-1. Select **Generate GitHub issue**.
+1.**Validate whether a GitHub issue already exists** - If a GitHub issue already exists, a GitHub icon is displayed. Hover over the icon to view issue details.  
+  If no issue exists and you have the required permissions, you can generate a new GitHub issue.
+1. Select **Generate GitHub issue**. From the code-to-cloud recommendation, generate a GitHub issue to track remediation work.  
+  The issue is created in the code repository of origin.
+  > [!NOTE]
+  > If the **Generate GitHub issue** option isn’t available, required GitHub or repository permissions may be missing.  
+  > Contact your GitHub or repository administrator to request access.
 
 :::image type="content" source="media/github-advanced-security/github-issue-security-alert.jpg" alt-text="Screenshot of a GitHub issues list that shows three entries marked with security and vulnerability tags." lightbox="media/github-advanced-security/github-issue-security-alert.jpg":::
 
 When you assign the issue, the issue status is updated in the Defender for Cloud portal. 
-ADD THE INFO ABOUT FOLLOWING THE ISSUE AND THE ASSIGNMENT
+**Track ownership and status updates** - Changes to issue status or assignment made in GitHub are reflected in Microsoft Defender for Cloud, allowing you to track ownership and remediation progress.
 
 :::image type="content" source="media/github-advanced-security/github-issue-security-details.jpg" alt-text="Screenshot of a GitHub issue with security and vulnerability tags, including details like CVE IDs, runtime risk factors, and deployment info." lightbox="media/github-advanced-security/github-issue-security-details.jpg":::
 
