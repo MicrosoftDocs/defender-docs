@@ -9,15 +9,15 @@ ms.reviewer: AbbyMSFT
 
 # Microsoft Defender for Identity overview
 
-Microsoft Defender for Identity helps organizations detect, investigate, and respond to identity-based attacks across on-premises, cloud, and hybrid environments. Threat actors frequently target identities such as users, applications, and service accounts to gain access, escalate privileges, and maintain persistence.
+Microsoft Defender for Identity helps organizations detect, investigate, and respond to identity-based attacks across on-premises, cloud, and hybrid environments. Attackers frequently target identities such as users, applications, and service accounts to gain access, escalate privileges, and maintain persistence.
 
-Defender for Identity monitors identity signals from on-premises Active Directory and Microsoft Entra ID, other IAM solution (e.g. Okta) and identity infrastructure, combining behavioral analytics, threat intelligence, and known attack patterns to detect suspicious activity across the full identity attack lifecycle. Alerts are delivered with clear investigation context in the Microsoft Defender portal, enabling security teams to understand what happened, why it matters, and how to respond.
+Defender for Identity monitors identity signals from on-premises Active Directory and Microsoft Entra ID, other IAM solutions (for example, Okta).  It analyzes these signals using behavioral analytics, threat intelligence, and known attack patterns to detect suspicious activity across the full identity attack lifecycle. Alerts include investigation context in the Microsoft Defender portal, helping security teams understand what happened, why it matters, and how to respond.
 
-## Identity Threat Detection and Response (ITDR)
+## Identity Security
 
-Microsoft Defender for Identity is a core component of Microsoft Identity Threat Detection and Response (ITDR). ITDR focuses on detecting and disrupting identity based threats by correlating signals across identity systems, applications, and infrastructure.
+Microsoft Defender for Identity is a core component of Microsoft Identity Security. Identity Security focuses on protecting identities by providing visibility into identity coverage and posture, detecting identity‑based threats, and enabling investigation and response across identity systems, applications, and infrastructure.
 
-Defender for Identity streams identity signals into the Microsoft Defender portal, where they are correlated with telemetry from endpoints, email, SaaS and Cloud, and other security sources. This correlation helps security teams detect anomalous behavior, track attacker movement, and respond through unified incidents that reflect the full scope of an attack rather than isolated alerts.
+Defender for Identity streams identity signals into the Microsoft Defender portal, where they are correlated with data from endpoints, email, SaaS applications, cloud workloads, and other security sources. This correlation helps security teams identify anomalous behavior, track attacker movement, and respond through unified incidents that reflect the full scope of an attack rather than isolated alerts.
 
 ## Defender for Identity capabilities
 
