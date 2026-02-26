@@ -44,45 +44,38 @@ The Azure Arc built-in role **Defender Kubernetes Agent Operator** to provision 
 
 ## AWS Agentless threat protection permissions
 
-- AzureDefenderKubernetesRole:
-  - sts:AssumeRole
-  - sts:AssumeRoleWithWebIdentity
-  - logs:PutSubscriptionFilter
-  - logs:DescribeSubscriptionFilters
-  - logs:DescribeLogGroups
-  - logs:PutRetentionPolicy
-  - firehose:*
-  - iam:PassRole
-  - eks:UpdateClusterConfig
-  - eks:DescribeCluster
-  - eks:CreateAccessEntry
-  - eks:ListAccessEntries
-  - eks:AssociateAccessPolicy
-  - eks:ListAssociatedAccessPolicies
-  - sqs:*
-  - s3:*
+- AzureDefenderKubernetesRole (default role name: **MDCContainersK8sRole**): 
 
-- AzureDefenderKubernetesScubaReaderRole (default role name: **MDCContainersK8sDataCollectionRole**):
 - sts:AssumeRole
 - sts:AssumeRoleWithWebIdentity
-- sqs:ReceiveMessage
-- sqs:DeleteMessage
-- s3:GetObject
-- s3:GetBucketLocation
+- logs:PutSubscriptionFilter
+- logs:DescribeSubscriptionFilters
+- logs:DescribeLogGroups
+- logs:PutRetentionPolicy
+- firehose:*
+- iam:PassRole
+- eks:UpdateClusterConfig
+- eks:DescribeCluster
+- eks:CreateAccessEntry
+- eks:ListAccessEntries
+- eks:AssociateAccessPolicy
+- eks:ListAssociatedAccessPolicies
+- sqs:*
+- s3:*
+
+- AzureDefenderKubernetesScubaReaderRole (default role name: **MDCContainersK8sDataCollectionRole**):
+  - sts:AssumeRole
+   - sts:AssumeRoleWithWebIdentity
+   - sqs:ReceiveMessage
+   - sqs:DeleteMessage
+   - s3:GetObject
+   - s3:GetBucketLocation
 
 - AzureDefenderCloudWatchToKinesisRole (default role name: **MDCContainersK8sCloudWatchToKinesisRole**):
-- sts:AssumeRole
-- firehose:*
-
+  - sts:AssumeRole
+  - firehose:*
+    
 - AzureDefenderKinesisToS3Role (default role name: **MDCContainersK8sKinesisToS3Role**):
-- sts:AssumeRole
-- s3:AbortMultipartUpload
-- s3:GetBucketLocation
-- s3:GetObject
-- s3:ListBucket
-- s3:ListBucketMultipartUploads
-- s3:PutObject
-
 - MDCContainersAgentlessDiscoveryK8sRole
   - sts:AssumeRoleWithWebIdentity
   - eks:UpdateClusterConfig
