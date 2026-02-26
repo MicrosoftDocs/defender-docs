@@ -54,13 +54,13 @@ To enable agentless scanning for machines in the Defender for Containers plan in
 
 1. In the navigation menu under **Management**, select **Environment settings**.
 
-1. Optional: Select the **Expand all** button to see all your available subscriptions, indicated by a key icon.
+1. (Optional) Select **Expand all**.
 
     :::image type="content" source="media/kubernetes-nodes-overview/environment-settings-expand-all-button.png" alt-text="Environment settings page with the Expand All button indicated.":::
 
 1. Select the relevant subscription.
 
-1. Under **Cloud Workload Protection (CWPP)**, find the **Containers** row, which indicates your **Defender for Containers** plan. Select **Settings**.
+1. Locate the Containers plan row and select **Settings**.
     :::image type="content" source="media/kubernetes-nodes-overview/settings-plans-containers-settings-select.png" alt-text="Screenshot of selecting the settings option of Defender for Containers plan." lightbox="media/kubernetes-nodes-overview/settings-plans-containers-settings-select.png":::
 
 1. Toggle Agentless scanning for machines to **On**.
