@@ -110,7 +110,7 @@
           href: dynamic-threat-detection-agent.md
         - name: Investigate entity pages
           items:
-          - name: User
+          - name: Identity
             href: investigate-users.md
           - name: Device
             href: entity-page-device.md

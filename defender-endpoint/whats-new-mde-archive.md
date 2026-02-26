@@ -29,7 +29,7 @@ The following features were in preview or generally available (GA) in Microsoft 
 For more information on preview features, see [Preview features](/defender-xdr/preview).
 
 For more information on what's new with Microsoft Defender for Endpoint on Windows, see:
-[What's new in Microsoft Defender for Endpoint on Windows](windows-whatsnew.md)
+[What's new in Microsoft Defender for Endpoint on Windows](microsoft-defender-endpoint-releases.md#windows-releases)
 
 For more information on what's new with other Microsoft Defender security products, see:
 
@@ -88,9 +88,9 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## January 2025
 
-- **(Android)** New dashboard with recommendation cards for alerts and feature tiles. The updated dashboard prominently displays active alerts and presents features in tile form for easier navigation. For more information, see [What's new in Defender for Endpoint on Android](android-whatsnew.md).
+- **(Android)** New dashboard with recommendation cards for alerts and feature tiles. The updated dashboard prominently displays active alerts and presents features in tile form for easier navigation. For more information, see [What's new in Defender for Endpoint on Android](microsoft-defender-endpoint-releases.md#android-releases).
 
-- **(iOS)** New dashboard with recommendation cards for alerts and feature tiles. The updated dashboard prominently displays active alerts and presents features in tile form for easier navigation. For more information, see [What's new in Defender for Endpoint on iOS](ios-whatsnew.md).
+- **(iOS)** New dashboard with recommendation cards for alerts and feature tiles. The updated dashboard prominently displays active alerts and presents features in tile form for easier navigation. For more information, see [What's new in Defender for Endpoint on iOS](microsoft-defender-endpoint-releases.md#ios-releases).
 
 - **(iOS)** Defender for Endpoint on iOS now supports iOS/iPadOS 16.x as the minimum version. Support for iOS/iPadOS 15 ends on January 31, 2025.
 
