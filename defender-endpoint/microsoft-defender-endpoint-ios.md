@@ -53,7 +53,7 @@ appliesto:
 >
 > - Defender for Endpoint on iOS requires configuring its VPN to activate the Web Protection feature and to send periodic status signals while the app operates in the background. This VPN is local and pass-through, meaning it doesn't route traffic through a remote VPN server.
 > 
-> Customers who opt not to set up a Defender for Endpoint VPN can disable Web Protection and still deploy Defender for Endpoint. In such cases, Defender for Endpoint will only send status signals to the Microsoft Defender portal when the user opens the app. If the app isn't opened for seven days, the device might be marked as inactive in the Microsoft Defender Portal.
+> Customers who opt not to set up a Defender for Endpoint VPN can disable Web Protection and still deploy Defender for Endpoint. In such cases, Defender for Endpoint will send status signals to the Microsoft Defender portal via push notifications.
 
 ### For Administrators
 
@@ -90,7 +90,7 @@ Deployment of Microsoft Defender for Endpoint on iOS can be done via Microsoft I
 
 ## Resources
 
-- Stay informed about upcoming releases by visiting [What's new in Microsoft Defender for Endpoint on iOS](ios-whatsnew.md) or our [blog](https://techcommunity.microsoft.com/t5/microsoft-defender-atp/bg-p/MicrosoftDefenderATPBlog/label-name/iOS).
+- Stay informed about upcoming releases by visiting [What's new in Microsoft Defender for Endpoint on iOS](microsoft-defender-endpoint-releases.md#ios-releases) or our [blog](https://techcommunity.microsoft.com/t5/microsoft-defender-atp/bg-p/MicrosoftDefenderATPBlog/label-name/iOS).
 
 - Provide feedback through in-app feedback system or through the [Microsoft Defender portal](https://security.microsoft.com)
 
