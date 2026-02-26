@@ -16,7 +16,7 @@ ms.collection:
 ms.custom:
 description: "Admins can configure where user reported messages go for analysis: to an internal reporting mailbox, to Microsoft, or both. Other settings complete the reporting experience for users when they report good messages, spam, or phishing messages from Outlook."
 ms.service: defender-office-365
-ms.date: 02/06/2026
+ms.date: 02/26/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -314,15 +314,18 @@ To correctly identify why the original messages were reported, messages sent to 
    >
    > `X-Microsoft-Antispam-Message-Info` should be a valid header.
 
-- The Subject line (Envelope Title) of messages sent to the reporting mailbox should start with one of the following prefix values. Messages that do not include this prefix are always identified as phishing:
-  - `1|` or `Junk:`.
-  - `2|` or `Not junk:`.
-  - `3|` or `Phishing:`.
+- The Subject line (Envelope Title) of messages sent to the reporting mailbox should start with one of the following prefix values:
+  - `1|` or `Junk:`
+  - `2|` or `Not junk:`
+  - `3|` or `Phishing:`
 
   For example:
 
   - `3|This text in the Subject line is ignored by the system`
   - `Not Junk:This text in the Subject line is also ignored by the system`
+
+  > [!TIP]
+  > Messages without a prefix are always identified as phishing.
 
 ## Use Exchange Online PowerShell to configure the reported message settings
 
