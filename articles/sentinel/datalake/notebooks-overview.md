@@ -5,7 +5,7 @@ description: This article gives an overview of Jupyter notebooks in Visual Studi
 author: EdB-MSFT 
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
-ms.topic: conceptual
+ms.topic: overview
 ms.date: 07/09/2025
 ms.author: edbaynash 
 
