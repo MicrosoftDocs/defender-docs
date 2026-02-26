@@ -405,7 +405,7 @@
           - name: Understand Defender Experts for Hunting reports
             href: defender-experts-report.md
           - name: Work with MSSPs
-            href: defender-experts-mssp-guide.md
+            href: defender-experts-managed-security-guide.md
         - name: Frequently asked questions
           items: 
           - name: General information
@@ -437,7 +437,7 @@
           - name: Auditing
             href: auditing.md
           - name: Work with MSSPs
-            href: defender-experts-mssp-guide.md
+            href: defender-experts-managed-security-guide.md
         - name: Frequently asked questions
           items:
           - name: General information
