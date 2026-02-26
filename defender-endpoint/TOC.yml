@@ -131,7 +131,7 @@
             href: streamlined-device-connectivity-urls-commercial.md
           - name: Streamlined device connectivity URLs (US government)
             href: streamlined-device-connectivity-urls-gov.md                                                           
-          - name: Legacy device connectivity URLs
+          - name: Standard device connectivity URLs
             items: 
             - name: Standard device connectivity URLs (commercial)
               href: standard-device-connectivity-urls-commercial.md
