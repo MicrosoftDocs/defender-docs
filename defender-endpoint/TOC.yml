@@ -126,17 +126,17 @@
             - name: Migrate devices to streamlined method
               href: migrate-devices-streamlined.md        
         - name: Enable access to service URLs
-            items:
-            - name: Streamlined device connectivity URLs (commercial)
-              href: streamlined-device-connectivity-urls-commercial.md
-            - name: Streamlined device connectivity URLs (US government)
-              href: streamlined-device-connectivity-urls-gov.md                                               
-              name: Legacy device connectivity URLs
-              items: 
-              - name: Standard device connectivity URLs (commercial)
-                href: standard-device-connectivity-urls-commercial.md
-              - name: Standard device connectivity URLs (US government)
-                href: standard-device-connectivity-urls-gov.md
+          items:
+          - name: Streamlined device connectivity URLs (commercial)
+            href: streamlined-device-connectivity-urls-commercial.md
+          - name: Streamlined device connectivity URLs (US government)
+            href: streamlined-device-connectivity-urls-gov.md                                                           
+          - name: Legacy device connectivity URLs
+            items: 
+            - name: Standard device connectivity URLs (commercial)
+              href: standard-device-connectivity-urls-commercial.md
+            - name: Standard device connectivity URLs (US government)
+              href: standard-device-connectivity-urls-gov.md
         - name: Onboard client devices
           items:
           - name: Onboard Windows devices using the Defender deployment tool
