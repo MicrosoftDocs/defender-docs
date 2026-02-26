@@ -37,15 +37,15 @@ These new alerts were added to the Defender for Identity security alerts:
 
 **New alerts related to Entra ID**:
 
-- [Possible golden ticket attack (suspicious ticket)](alerts-xdr.md#possible-golden-ticket-attack-suspicious-ticket)
-- [Suspicious Graph API request made from Entra ID sync application](alerts-xdr.md#suspicious-graph-api-request-made-from-entra-id-sync-application)
-- [Suspicious sign in with CSRF speedbump trigger](alerts-xdr.md#suspicious-sign-in-with-csrf-speedbump-trigger)
-- [Suspicious sign-in observed from Entra ID sync application](alerts-xdr.md#suspicious-sign-in-observed-from-entra-id-sync-application)
 - [Suspicious user configuration change activity from Entra ID sync application](alerts-xdr.md#suspicious-user-configuration-change-activity-from-entra-id-sync-application)
+- [Anomalous OAuth device code authentication activity](alerts-xdr.md#anomalous-oauth-device-code-authentication-activity)
+- [Suspicious Graph API request made from Entra ID sync application](alerts-xdr.md#suspicious-graph-api-request-made-from-entra-id-sync-application)
+- [Suspicious sign-in observed from Entra ID sync application](alerts-xdr.md#suspicious-sign-in-observed-from-entra-id-sync-application)
+- [Suspicious sign in with CSRF speedbump trigger](alerts-xdr.md#suspicious-sign-in-with-csrf-speedbump-trigger)
 
 **New alerts related to Active Directory**:
 
-- [Anomalous OAuth device code authentication activity](alerts-xdr.md#anomalous-oauth-device-code-authentication-activity)
+- [Possible golden ticket attack (suspicious ticket)](alerts-xdr.md#possible-golden-ticket-attack-suspicious-ticket)
 - [Possible Kerberos key list attack](alerts-xdr.md#possible-kerberos-key-list-attack)
 
 ## January 2026
