@@ -119,7 +119,7 @@ For passive mode to work on endpoints running Windows Server 2016 and Windows Se
 
 
 > [!IMPORTANT]
-> Beginning with [platform version 4.18.2208.0 and later](msda-updates-previous-versions-technical-upgrade-support.md#september-2022-platform-41822097--engine-11197003), if a server is onboarded to Microsoft Defender for Endpoint, [tamper protection](/editor/MicrosoftDocs/microsoft-365-docs-pr/microsoft-365%2Fsecurity%2Fdefender-endpoint%2Fmicrosoft-defender-antivirus-compatibility.md/main/9a5f8a9f-f5b9-cd00-0d21-171936a25b2b/prevent-changes-to-security-settings-with-tamper-protection.md) allows a switch to active mode, but not to passive mode.
+> Beginning with [platform version 4.18.2208.0 and later](msda-updates-previous-versions-technical-upgrade-support.md#september-2022-platform-41822097--engine-11197003), if a server is onboarded to Microsoft Defender for Endpoint, [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) allows a switch to active mode, but not to passive mode.
 >
 > Notice the modified logic for `ForceDefenderPassiveMode` when tamper protection is enabled: When Microsoft Defender Antivirus is set to active mode, tamper protection prevents it from going back into passive mode even when `ForceDefenderPassiveMode` is set to `1`.
 
