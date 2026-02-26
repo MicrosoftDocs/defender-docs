@@ -314,7 +314,7 @@ To correctly identify why the original messages were reported, messages sent to 
    >
    > `X-Microsoft-Antispam-Message-Info` should be a valid header.
 
-- The Subject line (Envelope Title) of messages sent to the reporting mailbox should start with one of the following prefix values. Messages that do not meet this requirement are always identified as phishing:
+- The Subject line (Envelope Title) of messages sent to the reporting mailbox should start with one of the following prefix values. Messages that do not include this prefix are always identified as phishing:
   - `1|` or `Junk:`.
   - `2|` or `Not junk:`.
   - `3|` or `Phishing:`.
