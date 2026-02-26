@@ -47,7 +47,7 @@ While constructing queries, use the built-in schema reference to quickly get the
 ### Access the schema reference
 To quickly access the schema reference, select the **View reference** action next to the table name in the schema representation. You can also select **Schema reference** to search for a table.
 
-:::image type="content" source="media/advanced-hunting-schema-tables/understand-schema-1.png" alt-text="The Schema Reference page on the Advanced Hunting page in the Microsoft Defender portal" lightbox="media/advanced-hunting-schema-tables/understand-schema-1.png":::
+:::image type="content" source="/defender/media/understand-schema-1.png" alt-text="The Schema Reference page on the Advanced Hunting page in the Microsoft Defender portal" lightbox="/defender/media/understand-schema-1.png":::
 
 ## Learn the schema tables
 The following reference lists all the tables in the schema. Each table name links to a page describing the column names for that table. Table and column names are also listed in Microsoft Defender XDR as part of the schema representation on the advanced hunting screen.
@@ -98,13 +98,13 @@ The following reference lists all the tables in the schema. Each table name link
 | **[EmailEvents](advanced-hunting-emailevents-table.md)** | Microsoft 365 email events, including email delivery and blocking events |	Yes|	Yes|
 | **[EmailPostDeliveryEvents](advanced-hunting-emailpostdeliveryevents-table.md)** | Security events that occur post-delivery, after Microsoft 365 delivers the emails to the recipient mailbox |	Yes|	Yes|
 | **[EmailUrlInfo](advanced-hunting-emailurlinfo-table.md)** | Information about URLs on emails |	Yes|	Yes|
-| **[EntraIdSignInEvents](advanced-hunting-entraidsigninevents-table.md)** (Preview)| Microsoft Entra interactive and non-interactive sign-ins |	No|	No|
-| **[EntraIdSpnSignInEvents](advanced-hunting-entraidspnsigninevents-table.md)** (Preview)| Microsoft Entra service principal and managed identity sign-ins |	No|	No|
+| **[EntraIdSignInEvents](advanced-hunting-entraidsigninevents-table.md)** | Microsoft Entra interactive and non-interactive sign-ins |	No|	No|
+| **[EntraIdSpnSignInEvents](advanced-hunting-entraidspnsigninevents-table.md)** | Microsoft Entra service principal and managed identity sign-ins |	No|	No|
 | **[ExposureGraphEdges](advanced-hunting-exposuregraphedges-table.md)** | Microsoft Security Exposure Management exposure graph edge information provides visibility into relationships between entities and assets in the graph |	No|	No|
 | **[ExposureGraphNodes](advanced-hunting-exposuregraphnodes-table.md)** | Microsoft Security Exposure Management exposure graph node information, about organizational entities and their properties |	No|	No|
 | **[FileMaliciousContentInfo](advanced-hunting-emailurlinfo-table.md)** (Preview) | Files that were processed by Microsoft Defender for Office 365 in SharePoint Online, OneDrive, and Microsoft Teams.  |	Yes|	Yes|
-| **[GraphApiAuditEvents](advanced-hunting-graphapiauditevents-table.md)**  (Preview) | Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant |	No|	No|
-| **[IdentityAccountInfo](advanced-hunting-identityaccountinfo-table.md)** (Preview) | Account information from various sources, including Microsoft Entra ID. This table also includes information and link to the identity that owns the account. |	No|	No|
+| **[GraphApiAuditEvents](advanced-hunting-graphapiauditevents-table.md)** | Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant |	No|	No|
+| **[IdentityAccountInfo](advanced-hunting-identityaccountinfo-table.md)** | Account information from various sources, including Microsoft Entra ID. This table also includes information and link to the identity that owns the account. |	No|	No|
 | **[IdentityDirectoryEvents](advanced-hunting-identitydirectoryevents-table.md)** | Events involving an on-premises domain controller running Active Directory (AD). This table covers a range of identity-related events and system events on the domain controller. |	Yes|	Yes|
 | **[IdentityEvents](advanced-hunting-identityevents-table.md)** (Preview) | Information about identity events obtained from other cloud identity service providers |	No|	No|
 | **[IdentityInfo](advanced-hunting-identityinfo-table.md)** | Account information from various sources, including Microsoft Entra ID |	Yes|	No|
