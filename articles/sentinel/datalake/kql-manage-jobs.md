@@ -5,7 +5,7 @@ description: Managing KQL jobs in the Defender portal for Microsoft Sentinel dat
 author: EdB-MSFT  
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 07/09/2025
 ms.author: edbaynash  
 ms.collection: ms-security  
