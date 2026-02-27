@@ -188,6 +188,7 @@ For more information about granting access in Google Cloud Platform, see [Manage
 The instructions in this section are for using the Microsoft Sentinel **GCP Pub/Sub Audit Logs** connector.
 
 See [GCP Security Command Center setup](#gcp-security-command-center-setup) for using the Microsoft Sentinel **GCP Pub/Sub Security Command Center** connector.
+
 See [GKE Logs setup](#google-kubernetes-engine-connector-setup) for using the Microsoft Sentinel **Google Kubernetes Engine** connector.
 
 # [Terraform API Setup](#tab/terraform)
@@ -281,6 +282,7 @@ Otherwise, skip to [Set up the GCP Pub/Sub connector in Microsoft Sentinel](#set
 The instructions in this section are for using the Microsoft Sentinel **GCP Pub/Sub Security Command Center** connector.
 
 See [the instructions in the previous section](#gcp-audit-logs-setup) for using the Microsoft Sentinel **GCP Pub/Sub Audit Logs** connector.
+
 See [GKE Logs setup](#google-kubernetes-engine-connector-setup) for using the Microsoft Sentinel **Google Kubernetes Engine** connector.
 
 #### Configure continuous export of findings
@@ -296,6 +298,7 @@ Follow the instructions in the Google Cloud documentation to [**configure Pub/Su
 The instructions in this section are for using the Microsoft Sentinel **Google Kubernetes Engine** connector.
 
 See [GCP Security Command Center setup](#gcp-security-command-center-setup) for using the Microsoft Sentinel **GCP Pub/Sub Security Command Center** connector.
+
 See [GCP Audit Logs setup](#gcp-audit-logs-setup) for using the Microsoft Sentinel **GCP Pub/Sub Audit Logs** connector.
 
 # [Terraform API Setup](#tab/terraformgke)
