@@ -443,6 +443,15 @@ Wait five minutes before moving to the next step.
 
 1. Enable the [health feature](enable-monitoring.md) for data connectors. 
 
+## Troubleshooting
+1. "Error 409: Requested entity already exists":  import those existing GCP resources into Terraform state so Terraform manages them instead of trying to recreate them.
+For example, with error message: "Error creating WorkloadIdentityPool: googleapi: Error 409: Requested entity already exists", please find the pool ID and project ID, run:
+```bash
+terraform import google_iam_workload_identity_pool.<POOL_RESOURCE_NAME> projects/<PROJECT_ID>/locations/global/workloadIdentityPools/<POOL_ID>
+```
+
+---
+
 ## Next steps
    In this article, you learned how to ingest GCP data into Microsoft Sentinel using the GCP Pub/Sub connectors. To learn more about Microsoft Sentinel, see the following articles:
 
