@@ -93,7 +93,7 @@ You can use the following methods to define exclusions for Microsoft Defender An
 
 For more information, see the following article:
 
-- [Create a Microsoft Defender Antivirus exclusions policy in Microsoft Intune](configure-exclusions-microsoft-defender-antivirus.md#create-a-new-antivirus-policy-with-exclusions-in-intune)
+- [Create a Microsoft Defender Antivirus exclusions policy in Microsoft Intune](configure-exclusions-microsoft-defender-antivirus.md#create-microsoft-defender-antivirus-exclusion-policies-in-intune)
 
 ### Use Configuration Manager to configure file name, folder, or file extension exclusions
 
