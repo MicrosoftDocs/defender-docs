@@ -4,12 +4,10 @@ titleSuffix: Microsoft Security
 description: Use the Defender portal's Data lake exploration KQL queries to create and schedule jobs to promote data to the analytics tier.
 author: EdB-MSFT  
 ms.author: edbaynash  
-ms.service: microsoft-sentinel  
+ms.service: microsoft-sentinel
+ms.subservice: sentinel-platform  
 ms.topic: conceptual
-ms.subservice: sentinel-graph
 ms.date: 11/19/2025
-
-
 ms.collection: ms-security  
 
 # Customer intent: As a security engineer or administrator, I want to create jobs in the Microsoft Sentinel data lake so that I can run KQL queries against the data in the lake tier and promote the results to the analytics tier.

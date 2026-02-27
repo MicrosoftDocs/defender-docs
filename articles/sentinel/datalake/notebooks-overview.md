@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: This article gives an overview of Jupyter notebooks in Visual Studio Code for the Microsoft Sentinel data lake.
 author: EdB-MSFT 
 ms.service: microsoft-sentinel
-ms.subservice: sentinel-graph
+ms.subservice: sentinel-platform
 ms.topic: conceptual
 ms.date: 07/09/2025
 ms.author: edbaynash 
