@@ -18,10 +18,10 @@ This article gives an overview of where you can use Microsoft Defender for Cloud
 ### Defender for Servers P2 (Agentless scanning)
 
 **Supported regions:**  
-Asia East, Asia Southeast, Australia Central 2, Australia East, Australia Southeast, Brazil South, Canada Central, Canada East, Central US, East US, East US 2, France Central, Germany West Central, India Central, India South, India West, Japan East, Japan West, Korea Central, Korea South, New Zealand North, North Central US, North Europe, Norway East, Poland Central, Qatar Central, South Africa North, South Central US, Spain Central, Sweden Central, Switzerland North, UAE North, UK South, UK West, US Gov East, US Gov South Central, US Gov Southwest, West Central US, West Europe, West US, West US 2, West US 3
+Asia East, Asia Southeast, Australia Central 2, Australia East, Australia Southeast, Austria East, Belgium Central, Brazil South, Brazil Southeast, Canada Central, Canada East, Central US, Chile Central, East US, East US 2, France Central, Germany West Central, India Central, India South, India West, Israel North West, Japan East, Japan West, Korea Central, Korea South, Malaysia South, New Zealand North, North Central US, North Europe, Norway East, Poland Central, Qatar Central, South Africa North, South Central US, South East US, South East US 3, Spain Central, Sweden Central, Sweden South, Switzerland North, Taiwan North, Taiwan North West, UAE North, UK South, UK West, US Gov East, US Gov South Central, US Gov Southwest, West Central US, West Europe, West US, West US 2, West US 3
 
 **Unsupported regions:**  
-Asia Northeast, Austria East, Belgium Central, Brazil Southeast, Central US (EU Access Program), Chile Central, China East, China East 2, China East 3, China North, China North 2, China North 3, East US 2 (EU Access Program), EU SSLV, France South, Germany North, Indonesia Central, Israel Central, Israel North West, Italy North, Jio India Central, Jio India West, Malaysia South, Mexico Central, Norway West, South Africa West, South East US, South East US 3, South US 2, Sweden South, Switzerland West, Taiwan North, Taiwan North West, UAE Central, US DoD Central, US DoD East
+Asia Northeast, Central US (EU Access Program), China East, China East 2, China East 3, China North, China North 2, China North 3, East US 2 (EU Access Program), EU SSLV, France South, Germany North, Indonesia Central, Israel Central, Italy North, Jio India Central, Jio India West, Mexico Central, Norway West, South Africa West, South US 2, Switzerland West, UAE Central, US DoD Central, US DoD East
 
 ### Defender for Servers P1
 
@@ -35,7 +35,7 @@ Asia East, Asia Southeast, Asia Northeast, Australia Central 2, Australia East, 
 **Unsupported regions:**  
 Austria East, Belgium Central, Chile Central, China East 2, China North, China North 2, China North 3, EU SSLV, India West, Indonesia Central, Israel North West, Jio India Central, Jio India West, Malaysia South, South East US 3, South US 2, Taiwan North, Taiwan North West, UAE Central, US DoD Central, US DoD East
 
-****** Supported via API management only.
+***** Supported via API management only.
 
 ### Defender for Storage (Malware Scanning)
 

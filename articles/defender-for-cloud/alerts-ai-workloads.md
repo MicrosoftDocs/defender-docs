@@ -3,7 +3,7 @@ title: Alerts for AI services
 description: This article lists the security alerts for AI services visible in Microsoft Defender for Cloud.
 ms.topic: reference
 ms.custom: linux-related-content
-ms.date: 05/05/2025
+ms.date: 02/22/2026
 ai-usage: ai-assisted
 ms.author: elkrieger
 author: Elazark
@@ -165,7 +165,7 @@ This article lists the security alerts you might get for AI from Microsoft Defen
 
 **Severity**: Medium
 
-### **Anomalous tool invocation**
+### Anomalous tool invocation
 
 (AI.Azure_AnomalousToolInvocation)
 
@@ -175,7 +175,7 @@ This article lists the security alerts you might get for AI from Microsoft Defen
 
 **Severity**: Low
 
-### (Preview) Suspicious anomaly detected in sensitive data exposed by an AI resource
+### (Preview) Suspicious sensitive data mentioned by your Azure AI resource
 
 (AI.Azure_SensitiveDataAnomaly)
 

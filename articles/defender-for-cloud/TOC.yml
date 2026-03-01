@@ -145,6 +145,9 @@
                 - name: Update Defender for SQL Servers on Machines plan configuration
                   displayName: SQL, SQL servers, defender, machines
                   href: update-sql-machine-configuration.md
+                - name: Identify SQL Servers protected by Microsoft Monitoring Agent
+                  displayName: SQL, SQL servers, defender, machines, identify, Microsoft Monitoring Agent, MMA
+                  href: identify-sql-servers-protected-by-monitor-agent.md
                 - name: Verify SQL machine protection
                   displayName: SQL, SQL servers, defender, machines
                   href: verify-machine-protection.md
@@ -806,8 +809,11 @@
             href: transition-to-defender-vulnerability-management.md
           - name: Common questions 
             href: common-questions-microsoft-defender-vulnerability-management.md
-      - name: Binary drift detection
-        displayName: k8s, containers, aks
+      - name: Antimalware
+        displayName: antimalware, containers,
+        href: anti-malware.md
+      - name: Binary drift detection and blocking
+        displayName: k8s, containers, aks, block, binary, drift, detection, blocking
         href: binary-drift-detection.md
       - name: Kubernetes data plane hardening
         displayName: k8s, containers, aks
@@ -823,10 +829,16 @@
               - name: Overview
                 href: runtime-gated-overview.md
               - name: Enable gated deployment
+                displayName: gated deployment, enable
                 href: enablement-guide-runtime-gated.md
+              - name: Gated deployment for Infrastructure as Code
+                displayName: gated deployment, infrastructure as code, IaC
+                href: gated-deployment-infrastructure-as-code.md
               - name: Troubleshooting
+                displayName: troubleshooting, gated deployment
                 href: troubleshooting-runtime-gated.md
               - name: Frequently asked questions
+                displayName: faq, frequently asked questions, gated deployment
                 href: faq-runtime-gated.md
       - name: Protect clusters with AKS Security Dashboard
         displayName: k8s, containers
