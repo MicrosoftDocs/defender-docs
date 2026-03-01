@@ -1885,9 +1885,9 @@ Learn more about [agentless malware scanning](agentless-malware-scanning.md) for
 
 January 15, 2024
 
-We're announcing the general availability (GA) of the integration between Defender for Cloud and Microsoft Defender XDR (formerly Microsoft 365 Defender).
+We're announcing the general availability (GA) of the integration between Defender for Cloud and Microsoft Defender XDR (formerly Office 365 Defender).
 
-The integration brings competitive cloud protection capabilities into the Security Operations Center (SOC) day-to-day. With Microsoft Defender for Cloud and the Defender XDR integration, SOC teams can discover attacks that combine detections from multiple pillars, including Cloud, Endpoint, Identity, Office 365, and more.
+The integration brings competitive cloud protection capabilities into the Security Operations Center (SOC) day-to-day. With Microsoft Defender for Cloud and the Defender XDR integration, SOC teams can discover attacks that combine detections from multiple pillars, including Cloud, Endpoint, Identity, Microsoft 365, and more.
 
 Learn more about [alerts and incidents in Microsoft Defender XDR](concept-integration-365.md).
 
@@ -2172,7 +2172,7 @@ November 15, 2023
 
 Businesses can protect their cloud resources and devices with the new integration between Microsoft Defender for Cloud and Microsoft Defender XDR. This integration connects the dots between cloud resources, devices, and identities, which previously required multiple experiences.
 
-The integration also brings competitive cloud protection capabilities into the Security Operations Center (SOC) day-to-day. With Microsoft Defender XDR, SOC teams can easily discover attacks that combine detections from multiple pillars, including Cloud, Endpoint, Identity, Office 365, and more.
+The integration also brings competitive cloud protection capabilities into the Security Operations Center (SOC) day-to-day. With Microsoft Defender XDR, SOC teams can easily discover attacks that combine detections from multiple pillars, including Cloud, Endpoint, Identity, Microsoft 365, and more.
 
 Some of the key benefits include:
 
@@ -3038,7 +3038,7 @@ Updates in April include:
 - [Three alerts in the Defender for Resource Manager plan have been deprecated](#three-alerts-in-the-defender-for-resource-manager-plan-have-been-deprecated)
 - [Alerts automatic export to Log Analytics workspace have been deprecated](#alerts-automatic-export-to-log-analytics-workspace-have-been-deprecated)
 - [Deprecation and improvement of selected alerts for Windows and Linux Servers](#deprecation-and-improvement-of-selected-alerts-for-windows-and-linux-servers)
-- [New Azure Active Directory authentication-related recommendations for Azure Data Services](#new-azure-active-directory-authentication-related-recommendations-for-azure-data-services)
+- [New Microsoft Entra authentication-related recommendations for Azure Data Services](#new-azure-active-directory-authentication-related-recommendations-for-azure-data-services)
 - [Two recommendations related to missing Operating System (OS) updates were released to GA](#two-recommendations-related-to-missing-operating-system-os-updates-were-released-to-ga)
 - [Defender for APIs (Preview)](#defender-for-apis-preview)
 
@@ -3138,16 +3138,16 @@ You can also view the [full list of alerts](alerts-reference.md) that are set to
 
 Read the [Microsoft Defender for Cloud blog](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/defender-for-servers-security-alerts-improvements/ba-p/3714175).
 
-### New Azure Active Directory authentication-related recommendations for Azure Data Services
+### New Microsoft Entra authentication-related recommendations for Azure Data Services
 
-We have added four new Azure Active Directory authentication recommendations for Azure Data Services.
+We have added four new Microsoft Entra authentication recommendations for Azure Data Services.
 
 | Recommendation Name | Recommendation Description | Policy |
 |--|--|--|
-| Azure SQL Managed Instance authentication mode should be Azure Active Directory Only | Disabling local authentication methods and allowing only Azure Active Directory Authentication improves security by ensuring that Azure SQL Managed Instances can exclusively be accessed by Azure Active Directory identities. | [Azure SQL Managed Instance should have Azure Active Directory Only Authentication enabled](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f78215662-041e-49ed-a9dd-5385911b3a1f) |
-| Azure Synapse Workspace authentication mode should be Azure Active Directory Only | Azure Active Directory only authentication methods improves security by ensuring that Synapse Workspaces exclusively require Azure AD identities for authentication. [Learn more](https://aka.ms/Synapse). | [Synapse Workspaces should use only Azure Active Directory identities for authentication](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f2158ddbe-fefa-408e-b43f-d4faef8ff3b8) |
-| Azure Database for MySQL should have an Azure Active Directory administrator provisioned | Provision an Azure AD administrator for your Azure Database for MySQL to enable Azure AD authentication. Azure AD authentication enables simplified permission management and centralized identity management of database users and other Microsoft services | [An Azure Active Directory administrator should be provisioned for MySQL servers](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f146412e9-005c-472b-9e48-c87b72ac229e) |
-| Azure Database for PostgreSQL should have an Azure Active Directory administrator provisioned | Provision an Azure AD administrator for your Azure Database for PostgreSQL to enable Azure AD authentication. Azure AD authentication enables simplified permission management and centralized identity management of database users and other Microsoft services | [An Azure Active Directory administrator should be provisioned for PostgreSQL servers](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fb4dec045-250a-48c2-b5cc-e0c4eec8b5b4) |
+| Azure SQL Managed Instance authentication mode should be Microsoft Entra ID Only | Disabling local authentication methods and allowing only Microsoft Entra authentication improves security by ensuring that Azure SQL Managed Instances can exclusively be accessed by Microsoft Entra ID identities. | [Azure SQL Managed Instance should have Microsoft Entra ID Only Authentication enabled](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f78215662-041e-49ed-a9dd-5385911b3a1f) |
+| Azure Synapse Workspace authentication mode should be Microsoft Entra ID Only | Microsoft Entra ID only authentication methods improves security by ensuring that Synapse Workspaces exclusively require Microsoft Entra ID identities for authentication. [Learn more](https://aka.ms/Synapse). | [Synapse Workspaces should use only Microsoft Entra ID identities for authentication](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f2158ddbe-fefa-408e-b43f-d4faef8ff3b8) |
+| Azure Database for MySQL should have an Microsoft Entra administrator provisioned | Provision an Microsoft Entra administrator for your Azure Database for MySQL to enable Microsoft Entra authentication. Microsoft Entra authentication enables simplified permission management and centralized identity management of database users and other Microsoft services | [An Microsoft Entra administrator should be provisioned for MySQL servers](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f146412e9-005c-472b-9e48-c87b72ac229e) |
+| Azure Database for PostgreSQL should have an Microsoft Entra administrator provisioned | Provision an Microsoft Entra administrator for your Azure Database for PostgreSQL to enable Microsoft Entra authentication. Microsoft Entra authentication enables simplified permission management and centralized identity management of database users and other Microsoft services | [An Microsoft Entra administrator should be provisioned for PostgreSQL servers](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fb4dec045-250a-48c2-b5cc-e0c4eec8b5b4) |
 
 ### Two recommendations related to missing Operating System (OS) updates were released to GA
 
@@ -3283,11 +3283,11 @@ Learn how to [Customize the set of standards in your regulatory compliance dashb
 
 ### New preview recommendation for Azure SQL Servers
 
-We've added a new recommendation for Azure SQL Servers, `Azure SQL Server authentication mode should be Azure Active Directory Only (Preview)`.
+We've added a new recommendation for Azure SQL Servers, `Azure SQL Server authentication mode should be Microsoft Entra ID Only (Preview)`.
 
-The recommendation is based on the existing policy [`Azure SQL Database should have Azure Active Directory Only Authentication enabled`](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fabda6d70-9778-44e7-84a8-06713e6db027)
+The recommendation is based on the existing policy [`Azure SQL Database should have Microsoft Entra ID Only Authentication enabled`](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fabda6d70-9778-44e7-84a8-06713e6db027)
 
-This recommendation disables local authentication methods and allows only Azure Active Directory Authentication, which improves security by ensuring that Azure SQL Databases can exclusively be accessed by Azure Active Directory identities.
+This recommendation disables local authentication methods and allows only Microsoft Entra authentication, which improves security by ensuring that Azure SQL Databases can exclusively be accessed by Microsoft Entra ID identities.
 
 Learn how to [create servers with Azure AD-only authentication enabled in Azure SQL](/azure/azure-sql/database/authentication-azure-ad-only-authentication-create-server).
 
@@ -3355,7 +3355,7 @@ Updates in January include:
 - [New version of the recommendation to find missing system updates (Preview)](#new-version-of-the-recommendation-to-find-missing-system-updates-preview)
 - [Cleanup of deleted Azure Arc machines in connected AWS and GCP accounts](#cleanup-of-deleted-azure-arc-machines-in-connected-aws-and-gcp-accounts)
 - [Allow continuous export to Event Hubs behind a firewall](#allow-continuous-export-to-event-hubs-behind-a-firewall)
-- [The name of the Secure score control Protect your applications with Azure advanced networking solutions has changed](#the-name-of-the-secure-score-control-protect-your-applications-with-azure-advanced-networking-solutions-is-changed)
+- [The name of the Secure score control Protect your applications with Microsoft Entra IDvanced networking solutions has changed](#the-name-of-the-secure-score-control-protect-your-applications-with-azure-advanced-networking-solutions-is-changed)
 - [The policy Vulnerability Assessment settings for SQL server should contain an email address to receive scan reports is deprecated](#the-policy-vulnerability-assessment-settings-for-sql-server-should-contain-an-email-address-to-receive-scan-reports-is-deprecated)
 - [Recommendation to enable diagnostic logs for Virtual Machine Scale Sets is deprecated](#recommendation-to-enable-diagnostic-logs-for-virtual-machine-scale-sets-is-deprecated)
 
@@ -3392,9 +3392,9 @@ You can enable continuous export as the alerts or recommendations are generated.
 
 Learn how to enable [continuous export to an Event Hubs behind an Azure firewall](continuous-export-event-hub-firewall.md).
 
-### The name of the Secure score control Protect your applications with Azure advanced networking solutions is changed
+### The name of the Secure score control Protect your applications with Microsoft Entra IDvanced networking solutions is changed
 
-The secure score control, `Protect your applications with Azure advanced networking solutions` is changed to `Protect applications against DDoS attacks`.
+The secure score control, `Protect your applications with Microsoft Entra IDvanced networking solutions` is changed to `Protect applications against DDoS attacks`.
 
 The updated name is reflected on Azure Resource Graph (ARG), Secure Score Controls API and the `Download CSV report`.
 
@@ -5490,7 +5490,7 @@ The eleven Azure Defender alerts listed below have been deprecated.
     | ARM_MicroBurstDomainInfo | PREVIEW - MicroBurst toolkit "Get-AzureDomainInfo" function run detected |
     | ARM_MicroBurstRunbook    | PREVIEW - MicroBurst toolkit "Get-AzurePasswords" function run detected  |
 
-- These nine alerts relate to an Azure Active Directory Identity Protection connector (IPC) that has already been deprecated:
+- These nine alerts relate to an Microsoft Entra Identity Protection connector (IPC) that has already been deprecated:
 
     | AlertType           | AlertDisplayName              |
     |---------------------|-------------------------------|
@@ -5501,11 +5501,11 @@ The eleven Azure Defender alerts listed below have been deprecated.
     | MaliciousIP         | Malicious IP address          |
     | LeakedCredentials   | Leaked credentials            |
     | PasswordSpray       | Password Spray                |
-    | LeakedCredentials   | Azure AD threat intelligence  |
-    | AADAI               | Azure AD AI                   |
+    | LeakedCredentials   | Microsoft Entra ID threat intelligence  |
+    | AADAI               | Microsoft Entra ID AI                   |
 
     > [!TIP]
-    > These nine IPC alerts were never Security Center alerts. They're part of the Azure Active Directory Identity Protection connector (IPC) that was sending them to Security Center. For the last two years, the only customers who've been seeing those alerts are organizations who configured the export (from the connector to ASC) in 2019 or earlier. Azure Active Directory IPC has continued to show them in its own alerts systems and they've continued to be available in Microsoft Sentinel. The only change is that they're no longer appearing in Security Center.
+    > These nine IPC alerts were never Security Center alerts. They're part of the Microsoft Entra Identity Protection connector (IPC) that was sending them to Security Center. For the last two years, the only customers who've been seeing those alerts are organizations who configured the export (from the connector to ASC) in 2019 or earlier. Microsoft Entra ID IPC has continued to show them in its own alerts systems and they've continued to be available in Microsoft Sentinel. The only change is that they're no longer appearing in Security Center.
 
 ### Two recommendations from "Apply system updates" security control were deprecated
 
@@ -5625,9 +5625,9 @@ Learn more about how to [Automate responses to Security Center triggers](workflo
 
 ### Two legacy recommendations no longer write data directly to Azure activity log
 
-Security Center passes the data for almost all security recommendations to Azure Advisor, which in turn, writes it to [Azure activity log](/azure/azure-monitor/essentials/activity-log).
+Security Center passes the data for almost all security recommendations to Microsoft Entra IDvisor, which in turn, writes it to [Azure activity log](/azure/azure-monitor/essentials/activity-log).
 
-For two recommendations, the data is simultaneously written directly to Azure activity log. With this change, Security Center stops writing data for these legacy security recommendations directly to activity Log. Instead, we're exporting the data to Azure Advisor as we do for all the other recommendations.
+For two recommendations, the data is simultaneously written directly to Azure activity log. With this change, Security Center stops writing data for these legacy security recommendations directly to activity Log. Instead, we're exporting the data to Microsoft Entra IDvisor as we do for all the other recommendations.
 
 The two legacy recommendations are:
 
@@ -5988,7 +5988,7 @@ Learn more about [Azure Defender for SQL](defender-for-sql-introduction.md).
 
 ### Global Administrators can now grant themselves tenant-level permissions
 
-A user with the Azure Active Directory role of **Global Administrator** might have tenant-wide responsibilities, but lack the Azure permissions to view that organization-wide information in Azure Security Center.
+A user with the Microsoft Entra ID role of **Global Administrator** might have tenant-wide responsibilities, but lack the Azure permissions to view that organization-wide information in Azure Security Center.
 
 To assign yourself tenant-level permissions, follow the instructions in [Grant tenant-wide permissions to yourself](tenant-wide-permissions-management.md#grant-tenant-wide-permissions-to-yourself).
 
@@ -6567,7 +6567,7 @@ The details page for recommendations now includes a freshness interval indicator
 Updates in August include:
 
 - [Asset inventory - powerful new view of the security posture of your assets](#asset-inventory---powerful-new-view-of-the-security-posture-of-your-assets)
-- [Added support for Azure Active Directory security defaults (for multifactor authentication)](#added-support-for-azure-active-directory-security-defaults-for-multifactor-authentication)
+- [Added support for Microsoft Entra ID security defaults (for multifactor authentication)](#added-support-for-azure-active-directory-security-defaults-for-multifactor-authentication)
 - [Service principals recommendation added](#service-principals-recommendation-added)
 - [Vulnerability assessment on VMs - recommendations and policies consolidated](#vulnerability-assessment-on-vms---recommendations-and-policies-consolidated)
 - [New AKS security policies added to ASC_default initiative](#new-aks-security-policies-added-to-asc_default-initiative)
@@ -6582,13 +6582,13 @@ You can use the view and its filters to explore your security posture data and t
 
 Learn more about [asset inventory](asset-inventory.md).
 
-### Added support for Azure Active Directory security defaults (for multifactor authentication)
+### Added support for Microsoft Entra ID security defaults (for multifactor authentication)
 
 Security Center has added full support for [security defaults](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults), Microsoft's free identity security protections.
 
 Security defaults provide preconfigured identity security settings to defend your organization from common identity-related attacks. Security defaults already protecting more than 5 million tenants overall; 50,000 tenants are also protected by Security Center.
 
-Security Center now provides a security recommendation whenever it identifies an Azure subscription without security defaults enabled. Until now, Security Center recommended enabling multifactor authentication using conditional access, which is part of the Azure Active Directory (AD) premium license. For customers using Azure AD free, we now recommend enabling security defaults.
+Security Center now provides a security recommendation whenever it identifies an Azure subscription without security defaults enabled. Until now, Security Center recommended enabling multifactor authentication using conditional access, which is part of the Microsoft Entra ID (AD) premium license. For customers using Microsoft Entra ID free, we now recommend enabling security defaults.
 
 Our goal is to encourage more customers to secure their cloud environments with MFA, and mitigate one of the highest risks that is also the most impactful to your [secure score](secure-score-security-controls.md).
 
@@ -6600,7 +6600,7 @@ A new recommendation was added to recommend that Security Center customers using
 
 The recommendation, **Service principals should be used to protect your subscriptions instead of Management Certificates** advises you to use Service Principals or Azure Resource Manager to more securely manage your subscriptions.
 
-Learn more about [Application and service principal objects in Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals#service-principal-object).
+Learn more about [Application and service principal objects in Microsoft Entra ID](/azure/active-directory/develop/app-objects-and-service-principals#service-principal-object).
 
 ### Vulnerability assessment on VMs - recommendations and policies consolidated
 

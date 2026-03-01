@@ -114,7 +114,7 @@ Azure Logic Apps is a low-code or no-code cloud-based service that provides you 
 
 You can use [these instructions](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Workflow%20automation/Notify-SQLVulnerabilityReport), to learn how to use Logic Apps to automate email notifications using an example template.
 
-This example Logic App template automates a weekly email report that summarizes the vulnerability scan results for every database from a selected list of servers. After you deploy the template, you must authorize the Office 365 connector to generate a valid access token to authenticate your credentials.
+This example Logic App template automates a weekly email report that summarizes the vulnerability scan results for every database from a selected list of servers. After you deploy the template, you must authorize the Microsoft 365 connector to generate a valid access token to authenticate your credentials.
 
 The recipients receive emails with the findings of the scan results.
 

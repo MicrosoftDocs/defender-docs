@@ -115,7 +115,7 @@ Using the latest Python version for API apps is recommended to benefit from secu
 ### Managed identity should be used in API apps
 
 **Description**: For enhanced authentication security, use a managed identity.
-On Azure, managed identities eliminate the need for developers to have to manage credentials by providing an identity for the Azure resource in Azure AD and using it to obtain Azure Active Directory (Azure AD) tokens.
+On Azure, managed identities eliminate the need for developers to have to manage credentials by providing an identity for the Azure resource in Microsoft Entra ID and using it to obtain Microsoft Entra ID (Microsoft Entra ID) tokens.
 (Related policy: [Managed identity should be used in your API App](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fc4d441f8-f9d9-4a9e-9cef-e82117cb3eef)).
 
 **Severity**: Medium
@@ -123,7 +123,7 @@ On Azure, managed identities eliminate the need for developers to have to manage
 ### Managed identity should be used in function apps
 
 **Description**: For enhanced authentication security, use a managed identity.
-On Azure, managed identities eliminate the need for developers to have to manage credentials by providing an identity for the Azure resource in Azure AD and using it to obtain Azure Active Directory (Azure AD) tokens.
+On Azure, managed identities eliminate the need for developers to have to manage credentials by providing an identity for the Azure resource in Microsoft Entra ID and using it to obtain Microsoft Entra ID (Microsoft Entra ID) tokens.
 (Related policy: [Managed identity should be used in your Function App](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f0da106f2-4ca3-48e8-bc85-c638fe6aea8f)).
 
 **Severity**: Medium
@@ -131,7 +131,7 @@ On Azure, managed identities eliminate the need for developers to have to manage
 ### Managed identity should be used in web apps
 
 **Description**: For enhanced authentication security, use a managed identity.
-On Azure, managed identities eliminate the need for developers to have to manage credentials by providing an identity for the Azure resource in Azure AD and using it to obtain Azure Active Directory (Azure AD) tokens.
+On Azure, managed identities eliminate the need for developers to have to manage credentials by providing an identity for the Azure resource in Microsoft Entra ID and using it to obtain Microsoft Entra ID (Microsoft Entra ID) tokens.
 (Related policy: [Managed identity should be used in your Web App](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f2b9ad585-36bc-4615-b300-fd4435808332)).
 
 **Severity**: Medium

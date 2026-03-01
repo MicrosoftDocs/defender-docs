@@ -191,17 +191,17 @@ Related policy: [Storage account public access should be disallowed](https://por
 
 **Severity**: Medium
 
-### Azure Database for MySQL should have an Azure Active Directory administrator provisioned
+### Azure Database for MySQL should have an Microsoft Entra administrator provisioned
 
-**Description**: Provision an Azure AD administrator for your Azure Database for MySQL to enable Azure AD authentication. Azure AD authentication enables simplified permission management and centralized identity management of database users and other Microsoft services
-(Related policy: [An Azure Active Directory administrator should be provisioned for MySQL servers](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f146412e9-005c-472b-9e48-c87b72ac229e)).
+**Description**: Provision an Microsoft Entra administrator for your Azure Database for MySQL to enable Microsoft Entra authentication. Microsoft Entra authentication enables simplified permission management and centralized identity management of database users and other Microsoft services
+(Related policy: [An Microsoft Entra administrator should be provisioned for MySQL servers](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f146412e9-005c-472b-9e48-c87b72ac229e)).
 
 **Severity**: Medium
 
-### Azure Database for PostgreSQL should have an Azure Active Directory administrator provisioned
+### Azure Database for PostgreSQL should have an Microsoft Entra administrator provisioned
 
-**Description**: Provision an Azure AD administrator for your Azure Database for PostgreSQL to enable Azure AD authentication. Azure AD authentication enables simplified permission management and centralized identity management of database users and other Microsoft services  
-(Related policy: [An Azure Active Directory administrator should be provisioned for PostgreSQL servers](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fb4dec045-250a-48c2-b5cc-e0c4eec8b5b4)).
+**Description**: Provision an Microsoft Entra administrator for your Azure Database for PostgreSQL to enable Microsoft Entra authentication. Microsoft Entra authentication enables simplified permission management and centralized identity management of database users and other Microsoft services  
+(Related policy: [An Microsoft Entra administrator should be provisioned for PostgreSQL servers](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fb4dec045-250a-48c2-b5cc-e0c4eec8b5b4)).
 
 **Severity**: Medium
 
@@ -253,18 +253,18 @@ Related policy: [Storage account public access should be disallowed](https://por
 
 **Severity**: Medium
 
-### SQL servers should have an Azure Active Directory administrator provisioned
+### SQL servers should have an Microsoft Entra administrator provisioned
 
-**Description**: Provision an Azure AD administrator for your SQL server to enable Azure AD authentication. Azure AD authentication enables simplified permission management and centralized identity management of database users and other Microsoft services.
-(Related policy: [An Azure Active Directory administrator should be provisioned for SQL servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f1f314764-cb73-4fc9-b863-8eca98ac36e9)).
+**Description**: Provision an Microsoft Entra administrator for your SQL server to enable Microsoft Entra authentication. Microsoft Entra authentication enables simplified permission management and centralized identity management of database users and other Microsoft services.
+(Related policy: [An Microsoft Entra administrator should be provisioned for SQL servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f1f314764-cb73-4fc9-b863-8eca98ac36e9)).
 
 **Severity**: High
 
-### Azure Synapse Workspace authentication mode should be Azure Active Directory Only
+### Azure Synapse Workspace authentication mode should be Microsoft Entra ID Only
 
-**Description**: Azure Synapse Workspace authentication mode should be Azure Active Directory Only
- Azure Active Directory only authentication methods improves security by ensuring that Synapse Workspaces exclusively require Azure AD identities for authentication. [Learn more](https://aka.ms/Synapse).
-(Related policy: [Synapse Workspaces should use only Azure Active Directory identities for authentication](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f2158ddbe-fefa-408e-b43f-d4faef8ff3b8)).
+**Description**: Azure Synapse Workspace authentication mode should be Microsoft Entra ID Only
+ Microsoft Entra ID only authentication methods improves security by ensuring that Synapse Workspaces exclusively require Microsoft Entra ID identities for authentication. [Learn more](https://aka.ms/Synapse).
+(Related policy: [Synapse Workspaces should use only Microsoft Entra ID identities for authentication](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f2158ddbe-fefa-408e-b43f-d4faef8ff3b8)).
 
 **Severity**: Medium
 
@@ -593,10 +593,10 @@ Configure a private endpoint connection to enable access to traffic coming only 
 
 **Severity**: High
 
-### SQL servers should have an Azure Active Directory administrator provisioned
+### SQL servers should have an Microsoft Entra administrator provisioned
 
-**Description**: Provision an Azure AD administrator for your SQL server to enable Azure AD authentication. Azure AD authentication enables simplified permission management and centralized identity management of database users and other Microsoft services.
-(Related policy: [An Azure Active Directory administrator should be provisioned for SQL servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f1f314764-cb73-4fc9-b863-8eca98ac36e9)).
+**Description**: Provision an Microsoft Entra administrator for your SQL server to enable Microsoft Entra authentication. Microsoft Entra authentication enables simplified permission management and centralized identity management of database users and other Microsoft services.
+(Related policy: [An Microsoft Entra administrator should be provisioned for SQL servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f1f314764-cb73-4fc9-b863-8eca98ac36e9)).
 
 **Severity**: High
 
@@ -623,7 +623,7 @@ Configure a private endpoint connection to enable access to traffic coming only 
 
 ### Storage accounts should prevent shared key access
 
-**Description**: Audit requirement of Azure Active Directory (Azure AD) to authorize requests for your storage account. By default, requests can be authorized with either Azure Active Directory credentials, or by using the account access key for Shared Key authorization. Of these two types of authorization, Azure AD provides superior security and ease of use over shared Key, and is recommended by Microsoft.
+**Description**: Audit requirement of Microsoft Entra ID (Microsoft Entra ID) to authorize requests for your storage account. By default, requests can be authorized with either Microsoft Entra ID credentials, or by using the account access key for Shared Key authorization. Of these two types of authorization, Microsoft Entra ID provides superior security and ease of use over shared Key, and is recommended by Microsoft.
 (Related policy: [policy](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%8c6a50c6-9ffd-4ae7-986f-5fa6111f9a54))
 
 **Severity**: Medium

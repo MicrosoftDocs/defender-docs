@@ -275,7 +275,7 @@ Shared access signature that provides secure delegated access to resources in yo
 
 ### **SaaS**
 
-Software as a service (SaaS) allows users to connect to and use cloud-based apps over the Internet. Common examples are email, calendaring, and office tools (such as Microsoft Office 365). SaaS provides a complete software solution that you purchase on a pay-as-you-go basis from a cloud service provider.[What is SaaS?](https://azure.microsoft.com/resources/cloud-computing-dictionary/what-is-saas/).
+Software as a service (SaaS) allows users to connect to and use cloud-based apps over the Internet. Common examples are email, calendaring, and office tools (such as Microsoft 365). SaaS provides a complete software solution that you purchase on a pay-as-you-go basis from a cloud service provider.[What is SaaS?](https://azure.microsoft.com/resources/cloud-computing-dictionary/what-is-saas/).
 
 ### **Secure Score**
 

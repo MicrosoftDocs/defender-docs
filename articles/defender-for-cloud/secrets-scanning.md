@@ -72,12 +72,12 @@ Plaintext Azure storage account SAS tokens.|Yes |Yes | Inventory, cloud security
 Plaintext AWS access keys.|Yes |Yes | Inventory, cloud security explorer, recommendations, attack paths
 Plaintext AWS S3 presigned URL. |Yes |Yes | Inventory, cloud security explorer, recommendations, attack paths
 Plaintext Google storage signed URL. |Yes |Yes | Inventory, cloud security explorer.
-Plaintext Azure AD Client Secret. |Yes |Yes | Inventory, cloud security explorer.
+Plaintext Microsoft Entra ID Client Secret. |Yes |Yes | Inventory, cloud security explorer.
 Plaintext Azure DevOps Personal Access Token. |Yes |Yes | Inventory, cloud security explorer.
 Plaintext GitHub Personal Access Token.|Yes |Yes | Inventory, cloud security explorer.
 Plaintext Azure App Configuration Access Key. |Yes |Yes | Inventory, cloud security explorer.
 Plaintext Azure Cognitive Service Key.|Yes |Yes | Inventory, cloud security explorer.
-Plaintext Azure AD User Credentials. |Yes |Yes | Inventory, cloud security explorer.
+Plaintext Microsoft Entra user Credentials. |Yes |Yes | Inventory, cloud security explorer.
 Plaintext Azure Container Registry Access Key. |Yes |Yes | Inventory, cloud security explorer.
 Plaintext Azure App Service Deployment Password. |Yes |Yes | Inventory, cloud security explorer.
 Plaintext Azure Databricks Personal Access Token. |Yes |Yes | Inventory, cloud security explorer.

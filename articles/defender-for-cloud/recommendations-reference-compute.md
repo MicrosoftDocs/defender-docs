@@ -403,10 +403,10 @@ Learn more about [Trusted launch for Azure virtual machines](/azure/virtual-mach
 
 **Severity**: High
 
-### Service Fabric clusters should only use Azure Active Directory for client authentication
+### Service Fabric clusters should only use Microsoft Entra ID for client authentication
 
-**Description**: Perform Client authentication only via Azure Active Directory in Service Fabric
-(Related policy: [Service Fabric clusters should only use Azure Active Directory for client authentication](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fb54ed75b-3e1a-44ac-a333-05ba39b99ff0)).
+**Description**: Perform Client authentication only via Microsoft Entra ID in Service Fabric
+(Related policy: [Service Fabric clusters should only use Microsoft Entra ID for client authentication](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fb54ed75b-3e1a-44ac-a333-05ba39b99ff0)).
 
 **Severity**: High
 
