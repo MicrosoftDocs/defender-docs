@@ -87,11 +87,9 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 
 1. Select the relevant AWS connector.
 
-1. Select **Next: Select plans**.
+1. On the Defender plans page, find the **Containers** row and toggle the status to **On**.
 
-1. In **Select plans**, toggle **Containers** to **On**.
-
-1. Select **Configure** to access the plan configuration options.
+1. Select **Settings** in the Containers plan row.
 
 1. Toggle **On** the relevant Defender for Containers components:
 
@@ -116,6 +114,14 @@ This article explains how to enable the Microsoft Defender for Containers plan i
     > If you enable agentless threat protection, Kubernetes API access, or registry access, [configure the required external settings](defender-for-containers-configure-external-requirements.md?tab=eks) so Defender for Cloud can collect the data those components rely on.
 
 1. Select **Save**.
+
+1. Select **Next : Configure access >**
+
+1. Regenerate and update the AWS CloudFormation template to apply the required permissions for the enabled components.
+
+1. Select **Next: Review and generate>**
+
+1. Select **Update**.
 
 ## Verify the plan is enabled
 
@@ -153,11 +159,9 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 
 1. Select the relevant GCP connector.
 
-1. Select **Next: Select plans**.
+1. On the Defender plans page, find the **Containers** row and toggle the status to **On**.
 
-1. In **Select plans**, toggle **Containers** to **On**.
-
-1. Select **Configure** to access the plan settings.
+1. Select **Settings** in the Containers plan row.
 
 1. Toggle **On** the relevant Defender for Containers components:
 
@@ -183,6 +187,14 @@ This article explains how to enable the Microsoft Defender for Containers plan i
     > If you enable agentless threat protection or registry access, [configure the required external settings](defender-for-containers-configure-external-requirements.md?tab=gke) so Defender for Cloud can collect the data those components rely on.
 
 1. Select **Save**.
+
+1. Select **Next : Configure access >**
+
+1. Regenerate and redeploy the onboarding script in your GCP project to apply the required permissions for the enabled components.
+
+1. Select **Next: Review and generate>**
+
+1. Select **Update**.
 
 ## Verify the plan is enabled
 

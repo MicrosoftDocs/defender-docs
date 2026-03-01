@@ -11,7 +11,7 @@ ms.date: 12/09/2025
 
 Microsoft Defender for Containers provides threat protection, vulnerability assessment, and security posture management for Kubernetes clusters across cloud environments through Microsoft Defender for Cloud.
 
-Defender for Containers is enabled and deployed differently depending on the Kubernetes environment. Azure Kubernetes Service (AKS) uses Azure-native integrations, while Amazon EKS and Google Kubernetes Engine (GKE) rely on multicloud connectors, Azure Arc-enabled Kubernetes, and environment-specific components.
+Defender for Containers is enabled and deployed differently depending on the Kubernetes environment. Azure Kubernetes Service (AKS) uses Azure-native integrations, while Amazon Elastic Kubernetes Service (EKS) and Google Kubernetes Engine (GKE) rely on multicloud connectors, Azure Arc-enabled Kubernetes, and environment-specific components.
 
 # [Azure Kubernetes Service (AKS)](#tab/aks)
 
