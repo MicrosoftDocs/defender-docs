@@ -27,7 +27,7 @@ This article lists hardware and software requirements for Defender for Endpoint 
 
 - [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 
-- [What's new in Defender for Endpoint on Linux](linux-whatsnew.md)
+- [What's new in Defender for Endpoint on Linux](microsoft-defender-endpoint-releases.md#linux-releases)
 
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
