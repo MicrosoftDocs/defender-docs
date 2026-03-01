@@ -5456,7 +5456,7 @@ We've added four new recommendations to Security Center to make the most of this
   - **Virtual machines' Guest Configuration extension should be deployed with system-assigned managed identity**
 
 - When the extension is installed and running, it will begin auditing your machines and you'll be prompted to harden settings such as configuration of the operating system and environment settings. These two recommendations will prompt you to harden your Windows and Linux machines as described:
-  - **Windows Defender Exploit Guard should be enabled on your machines**
+  - **Microsoft Defender Exploit Guard should be enabled on your machines**
   - **Authentication to Linux machines should require SSH keys**
 
 Learn more in [Understand Azure Policy's Guest Configuration](/azure/governance/machine-configuration/overview).
@@ -6929,9 +6929,9 @@ The two new recommendations added to the control are:
 
 - **Guest configuration extension should be installed on Windows virtual machines (Preview)** - Using [Azure Policy Guest Configuration](/azure/governance/machine-configuration/overview) provides visibility inside virtual machines to server and application settings (Windows only).
 
-- **Windows Defender Exploit Guard should be enabled on your machines (Preview)** - Windows Defender Exploit Guard leverages the Azure Policy Guest Configuration agent. Exploit Guard has four components that are designed to lock down devices against a wide variety of attack vectors and block behaviors commonly used in malware attacks while enabling enterprises to balance their security risk and productivity requirements  (Windows only).
+- **Microsoft Defender Exploit Guard should be enabled on your machines (Preview)** - Microsoft Defender Exploit Guard leverages the Azure Policy Guest Configuration agent. Exploit Guard has four components that are designed to lock down devices against a wide variety of attack vectors and block behaviors commonly used in malware attacks while enabling enterprises to balance their security risk and productivity requirements  (Windows only).
 
-Learn more about Windows Defender Exploit Guard in [Create and deploy an Exploit Guard policy](/mem/configmgr/protect/deploy-use/create-deploy-exploit-guard-policy).
+Learn more about Microsoft Defender Exploit Guard in [Create and deploy an Exploit Guard policy](/mem/configmgr/protect/deploy-use/create-deploy-exploit-guard-policy).
 
 Learn more about security controls in [Enhanced secure score (preview)](secure-score-security-controls.md).
 
