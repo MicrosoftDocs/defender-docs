@@ -16,18 +16,17 @@ jobs:
       contents: read
       pull-requests: write
     steps:
-      - name: Checkout for composite action and approvers file
+      - name: Checkout calling repo for approvers file
         uses: actions/checkout@v4
         with:
           sparse-checkout: |
-            .github/actions/is-authorized
             authorized-approvers.txt
             .github/authorized-approvers.txt
             docs/authorized-approvers.txt
 
       - name: Check if PR author is authorized
         id: auth
-        uses: ./.github/actions/is-authorized
+        uses: MicrosoftDocs/defender-docs/.github/actions/is-authorized@workflows-test
         with:
           token: ${{ secrets.MSECD_READTEAM_TOKEN }}
           user: ${{ env.TEST_USER || github.event.pull_request.user.login }}
@@ -80,11 +79,10 @@ jobs:
       contents: read
       pull-requests: write
     steps:
-      - name: Checkout for composite action and approvers file
+      - name: Checkout calling repo for approvers file
         uses: actions/checkout@v4
         with:
           sparse-checkout: |
-            .github/actions/is-authorized
             authorized-approvers.txt
             .github/authorized-approvers.txt
             docs/authorized-approvers.txt
@@ -127,7 +125,7 @@ jobs:
       - name: Check if comment author is authorized
         if: steps.signoff.outputs.skip != 'true'
         id: auth
-        uses: ./.github/actions/is-authorized
+        uses: MicrosoftDocs/defender-docs/.github/actions/is-authorized@workflows-test
         with:
           token: ${{ secrets.MSECD_READTEAM_TOKEN }}
           user: ${{ env.TEST_USER || steps.signoff.outputs.author }}
