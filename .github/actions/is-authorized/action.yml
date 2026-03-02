@@ -1,0 +1,245 @@
+name: Check if User is Authorized
+description: |
+  Checks if a user is authorized by parsing authorized-approvers.txt (CODEOWNERS format).
+  Resolves @org/team references to individual members via the GitHub API.
+  The calling workflow must ensure authorized-approvers.txt is checked out and available.
+
+  File format (same as CODEOWNERS):
+    # Global approvers
+    * @user1 @MicrosoftDocs/msecd-org
+    # Folder-scoped approvers
+    /defender/  @user2 @user3
+
+inputs:
+  token:
+    description: GitHub token with read:org scope for resolving team memberships
+    required: true
+  user:
+    description: GitHub username to check
+    required: true
+  files:
+    description: |
+      Newline-separated list of changed files to check against folder-scope rules.
+      If empty, checks if the user appears in any rule (global authorization check).
+    required: false
+    default: ''
+  default:
+    description: |
+      Default authorization result when authorized-approvers.txt is not found.
+      Use 'false' for checks that should deny by default, 'true' for checks that should allow.
+    required: false
+    default: 'false'
+
+outputs:
+  authorized:
+    description: 'true if user is authorized, false otherwise'
+    value: ${{ steps.check.outputs.authorized }}
+  authorized-scopes:
+    description: 'JSON array of scope patterns the user is authorized for'
+    value: ${{ steps.check.outputs.authorized_scopes }}
+
+runs:
+  using: composite
+  steps:
+    - name: Check user authorization
+      id: check
+      shell: bash
+      run: |
+        set -eo pipefail
+        VERSION="2.0.0"
+        echo "is-authorized action version: $VERSION"
+
+        USER="${{ inputs.user }}"
+        TOKEN="${{ inputs.token }}"
+
+        # Strip blank lines from files input
+        FILES=$(echo "${{ inputs.files }}" | grep -v '^[[:space:]]*$' || true)
+
+        echo "::group::Authorization Check for '$USER'"
+
+        # ── Step 1: Locate authorized-approvers.txt ──────────────
+        AUTH_FILE=""
+        for path in "authorized-approvers.txt" ".github/authorized-approvers.txt" "docs/authorized-approvers.txt"; do
+          if [ -f "$path" ]; then
+            AUTH_FILE="$path"
+            break
+          fi
+        done
+
+        DEFAULT="${{ inputs.default }}"
+
+        if [ -z "$AUTH_FILE" ]; then
+          echo "::warning::No authorized-approvers.txt found. Returning default: $DEFAULT"
+          echo "authorized=$DEFAULT" >> "$GITHUB_OUTPUT"
+          echo "authorized_scopes=[]" >> "$GITHUB_OUTPUT"
+          echo "::endgroup::"
+          exit 0
+        fi
+        echo "Found: $AUTH_FILE"
+
+        # ── Step 2: Team resolver (with pagination) ──────────────
+        resolve_team() {
+          local org="$1" team="$2"
+          local page=1 all_members=""
+
+          while :; do
+            local response http_code body page_members count
+            response=$(curl -s -w "\n%{http_code}" \
+              -H "Authorization: token $TOKEN" \
+              "https://api.github.com/orgs/${org}/teams/${team}/members?per_page=100&page=${page}")
+            http_code=$(echo "$response" | tail -n1)
+            body=$(echo "$response" | sed '$d')
+
+            if [ "$http_code" != "200" ]; then
+              echo "::warning::Failed to resolve team $org/$team (HTTP $http_code)" >&2
+              break
+            fi
+
+            page_members=$(echo "$body" | jq -r '.[].login' 2>/dev/null || true)
+            [ -z "$page_members" ] && break
+            all_members="$all_members $page_members"
+
+            count=$(echo "$body" | jq 'length')
+            [ "$count" -lt 100 ] && break
+            ((page++))
+          done
+
+          echo "$all_members" | xargs
+        }
+
+        # ── Step 3: Parse rules and resolve owners ───────────────
+        declare -A TEAM_CACHE
+        declare -a RULE_PATTERNS=()
+        declare -a RULE_USERS=()
+
+        while IFS= read -r line || [ -n "$line" ]; do
+          # Skip comments and blank lines
+          [[ "$line" =~ ^[[:space:]]*# ]] && continue
+          [[ -z "${line// }" ]] && continue
+
+          # First token is the pattern; remaining @-prefixed tokens are owners
+          pattern=$(echo "$line" | awk '{print $1}')
+          owners=$(echo "$line" | grep -oE '@[^ ]+' | sed 's/@//' || true)
+          [ -z "$owners" ] && continue
+
+          resolved=""
+          for entry in $owners; do
+            if [[ "$entry" == *"/"* ]]; then
+              # Team reference — resolve with cache
+              if [[ -z "${TEAM_CACHE[$entry]+x}" ]]; then
+                org_name=$(echo "$entry" | cut -d'/' -f1)
+                team_name=$(echo "$entry" | cut -d'/' -f2)
+                TEAM_CACHE["$entry"]=$(resolve_team "$org_name" "$team_name")
+                echo "Resolved team $entry: ${TEAM_CACHE[$entry]}"
+              fi
+              resolved="$resolved ${TEAM_CACHE[$entry]}"
+            else
+              resolved="$resolved $entry"
+            fi
+          done
+
+          # Deduplicate resolved users
+          resolved=$(echo "$resolved" | tr ' ' '\n' | sort -uf | tr '\n' ' ' | xargs)
+          RULE_PATTERNS+=("$pattern")
+          RULE_USERS+=("$resolved")
+          echo "Rule: $pattern -> $resolved"
+        done < "$AUTH_FILE"
+
+        # ── Step 4: Helper functions ─────────────────────────────
+        # Case-insensitive username match
+        user_in_list() {
+          local target="${1,,}"
+          shift
+          for u in "$@"; do
+            [[ "${u,,}" == "$target" ]] && return 0
+          done
+          return 1
+        }
+
+        # CODEOWNERS-style pattern matching
+        file_matches_pattern() {
+          local file="$1" pattern="$2"
+
+          # Global catch-all
+          [[ "$pattern" == "*" ]] && return 0
+
+          # Directory pattern ending with /  (e.g. /defender/ or defender/)
+          if [[ "$pattern" == */ ]]; then
+            local dir="${pattern#/}"
+            [[ "$file" == ${dir}* ]] && return 0
+            return 1
+          fi
+
+          # Rooted pattern (starts with /)
+          if [[ "$pattern" == /* ]]; then
+            local rooted="${pattern#/}"
+            if [[ "$rooted" == *"**"* ]]; then
+              local prefix="${rooted%%\*\**}"
+              [[ "$file" == ${prefix}* ]] && return 0
+            else
+              [[ "$file" == $rooted ]] && return 0
+            fi
+            return 1
+          fi
+
+          # Unrooted pattern — match against full path or basename
+          [[ "$file" == $pattern ]] && return 0
+          [[ "$file" == */$pattern ]] && return 0
+          [[ "$(basename "$file")" == $pattern ]] && return 0
+          return 1
+        }
+
+        # ── Step 5: Check authorization ──────────────────────────
+        IS_AUTHORIZED="false"
+        declare -a AUTH_SCOPES=()
+
+        if [ -z "$FILES" ]; then
+          # Global check: authorized if user appears in ANY rule
+          for i in "${!RULE_PATTERNS[@]}"; do
+            if user_in_list "$USER" ${RULE_USERS[$i]}; then
+              IS_AUTHORIZED="true"
+              AUTH_SCOPES+=("${RULE_PATTERNS[$i]}")
+            fi
+          done
+        else
+          # Per-file check: last matching rule wins (CODEOWNERS semantics)
+          ALL_AUTHORIZED=true
+
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+
+            # Walk rules in order — last match wins
+            MATCHED_INDEX=-1
+            for i in "${!RULE_PATTERNS[@]}"; do
+              if file_matches_pattern "$file" "${RULE_PATTERNS[$i]}"; then
+                MATCHED_INDEX=$i
+              fi
+            done
+
+            if [ "$MATCHED_INDEX" -ge 0 ]; then
+              if user_in_list "$USER" ${RULE_USERS[$MATCHED_INDEX]}; then
+                AUTH_SCOPES+=("${RULE_PATTERNS[$MATCHED_INDEX]}")
+              else
+                echo "DENIED: '$file' (pattern: ${RULE_PATTERNS[$MATCHED_INDEX]})"
+                ALL_AUTHORIZED=false
+              fi
+            else
+              echo "DENIED: '$file' (no matching rule)"
+              ALL_AUTHORIZED=false
+            fi
+          done <<< "$FILES"
+
+          [ "$ALL_AUTHORIZED" = true ] && IS_AUTHORIZED="true"
+        fi
+
+        # ── Step 6: Output results ───────────────────────────────
+        SCOPES_JSON="[]"
+        if [ ${#AUTH_SCOPES[@]} -gt 0 ]; then
+          SCOPES_JSON=$(printf '%s\n' "${AUTH_SCOPES[@]}" | sort -u | jq -R . | jq -s .)
+        fi
+
+        echo "::endgroup::"
+        echo "Result: authorized=$IS_AUTHORIZED, scopes=$SCOPES_JSON"
+
+        echo "authorized=$IS_AUTHORIZED" >> "$GITHUB_OUTPUT"
+        echo "authorized_scopes=$SCOPES_JSON" >> "$GITHUB_OUTPUT"

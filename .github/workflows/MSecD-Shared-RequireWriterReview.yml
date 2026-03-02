@@ -2,104 +2,188 @@ name: Require Writer Review
 
 on:
   workflow_call:
+  pull_request_target:
+    types: [labeled]
+
+env:
+  TEST_USER: 'SomeTestUser' # Set to a GitHub username to override the event-derived user for testing
 
 jobs:
-  add-hold-off-comment:
+  validate-auto-merge-label:
+    if: github.event_name == 'pull_request_target' && github.event.action == 'labeled' && github.event.label.name == 'qualifies-for-auto-merge'
     runs-on: ubuntu-latest
     permissions:
       contents: read
       pull-requests: write
     steps:
-      - name: Check if command author is a team member and add hold-off comment
+      - name: Checkout for composite action and approvers file
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            .github/actions/is-authorized
+            authorized-approvers.txt
+            .github/authorized-approvers.txt
+            docs/authorized-approvers.txt
+
+      - name: Check if PR author is authorized
+        id: auth
+        uses: ./.github/actions/is-authorized
+        with:
+          token: ${{ secrets.MSECD_READTEAM_TOKEN }}
+          user: ${{ env.TEST_USER || github.event.pull_request.user.login }}
+          default: 'false'
+
+      - name: Remove label if not authorized
+        if: steps.auth.outputs.authorized == 'false'
         env:
-          MSECD_READTEAM_TOKEN: ${{ secrets.MSECD_READTEAM_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          VERSION="2.0.0"
+          echo "Auto-Merge Label Validation Workflow Version: $VERSION"
+          
+          echo "PR author '$PR_AUTHOR' is not authorized. Removing label..."
+          
+          curl -s -X DELETE \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels/qualifies-for-auto-merge"
+          
+          echo "Label removed successfully."
+          
+          # Add 'removed-qualifies-for-auto-merge' label
+          curl -s -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels" \
+            -d '{"labels":["removed-qualifies-for-auto-merge"]}'
+          
+          echo "Added 'removed-qualifies-for-auto-merge' label."
+          
+          # Add a comment explaining why the label was removed
+          COMMENT_BODY="The 'qualifies-for-auto-merge' label was removed because the PR author is not an authorized approver.\nOnly authorized approvers can have their PRs qualify for auto-merge.\nIf you believe this PR qualifies for auto-merge, please contact an authorized reviewer."
+          
+          curl -s -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments" \
+            -d "{\"body\":\"$COMMENT_BODY\"}"
+          
+          echo "Explanation comment added."
+
+  add-hold-off-comment:
+    if: github.event_name == 'workflow_call' || (github.event_name == 'pull_request_target' && github.event.action != 'labeled')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Checkout for composite action and approvers file
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            .github/actions/is-authorized
+            authorized-approvers.txt
+            .github/authorized-approvers.txt
+            docs/authorized-approvers.txt
+
+      - name: Check if last PRMerger command is sign-off
+        id: signoff
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
           PR_NUMBER: ${{ github.event.pull_request.number || github.event.issue.number }}
           REPO: ${{ github.repository }}
         run: |
-          VERSION="1.2.0"
+          VERSION="2.0.0"
           echo "Hold-off Comment Workflow Version: $VERSION"
           
-          if [ -z "$MSECD_READTEAM_TOKEN" ]; then
-            echo "ERROR: MSECD_READTEAM_TOKEN is not set!"
-            exit 1
-          else
-            echo "MSECD_READTEAM_TOKEN is configured."
-          fi
-          
-          # Check if last PRMerger command is #sign-off
+          # Find the last PRMerger command and its author
           echo "Checking last PRMerger command..."
-          COMMENTS=$(curl -s -H "Authorization: token $MSECD_READTEAM_TOKEN" \
+          COMMENTS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
             "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments?per_page=100")
           
-          COMMAND_LINES=$(echo "$COMMENTS" | jq -r '.[] | .user.login as $u | .body | split("\n")[] | select(test("^#[A-Za-z-]+")) | "\($u)|\(.)"')
-          LAST_COMMAND_LINE=$(echo "$COMMAND_LINES" | tail -n1)
-          COMMAND_AUTHOR=${LAST_COMMAND_LINE%%|*}
-          COMMAND_TEXT=${LAST_COMMAND_LINE#*|}
-          LAST_COMMAND=$(echo "$COMMAND_TEXT" | tr '[:upper:]' '[:lower:]')
+          # Get the last comment whose body starts with a # command, extract command and author
+          LAST_ENTRY=$(echo "$COMMENTS" | jq -r '
+            [.[] | select(.body | test("^#[a-zA-Z-]+"))] | last |
+            {command: (.body | split("\n")[0] | ascii_downcase), author: .user.login}
+          ' 2>/dev/null || echo '{}')
           
-          echo "Last PRMerger command found: $LAST_COMMAND"
-          echo "Last PRMerger command author: $COMMAND_AUTHOR"
+          LAST_COMMAND=$(echo "$LAST_ENTRY" | jq -r '.command // ""')
+          SIGNOFF_AUTHOR=$(echo "$LAST_ENTRY" | jq -r '.author // ""')
           
-          if [ -z "$LAST_COMMAND" ] || [ "$LAST_COMMAND" != "#sign-off" ]; then
+          echo "Last PRMerger command found: $LAST_COMMAND (by: $SIGNOFF_AUTHOR)"
+          
+          if [ "$LAST_COMMAND" != "#sign-off" ]; then
             echo "Last command is not #sign-off. Skipping workflow."
-            exit 0
-          fi
-
-          if [ -z "$COMMAND_AUTHOR" ]; then
-            echo "ERROR: Unable to resolve command author."
-            exit 1
-          fi
-          
-          echo "Last command is #sign-off by the command author. Continuing workflow."
-          
-          # Use hardcoded team
-          ORG="MicrosoftDocs"
-          TEAM="msecd-org"
-          echo "Resolving team: $ORG/$TEAM"
-          
-          # Fetch team members using MSECD_READTEAM_TOKEN
-          RESPONSE=$(curl -s -w "\n%{http_code}" -H "Authorization: token $MSECD_READTEAM_TOKEN" \
-            "https://api.github.com/orgs/$ORG/teams/$TEAM/members")
-          
-          HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
-          BODY=$(echo "$RESPONSE" | sed '$d')
-          
-          TEAM_MEMBERS=""
-          
-          if [ "$HTTP_CODE" = "200" ]; then
-            MEMBERS=$(echo "$BODY" | jq -r '.[].login' 2>/dev/null || echo "")
-            if [ -n "$MEMBERS" ]; then
-              echo "Team members: $MEMBERS"
-              TEAM_MEMBERS="$MEMBERS"
-            else
-              echo "No members found in team response."
-            fi
+            echo "skip=true" >> "$GITHUB_OUTPUT"
           else
-            echo "Failed to fetch team members. HTTP Status: $HTTP_CODE"
+            echo "Last command is #sign-off. Continuing workflow."
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            echo "author=$SIGNOFF_AUTHOR" >> "$GITHUB_OUTPUT"
           fi
 
-          # Remove duplicates and check if command author is a team member
-          TEAM_MEMBERS=$(echo "$TEAM_MEMBERS" | tr ' ' '\n' | sort -u | tr '\n' ' ')
-          echo "Team members: $TEAM_MEMBERS"
+      - name: Check if comment author is authorized
+        if: steps.signoff.outputs.skip != 'true'
+        id: auth
+        uses: ./.github/actions/is-authorized
+        with:
+          token: ${{ secrets.MSECD_READTEAM_TOKEN }}
+          user: ${{ env.TEST_USER || steps.signoff.outputs.author }}
+          default: 'true'
 
-          IS_TEAM_MEMBER=false
-          for user in $TEAM_MEMBERS; do
-            if [ "$user" == "$COMMAND_AUTHOR" ]; then
-              IS_TEAM_MEMBER=true
-              break
-            fi
-          done
-
-          if [ "$IS_TEAM_MEMBER" = false ]; then
-            echo "Command author '$COMMAND_AUTHOR' is not a team member. Adding hold-off comment..."
-            COMMENT_BODY="#hold-off\nThis PR requires a writer review before merging.\nThe review process typically takes 2-3 business days. For urgent requests, please contact the page's author or assigned team."
+      - name: Restore auto-merge label if authorized
+        if: steps.signoff.outputs.skip != 'true' && steps.auth.outputs.authorized == 'true'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          SIGNOFF_AUTHOR: ${{ env.TEST_USER || steps.signoff.outputs.author }}
+          PR_NUMBER: ${{ github.event.pull_request.number || github.event.issue.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          # Check if PR has 'removed-qualifies-for-auto-merge' label
+          PR_DATA=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER")
+          
+          HAS_REMOVED_LABEL=$(echo "$PR_DATA" | jq -r '[.labels[].name] | contains(["removed-qualifies-for-auto-merge"])')
+          
+          if [ "$HAS_REMOVED_LABEL" = "true" ]; then
+            echo "Author '$SIGNOFF_AUTHOR' is now authorized and PR has 'removed-qualifies-for-auto-merge' label. Restoring auto-merge label..."
             
-            curl -s -X POST \
-              -H "Authorization: token $MSECD_READTEAM_TOKEN" \
+            # Remove 'removed-qualifies-for-auto-merge' label
+            curl -s -X DELETE \
+              -H "Authorization: token $GITHUB_TOKEN" \
               -H "Accept: application/vnd.github.v3+json" \
-              "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments" \
-              -d "{\"body\":\"$COMMENT_BODY\"}"
-            echo "Hold-off comment added successfully."
+              "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels/removed-qualifies-for-auto-merge"
+            
+            echo "Removed 'removed-qualifies-for-auto-merge' label."
+            
+            # Add 'qualifies-for-auto-merge' label
+            curl -s -X POST \
+              -H "Authorization: token $GITHUB_TOKEN" \
+              -H "Accept: application/vnd.github.v3+json" \
+              "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels" \
+              -d '{"labels":["qualifies-for-auto-merge"]}'
+            
+            echo "Added 'qualifies-for-auto-merge' label."
           else
-            echo "Command author '$COMMAND_AUTHOR' is a team member. Skipping comment."
+            echo "Author is authorized but PR does not have 'removed-qualifies-for-auto-merge' label. Skipping."
           fi
+
+      - name: Add hold-off comment if not authorized
+        if: steps.signoff.outputs.skip != 'true' && steps.auth.outputs.authorized == 'false'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          SIGNOFF_AUTHOR: ${{ env.TEST_USER || steps.signoff.outputs.author }}
+          PR_NUMBER: ${{ github.event.pull_request.number || github.event.issue.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          echo "Sign-off author '$SIGNOFF_AUTHOR' is not authorized. Adding hold-off comment..."
+          COMMENT_BODY="#hold-off\nThis PR requires a writer review before merging.\nThe review process typically takes 2-3 business days. For urgent requests, please contact the page's author or assigned team."
+          
+          curl -s -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments" \
+            -d "{\"body\":\"$COMMENT_BODY\"}"
+          echo "Hold-off comment added successfully."
