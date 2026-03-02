@@ -3,7 +3,7 @@ title: How-to enable agentless container posture
 description: Learn how to onboard agentless containers
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 03/30/2025
+ms.date: 03/02/2026
 ---
 
 # Onboard agentless container posture in Defender CSPM
@@ -19,15 +19,16 @@ Defender CSPM includes extensions that allow for agentless visibility into Kuber
 
 1. Before starting, verify that the scope is [onboarded to Defender CSPM](enable-enhanced-security.md).
 
-1. In the Azure portal, navigate to the Defender for Cloud's **Environment Settings** page.
+1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Go to the Defender for Cloud's **Environment Settings** page.
 
 1. Select the scope that's onboarded to the Defender CSPM plan, then select **Settings**.
 
 1. Ensure the **K8S API access** and **Registry access** extensions are toggled to **On**.
 
-1. Select **Continue**.
-
     :::image type="content" source="media/concept-agentless-containers/select-components.png" alt-text="Screenshot of selecting components 8S API access and Registry access." lightbox="media/concept-agentless-containers/select-components.png":::
+
+1. Select **Continue**.
 
 1. Select **Save**.
 

@@ -3,14 +3,14 @@ title: Attack path analysis and enhanced risk-hunting for containers
 description: Learn how to test attack paths and perform enhanced risk-hunting for containers with cloud security explorer in Microsoft Defender for Cloud
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 05/18/2025
+ms.date: 03/02/2026
 ---
 
 # Attack path analysis and enhanced risk-hunting for containers
 
-Attack path analysis is a graph-based algorithm that scans the cloud security graph. The scans expose exploitable paths that attackers might use to breach your environment to reach your high-impact assets. Attack path analysis exposes attack paths and suggests recommendations as to how best remediate issues that break the attack path and prevent successful breach.
+Attack path analysis is a graph-based algorithm that scans the cloud security graph. The scans expose paths that attackers might exploit to breach your environment and reach your high-impact assets. Attack path analysis exposes attack paths and suggests recommendations as to how best remediate issues that break the attack path and prevent a successful breach.
 
-Explore and investigate [attack paths](how-to-manage-attack-path.md) by sorting them based on risk level, name, environment, and risk factors, entry point, target, affected resources and active recommendations. Explore cloud security graph Insights on the resource. Examples of Insight types are:
+You can explore and investigate [attack paths](how-to-manage-attack-path.md) by sorting them based on risk level, name, environment, and risk factors, entry point, target, affected resources, and active recommendations. You can also explore cloud security graph Insights on the resource. Examples of Insight types include:
 
 - Pod exposed to the internet
 - Privileged container
@@ -19,13 +19,13 @@ Explore and investigate [attack paths](how-to-manage-attack-path.md) by sorting 
 
 ## Azure: Testing the attack path and security explorer using a mock vulnerable container image
 
-If there are no entries in the list of attack paths, you can still test this feature by using a mock container image. Use the following steps to set up the test:
+If the list of attack paths has no entries, you can still test this feature by using a mock container image. Use the following steps to set up the test:
 
 **Requirement:** An instance of Azure Container Registry (ACR) in the tested scope.
 
 1. Import a mock vulnerable image to your Azure Container Registry:
 
-    1. First, pull a base image (for example, alpine) to your local environment by running:
+    1. Pull a base image (for example, alpine) to your local environment by running:
 
         ```azurecli
         docker pull alpine
@@ -70,27 +70,28 @@ If there are no entries in the list of attack paths, you can still test this fea
 
 1. Verify success by doing the following steps:
 
-   - Look for an entry with **mdc-dcspm-demo** as namespace
+   - Look for an entry with **mdc-dcspm-demo** as namespace.
    - In the **Workloads-> Deployments** tab, verify "pod1" and "pod2" are created 3/3 and **ingress-controller-nginx-ingress-controller** is created 1/1.
-   - In services and ingresses look for-> service **service1** and **ingress-controller-nginx-ingress-controller**. In the ingress tab, verify one **ingress** is created with an IP address and nginx class.
+   - In services and ingresses, look for-> service **service1** and **ingress-controller-nginx-ingress-controller**. In the ingress tab, verify one **ingress** is created with an IP address and nginx class.
 
 > [!NOTE]
-> After completing the above flow, it can take up to 24 hours to see results in the cloud security explorer and attack path.
+> It can take up to 24 hours to see results in the cloud security explorer and attack path.
 
-After you completed testing the attack path, investigate the created attack path by going to **Attack path analysis**, and search for the attack path you created. For more information, see [Identify and remediate attack paths](how-to-manage-attack-path.md).
+After you finish testing the attack path, investigate the created attack path by going to **Attack path analysis**, and search for the attack path you created. For more information, see [Identify and remediate attack paths](how-to-manage-attack-path.md).
 
 ## AWS: Testing the attack path and security explorer using a mock vulnerable container image
 
 1. Create an ECR repository named *mdc-mock-0001*
 1. Go to your AWS account and choose **Command line or programmatic access**.
-1. Open a command line and choose **Option 1: Set AWS environment variables (Short-term credentials)**. Copy the credentials of the *AWS_ACCESS_KEY_ID*, *AWS_SECRET_ACCESS_KEY*, and *AWS_SESSION_TOKEN* environment variables.
+1. Open a command line and choose **Option 1: Set AWS environment variables (Short-term credentials)**. 
+1. Copy the credentials of the *AWS_ACCESS_KEY_ID*, *AWS_SECRET_ACCESS_KEY*, and *AWS_SESSION_TOKEN* environment variables.
 1. Run the following command to get the authentication token for your Amazon ECR registry. Replace `<REGION>` with the region of your registry. Replace `<ACCOUNT>` with your AWS account ID.
 
     ```awscli
     aws ecr get-login-password --region <REGION> | docker login --username AWS --password-stdin <ACCOUNT>.dkr.ecr.<REGION>.amazonaws.com
     ```
 
-1. Create a Docker image that is tagged as vulnerable by name. The name of the image should contain the string *mdc-mock-0001*. Once you created the image, push it to your ECR registry, with the following command (replace `<ACCOUNT>` and `<REGION>` with your AWS account ID and region):
+1. Create a Docker image that is tagged as vulnerable by name. The name of the image should contain the string *mdc-mock-0001*. After you create the image, push it to your ECR registry using the following command. Replace `<ACCOUNT>` and `<REGION>` with your AWS account ID and region:
 
     ```awscli
     docker pull alpine
@@ -122,17 +123,18 @@ After you completed testing the attack path, investigate the created attack path
     helm install dcspmcharts oci://mcr.microsoft.com/mdc/stable/dcspmcharts --version 1.0.0 --namespace mdc-dcspm-demo --create-namespace --set image=<ACCOUNT>.dkr.ecr.<REGION>.amazonaws.com/mdc-mock-0001 --set distribution=AWS
     ```
 
-The Helm chart deploys resources onto your cluster that can be used to infer attack paths. It also includes the vulnerable image.
+The Helm chart deploys resources onto your cluster that you can use to infer attack paths. It also includes the vulnerable image.
 
 > [!NOTE]
-> After completing the above flow, it can take up to 24 hours to see results in the cloud security explorer and attack path.
+> It can take up to 24 hours to see results in the cloud security explorer and attack path.
 
-After you completed testing the attack path, investigate the created attack path by going to **Attack path analysis**, and search for the attack path you created. For more information, see [Identify and remediate attack paths](how-to-manage-attack-path.md).
+After you finish testing the attack path, investigate the created attack path by going to **Attack path analysis**, and search for the attack path you created. For more information, see [Identify and remediate attack paths](how-to-manage-attack-path.md).
 
 ## GCP: Testing the attack path and security explorer using a mock vulnerable container image
 
-1. In the GCP portal, search for **Artifact Registry**, and then create a GCP repository named *mdc-mock-0001*
-1. Follow [these instructions](https://cloud.google.com/artifact-registry/docs/docker/pushing-and-pulling) to push the image to your repository. Run these commands:
+1. Sign in to the GCP portal.
+1. Search for **Artifact Registry**, and then create a GCP repository named *mdc-mock-0001*
+1. Follow the GCP documentation ,[Push and pull images](https://cloud.google.com/artifact-registry/docs/docker/pushing-and-pulling) to push the image to your repository. Run these commands:
 
     ```docker
     docker pull alpine
@@ -140,8 +142,8 @@ After you completed testing the attack path, investigate the created attack path
     docker push <LOCATION>-docker.pkg.dev/<PROJECT_ID>/<REGISTRY>/<REPOSITORY>/mdc-mock-0001
     ```
 
-1. Go to the GCP portal. Then go to **Kubernetes Engine** > **Clusters**. Select the **Connect** button.
-1. Once connected,  either run the command in the Cloud Shell or copy the connection command and run it on your machine:
+1. Go to **Kubernetes Engine** > **Clusters**. Select the **Connect** button.
+1. Once connected, either run the command in the Cloud Shell or copy the connection command and run it on your machine:
 
    ```gcloud-cli
    gcloud container clusters get-credentials contra-bugbash-gcp --zone us-central1-c --project onboardingc-demo-gcp-1
@@ -162,12 +164,12 @@ After you completed testing the attack path, investigate the created attack path
         helm install dcspmcharts oci:/mcr.microsoft.com/mdc/stable/dcspmcharts --version 1.0.0 --namespace mdc-dcspm-demo --create-namespace --set image=<IMAGE_URI> --set distribution=GCP
         ```
 
-The Helm chart deploys resources onto your cluster that can be used to infer attack paths. It also includes the vulnerable image.
+The Helm chart deploys resources onto your cluster that you can use to infer attack paths. It also includes the vulnerable image.
 
 > [!NOTE]
-> After completing the above flow, it can take up to 24 hours to see results in the cloud security explorer and attack path.
+> It can take up to 24 hours to see results in the cloud security explorer and attack path.
 
-After you completed testing the attack path, investigate the created attack path by going to **Attack path analysis**, and search for the attack path you created. For more information, see [Identify and remediate attack paths](how-to-manage-attack-path.md).
+After you finish testing the attack path, investigate the created attack path by going to **Attack path analysis**, and search for the attack path you created. For more information, see [Identify and remediate attack paths](how-to-manage-attack-path.md).
 
 ## Find container posture issues with cloud security explorer
 
@@ -176,20 +178,20 @@ You can build queries in one of the following ways:
 - [Explore risks with built-in cloud security explorer templates](#explore-risks-with-cloud-security-explorer-templates)
 - [Create custom queries with cloud security explorer](#create-custom-queries-with-cloud-security-explorer)
 
-In the following sections, we present examples of queries you can select or create.
+In the following sections, you can find examples of queries you can select or create.
 
 ### Explore risks with cloud security explorer templates
 
-1. From the Defender for Cloud overview page, open the cloud security explorer.
+1. Go to the Defender for Cloud overview page and open the cloud security explorer.
 
-1. Some out of the box templates for Kubernetes appear. Select one of the templates:
+1. Some out-of-the-box templates for Kubernetes appear. Select one of the templates:
 
     - **Azure Kubernetes pods running images with high severity vulnerabilities**
     - **Kubernetes namespaces contain vulnerable pods**
   
     :::image type="content" source="media/how-to-test-attack-path/select-template.png" alt-text="Screenshot showing where to select templates." lightbox="media/how-to-test-attack-path/select-template.png":::
 
-1. Select **Open query**; the template builds the query in the upper portion of the screen. Select **Search** to view the results.
+1. Select **Open query**. The template builds the query in the upper portion of the screen. Select **Search** to view the results.
 
     :::image type="content" source="media/how-to-test-attack-path/query-builder-search.png" alt-text="Screenshot that shows the query built and where to select search." lightbox="media/how-to-test-attack-path/query-builder-search.png":::
 
