@@ -27,7 +27,7 @@ This article lists hardware and software requirements for Defender for Endpoint 
 
 - [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 
-- [What's new in Defender for Endpoint on Linux](linux-whatsnew.md)
+- [What's new in Defender for Endpoint on Linux](microsoft-defender-endpoint-releases.md#linux-releases)
 
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
@@ -144,14 +144,15 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 |`fuse`|`glustrefs`|
 |`fuseblk`|`Afs`|
 |`jfs`|`sshfs`|
-|`nfs` (v3 only)|`cifs`|
-|`overlay`|`smb`|
-|`ramfs`|`gcsfuse`|
-|`reiserfs`|`sysfs`|
-|`tmpfs`|
-|`udf`|
-|`vfat`|
-|`xfs`|
+|`nfs` (v3)|`cifs`|
+|`nfs4`|`smb`|
+|`overlay`|`gcsfuse`|
+|`ramfs`|`sysfs`|
+|`reiserfs`||
+|`tmpfs`||
+|`udf`||
+|`vfat`||
+|`xfs`||
 
 > [!NOTE]
 > To scan NFS v3 mount points, make sure to set the `no_root_squash` export option. Without this option, scanning NFS v3 can potentially fail due to lack of permissions.
