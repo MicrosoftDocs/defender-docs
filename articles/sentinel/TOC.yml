@@ -710,6 +710,8 @@
               href: connect-services-diagnostic-setting-based.md
             - name: Connect via Windows agent-based connectors
               href: connect-services-windows-based.md
+            - name: Connect via Azure Storage connectors 
+              href: setup-azure-storage-connector.md              
         - name: Azure Functions API connection
           href: connect-azure-functions-template.md
         - name: CEF/Syslog
