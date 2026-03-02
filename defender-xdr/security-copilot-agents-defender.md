@@ -83,7 +83,7 @@ The [Phishing Triage Agent](phishing-triage-agent.md) helps security operations 
 |---|---|
 | Identity | Operates in the context of the user you connect to the agent |
 | License | [Microsoft Defender for Office P2](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)|
-| Permissions | The agent requires these permissions to operate:<ul><li>Read Security data basics (read)<li>Email & collaboration content (read)<li>Email & collaboration metadata (read)<li>Security Copilot (read)<li>Alerts (manage)</ul> |
+| Permissions | The agent requires these permissions to operate:<ul><li>Security data basics (read)<li>Alerts (manage)<li>Security Copilot (read)<li>Email & collaboration metadata (read)<li>Email & collaboration content (read)</ul> |
 | Plugins | The agent automatically activates these Security Copilot plugins:<ul><li>[Microsoft Defender XDR](security-copilot-in-microsoft-365-defender.md)<li>[Microsoft Threat Intelligence](/defender/threat-intelligence/security-copilot-and-defender-threat-intelligence)<li>[Phishing Triage Agent](phishing-triage-agent.md)|
 | Products | <ul><li>[Security Copilot](/copilot/security/get-started-security-copilot)<li>Microsoft Defender for Office 365 Plan 2</ul> | 
 | Role-based access | [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator) Microsoft Entra role is required to set up and manage the agent<br><br>Users with the same permissions as the Phishing Triage Agent can view the agent's activity and results, and provide feedback on the agent's classification verdict. |
