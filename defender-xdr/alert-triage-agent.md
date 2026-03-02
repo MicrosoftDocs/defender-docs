@@ -55,7 +55,7 @@ The Alert Triage Agent currently supports these alert types in Microsoft Defende
 |:---|:---|:---|
 | **Phishing incidents** | Microsoft Defender for Office 365 | User‑reported phishing alerts. |
 | **Container incident triage (Preview)** | Microsoft Defender for Cloud |  |
-| | Microsoft Defender for Identity |  |
+
 
 ## Prerequisites
 
@@ -163,13 +163,7 @@ In alignment with [the principle of least privileges](/entra/identity-platform/s
 
 ##### Alert Triage Agent required permissions
 
-The agent identity needs these permissions to access emails, analyze their content, and manage alerts:
-
-- **Security data basics (read):** Used to access basic security data, such as alerts and incidents.
-- **Alerts (manage):** Used to classify the alert and monitor the alert’s state, preventing override of the alert status.
-- **Security Copilot (read):** Used to access Security Copilot capabilities.
-- **Email & collaboration metadata (read):** Used to access metadata for user reported emails.
-- **Email & collaboration content (read):** Used to read the content of user reported emails needed to do the analysis.
+The Alert Triage Agent requires specific permissions to access the necessary data and perform its triage functions. The required permissions depend on the alert types and associated products you want the agent to work with.
 
 This table summarizes the required permissions and data scopes for each alert type:
 
@@ -177,7 +171,6 @@ This table summarizes the required permissions and data scopes for each alert ty
 |:---|:---|:---|
 | **Phishing** | Security Copilot (read), Security data basics (read), Alerts (manage), Email & collaboration metadata (read), Email & collaboration content (read) | Microsoft Defender for Office 365 |
 | **Container (Preview)** | Security Copilot (read), Security data basics (read), Alerts (manage) | Microsoft Defender for Cloud |
-| **Identity (Preview)** | Security Copilot (read), Security data basics (read), Alerts (manage) | Microsoft Defender for Identity |
 
 
 These permissions are under the **Security operations** permissions group:
