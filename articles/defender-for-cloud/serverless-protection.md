@@ -2,7 +2,7 @@
 title: What is Serverless protection
 description: Learn about Serverless protection in Microsoft Defender for Cloud and how it helps secure your serverless resources.
 ms.topic: overview
-ms.date: 12/01/2025
+ms.date: 03/01/2026
 #customer intent: As a reader, I want to understand what Serverless protection is in Microsoft Defender for Cloud.
 ---
 
@@ -17,6 +17,8 @@ Serverless protection automatically discovers and inventories all Web Apps, Azur
 Serverless protection is available as part of the [Defender Cloud Security Posture Management (CSPM) plan](concept-cloud-security-posture-management.md#cspm-plans). 
 
 To enable serverless protection, you must [Enable the Defender CSPM plan](tutorial-enable-cspm-plan.md) on your subscription, and [enable the Serverless protection component](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan) of the Defender CSPM plan.
+
+See [limitations](#limitations) for serverless resources.
 
 ## Benefits of serverless protection
 
@@ -71,6 +73,14 @@ Defender for Cloud's Cloud Security Explorer provides advanced filtering and que
 
 Learn how to [build queries with cloud security explorer](how-to-manage-cloud-security-explorer.md).
 
+## Limitations
+
+Serverless resources that are eligible for vulnerability assessment are the following:
+- **Power State**: Web Apps and Function Apps with ‘Running’ power state.
+- **Internet Access**: Web Apps and Function Apps with access to the internet
+- **Kind**: WebApps and Function Apps with the following ‘kind’ values are not scanned:
+   - app,migration; functionapp,botapp; app,linux,aspiredashboard; app,container,xenon; app,botapp; app,linux,Kubernetes; app,functionapp,windows; functionapp,linux,container,Kubernetes; app,linux,container,Kubernetes; app,xenon; functionapp,linux,Kubernetes; app,functionapp
+ 
 ## Related content
 
 - [Protect your resources with Defender CSPM](tutorial-enable-cspm-plan.md)
