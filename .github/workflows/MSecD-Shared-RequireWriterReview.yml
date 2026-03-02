@@ -57,14 +57,14 @@ jobs:
           
           echo "Label removed successfully."
           
-          # Add 'removed-qualifies-for-auto-merge' label
+          # Add 'blocked-qualifies-for-auto-merge' label
           curl -s -X POST \
             -H "Authorization: token $GITHUB_TOKEN" \
             -H "Accept: application/vnd.github.v3+json" \
             "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels" \
-            -d '{"labels":["removed-qualifies-for-auto-merge"]}'
+            -d '{"labels":["blocked-qualifies-for-auto-merge"]}'
           
-          echo "Added 'removed-qualifies-for-auto-merge' label."
+          echo "Added 'blocked-qualifies-for-auto-merge' label."
           
           # Add a comment explaining why the label was removed
           COMMENT_BODY="The 'qualifies-for-auto-merge' label was removed because the PR author is not an authorized approver.\nOnly authorized approvers can have their PRs qualify for auto-merge.\nIf you believe this PR qualifies for auto-merge, please contact an authorized reviewer."
@@ -132,22 +132,22 @@ jobs:
           PR_NUMBER: ${{ github.event.pull_request.number || github.event.issue.number }}
           REPO: ${{ github.repository }}
         run: |
-          # Check if PR has 'removed-qualifies-for-auto-merge' label
+          # Check if PR has 'blocked-qualifies-for-auto-merge' label
           PR_DATA=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
             "https://api.github.com/repos/$REPO/issues/$PR_NUMBER")
           
-          HAS_REMOVED_LABEL=$(echo "$PR_DATA" | jq -r '[.labels[].name] | contains(["removed-qualifies-for-auto-merge"])')
+          HAS_REMOVED_LABEL=$(echo "$PR_DATA" | jq -r '[.labels[].name] | contains(["blocked-qualifies-for-auto-merge"])')
           
           if [ "$HAS_REMOVED_LABEL" = "true" ]; then
-            echo "Author '$SIGNOFF_AUTHOR' is now authorized and PR has 'removed-qualifies-for-auto-merge' label. Restoring auto-merge label..."
+            echo "Author '$SIGNOFF_AUTHOR' is now authorized and PR has 'blocked-qualifies-for-auto-merge' label. Restoring auto-merge label..."
             
-            # Remove 'removed-qualifies-for-auto-merge' label
+            # Remove 'blocked-qualifies-for-auto-merge' label
             curl -s -X DELETE \
               -H "Authorization: token $GITHUB_TOKEN" \
               -H "Accept: application/vnd.github.v3+json" \
-              "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels/removed-qualifies-for-auto-merge"
+              "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels/blocked-qualifies-for-auto-merge"
             
-            echo "Removed 'removed-qualifies-for-auto-merge' label."
+            echo "Removed 'blocked-qualifies-for-auto-merge' label."
             
             # Add 'qualifies-for-auto-merge' label
             curl -s -X POST \
@@ -158,7 +158,7 @@ jobs:
             
             echo "Added 'qualifies-for-auto-merge' label."
           else
-            echo "Author is authorized but PR does not have 'removed-qualifies-for-auto-merge' label. Skipping."
+            echo "Author is authorized but PR does not have 'blocked-qualifies-for-auto-merge' label. Skipping."
           fi
 
       - name: Add hold-off comment if not authorized
