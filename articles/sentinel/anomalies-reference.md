@@ -69,7 +69,7 @@ UEBA detects anomalies based on these anomaly rules:
 - [UEBA Anomalous Defensive Mechanism Modification](#ueba-anomalous-defensive-mechanism-modification)
 - [UEBA Anomalous Failed Sign-in](#ueba-anomalous-failed-sign-in)
 - [UEBA Anomalous Federated or SAML Identity Activity in AwsCloudTrail](#ueba-anomalous-federated-or-saml-identity-activity-in-awscloudtrail)
-- [UEBA Anomalous IAM Privilege Modification in AwsCloudTrail)](#ueba-anomalous-iam-privilege-modification-in-awscloudtrail)
+- [UEBA Anomalous IAM Privilege Modification in AwsCloudTrail](#ueba-anomalous-iam-privilege-modification-in-awscloudtrail)
 - [UEBA Anomalous Logon in AwsCloudTrail](#ueba-anomalous-logon-in-awscloudtrail)
 - [UEBA Anomalous MFA Failures in Okta_CL](#ueba-anomalous-mfa-failures-in-okta_cl)
 - [UEBA Anomalous Password Reset](#ueba-anomalous-password-reset)
