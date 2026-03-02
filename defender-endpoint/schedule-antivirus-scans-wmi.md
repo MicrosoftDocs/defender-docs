@@ -35,7 +35,7 @@ This article describes how to configure scheduled scans using WMI. To learn more
 - Windows
 - Windows Server
 
-## Use Windows Management Instruction (WMI) to schedule scans
+## Use Windows Management Instrumentation (WMI) to schedule scans
 
 Use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class for the following properties:
 
