@@ -9,7 +9,7 @@ env:
   TEST_USER: 'SomeTestUser' # Set to a GitHub username to override the event-derived user for testing
 
 jobs:
-  require-writer-review:
+  enforce-policy:
     if: >-
       (github.event_name == 'pull_request_target' && github.event.action == 'labeled' && github.event.label.name == 'qualifies-for-auto-merge')
       || github.event_name == 'workflow_call'
