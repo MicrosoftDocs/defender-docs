@@ -8,7 +8,7 @@ ms.topic: reference
 ms.date: 9/30/2024
 ms.author: edbaynash
 
-#Customer intent: As a security engineer, I want to reference paging, authentication and payload options to create and configure RestApiPoller data connectors using the Codeless Connector Framework so that I can integrate a specific data source into Microsoft Sentinel without writing custom code.
+#Customer intent: As a security engineer, I want to reference paging, authentication and payload options to create and configure RestApiPoller data connectors by using the Codeless Connector Framework so that I can integrate a specific data source into Microsoft Sentinel without writing custom code.
 
 ---
 
@@ -24,7 +24,7 @@ For more information, see [Create a codeless connector for Microsoft Sentinel](c
 
 Find the latest stable or preview API version by referencing the [`create` or `update`](/rest/api/securityinsights/data-connectors/create-or-update) operations in the REST API docs. The difference between the `create` and `update` operations is that `update` requires the `etag` value.
 
-PUT method:
+`PUT` method:
 
 ```http
 https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroupName}}/providers/Microsoft.OperationalInsights/workspaces/{{workspaceName}}/providers/Microsoft.SecurityInsights/dataConnectors/{{dataConnectorId}}?api-version={{apiVersion}}
@@ -36,10 +36,10 @@ For more information about the latest API version, see [Data connectors: create 
 
 |Name  | Description  |
 |---------|---------|
-| `dataConnectorId` | The data connector ID must be a unique name. It's same as the `name` parameter in the [request body](#request-body).|
-| `resourceGroupName` | The name of the resource group, not case sensitive.  |
+| `dataConnectorId` | The data connector ID. It must be a unique name that's the same as the `name` parameter in the [request body](#request-body). |
+| `resourceGroupName` | The name of the resource group, not case sensitive. |
 | `subscriptionId` | The ID of the target subscription. |
-| `workspaceName` | The *name* of the workspace, not the ID.<br>Regex pattern: `^[A-Za-z0-9][A-Za-z0-9-]+[A-Za-z0-9]$` |
+| `workspaceName` | The *name* of the workspace, not the ID.<br> The regex pattern is `^[A-Za-z0-9][A-Za-z0-9-]+[A-Za-z0-9]$`. |
 | `api-version` | The API version to use for this operation. |
 
 ## Request body
@@ -65,19 +65,19 @@ The request body for a `RestApiPoller` CCF data connector has the following stru
 
 ### RestApiPoller
 
-`RestApiPoller` is an API Poller CCF data connector that you can use to customize paging, authorization, and request/response payloads for your data source.
+`RestApiPoller` is an API poller CCF data connector that you can use to customize paging, authorization, and request/response payloads for your data source.
 
 | Name | Required | Type | Description |
 | ---- | ---- | ---- | ---- |
-| `name` | True | string | The unique name of the connection that matches the URI parameter. |
-| `kind` | True | string | Must be `RestApiPoller`. |
-| `etag` |  | GUID | Leave empty for new connector creation. For update operations, `etag` must match the existing connector `etag` (GUID). |
-| `properties.connectorDefinitionName` |  | string | The name of the `DataConnectorDefinition` resource that defines the UI configuration of the data connector. For more information, see [Data Connector Definition](create-codeless-connector.md#data-connector-user-interface). |
-| properties.**auth**	| True | Nested JSON | Describes the authentication properties for polling the data. For more information, see [authentication configuration](#authentication-configuration). |
-| properties.**request** | True | Nested JSON | Describes the request payload for polling the data, such as the API endpoint. For more information, see [request configuration](#request-configuration). |
-| properties.**response** | True | Nested JSON | Describes the response object and nested message the API returns when it polls the data. For more information, see [response configuration](#response-configuration). |
-| properties.**paging** |  | Nested JSON | Describes the pagination payload when polling the data. For more information, see [paging configuration](#paging-configuration). |
-| properties.**dcrConfig** |  | Nested JSON | Required parameters when the data is sent to a Data Collection Rule (DCR). For more information, see [DCR configuration](#dcr-configuration). |
+| `name` | True | String | The unique name of the connection that matches the URI parameter. |
+| `kind` | True | String | The `kind` value. This field must be set to `RestApiPoller`. |
+| `etag` |  | GUID | The `etag` value. This field must be left empty for new connector creation. For update operations, `etag` must match the existing connector `etag` (GUID). |
+| `properties.connectorDefinitionName` |  | String | The name of the `DataConnectorDefinition` resource that defines the UI configuration of the data connector. For more information, go to [Data connector definition](create-codeless-connector.md#data-connector-user-interface). |
+| `properties.auth`	| True | Nested JSON | The authentication properties for polling the data. For more information, go to [Authentication configuration](#authentication-configuration). |
+| `properties.request` | True | Nested JSON | The request payload for polling the data, such as the API endpoint. For more information, go to [Request configuration](#request-configuration). |
+| `properties. response` | True | Nested JSON | The response object and nested message the API returns when it polls the data. For more information, go to [Response configuration](#response-configuration). |
+| `properties.paging` |  | Nested JSON | The pagination payload when polling the data. For more information, go to [Paging configuration](#paging-configuration). |
+| `properties.dcrConfig` |  | Nested JSON | The required parameters when the data is sent to a data collection rule (DCR). For more information, go to [DCR configuration](#dcr-configuration). |
 
 ## Authentication configuration
 
@@ -91,20 +91,20 @@ The CCF supports the following authentication types:
 > [!NOTE]
 > CCF OAuth2 implementation doesn't support client certificate credentials.
 
-As a best practice, use parameters in the auth section instead of hard-coding credentials. For more information, see [Secure confidential input](create-codeless-connector.md#secure-confidential-input).
+As a best practice, use parameters in the authentication section instead of hard-coding credentials. For more information, see [Secure confidential input](create-codeless-connector.md#secure-confidential-input).
 
 To create the deployment template, which also uses parameters, you need to escape the parameters in this section with an extra starting `[`. This step allows the parameters to assign a value based on the user interaction with the connector. For more information, see [Template expressions escape characters](../azure-resource-manager/templates/template-expressions.md#escape-characters).
 
 To enable the credentials to be entered from the UI, the `connectorUIConfig` section requires you enter the desired parameters in `instructions`. For more information, see [Data connector definitions reference for the Codeless Connector Framework](data-connector-ui-definitions-reference.md#instructions).
 
-#### Basic auth
+#### Basic authentication
 
 | Field | Required | Type |
 | ---- | ---- | ---- |
-| `UserName` | True | string |
-| `Password` | True | string |
+| `UserName` | True | String |
+| `Password` | True | String |
 
-Example basic auth using parameters defined in `connectorUIconfig`:
+Here's an example of basic authentication that uses parameters defined in `connectorUIconfig`:
 
 ```json
 "auth": {
@@ -118,12 +118,12 @@ Example basic auth using parameters defined in `connectorUIconfig`:
 
 | Field | Required | Type | Description | Default value |
 | ---- | ---- | ---- | ---- | ---- |
-| `ApiKey` | True | string | User secret key | |
-| `ApiKeyName` | | string | Name of the URI header that contains the `ApiKey` value. | `Authorization` | 
-| `ApiKeyIdentifier` | | string | String value to prepend the token. | `token` |
-| `IsApiKeyInPostPayload` | | boolean | Send secret in `POST` body instead of header. | `false` |
+| `ApiKey` | True | String | User secret key. | |
+| `ApiKeyName` | | String | Name of the URI header that contains the `ApiKey` value. | `Authorization` | 
+| `ApiKeyIdentifier` | | String | String value to prepend the token. | `token` |
+| `IsApiKeyInPostPayload` | | Boolean | This value determines whether to send the secret in the `POST` body instead of header. | `false` |
 
-`APIKey` auth examples:
+`APIKey` authentication examples:
 
 ```json
 "auth": {
@@ -153,7 +153,7 @@ This example uses the default values and results in the following header: Author
 }
 ```
 
-Since `ApiKeyName` is explicitly set to `""`, the result is the following header: Authorization: `123123123`.
+Because `ApiKeyName` is explicitly set to `""`, the result is the following header: Authorization: `123123123`.
 
 #### OAuth2
 
@@ -164,22 +164,21 @@ After the user returns to the client via the redirect URL, the application will 
 |Field | Required | Type | Description |
 | ---- | ---- | ---- | ---- | 
 | `ClientId` | True	| String | The client ID |
-| `ClientSecret`	| True | String | The client secret |
-| `AuthorizationCode` | True when grantType = `authorization_code` |	String | If the grant type is `authorization_code` this field value is the authorization code returned from the auth serve. |
-| `Scope` | True for `authorization_code` grant type<br> optional for `client_credentials` grant type| String | A space-separated list of scopes for user consent. For more information, see [OAuth2 scopes and permissions](/entra/identity-platform/scopes-oidc). |
-| `RedirectUri` | True when grantType = `authorization_code` | String | URL for redirect must be `https://portal.azure.com/TokenAuthorize/ExtensionName/Microsoft_Azure_Security_Insights`. |
-| `GrantType` | True | String | `authorization_code` or `client_credentials` |
-| `TokenEndpoint` | True | String | URL to exchange code with valid token in `authorization_code` grant or client ID and secret with valid token in `client_credentials` grant. |
-| `TokenEndpointHeaders` |  | Object | An optional key/value object to send custom headers to token server. |
-| `TokenEndpointQueryParameters` |  | Object | An optional key/value object to send custom query params to token server. |
-| `AuthorizationEndpoint`	| True | String | URL for user consent for `authorization_code` flow. |
-| `AuthorizationEndpointHeaders` |	 | Object | An optional key/value object to send custom headers to auth server. |
-| `AuthorizationEndpointQueryParameters`	|  | Object | An optional key/value pair used in OAuth2 authorization code flow request. |
+| `ClientSecret`| True | String | The client secret |
+| `AuthorizationCode` | True when the `grantType` value is `authorization_code` | String | If the grant type is `authorization_code`, this field value is the authorization code that the authentication server returned. |
+| `Scope` | True for the `authorization_code` grant type.<br> Optional for the `client_credentials` grant type. | String | A space-separated list of scopes for user consent. For more information, see [OAuth2 scopes and permissions](/entra/identity-platform/scopes-oidc). |
+| `RedirectUri` | True when the `grantType` value is `authorization_code`. | String | The URL for redirect must be `https://portal.azure.com/TokenAuthorize/ExtensionName/Microsoft_Azure_Security_Insights`. |
+| `GrantType` | True | String | The grant type is `authorization_code` or `client_credentials`. |
+| `TokenEndpoint` | True | String | URL to exchange code with a valid token in the `authorization_code` grant, or a client ID and secret with a valid token in the `client_credentials` grant. |
+| `TokenEndpointHeaders` |  | Object | An optional key/value object to send custom headers to the token server. |
+| `TokenEndpointQueryParameters` |  | Object | An optional key/value object to send custom query parameters to the token server. |
+| `AuthorizationEndpoint`	| True | String | The URL for user consent for the `authorization_code` flow. |
+| `AuthorizationEndpointHeaders` |	 | Object | An optional key/value object to send custom headers to the authentication server. |
+| `AuthorizationEndpointQueryParameters`	|  | Object | An optional key/value pair used in an OAuth2 authorization code flow request. |
 
-Auth code flow is for fetching data on behalf of a user's permissions and client credentials is for fetching data with application permissions. The data server grants access to the application. Since there's no user in client credentials flow, no authorization endpoint is needed, only a token endpoint.
+You can use authentication code flow to fetch data on behalf of a user's permissions. You can use client credentials to fetch data with application permissions. The data server grants access to the application. Because there's no user in client credentials flow, no authorization endpoint is needed, only a token endpoint.
 
-Example:
-OAuth2 `authorization_code` grant type
+Here's an example of the OAuth2 `authorization_code` grant type:
 
 ```json
 "auth": {
@@ -203,8 +202,7 @@ OAuth2 `authorization_code` grant type
 }
 ```
 
-Example:
-OAuth2 `client_credentials` grant type
+Here's an example of the OAuth2 `client_credentials` grant type:
 
 ```json
 "auth": {
@@ -269,7 +267,7 @@ JSON Web Token (JWT) authentication supports obtaining tokens via username and p
 }
 ```
 
-##### Credentials in headers (basic auth)
+##### Credentials in headers (basic authentication)
 
 ```json
 "auth": {
@@ -314,45 +312,45 @@ Authentication flow:
 
 1. Send credentials to `TokenEndpoint` to obtain JWT token.
 
-   - If `IsCredentialsInHeaders: true`: Sends Basic Auth header with `username:password`.
-   - If `IsCredentialsInHeaders: false`: Sends credentials in POST body.
+   - If `IsCredentialsInHeaders: true`: Sends a basic authentication header with `username:password`.
+   - If `IsCredentialsInHeaders: false`: Sends credentials in a `POST` body.
 
-2. Extract token by using `JwtTokenJsonPath` or from response header.
+2. Extract the token by using `JwtTokenJsonPath` or from the response header.
 
-3. Use token in subsequent API requests with the `ApiKeyName` header.
+3. Use the token in subsequent API requests with the `ApiKeyName` header.
 
 Properties:
 
 |Field |Required |Type |Description	|
 | ---- | ---- | ---- | ---- |
-| `type`                      | True      | String   | Must be `JwtToken` |
-| `userName`                  | True (if `userToken` isn't used)      | Object   | Key/value pair for username credential. If `userName` and `password` are sent in header request, specify the `value` property with the username. If `userName` and `password` sent in body request, specify `Key` and `Value`. |
-| `password`                  | True (if `userToken` isn't used)     | Object   | Key/value pair for password credential. If `userName` and `password` are sent in header request, specify the `value` property with the username. If `userName` and `password` sent in body request, specify `Key` and `Value`. |
-| `userToken`                  | True (if `userName` isn't used)     | String   | User token generated by the client to get system token for authentication. |
-| `UserTokenPrepend`                  | False     | String   | Prepend text before the token. Example: `Bearer`. |
-| `NoAccessTokenPrepend`                  | False     | Boolean   | Access flag to indicate token shouldn't prepend anything. |
-| `TokenEndpointHttpMethod`                  | False     | String   | HTTP method to token endpoint. Can be `Get` or `Post`. Default: `Post`. |
-| `TokenEndpoint`             | True      | String   | URL endpoint to obtain the JWT token. |
-| `IsCredentialsInHeaders`    |           | Boolean  | Send credentials as Basic Auth header (`true`) vs POST body (`false`). Default: `false`. |
-| `IsJsonRequest`             |           | Boolean  | Send request as JSON (header `Content-Type = application/json`) vs form-encoded (header `Content-Type = application/x-www-form-urlencoded`). Default: `false`. |
-| `JwtTokenJsonPath`          |           | String   | JSONPath to extract the token from response (like "`$.access_token`"). |
-| `JwtTokenInResponseHeader`  |           | Boolean  | Extract token from the response header vs body. Default: `false`. |
-| `JwtTokenHeaderName`.        |           | String   | Header name when token is in the response header. Default: "`Authorization`" |
-| `JwtTokenIdentifier`        |           | String   | Identifier used to extract the JWT from a prefixed token string. |
-| `QueryParameters`           |           | Object   | Custom query parameters to include when sending the request to the token endpoint. |
-| `Headers`                   |           | Object   | Custom headers to include when sending the request to the token endpoint. |
-| `RequestTimeoutInSeconds`   |           | Integer  | Request timeout in seconds. Default: `100`, Max `180`. |
+| `type`                      | True      | String   | The type. Must be `JwtToken` |
+| `userName`                  | True (if `userToken` isn't used)      | Object   | The key/value pair for the `userName` credential. If `userName` and `password` are sent in the header request, specify the `value` property with the username. If `userName` and `password` are sent in the body request, specify `Key` and `Value`. |
+| `password`                  | True (if `userToken` isn't used).     | Object   | The key/value pair for the password credential. If `userName` and `password` are sent in the header request, specify the `value` property with the `userName`. If `userName` and `password` are sent in the body request, specify `Key` and `Value`. |
+| `userToken`                  | True (if `userName` isn't used)     | String   | The user token generated by the client to get the system token for authentication. |
+| `UserTokenPrepend`                  | False     | String   | The value that indicates whether to prepend text before the token. Example: `Bearer`. |
+| `NoAccessTokenPrepend`                  | False     | Boolean   | An access flag that indicates that the token shouldn't prepend anything. |
+| `TokenEndpointHttpMethod`                  | False     | String   | The HTTP method to token endpoint. It can be `Get` or `Post`. The default is `Post`. |
+| `TokenEndpoint`             | True      | String   | The URL endpoint that's used to obtain the JWT token. |
+| `IsCredentialsInHeaders`    |           | Boolean  | This value indicates whether to send credentials as a basic authentication header (`true`) versus a `POST` body (`false`). The default is `false`. |
+| `IsJsonRequest`             |           | Boolean  | This value indicates whether to send the request in JSON (header `Content-Type = application/json`) versus form-encoded (header `Content-Type = application/x-www-form-urlencoded`). The default is `false`. |
+| `JwtTokenJsonPath`          |           | String   | This value indicates the `JSONPath` value to use to extract the token from the response. For example: "`$.access_token`"). |
+| `JwtTokenInResponseHeader`  |           | Boolean  | This value indicates whether to extract the token from the response header versus the body. The default is `false`. |
+| `JwtTokenHeaderName`.        |           | String   | This value indicates the header name when the token is in the response header. The default is "`Authorization`" |
+| `JwtTokenIdentifier`        |           | String   | The identifier used to extract the JWT from a prefixed token string. |
+| `QueryParameters`           |           | Object   | The custom query parameters to include when sending the request to the token endpoint. |
+| `Headers`                   |           | Object   | The custom headers to include when sending the request to the token endpoint. |
+| `RequestTimeoutInSeconds`   |           | Integer  | The request timeout in seconds. The default value is `100`, with a maximum value of `180`. |
 
 Authentication flow:
 
-1. Send credentials to `TokenEndpoint` to obtain JWT token
+1. Send credentials to `TokenEndpoint` to obtain the JWT token.
 
-   - If `IsCredentialsInHeaders: true`: Sends Basic Auth header with `username:password`.
-   - If `IsCredentialsInHeaders: false`: Sends credentials in POST body.
+   - If `IsCredentialsInHeaders: true`: Sends a basic authentication header with `username:password`.
+   - If `IsCredentialsInHeaders: false`: Sends credentials in a `POST` body.
 
-2. Extract token using `JwtTokenJsonPath` or from response header.
+2. Extract the token by using `JwtTokenJsonPath` or from the response header.
 
-3. Use token in subsequent API requests with `ApiKeyName` header.
+3. Use the token in subsequent API requests with the `ApiKeyName` header.
 
    > [!NOTE]
    > Limitations
@@ -361,38 +359,38 @@ Authentication flow:
    > - Doesn't support API key-based token requests.
    > - Custom header authentication (without username and password) isn't supported.
 
-## Request configuration 
+## Request configuration
 
 The request section defines how the CCF data connector sends requests to your data source (for example, the API endpoint and how often to poll that endpoint).
 
 |Field |Required |Type |Description	|
 | ---- | ---- | ---- | ---- |
-| `ApiEndpoint` | True | String | URL for remote server. Defines the endpoint from which to pull data. |
-| `RateLimitQPS` |  | Integer | Defines the number of calls or queries allowed in a second. |
-| `RateLimitConfig` |  | Object | Defines the rate-limit configuration for the RESTful API. See [example](#ratelimitconfig-example). |
-| `QueryWindowInMin` |  | Integer | Defines the available query window in minutes. Minimum is 1 minute. The default is 5 minutes.|
-| `HttpMethod` |  | String | Defines the API method: `GET`(default) or `POST` |
-| `QueryTimeFormat` |  | String | Defines the date and time format the endpoint (remote server) expects. The CCF uses the current date and time wherever this variable is used. Possible values are the constants: `UnixTimestamp`, `UnixTimestampInMills`, or any other valid representation of date and time, for example: `yyyy-MM-dd`, `MM/dd/yyyy HH:mm:ss`.<br> The default is `ISO 8601 UTC`. |
-| `RetryCount` |  | Integer (1...6) | Defines that values of `1` to `6` retries are allowed to recover from a failure. The default value is `3`. |
-| `TimeoutInSeconds` |  | Integer (1...180) | Defines the request timeout in seconds. The default value is `20`. |
-| `IsPostPayloadJson` |  | Boolean | Determines whether the POST payload is in JSON format. The default value is `false`. |
-| `Headers` |  | Object | Key/value pairs that define the request headers. |
-| `QueryParameters` |  | Object | Key/value pairs that define the request query parameters. |
-| `StartTimeAttributeName` | True when the `EndTimeAttributeName` value is set. | String | Defines the query parameter name for query start time. See [example](#starttimeattributename-example). |
-| `EndTimeAttributeName` | True when `StartTimeAttributeName` is set. | String | Defines the query parameter name for query end time. |
-| `QueryTimeIntervalAttributeName` |  | String | If the endpoint requires a specialized format for querying the data on a timeframe, use this property with the `QueryTimeIntervalPrepend` and the `QueryTimeIntervalDelimiter` parameters. See [example](#querytimeintervalattributename-example). |
-| `QueryTimeIntervalPrepend` | True when `QueryTimeIntervalAttributeName` is set. | String | See `QueryTimeIntervalAttributeName`. |
-| `QueryTimeIntervalDelimiter` |  True when `QueryTimeIntervalAttributeName` is set. | String | See `QueryTimeIntervalAttributeName`. |
-| `QueryParametersTemplate` |  | String | Query template to use when passing parameters in advanced scenarios.<br>br>For example: `"queryParametersTemplate": "{'cid': 1234567, 'cmd': 'reporting', 'format': 'siem', 'data': { 'from': '{_QueryWindowStartTime}', 'to': '{_QueryWindowEndTime}'}, '{_APIKeyName}': '{_APIKey}'}"`. |
+| `ApiEndpoint` | True | String | This field determines the URL for the remote server and defines the endpoint from which to pull data. |
+| `RateLimitQPS` |  | Integer | This field defines the number of calls or queries allowed in a second. |
+| `RateLimitConfig` |  | Object | This field defines the rate-limit configuration for the RESTful API. For more, go to [`RateLimitConfig` example](#ratelimitconfig-example). |
+| `QueryWindowInMin` |  | Integer | This field defines the available query window in minutes. The minimum is 1 minute. The default is 5 minutes.|
+| `HttpMethod` |  | String | This field defines the API method: `GET`(default) or `POST`. |
+| `QueryTimeFormat` |  | String | This field defines the date and time format the endpoint (remote server) expects. The CCF uses the current date and time wherever this variable is used. Possible values are the constants: `UnixTimestamp`, `UnixTimestampInMills`, or any other valid representation of date and time. For example: `yyyy-MM-dd`, `MM/dd/yyyy HH:mm:ss`.<br> The default is `ISO 8601 UTC`. |
+| `RetryCount` |  | Integer (1...6) | This field defines that values of `1` to `6` retries are allowed to recover from a failure. The default value is `3`. |
+| `TimeoutInSeconds` |  | Integer (1...180) | This field defines the request timeout in seconds. The default value is `20`. |
+| `IsPostPayloadJson` |  | Boolean | This field determines whether the `POST` payload is in JSON format. The default value is `false`. |
+| `Headers` |  | Object | This field includes key/value pairs that define the request headers. |
+| `QueryParameters` |  | Object | This field includes Key/value pairs that define the request query parameters. |
+| `StartTimeAttributeName` | True when the `EndTimeAttributeName` value is set. | String | This field defines the query parameter name for the query start time. For more, go to [`StartTimeAttributeName` example](#starttimeattributename-example). |
+| `EndTimeAttributeName` | True when `StartTimeAttributeName` is set. | String | This field defines the query parameter name for query end time. |
+| `QueryTimeIntervalAttributeName` |  | String | This field is used if the endpoint requires a specialized format for querying the data on a time frame. Use this property with the `QueryTimeIntervalPrepend` and the `QueryTimeIntervalDelimiter` parameters. For more, go to [`QueryTimeIntervalAttributeName` example](#querytimeintervalattributename-example). |
+| `QueryTimeIntervalPrepend` | True when `QueryTimeIntervalAttributeName` is set. | String | Reference `QueryTimeIntervalAttributeName`. |
+| `QueryTimeIntervalDelimiter` |  True when `QueryTimeIntervalAttributeName` is set. | String | Reference `QueryTimeIntervalAttributeName`. |
+| `QueryParametersTemplate` |  | String | This field references the query template to use when passing parameters in advanced scenarios.<br><br>For example: `"queryParametersTemplate": "{'cid': 1234567, 'cmd': 'reporting', 'format': 'siem', 'data': { 'from': '{_QueryWindowStartTime}', 'to': '{_QueryWindowEndTime}'}, '{_APIKeyName}': '{_APIKey}'}"`. |
 
-When the API requires complex parameters, use the `queryParameters` or `queryParametersTemplate`, which include some built-in variables.
+When the API requires complex parameters, use `queryParameters` or `queryParametersTemplate`. These commands include some built-in variables.
 
 | Built-in variable | For use in `queryParameters` | For use in `queryParametersTemplate` |
 | ---- | ---- | ---- |
-| `_QueryWindowStartTime` | yes | yes |
-| `_QueryWindowEndTime` | yes | yes |
-| `_APIKeyName` | no | yes |
-| `_APIKey` | no | yes |
+| `_QueryWindowStartTime` | Yes | Yes |
+| `_QueryWindowEndTime` | Yes | Yes |
+| `_APIKeyName` | No | Yes |
+| `_APIKey` | No | Yes |
 
 ### StartTimeAttributeName example
 
@@ -402,7 +400,7 @@ Consider this example:
 - `EndTimeAttributeName` = `until`
 - `ApiEndpoint` = `https://www.example.com`
 
-The query sent to the remote server is: `https://www.example.com?from={QueryTimeFormat}&until={QueryTimeFormat + QueryWindowInMin}`
+The query sent to the remote server is: `https://www.example.com?from={QueryTimeFormat}&until={QueryTimeFormat + QueryWindowInMin}`.
 
 ### QueryTimeIntervalAttributeName example
 
@@ -413,13 +411,13 @@ Consider this example:
 - `QueryTimeIntervalDelimiter` = `..`
 - `ApiEndpoint` = `https://www.example.com`
 
-The query sent to the remote server is: `https://www.example.com?interval=time:{QueryTimeFormat}..{QueryTimeFormat + QueryWindowInMin}`
+The query sent to the remote server is: `https://www.example.com?interval=time:{QueryTimeFormat}..{QueryTimeFormat + QueryWindowInMin}`.
 
 ### RateLimitConfig example
 
 Consider this example:
 
-- `ApiEndpoint` = `https://www.example.com`
+`ApiEndpoint` = `https://www.example.com`.
 
 ```json
 "rateLimitConfig": {
@@ -451,7 +449,7 @@ Consider this example:
 
 When the response includes rate limit headers, the connector can use this information to adjust its request rate.
 
-### Request examples that use Microsoft Graph as data source API
+### Request examples that use Microsoft Graph as the data source API
 
 This example queries messages with a filter query parameter. For more information, see [Microsoft Graph API query parameters](/graph/use-the-api#query-parameters).
 
@@ -473,7 +471,7 @@ This example queries messages with a filter query parameter. For more informatio
 }
 ```
 
-The previous example sends a `GET` request to `https://graph.microsoft.com/v1.0/me/messages?filter=receivedDateTime gt {time of request} and receivedDateTime lt 2019-09-01T17:00:00.0000000`. The timestamp updates for each `queryWindowInMin` time.
+The previous example sends a `GET` request to `https://graph.microsoft.com/v1.0/me/messages?filter=receivedDateTime gt {time of request} and receivedDateTime lt 2019-09-01T17:00:00.0000000`. The time stamp updates for each `queryWindowInMin` time.
 
 You achieve the same results with this example:
 
@@ -494,7 +492,7 @@ You achieve the same results with this example:
 }
 ```
 
-Another option is when the data source expects two query parameters, one for start time and one for end time.
+There's another option for situations when the data source expects two query parameters (one for start time and one for end time).
 
 Example:
 
@@ -536,7 +534,7 @@ For complex queries, use `QueryParametersTemplate`. This example sends a `POST` 
 
 ## Response configuration
 
-Define how your data connector handles responses with the following parameters:
+Define how your data connector handles responses by using the following parameters:
 
 | Field | Required | Type | Description |
 |----|----|----|----|
@@ -544,20 +542,20 @@ Define how your data connector handles responses with the following parameters:
 | `SuccessStatusJsonPath` |  | String | Defines the path to the success message in the response JSON. When this parameter is defined, the `SuccessStatusValue` parameter should also be defined. |
 | `SuccessStatusValue` |  | String | Defines the path to the success message value in the response JSON. |
 | `IsGzipCompressed` |  | Boolean | Determines whether the response is compressed in a GZIP file.	|
-| `format` | True | String | `json`, `csv`, or `xml` |
-| `CompressionAlgo` |  | String | The compressions algorithm, either `multi-gzip` or `deflate`. For the GZIP compression algorithm, just configure `IsGzipCompressed` to `True` instead of setting a value for this parameter. |
-| `CsvDelimiter` |  | String | If the response format is CSV and you want to change the default CSV delimiter of `","`. |
+| `format` | True | String | Determines whether the format is `json`, `csv`, or `xml`. |
+| `CompressionAlgo` |  | String | Defines the compressions algorithm, either `multi-gzip` or `deflate`. For the GZIP compression algorithm, configure `IsGzipCompressed` to `True` instead of setting a value for this parameter. |
+| `CsvDelimiter` |  | String | References if the response format is CSV and you want to change the default CSV delimiter of `","`. |
 | `HasCsvBoundary` |  | Boolean | Indicates if the CSV data has a boundary. |
 | `HasCsvHeader` |  | Boolean | Indicates if the CSV data has a header. The default is `True`. |
-| `CsvEscape` |  | String | Escape character for a field boundary. The default is `"`<br><br>For example, a CSV with headers `id,name,avg` and a row of data containing spaces like `1,"my name",5.5` requires the `"` field boundary. |
-| `ConvertChildPropertiesToArray` |  | Boolean | Special case in which the remote server returns an object instead of a list of events where each property has data in it. |
+| `CsvEscape` |  | String | Defines an escape character for a field boundary. The default is `"`<br><br>For example, a CSV with headers `id,name,avg` and a row of data containing spaces like `1,"my name",5.5` requires the `"` field boundary. |
+| `ConvertChildPropertiesToArray` |  | Boolean | References a special case in which the remote server returns an object instead of a list of events where each property includes data. |
 
 > [!NOTE]
 > CSV format type is parsed by the [`RFC4180`](https://www.rfc-editor.org/rfc/rfc4180) specification.
 
 ### Response configuration examples
 
-A server response in JSON format is expected, with the requested data in the property *value*. The response property *status* indicates to ingest the data only if the value is `success`.
+A server response in JSON format is expected. The response has the requested data in the property *value*. The response property *status* indicates to ingest the data only if the value is `success`.
 
 ```json
 "response": {
@@ -592,14 +590,16 @@ When the data source can't send the entire response payload all at once, the CCF
 
 #### Configure LinkHeader or PersistentLinkHeader
 
-The most common paging type is when a server data source API provides URLs to the next and previous pages of data. For more information on the *Link Header* specification, see [`RFC 5988`](https://www.rfc-editor.org/rfc/rfc5988#section-5).
+The most common paging type is when a server data source API provides URLs to the next and previous pages of data. For more information on the **Link Header** specification, see [`RFC 5988`](https://www.rfc-editor.org/rfc/rfc5988#section-5).
 
 `LinkHeader` paging means the API response includes either:
 
 - The `Link` HTTP response header.
 - A JSON path to retrieve the link from the response body.
 
-`PersistentLinkHeader`-type paging has the same properties as `LinkHeader`, except the link header persists in backend storage. This option enables paging links across query windows. For example, some APIs don't support query start times or end times. Instead, they support a server side *cursor*. You can use persistent page types to remember the server side *cursor*. For more information, see [What is a cursor?](/office/client-developer/access/desktop-database-reference/what-is-a-cursor).
+`PersistentLinkHeader`-type paging has the same properties as `LinkHeader`, except the link header persists in back-end storage. This option enables paging links across query windows.
+
+For example, some APIs don't support query start times or end times. Instead, they support a server side *cursor*. You can use persistent page types to remember the server side *cursor*. For more information, see [What is a cursor?](/office/client-developer/access/desktop-database-reference/what-is-a-cursor).
 
 > [!NOTE]
 > Only one query for the connector can run with `PersistentLinkHeader` to avoid race conditions on the server side *cursor*. This issue might affect latency.
@@ -607,10 +607,10 @@ The most common paging type is when a server data source API provides URLs to th
 | Field | Required | Type | Description |
 |----|----|----|----|
 | `LinkHeaderTokenJsonPath` | False | String | Use this property to indicate where to get the value in the response body.<br><br>For example, if the data source returns the following JSON: `{ nextPage: "foo", value: [{data}]}`, the `LinkHeaderTokenJsonPath` value is `$.nextPage`. |
-| `PageSize` | False | Integer | Number of events per page. |
-| `PageSizeParameterName` | False | String | Query parameter name for the page size. |
-| `PagingInfoPlacement` | False | String | How paging info is populated. Accepts either `QueryString` or `RequestBody`. |
-| `PagingQueryParamOnly` | False | Boolean | If set to true, it omits all other query parameters except paging query parameters. |
+| `PageSize` | False | Integer | Use this property to determine the number of events per page. |
+| `PageSizeParameterName` | False | String | Use this query parameter name to indicate the page size. |
+| `PagingInfoPlacement` | False | String | Use this property to determine how paging info is populated. Accepts either `QueryString` or `RequestBody`. |
+| `PagingQueryParamOnly` | False | Boolean | Use this property to specify query parameters. If set to true, it omits all other query parameters except paging query parameters. |
 
 Here are some examples:
 
@@ -635,16 +635,16 @@ Here are some examples:
 
 | Field | Required | Type | Description |
 |----|----|----|----|
-| `PageSize` | False | Integer | Number of events per page. |
-| `PageSizeParameterName` | False | String | Query parameter name for the page size. |
-| `NextPageUrl` | False | String | Only if the connector is for the Coralogix API. |
+| `PageSize` | False | Integer | The number of events per page. |
+| `PageSizeParameterName` | False | String | The query parameter name for the page size. |
+| `NextPageUrl` | False | String | Field that's used only if the connector is for the Coralogix API. |
 | `NextPageUrlQueryParameters` | False | Object key/value pairs that add a custom query parameter to each request for the next page. |
-| `NextPageParaName` | False | String | Determines the next page name in the request. |
-| `HasNextFlagJsonPath` | False | String | Defines the path to the `HasNextPage` flag attribute. |
-| `NextPageRequestHeader` | False | String | Determines the next page header name in the request. |
-| `NextPageUrlQueryParametersTemplate` | False | String | Only if the connector is for the Coralogix API. |
-| `PagingInfoPlacement` | False | String | How paging info is populated. Accepts either `QueryString` or `RequestBody`. |
-| `PagingQueryParamOnly` | False | Boolean | If set to true, it omits all other query parameters except paging query parameters. |
+| `NextPageParaName` | False | String | The next page name in the request. |
+| `HasNextFlagJsonPath` | False | String | The path to the `HasNextPage` flag attribute. |
+| `NextPageRequestHeader` | False | String | The next page header name in the request. |
+| `NextPageUrlQueryParametersTemplate` | False | String | Field that's used only if the connector is for the Coralogix API. |
+| `PagingInfoPlacement` | False | String | Field that determines how paging info is populated. Accepts either `QueryString` or `RequestBody`. |
+| `PagingQueryParamOnly` | False | Boolean | Field that determines query parameters. If set to true, it omits all other query parameters except paging query parameters. |
 
 Example:
 
@@ -662,19 +662,19 @@ Example:
 
 `NextPageToken`-type pagination uses a token (a hash or a cursor) that represents the state of the current page. The token is included in the API response and the client appends it to the next request to fetch the next page. This method is often used when the server needs to maintain the exact state between requests.
 
-`PersistentToken` pagination uses a token that persists server side. The server remembers the last token the client retrieved client and provides the next token in subsequent requests. The client continues where it left off even if it makes new requests later.
+`PersistentToken` pagination uses a token that persists server side. The server remembers the last token the client retrieved and provides the next token in subsequent requests. The client continues where it left off, even if it makes new requests later.
 
 | Field | Required | Type | Description |
 |----|----|----|----|
 | `PageSize` | False | Integer | Number of events per page. |
-| `PageSizeParameterName` | False | string | Query parameter name for the page size. |
-| `NextPageTokenJsonPath` | False | string | JSON path for the next page token in the response body. |
-| `NextPageTokenResponseHeader` | False | string | If `NextPageTokenJsonPath` is empty, use the token in this header name for the next page. |
-| `NextPageParaName` | False | string | Determines the next page name in the request. |
-| `HasNextFlagJsonPath` | False | string | Defines the path to a `HasNextPage` flag attribute when determining if more pages are left in the response. |
-| `NextPageRequestHeader` | False | string | Determines the next page header name in the request. |
-| `PagingInfoPlacement` | False | String | How paging info is populated. Accepts either `QueryString` or `RequestBody`. |
-| `PagingQueryParamOnly` | False | Boolean | If set to true, it omits all other query parameters except paging query parameters. |
+| `PageSizeParameterName` | False | String | Query parameter name for the page size. |
+| `NextPageTokenJsonPath` | False | String | JSON path for the next page token in the response body. |
+| `NextPageTokenResponseHeader` | False | String | Field that specifies that if `NextPageTokenJsonPath` is empty, use the token in this header name for the next page. |
+| `NextPageParaName` | False | String | Field that determines the next page name in the request. |
+| `HasNextFlagJsonPath` | False | String | Field that defines the path to a `HasNextPage` flag attribute when determining if more pages are left in the response. |
+| `NextPageRequestHeader` | False | String | Field that determines the next page header name in the request. |
+| `PagingInfoPlacement` | False | String | Field that determines how paging info is populated. Accepts either `QueryString` or `RequestBody`. |
+| `PagingQueryParamOnly` | False | Boolean | Field that determines query parameters. If set to true, it omits all other query parameters except paging query parameters. |
 
 Examples:
 
@@ -703,8 +703,8 @@ Examples:
 | `PageSize` | False | Integer | Number of events per page. |
 | `PageSizeParameterName` | False | String | Query parameter name for the page size. |
 | `OffsetParaName` | False | String | The next request query parameter name. The CCF calculates the offset value for each request (all events ingested + 1). |
-| `PagingInfoPlacement` | False | String | How paging info is populated. Accepts either `QueryString` or `RequestBody` |
-| `PagingQueryParamOnly` | False | Boolean | If set to true, it omits all other query parameters except paging query parameters. |
+| `PagingInfoPlacement` | False | String | Field that determines how paging info is populated. Accepts either `QueryString` or `RequestBody`. |
+| `PagingQueryParamOnly` | False | Boolean | Field that determines query parameters. If set to true, it omits all other query parameters except paging query parameters. |
 
 Example:
 
@@ -724,15 +724,15 @@ Example:
 
 | Field | Required | Type | Description |
 |----|----|----|----|
-| `pageNumberParaName` | True | String | Parameter name of page number in HTTP request. |
+| `pageNumberParaName` | True | String | Parameter name of the page number in the HTTP request. |
 | `PageSize` | False | Integer | Number of events per page. |
-| `ZeroBasedIndexing` | False | Boolean | Flag that indicates count is zero based. |
-| `HasNextFlagJsonPath` | False | String | JSON path of flag in the HTTP response payload that indicates there are more pages. |
-| `TotalResultsJsonPath` | False | String | JSON path of total number of results in the HTTP response payload. |
-| `PageNumberJsonPath` | False | String | Required if `totalResultsJsonPath` is provided. JSON path of the page number in the HTTP response payload. |
-| `PageCountJsonPath` | False | String | Required if `totalResultsJsonPath` is provided. JSON path of the page count in the HTTP response payload. |
-| `PagingInfoPlacement` | False | String | How paging info is populated. Accepts either `QueryString` or `RequestBody`. |
-| `PagingQueryParamOnly` | False | Boolean | If set to true, it omits all other query parameters except paging query parameters. |
+| `ZeroBasedIndexing` | False | Boolean | Flag that indicates that the count is zero based. |
+| `HasNextFlagJsonPath` | False | String | The JSON path of the flag in the HTTP response payload that indicates there are more pages. |
+| `TotalResultsJsonPath` | False | String | The JSON path of the total number of results in the HTTP response payload. |
+| `PageNumberJsonPath` | False | String | The JSON path of the page number in the HTTP response payload. Required if `totalResultsJsonPath` is provided.  |
+| `PageCountJsonPath` | False | String | The JSON path of the page count in the HTTP response payload. Required if `totalResultsJsonPath` is provided. |
+| `PagingInfoPlacement` | False | String | Field that determines how paging info is populated. Accepts either `QueryString` or `RequestBody`. |
+| `PagingQueryParamOnly` | False | Boolean | Field that determines query parameters. If set to true, it omits all other query parameters except paging query parameters. |
 
 Example:
 
@@ -754,8 +754,8 @@ Example:
 | Field | Required | Type | Description |
 |----|----|----|----|
 | `DataCollectionEndpoint` | True | String | Data collection endpoint (DCE). For example: `https://example.ingest.monitor.azure.com`. |
-| `DataCollectionRuleImmutableId` | True | String | The DCR immutable ID. Find it by viewing the DCR creation response or using the [DCR API](/rest/api/monitor/data-collection-rules/get). |
-| `StreamName` | True | string | This value is the `streamDeclaration` defined in the DCR. The prefix must begin with *Custom-*). |
+| `DataCollectionRuleImmutableId` | True | String | The DCR immutable ID. Find it by viewing the DCR creation response or by using the [DCR API](/rest/api/monitor/data-collection-rules/get). |
+| `StreamName` | True | String | This value is the `streamDeclaration` defined in the DCR. The prefix must begin with *Custom-*). |
 
 ## Example CCF data connector
 
