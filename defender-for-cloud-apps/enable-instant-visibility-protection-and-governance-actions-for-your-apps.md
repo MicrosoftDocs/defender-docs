@@ -157,6 +157,19 @@ The following tables list, per cloud app, which abilities are supported with App
 > [!NOTE]
 > To get updates when URLs and IP addresses are changed, subscribe to the RSS as explained in: [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 
+## Enable app connectors
+
+To enable an app connector for the first time, configure an API connection for the specific cloud app you want to connect. See the individual connector guides for each app for detailed instructions.
+
+
+1. In the Microsoft Defender portal, go to **Cloud Apps** > **Connected apps**.
+2. Select **Connect an app** or **Add a new connector**.
+3. Choose the cloud app you want to connect.
+4. Follow the instructions in the corresponding app-specific API connector guide. These instructions include the required permissions and authentication steps.
+
+Each cloud app has its own enablement process based on the APIs it supports.
+
+
 ### ExpressRoute
 
 Defender for Cloud Apps is deployed in Azure and fully integrated with [ExpressRoute](/azure/expressroute/expressroute-introduction). All interactions with the Defender for Cloud Apps apps and traffic sent to Defender for Cloud Apps, including upload of discovery logs, is routed via ExpressRoute for improved latency, performance, and security.
@@ -182,11 +195,6 @@ To re-enable connected apps:
 
 1. In the **Connected apps** page, in the relevant row, select the three dots and choose **Edit settings**. This starts the process to add a connector.
 1. Add the connector using the steps in the relevant API connector guide. For example, if you are re-enabling GitHub, use the steps in [Connect GitHub Enterprise Cloud to Microsoft Defender for Cloud Apps](protect-github.md#connect-github-enterprise-cloud-to-microsoft-defender-for-cloud-apps).
-
-## Related videos
-
-> [!div class="nextstepaction"]
-> [Connecting third-party apps webinar](webinars.md#on-demand-webinars)
 
 ## Next steps
 
