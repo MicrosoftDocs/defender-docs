@@ -9,8 +9,10 @@ env:
   TEST_USER: 'SomeTestUser' # Set to a GitHub username to override the event-derived user for testing
 
 jobs:
-  validate-auto-merge-label:
-    if: github.event_name == 'pull_request_target' && github.event.action == 'labeled' && github.event.label.name == 'qualifies-for-auto-merge'
+  require-writer-review:
+    if: >-
+      (github.event_name == 'pull_request_target' && github.event.action == 'labeled' && github.event.label.name == 'qualifies-for-auto-merge')
+      || github.event_name == 'workflow_call'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -24,8 +26,11 @@ jobs:
             .github/authorized-approvers.txt
             docs/authorized-approvers.txt
 
+      # --- Label validation path (pull_request_target + labeled) ---
+
       - name: Check if PR author is authorized
-        id: auth
+        if: github.event_name == 'pull_request_target'
+        id: label-auth
         uses: MicrosoftDocs/defender-docs/.github/actions/is-authorized@workflows-test
         with:
           token: ${{ secrets.MSECD_READTEAM_TOKEN }}
@@ -33,7 +38,7 @@ jobs:
           default: 'false'
 
       - name: Remove label if not authorized
-        if: steps.auth.outputs.authorized == 'false'
+        if: github.event_name == 'pull_request_target' && steps.label-auth.outputs.authorized == 'false'
         env:
           GITHUB_TOKEN: ${{ github.token }}
           PR_AUTHOR: ${{ github.event.pull_request.user.login }}
@@ -72,22 +77,10 @@ jobs:
           
           echo "Explanation comment added."
 
-  add-hold-off-comment:
-    if: github.event_name == 'workflow_call' || (github.event_name == 'pull_request_target' && github.event.action != 'labeled')
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
-    steps:
-      - name: Checkout calling repo for approvers file
-        uses: actions/checkout@v4
-        with:
-          sparse-checkout: |
-            authorized-approvers.txt
-            .github/authorized-approvers.txt
-            docs/authorized-approvers.txt
+      # --- Hold-off comment path (workflow_call) ---
 
       - name: Check if last PRMerger command is sign-off
+        if: github.event_name == 'workflow_call'
         id: signoff
         env:
           GITHUB_TOKEN: ${{ github.token }}
@@ -123,8 +116,8 @@ jobs:
           fi
 
       - name: Check if comment author is authorized
-        if: steps.signoff.outputs.skip != 'true'
-        id: auth
+        if: github.event_name == 'workflow_call' && steps.signoff.outputs.skip != 'true'
+        id: holdoff-auth
         uses: MicrosoftDocs/defender-docs/.github/actions/is-authorized@workflows-test
         with:
           token: ${{ secrets.MSECD_READTEAM_TOKEN }}
@@ -132,7 +125,7 @@ jobs:
           default: 'true'
 
       - name: Restore auto-merge label if authorized
-        if: steps.signoff.outputs.skip != 'true' && steps.auth.outputs.authorized == 'true'
+        if: github.event_name == 'workflow_call' && steps.signoff.outputs.skip != 'true' && steps.holdoff-auth.outputs.authorized == 'true'
         env:
           GITHUB_TOKEN: ${{ github.token }}
           SIGNOFF_AUTHOR: ${{ env.TEST_USER || steps.signoff.outputs.author }}
@@ -169,7 +162,7 @@ jobs:
           fi
 
       - name: Add hold-off comment if not authorized
-        if: steps.signoff.outputs.skip != 'true' && steps.auth.outputs.authorized == 'false'
+        if: github.event_name == 'workflow_call' && steps.signoff.outputs.skip != 'true' && steps.holdoff-auth.outputs.authorized == 'false'
         env:
           GITHUB_TOKEN: ${{ github.token }}
           SIGNOFF_AUTHOR: ${{ env.TEST_USER || steps.signoff.outputs.author }}
