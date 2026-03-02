@@ -6,7 +6,7 @@ on:
     types: [labeled]
 
 env:
-  TEST_USER: 'SomeTestUser' # Set to a GitHub username to override the event-derived user for testing
+  TEST_USER: '' # Set to a GitHub username to override the event-derived user for testing
 
 jobs:
   enforce-policy:
