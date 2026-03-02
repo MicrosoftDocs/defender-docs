@@ -22,7 +22,7 @@ ms.date: 10/05/2025
 
 - [05:54](/shows/mdc-in-the-field/defender-for-devops) -  Protection for infrastructure as a code
 
-- [07:03](/shows/mdc-in-the-field/defender-for-devops) -  Microsoft Entra IDO connector
+- [07:03](/shows/mdc-in-the-field/defender-for-devops) -  Azure ADO connector
 
 - [08:22](/shows/mdc-in-the-field/defender-for-devops#time=08m22s) -  Demonstration
 
