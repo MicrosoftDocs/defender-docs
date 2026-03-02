@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-ms.date: 02/04/2026
+ms.date: 02/19/2026
 manager: orspodek
 audience: ITPro
 ms.collection:
@@ -34,9 +34,15 @@ You can also get product updates and important notifications through the [messag
 
 ## February 2026
 
-- (GA) The [`IdentityAccountInfo`](advanced-hunting-identityaccountinfo-table.md) table in advanced hunting is now generally available. This table contains information about account information from various sources, including Microsoft Entra ID. It also includes information and link to the identity that owns the account.
+- Microsoft Defender Experts for Hunting customers can now set up [Notification contacts](onboarding-defender-experts-for-hunting.md#tell-us-who-to-contact-for-important-matters). These contacts are the individuals or groups that Microsoft needs to notify if there are critical incidents or service updates.
+- (GA) The following advanced hunting schema tables are now generally available:
+    - The [`IdentityAccountInfo`](advanced-hunting-identityaccountinfo-table.md) table contains information about account information from various sources, including Microsoft Entra ID. It also includes information and link to the identity that owns the account.
+    - The [`EntraIdSignInEvents`](advanced-hunting-entraidsigninevents-table.md) table contains information about Microsoft Entra interactive and non-interactive sign-ins.
+    - The [`EntraIdSpnSignInEvents`](advanced-hunting-entraidspnsigninevents-table.md) table contains information about Microsoft Entra service principal and managed identity sign-ins.
+    - The [`GraphApiAuditEvents`](advanced-hunting-graphapiauditevents-table.md) table provides information about Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant.
 
 ## January 2026
+
 - (Preview) Custom detections rules in Microsoft Defender now support Near Real-Time (NRT) configuration on [Microsoft Sentinel data](custom-detection-rules.md#tables-that-support-continuous-nrt-frequency).
 - (Preview) In advanced hunting, if the query result exceeds the 64-MB size limit, the portal now returns the maximum number of records it can within this limit and displays a message indicating that the displayed results are partial due to size constraints. [Learn more](advanced-hunting-overview.md#quotas-and-usage-parameters)
 - (Preview) The [`BehaviorInfo`](advanced-hunting-behaviorinfo-table.md) and [`BehaviorEntities`](advanced-hunting-behaviorentities-table.md) tables in advanced hunting now include additional columns and information about behavior data types and alerts from User and Entity Behavior Analytics (UEBA), providing more insights on the relationships between identified behaviors and entities. [Learn more about UEBA behaviors](/azure/sentinel/entity-behaviors-layer)
@@ -45,10 +51,10 @@ You can also get product updates and important notifications through the [messag
 
 - (Preview) Microsoft Security Copilot in Microsoft Defender now includes the Dynamic Threat Detection Agent, an always-on, adaptive backend service that uncovers hidden threats across Defender and Microsoft Sentinel environments. [Learn more](dynamic-threat-detection-agent.md)
 - (GA) The [Microsoft Security Copilot Threat Intelligence Briefing Agent in Microsoft Defender](threat-intel-briefing-agent-defender.md) is now generally available. It generates threat intelligence briefings based on the latest threat actor activity and both internal and external vulnerability information in a matter of minutes, helping security teams save time by creating customized, relevant reports.
-- (Preview) Microsoft Security Copilot in Microsoft Defender now lets you to hunt for threats using natural language with the [Threat Hunting Agent](advanced-hunting-security-copilot-threat-hunting-agent.md). This agent delivers a complete, conversational threat hunting experience by not only generates queries but also interpreting results, surfacing insights, and guiding you through full hunting sessions. 
+- (Preview) Microsoft Security Copilot in Microsoft Defender now lets you to hunt for threats using natural language with the [Threat Hunting Agent](advanced-hunting-security-copilot-threat-hunting-agent.md). This agent delivers a complete, conversational threat hunting experience by not only generates queries but also interpreting results, surfacing insights, and guiding you through full hunting sessions.
 - (Preview) The following advanced hunting schema tables are now available for preview:
-    - The [`CampaignInfo`](advanced-hunting-campaigninfo-table.md) table contains contains information about email campaigns identified by Microsoft Defender for Office 365
-    - The [`FileMaliciousContentInfo`](advanced-hunting-filemaliciouscontentinfo-table.md) table contains information about files that were processed by Microsoft Defender for Office 365 in SharePoint Online, OneDrive, and Microsoft Teams
+    - The [`CampaignInfo`](advanced-hunting-campaigninfo-table.md) table contains contains information about email campaigns identified by Microsoft Defender for Office 365.
+    - The [`FileMaliciousContentInfo`](advanced-hunting-filemaliciouscontentinfo-table.md) table contains information about files that were processed by Microsoft Defender for Office 365 in SharePoint Online, OneDrive, and Microsoft Teams.
 - (GA) The [hunting graph](advanced-hunting-graph.md) in advanced hunting is now generally available. It also now has two new predefined threat scenarios that you can use to render your hunts as interactive graphs.
 - (GA) Advanced hunting now supports custom functions that use tabular parameters. With tabular parameters, you can pass entire tables as inputs. This approach lets you build more modular, reusable, and expressive logic across your hunting queries. [Learn more](advanced-hunting-custom-functions.md#create-custom-functions-with-tabular-parameters) 
 

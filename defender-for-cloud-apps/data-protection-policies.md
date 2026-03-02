@@ -293,10 +293,6 @@ The fields in the File drawer provide contextual links to files and drill downs 
 
 For a list of governance actions available, see [File governance actions](governance-actions.md#file-governance-actions).
 
-## Related videos
-
-> [!div class="nextstepaction"]
-> [Information protection webinar](webinars.md#on-demand-webinars)
 
 ## Next steps
 

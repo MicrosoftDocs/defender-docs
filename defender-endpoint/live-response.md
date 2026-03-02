@@ -35,6 +35,9 @@ With live response, analysts can do all of the following tasks:
 - Upload a PowerShell script or executable to the library and run it on a device from a tenant level.
 - Take or undo remediation actions.
 
+> [!TIP]
+> You can upload, view, and manage files used for live response from the [Library management](configure-libraries-live-response.md) page.
+
 ## Prerequisites
 
 Devices must be running one of the following versions of Windows
@@ -90,7 +93,7 @@ Devices must be running one of the following versions of Windows
 - **Ensure that you have the appropriate permissions**:   Only users who are provisioned with the appropriate permissions can initiate a session. For more information on role assignments, see [Create and manage roles](user-roles.md).
 
   > [!IMPORTANT]
-  > The option to upload a file to the library is only available to users with "Manage Security Settings" permission. The button is greyed out for users with only delegated permissions.
+  > The option to upload a file to the library via live response is only available to users with "Manage Security Settings" permission. The button is greyed out for users with only delegated permissions. You can also upload files to the library from the [Library management](configure-libraries-live-response.md) page, for which you don't need this permission.
 
   Depending on the role that's been granted to you, you can run basic or advanced live response commands. Users permissions are controlled by RBAC custom role.
 
@@ -169,7 +172,7 @@ The following commands are available for user roles that are granted the ability
 |`isolate`|Disconnects the device from the network while retaining connectivity to the Defender for Endpoint service.|N|Y|N|
 |`release`|Releases a device from network isolation.|N|Y|N|
 |`run`|Runs a PowerShell script from the library on the device.|Y|Y|Y|
-|`library`|Lists files that were uploaded to the live response library.|Y|Y|Y|
+|`library`|Lists files that were uploaded to the live response library. You can also view and manage these files from the [Library management](configure-libraries-live-response.md) page.|Y|Y|Y|
 |`putfile`|Puts a file from the library to the device. Files are saved in a working folder and are deleted when the device restarts by default.|Y|Y|Y|
 |`remediate`|Remediates an entity on the device. The remediation action varies, depending on the entity type: <ul><li>**File**: delete</li><li>**Process**: stop, delete image file </li><li>**Service**: stop, delete image file</li><li>**Registry entry**: delete</li><li>**Scheduled task**: remove</li><li>**Startup folder item**: delete file</li></ul> <br/> This command has a prerequisite command. You can use the `-auto` command in conjunction with remediate to automatically run the prerequisite command.|Y|Y|Y|
 |`scan`|Runs a quick antivirus scan to help identify and remediate malware.|N|Y|Y|
@@ -186,6 +189,9 @@ The following commands are available for user roles that are granted the ability
 The commands that you can use in the console follow similar principles as [Windows Commands](/windows-server/administration/windows-commands/windows-commands#BKMK_c).
 
 The advanced commands offer a more robust set of actions that allow you to take more powerful actions such as download and upload a file, run scripts on the device, and take remediation actions on an entity.
+
+> [!TIP]
+> You can upload, view, and manage files used for live response from the [Library management](configure-libraries-live-response.md) page.
 
 ### Get a file from the device
 
@@ -223,6 +229,10 @@ You can have a collection of PowerShell and Bash scripts that can run on devices
 
 #### To upload a file in the library
 
+You can either upload a file to the library from the live response session console or from the [Library management](configure-libraries-live-response.md) page.
+
+To upload a file to the library from the live response session console:
+
 > [!NOTE]
 > There are restrictions on the characters that can be uploaded to the library. Use alphanumeric characters and some symbols (specifically, `-`, `_`, or `.`).
 
@@ -238,7 +248,7 @@ You can have a collection of PowerShell and Bash scripts that can run on devices
 
 1. Select **Confirm**.
 
-1. (Optional) To verify that the file was uploaded to the library, run the `library` command.
+1. (Optional) To verify that the file was uploaded to the library, run the `library` command or check the [Library management](configure-libraries-live-response.md) page.
 
 ### Cancel a command
 
@@ -250,6 +260,8 @@ Anytime during a session, you can cancel a command by pressing CTRL + C.
 ## Run a script
 
 Before you can run a PowerShell/Bash script, you must first upload it to the library.
+
+You can upload a script to the library from the live response session console or from the [Library management](configure-libraries-live-response.md) page.
 
 After uploading the script to the library, use the `run` command to run the script.
 
