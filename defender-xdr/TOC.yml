@@ -84,7 +84,7 @@
         href: incidents-overview.md      
       - name: Correlation and merging
         href: alerts-incidents-correlation.md
-      - name: Exclude analytics rules from correlation
+      - name: Manage analytics rule correlation settings
         href: exclude-analytics-rules-correlation.md
       - name: Prioritize incidents
         href: incident-queue.md
