@@ -186,15 +186,16 @@ Use filters on very large incidents with many alerts and entities or hide specif
 
 1. Select **Add filter** above the incident graph.
 
-    :::image type="content" source="media/investigate-incidents/incident-graph-filter-criteria.png" alt-text="Screenshot of the incident graph in the Defender portal with add filter option highlighted." lightbox="media/investigate-incidents/incident-graph-filter-criteria.png":::
 1. Choose any of the following available filter criteria, and then select **Add**:
     - **Severity:** Display high-, medium-, or low-severity alerts.
     - **Status:** Display new, in progress, or resolved alerts.
     - **Service sources:** Display alerts from specific services, such as Microsoft Defender for Endpoint, Microsoft Defender for Identity, Microsoft Defender for Office 365, and others.
 
-    :::image type="content" source="media/investigate-incidents/incident-graph-apply-filter.png" alt-text="Screenshot of the incident graph in the Defender portal with add Severity filter highlighted." lightbox="media/investigate-incidents/incident-graph-apply-filter.png":::
+    :::image type="content" source="media/investigate-incidents/incident-graph-filter-criteria.png" alt-text="Screenshot of the incident graph in the Defender portal with add filter option highlighted." lightbox="media/investigate-incidents/incident-graph-filter-criteria.png":::
 
 1. For each added filter criteria, choose the items you want to filter, and then select **Apply**.
+
+    :::image type="content" source="media/investigate-incidents/incident-graph-apply-filter.png" alt-text="Screenshot of the incident graph in the Defender portal with add Severity filter highlighted." lightbox="media/investigate-incidents/incident-graph-apply-filter.png":::
 
     >[!NOTE]
     > If all entities are filtered out, an empty state message appears. Adjust your filters to see relevant entities.
