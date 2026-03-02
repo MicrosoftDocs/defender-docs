@@ -235,7 +235,7 @@ runs:
         # ── Step 6: Output results ───────────────────────────────
         SCOPES_JSON="[]"
         if [ ${#AUTH_SCOPES[@]} -gt 0 ]; then
-          SCOPES_JSON=$(printf '%s\n' "${AUTH_SCOPES[@]}" | sort -u | jq -R . | jq -s .)
+          SCOPES_JSON=$(printf '%s\n' "${AUTH_SCOPES[@]}" | sort -u | jq -R . | jq -sc .)
         fi
 
         echo "::endgroup::"
