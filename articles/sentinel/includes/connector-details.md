@@ -2,9 +2,9 @@
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: include
-ms.date: 02/26/2026
+ms.date: 03/02/2026
 
-# This file is auto-generated. Do not edit manually. Changes will be overwritten.
+# This file is auto-generated . Do not edit manually. Changes will be overwritten.
 ---
 
 <a name="1password-serverless"></a><details><summary>**1Password (Serverless)**</summary>
@@ -880,6 +880,31 @@ The BETTER MTD Connector allows Enterprises to connect their Better MTD instance
 
  ---
    
+<a name="beyondtrust-pm-cloud"></a><details><summary>**BeyondTrust PM Cloud**</summary>
+
+**Supported by:** [BeyondTrust](https://www.beyondtrust.com/docs/index.htm)
+
+The BeyondTrust Privilege Management Cloud data connector provides the capability to ingest activity audit logs and client event logs from BeyondTrust PM Cloud into Microsoft Sentinel.
+
+This connector uses Azure Functions to pull data from the BeyondTrust PM Cloud API and ingest it into custom Log Analytics tables.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`BeyondTrustPM_ActivityAudits_CL`|No|No|
+|`BeyondTrustPM_ClientEvents_CL`|No|No|
+
+**Data collection rule support:** Not currently supported
+
+**Prerequisites:**
+
+- **Microsoft.Web/sites permissions**: Read and write permissions to Azure Functions to create a Function App is required. For more information, see [Azure Functions](/azure/azure-functions/).
+- **BeyondTrust PM Cloud API credentials**: BeyondTrust PM Cloud OAuth Client ID and Client Secret are required. The API account requires the following permissions: Audit - Read Only and Reporting - Read Only<br><br>
+</details> 
+
+ ---
+   
 <a name="bigid-dspm-connector"></a><details><summary>**BigID DSPM connector**</summary>
 
 **Supported by:** [BigID](https://support.bigid.com/)
@@ -1117,8 +1142,8 @@ The Cisco Cloud Security solution for Microsoft Sentinel enables you to ingest [
 |`Cisco_Umbrella_dns_CL`|Yes|Yes|
 |`Cisco_Umbrella_proxy_CL`|Yes|Yes|
 |`Cisco_Umbrella_ip_CL`|Yes|Yes|
-|`Cisco_Umbrella_cloudfirewall_CL`|Yes|Yes|
-|`Cisco_Umbrella_firewall_CL`|Yes|Yes|
+|`Cisco_Umbrella_cloudfirewall_CL`|No|No|
+|`Cisco_Umbrella_firewall_CL`|No|No|
 |`Cisco_Umbrella_dlp_CL`|No|No|
 |`Cisco_Umbrella_ravpnlogs_CL`|No|No|
 |`Cisco_Umbrella_audit_CL`|No|No|
@@ -1152,8 +1177,8 @@ The Cisco Umbrella data connector provides the capability to ingest [Cisco Umbre
 |`Cisco_Umbrella_dns_CL`|Yes|Yes|
 |`Cisco_Umbrella_proxy_CL`|Yes|Yes|
 |`Cisco_Umbrella_ip_CL`|Yes|Yes|
-|`Cisco_Umbrella_cloudfirewall_CL`|Yes|Yes|
-|`Cisco_Umbrella_firewall_CL`|Yes|Yes|
+|`Cisco_Umbrella_cloudfirewall_CL`|No|No|
+|`Cisco_Umbrella_firewall_CL`|No|No|
 |`Cisco_Umbrella_dlp_CL`|No|No|
 |`Cisco_Umbrella_ravpnlogs_CL`|No|No|
 |`Cisco_Umbrella_audit_CL`|No|No|
@@ -2391,11 +2416,11 @@ The F5 firewall connector allows you to easily connect your F5 logs with Microso
 
  ---
    
-<a name="feedly"></a><details><summary>**Feedly**</summary>
+<a name="feedly-ioc"></a><details><summary>**Feedly IoC**</summary>
 
 **Supported by:** [Feedly Inc](https://blog.feedly.com/help/)
 
-This connector allows you to ingest IoCs from Feedly.
+The [Feedly](https://feedly.com/) IoC data connector provides the capability to ingest Indicators of Compromise (IoCs) from Feedly API into Microsoft Sentinel.
 
 **Log Analytics table(s):**  
 
@@ -2407,8 +2432,7 @@ This connector allows you to ingest IoCs from Feedly.
 
 **Prerequisites:**
 
-- **Microsoft.Web/sites permissions**: Read and write permissions to Azure Functions to create a Function App is required. For more information, see [Azure Functions](/azure/azure-functions/).
-- **Custom prerequisites if necessary, otherwise delete this customs tag**: Description for any custom pre-requisites<br><br>
+- **Feedly API access**: Access to the Feedly API is required. You need a Feedly API token with access to the IoC streams you want to ingest. Generate your API token at https://feedly.com/i/team/api<br><br>
 </details> 
 
  ---
@@ -2423,9 +2447,9 @@ The [Flare](https://flare.io) connector provides the capability to ingest threat
 
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
-|`FireworkV2_CL`|No|No|
+|`FireworkV2_CL`|Yes|Yes|
 
-**Data collection rule support:** Not currently supported
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
 
 **Prerequisites:**
 
@@ -4069,12 +4093,12 @@ The Mimecast products included within the connector are:
 
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
-|`Awareness_Performance_Details_CL`|No|No|
-|`Awareness_SafeScore_Details_CL`|No|No|
-|`Awareness_User_Data_CL`|No|No|
-|`Awareness_Watchlist_Details_CL`|No|No|
+|`Awareness_Performance_Details_CL`|Yes|Yes|
+|`Awareness_SafeScore_Details_CL`|Yes|Yes|
+|`Awareness_User_Data_CL`|Yes|Yes|
+|`Awareness_Watchlist_Details_CL`|Yes|Yes|
 
-**Data collection rule support:** Not currently supported
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
 
 **Prerequisites:**
 
@@ -4164,10 +4188,10 @@ The data connector for [Mimecast Secure Email Gateway](https://integrations.mime
 
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
-|`Seg_Cg_CL`|No|No|
-|`Seg_Dlp_CL`|No|No|
+|`Seg_Cg_CL`|Yes|Yes|
+|`Seg_Dlp_CL`|Yes|Yes|
 
-**Data collection rule support:** Not currently supported
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
 
 **Prerequisites:**
 
@@ -4236,11 +4260,11 @@ The Mimecast products included within the connector are:
 
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
-|`Ttp_Url_CL`|No|No|
-|`Ttp_Attachment_CL`|No|No|
-|`Ttp_Impersonation_CL`|No|No|
+|`Ttp_Url_CL`|Yes|Yes|
+|`Ttp_Attachment_CL`|Yes|Yes|
+|`Ttp_Impersonation_CL`|Yes|Yes|
 
-**Data collection rule support:** Not currently supported
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
 
 **Prerequisites:**
 
