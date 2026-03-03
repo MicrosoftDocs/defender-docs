@@ -42,7 +42,7 @@ The **Chat** tab within the Microsoft Defender portal provides a space to engage
 
 :::image type="content" source="media/communicate-defender-experts-xdr/in-portal-xdr-chat.png" alt-text="Screenshot of managed response in-portal chat." lightbox="media/communicate-defender-experts-xdr/in-portal-xdr-chat.png":::
 
-For quicker responses to your messages, Defender Experts-trained AI sometimes posts on behalf of the experts (for example, to acknowledge your message that your SOC team is still working on remediation actions). These messages show up as coming from *Defender Experts virtual assistant*.
+For quicker responses to your messages, Defender Experts-trained AI sometimes posts on behalf of the experts (for example, to acknowledge your message that your SOC team is still working on remediation actions). Its messages show up as coming from *Defender Experts virtual assistant*.
 
 You can also translate the chat messages to another language by selecting the **Translate messages** icon :::image type="icon" source="media/communicate-defender-experts-xdr/translate-messages-icon.png"::: on the upper-right corner of the chat window. This feature uses AI to support English, Spanish, Japanese, and Portuguese (Brazil and Portugal) translations.
 
