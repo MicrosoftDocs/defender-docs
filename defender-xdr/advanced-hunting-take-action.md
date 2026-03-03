@@ -31,7 +31,7 @@ ms.date: 03/05/2026
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
-You can quickly contain threats or address compromised assets that you find in [advanced hunting](advanced-hunting-overview.md) by using powerful and comprehensive action options. By using these options, you can take various actions on devices, files, and emails.
+You can quickly contain threats or address compromised assets that you find in [advanced hunting](advanced-hunting-overview.md) by using powerful and comprehensive action options. By using these options, you can take various actions on devices and emails, as well as quarantine files.
 
 ## Required permissions
 
