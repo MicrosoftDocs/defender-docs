@@ -1,7 +1,6 @@
-<img width="1375" height="723" alt="image" src="https://github.com/user-attachments/assets/f3bfabb0-d16b-485e-843b-8f5d639adfb8" />---
 title: Deploy GitHub Advanced Security Integration with Microsoft Defender for Cloud
 description: Use this step-by-step guide to set up GitHub Advanced Security integration with Microsoft Defender for Cloud for code-to-runtime security.
-ms.date: 02/26/2026
+ms.date: 03/03/2026
 ms.topic: how-to
 ms.author: dlanger
 author: DebLanger
