@@ -294,6 +294,7 @@ After you create a graph job, you can view and manage the graph in your tenant f
             RETURN *
             LIMIT 30
     ```
+    
 :::image type="content" source="media/create-custom-graphs/graph-query.png" lightbox="media/create-custom-graphs/graph-query.png" alt-text="A screenshot of the graph query tab.":::
 
 For more information on GQL, see [GQL language guide](/kusto/query/graph-query-language-reference?view=microsoft-fabric).

@@ -1,10 +1,10 @@
 ---
-title: Microsoft Sentinel Graph Builder API reference
+title: Microsoft Sentinel graph provider reference
 description: Reference documentation for the Microsoft Sentinel Graph Builder API for building and querying security graphs.
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: reference
-ms.date: 01/11/2026
+ms.date: 03/03/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 
@@ -12,7 +12,7 @@ ms.subservice: sentinel-platform
 
 ---
 
-# Microsoft Sentinel Graph Builder API reference
+# Microsoft Sentinel graph provider reference
 
 The Graph Builder API provides a fluent interface for building graph specifications with nodes and edges, configuring ETL pipelines for data ingestion, querying graphs using GQL (Graph Query Language), running graph algorithms, and visualizing graph data. This API is part of the `sentinel_graph` module.
 

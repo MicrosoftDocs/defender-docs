@@ -57,7 +57,7 @@ Query these graphs and run advanced graph algorithms to understand choke points,
 
 ## Building custom graphs in Microsoft Sentinel
 
-Use the Jupyter pyspark notebooks in the Microsoft Sentinel Visual Studio Code extension to create custom graphs with your Microsoft Sentinel data. Work with the [graph builder Python library](./graph-builder-api-reference.md) to define nodes and edges, and use [Graph Query Language (GQL)](./graph-query-language.md) to query and analyze your graphs. Materialize your custom graphs in your tenant for continuous monitoring and detection of systemic threats, and leverage built-in graph algorithms for deeper insights.
+Use the Jupyter pyspark notebooks in the Microsoft Sentinel Visual Studio Code extension to create custom graphs with your Microsoft Sentinel data. Work with the [graph builder Python library](./graph-builder-api-reference.md) to define nodes and edges, and use [Graph Query Language (GQL)](./gql-reference-for-sentinel-custom-graph.md) to query and analyze your graphs. Materialize your custom graphs in your tenant for continuous monitoring and detection of systemic threats, and leverage built-in graph algorithms for deeper insights.
 
 The following table summarizes the steps to build custom graphs in Microsoft Sentinel:
 
