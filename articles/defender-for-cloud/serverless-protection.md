@@ -75,10 +75,10 @@ Learn how to [build queries with cloud security explorer](how-to-manage-cloud-se
 
 ## Limitations
 
-Serverless resources that are eligible for vulnerability assessment are the following:
-- **Power State**: Web Apps and Function Apps with ‘Running’ power state.
-- **Internet Access**: Web Apps and Function Apps with access to the internet
-- **Kind**: WebApps and Function Apps with the following ‘kind’ values are not scanned:
+Serverless resources that are not eligible for vulnerability assessment are as follows:
+- Web Apps and function apps that do not have a "Running" power stat
+- Web Apps and Function Apps that do not have access to the internet
+- WebApps and Function Apps with the following ‘kind’ values are not scanned:
    - app,migration; functionapp,botapp; app,linux,aspiredashboard; app,container,xenon; app,botapp; app,linux,Kubernetes; app,functionapp,windows; functionapp,linux,container,Kubernetes; app,linux,container,Kubernetes; app,xenon; functionapp,linux,Kubernetes; app,functionapp
  
 ## Related content
