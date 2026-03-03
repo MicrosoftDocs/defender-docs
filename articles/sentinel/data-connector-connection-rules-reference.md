@@ -143,7 +143,7 @@ The result of this example is the secret defined from the user input sent in the
 }
 ```
 
-This example uses the default values and results in the following header: Authorization: `token 123123123`.
+This example uses the default values and results in the following header: `Authorization`: `token 123123123`.
 
 ```json
 "auth": { 
@@ -153,7 +153,7 @@ This example uses the default values and results in the following header: Author
 }
 ```
 
-Because `ApiKeyName` is explicitly set to `""`, the result is the following header: Authorization: `123123123`.
+Because `ApiKeyName` is explicitly set to `""`, the result is the following header: `Authorization`: `123123123`.
 
 #### OAuth2
 
@@ -224,7 +224,7 @@ Here's an example of the OAuth2 `client_credentials` grant type:
 
 JSON Web Token (JWT) authentication supports obtaining tokens via username and password credentials and using them for API requests.
 
-##### Basic Example
+##### Basic example
 
 ```json
 "auth": {
@@ -331,9 +331,9 @@ Follow this authentication flow:
 | `TokenEndpoint`             | True      | String   | The URL endpoint that's used to obtain the JWT token. |
 | `IsCredentialsInHeaders`    |           | Boolean  | The value that indicates whether to send credentials as a basic authentication header (`true`) versus a `POST` body (`false`). The default is `false`. |
 | `IsJsonRequest`             |           | Boolean  | The value that indicates whether to send the request in JSON (header `Content-Type = application/json`) versus form-encoded (header `Content-Type = application/x-www-form-urlencoded`). The default is `false`. |
-| `JwtTokenJsonPath`          |           | String   | The value that indicates the `JSONPath` value to use to extract the token from the response. For example: "`$.access_token`"). |
+| `JwtTokenJsonPath`          |           | String   | The value that indicates the `JSONPath` value to use to extract the token from the response. For example: `$.access_token`). |
 | `JwtTokenInResponseHeader`  |           | Boolean  | The value that indicates whether to extract the token from the response header versus the body. The default is `false`. |
-| `JwtTokenHeaderName`.        |           | String   | The value that indicates the header name when the token is in the response header. The default is "`Authorization`" |
+| `JwtTokenHeaderName`.        |           | String   | The value that indicates the header name when the token is in the response header. The default is `Authorization`. |
 | `JwtTokenIdentifier`        |           | String   | The identifier used to extract the JWT from a prefixed token string. |
 | `QueryParameters`           |           | Object   | The custom query parameters to include when sending the request to the token endpoint. |
 | `Headers`                   |           | Object   | The custom headers to include when sending the request to the token endpoint. |
@@ -343,8 +343,8 @@ Follow this authentication flow:
 
 1. Send credentials to `TokenEndpoint` to obtain the JWT token.
 
-   - If `IsCredentialsInHeaders: true`: Sends a basic authentication header with `username:password`.
-   - If `IsCredentialsInHeaders: false`: Sends credentials in a `POST` body.
+   - If `IsCredentialsInHeaders: true`: sends a basic authentication header with `username:password`.
+   - If `IsCredentialsInHeaders: false`: sends credentials in a `POST` body.
 
 2. Extract the token by using `JwtTokenJsonPath` or from the response header.
 
@@ -353,9 +353,9 @@ Follow this authentication flow:
    > [!NOTE]
    > Limitations
    >
-   > - Requires username and password authentication for token acquisition.
-   > - Doesn't support API key-based token requests.
-   > - Custom header authentication (without username and password) isn't supported.
+   > - Requires username and password authentication for token acquisition
+   > - Doesn't support API key-based token requests
+   > - Doesn't support custom header authentication (without username and password)
 
 ## Request configuration
 
@@ -373,10 +373,10 @@ The request section defines how the CCF data connector sends requests to your da
 | `TimeoutInSeconds` |  | Integer (1...180) | This field defines the request timeout in seconds. The default value is `20`. |
 | `IsPostPayloadJson` |  | Boolean | This field determines whether the `POST` payload is in JSON format. The default value is `false`. |
 | `Headers` |  | Object | This field includes key/value pairs that define the request headers. |
-| `QueryParameters` |  | Object | This field includes Key/value pairs that define the request query parameters. |
+| `QueryParameters` |  | Object | This field includes key/value pairs that define the request query parameters. |
 | `StartTimeAttributeName` | True when the `EndTimeAttributeName` value is set. | String | This field defines the query parameter name for the query start time. For more, go to [`StartTimeAttributeName` example](#starttimeattributename-example). |
 | `EndTimeAttributeName` | True when `StartTimeAttributeName` is set. | String | This field defines the query parameter name for query end time. |
-| `QueryTimeIntervalAttributeName` |  | String | This field is used if the endpoint requires a specialized format for querying the data on a time frame. Use this property with the `QueryTimeIntervalPrepend` and the `QueryTimeIntervalDelimiter` parameters. For more, go to [`QueryTimeIntervalAttributeName` example](#querytimeintervalattributename-example). |
+| `QueryTimeIntervalAttributeName` |  | String | This field is used if the endpoint requires a specialized format for querying the data on a time frame. Use this property with the `QueryTimeIntervalPrepend` and `QueryTimeIntervalDelimiter` parameters. For more, go to [`QueryTimeIntervalAttributeName` example](#querytimeintervalattributename-example). |
 | `QueryTimeIntervalPrepend` | True when `QueryTimeIntervalAttributeName` is set. | String | Reference `QueryTimeIntervalAttributeName`. |
 | `QueryTimeIntervalDelimiter` |  True when `QueryTimeIntervalAttributeName` is set. | String | Reference `QueryTimeIntervalAttributeName`. |
 | `QueryParametersTemplate` |  | String | This field references the query template to use when passing parameters in advanced scenarios.<br><br>For example: `"queryParametersTemplate": "{'cid': 1234567, 'cmd': 'reporting', 'format': 'siem', 'data': { 'from': '{_QueryWindowStartTime}', 'to': '{_QueryWindowEndTime}'}, '{_APIKeyName}': '{_APIKey}'}"`. |
@@ -636,7 +636,7 @@ Here are some examples:
 | `PageSize` | False | Integer | The number of events per page. |
 | `PageSizeParameterName` | False | String | The query parameter name for the page size. |
 | `NextPageUrl` | False | String | Field that's used only if the connector is for the Coralogix API. |
-| `NextPageUrlQueryParameters` | False | Object key/value pairs that add a custom query parameter to each request for the next page. |
+| `NextPageUrlQueryParameters` | False | Object key/value pairs that add a custom query parameter to each request for the next page |
 | `NextPageParaName` | False | String | The next page name in the request. |
 | `HasNextFlagJsonPath` | False | String | The path to the `HasNextPage` flag attribute. |
 | `NextPageRequestHeader` | False | String | The next page header name in the request. |
@@ -753,7 +753,7 @@ Example:
 |----|----|----|----|
 | `DataCollectionEndpoint` | True | String | Data collection endpoint (DCE). For example: `https://example.ingest.monitor.azure.com`. |
 | `DataCollectionRuleImmutableId` | True | String | The DCR immutable ID. Find it by viewing the DCR creation response or by using the [DCR API](/rest/api/monitor/data-collection-rules/get). |
-| `StreamName` | True | String | This value is the `streamDeclaration` defined in the DCR. The prefix must begin with `Custom-`). |
+| `StreamName` | True | String | This value is the `streamDeclaration` defined in the DCR. The prefix must begin with `Custom-`. |
 
 ## Example CCF data connector
 
