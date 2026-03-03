@@ -4,7 +4,7 @@ description: This article lists all Microsoft Defender for Cloud container secur
 author: Elazark
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 02/24/2026
+ms.date: 03/04/2026
 ms.author: elkrieger
 ms.custom: generated
 ai-usage: ai-assisted
@@ -112,7 +112,7 @@ Images running on your Kubernetes cluster should come from known and monitored c
 ### [Preview] Container images in Azure registry should have vulnerability findings resolved
 
 >[!NOTE]
-> This preview recommendation is going to be deprecated on March 25, 2026. [Deprecation of preview of container and container images vulnerability recommendations](release-notes.md#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations)
+> This preview recommendation is going to be deprecated on April 13, 2026. [Deprecation of preview of container and container images vulnerability recommendations](release-notes.md#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations)
 
 **Description**: Defender for Cloud scans your registry images for known vulnerabilities (CVEs) and provides detailed findings for each scanned image. Scanning and remediating vulnerabilities for container images in the registry helps maintain a secure and reliable software supply chain, reduces the risk of security incidents, and ensures compliance with industry standards.
 
