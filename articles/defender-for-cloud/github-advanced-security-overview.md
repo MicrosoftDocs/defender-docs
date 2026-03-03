@@ -15,7 +15,7 @@ GitHub Advanced Security (GHAS) integration with Microsoft Defender for Cloud co
 Use this integration to:
 
 - Track vulnerabilities from source code to deployed applications 
-- Trace the code repo and the fix owner of origin for your vulernable runtime workloads
+- Trace the code repository and the fix owner of origin for your vulnerable runtime workloads.
 - Focus on security issues that affect production workloads.
 - Coordinate fixes between GitHub repositories and Azure environments.
 - Take advantage of AI-powered remediation tools for faster resolution.
