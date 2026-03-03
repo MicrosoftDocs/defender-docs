@@ -17,7 +17,11 @@ You can explore and investigate [attack paths](how-to-manage-attack-path.md) by 
 - Pod uses host network
 - Container image is vulnerable to remote code execution
 
-## Azure: Testing the attack path and security explorer using a mock vulnerable container image
+## Test the attack path and security explorer using a mock vulnerable container image for each cloud provider
+
+## [Azure)**](#tab/testing-the-attack-path-and-security-explorer-using-a-mock-vulnerable-container-image-for-azure)
+
+### Testing the attack path and security explorer using a mock vulnerable container image for Azure
 
 If the list of attack paths has no entries, you can still test this feature by using a mock container image. Use the following steps to set up the test:
 
@@ -79,7 +83,11 @@ If the list of attack paths has no entries, you can still test this feature by u
 
 After you finish testing the attack path, investigate the created attack path by going to **Attack path analysis**, and search for the attack path you created. For more information, see [Identify and remediate attack paths](how-to-manage-attack-path.md).
 
-## AWS: Testing the attack path and security explorer using a mock vulnerable container image
+## AWS: 
+
+## [**AWS**](#tab/testing-the-attack-path-and-security-explorer-using-a-mock-vulnerable-container-image-for-aws)
+
+### Testing the attack path and security explorer using a mock vulnerable container image for AWS
 
 1. Create an ECR repository named *mdc-mock-0001*
 1. Go to your AWS account and choose **Command line or programmatic access**.
@@ -130,7 +138,9 @@ The Helm chart deploys resources onto your cluster that you can use to infer att
 
 After you finish testing the attack path, investigate the created attack path by going to **Attack path analysis**, and search for the attack path you created. For more information, see [Identify and remediate attack paths](how-to-manage-attack-path.md).
 
-## GCP: Testing the attack path and security explorer using a mock vulnerable container image
+## [**GCP**](#tab/testing-the-attack-path-and-security-explorer-using-a-mock-vulnerable-container-image-for-gcp)
+
+### Testing the attack path and security explorer using a mock vulnerable container image for GCP
 
 1. Sign in to the GCP portal.
 1. Search for **Artifact Registry**, and then create a GCP repository named *mdc-mock-0001*
