@@ -331,7 +331,7 @@ Follow this authentication flow:
 | `TokenEndpoint`             | True      | String   | The URL endpoint that's used to obtain the JWT token. |
 | `IsCredentialsInHeaders`    |           | Boolean  | The value that indicates whether to send credentials as a basic authentication header (`true`) versus a `POST` body (`false`). The default is `false`. |
 | `IsJsonRequest`             |           | Boolean  | The value that indicates whether to send the request in JSON (header `Content-Type = application/json`) versus form-encoded (header `Content-Type = application/x-www-form-urlencoded`). The default is `false`. |
-| `JwtTokenJsonPath`          |           | String   | The value that indicates the `JSONPath` value to use to extract the token from the response. For example: `$.access_token`). |
+| `JwtTokenJsonPath`          |           | String   | The value that indicates the `JSONPath` value to use to extract the token from the response. For example: `$.access_token`. |
 | `JwtTokenInResponseHeader`  |           | Boolean  | The value that indicates whether to extract the token from the response header versus the body. The default is `false`. |
 | `JwtTokenHeaderName`.        |           | String   | The value that indicates the header name when the token is in the response header. The default is `Authorization`. |
 | `JwtTokenIdentifier`        |           | String   | The identifier used to extract the JWT from a prefixed token string. |
@@ -636,7 +636,7 @@ Here are some examples:
 | `PageSize` | False | Integer | The number of events per page. |
 | `PageSizeParameterName` | False | String | The query parameter name for the page size. |
 | `NextPageUrl` | False | String | Field that's used only if the connector is for the Coralogix API. |
-| `NextPageUrlQueryParameters` | False | Object key/value pairs that add a custom query parameter to each request for the next page |
+| `NextPageUrlQueryParameters` | False | Object | Key/value pairs that add a custom query parameter to each request for the next page. |
 | `NextPageParaName` | False | String | The next page name in the request. |
 | `HasNextFlagJsonPath` | False | String | The path to the `HasNextPage` flag attribute. |
 | `NextPageRequestHeader` | False | String | The next page header name in the request. |
