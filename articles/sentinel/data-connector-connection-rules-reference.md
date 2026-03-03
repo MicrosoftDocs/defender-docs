@@ -8,7 +8,7 @@ ms.topic: reference
 ms.date: 9/30/2024
 ms.author: edbaynash
 
-#Customer intent: As a security engineer, I want to reference paging, authentication and payload options to create and configure RestApiPoller data connectors by using the Codeless Connector Framework so that I can integrate a specific data source into Microsoft Sentinel without writing custom code.
+#Customer intent: As a security engineer, I want to reference paging, authentication, and payload options to create and configure RestApiPoller data connectors by using the Codeless Connector Framework. By using RestApiPoller data connectors, I can integrate a specific data source into Microsoft Sentinel without writing custom code.
 
 ---
 
@@ -20,7 +20,7 @@ Each data connector represents a specific *connection* of a Microsoft Sentinel d
 
 For more information, see [Create a codeless connector for Microsoft Sentinel](create-codeless-connector.md#create-the-deployment-template).
 
-## Create or update data connectors
+## Creating or updating data connectors
 
 Find the latest stable or preview API version by referencing the [`create` or `update`](/rest/api/securityinsights/data-connectors/create-or-update) operations in the REST API docs. The difference between the `create` and `update` operations is that `update` requires the `etag` value.
 
@@ -97,7 +97,7 @@ To create the deployment template, which also uses parameters, you need to escap
 
 To enable the credentials to be entered from the UI, the `connectorUIConfig` section requires you enter the desired parameters in `instructions`. For more information, see [Data connector definitions reference for the Codeless Connector Framework](data-connector-ui-definitions-reference.md#instructions).
 
-#### Basic authentication
+#### <a name = "basic-auth"></a> Basic authentication
 
 | Field | Required | Type |
 | ---- | ---- | ---- |
@@ -121,7 +121,7 @@ Here's an example of basic authentication that uses parameters defined in `conne
 | `ApiKey` | True | String | User secret key. | |
 | `ApiKeyName` | | String | Name of the URI header that contains the `ApiKey` value. | `Authorization` | 
 | `ApiKeyIdentifier` | | String | String value to prepend the token. | `token` |
-| `IsApiKeyInPostPayload` | | Boolean | This value determines whether to send the secret in the `POST` body instead of header. | `false` |
+| `IsApiKeyInPostPayload` | | Boolean | Value that determines whether to send the secret in the `POST` body instead of header. | `false` |
 
 `APIKey` authentication examples:
 
@@ -163,16 +163,16 @@ After the user returns to the client via the redirect URL, the application will 
 
 |Field | Required | Type | Description |
 | ---- | ---- | ---- | ---- | 
-| `ClientId` | True	| String | The client ID |
-| `ClientSecret`| True | String | The client secret |
-| `AuthorizationCode` | True when the `grantType` value is `authorization_code` | String | If the grant type is `authorization_code`, this field value is the authorization code that the authentication server returned. |
+| `ClientId` | True. | String | The client ID. |
+| `ClientSecret`| True. | String | The client secret. |
+| `AuthorizationCode` | True when the `grantType` value is `authorization_code`. | String | If the grant type is `authorization_code`, this field value is the authorization code that the authentication server returned. |
 | `Scope` | True for the `authorization_code` grant type.<br> Optional for the `client_credentials` grant type. | String | A space-separated list of scopes for user consent. For more information, see [OAuth2 scopes and permissions](/entra/identity-platform/scopes-oidc). |
 | `RedirectUri` | True when the `grantType` value is `authorization_code`. | String | The URL for redirect must be `https://portal.azure.com/TokenAuthorize/ExtensionName/Microsoft_Azure_Security_Insights`. |
-| `GrantType` | True | String | The grant type is `authorization_code` or `client_credentials`. |
-| `TokenEndpoint` | True | String | URL to exchange code with a valid token in the `authorization_code` grant, or a client ID and secret with a valid token in the `client_credentials` grant. |
+| `GrantType` | True. | String | The grant type. Can be `authorization_code` or `client_credentials`. |
+| `TokenEndpoint` | True. | String | The URL to exchange code with a valid token in the `authorization_code` grant, or a client ID and secret with a valid token in the `client_credentials` grant. |
 | `TokenEndpointHeaders` |  | Object | An optional key/value object to send custom headers to the token server. |
 | `TokenEndpointQueryParameters` |  | Object | An optional key/value object to send custom query parameters to the token server. |
-| `AuthorizationEndpoint`	| True | String | The URL for user consent for the `authorization_code` flow. |
+| `AuthorizationEndpoint`	| True. | String | The URL for user consent for the `authorization_code` flow. |
 | `AuthorizationEndpointHeaders` |	 | Object | An optional key/value object to send custom headers to the authentication server. |
 | `AuthorizationEndpointQueryParameters`	|  | Object | An optional key/value pair used in an OAuth2 authorization code flow request. |
 
@@ -308,7 +308,7 @@ JSON Web Token (JWT) authentication supports obtaining tokens via username and p
 }
 ```
 
-Authentication flow:
+Follow this authentication flow:
 
 1. Send credentials to `TokenEndpoint` to obtain JWT token.
 
@@ -319,29 +319,27 @@ Authentication flow:
 
 3. Use the token in subsequent API requests with the `ApiKeyName` header.
 
-Properties:
-
 |Field |Required |Type |Description	|
 | ---- | ---- | ---- | ---- |
 | `type`                      | True      | String   | The type. Must be `JwtToken` |
 | `userName`                  | True (if `userToken` isn't used)      | Object   | The key/value pair for the `userName` credential. If `userName` and `password` are sent in the header request, specify the `value` property with the username. If `userName` and `password` are sent in the body request, specify `Key` and `Value`. |
-| `password`                  | True (if `userToken` isn't used).     | Object   | The key/value pair for the password credential. If `userName` and `password` are sent in the header request, specify the `value` property with the `userName`. If `userName` and `password` are sent in the body request, specify `Key` and `Value`. |
+| `password`                  | True (if `userToken` isn't used) | Object   | The key/value pair for the password credential. If `userName` and `password` are sent in the header request, specify the `value` property with the `userName`. If `userName` and `password` are sent in the body request, specify `Key` and `Value`. |
 | `userToken`                  | True (if `userName` isn't used)     | String   | The user token generated by the client to get the system token for authentication. |
 | `UserTokenPrepend`                  | False     | String   | The value that indicates whether to prepend text before the token. Example: `Bearer`. |
 | `NoAccessTokenPrepend`                  | False     | Boolean   | An access flag that indicates that the token shouldn't prepend anything. |
-| `TokenEndpointHttpMethod`                  | False     | String   | The HTTP method to token endpoint. It can be `Get` or `Post`. The default is `Post`. |
+| `TokenEndpointHttpMethod`                  | False     | String   | The HTTP method for token endpoint. It can be `Get` or `Post`. The default is `Post`. |
 | `TokenEndpoint`             | True      | String   | The URL endpoint that's used to obtain the JWT token. |
-| `IsCredentialsInHeaders`    |           | Boolean  | This value indicates whether to send credentials as a basic authentication header (`true`) versus a `POST` body (`false`). The default is `false`. |
-| `IsJsonRequest`             |           | Boolean  | This value indicates whether to send the request in JSON (header `Content-Type = application/json`) versus form-encoded (header `Content-Type = application/x-www-form-urlencoded`). The default is `false`. |
-| `JwtTokenJsonPath`          |           | String   | This value indicates the `JSONPath` value to use to extract the token from the response. For example: "`$.access_token`"). |
-| `JwtTokenInResponseHeader`  |           | Boolean  | This value indicates whether to extract the token from the response header versus the body. The default is `false`. |
-| `JwtTokenHeaderName`.        |           | String   | This value indicates the header name when the token is in the response header. The default is "`Authorization`" |
+| `IsCredentialsInHeaders`    |           | Boolean  | The value that indicates whether to send credentials as a basic authentication header (`true`) versus a `POST` body (`false`). The default is `false`. |
+| `IsJsonRequest`             |           | Boolean  | The value that indicates whether to send the request in JSON (header `Content-Type = application/json`) versus form-encoded (header `Content-Type = application/x-www-form-urlencoded`). The default is `false`. |
+| `JwtTokenJsonPath`          |           | String   | The value that indicates the `JSONPath` value to use to extract the token from the response. For example: "`$.access_token`"). |
+| `JwtTokenInResponseHeader`  |           | Boolean  | The value that indicates whether to extract the token from the response header versus the body. The default is `false`. |
+| `JwtTokenHeaderName`.        |           | String   | The value that indicates the header name when the token is in the response header. The default is "`Authorization`" |
 | `JwtTokenIdentifier`        |           | String   | The identifier used to extract the JWT from a prefixed token string. |
 | `QueryParameters`           |           | Object   | The custom query parameters to include when sending the request to the token endpoint. |
 | `Headers`                   |           | Object   | The custom headers to include when sending the request to the token endpoint. |
 | `RequestTimeoutInSeconds`   |           | Integer  | The request timeout in seconds. The default value is `100`, with a maximum value of `180`. |
 
-Authentication flow:
+Follow this authentication flow:
 
 1. Send credentials to `TokenEndpoint` to obtain the JWT token.
 
@@ -365,7 +363,7 @@ The request section defines how the CCF data connector sends requests to your da
 
 |Field |Required |Type |Description	|
 | ---- | ---- | ---- | ---- |
-| `ApiEndpoint` | True | String | This field determines the URL for the remote server and defines the endpoint from which to pull data. |
+| `ApiEndpoint` | True. | String | This field determines the URL for the remote server and defines the endpoint from which to pull data. |
 | `RateLimitQPS` |  | Integer | This field defines the number of calls or queries allowed in a second. |
 | `RateLimitConfig` |  | Object | This field defines the rate-limit configuration for the RESTful API. For more, go to [`RateLimitConfig` example](#ratelimitconfig-example). |
 | `QueryWindowInMin` |  | Integer | This field defines the available query window in minutes. The minimum is 1 minute. The default is 5 minutes.|
@@ -755,7 +753,7 @@ Example:
 |----|----|----|----|
 | `DataCollectionEndpoint` | True | String | Data collection endpoint (DCE). For example: `https://example.ingest.monitor.azure.com`. |
 | `DataCollectionRuleImmutableId` | True | String | The DCR immutable ID. Find it by viewing the DCR creation response or by using the [DCR API](/rest/api/monitor/data-collection-rules/get). |
-| `StreamName` | True | String | This value is the `streamDeclaration` defined in the DCR. The prefix must begin with *Custom-*). |
+| `StreamName` | True | String | This value is the `streamDeclaration` defined in the DCR. The prefix must begin with `Custom-`). |
 
 ## Example CCF data connector
 
