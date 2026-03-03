@@ -1,3 +1,4 @@
+- ---
 title: Deploy GitHub Advanced Security Integration with Microsoft Defender for Cloud
 description: Use this step-by-step guide to set up GitHub Advanced Security integration with Microsoft Defender for Cloud for code-to-runtime security.
 ms.date: 03/03/2026
