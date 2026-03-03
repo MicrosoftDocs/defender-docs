@@ -3,7 +3,7 @@ title: Get started with custom graphs in Microsoft Sentinel
 description: Learn how to create and manage custom graphs in Microsoft Sentinel to model attack patterns, investigate threats, and run advanced graph algorithms.
 author: EdB-MSFT
 ms.author: edbaynash
-ms.date: 12/01/2025
+ms.date: 03/03/2026
 ms.topic: how-to 
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-graph
@@ -27,9 +27,9 @@ To interact with custom graphs, you need the following XDR permissions in Sentin
 
 | Graph operation| Permissions required|
 |---------------------|-------------------------|
-| Create and query an ephemeral graph | Use a [custom Microsoft Defender XDR unified RBAC role with *data (manage)*](https://aka.ms/data-lake-custom-urbac) permissions over the Microsoft Sentinel data collection. |
-| Materialize a graph in tenant | Use one of the following Microsoft Entra ID roles:<br>[Security operator](/entra/identity/role-based-access-control/permissions-reference#security-operator)<br>[Security administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator)<br>[Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) |
-| Query a materialized graph | Use a [custom Microsoft Defender XDR unified RBAC role with *security data basics (read)*](/defender-xdr/custom-permissions-details) permissions over the Microsoft Sentinel data collection. |
+| Model and build a notebook graph | Use a [custom Microsoft Defender XDR unified RBAC role with *data (manage)*](https://aka.ms/data-lake-custom-urbac) permissions over the Microsoft Sentinel data collection. |
+| Persist a graph in tenant | Use one of the following Microsoft Entra ID roles:<br>[Security operator](/entra/identity/role-based-access-control/permissions-reference#security-operator)<br>[Security administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator)<br>[Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) |
+| Query a persisted graph | Use a [custom Microsoft Defender XDR unified RBAC role with *security data basics (read)*](/defender-xdr/custom-permissions-details) permissions over the Microsoft Sentinel data collection. |
 
 Microsoft Entra ID roles provide broad access across all workspaces in the data lake. For more information, see [Roles and permissions in Microsoft Sentinel](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake).
 
@@ -37,23 +37,20 @@ Microsoft Entra ID roles provide broad access across all workspaces in the data 
 
 Create custom graphs by using Jupyter notebooks in the Microsoft Sentinel Visual Studio Code extension. For more information, see [Install Visual Studio Code and the Microsoft Sentinel extension ](notebooks.md#install-visual-studio-code-and-the-microsoft-sentinel-extension)
   
-During the preview period, select **Auto Update** and select **Install Pre-Release Versions**.
-
-:::image type="content" source="media/create-custom-graphs/install-pre-release-versions.png" lightbox="media/create-custom-graphs/install-pre-release-versions.png" alt-text="A screenshot showing the install pre-release versions option in Visual Studio Code.":::
-
 
 ## Create a custom graph 
 
 To create and work with custom graphs, complete the following steps:
 
-1. Create an ephemeral graph
-1. Materialize the graph in your tenant
-1. View and manage materialized graphs
+1. Model a custom graph
+1. Save the custom graph in your tenant
+1. View and manage custom graphs in your tenant
 
 
-### Create an ephemeral graph
 
-Create an ephemeral graph by using a Jupyter notebook in the Microsoft Sentinel Visual Studio Code extension. 
+## Model a custom graph
+
+Create a custom graph by using a Jupyter notebook in the Microsoft Sentinel Visual Studio Code extension. 
 
 The following steps walk you through creating your first custom graph by using a sample notebook:
 
@@ -67,7 +64,7 @@ The following steps walk you through creating your first custom graph by using a
    :::image type="content" source="media/create-custom-graphs/sign-in-to-view-graphs.png" lightbox="media/create-custom-graphs/sign-in-to-view-graphs.png" alt-text="A screenshot of the sign-in page for graphs in Visual Studio Code.":::
 
 1. Select **Select kernel** in the top right of the notebook window to select a spark compute pool.
-1. Select **Microsoft Sentinel**, then select the **Medium graph pool**.
+1. Select **Microsoft Sentinel**, then select any of the available spark pools.
 
    :::image type="content" source="media/create-custom-graphs/select-kernel.png"  lightbox="media/create-custom-graphs/select-kernel.png" alt-text="A screenshot of the select kernel page in Visual Studio Code.":::
 
@@ -93,7 +90,7 @@ The following steps walk you through creating your first custom graph by using a
 
     This checks the version of the library, your Spark custer region and account ID, and sets the logging level to DEBUG for detailed output.
     
-1. Run the cell to by selecting the run cell triangle icon to the left of the cell. The first time you run a cell, you might be prompted to select a kernel if you didn't already select one. Select **Microsoft Sentinel**, then select the **Medium graph pool**.
+1. Run the cell to by selecting the run cell triangle icon to the left of the cell. The first time you run a cell, you might be prompted to select a kernel if you didn't already select one.
 
      The first time you run a cell, it might take up to five minutes to start the Spark session.
 
@@ -219,7 +216,7 @@ The following steps walk you through creating your first custom graph by using a
     ```
     When successful, the last line of the output cell displays *Status: success*.
 
-You have now created an ephemeral graph in the notebook.
+You have now created a graph in the notebook.
 
 1. Show a visual representation of the graph. In a new cell, paste and run the following code:
 
@@ -245,9 +242,9 @@ You have now created an ephemeral graph in the notebook.
    :::image type="content" source="media/create-custom-graphs/graph-visualization-details.png" lightbox="media/create-custom-graphs/graph-visualization-details.png" alt-text="A screenshot showing the visualization of a graph and detail side-panel in Visual Studio Code.":::
 
 
-### Materialize a graph in your tenant
+### Save a custom graph in your tenant
 
-After you create an ephemeral graph, you can persist it by storing the graph in your tenant with a scheduled job.
+After you create a graph, you can persist it by storing the graph in your tenant with a scheduled job.
 
 1. From your graph notebook, select **Create Scheduled Job**, then select **Create a graph job**.
 
@@ -273,11 +270,9 @@ After you create an ephemeral graph, you can persist it by storing the graph in 
 
 .
 
-### Viewing and managing materialized graphs
+### View and manage custom graphs in your tenant
 
-1.  In Microsoft Sentinel extension, select **Graphs** -\> **Custom Graphs** -\> and your materialized graph.
-
-:::image type="content" source="media/create-custom-graphs/configure-graph-job.png" lightbox="media/create-custom-graphs/configure-graph-job.png" alt-text="A screenshot showing the create graph job page in Visual Studio Code.":::
+After you create a graph job, you can view and manage the graph in your tenant from the Microsoft Sentinel extension in Visual Studio Code.
 
 1. From the list of graphs, select your materialized graph to view its details.
 1. Select the **Job Details** tab to view the status of the graph job, including last run time, next run time, and any errors encountered during the build process.
@@ -285,11 +280,12 @@ After you create an ephemeral graph, you can persist it by storing the graph in 
 
     :::image type="content" source="media/create-custom-graphs/graph-job-details.png" lightbox="media/create-custom-graphs/graph-job-details.png" alt-text="A screenshot showing the graph job details tab in Visual Studio Code.":::
 
-1. When the graph build is complete, the **Status** updates to **Succeeded**. Select the **Graph Details** tab to view information about the graph. The **Status** shows **Ready** when the graph is successfully built and stored in your tenant.
+1. When the graph build is complete, the **Status** updates to **Succeeded**. Select the **Graph Details** tab to view information about the graph. 
+<!-- The **Status** shows **Ready** when the graph is successfully built and stored in your tenant. -->
 
     :::image type="content" source="media/create-custom-graphs/graph-details.png" lightbox="media/create-custom-graphs/graph-details.png" alt-text="A screenshot of the graph details tab.":::
 
-1.  You can now query the graph in the query editor.  Select the **Graph Query** tab to open the graph query editor.
+1. You can now query the graph in the query editor.  Select the **Graph Query** tab to open the graph query editor.
 1. Paste the following sample GQL query to retrieve all user nodes in the graph:
 
     ```gql

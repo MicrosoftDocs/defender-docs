@@ -6,6 +6,7 @@ ms.author: edbaynash
 ms.topic: reference
 ms.date: 01/11/2026
 ms.service: microsoft-sentinel
+ms.subservice: sentinel-platform
 
 #Customer intent: As a security analyst or engineer, I want to use the Graph Builder API to create and query security graphs so that I can perform advanced threat analysis and investigation.
 

@@ -1,7 +1,17 @@
-# **Graph Query Language (GQL) reference (In Preview)**
+---
+title: Graph Query Language (GQL) reference for Microsoft Sentinel graph (Preview)
+description: Learn the fundamental concepts, functions, and operators of Graph Query Language (GQL) for querying graph data in Microsoft Sentinel graph.
+author: EdB-MSFT
+ms.author: edbaynash
+ms.date: 03/03/2026
+ms.topic: reference
+ms.service: microsoft-sentinel
+ms.subservice: sentinel-platform
+---
+
+# Graph Query Language (GQL) reference for Microsoft Sentinel graph (Preview)
 
  Applies to: Microsoft Sentinel Graph
-
 
 >
 > [!NOTE]>
@@ -296,7 +306,7 @@ The following table lists the core GQL functions and operators, and examples.
 | STARTS WITH | String starts with pattern | WHERE person.name STARTS WITH 'Tom' |
 | ENDS WITH | String ends with pattern | WHERE person.name ENDS WITH 'Hanks' |
 | CONTAINS | String contains pattern | WHERE person.name CONTAINS 'Tom' |
-| || | String concatenation | RETURN n.firstName || ' ' || n.lastName |
+| \|\| | String concatenation | RETURN n.firstName \|\| ' ' \|\| n.lastName |
 | TRIM() | Remove whitespace from both ends | RETURN TRIM(' abc ') |
 
 
