@@ -31,7 +31,7 @@ ms.date: 03/05/2026
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
-You can quickly contain threats or address compromised assets that you find in [advanced hunting](advanced-hunting-overview.md) by using powerful and comprehensive action options. By using these options, you can take various actions on devices and emails, such as quarantining files, deleting emails, and more.
+You can quickly contain threats or address compromised assets that you find in [advanced hunting](advanced-hunting-overview.md) by using powerful and comprehensive action options. By using these options, you can take various actions on devices, files, and emails.
 
 ## Required permissions
 
@@ -58,7 +58,7 @@ You can take the following actions on devices identified by the `DeviceId` colum
 
 To learn more about how Microsoft Defender for Endpoint performs these response actions, [read about response actions on devices](/windows/security/threat-protection/microsoft-defender-atp/respond-machine-alerts).
 
-### Quarantine files
+## Quarantine files
 
 You can deploy the *quarantine* action on files so that they're automatically quarantined when encountered. When selecting this action, you can choose between the following columns to identify which files in your query results to quarantine:
 
