@@ -1,4 +1,4 @@
----
+<img width="1375" height="723" alt="image" src="https://github.com/user-attachments/assets/f3bfabb0-d16b-485e-843b-8f5d639adfb8" />---
 title: Deploy GitHub Advanced Security Integration with Microsoft Defender for Cloud
 description: Use this step-by-step guide to set up GitHub Advanced Security integration with Microsoft Defender for Cloud for code-to-runtime security.
 ms.date: 02/26/2026
@@ -8,9 +8,9 @@ author: DebLanger
 #customer intent: As a security administrator, I want to deploy and configure GitHub Advanced Security integration with Microsoft Defender for Cloud to protect applications from code to production.
 ---
 
-# Deploy GitHub Advanced Security integration with Microsoft Defender for Cloud
+# Setup GitHub Advanced Security native integration with Microsoft Defender for Cloud
 
-This guide provides setup steps and other actions to help you integrate GitHub Advanced Security (GHAS) and Microsoft Defender for Cloud. This integration helps you maximize Microsoft's cloud-native application security.
+This guide provides setup steps and other actions to help you integrate GitHub Advanced Security (GHAS) and Microsoft Defender for Cloud with a use case that would help you validate the integration end 2 end. This integration helps you maximize Microsoft's cloud-native application security by correalting runtime risks and context with the originated code for faster AI-powered remediation.
 
 By following this guide, you:
 
@@ -26,8 +26,8 @@ By following this guide, you:
 
 | Aspect | Details |
 | ------ | ------- |
-| Environmental requirements | - GitHub account with a connector created in Defender for Cloud<br>- GHAS license<br>- Defender Cloud Security Posture Management (CSPM) enabled on the subscription<br>- Microsoft Security Copilot (optional for automated remediation) |
-| Roles and permissions | - Security Admin permissions<br>- Security Reader on the Azure subscription (to view findings in Defender for Cloud)<br>- GitHub organization owner |
+| Environmental requirements | - GitHub account with a connector created in Defender for Cloud<br>- GHAS license<br>- Defender Cloud Security Posture Management (DCSPM) enabled on the subscription<br>- Microsoft Security Copilot (optional for automated remediation) |
+| Roles and permissions | - Security Admin permissions<br>- Security Admin  on the Azure subscription (to view findings in Defender for Cloud)<br>- GitHub organization owner |
 | Cloud environments | - Available in commercial clouds only (not in Azure Government, Azure operated by 21Vianet, or other sovereign clouds) |
 
 ## Prepare your environment
@@ -102,7 +102,7 @@ One way to complete this step is by connecting to the cluster and using the `kub
        kubectl run $containerName --image=$registryName.azurecr.io/mdc-mock-0001:mdc-ghas-integration
        ```
 
-### Step 2: Create the first risk factor (business-critical rule)
+### Step 2: Create the example risk factor (business-critical rule)
 
 One of the risk factors that Defender for Cloud detects for this integration is business criticality. Organizations can create rules to label resources as business critical.
 
@@ -206,13 +206,13 @@ To view the code-to-runtime recommendations:
 
 1. In the Defender for Cloud portal, go to the **Recommendations** tab.
 
-1. Search for the name of the container that you created. Then, open one of the recommendations that includes the word **Update**.
+1. Search for the name of the container that you created. Then, open one of the **Update software** recommendations , reccomendation name starts  the word **Update** .
 
-   If you used the example repository, look for **Update brace-expansion recommendation**.
+   If you used the example repository, look for **Update brace-expansion** recommendation.
 
 1. Go to the **Remediation Insights** tab and view the code to runtime diagram. The diagram maps your running container to the container image in the code repository and to the code repository of the origin in GitHub.
 
-   When the campaign runs, Defender surfaces cloud to cloud recommendations that correlate cloud findings with code and build artifacts.
+   When the campaign runs, Defender surfaces code to cloud recommendations that correlate cloud findings with code and build artifacts.
 
    The following view provides context about the affected assets and risk signals. This view helps you understand why a recommendation was generated before you take action.
 
@@ -222,9 +222,9 @@ To view the code-to-runtime recommendations:
 
 Security alerts appear as part of the recommendation evaluation flow. These alerts provide additional context about active risks and help prioritize remediation, but they do not automatically create GitHub issues.
 
-1. Select the **Associated CVEs** tab. Notice that some CVE IDs have a **View on GitHub** link in the **Related GitHub Alerts** column.
+1. Click the **Associated CVEs** tab. Notice that some CVE IDs have a **View on GitHub** link in the **Related GitHub Alerts** column.
 
-1. Select the link to open the relevant GHAS security alert. (You must have relevant permissions. Contact your administrator if you don't.)
+1. Select the link to open the relevant GHAS security alert. (To view the GHAS alert content in GitHub you must have access permissions to the relevant GitHub repo. Contact your GitHub administrator if you don't.)
 
 :::image type="content" source="media/github-advanced-security/associated-cves-tab-view.jpg" alt-text="Screenshot of the Associated CVEs tab that shows a link to a related GitHub alert." lightbox="media/github-advanced-security/associated-cves-tab-view.jpg":::
 
@@ -236,19 +236,23 @@ The GitHub issue is automatically generated with all the CVE IDs found in the sc
 
 From the recommendation view, you can explicitly generate a GitHub issue to track remediation work.
 
-1. Open the relevant code to runtime recommendation.
-1. Review the affected artifacts and risk details.
-1.**Validate whether a GitHub issue already exists** - If a GitHub issue already exists, a GitHub icon is displayed. Hover over the icon to view issue details.  
+1. Open the relevant **Update software** recommendation.
+2. Click the **Remediation Insights** tab
+3.  Review the affected **Runtime** box
+4.**Validate whether a GitHub issue already exists** - If a GitHub issue already exists, a GitHub icon is displayed on the box . Hover over the icon to view issue details.  
   If no issue exists and you have the required permissions, you can generate a new GitHub issue.
-1. Select **Generate GitHub issue**. From the code-to-runtime recommendation, generate a GitHub issue to track remediation work.  
-  The issue is created in the code repository of origin.
+1.Click **Take action**
+2. Select **Generate GitHub issue**. option from the popup.
+3. If the issue created succesfully you would see a popup notification with a link to the issue
+4. The issue is created in the code repository of origin.
   > [!NOTE]
   > If the **Generate GitHub issue** option isn’t available, required GitHub or repository permissions may be missing.  
   > Contact your GitHub or repository administrator to request access.
 
 :::image type="content" source="media/github-advanced-security/github-issue-security-alert.jpg" alt-text="Screenshot of a GitHub issues list that shows three entries marked with security and vulnerability tags." lightbox="media/github-advanced-security/github-issue-security-alert.jpg":::
 
-When you assign the issue, the issue status is updated in the Defender for Cloud portal. 
+5. When the issue would be assign to a GIthUb user or  if it's status would change the update would be reflected in the Defender for Cloud portal.
+   
 **Track ownership and status updates** - Changes to issue status or assignment made in GitHub are reflected in Microsoft Defender for Cloud, allowing you to track ownership and remediation progress.
 
 :::image type="content" source="media/github-advanced-security/github-issue-security-details.jpg" alt-text="Screenshot of a GitHub issue with security and vulnerability tags, including details like CVE IDs, runtime risk factors, and deployment info." lightbox="media/github-advanced-security/github-issue-security-details.jpg":::
