@@ -15,16 +15,19 @@ Onboarding agentless container posture in Defender CSPM allows you to gain all i
 
 Defender CSPM includes extensions that allow for agentless visibility into Kubernetes and containers registries across your organization's software development lifecycle: **Agentless scanning for machines** for scanning of runtime container images,  **K8S API access** for Kubernetes cluster discovery and **Registry access** to access images in a supported container registry.
 
+## Prerequisites
+
+- The subscription or management group is onboarded to [Microsoft Defender CSPM](enable-enhanced-security.md).
+
 ## How to onboard agentless container posture in Defender CSPM
 
-1. Before starting, verify that the scope is [onboarded to Defender CSPM](enable-enhanced-security.md).
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 1. Go to the Defender for Cloud's **Environment Settings** page.
 
 1. Select the scope that's onboarded to the Defender CSPM plan, then select **Settings**.
 
-1. Ensure the **K8S API access** and **Registry access** extensions are toggled to **On**.
+1. Toggle **K8S API access** and **Registry access** extensions to **On**.
 
     :::image type="content" source="media/concept-agentless-containers/select-components.png" alt-text="Screenshot of selecting components 8S API access and Registry access." lightbox="media/concept-agentless-containers/select-components.png":::
 

@@ -18,15 +18,15 @@ For an introduction to Cloud Security Explorer queries, see [Build queries with 
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Go to [Microsoft Defender for Cloud > Cloud Security Explorer](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/SecurityGraph).
+1. Go to **Microsoft Defender for Cloud > Cloud Security Explorer**.
 
     :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/cloud-security-explorer-main-page.png" alt-text="Screenshot of main page of Cloud Security Explorer." lightbox="./media/cloud-security-explorer-kubernetes-clusters/cloud-security-explorer-main-page.png":::
 
-1. Filter on the software in the container images to query.
+1. Search for container images that have installed softwares.
 
     :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/security-explorer-containers-query.png" alt-text="Screenshot of Cloud Security Explorer query options to retrieve list of container images with software installed." lightbox="./media/cloud-security-explorer-kubernetes-clusters/security-explorer-containers-query.png":::
 
-1. Select the **View details** link of the container image of interest to see the result details pane. In the **Insights** section of the Result details pane is a drop-drown list of the software installed on the container image. Select the installed software for review.
+1. Select the **View details** link to see the result details pane. 
 
     :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/security-explorer-containers-query-result-details.png" alt-text="Screenshot shows results of Cloud Security Explorer query to retrieve container images with software installed." lightbox="./media/cloud-security-explorer-kubernetes-clusters/security-explorer-containers-query-result-details.png":::
 
@@ -38,14 +38,14 @@ For an introduction to Cloud Security Explorer queries, see [Build queries with 
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Go to [Microsoft Defender for Cloud > Cloud Security Explorer](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/SecurityGraph).
+1. Go to **Microsoft Defender for Cloud > Cloud Security Explorer**.
 
     :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/cloud-security-explorer-main-page.png" alt-text="Screenshot of main page of Cloud Security Explorer." lightbox="./media/cloud-security-explorer-kubernetes-clusters/cloud-security-explorer-main-page.png":::
 
-1. Filter on the cluster nodes in the Azure Kubernetes Services environment to query.
+1. Create a query for cluster nodes in your Azure Kubernetes Service environment.
 
     :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/security-cloud-explorer-kubernetes-nodes-results.png" alt-text="Screenshot of Cloud Security Explorer query options to retrieve list of cluster nodes with vulnerabilities." lightbox="./media/cloud-security-explorer-kubernetes-clusters/security-cloud-explorer-kubernetes-nodes-results.png":::
 
-1. Select the **View details** link for the cluster node pool to see the result details pane. In the result details pane, select the virtual machine scale set icon to see the vulnerabilities.
+1. Select **View details** for the cluster node pool. In the **Result details** pane, select the **Virtual machine scale set** icon to view its vulnerabilities.
 
     :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/security-cloud-explorer-kubernetes-nodes-results-details.png" alt-text="Screenshot shows results of Cloud Security Explorer query to retrieve vulnerabilities in cluster nodes." lightbox="./media/cloud-security-explorer-kubernetes-clusters/security-cloud-explorer-kubernetes-nodes-results-details.png":::
