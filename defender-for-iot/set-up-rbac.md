@@ -2,7 +2,7 @@
 title: Permissions needed for the site security feature of Microsoft Defender for IoT in the Defender portal
 description: This article describes the permissions required for the site security feature of Microsoft Defender for IoT in the Microsoft Defender portal.
 ms.service: defender-for-iot
-author: lwainstein
+author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
 ms.date: 07/23/2024
