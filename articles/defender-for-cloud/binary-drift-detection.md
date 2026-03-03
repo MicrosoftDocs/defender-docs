@@ -1,89 +1,165 @@
 ---
-title: Binary drift detection
-description: Learn how binary drift detection can help you detect unauthorized external processes within containers.
+title: Binary drift detection and blocking
+description: Learn how binary drift detecting and blocking can help you detect unauthorized external processes within containers.
 ms.topic: how-to
 author: Elazark
 ms.author: elkrieger
-ms.date: 07/15/2025
-#customer intent: As a user, I want to understand how binary drift detection can help me detect unauthorized external processes within containers.
+ms.date: 02/22/2026
+#customer intent: As a user, I want to understand how binary drift detection and blocking can help me detect unauthorized external processes within containers.
 ---
 
-# Binary drift detection
+# Binary drift detection and blocking
 
-A binary drift happens when a container is running an executable that didn't come from the original image. This can either be intentional and legitimate, or it can indicate an attack. Since container images should be immutable, any processes launched from binaries not included in the original image should be evaluated as suspicious activity.
+Binary drift happens when a container runs an executable that didn't come from the original image. This drift can be intentional and legitimate, or it can indicate an attack. Since container images should be immutable, you should evaluate any processes that start from binaries not included in the original image as suspicious activity and block them to prevent potential security threats.
 
-The binary drift detection feature alerts you when there's a difference between the workload that came from the image, and the workload running in the container. It alerts you about potential security threats by detecting unauthorized external processes within containers. You can define drift policies to specify conditions under which alerts should be generated, helping you distinguish between legitimate activities and potential threats.
+The binary drift detection feature alerts you when there's a difference between the workload that comes from the image and the workload running in the container. It alerts you about potential security threats by detecting unauthorized external processes within containers. You can define drift policies to specify conditions under which alerts should be generated, helping you distinguish between legitimate activities and potential threats.
 
-Binary drift detection is integrated into the Defender for Containers plan and is available for the Azure (AKS), Amazon (EKS), and Google (GKE) clouds.
+Binary drift blocking blocks the execution of unauthorized external processes within containers. When enabled, this feature enforces the policies you define, ensuring that only approved processes can run. This proactive approach helps maintain the integrity of your containerized applications and reduces the risk of security breaches.
+
+Check out the availability of [binary drift and blocking](support-matrix-defender-for-containers.md#runtime-protection-features).
+
+> [!NOTE]
+> Binary drift blocking is currently in preview
 
 ## Prerequisites
 
-- To use binary drift detection, you need to run the Defender for Container sensor, which is available for the AWS, GCP, and AKS clouds.
-- The Defender for Container sensor must be enabled on the subscriptions and connectors.
-- To create and modify drift policies, you need Security Admin or higher permissions on the tenant. To view drift policies, you need Security Reader or higher permissions on the tenant.
+- Run the Defender for Container sensor.
+- **Binary drift blocking (Preview) only**:
+    - AKS: Helm provisioning with sensor version **0.10.1**.
+    - Multicloud: Helm provisioning with sensor version **0.10.1** or the ARC extension using `release train=preview`.
+- [Enable the Defender for Container sensor](defender-for-containers-azure-enable-portal.md#configure-plan-components) on the subscriptions and connectors.
+- The following roles and permissions:
+    - **To create and modify drift policies**: Security Admin or higher permissions on the tenant. 
+    - **To view drift policies**: Security Reader or higher permissions on the tenant.
 
-## Components
+## Configure drift and block policies
 
-The following components are part of binary drift detection:
+Create drift and block policies to define when alerts should be generated. Each policy consists of rules that define the conditions for generating alerts. This structure lets you tailor the feature to your specific needs and reduce false positives. You can create exclusions by setting higher priority rules for specific scopes or clusters, images, pods, Kubernetes labels, or namespaces.
 
-- An enhanced sensor capable of detecting binary drift
-- Policy configuration options
-- A new binary drift alert
+1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-## Configure drift policies
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
-Create drift policies to define when alerts should be generated. Each policy is made up of rules that define the conditions under which alerts should be generated. This allows you to tailor the feature to your specific needs, reducing false positives. You can create exclusions by setting higher priority rules for specific scopes or clusters, images, pods, Kubernetes labels, or namespaces.
-
-To create and configure policies, follow these steps:
-
-1. In Microsoft Defender for Cloud, go to **Management** > **Environment settings**. 
 1. Select **Containers drift policy**.
 
     :::image type="content" source="media/binary-drift-detection/select-containers-drift-policy.png" alt-text="Screenshot of Select Containers drift policy in Environment settings." lightbox="media/binary-drift-detection/select-containers-drift-policy.png":::
 
-1. You receive two rules out of the box: the **Alert on Kube-System namespace** rule and the **Default binary drift** rule. The default rule is a special rule that applies to everything if no other rule before it's matched. You can only modify its action, either to **Drift detection alert** or return it to the default **Ignore drift detection**. The **Alert on Kube-System namespace** rule is an out-of-the-box suggestion and can be modified like any other rule.
+1. Select the applicable rule:
+    - **Alert on Kube-System namespace** - can be modified like any other rule.
+    - **Default binary drift** - applies to everything if no other rule matches. You can only modify the actions to either **Drift detection alert**, **Drift detection blocking**, or **Ignore drift detection** (default).
 
-    :::image type="content" source="media/binary-drift-detection/default-rule.png" alt-text="Screenshot of Default rule appears at the bottom of the list of rules." lightbox="media/binary-drift-detection/default-rule.png":::
+        :::image type="content" source="media/binary-drift-detection/default-rule.png" alt-text="Screenshot of Default rule appears at the bottom of the list of rules." lightbox="media/binary-drift-detection/default-rule.png":::
 
-1. To add a new rule, select **Add rule**. A side panel appears where you can configure the rule.
+## Add a new rule
+
+Binary drift rules define what behavior is considered suspicious, what to alert on, and what to block. Add a new rule to enforce better control, different enforcement levels, or more granular security behavior for specific workloads. You can also set blocking rules to prevent unauthorized processes from running in your containers.
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
+
+1. Select **Containers drift policy**.
+
+1. Select **Add rule**.
 
     :::image type="content" source="media/binary-drift-detection/add-rule.png" alt-text="Screenshot of Select Add rule to create and configure a new rule." lightbox="media/binary-drift-detection/add-rule.png":::
 
-1. To configure the rule, define the following fields:
+1. Define the following fields:
 
     - **Rule name**: A descriptive name for the rule.
-    - **Action**: Select **Drift detection alert** if the rule should generate an alert or **Ignore drift detection** to exclude it from alert generation.
+    
+    - **Action**: 
+        - **Drift detection alert** if the rule should generate an alert.
+        - **Drift detection blocking** if the rule should block the drifted process.
+        - **Ignore drift detection** to exclude it from alert generation.
+        
     - **Scope description**: A description of the scope to which the rule applies.
-    - **Cloud scope**: The cloud provider to which the rule applies. You can choose any combination of Azure, AWS, or GCP. If you expand a cloud provider, you can select specific subscription. If you don't select the entire cloud provider, new subscriptions added to the cloud provider won't be included in the rule.
-    - **Resource scope**: Here you can add conditions based on the following categories: **Container name**, **Image name**, **Namespace**, **Pod labels**, **Pod name**, or **Cluster name**. Then choose an operator: **Starts with**, **Ends with**, **Equals**, or **Contains**. Finally, enter the value to match. You can add as many conditions as needed by selecting **+Add condition**.
-    - **Allow list for processes**: A list of processes that are allowed to run in the container. If a process not on this list is detected, an alert is generated.
+    
+    - **Cloud scope**: The cloud provider to which the rule applies. You can choose any combination of Azure, Amazon Web Services (AWS), or Google Cloud Platform (GCP). If you expand a cloud provider, you can select specific subscription. If you don't select the entire cloud provider, new subscriptions added to the cloud provider aren't included in the rule.
+    
+    - **Resource scope**: Add conditions based on the following categories: **Container name**, **Image name**, **Namespace**, **Pod labels**, **Pod name**, or **Cluster name**. Then choose an operator: **Starts with**, **Ends with**, **Equals**, or **Contains**. Finally, enter the value to match. You can add as many conditions as needed by selecting **+Add condition**.
+    
+    - **Allow list for processes**: A list of processes that are allowed to run in the container. Any process not on this list detected, generates an alert.
 
-    Here's an example of a rule that allows the `dev1.exe` process to run in containers in the Azure cloud scope, whose image names start with either *Test123* or *env123*:
+        Sample rule that allows the `dev1.exe` process to run in containers in the Azure cloud scope, whose image names start with either *Test123* or *env123*:
+    
+        :::image type="content" source="media/binary-drift-detection/rule-configuration.png" alt-text="Example of a rule configuration with all the fields defined." lightbox="media/binary-drift-detection/rule-configuration.png":::
 
-    :::image type="content" source="media/binary-drift-detection/rule-configuration.png" alt-text="Example of a rule configuration with all the fields defined." lightbox="media/binary-drift-detection/rule-configuration.png":::
+1. Select **Apply**.
 
-1. Select **Apply** to save the rule.
+1. Assign priority to the rule by moving the rule up or down on the list. The rule with the highest priority is evaluated first. If there's a match, the evaluation stops. If no match is found, the next rule is evaluated. If there's no match for any rule, the default rule is applied.
 
-1. Once you configure your rule, select and drag the rule up or down on the list to change its priority. The rule with the highest priority is evaluated first. If there's a match, it either generates an alert or ignores it (based on what was chosen for that rule) and the evaluation stops. If no match is found, the next rule is evaluated. If there's no match for any rule, the default rule is applied.
+1. Select **Save**.
 
-1. To edit an existing rule, choose the rule and select **Edit**. This opens the side panel where you can make changes to the rule.
+Within 30 minutes, the sensors on the protected clusters update by using the new policy.
 
-1. You can select **Duplicate rule** to create a copy of a rule. This can be useful if you want to create a similar rule with only minor changes.
+## Manage a rule
 
-1. To delete a rule, select **Delete rule**.
+Binary drift policies are flexible and customizable, allowing you to manage and adjust them as needed. You can edit rules to refine their conditions or actions, duplicate rules to create similar ones with minor changes, or delete rules that are no longer necessary. Regularly reviewing and managing your rules ensures that your binary drift detection and blocking policies remain effective and aligned with your security needs.
 
-1. After you configured your rules, select **Save** to apply the changes and create the policy.
-1. Within 30 minutes, the sensors on the protected clusters are updated with the new policy.
+### [Edit rule](#tab/edit-rule)
 
-## Monitor and manage alerts
+Rules can be edited to refine their conditions or actions. This flexibility allows you to adjust your policies based on the alerts you receive and your review of them, ensuring that they effectively balance security needs with operational efficiency.
 
-The alert system is designed to notify you of any binary drifts, helping you maintain the integrity of your container images. If an unauthorized external process is detected that matches your defined policy conditions, an alert with high severity is generated for you to review.
+1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-## Adjust policies as needed
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
-Based on the alerts, you receive and your review of them, you might find it necessary to adjust your rules in the binary drift policy. This could involve refining conditions, adding new rules, or removing ones that generate too many false positives. The goal is to ensure that the defined binary drift policies with their rules effectively balance security needs with operational efficiency.
+1. Select **Containers drift policy**. 
 
-The effectiveness of binary drift detection relies on your active engagement in configuring, monitoring, and adjusting policies to suit your environment's unique requirements.
+1. Select a rule.
+
+1. Select **Edit**.
+
+1. Select **Save**.
+
+Within 30 minutes, the sensors on the protected clusters update by using the new policy.
+
+### [Duplicate rule](#tab/duplicate-rule)
+
+Rules can be duplicated to create similar ones with minor changes. This option is useful if you want to create a new rule that is similar to an existing one, allowing you to save time and maintain consistency in your policies.
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
+
+1. Select **Containers drift policy**. 
+
+1. Select a rule.
+
+1. Select **Duplicate rule**.
+
+1. Select **Save**.
+
+Within 30 minutes, the sensors on the protected clusters update by using the new policy.
+
+### [Delete rule](#tab/delete-rule) 
+
+Rules can be deleted when they are no longer necessary or if they generate too many false positives. Regularly reviewing and cleaning up your rules helps maintain the effectiveness of your binary drift detection and blocking policies.
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
+
+1. Select **Containers drift policy**. 
+
+1. Select a rule.
+
+1. Select **Delete rule**.
+
+1. Select **Save**.
+
+Within 30 minutes, the sensors on the protected clusters update by using the new policy.
+
+---
+
+## Additional information
+
+Defender for Cloud's alerts notify you of any binary drifts, so you can maintain the integrity of your container images. If the system detects an unauthorized external process that matches your defined policy conditions, it generates a high-severity alert for you to review. If you configure blocking rules, the system blocks the execution of those unauthorized processes.
+
+Based on the alerts generated and your review of them, you might need to adjust your rules in the binary drift or blocking policy. This adjustment could involve refining conditions, adding new rules, or removing ones that generate too many false positives. The goal is to ensure that the defined binary drift and blocking policies with their rules effectively balance security needs with operational efficiency.
+
+The effectiveness of binary drift detection and blocking relies on your active engagement in configuring, monitoring, and adjusting policies to suit your environment's unique requirements.
 
 ## Related content
 
