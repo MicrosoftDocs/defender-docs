@@ -35,7 +35,7 @@ The following table displays roles and allowed actions in Defender for Cloud.
 | View alerts and recommendations | ✔ | ✔ | ✔ | ✔ | ✔ |
 | Exempt security recommendations | - |✔|-|-| ✔ |
 | Configure email notifications | - | ✔ | ✔| ✔ | ✔ |
-| View GitHub issue and it's assosiated inforamtion | ✔ | ✔ | ✔ | ✔ | ✔ |
+| View GitHub issue and its associated information | ✔ | ✔ | ✔ | ✔ | ✔ |
 | Generate GitHub issue + assign to "owner" | - | ✔ | ✔ | ✔ | ✔ |
 
 > [!NOTE]
