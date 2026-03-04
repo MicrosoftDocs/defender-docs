@@ -120,7 +120,7 @@ Attack surface reduction rule merge behavior works as follows:
 - Attack surface reduction rules from the following profiles are evaluated for each device to which the rules apply:
   - **Devices** \> **Configuration profiles** \> **Endpoint protection profile** \> **Microsoft Defender Exploit Guard** \> **Attack Surface Reduction**. (See [Attack Surface Reduction](/intune/intune-service/protect/endpoint-protection-windows-10#attack-surface-reduction-rules).)
   - **Endpoint security** \> **Attack surface reduction policy** \> **Attack surface reduction rules**. (See [Attack surface reduction rules](/intune/intune-service/protect/endpoint-security-asr-policy#devices-managed-by-intune).)
-  - **Endpoint security** \> **Security baselines** \> **Microsoft Defender ATP Baseline** \> **Attack Surface Reduction Rules**. (See [Attack Surface Reduction Rules](/intune/intune-service/protect/security-baseline-settings-defender-atp#attack-surface-reduction-rules).)
+  - **Endpoint security** \> **Security baselines** \> **Microsoft Defender ATP Baseline** \> **Attack Surface Reduction Rules**. (See [Microsoft Defender for Endpoint security baseline settings reference for Microsoft Intune](/intune/intune-service/protect/security-baseline-settings-defender).)
 
 - Settings that don't have conflicts are added to a superset of policy for the device.
 

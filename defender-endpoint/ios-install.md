@@ -19,12 +19,11 @@ ms.date: 03/28/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # Deploy Microsoft Defender for Endpoint on iOS with Microsoft Intune
 
-
-This article describes deploying the Defender for Endpoint on iOS (using the Microsoft Defender app) with Microsoft Intune Company Portal enrolled devices. For more information about Microsoft Intune device enrollment, see [Enroll iOS/iPadOS devices in Intune](/intune/intune-service/enrollment/ios-enroll).
+This article describes deploying the Defender for Endpoint on iOS (using the Microsoft Defender app) with Microsoft Intune Company Portal enrolled devices. For more information about Microsoft Intune device enrollment, see [Enroll iOS and iPadOS devices in Microsoft Intune](/intune/intune-service/fundamentals/deployment-guide-enrollment-ios-ipados).
 
 ## Before you begin
 
@@ -324,5 +323,3 @@ The Microsoft Defender app is installed into the users' devices. Each user signs
 
 - [Configure app protection policy to include Defender for Endpoint risk signals (MAM)](ios-install-unmanaged.md)
 - [Configure Defender for Endpoint on iOS features](ios-configure-features.md)
-
-
