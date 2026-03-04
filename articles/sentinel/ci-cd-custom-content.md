@@ -134,7 +134,7 @@ These options are available through a feature of the PowerShell deployment scrip
 
 ## Manage Microsoft Sentinel repositories using the API
 
-For information on managing Microsoft Sentinel repositories using the API, see [Source Control API](/rest/api/securityinsights/source-control).
+For information on managing Microsoft Sentinel repositories using the API, see [Source Control API](/rest/api/securityinsights/source-control) and [Source Controls API](/rest/api/securityinsights/source-controls).
 
 > [!IMPORTANT]
 > Starting **May 1, 2026**, older API versions used by Microsoft Sentinel repositories will no longer be supported. If you are using APIs to create and manage repository connections, transition to API version **2025-06-01** or **2025-07-01-preview** before May 1, 2026 to avoid service disruption. Existing repository connections aren't affected. 
