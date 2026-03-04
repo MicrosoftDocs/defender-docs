@@ -342,7 +342,7 @@ The steps in this article provide guidance for the following scenario:
 ## Troubleshoot onboarding with Microsoft Endpoint Configuration Manager
 
 > [!NOTE]
-> The following steps are only relevant when using Microsoft Endpoint Configuration Manager. For more information about onboarding using Microsoft Endpoint Configuration Manager, see [Microsoft Defender for Endpoint](/mem/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection).
+> The following steps are only relevant when using Microsoft Endpoint Configuration Manager. For more information about onboarding using Microsoft Endpoint Configuration Manager, see [Microsoft Defender for Endpoint](/intune/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection).
 
 1. Create an application in Microsoft Endpoint Configuration Manager.
 

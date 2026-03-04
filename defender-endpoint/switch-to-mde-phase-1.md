@@ -88,7 +88,7 @@ Permissions to the Microsoft Defender portal can be granted by using either basi
 
 1. Plan the roles and permissions for your security administrators and security operators. See [Role-based access control](prepare-deployment.md#role-based-access-control).
 
-1. Set up and configure RBAC. We recommend using [Intune](/mem/intune/fundamentals/what-is-intune) to configure RBAC, especially if your organization is using a combination of Windows, macOS, iOS, and Android devices. See [setting up RBAC using Intune](/mem/intune/fundamentals/role-based-access-control).
+1. Set up and configure RBAC. We recommend using [Intune](/intune/intune-service/fundamentals/what-is-intune) to configure RBAC, especially if your organization is using a combination of Windows, macOS, iOS, and Android devices. See [setting up RBAC using Intune](/intune/intune-service/fundamentals/role-based-access-control).
 
     If your organization requires a method other than Intune, choose one of the following options:
 
