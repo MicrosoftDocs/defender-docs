@@ -40,7 +40,7 @@ Defender for Cloud presents the findings and related information as recommendati
 
     :::image type="content" source="media/view-and-remediate-vulnerabilities-for-images-running-on-aks/running-list-vulnerabilities.png" alt-text="Screenshot showing the container vulnerabilities." lightbox="media/view-and-remediate-vulnerabilities-for-images-running-on-aks/running-list-vulnerabilities.png":::
 
-To find all containers impacted by a specific vulnerability, group recommendations by title. For more information, see [Group recommendations by title](review-security-recommendations.md#group-recommendations-by-title).
+To find all containers impacted by a specific vulnerability, group recommendations by title. For more information, see [Recommendation title view](review-security-recommendations.md#recommendation-title-view).
 
 For information on how to remediate the vulnerabilities, see [Remediate recommendations](implement-security-recommendations.md).
 
