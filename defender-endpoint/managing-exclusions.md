@@ -147,7 +147,7 @@ Use `Set-MpPreference` or `Get-MpPreference` in the [Defender PowerShell Module]
 
 |Exclusion Type | Reference |
 | -------- | -------- |
-| Custom antivirus exclusion | See [exclusion settings](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings)|
+| Custom antivirus exclusion | See [exclusion settings](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings)|
 | Attack Surface Reduction only exclusions | See [Microsoft Configuration Manager](/defender-endpoint/enable-attack-surface-reduction#microsoft-configuration-manager) |
 | Attack surface reduction rule per rule exclusion | Not supported |
 | Controlled Folder Access exclusions | See [Microsoft Configuration Manager](/defender-endpoint/enable-controlled-folders#microsoft-configuration-manager) |

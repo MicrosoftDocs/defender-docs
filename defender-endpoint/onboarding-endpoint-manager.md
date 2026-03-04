@@ -34,7 +34,7 @@ In the [Planning](deployment-strategy.md) article, there were several methods pr
 
 While Defender for Endpoint supports onboarding of various endpoints and tools, this article doesn't cover them. For information on general onboarding using other supported deployment tools and methods, see [Onboarding overview](onboarding.md).
 
-The Microsoft Intune family of products is a solution platform that unifies several services. It includes [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) and [Microsoft Configuration Manager](/mem/configmgr).
+The Microsoft Intune family of products is a solution platform that unifies several services. It includes [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) and [Microsoft Configuration Manager](/intune/configmgr).
 
 This article guides users in:
 

@@ -92,7 +92,7 @@ Permissions to the Microsoft Defender portal can be granted by using either basi
 
     If your organization requires a method other than Intune, choose one of the following options:
 
-    - [Configuration Manager](/mem/configmgr/core/servers/deploy/configure/configure-role-based-administration)
+    - [Configuration Manager](/intune/configmgr/core/servers/deploy/configure/configure-role-based-administration)
     - [Advanced Group Policy Management](/microsoft-desktop-optimization-pack/agpm)
     - [Windows Admin Center](/windows-server/manage/windows-admin-center/overview)
 

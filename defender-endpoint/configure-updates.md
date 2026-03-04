@@ -102,7 +102,7 @@ These settings can be confirmed in the registry under `HKEY_LOCAL_MACHINE\SOFTWA
 - `SignaturesRing`
 
 > [!NOTE]
-> You can also use a management tool such as Microsoft Configuration Manager to run PowerShell scripts. See [Create and run PowerShell scripts from the Configuration Manager console](/mem/configmgr/apps/deploy-use/create-deploy-scripts).
+> You can also use a management tool such as Microsoft Configuration Manager to run PowerShell scripts. See [Create and run PowerShell scripts from the Configuration Manager console](/intune/configmgr/apps/deploy-use/create-deploy-scripts).
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
