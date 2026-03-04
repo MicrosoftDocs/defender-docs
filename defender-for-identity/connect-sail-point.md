@@ -39,13 +39,13 @@ This section provides instructions for connecting Microsoft Defender for Identit
 
 1. Sign in to SailPoint Identity .
 1. Go to **User's Preferences > **Personal Access Tokens**
-1. Select New Token.
+1. Select **New Token.**
 1. Add the following scopes to the token:
     1. idn:accounts:read (get a list of accounts) 
     1. idn:entitlement:read (for entitlements of accounts) 
     1. sp:search:read (for events) 
     1. idn:accounts-state:manage (to take actions like disable an account) 
-1. Copy the Client ID and Secret. You'll need these values to connect SailPoint Identity to Microsoft Defender for Identity.
+1. Copy the **Client ID** and **Secret**. You'll need these values to connect SailPoint Identity to Microsoft Defender for Identity.
 
 
 ### Connect SailPoint Identity to Defender for Identity 
@@ -53,15 +53,15 @@ This section provides instructions for connecting Microsoft Defender for Identit
 1. Sign in to the [Microsoft Defender Portal](https://security.microsoft.com).
 1. Go to **System > Data Management > Data Connectors**.
 1. Select **Catalog > SailPoint Identity Security Cloud**.
-1. Select on **Connect a connector**  
+1. Select **Connect a connector**  
     1. Enter a name for your connector.
     1. Enter your SailPoint Identity Security Cloud Endpoint URL. For example, `my-domain.api.identitynow.com`. Use the value after `https://`. For example, `contoso.privilegecloud.sailpoint.cloud`.
-    1. Enter your Client ID and Client Secret.
+    1. Enter your **Client ID** and **Client Secret**.
 
     :::image type="content" source="media/connect-sail-point/name-and-connection-details.png" alt-text="Screenshot that shows where to enter the client ID and Client Secret in the Defender portal." lightbox="media/connect-sail-point/name-and-connection-details.png":::
 
-1. Select **Next**. 
-1. Select **Protection Types > Identity**, and then select **Next**. 
+1. Select **Next**.
+1. Select **Protection Types > Identity**, and then select **Next**.
 
     :::image type="content" source="media/connect-sail-point/select-product-microsoft-defender-for-identity.png" alt-text="Screenshot that shows the selection of protection types in the Defender portal." lightbox="media/connect-sail-point/select-product-microsoft-defender-for-identity.png":::
 
