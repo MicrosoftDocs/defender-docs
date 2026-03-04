@@ -1,7 +1,7 @@
 ---
 title: How Microsoft Defender for Identity protects your SailPoint identity accounts
 description: Learn how Microsoft Defender for Identity protect your SailPoint accounts and what the integration enables.
-ms.date:03/04/2026
+ms.date: 03/04/2026
 ms.topic: overview
 ms.reviewer: himanch
 # customer-intent: As a security administrator, I want to understand what happens when I connect SailPoint to Microsoft Defender for Identity, so that I can decide whether to enable the integration.
@@ -25,3 +25,5 @@ After you connect SailPoint Identity, Microsoft Defender for Identity provides t
 | Take remediation actions | If an identity is determined to be at risk, the following remediation actions can be taken from within the Microsoft Defender portal: <br>- Disable user in SailPoint Identity <br> - Enable user in SailPoint Identity  |
 
 ## Next steps
+
+- [Connect SailPoint Identity to Microsoft Defender for Identity (Preview)](connect-sail-point.md).

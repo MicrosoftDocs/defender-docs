@@ -94,7 +94,7 @@ items:
     - name: Microsoft Defender for Identity and SailPoint Identity
       items:
       - name: Overview
-        href: defender-for-identity-sailpoint-overview.md
+        href: sailpoint-overview.md
       - name: Connect SailPoint Identity to Microsoft Defender for Identity (Preview)
         href: connect-sail-point.md
     - name: Integrate Defender for Identity with PAM services

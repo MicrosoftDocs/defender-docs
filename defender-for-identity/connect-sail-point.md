@@ -1,8 +1,9 @@
+---
 title: Connect SailPoint Identity to Microsoft Defender for Identity (Preview)
 description: Learn how to connect your SailPoint Identity app to Defender for Identity using the API connector.
 ms.date: 02/15/2026
 ms.topic: how-to
-ms. reviewer: Himanch
+ms.reviewer: Himanch
 ---
 
 # Connect SailPoint Identity to Microsoft Defender for Identity (Preview)
@@ -69,4 +70,4 @@ This section provides instructions for connecting Microsoft Defender for Identit
 
 ## Related articles
 
-- [How Microsoft Defender for Identity protects your SailPoint identity accounts](defender-for-identity-sailpoint-overview.md)
+- [How Microsoft Defender for Identity protects your SailPoint identity accounts](sailpoint-overview.md)
