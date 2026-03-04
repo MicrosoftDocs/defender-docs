@@ -32,13 +32,13 @@ For more information on using Defender for Endpoint CSP, see, [WindowsAdvancedTh
 
 Devices must be enrolled with Intune as your Mobile Device Management (MDM) solution.
 
-For more information on enabling MDM with Microsoft Intune, see [Device enrollment (Microsoft Intune)](/mem/intune/enrollment/device-enrollment).
+For more information on enabling MDM with Microsoft Intune, see [Device enrollment (Microsoft Intune)](/intune/intune-service/enrollment/device-enrollment).
 
 ## Onboard devices using Microsoft Intune
 
 Check out [Identify Defender for Endpoint architecture and deployment method](deployment-strategy.md) to see the various paths in deploying Defender for Endpoint.
 
-Follow the instructions from [Intune](/mem/intune/protect/advanced-threat-protection-configure#enable-microsoft-defender-for-endpoint-in-intune).
+Follow the instructions from [Intune](/intune/intune-service/protect/advanced-threat-protection-configure#enable-microsoft-defender-for-endpoint-in-intune).
 
 For more information on using Defender for Endpoint CSP, see, [WindowsAdvancedThreatProtection CSP](https://msdn.microsoft.com/library/windows/hardware/mt723296(v=vs.85).aspx) and [WindowsAdvancedThreatProtection DDF file](https://msdn.microsoft.com/library/windows/hardware/mt723297(v=vs.85).aspx).
 
@@ -78,7 +78,7 @@ For security reasons, the package used to Offboard devices expires seven days af
    | Custom configuration policy | 1. In the navigation pane, select **Devices** \> **By platform** \> **Windows** \> **Manage Devices** \> **Configuration**. <br/><br/>2. Under **Policies** select **Create** \> **New Policy**.<br/><br/>3. In the **Create a profile** slide out, select **Windows 10 and later** as **Platform** and **Templates** as **Profile Type**.<br/><br/>4. Under **Template Name**, select the **Custom** template and select **Create**.<br/><br/>5. Enter a value for **Name** and select **Next**. <br/><br/>6. Under **Configuration settings**, select **Add** and use the following OMA-URI settings: <br/>- Name: Provide a name <br/>- OMA-URI: `./Device/Vendor/MSFT/WindowsAdvancedThreatProtection/Offboarding` <br/> - Date type: String<br/>- Value: Copy and paste the value from the content of the `WindowsDefenderATP_valid_until_YYYY-MM-DD` offboarding file. <br/><br/>7. Make the appropriate group assignments, applicability rules, and on the **Review + create** step, select **Create**. |
    | EDR policy | 1. In the navigation pane, select **Endpoint security** \> **Manage** \> **Endpoint detection and response**.<br/><br/>2. Under **Endpoint detection and response (EDR) policies**, select **Create policy**.<br/><br/>3. In the **Create a profile** slide out, select **Windows** as **Platform** and **Endpoint detection and response** and select **Create**.<br/><br/>5. Enter a value for **Name** and select **Next**. <br/><br/>6. Under **Configuration settings**, select **Offboard** for the setting **Microsoft Defender for Endpoint client configuration package type**.<br/><br/>7. Copy the value from the content of the `WindowsDefenderATP_valid_until_YYYY-MM-DD` offboarding file and paste it in the **Offboarding (Device)** setting. Then select **Next**.<br/><br/>8. Specify any scope tags if needed, make the appropriate group assignments and on the **Review + create** step, select **Create**. |
 
-   For more information on Microsoft Intune policy settings, see [Windows 10 policy settings in Microsoft Intune](/mem/intune/configuration/custom-settings-windows-10).
+   For more information on Microsoft Intune policy settings, see [Windows 10 policy settings in Microsoft Intune](/intune/intune-service/configuration/custom-settings-windows-10).
 
 > [!NOTE]
 > The **Health Status for offboarded devices** policy uses read-only properties and can't be remediated.

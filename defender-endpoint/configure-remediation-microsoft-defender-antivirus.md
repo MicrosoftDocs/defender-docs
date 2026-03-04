@@ -71,7 +71,7 @@ Also see [About regular quick and full scans with Microsoft Defender Antivirus](
 
 1. Review your settings, and then choose **Save**.
 
-For more information about antivirus policies in Intune, see [Antivirus policy for endpoint security in Intune](/mem/intune/protect/endpoint-security-antivirus-policy).
+For more information about antivirus policies in Intune, see [Antivirus policy for endpoint security in Intune](/intune/intune-service/protect/endpoint-security-antivirus-policy).
 
 ## Configure remediation options using Configuration Manager
 
