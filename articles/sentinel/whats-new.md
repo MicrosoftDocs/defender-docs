@@ -20,7 +20,7 @@ The listed features were released in the last six months. For information about 
 
 ## March 2026
 
-- [Call to action: update older Microsoft Sentinel Content as Code (Repositories) API versions before May 2026](#call-to-action-update-older-microsoft-sentinel-content-as-code-repositories-api-versions-before-may-2026)
+- [Call to action: update older Microsoft Sentinel content as code (Sentinel repositories) API versions before May 2026](#call-to-action-update-older-microsoft-sentinel-content-as-code-sentinel-repositories-api-versions-before-may-2026)
 
 ### Call to action: update older Microsoft Sentinel content as code (Sentinel repositories) API versions before May 2026
 
@@ -34,7 +34,7 @@ If you are using APIs to create or manage repository connections, transition to 
 
 **Affected API versions**
 
-The following API versions will be deprecated on May 1, 2026:
+The following API versions will be retired on May 1, 2026:
 
 <details>
 <summary><strong>Preview API versions (click to expand)</strong></summary>
