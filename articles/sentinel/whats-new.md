@@ -24,13 +24,13 @@ The listed features were released in the last six months. For information about 
 
 ### Call to action: update older Microsoft Sentinel content as code (Sentinel repositories) API versions before May 2026
 
-Starting **May 1, 2026**, older API versions used by the Microsoft Sentinel Content as Code capability (also known as Repositories) will no longer be supported. This change impacts all [Source Control](/rest/api/securityinsights/source-control) and [Source Controls](/rest/api/securityinsights/source-controls) actions in the Microsoft Sentinel REST API for the affected API versions.
+Starting **May 1, 2026**, older API versions used by [Microsoft Sentinel repositories](ci-cd-custom-content.md) will no longer be supported. This change impacts all [Source Control](/rest/api/securityinsights/source-control) and [Source Controls](/rest/api/securityinsights/source-controls) actions in the Microsoft Sentinel REST API for the affected API versions.
 
 The retired API versions will no longer be supported, and requests using them will fail. Existing repository connections created with those APIs aren't affected, and the repositories will continue to operate.
 
 **Required action**
 
-If you are using APIs to create or manage repository connections, transition to API version **2025-06-01** or **2025-07-01-preview** before May 1, 2026 to avoid service disruption.
+If you're using APIs to create or manage repository connections, transition to API version **2025-06-01** or **2025-07-01-preview** before May 1, 2026 to avoid service disruption.
 
 **Affected API versions**
 
