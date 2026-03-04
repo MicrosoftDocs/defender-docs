@@ -295,7 +295,7 @@ After creation, your generated playbook requires activation and an alert trigger
 
 1. Go to the **Automation Rules** tab.
 
-1. Select **Create** to define a new rule with extended trigger.
+1. Select **Create** to define a new rule with enhanced trigger.
 
 1. Set up the trigger conditions:
 
