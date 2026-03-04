@@ -118,13 +118,25 @@
             - name: Step 2 - Configure device proxy and Internet settings
               href: configure-proxy-internet.md
             - name: Step 3 - Verify client connectivity to service URLs
-              href: verify-connectivity.md        
+              href: verify-connectivity.md            
+        - name: Configure streamlined connectivity
+          items:
             - name: Onboard devices using streamlined method
-              href: configure-device-connectivity.md            
+              href: configure-device-connectivity.md
             - name: Migrate devices to streamlined method
-              href: migrate-devices-streamlined.md
-            - name: Enable access to service URLs - US government            
-              href: streamlined-device-connectivity-urls-gov.md                       
+              href: migrate-devices-streamlined.md        
+        - name: Enable access to service URLs
+          items:
+          - name: Streamlined device connectivity URLs (commercial)
+            href: streamlined-device-connectivity-urls-commercial.md
+          - name: Streamlined device connectivity URLs (US government)
+            href: streamlined-device-connectivity-urls-gov.md                                                           
+          - name: Standard device connectivity URLs
+            items: 
+            - name: Standard device connectivity URLs (commercial)
+              href: standard-device-connectivity-urls-commercial.md
+            - name: Standard device connectivity URLs (US government)
+              href: standard-device-connectivity-urls-gov.md
         - name: Onboard client devices
           items:
           - name: Onboard Windows devices using the Defender deployment tool
@@ -595,18 +607,22 @@
   - name: Detect threats and protect endpoints
     items:
     - name: Detect vulnerabilities
+    - name: Detect vulnerabilities
       href: /defender-vulnerability-management
     - name: Discover devices
-      items:
+    - name: Discover devices
+      items:      
       - name: Overview
         href: device-discovery.md
       - name: Manage device discovery
-        href: configure-device-discovery.md            
+        href: configure-device-discovery.md
+      - name: Review and assess devices
+        href: assess-devices.md        
 
-      - name: Discover network devices (network scans)
+      - name: Configure network authenticated scans
         href: network-devices.md
-      - name: Device discovery FAQ
-        href: device-discovery-faq.md
+      - name: Troubleshoot
+        href: troubleshoot-device-discovery-network-scans.md
     - name: Devices
       items:      
       - name: Device inventory
