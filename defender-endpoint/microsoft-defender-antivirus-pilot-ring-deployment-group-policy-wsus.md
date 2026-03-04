@@ -42,7 +42,7 @@ Microsoft Defender for Endpoint is an enterprise endpoint security platform desi
 ### Resources
 
 The following resources provide information for using and managing Windows Server Update Services (WSUS).
-- [Deploy Windows Defender definition updates using WSUS - Configuration Manager](/troubleshoot/intune/configmgr/update-management/deploy-definition-updates-using-wsus)
+- [Deploy Windows Defender definition updates using WSUS - Configuration Manager](/troubleshoot/mem/configmgr/update-management/deploy-definition-updates-using-wsus)
 - [Windows Server Update Services Help](/previous-versions/orphan-topics/ws.11/dn343567(v=ws.11)?redirectedfrom=MSDN)
 
 ## Setting up the pilot environment
