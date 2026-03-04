@@ -31,7 +31,7 @@ Start by using the following steps to get visibility and insights about your app
 1. **[Determine compliance posture](app-governance-visibility-insights-compliance-posture.md)**: Use the data on the **App governance > Overview** tab to assess the compliance posture of your apps and incidents in your tenant. View details like how many overprivileged apps are in your tenant, the number of active incidents, the total Graph API data access, and more.
 
    > [!TIP]
-   > You can also view app governance-related recommendations in [Secure Score](https://security.microsoft.com/securescore?viewid=overview&tid=aaaabbbb-0000-cccc-1111-dddd2222eeee) to help you holistically manage your posture.
+   > You can also view app governance-related recommendations in [Secure Score](https://security.microsoft.com/securescore?viewid=overview&tid=b5304409-74ae-42bf-a3e3-d62da4845129) to help you holistically manage your posture.
    >
 
 1. **[View your apps](app-governance-visibility-insights-view-apps.md)**: Sort the data on the **App governance** tabs by apps with high data usage or number of consents given, or filter by high privileged apps, unused apps, apps with unused permissions, or unverified publisher, and more.
