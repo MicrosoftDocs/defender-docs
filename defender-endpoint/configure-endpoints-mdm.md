@@ -1,5 +1,5 @@
 ﻿---
-title: Onboard Windows devices to Defender for Endpoint using Intune 
+title: Onboard Windows devices to Defender for Endpoint using Intune
 description: Use Microsoft Intune to deploy the configuration package on devices so that they're onboarded to the Defender for Endpoint service.
 ms.service: defender-endpoint
 ms.author: painbar
@@ -7,7 +7,7 @@ author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier1
 ms.custom: admindeeplinkDEFENDER
@@ -18,9 +18,9 @@ ms.date: 11/17/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
-# Onboard Windows devices to Defender for Endpoint using Intune 
+
+# Onboard Windows devices to Defender for Endpoint using Intune
 
 [!INCLUDE [Microsoft Defender deployment tool preview](./includes/defender-deployment-tool-preview.md)]
 
@@ -32,7 +32,7 @@ For more information on using Defender for Endpoint CSP, see, [WindowsAdvancedTh
 
 Devices must be enrolled with Intune as your Mobile Device Management (MDM) solution.
 
-For more information on enabling MDM with Microsoft Intune, see [Device enrollment (Microsoft Intune)](/intune/intune-service/enrollment/device-enrollment).
+For more information on enabling MDM with Microsoft Intune, see [Device enrollment (Microsoft Intune)](/intune/intune-service/fundamentals/deployment-guide-enrollment).
 
 ## Onboard devices using Microsoft Intune
 
@@ -43,10 +43,10 @@ Follow the instructions from [Intune](/intune/intune-service/protect/advanced-th
 For more information on using Defender for Endpoint CSP, see, [WindowsAdvancedThreatProtection CSP](https://msdn.microsoft.com/library/windows/hardware/mt723296(v=vs.85).aspx) and [WindowsAdvancedThreatProtection DDF file](https://msdn.microsoft.com/library/windows/hardware/mt723297(v=vs.85).aspx).
 
 > [!NOTE]
+>
 > - The **Health Status for onboarded devices** policy uses read-only properties and can't be remediated.
 > - Configuration of diagnostic data reporting frequency is only available for devices on Windows 10, version 1703.
 > - Onboarding to Defender for Endpoint will onboard the device to [Data Loss Prevention (DLP)](/Microsoft-365/compliance/endpoint-dlp-learn-about), which is also a part of Microsoft 365 compliance.
-
 
 ## Run a detection test to verify onboarding
 
@@ -94,6 +94,3 @@ For security reasons, the package used to Offboard devices expires seven days af
 - [Onboard non-persistent virtual desktop infrastructure (VDI) devices](configure-endpoints-vdi.md)
 - [Run a detection test on a newly onboarded Microsoft Defender for Endpoint device](run-detection-test.md)
 - [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
-
-
-
