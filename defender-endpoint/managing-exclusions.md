@@ -96,7 +96,7 @@ Many exclusions can be managed in the [Microsoft Intune admin center](https://go
 
 - [Defender CSP](/windows/client-management/mdm/defender-csp)
 - [Defender Policy CSP](/windows/client-management/mdm/policy-csp-defender)
-- [Use custom settings for Windows client devices in Intune](/mem/intune/configuration/custom-settings-windows-10)
+- [Use custom settings for Windows client devices in Intune](/intune/intune-service/configuration/custom-settings-windows-10)
 
 ### PowerShell
 
