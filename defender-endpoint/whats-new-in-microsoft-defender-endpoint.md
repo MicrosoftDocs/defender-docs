@@ -27,11 +27,19 @@ For recent releases of Microsoft Defender for Endpoint, including build numbers,
 
 Learn more about [Preview features](/defender-xdr/preview).
 
+## March 2026
+
+|Type  |Feature  |Preview/GA  |Description  |
+|---------|------------|-------------|-------------|
+|Feature |[Proactive user containment (contain user)](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) |GA |The proactive user containment (contain user) action as part of the predictive shielding feature is now generally available. This action infuses activity data with exposure data to identify exposed credentials at risk of being compromised and reused to conduct malicious activity.|
+
 ## February 2026
 
 |Type  |Feature  |Preview/GA  |Description  |
 |----------|---------|------------|-------------|
+|Release - macOS |Build 101.26012.0012 |GA |Release version 20.126012.12.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--february-2026--101260120012).|
 |Feature |What's new and release notes documentation updates |GA |The what's new and OS-specific release notes pages are now updated to provide better visibility and access to new features, improvements, and fixes:<br>- The what's new page (this page) is now named **New features in Microsoft Defender for Endpoint** and includes both features and links to latest release notes.<br>- The [Release notes page](microsoft-defender-endpoint-releases.md) now consolidates release details for all supported operating systems, including Windows Antivirus. The new page groups updates by platform and date, making it easier to find specific information.<br>- All previous release notes pages redirect to the consolidated release notes page. |
+|Feature |Support for software product vulnerability data on Windows 7 |GA |To provide comprehensive vulnerability management capabilities across all supported Windows versions, Microsoft Defender Vulnerability Management now gathers software product vulnerability data on Windows 7 devices. |
 |Feature |[Library management for live response](configure-libraries-live-response.md) |Preview |You can now view and manage files and scripts used during live response sessions in the Microsoft Defender portal. With this enhancement, you get a centralized view of all uploaded files and their properties, and can upload, view and delete files outside the live response session. |
 |Feature |[Effective settings tab](investigate-machines.md#configuration-management---effective-settings) |GA |The **Effective settings** tab under the device inventory **Configuration management** tab is now generally available. In this tab, you can view the actual value and configuration source of each security setting on a device. This helps identify configuration attempts that didn't take effect and eliminates gaps where intended protections aren't enforced. |
 |Feature |Vulnerable components page renamed to [Software components](/defender-vulnerability-management/tvm-vulnerable-components) |GA |To reflect Defender Vulnerability Management's visibility into all software components identified in your organization, the **Vulnerable components** page is now named **Software components**. |
