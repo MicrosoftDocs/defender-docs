@@ -63,7 +63,7 @@ Open your Azure [Enterprise application settings](https://portal.azure.com/#blad
 
 - If **No** is selected, a Microsoft Entra administrator for the customer tenant needs to provide consent for the organization. Depending on the configuration with Microsoft Entra ID, users might be able to submit a request right from the same dialog box. If there's no option to ask for admin consent,  users need to request for these permissions to be added to their Microsoft Entra admin. Go to the following section for more information.
 
-- If **Yes** is selected, ensure the Windows Defender Security Intelligence app setting **Enabled for users to sign in?** is set to **Yes** [in Azure](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ManagedAppMenuBlade/Properties/appId/f0cf43e5-8a9b-451c-b2d5-7285c785684d/objectId/ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0). If **No** is selected, you need to request a Microsoft Entra admin enable it.
+- If **Yes** is selected, ensure the Windows Defender Security Intelligence app setting **Enabled for users to sign in?** is set to **Yes** [in Azure](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ManagedAppMenuBlade/Properties/appId/f0cf43e5-8a9b-451c-b2d5-7285c785684d/objectId/4a918a14-4069-4108-9b7d-76486212d75d). If **No** is selected, you need to request a Microsoft Entra admin enable it.
 
 ### Implement required Enterprise Application permissions
 
@@ -72,7 +72,7 @@ Open your Azure [Enterprise application settings](https://portal.azure.com/#blad
 
 This process requires a Global Administrator or Application Administrator in the tenant.
 
-1. Open [Enterprise Application settings](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ManagedAppMenuBlade/Permissions/appId/f0cf43e5-8a9b-451c-b2d5-7285c785684d/objectId/ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0).
+1. Open [Enterprise Application settings](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ManagedAppMenuBlade/Permissions/appId/f0cf43e5-8a9b-451c-b2d5-7285c785684d/objectId/4a918a14-4069-4108-9b7d-76486212d75d).
 
 2. Select **Grant admin consent for organization**.
 
@@ -119,7 +119,7 @@ and select **delete**.
 
 2. Capture `TenantID` from [Properties](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties).
 
-3. Replace `{tenant-id}` with the specific tenant that needs to grant consent to this application in the URL below. Copy the following URL into browser: `https://login.microsoftonline.com/{tenant-id}/v2.0/adminconsent?client_id=00001111-aaaa-2222-bbbb-3333cccc4444&state=12345&redirect_uri=https%3a%2f%2fwww.microsoft.com%2fwdsi%2ffilesubmission&scope=openid+profile+email+offline_access`
+3. Replace `{tenant-id}` with the specific tenant that needs to grant consent to this application in the URL below. Copy the following URL into browser: `https://login.microsoftonline.com/{tenant-id}/v2.0/adminconsent?client_id=f0cf43e5-8a9b-451c-b2d5-7285c785684d&state=12345&redirect_uri=https%3a%2f%2fwww.microsoft.com%2fwdsi%2ffilesubmission&scope=openid+profile+email+offline_access`
 
    The rest of the parameters are already completed.
 
@@ -127,7 +127,7 @@ and select **delete**.
 
 4. Review the permissions required by the application, and then select **Accept**.
 
-5. Confirm the permissions are applied in the [Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ManagedAppMenuBlade/Permissions/appId/f0cf43e5-8a9b-451c-b2d5-7285c785684d/objectId/ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0).
+5. Confirm the permissions are applied in the [Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ManagedAppMenuBlade/Permissions/appId/f0cf43e5-8a9b-451c-b2d5-7285c785684d/objectId/ce60a464-5fca-4819-8423-bcb46796b051).
 
    ![Review that permissions are applied.](media/troubleshoot/msi-permissions.jpg)
 
