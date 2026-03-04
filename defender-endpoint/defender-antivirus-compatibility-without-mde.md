@@ -101,7 +101,7 @@ Uninstall-WindowsFeature Windows-Defender-Gui
   
   - [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender)
   
-- [How to create and deploy antimalware policies for Endpoint Protection in Configuration Manager](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies)
+- [How to create and deploy antimalware policies for Endpoint Protection in Configuration Manager](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies)
 
 - [Use Group Policy settings to configure and manage Microsoft Defender Antivirus](/defender-endpoint/use-group-policy-microsoft-defender-antivirus)
 

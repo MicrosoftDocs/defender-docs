@@ -228,7 +228,7 @@ What's new
 - Fixed an issue with [Azure Virtual Desktop](/azure/virtual-desktop/overview) where the Intune policy wasn't being honored.
 - Fixed potential deadlock for [custom detection rules](/defender-xdr/custom-detection-rules) on the Windows client
 - Resolved an issue where [antivirus exclusions](configure-exclusions-microsoft-defender-antivirus.md) weren't being honored with [AMSI](/windows/win32/amsi/antimalware-scan-interface-portal).
-- Fixed issue impacting a subset of devices where [antivirus exclusions configured through SCCM](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings) weren't honored
+- Fixed issue impacting a subset of devices where [antivirus exclusions configured through SCCM](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings) weren't honored
 
 > [!IMPORTANT]
 > On Windows Server 2019 and later, a new binary (`MpDefenderCoreService.exe`) will be included in the update package to support future service improvements (more information to follow).

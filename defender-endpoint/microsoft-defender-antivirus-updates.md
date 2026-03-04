@@ -41,12 +41,12 @@ Microsoft Defender Antivirus requires monthly updates (KB4052623) known as *plat
 
 You can manage the distribution of updates using one of the following methods:
 
-- [Windows Server Update Service (WSUS)](/mem/configmgr/protect/deploy-use/endpoint-definitions-wsus#to-synchronize-endpoint-protection-definition-updates-in-standalone-wsus)
+- [Windows Server Update Service (WSUS)](/intune/configmgr/protect/deploy-use/endpoint-definitions-wsus#to-synchronize-endpoint-protection-definition-updates-in-standalone-wsus)
 - [Microsoft Configuration Manager](/configmgr/sum/understand/software-updates-introduction)
 - The usual methods you use to deploy Microsoft and Windows updates to endpoints in your network.
 - UNC Share
 
-For more information, see [Manage the sources for Microsoft Defender Antivirus protection updates](/mem/configmgr/protect/deploy-use/endpoint-definitions-wsus#to-synchronize-endpoint-protection-definition-updates-in-standalone-wsus).
+For more information, see [Manage the sources for Microsoft Defender Antivirus protection updates](/intune/configmgr/protect/deploy-use/endpoint-definitions-wsus#to-synchronize-endpoint-protection-definition-updates-in-standalone-wsus).
 
 ### Important points about product updates
 

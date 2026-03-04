@@ -85,7 +85,7 @@ Follow the guidance in [Intune](/mem/intune/protect/endpoint-security-edr-policy
 
 ### Microsoft Configuration Manager
 
-Follow the guidance in [Configuration Manager](/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection#bkmk_updateatp).
+Follow the guidance in [Configuration Manager](/intune/configmgr/protect/deploy-use/defender-advanced-threat-protection#bkmk_updateatp).
 
 ### VDI
 
@@ -105,7 +105,7 @@ Devices already onboarded don't reonboard automatically. Turn on the following A
 
 ### Microsoft Configuration Manager
 
-Follow the guidance in [Configuration Manager](/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection#bkmk_updateatp) to deploy a new policy.
+Follow the guidance in [Configuration Manager](/intune/configmgr/protect/deploy-use/defender-advanced-threat-protection#bkmk_updateatp) to deploy a new policy.
 
 ### Group policy
 

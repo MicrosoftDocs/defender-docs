@@ -56,7 +56,7 @@ For reporting, you can choose from several options:
 
 ## Configuration Manager
 
-With Configuration Manager, you can manage security and malware on Configuration Manager client computers. Use the [Endpoint Protection point site system role](/mem/configmgr/protect/deploy-use/endpoint-protection-site-role) and [enable Endpoint Protection with custom client settings](/mem/configmgr/protect/deploy-use/endpoint-protection-configure-client). You can use [default and customized antimalware policies](/defender-office-365/anti-malware-policies-configure).
+With Configuration Manager, you can manage security and malware on Configuration Manager client computers. Use the [Endpoint Protection point site system role](/intune/configmgr/protect/deploy-use/endpoint-protection-site-role) and [enable Endpoint Protection with custom client settings](/intune/configmgr/protect/deploy-use/endpoint-protection-configure-client). You can use [default and customized antimalware policies](/defender-office-365/anti-malware-policies-configure).
 
 For reporting, you can choose from several options:
 
@@ -64,7 +64,7 @@ For reporting, you can choose from several options:
 
 - [Use Intune to view device details](/mem/intune/remote-actions/device-inventory).
 
-- Use the default [Configuration Manager Monitoring workspace](/mem/configmgr/apps/deploy-use/monitor-applications-from-the-console).
+- Use the default [Configuration Manager Monitoring workspace](/intune/configmgr/apps/deploy-use/monitor-applications-from-the-console).
 
 - [Create email alerts](/configmgr/protect/deploy-use/endpoint-configure-alerts).
 
@@ -84,7 +84,7 @@ For reporting, you can choose from the following options:
 
 - [Use Intune to view device details](/mem/intune/remote-actions/device-inventory).
 
-- Use the default [Configuration Manager Monitoring workspace](/mem/configmgr/apps/deploy-use/monitor-applications-from-the-console).
+- Use the default [Configuration Manager Monitoring workspace](/intune/configmgr/apps/deploy-use/monitor-applications-from-the-console).
 
 <a name='group-policy-and-azure-active-directory'></a>
 

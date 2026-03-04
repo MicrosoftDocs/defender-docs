@@ -77,8 +77,8 @@ For more information about antivirus policies in Intune, see [Antivirus policy f
 
 If you're using Configuration Manager, see the following articles:
 
-- [Configure Endpoint Protection in Configuration Manager](/mem/configmgr/protect/deploy-use/endpoint-protection-configure)
-- [Default Actions Settings](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies#default-actions-settings)
+- [Configure Endpoint Protection in Configuration Manager](/intune/configmgr/protect/deploy-use/endpoint-protection-configure)
+- [Default Actions Settings](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#default-actions-settings)
 
 ## Configure remediation options using Group Policy
 

@@ -60,7 +60,7 @@ For more information on how to use the script, use the PowerShell command `get-h
 ## Microsoft Endpoint Configuration Manager migration scenarios
 
 > [!NOTE]
-> You'll need Configuration Manager, version 2107 or later to perform Endpoint Protection policy configuration. From [version 2207 or later](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2207#improved-microsoft-defender-for-endpoint-mde-onboarding-for-windows-server-2012-r2-and-windows-server-2016) deployment and upgrades can be fully automated.
+> You'll need Configuration Manager, version 2107 or later to perform Endpoint Protection policy configuration. From [version 2207 or later](/intune/configmgr/core/plan-design/changes/whats-new-in-version-2207#improved-microsoft-defender-for-endpoint-mde-onboarding-for-windows-server-2012-r2-and-windows-server-2016) deployment and upgrades can be fully automated.
 
 For instructions on how to migrate using Configuration Manager older than version 2207, see [Migrating servers from Microsoft Monitoring Agent to the unified solution.](application-deployment-via-mecm.md)
 
