@@ -54,7 +54,7 @@ Here are the links you need for the rest of the process:
 
 - [Intune admin center](https://aka.ms/memac)
 - [Microsoft Defender XDR](https://security.microsoft.com)
-- [Intune Security baselines](/intune/intune-service/protect/security-baseline-settings-defender-atp#microsoft-defender)
+- [Intune Security baselines](/intune/intune-service/protect/security-baseline-settings-defender)
 
 For more information about Microsoft Intune, go to [Microsoft Intune securely manages identities, manages apps, and manages devices](/intune/intune-service/fundamentals/what-is-intune).
 

@@ -49,7 +49,7 @@ In the Microsoft Defender portal, you can view and manage threat detections usin
 
 ## Manage threat detections in Microsoft Intune
 
-You can manage threat detections for any devices that are [enrolled in Microsoft Intune](/intune/intune-service/enrollment/windows-enrollment-methods) using the following steps:
+You can manage threat detections for any devices that are [enrolled in Microsoft Intune](/intune/intune-service/fundamentals/deployment-guide-enroll) using the following steps:
 
 1. Go to the Microsoft Intune admin center at [intune.microsoft.com](https://intune.microsoft.com) and sign-in.
 
