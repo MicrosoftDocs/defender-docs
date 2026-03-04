@@ -88,11 +88,11 @@ For more information about the specific network-connectivity requirements to ens
 
    | Task  | Steps  |
    |---------|---------|
-   | Create a new policy     | 1. For **Platform**, select **Windows**. <br/><br/>2. For **Profile**, select **Microsoft Defender Antivirus**.<br/><br/>3. On the **Basics** page, specify a name and description for the policy, and then choose **Next**.<br/><br/>4. In the **Defender** section, find **Allow Cloud Protection**, and set it to **Allowed**.<br/><br/>5. Scroll down to **Submit Samples Consent**, and select one of the following settings:<br/>- **Send all samples automatically**<br/>- **Send safe samples automatically**<br/><br/>6. On the **Scope tags** step, if your organization is using [scope tags](/mem/intune/fundamentals/scope-tags), select the tags you want to use, and then choose **Next**.<br/><br/>7. On the **Assignments** step, select the groups, users, or devices that you want to apply this policy to, and then choose **Next**.<br/><br/>8. On the **Review + create** step, review the settings for your policy, and then choose **Create**.          |
+   | Create a new policy     | 1. For **Platform**, select **Windows**. <br/><br/>2. For **Profile**, select **Microsoft Defender Antivirus**.<br/><br/>3. On the **Basics** page, specify a name and description for the policy, and then choose **Next**.<br/><br/>4. In the **Defender** section, find **Allow Cloud Protection**, and set it to **Allowed**.<br/><br/>5. Scroll down to **Submit Samples Consent**, and select one of the following settings:<br/>- **Send all samples automatically**<br/>- **Send safe samples automatically**<br/><br/>6. On the **Scope tags** step, if your organization is using [scope tags](/intune/intune-service/fundamentals/scope-tags), select the tags you want to use, and then choose **Next**.<br/><br/>7. On the **Assignments** step, select the groups, users, or devices that you want to apply this policy to, and then choose **Next**.<br/><br/>8. On the **Review + create** step, review the settings for your policy, and then choose **Create**.          |
    | Edit an existing policy     | 1. Select the policy that you want to edit.<br/><br/>2. Under **Configuration settings**, choose **Edit**.<br/><br/>3. In the **Defender** section, find **Allow Cloud Protection**, and set it to **Allowed**.<br/><br/>4. Scroll down to **Submit Samples Consent**, and select one of the following settings:<br/>- **Send all samples automatically**<br/>- **Send safe samples automatically**<br/><br/>5. Select **Review + save**.        |
 
 > [!TIP]
-> To learn more about Microsoft Defender Antivirus settings in Intune, see [Antivirus policy for endpoint security in Intune](/mem/intune/protect/endpoint-security-antivirus-policy).
+> To learn more about Microsoft Defender Antivirus settings in Intune, see [Antivirus policy for endpoint security in Intune](/intune/intune-service/protect/endpoint-security-antivirus-policy).
 
 ## Use Group Policy to turn on cloud protection
 
@@ -183,7 +183,7 @@ For more information about allowed parameters, see [Windows Defender WMIv2 APIs]
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
