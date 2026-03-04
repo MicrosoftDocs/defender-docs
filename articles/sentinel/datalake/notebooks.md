@@ -7,7 +7,7 @@ ms.author: edbaynash
 ms.topic: how-to  
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
-ms.date: 07/16/2025
+ms.date: 02/19/2026
 
 # Customer intent: As a security engineer or data scientist, I want to explore and analyze security data in the Microsoft Sentinel data lake using Jupyter notebooks, so that I can gain insights and build advanced analytics solutions.
 ---
@@ -75,6 +75,14 @@ After installing the Microsoft Sentinel extension, you can start exploring data 
 1. Select your account name to complete the sign in.
  
    :::image type="content" source="./media/notebooks/select-account.png" lightbox="./media/notebooks/select-account.png" alt-text="A screenshot showing the account selection list at the top of the page."::: 
+
+    If you have multiple guest accounts associated with your login, you can seamlessly switch between accounts. To switch between accounts, select the account name at the bottom left of the Visual Studio Code window. Only one account can be selected at a time.
+
+    :::image type="content" source="./media/notebooks/account-picker.png" lightbox="./media/notebooks/account-picker.png" alt-text="A screenshot showing how to switch accounts in Visual Studio Code.":::
+  
+   > [!IMPORTANT] 
+   > Switching between accounts disconnects any active pyspark sessions. 
+
 
 ### View data lake tables and jobs
 
