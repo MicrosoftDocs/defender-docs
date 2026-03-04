@@ -6,7 +6,7 @@ author: EdB-MSFT
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
 ms.topic: how-to
-ms.date: 12/10/2025
+ms.date: 03/04/2026
 ms.author: edbaynash  
 ms.collection: ms-security  
 ---  
@@ -127,6 +127,7 @@ external_table("AADRiskyUsers")
 
 ## Query considerations and limitations
 
++ Querying legacy tables such as AzureDiagnostics is not supported.
 + Queries are run against the workspaces you selected. Make sure you select the correct workspaces before running a query.
 + Executing KQL queries on the Microsoft Sentinel data lake incurs charges based on query billing meters. For more information, see [Plan costs and understand Microsoft Sentinel pricing and billing](../billing.md#data-lake-tier).
 + Review data ingestion and table retention policy. Before setting query time range, be aware of data retention on your data lake tables and whether data is available for selected time range. For more information, see [Manage data tiers and retention in Microsoft Defender portal](https://aka.ms/manage-data-defender-portal-overview).
