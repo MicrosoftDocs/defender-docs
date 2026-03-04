@@ -16,7 +16,7 @@ ms.collection: usx-security
 
 # Generate playbooks using AI in Microsoft Sentinel (preview)
 
-The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. You describe automation logic in natural language, and the system generates validated, code-based playbooks with complete documentation and visual flow diagrams. This experience is powered by an embedded Visual Studio Code environment within the Defender portal, so you can author and refine playbooks without leaving the portal. Generated playbooks use alert data as input and dynamically generate the required API calls, as long as you configure the integration for the target provider.
+The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. You describe automation logic in natural language, and the system generates validated, code-based playbooks with complete documentation and visual flow diagrams. This experience is powered by an embedded VS Code environment within the Defender portal, so you can author and refine playbooks without leaving the portal. Generated playbooks use alert data as input and dynamically generate the required API calls, as long as you configure the integration for the target provider.
 
 This article describes how to generate playbooks by using AI, configure required integrations, and deploy your automation workflows.
 
@@ -31,11 +31,11 @@ Playbook generation provides the following capabilities:
 - **Third-party integrations**: Connect external tools and APIs seamlessly through integration profiles
 - **Broad alert coverage**: Apply automation to alerts from Microsoft Sentinel, Microsoft Defender, and XDR platforms
 
-An embedded Visual Studio Code environment within the Microsoft Defender portal powers the experience. You can author and refine playbooks without leaving the portal.
+An embedded VS Code environment within the Microsoft Defender portal powers the experience. You can author and refine playbooks without leaving the portal.
 
 ## Prerequisites
 
-You don't need prior coding experience to generate a playbook, but it helps to be familiar with tools like Visual Studio Code and Entra ID app registration.
+You don't need prior coding experience to generate a playbook, but it helps to be familiar with tools like VS Code and Entra ID app registration.
 
 You also must meet the following requirements:
 
@@ -249,7 +249,7 @@ When the editor opens, the experience starts in **Plan mode**. In this mode, you
 
 #### Generate the playbook in Act mode
 
-1. After switching to Act mode, the playbook generator delivers:
+1. After you switch to Act mode, the playbook generator delivers:
    - The complete playbook code in Python
    - Code validation
    - Comprehensive documentation, including a visual flow diagram and description of the playbook in natural language
@@ -295,7 +295,7 @@ After creation, your generated playbook requires activation and an alert trigger
 
 1. Go to the **Automation Rules** tab.
 
-1. Select **Create** to define a new rule with extended trigger.
+1. Select **Create** to define a new rule with enhanced trigger.
 
 1. Set up the trigger conditions:
 
