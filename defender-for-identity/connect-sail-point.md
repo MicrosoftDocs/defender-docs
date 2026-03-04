@@ -70,4 +70,4 @@ This section provides instructions for connecting Microsoft Defender for Identit
 
 ## Related articles
 
-- [How Microsoft Defender for Identity protects your SailPoint identity accounts](sailpoint-overview.md)
+- [How Microsoft Defender for Identity protects your SailPoint identity accounts](sail-point-overview.md)
