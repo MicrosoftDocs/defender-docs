@@ -112,7 +112,7 @@ All users in the tenant can now use this application.
 
 If neither of these options resolve the issue, try the following steps (as an admin):
 
-1. Remove previous configurations for the application. Go to [Enterprise applications](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ManagedAppMenuBlade/Properties/appId/f0cf43e5-8a9b-451c-b2d5-7285c785684d/objectId/ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0)
+1. Remove previous configurations for the application. Go to [Enterprise applications](https://portal.azure.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/~/AppAppsPreview)
 and select **delete**.
 
    ![Delete app permissions.](media/troubleshoot/msi-properties.png)
