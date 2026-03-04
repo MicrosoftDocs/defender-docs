@@ -70,7 +70,7 @@ You can use [Group Policy](/windows/win32/srvnodes/group-policy?redirectedfrom=M
 
 Follow the instructions in below link to create a custom policy in Intune:
 
-[Add custom settings for Windows 10 devices in Microsoft Intune](/mem/intune/configuration/custom-settings-windows-10).
+[Add custom settings for Windows 10 devices in Microsoft Intune](/intune/intune-service/configuration/custom-settings-windows-10).
 
 For more information on the Defender CSP used for the gradual rollout process, see [Defender CSP](/windows/client-management/mdm/defender-csp).
 
@@ -108,7 +108,7 @@ These settings can be confirmed in the registry under `HKEY_LOCAL_MACHINE\SOFTWA
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
