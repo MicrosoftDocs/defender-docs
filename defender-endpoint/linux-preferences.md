@@ -54,7 +54,7 @@ You can use the command line to configure specific settings, gather diagnostics,
 
 ### Defender for Endpoint Security Settings Management
 
-You can configure Defender for Endpoint on Linux in the Microsoft Defender portal at ([https://security.microsoft.com](https://security.microsoft.com)) using Defender for Endpoint Security Settings Management. For more information, including how to create, edit, and verify security policies, see [Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus](mde-security-settings-management.md).
+You can configure Defender for Endpoint on Linux in the Microsoft Defender portal at ([https://security.microsoft.com](https://security.microsoft.com)) using Defender for Endpoint Security Settings Management. For more information, including how to create, edit, and verify security policies, see [Use Microsoft Intune to manage Microsoft Defender settings on devices not enrolled with Intune](/mem/intune/protect/mde-security-integration).
 
 ### Configuration profile
 

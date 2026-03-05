@@ -64,7 +64,7 @@ These three most recent major releases of macOS are supported.
 There are several methods and deployment tools that you can use to centrally install and configure Defender for Endpoint on macOS across your devices:
 
 - [Microsoft Intune-based deployment](mac-install-with-intune.md)
-- [Security Settings Management](mde-security-settings-management.md)
+- [Security Settings Management](/mem/intune/protect/mde-security-integration)
 - Non-Microsoft management tools:
     - [Other Mobile Device Management products (including JAMF)](mac-install-with-other-mdm.md)
  

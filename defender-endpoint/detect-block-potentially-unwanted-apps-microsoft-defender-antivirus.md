@@ -132,7 +132,7 @@ Scenarios and default settings for PUA protection depend on whether devices are 
 
 See the following articles:
 
-- [Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus](/defender-endpoint/mde-security-settings-management)
+- [Use Microsoft Intune to manage Microsoft Defender settings on devices not enrolled with Intune](/mem/intune/protect/mde-security-integration)
 
 ### Use Intune to configure PUA protection
 
