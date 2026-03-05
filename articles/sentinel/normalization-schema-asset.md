@@ -4,7 +4,7 @@ description: This article displays the Microsoft Sentinel Asset Entity normaliza
 author: derricklee
 ms.topic: reference
 ms.date: 03/04/2026
-ms.author: vakohl
+ms.author: derricklee
 
 
 
