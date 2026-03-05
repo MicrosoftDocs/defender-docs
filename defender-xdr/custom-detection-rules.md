@@ -323,17 +323,20 @@ These actions are applied to devices in the `DeviceId` column of the query resul
 - When selected, the **Mark user as compromised** action is taken on users in the `AccountObjectId`, `InitiatingProcessAccountObjectId`, or `RecipientObjectId` column of the query results. This action sets the users risk level to "high" in Microsoft Entra ID, triggering corresponding [identity protection policies](/azure/active-directory/identity-protection/overview-identity-protection).
 
 - Select **Disable user** to temporarily prevent a user from signing in.
-- Select **Force password reset** to prompt the user to change their password on the next sign in session.
-- Both the `Disable user` and `Force password reset` options require the user SID, which are in the columns `AccountSid`, `InitiatingProcessAccountSid`, `RequestAccountSid`, and `OnPremSid`.
+- Select **Reset user authentication** to prompt the user to either change their password on the next sign in session (for on-Prem Identities) or require user to sign in again (for Entra Identities).
 
-For more information on user actions, see [Remediation actions in Microsoft Defender for Identity](/defender-for-identity/remediation-actions).
+- Both the `Disable user` and `Reset user authentication` options require the user SID, which are in the columns `AccountSid`, `InitiatingProcessAccountSid`, `RequestAccountSid`, and `OnPremSid`.
+
+- For Entra Identities, `AccountObjectId` parameter is needed for all actions.
+
+For more information on user actions, see [Remediation actions in Microsoft Defender for Identity](/defender-for-identity/remediation-actions) and [Remediation actions in Microsoft Defender for Cloud Apps](/defender-cloud-apps/governance-actions).
 
 #### Actions on emails
 
-- If the custom detection yields email messages, you can select **Move to mailbox folder** to move the email to  a selected folder (any of **Junk**, **Inbox**, or **Deleted items** folders). Specifically, you can move email results from quarantined items (for instance, in the case of false positives) by selecting the **Inbox** option.
+- If the custom detection yields email messages, you can select **Move to mailbox folder** to move the email to a selected folder (any of **Junk**, **Inbox**, or **Deleted items** folders). Specifically, you can move email results from quarantined items (for instance, in the case of false positives) by selecting the **Inbox** option.
 
    :::image type="content" source="media/custom-detection-rules/advanced-hunting-custom-quarantine-results.png" alt-text="Screenshot of the Inbox option under custom detections in the Microsoft Defender portal." lightbox="media/custom-detection-rules/advanced-hunting-custom-quarantine-results.png":::
-  :::image type="content" source="media/custom-detection-rules/advanced-hunting-custom-quarantine-results.png" alt-text="Screenshot of the Inbox option under custom detections in the Microsoft Defender portal." lightbox="media/custom-detection-rules/advanced-hunting-custom-quarantine-results.png":::
+    :::image type="content" source="media/custom-detection-rules/advanced-hunting-custom-quarantine-results.png" alt-text="Screenshot of the Inbox option under custom detections in the Microsoft Defender portal." lightbox="media/custom-detection-rules/advanced-hunting-custom-quarantine-results.png":::
 
 - Alternatively, you can select **Delete email** and then choose to either move the emails to Deleted Items (**Soft delete**) or delete the selected emails permanently (**Hard delete**).
 
