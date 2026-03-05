@@ -229,6 +229,12 @@ In order to preview new features and provide early feedback, it's recommended th
       curl -sSL https://packages.microsoft.com/keys/microsoft-2025.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg > /dev/null
       sudo chmod o+r /usr/share/keyrings/microsoft-prod.gpg
       ```
+      
+   - For Debian 13 and later, run the following command.
+
+      ```bash
+      curl -sSL https://packages.microsoft.com/keys/microsoft-2025.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg > /dev/null
+      ```
 
 7. Install the HTTPS driver if not already installed:
 
@@ -543,7 +549,7 @@ For example, to change channel from Insiders-Fast to Production, do the followin
 
 To configure antivirus and EDR settings, see the following articles:
 
-- [Defender for Endpoint security settings management](/mem/intune/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal. (*This method is recommended*.)
+- [Defender for Endpoint security settings management](/intune/intune-service/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal. (*This method is recommended*.)
 - [Set preferences for Defender for Endpoint on Linux](/defender-endpoint/linux-preferences) describes settings you can configure.
 
 ## Uninstall Defender for Endpoint on Linux

@@ -14,7 +14,7 @@ ms.collection:
 - mde-android
 ms.topic: how-to
 ms.subservice: android
-ms.date: 12/17/2025
+ms.date: 01/31/2026
 appliesto:
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2
@@ -30,7 +30,7 @@ Microsoft Defender for Endpoint on Android threat information is applied by Intu
 Microsoft Defender for Endpoint on Android supports both the configurations of MAM.
 
 - **Intune MDM + MAM**: IT administrators can only manage apps using App Protection Policies on devices that are enrolled with Intune mobile device management (MDM).
-- **MAM without device enrollment**: MAM without device enrollment, or MAM-WE, allows IT administrators to manage apps using [App Protection Policies](/mem/intune/apps/app-protection-policy) on devices not enrolled with Intune MDM. This provision means that apps can be managed by Intune on devices enrolled with third-party EMM providers.
+- **MAM without device enrollment**: MAM without device enrollment, or MAM-WE, allows IT administrators to manage apps using [App Protection Policies](/intune/intune-service/apps/app-protection-policy) on devices not enrolled with Intune MDM. This provision means that apps can be managed by Intune on devices enrolled with third-party EMM providers.
 To manage apps in both these configurations customers should use Intune in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 To enable this capability an administrator needs to configure the connection between Microsoft Defender for Endpoint and Intune, create the app protection policy, and apply the policy on targeted devices and applications.
@@ -87,7 +87,7 @@ End users also need to take steps to install Microsoft Defender for Endpoint on 
 
      1. Select Apps.
 
-        A managed app is an app that has app protection policies applied to it, and can be managed by Intune. Any app that has been integrated with the [Intune SDK](/mem/intune/developer/app-sdk) or wrapped by the [Intune App Wrapping Tool](/mem/intune/developer/apps-prepare-mobile-application-management) can be managed using Intune app protection Policies. See the official list of [Microsoft Intune protected apps](/mem/intune/apps/apps-supported-intune-apps) that have been built using these tools and are available for public use.
+        A managed app is an app that has app protection policies applied to it, and can be managed by Intune. Any app that has been integrated with the [Intune SDK](/intune/intune-service/developer/app-sdk) or wrapped by the [Intune App Wrapping Tool](/intune/intune-service/developer/apps-prepare-mobile-application-management) can be managed using Intune app protection Policies. See the official list of [Microsoft Intune protected apps](/intune/intune-service/apps/apps-supported-intune-apps) that have been built using these tools and are available for public use.
 
         *Example: Outlook as a managed app*
 
@@ -118,6 +118,8 @@ End users also need to take steps to install Microsoft Defender for Endpoint on 
 - Users have the required licenses for the managed app and have the app installed.
 
 ### End-user onboarding
+> [!NOTE]
+> End-user onboarding can be done directly by downloading or launching the Defender app. Onboarding is enabled by default when no policies are set explicitly.
 
 1. Sign in to a managed application, for example, Outlook. The device is registered and the application protection policy is synchronized to the device. The application protection policy recognizes the device's health state.
 
@@ -279,6 +281,16 @@ Use the following steps to configure the Device tags:
 
 > [!NOTE]
 > The Defender app needs to be opened for tags to be synced with Intune and passed to Security Portal. It may take up to 18 hours for tags to reflect in the portal.
+
+## Disable end-user onboarding 
+
+Defender for Endpoint on Android is enabled by default in MAM mode. To prevent end users from downloading and setting up Defender on unenrolled devices, the DefenderMAMConfigs key can be set to 0 to block onboarding. Use the following steps to disable onboarding:
+
+1. In the Microsoft Intune admin center, go to **Apps** > **App configuration policies** > **Add** > **Managed apps**.
+1. Give the policy a **name**.
+1. Select **Microsoft Defender for Endpoint** in public apps.
+1. On the Settings page, select **Use configuration designer** and add the **DefenderMAMConfigs** key and set the value as 0.
+2. Click **Next** and assign this policy to targeted devices and users.
 
 ## Related topics
 

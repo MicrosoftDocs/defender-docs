@@ -64,7 +64,7 @@ From the device compliance page, create a configuration profile specifically for
 - Select **Create a device configuration profile to configure ATP sensor** to start with a predefined device configuration profile.
 - Create the device configuration profile from scratch.
 
-For more information, [read about using Intune device configuration profiles to onboard devices to Defender for Endpoint](/mem/intune/protect/advanced-threat-protection#onboard-devices).
+For more information, [read about using Intune device configuration profiles to onboard devices to Defender for Endpoint](/intune/intune-service/protect/advanced-threat-protection#onboard-devices).
 
 
 

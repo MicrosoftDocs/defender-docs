@@ -20,13 +20,13 @@ search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # Protect important folders with controlled folder access
 
 ## What is controlled folder access?
 
-Controlled folder access helps protect your valuable data from malicious apps and threats, such as ransomware. Controlled folder access protects your data by checking apps against a list of known, trusted apps. Controlled folder access can be configured by using Microsoft Defender for Endpoint Security Settings Management, Microsoft Intune, Microsoft Endpoint Configuration Manager, or the Windows Security App. 
+Controlled folder access helps protect your valuable data from malicious apps and threats, such as ransomware. Controlled folder access protects your data by checking apps against a list of known, trusted apps. Controlled folder access can be configured by using Microsoft Defender for Endpoint Security Settings Management, Microsoft Intune, Microsoft Configuration Manager, or the Windows Security App.
 
 Controlled folder access works best with [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md), which gives you detailed reporting into controlled folder access events and blocks as part of the usual [alert investigation scenarios](investigate-alerts.md).
 
@@ -99,7 +99,7 @@ The same profile folders are also protected for system accounts, such as `LocalS
 ## Review controlled folder access events in the Microsoft Defender portal
 
 > [!TIP]
-> Controlled folder access blocks don't generate alerts in the **[Alerts queue](/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Fcontrolled-folders.md/main/1f8f3424-7307-8178-dc20-b5160d121a7d/alerts-queue.md)**. However, you can view information about controlled folder access blocks in the **[device timeline view](/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Fcontrolled-folders.md/main/1f8f3424-7307-8178-dc20-b5160d121a7d/investigate-machines.md)**, while using **[advanced hunting](/defender-xdr/advanced-hunting-overview)**, or with **[custom detection rules](/defender-xdr/custom-detection-rules)**.
+> Controlled folder access blocks don't generate alerts in the **[Alerts queue](alerts-queue.md)**. However, you can view information about controlled folder access blocks in the **[device timeline view](investigate-machines.md)**, while using **[advanced hunting](/defender-xdr/advanced-hunting-overview)**, or with **[custom detection rules](/defender-xdr/custom-detection-rules)**.
 
 Defender for Endpoint provides detailed reporting into events and blocks as part of its [alert investigation scenarios](investigate-alerts.md) in the Microsoft Defender portal. For more information, see [Microsoft Defender for Endpoint in Microsoft Defender XDR](/defender-xdr/microsoft-365-security-center-mde).
 
