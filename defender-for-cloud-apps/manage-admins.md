@@ -25,7 +25,7 @@ By default, the following Microsoft 365 and [Microsoft Entra ID](/azure/active-d
 
 |Role name|Description|
 |---|---|
-|**Global administrator**<sup>\*</sup> and **Security administrator**|Administrators with **Full access** have full permissions in Defender for Cloud Apps. They can add admins, add policies and settings, upload logs and perform governance actions, access and manage SIEM agents.|
+|**Security administrator**|Administrators with **Full access** have full permissions in Defender for Cloud Apps. They can add admins, add policies and settings, upload logs and perform governance actions, access and manage SIEM agents.|
 |**Cloud App Security administrator**|Allows full access and permissions in Defender for Cloud Apps. This role grants full permissions to Defender for Cloud Apps, like the Microsoft Entra ID **Global administrator** role. However, this role is scoped to Defender for Cloud Apps and doesn't grant full permissions across other Microsoft security products.|
 |**Compliance administrator**|Has read-only permissions and can manage alerts. Can't access Security recommendations for cloud platforms. Can create and modify file policies, allow file governance actions, and view all the built-in reports under Data Management.|
 |**Compliance data administrator**|Has read-only permissions, can create and modify file policies, allow file governance actions, and view all discovery reports. Can't access Security recommendations for cloud platforms.|
@@ -91,8 +91,6 @@ The following specific admin roles can be configured in the Microsoft Defender p
 
 To override an administrator's permission from Microsoft Entra ID or Microsoft 365, you can manually add the user to Defender for Cloud Apps and assign permissions to the user. For example, if you want to assign Stephanie, who is a Security reader in Microsoft Entra ID to have **Full access** in Defender for Cloud Apps, you can add her manually to Defender for Cloud Apps and assign her **Full access** to override her role and allow her the necessary permissions in Defender for Cloud Apps. You can't override Microsoft Entra roles that grant Full access (Global administrator, Security administrator, and Cloud App Security administrator).
 
-> [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. This strategy helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Add additional admins
 

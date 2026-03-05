@@ -39,7 +39,7 @@ appliesto:
 
 ## Prerequisites
 
-- You must have appropriate permissions assigned through roles, such as Global Administrator or Security Administrator. (See [Microsoft Defender XDR role-based access control (RBAC)](/defender-xdr/manage-rbac).)
+- You must have appropriate permissions assigned through roles, such as Security Administrator. See [Microsoft Defender XDR role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
 - Devices must be running certain versions of Windows or macOS. (See [On what devices can tamper protection be enabled](prevent-changes-to-security-settings-with-tamper-protection.md#)
 
