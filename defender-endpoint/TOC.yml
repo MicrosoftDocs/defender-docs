@@ -880,7 +880,7 @@
           href: use-intune-config-manager-microsoft-defender-antivirus.md
         - name: Use Microsoft Defender for Endpoint Security Settings Management to manage
             Microsoft Defender Antivirus
-          href: mde-security-settings-management.md
+          href: /intune/intune-service/protect/mde-security-integration?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
           displayName: Use Microsoft Defender for Endpoint Security Settings Management to
             manage Microsoft Defender Antivirus MDE Attach MDE Attach v2
         - name: Use Group Policy settings to manage Microsoft Defender Antivirus
