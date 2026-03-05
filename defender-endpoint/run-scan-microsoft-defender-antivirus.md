@@ -70,7 +70,7 @@ To check on the detections, see [Review the results of Microsoft Defender Antivi
    [![Scan options on the Windows 10 unhealthy endpoints tab.](media/mem-antivirus-scan-on-demand.png)](media/mem-antivirus-scan-on-demand.png#lightbox)
    
 > [!TIP]
-> For more information about using Microsoft Configuration Manager to run a scan, see [Antimalware and firewall tasks: How to perform an on-demand scan](/configmgr/protect/deploy-use/endpoint-antimalware-firewall#how-to-perform-an-on-demand-scan-of-computers).
+> For more information about using Microsoft Configuration Manager to run a scan, see [Antimalware and firewall tasks: How to perform an on-demand scan](/intune/configmgr/protect/deploy-use/endpoint-antimalware-firewall#how-to-perform-an-on-demand-scan-of-computers).
 
 ### Use devices to run a scan on a single device
 

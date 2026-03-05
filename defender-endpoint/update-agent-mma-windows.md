@@ -56,9 +56,9 @@ A new agent was released in April 2022 for Windows Server 2012 R2 and Windows Se
 
 - See [Server migration scenarios from the previous, MMA-based Microsoft Defender for Endpoint solution](server-migration.md) to understand your options for upgrading to the new agent.
 
-- If you're using Microsoft Endpoint Configuration Manager (SCCM/ConfigMgr) 2107 or later to manage your servers running Windows Server 2012 R2 or Windows Server 2016, see [Migrating servers from Microsoft Monitoring Agent to the unified solution](application-deployment-via-mecm.md) to perform an **orchestrated** upgrade.
+- If you're using Microsoft Configuration Manager version 2107 (August 2021) or later to manage your servers running Windows Server 2012 R2 or Windows Server 2016, see [Migrating servers from Microsoft Monitoring Agent to the unified solution](application-deployment-via-mecm.md) to perform an **orchestrated** upgrade.
 
-- If you're using Microsoft Endpoint Configuration Manager (SCCM/ConfigMgr) 2207 or later to manage your servers running Windows Server 2012 R2 or Windows Server 2016, see [Onboarding to Microsoft Defender for Endpoint with Configuration Manager 2207 and later versions](/intune/configmgr/protect/deploy-use/defender-advanced-threat-protection) to perform an **automated** upgrade.
+- If you're using Microsoft Configuration Manager 2207 (August 2022) or later to manage your servers running Windows Server 2012 R2 or Windows Server 2016, see [Onboarding to Microsoft Defender for Endpoint with Configuration Manager 2207 and later versions](/intune/configmgr/protect/deploy-use/defender-advanced-threat-protection) to perform an **automated** upgrade.
 
 - If you're using Microsoft Defender for Cloud with servers running Windows Server 2012 R2 or Windows Server 2016, you can automate the upgrade by selecting **Enable unified solution**. See [Users with Defender for Servers enabled and Microsoft Defender for Endpoint deployed](/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows).
 
