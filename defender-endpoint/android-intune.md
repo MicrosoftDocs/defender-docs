@@ -23,12 +23,14 @@ appliesto:
 
 # Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune
 
-
 Learn how to deploy Defender for Endpoint on Android on Microsoft Intune Company Portal enrolled devices. For more information about Microsoft Intune device enrollment, see [Enroll your device](/mem/intune/user-help/enroll-device-android-company-portal).
 
 > [!NOTE]
 > **Defender for Endpoint on Android is now available on [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.scmx)**
 > > You can connect to Google Play from Microsoft Intune to deploy Defender for Endpoint app across device administrator and Android Enterprise enrollment modes. Updates to the app are automatic via Google Play.
+
+> [!IMPORTANT]
+> At the end of March 2026, Microsoft Defender for Endpoint on Android will no longer support protection of personal profiles on enrolled devices. See the note in [Set up Microsoft Defender in personal profile on Android Enterprise in BYOD mode](#s) for details.
 ## Deploy on Android Enterprise enrolled devices
 
 Defender for Endpoint on Android supports Android Enterprise enrolled devices.
@@ -206,6 +208,13 @@ Administrators can configure Microsoft Defender for Endpoint in low-touch onboar
 1. Review and create the policy.
 
 ## Set up Microsoft Defender in personal profile on Android Enterprise in BYOD mode
+
+> [!IMPORTANT]
+> At the end of March 2026, Microsoft Defender for Endpoint on Android will no longer support protection of personal profiles on enrolled devices (that is, personal profiles managed via MDM configuration policies). At that time:
+> * Defender for Endpoint on Android devices in a personal profile configured via MDM policies will stop functioning, and users will see the following popup:
+>    :::image type="content" source="{source}" alt-text="{alt-text}":::
+> * Devices enrolled in personal profiles that have the suffix AEPersonal will remain in the SOC portal after deprecation. The devices will become inactive, and will follow the device lifecycle of 180 days before being deleted from the Defender portal.
+> * It will no longer be possible to configure personal profiles via MDM policies.
 
 ### Set up Microsoft Defender in personal profile
 
