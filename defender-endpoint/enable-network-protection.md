@@ -25,7 +25,7 @@ appliesto:
 
 [Network protection](network-protection.md) helps to prevent users from using any application to access dangerous domains that might host phishing scams, exploits, and other malicious content on the internet. You can [audit network protection](evaluate-network-protection.md) in a test environment to view which apps would be blocked before enabling network protection.
 
-[Learn more about network filtering configuration options.](/mem/intune/protect/endpoint-protection-windows-10#network-filtering)
+[Learn more about network filtering configuration options.](/intune/intune-service/protect/endpoint-protection-windows-10#network-filtering)
 
 ## Prerequisites
 
@@ -147,7 +147,7 @@ To enable network protection, you can use any of the methods described in this a
 
    Select **Next**.
 
-7. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing [scope tags](/mem/intune/fundamentals/scope-tags). When you're finished, select **Next**.
+7. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing [scope tags](/intune/intune-service/fundamentals/scope-tags). When you're finished, select **Next**.
 
 8. On the **Assignments** tab, configure the following settings:
    - **Included groups** section: Select one of the following options:
@@ -186,7 +186,7 @@ To enable network protection, you can use any of the methods described in this a
 
    Select **Next**.
 
-6. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing [scope tags](/mem/intune/fundamentals/scope-tags). When you're finished, select **Next**.
+6. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing [scope tags](/intune/intune-service/fundamentals/scope-tags). When you're finished, select **Next**.
 
 7. On the **Assignments** tab, click in the search box or start typing a group name, and then select it from the results.
 
