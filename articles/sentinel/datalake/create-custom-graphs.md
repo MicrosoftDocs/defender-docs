@@ -280,9 +280,9 @@ After you create a graph job, you can view and manage the graph in your tenant f
     :::image type="content" source="media/create-custom-graphs/graph-job-details.png" lightbox="media/create-custom-graphs/graph-job-details.png" alt-text="A screenshot showing the graph job details tab in Visual Studio Code.":::
 
 1. When the graph build is complete, the **Status** updates to **Succeeded**. Select the **Graph Details** tab to view information about the graph. 
-<!-- The **Status** shows **Ready** when the graph is successfully built and stored in your tenant. -->
 
     :::image type="content" source="media/create-custom-graphs/graph-details.png" lightbox="media/create-custom-graphs/graph-details.png" alt-text="A screenshot of the graph details tab.":::
+<!-- The **Status** shows **Ready** when the graph is successfully built and stored in your tenant. -->
 
 1. You can now query the graph in the query editor.  Select the **Graph Query** tab to open the graph query editor.
 1. Paste the following sample GQL query to retrieve all user nodes in the graph:
@@ -300,4 +300,4 @@ For more information on GQL, see [GQL language guide](/kusto/query/graph-query-l
 
 ## Related articles
 
-- [Microsoft Sentinel graph provider library reference](./graph-builder-api-reference.md)
+- [Microsoft Sentinel graph provider library reference](./sentinel-graph-provider-reference.md)

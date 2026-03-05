@@ -600,10 +600,8 @@
           href: datalake/custom-graphs-overview.md
         - name: Create custom graphs
           href: datalake/create-custom-graphs.md
-        - name: Sentinel graph builder API reference
-          href: datalake/graph-builder-api-reference.md
-        - name: Sentinel graph builder API reference2
-          href: datalake/graph-builder-api-reference2.md
+        - name: Microsoft Sentinel graph provider reference
+          href: datalake/sentinel-graph-provider-reference.md
         - name: GQL reference for Sentinel custom graph
           href: datalake/gql-reference-for-sentinel-custom-graph.md
     - name: Microsoft Sentinel MCP server
