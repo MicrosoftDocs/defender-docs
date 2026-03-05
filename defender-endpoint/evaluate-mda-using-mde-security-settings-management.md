@@ -27,7 +27,7 @@ If you have any questions about a detection that MDAV makes, or you discover a m
 
 ## Use Microsoft Defender Endpoint Security Settings Management (Endpoint security policies) to enable the features
 
-This section describes the [Microsoft Defender for Endpoint Security Settings Management (Endpoint security policies)](/mem/intune/protect/mde-security-integration) that configure the features you should use to evaluate our protection.
+This section describes the [Microsoft Defender for Endpoint Security Settings Management (Endpoint security policies)](/intune/intune-service/protect/mde-security-integration) that configure the features you should use to evaluate our protection.
 
 MDAV indicates a detection through [standard Windows notifications](configure-notifications-microsoft-defender-antivirus.md). You can also review detections in the MDAV app. To do this, see [Review Microsoft Defender Antivirus scan results](review-scan-results-microsoft-defender-antivirus.md).
 

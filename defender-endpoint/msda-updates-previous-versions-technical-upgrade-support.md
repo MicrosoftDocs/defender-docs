@@ -220,7 +220,7 @@ What's new
 #### What's new
 
 - Improved detection logic to reduce false positives related to the Azure Site Recovery rule, [Block Office applications from injecting code into other processes](/defender-endpoint/attack-surface-reduction-rules-reference#block-office-applications-from-injecting-code-into-other-processes)
-- Resolved an issue that could lead to a Windows device to be marked as [noncompliant in Intune](/mem/intune/fundamentals/reports#device-compliance-reports) when Microsoft Defender Antivirus starts.
+- Resolved an issue that could lead to a Windows device to be marked as [noncompliant in Intune](/intune/intune-service/fundamentals/reports#device-compliance-reports) when Microsoft Defender Antivirus starts.
 - Resolved an issue with catchup scan configuration, where the [DaysUntilAggressiveCatchupQuickScan](/windows/client-management/mdm/defender-csp#configurationdaysuntilaggressivecatchupquickscan) policy setting wasn't honored.
 - Fixed `SharedSignatureRoot` processing when an empty value was set.
 - Fixed a problem with [device control](device-control-overview.md) where certain file systems (like `FAT`, `FAT32`, `exFAT`) with volume information displayed when a blocking rule was defined.
@@ -228,7 +228,7 @@ What's new
 - Fixed an issue with [Azure Virtual Desktop](/azure/virtual-desktop/overview) where the Intune policy wasn't being honored.
 - Fixed potential deadlock for [custom detection rules](/defender-xdr/custom-detection-rules) on the Windows client
 - Resolved an issue where [antivirus exclusions](configure-exclusions-microsoft-defender-antivirus.md) weren't being honored with [AMSI](/windows/win32/amsi/antimalware-scan-interface-portal).
-- Fixed issue impacting a subset of devices where [antivirus exclusions configured through SCCM](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings) weren't honored
+- Fixed issue impacting a subset of devices where [antivirus exclusions configured through SCCM](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings) weren't honored
 
 > [!IMPORTANT]
 > On Windows Server 2019 and later, a new binary (`MpDefenderCoreService.exe`) will be included in the update package to support future service improvements (more information to follow).
@@ -398,7 +398,7 @@ What's new
 - Added the ability to have [quick scans](schedule-antivirus-scans.md) ignore Microsoft Defender Antivirus exclusions
 - Fixed remediation for long running [on-demand scans](run-scan-microsoft-defender-antivirus.md) where the service may have been restarted
 - Fixed an issue with Microsoft Defender Vulnerability Management to allow the execution of a [blocked application](/defender-vulnerability-management/tvm-block-vuln-apps) when the [warn option](/defender-vulnerability-management/tvm-block-vuln-apps#block-or-warn-mitigation-action) is selected
-- Added support for managing schedule day/time for [signature updates in Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-windows#updates) and [Defender for Endpoint security settings management](/mem/intune/protect/mde-security-integration)
+- Added support for managing schedule day/time for [signature updates in Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-windows#updates) and [Defender for Endpoint security settings management](/intune/intune-service/protect/mde-security-integration)
 - Fixed non-standard signature path loading across platforms ([Windows](microsoft-defender-antivirus-windows.md), [Mac](microsoft-defender-endpoint-mac.md), [Linux](microsoft-defender-endpoint-linux.md), [Android](microsoft-defender-endpoint-android.md), and [iOS](microsoft-defender-endpoint-ios.md))
 - Improved handling of cached detections in [attack surface reduction](overview-attack-surface-reduction.md) capabilities
 - Improved performance for enumerating virtual memory ranges
@@ -531,7 +531,7 @@ What's new
 
 #### What's new
 
-- Fixed an issue with [ASR rules deployed via Intune](/mem/intune/protect/endpoint-security-asr-policy) to display accurately in the Microsoft Defender portal
+- Fixed an issue with [ASR rules deployed via Intune](/intune/intune-service/protect/endpoint-security-asr-policy) to display accurately in the Microsoft Defender portal
 - Fixed a performance issue when building and validating the Microsoft Defender Antivirus cache
 - Improved performance by removing redundant exclusion checks
 
