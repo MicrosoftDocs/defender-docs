@@ -224,7 +224,7 @@ If you experience any installation issues, self-troubleshooting resources are av
 
 ## Related content
 
-- [Use Microsoft Intune to manage Microsoft Defender settings on devices not enrolled with Intune](/mem/intune/protect/mde-security-integration)
+- [Use Microsoft Intune to manage Microsoft Defender settings on devices not enrolled with Intune](/intune/intune-service/protect/mde-security-integration)
 - [Linux Resources](linux-resources.md)
 - [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](linux-support-connectivity.md)
 - [Investigate agent health issues](health-status.md)

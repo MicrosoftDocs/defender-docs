@@ -39,7 +39,7 @@ If you have servers onboarded to Defender for Endpoint, the migration process va
 
 Before you enable Defender for Cloud, it's important to know how to manage antivirus policies and define any needed exclusions. See the following articles:
 
-- [Use Microsoft Intune to manage Microsoft Defender settings on devices not enrolled with Intune](/mem/intune/protect/mde-security-integration)
+- [Use Microsoft Intune to manage Microsoft Defender settings on devices not enrolled with Intune](/intune/intune-service/protect/mde-security-integration)
 - [Manage Microsoft Defender Antivirus in your business](configuration-management-reference-microsoft-defender-antivirus.md)
 - [Defender for Endpoint exclusions](navigate-defender-endpoint-antivirus-exclusions.md)
 - [Managing exclusions reference](managing-exclusions.md)
