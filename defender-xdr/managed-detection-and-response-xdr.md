@@ -150,6 +150,9 @@ The following tables show the different managed response details in the Defender
 
 ### In the [`incidentTask`](https://graph.microsoft.com/beta/security/incidentTasks) resource type
 
+>[!IMPORTANT]
+>The `incidentTask` resource type is available in the beta version of Graph security API only.
+
 | Defender portal field| Graph security API field | Description |
 |---|---|---|
 | Action status | `actionStatus` | The execution status of the remediation action. For more information, see [incidentTaskActionStatus values](/graph/api/resources/security-incidenttask#incidenttaskactionstatus-values). |
