@@ -63,13 +63,17 @@ Automatic attack disruption uses Microsoft-based XDR response actions. Examples 
 - [Device contain](/defender-endpoint/respond-machine-alerts#contain-devices-from-the-network) - based on Microsoft Defender for Endpoint's capability, this action is an automatic containment of a suspicious device to block any incoming/outgoing communication with the said device.
   - In addition, Defender for Endpoint automatically contains malicious IP addresses associated with undiscovered/not onboarded devices to block any lateral movement and encryption activity to other Defender for Endpoint-onboarded/discovered devices. It does this through its **[Contain IP](/defender-endpoint/respond-machine-alerts#contain-ip-addresses-of-undiscovered-devices)** (Preview) policy. Moreover, [compromised critical assets' IP addresses are also automatically contained](/defender-endpoint/respond-machine-alerts#containing-critical-assets) with specific blocking mechanisms to stop the spread of an attack while avoiding productivity loss.
 
-- [Disable user](/defender-for-identity/remediation-actions) - based on Microsoft Defender for Identity's capability, this action is an automatic suspension of a compromised account to prevent additional damage like lateral movement, malicious mailbox use, or malware execution.
+- [Disable user](/defender-for-identity/remediation-actions) - based on Microsoft Defender for Identity’s capability, this action is an automatic suspension of a compromised account to prevent additional damage, such as lateral movement, malicious mailbox use, or malware execution.
 
-  Defender for Identity enables remediation actions for users from Active Directory, Microsoft Entra ID, and integrated identity providers. The disable user action behaves differently depending on how the user is hosted in your environment.
+  Defender for Identity enables remediation actions for users from Active Directory, Microsoft Entra ID, and integrated identity providers. The Disable user action behaves differently depending on how the user is hosted in your environment.
 
-  - When the user account is hosted in Active Directory: Defender for Identity triggers the disable user action on domain controllers running the Defender for Identity agent.
-  - When the user account is hosted in Active Directory and is synced on Microsoft Entra ID:  Defender for Identity triggers the disable user action via onboarded domain controllers. Attack disruption also disables the user account on the Entra ID synced account.
-  - When the user account is hosted in Entra ID only (cloud native account): Defender for Identity creates a Microsoft Entra ID enterprise application that checks the signed‑in user’s assigned roles and permissions through role‑based access control (RBAC) before attack disruption disables the user account on the Entra ID synced account.
+  - **When the user account is hosted in Active Directory**: Defender for Identity triggers the disable user action on domain controllers running the Defender for Identity sensor. [Automatic...soft Learn | Learn.Microsoft.com]
+  - **When the user account is hosted in Active Directory and is synced to Microsoft Entra ID**:
+Defender for Identity triggers the disable user action via onboarded domain controllers. Attack disruption also disables the user account in Microsoft Entra ID. [Automatic...soft Learn | Learn.Microsoft.com]
+  - **When the user account is hosted in Microsoft Entra ID only (cloud‑native account)**:
+Defender for Identity executes the disable user action in Microsoft Entra ID by using a Microsoft‑managed enterprise application. This application validates the signed‑in user’s assigned roles and permissions through role‑based access control (RBAC) before the account is disabled.
+
+    The enterprise application is named `Microsoft Defender for Identity` and uses application ID `60ca1954‑583c‑4d1f‑86de‑39d835f3e452`. In older tenants, this same application may appear as `Radius Aad Syncer`.
 
   > [!NOTE]
   > Disabling the user account in Microsoft Entra ID is not dependent on the deployment of Microsoft Defender for Identity.
