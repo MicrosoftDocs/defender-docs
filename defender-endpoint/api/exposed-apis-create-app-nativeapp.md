@@ -131,6 +131,9 @@ For more information on Microsoft Entra tokens, see [Microsoft Entra tutorial](/
 
 ### Using C\#
 
+> [!TIP]
+> Some Microsoft Defender for Endpoint APIs continue to require access tokens issued for the legacy resource `https://api.securitycenter.microsoft.com`. If the token audience doesn't match the resource expected by the API, requests fail with `403 Forbidden`, even if the API endpoint uses `https://api.security.microsoft.com`. Use `https://api.securitycenter.microsoft.com` as the resource or scope when acquiring tokens.
+
 - Copy/Paste the below class in your application.
 - Use **AcquireUserTokenAsync** method with your application ID, tenant ID, user name, and password to acquire a token.
 
@@ -146,7 +149,7 @@ For more information on Microsoft Entra tokens, see [Microsoft Entra tutorial](/
         {
             private const string Authority = "https://login.microsoftonline.com";
 
-            private const string WdatpResourceId = "https://api.security.microsoft.com";
+            private const string WdatpResourceId = "https://api.securitycenter.microsoft.com";
 
             public static async Task<string> AcquireUserTokenAsync(string username, string password, string appId, string tenantId)
             {

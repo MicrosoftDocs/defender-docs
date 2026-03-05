@@ -55,7 +55,7 @@ To specify the cloud block time out period with Microsoft Defender for Endpoint 
 
 ## Specify the extended time out period using Microsoft Intune
 
-You can specify the cloud block time out period with an [endpoint security policy in Microsoft Intune](/mem/intune/protect/endpoint-security-policy).
+You can specify the cloud block time out period with an [endpoint security policy in Microsoft Intune](/intune/intune-service/protect/endpoint-security-policy).
 
 1. Go to the Intune admin center ([https://intune.microsoft.com/](https://intune.microsoft.com/)) and sign in.
 
@@ -65,7 +65,7 @@ You can specify the cloud block time out period with an [endpoint security polic
 
 1. In the **Configuration settings** section, scroll down to **Cloud Extended Timeout** and specify the time out, in seconds, from 0 to 50 seconds. Whatever you specify is added to the default 10 seconds.
 
-1. (This step is optional) Make any other changes to your antivirus policy. (Need help? See [Settings for Microsoft Defender Antivirus policy in Microsoft Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-windows).)
+1. (This step is optional) Make any other changes to your antivirus policy. (Need help? See [Settings for Microsoft Defender Antivirus policy in Microsoft Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-windows).)
 
 1. Choose **Next**, and finish configuring your policy.
 
@@ -91,7 +91,7 @@ You can use Group Policy to specify an extended time out for cloud checks.
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
