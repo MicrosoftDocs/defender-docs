@@ -1,4 +1,4 @@
-﻿---
+---
 title: Get one remediation activity by ID
 description: Returns information for the specified remediation activity.
 ms.service: defender-endpoint
@@ -83,7 +83,7 @@ One of the following permissions is required to call this API. To learn more, in
 ### Request example
 
 ```http
-GET https://api.security.microsoft.com/api/remediationtasks/03942ef5-aecb-4c6e-b555-d6a97013844c
+GET https://api.security.microsoft.com/api/remediationtasks/aaaabbbb-0000-cccc-1111-dddd2222eeee
 ```
 
 ### Response example
@@ -91,7 +91,7 @@ GET https://api.security.microsoft.com/api/remediationtasks/03942ef5-aecb-4c6e-b
 ```json
 {
     "@odata.context": "https://api.security.microsoft.com/api/$metadata#RemediationTasks/$entity",
-    "id": "03942ef5-aecb-4c6e-b555-d6a97013844c",
+    "id": "aaaabbbb-0000-cccc-1111-dddd2222eeee",
     "title": "Update Microsoft Silverlight",
     "createdOn": "2021-02-10T13:20:36.4718166Z",
     "requesterId": "65548a1d-efo0-4a7a-8d19-1b967b5c36f4",
