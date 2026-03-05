@@ -141,17 +141,15 @@ The following tables show the different managed response details in the Defender
 >[!NOTE]
 >Any incident in the Microsoft Defender portal is a collection of correlated alerts. [Learn more](/graph/api/resources/security-incident).
 
-### In the [`incident`](https://graph.microsoft.com/beta/security/incidents) resource type
+**In the [`incident`](https://graph.microsoft.com/beta/security/incidents) resource type:**
 
 | Defender portal field| Graph security API field | Description |
 |---|---|---|
 | Investigation summary | `description` | The investigation notes from Defender Experts. |
 
 
-### In the [`incidentTask`](https://graph.microsoft.com/beta/security/incidentTasks) resource type
+**In the [`incidentTask`](https://graph.microsoft.com/beta/security/incidentTasks) resource type:**
 
->[!IMPORTANT]
->The `incidentTask` resource type is available in the beta version of Graph security API only.
 
 | Defender portal field| Graph security API field | Description |
 |---|---|---|
@@ -168,7 +166,10 @@ The following tables show the different managed response details in the Defender
 | Last modified by | `lastModifiedByDisplayName` | Name of the entity that last updated the task. Read-only. |
 | Last modified time | `lastModifiedDateTime` | Last update time of the task. Read-only. |
 
-### Consume managed response through API
+
+>[!IMPORTANT]
+>The `incidentTask` resource type is available in the beta version of Graph security API only.
+
 Your approach to consuming managed response from the API might vary depending on the downstream system you intend to use and your specific requirements. The following steps are a basic implementation to help you get started:
 
 **Starting from incidents in the Graph API**
