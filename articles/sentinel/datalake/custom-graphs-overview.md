@@ -20,7 +20,6 @@ Custom graphs enable organizations to create custom enterprise knowledge graphs 
 
 
 Custom graphs allow you to model and build a graph iteratively using a notebook built with the Microsoft Sentinel Visual Studio Code extension. Notebook-based graphs allow you to perform ad hoc graphical investigations that require quick pattern examination and rapidly changing relationships. Pull data from the Microsoft Sentinel data lake and build a graph to explore relationships, run analytics, iterate on nodes and edges, and refine queries in an interactive loop. When the investigation is complete, you can discard the graph or save the graph in your tenant. 
-A saved graph persists in the graph database and allows you to run graph analytics and visualization on a continuous basis. You can schedule an automatic refresh of the graph at regular intervals, for example daily or hourly. An authorized team member can query a graph using a variety of tools including MCP tools, the Graph Explorer user interface, the graph APIs or using Sentinel interactive notebooks.
 
 
 <!-- ## Ad-hoc custom graphs
@@ -41,6 +40,17 @@ The following scenarios demonstrate how ad-hoc custom graphs can expose hidden p
 
 - **Audit log pattern discovery**: By graphing Office 365 activity logs or admin audit logs, defenders can apply advanced graph algorithms, like betweenness centrality, to find outliers. For example, an account that intermediates many rare file access relationships might indicate insider abuse.
 
+
+Ad-hoc custom graphs are built, viewed, and queried in Jupyter notebooks in the Microsoft Sentinel Visual Studio Code extension.
+
+:::image type="content" source="media/custom-graphs-overview/notebook-graph.png" alt-text="Screenshot of an ad-hoc custom graph in Microsoft Sentinel showing interconnected nodes and edges." lightbox="media/custom-graphs-overview/notebook-graph.png":::
+
+
+## Persisted custom graphs
+
+Persisted custom graphs are designed for continuous monitoring of systemic threats that require regular updates and ongoing analysis. A persisted graph is saved in the graph database and can be refreshed on a regular basis. Authorized team members can query a persisted graph using a variety of tools including MCP tools, the Graph explorer, or using the Sentinel interactive notebooks.
+
+
 ### Detect gradual privilege overlap using persisting graphs in your tenant
 
 A persisted graph is saved in the graph database and can be refreshed on a regular basis. A persisted custom graph can help detect the gradual buildup of privilege overlap — when identities that were once isolated begin to share access paths through evolving group memberships, role assignments, or inherited permissions. Over weeks or months, these subtle shifts expand the blast radius of any single compromise.
@@ -57,7 +67,7 @@ Query these graphs and run advanced graph algorithms to understand choke points,
 
 ## Building custom graphs in Microsoft Sentinel
 
-Use the Jupyter pyspark notebooks in the Microsoft Sentinel Visual Studio Code extension to create custom graphs with your Microsoft Sentinel data. Work with the [graph builder Python library](./graph-builder-api-reference.md) to define nodes and edges, and use [Graph Query Language (GQL)](./gql-reference-for-sentinel-custom-graph.md) to query and analyze your graphs. Materialize your custom graphs in your tenant for continuous monitoring and detection of systemic threats, and leverage built-in graph algorithms for deeper insights.
+Use the Jupyter pyspark notebooks in the Microsoft Sentinel Visual Studio Code extension to create custom graphs with your Microsoft Sentinel data. Work with the [Microsoft Sentinel graph provider reference](./graph-builder-api-reference.md) to define nodes and edges, and use [Graph Query Language (GQL)](./gql-reference-for-sentinel-custom-graph.md) to query and analyze your graphs. Materialize your custom graphs in your tenant for continuous monitoring and detection of systemic threats, and leverage built-in graph algorithms for deeper insights.
 
 The following table summarizes the steps to build custom graphs in Microsoft Sentinel:
 
@@ -68,3 +78,12 @@ The following table summarizes the steps to build custom graphs in Microsoft Sen
 | **3. Run advanced graph algorithms** | - Use built-in support for Graph Frames analytics and graph traversal functions.<br>- Leverage purpose-built Sentinel graph algorithms for common security use cases. |
 
 For detailed instructions on how to build custom graphs in Microsoft Sentinel, see [Custom graphs in Microsoft Sentinel](./create-custom-graphs.md).
+
+## Visualizing Graphs in Microsoft Sentinel
+
+Microsoft Sentinel provides multiple options for visualizing graphs, including the Graph explorer, Jupyter notebooks in the Sentinel Visual Studio Code extension. The Graph Explorer allows you to interactively explore and query your graphs using GQL, while Jupyter notebooks provide a flexible environment for building and analyzing custom graphs.
+
+:::image type="content" source="media/custom-graphs-overview/graph-explorer.png" alt-text="Screenshot of the Graph explorer in Microsoft Sentinel showing a graph visualization." lightbox="media/custom-graphs-overview/graph-explorer.png":::
+
+For more information on visualizing graphs in Microsoft Sentinel using Graph explorer, see [Microsoft Sentinel Graph explorer](./graph-explorer.md).
+
