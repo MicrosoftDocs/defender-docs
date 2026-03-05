@@ -296,7 +296,7 @@ To get support from Microsoft, open a support ticket, and provide the log files 
 You can configure antivirus or EDR settings on your endpoints using any of the following methods:
 
 - See [Set preferences for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences).
-- See [security settings management](/mem/intune/protect/mde-security-integration) to configure settings in the Microsoft Defender portal.
+- See [security settings management](/intune/intune-service/protect/mde-security-integration) to configure settings in the Microsoft Defender portal.
 
 ## Operating system upgrades
 
