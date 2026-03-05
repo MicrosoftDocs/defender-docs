@@ -93,9 +93,9 @@ After authorization, the action is executed by the identity system that manages 
 
 Remediation actions are recorded by the identity system where the action is executed and are visible in Microsoft Defender audit logs.
 
-## Automatic Attack Disruption
+## Remediation actions in Automatic Attack Disruption
 
-Automatic Attack Disruption in Microsoft Defender XDR uses Microsoft Defender for Identity remediation capabilities to respond to active attacks. During attack disruption, remediation actions are applied automatically. For details, see the Automatic Attack Disruption documentation in Microsoft Defender XDR.
+Remediation actions can also be applied automatically by Microsoft Defender's automatic attack disruption. When an active attack is detected, attack disruption uses Defender for Identity remediation capabilities to contain the threat without manual intervention. For details, see [automatic attack disruption](/defender-xdr/automatic-attack-disruption.md) .
 
 ## Related video
 
