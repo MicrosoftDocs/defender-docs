@@ -1,6 +1,6 @@
 ﻿---
 title: Review the results of Microsoft Defender Antivirus scans
-description: Review the results of scans using Microsoft Endpoint Configuration Manager, Microsoft Intune, or the Windows Security app
+description: Review the results of scans using Microsoft Configuration Manager, Microsoft Intune, or the Windows Security app
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: chrisda
@@ -66,7 +66,7 @@ To view the scan results using Microsoft Intune admin center, follow the below p
 
 ## Use Configuration Manager to review scan results
 
-See [How to monitor Endpoint Protection status](/configmgr/protect/deploy-use/monitor-endpoint-protection).
+See [How to monitor Endpoint Protection status](/intune/configmgr/protect/deploy-use/monitor-endpoint-protection).
 
 ## Use PowerShell cmdlets to review scan results
 

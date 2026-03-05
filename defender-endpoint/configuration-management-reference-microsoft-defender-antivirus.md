@@ -49,7 +49,7 @@ The following articles provide further information, links, and resources for usi
 |Article|Description|
 |:---|:---|
 |[Manage Microsoft Defender Antivirus with Microsoft Defender for Endpoint Security Configuration Management](/intune/intune-service/protect/mde-security-integration)|Information about using the Microsoft Defender for Endpoint Security Configuration Management to configure, manage, and report, Microsoft Defender Antivirus|
-|[Manage Microsoft Defender Antivirus with Microsoft Intune and Microsoft Endpoint Configuration Manager](use-intune-config-manager-microsoft-defender-antivirus.md)|Information about using Intune and Configuration Manager to deploy, manage, report, and configure Microsoft Defender Antivirus|
+|[Manage Microsoft Defender Antivirus with Microsoft Intune and Microsoft Configuration Manager](use-intune-config-manager-microsoft-defender-antivirus.md)|Information about using Intune and Configuration Manager to deploy, manage, report, and configure Microsoft Defender Antivirus|
 |[Manage Microsoft Defender Antivirus with Group Policy settings](use-group-policy-microsoft-defender-antivirus.md)|List of all Group Policy settings located in ADMX templates|
 |[Manage Microsoft Defender Antivirus with PowerShell cmdlets](use-powershell-cmdlets-microsoft-defender-antivirus.md)|Instructions for using PowerShell cmdlets to manage Microsoft Defender Antivirus, plus links to documentation for all cmdlets and allowed parameters|
 |[Manage Microsoft Defender Antivirus with Windows Management Instrumentation (WMI)](use-wmi-microsoft-defender-antivirus.md)|Instructions for using WMI to manage Microsoft Defender Antivirus, plus links to documentation for the WMIv2 APIs (including all classes, methods, and properties)|
