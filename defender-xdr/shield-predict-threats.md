@@ -101,6 +101,7 @@ Predictive shielding uses Defender for Endpoint-based actions. To use these acti
 
     > [!NOTE]
     > While the contain user action is used both in attack disruption and predictive shielding, this action is applied differently in each context. In predictive shielding, the contain user action applies restrictions more selectively, with a focus on users identified as high risk through prediction logic. This action prevents new sessions rather than terminating existing ones.
+    > 
     > This action is generally available, both when triggered by attack disruption and predictive shielding.
 
 ## Next steps
