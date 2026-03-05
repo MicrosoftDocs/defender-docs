@@ -48,11 +48,11 @@ Device control capabilities from Microsoft can be organized into three main cate
 
    Device control in Windows works with BitLocker and ADMX templates, and can be managed using Intune.
 
-  **BitLocker**. [BitLocker](/windows/security/operating-system-security/data-protection/encrypted-hard-drive) is a Windows security feature that provides encryption for entire volumes. BitLocker encryption can be required for writing to removable media. Together with [Intune](/mem/intune/fundamentals/what-is-intune), policies can be configured to enforce encryption on devices using BitLocker for Windows. For more information, see [Disk encryption policy settings for endpoint security in Intune](/mem/intune/protect/endpoint-security-disk-encryption-profile-settings).
+  **BitLocker**. [BitLocker](/windows/security/operating-system-security/data-protection/encrypted-hard-drive) is a Windows security feature that provides encryption for entire volumes. BitLocker encryption can be required for writing to removable media. Together with [Intune](/intune/intune-service/fundamentals/what-is-intune), policies can be configured to enforce encryption on devices using BitLocker for Windows. For more information, see [Disk encryption policy settings for endpoint security in Intune](/intune/intune-service/protect/endpoint-security-disk-encryption-profile-settings).
 
   **Device Installation**. Windows provides the capability to prevent the installation of specific types of USB devices.
 
-     For more information on how to configure device installation with Intune, see [Restrict USB devices and allow specific USB devices using ADMX templates in Intune](/mem/intune/configuration/administrative-templates-restrict-usb).
+     For more information on how to configure device installation with Intune, see [Restrict USB devices and allow specific USB devices using ADMX templates in Intune](/intune/intune-service/configuration/administrative-templates-restrict-usb).
 
      For more information on how to configure device installation with Group Policy, see [Manage Device Installation with Group Policy](/windows/client-management/client-tools/manage-device-installation-with-group-policy).
 
@@ -113,7 +113,7 @@ When a device installation restrictions are configured and a device is installed
 
 - [Manage Device Installation with Group Policy - Windows Client Management](/windows/client-management/client-tools/manage-device-installation-with-group-policy)
 
-- [Restrict USB devices and allow specific USB devices using ADMX templates in Intune](/mem/intune/configuration/administrative-templates-restrict-usb).
+- [Restrict USB devices and allow specific USB devices using ADMX templates in Intune](/intune/intune-service/configuration/administrative-templates-restrict-usb).
 
 ### Control access to removable media using device control
 

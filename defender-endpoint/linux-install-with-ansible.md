@@ -454,7 +454,7 @@ To get support from Microsoft, open a support ticket, and provide the log files 
 
 ## How to configure policies for Microsoft Defender on Linux
 
-- [Defender for Endpoint security settings management](/mem/intune/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal. (*This method is recommended*.)
+- [Defender for Endpoint security settings management](/intune/intune-service/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal. (*This method is recommended*.)
 - [Set preferences for Defender for Endpoint on Linux](/defender-endpoint/linux-preferences) describes settings you can configure.
  
 ## Operating system upgrades
