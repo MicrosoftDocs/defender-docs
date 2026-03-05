@@ -13,11 +13,13 @@ ms.author: ofshezaf
 
 # Advanced Security Information Model (ASIM) schemas
 
-An Advanced Security Information Model ([ASIM](normalization.md)) schema is a set of fields that represent an activity. Using the fields from a normalized schema in a query ensures that the query will work with every normalized source.
+An Advanced Security Information Model ([ASIM](normalization.md)) schema is a set of fields that represent an activity or entity. Using the fields from a normalized schema in a query ensures that the query will work with every normalized source.
 
 To understand how schemas fit within the ASIM architecture, refer to the [ASIM architecture diagram](normalization.md#asim-components).
 
-Schema references outline the fields that comprise each schema. ASIM currently defines the following schemas:
+## Activity/Event Schemas
+
+Schema references outline the fields that comprise each schema. ASIM currently defines the following schemas for events:
 
 | Schema | Version | Status |
 | ------ | ------- | ------ |
@@ -32,6 +34,14 @@ Schema references outline the fields that comprise each schema. ASIM currently d
 | [Registry Event](normalization-schema-registry-event.md) | 0.1.3 | GA |
 | [User Management](normalization-schema-user-management.md) | 0.1.2 | GA |
 | [Web Session](normalization-schema-web.md) | 0.2.7 | GA |
+
+## Entity Schemas
+
+ASIM currently defines the following schemas for entities:
+
+| Schema | Version | Status |
+| ------ | ------- | ------ |
+| [Asset Entity](normalization-schema-assets.md) | 0.1.0 | GA |
 
 ## Field naming
 
@@ -57,7 +67,7 @@ Fields might have several classes, which define when the fields should be implem
 - **Conditional** fields are mandatory if the field they follow is populated. Conditional fields are typically used to describe the value in another field. For example, the common field [DvcIdType](normalization-common-fields.md#dvcidtype) describes the value int the common field [DvcId](normalization-common-fields.md#dvcid) and is therefore mandatory if the latter is populated.
 - **Alias** is a special type of a conditional field, and is mandatory if the aliased field is populated.
 
-## Entities
+## Event Entities
 
 Events evolve around entities, such as users, hosts, processes, or files. Each entity might require several fields to describe it. For example, a host might have a name and an IP address.
 
