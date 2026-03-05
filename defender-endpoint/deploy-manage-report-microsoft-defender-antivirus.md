@@ -66,7 +66,7 @@ For reporting, you can choose from several options:
 
 - Use the default [Configuration Manager Monitoring workspace](/intune/configmgr/apps/deploy-use/monitor-applications-from-the-console).
 
-- [Create email alerts](/configmgr/protect/deploy-use/endpoint-configure-alerts).
+- [Create email alerts](/intune/configmgr/protect/deploy-use/endpoint-configure-alerts).
 
 - If your organization has Defender for Endpoint, you can also use the [Microsoft Defender portal](/defender-xdr/microsoft-365-defender-portal), which includes a [device inventory list](machines-view-overview.md). To access the device inventory, in the Microsoft Defender portal ([https://security.microsoft.com/](https://security.microsoft.com/)), go to **Assets** > **Devices**. The device inventory list displays onboarded devices along with their health state and risk level.
 

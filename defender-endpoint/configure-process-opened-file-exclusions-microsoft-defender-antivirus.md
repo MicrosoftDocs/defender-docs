@@ -98,7 +98,7 @@ For more information, see [Configure device restriction settings in Microsoft In
 
 ### Use Microsoft Configuration Manager to exclude files that have been opened by specified processes from scans
 
-See [How to create and deploy anti-malware policies: Exclusion settings](/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings) for details on configuring Microsoft Configuration Manager (current branch).
+See [How to create and deploy anti-malware policies: Exclusion settings](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings) for details on configuring Microsoft Configuration Manager (current branch).
 
 ### Use Group Policy to exclude files that have been opened by specified processes from scans
 
