@@ -110,7 +110,7 @@ Use the [./Vendor/MSFT/Policy/Config/ControlledFolderAccessProtectedFolders](/wi
 
 1. After the policy is created, **Close**.
 
-For more information about Microsoft Configuration Manager and Controlled Folder Access, visit [Controlled folder access policies and options](/mem/configmgr/protect/deploy-use/create-deploy-exploit-guard-policy).
+For more information about Microsoft Configuration Manager and Controlled Folder Access, visit [Controlled folder access policies and options](/intune/configmgr/protect/deploy-use/create-deploy-exploit-guard-policy).
 
 ## Group Policy
 

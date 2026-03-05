@@ -96,7 +96,7 @@ Many exclusions can be managed in the [Microsoft Intune admin center](https://go
 
 - [Defender CSP](/windows/client-management/mdm/defender-csp)
 - [Defender Policy CSP](/windows/client-management/mdm/policy-csp-defender)
-- [Use custom settings for Windows client devices in Intune](/mem/intune/configuration/custom-settings-windows-10)
+- [Use custom settings for Windows client devices in Intune](/intune/intune-service/configuration/custom-settings-windows-10)
 
 ### PowerShell
 
@@ -147,7 +147,7 @@ Use `Set-MpPreference` or `Get-MpPreference` in the [Defender PowerShell Module]
 
 |Exclusion Type | Reference |
 | -------- | -------- |
-| Custom antivirus exclusion | See [exclusion settings](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings)|
+| Custom antivirus exclusion | See [exclusion settings](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings)|
 | Attack Surface Reduction only exclusions | See [Microsoft Configuration Manager](/defender-endpoint/enable-attack-surface-reduction#microsoft-configuration-manager) |
 | Attack surface reduction rule per rule exclusion | Not supported |
 | Controlled Folder Access exclusions | See [Microsoft Configuration Manager](/defender-endpoint/enable-controlled-folders#microsoft-configuration-manager) |

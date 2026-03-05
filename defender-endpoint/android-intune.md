@@ -24,7 +24,7 @@ appliesto:
 # Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune
 
 
-Learn how to deploy Defender for Endpoint on Android on Microsoft Intune Company Portal enrolled devices. For more information about Microsoft Intune device enrollment, see [Enroll your device](/mem/intune/user-help/enroll-device-android-company-portal).
+Learn how to deploy Defender for Endpoint on Android on Microsoft Intune Company Portal enrolled devices. For more information about Microsoft Intune device enrollment, see [Enroll your device](/intune/intune-service/user-help/enroll-device-android-company-portal).
 
 > [!NOTE]
 > **Defender for Endpoint on Android is now available on [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.scmx)**
@@ -33,7 +33,7 @@ Learn how to deploy Defender for Endpoint on Android on Microsoft Intune Company
 
 Defender for Endpoint on Android supports Android Enterprise enrolled devices.
 
-For more information on the enrollment options supported by Microsoft Intune, see [Enrollment Options](/mem/intune/enrollment/android-enroll).
+For more information on the enrollment options supported by Microsoft Intune, see [Enrollment Options](/intune/intune-service/enrollment/android-enroll).
 
 **Currently, personally-owned devices with a work profile, corporate-owned devices with a work profile, and corporate-owned, fully managed user device enrollments are supported in Android Enterprise.**
 

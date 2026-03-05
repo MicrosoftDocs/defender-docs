@@ -95,13 +95,13 @@ Uninstall-WindowsFeature Windows-Defender-Gui
 
 - [Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus](/defender-endpoint/mde-security-settings-management)
 
-- [Microsoft Intune securely manages identities, manages apps, and manages devices](/mem/intune/fundamentals/what-is-intune)
+- [Microsoft Intune securely manages identities, manages apps, and manages devices](/intune/intune-service/fundamentals/what-is-intune)
 
   - [Defender CSP](/windows/client-management/mdm/defender-csp)
   
   - [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender)
   
-- [How to create and deploy antimalware policies for Endpoint Protection in Configuration Manager](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies)
+- [How to create and deploy antimalware policies for Endpoint Protection in Configuration Manager](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies)
 
 - [Use Group Policy settings to configure and manage Microsoft Defender Antivirus](/defender-endpoint/use-group-policy-microsoft-defender-antivirus)
 
