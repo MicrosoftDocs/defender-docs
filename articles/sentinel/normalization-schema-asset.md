@@ -12,7 +12,7 @@ ms.author: derricklee
 
 ---
 
-# The Advanced Security Information Model (ASIM) Asset Entity Schema Reference
+# The Advanced Security Information Model (ASIM) asset entity schema reference
 
 The Microsoft Sentinel Asset Entity Schema is designed to normalize assets from various products into a standardized format within Microsoft Advanced Security Information Model (ASIM). This schema focuses exclusively on assets in non-Microsoft data sources, ensuring consistent and efficient analysis.
 
@@ -28,12 +28,12 @@ For more information about normalization in Microsoft Sentinel, see [Normalizati
 
 For more information about ASIM parsers, see the [ASIM parsers overview](normalization-parsers-overview.md).
 
-### Unifying Parsers
+### Unifying parsers
 
 To use parsers that unify all ASIM out-of-the-box parsers and ensure that your analysis runs across all the configured sources, use the `_Im_AssetEntity` parser.
 
 
-### Add Your Own Normalized Parsers
+### Add your own normalized parsers
 
 When [developing custom parsers](normalization-develop-parsers.md) for the Asset Entity schema, name your KQL functions using the following syntax:
 - `vimAssetEntity<vendor><Product>` for parameterized parsers
@@ -41,7 +41,7 @@ When [developing custom parsers](normalization-develop-parsers.md) for the Asset
 
 Refer to the article [Managing ASIM parsers](normalization-manage-parsers.md) to learn how to add your custom parsers to the unifying parsers.
 
-### Filtering Parser Parameters
+### Filtering parser parameters
 
 The Asset Entity parsers support various [filtering parameters](normalization-about-parsers.md#optimizing-parsing-using-parameters) to improve query performance. These parameters are optional but can enhance your query performance. The following filtering parameters are available:
 
@@ -56,7 +56,7 @@ The Asset Entity parsers support various [filtering parameters](normalization-ab
 | **assetowner_has_any** | dynamic | Filter only assets for which the **'AssetOwner'** or **'AdditionalAssetOwners'** field is in one of the listed values. |
 | **entitysource_has_any** | dynamic | Filter only assets for which the **'EntitySource'** field is in one of the listed values. |
 
-## Schema Details
+## Schema details
 
 ### <a id="common-entity-fields">Common ASIM Entity Fields</a>
 
@@ -82,7 +82,7 @@ The following list mentions fields that have specific guidelines for Asset entit
 | **EntitySchema** | Mandatory | Enumerated | The schema used for the entity. The schema documented here is `Asset`. |
 | **EntitySchemaVersion** | Mandatory | SchemaVersion (String) | The version of the schema. The version of the schema documented here is `0.1.0`. |
 
-### <a id="asset-owner-fields">Asset Owner Fields</a>
+### <a id="asset-owner-fields">Asset owner fields</a>
 
 This section defines information about the asset owner. If your asset has multiple owners, populate both fields `AssetOwnerId` and `AdditionalAssetOwners`. `AdditionalAssetOwners` should be an array of strings and the strings must be in the same format as `AssetOwnerId`.
 
@@ -95,7 +95,7 @@ This section defines information about the asset owner. If your asset has multip
 | **AssetOwnerScopeId** | Optional | string | The identifier of the scope to which the asset owner belongs. |
 | **AdditionalAssetOwners** | Optional | dynamic | A dynamic collection of additional owners or co-owners associated with the asset. This must be an **array of strings**. |
 
-### <a id="asset-metadata-fields">Asset Metadata Fields</a>
+### <a id="asset-metadata-fields">Asset metadata fields</a>
 
 | Field | Class | Type | Description |
 |-------|-------|------|-------------|
@@ -104,7 +104,7 @@ This section defines information about the asset owner. If your asset has multip
 | **IdentityDirectoryId** | Mandatory | string | The identifier of the identity directory associated with the entity. |
 | **AdditionalFields** | Optional | dynamic | Additional information about the entity that is not captured by other fields in the schema. |
 
-### <a id="asset-type-fields">Asset Type Fields</a>
+### <a id="asset-type-fields">Asset type fields</a>
 
 This section defines information about the asset type. The current types supported are [`File`](#file-fields) and [`Site`](#site-fields). The asset's type's additional properties should be populated.
 
@@ -113,7 +113,7 @@ This section defines information about the asset type. The current types support
 | **AssetType** | Mandatory | string | The high-level type of the asset. The allowed and supported values are: `File`, `Site`. |
 | **AssetOriginalType** | Recommended | string | The original name of the high-level type of the asset at the source. |
 
-### <a id="asset-security-fields">Asset Security Fields</a>
+### <a id="asset-security-fields">Asset security fields</a>
 
 This section captures the asset's security posture and exposure context, including source permissions, sensitivity and data-classification details, DLP protection status, related threat indicators, and the last classification scan time. It also includes internal and external user access counts to help assess potential exposure.
 
@@ -129,7 +129,7 @@ This section captures the asset's security posture and exposure context, includi
 | **InternalUsersCount** | Optional | int | The number of internal users associated with or having access to the asset. |
 | **ExternalUsersCount** | Optional | int | The number of external users associated with or having access to the asset. |
 
-### <a id="asset-risk-fields">Asset Risk Fields</a>
+### <a id="asset-risk-fields">Asset risk fields</a>
 
 This section captures risk context for the asset, including normalized and source-reported risk names and levels, first and last report timestamps, and provider-specific risk details.
 
@@ -142,7 +142,7 @@ This section captures risk context for the asset, including normalized and sourc
 | **AssetRiskLastReportedTime** | Optional | datetime | The timestamp (UTC) of when the risk associated with the asset was most recently reported. |
 | **AssetOriginalRiskDetails** | Optional | dynamic | The full risk details for the asset as provided by the source system. |
 
-### <a id="file-fields">File (Asset Type) Fields</a>
+### <a id="file-fields">File (asset type) fields</a>
 
 This section captures file-specific asset properties. The properties should be populated if the `AssetType` is **File**.
 
@@ -158,7 +158,7 @@ This section captures file-specific asset properties. The properties should be p
 | **FileIsSignatureValid** | Optional | bool | Indicates whether the digital signature of the file is valid. |
 | **FileSignatureDetails** | Optional | string | Details about the digital signature of the file, such as the signer or certificate information. |
 
-### <a id="site-fields">Site (Asset Type) Fields</a>
+### <a id="site-fields">Site (asset type) fields</a>
 
 This section captures site-specific location properties for sharepoint site assets. The properties should be populated if the `AssetType` is **Site**.
 
@@ -174,7 +174,7 @@ This section captures site-specific location properties for sharepoint site asse
 | **AssetPath** | Alias | string | The alias for either `FilePath` or `SitePath` |
 | **User** | Alias | string | The alias for `AssetOwnerId`. |
 
-## Schema Updates
+## Schema updates
 
 The following are the changes in various versions of the schema:
 
