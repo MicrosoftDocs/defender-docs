@@ -280,7 +280,7 @@ In addition to the fields available from the source, a resulting ASIM event incl
      EventSchema = 'ProcessEvent'
 ```
 
-Another type of enrichment fields that your parsers should set are type fields, which designate the type of the value stored in a related field. For example, the `SrcUsernameType` field designates the type of value stored in the `SrcUsername` field. You can find more information about type fields in the [entities description](normalization-about-schemas.md#entities).
+Another type of enrichment fields that your parsers should set are type fields, which designate the type of the value stored in a related field. For example, the `SrcUsernameType` field designates the type of value stored in the `SrcUsername` field. You can find more information about type fields in the [entities description](normalization-about-schemas.md#event-entities).
 
 In most cases, types are also assigned a constant value. However, in some cases the type has to be determined based on the actual value, for example:
 
