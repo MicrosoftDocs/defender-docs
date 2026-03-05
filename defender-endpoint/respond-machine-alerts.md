@@ -406,7 +406,7 @@ In addition, you can expand the investigation by using advanced hunting. Look fo
 
 :::image type="content" source="/defender/media/defender-endpoint/user-contain-advanced-hunting.png" alt-text="Shows advanced hunting for user contain events" lightbox="/defender/media/defender-endpoint/user-contain-advanced-hunting.png":::
 
-## GPO hardening (Preview)
+## GPO hardening
 
 > [!NOTE]
 > When used as part of the predictive shielding feature, this action in in Preview. When used as part of the general attack disruption feature, this action is generally available. I
@@ -417,7 +417,7 @@ To enrich predictive shielding actions, we recommend you use the Microsoft Defen
 
 After the action is applied, you can view the action impact in the incident graph, track the actions in the Action center, and investigate further using advanced hunting. For more information, see [Manage predictive shielding actions](/defender-xdr/shield-predict-threats-manage).
 
-## Safeboot hardening (Preview)
+## Safeboot hardening
 
 > [!NOTE]
 > When used as part of the predictive shielding feature, this action in in Preview. When used as part of the general attack disruption feature, this action is generally available.
