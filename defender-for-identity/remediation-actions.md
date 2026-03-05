@@ -1,7 +1,7 @@
 ---
 title: Remediation actions
 description: Learn how to respond to compromised users with remediation actions in Microsoft Defender for Identity
-ms.date: 02/23/2026
+ms.date: 03/05/2026
 ms.topic: how-to
 ---
 
@@ -14,7 +14,7 @@ Applies to:
 
 Microsoft Defender for Identity enables security remediation actions to reduce risk and contain suspicious activity from the Microsoft Defender portal. These actions let you manage identity state and access, such as disabling or enabling accounts, ending active sessions, and marking identities as compromised.
 
-You can initiate remediation actions from the **Identity** page, the **Advanced hunting** page, or the Action center.
+You can perform remediation actions from the **Identity** page, the **Advanced hunting** page, or the Action center.
 
 ## Supported actions
 
@@ -25,7 +25,7 @@ Depending on your Microsoft Entra ID roles, you might see additional Microsoft E
 
 | Remediation Action | Description | Supported Identity systems |
 | ------------------ | ----------- | ------ |
-| Disable | Disables **all accounts linked to an identity** or **a specific account**. Disabling prevents sign-in and access to network resources until the accounts are re-enabled. This action doesn't delete the identity profile or associated data such as documents, calendar events, or email messages. | <ul><li>Active Directory</li><li>Microsoft Entra ID</li><li>Okta</li></ul> |
+| Disable | Disables all accounts linked to an identity or a specific account. Disabling prevents sign-in and access to network resources until the accounts are re-enabled. This action doesn't delete the identity profile or associated data such as documents, calendar events, or email messages. | <ul><li>Active Directory</li><li>Microsoft Entra ID</li><li>Okta</li></ul> |
 | Enable | Re-enables accounts that were previously disabled for the selected identity. | <ul><li>Active Directory</li><li>Microsoft Entra ID</li><li>Okta</li></ul> |
 | Revoke session | Revokes active sessions for the selected identity. | <ul><li>Microsoft Entra ID</li><li>Okta</li></ul> |
 | Mark as compromised | Marks all accounts linked to the selected identity as compromised in Microsoft Entra ID. | Microsoft Entra ID |
@@ -39,11 +39,11 @@ This table lists the remediation actions supported by Defender for Identity and 
 
 | Remediation Action | Active Directory |Microsoft Entra ID | Okta |
 | ---- | ---- | ---- | ---- |
-| Disable | Refer to [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) | Microsoft Entra Roles: <ul><li>Global Administrator</li><li>User Administrator</li><li>Authentication Administrator</li><li>Privileged Authentication Administrator</li><li>Directory Writers</li></ul> | A custom role defined with permissions for Response (manage) or one of the following Microsoft Entra roles: <ul><li>Security Operator</li><li>Security Administrator</li><li>Global Administrator</li></ul> |
-| Enable | Refer to [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) | Microsoft Entra Roles: <ul><li>Global Administrator</li><li>User Administrator</li><li>Authentication Administrator</li><li>Privileged Authentication Administrator</li><li>Directory Writers</li></ul> | A custom role defined with permissions for Response (manage) or one of the following Microsoft Entra roles: <ul><li>Security Operator</li><li>Security Administrator</li><li>Global Administrator</li></ul> |
-| Revoke session | N/A | Microsoft Entra Roles: <ul><li>Global Administrator</li><li>User Administrator</li><li>Authentication Administrator</li><li>Privileged Authentication Administrator</li><li>Directory Writers</li><li>Helpdesk Administrator</li></ul> | A custom role defined with permissions for Response (manage) or one of the following Microsoft Entra roles: <ul><li>Security Operator</li><li>Security Administrator</li><li>Global Administrator</li></ul> |
-| Mark as compromised | N/A | Microsoft Entra Roles: <ul><li>Global Administrator</li><li>Security Administrator</li><li>Security Operator</li></ul> | N/A |
-| Force password change | Refer to [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) | N/A | N/A |
+| Disable | See [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) | <ul><li>Global Administrator</li><li>User Administrator</li><li>Authentication Administrator</li><li>Privileged Authentication Administrator</li><li>Directory Writers</li></ul> | A custom role defined with permissions for Response (manage) or one of the following Microsoft Entra roles: <ul><li>Security Operator</li><li>Security Administrator</li><li>Global Administrator</li></ul> |
+| Enable | See [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) |<ul><li>Global Administrator</li><li>User Administrator</li><li>Authentication Administrator</li><li>Privileged Authentication Administrator</li><li>Directory Writers</li></ul> | A custom role defined with permissions for Response (manage) or one of the following Microsoft Entra roles: <ul><li>Security Operator</li><li>Security Administrator</li><li>Global Administrator</li></ul> |
+| Revoke session | N/A |<ul><li>Global Administrator</li><li>User Administrator</li><li>Authentication Administrator</li><li>Privileged Authentication Administrator</li><li>Directory Writers</li><li>Helpdesk Administrator</li></ul> | A custom role defined with permissions for Response (manage) or one of the following Microsoft Entra roles: <ul><li>Security Operator</li><li>Security Administrator</li><li>Global Administrator</li></ul> |
+| Mark as compromised | N/A |<ul><li>Global Administrator</li><li>Security Administrator</li><li>Security Operator</li></ul> | N/A |
+| Force password change | See [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) | N/A | N/A |
 | Deactivate | N/A | N/A | A custom role defined with permissions for Response (manage) or one of the following Microsoft Entra roles: <ul><li>Security Operator</li><li>Security Administrator</li><li>Global Administrator</li></ul> |
 | Set identity risk to High/Medium/Low | N/A | N/A | A custom role defined with permissions for Response (manage) or one of the following Microsoft Entra roles: <ul><li>Security Operator</li><li>Security Administrator</li><li>Global Administrator</li></ul> |
 
@@ -80,19 +80,18 @@ Remediation actions are initiated by a user in the Microsoft Defender portal and
 
 After authorization, the action is executed by the identity system that manages the affected account:
 
-- **Active Directory**  
+- **Active Directory**
   Actions are executed by the Microsoft Defender for Identity sensor on the domain controller. The sensor impersonates the **LocalSystem** account to perform the action.
 
-- **Microsoft Entra ID**  
+- **Microsoft Entra ID**
   Microsoft Defender for Identity creates and uses a Microsoft‑managed enterprise application to execute remediation actions in Entra ID.  
-  - **Application name:** *Microsoft Defender for Identity*  
-  - **Application ID:** `60ca1954-583c-4d1f-86de-39d835f3e452`  
-  - In older tenants, the same application ID may appear with the name *Radius Aad Syncer*.
+  - **Application name:** *Microsoft Defender for Identity*
+  - **Application ID:** `60ca1954-583c-4d1f-86de-39d835f3e452`. In older tenants, the same application ID may appear with the name *Radius Aad Syncer*.
 
-- **Supported non‑Microsoft identity providers (IdPs)**  
+- **Supported non‑Microsoft identity providers (IdPs)**
   Actions are executed using the source IdP’s APIs based on the credentials configured for the integration.
 
-Remediation actions are recorded by the identity system where the action is executed and are surfaced in Microsoft Defender audit logs.
+Remediation actions are recorded by the identity system where the action is executed and are visible in Microsoft Defender audit logs.
 
 ## Automatic Attack Disruption
 
@@ -100,10 +99,8 @@ Automatic Attack Disruption in Microsoft Defender XDR uses Microsoft Defender fo
 
 ## Related video
 
-- **Remediation actions in Microsoft Defender for Identity**  
-  https://learn-video.azurefd.net/vod/id/adc6068b-225c-457d-b053-db6b64dedb79
+- [Remediation actions in Microsoft Defender for Identity](https://learn-video.azurefd.net/vod/id/adc6068b-225c-457d-b053-db6b64dedb79)
 
 ## See also
 
 [Microsoft Defender for Identity action accounts](deploy/manage-action-accounts.md)
-s
