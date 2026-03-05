@@ -19,7 +19,7 @@ ms.collection:
 
 # Managing exclusions reference
 
-Each version of Defender for Endpoint provides management of exclusions via the supported management tools. This article summarizes how you can configure exclusions using various management tools. 
+Each version of Defender for Endpoint provides management of exclusions via the supported management tools. This article summarizes how you can configure exclusions using various management tools.
 
 ## Manage exclusions for Windows devices
 
@@ -60,7 +60,7 @@ Many exclusions can be managed in the [Microsoft Defender portal](https://securi
 
 **Learn More**:
 
-- [Use Microsoft Intune to manage Microsoft Defender settings on devices not enrolled with Intune](/intune/intune-service/protect/mde-security-integration)
+- <a href="/intune/intune-service/protect/mde-security-integration" target="_blank" rel="noopener noreferrer">Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus</a>
 - [Add automatic folder exclusions](/defender-endpoint/manage-automation-folder-exclusions#add-an-automation-folder-exclusion)
 
 ### Intune

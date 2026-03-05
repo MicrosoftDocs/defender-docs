@@ -85,7 +85,7 @@ If you experience any installation issues, self-troubleshooting resources are av
 
 To configure Defender for Endpoint on Linux, you can choose from two options to configure policies:
 
-- [Enroll in Defender for Endpoint security settings management](/intune/intune-service/protect/mde-security-integration) and use the Microsoft Defender portal to configure and manage your policies.
+- <a href="/intune/intune-service/protect/mde-security-integration" target="_blank" rel="noopener noreferrer">Enroll in Defender for Endpoint security settings management</a> and use the Microsoft Defender portal to configure and manage your policies.
 - [Set up a configuration profile that uses a json file](/defender-endpoint/linux-preferences).
 
 For more information, see [Configure security settings and policies for Defender for Endpoint on Linux](/defender-endpoint/linux-preferences).
@@ -140,10 +140,9 @@ If you're using non-Microsoft applications, also see their documentation regardi
 
 ## See also
 
-- [Use Microsoft Intune to manage Microsoft Defender settings on devices not enrolled with Intune](/intune/intune-service/protect/mde-security-integration)
+- <a href="/intune/intune-service/protect/mde-security-integration" target="_blank" rel="noopener noreferrer">Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus</a>
 - [Linux Resources](linux-resources.md)
 - [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](linux-support-connectivity.md)
 - [Investigate agent health issues](health-status.md)
 - [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](linux-support-events.md)
 - [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md)
-

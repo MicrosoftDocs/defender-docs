@@ -93,7 +93,7 @@ Uninstall-WindowsFeature Windows-Defender-Gui
 
 ## See also
 
-- [Use Microsoft Intune to manage Microsoft Defender settings on devices not enrolled with Intune](/intune/intune-service/protect/mde-security-integration)
+- <a href="/intune/intune-service/protect/mde-security-integration" target="_blank" rel="noopener noreferrer">Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus</a>
 - [Microsoft Intune securely manages identities, manages apps, and manages devices](/intune/intune-service/fundamentals/what-is-intune)
   - [Defender CSP](/windows/client-management/mdm/defender-csp)
   - [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender)
