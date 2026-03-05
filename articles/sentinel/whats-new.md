@@ -18,6 +18,75 @@ The listed features were released in the last six months. For information about 
 
 [!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
 
+## March 2026
+
+- [Call to action: update older Microsoft Sentinel content as code (Sentinel repositories) API versions before June 2026](#call-to-action-update-older-microsoft-sentinel-content-as-code-sentinel-repositories-api-versions-before-june-2026)
+
+### Call to action: update older Microsoft Sentinel content as code (Sentinel repositories) API versions before June 2026
+
+Starting **June 1, 2026**, older API versions used by [Microsoft Sentinel repositories](ci-cd-custom-content.md) will no longer be supported. This change impacts all [Source Control](/rest/api/securityinsights/source-control) and [Source Controls](/rest/api/securityinsights/source-controls) actions in the Microsoft Sentinel REST API for the affected API versions.
+
+The retired API versions will no longer be supported, and requests using them will fail. Existing repository connections created with those APIs aren't affected, and the repositories will continue to operate.
+
+**Required action**
+
+If you're using APIs to create or manage repository connections, transition to API version **2025-06-01** or **2025-07-01-preview** before May 1, 2026 to avoid service disruption.
+
+**Affected API versions**
+
+The following API versions will be retired on May 1, 2026:
+
+<details>
+<summary><strong>Preview API versions (click to expand)</strong></summary>
+
+- 2021-03-01-preview
+- 2021-09-01-preview
+- 2021-10-01-preview
+- 2022-01-01-preview
+- 2022-04-01-preview
+- 2022-05-01-preview
+- 2022-06-01-preview
+- 2022-07-01-preview
+- 2022-08-01-preview
+- 2022-09-01-preview
+- 2022-10-01-preview
+- 2022-11-01-preview
+- 2022-12-01-preview
+- 2023-02-01-preview
+- 2023-03-01-preview
+- 2023-04-01-preview
+- 2023-05-01-preview
+- 2023-06-01-preview
+- 2023-07-01-preview
+- 2023-08-01-preview
+- 2023-09-01-preview
+- 2023-10-01-preview
+- 2023-11-01-preview
+- 2023-12-01-preview
+- 2024-01-01-preview
+- 2024-04-01-preview
+- 2024-10-01-preview
+- 2025-01-01-preview
+- 2025-04-01-preview
+- 2025-07-01-preview
+
+</details>
+
+<details>
+<summary><strong>Stable API versions (click to expand)</strong></summary>
+
+- 2023-11-01
+- 2024-03-01
+- 2024-09-01
+- 2025-03-01
+
+</details>
+
+**Recommended API versions to use:**
+- **2025-09-01** (stable)
+- **2025-06-01** (stable)
+- **2025-07-01-preview** (preview)
+
 ## February 2026
 
 ### Microsoft Sentinel UEBA behaviors layer is now generally available
