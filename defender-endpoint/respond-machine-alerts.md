@@ -409,7 +409,7 @@ In addition, you can expand the investigation by using advanced hunting. Look fo
 ## GPO hardening
 
 > [!NOTE]
-> When used as part of the predictive shielding feature, this action in in Preview. When used as part of the general attack disruption feature, this action is generally available. I
+> When used as part of the predictive shielding feature, this action in in Preview. When used as part of the general attack disruption feature, this action is generally available.
 
 As part of the [predictive shielding](/defender-xdr/shield-predict-threats) (Preview) feature, Defender for Endpoint automatically applies the GPO hardening action. Group Policy Object (GPO) hardening temporarily stops new GPO policies from being applied to devices identified as high risk. This action helps prevent potential compromise by limiting changes to critical configurations.
 
