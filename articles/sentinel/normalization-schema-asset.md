@@ -16,7 +16,11 @@ ms.author: derricklee
 
 The Microsoft Sentinel Asset Entity Schema is designed to normalize assets from various products into a standardized format within Microsoft Advanced Security Information Model (ASIM). This schema focuses exclusively on assets in non-Microsoft data sources, ensuring consistent and efficient analysis.
 
-Usage of the schema allows Microsoft Purview Data Security Posture Management (DSPM) to manage data security posture across Microsoft and partner platforms. For more information, see the [Ignite 2025 announcement](https://aka.ms/newpurviewdspm) introducing the DSPM partner ecosystem.
+An asset is any data resource that an organization stores, processes, or manages, such as a file, or site. Each asset carries security-relevant metadata including ownership, permissions, sensitivity classifications, and risk indicators. Assets can originate from a wide range of platforms, databases, cloud storage services, SaaS applications, and on-premises systems and are collected as either full inventory snapshots or incremental change feeds.
+
+By normalizing asset data into a common schema, Microsoft Sentinel enables security teams to analyze and correlate asset information across diverse data sources in a consistent way. Key fields in the schema include `EntityId` and `EntityName` for uniquely identifying assets, `AssetType` for distinguishing between asset kinds such as File or Site, `AssetOwnerId` for tracking ownership, `AssetSensitivityLabel` and `AssetOriginalDataClassificationType` for data classification context, and `EntityFeedType` for indicating whether a record is a full inventory snapshot or an incremental change. This unified representation powers downstream scenarios such as identifying overshared sensitive files, tracking permission changes, detecting unprotected assets, and surfacing risk across the entire data estate through integrations like Microsoft Purview Data Security Posture Management (DSPM).
+
+Usage of the schema allows Microsoft Purview DSPM to manage data security posture across Microsoft and partner platforms. For more information, see the [Ignite 2025 announcement](https://aka.ms/newpurviewdspm) introducing the DSPM partner ecosystem.
 
 For more information about normalization in Microsoft Sentinel, see [Normalization and the Advanced Security Information Model (ASIM)](normalization.md).
 
@@ -28,9 +32,6 @@ For more information about ASIM parsers, see the [ASIM parsers overview](normali
 
 To use parsers that unify all ASIM out-of-the-box parsers and ensure that your analysis runs across all the configured sources, use the `_Im_AssetEntity` parser.
 
-### Out-of-the-box, Source-specific Parsers
-
-For the list of the Asset Entity parsers Microsoft Sentinel provides out-of-the-box, refer to the [ASIM parsers list](normalization-parsers-list.md#asset-entity-parsers).
 
 ### Add Your Own Normalized Parsers
 
@@ -166,7 +167,7 @@ This section captures site-specific location properties for sharepoint site asse
 | **SitePath** | Optional | string | The path of the site or storage location associated with the asset. |
 | **SitePrimaryUri** | Optional | string | The primary URI of the site or storage location associated with the asset. |
 
-### Other Fields
+### Aliases
 
 | Field | Class | Type | Description |
 |-------|-------|------|-------------|
