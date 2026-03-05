@@ -13,7 +13,7 @@ ms.subservice: sentinel-platform
 
  Applies to: Microsoft Sentinel Graph
 
-> [!NOTE]>
+> [!NOTE]
 > GQL support is in preview. Features and syntax can change based on feedback and ongoing development.
 
 
