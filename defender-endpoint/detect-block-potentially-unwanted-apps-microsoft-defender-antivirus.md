@@ -145,7 +145,7 @@ See the following articles:
 
 PUA protection is enabled by default in the Microsoft Configuration Manager (Current Branch).
 
-See [How to create and deploy anti-malware policies: Scheduled scans settings](/configmgr/protect/deploy-use/endpoint-antimalware-policies#real-time-protection-settings) for details on configuring Microsoft Configuration Manager (Current Branch).
+See [How to create and deploy anti-malware policies: Scheduled scans settings](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#real-time-protection-settings) for details on configuring Microsoft Configuration Manager (Current Branch).
 
 For System Center 2012 Configuration Manager, see [How to Deploy Potentially Unwanted Application Protection Policy for Endpoint Protection in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh508770(v=technet.10)#BKMK_PUA).
 

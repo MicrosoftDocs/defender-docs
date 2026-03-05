@@ -60,16 +60,14 @@ Our engineers continuously monitor impact and escalate any issues to create a fi
 
 ## How to customize your internal deployment process
 
-
 If your machines are receiving Defender updates from Windows Update, the gradual rollout process can result in some of your devices receiving Defender updates sooner than others. The following section explains how to define a strategy that will allow automatic updates to flow differently to specific groups of devices by using update channel configuration.
-
 
 > [!NOTE]
 > When planning for your own gradual release, please make sure to always have a selection of devices subscribed to the preview and staged channels. This will provide your organization as well as Microsoft the opportunity to prevent or find and fix issues specific to your environment.
 
 For machines receiving updates through, for example, Windows Server Update Services (WSUS) or Microsoft Configuration Manager, more options are available to all Windows updates, including options  for Microsoft Defender for Endpoint.
 
-- Learn more about how to use solutions such as WSUS and MECM to manage the distribution and application of updates at [Manage Microsoft Defender Antivirus updates and apply baselines - Windows security](microsoft-defender-antivirus-updates.md#product-updates).
+- Learn more about how to use solutions such as WSUS and ConfigMgr to manage the distribution and application of updates at [Manage Microsoft Defender Antivirus updates and apply baselines - Windows security](microsoft-defender-antivirus-updates.md#product-updates).
 
 ## Update channels for monthly updates
 
