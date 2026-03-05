@@ -86,7 +86,7 @@ If you experience any installation issues, self-troubleshooting resources are av
 To configure Defender for Endpoint on Linux, you can choose from two options to configure policies:
 
 - [Enroll in Defender for Endpoint security settings management](/defender-endpoint/mde-security-settings-management) and use the Microsoft Defender portal to configure and manage your policies
-- [Set up a configuration profile that uses a json file](/defender-endpoint/linux-preferences?branch=main&branchFallbackFrom=pr-en-us-2468%22%20%5Cl%20%22configuration-profile)
+- [Set up a configuration profile that uses a json file](/defender-endpoint/linux-preferences)
 
 For more information, see [Configure security settings and policies for Defender for Endpoint on Linux](/defender-endpoint/linux-preferences).
 
