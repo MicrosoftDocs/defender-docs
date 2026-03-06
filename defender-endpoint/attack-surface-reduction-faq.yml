@@ -57,7 +57,7 @@ sections:
         answer: |
           All attack surface reduction features in Windows Enterprise E3 are also supported in Windows Enterprise E5.
 
-         Windows Enterprise E5 adds greater integration with Defender for Endpoint:
+          Windows Enterprise E5 adds greater integration with Defender for Endpoint:
 
           - View alerts in real-time.
           - Fine-tune rule exclusions.
