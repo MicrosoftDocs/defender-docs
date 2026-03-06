@@ -86,7 +86,7 @@ sections:
           - Most exclusions are independent from Microsoft Defender Antivirus exclusions. However, Microsoft Defender Antivirus exclusions apply to some attack surface reduction rules. For more information, see [Attack surface reduction rules](attack-surface-reduction-rules-reference.md#attack-surface-reduction-rules).
           - Wildcards can't define a drive letter.
           - To exclude more than one folder in a path, use multiple instances of `\*\` to indicate multiple nested folders. For example, `c:\Folder\*\*\Test`.
-          - Microsoft Endpoint Configuration Manager supports wildcards (`*` or `?`).
+          - Microsoft Configuration Manager supports wildcards (`*` or `?`).
           - To exclude a file that contains random characters (for example, from automated file generation), use `?` symbol. For example, `C:\Folder\fileversion?.docx`.
           - Exclusions in Group Policy don't support quotation marks. The engine natively handles long filenames and spaces, so you don't need to use quotation marks.
           - Attack surface reduction rules run under `NT AUTHORITY\SYSTEM` account, so environment variables are limited to machine variables.

@@ -21,8 +21,7 @@ The sizing tool measures the capacity needed for domain controllers only. There 
 ## Prerequisites
 
 - Download the [Defender for Identity sizing tool](<https://aka.ms/mdi/sizingtool>).
-- Review the [Defender for Identity architecture](../architecture.md) article.
-- Review the [Defender for Identity prerequisites](prerequisites-sensor-version-2.md) article.
+- Review the [Defender for Identity prerequisites](prerequisites-sensor-version-2.md).
 
 To ensure accurate results, only run the sizing tool *before* you've installed any Defender for Identity sensors in your environment.
 
@@ -86,8 +85,6 @@ In this table:
 - CPU capacity doesn't include hyper-threaded cores. We recommend that you don't work with hyper-threaded cores, which can result in health issues in the Defender for Identity sensor. 
 
 When determining sizing, keep in mind the total number of cores and total amount of memory that will be used by the sensor service.
-
-For more information, see [Resource limitations](../architecture.md#resource-limitations).
 
 ## Manual sizing estimation for domain controllers
 

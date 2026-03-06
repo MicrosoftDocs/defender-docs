@@ -44,7 +44,7 @@ You can use one of several methods to set up catch-up protection updates:
 - [Configuration Manager](#use-configuration-manager-to-configure-catch-up-protection-updates)
 - [Group Policy](#use-group-policy-to-enable-and-configure-the-catch-up-update-feature)
 - [PowerShell cmdlets](#use-powershell-cmdlets-to-configure-catch-up-protection-updates)
-- [Windows Management Instruction (WMI)](#use-windows-management-instruction-wmi-to-configure-catch-up-protection-updates)
+- [Windows Management Instrumentation (WMI)](#use-windows-management-instruction-wmi-to-configure-catch-up-protection-updates)
 
 ### Use Configuration Manager to configure catch-up protection updates
 
@@ -86,7 +86,9 @@ For more information about using PowerShell with Microsoft Defender Antivirus, s
 - [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md)
 - [Defender Antivirus cmdlets](/powershell/module/defender/)
 
-### Use Windows Management Instruction (WMI) to configure catch-up protection updates
+<a name='use-windows-management-instruction-wmi-to-configure-catch-up-protection-updates'></a>
+
+### Use Windows Management Instrumentation (WMI) to configure catch-up protection updates
 
 Use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class for the following properties:
 
@@ -143,7 +145,7 @@ You can use one of several methods to set up catch-up scans:
 
 - [Group Policy](#use-group-policy-to-enable-and-configure-the-catch-up-scan-feature)
 - [Use PowerShell cmdlets to configure catch-up scans](#use-powershell-cmdlets-to-configure-catch-up-scans)
-- [Windows Management Instruction (WMI)](#use-windows-management-instruction-wmi-to-configure-catch-up-scans)
+- [Windows Management Instrumentation (WMI)](#use-windows-management-instruction-wmi-to-configure-catch-up-scans)
 - [Configuration Manager](#use-configuration-manager-to-configure-catch-up-scans)
 
 ### Use Group Policy to enable and configure the catch-up scan feature
@@ -181,7 +183,9 @@ For more information about using PowerShell with Microsoft Defender Antivirus, s
 - [Use PowerShell cmdlets to manage Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) 
 - [Defender Antivirus cmdlets](/powershell/module/defender/)
 
-### Use Windows Management Instruction (WMI) to configure catch-up scans
+<a name='use-windows-management-instruction-wmi-to-configure-catch-up-scans'></a>
+
+### Use Windows Management Instrumentation (WMI) to configure catch-up scans
 
 Use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class for the following properties:
 
@@ -225,7 +229,7 @@ See the following article for more information and allowed parameters:
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)

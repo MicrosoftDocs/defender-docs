@@ -1,4 +1,4 @@
-﻿---
+---
 title: Attack surface reduction rules reference
 description: Lists details about Microsoft Defender for Endpoint attack surface reduction rules on a per-rule basis.
 ms.service: defender-endpoint
@@ -183,7 +183,7 @@ The supported configuration management systems for ASR rules are described in th
 - **Microsoft Endpoint Configuration Manager**: 1910 to 2211 (December 2019 to December 2022)
 - **Microsoft System Center Configuration Manager**: 1511 to 1906 (November 2015 to July 2019)
 
-For support and update information, see [Updates and servicing for Configuration Manager](/configmgr/core/servers/manage/updates).
+For support and update information, see [Updates and servicing for Configuration Manager](/intune/configmgr/core/servers/manage/updates).
 
 ² In group policies or PowerShell, you configure individual ASR rules by using the rule's GUID value.
 

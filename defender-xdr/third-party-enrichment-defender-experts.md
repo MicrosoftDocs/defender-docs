@@ -54,7 +54,7 @@ The Defender Experts team employs a threat-centric methodology that monitors pot
 4. **Response:** Once Defender Experts confirmed malicious access, they initiated a coordinated response across identity, network, and device domains. They revoked active tokens, isolated affected devices, and hardened mobile policy configurations to enforce Conditional Access more strictly.
 
 ## Ingesting third-party network signals for enrichment
-If you're a Microsoft Defender XDR customer, [reach out to your service delivery manager](communicate-defender-experts-xdr.md#collaborating-with-your-service-delivery-manager) if you're interested in enabling the third-party network signal enrichment.
+If you're a Microsoft Defender XDR customer, [reach out to your Security Delivery Expert](communicate-defender-experts-xdr.md#collaborating-with-your-security-delivery-expert-sdx) if you're interested in enabling the third-party network signal enrichment.
 
 ### Prerequisites
 
