@@ -144,14 +144,15 @@ The following Linux server distributions and x64 (AMD64/EM64T) versions are supp
 |`fuse`|`glustrefs`|
 |`fuseblk`|`Afs`|
 |`jfs`|`sshfs`|
-|`nfs` (v3 only)|`cifs`|
-|`overlay`|`smb`|
-|`ramfs`|`gcsfuse`|
-|`reiserfs`|`sysfs`|
-|`tmpfs`|
-|`udf`|
-|`vfat`|
-|`xfs`|
+|`nfs` (v3)|`cifs`|
+|`nfs4`|`smb`|
+|`overlay`|`gcsfuse`|
+|`ramfs`|`sysfs`|
+|`reiserfs`||
+|`tmpfs`||
+|`udf`||
+|`vfat`||
+|`xfs`||
 
 > [!NOTE]
 > To scan NFS v3 mount points, make sure to set the `no_root_squash` export option. Without this option, scanning NFS v3 can potentially fail due to lack of permissions.
@@ -223,12 +224,10 @@ If you experience any installation issues, self-troubleshooting resources are av
 
 ## Related content
 
-- [Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus](mde-security-settings-management.md)
+- <a href="/intune/intune-service/protect/mde-security-integration" target="_blank" rel="noopener noreferrer">Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus</a>
 - [Linux Resources](linux-resources.md)
 - [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](linux-support-connectivity.md)
 - [Investigate agent health issues](health-status.md)
 - [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](linux-support-events.md)
 - [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md)
 - [Install Defender for Endpoint on Linux to a custom path](linux-custom-location-installation.md)
-
-

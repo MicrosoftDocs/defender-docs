@@ -122,7 +122,7 @@ You can also specify where the diagnostic `.cab` file is created using a Group P
 1. Select **OK** or **Apply**.
 ## See also
 
-- [Troubleshoot Microsoft Defender Antivirus reporting](/mem/intune/protect/advanced-threat-protection-configure)
+- [Troubleshoot Microsoft Defender Antivirus reporting](/intune/intune-service/protect/advanced-threat-protection-configure)
 - [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)
 
 

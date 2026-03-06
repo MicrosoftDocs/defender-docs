@@ -97,7 +97,7 @@ For more information, see the following article:
 
 ### Use Configuration Manager to configure file name, folder, or file extension exclusions
 
-For more information, see [How to create and deploy antimalware policies: Exclusion settings](/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings).
+For more information, see [How to create and deploy antimalware policies: Exclusion settings](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings).
 
 ### Use Group Policy to configure folder or file extension exclusions
 
