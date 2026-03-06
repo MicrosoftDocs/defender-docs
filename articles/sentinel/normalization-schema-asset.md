@@ -60,7 +60,7 @@ The Asset Entity parsers support various [filtering parameters](normalization-ab
 
 ### <a id="common-entity-fields">Common ASIM Entity Fields</a>
 
-The following list mentions fields that have specific guidelines for Asset entities:
+The following list mentions fields for an Entity schema alongside their specific guidelines for Asset entities:
 
 | Field | Class | Type | Description |
 |-------|-------|------|-------------|
