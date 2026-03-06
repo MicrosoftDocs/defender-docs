@@ -982,6 +982,8 @@
           items:
             - name: ASIM alert event schema
               href: normalization-schema-alert.md
+            - name: ASIM asset entity schema
+              href: normalization-schema-asset.md
             - name: ASIM audit event schema
               href: normalization-schema-audit.md
             - name: ASIM authentication schema
