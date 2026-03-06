@@ -11,7 +11,7 @@ ms.reviewer: sugamar
 manager: bagol
 ms.custom: asr
 ms.topic: how-to
-ms.collection: 
+ms.collection:
  - m365-security
  - m365solution-asr-rules
  - highpri
@@ -22,42 +22,34 @@ search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
-# Implement attack surface reduction rules
 
+# Implement attack surface reduction rules
 
 When you're implementing attack surface reduction rules, move the first test ring into an enabled, functional state.
 
 > :::image type="content" source="media/asr-rules-implementation-steps.png" alt-text="The procedure to implement attack surface reduction rules" lightbox="media/asr-rules-implementation-steps.png":::
-  
 
 ## Step 1: Transition attack surface reduction rules from Audit to Block
 
-1. After all exclusions are determined while in audit mode, start setting some attack surface reduction rules to "block" mode, starting with the rule that has the fewest triggered events. See [Enable attack surface reduction rules](attack-surface-reduction-rules-enable.md).
+1. After you determine all required exclusions for rules in **Audit** mode, start setting some rules to **Block** mode. Start with the rule with the fewest triggered events. For instructions, see [Enable attack surface reduction rules](attack-surface-reduction-rules-enable.md).
 
-1. Review the reporting page in the Microsoft Defender portal; see [Threat protection report in Microsoft Defender for Endpoint](threat-protection-reports.md). Also review feedback from your champions.
+1. Review the [reporting page in the Microsoft Defender portal](threat-protection-reports.md). Also review feedback from your champions.
 
-1. Refine exclusions or create new exclusions as determined necessary.
-
-1. Switch problematic rules back to Audit.
-   > [!NOTE]
-   > For problematic rules (rules creating too much noise), it's better to create exclusions than to turn off rules or switching back to Audit. You have to determine what is best for your environment.
+1. Refine exclusions or create new exclusions as necessary.
 
 > [!TIP]
-> When available, take advantage of the Warn mode setting in rules to limit disruptions. Enabling attack surface reduction rules in Warn mode enables you to capture triggered events and view their potential disruptions, without actually blocking end-user access. Learn more: [Warn mode for users](attack-surface-reduction-rules-overview.md#warn-mode-for-users).
-
-### How does Warn mode work?
-
-Warn mode is effectively a Block instruction, but with the option for the user to "Unblock" subsequent executions of the given flow or app. Warn mode unblocks on a per device, user, file, and process combination. The warn mode information is stored locally and has a duration of 24 hours.
+> It's better to create exclusions for rules than to turn them off or switch them back to **Audit** mode.
+>
+> Take advantage of the **Warn** mode in available rules to limit disruptions. **Warn** mode enables you to capture triggered events and view potential disruptions without actually blocking user access. For more information about **Warn** mode, see [ASR rule modes](attack-surface-reduction-rules-reference.md#asr-rule-modes).
 
 ### Step 2: Expand deployment to ring n + 1
 
-When you're confident that you've correctly configured the attack surface reduction rules for ring 1, you can widen the scope of your deployment to the next ring (ring n + 1).
+When you're confident you correctly configured attack surface reduction rules for ring 1, you can widen the scope of your deployment to the next ring (ring n + 1).
 
 In the following deployment process, steps 1 – 3 are essentially the same for each subsequent ring:
 
-1. Test rules in Audit mode.
+1. Test rules in **Audit** mode.
 
 1. Review attack surface reduction-triggered audit events in the Microsoft Defender portal.
 
@@ -65,13 +57,13 @@ In the following deployment process, steps 1 – 3 are essentially the same for 
 
 1. Review, and then refine, add, or remove exclusions as necessary.
 
-1. Set rules to "block" mode.
+1. Set rules to **Block** mode.
 
 1. Review the reporting page in the Microsoft Defender portal.
 
 1. Create exclusions.
 
-1. Disable problematic rules or switch them back to Audit.
+1. Disable problematic rules or switch them back to **Audit** mode.
 
 #### Customize attack surface reduction rules
 
@@ -114,18 +106,23 @@ See the [attack surface reduction rules reference](attack-surface-reduction-rule
 
 ##### Use PowerShell to exclude files and folders
 
-1. Type **powershell** in the Start menu, right-click **Windows PowerShell**, and then select **Run as administrator**.
+Run the following command in an elevated PowerShell prompt (a PowerShell window you opened by selecting **Run as administrator**):
 
-1. Enter the following cmdlet:
+```powershell
+Add-MpPreference -AttackSurfaceReductionOnlyExclusions "Value1","Value2",..."ValueN"
+```
 
-   ```PowerShell
-   Add-MpPreference -AttackSurfaceReductionOnlyExclusions "<fully qualified path or resource>"
-   ```
+A value can be a folder path or a fully qualified resource name. For example:
 
-   Continue to use `Add-MpPreference -AttackSurfaceReductionOnlyExclusions` to add more folders to the list.
+- "C:\Windows"
+- "C:\Windows\App.exe"
 
-   > [!IMPORTANT]
-   > Use `Add-MpPreference` to append or add apps to the list. Using the `Set-MpPreference` cmdlet overwrites the existing list.
+> [!TIP]
+> To see the current list of exclusions, use the **Get-MpPreference** cmdlet: `(Get-MpPreference).AttackSurfaceReductionOnlyExclusions`.
+>
+> To remove exclusions without affecting other existing values, use the **Remove-MpPreference** cmdlet: `Remove-MpPreference -AttackSurfaceReductionOnlyExclusions "Value1","Value2",..."ValueN"`.
+>
+> To replace all existing exclusions with the values you specify, use the **Set-MpPreference** cmdlet: `Set-MpPreference -AttackSurfaceReductionOnlyExclusions "Value1","Value2",..."ValueN"`.
 
 ##### Use MDM CSPs to exclude files and folders
 
@@ -150,6 +147,3 @@ You can customize the notification for when a rule is triggered and blocks an ap
 ## See also
 
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
-
-
-
