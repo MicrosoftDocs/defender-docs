@@ -45,6 +45,8 @@ Review all planning guidance and finish all prerequisites before you onboard you
 
 - [**Plan for unified security operations in the Defender portal**](/unified-secops-platform/overview-plan). After onboarding to the Defender portal, the **[Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles/security#microsoft-sentinel-contributor)** role is assigned to the **Microsoft Threat Protection** and **WindowsDefenderATP** apps in your subscription.
 
+- [**Manage Microsoft Sentinel and Defender XDR permissions in the Defender portal**](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/managing-microsoft-sentinel-and-microsoft-defender-xdr-permissions-in-microsoft-/4480583). This blog post explains how Microsoft Sentinel and Defender XDR permissions work in the unified Defender portal, what to expect as you transition, as well as an introduction to the new unified role-based access control (URBAC).
+
 - [**Deploy for unified security operations in the Defender portal**](/unified-secops-platform/overview-deploy). While this article is for new customers who don't yet have a workspace for Microsoft Sentinel or other services onboarded to the Defender portal, use it as a reference if you're moving to the Defender portal.
 
 - [**Connect Microsoft Sentinel to the Defender portal**](/unified-secops-platform/microsoft-sentinel-onboard). This article lists the prerequisites for onboarding your workspace to the Defender portal. If you plan to use Microsoft Sentinel without Defender XDR, you need to take an extra step to trigger the connection between Microsoft Sentinel and the Defender portal.
