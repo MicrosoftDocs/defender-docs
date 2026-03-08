@@ -295,7 +295,7 @@ To see which category a default alert policy is assigned to, see the tables in [
 |Information Protection Analyst||✔|||||
 |Information Protection Investigator||✔|||||
 |Manage Alerts||||||✔|
-|Organization Configuration||||||✔|
+|Organization Management||||||✔|
 |Privacy Management|||||||
 |Quarantine|||||||
 |Record Management|✔||||||

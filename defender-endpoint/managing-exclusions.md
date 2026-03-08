@@ -19,7 +19,7 @@ ms.collection:
 
 # Managing exclusions reference
 
-Each version of Defender for Endpoint provides management of exclusions via the supported management tools. This article summarizes how you can configure exclusions using various management tools. 
+Each version of Defender for Endpoint provides management of exclusions via the supported management tools. This article summarizes how you can configure exclusions using various management tools.
 
 ## Manage exclusions for Windows devices
 
@@ -60,7 +60,7 @@ Many exclusions can be managed in the [Microsoft Defender portal](https://securi
 
 **Learn More**:
 
-- [Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus](/defender-endpoint/mde-security-settings-management)
+- <a href="/intune/intune-service/protect/mde-security-integration" target="_blank" rel="noopener noreferrer">Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus</a>
 - [Add automatic folder exclusions](/defender-endpoint/manage-automation-folder-exclusions#add-an-automation-folder-exclusion)
 
 ### Intune
@@ -78,8 +78,8 @@ Many exclusions can be managed in the [Microsoft Intune admin center](https://go
 
 **Learn More**:
 
-- [Create a new antivirus policy with exclusions in Intune](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus#create-a-new-antivirus-policy-with-exclusions-in-intune)
-- [Manage antivirus exclusions in Intune (for existing policies)](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus#manage-antivirus-exclusions-in-intune-for-existing-policies)
+- [Create Microsoft Defender antivirus exclusion policies in Intune](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus#create-microsoft-defender-antivirus-exclusion-policies-in-intune)
+- [Modify exclusions in Microsoft Defender antivirus exclusion policies in Intune](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus#modify-exclusions-in-microsoft-defender-antivirus-exclusion-policies-in-intune))
 - [Configure attack surface reduction per-rule exclusions](/defender-endpoint/attack-surface-reduction-rules-deployment-test#configure-attack-surface-reduction-per-rule-exclusions)
 
 ### MDM CSP
@@ -96,7 +96,7 @@ Many exclusions can be managed in the [Microsoft Intune admin center](https://go
 
 - [Defender CSP](/windows/client-management/mdm/defender-csp)
 - [Defender Policy CSP](/windows/client-management/mdm/policy-csp-defender)
-- [Use custom settings for Windows client devices in Intune](/mem/intune/configuration/custom-settings-windows-10)
+- [Use custom settings for Windows client devices in Intune](/intune/intune-service/configuration/custom-settings-windows-10)
 
 ### PowerShell
 
@@ -147,7 +147,7 @@ Use `Set-MpPreference` or `Get-MpPreference` in the [Defender PowerShell Module]
 
 |Exclusion Type | Reference |
 | -------- | -------- |
-| Custom antivirus exclusion | See [exclusion settings](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings)|
+| Custom antivirus exclusion | See [exclusion settings](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings)|
 | Attack Surface Reduction only exclusions | See [Microsoft Configuration Manager](/defender-endpoint/enable-attack-surface-reduction#microsoft-configuration-manager) |
 | Attack surface reduction rule per rule exclusion | Not supported |
 | Controlled Folder Access exclusions | See [Microsoft Configuration Manager](/defender-endpoint/enable-controlled-folders#microsoft-configuration-manager) |

@@ -12,10 +12,11 @@ This article describes the requirements for installing the Microsoft Defender fo
 
 ## Sensor version limitations
 
-Before you activate the Defender for Identity sensor v3.x, keep in mind that v3.x:
+Before you activate the Defender for Identity sensor v3.x, note that v3.x:
 
 - Doesn't support VPN integration.
-- Doesn't support ExpressRoute.
+- Doesn't support [syslog notifications](../notifications.md#configure-syslog-notifications).
+- Has limitations working with Azure ExpressRoute. For more information, see [Azure ExpressRoute for Microsoft 365](/microsoft-365/enterprise/azure-expressroute?view=o365-worldwide).
 
 ## Server requirements
 
