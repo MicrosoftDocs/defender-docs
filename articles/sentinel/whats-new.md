@@ -34,7 +34,7 @@ If you're using APIs to create or manage repository connections, transition to A
 
 **Affected API versions**
 
-The following API versions will be retired on May 1, 2026:
+The following API versions will be retired on June 1, 2026:
 
 <details>
 <summary><strong>Preview API versions (click to expand)</strong></summary>
