@@ -111,7 +111,7 @@ If you turn on security defaults, you are awarded full points for the following 
 ## Secure Score permissions
 
 > [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization.
 
 <a name='manage-permissions-with-microsoft-365-defender-unified-role-based-access-controlrbac'></a>
 
@@ -132,12 +132,11 @@ To start using Microsoft Defender XDR Unified RBAC to manage your Secure Score p
 
 ### Microsoft Entra global roles permissions
 
-Microsoft Entra global roles (for example, Global Administrator) can still be used to access Secure Score. Users who have the supported Microsoft Entra global roles, but aren't assigned to a custom role in Microsoft Defender XDR Unified RBAC continue to have access to view (and manage where permitted) Secure Score data as outlined:
+Microsoft Entra global roles (for example, Security Administrator) can still be used to access Secure Score. Users who have the supported Microsoft Entra global roles, but aren't assigned to a custom role in Microsoft Defender XDR Unified RBAC continue to have access to view (and manage where permitted) Secure Score data as outlined:
 
 The following roles have read and write access and can make changes, directly interact with Secure Score, and can assign read-only access to other users:
 
-- Global Administrator
-- Security Administrator
+- Security Administrator or higher
 - Exchange Administrator
 - SharePoint Administrator
 
