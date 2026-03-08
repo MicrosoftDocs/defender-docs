@@ -15,7 +15,7 @@ ms.custom: partner-contribution
 ms.topic: install-set-up-deploy
 ms.subservice: android
 search.appverid: met150
-ms.date: 03/24/2025
+ms.date: 03/08/2026
 appliesto: 
    - Microsoft Defender for Endpoint Plan 1
    - Microsoft Defender for Endpoint Plan 2
@@ -30,7 +30,8 @@ Learn how to deploy Defender for Endpoint on Android on Microsoft Intune Company
 > > You can connect to Google Play from Microsoft Intune to deploy Defender for Endpoint app across device administrator and Android Enterprise enrollment modes. Updates to the app are automatic via Google Play.
 
 > [!IMPORTANT]
-> At the end of March 2026, Microsoft Defender for Endpoint on Android will no longer support protection of personal profiles on enrolled devices. See the note in [Set up Microsoft Defender in personal profile on Android Enterprise in BYOD mode](#s) for details.
+> At the end of March 2026, Microsoft Defender for Endpoint on Android will no longer support monitoring and protection of personal profiles on enrolled devices. See the note in [Set up Microsoft Defender in personal profile on Android Enterprise in BYOD mode](#set-up-microsoft-defender-in-personal-profile-on-android-enterprise-in-byod-mode) for details.
+
 ## Deploy on Android Enterprise enrolled devices
 
 Defender for Endpoint on Android supports Android Enterprise enrolled devices.
@@ -210,9 +211,11 @@ Administrators can configure Microsoft Defender for Endpoint in low-touch onboar
 ## Set up Microsoft Defender in personal profile on Android Enterprise in BYOD mode
 
 > [!IMPORTANT]
-> At the end of March 2026, Microsoft Defender for Endpoint on Android will no longer support protection of personal profiles on enrolled devices (that is, personal profiles managed via MDM configuration policies). At that time:
-> * Defender for Endpoint on Android devices in a personal profile configured via MDM policies will stop functioning, and users will see the following popup:
->    :::image type="content" source="{source}" alt-text="{alt-text}":::
+> At the end of March 2026, Microsoft Defender for Endpoint on Android will no longer support the monitoring and protection of personal profiles on enrolled devices. At that time:
+> * Defender in personal profiles configured via MDM policies will stop functioning, and users will be see the following popup:
+>
+>    :::image type="content" source="./media/android-intune/personal-profile-support-end.png" alt-text="Screenshot of personal profile end of support popup.":::
+>
 > * Devices enrolled in personal profiles that have the suffix AEPersonal will remain in the SOC portal after deprecation. The devices will become inactive, and will follow the device lifecycle of 180 days before being deleted from the Defender portal.
 > * It will no longer be possible to configure personal profiles via MDM policies.
 
