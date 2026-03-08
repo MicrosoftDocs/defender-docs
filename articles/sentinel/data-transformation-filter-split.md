@@ -1,8 +1,10 @@
 ---
 title: Filter and split data transformations in Microsoft Sentinel
 description: Learn how to use filter and split data transformations to streamline ingestion, reduce costs, and route data between Analytics and Data Lake tiers in Microsoft Sentinel.
-author: guEdB-MSFT
+author: EdB-MSFT
 ms.author: edbaynash
+ms.service: microsoft-sentinel
+ms.subservice: sentinel-platform
 ms.topic: how-to
 ms.date: 03/08/2026
 
@@ -15,8 +17,6 @@ ms.date: 03/08/2026
 As security data volumes continue to grow, organizations face the challenge of balancing cost-effective retention of telemetry used for AI, compliance, and investigations while ensuring that only necessary data is retained in high-performance storage tiers. Use Filter and split data transformations in Microsoft Sentinel to address this challenge by modifying data at ingestion time to optimize your data retention strategy.
 
 This article describes how to configure filter and split data transformations to streamline your analytics pipelines in Microsoft Sentinel. These transformations let you tailor data ingestion, improving performance and reducing noise.
-
-## Benefits of data transformations
 
 Data transformations allow you to optimize your security data pipeline by controlling what data is stored and where it's stored. Using filter and split transformations provides the following benefits:
 
@@ -53,8 +53,6 @@ To verify whether a connector's tables support DCRs, see [Find your Microsoft Se
 
 Filter transformations enable you to reduce noise by discarding data during ingestion that isn't useful for investigations. Use a filter transformation rule to specify a KQL condition that determines which data is retained and sent to the Analytics tier.
 
-:::image type="content" source="media/data-transformation-filter-split/filter-rule-config.png" alt-text="Screenshot showing the filter rule configuration dialog in Microsoft Sentinel." lightbox="media/data-transformation-filter-split/filter-rule-config.png":::
-
 ### Filter transformation use cases
 
 Use filter transformations when you need to:
@@ -88,30 +86,35 @@ Use split transformations when you need to:
 
 Your enterprise ingests millions of firewall log entries daily for threat detection and compliance. Your SOC team needs real-time access to recent logs for active investigations, but must also retain historical logs for regulatory audits. Create a split transformation rule to route real-time data to the Analytics tier and historical data to the Data Lake tier.
 
-## Configure a filter transformation rule
+## Configure filter transformation rules
 
 Follow these steps to create a filter transformation rule:
 
 1. In the Microsoft Defender portal, go to **Microsoft Sentinel** > **Configuration** > **Tables**.
 
-1. Select a table and then select **Filter rule**.
+1. Select a table and then in the side panel, select **Filter rule**.
 
-1. Enter the following information:
+:::image type="content" source="media/data-transformation-filter-split/table-properties-filter.png" alt-text="Screenshot showing the table properties in Microsoft Sentinel." lightbox="media/data-transformation-filter-split/table-properties-filter.png":::
 
-   - **Rule name**: A descriptive name for the filter rule.
-   - **KQL expression**: The Kusto Query Language expression that designates which data is filtered out. Data matching this expression is discarded.
+
+1. In the side panel, enter a *rule name**.
+
+1. In the **Condition** field, enter a KQL expression that designates which data is filtered out. The KQL expression should evaluate to true for data you don't want to ingest.
+1. Set the **rule status** switch to **On** to enable the filter.
+
+
+> [!IMPORTANT]
+> Filters filter data out. Data matching the filter condition is discarded and isn't ingested to either Analytics or Data Lake tiers. Ensure your KQL expression accurately captures the data you want to exclude.
+
+1. To add another condition, select **Add condition** and enter a new KQL expression to filter out data. Multiple conditions are combined with a logical OR, meaning data matching any of the conditions is filtered out.
 
 1. Select **Save** to apply the rule.
 
 1. Verify that the filter rule is applied by checking the **Transformation Rules** column for the table. The column displays **Filter** when a filter rule is active.
 
-### Manage filter rules
+:::image type="content" source="media/data-transformation-filter-split/filter-rule.png" alt-text="Screenshot showing the filter rule applied in the table list in Microsoft Sentinel." lightbox="media/data-transformation-filter-split/filter-rule.png":::
 
-To manage existing filter rules:
 
-- **Disable a filter rule**: Select the table, select **Filter rule**, turn off the rule, and save. Newly ingested data matching the filter rule is no longer filtered out.
-- **Delete a filter rule**: Select the table, select **Filter rule**, and then delete the rule.
-- **Verify filtering**: Run KQL queries to confirm that the desired data is being filtered out.
 
 ## Configure a split transformation rule
 
@@ -148,13 +151,13 @@ After creating a split rule, you can configure retention settings for each tier:
 
 1. Alternatively, select the original table and configure both Analytics and Data Lake retention from the combined **Data retention settings** dialog.
 
-### Manage split rules
+### Manage rules
 
-To manage existing split rules:
+To manage existing rules, select the table and then select either **Split rule** or **Filter rule** depending on the rule type you want to manage.
++ To Disable a rule,  select the **Rule status** switch to turn off the rule then select save.
++ Delete a rule by selecting **Delete**.
 
-- **Disable a split rule**: Select the table, select **Split rule**, turn off the rule, and save.
-- **Delete a split rule**: Select the table, select **Split rule**, and then delete the rule.
-- **Verify splitting**: Run KQL queries to confirm that data is being routed to the correct tier.
+Verify rules by running KQL queries to confirm that data is being ingested correctly and is being routed to the correct tier.
 
 
 <!-- ### Pricing example
@@ -176,25 +179,6 @@ Be aware of the following limitations when using filter and split transformation
 - **Propagation delay**: Transformations can take up to one hour to take effect.
 
 - **Table support**: Only tables that support Data Collection Rules (DCRs) support split and filter transformations.
-
-## Frequently asked questions
-
-### What tables support filtering and splitting?
-
-- **Filtering**: Any table that supports Data Collection Rules (DCRs).
-- **Splitting**: Any table that supports Analytics only ingestion, Data Lake only ingestion, and Data Collection Rules (DCRs).
-
-### I have existing Data Collection Rules. How do transformations created in Tables affect them?
-
-Existing Data Collection Rules that don't conflict with transformations created in Tables aren't affected. Existing Data Collection Rules that conflict with transformations created in Tables are overridden by the new transformations.
-
-### What else can I do with Data Collection Rules?
-
-Data Collection Rules provide powerful capabilities beyond filtering and splitting. For sample DCRs and advanced scenarios, see [Sample data collection rules in Azure Monitor](/azure/azure-monitor/essentials/data-collection-rule-samples).
-
-### How long do transformations take to apply?
-
-Transformations can take up to one hour to take effect after you create or modify them.
 
 ## Related content
 
