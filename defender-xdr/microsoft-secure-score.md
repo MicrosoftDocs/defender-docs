@@ -58,18 +58,18 @@ Your score is updated in real time to reflect the information presented in the v
 > [!NOTE]
 > For Microsoft Teams and Microsoft Entra related recommendations, the recommendation state will get updated when changes occur in the configuration state. In addition, the recommendation state is refreshed once a month or once a week, respectively.
 
-### Key scenarios
-
-- [Check your current score](microsoft-secure-score-improvement-actions.md#check-your-current-score)
-- [View security recommendations and decide an action plan](microsoft-secure-score-improvement-actions.md#take-action-to-improve-your-score)
-- [Initiate work flows to investigate or implement](microsoft-secure-score-improvement-actions.md#view-recommended-action-details)
-- [Compare your score to organizations like yours](microsoft-secure-score-history-metrics-trends.md#compare-your-score-to-organizations-like-yours)
-
 ### How recommended actions are scored
 
 Each recommended action is worth 10 points or less, and most are scored in a binary fashion. If you implement the recommended action, like create a new policy or turn on a specific setting, you get 100% of the points. For other recommended actions, points are given as a percentage of the total configuration.
 
 For example, a recommended action states you get 10 points by protecting all your users with multifactor authentication. You only have 50 of 100 total users protected, so you'd get a partial score of five points (50 protected / 100 total * 10 max pts = 5 pts).
+
+### Get started with Microsoft Secure Score
+
+- [Check your current score](microsoft-secure-score-improvement-actions.md#check-your-current-score)
+- [View recommended actions and decide an action plan](microsoft-secure-score-improvement-actions.md#take-action-to-improve-your-score)
+- [Initiate work flows to investigate or implement](microsoft-secure-score-improvement-actions.md#view-recommended-action-details)
+- [Compare your score to organizations like yours](microsoft-secure-score-history-metrics-trends.md#compare-your-score-to-organizations-like-yours)
 
 ### Products included in Secure Score
 
