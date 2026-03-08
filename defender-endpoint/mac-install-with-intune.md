@@ -363,7 +363,7 @@ In this step, you will configure anti-malware and EDR policies, using either the
 
 Set policies using the Microsoft Defender portal by following these steps:
 
-1. Go through [Configure Microsoft Defender for Endpoint in Intune](/mem/intune/protect/advanced-threat-protection-configure) before setting the security policies using Microsoft Defender for Endpoint Security Settings Management.
+1. Go through [Configure Microsoft Defender for Endpoint in Intune](/intune/intune-service/protect/advanced-threat-protection-configure) before setting the security policies using Microsoft Defender for Endpoint Security Settings Management.
 
 1. In the [Microsoft Defender portal](https://sip.security.microsoft.com/homepage), go to **Configuration management** \> **Endpoint security policies** \> **Mac policies** \> **Create new policy**.
 
@@ -420,7 +420,7 @@ For more information, see [Set preferences for Microsoft Defender for Endpoint o
 
 For more information about managing security settings, see:
 
-- [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](/mem/intune/protect/mde-security-integration?pivots=mdssc-ga)
+- [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](/intune/intune-service/protect/mde-security-integration?pivots=mdssc-ga)
 - [Manage security settings for Windows, macOS, and Linux natively in Defender for Endpoint](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/manage-security-settings-for-windows-macos-and-linux-natively-in/ba-p/3870617)
 
 ### Step 10: Network protection for Microsoft Defender for Endpoint on macOS (optional)
@@ -469,7 +469,7 @@ This step enables deploying Microsoft Defender for Endpoint to machines enrolled
 
       :::image type="content" source="media/mdatp-12-applications.png" alt-text="Screenshot that shows the application lists page." lightbox="media/mdatp-12-applications.png":::
 
-      For more information, see [Add Microsoft Defender for Endpoint to macOS devices using Microsoft Intune](/mem/intune/apps/apps-advanced-threat-protection-macos).
+      For more information, see [Add Microsoft Defender for Endpoint to macOS devices using Microsoft Intune](/intune/intune-service/apps/apps-advanced-threat-protection-macos).
 
 ### Step 13: Download the Microsoft Defender for Endpoint onboarding package
 
@@ -541,7 +541,7 @@ There are multiple ways to look at this information in the [Microsoft Intune adm
 
 #### Step 15b. Client device setup
 
-1. Follow the steps outlined in [Enroll your macOS device using the Company Portal app](/mem/intune/user-help/enroll-your-device-in-intune-macos-cp)
+1. Follow the steps outlined in [Enroll your macOS device using the Company Portal app](/intune/intune-service/user-help/enroll-your-device-in-intune-macos-cp)
 
 1. Confirm device management.
 

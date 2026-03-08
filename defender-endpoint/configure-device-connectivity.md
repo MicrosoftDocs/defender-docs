@@ -69,7 +69,7 @@ Devices must meet specific prerequisites to use the streamlined connectivity met
 ### Supported operating systems
 
 - Windows 10 version 1809 or later. 
-- Windows 10 versions 1607, 1703, 1709, 1803 are supported on the streamlined onboarding package but require a different URL list, see [streamlined URL sheet](https://aka.ms/MDE-streamlined-urls)
+- Windows 10 versions 1607, 1703, 1709, 1803 are supported on the streamlined onboarding package but require a different URL list, see [Microsoft Defender for Endpoint streamlined connectivity URLs - commercial](streamlined-device-connectivity-urls-commercial.md)
 - Windows 11
 - Windows Server 2019 and later
 - Windows Server 2012 R2 or Windows Server 2016, fully updated running Defender for Endpoint modern unified solution (installation through MSI).
@@ -81,7 +81,7 @@ Devices must meet specific prerequisites to use the streamlined connectivity met
 >
 > - **Devices running on MMA agent are not supported** on the streamlined connectivity method and will need to continue using the standard URL set (Windows 7, Windows 8.1, Windows Server 2008 R2 MMA, Server 2012 & 2016 not upgraded to modern unified agent). 
 > - Windows Server 2012 R2 and Server 2016 will need to upgrade to unified agent to leverage the new method. <br/>
-> - Windows 10 1607, 1703, 1709, 1803 can leverage the new onboarding option but will use a longer list. For more information, see the [streamlined URL sheet](https://aka.ms/MDE-streamlined-urls).
+> - Windows 10 1607, 1703, 1709, 1803 can leverage the new onboarding option but will use a longer list. For more information, see the [Microsoft Defender for Endpoint streamlined connectivity URLs - commercial](streamlined-device-connectivity-urls-commercial.md)
 
 | Windows   OS    |     Minimum   KB Required (March 8, 2022)    |
 |:---|:---|
@@ -121,7 +121,7 @@ Configure your environment to allow connections to the simplified Defender for E
 
 For more information, see [Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
 
-You must maintain connectivity with remaining required services listed under the [commercial devices streamlined URL list](https://aka.ms/MDE-streamlined-urls) or [government devices streamlined URL list (Preview)](streamlined-device-connectivity-urls-gov.md). For example, the certification revocation list, Windows Update, SmartScreen services may also need to be accessible dependent on your current networking infrastructure and patching approach.
+You must maintain connectivity with remaining required services listed under the [Microsoft Defender for Endpoint standard connectivity URLs - commercial](standard-device-connectivity-urls-commercial.md) or [Microsoft Defender for Endpoint standard connectivity URLs - US government](standard-device-connectivity-urls-gov.md). For example, the certification revocation list, Windows Update, SmartScreen services may also need to be accessible dependent on your current networking infrastructure and patching approach.
 
 #### Option 2: Configure connectivity using static IP ranges 
 
@@ -163,7 +163,7 @@ To test streamlined connectivity for devices not yet onboarded to Defender for E
 
 - Run `mdeclientanalyzer.cmd -g <GW_US, GW_UK, GW_EU>` , where parameter is of GW_US, GW_EU, GW_UK. GW refers to the streamlined option. Run with applicable tenant geo.
 
-As a supplementary check, you can also use the client analyzer to test whether a device meets prerequisites: [MDEClientAnalyzerPreview.zip]{https://aka.ms/MDEClientAnalyzerPreview}.
+As a supplementary check, you can also use the client analyzer to test whether a device meets prerequisites: [MDEClientAnalyzerPreview.zip](https://aka.ms/MDEClientAnalyzerPreview).
  
 
 > [!NOTE]

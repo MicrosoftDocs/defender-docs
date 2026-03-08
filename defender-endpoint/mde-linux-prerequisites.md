@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: article
 ms.subservice: linux
 search.appverid: met150
-ms.date: 02/26/2026
+ms.date: 03/06/2026
 ---
 
 # Prerequisites for Microsoft Defender for Endpoint on Linux
@@ -48,7 +48,14 @@ For detailed licensing information, see [Product Terms: Microsoft Defender for E
 
 ## Software requirements
 
-Linux server endpoints should have systemd (system manager) installed.
+- Linux server endpoints should be able to access the endpoints documented in:
+   - [Microsoft Defender for Endpoint streamlined connectivity URLs - commercial](./streamlined-device-connectivity-urls-commercial.md) (commercial customers)
+   - [Microsoft Defender for Endpoint streamlined connectivity URLs - US government environments](./streamlined-device-connectivity-urls-gov.md) (US Government customers).
+
+   If necessary, [configure static proxy discovery](./linux-static-proxy-configuration.md).
+- Linux server endpoints should have systemd (system manager) installed.
+- Administrative privileges on the Linux server endpoint are required for installation.
+- An appropriate role assigned in Defender for Endpoint. See [Role-based access control](/defender-endpoint/prepare-deployment#role-based-access-control).
 
 > [!NOTE] 
 > Linux distributions using system manager support both SystemV and Upstart.
@@ -69,6 +76,9 @@ To use [device isolation functionality](./respond-machine-alerts.md#isolate-devi
 - Linux kernel with `CONFIG_NETFILTER`, `CONFIG_IP_NF_IPTABLES`, and `CONFIG_IP_NF_MATCH_OWNER` for kernel version lower than 5.x and `CONFIG_NETFILTER_XT_MATCH_OWNER` from 5.x kernel.
 
 If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the prerequisite dependencies.
+
+## Network requirements
+
 
 ## Roles and permissions
 
@@ -117,14 +127,15 @@ The following Linux server distributions are supported:
 |`fuse`|`glustrefs`|
 |`fuseblk`|`Afs`|
 |`jfs`|`sshfs`|
-|`nfs` (v3 only)|`cifs`|
-|`overlay`|`smb`|
-|`ramfs`|`gcsfuse`|
-|`reiserfs`|`sysfs`|
-|`tmpfs`|
-|`udf`|
-|`vfat`|
-|`xfs`|
+|`nfs` (v3)|`cifs`|
+|`nfs4`|`smb`|
+|`overlay`|`gcsfuse`|
+|`ramfs`|`sysfs`|
+|`reiserfs`||
+|`tmpfs`||
+|`udf`||
+|`vfat`||
+|`xfs`||
 
 > [!NOTE]
 > To scan NFS v3 mount points, make sure to set the `no_root_squash` export option. Without this option, scanning NFS v3 can potentially fail due to lack of permissions.
@@ -194,7 +205,7 @@ If you experience any installation issues, self-troubleshooting resources are av
 
 ## Related content
 
-- [Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus](mde-security-settings-management.md)
+- <a href="/intune/intune-service/protect/mde-security-integration" target="_blank" rel="noopener noreferrer">Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus</a>
 - [Linux Resources](linux-resources.md)
 - [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](linux-support-connectivity.md)
 - [Investigate agent health issues](health-status.md)
