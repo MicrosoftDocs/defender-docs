@@ -142,7 +142,7 @@ The following Linux server distributions are supported:
 
 |Real-time protection and quick/full scans|Custom scans|
 |---|---|
-|`btrfs`|All filesystems that are supported for real-time protection and quick/full scans are also supported for custom scans.|
+|`btrfs`|All filesystems that are supported for real-time protection and quick/full scans are also supported for custom scans. In addtion, the filesystems listed below are also supported for custom scans.|
 |`ecryptfs`|`Efs`|
 |`ext2`|`S3fs`|
 |`ext3`|`Blobfuse`|
