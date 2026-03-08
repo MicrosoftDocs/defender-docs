@@ -48,11 +48,6 @@ For detailed licensing information, see [Product Terms: Microsoft Defender for E
 
 ## Software requirements
 
-- Linux server endpoints should be able to access the endpoints documented in:
-   - [Microsoft Defender for Endpoint streamlined connectivity URLs - commercial](./streamlined-device-connectivity-urls-commercial.md) (commercial customers)
-   - [Microsoft Defender for Endpoint streamlined connectivity URLs - US government environments](./streamlined-device-connectivity-urls-gov.md) (US Government customers).
-
-   If necessary, [configure static proxy discovery](./linux-static-proxy-configuration.md).
 - Linux server endpoints should have systemd (system manager) installed.
 - Administrative privileges on the Linux server endpoint are required for installation.
 - An appropriate role assigned in Defender for Endpoint. See [Role-based access control](/defender-endpoint/prepare-deployment#role-based-access-control).
@@ -79,6 +74,34 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 
 ## Network requirements
 
+- Linux server endpoints should be able to access the endpoints documented in:
+   - [Microsoft Defender for Endpoint streamlined connectivity URLs - commercial](./streamlined-device-connectivity-urls-commercial.md) (commercial customers)
+   - [Microsoft Defender for Endpoint streamlined connectivity URLs - US government environments](./streamlined-device-connectivity-urls-gov.md) (US Government customers).
+
+   If necessary, [configure static proxy discovery](./linux-static-proxy-configuration.md).
+
+### Verify if devices can connect to Defender for Endpoint cloud services
+
+1. Prepare your environment, as described in Step 1 of the following article [Configure your network environment to ensure connectivity with Defender for Endpoint service](/defender-endpoint/configure-environment).
+
+1. Connect Defender for Endpoint on Linux through a proxy server by using the following discovery methods:
+
+   - Transparent proxy
+   - [Manual static proxy configuration](/defender-endpoint/linux-static-proxy-configuration#installation-time-configuration)
+
+1. Permit anonymous traffic in the previously listed URLs, if a proxy or firewall blocks traffic.
+
+> [!NOTE]
+> Configuration for transparent proxies isn't needed for Defender for Endpoint. See [Manual Static Proxy Configuration.](/defender-endpoint/linux-static-proxy-configuration)
+
+> [!WARNING]
+> PAC, WPAD, and authenticated proxies aren't supported.
+> Use only static or transparent proxies.
+> SSL inspection and intercepting proxies aren't supported for security reasons.
+> Configure an exception for SSL inspection and your proxy server to allow direct data pass-through from Defender for Endpoint on Linux to the relevant URLs without interception.
+> Adding your interception certificate to the global store doesn't enable interception.
+
+For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-connectivity).
 
 ## Roles and permissions
 
@@ -119,7 +142,7 @@ The following Linux server distributions are supported:
 
 |Real-time protection and quick/full scans|Custom scans|
 |---|---|
-|`btrfs`|All filesystems are supported for real-time protection and quick/full scans|
+|`btrfs`|All filesystems that are supported for real-time protection and quick/full scans are also supported for custom scans.|
 |`ecryptfs`|`Efs`|
 |`ext2`|`S3fs`|
 |`ext3`|`Blobfuse`|
@@ -139,40 +162,6 @@ The following Linux server distributions are supported:
 
 > [!NOTE]
 > To scan NFS v3 mount points, make sure to set the `no_root_squash` export option. Without this option, scanning NFS v3 can potentially fail due to lack of permissions.
-
-## Network connectivity requirements
-
-Ensure the following URLs are allowed in network configurations:
-
-- `https://config.edge.skype.com/config/v1` (default)
-- `https://config.ecs.dod.teams.microsoft.us/config/v1`
-- `https://config.ecs.gov.teams.microsoft.us/config/v1`
-- `https://gccmod.ecs.office.com/config/v1`
-
-- Linux server endpoints should be able to access the `*.endpoint.security.microsoft.com`. If necessary, [configure static proxy discovery](linux-static-proxy-configuration.md).
-
-### Verify if devices can connect to Defender for Endpoint cloud services
-
-1. Prepare your environment, as described in Step 1 of the following article [Configure your network environment to ensure connectivity with Defender for Endpoint service](/defender-endpoint/configure-environment).
-
-1. Connect Defender for Endpoint on Linux through a proxy server by using the following discovery methods:
-
-   - Transparent proxy
-   - [Manual static proxy configuration](/defender-endpoint/linux-static-proxy-configuration#installation-time-configuration)
-
-1. Permit anonymous traffic in the previously listed URLs, if a proxy or firewall blocks traffic.
-
-> [!NOTE]
-> Configuration for transparent proxies isn't needed for Defender for Endpoint. See [Manual Static Proxy Configuration.](/defender-endpoint/linux-static-proxy-configuration)
-
-> [!WARNING]
-> PAC, WPAD, and authenticated proxies aren't supported.
-> Use only static or transparent proxies.
-> SSL inspection and intercepting proxies aren't supported for security reasons.
-> Configure an exception for SSL inspection and your proxy server to allow direct data pass-through from Defender for Endpoint on Linux to the relevant URLs without interception.
-> Adding your interception certificate to the global store doesn't enable interception.
-
-For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-connectivity).
 
 ## Installation methods and tools
 
