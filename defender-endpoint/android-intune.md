@@ -219,8 +219,6 @@ Administrators can configure Microsoft Defender for Endpoint in low-touch onboar
 > * Devices enrolled in personal profiles that have the suffix AEPersonal will remain in the SOC portal after deprecation. The devices will become inactive, and will follow the device lifecycle of 180 days before being deleted from the Defender portal.
 > * It will no longer be possible to configure personal profiles via MDM policies.
 
-### Set up Microsoft Defender in personal profile
-
 Administrators can use the [Microsoft Intune admin center](https://intune.microsoft.com) to set up and configure Microsoft Defender support in personal profiles by following these steps:
 
 1. Go to **Apps** > **App configuration policies**, and then select **Add**. Select **Managed Devices**.
