@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: article
 ms.subservice: linux
 search.appverid: met150
-ms.date: 03/06/2026
+ms.date: 03/08/2026
 ---
 
 # Prerequisites for Microsoft Defender for Endpoint on Linux
@@ -49,10 +49,8 @@ For detailed licensing information, see [Product Terms: Microsoft Defender for E
 ## Software requirements
 
 - Linux server endpoints should have systemd (system manager) installed.
-- Administrative privileges on the Linux server endpoint are required for installation.
-- An appropriate role assigned in Defender for Endpoint. See [Role-based access control](/defender-endpoint/prepare-deployment#role-based-access-control).
 
-> [!NOTE] 
+> [!NOTE]
 > Linux distributions using system manager support both SystemV and Upstart.
 > The Microsoft Defender for Endpoint on Linux agent is independent from [Operation Management Suite (OMS) agent](/azure/azure-monitor/agents/azure-monitor-agent-overview#log-analytics-agent).
 > Microsoft Defender for Endpoint relies on its own independent telemetry pipeline.
@@ -102,11 +100,6 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 > Adding your interception certificate to the global store doesn't enable interception.
 
 For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-connectivity).
-
-## Roles and permissions
-
-- Administrative privileges on the Linux server endpoint are required for installation.
-- An appropriate role assigned in Defender for Endpoint. See [Role-based access control](/defender-endpoint/prepare-deployment#role-based-access-control).
 
 ## Supported Linux distributions
 
@@ -163,6 +156,11 @@ The following Linux server distributions are supported:
 > [!NOTE]
 > To scan NFS v3 mount points, make sure to set the `no_root_squash` export option. Without this option, scanning NFS v3 can potentially fail due to lack of permissions.
 
+## Roles and permissions
+
+- Administrative privileges on the Linux server endpoint are required for installation.
+- An appropriate role assigned in Defender for Endpoint. See [Role-based access control](/defender-endpoint/prepare-deployment#role-based-access-control).
+
 ## Installation methods and tools
 
 There are several methods and tools that you can use to deploy Microsoft Defender for Endpoint on [supported Linux servers](#supported-linux-distributions).
@@ -188,7 +186,7 @@ If you experience any installation issues, self-troubleshooting resources are av
 
 ## Next steps
 
-- [Deploy Defender for Endpoint on Linux](/defender-endpoint/linux-installer-script)
+- [Deploy Defender for Endpoint on Linux](/defender-endpoint/linux-install-with-defender-deployment-tool.md)
 - [Configure Defender for Endpoint on Linux](/defender-endpoint/linux-preferences)
 - [Deploy updates for Defender for Endpoint on Linux](/defender-endpoint/linux-updates)
 
