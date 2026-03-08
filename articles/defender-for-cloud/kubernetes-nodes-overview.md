@@ -1,7 +1,7 @@
 ---
 title: Overview of Kubernetes Nodes Protection
 description: Learn about Defender for Containers vulnerability assessment and malware detection for Kubernetes nodes.
-ms.date: 02/22/2026
+ms.date: 03/09/2026
 ms.topic: overview
 ---
 
@@ -54,7 +54,7 @@ To enable agentless scanning for machines in the Defender for Containers plan in
 
 1. (Optional) Select **Expand all**.
 
-    :::image type="content" source="media/kubernetes-nodes-overview/environment-settings-expand-all-button.png" alt-text="Environment settings page with the Expand All button indicated.":::
+    :::image type="content" source="media/kubernetes-nodes-overview/environment-settings-expand-all-button.png" alt-text="Screenshot of Environment settings page with the Expand All button indicated.":::
 
 1. Select the relevant subscription.
 
