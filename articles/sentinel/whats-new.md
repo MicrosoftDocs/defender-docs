@@ -30,7 +30,7 @@ The retired API versions will no longer be supported, and requests using them wi
 
 **Required action**
 
-If you're using APIs to create or manage repository connections, transition to API version **2025-06-01** or **2025-07-01-preview** before May 1, 2026 to avoid service disruption.
+If you're using APIs to create or manage repository connections, transition to API version **2025-09-01**, **2025-06-01**, or **2025-07-01-preview** before June 1, 2026 to avoid service disruption.
 
 **Affected API versions**
 
