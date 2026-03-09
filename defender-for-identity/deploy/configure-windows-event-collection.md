@@ -260,7 +260,7 @@ This section describes how to modify your Active Directory Federation Services (
 
    :::image type="content" source="media/configure-windows-event-collection/group-policy-management-editor.png" alt-text="Screenshot of the advanced auditing audit policy configuration.":::
 
-### Configure AD FS event auditing in AD FS Management
+#### Configure AD FS event auditing in AD FS Management
 
 1. Select **Start** > **Programs** > **Administrative Tools** > **AD FS Management**.
 1. Go to **Actions** > **Edit Federation Service Properties**.
