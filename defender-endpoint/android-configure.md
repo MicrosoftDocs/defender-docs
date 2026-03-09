@@ -28,7 +28,7 @@ appliesto:
 
 Microsoft Defender for Endpoint on Android, along with Microsoft Intune and Microsoft Entra ID, enables enforcing Device compliance and Conditional Access policies based on device risk levels. Defender for Endpoint is a Mobile Threat Defense (MTD) solution that you can deploy through Intune.
 
-For more information about how to set up Defender for Endpoint on Android and Conditional Access, see [Defender for Endpoint and Intune](/mem/intune/protect/advanced-threat-protection).
+For more information about how to set up Defender for Endpoint on Android and Conditional Access, see [Defender for Endpoint and Intune](/intune/intune-service/protect/advanced-threat-protection).
 
 ## Configure custom indicators
 
@@ -49,7 +49,7 @@ Defender for Endpoint on Android allows IT Administrators the ability to configu
 > [!NOTE]
 > Defender for Endpoint on Android would use a VPN in order to provide the Web Protection feature. This VPN isn't a regular VPN. Instead, it's a local/self-looping VPN that doesn't take traffic outside the device.
 >
-> For more information, see [Configure web protection on devices that run Android](/mem/intune/protect/advanced-threat-protection-manage-android).
+> For more information, see [Configure web protection on devices that run Android](/intune/intune-service/protect/advanced-threat-protection-manage-android).
 
 ## Network Protection
 

@@ -132,7 +132,7 @@ Here's a list of SAP articles you can use as needed:
 
    ```
 
-1. **Use tools, such as [Intune](/mem/intune/protect/endpoint-security) or [Defender for Endpoint security settings management](/mem/intune/protect/mde-security-integration) to set up Defender for Endpoint**. Such tools can help ensure that Defender for Endpoint is configured correctly and uniformly deployed. To use Defender for Endpoint security settings management, follow these steps:
+1. **Use tools, such as [Intune](/intune/intune-service/protect/endpoint-security) or [Defender for Endpoint security settings management](/intune/intune-service/protect/mde-security-integration) to set up Defender for Endpoint**. Such tools can help ensure that Defender for Endpoint is configured correctly and uniformly deployed. To use Defender for Endpoint security settings management, follow these steps:
 
    1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Endpoints** > **Configuration management** > **Endpoint security policies**.
    
@@ -146,7 +146,7 @@ SAP and Microsoft both don't recommend deploying Defender for Endpoint on Window
 
 Defender for Endpoint on Windows and any other software or configuration change should be deployed into development systems first, validated in QAS, and only then deployed into production environments.
 
-Using tools, such as [Defender for Endpoint security settings management](/mem/intune/protect/mde-security-integration) to deploy Defender for Endpoint to an entire SAP landscape without testing is likely to cause downtime.
+Using tools, such as [Defender for Endpoint security settings management](/intune/intune-service/protect/mde-security-integration) to deploy Defender for Endpoint to an entire SAP landscape without testing is likely to cause downtime.
 
 Here's a list of what to check:
 
