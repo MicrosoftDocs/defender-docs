@@ -3,7 +3,7 @@ title: Turn on network protection
 description: Enable network protection with Group Policy, PowerShell, or Mobile Device Management and Configuration Manager.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 01/05/2026
+ms.date: 02/16/2026
 ms.topic: how-to
 author: paulinbar
 ms.author: painbar
@@ -25,7 +25,7 @@ appliesto:
 
 [Network protection](network-protection.md) helps to prevent users from using any application to access dangerous domains that might host phishing scams, exploits, and other malicious content on the internet. You can [audit network protection](evaluate-network-protection.md) in a test environment to view which apps would be blocked before enabling network protection.
 
-[Learn more about network filtering configuration options.](/mem/intune/protect/endpoint-protection-windows-10#network-filtering)
+[Learn more about network filtering configuration options.](/intune/intune-service/protect/endpoint-protection-windows-10#network-filtering)
 
 ## Prerequisites
 
@@ -131,9 +131,9 @@ To enable network protection, you can use any of the methods described in this a
 
 3. On the **Microsoft Defender for Endpoint Security Baseline \| Profiles** page, select **Create policy**.
 
-4. On the **Create profile** flyout that opens, select **Create**.
+4. On the **Create a profile** flyout that opens, select **Create**.
 
-5. The **Create profile** wizard opens. On the **Basics** tab, configure the following settings:
+5. The **Create a profile** wizard opens. On the **Basics** tab, configure the following settings:
    - **Name**: Enter a unique, descriptive name for the policy.
    - **Description**: Enter an optional description.
 
@@ -142,11 +142,12 @@ To enable network protection, you can use any of the methods described in this a
 6. On the **Configuration settings** tab, expand **Defender** and then select one of the following values for **Enable network protection**:
    - **Disabled**
    - **Enabled (block mode)**
-   - **Enable Network Protection**
+   - **Enabled (audit mode)**
+   - **Not configured**
 
    Select **Next**.
 
-7. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing [scope tags](/mem/intune/fundamentals/scope-tags). When you're finished, select **Next**.
+7. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing [scope tags](/intune/intune-service/fundamentals/scope-tags). When you're finished, select **Next**.
 
 8. On the **Assignments** tab, configure the following settings:
    - **Included groups** section: Select one of the following options:
@@ -178,13 +179,14 @@ To enable network protection, you can use any of the methods described in this a
    Select **Next**.
 
 5. On the **Configuration settings** tab, select one of the following values for **Enable network protection**:
-   - **Disabled**
+   - **Not configured**
+   - **Disabled (Default)**
    - **Enabled (block mode)**
-   - **Enable Network Protection**
+   - **Enabled (audit mode)**
 
    Select **Next**.
 
-6. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing [scope tags](/mem/intune/fundamentals/scope-tags). When you're finished, select **Next**.
+6. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing [scope tags](/intune/intune-service/fundamentals/scope-tags). When you're finished, select **Next**.
 
 7. On the **Assignments** tab, click in the search box or start typing a group name, and then select it from the results.
 
@@ -218,7 +220,7 @@ To enable network protection, you can use any of the methods described in this a
 
 5. On the **Configuration settings** tab, select **Microsoft Defender Exploit Guard** > **Network filtering**.
 
-   Change the **Network protection** value from **Not configured** to **Audit** (for testing and observation) or **Enable**.
+   Change the **Network protection** value from **Not configured** to **Disable**, **Enable**, or **Audit** (for testing and observation).
 
    Select **Next**.
 

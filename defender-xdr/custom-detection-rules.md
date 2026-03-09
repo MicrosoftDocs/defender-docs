@@ -22,14 +22,12 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 01/30/2026
+ms.date: 02/27/2026
 ---
 
 # Create custom detection rules
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-[!INCLUDE [Prerelease](../includes/prerelease.md)]
 
 Custom detection rules are rules you design and tweak by using [advanced hunting](advanced-hunting-overview.md) queries. These rules let you proactively monitor various events and system states, including suspected breach activity and misconfigured endpoints. You can set them to run at regular intervals, generating alerts and taking response actions whenever there are matches.
 
@@ -155,7 +153,7 @@ When you save a new rule, it runs and checks for matches from the past 30 days o
 - **Every 3 hours** - Runs every 3 hours, checking data from the past 12 hours.
 - **Every hour** - Runs hourly, checking data from the past 4 hours.
 - **Continuous (NRT)** - Runs continuously, checking data from events as they're collected and processed in near real-time (NRT). For more information, see [Continuous (NRT) frequency](custom-detection-rules.md#continuous-nrt-frequency).
-- **Custom** - Runs according to the frequency you selected. This option is available if the rule is based only on data that is ingested to Microsoft Sentinel. For more information, see [Custom frequency for Microsoft Sentinel data (Preview)](#custom-frequency-for-microsoft-sentinel-data-preview).
+- **Custom** - Runs according to the frequency you selected. This option is available if the rule is based only on data that is ingested to Microsoft Sentinel. For more information, see [Custom frequency for Microsoft Sentinel data](#custom-frequency-for-microsoft-sentinel-data).
 
 > [!TIP]
 > Match the time filters in your query with the lookback period. Results outside of the lookback period are ignored.
@@ -191,14 +189,14 @@ You can run a query continuously as long as:
 
 Near real-time detections are supported for the following tables:
 
-|Microsoft Defender XDR| Microsoft Sentinel (Preview)|
+|Microsoft Defender XDR| Microsoft Sentinel|
 |----------------------|-------------------|
 |<ul><li>`AlertEvidence`<li>`CloudAppEvents`<li>`DeviceEvents`<li>`DeviceFileCertificateInfo`<li>`DeviceFileEvents`<li>`DeviceImageLoadEvents`<li>`DeviceLogonEvents`<li>`DeviceNetworkEvents`<li>`DeviceNetworkInfo`<li>`DeviceInfo`<li>`DeviceProcessEvents`<li>`DeviceRegistryEvents`<li>`EmailAttachmentInfo`<li>`EmailEvents` (except `LatestDeliveryLocation` and `LatestDeliveryAction` columns)<li>`EmailPostDeliveryEvents`<li>`EmailUrlInfo`<li>`IdentityDirectoryEvents`<li>`IdentityLogonEvents`<li>`IdentityQueryEvents`<li>`UrlClickEvents`</ul>| <ul><li>`ABAPAuditLog_CL`<li>`AuditLogs`<li>`AWSCloudTrail`<li>`AWSGuardDuty`<li>`AzureActivity`<li>`Cisco_Umbrella_dns_CL`<li>`Cisco_Umbrella_proxy_CL`<li>`CommonSecurityLog`<li>`GCPAuditLogs`<li>`MicrosoftGraphActivityLogs`<li>`MicrosoftGraphActivityLogs`<li>`OfficeActivity`<li>`OfficeActivity`<li>`Okta_CL`<li>`OktaV2_CL`<li>`ProofpointPOD`<li>`ProofPointTAPClicksPermitted_CL`<li>`ProofPointTAPMessagesDelivered_CL`<li>`SecurityAlert`<li>`SecurityEvent`<li>`SigninLogs`</ul> 
 
 > [!NOTE]
 > Only columns that are generally available support **Continuous (NRT)** frequency.
 
-###### Custom frequency for Microsoft Sentinel data (Preview)
+###### Custom frequency for Microsoft Sentinel data
 
 Microsoft Sentinel customers who are onboarded to Microsoft Defender can select **Custom** frequency when the rule is based only on data that is ingested to Microsoft Sentinel. 
 
@@ -215,11 +213,11 @@ When you select this frequency option, the **Run query every input** component a
 
 ### 3. Define alert enrichment details 
 You can enrich alerts by providing and defining more details. When you enrich alerts, you can:
--	[Create a dynamic alert title and description](#create-a-dynamic-alert-title-and-description-preview)
--	[Add custom details](#add-custom-details-preview) to display in the alert side panel 
+-	[Create a dynamic alert title and description](#create-a-dynamic-alert-title-and-description)
+-	[Add custom details](#add-custom-details) to display in the alert side panel 
 -	[Link entities](#link-entities)
 
-#### Create a dynamic alert title and description (Preview)
+#### Create a dynamic alert title and description
 You can dynamically craft your alert’s title and description by using the results of your query to make them accurate and indicative. This feature can boost SOC analysts’ efficiency when triaging alerts and incidents, and when trying to quickly understand the essence of an alert.  
 
 To dynamically configure the alert’s title or description, integrate them into the **Alert details** section by using the free text names of columns that are available in your query results and surrounding them with double curly brackets. 
@@ -233,7 +231,7 @@ For example: `User {{AccountName}} unexpectedly signed in from {{Location}}`
 
 To help you decide on the exact column names you want to reference, select **Explore query and results**. This selection opens the Advanced hunting context pane on top of the rule creation wizard, where you can examine your query logic and its results. 
 
-#### Add custom details (Preview)
+#### Add custom details
 
 You can further enhance your SOC analysts’ productivity by showing important details in the alert side panel. You can surface events’ data in alerts that are constructed from those events. This feature gives your SOC analysts immediate event content visibility of their incidents, enabling them to triage, investigate, and draw conclusions faster. 
 
@@ -258,7 +256,7 @@ Identify the columns in your query results where you expect to find the main aff
 
 You can select only one column for each entity type (mailbox, user, or device). You can't select columns that aren't returned by your query.
 
-##### Expanded entity mapping (Preview)
+##### Expanded entity mapping
 
 You can link a wide range of entity types to your alerts. Linking more entities helps the correlation engine group alerts to the same incidents and to correlate incidents together. If you're a Microsoft Sentinel customer, this also means that you can map any entity from your third-party data sources that are ingested into Microsoft Sentinel.
 

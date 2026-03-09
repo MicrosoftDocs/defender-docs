@@ -110,7 +110,7 @@
           href: dynamic-threat-detection-agent.md
         - name: Investigate entity pages
           items:
-          - name: User
+          - name: Identity
             href: investigate-users.md
           - name: Device
             href: entity-page-device.md
@@ -404,6 +404,8 @@
             href: experts-on-demand.md
           - name: Understand Defender Experts for Hunting reports
             href: defender-experts-report.md
+          - name: Work with MSSPs
+            href: defender-experts-managed-security-guide.md
         - name: Frequently asked questions
           items: 
           - name: General information
@@ -434,6 +436,8 @@
             href: defender-experts-for-hunting.md
           - name: Auditing
             href: auditing.md
+          - name: Work with MSSPs
+            href: defender-experts-managed-security-guide.md
         - name: Frequently asked questions
           items:
           - name: General information

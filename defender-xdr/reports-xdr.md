@@ -31,7 +31,7 @@ For Defender Experts for XDR reports instructions, check out this short video.
 
 > [!VIDEO https://www.youtube.com/embed/Ymm6g_Eis34]
 
-Microsoft Defender Experts for XDR includes an interactive, on-demand report that provides a clear summary of the work our expert analysts are doing on your behalf, aggregate information about your incident landscape, and granular details about specific incidents. Your service delivery manager (SDM) also uses the report to provide you with more context regarding the service during a monthly business review.
+Microsoft Defender Experts for XDR includes an interactive, on-demand report that provides a clear summary of the work our expert analysts are doing on your behalf, aggregate information about your incident landscape, and granular details about specific incidents. Your Security Delivery Expert (SDX) also uses the report to provide you with more context regarding the service during a monthly business review.
 
 :::image type="content" source="media/defender-xdr-report.png" alt-text="Screenshot of the Report overview tab in Defender Experts for XDR report." lightbox="media/defender-xdr-report.png":::
 
