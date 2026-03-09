@@ -228,6 +228,7 @@ If you're using a non-Microsoft reporting solution for end users, you gain the f
 
 Examples of non-Microsoft reporting solutions include:
 
+- Keepnet Phishing Reporter Button
 - KnowBe4 Phish Alert Button
 - Cofense Report Phishing
 - Hoxhunt report button
