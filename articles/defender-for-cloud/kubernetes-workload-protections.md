@@ -27,9 +27,9 @@ Microsoft Defender for Cloud includes a bundle of recommendations that are avail
 
 You can enable the Azure Policy for Kubernetes by one of two ways:
 
-- Enable for all current and future clusters using plan/connector settings
+- Enable for all current and future clusters using plan/connector settings:
   - [Enabling for Azure subscriptions or on-premises](#enable-for-azure-subscriptions-or-on-premises)
-  - [Enabling for GCP projects](#enable-for-gcp-projects)
+  - [Enabling for Google Cloud Platform (GCP) projects](#enable-for-gcp-projects)
 - [Deploy Azure Policy for Kubernetes on existing clusters](#deploy-azure-policy-for-kubernetes-on-existing-clusters)
 
 ### Enable Azure Policy for Kubernetes for all current and future clusters using plan/connector settings
@@ -42,23 +42,23 @@ You can enable the Azure Policy for Kubernetes by one of two ways:
 
 #### Enable for Azure subscriptions or on-premises
 
-When you enable Microsoft Defender for Containers, the "Azure Policy for Kubernetes" setting is enabled by default for the Azure Kubernetes Service, and for Azure Arc-enabled Kubernetes clusters in the relevant subscription. If you disable the setting on initial configuration, you can enable it afterwards manually.
+When you enable Microsoft Defender for Containers, the "Azure Policy for Kubernetes" setting is enabled by default for the Azure Kubernetes Service and for Azure Arc-enabled Kubernetes clusters in the relevant subscription. If you disable the setting on initial configuration, you can enable it afterwards manually.
 
-If you disabled the "Azure Policy for Kubernetes" settings under the containers plan, you can follow the below steps to enable it across all clusters in your subscription:
+If you disabled the "Azure Policy for Kubernetes" settings under the containers plan, you can follow the steps bellow to enable it across all clusters in your subscription:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
+1. Navigate to **Microsoft Defender for Cloud** > **Management** > **Environment settings**.
 
 1. Select the relevant subscription.
 
-1. On the Defender plans page, ensure that Containers is toggled to **On**.
+1. On the Defender plans page, ensure that **Containers** is toggled to **On**.
 
 1. Select **Settings**.
 
     :::image type="content" source="media/kubernetes-workload-protections/containers-settings.png" alt-text="Screenshot showing the settings button in the Defender plan." lightbox="media/kubernetes-workload-protections/containers-settings.png":::
 
-1. In the Settings & Monitoring page, toggle the "Azure Policy for Kubernetes" to **On**.
+1. In the Settings & Monitoring page, toggle the **Azure Policy for Kubernetes** to **On**.
 
       :::image type="content" source="media/kubernetes-workload-protections/toggle-on-extensions.png" alt-text="Screenshot showing the toggles used to enable or disable the extensions." lightbox="media/kubernetes-workload-protections/toggle-on-extensions.png":::
 
@@ -73,11 +73,15 @@ If you disabled the "Azure Policy Extension for Azure Arc" settings under the GC
 You can manually configure the Azure Policy for Kubernetes on existing Kubernetes clusters through the Recommendations page. Once enabled, the hardening recommendations become available (some of the recommendations require another configuration to work).
 
 > [!NOTE]
-> For AWS it isn't possible to do onboarding at scale using the connector, but it can be installed on all existing clusters or on specific clusters using the recommendation Azure Arc-enabled Kubernetes clusters should have the Azure policy extension for Kubernetes extension installed**.
+> For AWS, onboarding at scale using the connector isn't supported. However, you can install Azure Policy for Kubernetes on all existing clusters or on specific clusters by using the recommendation `Azure Arc-enabled Kubernetes clusters should have the Azure policy extension for Kubernetes extension installed`.
 
-**To deploy the** **Azure Policy for Kubernetes** **to specified clusters**:
+**To deploy the Azure Policy for Kubernetes to specified clusters**:
 
-1. From the recommendations page, search for the relevant recommendation:
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Navigate to **Microsoft Defender for Cloud** > **General** > **Recommendations**.
+
+1. Search for the relevant recommendation:
 
    - **Azure -** `"Azure Kubernetes Service clusters should have the Azure Policy add-on for Kubernetes installed"`
    - **GCP** - `"GKE clusters should have the Azure Policy extension"`.
