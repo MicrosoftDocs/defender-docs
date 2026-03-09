@@ -10,7 +10,7 @@ ms.reviewer: rlitinsky
 
 This article describes how to configure Windows event auditing.
 
-Defender for Identity uses Windows event log entries to detect specific activities. This data is used in various detection scenarios and can be used in advanced hunting queries. For optimal protection and monitoring, make sure that collection of Windows events is properly configured.
+Defender for Identity uses Windows event log entries to detect specific activities. This data is used in various detection scenarios and can be used in advanced hunting queries. For optimal protection and monitoring, make sure that you properly configure the collection of Windows events.
 
 Defender for Identity generates health alerts when it detects incorrect Windows event auditing configurations. For more information, see [Microsoft Defender for Identity health alerts](../health-alerts.md).
 
@@ -18,7 +18,7 @@ If you configure auditing properly, it has minimal effect on server performance.
 
 ## Before you begin
 
-Before you begin configuring windows event collection, we recommend that you run a PowerShell script to check your current configuration and generate a report of any adjustments you need to make:
+Before you begin configuring Windows event collection, run a PowerShell script to check your current configuration and generate a report of any adjustments you need to make:
 
 1. Download the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).  
 1. Run the Defender for Identity `New-MDIConfigurationReport` PowerShell module to generate a report of your current Windows event auditing configuration.
@@ -39,9 +39,9 @@ Before you begin configuring windows event collection, we recommend that you run
     New-MDIConfigurationReport -Path "C:\Reports" -Mode Domain -OpenHtmlReport
     ```
 
-    For more information, see: [New-MDIConfigurationReport](/powershell/module/defenderforidentity/new-mdiconfigurationreport?view=defenderforidentity-latest&preserve-view=true).
+    For more information, see [New-MDIConfigurationReport](/powershell/module/defenderforidentity/new-mdiconfigurationreport?view=defenderforidentity-latest&preserve-view=true).
 
-1. Review the report and make any necessary adjustments before configuring windows event collection.
+1. Review the report and make any necessary adjustments before configuring Windows event collection.
 
 ## Configure Defender for Identity to collect Windows events automatically (Preview)
 
@@ -82,7 +82,7 @@ This section includes instructions for manually configuring Windows event collec
 - [Configure auditing on Microsoft Entra Connect](#configure-auditing-on-microsoft-entra-connect)
 - [Configure auditing on the Configuration container](#configure-auditing-on-the-configuration-container)
 
-### Configure auditing on domain controllers
+### Configure auditing on a domain controller
 
 To configure auditing on a domain controller, complete the following steps:
 
@@ -166,7 +166,7 @@ For more information, see the [auditpol reference documentation](/windows-server
 
 #### Configure NTLM auditing
 
-When a Defender for Identity sensor parses Windows event 8004, Defender for Identity NTLM authentication activities are enriched with the server-accessed data. This section describes the configuration steps that you need for auditing Windows event 8004.
+When a Defender for Identity sensor parses Windows event 8004, it enriches Defender for Identity NTLM authentication activities with the server-accessed data. This section describes the configuration steps for auditing Windows event 8004.
 
 > [!NOTE]
 > Apply domain group policies to collect Windows event 8004 *only* to domain controllers.
@@ -249,17 +249,6 @@ To configure domain object auditing:
 This section describes how to modify your Active Directory Federation Services (AD FS) audit configurations for Defender for Identity.
 
 
-#### Configure AD FS event auditing in AD FS Management
-
-1. Select **Start** > **Programs** > **Administrative Tools** > **AD FS Management**.
-1. Go to **Actions** > **Edit Federation Service Properties**.
-1. Select the **Events** tab.
-1. Select the **Success audits** and **Failure audits** check boxes.
-1. Select **OK**.
-
-    :::image type="content" source="media/configure-windows-event-collection/federation-services-dialog.png" alt-text="Screenshot that shows the Federation service properties page." lightbox="media/configure-windows-event-collection/federation-services-dialog.png":::
-
-
 #### Configure a Group Policy for event auditing
 
 1. Create a group policy to apply to your Active Directory Federation Services (AD FS).
@@ -272,13 +261,22 @@ This section describes how to modify your Active Directory Federation Services (
    :::image type="content" source="media/configure-windows-event-collection/group-policy-management-editor.png" alt-text="Screenshot of the advanced auditing audit policy configuration.":::
 
 
+#### Configure AD FS event auditing in AD FS Management
+
+1. Select **Start** > **Programs** > **Administrative Tools** > **AD FS Management**.
+1. Go to **Actions** > **Edit Federation Service Properties**.
+1. Select the **Events** tab.
+1. Select the **Success audits** and **Failure audits** check boxes.
+1. Select **OK**.
+
+    :::image type="content" source="media/configure-windows-event-collection/federation-services-dialog.png" alt-text="Screenshot that shows the Federation service properties page." lightbox="media/configure-windows-event-collection/federation-services-dialog.png":::
 
    
 #### Configure Verbose logging for AD FS events
 
 Sensors running on AD FS servers must have the auditing level set to **Verbose** for relevant events. 
 
-You can use the following PowerShell command to configure the auditing level to **Verbose**:
+Use the following PowerShell command to configure the auditing level to **Verbose**:
 
 ```powershell
 Set-AdfsProperties -AuditLevel Verbose
@@ -379,7 +377,7 @@ Get-MDIConfiguration [-Mode] <String> [-Configuration] <String[]>
 
 Where:
 
-- `Mode` specifies whether you want to use `Domain` or `LocalMachine` mode. In `Domain` mode, the settings are collected from the Group Policy objects. In `LocalMachine` mode, the settings are collected from the local machine.
+- `Mode` specifies whether to use `Domain` or `LocalMachine` mode. In `Domain` mode, the settings come from the Group Policy objects. In `LocalMachine` mode, the settings come from the local machine.
 - `Configuration` specifies which configuration to get. Use `All` to get all configurations.
 
 **To configure your settings**:
@@ -390,7 +388,7 @@ Set-MDIConfiguration [-Mode] <String> [-Configuration] <String[]> [-CreateGpoDis
 
 Where:
 
-- `Mode` specifies whether you want to use `Domain` or `LocalMachine` mode. In `Domain` mode, the settings are collected from the Group Policy objects. In `LocalMachine` mode, the settings are collected from the local machine.
+- `Mode` specifies whether to use `Domain` or `LocalMachine` mode. In `Domain` mode, the settings come from the Group Policy objects. In `LocalMachine` mode, the settings come from the local machine.
 - `Configuration` specifies which configuration to set. Use `All` to set all configurations.
 - `CreateGpoDisabled` specifies if the GPOs are created and kept as disabled.
 - `SkipGpoLink` specifies that GPO links aren't created.
