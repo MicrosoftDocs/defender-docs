@@ -23,13 +23,9 @@ appliesto:
   - Microsoft Defender for Business
   - Microsoft Defender for Individuals
   - Microsoft Defender Antivirus
-
 ---
+
 # Detect and block potentially unwanted applications
-
-
-
-## What are potentially unwanted applications?
 
 Potentially unwanted applications (PUA) are a category of software that can cause your machine to run slowly, display unexpected ads, or at worst, install other software that might be unexpected or unwanted. PUA isn't considered a virus, malware, or other type of threat, but it might perform actions on endpoints that adversely affect endpoint performance or use. The term *PUA* can also refer to an application that has a poor reputation, as assessed by Microsoft Defender for Endpoint, due to certain kinds of undesirable behavior.
 
@@ -98,20 +94,20 @@ The notification appears in the usual [quarantine list within the Windows Securi
 
 ## Configure PUA protection in Microsoft Defender Antivirus
 
-You can enable PUA protection with Microsoft Defender for Endpoint Security Settings Management, [Microsoft Intune](/mem/intune/protect/device-protect), [Microsoft Configuration Manager](/mem/configmgr/protect/deploy-use/endpoint-protection), [Group Policy](/azure/active-directory-domain-services/manage-group-policy), or via [PowerShell cmdlets](/powershell/module/defender/?preserve-view=true&view=win10-ps).
+You can enable PUA protection with Microsoft Defender for Endpoint Security Settings Management, [Microsoft Intune](/intune/intune-service/protect/device-protect), [Microsoft Configuration Manager](/intune/configmgr/protect/deploy-use/endpoint-protection), [Group Policy](/azure/active-directory-domain-services/manage-group-policy), or via [PowerShell cmdlets](/powershell/module/defender/?preserve-view=true&view=win10-ps).
 
 At first, try using PUA protection in audit mode. It detects potentially unwanted applications without actually blocking them. Detections are captured in the Windows Event log. PUA protection in audit mode is useful if your company is conducting an internal software security compliance check and it's important to avoid false positives.
 
 Scenarios and default settings for PUA protection depend on whether devices are onboarded to Defender for Endpoint or Microsoft Defender for Business.
 
-##### Microsoft Defender Antivirus without devices onboarded to Defender for Endpoint
+### Microsoft Defender Antivirus without devices onboarded to Defender for Endpoint
 
 |Scenarios| Security intelligence update version |PUA protection default setting|
 | -------- | -------- | -------- |
 | Windows 10 or later<br/>Windows Server 2016 or later | older than 1.329.495.0 | Disabled (0) |
 | Windows 10 or later<br/>Windows Server 2016 or later | 1.329.495.0 or later | Audit mode (2) |
 
-##### Microsoft Defender Antivirus with devices onboarded to Defender for Endpoint Plan 1/Plan 2 or Defender for Business
+### Microsoft Defender Antivirus with devices onboarded to Defender for Endpoint Plan 1/Plan 2 or Defender for Business
 
 | Scenarios |Security intelligence update version | Smart App Control| PUA protection default setting|
 | -------- | -------- | -------- | -------- |
@@ -130,22 +126,20 @@ Scenarios and default settings for PUA protection depend on whether devices are 
 
 ### Use Microsoft Defender for Endpoint Security Settings Management to configure PUA protection
 
-See the following articles:
-
-- [Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus](/defender-endpoint/mde-security-settings-management)
+For more information, see <a href="/intune/intune-service/protect/mde-security-integration" target="_blank" rel="noopener noreferrer">Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus</a>
 
 ### Use Intune to configure PUA protection
 
 See the following articles:
 
-- [Configure device restriction settings in Microsoft Intune](/mem/intune/configuration/device-restrictions-configure)
-- [Microsoft Defender Antivirus device restriction settings for Windows 10 in Intune](/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus)
+- [Configure device restriction settings in Microsoft Intune](/intune/intune-service/configuration/device-restrictions-configure)
+- [Microsoft Defender Antivirus device restriction settings for Windows 10 in Intune](/intune/intune-service/configuration/device-restrictions-windows-10#microsoft-defender-antivirus)
 
 ### Use Configuration Manager to configure PUA protection
 
 PUA protection is enabled by default in the Microsoft Configuration Manager (Current Branch).
 
-See [How to create and deploy anti-malware policies: Scheduled scans settings](/configmgr/protect/deploy-use/endpoint-antimalware-policies#real-time-protection-settings) for details on configuring Microsoft Configuration Manager (Current Branch).
+See [How to create and deploy anti-malware policies: Scheduled scans settings](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#real-time-protection-settings) for details on configuring Microsoft Configuration Manager (Current Branch).
 
 For System Center 2012 Configuration Manager, see [How to Deploy Potentially Unwanted Application Protection Policy for Endpoint Protection in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh508770(v=technet.10)#BKMK_PUA).
 
@@ -200,9 +194,8 @@ Setting the value for this cmdlet to `Disabled` turns off the feature if it has 
 
 #### To query the PUA status
 
-
 ```powershell
-get-mpPreference | ft PUAProtection
+Get-MpPreference | Format-Table PUAProtection
 ```
 
 |Value | Description|
@@ -260,7 +253,6 @@ Sometimes a file is erroneously blocked by PUA protection, or a feature of a PUA
 
 For more information, see [Configure and validate exclusions based on file extension and folder location](configure-extension-file-exclusions-microsoft-defender-antivirus.md).
 
-
 ## See also
 
 - [Next-generation protection](microsoft-defender-antivirus-windows.md)
@@ -269,6 +261,3 @@ For more information, see [Configure and validate exclusions based on file exten
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 - [Configure Defender for Endpoint on Android features](android-configure.md)
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-
-
-

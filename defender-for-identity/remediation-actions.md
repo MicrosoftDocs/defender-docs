@@ -63,6 +63,7 @@ Depending on your Microsoft Entra ID roles, you might see additional Microsoft E
 > [!NOTE]
 > There are some limitations for Microsoft Entra ID when performing certain actions on other roles. For more information, see the [Graph API documentation](/graph/api/resources/users?view=graph-rest-1.0&preserve-view=true ).
 
+
 ## Related videos
 
 [Remediation actions in Defender for Identity](https://learn-video.azurefd.net/vod/player?id=adc6068b-225c-457d-b053-db6b64dedb79)

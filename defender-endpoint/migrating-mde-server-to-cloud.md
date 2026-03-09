@@ -18,10 +18,9 @@ search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
-# Migrate servers from Microsoft Defender for Endpoint to Microsoft Defender for Servers
 
+# Migrate servers from Microsoft Defender for Endpoint to Microsoft Defender for Servers
 
 This article describes how to migrate your servers from Defender for Endpoint to Defender for Servers.
 
@@ -39,7 +38,7 @@ If you have servers onboarded to Defender for Endpoint, the migration process va
 
 Before you enable Defender for Cloud, it's important to know how to manage antivirus policies and define any needed exclusions. See the following articles:
 
-- [Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus](mde-security-settings-management.md)
+- <a href="/intune/intune-service/protect/mde-security-integration" target="_blank" rel="noopener noreferrer">Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus</a>
 - [Manage Microsoft Defender Antivirus in your business](configuration-management-reference-microsoft-defender-antivirus.md)
 - [Defender for Endpoint exclusions](navigate-defender-endpoint-antivirus-exclusions.md)
 - [Managing exclusions reference](managing-exclusions.md)
