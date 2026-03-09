@@ -41,7 +41,7 @@ Details include additional containers affected by that vulnerability, informatio
 
     :::image type="content" source="media/view-and-remediate-vulnerabilities-for-images-running-on-aks/running-list-vulnerabilities.png" alt-text="Screenshot showing the container vulnerabilities." lightbox="media/view-and-remediate-vulnerabilities-for-images-running-on-aks/running-list-vulnerabilities.png":::
 
-To find all containers impacted by a specific vulnerability, see [Group recommendations by title](review-security-recommendations.md#group-recommendations-by-title).
+To find all containers impacted by a specific vulnerability, see [Group recommendations by title](review-security-recommendations.md#resource-views).
 
 For information on how to remediate the vulnerabilities, see [Remediate recommendations](implement-security-recommendations.md).
 
