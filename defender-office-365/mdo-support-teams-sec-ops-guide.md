@@ -71,8 +71,8 @@ SecOps team members can triage and respond to false positive Teams messages (goo
 
 SecOps team members can also use allow entries in the Tenant Allow/Block List to allow the misclassified indicators:
 
-- URLs misidentified by Defender for Office 365 via the [URL tab on the Submissions page](submissions-admin#report-good-urls-to-microsoft). URL allows entries are enforced at time of click in Teams when [Teams integration in Safe Links policies is turned on](mdo-support-teams-quick-configure.md#step-2-verify-safe-links-integration-for-microsoft-teams).
-- Files by using the SHA256 hash value from the [Email attachments tab on the Submissions page](submissions-admin#report-good-email-attachments-to-microsoft)
+- URLs misidentified by Defender for Office 365 via the [URL tab on the Submissions page](submissions-admin.md#report-good-urls-to-microsoft). URL allows entries are enforced at time of click in Teams when [Teams integration in Safe Links policies is turned on](mdo-support-teams-quick-configure.md#step-2-verify-safe-links-integration-for-microsoft-teams).
+- Files by using the SHA256 hash value from the [Email attachments tab on the Submissions page](submissions-admin.md#report-good-email-attachments-to-microsoft)
 
 > [!TIP]
 > Teams messages released from quarantine are available to senders and recipients in the original location in Teams chats and channel posts.
