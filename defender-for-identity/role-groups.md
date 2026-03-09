@@ -12,7 +12,7 @@ Microsoft Defender for Identity offers role-based security to safeguard data acc
 
 ## Unified role-based access control (RBAC)
 
-Users that are already [Global Administrators](/entra/identity/role-based-access-control/permissions-reference) or [Security Administrators](/entra/identity/role-based-access-control/permissions-reference) on your tenant's Microsoft Entra ID are also automatically Defender for Identity administrator. Microsoft Entra Global and Security Administrators don't need extra permissions to access Defender for Identity.
+Users that are already have the [Security Administrators](/entra/identity/role-based-access-control/permissions-reference) on your tenant's Microsoft Entra ID are also automatically Defender for Identity administrator. Microsoft Entra Security Administrators don't need extra permissions to access Defender for Identity.
 
 For other users, enable and use Microsoft 365 role-based access control (RBAC) to create custom roles and to support more Entra ID roles such as Security operator or Security Reader by default to manage access to Defender for Identity.
 
