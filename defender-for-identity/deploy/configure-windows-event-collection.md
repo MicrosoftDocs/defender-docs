@@ -249,6 +249,17 @@ To configure domain object auditing:
 This section describes how to modify your Active Directory Federation Services (AD FS) audit configurations for Defender for Identity.
 
 
+#### Configure AD FS event auditing in AD FS Management
+
+1. Select **Start** > **Programs** > **Administrative Tools** > **AD FS Management**.
+1. Go to **Actions** > **Edit Federation Service Properties**.
+1. Select the **Events** tab.
+1. Select the **Success audits** and **Failure audits** check boxes.
+1. Select **OK**.
+
+    :::image type="content" source="media/configure-windows-event-collection/federation-services-dialog.png" alt-text="Screenshot that shows the Federation service properties page." lightbox="media/configure-windows-event-collection/federation-services-dialog.png":::
+
+
 #### Configure a Group Policy for event auditing
 
 1. Create a group policy to apply to your Active Directory Federation Services (AD FS).
@@ -260,15 +271,7 @@ This section describes how to modify your Active Directory Federation Services (
 
    :::image type="content" source="media/configure-windows-event-collection/group-policy-management-editor.png" alt-text="Screenshot of the advanced auditing audit policy configuration.":::
 
-#### Configure AD FS event auditing in AD FS Management
 
-1. Select **Start** > **Programs** > **Administrative Tools** > **AD FS Management**.
-1. Go to **Actions** > **Edit Federation Service Properties**.
-1. Select the **Events** tab.
-1. Select the **Success audits** and **Failure audits** check boxes.
-1. Select **OK**.
-
-    :::image type="content" source="media/configure-windows-event-collection/federation-services-dialog.png" alt-text="Screenshot that shows the Federation service properties page." lightbox="media/configure-windows-event-collection/federation-services-dialog.png":::
 
    
 #### Configure Verbose logging for AD FS events
