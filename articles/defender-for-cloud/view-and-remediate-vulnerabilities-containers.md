@@ -23,7 +23,7 @@ Details include additional containers affected by that vulnerability, informatio
 ## View vulnerabilities for a container
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
-1. Go to **Defender for Cloud > Recommendations**. 
+1. Go to **Microsoft Defender for Cloud > Recommendations**. 
 1. Search for `Containers running in Azure should have vulnerability findings resolved`
 
     :::image type="content" source="media/view-and-remediate-vulnerabilities-for-images-running-on-aks/running-image-recommendation-line.png" alt-text="Screenshot showing the recommendation line for running container images should have vulnerability findings resolved." lightbox="media/view-and-remediate-vulnerabilities-for-images-running-on-aks/running-image-recommendation-line.png":::
