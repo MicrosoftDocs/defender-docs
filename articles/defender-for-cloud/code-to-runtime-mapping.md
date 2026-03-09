@@ -51,7 +51,7 @@ Docker labels–based mapping relies on metadata embedded directly into the cont
 **Learn more:**
 
 - [OCI Docker image annotations specification](https://github.com/opencontainers/image-spec/blob/main/annotations.md)
-- [Add OCI/Docker labels in Azure DevOps](https://learn.microsoft.com/azure/devops/pipelines/tasks/reference/docker-v2?view=azure-pipelines&tabs=yaml)
+- [Add OCI/Docker labels in Azure DevOps](/azure/devops/pipelines/tasks/reference/docker-v2)
 - [Add labels in GitHub](https://github.com/docker/metadata-action?tab=readme-ov-file)
 - [Manually provide labels using the Dockerfile `LABEL` instruction](https://docs.docker.com/reference/dockerfile/)
 
