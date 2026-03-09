@@ -4,7 +4,7 @@ description: Learn how to use Microsoft Defender for Cloud's set of Kubernetes d
 ms.topic: how-to
 author: Elazark
 ms.author: elkrieger
-ms.date: 07/15/2025
+ms.date: 03/09/2026
 ---
 
 # Protect your Kubernetes data plane hardening
@@ -135,11 +135,11 @@ For recommendations with parameters that need to be customized, you need to set 
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
+1. Navigate to **Microsoft Defender for Cloud** > **Management** > **Environment settings**.
 
 1. Select the relevant subscription.
 
-1. From Defender for Cloud's menu, select **Security policy**.
+1. From Defender for Cloud's menu, select **Security policies**.
 
 1. Select the relevant assignment. The default assignment is `ASC default`.
 
