@@ -1,5 +1,5 @@
 ---
-title: Code to runtime - trace and fix cloud security issues at the source
+title: Code to runtime for recommendations
 description: Learn how to use code to runtime visibility to trace security issues from runtime back to source code and fix them at the origin to prevent recurrence.
 ms.date: 03/09/2026
 ms.topic: how-to
@@ -8,67 +8,13 @@ author: DebLanger
 #customer intent: As a security administrator, I want to trace runtime security issues back to their source code origin and understand the blast radius to fix issues effectively at the source.
 ---
 
-# Code to runtime: trace and fix cloud security issues at the source
+# Code to runtime for recommendations
 
 Modern cloud applications move through stages that include source code, pipelines, registries, and runtime environments. A small code change can create many container images and workloads across clusters and namespaces. When a security issue appears at runtime, you might not know where the issue starts or how many assets it affects.
 
 Code to runtime gives you end-to-end visibility across the software development lifecycle (SDLC). This feature helps you find the origin of an issue, assess its blast radius, and fix the issue at the source.
 
-## Code-to-Runtime (C2R) – Technical Prerequisites
-
-The following prerequisites are required to establish **code-to-runtime relationships**.
-
-### General Prerequisites (All Methods)
-
-The following prerequisites apply regardless of the mapping method used:
-
-- **Defender CSPM (Cloud Security Posture Management)** or **Defender for Containers** must be enabled on your cloud environment  
-  - A limited set of mapping capabilities is included with Defender for Containers.
-- Container images must be **built through a CI/CD pipeline**  
-  - Images that are manually built and pushed are not supported (in some cases, manually built/pushed images may still have mapping).
-- Container images must be **discoverable by Defender for Cloud**, either by:
-  - Being stored in a **supported container registry**, or
-  - Running in a **supported Kubernetes environment**
-
-### Method 1: Connect Your Code Environment to Defender for Cloud
-
-When you connect your code environment to Defender for Cloud, a set of automated tools is triggered automatically. These tools do **not** affect your existing DevOps workflows and enable code-to-runtime mapping.
-
->[!NOTE]
->
-> - Currently supported for **Azure DevOps** and **GitHub**
-> - Container images built and deployed **prior** to connecting may have limited support
-
-**Learn more:**
-
-- [Connect Azure DevOps to Defender for Cloud](quickstart-onboard-devops.md)
-- [Connect GitHub to Defender for Cloud](quickstart-onboard-github.md)
-
-### Method 2: Docker Labels–Based Mapping
-
-Docker labels–based mapping relies on metadata embedded directly into the container image at build time. Defender for Cloud extracts this metadata from the OCI/Docker image manifest and uses it to correlate the image to its source repository.
-
-**Learn more:**
-
-- [OCI Docker image annotations specification](https://github.com/opencontainers/image-spec/blob/main/annotations.md)
-- [Add OCI/Docker labels in Azure DevOps](/azure/devops/pipelines/tasks/reference/docker-v2)
-- [Add labels in GitHub](https://github.com/docker/metadata-action?tab=readme-ov-file)
-- [Manually provide labels using the Dockerfile `LABEL` instruction](https://docs.docker.com/reference/dockerfile/)
-
->[!NOTE]
->
->- This method does **not** require a DevOps connector.
->- Mapping is performed for Defender CSPM or Defender for Containers–covered Kubernetes environments.
-
-### Method 3: GitHub Attestations–Based Mapping
-
-Attestation-based mapping uses **cryptographically verifiable provenance metadata** generated during GitHub Actions workflows. These attestations link container images to their exact source repository, commit, and build identity.
-
-**Learn more:**
-
-- [Using artifact attestations to establish provenance for builds – GitHub Docs](https://docs.github.com/en/actions/how-tos/secure-your-work/use-artifact-attestations/use-artifact-attestations)
-
-## Where you see Code to runtime
+## Where you see code to runtime
 
 You access code to runtime from recommendations in Microsoft Defender for Cloud.
 
