@@ -55,20 +55,11 @@ For detailed licensing information, see [Product Terms: Microsoft Defender for E
 > The Microsoft Defender for Endpoint on Linux agent is independent from [Operation Management Suite (OMS) agent](/azure/azure-monitor/agents/azure-monitor-agent-overview#log-analytics-agent).
 > Microsoft Defender for Endpoint relies on its own independent telemetry pipeline.
 
-### External package dependencies
-
-The following external package dependencies exist for the mdatp package:
-
-- The mdatp RPM package requires `glibc >= 2.17`.
-- For DEBIAN, the mdatp package requires `libc6 >= 2.23`.
-
-To use [device isolation functionality](./respond-machine-alerts.md#isolate-devices-from-the-network), the following prerequisites must be enabled:
+To use [device isolation functionality](./respond-machine-alerts.md#isolate-devices-from-the-network), the following must be enabled:
 
 - `iptables`
 - `ip6tables`
 - Linux kernel with `CONFIG_NETFILTER`, `CONFIG_IP_NF_IPTABLES`, and `CONFIG_IP_NF_MATCH_OWNER` for kernel version lower than 5.x and `CONFIG_NETFILTER_XT_MATCH_OWNER` from 5.x kernel.
-
-If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the prerequisite dependencies.
 
 ## Network requirements
 
