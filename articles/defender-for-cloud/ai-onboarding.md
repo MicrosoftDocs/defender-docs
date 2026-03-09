@@ -19,6 +19,8 @@ Threat protection for AI services in Microsoft Defender for Cloud protects Micro
 
 - [Enable Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
+- Required permissions: To enable the plan, you need **Owner** or **Contributor** level.
+
 ## Enable threat protection for AI services
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
