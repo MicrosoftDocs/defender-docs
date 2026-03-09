@@ -1,4 +1,4 @@
-﻿---
+---
 title: Attack surface reduction rules reference
 description: Lists details about Microsoft Defender for Endpoint attack surface reduction rules on a per-rule basis.
 ms.service: defender-endpoint
@@ -701,5 +701,3 @@ Dependencies: Microsoft Defender Antivirus, Cloud Protection
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 
 - [Troubleshoot attack surface reduction rules](/defender-endpoint/troubleshoot-asr)
-
-
