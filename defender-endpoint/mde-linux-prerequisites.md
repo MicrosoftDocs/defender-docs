@@ -48,7 +48,7 @@ For detailed licensing information, see [Product Terms: Microsoft Defender for E
 
 ## Software requirements
 
-- Linux server endpoints should have systemd (system manager) installed.
+Linux server endpoints should have systemd (system manager) installed.
 
 > [!NOTE]
 > Linux distributions using system manager support both SystemV and Upstart.
@@ -63,11 +63,11 @@ To use [device isolation functionality](./respond-machine-alerts.md#isolate-devi
 
 ## Network requirements
 
-- Linux server endpoints should be able to access the endpoints documented in:
-   - [Microsoft Defender for Endpoint streamlined connectivity URLs - commercial](./streamlined-device-connectivity-urls-commercial.md) (commercial customers)
-   - [Microsoft Defender for Endpoint streamlined connectivity URLs - US government environments](./streamlined-device-connectivity-urls-gov.md) (US Government customers).
+Linux server endpoints should be able to access the endpoints documented in:
+- [Microsoft Defender for Endpoint streamlined connectivity URLs - commercial](./streamlined-device-connectivity-urls-commercial.md) (commercial customers)
+- [Microsoft Defender for Endpoint streamlined connectivity URLs - US government environments](./streamlined-device-connectivity-urls-gov.md) (US Government customers).
 
-   If necessary, [configure static proxy discovery](./linux-static-proxy-configuration.md).
+If necessary, [configure static proxy discovery](./linux-static-proxy-configuration.md).
 
 ### Verify if devices can connect to Defender for Endpoint cloud services
 
