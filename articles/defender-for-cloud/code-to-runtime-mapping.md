@@ -14,6 +14,8 @@ Modern cloud applications move through stages that include source code, pipeline
 
 Code to runtime gives you end-to-end visibility across the software development lifecycle (SDLC). This feature helps you find the origin of an issue, assess its blast radius, and fix the issue at the source.
 
+Before continueing, take a look at the [prerequisites](container-image-mapping.md).
+
 ## Where you see code to runtime
 
 You access code to runtime from recommendations in Microsoft Defender for Cloud.
@@ -38,7 +40,7 @@ When SDLC context is available, the recommendation page shows:
 When a runtime recommendation appears, Defender correlates data across the SDLC to identify:
 
 1. Where the issue originated (for example, in code or the build pipeline).
-1. Which intermediate stages are involved. These stages include the image in the registry and the pipeline that creates it.
+1. Which intermediate stages are involved. These stages include the image in the registry and the CI/CD pipeline that was part of the deployment.
 1. How many assets are affected, giving you visibility into the blast radius.
 1. Which actions you can take at each stage.
 
@@ -55,7 +57,7 @@ The SDLC chain provides a clear, linear path that explains how the affected work
 
 ## Understand the blast radius of the issue
 
-Before taking action, you can open the All impacted assets grid for more information:
+Before taking action, you can open the **All impacted assets** grid for more information:
 
 1. The list shows the impacted assets from the same source. It includes assets in the cloud environment or code environment. Fixing the issue at the source can impact all the affected assets either by automated CI/CD processes or by manual deployment of new code.
 1. You can filter the list based on your preferences. For example, you can filter runtime assets by namespace to assign the issue to a specific development team. You can also filter by relevant asset metadata, such as image tags, labels and so on.

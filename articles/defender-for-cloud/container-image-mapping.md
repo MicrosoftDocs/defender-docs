@@ -94,3 +94,4 @@ The following is an example of an advanced query that utilizes container image m
 ## Next steps
 
 - Learn more about [DevOps security in Defender for Cloud](defender-for-devops-introduction.md).
+- Learn more about [Code to runtime for recommendations](code-to-runtime-mapping.md)
