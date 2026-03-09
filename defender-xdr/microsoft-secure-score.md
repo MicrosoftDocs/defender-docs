@@ -17,7 +17,7 @@ ms.topic: article
 search.appverid:
 - MOE150
 - MET150
-ms.date: 04/28/2025
+ms.date: 03/07/2026
 ---
 
 # Microsoft Secure Score
@@ -61,9 +61,9 @@ Your score is updated in real time to reflect the information presented in the v
 ### Key scenarios
 
 - [Check your current score](microsoft-secure-score-improvement-actions.md#check-your-current-score)
-- [Compare your score to organizations like yours](microsoft-secure-score-history-metrics-trends.md#compare-your-score-to-organizations-like-yours)
-- [View recommended actions and decide an action plan](microsoft-secure-score-improvement-actions.md#take-action-to-improve-your-score)
+- [View security recommendations and decide an action plan](microsoft-secure-score-improvement-actions.md#take-action-to-improve-your-score)
 - [Initiate work flows to investigate or implement](microsoft-secure-score-improvement-actions.md#view-recommended-action-details)
+- [Compare your score to organizations like yours](microsoft-secure-score-history-metrics-trends.md#compare-your-score-to-organizations-like-yours)
 
 ### How recommended actions are scored
 
@@ -163,7 +163,7 @@ If you have any issues, let us know by posting in the [Defender XDR community](h
 
 ## Related resources
 
-- [Assess your security posture](microsoft-secure-score-improvement-actions.md)
+- [Assess your security posture and see recommendations](microsoft-secure-score-improvement-actions.md)
 - [Track your Microsoft Secure Score history and meet goals](microsoft-secure-score-history-metrics-trends.md)
 - [What's coming](whats-new.md)
 - [What's new](microsoft-secure-score-whats-new.md)

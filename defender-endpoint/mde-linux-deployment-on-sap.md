@@ -253,7 +253,7 @@ sudo mdatp diagnostic create
 
 - To analyze performance or other issues, see [Run the client analyzer on Linux](run-analyzer-linux.md).
 
-- Microsoft Intune doesn't support Linux at this time. See [Learn how to use Intune endpoint security policies to manage Microsoft Defender for Endpoint on devices that aren't enrolled with Intune](/mem/intune/protect/mde-security-integration).
+- Microsoft Intune doesn't support Linux at this time. See [Learn how to use Intune endpoint security policies to manage Microsoft Defender for Endpoint on devices that aren't enrolled with Intune](/intune/intune-service/protect/mde-security-integration).
 
 - [Microsoft Tech Community: Microsoft Defender for Endpoint Linux - Configuration and Operation Command List](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/microsoft-defender-for-endpoint-linux-configuration-and/ba-p/1577902)
 
