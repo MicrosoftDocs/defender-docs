@@ -60,7 +60,7 @@ To learn more about how Microsoft Defender for Endpoint performs these response 
 
 ## Quarantine files
 
-You can deploy the *quarantine* action on files so that they're automatically quarantined when encountered. When selecting this action, you can choose between the following columns to identify which files in your query results to quarantine:
+You can deploy the *quarantine* action on files so that the files are automatically quarantined when encountered. When selecting this action, you can choose between the following columns to identify which files in your query results to quarantine:
 
 - `SHA1`: In most advanced hunting tables, this column refers to the SHA-1 of the file that's affected by the recorded action. For example, if a file was copied, this affected file is the copied file.
 - `InitiatingProcessSHA1`: In most advanced hunting tables, this column refers to the file responsible for initiating the recorded action. For example, if a child process was launched, this initiator file is part of the parent process.
@@ -78,7 +78,7 @@ To take any of the described actions, select one or more records in your query r
 
 ## Take various actions on emails
 
-Apart from device-focused remediation steps, you can also take some actions on emails from your query results. Select the records you want to take action on, select **Take actions**, then under **Choose actions**, select your choice from the following options:
+Apart from device-focused remediation steps, you can also take some actions on emails from your query results. Select the records you want to take action on, select **Take actions**, and then under **Choose actions**, select your choice from the following options:
 
 - `Move to mailbox folder` - select this action to move the email messages to Junk, Inbox, or Deleted items folder.
 
@@ -104,10 +104,10 @@ Apart from device-focused remediation steps, you can also take some actions on e
 
 - `Submit to Microsoft` - select this action to submit false positive or false negative emails to Microsoft.
 
-  As part of the submission, you can also add URLs, top-level domains (TLDs), sender domains, and file attachments to the Tenant Allow/Block List to immediately resolve the issue while Microsoft evaluates the submission.
+  As part of the submission, you can also add URLs and URL domains, sender domains, and file attachments to the Tenant Allow/Block List to immediately resolve the issue while Microsoft evaluates the submission.
 
     > [!IMPORTANT]
-    > To block a URL or domain, join the [`EmailUrlInfo`](advanced-hunting-emailurlinfo-table.md) table with `NetworkMessageId` to get the required details. To block an attachment (file), join the [`EmailAttachmentInfo`](advanced-hunting-emailattachmentinfo-table.md) table with `NetworkMessageId` to get the file's hash.
+    > To block a URL or URL domain, join the [`EmailUrlInfo`](advanced-hunting-emailurlinfo-table.md) table with `NetworkMessageId` to get the required details. To block an attachment (file), join the [`EmailAttachmentInfo`](advanced-hunting-emailattachmentinfo-table.md) table with `NetworkMessageId` to get the file's hash.
 
   **Submit to Microsoft** might be disabled if mandatory columns are missing. To resolve this issue, select **Show empty columns** before you select **Take actions**.
 
