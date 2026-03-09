@@ -1,6 +1,6 @@
 ---
 title: Filter and split data transformations in Microsoft Sentinel
-description: Learn how to use filter and split data transformations to streamline ingestion, reduce costs, and route data between Analytics and Data Lake tiers in Microsoft Sentinel.
+description: Learn how to use filter and split data transformations to streamline ingestion, reduce costs, and route data between Analytics and Data lake tiers in Microsoft Sentinel.
 author: EdB-MSFT
 ms.author: edbaynash
 ms.service: microsoft-sentinel
@@ -20,13 +20,13 @@ This article describes how to configure filter and split data transformations to
 
 Data transformations allow you to optimize your security data pipeline by controlling what data is stored and where it's stored. Using filter and split transformations provides the following benefits:
 
-- **Cost optimization**: Reduce storage and processing costs by filtering out low-value data that doesn't contribute to threat detection. Route less frequently accessed data to cost-effective Data Lake storage while keeping high-priority data in the Analytics tier.
+- **Cost optimization**: Reduce storage and processing costs by filtering out low-value data that doesn't contribute to threat detection. Route less frequently accessed data to cost-effective Data lake storage while keeping high-priority data in the Analytics tier.
 
 - **Improved SOC efficiency**: Focus your security operations center (SOC) on actionable, high-value events. By removing noise at ingestion time, analysts spend less time sifting through irrelevant logs and more time investigating real threats.
 
 - **Faster query performance**: Smaller datasets in the Analytics tier result in faster query execution times. This improves the responsiveness of your threat hunting, incident investigations, and analytics rules.
 
-- **Compliance and retention flexibility**: Maintain comprehensive data retention for regulatory audits and forensic analysis in the Data Lake tier while optimizing the Analytics tier for operational workloads. This approach satisfies compliance requirements without sacrificing performance.
+- **Compliance and retention flexibility**: Maintain comprehensive data retention for regulatory audits and forensic analysis in the Data lake tier while optimizing the Analytics tier for operational workloads. This approach satisfies compliance requirements without sacrificing performance.
 
 - **Scalable data management**: As your organization's data volumes grow, transformations help you maintain control over costs and performance. Apply consistent policies across tables to ensure predictable data management.
 
@@ -45,7 +45,7 @@ Before you configure filter or split transformation rules, verify the following 
 Filter and split transformations have different table support requirements:
 
 - **Filtering**: Supported on any table that supports Data Collection Rules (DCRs).
-- **Splitting**: Supported on any table that supports Analytics only ingestion, Data Lake only ingestion, and Data Collection Rules (DCRs).
+- **Splitting**: Supported on any table that supports Analytics only ingestion, Data lake only ingestion, and Data Collection Rules (DCRs).
 
 To verify whether a connector's tables support DCRs, see [Find your Microsoft Sentinel data connector](data-connectors-reference.md).
 
@@ -67,10 +67,10 @@ Your enterprise relies on firewall logs to identify anomalies. However, most fir
 
 ## Understand split transformations
 
-Split transformations enable you to route data between the Analytics tier and the Data Lake tier based on specified conditions. Use a split transformation rule to define a KQL expression that determines which data lands in Analytics. Data that doesn't match the expression is routed to the Data Lake tier only.
+Split transformations enable you to route data between the Analytics tier and the Data lake tier based on specified conditions. Use a split transformation rule to define a KQL expression that determines which data lands in Analytics. Data that doesn't match the expression is routed to the Data lake tier only.
 
 > [!IMPORTANT]
-> When you configure a split transformation, data designated for the Analytics tier is also copied to the Data Lake tier. Data that doesn't match the Analytics criteria goes to the Data Lake tier only. This ensures that all your data remains available in the Data Lake for long-term retention and compliance purposes.
+> When you configure a split transformation, data designated for the Analytics tier is also copied to the Data lake tier. Data that doesn't match the Analytics criteria goes to the Data lake tier only. This ensures that all your data remains available in the Data lake for long-term retention and compliance purposes.
 
 :::image type="content" source="media/data-transformation-filter-split/split-rule-config.png" alt-text="Screenshot showing the split rule configuration dialog in Microsoft Sentinel." lightbox="media/data-transformation-filter-split/split-rule-config.png":::
 
@@ -78,13 +78,13 @@ Split transformations enable you to route data between the Analytics tier and th
 
 Use split transformations when you need to:
 
-- **Optimize storage costs**: Route older or less frequently accessed logs to the Data Lake tier for cost-effective long-term storage.
+- **Optimize storage costs**: Route older or less frequently accessed logs to the Data lake tier for cost-effective long-term storage.
 - **Maintain performance**: Keep recent logs in the Analytics tier for faster queries during active threat hunting.
 - **Meet compliance requirements**: Retain historical logs for regulatory audits and forensic analysis without sacrificing operational agility.
 
 ### Example: Optimize firewall log storage
 
-Your enterprise ingests millions of firewall log entries daily for threat detection and compliance. Your SOC team needs real-time access to recent logs for active investigations, but must also retain historical logs for regulatory audits. Create a split transformation rule to route real-time data to the Analytics tier and historical data to the Data Lake tier.
+Your enterprise ingests millions of firewall log entries daily for threat detection and compliance. Your SOC team needs real-time access to recent logs for active investigations, but must also retain historical logs for regulatory audits. Create a split transformation rule to route real-time data to the Analytics tier and historical data to the Data lake tier.
 
 ## Configure filter transformation rules
 
@@ -97,14 +97,14 @@ Follow these steps to create a filter transformation rule:
 :::image type="content" source="media/data-transformation-filter-split/table-properties-filter.png" alt-text="Screenshot showing the table properties in Microsoft Sentinel." lightbox="media/data-transformation-filter-split/table-properties-filter.png":::
 
 
-1. In the side panel, enter a *rule name**.
+1. In the side panel, enter a **Rule name**.
 
 1. In the **Condition** field, enter a KQL expression that designates which data is filtered out. The KQL expression should evaluate to true for data you don't want to ingest.
 1. Set the **rule status** switch to **On** to enable the filter.
 
 
 > [!IMPORTANT]
-> Filters filter data out. Data matching the filter condition is discarded and isn't ingested to either Analytics or Data Lake tiers. Ensure your KQL expression accurately captures the data you want to exclude.
+> Filters filter data out. Data matching the filter condition is discarded and isn't ingested to either Analytics or Data lake tiers. Ensure your KQL expression accurately captures the data you want to exclude.
 
 1. To add another condition, select **Add condition** and enter a new KQL expression to filter out data. Multiple conditions are combined with a logical OR, meaning data matching any of the conditions is filtered out.
 
@@ -120,36 +120,36 @@ Follow these steps to create a filter transformation rule:
 
 Follow these steps to create a split transformation rule:
 
-1. In the Microsoft Defender portal, go to **Microsoft Sentinel** > **Configuration** > **Tables**.
+1. To create a split rule, go to **Microsoft Sentinel** > **Configuration** > **Tables**.
 
 1. Select a table and then select **Split rule**.
 
-1. Enter the following information:
-
-   - **Rule name**: A descriptive name for the split rule.
-   - **KQL expression**: The Kusto Query Language expression that designates which data lands in the Analytics tier. Data that doesn't match this expression lands in the Data Lake tier.
+1. In the side panel, enter a **Rule name**.
+1. In the **KQL expression** field, enter the KQL expression that defines which data to ingest to the Analytics tier. Data that doesn't match this expression is ingested to the Data lake tier.
 
 1. Select **Save** to apply the rule.
 
 1. Verify that the split rule is applied by checking the **Transformation Rules** column for the table. The column displays **Split** when a split rule is active.
 
+> [!NOTE]
+> The split data that is ingested into the Data lake tier is ingested into a separate table with the same name as the original table with a "_SPLT" suffix. For example, if you apply a split rule to the "FirewallLogs" table, the data routed to the Data lake tier is ingested into a separate "FirewallLogs_SPLT" table. This allows you to manage retention and access policies separately for Analytics and Data lake tiers.
+
+:::image type="content" source="media/data-transformation-filter-split/split-rule.png" alt-text="Screenshot showing the split rule applied in the table list in Microsoft Sentinel." lightbox="media/data-transformation-filter-split/split-rule.png":::
+
 ### Configure retention for split tables
 
-After creating a split rule, you can configure retention settings for each tier:
+After creating a split rule, configure retention settings for each tier:
 
-1. Beneath the original table, view the resulting **Analytics** and **Data Lake** split tables.
+1. Under the original table, view the resulting **Analytics** and **Data lake** split tables.
 
-1. To configure Analytics tier retention:
-   - Select the Analytics table.
-   - Select **Data retention settings**.
-   - Configure the desired retention period and save.
+1. To configure retention, select the Analytics or Data lake table.
+1. Select **Data retention settings**.
+1. Configure the retention period and save.
 
-1. To configure Data Lake tier retention:
-   - Select the Data Lake table.
-   - Select **Data retention settings**.
-   - Configure the desired retention period and save.
+Alternatively, select the original table and configure both Analytics and Data lake retention from the combined **Data retention settings** dialog.
 
-1. Alternatively, select the original table and configure both Analytics and Data Lake retention from the combined **Data retention settings** dialog.
+::: image type="content" source="media/data-transformation-filter-split/retention-settings.png" alt-text="Screenshot showing the retention settings for split tables in Microsoft Sentinel." lightbox="media/data-transformation-filter-split/retention-settings.png":::
+
 
 ### Manage rules
 
@@ -162,9 +162,9 @@ Verify rules by running KQL queries to confirm that data is being ingested corre
 
 <!-- ### Pricing example
 
-Consider a scenario where 100 GB enters the pipeline, 50% is filtered out, and the remaining 50% is split between Analytics and Data Lake tiers:
+Consider a scenario where 100 GB enters the pipeline, 50% is filtered out, and the remaining 50% is split between Analytics and Data lake tiers:
 
-1. **Filtering and routing to Data Lake**: 100% of Data Lake tier data is charged for transformation. The filtered portion incurs no storage cost, while the routed portion is charged only for Data Lake ingestion.
+1. **Filtering and routing to Data lake**: 100% of Data lake tier data is charged for transformation. The filtered portion incurs no storage cost, while the routed portion is charged only for Data lake ingestion.
 
 1. **Filtering and routing to Analytics**: Data sent to Analytics isn't charged for transformation. The Analytics portion is stored at standard Analytics tier pricing. -->
 
