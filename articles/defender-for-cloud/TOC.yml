@@ -145,6 +145,9 @@
                 - name: Update Defender for SQL Servers on Machines plan configuration
                   displayName: SQL, SQL servers, defender, machines
                   href: update-sql-machine-configuration.md
+                - name: Identify SQL Servers protected by Microsoft Monitoring Agent
+                  displayName: SQL, SQL servers, defender, machines, identify, Microsoft Monitoring Agent, MMA
+                  href: identify-sql-servers-protected-by-monitor-agent.md
                 - name: Verify SQL machine protection
                   displayName: SQL, SQL servers, defender, machines
                   href: verify-machine-protection.md
@@ -531,6 +534,9 @@
             - name: Review security recommendations
               displayName: security, recommendations, owner, azure, resource, graph, azure resource graph, csv report
               href: review-security-recommendations.md
+            - name: Transition from grouped to individual recommendations
+              displayName: grouped, individual, recommendations, transition, legacy, dynamic, best practices
+              href: transition-grouped-individual-recommendations.md
             - name: Review resources exempted from recommendations
               displayName: review, exemptions, exempted, resources, recommendation, exempt
               href: review-exemptions.md

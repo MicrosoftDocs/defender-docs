@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 02/15/2026
+ms.date: 02/24/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -27,6 +27,105 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## March 2026
+
+| Date | Category | Update |
+| -------- | -------- | -------- |
+| March 04, 2026 | Deprecation | [Deprecation of preview of container and container images vulnerability recommendations](#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations) |
+| March 04, 2026 | Preview |[New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview)|
+
+### Deprecation of preview of container and container images vulnerability recommendations
+
+March 04, 2026
+
+As part of the transition to individual recommendations, Microsoft Defender for Cloud is deprecating existing grouped container vulnerability recommendations. This change enables more granular visibility, prioritization, and governance of container security findings.
+
+Grouped recommendations previously aggregated multiple findings under a single recommendation. These findings are now surfaced as individual recommendations, created per software update, vulnerability, secret, or issue type.
+
+During the transition period, grouped and individual recommendations may appear side by side. Grouped recommendations are on a deprecation path and will be removed in phases.
+
+The following grouped container vulnerability recommendations will be deprecated on April 13, 2026:
+
+**Container recommendations**
+
+- [Preview] Containers running in Azure should have vulnerability findings resolved
+- [Preview] Containers running in AWS should have vulnerability findings resolved
+- [Preview] Containers running in GCP should have vulnerability findings resolved
+
+**Container image recommendations**
+
+- [Preview] Container images in Azure registry should have vulnerability findings resolved
+- [Preview] Container images in AWS registry should have vulnerability findings resolved
+- [Preview] Container images in GCP registry should have vulnerability findings resolved
+
+Customers should update any queries, automation, governance rules, or workflows that rely on grouped recommendation keys to use individual recommendations and security categories instead.
+
+When querying individual recommendations, the same logic can be applied across cloud providers by adjusting the `Source` value.
+
+**Example: Container vulnerability recommendations**
+
+The following query allows customers to identify the new individual container vulnerability recommendations for containers running in Azure. To target containers running in AWS or GCP, change the `Source` value to `"AWS"` or `"GCP"`.
+
+```kusto
+securityresources
+| where type == "microsoft.security/assessments"
+| where properties.metadata.recommendationCategory == "SoftwareUpdate"
+| where properties.resourceDetails.ResourceType == "K8s-container"
+| where properties.resourceDetails.Source == "Azure"
+```
+
+**Example: Container image vulnerability recommendations**
+
+The following query allows customers to identify the new individual container image vulnerability recommendations in Azure container registries. To target AWS or GCP registries, update the `Source` value accordingly.
+
+```kusto
+securityresources
+| where type == "microsoft.security/assessments"
+| where properties.metadata.recommendationCategory == "SoftwareUpdate"
+| where properties.resourceDetails.ResourceType == ".containerimage"
+| where properties.resourceDetails.Source == "Azure"
+```
+
+Learn more about [security recommendations](review-security-recommendations.md) and [New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview).
+
+### New individual recommendations format in Azure portal (Preview)
+
+March 04, 2026
+
+Microsoft Defender for Cloud is converting grouped recommendations into individual recommendations in the Azure portal. This change reflects a shift from grouping related findings under one recommendation to listing each recommendation separately.
+
+**What's changing**
+
+You might see a longer list of recommendations than before. Combined findings (such as vulnerabilities, exposed secrets, or misconfigurations) now show as individual recommendations rather than nested under a parent recommendation.
+
+The grouped recommendations will still show side by side with the new format for now, but they will be deprecated in several months.
+
+The new individual recommendations are marked as **Preview** with additional **New version** tag. These tags indicate that the recommendation is in an early state and doesn't affect Secure Score yet, as well as allowing you to filter the recommendations by it.
+
+You can now manage exemptions at scale instead of for each recommendation.
+
+**Benefits**
+
+1. **Smart and accurate prioritization**
+
+   Each finding (such as vulnerabilities, exposed secrets, or misconfigurations) is now scored and prioritized individually, so you can focus on what actually reduces risk fastest.
+
+2. **Actionable context per finding**
+
+   Each recommendation gives clear risk context and remediation guidance, making it easier to understand what's wrong, why it matters, and how to fix it.
+
+3. **Better governance & tracking**
+
+   You apply targeted exemptions and measure security progress accurately.
+
+> [!NOTE]
+> The grouped recommendations still appear side by side with the new format for now, but they will be deprecated in several months.
+
+>[!Important]
+>To suport with the transition, learn more about best practices for [transitioning from grouped to individual recommendations](transition-grouped-individual-recommendations.md).
+
+Learn more about [reviewing security recommendations](review-security-recommendations.md).
+
 ## February 2026
 
 | Date | Category | Update |
@@ -39,7 +138,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | February 9, 2026| GA | [Simulate alerts for SQL servers on machines](#simulate-alerts-for-sql-servers-on-machines) |
 | February 3, 2026| Preview | [Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview) |
 |February 2, 2026| GA | [Updated CIEM recommendation logic](#updated-ciem-recommendation-logic) |
-|February 2, 2026| Preview | [Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview) |
+|February 2, 2026| Preview | [Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview) |
 
 ### Code to runtime for GitHub Advanced Security (Preview)
 
@@ -62,7 +161,7 @@ Learn more about [Code to runtime - trace and fix cloud security issues at the s
 
 ### Container runtime antimalware detection and blocking (Preview)
 
-February 20, 2026
+February 22, 2026
 
 Microsoft Defender for Cloud is announcing container runtime anti-malware detection and prevention in preview. This feature provides real-time detection and prevention of malware in containerized workloads across Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), and Google Kubernetes Engine (GKE) environments. With this release, you can create anti-malware rules to define conditions for generating alerts and blocking malware, helping you protect your clusters from threats while minimizing false positives.
 
@@ -118,7 +217,7 @@ Simulated alerts generates realistic alerts with full SQL and machine context on
 
 Learn how to [simulate alerts for SQL servers on machines](simulate-alerts-sql-machines.md).
 
-## Updated CIEM recommendation logic  
+### Updated CIEM recommendation logic  
 
 February 2, 2026
 
@@ -126,7 +225,7 @@ Cloud Infrastructure Entitlement Management (CIEM) recommendations are now avail
 
 This update changes how inactive identities and over-permissioned roles are evaluated and improves recommendation accuracy. It may affect existing recommendation results.
 
-### Key changes
+#### Key changes
 
 - Inactive identity detection now evaluates unused role assignments instead of sign-in activity.
 - The inactivity lookback window is extended to 90 days (previously 45 days).
@@ -134,7 +233,7 @@ This update changes how inactive identities and over-permissioned roles are eval
 - The Permissions Creep Index (PCI) metric is deprecated and no longer appears in recommendations.
 - CIEM onboarding no longer requires elevated high-risk permissions.
 
-### Cloud-specific considerations
+#### Cloud-specific considerations
 
 | Cloud | Details |
 |--------|---------|
@@ -144,9 +243,9 @@ This update changes how inactive identities and over-permissioned roles are eval
 
 Learn more about [permissions management in Defender for Cloud](permissions-management.md).
 
-### Threat protection for AI agents (Preview)
+### Threat protection for AI agents (Preview)
 
-February 2, 2026 
+February 2, 2026
 
 Microsoft Defender for Cloud now includes threat protection for AI agents built with Foundry, available in public preview as part of the Defender for AI Services plan. This new capability delivers advanced security from development through runtime, addressing high-impact, actionable threats aligned with OWASP guidance for LLM and agentic AI systems. 
 
