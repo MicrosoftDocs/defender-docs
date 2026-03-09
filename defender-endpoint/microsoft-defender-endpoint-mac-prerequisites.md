@@ -21,16 +21,13 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
   - Microsoft Defender for Individuals
-
 ---
-# Microsoft Defender for Endpoint on macOS prerequisites
 
+# Microsoft Defender for Endpoint on macOS prerequisites
 
 This article lists the prerequisites for installing and configuring Microsoft Defender for Endpoint on macOS. It also includes links to additional resources for more information.
 
-
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
-
 
 ## Prerequisites, installation, and configuration instructions
 
@@ -44,11 +41,12 @@ This article lists the prerequisites for installing and configuring Microsoft De
 
 ### System requirements
 
-These three most recent major releases of macOS are supported.
-- 26 (Tahoe)
+These three most recent major releases of macOS are supported:
 
+- 26 (Tahoe)
 - 15.0.1 (Sequoia)
 - 14 (Sonoma)
+
 > [!NOTE]
 > Beta versions of macOS aren't supported, but new releases of macOS are supported from day 1.
 
@@ -58,16 +56,16 @@ These three most recent major releases of macOS are supported.
 > [!CAUTION]
 > We recommend that you keep [System Integrity Protection](https://support.apple.com/HT204899) (SIP) enabled on client devices. SIP is a built-in macOS security feature that prevents low-level tampering with the OS, and is enabled by default.
 
-
 ### Enterprise deployment requirements
 
 There are several methods and deployment tools that you can use to centrally install and configure Defender for Endpoint on macOS across your devices:
 
 - [Microsoft Intune-based deployment](mac-install-with-intune.md)
-- [Security Settings Management](mde-security-settings-management.md)
+- <a href="/intune/intune-service/protect/mde-security-integration" target="_blank" rel="noopener noreferrer">Security Settings Management</a>
 - Non-Microsoft management tools:
-    - [Other Mobile Device Management products (including JAMF)](mac-install-with-other-mdm.md)
- 
+
+  [Other Mobile Device Management products (including JAMF)](mac-install-with-other-mdm.md)
+
 ### Manual deployment requirements
 
 You can also configure Defender for Endpoint on macOS locally
