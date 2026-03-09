@@ -177,7 +177,7 @@ If you experience any installation issues, self-troubleshooting resources are av
 
 ## Next steps
 
-- [Deploy Defender for Endpoint on Linux](/defender-endpoint/linux-install-with-defender-deployment-tool.md)
+- [Deploy Defender for Endpoint on Linux](./linux-install-with-defender-deployment-tool.md)
 - [Configure Defender for Endpoint on Linux](/defender-endpoint/linux-preferences)
 - [Deploy updates for Defender for Endpoint on Linux](/defender-endpoint/linux-updates)
 
