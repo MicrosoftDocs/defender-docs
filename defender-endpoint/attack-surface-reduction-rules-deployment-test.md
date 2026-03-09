@@ -77,9 +77,9 @@ You can use Microsoft Intune Endpoint Security to configure custom attack surfac
    > [!NOTE]
    > There are variations in some attack surface reduction rules mode listings; _Blocked_ and _Enabled_ provide the same functionality.
 
-1. [Optional] In the **Scope tags** pane, you can add tag information to specific devices. You can also use role-based access control and scope tags to make sure that the right admins have the right access and visibility to the correct Intune objects. Learn more: [Use role-based access control (RBAC) and scope tags for distributed IT in Intune](/mem/intune/fundamentals/scope-tags).
+1. [Optional] In the **Scope tags** pane, you can add tag information to specific devices. You can also use role-based access control and scope tags to make sure that the right admins have the right access and visibility to the correct Intune objects. Learn more: [Use role-based access control (RBAC) and scope tags for distributed IT in Intune](/intune/intune-service/fundamentals/scope-tags).
 
-1. In the **Assignments** pane, you can deploy or assign the profile to your user or device groups. For more information, see [Assign device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-assign#exclude-groups-from-a-profile-assignment).
+1. In the **Assignments** pane, you can deploy or assign the profile to your user or device groups. For more information, see [Assign device profiles in Microsoft Intune](/intune/intune-service/configuration/device-profile-assign#exclude-groups-from-a-profile-assignment).
 
    > [!NOTE]
    > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.

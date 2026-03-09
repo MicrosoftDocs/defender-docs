@@ -179,7 +179,6 @@ You can export all activities from the past six months by clicking the Export bu
 >   - Compliance Admin
 >   - Security Reader
 > - **Microsoft Entra ID Roles-** These roles must be assigned through [Microsoft Entra ID built-in roles](/entra/identity/role-based-access-control/permissions-reference):
->   - Global Administrator
 >   - Security Administrator
 >   - Cloud App Security Administrator
 >   - Global Reader
