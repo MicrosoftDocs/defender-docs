@@ -159,9 +159,9 @@ If you have onboarded the primary image of your VDI environment (SENSE service i
 The PsExec tool is required to start a command shell under the SYSTEM account, which is necessary to access and modify the registry paths referenced below.
 
 3. Open an elevated Command Prompt.  
-Select Start, type cmd, right‑click Command Prompt, and select Run as administrator.
+Select **Start**, type **cmd**, right‑click **Command Prompt**, and select **Run as administrator**.
 
-4. Ensure the sensor is stopped by running the following command in a CMD window:
+4. Ensure the sensor is stopped by running the following command in the CMD window:
 
    ```console
 
@@ -169,7 +169,7 @@ Select Start, type cmd, right‑click Command Prompt, and select Run as administ
 
    ```
 
-5. To reset local Microsoft Defender for Endpoint registration data, start a SYSTEM‑level command shell by running the following:
+5. To reset local Microsoft Defender for Endpoint registration data, start a **SYSTEM‑level** command shell by running the following:
 
    ```console
 
