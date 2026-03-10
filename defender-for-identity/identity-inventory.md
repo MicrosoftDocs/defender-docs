@@ -102,7 +102,7 @@ Nondefault columns: Email, Microsoft Entra ID risk level, and Cloud ID.
 
 The **Non-Human identities** tab consolidates all non-human identities in one place, making it easier to determine ownership and assess risk. To investigate details about a specific non-human identity, see [View a non-human identity](/defender-for-identity/investigate-non-human-identities).
 
-:::image type="content" source="media/identity-inventory/non-human-identities-page.png" alt-text="Screenshot of the non-human identities list in the identity inventory page in the Microsoft Defender portal.":::
+:::image type="content" source="media/identity-inventory/non-human-identities.png" alt-text="Screenshot of the non-human identities list in the identity inventory page in the Microsoft Defender portal.":::
 
 ### Non-Human identity stats
 
