@@ -68,7 +68,11 @@ Use queries before, during, and after a compromise to take the following actions
 
     Results from your proactive hunting provide early insight into events that might confirm that a compromise is in process, or at least show weaker areas in your environment that are at risk and need attention.
 
-- **During a compromise**:  Use [livestream](livestream.md) to run a specific query constantly, presenting results as they come in. Use livestream when you need to actively monitor user events, such as if you need to verify whether a specific compromise is still taking place, to help determine a threat actor's next action, and towards the end of an investigation to confirm that the compromise is indeed over.
+- **During a compromise**:  Actively monitor events to help determine a threat actor's next action, send notifications to the right people, and take action to stop an attack in progress.
+
+  - Use [KQL jobs](/azure/sentinel/datalake/kql-jobs) to monitor attacker behavior and persist query results in the Microsoft Sentinel data lake.
+  - Analyze persisted results with tools such as [Security Copilot](/copilot/security/investigate-incident-malicious-script), [Jupyter notebooks](./notebooks-hunt.md), [Advanced Hunting](/defender-xdr/advanced-hunting-microsoft-defender), and [KQL queries](/azure/sentinel/datalake/kql-queries).
+  - Send notifications to Teams, email, and other messaging platforms.
 
 - **After a compromise**:  After a compromise or an incident occurred, make sure to improve your coverage and insight to prevent similar incidents in the future.
 
@@ -77,6 +81,8 @@ Use queries before, during, and after a compromise to take the following actions
   - If you discovered or created a hunting query that provides high value insights into possible attacks, create custom detection rules based on that query and surface those insights as alerts to your security incident responders.
 
     View the query's results, and select **New alert rule** > **Create Microsoft Sentinel alert**. Use the **Analytics rule wizard** to create a new rule based on your query. For more information, see [Create custom analytics rules to detect threats](detect-threats-custom.md).
+
+  - [Export findings](/defender-xdr/manage-incidents#incident-logging-and-reporting) and link them to specific cases for improved SOC collaboration.
 
 You can also create hunting and queries over data stored in Azure Data Explorer. For more information, see details of [constructing cross-resource queries](/azure/azure-monitor/logs/azure-monitor-data-explorer-proxy) in the Azure Monitor documentation.
 
