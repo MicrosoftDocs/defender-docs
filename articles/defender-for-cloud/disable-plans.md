@@ -123,7 +123,31 @@ Auto‑provisioning can silently reinstall Defender for Cloud's agents or extens
 
 1. Toggle Guest configuration agent to **Off**.
 
-1. Toggle Endpoint protection to **Off**. 
+1. Toggle Endpoint protection to **Off**.
+
+1. Select **Continue**.
+
+1. Select **Save**.
+
+### [Disable Azure Policy assignments](#tab/disable-azure-policy-assignements)
+
+As a security measure, Defender for Cloud has Azure Policy initiatives that can automatically redeploy Defender for Cloud components if they are uninstalled. To prevent this, you need to identify and disable any relevant Azure Policy assignments.
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Serach for and select **Policy**.
+
+1. Select **Assignments**.
+
+    :::image type="content" source="media/disable-plans/policy-assignments.png" alt-text="Screenshot that shows where the assignments for policy is located in Azure." lightbox="media/disable-plans/policy-assignments.png":::
+
+1. Search policies starting with `Deploy Microsoft Defender for Endpoint...`.
+
+    :::image type="content" source="media/disable-plans/search-assignments.png" alt-text="Screenshot that shows the results of searching for the policy." lightbox="media/disable-plans/search-assignments.png":::
+
+1. Select each relevant policy assignment.
+
+1.  Select **Delete assignment**.
 
 ---
 
