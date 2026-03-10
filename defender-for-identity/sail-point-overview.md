@@ -7,7 +7,7 @@ ms.reviewer: himanch
 # customer-intent: As a security administrator, I want to understand what happens when I connect SailPoint to Microsoft Defender for Identity, so that I can decide whether to enable the integration.
 ---
 
-# How Microsoft Defender for Identity protects your SailPoint identity accounts
+# How Microsoft Defender for Identity protects your SailPoint identity accounts (Preview)
 
 As organizations increasingly adopt hybrid and multi-cloud environments, securing identities across platforms becomes critical.
 Microsoft Defender for Identity is a cloud-based security solution that helps protect your on-premises Active Directory and Azure Active Directory environments from advanced threats. 
