@@ -52,17 +52,16 @@ Begin the testing phase by turning on the attack surface reduction rules with th
 
 ### Configure attack surface reduction rules using Intune
 
-To use Microsoft Intune Endpoint Security to configure custom attack surface reduction rules, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
+To configure attack surface reduction rules using a Microsoft Intune Endpoint Security **Attack surface reduction** policy, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
 
+- **Policy type**: Attack surface reduction
 - **Platform**: Windows 10, Windows 11, and Windows Server
 - **Profile**: Attack Surface Reduction Rules
 - **Configuration settings**: Set all rules to **Audit mode** to assess impact before enforcement
 
 For more information about attack surface reduction profiles available in Microsoft Intune, see [Manage attack surface reduction settings with Microsoft Intune](/intune/intune-service/protect/endpoint-security-asr-policy#attack-surface-reduction-profiles).
 
-<!-- DEFENDER TASK: Ensure teh details for the configuration are clear enough for the reader to use successfully -->
-
-After your policy is created and assigned, return to this article to continue with testing and validation.
+After your policy is created and assigned, return to this article to continue with [testing and validation](#step-2-understand-the-attack-surface-reduction-rules-reporting-page-in-the-microsoft-defender-portal).
 
 <a name='step-2-understand-the-asr-rules-reporting-page-in-the-microsoft-365-defender-portal'></a>
 
