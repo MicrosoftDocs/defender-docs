@@ -94,6 +94,8 @@ Each card includes:
 - Actions required, the number of unresolved gaps.
 - The **Review and improve coverage** button. Select to see the list of gaps for this identity domain.
 
+If any servers or applications have health issues, the card displays a health notification. Select the notification to go to the **Health issues** tab, where you can review and resolve the issues.
+
 ### Entra ID identities card
 
 When you connect Microsoft Entra ID, the card provides risk insights based on Entra ID Protection. You can search Entra sign‑in events by using advanced hunting, correlate identities across environments, and receive security posture recommendations for Entra identities. The integration also enhances detections for OAuth applications and Entra ID accounts.
@@ -117,7 +119,7 @@ The on-premises identities card shows:
 | Active servers | X servers activated / Y servers in use. |
 | Actions required | Number of unresolved deployment gaps. |
 
-If any sensors have an unhealthy deployment, the card displays a notification. Select the notification to go to the **Health issues** page.
+The card displays a health notification if any servers or sensors have health issues. Select the notification to go to the **Health issues** tab, where you can review and resolve the issues.
 
 ### SaaS identities card
 
@@ -145,7 +147,11 @@ The PIM / PAM and IdPs card shows the following information:
 | Active connectors | X supported connectors identity providers / Y supported identity providers in use. |
 | Actions required | Number of unresolved deployment gaps. |
 
+> [!NOTE]
+> The number of PIM and PAM deployments doesn't affect the maturity score.
+
 ## Next steps
 
 - [Microsoft Defender for Identity deployment overview](/defender-for-identity/deploy/deploy-defender-identity)
 - [Enable instant visibility, protection, and governance actions for your apps](/defender-cloud-apps/enable-instant-visibility-protection-and-governance-actions-for-your-apps)
+- [Non-Microsoft identity and PAM integration](identity-security-overview.md)
