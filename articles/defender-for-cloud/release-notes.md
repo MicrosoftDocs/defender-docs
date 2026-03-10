@@ -31,7 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| March 10, 2026 | Preview | [On-demand malware scanning of Azure Files in Microsoft Defender for Storage](#On-demand-malware-scanning-of-azure-files-in-microsoft-defender-for-storage-preview) |
+| March 10, 2026 | Preview | [On-demand malware scanning of Azure Files in Microsoft Defender for Storage](#on-demand-malware-scanning-of-azure-files-in-microsoft-defender-for-storage-preview) |
 | March 04, 2026 | Deprecation | [Deprecation of preview of container and container images vulnerability recommendations](#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations) |
 | March 04, 2026 | Preview |[New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview)|
 
