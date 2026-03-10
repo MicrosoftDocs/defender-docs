@@ -31,7 +31,7 @@ This table includes supported releases for all supported platforms in the past s
 |macOS |101.25122.0007  |January 2026 |- Release version: 20.125122.7.0<br>- Engine version: 1.1.25100.3000<br>- Signature version: 1.443.820.0 |[Release details and updates](#macos--january-2026--platform-101251220007) |
 |macOS  |101.25122.0006  |January 2026 |- Release version: 20.125122.6.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--january-2026--platform-101251220006) |
 |Windows Antivirus |Platform 4.18.26010.5 / Engine 1.1.26010.1 |January 2026 |- Platform: 4.18.26010.5<br>- Engine: 1.1.26010.1<br>- Security intelligence: 1.443.820.0 |[Release details and updates](#windows-antivirus--january-2026--platform-418260105--engine-11260101) |
-|Linux  |101.25102.0005  |January 2026 |- Release version: 30.125102.0005.0<br>- Engine version: 1.1.25090.6000<br>- Signature version: 1.439.338.0 |[Release details and updates](#linux--january-2026--101251020005) |
+|Linux  |101.25102.0005  |January 2026 |- Release version: 30.125102.0005.0<br>- Engine version: 1.1.25090.6000<br>- Signature version: 1.439.338.0 |[Release details and updates](#linux--january-2026--platform-101251020005) |
 |Linux  |101.25092.0005  |December 2025 |- Release version: 30.125092.0005.0<br>- Engine version: 1.1.25090.4000<br>- Signature version: 1.437.18.0 |[Release details and updates](#linux--december-2025--platform-101250920005) |
 |Linux  |101.25092.0002  |December 2025 |- Release version: 30.125092.0002.0<br>- Engine version: 1.1.25090.4000<br>- Signature version: 1.437.18.0 |[Release details and updates](#linux--december-2025--platform-101250920002) |
 |Android |1.0.8412.0101  |December 2025 |- Build: 1.0.8412.0101<br>- Released: December 15, 2025 |[Release details and updates](#android--december-2025--platform-1084120101) |
@@ -286,7 +286,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 | Identity | Username information is now preserved for login events including nonexistent users. |
 | Diagnostics | Improved validation logic for log file permissions to provide more accurate `mdatp health` status reporting. |
 
-### Linux | January 2026 | 101.25102.0005
+### Linux | January 2026 | Platform: 101.25102.0005
 
 #### Release details
 

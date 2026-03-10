@@ -53,7 +53,7 @@ Learn more about [Preview features](/defender-xdr/preview).
 
 |Type  |Feature  |Preview/GA  |Description  |
 |----------|---------|------------|-------------|
-|Release - Linux |Build 101.25102.0005 |GA |Release version 30.125102.0005.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#linux--january-2026--101251020005). |
+|Release - Linux |Build 101.25102.0005 |GA |Release version 30.125102.0005.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#linux--january-2026--platform-101251020005). |
 |Release - macOS |Build 101.25122.0007 |GA |Release version 20.125122.7.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--january-2026--platform-101251220007). |
 |Release - macOS |Build 101.25122.0006 |GA |Release version 20.125122.6.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--january-2026--platform-101251220006). |
 |Feature |[Device vulnerabilities report](/defender-vulnerability-management/tvm-vulnerable-devices-report) enhancements |Preview |To simplify and streamline the Device vulnerabilities report experience, the Vulnerable devices report now includes several changes and enhancements ([learn more](#february-2026)).<br><br>**Note**: These changes are not yet visible to government cloud customers. |
