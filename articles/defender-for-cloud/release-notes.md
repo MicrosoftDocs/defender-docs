@@ -31,8 +31,22 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| March 12, 2026 | GA| [Severity‑based risk assignment for Not evaluated recommendations](#severity-based-risk-assignment-for-not-evaluated-recommendations) |
 | March 04, 2026 | Deprecation | [Deprecation of preview of container and container images vulnerability recommendations](#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations) |
 | March 04, 2026 | Preview |[New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview)|
+
+### Severity‑based risk assignment for Not evaluated recommendations
+March 12, 2026
+
+
+
+Recommendations that previously appeared as **Not evaluated** will now receive a risk level derived from the recommendation severity. As a result, these recommendations will now be prioritized in the recommendations list based on their assigned risk level. 
+
+This change may affect the overall status of recommendations and will also impact Secure Score, as previously unevaluated recommendations are now included in risk calculations. 
+
+For customers without Defender CSPM enabled, this update removes the **Not evaluated** risk state and replaces it with severity‑based risk. 
+
+To benefit from full contextual, environment‑aware risk evaluation, Defender CSPM must be enabled on the subscription.
 
 ### Deprecation of preview of container and container images vulnerability recommendations
 
