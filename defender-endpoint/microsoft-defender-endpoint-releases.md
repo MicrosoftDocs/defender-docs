@@ -19,12 +19,6 @@ To learn about Microsoft Defender for Endpoint features that aren't version-spec
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-## Who should read this article
-
-This page is intended primarily for customers with a Microsoft Defender for Endpoint license who regularly deploy, maintain, or validate Defender for Endpoint across their organization. These customers can use this page to find supported releases, component updates, and platform requirements as part of installing and operating Defender for Endpoint in their environments.
-
-For more information on Defender for Endpoint plans and licenses, see the [Microsoft 365 licensing guidance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
-
 ## All supported releases by date
 
 This table includes supported releases for all supported platforms in the past six months. Each release includes a link to the full release details section.
