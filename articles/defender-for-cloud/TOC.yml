@@ -1027,10 +1027,10 @@
           href: agentless-code-scanning.md
         - name: Configure code-to-runtime mapping
           items:
-            - name: Map IaC templates from code to cloud
-              href: iac-template-mapping.md
             - name: Map container images from code to cloud
               href: container-image-mapping.md
+            - name: Map IaC templates from code to cloud
+              href: iac-template-mapping.md
         - name: Defender for Cloud CLI
           items:
             - name: Overview
