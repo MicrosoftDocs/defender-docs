@@ -93,100 +93,100 @@
       - name: URL reputation demonstrations
         href: defender-endpoint-demonstration-smartscreen-url-reputation.md
  
-  - name: Deployment and configuration
+  - name: Deployment and onboarding
     items:
-      - name: Plan your deployment
+    - name: Plan your deployment
+      items:
+      - name: Overview
+        href: mde-planning-guide.md
+      - name: Step 1 - Prepare for deployment
+        href: production-deployment.md
+      - name: Step 2 - Assign roles and permissions
+        href: prepare-deployment.md
+      - name: Step 3 - Identify your architecture and select a deployment method
+        href: deployment-strategy.md
+      - name: Step 4 - Onboard devices to Defender for Endpoint
+        href: onboarding.md
+      - name: Step 5 - Configure Defender for Endpoint capabilities
+        href: onboard-configure.md
+
+    - name: Onboard and configure devices
+      items:
+      - name: Configure service connections
         items:
-        - name: Overview
-          href: mde-planning-guide.md
-        - name: Step 1 - Prepare for deployment
-          href: production-deployment.md
-        - name: Step 2 - Assign roles and permissions
-          href: prepare-deployment.md
-        - name: Step 3 - Identify your architecture and select a deployment method
-          href: deployment-strategy.md
-        - name: Step 4 - Onboard devices to Defender for Endpoint
-          href: onboarding.md
-        - name: Step 5 - Configure Defender for Endpoint capabilities
-          href: onboard-configure.md
-
-      - name: Onboard and configure devices
+        - name: Step 1 - Configure your network environment 
+          href: configure-environment.md
+        - name: Step 2 - Configure device proxy and Internet settings
+          href: configure-proxy-internet.md
+        - name: Step 3 - Verify client connectivity to service URLs
+          href: verify-connectivity.md            
+      - name: Configure streamlined connectivity
         items:
-        - name: Configure service connections
-          items:
-            - name: Step 1 - Configure your network environment 
-              href: configure-environment.md
-            - name: Step 2 - Configure device proxy and Internet settings
-              href: configure-proxy-internet.md
-            - name: Step 3 - Verify client connectivity to service URLs
-              href: verify-connectivity.md            
-        - name: Configure streamlined connectivity
-          items:
-            - name: Onboard devices using streamlined method
-              href: configure-device-connectivity.md
-            - name: Migrate devices to streamlined method
-              href: migrate-devices-streamlined.md        
-        - name: Enable access to service URLs
-          items:
-          - name: Streamlined device connectivity URLs (commercial)
-            href: streamlined-device-connectivity-urls-commercial.md
-          - name: Streamlined device connectivity URLs (US government)
-            href: streamlined-device-connectivity-urls-gov.md                                                           
-          - name: Standard device connectivity URLs
-            items: 
-            - name: Standard device connectivity URLs (commercial)
-              href: standard-device-connectivity-urls-commercial.md
-            - name: Standard device connectivity URLs (US government)
-              href: standard-device-connectivity-urls-gov.md 
+        - name: Onboard devices using streamlined method
+          href: configure-device-connectivity.md
+        - name: Migrate devices to streamlined method
+          href: migrate-devices-streamlined.md        
+      - name: Enable access to service URLs
+        items:
+        - name: Streamlined device connectivity URLs (commercial)
+          href: streamlined-device-connectivity-urls-commercial.md
+        - name: Streamlined device connectivity URLs (US government)
+          href: streamlined-device-connectivity-urls-gov.md                                                           
+        - name: Standard device connectivity URLs
+          items: 
+          - name: Standard device connectivity URLs (commercial)
+            href: standard-device-connectivity-urls-commercial.md
+          - name: Standard device connectivity URLs (US government)
+            href: standard-device-connectivity-urls-gov.md 
 
-        - name: Defender for Endpoint on Windows
-          items:                                                               
-          - name: Onboard client devices
-            items:
-            - name: Onboard Windows devices using the Defender deployment tool
-              href: defender-deployment-tool-windows.md
-            - name: Onboard client devices running Windows or macOS
-              href: onboard-client.md
-            - name: Defender for Endpoint plug-in for WSL
-              href: mde-plugin-wsl.md
-            - name: Onboard Windows devices to Defender for Endpoint using Intune
-              href: configure-endpoints-mdm.md
-            - name: Onboard Windows devices to Defender for Endpoint using Microsoft Configuration Manager
-              href: configure-endpoints-sccm.md
-            - name: Onboard Windows devices to Defender for Endpoint using Group Policy
-              href: configure-endpoints-gp.md
-            - name: Onboard Windows devices to Defender for Endpoint using a local script
-              href: configure-endpoints-script.md
-            - name: Onboard non-persistent virtual desktop infrastructure (VDI) devices
-              href: configure-endpoints-vdi.md
-            - name: Onboard Windows 10 multi-session devices in Azure Virtual Desktop
-              href: onboard-windows-multi-session-device.md
-            - name: Onboard previous versions of Windows
-              href: onboard-downlevel.md
-
-          - name: Onboard server devices
-            items:
-            - name: Onboard servers through Defender for Endpoint's experience
-              href: onboard-server.md
-            - name: Onboard Windows devices using Configuration Manager
-              href: configure-endpoints-sccm.md
-            - name: Onboard Windows devices using Group Policy
-              href: configure-endpoints-gp.md
-            - name: Onboard Windows devices using a local script
-              href: configure-endpoints-script.md
-            - name: Onboard non-persistent virtual desktop infrastructure (VDI) devices
-              href: configure-endpoints-vdi.md
-            - name: Direct onboarding with Defender for Cloud
-              href: /azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
-            - name: Defender for Endpoint on Windows Server with SAP
-              href: mde-sap-windows-server.md
-            - name: Deployment guidance for Defender for Endpoint on Linux for SAP
-              href: mde-linux-deployment-on-sap.md
-            - name: Use custom detection rules to protect SAPXPG
-              href: mde-sap-custom-detection-rules.md
-
-        - name: Defender for Endpoint on macOS
+      - name: Defender for Endpoint on Windows
+        items:                                                               
+        - name: Onboard client devices
           items:
+          - name: Onboard Windows devices using the Defender deployment tool
+            href: defender-deployment-tool-windows.md
+          - name: Onboard client devices running Windows or macOS
+            href: onboard-client.md
+          - name: Defender for Endpoint plug-in for WSL
+            href: mde-plugin-wsl.md
+          - name: Onboard Windows devices to Defender for Endpoint using Intune
+            href: configure-endpoints-mdm.md
+          - name: Onboard Windows devices to Defender for Endpoint using Microsoft Configuration Manager
+            href: configure-endpoints-sccm.md
+          - name: Onboard Windows devices to Defender for Endpoint using Group Policy
+            href: configure-endpoints-gp.md
+          - name: Onboard Windows devices to Defender for Endpoint using a local script
+            href: configure-endpoints-script.md
+          - name: Onboard non-persistent virtual desktop infrastructure (VDI) devices
+            href: configure-endpoints-vdi.md
+          - name: Onboard Windows 10 multi-session devices in Azure Virtual Desktop
+            href: onboard-windows-multi-session-device.md
+          - name: Onboard previous versions of Windows
+            href: onboard-downlevel.md
+
+        - name: Onboard server devices
+          items:
+          - name: Onboard servers through Defender for Endpoint's experience
+            href: onboard-server.md
+          - name: Onboard Windows devices using Configuration Manager
+            href: configure-endpoints-sccm.md
+          - name: Onboard Windows devices using Group Policy
+            href: configure-endpoints-gp.md
+          - name: Onboard Windows devices using a local script
+            href: configure-endpoints-script.md
+          - name: Onboard non-persistent virtual desktop infrastructure (VDI) devices
+            href: configure-endpoints-vdi.md
+          - name: Direct onboarding with Defender for Cloud
+            href: /azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
+          - name: Defender for Endpoint on Windows Server with SAP
+            href: mde-sap-windows-server.md
+          - name: Deployment guidance for Defender for Endpoint on Linux for SAP
+            href: mde-linux-deployment-on-sap.md
+          - name: Use custom detection rules to protect SAPXPG
+            href: mde-sap-custom-detection-rules.md
+
+      - name: Defender for Endpoint on macOS
+        items:
           - name: Deploy Defender for Endpoint on macOS
             items:
             - name: Microsoft Defender for Endpoint Prerequisites on macOS
