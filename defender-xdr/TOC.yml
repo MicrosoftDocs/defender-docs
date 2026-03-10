@@ -505,7 +505,7 @@
         - name: Investigate a human identity
           href: investigate-users.md
         - name: Investigate a non-human identity
-          href: /defender-for-identity/investigate-non-human-identities?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json  
+          href: investigate-non-human-identities.md
       - name: Identity security posture assessments
         href: ./identity-security/identity-security-assessments.md
       - name: Investigate and respond to identity threats
