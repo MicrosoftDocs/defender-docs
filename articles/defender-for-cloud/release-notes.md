@@ -39,7 +39,11 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 March 10, 2026
 
-On-demand malware scanning for Azure Files in Microsoft Defender for Storage, now in public preview, extends the existing on-demand malware scanning feature, enabling the scanning of entire Azure Storage accounts containing both blobs and files. Scans can be initiated from the Azure portal UI or via the REST API, supporting automation through Logic Apps, Automation playbooks, and PowerShell scripts. This feature uses Microsoft Defender Antivirus with the latest malware definitions for every scan and provides upfront cost estimation in the Azure portal before scanning.
+On-demand malware scanning for Azure Files in Microsoft Defender for Storage is now in preview. This preview extends the existing on-demand malware scan feature and lets you scan entire Azure Storage accounts that contain blobs and files.
+
+You can start scans in the Azure portal UI or with the Representational State Transfer (REST) application programming interface (API). You can also automate scans with Azure Logic Apps, Azure Automation playbooks, and PowerShell scripts.
+
+This feature uses Microsoft Defender Antivirus and applies the latest malware definitions for each scan. It also shows an upfront cost estimate in the Azure portal before you start a scan.
 
 For more information, see [On-demand malware scanning](on-demand-malware-scanning.md)
 
