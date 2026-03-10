@@ -58,9 +58,6 @@ Security teams might hesitate when systems take automatic action because respons
 
 Confidence in automatic attack disruption refers to detector precision, measured by signal-to-noise ratio (SNR). For containment actions, Defender maintains a confidence level of 99% or higher based on real production data. Defender evaluates each detector hit against a broad set of indicators to classify true positives and false positives by combining machine learning outputs, cross-workload correlation, and expert-led incident classification.
 
-> [!NOTE]
-> The 99%+ confidence threshold applies to containment actions taken as part of automatic attack disruption. [Predictive shielding](shield-predict-threats.md) actions use a different risk model and don't apply the same confidence threshold.
-
 Defender validates detectors in audit mode before broad release and gradually deploys only detectors that meet strict quality requirements. This process aims to keep false positives low while maintaining effective disruption of active attacks. Disruption detectors are continuously and dynamically evaluated to maintain detection quality and confidence.
 
 Microsoft security experts continuously review disruption activity, monitor anomalies, and assess impact to preserve high detection quality over time.
