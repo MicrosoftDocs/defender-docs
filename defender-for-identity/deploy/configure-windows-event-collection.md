@@ -128,7 +128,7 @@ This section describes how to modify your domain controller's Advanced Audit Pol
         > [!NOTE]
         > <a name=failure>*</a> These subcategories don't support failure events. We recommend adding them for auditing purposes in case they're implemented in the future. For more information, see [Audit Computer Account Management](/windows/security/threat-protection/auditing/audit-computer-account-management), [Audit Security Group Management](/windows/security/threat-protection/auditing/audit-security-group-management), and [Audit Security System Extension](/windows/security/threat-protection/auditing/audit-security-system-extension).
 
-    1. To configure **Audit Security Group Management**, under **Account Management**, double-click **Audit Security Group Management**, and then select **Configure the following audit events** for both **Success** and **Failure** events.
+    1. To configure **Audit Security Group Management**, under **Account Management**, select **Audit Security Group Management**, and then select **Configure the following audit events** for both **Success** and **Failure** events.
 
         :::image type="content" source="../media/configure-windows-event-collection/advanced-audit-policy-check-step-4.png" alt-text="Screenshot of the audit security group management properties log.":::
 
@@ -372,7 +372,7 @@ For more information, see the [Defender for Identity PowerShell reference](/powe
 
 The following commands show how to modify your domain controller's Advanced Audit Policy settings for Defender for Identity by using PowerShell.
 
-**To view your audit policies**:
+**To view your audit policies:**
 
 ```powershell
 Get-MDIConfiguration [-Mode] <String> [-Configuration] <String[]>
@@ -383,7 +383,7 @@ Where:
 - `Mode` specifies whether to use `Domain` or `LocalMachine` mode. In `Domain` mode, the settings come from the Group Policy objects. In `LocalMachine` mode, the settings come from the local machine.
 - `Configuration` specifies which configuration to get. Use `All` to get all configurations.
 
-**To configure your settings**:
+**To configure your settings:**
 
 ```powershell
 Set-MDIConfiguration [-Mode] <String> [-Configuration] <String[]> [-CreateGpoDisabled] [-SkipGpoLink] [-Force]
