@@ -1,5 +1,5 @@
 ---
-title: Security Alert Triage Agent overview in Microsoft Defender
+title: Microsoft Security Copilot Security Alert Triage Agent in Microsoft Defender
 description: Learn about the Security Alert Triage Agent, an autonomous agent in the Microsoft Defender ecosystem that helps security teams triage alerts at scale using AI-driven reasoning, prioritization, and enrichment.
 ms.service: defender-xdr
 f1.keywords:
@@ -23,7 +23,7 @@ appliesto:
 #customer intent: As a security analyst, I want to learn about the Security Alert Triage Agent in Microsoft Defender so that I can triage and classify security incidents efficiently at scale.
 ---
 
-# Security Alert Triage Agent overview
+# Microsoft Security Copilot Security Alert Triage Agent in Microsoft Defender
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -45,14 +45,14 @@ The Security Alert Triage Agent is a [Security Copilot agent](/copilot/security/
 - **Learning based on feedback:** For supported alerts, the agent incorporates analyst feedback to continuously improve future triage decisions while keeping humans in control. Over time, this feedback helps refine the agent’s behavior to better reflect organizational context and reduce manual follow‑up. This capability is currently available for phishing alerts only.
 
 
-## Supported workloads and alert types
+## Supported alert types
 
 The Security Alert Triage Agent currently supports these alert types in Microsoft Defender:
 
-| Incident type | Alert type |
-|:---|:---|
-| **Phishing alerts (Generally Available)** | Email and collaboration alerts, including phishing. |
-| **Container incident triage (Preview)** | Cloud alerts, including containers. |
+| Alert category | Alert type | Alert name |
+|:---|:---|:---|
+| **Phishing alerts (Generally Available)** | Email and collaboration alerts, including phishing. |  |
+| **Container incident triage (Preview)** | Cloud alerts, including containers. |  |
 
 ## Prerequisites
 
@@ -60,7 +60,7 @@ To run the Security Alert Triage Agent in your environment, you need:
 
 |Components|Details|
 |:---|:---|
-|Products|- Security Copilot and provisioned capacity in Security Compute Units (SCU). See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) or check whether you're entitled to SCUs as part of the [Microsoft Security Copilot inclusion model](/copilot/security/security-copilot-inclusion)</br> - [Supported products](#supported-workloads-and-alert-types) deployed and configured based on the alert tyhpe you want the agent to triage. |
+|Products|- Security Copilot and provisioned capacity in Security Compute Units (SCU). See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) or check whether you're entitled to SCUs as part of the [Microsoft Security Copilot inclusion model](/copilot/security/security-copilot-inclusion)</br> - [Supported products](#supported-alert-types) deployed and configured based on the alert type you want the agent to triage. |
 |Microsoft Defender required features|- Unified role-based access control (URBAC) enabled for Defender for Office 365. See [Activate URBAC settings](#activate-urbac-settings) for more information. </br> - Enable **Monitor reported messages in Outlook** in **User reported settings**. See [User reported settings](#configure-user-reported-settings) for more information </br> - The alert policy **Email reported by user as malware or phish** must be turned on. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information|
 | Plugins | The Phishing Triage Agent automatically activates these Security Copilot plugins: <br>- Microsoft Defender XDR<br>- Microsoft Threat Intelligence<br>- Phishing Triage Agent |
 
@@ -85,7 +85,7 @@ If you’re using a third-party email reporting tool, review [Options for third-
 The Phishing Triage Agent addresses phishing incidents that include alerts with the type **Email reported by user as malware or phish**. Ensure that you have the corresponding alert policy enabled. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information.
 
 > [!IMPORTANT]
-> The Phishing Triage Agent doesn't classify alerts that you suppress by using [suppression rules](/defender-endpoint/manage-suppression-rules).
+> The Phishing Triage Agent doesn't classify alerts suppressed by [alert tuning](investigate-alerts.md#tune-an-alert). Make sure to disable the **Auto-Resolve - Email reported by user as malware or phish** built-in alert tuning rule and any custom tuning rules that suppress this alert.
 
 ## Permissions required
 
