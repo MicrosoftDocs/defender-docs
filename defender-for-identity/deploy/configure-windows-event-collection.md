@@ -251,12 +251,6 @@ To configure domain object auditing:
 
 This section describes how to modify your Active Directory Federation Services (AD FS) audit configurations for Defender for Identity.
 
-
-### Configure auditing on AD FS
-
-This section describes how to modify your Active Directory Federation Services (AD FS) audit configurations for Defender for Identity.
-
-
 #### Configure a Group Policy for event auditing
 
 1. Create a group policy to apply to your Active Directory Federation Services (AD FS).
