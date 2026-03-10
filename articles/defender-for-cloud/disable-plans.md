@@ -121,7 +121,11 @@ Auto‑provisioning can silently reinstall Defender for Cloud's agents or extens
 
     :::image type="content" source="media/disable-plans/select-settings.png" alt-text="Screenshot that shows an example of where the settings button is located on the plans page." lightbox="media/disable-plans/select-settings.png":::
 
-1. 
+1. Toggle Guest configuration agent to **Off**.
+
+1. Toggle Endpoint protection to **Off**. 
+
+---
 
 ## Next step
 
