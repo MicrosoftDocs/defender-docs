@@ -23,8 +23,6 @@ appliesto:
 
 # Configure security settings in Microsoft Defender for Endpoint on Linux
 
-## Configure your security settings
-
 Microsoft Defender for Endpoint on Linux includes antivirus, anti-malware protection, endpoint detection, and response capabilities. This article summarizes important security settings to configure and includes links to other resources.
 
 |Settings|Description|
@@ -54,7 +52,7 @@ You can use the command line to configure specific settings, gather diagnostics,
 
 ### Defender for Endpoint Security Settings Management
 
-You can configure Defender for Endpoint on Linux in the Microsoft Defender portal at ([https://security.microsoft.com](https://security.microsoft.com)) using Defender for Endpoint Security Settings Management. For more information, including how to create, edit, and verify security policies, see [Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus](mde-security-settings-management.md).
+You can configure Defender for Endpoint on Linux in the Microsoft Defender portal at ([https://security.microsoft.com](https://security.microsoft.com)) using Defender for Endpoint Security Settings Management. For more information, including how to create, edit, and verify security policies, see <a href="/intune/intune-service/protect/mde-security-integration" target="_blank" rel="noopener noreferrer">Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus</a>.
 
 ### Configuration profile
 
@@ -176,7 +174,7 @@ The following configuration profile contains entries for all settings described 
         "enableRawSocketEvent":"disabled",
         "enableBootLoaderCalls":"disabled",
         "enableProcessCalls":"disabled",
-        "enablePseudofsCalls":"diabled",
+        "enablePseudofsCalls":"disabled",
         "enableEbpfModuleLoadEvents":"disabled",
         "sendLowfiEvents":"disabled"
       },

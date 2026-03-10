@@ -109,7 +109,7 @@ By default, lists that have been configured in local group policy and the Window
 
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
@@ -117,7 +117,7 @@ By default, lists that have been configured in local group policy and the Window
 
 ## Related topics
 
-- [Microsoft Intune](/mem/intune/protect/advanced-threat-protection-configure)
+- [Microsoft Intune](/intune/intune-service/protect/advanced-threat-protection-configure)
 - [Microsoft Defender Antivirus in Windows](microsoft-defender-antivirus-windows.md)
 - [Configure end-user interaction with Microsoft Defender Antivirus](configure-local-policy-overrides-microsoft-defender-antivirus.md)
 

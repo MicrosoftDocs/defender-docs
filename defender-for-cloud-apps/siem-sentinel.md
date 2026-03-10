@@ -102,7 +102,7 @@ The following table describes each field in the **McasShadowItReporting** schema
 
 | Field | Type | Description | Examples |
 | --- | --- | --- | --- |
-| **TenantId** | String | Workspace ID | b459b4u5-912x-46d5-9cb1-p43069212nb4 |
+| **TenantId** | String | Workspace ID | aaaabbbb-0000-cccc-1111-dddd2222eeee |
 | **SourceSystem** | String | Source system – static value | Azure |
 | **TimeGenerated [UTC]** | DateTime | Date of discovery data | 2019-07-23T11:00:35.858Z |
 | **StreamName** | String | Name of the specific stream | Marketing Department |

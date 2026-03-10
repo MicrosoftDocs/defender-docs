@@ -30,6 +30,9 @@ appliesto:
 
 Delete a file from live response library.
 
+> [!TIP]
+> You can also delete live response files from the [Library management](../configure-libraries-live-response.md) page in the Microsoft Defender portal.
+
 ## Limitations
 
 Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
