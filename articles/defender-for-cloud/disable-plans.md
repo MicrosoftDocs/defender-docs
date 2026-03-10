@@ -100,7 +100,7 @@ Defender for Cloud stops monitoring and onboarding all your resources after you 
 
 If you want to cancel your Microsoft Defender for Cloud subscription, you need to go through the subscription cancellation process in addition to disabling the plans.
 
-## Additional 
+## Ensure plans are fully disabled
 
 Even if a Defender plan is turned off at the subscription level, it can still be turned back on for a specific resource which can generate charges. Therefore, if you want to make sure that a plan is fully disabled for a specific resource, you should also check the resource level configuration for that plan.
 
@@ -150,6 +150,20 @@ As a security measure, Defender for Cloud has Azure Policy initiatives that can 
 1.  Select **Delete assignment**.
 
 ---
+
+## Verify disablement with billing
+
+After you disable plans, you can check your billing meters to verify that the plans are disabled and that you are no longer being charged for them. Billing meters can also reveal if any plan gets re-enabled after being turned off.
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Search for and select **Cost Management + Billing**.
+
+1. Select **Cost Management** > **Cost analysis**.
+
+    :::image type="content" source="media/disable-plans/cost-analysis.png" alt-text="Screenshot that shows where to find cost analysis in the Azure portal." lightbox="media/disable-plans/cost-analysis.png":::
+
+
 
 ## Next step
 
