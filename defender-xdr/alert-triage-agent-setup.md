@@ -1,6 +1,6 @@
 ---
-title: Set up the Alert Triage Agent
-description: Learn how to set up and configure the Alert Triage Agent in Microsoft Defender, including identity assignment and permissions configuration.
+title: Set up the Security Alert Triage Agent
+description: Learn how to set up and configure the Security Alert Triage Agent in Microsoft Defender, including identity assignment and permissions configuration.
 ms.service: defender-xdr
 f1.keywords:
 - NOCSH
@@ -20,14 +20,14 @@ search.appverid:
 ms.date: 01/25/2026
 appliesto:
 - Microsoft Defender XDR
-#customer intent: As a security administrator, I want to set up the Alert Triage Agent in Microsoft Defender so that it can automatically triage security alerts in my environment.
+#customer intent: As a security administrator, I want to set up the Security Alert Triage Agent in Microsoft Defender so that it can automatically triage security alerts in my environment.
 ---
 
-# Set up the Alert Triage Agent
+# Set up the Security Alert Triage Agent
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-This article walks you through the complete setup process for the Alert Triage Agent, including assigning an identity, configuring permissions, and getting the agent operational in your Microsoft Defender environment.
+This article walks you through the complete setup process for the Security Alert Triage Agent, including assigning an identity, configuring permissions, and getting the agent operational in your Microsoft Defender environment.
 
 ## Before you begin
 
@@ -35,7 +35,7 @@ Make sure you have the [permissions required](alert-triage-agent-prerequisites.m
 
 ## Launch the setup wizard
 
-Open the Alert Triage Agent setup wizard in one of two ways:
+Open the Security Alert Triage Agent setup wizard in one of two ways:
 
 - From the Security Store in the Microsoft Defender portal, as explained in [Deploy AI agents in Microsoft Defender](../defender-xdr/security-copilot-agents-defender.md#discover-and-deploy-agents-in-the-microsoft-defender-portal).
 - From the **Incidents** queue in the Microsoft Defender portal, select **Set up agent**.
@@ -86,9 +86,9 @@ In alignment with [the principle of least privileges](/entra/identity-platform/s
 
    :::image type="content" source="media/phishing-triage-agent/setup-assign-user.PNG" alt-text="Screenshot of the Connect with an existing user accout screen in the Phishing Triage Agent setup wizard" lightbox="media/phishing-triage-agent/setup-assign-user.PNG":::
 
-##### Alert Triage Agent required permissions
+##### Security Alert Triage Agent required permissions
 
-The Alert Triage Agent requires specific permissions to access the necessary data and perform its triage functions. The required permissions depend on the alert types and associated products you want the agent to work with.
+The Security Alert Triage Agent requires specific permissions to access the necessary data and perform its triage functions. The required permissions depend on the alert types and associated products you want the agent to work with.
 
 This table summarizes the required permissions and data scopes for each alert type:
 
@@ -106,7 +106,7 @@ To create a role:
 1. Ensure that the relevant Defender workloads are activated to allow the agent to effectively analyze alerts with comprehensive context. Follow the steps in [Activate URBAC settings](activate-defender-rbac.md).
 1. [Create a role](../defender-xdr/create-custom-rbac-roles.md#create-a-custom-role) with the required permissions or assign an existing role with these permissions to the agent.
 
-    Make sure to grant the agent access to all the [supported products](#supported-workloads-and-alert-types) you want to associate with the Alert Triage Agent.
+    Make sure to grant the agent access to all the [supported products](#supported-workloads-and-alert-types) you want to associate with the Security Alert Triage Agent.
 
     :::image type="content" source="/defender-xdr/media/phishing-triage-agent/agent-permissions-sources.png" alt-text="Screenshot of required data sources for Phishing Triage" lightbox="/defender-xdr/media/phishing-triage-agent/agent-permissions-sources.png":::
 
@@ -117,7 +117,7 @@ To create a role:
 
 ## Complete setup
 
-After assigning the identity and permissions, the setup wizard guides you through the final configuration steps. Once complete, the Alert Triage Agent is active and ready to begin triaging alerts automatically.
+After assigning the identity and permissions, the setup wizard guides you through the final configuration steps. Once complete, the Security Alert Triage Agent is active and ready to begin triaging alerts automatically.
 
 The agent:
 - Automatically activates the required Security Copilot plugins.
@@ -129,7 +129,7 @@ After setup is complete, you can verify the agent is working correctly by:
 
 - Checking the agent status by selecting **Security Copilot > Agents** from the Microsoft Defender portal menu.
 - Monitoring the incident queue for agent activity.
-- Reviewing agent metrics on the Alert Triage Agent dashboard.
+- Reviewing agent metrics on the Security Alert Triage Agent dashboard.
 
 ## Next steps
 
@@ -138,6 +138,6 @@ After setup is complete, you can verify the agent is working correctly by:
 
 ## Related content
 
-- [Alert Triage Agent overview](alert-triage-agent-overview.md)
-- [Alert Triage Agent permissions and prerequisites](alert-triage-agent-prerequisites.md)
+- [Security Alert Triage Agent overview](alert-triage-agent-overview.md)
+- [Security Alert Triage Agent permissions and prerequisites](alert-triage-agent-prerequisites.md)
 - [Deploy AI agents in Microsoft Defender](security-copilot-agents-defender.md)

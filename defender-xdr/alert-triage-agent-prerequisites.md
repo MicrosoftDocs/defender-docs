@@ -1,6 +1,6 @@
 ---
-title: Alert Triage Agent permissions and prerequisites
-description: Review the prerequisites, permissions, and configuration requirements needed to run the Alert Triage Agent in Microsoft Defender.
+title: Security Alert Triage Agent permissions and prerequisites
+description: Review the prerequisites, permissions, and configuration requirements needed to run the Security Alert Triage Agent in Microsoft Defender.
 ms.service: defender-xdr
 f1.keywords:
 - NOCSH
@@ -20,18 +20,18 @@ search.appverid:
 ms.date: 01/25/2026
 appliesto:
 - Microsoft Defender XDR
-#customer intent: As a security administrator, I want to understand the prerequisites and permissions needed for the Alert Triage Agent so that I can properly prepare my environment for deployment.
+#customer intent: As a security administrator, I want to understand the prerequisites and permissions needed for the Security Alert Triage Agent so that I can properly prepare my environment for deployment.
 ---
 
-# Alert Triage Agent permissions and prerequisites
+# Security Alert Triage Agent permissions and prerequisites
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Before setting up the Alert Triage Agent, ensure your environment meets the necessary prerequisites and your organization has the required permissions configured. This article outlines the products, features, and permissions needed to successfully deploy and operate the Alert Triage Agent.
+Before setting up the Security Alert Triage Agent, ensure your environment meets the necessary prerequisites and your organization has the required permissions configured. This article outlines the products, features, and permissions needed to successfully deploy and operate the Security Alert Triage Agent.
 
 ## Prerequisites
 
-To run the Alert Triage Agent in your environment, you need:
+To run the Security Alert Triage Agent in your environment, you need:
 
 |Components|Details|
 |:---|:---|
@@ -41,7 +41,7 @@ To run the Alert Triage Agent in your environment, you need:
 
 ### Activate URBAC settings
 
-To ensures the agent has the necessary access to triage alerts, activate the URBAC settings for all of the [supported products](alert-triage-agent-overview.md#supported-workloads-and-alert-types) you want to associate with the Alert Triage Agent.
+To ensures the agent has the necessary access to triage alerts, activate the URBAC settings for all of the [supported products](alert-triage-agent-overview.md#supported-workloads-and-alert-types) you want to associate with the Security Alert Triage Agent.
 
 For more information, see [Activate workloads in Microsoft Defender XDR settings](activate-defender-rbac.md#activate-in-microsoft-defender-xdr-settings).
 
@@ -57,18 +57,18 @@ If you're using a third-party email reporting tool, review [Options for third-pa
 
 ### Add alert policy (for Microsoft Defender for Office 365)
 
-The Alert Triage Agent addresses phishing incidents that include alerts with the type **Email reported by user as malware or phish**. Ensure that you have the corresponding alert policy enabled. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information.
+The Security Alert Triage Agent addresses phishing incidents that include alerts with the type **Email reported by user as malware or phish**. Ensure that you have the corresponding alert policy enabled. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information.
 
 > [!IMPORTANT]
-> The Alert Triage Agent doesn't classify alerts that you suppress by using [suppression rules](/defender-endpoint/manage-suppression-rules).
+> The Security Alert Triage Agent doesn't classify alerts that you suppress by using [suppression rules](/defender-endpoint/manage-suppression-rules).
 
 ## Permissions required
 
-This table outlines the permissions required to perform various actions related to the Alert Triage Agent in the Defender portal.
+This table outlines the permissions required to perform various actions related to the Security Alert Triage Agent in the Defender portal.
 
 | **User action**                                              | **Permission required**                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| View agent results and teach agent through feedback | View agent results and provide feedback you need the same permissions as the agent, or higher. For more information, see [Alert Triage Agent required permissions](alert-triage-agent-setup.md#alert-triage-agent-required-permissions). |
+| View agent results and teach agent through feedback | View agent results and provide feedback you need the same permissions as the agent, or higher. For more information, see [Security Alert Triage Agent required permissions](alert-triage-agent-setup.md#alert-triage-agent-required-permissions). |
 | View  agent settings                                         | **Security  Copilot (read)** and **Security data  basics (read)** under the **Security operations** permissions  group in the Defender portal<br>OR<br>**Security Administrator** in Microsoft Entra ID |
 | View  feedback page | **Security  Copilot (read)**, **Security data basics  (read)**, and **Email & collaboration metadata (read)** under  the **Security operations** permissions group in the Defender  portal<br>OR<br>**Security Administrator** in Microsoft Entra ID |
 | Manage  agent settings (set up, pause, remove the agent, and manage agent identity) | **Security  Administrator** in Microsoft Entra ID            |
@@ -79,11 +79,11 @@ For more information about unified RBAC in the Defender portal, see [Microsoft D
 
 ## Next steps
 
-- [Set up the Alert Triage Agent](alert-triage-agent-setup.md)
+- [Set up the Security Alert Triage Agent](alert-triage-agent-setup.md)
 - [Learn how to use the agent](alert-triage-agent-usage.md)
 
 ## Related content
 
-- [Alert Triage Agent overview](alert-triage-agent-overview.md)
+- [Security Alert Triage Agent overview](alert-triage-agent-overview.md)
 - [Activate workloads in Microsoft Defender XDR settings](activate-defender-rbac.md)
 - [Microsoft Defender XDR Unified role-based access control (RBAC)](manage-rbac.md)

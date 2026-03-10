@@ -1,6 +1,6 @@
 ---
-title: Use the Alert Triage Agent
-description: Learn how to collaborate with the Alert Triage Agent, understand its decisions, and provide feedback to improve its performance in Microsoft Defender.
+title: Use the Security Alert Triage Agent
+description: Learn how to collaborate with the Security Alert Triage Agent, understand its decisions, and provide feedback to improve its performance in Microsoft Defender.
 ms.service: defender-xdr
 f1.keywords:
 - NOCSH
@@ -20,33 +20,33 @@ search.appverid:
 ms.date: 01/25/2026
 appliesto:
 - Microsoft Defender XDR
-#customer intent: As a security analyst, I want to understand how to work with the Alert Triage Agent and provide feedback so that I can improve its effectiveness in triaging alerts.
+#customer intent: As a security analyst, I want to understand how to work with the Security Alert Triage Agent and provide feedback so that I can improve its effectiveness in triaging alerts.
 ---
 
-# Use the Alert Triage Agent
+# Use the Security Alert Triage Agent
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Once the Alert Triage Agent is set up and running, it automatically begins triaging alerts in your environment. This article explains how to collaborate with the agent, understand its decisions, and provide feedback to continuously improve its performance.
+Once the Security Alert Triage Agent is set up and running, it automatically begins triaging alerts in your environment. This article explains how to collaborate with the agent, understand its decisions, and provide feedback to continuously improve its performance.
 
 ## How to collaborate with the agent
 
-The Alert Triage Agent is designed to enhance incident response by working alongside your security team. Understanding how to effectively collaborate with the agent helps maximize its impact on your security operations.
+The Security Alert Triage Agent is designed to enhance incident response by working alongside your security team. Understanding how to effectively collaborate with the agent helps maximize its impact on your security operations.
 
 ### Agent workflow in incidents
 
 To maintain transparency, the agent routinely updates incident fields during the triage process. When triaging starts, the agent assigns the alert to itself and adds an **Agent** tag to the corresponding incident. Analysts can filter the incident queue to see only incidents tagged by the agent, which simplifies oversight and prioritization.
 
 > [!TIP]
-> You can also filter the incident queue using the name of the identity you assigned to the Alert Triage Agent to see the incidents the agent is actively working on.
+> You can also filter the incident queue using the name of the identity you assigned to the Security Alert Triage Agent to see the incidents the agent is actively working on.
 
-When an alert is identified as a true threat, the Alert Triage Agent marks it as a True Positive. This enables analysts to prioritize confirmed threats and respond more swiftly. With these alerts clearly flagged, analysts can easily filter the queue to focus on verified threats, resulting in significant queue reduction and minimizing the time spent sorting through false positives. This allows them to concentrate their efforts where they matter most.
+When an alert is identified as a true threat, the Security Alert Triage Agent marks it as a True Positive. This enables analysts to prioritize confirmed threats and respond more swiftly. With these alerts clearly flagged, analysts can easily filter the queue to focus on verified threats, resulting in significant queue reduction and minimizing the time spent sorting through false positives. This allows them to concentrate their efforts where they matter most.
 
 :::image type="content" source="media/phishing-triage-agent/incident-queue-agent-only.png" alt-text="Screenshot of the incident queue filtered by the Phishing Triage Agent tag" lightbox="media/phishing-triage-agent/incident-queue-agent-only.png":::
 
 ## Understanding agent decisions and transparency
 
-The Alert Triage Agent is purpose-built to clearly explain *why* and *how* it made each decision. For every alert it processes, it provides a detailed explanation in plain text along with a full graphical representation of its decision-making workflow. This level of transparency allows analysts to quickly interpret results, build trust in the agent's output, and focus their time on making informed decisions—rather than repeating manual steps in the triage process.
+The Security Alert Triage Agent is purpose-built to clearly explain *why* and *how* it made each decision. For every alert it processes, it provides a detailed explanation in plain text along with a full graphical representation of its decision-making workflow. This level of transparency allows analysts to quickly interpret results, build trust in the agent's output, and focus their time on making informed decisions—rather than repeating manual steps in the triage process.
 
 ### Reviewing agent findings
 
@@ -67,13 +67,13 @@ To review the agent's findings, follow these steps:
 
 ## Teach the agent through feedback
 
-The Alert Triage Agent continuously improves its decision-making based on feedback tailored to your organization's needs. Analysts can provide input in plain, natural language—no complex configurations required—making it easy to guide and shape the agent's behavior. This feedback is stored in the agent's memory, allowing it to adapt to how your organization interprets and classifies threats. Over time, this adaptation enhances the agent's accuracy and effectiveness in triaging future alerts, with your team in control.
+The Security Alert Triage Agent continuously improves its decision-making based on feedback tailored to your organization's needs. Analysts can provide input in plain, natural language—no complex configurations required—making it easy to guide and shape the agent's behavior. This feedback is stored in the agent's memory, allowing it to adapt to how your organization interprets and classifies threats. Over time, this adaptation enhances the agent's accuracy and effectiveness in triaging future alerts, with your team in control.
 
 ### Providing feedback
 
 To provide feedback and teach the agent, follow these steps:
 
-1. In the incident page, look for the Alert Triage Agent card in the Copilot or Tasks side panel under the Guided Response triage section.
+1. In the incident page, look for the Security Alert Triage Agent card in the Copilot or Tasks side panel under the Guided Response triage section.
 1. Review the agent's classification and reasoning displayed in the card's title and content. If the decision doesn't align with your organization's classification criteria, select **Change classification**. Alternatively, you can update the classification by selecting the specific alert from the **Alerts** tab, then choosing **Manage alert**.
 
    :::image type="content" source="media/phishing-triage-agent/change-classification.png" alt-text="Screenshot highlighting the Change classification option in the Phishing Triage Agent card" lightbox="media/phishing-triage-agent/change-classification.png":::
@@ -94,7 +94,7 @@ The agent utilizes stored feedback to triage and classify similar alerts in the 
 
 ## Best practices for writing feedback
 
-Lessons provide systematic guidelines that help the agent determine whether an alert is a genuine threat or a false alarm. To ensure the agent effectively incorporates your feedback, follow these best practices when providing input to the Alert Triage Agent:
+Lessons provide systematic guidelines that help the agent determine whether an alert is a genuine threat or a false alarm. To ensure the agent effectively incorporates your feedback, follow these best practices when providing input to the Security Alert Triage Agent:
 
 1. **Ensure feedback is relevant and contextual.** Feedback should pertain only to the alert currently under review. It must also align with the updated classification you've assigned.
 1. **Be descriptive and specific.** Clearly explain the characteristics of the alert. Provide relevant details like the subject, message body, sender, or recipients to help the agent understand the context. Specific feedback with multiple details enhances effectiveness.
@@ -139,6 +139,6 @@ Once the agent is taught and equipped with organizational knowledge, it begins t
 
 ## Related content
 
-- [Alert Triage Agent overview](alert-triage-agent-overview.md)
-- [Set up the Alert Triage Agent](alert-triage-agent-setup.md)
+- [Security Alert Triage Agent overview](alert-triage-agent-overview.md)
+- [Set up the Security Alert Triage Agent](alert-triage-agent-setup.md)
 - [Microsoft Security Copilot agents](/copilot/security/agents-overview)
