@@ -1,7 +1,7 @@
 ---
 title: Map container images from code to runtime
 description: Learn how to map your container images from code to cloud.
-ms.date: 03/09/2026
+ms.date: 03/10/2026
 author: dlanger
 ms.author: dlanger
 ms.topic: how-to
@@ -28,7 +28,7 @@ The following prerequisites apply regardless of the mapping method used:
   - Being stored in a **supported container registry**, or
   - Running in a **supported Kubernetes environment**
 
-### Method 1: Connect your code environment to Defender for Cloud
+### Option 1: Connect your code environment to Defender for Cloud
 
 When you connect your code environment to Defender for Cloud, a set of automated tools is triggered automatically. These tools do **not** affect your existing DevOps workflows and enable code-to-runtime mapping.
 
@@ -42,7 +42,7 @@ When you connect your code environment to Defender for Cloud, a set of automated
 - [Connect Azure DevOps to Defender for Cloud](quickstart-onboard-devops.md)
 - [Connect GitHub to Defender for Cloud](quickstart-onboard-github.md)
 
-### Method 2: Docker labels–based mapping
+### Option 2: Docker labels–based mapping
 
 Docker labels–based mapping relies on metadata embedded directly into the container image at build time. Defender for Cloud extracts this metadata from the OCI/Docker image manifest and uses it to correlate the image to its source repository.
 
@@ -58,7 +58,7 @@ Docker labels–based mapping relies on metadata embedded directly into the cont
 >- This method does **not** require a DevOps connector.
 >- Mapping is performed for Defender CSPM or Defender for Containers–covered Kubernetes environments.
 
-### Method 3: GitHub ttaestations–based mapping
+### Option 3: GitHub attestations-based mapping
 
 Attestation-based mapping uses **cryptographically verifiable provenance metadata** generated during GitHub Actions workflows. These attestations link container images to their exact source repository, commit, and build identity.
 
@@ -66,7 +66,7 @@ Attestation-based mapping uses **cryptographically verifiable provenance metadat
 
 - [Using artifact attestations to establish provenance for builds – GitHub Docs](https://docs.github.com/en/actions/how-tos/secure-your-work/use-artifact-attestations/use-artifact-attestations)
 
-## Map your container image from Azure DevOps pipelines to the container registry
+## Verify your code to runtime mapping (Azure portal)
 
 After building a container image in an Azure DevOps CI/CD pipeline and pushing it to a registry, see the mapping by using the [Cloud Security Explorer](how-to-manage-cloud-security-explorer.md):
 
@@ -80,16 +80,9 @@ After building a container image in an Azure DevOps CI/CD pipeline and pushing i
 
 1. (Optional) Select + by **Container Images** to add other filters to your query, such as **Has vulnerabilities** to filter only container images with CVEs.
 
-1. After running your query, you'll see the mapping between container registry and Azure DevOps pipeline. Select **...** next to the edge to see more details on where the Azure DevOps pipeline was run.
+1. After running your query, you'll see the mapping between container registry and pipeline. Select **...** next to the edge to see more details.
 
     :::image type="content" source="media/container-image-mapping/mapping-results.png" alt-text="Screenshot that shows an advanced query for container mapping results." lightbox="media/container-image-mapping/mapping-results.png":::
-
-The following is an example of an advanced query that utilizes container image mapping. Starting with a Kubernetes workload that is exposed to the internet, you can trace all container images with high severity CVEs back to the Azure DevOps pipeline where the container image was built, empowering a security practitioner to kick off a developer remediation workflow.
-
-  :::image type="content" source="media/container-image-mapping/advanced-mapping-query.png" alt-text="Screenshot that shows basic container mapping results." lightbox="media/container-image-mapping/advanced-mapping-query.png":::
-
-> [!NOTE]
-> If your Azure DevOps organization had the Azure DevOps connector created prior to November 15, 2023, navigate to **Organization settings** > **Extensions > Shared** and install the container image mapping decorator. If you don't see the extension shared with your organization, fill out the following [form](https://aka.ms/ContainerImageMappingForm).
 
 ## Next steps
 

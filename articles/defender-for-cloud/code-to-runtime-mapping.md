@@ -1,16 +1,16 @@
 ---
 title: Code to runtime for recommendations
 description: Learn how to use code to runtime visibility to trace security issues from runtime back to source code and fix them at the origin to prevent recurrence.
-ms.date: 03/09/2026
+ms.date: 03/10/2026
 ms.topic: how-to
 ms.author: dlanger
 author: DebLanger
 #customer intent: As a security administrator, I want to trace runtime security issues back to their source code origin and understand the blast radius to fix issues effectively at the source.
 ---
 
-# Code to runtime for recommendations
+# Code to runtime enrichment for recommendations
 
-Modern cloud applications move through stages that include source code, pipelines, registries, and runtime environments. A small code change can create many container images and workloads across clusters and namespaces. When a security issue appears at runtime, you might not know where the issue starts or how many assets it affects.
+Modern cloud applications move through stages that might include source code, pipelines, registries, and runtime environments. A small code change can create many cloud workloads across your environments. When a security issue appears at runtime, you might not know where the issue starts or how many assets it affects.
 
 Code to runtime gives you end-to-end visibility across the software development lifecycle (SDLC). This feature helps you find the origin of an issue, assess its blast radius, and fix the issue at the source.
 
@@ -21,13 +21,13 @@ Before continueing, take a look at the [prerequisites](container-image-mapping.m
 You access code to runtime from recommendations in Microsoft Defender for Cloud.
 
 > [!NOTE]
-> Currently only containers VA recommendations are supported.
+> Currently only containers and container images vulnerability assessment recommendations are supported.
 
 When SDLC context is available, the recommendation page shows:
 
 - A context banner indicating the issue's SDLC flow
-- An SDLC chain view: Source → Pipeline → Registry → Runtime
-- A dynamic count of impacted runtime assets
+- An SDLC chain view: Source → CI/CD Pipeline → Registry → Runtime
+- A dynamic count of impacted assets
 - Cards representing each SDLC stage
 - Links to deeper views and remediation actions
 
@@ -37,7 +37,7 @@ When SDLC context is available, the recommendation page shows:
 
 ## How Code to runtime builds end-to-end context
 
-When a runtime recommendation appears, Defender correlates data across the SDLC to identify:
+For any recommendation supported by code to runtime, Defender correlates data across the SDLC to identify:
 
 1. Where the issue originated (for example, in code or the build pipeline).
 1. Which intermediate stages are involved. These stages include the image in the registry and the CI/CD pipeline that was part of the deployment.
@@ -60,14 +60,13 @@ The SDLC chain provides a clear, linear path that explains how the affected work
 Before taking action, you can open the **All impacted assets** grid for more information:
 
 1. The list shows the impacted assets from the same source. It includes assets in the cloud environment or code environment. Fixing the issue at the source can impact all the affected assets either by automated CI/CD processes or by manual deployment of new code.
-1. You can filter the list based on your preferences. For example, you can filter runtime assets by namespace to assign the issue to a specific development team. You can also filter by relevant asset metadata, such as image tags, labels and so on.
+1. You can filter the list based on your preferences. For example, you can filter runtime assets by Kubernetes namespace to assign the issue to a specific development team. You can also filter by relevant asset metadata, such as image tags, labels and so on.
 1. When you select a line, the system shows more details for that instance of the issue.
 
 The grid shows:
 
-- Each runtime workload that uses the affected image
-- Clusters and namespaces
-- Related recommendations
+- Each affected resource from the same security issue and same source
+- Different metadata items according to the resource type
 - Filtering and navigation options
 
 This helps you:
@@ -86,7 +85,7 @@ Some SDLC stages might not show full data because of missing prerequisites such 
 - Absent pipeline signals
 - Unsupported configurations
 
-Instead of ending the experience, Code to Runtime provides:
+For every missing or partial data, Defender provides:
 
 - Clear explanations for missing data
 - Guidance to enable or configure missing components
@@ -105,25 +104,19 @@ Assign the recommendation directly to a person or team inside Defender for Cloud
 If repository integration is enabled, you can:
 
 - Auto populate an issue with the SDLC context
-- Route it directly to engineering
+- Route it directly to the relevant fixer
 - Provide precise guidance on what needs to change
+
+Learn more about [Defender for cloud and GitHub integration](github-advanced-security-overview.md).
 
 > [!NOTE]
 > This is currently only available in the Azure portal.
-
-### Apply exemptions in a consistent way
-
-If you exempt a finding (temporarily or permanently), you can do so:
-
-- At the SDLC stage where it makes the most sense
-- Once, instead of repeatedly across multiple workloads
-- With partial exemptions if you want visibility on selected findings
 
 ## Example workflow
 
 A typical investigation that uses code to runtime includes these steps:
 
-1. Open a container runtime recommendation.
+1. Open a container recommendation.
 1. Review the SDLC context banner.
 1. Identify the earliest stage where the issue originated.
 1. Expand SDLC cards to explore source, pipeline, registry, and runtime data.
@@ -140,7 +133,7 @@ Code to Runtime gives you a unified, contextual view across the SDLC so you can:
 - Fix it once in the most effective place
 - Provide engineering teams with actionable, precise context
 
-This streamlines collaboration between security and engineering and reduces repeated manual remediation work.
+This streamlined collaboration between security and engineering reduces repeated manual remediation work.
 
 ## Related content
 

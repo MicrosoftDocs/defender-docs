@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 02/24/2026
+ms.date: 03/10/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -31,26 +31,22 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| March 09, 2026| Preview |[Code to runtime for recommendations](#code-to-runtime-for-recommendations-preview)|
+| March 10, 2026| Preview |[Code to runtime for recommendations](#code-to-runtime-for-recommendations-preview)|
 | March 04, 2026 | Deprecation | [Deprecation of preview of container and container images vulnerability recommendations](#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations) |
 | March 04, 2026 | Preview |[New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview)|
 
 ### Code to runtime for recommendations (Preview)
 
-March 09, 2026
+March 10, 2026
 
 Microsoft Defender for Cloud now provides Code to runtime capabilities, enabling end-to-end visibility across the software development lifecycle (SDLC). This feature helps security teams trace runtime security issues back to their source code origins and understand the full blast radius of vulnerabilities.
-Microsoft Defender for Cloud now includes threat protection for AI agents built with Foundry, available in preview as part of the Defender for AI Services plan. This new capability delivers advanced security from development through runtime, addressing high-impact, actionable threats aligned with OWASP guidance for LLM and agentic AI systems.
 
 **Key capabilities:**
 
 - **SDLC Chain Visibility**: Track security issues from source code through pipelines, registries, to runtime environments
-- **Blast Radius Analysis**: Understand how many assets are affected by a single code change across clusters and namespaces  
+- **Blast Radius Analysis**: Understand how many assets are affected by a single code change   
 - **Runtime-to-Source Tracing**: Navigate backwards from runtime recommendations to identify the original source of security issues
 - **Actionable Remediation**: Fix issues at the source to prevent recurring regressions rather than addressing only runtime symptoms
-- **Team Coordination**: Streamlined workflows for assigning ownership, creating GitHub issues, and applying exemptions at appropriate SDLC stages
-
-This feature requires Defender CSPM or Defender for Containers plans along with GitHub Connector, Azure DevOps connector, or Defender CLI integration. Code to runtime is currently supported for container vulnerability assessment recommendations.
 
 Learn more about the [Map container images from code to runtime preqrequisites](container-image-mapping.md).
 Learn more about [Code to runtime for recommendations](code-to-runtime-mapping.md).
