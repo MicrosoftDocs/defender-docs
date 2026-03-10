@@ -5,6 +5,7 @@ ms.date: 03/10/2026
 ms.topic: how-to
 ms.author: dlanger
 author: DebLanger
+zone_pivot_groups: defender-portal-experience
 #customer intent: As a security administrator, I want to trace runtime security issues back to their source code origin and understand the blast radius to fix issues effectively at the source.
 ---
 
@@ -112,6 +113,18 @@ Learn more about [Defender for cloud and GitHub integration](github-advanced-sec
 > [!NOTE]
 > This is currently only available in the Azure portal.
 
+::: zone pivot="azure-portal"
+
+Apply exemptions in a consistent way.
+
+If you exempt a finding (temporarily or permanently), you can do so:
+
+- At the SDLC stage where it makes the most sense
+
+- Once, instead of repeatedly across multiple workloads
+
+- With partial exemptions if you want visibility on selected findings 
+
 ## Example workflow
 
 A typical investigation that uses code to runtime includes these steps:
@@ -123,6 +136,8 @@ A typical investigation that uses code to runtime includes these steps:
 1. Use the impact grid to understand how many workloads are affected.
 1. Assign ownership or open a GitHub issue.
 1. (Optional) Apply an exemption at the appropriate SDLC stage.
+
+::: zone-end
 
 ## Summary
 
