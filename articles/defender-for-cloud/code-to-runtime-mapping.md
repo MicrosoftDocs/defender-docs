@@ -40,7 +40,7 @@ When SDLC context is available, the recommendation page shows:
 
 ::: zone pivot="azure-portal"
 
-:::image type="content" source="media/code-to-runtime-mapping/code-to-runtime-sdlc-chain.png" alt-text="Screenshot of recommendations page with the SDLC chain." lightbox="media/code-to-runtime-mapping/code-to-runtime-sdlc-chain.png":::
+:::image type="content" source="media/code-to-runtime-mapping/code-to-runtime-chain-azure.png" alt-text="Screenshot of recommendations page with the SDLC chain." lightbox="media/code-to-runtime-mapping/code-to-runtime-chain-azure.png":::
 
 ::: zone-end
 
