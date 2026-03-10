@@ -78,7 +78,7 @@ Use queries before, during, and after a compromise to take the following actions
 
     View the query's results, and select **New alert rule** > **Create Microsoft Sentinel alert**. Use the **Analytics rule wizard** to create a new rule based on your query. For more information, see [Create custom analytics rules to detect threats](detect-threats-custom.md).
 
-You can also create hunting and livestream queries over data stored in Azure Data Explorer. For more information, see details of [constructing cross-resource queries](/azure/azure-monitor/logs/azure-monitor-data-explorer-proxy) in the Azure Monitor documentation.
+You can also create hunting and queries over data stored in Azure Data Explorer. For more information, see details of [constructing cross-resource queries](/azure/azure-monitor/logs/azure-monitor-data-explorer-proxy) in the Azure Monitor documentation.
 
 To find more queries and data sources, go to the **Content hub** in Microsoft Sentinel or refer to community resources like [Microsoft Sentinel GitHub repository](https://github.com/Azure/Azure-Sentinel/tree/master/Hunting%20Queries). 
 
@@ -89,16 +89,16 @@ Many security solutions include out of the box hunting queries. After you instal
 
 Many available hunting queries are developed by Microsoft security researchers on a continuous basis. They add new queries to security solutions and fine-tune existing queries to provide you with an entry point to look for new detections and attacks.
 
-
-
 ### Custom hunting queries
 
 Create or edit a query and save it as your own query or share it with users who are in the same tenant. In Microsoft Sentinel, create a custom hunting query from the **Hunting** > **Queries** tab.
 
 # [Defender portal](#tab/defender-portal)
+
 :::image type="content" source="./media/hunting/save-query-defender.png" alt-text="Save query" lightbox="./media/hunting/save-query-defender.png":::
 
 # [Azure portal](#tab/azure-portal)
+
 :::image type="content" source="./media/hunting/save-query.png" alt-text="Save query" lightbox="./media/hunting/save-query.png":::
 
 ---
@@ -106,25 +106,6 @@ Create or edit a query and save it as your own query or share it with users who 
 For more information, see [Create custom hunting queries in Microsoft Sentinel](hunts-custom-queries.md).
 
 <a name="create-bookmarks"></a>
-
-
-## Livestream sessions
-
-Create interactive sessions that let you test newly created queries as events occur, get notifications from the sessions when a match is found, and launch investigations if necessary. You can quickly create a livestream session using any Log Analytics query.
-
-- **Test newly created queries as events occur**
-    
-    You can test and adjust queries without any conflicts to current rules that are being actively applied to events. After you confirm these new queries work as expected, it's easy to promote them to custom alert rules by selecting an option that elevates the session to an alert.
-
-- **Get notified when threats occur**
-    
-    You can compare threat data feeds to aggregated log data and be notified when a match occurs. Threat data feeds are ongoing streams of data that are related to potential or current threats, so the notification might indicate a potential threat to your organization. Create a livestream session instead of a custom alert rule to be notified of a potential issue without the overheads of maintaining a custom alert rule.
-
-- **Launch investigations**
-    
-    If there's an active investigation that involves an asset such as a host or user, view specific (or any) activity in the log data as it occurs on that asset. Be notified when that activity occurs.
-
-For more information, see [Detect threats by using hunting livestream in Microsoft Sentinel](livestream.md).
 
 ## Bookmarks to keep track of data
 
@@ -234,5 +215,4 @@ The following operators are especially helpful in Microsoft Sentinel hunting que
 
 - [Jupyter notebooks with Microsoft Sentinel hunting capabilities](notebooks.md)
 - [Keep track of data during hunting with Microsoft Sentinel](bookmarks.md)
-- [Detect threats by using hunting livestream in Microsoft Sentinel](livestream.md)
 - Learn from an example of using custom analytics rules when [monitoring Zoom](https://techcommunity.microsoft.com/t5/azure-sentinel/monitoring-zoom-with-azure-sentinel/ba-p/1341516) with a [custom connector](create-custom-connector.md).
