@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 03/24/2025
+ms.date: 03/10/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -45,26 +45,9 @@ The **Onboarding** card provides a high-level overview of your onboarding rate b
 
 ## Onboard more devices with Intune profiles
 
-Defender for Endpoint provides several convenient options for [onboarding Windows devices](onboarding.md). For Intune-managed devices, however, you can leverage Intune profiles to conveniently deploy the Defender for Endpoint sensor to select devices, effectively onboarding these devices to the service.
+Defender for Endpoint provides several convenient options for [onboarding Windows devices](onboarding.md). For Intune-managed devices, you can use Intune profiles to deploy the Defender for Endpoint sensor to devices and onboard them to the service.
 
-From the **Onboarding** card, select **Onboard more devices** to create and assign a profile on Intune. The link takes you to the device compliance page on Intune, which provides a similar overview of your onboarding state.
-
-:::image type="content" source="media/secconmgmt-onboarding-1deviceconfprofile.png" alt-text="The Microsoft Defender for Endpoint device compliance page on Intune device management" lightbox="media/secconmgmt-onboarding-1deviceconfprofile.png":::
-
-*Microsoft Defender for Endpoint device compliance page on Intune device management*
-
-> [!TIP]
-> Alternatively, you can navigate to the Defender for Endpoint onboarding compliance page in the [Microsoft Azure portal](https://portal.azure.com/) from **All services > Intune > Device compliance > Microsoft Defender ATP**.
-
-> [!NOTE]
-> If you want to view the most up-to-date device data, click on **List of devices without ATP sensor**.
-
-From the device compliance page, create a configuration profile specifically for the deployment of the Defender for Endpoint sensor and assign that profile to the devices you want to onboard. To do this, you can either:
-
-- Select **Create a device configuration profile to configure ATP sensor** to start with a predefined device configuration profile.
-- Create the device configuration profile from scratch.
-
-For more information, [read about using Intune device configuration profiles to onboard devices to Defender for Endpoint](/intune/intune-service/protect/advanced-threat-protection#onboard-devices).
+To create and assign a device configuration profile to onboard devices to Defender for Endpoint, see <a href="/intune/intune-service/protect/advanced-threat-protection#onboard-devices" target="_blank">Onboard devices</a> (opens in a new tab in the Intune documentation).
 
 
 
