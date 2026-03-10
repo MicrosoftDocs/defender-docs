@@ -9,15 +9,11 @@ ms.reviewer: gayasalomon
 
 
 
-Microsoft Defender for Cloud Apps gives you visibility into the accounts from your connected applications. After you connect Defender for Cloud Apps to an app using the [App connector](/defender-cloud-apps/enable-instant-visibility-protection-and-governance-actions-for-your-apps), Defender for Cloud Apps reads account information associated with connected applications. The Cloud application accounts tab within the Identity inventory enables you to investigate those accounts, permissions, the groups they're members of, their aliases, and the apps they're using. Additionally, when Defender for Cloud Apps detects a new account that wasn't previously seen in one of the connected apps - for example, in activities or file sharing - the account is added to the accounts list of that app. This enables you to have visibility into the activity of external users interacting with your cloud apps.
+Microsoft Defender for Cloud Apps gives you visibility into the accounts from your connected applications. After you connect Defender for Cloud Apps to an app using the [App connector](/defender-cloud-apps/enable-instant-visibility-protection-and-governance-actions-for-your-apps), Defender for Cloud Apps reads account information associated with connected applications.
 
-## Identity Inventory
+The Cloud application accounts inventory enables you to investigate those accounts, permissions, the groups they're members of, their aliases, and the apps they're using. Additionally, when Defender for Cloud Apps detects a new account that wasn't previously seen in one of the connected apps - for example, in activities or file sharing - the account is added to the accounts list of that app. This enables you to have visibility into the activity of external users interacting with your cloud apps.
 
-The visibility into cloud application accounts, as described above, is provided in the Identity Inventory under the "**Cloud application accounts**" tab.
-
-The **Identity inventory** provides a centralized view of all identities in your organization, enabling you to monitor and manage them efficiently. At a glance, you can see key details such as Domain, Tags, Type, and other attributes, helping you quickly identify and manage identities that require attention. 
-
-For more details, visit the [Identity Inventory documentation](/defender-for-identity/identity-inventory).
+You can view the Cloud application accounts inventory from the tile at the top of the the [Identity Inventory page](/defender-for-identity/identity-inventory).
 
 ## Cloud Application Accounts
 

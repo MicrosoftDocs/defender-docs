@@ -5,8 +5,8 @@
 
 title: Identity inventory
 description: The Identity Inventory provides a centralized location for customers to view and manage identity information across their environment, ensuring optimal visibility and a comprehensive experience. The updated Identities Inventory page is located under Assets in the Microsoft Defender portal.
-author:      LiorShapiraa # GitHub alias
-ms.author: liorshapira
+author: AbbyMSFT
+ms.author: abbyweisberg
 ms.service: microsoft-defender-for-identity
 ms.topic: article
 ms.date: 01/25/2026
@@ -23,32 +23,37 @@ The **Identity inventory** gives you a centralized view of all identities in you
 
 The Identities inventory page includes tabs for:
 
-- **Human identities**: A consolidated view of identities from Active Directory and Microsoft Entra ID, highlighting key details like identity types and user information.
-- **Non-Human identities**:
+- **Human identities**: The human identities discovered in your environment from Active Directory and Microsoft Entra ID.
+- **Non-Human identities (Preview)**: The non-human identities discovered in your SaaS and on-premises environments, including:
+  - OAuth apps registered in:
+    - Microsoft Entra ID
+    - Google
+    - Salesforce
+  - On-premises service accounts from Active Directory.
 
-There are several options you can choose from to customize the identities list view. On the top navigation you can:
+From the top navigation, you can:
 
 - Add or remove columns.
 - Apply filters.
-- Search for an identity by name or full UPN, SID, and Object ID. 
+- Sort the list by column values.
+- Search for a specific identity.
 - Export the list to a CSV file.
+- Copy a link to the current filtered view.
 
 > [!NOTE]
 > When you export the identities list to a CSV file, only the first 5,000 identities are included.
 
-- Copy list link with the included filters configured.
-
 :::image type="content" source="media/identity-inventory/inventory-page.png" alt-text="Screenshot of the identity inventory page in the Microsoft Defender portal.":::
 
-### Navigate to the Identity inventory page
+## View the Identity inventory
 
-In the [Microsoft Defender portal](https://security.microsoft.com), go to **Assets** > **Identities**. 
+In the [Microsoft Defender portal](https://security.microsoft.com), go to **Assets** > **Identities**.
 
-### Identity inventory insights
+## Identity inventory insights
 
 The top section of the Identity inventory page provides you with quick insights into your identity landscape through the following cards:
 
-- The **Classify critical assets** card allows you to define identity groups as business critical. For more information, see [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management). 
+- The **Classify critical assets** card allows you to define identity groups as business critical. For more information, see [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management).
 
 - The **Highly privileged identities** card helps you investigate in Advanced hunting all sensitive accounts in your organization, including Microsoft Entra ID security administrators and Global admin users.
 
@@ -56,7 +61,13 @@ The top section of the Identity inventory page provides you with quick insights 
 
 - The **Cloud application accounts:** card connects you to  your [Cloud application accounts](/defender-cloud-apps/accounts), including those from application connectors and third-party sources.
 
-You can also see these important statistics:
+## [Human identities](#tab/human-identities)
+
+The **Human identities** tab consolidates all user identities from Active Directory and Microsoft Entra ID in one place, making it easier to view and manage user accounts. To investigate details about a specific user, see [Investigate users in Microsoft Defender XDR](/defender-xdr/investigate-users).
+
+### Human identity stats
+
+These important statistics to help you prioritize identities for security posture improvements:
 
 | Name | Description |
 | --------- | --------- |
@@ -64,44 +75,77 @@ You can also see these important statistics:
 | Critical | The number of your critical assets. |
 | Disabled | The number of all disabled identities in your organization. |
 
-You can use this information to help you prioritize identities for security posture improvements.
+### Human identity details
 
-### Identity details
-
-The **Identities** list offers a consolidated view of identities across Active Directory and Microsoft Entra IDs. It highlights key details, including the following columns by default:
+The **Identities** list highlights key details for each human identity, including these columns by default:
 
 | Column name | Description |
 | --------- | --------- |
-| Display name | The full name of the identity as shown in the directory.  |
-| SID | The Security Identifier, a unique value used to identify the identity in Active Directory. |
+| Display name | The full name of the identity as shown in the directory. |
 | Domain | The Active Directory domain to which the identity belongs. |
 | Object ID | A unique identifier for the identity in Microsoft Entra ID. |
-| Source | Indicates whether the identity is on-premises (originate from Active Directory), Cloud only (Entra ID) or Hybrid (synced from Azure Active Directory to Microsoft Entra ID). |
-| Type | Specifies if the identity is a user account or service account. |
-| UPN (User Principal Name)**    | The unique login name of the identity in an email-like format. |
-| Tags | Custom labels that help categorize identities that are considered high value assets. For example, **Sensitive**, **Honeytoken** or **Privileged Accounts** managed by a [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) (PIM) service. |
-| Created time | The timestamp when the identity was first created. |
+| UPN (User Principal Name) | The unique login name of the identity in an email-like format. |
+| Identity environment |  Indicates whether the identity is on-premises (originates from Active Directory), Cloud only (Entra ID) or Hybrid (synced from Azure Active Directory to Microsoft Entra ID). |
+|Identity provider | The name of the Identity provider. |
+| Risk score | The critical level of the identity. |
 | Criticality level | Indicates the critical level of the identity. |
+| Tags | Custom labels that help categorize identities that are considered high value assets. For example, **Sensitive**, **Honeytoken** or **Privileged Accounts** managed by a [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) (PIM) service. |
+| SID | The Security Identifier, a unique value used to identify the identity in Active Directory. |
 | Account status | Shows whether the identity is enabled or disabled. |
+| Type | Specifies if the identity is a user account or service account. |
+| Created time | The timestamp when the identity was first created. |
 | Last updated | The timestamp of the most recent update to the identity's attributes in Active Directory. |
 
 Nondefault columns: Email, Microsoft Entra ID risk level, and Cloud ID.
 
-### Sort and filter the Identities list
+## [Non-Human identities (Preview)](#tab/non-human-identities)
 
-You can apply the following filters to limit the list of identities and get a more focused view:
+The **Non-Human identities** tab consolidates all non-human identities in one place, making it easier to determine ownership and assess risk. To investigate details about a specific non-human identity, see [View a non-human identity](/defender-for-identity/investigate-non-human-identities).
 
-- Domain
-- Type
-- Source
-- Tags
-- Criticality level
-- Account status
+:::image type="content" source="media/identity-inventory/non-human-identities-page.png" alt-text="Screenshot of the non-human identities list in the identity inventory page in the Microsoft Defender portal.":::
 
-Sort option applies to Display name, Domain, and Created time columns.
+### Non-Human identity stats
+
+These statistics highlight non-human identities that might need prioritization. Select any statistic to get a filtered list of identities to investigate.
+
+| Name | Description |
+| --------- | --------- |
+| Risky | The number of non-human identities with an elevated risk score. Risk scores are determined by factors described in the [Risk score tab of the identity](investigate-non-human-identities.md#risk-score). |
+| Highly privileged | The number of non-human identities with high-privilege permissions, such as admin consent or broad application permissions. |
+| Overprivileged | The number of non-human identities with more permissions than they use. |
+| Unused | The number of non-human identities with no recent sign-in activity. |
+| External unverified publishers | The number of non-human identities from external publishers that aren't verified. |
+| New | The number of recently discovered non-human identities. |
+
+### Non-Human identity details
+
+The Non-Human identities tab contains these sections:
+
+- **Entra ID**: OAuth apps registered in Microsoft Entra ID.
+- **Active Directory**: On-premises service accounts.
+- **Salesforce**: OAuth apps registered in Salesforce.
+- **Google Workspace**: OAuth apps registered in Google.
+
+The **Identities** list highlights key details for each human identity, including these columns by default:
+
+| Column name | Description |
+| --------- | --------- |
+| Display name | The full name of the identity as shown in the directory. |
+| Status | Shows whether the identity is enabled or disabled, and if disabled, by whom. |
+| Risk score | Shows the identity risk score (1-100). Higher values indicate greater risk. |
+| Graph API access | Shows whether the identity has at least one Graph API permission. |
+| Permission type | Shows whether the identity has application (app only), dedicated, or mixed permission. |
+| Origin | Shows whether the identity originated in the tenant or was registered in an external tenant.  |
+| Content type | Shows whether the identity has admin or user-only consent. For identities with only user consent, the total consented users are shown. Identities with admin consent have broad access to all data, unless limited by access policies and other restrictions. |
+| Publisher | Publisher of the identity and their verification status. |
+| Last used | Last time the identity signed in. This data is tracked back only until June 1, 2022.|
+
+For Microsoft Entra ID identities, select **Create new policy** to set up a governance policy that automatically responds when high-risk apps appear. You can use the built-in **New high risk app** template for a quick setup, or create a custom policy with risk score as a policy condition.
+
+---
 
 ### Related Articles
 
+- [Investigate users in Microsoft Defender](/defender-xdr/investigate-users)
+- [Investigate non-human identities in Microsoft Defender](/defender-xdr/investigate-users)
 - [Investigate cloud application accounts](/defender-cloud-apps/accounts)
-- [Investigate users in Microsoft Defender XDR](/defender-xdr/investigate-users)
-- [Investigate assets in Microsoft Defender for Identity](/defender-for-identity/investigate-assets)
