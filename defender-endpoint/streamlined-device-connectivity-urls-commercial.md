@@ -185,6 +185,17 @@ Lists the URL endpoints required for administrative/security operations access t
 |https://*.api.security.microsoft.com|Microsoft Defender Security Center portal/APIs|
 |https://security.microsoft.com|Microsoft Defender XDR admin portal|
 
-## Microsoft Defender process exclusions
+## Client Processes
 
 [!INCLUDE [Microsoft Defender for Endpoint processes](includes/streamlined-connectivity-processes.md)]
+
+## Change Log
+
+|Date|Change Log|
+|---|---|
+|24/10/2023|File Created|
+|02/01/2024|Updated prerequisites|
+|03/11/2024|Updated Xplat MDE agent version to 101.24022.*+|
+|04/10/2024|Overhaul based on streamlined connectivity GA scope|
+|05/06/2024|Final adjustments before streamlined connectivity GA|
+|04/07/2025|Removed dm.microsoft.com|
