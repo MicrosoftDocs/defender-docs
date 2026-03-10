@@ -77,7 +77,7 @@ Automatic Windows auditing performs all configuration tasks automatically:
 This section includes instructions for manually configuring Windows event collection in these cases:
 
 - [Configure auditing on a domain controller](#configure-auditing-on-a-domain-controller)
-- [Configure auditing on an AD FS container](#configure-auditing-on-an-ad-fs-container)
+- [Configure auditing on an AD FS server](#configure-auditing-on-an-ad-fs-server)
 - [Configure auditing on an AD CS server](#configure-auditing-on-an-ad-cs-server)
 - [Configure auditing on Microsoft Entra Connect](#configure-auditing-on-microsoft-entra-connect)
 - [Configure auditing on the Configuration container](#configure-auditing-on-the-configuration-container)
@@ -247,7 +247,7 @@ To configure domain object auditing:
    
 1. Select **OK**.
 
-### Configure auditing on an AD FS container
+### Configure auditing on an AD FS server
 
 This section describes how to modify your Active Directory Federation Services (AD FS) audit configurations for Defender for Identity.
 
