@@ -498,13 +498,13 @@
         href: ./identity-security/identity-security-dashboard.md  
       - name: View your identities
         items:
-        - name: View the identity dashboard
+        - name: The identity security dashboard
           href: /defender-for-identity/dashboard?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
         - name: View the identity inventory
           href: /defender-for-identity/identity-inventory?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-        - name: View a human identity
+        - name: Investigate a human identity
           href: investigate-users.md
-        - name: View a non-human identity
+        - name: Investigate a non-human identity
           href: /defender-for-identity/investigate-non-human-identities?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json  
       - name: Identity security posture assessments
         href: ./identity-security/identity-security-assessments.md

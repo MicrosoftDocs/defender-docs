@@ -12,9 +12,9 @@ ai-usage: ai-assisted
 
 # Investigate non-human identities in Microsoft Defender (Preview)
 
-When you select a non-human identity from the [Identity inventory](identity-inventory.md), a details pane opens to help you understand the identity's context, risk level, relationships, and activity.
+When you select a non-human identity from the [Identity inventory](identity-inventory.md), a details pane opens that helps you understand the identity's context, risk level, relationships, and activity.
 
-The non-human identity details pane includes these tabs:
+The non-human identity details pane has these tabs:
 
 - [Summary](#summary)
 - [Risk score](#risk-score)
@@ -28,7 +28,7 @@ The non-human identity details pane includes these tabs:
 
 ## Summary
 
-The **Summary** tab provides a high-level overview of the selected non-human identity. Use this tab to quickly assess the identity's basic profile.
+The **Summary** tab provides a high-level overview of the selected non-human identity. Use this tab to quickly check the identity's basic profile.
 
 :::image type="content" source="media/investigate-non-human-identities/non-human-identities-summary.png" alt-text="Screenshot of the Summary tab for a non-human identity in the Microsoft Defender portal.":::
 
@@ -45,15 +45,15 @@ The tab shows the risk summary, which includes the factors behind the identity's
 
 ## Graph
 
-The **Graph** tab displays a visual identity graph that shows how the selected non-human identity connects to other entities in your organization, such as users, resources, SaaS workloads, and critical assets.
+The **Graph** tab displays a visual identity graph that shows how the selected non-human identity connects to other entities in your organization, like users, resources, SaaS workloads, and critical assets.
 
 Use the identity graph to:
 
 - Understand what the non-human identity can access and how it's connected.
-- Identify risky or unexpected relationships, such as high-privilege access paths or sensitive resource exposure.
+- Identify risky or unexpected relationships, like high-privilege access paths or sensitive resource exposure.
 - Make faster, more confident decisions about review, remediation, or deeper investigation.
 
-Select any node or edge in the graph to open a details panel with deeper context and attributes for that entity or relationship. When applicable, the details panel also surfaces attack paths involving the selected nodes or edges.
+Select any node or edge in the graph to open a details panel with deeper context and attributes for that entity or relationship. When applicable, the details panel also shows attack paths involving the selected nodes or edges.
 
 To explore further, select **View in map** below the graph to open the full Attack Map experience in a new window.
 
@@ -66,7 +66,7 @@ To explore further, select **View in map** below the graph to open the full Atta
 
 The **Permissions** tab shows the permissions granted to the non-human identity, including the permission type (application-only, delegated, or mixed) and consent type (admin or user consent).
 
-Use this tab to review the level of access the identity has and identify overprivileged or unnecessarily broad permissions.
+Use this tab to review the level of access the identity has and to identify overprivileged or unnecessarily broad permissions.
 
 :::image type="content" source="media/investigate-non-human-identities/non-human-identities-permissions.png" alt-text="Screenshot of the Permissions tab for a non-human identity in the Microsoft Defender portal.":::
 
@@ -74,19 +74,19 @@ Use this tab to review the level of access the identity has and identify overpri
 
 The **Data usage** tab shows the identity's activity patterns, including recent sign-in activity and resource access.
 
-Use this tab to understand how the identity is being used and identify unusual or unexpected activity.
+Use this tab to learn how the identity is used and to identify unusual or unexpected activity.
 
 :::image type="content" source="media/investigate-non-human-identities/non-human-identities-data-usage.png" alt-text="Screenshot of the Data usage tab for a non-human identity in the Microsoft Defender portal.":::
 
 ## Users
 
-The **Users** tab shows the users associated with the non-human identity, such as users who consented to the app or are assigned to it. Use this tab to understand which users interact with the identity and assess the scope of its access.
+The **Users** tab shows the users associated with the non-human identity, like users who consented to the app or are assigned to it. Use this tab to learn which users interact with the identity and assess the scope of its access.
 
-:::image type="content" source="media/investigate-non-human-identities/non-human-identities-users.png" alt-text="Screenshot of the User tab for a non-human identity in the Microsoft Defender portal.":::
+:::image type="content" source="media/investigate-non-human-identities/non-human-identities-users.png" alt-text="Screenshot of the Users tab for a non-human identity in the Microsoft Defender portal.":::
 
 ## Sensitivity labels
 
-The **Sensitivity labels** tab shows the Microsoft Purview sensitivity labels applied to data that the non-human identity can access. Use this tab to understand whether the identity has access to sensitive or classified information.
+The **Sensitivity labels** tab shows the Microsoft Purview sensitivity labels applied to data that the non-human identity can access. Use this tab to learn whether the identity has access to sensitive or classified information.
 
 :::image type="content" source="media/investigate-non-human-identities/non-human-identities-sensitivity-labels.png" alt-text="Screenshot of the Sensitivity labels tab for a non-human identity in the Microsoft Defender portal.":::
 

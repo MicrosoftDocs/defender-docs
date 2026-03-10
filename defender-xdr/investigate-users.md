@@ -9,7 +9,7 @@ ms.topic: article
 ms.service: microsoft-defender
 ---
 
-# Identity entity page in Microsoft Defender
+# Investigate an identity
 
 In Microsoft Defender, an **identity** represents a person or entity in your organization. Users often have multiple accounts across providers such as on-premises Active Directory, Microsoft Entra ID, SaaS applications, and other IDPs. Defender correlates these accounts into a single identity.
 

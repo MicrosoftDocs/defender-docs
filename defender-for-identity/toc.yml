@@ -140,9 +140,9 @@ items:
       items:
        - name: View the identity inventory
          href: identity-inventory.md
-       - name: View a human identity
+       - name: Investigate a human identity
          href: /defender-xdr/investigate-user?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
-       - name: View a non-human identity
+       - name: Investigate a non-human identity
          href: /defender-xdr/investigate-non-human-indentity?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
     - name: View service accounts
       href: service-account-discovery.md
