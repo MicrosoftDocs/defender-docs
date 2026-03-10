@@ -36,7 +36,7 @@ If you're working with AD FS, AD CS, or Microsoft Entra Connect servers, make su
 - AD CS:
 
   - [Required AD CS events](event-collection-overview.md#required-ad-cs-events)
-  - [Configure auditing on AD CS](configure-windows-event-collection.md#configure-auditing-on-ad-cs)
+  - [Configure auditing on an AD CS server](configure-windows-event-collection.md#configure-auditing-on-an-ad-cs-server)
 
 - Microsoft Entra Connect:
 
