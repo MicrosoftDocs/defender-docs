@@ -149,7 +149,7 @@ If you have onboarded the primary image of your VDI environment (SENSE service i
 
 ## Prerequisites
 - Administrator permissions on the device.
-- The PsExec tool from Sysinternals: <https://learn.microsoft.com/sysinternals/downloads/psexec>
+- The PsExec tool from Sysinternals: </sysinternals/sysinternals/downloads/psexec.md>
 
 ## Steps
 
