@@ -6,7 +6,7 @@ ms.topic: how-to
 ms.reviewer: LiorShapiraa
 ---
 
-# Work with Defender for Identity's ITDR dashboard
+# Work with Defender for Identity's Identity Security dashboard
 
 The Microsoft Defender for Identity **Dashboard** page shows data to help you better analyze your security posture, understand how well you're protected, identify vulnerabilities, and perform recommended actions.
 

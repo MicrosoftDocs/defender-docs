@@ -503,9 +503,9 @@
         - name: View the identity inventory
           href: /defender-for-identity/identity-inventory?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
         - name: View a human identity
-          href: /defender-for-identity/view-human-identities?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+          href: investigate-users.md
         - name: View a non-human identity
-          href: /defender-for-identity/view-non-human-identities?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json  
+          href: /defender-for-identity/investigate-non-human-identities?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json  
       - name: Identity security posture assessments
         href: ./identity-security/identity-security-assessments.md
       - name: Investigate and respond to identity threats

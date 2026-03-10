@@ -43,9 +43,9 @@ From the top navigation, you can:
 > [!NOTE]
 > When you export the identities list to a CSV file, only the first 5,000 identities are included.
 
-:::image type="content" source="media/identity-inventory/inventory-page.png" alt-text="Screenshot of the identity inventory page in the Microsoft Defender portal.":::
+## Access the Identity inventory
 
-## View the Identity inventory
+:::image type="content" source="media/identity-inventory/inventory-page.png" alt-text="Screenshot of the identity inventory page in the Microsoft Defender portal.":::
 
 In the [Microsoft Defender portal](https://security.microsoft.com), go to **Assets** > **Identities**.
 
@@ -60,6 +60,10 @@ The top section of the Identity inventory page provides you with quick insights 
 - The **Critical Active Directory service accounts** card helps you quickly identify all Active Directory accounts designated as critical, making it easier to focus on identities most at risk.
 
 - The **Cloud application accounts:** card connects you to  your [Cloud application accounts](/defender-cloud-apps/accounts), including those from application connectors and third-party sources.
+
+## The identity inventory lists
+
+Select a tab to view the details and available actions for each identity type.
 
 ## [Human identities](#tab/human-identities)
 
