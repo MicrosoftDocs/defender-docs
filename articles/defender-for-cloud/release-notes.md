@@ -31,8 +31,17 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| March 10, 2026 | Preview | [On-demand malware scanning of Azure Files in Microsoft Defender for Storage](#On-demand-malware-scanning-of-Azure-Files-in-Microsoft-Defender-for-Storage) |
 | March 04, 2026 | Deprecation | [Deprecation of preview of container and container images vulnerability recommendations](#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations) |
 | March 04, 2026 | Preview |[New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview)|
+
+### On-demand malware scanning of Azure Files in Microsoft Defender for Storage (Preview)
+
+March 10, 2026
+
+On-demand malware scanning for Azure Files in Microsoft Defender for Storage, now in public preview, extends the existing on-demand malware scanning feature, enabling the scanning of entire Azure Storage accounts containing both blobs and files. Scans can be initiated from the Azure portal UI or via the REST API, supporting automation through Logic Apps, Automation playbooks, and PowerShell scripts. This feature uses Microsoft Defender Antivirus with the latest malware definitions for every scan and provides upfront cost estimation in the Azure portal before scanning.
+
+For more information, see [On-demand malware scanning](https://learn.microsoft.com/en-us/azure/defender-for-cloud/on-demand-malware-scanning)
 
 ### Deprecation of preview of container and container images vulnerability recommendations
 
