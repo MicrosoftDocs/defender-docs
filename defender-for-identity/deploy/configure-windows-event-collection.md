@@ -77,11 +77,10 @@ Automatic Windows auditing performs all configuration tasks automatically:
 This section includes instructions for manually configuring Windows event collection in these cases:
 
 - [Configure auditing on a domain controller](#configure-auditing-on-a-domain-controller)
-- [Configure auditing on an AD FS Container](#configure-auditing-on-an-ad-fs-container)
-- [Configure auditing on AD CS servers](#configure-auditing-on-ad-cs-servers)
+- [Configure auditing on an AD FS container](#configure-auditing-on-an-ad-fs-container)
+- [Configure auditing on an AD CS server](#configure-auditing-on-an-ad-cs-server)
 - [Configure auditing on Microsoft Entra Connect](#configure-auditing-on-microsoft-entra-connect)
 - [Configure auditing on the Configuration container](#configure-auditing-on-the-configuration-container)
-- [Configure object-level auditing on the AD FS configuration folder](#configure-object-level-auditing-on-the-ad-fs-configuration-folder)
 
 ### Configure auditing on a domain controller
 
@@ -90,6 +89,7 @@ To configure auditing on a domain controller, complete the following steps:
 - [Configure Directory Services Advanced Auditing](#configure-directory-services-advanced-auditing)
 - [Configure NTLM auditing](#configure-ntlm-auditing)
 - [Configure Domain object auditing](#configure-domain-object-auditing)
+- [Configure object-level auditing on the AD FS configuration folder](#configure-object-level-auditing-on-the-ad-fs-configuration-folder)
 
 
 #### Configure Directory Services Advanced Auditing
@@ -247,6 +247,11 @@ To configure domain object auditing:
    
 1. Select **OK**.
 
+### Configure auditing on an AD FS container
+
+This section describes how to modify your Active Directory Federation Services (AD FS) audit configurations for Defender for Identity.
+
+
 ### Configure auditing on AD FS
 
 This section describes how to modify your Active Directory Federation Services (AD FS) audit configurations for Defender for Identity.
@@ -285,7 +290,7 @@ Use the following PowerShell command to configure the auditing level to **Verbos
 Set-AdfsProperties -AuditLevel Verbose
 ```
 
-### Configure auditing on AD CS
+### Configure auditing on an AD CS server
 
 If you're working with a dedicated server that has Active Directory Certificate Services (AD CS) configured, configure auditing as follows to view dedicated alerts and Secure Score reports:
 
