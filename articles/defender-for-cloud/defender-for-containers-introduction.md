@@ -99,7 +99,9 @@ The following images are used by Defender for Containers runtime protection comp
 | Image | Purpose | MCR path |
 |---|---|---|
 | `security-publisher` | Publishes security findings collected from Kubernetes environments | `mcr.microsoft.com/azuredefender/stable/security-publisher` |
-| `defender-sensor` | Provides runtime threat detection for Kubernetes clusters and workloads | `mcr.microsoft.com/azuredefender/stable/defender-sensor` |
+| `low-level-collector` | Collects low-level runtime telemetry from Kubernetes nodes | `mcr.microsoft.com/azuredefender/stable/low-level-collector` |
+| `pod-collector` | Collects Kubernetes pod runtime data used for threat detection | `mcr.microsoft.com/azuredefender/stable/pod-collector` |
+| `anti-malware-collector` | Collects malware detection signals for container workloads | `mcr.microsoft.com/azuredefender/stable/anti-malware-collector` |
 
 Updates are delivered through the deployment mechanism used by your environment. For example:
 
