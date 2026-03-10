@@ -1,0 +1,166 @@
+---
+title: Code to runtime for recommendations
+description: Learn how to use code to runtime visibility to trace security issues from runtime back to source code and fix them at the origin to prevent recurrence.
+ms.date: 03/10/2026
+ms.topic: how-to
+ms.author: dlanger
+author: DebLanger
+zone_pivot_groups: defender-portal-experience
+#customer intent: As a security administrator, I want to trace runtime security issues back to their source code origin and understand the blast radius to fix issues effectively at the source.
+---
+
+# Code to runtime enrichment for recommendations
+
+Modern cloud applications move through stages that might include source code, pipelines, registries, and runtime environments. A small code change can create many cloud workloads across your environments. When a security issue appears at runtime, you might not know where the issue starts or how many assets it affects.
+
+Code to runtime gives you end-to-end visibility across the software development lifecycle (SDLC). This feature helps you find the origin of an issue, assess its blast radius, and fix the issue at the source.
+
+Before continueing, take a look at the [prerequisites](container-image-mapping.md).
+
+## Where you see code to runtime
+
+You access code to runtime from recommendations in Microsoft Defender for Cloud.
+
+> [!NOTE]
+> Currently only containers and container images vulnerability assessment recommendations are supported.
+
+When SDLC context is available, the recommendation page shows:
+
+- A context banner indicating the issue's SDLC flow
+- An SDLC chain view: Source → CI/CD Pipeline → Registry → Runtime
+- A dynamic count of impacted assets
+- Cards representing each SDLC stage
+- Links to deeper views and remediation actions
+
+::: zone pivot="defender-portal"
+
+:::image type="content" source="media/code-to-runtime-mapping/code-to-runtime-context-banner.png" alt-text="Screenshot of recommendations page with Code to Runtime context banner." lightbox="media/code-to-runtime-mapping/code-to-runtime-context-banner.png":::
+
+::: zone-end
+
+::: zone pivot="azure-portal"
+
+:::image type="content" source="media/code-to-runtime-mapping/code-to-runtime-chain-azure.png" alt-text="Screenshot of recommendations page with the SDLC chain." lightbox="media/code-to-runtime-mapping/code-to-runtime-chain-azure.png":::
+
+::: zone-end
+
+## How Code to runtime builds end-to-end context
+
+For any recommendation supported by code to runtime, Defender correlates data across the SDLC to identify:
+
+1. Where the issue originated (for example, in code or the build pipeline).
+1. Which intermediate stages are involved. These stages include the image in the registry and the CI/CD pipeline that was part of the deployment.
+1. How many assets are affected, giving you visibility into the blast radius.
+1. Which actions you can take at each stage.
+
+## Why this feature matters
+
+- Fixing only at runtime can cause the issue to reappear during the next deployment.
+- Fixing at the source prevents recurring regressions.
+- Understanding impact helps you plan rollouts and coordinate work.
+- Helps you identify the owner for the fix
+
+## Walk the SDLC chain from runtime back to source
+
+The SDLC chain provides a clear, linear path that explains how the affected workload was created. Each stage appears as a card. You can expand this card to see metadata and available actions.
+
+## Understand the blast radius of the issue
+
+Before taking action, you can open the **All impacted assets** grid for more information:
+
+1. The list shows the impacted assets from the same source. It includes assets in the cloud environment or code environment. Fixing the issue at the source can impact all the affected assets either by automated CI/CD processes or by manual deployment of new code.
+1. You can filter the list based on your preferences. For example, you can filter runtime assets by Kubernetes namespace to assign the issue to a specific development team. You can also filter by relevant asset metadata, such as image tags, labels and so on.
+1. When you select a line, the system shows more details for that instance of the issue.
+
+The grid shows:
+
+- Each affected resource from the same security issue and same source
+- Different metadata items according to the resource type
+- Filtering and navigation options
+
+This helps you:
+
+- Prioritize issues
+- Coordinate with owning teams
+- Decide whether you need a staged rollout
+- Avoid unintentionally breaking dependent workloads
+
+## Handling missing or partial data
+
+Some SDLC stages might not show full data because of missing prerequisites such as:
+
+- Disabled connectors
+- Missing permissions
+- Absent pipeline signals
+- Unsupported configurations
+
+For every missing or partial data, Defender provides:
+
+- Clear explanations for missing data
+- Guidance to enable or configure missing components
+- An actionable path to expand SDLC visibility
+
+## Act on these insights
+
+Once you understand the issue and its impact, choose the appropriate next step:
+
+### Assign ownership
+
+Assign the recommendation directly to a person or team inside Defender for Cloud.
+
+### Create or link a GitHub issue
+
+If repository integration is enabled, you can:
+
+- Auto populate an issue with the SDLC context
+- Route it directly to the relevant fixer
+- Provide precise guidance on what needs to change
+
+Learn more about [Defender for cloud and GitHub integration](github-advanced-security-overview.md).
+
+> [!NOTE]
+> This is currently only available in the Azure portal.
+
+::: zone pivot="azure-portal"
+
+Apply exemptions in a consistent way.
+
+If you exempt a finding (temporarily or permanently), you can do so:
+
+- At the SDLC stage where it makes the most sense
+
+- Once, instead of repeatedly across multiple workloads
+
+- With partial exemptions if you want visibility on selected findings 
+
+## Example workflow
+
+A typical investigation that uses code to runtime includes these steps:
+
+1. Open a container recommendation.
+1. Review the SDLC context banner.
+1. Identify the earliest stage where the issue originated.
+1. Expand SDLC cards to explore source, pipeline, registry, and runtime data.
+1. Use the impact grid to understand how many workloads are affected.
+1. Assign ownership or open a GitHub issue.
+1. (Optional) Apply an exemption at the appropriate SDLC stage.
+
+::: zone-end
+
+## Summary
+
+Code to Runtime gives you a unified, contextual view across the SDLC so you can:
+
+- Find the real source of a runtime issue
+- Understand its reach
+- Fix it once in the most effective place
+- Provide engineering teams with actionable, precise context
+
+This streamlined collaboration between security and engineering reduces repeated manual remediation work.
+
+## Related content
+
+- [What is GitHub Advanced Security integration with Microsoft Defender for Cloud (preview)?](github-advanced-security-overview.md)
+- [Deploy GitHub Advanced Security integration with Microsoft Defender for Cloud](github-advanced-security-deploy.md)
+- [Overview of Microsoft Defender for Cloud DevOps security](defender-for-devops-introduction.md)
+- [Container image mapping](container-image-mapping.md)
