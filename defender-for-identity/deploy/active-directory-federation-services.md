@@ -31,12 +31,12 @@ If you're working with AD FS, AD CS, or Microsoft Entra Connect servers, make su
 - AD FS:
 
   - [Required AD FS events](event-collection-overview.md#required-ad-fs-events)
-  - [Configure auditing on an AD FS container](#configure-auditing-on-an-ad-fs-container)
+  - [Configure auditing on an AD FS container](deploy/configure-windows-event-collection.md#configure-auditing-on-an-ad-fs-container)
 
 - AD CS:
 
   - [Required AD CS events](event-collection-overview.md#required-ad-cs-events)
-  - [Configure auditing on an AD CS server](configure-windows-event-collection.md#configure-auditing-on-an-ad-cs-server)
+  - [Configure auditing on an AD CS server](deploy/configure-windows-event-collection.md#configure-auditing-on-an-ad-cs-server)
 
 - Microsoft Entra Connect:
 
