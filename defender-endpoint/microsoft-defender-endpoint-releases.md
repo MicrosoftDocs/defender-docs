@@ -79,7 +79,7 @@ This section covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. 
 - [Windows Server 2019 updates](https://support.microsoft.com/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059)
 - [Windows Server 2025 updates](https://support.microsoft.com/topic/windows-server-2025-update-history-10f58da7-e57b-4a9d-9c16-9f1dcd72d7d7)
 
-### Windows | May 2025 | 10.8797.25857.1000
+### Windows | May 2025 | Platform: 10.8797.25857.1000
 
 #### Release details
 
@@ -99,7 +99,7 @@ This section covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. 
 | Network Detection & Response (NDR) | Enhanced data telemetry for better insights. |
 | SOC experience | Faster, more complete data collection and detection; improved offline environment handling. |
 
-### Windows | July 2024 | 10.8760.27617.1006
+### Windows | July 2024 | Platform: 10.8760.27617.1006
 
 #### Release details
 
@@ -129,13 +129,13 @@ To get latest features, configure your device for the Beta channel (formerly Ins
 
 For known issues, see [macOS known issues](#macos-known-issues).
 
-### macOS | February-2026 | 101.26012.0012
+### macOS | February-2026 | Platform: 101.26012.0012
 
 #### Versions
 
-| Release version | Engine version | Signature version |
-|-----------------|----------------|-------------------|
-| 20.126012.12.0  | 1.1.25100.4000 | 1.439.74.0        |
+| Platform version | Release version | Engine version | Signature version |
+|-----------------|----------------|-------------------|-------------------|
+|101.26012.0012 | 20.126012.12.0  | 1.1.25100.4000 | 1.439.74.0        |
 
 #### Enhancements and features
 
@@ -146,37 +146,37 @@ For known issues, see [macOS known issues](#macos-known-issues).
 | General      | Device Control - policy conditional on secure digital card details |
 | General      | Bug and performance fixes |
 
-### macOS | February 2026 | 101.25122.0008
+### macOS | February 2026 | Platform: 101.25122.0008
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|20.125122.8.0 |1.1.25100.4000 |1.439.74.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25122.0008 |20.125122.8.0 |1.1.25100.4000 |1.439.74.0 |
 
 #### Enhancements and features
 
 Bug and performance fixes
 
-### macOS | January 2026 | 101.25122.0007
+### macOS | January 2026 | Platform: 101.25122.0007
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|20.125122.7.0 |1.1.25100.4000 |1.439.74.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25122.0007 |20.125122.7.0 |1.1.25100.4000 |1.439.74.0 |
 
 #### Enhancements and features
 
 Bug and performance fixes
 
-### macOS | January 2026 | 101.25122.0006
+### macOS | January 2026 | Platform: 101.25122.0006
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|20.125122.6.0 |1.1.25100.4000 |1.439.74.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25122.0006 |20.125122.6.0 |1.1.25100.4000 |1.439.74.0 |
 
 #### Enhancements and features
 
@@ -184,13 +184,13 @@ Bug and performance fixes
 |--------------|---------------|
 | General | Bug and performance fixes. |
 
-### macOS | December 2025 | 101.25102.0019
+### macOS | December 2025 | Platform: 101.25102.0019
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|20.125102.19.0 |1.1.25090.2000 |1.435.600.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25102.0019 |20.125102.19.0 |1.1.25090.2000 |1.435.600.0 |
 
 #### Enhancements and features
 
@@ -198,13 +198,13 @@ Bug and performance fixes
 |--------------|---------------|
 | Vulnerability Management | [CVE-2025-55182 (React2Shell)](https://www.microsoft.com/security/blog/2025/12/15/defending-against-the-cve-2025-55182-react2shell-vulnerability-in-react-server-components/?msockid=30fe85b32a9c6d12269c90ef2e9c6f88) - Microsoft Defender Vulnerability Management (MDVM) can now surface devices that this vulnerability may affect. |
 
-### macOS | November 2025 | 101.25102.0016
+### macOS | November 2025 | Platform: 101.25102.0016
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|20.125102.16.0 |1.1.25090.2000 |1.435.600.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25102.0016 |20.125102.16.0 |1.1.25090.2000 |1.435.600.0 |
 
 #### Enhancements and features
 
@@ -212,13 +212,13 @@ Bug and performance fixes
 |--------------|---------------|
 | General | Bug and performance fixes. |
 
-### macOS | October 2025 | 101.25082.0006
+### macOS | October 2025 | Platform: 101.25082.0006
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|20.125082.6.0 |1.1.25070.3000 |1.437.276.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25082.0006 |20.125082.6.0 |1.1.25070.3000 |1.437.276.0 |
 
 #### Enhancements and features
 
@@ -226,13 +226,13 @@ Bug and performance fixes
 |--------------|---------------|
 | General | Bug and performance fixes. |
 
-### macOS | September 2025 | 101.25072.0011
+### macOS | September 2025 | Platform: 101.25072.0011
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|20.125072.11.0 |1.1.25060.3000 |1.429.309.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25072.0011 |20.125072.11.0 |1.1.25060.3000 |1.429.309.0 |
 
 #### Enhancements and features
 
@@ -276,13 +276,13 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 >
 > If you have any concerns or need assistance during this transition, contact support.
 
-### Linux | February 2026 | 101.25122.0004
+### Linux | February 2026 | Platform: 101.25122.0004
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|30.125122.0004.0 |1.1.25110.3002 |1.443.508.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25122.0004 |20.125122.0004 |1.1.25110.3002 |1.443.508.0 |
 
 #### Enhancements and features
 
@@ -296,9 +296,9 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|30.125102.0005.0 |1.1.25090.6000 |1.439.338.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25102.0005 |30.125102.0005.0 |1.1.25090.6000 |1.439.338.0 |
 
 #### Enhancements and features
 
@@ -308,13 +308,13 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 | Agent optimization | Agent process handling is now streamlined by removing the dependency on telemetryd_v2, enabling more efficient and consistent telemetry collection. This change applies to builds 101.24062.0001 and later, with no impact on functionality, data collection, or customer configurations. All features remain intact, and no customer action is required. |
 | Platform support | Added support for Debian 13. |
 
-### Linux | December 2025 | 101.25092.0005
+### Linux | December 2025 | Platform: 101.25092.0005
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|30.125092.0005.0 |1.1.25090.4000 |1.437.18.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25092.0005 |30.125092.0005.0 |1.1.25090.4000 |1.437.18.0 |
 
 #### Enhancements and features
 
@@ -322,13 +322,13 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 |--------------|---------------|
 | Vulnerability detection | Enhanced vulnerability detection for vulnerable React components through deeper component analysis and enhanced telemetry. This includes support for identifying [(CVE-2025-55182)](https://github.com/advisories/GHSA-fv66-9v8q-g76r), providing more complete security coverage for React-based applications. |
 
-### Linux | December 2025 | 101.25092.0002
+### Linux | December 2025 | Platform: 101.25092.0002
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|30.125092.0002.0 |1.1.25090.4000 |1.437.18.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25092.0002 |30.125092.0002.0 |1.1.25090.4000 |1.437.18.0 |
 
 #### Enhancements and features
 
@@ -336,13 +336,13 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 |--------------|---------------|
 | Critical fix | Includes critical fix related to machine identifier ensuring every endpoint is accurately identified as a unique device. |
 
-### Linux | November 2025 | 101.25102.0003
+### Linux | November 2025 | Platform: 101.25102.0003
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|30.125102.0003.0 |1.1.25090.6000 |1.439.338.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25102.0003 |30.125102.0003.0 |1.1.25090.6000 |1.439.338.0 |
 
 #### Enhancements and features
 
@@ -352,13 +352,13 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 | Library updates | Libcurl library is upgraded to version 8.16.0 |
 | Engine updates | The default engine version is now updated to 1.1.25090.6000, and the default signature version is now updated to 1.439.338.0. |
 
-### Linux | October 2025 | 101.25092.0001
+### Linux | October 2025 | Platform: 101.25092.0001
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|30.125092.0001.0 |1.1.25090.6000 |1.439.558.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25092.0001 |30.125092.0001.0 |1.1.25090.6000 |1.439.558.0 |
 
 #### Enhancements and features
 
@@ -368,13 +368,13 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 | Engine resiliency | Enhanced engine resiliency through automatic error recovery, preventing excessive logging and minimizing downtime to improve overall reliability. |
 | General | Other quality and stability fixes. |
 
-### Linux | September 2025 | 101.25082.0003 (Build 1)
+### Linux | September 2025 | Platform: 101.25082.0003 (Build 1)
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|30.125082.0003.0 |1.1.25070.4000 |1.435.242.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25082.0003 |30.125082.0003.0 |1.1.25070.4000 |1.435.242.0 |
 
 #### Enhancements and features
 
@@ -384,13 +384,13 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 | Diagnostics | Client Analyzer is now bundled directly within the MDE package, eliminating the need for separate downloads. Both the binary and Python versions are included by default and can be found at /opt/microsoft/mdatp/tools/client_analyzer/. |
 | General | Other quality and stability fixes. |
 
-### Linux | September 2025 | 101.25072.0003 (Build 2)
+### Linux | September 2025 | Platform: 101.25072.0003 (Build 2)
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|30.125072.0003.0 |1.1.25060.4000 |1.431.4.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25072.0003 |30.125072.0003.0 |1.1.25060.4000 |1.431.4.0 |
 
 #### Enhancements and features
 
@@ -399,13 +399,13 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 | Device management | Fixed issue to generate unique machine identifiers for each onboarded deviceâ€”especially useful when deploying Microsoft Defender via Golden image. |
 | General | Other stability enhancements and bug fixes. |
 
-### Linux | August 2025 | 101.25062.0003
+### Linux | August 2025 | Platform: 101.25062.0003
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|30.125062.0003.0 |1.1.25040.4000 |1.429.442.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25062.0003 |30.125062.0003.0 |1.1.25040.4000 |1.429.442.0 |
 
 #### Enhancements and features
 
@@ -421,11 +421,11 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 See the full list of [Android UX improvements](android-new-ux.md).
 
-### Android | December 2025 | 1.0.8412.0101
+### Android | December 2025 | Platform: 1.0.8412.0101
 
 #### Release details
 
-| Build | Release Date |
+| Platform version| Release Date |
 | -------- | -------- |
 |1.0.8412.0101 |December 15, 2025 |
 
@@ -435,11 +435,11 @@ See the full list of [Android UX improvements](android-new-ux.md).
 |--------------|---------------|
 | General | Performance improvement and bug fixes. |
 
-### Android | December 2025 | 1.0.8321.0101
+### Android | December 2025 | Platform: 1.0.8321.0101
 
 #### Release details
 
-| Build | Release Date |
+| Platform version| Release Date |
 | -------- | -------- |
 |1.0.8321.0101 |December 2, 2025 |
 
@@ -450,11 +450,11 @@ See the full list of [Android UX improvements](android-new-ux.md).
 | Root detection | Native root detection for Microsoft Defender is now GA. |
 | General | Performance improvement and bug fixes. |
 
-### Android | November 2025 | 1.0.8315.0101
+### Android | November 2025 | Platform: 1.0.8315.0101
 
 #### Release details
 
-| Build | Release Date |
+| Platform version| Release Date |
 | -------- | -------- |
 |1.0.8315.0101 |November 17, 2025 |
 
@@ -465,11 +465,11 @@ See the full list of [Android UX improvements](android-new-ux.md).
 | Root detection | Native root detection for Microsoft Defender is now in preview. |
 | General | Performance improvement and bug fixes. |
 
-### Android | November 2025 | 1.0.8303.0101
+### Android | November 2025 | Platform: 1.0.8303.0101
 
 #### Release details
 
-| Build | Release Date |
+| Platform version | Release Date |
 | -------- | -------- |
 |1.0.8303.0101 |November 4, 2025 |
 
@@ -481,11 +481,11 @@ See the full list of [Android UX improvements](android-new-ux.md).
 | Telemetry | Telemetry features to improve app performance monitoring and detect specific scenarios, such as entering landscape mode or invalid authentication attempts. |
 | Configuration | Fixed the bug where feedback sending wasn't disabled in Defender app despite 'Control Feedback Sending' key being disabled (set as 0) in Intune app configuration. |
 
-### Android | October 2025 | 1.0.8217.0101
+### Android | October 2025 | Platform: 1.0.8217.0101
 
 #### Release details
 
-| Build | Release Date |
+| Platform version | Release Date |
 | -------- | -------- |
 |1.0.8217.0101 |October 28, 2025 |
 
@@ -495,11 +495,11 @@ See the full list of [Android UX improvements](android-new-ux.md).
 |--------------|---------------|
 | User interface | Refreshed the Defender app with a new icon. |
 
-### Android | October 2025 | 1.0.8201.0101
+### Android | October 2025 | Platform: 1.0.8201.0101
 
 #### Release details
 
-| Build | Release Date |
+| Platform version | Release Date |
 | -------- | -------- |
 |1.0.8201.0101 |October 2, 2025 |
 
@@ -511,11 +511,11 @@ See the full list of [Android UX improvements](android-new-ux.md).
 | Global Secure Access | Kerberos SSO support on Android (GA): Kerberos SSO experience for users on Android devices with Global Secure Access is now supported. Users need to install and configure a third-party SSO client. |
 | General | Performance Improvement and bug fixes. |
 
-### Android | September 2025 | 1.0.8102.0101
+### Android | September 2025 | Platform: 1.0.8102.0101
 
 #### Release details
 
-| Build | Release Date |
+| Platform version | Release Date |
 | -------- | -------- |
 |1.0.8102.0101 |September 4, 2025 |
 
@@ -526,11 +526,11 @@ See the full list of [Android UX improvements](android-new-ux.md).
 | Authentication | Resolved the sign-in loop issue for shared device mode. Now, if a user attempts to sign in on a shared device that doesn't support Defender for Endpoint on mobile, the user is redirected back to the sign-in page. |
 | Accessibility | Other accessibility bug fixes and performance improvements. |
 
-### Android | August 2025 | 1.0.8018.0103
+### Android | August 2025 | Platform: 1.0.8018.0103
 
 #### Release details
 
-| Build | Release Date |
+| Platform version | Release Date |
 | -------- | -------- |
 |1.0.8018.0103 |August 19, 2025 |
 
@@ -540,11 +540,11 @@ See the full list of [Android UX improvements](android-new-ux.md).
 |--------------|---------------|
 | General | Performance improvements and bug fixes. |
 
-### Android | July 2025 | 1.0.7901.0101
+### Android | July 2025 | Platform: 1.0.7901.0101
 
 #### Release details
 
-| Build | Release Date |
+| Platform version | Release Date |
 | -------- | -------- |
 |1.0.7901.0101 |July 10, 2025 |
 
@@ -558,11 +558,11 @@ See the full list of [Android UX improvements](android-new-ux.md).
 
 For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 
-### iOS | November 2025 | 1.1.70290103
+### iOS | November 2025 | Platform: 1.1.70290103
 
 #### Release details
 
-| Build | Release Date |
+| Platform version | Release Date |
 |--------|--------------|
 | 1.1.70290103 | November 6, 2025 |
 
@@ -572,11 +572,11 @@ For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 |--------------|---------------|
 | User feedback & Telemetry | An improved user feedback experience: See [Key Changes - November 2025](./ios-new-ux.md#key-changes---november-2025) for details. Added Landscape mode UI support for the Defender app. Added telemetry features to improve app performance monitoring and detect specific scenarios, such as entering landscape mode or invalid authentication attempts. |
 
-### iOS | October 2025 | 1.1.70230101, 1.1.69250104
+### iOS | October 2025 | Platform: 1.1.70230101, 1.1.69250104
 
 #### Release details
 
-| Build | Release Date |
+| Platform version | Release Date |
 |--------|--------------|
 | 1.1.70230101 | October 26, 2025 |
 | 1.1.69250104 | October 7, 2025 |
@@ -588,11 +588,11 @@ For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 | Compliance & UX | Simplified return to compliance experience in iOS/iPadOS. See the [Blog](https://techcommunity.microsoft.com/blog/intunecustomersuccess/simplifying-compliance-remediation-with-microsoft-intune-and-defender-on-iosipad/4465293) for more information. Refreshed the Defender app with a new icon. |
 | Kerberos SSO & Performance | Global Secure Access Kerberos SSO support on iOS (Preview): Kerberos SSO experience for users on iOS devices with Global Secure Access is now supported. On iOS, to create and deploy profile. See [Single sign-on app extension](/intune/intune-service/configuration/ios-device-features-settings). Performance Improvement and Bug fixes. |
 
-### iOS | September 2025 | 1.1.68200103
+### iOS | September 2025 | Platform: 1.1.68200103
 
 #### Release details
 
-| Build | Release Date |
+| Platform version | Release Date |
 |--------|--------------|
 | 1.1.68200103 | September 4, 2025 |
 
@@ -602,11 +602,11 @@ For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 |--------------|---------------|
 | Secure Web Gateway | [Global Secure Access Internet Profile Support for iOS](/entra/global-secure-access/how-to-install-ios-client) (Preview) - Enables organizations to protect access to internet and SaaS apps with an identity-based Secure Web Gateway, blocking threats, unsafe content, and malicious traffic from the iPhone and iPads. |
 
-### iOS | August 2025 | 1.1.68140102
+### iOS | August 2025 | Platform: 1.1.68140102
 
 #### Release details
 
-| Build | Release Date |
+| Platform version | Release Date |
 |--------|--------------|
 | 1.1.68140102 | August 19, 2025 |
 
@@ -616,11 +616,11 @@ For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 |--------------|---------------|
 | Notifications & Performance | Fixed push notification bug to ensure heartbeat signals are sent reliably. Performance improvements and bug fixes. |
 
-### iOS | July 2025 | 1.1.67040101
+### iOS | July 2025 | Platform: 1.1.67040101
 
 #### Release details
 
-| Build | Release Date |
+| Platform version | Release Date |
 |--------|--------------|
 | 1.1.67040101 | July 8, 2025 |
 
