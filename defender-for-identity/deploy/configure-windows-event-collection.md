@@ -76,11 +76,12 @@ Automatic Windows auditing performs all configuration tasks automatically:
 
 This section includes instructions for manually configuring Windows event collection in these cases:
 
-- [Configure auditing on a domain controller](#configure-auditing-on-domain-controllers)
-- [Configure auditing on an AD FS Container](#configure-auditing-on-ad-fs)
-- [Configure auditing on AD CS servers](#configure-auditing-on-ad-cs)
+- [Configure auditing on a domain controller](#configure-auditing-on-a-domain-controller)
+- [Configure auditing on an AD FS Container](#configure-auditing-on-an-ad-fs-container)
+- [Configure auditing on AD CS servers](#configure-auditing-on-ad-cs-servers)
 - [Configure auditing on Microsoft Entra Connect](#configure-auditing-on-microsoft-entra-connect)
 - [Configure auditing on the Configuration container](#configure-auditing-on-the-configuration-container)
+- [Configure object-level auditing on the AD FS configuration folder](#configure-object-level-auditing-on-the-ad-fs-configuration-folder)
 
 ### Configure auditing on a domain controller
 
@@ -90,27 +91,6 @@ To configure auditing on a domain controller, complete the following steps:
 - [Configure NTLM auditing](#configure-ntlm-auditing)
 - [Configure Domain object auditing](#configure-domain-object-auditing)
 
-#### Object-level auditing on the AD FS configuration folder
-
-1. Go to the **Active Directory Users and Computers** console, and select the domain where you want to enable the logs.
-1. Go to **Program Data** > **Microsoft** > **ADFS**.
-
-    :::image type="content" source="../media/configure-windows-event-collection/adfs-container.png" alt-text="Screenshot of a container for Active Directory Federation Services.":::
-
-   
-1. Right-click **ADFS** and select **Properties**.
-1. Go to the **Security** tab and select **Advanced** > **Advanced Security Settings**. Then go to the **Auditing** tab and select **Add** > **Select a principal**.
-1. Under **Enter the object name to select**, enter **Everyone**. Then select **Check Names** > **OK**.
-1. Return to **Auditing Entry**. Make the following selections:
-
-   - For **Type**, select **All**.
-   - For **Applies to**, select **This object and all descendant objects**.
-   - Under **Permissions**, scroll down and select **Clear all**. Scroll up and select **Read all properties** and **Write all properties**.
-      
-    :::image type="content" source="../media/configure-windows-event-collection/audit-adfs.png" alt-text="Screenshot of the auditing settings for Active Directory Federation Services.":::
-    
-   
-1. Select **OK**.
 
 #### Configure Directory Services Advanced Auditing
 
@@ -243,6 +223,29 @@ To configure domain object auditing:
 >
 > - You can assign auditing permissions to **All descendant objects**, using only the object types detailed in the last step.
 > - The **msDS-DelegatedManagedServiceAccount** class is relevant only for domains running at least one Windows Server 2025 domain controller.
+
+
+#### Configure Object-level auditing on the AD FS configuration folder
+
+1. Go to the **Active Directory Users and Computers** console, and select the domain where you want to enable the logs.
+1. Go to **Program Data** > **Microsoft** > **ADFS**.
+
+    :::image type="content" source="../media/configure-windows-event-collection/adfs-container.png" alt-text="Screenshot of a container for Active Directory Federation Services.":::
+
+   
+1. Right-click **ADFS** and select **Properties**.
+1. Go to the **Security** tab and select **Advanced** > **Advanced Security Settings**. Then go to the **Auditing** tab and select **Add** > **Select a principal**.
+1. Under **Enter the object name to select**, enter **Everyone**. Then select **Check Names** > **OK**.
+1. Return to **Auditing Entry**. Make the following selections:
+
+   - For **Type**, select **All**.
+   - For **Applies to**, select **This object and all descendant objects**.
+   - Under **Permissions**, scroll down and select **Clear all**. Scroll up and select **Read all properties** and **Write all properties**.
+      
+    :::image type="content" source="../media/configure-windows-event-collection/audit-adfs.png" alt-text="Screenshot of the auditing settings for Active Directory Federation Services.":::
+    
+   
+1. Select **OK**.
 
 ### Configure auditing on AD FS
 
