@@ -31,11 +31,11 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| March 10, 2026| Preview |[Code to runtime for recommendations](#code-to-runtime-for-recommendations-preview)|
+| March 10, 2026| Preview |[Code to runtime enrichment for recommendations](#code-to-runtime-enrichment-for-recommendations-preview)|
 | March 04, 2026 | Deprecation | [Deprecation of preview of container and container images vulnerability recommendations](#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations) |
 | March 04, 2026 | Preview |[New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview)|
 
-### Code to runtime for recommendations (Preview)
+### Code to runtime for enrichment recommendations (Preview)
 
 March 10, 2026
 
@@ -49,7 +49,7 @@ Microsoft Defender for Cloud now provides Code to runtime capabilities, enabling
 - **Actionable Remediation**: Fix issues at the source to prevent recurring regressions rather than addressing only runtime symptoms
 
 Learn more about the [Map container images from code to runtime preqrequisites](container-image-mapping.md).
-Learn more about [Code to runtime for recommendations](code-to-runtime-mapping.md).
+Learn more about [Code to runtime enrichment for recommendations](code-to-runtime-mapping.md).
 
 ### Deprecation of preview of container and container images vulnerability recommendations
 
