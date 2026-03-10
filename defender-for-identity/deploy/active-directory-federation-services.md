@@ -31,17 +31,17 @@ If you're working with AD FS, AD CS, or Microsoft Entra Connect servers, make su
 - AD FS:
 
   - [Required AD FS events](event-collection-overview.md#required-ad-fs-events)
-  - [Configure auditing on AD FS](/defender-for-identity/deploy/configure-windows-event-collection.md#configure-auditing-on-an-ad-fs-server)
+  - [Configure auditing on an AD FS server](configure-windows-event-collection.md#configure-auditing-on-an-ad-fs-server)
 
 - AD CS:
 
   - [Required AD CS events](event-collection-overview.md#required-ad-cs-events)
-  - [Configure auditing on an AD CS server](/defender-for-identity/deploy/configure-windows-event-collection.md#configure-auditing-on-an-ad-cs-server)
+  - [Configure auditing on an AD CS server](configure-windows-event-collection.md#configure-auditing-on-an-ad-cs-server)
 
 - Microsoft Entra Connect:
 
   - [Required Microsoft Entra Connect events](event-collection-overview.md#required-microsoft-entra-connect-events)
-  - [Configure auditing on Microsoft Entra Connect](/defender-for-identity/deploy/configure-windows-event-collection.md#configure-auditing-on-microsoft-entra-connect)
+  - [Configure auditing on Microsoft Entra Connect](configure-windows-event-collection.md#configure-auditing-on-microsoft-entra-connect)
 
 ## Configure read permissions for the AD FS database
 
