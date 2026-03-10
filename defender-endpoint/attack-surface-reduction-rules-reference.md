@@ -62,10 +62,9 @@ Detailed descriptions of each rule are available in the links to the end of this
 |Rule name|GUID|
 |---|---|
 |**Standard protection rules**||
-|[Block abuse of exploited vulnerable signed drivers](#block-abuse-of-exploited-vulnerable-signed-drivers)|56a863a9-875e-4185-98a7-b882c64b5ce5|
-|[Block credential stealing from the Windows local security authority subsystem (lsass.exe)](#block-credential-stealing-from-the-windows-local-security-authority-subsystem)¹ ² ³|9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2|
-|[Block persistence through Windows Management Instrumentation (WMI) event subscription](#block-persistence-through-wmi-event-subscription)⁴ ⁵|
-|e6db77e5-3df2-4cf1-b95a-636979351e5b|
+|[Block abuse of exploited vulnerable signed drivers (Device)](#block-abuse-of-exploited-vulnerable-signed-drivers)|56a863a9-875e-4185-98a7-b882c64b5ce5|
+|[Block credential stealing from the Windows local security authority subsystem](#block-credential-stealing-from-the-windows-local-security-authority-subsystem)¹ ² ³|9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2|
+|[Block persistence through WMI event subscription](#block-persistence-through-wmi-event-subscription)⁴ ⁵|e6db77e5-3df2-4cf1-b95a-636979351e5b|
 |**Other ASR rules**||
 |[Block Adobe Reader from creating child processes](#block-adobe-reader-from-creating-child-processes)²|7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c|
 |[Block all Office applications from creating child processes](#block-all-office-applications-from-creating-child-processes)|d4f940ab-401b-4efc-aadc-ad5f3c50688a|
@@ -124,8 +123,8 @@ The supported operating systems for ASR rules are described in the following tab
 |Rule name|Windows 11 or later|Windows 10|Windows Server 2019 or later|Windows Server 2016<sup>\*</sup>|Windows Server 2012 R2<sup>\*</sup>|
 |---|:---:|:---:|:---:|:---:|:---:|
 |**Standard protection rules**||||||
-|Block abuse of exploited vulnerable signed drivers|Y|1709 or later|Y|Windows Server 1803 (Semi-Annual Enterprise Channel (SAC)) or later|Y|
-|Block credential stealing from the Windows local security authority subsystem (lsass.exe)|Y|1803 or later|Y|Y|Y|
+|Block abuse of exploited vulnerable signed drivers (Device)|Y|1709 or later|Y|Windows Server 1803 (Semi-Annual Enterprise Channel (SAC)) or later|Y|
+|Block credential stealing from the Windows local security authority subsystem|Y|1803 or later|Y|Y|Y|
 |Block persistence through Windows Management Instrumentation (WMI) event subscription|Y|1903 or later|Windows Server 1903 (SAC) or later|N|N|
 |**Other ASR rules**||||||
 |Block Adobe Reader from creating child processes|Y|1809 or later|Y|Y|Y|
@@ -156,8 +155,8 @@ The supported configuration management systems for ASR rules are described in th
 |Rule name|Microsoft Intune|Microsoft Configuration Manager¹|Group policy²|PowerShell²|
 |---|:---:|:---:|:---:|:---:|
 |**Standard protection rules**|||||
-|Block abuse of exploited vulnerable signed drivers|Y||Y|Y|
-|Block credential stealing from the Windows local security authority subsystem (lsass.exe)|Y|1802 or later|Y|Y|
+|Block abuse of exploited vulnerable signed drivers (Device)|Y||Y|Y|
+|Block credential stealing from the Windows local security authority subsystem|Y|1802 or later|Y|Y|
 |Block persistence through WMI event subscription|Y||Y|Y|
 |**Other ASR rules**|||||
 |Block Adobe Reader from creating child processes|Y||Y|Y|
@@ -210,8 +209,8 @@ This behavior is summarized in the following table:
 |Rule name|EDR alerts?|Toast notifications<br/>in Block mode?|Toast notifications<br/>in Warn mode?|
 |---|:---:|:---:|:---:|
 |**Standard protection rules**||||
-|Block abuse of exploited vulnerable signed drivers|N|Y||
-|Block credential stealing from the Windows local security authority subsystem (lsass.exe)|N|N|N¹|
+|Block abuse of exploited vulnerable signed drivers (Device)|N|Y||
+|Block credential stealing from the Windows local security authority subsystem|N|N|N¹|
 |Block persistence through WMI event subscription|Y|Y||
 |**Other ASR rules**||||
 |Block Adobe Reader from creating child processes|Y|Y||
@@ -241,13 +240,15 @@ This behavior is summarized in the following table:
 
 ### Standard protection rules
 
-#### Block abuse of exploited vulnerable signed drivers
+<a name="block-abuse-of-exploited-vulnerable-signed-drivers"></a>
+
+#### Block abuse of exploited vulnerable signed drivers (Device)
 
 Local apps _with sufficient privileges_ can exploit vulnerable signed drivers to gain access to the operating system kernel. Vulnerable signed drivers enable attackers to disable or circumvent security solutions, eventually leading to system compromise.
 
 This ASR rule prevents apps from saving vulnerable signed drivers on the computer. It doesn't prevent loading existing drivers already on the computer.
 
-- **Intune name**: `Block abuse of exploited vulnerable signed drivers`
+- **Intune name**: `Block abuse of exploited vulnerable signed drivers (Device)`
 - **Microsoft Configuration Manager name**: n/a
 - **GUID**: `56a863a9-875e-4185-98a7-b882c64b5ce5`
 - **Advanced hunting action type**:

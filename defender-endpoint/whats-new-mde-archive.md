@@ -401,7 +401,7 @@ Threat Analytics is a set of interactive reports published by the Microsoft Defe
 
   - Use advanced protection against ransomware
 
-  - Block credential stealing from the Windows local security authority subsystem (lsass.exe)
+  - Block credential stealing from the Windows local security authority subsystem
 
   - Block process creations originating from PSExec and WMI commands
 

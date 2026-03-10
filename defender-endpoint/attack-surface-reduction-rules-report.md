@@ -123,8 +123,8 @@ Selecting the **ASR rules configuration** link at the top of the card also opens
 
 The configuration summary card provides a button to **Protect devices** with the three standard protection rules. At minimum, Microsoft recommends that you enable these three attack surface reduction standard protection rules:
 
-- [Block credential stealing from the Windows local security authority subsystem (lsass.exe)](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
-- [Block abuse of exploited vulnerable signed drivers](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers)
+- [Block credential stealing from the Windows local security authority subsystem](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
+- [Block abuse of exploited vulnerable signed drivers (Device)](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers)
 - [Block persistence through Windows Management Instrumentation (WMI) event subscription](attack-surface-reduction-rules-reference.md#block-persistence-through-wmi-event-subscription)
 
 To enable the three standard protection rules:
@@ -194,8 +194,8 @@ You can filter the information on the tab by selecting **Add filter**, and then 
 - **Date**: Select a start date up to 30 days old.
 - **Select rules**: Select one or more of the following rules:
   - **Block persistence through WMI event subscription**
-  - **Block credential stealing from the Windows local security authority subsystem (lsass.exe)**
-  - **Block abuse of exploited vulnerable signed drivers**
+  - **Block credential stealing from the Windows local security authority subsystem**
+  - **Block abuse of exploited vulnerable signed drivers (Device)**
 
   > [!TIP]
   > To view all rules triggered, use the [DeviceEvents table in advanced hunting](/defender-xdr/advanced-hunting-deviceevents-table).

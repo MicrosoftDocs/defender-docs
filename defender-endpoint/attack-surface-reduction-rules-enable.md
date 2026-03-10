@@ -184,7 +184,7 @@ The following procedures for enabling attack surface reduction rules include ins
 
 #### Custom profile in Intune (Alternative 2)
 
-You can use Microsoft Intune OMA-URI to configure custom attack surface reduction rules. The following procedure uses the rule [Block abuse of exploited vulnerable signed drivers](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers) for the example.
+You can use Microsoft Intune OMA-URI to configure custom attack surface reduction rules. The following procedure uses the rule [Block abuse of exploited vulnerable signed drivers (Device)](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers) for the example.
 
 1. In the Microsoft Intune admin center at <https://intune.microsoft.com>, select **Devices** \> **Manage devices** \> **Configuration**. Or, to go directly to the **Devices \| Configuration** page, use <https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/configuration>.
 
@@ -350,22 +350,19 @@ Example:
 > [!WARNING]
 > If you manage your computers and devices with Intune, Configuration Manager, or another enterprise-level management platform, the management software overwrites any conflicting PowerShell settings on startup. 
 
-1. Type **powershell** in the Start menu, right-click **Windows PowerShell** and select **Run as administrator**.
+1. Open an elevated PowerShell window (a PowerShell window you opened by selecting **Run as administrator**.
 
-1. Type one of the following cmdlets. For more information, such as rule ID, refer to [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md).
+1. Use one of the following commands. For information about each rule, including a mapping of rule name to rule GUID, see [Attack surface reduction rules](attack-surface-reduction-rules-reference.md#attack-surface-reduction-rules).
 
    |Task|PowerShell cmdlet|
    |---|---|
-   |Enable attack surface reduction rules|`Set-MpPreference -AttackSurfaceReductionRules_Ids <rule ID> -AttackSurfaceReductionRules_Actions Enabled`|
-   |Enable attack surface reduction rules in audit mode|`Add-MpPreference -AttackSurfaceReductionRules_Ids <rule ID> -AttackSurfaceReductionRules_Actions AuditMode`|
-   |Enable attack surface reduction rules in warn mode|`Add-MpPreference -AttackSurfaceReductionRules_Ids <rule ID> -AttackSurfaceReductionRules_Actions Warn` |
-   |Enable attack surface reduction Block abuse of exploited vulnerable signed drivers|`Add-MpPreference -AttackSurfaceReductionRules_Ids 56a863a9-875e-4185-98a7-b882c64b5ce5 -AttackSurfaceReductionRules_Actions Enabled`|
+   |EnableEnable ASR rules in **Block** mode|`Set-MpPreference -AttackSurfaceReductionRules_Ids <rule ID> -AttackSurfaceReductionRules_Actions Enabled`|
+   |Enable ASR rules in **Audit** mode|`Add-MpPreference -AttackSurfaceReductionRules_Ids <rule ID> -AttackSurfaceReductionRules_Actions AuditMode`|
+   |Enable ASR rules in **Warn** mode|`Add-MpPreference -AttackSurfaceReductionRules_Ids <rule ID> -AttackSurfaceReductionRules_Actions Warn`|
+   |Enable the ASR rule named **Block abuse of exploited vulnerable signed drivers (Device)**|`Add-MpPreference -AttackSurfaceReductionRules_Ids 56a863a9-875e-4185-98a7-b882c64b5ce5 -AttackSurfaceReductionRules_Actions Enabled`|
    |Turn off attack surface reduction rules|`Add-MpPreference -AttackSurfaceReductionRules_Ids <rule ID> -AttackSurfaceReductionRules_Actions Disabled`|
 
-   > [!IMPORTANT]
-   > You must specify the state individually for each rule, but you can combine rules and states in a comma-separated list.
-   >
-   > In the following example, the first two rules are enabled, the third rule is disabled, and the fourth rule is enabled in audit mode: `Set-MpPreference -AttackSurfaceReductionRules_Ids <rule ID 1>,<rule ID 2>,<rule ID 3>,<rule ID 4> -AttackSurfaceReductionRules_Actions Enabled, Enabled, Disabled, AuditMode`
+   You canYou must specify the state individually for each rule, but you can combine rules and states in a comma-separated list. In the following example, the first two rules are enabled in **Block** mode, the third rule is disabled, and the fourth rule is enabled in **Audit** mode: `Set-MpPreference -AttackSurfaceReductionRules_Ids <rule ID 1>,<rule ID 2>,<rule ID 3>,<rule ID 4> -AttackSurfaceReductionRules_Actions Enabled, Enabled, Disabled, AuditMode`
 
    You can also use the `Add-MpPreference` PowerShell verb to add new rules to the existing list.
 

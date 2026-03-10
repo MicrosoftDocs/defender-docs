@@ -24,7 +24,6 @@ appliesto:
 ---
 # Evaluate Microsoft Defender Antivirus using Group Policy
 
-
 In Windows 10 or newer and Windows Server 2016 or newer, you can use next-generation protection features offered by Microsoft Defender Antivirus (MDAV) and Microsoft Defender Exploit Guard (Microsoft Defender EG).
 
 This article explains how to enable and test the key protection features in Microsoft Defender AV and Microsoft Defender EG and provides you with guidance and links to more information.
@@ -76,7 +75,7 @@ This guide provides the Microsoft Defender Antivirus Group Policy that configure
 
 ## MDAV and Potentially Unwanted Applications (PUA)
 
-**Root:**
+**Root**:
 
 | Description | Setting |
 | --- | --- |
@@ -85,12 +84,12 @@ This guide provides the Microsoft Defender Antivirus Group Policy that configure
 
 ## Real-time protection (always-on protection, real-time scanning)
 
-\\**Real-time protection:**
+**Real-time protection**:
 
 | Description | Setting |
 | --- | --- |
 | Turn off real-time protection | Disabled |
-| Configure monitoring for incoming and outgoing file and program activity | Enabled, bi-directional (full on-access) |
+| Configure monitoring for incoming and outgoing file and program activity | Enabled, bi-directional (full on-access|
 | Turn on Behavior Monitoring | Enabled |
 | Monitor file and program activity on your computer | Enabled |
 
@@ -100,7 +99,7 @@ Standard security intelligence updates can take hours to prepare and deliver; ou
 
 For more information, see [Use next-gen technologies in Microsoft Defender Antivirus through cloud-delivered protection](/windows/threat-protection/windows-defender-antivirus/utilize-microsoft-cloud-protection-windows-defender-antivirus).
 
-\\**MAPS:**
+**MAPS**:
 
 | Description | Setting |
 | --- | --- |
@@ -108,7 +107,7 @@ For more information, see [Use next-gen technologies in Microsoft Defender Antiv
 | Configure the 'Block at First Sight' feature | Enabled |
 | Send file samples when further analysis is required | Enabled, Send all samples |
 
-\\**MpEngine:**
+**MpEngine**:
 
 | Description | Setting |
 | --- | --- |
@@ -125,7 +124,7 @@ For more information, see [Use next-gen technologies in Microsoft Defender Antiv
 | Turn on script scanning | Enabled |
 | Scan archive files | Enabled |
 | Scan packed executables | Enabled |
-| Configure scanning of network files (Scan Network Files) | Enabled |
+| Configure scanning of network files (Scan Network Files| Enabled |
 | Scan removable drives | Enabled |
 | Turn on reparse point scanning | Enabled |
 
@@ -149,23 +148,23 @@ Disable local administrator AV settings such as exclusions, and enforce the poli
 
 ## Threat Severity Default Action
 
-\\**Threats**
+**Threats**:
 
-| Description | Setting | Alert level    | Action    |
-| --- | --- | --- | --- |
-| Specify threat alert levels at which default action shouldn't be taken when detected | Enabled |     |     |
-|     |     | 5 (Severe) | 2 (Quarantine) |
-|     |     | 4 (High) | 2 (Quarantine) |
-|     |     | 2 (Medium) | 2 (Quarantine) |
-|     |     | 1 (Low) | 2 (Quarantine) |
+|Description|Setting|Alert level|Action|
+|---|---|---|---|
+|Specify threat alert levels at which default action shouldn't be taken when detected|Enabled|||
+|||5 (Severe)|2 (Quarantine)|
+|||4 (High)|2 (Quarantine)|
+|||2 (Medium)|2 (Quarantine)|
+|||1 (Low)|2 (Quarantine)|
 
-\\**Quarantine**
+**Quarantine**:
 
 | Description | Setting |
 | --- | --- |
 | Configure removal of items from Quarantine folder | Enabled, 60 |
 
-\\**Client Interface**
+**Client Interface**:
 
 | Description | Setting |
 | --- | --- |
@@ -182,38 +181,38 @@ Disable local administrator AV settings such as exclusions, and enforce the poli
 
 To enable Network Protection for Windows Servers, for now, please use PowerShell:
 
-| OS | PowerShell cmdlet |
-| --- | --- |
-| Windows Server 2012 R2 and later    | `set-MpPreference -AllowNetworkProtectionOnWinServer $true` |
-| Windows Server 2016 and Windows Server 2012 R2 [unified MDE client](/defender-endpoint/update-agent-mma-windows#upgrade-to-the-new-unified-agent-for-defender-for-endpoint) | `set-MpPreference -AllowNetworkProtectionOnWinServer $true` <br/><br/>`set-MpPreference -AllowNetworkProtectionDownLevel $ true` |
+|OS|PowerShell command|
+|---|---|
+|Windows Server 2012 R2 and later|`Set-MpPreference -AllowNetworkProtectionOnWinServer $true`|
+|Windows Server 2016 and Windows Server 2012 R2 [unified MDE client](/defender-endpoint/update-agent-mma-windows#upgrade-to-the-new-unified-agent-for-defender-for-endpoint|`Set-MpPreference -AllowNetworkProtectionOnWinServer $true -AllowNetworkProtectionDownLevel $ true`|
 
-## Attack Surface Reduction Rules
+## Attack surface reduction rules
 
 1. Navigate to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus** > **Microsoft Defender Exploit Guard** > **Attack Surface Reduction**.
 
 2. Select **Next**.
 
-| Description | Setting |
-| --- | --- |
-| be9ba2d9-53ea-4cdc-84e5-9b1eeee46550<br><br>**Note:** (Block executable content from email client and webmail) | 1 (Block) |
-| 7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c<br><br>**Note:** (Block Adobe Reader from creating child processes) | 1 (Block) |
-| 5beb7efe-fd9a-4556-801d-275e5ffc04cc<br><br>**Note:** (Block execution of potentially obfuscated scripts) | 1 (Block) |
-| 56a863a9-875e-4185-98a7-b882c64b5ce5<br><br>**Note:** (Block abuse of exploited vulnerable signed drivers) | 1 (Block) |
-| 92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b<br><br>**Note:** (Block Win32 API calls from Office macros) | 1 (Block) |
-| 01443614-cd74-433a-b99e-2ecdc07bfc25<br><br>**Note:** (Block executable files from running unless they meet a prevalence, age, or trusted list criterion) | 1 (Block) |
-| 26190899-1602-49e8-8b27-eb1d0a1ce869<br><br>**Note:** (Block Office communication application from creating child processes) | 1 (Block) |
-| d4f940ab-401b-4efc-aadc-ad5f3c50688a<br><br>**Note:** (Block all Office applications from creating child processes) | 1 (Block) |
-| c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb<br><br>**Note:** ([PREVIEW] Block use of copied or impersonated system tools) | 1 (Block) |
-| d3e037e1-3eb8-44c8-a917-57927947596d<br><br>**Note:** (Block JavaScript or VBScript from launching downloaded executable content) | 1 (Block) |
-| 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2<br><br>**Note:** (Block credential stealing from the Windows local security authority subsystem) | 1 (Block) |
-| a8f5898e-1dc8-49a9-9878-85004b8a61e6<br><br>**Note:** (Block Web shell creation for Servers) | 1 (Block) |
-| 3b576869-a4ec-4529-8536-b80a7769e899<br><br>**Note:** (Block Office applications from creating executable content) | 1 (Block) |
-| b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4<br><br>**Note:** (Block untrusted and unsigned processes that run from USB) | 1 (Block) |
-| 75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84<br><br>**Note:** (Block Office applications from injecting code into other processes) | 1 (Block) |
-| e6db77e5-3df2-4cf1-b95a-636979351e5b<br><br>**Note:** (Block persistence through WMI event subscription) | 1 (Block) |
-| c1db55ab-c21a-4637-bb3f-a12568109d35<br><br>**Note:** (Use advanced protection against ransomware) | 1 (Block) |
-| d1e49aac-8f56-4280-b9ba-993a6d77406c<br><br>**Note:** (Block process creations originating from PSExec and WMI commands) | 1 (Block)<br><br>**Note:** If you have Configuration Manager (formerly SCCM), or other management tools that use WMI, you might need to set this to 2 ('audit') instead of 1('block'). |
-| 33ddedf1-c6e0-47cb-833e-de6133960387<br><br>**Note:** ([PREVIEW] Block rebooting machine in Safe Mode) | 1 (Block) |
+|Value name|ASR rule name|Setting|
+|---|---|---|
+|be9ba2d9-53ea-4cdc-84e5-9b1eeee46550|Block executable content from email client and webmail|1 (Block)|
+|7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c|Block Adobe Reader from creating child processes|1 (Block)|
+|5beb7efe-fd9a-4556-801d-275e5ffc04cc|Block execution of potentially obfuscated scripts|1 (Block)|
+|56a863a9-875e-4185-98a7-b882c64b5ce5|Block abuse of exploited vulnerable signed drivers (Device)|1 (Block)|
+|92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b|Block Win32 API calls from Office macros|1 (Block)|
+|01443614-cd74-433a-b99e-2ecdc07bfc25|Block executable files from running unless they meet a prevalence, age, or trusted list criterion|1 (Block)|
+|26190899-1602-49e8-8b27-eb1d0a1ce869|Block Office communication application from creating child processes|1 (Block)|
+|d4f940ab-401b-4efc-aadc-ad5f3c50688a|Block all Office applications from creating child processes|1 (Block)|
+|c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb|Block use of copied or impersonated system tools|1 (Block)|
+|d3e037e1-3eb8-44c8-a917-57927947596d|Block JavaScript or VBScript from launching downloaded executable content|1 (Block)|
+|9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2|Block credential stealing from the Windows local security authority subsystem|1 (Block)|
+|a8f5898e-1dc8-49a9-9878-85004b8a61e6|Block Web shell creation for Servers|1 (Block)|
+|3b576869-a4ec-4529-8536-b80a7769e899|Block Office applications from creating executable content|1 (Block)|
+|b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4|Block untrusted and unsigned processes that run from USB|1 (Block)|
+|75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84|Block Office applications from injecting code into other processes|1 (Block)|
+|e6db77e5-3df2-4cf1-b95a-636979351e5b|Block persistence through WMI event subscription|1 (Block)|
+|c1db55ab-c21a-4637-bb3f-a12568109d35|Use advanced protection against ransomware|1 (Block)|
+|d1e49aac-8f56-4280-b9ba-993a6d77406c|Block process creations originating from PSExec and WMI commands|1 (Block)<br><br>**Note:** If you have Configuration Manager (formerly SCCM), or other management tools that use WMI, you might need to set this to 2 ('audit') instead of 1('block').|
+|33ddedf1-c6e0-47cb-833e-de6133960387|Block rebooting machine in Safe Mode|1 (Block)|
 
 > [!TIP]
 > Some rules might block behavior you find acceptable in your organization. In these cases, change the rule from 'Enabled' to 'Audit' to prevent unwanted blocks.
@@ -238,11 +237,11 @@ For more information, see [How do I configure or manage tamper protection?](/def
 
 It's important to check that the Cloud Protection network connectivity is working during your pen testing.
 
-CMD (Run as admin)
+Run the following command in an elevated command prompt (a Command Prompt window you opened by selecting **Run as administrator**):
 
-
-```
+```dos
 cd "C:\Program Files\Windows Defender"
+
 MpCmdRun.exe -ValidateMapsConnection
 ```
 
@@ -257,31 +256,31 @@ The latest 'Platform Update' version Production channel (GA) is available here:
 To check which 'Platform Update' version is installed, use the following PowerShell command (Run as admin):
 
 ```powershell
-get-mpComputerStatus | ft AMProductVersion
+Get-MpComputerStatus | Format-Table AMProductVersion
 ```
 
 ## Check the Security Intelligence Update version
 
 The latest 'Security Intelligence Update' version is available here:
 
-[Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware - Microsoft Security Intelligence](https://www.microsoft.com/en-us/wdsi/defenderupdates)
+[Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware - Microsoft Security Intelligence](https://www.microsoft.com//wdsi/defenderupdates)
 
 To check which 'Security Intelligence Update' version is installed, use the following PowerShell command (Run as admin):
 
 ```PowerShell
-get-mpComputerStatus | ft AntivirusSignatureVersion
+Get-MpComputerStatus | Format-Table AntivirusSignatureVersion
 ```
 
 ## Check the Engine Update version
 
 The latest scan 'engine update' version is available here:
 
-[Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware - Microsoft Security Intelligence](https://www.microsoft.com/en-us/wdsi/defenderupdates)
+[Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware - Microsoft Security Intelligence](https://www.microsoft.com/wdsi/defenderupdates)
 
 To check which 'Engine Update' version is installed, use the following PowerShell command(Run as admin):
 
 ```PowerShell
-get-mpComputerStatus | ft AMEngineVersion
+Get-MpComputerStatus | Format-Table AMEngineVersion
 ```
 
 If you're finding that your settings aren't taking effect, you might have a conflict. To resolve conflicts, refer:
@@ -293,8 +292,7 @@ If you have any questions about a detection that Microsoft Defender AV makes, or
 
 If you have Microsoft XDR, Microsoft Defender for Endpoint P2/P1, or Microsoft Defender for Business: refer [Submit files in Microsoft Defender for Endpoint](admin-submissions-mde.md).
 
-If you have Microsoft Defender Antivirus, refer:
-https://www.microsoft.com/security/portal/mmpc/help/submission-help.aspx
+If you have Microsoft Defender Antivirus, see [Submit files for analysis](https://learn.microsoft.com/unified-secops/submission-guide).
 
 Microsoft Defender AV indicates a detection through [standard Windows notifications](configure-notifications-microsoft-defender-antivirus.md). You can also [review detections in the Microsoft Defender AV app](review-scan-results-microsoft-defender-antivirus.md).
 
@@ -302,6 +300,4 @@ The Windows event log also records detection and engine events. See the [Microso
 
 If your settings aren't applied properly, find out if there are conflicting policies that are enabled in your environment. For more information, see [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md).
 
-If you need to open a Microsoft support case:
-[Contact Microsoft Defender for Endpoint support](contact-support.md).
-
+If you need to open a Microsoft support case: [Contact Microsoft Defender for Endpoint support](contact-support.md).

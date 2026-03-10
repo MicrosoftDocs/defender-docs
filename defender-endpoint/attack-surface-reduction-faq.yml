@@ -96,7 +96,7 @@ sections:
         answer: |
           Different attack surface reduction rules have different protection flows. Always think about what the attack surface reduction rule protects against, and how the execution flow works. For example, reading directly from the local security authority subsystem (LSASS) process can be a security risk, because it might expose corporate credentials.
 
-          The **Block credential stealing from the Windows local security authority subsystem (lsass.exe)** rule prevents untrusted processes from having direct access to LSASS memory. When a process with the `PROCESS_VM_READ` access right tries to use the `OpenProcess()` function to access LSASS, the rule specifically blocks that access right as shown in the following screenshot:
+          The **Block credential stealing from the Windows local security authority subsystem** (lsass.exe) rule prevents untrusted processes from having direct access to LSASS memory. When a process with the `PROCESS_VM_READ` access right tries to use the `OpenProcess()` function to access LSASS, the rule specifically blocks that access right as shown in the following screenshot:
 
           :::image type="content" source="media/asrfaq1.png" alt-text="block credential stealing LSASS":::
 
@@ -117,8 +117,8 @@ sections:
           Generally, we recommend enabling all rules, but with the following considerations:
 
           - Typically, you can enable the following **standard protection rules** in **Block** mode without testing in **Audit** mode:
-            - [Block abuse of exploited vulnerable signed drivers](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers)
-            - [Block credential stealing from the Windows local security authority subsystem (lsass.exe)](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
+            - [Block abuse of exploited vulnerable signed drivers (Device)](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers)
+            - [Block credential stealing from the Windows local security authority subsystem](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
             - [Block persistence through WMI event subscription](attack-surface-reduction-rules-reference.md#block-persistence-through-wmi-event-subscription) **Note**: The Microsoft Configuration Manager (or previous versions) client relies heavily on WMI, so we recommend extensive testing in **Audit** mode before you activate this rule in **Block** mode.
 
             For details about each of these rules, see [Standard protection rules](attack-surface-reduction-rules-reference.md#standard-protection-rules).
@@ -128,7 +128,7 @@ sections:
       - question: |
           Is local security authority subsystem rule enabled by default?
         answer: |
-          The default state for the attack surface reduction rule named **Block credential stealing from the Windows local security authority subsystem (lsass.exe)** changes from **Not Configured** to **Configured** and the default mode set to **Block**. All other attack surface reduction rules remain in their default state of **Not Configured**. Extra filtering logic is already incorporated in the rule to reduce end user notifications. Customers can configure the rule in **Audit**, **Warn**, or **Disabled** modes. The functionality of this rule is the same, whether the rule is configured in the on-by-default mode, or if you enable **Block** mode manually.
+          The default state for the attack surface reduction rule named **Block credential stealing from the Windows local security authority subsystem** changes from **Not Configured** to **Configured** and the default mode set to **Block**. All other attack surface reduction rules remain in their default state of **Not Configured**. Extra filtering logic is already incorporated in the rule to reduce end user notifications. Customers can configure the rule in **Audit**, **Warn**, or **Disabled** modes. The functionality of this rule is the same, whether the rule is configured in the on-by-default mode, or if you enable **Block** mode manually.
 
       - question: |
           What are some recommendations for getting started with attack surface reduction?
@@ -192,14 +192,14 @@ sections:
           Typically, cloud protection can determine that a new version of an app is similar enough to previous versions of the app, so a lengthy reassessment of the app isn't required. However, it might take time for the new version of the app to build a reputation, particularly after a major update. In the meantime, you can add the app to the exclusions list. If you frequently update and work with new versions of apps, you might consider configuring this rule in **Audit** mode.
 
       - question: |
-          I recently enabled the attack surface reduction rule named 'Block credential stealing from the Windows local security authority subsystem (lsass.exe)', and I'm getting a large number of notifications. What's going on?
+          I recently enabled the attack surface reduction rule named Block credential stealing from the Windows local security authority subsystem, and I am getting a large number of notifications. What's going on?
         answer: |
           A notification generated by this rule doesn't necessarily indicate malicious activity. But this rule is still useful for blocking malicious activity. Malware often targets lsass.exe to gain illicit access to accounts. The lsass.exe process stores user credentials in memory after a user signs in. Windows uses these credentials to validate users and apply local security policies.
 
           Because many legitimate processes call on lsass.exe for credentials, this rule can be especially noisy. If a known, legitimate app causes this rule to generate an excessive number of notifications, you can add it to the exclusion list. Most other attack surface reduction rules generate a relatively smaller number of notifications.
 
       - question: |
-          Is it a good idea to enable the rule named 'Block credential stealing from the Windows local security authority subsystem (lsass.exe)' alongside LSA protection?
+          Is it a good idea to enable the rule named Block credential stealing from the Windows local security authority subsystem alongside LSA protection?
         answer: |
           No. If you enabled [Local Security Authority (LSA) protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection) (which we recommend, along with [Credential Guard](/windows/security/identity-protection/credential-guard)):
 
