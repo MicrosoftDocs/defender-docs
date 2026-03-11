@@ -21,6 +21,7 @@ ms.custom:
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
+    - Microsoft Defender for Endpoint Plan 2
 ms.topic: how-to
 ms.date: 02/27/2026
 ---
