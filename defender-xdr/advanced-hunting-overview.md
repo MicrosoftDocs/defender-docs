@@ -62,6 +62,12 @@ You need to be assigned permissions before you can run Advanced Hunting queries.
     - **EmailEvents**
     - **EmailUrlInfo**
     - **EmailAttachmentInfo**
+    - **EmailPostDeliveryevents**
+    - **CampaignInfo**
+    - **FileMaliciousContentInfo**
+    - **MessageEvents**
+    - **MessagePostDeliveryEvents**
+    - **MessageUrlInfo**
     - **UrlClickEvents**
     - **Email entity metadata**
 
