@@ -19,8 +19,6 @@ Threat protection for AI services in Microsoft Defender for Cloud protects Micro
 
 - [Enable Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
-- We recommend not opting out of prompt-based triggered alerts for [Azure OpenAI content filtering](/azure/ai-services/openai/concepts/content-filter). Opting out prevents Microsoft Defender for Cloud from analyzing prompt and response data, which can limit or disable AI threat detection.
-
 ## Enable threat protection for AI services
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
@@ -40,6 +38,8 @@ Threat protection for AI services in Microsoft Defender for Cloud protects Micro
 With the AI services threat protection plan enabled, you can control whether alerts include suspicious segments directly from your user's prompts, or the model responses from your AI applications or agents. Enabling user prompt evidence helps you triage, classify alerts and your user's intentions.
 
 User prompt evidence consists of prompts and model responses. Both are considered your data. Evidence is available through the Azure portal, Defender portal, and any attached partners integrations.
+
+If User prompt evidence is disabled, Microsoft Defender for Cloud continues analyzing prompts and responses for threat detection, but the prompt content is masked in alerts.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
