@@ -55,13 +55,6 @@ The following steps guide you through onboarding VDI devices and highlight steps
 > [!WARNING]
 > For environments where there are low resource configurations, the VDI boot procedure might slow the Defender for Endpoint sensor onboarding.
 
-## Prerequisites
-
-To [update virtual desktop infrastructure (VDI) images](#updating-virtual-desktop-infrastructure-vdi-images-persistent-or-non-persistent), you need the following:
-
-- Administrator permissions on the device.
-- The [PsExec](/sysinternals/downloads/psexec) tool.
-
 ### Onboarding steps
 
 > [!NOTE]
@@ -153,6 +146,9 @@ The following registry is relevant only when the aim is to achieve a single entr
 With the ability to easily deploy updates to VMs running in VDIs, we've shortened this guide to focus on how you can get updates on your machines quickly and easily. You no longer need to create and seal golden images on a periodic basis, as updates are expanded into their component bits on the host server and then downloaded directly to the VM when it's turned on.
 
 If you have onboarded the primary image of your VDI environment (SENSE service is running), then you must offboard and clear local Microsoft Defender for Endpoint registration data before putting the image back into production.
+
+> [!NOTE]
+> To [update virtual desktop infrastructure (VDI) images](#updating-virtual-desktop-infrastructure-vdi-images-persistent-or-non-persistent), you need administrator permissions on the device, and the the [PsExec](/sysinternals/downloads/psexec) tool.
 
 To update VDI images:
 
