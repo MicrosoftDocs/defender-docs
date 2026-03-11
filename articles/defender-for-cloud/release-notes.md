@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 03/10/2026
+ms.date: 03/11/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -31,10 +31,25 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| March 11, 2026 | GA| [Severity‑based risk assignment for "Not evaluated" recommendations](#severitybased-risk-assignment-for-not-evaluated-recommendations) |
 | March 10, 2026| Preview |[Code to runtime enrichment for recommendations](#code-to-runtime-enrichment-for-recommendations-preview)|
 | March 10, 2026 | Preview | [On-demand malware scanning of Azure Files in Microsoft Defender for Storage](#on-demand-malware-scanning-of-azure-files-in-microsoft-defender-for-storage-preview) 
 | March 04, 2026 | Deprecation | [Deprecation of preview of container and container images vulnerability recommendations](#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations) |
 | March 04, 2026 | Preview |[New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview)|
+
+### Severity‑based risk assignment for "Not evaluated" recommendations
+
+March 11, 2026
+
+Recommendations that previously appeared as **Not evaluated** will now receive a risk level derived from the recommendation severity. As a result, these recommendations will now be prioritized in the recommendations list based on their assigned risk level. 
+
+This change may affect the overall status of recommendations and will also impact Secure Score, as previously recommendations that were not evaluated are now included in risk calculations. 
+
+For customers without Defender CSPM enabled, this update removes the **Not evaluated** risk state and replaces it with severity‑based risk. 
+
+To benefit from full contextual, environment‑aware risk evaluation, Defender CSPM must be enabled on the subscription.
+
+For more information, see [Security recommendations](security-recommendations.md).
 
 ### Code to runtime enrichment for recommendations (Preview)
 
@@ -49,7 +64,7 @@ Microsoft Defender for Cloud now provides Code to runtime capabilities, enabling
 - **Runtime-to-Source Tracing**: Navigate backwards from runtime recommendations to identify the original source of security issues
 - **Actionable Remediation**: Fix issues at the source to prevent recurring regressions rather than addressing only runtime symptoms
 
-Learn more about the [Map container images from code to runtime preqrequisites](container-image-mapping.md).
+Learn more about the [Map container images from code to runtime prerequisites](container-image-mapping.md).
 Learn more about [Code to runtime enrichment for recommendations](code-to-runtime-mapping.md).
 
 ### On-demand malware scanning of Azure Files in Microsoft Defender for Storage (Preview)
