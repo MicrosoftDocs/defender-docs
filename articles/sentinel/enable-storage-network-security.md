@@ -1,5 +1,5 @@
 ---
-title: Enable Network Security for Azure Storage Connector
+title: Enable Network Security for Azure Storage blob connectors
 description: Learn how to enable network security for Azure Storage connector resources. Follow step-by-step instructions to secure your storage accounts with Network Security Perimeters.
 author: EdB-MSFT
 ms.author: edbaynash
@@ -10,7 +10,7 @@ ms.service: microsoft-sentinel
 #customer intent: As a security engineer, I want to configure a Network Security Perimeter for storage accounts used in storage blob connectors
 ---
 
-# Enable network security on connector integrated storage resources
+# Enable Network Security for Azure Storage blob connectors
 
 This article provides step-by-step instructions on how to enable network security on the storage resources integrated with your Azure Storage connector. Azure network security perimeter (NSP) is an Azure-native feature that creates a logical isolation boundary for your PaaS resources. By associating resources like storage accounts or databases with an NSP, you can centrally manage network access using a simplified rule set. For more information, see [Network security perimeter concepts](/azure/private-link/network-security-perimeter-concepts).
 
