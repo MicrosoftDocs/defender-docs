@@ -19,6 +19,8 @@ For example, one out of the box query provides data about the most uncommon proc
 
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 
+> [!NOTE]
+>Microsoft Sentinel livestreams are longer be available. To automate queries and notifications, use [KQL jobs](./datalake/kql-jobs.md), [analytics rules](./threat-detection.md#types-of-analytics-rules), or [playbooks](./automation/automate-responses-with-playbooks.md). These alternatives offer persistent query results and support for various messaging platforms.
 
 ## Hunts in Microsoft Sentinel (preview)
 
