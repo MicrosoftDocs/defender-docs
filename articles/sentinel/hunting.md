@@ -81,7 +81,7 @@ Use queries before, during, and after a compromise to take the following actions
 
   - [Export findings](/defender-xdr/manage-incidents#incident-logging-and-reporting) and link them to specific cases for improved SOC collaboration.
 
-You can also create hunting and queries over data stored in Azure Data Explorer. For more information, see details of [constructing cross-resource queries](/azure/azure-monitor/logs/azure-monitor-data-explorer-proxy) in the Azure Monitor documentation.
+You can also create hunting queries over data stored in Azure Data Explorer. For more information, see details of [constructing cross-resource queries](/azure/azure-monitor/logs/azure-monitor-data-explorer-proxy) in the Azure Monitor documentation.
 
 To find more queries and data sources, go to the **Content hub** in Microsoft Sentinel or refer to community resources like [Microsoft Sentinel GitHub repository](https://github.com/Azure/Azure-Sentinel/tree/master/Hunting%20Queries). 
 
