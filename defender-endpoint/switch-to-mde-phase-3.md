@@ -136,7 +136,9 @@ To get your updates, follow the guidance in [Manage Microsoft Defender Antivirus
 
 ## Step 5: Uninstall your non-Microsoft solution
 
-If, at this point you have onboarded your organization's devices to Defender for Endpoint, and Microsoft Defender Antivirus is installed and enabled, then your next step is to uninstall your non-Microsoft antivirus, antimalware, and endpoint protection solution. When you uninstall your non-Microsoft solution, Microsoft Defender Antivirus changes from passive mode to active mode. In most cases, this happens automatically. 
+If, at this point you have onboarded your organization's devices to Defender for Endpoint, and Microsoft Defender Antivirus is installed and enabled, then your next step is to uninstall your non-Microsoft antivirus, antimalware, and endpoint protection solution. When you uninstall your non-Microsoft solution, Microsoft Defender Antivirus changes from passive mode to active mode. In most cases, this happens automatically.
+
+You can monitor the state of Microsoft Defender Antivirus at scale from the Defender XDR Portal using the [Device Health Report](https://security.microsoft.com/devicehealth?viewid=oldavhealthreport). This report highlights the state of Microsoft Defender Antivirus on devices onboarded to Defender for Endpoint, helping you to track current antivirus mode, engine version and various other details.
 
 > [!IMPORTANT]
 > If, for some reason, Microsoft Defender Antivirus does not go into active mode after you have uninstalled your non-Microsoft antivirus/antimalware solution, see [Microsoft Defender Antivirus seems to be stuck in passive mode](switch-to-mde-troubleshooting.md#microsoft-defender-antivirus-seems-to-be-stuck-in-passive-mode).
