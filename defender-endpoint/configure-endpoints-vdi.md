@@ -55,6 +55,13 @@ The following steps guide you through onboarding VDI devices and highlight steps
 > [!WARNING]
 > For environments where there are low resource configurations, the VDI boot procedure might slow the Defender for Endpoint sensor onboarding.
 
+## Prerequisites
+
+To [update virtual desktop infrastructure (VDI) images](#updating-virtual-desktop-infrastructure-vdi-images-persistent-or-non-persistent), you need the following:
+
+- Administrator permissions on the device.
+- The [PsExec](https://learn.microsoft.com/sysinternals/downloads/psexec) tool.
+
 ### Onboarding steps
 
 > [!NOTE]
@@ -147,21 +154,17 @@ With the ability to easily deploy updates to VMs running in VDIs, we've shortene
 
 If you have onboarded the primary image of your VDI environment (SENSE service is running), then you must offboard and clear local Microsoft Defender for Endpoint registration data before putting the image back into production.
 
-## Prerequisites
-- Administrator permissions on the device.
-- The [PsExec](https://learn.microsoft.com/sysinternals/downloads/psexec) tool.
+To update VDI images:
 
-## Steps
-
+1. Review the [prerequisites](#prerequisites) to ensure you have the necessary permissions and tools.
 1. [Offboard the machine](offboard-machines.md).
+1. Ensure that the PsExec tool is available in the command‑prompt path.  
 
-2. Ensure PsExec is available in the command‑prompt path.  
-The PsExec tool is required to start a command shell under the SYSTEM account, which is necessary to access and modify the registry paths referenced below.
+    The PsExec tool is required to start a command shell under the SYSTEM account, which is necessary to access and modify the registry paths referenced below.
 
-3. Open an elevated Command Prompt.  
-Select **Start**, type **cmd**, right‑click **Command Prompt**, and select **Run as administrator**.
-
-4. Ensure the sensor is stopped by running the following command in the CMD window:
+1. Open an elevated command prompt.  
+1. Select **Start**, type **cmd**, right‑click **Command Prompt**, and select **Run as administrator**.
+1. To ensure that the sensor isn't running, type the following command in the command prompt window:
 
    ```console
 
@@ -169,7 +172,7 @@ Select **Start**, type **cmd**, right‑click **Command Prompt**, and select **R
 
    ```
 
-5. To reset local Microsoft Defender for Endpoint registration data, start a **SYSTEM‑level** command shell by running the following:
+1. To reset local Defender for Endpoint registration data, start a **SYSTEM‑level** command shell:
 
    ```console
 
@@ -184,9 +187,10 @@ Select **Start**, type **cmd**, right‑click **Command Prompt**, and select **R
    exit
 
    ```
+
 > [!NOTE]
-> Some of the registry deletion commands may return a “The system was unable to find the specified registry key or value” message.  
-> This occurs when the corresponding registry path does not exist. This is expected and can be safely ignored. 
+> Some of the registry deletion commands may return a `The system was unable to find the specified registry key or value` message.  
+> This message is triggered when the corresponding registry path doesn't exist. This is expected behavior and can be safely ignored.
 
 ### Are you using a third party for VDIs?
 
