@@ -64,7 +64,7 @@ Microsoft Defender for Cloud now provides Code to runtime capabilities, enabling
 - **Runtime-to-Source Tracing**: Navigate backwards from runtime recommendations to identify the original source of security issues
 - **Actionable Remediation**: Fix issues at the source to prevent recurring regressions rather than addressing only runtime symptoms
 
-Learn more about the [Map container images from code to runtime preqrequisites](container-image-mapping.md).
+Learn more about the [Map container images from code to runtime prerequisites](container-image-mapping.md).
 Learn more about [Code to runtime enrichment for recommendations](code-to-runtime-mapping.md).
 
 ### On-demand malware scanning of Azure Files in Microsoft Defender for Storage (Preview)
