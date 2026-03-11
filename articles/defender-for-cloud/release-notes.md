@@ -49,7 +49,7 @@ For customers without Defender CSPM enabled, this update removes the **Not evalu
 
 To benefit from full contextual, environment‑aware risk evaluation, Defender CSPM must be enabled on the subscription.
 
-For more information, see [On-demand malware scanning](on-demand-malware-scanning.md).
+For more information, see [Security recommendations](security-recommendations.md).
 
 ### Code to runtime enrichment for recommendations (Preview)
 
