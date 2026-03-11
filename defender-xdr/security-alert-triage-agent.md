@@ -66,7 +66,7 @@ To run the Security Alert Triage Agent in your environment, you need:
 |Products and licenses|- Security Copilot and provisioned capacity in Security Compute Units (SCU). See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) or check whether you're entitled to SCUs as part of the [Microsoft Security Copilot inclusion model](/copilot/security/security-copilot-inclusion) <br>- **For email and collaboration alerts** - [Microsoft Defender for Office P2](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)<br>- **For cloud container alerts** - [Microsoft Defender for Containers (part of Microsoft Defender for Cloud)](/azure/defender-for-cloud/defender-for-containers-deployment-overview)<br> - **For identity alerts** - [Entra ID P2 license](/entra/fundamentals/licensing) and Microsoft for Defender for Identity and Microsoft for Cloud Apps deployed |
 |Microsoft Defender required features|- Enable unified role-based access control (URBAC) for Defender for Office 365. See [Activate URBAC settings](#activate-urbac-settings) for more information. </br>**For email and collaboration alerts**</br> - Enable **Monitor reported messages in Outlook** in **User reported settings**. See [User reported settings](#configure-user-reported-settings) for more information </br>- Turn on the **Email reported by user as malware or phish** alert policy to triage phishing alerts. For more information, see [Alert policies in the Microsoft Defender portal](alert-policies.md).|
 | Plugins | The Security Alert Triage Agent automatically activates these Security Copilot plugins: <br>- Microsoft Defender XDR<br>- Microsoft Threat Intelligence<br>- Security Alert Triage Agent |
-| Alert-tuning rules | The Security Alert Triage Agent doesn't classify alerts that you suppress by using [alert tuning](investigate-alerts.md#tune-an-alert). Make sure to disable tuning rules that suppress the alerts you want the agent to triage.<br>- For email and collaboration alerts disable **Email reported by user as malware or phish**.<br>- For cloud alerts disable **Drift Binary Detected Executing in Container**, **Possible Web Shell Activity Detected**, and **Network Scanning Tool Detected**. <br>- For identity alerts, disable **Password Spray**, **Possible BEC-related inbox rule**, and **Account compromised following a password-spray attack**.|
+| Alert-tuning rules | The Security Alert Triage Agent doesn't classify alerts that you suppress by using [alert tuning](investigate-alerts.md#tune-an-alert). Make sure to disable tuning rules that suppress the alerts you want the agent to triage.<br>- For email and collaboration alerts disable **Email reported by user as malware or phish** built-in tuning rule.<br>- For cloud alerts disable **Drift Binary Detected Executing in Container**, **Possible Web Shell Activity Detected**, and **Network Scanning Tool Detected**. <br>- For identity alerts, disable **Password Spray**, **Possible BEC-related inbox rule**, and **Account compromised following a password-spray attack**.|
 
 ### Activate URBAC settings
 
@@ -76,6 +76,7 @@ Activate the workloads for the alert types you want the agent to triage in the M
 |:---|:---|
 | Email and collaboration alerts | Defender for Office 365 |
 | Cloud alerts | None required | 
+| Identity alerts | Cloud Apps |
 
 :::image type="content" source="media/phishing-triage-agent/activate-defender-for-office-365-workloads.png" alt-text="Screenshot of the Activate unified role-based access control page showing the Defender for Office 365 toggle, which needs to be enabled for the Phishing Triage Agent." lightbox="media/phishing-triage-agent/activate-defender-for-office-365-workloads.png":::
 
@@ -250,7 +251,7 @@ To review the agent’s findings, follow these steps:
 
    :::image type="content" source="media/phishing-triage-agent/view-agent-activity.png" alt-text="Screenshot highlighting the View agent activity pane." lightbox="media/phishing-triage-agent/view-agent-activity.png"::: 
 
-## Teach the agent your organization’s context through feedback
+## Teach the agent your organization’s context through feedback (email and collaboration alerts only)
 
 > [!IMPORTANT]
 > The feedback option is currently only available for email and collaboration alerts.
