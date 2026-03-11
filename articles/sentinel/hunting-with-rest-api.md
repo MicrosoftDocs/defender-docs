@@ -13,9 +13,8 @@ ms.date: 11/09/2025
 
 # Manage hunting queries in Microsoft Sentinel using REST API
 
-Microsoft Sentinel, being built in part on Azure Monitor Log Analytics, lets you use Log Analytics’ REST API to manage hunting queries. This document shows you how to create and manage hunting queries using the REST API.  Queries created in this way will be displayed in the Microsoft Sentinel UI.
-
-See the definitive REST API reference for more details on the [saved searches API](/rest/api/loganalytics/savedsearches).
+Microsoft Sentinel, being built in part on Azure Monitor Log Analytics, lets you use Log Analytics’ REST API to manage hunting queries. This document shows you how to create and manage hunting queries using the REST API. Queries created in this way are displayed in the Microsoft Sentinel UI.
+For more information on the [saved searches API](/rest/api/loganalytics/savedsearches), see the definitive REST API reference.
 
 ## API examples
 
@@ -23,15 +22,14 @@ In the following examples, replace these placeholders with the replacement presc
 
 | Placeholder | Replace with |
 |-|-|
-| **{subscriptionId}** | the name of the subscription to which you are applying the hunting query. |
-| **{resourceGroupName}** | the name of the resource group to which you are applying the hunting query. |
-| **{savedSearchId}** | a unique id (GUID) for each hunting query. |
+| **{subscriptionId}** | the name of the subscription to which you're applying the hunting query. |
+| **{resourceGroupName}** | the name of the resource group to which you're applying the hunting query. |
+| **{savedSearchId}** | a unique ID (GUID) for each hunting query. |
 | **{WorkspaceName}** | the name of the Log Analytics workspace that is the target of the query. |
 | **{DisplayName}** | a display name of your choice for the query. |
 | **{Description}** | a description of the hunting query. |
 | **{Tactics}** | the relevant MITRE ATT&CK tactics that apply to the query. |
 | **{Query}** | the query expression for your query. |
-|  
 
 ### Example 1
 
