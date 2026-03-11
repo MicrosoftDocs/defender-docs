@@ -23,14 +23,14 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 03/10/2026
+ms.date: 03/11/2026
 ---
 
 # Create custom detection rules
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Custom detection rules are rules you design and tweak by using [advanced hunting](advanced-hunting-overview.md) queries. These rules let you proactively monitor various events and system states, including suspected breach activity and misconfigured endpoints. You can set them to run at regular intervals, generating alerts and taking response actions whenever there are matches.
+Custom detection rules are rules you design and tweak by using [advanced hunting](advanced-hunting-overview.md) queries. By using these rules, you can proactively monitor various events and system states, including suspected breach activity and misconfigured endpoints. You can set them to run at regular intervals, generating alerts and taking response actions whenever there are matches.
 
 ## Required permissions for managing custom detections
 
@@ -169,17 +169,20 @@ When you save a new rule, it runs and checks for matches from the past 30 days o
 
 When you edit a rule, the next run time scheduled according to the frequency you set applies the changes. The rule frequency is based on the event timestamp and not the ingestion time. Small delays might occur in specific runs, so the configured frequency isn't 100% accurate.
 
+>[!IMPORTANT]
+> Custom detections evaluate `ingestion_time()` to account for ingestion delays. Because of this condition, events with `Timestamp` or `TimeGenerated` values older than the configured lookback period might still be included in the rule evaluation.
+
 
 ##### Continuous (NRT) frequency
 
-Setting a custom detection to run in Continuous (NRT) frequency increases your organization's ability to identify threats faster. Using the Continuous (NRT) frequency has minimal to no impact on your resource usage and should thus be considered for any qualified custom detection rule in your organization.
+Setting a custom detection to run in Continuous (NRT) frequency increases your organization's ability to identify threats faster. Using the Continuous (NRT) frequency has minimal to no impact on your resource usage. Consider using it for any qualified custom detection rule in your organization.
 
-From the custom detection rules page, you can migrate custom detections rules that fit the Continuous (NRT) frequency with a single button, **Migrate now**:
+From the custom detection rules page, you can migrate custom detections rules that fit the Continuous (NRT) frequency by selecting **Migrate now**:
 
 :::image type="content" source="media/custom-detection-rules/custom-detection-migrate-now.png" alt-text="Screenshot of the Migrate now button in advanced hunting." lightbox="media/custom-detection-rules/custom-detection-migrate-now.png":::
 
 
-When you select **Migrate now**, you get a list of all compatible rules according to their KQL query. You can choose to migrate all or selected rules only according to your preferences:
+When you select **Migrate now**, you see a list of all compatible rules according to their KQL query. You can choose to migrate all or selected rules only:
 
 :::image type="content" source="media/custom-detection-rules/custom-detection-compatible-queries.png" alt-text="Screenshot of the continuous frequency compatible queries in advanced hunting." lightbox="media/custom-detection-rules/custom-detection-compatible-queries.png":::
 
@@ -196,7 +199,7 @@ You can run a query continuously as long as:
 
 ###### Tables that support Continuous (NRT) frequency
 
-Near real-time detections are supported for the following tables:
+Near real-time detections support the following tables:
 
 |Microsoft Defender XDR| Microsoft Sentinel|
 |----------------------|-------------------|
@@ -207,7 +210,7 @@ Near real-time detections are supported for the following tables:
 
 ###### Custom frequency for Microsoft Sentinel data
 
-Microsoft Sentinel customers who are onboarded to Microsoft Defender can select **Custom** frequency when the rule is based only on data that Microsoft Sentinel ingests. 
+Microsoft Sentinel customers who onboard to Microsoft Defender can select **Custom** frequency when the rule is based only on data that Microsoft Sentinel ingests. 
 
 When you select this frequency option, the **Run query every input** component appears. Type the desired frequency for the rule and use the dropdown to select the units: minutes, hours, or days. The supported range is any value from 5 minutes to 14 days. When you select a frequency, the lookback period is determined automatically by using the following logic: 
 1.	For detections set to run more frequently than once a day, the lookback is four times the frequency. For example, if the frequency is 20 minutes, the lookback is 80 minutes.  
@@ -216,7 +219,7 @@ When you select this frequency option, the **Run query every input** component a
 :::image type="content" source="media/custom-detection-rules/ah-custom-frequency.png" alt-text="Screenshot that shows the Custom frequency option in the Custom detections setup guide." lightbox="media/custom-detection-rules/ah-custom-frequency.png":::
 
 > [!IMPORTANT]
->When you select a custom frequency, we fetch your data from Microsoft Sentinel. This means that: 
+>When you select a custom frequency, Defender fetches your data from Microsoft Sentinel. This means that: 
 >1.	You must have data available in Microsoft Sentinel.
 >1.	Defender XDR data doesn't support scoping, since Microsoft Sentinel doesn't support scoping.
 
@@ -272,7 +275,7 @@ You can link a wide range of entity types to your alerts. Linking more entities 
 For Microsoft Defender XDR data, the entities are automatically selected. If the data is from Microsoft Sentinel, you need to select the entities manually. 
 
 >[!NOTE]
->Entities impact how alerts are grouped into incidents. Make sure to carefully review the entities to ensure high incidents’ quality. For more information, see [Alert correlation and incident merging in the Microsoft Defender portal](alerts-incidents-correlation.md). 
+>Entities impact how alerts are grouped into incidents. Make sure to carefully review the entities to ensure high quality of incidents. For more information, see [Alert correlation and incident merging in the Microsoft Defender portal](alerts-incidents-correlation.md). 
 
 The expanded **Entity mapping** section has two sections where you can select entities: 
 -	**Impacted assets** – Add impacted assets that appear in the selected events. You can add the following types of assets: 
@@ -323,13 +326,13 @@ Apply these actions to devices in the `DeviceId` column of the query results:
 
 #### Actions on files
 
-- When selected, the **Allow/Block** action can be applied to the file. Blocking files are only allowed if you have *Remediate* permissions for files and if the query results have identified a file ID, such as a SHA-1 hash. Once a file is blocked, other instances of the same file in all devices are also blocked. You can control which device group the blocking is applied to, but not specific devices.
+- When selected, the **Allow/Block** action can be applied to the file. Blocking files is only allowed if you have *Remediate* permissions for files and if the query results identify a file ID, such as a SHA-1 hash. Once a file is blocked, other instances of the same file on all devices are also blocked. You can control which device group the blocking applies to, but not specific devices.
 
 - When selected, the **Quarantine file** action can be applied to files in the `SHA1`, `InitiatingProcessSHA1`, `SHA256`, or `InitiatingProcessSHA256` column of the query results. This action deletes the file from its current location and places a copy in quarantine.
 
 #### Actions on users
 
-- When selected, the **Mark user as compromised** action is taken on users in the `AccountObjectId`, `InitiatingProcessAccountObjectId`, or `RecipientObjectId` column of the query results. This action sets the users risk level to "high" in Microsoft Entra ID, triggering corresponding [identity protection policies](/azure/active-directory/identity-protection/overview-identity-protection).
+- When selected, the **Mark user as compromised** action takes on users in the `AccountObjectId`, `InitiatingProcessAccountObjectId`, or `RecipientObjectId` column of the query results. This action sets the user's risk level to "high" in Microsoft Entra ID, triggering corresponding [identity protection policies](/azure/active-directory/identity-protection/overview-identity-protection).
 
 - Select **Disable user** to temporarily prevent a user from signing in.
 - Select **Force password reset** to prompt the user to change their password on the next sign in session.
@@ -373,7 +376,7 @@ After reviewing the rule, select **Create** to save it. The custom detection rul
 
 #### How custom detections handle duplicate alerts
 
-An important consideration when creating and reviewing custom detection rules is alert noise and fatigue. Custom detections group and deduplicate events into a single alert. If a custom detection fires twice on an event that contains the same entities, custom details, and dynamic details, it creates one alert for both events. If the detection recognizes that the events are identical, it logs one of the events on the created alert and takes care of the duplicates. Duplicates can occur when the lookback period is longer than the frequency. If the events are different, the custom detection logs both events on the alert.
+An important consideration when creating and reviewing custom detection rules is alert noise and fatigue. Custom detections group and deduplicate events into a single alert. If a custom detection rule fires twice on an event that contains the same entities, custom details, and dynamic details, it creates one alert for both events. If the detection rule recognizes that the events are identical, it logs one of the events on the created alert and takes care of the duplicates. Duplicates can occur when the lookback period is longer than the frequency. If the events are different, the custom detection logs both events on the alert.
 
 ## See also
 
