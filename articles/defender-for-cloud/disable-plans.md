@@ -111,7 +111,7 @@ For security purposed Defender for Cloud also has multiple features that can re-
 - Resource‑level settings
 - Billing meters that reveal what’s actually charging
 
-### [Disable auto-provisioning](#tab/disable-auto-provisioning)
+### [1. Disable auto-provisioning](#tab/disable-auto-provisioning)
 
 Auto‑provisioning can silently reinstall Defender for Cloud's agents or extensions, even after plans are turned off. To prevent this, you need to disable auto‑provisioning in Defender for Cloud's settings. It's important to find the plans that contain Endpoint protection and Guest Configuration agent, and disable them to make sure that the agents/extensions don't get reinstalled.
 
@@ -129,7 +129,7 @@ Auto‑provisioning can silently reinstall Defender for Cloud's agents or extens
 
 1. Select **Save**.
 
-### [Disable Azure Policy assignments](#tab/disable-azure-policy-assignements)
+### [2. Disable Azure Policy assignments](#tab/disable-azure-policy-assignements)
 
 As a security measure, Defender for Cloud has Azure Policy initiatives that can automatically redeploy Defender for Cloud components if they are uninstalled. To prevent this, you need to identify and disable any relevant Azure Policy assignments.
 
@@ -151,17 +151,17 @@ As a security measure, Defender for Cloud has Azure Policy initiatives that can 
 
 ---
 
-## Verify disablement with billing
+## Check resource-level settings
 
-After you disable plans, you can check your billing meters to verify that the plans are disabled and that you are no longer being charged for them. Billing meters can also reveal if any plan gets re-enabled after being turned off.
+Defender for Cloud can be enabled per individual resource, even if the subscription‑level plan is turned off. To fully stop charges, you must check and disable Defender on each supported resource type.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Open the rpecific Azure resource.
 
-1. Search for and select **Cost Management + Billing**.
+1. Locate and select **Microsoft Defender for Cloud**.
 
-1. Select **Cost Management** > **Cost analysis**.
+1. Turn Defender for Cloud to **Off**.
 
-    :::image type="content" source="media/disable-plans/cost-analysis.png" alt-text="Screenshot that shows where to find cost analysis in the Azure portal." lightbox="media/disable-plans/cost-analysis.png":::
+1. Save.
 
 
 
