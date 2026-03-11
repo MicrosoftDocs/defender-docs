@@ -5,12 +5,7 @@ ms.topic: conceptual
 ms.date: 12/31/2024
 ms.author: monaberdugo
 author: mberdugo
-appliesto:
-    - Microsoft Sentinel in the Microsoft Defender portal
-    - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange
-
 
 #Customer intent: As a security analyst, I want to use advanced threat hunting tools and queries so that I can proactively identify and mitigate security threats across my organization's data sources.
 
@@ -99,11 +94,11 @@ Many available hunting queries are developed by Microsoft security researchers o
 
 Create or edit a query and save it as your own query or share it with users who are in the same tenant. In Microsoft Sentinel, create a custom hunting query from the **Hunting** > **Queries** tab.
 
-# [Defender portal](#tab/defender-portal)
+#### [Defender portal](#tab/defender-portal)
 
 :::image type="content" source="./media/hunting/save-query-defender.png" alt-text="Save query" lightbox="./media/hunting/save-query-defender.png":::
 
-# [Azure portal](#tab/azure-portal)
+#### [Azure portal](#tab/azure-portal)
 
 :::image type="content" source="./media/hunting/save-query.png" alt-text="Save query" lightbox="./media/hunting/save-query.png":::
 
