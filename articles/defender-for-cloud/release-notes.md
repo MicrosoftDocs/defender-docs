@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 01/06/2026
+ms.date: 02/24/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -27,13 +27,219 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## March 2026
+
+| Date | Category | Update |
+| -------- | -------- | -------- |
+| March 04, 2026 | Deprecation | [Deprecation of preview of container and container images vulnerability recommendations](#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations) |
+| March 04, 2026 | Preview |[New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview)|
+
+### Deprecation of preview of container and container images vulnerability recommendations
+
+March 04, 2026
+
+As part of the transition to individual recommendations, Microsoft Defender for Cloud is deprecating existing grouped container vulnerability recommendations. This change enables more granular visibility, prioritization, and governance of container security findings.
+
+Grouped recommendations previously aggregated multiple findings under a single recommendation. These findings are now surfaced as individual recommendations, created per software update, vulnerability, secret, or issue type.
+
+During the transition period, grouped and individual recommendations may appear side by side. Grouped recommendations are on a deprecation path and will be removed in phases.
+
+The following grouped container vulnerability recommendations will be deprecated on April 13, 2026:
+
+**Container recommendations**
+
+- [Preview] Containers running in Azure should have vulnerability findings resolved
+- [Preview] Containers running in AWS should have vulnerability findings resolved
+- [Preview] Containers running in GCP should have vulnerability findings resolved
+
+**Container image recommendations**
+
+- [Preview] Container images in Azure registry should have vulnerability findings resolved
+- [Preview] Container images in AWS registry should have vulnerability findings resolved
+- [Preview] Container images in GCP registry should have vulnerability findings resolved
+
+Customers should update any queries, automation, governance rules, or workflows that rely on grouped recommendation keys to use individual recommendations and security categories instead.
+
+When querying individual recommendations, the same logic can be applied across cloud providers by adjusting the `Source` value.
+
+**Example: Container vulnerability recommendations**
+
+The following query allows customers to identify the new individual container vulnerability recommendations for containers running in Azure. To target containers running in AWS or GCP, change the `Source` value to `"AWS"` or `"GCP"`.
+
+```kusto
+securityresources
+| where type == "microsoft.security/assessments"
+| where properties.metadata.recommendationCategory == "SoftwareUpdate"
+| where properties.resourceDetails.ResourceType == "K8s-container"
+| where properties.resourceDetails.Source == "Azure"
+```
+
+**Example: Container image vulnerability recommendations**
+
+The following query allows customers to identify the new individual container image vulnerability recommendations in Azure container registries. To target AWS or GCP registries, update the `Source` value accordingly.
+
+```kusto
+securityresources
+| where type == "microsoft.security/assessments"
+| where properties.metadata.recommendationCategory == "SoftwareUpdate"
+| where properties.resourceDetails.ResourceType == ".containerimage"
+| where properties.resourceDetails.Source == "Azure"
+```
+
+Learn more about [security recommendations](review-security-recommendations.md) and [New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview).
+
+### New individual recommendations format in Azure portal (Preview)
+
+March 04, 2026
+
+Microsoft Defender for Cloud is converting grouped recommendations into individual recommendations in the Azure portal. This change reflects a shift from grouping related findings under one recommendation to listing each recommendation separately.
+
+**What's changing**
+
+You might see a longer list of recommendations than before. Combined findings (such as vulnerabilities, exposed secrets, or misconfigurations) now show as individual recommendations rather than nested under a parent recommendation.
+
+The grouped recommendations will still show side by side with the new format for now, but they will be deprecated in several months.
+
+The new individual recommendations are marked as **Preview** with additional **New version** tag. These tags indicate that the recommendation is in an early state and doesn't affect Secure Score yet, as well as allowing you to filter the recommendations by it.
+
+You can now manage exemptions at scale instead of for each recommendation.
+
+**Benefits**
+
+1. **Smart and accurate prioritization**
+
+   Each finding (such as vulnerabilities, exposed secrets, or misconfigurations) is now scored and prioritized individually, so you can focus on what actually reduces risk fastest.
+
+2. **Actionable context per finding**
+
+   Each recommendation gives clear risk context and remediation guidance, making it easier to understand what's wrong, why it matters, and how to fix it.
+
+3. **Better governance & tracking**
+
+   You apply targeted exemptions and measure security progress accurately.
+
+> [!NOTE]
+> The grouped recommendations still appear side by side with the new format for now, but they will be deprecated in several months.
+
+>[!Important]
+>To suport with the transition, learn more about best practices for [transitioning from grouped to individual recommendations](transition-grouped-individual-recommendations.md).
+
+Learn more about [reviewing security recommendations](review-security-recommendations.md).
+
+## February 2026
+
+| Date | Category | Update |
+| -------- | -------- | -------- |
+| February 22, 2026 | Preview | [Container runtime antimalware detection and blocking (Preview)](#container-runtime-antimalware-detection-and-blocking-preview) |
+| February 22, 2026 | Update - Preview | [Binary drift now supports blocking (Preview)](#binary-drift-now-supports-blocking-preview) |
+| February 10, 2026| Preview | [Database-level recommendations experience for SQL Vulnerability Assessment findings (Preview)](#database-level-recommendations-experience-for-sql-vulnerability-assessment-preview) |
+| February 10, 2026| GA | [Scanning support for Minimus and Photon OS container images](#scanning-support-for-minimus-and-photon-os-container-images) |
+| February 9, 2026| GA | [Simulate alerts for SQL servers on machines](#simulate-alerts-for-sql-servers-on-machines) |
+| February 3, 2026| Preview | [Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview) |
+|February 2, 2026| GA | [Updated CIEM recommendation logic](#updated-ciem-recommendation-logic) |
+|February 2, 2026| Preview | [Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview) |
+
+### Container runtime antimalware detection and blocking (Preview)
+
+February 22, 2026
+
+Microsoft Defender for Cloud is announcing container runtime anti-malware detection and prevention in preview. This feature provides real-time detection and prevention of malware in containerized workloads across Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), and Google Kubernetes Engine (GKE) environments. With this release, you can create anti-malware rules to define conditions for generating alerts and blocking malware, helping you protect your clusters from threats while minimizing false positives.
+
+Learn more about [antimalware detection and blocking](anti-malware.md).
+
+### Binary drift now supports blocking (Preview)
+
+February 22, 2026
+
+Binary drift now supports blocking in preview. With this update, you can configure binary drift policies to not only detect but also block unauthorized changes to container images at runtime. This enhancement helps prevent potential security breaches by stopping the execution of binaries within the containers that have been tampered with or contain unexpected modifications, providing an additional layer of protection for your containerized workloads.
+
+Learn more about [binary drift detection and blocking](binary-drift-detection.md).
+
+### Database-level recommendations experience for SQL Vulnerability Assessment (Preview)
+
+February 10, 2026
+
+Microsoft Defender for SQL is introducing a database-level recommendations experience for SQL Vulnerability Assessment in preview.
+
+This update applies to SQL VA across all supported database types (PaaS and IaaS), including both classic and express configurations, and is available in the following portal experiences:
+
+- [Azure portal](sql-azure-vulnerability-assessment-find.md#review-and-remediate-vulnerabilities-azure-portal)
+- [Defender portal](sql-azure-vulnerability-assessment-find.md#review-and-remediate-vulnerabilities-defender-portal)
+
+In this experience, each SQL Vulnerability Assessment rule generates a separate assessment for each affected database. Assessments are displayed and managed as recommendations in the Defender for Cloud **Recommendations** page. 
+
+In the previous model, findings were aggregated at the server or instance level and surfaced under the following recommendations:
+
+- SQL databases should have vulnerability findings resolved
+- SQL servers on machines should have vulnerability findings resolved
+
+The database-level experience keeps the same security capabilities and doesn’t affect SQL VA scanning logic, rules, queries, scan schedules, APIs, or pricing. It only provides another way to consume and manage findings that's consistent with all Defender for Cloud recommendations.
+
+During preview, the new database-level assessments don’t affect Secure Score in the Azure portal but do contribute to Secure Score in the Defender portal.
+
+The SQL [vulnerability assessment rules reference](sql-azure-vulnerability-assessment-rules.md) has been updated to include the new database-level recommendation names and assessment identifiers.
+
+The existing server-level (aggregated) experience remains available during preview.
+
+### Scanning support for Minimus and Photon OS container images
+
+February 10, 2026
+
+Microsoft Defender for Cloud's vulnerability scanner, powered by Microsoft Defender Vulnerability Management, is extending its scanning coverage to Minimus and Photon OS container images, and identify vulnerabilities in Minimus Images and Photos OS to validate that they're shipping the most secure builds possible.  As additional image types are being scanned, your bill might increase. For all supported distributions, see [Registries and images support for vulnerability assessment](support-matrix-defender-for-containers.md#registries-and-images-support-for-vulnerability-assessment).
+
+### Simulate alerts for SQL servers on machines
+
+February 9, 2026
+
+Microsoft Defender for Cloud’s SQL simulated alerts is now generally available. Simulated alerts allow security teams safely validate SQL protection, detections, and automated response workflows without introducing real risk. 
+
+Simulated alerts generates realistic alerts with full SQL and machine context on Azure VMs or Arc‑connected machines, enabling end‑to‑end testing of playbooks and SOC readiness. All alerts are produced locally using a safe script extension, with no external payloads or impact to production resources.
+
+Learn how to [simulate alerts for SQL servers on machines](simulate-alerts-sql-machines.md).
+
+### Updated CIEM recommendation logic  
+
+February 2, 2026
+
+Cloud Infrastructure Entitlement Management (CIEM) recommendations are now available as a native capability in Microsoft Defender for Cloud across Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP).
+
+This update changes how inactive identities and over-permissioned roles are evaluated and improves recommendation accuracy. It may affect existing recommendation results.
+
+#### Key changes
+
+- Inactive identity detection now evaluates unused role assignments instead of sign-in activity.
+- The inactivity lookback window is extended to 90 days (previously 45 days).
+- Identities created within the past 90 days aren’t evaluated as inactive.
+- The Permissions Creep Index (PCI) metric is deprecated and no longer appears in recommendations.
+- CIEM onboarding no longer requires elevated high-risk permissions.
+
+#### Cloud-specific considerations
+
+| Cloud | Details |
+|--------|---------|
+| **Azure** | Inactive identity recommendations include evaluation of read-level permissions. |
+| **AWS** | CIEM evaluates AWS users and roles whose permissions can be reliably assessed. SAML and SSO identities require [AWS CloudTrail Logs (Preview)](integrate-cloud-trail.md) to be enabled in the Defender CSPM plan. Serverless and compute identities are excluded from CIEM inactivity evaluation, which might affect recommendation counts. |
+| **GCP** | CIEM evaluation requires [Cloud Logging ingestion (Preview)](logging-ingestion.md) to be enabled in the Defender CSPM plan. |
+
+Learn more about [permissions management in Defender for Cloud](permissions-management.md).
+
+### Threat protection for AI agents (Preview)
+
+February 2, 2026
+
+Microsoft Defender for Cloud now includes threat protection for AI agents built with Foundry, available in preview as part of the Defender for AI Services plan. This new capability delivers advanced security from development through runtime, addressing high-impact, actionable threats aligned with OWASP guidance for LLM and agentic AI systems. 
+
+This release further expands Defender’s AI threat protection coverage, helping organizations secure a broader range of AI platforms. 
+
+Learn more about [Threat Protection for AI Agents with Microsoft Defender for Cloud](/azure/defender-for-cloud/alerts-ai-workloads).  
+
 ## January 2026
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
 |January 8, 2026| Preview | [Microsoft Security Private Link (Preview)](#microsoft-security-private-link-preview) |
 
-## Microsoft Security Private Link (Preview)
+### Microsoft Security Private Link (Preview)
 
 January 8, 2026
 
@@ -83,7 +289,7 @@ As part of the ongoing [deprecation of the Microsoft Entra Permissions Managemen
 | Cloud | Change |
 |-------|--------|
 | Azure | Inactive identity recommendations now include read-level permission evaluation for improved fidelity. |
-| AWS | - CIEM evaluations now apply to all AWS users and roles whose permissions can be reliably assessed.<br>- SAML and SSO identities require [AWS CloudTrail Logs (Preview)](integrate-cloud-trail.md) to be enabled within the Defender CSPM plan.<br>- Serverless and compute identities are no longer included in CIEM’s inactivity logic, which may change recommendation counts. |
+| AWS | - CIEM evaluations now apply to all AWS users and roles whose permissions can be reliably assessed.<br>- SAML and SSO identities require [AWS CloudTrail Logs (Preview)](integrate-cloud-trail.md) to be enabled within the Defender CSPM plan.<br>- Serverless and compute identities are no longer included in CIEM's inactivity logic, which may change recommendation counts. |
 | GCP | CIEM evaluations require [Cloud Logging ingestion (Preview)](logging-ingestion.md) to be enabled within the Defender CSPM plan. |
 
 The Permissions Creep Index (PCI) metric is being deprecated and will no longer appear in the Defender for Cloud recommendations. PCI is replaced by the improved activity-based CIEM logic, offering clearer guidance and more consistent identity risk insights.
@@ -94,7 +300,7 @@ Learn more about [permissions management in Defender for Cloud](permissions-mana
 
 December 1, 2025
 
-Defender for Cloud's integration with Endor labs is now generally available.
+Defender for Cloud's integration with Endor Labs is now generally available.
 
 Defender for Cloud's integration with Endor Labs enhances vulnerability analysis by using reachability-based Software Composition Analysis (SCA), which shows exploitable vulnerabilities from code to runtime.
 
@@ -148,14 +354,13 @@ Learn more about [Serverless protection](serverless-protection.md).
 |November 3, 2025| GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
 |November 3, 2025| GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks)|
 
-
 ### GitHub Advanced Security (GHAS) and Microsoft Defender for Cloud Native integration
 
 November 26, 2025
 
-Announcing the public preview of the native integration between Microsoft Defender for Cloud (MDC) and GitHub Advanced Security (GHAS).
+Announcing the preview of the native integration between Microsoft Defender for Cloud (MDC) and GitHub Advanced Security (GHAS).
 
-This integration helps organizations secure code to cloud and accelerate fixing security issues in their software portfolio. It uses agentic remediation from GitHub Advanced Security’s security campaigns and autofix agent with Microsoft Defender for Cloud runtime context-based vulnerability prioritization. The result is fewer distractions, faster fixes, better collaboration, and secure code to cloud. 
+This integration helps organizations secure code to cloud and accelerate fixing security issues in their software portfolio. It uses agentic remediation from GitHub Advanced Security's security campaigns and autofix agent with Microsoft Defender for Cloud runtime context-based vulnerability prioritization. The result is fewer distractions, faster fixes, better collaboration, and secure code to cloud. 
 
 This integration connects _code and runtime security_, enabling developer and security teams to collaborate seamlessly in their existing workflows.
 
@@ -167,7 +372,7 @@ This integration connects _code and runtime security_, enabling developer and se
     
   - Developers can view runtime risk factors (e.g., internet exposure, sensitive data) alongside code scanning alerts
     
--  **AI-Powered Remediation**
+-  **AI-Powered Remediation**
 
   - Copilot Autofix and GitHub Copilot coding agent provide validated fixes for vulnerabilities.
     
@@ -253,7 +458,7 @@ This integration brings new value and benefits for security personas:
 
 **New modeling for security recommendations**
 
-Security recommendations now use a unified model where each finding appears as its own recommendation. Previously, some recommendations grouped multiple findings (for example, **“Vulnerabilities should be resolved”**), which made prioritization and governance harder.
+Security recommendations now use a unified model where each finding appears as its own recommendation. Previously, some recommendations grouped multiple findings (for example, **"Vulnerabilities should be resolved"**), which made prioritization and governance harder.
 
 With this change, you get:
 
@@ -261,17 +466,17 @@ With this change, you get:
 - **Governance** - more detailed usage of governance, recommendations, and exemption capabilities
 - **More accurate scoring** since each finding counts separately  
 
-In the Defender portal, only the new model is available. In the Azure portal, the new experience is in preview alongside the current model. This unified approach eliminates the need to treat aggregated recommendations differently, they’re now regular recommendations like all others. For more information, see [Security recommendations](review-security-recommendations.md?pivots=defender-portal).
+In the Defender portal, only the new model is available. In the Azure portal, the new experience is in preview alongside the current model. This unified approach eliminates the need to treat aggregated recommendations differently, they're now regular recommendations like all others. For more information, see [Security recommendations](review-security-recommendations.md?pivots=defender-portal).
 
-**Risk-based Cloud Secure Score** - The new Cloud Secure Score introduces a new score formula, that allows you to objectively assess and monitor your cloud security posture. The Cloud Secure Score is based on asset risk factors and asset criticality, making the score more accurate and enabling smarter prioritization of high risk level recommendations. The new Cloud Secure Score is available only in the Defender portal. The classic Secure Score is still available in Azure portal. For more information, see [Cloud Secure Score](secure-score-security-controls.md?pivots=defender-portal).
+**Risk-based Cloud Secure Score** - The new Cloud Secure Score introduces a new score formula that allows you to objectively assess and monitor your cloud security posture. The Cloud Secure Score is based on asset risk factors and asset criticality, making the score more accurate and enabling smarter prioritization of high risk level recommendations. The new Cloud Secure Score is available only in the Defender portal. The classic Secure Score is still available in Azure portal. For more information, see [Cloud Secure Score](secure-score-security-controls.md?pivots=defender-portal).
 
-For more information, see [Defender for Cloud in the Defender portal](defender-portal/defender-for-cloud-defender-portal.md)
+For more information, see [Defender for Cloud in the Defender portal](defender-portal/defender-for-cloud-defender-portal.md)
 
 ### Documentation updates
 
 November 25, 2025
 
-We’ve begun a major revamp of the Microsoft Defender for Cloud documentation to streamline structure, remove outdated content, and add new material for the integration into the Defender portal.
+We've begun a major revamp of the Microsoft Defender for Cloud documentation to streamline structure, remove outdated content, and add new material for the integration into the Defender portal.
 
 **Highlights:**  
 
@@ -392,9 +597,9 @@ Learn more about [container vulnerability scanning in Defender for Cloud](agentl
 
 November 3, 2025
 
-We’re announcing the general availability of Jfrog Artifactory (Cloud) and Docker Hub container registry support in Microsoft Defender for Containers and Defender CSPM.
+We're announcing the general availability of Jfrog Artifactory (Cloud) and Docker Hub container registry support in Microsoft Defender for Containers and Defender CSPM.
 
-This release extends Microsoft Defender for Containers coverage to external registries, enabling vulnerability scanning of container images stored in your organization’s JFrog Artifactory (Cloud) and Docker Hub accounts using Microsoft Defender Vulnerability Management (MDVM). This enhancement helps you detect vulnerabilities earlier and strengthen your cloud security posture.
+This release extends Microsoft Defender for Containers coverage to external registries, enabling vulnerability scanning of container images stored in your organization's JFrog Artifactory (Cloud) and Docker Hub accounts using Microsoft Defender Vulnerability Management (MDVM). This enhancement helps you detect vulnerabilities earlier and strengthen your cloud security posture.
 
 Learn more about [Agentless vulnerability assessment for Jfrog Artifactory (Cloud)](agentless-vulnerability-assessment-jfrog-artifactory.md) and [Agentless vulnerability assessment for Docker Hub](agentless-vulnerability-assessment-docker-hub.md).
 
@@ -433,7 +638,7 @@ The following regulatory compliance standards, previously available in preview, 
 | Cybersecurity Maturity Model Certification (CMMC) Level 2 v2.0 | Azure, AWS, GCP |
 | EU 2022/2555 (NIS2) 2022 | Azure, AWS, GCP |
 | EU General Data Protection Regulation (GDPR) 2016/679 | Azure, AWS, GCP |
-| FedRAMP ‘H’ & ‘M’ | Azure |
+| FedRAMP 'H' & 'M' | Azure |
 | FedRAMP High Baseline Rev5 | AWS, GCP |
 | FedRAMP Moderate Baseline Rev5 | AWS, GCP |
 | FFIEC CAT 2017 | Azure, AWS, GCP |
@@ -477,7 +682,7 @@ Learn more about [regulatory compliance standards in Microsoft Defender for Clou
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-|October 31, 2025|Public Preview |[GCP Cloud Logging Ingestion (Preview)](#gcp-cloud-logging-ingestion-preview)|
+|October 31, 2025| Preview |[GCP Cloud Logging Ingestion (Preview)](#gcp-cloud-logging-ingestion-preview)|
 |October 23, 2025 |Deprecation Notice | [Update Outbound Rules for Microsoft Defender for Containers](#deprecation-notice-update-outbound-rules-for-microsoft-defender-for-containers) |
 |October 23, 2025 | Update | [GitHub Application Permissions Update](#github-application-permissions-update)|
 
@@ -526,7 +731,7 @@ The permission is narrowly scoped, aligning with least privilege principles to s
 
 - **Via email (for organization owners):** GitHub sends an automated email to **organization owners** with the subject **"Review permissions request for Microsoft Security DevOps"**. Select **Review permission request** to approve or reject the change.
 
-> **Didn’t get the email?**
+> **Didn't get the email?**
 > Only GitHub **organization owners** receive this notification. If you're not an owner, please contact one in your organization to approve the request via GitHub settings.
 
 **Note:** existing connectors will continue to work without this permission, but the new functionality will only be available once the permission is approved.
@@ -535,7 +740,7 @@ The permission is narrowly scoped, aligning with least privilege principles to s
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-|September 16, 2025 | Public Preview | [Malware automated remediation in Defender for Storage (Preview)](#malware-automated-remediation-in-defender-for-storage-preview)|
+|September 16, 2025 | Preview | [Malware automated remediation in Defender for Storage (Preview)](#malware-automated-remediation-in-defender-for-storage-preview)|
 |September 15, 2025 | Update | [New refined attack paths](#new-refined-attack-paths) |
 |September 14, 2025| Preview |[Trusted IPs support for internet-exposure analysis](#trusted-ips-support-for-internet-exposure-analysis)|
 |September 14, 2025| GA | [Exposure width for internet-exposure analysis](#exposure-width-for-internet-exposure-analysis)|
@@ -545,7 +750,7 @@ The permission is narrowly scoped, aligning with least privilege principles to s
 
 September 16, 2025
 
-Malware automated remediation in Defender for Storage malware scanning is now available in public preview. 
+Malware automated remediation in Defender for Storage malware scanning is now available in preview. 
 
 With this new capability, malicious blobs detected during on-upload or on-demand scanning can be automatically soft-deleted. This ensures harmful content is quarantined while still recoverable for further investigation. 
 
@@ -619,7 +824,7 @@ If you use [GitHub Advanced Security](https://docs.github.com/get-started/learni
 
 August 27, 2025
 
-Defender for Storage malware scanning introduces optional index tags for both on-upload and on-demand scans. With this new capability, users can choose whether to publish results to blob’s index tags when a blob is scanned (default) or to not use index tags. Index tags can be enabled or disabled at the subscription and storage account level through the Azure portal or via API.
+Defender for Storage malware scanning introduces optional index tags for both on-upload and on-demand scans. With this new capability, users can choose whether to publish results to blob's index tags when a blob is scanned (default) or to not use index tags. Index tags can be enabled or disabled at the subscription and storage account level through the Azure portal or via API.
 
 ### General availability of Defender for Storage in Azure Government cloud
 
@@ -635,7 +840,7 @@ August 11, 2025
 
 Microsoft Defender for Cloud's [Cloud Security Posture Management (CSPM)](/azure/defender-for-cloud/tutorial-enable-cspm-plan) is generally available to government cloud customers. The service helps U.S. federal and government agencies, including the Department of Defense (DoD) and civilian agencies, manage cloud security posture and improve compliance.
 
-All features of [Defender for Servers Plan 2's (P2)](defender-for-servers-overview.md#plan-protection-features) are available in government clouds, aligning the feature coverage with commercial cloud services.
+All features of [Defender for Servers Plan 2's (P2)](defender-for-servers-overview.md#plan-protection-features) are available in government clouds, aligning the feature coverage with commercial cloud services.
 
 Learn more about [Defender for Cloud's government cloud coverage](support-matrix-defender-for-cloud.md).
 
@@ -651,7 +856,7 @@ For more information, see [Azure Kubernetes Service (AKS) Security Dashboard](cl
 
 August 5, 2025
 
-The new `CloudStorageAggregatedEvents` table is now available in Microsoft Defender XDR’s Advanced Hunting experience. It brings aggregated storage activity logs, such as operations, authentication details, access sources, and success/failure counts, from Defender for Cloud into a single, queryable schema. The aggregation reduces noise, improves performance, and provides a high-level view of storage access patterns to support more effective threat detection and investigation.
+The new `CloudStorageAggregatedEvents` table is now available in Microsoft Defender XDR's Advanced Hunting experience. It brings aggregated storage activity logs, such as operations, authentication details, access sources, and success/failure counts, from Defender for Cloud into a single, queryable schema. The aggregation reduces noise, improves performance, and provides a high-level view of storage access patterns to support more effective threat detection and investigation.
 
 The logs are available at no additional cost as part of the new per-storage account plan in Defender for Storage. For more information, visit [CloudStorageAggregatedEvents (Preview)](/defender-xdr/advanced-hunting-cloudstorageaggregatedevents-table).
 
@@ -673,7 +878,7 @@ Microsoft Defender for Cloud's **Regulatory Compliance** is expanding its suppor
 3. **Korean Information Security Management System for Public Cloud (k-ISMS-P)**
 4. **Center for Internet Security (CIS) Microsoft Azure Foundations Benchmark v3.0**
 
-These frameworks are now available in **public preview** and can be enabled via the **Regulatory Compliance dashboard** in Microsoft Defender for Cloud.
+These frameworks are now available in preview and can be enabled via the **Regulatory Compliance dashboard** in Microsoft Defender for Cloud.
 
 For more information, see: [Regulatory compliance standards in Microsoft Defender for Cloud](/azure/defender-for-cloud/concept-regulatory-compliance-standards).
 
