@@ -47,6 +47,7 @@ KQL jobs are one-time or scheduled asynchronous KQL queries on data in the Micro
 Run one-time KQL jobs on the data lake to promote specific historical data from the data lake tier to the analytics tier, or create custom summary tables in the data lake tier. Promoting data is useful for root cause analysis or zero-day detection when investigating incidents that span beyond the analytics tier window. Submit a scheduled job on data lake to automate recurring queries to detect anomalies or build baselines using historical data. Threat hunters can use this to monitor for unusual patterns over time and feed results into detections or dashboards. For more information, see [Create jobs in the Microsoft Sentinel data lake](kql-jobs.md) and [Manage jobs in the Microsoft Sentinel data lake](kql-manage-jobs.md).
 
 
+
 ## Exploration scenarios
 
 The following scenarios illustrate how KQL queries in the Microsoft Sentinel data lake can be used to enhance security operations:
