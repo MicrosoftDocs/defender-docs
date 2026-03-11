@@ -314,7 +314,7 @@ After you contain a device, if the behavior isn't as expected, verify the Base F
 
 ### Stop containing a device
 
-You're be able to stop containing a device at any time.
+You can stop containing a device at any time.
 
 1. Select the device from the **Device inventory** or open the device page.
 
