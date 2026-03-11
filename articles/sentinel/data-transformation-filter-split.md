@@ -16,9 +16,9 @@ ms.date: 03/08/2026
 
 As security data volumes continue to grow, organizations face the challenge of balancing cost-effective retention of telemetry used for AI, compliance, and investigations while ensuring that only necessary data is retained in high-performance storage tiers. Use filter and split data transformations in Microsoft Sentinel to address this challenge by modifying data at ingestion time to optimize your data retention strategy.
 
-This article describes how to configure filter and split data transformations to streamline your analytics pipelines in Microsoft Sentinel. By tailoring data ingestion, these transformations improve performance and reduce noise.
+This article describes how to configure filter and split data transformations without the need for custom Data Collection Rule (DCR) configurations to streamline your analytics pipelines in Microsoft Sentinel. By tailoring data ingestion, these transformations improve performance and reduce noise.
 
-By using data transformations, you can optimize your security data pipeline by controlling what data is stored and where it's stored. Using filter and split transformations provides the following benefits:
+By using data transformations, you can optimize your security data pipeline by controlling what data is stored and in which tier. Using filter and split transformations provides the following benefits:
 
 - **Cost optimization**: Reduce storage and processing costs by filtering out low-value data that doesn't contribute to threat detection. Route less frequently accessed data to cost-effective Data lake storage while keeping high-priority data in the Analytics tier.
 
@@ -51,7 +51,7 @@ To verify whether a connector's tables support DCRs, see [Find your Microsoft Se
 
 ## Filter transformations
 
-Filter transformations enable you to reduce noise by discarding data during ingestion that isn't useful for investigations. Use a filter transformation rule to specify a KQL condition that determines which data is retained and sent to the Analytics tier.
+Filter transformations enable you to reduce noise by discarding data during ingestion that isn't useful for investigations. Use a filter transformation rule to specify a KQL condition that determines which data to filter out, with the remaining data sent to the Analytics tier.
 
 Use filter transformations when you need to:
 
@@ -67,7 +67,7 @@ Your enterprise relies on firewall logs to identify anomalies. Most firewall log
 
 Split transformations enable you to route data between the Analytics tier and the Data lake tier based on specified conditions. Use a split transformation rule to define a KQL expression that determines which data lands in Analytics. Data that doesn't match the expression is routed to the Data lake tier only.
 
-> [!IMPORTANT]
+> [!NOTE]
 > When you configure a split transformation, data designated for the Analytics tier is also mirrored to the Data lake tier. Data that doesn't match the Analytics criteria goes to the Data lake tier only. This configuration ensures that all your data remains available in the Data lake for long-term retention and compliance purposes.
 
 Use split transformations when you need to balance cost and performance by routing data to the appropriate storage tier:
@@ -79,6 +79,9 @@ Use split transformations when you need to balance cost and performance by routi
 Consider the following example of a split transformation:  
 
 Your enterprise ingests millions of firewall log entries daily for threat detection and compliance. Your SOC team needs real-time access to recent logs for active investigations, but must also retain historical logs for regulatory audits. Create a split transformation rule to route real-time data to the Analytics tier and historical data to the Data lake tier.
+
+> [!IMPORTANT]
+> Transformations you create in Microsoft Sentinel may conflict with transformations created in Azure Monitor by using DCRs. For example, if a DCR is already applied to a table where all but a certain region is filtered in and a filter is applied that filters out only that region, no data is ingested. Ensure you understand and check the combined effects of having a DCR and a transformation applied to a table.
 
 ## Configure filter transformation rules
 
@@ -126,7 +129,7 @@ Follow these steps to create a split transformation rule:
 1. Verify that the split rule is applied by checking the **Transformation Rules** column for the table. The column displays **Split** when a split rule is active.
 
 > [!NOTE]
-> The split data that's ingested into the Data lake tier goes into a separate table with the same name as the original table but with a "_SPLT" suffix. For example, if you apply a split rule to the "FirewallLogs" table, the data routed to the Data lake tier is ingested into a separate "FirewallLogs_SPLT" table. This setup lets you manage retention and access policies separately for Analytics and Data lake tiers.
+> The split data ingested into the Data lake tier goes into a separate table with the same name as the original table but with a "_SPLT" suffix. For example, if you apply a split rule to the "FirewallLogs" table, the data routed to the Data lake tier is ingested into a separate "FirewallLogs_SPLT" table. This setup lets you manage retention and access policies separately for Analytics and Data lake tiers.
 
 :::image type="content" source="media/data-transformation-filter-split/split-rule.png" alt-text="Screenshot showing the split rule applied in the table list in Microsoft Sentinel." lightbox="media/data-transformation-filter-split/split-rule.png":::
 
@@ -167,8 +170,6 @@ Consider a scenario where 100 GB enters the pipeline, 50% is filtered out, and t
 Be aware of the following limitations when using filter and split transformations:
 
 - **XDR table visibility**: Split and filter transformations applied to XDR tables don't appear in Advanced Hunting for the first 30 days of data. The transformations are applied, and once data ages beyond the first 30 days, it behaves normally in Advanced Hunting. Data queried from Log Analytics or Microsoft Sentinel reflects the cost savings immediately.
-
-- **DCR conflicts**: Transformations you create in Microsoft Sentinel override transformations created in Azure Monitor by using DCRs. Ensure you don't have an existing Azure Monitor DCR applied to a table before creating a new split or filter rule.
 
 - **Propagation delay**: Transformations can take up to one hour to take effect.
 
