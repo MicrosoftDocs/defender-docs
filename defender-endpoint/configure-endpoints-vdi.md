@@ -60,7 +60,7 @@ The following steps guide you through onboarding VDI devices and highlight steps
 To [update virtual desktop infrastructure (VDI) images](#updating-virtual-desktop-infrastructure-vdi-images-persistent-or-non-persistent), you need the following:
 
 - Administrator permissions on the device.
-- The [PsExec](https://learn.microsoft.com/sysinternals/downloads/psexec) tool.
+- The [PsExec](/sysinternals/downloads/psexec) tool.
 
 ### Onboarding steps
 
