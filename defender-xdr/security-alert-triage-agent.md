@@ -51,7 +51,7 @@ The Security Alert Triage Agent currently supports these alert types in Microsof
 
 | Alert category | Alert type | Alert name |
 |:---|:---|:---|
-| **Phishing alerts (Generally Available)** | Email and collaboration alerts, including phishing. |  |
+| **Phishing alerts (Generally Available)** | Email and collaboration alerts. |  |
 | **Container incident triage (Preview)** | Cloud alerts, including containers. |  |
 
 ## Prerequisites
@@ -61,7 +61,7 @@ To run the Security Alert Triage Agent in your environment, you need:
 |Components|Details|
 |:---|:---|
 |Products|- Security Copilot and provisioned capacity in Security Compute Units (SCU). See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) or check whether you're entitled to SCUs as part of the [Microsoft Security Copilot inclusion model](/copilot/security/security-copilot-inclusion)</br> - [Supported products](#supported-alert-types) deployed and configured based on the alert type you want the agent to triage. |
-|Microsoft Defender required features|- Unified role-based access control (URBAC) enabled for Defender for Office 365. See [Activate URBAC settings](#activate-urbac-settings) for more information. </br>**For phishing alerts** - Enable **Monitor reported messages in Outlook** in **User reported settings**. See [User reported settings](#configure-user-reported-settings) for more information </br>- Turn on the **Email reported by user as malware or phish** alert policy to triage phishing alerts. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information.</br>- The Security Alert Triage Agent doesn't classify alerts suppressed by [alert tuning](investigate-alerts.md#tune-an-alert). Make sure to disable the **Auto-Resolve - Email reported by user as malware or phish** built-in alert tuning rule and any custom tuning rules that suppress this alert.|
+|Microsoft Defender required features|- Enable unified role-based access control (URBAC) for Defender for Office 365. See [Activate URBAC settings](#activate-urbac-settings) for more information. </br>**Email and collaboration alerts**</br> - Enable **Monitor reported messages in Outlook** in **User reported settings**. See [User reported settings](#configure-user-reported-settings) for more information </br>- Turn on the **Email reported by user as malware or phish** alert policy to triage phishing alerts. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information.</br>- The Security Alert Triage Agent doesn't classify alerts suppressed by [alert tuning](investigate-alerts.md#tune-an-alert). Make sure to disable the **Auto-Resolve - Email reported by user as malware or phish** built-in alert tuning rule and any custom tuning rules that suppress this alert.|
 | Plugins | The Security Alert Triage Agent automatically activates these Security Copilot plugins: <br>- Microsoft Defender XDR<br>- Microsoft Threat Intelligence<br>- Security Alert Triage Agent |
 
 ### Activate URBAC settings
@@ -70,7 +70,9 @@ To ensures the agent has the necessary access to triage alerts, activate the URB
 
 For more information, see [Activate workloads in Microsoft Defender XDR settings](activate-defender-rbac.md#activate-in-microsoft-defender-xdr-settings).
 
-### Set up phishing alert triage prerequisites
+### Set up Email and collaboration alert triage prerequisites
+
+These prerequisites are required to enable the agent to triage email and collaboration alerts. 
 
 #### Configure user reported settings
 
@@ -84,7 +86,7 @@ If you’re using a third-party email reporting tool, review [Options for third-
 
 #### Add alert policy
 
-The Security Alert Triage Agent addresses phishing incidents that include alerts with the type **Email reported by user as malware or phish**. Ensure that you have the corresponding alert policy enabled. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information.
+The Security Alert Triage Agent addresses email and collaboration incidents that include alerts with the type **Email reported by user as malware or phish**. Ensure that you have the corresponding alert policy enabled. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information.
 
 > [!IMPORTANT]
 > The Security Alert Triage Agent doesn't classify alerts suppressed by [alert tuning](investigate-alerts.md#tune-an-alert). Make sure to disable the **Auto-Resolve - Email reported by user as malware or phish** built-in alert tuning rule and any custom tuning rules that suppress this alert.
@@ -214,9 +216,9 @@ When an alert is identified as a true threat, the Security Alert Triage Agent ma
 
 :::image type="content" source="media/phishing-triage-agent/incident-queue-agent-only.png" alt-text="Screenshot of the incident queue filtered by the Security Alert Triage Agent tag" lightbox="media/phishing-triage-agent/incident-queue-agent-only.png":::
 
-### Transparency and explainability in phishing triage
+### Transparency and explainability inalert triage
 
-The Security Alert Triage Agent is purpose-built to clearly explain *why* and *how* it made each decision. For every alert it processes, it provides a detailed explanation in plain text along with a full graphical representation of its decision-making workflow. This level of transparency allows analysts to quickly interpret results, build trust in the agent’s output, and focus their time on making informed decisions—rather than repeating manual steps in the phishing triage process.
+The Security Alert Triage Agent is purpose-built to clearly explain *why* and *how* it made each decision. For every alert it processes, it provides a detailed explanation in plain text along with a full graphical representation of its decision-making workflow. This level of transparency allows analysts to quickly interpret results, build trust in the agent’s output, and focus their time on making informed decisions—rather than repeating manual steps in the email and collaboration alert triage process.
 
 To review the agent’s findings, follow these steps:
 
@@ -251,7 +253,7 @@ To provide feedback and teach the agent, follow these steps:
 1. To apply your feedback, select **Use this feedback to teach the agent**. You can use the [guide to writing feedback](#best-practices-for-writing-feedback) to help you craft effective input, and then choose **Evaluate feedback** to allow you to preview how the agent translates your feedback into a lesson and assess whether the outcome aligns with your intent. Additionally, the feedback evaluation performs basic safety checks to ensure that the applied feedback is relevant for the agent to use and doesn’t conflict with previous feedback.
 
    > [!NOTE]
-   > You can only provide feedback to the agent once per alert, and it can only be used to teach the agent how to classify phishing alerts, specifically by selecting either True Positive (phishing) or False Positive (not malicious).
+   > You can only provide feedback to the agent once per alert, and it can only be used to teach the agent how to classify email and collaboration alerts, specifically by selecting either True Positive (phishing) or False Positive (not malicious).
    > Always review your feedback and verify the AI-generated response before saving the lesson.
 
 1. If the result meets your expectations, you can choose to insert the lesson into the agent’s memory to influence its future decisions. Select **Save** to save the lesson and store it as a lesson in the agent’s memory if applicable. All feedback recorded for audit purposes, and lessons added to the agent’s memory, can be later reviewed in the [feedback management page](#view-and-manage-feedback-to-the-agent).
@@ -330,7 +332,7 @@ To view agent metrics and manage the agent, go to the Security Alert Triage Agen
 
    The Security Alert Triage Agent card above the incident queue shows some of the agent’s key metrics, including: 
 
-   - **Incidents addressed:** Incidents containing user-reported phishing alerts that the agent classified as true phishing threats or false alarms.
+   - **Incidents addressed:** Incidents containing alerts that the agent classified as true threats or false alarms.
    - **Incidents resolved:** Incidents that no longer require further handling, like false alarms.
 
    This data helps demonstrate the agent’s impact and can be used to inform broader strategic conversations, highlight return on investment, or support decisions around scaling automation across your organization.
@@ -407,11 +409,11 @@ Following are responses to commonly asked questions about the Security Alert Tri
 
 ### When is the agent triggered?
 
-The agent automatically runs when a relevant alert is created. For example, the Security Alert Triage Agent triggers when a user reports a potential phishing attempt.
+The agent automatically runs when a relevant alert is created. For example, the Security Alert Triage Agent automatically runs when a user reports a potential phishing attempt.
 
-### Why are the Security Alert Triage Agent important?
+### Why is the Security Alert Triage Agent important?
 
-Security alerts often arrive in high volume, overwhelming analysts with repetitive investigations—many of which turn out to be false positives. This manual triage can consume significant time, sometimes up to 30 minutes per alert. By automating classification, prioritization, and enrichment, the Security Alert Triage Agent reduce analyst fatigue and free up time for higher-impact investigations and proactive security work.
+Security alerts often arrive in high volume, overwhelming analysts with repetitive investigations—many of which turn out to be false positives. This manual triage can consume significant time, sometimes up to 30 minutes per alert. By automating classification, prioritization, and enrichment, the Security Alert Triage Agent reduces analyst fatigue and frees up time for higher-impact investigations and proactive security work.
 
 ### Can the Security Alert Triage Agent be trusted?
 
