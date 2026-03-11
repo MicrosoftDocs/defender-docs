@@ -24,7 +24,7 @@ When using Sentinel data lake as the data source for your workbooks, keep in min
 
 1. In the defender portal go to **Microsoft Sentinel** > **Threat management** > **Workbooks**.
 
-1. Select the cube icon in the top right corner to select the workspaces you want to query against.
+1. Select the cube icon in the top right corner to select the workspaces you want to store your workbooks.
 
 1. Select **Add workbook** 
 
@@ -74,6 +74,8 @@ When using Sentinel data lake as the data source for your workbooks, keep in min
 1. Select **Save** to save the workbook to your library, giving your workbook a name and location.
 
 1. You can view your saved workbook in the list of workbooks, and select it to view the visualizations you created. You can also edit the workbook at any time to update the queries or visuals.
+
+:::image type="content" source="./media/workbooks-for-data-lake/saved-workbooks.png" lightbox="./media/workbooks-for-data-lake/saved-workbooks.png" alt-text="Screenshot showing the list of saved workbooks in Microsoft Sentinel.":::
 
 ## Related content
 
