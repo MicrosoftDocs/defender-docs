@@ -469,6 +469,12 @@ You can also export the dashboard data into Excel for more detailed analysis, an
 
 After evaluating your SCU usage needs, update the SCU capacity for your organization. For more information about managing SCUs, see [Manage security compute unit usage in Security Copilot](/copilot/security/manage-usage).
 
+### How do I onboard to the Security Alert Triage Agent if I'm already using the Phishing Triage Agent?
+
+The Security Alert Triage Agent is the evolution of the Phishing Triage Agent, expanding its scope to cover a broader range of security alert types. It's the same agent, with a broader scope — your existing phishing triage settings and feedback carry over.
+
+To onboard to the expanded agent, open the agent setup wizard, review the prerequisites for the new alert types, and select the additional alert types you want the agent to triage. For detailed instructions, see [Set up the Security Alert Triage Agent](#set-up-the-security-alert-triage-agent).
+
 ## Related content
 
 - [Microsoft Security Copilot agents](/copilot/security/agents-overview)
