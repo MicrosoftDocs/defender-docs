@@ -152,7 +152,6 @@ If you have onboarded the primary image of your VDI environment (SENSE service i
 
 To update VDI images:
 
-1. Review the [prerequisites](#prerequisites) to ensure you have the necessary permissions and tools.
 1. [Offboard the machine](offboard-machines.md).
 1. Ensure that the PsExec tool is available in the command‑prompt path.  
 
