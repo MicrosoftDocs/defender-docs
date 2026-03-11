@@ -196,7 +196,7 @@ Below is a list of the file filters that can be applied:
 > [!NOTE]
 > - This filter doesn't support files that were shared with a group, only with specific users.
 > - This filter doesn't support files shared with a specific user through a shared link for SharePoint and OneDrive.
-> - When files are uploaded to SharePoint, OneDrive, etc., the **Collaborator > Domains** field automatically includes the domain of the file owner. If you use the **Any from domain** filter with the **does not contain** condition to exclude your organization's domain, files owned by users in your domain may be ignored by the policy.
+When files are uploaded to SharePoint or OneDrive, the Collaborator > Domains field automatically includes the domain of the file owner. Since most files are owned by users in your organization, using the Any from domain filter with the does not contain condition and specifying your organization’s domain will exclude the majority of files from the policy. To avoid this, do not specify your organization’s domain with this condition.
 
   - **Entire organization** – If the entire organization has access to the file.
 

@@ -17,7 +17,7 @@ ms.topic: article
 search.appverid:
 - MOE150
 - MET150
-ms.date: 04/28/2025
+ms.date: 03/07/2026
 ---
 
 # Microsoft Secure Score
@@ -58,18 +58,18 @@ Your score is updated in real time to reflect the information presented in the v
 > [!NOTE]
 > For Microsoft Teams and Microsoft Entra related recommendations, the recommendation state will get updated when changes occur in the configuration state. In addition, the recommendation state is refreshed once a month or once a week, respectively.
 
-### Key scenarios
-
-- [Check your current score](microsoft-secure-score-improvement-actions.md#check-your-current-score)
-- [Compare your score to organizations like yours](microsoft-secure-score-history-metrics-trends.md#compare-your-score-to-organizations-like-yours)
-- [View recommended actions and decide an action plan](microsoft-secure-score-improvement-actions.md#take-action-to-improve-your-score)
-- [Initiate work flows to investigate or implement](microsoft-secure-score-improvement-actions.md#view-recommended-action-details)
-
 ### How recommended actions are scored
 
 Each recommended action is worth 10 points or less, and most are scored in a binary fashion. If you implement the recommended action, like create a new policy or turn on a specific setting, you get 100% of the points. For other recommended actions, points are given as a percentage of the total configuration.
 
 For example, a recommended action states you get 10 points by protecting all your users with multifactor authentication. You only have 50 of 100 total users protected, so you'd get a partial score of five points (50 protected / 100 total * 10 max pts = 5 pts).
+
+### Get started with Microsoft Secure Score
+
+- [Check your current score](microsoft-secure-score-improvement-actions.md#check-your-current-score)
+- [View recommended actions and decide an action plan](microsoft-secure-score-improvement-actions.md#take-action-to-improve-your-score)
+- [Initiate work flows to investigate or implement](microsoft-secure-score-improvement-actions.md#view-recommended-action-details)
+- [Compare your score to organizations like yours](microsoft-secure-score-history-metrics-trends.md#compare-your-score-to-organizations-like-yours)
 
 ### Products included in Secure Score
 
@@ -111,7 +111,7 @@ If you turn on security defaults, you are awarded full points for the following 
 ## Secure Score permissions
 
 > [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization.
 
 <a name='manage-permissions-with-microsoft-365-defender-unified-role-based-access-controlrbac'></a>
 
@@ -132,12 +132,11 @@ To start using Microsoft Defender XDR Unified RBAC to manage your Secure Score p
 
 ### Microsoft Entra global roles permissions
 
-Microsoft Entra global roles (for example, Global Administrator) can still be used to access Secure Score. Users who have the supported Microsoft Entra global roles, but aren't assigned to a custom role in Microsoft Defender XDR Unified RBAC continue to have access to view (and manage where permitted) Secure Score data as outlined:
+Microsoft Entra global roles (for example, Security Administrator) can still be used to access Secure Score. Users who have the supported Microsoft Entra global roles, but aren't assigned to a custom role in Microsoft Defender XDR Unified RBAC continue to have access to view (and manage where permitted) Secure Score data as outlined:
 
 The following roles have read and write access and can make changes, directly interact with Secure Score, and can assign read-only access to other users:
 
-- Global Administrator
-- Security Administrator
+- Security Administrator or higher
 - Exchange Administrator
 - SharePoint Administrator
 
@@ -163,7 +162,7 @@ If you have any issues, let us know by posting in the [Defender XDR community](h
 
 ## Related resources
 
-- [Assess your security posture](microsoft-secure-score-improvement-actions.md)
+- [Assess your security posture and see recommendations](microsoft-secure-score-improvement-actions.md)
 - [Track your Microsoft Secure Score history and meet goals](microsoft-secure-score-history-metrics-trends.md)
 - [What's coming](whats-new.md)
 - [What's new](microsoft-secure-score-whats-new.md)
