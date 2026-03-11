@@ -33,7 +33,7 @@ MDAV indicates a detection through [standard Windows notifications](configure-no
 
 The Windows event log also records detection and engine events. See the Microsoft Defender Antivirus events article for a list of event IDs and their corresponding actions. For information on the list of event IDs and their corresponding actions, see [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](troubleshoot-microsoft-defender-antivirus.yml).
 
-To configure the options that you must use to test the protection features, perform the following steps:
+To configure the options that you must use to test the protection features, do the following steps:
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Endpoints** \> **Configuration management** \> **Endpoint security policies**. Or, to go directly to the **Endpoint security policies** page, use <https://security.microsoft.com/policy-inventory> Windows policies.
 1. On the **Endpoint security policies** page, verify the **Windows policies** tab is selected, and then select **Create new policy**
@@ -128,34 +128,39 @@ To configure the options that you must use to test the protection features, perf
 
    When you're finished on the **Configuration settings** page, select **Next**.
 
-1. On the **Assignments** page, click in the box an select from the following values:
-   - **All users**
-   - **All devices**
-   - Select an available group from the list.
-   - Start typing the group name to filter the list so you can select the group.
-
-   Verify the **Target type** value on the groups you selected is **Include**.
+1. On the **Assignments** page, click in the box and select from the following values:
+   - **All users** or **All devices**.
+   - When you find and select one or more available groups, you can use the **Target type** value on the group entry to to **Include** or **Exclude** the group members.
 
    When you're finished on the **Assignments** page, select **Next**.
 
-1. On the **Review + create** page, review your settings. Select **Back** or click on the page name to make changes.
+1. On the **Review + create** page, review your settings. Select **Back** or select the page name to make changes.
 
-   When you're ready, select **Save**.
+   When you're finished on the **Review + create** page, select **Save**.
 
-When the policy creation is complete, you're taken to the details page of the new policy. Select **Endpoint security policies** at the top of the page to return to the **Endpoint security policies** page where the new policy is listed with the **Policy type** value **Microsoft Defender Antivirus**.
+When the policy creation is complete, you're taken to the details page of the new policy.
+
+Select **Endpoint security policies** at the top of the page to return to the **Endpoint security policies** page where the new policy is listed with the **Policy type** value **Microsoft Defender Antivirus**.
 
 ### Attack Surface Reduction rules
 
-To enable Attack Surface Reduction (ASR) rules using the endpoint security policies, perform the following steps:
+To enable Attack Surface Reduction (ASR) rules using the endpoint security policies, do the following steps:
 
-1. Sign in to [Microsoft Defender XDR](https://sip.security.microsoft.com/).
-1. Go to **Endpoints > Configuration management > Endpoint security policies > Windows policies > Create new policy**.
-1. Select **Windows 10, Windows 11, and Windows Server** from the **Select Platform** drop-down list.
-1. Select **Attack Surface Reduction Rules** from the **Select Template** drop-down list.
-1. Select **Create policy**.
-1. On the **Basics** page, enter a name and description for the profile; then, choose **Next**.
-1. On the **Configuration settings** page, expand the groups of settings and configure those settings you want to manage with this profile.
-1. Set the policies based on the following recommended settings:
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Endpoints** \> **Configuration management** \> **Endpoint security policies**. Or, to go directly to the **Endpoint security policies** page, use <https://security.microsoft.com/policy-inventory> Windows policies.
+1. On the **Endpoint security policies** page, verify the **Windows policies** tab is selected, and then select **Create new policy**
+1. On the **Create a new policy flyout** that opens, configure the following settings:
+   - **Select a platform**: Select **Windows**.
+   - **Select template**: Select **Attack Surface Reduction Rules**.
+
+   Select **Create policy**
+
+1. The create a new policy wizard opens. On the **Basics** page, configure the following settings:
+   - **Name**: Enter a unique name for the policy.
+   - **Description**: Enter an optional description.
+
+   Select **Next**
+
+1. On the **Configuration settings** page, configure the settings based on the following recommendations:
 
    |Setting|Value|
    |---|---|
@@ -183,10 +188,19 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 > [!TIP]
 > Any of the rules might block behavior you find acceptable in your organization. In these cases, add the per-rule exclusions named "Attack Surface Reduction Only Exclusions." Additionally, change the rule from **Enabled** to **Audit** to prevent unwanted blocks.
 
-1. Select **Next**.
-1. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**.
-1. Select **Next**.
-1. On the **Review + create** tab, review your policy settings, and then select **Save**.
+1. On the **Assignments** page, click in the box and select from the following values:
+   - **All users** or **All devices**.
+   - When you find and select one or more available groups, you can use the **Target type** value on the group entry to to **Include** or **Exclude** the group members.
+
+   When you're finished on the **Assignments** page, select **Next**.
+
+1. On the **Review + create** page, review your settings. Select **Back** or select the page name to make changes.
+
+   When you're finished on the **Review + create** page, select **Save**.
+
+When the policy creation is complete, you're taken to the details page of the new policy.
+
+Select **Endpoint security policies** at the top of the page to return to the **Endpoint security policies** page where the new policy is listed with the **Policy type** value **Attack Surface Reduction Rules**.
 
 #### Enable Tamper Protection
 

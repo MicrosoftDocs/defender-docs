@@ -37,39 +37,29 @@ This article explains how to enable and test the key protection features in Micr
 
 ## Use Microsoft Defender Antivirus using Group Policy to enable the features
 
-This guide provides the Microsoft Defender Antivirus Group Policy that configures the features you should use to evaluate our protection.
+This section describes how to use a [Group Policy Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) to configure Microsoft Defender Antivirus for evaluation.
 
-1. Grab the latest 'Windows Group Policy Administrative Templates.'
-
-   For more information, see [Create and manage Central Store - Windows Client](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#links-to-download-the-administrative-templates-files-based-on-the-operating-system-version).
+1. Download the latest Administrative Template files from [Links to download the Administrative Templates files based on the operating system version](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#links-to-download-the-administrative-templates-files-based-on-the-operating-system-version).
 
    > [!TIP]
+   > Check the **System Requirements** section on the individual download pages:
    >
-   > - The Windows one works with the Windows Servers.
-   > - Even if you're running a Windows 10 or Windows Server 2016, get the latest administrative templates for Windows 11 or later.
+   > - Most downloads support Windows clients and Windows servers.
+   > - Get the latest available and applicable download.
 
-1. Create a 'Central Store' to host the latest .admx and .adml templates.
+1. Do one of the following procedures to create a Central Store to host the latest .admx and .adml templates:
+   - **Domains**:
+     1. Create a new OU to block policy inheritance.
+     1. Open the Group policy Management Console (gpmc.msc).
+     1. Go to **Group Policy Objects** and create a new group policy.
+     1. Right-click on the new group policy and then select **Edit**.
+     1. Go to **Computer Configuration** \> **Policies** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus**.
 
-   For more information, see [Create and manage Central Store - Windows Client](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#the-central-store).
+   - **Workgroups**:
+     1. Open the Group Policy Editor (gpedit.msc).
+     1. Go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus**.
 
-   If joined to a domain:
-
-   1. Create a new OU block policy inheritance.
-
-   1. Open Group policy Management Console (GPMC.msc).
-
-   1. Go to **Group Policy Objects** and create a new Group Policy.
-
-   1. Right-click the new policy created and select **Edit**.
-   1. Navigate to **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus**.
-
-   or
-
-   If joined to a workgroup
-
-   1. Open Group Policy Editor MMC (GPEdit.msc).
-
-   1. Navigate to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus**.
+For more information, see [Create and manage Central Store - Windows Client](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#the-central-store).
 
 ## MDAV and Potentially Unwanted Applications (PUA)
 
@@ -186,36 +176,36 @@ To enable Network Protection for Windows Servers, for now, please use PowerShell
 
 ## Attack surface reduction rules
 
-1. Navigate to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus** > **Microsoft Defender Exploit Guard** > **Attack Surface Reduction**.
+1. Go to **Computer Configuration** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus** \> **Microsoft Defender Exploit Guard** \> **Attack Surface Reduction**.
 
 2. Select **Next**.
 
 |Value name|ASR rule name|Value|
 |---|---|---|
-|01443614-cd74-433a-b99e-2ecdc07bfc25|Block executable files from running unless they meet a prevalence, age, or trusted list criterion|1 (Block)|
-|26190899-1602-49e8-8b27-eb1d0a1ce869|Block Office communication application from creating child processes|1 (Block)|
-|33ddedf1-c6e0-47cb-833e-de6133960387|Block rebooting machine in Safe Mode|1 (Block)|
-|3b576869-a4ec-4529-8536-b80a7769e899|Block Office applications from creating executable content|1 (Block)|
-|56a863a9-875e-4185-98a7-b882c64b5ce5|Block abuse of exploited vulnerable signed drivers (Device)|1 (Block)|
-|5beb7efe-fd9a-4556-801d-275e5ffc04cc|Block execution of potentially obfuscated scripts|1 (Block)|
-|75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84|Block Office applications from injecting code into other processes|1 (Block)|
-|7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c|Block Adobe Reader from creating child processes|1 (Block)|
-|92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b|Block Win32 API calls from Office macros|1 (Block)|
-|9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2|Block credential stealing from the Windows local security authority subsystem|1 (Block)|
-|a8f5898e-1dc8-49a9-9878-85004b8a61e6|Block Web shell creation for Servers|1 (Block)|
-|b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4|Block untrusted and unsigned processes that run from USB|1 (Block)|
-|be9ba2d9-53ea-4cdc-84e5-9b1eeee46550|Block executable content from email client and webmail|1 (Block)|
-|c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb|Block use of copied or impersonated system tools|1 (Block)|
-|c1db55ab-c21a-4637-bb3f-a12568109d35|Use advanced protection against ransomware|1 (Block)|
-|d1e49aac-8f56-4280-b9ba-993a6d77406c|Block process creations originating from PSExec and WMI commands|1 (Block)<sup>\*</sup>|
-|d3e037e1-3eb8-44c8-a917-57927947596d|Block JavaScript or VBScript from launching downloaded executable content|1 (Block)|
-|d4f940ab-401b-4efc-aadc-ad5f3c50688a|Block all Office applications from creating child processes|1 (Block)|
-|e6db77e5-3df2-4cf1-b95a-636979351e5b|Block persistence through WMI event subscription|1 (Block)|
+|01443614-cd74-433a-b99e-2ecdc07bfc25|[Block executable files from running unless they meet a prevalence, age, or trusted list criterion](attack-surface-reduction-rules-reference.md#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)|1 (Block)|
+|26190899-1602-49e8-8b27-eb1d0a1ce869|[Block Office communication application from creating child processes](attack-surface-reduction-rules-reference.md#block-office-communication-application-from-creating-child-processes)|1 (Block)|
+|33ddedf1-c6e0-47cb-833e-de6133960387|[Block rebooting machine in Safe Mode](attack-surface-reduction-rules-reference.md#block-rebooting-machine-in-safe-mode)|1 (Block)|
+|3b576869-a4ec-4529-8536-b80a7769e899|[Block Office applications from creating executable content](attack-surface-reduction-rules-reference.md#block-office-applications-from-creating-executable-content)|1 (Block)|
+|56a863a9-875e-4185-98a7-b882c64b5ce5|[Block abuse of exploited vulnerable signed drivers (Device)](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers-device)|1 (Block)|
+|5beb7efe-fd9a-4556-801d-275e5ffc04cc|[Block execution of potentially obfuscated scripts](attack-surface-reduction-rules-reference.md#block-execution-of-potentially-obfuscated-scripts)|1 (Block)|
+|75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84|[Block Office applications from injecting code into other processes](attack-surface-reduction-rules-reference.md#block-office-applications-from-injecting-code-into-other-processes)|1 (Block)|
+|7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c|[Block Adobe Reader from creating child processes](attack-surface-reduction-rules-reference.md#block-adobe-reader-from-creating-child-processes)|1 (Block)|
+|92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b|[Block Win32 API calls from Office macros](attack-surface-reduction-rules-reference.md#block-win32-api-calls-from-office-macros)|1 (Block)|
+|9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2|[Block credential stealing from the Windows local security authority subsystem](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem)|1 (Block)|
+|a8f5898e-1dc8-49a9-9878-85004b8a61e6|[Block Webshell creation for Servers](attack-surface-reduction-rules-reference.md#block-webshell-creation-for-servers)|1 (Block)|
+|b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4|[Block untrusted and unsigned processes that run from USB](attack-surface-reduction-rules-reference.md#block-untrusted-and-unsigned-processes-that-run-from-usb)|1 (Block)|
+|be9ba2d9-53ea-4cdc-84e5-9b1eeee46550|[Block executable content from email client and webmail](attack-surface-reduction-rules-reference.md#block-executable-content-from-email-client-and-webmail)|1 (Block)|
+|c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb|[Block use of copied or impersonated system tools](attack-surface-reduction-rules-reference.md#block-use-of-copied-or-impersonated-system-tools)|1 (Block)|
+|c1db55ab-c21a-4637-bb3f-a12568109d35|[Use advanced protection against ransomware](attack-surface-reduction-rules-reference.md#use-advanced-protection-against-ransomware)|1 (Block)|
+|d1e49aac-8f56-4280-b9ba-993a6d77406c|[Block process creations originating from PSExec and WMI commands](attack-surface-reduction-rules-reference.md#block-process-creations-originating-from-psexec-and-wmi-commands)|1 (Block)<sup>\*</sup>|
+|d3e037e1-3eb8-44c8-a917-57927947596d|[Block JavaScript or VBScript from launching downloaded executable content](attack-surface-reduction-rules-reference.md#block-process-creations-originating-from-psexec-and-wmi-commands)|1 (Block)|
+|d4f940ab-401b-4efc-aadc-ad5f3c50688a|[Block all Office applications from creating child processes](attack-surface-reduction-rules-reference.md#block-all-office-applications-from-creating-child-processes)|1 (Block)|
+|e6db77e5-3df2-4cf1-b95a-636979351e5b|[Block persistence through WMI event subscription](attack-surface-reduction-rules-reference.md#block-persistence-through-wmi-event-subscription)|1 (Block)|
 
-<sup>\*</sup> If you use Microsoft Configuration Manager (formerly known as Microsoft Endpoint Configuration Manager and Microsoft System Center Configuration Manager) or other management tools that use WMI, you might need to set this settings to 2 (Audit). The Configuration Manager client relies heavily on WMI.
+<sup>\*</sup> If you use Microsoft Configuration Manager (formerly known as Microsoft Endpoint Configuration Manager and Microsoft System Center Configuration Manager) or other management tools that use WMI, use the value 2 (Audit). The Configuration Manager client relies heavily on WMI.
 
 > [!TIP]
-> Some rules might block behavior you find acceptable in your organization. In these cases, change the rule from 'Enabled' to 'Audit' to prevent unwanted blocks.
+> Some rules might block behavior you find acceptable in your organization. In these cases, change the rule from 1 (Block) to 2 (Audit) to prevent unwanted blocks.
 
 ## Controlled Folder Access
 
@@ -292,7 +282,7 @@ If you have any questions about a detection that Microsoft Defender AV makes, or
 
 If you have Microsoft XDR, Microsoft Defender for Endpoint P2/P1, or Microsoft Defender for Business: refer [Submit files in Microsoft Defender for Endpoint](admin-submissions-mde.md).
 
-If you have Microsoft Defender Antivirus, see [Submit files for analysis](https://learn.microsoft.com/unified-secops/submission-guide).
+If you have Microsoft Defender Antivirus, see [Submit files for analysis](/unified-secops/submission-guide).
 
 Microsoft Defender AV indicates a detection through [standard Windows notifications](configure-notifications-microsoft-defender-antivirus.md). You can also [review detections in the Microsoft Defender AV app](review-scan-results-microsoft-defender-antivirus.md).
 
