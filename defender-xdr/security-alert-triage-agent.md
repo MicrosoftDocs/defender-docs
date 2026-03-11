@@ -1,5 +1,5 @@
 ---
-title: Microsoft Security Copilot Security Alert Triage Agent in Microsoft Defender
+title: Microsoft Security Copilot Security Alert Triage Agent in Microsoft Defender (Preview)
 description: Learn about the Security Alert Triage Agent, an autonomous agent in the Microsoft Defender ecosystem that helps security teams triage alerts at scale using AI-driven reasoning, prioritization, and enrichment.
 ms.service: defender-xdr
 f1.keywords:
@@ -23,7 +23,7 @@ appliesto:
 #customer intent: As a security analyst, I want to learn about the Security Alert Triage Agent in Microsoft Defender so that I can triage and classify security incidents efficiently at scale.
 ---
 
-# Microsoft Security Copilot Security Alert Triage Agent in Microsoft Defender
+# Microsoft Security Copilot Security Alert Triage Agent in Microsoft Defender (Preview)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -50,8 +50,8 @@ The Security Alert Triage Agent currently supports these alert types in Microsof
 
 | Alert type | Product | Alert name |
 |:---|:---|:---|
-| **Email and collaboration alerts, including phishing (Generally Available)** | Microsoft Defender for Office 365 |  |
-| **Cloud alerts, including containers (Preview)** | Microsoft Defender for Cloud |  |
+| **Email and collaboration alerts, including phishing (Generally Available)** | Microsoft Defender for Office 365 | Email reported by user as malware or phish |
+| **Cloud alerts, including containers (Preview)** | Microsoft Defender for Cloud | <ul><li>SecurityConfigurationTampering</li><li>BackdoorFromProcesses</li><li>FileAttributeChange</li><li>ShredHiddenFiles</li><li>ReverseShell</li><li>WorkloadIdentityTheft</li><li>CurrencyMining</li><li>SuspectDownload</li><li>SuspiciousNetcatActivity</li><li>ImdsCall</li><li>SensitiveFilesLookUp</li><li>SecretReconnaissance</li><li>DigitalCurrencyMining</li><li>CryptoCoinMinerDownload</li><li>CronEnumerationPersistence</li><li>BackdoorFacilitatingBinaries</li><li>ExecutableAfterDownload</li><li>ReadingHistoryFile</li><li>ImpairCommandHistoryLogging</li><li>KnownLinuxCredentialAccessTool</li><li>DisableSecurityTools</li><li>ProxyjackingUsingTrafficMonetizers</li><li>KnownLinuxAttackTool</li><li>DarkWeb</li><li>RandomizedDomain</li><li>TIDomain</li><li>SuspiciousIpInCommandLine</li><li>SuspiciousActivityByDB</li><li>CryptoPoolDetectedInCommandLine</li><li>CryptominerProcessKill</li><li>PenTestToolsPeirates</li><li>CryptoCoinMinerArtifacts</li><li>OASTDomain</li><li>sha1huludScriptInjection</li><li>SuspectConnection</li><li>SecurityProcessTermination</li><li>DirectoryTriversalUsingCurl</li><li>SuspectPortForwarding</li><li>UnpackContainerImages</li></ul> |
 
 ## Prerequisites
 
