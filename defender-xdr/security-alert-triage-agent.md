@@ -42,17 +42,16 @@ The Security Alert Triage Agent is a [Security Copilot agent](/copilot/security/
 
 - **Autonomous triage:** Uses advanced AI tools to perform sophisticated assessments and determine whether a submission is a real threat or a false alarm, without requiring step-by-step human input or code.
 - **Transparent rationale:** Provides transparent rationale for its classification verdicts in natural language, detailing the reasoning behind its conclusions and the evidence used to reach them. It also provides a visual representation of its reasoning process.
-- **Learning based on feedback:** For supported alerts, the agent incorporates analyst feedback to continuously improve future triage decisions while keeping humans in control. Over time, this feedback helps refine the agent’s behavior to better reflect organizational context and reduce manual follow‑up. This capability is currently available for phishing alerts only.
+- **Learning based on feedback:** For supported alerts, the agent incorporates analyst feedback to continuously improve future triage decisions while keeping humans in control. Over time, this feedback helps refine the agent’s behavior to better reflect organizational context and reduce manual follow‑up. This capability is currently available for email and collaboration alerts only.
 
-
-## Supported alert types
+## Supported alerts and products
 
 The Security Alert Triage Agent currently supports these alert types in Microsoft Defender:
 
-| Alert category | Alert type | Alert name |
+| Alert type | Product | Alert name |
 |:---|:---|:---|
-| **Phishing alerts (Generally Available)** | Email and collaboration alerts. |  |
-| **Container incident triage (Preview)** | Cloud alerts, including containers. |  |
+| **Email and collaboration alerts, including phishing (Generally Available)** | Microsoft Defender for Office 365 |  |
+| **Cloud alerts, including containers (Preview)** | Microsoft Defender for Cloud |  |
 
 ## Prerequisites
 
@@ -60,17 +59,17 @@ To run the Security Alert Triage Agent in your environment, you need:
 
 |Components|Details|
 |:---|:---|
-|Products|- Security Copilot and provisioned capacity in Security Compute Units (SCU). See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) or check whether you're entitled to SCUs as part of the [Microsoft Security Copilot inclusion model](/copilot/security/security-copilot-inclusion)</br> - [Supported products](#supported-alert-types) deployed and configured based on the alert type you want the agent to triage. |
+|Products|- Security Copilot and provisioned capacity in Security Compute Units (SCU). See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) or check whether you're entitled to SCUs as part of the [Microsoft Security Copilot inclusion model](/copilot/security/security-copilot-inclusion)</br> - [Supported products](#supported-alerts-and-products) deployed and configured based on the alert type you want the agent to triage. |
 |Microsoft Defender required features|- Enable unified role-based access control (URBAC) for Defender for Office 365. See [Activate URBAC settings](#activate-urbac-settings) for more information. </br>**Email and collaboration alerts**</br> - Enable **Monitor reported messages in Outlook** in **User reported settings**. See [User reported settings](#configure-user-reported-settings) for more information </br>- Turn on the **Email reported by user as malware or phish** alert policy to triage phishing alerts. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information.</br>- The Security Alert Triage Agent doesn't classify alerts suppressed by [alert tuning](investigate-alerts.md#tune-an-alert). Make sure to disable the **Auto-Resolve - Email reported by user as malware or phish** built-in alert tuning rule and any custom tuning rules that suppress this alert.|
 | Plugins | The Security Alert Triage Agent automatically activates these Security Copilot plugins: <br>- Microsoft Defender XDR<br>- Microsoft Threat Intelligence<br>- Security Alert Triage Agent |
 
 ### Activate URBAC settings
 
-To ensures the agent has the necessary access to triage alerts, activate the URBAC settings for all of the [supported products](#supported-workloads-and-alert-types) you want to associate with the Security Alert Triage Agent.
+To ensure the agent has the necessary access to triage alerts, activate the URBAC settings for all of the [supported alerts and products](#supported-alerts-and-products) you want to associate with the Security Alert Triage Agent.
 
 For more information, see [Activate workloads in Microsoft Defender XDR settings](activate-defender-rbac.md#activate-in-microsoft-defender-xdr-settings).
 
-### Set up Email and collaboration alert triage prerequisites
+### Set up email and collaboration alert triage prerequisites
 
 These prerequisites are required to enable the agent to triage email and collaboration alerts. 
 
@@ -119,6 +118,10 @@ Open the Security Alert Triage Agent setup wizard in one of two ways:
    :::image type="content" source="media/phishing-triage-agent/phishing-triage-setup-incident.png" alt-text="Screenshot of the incident queue with the Phishing Triage card where Set up agent is highlighted." lightbox="media/phishing-triage-agent/phishing-triage-setup-incident.png":::
 
 Follow the steps in the setup wizard, as described in the sections below.
+
+### Select which alert types to triage
+
+Select the alert types you want the agent to triage from the list of [supported alert types](#supported-alerts-and-products). 
 
 ### Assign the agent’s identity and permissions
 
@@ -170,8 +173,8 @@ This table summarizes the required permissions and data scopes for each alert ty
 
 | Alert type | Permissions | Data scopes |
 |:---|:---|:---|
-| **Phishing** | Security Copilot (read), Security data basics (read), Alerts (manage), Email & collaboration metadata (read), Email & collaboration content (read) | Microsoft Defender for Office 365 |
-| **Container (Preview)** | Security Copilot (read), Security data basics (read), Alerts (manage) | Microsoft Defender for Cloud |
+| **Email and collaboration alerts, including phishing** | Security Copilot (read), Security data basics (read), Alerts (manage), Email & collaboration metadata (read), Email & collaboration content (read) | Microsoft Defender for Office 365 |
+| **Cloud alerts, including containers** | Security Copilot (read), Security data basics (read), Alerts (manage) | Microsoft Defender for Cloud |
 
 
 These permissions are under the **Security operations** permissions group:
