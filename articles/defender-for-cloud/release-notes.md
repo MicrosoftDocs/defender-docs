@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 02/24/2026
+ms.date: 03/10/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -31,22 +31,53 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| March 12, 2026 | GA| [Severity‑based risk assignment for Not evaluated recommendations](#severity-based-risk-assignment-for-not-evaluated-recommendations) |
+| March 12, 2026 | GA| [Severity‑based risk assignment for "Not evaluated" recommendations](#severity-based-risk-assignment-for-"not-evaluated"-recommendations) |
+| March 10, 2026| Preview |[Code to runtime enrichment for recommendations](#code-to-runtime-enrichment-for-recommendations-preview)|
+| March 10, 2026 | Preview | [On-demand malware scanning of Azure Files in Microsoft Defender for Storage](#on-demand-malware-scanning-of-azure-files-in-microsoft-defender-for-storage-preview) 
 | March 04, 2026 | Deprecation | [Deprecation of preview of container and container images vulnerability recommendations](#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations) |
 | March 04, 2026 | Preview |[New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview)|
 
-### Severity‑based risk assignment for Not evaluated recommendations
+### Severity‑based risk assignment for "Not evaluated" recommendations
+
 March 12, 2026
-
-
 
 Recommendations that previously appeared as **Not evaluated** will now receive a risk level derived from the recommendation severity. As a result, these recommendations will now be prioritized in the recommendations list based on their assigned risk level. 
 
-This change may affect the overall status of recommendations and will also impact Secure Score, as previously unevaluated recommendations are now included in risk calculations. 
+This change may affect the overall status of recommendations and will also impact Secure Score, as previously recommendations that were not evaluated are now included in risk calculations. 
 
 For customers without Defender CSPM enabled, this update removes the **Not evaluated** risk state and replaces it with severity‑based risk. 
 
 To benefit from full contextual, environment‑aware risk evaluation, Defender CSPM must be enabled on the subscription.
+
+For more information, see [On-demand malware scanning](on-demand-malware-scanning.md).
+
+### Code to runtime enrichment for recommendations (Preview)
+
+March 10, 2026
+
+Microsoft Defender for Cloud now provides Code to runtime capabilities, enabling end-to-end visibility across the software development lifecycle (SDLC). This feature helps security teams trace runtime security issues back to their source code origins and understand the full blast radius of vulnerabilities.
+
+**Key capabilities:**
+
+- **SDLC Chain Visibility**: Track security issues from source code through pipelines, registries, to runtime environments
+- **Blast Radius Analysis**: Understand how many assets are affected by a single code change   
+- **Runtime-to-Source Tracing**: Navigate backwards from runtime recommendations to identify the original source of security issues
+- **Actionable Remediation**: Fix issues at the source to prevent recurring regressions rather than addressing only runtime symptoms
+
+Learn more about the [Map container images from code to runtime preqrequisites](container-image-mapping.md).
+Learn more about [Code to runtime enrichment for recommendations](code-to-runtime-mapping.md).
+
+### On-demand malware scanning of Azure Files in Microsoft Defender for Storage (Preview)
+
+March 10, 2026
+
+On-demand malware scanning for Azure Files in Microsoft Defender for Storage is now in preview. This preview extends the existing on-demand malware scan feature and lets you scan entire Azure Storage accounts that contain blobs and files.
+
+You can start scans in the Azure portal UI or with the Representational State Transfer (REST) application programming interface (API). You can also automate scans with Azure Logic Apps, Azure Automation playbooks, and PowerShell scripts.
+
+This feature uses Microsoft Defender Antivirus and applies the latest malware definitions for each scan. It also shows an upfront cost estimate in the Azure portal before you start a scan.
+
+For more information, see [On-demand malware scanning](on-demand-malware-scanning.md).
 
 ### Deprecation of preview of container and container images vulnerability recommendations
 
@@ -144,7 +175,7 @@ Learn more about [reviewing security recommendations](review-security-recommenda
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| February 22, 2026 | Preview | [Container runtime antimalware detection and blocking (Preview)](#container-runtime-antimalware-detection-and-blocking-preview) |
+| February 22, 2026 | Preview | [Container runtime anti-malware detection and blocking (Preview)](#container-runtime-anti-malware-detection-and-blocking-preview) |
 | February 22, 2026 | Update - Preview | [Binary drift now supports blocking (Preview)](#binary-drift-now-supports-blocking-preview) |
 | February 10, 2026| Preview | [Database-level recommendations experience for SQL Vulnerability Assessment findings (Preview)](#database-level-recommendations-experience-for-sql-vulnerability-assessment-preview) |
 | February 10, 2026| GA | [Scanning support for Minimus and Photon OS container images](#scanning-support-for-minimus-and-photon-os-container-images) |
@@ -153,13 +184,13 @@ Learn more about [reviewing security recommendations](review-security-recommenda
 |February 2, 2026| GA | [Updated CIEM recommendation logic](#updated-ciem-recommendation-logic) |
 |February 2, 2026| Preview | [Threat protection for AI agents (Preview)](#threat-protection-for-ai-agentspreview) |
 
-### Container runtime antimalware detection and blocking (Preview)
+### Container runtime anti-malware detection and blocking (Preview)
 
 February 22, 2026
 
 Microsoft Defender for Cloud is announcing container runtime anti-malware detection and prevention in preview. This feature provides real-time detection and prevention of malware in containerized workloads across Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), and Google Kubernetes Engine (GKE) environments. With this release, you can create anti-malware rules to define conditions for generating alerts and blocking malware, helping you protect your clusters from threats while minimizing false positives.
 
-Learn more about [antimalware detection and blocking](anti-malware.md).
+Learn more about [anti-malware detection and blocking](anti-malware.md).
 
 ### Binary drift now supports blocking (Preview)
 
@@ -241,10 +272,11 @@ Learn more about [permissions management in Defender for Cloud](permissions-mana
 
 February 2, 2026
 
-Microsoft Defender for Cloud now includes threat protection for AI agents built with Foundry, available in preview as part of the Defender for AI Services plan. This new capability delivers advanced security from development through runtime, addressing high-impact, actionable threats aligned with OWASP guidance for LLM and agentic AI systems. 
+Microsoft Defender for Cloud now includes threat protection for AI agents built with Foundry, available in public preview as part of the Defender for AI Services plan. This new capability delivers advanced security from development through runtime, addressing high-impact, actionable threats aligned with OWASP guidance for LLM and agentic AI systems. 
 
-This release further expands Defender’s AI threat protection coverage, helping organizations secure a broader range of AI platforms. 
+This release further expands Defender's AI threat protection coverage, helping organizations secure a broader range of AI platforms. 
 
+Learn more about [Threat Protection for AI Agents with Microsoft Defender for Cloud](/azure/defender-for-cloud/alerts-ai-workloads).  
 Learn more about [Threat Protection for AI Agents with Microsoft Defender for Cloud](/azure/defender-for-cloud/alerts-ai-workloads).  
 
 ## January 2026
@@ -358,7 +390,7 @@ Learn more about [Serverless protection](serverless-protection.md).
 |November 25, 2025 | GA | [General availability of AI security posture management in GCP Vertex](#general-availability-of-ai-security-posture-management-in-gcp-vertex) |
 |November 24, 2025 | Update | [Update to Attack Path Analysis logic](#update-to-attack-path-analysis-logic)|
 |November 24,2025 | Upcoming change | [Update to CSPM multicloud network requirements](#update-to-cspm-multicloud-network-requirements) |
-|November 20, 2025| GA | [Attack Path now includes Entra OAuth application compromise](#attack-path-now-includes-microsoft-entra-oauth-application-compromise)|
+|November 20, 2025| GA | [Attack Path now includes Microsoft Entra OAuth application compromise](#attack-path-now-includes-microsoft-entra-oauth-application-compromise)|
 |November 19, 2025| Preview |[In-pipeline container vulnerability scanning (preview)](#in-pipeline-container-vulnerability-scanning-preview)|
 |November 19, 2025| GA | [General availability of agentless vulnerability assessment for AKS runtime containers](#general-availability-of-agentless-vulnerability-assessment-for-aks-runtime-containers)|
 |November 18, 2025| Preview|[Advanced security posture for API discovery (Preview)](#advanced-security-posture-for-api-discovery-preview)|
@@ -559,7 +591,7 @@ Learn more about the [Defender for Cloud CLI](cli-cicd-integration.md).
 
 November 19, 2025
 
-Defender for Containers and Defender for Cloud Security Posture Management (CSPM) plans now include agentless vulnerability assessment for AKS runtime containers. This update extends vulnerability assessment coverage to running containers that use images from any container registry, rather than only supported registries. It also continues to scan Kubernetes add-ons and third-party tooling running in your AKS clusters.
+Defender for Containers and Defender for Cloud Security Posture Management (CSPM) plans now include agentless vulnerability assessment for AKS runtime containers. This update extends vulnerability assessment coverage to running containers that use images from any container registry, rather than only supported registries. It also continues to scan Kubernetes add-ons and non-Microsoft tooling running in your AKS clusters.
 
 To enable this feature, make sure that **Agentless machine scanning** is turned on for your subscription in Defender for Cloud environment settings.
 
