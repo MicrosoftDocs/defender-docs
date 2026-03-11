@@ -58,7 +58,7 @@ We recommended that you enable the following three _standard protection rules_. 
 
 - [Block credential stealing from the Windows local security authority subsystem](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
 - [Block abuse of exploited vulnerable signed drivers (Device)](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers)
-- [Block persistence through Windows Management Instrumentation (WMI) event subscription](attack-surface-reduction-rules-reference.md#block-persistence-through-wmi-event-subscription)
+- [Block persistence through WMI event subscription](attack-surface-reduction-rules-reference.md#block-persistence-through-wmi-event-subscription)
 
 Typically, you can enable the standard protection rules with minimal-to-no noticeable impact to the end user. For an easy method to enable the standard protection rules, see [Simplified standard protection option](attack-surface-reduction-rules-report.md#simplified-standard-protection-option).
 
@@ -88,7 +88,7 @@ The following table shows attack surface reduction rules by category:
 
 |Polymorphic threats|Lateral movement & credential theft|Productivity apps rules|Email rules|Script rules|Misc rules|
 |---|---|---|---|---|---|
-|Block executable files from running unless they meet a prevalence (1,000 machines), age, or trusted list criteria|Block process creations originating from PSExec and WMI commands|Block Office apps from creating executable content|Block executable content from email client and webmail|Block obfuscated JS/VBS/PS/macro code|Block abuse of exploited vulnerable signed drivers (Device) <sup>[[1](#fn1)]<sup></sup>|
+|Block executable files from running unless they meet a prevalence, age, or trusted list criterion|Block process creations originating from PSExec and WMI commands|Block Office apps from creating executable content|Block executable content from email client and webmail|Block obfuscated JS/VBS/PS/macro code|Block abuse of exploited vulnerable signed drivers (Device) <sup>[[1](#fn1)]<sup></sup>|
 |Block untrusted and unsigned processes that run from USB|Block credential stealing from the Windows local security authority subsystem<sup>[[2](#fn1)]<sup></sup>|Block Office apps from creating child processes|Block only Office communication applications from creating child processes|Block JS/VBS from launching downloaded executable content||
 |Use advanced protection against ransomware|Block persistence through WMI event subscription|Block Office apps from injecting code into other processes|Block Office communication apps from creating child processes|||
 |||Block Adobe Reader from creating child processes||||

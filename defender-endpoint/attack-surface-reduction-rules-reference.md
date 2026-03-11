@@ -53,7 +53,7 @@ The available ASR rules and their corresponding GUID values are described in the
 
 - **Standard protection rules** are the minimum set of ASR rules we recommend you always enable in **Block** mode<sup>\*</sup>. These rules typically have minimal or no noticeable effect on users. To quickly implement these ASR rules, see [Simplified standard protection option](attack-surface-reduction-rules-report.md#simplified-standard-protection-option).
 
-  <sup>\*</sup> The notable exception is the [Block persistence through Windows Management Instrumentation (WMI) event subscription](#block-persistence-through-wmi-event-subscription) ASR rule **if** you use Microsoft Configuration Manager (formerly known as Microsoft Endpoint Configuration Manager and Microsoft System Center Configuration Manager) to manage devices. The Configuration Manager client relies heavily on WMI, so we recommend extensive testing in **Audit** mode before you activate the rule in **Block** mode.
+  <sup>\*</sup> The notable exception is the [Block persistence through WMI event subscription](#block-persistence-through-wmi-event-subscription) ASR rule **if** you use Microsoft Configuration Manager (formerly known as Microsoft Endpoint Configuration Manager and Microsoft System Center Configuration Manager) to manage devices. The Configuration Manager client relies heavily on WMI, so we recommend extensive testing in **Audit** mode before you activate the rule in **Block** mode.
 
 - For other ASR rules, you should always test them in **Audit** mode before you activate them in **Block** or **Warn** mode as described in the [Attack surface reduction rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
@@ -125,7 +125,7 @@ The supported operating systems for ASR rules are described in the following tab
 |**Standard protection rules**||||||
 |Block abuse of exploited vulnerable signed drivers (Device)|Y|1709 or later|Y|Windows Server 1803 (Semi-Annual Enterprise Channel (SAC)) or later|Y|
 |Block credential stealing from the Windows local security authority subsystem|Y|1803 or later|Y|Y|Y|
-|Block persistence through Windows Management Instrumentation (WMI) event subscription|Y|1903 or later|Windows Server 1903 (SAC) or later|N|N|
+|Block persistence through WMI event subscription|Y|1903 or later|Windows Server 1903 (SAC) or later|N|N|
 |**Other ASR rules**||||||
 |Block Adobe Reader from creating child processes|Y|1809 or later|Y|Y|Y|
 |Block all Office applications from creating child processes|Y|1709 or later|Y|Y|Y|
@@ -144,7 +144,7 @@ The supported operating systems for ASR rules are described in the following tab
 |Block Win32 API calls from Office macros|Y|1709 or later|n/a|n/a|n/a|
 |Use advanced protection against ransomware|Y|1803 or later|Y|Y|Y|
 
-<sup>\*</sup> Attack surface reduction rules in Windows Server 2016 and Windows Server 2012 R2 are available for devices onboarded using the modern unified solution package. For more information, see [New Windows Server 2012 R2 and 2016 functionality in the modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
+<sup>\*</sup> ASR rules in Windows Server 2016 and Windows Server 2012 R2 are available for devices onboarded using the modern unified solution package. For more information, see [New Windows Server 2012 R2 and 2016 functionality in the modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
 
 <a name='asr-rules-supported-configuration-management-systems'></a>
 
