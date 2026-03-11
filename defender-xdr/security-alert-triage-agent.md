@@ -27,6 +27,9 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+
+Security Operations Center (SOCs) struggle to cut through noise and identify real threats. Analysts deal with queues that are overloaded with alerts of different types, related to different workloads, and each alert type has a different set of challenges and triage complexities. This challenge reduces SOC efficiency, increases operational costs and elevates organizational risk.
+
 The Microsoft Security Copilot Security Alert Triage Agent is an autonomous Microsoft Security Copilot agent that helps security teams triage alerts at scale by applying consistent reasoning, prioritization, and enrichment across supported security workloads.
 
 The Security Alert Triage Agent evaluates alerts using AI‑driven reasoning, determines their relevance and risk, and records its conclusions directly in Microsoft Defender incidents. This reduces alert fatigue, accelerates response, and helps analysts focus on the alerts that matter most.
@@ -44,14 +47,14 @@ The Security Alert Triage Agent is a [Security Copilot agent](/copilot/security/
 - **Transparent rationale:** Provides transparent rationale for its classification verdicts in natural language, detailing the reasoning behind its conclusions and the evidence used to reach them. It also provides a visual representation of its reasoning process.
 - **Learning based on feedback:** For supported alerts, the agent incorporates analyst feedback to continuously improve future triage decisions while keeping humans in control. Over time, this feedback helps refine the agent’s behavior to better reflect organizational context and reduce manual follow‑up. This capability is currently available for email and collaboration alerts only.
 
-## Supported alerts and products
+## Supported alerts
 
 The Security Alert Triage Agent currently supports these alert types in Microsoft Defender:
 
-| Alert type | Product | Alert name |
-|:---|:---|:---|
-| **Email and collaboration alerts, including phishing (Generally Available)** | Microsoft Defender for Office 365 | Email reported by user as malware or phish |
-| **Cloud alerts, including containers (Preview)** | Microsoft Defender for Cloud | <ul><li>SecurityConfigurationTampering</li><li>BackdoorFromProcesses</li><li>FileAttributeChange</li><li>ShredHiddenFiles</li><li>ReverseShell</li><li>WorkloadIdentityTheft</li><li>CurrencyMining</li><li>SuspectDownload</li><li>SuspiciousNetcatActivity</li><li>ImdsCall</li><li>SensitiveFilesLookUp</li><li>SecretReconnaissance</li><li>DigitalCurrencyMining</li><li>CryptoCoinMinerDownload</li><li>CronEnumerationPersistence</li><li>BackdoorFacilitatingBinaries</li><li>ExecutableAfterDownload</li><li>ReadingHistoryFile</li><li>ImpairCommandHistoryLogging</li><li>KnownLinuxCredentialAccessTool</li><li>DisableSecurityTools</li><li>ProxyjackingUsingTrafficMonetizers</li><li>KnownLinuxAttackTool</li><li>DarkWeb</li><li>RandomizedDomain</li><li>TIDomain</li><li>SuspiciousIpInCommandLine</li><li>SuspiciousActivityByDB</li><li>CryptoPoolDetectedInCommandLine</li><li>CryptominerProcessKill</li><li>PenTestToolsPeirates</li><li>CryptoCoinMinerArtifacts</li><li>OASTDomain</li><li>sha1huludScriptInjection</li><li>SuspectConnection</li><li>SecurityProcessTermination</li><li>DirectoryTriversalUsingCurl</li><li>SuspectPortForwarding</li><li>UnpackContainerImages</li></ul> |
+| Alert type | Alert name |
+|:---|:---|
+| **Email and collaboration alerts, including phishing (Generally Available)** | <ul><li>Email reported by user as malware or phish</li></ul> |
+| **Cloud alerts, including containers (Preview)** | <ul><li>SecurityConfigurationTampering</li><li>BackdoorFromProcesses</li><li>FileAttributeChange</li><li>ShredHiddenFiles</li><li>ReverseShell</li><li>WorkloadIdentityTheft</li><li>CurrencyMining</li><li>SuspectDownload</li><li>SuspiciousNetcatActivity</li><li>ImdsCall</li><li>SensitiveFilesLookUp</li><li>SecretReconnaissance</li><li>DigitalCurrencyMining</li><li>CryptoCoinMinerDownload</li><li>CronEnumerationPersistence</li><li>BackdoorFacilitatingBinaries</li><li>ExecutableAfterDownload</li><li>ReadingHistoryFile</li><li>ImpairCommandHistoryLogging</li><li>KnownLinuxCredentialAccessTool</li><li>DisableSecurityTools</li><li>ProxyjackingUsingTrafficMonetizers</li><li>KnownLinuxAttackTool</li><li>DarkWeb</li><li>RandomizedDomain</li><li>TIDomain</li><li>SuspiciousIpInCommandLine</li><li>SuspiciousActivityByDB</li><li>CryptoPoolDetectedInCommandLine</li><li>CryptominerProcessKill</li><li>PenTestToolsPeirates</li><li>CryptoCoinMinerArtifacts</li><li>OASTDomain</li><li>sha1huludScriptInjection</li><li>SuspectConnection</li><li>SecurityProcessTermination</li><li>DirectoryTriversalUsingCurl</li><li>SuspectPortForwarding</li><li>UnpackContainerImages</li></ul> |
 
 ## Prerequisites
 
@@ -59,13 +62,21 @@ To run the Security Alert Triage Agent in your environment, you need:
 
 |Components|Details|
 |:---|:---|
-|Products|- Security Copilot and provisioned capacity in Security Compute Units (SCU). See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) or check whether you're entitled to SCUs as part of the [Microsoft Security Copilot inclusion model](/copilot/security/security-copilot-inclusion)</br> - [Supported products](#supported-alerts-and-products) deployed and configured based on the alert type you want the agent to triage. |
-|Microsoft Defender required features|- Enable unified role-based access control (URBAC) for Defender for Office 365. See [Activate URBAC settings](#activate-urbac-settings) for more information. </br>**Email and collaboration alerts**</br> - Enable **Monitor reported messages in Outlook** in **User reported settings**. See [User reported settings](#configure-user-reported-settings) for more information </br>- Turn on the **Email reported by user as malware or phish** alert policy to triage phishing alerts. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information.</br>- The Security Alert Triage Agent doesn't classify alerts suppressed by [alert tuning](investigate-alerts.md#tune-an-alert). Make sure to disable the **Auto-Resolve - Email reported by user as malware or phish** built-in alert tuning rule and any custom tuning rules that suppress this alert.|
+|Products and licenses|- Security Copilot and provisioned capacity in Security Compute Units (SCU). See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) or check whether you're entitled to SCUs as part of the [Microsoft Security Copilot inclusion model](/copilot/security/security-copilot-inclusion) <br>- **For email and collaboration alerts** - [Microsoft Defender for Office P2](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)<br>- **For cloud container alerts** - [Microsoft Defender for Containers (part of Microsoft Defender for Cloud)](/azure/defender-for-cloud/defender-for-containers-deployment-overview)<br> - **For identity alerts** - [Entra ID P2 license](/entra/fundamentals/licensing) and Microsoft for Defender for Identity and Microsoft for Cloud Apps deployed |
+|Microsoft Defender required features|- Enable unified role-based access control (URBAC) for Defender for Office 365. See [Activate URBAC settings](#activate-urbac-settings) for more information. </br>**For email and collaboration alerts**</br> - Enable **Monitor reported messages in Outlook** in **User reported settings**. See [User reported settings](#configure-user-reported-settings) for more information </br>- Turn on the **Email reported by user as malware or phish** alert policy to triage phishing alerts. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information.|
 | Plugins | The Security Alert Triage Agent automatically activates these Security Copilot plugins: <br>- Microsoft Defender XDR<br>- Microsoft Threat Intelligence<br>- Security Alert Triage Agent |
+| Alert-tuning rules | The Security Alert Triage Agent doesn't classify alerts that you suppress by using [alert tuning](investigate-alerts.md#tune-an-alert). Make sure to disable tuning rules that suppress the alerts you want the agent to triage.<br>- For email and collaboration alerts disable **Email reported by user as malware or phish**.<br>- For cloud alerts disable **Drift Binary Detected Executing in Container**, **Possible Web Shell Activity Detected**, and **Network Scanning Tool Detected**. <br>- For identity alerts, disable **Password Spray**, **Possible BEC-related inbox rule**, and **Account compromised following a password-spray attack**.|
 
 ### Activate URBAC settings
 
-To ensure the agent has the necessary access to triage alerts, activate the URBAC settings for all of the [supported alerts and products](#supported-alerts-and-products) you want to associate with the Security Alert Triage Agent.
+Activate the workloads for the alert types you want the agent to triage in the Microsoft Defender XDR settings:
+
+| Alert type | Workload to activate |
+|:---|:---|
+| Email and collaboration alerts | Defender for Office 365 |
+| Cloud alerts | None required | 
+
+:::image type="content" source="media/phishing-triage-agent/activate-defender-for-office-365-workloads.png" alt-text="Screenshot of the Activate unified role-based access control page showing the Defender for Office 365 toggle, which needs to be enabled for the Phishing Triage Agent." lightbox="media/phishing-triage-agent/activate-defender-for-office-365-workloads.png":::
 
 For more information, see [Activate workloads in Microsoft Defender XDR settings](activate-defender-rbac.md#activate-in-microsoft-defender-xdr-settings).
 
@@ -121,7 +132,7 @@ Follow the steps in the setup wizard, as described in the sections below.
 
 ### Select which alert types to triage
 
-Select the alert types you want the agent to triage from the list of [supported alert types](#supported-alerts-and-products). 
+Select the alert types you want the agent to triage from the list of [supported alert types](#supported-alerts). Permissions and data scopes depend on that selection.
 
 ### Assign the agent’s identity and permissions
 
@@ -186,7 +197,7 @@ To create a role:
 1. Ensure that the relevant Defender workloads are activated to allow the agent to effectively analyze alerts with comprehensive context. Follow the steps in [Activate URBAC settings](activate-defender-rbac.md).
 1. [Create a role](../defender-xdr/create-custom-rbac-roles.md#create-a-custom-role) with the required permissions or assign an existing role with these permissions to the agent.
 
-   Make sure to grant the agent access to all the [supported products](#supported-workloads-and-alert-types) you want to associate with the Security Alert Triage Agent.
+   Make sure to grant the agent access to all the [supported alerts](#supported-alerts) you want to associate with the Security Alert Triage Agent.
 
       :::image type="content" source="/defender-xdr/media/phishing-triage-agent/agent-permissions-sources.png" alt-text="Screenshot of required data sources for Phishing Triage" lightbox="/defender-xdr/media/phishing-triage-agent/agent-permissions-sources.png":::
 
@@ -240,7 +251,10 @@ To review the agent’s findings, follow these steps:
 
 ## Teach the agent your organization’s context through feedback
 
-The Security Alert Triage Agent continuously improves its decision-making based on feedback tailored to your organization’s needs. Analysts can provide input in plain, natural language—no complex configurations required—making it easy to guide and shape the agent’s behavior. This feedback is stored in the agent’s memory, allowing it to adapt to how your organization interprets and classifies security alerts. Over time, this adaptation enhances the agent’s accuracy and effectiveness in triaging future alerts, with your team in control.
+> [!IMPORTANT]
+> The feedback option is currently only available for email and collaboration alerts.
+
+The Security Alert Triage Agent continuously improves its decision-making based on feedback tailored to your organization’s needs. Analysts can provide input in plain, natural language — no complex configurations required — making it easy to guide and shape the agent’s behavior. This feedback is stored in the agent’s memory, allowing it to adapt to how your organization interprets and classifies security alerts. Over time, this adaptation enhances the agent’s accuracy and effectiveness in triaging future alerts, with your team in control.
 
 To provide feedback and teach the agent, follow these steps:
 
