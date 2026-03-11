@@ -13,7 +13,7 @@ ms.collection:
 - tier3
 ms.topic: how-to
 search.appverid: met150
-ms.date: 03/10/2026
+ms.date: 03/25/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -66,11 +66,35 @@ To review specific devices, select **Configure security baseline** on the card. 
 
 ## Review and assign the Microsoft Defender for Endpoint security baseline
 
-Device configuration management monitors baseline compliance only of Windows 10 and Windows 11 devices that have been assigned the Microsoft Defender for Endpoint security baseline. To create and assign the Microsoft Defender for Endpoint security baseline profile in Microsoft Intune, see <a href="/intune/intune-service/protect/security-baselines-configure#create-a-profile-for-a-security-baseline" target="_blank">Create a profile for a security baseline</a> (opens in a new tab in the Intune documentation). When creating the profile, use these settings:
+Device configuration management monitors baseline compliance only of Windows 10 and Windows 11 devices that have been assigned the Microsoft Defender for Endpoint security baseline. You can conveniently review the baseline and assign it to devices on Intune device management.
 
-- **Baseline**: Microsoft Defender for Endpoint Security Baseline
+1. Select **Configure security baseline** on the **Security baseline** card to go to Intune device management. A similar overview of baseline compliance is displayed.
 
-For more information about security baselines in Microsoft Intune, see [Learn about Intune security baselines for Windows devices](/intune/intune-service/protect/security-baselines).
+   > [!TIP]
+   > Alternatively, you can navigate to the Defender for Endpoint security baseline in the Microsoft Azure portal from **All services > Intune > Device security > Security baselines > Microsoft Defender ATP baseline**.
+
+1. Create a new profile.
+
+   :::image type="content" source="media/secconmgmt-baseline-intuneprofile1.png" alt-text="The Create profile tab in the Microsoft Defender for Endpoint security baseline overview on Intune" lightbox="media/secconmgmt-baseline-intuneprofile1.png":::<br>
+   *Microsoft Defender for Endpoint security baseline overview on Intune*
+
+1. During profile creation, you can review and adjust specific settings on the baseline.
+
+   :::image type="content" source="media/secconmgmt-baseline-intuneprofile2.png" alt-text="The Security baseline options during profile creation on Intune" lightbox="media/secconmgmt-baseline-intuneprofile2.png":::<br>
+   *Security baseline options during profile creation on Intune*
+
+1. Assign the profile to the appropriate device group.
+
+   :::image type="content" source="media/secconmgmt-baseline-intuneprofile3.png" alt-text="The Security baseline profiles on Intune" lightbox="media/secconmgmt-baseline-intuneprofile3.png":::<br>
+   *Assigning the security baseline profile on Intune*
+
+1. Create the profile to save it and deploy it to the assigned device group.
+
+   :::image type="content" source="media/secconmgmt-baseline-intuneprofile4.png" alt-text="Assigning the security baseline on Intune" lightbox="media/secconmgmt-baseline-intuneprofile4.png":::<br>
+   *Creating the security baseline profile on Intune*
+
+> [!TIP]
+> Security baselines on Intune provide a convenient way to comprehensively secure and protect your devices. [Learn more about security baselines on Intune](/intune/intune-service/protect/security-baselines).
 
 
 
