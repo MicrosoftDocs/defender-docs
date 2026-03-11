@@ -189,7 +189,7 @@ To update VDI images:
    ```
 
 > [!NOTE]
-> Some of the registry deletion commands may return a `The system was unable to find the specified registry key or value` message.  
+> Some of the registry deletion commands may return a "The system was unable to find the specified registry key or value" message.  
 > This message is triggered when the corresponding registry path doesn't exist. This is expected behavior and can be safely ignored.
 
 ### Are you using a third party for VDIs?
