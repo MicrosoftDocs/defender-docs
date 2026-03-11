@@ -2,7 +2,7 @@
 title: Disable Defender for Cloud plans
 description: Learn how to disable Defender for Cloud plans on your connected environments subscription.
 ms.topic: how-to
-ms.date: 12/16/2025
+ms.date: 03/11/2026
 #customer intent: As a cloud administrator, I want to disable Defender for Cloud plans so that I can manage my security costs.
 ---
 
@@ -151,11 +151,11 @@ As a security measure, Defender for Cloud has Azure Policy initiatives that can 
 
 ---
 
-## Check resource-level settings
+## Check resource level settings
 
 Defender for Cloud can be enabled per individual resource, even if the subscription‑level plan is turned off. To fully stop charges, you must check and disable Defender on each supported resource type.
 
-1. Open the rpecific Azure resource.
+1. Open the specific Azure resource.
 
 1. Locate and select **Microsoft Defender for Cloud**.
 
@@ -163,7 +163,84 @@ Defender for Cloud can be enabled per individual resource, even if the subscript
 
 1. Save.
 
+### Resource specific instructions
 
+The following are the most common resource types where Defender can remain enabled.
+
+### [App Service](#tab/app-service)
+
+App Service is the most common place Defender stays enabled accidentally. Defender for App Service is billed per App Service plan and can remain enabled even when the subscription plan is off.
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Open the **App Service plan** (not the individual app).
+
+1. In the left menu, select **Microsoft Defender for Cloud**.
+
+1. Set **Defender for App Service** to **Off**.
+
+1. Select **Save**.
+
+### [Storage Accounts](#tab/storage-accounts)
+
+The resource-level setting overrides the subscription setting. Charges stop for that storage account only.
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Open the **Storage Account**.
+
+1. In the left menu, select **Microsoft Defender for Cloud**.
+
+1. Toggle **Defender for Storage** to **Off**.
+
+1. Select **Save**.
+
+### [Virtual Machines](#tab/virtual-machines)
+
+If auto-provisioning or Azure Policy is still enabled, agents might come back. This is why subscription-level cleanup still matters.
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Open the **Virtual Machine**.
+
+1. In the left menu, select **Microsoft Defender for Cloud**.
+
+1. Turn **Defender for Servers** features to **Off**.
+
+1. Select **Save**.
+
+### [SQL / Databases](#tab/sql-databases)
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Open the **SQL Server** or **SQL Database**.
+
+1. In the left menu, select **Microsoft Defender for Cloud**.
+
+1. Disable **Defender for SQL**.
+
+1. Select **Save**.
+
+---
+
+## Confirm resource-level Defender is off
+
+Use billing as the source of truth to confirm that resource-level Defender is truly off.
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Navigate to **Cost Management + Billing** > **Cost analysis**.
+
+1. Filter by **Service name** and **Meter name**.
+
+1. Look for meters such as:
+
+    - `Defender for App Service`
+    - `Defender for Storage`
+    - `Defender for Servers`
+    - `Defender CSPM`
+
+If charges still appear, there's at least one resource with Defender still enabled, or a policy or auto-provisioning rule is re-enabling it.
 
 ## Next step
 
