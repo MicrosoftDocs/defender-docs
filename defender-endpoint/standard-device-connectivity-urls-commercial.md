@@ -14,13 +14,12 @@ ms.collection:
 ms.reviewer: pahuijbr
 search.appverid: MET150
 audience: ITPro
-ms.date: 12/25/2025
+ms.date: 03/11/2026
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ---
 
 # Microsoft Defender for Endpoint standard connectivity URLs - commercial
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 This article includes a list of the standard connectivity URLs required to onboard and maintain devices in Microsoft Defender for Endpoint in commercial cloud environments.
 
@@ -218,23 +217,3 @@ While this list continue to be updated, Microsoft can't provide any guarantees o
 |---|---|
 |16/06/2025|Corrected row 94, Defender Core service and ECS, to be listed as "Required". <br> Corrected row 93, *.events.data.microsoft.com, to be listed as "Required".|
 |22/01/2024|Updates for URLs required for Microsoft Defender Core service and DLP service processes: <br> Added new line 93 for 1DS URL in Microsoft Defender URLs. <br> Added new line 94 for ECS URL in Microsoft Defender URLs. <br> Added new line 8 for Defender Core Service in Microsoft Defender Processes. <br> Added new line 9 for Purview DLP Process.|
-|14/08/2023|Updates for Australia region: <br> Added Line 72: australia.x.cp.wd.microsoft.com. <br> Added Line 73: au.vortex-win.data.microsoft.com. <br> Added Line 74: au-v20.events.data.microsoft.com. <br> Added Line 75: winatp-gw-aue.microsoft.com. <br> Added Line 76: winatp-gw-aus.microsoft.com. <br> Added Line 77: automatedirstrprdaue.blob.core.windows.net. <br> Added Line 78: automatedirstrprdaus.blob.core.windows.net. <br> Added Line 79: ussau1southeastprod.blob.core.windows.net. <br> Added Line 80: ussau1eastprod.blob.core.windows.net. <br> Removed URL: https://msdl.microsoft.com/download/symbols|
-|05/12/2022|URL details updated: <br> Updated Line 82: Updated from required to optional. <br> Updated Line 85: Changed from optional to required - guidance text updated - added Mac and Linux. <br> Updated Line 86: Changed from optional to required - guidance text updated - added Mac and Linux.|
-|22/06/2022|Updates as part of the new antimalware engine for Mac and Linux: <br> Updated Line 76: Updated guidance for optional vs required (required for Mac and Linux platforms). <br> Updated Line 77: Updated guidance for optional vs required (required for Mac and Linux platforms). <br> Added Line 78: https://www.microsoft.com/security/encyclopedia/adlpackages.aspx. <br> Updated Line 83: URL required for Mac and Linux platforms. <br> Updated Line 84: URL required for Mac and Linux platforms.|
-|27/05/2022|Removed preview status from Server 2012 R2 and Server 2016 Unified Agent references. <br> Updated Line 4: URL required for Mac and Linux platforms. <br> Updated Line 5: URL required for Mac and Linux platforms. <br> Updated Line 76: URL required for Mac and Linux platforms. <br> Updated Line 77: URL required for Mac and Linux platforms. <br> Updated Line 82 URL: From wdcp.microsoft.com to *.wdcp.microsoft.com.|
-|11/03/2022|Unnecessary non-breaking spaces (NBSP) removed from Endpoint/URL column.|
-|25/01/2022|Duplicate URLs consolidated. <br> Optional field added. <br> US Gov / GCC / GCC High guidance moved to separate spreadsheet. <br> URLs removed: <br> eu-cdn.x.cp.wd.microsoft.com; wu-cdn.x.cp.wd.microsoft.com; *.azure-automation.net; *.notify.windows.com.|
-|02/11/2021|Microsoft Defender URL updates (support for Security Management for Microsoft Defender for Endpoint): <br> Added Line 18: enterpriseregistration.windows.net. <br> Added Line 19: login.microsoftonline.com. <br> Added Line 20: *.dm.microsoft.com.|
-|07/10/2021|Microsoft Defender URL updates (new down-level server agent and Windows 11 support): Updated OS headers: Windows 11; Server 2016 (preview) / Server 2012 R2 (preview) and MMA-based support.|
-|22/09/2021|Microsoft Defender URL updates (required for new tenants): <br> Added Line 52: winatp-gw-neu3.microsoft.com. <br> Added Line 53: winatp-gw-weu3.microsoft.com. <br> Added Line 56: automatedirstrprdneu3.blob.core.windows.net. <br> Added Line 57: automatedirstrprdweu3.blob.core.windows.net.|
-|10/09/2021|Security Center URLs US Gov updates: <br> GCC: https://*.securitycenter.windows.us; https://*.gcc.securitycenter.windows.us; https://transition.security.microsoft.com; https://security.microsoft.com. <br> GCC High: https://*.securitycenter.windows.us. <br> DoD: https://*.securitycenter.windows.us.|
-|01/09/2021|Added Line 17: packages.microsoft.com. <br> Updated Line 72 Port: From 80 to 443. <br> Updated Line 74 URL: From *download.windowsupdate.com to *.download.windowsupdate.com.|
-|22/07/2021|SmartScreen URL correction. <br> Security Center URLs Commercial / US Gov correction. <br> URLs added: <br> winatp-gw-cus3.microsoft.com; <br> winatp-gw-eus3.microsoft.com; <br> automatedirstrprdcus3.blob.core.windows.net; <br> automatedirstrprdeus3.blob.core.windows.net.|
-|14/04/2021|Description updated: login.microsoftonline.com. <br> Added Defender for Endpoint URLs: login.windows.net; *.securitycenter.windows.com. <br> Added Defender AV URLs: go.microsoft.com; definitionupdates.microsoft.com.|
-|18/02/2021|Added US Gov URLs. <br> Updated the malware submission URLs for US. <br> Removed the malware submission URLs for Asia and AUS.|
-|03/02/2021|Alternate location for Microsoft Defender Antivirus Security intelligence updates added: <br> *download.windowsupdate.com. <br> fe3cr.delivery.mp.microsoft.com/ClientWebService/client.asmx.|
-|02/02/2021|Microsoft Defender Processes tab added. <br> Comment updated for removing MMA wildcard (*) requirement.|
-|16/12/2020|*.vortex-win.data.microsoft.com and Windows 10 version comments updated. <br> Security Center URLs tab added. <br> Windows Push Notifications Service (WNS) URLs added: <br> *.notify.windows.com; <br> *.wns.windows.com; <br>login.microsoftonline.com; <br> login.live.com.|
-|16/11/2020|Name change MDATP to Microsoft Defender for Endpoint.|
-|09/07/2020|File created.|
-

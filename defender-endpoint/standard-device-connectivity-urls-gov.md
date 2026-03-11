@@ -16,11 +16,11 @@ search.appverid: MET150
 audience: ITPro
 ms.date: 12/25/2025
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
+
 ---
 
 # Microsoft Defender for Endpoint standard connectivity URLs - US government
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 This article includes a list of the standard connectivity URLs required to onboard and maintain devices in Microsoft Defender for Endpoint in US government cloud environments.
 
@@ -113,7 +113,7 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender for Endpoint|DoD|https://onboardingpckgsusgvprd.blob.core.usgovcloudapi.net|
 
 
-## Microsoft Defender processes
+## Client processes
 
 The processes in this section are exclusively for Microsoft Defender for Endpoint for Windows platforms, including down-level OS. This list doesn't account for any other Windows communications requirements.
 
@@ -178,3 +178,5 @@ While this list continues to be updated, Microsoft can't provide any guarantees 
 |C:\Program Files\Microsoft Security Client|Microsoft Defender Antivirus service executable (SCEP)|
 |C:\Program Files\Microsoft Security Client|Microsoft Security Client Policy Configuration Tool (SCEP)|
 |C:\Program Files\Microsoft Security Client|Microsoft Defender Antivirus Network Realtime Inspection (SCEP)|
+
+
