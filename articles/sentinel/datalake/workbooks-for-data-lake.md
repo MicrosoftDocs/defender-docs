@@ -54,12 +54,12 @@ When using Sentinel data lake as the data source for your workbooks, keep in min
     ```
 1. Select **Run query** to visualize the results.
  
+    :::image type="content" source="./media/workbooks-for-data-lake/edit-new-query.png" alt-text="Screenshot showing the editing of a new query and visualization." lightbox="./media/workbooks-for-data-lake/edit-new-query.png":::
+
     > [!NOTE]
     > The **Visualization** type **Set by query** is not supported. 
     >
     > Relative time ranges such as `> ago(10d) ` are supported up to 90 days. Absolute time ranges are supported according to your data retention policy. 
-
-    :::image type="content" source="./media/workbooks-for-data-lake/edit-new-query.png" alt-text="Screenshot showing the editing of a new query and visualization." lightbox="./media/workbooks-for-data-lake/edit-new-query.png":::
 
 1. Customize the visual by selecting **Visual formatting**
 
