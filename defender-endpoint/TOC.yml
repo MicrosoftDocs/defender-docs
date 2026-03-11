@@ -506,8 +506,6 @@
             href: linux-support-connectivity.md
           - name: Troubleshoot performance issues
             href: linux-support-perf.md
-          - name: Troubleshoot missing events issues
-            href: linux-support-events.md
 
         - name: Troubleshoot Mobile Threat Defense
           items:
