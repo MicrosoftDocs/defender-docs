@@ -115,11 +115,11 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 
 1. Select **Save**.
 
-1. Select **Next : Configure access >**
+1. Select **Next : Configure access >**.
 
 1. Regenerate and update the AWS CloudFormation template to apply the required permissions for the enabled components.
 
-1. Select **Next: Review and generate>**
+1. Select **Next: Review and generate >**.
 
 1. Select **Update**.
 
@@ -188,11 +188,11 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 
 1. Select **Save**.
 
-1. Select **Next : Configure access >**
+1. Select **Next : Configure access >**.
 
 1. Regenerate and redeploy the onboarding script in your GCP project to apply the required permissions for the enabled components.
 
-1. Select **Next: Review and generate>**
+1. Select **Next: Review and generate >**.
 
 1. Select **Update**.
 
