@@ -28,13 +28,13 @@ When using Sentinel data lake as the data source for your workbooks, keep in min
 
 1. Select **Add workbook** 
 
-    :::image type="content" source="./media/workbooks-for-data-lake/add-workbook.png" alt-text="Screenshot of a workbook in edit mode with the query editor open." lightbox="./media/workbooks-for-data-lake/workbook-edit-mode.png":::
+    :::image type="content" source="./media/workbooks-for-data-lake/add-workbook.png" alt-text="Screenshot of a workbook in edit mode with the query editor open." lightbox="./media/workbooks-for-data-lake/add-workbook.png":::
    
     A new workbook opens with a basic query and a par chart visual.
 
 1. Select the **Edit**.
 
-    :::image type="content" source="./media/workbooks-for-data-lake/edit-new-workbook.png" alt-text="Screenshot of a new workbook with basic query and chart visual." lightbox="./media/workbooks-for-data-lake/edit-workbook.png":::
+    :::image type="content" source="./media/workbooks-for-data-lake/edit-new-workbook.png" alt-text="Screenshot of a new workbook with basic query and chart visual." lightbox="./media/workbooks-for-data-lake/edit-new-workbook.png":::
 
 1. Under the chart, select **Add**, and then select **Add data source and visualization**.
 
@@ -67,7 +67,7 @@ When using Sentinel data lake as the data source for your workbooks, keep in min
 1. Select **X Axis** and set the **Column** to `UserPrincipalName` 
 1. Select **Done editing** to save your changes.
     
-    :::image type="content" source="./media/workbooks-for-data-lake/customize-visual.png" alt-text="Screenshot showing the results of a new query in a Microsoft Sentinel workbook." lightbox="./media/workbooks-for-data-lake/new-query-result.png":::
+    :::image type="content" source="./media/workbooks-for-data-lake/customize-visual.png" alt-text="Screenshot showing the results of a new query in a Microsoft Sentinel workbook." lightbox="./media/workbooks-for-data-lake/customize-visual.png":::
 
 1.  On the workbook page, select **Done editing**
 
