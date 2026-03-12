@@ -34,7 +34,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | March 12, 2026 | GA | [Kubernetes gated deployment support for AKS Automatic (GA)](#kubernetes-gated-deployment-support-for-aks-automatic-ga) |
 | March 11, 2026 | GA| [Severity‑based risk assignment for "Not evaluated" recommendations](#severitybased-risk-assignment-for-not-evaluated-recommendations) |
 | March 10, 2026| Preview |[Code to runtime enrichment for recommendations](#code-to-runtime-enrichment-for-recommendations-preview)|
-| March 10, 2026 | Preview | [On-demand malware scanning of Azure Files in Microsoft Defender for Storage](#on-demand-malware-scanning-of-azure-files-in-microsoft-defender-for-storage-preview) 
+| March 10, 2026 | Preview | [On-demand malware scanning of Azure Files in Microsoft Defender for Storage](#on-demand-malware-scanning-of-azure-files-in-microsoft-defender-for-storage-preview) |
 | March 04, 2026 | Deprecation | [Deprecation of preview of container and container images vulnerability recommendations](#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations) |
 | March 04, 2026 | Preview |[New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview)|
 
@@ -89,10 +89,6 @@ You can start scans in the Azure portal UI or with the Representational State Tr
 This feature uses Microsoft Defender Antivirus and applies the latest malware definitions for each scan. It also shows an upfront cost estimate in the Azure portal before you start a scan.
 
 For more information, see [On-demand malware scanning](on-demand-malware-scanning.md).
-<<<<<<< HEAD
->>>>>>> ea07b0af21d681f00ef50fa710ff0b9ed1a62aa5
-=======
->>>>>>> 22d6f1ca7b834e2f2764482c50bc536ddec4c97e
 
 ### Deprecation of preview of container and container images vulnerability recommendations
 
