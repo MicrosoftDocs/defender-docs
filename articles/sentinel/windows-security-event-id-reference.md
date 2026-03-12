@@ -14,7 +14,7 @@ ms.date: 03/12/2026
 
 When ingesting security events from Windows devices using the [Windows Security Events data connector](data-connectors-reference.md#windows-security-events-via-ama) (including the legacy version), you can choose which events to collect from among the following sets:
 
-- **All events** - Collects the full, unfiltered set of events from the Windows Security event log and the AppLocker event log channels, without reduction. The Security log (`Windows Logs > Security` in Event Viewer) records auditing events such as logons, privilege use, and policy changes. The AppLocker logs (`Application and Services Logs > Microsoft > Windows > AppLocker`) cover application execution and installation policies. This set does *not* include events from other Windows event logs such as Application, System, or Setup.
+- **All events** - Collects the full, unfiltered set of events from the Windows Security event log and the AppLocker event log channels. The Security log (`Windows Logs > Security` in Event Viewer) records auditing events such as logons, privilege use, and policy changes. The AppLocker logs (`Application and Services Logs > Microsoft > Windows > AppLocker`) cover application execution and installation policies. This set does *not* include events from other Windows event logs such as Application, System, or Setup.
 
 - **Common** - A standard set of events for auditing purposes. A full user audit trail is included in this set. For example, it contains both user sign-in and user sign-out events (event IDs 4624, 4634). There are also auditing actions such as security group changes, key domain controller Kerberos operations, and other types of events in line with accepted best practices.
 
