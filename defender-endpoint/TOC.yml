@@ -442,8 +442,6 @@
           - name: Safe deployment practices
             href: mde-sdp-strategy.md
 
-      - name: Defender for Endpoint Security Operations Guide 
-        href: mde-sec-ops-guide.md
       - name: Troubleshoot
         items:
         - name: Troubleshoot antivirus scan issues
@@ -566,7 +564,10 @@
             href: troubleshoot-asr.md
           - name: Migrate to Attack surface reduction rules
             href: migrating-asr-rules.md
-    
+
+  - name: Defender for Endpoint Security Operations Guide 
+    href: mde-sec-ops-guide.md    
+
   - name: How to guides
     items:
     - name: Integration with Microsoft Defender for Cloud
