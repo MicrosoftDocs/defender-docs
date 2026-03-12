@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 11/24/2025
+ms.date: 02/26/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -23,7 +23,6 @@ appliesto:
 ---
 
 # Use installer script based deployment to deploy Microsoft Defender for Endpoint on Linux
-
 
 ## Introduction
 
@@ -36,6 +35,9 @@ To use another method, refer to the [Related content section](#related-content).
 ## Prerequisites and system requirements
 
 Before you get started, see [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md) for a description of prerequisites and system requirements.
+
+> [!TIP]
+> Before running the installer script to deploy Defender on your Linux server, it's recommended to run the script with the `--min-req` option to help identify and fix any potential issues that might impact the deployment.
 
 ## Deployment process
 
