@@ -33,7 +33,7 @@ For clusters that aren’t running in Azure Kubernetes Service (AKS), Defender f
 
 ## Deploy the Defender sensor
 
-If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](#verify-defender-for-containers-deployment) before running these commands.
+If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](defender-for-containers-verify-deployment.md) before running these commands.
 
 > [!NOTE]
 > If the cluster has the tag `ms_defender_container_exclude_sensors = true`, the Defender sensor won't be installed automatically. However, this tag doesn't prevent manual installation by using Azure CLI.
@@ -106,32 +106,6 @@ az aks enable-addons \
   --resource-group <resource-group>
 ```
 
-## Verify deployment
-
-Use the following steps to verify that Defender for Containers components were deployed successfully.
-
-### Verify that the Defender sensor is enabled on an AKS cluster
-
-```azurecli
-az aks show \
-  --name <aks-cluster-name> \
-  --resource-group <resource-group> \
-  --query "securityProfile.defender.securityMonitoring.enabled"
-```
-
-The output should be `true`.
-
-### Verify that Azure Policy add-on is enabled
-
-```azurecli
-az aks show \
-  --name <aks-cluster-name> \
-  --resource-group <resource-group> \
-  --query addonProfiles.azurepolicy
-```
-
-The output should show `enabled: true`.
-
 # [Amazon Elastic Kubernetes Service (EKS)](#tab/eks)
 
 ## Prerequisites
@@ -154,7 +128,7 @@ The output should show `enabled: true`.
 
 For EKS clusters, Defender components are deployed as Azure Arc Kubernetes extensions when you deploy them manually using Azure CLI.
 
-If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](#verify-defender-for-containers-deployment) before running these commands.
+If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](defender-for-containers-verify-deployment.md) before running these commands.
 
 > [!NOTE]
 > If the cluster has the tag `ms_defender_container_exclude_sensors = true`, the Defender sensor won't be installed automatically. However, this tag doesn't prevent manual installation by using Azure CLI.
@@ -283,7 +257,7 @@ az k8s-extension create \
 
 For Arc-enabled Kubernetes clusters, Defender components are deployed as Azure Arc Kubernetes extensions.
 
-If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](#verify-defender-for-containers-deployment) before running these commands.
+If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](defender-for-containers-verify-deployment.md) before running these commands.
 
 > [!NOTE]
 > If the cluster has the tag `ms_defender_container_exclude_sensors = true`, the Defender sensor won't be installed automatically. However, this tag doesn't prevent manual installation by using Azure CLI.
@@ -314,54 +288,25 @@ az k8s-extension create \
 
 ---
 
-## Verify Defender for Containers deployment
+## Configure namespace exclusions (optional)
 
-After remediating the recommendation, verify that Defender components are running correctly.
+After deploying the Defender sensor as an Azure Arc Kubernetes extension, you can exclude specific namespaces from monitoring.
 
-### Verify recommendation health
-
-1. In the Azure portal, go to **Microsoft Defender for Cloud** > **Recommendations**.
-
-1. Confirm that the relevant recommendation status changes to **Healthy**.
-
-### Verify extension installation (Arc-enabled clusters)
-
-For EKS, GKE, and Arc-enabled Kubernetes clusters:
-
-1. Open the Arc-enabled Kubernetes resource in Azure.
+1. In the Azure portal, open the **Arc-enabled Kubernetes** cluster.
 
 1. Select **Extensions**.
 
-1. Confirm that:
+1. Select **Microsoft Defender for Containers**.
 
-   - **Microsoft Defender for Containers** shows **Succeeded**.
+1. Select **Manage**.
 
-   - **Azure Policy for Kubernetes** shows **Succeeded** (if enabled).
+1. Configure namespace exclusions as needed.
 
-### Verify Defender sensor pods
+1. Select **Save**.
 
-1. Run the following command:
+## Next steps
 
-   ```bash
-   kubectl get pods -n kube-system -l app=microsoft-defender
-   ```
-1. Confirm that the Defender sensor pods are in a `Running` state.
-
-1. (Optional) Verify the DaemonSet:
-
-   ```bash
-   kubectl get ds microsoft-defender-collector-ds -n kube-system
-   ```
-
-Confirm that the **DESIRED**, **CURRENT**, and **READY** values match the number of cluster nodes.
-
-## Related content
-
-- [Defender for Containers deployment overview](defender-for-containers-deployment-overview.md)
-
-- [Enable Defender for Containers](defender-for-containers-enable-portal.md)
+- [Verify Defender for Containers deployment](defender-for-containers-verify-deployment.md).
 
 - [Troubleshoot Defender for Containers](defender-for-containers-troubleshoot.md)
-
-- [Disable Microsoft Defender for Containers](defender-for-containers-remove.md)
 

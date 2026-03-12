@@ -17,7 +17,6 @@ For clusters that aren’t running in Azure Kubernetes Service (AKS), Defender f
 
 [!INCLUDE[Exclude the Defender sensor](includes/defender-for-containers-exclude-sensor.md)]
 
-
 # [Azure Kubernetes Service (AKS)](#tab/aks)
 
 For AKS clusters, recommendations activate built-in AKS security capabilities, including the Defender profile and Azure Policy add-on.
@@ -46,16 +45,6 @@ For AKS clusters, recommendations activate built-in AKS security capabilities, i
 1. Select the affected AKS clusters.
 
 1. Follow the remediation steps to apply the fix.
-
-## Verify deployment
-
-1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
-
-1. Confirm the recommendation status changes to **Healthy**.
-
-1. In the AKS cluster resource, verify:
-   - Defender profile is enabled
-   - Azure Policy add-on is installed
 
 # [Amazon Elastic Kubernetes Service (EKS)](#tab/eks)
 
@@ -90,36 +79,6 @@ For EKS clusters, Defender uses Azure Arc-enabled Kubernetes to deploy the Defen
    - Connect clusters to Azure Arc (if not already connected)
    - Install the Defender extension
    - Install the Azure Policy extension (if applicable)
-
-## Manage the Defender extension from the Arc-enabled Kubernetes resource (optional)
-
-You can also inspect and manage the Defender for Containers extension directly from the Azure Arc-enabled Kubernetes resource:
-
-1. In the Azure portal, open **Azure Arc**.
-
-1. Select **Kubernetes clusters**, then select your cluster.
-
-1. Select **Extensions**.
-
-1. Verify that **Microsoft Defender for Containers** shows **Succeeded**.
-
-1. Select the extension to view its status and configuration.
-
-### Configure namespace exclusions (optional)
-
-To exclude specific namespaces from Defender sensor monitoring:
-
-1. In the Azure portal, open the Arc-enabled Kubernetes cluster.
-
-1. Select **Extensions**.
-
-1. Select **Microsoft Defender for Containers**.
-
-1. Select **Manage**.
-
-1. Configure namespace exclusions as needed.
-
-1. Select **Save**.
 
 # [Google Kubernetes Engine (GKE)](#tab/gke)
 
@@ -184,36 +143,6 @@ For Autopilot clusters:
    - Install the Defender extension
    - Install the Azure Policy extension (if applicable)
 
-## Manage the Defender extension from the Arc-enabled Kubernetes resource (optional)
-
-You can also inspect and manage the Defender for Containers extension directly from the Azure Arc-enabled Kubernetes resource:
-
-1. In the Azure portal, open **Azure Arc**.
-
-1. Select **Kubernetes clusters**, then select your cluster.
-
-1. Select **Extensions**.
-
-1. Verify that **Microsoft Defender for Containers** shows **Succeeded**.
-
-1. Select the extension to view its status and configuration.
-
-### Configure namespace exclusions (optional)
-
-To exclude specific namespaces from Defender sensor monitoring:
-
-1. In the Azure portal, open the Arc-enabled Kubernetes cluster.
-
-1. Select **Extensions**.
-
-1. Select **Microsoft Defender for Containers**.
-
-1. Select **Manage**.
-
-1. Configure namespace exclusions as needed.
-
-1. Select **Save**.
-
 # [Arc-enabled Kubernetes](#tab/arc)
 
 For Kubernetes clusters connected to Azure using Azure Arc that aren’t running in Azure Kubernetes Service (AKS), Amazon EKS, or Google Kubernetes Engine (GKE), Defender for Cloud deploys components as Azure Arc Kubernetes extensions when you remediate security recommendations.
@@ -246,83 +175,11 @@ For Kubernetes clusters connected to Azure using Azure Arc that aren’t running
    - Install the **Microsoft Defender for Containers** extension  
    - Install the **Azure Policy for Kubernetes** extension (if applicable)
 
-### Manage the Defender extension from the Arc-enabled Kubernetes resource (optional)
-
-You can also inspect and manage the Defender for Containers extension directly from the Azure Arc-enabled Kubernetes resource:
-
-1. In the Azure portal, open **Azure Arc**.
-
-1. Select **Kubernetes clusters**, then select your cluster.
-
-1. Select **Extensions**.
-
-1. Verify that **Microsoft Defender for Containers** shows **Succeeded**.
-
-1. Select the extension to view its status and configuration.
-
-### Configure namespace exclusions (optional)
-
-To exclude specific namespaces from Defender sensor monitoring:
-
-1. In the Azure portal, open the Arc-enabled Kubernetes cluster.
-
-1. Select **Extensions**.
-
-1. Select **Microsoft Defender for Containers**.
-
-1. Select **Manage**.
-
-1. Configure namespace exclusions as needed.
-
-1. Select **Save**.
-
 ---
 
-## Verify Defender for Containers deployment
+## Next steps
 
-After remediating the recommendation, verify that Defender components are running correctly.
+- [Verify Defender for Containers deployment](defender-for-containers-verify-deployment.md).
 
-### Verify recommendation health
+- [Troubleshoot Defender for Containers](defender-for-containers-troubleshoot.md)
 
-1. In the Azure portal, go to **Microsoft Defender for Cloud** > **Recommendations**.
-
-1. Confirm that the relevant recommendation status changes to **Healthy**.
-
-### Verify extension installation (Arc-enabled clusters)
-
-For EKS, GKE, and Arc-enabled Kubernetes clusters:
-
-1. Open the Arc-enabled Kubernetes resource in Azure.
-
-1. Select **Extensions**.
-
-1. Confirm that:
-
-   - **Microsoft Defender for Containers** shows **Succeeded**.
-
-   - **Azure Policy for Kubernetes** shows **Succeeded** (if enabled).
-
-### Verify Defender sensor pods
-
-1. Run the following command:
-
-   ```bash
-   kubectl get pods -n kube-system -l app=microsoft-defender
-   ```
-1. Confirm that the Defender sensor pods are in a `Running` state.
-
-1. (Optional) Verify the DaemonSet:
-
-   ```bash
-   kubectl get ds microsoft-defender-collector-ds -n kube-system
-   ```
-
-Confirm that the **DESIRED**, **CURRENT**, and **READY** values match the number of cluster nodes.
-
-## Related content
-
-- [Enable Defender for Containers in Microsoft Defender for Cloud](defender-for-containers-enable-portal.md)
-
-- [Enable Defender for Containers using Azure CLI](defender-for-containers-deploy-azure-cli.md)
-
-- [Defender for Containers deployment overview](defender-for-containers-deployment-overview.md)

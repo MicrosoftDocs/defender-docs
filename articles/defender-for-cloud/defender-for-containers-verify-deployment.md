@@ -7,15 +7,6 @@ author: Elazark
 ms.date: 03/12/2026
 ---
 
----
-title: Verify Defender for Containers deployment
-description: Learn how to verify that Microsoft Defender for Containers sensors and extensions are running correctly on Kubernetes clusters.
-ms.topic: how-to
-ms.author: elkrieger
-author: Elazark
-ms.date: 03/12/2026
----
-
 # Verify Defender for Containers deployment
 
 After deploying Microsoft Defender for Containers components, verify that the sensor and related extensions are running correctly on your cluster.
@@ -71,12 +62,22 @@ To verify extension installation:
    - **Microsoft Defender for Containers**
    - **Azure Policy for Kubernetes** (if enabled)
 
+You can also select the **Microsoft Defender for Containers** extension to view its status and configuration details.
+
 ## Verify Defender sensor pods
 
 Verify that the Defender sensor pods are running in the cluster.
 
+**For AKS clusters:**
+
 ```bash
-kubectl get pods -n kube-system -l app=microsoft-defender
+kubectl get pods -n kube-system -l app=defender
+```
+
+**For Arc-enabled clusters and Helm:**
+
+```bash
+kubectl get pods -n defender-k8s-sensor
 ```
 
 Confirm that the Defender sensor pods are in a `Running` state.
