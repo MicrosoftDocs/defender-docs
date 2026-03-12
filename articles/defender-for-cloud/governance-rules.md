@@ -4,7 +4,7 @@ description: Learn how to drive remediation of security recommendations by using
 services: defender-for-cloud
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 05/18/2025
+ms.date: 03/04/2026
 ---
 
 # Drive recommendation remediation by using governance rules
@@ -81,6 +81,9 @@ Conflicting rules are applied in scope order. For example, rules on a management
    - **By severity**: The rule assigns the owner and due date to any recommendation in the subscription that has no owner or due date and that matches the specified severity levels.
    - **By risk level**: The rule assigns an owner and due date to any recommendations that match the specified risk levels.
    - **By recommendation category**: The rule assigns an owner and due date to any recommendations that match the specified recommendation category.
+     >[!NOTE]  
+     >The recommendations category to implement governance rules is for use with the new individual recommendation format.
+     >:::image type="content" source="media/governance-rules/recommendation-categories.png" alt-text="Screenshot of the list of recommendation categories." lightbox="media/governance-rules/recommendation-categories.png":::
    - **By specific recommendations**: Select the specific built-in or custom recommendations that the rule applies to.
 
    To apply the rule to already-generated recommendations, you can rerun the rule using the UI or API.
