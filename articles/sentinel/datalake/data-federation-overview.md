@@ -6,7 +6,7 @@ author: edbaynash
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: concept-article
-ms.date: 03/05/2026
+ms.date: 03/31/2026
 ms.author: edbaynash
 ms.collection: ms-security
 
@@ -19,7 +19,7 @@ Data federation in Microsoft Sentinel enables seamless querying of multiple exte
 
 ## What is data federation?
 
-Data federation allows you to query external data sources directly from the Microsoft Sentinel data lake using Kusto Query Language (KQL) or Pyspark Notebooks using the Microsoft Sentinel VS Code extension. Instead of ingesting all data into Sentinel, federation creates virtual connections to external data stores, enabling:
+Data federation allows you to query external data sources directly from the Microsoft Sentinel data lake using Kusto Query Language (KQL) or Jupyter notebooks using the Microsoft Sentinel VS Code extension. Instead of ingesting the data into Sentinel, federation creates connections to external data stores, enabling:
 
 - **Unified analytics**: Query federated sources alongside native Microsoft Sentinel data lake tables.
 - **Cost optimization**: Avoid data duplication by querying data where it resides.
@@ -63,17 +63,30 @@ Before setting up data federation, ensure you meet the following requirements:
 
 - **Sentinel data lake onboarding**: Your Microsoft Sentinel workspace must be onboarded to the Sentinel data lake.
 - **Public accessibility**: The federation source must be publicly accessible. Private endpoints aren't supported currently.
-- **Service principal**: A service principal with appropriate permissions to access Azure Key Vault secrets (required for Azure Databricks and ADLS Gen 2).
-- **Azure Key Vault**: An Azure Key Vault configured with role-based access control (RBAC) to store authentication secrets.
+- **Service principal**: A service principal with appropriate permissions in the data source you want to connect with.  
+- **Azure Key Vault**: An Azure Key Vault to store authentication secrets for the service principal. You need to configure permissions for both the service principal as well as the Microsoft Sentinel managed identity to read secrets from the key vault.
 
 ## How federation works
 
 1. **Configure authentication**: Create a service principal and store its credentials in Azure Key Vault.
 2. **Create a federated connection**: Use the Data connectors page in Microsoft Sentinel to create a connector instance for your chosen federation source.
 3. **Select tables**: Choose which tables from the external source to federate.
-4. **Query federated data**: Use KQL queries to access federated tables alongside native Sentinel data.
+4. **Query federated data**: Use data lake experiences such as KQL queries, Notebooks, or MCP tools to access federated tables alongside native Sentinel data. 
 
-:::image type="content" source="../media/data-federation/federation-catalog.png" alt-text="Screenshot showing the data federation catalog page with available connectors in Microsoft Sentinel." lightbox="../media/data-federation/federation-catalog.png":::
+:::image type="content" source="media/data-federation-overview/federation-catalog.png" alt-text="Screenshot showing the data federation catalog page with available connectors in Microsoft Sentinel." lightbox="media/data-federation-overview/federation-catalog.png":::
+
+
+## Common scenarios for data federation 
+
+Data federation lets you access data that resides outside of the data lake. This is especially valuable in the following scenarios:
+
++ Operationalization across multiple teams and systems.
+
++ Years of historical data that you want to naturally age out and isn't cost effective to ingest.
+
++ Regional or compliance regulations that constrain data from being copied.
+
++ Data that is not frequently accessed and is only contextually relevant in limited scenarios. 
 
 ## Benefits of data federation
 

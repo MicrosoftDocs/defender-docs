@@ -23,7 +23,6 @@ Before you begin, ensure:
 
 - You have [set up federated data connectors](data-federation-setup.md) for your external data sources.
 - You have appropriate permissions to query data in the Sentinel data lake.
-- The federated connector instances are in a connected state.
 
 ## Understand federated table naming
 
@@ -31,9 +30,9 @@ Federated table names follow the pattern `<tableName>_<connectorInstanceName>`. 
 
 | Original table name | Connector instance name | Federated table name |
 |---------------------|------------------------|---------------------|
-| `widgets` | `my_adls_connector` | `widgets_my_adls_connector` |
-| `sales_data` | `databricks_prod` | `sales_data_databricks_prod` |
-| `inventory` | `fabric_lakehouse` | `inventory_fabric_lakehouse` |
+| `widgets` | `ADLS01` | `widgets_ADLS01` |
+| `sales_data` | `AzureDBX01` | `sales_data_AzureDBX01` |
+| `inventory` | `Fabric01` | `inventory_Fabric01` |
 
 Use the federated table name when querying data from the Sentinel data lake.
 
@@ -45,7 +44,7 @@ The table management view provides an overview of all tables in your Sentinel da
 1. Select the **Type** filter.
 1. Select **Federated** and select **Apply**.
 
-:::image type="content" source="../media/data-federation/tables-federated-filter.png" alt-text="Screenshot showing the table management view filtered to show federated tables." lightbox="../media/data-federation/tables-federated-filter.png":::
+:::image type="content" source="./media/data-federation/tables-federated-filter.png" alt-text="Screenshot showing the table management view filtered to show federated tables." lightbox="./media/data-federation/tables-federated-filter.png":::
 
 Your table list now displays only federated tables.
 
@@ -55,11 +54,11 @@ Select a table row to open the details flyout panel. The panel contains three ta
 
 | Tab | Description |
 |-----|-------------|
-| **Overview** | Basic information about the federated table, including the source type and connection status |
-| **Data Sources** | Shows which connector instances provide data for this table |
-| **Schema** | Displays the columns, data types, and descriptions for the table's columns |
+| **Overview** | Basic information about the federated table, including the source type and connection status. |
+| **Data Sources** | Shows which connector instances provide data for this table. |
+| **Schema** | Displays the columns, data types, and descriptions for the table's columns.  Users with permissions to write to the data lake System tables SELECT **Refresh schema** to update columns from the source. |
 
-:::image type="content" source="../media/data-federation/table-details-flyout.png" alt-text="Screenshot showing the federated table details flyout with overview, data sources, and schema tabs." lightbox="../media/data-federation/table-details-flyout.png":::
+:::image type="content" source="./media/data-federation/table-details-flyout.png" alt-text="Screenshot showing the federated table details flyout with overview, data sources, and schema tabs." lightbox="./media/data-federation/table-details-flyout.png":::
 
 ## Query federated tables using KQL
 
@@ -71,7 +70,7 @@ The KQL queries page in Microsoft Sentinel allows you to query federated tables 
 1. Select the **Selected workspace** button in the information bar.
 1. Ensure **System Tables** is selected as the workspace scope.
 
-:::image type="content" source="../media/data-federation/kql-schema-federated.png" alt-text="Screenshot showing the KQL queries workspace selector with System Tables selected." lightbox="../media/data-federation/kql-schema-federated.png":::
+:::image type="content" source="./media/using-data-federation/kql-schema-federated.png" alt-text="Screenshot showing the KQL queries workspace selector with System Tables selected." lightbox="./media/using-data-federation/kql-schema-federated.png":::
 
 ### Locate federated tables in the schema
 
@@ -81,68 +80,15 @@ The KQL queries page in Microsoft Sentinel allows you to query federated tables 
 1. Expand the federation type to see your federated tables.
 1. Expand a table to view its columns.
 
-:::image type="content" source="../media/data-federation/kql-schema-federated.png" alt-text="Screenshot showing the KQL queries schema tab with federated tables expanded." lightbox="../media/data-federation/kql-schema-federated.png":::
+:::image type="content" source="./media/using-data-federation/kql-schema-federated.png" alt-text="Screenshot showing the KQL queries schema tab with federated tables expanded." lightbox="./media/using-data-federation/kql-schema-federated.png":::
 
 ### Write and execute queries
 
-1. In the query pane, construct a KQL query that references your federated table.
-1. Select **Run query** to execute the query.
-1. View the results in the **Results** pane.
+Queries against federated tables work like queries against native lake tables with a few important differences:
 
-**Example: Basic query on a federated table**
++ It is possible for a change to occur to the schema of a table in the external source.  This can result in a failure during a query that indicates a column isn’t present. Refresh columns on Table management page by selecting the federated table, selecting the **Schema** tab and selecting **Refresh Schema**.
 
-```kusto
-widgets_my_adls_connector
-| take 100
-```
-
-**Example: Query with filtering and projection**
-
-```kusto
-sales_data_databricks_prod
-| where TransactionDate >= ago(30d)
-| summarize TotalSales = sum(Amount) by Region
-| order by TotalSales desc
-```
-
-### View nested data
-
-If your federated data contains nested objects or complex types:
-
-1. Run a query to retrieve the data.
-1. In the results pane, expand individual rows to view nested details.
-1. Expand complex column values to validate the data structure.
-
-:::image type="content" source="../media/data-federation/kql-nested-data.png" alt-text="Screenshot showing expanded nested data in KQL query results." lightbox="../media/data-federation/kql-nested-data.png":::
-
-### Join federated and native tables
-
-One of the key benefits of federation is the ability to join external data with native Sentinel data lake tables.
-
-**Example: Join federated data with security events**
-
-```kusto
-SecurityEvent
-| where TimeGenerated >= ago(1d)
-| join kind=inner (
-    user_data_databricks_prod
-    | project UserPrincipalName, Department, CostCenter
-) on $left.Account == $right.UserPrincipalName
-| project TimeGenerated, Account, Activity, Department, CostCenter
-```
-
-**Example: Enrich alerts with external context**
-
-```kusto
-SecurityAlert
-| where TimeGenerated >= ago(7d)
-| extend HostName = tostring(parse_json(ExtendedProperties).HostName)
-| join kind=leftouter (
-    asset_inventory_adls_connector
-    | project HostName, AssetOwner, BusinessUnit, CriticalityLevel
-) on HostName
-| project TimeGenerated, AlertName, Severity, HostName, AssetOwner, CriticalityLevel
-```
++ Federated tables without a `TimeGenerated` column, or where a `TimeGenerated` column is present with data in the wrong format, cant be used in data lake explorer to select time ranges in the user interface. Define date filters in the body of the KQL that match your federated table's date format. 
 
 ### Create KQL jobs from federated queries
 
@@ -152,6 +98,9 @@ You can create KQL jobs based on queries that use federated tables:
 1. Select the **Create job** button in the upper right corner of the query panel.
 1. Configure the job settings, including schedule and output destination.
 1. Save the job.
+
+> [!NOTE] 
+> If federated tables don't contain `TimeGenerated` columns, or your output doesn’t contain a `TimeGenerated` column with a properly formatted date value for each row, KQL queries won't function on the table once its created in the lake. 
 
 Federated tables are fully supported for KQL jobs, async queries, and MCP tools.
 
@@ -165,7 +114,7 @@ In the Microsoft Sentinel VS Code extension, federated tables appear under:
 
 **System tables** > **Assets**
 
-:::image type="content" source="../media/data-federation/vscode-federated-tables.png" alt-text="Screenshot showing federated tables in the Microsoft Sentinel VS Code extension under System tables Assets." lightbox="../media/data-federation/vscode-federated-tables.png":::
+:::image type="content" source="./media/using-data-federation/vscode-federated-tables.png" alt-text="Screenshot showing federated tables in the Microsoft Sentinel VS Code extension under System tables Assets." lightbox="./media/data-federation/vscode-federated-tables.png":::
 
 ### Work with federated tables in notebooks
 
@@ -175,39 +124,9 @@ Working with federated tables in Jupyter notebooks follows the same patterns as 
 1. **Don't specify a workspace name**: Read operations don't require a workspace specification.
 1. **Read-only access**: Federated tables are read-only; you can't write data back to federated sources.
 
-**Example: Reading federated data in a notebook**
-
-```python
-# Query federated table
-df = sentinel.query("widgets_my_adls_connector | take 1000")
-
-# Process the data
-df.head()
-```
-
-### Save federated data to other tables
-
-Although you can't write to federated tables, you can save processed federated data to other Sentinel tables:
-
-- **System table custom tables** (`_SPRK`): Save to custom tables in the System tables workspace.
-- **Analytics custom tables** (`_SPRK_CL`): Save to analytics custom tables.
-
-**Example: Transform and save federated data**
-
-```python
-# Query and transform federated data
-df = sentinel.query("""
-    sales_data_databricks_prod
-    | summarize DailySales = sum(Amount) by bin(TransactionDate, 1d), Region
-""")
-
-# Save to a custom system table
-sentinel.save_dataframe(df, "daily_sales_summary_SPRK")
-```
-
 ### Create Jupyter notebook jobs
 
-You can create scheduled Jupyter notebook jobs that utilize federated tables:
+You can create scheduled Jupyter notebook jobs that utilize federated tables in the same way that you would create a notebook job for native data lake tables: 
 
 1. Develop your notebook with federated table queries.
 1. Test the notebook to ensure federated queries execute correctly.
