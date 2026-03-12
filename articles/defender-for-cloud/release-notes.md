@@ -40,11 +40,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ### Kubernetes gated deployment support for AKS Automatic (GA)
 
-<<<<<<< HEAD
 March 12, 2026
-=======
-March 11, 2026
->>>>>>> 22d6f1ca7b834e2f2764482c50bc536ddec4c97e
 
 Kubernetes gated deployment is now generally available for AKS Automatic clusters.
 
