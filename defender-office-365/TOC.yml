@@ -291,8 +291,6 @@
            href: attack-simulation-training-settings.md
          - name: Attack simulation training deployment considerations and FAQ
            href: attack-simulation-training-faq.md
-         - name: Microsoft Teams in Attack simulation training
-           href: attack-simulation-training-teams.md
        - name: Connectors for mail flow
          items:
          - name: Configure mail flow using connectors
