@@ -12,7 +12,7 @@ ms.collection:
 - tier3
 ms.custom: 
 ms.topic: overview
-ms.date: 03/02/2025
+ms.date: 03/12/2026
 ms.reviewer: 
 search.appverid: met150
 #customer intent: As a security administrator, I want to manage permissions and access to Microsoft Defender portal experiences using unified role-based access control (RBAC).
@@ -62,7 +62,7 @@ Centralized permissions management is supported for the following services:
 |**Microsoft Sentinel** (Preview)| Supports unified access management for all Microsoft Sentinel workspaces onboarded to the Defender portal.<br><br> Sentinel experiences in the Defender portal continue to respect ARM roles and permissions in addition to URBAC. Therefore, users with more permissions in ARM than in URBAC may see more data in the Sentinel pages in the Defender portal than configured in their URBAC permissions. <br><br>Supports permission management for the Microsoft Sentinel data lake default workspace, when Microsoft Sentinel is onboarded to both the Defender portal and the Microsoft Sentinel data lake. <br><br>Microsoft Sentinel users with built-in Azure RBAC roles for their workspaces receive parallel permissions in the Microsoft Sentinel data lake experiences, such as the lake explorer and notebooks. For more information, see [Roles and permissions for the Microsoft Sentinel data lake (Preview)](/azure/sentinel/roles#roles-and-permissions-for-the-microsoft-sentinel-data-lake-preview). <br><br>To see which roles are supported, check the [unified RBAC roles mapping](compare-rbac-roles.md#microsoft-sentinel-preview].|
 
 > [!NOTE]
-> Scenarios and experiences controlled by Compliance permissions are managed in the Microsoft Purview portal.
+> Scenarios and experiences controlled by Compliance permissions are managed in the Microsoft Purview portal. Specifically, Data Loss Prevention (DLP) and Insider Risk Management experiences accessible from the Defender portal are governed by Microsoft Purview RBAC, not Microsoft Defender unified RBAC. To manage permissions for these experiences, see [Permissions in the Microsoft Purview portal](/purview/purview-permissions).
 
 ## Before you start
 

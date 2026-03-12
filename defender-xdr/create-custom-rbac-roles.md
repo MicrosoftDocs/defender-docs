@@ -12,7 +12,7 @@ ms.collection:
 - tier3
 ms.custom: 
 ms.topic: how-to
-ms.date: 07/06/2025
+ms.date: 03/12/2026
 ms.reviewer: 
 search.appverid: met150
 appliesto:
@@ -155,6 +155,15 @@ For more information, see: [Configure scoped access for Microsoft Defender for I
 You can configure scoped access using Microsoft Defender XDR’s Unified RBAC model for resources managed by Microsoft Defender for Cloud. This enables you to limit access and visibility to specific **subscriptions**, **resource groups**, or **individual resources**. By applying scoped roles, you help ensure that team members only see and manage the assets relevant to their responsibilities, reducing unnecessary exposure and improving operational security.
 
 For more information, see: [Manage cloud scopes and unified role-based access control](/azure/defender-for-cloud/cloud-scopes-unified-rbac?pivots=defender-portal).
+
+## Scoping considerations for Microsoft Defender for Endpoint device groups
+
+Microsoft Defender for Endpoint device groups continue to govern per-device visibility and actions alongside unified RBAC. When you create or import URBAC roles, device group assignments determine which devices assigned users can see and act on. Configure device groups in the Microsoft Defender portal separately from URBAC role assignments to ensure proper scoping.
+
+For more information, see [Create and manage device groups in Microsoft Defender for Endpoint](/defender-endpoint/machine-groups).
+
+> [!NOTE]
+> In multi-workspace Microsoft Sentinel environments, URBAC data source selections control access to Sentinel workspace data in the Defender portal. These selections don't change SIEM access or permissions configured through Azure RBAC for individual workspaces. Azure RBAC continues to govern direct workspace access outside the Defender portal.
 
 ## Next steps
 
