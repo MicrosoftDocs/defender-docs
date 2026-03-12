@@ -38,7 +38,12 @@ Before you configure filter or split transformation rules, verify the following 
 
 - In the Microsoft Defender portal with unified role-based access control (RBAC), **Data (manage)** permissions under the **Data operations** permissions group.
 
-- For the Microsoft Sentinel workspace, you need **Microsoft.OperationalInsights/workspaces/write** and **Microsoft.OperationalInsights/workspaces/tables/write** permissions to the Log Analytics workspace. The **Log Analytics Contributor** built-in role provides these permissions.
+- For the Microsoft Sentinel workspace, you need the following permissions: 
+- **Log Analytics Contributor** role to provide:
+    - **Microsoft.OperationalInsights/workspaces/write** 
+    - **Microsoft.OperationalInsights/workspaces/tables/write** permissions to the Log Analytics workspace. 
+- **Monitoring Contributor** role.
+ 
 
 ### Supported tables
 
