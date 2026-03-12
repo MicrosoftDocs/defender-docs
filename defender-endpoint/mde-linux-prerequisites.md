@@ -69,6 +69,13 @@ Linux server endpoints should be able to access the endpoints documented in:
 
 If necessary, [configure static proxy discovery](./linux-static-proxy-configuration.md).
 
+> [!WARNING]
+> PAC, WPAD, and authenticated proxies aren't supported.
+> Use only static or transparent proxies.
+> SSL inspection and intercepting proxies aren't supported for security reasons.
+> Configure an exception for SSL inspection and your proxy server to allow direct data pass-through from Defender for Endpoint on Linux to the relevant URLs without interception.
+> Adding your interception certificate to the global store doesn't enable interception.
+
 ### Verify if devices can connect to Defender for Endpoint cloud services
 
 1. Prepare your environment, as described in Step 1 of the following article [Configure your network environment to ensure connectivity with Defender for Endpoint service](/defender-endpoint/configure-environment).
@@ -83,23 +90,16 @@ If necessary, [configure static proxy discovery](./linux-static-proxy-configurat
 > [!NOTE]
 > Configuration for transparent proxies isn't needed for Defender for Endpoint. See [Manual Static Proxy Configuration.](/defender-endpoint/linux-static-proxy-configuration)
 
-> [!WARNING]
-> PAC, WPAD, and authenticated proxies aren't supported.
-> Use only static or transparent proxies.
-> SSL inspection and intercepting proxies aren't supported for security reasons.
-> Configure an exception for SSL inspection and your proxy server to allow direct data pass-through from Defender for Endpoint on Linux to the relevant URLs without interception.
-> Adding your interception certificate to the global store doesn't enable interception.
-
 For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-connectivity).
 
 ## Supported Linux distributions
 
 The following Linux server distributions are supported:
 
-| Distribution | x64 (AMD64/EM64T) | ARM64 (GA) |
+| Distribution | x64 (AMD64/EM64T) | ARM64 |
 |---|---|---|
 | Red Hat Enterprise Linux | 7.2+, 8.x, 9.x, 10.x | 8.x, 9.x, 10.x |
-| CentOS | 7.2+, 8.x | — |
+| CentOS | 7.2+, 8.x | Not supported |
 | CentOS Stream | 8.x, 9.x, 10.x | 8.x, 9.x, 10.x |
 | Ubuntu LTS | 16.04–24.04 | 20.04, 22.04, 24.04 |
 | Ubuntu Pro | 22.04, 24.04 | 22.04, 24.04 |
@@ -107,10 +107,10 @@ The following Linux server distributions are supported:
 | SUSE Linux Enterprise Server | 12.x, 15.x | 15 (SP5, SP6) |
 | Oracle Linux | 7.2+, 8.x, 9.x | 8.x, 9.x |
 | Amazon Linux | 2, 2023 | 2, 2023 |
-| Fedora | 33–42 | — |
-| Rocky Linux | 8.7+, 9.2+ | — |
-| AlmaLinux | 8.4+, 9.2+ | — |
-| Mariner | 2 | — |
+| Fedora | 33–42 | Not supported |
+| Rocky Linux | 8.7+, 9.2+ | Not supported |
+| AlmaLinux | 8.4+, 9.2+ | Not supported |
+| Mariner | 2 | Not supported |
 
 > [!NOTE]
 > Distributions and versions that aren't explicitly listed above, and custom operating systems, are unsupported (even if they're derived from the officially supported distributions).
