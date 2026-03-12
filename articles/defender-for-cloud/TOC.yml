@@ -237,8 +237,8 @@
                   href: defender-for-containers-deploy-azure-cli.md
                 - name: Deploy using Helm (advanced)
                   href: deploy-helm.md
-            - name: Validate deployment
-              href: defender-for-containers-validate-deployment.md
+            - name: Veriify deployment
+              href: defender-for-containers-verify-deployment.md
             - name: Troubleshoot Defender for Containers
               href: defender-for-containers-troubleshoot.md
             - name: Disable Defender for Containers

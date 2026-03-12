@@ -98,6 +98,6 @@ Confirm that the **DESIRED**, **CURRENT**, and **READY** values match the number
 
 - [Deploy Defender sensor using Azure CLI](defender-for-containers-deploy-azure-cli.md)
 
-- [Deploy Defender sensor using security recommendations](defender-for-containers-deploy-recommendations.md)
+- [Deploy Defender sensor using security recommendations](defender-for-containers-deploy-portal.md)
 
 - [Troubleshoot Defender for Containers](defender-for-containers-troubleshoot.md)
