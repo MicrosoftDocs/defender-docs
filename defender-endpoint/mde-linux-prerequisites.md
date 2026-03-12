@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: article
 ms.subservice: linux
 search.appverid: met150
-ms.date: 03/08/2026
+ms.date: 03/12/2026
 ---
 
 # Prerequisites for Microsoft Defender for Endpoint on Linux
@@ -101,7 +101,7 @@ The following Linux server distributions are supported:
 | Red Hat Enterprise Linux | 7.2+, 8.x, 9.x, 10.x | 8.x, 9.x, 10.x |
 | CentOS | 7.2+, 8.x | Not supported |
 | CentOS Stream | 8.x, 9.x, 10.x | 8.x, 9.x, 10.x |
-| Ubuntu LTS | 16.04–24.04 | 20.04, 22.04, 24.04 |
+| Ubuntu LTS | 16.04, 18.04, 20.04, 22.04,24.04 | 20.04, 22.04, 24.04 |
 | Ubuntu Pro | 22.04, 24.04 | 22.04, 24.04 |
 | Debian | 9–13 | 11, 12 |
 | SUSE Linux Enterprise Server | 12.x, 15.x | 15 (SP5, SP6) |
@@ -109,7 +109,7 @@ The following Linux server distributions are supported:
 | Amazon Linux | 2, 2023 | 2, 2023 |
 | Fedora | 33–42 | Not supported |
 | Rocky Linux | 8.7+, 9.2+ | Not supported |
-| AlmaLinux | 8.4+, 9.2+ | Not supported |
+| Alma Linux | 8.4+, 9.2+ | Not supported |
 | Mariner | 2 | Not supported |
 
 > [!NOTE]
