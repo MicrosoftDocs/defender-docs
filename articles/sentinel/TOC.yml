@@ -654,9 +654,9 @@
         - name: Troubleshoot KQL for the lake
           href: datalake/kql-troubleshoot.md
           displayName: data lake
-        - name:  Workbooks for Microsoft Sentinel data lake
+        - name: Workbooks for Microsoft Sentinel data lake
           href: datalake/workbooks-for-data-lake.md
-          displayName: data lake    
+          displayName: data lake
     - name: Notebooks for data lake exploration
       items:
         - name: Overview
