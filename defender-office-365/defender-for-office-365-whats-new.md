@@ -8,7 +8,7 @@ author: chrisda
 ms.author: chrisda
 manager: bagol
 ms.localizationpriority: medium
-ms.date: 01/16/2026
+ms.date: 02/18/2026
 audience: ITPro
 ms.collection:
   - m365-security
@@ -38,6 +38,10 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Endpoint](/defender-endpoint/whats-new-in-microsoft-defender-endpoint)
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
+
+## February 2026
+
+- **Expanding User reporting in Teams to Defender for Office 365 Plan 1**: Users can report external and intra-org [Microsoft Teams messages](submissions-teams.md) from chats, standard, shared, and private channels, meeting conversations to Microsoft as malicious (security risk) the specified reporting mailbox, or both via [user reported settings](submissions-user-reported-messages-custom-mailbox.md).
 
 ## January 2026
 
@@ -142,7 +146,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 - (GA) SecOps personnel can now release email messages from quarantine or move messages from quarantine back to user Inboxes directly from :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** in Threat Explorer, Advanced hunting, custom detection, the Email entity page, and the Email summary panel. This capability allows security operators to manage false positives more efficiently and without losing context. For more information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
 
-- We're introducing intra-org protection data into three of our core customer facing reports: the [Mailflow status report](reports-email-security.md#mailflow-status-report), [Threat protection status report](reports-email-security.md#threat-protection-status-report), and [Top senders and recipient report](reports-email-security.md#top-senders-and-recipients-report). Admins and security operators now have insight into how the default email protections for cloud mailboxes and Defender for Office 365 protect users from malicious email traffic inside the organization. For more information, see [Email security report changes in the Microsoft Defender portal](reports-email-security.md#email-security-report-changes-in-the-microsoft-defender-portal).
+- We're introducing intra-org protection data into three of our core customer facing reports: the [Mailflow status report](reports-email-security.md#mailflow-status-report), [Threat protection status report](reports-email-security.md#threat-protection-status-report), and [Top senders and recipient report](reports-email-security.md#top-senders-and-recipients-report). Admins and security operators now have insight into how [the built-in security features for all cloud mailboxes](eop-about.md) and Defender for Office 365 protect users from malicious email traffic inside the organization. For more information, see [Email security report changes in the Microsoft Defender portal](reports-email-security.md#email-security-report-changes-in-the-microsoft-defender-portal).
 
 ## May 2024
 
@@ -190,7 +194,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## December 2023
 
-- **QR code related phishing protection in the default email protections for cloud mailboxes and in Microsoft Defender for Office 365**: New detection capabilities using image detection, threat signals, URL analysis now extracts QR codes from URLs and blocks QR code based phishing attacks from the body of an email. To learn more, see our [blog](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/protect-your-organizations-against-qr-code-phishing-with-defender-for-office-365/4007041).
+- **QR code related phishing protection in the built-in security features for all cloud mailboxes and in Microsoft Defender for Office 365**: New detection capabilities using image detection, threat signals, URL analysis now extracts QR codes from URLs and blocks QR code based phishing attacks from the body of an email. To learn more, see our [blog](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/protect-your-organizations-against-qr-code-phishing-with-defender-for-office-365/4007041).
 - **Microsoft Defender XDR Unified RBAC is now generally available**: Defender XDR Unified RBAC supports all Defender for Office 365 scenarios previously controlled by [Email & collaboration permissions](mdo-portal-permissions.md) and [Exchange Online permissions](/exchange/permissions-exo/permissions-exo). To learn more about the supported workloads and data resources, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
   > [!TIP]

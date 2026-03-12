@@ -70,7 +70,7 @@ To check on the detections, see [Review the results of Microsoft Defender Antivi
    [![Scan options on the Windows 10 unhealthy endpoints tab.](media/mem-antivirus-scan-on-demand.png)](media/mem-antivirus-scan-on-demand.png#lightbox)
    
 > [!TIP]
-> For more information about using Microsoft Configuration Manager to run a scan, see [Antimalware and firewall tasks: How to perform an on-demand scan](/configmgr/protect/deploy-use/endpoint-antimalware-firewall#how-to-perform-an-on-demand-scan-of-computers).
+> For more information about using Microsoft Configuration Manager to run a scan, see [Antimalware and firewall tasks: How to perform an on-demand scan](/intune/configmgr/protect/deploy-use/endpoint-antimalware-firewall#how-to-perform-an-on-demand-scan-of-computers).
 
 ### Use devices to run a scan on a single device
 
@@ -119,7 +119,7 @@ mpcmdrun.exe -scan -scantype 1
 
 For more information on how to use the tool and other parameters, including starting a full scan or defining paths, see [Use the mpcmdrun.exe commandline tool to configure and manage Microsoft Defender Antivirus](command-line-arguments-microsoft-defender-antivirus.md).
 
-## Use Windows Management Instruction (WMI) to run a scan
+## Use Windows Management Instrumentation (WMI) to run a scan
 
 Use the [**Start** method](/previous-versions/windows/desktop/defender/start-msft-mpscan) of the **MSFT_MpScan** class.
 
@@ -130,7 +130,7 @@ For more information about which parameters are allowed, see [Windows Defender W
 >
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)

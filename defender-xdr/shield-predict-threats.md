@@ -46,6 +46,8 @@ This proactive approach reduces the reactive chase, minimizes operational burden
 
 While attack disruption identifies and contains compromised assets, predictive shielding anticipates potential attack progression and proactively restricts vulnerable assets or paths. For example, while automatic attack disruption isolates a compromised device, predictive shielding might proactively restrict access to sensitive data for at-risk devices.
 
+Because predictive shielding is part of the same autonomous protection stack, the confidence and AI model principles described for attack disruption also apply to predictive shielding. For more information, see [How Defender establishes confidence for automatic action](automatic-attack-disruption.md#how-defender-establishes-confidence-for-automatic-action) and [How attack disruption uses AI](automatic-attack-disruption.md#how-attack-disruption-uses-ai).
+
 ## How predictive shielding works
 
 Predictive shielding uses predictive analytics and real-time insights to dynamically identify emerging risks, and applies targeted protections.
@@ -93,14 +95,16 @@ This dynamic understanding allows Defender to move beyond reactive responses, en
 
 Predictive shielding uses Defender for Endpoint-based actions. To use these actions, you need a Defender for Endpoint license.
 
-- [Safeboot hardening](/defender-endpoint/respond-machine-alerts#safeboot-hardening) - hardens the device against booting into Safe Mode. Booting into Safe Mode is a common tactic used by attackers to bypass security controls and maintain persistence on compromised systems.
+- [Safeboot hardening](/defender-endpoint/respond-machine-alerts#safeboot-hardening) (Preview) - hardens the device against booting into Safe Mode. Booting into Safe Mode is a common tactic used by attackers to bypass security controls and maintain persistence on compromised systems.
 
-- [GPO hardening](/defender-endpoint/respond-machine-alerts#gpo-hardening) - hardens Group Policy Objects (GPOs) to prevent attackers from exploiting misconfigurations or weaknesses in GPO settings to escalate privileges or move laterally within the network.
+- [GPO hardening](/defender-endpoint/respond-machine-alerts#gpo-hardening) (Preview) - hardens Group Policy Objects (GPOs) to prevent attackers from exploiting misconfigurations or weaknesses in GPO settings to escalate privileges or move laterally within the network.
 
 - [Proactive user containment (contain user)](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) - infuses activity data with exposure data to identify exposed credentials at risk of being compromised and reused to conduct malicious activity. Proactively restricts the activity of the users associated with those credentials.
 
     > [!NOTE]
     > While the contain user action is used both in attack disruption and predictive shielding, this action is applied differently in each context. In predictive shielding, the contain user action applies restrictions more selectively, with a focus on users identified as high risk through prediction logic. This action prevents new sessions rather than terminating existing ones.
+    > 
+    > This action is generally available, both when triggered by attack disruption and predictive shielding.
 
 ## Next steps
 

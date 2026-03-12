@@ -23,7 +23,7 @@ description: Zero-hour auto purge (ZAP) in all organizations with cloud mailboxe
 ms.service: defender-office-365
 ms.date: 01/15/2026
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
 ---
 
@@ -54,7 +54,7 @@ Watch this short video to learn how ZAP in Microsoft Defender for Office 365 aut
 For _read or unread messages_ found to contain malware after delivery, ZAP quarantines the message that contains the malware attachment. By default, only admins can view and manage quarantined malware messages. But, admins can create and use _quarantine policies_ to define what users are able to do to quarantined messages, and whether users receive quarantine notifications. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
 
 > [!NOTE]
-> Users can't release their own messages quarantined as malware, regardless of how the quarantine policy is configured. If the policy is configured for users to release these quarantined messages, users are instead allowed to _request_ the release of these quarantined messages.
+> Recipients can't release messages quarantined as malware, regardless of how the quarantine policy is configured. If the quarantine policy allows recipients to release messages, they can only _request_ the release of messages quarantined as malware.
 
 ZAP for malware is enabled by default in anti-malware policies. For more information, see [Configure anti-malware policies](anti-malware-policies-configure.md).
 
@@ -80,7 +80,7 @@ For more information about configuring spam filtering verdicts, see [Configure a
 For _read or unread messages_ that are identified as _high confidence phishing_ after delivery, ZAP quarantines the message. By default, only admins can view and manage quarantined high confidence phishing messages. But, admins can create and use _quarantine policies_ to define what users are able to do to quarantined messages, and whether users receive quarantine notifications. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
 
 > [!NOTE]
-> Users can't release their own messages quarantined as high confidence phishing, regardless of how the quarantine policy is configured. If the policy is configured for users to release these quarantined messages, users are instead allowed to _request_ the release of these quarantined messages.
+> Recipients can't release messages quarantined as high confidence phishing, regardless of how the quarantine policy is configured. If the quarantine policy allows recipients to release messages, they can only _request_ the release of messages quarantined as high confidence phishing.
 
 ZAP for high confidence phishing is enabled by default. For more information, see [Secure by Default in Office 365](secure-by-default.md).
 
@@ -194,7 +194,9 @@ Follow the normal process for [reporting false positives to Microsoft](submissio
 
 ZAP takes action on a message based on the configuration of anti-spam policies as described earlier in this article.
 
-### How is ZAP affected by the exceptions to default email protections for cloud mailboxes and Defender for Office 365?
+<a name='how-is-zap-affected-by-the-exceptions-to-default-email-protections-for-cloud-mailboxes-and-defender-for-office-365'></a>
+
+### How is ZAP affected by the exceptions to the built-in security features for all cloud mailboxes and Defender for Office 365?
 
 The following features might override ZAP actions:
 

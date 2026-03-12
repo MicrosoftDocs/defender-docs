@@ -1,4 +1,4 @@
-﻿---
+---
 title: Device health Microsoft Defender Antivirus health report
 description: Use the Microsoft Defender Antivirus report to track antivirus status and Microsoft Defender Antivirus engine, intelligence, and platform versions.
 search.appverid: met150
@@ -30,11 +30,17 @@ appliesto:
 The Device Health report provides information about the devices in your organization. The report includes trending information showing the antivirus status and Microsoft Defender Antivirus engine, intelligence, and platform versions.
 
 > [!IMPORTANT]
-> For devices to appear in Microsoft Defender Antivirus device health reports they must meet the following pre-requisites:  
+> For devices to appear **correctly** in Microsoft Defender Antivirus device health reports, they must meet the following prerequisites:  
 >
 > - Device is onboarded to Microsoft Defender for Endpoint
-> - OS: Windows 10, Windows 11, Windows Server 2012 R2/, 2016 R2/ 2019/2022 (non MMA), MacOS, Linux 
-> - Sense (MsSense.exe): **10.8210.** \*+.
+> - OS: Windows 10, Windows 11, Windows Server 2012 R2/, 2016 R2/ 2019/2022 (not onboarded via Microsoft Management Agent), macOS, Linux
+> - Sense (MsSense.exe) version: **10.8210.** *+.
+>
+> **OS build dependency (Windows 10 2016 LTSB / 1607):**  
+> On older Windows editions, the Microsoft Defender for Endpoint sensor (MsSense.exe) version is **tied to the OS build and can't be upgraded independently**.  
+> - **Windows 10 2016 LTSB (1607)** uses **MsSense.exe 10.1407.\*** and cannot reach **10.8210+** without upgrading Windows to a newer build.  
+> - On these devices, Defender Antivirus health fields (for example **engine** or **platform** version) may appear as **"Unknown"** in the report. This is **expected behavior** when the Sense prerequisite isn't met.  
+> - To get complete Defender Antivirus health reporting, upgrade the device to a newer supported Windows build that includes a Sense version meeting the requirement.
 >
 > For Windows&nbsp;Server&nbsp;2012&nbsp;R2 and Windows&nbsp;Server&nbsp;2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
 
@@ -316,7 +322,7 @@ The following table lays out the possible values for up to date reports for **An
 | < 7 days (new) | whatever client reports (_Up to date <br/> Out of date <br/> Unknown)_ |
 | > 7 days (old) | `Unknown` |
 
-For information about Manage Microsoft Defender Antivirus update versions, see [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases).
+For information about Manage Microsoft Defender Antivirus update versions, see [Monthly platform and engine versions](microsoft-defender-endpoint-releases.md#microsoft-defender-antivirus-releases).
 
 #### Antivirus platform updates card
 
@@ -331,7 +337,7 @@ The following table lays out the possible up to date report values for **Antivir
 | < 7 days (new) | whatever client reports (`Up to date` <br/> `Out of date` <br/> `Unknown)` |
 | > 7 days (old) | `Unknown` |
 
-For information about Manage Microsoft Defender Antivirus update versions, see [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases).
+For information about Manage Microsoft Defender Antivirus update versions, see [Monthly platform and engine versions](microsoft-defender-endpoint-releases.md#microsoft-defender-antivirus-releases).
 
 ##### Security intelligence updates card
 
@@ -376,7 +382,7 @@ The following table lays out the possible up to date report values for **Securit
 >
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
