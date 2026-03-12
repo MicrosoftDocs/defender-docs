@@ -40,7 +40,11 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ### Kubernetes gated deployment support for AKS Automatic (GA)
 
+<<<<<<< HEAD
 March 12, 2026
+=======
+March 11, 2026
+>>>>>>> 22d6f1ca7b834e2f2764482c50bc536ddec4c97e
 
 Kubernetes gated deployment is now generally available for AKS Automatic clusters.
 
@@ -89,7 +93,10 @@ You can start scans in the Azure portal UI or with the Representational State Tr
 This feature uses Microsoft Defender Antivirus and applies the latest malware definitions for each scan. It also shows an upfront cost estimate in the Azure portal before you start a scan.
 
 For more information, see [On-demand malware scanning](on-demand-malware-scanning.md).
+<<<<<<< HEAD
 >>>>>>> ea07b0af21d681f00ef50fa710ff0b9ed1a62aa5
+=======
+>>>>>>> 22d6f1ca7b834e2f2764482c50bc536ddec4c97e
 
 ### Deprecation of preview of container and container images vulnerability recommendations
 
