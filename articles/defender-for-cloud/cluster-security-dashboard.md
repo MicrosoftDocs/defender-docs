@@ -25,12 +25,15 @@ The AKS Security Dashboard lets you:
 
 The AKS Security Dashboard shows security issues for a cluster if at least one of the following plans is enabled:
 
-- [Defender for Containers](tutorial-enable-containers-azure.md) on the subscription or the [individual cluster](#plan-enablement).
-- [Defender CSPM](tutorial-enable-cspm-plan.md) on the subscription.
+- [Defender for Containers](tutorial-enable-containers-azure.md)
+- [Individual cluster](#plan-enablement) 
+- [Defender CSPM](tutorial-enable-cspm-plan.md) 
 
 ## Using the AKS Security Dashboard
 
-Access the AKS Security Dashboard from an AKS cluster resource pane by selecting **Microsoft Defender for Cloud** in the menu list.
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+1. Search for **Microsoft Defender for Cloud**
+1. Access the AKS Security Dashboard from an AKS cluster resource pane by selecting  in the menu list.
 
 ### Understand the dashboard sections
 
@@ -50,15 +53,15 @@ When you select an alert, you open a panel that provides more information about 
 
 - **High** There's a high probability that your resource is compromised. You should investigate immediately. Defender for Cloud has high confidence in both the malicious intent and the findings it uses to issue the alert.
 
-- **Medium** The alert probably indicates suspicious activity and might show that a resource is compromised. The confidence in the analytic or finding is medium. The confidence of the malicious intent is medium to high. These alerts usually come from machine learning or anomaly based detections.
+- **Medium** The alert probably indicates suspicious activity and might show that a resource is compromised. The confidence in the analytic or finding is medium. The confidence of the malicious intent is medium to high. These alerts might come from machine learning or anomaly based detections.
 
-- **Low** This alert might be a benign positive or a blocked attack.
+- **Low** This alert might be a false positive or a blocked attack.
 
 - **Informational** An incident typically includes several alerts. Some alerts might appear on their own to be only informational, but in the context of the other alerts, they might warrant a closer look.
 
 #### Investigate an alert
 
-1. Review the alert description and recommended steps for response in the alert right panel.
+1. Review the alert description and recommended steps for response.
 
 1. Use the additional details and related entities to identify the compromised workload.
 
@@ -95,7 +98,7 @@ The scanning of container images includes the following types of packages:
 
 1. Review the list of CVEs, use the package name and the fixed version information to identify to which package version the package should be upgraded to remediate the issue.
 
-1. Use the assigned owner (available with the Defender CSPM plan), to assign an owner for the fix, and notify them by e-mail or with a ticket in service now.
+1. Use the assigned owner (available with the Defender CSPM plan) to assign an owner for the fix, and notify them by email or with a ticket in service now.
 
 [Learn more](/azure/defender-for-cloud/agentless-vulnerability-assessment-azure?tabs=azure-new%2Cazure-old) about vulnerability assessment in Defender for Cloud.
 
@@ -107,15 +110,15 @@ Microsoft Defender for Cloud continuously monitors Azure and AKS APIs, along wit
 
 #### Review misconfiguration assessment findings
 
-1. Select the misconfigured component in the misconfiguration tab to open the details panel.
+1. Select the misconfigured component in the **Misconfigurations** tab to open the details panel.
 
 1. Review the description and remediation steps.
 
 1. For cluster level misconfigurations, use the **Quick Fix** button to start remediation flow.
 
-1. For containers misconfigurations, it's recommended to deploy policy to prevent future faulty deployments. Use the link to a relevant built-in “Azure Policy” policy.
+1. For container misconfigurations, it's recommended to deploy a policy to prevent future faulty deployments. Use the link to a relevant built-in **Azure Policy** policy.
 
-1. Use the assigned owner (available with the Defender CSPM plan), to assign an owner for the fix, and notify them by e-mail or with a ticket in service now.
+1. Use the assigned owner (available with the Defender CSPM plan) to assign an owner for the fix, and notify them by email or with a ticket in service now.
 
 [Learn more](/azure/defender-for-cloud/kubernetes-workload-protections) about how to remediate security misconfigurations with Defender for Cloud.
 
@@ -129,7 +132,7 @@ Defender for Cloud continuously assesses your environment against selected regul
 
 1. Configure the required compliance standard you need to adhere to. You configure the standard at the subscription level. Follow the link for configuration from the compliance tab or the dashboard settings.
 
-1. Once the relevant standards are selected, use the compliance tab summary to understand which standard you comply with and which requires additional steps to comply with.
+1. Once you select the relevant standards, use the compliance tab summary to understand which standard you comply with and which requires additional steps to comply with.
 
 1. The compliance tab grid shows only recommendations for controls the cluster or its components aren't complying with.
 
@@ -141,7 +144,7 @@ Defender for Cloud continuously assesses your environment against selected regul
 
 [Learn more](/azure/defender-for-cloud/concept-regulatory-compliance-standards)about regulatory compliance in Defender for Cloud.
 
-[Learn more about how to configure regulatory compliance standards](/azure/defender-for-cloud/update-regulatory-compliance-packages)
+[Learn more about how to configure regulatory compliance standards](/azure/defender-for-cloud/update-regulatory-compliance-packages).
 
 :::image type="content" source="media/cluster-security-dashboard/compliance-standards-tab.png" alt-text="Screenshot of the Compliance tab showing regulatory compliance assessment results." lightbox="media/cluster-security-dashboard/compliance-standards-tab.png":::
 
