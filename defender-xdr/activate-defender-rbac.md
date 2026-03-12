@@ -104,6 +104,9 @@ Follow these steps to activate your workloads directly in Microsoft Defender XDR
 > [!NOTE]
 > The Microsoft Defender unified RBAC model only impacts the Microsoft Defender portal. It doesn't impact the [Microsoft Purview portal](https://purview.microsoft.com) or the [Exchange Admin Center](https://admin.exchange.microsoft.com).
 
+> [!IMPORTANT]
+> Once unified RBAC is activated for Microsoft Sentinel, use unified RBAC in the Defender portal to manage Sentinel permissions. Making permission changes in the Azure portal after unified RBAC is active for a workspace might lead to sync errors. If a sync error occurs, a notification appears on the **Permissions** page in the Defender portal with instructions on how to resolve it.
+
 <a name='deactivate-microsoft-365-defender-unified-rbac'></a>
 
 ## Deactivate Microsoft Defender unified RBAC

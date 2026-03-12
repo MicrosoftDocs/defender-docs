@@ -125,6 +125,9 @@ Use the following steps as a guide to start using the Microsoft Defender unified
 4. **Learn more about Microsoft Defender for Identity scoped access**
    - [Configure scoped access in Microsoft Defender for Identity](/defender-for-identity/configure-scoped-access).
 
+5. **Manage unified RBAC across multiple tenants**
+   - [Manage unified role-based access control in multitenant management](/unified-secops-platform/mto-urbac)
+
 Watch the following video to see the preceding steps in action:
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=0b4bc29d-0b8b-41f1-ad8b-105b0d0386f8]
