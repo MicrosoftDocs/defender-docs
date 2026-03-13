@@ -22,8 +22,9 @@ appliesto:
 ---
 # Supported Microsoft Defender for Endpoint capabilities by platform
 
-
 Learn how to [Onboard devices and configure Microsoft Defender for Endpoint capabilities](onboard-configure.md).
+
+## Supported capabilities by platform
 
 The following table gives information about the supported Microsoft Defender for Endpoint capabilities by platform.
 
@@ -62,6 +63,3 @@ The following table gives information about the supported Microsoft Defender for
 >   - Endpoint & network device discovery is supported on Windows Server 2019 or later, and on Windows 10 and Windows 11.
 > - For Windows 7, Windows 8.1, and Windows Server 2008 R2, use [MMA](/defender-endpoint/onboard-downlevel#install-and-configure-microsoft-monitoring-agent-mma) for the EDR sensor and [System Center Endpoint Protection](/defender-endpoint/onboard-downlevel#configure-and-update-system-center-endpoint-protection-clients) (SCEP) for antivirus protection.
 > - For Windows 7 SP1 and Windows Server 2008 R2 SP1, you can also use [Microsoft Defender endpoint security solution (preview)](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security) supplied by the [Defender deployment tool (preview)](./defender-deployment-tool-windows.md). 
-
-
-

@@ -33,10 +33,8 @@ In organizations with Microsoft Defender for Office 365 Plan 2 (add-on licenses 
 This article explains the basics of Attack simulation training.
 
 Watch this short video to learn more about Attack simulation training.
-> [!VIDEO https://learn-video.azurefd.net/vod/player?id=37f13948-e44b-4d1a-ac3b-a13ce02dabec]
 
-> [!NOTE]
-> Attack simulation training replaces the old Attack Simulator v1 experience that was available in the Security & Compliance Center at **Threat management** \> **Attack simulator** or <https://protection.office.com/attacksimulator>.
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=37f13948-e44b-4d1a-ac3b-a13ce02dabec]
 
 ## What do you need to know before you begin?
 
@@ -80,12 +78,12 @@ Watch this short video to learn more about Attack simulation training.
 
 - There are no corresponding PowerShell cmdlets for Attack simulation training.
 
-- Attack simulation and training related data is stored with other customer data for Microsoft 365 services. For more information, see [Microsoft 365 data locations](/microsoft-365/enterprise/o365-data-locations). Attack simulation training is available in the following regions: APC, EUR, and NAM. Countries within these regions where Attack simulation training is available include ARE, AUS, AUT, BRA, CAN, CHE, CHL, DEU, ESP, FRA, GBR, IDN, IND, ISR, ITA, JPN, KOR, LAM, MEX, MYS, NOR, NZL, POL, QAT, SGP, SWE, TWN and ZAF.
+- Attack simulation and training related data is stored with other customer data for Microsoft 365 services. For more information, see [Microsoft 365 data locations](/microsoft-365/enterprise/o365-data-locations). Attack simulation training is available in the following regions: APC, EUR, and NAM. Countries within these regions where Attack simulation training is available include ARE, AUS, AUT, BRA, CAN, CHE, CHL, DEU, ESP, FRA, GBR, IDN, IND, ISR, ITA, JPN, KOR, LAM, MEX, MYS, NOR, NZL, POL, QAT, SGP, SWE, TWN, and ZAF.
 
   > [!NOTE]
-  > NOR, ZAF, ARE and DEU are the latest additions. All features except reported email telemetry are available in these regions. We're working to enable the features and we'll notify customers as soon as reported email telemetry becomes available.
+  > NOR, ZAF, ARE, and DEU are the latest additions. All features except reported email telemetry are available in these regions. We're working to enable the features and we'll notify customers when reported email telemetry becomes available.
 
-- Attack simulation training is available in Microsoft 365 GCC, GCC High and DoD environments, but certain advanced features aren't available in GCC High and DoD (for example, payload automation, recommended payloads, the predicted compromised rate). If your organization has Microsoft 365 G5, Office 365 G5 or Microsoft Defender for Office 365 (Plan 2) for Government, you can use Attack simulation training as described in this article.
+- Attack simulation training is available in Microsoft 365 GCC, GCC High, and DoD environments. Certain advanced features aren't available in GCC High and DoD (for example, payload automation, recommended payloads, and predicted compromised rate). If your organization has Microsoft 365 G5, Office 365 G5 or Microsoft Defender for Office 365 (Plan 2) for Government, you can use Attack simulation training as described in this article.
 
 > [!NOTE]
 > Attack simulation training offers a subset of capabilities to E3 customers as a trial. The trial offering contains the ability to use a Credential Harvest payload and the ability to select 'ISA Phishing' or 'Mass Market Phishing' training experiences. No other capabilities are part of the E3 trial offering.
@@ -96,22 +94,22 @@ A simulation in Attack simulation training is the overall campaign that delivers
 
 - Who gets the simulated phishing message and on what schedule.
 - Training that users get based on their action or lack of action (for both correct and incorrect actions) on the simulated phishing message.
-- The _payload_ that's used in the simulated phishing message (a link or an attachment), and the composition of the phishing message (for example, package delivered, problem with your account, or you won a prize).
-- The _social engineering technique_ that's used. The payload and social engineering technique are closely related.
+- The _payload_ used in the simulated phishing message (a link or an attachment), and the composition of the phishing message (for example, package delivered, problem with your account, or you won a prize).
+- The _social engineering technique_. The payload and social engineering technique are closely related.
 
 In Attack simulation training, multiple types of social engineering techniques are available. Except for **How-to Guide**, these techniques were curated from the [MITRE ATT&CK® framework](https://attack.mitre.org/techniques/enterprise/). Different payloads are available for different techniques.
 
 The following social engineering techniques are available:
 
-- **Credential Harvest**: An attacker sends the recipient a message that contains a link<sup>\*</sup>. When the recipient clicks on the link, they're taken to a website that typically shows a dialog box that asks the user for their username and password. Typically, the destination page is themed to represent a well-known website in order to build trust in the user.
+- **Credential Harvest**: An attacker sends the recipient a message that contains a link<sup>\*</sup>. When the recipient clicks on the link, they go to a website that typically shows a dialog box that asks the user for their username and password. Typically, the destination page is themed to represent a well-known website in order to build trust in the user.
 
-- **Malware Attachment**: An attacker sends the recipient a message that contains an attachment. When the recipient opens the attachment, arbitrary code (for example, a macro) runs on the user's device to help the attacker install additional code or further entrench themselves.
+- **Malware Attachment**: An attacker sends the recipient a message that contains an attachment. When the recipient opens the attachment, arbitrary code (for example, a macro) runs on the user's device to help the attacker install more code or further entrench themselves.
 
-- **Link in Attachment**: This technique is a hybrid of a credential harvest. An attacker sends the recipient a message that contains a link inside of an attachment. When the recipient opens the attachment and clicks on the link, they're taken to a website that typically shows a dialog box that asks the user for their username and password. Typically, the destination page is themed to represent a well-known website in order to build trust in the user.
+- **Link in Attachment**: This technique is a hybrid of a credential harvest. An attacker sends the recipient a message that contains a link inside of an attachment. When the recipient opens the attachment and clicks on the link, they go to a website that typically shows a dialog box that asks the user for their username and password. Typically, the destination page is themed to represent a well-known website in order to build trust in the user.
 
-- **Link to Malware**<sup>\*</sup>: An attacker sends the recipient a message that contains a link to an attachment on a well-known file sharing site (for example, SharePoint or Dropbox). When the recipient clicks on the link, the attachment opens, and arbitrary code (for example, a macro) runs on the user's device to help the attacker install additional code or further entrench themselves.
+- **Link to Malware**<sup>\*</sup>: An attacker sends the recipient a message that contains a link to an attachment on a well-known file sharing site (for example, SharePoint or Dropbox). When the recipient clicks on the link, the attachment opens, and arbitrary code (for example, a macro) runs on the user's device to help the attacker install other code or further entrench themselves.
 
-- **Drive-by-url**<sup>\*</sup>: An attacker sends the recipient a message that contains a link. When the recipient clicks on the link, they're taken to a website that tries to run background code. This background code attempts to gather information about the recipient or deploy arbitrary code on their device. Typically, the destination website is a well-known website that has been compromised or a clone of a well-known website. Familiarity with the website helps convince the user that the link is safe to click. This technique is also known as a _watering hole attack_.
+- **Drive-by-url**<sup>\*</sup>: An attacker sends the recipient a message that contains a link. When the recipient clicks on the link, they go to a website that tries to run background code. This background code attempts to gather information about the recipient or deploy arbitrary code on their device. Typically, the destination website is a well-known website that was compromised or a clone of a well-known website. Familiarity with the website helps convince the user that the link is safe to click. This technique is also known as a _watering hole attack_.
 
 - **OAuth Consent Grant**<sup>\*</sup>: An attacker creates a malicious Azure Application that seeks to gain access to data. The application sends an email request that contains a link. When the recipient clicks on the link, the consent grant mechanism of the application asks for access to the data (for example, the user's Inbox).
 
@@ -211,7 +209,7 @@ The available reports and insights for Attack simulation training are described 
 
 ### Predicted compromise rate
 
-You often need to tailor a simulated phishing campaign for specific audiences. If the phishing message is too close to perfect, almost everyone will be fooled by it. If it's too suspicious, no will be fooled by it. And, the phishing messages that some users consider difficult to identify are considered easy to identify by other users. So how do you strike a balance?
+You often need to tailor a simulated phishing campaign for specific audiences. If the phishing message is too close to perfect, almost everyone is fooled by it. If it's too suspicious, no is fooled by it. And, the phishing messages that some users consider difficult to identify are considered easy to identify by other users. So how do you strike a balance?
 
 The _predicted compromise rate (PCR)_ indicates the potential effectiveness when the payload is used in a simulation. PCR uses intelligent historical data across Microsoft 365 to predict the percentage of people who will be compromised by the payload. For example:
 
@@ -227,7 +225,7 @@ PCR information for a payload is available wherever you view and select payloads
 - [Training efficacy tab for the Attack simulation report](attack-simulation-training-insights.md#training-efficacy-tab-for-the-attack-simulation-report)
 
 > [!TIP]
-> Attack Simulator uses Safe Links in Defender for Office 365 to securely track click data for the URL in the payload message that's sent to targeted recipients of a phishing campaign, even if the **Track user clicks** setting in Safe Links policies is turned off.
+> Attack Simulator uses Safe Links in Defender for Office 365 to securely track click data for the URL in the payload message sent to targeted recipients of a phishing campaign, even if the **Track user clicks** setting in Safe Links policies is turned off.
 
 ## Training without tricks
 

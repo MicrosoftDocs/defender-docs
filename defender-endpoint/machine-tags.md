@@ -120,7 +120,7 @@ Use the following registry key entry to add a tag on a device:
 
 You can use Defender for Endpoint security settings management to define and apply device tags for macOS and Linux. You can perform this task by creating Endpoint detection and response security policy. Please refer to following documentation for details.
 
-- [Manage endpoint security policies on devices onboarded to Microsoft Defender for Endpoint](/mem/intune/protect/mde-security-integration)
+- [Manage endpoint security policies on devices onboarded to Microsoft Defender for Endpoint](/intune/intune-service/protect/mde-security-integration)
 - [Manage endpoint security policies in Microsoft Defender for Endpoint](manage-security-policies.md)
 
 ## Add device tags by creating a configuration profile
@@ -133,7 +133,7 @@ You can use Defender for Endpoint security settings management to define and app
 
 You can use configuration profile to set device tag for macOS and Linux. Please refer to following documentation for details.
 
-- **For macOS**, create configuration profile (.plist file) and deploy it manually or through management tool including Intune. See the guidance in [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md). To deploy configuration profile with Intune, follow the guidance in [Use custom settings for macOS devices in Microsoft Intune](/mem/intune/configuration/custom-settings-macos).
+- **For macOS**, create configuration profile (.plist file) and deploy it manually or through management tool including Intune. See the guidance in [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md). To deploy configuration profile with Intune, follow the guidance in [Use custom settings for macOS devices in Microsoft Intune](/intune/intune-service/configuration/custom-settings-macos).
 
 - **For Linux**, create configuration profile (.json file) and deploy it manually or through management tool. See the guidance in [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 
@@ -145,11 +145,11 @@ You can use configuration profile to set device tag for macOS and Linux. Please 
 > - Windows 10
 > - Windows 11
 
-You can use Microsoft Intune to define and apply device tags. You can perform this task by creating a device configuration profile using custom settings in Intune. For more information, see [Create a profile with custom settings in Intune](/mem/intune/configuration/custom-settings-configure).
+You can use Microsoft Intune to define and apply device tags. You can perform this task by creating a device configuration profile using custom settings in Intune. For more information, see [Create a profile with custom settings in Intune](/intune/intune-service/configuration/custom-settings-configure).
 
-- In the [Create the profile](/mem/intune/configuration/custom-settings-configure) procedure, for step 3, choose [Windows 10 and later](/mem/intune/configuration/custom-settings-windows-10).
+- In the [Create the profile](/intune/intune-service/configuration/custom-settings-configure) procedure, for step 3, choose [Windows 10 and later](/intune/intune-service/configuration/custom-settings-windows-10).
 
-- In the [OMA-IRU settings](/mem/intune/configuration/custom-settings-windows-10) section, for **Data type**, choose **String**. For **OMA-URI**, type (or paste) `./Device/Vendor/MSFT/WindowsAdvancedThreatProtection/DeviceTagging/Group`.
+- In the [OMA-IRU settings](/intune/intune-service/configuration/custom-settings-windows-10) section, for **Data type**, choose **String**. For **OMA-URI**, type (or paste) `./Device/Vendor/MSFT/WindowsAdvancedThreatProtection/DeviceTagging/Group`.
 
 ## Add device tags by creating app configuration policy in Microsoft Intune
 

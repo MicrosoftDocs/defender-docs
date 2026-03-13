@@ -32,10 +32,10 @@ appliesto:
 
 You can configure Microsoft Defender Antivirus with a number of tools, such as:
 
-- [Microsoft Defender for Endpoint Security Policy Management](/mem/intune/protect/mde-security-integration)
+- [Microsoft Defender for Endpoint Security Policy Management](/intune/intune-service/protect/mde-security-integration)
 - [Microsoft Intune](use-intune-config-manager-microsoft-defender-antivirus.md)
 - [Microsoft Configuration Manager](preferences-setup.md)
-- Microsoft Configuration Manager [Tenant attach](/mem/configmgr/tenant-attach/)
+- Microsoft Configuration Manager [Tenant attach](/intune/configmgr/tenant-attach/)
 
 - [Group Policy](use-group-policy-microsoft-defender-antivirus.md)
 - [PowerShell cmdlets](use-powershell-cmdlets-microsoft-defender-antivirus.md)
@@ -56,7 +56,7 @@ The following broad categories of features can be configured:
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)

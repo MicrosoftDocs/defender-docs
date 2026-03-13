@@ -28,9 +28,9 @@ Create distribution profiles to distribute the following types of content across
 
 - [Custom detection rules](/azure/sentinel/compare-analytics-rules-custom-detections)
 - [Endpoint security](/defender-endpoint/microsoft-defender-endpoint) policies, supported for Microsoft Defender for Endpoint customers only
-- [Analytics rules](/azure/sentinel/scheduled-rules-overview?) (preview) for Microsoft Sentinel customers only
-- [Automation rules](/azure/sentinel/create-manage-use-automation-rules) (preview) for Microsoft Sentinel customers only
-- [Workbooks](/azure/sentinel/monitor-your-data) (preview) for Microsoft Sentinel customers only
+- [Analytics rules](/azure/sentinel/scheduled-rules-overview?) for Microsoft Sentinel customers only
+- [Automation rules](/azure/sentinel/create-manage-use-automation-rules)for Microsoft Sentinel customers only
+- [Workbooks](/azure/sentinel/monitor-your-data) for Microsoft Sentinel customers only
 
 ## Prerequisites
 

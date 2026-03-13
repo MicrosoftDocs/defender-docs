@@ -3,7 +3,7 @@ title: What's new in Microsoft Defender for IoT in the Defender portal
 description: This article describes new features available in Microsoft Defender for IoT in the Defender portal, including both OT and Enterprise IoT networks.
 ms.topic: whats-new
 ms.service: defender-for-iot
-author: lwainstein
+author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
 ms.date: 01/08/2025

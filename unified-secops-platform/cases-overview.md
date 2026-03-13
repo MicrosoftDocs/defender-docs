@@ -2,7 +2,7 @@
 title: Manage security operations cases natively in the Microsoft Defender portal
 description: Learn about the case management capabilities in the Defender portal for managing and standardizing unified security operations.
 search.appverid: met150
-ms.service: unified-secops-platform
+ms.service: microsoft-defender
 ms.author: monaberdugo
 author: mberdugo
 ms.localizationpriority: medium
@@ -15,6 +15,7 @@ ms.collection:
 ms.topic: concept-article
 
 # customer intent: As a business decision maker for a security operations center, I want to learn about the case management tools available in the Microsoft Defender portal so I can unify security tickets and increase visibility across hybrid, multitenant, and multicloud environments, and disrupt attacks on identities, endpoints, email, cloud apps, and data in real time.
+ms.subservice: unified-security-operations
 ---
 
 # Manage security operations cases natively in the Microsoft Defender portal

@@ -80,14 +80,14 @@ In break-glass scenarios or matters that require immediate attention (for exampl
 
 While the previous scenarios involve our experts initiating communication with you, you can also request advanced threat expertise on demand by selecting **Ask Defender Experts** directly inside the Microsoft Defender portal. [Learn more](experts-on-demand.md)
 
-## Collaborating with your service delivery manager
+## Collaborating with your Security Delivery Expert (SDX)
 
-The service delivery manager (SDM) is responsible for managing the overall relationship for your organization with the Defender Experts for XDR service. They are your trusted advisor working along with XDR experts' team to help you protect your organization.
+The Security Delivery Expert (SDX) is responsible for managing the overall relationship for your organization with the Defender Experts for XDR service. They are your trusted advisor working along with XDR experts' team to help you protect your organization.
 
 > [!NOTE]
-> Service delivery managers are included if your Defender Experts for XDR service is licensed for 500 or more seats.
+> Security Delivery Experts are included if your Defender Experts for XDR service is licensed for 500 or more seats.
 
-The SDM provides the following services:
+The SDX provides the following services:
 
 - Service readiness support
   - Educate customers about the end-to-end service experience, from signup to regular operations and escalation process.
@@ -96,7 +96,7 @@ The SDM provides the following services:
   - Provide tailored service delivery content and reporting, including periodic business reviews.
   - Serve as a single point of contact for feedback and escalations related to Defender Experts Service.
 
-The SDM engages with your identified **service review contacts**. [Learn more about adding contact persons or groups for service review and delivery](get-started-xdr.md#tell-us-who-to-contact-for-important-matters)
+The SDX engages with your identified **service review contacts**. [Learn more about adding contact persons or groups for service review and delivery](get-started-xdr.md#tell-us-who-to-contact-for-important-matters)
 
 ### See also
 

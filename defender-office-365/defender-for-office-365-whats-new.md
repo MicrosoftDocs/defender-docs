@@ -8,7 +8,7 @@ author: chrisda
 ms.author: chrisda
 manager: bagol
 ms.localizationpriority: medium
-ms.date: 01/16/2026
+ms.date: 02/18/2026
 audience: ITPro
 ms.collection:
   - m365-security
@@ -37,7 +37,11 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender XDR](/defender-xdr/whats-new)
 - [What's new in Microsoft Defender for Endpoint](/defender-endpoint/whats-new-in-microsoft-defender-endpoint)
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
-- [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
+- [What's new in Microsoft Defender for Cloud Apps](/defender-cloud-apps/release-notes)
+
+## February 2026
+
+- **Expanding User reporting in Teams to Defender for Office 365 Plan 1**: Users can report external and intra-org [Microsoft Teams messages](submissions-teams.md) from chats, standard, shared, and private channels, meeting conversations to Microsoft as malicious (security risk) the specified reporting mailbox, or both via [user reported settings](submissions-user-reported-messages-custom-mailbox.md).
 
 ## January 2026
 
