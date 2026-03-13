@@ -47,7 +47,7 @@ To manage custom detections on Microsoft Defender XDR data, you need to be assig
 
 You can manage custom detections that apply to data from specific Defender XDR solutions if you have the right permissions for them. For example, if you only have manage permissions for Microsoft Defender for Office 365, you can create custom detections using `Email*` tables but not `Identity*` tables.
 
-Likewise, since the `IdentityLogonEvents` table holds authentication activity information from both Microsoft Defender for Cloud Apps and Defender for Identity, you need to have manage permissions for both services to manage custom detections querying the said table.
+Likewise, since the `IdentityLogonEvents` table holds authentication activity information from both Microsoft Defender for Cloud Apps and Defender for Identity, you need to have manage permissions for both services to manage custom detections querying that table.
 
 > [!NOTE]
 > To manage custom detections, Security Operators must have the Manage Security Settings permission in Microsoft Defender for Endpoint if RBAC is turned on.
@@ -171,7 +171,8 @@ When you edit a rule, the next run time scheduled according to the frequency you
 
 >[!IMPORTANT]
 > Custom detections evaluate `ingestion_time()` to account for ingestion delays. Because of this condition, events with `Timestamp` or `TimeGenerated` values older than the configured lookback period might still be included in the rule evaluation.
-
+>
+> When the lookback period is longer than the frequency, duplicate events might occur. However, custom detections [group and deduplicate them automatically](#how-custom-detections-handle-duplicate-alerts) to reduce alert noise and fatigue.
 
 ##### Continuous (NRT) frequency
 
@@ -253,7 +254,7 @@ In the **Custom details** section, add key-value pairs corresponding to the de
   
 :::image type="content" source="media/custom-detection-rules/ah-custom-details.png" alt-text="Screenshot that shows the Custom details option in the Custom detections wizard." lightbox="media/custom-detection-rules/ah-custom-details.png":::
 
-The following screenshot shows how the custom details are surfaced in the alert side panel: 
+The following screenshot shows how the custom details surface in the alert side panel: 
 
 :::image type="content" source="media/custom-detection-rules/ah-custom-details-panel.png" alt-text="Screenshot that shows the custom details as they appear in the alert side panel of the Defender portal." lightbox="media/custom-detection-rules/ah-custom-details-panel.png":::
 
