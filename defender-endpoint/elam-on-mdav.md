@@ -1,8 +1,8 @@
 ﻿---
 title: Early Launch Antimalware (ELAM) and Microsoft Defender Antivirus
 description: How Microsoft Defender Antivirus incorporates Early Launch Antimalware (ELAM) for preventing rootkit and drivers with malware from loading before the antivirus service and drivers are loaded.
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.reviewer: yongrhee
 manager: bagol
 ms.service: defender-endpoint

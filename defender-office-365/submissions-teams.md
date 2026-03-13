@@ -16,7 +16,7 @@ ms.collection:
 ms.custom:
 description: "Admins can configure whether users can report malicious message in Microsoft Teams."
 ms.service: defender-office-365
-ms.date: 09/15/2025
+ms.date: 02/18/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -26,7 +26,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In organizations with Microsoft Defender for Office 365 Plan 2 or Microsoft Defender XDR, admins can decide whether users can report messages in Microsoft Teams. The following clients support message reporting:
+In organizations with Microsoft Defender for Office 365 Plan 1 or Plan 2 or Microsoft Defender XDR, admins can decide whether users can report messages in Microsoft Teams. The following clients support message reporting:
 
 - The Microsoft Teams desktop client.
 - The Microsoft Teams Web App.
@@ -106,7 +106,7 @@ The value of this setting is meaningful only if message reporting is turned on i
 
 For more information about user reported message settings in the Defender portal, see [User reported settings](submissions-user-reported-messages-custom-mailbox.md).
 
-<a name="how-users-report-messages-in-teams"></a>
+<a name='how-users-report-messages-in-teams'></a>
 
 ## How users report messages in Teams
 

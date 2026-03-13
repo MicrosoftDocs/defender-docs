@@ -4,8 +4,8 @@ description: Resources and sample code to troubleshoot issues with Network prote
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.reviewer: oogunrinde, yongrhee
 manager: bagol
 ms.subservice: asr
@@ -33,9 +33,9 @@ This article provides troubleshooting information for [network protection](netwo
 There are four steps to troubleshooting these problems:
 
 1. Confirm prerequisites
-2. Use audit mode to test the rule
-3. Add exclusions for the specified rule (for false positives)
-4. Submit support logs
+1. Use audit mode to test the rule
+1. Add exclusions for the specified rule (for false positives)
+1. Submit support logs
 
 ## Confirm prerequisites
 
@@ -60,9 +60,9 @@ You can enable network protection in audit mode and then visit a website designe
    Set-MpPreference -EnableNetworkProtection AuditMode
    ```
 
-2. Perform the connection activity that is causing an issue (for example, attempt to visit the site, or connect to the IP address you do or don't want to block).
+1. Perform the connection activity that is causing an issue (for example, attempt to visit the site, or connect to the IP address you do or don't want to block).
 
-3. [Review the network protection event logs](network-protection.md#review-network-protection-events-in-windows-event-viewer) to see if the feature would block the connection if it were set to **Enabled**.
+1. [Review the network protection event logs](network-protection.md#review-network-protection-events-in-windows-event-viewer) to see if the feature would block the connection if it were set to **Enabled**.
 
    If network protection isn't blocking a connection that you're expecting it should block, enable the feature.
 
@@ -82,9 +82,9 @@ The current exclusion options are:
 
 1. Setting up a custom allow indicator.
 
-2. Using IP exclusions: `Add-MpPreference -ExclusionIpAddress 192.168.1.1`.
+1. Using IP exclusions: `Add-MpPreference -ExclusionIpAddress 192.168.1.1`.
 
-3. Excluding an entire process. For more information, see [Microsoft Defender Antivirus exclusions](configure-exclusions-microsoft-defender-antivirus.md).
+1. Excluding an entire process. For more information, see [Microsoft Defender Antivirus exclusions](configure-exclusions-microsoft-defender-antivirus.md).
 
 ## Network Performance issues
 
@@ -118,13 +118,13 @@ When you report a problem with network protection, you're asked to collect and s
    cd c:\program files\windows defender
    ```
 
-2. Run this command to generate the diagnostic logs:
+1. Run this command to generate the diagnostic logs:
 
    ```console
    mpcmdrun -getfiles
    ```
 
-3. Attach the file to the submission form. By default, diagnostic logs are saved at `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab`.
+1. Attach the file to the submission form. By default, diagnostic logs are saved at `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab`.
 
 ## Resolve connectivity issues with network protection (for E5 customers)
 
@@ -143,8 +143,8 @@ Set-MpPreference -ProxyPacUrl <Proxy PAC url>
 You can configure the registry key by using PowerShell, Microsoft Configuration Manager, or Group Policy. Here are some resources to help:
 
 - [Working with Registry Keys](/powershell/scripting/samples/working-with-registry-keys)
-- [Configure custom client settings for Endpoint Protection](/mem/configmgr/protect/deploy-use/endpoint-protection-configure-client)
-- [Use Group Policy settings to manage Endpoint Protection](/mem/configmgr/protect/deploy-use/endpoint-protection-group-policies)
+- [Configure custom client settings for Endpoint Protection](/intune/configmgr/protect/deploy-use/endpoint-protection-configure-client)
+- [Use Group Policy settings to manage Endpoint Protection](/intune/configmgr/protect/deploy-use/endpoint-protection-group-policies)
 
 ## See also
 
@@ -154,5 +154,5 @@ You can configure the registry key by using PowerShell, Microsoft Configuration 
 - [Enable network protection](enable-network-protection.md)
 - [Address false positives/negatives in Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

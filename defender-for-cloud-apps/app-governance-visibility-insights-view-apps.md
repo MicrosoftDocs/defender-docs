@@ -35,6 +35,7 @@ On the **Microsoft 365** tab, the apps in your tenant are listed with the follow
 | **App origin**| Shows whether the app originated within the tenant or was registered in an external tenant |
 | **Consent type**| Shows whether the app consent has been given at the user or the admin level, and the number of users whose data is accessible to the app |
 | **Publisher**| Publisher of the app and their verification status |
+| **Last used**| Shows the last time when the app signed in. Tracking of this data goes back to June, 2022. | 
 | **Last modified**| Date and time when registration information was last updated on Microsoft Entra ID |
 | **Added on**| Shows the date and time when the app was registered to Microsoft Entra ID and assigned a service principal |
 | **Permission usage**| Shows whether the app has any unused Graph API permissions in the last 90 days |
@@ -72,13 +73,13 @@ In the details pane, select any of the following tabs to view more details:
 
   ![Screenshot 2025-02-24 005703](media/app-governance-visibility-insights-view-apps/screenshot-2025-02-24-005703.png)
   
-   If an app is *admin consented*, the **Total consented users** are all users in the tenant.
-  
+  If an app is *admin consented*, the **Total consented users** are all users in the tenant.
+
 - Select the **Permissions** tab to see a summary and list of the Graph API and legacy permissions granted to the app, consent type, privilege level and whether they are in use. For example:
 
     :::image type="content" source="media/app-governance-visibility-insights-view-apps/permissions.png" alt-text="Screenshot of the Permissions tab.":::
 
-    For more information, see the [Microsoft Graph permissions reference](/graph/permissions-reference).
+  For more information, see the [Microsoft Graph permissions reference](/graph/permissions-reference).
 
 - Select the **Sensitivity labels** tab to see how frequently items with certain sensitivity labels were accessed by the app on Microsoft 365. For example:
 

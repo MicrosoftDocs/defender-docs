@@ -1,11 +1,11 @@
-﻿---
+---
 title: Run and customize on-demand scans in Microsoft Defender Antivirus
 description: Run and configure on-demand scans using PowerShell, Windows Management Instrumentation, or individually on endpoints with the Windows Security app
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.reviewer: yongrhee
 manager: bagol
 ms.custom: nextgen
@@ -37,21 +37,21 @@ Combined with always-on, real-time protection, which reviews files when they are
 ## Use Microsoft Defender portal to run a scan
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com/)) and sign-in.
-2. Go to the **device page** that you would like to run a remote scan.
-3. Click on the ellipses **(...)**.
-4. Click on **Run Antivirus Scan**.
-5. Under **Select scan type**, select the radio button for **Quick Scan** or **Full Scan**.
-6. Add a comment.
-7. Click on **Confirm**.
+1. Go to the **device page** that you would like to run a remote scan.
+1. Click on the ellipses **(...)**.
+1. Click on **Run Antivirus Scan**.
+1. Under **Select scan type**, select the radio button for **Quick Scan** or **Full Scan**.
+1. Add a comment.
+1. Click on **Confirm**.
 
 To check on the status:
 
 1. Under **Actions & submissions**, select **Action Center** and then select **History** tab.
-2. Click on **Filters**.
-3. Under the **Action Type**, check the box for **Start antivirus scan**.
-4. Click on **Apply**.
-5. Select one of the **radio button**.
-6. Under **Action Status**, you'll see the status such as **Completed**.
+1. Click on **Filters**.
+1. Under the **Action Type**, check the box for **Start antivirus scan**.
+1. Click on **Apply**.
+1. Select one of the **radio button**.
+1. Under **Action Status**, you'll see the status such as **Completed**.
 
 To check on the detections, see [Review the results of Microsoft Defender Antivirus scans | Microsoft Learn](review-scan-results-microsoft-defender-antivirus.md)
 
@@ -61,24 +61,24 @@ To check on the detections, see [Review the results of Microsoft Defender Antivi
 
 1. Go to the Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)) and sign-in.
 
-2. Choose **Endpoint security** \> **Antivirus**.
+1. Choose **Endpoint security** \> **Antivirus**.
 
-3. In the list of tabs, select **Windows 10 unhealthy endpoints** or **Windows 11 unhealthy endpoints**.
+1. In the list of tabs, select **Windows 10 unhealthy endpoints** or **Windows 11 unhealthy endpoints**.
 
 1. From the list of actions provided, select **Quick Scan** (recommended) or **Full Scan**.
 
    [![Scan options on the Windows 10 unhealthy endpoints tab.](media/mem-antivirus-scan-on-demand.png)](media/mem-antivirus-scan-on-demand.png#lightbox)
    
 > [!TIP]
-> For more information about using Microsoft Configuration Manager to run a scan, see [Antimalware and firewall tasks: How to perform an on-demand scan](/configmgr/protect/deploy-use/endpoint-antimalware-firewall#how-to-perform-an-on-demand-scan-of-computers).
+> For more information about using Microsoft Configuration Manager to run a scan, see [Antimalware and firewall tasks: How to perform an on-demand scan](/intune/configmgr/protect/deploy-use/endpoint-antimalware-firewall#how-to-perform-an-on-demand-scan-of-computers).
 
 ### Use devices to run a scan on a single device
 
 1. Go to the Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)) and sign-in.
 
-2. From the sidebar, select **Devices** \> **All Devices** and choose the device you want to scan.
+1. From the sidebar, select **Devices** \> **All Devices** and choose the device you want to scan.
 
-3. Select **...More** and select **Quick Scan** (recommended) or **Full Scan** from the options.
+1. Select **...More** and select **Quick Scan** (recommended) or **Full Scan** from the options.
 
 ## Use the Windows Security app to run a scan
 
@@ -119,7 +119,7 @@ mpcmdrun.exe -scan -scantype 1
 
 For more information on how to use the tool and other parameters, including starting a full scan or defining paths, see [Use the mpcmdrun.exe commandline tool to configure and manage Microsoft Defender Antivirus](command-line-arguments-microsoft-defender-antivirus.md).
 
-## Use Windows Management Instruction (WMI) to run a scan
+## Use Windows Management Instrumentation (WMI) to run a scan
 
 Use the [**Start** method](/previous-versions/windows/desktop/defender/start-msft-mpscan) of the **MSFT_MpScan** class.
 
@@ -130,11 +130,11 @@ For more information about which parameters are allowed, see [Windows Defender W
 >
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

@@ -2,8 +2,8 @@
 title: Respond to web threats in Microsoft Defender for Endpoint
 description: Respond to alerts related to malicious and unwanted websites. Understand how web threat protection informs end users through their web browsers and Windows notifications
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -27,7 +27,7 @@ Web protection in Microsoft Defender for Endpoint lets you efficiently investiga
 
 ## View web threat alerts
 
-Microsoft Defender for Endpoint generates the following [alerts](manage-alerts.md) for malicious or suspicious web activity:
+Microsoft Defender for Endpoint generates the following [alerts](/defender-xdr/investigate-alerts?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#manage-alerts) for malicious or suspicious web activity:
 
 - **Suspicious connection blocked by network protection**: This alert is generated when network protection (in block mode) stops an attempt to access a malicious website or a website in your custom indicator list.
 - **Suspicious connection detected by network protection**: This alert is generated when network protection (in audit mode) detects an attempt to access a malicious website or a website in your custom indicator list.
@@ -79,5 +79,5 @@ With web protection in Defender for Endpoint, your end users are prevented from 
 - [Web content filtering](web-content-filtering.md)
 - [Web threat protection](web-threat-protection.md)
 - [Monitor web security](web-protection-monitoring.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

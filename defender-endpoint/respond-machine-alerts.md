@@ -2,10 +2,10 @@
 title: Take response actions on a device in Microsoft Defender for Endpoint
 description: Take response actions on a device such as isolating devices, collecting an investigation package, managing tags, running an antivirus scan, and restricting app execution.
 ms.service: defender-endpoint
-ms.author: painbar
-author: paulinbar
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-ms.date: 11/11/2025
+ms.date: 12/31/2025
 manager: bagol
 audience: ITPro
 ms.collection:
@@ -17,11 +17,9 @@ ms.subservice: edr
 search.appverid: met150
 appliesto:
   - Microsoft Defender for Business
-
 ---
 
 # Take response actions on a device
-
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
@@ -44,6 +42,7 @@ Response actions run along the top of a specific device page and include:
 
 > [!NOTE]
 > [Defender for Endpoint Plan 1](defender-endpoint-plan-1.md) includes only the following manual response actions:
+>
 > - Run antivirus scan
 > - Isolate device
 > - Stop and quarantine a file
@@ -90,31 +89,31 @@ To download the package (zipped folder) and investigate the events that occurred
 
 1. Select **Collect investigation package** from the row of response actions at the top of the device page.
 
-2. Specify in the text box why you want to perform this action. Select **Confirm**.
+1. Specify in the text box why you want to perform this action. Select **Confirm**.
 
-3. The zip file downloads.
+1. The zip file downloads.
 
 Or, use this alternate procedure:
 
 1. Select **Collect Investigation Package** from the response actions section of the device page.
 
    ![Image of collect investigation package](media/collect-investigation-package.png)
-   
+
 1. Add comments and then select **Confirm**.
 
    ![Image of confirm comment](media/comments-confirm.png)
-   
+
 1. Select **Action center** from the response actions section of the device page.
 
    ![Image of action center](media/action-center-selected.png)
-   
+
 1. Select **Package collection package available** to download the collection package.
 
    ![Image of download package](media/download-package.png)
-   
+
       > [!NOTE]
    > The collection of the investigation package may fail if a device has a low battery level or is on a metered connection.
-   
+
 ### Investigation package contents for Windows devices
 
 For Windows devices, the package contains the folders described in the following table:
@@ -205,17 +204,17 @@ When an app is restricted, the following notification is displayed to inform the
 
 Depending on the severity of the attack and the sensitivity of the device, you might want to isolate the device from the network. This action can help prevent the attacker from controlling the compromised device and performing further activities such as data exfiltration and lateral movement.
 
-**Important points to keep in mind**: 
+**Important points to keep in mind**:
 
 - In environments that use Proxy Auto Configuration (PAC) files or WPAD settings, devices may not be able to recover from network isolation. Use selective isolation in such cases. When using selective isolation, exclusion settings are not required to avoid this scenario.
 - Isolating devices from the network is supported for macOS for client version 101.98.84 and above. You can also use live response to run the action. For more information on live response, see [Investigate entities on devices using live response](live-response.md)
 - Full isolation is available for devices running Windows 11, Windows 10, version 1703 or later, Windows Server 2012 R2 and later, and Azure Stack HCI OS, version 23H2 and later.
 - Isolating devices from the network is supported when Defender is running in passive mode on all supported Windows operating systems, macOS and Linux supported versions.
 - You can use the device isolation capability on all supported Microsoft Defender for Endpoint on Linux listed in [System requirements](mde-linux-prerequisites.md). Ensure that the following prerequisites are enabled:
-   - `iptables`
-   - `ip6tables`
-   - Linux kernel with `CONFIG_NETFILTER`, `CONFIG_IP_NF_IPTABLES`, and `CONFIG_IP_NF_MATCH_OWNER` for kernel version lower than 5.x and `CONFIG_NETFILTER_XT_MATCH_OWNER` from 5.x kernel.
-    
+  - `iptables`
+  - `ip6tables`
+  - Linux kernel with `CONFIG_NETFILTER`, `CONFIG_IP_NF_IPTABLES`, and `CONFIG_IP_NF_MATCH_OWNER` for kernel version lower than 5.x and `CONFIG_NETFILTER_XT_MATCH_OWNER` from 5.x kernel.
+
 - Selective isolation is available for devices running on Windows 11, Windows 10 version 1703 or later, Windows Server 2012 R2 and later, Azure Stack HCI OS, version 23H2 and later, and macOS. For more information about selective isolation, see [Isolation exclusions](./isolation-exclusions.md).
 - When isolating a device, only certain processes and destinations are allowed. Therefore, devices that are behind a full VPN tunnel won't be able to reach the Microsoft Defender for Endpoint cloud service after the device is isolated. We recommend using a split-tunneling VPN for Microsoft Defender for Endpoint and Microsoft Defender Antivirus cloud-based protection-related traffic.
 - The feature supports VPN connection.
@@ -285,11 +284,11 @@ Once devices are contained, we recommend investigating and remediating the threa
 
 1. Go to the **Device inventory** page and select the device to contain.
 
-2. Select **Contain device** from the actions menu in the device flyout.
+1. Select **Contain device** from the actions menu in the device flyout.
 
    :::image type="content" alt-text="Screenshot of the contain device popup message." source="/defender/media/defender-endpoint/contain_device.png" lightbox="/defender/media/defender-endpoint/contain_device.png":::
 
-3. On the contain device popup, type a comment, and select **Confirm**.
+1. On the contain device popup, type a comment, and select **Confirm**.
 
    :::image type="content" alt-text="Screenshot of the contain device menu item." source="/defender/media/defender-endpoint/contain_device_popup.png" lightbox="/defender/media/defender-endpoint/contain_device_popup.png":::
 
@@ -315,11 +314,11 @@ After you contain a device, if the behavior isn't as expected, verify the Base F
 
 ### Stop containing a device
 
-You're be able to stop containing a device at any time.
+You can stop containing a device at any time.
 
 1. Select the device from the **Device inventory** or open the device page.
 
-2. Select **Release from containment** from the action menu. This action restores the device's connection to the network.
+1. Select **Release from containment** from the action menu. This action restores the device's connection to the network.
 
 ### Contain IP addresses of undiscovered devices
 
@@ -353,19 +352,19 @@ When a critical asset is compromised and used to spread threats within an organi
 
 Through automatic attack disruption, Defender for Endpoint incriminates a malicious device, identifies the role of the device to apply a matching policy to automatically contain a critical asset. The granular containment is done by blocking only specific ports and communication directions.
 
-You can identify critical assets by the **critical asset** tag on the device or IP page. Device containment currently supports critical asset types like domain controllers, DNS servers, and DHCP servers.
+You can identify critical assets by the **critical asset** tag on the device or IP page. Device containment supports critical asset types like domain controllers, DNS servers, and DHCP servers.
 
 ## Contain user from the network
 
 When an identity in your network might be compromised, you must prevent that identity from accessing the network and different endpoints. Defender for Endpoint can contain an identity, blocking it from access, and helping prevent attacks-- specifically, ransomware. When an identity is contained, any supported Microsoft Defender for Endpoint onboarded device will block incoming traffic in specific protocols related to attacks (deny network logons, RPC, SMB, RDP), terminate ongoing remote sessions and logoff existing RDP connections (terminating the session itself including all its related processes), while enabling legitimate traffic. This action can significantly help to reduce the impact of an attack. When an identity is contained, security operations analysts have extra time to locate, identify and remediate the threat to the compromised identity. Once contained by automatic attack disruption, a user is automatically removed from containment in the next five days.
 
-> [!NOTE]
-> Blocking incoming communication with a "contained" user is supported on onboarded Microsoft Defender for Endpoint Windows 10 and 11 devices (Sense version 8740 and higher), Windows Server 2019+ devices, and Windows Servers 2012R2 and 2016 with the modern agent.
+### Contain user important notes
 
-> [!IMPORTANT]
-> As part of the active protection provided by Microsoft Defender for Endpoint, a distributed mechanism can apply LSA Policy to prevent compromised users from accessing machines in your organization. Currently, when this policy is applied on domain controllers, it may cause Group Policy synchronization activity across domain controllers.
->
-> We are gradually rolling out a new solution by integrating with new OS APIs. This deployment will be phased and thoroughly tested to ensure stability and security. During this rollout, LSA Policy enforcement on your servers will be temporarily removed to prevent potential GPO sync. This change will remain in effect until the rollout is complete.
+- Defender for Endpoint enforces user containment at the endpoint layer and doesn't disable the account in the identity provider. Defender for Endpoint blocks attacker use of compromised identities on protected devices and limits authentication-based access, file system access, and network communication paths. This action applies controls at a granular level, so Microsoft can target attack-related activity and preserve normal business communication where possible.
+- When the contain user action is triggered by [predictive shielding](/defender-xdr/shield-predict-threats) (Preview), the contain user action applies restrictions more selectively, with a focus on users identified as high risk through prediction logic. The contain user action in predictive shielding prevents new sessions rather than terminating existing ones.
+- While the predictive shielding feature as a whole is in Preview, this action is generally available, both when triggered by attack disruption and predictive shielding.
+- Blocking incoming communication with a "contained" user is supported on onboarded Microsoft Defender for Endpoint Windows 10 and 11 devices (Sense version 8740 and higher), Windows Server 2019+ devices, and Windows Servers 2012R2 and 2016 with the modern agent.
+- **Important**: Once a **Contain user** action is enforced on a domain controller, it starts a GPO update on the Default Domain Controller policy. A change of a GPO starts a sync across the domain controllers in your environment.  This is expected behavior, and if you monitor your environment for AD GPO changes, you may be notified of such changes. Undoing the **Contain user** action reverts the GPO changes to their previous state, which will then start another AD GPO synchronization in your environment. Learn more about [merging of security policies on domain controllers](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj966251(v=ws.11)#merging-of-security-policies-on-domain-controllers).
 
 ### How to contain a user
 
@@ -383,11 +382,16 @@ Furthermore, after an identity is considered "contained", that user will be bloc
 
 ### Undo contain user actions
 
+> [!TIP]
+> Undoing contain user actions requires membership in the **Global Administrator**<sup>\*</sup> role in [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal).
+>
+> <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
+
 You can release the blocks and containment on a user at any time:
 
 1. Select the **Contain User** action in the **Action Center**. In the side pane select **Undo**.
 
-2. Select the user from either the user inventory, Incident page side pane or alert side pane and select **Undo**.
+1. Select the user from either the user inventory, Incident page side pane or alert side pane and select **Undo**.
 
 This action restores the user's connection to the network.
 
@@ -402,6 +406,22 @@ After a user is contained, you can investigate the potential threat by viewing t
 In addition, you can expand the investigation by using advanced hunting. Look for any action type starting with *contain* in the `DeviceEvents` table. Then, you can view all the different singular blocking events in relation to Contain User in your tenant, dive deeper into the context of each block, and extract the different entities and techniques associated with those events.
 
 :::image type="content" source="/defender/media/defender-endpoint/user-contain-advanced-hunting.png" alt-text="Shows advanced hunting for user contain events" lightbox="/defender/media/defender-endpoint/user-contain-advanced-hunting.png":::
+
+## GPO hardening (Preview)
+
+As part of the [predictive shielding](/defender-xdr/shield-predict-threats) (Preview) feature, Defender for Endpoint automatically applies the GPO hardening action. Group Policy Object (GPO) hardening temporarily stops new GPO policies from being applied to devices identified as high risk. This action helps prevent potential compromise by limiting changes to critical configurations.
+
+To enrich predictive shielding actions, we recommend you use the Microsoft Defender for Identity sensor in your environment. For more information, see [Enrich predictive shielding with Microsoft Defender for Identity](/defender-xdr/shield-predict-threats-manage#enrich-predictive-shielding-data).
+
+After the action is applied, you can view the action impact in the incident graph, track the actions in the Action center, and investigate further using advanced hunting. For more information, see [Manage predictive shielding actions](/defender-xdr/shield-predict-threats-manage).
+
+## Safeboot hardening (Preview)
+
+As part of the [predictive shielding](/defender-xdr/shield-predict-threats) (Preview) feature, Defender for Endpoint automatically applies the Safeboot hardening action. Safeboot hardening helps protect devices from being compromised by enforcing stricter boot settings on devices that are predicted to be at high risk of compromise.
+
+To enrich predictive shielding actions, we recommend you use the Microsoft Defender for Identity sensor in your environment. For more information, see [Enrich predictive shielding with Microsoft Defender for Identity](/defender-xdr/shield-predict-threats-manage#enrich-predictive-shielding-data).
+
+After the action is applied, you can view the action impact in the incident graph, track the actions in the Action center, and investigate further using advanced hunting. For more information, see [Manage predictive shielding actions](/defender-xdr/shield-predict-threats-manage).
 
 ## Consult a threat expert
 
@@ -427,5 +447,4 @@ All other related details are also shown, for example, submission date/time, sub
 - [Take response actions on a file](respond-file-alerts.md)
 - [Manual response actions in Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md#manual-response-actions)
 - [Report inaccuracy](/defender-vulnerability-management/tvm-security-recommendation#report-inaccuracy)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

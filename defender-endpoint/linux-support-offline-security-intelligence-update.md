@@ -3,8 +3,8 @@ title: Configure offline security intelligence updates for Microsoft Defender fo
 description: Learn how to set up offline security intelligence updates in Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
 ms.subservice: linux
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
 manager: bagol
@@ -100,19 +100,19 @@ Perform the following steps to get the downloader script:
 
 1. [Install git](https://kinsta.com/knowledgebase/install-git/) on the mirror server.
 
-2. Navigate to the directory where you want to clone the repo.
+1. Navigate to the directory where you want to clone the repo.
 
-3. Run the following command: `git clone https://github.com/microsoft/mdatp-xplat.git`
+1. Run the following command: `git clone https://github.com/microsoft/mdatp-xplat.git`
 
 #### Option 2: Download the zipped file
 
 1. [Download the zipped file](https://github.com/microsoft/mdatp-xplat/archive/refs/heads/master.zip).
 
-2. Copy the downloaded file to the folder where you want to keep the script.
+1. Copy the downloaded file to the folder where you want to keep the script.
 
-3. Extract the zipped folder.
+1. Extract the zipped folder.
 
-4. Schedule a task or a [cron job](linux-update-mde-linux.md#to-set-the-cron-job) to keep the repo/downloaded zip file updated to the latest version at regular intervals.
+1. Schedule a task or a [cron job](linux-update-mde-linux.md#to-set-the-cron-job) to keep the repo/downloaded zip file updated to the latest version at regular intervals.
 
 #### Local directory structure after cloning the repo or downloading the zipped file
 
@@ -278,20 +278,20 @@ If updates fail, are stuck, or don't start, follow these steps to troubleshoot:
 
    Look for information in the `definitions_update_fail_reason` section.
 
-2. Make sure that `offline_definition_update` and `offline_definition_update_verify_sig` are enabled.
+1. Make sure that `offline_definition_update` and `offline_definition_update_verify_sig` are enabled.
 
-3. Make sure that `definitions_update_source_uri` is equal to `offline_definition_url_configured`.
+1. Make sure that `definitions_update_source_uri` is equal to `offline_definition_url_configured`.
 
    - `definitions_update_source_uri` is the source from where the signatures were downloaded.
    - `offline_definition_url_configured` is the source from where signatures should be downloaded, the one mentioned in the managed config file.
 
-4. Try performing the connectivity test to check if mirror server is reachable from the host:
+1. Try performing the connectivity test to check if mirror server is reachable from the host:
 
    ```bash
    mdatp connectivity test
    ```
 
-5. Try to initiate a manual update using the following command:
+1. Try to initiate a manual update using the following command:
 
    ```bash
    mdatp definitions update

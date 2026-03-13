@@ -14,16 +14,14 @@ The **Overview** page shows the following details:
 
 |Apps / incidents  |Details shown  | Use this data to... |
 |---------|---------|---------|
-|**OAuth-enabled apps that use the Microsoft Graph API**     |  - How many apps are in your tenant <br>- How many apps might be overprivileged <br>- How many apps are highly privileged | Determine the level of risk to your organization by overprivileged and highly privileged apps. |
-|**For incidents**    | - How many active incidents your tenant has <br>- How many are based on app governance detections (**Threat incidents**) <br>- How many are based on app policies you have in place (**Policy incidents**) <br>- The 10 latest incidents  | Determine how quickly incidents are being generated and the relative number of detected and policy-based incidents. |
+|**OAuth-enabled apps that use the Microsoft Graph API**     |  - How many apps are in your tenant <br>  - How many apps are unused in the last 90 days <br>  - How many apps might be overprivileged <br>  - How many apps are highly privileged | Determine the level of risk to your organization by unused, overprivileged and highly privileged apps. |
+|**For incidents**    | - How many active incidents your tenant has <br>- How many are based on app governance detections (**Threat incidents**) <br> - How many are based on app policies you have in place (**Policy incidents**) <br>- The 10 latest incidents  | Determine how quickly incidents are being generated and the relative number of detected and policy-based incidents. |
 
 For example:
 
-> [!div class="mx-imgBorder"]
-> ![Relative number of detected and policy-based incidents.](media/incidents-summary1.png)
-> 
-> [!div class="mx-imgBorder"]
-> ![top alerts.](media/app-governance-visibility-insights-compliance-posture/top-alerts.png)
+:::image type="content" source="media/incidents-summary1.png" alt-text="Screenshot showing relative number of detected and policy-based incidents.":::
+
+:::image type="content" source="media/app-governance-visibility-insights-compliance-posture/top-alerts.png" alt-text="Screenshot showing top alerts.":::
 
 ## Data usage cards
 
@@ -35,8 +33,7 @@ Data usage cards show the following types of information:
 
 For example:
 
-> [!div class="mx-imgBorder"]
-> ![Total data accessed by apps.](media/app-governance-visibility-insights-compliance-posture/data-usage-chart.png)
+:::image type="content" source="media/app-governance-visibility-insights-compliance-posture/data-usage-chart.png" alt-text="Screenshot showing total data accessed by apps.":::
 
 ## Apps that access data on Microsoft 365
 
@@ -44,8 +41,7 @@ For apps that access data on Microsoft 365, cards show the number of apps that h
 
 For example:
 
-> [!div class="mx-imgBorder"]
-> ![Apps that have accessed data on SharePoint, OneDrive, Exchange Online, or Teams in the last 30 days.](media/app-governance-visibility-insights-compliance-posture/apps-accessed-m365-services-chart.png)
+:::image type="content" source="media/app-governance-visibility-insights-compliance-posture/apps-accessed-m365-services-chart.png" alt-text="Screenshot showing apps that have accessed data on SharePoint, OneDrive, Exchange Online, or Teams in the last 30 days.":::
 
 ## Sensitivity labels accessed
 
@@ -54,7 +50,8 @@ For sensitivity labeling data, cards show the number apps that have accessed con
 For example:
 
 The number of apps that have accessed content with sensitivity labels.
-> :::image type="content" source="media/sensitive-data-accessed-chart1.png" alt-text="Number of apps that have accessed content with sensitivity labels.":::
+
+:::image type="content" source="media/sensitive-data-accessed-chart1.png" alt-text="Screenshot showing the number of apps that have accessed content with sensitivity labels.":::
 
 ## Next steps
 

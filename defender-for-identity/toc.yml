@@ -3,14 +3,12 @@ items:
   href: index.yml
 - name: Overview
   items:
-  - name: Welcome to Defender for Identity
+  - name: What is Microsoft Defender for Identity
     href: what-is.md
   - name: What's new?
     href: whats-new.md
   - name: Deploy and monitor for Zero Trust
     href: zero-trust.md
-  - name: System architecture
-    href: architecture.md
   - name: Defender for Identity in the Microsoft Defender portal
     href: microsoft-365-security-center-mdi.md
   - name: Pilot Microsoft Defender XDR
@@ -97,10 +95,14 @@ items:
       href: integrate-microsoft-and-pam-services.md
 - name: Manage
   items:
+  - name: Manage related identities and accounts
+    href: manage-related-identities-accounts.md
   - name: View the ITDR dashboard
     href: dashboard.md
   - name: View and manage health issues
     href: health-alerts.md
+  - name: Best practices for security testing
+    href: security-testing-best-practices.md
   - name: Defender for Identity reports
     href: reports.md
   - name: Settings

@@ -1,8 +1,8 @@
 ﻿---
 title: Migration and setup guides to move to Microsoft Defender for Endpoint
 description: Learn how to make the switch from a non-Microsoft Defender XDR solution to Microsoft Defender for Endpoint
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 manager: bagol
 audience: ITPro
 ms.topic: install-set-up-deploy
@@ -54,5 +54,5 @@ Let us know what you think! Submit your feedback at the bottom of the page. We'l
 - [Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-overview)
 - [Microsoft Defender for Business](/defender-business/mdb-overview)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

@@ -4,8 +4,8 @@ description: Learn how to access Microsoft Defender XDR APIs on behalf of a user
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: macapara
-author: mjcaparas
+ms.author: edbaynash
+author: EdB-MSFT
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -64,7 +64,7 @@ This article explains how to:
 
 3. In the form, choose a name for your application and enter the following information for the redirect URI, then select **Register**.
 
-   :::image type="content" source="/defender/media/nativeapp-create2.PNG" alt-text="The application registration pane in the Azure portal" lightbox="/defender/media/nativeapp-create2.PNG":::
+   :::image type="content" source="media/api-create-app-user-context/nativeapp-create2.PNG" alt-text="The application registration pane in the Azure portal" lightbox="media/api-create-app-user-context/nativeapp-create2.PNG":::
    
 
    - **Application type:** Public client
@@ -79,7 +79,7 @@ This article explains how to:
 
    - Choose **Delegated permissions**. Choose the relevant permissions for your scenario (for example **Incident.Read**), and then select **Add permissions**.
 
-     :::image type="content" source="/defender/media/request-api-permissions-delegated.PNG" alt-text="The Delegated permissions pane in the Microsoft Defender portal" lightbox="/defender/media/request-api-permissions-delegated.PNG":::
+     :::image type="content" source="media/api-create-app-user-context/request-api-permissions-delegated.PNG" alt-text="The Delegated permissions pane in the Microsoft Defender portal" lightbox="media/api-create-app-user-context/request-api-permissions-delegated.PNG":::
 
     > [!NOTE]
     > You need to select the relevant permissions for your scenario. *Read all incidents* is just an example. To determine which permission you need, please look at the **Permissions** section in the API you want to call.
@@ -88,7 +88,7 @@ This article explains how to:
 
 5. Select **Grant admin consent**. Every time you add a permission, you must select **Grant admin consent** for it to take effect.
 
-   :::image type="content" source="/defender/media/grant-consent-delegated.PNG" alt-text="The admin consent-granting pane in the Microsoft Defender portal" lightbox="/defender/media/grant-consent-delegated.PNG":::
+   :::image type="content" source="media/api-create-app-user-context/grant-consent-delegated.PNG" alt-text="The admin consent-granting pane in the Microsoft Defender portal" lightbox="media/api-create-app-user-context/grant-consent-delegated.PNG":::
 
 6. Record your application ID and your tenant ID somewhere safe. They're listed under **Overview** on your application page.
 

@@ -1,8 +1,8 @@
 ﻿---
 title: Deploy and manage device control in Microsoft Defender for Endpoint with Group Policy           
 description: Learn how to deploy and manage device control in Defender for Endpoint using Group Policy
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 manager: bagol 
 ms.date: 01/31/2025
 ms.topic: overview
@@ -35,7 +35,7 @@ If you're using Group Policy to manage Defender for Endpoint settings, you can u
 
 1. On a device running Windows, go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus** > **Features** > **Device Control**.
 
-2. In the **Device Control** window, select **Enabled**.
+1. In the **Device Control** window, select **Enabled**.
 
 > [!NOTE]
 > If you don't see these Group Policy Objects, you need to add the Group Policy Administrative Templates (ADMX). You can download administrative template ([WindowsDefender.adml](https://github.com/microsoft/mdatp-devicecontrol/blob/main/windows/WindowsDefender.adml) and [WindowsDefender.admx](https://github.com/microsoft/mdatp-devicecontrol/blob/main/windows/WindowsDefender.admx)) from [mdatp-devicecontrol / Windows samples](https://github.com/microsoft/mdatp-devicecontrol/tree/main/windows) in GitHub.
@@ -50,7 +50,7 @@ For example, you can have either a `Deny` or an `Allow` policy for `RemovableMed
 
 1. On a device running Windows, go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus** > **Features** > **Device Control** > **Select Device Control Default Enforcement Policy**.
 
-2. In the **Select Device Control Default Enforcement Policy** window, select **Default Deny**.
+1. In the **Select Device Control Default Enforcement Policy** window, select **Default Deny**.
 
 ## Configure device types
 
@@ -60,7 +60,7 @@ To configure the device types that a device control policy is applied, follow th
 
 1. On a computer running Windows, go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus** > **Device Control** > **Turn on device control for specific device types**.
 
-2. In the **Turn on device control for specific types** window, specify the product family IDs, separate by a pipe (`|`). This setting must be a single string with no spaces or it will be parsed incorrectly by the device control engine causing unexpected behaviors. Product family IDs include `RemovableMediaDevices`, `CdRomDevices`, `WpdDevices`, or `PrinterDevices`.
+1. In the **Turn on device control for specific types** window, specify the product family IDs, separate by a pipe (`|`). This setting must be a single string with no spaces or it will be parsed incorrectly by the device control engine causing unexpected behaviors. Product family IDs include `RemovableMediaDevices`, `CdRomDevices`, `WpdDevices`, or `PrinterDevices`.
 
 ## Define groups
 
@@ -68,7 +68,7 @@ To configure the device types that a device control policy is applied, follow th
 
 1. Create one XML file for each removable storage group. 
 
-2. Use the properties in your removable storage group to create an XML file for each removable storage group.
+1. Use the properties in your removable storage group to create an XML file for each removable storage group.
 
    Make sure the root node of the XML is PolicyGroups, for example, the following XML:
 
@@ -80,13 +80,13 @@ To configure the device types that a device control policy is applied, follow th
     </PolicyGroups>
     ```
 
-3. Save the XML file to your network share.
+1. Save the XML file to your network share.
 
-4. Define the settings as follows:
+1. Define the settings as follows:
 
    1. On a device running Windows, go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus** > **Device Control** > **Define device control policy groups**.
 
-   2. In the **Defined device control policy groups** window, specify the network share file path containing the XML groups data.
+   1. In the **Defined device control policy groups** window, specify the network share file path containing the XML groups data.
 
 You can create different group types. Here's one group example XML file for any removable storage and CD-ROM, Windows portable devices, and approved USBs group: [XML file](https://github.com/microsoft/mdatp-devicecontrol/blob/main/windows/device/Group%20Policy/Scenario%202%20GPO%20Removable%20Storage%20Group.xml)
 
@@ -100,7 +100,7 @@ You can create different group types. Here's one group example XML file for any 
 
 1. Create one XML file for access policy rule.
 
-2. Use the properties in removable storage access policy rules to create an XML for each group's removable storage access policy rule. 
+1. Use the properties in removable storage access policy rules to create an XML for each group's removable storage access policy rule. 
 
    Ensure root node of the XML is PolicyRules, for example, the following XML:
 
@@ -112,9 +112,9 @@ You can create different group types. Here's one group example XML file for any 
    </PolicyRules>
    ```
 
-3. Save the XML file to network share.
+1. Save the XML file to network share.
 
-4. Define the settings as follows:
+1. Define the settings as follows:
 
    1. On a device running Windows, go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus** > **Device Control** > **Define device control policy rules**.
 

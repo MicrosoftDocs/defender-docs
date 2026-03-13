@@ -3,8 +3,8 @@ title: Migrate to Microsoft Defender for Endpoint - Onboard
 description: Move to Microsoft Defender for Endpoint. Onboard devices and then uninstall your non-Microsoft solution.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -35,11 +35,11 @@ appliesto:
 **Welcome to Phase 3 of [migrating to Defender for Endpoint](switch-to-mde-overview.md#the-migration-process)**. This migration phase includes the following steps:
 
 1. Onboard devices to Defender for Endpoint.
-2. Run a detection test.
-3. Confirm that Microsoft Defender Antivirus is in passive mode on your endpoints.
-4. Get updates for Microsoft Defender Antivirus.
-5. Uninstall your non-Microsoft solution.
-6. Make sure Defender for Endpoint is working correctly.
+1. Run a detection test.
+1. Confirm that Microsoft Defender Antivirus is in passive mode on your endpoints.
+1. Get updates for Microsoft Defender Antivirus.
+1. Uninstall your non-Microsoft solution.
+1. Make sure Defender for Endpoint is working correctly.
 
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
@@ -47,11 +47,11 @@ appliesto:
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 
-2. Choose **Settings** \> **Endpoints** \> **Onboarding** (under **Device management**).
+1. Choose **Settings** \> **Endpoints** \> **Onboarding** (under **Device management**).
 
-3. In the **Select operating system to start onboarding process** list, select an operating system.
+1. In the **Select operating system to start onboarding process** list, select an operating system.
 
-4. Under **Deployment method**, select an option. Follow the links and prompts to onboard your organization's devices. Need help? See [Onboarding methods](#onboarding-methods) (in this article).
+1. Under **Deployment method**, select an option. Follow the links and prompts to onboard your organization's devices. Need help? See [Onboarding methods](#onboarding-methods) (in this article).
 
 > [!NOTE]
 > If something goes wrong while onboarding, see [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md). That article describes how to resolve onboarding issues and common errors on endpoints.
@@ -93,9 +93,9 @@ Now that your endpoints have been onboarded to Defender for Endpoint, your next 
 
 1. On a Windows device, open Windows PowerShell as an administrator.
 
-2. Run the following PowerShell cmdlet: `Get-MpComputerStatus|select AMRunningMode`. 
+1. Run the following PowerShell cmdlet: `Get-MpComputerStatus|select AMRunningMode`. 
 
-3. Review the results. You should see **Passive mode**.
+1. Review the results. You should see **Passive mode**.
 
 > [!NOTE]
 > To learn more about passive mode and active mode, see [More details about Microsoft Defender Antivirus states](microsoft-defender-antivirus-compatibility.md#more-details-about-microsoft-defender-antivirus-states).
@@ -106,7 +106,7 @@ To set Microsoft Defender Antivirus to passive mode on Windows Server 2019 and l
 
 1. Open Registry Editor, and then navigate to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`.
 
-2. Edit (or create) a DWORD entry called **ForceDefenderPassiveMode**, and specify the following settings:
+1. Edit (or create) a DWORD entry called **ForceDefenderPassiveMode**, and specify the following settings:
 
    - Set the DWORD's value to **1**.
    - Under **Base**, select **Hexadecimal**.
@@ -116,7 +116,7 @@ To set Microsoft Defender Antivirus to passive mode on Windows Server 2019 and l
 >
 > - [Group Policy Preference](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn581922(v=ws.11))
 > - [Local Group Policy Object tool](/windows/security/threat-protection/security-compliance-toolkit-10#what-is-the-local-group-policy-object-lgpo-tool)
-> - [A package in Configuration Manager](/mem/configmgr/apps/deploy-use/packages-and-programs)
+> - [A package in Configuration Manager](/intune/configmgr/apps/deploy-use/packages-and-programs)
 
 ### Start Microsoft Defender Antivirus on Windows Server 2016
 
@@ -149,7 +149,7 @@ Now that you have onboarded to Defender for Endpoint, and you have uninstalled y
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 
-2. In the navigation pane, choose **Endpoints** > **Device inventory**. There, you're able to see protection status for devices.
+1. In the navigation pane, choose **Endpoints** > **Device inventory**. There, you're able to see protection status for devices.
 
 To learn more, see [Device inventory](machines-view-overview.md).
 
@@ -159,5 +159,5 @@ To learn more, see [Device inventory](machines-view-overview.md).
 
 - [Configure your Defender for Endpoint settings](preferences-setup.md).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

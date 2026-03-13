@@ -4,8 +4,8 @@ description: Enable behavior-based, heuristic, and real-time protection in Micro
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.topic: install-set-up-deploy
 ms.custom: nextgen
 ms.reviewer: yongrhee
@@ -30,7 +30,7 @@ Microsoft Defender Antivirus uses several methods to provide threat protection:
 - Always-on scanning, using file and process behavior monitoring and other heuristics (also known as "real-time protection")
 - Dedicated protection updates based on machine learning, human and automated big-data analysis, and in-depth threat resistance research
 
-You can configure how Microsoft Defender Antivirus uses these methods with [Microsoft Defender for Endpoint Security Configuration Management](/mem/intune/protect/mde-security-integration), [Microsoft Intune](use-intune-config-manager-microsoft-defender-antivirus.md), Microsoft Configuration Manager, [Group Policy](use-group-policy-microsoft-defender-antivirus.md), [PowerShell cmdlets](use-powershell-cmdlets-microsoft-defender-antivirus.md), and [Windows Management Instrumentation (WMI)](use-wmi-microsoft-defender-antivirus.md).
+You can configure how Microsoft Defender Antivirus uses these methods with [Microsoft Defender for Endpoint Security Configuration Management](/intune/intune-service/protect/mde-security-integration), [Microsoft Intune](use-intune-config-manager-microsoft-defender-antivirus.md), Microsoft Configuration Manager, [Group Policy](use-group-policy-microsoft-defender-antivirus.md), [PowerShell cmdlets](use-powershell-cmdlets-microsoft-defender-antivirus.md), and [Windows Management Instrumentation (WMI)](use-wmi-microsoft-defender-antivirus.md).
 
 This section covers configuration for always-on scanning, including how to detect and block apps that are deemed unsafe, but might not be detected as malware.
 
@@ -55,7 +55,7 @@ See [Use next-gen Microsoft Defender Antivirus technologies through cloud protec
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
@@ -64,5 +64,5 @@ See [Use next-gen Microsoft Defender Antivirus technologies through cloud protec
 ## See also
 
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

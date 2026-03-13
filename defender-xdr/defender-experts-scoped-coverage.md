@@ -2,8 +2,7 @@
 title: Scoped coverage in Microsoft Defender Experts for XDR
 ms.reviewer:
 description: Defender Experts scoped coverage covers a specific section of the organization where SOC support is limited.
-ms.service: defender-experts
-ms.subservice: dex-xdr
+ms.service: defender-experts-for-xdr
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
@@ -40,9 +39,9 @@ You can create a predefined Microsoft Defender for Endpoint device group or a Mi
 - **Defender_Experts_Scoped_Coverage_Devices**
 - **Defender_Experts_Scoped_Coverage_Users**
 
-:::image type="content" source="media/defender_scoped_devices.png" alt-text="Screenshot of Defender Experts Scoped devices." lightbox="media/defender_scoped_devices.png":::
+:::image type="content" source="media/defender-experts-scoped-coverage/defender_scoped_devices.png" alt-text="Screenshot of Defender Experts Scoped devices." lightbox="media/defender-experts-scoped-coverage/defender_scoped_devices.png":::
 
-:::image type="content" source="media/defender-experts-scoped-users.png" alt-text="Screenshot of Defender Experts Scoped users." lightbox="media/defender-experts-scoped-users.png":::
+:::image type="content" source="media/defender-experts-scoped-coverage/defender-experts-scoped-users.png" alt-text="Screenshot of Defender Experts Scoped users." lightbox="media/defender-experts-scoped-coverage/defender-experts-scoped-users.png":::
 
 The devices and users you add to these groups are then considered as the set of assets that are in scope for this service.
 

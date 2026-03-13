@@ -1,15 +1,14 @@
 ---
 title: Protect your Azure environment
 description: Learn how about connecting your Azure app to Defender for Cloud Apps using the API connector.
-ms.date: 12/05/2023
+ms.date: 01/07/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
+
 # How Defender for Cloud Apps helps protect your Azure environment
 
-
-
-Azure is an IaaS provider that enables your organization to host and manage their entire workloads in the cloud. Along with the benefits of leveraging infrastructure in the cloud, your organization's most critical assets might be exposed to threats. Exposed assets include storage instances with potentially sensitive information, compute resources that operate some of your most critical applications, ports, and virtual private networks that enable access to your organization.
+Azure is an IaaS provider that enables your organization to host and manage their entire workloads in the cloud. Along with the benefits of using infrastructure in the cloud, your organization's most critical assets might be exposed to threats. Exposed assets include storage instances with potentially sensitive information, compute resources that operate some of your most critical applications, ports, and virtual private networks that enable access to your organization.
 
 Connecting Azure to Defender for Cloud Apps helps you secure your assets and detect potential threats by monitoring administrative and sign-in activities, notifying on possible brute force attacks, malicious use of a privileged user account, and unusual deletions of VMs.
 
@@ -48,41 +47,48 @@ For more information about remediating threats from apps, see [Governing connect
 
 ## Protect Azure in real time
 
-Review our best practices for [securing and collaborating with external users](best-practices.md#secure-collaboration-with-external-users-by-enforcing-real-time-session-controls) and [blocking and protecting the download of sensitive data to unmanaged or risky devices](best-practices.md#block-and-protect-download-of-sensitive-data-to-unmanaged-or-risky-devices).
+Review our best practices for [securing and collaborating with guests](best-practices.md#secure-collaboration-with-external-users-by-enforcing-real-time-session-controls) and [blocking and protecting the download of sensitive data to unmanaged or risky devices](best-practices.md#block-and-protect-download-of-sensitive-data-to-unmanaged-or-risky-devices).
 
 ## Connect Azure to Microsoft Defender for Cloud Apps
 
 This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing Azure account using the app connector API. This connection gives you visibility into and control over Azure use. For information about how Defender for Cloud Apps protects Azure, see [Protect Azure](protect-azure.md).
 
-> [!NOTE]
->
-> - User must be at least a Security administrator in Azure AD to connect Azure to Microsoft Defender for Cloud Apps.
+### Prerequisites
+
+Before you connect Azure to Microsoft Defender for Cloud Apps, make sure that the user connecting Azure has the **Security administrator** role in Azure Active Directory.
+
+- The user connecting Azure must have a **Security administrator** role in Azure Active Directory.
+
+### Scope and limitations
+
+When you connect Azure to Defender for Cloud Apps, keep in mind the following scope and limitations:
+
 > - Defender for Cloud Apps displays activities from **all** subscriptions.
 > - User account information is populated in Defender for Cloud Apps as users perform activities in Azure.
-> - Currently, Defender for Cloud Apps monitors only ARM activities.
+> - Defender for Cloud Apps monitors ARM activities only.
 
-**To connect Azure to Defender for Cloud Apps**: 
+### Connect Azure to Defender for Cloud Apps
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**.
 
 1. In the **App connectors** page, select **+Connect an app**, followed by **Microsoft Azure**.
 
-    ![Connect Azure menu item.](media/connect-azure-menu.png)
+    :::image type="content" source="media/connect-azure-menu.png" alt-text="Screenshot that shows the Azure connector in the Defender portal.":::
+
 
 1. In the **Connect Microsoft Azure** page, select **Connect Microsoft Azure**.
 
-    ![Connect Azure.](media/connect-azure.png)
+    :::image type="content" source="media/connect-azure.png" alt-text="Screenshot that shows the Connect Microsoft Azure page in the Defender portal.":::
+
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**. Make sure the status of the connected App Connector is **Connected**.
 
 > [!NOTE]
-> After connecting to Azure, data will be pulled. You'll see data from then onwards.
+> After the Azure connection is established, Defender for Cloud Apps pulls data from that point forward.
 
-If you have any problems connecting the app, see [Troubleshooting App Connectors](troubleshooting-api-connectors-using-error-messages.md).
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Control cloud apps with policies](control-cloud-apps-with-policies.md)
+- If you have any problems connecting the app, see [Troubleshooting App Connectors](troubleshooting-api-connectors-using-error-messages.md).
 
-[!INCLUDE [Open support ticket](includes/support.md)]
+- [Control cloud apps with policies](control-cloud-apps-with-policies.md)
 

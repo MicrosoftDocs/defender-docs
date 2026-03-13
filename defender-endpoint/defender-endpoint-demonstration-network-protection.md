@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint Network protection demonstrations
 description: Shows how Network protection prevents employees from using any application to access dangerous domains that might host phishing scams, exploits, and other malicious content on the Internet.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -62,7 +62,7 @@ Get-MpPreference
    Set-MpPreference -EnableNetworkProtection Enabled
    ```
 
-2. Using the browser of your choice (not Microsoft Edge*), navigate to the [Network Protection website test](https://smartscreentestratings2.net/). Microsoft Edge has other security measures in place to protect from this vulnerability (SmartScreen).
+1. Using the browser of your choice (not Microsoft Edge*), navigate to the [Network Protection website test](https://smartscreentestratings2.net/). Microsoft Edge has other security measures in place to protect from this vulnerability (SmartScreen).
 
 Following are the expected results:
 
@@ -121,5 +121,5 @@ mdatp config network-protection enforcement-level --value audit
 [Network Protection](network-protection.md)
 
 [Microsoft Defender for Endpoint - demonstration scenarios](defender-endpoint-demonstrations.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

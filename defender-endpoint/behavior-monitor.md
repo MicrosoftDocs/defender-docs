@@ -1,8 +1,8 @@
 ﻿---
 title: Behavior monitoring in Microsoft Defender Antivirus
 description: Learn about Behavior monitoring in Microsoft Defender Antivirus and Defender for Endpoint.
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.reviewer: yongrhee
 manager: bagol
 audience: ITPro
@@ -30,7 +30,7 @@ Monitors process behavior to detect and analyze potential threats based on the b
    - Continuously observe processes, file system activities, and interactions within the system.
    - Defender Antivirus can identify patterns associated with malware or other threats. For example, it looks for processes making unusual changes to existing files, modifying or creating automatic startup registry (ASEP) keys, and other alterations to the file system or structure.
 
-2. Dynamic Approach:
+1. Dynamic Approach:
 
 - Unlike static, signature-based detection, behavior monitoring adapts to new and evolving threats.
 
@@ -63,9 +63,9 @@ The following table shows the different ways to configure behavior monitoring.
 | Management tool | Name | Links |
 |---|---|---|
 | Security Settings Management | Allow behavior monitoring | This article |
-| Intune |  Allow behavior monitoring | [Windows Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-windows#real-time-protection) |
-| CSP | AllowBehaviorMonitoring | [Defender Policy CSP](/mem/intune/protect/antivirus-microsoft-defender-settings-windows#real-time-protection)   |
-| Configuration Manager Tenant Attach | Turn on behavior monitoring | [Windows Antivirus policy settings from Microsoft Defender Antivirus for tenant attached devices](/mem/intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach#real-time-protection) |
+| Intune |  Allow behavior monitoring | [Windows Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-windows#real-time-protection) |
+| CSP | AllowBehaviorMonitoring | [Defender Policy CSP](/intune/intune-service/protect/antivirus-microsoft-defender-settings-windows#real-time-protection)   |
+| Configuration Manager Tenant Attach | Turn on behavior monitoring | [Windows Antivirus policy settings from Microsoft Defender Antivirus for tenant attached devices](/intune/intune-service/protect/antivirus-microsoft-defender-settings-windows-tenant-attach#real-time-protection) |
 | Group Policy | Turn on behavior monitoring | [Download Group Policy Settings Reference Spreadsheet for Windows 11 2023 Update (23H2)](https://www.microsoft.com/download/details.aspx?id=105668)   |
 | PowerShell | Set-MpPreference -DisableBehaviorMonitoring | [Set-MpPreference](/powershell/module/defender/set-mppreference#-disablebehaviormonitoring) |
 | WMI | boolean  DisableBehaviorMonitoring;  | [MSFT\_MpPreference class](/previous-versions/windows/desktop/defender/msft-mppreference) |

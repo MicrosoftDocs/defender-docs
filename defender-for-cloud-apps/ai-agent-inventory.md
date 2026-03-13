@@ -43,34 +43,19 @@ When Copilot Studio AI Agents are connected, a green indicator appears in the **
 
 ## Identify misconfigured or risky AI agents using advanced hunting
 
-After you give Microsoft Defender access to your custom agents, you can use advanced hunting to help identify misconfigured or risky agents and minimize organizational exposure to potential threats.
+After you give Microsoft Defender access to your custom agents, you can use advanced hunting to help identify misconfigured or risky agents and minimize organizational exposure to potential threats. 
+
+See [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview) to learn how to use queries to proactively hunt for threats.
+
 We recommend that you reach out to the owners of the risky agents for more information, and that you consider quarantining or deleting risky agents.
 
 1. Sign in to the Defender portal, and go **Investigation & response** -> **Hunting** -> **Advanced hunting**.
 1. In the **Apps & identities** section, the [AIAgentsInfo table](/defender-xdr/advanced-hunting-aiagentsinfo-table) contains data for all your custom AI agents created using Copilot Studio. You can use this data to create custom queries.
+1. You can use the collection of community queries to identify misconfigured or risky agents.
+    1. **Sign in to the [Microsoft Defender portal](https://security.microsoft.com)**.
+    1. Go to **Investigation & response** -> **Hunting** -> **Advanced hunting**.
+    1. In the **Queries** tab, select **Community queries**. The **AI Agents** folder contains queries related to AI agents. For more information, see [Sample queries](/defender-xdr/advanced-hunting-aiagentsinfo-table).
 
-### Sample queries
-
-Run this query to get a list of all the agents in your tenant:
-
-```kusto
-    AIAgentsInfo 
-    | summarize arg_max(Timestamp, *) by AIAgentId
-```
-
-Run this query to identify all published agents that are configured with an incorrect authentication mechanism: 
-
-```kusto
-    AIAgentsInfo
-    | summarize arg_max(Timestamp, *) by AIAgentId 
-    | where AgentStatus != "Deleted"  
-    | where AgentStatus == "Published" 
-    | where UserAuthenticationType == "None" or AuthenticationTrigger == "As Needed"  
-    | project-reorder AgentCreationTime ,AIAgentId, AIAgentName, AgentStatus, CreatorAccountUpn, OwnerAccountUpns
-```
-
- 
-See [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview) to learn how to use queries to proactively hunt for threats.
 
  ## Related articles
  

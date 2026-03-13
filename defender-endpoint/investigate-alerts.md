@@ -2,8 +2,8 @@
 title: Investigate Microsoft Defender for Endpoint alerts
 description: Use the investigation options to get details on alerts are affecting your network, what they mean, and how to resolve them.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -67,11 +67,11 @@ If you are experiencing a false alert with a line-of-business application, creat
 ## Related topics
 
 - [View and organize the Microsoft Defender for Endpoint Alerts queue](alerts-queue.md)
-- [Manage Microsoft Defender for Endpoint alerts](manage-alerts.md)
+- [Manage Microsoft Defender for Endpoint alerts](/defender-xdr/investigate-alerts?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#manage-alerts)
 - [Investigate a file associated with a Defender for Endpoint alert](investigate-files.md)
 - [Investigate devices in the Defender for Endpoint Devices list](investigate-machines.md)
 - [Investigate an IP address associated with a Defender for Endpoint alert](investigate-ip.md)
 - [Investigate a domain associated with a Defender for Endpoint alert](investigate-domain.md)
 - [Investigate a user account in Defender for Endpoint](investigate-user.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

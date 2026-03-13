@@ -16,6 +16,7 @@ ms.custom:
 - cx-ti
 - cx-mdti
 ms.topic: how-to
+ms.update-cycle: 180-days
 ms.date: 09/12/2025
 ---
 

@@ -2,12 +2,12 @@
 title: Delete Indicator API.
 description: Learn how to use the Delete Indicator API to delete an Indicator entity by ID in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -15,23 +15,13 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
-
 ---
+
 # Delete Indicator API
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
-
 
 ## API description
 
@@ -45,24 +35,21 @@ Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Get started](apis-intro.md).
 
-| Permission type | Permission | Permission display name |
-| :---|:---|:---|
-| Application | Ti.ReadWrite | 'Read and write TI Indicators' |
-| Application | Ti.ReadWrite.All | 'Read and write Indicators' |
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Ti.ReadWrite.All|'Read and write Indicators'|
 
 ## HTTP request
 
 ```http
-Delete https://api.securitycenter.microsoft.com/api/indicators/{id}
+Delete https://api.security.microsoft.com/api/indicators/{id}
 ```
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization | String | Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -81,9 +68,5 @@ If Indicator with the specified ID wasn't found - 404 Not Found.
 Here's an example of the request.
 
 ```http
-DELETE https://api.securitycenter.microsoft.com/api/indicators/995
+DELETE https://api.security.microsoft.com/api/indicators/995
 ```
-
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

@@ -1,30 +1,31 @@
 ---
 title: Create access policies | Microsoft Defender for Cloud Apps
 description: Learn how to configure Microsoft Defender for Cloud Apps access policies with Conditional Access app control to control access to cloud apps.
-ms.date: 05/15/2024
+ms.date: 12/23/2025
 ms.topic: how-to
-ms.reviewer: AmitMishaeli
+ms.reviewer: Adipkmic
 ---
+
 # Create Microsoft Defender for Cloud Apps access policies
-
-
 
 Microsoft Defender for Cloud Apps access policies use Conditional Access app control to provide real-time monitoring and control over access to cloud apps. Access policies control access based on user, location, device, and app, and are supported for any device.
 
-Policies created for a host app are not connected to any related resource apps. For example, access policies that you create for Teams, Exchange, or Gmail are not connected to SharePoint, OneDrive, or Google Drive. If you need a policy for the resource app in addition to the host app, create a separate policy.
+Policies created for a host app aren't connected to any related resource apps. For example, access policies that you create for Teams, Exchange, or Gmail aren't connected to SharePoint, OneDrive, or Google Drive. If you need a policy for the resource app in addition to the host app, create a separate policy.
 
 > [!TIP]
-> If you'd prefer to generally allow access while monitoring sessions or limit specific session activities, create session policies instead. For more information, see [Session policies](session-policy-aad.md).
+> If you'd prefer to generally allow, access while monitoring sessions or limit specific session activities, create session policies instead. For more information, see [Session policies](session-policy-aad.md).
 
 ## Prerequisites
 
 Before you start, make sure that you have the following prerequisites:
 
-- A Defender for Cloud Apps license, either as a stand-alone license or as part of another license.
+- A Defender for Cloud Apps license, either as a stand-alone license or as part of another license
 
-- A license for Microsoft Entra ID P1, either as stand-alone license or as part of another license.
+- A license for Microsoft Entra ID P1, either as stand-alone license or as part of another license
 
-- If you're using a non-Microsoft IdP, the license required by your identity provider (IdP) solution.
+- If you're using a non-Microsoft IdP, the license required by your identity provider (IdP) solution
+
+- A Microsoft Entra ID Conditional Access policy configured for Microsoft Defender for Cloud Apps (Conditional Access app control).This policy creates the permissions required to control traffic. For more information, see: [Automatically onboard Microsoft Entra ID apps to conditional access app control (preview)](app-onboarding.md#supported-apps)
 
 - The relevant apps onboarded to Conditional Access app control. Microsoft Entra ID apps are automatically onboarded, while non-Microsoft IdP apps must be onboarded manually.
 
@@ -33,10 +34,8 @@ Before you start, make sure that you have the following prerequisites:
     - [Onboard non-Microsoft IdP catalog apps for Conditional Access app control](proxy-deployment-featured-idp.md)
     - [Onboard non-Microsoft IdP custom apps for Conditional Access app control](proxy-deployment-any-app-idp.md)
 
-In order for your access policy to work, you must also have a Microsoft Entra ID Conditional Access policy, which creates the permissions to control traffic.
 
 [!INCLUDE [entra-conditional-access-policy](includes/entra-conditional-access-policy.md)]
-
 
 ## Create a Defender for Cloud Apps access policy
 
@@ -61,11 +60,11 @@ This procedure describes how to create a new access policy in Defender for Cloud
 
     |Name  |Description  |
     |---------|---------|
-    | **App** | Filters for a specific app to include in the policy. Select apps by first selecting whether they use **Automated Azure AD onboarding**, for Microsoft Entra ID apps, or **Manual onboarding**, for non-Microsoft IdP apps. Then, select the app you want to include in your filter from the list. <br><br>If your non-Microsoft IdP app is missing from the list, make sure that you've onboarded it fully. For more information, see: <br>- [Onboard non-Microsoft IdP catalog apps for Conditional Access app control](proxy-deployment-featured-idp.md)<br>- [Onboard non-Microsoft IdP custom apps for Conditional Access app control](proxy-deployment-any-app-idp.md) <br><br>If you choose not to use the **App** filter, the policy applies to all applications that are marked as **Enabled** on the **Settings > Cloud Apps > Connected apps > Conditional Access App Control apps** page.<br><br>**Note**: You may see some overlap between apps that are onboarded and apps that need manual onboarding. In case of a conflict in your filter between the apps, manually onboarded apps take precedence.|
+    | **App** | Filters for a specific app to include in the policy. Select apps by first selecting whether they use **Automated Azure AD onboarding**, for Microsoft Entra ID apps, or **Manual onboarding**, for non-Microsoft IdP apps. Then, select the app you want to include in your filter from the list. <br><br>If your non-Microsoft IdP app is missing from the list, make sure that you've onboarded it fully. For more information, see: <br>- [Onboard non-Microsoft IdP catalog apps for Conditional Access app control](proxy-deployment-featured-idp.md)<br>- [Onboard non-Microsoft IdP custom apps for Conditional Access app control](proxy-deployment-any-app-idp.md) <br><br>If you choose not to use the **App** filter, the policy applies to all applications that are marked as **Enabled** on the **Settings > Cloud Apps > Connected apps > Conditional Access App Control apps** page.<br><br>**Note**: You might see some overlap between apps that are onboarded and apps that need manual onboarding. In case of a conflict in your filter between the apps, manually onboarded apps take precedence.|
     | **Client app** | Filter for browser or mobile/desktop apps. |
     | **Device** | Filter for device tags, such as for a specific device management method, or device types, such as PC, mobile, or tablet.|
     |**IP address**     |  Filter per IP address or use previously assigned IP address tags.       |
-    |**Location**     |   Filter by geographic location. The absence of a clearly defined location may identify risky activities. |
+    |**Location**     |   Filter by geographic location. The absence of a clearly defined location might identify risky activities. |
     | **Registered ISP** |Filter for activities coming from a specific ISP.|
     | **User** | Filter for a specific user or group of users. |
     | **User agent string** |    Filter for a specific user agent string.|
@@ -112,7 +111,7 @@ Make sure to sign in with a user that matches your policy.
 
 **To check activity logs**:
 
-1. In Microsoft Defender XDR, select **Cloud apps > Activity log**, and check for the sign-in activities captured for each step. You may want to filter by selecting **Advanced filters** and filtering for **Source equals Access control**.
+1. In Microsoft Defender XDR, select **Cloud apps > Activity log**, and check for the sign-in activities captured for each step. You might want to filter by selecting **Advanced filters** and filtering for **Source equals Access control**.
 
    **Single sign-on log on** activities are Conditional Access app control events.
 
@@ -122,7 +121,7 @@ If you encounter errors or issues, use the **Admin View toolbar** to gather reso
 
 ## Create access policies for identity-managed devices
 
-Use client certificates to control access for devices that aren't Microsoft Entra-hybrid joined and aren't managed by Microsoft Intune. Roll out new certificates to managed devices, or use existing certificates, such as third-party MDM certificates. For example, you may want to deploy client certificate to managed devices and then block access from devices without a certificate.
+Use client certificates to control access for devices that aren't Microsoft Entra-hybrid joined and aren't managed by Microsoft Intune. Roll out new certificates to managed devices, or use existing certificates, such as third-party MDM certificates. For example, you might want to deploy client certificate to managed devices and then block access from devices without a certificate.
 
 For more information, see [Identity managed devices with Conditional Access app control](conditional-access-app-control-identity.md).
 
@@ -133,6 +132,5 @@ For more information, see:
 - [Troubleshooting access and session controls](troubleshooting-proxy.md)
 - [Tutorial: Block download of sensitive information with conditional access app control](use-case-proxy-block-session-aad.md)
 - [Blocking downloads on unmanaged devices using session controls](use-case-proxy-block-session-aad.md)
-- [Conditional access app control webinar](webinars.md#on-demand-webinars)
 
 If you run into any problems, we're here to help. To get assistance or support for your product issue, please [open a support ticket](/defender-xdr/contact-defender-support)

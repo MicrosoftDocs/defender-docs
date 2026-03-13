@@ -1,18 +1,16 @@
 ---
 title: Protect your Salesforce environment | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your Salesforce app to Defender for Cloud Apps using the API connector.
-ms.date: 12/26/2023
+ms.date: 01/05/2025
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
 
 # How Defender for Cloud Apps helps protect your Salesforce environment
 
+As a major CRM cloud provider, Salesforce incorporates large amounts of sensitive information about customers, pricing playbooks, and major deals inside your organization. Being a business-critical app, Salesforce is accessed and used by people inside your organization and by others outside of it (such as partners and contractors) for various purposes. In many cases, a large proportion of your users accessing Salesforce have low awareness of security and might put your sensitive information at risk by unintentionally sharing it. In other instances, malicious actors might gain access to your most sensitive customer-related assets.
 
-
-As a major CRM cloud provider, Salesforce incorporates large amounts of sensitive information about customers, pricing playbooks, and major deals inside your organization. Being a business-critical app, Salesforce is accessed and used by people inside your organization and by others outside of it (such as partners and contractors) for various purposes. In many cases, a large proportion of your users accessing Salesforce have low awareness of security and might put your sensitive information at risk by unintentionally sharing it. In other instances, malicious actors may gain access to your most sensitive customer-related assets.
-
-Connecting Salesforce to Defender for Cloud Apps gives you improved insights into your users' activities, provides threat detection using machine learning based anomaly detections and information protection detections (such as detecting external information sharing), enables automated remediation controls, and detects threats from enabled third-party apps in your organization.
+Connecting Salesforce to Defender for Cloud Apps gives you improved insights into your users' activities, provides threat detection using machine learning based anomaly detections and information protection detections (such as detecting external information sharing). It also enables automated remediation controls, and detects threats from enabled third-party apps in your organization.
 
 [!INCLUDE [security-posture-management-connector](includes/security-posture-management-connector.md)]
 
@@ -25,6 +23,13 @@ Connecting Salesforce to Defender for Cloud Apps gives you improved insights int
 - Malicious third-party apps and Google add-ons
 - Ransomware
 - Unmanaged bring your own device (BYOD)
+
+
+### Prerequisites
+
+- Install and authorize the Salesforce Connected App in the target Salesforce org before you start the connection process. Salesforce enforces usage restrictions on Connected Apps. For more information, see:[Prepare for Connected App Usage Restrictions Change](https://help.salesforce.com/s/articleView?id=005132365&type=1)
+
+- Assign the **Approve Uninstalled Connected Apps** permission to the Salesforce service account used to connect Microsoft Defender for Cloud Apps. Salesforce requires this permission to connect third-party apps via OAuth.
 
 ## How Defender for Cloud Apps helps to protect your environment
 
@@ -80,72 +85,42 @@ Review our best practices for [securing and collaborating with external users](b
 
 ## Connect Salesforce to Microsoft Defender for Cloud Apps
 
+### Prerequisites 
+
+- For all integrations other than SSPM, make sure that Salesforce Shield is available for your Salesforce instance.
+
 This section provides instructions for connecting Microsoft  Defender for Cloud Apps to your existing Salesforce account using the app connector API. This connection gives you visibility into and control over Salesforce use.
 
 [!INCLUDE [security-posture-management-connector](includes/security-posture-management-connector.md)]
 
-### How to connect Salesforce to Defender for Cloud Apps
 
-> [!NOTE]
-> Salesforce Shield should be available for your Salesforce instance as a prerequisite for this integration in all supported abilities except SSPM
+1. In your Salesforce account, create a dedicated service admin account for Defender for Cloud Apps.
 
-1. It's recommended to have a dedicated service admin account for Defender for Cloud Apps.
+1. Make sure that the Salesforce account is assigned to one of the following editions, which support REST API access:
 
-1. Validate that REST API is enabled in Salesforce.
+    - Performance
+    - Enterprise
+    - Unlimited
+    - Developer
+    - Professional. REST API must be added to the Professional edition separately.
+ 
 
-    Your Salesforce account must be one of the following editions that include REST API support:
+1. Create a new profile for the Defender for Cloud Apps service account. This profile will be used to configure the App connector.
 
-    **Performance**, **Enterprise**, **Unlimited**, or **Developer**.
+1. Make sure that the service account profile includes the following permissions:
 
-    The **Professional** edition doesn't have REST API by default, but it can be added on demand.
+    - **API Enabled**
+    - **View All Data**
+    - **Manage Salesforce CRM Content**
+    - **Manage Users**
+    - **[Query All Files](https://go.microsoft.com/fwlink/?linkid=2106480)**
+    - **Modify Metadata Through Metadata API Functions**
+    - **View Setup And Configuration**
 
-    Check to see that your edition has REST API available and enabled as follows:
-
-    * Sign in to your Salesforce account and go to the **Setup Home** page.
-
-    * Under **Administration** -> **Users**, go to the **Profiles** page.
-
-        ![Salesforce manage users profiles.](media/salesforce-profiles.png)
-
-    * Create a new profile by selecting **New Profile**.
-    * Choose the profile you just created to deploy Defender for Cloud Apps and select **Edit**. This profile will be used for the Defender for Cloud Apps service account to set up the App connector.
-
-         ![Salesforce edit profile.](media/salesforce-edit-profile.png)
-
-    * Make sure you have the following checkboxes enabled:
-      * **API Enabled**
-      * **View All Data**
-      * **Manage Salesforce CRM Content**
-      * **Manage Users**
-      * **[Query All Files](https://go.microsoft.com/fwlink/?linkid=2106480)**
-      * **Modify Metadata Through Metadata API Functions**
-      * **View Setup And Configuration**
-
-      If these checkboxes aren't selected, you may need to contact Salesforce to add them to your account.
-
-1. If your organization has **Salesforce CRM Content** enabled, make sure that the current administrative account has it enabled as well.
-    1. Go to the Salesforce **Setup Home** page.
-
-    1. Under **Administration** -> **Users**, go to the **Users** page.
-
-        ![Salesforce menu users.](media/salesforce-menu-users.png)
-
-    1. Select the current administrative user to your dedicated Defender for Cloud Apps user.
-
-    1. Make sure that the **Salesforce CRM Content User** check box is selected.
-
-        ![Salesforce crm content user.](media/salesforce-crm-content-user.png)
-
-    1. Go to **Setup Home** -> **Security** -> **Session Settings**. Under **Session Settings**, make sure that  **Lock sessions to the IP address from which they originated** check box is **not** selected.
-
-        ![Salesforce session settings.](media/salesforce-setup-session-settings.png)
-
-    1. Select **Save**.
-
-   1. Go to **Apps** -> **Feature Settings** -> **Salesforce Files** ->  **Content Deliveries and Public Links**.
-    1. Select **Edit** and then select **Checked Content Deliveries feature can be enabled for users**
-
-    1. Select **Save**.
+1. If **Salesforce CRM Content** is active in your organization:
+ - Grant Salesforce CRM Content access to the Defender for Cloud Apps service admin account.
+ - Turn off **Lock sessions to the IP address from which they originated** for the service account profile.
+ - Turn on **Content Deliveries and Public Links**. 
 
 > [!NOTE]
 > The Content Deliveries feature needs to be enabled for Defender for Cloud Apps to query file sharing data. For more information, see [ContentDistribution](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contentdistribution.htm).
@@ -156,7 +131,7 @@ This section provides instructions for connecting Microsoft  Defender for Cloud 
 
 1. In the **App connectors** page, select **+Connect an app** followed by **Salesforce**.
 
-    ![Connect Salesforce.](media/connect-salesforce.png)
+    :::image type="content" source="media/connect-salesforce.png" alt-text="Screenshot that shows how to add the Salesforce app connector in the Defender portal." lightbox="media/connect-salesforce.png":::
 
 1. In the next window, give the connection a name and select **Next**.
 
@@ -164,7 +139,7 @@ This section provides instructions for connecting Microsoft  Defender for Cloud 
 
 1. This opens the Salesforce sign in page. Enter your credentials to allow Defender for Cloud Apps access to your team's Salesforce app.
 
-    ![Salesforce sign-in.](media/salesforce-logon.png)
+    :::image type="content" source="media/salesforce-logon.png" alt-text="Screenshot that shows a pop up and how to enter your Salesforce credentials." lightbox="media/salesforce-logon.png":::
 
 1. Salesforce will ask you if you want to allow Defender for Cloud Apps access to your team information and activity log and perform any activity as any team member. To continue, select **Allow**.
 
@@ -178,24 +153,24 @@ After connecting Salesforce, you'll receive Events as follows: Log in events and
 
 > [!NOTE]
 > Defender for Cloud Apps throttling is calculated solely on its own API calls with Salesforce, not with those of any other applications making API calls with Salesforce.
-> Limiting API calls due to the limitation may slow down the rate at which data is ingested in Defender for Cloud Apps, but usually catches up over night.
+>Limiting API calls due to throttling may temporarily slow data ingestion in Defender for Cloud Apps, but the process typically catches up overnight
 
 > [!NOTE]
-> If your Salesforce instance is not in English, make sure to select the appropriate **language** attribute value for the integration service admin account.
+> If your Salesforce instance isn't in English, select the appropriate **language** attribute value for the integration service admin account.
 >
 > To change the language attribute, navigate to **Administration** -> **Users** -> **User** and open the integration system admin account. Now navigate to **Locale Settings** -> **Language** and select the desired language.
 
-Salesforce events are processed by Defender for Cloud Apps as follows:
+Defender for Cloud Apps processeS Salesforce events as follows:
 
 * Sign-in events every 15 minutes
 * Setup audit trails every 15 minutes
 * Event logs every 1 hour. For more information about Salesforce events, see [Using event monitoring](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/using_resources_event_log_files.htm).
 
-If you have any problems connecting the app, see [Troubleshooting App Connectors](troubleshooting-api-connectors-using-error-messages.md).
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Control cloud apps with policies](control-cloud-apps-with-policies.md)
+- If you have any problems connecting the app, see [Troubleshooting App Connectors](troubleshooting-api-connectors-using-error-messages.md).
 
-[!INCLUDE [Open support ticket](includes/support.md)]
+- [Control cloud apps with policies](control-cloud-apps-with-policies.md)
+
+

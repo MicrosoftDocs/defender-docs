@@ -2,8 +2,8 @@
 title: Troubleshoot Microsoft Defender Antivirus scan issues
 description: Troubleshoot antivirus scan issues, such as scan not finishing or scans affecting device performance. 
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -77,7 +77,7 @@ The following table summarizes antivirus settings in Microsoft Intune for Window
 | Scan Schedule | Scheduler Randomization Time | |
 | Scan Schedule | Turn on scan after Security intelligence update | Turn on scan after Security intelligence update. Keep in mind that this setting is only available through Settings Catalog. |
 
-In an Intune policy and in [Defender for Endpoint Security Settings Management](/defender-endpoint/mde-security-settings-management), you can configure two scanning schedules:
+In an Intune policy and in <a href="/intune/intune-service/protect/mde-security-integration" target="_blank" rel="noopener noreferrer">Defender for Endpoint Security Settings Management</a>, you can configure two scanning schedules:
 
 - **A daily quick scan**: You can configure the time a daily quick scan runs. Disabling or not configuring disables a daily quick scan.
 
@@ -230,5 +230,5 @@ Get-WinEvent -LogName 'Microsoft-Windows-Windows Defender/Operational' | where i
 
 ## See also
 
-- [Configure scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md)
+- [About scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md)
 - [Exclusions overview](navigate-defender-endpoint-antivirus-exclusions.md)

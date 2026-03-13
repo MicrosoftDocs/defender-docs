@@ -4,8 +4,8 @@ description: Learn about the methods and properties of the Incidents resource ty
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: macapara
-author: mjcaparas
+ms.author: edbaynash
+author: EdB-MSFT
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro

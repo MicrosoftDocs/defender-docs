@@ -17,9 +17,9 @@ ms.custom:
   - seo-marvel-apr2020
 description: Authenticated Received Chain (ARC) is an email authentication method that tries to preserve authentication results across devices and any message modification that occurs between the sender and recipient.
 ms.service: defender-office-365
-ms.date: 04/30/2025
+ms.date: 02/11/2026
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -57,14 +57,14 @@ After an admin adds a trusted ARC sealer in the Defender portal, Microsoft 365 u
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Core Security settings (manage)** or **Authorization and settings/Security settings/Core Security settings (read)**.
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo): Membership in the **Organization Management** or **Security Administrator** role groups.
-  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup> or **Security Administrator** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
+  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>. Members of the Security Administrator role can't access email authentication settings in the Defender portal.
 
     > [!IMPORTANT]
     > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## Use the Microsoft Defender portal to add trusted ARC sealers
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Email Authentication Settings** in the **Rules** section \> **ARC** . Or, to go directly to the **Email authentication settings** page, use <https://security.microsoft.com/authentication>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Email Authentication Settings** in the **Rules** section \> **ARC** . Or, to go directly to the **Email authentication settings** page, use <https://security.microsoft.com/authentication>.
 
 2. On the **Email authentication settings** page, verify that the **ARC** tab is selected, and then select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add**.
 
@@ -102,7 +102,7 @@ If you'd rather use PowerShell to view, add, or remove trusted ARC sealers, conn
   Set-ArcConfig -Identity [TenantId\]Default -ArcTrustedSealers "Domain1","Domain2",..."DomainN"
   ```
 
-  The TenantId\ value isn't required in your own organization, only in delegated organizations. It's a GUID that's visible in many admin portal URLs in Microsoft 365 (the `tid=` value). For example, a32d39e2-3702-4ff5-9628-31358774c091.
+  The TenantId\ value isn't required in your own organization, only in delegated organizations. It's a GUID that's visible in many admin portal URLs in Microsoft 365 (the `tid=` value). For example, aaaabbbb-0000-cccc-1111-dddd2222eeee.
 
   This example configures "cohovineyard.com" and "tailspintoys.com" as the only trusted ARC sealers in the organization.
 

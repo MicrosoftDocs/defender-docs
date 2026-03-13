@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint Potentially unwanted applications (PUA) d
 description: Demonstration to show how the Potentially Unwanted Applications (PUA) protection feature can identify and block PUAs from downloading and installing on endpoints.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -21,8 +21,8 @@ appliesto:
   - Microsoft Defender for Business
   - Microsoft Defender for Individuals
   - Microsoft Defender Antivirus
-
 ---
+
 # Potentially unwanted applications (PUA) demonstration
 
 
@@ -38,7 +38,7 @@ The Potentially Unwanted Applications (PUA) protection feature in Microsoft Defe
 
 - Windows 11 or Windows 10
 - Windows Server 2022
--  Windows Server 2019
+- Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2
 - Windows Server 2008 R2 SP1
@@ -48,13 +48,13 @@ The Potentially Unwanted Applications (PUA) protection feature in Microsoft Defe
 ## Scenario
 
 1. Go to [http://www.amtso.org/feature-settings-check-potentially-unwanted-applications/](http://www.amtso.org/feature-settings-check-potentially-unwanted-applications/)
-2. Click "Download the Potentially Unwanted Application 'test' file" link
-3. After downloading the file, it's automatically blocked and prevented from running.
+1. Click "Download the Potentially Unwanted Application 'test' file" link
+1. After downloading the file, it's automatically blocked and prevented from running.
 
 ## See also
 
 [Detect and block Potentially Unwanted Applications](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md)
 
 [Microsoft Defender for Endpoint - demonstration scenarios](defender-endpoint-demonstrations.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

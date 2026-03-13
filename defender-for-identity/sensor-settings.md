@@ -18,7 +18,7 @@ This article explains how to configure and manage Microsoft Defender for Identit
 
 1. Select the **Sensors** page, which displays all of your Defender for Identity sensors. For each sensor, you'll see its name, its domain membership, the version number, if updates should be delayed, the service status, sensor status, health status, the number of health issues, and when the sensor was created. For details about each column, see [Sensor details](#sensor-details).
 
-    [![Sensor page.](media/sensor-page.png)](media/sensor-page.png#lightbox)
+   :::image type="content" source="media/download-sensor/sensor-page.png" alt-text="Screenshot that shows where to find the sensors page in the Microsoft Defender portal.":::
 
 1. If you select **Filters**, you can choose which filters will be available. Then with each filter, you can choose which sensors to display.
 

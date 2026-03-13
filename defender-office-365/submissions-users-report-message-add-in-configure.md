@@ -20,7 +20,7 @@ ms.collection:
 description: Learn how to transition from the Report Message or the Report Phishing add-ins for all version of Outlook to the build in Report button all versions of Outlook.
 ms.service: defender-office-365
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -70,9 +70,9 @@ The rest of this article describes how to remove the Report Message and Report P
     > [!IMPORTANT]
     > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
--  The Report Message and Report Phishing add-ins now use Nested app authentication. For more information, see [Nested app auth requirement set](/javascript/api/requirement-sets/common/nested-app-auth-requirement-sets) . If your Outlook client doesn't support the required NAA authentication, we suggest updating clients in the Microsoft admin center or advising users to use the built-in **Report** button.
+- The Report Message and Report Phishing add-ins now use Nested app authentication. For more information, see [Nested app auth requirement set](/javascript/api/requirement-sets/common/nested-app-auth-requirement-sets) . If your Outlook client doesn't support the required NAA authentication, we suggest updating clients in the Microsoft admin center or advising users to use the built-in **Report** button.
 
--  For organizational removals, the organization needs to be configured to use OAuth authentication. For more information, see [Determine if Centralized Deployment of add-ins works for your organization](/Microsoft-365/admin/manage/centralized-deployment-of-add-ins).
+- For organizational removals, the organization needs to be configured to use OAuth authentication. For more information, see [Determine if Centralized Deployment of add-ins works for your organization](/Microsoft-365/admin/manage/centralized-deployment-of-add-ins).
 
 - For more information on how to report a message using reporting in Outlook, see [Report false positives and false negatives in Outlook](submissions-outlook-report-messages.md).
 

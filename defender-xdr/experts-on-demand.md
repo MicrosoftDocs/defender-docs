@@ -7,8 +7,8 @@ ms.service: defender-experts-for-hunting
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
-ms.author: vpattnaik
-author: vpattnai
+ms.author: pauloliveria
+author: poliveria
 ms.custom: 
 - cx-ti
 - cx-ean
@@ -41,7 +41,7 @@ Select **Ask Defender Experts** directly inside the Microsoft 365 security porta
 - Gain clarity into suspicious devices, alerts, or incidents and take next steps if faced with an advanced attacker
 - Determine risks and available protections related to threat actors, campaigns, or emerging attacker techniques
 
- :::image type="content" source="media/ask-defender-expert-dialog.png" alt-text="Screenshot of the Ask Defender Experts dialog box." lightbox="media/ask-defender-expert-dialog.png":::
+ :::image type="content" source="media/experts-on-demand/ask-defender-expert-dialog.png" alt-text="Screenshot of the Ask Defender Experts dialog box." lightbox="media/experts-on-demand/ask-defender-expert-dialog.png":::
 
 ## Required permissions for using Ask Defender Experts
 
@@ -67,19 +67,19 @@ The option to **Ask Defender Experts** is available in several places throughout
 
 - **Device page actions menu**:
 
-  :::image type="content" source="/defender/media/mte/defenderexperts/device-page-actions-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Device page action menu in the Microsoft Defender portal." lightbox="/defender/media/mte/defenderexperts/device-page-actions-menu.png":::
+  :::image type="content" source="media/experts-on-demand/device-page-actions-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Device page action menu in the Microsoft Defender portal." lightbox="media/experts-on-demand/device-page-actions-menu.png":::
 
 - **Device inventory page flyout menu**:
 
-  :::image type="content" source="/defender/media/mte/defenderexperts/device-inventory-flyout-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Device inventory page flyout menu in the Microsoft Defender portal." lightbox="/defender/media/mte/defenderexperts/device-inventory-flyout-menu.png":::
+  :::image type="content" source="media/experts-on-demand/device-inventory-flyout-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Device inventory page flyout menu in the Microsoft Defender portal." lightbox="media/experts-on-demand/device-inventory-flyout-menu.png":::
 
 - **Alerts page flyout menu**:
 
-  :::image type="content" source="/defender/media/mte/defenderexperts/alerts-flyout-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Alerts page flyout menu in the Microsoft Defender portal." lightbox="/defender/media/mte/defenderexperts/alerts-flyout-menu.png":::
+  :::image type="content" source="media/alerts-flyout-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Alerts page flyout menu in the Microsoft Defender portal." lightbox="media/alerts-flyout-menu.png":::
 
 - **Incidents page actions menu**:
 
-  :::image type="content" source="/defender/media/mte/defenderexperts/incidents-page-actions-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Incidents page actions menu in the Microsoft Defender portal." lightbox="/defender/media/mte/defenderexperts/incidents-page-actions-menu.png":::
+  :::image type="content" source="media/incidents-page-actions-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Incidents page actions menu in the Microsoft Defender portal." lightbox="media/incidents-page-actions-menu.png":::
 
 ## Where to view responses from Defender Experts
 
@@ -87,13 +87,13 @@ The option to **Ask Defender Experts** is available in several places throughout
 
 You can view responses to inquiries submitted to Ask Defender Experts from up to six months ago by navigating to **Reports** > **Defender Experts messages**. You can also ask follow-up questions or reply with more information to Defender Experts from this page.
 
-:::image type="content" source="media/inportal-managed-response.png" alt-text="Screenshot of in-portal managed response." lightbox="media/inportal-managed-response.png":::
+:::image type="content" source="media/experts-on-demand/inportal-managed-response.png" alt-text="Screenshot of in-portal managed response." lightbox="media/experts-on-demand/inportal-managed-response.png":::
 
 ### Email
 
 If you included contact email addresses when submitting your inquiry, they'll receive an email notification when a response from Defender Experts is posted.
 
-:::image type="content" source="media/email-based-managed-response.png" alt-text="Screenshot of email based managed response." lightbox="media/email-based-managed-response.png":::
+:::image type="content" source="media/experts-on-demand/email-based-managed-response.png" alt-text="Screenshot of email based managed response." lightbox="media/experts-on-demand/email-based-managed-response.png":::
 
 ## Sample questions you can ask from Defender Experts
 
@@ -137,7 +137,7 @@ The service doesn't cover the following scenarios:
 
 - **Inquiries related to non-Microsoft Defender XDR products**- Defender Experts don't handle inquiries on non-Defender XDR products such as Microsoft Defender for Cloud, Microsoft Defender for IoT, Microsoft Sentinel, Microsoft Purview, Microsoft Priva, and other third-party cybersecurity products.
 
-- **Inquiries regarding bugs**- Defender Experts don't handle inquiries regarding bugs in your product experience in the Defender XDR portal, such as, missing data on the alert or incident page or a recommended action not completing when you action it. You can reach out to Microsoft Support via the [Services Hub](https://serviceshub.microsoft.com/home) regarding such issues.
+- **Inquiries regarding bugs**- Defender Experts don't handle inquiries regarding bugs in your product experience in the Microsoft Defender portal, such as, missing data on the alert or incident page or a recommended action not completing when you action it. You can reach out to Microsoft Support via the [Services Hub](https://serviceshub.microsoft.com/home) regarding such issues.
 
 - **Inquiries related to security incident response issues**- Ask Defender Experts isn't a security incident response service. It's intended to provide a better understanding of complex threats affecting your organization. Engage with your own security incident response team to address urgent security incident response issues. If you don't have your own security incident response team and would like Microsoft's help, create a support request in the [Premier Services Hub](/services-hub/).
 

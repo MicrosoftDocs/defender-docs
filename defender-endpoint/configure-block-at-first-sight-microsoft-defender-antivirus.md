@@ -74,20 +74,19 @@ Microsoft Defender Antivirus uses multiple detection and prevention technologies
 
 1. In the Microsoft Intune admin center (<https://intune.microsoft.com>), go to **Endpoint security** \> **Antivirus**.
 
-2. Select an existing policy, or create a new policy using the **Microsoft Defender Antivirus** profile type. In our example, we selected **Windows 10, Windows 11, or Windows Server** for the platform.
+1. Select an existing policy, or create a new policy using the **Microsoft Defender Antivirus** profile type. In our example, we selected **Windows 10, Windows 11, or Windows Server** for the platform.
 
    :::image type="content" source="media/intune-mdav-policy.png" alt-text="Screenshot of new MDAV policy creation in Intune." lightbox="media/intune-mdav-policy.png":::
 
-3. Set **Allow cloud protection** to **Allowed. Turns on Cloud Protection**. 
-
+1. Set **Allow cloud protection** to **Allowed. Turns on Cloud Protection**. 
    :::image type="content" source="media/intune-mdav-cpallowed.png" alt-text="Screenshot of Cloud Protection set to allowed in Intune.":::
 
-4. Scroll down to **Submit Samples Consent**, and select one of the following settings:
+1. Scroll down to **Submit Samples Consent**, and select one of the following settings:
 
    - **Send all samples automatically**
    - **Send safe samples automatically**
 
-5. Apply the Microsoft Defender Antivirus profile to a group, such as **All users**, **All devices**, or **All users and devices**.
+1. Apply the Microsoft Defender Antivirus profile to a group, such as **All users**, **All devices**, or **All users and devices**.
 
 ## Turn on block at first sight with Group Policy
 
@@ -96,16 +95,16 @@ Microsoft Defender Antivirus uses multiple detection and prevention technologies
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure and select **Edit**.
 
-2. Using the **Group Policy Management Editor** go to **Computer configuration** \> **Administrative templates** \> **Windows Components** \> **Microsoft Defender Antivirus** \> **MAPS**.
+1. Using the **Group Policy Management Editor** go to **Computer configuration** \> **Administrative templates** \> **Windows Components** \> **Microsoft Defender Antivirus** \> **MAPS**.
 
-3. In the MAPS section, double-click **Configure the 'Block at First Sight' feature**, and set it to **Enabled**, and then select **OK**.
+1. In the MAPS section, double-click **Configure the 'Block at First Sight' feature**, and set it to **Enabled**, and then select **OK**.
 
     > [!IMPORTANT]
     > Setting to **Always prompt (0)** lowers the protection state of the device. Setting to **Never send (2)** means block at first sight won't function.
 
-4. In the MAPS section, double-click **Send file samples when further analysis is required**, and set it to **Enabled**. Under **Send file samples when further analysis is required**, select **Send all samples**, and then select **OK**.
+1. In the MAPS section, double-click **Send file samples when further analysis is required**, and set it to **Enabled**. Under **Send file samples when further analysis is required**, select **Send all samples**, and then select **OK**.
 
-5. Redeploy your Group Policy Object across your network as you usually do.
+1. Redeploy your Group Policy Object across your network as you usually do.
 
 ## Confirm block at first sight is enabled on individual client devices
 
@@ -113,11 +112,11 @@ You can confirm that block at first sight is enabled on individual client device
 
 1. Open the Windows Security app.
 
-2. Select **Virus & threat protection**, and then, under **Virus & threat protection settings**, select **Manage Settings**.
+1. Select **Virus & threat protection**, and then, under **Virus & threat protection settings**, select **Manage Settings**.
 
    :::image type="content" source="/defender/media/wdav-protection-settings-wdsc.png" alt-text="The Virus & threat protection settings label in the Windows Security app" lightbox="/defender/media/wdav-protection-settings-wdsc.png":::
 
-3. Confirm that **Cloud-delivered protection** and **Automatic sample submission** are both turned on.
+1. Confirm that **Cloud-delivered protection** and **Automatic sample submission** are both turned on.
 
 > [!NOTE]
 >
@@ -133,25 +132,25 @@ You can confirm that block at first sight is enabled on individual client device
 
 1. Go to the Microsoft Intune admin center (<https://intune.microsoft.com>) and sign in.
 
-2. Go to **Endpoint security** \> **Antivirus**, and then select your Microsoft Defender Antivirus policy.
+1. Go to **Endpoint security** \> **Antivirus**, and then select your Microsoft Defender Antivirus policy.
 
-3. Under **Manage**, choose **Properties**.
+1. Under **Manage**, choose **Properties**.
 
-4. Next to **Configuration settings**, choose **Edit**.
+1. Next to **Configuration settings**, choose **Edit**.
 
-5. Set **Allow cloud protection** to **Not allowed. Turns off Cloud Protection**. 
+1. Set **Allow cloud protection** to **Not allowed. Turns off Cloud Protection**. 
 
-6. Review and save your settings.
+1. Review and save your settings.
 
 ### Turn off block at first sight with Group Policy
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure, and then select **Edit**.
 
-2. Using the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
+1. Using the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
 
-3. Expand the tree through **Windows components** \> **Microsoft Defender Antivirus** \> **MAPS**.
+1. Expand the tree through **Windows components** \> **Microsoft Defender Antivirus** \> **MAPS**.
 
-4. Double-click **Configure the 'Block at First Sight' feature** and set the option to **Disabled**.
+1. Double-click **Configure the 'Block at First Sight' feature** and set the option to **Disabled**.
 
     > [!NOTE]
     > Disabling block at first sight doesn't disable or alter the prerequisite group policies.
@@ -166,12 +165,11 @@ If you have a personal device that isn't managed by an organization, you might b
 
 1. On your Windows 10 or Windows 11 computer, open the Windows Security app.
 
-2. Select **Virus & threat protection**.
+1. Select **Virus & threat protection**.
 
-3. Under **Virus & threat protection settings**, select **Manage settings**.
+1. Under **Virus & threat protection settings**, select **Manage settings**.
 
-4. Take one of the following steps:
-
+1. Take one of the following steps:
    - To enable block at first sight, make sure that both **Cloud-delivered protection** and **Automatic sample submission** are both turned on.
 
    - To disable block at first sight, turn off **Cloud-delivered protection** or **Automatic sample submission**.
@@ -186,5 +184,5 @@ If you have a personal device that isn't managed by an organization, you might b
 - [Stay protected with Windows Security](https://support.microsoft.com/windows/stay-protected-with-windows-security-2ae0363d-0ada-c064-8b56-6a39afb6a963)
 - [Onboard to Microsoft Defender for Endpoint](onboarding.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

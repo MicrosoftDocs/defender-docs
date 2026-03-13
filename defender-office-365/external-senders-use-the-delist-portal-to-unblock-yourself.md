@@ -21,7 +21,7 @@ ms.custom:
 description: Learn how to resolve 5.7.606-649 Access denied, banned sending IP errors, and what to do for 5.7.511 Access denied, banned sender errors for sending mail to Microsoft 365.
 ms.service: defender-office-365
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -68,7 +68,7 @@ For these delivery failures, we provide the **Office 365 Anti-Spam IP Delist Por
 
 5. In the delist portal, select **Delist IP**.
 
-After the IP address is removed from the blocked senders list, email messages that pass the [default email protections for cloud mailboxes](eop-about.md) and [Microsoft Defender for Office 365](mdo-about.md) (including [composite authentication](email-authentication-about.md#composite-authentication)) are delivered to Microsoft 365 recipients. Verify that messages aren't abusive or malicious. Otherwise, the IP address might be blocked again.
+After the IP address is removed from the blocked senders list, email messages that pass [the built-in security features for all cloud mailboxes](eop-about.md) and [Microsoft Defender for Office 365](mdo-about.md) (including [composite authentication](email-authentication-about.md#composite-authentication)) are delivered to Microsoft 365 recipients. Verify that messages aren't abusive or malicious. Otherwise, the IP address might be blocked again.
 
 > [!NOTE]
 > Results can vary widely before the restrictions are removed. It might take up to 24 hours or longer.

@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint device timeline
 description: Use Microsoft Defender for Endpoint device timeline and timeline event flags.
 keywords: Defender for Endpoint device timeline, event flags
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.reviewer: efratka, alonshar
 ms.localizationpriority: medium
 manager: bagol
@@ -105,6 +105,11 @@ On the upper right-hand side of the device timeline, you can choose a date range
 
 You can customize which columns to expose. You can also filter for flagged events by data type or by event group.
 
+**Timeline data retention:** Device timeline events in Microsoft Defender for Endpoint are retained according to the organization’s data retention policy configured in the security portal and the underlying workspace settings. By default, security event data (including device timeline items) in Defender for Endpoint is retained for 90 days. If your tenant sends logs to a connected Microsoft Sentinel or Log Analytics workspace with a custom retention period, then timeline events retained there may be available for longer durations, as defined by those retention settings.
+
+> [!IMPORTANT]
+> The availability of historical timeline data depends on your retention configuration. If the default 90-day retention is insufficient for your investigation or compliance needs, consider exporting events to long-term storage or increasing the retention period in the connected workspace.
+
 ### Choose columns to expose
 
 You can choose which columns to expose in the timeline by selecting the **Choose columns** button.
@@ -138,17 +143,17 @@ While navigating the device timeline, you can search and filter for specific eve
 
 1. Find the event that you want to flag.
 
-2. Select the flag icon in the Flag column. 
+1. Select the flag icon in the Flag column. 
 
 :::image type="content" source="media/device-flags.png" alt-text="The device timeline flag" lightbox="media/device-flags.png":::
 
 ## View flagged events
 
 1. In the timeline **Filters** section, enable **Flagged events**.
-2. Select **Apply**. Only flagged events are displayed.
+1. Select **Apply**. Only flagged events are displayed.
 
 You can apply more filters by clicking on the time bar. This will only show events prior to the flagged event.  
 
 :::image type="content" source="media/device-flag-filter.png" alt-text="Screenshot that shows the device timeline flag with the filter switched on." lightbox="media/device-flag-filter.png":::
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

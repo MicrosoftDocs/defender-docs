@@ -4,8 +4,8 @@ description: Learn how to run advanced hunting queries using Microsoft Defender 
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: macapara
-author: mjcaparas
+ms.author: edbaynash
+author: EdB-MSFT
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro

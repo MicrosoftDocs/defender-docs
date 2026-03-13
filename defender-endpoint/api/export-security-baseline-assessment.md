@@ -2,12 +2,12 @@
 title: Security baseline assessment methods and properties per device
 description: Provides information about the security baselines APIs that pull "Microsoft Defender Vulnerability Management" data. There are different API calls to get different types of data. In general, each API call contains the requisite data for devices in your organization.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -15,19 +15,14 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 01/22/2025
+ms.date: 11/16/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Vulnerability Management
-
 ---
+
 # Export security baselines assessment per device
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-> Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](/defender-vulnerability-management/get-defender-vulnerability-management).
 
 There are different API calls to get different types of data. In general, each API call contains the requisite data for devices in your organization.
 
@@ -52,10 +47,10 @@ Returns all security baselines assessments for all devices, on a per-device basi
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md) for details.
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|SecurityBaselinesAssessment.Read.All |'Read all security baselines assessments information'
-Delegated (work or school account)|SecurityBaselinesAssessment.Read|'Read security baselines assessments information'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|SecurityBaselinesAssessment.Read.All|'Read all security baselines assessments information'|
+|Delegated (work or school account)|SecurityBaselinesAssessment.Read|'Read security baselines assessments information'|
 
 ### 1.3 Limitations
 
@@ -82,38 +77,38 @@ GET /api/machines/baselineComplianceAssessmentByMachine
 >
 > The properties defined in the following table are listed alphabetically by property ID. When running this API, the resulting output will not necessarily be returned in the same order listed in this table.
 
-Property (ID)|Data type|Description
-:---|:---|:---
-|configurationId|String|Unique identifier for a specific configuration in the baseline benchmark.
-|profileId|String|Unique identifier for the profile assessed.
-|deviceId|String|Unique identifier for the device in the service.
-|deviceName|String|Fully qualified domain name (FQDN) of the device.
-|isApplicable|Boolean|Indicates whether the configuration is applicable to this device.
-|isCompliant|Boolean|Indicates whether the device is compliant with configuration.
-|id|String|Unique identifier for the record, which is a combination of DeviceId, ProfileId, and ConfigurationId.
-|osVersion|String|Specific version of the operating system running on the device.
-|osPlatform|String|Operating system platform running on the device. Specific operating systems with variations within the same family, such as Windows 10 and Windows 11. See [MDVM supported operating systems and platforms](/defender-vulnerability-management/tvm-supported-os) for details.
-|rbacGroupId|Int|The role-based access control (RBAC) group Id. If the device isn't assigned to any RBAC group, the value will be "Unassigned." If the organization doesn't contain any RBAC groups, the value will be "None."
-|rbacGroupName|String|The role-based access control (RBAC) group. If the device isn't assigned to any RBAC group, the value will be "Unassigned." If the organization doesn't contain any RBAC groups, the value will be "None."
-|DataCollectionTimeOffset|DateTime|The time the data was collected from the device. This field may not appear if no data was collected.
-|ComplianceCalculationTimeOffset|DateTime|The time the assessment calculation was made.
-|RecommendedValue|String|Set of expected values for the current device setting to be complaint.
-|CurrentValue|String|Set of detected values found on the device.
-|Source|String|The registry path or other location used to determine the current device setting.
+|Property (ID)|Data type|Description|
+|---|---|---|
+|configurationId|String|Unique identifier for a specific configuration in the baseline benchmark.|
+|profileId|String|Unique identifier for the profile assessed.|
+|deviceId|String|Unique identifier for the device in the service.|
+|deviceName|String|Fully qualified domain name (FQDN) of the device.|
+|isApplicable|Boolean|Indicates whether the configuration is applicable to this device.|
+|isCompliant|Boolean|Indicates whether the device is compliant with configuration.|
+|id|String|Unique identifier for the record, which is a combination of DeviceId, ProfileId, and ConfigurationId.|
+|osVersion|String|Specific version of the operating system running on the device.|
+|osPlatform|String|Operating system platform running on the device. Specific operating systems with variations within the same family, such as Windows 10 and Windows 11. See [MDVM supported operating systems and platforms](/defender-vulnerability-management/tvm-supported-os) for details.|
+|rbacGroupId|Int|The role-based access control (RBAC) group Id. If the device isn't assigned to any RBAC group, the value will be "Unassigned." If the organization doesn't contain any RBAC groups, the value will be "None."|
+|rbacGroupName|String|The role-based access control (RBAC) group. If the device isn't assigned to any RBAC group, the value will be "Unassigned." If the organization doesn't contain any RBAC groups, the value will be "None."|
+|DataCollectionTimeOffset|DateTime|The time the data was collected from the device. This field may not appear if no data was collected.|
+|ComplianceCalculationTimeOffset|DateTime|The time the assessment calculation was made.|
+|RecommendedValue|String|Set of expected values for the current device setting to be complaint.|
+|CurrentValue|String|Set of detected values found on the device.|
+|Source|String|The registry path or other location used to determine the current device setting.|
 
 ## 1.7 Example
 
 ### 1.7.1 Request example
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/machines/BaselineComplianceAssessmentByMachine
+GET https://api.security.microsoft.com/api/machines/BaselineComplianceAssessmentByMachine
 ```
 
 ### 1.7.2 Response example
 
 ```json
 {
-"@odata.context": " https://api.securitycenter.microsoft.com /api/$metadata#Collection(microsoft.windowsDefenderATP.api.AssetBaselineAssessment)",
+"@odata.context": " https://api.security.microsoft.com /api/$metadata#Collection(microsoft.windowsDefenderATP.api.AssetBaselineAssessment)",
 "value": [
 {
     "id": "0000682575d5d473e82ed4d8680425d152411251_9e1b90be-e83e-485b-a5ec-4a429412e734_1.1.1",
@@ -163,30 +158,30 @@ GET /api/machines/BaselineComplianceAssessmentExport
 ### 2.5 Properties (via files)
 
 > [!NOTE]
-> 
+>
 > - The files are GZIP compressed & in multiline JSON format.
 > - The download URLs are valid for 1 hour unless the `sasValidHours` parameter is used.
 > - To maximize download speeds, make sure you are downloading the data from the same Azure region where your data resides.
 > - Some additional columns might be returned in the response. These columns are temporary and might be removed. Only use the documented columns.
 
-Property (ID)|Data type|Description
-:---|:---|:---
-|Export files|array[string]|A list of download URLs for files holding the current snapshot of the organization.
-|GeneratedTime|String|The time that the export was generated.
+|Property (ID)|Data type|Description|
+|---|---|---|
+|Export files|array[string]|A list of download URLs for files holding the current snapshot of the organization.|
+|GeneratedTime|String|The time that the export was generated.|
 
 ## 2.6 Examples
 
 ### 2.6.1 Request example
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/machines/BaselineComplianceAssessmentExport
+GET https://api.security.microsoft.com/api/machines/BaselineComplianceAssessmentExport
 ```
 
 ### 2.6.2 Response example
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter. contoso.com/api/$metadata#microsoft.windowsDefenderATP.api.ExportFilesResponse",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#microsoft.windowsDefenderATP.api.ExportFilesResponse",
     "exportFiles":
     [
     "https://tvmexportexternalstgeus.blob.core.windows.net/temp-1ebd3d09-d06a-4aad-ab80-ebc536cec61c/2021-12-22/0500/BaselineAssessmentExport/json/OrgId= OrgId=<Org Id>/_RbacGroupId=<Rbac Group Id>/part-00000-c09dfd00-2278-4735-b23a-71733751fcbc.c000.json.gz?sv=ABCD",
@@ -200,5 +195,3 @@ GET https://api.securitycenter.microsoft.com/api/machines/BaselineComplianceAsse
 
 - [Get security baselines assessment profiles](get-security-baselines-assessment-profiles.md)
 - [Get security baselines assessment configurations](get-security-baselines-assessment-configurations.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

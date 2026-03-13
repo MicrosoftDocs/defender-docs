@@ -17,9 +17,9 @@ Before you begin, make sure you meet the following requirements:
 
 - Check that Microsoft Defender for Identity sensor installed. 
 - Confirm the [Identity workload for URBAC](/defender-xdr/activate-defender-rbac#activate-from-the-permissions-and-roles-page) is activated. 
-- Ensure you have the [Global Administrator](/entra/identity/role-based-access-control/permissions-reference) or [Security Administrator](/entra/identity/role-based-access-control/permissions-reference) role in Microsoft Entra ID to create and manage custom roles.
+- Ensure you have the [Security Administrator](/entra/identity/role-based-access-control/permissions-reference) role in Microsoft Entra ID to create and manage custom roles.
 
-- Make sure Authorization permissions are configured through [URBAC](/defender-xdr/manage-rbac) to manage roles without Global Administrator or Security Administrator privileges.
+- Make sure Authorization permissions are configured through [URBAC](/defender-xdr/manage-rbac) to manage roles without Security Administrator privileges.
 
 ### Configure scoping rules
 
@@ -27,7 +27,7 @@ To enable identity scoping, follow these steps:​
 
 1. Navigate to **Permissions > Microsoft Defender XDR > Roles​**.
 
-    :::image type="content" source="media/custom-roles/permissions-roles.png" alt-text="Screenshot showing the roles page in the Defender XDR portal.":::
+    :::image type="content" source="media/custom-roles/permissions-roles.png" alt-text="Screenshot showing the roles page in the Microsoft Defender portal.":::
 
 1. Select **+ Create custom role** and follow the instructions in [Create custom roles with Microsoft Defender XDR Unified RBAC.](/defender-xdr/create-custom-rbac-roles#create-a-custom-role)
 
@@ -56,7 +56,7 @@ The following table lists the current limitations and supported scenarios for sc
 
 > [!NOTE]
 > - Custom roles apply only to new alerts and activities. Alerts and activities triggered before a custom role was created aren't retroactively tagged or filtered.
->
+> - The Exposure Management section in the Defender Portal is not visible to users with an MDI scope assignment.
 > - Microsoft Entra ID IP alerts aren't included within scoped MDI detections.
 
 |Defender for Identity experience |Scoping by OU's|Scoping by AD domain|

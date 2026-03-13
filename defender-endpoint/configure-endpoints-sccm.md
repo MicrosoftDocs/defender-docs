@@ -12,32 +12,32 @@ ms.collection:
 - tier1
 ms.custom: admindeeplinkDEFENDER
 ms.topic: install-set-up-deploy
-ms.date: 10/27/2025
+ms.date: 11/17/2025
 ms.subservice: onboard
 search.appverid: met150
 ---
 
 # Onboard Windows devices using Configuration Manager
 
-
 You can use Configuration Manager to onboard endpoints to the Microsoft Defender for Endpoint service. 
 
 There are several options you can use to onboard devices using Configuration Manager:
 
-- [Onboard devices using System Center Configuration Manager](/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection)
-- [Tenant attach](/mem/configmgr/tenant-attach/endpoint-security-get-started)
+- [Onboard devices using System Center Configuration Manager](/intune/configmgr/protect/deploy-use/defender-advanced-threat-protection)
+- [Tenant attach](/intune/configmgr/tenant-attach/endpoint-security-get-started)
 
 > [!NOTE]
 > Defender for Endpoint doesn't support onboarding during the [Out-Of-Box Experience (OOBE)](/windows-hardware/test/assessments/out-of-box-experience) phase. Make sure users complete OOBE after running Windows installation or upgrading.
 
 You can create a detection rule on a Configuration Manager application to continuously check if a device has been onboarded. An application is a different type of object than a package and program. If a device is not yet onboarded (due to pending OOBE completion or any other reason), Configuration Manager reattempts to onboard the device until the rule detects the status change. For more information, see [Configure Detection Methods in System Center 2012 R2 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682159\(v=technet.10\)#step-4-configure-detection-methods-to-indicate-the-presence-of-the-deployment-type).
 
+[!INCLUDE [Microsoft Defender deployment tool preview](./includes/defender-deployment-tool-preview.md)]
 
 ## Prerequisites
 
 - See [Minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md).
 
-- [Endpoint Protection point site system role](/mem/configmgr/protect/deploy-use/endpoint-protection-site-role). This role is required so that antivirus and attack surface reduction policies are properly deployed to the targeted endpoints. Without this role, endpoints in the device collection won't receive the configured antivirus and attack surface reduction policies.
+- [Endpoint Protection point site system role](/intune/configmgr/protect/deploy-use/endpoint-protection-site-role). This role is required so that antivirus and attack surface reduction policies are properly deployed to the targeted endpoints. Without this role, endpoints in the device collection won't receive the configured antivirus and attack surface reduction policies.
 
 ## Configure sample collection settings
 
@@ -83,35 +83,33 @@ Follow these steps to create a device collection that can be used to onboard end
 
     :::image type="content" source="media/configmgr-device-collections.png" alt-text="Screenshot of the Microsoft Configuration Manager wizard1.":::
 
-2. Select and hold (or right-click) **Device Collection** and select **Create Device Collection**.
+1. Select and hold (or right-click) **Device Collection** and select **Create Device Collection**.
 
     :::image type="content" source="media/configmgr-create-device-collection.png" alt-text="Screenshot of the Microsoft Configuration Manager wizard2.":::
 
-3. Provide a **Name** and **Limiting Collection**, then select **Next**.
+1. Provide a **Name** and **Limiting Collection**, then select **Next**.
 
     :::image type="content" source="media/configmgr-limiting-collection.png" alt-text="Screenshot of the Microsoft Configuration Manager wizard3.":::
 
-4. Select **Add Rule** and choose **Query Rule**.
+1. Select **Add Rule** and choose **Query Rule**.
 
     :::image type="content" source="media/configmgr-query-rule.png" alt-text="Screenshot of the Microsoft Configuration Manager wizard4." :::
 
-5. Select **Next** on the **Direct Membership Wizard** and then select **Edit Query Statement**.
-
+1. Select **Next** on the **Direct Membership Wizard** and then select **Edit Query Statement**.
     :::image type="content" source="media/configmgr-direct-membership.png" alt-text="Screenshot of the Microsoft Configuration Manager wizard5.":::
 
-6. Select **Criteria** and then choose the star icon.
+1. Select **Criteria** and then choose the star icon.
 
     :::image type="content" source="media/configmgr-criteria.png" alt-text="Screenshot of the Microsoft Configuration Manager wizard6.":::
 
-7. Keep criterion type as **simple value**, choose whereas **Operating System - build number**, operator as **is greater than or equal to** and value **14393**, and select **OK**.
-
+1. Keep criterion type as **simple value**, choose whereas **Operating System - build number**, operator as **is greater than or equal to** and value **14393**, and select **OK**.
     :::image type="content" source="media/configmgr-simple-value.png" alt-text="Screenshot of the Microsoft Configuration Manager wizard7.":::
 
-8. Select **Next** and **Close**.
+1. Select **Next** and **Close**.
 
     :::image type="content" source="media/configmgr-membership-rules.png" alt-text="Screenshot of the Microsoft Configuration Manager wizard8.":::
 
-9. Select **Next**.
+1. Select **Next**.
 
     :::image type="content" source="media/configmgr-confirm.png" alt-text="Screenshot of the Microsoft Configuration Manager wizard9.":::
 
@@ -146,7 +144,7 @@ Follow the steps to enable endpoint protection and configuration of custom clien
 
 1. In the **Create Custom Client Device Settings** dialog box, provide a name and a description for the group of settings, and then select **Endpoint Protection**.
 
-1. Configure the Endpoint Protection client settings that you require. For a full list of Endpoint Protection client settings that you can configure, see the Endpoint Protection section in [About client settings.](/mem/configmgr/core/clients/deploy/about-client-settings#endpoint-protection)
+1. Configure the Endpoint Protection client settings that you require. For a full list of Endpoint Protection client settings that you can configure, see the Endpoint Protection section in [About client settings.](/intune/configmgr/core/clients/deploy/about-client-settings#endpoint-protection)
 
     > [!IMPORTANT]
     > Install the Endpoint Protection site system role before you configure client settings for Endpoint Protection.
@@ -158,10 +156,10 @@ Follow the steps to enable endpoint protection and configuration of custom clien
 
 1. In the **Select Collection** dialog box, choose the collection to which you want to deploy the client settings and then click **OK**.The new deployment is shown in the **Deployments** tab of the details pane.
 
-Clients are configured with these settings when they next download client policy. For more information, see [Initiate policy retrieval for a Configuration Manager client.](/mem/configmgr/core/clients/manage/manage-clients)
+Clients are configured with these settings when they next download client policy. For more information, see [Initiate policy retrieval for a Configuration Manager client.](/intune/configmgr/core/clients/manage/manage-clients)
 
 > [!NOTE]
-> For Windows Server 2012 R2 and Windows Server 2016 managed by Configuration Manager 2207 and later versions, onboard using the [Microsoft Defender for Endpoint (MDE) Client (recommended)](/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection#bkmk_2207) setting. Alternatively, you can use older versions of Configuration Manager to perform a migration. For more information, see [Migrating servers from Microsoft Monitoring Agent to the unified solution](application-deployment-via-mecm.md).
+> For Windows Server 2012 R2 and Windows Server 2016 managed by Configuration Manager 2207 and later versions, onboard using the [Microsoft Defender for Endpoint (MDE) Client (recommended)](/intune/configmgr/protect/deploy-use/defender-advanced-threat-protection#bkmk_2207) setting. Alternatively, you can use older versions of Configuration Manager to perform a migration. For more information, see [Migrating servers from Microsoft Monitoring Agent to the unified solution](application-deployment-via-mecm.md).
      
 ### Install the Endpoint Protection client using Command Prompt
 
@@ -227,7 +225,7 @@ For security reasons, the package used to Offboard devices will expire 7 days af
 
 ### Offboard devices using Microsoft Configuration Manager current branch
 
-If you use Microsoft Configuration Manager current branch, see [Create an offboarding configuration file](/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection#create-an-offboarding-configuration-file).
+If you use Microsoft Configuration Manager current branch, see [Create an offboarding configuration file](/intune/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection#create-an-offboarding-configuration-file).
 
 ### Offboard devices using System Center 2012 R2 Configuration Manager
 
@@ -237,9 +235,9 @@ If you use Microsoft Configuration Manager current branch, see [Create an offboa
     1. In the **Deployment method** field, select **System Center Configuration Manager 2012/2012 R2/1511/1602**.
     1. Select **Download package**, and save the .zip file.
 
-2. Extract the contents of the .zip file to a shared, read-only location that can be accessed by the network administrators who will deploy the package. You should have a file named *WindowsDefenderATPOffboardingScript_valid_until_YYYY-MM-DD.cmd*.
+1. Extract the contents of the .zip file to a shared, read-only location that can be accessed by the network administrators who will deploy the package. You should have a file named *WindowsDefenderATPOffboardingScript_valid_until_YYYY-MM-DD.cmd*.
 
-3. Deploy the package by following the steps in the [Packages and Programs in System Center 2012 R2 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg699369\(v=technet.10\)) article.
+1. Deploy the package by following the steps in the [Packages and Programs in System Center 2012 R2 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg699369\(v=technet.10\)) article.
 
    Choose a predefined device collection to deploy the package to.
 
@@ -248,23 +246,23 @@ If you use Microsoft Configuration Manager current branch, see [Create an offboa
 
 ## Monitor device configuration
 
-If you're using Microsoft Configuration Manager current branch, use the built-in Defender for Endpoint dashboard in the Configuration Manager console. For more information, see [Defender for Endpoint - Monitor](/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection#monitor).
+If you're using Microsoft Configuration Manager current branch, use the built-in Defender for Endpoint dashboard in the Configuration Manager console. For more information, see [Defender for Endpoint - Monitor](/intune/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection#monitor).
 
 If you're using System Center 2012 R2 Configuration Manager, monitoring consists of two parts:
 
 1. Confirming the configuration package has been correctly deployed and is running (or has successfully run) on the devices in your network.
 
-2. Checking that the devices are compliant with the Defender for Endpoint service (this ensures the device can complete the onboarding process and can continue to report data to the service).
+1. Checking that the devices are compliant with the Defender for Endpoint service (this ensures the device can complete the onboarding process and can continue to report data to the service).
 
 ### Confirm the configuration package has been correctly deployed
 
 1. In the Configuration Manager console, click **Monitoring** at the bottom of the navigation pane.
 
-2. Select **Overview** and then **Deployments**.
+1. Select **Overview** and then **Deployments**.
 
-3. Select on the deployment with the package name.
+1. Select on the deployment with the package name.
 
-4. Review the status indicators under **Completion Statistics** and **Content Status**.
+1. Review the status indicators under **Completion Statistics** and **Content Status**.
 
     If there are failed deployments (devices with **Error**, **Requirements Not Met**, or **Failed statuses**), you may need to  troubleshoot the devices. For more information, see, [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md).
 
@@ -291,4 +289,4 @@ For more information, see [Introduction to compliance settings in System Center 
 - [Onboard servers to Microsoft Defender for Endpoint](onboard-server.md)
 - [Onboard Windows and Mac client devices to Microsoft Defender for Endpoint](onboard-client.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

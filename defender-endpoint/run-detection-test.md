@@ -3,8 +3,8 @@ title: Run a detection test on a device recently onboarded to Microsoft Defender
 description: Run the detection test script on a device recently onboarded to the Microsoft Defender for Endpoint service to verify that it's properly added.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 ms.date: 10/20/2025
 manager: bagol
@@ -38,7 +38,7 @@ Run the following PowerShell script on a newly onboarded device to verify that i
 
 1. On the device, open Command Prompt as an administrator. 
 
-2. At the prompt, copy and run the following command:
+1. At the prompt, copy and run the following command:
 
    ```powershell
    powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden $ErrorActionPreference = 'silentlycontinue';(New-Object System.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe', 'C:\\test-MDATP-test\\invoice.exe');Start-Process 'C:\\test-MDATP-test\\invoice.exe'
@@ -55,4 +55,4 @@ Run the following PowerShell script on a newly onboarded device to verify that i
 - [Onboard servers](onboard-server.md)
 - [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

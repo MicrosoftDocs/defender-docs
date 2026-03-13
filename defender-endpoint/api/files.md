@@ -2,12 +2,12 @@
 title: File resource type
 description: Retrieve recent Microsoft Defender for Endpoint alerts related to files.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -15,40 +15,18 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 11/12/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # File resource type
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
-
-Represent a file entity in Defender for Endpoint.
-
-## Methods
-
-|Method|Return Type |Description|
-|:---|:---|:---|
-|[Get file](get-file-information.md) | [file](files.md) | Get a single file |
-|[List file related alerts](get-file-related-alerts.md) | [alert](alerts.md) collection | Get the [alert](alerts.md) entities that are associated with the file.|
-|[List file related machines](get-file-related-machines.md) | [machine](machine.md) collection | Get the [machine](machine.md) entities associated with the alert.|
-|[file statistics](get-file-statistics.md) | Statistics summary | Retrieves the prevalence for the given file.|
-
 
 ## Properties
 
 |Property | Type | Description |
-|:---|:---|:---|
+|---|---|---|
 |sha1 | String | Sha1 hash of the file content |
 |sha256 | String | Sha256 hash of the file content |
 |globalPrevalence | Nullable long | File prevalence across organization |
@@ -88,5 +66,3 @@ Represent a file entity in Defender for Endpoint.
     "determinationValue": "PUA:Win32/FusionCore"
 }
 ```
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

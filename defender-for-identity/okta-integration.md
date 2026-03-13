@@ -8,7 +8,7 @@ ms. reviewer: Himanch
 
 # Connect Okta to Microsoft Defender for Identity (Preview)
 
-This page explains how to connect Microsoft Defender for Identity to your Okta account using the Unified Connectors experience. This connection provides visibility into Okta activity and enables shared data collection across Microsoft security products. The Unified Connectors experience allows Defender for Identity to collect Okta system logs once and share them with other supported Microsoft security products, such as Microsoft Sentinel. This reduces API usage, avoids duplicate data collection, and simplifies connector management. For more information, see [Unified connectors overview](/azure/sentinel/unified-connector).
+This page explains how to connect Microsoft Defender for Identity to your Okta account. This connection provides visibility into Okta activity and enables shared data collection across Microsoft security products. The connector allows Defender for Identity to collect Okta system logs once and share them with other supported Microsoft security products, such as Microsoft Sentinel. This reduces API usage, avoids duplicate data collection, and simplifies connector management.
 
 > [!NOTE]
 > If your Okta environment is already integrated with [Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-okta), connecting it to Microsoft Defender for Identity can cause duplicate Okta data, such as user activity, to appear in the Defender portal.

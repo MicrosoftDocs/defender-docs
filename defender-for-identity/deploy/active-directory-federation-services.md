@@ -18,7 +18,7 @@ These considerations apply:
 
 ## Prerequisites
 
-Prerequisites for installing Defender for Identity sensors on AD FS, AD CS, or Microsoft Entra Connect servers are the same as for installing sensors on domain controllers. For more information, see [Microsoft Defender for Identity prerequisites](prerequisites-sensor-version-2.md).
+Prerequisites for installing Defender for Identity sensors on AD FS, AD CS, or Microsoft Entra Connect servers can be found in [Microsoft Defender for Identity prerequisites](prerequisites-sensor-version-2.md) article.
 
 A sensor installed on an AD FS, AD CS, or Microsoft Entra Connect server can't use the local service account to connect to the domain. Instead, you need to configure a [Directory Service Account](directory-service-accounts.md).
 
@@ -110,6 +110,7 @@ $SQLConnection.Close()
 > [!NOTE]
 > This section is applicable only if the Entra Connect database is hosted on an external SQL server instance.
 >
+> Microsoft recommends that you use the most secure authentication flow available. The authentication flow described in this procedure requires a very high degree of trust in the application, and carries risks that are not present in other flows. You should only use this flow when other more secure flows, such as managed identities, aren't viable.
 
 Sensors running on Microsoft Entra Connect servers need to have access to the ADSync database, and have execute permissions for the relevant stored procedures. If you have more than one Microsoft Entra Connect server, make sure to run this across all of them. 
 

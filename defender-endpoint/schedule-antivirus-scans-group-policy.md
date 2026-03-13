@@ -3,8 +3,8 @@ title: Schedule antivirus scans using Group Policy
 description: Use Group Policy to set up antivirus scans
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
 ms.date: 10/20/2025
 ms.reviewer: pauhijbr, ksarens
@@ -24,7 +24,7 @@ appliesto:
 ---
 # Schedule antivirus scans using Group Policy
 
-This article describes how to configure scheduled scans using Group Policy. To learn more about scheduling scans and about scan types, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md). 
+This article describes how to configure scheduled scans using Group Policy. To learn more about scheduling scans and about scan types, see [About scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md).
 
 ## Prerequisites
 
@@ -36,13 +36,13 @@ This article describes how to configure scheduled scans using Group Policy. To l
 
 1. On your Group Policy management machine, in the Group Policy Editor, go to **Computer configuration** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus** \> **Scan**.
 
-2. Right-click the Group Policy Object you want to configure, and then select **Edit**.
+1. Right-click the Group Policy Object you want to configure, and then select **Edit**.
 
-3. Specify the settings for the Group Policy Object, and then select **OK**. 
+1. Specify the settings for the Group Policy Object, and then select **OK**. 
 
 1. Repeat steps for each setting you want to configure.
 
-5. Deploy your Group Policy Object as you normally do. If you need help with Group Policy Objects, see [Create a Group Policy Object](/windows/security/threat-protection/windows-firewall/create-a-group-policy-object).
+1. Deploy your Group Policy Object as you normally do. If you need help with Group Policy Objects, see [Create a Group Policy Object](/windows/security/threat-protection/windows-firewall/create-a-group-policy-object).
 
 > [!NOTE]
 > When configuring scheduled scans, the setting **Start the scheduled scan only when computer is on but not in use** (which is enabled by default) can affect the expected scheduled time by requiring the machine to be idle first.
@@ -139,11 +139,11 @@ For more information, see the [Manage when protection updates should be download
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

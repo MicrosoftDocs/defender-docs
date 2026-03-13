@@ -4,8 +4,8 @@ description: Learn how to migrate down-level servers from Microsoft Monitoring A
 search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: onboard
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -55,24 +55,24 @@ Copy the unified solution package, onboarding script, and migration script to th
 
 1. In the Configuration Manager console, go to **Software Library** > **Applications** > **Create Application**.
 
-2. Select **Manually specify the application information**.
-   :::image type="content" source="media/manual-application-information.png" alt-text="Screenshot of manually specifying the application information selection." lightbox="media/manual-application-information.png":::
+1. Select **Manually specify the application information**.
+    :::image type="content" source="media/manual-application-information.png" alt-text="Screenshot of manually specifying the application information selection." lightbox="media/manual-application-information.png":::
 
-3. Select **Next** on the Software Center screen of the wizard.
+1. Select **Next** on the Software Center screen of the wizard.
 
-4. On the Deployment Types, select **Add**.
+1. On the Deployment Types, select **Add**.
 
-5. Select **Manually to specify the deployment type information** and select **Next**.
+1. Select **Manually to specify the deployment type information** and select **Next**.
 
-6. Give a name to your script deployment and select **Next**.
+1. Give a name to your script deployment and select **Next**.
 
-   :::image type="content" source="media/manual-deployment-information.png" alt-text="Screenshot specifying the script deployment information.":::
+    a. :::image type="content" source="media/manual-deployment-information.png" alt-text="Screenshot specifying the script deployment information.":::
 
-7. Copy the UNC path that your content is located. Example: `\\ServerName\h$\SOFTWARE_SOURCE\path`.
+1. Copy the UNC path that your content is located. Example: `\\ServerName\h$\SOFTWARE_SOURCE\path`.
 
    :::image type="content" source="media/deployment-type-wizard.png" alt-text="Screenshot that shows UNC path copy.":::
 
-8. Set the installation program by using the following command:
+1. Set the installation program by using the following command:
 
      ```powershell
       Powershell.exe -ExecutionPolicy ByPass -File install.ps1 -RemoveMMA <workspace ID> -OnboardingScript .\WindowsDefenderATPOnboardingScript.cmd
@@ -80,9 +80,9 @@ Copy the unified solution package, onboarding script, and migration script to th
 
    Select **Next**, and make sure to add your own Workspace ID in this section.
 
-9. Select **Next**, and then select **add a clause**.
+1. Select **Next**, and then select **add a clause**.
 
-10. The detection method is based on this registry key: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Sense`.
+1. The detection method is based on this registry key: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Sense`.
 
      Select the option: **This registry setting must exit on the target system to indicate presence of this application.**
   
@@ -95,7 +95,7 @@ Copy the unified solution package, onboarding script, and migration script to th
      get-wmiobject Win32_Product | Sort-Object -Property Name |Format-Table IdentifyingNumber, Name, LocalPackage -AutoSize
      ```
 
-11. In the **User Experience** section, check the recommended settings shown in the screenshot. You can choose what suits your environment, and then select **Next**. 
+1. In the **User Experience** section, check the recommended settings shown in the screenshot. You can choose what suits your environment, and then select **Next**. 
 
      For **Installation program visibility**, it's advisable to install with **Normal** during phase testing then change it to **Minimized** for general deployment.
   
@@ -104,29 +104,29 @@ Copy the unified solution package, onboarding script, and migration script to th
   
      :::image type="content" source="media/user-experience-in-deployment-type-wizard.png" alt-text="Screenshot that shows user experience in deployment-type wizard." lightbox="media/user-experience-in-deployment-type-wizard.png":::
 
-12. Add any additional requirements, and then select **Next**.
+1. Add any additional requirements, and then select **Next**.
 
-13. Under the Dependencies section, select **Next**.
+1. Under the Dependencies section, select **Next**.
 
-14. Select **Next** until completion screen comes up, and then select **Close**.
+1. Select **Next** until completion screen comes up, and then select **Close**.
 
-15. Keep selecting **Next** until the completion of Application Wizard. Verify all have been green checked.
+1. Keep selecting **Next** until the completion of Application Wizard. Verify all have been green checked.
 
-16. Close the wizard, right-click on the recently created application and deploy it to your down-level-server collection. Locally, the installation can be confirmed at Software Center. For details, check the CM logs at `C:\Windows\CCM\Logs\AppEnforce.log`.
+1. Close the wizard, right-click on the recently created application and deploy it to your down-level-server collection. Locally, the installation can be confirmed at Software Center. For details, check the CM logs at `C:\Windows\CCM\Logs\AppEnforce.log`.
 
     :::image type="content" source="media/deploy-application.png" alt-text="Screenshot that shows deployment of created application." lightbox="media/deploy-application.png":::
 
-17. Verify the status of the migration in Configuration Manager by going to **Monitoring** > **Deployments**.
+1. Verify the status of the migration in Configuration Manager by going to **Monitoring** > **Deployments**.
 
-18. Troubleshooting .ETL files are created and automatically saved locally in each server at this location `C:\Windows\ccmcache\#\`. These files can be leveraged by support to troubleshoot onboarding issues.
+1. Troubleshooting .ETL files are created and automatically saved locally in each server at this location `C:\Windows\ccmcache\#\`. These files can be leveraged by support to troubleshoot onboarding issues.
 
 ## Related articles
 
 - [Microsoft Monitoring Agent Setup](/services-hub/health/mma-setup)
-- [Deploy applications - Configuration Manager](/mem/configmgr/apps/deploy-use/deploy-applications)
-- [Microsoft Defender for Endpoint - Configuration Manager](/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection)
+- [Deploy applications - Configuration Manager](/intune/configmgr/apps/deploy-use/deploy-applications)
+- [Microsoft Defender for Endpoint - Configuration Manager](/intune/configmgr/protect/deploy-use/defender-advanced-threat-protection)
 - [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
 - [Microsoft Defender for Endpoint: Defending Windows Server 2012 R2 and 2016](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/defending-windows-server-2012-r2-and-2016/ba-p/2783292)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

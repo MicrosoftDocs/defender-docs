@@ -2,12 +2,12 @@
 title: Get baseline profile configurations
 description: Provides information about the security baselines assessment configurations that pull "Microsoft Defender Vulnerability Management" data. There are different API calls to get different types of data. In general, each API call contains the requisite data for devices in your organization.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -15,19 +15,14 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 05/02/2022
+ms.date: 11/16/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Vulnerability Management
-
 ---
+
 # List configurations in active baseline profiles
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-> Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](/defender-vulnerability-management/get-defender-vulnerability-management).
 
 ## 1.API description
 
@@ -35,23 +30,29 @@ This API retrieves a list of the configurations being assessed in active baselin
 
 ### 1.1 Parameters
 
-- Supports OData V4 queries
-- OData supported operators:
-  - `$filter` on: `id`, `category`, `name`, `CCE`
-  - `$top` with max value of 10,000
-  - `$skip`
+Supports [OData V4 queries](https://www.odata.org/documentation/). OData supported operators:
+
+- `$filter` on the following properties:
+  - `id`
+  - `category`
+  - `name`
+  - `CCE`
+- `$top` with max value of 10,000
+- `$skip`
+
+See examples at [OData queries with Microsoft Defender for Endpoint](exposed-apis-odata-samples.md).
 
 ### 1.2 HTTP request
 
 ```http
-GET /api/baselineConfigurations 
+GET /api/baselineConfigurations
 ```
 
 ### 1.3 Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ### 1.4 Response
 
@@ -59,36 +60,36 @@ If successful, this method returns 200 OK with the list of baseline configuratio
 
 ### 1.5 Properties
 
-|Property | Type | Description |
-|:---|:---|:---|
-|uniqueId | String | Identifier for the specific configuration across baseline benchmarks.
-|Id | String | Identifier of the specific configuration in the baseline benchmark.
-|benchmarkName| String | The name of the benchmark.
-|benchmarkVersion| String | The version of the benchmark. May contain operating system details.
-|name | String | The configuration name at it appears in the benchmark.
-|description | String | The configuration description as it appears in the benchmark.
-|category | String | The configuration  category as it appears in the benchmark.
-|complianceLevels|String|The compliance level of the benchmark where this configuration appears.
-|`cce`|Int|The CCE for this configuration as it appears in the benchmark.
-|rationale |String|The rationale for this configuration as it appears in the benchmark. For STIG benchmark this isn't supplied for this configuration.
-|source|Array [String]| Array of the registry paths or other locations used to determine the current device setting.
-|recommendedValue|Array [String]|Array of the recommended value for each source returned in the 'source' property array (values returned in the same order as the source property array).
-|remediation|String| The recommended steps to remediate.
-|isCustom|Boolean| True if the configuration is customized, false if not.
+|Property|Type|Description|
+|---|---|---|
+|uniqueId|String|Identifier for the specific configuration across baseline benchmarks.|
+|Id|String|Identifier of the specific configuration in the baseline benchmark.|
+|benchmarkName|String|The name of the benchmark.|
+|benchmarkVersion|String|The version of the benchmark. May contain operating system details.|
+|name|String|The configuration name at it appears in the benchmark.|
+|description|String|The configuration description as it appears in the benchmark.|
+|category|String|The configuration  category as it appears in the benchmark.|
+|complianceLevels|String|The compliance level of the benchmark where this configuration appears.|
+|`cce`|Int|The CCE for this configuration as it appears in the benchmark.|
+|rationale|String|The rationale for this configuration as it appears in the benchmark. For STIG benchmark this isn't supplied for this configuration.|
+|source|Array [String]|Array of the registry paths or other locations used to determine the current device setting.|
+|recommendedValue|Array [String]|Array of the recommended value for each source returned in the 'source' property array (values returned in the same order as the source property array).|
+|remediation|String|The recommended steps to remediate.|
+|isCustom|Boolean|True if the configuration is customized, false if not.|
 
 ## 1.6 Example
 
 ### 1.5.1 Request example
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/baselineConfigurations
+GET https://api.security.microsoft.com/api/baselineConfigurations
 ```
 
 ### 1.6.2 Response example
 
 ```json
 {
-    "@odata.context": " https://api-df.securitycenter.microsoft.com/api/$metadata#BaselineConfigurations ", 
+    "@odata.context": " https://api.security.microsoft.com/api/$metadata#BaselineConfigurations ",
     "value": [
         {
             "id": "9.3.9",
@@ -115,13 +116,6 @@ GET https://api.securitycenter.microsoft.com/api/baselineConfigurations
             ],
             "isCustom": false
         },
-    ] 
-} 
+    ]
+}
 ```
-
-## See also
-
-- [Export security baselines assessment](export-security-baseline-assessment.md)
-- [Get security baselines assessment profiles](get-security-baselines-assessment-profiles.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

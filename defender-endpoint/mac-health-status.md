@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot agent health issues with Defender for Endpoint on macOS 
 description: Investigate macOS Defender agent health issues
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.reviewer: lianx; joshbregman
 manager: bagol
 ms.localizationpriority: medium
@@ -88,9 +88,5 @@ You can run `mdatp health --help` on recent versions to list all supported featu
 
 ## See also
 
-- [What's new in Microsoft Defender for Endpoint on macOS](mac-whatsnew.md)
+- [What's new in Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-releases.md#macos-releases)
 - [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md)
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
-
-

@@ -62,7 +62,7 @@ Admins can use the impersonation insight in the Microsoft Defender portal to qui
 
 ## Open the impersonation insight in the Microsoft Defender portal
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Anti-phishing** in the **Policies** section. Or, to go directly to the **Anti-phishing** page, use <https://security.microsoft.com/antiphishing>.
+In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Anti-phishing** in the **Policies** section. Or, to go directly to the **Anti-phishing** page, use <https://security.microsoft.com/antiphishing>.
 
 On the **Anti-phishing** page, the impersonation insight looks like this:
 

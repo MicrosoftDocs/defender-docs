@@ -3,8 +3,8 @@ title: Create an onboarding or offboarding notification rule
 description: Get a notification when a local onboarding or offboarding script is used.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -41,23 +41,23 @@ You need to have access to:
 
 1. In [make.powerautomate.com](https://make.powerautomate.com/).
 
-2. Navigate to **My flows > New > Scheduled - from blank**.
+1. Navigate to **My flows > New > Scheduled - from blank**.
 
    :::image type="content" source="media/new-flow.png" alt-text="The flow" lightbox="media/new-flow.png":::
 
 
-3. Build a scheduled flow.
+1. Build a scheduled flow.
    1. Enter a flow name.
    2. Specify the start and time.
    3. Specify the frequency. For example, every 5 minutes.
 
    :::image type="content" source="media/build-flow.png" alt-text="The notification flow" lightbox="media/build-flow.png":::
 
-4. Select the + button to add a new action. The new action is an HTTP request to the Defender for Endpoint devices API. You can also replace it with the out-of-the-box **WDATP Connector** (action: **Machines - Get list of machines**).
+1. Select the + button to add a new action. The new action is an HTTP request to the Defender for Endpoint devices API. You can also replace it with the out-of-the-box **WDATP Connector** (action: **Machines - Get list of machines**).
 
    :::image type="content" source="media/recurrence-add.png" alt-text="The recurrence and add action" lightbox="media/recurrence-add.png":::
 
-5. Enter the following HTTP fields:
+1. Enter the following HTTP fields:
 
    - Method: **GET** as a value to get the list of devices.
    - URI: Enter `https://api.securitycenter.microsoft.com/api/machines`.
@@ -70,20 +70,19 @@ You need to have access to:
 
     :::image type="content" source="media/http-conditions.png" alt-text="The HTTP conditions" lightbox="media/http-conditions.png":::
 
-6. Add a new step by selecting **Add new action** then search for **Data Operations** and select
+1. Add a new step by selecting **Add new action** then search for **Data Operations** and select
 **Parse JSON**.
 
    :::image type="content" source="media/data-operations.png" alt-text="The data operations entry" lightbox="media/data-operations.png":::
 
-7. Add Body in the **Content** field.
+1. Add Body in the **Content** field.
 
    :::image type="content" source="media/parse-json.png" alt-text="The parse JSON section" lightbox="media/parse-json.png":::
 
-8. Select the **Use sample payload to generate schema** link.
-
+1. Select the **Use sample payload to generate schema** link.
    :::image type="content" source="media/parse-json-schema.png" alt-text="The parse JSON with payload" lightbox="media/parse-json-schema.png":::
 
-9. Copy and paste the following JSON snippet:
+1. Copy and paste the following JSON snippet:
 
     ```json
     {
@@ -165,7 +164,7 @@ You need to have access to:
 
     ```
 
-10. Extract the values from the JSON call and check if the onboarded devices is / are already registered at the SharePoint list as an example:
+1. Extract the values from the JSON call and check if the onboarded devices is / are already registered at the SharePoint list as an example:
 
     - If yes, no notification is triggered
     - If no, will register the newly onboarded devices in the SharePoint list and a notification is sent to the Defender for Endpoint admin
@@ -174,7 +173,7 @@ You need to have access to:
 
     :::image type="content" source="media/apply-to-each.png" alt-text="The application of the flow to the Get items element" lightbox="media/apply-to-each.png":::
 
-11. Under **Condition**, add the following expression: "length(body('Get_items')?['value'])" and set the condition to equal to 0.
+1. Under **Condition**, add the following expression: "length(body('Get_items')?['value'])" and set the condition to equal to 0.
 
     :::image type="content" source="media/apply-to-each-value.png" alt-text="The application of the flow to each condition" lightbox="media/apply-to-each-value.png":::
     :::image type="content" source="media/conditions-2.png" alt-text="The condition-1" lightbox="media/conditions-2.png":::
@@ -205,8 +204,8 @@ You can split it to two queries:
 
 1. For offboarding take only this interval using the OData $filter and only notify if the conditions are met.
 
-2. Take all devices last seen in the past hour and check first seen property for them (if the first seen property is on the past hour, the last seen must be there too).
+1. Take all devices last seen in the past hour and check first seen property for them (if the first seen property is on the past hour, the last seen must be there too).
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

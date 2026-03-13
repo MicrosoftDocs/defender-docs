@@ -3,8 +3,8 @@ title: Configure alert notifications that are sent to MSSPs
 description: Configure alert notifications that are sent to MSSPs
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: bagol
-author: batamig
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -39,5 +39,5 @@ These check boxes must be checked:
 - [Grant MSSP access to the portal](grant-mssp-access.md)
 - [Access the MSSP customer portal](access-mssp-portal.md)
 - [Fetch alerts from customer tenant](api/fetch-alerts-mssp.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

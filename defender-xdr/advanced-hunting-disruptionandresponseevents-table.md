@@ -6,8 +6,8 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
-ms.author: dansimp
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -25,22 +25,27 @@ ms.date: 06/11/2025
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
-
 > [!IMPORTANT]
 > Some information relates to prereleased product which might be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-
-The `DisruptionAndResponseEvents` table in the [advanced hunting](advanced-hunting-overview.md) contains information about [automatic attack disruption](automatic-attack-disruption.md) events in Microsoft Defender XDR. These events include both block and policy application events related to triggered attack disruption policies, and automatic actions that were taken across related workloads. 
+The `DisruptionAndResponseEvents` table in the [advanced hunting](advanced-hunting-overview.md) contains information about [automatic attack disruption](automatic-attack-disruption.md) and [predictive shielding](shield-predict-threats.md) events in Microsoft Defender XDR. These events include both block and policy application events related to triggered attack disruption policies, and automatic actions that were taken across related workloads.
 
 Users can use this table to increase their visibility and awareness of active, complex attacks disrupted by automatic attack disruption. Understanding the scope of even complex attacks, their context, impact, and why disruption actions were taken, can help users make better and faster decisions and allocate resources more efficiently.
 
-This advanced hunting table is populated by records from various Microsoft security services. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return complete results. For more information about how to deploy supported services in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
+## DisruptionAndResponseEvents table considerations
+
+The `DisruptionAndResponseEvents` table:
+
+- Is populated by records from various Microsoft security services. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return complete results. For more information about how to deploy supported services in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
+- Doesn't contain the execution of actions like contain user or disable user. The table only reflects the outcomes of these actions, such as blocked logon attempts or policy applications. For the full context of these actions, the [Action Center](m365d-action-center.md) logs all events.
+- Exposes only Defender for Endpoint-based controls.
+
+## Schema reference
 
 Use this reference to construct queries that return information from this table.
 
 > [!TIP]
-> For detailed information about the events types (`ActionType` values) supported by a table, use the built-in schema reference available in Microsoft Defender XDR.
+> For detailed information about the events types (`ActionType` values) supported by this table, see [ActionType values](#actiontype-values).
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
@@ -48,7 +53,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | Column name | Data type | Description |
 |-------------|-----------|-------------|
 | `Timestamp` | `datetime` | Date and time when the event was recorded |
-| `ActionType` | `string` | Type of disruption action taken, for example: ContainedUserLogonBlocked, ContainedUserSmbFileOpenBlocked, SafeBootGuardApplied   |
+| `ActionType` | `string` | Type of disruption action taken<br>**Tip**: For more information, see [ActionType values](#actiontype-values).   |
 | `DeviceId` | `string` | Unique identifier for the device that reported the event; the reporting device can be the one that blocked the access, the compromised device itself, or even a different device that is aware of the attack |
 | `SourceDeviceId` | `string` | Unique identifier for the device that the attack originated from  |
 | `TargetDeviceId` | `string` | Unique identifier for the device that was targeted or attacked |
@@ -61,15 +66,15 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `SourceUserSid` | `string` | The security identifier of the account conducting the malicious activity   |
 | `SourceUserName` | `string` | The user name of the account conducting the malicious activity  |
 | `SourceUserDomainName` | `string` | The domain name of the account conducting the malicious activity  |
-| `SourceIPAddress` | `string` | IP address where the attacker communication originated from and was blocked by automatic attack disruption  |
+| `SourceIpAddress` | `string` | IP address where the attacker communication originated from and was blocked by automatic attack disruption  |
 | `SourcePort` | `integer` | Port where the attacker communication originated from  |
-| `IPAddress` | `string` | IP address that the attacker attempted to access |
+| `IpAddress` | `string` | IP address that the attacker attempted to access |
 | `Port` | `string` | Port that the attacker attempted to access |
 | `SourceDeviceName` | `string` | Host name of the device where the attack originated from |
 | `SourceDomainName` | `string` | Domain name of the device where the attack originated from  |
 | `AuthenticationProtocol` | `string` | Authentication protocol that the compromised user used to sign in; possible values: Undefined, NTLM, Kerberos |
 | `Service` | `string` | Name of the service the attacker attempted to use, if the attacker signed in using Kerberos or NTLM; for example: SMB, HTTP, cifs, SMB, host, ldap, SMB, krbtgt |
-| `InterfaceUuidSourceDomainName` | `string` | Unique identifier (UUID) for the Remote Procedure Call (RPC) interface that the attacker attempted to access |
+| `InterfaceUuid` | `string` | Unique identifier (UUID) for the Remote Procedure Call (RPC) interface that the attacker attempted to access |
 | `InterfaceFriendlyName` | `string` |Friendly name of the interface represented by the interface UUID  |
 | `FileName` | `string` | Name of the file that the attacker attempted to access |
 | `ShareName` | `string` | Name of the share location that the attacker attempted to access |
@@ -81,11 +86,33 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `PolicyName` | `string` | Name of the policy  |
 | `PolicyVersion` | `string` | Version of the policy |
 | `PolicyHash` | `string` | Unique hash of the policy  |
-| `DataSources` | `array` |Products or services that provided information for the event; for example: Microsoft Defender for Endpoint |
+| `DataSources` | `string` |Products or services that provided information for the event; for example: Microsoft Defender for Endpoint |
 | `IsPolicyOn` | `boolean` |Indicates the current state of the policy on the device at the time of the disruption event; possible values: true (the policy is on, therefore it was applied or enforced), false (the policy was turned off or revoked from the device) |
 |`ReportType` | `string` | The nature and impact level of the reported event; possible values: Prevented (the action, such as a connection or authentication attempt, was fully blocked before execution), Blocked (an active connection or session was forcibly terminated, with partial impact on the device), PolicyUpdated (the client received and possibly applied a new policy) |
 
+### ActionType values
+
+
+| Action | Description | Defense strategy |
+|-------|-------------|------------------|
+| `ContainedRestrictedUserSmbFileOpenBlocked` | Logs an event when a user who is a member of a restricted user group attempts to open a specific Server Message Block (SMB) shared file and the action is blocked. |Automatic attack disruption |
+| `ContainedUserLogonBlocked` | Logs an event when a contained user's logon attempt is blocked. |Automatic attack disruption |
+| `ContainedUserLogonBlockedByDomainController` | Logs an event when a user's logon attempt to a device in the domain is blocked by the Domain Controller due to containment policies. |Automatic attack disruption |
+| `ContainedUserRemoteDesktopSessionDisconnected` | Logs an event when a contained user's remote desktop session is forcibly disconnected using `WTSDisconnectSession`. |Automatic attack disruption |
+| `ContainedUserRemoteDesktopSessionStopped` | Logs an event when a contained user's remote desktop session is stopped using `WTSLogoffSession`. |Automatic attack disruption |
+| `ContainedUserRpcAccessBlocked` | Logs an event when a contained user's attempt to access a resource via RPC is blocked. |Automatic attack disruption |
+| `ContainedUserSmbFileOpenBlocked` | Logs an event when a contained user attempts to open an SMB shared file and the attempt is blocked. |Automatic attack disruption |
+| `ContainedUserSmbFileOpenBlockedAggregation` | Same as `ContainedUserSmbFileOpenBlocked`, but aggregated for cases where the same contained user accesses more than 10 files within a one-minute window. |Automatic attack disruption |
+| `ContainedUserSmbSessionStopped` | Logs an event when an SMB session initiated by a contained user is forcibly ended. |Automatic attack disruption |
+| `GroupPolicyAccessBlocked` | Blocks access to the **SYSVOL** directory, preventing the device from pulling group policy updates. |Predictive shielding |
+| `SafeBootBlocked` | Prevents the device from being rebooted into safe mode. |Predictive shielding |
+| `SafeBootGuardPolicyApplied` | Applies the Safe Boot Guard policy to the device. |Predictive shielding |
+| `SafeBootGuardPolicyRemoved` | Removes the Safe Boot Guard policy from the device. |Predictive shielding |
+| `GroupPolicyHardeningPolicyApplied` | Applies the Group Policy Hardening policy to the device. |Predictive shielding |
+| `GroupPolicyHardeningPolicyRemoved` | Removes the Group Policy Hardening policy from the device. |Predictive shielding |
+
 ## Related topics
+
 - [Advanced hunting overview](advanced-hunting-overview.md)
 - [Learn the query language](advanced-hunting-query-language.md)
 - [Use shared queries](advanced-hunting-shared-queries.md)

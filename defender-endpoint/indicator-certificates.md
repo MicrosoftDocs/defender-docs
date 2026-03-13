@@ -3,8 +3,8 @@ title: Create indicators based on certificates
 ms.reviewer:
 description: Create indicators based on certificates that define the detection, prevention, and exclusion of entities.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -42,13 +42,22 @@ It's important to understand the following requirements before creating indicato
   > Windows Server 2016 and Windows Server 2012 R2 must be onboarded using the instructions in [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-server.md) for this feature to work.
 
 - The virus and threat protection definitions must be up to date.
-- This feature currently supports entering .CER or .PEM file extensions.
+- This feature supports entering .CER or .PEM file extensions.
 
 > [!IMPORTANT]
 >
 > - A valid leaf certificate is a signing certificate that has a valid certification path and must be chained to the Root Certificate Authority (CA) trusted by Microsoft. Alternatively, a custom (self-signed) certificate can be used as long as it's trusted by the client (Root CA certificate is installed under the Local Machine 'Trusted Root Certification Authorities').
 > - The children or parent of the allow/block certificate IOCs aren't included in the allow/block IoC functionality, only leaf certificates are supported.
 > - Microsoft signed certificates can't be blocked.
+
+> [!NOTE]
+> In situations where a certificate-based indicator is configured to **Block**, but a file hash indicator for one of its signed files is configured to **Allow**, this configuration is **not supported by design**. 
+> Certificate-based indicators have higher precedence in the Defender evaluation pipeline and will always override file hash allow indicators.
+> A configuration that simultaneously:
+> - blocks a certificate, and
+> - attempts to allow one of its signed files via file hash
+>
+> is **not supported**. Certificate-based indicators take precedence, and therefore the file will continue to be blocked.
 
 ## Create an indicator for certificates from the settings page:
 
@@ -57,15 +66,15 @@ It's important to understand the following requirements before creating indicato
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Indicators** (under **Rules**).
 
-2. Select **Add indicator**.
+1. Select **Add indicator**.
 
-3. Specify the following details:
+1. Specify the following details:
 
    - **Indicator**: Specify the entity details and define the expiration of the indicator.
    - **Action**: Specify the action to be taken and provide a description.
    - **Scope**: Define the scope of the machine group.
 
-4. Review the details on the **Summary** tab, and then select **Save**.
+1. Review the details on the **Summary** tab, and then select **Save**.
 
 ## Related articles
 
@@ -75,5 +84,5 @@ It's important to understand the following requirements before creating indicato
 - [Manage indicators](indicator-manage.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

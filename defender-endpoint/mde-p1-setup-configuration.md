@@ -2,8 +2,8 @@
 title: Set up and configure Microsoft Defender for Endpoint Plan 1
 description: Learn how to set up and configure Defender for Endpoint Plan 1. Review the requirements, plan your rollout, and set up your environment. 
 search.appverid: MET150 
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 manager: bagol 
 ms.topic: overview
 ms.service: defender-endpoint
@@ -69,9 +69,9 @@ When you plan your deployment, you can choose from several different architectur
 
 | Method | Description |
 |:---|:---|
-| [Intune](/mem/intune/fundamentals/what-is-intune)  | Use Intune to manage endpoints in a cloud native environment |
-| [Intune](/mem/intune/fundamentals/what-is-intune) and [Configuration Manager](/mem/configmgr/core/understand/introduction)  | Use Intune and Configuration Manager to manage endpoints and workloads that span an on-premises and cloud environment |
-| [Configuration Manager](/mem/configmgr/core/understand/introduction) | Use Configuration Manager to protect on-premises endpoints with the cloud-based power of Defender for Endpoint |
+| [Intune](/intune/intune-service/fundamentals/what-is-intune)  | Use Intune to manage endpoints in a cloud native environment |
+| [Intune](/intune/intune-service/fundamentals/what-is-intune) and [Configuration Manager](/intune/configmgr/core/understand/introduction)  | Use Intune and Configuration Manager to manage endpoints and workloads that span an on-premises and cloud environment |
+| [Configuration Manager](/intune/configmgr/core/understand/introduction) | Use Configuration Manager to protect on-premises endpoints with the cloud-based power of Defender for Endpoint |
 | Local script downloaded from the Microsoft Defender portal | Use local scripts on endpoints to run a pilot or onboard just a few devices |
 
 To learn more about your deployment options, see [Plan your Defender for Endpoint deployment](deployment-strategy.md). And, download the following poster: 
@@ -127,7 +127,7 @@ When you're ready to onboard your organization's endpoints, you can choose from 
 
 |Endpoint|Deployment tool|
 |---|---|
-|**Windows**|[Local script (up to 10 devices)](configure-endpoints-script.md) <br>  [Group Policy](configure-endpoints-gp.md) <br>  [Microsoft Intune/ Mobile Device Manager](configure-endpoints-mdm.md) <br>   [Microsoft Endpoint Configuration Manager](configure-endpoints-sccm.md) <br> [VDI scripts](configure-endpoints-vdi.md)|
+|**Windows**|[Local script (up to 10 devices)](configure-endpoints-script.md) <br>  [Group Policy](configure-endpoints-gp.md) <br>  [Microsoft Intune/ Mobile Device Manager](configure-endpoints-mdm.md) <br>   [Microsoft Configuration Manager](configure-endpoints-sccm.md) <br> [VDI scripts](configure-endpoints-vdi.md)|
 |**macOS**|[Local script](mac-install-manually.md) <br> [Microsoft Intune](mac-install-with-intune.md) <br> [JAMF Pro](mac-install-with-jamf.md) <br> [Mobile Device Management](mac-install-with-other-mdm.md)|
 |**Android**|[Microsoft Intune](android-intune.md)|
 |**iOS**|[Microsoft Intune](ios-install.md) <br> [Mobile Application Manager](ios-install-unmanaged.md) |
@@ -145,14 +145,14 @@ To configure your next-generation protection in Intune, follow these steps:
 
 1. Go to the Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)) and sign in.
 
-2. Select **Endpoint security** > **Antivirus**, and then select an existing policy. (If you don't have an existing policy, create a new policy.)
+1. Select **Endpoint security** > **Antivirus**, and then select an existing policy. (If you don't have an existing policy, create a new policy.)
 
-3. Set or change your antivirus configuration settings. Need help? Refer to the following resources: <br/>
+1. Set or change your antivirus configuration settings. Need help? Refer to the following resources: <br/>
 
-   - [Settings for Windows 10 Microsoft Defender Antivirus policy in Microsoft Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-windows)
+   - [Settings for Windows 10 Microsoft Defender Antivirus policy in Microsoft Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-windows)
    - [Configure Defender for Endpoint on iOS features](ios-configure-features.md)
 
-4. When you're finished specifying your settings, choose **Review + save**.
+1. When you're finished specifying your settings, choose **Review + save**.
 
 ## Configure your attack surface reduction capabilities
 
@@ -176,15 +176,15 @@ Attack surface reduction rules are available on devices running Windows. We reco
 
 1. Go to the [Intune admin center](https://intune.microsoft.com) and sign in.
 
-2. Choose **Endpoint security** > **Attack surface reduction** > **+ Create policy**.
+1. Choose **Endpoint security** > **Attack surface reduction** > **+ Create policy**.
 
-3. For **Platform**, select **Windows 10, Windows 11, and Windows Server**.
+1. For **Platform**, select **Windows 10, Windows 11, and Windows Server**.
 
-4. For **Profile**, select **Attack surface reduction rules**, and then choose **Create**.
+1. For **Profile**, select **Attack surface reduction rules**, and then choose **Create**.
 
-5. On the **Basics** tab, specify a name and description for the policy, and then choose **Next**.
+1. On the **Basics** tab, specify a name and description for the policy, and then choose **Next**.
 
-6. On the **Configuration settings** tab, expand under **Defender**, configure your attack surface reduction rules, and then choose **Next**. For more information about attack surface reduction rules, see [Attack surface reduction rules deployment overview](attack-surface-reduction-rules-deployment.md).
+1. On the **Configuration settings** tab, expand under **Defender**, configure your attack surface reduction rules, and then choose **Next**. For more information about attack surface reduction rules, see [Attack surface reduction rules deployment overview](attack-surface-reduction-rules-deployment.md).
 
    At a minimum, we recommend enabling the following three standard protection rules:
 
@@ -192,13 +192,13 @@ Attack surface reduction rules are available on devices running Windows. We reco
    - [Block credential stealing from the Windows local security authority subsystem (lsass.exe)](/defender-endpoint/attack-surface-reduction-rules-reference#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
    - [Block persistence through Windows Management Instrumentation (WMI) event subscription](/defender-endpoint/attack-surface-reduction-rules-reference#block-persistence-through-wmi-event-subscription)
 
-7. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**. 
+1. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**. 
    
-   To learn more about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
+   To learn more about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](/intune/intune-service/fundamentals/scope-tags).
 
-8. On the **Assignments** tab, specify the users and groups to whom your policy should be applied, and then choose **Next**. (To learn more about assignments, see [Assign user and device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-assign).)
+1. On the **Assignments** tab, specify the users and groups to whom your policy should be applied, and then choose **Next**. (To learn more about assignments, see [Assign user and device profiles in Microsoft Intune](/intune/intune-service/configuration/device-profile-assign).)
 
-9. On the **Review + create** tab, review the settings, and then choose **Create**.
+1. On the **Review + create** tab, review the settings, and then choose **Create**.
 
 > [!TIP]
 > To learn more about attack surface reduction rules, see the following resources:
@@ -216,24 +216,24 @@ We recommend using Intune to configure controlled folder access.
 
 1. Go to the [Intune admin center](https://intune.microsoft.com) and sign in. 
 
-2. Go to **Endpoint Security** > **Attack Surface Reduction**, and then choose **+ Create Policy**. 
+1. Go to **Endpoint Security** > **Attack Surface Reduction**, and then choose **+ Create Policy**. 
 
-3. For **Platform**, select **Windows 10, Windows 11, and Windows Server**, and for **Profile**, select **Attack surface reduction rules**. Then choose **Create**. 
+1. For **Platform**, select **Windows 10, Windows 11, and Windows Server**, and for **Profile**, select **Attack surface reduction rules**. Then choose **Create**. 
 
-4. On the **Basics** tab, name the policy and add a description. Select **Next**. 
+1. On the **Basics** tab, name the policy and add a description. Select **Next**. 
 
-5. On the **Configuration settings** tab, under **Defender** section, scroll down to the bottom. In the **Enable Controlled Folder Access** drop-down, select **Enabled**, and then choose **Next**. 
+1. On the **Configuration settings** tab, under **Defender** section, scroll down to the bottom. In the **Enable Controlled Folder Access** drop-down, select **Enabled**, and then choose **Next**. 
 
    You can optionally specify these other settings:
 
       - Next to **Controlled Folder Access Protected Folders**, toggle the switch to **Configured**, and then add folders that need to be protected.
       - Next to **Controlled Folder Access Allowed Applications**, toggle the switch to **Configured**, and then add apps that should have access to protected folders.
 
-7. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**. To learn more about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
+1. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**. To learn more about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](/intune/intune-service/fundamentals/scope-tags).
 
-8. On the **Assignments** tab, select **Add all users** and **+ Add all devices**, and then choose **Next**. (You can alternately specify specific groups of users or devices.)
+1. On the **Assignments** tab, select **Add all users** and **+ Add all devices**, and then choose **Next**. (You can alternately specify specific groups of users or devices.)
 
-9. On the **Review + create** tab, review the settings for your policy, and then choose **Create**. The policy is applied to any endpoints that were onboarded to Defender for Endpoint shortly.
+1. On the **Review + create** tab, review the settings for your policy, and then choose **Create**. The policy is applied to any endpoints that were onboarded to Defender for Endpoint shortly.
 
 ### Device control
 
@@ -243,27 +243,27 @@ You can configure Defender for Endpoint to block or allow removable devices and 
 
 1. Go to the [Intune admin center](https://intune.microsoft.com) and sign in. 
 
-2. Select **Devices** > **Configuration** > **+ Create** > **Create policy**.
+1. Select **Devices** > **Configuration** > **+ Create** > **Create policy**.
 
-3. For **Platform**, select a profile, such as **Windows 10 and later**, and for **Profile type**, select **Templates**. 
+1. For **Platform**, select a profile, such as **Windows 10 and later**, and for **Profile type**, select **Templates**. 
 
-   Under **Template name**, select **Administrative Templates**, and then choose **Create**. 
+1. Under **Template name**, select **Administrative Templates**, and then choose **Create**. 
 
-4. On the **Basics** tab, name the policy and add a description. Select **Next**. 
+1. On the **Basics** tab, name the policy and add a description. Select **Next**. 
 
-5. On the **Configuration settings** tab, select **All Settings**. Then in the search box, type `Removable` to see all the settings that pertain to removable devices.
+1. On the **Configuration settings** tab, select **All Settings**. Then in the search box, type `Removable` to see all the settings that pertain to removable devices.
 
-6. Select an item in the list, such as **All Removable Storage classes, Deny all access**, to open its flyout pane. The flyout for each setting explains what happens when it's enabled, disabled, or not configured. Select a setting, and then choose **OK**. 
+1. Select an item in the list, such as **All Removable Storage classes, Deny all access**, to open its flyout pane. The flyout for each setting explains what happens when it's enabled, disabled, or not configured. Select a setting, and then choose **OK**. 
 
-7. Repeat step 6 for each setting that you want to configure. Then choose **Next**.
+1. Repeat step 6 for each setting that you want to configure. Then choose **Next**.
 
-8. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**. 
+1. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**. 
    
-   To learn more about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
+1. To learn more about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](/intune/intune-service/fundamentals/scope-tags).
 
-9. On the **Assignments** tab, select **Add all users** and **+ Add all devices**, and then choose **Next**. (You can alternately specify specific groups of users or devices.)
+1. On the **Assignments** tab, select **Add all users** and **+ Add all devices**, and then choose **Next**. (You can alternately specify specific groups of users or devices.)
 
-10. On the **Review + create** tab, review the settings for your policy, and then choose **Create**. The policy is applied to any endpoints that were onboarded to Defender for Endpoint shortly.
+1. On the **Review + create** tab, review the settings for your policy, and then choose **Create**. The policy is applied to any endpoints that were onboarded to Defender for Endpoint shortly.
 
 > [!TIP]
 > For more information, see [How to control USB devices and other removable media using Microsoft Defender for Endpoint](device-control-overview.md).
@@ -276,29 +276,29 @@ With network protection, you can help protect your organization against dangerou
 
 1. Go to the [Intune admin center](https://intune.microsoft.com) and sign in. 
 
-2. Select **Devices** > **Configuration** > **+ Create** > **Create policy**.
+1. Select **Devices** > **Configuration** > **+ Create** > **Create policy**.
 
-3. For **Platform**, select a profile, such as **Windows 10 and later**, and for **Profile type**, select **Templates**. 
+1. For **Platform**, select a profile, such as **Windows 10 and later**, and for **Profile type**, select **Templates**. 
 
-   Under **Template name**, select **Endpoint protection**, and then choose **Create**. 
+1. Under **Template name**, select **Endpoint protection**, and then choose **Create**. 
 
-4. On the **Basics** tab, name the policy and add a description. Select **Next**. 
+1. On the **Basics** tab, name the policy and add a description. Select **Next**. 
 
-5. On the **Configuration settings** tab, expand **Microsoft Defender Exploit Guard**, and then expand **Network filtering**.
+1. On the **Configuration settings** tab, expand **Microsoft Defender Exploit Guard**, and then expand **Network filtering**.
 
-   Set **Network protection** to **Enable**. (You can alternately choose **Audit** to see how network protection works in your environment at first.)
+    a. Set **Network protection** to **Enable**. (You can alternately choose **Audit** to see how network protection works in your environment at first.)
 
-   Then choose **Next**.
+    a. Then choose **Next**.
 
-6. On the **Assignments** tab, select **Add all users** and **+ Add all devices**, and then choose **Next**. (You can alternately specify specific groups of users or devices.)
+1. On the **Assignments** tab, select **Add all users** and **+ Add all devices**, and then choose **Next**. (You can alternately specify specific groups of users or devices.)
 
-7. On the **Applicability Rules** tab, set up a rule. The profile you're configuring is applied only to devices that meet the combined criteria you specify. 
+1. On the **Applicability Rules** tab, set up a rule. The profile you're configuring is applied only to devices that meet the combined criteria you specify. 
 
-   For example, you might choose to assign the policy to endpoints that are running a certain OS edition only.
+    a. For example, you might choose to assign the policy to endpoints that are running a certain OS edition only.
 
-   Then choose **Next**. 
+    a. Then choose **Next**. 
 
-8. On the **Review + create** tab, review the settings for your policy, and then choose **Create**. The policy is applied to any endpoints that were onboarded to Defender for Endpoint shortly.
+1. On the **Review + create** tab, review the settings for your policy, and then choose **Create**. The policy is applied to any endpoints that were onboarded to Defender for Endpoint shortly.
 
 > [!TIP]
 > You can use other methods, such as Windows PowerShell or Group Policy, to enable network protection. To learn more, see [Turn on network protection](enable-network-protection.md).
@@ -311,13 +311,13 @@ With web protection, you can protect your organization's devices from web threat
 
 1. Go to the [Intune admin center](https://intune.microsoft.com), and sign in.
  
-2. Choose **Endpoint security** > **Attack surface reduction**, and then choose **+ Create policy**.
+1. Choose **Endpoint security** > **Attack surface reduction**, and then choose **+ Create policy**.
 
-3. Select a platform, such as **Windows 10 and later**, select the **Web protection** profile, and then choose **Create**. 
+1. Select a platform, such as **Windows 10 and later**, select the **Web protection** profile, and then choose **Create**. 
 
-4. On the **Basics** tab, specify a name and description, and then choose **Next**.
+1. On the **Basics** tab, specify a name and description, and then choose **Next**.
 
-5. On the **Configuration settings** tab, expand **Web Protection**, specify the settings in the following table, and then choose **Next**. <br/><br/>
+1. On the **Configuration settings** tab, expand **Web Protection**, specify the settings in the following table, and then choose **Next**. <br/><br/>
 
    | Setting | Recommendation |
    |:---|:---|
@@ -326,13 +326,13 @@ With web protection, you can protect your organization's devices from web threat
    | **Block malicious site access** | Set to **Yes**. Prevents users from bypassing warnings about potentially malicious sites. |
    | **Block unverified file download** | Set to **Yes**. Prevents users from bypassing the warnings and downloading unverified files. |
 
-6. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**. 
+1. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**. 
    
-   To learn more about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
+1. To learn more about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](/intune/intune-service/fundamentals/scope-tags).
 
-7. On the **Assignments** tab, specify the users and devices to receive the web protection policy, and then choose **Next**.
+1. On the **Assignments** tab, specify the users and devices to receive the web protection policy, and then choose **Next**.
 
-8. On the **Review + create** tab, review your policy settings, and then choose **Create**.
+1. On the **Review + create** tab, review your policy settings, and then choose **Create**.
 
 > [!TIP]
 > To learn more about web threat protection, see [Protect your organization against web threats](web-threat-protection.md).
@@ -341,17 +341,17 @@ With web protection, you can protect your organization's devices from web threat
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com/) and sign in.
 
-2. Choose **Settings** > **Endpoints**.
+1. Choose **Settings** > **Endpoints**.
 
-3. Under **Rules**, choose **Web content filtering**, and then choose **+ Add policy**.
+1. Under **Rules**, choose **Web content filtering**, and then choose **+ Add policy**.
 
-4. In the **Add policy** flyout, on the **General** tab, specify a name for your policy, and then choose **Next**.
+1. In the **Add policy** flyout, on the **General** tab, specify a name for your policy, and then choose **Next**.
 
-5. On the **Blocked categories**, select one or more categories that you want to block, and then choose **Next**.
+1. On the **Blocked categories**, select one or more categories that you want to block, and then choose **Next**.
 
-6. On the **Scope** tab, select the device groups you want to receive this policy, and then choose **Next**.
+1. On the **Scope** tab, select the device groups you want to receive this policy, and then choose **Next**.
 
-7. On the **Summary** tab, review your policy settings, and then choose **Save**.
+1. On the **Summary** tab, review your policy settings, and then choose **Save**.
 
 > [!TIP]
 > To learn more about configuring web content filtering, see [Web content filtering](web-content-filtering.md).
@@ -366,15 +366,15 @@ To configure basic firewall settings, follow these steps:
 
 1. Go to the [Intune admin center](https://intune.microsoft.com), and sign in.
 
-2. Choose **Endpoint security** > **Firewall**, and then choose **+ Create Policy**.
+1. Choose **Endpoint security** > **Firewall**, and then choose **+ Create Policy**.
 
-3. Select a platform, such as **Windows 10, Windows 11, and Windows Server**, select the **Microsoft Firewall** profile, and then choose **Create**. 
+1. Select a platform, such as **Windows 10, Windows 11, and Windows Server**, select the **Microsoft Firewall** profile, and then choose **Create**. 
 
-4. On the **Basics** tab, specify a name and description, and then choose **Next**.
+1. On the **Basics** tab, specify a name and description, and then choose **Next**.
 
-5. Expand **Firewall**, and then scroll down to the bottom of the list.
+1. Expand **Firewall**, and then scroll down to the bottom of the list.
 
-6. Set each of the following settings to **True**:
+1. Set each of the following settings to **True**:
 
    - **Enable Domain Network Firewall** 
    - **Enable Private Network Firewall**
@@ -384,13 +384,13 @@ To configure basic firewall settings, follow these steps:
 
    Then choose **Next**.
 
-7. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**. 
+1. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**. 
    
-   To learn more about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
+ To learn more about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](/intune/intune-service/fundamentals/scope-tags).
 
-8. On the **Assignments** tab, select **Add all users** and **+ Add all devices**, and then choose **Next**. (You can alternately specify specific groups of users or devices.)
+1. On the **Assignments** tab, select **Add all users** and **+ Add all devices**, and then choose **Next**. (You can alternately specify specific groups of users or devices.)
 
-9. On the **Review + create** tab, review your policy settings, and then choose **Create**.
+1. On the **Review + create** tab, review your policy settings, and then choose **Create**.
 
 > [!TIP]
 > Firewall settings are detailed and can seem complex. Refer to [Best practices for configuring Windows Defender Firewall](/windows/security/threat-protection/windows-firewall/best-practices-configuring).
@@ -413,5 +413,5 @@ Now that you've finished the setup and configuration process, your next step is 
 
 - [Get started with Defender for Endpoint Plan 1](mde-plan1-getting-started.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

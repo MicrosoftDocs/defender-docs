@@ -1,5 +1,5 @@
 ---
-title: Insights and reports Attack simulation training
+title: Reports for Attack simulation training
 author: chrisda
 ms.author: chrisda
 manager: bagol
@@ -13,23 +13,23 @@ ms.collection:
 ms.custom:
 description: Admins can learn how Attack simulation training in the Microsoft Defender portal affects users and can gain insights from simulation and training outcomes.
 search.appverid: met150
-ms.date: 10/18/2024
+ms.date: 02/06/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
 
-# Insights and reports for Attack simulation training
+# Reports for Attack simulation training
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In Attack simulation training in Microsoft Defender for Office 365 Plan 2 or Microsoft 365 E5, Microsoft provides insights and reports from the results of simulations and the corresponding trainings. This information keeps you informed on the threat readiness progress of your users, and recommended next steps to better prepare your users for future attacks.
+In Attack simulation training in Microsoft Defender for Office 365 Plan 2 or Microsoft 365 E5, Microsoft provides reports from the results of simulations and the corresponding trainings. This information keeps you informed on the threat readiness progress of your users, and recommended next steps to better prepare your users for future attacks.
 
-Insights and reports are available in the following locations on the **Attack simulation training** page in the Microsoft Defender portal:
+Reports are available in the following locations on the **Attack simulation training** page in the Microsoft Defender portal:
 
-- Insights:
+- Report summaries:
   - The **Overview** tab at <https://security.microsoft.com/attacksimulator?viewid=overview>.
   - The **Reports** tab at <https://security.microsoft.com/attacksimulator?viewid=reports>.
-- Reports:
+- Full reports:
   - The **Attack simulation report** page at <https://security.microsoft.com/attacksimulationreport>:
     - [Training efficacy tab](#training-efficacy-tab-for-the-attack-simulation-report)
     - [User coverage tab](#user-coverage-tab-for-the-attack-simulation-report)
@@ -37,18 +37,18 @@ Insights and reports are available in the following locations on the **Attack si
     - [Repeat offenders tab](#repeat-offenders-tab-for-the-attack-simulation-report)
   - The reports for in-progress and completed simulations and training campaigns: For more information, see [Attack simulation report](#attack-simulation-report).
 
-The rest of this article describes the reports and insights for Attack simulation training.
+The rest of this article describes the available reports for Attack simulation training.
 
 For getting started information about Attack simulation training, see [Get started using Attack simulation training](attack-simulation-training-get-started.md).
 
-## Insights on the Overview and Reports tabs of Attack simulation training
+## Report summaries on the Overview and Reports tabs of Attack simulation training
 
 To go to the **Overview** tab, open the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Attack simulation training**:
 
 - **Overview** tab: Verify that the **Overview** tab is selected (it's the default). Or, to go directly to the **Overview** tab, use <https://security.microsoft.com/attacksimulator?viewid=overview>.
 - **Reports** tab: Select the **Reports** tab. Or, to go directly to the **Reports** tab, use <https://security.microsoft.com/attacksimulationreport>.
 
-The distribution of insights on the tabs is described in the following table:
+The distribution of report summaries on the tabs is described in the following table:
 
 |Report|Overview tab|Reports tab|
 |---|:---:|:---:|
@@ -124,7 +124,7 @@ Selecting **View repeat offender report** takes you to the [Repeat offenders tab
 
 ### Behavior impact on compromise rate card
 
-The **Behavior impact on compromise rate** card on the **Overview** and **Reports** tabs shows how your users responded to your simulations as compared to the historical data in Microsoft 365. You can use these insights to track progress in users threat readiness by running multiple simulations against the same groups of users.
+The **Behavior impact on compromise rate** card on the **Overview** and **Reports** tabs shows how your users responded to your simulations as compared to the historical data in Microsoft 365. You can use this information to track progress in users threat readiness by running multiple simulations against the same groups of users.
 
 The chart data shows the following information:
 
@@ -143,7 +143,7 @@ You can open the **Attack simulation report** from the **Overview** tab by selec
 
 ### Training efficacy tab for the Attack simulation report
 
-The **Training efficacy** tab is selected by default on the **Attack simulation report** page. This tab provides the same information that's available in the **Behavior impact on compromise rate** card, with additional context from the simulation itself.
+The **Training efficacy** tab is selected by default on the **Attack simulation report** page. This tab provides the same information that's available in the **Behavior impact on compromise rate** card, with more context from the simulation itself.
 
 :::image type="content" source="media/attack-sim-report-training-efficacy-view.png" alt-text="The Training efficacy tab in the Attack simulation report in the Microsoft Defender portal." lightbox="media/attack-sim-report-training-efficacy-view.png":::
 
@@ -224,13 +224,13 @@ The details table below the chart shows the following information. You can sort 
 - **Simulation types**: Type of simulations where the user was involved.
 - **Simulations**: Name of simulations where the user was involved.
 - **Email address**: Email address of the user.
-- **Latest repeat count**: Latest count of compromises for users categorized as repeat offenders. For example, if the repeat offender threshold is set to 3, and a user was compromised in 3 consecutive simulations, then the latest repeat count is 3. If the user was compromised in 4 consecutive simulations, then the latest repeat count is 4. If the user was compromised in 2 consecutive simulations, then the value N/A. The latest repeat count sets to 0 (N/A), every time a repeat offender flag is reset (meaning the user passes a simulation).
-- **Repeat offences**: Includes the number of times a user was classified as a repeat offender. For example:
-  - The user was classified as a repeat offender in first few simulations (they were compromised 3 consecutive times, where repeat offender threshold is 2).
+- **Latest repeat count**: Latest count of compromises for users categorized as repeat offenders. For example, if the repeat offender threshold is set to 3, and a user was compromised in three consecutive simulations, then the latest repeat count is 3. If the user was compromised in four consecutive simulations, then the latest repeat count is 4. If the user was compromised in two consecutive simulations, then the value N/A. The latest repeat count sets to 0 (N/A), every time a repeat offender flag is reset (meaning the user passes a simulation).
+- **Repeat offenses**: Includes the number of times a user was classified as a repeat offender. For example:
+  - The user was classified as a repeat offender in first few simulations (they were compromised three consecutive times, where repeat offender threshold is 2).
   - The user was classified as 'clean' after passing a simulation.
-  - The user was classified as a repeat offender in the next few simulations (they were compromised 4 consecutive times, where repeat offender threshold is 2).
+  - The user was classified as a repeat offender in the next few simulations (they were compromised four consecutive times, where repeat offender threshold is 2).
 
-  In these cases, the number of repeat offences is set to 2. The count updates every time a user is considered a repeat offender.
+  In these cases, the number of repeat offenses is set to 2. The count updates every time a user is considered to be a repeat offender.
 
 - **Last simulation name**
 - **Last simulation result**
@@ -250,6 +250,9 @@ Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="f
 
 Use the :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export report** button to save the information to a CSV file. The default filename is Attack simulation report - Microsoft Defender.csv, and the default location is the local Downloads folder. If an exported report already exists in that location, the filename is incremented (for example, Attack simulation report - Microsoft Defender (1).csv).
 
+> [!TIP]
+> If the **Department** property in Microsoft Entra ID is populated for users, you can export the information from this report to identify departments that were most vulnerable to completed phishing simulations.
+
 ## Simulation report in Attack simulation training
 
 The simulation report shows the details of in-progress or completed simulations (the **Status** value is **In progress** or **Completed**). To view the simulation report, use any of the following methods:
@@ -266,7 +269,7 @@ The simulation report shows the details of in-progress or completed simulations 
 
   For more information, see [View Training campaign reports](attack-simulation-training-training-campaigns.md#view-training-campaign-reports).
 
-The report page that opens contains **Report**, **Users, and **Details** tabs that contain information about the simulation. The rest of this section describes the insights and reports that are available on the **Report** tab.
+The report page that opens contains **Report**, **Users**, and **Details** tabs that contain information about the simulation. The rest of this section describes the information available on the **Report** tab.
 
 The sections on the **Report** tab for a simulation are described in the following subsections.
 
@@ -274,6 +277,10 @@ For more information about the **Users** and **Details** tabs, see the following
 
 - Simulations:
   - [Users tab](attack-simulation-training-simulations.md#users-tab)
+
+    > [!TIP]
+    > If the **Department** property in Microsoft Entra ID is populated for users, you can export the information from the **Users** tab to identify departments that were most vulnerable to a completed phishing simulation.
+
   - [Details tab](attack-simulation-training-simulations.md#details-tab)
 - Training campaigns:
   - [Users tab](attack-simulation-training-training-campaigns.md#users-tab)
@@ -290,7 +297,7 @@ If you export a [simulation report](#simulation-report-for-simulations) to a CSV
 - `PhishingURL`: The user clicked on the phishing link in the simulation email message.
 - `QRCode`: The user scanned the QR code in the simulation email message.
 
-Other metrics like reads, compromises, deletes, and reported messages continue to be tracked without any additional updates. For more information, the [Appendix](#appendix) section later in this article.
+Other metrics like reads, compromises, deletes, and reported messages continue to be tracked without any other updates. For more information, the [Appendix](#appendix) section later in this article.
 
 ### Simulation report for simulations
 
@@ -301,6 +308,9 @@ This section describes the information in the simulation report for regular simu
 #### Simulation impact section in the report for simulations
 
 The **Simulation impact** section on **Report** tab** for a simulation shows the number and percentage of **Compromised users** and **Users who reported** the message.
+
+> [!TIP]
+> Simulation messages reported by non-Microsoft tools aren't captured in attack simulation reports.
 
 If you hover over a section in the chart, the actual numbers for each category are shown.
 
@@ -405,6 +415,8 @@ When you export information from the reports, the CSV file contains more informa
 
 > [!TIP]
 > For maximum information, verify that all available columns in the report are visible before you export.
+>
+> Simulation messages reported by non-Microsoft tools aren't captured in attack simulation reports.
 
 |Field Name|Description|
 |---|---|
@@ -462,7 +474,7 @@ How user activity signals are captured is described in the following table.
 |Opened Attachment|A user opened the attachment.|The signal comes from the client (for example, Outlook or Word).|
 |Read Message|The user read the simulation message.|Message read signals might experience issues in the following scenarios: <ul><li>The user reported the message as phishing in Outlook without leaving the reading pane, and **Mark items as read when viewed in the Reading Pane** wasn't configured (default).</li><li>The user reported the unread message as phishing in Outlook, the message was deleted, and **Mark messages as read when deleted** wasn't configured (default).</li></ul>|
 |Out of Office|Determines whether the user is out of office.|Currently calculated by the Automatic replies setting from Outlook.|
-|Compromised User|The user was compromised. The compromise signal varies based on the social engineering technique.|<ul><li>**Credential Harvest**: The user entered their credentials on the login page (credentials aren't stored by Microsoft).¹</li><li>**Malware Attachment**: The user opened the payload attachment and selected **Enable Editing** in [Protected View](https://support.microsoft.com/office/d6f09ac7-e6b9-4495-8e43-2bbcdbcb6653).</li><li>**Link in Attachment**: The user opened the attachment and entered their credentials after clicking on the payload link.</li><li>**Link to Malware**: The user clicked on the payload link and entered their credentials.</li><li>**Drive by URL**: The user clicked on the payload link (entering credentials isn't required).¹</li><li>**OAuth Consent Grant**: The user clicked on the payload link and accepted the prompt to share permissions.¹</li></ul>|
+|Compromised User|The user was compromised. The compromise signal varies based on the social engineering technique.|<ul><li>**Credential Harvest**: The user entered their credentials on the sign in page (credentials aren't stored by Microsoft).¹</li><li>**Malware Attachment**: The user opened the payload attachment and selected **Enable Editing** in [Protected View](https://support.microsoft.com/office/d6f09ac7-e6b9-4495-8e43-2bbcdbcb6653).</li><li>**Link in Attachment**: The user opened the attachment and entered their credentials after clicking on the payload link.</li><li>**Link to Malware**: The user clicked on the payload link and entered their credentials.</li><li>**Drive by URL**: The user clicked on the payload link (entering credentials isn't required).¹</li><li>**OAuth Consent Grant**: The user clicked on the payload link and accepted the prompt to share permissions.¹</li></ul>|
 |Clicked Message Link|The user clicked on the payload link in the simulation message.|The URL in the simulation is unique for each user, which allows individual user activity tracking. Non-Microsoft filtering services or email forwarding can lead to false positives. For more information, see [I see clicks or compromise events from users who insist they didn't click the link in the simulation message OR I see clicks within a few seconds of delivery for many users (false positives). What's going on?](attack-simulation-training-faq.md#i-see-clicks-or-compromise-events-from-users-who-insist-they-didnt-click-the-link-in-the-simulation-message-or-i-see-clicks-within-a-few-seconds-of-delivery-for-many-users-false-positives-whats-going-on)|
 |Forwarded Message|The user forwarded the message.||
 |Replied to Message|The user replied to the message.||

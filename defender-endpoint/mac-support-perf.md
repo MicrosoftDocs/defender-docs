@@ -2,8 +2,8 @@
 title: Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS
 description: Troubleshoot performance issues in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
 manager: bagol
 ms.localizationpriority: medium
@@ -47,7 +47,7 @@ Prerequisites:
 - If you have [Tamper protection](tamperprotection-macos.md) turned on in block mode, use [Troubleshooting mode](mac-troubleshoot-mode.md) to capture real-time-protection-statistics. Otherwise, you get null results. 
 
 > [!TIP]
-> As a general best practice, it's recommended to update the [Microsoft Defender for Endpoint agent to latest available version](linux-whatsnew.md) and confirming that the issue still persists before investigating further.
+> As a general best practice, it's recommended to update the [Microsoft Defender for Endpoint agent to latest available version](microsoft-defender-endpoint-releases.md#linux-releases) and confirming that the issue still persists before investigating further.
 
 To troubleshoot and mitigate performance issues, follow these steps:
 
@@ -61,9 +61,9 @@ To troubleshoot and mitigate performance issues, follow these steps:
    
    If the performance problem persists while real-time protection is off, the origin of the problem could be the endpoint detection and response component. In this case, contact customer support for further instructions and mitigation.
    
-2. Open Finder and navigate to **Applications** > **Utilities**. Open **Activity Monitor** and analyze which applications are using the resources on your system. Typical examples include software updaters and compilers.
+1. Open Finder and navigate to **Applications** > **Utilities**. Open **Activity Monitor** and analyze which applications are using the resources on your system. Typical examples include software updaters and compilers.
 
-3. This feature requires real-time protection to be enabled. To check the status of real-time protection, run the following command:
+1. This feature requires real-time protection to be enabled. To check the status of real-time protection, run the following command:
 
    ```bash
    mdatp health --field real_time_protection_enabled
@@ -79,7 +79,7 @@ To troubleshoot and mitigate performance issues, follow these steps:
    Configuration property updated
    ```
    
-4. To find the applications that are triggering the most scans, you can use real-time statistics gathered by Defender for Endpoint on macOS. Run the following command to enable it:
+1. To find the applications that are triggering the most scans, you can use real-time statistics gathered by Defender for Endpoint on macOS. Run the following command to enable it:
 
    ```bash
    mdatp config real-time-protection-statistics --value enabled
@@ -88,7 +88,7 @@ To troubleshoot and mitigate performance issues, follow these steps:
    > [!TIP]
    > Before proceeding to capture the data, make sure that the high cpu utilization is occurring in the wdavdaemon_unprivileged by either running top or opening `activity monitor`.
 
-5. To output to a json file, run the following command: 
+1. To output to a json file, run the following command: 
 
    ```bash
    mdatp diagnostic real-time-protection-statistics --output json > real_time_protection.json
@@ -96,7 +96,7 @@ To troubleshoot and mitigate performance issues, follow these steps:
    
    > [!NOTE]
    > Using `--output json` (note the double dash) ensures that the output format is ready for parsing. The output of this command shows all processes and their associated scan activity. 
-6. On your macOS system, download the sample Python parser `high_cpu_parser.py` using the command:
+1. On your macOS system, download the sample Python parser `high_cpu_parser.py` using the command:
 
       ```bash
    curl -O https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/linux/diagnostic/high_cpu_parser.py
@@ -116,7 +116,7 @@ To troubleshoot and mitigate performance issues, follow these steps:
    0s
    ```
 
-7. Type the following commands:
+1. Type the following commands:
 
    ```bash
    chmod +x high_cpu_parser.py
@@ -142,12 +142,12 @@ To troubleshoot and mitigate performance issues, follow these steps:
    125  CrashPlanService 164
    ```
 
-8. To improve the performance of Defender for Endpoint on macOS, locate the one with the highest number under the **Total files scanned** row, and then add an exclusion for it. For more information, see [Configure and validate exclusions for Defender for Endpoint on macOS](mac-exclusions.md).
+1. To improve the performance of Defender for Endpoint on macOS, locate the one with the highest number under the **Total files scanned** row, and then add an exclusion for it. For more information, see [Configure and validate exclusions for Defender for Endpoint on macOS](mac-exclusions.md).
 
    > [!NOTE]
    > The application stores statistics in memory and only keeps track of file activity since it was started and real-time protection was enabled. Processes that were launched before or during periods when real time protection was off aren't counted. Additionally, only events which triggered scans are counted.
 
-9. Configure Microsoft Defender for Endpoint on macOS with exclusions for the processes or disk locations that contribute to the performance issues and re-enable real-time protection. 
+1. Configure Microsoft Defender for Endpoint on macOS with exclusions for the processes or disk locations that contribute to the performance issues and re-enable real-time protection. 
 
    See [Configure and validate exclusions for Microsoft Defender for Endpoint on macOS](mac-exclusions.md).
 

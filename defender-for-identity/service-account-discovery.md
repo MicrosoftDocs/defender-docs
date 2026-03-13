@@ -1,7 +1,7 @@
 ---
 title: Service Account Discovery
 description: The Service Accounts page provides a centralized location for customers to view and manage identity information across their environment, ensuring optimal visibility and a comprehensive experience.
-ms.topic: conceptual
+ms.topic: article
 ms.date: 03/25/2025
 ---
 
@@ -25,7 +25,7 @@ Service account types are displayed in the **Identity Info** table within Advanc
 
 #### Navigate to the Service accounts page
 
-In the Defender XDR portal at [https://security.microsoft.com](https://security.microsoft.com), go to Identities > Service Accounts.
+In the Microsoft Defender portal at [https://security.microsoft.com](https://security.microsoft.com), go to Identities > Service Accounts.
 
 The following image depicts the Service accounts page:
 

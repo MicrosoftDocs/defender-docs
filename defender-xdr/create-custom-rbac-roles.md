@@ -2,8 +2,8 @@
 title: Create custom roles with Microsoft Defender XDR Unified role-based access control (RBAC)
 description: Create custom roles in Microsoft Defender XDR Security portal role-based access control (RBAC)
 ms.service: defender-xdr
-ms.author: bagol
-author: batamig
+ms.author: monaberdugo
+author: mberdugo
 ms.localizationpriority: medium
 manager: orspodek
 audience: ITPro
@@ -123,7 +123,7 @@ To access and manage roles and permissions, without being a Global Administrator
 
     For example:
 
-    :::image type="content" source="/defender/media/defender/m365-defender-rbac-authorization-role.png" alt-text="Screenshot of the permissions and roles page" lightbox="/defender/media/defender/m365-defender-rbac-authorization-role.png":::
+    :::image type="content" source="media/create-custom-rbac-roles/m365-defender-rbac-authorization-role.png" alt-text="Screenshot of the permissions and roles page" lightbox="media/create-custom-rbac-roles/m365-defender-rbac-authorization-role.png":::
 
 1. Select **Apply** and then **Next** to assign users and data sources.
 
@@ -148,6 +148,12 @@ To access and manage roles and permissions, without being a Global Administrator
 You can configure scoped access using Microsoft Defender XDR’s Unified RBAC (URBAC) model for identities managed by Microsoft Defender for Identity (MDI). This allows you to restrict access and visibility to specific Active Directory domains or Organizational units, helping align with team responsibilities and reduce unnecessary data exposure.
 
 For more information, see: [Configure scoped access for Microsoft Defender for Identity](/defender-for-identity/configure-scoped-access).
+
+## Configure scoped roles for Microsoft Defender for Cloud
+
+You can configure scoped access using Microsoft Defender XDR’s Unified RBAC model for resources managed by Microsoft Defender for Cloud. This enables you to limit access and visibility to specific **subscriptions**, **resource groups**, or **individual resources**. By applying scoped roles, you help ensure that team members only see and manage the assets relevant to their responsibilities, reducing unnecessary exposure and improving operational security.
+
+For more information, see: [Manage cloud scopes and unified role-based access control](/azure/defender-for-cloud/cloud-scopes-unified-rbac?pivots=defender-portal).
 
 ## Next steps
 

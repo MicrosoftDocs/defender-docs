@@ -2,8 +2,8 @@
 title: Set preferences for Microsoft Defender for Endpoint on macOS
 description: Configure Microsoft Defender for Endpoint on macOS in enterprise organizations.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 manager: bagol
 ms.reviewer: joshbregman
 ms.localizationpriority: medium
@@ -15,15 +15,14 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: macos
 search.appverid: met150
-ms.date: 07/01/2025
+ms.date: 12/16/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ---
+
 # Set preferences for Microsoft Defender for Endpoint on macOS
-
-
 
 > [!IMPORTANT]
 > This article contains instructions for how to set preferences for Microsoft Defender for Endpoint on macOS in enterprise organizations. To configure Microsoft Defender for Endpoint on macOS using the command-line interface, see [Resources](mac-resources.md#configuring-from-the-command-line).
@@ -737,7 +736,7 @@ The following configuration profile (or, if there's JAMF, a property list that c
                 <key>PayloadOrganization</key>
                 <string>Microsoft</string>
                 <key>PayloadIdentifier</key>
-                <string/>
+                <string>99DBC2BC-3B3A-46A2-A413-C8F9BB9A7295</string>
                 <key>PayloadDisplayName</key>
                 <string>Microsoft Defender for Endpoint configuration settings</string>
                 <key>PayloadDescription</key>
@@ -1166,17 +1165,17 @@ From the JAMF console, open **Computers** \> **Configuration Profiles**, navigat
 
 1. Open **Devices** \> **Configuration Profiles**. Select **Create Profile**.
 
-2. Choose a name for the profile. Change **Platform=macOS** to **Profile type=Templates** and choose **Custom** in the template name section. Select **Configure**.
+1. Choose a name for the profile. Change **Platform=macOS** to **Profile type=Templates** and choose **Custom** in the template name section. Select **Configure**.
 
-3. Save the .plist produced earlier as `com.microsoft.wdav.xml`.
+1. Save the .plist produced earlier as `com.microsoft.wdav.xml`.
 
-4. Enter `com.microsoft.wdav` as the **custom configuration profile name**.
+1. Enter `com.microsoft.wdav` as the **custom configuration profile name**.
 
-5. Open the configuration profile and upload the `com.microsoft.wdav.xml` file. (This file was created in step 3.)
+1. Open the configuration profile and upload the `com.microsoft.wdav.xml` file. (This file was created in step 3.)
 
-6. Select **OK**.
+1. Select **OK**.
 
-7. Select **Manage** \> **Assignments**. In the **Include** tab, select **Assign to All Users & All devices**.
+1. Select **Manage** \> **Assignments**. In the **Include** tab, select **Assign to All Users & All devices**.
 
 > [!CAUTION]
 > You must enter the correct custom configuration profile name; otherwise, these preferences won't be recognized by Microsoft Defender for Endpoint.
@@ -1185,5 +1184,5 @@ From the JAMF console, open **Computers** \> **Configuration Profiles**, navigat
 
 - [Configuration Profile Reference (Apple developer documentation)](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

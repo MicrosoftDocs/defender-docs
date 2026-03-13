@@ -1,12 +1,12 @@
 ﻿---
-title: Schedule regular quick and full scans with Microsoft Defender Antivirus
-description: Set up recurring (scheduled) scans, including when they should run and whether they run as full or quick scans
+title: About regular quick and full scans with Microsoft Defender Antivirus
+description: Learn about recurring (scheduled) scans, including when they should run and whether they run as full or quick scans
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
-ms.date: 10/20/2025
+ms.date: 12/12/2025
 ms.reviewer: pauhijbr, ksarens, yongrhee, bsabetghadam
 manager: bagol
 ms.subservice: ngp
@@ -22,10 +22,18 @@ appliesto:
   - Microsoft Defender Antivirus
 
 ---
-# Configure scheduled quick or full Microsoft Defender Antivirus scans
 
+# About scheduled quick or full Microsoft Defender Antivirus scans
 
 You can set up regular, scheduled antivirus scans on devices. These scheduled scans are in addition to always-on, real-time protection and [on-demand antivirus](run-scan-microsoft-defender-antivirus.md) scans. When you schedule a scan, you can specify the type of scan, when the scan should occur, and if the scan should occur after a [protection update](manage-protection-updates-microsoft-defender-antivirus.md) or when a device isn't being used. You can also set up special scans to complete remediation actions if needed.
+
+For scheduled scan instructions, see the following articles:
+
+- [Schedule antivirus scans using PowerShell](schedule-antivirus-scans-powershell.md)
+- [Schedule antivirus scans using Windows Management Instrumentation (WMI)](schedule-antivirus-scans-wmi.md)
+- [Schedule antivirus scans using Windows Task Scheduler](https://support.microsoft.com/windows/schedule-a-scan-in-microsoft-defender-antivirus-54b64e9c-880a-c6b6-2416-0eb330ed5d2d)
+- [Schedule antivirus scans using Group Policy](schedule-antivirus-scans-group-policy.md)
+- [Schedule antivirus scans using Microsoft Intune](schedule-antivirus-scans-intune.md)
 
 ## Prerequisites
 
@@ -64,7 +72,7 @@ Use the following table to choose a scan type. Also see [Microsoft Defender Anti
 
     1. **Daily Scan**: Runs once per day and can only be a **quick scan**.
 
-    2. **Weekly Scan**: Runs once per week and can be either a **quick scan** or a **full scan**.
+    1. **Weekly Scan**: Runs once per week and can be either a **quick scan** or a **full scan**.
 
 - By default, Microsoft Defender Antivirus checks for an update 15 minutes before the time of any scheduled scans. You can [manage the schedule for when protection updates should be downloaded and applied](manage-protection-update-schedule-microsoft-defender-antivirus.md) to override this default.
 
@@ -107,5 +115,5 @@ This optimization applies to machines running Windows 10 Anniversary Update (ver
 - [Microsoft Defender Antivirus scan considerations and best practices](mdav-scan-best-practices.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

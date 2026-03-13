@@ -2,8 +2,8 @@
 title: Get scan definitions
 description: Learn how to use the Get all scan definition APIs
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -15,27 +15,16 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/14/2022
+ms.date: 11/10/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender Vulnerability Management
-
 ---
+
 # Get scan definitions
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-> Want to experience Microsoft Defender Vulnerability Management? Find out how to [sign up for a free trial](/defender-vulnerability-management/get-defender-vulnerability-management).
-
-[!Include[Prerelease information](../../includes/prerelease.md)]
-
-[!Include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!Include[Improve request performance](../../includes/improve-request-performance.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 ## API description
 
@@ -43,18 +32,18 @@ Retrieves a list of all scan definitions.
 
 ## Limitations
 
-1. Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
+Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
 
+When obtaining a token using user credentials, to view data, the user needs to have at least the following role permission: `ViewData` or `TvmViewData` . For more information, see: [Create and manage roles](../user-roles.md).
+
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md).
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Machine.Read.All| Read all scan information.
-Delegated (work or school account)|Machine.Read.All|Read all scan information.
-
-When obtaining a token using user credentials, to view data, the user needs to have at least the following role permission: `ViewData` or `TvmViewData` (See [Create and manage roles](../user-roles.md))
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Machine.Read.All|Read all scan information.|
+|Delegated (work or school account)|Machine.Read.All|Read all scan information.|
 
 ## HTTP request
 
@@ -64,9 +53,9 @@ GET /api/DeviceAuthenticatedScanDefinitions
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -83,7 +72,7 @@ If successful, this method returns 200 - OK response code with a list of authent
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefinitions
+GET https://api.security.microsoft.com/api/DeviceAuthenticatedScanDefinitions
 ```
 
 ### Response example
@@ -92,40 +81,8 @@ Here's an example of the response.
 
 ```json
 {
-"@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#DeviceAuthenticatedScanDefinitions",
+"@odata.context": "https://api.security.microsoft.com/api/$metadata#DeviceAuthenticatedScanDefinitions",
     "value": [
-    {
-    "id": "60c4vv57-asdf-3454-a456-2e45t9d79ec9d",
-    "scanType": "Windows",
-    "scanName": "Test Windows scan",
-    "isActive": true,
-    "target": "127.0.0.1",
-    "orgId": "47d21a0c-cccd-45d3-bffa-a93dbc0bfcaa",
-    "intervalInHours": 1,
-    "createdBy": "test@contoso.com",
-    "targetType": "Ip",
-    "scanAuthenticationParams": {
-        "@odata.type": "#microsoft.windowsDefenderATP.api.WindowsAuthParams",
-        "type": "Kerberos",
-        "username": "username",
-        "domain": "password",
-        "isGmsaUser": true
-        },
-    "scannerAgent": {
-        "id": "47d41a0c-xxx-46d3-bbea-93dbc0bfcaa_1bc268a79eedf14c4b90f77",
-        "machineId": "eb663asadf345dfg4bc268a79eedf14c4b90f77",
-        "machineName": "DESKTOP-TEST",
-        "lastSeen": "2021-12-19T20:29:04.8242449Z",
-        "AssignedApplicationId": "9E0FA0EB-0A51-4357-9C87-C21BFBE07571",
-        "ScannerSoftwareVersion": "7.1.1",
-        "LastCommandExecutionTimestamp": "2021-12-19T20:29:04.8242449Z",
-        "mdeClientVersion": "10.8295.22621.1195"
-        },
-    "latestScan": {
-        "status": "Fail",
-        "failureReason": null,
-        "executionDateTime": "2021-12-19T20:06:55.2295854Z"
-       },
     {
     "id": "60c4aa57-ioi3-1290-7ff6-09fr14792a92",
     "scanType": "Network",
@@ -161,10 +118,7 @@ Here's an example of the response.
     "failureReason": null,
     "executionDateTime": "2022-12-21T14:35:55.6702703Z"
         }
-    },
-     }
+    }
     ]
 }
 ```
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

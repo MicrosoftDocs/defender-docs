@@ -1,10 +1,10 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint on macOS overview
 ms.reviewer: joshbregman
 description: An introduction and overview of Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -38,7 +38,7 @@ This article describes how to install, configure, update, and use Defender for E
 
 [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md)
 
-[What's new in Microsoft Defender for Endpoint on Mac](mac-whatsnew.md)
+[What's new in Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-releases.md#macos-releases)
 
 > [!TIP]
 > If you have any feedback that you would like to share, submit it by opening Microsoft Defender for Endpoint on Mac on your device and navigating to **Help** \> **Send feedback**.
@@ -62,6 +62,11 @@ There are several methods and deployment tools that you can use to install and c
   - [JAMF-based deployment](mac-install-with-jamf.md)
   - [Other MDM products](mac-install-with-other-mdm.md)
 - [Manual deployment](mac-install-manually.md) via command line.
+
+> [!NOTE]
+> Uninstalling and reinstalling Microsoft Defender is **not required** when performing an in-place upgrade of macOS.
+> For certain macOS releases, Apple introduces new security or configuration requirements that require administrators to deploy additional configuration profiles via MDM. When this applies, the required changes are documented on the [What's new](microsoft-defender-endpoint-releases.md#macos-releases) page.
+> We recommend reviewing the latest What’s new updates to confirm whether any additional configuration is needed for your environment.
 
 ### System requirements
 
@@ -162,5 +167,5 @@ Starting with macOS 11 (Big Sur), Defender for Endpoint has been fully migrated 
 - [Privacy for Microsoft Defender for Endpoint on macOS](mac-privacy.md).
 - [Turn on Network protection for macOS](network-protection-macos.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

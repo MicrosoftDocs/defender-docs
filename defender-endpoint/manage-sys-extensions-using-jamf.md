@@ -2,8 +2,8 @@
 title: Manage system extensions using Jamf
 description: Manage system extensions using Jamf for Microsoft Defender for Endpoint to work properly on macOS.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.reviewer: joshbregman
 ms.localizationpriority: medium
 manager: bagol
@@ -30,11 +30,11 @@ To approve the system extensions, perform the following steps:
 
 1. Select **Computers > Configuration Profiles**, and then select **Options > System Extensions**.
 
-2. Select **Allowed System Extensions** from the **System Extension Types** drop-down list.
+1. Select **Allowed System Extensions** from the **System Extension Types** drop-down list.
 
-3. Use **UBF8T346G9** for Team ID.
+1. Use **UBF8T346G9** for Team ID.
 
-4. Add the following bundle identifiers to the **Allowed System Extensions** list:
+1. Add the following bundle identifiers to the **Allowed System Extensions** list:
 
    - com.microsoft.wdav.epsext
    - com.microsoft.wdav.netext
@@ -47,11 +47,11 @@ Add the following Jamf payload to grant Full Disk Access to the Microsoft Defend
 
 1. Select **Options > Privacy Preferences Policy Control**.
 
-2. Use **com.microsoft.wdav.epsext** as the Identifier and **Bundle ID** as Bundle type.
+1. Use **com.microsoft.wdav.epsext** as the Identifier and **Bundle ID** as Bundle type.
 
-3. Set Code Requirement to **identifier com.microsoft.wdav.epsext and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9**.
+1. Set Code Requirement to **identifier com.microsoft.wdav.epsext and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9**.
 
-4. Set **App or service** to **SystemPolicyAllFiles** and access to **Allow**.
+1. Set **App or service** to **SystemPolicyAllFiles** and access to **Allow**.
 
    :::image type="content" source="media/privacy-preferences-policy-control.png" alt-text="Privacy preferences policy control." lightbox="media/privacy-preferences-policy-control.png":::
 
@@ -125,7 +125,7 @@ As part of the Endpoint Detection and Response capabilities, Microsoft Defender 
 </plist>
 ```
 
-2. Verify that the above content was copied correctly into the file by running the **plutil** utility in terminal:
+1. Verify that the above content was copied correctly into the file by running the **plutil** utility in terminal:
 
 ```BashCopy
 $ plutil -lint <PathToFile>/com.microsoft.network-extension.mobileconfig
@@ -137,15 +137,15 @@ For example, if the file was stored in *Documents*:
 $ plutil -lint ~/Documents/com.microsoft.network-extension.mobileconfig
 ```
 
-3. Verify that the command outputs **OK**
+1. Verify that the command outputs **OK**
 
 ```BashCopy
 <PathToFile>/com.microsoft.network-extension.mobileconfig: OK
 ```
 
-4. Follow the instructions on [this page](https://learn.jamf.com/bundle/technical-articles/page/Welcome.html) to create a signing certificate using Jamf's built-in certificate authority.
+1. Follow the instructions on [this page](https://learn.jamf.com/bundle/technical-articles/page/Welcome.html) to create a signing certificate using Jamf's built-in certificate authority.
 
-5. After the certificate is created and installed to your device, run the following command from terminal to sign the file:
+1. After the certificate is created and installed to your device, run the following command from terminal to sign the file:
 
 ```BashCopy
 $ security cms -S -N "<CertificateName>" -i <PathToFile>/com.microsoft.network-extension.mobileconfig -o <PathToSignedFile>/com.microsoft.network-extension.signed.mobileconfig
@@ -157,4 +157,4 @@ For example, if the certificate name is *SigningCertificate* and the signed file
 $ security cms -S -N "SigningCertificate" -i ~/Documents/com.microsoft.network-extension.mobileconfig -o ~/Documents/com.microsoft.network-extension.signed.mobileconfig
 ```
 
-6. From the Jamf portal, navigate to **Configuration Profiles** and select the **Upload** button. Select **com.microsoft.network-extension.signed.mobileconfig** when prompted for the file.
+1. From the Jamf portal, navigate to **Configuration Profiles** and select the **Upload** button. Select **com.microsoft.network-extension.signed.mobileconfig** when prompted for the file.

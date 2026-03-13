@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
 ms.topic: concept-article
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: yongrhee
 manager: bagol
@@ -57,7 +57,7 @@ Although you can use a non-Microsoft antivirus solution with Microsoft Defender 
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
@@ -68,5 +68,5 @@ Although you can use a non-Microsoft antivirus solution with Microsoft Defender 
 [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
 
 [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

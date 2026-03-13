@@ -1,10 +1,10 @@
-﻿---
+---
 title: Create indicators for files
 ms.reviewer: yongrhee
 description: Create indicators for a file hash that define the detection, prevention, and exclusion of entities.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 ms.date: 10/20/2025
 manager: bagol
@@ -30,7 +30,7 @@ appliesto:
 
 > [!NOTE]
 > For this feature to work on Windows Server 2016 and Windows Server 2012 R2, those devices must be onboarded using the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2). 
-> Custom file indicators with the Allow, Block and Remediate actions are now also available in the [enhanced antimalware engine capabilities for macOS and Linux](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/enhanced-antimalware-engine-capabilities-for-linux-and-macos/ba-p/3292003).
+> Custom file indicators with the Allow, Block and Remediate actions are now also available in the [enhanced anti-malware engine capabilities for macOS and Linux](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/enhanced-antimalware-engine-capabilities-for-linux-and-macos/ba-p/3292003).
 
 File indicators prevent further propagation of an attack in your organization by banning potentially malicious files or suspected malware. If you know a potentially malicious portable executable (PE) file, you can block it. This operation will prevent it from being read, written, or executed on devices in your organization.
 
@@ -60,7 +60,7 @@ Understand the following prerequisites before you create indicators for files:
 ### Windows prerequisites
 
 - This feature is available if your organization uses [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md) (in active mode) 
-- The antimalware client version must be `4.18.1901.x` or later. See [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases)
+- The anti-malware client version must be `4.18.1901.x` or later. See [Monthly platform and engine versions](microsoft-defender-endpoint-releases.md#microsoft-defender-antivirus-releases)
 - File hash computation is enabled by setting `Computer Configuration\Administrative Templates\Windows Components\Microsoft Defender Antivirus\MpEngine\Enable File Hash Computation` to **Enabled**. Or, you can run the following PowerShell command: `Set-MpPreference -EnableFileHashComputation $true`
 
 > [!NOTE]
@@ -80,22 +80,25 @@ Understand the following prerequisites before you create indicators for files:
 - [File hash computation must be enabled](/defender-endpoint/linux-preferences#configure-file-hash-computation-feature) in the Microsoft Defender portal or in the managed JSON
 - Behavior monitoring enabled is preferred, but this feature works with any other scan (RTP or Custom).
 
+> [!NOTE]
+> On Linux, file indicators support script files (.sh files) and ELF files.
+
 ## Create an indicator for files from the settings page
 
 
 1. In the navigation pane, select **System** \> **Settings** \> **Endpoints** \> **Indicators** (under **Rules**).
 
-2. Select the **File hashes** tab.
+1. Select the **File hashes** tab.
 
-3. Select **Add item**.
+1. Select **Add item**.
 
-4. Specify the following details:
+1. Specify the following details:
 
    - Indicator: Specify the entity details and define the expiration of the indicator.
    - Action: Specify the action to be taken and provide a description.
    - Scope: Define the scope of the device group (scoping isn't available in [Defender for Business](/defender-business/mdb-overview)).
 
-5. Review the details in the Summary tab, then select **Save**.
+1. Review the details in the Summary tab, then select **Save**.
 
 ## Create a contextual indicator from the file details page
 
@@ -117,9 +120,9 @@ The current supported actions for file IOC are allow, audit and block, and remed
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints** > **Indicators** > **Add New File Hash**.
 
-2. Choose to block and remediate the file.
+1. Choose to block and remediate the file.
 
-3. Specify whether to generate an alert on the file block event and define the alerts settings:
+1. Specify whether to generate an alert on the file block event and define the alerts settings:
 
    - The alert title
    - The alert severity
@@ -172,20 +175,30 @@ Cert and File IoC policy handling conflicts follow this order:
 
 1. If the file isn't allowed by Windows Defender Application Control and AppLocker enforce mode policies, then **Block**.
 
-2. Else, if the file is allowed by the Microsoft Defender Antivirus exclusions, then **Allow**.
+1. Else, if the file is allowed by the Microsoft Defender Antivirus exclusions, then **Allow**.
 
-3. Else, if the file is blocked or warned by a block or warn file IoCs, then **Block/Warn**.
+1. Else, if the file is blocked or warned by a block or warn file IoCs, then **Block/Warn**.
 
-4. Else, if the file is blocked by SmartScreen, then **Block**.
+1. Else, if the file is blocked by SmartScreen, then **Block**.
 
-5. Else, if the file is allowed by an allow file IoC policy, then **Allow**.
+1. Else, if the file is allowed by an allow file IoC policy, then **Allow**.
 
-6. Else, if the file is blocked by attack surface reduction rules, controlled folder access, or antivirus protection, then **Block**.
+1. Else, if the file is blocked by attack surface reduction rules, controlled folder access, or antivirus protection, then **Block**.
 
-7. Else, **Allow** (passes Windows Defender Application Control & AppLocker policy, no IoC rules apply to it).
+1. Else, **Allow** (passes Windows Defender Application Control & AppLocker policy, no IoC rules apply to it).
 
 > [!NOTE]
 > In situations when Microsoft Defender Antivirus is set to **Block**, but Defender for Endpoint indicators for file hash or certificates are set to **Allow**, the policy defaults to **Allow**.
+
+> [!NOTE]
+> In situations where a certificate-based indicator is configured to **Block**, but a file hash indicator for one of its signed files is configured to **Allow**, this configuration is **not supported by design**. 
+> Certificate-based indicators have higher precedence in the Defender evaluation pipeline and will always override file hash allow indicators.
+> A configuration that simultaneously:
+> - blocks a certificate, and
+> - attempts to allow one of its signed files via file hash
+>
+> is **not supported**. Certificate-based indicators take precedence, and therefore the file will continue to be blocked.
+
 
 If there are conflicting file IoC policies with the same enforcement type and target, the policy of the more secure (meaning longer) hash is applied. For example, an SHA-256 file hash IoC policy takes precedence over an MD5 file hash IoC policy if both hash types define the same file.
 
@@ -198,6 +211,7 @@ Microsoft Defender Vulnerability Management's block vulnerable application featu
 
 |Component|Component enforcement|File indicator Action|Result|
 |---|---|---|---|
+|Antivirus protection|Block|Allow|Allow|
 |Attack surface reduction file path exclusion|Allow|Block|Block|
 |Attack surface reduction rule|Block|Allow|Allow|
 |Windows Defender Application Control|Allow|Block|Allow|
@@ -216,5 +230,5 @@ Microsoft Defender Vulnerability Management's block vulnerable application featu
 
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

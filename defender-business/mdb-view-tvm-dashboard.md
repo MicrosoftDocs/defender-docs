@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: concept-article
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 06/19/2024
+ms.date: 09/11/2025
 ms.reviewer: nehabha
 f1.keywords: NOCSH
 ms.collection:
@@ -24,7 +24,10 @@ ms.custom: intro-get-started
 Defender for Business includes a vulnerability management dashboard that is designed to save your security team time and effort. In addition to providing an exposure score, that dashboard enables you to view information about exposed devices and see relevant security recommendations. You can use your Defender Vulnerability Management dashboard to:
 
 - View your exposure score, which is associated with devices in your company.
-- View your top security recommendations, such as addressing impaired communications with devices, turning on firewall protection, or updating Microsoft Defender Antivirus definitions.
+- View your top security recommendations. For example:
+  - Address impaired communications with devices.
+  - Turn on firewall protection.
+  - Update Microsoft Defender Antivirus definitions.
 - View remediation activities, such as any files that were sent to quarantine, or vulnerabilities found on devices.
 
 ## Vulnerability management features and capabilities
@@ -41,9 +44,9 @@ Vulnerability management features and capabilities in Microsoft Defender for Bus
 
     :::image type="content" source="media/mdb-mdvm-remediation.png" alt-text="Screenshot of Microsoft Defender Vulnerability Management-Remediation." lightbox="media/mdb-mdvm-remediation.png":::
 
-- **Inventories**: Lists software and apps currently in use in your organization. You'll see browsers, operating systems, and other software on devices, along with identified weaknesses and threats.
+- **Inventories**: Lists software and apps currently in use in your organization. You see browsers, operating systems, and other software on devices, along with identified weaknesses and threats.
 
-- **Weaknesses**: Lists vulnerabilities along with the number of exposed devices in your organization. If you see "0" in the Exposed devices column, you do not have to take any immediate action. However, you can learn more about each vulnerability listed on this page. Select an item to learn more about it and what you can do to mitigate the potential threat to your company.
+- **Weaknesses**: Lists vulnerabilities along with the number of exposed devices in your organization. If you see "0" in the Exposed devices column, you don't have to take any immediate action. However, you can learn more about each vulnerability listed on this page. Select an item to learn more about it and what you can do to mitigate the potential threat to your company.
 
     :::image type="content" source="media/mdb-mdvm-weakness-details.png" alt-text="Screenshot of Microsoft Defender Vulnerability Management-Weaknesses." lightbox="media/mdb-mdvm-weakness-details.png":::
 

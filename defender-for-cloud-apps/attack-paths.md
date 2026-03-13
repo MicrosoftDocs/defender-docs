@@ -31,7 +31,6 @@ Alternatively, you can use one of the following **Entra ID roles**:
 
 |Permission |Actions |
 |---------|---------|
-|**Global Admin**    | (read and write permissions)        |
 |**Security Admin**    | (read and write permissions)        |
 |**Security Operator**   | (read and limited write permissions)        |
 |**Global Reader**    | (read permissions)        |
@@ -49,7 +48,7 @@ Microsoft Defender for Cloud Apps defines a set of critical privilege OAuth perm
 
 To view the full list of permissions, go to the  [Microsoft Defender portal](https://security.microsoft.com) and navigate to Settings > Microsoft Defender XDR > Rules > Critical asset management.
 
-:::image type="content" source="media/saas-securty-initiative/screenshot-of-the-critical-asset-management-page.png" alt-text="Screenshot of the Critical asset management page in the Defender XDR portal." lightbox="media/saas-securty-initiative/Screenshot-of-the-critical-asset-management-page.png":::
+:::image type="content" source="media/saas-securty-initiative/screenshot-of-the-critical-asset-management-page.png" alt-text="Screenshot of the Critical asset management page in the Microsoft Defender portal." lightbox="media/saas-securty-initiative/Screenshot-of-the-critical-asset-management-page.png":::
 
 
 ## Investigation user flow: View attack paths involving OAuth applications

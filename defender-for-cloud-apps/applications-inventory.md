@@ -3,7 +3,7 @@ title: Application inventory
 ms.date: 03/20/2025
 ms.topic: overview
 ms.reviewer: anandd512
-description: The new Applications page located under Assets in Microsoft Defender XDR portal provides a centralized location for users to view and manage SaaS and SaaS connected OAuth apps information across their environment, ensuring optimal visibility and a comprehensive experience
+description: The new Applications page located under Assets in the Microsoft Defender portal provides a centralized location for users to view and manage SaaS and SaaS connected OAuth apps information across their environment, ensuring optimal visibility and a comprehensive experience
 #customer intent: As a security administrator, I want to discover, monitor, and manage all SaaS and OAuth connected apps in my organization so that I can ensure security and compliance.
 ---
 # Applications inventory 
@@ -68,6 +68,8 @@ The OAuth apps tab provides visibility into Microsoft 365, Google workspace and 
 
 * **Highly privileged apps** – Shows apps with powerful permissions that allow them to access data or change important settings. (Available for Microsoft 365 and Google)
 
+* **Unused apps** - Shows apps that have not signed in within the last 90 days (Available for Microsoft 365)
+
 * **Overprivileged apps** – Shows apps with unused permissions. (Available for Microsoft 365)
 
 * **Apps from external unverified publishers** – Shows apps that originated from an external unverified publisher tenant. (Available for Microsoft 365)
@@ -91,6 +93,7 @@ You can apply the following filters to get a more focused view:
 | **App origin**| Shows whether the app originated within the tenant or was registered in an external tenant. |
 | **Consent type**| Shows whether the app consent has been given at the user or the admin level, and the number of users whose data is accessible to the app. |
 | **Publisher**| Publisher of the app and their verification status. |
+| **Last used**| Date and time when the app last signed in. Tracking of this data goes back to June, 2022. | 
 | **Last modified**| Date and time when registration information was last updated on Microsoft Entra ID |
 | **Added on**| Shows the date and time when the app was registered to Microsoft Entra ID and assigned a service principal. |
 | **Permission usage**| Shows whether the app has any unused Graph API permissions in the last 90 days. |

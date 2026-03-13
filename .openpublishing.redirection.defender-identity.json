@@ -16,6 +16,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "defender-for-identity/architecture.md",
+      "redirect_url": "/defender-for-identity/what-is",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "defender-for-identity/deploy/quick-installation-guide.md",
       "redirect_url": "/defender-for-identity/deploy/deploy-defender-identity",
       "redirect_document_id": false
@@ -1114,7 +1119,11 @@
       "source_path": "defender-for-identity/rotate-password-microsoft-entra-connect.md",
       "redirect_url": "/defender-for-identity/security-posture-assessments/hybrid-security",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/link-unlink-account-to-identity.md",
+      "redirect_url": "/defender-for-identity/manage-related-identities-accounts",
+      "redirect_document_id": false
     }
-
   ]
 }

@@ -2,8 +2,8 @@
 title: Manage system extensions using the manual methods of deployment
 description: Manage system extensions using the manual methods of deployment.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -94,15 +94,15 @@ If you run systemextensionsctl list, the following screen appears:
 
    :::image type="content" source="media/privacy-tab.png" alt-text="The Privacy tab." lightbox="media/privacy-tab.png":::
 
-2. Select **Accessibility** from the left navigation pane, and select **+**.
+1. Select **Accessibility** from the left navigation pane, and select **+**.
 
    :::image type="content" source="media/accessibility-and-plus-icon.png" alt-text="The Accessibility menu item and the Plus icon." lightbox="media/accessibility-and-plus-icon.png":::
 
-3. From the resultant screen, select **Applications** from the **Favorites** pane in the left-side of the screen; select **Microsoft Defender**; and then select **Open** at the bottom-right of the screen.
+1. From the resultant screen, select **Applications** from the **Favorites** pane in the left-side of the screen; select **Microsoft Defender**; and then select **Open** at the bottom-right of the screen.
 
    :::image type="content" source="media/applications-md-options.png" alt-text="The process of selecting Applications and Microsoft Defender." lightbox="media/applications-md-options.png":::
    
-4. From the resultant screen, check the **Microsoft Defender** checkbox.
+1. From the resultant screen, check the **Microsoft Defender** checkbox.
 
    :::image type="content" source="media/checking-md-checkbox.png" alt-text="Checking the Microsoft Defender checkbox." lightbox="media/checking-md-checkbox.png":::
 

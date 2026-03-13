@@ -3,8 +3,8 @@ title: Visit the Action center to see remediation actions
 description: Use the action center to view details and results following an automated investigation
 ms.service: defender-endpoint
 ms.subservice: edr
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -58,16 +58,16 @@ To get to the unified Action center in the improved Microsoft Defender portal:
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
-2. In the navigation pane, select **Action center**.
+1. In the navigation pane, select **Action center**.
 
-3. Use the **Pending actions** and **History** tabs. The following table summarizes what you'll see on each tab:
+1. Use the **Pending actions** and **History** tabs. The following table summarizes what you'll see on each tab:
 
    |Tab|Description|
    |---|---|
    |**Pending**|Displays a list of actions that require attention. You can approve or reject actions one at a time, or select multiple actions if they have the same type of action (such as **Quarantine file**). <p> **TIP**: Make sure to [review and approve (or reject) pending actions](manage-auto-investigation.md) as soon as possible so that your automated investigations can complete in a timely manner.|
    |**History**|Serves as an audit log for actions that were taken, such as: <ul><li>Remediation actions that were taken as a result of automated investigations</li><li>Remediation actions that were approved by your security operations team</li><li>Commands that were run and remediation actions that were applied during Live Response sessions</li><li>Remediation actions that were taken by threat protection features in Microsoft Defender Antivirus</li></ul> <p> Provides a way to undo certain actions (see [Undo completed actions](manage-auto-investigation.md#undo-completed-actions)).|
 
-4. To customize, sort, filter, and export data in the Action center, take one or more of the following steps:
+1. To customize, sort, filter, and export data in the Action center, take one or more of the following steps:
 
    :::image type="content" source="media/new-action-center-columnsfilters.png" alt-text="The Action center with Columns and filters" lightbox="media/new-action-center-columnsfilters.png":::
 
@@ -87,5 +87,5 @@ To get to the unified Action center in the improved Microsoft Defender portal:
 
 - [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

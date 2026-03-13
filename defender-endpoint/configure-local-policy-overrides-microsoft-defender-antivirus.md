@@ -4,8 +4,8 @@ description: Enable or disable users from locally changing settings in Microsoft
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.topic: how-to
 ms.custom: nextgen
 ms.date: 10/20/2025
@@ -46,13 +46,13 @@ To configure these settings:
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure and then select **Edit**.
 
-2. In the **Group Policy Management Editor** go to **Computer configuration** and select **Administrative templates**.
+1. In the **Group Policy Management Editor** go to **Computer configuration** and select **Administrative templates**.
 
-3. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** and then the **Location** specified in the [table of settings section](#table-of-settings) (in this article).
+1. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** and then the **Location** specified in the [table of settings section](#table-of-settings) (in this article).
 
-4. Double-click the policy **Setting** as specified in the table below, and set the option to your desired configuration. Select **OK**, and repeat for any other settings.
+1. Double-click the policy **Setting** as specified in the table below, and set the option to your desired configuration. Select **OK**, and repeat for any other settings.
 
-5. Deploy the Group Policy Object as usual.
+1. Deploy the Group Policy Object as usual.
 
 ## Table of settings
 
@@ -67,10 +67,10 @@ To configure these settings:
 | Real-time protection|Configure local setting override to turn on real-time protection|[Enable and configure Microsoft Defender Antivirus always-on protection and monitoring](configure-real-time-protection-microsoft-defender-antivirus.md) |
 | Remediation|Configure local setting override for the time of day to run a scheduled full scan to complete remediation|[Configure remediation for scans](configure-remediation-microsoft-defender-antivirus.md) |
 | Scan|Configure local setting override for maximum percentage of CPU utilization|[Configure and run scans](run-scan-microsoft-defender-antivirus.md) |
-| Scan|Configure local setting override for schedule scan day|[Configure scheduled scans](schedule-antivirus-scans.md) |
-| Scan|Configure local setting override for scheduled quick scan time|[Configure scheduled scans](schedule-antivirus-scans.md) |
-| Scan|Configure local setting override for scheduled scan time|[Configure scheduled scans](schedule-antivirus-scans.md) |
-| Scan|Configure local setting override for the scan type to use for a scheduled scan|[Configure scheduled scans](schedule-antivirus-scans.md) |
+| Scan|Configure local setting override for schedule scan day|[About scheduled scans](schedule-antivirus-scans.md) |
+| Scan|Configure local setting override for scheduled quick scan time|[About scheduled scans](schedule-antivirus-scans.md) |
+| Scan|Configure local setting override for scheduled scan time|[About scheduled scans](schedule-antivirus-scans.md) |
+| Scan|Configure local setting override for the scan type to use for a scheduled scan|[About scheduled scans](schedule-antivirus-scans.md) |
 
 <a id="merge-lists"></a>
 
@@ -84,11 +84,11 @@ By default, lists that have been configured in local group policy and the Window
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure and click **Edit**.
 
-2. In the **Group Policy Management Editor** go to **Computer configuration** and select **Administrative templates**.
+1. In the **Group Policy Management Editor** go to **Computer configuration** and select **Administrative templates**.
 
-3. Expand the tree to **Windows components** > **Microsoft Defender Antivirus**.
+1. Expand the tree to **Windows components** > **Microsoft Defender Antivirus**.
 
-4. Double-click **Configure local administrator merge behavior for lists** and set the option to **Disabled**. Then select **OK**.
+1. Double-click **Configure local administrator merge behavior for lists** and set the option to **Disabled**. Then select **OK**.
 
 > [!NOTE]
 > For "Administrative Templates (.admx) for Windows 11 2022 Update (22H2)" and "Administrative Templates (.admx) for Windows 10 November 2021 Update (21H2)" templates, set **Configure local administrator merge behavior for lists** to **Enabled** to disable the local administrator merge behavior.
@@ -97,9 +97,9 @@ By default, lists that have been configured in local group policy and the Window
 
 1. In the [Microsoft Intune admin center](https://intune.microsoft.com), select **Endpoint security** > **Antivirus**.
 
-2. Choose **Create Policy**, or modify an existing Microsoft Defender Antivirus policy.
+1. Choose **Create Policy**, or modify an existing Microsoft Defender Antivirus policy.
 
-3. Under the **Configuration settings**, select the drop-down next to **Disable Local Admin Merge** and select **Disable Local Admin Merge**.
+1. Under the **Configuration settings**, select the drop-down next to **Disable Local Admin Merge** and select **Disable Local Admin Merge**.
 
 > [!NOTE]
 > If you disable local list merging, it will override controlled folder access settings. It also overrides any protected folders or allowed apps set by the local administrator. For more information about controlled folder access settings, see [Allow a blocked app in Windows Security](https://support.microsoft.com/help/4046851/windows-10-allow-blocked-app-windows-security).
@@ -109,7 +109,7 @@ By default, lists that have been configured in local group policy and the Window
 
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
@@ -117,8 +117,8 @@ By default, lists that have been configured in local group policy and the Window
 
 ## Related topics
 
-- [Microsoft Intune](/mem/intune/protect/advanced-threat-protection-configure)
+- [Microsoft Intune](/intune/intune-service/protect/advanced-threat-protection-configure)
 - [Microsoft Defender Antivirus in Windows](microsoft-defender-antivirus-windows.md)
 - [Configure end-user interaction with Microsoft Defender Antivirus](configure-local-policy-overrides-microsoft-defender-antivirus.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

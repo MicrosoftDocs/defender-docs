@@ -2,12 +2,12 @@
 title: Get file statistics API
 description: Learn how to use the Get file statistics API to retrieve the statistics for the given file in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -15,22 +15,13 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 04/17/2024
+ms.date: 11/12/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # Get file statistics API
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## API description
 
@@ -38,22 +29,21 @@ Retrieves the statistics for the given file.
 
 ## Limitations
 
-1. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
-2. The maximum value for `lookbackhours` is 720 Hours(30 days).
+- Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+- The maximum value for `lookbackhours` is 720 Hours(30 days).
 
 ## Permissions
 
+When obtaining a token using user credentials:
+
+- The user needs to have at least the following role permission: 'View Data'. For more information, see [Create and manage roles](../user-roles.md).
+
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|File.Read.All|'Read file profiles'
-Delegated (work or school account)|File.Read.All|'Read file profiles'
-
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - The user needs to have at least the following role permission: 'View Data' (For more information, see [Create and manage roles](../user-roles.md))
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|File.Read.All|'Read file profiles'|
+|Delegated (work or school account)|File.Read.All|'Read file profiles'|
 
 ## HTTP request
 
@@ -63,15 +53,15 @@ GET /api/files/{id}/stats
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request URI parameters
 
-Name|Type|Description
-:---|:---|:---
-lookBackHours|Int32|Defines the hours we search back to get the statistics. Defaults to 30 days. **Optional**.
+|Name|Type|Description|
+|---|---|---|
+|lookBackHours|Int32|Defines the hours we search back to get the statistics. Defaults to 30 days. **Optional**.|
 
 ## Request body
 
@@ -110,5 +100,3 @@ Here's an example of the response.
     ]
 }
 ```
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

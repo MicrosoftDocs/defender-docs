@@ -2,13 +2,13 @@
 title: Troubleshoot system extension issues for Microsoft Defender for Endpoint on macOS
 description: Troubleshoot system extension issues in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
 manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - mde-macos
@@ -19,10 +19,9 @@ ms.date: 04/16/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
-# Troubleshoot system extension issues in Microsoft Defender for Endpoint on macOS
 
+# Troubleshoot system extension issues in Microsoft Defender for Endpoint on macOS
 
 You can submit feedback by opening Microsoft Defender for Endpoint on macOS on your device and by navigating to **Help > Send feedback**.
 
@@ -53,9 +52,10 @@ You can also run **mdatp health**: It reports if real-time protection is enabled
 ```bash
 mdatp health
 ```
+
 The output on running **mdatp health** is:
 
-```Output
+```output
 healthy                            : false
 health_issues                    : ["no active event provider", "network event provider not running", "full disk access has not been granted"]
 ...
@@ -64,6 +64,7 @@ real_time_protection_available: unavailable
 ...
 full_disk_access_enabled        : false
 ```
+
 The output report displayed on running **mdatp health** is shown in the following screenshot:
 
 :::image type="content" source="media/screen-on-clicking-fix.png" alt-text="The screen that is displayed on clicking the Fix button." lightbox="media/screen-on-clicking-fix.png":::
@@ -76,28 +77,28 @@ If you didn't approve the system extension during the deployment/installation of
 
 1. Check the system extensions by running the following command in the terminal:
 
-   ```BashCopy
+   ```bash
    systemextensionsctl list
    ```
 
    :::image type="content" source="media/check-system-extension.png" alt-text="The screen that shows what should be done to check the system extension." lightbox="media/check-system-extension.png":::
 
-You notice that both Microsoft Defender for Endpoint on macOS extensions is in the **[activated waiting for user]** state.
+   You notice that both Microsoft Defender for Endpoint on macOS extensions is in the **[activated waiting for user]** state.
 
-2. In the terminal, run the following command:
+1. In the terminal, run the following command:
 
-   ```BashCopy
+   ```bash
    mdatp health --details system_extensions
    ```
 
-You get the following output:
+   You get the following output:
 
-```OutputCopy
-network_extension_enabled                 : false
-network_extension_installed                 : true
-endpoint_security_extension_ready           : false
-endpoint_security_extension_installed        : true
-```
+   ```output
+   network_extension_enabled                 : false
+   network_extension_installed                 : true
+   endpoint_security_extension_ready           : false
+   endpoint_security_extension_installed        : true
+   ```
 
 This output is shown in the following screenshot:
 
@@ -105,25 +106,31 @@ This output is shown in the following screenshot:
 
 The following files might be missing if you're managing it via Intune, JamF, or another MDM solution:
 
-|MobileConfig (Plist)  |"mdatp health" console command output  |macOS setting needed for MDE on macOS to function properly  |
-|---------|---------|---------|
-|"/Library/Managed Preferences/com.apple.system-extension-policy.plist"    |  real_time_protection_subsystem       |   System extension      |
-|"/Library/Managed Preferences/com.apple.webcontent-filter.plist"    |   network_events_subsystem      |     Network Filter extension    |
-|"/Library/Managed Preferences/com.apple.TCC.configuration-profile-policy.plist"   |     full_disk_access_enabled    |    Privacy Preference Policy Controls (PPPC, aka TCC (Transparency, Consent & Control), Full Disk Access (FDA))     |
-|"/Library/Managed Preferences/com.apple.notificationsettings.plist"    |   n/a      |     End-user notifications    |
-|"/Library/Managed Preferences/servicemanagement.plist"     |   n/a      | Background services        |
-|"/Library/Managed Preferences/com.apple.TCC.configuration-profile-policy.plist"     |    full_disk_access_enabled (for DLP)     |   Accessibility      |
+|MobileConfig (Plist)|"mdatp health" console command output|macOS setting needed for MDE on macOS to function properly|
+|---|---|---|
+|"/Library/Managed Preferences/com.apple.system-extension-policy.plist"|real_time_protection_subsystem|System extension|
+|"/Library/Managed Preferences/com.apple.webcontent-filter.plist"|network_events_subsystem|Network Filter extension|
+|"/Library/Managed Preferences/com.apple.TCC.configuration-profile-policy.plist"|full_disk_access_enabled|Privacy Preference Policy Controls (PPPC, aka TCC (Transparency, Consent & Control), Full Disk Access (FDA))|
+|"/Library/Managed Preferences/com.apple.notificationsettings.plist"|n/a|End-user notifications|
+|"/Library/Managed Preferences/servicemanagement.plist"|n/a|Background services|
+|"/Library/Managed Preferences/com.apple.TCC.configuration-profile-policy.plist"|full_disk_access_enabled (for DLP)|Accessibility|
 
 To troubleshoot the issue of missing files to make Microsoft Defender for Endpoint on macOS work properly [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md#microsoft-defender-for-endpoint-on-macos).
 
 ## Solution
 
-This section describes the solution of approving the functions such system extension, background services, notifications, full disk access, and so on, using the management tools, namely Intune, JamF, Other MDM, and using the method of manual deployment. To perform these functions using these management tools, see:
+Approve functions (for example, system extensions, background services, notifications, and full disk access) using the following methods:
 
-- [Intune](manage-profiles-approve-sys-extensions-intune.md#manage-profiles-and-approve-extensions-using-intune)
-- [JamF](manage-sys-extensions-using-jamf.md#manage-system-extensions-using-jamf)
+- [Intune](manage-profiles-approve-sys-extensions-intune.md)
+
+  > [!NOTE]
+  > Intune policy support for macOS extensions was deprecated in the August 2024 service release (2048). Existing Intune policies with macOS extensions continue to work, but you can't create new policies with macOS extensions in Intune.
+  >
+  > Instead, use the settings catalog to create new Intune policies for macOS that configure the System Extension payload. For more information, see [Use the Intune settings catalog to configure settings](/intune/intune-service/configuration/settings-catalog).
+
+- [JamF](manage-sys-extensions-using-jamf.md)
 - [Other MDM](mac-install-with-other-mdm.md)
-- [Manual deployment](manage-sys-extensions-manual-deployment.md#manage-system-extensions-using-the-manual-methods-of-deployment)
+- [Manual deployment](manage-sys-extensions-manual-deployment.md)
 
 ### Prerequisites
 
@@ -131,7 +138,7 @@ Prior to approving the system extension (using any of the specified management t
 
 #### Step 1: Are the profiles coming down to your macOS?
 
-If you're using Intune, see [Manage macOS software update policies in Intune](/mem/intune/protect/software-updates-macos).
+If you're using Intune, see [Manage macOS software update policies in Intune](/intune/intune-service/protect/software-updates-macos).
 
 :::image type="content" source="media/refresh-devices.png" alt-text="The screen on which you refresh the devices." lightbox="media/refresh-devices.png":::
 
@@ -155,46 +162,48 @@ The section [Sections that provide guidance on enabling profiles needed for Micr
 > [!NOTE]
 > A proper naming convention for your configuration profiles is a real advantage. We recommend the following naming scheme:
 > `Name of the Setting(s) [(additional info)] -Platform - Set - Policy-Type`
-> For example, `FullDiskAccess (piloting) - macOS - Default - MDE`
+> For example: `FullDiskAccess (piloting) - macOS - Default - MDE`
 
 Using the recommended naming convention enables you to confirm that the correct profiles are dropping down at the time of checking.
 
 > [!TIP]
 > To ensure that the correct profiles are coming down, instead of typing.mobileconfig (plist)**, you can download this profile from GitHub, to avoid typos elongated hyphens.
 
-In terminal, enter the following syntax:
+In terminal, use the following syntax:
 
-`curl -O https://URL`
+```bash
+curl -O https://URL
+```
 
-For example,
+For example:
 
-```BashCopy
-   curl -O https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mobileconfig/profiles/sysext.mobileconfig
+```bash
+curl -O https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mobileconfig/profiles/sysext.mobileconfig
 ```
 
 ##### Sections that provide guidance on enabling profiles needed for Microsoft Defender for Endpoint
 
-1. 
+1.
    - **Function**: [Approve System Extensions](mac-install-with-intune.md)
-   - **Mobile config (plist)**: https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/sysext.mobileconfig
+   - **Mobile config (plist)**: `https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/sysext.mobileconfig`
    - **Applicable to**:
        - **Intune**: Yes
        - **JamF**: Yes
        - **Other MDM**: Yes
        - **Manual**: Must approve the extension by going to **Security Preferences or System Preferences > Security & Privacy** and then selecting **Allow**.
 
-2. 
+1.
    - **Function**: [Network Filter](mac-install-with-intune.md)
-   - **Mobile config (plist)**: https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/netfilter.mobileconfig
+   - **Mobile config (plist)**: `https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/netfilter.mobileconfig`
    - **Applicable to**:
        - **Intune**: Yes
        - **JamF**: Yes
        - **Other MDM**: Yes
        - **Manual**: Must approve the extension by going to **Security Preferences or System Preferences > Security & Privacy** and then selecting **Allow**.
 
-3. 
+1.
    - **Function**: [Privacy Preference Policy Controls (PPPC, aka TCC (Transparency, Consent & Control), Full Disk Access (FDA))](mac-install-with-intune.md)
-   - **Mobile config (plist)**: https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/fulldisk.mobileconfig
+   - **Mobile config (plist)**: `https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/fulldisk.mobileconfig`
    - **Applicable to**:
        - **Intune**: Yes
        - **JamF**: Yes
@@ -203,64 +212,63 @@ For example,
            - **Microsoft Defender**
            - **Microsoft Defender Security Extension**
 
-4. 
+1.
    - **Function**: Running in background
-   - **Mobile config (plist)**: https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/background_services.mobileconfig
+   - **Mobile config (plist)**: `https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/background_services.mobileconfig`
    - **Applicable to**:
        - **Intune**: Yes
        - **JamF**: Yes
        - **Other MDM**: Yes
        - **Manual**: Not applicable
 
-5. 
+1.
    - **Function**: Sending notifications
-   - **Mobile config (plist)**: https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/notif.mobileconfig
+   - **Mobile config (plist)**: `https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/notif.mobileconfig`
    - **Applicable to**:
        - **Intune**: Yes
        - **JamF**: Yes
        - **Other MDM**: Yes
        - **Manual**: Not applicable
 
-6. 
+1.
    - **Function**: Accessibility
-   - **Mobile config (plist)**: https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/accessibility.mobileconfig
+   - **Mobile config (plist)**: `https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/accessibility.mobileconfig`
    - **Applicable to**:
        - **Intune**: Yes
        - **JamF**: Yes
        - **Other MDM**: Yes
        - **Manual**: Not applicable
 
-#### Step 3: Test the installed profiles using macOS built-in 'profile' tool.  It compares your profiles with what we have published in GitHub, reporting inconsistent profiles or profiles missing altogether
+#### Step 3: Test the installed profiles using macOS built-in 'profile' tool
 
-1. Download the script from https://github.com/microsoft/mdatp-xplat/tree/master/macos/mdm.
-1. Select **Raw**. The new URL is https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mdm/analyze_profiles.py.
+The tool compares your profiles with what we have published in GitHub, and reports inconsistent or missing profiles.
+
+1. Download the script from <https://github.com/microsoft/mdatp-xplat/tree/master/macos/mdm>.
+1. Select **Raw**. The new URL is <https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mdm/analyze_profiles.py>.
 1. Save it as *analyze_profiles.py* to **Downloads** by running the following command in terminal:
 
-```BashCopy
+   ```bash
    curl -O https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mdm/analyze_profiles.py
-```
+   ```
 
-4. Run the profile analyzer python3 script without any parameters by executing the following command in terminal:
+1. Do one of the the following steps. Sudo permissions are required:
+   - Run the profile analyzer python3 script without any parameters by running the following commands in terminal:
 
-```BashCopy
-   cd /Downloads  
-   sudo python3 analyze_profiles.py
-```
+     ```bash
+     cd /Downloads
 
-   > [!NOTE]
-   > Sudo permissions are required to execute this command.
+     sudo python3 analyze_profiles.py
+     ```
 
-OR
+     OR
 
-5. Run the script directly from the Web by executing the following command:
+     - Run the script directly from the Web by running the following commands:
 
-```BashCopy
-   sudo curl https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mdm/analyze_profiles.py        
-| python3 -
-```
+       ```bash
+       sudo curl https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mdm/analyze_profiles.py
 
-   > [!NOTE]
-   > Sudo permissions are required to execute this command.
+       | python3 -
+       ```
 
 The output shows all potential issues with profiles.
 
@@ -268,7 +276,6 @@ The output shows all potential issues with profiles.
 
 - [Deploying Microsoft Defender for Endpoint on macOS with Jamf Pro](mac-install-with-jamf.md): Learn how to deploy Microsoft Defender for Endpoint on macOS with Jamf Pro.
 - [Set up the Microsoft Defender for Endpoint on macOS policies in Jamf Pro](mac-jamfpro-policies.md): Learn how to set up the Microsoft Defender for Endpoint on macOS policies in Jamf Pro.
-- [Set up device groups in Jamf Pro](mac-jamfpro-device-groups.md): 
+- [Set up device groups in Jamf Pro](mac-jamfpro-device-groups.md):
 Learn how to set up device groups in Jamf Pro for Microsoft Defender for Endpoint on macOS.
 - [Sign-in to Jamf Pro](mac-install-jamfpro-login.md)
-

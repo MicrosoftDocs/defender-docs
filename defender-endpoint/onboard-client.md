@@ -2,8 +2,8 @@
 title: Onboard client devices (Windows or Mac) to Microsoft Defender for Endpoint
 description: Find out how to onboard client devices, such as Windows and Mac PCs to Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 ms.reviewer: pahuijbr
@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 09/07/2025
+ms.date: 11/17/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -22,23 +22,23 @@ appliesto:
 ---
 # Onboard client devices running Windows or macOS to Microsoft Defender for Endpoint
 
-
-
 ## Overview of onboarding client devices
+
+[!INCLUDE [Microsoft Defender deployment tool preview](./includes/defender-deployment-tool-preview.md)]
 
 To onboard client devices running Windows or macOS, follow this general process:
 
 1. Make sure to review the [Minimum requirements for Defender for Endpoint](minimum-requirements.md).
 
-2. In the [Microsoft Defender portal](https://security.microsoft.com), go to **System** > **Settings** > **Endpoints**, and then, under **Device management**, select **Onboarding**.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **System** > **Settings** > **Endpoints**, and then, under **Device management**, select **Onboarding**.
 
    :::image type="content" source="media/mde-device-onboarding-ui.png" alt-text="Screenshot showing device onboarding in the Microsoft Defender portal for Defender for Endpoint." lightbox="media/mde-device-onboarding-ui.png":::
 
-3. Under **Select operating system to start onboarding process**, select the operating system for the device.
+1. Under **Select operating system to start onboarding process**, select the operating system for the device.
 
-4. Under **Connectivity type**, select either **Streamlined** or **Standard**. (See [prerequisites for streamlined connectivity](/defender-endpoint/configure-device-connectivity#prerequisites).)
+1. Under **Connectivity type**, select either **Streamlined** or **Standard**. (See [prerequisites for streamlined connectivity](/defender-endpoint/configure-device-connectivity#prerequisites).)
 
-5. Under **Deployment method**, select an option. Then download the onboarding package (and installation package, if there's one available). Follow the instructions to onboard your devices. The following table lists available deployment methods:
+1. Under **Deployment method**, select an option. Then download the onboarding package (and installation package, if there's one available). Follow the instructions to onboard your devices. The following table lists available deployment methods:
 
    |Operating system | Deployment method |
    |---|---|

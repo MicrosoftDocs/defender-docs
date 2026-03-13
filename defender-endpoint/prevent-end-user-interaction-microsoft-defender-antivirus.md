@@ -3,8 +3,8 @@ title: Hide the Microsoft Defender Antivirus interface
 description: You can hide virus and threat protection tile in the Windows Security app.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.custom: nextgen
 ms.date: 10/20/2025
 ms.reviewer: pahuijbr
@@ -57,13 +57,13 @@ In earlier versions of Windows 10, the setting hides the Windows Defender client
 
 1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/desktop/gpmc/group-policy-management-console-portal), right-click the Group Policy Object you want to configure and select **Edit**.
 
-2. Using the **Group Policy Management Editor** go to **Computer configuration**.
+1. Using the **Group Policy Management Editor** go to **Computer configuration**.
 
-3. Select **Administrative templates**.
+1. Select **Administrative templates**.
 
-4. Expand the tree to **Windows components > Microsoft Defender Antivirus > Client interface**.
+1. Expand the tree to **Windows components > Microsoft Defender Antivirus > Client interface**.
 
-5. Double-click the **Enable headless UI mode** setting and set the option to **Enabled**. Select **OK**.
+1. Double-click the **Enable headless UI mode** setting and set the option to **Enabled**. Select **OK**.
 
 See [Prevent users from locally modifying policy settings](configure-local-policy-overrides-microsoft-defender-antivirus.md) for more options on preventing users from modifying protection on their PCs.
 
@@ -78,13 +78,13 @@ You can prevent users from pausing scans, which can be helpful to ensure schedul
 
 1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/desktop/gpmc/group-policy-management-console-portal), right-click the Group Policy Object you want to configure and select **Edit**.
 
-2. Using the **Group Policy Management Editor** go to **Computer configuration**.
+1. Using the **Group Policy Management Editor** go to **Computer configuration**.
 
-3. Select **Administrative templates**.
+1. Select **Administrative templates**.
 
-4. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Scan**.
+1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Scan**.
 
-5. Double-click the **Allow users to pause scan** setting and set the option to **Disabled**. Select **OK**.
+1. Double-click the **Allow users to pause scan** setting and set the option to **Disabled**. Select **OK**.
 
 ## UI Lockdown mode
 
@@ -100,13 +100,11 @@ PS C:\>Set-MpPreference -UILockdown $true
 - [Configure end-user interaction with Microsoft Defender Antivirus](configure-local-policy-overrides-microsoft-defender-antivirus.md)
 - [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-windows.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
-
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)

@@ -4,8 +4,8 @@ description: Limited periodic scanning lets you use Microsoft Defender Antivirus
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
 ms.date: 10/20/2025
 ms.reviewer: yongrhee
@@ -56,10 +56,10 @@ Underneath the name of a non-Microsoft antivirus product, a link appears as **Mi
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

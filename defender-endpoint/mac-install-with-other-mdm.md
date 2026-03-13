@@ -1,10 +1,10 @@
-﻿---
+---
 title: Deployment with a different Mobile Device Management (MDM) system for Microsoft Defender for Endpoint on macOS 
 description: Install Microsoft Defender for Endpoint on macOS on other management solutions.
 ms.service: defender-endpoint
 ms.reviewer: joshbregman
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
@@ -95,7 +95,7 @@ To set up profiles:
 
 Apple regularly creates new types of payloads with new versions of an OS.
 You need to visit the above mentioned page, and publish new profiles once they became available.
-We post notifications to our [What's New page](mac-whatsnew.md) once we make changes like that.
+We post notifications to our [What's New page](microsoft-defender-endpoint-releases.md#macos-releases) once we make changes like that.
 
 ### Defender for Endpoint configuration settings
 
@@ -170,5 +170,5 @@ It can miss some errors, and it isn't aware of some design decisions that system
 ## Check installation status
 
 Run [Microsoft Defender for Endpoint](mac-install-with-jamf.md) on a client device to check the onboarding status.
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

@@ -48,13 +48,13 @@ In doing so, you benefit from:
 
 Device configuration management works closely with Intune device management to establish the inventory of the devices in your organization and the baseline security configuration. You will be able to track and manage configuration issues on Intune-managed Windows devices.
 
-Before you can ensure your devices are configured properly, enroll them to Intune management. Intune enrollment is robust and has several enrollment options for Windows devices. For more information about Intune enrollment options, read about [setting up enrollment for Windows devices](/mem/intune/enrollment/windows-enroll).
+Before you can ensure your devices are configured properly, enroll them to Intune management. Intune enrollment is robust and has several enrollment options for Windows devices. For more information about Intune enrollment options, read about [setting up enrollment for Windows devices](/intune/intune-service/enrollment/windows-enroll).
 
 > [!NOTE]
-> To enroll Windows devices to Intune, administrators must have already been assigned licenses. [Read about assigning licenses for device enrollment](/mem/intune/fundamentals/licenses-assign).
+> To enroll Windows devices to Intune, administrators must have already been assigned licenses. [Read about assigning licenses for device enrollment](/intune/intune-service/fundamentals/licenses-assign).
 
 > [!TIP]
-> To optimize device management through Intune, [connect Intune to Defender for Endpoint](/mem/intune/protect/advanced-threat-protection-configure#connect-microsoft-defender-for-endpoint-to-intune).
+> To optimize device management through Intune, [connect Intune to Defender for Endpoint](/intune/intune-service/protect/advanced-threat-protection-configure#connect-microsoft-defender-for-endpoint-to-intune).
 
 ## Obtain required permissions
 
@@ -75,7 +75,7 @@ If you have been assigned other roles, ensure you have the necessary permissions
 *Device configuration permissions on Intune*
 
 > [!TIP]
-> To learn more about assigning permissions on Intune, [read about creating custom roles](/mem/intune/fundamentals/create-custom-role#to-create-a-custom-role).
+> To learn more about assigning permissions on Intune, [read about creating custom roles](/intune/intune-service/fundamentals/create-custom-role#to-create-a-custom-role).
 
 ## More information
 
@@ -85,5 +85,5 @@ If you have been assigned other roles, ensure you have the necessary permissions
 |[Increase compliance to the Defender for Endpoint security baseline](configure-machines-security-baseline.md)|Track baseline compliance and noncompliance. Deploy the security baseline to more Intune-managed devices. |
 | [Optimize ASR rule deployment and detections](configure-machines-asr.md)|Review rule deployment and tweak detections using impact analysis tools in the [Microsoft Defender portal](https://security.microsoft.com). |
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

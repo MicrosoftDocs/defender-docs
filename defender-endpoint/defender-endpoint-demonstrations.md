@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint demonstration scenarios
 description: Lists Microsoft Defender for Endpoint demonstration scenarios that you can run.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
 manager: bagol
@@ -66,5 +66,5 @@ The following table lists the available demonstrations alphabetically, with thei
 [Endpoint detection and response overview](overview-endpoint-detection-response.md)
 [Microsoft Defender for Endpoint security blog](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/bg-p/MicrosoftDefenderATPBlog)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

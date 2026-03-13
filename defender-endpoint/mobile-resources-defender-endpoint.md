@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: concept-article
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 10/24/2025
+ms.date: 12/17/2025
 ---
 # Resources for Microsoft Defender for Endpoint for mobile devices
 
@@ -52,7 +52,7 @@ Microsoft Defender for Endpoint provides multiple capabilities on mobile devices
 |Anti-phishing (Defender warning overlooked)|Low |  |  |
 |Anti-malware|Medium | Information about malicious APKs including install source, storage location, time of install, etc.; [More information](android-privacy.md#app-information)||
 | ||||
-|Root Detection (Preview)|High|NA|NA|
+|Root Detection|High|NA|NA|
 |Jailbreak Detection|High | NA |NA |
 |Rogue Wifi |Low |  |  |
 |Open Network Detection (Migrated from alert to event in the device timeline)|NA (Event)| | |
@@ -70,7 +70,7 @@ The Microsoft Defender mobile app is a security app that needs to constantly be 
 
 1. **MicrosoftDefenderATP XPlat app (a0e84e36-b067-4d5c-ab4a-3db38e598ae2)**: MicrosoftDefenderATP XPlat app is the application responsible for forwarding Defender risk signals to the Defender backend. However, the presence of restrictive CA policies can result in Defender blocked from reporting signals. In these scenarios, we recommend excluding the MicrosoftDefenderATP XPlat app. Note, that **MicrosoftDefenderATP XPlat app** is also used by other platforms like Mac and Linux. So if the policy is same for these platforms, it is better to create a separate Conditional Access policy for Mobile.
 
-2. **Microsoft Defender for Mobile TVM app (e724aa31-0f56-4018-b8be-f8cb82ca1196)**: Microsoft Defender for Mobile TVM (Threat and Vulnerability Management) is the service, which provides the vulnerability assessment for the installed apps on the iOS devices. However, the presence of restrictive CA policies can result in Defender blocked from communicating the onboarding requests to the TVM backend services. This service should be excluded if MDVM (Vulnerability Assessment) is used in the organization.
+1. **Microsoft Defender for Mobile TVM app (e724aa31-0f56-4018-b8be-f8cb82ca1196)**: Microsoft Defender for Mobile TVM (Threat and Vulnerability Management) is the service, which provides the vulnerability assessment for the installed apps on the iOS devices. However, the presence of restrictive CA policies can result in Defender blocked from communicating the onboarding requests to the TVM backend services. This service should be excluded if MDVM (Vulnerability Assessment) is used in the organization.
 
 ### Steps to exclude
 

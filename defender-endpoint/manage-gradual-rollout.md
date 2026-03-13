@@ -4,8 +4,8 @@ description: Learn about the gradual update process and controls.
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
 manager: bagol
@@ -52,24 +52,22 @@ The following gradual rollout model is followed for monthly Defender updates:
 
 1. The first release goes out to Beta channel subscribers.
 
-2. After validation, feedback, and fixes, we start the gradual rollout process in a throttled way and to Preview channel subscribers first.
+1. After validation, feedback, and fixes, we start the gradual rollout process in a throttled way and to Preview channel subscribers first.
 
-3. We then proceed to release the update to the rest of the global population, scaling out from 10-100%.
+1. We then proceed to release the update to the rest of the global population, scaling out from 10-100%.
 
 Our engineers continuously monitor impact and escalate any issues to create a fix as needed.
 
 ## How to customize your internal deployment process
 
-
 If your machines are receiving Defender updates from Windows Update, the gradual rollout process can result in some of your devices receiving Defender updates sooner than others. The following section explains how to define a strategy that will allow automatic updates to flow differently to specific groups of devices by using update channel configuration.
-
 
 > [!NOTE]
 > When planning for your own gradual release, please make sure to always have a selection of devices subscribed to the preview and staged channels. This will provide your organization as well as Microsoft the opportunity to prevent or find and fix issues specific to your environment.
 
 For machines receiving updates through, for example, Windows Server Update Services (WSUS) or Microsoft Configuration Manager, more options are available to all Windows updates, including options  for Microsoft Defender for Endpoint.
 
-- Learn more about how to use solutions such as WSUS and MECM to manage the distribution and application of updates at [Manage Microsoft Defender Antivirus updates and apply baselines - Windows security](microsoft-defender-antivirus-updates.md#product-updates).
+- Learn more about how to use solutions such as WSUS and ConfigMgr to manage the distribution and application of updates at [Manage Microsoft Defender Antivirus updates and apply baselines - Windows security](microsoft-defender-antivirus-updates.md#product-updates).
 
 ## Update channels for monthly updates
 
@@ -109,12 +107,11 @@ For environments where there's a need for a more controlled gradual rollout of a
 
 1. Participate in the Windows Insider program or assign a group of devices to the Beta Channel.
 
-2. Designate a pilot group that opts in to Preview Channel, typically validation environments, to receive new updates early.
+1. Designate a pilot group that opts in to Preview Channel, typically validation environments, to receive new updates early.
 
-3. Designate a group of machines that receive updates later during the gradual rollout from Staged channel. Typically, this group would be a representative ~10% of the population.
+1. Designate a group of machines that receive updates later during the gradual rollout from Staged channel. Typically, this group would be a representative ~10% of the population.
 
-4. Designate a group of machines that receive updates after the gradual release cycle completes. These are typically important production systems.
-
+1. Designate a group of machines that receive updates after the gradual release cycle completes. These are typically important production systems.
 For the remainder of devices, the default setting is to receive new updates as they arrive during the Microsoft gradual rollout process and no further configuration is required.
 
 Adopting this model:
@@ -136,11 +133,11 @@ For details on how to use these tools, see [Create a custom gradual rollout proc
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

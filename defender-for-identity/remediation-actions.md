@@ -37,28 +37,32 @@ The following Defender for Identity actions can be performed on Identities:
 
 | Remediation Action  | Description     |          Scope                        | 
 | ------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-|Disable user                 | This temporarily prevents a user from signing in. This can help prevent compromised users from moving laterally and attempting to exfiltrate data or further compromise the network. | Active Directory, Entra ID and Okta
-|Enable user              | Enable a user to sign in. | Active Directory, Entra ID and Okta
-|Revoke all Users' sessions       | Revoke a user's active sessions. | Entra ID and Okta
-|Confirm user compromised      | The user's risk level is set to High | Entra ID
-| Reset user password| This prompts the user to change their password on the next logon, ensuring that this account can't be used for further impersonation attempts| Active Directory
-|Deactivate user in Okta | This action can be used when a non-legit malicious account was detected, to deactivate the account permanently | Okta
-| Set user risk to High/Medium/Low |Set one user risk scoring to one of the defined levels. This action will only be available if [Risk Scoring](https://help.okta.com/en-us/Content/Topics/Security/Security_Risk_Scoring.htm) feature is enabled | Okta
+|Disable                 | You can choose to disable **all accounts linked to an identity** or **only one of them**. Disabling an identity prevents sign-in and access to network resources until the accounts are re-enabled. This action doesn’t delete the identity profile or associated data such as documents, calendar events, or email messages. | Active Directory, Microsoft Entra ID, and Okta
+|Enable              | Re-enables accounts that were previously disabled for the selected identity. | Active Directory, Microsoft Entra ID, and Okta
+|Revoke session     | Revoke an identity's active session. | Microsoft Entra ID and Okta
+|Mark as compromised     | Marks all accounts linked to the selected identity as compromised in Microsoft Entra ID. | Microsoft Entra ID
+|Force password change| Force a password change for one or more accounts linked to the selected identity. This prompts the identity to change their password on the next logon, ensuring that this account can't be used for further impersonation attempts.| Active Directory
+|Deactivate | This action can be used when a non-legit malicious account was detected, to deactivate the account permanently | Okta
+|Set account risk to High/Medium/Low |Set account risk scoring to one of the defined levels. This action is only available if [Risk Scoring](https://help.okta.com/en-us/Content/Topics/Security/Security_Risk_Scoring.htm) feature is enabled | Okta
 
 
 Depending on your Microsoft Entra ID roles, you might see additional Microsoft Entra ID actions, such as requiring users to sign in again and confirming a user as compromised. For more information, see [Remediate risks and unblock users](/entra/id-protection/howto-identity-protection-remediate-unblock).
 
 ## Roles and Permissions
 
-| Remediation Action | Active Directory  |Entra ID   | Okta  |
+| Remediation Action | Active Directory  |Microsoft Entra ID   | Okta  |
 |--|--|--|--|
-| Disable user | Refer to [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) | Global Administrator   | A custom role defined with permissions for Response (manage) or one of the following Microsoft Entra roles: <br> - Security Operator <br> - Security Administrator <br> - Global Administrator |
-| Enable user | Refer to [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) | Global Administrator | A custom role defined with permissions for Response (manage) or one of the following Microsoft Entra roles: <br> - Security Operator <br> - Security Administrator <br> - Global Administrator |
-| Revoke all Users' sessions |N\A  | Global Administrator | A custom role defined with permissions for Response (manage) or one of the following Microsoft Entra roles: <br> - Security Operator <br> - Security Administrator <br> - Global Administrator |
-| Confirm user compromised |N\A  |  - Global Administrator <br> -Security Administrator | N/A|
-| Reset user password | Refer to [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) | N\A | N\A
-| Deactivate user in Okta  | N\A | N\A | A custom role defined with permissions for Response (manage) or one of the following Microsoft Entra roles: <br> - Security Operator <br> - Security Administrator <br> - Global Administrator
-|  Set User risk to High/Medium/Low  | N\A | N\A | A custom role defined with permissions for Response (manage) or One of the following Microsoft Entra roles: <br> - Security Operator <br> - Security Administrator <br> - Global Administrator
+|Disable | Refer to [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) | Microsoft Entra Roles: <br> - Global Administrator <br>  - User Administrator <br>  - Authentication Administrator <br>  - Privileged Authentication Administrator <br>  - Directory Writers <br>  | A custom role defined with permissions for Response (manage) or one of the following Microsoft Entra roles: <br> - Security Operator <br> - Security Administrator <br> - Global Administrator |
+| Enable | Refer to [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) | Microsoft Entra Roles: <br> - Global Administrator <br>  - User Administrator <br>  - Authentication Administrator <br>  - Privileged Authentication Administrator <br>  - Directory Writers <br>  | A custom role defined with permissions for Response (manage) or one of the following Microsoft Entra roles: <br> - Security Operator <br> - Security Administrator <br> - Global Administrator |
+| Revoke session |N\A  | Microsoft Entra Roles: <br> - Global Administrator <br>  - User Administrator <br>  - Authentication Administrator <br>  - Privileged Authentication Administrator <br>  - Directory Writers <br> - Helpdesk Administrator <br>| A custom role defined with permissions for Response (manage) or one of the following Microsoft Entra roles: <br> - Security Operator <br> - Security Administrator <br> - Global Administrator |
+| Mark as compromised |N\A  |  Microsoft Entra Roles: <br> - Global Administrator <br> -Security Administrator <br> - Security Operator <br>  | N/A|
+| Force password change| Refer to [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) | N\A | N\A
+| Deactivate | N\A | N\A | A custom role defined with permissions for Response (manage) or one of the following Microsoft Entra roles: <br> - Security Operator <br> - Security Administrator <br> - Global Administrator
+| Set identity risk to High/Medium/Low  | N\A | N\A | A custom role defined with permissions for Response (manage) or One of the following Microsoft Entra roles: <br> - Security Operator <br> - Security Administrator <br> - Global Administrator
+
+> [!NOTE]
+> There are some limitations for Microsoft Entra ID when performing certain actions on other roles. For more information, see the [Graph API documentation](/graph/api/resources/users?view=graph-rest-1.0&preserve-view=true ).
+
 
 ## Related videos
 

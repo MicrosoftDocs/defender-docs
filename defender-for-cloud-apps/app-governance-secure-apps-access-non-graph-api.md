@@ -1,47 +1,79 @@
 ---
-title: Secure apps accessing non-Graph APIs using app governance | Microsoft Defender for Cloud Apps
-ms.date: 05/28/2023
+title: Secure apps accessing non-Graph APIs using app governance
+ms.date: 10/30/2025
 ms.topic: how-to
-description: Learn how to secure apps accessing non-Graph APIs using app governance in Microsoft Defender XDR with Microsoft Defender for Cloud Apps
+description: Learn how to secure apps accessing other APIs using app governance in the Microsoft Defender portal.
+ms.reviewer: shragar
 ---
 
 # Secure apps accessing non-Graph APIs using app governance
 
-Many apps use APIs other than Microsoft Graph to access Microsoft 365 and other resources. With visibility over such apps, you can identify and defend against risks inherent to these apps as well as risks from APIs that they access, some of which might receive limited support and updates.
+Many apps use APIs other than Microsoft Graph to access Microsoft 365 and other resources. With visibility over such apps, you can identify and defend against risks inherent to these apps including APIs that they access, some of which might receive limited support and updates.
 
 App governance provides visibility over OAuth apps registered on Microsoft Entra ID, regardless of whether they access Graph API or other APIs. Additionally, you can monitor these apps and automatically take action if they're noncompliant or exhibit suspicious behavior.
 
 You can better protect your organization with the new functionalities and enhancements in the following ways:
 
 - Get improved coverage of OAuth apps with powerful app governance insights and monitoring capabilities.
-- Automatically get alerted for any threats or anomalies by apps using non-Graph or legacy APIs.
+- Automatically get alerted for any threats or anomalies from apps using non-Graph or legacy APIs.
 - Get an enhanced experience for investigation of apps with more filters, columns, and properties.
 
-## Identify apps that use only non-Graph APIs
+## Identify apps that use non-Graph APIs
 
-App governance lists all Microsoft Entra ID OAuth apps on the [Apps governance](https://security.microsoft.com/cloudapps/app-governance?viewid=allApps) page. To find apps that don't use Graph API, apply the API access filter, and select **Non-Graph only**. You can also use the Graph API access column to identify apps that don't have Graph API permissions among the listed apps.
+To view Microsoft 365 apps that access non-Graph APIs:
 
-For example:
+1. Go to **Settings** > **Cloud apps** > **[Apps governance](https://security.microsoft.com/cloudapps/app-governance?viewid=allApps)** in the [Microsoft Defender portal](https://security.microsoft.com).
+1. Select the **Microsoft 365** tab
+1. Open the **API access** filter
+1. Select one of the options:
+    - Office 365 Exchange Online
+    - Office 365 SharePoint Online
+    - Windows Azure Active Directory
+    - Other APIs
+1. Select **Apply**.
 
-:::image type="content" source="media/app-governance-secure-apps-access-non-graph-api/apps-page-non-graph-only.png" alt-text="Screenshot of the Microsoft Entra apps tab showing non-Graph apps only.":::
 
-## View non-Graph APIs used by OAuth apps
+:::image type="content" source="media/app-governance-secure-apps-access-non-graph-api/other-apis-app-governance.png" alt-text="Screenshot that shows the list of APIs plus the option to view other APIs." lightbox="media/app-governance-secure-apps-access-non-graph-api/other-apis-app-governance.png":::
 
-To view the APIs used by an app, go to the **Permissions** tab on an app details pane. You can find the names of the consented permissions and the APIs accessed by the app.
 
-For example:
+## View APIs used by an app
 
-:::image type="content" source="media/app-governance-secure-apps-access-non-graph-api/permissions-tab.png" alt-text="Screenshot of the Permissions tab on an app details pane.":::
+To view the APIs that an app uses:
 
-## Track API access
+1. In the App governance page, select the app you want to investigate.
 
-With visibility over apps that access non-Graph APIs, you can now use the **New app with non-Graph API permissions** policy template or the **Non-graph API permission** policy condition to find and monitor such apps.
+1. In the app details pane, select the **Permissions** tab.
 
-For example:
+The Permissions tab lists all permissions granted to the app, including Graph API permissions and non-Graph API permissions.
 
-:::image type="content" source="media/app-governance-secure-apps-access-non-graph-api/choose-policy-template.png" alt-text="Screenshot of the policy template page.":::
+:::image type="content" source="media/app-governance-secure-apps-access-non-graph-api/other-apis-permissions.png" alt-text="Screenshot that shows the list of APIs and their assigned permissions." lightbox="media/app-governance-secure-apps-access-non-graph-api/other-apis-permissions.png":::
 
+## Create policies for apps accessing non-graph APIs
+
+Create app governance policies to monitor and take action on apps that access non-Graph APIs.
+
+You can decide to create a custom policy or use an existing template.
+
+1. In the App governance page, select the **Policies** tab.
+1. Select **+ Create policy**.
+1. To create a custom policy, select **Custom policy** and then configure the policy settings as needed. Select the the **Non-Graph API permissions** policy condition to identify and monitor apps that access non-Graph APIs.
+
+
+
+    :::image type="content" source="media/app-governance-secure-apps-access-non-graph-api/choose-policy-template.png" alt-text="Screenshot that shows the option to create a custom policy.":::
+
+1. To use a template, select **usage** and then the template **New app with Non-Graph API permissions**.
+
+    :::image type="content" source="media/app-governance-secure-apps-access-non-graph-api/new-policy-non-graph-api.png" alt-text="Screenshot that shows the option to use a template for a new policy.":::
+
+1. Configure the policy settings as follows:
+    - Give the policy a name and description
+    - Set the severity level to low, medium, or high.
+    - Set policy scope and conditions, you can choose to apply the default settings or customize the policy.
+    - Choose an action you'd like to take on apps that match the conditions in this policy. For example, disabling the app.
+    - Set the policy actions to active or disabled.
 
 ## Next steps
 
-[Secure apps with app hygiene features](app-governance-secure-apps-app-hygiene-features.md)
+[Secure apps with app hygiene features](app-governance-secure-apps-app-hygiene-features.md)<br>
+[View your app details with app governance](app-governance-visibility-insights-view-apps.md#getting-detailed-information-on-an-app)

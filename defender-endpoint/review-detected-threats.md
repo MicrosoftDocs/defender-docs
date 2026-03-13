@@ -2,8 +2,8 @@
 title: Review detected threats using the Microsoft Defender for Endpoint Antivirus and Intune integration
 description: Use the Microsoft Defender for Endpoint Antivirus and Intune integration to view and manage threat detections.
 ms.service: defender-endpoint
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: chrisda
+ms.author: chrisda
 manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
@@ -33,7 +33,7 @@ appliesto:
 
 In the Microsoft Defender portal, you can view and manage threat detections using the following steps:
 
-1. Visit [Microsoft XDR portal](https://security.microsoft.com/) and sign-in.
+1. Visit the Microsoft Defender portal at [https://security.microsoft.com](https://security.microsoft.com) and sign-in.
 
     On the landing page, you see the **Devices with active malware** card with the following information:
 
@@ -43,21 +43,21 @@ In the Microsoft Defender portal, you can view and manage threat detections usin
 
     You can select **View Details** for more information.
 
-2. Once remediated, you see the following text being displayed:
+1. Once remediated, you see the following text being displayed:
 
     *Malware found on your devices have been remediated successfully*.
 
 ## Manage threat detections in Microsoft Intune
 
-You can manage threat detections for any devices that are [enrolled in Microsoft Intune](/mem/intune/enrollment/windows-enrollment-methods) using the following steps:
+You can manage threat detections for any devices that are [enrolled in Microsoft Intune](/intune/intune-service/fundamentals/deployment-guide-enroll) using the following steps:
 
 1. Go to the Microsoft Intune admin center at [intune.microsoft.com](https://intune.microsoft.com) and sign-in.
 
-2. In the navigation pane, select **Endpoint security**.
+1. In the navigation pane, select **Endpoint security**.
 
-3. Under **Manage**, select **Antivirus**. You see tabs for **Summary**, **Unhealthy endpoints**, and **Active malware**.
+1. Under **Manage**, select **Antivirus**. You see tabs for **Summary**, **Unhealthy endpoints**, and **Active malware**.
 
-4. Review the information on the available tabs, and then take action as necessary.
+1. Review the information on the available tabs, and then take action as necessary.
 
     For example, when you can select a device that is listed under the **Active malware** tab, you can choose one action from the list of actions provided:
      - Restart
@@ -68,17 +68,17 @@ You can manage threat detections for any devices that are [enrolled in Microsoft
 
 ## FAQs
 
-#### In the Microsoft XDR portal > Devices with active malware > Devices with malware detections report, why does the Last update seem to be occurring today?
+#### In the Microsoft Defender portal > Devices with active malware > Devices with malware detections report, why does the Last update seem to be occurring today?
 
 To see when the malware was detected, you can take the following steps:
 
 1. Since this is an integration with Intune, visit [**Intune portal**](https://intune.microsoft.com) and select **Antivirus** and then select **Active malware** tab.
 
-2. Select **Export**.
+1. Select **Export**.
 
-3. On your device, go to Downloads, and extract the `Active malware_YYYY_MM_DD_THH_MM_SS.0123Z.csv.zip` file.
+1. On your device, go to Downloads, and extract the `Active malware_YYYY_MM_DD_THH_MM_SS.0123Z.csv.zip` file.
 
-4. Open the CSV and find the **LastStateChangeDateTime** column to see when malware was detected.
+1. Open the CSV and find the **LastStateChangeDateTime** column to see when malware was detected.
 
 #### In the devices with malware detections report, why can't I see any information about which malware was detected on the device.
 
@@ -118,7 +118,7 @@ You need to ensure that when you run `%ProgramFiles%\Windows Defender\MpCmdRun.e
 #### I see a device that has been inactive for 180+ days but still showing up on the report for 'Devices with active malware'.  The device doesn't show in the "Device inventory", can't be turned on and can't be offboarded from Microsoft Defender for Endpoint.
 
   
-The device has not been [retired](/mem/intune/remote-actions/devices-wipe) from Intune.
+The device has not been [retired](/intune/intune-service/remote-actions/devices-wipe) from Intune.
 
 ## Related articles
 

@@ -3,13 +3,13 @@ title: Partner access through Microsoft Defender for Endpoint APIs
 ms.reviewer:
 description: Learn how to design a web app to get programmatic access to  Microsoft Defender for Endpoint on behalf of your users.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 ms.date: 03/21/2025
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -21,23 +21,18 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
 ---
+
 # Partner access through Microsoft Defender for Endpoint APIs
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-
-
 > [!IMPORTANT]
 > Advanced hunting capabilities are not included in Defender for Business.
 
+[!INCLUDE [Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
+[!INCLUDE [Improve request performance](../../includes/improve-request-performance.md)]
 
 This page describes how to create a Microsoft Entra application to get programmatic access to Microsoft Defender for Endpoint on behalf of your customers.
 
@@ -145,23 +140,25 @@ To get access token on behalf of your customer, use the customer's tenant ID on 
 
 For more information on Microsoft Entra token, see [Microsoft Entra tutorial](/azure/active-directory/develop/active-directory-v2-protocols-oauth-client-creds).
 
+> [!TIP]
+> Some Microsoft Defender for Endpoint APIs continue to require access tokens issued for the legacy resource `https://api.securitycenter.microsoft.com`. If the token audience doesn't match the resource expected by the API, requests fail with `403 Forbidden`, even if the API endpoint uses `https://api.security.microsoft.com`. Use `https://api.securitycenter.microsoft.com` as the resource or scope when acquiring tokens.
+
 ### Using PowerShell
 
 ```powershell
-# That code gets the App Context Token and save it to a file named "Latest-token.txt" under the current directory
-# Paste below your Tenant ID, App ID and App Secret (App key).
+# This code gets the application context token and saves it to a file named "Latest-token.txt" in the current directory.
 
-$tenantId = '' ### Paste your tenant ID here
-$appId = '' ### Paste your Application ID here
-$appSecret = '' ### Paste your Application key here
+$tenantId = '' ### Paste your tenant ID here.
+$appId = '' ### Paste your Application (client) ID here.
+$appSecret = '' ### Paste your Application secret (App key) here to test, and then store it in a safe place!
 
 $resourceAppIdUri = 'https://api.securitycenter.microsoft.com'
 $oAuthUri = "https://login.microsoftonline.com/$TenantId/oauth2/token"
 $authBody = [Ordered] @{
-    resource = "$resourceAppIdUri"
-    client_id = "$appId"
-    client_secret = "$appSecret"
-    grant_type = 'client_credentials'
+  resource = "$resourceAppIdUri"
+  client_id = "$appId"
+  client_secret = "$appSecret"
+  grant_type = 'client_credentials'
 }
 $authResponse = Invoke-RestMethod -Method Post -Uri $oAuthUri -Body $authBody -ErrorAction Stop
 $token = $authResponse.access_token
@@ -191,9 +188,9 @@ return $token
    ```csharp
    string tenantId = "00000000-0000-0000-0000-000000000000"; // Paste your own tenant ID here
    string appId = "11111111-1111-1111-1111-111111111111"; // Paste your own app ID here
-   string appSecret = "22222222-2222-2222-2222-222222222222"; // Paste your own app secret here for a test, and then store it in a safe place! 
+   string appSecret = "22222222-2222-2222-2222-222222222222"; // Paste your own app secret here for a test, and then store it in a safe place!
    const string authority = https://login.microsoftonline.com;
-   const string audience = https://api.securitycenter.microsoft.com;
+   const string audience = https://api.security.microsoft.com;
 
    IConfidentialClientApplication myApp = ConfidentialClientApplicationBuilder.Create(appId).WithClientSecret(appSecret).WithAuthority($"{authority}/{tenantId}").Build();
 
@@ -224,7 +221,7 @@ See [Get token using Python](run-advanced-query-sample-python.md#get-token).
 5. Run the following command:
 
    ```curl
-   curl -i -X POST -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=%CLIENT_ID%" -d "scope=https://securitycenter.onmicrosoft.com/windowsatpservice/.default" -d "client_secret=%CLIENT_SECRET%" "https://login.microsoftonline.com/%TENANT_ID%/oauth2/v2.0/token" -k
+   curl -i -X POST -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=%CLIENT_ID%" -d "scope=https://api.securitycenter.microsoft.com/.default" -d "client_secret=%CLIENT_SECRET%" "https://login.microsoftonline.com/%TENANT_ID%/oauth2/v2.0/token" -k
    ```
 
    You get an answer that resembles the following code snippet:
@@ -247,7 +244,6 @@ Confirm you received a correct token.
 
    The "tid" claim is the tenant ID the token belongs to.
 
-
 ## Use the token to access Microsoft Defender for Endpoint API
 
 1. Choose the API you want to use. For more information, see [Supported Microsoft Defender for Endpoint APIs](exposed-apis-list.md).
@@ -259,7 +255,7 @@ Confirm you received a correct token.
    ```csharp
    var httpClient = new HttpClient();
 
-   var request = new HttpRequestMessage(HttpMethod.Get, "https://api.securitycenter.microsoft.com/api/alerts");
+   var request = new HttpRequestMessage(HttpMethod.Get, "https://api.security.microsoft.com/api/alerts");
 
    request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
@@ -274,4 +270,3 @@ Confirm you received a correct token.
 - [Access Microsoft Defender for Endpoint on behalf of a user](exposed-apis-create-app-nativeapp.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

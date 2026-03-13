@@ -32,7 +32,8 @@ There are two settings that are useful for these devices:
 - Prevent Security intelligence updates when running on battery power
 
 The following articles may also be useful in these situations:
-- [Configuring scheduled and catch-up scans](schedule-antivirus-scans.md)
+
+- [About scheduled scans](schedule-antivirus-scans.md)
 - [Manage updates for endpoints that are out of date](manage-outdated-endpoints-microsoft-defender-antivirus.md)
 - [Deployment guide for Microsoft Defender Antivirus in a virtual desktop infrastructure (VDI) environment](deployment-vdi-microsoft-defender-antivirus.md)
 
@@ -60,27 +61,27 @@ You can opt in to Microsoft Update on the mobile device in one of the following 
 
 1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure and select **Edit**.
 
-2. In the **Group Policy Management Editor** go to **Computer configuration**.
+1. In the **Group Policy Management Editor** go to **Computer configuration**.
 
-3. Select **Policies** then **Administrative templates**.
+1. Select **Policies** then **Administrative templates**.
 
-4. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Signature Updates**.
+1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Signature Updates**.
 
-5. Set **Allow security intelligence updates from Microsoft Update** to **Enabled**, and then select  **OK**.
+1. Set **Allow security intelligence updates from Microsoft Update** to **Enabled**, and then select  **OK**.
 
 ### Use a VBScript to opt in to Microsoft Update
 
 1. Use the instructions in the MSDN article [Opt-In to Microsoft Update](/windows/win32/wua_sdk/opt-in-to-microsoft-update) to create the VBScript.
 
-2. Run the VBScript you created on each computer in your network.
+1. Run the VBScript you created on each computer in your network.
 
 ### Manually opt in to Microsoft Update
 
 1. Open **Windows Update** in **Update & security** settings on the computer you want to opt in.
 
-2. Select **Advanced** options.
+1. Select **Advanced** options.
 
-3. Select the checkbox for **Give me updates for other Microsoft products when I update Windows**.
+1. Select the checkbox for **Give me updates for other Microsoft products when I update Windows**.
 
 ## Prevent Security intelligence updates when running on battery power
 
@@ -90,11 +91,11 @@ You can configure Microsoft Defender Antivirus to only download protection updat
 
 1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), choose the Group Policy Object you want to configure, and open it for editing.
 
-2. In the **Group Policy Management Editor** go to **Computer configuration**.
+1. In the **Group Policy Management Editor** go to **Computer configuration**.
 
-3. Select **Policies** then **Administrative templates**.
+1. Select **Policies** then **Administrative templates**.
 
-4. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Signature Updates**, and then set **Allow security intelligence updates when running on battery power** to **Disabled**. Then select **OK**.
+1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Signature Updates**, and then set **Allow security intelligence updates when running on battery power** to **Disabled**. Then select **OK**.
 
 This action prevents protection updates from downloading when the PC is on battery power.
 
@@ -102,7 +103,7 @@ This action prevents protection updates from downloading when the PC is on batte
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
@@ -112,5 +113,5 @@ This action prevents protection updates from downloading when the PC is on batte
 
 - [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md)
 - [Update and manage Microsoft Defender Antivirus in Windows 10](deploy-manage-report-microsoft-defender-antivirus.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

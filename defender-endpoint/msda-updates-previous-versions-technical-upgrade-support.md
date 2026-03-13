@@ -2,8 +2,8 @@
 title: Microsoft Defender Antivirus updates - Previous versions for technical upgrade support
 description: Understand the type of technical support offered for previous versions of Microsoft Defender Antivirus
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
 ms.date: 07/23/2025
@@ -27,6 +27,34 @@ appliesto:
 Microsoft regularly releases [security intelligence updates and product updates for Microsoft Defender Antivirus](microsoft-defender-antivirus-updates.md). It's important to keep Microsoft Defender Antivirus up to date. When a new package version is released, support for the previous two versions reduces to technical support only. Versions that are older than the previous two versions are listed in this article and are provided for technical upgrade support only.
 
 ## Engine and platform updates
+
+### September-2025 (Platform: 4.18.25090.3009 | Engine: 1.1.25090.3001)
+
+- Security intelligence update version: **1.439.345.0**
+- Release date:  **October 8, 2025 (Engine) / October 21, 2025 (Platform)**
+
+- Platform: **4.18.25090.3009**
+- Engine: **1.1.25090.3001**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+- **Improved service startup behavior**: The core service now only restarts when necessary, for example, during a successful platform update. This change allows the organization to avoid unnecessary restarts when the service is already running correctly.
+- **Improved stability for RPC services**: Added input validation across multiple RPC endpoints to prevent crashes caused by malformed data, which addresses a reported security vulnerability.
+- **Fixed threat exclusion handling**: Resolved an issue where severity-based exclusions could cause the engine to misidentify threats, potentially skipping high severity detections.
+- **Restored performance optimization for network file access**: Fixed a regression that caused slowdowns during file operations, like robocopy to network shares. The fix included reintroducing the logic to skip unnecessary checks on non-local files when Controlled Folder Access is enabled.
+
+### August-2025 (Platform: 4.18.25080.5 | Engine: 1.1.25080.5)
+
+- Security intelligence update version: **1.437.1.0**
+- Release date:  **September 16, 2025 (Engine) / September 17, 2025 (Platform)**
+- Platform: **4.18.25080.5**
+- Engine: **1.1.25080.5**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+Improved Defender update reliability by allowing non-admin processes to trigger shared signature updates, reducing unnecessary privilege requirements.
 
 ### July-2025 (Platform: 4.18.25070.5 | Engine: 1.1.25070.4)
 
@@ -192,7 +220,7 @@ What's new
 #### What's new
 
 - Improved detection logic to reduce false positives related to the Azure Site Recovery rule, [Block Office applications from injecting code into other processes](/defender-endpoint/attack-surface-reduction-rules-reference#block-office-applications-from-injecting-code-into-other-processes)
-- Resolved an issue that could lead to a Windows device to be marked as [noncompliant in Intune](/mem/intune/fundamentals/reports#device-compliance-reports) when Microsoft Defender Antivirus starts.
+- Resolved an issue that could lead to a Windows device to be marked as [noncompliant in Intune](/intune/intune-service/fundamentals/reports#device-compliance-reports) when Microsoft Defender Antivirus starts.
 - Resolved an issue with catchup scan configuration, where the [DaysUntilAggressiveCatchupQuickScan](/windows/client-management/mdm/defender-csp#configurationdaysuntilaggressivecatchupquickscan) policy setting wasn't honored.
 - Fixed `SharedSignatureRoot` processing when an empty value was set.
 - Fixed a problem with [device control](device-control-overview.md) where certain file systems (like `FAT`, `FAT32`, `exFAT`) with volume information displayed when a blocking rule was defined.
@@ -200,7 +228,7 @@ What's new
 - Fixed an issue with [Azure Virtual Desktop](/azure/virtual-desktop/overview) where the Intune policy wasn't being honored.
 - Fixed potential deadlock for [custom detection rules](/defender-xdr/custom-detection-rules) on the Windows client
 - Resolved an issue where [antivirus exclusions](configure-exclusions-microsoft-defender-antivirus.md) weren't being honored with [AMSI](/windows/win32/amsi/antimalware-scan-interface-portal).
-- Fixed issue impacting a subset of devices where [antivirus exclusions configured through SCCM](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings) weren't honored
+- Fixed issue impacting a subset of devices where [antivirus exclusions configured through SCCM](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings) weren't honored
 
 > [!IMPORTANT]
 > On Windows Server 2019 and later, a new binary (`MpDefenderCoreService.exe`) will be included in the update package to support future service improvements (more information to follow).
@@ -370,7 +398,7 @@ What's new
 - Added the ability to have [quick scans](schedule-antivirus-scans.md) ignore Microsoft Defender Antivirus exclusions
 - Fixed remediation for long running [on-demand scans](run-scan-microsoft-defender-antivirus.md) where the service may have been restarted
 - Fixed an issue with Microsoft Defender Vulnerability Management to allow the execution of a [blocked application](/defender-vulnerability-management/tvm-block-vuln-apps) when the [warn option](/defender-vulnerability-management/tvm-block-vuln-apps#block-or-warn-mitigation-action) is selected
-- Added support for managing schedule day/time for [signature updates in Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-windows#updates) and [Defender for Endpoint security settings management](/mem/intune/protect/mde-security-integration)
+- Added support for managing schedule day/time for [signature updates in Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-windows#updates) and [Defender for Endpoint security settings management](/intune/intune-service/protect/mde-security-integration)
 - Fixed non-standard signature path loading across platforms ([Windows](microsoft-defender-antivirus-windows.md), [Mac](microsoft-defender-endpoint-mac.md), [Linux](microsoft-defender-endpoint-linux.md), [Android](microsoft-defender-endpoint-android.md), and [iOS](microsoft-defender-endpoint-ios.md))
 - Improved handling of cached detections in [attack surface reduction](overview-attack-surface-reduction.md) capabilities
 - Improved performance for enumerating virtual memory ranges
@@ -503,7 +531,7 @@ What's new
 
 #### What's new
 
-- Fixed an issue with [ASR rules deployed via Intune](/mem/intune/protect/endpoint-security-asr-policy) to display accurately in the Microsoft Defender portal
+- Fixed an issue with [ASR rules deployed via Intune](/intune/intune-service/protect/endpoint-security-asr-policy) to display accurately in the Microsoft Defender portal
 - Fixed a performance issue when building and validating the Microsoft Defender Antivirus cache
 - Improved performance by removing redundant exclusion checks
 
@@ -2094,5 +2122,4 @@ The versions listed in this section are no longer supported. To view current ver
 - Added support for Windows 10 RS1 or later OS install images.
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

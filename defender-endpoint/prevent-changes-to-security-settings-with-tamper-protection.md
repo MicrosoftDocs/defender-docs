@@ -8,8 +8,8 @@ ms.localizationpriority: medium
 ms.date: 10/20/2025
 audience: ITPro
 ms.topic: how-to
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 ms.custom: 
 - nextgen
 - admindeeplinkDEFENDER
@@ -92,7 +92,7 @@ If you're using Windows Server 2012 R2 using the modern unified solution, Window
 
 1. Open the Windows PowerShell app.
 
-2. Use the [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus?preserve-view=true&view=win10-ps) PowerShell cmdlet.
+1. Use the [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus?preserve-view=true&view=win10-ps) PowerShell cmdlet.
 
 1. In the list of results, look for `IsTamperProtected` and `RealTimeProtectionEnabled`. (A value of *true* means tamper protection is enabled.)
 
@@ -103,7 +103,7 @@ You can use Microsoft Intune and other methods to configure or manage tamper pro
 | Method | What you can do |
 |:---|:---|
 | Use the [Microsoft Defender portal](https://security.microsoft.com). |Turn tamper protection on (or off), tenant wide, or apply tamper protection to some users/devices. You can exclude certain devices from tamper protection. See [Manage tamper protection for your organization using Microsoft Defender XDR](manage-tamper-protection-microsoft-365-defender.md). <br/><br/>|
-| Use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) or [Configuration Manager](/mem/configmgr/protect/deploy-use/endpoint-protection-configure). | Turn tamper protection on (or off), tenant wide, or apply tamper protection to some users/devices. You can exclude certain devices from tamper protection. See [Manage tamper protection for your organization using Intune](manage-tamper-protection-intune.md).<br/><br/>Protect Microsoft Defender Antivirus exclusions from tampering if you're using Intune only or Configuration Manager only. See [Tamper protection for antivirus exclusions](manage-tamper-protection-intune.md#tamper-protection-for-antivirus-exclusions).  |
+| Use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) or [Configuration Manager](/intune/configmgr/protect/deploy-use/endpoint-protection-configure). | Turn tamper protection on (or off), tenant wide, or apply tamper protection to some users/devices. You can exclude certain devices from tamper protection. See [Manage tamper protection for your organization using Intune](manage-tamper-protection-intune.md).<br/><br/>Protect Microsoft Defender Antivirus exclusions from tampering if you're using Intune only or Configuration Manager only. See [Tamper protection for antivirus exclusions](manage-tamper-protection-intune.md#tamper-protection-for-antivirus-exclusions).  |
 | Use [Configuration Manager with tenant attach](manage-tamper-protection-configuration-manager.md). | Turn tamper protection on (or off), tenant wide, or apply tamper protection to some users/devices. You can exclude certain devices from tamper protection. See [Manage tamper protection for your organization using tenant attach with Configuration Manager, version 2006](manage-tamper-protection-configuration-manager.md). |
 | Use the [Windows Security app](manage-tamper-protection-individual-device.md). | Turn tamper protection on (or off) on an individual device that isn't managed by a security team (such as devices for home use). See [Manage tamper protection on an individual device](manage-tamper-protection-individual-device.md).<br/><br/>*This method doesn't override tamper protection settings that are set in the Microsoft Defender portal, Intune, or Configuration Manager, and it isn't intended to be used by organizations.* |
 
@@ -135,5 +135,5 @@ To learn more about Microsoft Defender Vulnerability Management, see [Dashboard 
 - [Frequently asked questions on tamper protection](faqs-on-tamper-protection.yml)
 - [Troubleshoot problems with tamper protection](troubleshoot-problems-with-tamper-protection.yml)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

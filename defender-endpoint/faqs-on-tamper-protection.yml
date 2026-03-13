@@ -52,7 +52,7 @@ sections:
           - Windows 10 OS [1709](/lifecycle/announcements/revised-end-of-service-windows-10-1709), [1803](/lifecycle/announcements/windows-server-1803-end-of-servicing), [1809](/windows/release-health/status-windows-10-1809-and-windows-server-2019), or later together with [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint).
           - Windows 10 Enterprise multi-session
 
-          If you're using Configuration Manager, version 2006, with tenant attach, tamper protection can be extended to Windows Server 2012 R2 and later, and Azure Stack HCI OS, version 23H2 and later. For more information, see [Tenant attach: Create and deploy endpoint security Antivirus policy from the admin center (preview)](/mem/configmgr/tenant-attach/deploy-antivirus-policy).
+          If you're using Configuration Manager, version 2006, with tenant attach, tamper protection can be extended to Windows Server 2012 R2 and later, and Azure Stack HCI OS, version 23H2 and later. For more information, see [Tenant attach: Create and deploy endpoint security Antivirus policy from the admin center (preview)](/intune/configmgr/tenant-attach/deploy-antivirus-policy).
 
       - question: |
           Does tamper protection affect non-Microsoft Antivirus registration in the Windows Security app?
@@ -69,7 +69,7 @@ sections:
       - question: |
           How do I turn tamper protection on or off?
         answer: |
-          We recommend using [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to manage Microsoft Defender Antivirus settings for your organization. With Intune, you can control where tamper protection is enabled (or disabled) through policies. You can also protect Microsoft Defender Antivirus exclusions. See [Tamper protection: Microsoft Defender Antivirus exclusions](prevent-changes-to-security-settings-with-tamper-protection.md#protect-microsoft-defender-antivirus-exclusions).
+          We recommend using [Microsoft Intune](/intune/intune-service/fundamentals/what-is-intune) to manage Microsoft Defender Antivirus settings for your organization. With Intune, you can control where tamper protection is enabled (or disabled) through policies. You can also protect Microsoft Defender Antivirus exclusions. See [Tamper protection: Microsoft Defender Antivirus exclusions](prevent-changes-to-security-settings-with-tamper-protection.md#protect-microsoft-defender-antivirus-exclusions).
           
           You can also use the [Microsoft Defender portal](manage-tamper-protection-microsoft-365-defender.md) or [Configuration Manager](manage-tamper-protection-configuration-manager.md).
           

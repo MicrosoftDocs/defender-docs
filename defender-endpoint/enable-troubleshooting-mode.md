@@ -105,18 +105,18 @@ You can query all troubleshooting mode events in advanced hunting.
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com), and sign in.
 
-2. Navigate to the device page/machine page for the device you would like to turn on troubleshooting mode. Select **Turn on troubleshooting mode**. You must have "Manage security settings in Security Center" [permissions](assign-portal-access.md) for Microsoft Defender for Endpoint.
+1. Navigate to the device page/machine page for the device you would like to turn on troubleshooting mode. Select **Turn on troubleshooting mode**. You must have "Manage security settings in Security Center" [permissions](assign-portal-access.md) for Microsoft Defender for Endpoint.
 
    :::image type="content" source="/defender/media/ts-mode-menu.png" alt-text="Turn on troubleshooting mode" lightbox="/defender/media/ts-mode-menu.png":::
 
    > [!NOTE]
    > The **Turn on troubleshooting mode** option is available on all devices, even if the device doesn't meet the prerequisites for troubleshooting mode.  
 
-3. Confirm you want to turn on troubleshooting mode for the device.
+1. Confirm you want to turn on troubleshooting mode for the device.
 
    :::image type="content" source="/defender/media/ts-mode-conf-flyout.png" alt-text="The configuration flyout" lightbox="/defender/media/ts-mode-conf-flyout.png":::
 
-4. The device page shows the device is now in troubleshooting mode.
+1. The device page shows the device is now in troubleshooting mode.
 
    :::image type="content" source="/defender/media/ts-mode-option-greyed-out.png" alt-text="The device is now in troubleshooting mode" lightbox="/defender/media/ts-mode-option-greyed-out.png":::
 
@@ -186,5 +186,5 @@ DeviceEvents
 - [Troubleshooting mode scenarios](troubleshooting-mode-scenarios.md)
 - [Protect security settings with tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

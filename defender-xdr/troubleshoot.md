@@ -4,8 +4,8 @@ description: Find and solve known Microsoft Defender XDR issues and use workarou
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
-ms.author: macapara
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -78,7 +78,7 @@ This process requires a Global Administrator or Application Administrator in the
 
 3. If you're able to do so, review the API permissions required for this application, as the following image shows. Provide consent for the tenant.
 
-    ![grant consent image.](/defender/media/security-intelligence-images/msi-grant-admin-consent.jpg)
+    ![grant consent image.](media/troubleshoot/msi-grant-admin-consent.jpg)
 
 4. If the administrator receives an error while attempting to provide consent manually, try either [Option 1](#option-1-approve-enterprise-application-permissions-by-user-request) or [Option 2](#option-2-provide-admin-consent-by-authenticating-the-application-as-an-admin) as possible workarounds.
 
@@ -86,13 +86,13 @@ This process requires a Global Administrator or Application Administrator in the
 
 Microsoft Entra Administrators need to allow for users to request admin consent to apps. Verify the setting is configured to **Yes** in [Enterprise applications](https://portal.azure.com/#blade/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/UserSettings/menuId/).
 
-![Enterprise applications user settings.](/defender/media/security-intelligence-images/msi-enterprise-app-user-setting.jpg)
+![Enterprise applications user settings.](media/troubleshoot/msi-enterprise-app-user-setting.jpg)
 
 More information is available in [Configure Admin consent workflow](/azure/active-directory/manage-apps/configure-admin-consent-workflow).
 
 Once this setting is verified, users can go through the enterprise customer sign-in at [Microsoft security intelligence](https://www.microsoft.com/wdsi/filesubmission), and submit a request for admin consent, including justification.
 
-![Contoso sign in flow.](/defender/media/security-intelligence-images/msi-contoso-approval-required.png)
+![Contoso sign in flow.](media/troubleshoot/msi-contoso-approval-required.png)
 
 Administrators can review and approve the application permissions [Azure admin consent requests](https://portal.azure.com/#blade/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/AccessRequests/menuId/).
 
@@ -102,7 +102,7 @@ After providing consent, all users in the tenant will be able to use the applica
 
 This process requires that Global Administrators go through the Enterprise customer sign-in flow at [Microsoft security intelligence](https://www.microsoft.com/wdsi/filesubmission).
 
-![Consent sign in flow.](/defender/media/security-intelligence-images/msi-microsoft-permission-required.jpg)
+![Consent sign in flow.](media/troubleshoot/msi-microsoft-permission-required.jpg)
 
 Then, admins review the permissions and make sure to select **Consent on behalf of your organization**, and then select **Accept**.
 
@@ -112,10 +112,10 @@ All users in the tenant can now use this application.
 
 If neither of these options resolve the issue, try the following steps (as an admin):
 
-1. Remove previous configurations for the application. Go to [Enterprise applications](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ManagedAppMenuBlade/Properties/appId/f0cf43e5-8a9b-451c-b2d5-7285c785684d/objectId/982e94b2-fea9-4d1f-9fca-318cda92f90b)
+1. Remove previous configurations for the application. Go to [Enterprise applications](https://portal.azure.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/~/AppAppsPreview)
 and select **delete**.
 
-   ![Delete app permissions.](/defender/media/security-intelligence-images/msi-properties.png)
+   ![Delete app permissions.](media/troubleshoot/msi-properties.png)
 
 2. Capture `TenantID` from [Properties](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties).
 
@@ -123,13 +123,13 @@ and select **delete**.
 
    The rest of the parameters are already completed.
 
-   ![Permissions needed.](/defender/media/security-intelligence-images/msi-microsoft-permission-requested-your-organization.png)
+   ![Permissions needed.](media/troubleshoot/msi-microsoft-permission-requested-your-organization.png)
 
 4. Review the permissions required by the application, and then select **Accept**.
 
 5. Confirm the permissions are applied in the [Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ManagedAppMenuBlade/Permissions/appId/f0cf43e5-8a9b-451c-b2d5-7285c785684d/objectId/ce60a464-5fca-4819-8423-bcb46796b051).
 
-   ![Review that permissions are applied.](/defender/media/security-intelligence-images/msi-permissions.jpg)
+   ![Review that permissions are applied.](media/troubleshoot/msi-permissions.jpg)
 
 6. Sign in to [Microsoft security intelligence](https://www.microsoft.com/wdsi/filesubmission) as an enterprise user with a non-admin account to see if you have access.
 

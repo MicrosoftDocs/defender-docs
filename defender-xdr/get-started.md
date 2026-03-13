@@ -4,8 +4,8 @@ ms.reviewer:
 description: Learn what steps you need to take to get started with Microsoft Defender XDR
 search.appverid: met150
 ms.service: defender-xdr
-ms.author: macapara
-author: mjcaparas
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -35,7 +35,7 @@ Watch this short video to learn how Microsoft Defender XDR helps to prevent, det
 
 Whether you're new to the Microsoft suite of security products or familiar with individual workflows, this topic will guide you in the simple steps you need to take to get started with Microsoft Defender XDR.
 
-:::image type="content" source="/defender/media/mtp/get-started-m365d.png" alt-text="The steps to get started with the Microsoft Defender portal" lightbox="/defender/media/mtp/get-started-m365d.png":::
+:::image type="content" source="media/get-started/get-started-m365d.png" alt-text="The steps to get started with the Microsoft Defender portal" lightbox="media/get-started/get-started-m365d.png":::
 
 In general, you'll need to take the following steps to get started:
 

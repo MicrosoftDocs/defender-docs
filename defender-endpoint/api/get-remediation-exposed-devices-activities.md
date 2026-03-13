@@ -1,13 +1,13 @@
-﻿---
+---
 title: List exposed devices of one remediation activity
 description: Returns information about exposed devices for the specified remediation task.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -15,24 +15,15 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 04/25/2021
+ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # List exposed devices of one remediation activity
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-[!include[Prerelease information](../../includes/prerelease.md)]
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 ## API Description
 
@@ -48,33 +39,33 @@ Returns information about exposed devices for the specified remediation task.
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs for details.](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|RemediationTasks.Read.All|\'Read Threat and Vulnerability Management vulnerability information\'
-Delegated (work or school account)|RemediationTask.Read.Read|\'Read Threat and Vulnerability Management vulnerability information\'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|RemediationTasks.Read.All|'Read Threat and Vulnerability Management vulnerability information'|
+|Delegated (work or school account)|RemediationTask.Read.Read|'Read Threat and Vulnerability Management vulnerability information'|
 
 ## Properties details
 
-Property (id)|Data type|Description|Example
-:---|:---|:---|:---
-id|String|Device ID|w2957837fwda8w9ae7f023dba081059dw8d94503
-computerDnsName|String|Device name|PC-SRV2012R2Foo.UserNameVldNet.local
-osPlatform|String|Device operating system|WindowsServer2012R2
-rbacGroupName|String|Name of the device group this device is associated with|Servers
+|Property (id)|Data type|Description|Example|
+|---|---|---|---|
+|id|String|Device ID|w2957837fwda8w9ae7f023dba081059dw8d94503|
+|computerDnsName|String|Device name|PC-SRV2012R2Foo.UserNameVldNet.local|
+|osPlatform|String|Device operating system|WindowsServer2012R2|
+|rbacGroupName|String|Name of the device group this device is associated with|Servers|
 
 ## Example
 
 ### Request example
 
 ```http
-GET https://api.securitycenter.windows.com/api/remediationtasks/03942ef5-aecb-4c6e-b555-d6a97013844c/machinereferences
+GET https://api.security.microsoft.com/api/remediationtasks/aaaabbbb-0000-cccc-1111-dddd2222eeee/machinereferences
 ```
 
 ### Response example
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.windows.com/api/$metadata#MachineReferences",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#MachineReferences",
     "value": [
         {
             "id": "3cb5df6bb3640a2d37ad09fcd357b182d684fafc",
@@ -107,13 +98,3 @@ GET https://api.securitycenter.windows.com/api/remediationtasks/03942ef5-aecb-4c
 ]
 }
 ```
-
-## See also
-
-- [Remediation methods and properties](get-remediation-methods-properties.md)
-- [Get one remediation activity by Id](get-remediation-one-activity.md)
-- [List all remediation activities](get-remediation-all-activities.md)
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

@@ -1,8 +1,8 @@
 ﻿---
 title: Tamper resiliency with Microsoft Defender for Endpoint
 description: Learn about the anti-tampering capabilities of Microsoft Defender for Endpoint.
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 manager: bagol
 ms.reviewer: joshbregman
 ms.service: defender-endpoint
@@ -37,7 +37,7 @@ In order to provide an effective defense against tampering, devices must be heal
 
 - [Onboard devices to Defender for Endpoint](onboard-configure.md).
 - Make sure [security intelligence and antivirus updates](microsoft-defender-antivirus-updates.md) are installed.
-- Managed devices centrally, such as by [Microsoft Intune](/mem/intune/protect/advanced-threat-protection-configure), [Microsoft Defender for Endpoint Security Configuration Management](/mem/intune/protect/mde-security-integration), or [Configuration Manager](/mem/configmgr/protect/deploy-use/endpoint-protection-configure).
+- Managed devices centrally, such as by [Microsoft Intune](/intune/intune-service/protect/advanced-threat-protection-configure), [Microsoft Defender for Endpoint Security Configuration Management](/intune/intune-service/protect/mde-security-integration), or [Configuration Manager](/intune/configmgr/protect/deploy-use/endpoint-protection-configure).
 
 > [!NOTE]
 > On Windows devices, Microsoft Defender Antivirus can be managed by using Group Policy, Windows Management Instrumentation (WMI), and PowerShell cmdlets. However, those methods are more susceptible to tampering than by using Microsoft Intune, Configuration Manager, or Microsoft Defender for Endpoint Security Configuration Management.
@@ -54,7 +54,7 @@ Attackers use various tampering techniques to disable Microsoft Defender for End
 | [Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) | Windows | - Terminating/suspending processes<br/>- Stopping/pausing/suspending services<br/>- Modifying registry settings including exclusions<br/>- Manipulating/hijacking DLLs<br/>- Manipulation/modification of the file system<br/>- Agent integrity |
 | [Tamper protection](tamperprotection-macos.md) | Mac | - Terminating/suspending processes<br/>- Manipulation/modification of the file system<br/>- Agent integrity|
 | [Attack surface reduction rules](attack-surface-reduction.md) | Windows | Kernel drivers (see [Block abuse of exploited vulnerable signed drivers](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers))|
-| [Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-operational-guide) (WDAC) | Windows | Kernel drivers (see [Microsoft vulnerable driver blocklist](/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules))|
+| [Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-operational-guide) (WDAC) | Windows | Kernel drivers (see [Microsoft vulnerable driver block list](/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules))|
 
 
 ## Understanding the different ways to prevent driver based tampering on Windows
@@ -67,24 +67,24 @@ Microsoft provides several ways to keep devices well protected and up to date ag
 
 ### Broadest protection - Microsoft vulnerable driver blocklist
 
-The blocklist is updated with each new major release of Windows, typically 1-2 times per year. Microsoft will occasionally publish future updates through regular Windows servicing. With Windows 11 2022 update, the vulnerable driver blocklist is enabled by default for all devices, but requires either memory integrity (also known as hypervisor-protected code integrity or HVCI), Smart App Control, or S mode to be active.
+The block list is updated with each new major release of Windows, typically 1-2 times per year. Microsoft will occasionally publish future updates through regular Windows servicing. With Windows 11 2022 update, the vulnerable driver block list is enabled by default for all devices, but requires either memory integrity (also known as hypervisor-protected code integrity or HVCI), Smart App Control, or S mode to be active.
 
-See [Microsoft vulnerable driver blocklist](/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules#microsoft-vulnerable-driver-blocklist).
+See [Microsoft vulnerable driver block list](/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules#microsoft-vulnerable-driver-blocklist).
 
 For devices that don't meet those requirements, this list of drivers can be blocked by using Windows Defender Application Control policy.
 
-See [Vulnerable Driver blocklist XML](/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules#microsoft-vulnerable-driver-blocklist).
+See [Vulnerable Driver block list XML](/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules#microsoft-vulnerable-driver-blocklist).
 
 
 ### Faster updates - Block exploited vulnerable and signed drivers ASR rule
 
-This list of drivers blocked by the exploited and vulnerable drivers get updated more frequently than the recommended drivers blocklist. ASR rules can run in audit mode first to ensure that there's no impact before applying the rule in block mode.
+This list of drivers blocked by the exploited and vulnerable drivers get updated more frequently than the recommended drivers block list. ASR rules can run in audit mode first to ensure that there's no impact before applying the rule in block mode.
 
 See [Block abuse of exploited vulnerable signed drivers rule](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers).
 
 ### Block other drivers - Windows Defender Application Control (WDAC)
 
-Attackers might attempt to use drivers that aren't blocked by either the recommended driver blocklist or an ASR rule. In this case, customers can protect themselves by using [WDAC to create a policy to block](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-operational-guide)
+Attackers might attempt to use drivers that aren't blocked by either the recommended driver block list or an ASR rule. In this case, customers can protect themselves by using [WDAC to create a policy to block](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-operational-guide)
 
 WDAC also provides an audit mode to help understand the impact of applying the policy in block mode to avoid accidentally impacting legitimate use.
 
@@ -116,7 +116,7 @@ When tampering is detected, an alert is raised. Some of the alert titles for tam
 - Microsoft Defender Antivirus tampering
 - Modification attempt in Microsoft Defender Antivirus exclusion list
 - Pending file operations mechanism abused for tampering purposes
-- Possible Antimalware Scan Interface (AMSI) tampering
+- Possible anti-malware Scan Interface (AMSI) tampering
 - Possible remote tampering
 - Possible sensor tampering in memory
 - Potential attempt to tamper with MDE via drivers
@@ -132,5 +132,5 @@ If the [Block abuse of exploited vulnerable signed drivers](attack-surface-reduc
 
 If [Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide) (WDAC) is enabled, the [block and audit activity can be seen in Advanced Hunting](/windows/security/threat-protection/windows-defender-application-control/querying-application-control-events-centrally-using-advanced-hunting).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

@@ -4,8 +4,8 @@ description: Learn how to update incidents using Microsoft Defender XDR API
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
-ms.author: macapara
-author: mjcaparas
+ms.author: edbaynash
+author: EdB-MSFT
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro

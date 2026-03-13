@@ -256,7 +256,7 @@ The length of the aggregation interval depends on your Office 365 or Microsoft 3
 |Defender for Office 365 Plan 2 |1 minute|
 |E5 Compliance add-on or E5 Discovery and Audit add-on|1 minute|
 |Office 365 or Microsoft 365 E1/F1/G1 or E3/F3/G3|15 minutes|
-|Defender for Office 365 Plan 1 or Exchange Online Protection|15 minutes|
+|The built-in security features for all cloud mailboxes or Defender for Office 365 Plan 1|15 minutes|
 
 When events that match the same alert policy occur within the aggregation interval, details about the subsequent event are added to the original alert. For all events, information about aggregated events is displayed in the details field and the number of times an event occurred with the aggregation interval is displayed in the activity/hit count field. You can view more information about all aggregated events instances by viewing the activity list.
 
@@ -295,7 +295,7 @@ To see which category a default alert policy is assigned to, see the tables in [
 |Information Protection Analyst||✔|||||
 |Information Protection Investigator||✔|||||
 |Manage Alerts||||||✔|
-|Organization Configuration||||||✔|
+|Organization Management||||||✔|
 |Privacy Management|||||||
 |Quarantine|||||||
 |Record Management|✔||||||

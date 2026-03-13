@@ -2,8 +2,8 @@
 title: How to schedule scans with Microsoft Defender for Endpoint on macOS
 description: Learn how to schedule an automatic scanning time for Microsoft Defender for Endpoint in macOS to better protect your organization's assets.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
 manager: bagol
 ms.localizationpriority: medium
@@ -33,7 +33,7 @@ There are three types of scheduled scans that are configurable: hourly, daily, a
 
 **Prerequisites**:
 
-- Platform Update version: [101.23122.0005](mac-whatsnew.md#jan-2024-build-101231220005---release-version-2012312250) or newer
+- Platform Update version: 101.23122.0005 or newer.
 
 ## Schedule a scan with Microsoft Defender for Endpoint on macOS
 
@@ -145,7 +145,7 @@ The following code shows the schema you need to use to schedule scans according 
 </plist>
 ```
 
-2. Save the file as `com.microsoft.wdav.mobileconfig`.
+1. Save the file as `com.microsoft.wdav.mobileconfig`.
 
 #### For JamF and other 3rd-party MDMs
 
@@ -184,9 +184,9 @@ The following code shows the schema you need to use to schedule scans according 
 </plist> 
 ```
 
-2. Save the file as `com.microsoft.wdav.plist`.
+1. Save the file as `com.microsoft.wdav.plist`.
 
-3. Check that the scheduled scan is configured via a "Set Preference"
+1. Check that the scheduled scan is configured via a "Set Preference"
      
      ```
      mdatp health --details scheduled_scan
@@ -277,7 +277,7 @@ In the following example, an hourly quick scan will run every 6 hours, a daily q
 </plist> 
 ```
 
-2. Save the file as `com.microsoft.wdav.mobileconfig`.
+1. Save the file as `com.microsoft.wdav.mobileconfig`.
 
 #### For JamF and other 3rd-party MDMs
 
@@ -320,9 +320,9 @@ In the following example, an hourly quick scan will run every 6 hours, a daily q
 </plist> 
 ```
 
-2. Save the file as `com.microsoft.wdav.plist`.
+1. Save the file as `com.microsoft.wdav.plist`.
 
-3. Check that the scheduled scan is configured via a "Set Preference"
+1. Check that the scheduled scan is configured via a "Set Preference"
      
      ```
      mdatp health --details scheduled_scan
@@ -385,6 +385,5 @@ Use the following command:
 > Scheduled scans do not run at the scheduled time while the device is asleep. Instead, scheduled scans run when the device resumes from sleep mode.
 > If the device is turned off, the scan runs at the next scheduled scan time.
 
-> [!TIP]
-> Do you want to learn more? Engage with the Microsoft Security community in our Tech Community: [**Microsoft Defender for Endpoint Tech Community**](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/bd-p/MicrosoftDefenderATP).
+
 

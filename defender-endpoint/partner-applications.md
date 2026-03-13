@@ -4,8 +4,8 @@ ms.reviewer:
 description: View supported partner applications to enhance the detection, investigation, and threat intelligence capabilities of the platform
 ms.service: defender-endpoint
 ms.subservice: reference
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -132,10 +132,10 @@ You can use threat-intelligence from providers and aggregators to maintain and u
 
 Defender for Endpoint allows you to integrate with these solutions and act on IoCs by correlating rich telemetry to create alerts. You can also use prevention and automated response capabilities to block execution and take remediation actions when there's a match.
 
-Defender for Endpoint currently supports IOC matching and remediation for file and network indicators. Blocking is supported for file indicators.
+Defender for Endpoint supports IOC matching and remediation for file and network indicators. Blocking is supported for file indicators.
 
 ## Support for non-Windows platforms
 
 Defender for Endpoint provides a centralized security operations experience for Windows and non-Windows platforms, including mobile devices. You'll be able to see alerts from various supported operating systems (OS) in the portal and better protect your organization's network.
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

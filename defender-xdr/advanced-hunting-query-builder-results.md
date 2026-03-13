@@ -4,10 +4,10 @@ description: Use and customize query results in guided mode for advanced hunting
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
+f1.keywords: 
   - NOCSH
-ms.author: dansimp
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -35,7 +35,7 @@ ms.date: 03/28/2025
 
 In hunting using guided mode, the results of the query appear in the **Results** tab.
 
-![Screenshot of results tab](/defender/media/guided-hunting/35-query-results.png)
+![Screenshot of results tab](media/advanced-hunting-query-builder-results/35-query-results.png)
 
 You can work on the results further by exporting them to a CSV file by selecting **Export**. This downloads the CSV file for your use.
 
@@ -54,7 +54,7 @@ To view more columns:
 1. Select **Customize columns** in the upper right-hand portion of the results view.
 2. From here, select the columns to include in the results view and deselect columns to hide.
 
-   ![Screenshot of list of columns you can add to the results view](/defender/media/guided-hunting/36-columns.png)
+   ![Screenshot of list of columns you can add to the results view](media/advanced-hunting-query-builder-results/36-columns.png)
 
 3. Select **Apply** to view results with the added columns. Use the scroll bars if necessary.
 

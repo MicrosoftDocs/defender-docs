@@ -12,13 +12,7 @@ ms.reviewer: gayasalomon
 Microsoft Defender for Cloud Apps provides security detections and alerts for malicious activities. The purpose of this guide is to provide you with general and practical information on each alert, to help with your investigation and remediation tasks. Included in this guide is general information about the conditions for triggering alerts. However, it's important to note that since anomaly detections are nondeterministic by nature, they're only triggered when there's behavior that deviates from the norm. Finally, some alerts might be in preview, so regularly review the official documentation for updated alert status.
 
 > [!IMPORTANT]
-> Starting June 2025, Microsoft Defender for Cloud Apps began transitioning anomaly detection policies to a dynamic threat detection model. This model automatically adapts detection logic to the evolving threat landscape, keeping detections current without manual configuration or policy updates. As part of these improvements to overall security, and to provide more accurate and timely alerts, several legacy policies have been disabled:
-> 
-> - Activity from suspicious IP addresses
-> - Suspicious inbox manipulation rules
-> - Suspicious email deletion activity
-> - Activity from anonymous IP addresses
-> - Suspicious inbox forwarding
+> Starting June 2025, Microsoft Defender for Cloud Apps began transitioning anomaly detection policies to a dynamic threat detection model. This model automatically adapts detection logic to the evolving threat landscape, keeping detections current without manual configuration or policy updates. As part of these improvements to overall security, and to provide more accurate and timely alerts the legacy policies will be disabled from the "Policy Management" page.
 >
 > You will continue to receive the same standard of protection without disruption to your existing security coverage. No action is required from your side.
 

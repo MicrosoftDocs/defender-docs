@@ -165,7 +165,7 @@ This procedure describes how to deploy your machine with Ubuntu. The deployment 
     (echo db3a7c73eb7e91a0db53566c50bab7ed3a755607d90bb348c875825a7d1b2fce) | docker run --name MyLogCollector -p 21:21 -p 20000-20099:20000-20099 -e "PUBLICIP='192.168.1.1'" -e "PROXY=192.168.10.1:8080" -e "CONSOLE=mod244533.us.portal.cloudappsecurity.com" -e "COLLECTOR=MyLogCollector" --security-opt apparmor:unconfined --cap-add=SYS_ADMIN --restart unless-stopped -a stdin -i mcr.microsoft.com/mcas/logcollector starter
     ```
 
-1. To verify that the log collector is running properly, run the following command: `Docker logs <collector_name>`. You should get the results: **Finished successfully!**
+1. To verify that the log collector is running properly, run the following command: `docker logs <collector_name>`. You should get the results: **Finished successfully!**
 
 ## Configure network appliance on-premises settings
 

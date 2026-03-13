@@ -1,14 +1,14 @@
 ﻿---
 title: Advanced Hunting with PowerShell API Guide
-ms.reviewer: 
+ms.reviewer:
 description: Use these code samples, querying several Microsoft Defender for Endpoint APIs.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -21,29 +21,25 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
 ---
+
 # Microsoft Defender for Endpoint APIs using PowerShell
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-
 > [!IMPORTANT]
-> Advanced hunting capabilities aren't included in Defender for Business.
+> Advanced hunting capabilities aren't included in Microsoft Defender for Business.
 
+[!INCLUDE [Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
-
-
+[!INCLUDE [Improve request performance](../../includes/improve-request-performance.md)]
 
 Full scenario using multiple APIs from Microsoft Defender for Endpoint.
 
-In this section, we share PowerShell samples to 
-- Retrieve a token 
-- Use token to retrieve the latest alerts in Microsoft Defender for Endpoint
+In this section, we share PowerShell samples to:
+
+- Retrieve a token.
+- Use token to retrieve the latest alerts in Microsoft Defender for Endpoint.
 - For each alert, if the alert has medium or high priority and is still in progress, check how many times the device has connected to suspicious URL.
 
 **Prerequisite**: You first need to [create an app](apis-intro.md).
@@ -54,7 +50,7 @@ In this section, we share PowerShell samples to
 
 2. If your policy doesn't allow you to run the PowerShell commands, you can run the following command:
 
-   ```
+   ```powershell
    Set-ExecutionPolicy -ExecutionPolicy Bypass
    ```
 
@@ -67,16 +63,18 @@ Run the following command, using your information as follows:
 - `$tenantId`: ID of the tenant on behalf of which you want to run the query (that is, the query is run on the data of this tenant).
 - `$appId`: ID of your Microsoft Entra app (the app must have 'Run advanced queries' permission to Defender for Endpoint).
 - `$appSecret`: Secret of your Microsoft Entra app.
-- `$suspiciousUrl`: The URL
+- `$suspiciousUrl`: The URL.
 
+> [!TIP]
+> Some Microsoft Defender for Endpoint APIs continue to require access tokens issued for the legacy resource `https://api.securitycenter.microsoft.com`. If the token audience doesn't match the resource expected by the API, requests fail with `403 Forbidden`, even if the API endpoint uses `https://api.security.microsoft.com`. Use `https://api.securitycenter.microsoft.com` as the resource or scope when acquiring tokens.
 
-```
+```powershell
 $tenantId = '00000000-0000-0000-0000-000000000000' # Paste your own tenant ID here
 $appId = '11111111-1111-1111-1111-111111111111' # Paste your own app ID here
 $appSecret = '22222222-2222-2222-2222-222222222222' # Paste your own app secret here
 $suspiciousUrl = 'www.suspiciousUrl.com' # Paste your own URL here
 
-$resourceAppIdUri = 'https://securitycenter.onmicrosoft.com/windowsatpservice'
+$resourceAppIdUri = 'https://api.securitycenter.microsoft.com'
 $oAuthUri = "https://login.microsoftonline.com/$TenantId/oauth2/token"
 $authBody = [Ordered] @{
     resource = "$resourceAppIdUri"
@@ -87,13 +85,12 @@ $authBody = [Ordered] @{
 $authResponse = Invoke-RestMethod -Method Post -Uri $oAuthUri -Body $authBody -ErrorAction Stop
 $aadToken = $authResponse.access_token
 
-
 #Get latest alert
-$alertUrl = "https://api.securitycenter.microsoft.com/api/alerts?`$top=10"
-$headers = @{ 
+$alertUrl = "https://api.security.microsoft.com/api/alerts?`$top=10"
+$headers = @{
     'Content-Type' = 'application/json'
     Accept = 'application/json'
-    Authorization = "Bearer $aadToken" 
+    Authorization = "Bearer $aadToken"
 }
 $alertResponse = Invoke-WebRequest -Method Get -Uri $alertUrl -Headers $headers -ErrorAction Stop
 $alerts =  ($alertResponse | ConvertFrom-Json).value
@@ -122,14 +119,13 @@ $query = "NetworkCommunicationEvents
 | where RemoteUrl  == `"$suspiciousUrl`"
 | summarize ConnectionsCount = count() by MachineId"
 
-$queryUrl = "https://api.securitycenter.microsoft.com/api/advancedqueries/run"
+$queryUrl = "https://api.security.microsoft.com/api/advancedqueries/run"
 
 $queryBody = ConvertTo-Json -InputObject @{ 'Query' = $query }
 $queryResponse = Invoke-WebRequest -Method Post -Uri $queryUrl -Headers $headers -Body $queryBody -ErrorAction Stop
 $response =  ($queryResponse | ConvertFrom-Json).Results
 $response
 ```
-
 
 ## See also
 
@@ -138,4 +134,3 @@ $response
 - [Advanced Hunting using Python](run-advanced-query-sample-python.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

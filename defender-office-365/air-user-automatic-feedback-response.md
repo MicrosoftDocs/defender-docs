@@ -6,7 +6,7 @@ ms.author: chrisda
 manager: bagol
 ms.reviewer: kellycrider
 ms.topic: overview
-ms.date: 07/10/2024
+ms.date: 11/17/2024
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
@@ -20,6 +20,8 @@ In Microsoft 365 organizations with [Microsoft Defender for Office 365 Plan 2](m
 This article explains how to enable and customize automatic feedback response for specific AIR verdicts, how the notification email messages are sent, and what the notifications look like.
 
 ## What do you need to know before you begin?
+
+- The alert policy named **Email reported by user as malware or phish** must be enabled for this feature to work (it's on by default). For more information about this alert policy, see [Threat management alert policies](/defender-xdr/alert-policies#threat-management-alert-policies).
 
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **User reported settings** page, use <https://security.microsoft.com/securitysettings/userSubmission>.
 

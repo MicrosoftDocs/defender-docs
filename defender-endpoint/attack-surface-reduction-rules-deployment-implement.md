@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
 audience: ITPro
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 ms.reviewer: sugamar
 manager: bagol
 ms.custom: asr
@@ -36,12 +36,11 @@ When you're implementing attack surface reduction rules, move the first test rin
 
 1. After all exclusions are determined while in audit mode, start setting some attack surface reduction rules to "block" mode, starting with the rule that has the fewest triggered events. See [Enable attack surface reduction rules](enable-attack-surface-reduction.md).
 
-2. Review the reporting page in the Microsoft Defender portal; see [Threat protection report in Microsoft Defender for Endpoint](threat-protection-reports.md). Also review feedback from your champions.
+1. Review the reporting page in the Microsoft Defender portal; see [Threat protection report in Microsoft Defender for Endpoint](threat-protection-reports.md). Also review feedback from your champions.
 
-3. Refine exclusions or create new exclusions as determined necessary.
+1. Refine exclusions or create new exclusions as determined necessary.
 
-4. Switch problematic rules back to Audit.
-
+1. Switch problematic rules back to Audit.
    > [!NOTE]
    > For problematic rules (rules creating too much noise), it's better to create exclusions than to turn off rules or switching back to Audit. You have to determine what is best for your environment.
 
@@ -60,19 +59,19 @@ In the following deployment process, steps 1 – 3 are essentially the same for 
 
 1. Test rules in Audit mode.
 
-2. Review attack surface reduction-triggered audit events in the Microsoft Defender portal.
+1. Review attack surface reduction-triggered audit events in the Microsoft Defender portal.
 
-3. Create exclusions.
+1. Create exclusions.
 
-4. Review, and then refine, add, or remove exclusions as necessary.
+1. Review, and then refine, add, or remove exclusions as necessary.
 
-5. Set rules to "block" mode.
+1. Set rules to "block" mode.
 
-6. Review the reporting page in the Microsoft Defender portal.
+1. Review the reporting page in the Microsoft Defender portal.
 
-7. Create exclusions.
+1. Create exclusions.
 
-8. Disable problematic rules or switch them back to Audit.
+1. Disable problematic rules or switch them back to Audit.
 
 #### Customize attack surface reduction rules
 
@@ -104,11 +103,11 @@ See the [attack surface reduction rules reference](attack-surface-reduction-rule
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](https://technet.microsoft.com/library/cc731212.aspx). Right-click the Group Policy Object you want to configure and select **Edit**.
 
-2. In the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
 
-3. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Microsoft Defender Exploit Guard** \> **Attack surface reduction**.
+1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Microsoft Defender Exploit Guard** \> **Attack surface reduction**.
 
-4. Double-click the **Exclude files and paths from Attack surface reduction Rules** setting and set the option to **Enabled**. Select **Show** and enter each file or folder in the **Value name** column. Enter **0** in the **Value** column for each item.
+1. Double-click the **Exclude files and paths from Attack surface reduction Rules** setting and set the option to **Enabled**. Select **Show** and enter each file or folder in the **Value name** column. Enter **0** in the **Value** column for each item.
 
 > [!WARNING]
 > Don't use quotes as they aren't supported for either the **Value name** column or the **Value** column.
@@ -117,7 +116,7 @@ See the [attack surface reduction rules reference](attack-surface-reduction-rule
 
 1. Type **powershell** in the Start menu, right-click **Windows PowerShell**, and then select **Run as administrator**.
 
-2. Enter the following cmdlet:
+1. Enter the following cmdlet:
 
    ```PowerShell
    Add-MpPreference -AttackSurfaceReductionOnlyExclusions "<fully qualified path or resource>"
@@ -152,5 +151,5 @@ You can customize the notification for when a rule is triggered and blocks an ap
 
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

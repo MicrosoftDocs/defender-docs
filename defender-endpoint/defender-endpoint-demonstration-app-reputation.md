@@ -4,8 +4,8 @@ description: Test how Microsoft Defender for Endpoint SmartScreen helps you iden
 search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: ngp
-ms.author: bagol 
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.reviewer: yongrhee 
 ms.localizationpriority: medium
 manager: bagol
@@ -81,5 +81,5 @@ This download is known malware; SmartScreen should block this program from runni
 ## See also
 
 [Microsoft Defender for Endpoint - demonstration scenarios](defender-endpoint-demonstrations.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

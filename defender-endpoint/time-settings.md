@@ -1,9 +1,9 @@
 ﻿---
 title: Microsoft Defender XDR time zone settings
-description: Use the info contained here to configure the Microsoft Defender XDR time zone settings and view license information.
+description: Use the info contained here to configure the Microsoft Defender XDR time zone settings.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: article
 ms.subservice: reference
 search.appverid: met150
-ms.date: 05/05/2025
+ms.date: 11/30/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -22,9 +22,7 @@ appliesto:
 # Microsoft Defender XDR time zone settings
 
 
-This article describes time zone settings and options. You can use **Time zone** menu to configure the time zone and view license information.
-
-:::image type="content" source="media/atp-time-zone.png" alt-text="The Time zone settings-1" lightbox="media/atp-time-zone.png":::
+This article describes how to configure time zone settings and options.
 
 > [!NOTE]
 > Changing the time zone setting in the [Microsoft Defender portal](https://security.microsoft.com) only affects how times are displayed. It doesn't affect the actual scheduling of operations, such as antivirus scans, which continue to follow the local system time or UTC settings, depending on how they're configured.
@@ -32,10 +30,6 @@ This article describes time zone settings and options. You can use **Time zone**
 ## Time zone settings
 
 The aspect of time is important in the assessment and analysis of perceived and actual cyberattacks. Cyberforensic investigations often rely on time stamps to piece together the sequence of events. It's important that your system reflects the correct time zone settings. Defender for Endpoint can display either Coordinated Universal Time (UTC) or local time.
-
-Your current time zone setting is shown in the **Timezone** menu in the Microsoft Defender portal.
-
-:::image type="content" source="media/atp-time-zone-menu.png" alt-text="The Time zone settings-2" lightbox="media/atp-time-zone-menu.png":::
 
 ### UTC time zone
 
@@ -55,13 +49,9 @@ The Defender for Endpoint time zone is set by default to UTC. Setting the time z
 
 To set the time zone:
 
-1. Select the **Time zone** menu.
+1. In the Microsoft Defender portal, go to **System** > **Settings** > **Microsoft Defender portal** > **Time zone**.
 
-   :::image type="content" source="media/atp-time-zone.png" alt-text="The Time zone settings-3" lightbox="media/atp-time-zone.png":::
-
-2. Select the **Timezone UTC** indicator.
-
-3. Select **Timezone UTC** or your local time zone, for example `-7:00`.
+1. In the **Time zone** drop down menu, select either UTC or your local time zone.
 
 ### Regional settings
 
@@ -96,5 +86,5 @@ The following date and time formats are currently not supported:
 
 Decimal symbol used is always a dot, even if a comma is selected in  the **Numbers** format settings in **Region** settings. For example, `15,5K` is displayed as `15.5K`.
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

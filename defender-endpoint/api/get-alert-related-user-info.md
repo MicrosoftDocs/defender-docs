@@ -2,12 +2,12 @@
 title: Get alert related user information
 description: Learn how to use the Get alert-related user information API to retrieve the user related to a specific alert in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -15,23 +15,14 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 11/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
 ---
+
 # Get alert related user information API
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## API description
 
@@ -44,20 +35,17 @@ Retrieves the User related to a specific alert.
 
 ## Permissions
 
+ When obtaining a token using user credentials:
+
+- The user needs to have at least the following role permission: 'View Data' (See [Create and manage roles](../user-roles.md) for more information)
+- The user needs to have access to the device associated with the alert, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information).
+
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|User.Read.All|'Read user profiles'
-Delegated (work or school account)|User.Read.All|'Read user profiles'
-
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - The user needs to have at least the following role permission: 'View Data' (See [Create and manage roles](../user-roles.md) for more information)
-> - The user needs to have access to the device associated with the alert, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information)
->
-> Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|User.Read.All|'Read user profiles'|
+|Delegated (work or school account)|User.Read.All|'Read user profiles'|
 
 ## HTTP request
 
@@ -67,9 +55,9 @@ GET /api/alerts/{id}/user
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -86,7 +74,7 @@ If successful and alert and a user exists - 200 OK with user in the body. If ale
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/alerts/636688558380765161_2136280442/user
+GET https://api.security.microsoft.com/api/alerts/636688558380765161_2136280442/user
 ```
 
 ### Response example
@@ -95,7 +83,7 @@ Here is an example of the response.
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Users/$entity",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Users/$entity",
     "id": "contoso\\user1",
     "accountName": "user1",
     "accountDomain": "contoso",
@@ -110,5 +98,3 @@ Here is an example of the response.
     "isOnlyNetworkUser": false
 }
 ```
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

@@ -2,8 +2,8 @@
 title: Supported Microsoft Defender for Endpoint capabilities by platform
 description: Get to know the Microsoft Defender for Endpoint capabilities supported for Windows 10 devices, servers, and non-Windows devices.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
 manager: bagol
@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: article
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 07/01/2025
+ms.date: 11/17/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -22,8 +22,9 @@ appliesto:
 ---
 # Supported Microsoft Defender for Endpoint capabilities by platform
 
-
 Learn how to [Onboard devices and configure Microsoft Defender for Endpoint capabilities](onboard-configure.md).
+
+## Supported capabilities by platform
 
 The following table gives information about the supported Microsoft Defender for Endpoint capabilities by platform.
 
@@ -61,7 +62,4 @@ The following table gives information about the supported Microsoft Defender for
 > - On Linux, network protection, web protection, and custom network indicators are currently in preview.
 >   - Endpoint & network device discovery is supported on Windows Server 2019 or later, and on Windows 10 and Windows 11.
 > - For Windows 7, Windows 8.1, and Windows Server 2008 R2, use [MMA](/defender-endpoint/onboard-downlevel#install-and-configure-microsoft-monitoring-agent-mma) for the EDR sensor and [System Center Endpoint Protection](/defender-endpoint/onboard-downlevel#configure-and-update-system-center-endpoint-protection-clients) (SCEP) for antivirus protection.
-
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
-
+> - For Windows 7 SP1 and Windows Server 2008 R2 SP1, you can also use [Microsoft Defender endpoint security solution (preview)](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security) supplied by the [Defender deployment tool (preview)](./defender-deployment-tool-windows.md). 

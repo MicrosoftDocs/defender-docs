@@ -23,7 +23,7 @@ If you're experiencing issues with a cloud service, we recommend checking servic
 
 ## Run advanced hunting queries
 
-**Where**: In the Microsoft Defender XDR Portal, select **Hunting > Advanced hunting** and query for Defender for Cloud Apps data.
+**Where**: In the Microsoft Defender portal at [https://security.microsoft.com](https://security.microsoft.com), select **Hunting > Advanced hunting** and query for Defender for Cloud Apps data.
 
 **Persona**: SOC analysts
 
@@ -90,7 +90,7 @@ AccountDisplayName,GroupName
 
 ## Review file quarantines
 
-**Where**: In the Microsoft Defender XDR Portal, select **Cloud apps > Files**. Query for items where **Quarantined** = **True**.
+**Where**: In the [Microsoft Defender portal](https://security.microsoft.com), select **Cloud apps > Files**. Query for items where **Quarantined** = **True**.
 
 **Persona**: Compliance administrators
 
@@ -102,7 +102,7 @@ For more information, see [Understand how quarantine works](../use-case-admin-qu
 
 ## Review app risk scores
 
-**Where**: In the Microsoft Defender XDR Portal, select **Cloud apps > Cloud app catalog**.
+**Where**: In the [Microsoft Defender portal](https://security.microsoft.com), select **Cloud apps > Cloud app catalog**.
 
 **Persona**: Compliance administrators
 
@@ -114,7 +114,7 @@ For more information, see [Find your cloud app and calculate risk scores](../ris
 
 ## Delete cloud discovery data
 
-**Where**: In the Microsoft Defender XDR Portal, select **Settings > Cloud apps > Cloud Discovery > Delete Data**.
+**Where**: In the [Microsoft Defender portal](https://security.microsoft.com), select **Settings > Cloud apps > Cloud Discovery > Delete Data**.
 
 **Persona**: Compliance administrators
 
@@ -129,7 +129,7 @@ For more information, see [Deleting cloud discovery data](../discovered-apps.md#
 
 ## Generate a cloud discovery executive report
 
-**Where**: In the Microsoft Defender XDR Portal, select **Cloud apps > Cloud discovery > Dashboard > Actions**
+**Where**: In the [Microsoft Defender portal](https://security.microsoft.com), select **Cloud apps > Cloud discovery > Dashboard > Actions**
 
 **Persona**: Compliance administrators
 
@@ -139,7 +139,7 @@ For more information, see [Generate cloud discovery executive report](../discove
 
 ## Generate a cloud discovery snapshot report
 
-**Where**: In the Microsoft Defender XDR Portal, select **Cloud apps > Cloud discovery > Dashboard > Actions**
+**Where**: In the [Microsoft Defender portal](https://security.microsoft.com), select **Cloud apps > Cloud discovery > Dashboard > Actions**
 
 **Persona**: Security and Compliance administrators
 

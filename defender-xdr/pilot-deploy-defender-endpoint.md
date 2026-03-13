@@ -112,13 +112,13 @@ You'll first need to check the license state to verify that it was properly prov
 
 1. To view your licenses, go to the **Microsoft Azure portal** and navigate to the [Microsoft Azure portal license section](https://portal.azure.com/#blade/Microsoft_AAD_IAM/LicensesMenuBlade/Products).
 
-   :::image type="content" source="/defender/media/defender/atp-licensing-azure-portal.png" alt-text="Screenshot of the Azure Licensing page in the Microsoft Defender portal." lightbox="/defender/media/defender/atp-licensing-azure-portal.png":::
+   :::image type="content" source="media/pilot-deploy-defender-endpoint/atp-licensing-azure-portal.png" alt-text="Screenshot of the Azure Licensing page in the Microsoft Defender portal." lightbox="media/pilot-deploy-defender-endpoint/atp-licensing-azure-portal.png":::
 
 1. Alternately, in the admin center, navigate to **Billing** > **Subscriptions**.
 
     On the screen, you'll see all the provisioned licenses and their current **Status**.
 
-    :::image type="content" source="/defender/media/defender/atp-billing-subscriptions.png" alt-text="Screenshot of the Billing licenses page in the Microsoft Azure portal." lightbox="/defender/media/defender/atp-billing-subscriptions.png":::
+    :::image type="content" source="media/pilot-deploy-defender-endpoint/atp-billing-subscriptions.png" alt-text="Screenshot of the Billing licenses page in the Microsoft Azure portal." lightbox="media/pilot-deploy-defender-endpoint/atp-billing-subscriptions.png":::
 
 ## Step 2: Onboard endpoints using any of the supported management tools
 

@@ -18,7 +18,7 @@ description: Admins can learn how to configure the junk email settings in Exchan
 ms.service: defender-office-365
 ms.date: 07/31/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -37,7 +37,7 @@ But, there are also specific anti-spam settings that admins can configure on ind
 
 Microsoft 365 adds the header `X-Forefront-Antispam-Report: SFV:BLK` to incoming messages from senders in a user's Blocked Senders list, and any future messages from that sender are classified as spam. The message is delivered to the user's Junk Email folder or to quarantine based on the action configured in the applicable anti-spam policy (our [recommended action](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings) is **Move message to Junk Email folder**).
 
-If the sender is a user's Safe Senders list, the message is delivered to their Inbox.
+If the sender is in the user's Safe Senders list, the message is delivered to their Inbox.
 
 Admins can use Exchange Online PowerShell to configure entries in the safelist collection on mailboxes (the Safe Senders list, the Safe Recipients list, and the Blocked Senders list).
 
@@ -52,7 +52,7 @@ Admins can use Exchange Online PowerShell to configure entries in the safelist c
 
 - You need to be assigned permissions in Exchange Online before you can do the procedures in this article. Specifically, you need the **Mail Recipients** role (which is assigned to the **Organization Management**, **Recipient Management**, and **Custom Mail Recipients** role groups by default) or the **User Options** role (which is assigned to the **Organization Management** and **Help Desk** role groups by default). To add users to role groups in Exchange Online, see [Modify role groups in Exchange Online](/Exchange/permissions-exo/role-groups#modify-role-groups). Users with default permissions can do these same procedures on their own mailboxes, as long as they have [access to Exchange Online PowerShell](/powershell/exchange/disable-access-to-exchange-online-powershell).
 
-- In hybrid environments where Exchange Online Protection (EOP) provides cloud protection of on-premises Exchange mailboxes, you need to configure Exchange mail flow rules (also known as transport rules) in your on-premises Exchange organization to recognize the spam filtering verdicts from the cloud. For details, see [Deliver cloud-detected spam to the Junk Email folder in on-premises mailboxes](/exchange/standalone-eop/configure-eop-spam-protection-hybrid).
+- In hybrid environments where the built-in security features for cloud mailboxes protect on-premises Exchange mailboxes, you need to configure Exchange mail flow rules (also known as transport rules) in your on-premises Exchange organization to recognize the spam filtering verdicts from the cloud. For details, see [Deliver cloud-detected spam to the Junk Email folder in on-premises mailboxes](/exchange/standalone-eop/configure-eop-spam-protection-hybrid).
 
   After you manually create the rule in Microsoft 365 to match the rule in on-premises Exchange, the rule replicates in hybrid environments.
 

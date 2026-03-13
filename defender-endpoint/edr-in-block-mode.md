@@ -1,8 +1,8 @@
 ﻿---
 title: Endpoint detection and response in block mode
 description: Learn about endpoint detection and response in block mode
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 manager: bagol
 ms.reviewer: pahuijbr, kausd
 audience: ITPro
@@ -86,7 +86,7 @@ When EDR in block mode is turned on, and a malicious artifact is detected, Defen
 
 ### Intune
 
-To create a custom policy in Intune, see [Deploy OMA-URIs to target a CSP through Intune, and a comparison to on-premises](/troubleshoot/mem/intune/deploy-oma-uris-to-target-csp-via-intune).
+To create a custom policy in Intune, see [Deploy OMA-URIs to target a CSP through Intune, and a comparison to on-premises](/troubleshoot/mem/intune/device-configuration/deploy-oma-uris-to-target-csp-via-intune).
 
 For more information on the Defender CSP used for EDR in block mode, see "Configuration/PassiveRemediation" under [Defender CSP](/windows/client-management/mdm/defender-csp).
 
@@ -98,13 +98,13 @@ You can use Group Policy to enable EDR in block mode.
 
 1. Right-click the Group Policy Object you want to configure, and then select **Edit**.
 
-2. In the **Group Policy Management Editor** go to **Computer configuration** and then select **Administrative templates**.
+1. In the **Group Policy Management Editor** go to **Computer configuration** and then select **Administrative templates**.
 
-3. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Features**.
+1. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Features**.
 
-4. Double-click **Enable EDR in block mode** and set the option to **Enabled**.
+1. Double-click **Enable EDR in block mode** and set the option to **Enabled**.
 
-5. Select **OK**. 
+1. Select **OK**. 
 
 ## Requirements for EDR in block mode
 
@@ -130,5 +130,5 @@ The following table lists requirements for EDR in block mode:
 
 - [Endpoint detection and response (EDR) in block mode frequently asked questions (FAQ)](edr-block-mode-faqs.yml)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

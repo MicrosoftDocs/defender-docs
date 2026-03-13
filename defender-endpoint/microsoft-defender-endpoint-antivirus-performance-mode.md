@@ -4,8 +4,8 @@ description: Learn how to manage, configure, Microsoft Defender Antivirus perfor
 ms.service: defender-endpoint
 ms.localizationpriority: high
 ms.topic: how-to
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.reviewer: pricci, yongrhee
 manager: bagol
 ms.custom: nextgen02
@@ -138,5 +138,5 @@ To verify that Dev Drive and Defender Performance Mode is enabled, follow these 
 
 [Set up a Dev Drive on Windows 11](/windows/dev-drive)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

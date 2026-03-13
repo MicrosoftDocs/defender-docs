@@ -1,14 +1,14 @@
 ﻿---
 title: Advanced Hunting with Python API Guide
-ms.reviewer: 
+ms.reviewer:
 description: Learn how to query using the Microsoft Defender for Endpoint API, by using Python, with examples.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -16,21 +16,18 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 01/08/2026
 appliesto:
   - Microsoft Defender for Endpoint
-
 ---
+
 # Advanced Hunting using Python
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
+[!INCLUDE [Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
+[!INCLUDE [Improve request performance](../../includes/improve-request-performance.md)]
 
 Run advanced queries using Python, see [Advanced Hunting API](run-advanced-query-api.md).
 
@@ -41,6 +38,9 @@ In this section, we share Python samples to retrieve a token and use it to run a
 ## Get token
 
 - Run the following commands:
+
+> [!TIP]
+> Some Microsoft Defender for Endpoint APIs continue to require access tokens issued for the legacy resource `https://api.securitycenter.microsoft.com`. If the token audience doesn't match the resource expected by the API, requests fail with `403 Forbidden`, even if the API endpoint uses `https://api.security.microsoft.com`. Use `https://api.securitycenter.microsoft.com` as the resource or scope when acquiring tokens.
 
 ```python
 import json
@@ -70,21 +70,21 @@ jsonResponse = json.loads(response.read())
 aadToken = jsonResponse["access_token"]
 ```
 
-Where
+Where:
 
-- tenantId: ID of the tenant on behalf of which you want to run the query (that is, the query is run on the data of this tenant)
-- appId: ID of your Microsoft Entra app (the app must have 'Run advanced queries' permission to Microsoft Defender for Endpoint)
-- appSecret: Secret of your Microsoft Entra app
+- `tenantId`: ID of the tenant on behalf of which you want to run the query (that is, the query is run on the data of this tenant)
+- `appId`: ID of your Microsoft Entra app (the app must have 'Run advanced queries' permission to Microsoft Defender for Endpoint)
+- `appSecret`: Secret of your Microsoft Entra app
 
 ## Run query
 
- Run the following query:
+Run the following query:
 
 ```python
 query = 'DeviceRegistryEvents | limit 10' # Paste your own query here
 
-url = "https://api.securitycenter.microsoft.com/api/advancedqueries/run"
-headers = { 
+url = "https://api.security.microsoft.com/api/advancedqueries/run"
+headers = {
     'Content-Type' : 'application/json',
     'Accept' : 'application/json',
     'Authorization' : "Bearer " + aadToken
@@ -104,7 +104,7 @@ results = jsonResponse["Results"]
 
 ### Complex queries
 
-If you want to run complex queries (or multiline queries), save your query in a file and, instead of the first line in the above sample, run the below command:
+If you want to run complex queries (or multiline queries), save your query in a file and, instead of the first line in the previous example, run the following command:
 
 ```python
 queryFile = open("D:\\Temp\\myQuery.txt", 'r') # Replace with the path to your file
@@ -124,7 +124,7 @@ for result in results:
     print(result["EventTime"]) # Prints only the property 'EventTime' from the result
 ```
 
-To output the results of the query in CSV format in file file1.csv use the following command:
+To output the results of the query in CSV format in file file1.csv, use the following command:
 
 ```python
 import csv
@@ -138,7 +138,7 @@ for result in results:
 outputFile.close()
 ```
 
-To output the results of the query in JSON format in file file1.json use the following command:
+To output the results of the query in JSON format in file file1.json, use the following command:
 
 ```python
 outputFile = open("D:\\Temp\\file1.json", 'w')
@@ -146,10 +146,10 @@ json.dump(results, outputFile)
 outputFile.close()
 ```
 
-## Related topic
+## Related articles
 
 - [Microsoft Defender for Endpoint APIs](apis-intro.md)
 - [Advanced Hunting API](run-advanced-query-api.md)
 - [Advanced Hunting using PowerShell](run-advanced-query-sample-powershell.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
 
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

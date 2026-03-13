@@ -8,8 +8,8 @@ ms.localizationpriority: medium
 ms.date: 10/20/2025
 audience: ITPro
 ms.topic: how-to
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 ms.custom: 
 - nextgen
 - admindeeplinkDEFENDER
@@ -40,9 +40,9 @@ If you're a home user, or you aren't subject to settings managed by a security t
 
 1. On a Windows device, select **Start**, and start typing *Security*. In the search results, select **Windows Security**.
 
-2. Select **Virus & threat protection** \> **Virus & threat protection settings**.
+1. Select **Virus & threat protection** \> **Virus & threat protection settings**.
 
-3. Set **Tamper Protection** to **On** or **Off**.
+1. Set **Tamper Protection** to **On** or **Off**.
 
     Here's what you see in the Windows Security app:
     
@@ -61,5 +61,5 @@ If you're a home user, or you aren't subject to settings managed by a security t
 - [Protect security settings with tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md)
 - [Troubleshoot problems with tamper protection](troubleshoot-problems-with-tamper-protection.yml)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

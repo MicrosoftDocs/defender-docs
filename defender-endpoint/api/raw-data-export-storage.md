@@ -2,12 +2,12 @@
 title: Stream Microsoft Defender for Endpoint events to your Storage account
 description: Learn how to configure Microsoft Defender for Endpoint to stream Advanced Hunting events to your Storage account.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -19,17 +19,14 @@ ms.date: 06/28/2024
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
-
 ---
+
 # Configure Microsoft Defender for Endpoint to stream Advanced Hunting events to your Storage account
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-
 > [!NOTE]
 > For the full data streaming experience available, please visit [Stream Microsoft Defender XDR events | Microsoft Learn](/defender-xdr/streaming-api).
-
-
 
 ## Before you begin
 
@@ -62,7 +59,7 @@ appliesto:
 
 - A blob container is created for each event type:
 
-  :::image type="content" source="../media/storage-account-event-schema.png" alt-text="The Event Hubs with resource ID2" lightbox="../media/storage-account-event-schema.png":::
+  :::image type="content" source="/defender-xdr/media/streaming-api-storage/storage-account-event-schema.png" alt-text="The Event Hubs with resource ID2" lightbox="/defender-xdr/media/streaming-api-storage/storage-account-event-schema.png":::
 
 - The schema of each row in a blob is the following JSON:
 
@@ -83,7 +80,7 @@ appliesto:
 
 - In Advanced Hunting, the **DeviceInfo** table has a column named **MachineGroup** which contains the group of the device. Here, every event is decorated with this column as well. For more information, see [Device Groups](../machine-groups.md).
     > [!NOTE]
-    > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.  
+    > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
 ## Data types mapping
 
@@ -112,4 +109,3 @@ In order to get the data types for our events properties, take the following ste
 - [Azure Storage Account documentation](/azure/storage/common/storage-account-overview)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

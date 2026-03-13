@@ -14,9 +14,9 @@ ms.collection:
 description: Learn how to report phishing and suspicious emails in supported versions of Outlook using the built-in Report button.
 ms.service: defender-office-365
 search.appverid: met150
-ms.date: 09/28/2025
+ms.date: 12/05/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 #customer intent: As an admin, I need to configure Outlook reporting and understand how reported phishing and suspicious emails are processed by Microsoft Defender so I can triage and remediate threats.
@@ -51,7 +51,7 @@ The built-in **Report** button is available in the following versions of Outlook
 - The new Outlook for Windows<sup>\*</sup>
 - Outlook on the web<sup>\*</sup>
 
-<sup>\*</sup> In this version of Outlook, the built-in **Report** button also supports reporting messages from shared mailboxes or other mailboxes by a delegate.
+<sup>\*</sup> In this version of Outlook, the built-in **Report** button also supports reporting messages from shared mailboxes or other mailboxes by a delegate. The delegate user needs [Send As permissions](/microsoft-365/admin/add-users/give-mailbox-permissions-to-another-user) to report messages from the shared mailbox. Without Send As permission, the message is **not** sent to the reporting mailbox. Instead, the message is removed from the folder only.
 
 The **Report** button is available in supported versions of Outlook if both of the following conditions are true:
 

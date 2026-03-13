@@ -28,11 +28,11 @@ Depending on the Microsoft security products that you use, some advanced feature
 
 1. Go to the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139) and sign in. 
 
-2. In the navigation pane, select **Settings** \> **Endpoints** \> **Advanced features**.
+1. In the navigation pane, select **Settings** \> **Endpoints** \> **Advanced features**.
 
-3. Select the advanced feature you want to configure and toggle the setting between **On** and **Off**.
+1. Select the advanced feature you want to configure and toggle the setting between **On** and **Off**.
 
-4. Select **Save preferences**.
+1. Select **Save preferences**.
 
 Use the following advanced features to get better protected from potentially malicious files and gain better insight during security investigations.
 
@@ -70,13 +70,13 @@ To turn **Allow or block** files on:
 
 1. In the Microsoft Defender portal, in the navigation pane, select **Settings** \> **Endpoints** \> **General** \> **Advanced features** \> **Allow or block file**.
 
-2. Toggle the setting between **On** and **Off**.
+1. Toggle the setting between **On** and **Off**.
  
-    :::image type="content" source="/defender/media/alloworblockfile.png" alt-text="The Endpoints screen" lightbox="/defender/media/alloworblockfile.png":::
+    a. :::image type="content" source="/defender/media/alloworblockfile.png" alt-text="The Endpoints screen" lightbox="/defender/media/alloworblockfile.png":::
 
-3. Select **Save preferences** at the bottom of the page.
+1. Select **Save preferences** at the bottom of the page.
 
-After turning on this feature, you can [block files](respond-file-alerts.md#allow-or-block-file) via the **Add Indicator** tab on a file's profile page.
+1. After turning on this feature, you can [block files](respond-file-alerts.md#allow-or-block-file) via the **Add Indicator** tab on a file's profile page.
 
 ## Hide potential duplicate device records
 
@@ -177,7 +177,7 @@ After configuring the [Security policy violation indicators](/microsoft-365/comp
 
 ## Microsoft Intune connection
 
-Defender for Endpoint can be integrated with [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to [enable device risk-based conditional access](/mem/intune/protect/advanced-threat-protection). When you [turn on this feature](configure-conditional-access.md), you'll be able to share Defender for Endpoint device information with Intune, enhancing policy enforcement.
+Defender for Endpoint can be integrated with [Microsoft Intune](/intune/intune-service/fundamentals/what-is-intune) to [enable device risk-based conditional access](/intune/intune-service/protect/advanced-threat-protection). When you [turn on this feature](configure-conditional-access.md), you'll be able to share Defender for Endpoint device information with Intune, enhancing policy enforcement.
 
 > [!IMPORTANT]
 > You'll need to enable the integration on both Intune and Defender for Endpoint to use this feature. For more information on specific steps, see [Configure Conditional Access in Defender for Endpoint](configure-conditional-access.md).
@@ -212,5 +212,4 @@ For proactive hunting across the full scope of Microsoft Defender XDR, including
 - [Update data retention settings](preferences-setup.md)
 - [Configure alert notifications](/defender-xdr/configure-email-notifications)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

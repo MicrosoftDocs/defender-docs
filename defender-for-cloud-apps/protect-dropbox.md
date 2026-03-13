@@ -1,13 +1,12 @@
 ---
 title: Protect your Dropbox environment | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your Dropbox app to Defender for Cloud Apps using the API connector.
-ms.date: 12/26/2023
+ms.date: 12/16/2025
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
+
 # How Defender for Cloud Apps helps protect your Dropbox environment
-
-
 
 As a cloud file storage and collaboration tool, Dropbox enables your users to share their documents across your organization and partners in a streamlined and efficient way. Using Dropbox may expose your sensitive data not only internally, but also to external collaborators, or even worse make it publicly available via a shared link. Such incidents can be caused by malicious actors, or by unaware employees.
 
@@ -71,9 +70,9 @@ For more information, see:
 
 ## Connect Dropbox to Microsoft Defender for Cloud Apps
 
-This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing Dropbox account using the connector APIs. This connection gives you visibility into and control over Dropbox use. For information about how Defender for Cloud Apps protects Dropbox, see [Protect Dropbox](protect-dropbox.md).
+This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing Dropbox account using the connector APIs. This connection gives you visibility into and control over Dropbox use.
 
-Because Dropbox enables access to files from shared links without signing in, Defender for Cloud Apps registers these users as Unauthenticated users. If you see unauthenticated Dropbox users, it may indicate users who aren't from your organization, or they might be recognized users from within your organization who didn't sign in.
+Dropbox enables access to files from shared links without signing in, Defender for Cloud Apps registers these users as Unauthenticated users. If you see unauthenticated Dropbox users, it might indicate users who aren't from your organization, or they might be recognized users from within your organization who didn't sign in.
 
 **To connect Dropbox to Defender for Cloud Apps**
 
@@ -81,7 +80,7 @@ Because Dropbox enables access to files from shared links without signing in, De
 
 1. In the **App connectors** page, select **+Connect an app**, followed by **Dropbox**.
 
-    ![connect dropbox.](media/connect-dropbox.png "connect dropbox")
+    :::image type="content" source="media/connect-dropbox/connect-an-app-drop-box.png" alt-text="Screenshot that shows how to connect Dropbox in the Microsoft Defender portal." lightbox="media/connect-dropbox/connect-an-app-drop-box.png":::
 
 1. In the next window, give the connector a name and select **Next**.
 
@@ -106,7 +105,4 @@ If you have any problems connecting the app, see [Troubleshooting App Connectors
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Control cloud apps with policies](control-cloud-apps-with-policies.md)
-
-[!INCLUDE [Open support ticket](includes/support.md)]
+- [Control cloud apps with policies](control-cloud-apps-with-policies.md)

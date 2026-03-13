@@ -2,8 +2,8 @@
 title: Troubleshoot installation issues for Microsoft Defender for Endpoint on macOS 
 description: Troubleshoot installation issues in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
 manager: bagol
 ms.localizationpriority: medium
@@ -56,5 +56,5 @@ grep '^2020-03-11 13:08' /var/log/install.log
 ```Output
 log show --start '2020-03-11 13:00:00' --end '2020-03-11 13:08:50' --info --debug --source --predicate 'processImagePath CONTAINS[C] "install"' --style syslog
 ```
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

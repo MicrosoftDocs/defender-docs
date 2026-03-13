@@ -45,6 +45,8 @@ In organizations with cloud mailboxes, alert policies generate alerts in the ale
 
 - For information about other alert policy categories, see [Permissions required to view alerts](/defender-xdr/alert-policies#rbac-permissions-required-to-view-alerts).
 
+[!INCLUDE [Built-in alert tuning rules](../includes/built-in-alert-tuning-rules.md)]
+
 ## Open alert policies
 
 In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Alert policy**. Or, to go directly to the **Alert policy** page, use <https://security.microsoft.com/alertpoliciesv2>.

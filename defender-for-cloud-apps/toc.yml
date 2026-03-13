@@ -420,7 +420,7 @@ items:
       href: app-governance-manage-alerts.md
   - name: Secure apps and other assets
     items:
-    - name: Secure apps accessing non-Graph APIs
+    - name: Secure apps accessing non-Graph APIs using app governance
       href: app-governance-secure-apps-access-non-graph-api.md
     - name: Secure apps with app hygiene features
       href: app-governance-secure-apps-app-hygiene-features.md
@@ -428,7 +428,7 @@ items:
       href: app-activity-threat-hunting.md
   - name: App governance FAQ
     href: app-governance-faq.yml
-- name: Protect AI agents
+- name: Protect AI agents (Preview)
   items:
   - name: Overview
     href: ai-agent-protection.md
@@ -550,6 +550,8 @@ items:
         href: api-files-list.md
       - name: Fetch File
         href: api-files-fetch.md
+  - name: What's new archive
+    href: release-note-archive.md
 - name: Resources
   items:
   - name: Licensing datasheet
@@ -560,10 +562,6 @@ items:
     href: https://www.microsoft.com/security/business/cloud-apps-defender
   - name: External integrations
     href: additional-integrations.md
-  - name: Watch our webinars
-    href: webinars.md
-  - name: Release note archive
-    href: release-note-archive.md
 - name: Microsoft Defender XDR Docs
   items:
   - name: Microsoft Defender XDR

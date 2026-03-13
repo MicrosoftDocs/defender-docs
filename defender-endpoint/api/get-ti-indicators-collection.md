@@ -2,12 +2,12 @@
 title: List Indicators API
 description: Learn how to use the List Indicators API to retrieve a collection of all active Indicators in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -15,38 +15,41 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
-
 ---
+
 # List Indicators API
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## API description
 
 Retrieves a collection of all active [Indicators](ti-indicator.md).
 
-Supports [OData V4 queries](https://www.odata.org/documentation/).
+Supports [OData V4 queries](https://www.odata.org/documentation/). OData supported operators:
 
-The OData's `$filter` query is supported on: `application`, `createdByDisplayName`, `expirationTime`, `generateAlert`, `title`, `rbacGroupNames`, `rbacGroupIds`, `indicatorValue`, `indicatorType`, `creationTimeDateTimeUtc`, `createdBy`, `action`, and `severity` properties.
-<br>```$stop``` with max value of 10,000. 
-<br>```$skip```.
+- `$filter` on the following operators: `application`
+  - `createdByDisplayName`
+  - `expirationTime`
+  - `generateAlert`
+  - `title`
+  - `rbacGroupNames`
+  - `rbacGroupIds`
+  - `indicatorValue`
+  - `indicatorType`
+  - `creationTimeDateTimeUtc`
+  - `createdBy`
+  - `action`
+  - `severity`
+- `$stop` with max value of 10,000.
+- `$skip`
 
 See examples at [OData queries with Microsoft Defender for Endpoint](exposed-apis-odata-samples.md).
 
 ## Limitations
 
-Rate limitations for this API are 100 calls per minute and 1,500 calls per hour. 
+Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
 
@@ -61,7 +64,7 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/indicators
+GET https://api.security.microsoft.com/api/indicators
 ```
 
 ## Request headers
@@ -78,8 +81,7 @@ Empty
 
 If successful, this method returns 200, Ok response code with a collection of [Indicator](ti-indicator.md) entities.
 
-> [!NOTE]
-> If the Application has `Ti.ReadWrite.All` permission, it will be exposed to all Indicators. Otherwise, it will be exposed only to the Indicators it created.
+If the Application has `Ti.ReadWrite.All` permission, it will be exposed to all Indicators. Otherwise, it will be exposed only to the Indicators it created.
 
 ## Example 1
 
@@ -88,7 +90,7 @@ If successful, this method returns 200, Ok response code with a collection of [I
 Here's an example of a request that gets all indicators.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/indicators
+GET https://api.security.microsoft.com/api/indicators
 ```
 
 ### Example 1 response
@@ -99,7 +101,7 @@ Here's an example of the response.
 HTTP/1.1 200 Ok
 Content-type: application/json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Indicators",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Indicators",
     "value": [
         {
             "id": "995",
@@ -151,7 +153,7 @@ Content-type: application/json
 Here's an example of a request that gets all Indicators with `AlertAndBlock` action.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/indicators?$filter=action+eq+'AlertAndBlock'
+GET https://api.security.microsoft.com/api/indicators?$filter=action+eq+'AlertAndBlock'
 ```
 
 ### Example 2 response
@@ -162,7 +164,7 @@ Here's an example of the response.
 HTTP/1.1 200 Ok
 Content-type: application/json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Indicators",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Indicators",
     "value": [
         {
             "id": "997",
@@ -187,6 +189,3 @@ Content-type: application/json
     ]
 }
 ```
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

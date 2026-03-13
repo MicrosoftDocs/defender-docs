@@ -1,7 +1,7 @@
 ---
 title: Cloud discovery policies 
 description: This article outlines the steps to configure many cloud discovery policies in Defender for Cloud Apps.
-ms.date: 01/29/2023
+ms.date: 12/15/2025
 ms.topic: how-to
 ms.reviewer: Mravela
 ---
@@ -32,7 +32,7 @@ Configure automatic log upload for continuous cloud discovery reports, as descri
 1. Configure the actions to be taken when an alert is triggered.
 
 > [!NOTE]
-> An alert is generated once for each new app that was not discovered in the last 90 days.
+> An alert is generated once for each new app that wasn't discovered in the last 90 days.
 
 ## Detect new risky or non-compliant app use
 
@@ -54,11 +54,11 @@ Configure automatic log upload for continuous cloud discovery reports, as descri
 
     1. Check the **Trigger a policy match if all the following occur on the same day** checkbox.
 
-    1. Select **Daily traffic** greater than 2000 GB (or other).
+    1. Select **Daily traffic** greater than 2,000 GB (or other).
 
 1. Configure governance actions to be taken when an alert is triggered. Under **Governance**, select **Tag app as unsanctioned.**<br />Access to the app will be automatically blocked when the policy is matched.
 
-1. Optional: Leverage [Defender for Cloud Apps native integrations](set-up-cloud-discovery.md) with Secure Web Gateways to block app access.
+1. Optional: Apply [Defender for Cloud Apps native integrations](set-up-cloud-discovery.md) with Secure Web Gateways to block app access.
 
 ## Detect use of unsanctioned business apps
 
@@ -78,50 +78,8 @@ You can detect when your employees continue to use unsanctioned apps as a replac
 
 1. Configure governance actions to be taken when an alert is triggered. Under Governance, select **Tag app as unsanctioned**.<br />Access to the app will be automatically blocked when the policy is matched.
 
-1. Optional: Leverage [Defender for Cloud Apps native integrations](set-up-cloud-discovery.md) with Secure Web Gateways to block app access.
+1. Optional: Use [Defender for Cloud Apps native integrations](set-up-cloud-discovery.md) with Secure Web Gateways to block app access.
 
-## Detect unusual usage patterns on your network
-
-Detect anomalous traffic use patterns (uploads/downloads) in your cloud apps, that originate from users or IP addresses inside your organization's network.
-
-### Prerequisites
-
-Configure automatic log upload for continuous cloud discovery reports, as described in [Configure automatic log upload for continuous reports](discovery-docker.md) or enable the Defender for Cloud Apps integration with Defender for Endpoint, as described in [Integrate Microsoft Defender for Endpoint with Defender for Cloud Apps](mde-integration.md).
-
-### Steps
-
-1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Policies** -> **Policy management**. Create a new **Cloud Discovery anomaly detection policy**.
-
-1. In the **Policy template** field, select **Anomalous behavior in discovered users** or **Anomalous behavior in discovered IP addresses**.
-
-1. Customize the filters to meet your organization's requirements.
-
-1. If you want to be alerted only when there are anomalies involving risky apps, use the **Risk score** filters and set the range in which apps are considered risky.
-
-1. Use the slider to **Select anomaly detection sensitivity**.
-
-> [!NOTE]
-> After continuous log upload is established, the anomaly detection engine takes a few days until a baseline (learning period), is established for the expected behavior in your organization. After a baseline is established, you start receiving alerts based on discrepancies from the expected traffic behavior across cloud apps made by users or from IP addresses.
-
-## Detect anomalous cloud discovery behavior in storage apps that aren't sanctioned
-
-Detect anomalous behavior by a user in a cloud storage app that isn't sanctioned.
-
-### Prerequisites
-
-Configure automatic log upload for continuous cloud discovery reports, as described in [Configure automatic log upload for continuous reports](discovery-docker.md) or enable the Defender for Cloud Apps integration with Defender for Endpoint, as described in [Integrate Microsoft Defender for Endpoint with Defender for Cloud Apps](mde-integration.md).
-
-### Steps
-
-1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Policies** -> **Policy management**. Create a new  **Cloud Discovery anomaly detection policy**.
-
-1. Select the filter **App category** equals **Cloud storage**.
-
-1. Select the filter **App tag** does not equal **Sanctioned**.
-
-1. Select the checkbox to **Create an alert for each matching event with the policy's severity**.
-
-1. Configure the actions to take when an alert is triggered.
 
 ## Detect risky OAuth apps
 
@@ -151,4 +109,3 @@ You must have the Google Workspace, Microsoft 365, or Salesforce app connected u
 > [!div class="nextstepaction"]
 > [Best practices for protecting your organization](best-practices.md)
 
-[!INCLUDE [Open support ticket](includes/support.md)]

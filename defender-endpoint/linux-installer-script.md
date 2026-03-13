@@ -15,14 +15,14 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 08/11/2025
+ms.date: 02/26/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ---
-# Use installer script based deployment to deploy Microsoft Defender for Endpoint on Linux
 
+# Use installer script based deployment to deploy Microsoft Defender for Endpoint on Linux
 
 ## Introduction
 
@@ -36,22 +36,24 @@ To use another method, refer to the [Related content section](#related-content).
 
 Before you get started, see [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md) for a description of prerequisites and system requirements.
 
+> [!TIP]
+> Before running the installer script to deploy Defender on your Linux server, it's recommended to run the script with the `--min-req` option to help identify and fix any potential issues that might impact the deployment.
+
 ## Deployment process
 
 1. Download the onboarding package from Microsoft Defender portal by following these steps:
 
-   1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints** > **Device management** > **Onboarding**.
+   1. In the [Microsoft Defender portal](https://security.microsoft.com), expand the **System** section and select **Settings** > **Endpoints** > **Device management** > **Onboarding**.
     
-   2. In the first drop-down menu, select **Linux Server** as the operating system.
+   1. In the first drop-down menu, select **Linux Server** as the operating system.
    
-   3. In the second drop-down menu, select **Local Script** as the deployment method.
+   1. In the second drop-down menu, select **Local Script** as the deployment method.
     
-   4. Select **Download onboarding package**. Save the file as `WindowsDefenderATPOnboardingPackage.zip`.
+   1. Select **Download onboarding package**. Save the file as `WindowsDefenderATPOnboardingPackage.zip`.
    
       :::image type="content" source="media/linux-script-image.png" alt-text="Screenshot showing the options to select to download the onboarding package." lightbox="media/linux-script-image.png":::
     
-   5. From a command prompt, extract the contents of the archive:
-
+   1. From a command prompt, extract the contents of the archive:
       ```bash
       unzip WindowsDefenderATPOnboardingPackage.zip
       ```
@@ -67,15 +69,15 @@ Before you get started, see [Prerequisites for Defender for Endpoint on Linux](m
       > [!IMPORTANT]
       > If you miss this step, any command executed shows a warning message indicating that the product is unlicensed. Also the mdatp health command returns a value of false. 
 
-2. Download the [installer bash script](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/mde_installer.sh) provided in our public [GitHub repository](https://github.com/microsoft/mdatp-xplat/).
+1. Download the [installer bash script](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/mde_installer.sh) provided in our public [GitHub repository](https://github.com/microsoft/mdatp-xplat/).
 
-3. Grant executable permissions to the installer script:
+1. Grant executable permissions to the installer script:
   
    ```bash
    chmod +x mde_installer.sh
    ```
 
-4. Execute the installer script and provide the onboarding package as a parameter to install the agent and onboard the device to the Defender portal.
+1. Execute the installer script and provide the onboarding package as a parameter to install the agent and onboard the device to the Defender portal.
 
    ```bash
    sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --channel prod --min_req
@@ -138,7 +140,7 @@ Before you get started, see [Prerequisites for Defender for Endpoint on Linux](m
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), open the device inventory. It might take 5-20 minutes for the device to show up in the portal.
 
-2. Run an antivirus detection test to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
+1. Run an antivirus detection test to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
    1. Ensure that real-time protection is enabled (denoted by a result of `true` from running the following command):
 
@@ -186,9 +188,9 @@ Before you get started, see [Prerequisites for Defender for Endpoint on Linux](m
       ./mde_linux_edr_diy.sh
       ```
       
-   3. After a few minutes, a detection should be raised in the Microsoft Defender XDR.
+   1. After a few minutes, a detection should be raised in the Microsoft Defender XDR.
    
-   4. Check the alert details, machine timeline, and perform your typical investigation steps.
+   1. Check the alert details, machine timeline, and perform your typical investigation steps.
 
 ## Microsoft Defender for Endpoint package external package dependencies
 
@@ -217,13 +219,13 @@ If you experience any installation issues, for self-troubleshooting, follow thes
 
 1. For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](linux-resources.md#log-installation-issues).
 
-2. For information about common installation issues, see [Installation issues](/defender-endpoint/linux-support-install).
+1. For information about common installation issues, see [Installation issues](/defender-endpoint/linux-support-install).
 
-3. If health of the device is `false`, see [Defender for Endpoint agent health issues](/defender-endpoint/health-status).
+1. If health of the device is `false`, see [Defender for Endpoint agent health issues](/defender-endpoint/health-status).
 
-4. For product performance issues, see [Troubleshoot performance issues](/defender-endpoint/linux-support-perf).
+1. For product performance issues, see [Troubleshoot performance issues](/defender-endpoint/linux-support-perf).
 
-5. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](/defender-endpoint/linux-support-connectivity).
+1. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](/defender-endpoint/linux-support-connectivity).
 
 To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](/defender-endpoint/overview-client-analyzer).
 
@@ -237,7 +239,7 @@ For example, to change channel from Insiders-Fast to Production, do the followin
    sudo yum remove mdatp
    ```
 
-2. Disable the Defender for Endpoint on Linux Insiders-Fast repo.
+1. Disable the Defender for Endpoint on Linux Insiders-Fast repo.
 
    ```bash
    sudo yum repolist
@@ -250,7 +252,7 @@ For example, to change channel from Insiders-Fast to Production, do the followin
    sudo yum-config-manager --disable packages-microsoft-com-fast-prod
    ```
 
-3. Redeploy Microsoft Defender for Endpoint on Linux using the Production channel.
+1. Redeploy Microsoft Defender for Endpoint on Linux using the Production channel.
 
 Defender for Endpoint on Linux can be deployed from one of the following channels (denoted as [channel]): 
 
@@ -271,7 +273,7 @@ In order to preview new features and provide early feedback, it's recommended th
 
 To configure antivirus and EDR settings, see the following articles:
 
-- [Defender for Endpoint security settings management](/mem/intune/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal. (*This method is recommended*.)
+- [Defender for Endpoint security settings management](/intune/intune-service/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal. (*This method is recommended*.)
 - [Set preferences for Defender for Endpoint on Linux](/defender-endpoint/linux-preferences) describes settings you can configure.
 
 ## Related content
@@ -286,6 +288,5 @@ To configure antivirus and EDR settings, see the following articles:
 - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
 - [Install Defender for Endpoint on Linux to a custom path](linux-custom-location-installation.md)
 
-> [!TIP]
-> Do you want to learn more? Engage with the Microsoft Security community in our Tech Community: [Microsoft Defender for Endpoint Tech Community](https://techcommunity.microsoft.com/category/microsoft-defender-for-endpoint/discussions/microsoftdefenderatp)
+
 

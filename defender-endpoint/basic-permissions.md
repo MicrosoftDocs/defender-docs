@@ -3,8 +3,8 @@ title: Use basic permissions to access the portal
 description: Learn how to use basic permissions to access the Microsoft Defender for Endpoint portal.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 ms.custom:
   - has-azure-ad-ps-ref
@@ -87,5 +87,5 @@ For more information, see [Add or remove group members using Microsoft Entra ID]
 - [Assign Microsoft Entra roles to users](/entra/identity/role-based-access-control/manage-roles-portal)
 - [Manage portal access using RBAC](rbac.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

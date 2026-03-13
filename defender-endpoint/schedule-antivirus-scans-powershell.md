@@ -3,10 +3,10 @@ title: Schedule antivirus scans using PowerShell
 description: Schedule antivirus scans using PowerShell
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
-ms.date: 10/20/2025
+ms.date: 12/16/2025
 ms.reviewer: pauhijbr, ksarens
 manager: bagol
 ms.subservice: ngp
@@ -25,124 +25,137 @@ appliesto:
 ---
 # Schedule antivirus scans using PowerShell
 
+This article describes how to use the [Set-MpPreference](/powershell/module/defender/set-mppreference) PowerShell cmdlet to configure scheduled scans. To learn more about scheduling scans and about scan types, see [About scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md).
 
-This article describes how to configure scheduled scans using PowerShell cmdlets. To learn more about scheduling scans and about scan types, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md).
+## Prerequisites
 
-## Prerequsites
-
-### Supported operating systems
+**Supported operating systems**:
 
 - Windows
 - Windows Server
 
-## Use PowerShell cmdlets for scheduling daily quick scans
+## Important PowerShell parameters for scheduled scans
 
-Use the following cmdlets:
+The following **Set-MpPreference** parameters are important for scheduled scans:
 
+- _ScanParameters_: Specifies the scan type to use for scheduled scans. Valid values are:
+  - 1 or QuickScan (default)
+  - 2 or FullScan
 
-```powershell
-Set-MpPreference -ScanScheduleQuickScanTime
-```
+- _ScanScheduleDay_: Specifies the day of the week to run scheduled scans. Valid values are:
+  - 0 or Everyday (default)
+  - 1 or Sunday
+  - 2 or Monday
+  - 3 or Tuesday
+  - 4 or Wednesday
+  - 5 or Thursday
+  - 6 or Friday
+  - 7 or Saturday
+  - 8 or Never
 
-> [!NOTE]
-> The time value is represented as the number of minutes past midnights (00:00 or 12:00 a.m.), For example, 120 is equivalent to 2:00 AM.  The schedule is based on local time on the device where the scan is executing. 
+- _ScanScheduleQuickScanTime_: Specifies the time on the local computer to run scheduled **quick scans**. To specify a value, enter it as a time span: `hh:mm:ss` where `hh` = hours, `mm` = minutes and `ss` = seconds. For example, `13:30:00` indicates 1:30 PM. The default value is 02:00:00 (2:00 AM).
 
-To set a daily quick scan run on the Windows clients at 12:00 PM. (720). In this example, we use lunch time, since many devices nowadays are turned off after-hours (For example, laptops and/or tablets).
+- _ScanScheduleTime_: Specifies the time on the local computer to run scheduled **full scans**. To specify a value, enter it as a time span: `hh:mm:ss` where `hh` = hours, `mm` = minutes and `ss` = seconds. For example, `13:30:00` indicates 1:30 PM. The default value is 02:00:00 (2:00 AM).
 
-```powershell
-Set-MpPreference -ScanScheduleQuickScanTime 720
-```
-To disable the daily quick scan, set this value to 0
-```powershell
-Set-MpPreference -ScanScheduleQuickScanTime 0
-```
+- _ScanScheduleOffset_: Specifies the fixed number of minutes to delay scheduled scan start times on the device. The default value is 120, which means scheduled scans start 2 hours after the times specified by the _ScanScheduleTime_ and _ScanScheduleQuickScanTime_ parameters.
 
-## Use PowerShell cmdlets to scheduling weekly quick or full scans
+- _RandomizeScheduleTaskTimes_: Specifies whether to select a random time for the scheduled tasks (including scheduled scans). Valid values are:
+  - $true: Scheduled tasks begin within 30 minutes before or after the scheduled time. This value is the default.
+  - $false: Scheduled tasks begin on the scheduled time.
 
-Use the following cmdlets:
+  Randomized start times can distribute the effects of scanning. For example, if several virtual machines share the same host, randomized start times prevent all virtual machines from starting the scheduled tasks at the same time.
 
-```PowerShell
-Set-MpPreference -ScanParameters
-Set-MpPreference -ScanScheduleDay
-Set-MpPreference -ScanScheduleOffset
-```
+- _SchedulerRandomizationTime_: Specifies the time window, in minutes, within which scheduled tasks in Microsoft Defender (including scheduled scans) can randomly start. Scheduled tasks can start within the specified number of minutes before or after the time of the scheduled task. A valid value is an integer from 0 to 4294967295.
 
-> [!TIP]
-> We recommend using the ScanScheduleOffset instead of ScanScheduleTime.
+  The randomization time window is used around specific start time values (for example, _ScanScheduleTime_ and _ScanScheduleQuickScanTime_ parameters) or around the number of minutes specified by the _ScanScheduleOffset_ parameter.
 
--ScanParameters,  specifies the scan type to use during a scheduled scan. The acceptable values for this parameter are:
-
-1: Quick scan
-
-2: Full scan
-
--ScanScheduleDay
-
-Specifies the day of the week on which to perform a scheduled scan. Alternatively, specify everyday for a scheduled scan or never. The acceptable values for this parameter are:
-
-0: Everyday
-
-1: Sunday
-
-2: Monday
-
-3: Tuesday
-
-4: Wednesday
-
-5: Thursday
-
-6: Friday
-
-7: Saturday
-
-8: Never
-
-The default value is 8, never. If you specify a value of 8 or don't specify a value, Windows Defender doesn't perform scheduled scans.
-
--ScanScheduleOffset
-
-This setting allows you to configure the number of minutes after midnight to perform a scheduled scan. The local time on the endpoint is used to determine when the scan occurs. If you enable this setting, the scheduled scan runs at the specified time. If you disable or don't enable this setting, the scheduled scan will default to running two hours (120 minutes) after midnight.
-
-For example, setting the weekly scheduled scan for a quick scan, that runs every Wednesday at 12:00 PM (lunch time)
-
-```powershell
-Set-MpPreference -ScanParameters 1
-Set-MpPreference -ScanScheduleDay 4
-Set-MpPreference -ScanScheduleOffset 720
-```
+- _ScanOnlyIfIdleEnabled_: Specifies whether to start scheduled scans only when the computer isn't in use. Valid values are:
+  - $true: Windows Defender runs schedules scans when the computer is on, but not in use. This value is the default.
+  - $false: Windows Defender runs schedules scans when the computer is in use.
 
 > [!TIP]
-> We recommend setting the scheduled scans for a quick scan with Real-Time Protection enabled, Cloud Protection enabled and having the network connectivity to the Cloud Protection backend.
+> We recommend the following settings for scheduled quick scans:
+>
+> - Real-time protection enabled (`-DisableRealtimeMonitoring $false`, which is the default value).
+> - Cloud Protection enabled.
+> - Network connectivity to the Cloud Protection backend.
 
-## Use PowerShell cmdlets to set the general settings for Scheduled scan
+## Use PowerShell to scheduling daily quick scans
 
-|Description|Setting|PowerShell cmdlet|
-| -------- | -------- | -------- |
-|Check for Security Intelligence Updates Before Running Scan|Disabled/Not configured (Default)|Set-MpPreference -CheckForSignaturesBeforeRunningScan Boolean <br> For example: Set-MpPreference -CheckForSignaturesBeforeRunningScan $False|
-|Check for Security Intelligence Updates Before Running Scan|Disabled/Not configured (Default)|Set-MpPreference -CheckForSignaturesBeforeRunningScan `Boolean` <br> For example: Set-MpPreference -CheckForSignaturesBeforeRunningScan $False|
-|Randomize Schedule Task Times|Disabled/Not configured (Default)|Set-MpPreference -RandomizeScheduleTaskTimes `Boolean` <br>Example for physical devices: Set-MpPreference -RandomizeScheduleTaskTimes $False <br>Example for Virtual Machines (VMs) or Virtual Desktop Infrastructure (VDIs) or Azure Virtual Desktop (AVD): Set-MpPreference -RandomizeScheduleTaskTimes $True <br> Note: The default randomization time is within an interval of 30 minutes after the specified start time, if the "Scheduler Randomization Time" is also not configured. <br> Note 2: Applies to scheduled scans.|
-|Scheduler Randomization Time|0/Not Configured (Default, Scheduled tasks aren't randomized)|Set-MpPreference -SchedulerRandomizationTime `UInt32` <br>For example: Set-MpPreference -SchedulerRandomizationTime 1 <br> Note: If Randomize Schedule Task Times is "Not configured" and "Randomize Schedule Task Times" is also set to "Not configured," then the system will use the default behavior within an interval of 30 minutes after the specific start time. Note: If you enable this setting, you must pick a randomization window in hours between 1 and 23. <br> Note 2: Applies to scheduled scans.|
-|Avg CPU Load Factor|50/Not Configured (Default)|Set-MpPreference -ScanAvgCPULoadFactor `Byte` <br>For example: Set-MpPreference -ScanAvgCPULoadFactor 50 <br> Note: The default value is 50. The acceptable values are 5 through 100. <br> Note 2: The lower you set it, the longer the scan takes. <br> Note 3: If both ScanOnlyIfIdleEnabled and DisableCpuThrottleOnIdleScans are both enabled, then the value of ScanAvgCPULoadFactor is ignored. |
-|Start the scheduled scan only when device is on but not in use|True/Not Configured (Default)|Set-MpPreference -ScanOnlyIfIdleEnabled `Boolean` <br>For example: Set-MpPreference -ScanOnlyIfIdleEnabled $True Note: Applies to scheduled scans.|
-|Disable CPU throttle on idle scans|Enabled/Not Configured (Default)|Set-MpPreference -DisableCpuThrottleOnIdleScans `Boolean` <br>For example: Set-MpPreference -DisableCpuThrottleOnIdleScans $True Idle here means 90% of CPU utilization or below|
-|Enable Low CPU Priority|Disabled/Not Configured (Default)|Set-MpPreference -EnableLowCpuPriority `Boolean` <br>For example: Set-MpPreference -EnableLowCpuPriority $False|
-|Disable Catchup Full Scan|Disabled/Not Configured (Default)|Set-MpPreference -DisableCatchupFullScan `Boolean` <br>For example: Set-MpPreference -DisableCatchupFullScan $True|
-|Disable Catchup Quick Scan|Disabled/Not Configured (Default)|Set-MpPreference -DisableCatchupQuickScan `Boolean` <br>For example: Set-MpPreference -DisableCatchupQuickScan $True|
-|Enable full scan on battery power|Disabled/Not Configured (Default)|Set-MpPreference -EnableFullScanOnBatteryPower `Boolean` <br>For example: Set-MpPreference -EnableFullScanOnBatteryPower $False|
+This example sets the daily scheduled quick scan to ±4 minutes of 12:30 PM. The device is likely on, but activity on the device is likely minimal (lunch).
 
-For more information, see [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Fschedule-antivirus-scans-powershell.md/main/bcb7536e-34b9-8af7-5381-96c46d108a91/use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Defender Antivirus cmdlets](/powershell/module/defender/).
-
-## PowerShell cmdlets for scheduling scans to complete remediation
-
-Use the following cmdlets:
-
-```PowerShell
-Set-MpPreference -RemediationScheduleDay
-Set-MpPreference -RemediationScheduleTime
+```powershell
+Set-MpPreference -ScanScheduleQuickScanTime 12:30:00 -ScanScheduleOffset 0 -RandomizeScheduleTaskTimes $false -ScanOnlyIfIdleEnabled $false
 ```
 
-#### See also
+We didn't need to use the following parameters in this command:
+
+- _ScanParameters_: The default value is 0 (QuickScan).
+- _ScanScheduleDay_: The default value is 0 (Everyday).
+
+## Use PowerShell to schedule weekly full scans
+
+This example schedules a weekly full scan every Wednesday at to ±4 minutes of 12:30 PM.
+
+```powershell
+Set-MpPreference -ScanParameters FullScan -ScanScheduleDay Wednesday -ScanScheduleQuickScanTime 12:30:00 -ScanScheduleOffset 0 -RandomizeScheduleTaskTimes $false
+```
+
+## General PowerShell parameters for scheduled scans
+
+The following **Set-MpPreference** parameters are also available for scheduled scans:
+
+- _CheckForSignaturesBeforeRunningScan_: Specifies whether to check for new virus and spyware definitions before Windows Defender runs **scheduled** scans. Valid values are:
+  - $true: Windows Defender checks for new definitions before running a scheduled scan.
+  - $false: The scheduled scan begins with the existing definitions. This value is the default.
+
+- _ScanAvgCPULoadFactor_: Specifies the maximum percentage CPU usage for a scan. A valid value is an integer from 5 to 100. The default value is 50. The value 0 disables CPU throttling. This value isn't a hard limit, but rather guidance for the scanning engine to not exceed the specified value on average.
+
+  The value of this parameter is ignored if both of the following conditions are true:
+
+  - The value of the _ScanOnlyIfIdleEnabled_ parameter is $true (scan only when the computer isn't in use).
+  - The value of the _DisableCpuThrottleOnIdleScans_ parameter is $true (disable CPU throttling on idle scans).
+
+- _DisableCpuThrottleOnIdleScans_: Specifies whether to disable CPU throttling for scheduled scans while the device is idle (less than 90% CPU utilization). Valid values are:
+  - $true: The CPU isn't throttled for scheduled scans, regardless of the value of the _ScanAvgCPULoadFactor_ parameter. This value is the default.
+  - $false: The CPU is throttled for scheduled scans.
+
+- _EnableLowCpuPriority_: Specifies whether to enable using low CPU priority for scheduled scans. Valid values are:
+  - $true: Windows Defender uses low CPU priority for scheduled scans. This value is the default.
+  - $false: Windows Defender doesn't use low CPU priority for scheduled scans.
+
+- _DisableCatchupFullScan_: Specifies whether to disable catch-up scans for missed scheduled full scans. Valid values are:
+  - $true: Windows Defender doesn't run catch-up scans for missed scheduled full scans. This value is the default.
+  - $false: After two missed scheduled full scans, Windows Defender runs a catch-up scan the next time someone signs in to the computer.
+
+- _DisableCatchupQuickScan_: Specifies whether to disable catch-up scans for missed scheduled quick scans. Valid values are:
+  - $true: Windows Defender doesn't run catch-up scans for missed scheduled quick scans. This value is the default.
+  - $false: After two missed scheduled quick scans, Windows Defender runs a catch-up scan the next time someone signs in to the computer.
+
+- _EnableFullScanOnBatteryPower_: Specifies whether to enable full scans while on battery power. Valid values are:
+  - $true: Windows Defender does full scans while on battery power.
+  - $false: Windows Defender doesn't do full scans while on battery power. This value is the default
+
+For more information, see [Use PowerShell cmdlets to configure and manage Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Defender Antivirus cmdlets](/powershell/module/defender/).
+
+## PowerShell parameters for scheduled scans to complete remediation
+
+Scheduled full scans to complete remediation use the following parameters:
+
+- _RemediationScheduleDay_:  Specifies the day of the week to run the scan. Valid values are:
+  - 0 or Everyday (default)
+  - 1 or Sunday
+  - 2 or Monday
+  - 3 or Tuesday
+  - 4 or Wednesday
+  - 5 or Thursday
+  - 6 or Friday
+  - 7 or Saturday
+  - 8 or Never
+
+- _RemediationScheduleTime_: Specifies the time on the local computer to run the scan. To specify a value, enter it as a time span: `hh:mm:ss` where `hh` = hours, `mm` = minutes and `ss` = seconds. For example, `13:30:00` indicates 1:30 PM. The default value is 02:00:00 (2:00 AM).
+
+## See also
 
 [Troubleshoot Microsoft Defender Antivirus scan issues](/defender-endpoint/troubleshoot-mdav-scan-issues)
 
@@ -153,13 +166,13 @@ Set-MpPreference -RemediationScheduleTime
 [Defender Antivirus specific PowerShell functions](/powershell/module/defender)
 
 > [!TIP]
-> If you're looking for Antivirus related information for other platforms, see:
+> If you're looking for Antivirus related information for other platforms, see the following resources:
+
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

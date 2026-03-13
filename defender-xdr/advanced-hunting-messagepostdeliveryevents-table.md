@@ -21,7 +21,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 08/13/2025
+ms.date: 11/18/2025
 ---
 
 # MessagePostDeliveryEvents
@@ -53,7 +53,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `LatestDeliveryLocation` | `string` |Last known location of the message |
 | `ReportId` | `string` |Unique identifier for the event|
 | `IsExternalThread` | `boolean` |Indicates if there are external recipients in the thread (1) or none (0)|
-
+| `SafetyTip` | `string` |The safety tip that has been added on a message, if any|
 
 
 ## Related topics

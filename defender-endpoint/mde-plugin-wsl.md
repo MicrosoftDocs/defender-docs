@@ -30,7 +30,7 @@ Windows Subsystem for Linux (WSL) 2, which replaces the previous version of WSL 
 
 ## Prerequisites
 
-- WSL version `2.0.7.0` or later must be running with at least one active distro. Run `wsl --update` to make sure you are on the latest version. If `wsl -–version` shows a version older than `2.0.7.0`, run `wsl -–update –pre-release` to get the latest update.
+- WSL version `2.0.7.0` or later must be running with at least one active distro. Run `wsl --update` to make sure you are on the latest version. If `wsl -–version` shows a version older than `2.0.7.0`, run `wsl --update --pre-release` to get the latest update.
 
 - The Windows client device must be onboarded to Defender for Endpoint.
 
@@ -78,21 +78,21 @@ If your Windows Subsystem for Linux isn't installed yet, follow these steps:
 
 1. Open Terminal or Command Prompt. (In Windows, go to **Start** > **Command Prompt**. Or, right-click the start button and then select **Terminal**.)
 
-2. Run the command `wsl -–install`.
+1. Run the command `wsl -–install`.
 
-3. Confirm that WSL is installed and running.
+1. Confirm that WSL is installed and running.
 
    1. Using Terminal or Command Prompt, run `wsl –-update` to make sure you have the latest version.
 
-   2. Run the `wsl` command to ensure WSL is running before testing.
+   1. Run the `wsl` command to ensure WSL is running before testing.
 
-4. Install the plug-in by following these steps:
+1. Install the plug-in by following these steps:
 
    1. Install the MSI file downloaded from the onboarding section in the Microsoft Defender portal (**Settings** > **Endpoints** > **Onboarding** > **Windows Subsystem for Linux 2 (plug-in)**).
 
-   2. Open a command prompt/terminal and run `wsl`.
+   1. Open a command prompt/terminal and run `wsl`.
 
-   You can [deploy the package using Microsoft Intune](/mem/intune/apps/lob-apps-windows).
+   You can [deploy the package using Microsoft Intune](/intune/intune-service/apps/lob-apps-windows).
 
 > [!NOTE]
 > If `WslService` is running, it stops during the installation process. You do not need to onboard the subsystem separately. Instead, the plug-in automatically onboards to the tenant the Windows host is onboarded to.
@@ -102,13 +102,12 @@ If your Windows Subsystem for Linux isn't installed yet, follow these steps:
 
 1. After update or installation, wait for at least five minutes for the plug-in to fully initialize and write log output.
 
-2. Open Terminal or Command Prompt. (In Windows, go to **Start** > **Command Prompt**. Or, right-click the start button and then select **Terminal**.)
+1. Open Terminal or Command Prompt. (In Windows, go to **Start** > **Command Prompt**. Or, right-click the start button and then select **Terminal**.)
 
-3. Run the command: `cd "%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools"`.
+1. Run the command: `cd "%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools"`.
 
-4. Run the command `.\healthcheck.exe`.
-
-5. Review the details of Defender and WSL and make sure they match or exceed the following requirements:
+1. Run the command `.\healthcheck.exe`.
+1. Review the details of Defender and WSL and make sure they match or exceed the following requirements:
 
    - **Plug-in Version**: `1.24.522.2`
    - **WSL Version**: `2.0.7.0` or later
@@ -134,9 +133,9 @@ If your host machine contains multiple proxy settings, the plug-in selects the p
 
 1. Defender for Endpoint static proxy setting (`TelemetryProxyServer`).
 
-2. `Winhttp` proxy (configured through `netsh` command).
+1. `Winhttp` proxy (configured through `netsh` command).
 
-3. Network & Internet proxy settings.
+1. Network & Internet proxy settings.
 
    For example, if your host machine has both `Winhttp proxy` and `Network & Internet proxy`, the plug-in selects `Winhttp proxy` as the proxy configuration.
 
@@ -159,13 +158,13 @@ After installing the plug-in, the subsystem and all its running containers are o
 
 1. Sign into the Microsoft Defender portal, and open the **Devices** view.
 
-2. Filter using the tag **WSL2**.
+1. Filter using the tag **WSL2**.
 
    :::image type="content" source="media/mdeplugin-wsl/wsl-device-inventory.png" alt-text="Screenshot showing device inventory filter" lightbox="media/mdeplugin-wsl/wsl-device-inventory.png":::
 
    You can see all WSL instances in your environment with an active Defender for Endpoint plug-in for WSL. These instances represent all distributions running inside WSL on a given host. The hostname of a *device* matches that of the Windows host. However, it's represented as a Linux device.
 
-3. Open the device page. In the **Overview** pane, there's a link for where the device is hosted. The link enables you to understand that the device is running on a Windows host. You can then pivot to the host for further investigation and/or response.
+1. Open the device page. In the **Overview** pane, there's a link for where the device is hosted. The link enables you to understand that the device is running on a Windows host. You can then pivot to the host for further investigation and/or response.
 
    :::image type="content" source="media/mdeplugin-wsl/wsl-ui-overview.png" alt-text="Screenshot showing device overview." lightbox="media/mdeplugin-wsl/wsl-ui-overview.png":::  
 
@@ -177,20 +176,20 @@ The plug-in onboards the WSL machine with the tag `WSL2`. Should you or your org
 
 1. Open Registry Editor as an administrator.
 
-2. Create a registry key with the following details:
+1. Create a registry key with the following details:
 
    - Name: `GROUP`
    - Type: `REG_SZ` or registry string
    - Value: `Custom tag`
    - Path: `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection\DeviceTagging`
 
-3. Once the registry is set, restart wsl using the following steps:
+1. Once the registry is set, restart wsl using the following steps:
 
    1. Open Command Prompt and run the command, `wsl --shutdown`.
 
-   2. Run the `wsl` command.
+   1. Run the `wsl` command.
 
-4. Wait for 5-10 minutes for the portal to reflect the changes. 
+1. Wait for 5-10 minutes for the portal to reflect the changes. 
 
 > [!NOTE]
 > The custom tag set in registry will be followed by a `_WSL2`.
@@ -202,12 +201,11 @@ To test the plug-in after installation, follow these steps:
 
 1. Open Terminal or Command Prompt. (In Windows, go to **Start** > **Command Prompt**. Or, right-click the start button and then select **Terminal**.)
 
-2. Run the command `wsl`.
+1. Run the command `wsl`.
 
-3. Download and extract the script file from [https://aka.ms/MDE-Linux-EDR-DIY](https://aka.ms/MDE-Linux-EDR-DIY).
+1. Download and extract the script file from [https://aka.ms/MDE-Linux-EDR-DIY](https://aka.ms/MDE-Linux-EDR-DIY).
 
-4. At the Linux prompt, run the command `./mde_linux_edr_diy.sh`.
-
+1. At the Linux prompt, run the command `./mde_linux_edr_diy.sh`.
    An alert should appear in the portal after a few minutes for a detection on the WSL2 instance.
 
    > [!NOTE]
@@ -261,7 +259,7 @@ If you see an error on launching WSL, such as `A fatal error was returned by plu
 
 1. In Control Panel, go to **Programs** > **Programs and Features**.
 
-2. Search for and select **Microsoft Defender for Endpoint plug-in for WSL**. Then select **Repair**.  This action should fix the problem by placing the right files in the expected directories.
+1. Search for and select **Microsoft Defender for Endpoint plug-in for WSL**. Then select **Repair**.  This action should fix the problem by placing the right files in the expected directories.
 
    :::image type="content" source="media/mdeplugin-wsl/plug-in-repair-control-panel.png" alt-text="Screenshot showing MDE plug-in for WSL repair option in control panel." lightbox="media/mdeplugin-wsl/plug-in-repair-control-panel.png":::
 
@@ -271,7 +269,7 @@ If you see an error on launching WSL, such as `A fatal error was returned by plu
    
 1. Open a terminal instance and run the command `wsl`.
 
-2. Wait for at least five minutes before rerunning the health check.
+1. Wait for at least five minutes before rerunning the health check.
 
 ### The `healthcheck.exe` command might show the output, "Waiting for Telemetry. Please retry in five minutes."
 
@@ -329,7 +327,7 @@ Collect the networking logs by following these steps:
 
 1. Open an elevated(admin) PowerShell prompt.
 
-2. Download and run: `.\collect-networking-logs.ps1`
+1. Download and run: `.\collect-networking-logs.ps1`
 
    ```powershell
    
@@ -339,17 +337,16 @@ Collect the networking logs by following these steps:
    
    ```
 
-3. Open a new command prompt and run the following command: `wsl`.
+1. Open a new command prompt and run the following command: `wsl`.
       
-4. Open an elevated(admin) command prompt and run the following command: `wsl --debug-shell`.
+1. Open an elevated(admin) command prompt and run the following command: `wsl --debug-shell`.
 
-5. In debug shell, run: `mdatp connectivity test`.
+1. In debug shell, run: `mdatp connectivity test`.
 
-6. Allow the connectivity test to be completed.
+1. Allow the connectivity test to be completed.
+1. Stop the .ps1 ran in step #2.
 
-7. Stop the .ps1 ran in step #2.
-
-8. Share the generated .zip file along with support bundle that can be collected as mentioned in [steps](#collect-a-support-bundle).
+1. Share the generated .zip file along with support bundle that can be collected as mentioned in [steps](#collect-a-support-bundle).
 
 ### Collect a support bundle
 
@@ -373,13 +370,13 @@ Microsoft Defender Endpoint plug-in for WSL supports Linux distributions running
 
 1. Go to your [Microsoft Intune admin center](https://intune.microsoft.com).
 
-2. Go to **Devices** > **Configuration Profiles** > **Create** > **New Policy**.
+1. Go to **Devices** > **Configuration Profiles** > **Create** > **New Policy**.
 
-3. Select **Windows 10 and later** > **Settings catalog**.
+1. Select **Windows 10 and later** > **Settings catalog**.
 
-4. Create a name for the new profile, and search for **Windows Subsystem for Linux** to see and add the full list of available settings.
+1. Create a name for the new profile, and search for **Windows Subsystem for Linux** to see and add the full list of available settings.
 
-5. Set the **Allow WSL1** setting to **Disabled**, to ensure that only WSL 2 distributions can be used.
+1. Set the **Allow WSL1** setting to **Disabled**, to ensure that only WSL 2 distributions can be used.
 
    Alternately, if you want to keep using WSL 1, or not use the Intune Policy, you can selectively associate your installed distributions to run on WSL 2, by running the command in PowerShell:
 

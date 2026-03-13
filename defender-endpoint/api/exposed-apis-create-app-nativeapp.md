@@ -3,13 +3,13 @@ title: Use Microsoft Defender for Endpoint APIs
 ms.reviewer:
 description: Learn how to design a native Windows app to get programmatic access to Microsoft Defender for Endpoint without a user.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 ms.date: 03/21/2025
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -21,23 +21,18 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
 ---
+
 # Use Microsoft Defender for Endpoint APIs
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-
-
 > [!IMPORTANT]
 > Advanced hunting capabilities are not included in Defender for Business.
 
+[!INCLUDE [Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
+[!INCLUDE [Improve request performance](../../includes/improve-request-performance.md)]
 
 This page describes how to create an application to get programmatic access to Defender for Endpoint on behalf of a user.
 
@@ -131,7 +126,13 @@ This page explains how to create a Microsoft Entra application, get an access to
 
 For more information on Microsoft Entra tokens, see [Microsoft Entra tutorial](/azure/active-directory/develop/active-directory-v2-protocols-oauth-client-creds).
 
+> [!NOTE]
+> Microsoft recommends that you use the most secure authentication flow available. The authentication flow described in this procedure requires a very high degree of trust in the application, and carries risks that are not present in other flows. You should only use this flow when other more secure flows, such as managed identities, aren't viable.
+
 ### Using C\#
+
+> [!TIP]
+> Some Microsoft Defender for Endpoint APIs continue to require access tokens issued for the legacy resource `https://api.securitycenter.microsoft.com`. If the token audience doesn't match the resource expected by the API, requests fail with `403 Forbidden`, even if the API endpoint uses `https://api.security.microsoft.com`. Use `https://api.securitycenter.microsoft.com` as the resource or scope when acquiring tokens.
 
 - Copy/Paste the below class in your application.
 - Use **AcquireUserTokenAsync** method with your application ID, tenant ID, user name, and password to acquire a token.
@@ -195,7 +196,7 @@ Verify to make sure you got a correct token:
     ```csharp
     var httpClient = new HttpClient();
 
-    var request = new HttpRequestMessage(HttpMethod.Get, "https://api.securitycenter.microsoft.com/api/alerts");
+    var request = new HttpRequestMessage(HttpMethod.Get, "https://api.security.microsoft.com/api/alerts");
 
     request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
@@ -209,4 +210,3 @@ Verify to make sure you got a correct token:
 - [Microsoft Defender for Endpoint APIs](exposed-apis-list.md)
 - [Access Microsoft Defender for Endpoint with application context](exposed-apis-create-app-webapp.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

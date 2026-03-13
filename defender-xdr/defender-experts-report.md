@@ -38,7 +38,7 @@ To view the report in your Microsoft Defender portal, go to **Reports**, select 
 
 Refer to the following screenshot of a sample report:
 
-:::image type="content" source="media/defender-experts-hunting-report.png" alt-text="Screenshot of Defender Experts for hunting report." lightbox="media/defender-experts-hunting-report.png":::
+:::image type="content" source="media/defender-experts-report/defender-experts-hunting-report.png" alt-text="Screenshot of Defender Experts for hunting report." lightbox="media/defender-experts-report/defender-experts-hunting-report.png":::
 
 ## Identify prevalent threats and other potential attack entry points
 
@@ -46,7 +46,7 @@ Signals from Microsoft Defender XDR and investigations by Defender Experts for H
 
 The top section of the report provides you with the total number of hunts, suspicious threats investigated, and Defender Experts Notifications our experts sent for your chosen period: 
 
-:::image type="content" source="media/report-top-section-dens.png" alt-text="Screenshot of the top section of the report showing the number of threats identified." lightbox="media/report-top-section-dens.png":::
+:::image type="content" source="media/defender-experts-report/report-top-section-dens.png" alt-text="Screenshot of the top section of the report showing the number of threats identified." lightbox="media/defender-experts-report/report-top-section-dens.png":::
 
 To view these notifications, select **View Defender Experts Notifications**. This action redirects you to the Microsoft Defender portal **Incidents** page. Defender Experts for Hunting alerts or Defender Experts Notifications have the **Defender Experts** tag.
 
@@ -63,7 +63,7 @@ All other identified activities are visualized or summarized in the following se
 The **Hunt trend** section displays a trendline chart of the number of hunting activities Defender Experts conducted in your environment for your chosen time period. This chart gives you visibility of the continuous monitoring and investigation our experts are doing even if they don't find any active threats or suspicious activities. 
 
 
-:::image type="content" source="media/hunting-report-hunt-trend.png" alt-text="Screenshot of the Hunt trend section of the Defender Experts for Hunting report." lightbox="media/hunting-report-hunt-trend.png":::
+:::image type="content" source="media/defender-experts-report/hunting-report-hunt-trend.png" alt-text="Screenshot of the Hunt trend section of the Defender Experts for Hunting report." lightbox="media/defender-experts-report/hunting-report-hunt-trend.png":::
 
 
 ### Emerging threats
@@ -72,7 +72,7 @@ The **Emerging threats** section details the proactive, hypothesis-based hunts w
 
 This section is a table that shows the threat title, whether we identified impact in your environment, the threat's severity, and threat category. It aggregates our hunts for emerging threats based on their severity. You can filter this section by the hunts' severity and threat category. 
 
-:::image type="content" source="media/hunting-report-emerging-threats.png" alt-text="Screenshot of the Emerging threats section of the Defender Experts for Hunting report." lightbox="media/hunting-report-emerging-threats.png":::
+:::image type="content" source="media/defender-experts-report/hunting-report-emerging-threats.png" alt-text="Screenshot of the Emerging threats section of the Defender Experts for Hunting report." lightbox="media/defender-experts-report/hunting-report-emerging-threats.png":::
 
 Selecting one of the threat titles opens a side panel with its [hunting summary](#hunting-summaries), which summarizes our findings about the threat. Hunting summaries give you insight into our investigations and keep you updated with the threat landscape.
 
@@ -80,7 +80,7 @@ Selecting one of the threat titles opens a side panel with its [hunting summary]
 
 The **Hunts by threat category** section displays hunting activity tiles that are sorted according to their threat categories. This sorting helps you visualize what an activity is trying to achieve in each attack phase so you can plan the corresponding containment and remediation actions.
 
-:::image type="content" source="/defender/media/defender-experts/threat-categories-filter.png" alt-text="Screenshot of the Hunts by threat category section of the Defender Experts for Hunting report showing the dropdown menu." lightbox="/defender/media/defender-experts/threat-categories-filter.png":::
+:::image type="content" source="media/defender-experts-report/threat-categories-filter.png" alt-text="Screenshot of the Hunts by threat category section of the Defender Experts for Hunting report showing the dropdown menu." lightbox="media/defender-experts-report/threat-categories-filter.png":::
 
 You can filter the activities displayed in the table by choosing any of the following options in the dropdown menu:
 
@@ -98,13 +98,13 @@ Each hunt that Defender Experts conduct tells a story, even when they don't find
 
 When you select one of the threat titles in the **Emerging threats** section or one of the activity tiles with the scroll icon in the **Hunts by threat category** section, a side panel opens that displays the **hunting summary**, or summary of the investigation related to the threat or activity: what the Defender Experts hunted for, why they hunted for it, and how they reached their final determination. The summary also provides the dates and times the hunt started and concluded, the hunt classification, and impacted assets. If applicable, it also provides links to view related Defender Experts Notifications.
 
-:::image type="content" source="media/hunting-report-hunt-summary.png" alt-text="Screenshot of a hunting summary in the Defender Experts for Hunting report." lightbox="media/hunting-report-hunt-summary.png":::
+:::image type="content" source="media/defender-experts-report/hunting-report-hunt-summary.png" alt-text="Screenshot of a hunting summary in the Defender Experts for Hunting report." lightbox="media/defender-experts-report/hunting-report-hunt-summary.png":::
 
 ## Know and understand the security weak spots in your environment
 
 The **Top trending suspicious activities** section of the report identifies up to 20 suspicious activities that Defender Experts consistently observed in your environment in the last three months, sorted based on their severity rating and frequency of occurrence:
 
-:::image type="content" source="/defender/media/defender-experts/top-trending-suspicious-activities.png" alt-text="Screenshot of the Top trending suspicious activities section of the report." lightbox="/defender/media/defender-experts/top-trending-suspicious-activities.png":::
+:::image type="content" source="media/defender-experts-report/top-trending-suspicious-activities.png" alt-text="Screenshot of the Top trending suspicious activities section of the report." lightbox="media/defender-experts-report/top-trending-suspicious-activities.png":::
 
 By showing the most critical and frequently observed activities, you can assess and evaluate their impact and develop strategies to prevent or mitigate potential threats to your environment.
 

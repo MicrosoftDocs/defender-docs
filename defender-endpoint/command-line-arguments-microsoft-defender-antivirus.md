@@ -3,8 +3,8 @@ title: Use the command line to manage Microsoft Defender Antivirus
 description: Run Microsoft Defender Antivirus scans and configure next-generation protection with a dedicated command-line utility.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: ksarens
 manager: bagol
@@ -109,9 +109,9 @@ The following table lists common errors that can occur while using the MpCmdRun 
 - [Configure and validate Microsoft Defender Antivirus network connections](configure-network-connections-microsoft-defender-antivirus.md)
 - [Reference articles for management and configuration tools](configuration-management-reference-microsoft-defender-antivirus.md)
 - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-- [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+- [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 - [Configure Defender for Endpoint on Android features](android-configure.md)
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

@@ -2,8 +2,8 @@
 title: View and organize the Microsoft Defender for Endpoint Alerts queue
 description: Learn about how the Microsoft Defender for Endpoint alerts queues work, and how to sort and filter lists of alerts.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -128,12 +128,12 @@ You can choose to filter the alerts based on their Automated investigation state
 
 ## Related topics
 
-- [Manage Microsoft Defender for Endpoint alerts](manage-alerts.md)
+- [Manage Microsoft Defender for Endpoint alerts](/defender-xdr/investigate-alerts?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#manage-alerts)
 - [Investigate Microsoft Defender for Endpoint alerts](investigate-alerts.md)
 - [Investigate a file associated with a Microsoft Defender for Endpoint alert](investigate-files.md)
 - [Investigate devices in the Microsoft Defender for Endpoint Devices list](investigate-machines.md)
 - [Investigate an IP address associated with a Microsoft Defender for Endpoint alert](investigate-ip.md)
 - [Investigate a domain associated with a Microsoft Defender for Endpoint alert](investigate-domain.md)
 - [Investigate a user account in Microsoft Defender for Endpoint](investigate-user.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

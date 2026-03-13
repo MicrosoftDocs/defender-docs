@@ -2,9 +2,9 @@
 title: Create an app to access Microsoft Defender for Endpoint without a user
 description: Learn how to grant a web app access to Microsoft Defender for Endpoint without a user.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
-ms.date: 09/08/2025
+ms.author: painbar
+author: paulinbar
+ms.date: 02/03/2026
 ms.topic: how-to
 ms.subservice: reference
 ms.appliesTo: Microsoft Defender for Business and Microsoft Defender for Endpoint Plans 1 and 2
@@ -90,6 +90,9 @@ https://login.microsoftonline.com/common/oauth2/authorize?prompt=consent&client_
 
 This section lists a few methods for getting your app's [access token](/entra/identity-platform/v2-oauth2-client-creds-grant-flow#get-a-token).
 
+> [!TIP]
+> Some Microsoft Defender for Endpoint APIs continue to require access tokens issued for the legacy resource `https://api.securitycenter.microsoft.com`. If the token audience doesn't match the resource expected by the API, requests fail with `403 Forbidden`, even if the API endpoint uses `https://api.security.microsoft.com`. Use `https://api.securitycenter.microsoft.com` as the resource or scope when acquiring tokens.
+
 # [PowerShell](#tab/PowerShell)
 
 ```powershell
@@ -130,16 +133,14 @@ The following procedure assumes that Curl for Windows is already installed on yo
 4. Run the following command:
 
    ```console
-   curl -i -X POST -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=%CLIENT_ID%" -d "scope=https://securitycenter.onmicrosoft.com/windowsatpservice/.default" -d "client_secret=%CLIENT_SECRET%" "https://login.microsoftonline.com/%TENANT_ID%/oauth2/v2.0/token" -k
+   curl -i -X POST -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=%CLIENT_ID%" -d "scope=https://api.securitycenter.microsoft.com/.default" -d "client_secret=%CLIENT_SECRET%" "https://login.microsoftonline.com/%TENANT_ID%/oauth2/v2.0/token" -k
    ```
 
    The answer resembles the following code snippet:
 
    ```console
     {"token_type":"Bearer","expires_in":3599,"ext_expires_in":0,"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIn <truncated> aWReH7P0s0tjTBX8wGWqJUdDA"}
-
-
----
+   ```
 
 ## Validate the token
 
@@ -161,7 +162,7 @@ This example sends a request to get a list of alerts using C#.
 
 ```csharp
 var httpClient = new HttpClient();
-var request = new HttpRequestMessage(HttpMethod.Get, "https://api.securitycenter.microsoft.com/api/alerts");
+var request = new HttpRequestMessage(HttpMethod.Get, "https://api.security.microsoft.com/api/alerts");
 request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
 var response = httpClient.SendAsync(request).GetAwaiter().GetResult();
 ```

@@ -1,11 +1,11 @@
 ---
 title: Supported Microsoft Defender XDR APIs
-description: Supported Microsoft Defender XDR APIs
+description: Learn about the specific supported Microsoft Defender XDR entities where you can create API calls to.
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: macapara
-author: mjcaparas
+ms.author: edbaynash
+author: EdB-MSFT
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro

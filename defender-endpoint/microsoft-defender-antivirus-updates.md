@@ -6,8 +6,8 @@ ms.localizationpriority: high
 ms.date: 10/20/2025
 audience: ITPro
 ms.topic: reference
-author: limwainstein
-ms.author: lwainstein
+author: chrisda
+ms.author: chrisda
 ms.subservice: ngp
 search.appverid: met150
 appliesto:
@@ -15,15 +15,13 @@ appliesto:
 - Microsoft Defender for Endpoint Plan 2
 ---
 
-# Microsoft Defender Antivirus security intelligence and product updates
+# Microsoft Defender Antivirus security intelligence and product updates and support
 
-Keeping Microsoft Defender Antivirus up to date is critical to assure your devices are protected against new malware and attack techniques. Update your antivirus protection, even if Microsoft Defender Antivirus is running in [passive mode](microsoft-defender-antivirus-compatibility.md). You can find the lates engine, platform, and signature date in [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/en-us/wdsi/defenderupdates)
+Keeping Microsoft Defender Antivirus up to date is critical to assure your devices are protected against new malware and attack techniques. Update your antivirus protection, even if Microsoft Defender Antivirus is running in [passive mode](microsoft-defender-antivirus-compatibility.md). You can find the lates engine, platform, and signature date in [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/wdsi/defenderupdates).
 
-This article is aimed at **Windows** devices, and includes information about the following two types of updates:
+This article is aimed at **Windows** devices, and includes information about [security intelligence updates](#security-intelligence-updates) and [product updates](#product-updates).
 
-- [Security intelligence updates](#security-intelligence-updates)
-
-- [Product updates](#product-updates)
+For a list of the latest **security intelligence and product versions**, see [Microsoft Defender for Endpoint supported releases](microsoft-defender-endpoint-releases.md#microsoft-defender-antivirus-releases).
 
 ## Security intelligence updates
 
@@ -43,12 +41,12 @@ Microsoft Defender Antivirus requires monthly updates (KB4052623) known as *plat
 
 You can manage the distribution of updates using one of the following methods:
 
-- [Windows Server Update Service (WSUS)](/mem/configmgr/protect/deploy-use/endpoint-definitions-wsus#to-synchronize-endpoint-protection-definition-updates-in-standalone-wsus)
-- [Microsoft Configuration Manager](/configmgr/sum/understand/software-updates-introduction)
+- [Windows Server Update Service (WSUS)](/intune/configmgr/protect/deploy-use/endpoint-definitions-wsus#to-synchronize-endpoint-protection-definition-updates-in-standalone-wsus)
+- [Microsoft Configuration Manager](/intune/configmgr/sum/understand/software-updates-introduction)
 - The usual methods you use to deploy Microsoft and Windows updates to endpoints in your network.
 - UNC Share
 
-For more information, see [Manage the sources for Microsoft Defender Antivirus protection updates](/mem/configmgr/protect/deploy-use/endpoint-definitions-wsus#to-synchronize-endpoint-protection-definition-updates-in-standalone-wsus).
+For more information, see [Manage the sources for Microsoft Defender Antivirus protection updates](/intune/configmgr/protect/deploy-use/endpoint-definitions-wsus#to-synchronize-endpoint-protection-definition-updates-in-standalone-wsus).
 
 ### Important points about product updates
 
@@ -58,53 +56,21 @@ For more information, see [Manage the sources for Microsoft Defender Antivirus p
 
 - To learn more about the gradual rollout process, and to see more information about the next release, see [Manage the gradual rollout process for Microsoft Defender updates](manage-gradual-rollout.md).
 
-- To learn more about security intelligence updates, see [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/en-us/wdsi/defenderupdates).
+- To learn more about security intelligence updates, see [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/wdsi/defenderupdates).
 
 - If you're looking for a list of Microsoft Defender processes, see the spreadsheet provided at [Enable access to Microsoft Defender for Endpoint service URLs in the proxy server](configure-environment.md#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server). The sheet also lists the services and their associated URLs that your network must be able to connect to.
 
 - Platform updates can be temporarily postponed if other protection features, such as [Endpoint DLP](/Microsoft-365/compliance/endpoint-dlp-getting-started) or [Device Control](device-control-report.md) are actively monitoring running processes. Platform updates are retried after a reboot or when all monitored services are stopped.
 
-- In the **Microsoft Endpoint Configuration Manager / Windows Server Update Services** (MECM/WSUS) catalog, the category **Microsoft Defender for Endpoint** includes updates for the `MSSense` service in [KB5005292](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5005292). KB5005292 includes updates and fixes to the Microsoft Defender for Endpoint **endpoint detection and response** (EDR) sensor. For more information, see [Microsoft Defender for Endpoint update for EDR Sensor](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) and [What's new in Microsoft Defender for Endpoint on Windows](windows-whatsnew.md).
-
-## Platform and engine releases
-
-Updates contain:
-
-- Performance improvements
-- Serviceability improvements
-- Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
-
-### September-2025 (Platform: 4.18.25090.3009 | Engine: 1.1.25090.3001)
-
-- Security intelligence update version: **1.439.345.0**
-- Release date:  **October 8, 2025 (Engine) / October 21, 2025 (Platform)**
-
-- Platform: **4.18.25090.3009**
-- Engine: **1.1.25090.3001**
-- Support phase: **Security and Critical Updates**
-
-#### What's new
-
-- **Improved service startup behavior**: The core service now only restarts when necessary, for example, during a successful platform update. This change allows the organization to avoid unnecessary restarts when the service is already running correctly.
-- **Improved stability for RPC services**: Added input validation across multiple RPC endpoints to prevent crashes caused by malformed data, which addresses a reported security vulnerability.
-- **Fixed threat exclusion handling**: Resolved an issue where severity-based exclusions could cause the engine to misidentify threats, potentially skipping high severity detections.
-- **Restored performance optimization for network file access**: Fixed a regression that caused slowdowns during file operations, like robocopy to network shares. The fix included reintroducing the logic to skip unnecessary checks on non-local files when Controlled Folder Access is enabled.
-
-### August-2025 (Platform: 4.18.25080.5 | Engine: 1.1.25080.5)
-
-- Security intelligence update version: **1.437.1.0**
-- Release date:  **September 16, 2025 (Engine) / September 17, 2025 (Platform)**
-- Platform: **4.18.25080.5**
-- Engine: **1.1.25080.5**
-- Support phase: **Security and Critical Updates**
-
-#### What's new
-
-Improved Defender update reliability by allowing non-admin processes to trigger shared signature updates, reducing unnecessary privilege requirements.
+- In the **Microsoft Configuration Manager / Windows Server Update Services** (MCM/WSUS) catalog, the category **Microsoft Defender for Endpoint** includes updates for the `MSSense` service in [KB5005292](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5005292). KB5005292 includes updates and fixes to the Microsoft Defender for Endpoint **endpoint detection and response** (EDR) sensor. For more information, see [Microsoft Defender for Endpoint update for EDR Sensor](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) and [What's new in Microsoft Defender for Endpoint on Windows](microsoft-defender-endpoint-releases.md#windows-releases).
 
 ### Previous version updates: Technical upgrade support only
 
 After a new package version is released, support for the previous two versions is reduced to technical upgrade support only. For more information about previous versions, see [Microsoft Defender Antivirus updates: Previous versions for technical upgrade support](msda-updates-previous-versions-technical-upgrade-support.md).
+
+## Platform and engine releases
+
+See [Microsoft Defender Antivirus platform and engine support](#microsoft-defender-antivirus-platform-and-engine-support).
 
 ## Microsoft Defender Antivirus platform and engine support
 
@@ -150,8 +116,8 @@ In the unfortunate event that you encounter issues after an update, you can roll
 
 | Scenario | Command |
 |--|--|
-| Roll security intelligence updates back to the previous or to the original inbox version of the security intelligence version | `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-RemoveDefinitions` |
-| Roll the engine version back to the previous version | `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe"-RemoveDefinitions -Engine` |
+| Roll security intelligence updates back to the previous or to the original inbox version of the security intelligence version | `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -RemoveDefinitions` |
+| Roll the engine version back to the previous version | `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -RemoveDefinitions -Engine` |
 | Roll a platform update back to the previous version | `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -RevertPlatform` | 
 | Roll updates back to the version shipped with the operating system (`%ProgramFiles%\Windows Defender`) | `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -ResetPlatform` |
   
@@ -253,11 +219,10 @@ After a new package version is released, support for the previous two versions i
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

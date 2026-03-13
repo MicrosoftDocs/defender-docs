@@ -2,58 +2,27 @@
 title: machineAction resource type
 description: Learn about the methods and properties of the MachineAction resource type in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 ms.topic: reference
 ms.custom: api
 ms.subservice: reference
 search.appverid: met150
-ms.date: 03/01/2025
+ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
-
 ---
+
 # MachineAction resource type
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
-
-
 - For more information, see [Response Actions](../respond-machine-alerts.md).
-- If you're using Defender for Business, see [Review remediation actions](/defender-business/mdb-review-remediation-actions) for available actions.
-
-|Method|Return Type|Description|
-|---|---|---|
-|[List MachineActions](get-machineactions-collection.md)|[Machine Action](machineaction.md)|List [Machine Action](machineaction.md) entities.|
-|[Get MachineAction](get-machineaction-object.md)|[Machine Action](machineaction.md)|Get a single [Machine Action](machineaction.md) entity.|
-|[Collect investigation package](collect-investigation-package.md)|[Machine Action](machineaction.md)|Collect investigation package from a [machine](machine.md).|
-|[Get investigation package SAS URI](get-package-sas-uri.md)|[Machine Action](machineaction.md)|Get URI for downloading the investigation package.|
-|[Isolate machine](isolate-machine.md)|[Machine Action](machineaction.md)|Isolate [machine](machine.md) from network.|
-|[Release machine from isolation](unisolate-machine.md)|[Machine Action](machineaction.md)|Release [machine](machine.md) from Isolation.|
-|[Restrict app execution](restrict-code-execution.md)|[Machine Action](machineaction.md)|Restrict application execution.|
-|[Remove app restriction](unrestrict-code-execution.md)|[Machine Action](machineaction.md)|Remove application execution restriction.|
-|[Run antivirus scan](run-av-scan.md)|[Machine Action](machineaction.md)|Run an AV scan using Windows Defender (when applicable).|
-|[Offboard machine](offboard-machine-api.md)|[Machine Action](machineaction.md)|Offboard [machine](machine.md) from Microsoft Defender for Endpoint.|
-|[Stop and quarantine file](stop-and-quarantine-file.md)|[Machine Action](machineaction.md)|Stop execution of a file on a machine and delete it.|
-|[Run live response](run-live-response.md)|[Machine Action](machineaction.md)|Runs a sequence of live response commands on a device|
-|[Get live response result](get-live-response-result.md)|URL entity|Retrieves specific live response command result download link by its index.|
-|[Cancel machine action](cancel-machine-action.md)|[Machine Action](machineaction.md)|Cancel an active machine action.|
-
-<br>
 
 ## Properties
 
@@ -95,5 +64,3 @@ appliesto:
         "relatedFileInfo": null
 }
 ```
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity sensor v3.x prerequisites | Microsoft Defender for Identity
 description: This article describes the prerequisites for installing the Microsoft Defender for Identity sensor version 3.x.
-ms.date: 10/24/2025
+ms.date: 01/28/2026
 ms.topic: install-set-up-deploy
 ms.reviewer: rlitinsky
 ---
@@ -10,108 +10,102 @@ ms.reviewer: rlitinsky
 
 This article describes the requirements for installing the Microsoft Defender for Identity sensor v3.x.
 
-## Sensor version limitations 
+## Sensor version limitations
 
-Before activating the Defender for Identity sensor v3.x, keep these limitations in mind before activating the sensor.
-The Defender for Identity sensor v3.x:
-- Requires that Defender for Endpoint is deployed and that the Microsoft Defender Antivirus component is running in either active mode or passive mode.
- - Can't be activated on a server that has a Defender for Identity sensor V2.x already deployed.
- - Doesn't currently support VPN integration.
- - Doesn't currently support ExpressRoute.
+Before you activate the Defender for Identity sensor v3.x, note that v3.x:
+
+- Doesn't support VPN integration.
+- Doesn't support [syslog notifications](../notifications.md#configure-syslog-notifications).
+- Has limitations working with Azure ExpressRoute. For more information, see [Azure ExpressRoute for Microsoft 365](/microsoft-365/enterprise/azure-expressroute?view=o365-worldwide).
+
+## Server requirements
+
+Before activating the Defender for Identity sensor v3.x, make sure that the server on which you're activating the sensor:
+
+- Has Defender for Endpoint deployed. The Microsoft Defender Antivirus component can be in either active or passive mode.
+- Doesn't have a Defender for Identity sensor v2.x already deployed.
+- Is running Windows Server 2019 or later.
+- Includes the [October 2025 or later](https://support.microsoft.com/topic/october-14-2025-kb5066782-os-build-20348-4294-f4af3c9e-7a60-4d17-a964-cfe1f1dd15f6) cumulative update.
 
 ## Licensing requirements
 
 Deploying Defender for Identity requires one of the following Microsoft 365 licenses:
 
-[!INCLUDE [licenses](../includes/licenses.md)]
+- Enterprise Mobility + Security E5 (EMS E5/A5)
+- Microsoft 365 E5 (Microsoft E5/A5/G5)
+- Microsoft 365 E5/A5/G5/F5* Security
+- Microsoft 365 F5 Security + Compliance*
 
-For more information, see [Licensing and privacy FAQs](/defender-for-identity/technical-faq#licensing-and-privacy).
+Both F5 licenses require Microsoft 365 F1/F3 or Office 365 F3 and Enterprise Mobility + Security E3. Purchase licenses in the Microsoft 365 portal or through Cloud Solution Partner (CSP) licensing. For more information, see [Licensing and privacy FAQs](/defender-for-identity/technical-faq#licensing-and-privacy).
 
-## Roles and permissions
+## Role and permissions requirements
 
 - To create your Defender for Identity workspace, you need a Microsoft Entra ID tenant.
 - You must either be a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference), or have the following [Unified RBAC](../role-groups.md#unified-role-based-access-control-rbac) permissions:
-    - `System settings (Read and manage)`
-    - `Security settings (All permissions)`
 
-## Sensor requirements and recommendations 
+  - `System settings (Read and manage)`
+  - `Security settings (All permissions)`
 
-The following table summarizes the server requirements and recommendations for the Defender for Identity sensor.
-
-|Prerequisite / Recommendation |Description  |
-|---------|---------|
-|Operating System|The domain controller must have both:<br> - Windows Server 2019 or later<br> - [October 2025 Cumulative Update](https://support.microsoft.com/en-us/topic/october-14-2025-kb5066782-os-build-20348-4294-f4af3c9e-7a60-4d17-a964-cfe1f1dd15f6) or later.|
-|Previous installations| Before activating the sensor on a domain controller, make sure that the domain controller doesn't have Defender for Identity sensor V2.x already deployed.|
-|Specifications|  A domain controller server with a minimum of:<br> - two cores<br>- 6 GB of RAM|
-|Performance| For optimal performance, set the **Power Option** of the machine running the Defender for Identity sensor to **High Performance**.        |
-|Connectivity|Requires a Microsoft Defender for Endpoint deployment. If Microsoft Defender for Endpoint is installed on the domain controller, there are no additional connectivity requirements.   |
-|Server time synchronization|The servers and domain controllers onto which the sensor is installed must have time synchronized to within five minutes of each other.|
-|ExpressRoute|This version of the sensor doesn't support ExpressRoute. If your environment uses ExpressRoute,  we recommend [deploying the Defender for Identity sensor v2.x](install-sensor.md).|
-|Identity and response actions|The sensor doesn't require credentials to be provided in the portal. Even if credentials are entered, the sensor uses the **Local System identity** on the server to query Active Directory and perform response actions. If a **Group Managed Service Account (gMSA)** is configured for response actions, the response actions are disabled. |
-
-### Dynamic memory requirements
+## Memory requirements
 
 The following table describes memory requirements on the server used for the Defender for Identity sensor, depending on the type of virtualization you're using:
 
-|VM running on|Description|
+| VM running on | Description |
 |------------|-------------|
 |Hyper-V|Ensure that **Enable Dynamic Memory** isn't enabled for the VM.|
 |VMware|Ensure that the amount of memory configured and the reserved memory are the same, or select the **Reserve all guest memory (All locked)** option in the VM settings.|
-|Other virtualization host|Refer to the vendor supplied documentation on how to ensure that memory is fully allocated to the VM at all times. |
+|Other virtualization host|Refer to the vendor-supplied documentation on how to ensure that memory is always fully allocated to the VMs.|
 
 > [!IMPORTANT]
-> When running as a virtual machine, all memory must be allocated to the virtual machine at all times.
+> When running as a virtual machine, always allocate all memory to the virtual machine.
 
-## Configure Unified Sensor to support advanced identity detections
+Version 3 of the sensor prevents the sensor from overusing CPU or memory by limiting CPU utilization at 30%, and memory usage to 1.5 GB. However, if Falcon Identity already uses substantial system resources, the domain controller might still experience performance strain.
 
-Applying the **Unified Sensor RPC Audit** tag enables a new, tested capability on the machine, improving security visibility and unlocking additional identity detections. Once applied, the configuration is enforced on **existing and future devices** that match the rule criteria. The tag itself is visible in the Device Inventory, providing admins with transparency and auditing capabilities.
+## Configure RPC auditing
 
-**Steps to apply the configuration:**
+Applying the **Unified Sensor RPC Audit** tag to a device improves security visibility and unlocks more identity detections. Once applied, the configuration is enforced on all existing and future devices that match the rule criteria. The tag is visible in the Device Inventory for transparency and auditing capabilities.
 
 1. In the **Microsoft Defender portal**, navigate to: **System > Settings > Microsoft Defender XDR > Asset Rule Management**.
 1. Select **Create a new rule**.
 
-    ![Screenshot that shows how to add a new rule.](media/prerequisites-sensor-version-3/new-rule.png)
+    :::image type="content" source="media/prerequisites-sensor-version-3/new-rule.png" alt-text="Screenshot that shows how to add a new rule." lightbox="media/prerequisites-sensor-version-3/new-rule.png":::
 
 1. In the side panel:
 
-   1. Enter a **Rule name** and **Description**.
-   
-   1. Set **rule conditions** using `Device name`, `Domain`, or `Device tag` to target the desired machines.
-   
-   1. Ensure that the **Defender for Identity V3.x sensor** is already deployed on the selected devices.
-    
-   1. Matching should primarily target **domain controllers** with the V3.x sensor installed.
-    
-1. **Add the tag** `Unified Sensor RPC Audit` to the selected devices.    
+    1. Enter a **Rule name** and **Description**.   
+    1. Set **rule conditions** using `Device name`, `Domain`, or `Device tag` to target the desired machines. Target domain controllers with the sensor v3.x installed.
+    1. Make sure that the **Defender for Identity sensor v3.x** is already deployed on the selected devices.
+
+1. Add the **Unified Sensor RPC Audit** tag to the selected devices.
 
     ![Screenshot that shows the config tag.](media/prerequisites-sensor-version-3/tag.png)
 
-1. Select **Next** to review and finish creating the rule and then select **Submit**.
+1. Select **Next** to review and finish creating the rule, and then select **Submit**. The rule might take up to one hour to take effect.
 
-### Updating rules
-   Offboarding a device from this configuration can be done **only** from **deleting the asset rule** or **modifying the rule conditions** so the device no longer matches.
+### Remove RPC auditing from a device
+
+To offboard a device from this configuration, delete the asset rule or modify the rule conditions so the device no longer matches.
 
 > [!NOTE]
-> It may take up to 1 hour for changes to be reflected in the portal.
+> It might take up to one hour for changes to be reflected in the portal.
 
-Learn more about Asset Management Rule [here](/defender-xdr/configure-asset-rules).
+Learn more about [asset management rules](/defender-xdr/configure-asset-rules).
 
-## Configure Windows auditing
+## Configure Windows event auditing
 
-Defender for Identity detections rely on specific Windows Event Log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications.
+Defender for Identity uses Windows event log entries to detect specific activities. This data is used in various detection scenarios and can be used in advanced hunting queries. For optimal protection and monitoring, make sure that collection of windows events is properly configured.
 
-Configure Windows event collection on your domain controller to support Defender for Identity detections. For more information, see [Event collection with Microsoft Defender for Identity](event-collection-overview.md) and [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
+See [Configure Defender for Identity to collect Windows events automatically (Preview)](configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically-preview).
 
-You might want to use the Defender for Identity PowerShell module to configure the required settings. For example, the following command defines all settings for the domain, creates group policy objects, and links them.
+If you don't select automatic Windows auditing configuration, you must [configure Windows event auditing manually](configure-windows-event-collection.md#configure-windows-event-collection-manually) or [using PowerShell](configure-windows-event-collection.md#configure-windows-event-collection-using-powershell). 
 
-```powershell
-Set-MDIConfiguration -Mode Domain -Configuration All
-```
-For more information, see:
-- [DefenderForIdentity Module](/powershell/module/defenderforidentity/)
-- [Defender for Identity in the PowerShell Gallery](https://www.powershellgallery.com/packages/DefenderForIdentity/)
- 
+## Recommended configurations for optimal performance
+
+We recommend that you make sure these items are properly configured for optimal performance.
+
+- Set the **Power Option** of the machine running the Defender for Identity sensor to **High Performance**.
+- Synchronize the time on servers and domain controllers where you install the sensor to within five minutes of each other.
+- This sensor uses the local system identity of the server for Active Directory and response actions. If you had Group Managed Service Account (gMSA) configured for an earlier version of the sensor, make sure to remove gMSA. If gMSA is enabled, the response actions won't work. In environments that use both v2 and v3 sensors, use local system accounts for all of your sensors.
 
 ## Test your prerequisites
 
@@ -120,4 +114,5 @@ We recommend running the [*Test-MdiReadiness.ps1*](https://github.com/microsoft/
 The *Test-MdiReadiness.ps1* script is also available from Microsoft Defender XDR, on the **Identities > Tools** page (Preview).
 
 ## Next step
-[Plan capacity for Microsoft Defender for Identity](capacity-planning.md)
+
+[Activate the Microsoft Defender for Identity sensor](activate-sensor.md)

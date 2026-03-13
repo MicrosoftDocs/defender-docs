@@ -14,19 +14,17 @@ ms.collection:
   - m365-security
   - tier1
   - highpri
-description: Describes the Teams message entity panel for Microsoft Teams in Microsoft Defender for Office 365 Plan 2, how it does post-breach work like ZAP and Safe Links and gives admins a single pane of glass on Teams chat and channel threats like suspicious URLs..
+description: Describes the Teams message entity panel for Microsoft Teams in Microsoft Defender for Office 365, how it does post-breach work like ZAP and Safe Links and gives admins a single pane of glass on Teams chat and channel threats like suspicious URLs..
 ms.service: defender-office-365
-ms.date: 11/16/2023
+ms.date: 01/13/2026
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
+ - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# The Teams message entity panel in Microsoft Defender for Office 365 Plan 2
+# The Teams message entity panel in Microsoft Defender for Office 365
 
-[!include[Prerelease information](../includes/prerelease.md)]
-
-Similar to the [The Email summary panel](mdo-email-entity-page.md#the-email-summary-panel) for email messages, Microsoft 365 organizations that have Microsoft Defender for Office 365 Plan 2 (add-on licenses or included in subscriptions like Microsoft 365 E5) have the _Microsoft Teams message entity panel_ in the Microsoft Defender portal. The Teams message entity panel is a details flyout includes all Microsoft Teams data about suspicious or malicious chats, channels, and group chats on a single, actionable panel.
+Similar to the [The Email summary panel](mdo-email-entity-page.md#the-email-summary-panel) for email messages, Microsoft 365 organizations that have Microsoft Defender for Office 365 Plan 1 or Plan 2 (add-on licenses or included in subscriptions like Microsoft 365 E5) have the _Microsoft Teams message entity panel_ in the Microsoft Defender portal. The Teams message entity panel is a details flyout includes all Microsoft Teams data about suspicious or malicious chats, channels, and group chats on a single, actionable panel.
 
 This article explains the information and actions on the Teams message entity panel.
 
@@ -34,10 +32,12 @@ This article explains the information and actions on the Teams message entity pa
 
 To use the Email entity page, you need to be assigned permissions. You have the following options:
 
-- [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md): Membership in the **Organization Management**, **Security Administrator**, or **Quarantine Administrator** role groups.
-- [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
-  - _Full access_: Membership in the **Global Administrator**<sup>\*</sup> or **Security Administrator** roles.
-  - _Read-only access_: Membership in the **Global Reader** or **Security Reader** roles.
+- _Full access_:
+  - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md): Membership in the **Organization Management**, **Security Administrator**, or **Quarantine Administrator** role groups.
+  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in one of the following roles gives users the required permissions _and_ permissions for other features in Microsoft 365: **Global Administrator**<sup>\*</sup>, **Security Administrator**, or **Security Operator**.
+- _Read-only access_:
+  - Microsoft Entra permissions: **Global Reader** or **Security Reader**.
+- _[Remove users from Teams chats](#remove-users-from-teams-chats-in-the-teams-message-entity-panel)_: Requires membership in one of the following Microsoft Entra roles: **Global Administrator**<sup>\*</sup>, **Security Administrator**, or **Security Operator**.
 
   > [!IMPORTANT]
   > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
@@ -50,7 +50,25 @@ There are no direct links to the Teams message entity panel from the top levels 
 
 - From the **Submissions** page at <https://security.microsoft.com/reportsubmission>:
   - Select the **Teams messages** tab \> select an entry by clicking anywhere in the row other than the check box.
-  - Select the **User reported** tab \> select a Teams entry by clicking anywhere in the row other than the check box. You can filter the entries by selecting :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** \> **Message type** \> **Teams**. The details flyout that opens is the Teams message entity panel.
+  - Select the **User reported** tab \> select a Teams entry by clicking anywhere in the row other than the check box. The details flyout that opens is the Teams message entity panel.
+
+    You can filter the entries by selecting :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** \> **Message type** \> **Teams**.
+
+- From the **Advanced Hunting** page at <https://security.microsoft.com/v2/advanced-hunting>, select a **TeamsMessageId** value (link) from the **MessageEvents** table in the query results. The details flyout that opens is the Teams message entity panel. For example:
+
+  ```kusto
+  UrlClickEvents
+  | where ThreatTypes !="" and Workload =="Teams"
+  | summarize count() by Url, ThreatTypes, ActionType, Workload
+  | project Url, ThreatTypes, ActionType, Workload, ClickCount=count_
+  | top 20 by ClickCount
+
+  UrlClickEvents
+  | limit 100
+
+  MessageEvents
+  | limit 100
+  ```
 
 ## What's on the Teams message entity panel
 
@@ -102,6 +120,48 @@ The rest of the Teams message entity panel contains the following information, r
   If the message has more than 10 URLs, select **View all URLs** to see all of them.
 
 :::image type="content" source="media/teams-message-entity-panel-shown-in-quarantine.png" alt-text="Screenshot of the Teams Message Entity panel from a quarantined Teams message showing the common sections." lightbox="media/teams-message-entity-panel-shown-in-quarantine.png":::
+
+## Remove users from Teams chats in the Teams message entity panel
+
+> [!TIP]
+> Currently, this feature is in Preview, isn't available in all organizations, and is subject to change.
+>
+> You can only remove _internal_ users in your organization from a chat.
+>
+> When you remove users from a chat, the sender of the chat isn't blocked, and the removed users can start new chats with the sender.
+
+In the Teams entity panel, you can select :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** at the top of the flyout (often under :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More actions**) to remove users from a Teams chat.
+
+Do the following steps in the **Take action** wizard:
+
+1. On the **Choose response actions** page, select **Remove user from conversation** from the **Conversation level actions** section, and then select **Next**.
+2. On the **Choose target entities** page, configure the following options:
+   - **Name** Enter a unique, descriptive name for the remove user scenario.
+   - **Description**: Enter optional details.
+
+   The rest of the page contains a details table with the following information about the users in the chat:
+
+   - **Impacted asset**: The email address of the user.
+   - **Action**: This value is always **Remove user from conversation**.
+   - **Target entity**: The **Thread id** GUID value of the chat.
+   - **Expires on**
+
+   By default, all users in the chat are selected, including external users you can't remove from the chat. Verify the _internal_ users to remove from the chat are selected.
+
+   When you're finished on the **Choose target entities** page, select **Next**.
+
+   :::image type="content" source="media/teams-message-entity-panel-choose-target-entities.png" alt-text="Screenshot of the Choose target entities page of the Take action wizard of the Teams message entity panel in the Microsoft Defender portal." lightbox="media/teams-message-entity-panel-choose-target-entities.png":::
+
+3. On the **Review and submit** page, review your previous selections.
+
+   Select **Back** to go back and change your selections.
+
+   When you're finished on the **Review and submit** page, select **Submit**.
+
+Removing users from a Teams chat is recorded on the **History** tab of the **Action center** page at <https://security.microsoft.com/action-center/history>. You can filter the results by **Action type** \> **Remove users from Teams conversations** and/or **Entity type** \> **Teams message**. In the alert details, you can confirm users were or were not removed from the Teams chat.
+
+> [!TIP]
+> Removing users from Teams chats doesn't create an investigation ID or an automated investigation.
 
 ## For more information
 

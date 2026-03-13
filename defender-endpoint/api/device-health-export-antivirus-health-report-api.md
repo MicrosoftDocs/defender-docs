@@ -2,13 +2,13 @@
 title: Microsoft Defender Antivirus Device Health export device antivirus health reporting
 description: Presents methods to retrieve Microsoft Defender Antivirus device health details.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-ms.date: 08/19/2025
+ms.date: 02/05/2026
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -19,20 +19,9 @@ search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
 ---
+
 # Export device antivirus health report
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
-
-[!include[Prerelease information](../../includes/prerelease.md)]
 
 This API has two methods to retrieve Microsoft Defender Antivirus device antivirus health details:
 
@@ -44,14 +33,11 @@ This API has two methods to retrieve Microsoft Defender Antivirus device antivir
 
 Data that is collected using either '_JSON response_ or _via files_' is the current snapshot of the current state. It doesn't contain historic data. To collect historic data, customers must save the data in their own data storages. See [Export device health details API methods and properties](device-health-api-methods-properties.md).
 
-> [!IMPORTANT]
->
-> For Windows&nbsp;Server&nbsp;2012&nbsp;R2 and Windows&nbsp;Server&nbsp;2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](../onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
+For information about using the **Device health and antivirus compliance** reporting tool in the Microsoft Defender portal, see: [Device health and antivirus compliance report in Microsoft Defender for Endpoint](../device-health-reports.md).
 
-> [!NOTE]
->
-> For information about using the **Device health and antivirus compliance** reporting tool in the Microsoft Defender portal, see: [Device health and antivirus compliance report in Microsoft Defender for Endpoint](../device-health-reports.md).
->
+## Prerequisites
+
+For Windows&nbsp;Server&nbsp;2012&nbsp;R2 and Windows&nbsp;Server&nbsp;2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](../onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
 
 ## 1 Export health reporting (JSON response)
 
@@ -70,23 +56,79 @@ This API retrieves a list of Microsoft Defender Antivirus device antivirus healt
 - maximum page size is 200,000
 - Rate limitations for this API are 30 calls per minute and 1000 calls per hour.
 
-#### OData supported operators
+Supports [OData V4 queries](https://www.odata.org/documentation/). OData supported operators:
 
-- `$filter` on: `machineId`, `computerDnsName`, `osKind`, `osPlatform`, `osVersion`, `avMode`, `avSignatureVersion`, `avEngineVersion`, `avPlatformVersion`, `quickScanResult`, `quickScanError`, `fullScanResult`, `fullScanError`, `avIsSignatureUpToDate`, `avIsEngineUpToDate`, `avIsPlatformUpToDate`, `rbacGroupId`
+- `$filter` on the following properties:
+  - `machineId`
+  - `computerDnsName`
+  - `osKind`
+  - `osPlatform`
+  - `osVersion`
+  - `avMode`
+  - `avSignatureVersion`
+  - `avEngineVersion`
+  - `avPlatformVersion`
+  - `quickScanResult`
+  - `quickScanError`
+  - `fullScanResult`
+  - `fullScanError`
+  - `avIsSignatureUpToDate`
+  - `avIsEngineUpToDate`
+  - `avIsPlatformUpToDate`
+  - `rbacGroupId`
 - `$top` with max value of 10,000.
 - `$skip`
 
+See examples at [OData queries with Microsoft Defender for Endpoint](exposed-apis-odata-samples.md).
+
 > [!IMPORTANT]
-> Note that **rbacgroupname** and **Id** are not supported filter operators.
+> `rbacgroupname` and `Id` aren't supported filter operators.
 
 ### 1.2 Permissions
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see Use Microsoft Defender for Endpoint APIs for details.
 
-| Permission type | Permission | Permission display name |
-|:---|:---|:---|
-| Application | Machine.Read.All | 'Read all machine profiles' |
-|Delegated (work or school account) | Machine.Read | 'Read machine information' |
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Machine.Read.All|'Read all machine profiles'|
+|Delegated (work or school account)|Machine.Read|'Read machine information'|
+
+If you need to call the API without a user (Service-to-Service), refer to the official documentation: [Create an app to access Microsoft Defender for Endpoint without a user](/defender-endpoint/api/exposed-apis-create-app-webapp?tabs=PowerShell#get-an-access-token).
+
+Use the script below to ensure the scope is correctly defined for the Device Health in Defender for Endpoint API.
+
+> [!TIP]
+> Some Microsoft Defender for Endpoint APIs continue to require access tokens issued for the legacy resource `https://api.securitycenter.microsoft.com`. If the token audience doesn't match the resource expected by the API, requests fail with `403 Forbidden`, even if the API endpoint uses `https://api.security.microsoft.com`. Use `https://api.securitycenter.microsoft.com` as the resource or scope when acquiring tokens.
+
+```powershell
+# This script acquires the App Context Token and stores it in the variable $token for later use.
+# Paste your Tenant ID, App ID, and App Secret (App key) into the quotes below.
+
+$tenantId    = '' ### Paste your Tenant ID here
+$appId       = '' ### Paste your Application ID here
+$appSecret   = '' ### Paste your Application key here
+
+# Corrected Source App ID URI
+$sourceAppIdUri = '[https://api.securitycenter.microsoft.com/.default](https://api.securitycenter.microsoft.com/.default)'
+$oAuthUri       = "[https://login.microsoftonline.com/$tenantId/oauth2/v2.0/token](https://login.microsoftonline.com/$tenantId/oauth2/v2.0/token)"
+
+$authBody = [Ordered] @{
+    scope         = "$sourceAppIdUri"
+    client_id     = "$appId"
+    client_secret = "$appSecret"
+    grant_type    = 'client_credentials'
+}
+
+$authResponse = Invoke-RestMethod -Method Post -Uri $oAuthUri -Body $authBody -ErrorAction Stop
+$token = $authResponse.access_token
+
+# Output the token
+$token
+```
+
+> [!IMPORTANT]
+> If permission is defined under **WindowsDefenderATP**, the scope must be set to:
+> `https://api.securitycenter.microsoft.com/.default`
 
 ### 1.3 URL (HTTP request)
 
@@ -96,9 +138,9 @@ URL: GET: /api/deviceavinfo
 
 #### 1.3.1 Request headers
 
-| Name | Type | Description |
-|:---|:---|:---|
-| Authorization | String | Bearer {token}. Required. |
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 #### 1.3.2 Request body
 
@@ -126,7 +168,7 @@ Supports [OData V4 queries](https://www.odata.org/documentation/).
 Here's an example request:
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/deviceavinfo
+GET https://api.security.microsoft.com/api/deviceavinfo
 ```
 
 #### Response example
@@ -136,7 +178,7 @@ Here's an example response:
 ```json
 {
 
-    @odata.context: "https://api.securitycenter.microsoft.com/api/$metadata#DeviceAvInfo",
+    @odata.context: "https://api.security.microsoft.com/api/$metadata#DeviceAvInfo",
 
 "value": [{
 
@@ -227,10 +269,10 @@ This API response contains all the data of Antivirus health and status per devic
 
 One of the following permissions is required to call this API.
 
-| Permission type | Permission | Permission display name |
-|:---|:---|:---|
-| Application | Vulnerability.Read.All | 'Read "threat and vulnerability management" vulnerability information' |
-| Delegated (work or school account) | Vulnerability.Read | 'Read "threat and vulnerability management" vulnerability information' |
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Vulnerability.Read.All|'Read "threat and vulnerability management" vulnerability information'|
+|Delegated (work or school account)|Vulnerability.Read|'Read "threat and vulnerability management" vulnerability information'|
 
 To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs for details](apis-intro.md).
 
@@ -255,7 +297,7 @@ See: [1.4 Export device antivirus health details API properties \(via files\)](d
 Here's an example request:
 
 ```HTTP
-GET https://api-us.securitycenter.windows.com/api/machines/InfoGatheringExport
+GET https://api.security.windows.com/api/machines/InfoGatheringExport
 ```
 
 #### 2.6.2 Response example
@@ -265,7 +307,7 @@ Here's an example response:
 ```json
 {
 
-   "@odata.context": "https://api-us.securitycenter.windows.com/api/$metadata#microsoft.windowsDefenderATP.api.ExportFilesResponse",
+   "@odata.context": "https://api.security.windows.com/api/$metadata#microsoft.windowsDefenderATP.api.ExportFilesResponse",
 
    "exportFiles": [
 
@@ -275,9 +317,7 @@ Here's an example response:
 
    ],
 
-
    "generatedTime": "2022-08-02T22:01:00Z"
-
 
 }
 ```
@@ -296,14 +336,5 @@ Here's an example response:
 >   - top scans per file
 >   - top scans per file per process
 >
-> You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions. 
+> You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions.
 > See: [Performance analyzer for Microsoft Defender Antivirus](../tune-performance-defender-antivirus.md).
->
-
-## See also
-
-[Export device health methods and properties](device-health-api-methods-properties.md)
-
-[Device health and compliance reporting](../device-health-reports.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

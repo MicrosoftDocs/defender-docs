@@ -4,8 +4,8 @@ description: Learn about the services and features available with Microsoft Defe
 search.appverid: met150
 ms.service: microsoft-defender
 ms.subservice: unified-security-operations
-ms.author: bagol
-author: batamig
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 10/31/2025
 audience: ITPro

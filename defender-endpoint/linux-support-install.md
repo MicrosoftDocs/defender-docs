@@ -3,8 +3,8 @@ title: Troubleshoot installation issues for Microsoft Defender for Endpoint on L
 ms.reviewer: gopkr
 description: Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -116,7 +116,7 @@ service mdatp status
     sudo useradd --system --no-create-home --user-group --shell /usr/sbin/nologin mdatp
     ```
 
-2. Try enabling and restarting the service using:
+1. Try enabling and restarting the service using:
 
     ```bash
     sudo service mdatp start
@@ -126,7 +126,7 @@ service mdatp status
     sudo service mdatp restart
     ```
 
-3. If mdatp.service isn't found upon running the previous command, run:
+1. If mdatp.service isn't found upon running the previous command, run:
 
     ```bash
     sudo cp /opt/microsoft/mdatp/conf/mdatp.service <systemd_path> 
@@ -134,13 +134,12 @@ service mdatp status
 
     where `<systemd_path>` is `/lib/systemd/system` for Ubuntu and Debian distributions and /usr/lib/systemd/system` for Rhel, CentOS, Oracle, and SLES. Then rerun step 2.
 
-4. If the above steps don't work, check if SELinux is installed and in enforcing mode. If so, try setting it to permissive (preferably) or disabled mode. It can be done by setting the parameter `SELINUX` to `permissive` or `disabled` in `/etc/selinux/config` file, followed by reboot. Check the man-page of selinux for more details.
+1. If the above steps don't work, check if SELinux is installed and in enforcing mode. If so, try setting it to permissive (preferably) or disabled mode. It can be done by setting the parameter `SELINUX` to `permissive` or `disabled` in `/etc/selinux/config` file, followed by reboot. Check the man-page of selinux for more details.
 
    Now try restarting the mdatp service using step 2. Revert the configuration change immediately though for security reasons after trying it and reboot.
 
-5. If `/opt` directory is a symbolic link, create a bind mount for `/opt/microsoft`.
-
-6. Ensure that the daemon has executable permission.
+1. If `/opt` directory is a symbolic link, create a bind mount for `/opt/microsoft`.
+1. Ensure that the daemon has executable permission.
 
     ```bash
     ls -l /opt/microsoft/mdatp/sbin/wdavdaemon
@@ -158,7 +157,7 @@ service mdatp status
 
     and retry running step 2.
 
-7. Ensure that the file system containing wdavdaemon isn't mounted with `noexec`.
+1. Ensure that the file system containing wdavdaemon isn't mounted with `noexec`.
 
 ## If the Defender for Endpoint service is running, but the EICAR text file detection doesn't work
 
@@ -192,5 +191,5 @@ service mdatp status
 
     Path to a zip file that contains the logs are displayed as an output. Reach out to our customer support with these logs.
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

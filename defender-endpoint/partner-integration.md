@@ -4,8 +4,8 @@ ms.reviewer:
 description: Learn how you can extend existing security offerings on top of the open framework and a rich set of APIs to build extensions and integrations with Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -53,5 +53,5 @@ Follow the steps in [Become a Microsoft Defender for Endpoint partner](get-start
 
 - [Overview of management and APIs](api/management-apis.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

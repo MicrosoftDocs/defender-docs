@@ -16,7 +16,7 @@ After the Defender for Identity sensor is installed, do the following to view an
 
 1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings** > **Identities** > **Sensors**. For example:
 
-   [![Screenshot of the Sensors page.](../media/sensor-page.png)](../media/sensor-page.png#lightbox)
+  :::image type="content" source="../media/download-sensor/sensor-page.png" alt-text="Screenshot that shows the sensor page in the Microsoft Defender portal.":::
 
    The **Sensors** page displays all of your Defender for Identity sensors, listing the following details per sensor:
 

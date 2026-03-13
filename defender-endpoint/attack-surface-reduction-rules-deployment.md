@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
 audience: ITPro
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 ms.reviewer: sugamar
 manager: bagol
 ms.custom: asr
@@ -192,9 +192,9 @@ Some rules don't work well if unsigned, internally developed application and scr
 
 [Create a deployment plan for Windows](/windows/deployment/update/create-deployment-plan)
 
-[Use role-based access control (RBAC) and scope tags for distributed IT in Intune](/mem/intune/fundamentals/scope-tags)
+[Use role-based access control (RBAC) and scope tags for distributed IT in Intune](/intune/intune-service/fundamentals/scope-tags)
 
-[Assign device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-assign#exclude-groups-from-a-profile-assignment)
+[Assign device profiles in Microsoft Intune](/intune/intune-service/configuration/device-profile-assign#exclude-groups-from-a-profile-assignment)
 
 ### Management sites
 
@@ -206,5 +206,5 @@ Some rules don't work well if unsigned, internally developed application and scr
 
 [Attack surface reduction rules exclusions](https://security.microsoft.com/asr?viewid=exclusions)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

@@ -19,7 +19,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn about deployment considerations and frequently asked questions regarding Attack simulation and training in Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2 organizations.
 ms.service: defender-office-365
-ms.date: 10/22/2025
+ms.date: 02/06/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -165,9 +165,22 @@ If you own the sender domain, the undelivered simulation report is returned in a
 ## Reporting issues
 
 > [!TIP]
-> Simulation data recording starts a few minutes after the simulation is launched and after users begin interacting with the simulation messages. There's no fixed start time. Events are still captured after the simulation ends.
 >
-> After December 2025 as described in Message Center post [MC1166864](https://admin.microsoft.com/AdminPortal/Home?#/MessageCenter/:/messages/MC1166864), user interaction signals (for example, Compromise, Report, Read, Delete, Reply, Forward, Out-of-office, and Attachment opened) are captured consistently until the simulation ends. Training-related events (for example, Training completed or In progress) are reflected in simulation reporting up to the training due date, even after the simulation ends.
+> - Simulation data recording starts a few minutes after the simulation is launched and after users begin interacting with the simulation messages. There's no fixed start time. Events are still captured after the simulation ends.
+>
+> - Simulation messages reported by non-Microsoft tools aren't captured in attack simulation reports.
+>
+> - After December 2025 as described in Message Center post [MC1166864](https://admin.microsoft.com/AdminPortal/Home?#/MessageCenter/:/messages/MC1166864), user interaction signals are captured consistently until the simulation ends. For example:
+>   - Compromise
+>   - Report
+>   - Read
+>   - Delete
+>   - Reply
+>   - Forward
+>   - Out-of-office (only when active at the time of receiving the attack simulation email)
+>   - Attachment opened
+>
+>   Training-related events (for example, Training completed or In progress) are reflected in simulation reporting up to the training due date, even after the simulation ends.
 
 ### Differences in user activity data from Attack simulation training reports and other reports
 

@@ -96,6 +96,8 @@
           items: 
             - name: Overview
               href: mto-overview.md
+            - name: MSSP deployment guide
+              href: playbook-managed-security.md
             - name: Set up multitenant management
               href: mto-requirements.md
             - name: View and manage incidents and alerts
@@ -117,6 +119,8 @@
               href: mto-endpoint-security-policy.md
             - name: Manage content distribution across tenants
               href: mto-distribution-profiles.md
+            - name: Workbooks in multitenant management (preview)
+              href: mto-workbooks.md
             - name: Manage tenants in other Microsoft clouds
               href: mto-cross-cloud.md
             - name: Manage unified role-based access control (URBAC) for multitenant management

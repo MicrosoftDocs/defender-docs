@@ -64,6 +64,8 @@
         href: /defender-cloud-apps/what-is-defender-for-cloud-apps?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Protect your IoT/OT assets
         href: protect-against-iot-ot-threats.md
+      - name: Protect your custom AI agents
+        href: ai-agent-inventory.md
       - name: Microsoft Secure Score
         items:
           - name: Overview
@@ -82,6 +84,8 @@
         href: incidents-overview.md      
       - name: Correlation and merging
         href: alerts-incidents-correlation.md
+      - name: Exclude analytics rules from correlation
+        href: exclude-analytics-rules-correlation.md
       - name: Prioritize incidents
         href: incident-queue.md
       - name: Manage incidents
@@ -100,12 +104,13 @@
           href: move-alert-to-another-incident.md
         - name: Merge incidents manually
           href: merge-incidents-manually.md
-        - name: Alerts
         - name: Investigate alerts
           href: investigate-alerts.md
+        - name: Use Dynamic Threat Detection Agent
+          href: dynamic-threat-detection-agent.md
         - name: Investigate entity pages
           items:
-          - name: User
+          - name: Identity
             href: investigate-users.md
           - name: Device
             href: entity-page-device.md
@@ -137,24 +142,36 @@
           href: m365d-autoir-results.md
         - name: Address false positives and negatives
           href: m365d-autoir-report-false-positives-negatives.md
-      - name: Manage attack disruption
+      - name: Attack disruption
         items:
         - name: Overview
           href: automatic-attack-disruption.md
-        - name: Configure capabilities
+        - name: Manage
           href: configure-attack-disruption.md
         - name: View details and results
           href: autoad-results.md
         - name: Exclude assets from automated responses
-          href: automatic-attack-disruption-exclusions.md           
+          href: automatic-attack-disruption-exclusions.md  
+      - name: Predictive shielding
+        items:
+        - name: Overview
+          href: shield-predict-threats.md        
+        - name: Manage and view details
+          href: shield-predict-threats-manage.md         
       - name: Search for threats with advanced hunting
         items:
         - name: Overview
           href: advanced-hunting-overview.md
         - name: Guided and advanced modes
           href: advanced-hunting-modes.md
-        - name: Generate KQL queries with Security Copilot
-          href: advanced-hunting-security-copilot.md
+        - name: Hunt for threats with Security Copilot
+          items:
+          - name: Overview
+            href: advanced-hunting-security-copilot.md
+          - name: Use the Threat Hunting Agent
+            href: advanced-hunting-security-copilot-threat-hunting-agent.md
+          - name: Generate KQL queries
+            href: advanced-hunting-security-copilot-query-assistant.md
         - name: Hunt over Microsoft Sentinel data
           items:
           - name: Microsoft Sentinel data in advanced hunting
@@ -233,6 +250,8 @@
             href: advanced-hunting-behaviorentities-table.md
           - name: BehaviorInfo
             href: advanced-hunting-behaviorinfo-table.md
+          - name: CampaignInfo
+            href: advanced-hunting-campaigninfo-table.md            
           - name: CloudAppEvents
             href: advanced-hunting-cloudappevents-table.md
           - name: CloudAuditEvents
@@ -313,8 +332,12 @@
             href: advanced-hunting-exposuregraphedges-table.md
           - name: ExposureGraphNodes
             href: advanced-hunting-exposuregraphnodes-table.md
+          - name: FileMaliciousContentInfo
+            href: advanced-hunting-filemaliciouscontentinfo-table.md            
           - name: GraphApiAuditEvents
             href: advanced-hunting-graphapiauditevents-table.md            
+          - name: IdentityAccountInfo
+            href: advanced-hunting-identityaccountinfo-table.md
           - name: IdentityDirectoryEvents
             href: advanced-hunting-identitydirectoryevents-table.md
           - name: IdentityEvents
@@ -381,6 +404,8 @@
             href: experts-on-demand.md
           - name: Understand Defender Experts for Hunting reports
             href: defender-experts-report.md
+          - name: Work with MSSPs
+            href: defender-experts-managed-security-guide.md
         - name: Frequently asked questions
           items: 
           - name: General information
@@ -411,6 +436,8 @@
             href: defender-experts-for-hunting.md
           - name: Auditing
             href: auditing.md
+          - name: Work with MSSPs
+            href: defender-experts-managed-security-guide.md
         - name: Frequently asked questions
           items:
           - name: General information
@@ -446,7 +473,7 @@
         - name: Use guided responses
           href: security-copilot-m365d-guided-response.md
         - name: Generate KQL queries
-          href: advanced-hunting-security-copilot.md
+          href: advanced-hunting-security-copilot-query-assistant.md
         - name: Create incident reports
           href: security-copilot-m365d-create-incident-report.md
         - name: Responsible AI FAQs
@@ -457,6 +484,12 @@
             href: security-copilot-agents-defender.md          
           - name: Phishing Triage Agent
             href: phishing-triage-agent.md
+          - name: Threat Intelligence Briefing Agent
+            href: threat-intel-briefing-agent-defender.md
+          - name: Threat Hunting Agent
+            href: advanced-hunting-security-copilot-threat-hunting-agent.md
+          - name: Dynamic Threat Detection Agent
+            href: dynamic-threat-detection-agent.md
     - name: Enhance security operations
       items:
       - name: Security operations guide
@@ -623,6 +656,8 @@
           href: alert-classification-password-spray-attack.md
       - name: Incident response playbooks
         href: /security/operations/incident-response-playbooks
+      - name: Customize incident responses
+        href: security-upload-guide.md
       - name: Ransomware playbooks
         items:
         - name: Detecting human-operated ransomware attacks with Microsoft Defender XDR

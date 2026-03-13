@@ -2,12 +2,12 @@
 title: Update alert entity API
 description: Learn how to update a Microsoft Defender for Endpoint alert by using this API. You can update the status, determination, classification, and assignedTo properties.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -15,24 +15,16 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 11/17/2023
+ms.date: 11/11/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # Update alert
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-[!Include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!Include[Improve request performance](../../includes/improve-request-performance.md)]
-
 ## API description
+
 Updates properties of existing [Alert](alerts.md).
 
 Submission of **comment** is available with or without updating properties.
@@ -41,25 +33,23 @@ Updatable properties are: `status`, `determination`, `classification`, and `assi
 
 ## Limitations
 
-1. You can update alerts that available in the API. For more information, see [List Alerts](get-alerts.md).
-2. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+- You can update alerts that available in the API. For more information, see [List Alerts](get-alerts.md).
+- Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
 
-One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
+When obtaining a token using user credentials:
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Alerts.ReadWrite.All|'Read and write all alerts'
-Delegated (work or school account)|Alert.ReadWrite|'Read and write alerts'
+- The user needs to have at least the following role permission: 'Alerts investigation'. For more information, see [Create and manage roles](../user-roles.md).
 
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - The user needs to have at least the following role permission: 'Alerts investigation' (For more information, see [Create and manage roles](../user-roles.md))
-> - The user needs to have access to the device associated with the alert, based on device group settings (For more information, see [Create and manage device groups](../machine-groups.md)
->
-> Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
+- The user needs to have access to the device associated with the alert, based on device group settings. For more information, see [Create and manage device groups](../machine-groups.md).
+
+One of the following permissions is required to call this API. For more information on how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
+
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Alerts.ReadWrite.All|'Read and write all alerts'|
+|Delegated (work or school account)|Alert.ReadWrite|'Read and write alerts'|
 
 ## HTTP request
 
@@ -69,10 +59,10 @@ PATCH /api/alerts/{id}
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
-Content-Type|String|application/json. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
+|Content-Type|String|application/json. **Required**.|
 
 ## Request body
 
@@ -82,13 +72,13 @@ Existing properties that aren't included in the request body will maintain their
 
 For best performance, you shouldn't include existing values that haven't change.
 
-Property|Type|Description|
-:---|:---|:---
-Status|String|Specifies the current status of the alert. The property values are: 'New', 'InProgress' and 'Resolved'.|
-assignedTo|String|Owner of the alert|
-Classification|String|Specifies the specification of the alert. The property values are: `TruePositive`, `InformationalExpectedActivity`, and `FalsePositive`.|
-Determination|String|Specifies the determination of the alert. <p>Possible determination values for each classification are: <br><li> <b>True positive</b>: `Multistage attack` (MultiStagedAttack), `Malicious user activity` (MaliciousUserActivity), `Compromised account` (CompromisedUser) – consider changing the enum name in public api accordingly, `Malware` (Malware), `Phishing` (Phishing), `Unwanted software` (UnwantedSoftware), and `Other` (Other). <li> <b>Informational, expected activity:</b> `Security test` (SecurityTesting), `Line-of-business application` (LineOfBusinessApplication), `Confirmed activity` (ConfirmedActivity) - consider changing the enum name in public api accordingly, and `Other` (Other). <li>  <b>False positive:</b> `Not malicious` (NotMalicious) - consider changing the enum name in public api accordingly, `Not enough data to validate` (InsufficientData), and `Other` (Other).|
-Comment|String|Comment to be added to the alert.|
+|Property|Type|Description|
+|---|---|---|
+|Status|String|Specifies the current status of the alert. The property values are: 'New', 'InProgress' and 'Resolved'.|
+|assignedTo|String|Owner of the alert|
+|Classification|String|Specifies the specification of the alert. The property values are: `TruePositive`, `InformationalExpectedActivity`, and `FalsePositive`.|
+|Determination|String|Specifies the determination of the alert. <p>Possible determination values for each classification are: <br><li> <b>True positive</b>: `Multistage attack` (MultiStagedAttack), `Malicious user activity` (MaliciousUserActivity), `Compromised account` (CompromisedUser) – consider changing the enum name in public API accordingly, `Malware` (Malware), `Phishing` (Phishing), `Unwanted software` (UnwantedSoftware), and `Other` (Other). <li> <b>Informational, expected activity:</b> `Security test` (SecurityTesting), `Line-of-business application` (LineOfBusinessApplication), `Confirmed activity` (ConfirmedActivity) - consider changing the enum name in public API accordingly, and `Other` (Other). <li>  <b>False positive:</b> `Not malicious` (NotMalicious) - consider changing the enum name in public API accordingly, `Not enough data to validate` (InsufficientData), and `Other` (Other).|
+|Comment|String|Comment to be added to the alert.|
 
 > [!NOTE]
 > Around August 29, 2022, previously supported alert determination values ('Apt' and 'SecurityPersonnel') will be deprecated and no longer available via the API.
@@ -104,7 +94,7 @@ If successful, this method returns 200 OK, and the [alert](alerts.md) entity in 
 Here's an example of the request.
 
 ```http
-PATCH https://api.securitycenter.microsoft.com/api/alerts/121688558380765161_2136280442
+PATCH https://api.security.microsoft.com/api/alerts/121688558380765161_2136280442
 ```
 
 ```json
@@ -116,5 +106,3 @@ PATCH https://api.securitycenter.microsoft.com/api/alerts/121688558380765161_213
     "comment": "Resolve my alert and assign to secop2"
 }
 ```
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

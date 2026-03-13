@@ -6,10 +6,10 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords: 
   - NOCSH
-ms.author: dansimp
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection: 
   - m365-security
@@ -23,15 +23,16 @@ ms.custom:
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 07/28/2025
+ms.date: 12/16/2025
 ---
 
 # Use Microsoft Sentinel functions, saved queries, and custom rules 
 
+This article explains how to use Microsoft Sentinel functions, saved queries, and custom rules in advanced hunting in the Microsoft Defender portal.
 
 ## Use functions
 
-To use a function from Microsoft Sentinel, go to the **Functions** tab and scroll until you find the function that you want. Double-click the function name to insert the function in the query editor. 
+To use a Microsoft Sentinel function, go to the **Functions** tab and scroll until you find the function that you want. Double-click the function name to insert the function in the query editor. 
 
 You can also select the vertical ellipses ( ![kebab icon](/defender/media/ah-kebab.png) ) to the right of the function and select **Insert to query** to insert the function into a query in the query editor. 
 
@@ -44,9 +45,9 @@ For editable functions, more options are available when you select the vertical 
 - **Delete** – Deletes the function.
 
 ### Use adx() operator for Azure Data Explorer queries
-Use the `adx()` operator to query tables stored in Azure Data Explorer. Read [What is Azure Data Explorer?](/azure/data-explorer/data-explorer-overview) for more details.
+Use the `adx()` operator to query tables stored in Azure Data Explorer. For more information, see [What is Azure Data Explorer?](/azure/data-explorer/data-explorer-overview)
 
-This feature was previously only available in log analytics in Microsoft Sentinel. Users can now use the operator in advanced hunting in the unified Microsoft Defender portal without needing to manually open a Microsoft Sentinel window. 
+Previously, this feature was only available in log analytics in Microsoft Sentinel. Now, users can use the operator in advanced hunting in the unified Microsoft Defender portal without needing to manually open a Microsoft Sentinel window. 
 
 In the query editor, enter the query in the following format:
 
@@ -63,9 +64,9 @@ For example, to get the first 10 rows of data from the `StormEvents` table store
 
 ### Use arg() operator for Azure Resource Graph queries
 
-The `arg()` operator can be used to query across deployed Azure resources like subscriptions, virtual machines, CPU, storage, and the like.
+Use the `arg()` operator to query across deployed Azure resources like subscriptions, virtual machines, CPU, storage, and the like.
 
-This feature was previously only available in the Logs feature in Microsoft Sentinel. In the Microsoft Defender portal, the `arg()` operator works to combine Azure Resource Graph (arg) queries with Microsoft Sentinel tables (that is, Defender XDR tables aren't supported). This allows users to make the cross-service query in advanced hunting without manually opening a Microsoft Sentinel window.
+Previously, this feature was only available in the Logs feature in Microsoft Sentinel. In the Microsoft Defender portal, the `arg()` operator works to combine Azure Resource Graph (arg) queries with Microsoft Sentinel tables (that is, Defender XDR tables aren't supported). By using this operator, you can make the cross-service query in advanced hunting without manually opening a Microsoft Sentinel window.
 
 For more information, see [Query data in Azure Resource Graph by using arg()](/azure/azure-monitor/logs/azure-monitor-data-explorer-proxy#query-data-in-azure-resource-graph-by-using-arg-preview).
 
@@ -89,6 +90,11 @@ BehaviorAnalytics
 ) on $left.name == $right.SourceDevice
 ```
 
+### Create custom functions
+
+For more information about creating custom functions in the Defender portal, see [Custom functions in the advanced hunting schema](advanced-hunting-custom-functions.md).
+
+
 ## Use saved queries
 
 To use a saved query from Microsoft Sentinel, go to the **Queries** tab and scroll until you find the query that you want. Double-click the query name to load the query in the query editor. For more options, select the vertical ellipses ( ![kebab icon](/defender/media/ah-kebab.png) ) to the right of the query. From here, you can perform the following actions:
@@ -97,12 +103,12 @@ To use a saved query from Microsoft Sentinel, go to the **Queries** tab and scro
 - **Open in query editor** – Loads the query in the query editor.
 - **View details** – Opens the query details side pane where you can inspect the query, run the query, or open the query in the editor.
 
-   :::image type="content" source="/defender/media/advanced-hunting-unified-view-details.png" alt-text="Screenshot of the options available in saved queries in the Microsoft Defender portal." lightbox="/defender/media/advanced-hunting-unified-view-details.png":::
+   :::image type="content" source="media/advanced-hunting-defender-use-custom-rules/advanced-hunting-unified-view-details.png" alt-text="Screenshot of the options available in saved queries in the Microsoft Defender portal." lightbox="media/advanced-hunting-defender-use-custom-rules/advanced-hunting-unified-view-details.png":::
 
 
 For editable queries, more options are available:
 
-- **Edit details** – Opens the query details side pane with the option to edit the details like description (if applicable) and the query itself; only the folder names (location) of Microsoft Sentinel queries can't be edited.
+- **Edit details** – Opens the query details side pane with the option to edit the details like description (if applicable) and the query itself. You can't edit the folder names (location) of Microsoft Sentinel queries.
 - **Delete** – Deletes the query.
 - **Rename** – Allows you to modify the query name.
 
@@ -117,7 +123,7 @@ To help discover threats and anomalous behaviors in your environment, you can cr
 
 For analytics rules that apply to data ingested through the connected Microsoft Sentinel workspace, select **Manage rules > Create analytics rule**.
 
-:::image type="content" source="/defender/media/advanced-hunting-unified-rules.png" alt-text="Screenshot of the options to create custom analytics or detections in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-unified-rules.png":::
+:::image type="content" source="media/advanced-hunting-defender-use-custom-rules/advanced-hunting-unified-rules.png" alt-text="Screenshot of the options to create custom analytics or detections in the Microsoft Defender portal" lightbox="media/advanced-hunting-defender-use-custom-rules/advanced-hunting-unified-rules.png":::
 
 The **Analytics rule wizard** appears. Fill up the required details as described in [Analytics rule wizard—General tab](/azure/sentinel/detect-threats-custom#analytics-rule-wizardgeneral-tab).
 
@@ -132,13 +138,13 @@ If your Defender XDR data is ingested into Microsoft Sentinel, you have the opti
 
 
 > [!NOTE]
-> If a Defender XDR table is not set up to stream to log analytics in Microsoft Sentinel but is recognized as a standard table in Microsoft Sentinel, an analytics rule can be created successfully but the rule won't run correctly since no data is actually available in Microsoft Sentinel. For these cases, use the custom detection rule wizard instead. 
+> If a Defender XDR table isn't set up to stream to log analytics in Microsoft Sentinel but is recognized as a standard table in Microsoft Sentinel, an analytics rule can be created successfully but the rule won't run correctly since no data is available in Microsoft Sentinel. For these cases, use the custom detection rule wizard instead. 
 
 ## Manage custom analytics and detection rules
 
-You can view all your user-defined rules—both custom detection rules and analytics rules—in the **Detection rules** page. Read [Manage custom detections](custom-detection-manage.md) for more details.
+You can view all your user-defined rules, including both custom detection rules and analytics rules, in the **Detection rules** page. For more information, see [Manage custom detections](custom-detection-manage.md).
 
 
 
-For multiworkspace organizations that have onboarded multiple workspaces to Microsoft Defender, you can now view the **Workspace ID** column and filter by workspace. 
+For multworkspace organizations that onboard multiple workspaces to Microsoft Defender, you can now view the **Workspace ID** column and filter by workspace. 
    

@@ -51,7 +51,7 @@ The following steps guide you on how to edit roles in Microsoft Defender XDR Uni
 
 5. Once selected, a flyout pane opens where you can edit the role:
 
-    :::image type="content" source="/defender/media/defender/m365-defender-rbac-edit-roles.png" alt-text="Screenshot of the edit roles flyout page" lightbox="/defender/media/defender/m365-defender-rbac-edit-roles.png":::
+    :::image type="content" source="media/edit-delete-rbac-roles/m365-defender-rbac-edit-roles.png" alt-text="Screenshot of the edit roles flyout page" lightbox="media/edit-delete-rbac-roles/m365-defender-rbac-edit-roles.png":::
 
 > [!NOTE]
 > After editing an imported role, the changes made in Microsoft Defender XDR Unified RBAC will not be reflected back in the individual product RBAC model.
@@ -100,7 +100,7 @@ The following steps guide you on how to export roles in Microsoft Defender XDR U
 
 4. Select the **Export** button.
 
-    :::image type="content" source="/defender/media/defender/m365-defender-rbac-export-roles.png" alt-text="Screenshot of the export roles page" lightbox="/defender/media/defender/m365-defender-rbac-export-roles.png":::
+    :::image type="content" source="media/edit-delete-rbac-roles/m365-defender-rbac-export-roles.png" alt-text="Screenshot of the export roles page" lightbox="media/edit-delete-rbac-roles/m365-defender-rbac-export-roles.png":::
 
 A CSV file containing all the roles data is generated and downloaded to the local computer.
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Cancel machine action API
 description: Learn how to cancel an already launched machine action
 search.appverid: met150
@@ -6,36 +6,27 @@ ms.service: defender-endpoint
 ms.subservice: reference
 f1.keywords:
 - NOCSH
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.custom: api
-ms.date: 03/21/2025
+ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # Cancel machine action API
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-[!include[Prerelease information](../../includes/prerelease.md)]
-
-
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 ## API description
 
@@ -43,7 +34,7 @@ Cancel an already launched machine action that isn't yet in final state (complet
 
 ## Limitations
 
-1. Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 
 ## Permissions
 
@@ -58,7 +49,7 @@ including how to choose permissions, see [Get started](apis-intro.md).
 ## HTTP request
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/machineactions/<machineactionid>/cancel
+POST https://api.security.microsoft.com/api/machineactions/<machineactionid>/cancel
 ```
 
 ## Request headers
@@ -86,7 +77,7 @@ Here's an example of the request.
 
 ```HTTP
 POST
-https://api.securitycenter.microsoft.com/api/machineactions/988cc94e-7a8f-4b28-ab65-54970c5d5018/cancel
+https://api.security.microsoft.com/api/machineactions/aaaabbbb-0000-cccc-1111-dddd2222eeee/cancel
 ```
 
 ```JSON
@@ -94,9 +85,3 @@ https://api.securitycenter.microsoft.com/api/machineactions/988cc94e-7a8f-4b28-a
     "Comment": "Machine action was canceled by automation"
 }
 ```
-
-## Related article
-
-- [Get machine action API](get-machineaction-object.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

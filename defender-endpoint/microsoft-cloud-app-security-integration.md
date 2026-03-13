@@ -12,7 +12,7 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: article
 ms.date: 03/27/2025
 search.appverid: met150
 appliesto:
@@ -51,5 +51,5 @@ For more information about cloud discovery, see [Working with discovered apps](/
 ## Related topic
 
 - [Configure Microsoft Defender for Cloud Apps integration](microsoft-cloud-app-security-config.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

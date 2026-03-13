@@ -2,8 +2,8 @@
 title: Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux
 description: eBPF-based sensor deployment in Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
 manager: bagol
@@ -99,13 +99,13 @@ You can also check the status of eBPF (enabled/disabled) on your linux endpoints
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
-2. In the navigation pane, go to **Hunting** > **Advanced hunting**.
+1. In the navigation pane, go to **Hunting** > **Advanced hunting**.
 
-3. Under **Advanced hunting**, go to **Defender Vulnerability Management**.
+1. Under **Advanced hunting**, go to **Defender Vulnerability Management**.
 
-4. Run the following query: `DeviceTvmInfoGathering`.
+1. Run the following query: `DeviceTvmInfoGathering`.
 
-5. In the output, in the **Additional fields** column, select **Show more**, and then look for **EBPF STATUS: true**.
+1. In the output, in the **Additional fields** column, select **Show more**, and then look for **EBPF STATUS: true**.
 
 ## Immutable mode of AuditD
 
@@ -121,9 +121,9 @@ The output of previous command should show no rules or any user added rules. In 
 
 1. Switch to ebpf mode.
 
-2. Remove the file `/etc/audit/rules.d/mdatp.rules`.
+1. Remove the file `/etc/audit/rules.d/mdatp.rules`.
 
-3. Reboot the machine.
+1. Reboot the machine.
 
 ### Troubleshooting and Diagnostics
 
@@ -140,7 +140,7 @@ uname -a
    - Use a distro version higher than RHEL 8.1.
    - Switch to AuditD mode if you need to use RHEL 8.1 version.
 
-2. Using Oracle Linux 8.8 with kernel version **5.15.0-0.30.20.el8uek.x86_64, 5.15.0-0.30.20.1.el8uek.x86_64** might result in kernel panic. To mitigate this issue, you can take one of the following steps:
+1. Using Oracle Linux 8.8 with kernel version **5.15.0-0.30.20.el8uek.x86_64, 5.15.0-0.30.20.1.el8uek.x86_64** might result in kernel panic. To mitigate this issue, you can take one of the following steps:
 
    - Use a kernel version higher or lower than **5.15.0-0.30.20.el8uek.x86_64, 5.15.0-0.30.20.1.el8uek.x86_64** on Oracle Linux 8.8 if you want to use eBPF as supplementary subsystem provider. The minimum kernel version for Oracle Linux is RHCK 3.10.0 and Oracle Linux UEK is 5.4.
    - Switch to AuditD mode if you need to use the same kernel version
@@ -153,9 +153,9 @@ uname -a
 
       1. Collect a diagnostic package from the client analyzer tool by using the following instructions: [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md).
 
-      2. Collect a debug diagnostic package when Defender for Endpoint is utilizing high resources by using the following instructions: [Microsoft Defender for Endpoint on Linux resources](linux-resources.md#collect-diagnostic-information).
+      1. Collect a debug diagnostic package when Defender for Endpoint is utilizing high resources by using the following instructions: [Microsoft Defender for Endpoint on Linux resources](linux-resources.md#collect-diagnostic-information).
 
-3. System hangs on Oracle Linux 7.9 running Defender for Linux when ksplice is used for live kernel patching. 
+1. System hangs on Oracle Linux 7.9 running Defender for Linux when ksplice is used for live kernel patching. 
 
     - Auto-install patching of ksplice simply adds a cron job to the endpoint.
     - To mitigate the hang issue, you can create a cron job which will first stop the mdatp service, apply ksplice based patching, then start the service.  
@@ -194,7 +194,7 @@ Top syscall ids:
 87 : 3
 ```
 
-In the previous output, you can see that stress-ng is the top process generating large number of events and might result into performance issues. Most likely stress-ng is generating the system call with ID 82. You can create a ticket with Microsoft to get this process excluded. In future as part of upcoming enhancements, you have more control to apply such exclusions at your end.
+In the previous output, you can see that stress-ng is the top process generating large number of events and might result into performance issues. Most likely stress-ng is generating the system call with ID 82. You can create a ticket with Microsoft to get this process excluded.
 
 Exclusions applied to AuditD can't be migrated or copied to eBPF. Common concerns such as noisy logs, kernel panic, noisy syscalls are already taken care of by eBPF internally. In case you want to add any further exclusions, then reach out to Microsoft to get the necessary exclusions applied.
 

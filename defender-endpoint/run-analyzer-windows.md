@@ -4,8 +4,8 @@ description: Learn how to run the Microsoft Defender for Endpoint Client Analyze
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: bagol
-author: batamig
+ms.author: chrisda
+author: chrisda
 ms.reviewer: younghree
 ms.localizationpriority: medium
 manager: bagol
@@ -42,15 +42,15 @@ You can collect the Defender for Endpoint analyzer support logs remotely using [
 
 1. Download the [MDE Client Analyzer tool](https://aka.ms/mdatpanalyzer) or [MDE Client Analyzer tool (preview)](https://aka.ms/MDEClientAnalyzerPreview) to the Windows device you want to investigate. The file is saved to your Downloads folder by default.
 
-2. Extract the contents of `MDEClientAnalyzer.zip` to an available folder.
+1. Extract the contents of `MDEClientAnalyzer.zip` to an available folder.
 
-3. Open a command line with administrator permissions: 
+1. Open a command line with administrator permissions: 
 
    1. Go to **Start** and type **cmd**.
    
-   2. Right-click **Command prompt** and select **Run as administrator**.
+   1. Right-click **Command prompt** and select **Run as administrator**.
 
-4. Type the following command and then press **Enter**:
+1. Type the following command and then press **Enter**:
 
    ```cmd
    *DrivePath*\MDEClientAnalyzer.cmd
@@ -128,6 +128,6 @@ By default, the unpacked `MDEClientAnalyzerResult.zip` file contains the items l
 - [Data collection for advanced troubleshooting on Windows](data-collection-analyzer.md)
 - [Understand the analyzer HTML report](analyzer-report.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
 

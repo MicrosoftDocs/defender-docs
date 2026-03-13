@@ -18,7 +18,7 @@ description: Admins and end-users can learn about the results of submitting enti
 ms.service: defender-office-365
 ms.date: 06/13/2025
 appliesto:
- - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+ - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
  - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
  - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -39,6 +39,9 @@ For more information, see [Learn more how submissions are processed behind-the-s
 > [!NOTE]
 >
 > - In U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD), admins can submit items to Microsoft for analysis, but the items are analyzed for email authentication and policy hits only. Payload reputation, detonation, and grader analysis aren't done for compliance reasons (data isn't allowed to leave the organization boundary).
+>
+> - In Defender for Office 365 Plan 2, we introduced agentic AI grading for admin and user reported phishing messages. The agentic grading system has multiple layers: a machine learning grader model, agentic grading, and human graders. If machine learning returns a verdict with high confidence, this verdict is shown for the submission result. If not, the message goes to agentic grading for additional analysis/response. After that, the message goes to a human grader for final review if required.
+>
 > - AI-powered Submissions Response introduces generative AI explanations for email submissions to Microsoft. These explanations aim to provide enterprise admins with clear, detailed, human-readable explanations for why messages were classified. Currently, this feature is scoped to email submissions only, and AI-generated explanations aren't used for the following types of submissions:
 >   - Files
 >   - URLs

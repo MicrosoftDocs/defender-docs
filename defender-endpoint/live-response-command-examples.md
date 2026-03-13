@@ -2,8 +2,8 @@
 title: Live response command examples
 description: Learn to run basic or advanced live response commands for Microsoft Defender for Endpoint, and see examples on how they're used.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -107,7 +107,7 @@ get c:\Users\user\Desktop\work.txt -auto
 > - Empty files
 > - Virtual files, or files that aren't fully present locally
 >
-> These file types are supported by [PowerShell](/powershell/scripting/overview).
+> [PowerShell](/powershell/scripting/overview) supports these file types.
 >
 > Use PowerShell as an alternative, if you have problems using this command from within Live Response.
 
@@ -210,7 +210,7 @@ run get-process-by-name.ps1 -parameters "-processName Registry"
 > [!NOTE]
 >
 > For long running commands such as '**run**' or '**getfile**', you might want to use the '**&**' symbol at the end of the command to perform that action in the background.
-> This allows you to continue investigating the machine and return to the background command when done using '**fg**' [basic command](live-response.md#basic-commands).
+> If you use the '**g**' symbol, you can continue investigating the machine and return to the background command when done using '**fg**' [basic command](live-response.md#basic-commands).
 >
 > When passing parameters to a live response script, don't include the following forbidden characters: **';'**, **'&'**, **'|'**, **'!'**, and **'$'**.
 
@@ -248,4 +248,4 @@ undo scheduledtask Microsoft\Windows\Subscription\LicenseAcquisition
 undo file c:\Users\user\Desktop\malware.exe
 ```
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

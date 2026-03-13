@@ -5,7 +5,7 @@ f1.keywords:
 author: chrisda
 ms.author: chrisda
 manager: bagol
-ms.date: 07/09/2025
+ms.date: 02/13/2026
 audience: ITPro
 ms.topic: concept-article
 ms.localizationpriority: medium
@@ -19,7 +19,7 @@ ms.collection:
 description: Learn more about the secure by default configuration in all organizations with cloud mailboxes.
 ms.service: defender-office-365
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -39,9 +39,9 @@ However, security needs to be balanced with productivity. This balance includes:
 All organizations with cloud mailboxes automatically receive email protection. This protection includes:
 
 - Email with suspected malware is automatically quarantined. The quarantine policy used by the anti-malware policy controls whether recipients are notified. For more information, see [Configure anti-malware policies](anti-malware-policies-configure.md).
-- Email identified as high confidence phishing is handled according to the anti-spam policy action. See [Configure anti-spam policies](anti-spam-policies-configure.md).
+- Email identified as high confidence phishing is quarantined by default.
 
-For more information, see [Default email protections for cloud mailboxes](eop-about.md).
+For more information, see [Built-in security features for all cloud mailboxes](eop-about.md).
 
 Because Microsoft wants to keep our customers secure by default, some organization overrides aren't applied for malware or high confidence phishing. These overrides include:
 
@@ -75,9 +75,10 @@ You should only consider using overrides in the following scenarios:
 
 - Phishing simulations: Simulated attacks can help you identify vulnerable users before a real attack impacts your organization. To prevent phishing simulation messages from being filtered, see [Configure non-Microsoft phishing simulations in the advanced delivery policy](advanced-delivery-policy-configure.md#use-the-microsoft-defender-portal-to-configure-non-microsoft-phishing-simulations-in-the-advanced-delivery-policy).
 - Security/SecOps mailboxes: Dedicated mailboxes used by security teams to get unfiltered messages (both good and bad). Teams can then review to see if they contain malicious content. For more information, see [Configure SecOps mailboxes in the advanced delivery policy](advanced-delivery-policy-configure.md#use-the-microsoft-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy).
-- Non-Microsoft filters: Secure by default applies only when the MX record for your domain points to Microsoft 365 (for example, contoso.mail.protection.outlook.com). If the MX record for your domain points to a non-Microsoft service or device, the following scenarios can result in the delivery of messages detected as high confidence phishing by anti-spam policies:
+- Non-Microsoft filters: Secure by default applies only when the MX record for your domain points to Microsoft 365 (for example, contoso.mail.protection.outlook.com). If the MX record for your domain points to a non-Microsoft service or device, policies including but not limited to the following scenarios can result in the delivery of messages detected as high confidence phishing by anti-spam policies:
   - [Exchange mail flow rules to bypass spam filtering](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
   - Senders identified in the [Safe Senders list](configure-junk-email-settings-on-exo-mailboxes.md) in user mailboxes.
   - [Allow entries in the Tenant Allow/Block List](tenant-allow-block-list-about.md#allow-entries-in-the-tenant-allowblock-list).
   - Senders identified in the [allowed senders list and allowed domains list in anti-spam policies](anti-spam-protection-about.md#allow-and-block-lists-in-anti-spam-policies).
+  - Source IP addresses allowed by the [connection filter policy](connection-filter-policies-configure.md).
 - False positives: To temporarily allow certain messages that Microsoft 365 blocked, use [admin submissions](submissions-admin.md#report-good-email-to-microsoft). By default, allow entries for domains and email addresses, files, and URLs exist for 30 days. During those 30 days, Microsoft learns from the allow entries and removes them or automatically extends them. By default, allow entries for spoofed senders never expire.

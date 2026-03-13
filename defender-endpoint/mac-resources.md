@@ -2,8 +2,8 @@
 title: Resources for Microsoft Defender for Endpoint on macOS
 description: Resources for Microsoft Defender for Endpoint on macOS, including how to uninstall it, how to collect diagnostic logs, CLI commands, and known issues with the product.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
 manager: bagol
 ms.localizationpriority: medium
@@ -39,9 +39,9 @@ If you can reproduce a problem, increase the logging level, run the system for s
    Log level configured successfully
    ```
 
-2. Reproduce the problem.
+1. Reproduce the problem.
 
-3. Run `sudo mdatp diagnostic create` to back up the Microsoft Defender for Endpoint logs. The files are stored inside a `.zip` archive. This command also prints the file path to the backup after the operation succeeds.
+1. Run `sudo mdatp diagnostic create` to back up the Microsoft Defender for Endpoint logs. The files are stored inside a `.zip` archive. This command also prints the file path to the backup after the operation succeeds.
 
    > [!TIP]
    > By default, diagnostic logs are saved to `/Library/Application Support/Microsoft/Defender/wdavdiag/`. To change the directory where diagnostic logs are saved, pass `--path [directory]` to the below command, replacing `[directory]` with the desired directory.
@@ -54,7 +54,7 @@ If you can reproduce a problem, increase the logging level, run the system for s
    Diagnostic file created: "/Library/Application Support/Microsoft/Defender/wdavdiag/932e68a8-8f2e-4ad0-a7f2-65eb97c0de01.zip"
    ```
 
-4. Restore logging level.
+1. Restore logging level.
 
    ```bash
    mdatp log level set --level info
@@ -114,9 +114,9 @@ Important tasks, such as controlling product settings and triggering on-demand s
 |Quarantine management|Remove all files from the quarantine|`mdatp threat quarantine remove-all`|
 |Quarantine management|Add a file detected as a threat to the quarantine|`mdatp threat quarantine add --id [threat-id]`|
 |Quarantine management|Remove a file detected as a threat from the quarantine|`mdatp threat quarantine remove --id [threat-id]`|
-|Quarantine management|Restore a file from the quarantine. Available in Defender for Endpoint version before [101.23092.0012](mac-whatsnew.md#nov-2023-build-101230920007--release-version-2012309270).|`mdatp threat quarantine restore --id [threat-id] --path [destination-folder]`|
-|Quarantine management|Restore a file from the quarantine with Threat ID. Available in Defender for Endpoint version [101.23092.0012](mac-whatsnew.md#nov-2023-build-101230920007--release-version-2012309270) or later.|`mdatp threat restore threat-id --id [threat-id] --destination-path [destination-folder]`|
-|Quarantine management|Restore a file from the quarantine with Threat Original Path. Available in Defender for Endpoint version [101.23092.0012](mac-whatsnew.md#nov-2023-build-101230920007--release-version-2012309270) or later.|`mdatp threat restore threat-path --path [threat-original-path] --destination-path [destination-folder]`|
+|Quarantine management|Restore a file from the quarantine. Available in Defender for Endpoint version before 101.23092.0012.|`mdatp threat quarantine restore --id [threat-id] --path [destination-folder]`|
+|Quarantine management|Restore a file from the quarantine with Threat ID. Available in Defender for Endpoint version 101.23092.0012 or later.|`mdatp threat restore threat-id --id [threat-id] --destination-path [destination-folder]`|
+|Quarantine management|Restore a file from the quarantine with Threat Original Path. Available in Defender for Endpoint version 101.23092.0012 or later.|`mdatp threat restore threat-path --path [threat-original-path] --destination-path [destination-folder]`|
 |Network Protection Configuration|Configure the Network Protection enforcement level|`mdatp config network-protection enforcement-level --value [Block/Audit/Disabled]`|
 |Network Protection management|Check Network protection was started successfully|`mdatp health --field network_protection_status`|
 |Device Control management|Is Device Control enabled, and what is the Default Enforcement?|`mdatp device-control policy preferences list`|
@@ -127,7 +127,6 @@ Important tasks, such as controlling product settings and triggering on-demand s
 |Diagnostics|Generate diagnostic logs|`mdatp diagnostic create --path [directory]`|
 |Health|Check the product's health|`mdatp health`|
 |Health|Check for a specific product attribute|`mdatp health --field [attribute: healthy/licensed/engine_version...]`|
-|EDR|EDR list exclusions (root)| `mdatp edr exclusion list [processes|paths|extensions|all]` |
 |EDR|Set/Remove tag, only GROUP supported|`mdatp edr tag set --name GROUP --value [name]`|
 |EDR|Remove group tag from device|`mdatp edr tag remove --tag-name [name]`|
 |EDR|Add Group ID|`mdatp edr group-ids --group-id [group]`|
@@ -219,5 +218,5 @@ When threats are detected, your security team can view detections and if necessa
 - [Microsoft Defender portal overview](/defender-xdr/microsoft-365-defender-portal)
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

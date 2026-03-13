@@ -8,7 +8,7 @@ manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 09/22/2025
+ms.date: 01/08/2025
 search.appverid:
 - MET150
 ms.collection:
@@ -18,7 +18,7 @@ ms.custom:
 description: Learn about allow entries and block entries in the Tenant Allow/Block List in Microsoft 365.
 ms.service: defender-office-365
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 #customer intent: As an admin, I need to know when to create allow or block entries, their effects, and how to use the Tenant Allow/Block List safely so I can override filtering appropriately.
@@ -32,19 +32,19 @@ You might occasionally disagree with the Microsoft filtering verdict for email m
 
 The Tenant Allow/Block List in the Microsoft Defender portal gives you a way to manually override filtering verdicts. The list is used during mail flow (for email) or time of click (for email, Teams, or Office apps).
 
-The Tenant Allow/Block list is available in the Microsoft Defender portal at <https://security.microsoft.com> **Email & collaboration** \> **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+The Tenant Allow/Block list is available in the Microsoft Defender portal at <https://security.microsoft.com> **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
 For usage and configuration instructions, see the following articles:
 
 - **Domains and email addresses** and **spoofed senders**: [Allow or block emails using the Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md)
-  - Entries apply to the MAIL FROM address (also known as the `5321.MailFrom` address, P1 sender, or envelope sender), not the From address (also known as the `5322.From` address or P2 sender). For more information about these addresses, see [Why internet email needs authentication](email-authentication-about.md#why-internet-email-needs-authentication).
+  - Entries apply to the From address (also known as the `5322.From` address or P2 sender), not the MAIL FROM address (also known as the `5321.MailFrom` address, P1 sender, or envelope sender). For more information about these addresses, see [Why internet email needs authentication](email-authentication-about.md#why-internet-email-needs-authentication).
   - Entries apply to messages from both internal and external senders. Special handling applies to internal spoofing scenarios.
   - Block entries for **Domains and email addresses** also prevent users in the organization from *sending* email to those blocked domains and addresses.
 - **Files**: [Allow or block files using the Tenant Allow/Block List](tenant-allow-block-list-files-configure.md)
 - **URLs**: [Allow or block URLs using the Tenant Allow/Block List](tenant-allow-block-list-urls-configure.md).
   - To allow phishing URLs from non-Microsoft attack simulation training, don't use URL allow entries in the Tenant Allow/Block List. Use the [advanced delivery policy](advanced-delivery-policy-configure.md) to specify the URLs.
 - **IP addresses**: [Allow or block IPv6 addresses using the Tenant Allow/Block List](tenant-allow-block-list-ip-addresses-configure.md).
-- **Teams domains**: [Block domains in Microsoft Teams using the Tenant Allow/Block List](tenant-allow-block-list-teams-domains-configure.md).
+- **Teams domains and email addresses**: [Block domains and addresses in Microsoft Teams using the Tenant Allow/Block List](tenant-allow-block-list-teams-domains-configure.md).
 
 These articles contain procedures in the Microsoft Defender portal and in PowerShell.
 
@@ -74,7 +74,7 @@ In the Tenant Allow/Block List, you can also directly create block entries for t
 
 - **[IP addresses](tenant-allow-block-list-ip-addresses-configure.md#create-block-entries-for-ipv6-addresses)**: If you manually create a block entry, all incoming email messages from that IP address are dropped at the edge of the service.
 
-- **[Teams domains](tenant-allow-block-list-teams-domains-configure.md)**: If you manually create a block entry, all incoming communication over Teams from that domain will be blocked whereas existing communication will be deleted.
+- **[Teams domains and addresses](tenant-allow-block-list-teams-domains-configure.md)**: If you manually create a block entry, all incoming communication over Teams from that domain and email address will be blocked whereas existing communication will be deleted.
 
 By default, the following types of block entries expire after 30 days, but you can set them to expire up 90 days or to never expire:
 
@@ -86,7 +86,7 @@ The following types of block entries never expire:
 
 - [Spoofed senders](tenant-allow-block-list-email-spoof-configure.md#create-block-entries-for-spoofed-senders)
 - [IP addresses](tenant-allow-block-list-ip-addresses-configure.md#create-block-entries-for-ipv6-addresses)
-- [Teams domains](tenant-allow-block-list-teams-domains-configure.md).
+- [Teams domains and addresses](tenant-allow-block-list-teams-domains-configure.md).
 
 ## Allow entries in the Tenant Allow/Block List
 

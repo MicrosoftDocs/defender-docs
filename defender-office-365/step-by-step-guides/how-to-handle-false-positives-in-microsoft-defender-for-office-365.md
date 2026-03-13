@@ -1,6 +1,6 @@
 ---
-title: (False Positives) How to handle legitimate emails getting blocked from delivery using Microsoft Defender for Office 365
-description: The steps to handle legitimate email getting blocked(False Positive) by Microsoft Defender for Office 365 in order to prevent lose of business.
+title: (False positives) How to use Microsoft Defender for Office 365 to handle legitimate emails that were blocked from delivery to recipients.
+description: Steps in  Microsoft Defender for Office 365 to handle legitimate emails getting blocked from delivery to end users (false positives) to prevent the loss of business.
 ms.service: defender-office-365
 f1.keywords: 
  - NOCSH
@@ -15,27 +15,29 @@ ms.collection:
 - tier3
 ms.topic: how-to
 search.appverid: met150
-ms.date: 01/31/2023
+ms.date: 12/08/2025
 ---
 
-# How to handle Legitimate emails getting blocked (False Positive), using Microsoft Defender for Office 365
+# How to handle legitimate emails getting blocked (false positives) using Microsoft Defender for Office 365
 
-Microsoft Defender for Office 365 helps deal with important legitimate business emails that are mistakenly blocked as threats (False Positives). Defender for Office 365 can help admins understand *why* legitimate emails are being blocked, how to resolve the situation quickly, and prevent similar situations from happening in the future.
+Microsoft Defender for Office 365 helps deal with legitimate business emails that are mistakenly blocked as threats (known as false positives).
 
-## What you'll need
+Defender for Office 365 can help admins understand *why* legitimate emails were blocked, how to quickly resolve the issue, and how to prevent similar issues from happening in the future.
 
-- Microsoft Defender for Office 365 Plan 1 or 2 (included as part of E5). Exchange Online customers can also leverage this feature.
-- Sufficient permissions (Security Administrator role).
-- 5-10 minutes to perform the steps below.
+## What you need
+
+- Microsoft Defender for Office 365 Plan 1 or Plan 2. Microsoft 365 A5/E5/G5 includes Plan 2.
+- Sufficient permissions. For example, membership in the **Security Administrator** role in [Microsoft Entra ID](/entra/identity/role-based-access-control/manage-roles-portal).
+- 5-10 minutes to perform the following steps.
 
 ## Handling legitimate emails in to Junk folder of end users
 
-1. Ask end users to report the email as **not junk** using Microsoft Message Add-in or the Outlook buttons.
-2. End users can also add the sender to the [**safe sender list**](https://support.microsoft.com/office/safe-senders-in-outlook-com-470d4ee6-e3b6-402b-8cd9-a6f00eda7339) in Outlook to prevent the email from these senders landing in Junk folder.
+1. Ask end users to report the email as **Not junk** using the [built-in **Report** button in supported versions of Outlook](../submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook).
+2. End users can also add senders to their **[Safe Sender List](https://support.microsoft.com/office/add-recipients-to-the-safe-senders-list-in-outlook-be1baea0-beab-4a30-b968-9004332336ce)** in Outlook to prevent messages from these senders landing in Junk folder.
 3. Admins can triage the user-reported messages from [the User reported tab on the Submission page](../submissions-admin.md#view-user-reported-messages-to-microsoft).
 4. From those reported messages admins can submit to [**Microsoft for analysis**](../submissions-admin.md#notify-users-about-admin-submitted-messages-to-microsoft) and understand why was that email blocked in the first place.
 5. If needed, while submitting to Microsoft for analysis, admins can judiciously [create an allow entry for the sender](../tenant-allow-block-list-email-spoof-configure.md#create-allow-entries-for-domains-and-email-addresses) to mitigate the problem.
-6. Once the results from the admin submission are available, read it to understand why emails were blocked and how your tenant setup could be improved to *prevent* similar situations from happening in the future.
+6. Once the results from the admin submission are available, read it to understand why emails were blocked and how your organization setup could be improved to *prevent* similar issues from happening in the future.
 
 ## Handling legitimate emails that are in quarantine folder of end users
 
@@ -45,10 +47,10 @@ Microsoft Defender for Office 365 helps deal with important legitimate business 
 ## Handling legitimate emails in quarantine folder of an admin
 
 1. Admins can view the quarantined emails (including the ones asking permission to request release) from the [review page](../quarantine-admin-manage-messages-files.md).
-2. Admins can release the message from quarantine while submitting it to Microsoft for analysis, and create a temporary allow to mitigate the situation.
+2. Admins can release the message from quarantine while submitting it to Microsoft for analysis. They can also create a temporary allow entry in the Tenant Allow/Block List during the submission to Microsoft to mitigate the issue.
 3. Once the results for submissions are available, admins should read the verdict to understand the reason.
-   - If false positives are due to tenant configuration, admins can correct it to mitigate the issue.
+   - If false positives are due to organization configuration, admins can correct it to mitigate the issue.
    - If false positives are due to other factors, Microsoft learns from the submission and similar messages aren't quarantined anymore.
 
 > [!NOTE]
-> Admins need to manually release any similar messages that have already been quarantined, as the quarantined messages aren't released automatically. To find and release quarantined messages in bulk, see [Can I release or report more than one quarantined message at a time?](../quarantine-faq.yml#can-i-release-or-report-more-than-one-quarantined-message-at-a-time-)
+> Admins need to manually release any similar quarantined messages. Quarantined messages aren't released automatically. To find and release quarantined messages in bulk, see [Can I release or report more than one quarantined message at a time?](../quarantine-faq.yml#can-i-release-or-report-more-than-one-quarantined-message-at-a-time-)

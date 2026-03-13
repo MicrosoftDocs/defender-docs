@@ -1,8 +1,8 @@
 ﻿---
 title: Overview for how to troubleshoot performance issues for Microsoft Defender for Endpoint on macOS
 description: Troubleshoot performance issues overview for Microsoft Defender for Endpoint on macOS.
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
 ms.service: defender-endpoint
 ms.topic: overview

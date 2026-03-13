@@ -2,12 +2,12 @@
 title: Get scan history by session
 description: Learn how to use the get scan history by session api.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -15,28 +15,17 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 03/01/2025
+ms.date: 11/10/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender Vulnerability Management
   - Microsoft Defender for Business
-
 ---
+
 # Get scan history by session
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-
-
-
-> Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](/defender-vulnerability-management/get-defender-vulnerability-management).
-
-[!Include[Prerelease information](../../includes/prerelease.md)]
-
-[!Include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!Include[Improve request performance](../../includes/improve-request-performance.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 ## API description
 
@@ -44,21 +33,20 @@ Retrieves a list of the scan history by session.
 
 ## Limitations
 
-1. Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
+Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
 
-One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md).
+When obtaining a token using user credentials:
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Machine.Read.All| Read all scan information.
-Delegated (work or school account)|Machine.Read.All|Read all scan information.
+- To view data the user needs to have at least the following role permission: `ViewData` or `TvmViewData`. For more information, see [Create and manage roles](../user-roles.md).
 
-> [!NOTE]
-> When obtaining a token using user credentials:
->
-> - To view data the user needs to have at least the following role permission: `ViewData` or `TvmViewData`. For more information, see [Create and manage roles](../user-roles.md).
+- One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md).
+
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Machine.Read.All| Read all scan information.|
+|Delegated (work or school account)|Machine.Read.All|Read all scan information.|
 
 ## HTTP request
 
@@ -68,18 +56,18 @@ POST /api/DeviceAuthenticatedScanDefinitions/GetScanHistoryBySessionId
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|string|Bearer {token}. **Required**.
-Content-Type|string|application/json. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|string|Bearer {token}. **Required**.|
+|Content-Type|string|application/json. **Required**.|
 
 ## Request body
 
 In the request body, supply a JSON object with the following parameters:
 
-Parameter|Type|Description
-:---|:---|:---
-SessionIds |String|The session Id. **Required**.
+|Parameter|Type|Description|
+|---|---|---|
+|SessionIds|String|The session Id. **Required**.|
 
 ## Response
 
@@ -90,7 +78,7 @@ If successful, this method returns 200 - OK response code with a list of the sca
 Here's an example of the request.
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefinitions/GetScanHistoryBySessionId
+POST https://api.security.microsoft.com/api/DeviceAuthenticatedScanDefinitions/GetScanHistoryBySessionId
 ```
 
 ```json
@@ -103,7 +91,7 @@ POST https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefinit
 
 ```json
 {
- "@odata.context": "https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefinitions/GetScanHistoryBySessionId",
+ "@odata.context": "https://api.security.microsoft.com/api/DeviceAuthenticatedScanDefinitions/GetScanHistoryBySessionId",
     "value": [
     {
      "orgId": "asdf781a0c-792d-46d3-bbea-a93dbc0bfcaa",
@@ -141,5 +129,3 @@ POST https://api.securitycenter.microsoft.com/api/DeviceAuthenticatedScanDefinit
   ]
 }
 ```
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

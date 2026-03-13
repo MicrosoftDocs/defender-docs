@@ -11,7 +11,8 @@ description: Get started with app governance capabilities to govern your apps in
 This article describes how to turn on Microsoft Defender for Cloud Apps app governance.
 
 > [!NOTE]
-> By default, the Microsoft Defender for Cloud Apps instance in the US Government environments can't connect to resources in Azure commercial and is FedRAMP compliant. However, App Governance isn't FedRAMP certified. App Governance will only store and process data in secure locations within the United States and the data will only be accessible by approved Microsoft employees. 
+> By default, the Microsoft Defender for Cloud Apps instance in the US Government environments can't connect to resources in Azure commercial and is FedRAMP compliant. However, App Governance isn't FedRAMP certified. App Governance will only store and process data in secure locations within the United States and the data will only be accessible by approved Microsoft employees.
+
 ## Prerequisites
 
 Before you start, verify that you satisfy the following prerequisites:
@@ -21,7 +22,6 @@ Before you start, verify that you satisfy the following prerequisites:
   If you aren't already a Defender for Cloud Apps customer, you can [sign up for a free trial](https://www.microsoft.com/security/business/cloud-apps-defender).
   
 - You must have [one of the appropriate roles](#roles) to turn on app governance and access it.
-
 
 - Your organization's billing address must be in a region **other than** Singapore, Poland, Italy, Qatar, Israel, Spain, Mexico and Taiwan.
 
@@ -41,7 +41,6 @@ After signing up for app governance, you'll need to wait up to 10 hours to see a
 If you're unable to see the app governance option in the settings page, it might be due to one or more of the following reasons:
 
 - App governance isn't yet supported in your region.
-
 - We're unable to serve you at the moment due to capacity constraints.
 
 You can join the waitlist and provide your consent, so that we can turn on app governance for your organization automatically when app governance becomes available for you. When we turn on app governance, we'll notify you by email.
@@ -56,28 +55,29 @@ App governance is available to organizations with a valid Defender for Cloud App
 
 ## Roles
 
-
 You must have at least one of these roles to turn on app governance:
 
 - Company Admin
-- Security Admin          
-- Compliance Admin  
+- Security Admin
+- Compliance Admin
 - Compliance Data Admin
 - Cloud App Security Admin
+
   > [!NOTE]
   > The Cloud App Security Admin role grants permissions turn on app governance for Microsoft Defender for Cloud Apps. However, this role doesn't grant access to view or manage app governance capabilities. To view or manage app governance capabilities, you must also have one of the other roles listed in the table  below.
+  > Microsoft recommends that you use roles with the fewest permissions. This strategy helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 The following table lists the app governance capabilities for each role.
 
-| Role | Read the dashboard | Read all apps |Read policies | Create, update, or delete policies | Read alerts | Update alerts | Read settings | Update settings | Read Remediation | Update Remediation |
-|:-------|:-----|:-------|:-------|:-------|:-------|:-------|:-------|:-------|:-------|:-------|
-| **Company or Global Administrator** | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) |
-| **Compliance Administrator** | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | |
-| **Compliance Data Administrator** | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | |
-| **Global Reader**  | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) |  | ![Check mark.](media\checkmark.png) |  | ![Check mark.](media\checkmark.png) |  | | |
-| **Security Administrator** | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | |
-| **Security Operator** | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | |
-| **Security Reader**  | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) | ![Check mark.](media\checkmark.png) |  | ![Check mark.](media\checkmark.png) |  | ![Check mark.](media\checkmark.png) |  | ![Check mark.](media\checkmark.png) | |
+|Role|Read the dashboard|Read all apps|Read policies|Create, update, or delete policies|Read alerts|Update alerts|Read settings|Update settings|Read Remediation|Update Remediation|
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|**Company or Global Administrator**|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|
+|**Compliance Administrator**|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)||
+|**Compliance Data Administrator**|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)||
+|**Global Reader**|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)||![Check mark.](media\checkmark.png)||![Check mark.](media\checkmark.png)||||
+|**Security Administrator**|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)||
+|**Security Operator**|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)||
+|**Security Reader**|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)|![Check mark.](media\checkmark.png)||![Check mark.](media\checkmark.png)||![Check mark.](media\checkmark.png)||![Check mark.](media\checkmark.png)||
 
 For more information about each role, see [Administrator role permissions](/azure/active-directory/roles/permissions-reference).
 
@@ -90,4 +90,3 @@ For more information about each role, see [Administrator role permissions](/azur
 ## Next steps
 
 [Get started with app governance in Defender for Cloud Apps](app-governance-trial-user-guide.md)
-

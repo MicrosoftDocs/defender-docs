@@ -4,8 +4,8 @@ description: Learn about multitenant device view in multitenant management of th
 search.appverid: met150
 ms.service: microsoft-defender
 ms.subservice: unified-security-operations
-ms.author: deniseb
-author: denisebmsft
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro

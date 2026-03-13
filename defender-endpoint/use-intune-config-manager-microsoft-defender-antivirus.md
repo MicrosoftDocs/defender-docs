@@ -3,8 +3,8 @@ title: Configure Microsoft Defender Antivirus using Microsoft Intune
 description: Use Microsoft Intune to configure Microsoft Defender Antivirus and Endpoint Protection
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
 ms.date: 05/07/2025
 ms.reviewer: phuijbr, yongrhee
@@ -30,23 +30,23 @@ appliesto:
 - Microsoft Defender Antivirus using Intune is available on the following platforms:
 - Windows 10 and later
 
-You can use the Microsoft Intune family of products to configure Microsoft Defender Antivirus settings, like [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) and [Configuration Manager](/mem/configmgr/core/understand/introduction).
+You can use the Microsoft Intune family of products to configure Microsoft Defender Antivirus settings, like [Microsoft Intune](/intune/intune-service/fundamentals/what-is-intune) and [Configuration Manager](/intune/configmgr/core/understand/introduction).
 
 ### Configure Microsoft Defender Antivirus settings in Intune
 
 1. Go to the Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)), and sign in.
 
-2. Navigate to **Endpoint Security**.
+1. Navigate to **Endpoint Security**.
 
-3. Under **Manage**, choose **Antivirus**.
+1. Under **Manage**, choose **Antivirus**.
 
-4. Click **Create Policy**, choose **Windows** as the platform and **Microsoft Defender Antivirus** for the profile type then select on **Create**.
+1. Click **Create Policy**, choose **Windows** as the platform and **Microsoft Defender Antivirus** for the profile type then select on **Create**.
 
-5. Enter a **Name** for the policy and optionally a description and select **Next** to go to **Configuration settings**.
+1. Enter a **Name** for the policy and optionally a description and select **Next** to go to **Configuration settings**.
 
-6. Edit your Microsoft Defender Antivirus settings.
+1. Edit your Microsoft Defender Antivirus settings.
 
-7. Choose **Review + save**.
+1. Choose **Review + save**.
 
 You can explore the list of settings that can be configured in a **Microsoft Defender Antivirus** policy within Intune.
 
@@ -595,13 +595,13 @@ This policy setting controls the level of intensity that Microsoft Defender Anti
   - **The Defender core service stops using the OneDsCollector framework to rapidly collect telemetry, impacting Microsoft's ability to quickly recognize and address poor performance, false positives, and other problems**.
   
 > [!TIP]
-> Need help? See [Manage endpoint security in Microsoft Intune](/mem/intune/protect/endpoint-security).
+> Need help? See [Manage endpoint security in Microsoft Intune](/intune/intune-service/protect/endpoint-security).
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
@@ -629,5 +629,4 @@ This policy setting controls the level of intensity that Microsoft Defender Anti
 >
 > You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions.
 > See: [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

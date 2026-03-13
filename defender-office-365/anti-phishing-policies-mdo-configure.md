@@ -67,7 +67,7 @@ For anti-phishing policy procedures in organizations without Defender for Office
 
 ## Use the Microsoft Defender portal to create anti-phishing policies
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Anti-phishing** in the **Policies** section. To go directly to the **Anti-phishing** page, use <https://security.microsoft.com/antiphishing>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Anti-phishing** in the **Policies** section. To go directly to the **Anti-phishing** page, use <https://security.microsoft.com/antiphishing>.
 
 2. On the **Anti-phishing** page, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create** to open the new anti-phishing policy wizard.
 
@@ -342,7 +342,7 @@ For anti-phishing policy procedures in organizations without Defender for Office
 
 ## Use the Microsoft Defender portal to view anti-phishing policy details
 
-In the Microsoft Defender portal, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Anti-phishing** in the **Policies** section. Or, to go directly to the **Anti-phishing** page, use <https://security.microsoft.com/antiphishing>.
+In the Microsoft Defender portal, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Anti-phishing** in the **Policies** section. Or, to go directly to the **Anti-phishing** page, use <https://security.microsoft.com/antiphishing>.
 
 On the **Anti-phishing** page, the following properties are displayed in the list of anti-phishing policies:
 
@@ -351,6 +351,7 @@ On the **Anti-phishing** page, the following properties are displayed in the lis
   - **Always on** for the default anti-phishing policy.
   - **On** or **Off** for other anti-spam policies.
 - **Priority**: For more information, see the [Set the priority of custom anti-spam policies](#use-the-microsoft-defender-portal-to-set-the-priority-of-custom-anti-phishing-policies) section.
+
 To change the list of policies from normal to compact spacing, select :::image type="icon" source="media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
 
 Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to filter the policies by **Time range** (creation date) or **Status**.
@@ -366,7 +367,7 @@ Select a policy by clicking anywhere in the row other than the check box next to
 
 ## Use the Microsoft Defender portal to take action on anti-phishing policies
 
-1. In the Microsoft Defender portal, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Anti-phishing** in the **Policies** section. Or, to go directly to the **Anti-phishing** page, use <https://security.microsoft.com/antiphishing>.
+1. In the Microsoft Defender portal, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Anti-phishing** in the **Policies** section. Or, to go directly to the **Anti-phishing** page, use <https://security.microsoft.com/antiphishing>.
 
 2. On the **Anti-phishing** page, select the anti-phishing policy by using either of the following methods:
 

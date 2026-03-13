@@ -19,6 +19,24 @@ ms.date: 07/06/2025
 
 This article provides information about new features and important product updates for the latest release of Microsoft Defender XDR Unified role-based access control (RBAC).
 
+## December 2025
+
+### Microsoft Defender for Cloud Apps permissions are now integrated with Microsoft Defender XDR Unified RBAC
+
+[Integration of Microsoft Defender for Cloud Apps permissions with Microsoft Defender XDR Unified RBAC](#microsoft-defender-for-cloud-apps-permissions-are-now-integrated-with-microsoft-defender-xdr-unified-rbac-preview) is now available worldwide.
+
+## November 2025
+
+### Microsoft Defender for Cloud permissions are now integrated with Microsoft Defender XDR unified RBAC (Preview)
+
+We’ve introduced Unified Role-Based Access Control (uRBAC) to simplify permission management across Defender for Cloud resources.
+
+Assign roles consistently across cloud scopes.
+Apply least-privilege principles with granular permissions.
+New consolidated role table available for quick reference.
+
+For more information, see: [Unified RBAC roles in Microsoft Defender for Cloud](compare-rbac-roles.md#unified-rbac-roles-in-microsoft-defender-for-cloud)
+
 ## July 2025
 
 ### Microsoft Sentinel data lake permissions integrated with Microsoft Defender XDR unified RBAC (Preview)
@@ -42,9 +60,9 @@ Starting February 16, 2025, the Microsoft Defender XDR Unified RBAC model is the
 
 ## November 2024
 
-### Microsoft Defender for Cloud Apps permissions are now integrated with Microsoft Defender XDR Unified role-based access control (RBAC)
+### Microsoft Defender for Cloud Apps permissions are now integrated with Microsoft Defender XDR Unified RBAC (Preview)
 
-You can control access and grant granular permissions for Microsoft Defender for Cloud Apps as part of the Microsoft Defender XDR Unified RBAC model. For more information, see [Map Microsoft Defender for Cloud Apps permissions to the Microsoft Defender XDR Unified RBAC permissions](compare-rbac-roles.md#map-microsoft-defender-for-cloud-apps-permissions-to-the-microsoft-defender-xdr-unified-rbac-permissions-preview) To activate the Defender for Cloud Apps workload, see [Activate Microsoft Defender XDR Unified RBAC](activate-defender-rbac.md).
+You can control access and grant granular permissions for Microsoft Defender for Cloud Apps as part of the Microsoft Defender XDR Unified RBAC model. For more information, see [Map Microsoft Defender for Cloud Apps permissions to the Microsoft Defender XDR Unified RBAC permissions](compare-rbac-roles.md#map-microsoft-defender-for-cloud-apps-permissions-to-the-microsoft-defender-xdr-unified-rbac-permissions). To activate the Defender for Cloud Apps workload, see [Activate Microsoft Defender XDR Unified RBAC](activate-defender-rbac.md).
 
 ## May 2024
 

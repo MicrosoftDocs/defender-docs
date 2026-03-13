@@ -34,8 +34,8 @@ To benefit from Microsoft Defender for Endpoint cloud app discovery signals, tur
 ## Enable Microsoft Defender for Cloud Apps in Microsoft Defender for Endpoint
 
 1. In the navigation pane, select **Preferences setup** \> **Advanced features**.
-2. Select **Microsoft Defender for Cloud Apps** and switch the toggle to **On**.
-3. Click **Save preferences**.
+1. Select **Microsoft Defender for Cloud Apps** and switch the toggle to **On**.
+1. Click **Save preferences**.
 
 Once activated, Microsoft Defender for Endpoint will immediately start forwarding discovery signals to Defender for Cloud Apps.
 
@@ -50,5 +50,5 @@ If you're interested in trying Microsoft Defender for Cloud Apps, see [Microsoft
 ## Related topic
 
 - [Microsoft Defender for Cloud Apps integration](microsoft-cloud-app-security-integration.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

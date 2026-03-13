@@ -2,8 +2,8 @@
 title: Troubleshoot license issues for Microsoft Defender for Endpoint on macOS
 description: Troubleshoot license issues in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
 manager: bagol
 ms.localizationpriority: medium
@@ -90,19 +90,19 @@ If the file exists, it prevents the macOS from being onboarded again. Delete the
 
    :::image type="content" source="media/endpoints-option-on-settings-screen.png" alt-text="Screenshot of the Settings screen on which the Endpoints option is listed." lightbox="media/endpoints-option-on-settings-screen.png":::
  
-2. Select **Licenses**.
+1. Select **Licenses**.
 
    :::image type="content" source="media/selecting-licenses-option-from-endpoints-screen.png" alt-text="Screenshot of the Endpoints page from which the Licenses options can be selected." lightbox="media/selecting-licenses-option-from-endpoints-screen.png":::
        
-3. Select **View and purchase licenses in the Microsoft 365 admin center**. The following screen in the Microsoft 365 admin center portal appears:
+1. Select **View and purchase licenses in the Microsoft 365 admin center**. The following screen in the Microsoft 365 admin center portal appears:
 
    :::image type="content" source="media/m365-admin-center-purchase-assign-licenses.png" alt-text="Screenshot of the Microsoft 365 admin center portal page from which licenses can be purchased and assigned." lightbox="media/m365-admin-center-purchase-assign-licenses.png":::
 
-4. Check the checkbox of the license you want to purchase from Microsoft, and select it. The screen displaying detail of the chosen license appears:
+1. Check the checkbox of the license you want to purchase from Microsoft, and select it. The screen displaying detail of the chosen license appears:
 
    :::image type="content" source="media/resultant-screen-of-selecting-preferred-license.png" alt-text="Screenshot of the product page from which you can select the option of assigning the purchased license.":::
 
-5. Select the **Assign licenses** link.
+1. Select the **Assign licenses** link.
 
    :::image type="content" source="media/assign-licenses-link.png" alt-text="Screenshot of the product page from which you can select the Assign licenses link.":::
 
@@ -110,13 +110,13 @@ If the file exists, it prevents the macOS from being onboarded again. Delete the
 
    :::image type="content" source="media/screen-containing-option-to-assign-licenses.png" alt-text="Screenshot of the page containing the + Assign licenses option." lightbox="media/screen-containing-option-to-assign-licenses.png":::
 
-6. Select **+ Assign licenses**.
+1. Select **+ Assign licenses**.
 
-7. Enter the name or email address of the person to whom you want to assign this license. The following screen appears, displaying the details of the chosen license assignee and a list of options.
+1. Enter the name or email address of the person to whom you want to assign this license. The following screen appears, displaying the details of the chosen license assignee and a list of options.
 
    :::image type="content" source="media/assignee-details-and-options.png" alt-text="Screenshot of the page displaying the assignee's details and a list of options.":::
  
-8. Check the checkboxes for **Microsoft 365 Advanced Auditing**, **Microsoft Defender XDR**, and **Microsoft Defender for Endpoint**. Then select **Save**.
+1. Check the checkboxes for **Microsoft 365 Advanced Auditing**, **Microsoft Defender XDR**, and **Microsoft Defender for Endpoint**. Then select **Save**.
 
 On implementing these solution-options (either of them), if the licensing issues have been resolved, and then you run **mdatp health**, you should see the following results:
 
@@ -157,5 +157,5 @@ You can also suppress switching to experience for Individuals on MDM-enrolled ma
 - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md): Learn how to install, configure, update, and use Microsoft Defender for Endpoint on Mac.
 - [Deploying Microsoft Defender for Endpoint on macOS with Jamf Pro](mac-install-with-jamf.md): Learn how to deploy Microsoft Defender for Endpoint on macOS with Jamf Pro.
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

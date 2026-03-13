@@ -2,12 +2,12 @@
 title: Fetch alerts from MSSP customer tenant
 description: Learn how to fetch alerts from a customer tenant
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -19,12 +19,11 @@ ms.date: 12/18/2020
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # Fetch alerts from MSSP customer tenant
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
 
 > [!NOTE]
 > This action is taken by the MSSP.
@@ -137,6 +136,7 @@ After providing your credentials, you'll need to grant consent to the applicatio
     Write-Host " ----------------------------------- REFRESH TOKEN ---------------------------------- "
     Write-Host $refreshToken
     ```
+
 4. Open an elevated PowerShell command prompt in the `MsspTokensAcquisition` folder.
 
 5. Run the following command:
@@ -185,4 +185,3 @@ For information on how to fetch alerts using REST API, see [Fetch alerts from MS
 - [Access the MSSP customer portal](../access-mssp-portal.md)
 - [Configure alert notifications](../configure-mssp-notifications.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

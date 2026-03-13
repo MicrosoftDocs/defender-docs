@@ -2,8 +2,8 @@
 title: Review events and errors using Event Viewer
 description: Get descriptions and further troubleshooting steps (if necessary) for all events reported by the Microsoft Defender for Endpoint service.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -31,7 +31,7 @@ You can review event IDs in the [Event Viewer](/shows/inside/event-viewer) on in
 To open the Defender for Endpoint service event log:
 
 1. Select **Start** on the Windows menu, type **Event Viewer**, and press **Enter** to open the Event Viewer.
-2. In the log list, under **Log Summary**, scroll until you see **Microsoft-Windows-SENSE/Operational**. Double-click the item to
+1. In the log list, under **Log Summary**, scroll until you see **Microsoft-Windows-SENSE/Operational**. Double-click the item to
    open the log.
 
    You can also access the log by expanding **Applications and Services Logs** \> **Microsoft** \> **Windows** \> **SENSE** and select **Operational**.
@@ -39,7 +39,7 @@ To open the Defender for Endpoint service event log:
    > [!NOTE]
    > SENSE is the internal name used to refer to the behavioral sensor that powers Microsoft Defender for Endpoint.
 
-3. Events recorded by the service appear in the log.
+1. Events recorded by the service appear in the log.
 
 See the following table for a list of events recorded by the service.
 
@@ -198,6 +198,9 @@ See the following table for a list of events recorded by the service.
 
 Microsoft Defender for Endpoint events also appear in the System event log.
 
+> [!NOTE]
+> The Event Viewer UI can vary by Windows version. The steps in this article reflect a recent version of Windows 11.
+
 To open the System event log:
 
 1. Select **Start** on the Windows menu, type **Event Viewer**, and press **Enter**  to open the Event Viewer.
@@ -217,5 +220,5 @@ You can use this table for more information on the Defender for Endpoint events 
 - [Client analyzer overview](overview-client-analyzer.md)
 - [Understand the analyzer HTML report](analyzer-report.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

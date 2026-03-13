@@ -37,7 +37,7 @@ First, you need to create a service account with the required permissions to get
 To establish a connection with Palo Alto Prisma in Exposure Management, follow these steps:
 
 1. Open the [Exposure Management Connectors](https://security.microsoft.com/exposure-data-connectors) page and click **Connect** in the Palo Alto tile.
-2. Enter your Palo Alto API URL and authentication credentials, then click **Connect**.
+2. Enter your Palo Alto **Endpoint** and authentication credentials, then click **Connect**.
 
 ## Retrieved data
 

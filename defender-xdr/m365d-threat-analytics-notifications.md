@@ -5,8 +5,8 @@ description: Set up email notifications to get notified of new Threat analytics 
 ms.service: defender-xdr
 f1.keywords:
 - NOCSH
-ms.author: guywild
-author: guywi-ms
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

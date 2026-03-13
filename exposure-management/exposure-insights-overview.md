@@ -3,10 +3,10 @@ title: Overview of exposure insights and secure score in Microsoft Security Expo
 description: Learn how to get exposure insights into your corporate attack surface with Microsoft Security Exposure Management.
 ms.author: dlanger
 author: dlanger
-manager: rayne-wiselman
+manager: ornat-spodek
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 05/27/2025
+ms.date: 07/30/2025
 ---
 
 # Overview - Exposure insights
@@ -40,7 +40,7 @@ Security Exposure Management provides initiatives that currently include:
   - Threat actors and threat vectors.
   - Threat reports that have three or more recommendations.
 
-- **Zero trust initiative**: Assess the risk associated with zero trust compliance. This initiative aligns with guidance provided by the [zero trust adoption framework](/security/zero-trust/adopt/zero-trust-adoption-overview).
+- **Zero trust initiative**: Assess the risk associated with Zero Trust compliance. This initiative aligns with guidance provided by the [Zero Trust adoption framework](/security/zero-trust/adopt/zero-trust-adoption-overview).
 
 - **External attack surface management initiative**: Assess the risk associated with your organization's or vendor's external attack surface. This initiative offers insights into identified exposures on the selected vendor. By leveraging this initiative, organizations can understand their risk exposure, prioritize security efforts, and proactively manage their security posture. 
 
@@ -64,7 +64,7 @@ You can prioritize which initiatives you want to see on the **Overview** dashboa
 
 ## Working with metrics
 
-On the **Metrics** tab of an initiative, or in the **Metrics** section of **Exposure Insights**, you can see the metric state, its effect and relative importance in an initiative, and recommendations to improve the metric. For each metric you can:
+On the **Metrics** tab of an initiative, or in the **Metrics** section of **Exposure Insights**, you can see the metric state, its effect, and relative importance in an initiative, and recommendations to improve the metric. For each metric you can:
 
 - Review metrics properties, including:
   - **Metric name**: The name of the metric.
@@ -92,34 +92,42 @@ Grayed out metrics aren't considered for score calculation.
 > The versioning feature in Exposure Management provides proactive notifications to users about upcoming version updates, providing advanced visibility into the expected metric changes and their impact on related initiatives.
 > A dedicated side panel offers more details about the update, including the expected date of the change, release notes, and current and new metric values, as well as changes to the related initiatives' scores.
 > Users can share feedback about the update directly through the platform.
-> The information is dynamic and may vary depending on when it is accessed.
+> The information is dynamic and might vary depending on when it's accessed.
 
 ## Working with recommendations
 
-Security Exposure Management ingests security recommendations from multiple sources, including Microsoft Defender for Cloud running the  [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management), [Microsoft Secure Score](/defender-xdr/microsoft-secure-score), Microsoft threat analytics, and other Microsoft workloads. Security Exposure Management integrates all of these recommendations into a single security catalog.
+Security Exposure Management ingests security recommendations from multiple sources, including Exposure Management, [Microsoft Secure Score](/defender-xdr/microsoft-secure-score), and Microsoft Defender for Cloud. With the integration of Defender for Cloud in the Defender portal, Microsoft Security Exposure Management consolidates all of these recommendations into a unified Recommendations Catalog accessible in the Defender portal.
 
-- You can view recommendations from the **Recommendations** tab, or review and remediate recommendations within a specific security initiative or metric.
-- Each recommendation provides remediation steps to fix detected compliance issues.
-- Every action taken on a security recommendation helps to reduce exposure and risk, improve security posture, and directly influence its related security initiatives and metrics.
+### Unified Recommendations Experience
 
-Security Exposure Management categorizes recommendations by compliance status, as follows:
+- **New unified Recommendations page**: All recommendations from various sources (Secure Score, Defender for Cloud, Defender for Endpoint, etc.) are now consolidated into one catalog view in the Defender portal
+- **Organized by attack surface**: Recommendations are organized by tabs for different domains - Devices, Cloud, Identity, SaaS, and Data
+- **Categorized by issue type**: Recommendations are separated by type - misconfigurations vs vulnerabilities vs secrets. For example, on the Devices tab, you'll find separate views for Misconfigurations and Vulnerabilities, aligning with different remediation workflows
 
-- **Compliant**: Indicates that the recommendation was implemented successfully.
-- **Not complaint**: Indicates that the recommendation hasn't been fixed.
-- **Mitigated by organization**: Displays when steps to mitigate recommendations were taken elsewhere, and Security Exposure Management can't know whether recommendations are compliant. For example, by changing a status in Secure score.
-- **Not available**: Means there isn't enough information to determine the compliance status.
+### Recommendation management
 
-:::image type="content" source="./media//exposure-insights-overview/recommendation-ransomware-advanced-protection.png" alt-text="Screenshot of the ransomware advanced protection recommendation details ":::
+- You can view recommendations from the **Recommendations** tab with new filtering options by attack surface tabs and issue types
+- Each recommendation provides remediation steps to fix detected compliance issues
+- Every action taken on a security recommendation helps to reduce exposure and risk, improve security posture, and directly influence its related security initiatives and metrics
+- Use the new filtering capabilities to focus on specific domains (Cloud, Devices, etc.) or issue types (misconfigurations, vulnerabilities, etc.)
 
-### Secure score
+### Secure score integration
 
-[Microsoft Secure Score](/defender-xdr/microsoft-secure-score) helps organizations to plan and improve overall security posture using the secure score as a tracking metric.
+Secure score helps organizations to plan and improve overall security posture using the secure score as a tracking metric. With the integration of Defender for Cloud in the Defender portal, Security Exposure Management now presents both traditional **Microsoft Secure Score** and new **Cloud Secure Score** side-by-side for comprehensive posture management.
 
-Security Exposure Management uses secure score as one of its sources for initiative scores.
+#### Unified secure score experience
 
-- Secure Score has recommended actions for a [number of products](/defender-xdr/microsoft-secure-score#products-included-in-secure-score).
-- When you select a recommendation to review, Security Exposure Management allows you to remediate the problem in the specific product, including recommendations that are derived from Secure Score.
-- For recommendations where Secure Score is relevant, the recommendation doesn't display if Secure Score isn't active.
+- **[Microsoft Secure Score](/defender-xdr/microsoft-secure-score)**: A score that covers device, identities, SaaS apps, and data, providing an overall organizational posture metric
+- **[Cloud Secure Score](/azure/defender-for-cloud/secure-score-security-controls?pivots=defender-portal)**: A score for Azure, AWS, and GCP resources, providing cloud-specific posture metric
+- **Side-by-side visibility**: Both scores are now accessible within MSEM, giving a combined view of organizational posture across different domains
+
+#### How Security Exposure Management uses Secure Score
+
+- Security Exposure Management leverages Secure Score more deeply as one of its sources for initiative scores
+- Secure Score has recommended actions for a [number of products](/defender-xdr/microsoft-secure-score#products-included-in-secure-score)
+- When you select a recommendation to review, Security Exposure Management allows you to remediate the problem in the specific product, including recommendations that are derived from Secure Score
+- For recommendations where Secure Score is relevant, the recommendation doesn't display if Secure Score isn't active
+- The unified experience allows you to see how traditional Secure Score improvements affect overall exposure management metrics
 
 ## Monitoring and improving scores
 

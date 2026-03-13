@@ -2,11 +2,11 @@
 title: Minimum requirements for Microsoft Defender for Endpoint
 description: Understand licensing and other requirements for onboarding devices to Defender for Endpoint
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
-ms.date: 06/10/2025
+ms.date: 11/17/2025
 manager: bagol
 audience: ITPro
 ms.collection: 
@@ -22,9 +22,6 @@ appliesto:
 
 ---
 # Minimum requirements for Microsoft Defender for Endpoint
-
-
-
 
 There are some minimum requirements for onboarding devices to Defender for Endpoint. This article describes licensing, hardware and software requirements, and other configuration settings needed to onboard devices.
 
@@ -63,6 +60,8 @@ Devices on your network must be running one of the operating systems listed in t
 - [Windows Enterprise LTSC 2016 (and later)](/windows/whats-new/ltsc/)
 
 - [Windows Enterprise multi-session](/azure/virtual-desktop/windows-multisession-faq)
+
+- Windows 7 SP1 Pro, Enterprise, provided that you onboard using the [Defender deployment tool (preview)](./defender-deployment-tool-windows.md).
 
 - Windows Server
   - Windows Server 2012 R2 and later (including Core installation type)
@@ -158,5 +157,5 @@ If you're running a non-Microsoft anti-malware client and use Mobile Device Mana
 
 - [Onboard devices](onboard-configure.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

@@ -6,8 +6,8 @@ ms.service: defender-xdr
 ms.subservice: adv-hunting
 f1.keywords:
   - NOCSH
-ms.author: dansimp
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -48,6 +48,9 @@ If you can't take action, contact a Global Administrator about getting the follo
 
 To take action on emails through advanced hunting, you need a role in Microsoft Defender for Office 365 to [search and purge emails](/defender-office-365/scc-permissions).
 
+- [Microsoft Defender XDR Unified role based access control (URBAC)](manage-rbac.md):
+  - Membership assigned with the **Security operations** \> **Security data** \> **Security data basic (read)** \> **Response (manage)** and **Email & collaboration advanced actions (manage)** URBAC permissions enable the **Take action** option in Advanced hunting and grants users the required permissions to perform remediation actions. 
+ 
 ## Take various actions on devices
 
 You can take the following actions on devices identified by the `DeviceId` column in your query results:
@@ -76,7 +79,7 @@ To learn more about how quarantine actions are taken and how files can be restor
 
 To take any of the described actions, select one or more records in your query results and then select **Take actions**. A wizard guides you through the process of selecting and then submitting your preferred actions.
 
-:::image type="content" source="media/take-action-multiple.png" alt-text="Screenshot of the take actions option in the Microsoft Defender portal." lightbox="media/take-action-multiple.png":::
+:::image type="content" source="media/advanced-hunting-take-action/take-action-multiple.png" alt-text="Screenshot of the take actions option in the Microsoft Defender portal." lightbox="media/advanced-hunting-take-action/take-action-multiple.png":::
 
 ## Take various actions on emails
 
@@ -86,13 +89,13 @@ Apart from device-focused remediation steps, you can also take some actions on e
 
      Note that you can move email results consisting of quarantined items (for instance, in the case of false positives) by selecting the **Inbox** option.
 
-   :::image type="content" source="media/advanced-hunting-quarantine-results.png" alt-text="Screenshot of the Inbox option under take actions pane in the Microsoft Defender portal." lightbox="media/advanced-hunting-quarantine-results.png":::
+   :::image type="content" source="media/advanced-hunting-take-action/advanced-hunting-quarantine-results.png" alt-text="Screenshot of the Inbox option under take actions pane in the Microsoft Defender portal." lightbox="media/advanced-hunting-take-action/advanced-hunting-quarantine-results.png":::
 
 - `Delete email` - select this action to move email messages to the Deleted items folder (**Soft delete**) or delete them permanently (**Hard delete**)
 
    Selecting **Soft delete** also automatically soft deletes the messages from the sender's Sent Items folder if the sender is in the organization.
 
-   :::image type="content" source="media/soft-delete-sender-copy.png" alt-text="Screenshot of take actions option in the Microsoft Defender portal." lightbox="media/soft-delete-sender-copy.png":::
+   :::image type="content" source="media/advanced-hunting-take-action/soft-delete-sender-copy.png" alt-text="Screenshot of take actions option in the Microsoft Defender portal." lightbox="media/advanced-hunting-take-action/soft-delete-sender-copy.png":::
 
    Automatic soft-deletion of the sender's copy is available for results using the `EmailEvents` and `EmailPostDeliveryEvents` tables but not the `UrlClickEvents` table. Furthermore, the result should contain the columns `EmailDirection` and `SenderFromAddress` columns for this action option to show up in the Take actions wizard. Sender's copy clean-up applies to intra-organization emails and outbound emails, ensuring that only the sender's copy is soft-deleted for these email messages. Inbound messages are out of scope.
 
@@ -110,17 +113,17 @@ Apart from device-focused remediation steps, you can also take some actions on e
 
   **Submit to Microsoft** might be disabled if mandatory columns are missing. To resolve this issue, select **Show empty columns** before you select **Take actions**.
 
-  :::image type="content" source="media/advanced-hunting-take-actions-submit-to-microsoft.png" alt-text="Screenshot of Choose actions page of the Take actions wizard with Submit to Microsoft selected and the Selected entities to block details flyout." lightbox="media/advanced-hunting-take-actions-submit-to-microsoft.png":::
+  :::image type="content" source="media/advanced-hunting-take-action/advanced-hunting-take-actions-submit-to-microsoft.png" alt-text="Screenshot of Choose actions page of the Take actions wizard with Submit to Microsoft selected and the Selected entities to block details flyout." lightbox="media/advanced-hunting-take-action/advanced-hunting-take-actions-submit-to-microsoft.png":::
 
 - `Initiate automated investigation` - select this action to trigger [Automated investigation](/defender-office-365/air-about) on email, sender, recipient or contact recipients.
 
   **Initiate automated investigation** might be disabled if mandatory columns are missing. To resolve this issue, select **Show empty columns** before you select **Take actions**.
 
-  :::image type="content" source="media/advanced-hunting-take-actions-choose-actions.png" alt-text="Screenshot of the Choose actions page of the Take actions wizard with Initiate automated investigation selected." lightbox="media/advanced-hunting-take-actions-choose-actions.png":::
+  :::image type="content" source="media/advanced-hunting-take-action/advanced-hunting-take-actions-choose-actions.png" alt-text="Screenshot of the Choose actions page of the Take actions wizard with Initiate automated investigation selected." lightbox="media/advanced-hunting-take-action/advanced-hunting-take-actions-choose-actions.png":::
 
 You can also provide a remediation name and a short description of the action taken to easily track it in the action center history. You can also use the Approval ID to filter for these actions in the action center. This ID is provided at the end of the wizard:
 
-:::image type="content" source="media/choose-email-actions-entities.png" alt-text="take actions wizard showing choose actions for entities" lightbox="media/choose-email-actions-entities.png":::
+:::image type="content" source="media/advanced-hunting-take-action/choose-email-actions-entities.png" alt-text="take actions wizard showing choose actions for entities" lightbox="media/advanced-hunting-take-action/choose-email-actions-entities.png":::
 
 These email actions are applicable to [custom detections](custom-detections-overview.md) as well.
 

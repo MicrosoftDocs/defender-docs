@@ -3,8 +3,8 @@ title: Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint S
 ms.reviewer: yonghree
 description: Learn how to evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management (Endpoint security policies).
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
 manager: bagol
 audience: ITPro
@@ -27,7 +27,7 @@ If you have any questions about a detection that MDAV makes, or you discover a m
 
 ## Use Microsoft Defender Endpoint Security Settings Management (Endpoint security policies) to enable the features
 
-This section describes the [Microsoft Defender for Endpoint Security Settings Management (Endpoint security policies)](/mem/intune/protect/mde-security-integration) that configure the features you should use to evaluate our protection.
+This section describes the [Microsoft Defender for Endpoint Security Settings Management (Endpoint security policies)](/intune/intune-service/protect/mde-security-integration) that configure the features you should use to evaluate our protection.
 
 MDAV indicates a detection through [standard Windows notifications](configure-notifications-microsoft-defender-antivirus.md). You can also review detections in the MDAV app. To do this, see [Review Microsoft Defender Antivirus scan results](review-scan-results-microsoft-defender-antivirus.md).
 
@@ -169,9 +169,9 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 > Any of the rules might block behavior you find acceptable in your organization. In these cases, add the per-rule exclusions named "Attack Surface Reduction Only Exclusions." Additionally, change the rule from **Enabled** to **Audit** to prevent unwanted blocks.
 
 1. Select **Next**.
-2. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**.
-3. Select **Next**.
-4. On the **Review + create** tab, review your policy settings, and then select **Save**.
+1. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**.
+1. Select **Next**.
+1. On the **Review + create** tab, review your policy settings, and then select **Save**.
 
 #### Enable Tamper Protection
 

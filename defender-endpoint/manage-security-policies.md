@@ -32,7 +32,7 @@ Use security policies to manage security settings on devices. As a Security Admi
 You'll find endpoint security policies under **Endpoints** > **Configuration management** > **Endpoint security policies**.
 
 > [!NOTE]
-> The **Endpoint Security Policies** page in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) is available only for users who have access to all devices and possess `Core security settings (manage)` permissions. Any user role without these permissions, such as `Security Reader`, cannot access the portal. When a user has the required permissions to view policies in the Microsoft Defender portal, the data is presented based on Intune permissions. If the user is in scope for Intune role-based access control, it applies to the list of policies presented in the Microsoft Defender portal. We recommend granting security administrators with the [Intune built-in role, "Endpoint Security Manager"](/mem/intune/fundamentals/role-based-access-control#built-in-roles) to effectively align the level of permissions between Intune and the Microsoft Defender portal.
+> The **Endpoint Security Policies** page in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) is available only for users who have access to all devices and possess `Core security settings (manage)` permissions. Any user role without these permissions, such as `Security Reader`, cannot access the portal. When a user has the required permissions to view policies in the Microsoft Defender portal, the data is presented based on Intune permissions. If the user is in scope for Intune role-based access control, it applies to the list of policies presented in the Microsoft Defender portal. We recommend granting security administrators with the [Intune built-in role, "Endpoint Security Manager"](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles) to effectively align the level of permissions between Intune and the Microsoft Defender portal.
 
 :::image type="content" source="./media/endpoint-security-policies.png" alt-text="Managing Endpoint security policies in the Microsoft Defender portal":::
 
@@ -53,24 +53,24 @@ The following list provides a brief description of each endpoint security policy
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) using at least a Security Administrator role.
 
-2. Select **Endpoints > Configuration management > Endpoint security policies** and then select **Create new Policy**. 
+1. Select **Endpoints > Configuration management > Endpoint security policies** and then select **Create new Policy**. 
 
-3. Select a platform from the dropdown list.
+1. Select a platform from the dropdown list.
 
-4. Select a template, then select **Create policy**.
+1. Select a template, then select **Create policy**.
 
 
-5. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
+1. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
 
-6. On the **Settings** page, expand each group of settings, and configure the settings you want to manage with this profile.
+1. On the **Settings** page, expand each group of settings, and configure the settings you want to manage with this profile.
 
    When you're done configuring settings, select **Next**.
 
-7. On the **Assignments** page, select the groups that will receive this profile. 
+1. On the **Assignments** page, select the groups that will receive this profile. 
 
    Select **Next**.
 
-8. On the **Review + create** page, when you're done, select **Save**. The new profile is displayed in the list when you select the policy type for the profile you created.
+1. On the **Review + create** page, when you're done, select **Save**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
 > [!NOTE]
 > To edit the scope tags, you'll need to go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -79,14 +79,14 @@ The following list provides a brief description of each endpoint security policy
 
 1. Select the new policy, and then select **Edit**.
  
-2. Select **Settings** to expand a list of the configuration settings in the policy. You can't modify the settings from this view, but you can review how they're configured.
+1. Select **Settings** to expand a list of the configuration settings in the policy. You can't modify the settings from this view, but you can review how they're configured.
 
-3. To modify the policy, select **Edit** for each category where you want to make a change:
+1. To modify the policy, select **Edit** for each category where you want to make a change:
    - Basics
    - Settings
    - Assignments
 
-4. After you've made changes, select **Save** to save your edits.  Edits to one category must be saved before you can introduce edits to additional categories.
+1. After you've made changes, select **Save** to save your edits.  Edits to one category must be saved before you can introduce edits to additional categories.
 
 ## Verify endpoint security policies
 
@@ -103,5 +103,4 @@ During an investigation, you can also view the **Security policies** tab in the 
 :::image type="content" source="./media/security-policies-list.png" alt-text="Security policies tab with list of policies":::
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
