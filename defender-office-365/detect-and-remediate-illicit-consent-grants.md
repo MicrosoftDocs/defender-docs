@@ -10,7 +10,7 @@ ms.topic: how-to
 ms.collection:
 - tier2
 - m365-security
-ms.date: 02/13/2025
+ms.date: 03/13/2026
 ms.localizationpriority: medium
 search.appverid:
   - MET150
@@ -39,7 +39,7 @@ In an illicit consent grant attack, the attacker creates a registered applicatio
 This article explains the steps to identify illicit consent grants in your organization, and how to remediate them.
 
 > [!TIP]
-> Do you suspect that you're experiencing problems with illicit consent grants right now? Microsoft Defender for Cloud Apps has tools to detect, investigate, and remediate your OAuth apps. This Defender for Cloud Apps article has a tutorial that outlines how to go about [investigating risky OAuth apps](/cloud-app-security/investigate-risky-oauth). You can also set [OAuth app policies](/cloud-app-security/app-permission-policy) to investigate app-requested permissions, which users are authorizing these apps, and widely approve or ban these permissions requests.
+> Do you suspect that you're experiencing problems with illicit consent grants right now? Microsoft Defender for Cloud Apps has tools to detect, investigate, and remediate your OAuth apps. This Defender for Cloud Apps article has a tutorial that outlines how to go about [investigating risky OAuth apps](/defender-cloud-apps/investigate-risky-oauth). You can also set [OAuth app policies](/defender-cloud-apps/app-permission-policy) to investigate app-requested permissions, which users are authorizing these apps, and widely approve or ban these permissions requests.
 
 ## What do you need to know before you begin?
 
