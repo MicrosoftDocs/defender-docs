@@ -3146,8 +3146,8 @@ We have added four new Microsoft Entra authentication recommendations for Azure 
 |--|--|--|
 | Azure SQL Managed Instance authentication mode should be Microsoft Entra ID Only | Disabling local authentication methods and allowing only Microsoft Entra authentication improves security by ensuring that Azure SQL Managed Instances can exclusively be accessed by Microsoft Entra ID identities. | [Azure SQL Managed Instance should have Microsoft Entra ID Only Authentication enabled](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f78215662-041e-49ed-a9dd-5385911b3a1f) |
 | Azure Synapse Workspace authentication mode should be Microsoft Entra ID Only | Microsoft Entra ID only authentication methods improves security by ensuring that Synapse Workspaces exclusively require Microsoft Entra ID identities for authentication. [Learn more](https://aka.ms/Synapse). | [Synapse Workspaces should use only Microsoft Entra ID identities for authentication](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f2158ddbe-fefa-408e-b43f-d4faef8ff3b8) |
-| Azure Database for MySQL should have an Microsoft Entra administrator provisioned | Provision an Microsoft Entra administrator for your Azure Database for MySQL to enable Microsoft Entra authentication. Microsoft Entra authentication enables simplified permission management and centralized identity management of database users and other Microsoft services | [An Microsoft Entra administrator should be provisioned for MySQL servers](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f146412e9-005c-472b-9e48-c87b72ac229e) |
-| Azure Database for PostgreSQL should have an Microsoft Entra administrator provisioned | Provision an Microsoft Entra administrator for your Azure Database for PostgreSQL to enable Microsoft Entra authentication. Microsoft Entra authentication enables simplified permission management and centralized identity management of database users and other Microsoft services | [An Microsoft Entra administrator should be provisioned for PostgreSQL servers](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fb4dec045-250a-48c2-b5cc-e0c4eec8b5b4) |
+| Azure Database for MySQL should have a Microsoft Entra administrator provisioned | Provision a Microsoft Entra administrator for your Azure Database for MySQL to enable Microsoft Entra authentication. Microsoft Entra authentication enables simplified permission management and centralized identity management of database users and other Microsoft services | [a Microsoft Entra administrator should be provisioned for MySQL servers](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f146412e9-005c-472b-9e48-c87b72ac229e) |
+| Azure Database for PostgreSQL should have a Microsoft Entra administrator provisioned | Provision a Microsoft Entra administrator for your Azure Database for PostgreSQL to enable Microsoft Entra authentication. Microsoft Entra authentication enables simplified permission management and centralized identity management of database users and other Microsoft services | [a Microsoft Entra administrator should be provisioned for PostgreSQL servers](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fb4dec045-250a-48c2-b5cc-e0c4eec8b5b4) |
 
 ### Two recommendations related to missing Operating System (OS) updates were released to GA
 
@@ -3283,9 +3283,9 @@ Learn how to [Customize the set of standards in your regulatory compliance dashb
 
 ### New preview recommendation for Azure SQL Servers
 
-We've added a new recommendation for Azure SQL Servers, `Azure SQL Server authentication mode should be Microsoft Entra ID Only (Preview)`.
+We've added a new recommendation for Azure SQL Servers, `Azure SQL Server authentication mode should be Azure Active Directory Only (Preview)`.
 
-The recommendation is based on the existing policy [`Azure SQL Database should have Microsoft Entra ID Only Authentication enabled`](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fabda6d70-9778-44e7-84a8-06713e6db027)
+The recommendation is based on the existing policy [`Azure SQL Database should have Azure Active Directory Only Authentication enabled`](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fabda6d70-9778-44e7-84a8-06713e6db027)
 
 This recommendation disables local authentication methods and allows only Microsoft Entra authentication, which improves security by ensuring that Azure SQL Databases can exclusively be accessed by Microsoft Entra ID identities.
 
@@ -5490,7 +5490,7 @@ The eleven Azure Defender alerts listed below have been deprecated.
     | ARM_MicroBurstDomainInfo | PREVIEW - MicroBurst toolkit "Get-AzureDomainInfo" function run detected |
     | ARM_MicroBurstRunbook    | PREVIEW - MicroBurst toolkit "Get-AzurePasswords" function run detected  |
 
-- These nine alerts relate to an Microsoft Entra Identity Protection connector (IPC) that has already been deprecated:
+- These nine alerts relate to a Microsoft Entra Identity Protection connector (IPC) that has already been deprecated:
 
     | AlertType           | AlertDisplayName              |
     |---------------------|-------------------------------|
@@ -5625,9 +5625,9 @@ Learn more about how to [Automate responses to Security Center triggers](workflo
 
 ### Two legacy recommendations no longer write data directly to Azure activity log
 
-Security Center passes the data for almost all security recommendations to Microsoft Entra IDvisor, which in turn, writes it to [Azure activity log](/azure/azure-monitor/essentials/activity-log).
+Security Center passes the data for almost all security recommendations to Azure Advisor, which in turn, writes it to [Azure activity log](/azure/azure-monitor/essentials/activity-log).
 
-For two recommendations, the data is simultaneously written directly to Azure activity log. With this change, Security Center stops writing data for these legacy security recommendations directly to activity Log. Instead, we're exporting the data to Microsoft Entra IDvisor as we do for all the other recommendations.
+For two recommendations, the data is simultaneously written directly to Azure activity log. With this change, Security Center stops writing data for these legacy security recommendations directly to activity Log. Instead, we're exporting the data to Azure Advisor as we do for all the other recommendations.
 
 The two legacy recommendations are:
 
