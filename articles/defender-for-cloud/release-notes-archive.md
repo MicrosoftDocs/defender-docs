@@ -3355,7 +3355,7 @@ Updates in January include:
 - [New version of the recommendation to find missing system updates (Preview)](#new-version-of-the-recommendation-to-find-missing-system-updates-preview)
 - [Cleanup of deleted Azure Arc machines in connected AWS and GCP accounts](#cleanup-of-deleted-azure-arc-machines-in-connected-aws-and-gcp-accounts)
 - [Allow continuous export to Event Hubs behind a firewall](#allow-continuous-export-to-event-hubs-behind-a-firewall)
-- [The name of the Secure score control Protect your applications with Microsoft Entra IDvanced networking solutions has changed](#the-name-of-the-secure-score-control-protect-your-applications-with-azure-advanced-networking-solutions-is-changed)
+- [The name of the Secure score control Protect your applications with Azure advanced networking solutions has changed](#the-name-of-the-secure-score-control-protect-your-applications-with-azure-advanced-networking-solutions-is-changed)
 - [The policy Vulnerability Assessment settings for SQL server should contain an email address to receive scan reports is deprecated](#the-policy-vulnerability-assessment-settings-for-sql-server-should-contain-an-email-address-to-receive-scan-reports-is-deprecated)
 - [Recommendation to enable diagnostic logs for Virtual Machine Scale Sets is deprecated](#recommendation-to-enable-diagnostic-logs-for-virtual-machine-scale-sets-is-deprecated)
 
@@ -3392,9 +3392,9 @@ You can enable continuous export as the alerts or recommendations are generated.
 
 Learn how to enable [continuous export to an Event Hubs behind an Azure firewall](continuous-export-event-hub-firewall.md).
 
-### The name of the Secure score control Protect your applications with Microsoft Entra IDvanced networking solutions is changed
+### The name of the Secure score control Protect your applications with Azure advanced networking solutions is changed
 
-The secure score control, `Protect your applications with Microsoft Entra IDvanced networking solutions` is changed to `Protect applications against DDoS attacks`.
+The secure score control, `Protect your applications with Azure advanced networking solutions` is changed to `Protect applications against DDoS attacks`.
 
 The updated name is reflected on Azure Resource Graph (ARG), Secure Score Controls API and the `Download CSV report`.
 
