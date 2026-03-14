@@ -16,7 +16,7 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 10/20/2025
+ms.date: 03/14/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
