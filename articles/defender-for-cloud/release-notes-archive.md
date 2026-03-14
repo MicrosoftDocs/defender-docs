@@ -3038,7 +3038,7 @@ Updates in April include:
 - [Three alerts in the Defender for Resource Manager plan have been deprecated](#three-alerts-in-the-defender-for-resource-manager-plan-have-been-deprecated)
 - [Alerts automatic export to Log Analytics workspace have been deprecated](#alerts-automatic-export-to-log-analytics-workspace-have-been-deprecated)
 - [Deprecation and improvement of selected alerts for Windows and Linux Servers](#deprecation-and-improvement-of-selected-alerts-for-windows-and-linux-servers)
-- [New Microsoft Entra authentication-related recommendations for Azure Data Services](#new-azure-active-directory-authentication-related-recommendations-for-azure-data-services)
+- [New Microsoft Entra authentication-related recommendations for Azure Data Services](#new-microsoft-entra-authentication-related-recommendations-for-azure-data-services)
 - [Two recommendations related to missing Operating System (OS) updates were released to GA](#two-recommendations-related-to-missing-operating-system-os-updates-were-released-to-ga)
 - [Defender for APIs (Preview)](#defender-for-apis-preview)
 
@@ -6567,7 +6567,7 @@ The details page for recommendations now includes a freshness interval indicator
 Updates in August include:
 
 - [Asset inventory - powerful new view of the security posture of your assets](#asset-inventory---powerful-new-view-of-the-security-posture-of-your-assets)
-- [Added support for Microsoft Entra ID security defaults (for multifactor authentication)](#added-support-for-azure-active-directory-security-defaults-for-multifactor-authentication)
+- [Added support for Microsoft Entra ID security defaults (for multifactor authentication)](#added-support-for-microsoft-entra-id-security-defaults-for-multifactor-authentication)
 - [Service principals recommendation added](#service-principals-recommendation-added)
 - [Vulnerability assessment on VMs - recommendations and policies consolidated](#vulnerability-assessment-on-vms---recommendations-and-policies-consolidated)
 - [New AKS security policies added to ASC_default initiative](#new-aks-security-policies-added-to-asc_default-initiative)
