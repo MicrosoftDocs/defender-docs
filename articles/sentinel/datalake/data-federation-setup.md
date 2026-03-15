@@ -22,10 +22,10 @@ This article explains how to configure federated data connectors to enable query
 Before setting up data federation, ensure you meet the following requirements:
 
 - **Sentinel data lake onboarding**: Your Microsoft Sentinel workspace must be onboarded to the Sentinel data lake.
-- **Public accessibility**: The federation source must be publicly accessible. Private endpoints aren't supported currently.
-- **Service principal**: A service principal with appropriate permissions to access Azure Key Vault secrets (required for Azure Databricks and ADLS Gen 2).
-- **Azure Key Vault**: An Azure Key Vault configured with role-based access control (RBAC) to store authentication secrets.
-- **Microsoft Sentinel permissions**: ??? Whats the minimum permisssion needed??? Appropriate permissions to create and manage data connectors. For more information, see [Microsoft Sentinel permissions](https://learn.microsoft.com/en-us/azure/sentinel/permissions).
+- **Public accessibility**: Azure Data Lake Storage Gen2 and Azure Databricks sources must be publicly accessible. Private endpoints for these sources aren't supported currently. 
+- **Service principal**: A service principal with access to the external data source. For more information on creating service principals. For more information, see [Microsoft Entra ID app registrations](/entra/identity-platform/quickstart-register-app).
+- **Azure Key Vault**:An Azure Key Vault configured with the Service principal client secret.  The Microsoft sentinel application identity needs permissions assigned to the key vault. For more information on configuring Azure Key vaults, see [Azure Key Vaults](s/azure/key-vault/general/basic-concepts).
+- **Microsoft Sentinel permissions**: **Data (manage)** permissions on System tables to configure a data federation connector. For more information, see [Microsoft Sentinel permissions](https://learn.microsoft.com/en-us/azure/sentinel/permissions).
 - **Source data access**: Access to the external data source you want to federate.
 - The external data source must be publicly accessible (private endpoints aren't supported)
 
@@ -53,6 +53,11 @@ For Azure Databricks and ADLS Gen 2 federation, you need a service principal to 
    - Object ID
    - Directory (tenant) ID
 
+For more information on creating service principals, see [Microsoft Entra ID app registrations](/entra/identity-platform/quickstart-register-app).
+
+
+## Create an Azure Key Vault and store credentials
+
 1. **Create an Azure Key Vault**:
    1. In the Azure portal, create a new Azure Key Vault.
    1. Use the **Azure role-based access control (recommended)** permission model.
@@ -62,12 +67,13 @@ For Azure Databricks and ADLS Gen 2 federation, you need a service principal to 
    1. Assign the **Key Vault Secrets Officer** role to your service principal on the Key Vault's **Access Control (IAM)** page.
    1. Assign the **Key Vault Secrets User** role to the Microsoft Sentinel platform's managed identity. The system managed identity prefixed with `msg-resource`.
 
+
 1. **Store the client secret in Key Vault**:
    1. In your Key Vault, go to **Secrets** > **Generate/Import**.
    1. Create a new secret containing the service principal's client secret.
    1. Note the secret name.
 
-For more information on creating service principals, see [Microsoft Entra ID app registrations](/entra/identity-platform/quickstart-register-app).
+:::image type="content" source="./media/data-federation-setup/key-vault-permissions.png" lightbox="./media/data-federation-setup/key-vault-permissions.png" alt-text="Screenshot showing the Key Vault secret details.":::
 
 ## Federated data connectors
 
@@ -76,7 +82,7 @@ Federated connectors are managed on the Data connectors page in Microsoft Sentin
 1. Navigate to **Microsoft Sentinel** > **Configuration** > **Data connectors**.
 1. Under **Data federation**, select **Catalog** to view the available federated connectors.
 
-:::image type="content" source="../media/data-federation/federation-catalog.png" alt-text="Screenshot showing the data federation catalog with available connectors." lightbox="../media/data-federation/federation-catalog.png":::
+:::image type="content" source="./media/data-federation-setup/federation-catalog.png" alt-text="Screenshot showing the data federation catalog with available connectors." lightbox="./media/data-federation-setup/federation-catalog.png":::
 
 The catalog page displays:
 - Available federation connector types
@@ -85,11 +91,11 @@ The catalog page displays:
 
 Select **My connectors page** to view all configured connector instances.
 
-:::image type="content" source="../media/data-federation/my-connectors.png" alt-text="Screenshot showing the My connectors page with configured federation instances." lightbox="../media/data-federation/my-connectors.png":::
+:::image type="content" source="./media/data-federation-setup/my-connectors.png" alt-text="Screenshot showing the My connectors page with configured federation instances." lightbox="./media/data-federation-setup/my-connectors.png":::
 
 ## Create a connector instance
 
-# [ADLS Gen 2](#tab/adls)
+# [Azure Data Lake Storage Gen 2](#tab/adls)
 
 ### Prepare your ADLS Gen 2 storage account
 
@@ -97,7 +103,10 @@ Before creating the connector, prepare your storage account:
 
 1. If you're creating a new storage account, ensure the **Hierarchical namespaces** setting is enabled.
 1. Assign the **Storage Blob Data Reader** role to the service principal you created earlier.
-1. Note the ADLS Gen 2 storage account endpoint URL.
+1. Take note of the ADLS Gen 2 storage account endpoint URL.
+
+> [!NOTE]
+> The files in your ADLS Gen 2 storage account must be in delta parquet format to be read from the Sentinel data lake.
 
 ### Create the ADLS Gen 2 connector instance
 
@@ -117,7 +126,7 @@ Before creating the connector, prepare your storage account:
 
 1. Select **Next** to continue.
 
-   :::image type="content" source="../media/data-federation/adls-connection-details.png" alt-text="Screenshot of the ADLS Gen 2 connection details form." lightbox="../media/data-federation/adls-connection-details.png":::
+   :::image type="content" source="./media/data-federation-setup/adls-connection-details.png" alt-text="Screenshot of the ADLS Gen 2 connection details form." lightbox="./media/data-federation-setup/adls-connection-details.png":::
 
 
 1. Select the tables you want to federate from your ADLS Gen 2 storage account.
@@ -126,14 +135,14 @@ Before creating the connector, prepare your storage account:
 1. Select at least one table to federate.
 1. Select **Next** to continue.
 
-   :::image type="content" source="../media/data-federation/adls-select-tables.png" alt-text="Screenshot showing table selection for ADLS Gen 2 federation." lightbox="../media/data-federation/adls-select-tables.png":::
+   :::image type="content" source="./media/data-federation-setup/adls-select-tables.png" alt-text="Screenshot showing table selection for ADLS Gen 2 federation." lightbox="./media/data-federation-setup/adls-select-tables.png":::
 
 
 1. Once you have selected the tables, review the configuration settings.
 1. Select **Connect** to create the connector instance.
 1. If you need to make changes, select **Back** to return to previous steps.
 
-   :::image type="content" source="../media/data-federation/adls-review.png" alt-text="Screenshot of the ADLS Gen 2 configuration review page." lightbox="../media/data-federation/adls-review.png":::
+   :::image type="content" source="./media/data-federation-setup/adls-review.png" alt-text="Screenshot of the ADLS Gen 2 configuration review page." lightbox="./media/data-federation-setup/adls-review.png":::
 
 Select **Connect**, to complete the setup for the ADLS Gen 2 connector instance.
 
@@ -143,53 +152,53 @@ Select **Connect**, to complete the setup for the ADLS Gen 2 connector instance.
 
 Before creating the connector, configure access in your Databricks environment:
 
-1. In Azure Databricks, navigate to **Settings** > **Identity and Access**.
-1. Select to add a Microsoft Entra ID service principal.
+1. In Azure Databricks, navigate to **Settings** > **Identity and Access**
+1. In your metastore, set **External data access** to **Enabled**.
+1.	In the catalog that you are federating with, select **Permissions** and then select **Grant**.
+1. Search for the service principal you created earlier.
 1. Grant the service principal the **Data Reader** role.
 1. Assign the target catalog the **External Use Schema** permission.
+1.	In the top right, select your account and select **Settings**.
+1. Under **Identity and access**, select the **Manage** button next to **Service principals**.
+1. Select **existing principal** from the box.
+1. Select the service principal you created earlier and select **Add**.
+1. Go back to your catalog, and select the **Settings** gearwheel.
+1. On the **Credentials** page, grant permissions for your service principal for **CREATE CONNECTION** and **READ FILES**.
 
-Your service principal permissions should appear on your catalog similar to this:
 
-:::image type="content" source="../media/data-federation/databricks-permissions.png" alt-text="Screenshot showing service principal permissions in Azure Databricks." lightbox="../media/data-federation/databricks-permissions.png":::
 
 ### Create the Azure Databricks connector instance
 
 1. On the **Data federation** > **Catalog** page, select the **Azure Databricks** row.
-1. In the flyout panel, select **Connect a connector**.
+1. In the side panel, select **Connect a connector**.
 
-#### Step 1: Name and connection details
+1. Enter the following details:
 
-Enter the following information:
+    | Field | Description |
+    |-------|-------------|
+    | **Instance name** | A friendly name for this connector instance |
+    | **Principal ID** | GUID of the service principal with Key Vault access |
+    | **Azure Key Vault URI** | URI of the Key Vault containing the authentication secret |
+    | **Secret name** | Name of the secret in Key Vault containing the Databricks connection information |
+    | **Databricks URL** | URL of the Azure Databricks instance (must be publicly accessible) |
+    | **Catalog name** | Name of the catalog in Azure Databricks to federate |
+    | **Schema name** | Name of the schema in Azure Databricks to federate |
 
-| Field | Description |
-|-------|-------------|
-| **Instance name** | A friendly name for this connector instance |
-| **Principal ID** | GUID of the service principal with Key Vault access |
-| **Azure Key Vault URI** | URI of the Key Vault containing the authentication secret |
-| **Secret name** | Name of the secret in Key Vault containing the Databricks connection information |
-| **Databricks URL** | URL of the Azure Databricks instance (must be publicly accessible) |
-| **Catalog name** | Name of the catalog in Azure Databricks to federate |
-| **Schema name** | Name of the schema in Azure Databricks to federate |
+    :::image type="content" source="./media/data-federation-setup/databricks-connection-details.png" alt-text="Screenshot of the Azure Databricks connection details form." lightbox="./media/data-federation-setup/databricks-connection-details.png":::
 
-:::image type="content" source="../media/data-federation/databricks-connection-details.png" alt-text="Screenshot of the Azure Databricks connection details form." lightbox="../media/data-federation/databricks-connection-details.png":::
+1. Select **Next**.
 
-Select **Next** to continue.
+1. Select the tables you want to federate from your Azure Databricks instance.
 
-#### Step 2: Select tables
-
-1. Browse the available tables in your Databricks catalog and schema.
-1. Select at least one table to federate.
 1. Select **Next** to continue.
 
-:::image type="content" source="../media/data-federation/databricks-select-tables.png" alt-text="Screenshot showing table selection for Azure Databricks federation." lightbox="../media/data-federation/databricks-select-tables.png":::
-
-#### Step 3: Review and connect
+    :::image type="content" source="./media/data-federation-setup/databricks-select-tables.png" alt-text="Screenshot showing table selection for Azure Databricks federation." lightbox="./media/data-federation-setup/databricks-select-tables.png":::
 
 1. Review the configuration settings.
 1. Select **Connect** to create the connector instance.
 1. If you need to make changes, select **Back** to return to previous steps.
 
-:::image type="content" source="../media/data-federation/databricks-review.png" alt-text="Screenshot of the Azure Databricks configuration review page." lightbox="../media/data-federation/databricks-review.png":::
+:::image type="content" source="./media/data-federation-setup/databricks-review.png" alt-text="Screenshot of the Azure Databricks configuration review page." lightbox="./media/data-federation-setup/databricks-review.png":::
 
 After selecting **Connect**, the wizard closes and the instance count for Databricks increases.
 
@@ -200,33 +209,27 @@ After selecting **Connect**, the wizard closes and the instance count for Databr
 Microsoft Fabric federation has simplified requirements compared to other sources.
 
 1. On the **Data federation** > **Catalog** page, select the **Microsoft Fabric** row.
-1. In the flyout panel, select **Connect a connector**.
+1. In the side panel, select **Connect a connector**.
 
-#### Step 1: Connection details
+1. Enter the following information:
 
-Enter the following information:
+    | Field | Description |
+    |-------|-------------|
+    | **Instance name** | A friendly name for this connector instance |
+    | **Fabric workspace ID** | ID of the Fabric workspace to federate |
+    | **Lakehouse table ID** | ID of the Fabric Lakehouse table to federate |
 
-| Field | Description |
-|-------|-------------|
-| **Instance name** | A friendly name for this connector instance |
-| **Fabric workspace ID** | ID of the Fabric workspace to federate |
-| **Lakehouse table ID** | ID of the Fabric Lakehouse table to federate |
+1. Select **Next**.
 
-:::image type="content" source="../media/data-federation/fabric-connection-details.png" alt-text="Screenshot of the Microsoft Fabric connection details form." lightbox="../media/data-federation/fabric-connection-details.png":::
-
-Select **Next** to continue.
-
-#### Step 2: Select tables
+    :::image type="content" source="./media/data-federation-setup/fabric-connection-details.png" alt-text="Screenshot of the Microsoft Fabric connection details form." lightbox="./media/data-federation-setup/fabric-connection-details.png":::
 
 1. Select the tables you want to federate.
-1. Select **Next** to continue.
+1. Select **Next**.
 
-#### Step 3: Review and connect
 
 1. Review the federation target configuration.
-1. Select **Connect** to create the connection instance.
 
-After the connection is created, the wizard closes and you can proceed to query the federated tables.
+1. Select **Connect** to create the connection instance.
 
 ---
 
@@ -238,7 +241,7 @@ After creating a connector instance:
 1. Locate your new connector instance in the list.
 1. Select the instance row to open the details flyout.
 
-:::image type="content" source="../media/data-federation/connector-instance-details.png" alt-text="Screenshot showing connector instance details in the flyout panel." lightbox="../media/data-federation/connector-instance-details.png":::
+:::image type="content" source="./media/data-federation-setup/connector-instance-details.png" alt-text="Screenshot showing connector instance details in the flyout panel." lightbox="./media/data-federation-setup/connector-instance-details.png":::
 
 The flyout displays:
 - Connection status
