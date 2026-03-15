@@ -314,7 +314,7 @@ After you contain a device, if the behavior isn't as expected, verify the Base F
 
 ### Stop containing a device
 
-You're be able to stop containing a device at any time.
+You can stop containing a device at any time.
 
 1. Select the device from the **Device inventory** or open the device page.
 
@@ -360,6 +360,7 @@ When an identity in your network might be compromised, you must prevent that ide
 
 ### Contain user important notes
 
+- Defender for Endpoint enforces user containment at the endpoint layer and doesn't disable the account in the identity provider. Defender for Endpoint blocks attacker use of compromised identities on protected devices and limits authentication-based access, file system access, and network communication paths. This action applies controls at a granular level, so Microsoft can target attack-related activity and preserve normal business communication where possible.
 - When the contain user action is triggered by [predictive shielding](/defender-xdr/shield-predict-threats) (Preview), the contain user action applies restrictions more selectively, with a focus on users identified as high risk through prediction logic. The contain user action in predictive shielding prevents new sessions rather than terminating existing ones.
 - While the predictive shielding feature as a whole is in Preview, this action is generally available, both when triggered by attack disruption and predictive shielding.
 - Blocking incoming communication with a "contained" user is supported on onboarded Microsoft Defender for Endpoint Windows 10 and 11 devices (Sense version 8740 and higher), Windows Server 2019+ devices, and Windows Servers 2012R2 and 2016 with the modern agent.

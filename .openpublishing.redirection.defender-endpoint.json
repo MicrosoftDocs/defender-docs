@@ -51,6 +51,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "defender-endpoint/linux-support-events.md",
+      "redirect_url": "/defender-endpoint/mde-linux-prerequisites",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "defender-endpoint/mssp-support.md",
       "redirect_url": "/defender-endpoint/configure-mssp-support",
       "redirect_document_id": true
