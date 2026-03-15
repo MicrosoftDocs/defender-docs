@@ -4,7 +4,7 @@ description: Learn how to use Microsoft Defender for Cloud's set of Kubernetes d
 ms.topic: how-to
 author: Elazark
 ms.author: elkrieger
-ms.date: 03/09/2026
+ms.date: 03/15/2026
 ---
 
 # Protect your Kubernetes data plane hardening
@@ -48,7 +48,7 @@ If you disabled the "Azure Policy for Kubernetes" settings under the containers 
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Navigate to **Microsoft Defender for Cloud** > **Management** > **Environment settings**.
+1. Go to **Microsoft Defender for Cloud** > **Management** > **Environment settings**.
 
 1. Select the relevant subscription.
 
@@ -79,7 +79,7 @@ You can manually configure the Azure Policy for Kubernetes on existing Kubernete
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Navigate to **Microsoft Defender for Cloud** > **General** > **Recommendations**.
+1. Go to **Microsoft Defender for Cloud** > **General** > **Recommendations**.
 
 1. Search for the relevant recommendation:
 
@@ -88,14 +88,12 @@ You can manually configure the Azure Policy for Kubernetes on existing Kubernete
    - **AWS and On-premises** - `"Azure Arc-enabled Kubernetes clusters should have the Azure policy extension for Kubernetes extension installed"`.
            :::image type="content" source="./media/kubernetes-workload-protections/azure-kubernetes-service-clusters-recommendation.png" alt-text="Screenshot showing the Azure Kubernetes service clusters recommendation." lightbox="media/kubernetes-workload-protections/azure-kubernetes-service-clusters-recommendation.png":::
 
-      > [!TIP]
-      > The recommendation is included in different security controls, and it doesn't matter which one you select in the next step.
+1. Select a found recommendation.
 
-1. From any of the security controls, select the recommendation to see the resources on which you can install the add-on.
+1. Select **Fix**.
+   :::image type="content" source="media/kubernetes-workload-protections/azure-kubernetes-service-clusters-recommendation-fix.png" alt-text="Screenshot of a recommendation with the Fix button highlighted.":::
 
-1. Select the relevant cluster, and select **Remediate**.
-
-    :::image type="content" source="./media/kubernetes-workload-protections/azure-kubernetes-service-clusters-recommendation-remediation.png" alt-text="Screenshot that shows how to select the cluster to remediate." lightbox="media/kubernetes-workload-protections/azure-kubernetes-service-clusters-recommendation-remediation.png":::
+1. Repeat for each additional recommendation.
 
 ## View and configure the bundle of recommendations
 
