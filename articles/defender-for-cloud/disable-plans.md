@@ -221,6 +221,26 @@ If auto-provisioning or Azure Policy is still enabled, agents might come back. T
 
 1. Select **Save**.
 
+### [Servers](#tab/servers)
+
+On the resource level, you can enable or disable Defender for Servers plan 1. Plan 2 can only be disabled at the resource level.
+
+For example, it’s possible to enable Defender for Servers plan 2 at the subscription level and disable specific resources within the subscription. However, you can't enable plan 2 only on specific resources. If you are still being billed even with the plan disabled, you should see what is still being covered using the [Coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook).
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Search for and select **Microsoft Defender for Cloud**.
+
+1. Go to **Environment settings**.
+
+1. Select a relevant subscription or workspace.
+
+1. Toggle **Defender for Servers plan 1** or **plan 2** to **Off**.
+
+1. Select **Save**.
+
+1. Repeat for each relevant subscription or workspace.
+
 ---
 
 ## Confirm resource-level Defender is off
