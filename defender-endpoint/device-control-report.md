@@ -3,7 +3,7 @@ title: View device control events and information in Microsoft Defender for Endp
 description: Monitor your organization's data security through device control reports.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 06/25/2024
+ms.date: 03/15/2026
 ms.author: lwainstein
 author: limwainstein
 ms.topic: article
@@ -136,6 +136,29 @@ There might be a delay of up to six hours from the time a media connection occur
 
 ---
 
+## Deduplication of access events (preview)
+
+[!INCLUDE [Microsoft Defender for Endpoint preview](../includes/prerelease.md)]
+
+By default, device control sends an audit event for every operating system access request that matches a policy. In high-activity environments, this can generate a large volume of events, potentially reaching the 300 events per device per day limit for `RemovableStoragePolicyTriggered` events.
+
+When deduplication of access events is enabled, device control sends a single audit event per device instead of reporting every individual request. This reduces event noise and helps ensure that audit events remain useful for evaluating how policies behave before you switch to deny mode.
+
+<!-- TODO: Confirm the exact deduplication scope — is it one event per device per policy, per device per access type, or one event per device total? -->
+<!-- TODO: Confirm the deduplication time window — is it per day, per session, or per configurable interval? -->
+
+### Why use event deduplication
+
+- **Stay within event limits**: Avoid reaching the 300 events per device per day cap for `RemovableStoragePolicyTriggered` events in advanced hunting.
+- **Evaluate policies before enforcement**: Use audit mode effectively to understand how policies behave across your environment before switching to deny mode.
+- **Reduce noise**: Focus on meaningful audit signals instead of processing duplicate events for the same device and policy.
+
+<!-- TODO: Confirm how deduplication is enabled — is it automatically enabled for preview participants, or is there a setting/toggle? Add the appropriate instructions here. -->
+<!-- TODO: Confirm which event types are affected — only RemovableStoragePolicyTriggered, or also PnPDeviceConnected, PnPDeviceAllowed, etc.? -->
+<!-- TODO: Confirm whether deduplicated events include an aggregated count field (e.g., EventCount) or other new fields in AdditionalFields. If so, add a sample advanced hunting query showing the new fields. -->
+<!-- TODO: Confirm whether the device control report in the Defender portal is also affected by deduplication, or only advanced hunting events. -->
+<!-- TODO: Confirm platform support — Windows only, or also macOS? -->
+<!-- TODO: Confirm minimum agent/platform version required for this feature. -->
 
 ## See also
 

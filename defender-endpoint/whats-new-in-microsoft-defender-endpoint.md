@@ -32,6 +32,7 @@ Learn more about [Preview features](/defender-xdr/preview).
 |Type  |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|-------------|
 |Feature |[Proactive user containment (contain user)](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) |GA |The proactive user containment (contain user) action as part of the predictive shielding feature is now generally available. This action infuses activity data with exposure data to identify exposed credentials at risk of being compromised and reused to conduct malicious activity.|
+|Feature |[Deduplication of device control access events](device-control-report.md#deduplication-of-access-events-preview) |Preview |Device control can now deduplicate audit events, sending a single event per device instead of one for every access request. This helps you stay within the 300-event daily limit and evaluate policies in audit mode before enforcing them. |
 
 ## February 2026
 
