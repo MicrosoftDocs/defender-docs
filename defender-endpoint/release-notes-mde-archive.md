@@ -141,7 +141,7 @@ This page contains archived platform-specific build and version history for Micr
 - The *Contain* feature now supports more desktop and server versions to perform contain actions and block discovered devices when such devices are contained.
 - Expanded the troubleshooting mode feature to more desktop and server versions. For a complete list of supported OS versions and more information about prerequisites, see [Get started with troubleshooting mode in Microsoft Defender for Endpoint](enable-troubleshooting-mode.md).
 - Live Response improvements include reduced session creation latency when using proxies, an undo remediation manual command, support for OneDrive shares in `FindFile` action, and improved isolation and stability.
-- [Security Management for Microsoft Defender for Endpoint](/mem/intune/protect/mde-security-integration#configure-your-tenant-to-support-microsoft-defender-for-endpoint-security-configuration-management) now provides the ability to sync the device configuration on demand instead of waiting for a specific cadence.
+- [Security Management for Microsoft Defender for Endpoint](/intune/intune-service/protect/mde-security-integration#configure-your-tenant-to-support-microsoft-defender-for-endpoint-security-configuration-management) now provides the ability to sync the device configuration on demand instead of waiting for a specific cadence.
 
  > [!NOTE] 
  > Update package KB5005292 is on a gradual rollout schedule through Windows Update. Towards the end of this schedule, the package will be published completely, including to the update catalog for manual download. For the current release, this will be in the second half of October. If you want to test the package sooner, you can use [gradual rollout controls for platform updates](configure-updates.md) to select the Preview channel.
@@ -1135,7 +1135,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- Improved [product onboarding experience for Intune users](/mem/intune/apps/apps-advanced-threat-protection-macos)
+- Improved [product onboarding experience for Intune users](/intune/intune-service/apps/apps-advanced-threat-protection-macos)
 - Antivirus [exclusions now support wildcards](mac-exclusions.md#supported-exclusion-types)
 - Added the ability to trigger antivirus scans from the macOS contextual menu. You can now right-click a file or a folder in Finder and select **Scan with Microsoft Defender for Endpoint**.
 - In-place product downgrades are now explicitly disallowed by the installer. If you need to downgrade, first uninstall the existing version and reconfigure your device.
@@ -2776,7 +2776,7 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 
 ### 1.1.28250101
 
-- **Integration with Tunnel** - Microsoft Defender for Endpoint on iOS can now integrate with Microsoft Tunnel, a VPN gateway solution to enable security and connectivity in a single app. For more information, see [Microsoft Tunnel Overview](/mem/intune/protect/microsoft-tunnel-overview).
+- **Integration with Tunnel** - Microsoft Defender for Endpoint on iOS can now integrate with Microsoft Tunnel, a VPN gateway solution to enable security and connectivity in a single app. For more information, see [Microsoft Tunnel Overview](/intune/intune-service/protect/microsoft-tunnel-overview).
 - **Zero-touch onboard for enrolled iOS devices** enrolled through Microsoft Intune is generally available. For more information, see [Zero touch onboarding of Microsoft Defender for Endpoint](ios-install.md#zero-touch-silent-onboarding-to-defender-for-endpoint).
 - Bug fixes.
 

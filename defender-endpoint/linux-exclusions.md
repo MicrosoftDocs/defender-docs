@@ -138,7 +138,7 @@ In enterprise environments, exclusions can also be managed through a configurati
 ### Using Defender for Endpoint security settings management
 
 > [!NOTE]
-> Make sure to review the prerequisites: [Defender for Endpoint security settings management prerequisites](/mem/intune/protect/mde-security-integration#prerequisites)
+> Make sure to review the prerequisites: [Defender for Endpoint security settings management prerequisites](/intune/intune-service/protect/mde-security-integration#prerequisites)
 
 You can use the Microsoft Intune admin center or the Microsoft Defender portal to manage exclusions as endpoint security policies and assign those policies to Microsoft Entra ID groups. If you're using this method for the first time, make sure to complete the following steps:
 
@@ -146,11 +146,11 @@ You can use the Microsoft Intune admin center or the Microsoft Defender portal t
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), navigate to **Settings** > **Endpoints** > **Configuration Management** > **Enforcement Scope**, and then select the Linux platform. 
 
-1. Tag devices with the `MDE-Management` tag. Most devices enroll and receive the policy within minutes, although some might take up to 24 hours. For more information, see [Learn how to use Intune endpoint security policies to manage Microsoft Defender for Endpoint on devices that aren't enrolled with Intune](/mem/intune/protect/mde-security-integration).
+1. Tag devices with the `MDE-Management` tag. Most devices enroll and receive the policy within minutes, although some might take up to 24 hours. For more information, see [Learn how to use Intune endpoint security policies to manage Microsoft Defender for Endpoint on devices that aren't enrolled with Intune](/intune/intune-service/protect/mde-security-integration).
 
 #### 2. Create a Microsoft Entra group
 
-Create a dynamic Microsoft Entra group based on the operating system type to ensure that all devices onboarded to Defender for Endpoint receive the appropriate policies. This dynamic group automatically includes devices managed by Defender for Endpoint, eliminating the need for admins to manually create new policies. For more information, see the following article: [Create Microsoft Entra Groups](/mem/intune/protect/mde-security-integration#create-microsoft-entra-groups) 
+Create a dynamic Microsoft Entra group based on the operating system type to ensure that all devices onboarded to Defender for Endpoint receive the appropriate policies. This dynamic group automatically includes devices managed by Defender for Endpoint, eliminating the need for admins to manually create new policies. For more information, see the following article: [Create Microsoft Entra Groups](/intune/intune-service/protect/mde-security-integration#create-microsoft-entra-groups) 
 
 #### 3. Create an endpoint security policy 
 

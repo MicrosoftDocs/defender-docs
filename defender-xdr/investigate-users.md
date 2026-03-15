@@ -45,7 +45,11 @@ The Identity page includes these tabs:
 
 ## Identity actions
 
-From the **Overview** page, use the **Actions** menu to trigger [remediation actions](/defender-for-identity/remediation-actions#supported-actions).
+From the **Overview** page, use the **Actions** menu to trigger [remediation actions](/defender-for-identity/remediation-actions#supported-actions). Available actions include:
+
+- Enable, disable, or suspend the user in Microsoft Entra ID
+- Require the user to sign in again or force a password reset
+- View Microsoft Entra account settings, related governance, the user's owned files, or shared files
 
 :::image type="content" source="media/investigate-users/identity-actions.png" alt-text="Screenshot of the identity page with the identity actions menu showing.":::
 
@@ -115,12 +119,45 @@ The timeline helps reconstruct sequences of activity and correlate events during
 
 :::image type="content" source="media/investigate-users/identity-timeline.png" alt-text="Screenshot of the Timeline tab on the Identity page in Microsoft Defender.":::
 
-Analysts can:
+### Types of activities that appear in the timeline
 
-- Filter by activity type, severity, application, location, or protocol
-- Adjust the time range or select a custom range
-- Customize visible columns
-- Export timeline data to CSV (within supported limits)
+The following data types are available in the timeline:
+
+- A user's impacted alerts
+- Active Directory and Microsoft Entra activities
+- Cloud apps events
+- Device logon events
+- Directory services changes
+
+### Information shown for each activity in the timeline
+
+The following information is displayed in the timeline:
+
+- Date and time of the activity
+- Activity/alert description
+- Application that performed the activity
+- Source device/IP address
+- [MITRE ATT&CK](https://attack.mitre.org/) techniques
+- Alert severity and status
+- Country/region where the client IP address is geolocated
+- Protocol used during the communication
+- Target device (optional, viewable by customizing columns)
+- Number of times the activity happened (optional, viewable by customizing columns)
+
+### Working with the timeline
+
+> [!NOTE]
+> Microsoft Defender XDR can display date and time information using either your local time zone or UTC. The selected time zone applies to all date and time information shown in the Identity timeline.
+>
+> To set the time zone for these features, go to **Settings** \> **Security center** \> **Time zone**.
+
+- **Custom time range picker:** Choose a timeframe to focus your investigation on the last 24 hours, the last 3 days, and so on. Or choose a specific timeframe by selecting **Custom range**. Filtered data older than 30 days is displayed in seven-day intervals.
+
+- **Timeline filters:** Use the timeline filters to narrow results by Type (alerts and/or user's related activities), Alert severity, Activity type, App, Location, or Protocol. Each filter depends on the others, and the options in each filter only contain data that's relevant for the specific user.
+
+- **Customized columns:** Select the **Customize columns** button to choose which columns to expose in the timeline.
+
+- **Export:** Export the timeline to a CSV file. Export is limited to the first 5,000 records and contains the data as displayed in the UI (same filters and columns).
 
 ## Security recommendations tab
 
@@ -146,7 +183,44 @@ When Microsoft Sentinel is connected to the Defender portal, this tab shows a Se
 
 ### Insights
 
-The **Insights** section shows entity insights, which are investigation queries defined by Microsoft security researchers to help analysts investigate identities more efficiently. These insights automatically highlight key security signals such as sign‑in activity, group changes, and anomalous behavior, and present results as tables and visualizations. Insights are powered by Microsoft Sentinel and the data sources connected to it, including Microsoft Entra ID logs and Microsoft Sentinel UEBA when enabled.
+The **Insights** section shows entity insights, which are investigation queries defined by Microsoft security researchers to help analysts investigate identities more efficiently. These insights automatically highlight key security signals such as sign-in activity, group changes, and anomalous behavior, and present results as tables and charts. Insights are powered by Microsoft Sentinel and the data sources connected to it, including Microsoft Entra ID logs and Microsoft Sentinel UEBA when enabled.
+
+#### Types of insights
+
+The following are some of the insights shown:
+
+- User peers based on security groups membership
+- Actions by account
+- Actions on account
+- Event logs cleared by user
+- Group additions
+- Anomalously high office operation count
+- Resource access
+- Anomalously high Azure sign-in result count
+- UEBA insights
+- User access permissions to Azure subscriptions
+- Threat indicators related to user
+- Watchlist insights (Preview)
+- Windows sign-in activity
+
+#### Data sources for insights
+
+Insights are based on the following data sources:
+
+- Syslog (Linux)
+- SecurityEvent (Windows)
+- AuditLogs (Microsoft Entra ID)
+- SigninLogs (Microsoft Entra ID)
+- OfficeActivity (Office 365)
+- BehaviorAnalytics (Microsoft Sentinel UEBA)
+- Heartbeat (Azure Monitor Agent)
+- CommonSecurityLog (Microsoft Sentinel)
+
+#### Explore insights in Advanced hunting
+
+To further explore any insight, select the link accompanying the insight. The link opens the **Advanced hunting** page with the query underlying the insight and its raw results. You can modify the query or drill down into the results to expand your investigation.
+
+:::image type="content" source="media/investigate-users/insights-advanced-hunting.png" alt-text="Screenshot of the Advanced hunting screen with insight query.":::
 
 ## Next steps
 
