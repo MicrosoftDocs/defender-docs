@@ -207,7 +207,7 @@ If auto-provisioning or Azure Policy is still enabled, agents might come back. T
 
 1. Ensure Defender for Servers displays **unknown**.
 
-    :::image type="content" source="media/disable-plans/unknown.png" alt-text="Screenshot that shows the status of Defender for Servers as "Unknown"." lightbox="media/disable-plans/unknown.png":::
+    :::image type="content" source="media/disable-plans/display-unknown.png" alt-text="Screenshot that shows the status displaying as Uknonwn." lightbox="media/disable-plans/display-unknown.png":::
 
 1. If Microsoft Defender for Servers display `On`, go to **Microsoft Defender for Cloud** > **Environment settings** > **relevant subscription or resource**.
 
