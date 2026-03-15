@@ -41,6 +41,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "defender-office-365/attack-simulation-training-teams.md",
+      "redirect_url": "/defender-office-365/attack-simulation-training-get-started",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "defender-office-365/zero-trust-identity-device-access-policies-teams.md",
       "redirect_url": "/security/zero-trust/zero-trust-identity-device-access-policies-teams",
       "redirect_document_id": false
