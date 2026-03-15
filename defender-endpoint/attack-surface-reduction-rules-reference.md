@@ -591,9 +591,6 @@ Advanced hunting action type:
 
 Dependencies: Microsoft Defender Antivirus
 
-> [!NOTE]
-> Currently, Threat and Vulnerability Management doesn't recognize this rule, so the Attack Surface Reduction rule report shows it as "Not applicable."
-
 ### Block untrusted and unsigned processes that run from USB
 
 With this rule, admins can prevent unsigned or untrusted executable files from running from USB removable drives, including SD cards. Blocked file types include executable files (such as .exe, .dll, or .scr)
@@ -634,9 +631,6 @@ Advanced hunting action type:
 
 Dependencies: Microsoft Defender Antivirus
 
-> [!NOTE]
-> Currently, Threat and Vulnerability Management doesn't recognize this rule, so the Attack Surface Reduction rule report shows it as "Not applicable."
-
 ### Block Webshell creation for Servers
 
 This rule blocks web shell script creation on Microsoft Server, Exchange Role. A web shell script is a crafted script that allows an attacker to control the compromised server. 
@@ -651,8 +645,6 @@ Dependencies: Microsoft Defender Antivirus
 
 > [!NOTE]
 > When you manage ASR rules using Microsoft Defender for Endpoint security settings management, you need to configure the **Block Webshell creation for Servers** setting as `Not Configured` in Group Policy or other local settings. If this rule is set to any other value (such as `Enabled` or `Disabled`), it could cause conflicts and prevent the policy from applying correctly through security settings management.
->
-> Currently, Threat and Vulnerability Management doesn't recognize this rule, so the Attack Surface Reduction rule report shows it as "Not applicable."
 
 ### Block Win32 API calls from Office macros
 
