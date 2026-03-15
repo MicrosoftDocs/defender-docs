@@ -23,7 +23,7 @@ ms.date: 02/26/2026
 This guide is for you if:
 
 - You're licensed for Microsoft Defender for Office 365 and host your mailboxes in Office 365
-- You're also using a non-Microsoft for your email security
+- You're also using a non-Microsoft solution for your email security
 
 The following information details how to get the most out of your investment, broken down into easy to follow steps.
 

@@ -25,7 +25,7 @@ appliesto:
 
 Security baselines ensure that security features are configured according to guidance from both security experts and expert Windows system administrators. When deployed, the Defender for Endpoint security baseline sets Defender for Endpoint security controls to provide optimal protection.
 
-To understand security baselines and how they're assigned on Intune using configuration profiles, [read this FAQ](/mem/intune/protect/security-baselines#q--a).
+To understand security baselines and how they're assigned on Intune using configuration profiles, [read this FAQ](/intune/intune-service/protect/security-baselines#q--a).
 
 Before you can deploy and track compliance to security baselines:
 
@@ -36,8 +36,8 @@ Before you can deploy and track compliance to security baselines:
 
 The Windows Intune security baseline provides a comprehensive set of recommended settings needed to securely configure devices running Windows, including browser settings, PowerShell settings, and settings for some security features like Microsoft Defender Antivirus. In contrast, the Defender for Endpoint baseline provides settings that optimize all the security controls in the Defender for Endpoint stack, including settings for endpoint detection and response (EDR) and settings also found in the Windows Intune security baseline. For more information about each baseline, see:
 
-- [Windows security baseline settings for Intune](/mem/intune/protect/security-baseline-settings-mdm-all)
-- [Microsoft Defender for Endpoint baseline settings for Intune](/mem/intune/protect/security-baseline-settings-defender)
+- [Windows security baseline settings for Intune](/intune/intune-service/protect/security-baseline-settings-mdm-all)
+- [Microsoft Defender for Endpoint baseline settings for Intune](/intune/intune-service/protect/security-baseline-settings-defender)
 
 Ideally, devices onboarded to Defender for Endpoint are deployed both baselines: the Windows Intune security baseline to initially secure Windows and then the Defender for Endpoint security baseline layered on top to optimally configure the Defender for Endpoint security controls. To benefit from the latest data on risks and threats and to minimize conflicts as baselines evolve, always apply the latest versions of the baselines across all products as soon as they're released.
 
@@ -94,7 +94,7 @@ Device configuration management monitors baseline compliance only of Windows 10 
    *Creating the security baseline profile on Intune*
 
 > [!TIP]
-> Security baselines on Intune provide a convenient way to comprehensively secure and protect your devices. [Learn more about security baselines on Intune](/mem/intune/protect/security-baselines).
+> Security baselines on Intune provide a convenient way to comprehensively secure and protect your devices. [Learn more about security baselines on Intune](/intune/intune-service/protect/security-baselines).
 
 
 

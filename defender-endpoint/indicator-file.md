@@ -1,4 +1,4 @@
-﻿---
+---
 title: Create indicators for files
 ms.reviewer: yongrhee
 description: Create indicators for a file hash that define the detection, prevention, and exclusion of entities.
@@ -30,7 +30,7 @@ appliesto:
 
 > [!NOTE]
 > For this feature to work on Windows Server 2016 and Windows Server 2012 R2, those devices must be onboarded using the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2). 
-> Custom file indicators with the Allow, Block and Remediate actions are now also available in the [enhanced antimalware engine capabilities for macOS and Linux](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/enhanced-antimalware-engine-capabilities-for-linux-and-macos/ba-p/3292003).
+> Custom file indicators with the Allow, Block and Remediate actions are now also available in the [enhanced anti-malware engine capabilities for macOS and Linux](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/enhanced-antimalware-engine-capabilities-for-linux-and-macos/ba-p/3292003).
 
 File indicators prevent further propagation of an attack in your organization by banning potentially malicious files or suspected malware. If you know a potentially malicious portable executable (PE) file, you can block it. This operation will prevent it from being read, written, or executed on devices in your organization.
 
@@ -60,7 +60,7 @@ Understand the following prerequisites before you create indicators for files:
 ### Windows prerequisites
 
 - This feature is available if your organization uses [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md) (in active mode) 
-- The antimalware client version must be `4.18.1901.x` or later. See [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases)
+- The anti-malware client version must be `4.18.1901.x` or later. See [Monthly platform and engine versions](microsoft-defender-endpoint-releases.md#microsoft-defender-antivirus-releases)
 - File hash computation is enabled by setting `Computer Configuration\Administrative Templates\Windows Components\Microsoft Defender Antivirus\MpEngine\Enable File Hash Computation` to **Enabled**. Or, you can run the following PowerShell command: `Set-MpPreference -EnableFileHashComputation $true`
 
 > [!NOTE]
@@ -189,6 +189,16 @@ Cert and File IoC policy handling conflicts follow this order:
 
 > [!NOTE]
 > In situations when Microsoft Defender Antivirus is set to **Block**, but Defender for Endpoint indicators for file hash or certificates are set to **Allow**, the policy defaults to **Allow**.
+
+> [!NOTE]
+> In situations where a certificate-based indicator is configured to **Block**, but a file hash indicator for one of its signed files is configured to **Allow**, this configuration is **not supported by design**. 
+> Certificate-based indicators have higher precedence in the Defender evaluation pipeline and will always override file hash allow indicators.
+> A configuration that simultaneously:
+> - blocks a certificate, and
+> - attempts to allow one of its signed files via file hash
+>
+> is **not supported**. Certificate-based indicators take precedence, and therefore the file will continue to be blocked.
+
 
 If there are conflicting file IoC policies with the same enforcement type and target, the policy of the more secure (meaning longer) hash is applied. For example, an SHA-256 file hash IoC policy takes precedence over an MD5 file hash IoC policy if both hash types define the same file.
 

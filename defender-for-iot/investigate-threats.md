@@ -2,7 +2,7 @@
 title: Investigate incidents and alerts in Microsoft Defender for IoT in the Defender portal
 description: This article describes how to investigate incidents and alerts in Microsoft Defender for IoT in the Defender portal.
 ms.service: defender-for-iot
-author: lwainstein
+author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
 ms.date: 06/26/2024

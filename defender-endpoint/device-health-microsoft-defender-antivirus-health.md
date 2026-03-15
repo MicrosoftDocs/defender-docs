@@ -1,4 +1,4 @@
-﻿---
+---
 title: Device health Microsoft Defender Antivirus health report
 description: Use the Microsoft Defender Antivirus report to track antivirus status and Microsoft Defender Antivirus engine, intelligence, and platform versions.
 search.appverid: met150
@@ -33,7 +33,7 @@ The Device Health report provides information about the devices in your organiza
 > For devices to appear **correctly** in Microsoft Defender Antivirus device health reports, they must meet the following prerequisites:  
 >
 > - Device is onboarded to Microsoft Defender for Endpoint
-> - OS: Windows 10, Windows 11, Windows Server 2012 R2/, 2016 R2/ 2019/2022 (not onboarded via Microsoft Management Agent), MacOS, Linux
+> - OS: Windows 10, Windows 11, Windows Server 2012 R2/, 2016 R2/ 2019/2022 (not onboarded via Microsoft Management Agent), macOS, Linux
 > - Sense (MsSense.exe) version: **10.8210.** *+.
 >
 > **OS build dependency (Windows 10 2016 LTSB / 1607):**  
@@ -322,7 +322,7 @@ The following table lays out the possible values for up to date reports for **An
 | < 7 days (new) | whatever client reports (_Up to date <br/> Out of date <br/> Unknown)_ |
 | > 7 days (old) | `Unknown` |
 
-For information about Manage Microsoft Defender Antivirus update versions, see [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases).
+For information about Manage Microsoft Defender Antivirus update versions, see [Monthly platform and engine versions](microsoft-defender-endpoint-releases.md#microsoft-defender-antivirus-releases).
 
 #### Antivirus platform updates card
 
@@ -337,7 +337,7 @@ The following table lays out the possible up to date report values for **Antivir
 | < 7 days (new) | whatever client reports (`Up to date` <br/> `Out of date` <br/> `Unknown)` |
 | > 7 days (old) | `Unknown` |
 
-For information about Manage Microsoft Defender Antivirus update versions, see [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases).
+For information about Manage Microsoft Defender Antivirus update versions, see [Monthly platform and engine versions](microsoft-defender-endpoint-releases.md#microsoft-defender-antivirus-releases).
 
 ##### Security intelligence updates card
 
@@ -382,7 +382,7 @@ The following table lays out the possible up to date report values for **Securit
 >
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)

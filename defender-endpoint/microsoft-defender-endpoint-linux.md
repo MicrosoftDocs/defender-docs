@@ -24,12 +24,10 @@ appliesto:
 
 # Microsoft Defender for Endpoint on Linux
 
-
-> [!TIP]
-> We're excited to share that Microsoft Defender for Endpoint on Linux now extends support to Arm64-based Linux servers. For more information, see [April 2025 updates](whats-new-in-microsoft-defender-endpoint.md#april-2025).
-
-
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
+> [!NOTE]
+> Defender for Endpoint supports ARM64-based Linux servers on Ubuntu, RHEL, Debian, SUSE Linux, Amazon Linux, and Oracle Linux. All product capabilities that are supported on AMD64 devices are now supported on ARM64-based Linux servers.
 
 ## What is Microsoft Defender for Endpoint on Linux?
 
@@ -87,8 +85,8 @@ If you experience any installation issues, self-troubleshooting resources are av
 
 To configure Defender for Endpoint on Linux, you can choose from two options to configure policies:
 
-- [Enroll in Defender for Endpoint security settings management](/defender-endpoint/mde-security-settings-management) and use the Microsoft Defender portal to configure and manage your policies
-- [Set up a configuration profile that uses a json file](/defender-endpoint/linux-preferences?branch=main&branchFallbackFrom=pr-en-us-2468%22%20%5Cl%20%22configuration-profile)
+- <a href="/intune/intune-service/protect/mde-security-integration" target="_blank" rel="noopener noreferrer">Enroll in Defender for Endpoint security settings management</a> and use the Microsoft Defender portal to configure and manage your policies.
+- [Set up a configuration profile that uses a json file](/defender-endpoint/linux-preferences).
 
 For more information, see [Configure security settings and policies for Defender for Endpoint on Linux](/defender-endpoint/linux-preferences).
 
@@ -142,10 +140,9 @@ If you're using non-Microsoft applications, also see their documentation regardi
 
 ## See also
 
-- [Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus](mde-security-settings-management.md)
+- <a href="/intune/intune-service/protect/mde-security-integration" target="_blank" rel="noopener noreferrer">Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus</a>
 - [Linux Resources](linux-resources.md)
 - [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](linux-support-connectivity.md)
 - [Investigate agent health issues](health-status.md)
 - [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](linux-support-events.md)
 - [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md)
-

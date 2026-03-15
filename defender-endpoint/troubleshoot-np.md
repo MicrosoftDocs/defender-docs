@@ -143,8 +143,8 @@ Set-MpPreference -ProxyPacUrl <Proxy PAC url>
 You can configure the registry key by using PowerShell, Microsoft Configuration Manager, or Group Policy. Here are some resources to help:
 
 - [Working with Registry Keys](/powershell/scripting/samples/working-with-registry-keys)
-- [Configure custom client settings for Endpoint Protection](/mem/configmgr/protect/deploy-use/endpoint-protection-configure-client)
-- [Use Group Policy settings to manage Endpoint Protection](/mem/configmgr/protect/deploy-use/endpoint-protection-group-policies)
+- [Configure custom client settings for Endpoint Protection](/intune/configmgr/protect/deploy-use/endpoint-protection-configure-client)
+- [Use Group Policy settings to manage Endpoint Protection](/intune/configmgr/protect/deploy-use/endpoint-protection-group-policies)
 
 ## See also
 

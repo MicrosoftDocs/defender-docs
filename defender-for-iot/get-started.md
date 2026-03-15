@@ -1,8 +1,8 @@
 ---
 title: Get started and set up a license for Microsoft Defender for IoT in the Defender portal
-description: This article describes how to get started and set up a license got Microsoft Defender for IoT in the Defender portal.
+description: This article describes how to get started and set up a license for Microsoft Defender for IoT in the Defender portal.
 ms.service: defender-for-iot
-author: lwainstein
+author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
 ms.date: 05/19/2024
