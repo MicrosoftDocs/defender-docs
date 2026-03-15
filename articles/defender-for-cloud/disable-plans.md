@@ -2,7 +2,7 @@
 title: Disable Defender for Cloud plans
 description: Learn how to disable Defender for Cloud plans on your connected environments subscription.
 ms.topic: how-to
-ms.date: 03/11/2026
+ms.date: 03/15/2026
 #customer intent: As a cloud administrator, I want to disable Defender for Cloud plans so that I can manage my security costs.
 ---
 
@@ -175,7 +175,7 @@ App Service is the most common place Defender stays enabled accidentally. Defend
 
 1. Open the **App Service plan** (not the individual app).
 
-1. In the left menu, select **Microsoft Defender for Cloud**.
+1. Select **Microsoft Defender for Cloud**.
 
 1. Set **Defender for App Service** to **Off**.
 
@@ -189,7 +189,7 @@ The resource-level setting overrides the subscription setting. Charges stop for 
 
 1. Open the **Storage Account**.
 
-1. In the left menu, select **Microsoft Defender for Cloud**.
+1. Select **Microsoft Defender for Cloud**.
 
 1. Toggle **Defender for Storage** to **Off**.
 
@@ -201,11 +201,17 @@ If auto-provisioning or Azure Policy is still enabled, agents might come back. T
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Open the **Virtual Machine**.
+1. Search for and select **Virtual Machines**.
 
-1. In the left menu, select **Microsoft Defender for Cloud**.
+1. Select a VM.
 
-1. Turn **Defender for Servers** features to **Off**.
+1. Ensure Defender for Servers displays **unknown**.
+
+    :::image type="content" source="media/disable-plans/unknown.png" alt-text="Screenshot that shows the status of Defender for Servers as "Unknown"." lightbox="media/disable-plans/unknown.png":::
+
+1. If Microsoft Defender for Servers display `On`, go to **Microsoft Defender for Cloud** > **Environment settings** > **relevant subscription or resource**.
+
+1. Toggle Defender for Servers to **Off**.
 
 1. Select **Save**.
 
@@ -215,9 +221,13 @@ If auto-provisioning or Azure Policy is still enabled, agents might come back. T
 
 1. Open the **SQL Server** or **SQL Database**.
 
-1. In the left menu, select **Microsoft Defender for Cloud**.
+1. Select **Microsoft Defender for Cloud**.
 
-1. Disable **Defender for SQL**.
+1. Select **Configure**.
+
+    :::image type="content" source="media/disable-plans/configure.jpg" alt-text="Screenshot that shows where teh configure button is located for your SQL." lightbox="media/disable-plans/configure.jpg":::
+
+1. Toggle Microsoft Defender for SQL to **Off**.
 
 1. Select **Save**.
 
@@ -261,6 +271,10 @@ Use billing as the source of truth to confirm that resource-level Defender is tr
     - `Defender CSPM`
 
 If charges still appear, there's at least one resource with Defender still enabled, or a policy or auto-provisioning rule is re-enabling it.
+
+## Confirm you are no longer covered
+
+Once you have disabled the plans and confirmed that you are no longer being billed, you can also check that you are no longer covered by checking your current coverage using the [Coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook).
 
 ## Next step
 
