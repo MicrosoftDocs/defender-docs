@@ -49,7 +49,7 @@ RETURN *
 LIMIT 100
 ```
 
-For more information on using GQL, see the [GQL help documentation](<!-- LINK HERE -->).
+For more information on using GQL, see the [GQL help documentation](./gql-reference-for-sentinel-custom-graph.md).
 
 Paste the query into the quey field and select **Run GQL query** to view your results. Once complete, the graph visualization appears.
 
@@ -130,7 +130,7 @@ You can view a tabular representation of your data by selecting the **Table** ta
 
 :::image type="content" source="media/graph-explorer/graph-table-export.png" alt-text="Screenshot showing the table view with search, sort, and export capabilities." lightbox="media/graph-explorer/graph-table-export.png":::
 
-You can also customize the table format by using the `RETURN` operator to define the column structure, or order results to your preference. For more information, see the [GQL documentation](<!-- LINK HERE -->).
+You can also customize the table format by using the `RETURN` operator to define the column structure, or order results to your preference. For more information, see the [GQL documentation](./gql-reference-for-sentinel-custom-graph.md).
 
 ## Related content
 
