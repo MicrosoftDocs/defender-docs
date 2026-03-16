@@ -23,8 +23,6 @@ For AKS clusters, remediating recommendations enables built-in AKS security capa
 
 - [Defender for Containers enabled on your Azure subcription](defender-for-containers-enable-portal.md?tab=aks).
 
-- Figure out if this is for all deployment, or only automatic provisioning
-
 ## Network requirements
 
 [!INCLUDE[defender-for-container-prerequisites-aks](includes/defender-for-containers-network-requirements-aks.md)]
@@ -172,7 +170,7 @@ For Kubernetes clusters connected to Azure using Azure Arc that aren’t running
 
 ---
 
-## Next steps
+## Related content
 
 - [Verify Defender for Containers deployment](defender-for-containers-verify-deployment.md).
 
