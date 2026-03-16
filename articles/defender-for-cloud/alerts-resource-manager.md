@@ -118,7 +118,7 @@ This article lists the security alerts you might get for Resource Manager from M
 
 **Severity**: High
 
-### **PowerZure exploitation toolkit used to elevate access from Azure AD to Azure**
+### **PowerZure exploitation toolkit used to elevate access from Microsoft Entra ID to Azure**
 
 (ARM_PowerZure.AzureElevatedPrivileges)
 
