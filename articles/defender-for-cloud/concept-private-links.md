@@ -1,5 +1,5 @@
 ---
-title: Microsoft Security Private Link for Microsoft Defender for Cloud (Preview)
+title: Microsoft Security Private Link for Microsoft Defender for Cloud
 description: Learn how Microsoft Security Private Link provides secure, private connectivity between your virtual network and Microsoft Defender for Cloud.
 author: Elazark
 ms.author: elkrieger
@@ -7,7 +7,7 @@ ms.topic: article
 ms.date: 01/07/2025
 ---
 
-# Microsoft Security Private Link for Microsoft Defender for Cloud (Preview)
+# Microsoft Security Private Link for Microsoft Defender for Cloud
 
 Microsoft Security Private Link allows workloads in your virtual network to connect to Microsoft Defender for Cloud. You enable this connection by creating a Security Private Link resource in your subscription and private endpoints in your Azure virtual networks that connect to it.
 

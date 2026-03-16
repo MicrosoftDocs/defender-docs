@@ -22,4 +22,4 @@ For clusters with restricted egress, you must allow specific FQDNs for Microsoft
 
 #### Private link configuration
 
-For instructions, see [Microsoft Security Private Link for Microsoft Defender for Cloud (Preview)](../concept-private-links.md).
+For instructions, see [Microsoft Security Private Link for Microsoft Defender for Cloud](../concept-private-links.md).
