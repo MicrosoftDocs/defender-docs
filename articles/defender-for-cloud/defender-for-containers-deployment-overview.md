@@ -196,29 +196,44 @@ Connect the environment to Microsoft Defender for Cloud:
 - **Google Kubernetes Engine (GKE):** [Connect your GCP project](quickstart-onboard-gcp.md).
 - **Other Kubernetes distributions:** [Connect the cluster to Azure using Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
 
+### Choose deployment path
+
+Automatic provisioning = enable defender for containers in mdc
+
+Manually:
+enable and then deploy clusters using:
+- azure cli
+- helm
+
+To exclude the Defender sensor from automatic provisioning, add the following tag to the cluster resource in Azure:
+
+- `ms_defender_container_exclude_sensors = true`
+
+For clusters connected to Azure through Azure Arc (including Amazon EKS and Google Kubernetes Engine), add the tag to the Azure Arc-enabled Kubernetes resource in Azure.
+
 ### Enable the Containers plan and select components
 
 Enable the Containers plan and turn on the components you need using the Azure portal.
 
 Learn how to [enable Defender for Containers on your environment](defender-for-containers-enable-portal.md).
 
-### Configure external requirements
+#### Deploy cluster components manually 
 
-Some components require additional cloud-provider or Kubernetes configuration that isn’t performed automatically when you enable the plan.
-
-Learn how to [configure external requirements for your components](defender-for-containers-configure-external-requirements.md).
-
-### Deploy cluster components
+Instead explain that this is if you disable automatic provisioning:
 
 Depending on the Kubernetes environment and the components you enable, Defender for Containers deploys cluster-level components such as the Defender sensor or Azure Policy extension.
 
 You can deploy these components by using one of the following methods:
 
-- [Deploy Defender sensor and Azure Policy to clusters using security recommendations](defender-for-containers-deploy-portal.md)
-
 - [Deploy Defender sensor and Azure Policy to clusters using Azure CLI](defender-for-containers-deploy-azure-cli.md)
 
 - [Install Defender for Containers sensor by using Helm](deploy-helm.md)
+
+### Post Deployment
+
+- verify (defender-for-containers-verify-deployment.md)
+- remediate (defender-for-containers-deploy-portal.md)
+- troubleshoot (defender-for-containers-troubleshoot.md)
 
 ## View your current coverage
 

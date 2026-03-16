@@ -1,35 +1,35 @@
 ---
-title: Deploy Defender sensor and Azure Policy to clusters using security recommendations
-description: Learn how to deploy the Microsoft Defender for Containers sensor and Azure Policy for Kubernetes to AKS, Amazon EKS, and Google Kubernetes Engine clusters by using Microsoft Defender for Cloud security recommendations.
+title: Remediate Defender for Containers security recommendations
+description: Learn how to remediate Microsoft Defender for Cloud recommendations related to Microsoft Defender for Containers on AKS, Amazon EKS, Google Kubernetes Engine, and Arc-enabled Kubernetes clusters.
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
 ms.date: 01/29/2026
 ---
 
-# Deploy Defender sensor and Azure Policy to clusters using security recommendations
+# Remediate Defender for Containers security recommendations
 
-This article explains how to deploy the Microsoft Defender for Containers sensor and Azure Policy for Kubernetes to clusters by remediating security recommendations after you [enable the Defender for Containers plan in Microsoft Defender for Cloud](defender-for-containers-enable-portal.md).
+This article explains how to remediate Microsoft Defender for Cloud security recommendations related to Microsoft Defender for Containers.
 
-For clusters that aren’t running in Azure Kubernetes Service (AKS), Defender for Cloud uses Azure Arc-enabled Kubernetes to deploy the required extensions.
+After you deploy and configure Defender for Containers, Microsoft Defender for Cloud evaluates your Kubernetes environments and generates recommendations when required components such as the Defender sensor or Azure Policy extension aren't installed or configured correctly.
 
-## Exclude the Defender sensor from automatic provisioning
-
-[!INCLUDE[Exclude the Defender sensor](includes/defender-for-containers-exclude-sensor.md)]
+Remediating these recommendations installs or enables the required components.
 
 # [Azure Kubernetes Service (AKS)](#tab/aks)
 
-For AKS clusters, recommendations activate built-in AKS security capabilities, including the Defender profile and Azure Policy add-on.
+For AKS clusters, remediating recommendations enables built-in AKS security capabilities, including the Defender profile and Azure Policy add-on.
 
 ## Prerequisites
 
 - [Defender for Containers enabled on your Azure subcription](defender-for-containers-enable-portal.md?tab=aks).
 
+- Figure out if this is for all deployment, or only automatic provisioning
+
 ## Network requirements
 
 [!INCLUDE[defender-for-container-prerequisites-aks](includes/defender-for-containers-network-requirements-aks.md)]
 
-## Deploy components
+## Remediate recommendations
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -44,7 +44,7 @@ For AKS clusters, recommendations activate built-in AKS security capabilities, i
 
 1. Select the affected AKS clusters.
 
-1. Follow the remediation steps to apply the fix.
+1. Follow the remediation steps to resolve the recommendation.
 
 # [Amazon Elastic Kubernetes Service (EKS)](#tab/eks)
 
@@ -54,13 +54,11 @@ For EKS clusters, Defender uses Azure Arc-enabled Kubernetes to deploy the Defen
 
 - [Defender for Containers enabled on your AWS connector](defender-for-containers-enable-portal.md?tab=eks). 
 
-- If you've enabled agentless threat protection, Kubernetes API access, or registry access, [configure the required external settings](defender-for-containers-configure-external-requirements.md?tab=eks).
-
 ## Network requirements
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
 
-## Deploy components
+## Remediate recommendations
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -87,8 +85,6 @@ For GKE clusters, Defender uses Azure Arc-enabled Kubernetes to deploy the Defen
 ## Prerequisites
 
 - [Defender for Containers enabled on your GCP connector](defender-for-containers-enable-portal.md?tab=gke). 
-
-- If you've enabled agentless threat protection or registry access, [configure the required external settings](defender-for-containers-configure-external-requirements.md?tab=gke).
 
 ## Network requirements
 
@@ -123,7 +119,7 @@ For Autopilot clusters:
 > [!IMPORTANT]
 > In GKE Autopilot clusters, resource requests and limits for the Defender sensor can't be manually configured. Resource management is controlled by GKE Autopilot and can't be overridden.
 
-## Deploy components
+## Remediate recommendations
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -155,7 +151,7 @@ For Kubernetes clusters connected to Azure using Azure Arc that aren’t running
 
 [!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
 
-## Deploy components
+## Remediate recommendations
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -171,7 +167,6 @@ For Kubernetes clusters connected to Azure using Azure Arc that aren’t running
 1. Select the affected clusters.
 
 1. Follow the remediation steps to:
-
    - Install the **Microsoft Defender for Containers** extension  
    - Install the **Azure Policy for Kubernetes** extension (if applicable)
 

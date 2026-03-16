@@ -15,7 +15,7 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 
 ## Prerequisites
 
-- AKS cluster supported by Defender for Containers. See the [support matrix](support-matrix-defender-for-containers.md).
+- An AKS cluster. See the [support matrix](support-matrix-defender-for-containers.md).
 
 ## Enable the Defender for Containers plan
 
@@ -75,9 +75,9 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 
 ## Prerequisites
 
-- An AWS account with permissions to create and manage IAM roles and deploy CloudFormation stacks. Learn how to [connect your AWS account to Microsoft Defender for Cloud](quickstart-onboard-aws.md).
+- An [AWS project onboarded to Microsoft Defender for Cloud](quickstart-onboard-aws.md).
 
-- One or more Amazon EKS clusters running Kubernetes version 1.19 or later.
+- One or more Amazon EKS clusters running Kubernetes running Kubernetes See the [support matrix](support-matrix-defender-for-containers.md).
 
 ## Enable the Defender for Containers plan
 
@@ -111,7 +111,7 @@ This article explains how to enable the Microsoft Defender for Containers plan i
         - **Security findings:** Generates findings and links them to container images when new images are pushed or existing images are updated.
     
     > [!IMPORTANT]  
-    > If you enable agentless threat protection, Kubernetes API access, or registry access, [configure the required external settings](defender-for-containers-configure-external-requirements.md?tab=eks) so Defender for Cloud can collect the data those components rely on.
+    > If you enable Kubernetes API access,  API servers need to be publicly accessible. (edit)
 
 1. Select **Save**.
 
@@ -147,9 +147,9 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 
 ## Prerequisites
 
-- A GCP project connected to Microsoft Defender for Cloud. If you haven’t connected your project yet, see [Connect your GCP project to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
+- A [GCP project onboarded to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
 
-- One or more GKE clusters running Kubernetes version 1.19 or later.
+- One or more GKE clusters running Kubernetes version that is allowed?. See the [support matrix](support-matrix-defender-for-containers.md).
 
 ## Enable the Defender for Containers plan
 
@@ -182,9 +182,6 @@ This article explains how to enable the Microsoft Defender for Containers plan i
     - **Registry access**  
       Enables agentless vulnerability assessment for container images stored in Google Container Registry (GCR) and Artifact Registry.
         - **Security findings:** Generates findings and links them to container images when new images are pushed or existing images are updated.
-
-    > [!IMPORTANT]  
-    > If you enable agentless threat protection or registry access, [configure the required external settings](defender-for-containers-configure-external-requirements.md?tab=gke) so Defender for Cloud can collect the data those components rely on.
 
 1. Select **Save**.
 

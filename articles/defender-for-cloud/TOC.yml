@@ -219,6 +219,8 @@
               href: support-matrix-defender-for-containers.md
             - name: Deployment overview
               href: defender-for-containers-deployment-overview.md
+            - name: Deployment planning reference
+              href: defender-for-containers-deployment-planning.md
             - name: Architecture overview
               href: defender-for-containers-architecture.md
             - name: Network access and permissions
@@ -227,18 +229,16 @@
               href: containers-permissions.md
             - name: Enable Defender for Containers
               href: defender-for-containers-enable-portal.md
-            - name: Configure external requirements for components
-              href: defender-for-containers-configure-external-requirements.md
-            - name: Deploy cluster components
+            - name: Deploy components manually
               items:
-                - name: Deploy using security recommendations
-                  href: defender-for-containers-deploy-portal.md
-                - name: Deploy using Azure CLI
+                - name: Deploy components using Azure CLI
                   href: defender-for-containers-deploy-azure-cli.md
-                - name: Deploy using Helm (advanced)
+                - name: Deploy components using Helm (advanced)
                   href: deploy-helm.md
-            - name: Veriify deployment
+            - name: Verify deployment
               href: defender-for-containers-verify-deployment.md
+            - name: Remediate using security recommendations
+              href: defender-for-containers-deploy-portal.md
             - name: Troubleshoot Defender for Containers
               href: defender-for-containers-troubleshoot.md
             - name: Disable Defender for Containers
