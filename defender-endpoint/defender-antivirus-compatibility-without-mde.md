@@ -93,29 +93,15 @@ Uninstall-WindowsFeature Windows-Defender-Gui
 
 ## See also
 
-- [Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus](/defender-endpoint/mde-security-settings-management)
-
+- <a href="/intune/intune-service/protect/mde-security-integration" target="_blank" rel="noopener noreferrer">Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus</a>
 - [Microsoft Intune securely manages identities, manages apps, and manages devices](/intune/intune-service/fundamentals/what-is-intune)
-
   - [Defender CSP](/windows/client-management/mdm/defender-csp)
-  
   - [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender)
-  
-- [How to create and deploy antimalware policies for Endpoint Protection in Configuration Manager](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies)
-
+  - [How to create and deploy antimalware policies for Endpoint Protection in Configuration Manager](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies)
 - [Use Group Policy settings to configure and manage Microsoft Defender Antivirus](/defender-endpoint/use-group-policy-microsoft-defender-antivirus)
-
 - [Use PowerShell cmdlets to configure and manage Microsoft Defender Antivirus](/defender-endpoint/use-powershell-cmdlets-microsoft-defender-antivirus)
-
 - [Exclusions overview](/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions)
-
 - [Address false positives/negatives in Microsoft Defender for Endpoint](/defender-endpoint/defender-endpoint-false-positives-negatives)
-
 - [Troubleshoot Microsoft Defender Antivirus settings](/defender-endpoint/troubleshoot-settings)
-
 - [Run the client analyzer on Windows](/defender-endpoint/run-analyzer-windows)
-
 - [Performance analyzer for Microsoft Defender Antivirus](/defender-endpoint/tune-performance-defender-antivirus)
-
-
-

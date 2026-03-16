@@ -71,7 +71,6 @@ These actions are restricted to users with specific administrative roles. If the
 
 - Security Operator
 - Security administrator
-- Global administrator
 - Cloud app security administrator
 
 :::image type="content" source="media/governance-actions/governance-actions-dropbox-google-workspace.png" alt-text="Screenshot that shows malware governance actions." lightbox="media/governance-actions/governance-actions-dropbox-google-workspace.png":::
