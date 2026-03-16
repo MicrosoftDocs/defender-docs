@@ -271,6 +271,14 @@ When a device is being isolated, the following notification is displayed to info
 > [!NOTE]
 > The notification is not available on non-Windows platforms.
 
+## Containing critical assets
+
+When a critical asset is compromised and used to spread threats within an organization, stopping the spread can be challenging because these assets must continue to function to avoid productivity loss. Defender for Endpoint addresses this by granularly containing the critical asset, preventing the spread of the attack while ensuring the asset remains operational for business continuity.
+
+Through automatic attack disruption, Defender for Endpoint incriminates a malicious device, identifies the role of the device to apply a matching policy to automatically contain a critical asset. The granular containment is done by blocking only specific ports and communication directions.
+
+You can identify critical assets by the **critical asset** tag on the device or IP page. Device containment supports critical asset types like domain controllers, DNS servers, and DHCP servers.
+
 ## Contain devices from the network
 
 When you have identified an unmanaged device that is compromised or potentially compromised, you might want to contain that device from the network to prevent the potential attack from moving laterally across the network. When you contain a device any Microsoft Defender for Endpoint onboarded device blocks incoming and outgoing communication with that device. This action can help prevent neighboring devices from becoming compromised while the security operations analyst locates, identifies, and remediates the threat on the compromised device.
@@ -320,7 +328,7 @@ You can stop containing a device at any time.
 
 1. Select **Release from containment** from the action menu. This action restores the device's connection to the network.
 
-### Contain IP addresses of undiscovered devices
+## Contain IP addresses of undiscovered devices
 
 > [!IMPORTANT]
 > Some information in this article relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
@@ -346,13 +354,7 @@ If a contained IP address is part of an incident, an indicator is present on the
 
 You can stop an IP address' containment at any time. To stop containment, select the **Contain IP** action in the **Action Center**. In the flyout, select **Undo**. This action restores the IP address’ connection to the network.
 
-### Containing critical assets
 
-When a critical asset is compromised and used to spread threats within an organization, stopping the spread can be challenging because these assets must continue to function to avoid productivity loss. Defender for Endpoint addresses this by granularly containing the critical asset, preventing the spread of the attack while ensuring the asset remains operational for business continuity.
-
-Through automatic attack disruption, Defender for Endpoint incriminates a malicious device, identifies the role of the device to apply a matching policy to automatically contain a critical asset. The granular containment is done by blocking only specific ports and communication directions.
-
-You can identify critical assets by the **critical asset** tag on the device or IP page. Device containment supports critical asset types like domain controllers, DNS servers, and DHCP servers.
 
 ## Contain user from the network
 
