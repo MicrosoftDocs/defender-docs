@@ -81,7 +81,6 @@ If the list of attack paths has no entries, you can still test this feature by u
 > [!NOTE]
 > It can take up to 24 hours to see results in the cloud security explorer and attack path.
 
-After you finish testing the attack path, investigate the created attack path by going to **Attack path analysis**, and search for the attack path you created. For more information, see [Identify and remediate attack paths](how-to-manage-attack-path.md).
 
 ## [**AWS**](#tab/testing-the-attack-path-and-security-explorer-using-a-mock-vulnerable-container-image-for-aws)
 
@@ -134,7 +133,6 @@ The Helm chart deploys resources onto your cluster that you can use to infer att
 > [!NOTE]
 > It can take up to 24 hours to see results in the cloud security explorer and attack path.
 
-After you finish testing the attack path, investigate the created attack path by going to **Attack path analysis**, and search for the attack path you created. For more information, see [Identify and remediate attack paths](how-to-manage-attack-path.md).
 
 ## [**GCP**](#tab/testing-the-attack-path-and-security-explorer-using-a-mock-vulnerable-container-image-for-gcp)
 
@@ -179,7 +177,7 @@ The Helm chart deploys resources onto your cluster that you can use to infer att
 
 After you finish testing the attack path, investigate the created attack path by going to **Attack path analysis**, and search for the attack path you created. For more information, see [Identify and remediate attack paths](how-to-manage-attack-path.md).
 
-## Find container posture issues with cloud security explorer
+### Find container posture issues with cloud security explorer
 
 You can build queries in one of the following ways:
 
@@ -212,6 +210,7 @@ You can also create your own custom queries. The following example shows a searc
 The results are listed below the query.
 
 :::image type="content" source="media/how-to-test-attack-path/custom-query-results.png" alt-text="Screenshot that shows the results from a custom query." lightbox="media/how-to-test-attack-path/custom-query-results.png":::
+
 
 ## Next steps
 

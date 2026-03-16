@@ -124,7 +124,7 @@ Microsoft Defender for Cloud continuously monitors Azure and AKS APIs, along wit
 
 1. Use the assigned owner (available with the Defender CSPM plan) to assign an owner for the fix, and notify them by email or with a ticket in service now.
 
-[Learn more](/azure/defender-for-cloud/kubernetes-workload-protections) about how to remediate security misconfigurations with Defender for Cloud.
+Learn how to [remediate security misconfigurations with Defender for Cloud](/azure/defender-for-cloud/kubernetes-workload-protections). 
 
 :::image type="content" source="media/cluster-security-dashboard/misconfigurations-assessment-tab.png" alt-text="Screenshot of the Misconfigurations tab displaying security configuration issues." lightbox="media/cluster-security-dashboard/misconfigurations-assessment-tab.png":::
 
@@ -146,9 +146,9 @@ Defender for Cloud continuously assesses your environment against selected regul
 
 1. Follow the remediation steps in the side panel to comply with the relevant control.
 
-[Learn more](/azure/defender-for-cloud/concept-regulatory-compliance-standards)about regulatory compliance in Defender for Cloud.
+Learn more about [regulatory compliance in Defender for Cloud](/azure/defender-for-cloud/concept-regulatory-compliance-standards).
 
-[Learn more about how to configure regulatory compliance standards](/azure/defender-for-cloud/update-regulatory-compliance-packages).
+Learn how to [configure regulatory compliance standards](/azure/defender-for-cloud/update-regulatory-compliance-packages).
 
 :::image type="content" source="media/cluster-security-dashboard/compliance-standards-tab.png" alt-text="Screenshot of the Compliance tab showing regulatory compliance assessment results." lightbox="media/cluster-security-dashboard/compliance-standards-tab.png":::
 
