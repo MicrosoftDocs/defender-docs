@@ -172,8 +172,8 @@ AIAgentsInfo
 Agents with hard-coded credentials in Topics or Actions can expose clear-text credentials to unintended entities.
 
 **Recommendations:**
-- Consider keeping the credentials in Azure Key Vault and retrieving them at runtime by using environment variables (see [Use environment variables for Azure Key Vault secrets - Power Apps](https://learn.microsoft.com/powerapps/developer/data-platform/environment-variables-azure-key-vault-secrets)). 
-- If you can't use Azure Key Vault, make sure you enable the secured input option (see [Manage sensitive input like passwords in Power Automate](https://learn.microsoft.com/power-automate/manage-sensitive-input)).
+- Consider keeping the credentials in Azure Key Vault and retrieving them at runtime by using environment variables (see [Use environment variables for Azure Key Vault secrets](/power-apps/maker/data-platform/environmentvariables-azure-key-vault-secrets)). 
+- If you can't use Azure Key Vault, make sure you enable the secured input option (see [Manage sensitive input like passwords](/power-automate/how-tos-use-sensitive-input)).
 
 ```kusto  
 //Find Agents with hard-coded credentials in Topics or Actions can expose clear-text credentials to unintended entities. 
