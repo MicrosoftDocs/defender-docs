@@ -44,19 +44,6 @@ Defender for Containers provides the following capabilities for AKS environments
 > [!NOTE]
 > Available signals and detections depend on cluster configuration and enabled components.
 
-## Architecture components
-
-The Defender for Containers architecture for AKS consists of Azure-managed and Kubernetes-native components:
-
-- **Defender sensor**
-- **Azure Policy for Kubernetes**
-- **Azure Container Registry integration**
-- **Agentless discovery**
-
-These components work together to provide visibility into security signals and posture without requiring inbound access to AKS clusters.
-
-Learn more about [container security architecture](defender-for-containers-architecture.md#architecture-for-each-kubernetes-environment).
-
 # [Amazon Elastic Kubernetes Service (EKS)](#tab/eks)
 
 Microsoft Defender for Containers extends security monitoring and protection to Amazon Elastic Kubernetes Service (EKS) clusters to provide visibility into container image vulnerabilities, runtime activity, and cluster configuration risks through Microsoft Defender for Cloud.
@@ -83,19 +70,6 @@ Defender for Containers provides the following capabilities for Amazon EKS envir
 
 > [!NOTE]
 > Available signals and detections depend on cluster configuration and enabled data sources.
-
-## Architecture components
-
-The Defender for Containers architecture for Amazon EKS consists of:
-
-- **AWS Connector**
-- **Azure Arc-enabled Kubernetes**
-- **Defender sensor**
-- **Azure Policy extension for Kubernetes**
-
-These components work together to provide visibility into security signals and posture without requiring inbound connectivity.
-
-Learn more about [container security architecture](defender-for-containers-architecture.md#architecture-for-each-kubernetes-environment).
 
 # [Google Kubernetes Engine (GKE)](#tab/gke)
 
@@ -124,19 +98,6 @@ Defender for Containers provides the following capabilities for GKE environments
 
 > [!NOTE]
 > Available signals and detections depend on cluster configuration and enabled data sources.
-
-## Architecture components
-
-The Defender for Containers architecture for GKE consists of:
-
-- **GCP Connector**
-- **Azure Arc-enabled Kubernetes**
-- **Defender sensor**
-- **Azure Policy extension for Kubernetes**
-
-These components work together to provide visibility into security signals and posture without requiring inbound access to GKE clusters.
-
-Learn more about [container security architecture](defender-for-containers-architecture.md#architecture-for-each-kubernetes-environment).
 
 # [Arc-enabled Kubernetes](#tab/arc)
 
@@ -170,70 +131,7 @@ Defender for Containers provides the following capabilities for Arc-enabled Kube
 > [!NOTE]
 > Available signals, detections, and posture assessments depend on enabled components and cluster configuration.
 
-## Architecture components
-
-The Defender for Containers architecture for Arc-enabled Kubernetes consists of:
-
-- **Azure Arc agents**
-- **Defender extension for Kubernetes**
-- **Defender sensor (DaemonSet)**
-- **Azure Policy extension for Kubernetes**
-
-These components are deployed and managed through Azure Arc and are scoped to the Arc-enabled cluster.
-
-Learn more about [container security architecture](defender-for-containers-architecture.md#architecture-for-each-kubernetes-environment).
-
 ---
-
-## Deployment flow
-
-### Onboard the environment
-
-Connect the environment to Microsoft Defender for Cloud:
-
-- **AKS:** No additional connector is required. AKS clusters are discovered automatically within the subscription.
-- **Amazon EKS:** [Connect your AWS account](quickstart-onboard-aws.md).
-- **Google Kubernetes Engine (GKE):** [Connect your GCP project](quickstart-onboard-gcp.md).
-- **Other Kubernetes distributions:** [Connect the cluster to Azure using Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
-
-### Choose deployment path
-
-Automatic provisioning = enable defender for containers in mdc
-
-Manually:
-enable and then deploy clusters using:
-- azure cli
-- helm
-
-To exclude the Defender sensor from automatic provisioning, add the following tag to the cluster resource in Azure:
-
-- `ms_defender_container_exclude_sensors = true`
-
-For clusters connected to Azure through Azure Arc (including Amazon EKS and Google Kubernetes Engine), add the tag to the Azure Arc-enabled Kubernetes resource in Azure.
-
-### Enable the Containers plan and select components
-
-Enable the Containers plan and turn on the components you need using the Azure portal.
-
-Learn how to [enable Defender for Containers on your environment](defender-for-containers-enable-portal.md).
-
-#### Deploy cluster components manually 
-
-Instead explain that this is if you disable automatic provisioning:
-
-Depending on the Kubernetes environment and the components you enable, Defender for Containers deploys cluster-level components such as the Defender sensor or Azure Policy extension.
-
-You can deploy these components by using one of the following methods:
-
-- [Deploy Defender sensor and Azure Policy to clusters using Azure CLI](defender-for-containers-deploy-azure-cli.md)
-
-- [Install Defender for Containers sensor by using Helm](deploy-helm.md)
-
-### Post Deployment
-
-- verify (defender-for-containers-verify-deployment.md)
-- remediate (defender-for-containers-deploy-portal.md)
-- troubleshoot (defender-for-containers-troubleshoot.md)
 
 ## View your current coverage
 
@@ -247,8 +145,8 @@ Defender for Containers is billed as part of Microsoft Defender for Cloud. Prici
 
 For pricing details, see [Microsoft Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 
-## Next steps
+## Related content
 
-- [Enable Defender for Containers in Microsoft Defender for Cloud](defender-for-containers-enable-portal.md)
+- [Plan deployment for Microsoft Defender for Containers](defender-for-containers-deployment-planning.md)
 
-- [Deploy Defender for Containers components using Azure CLI](defender-for-containers-deploy-azure-cli.md)
+- [Defender for Containers architecture overview](defender-for-containers-architecture.md)

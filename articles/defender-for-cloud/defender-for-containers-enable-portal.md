@@ -77,7 +77,7 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 
 - An [AWS project onboarded to Microsoft Defender for Cloud](quickstart-onboard-aws.md).
 
-- One or more Amazon EKS clusters running Kubernetes running Kubernetes See the [support matrix](support-matrix-defender-for-containers.md).
+- One or more Amazon EKS clusters running a supported Kubernetes version. See the [support matrix](support-matrix-defender-for-containers.md).
 
 ## Enable the Defender for Containers plan
 
@@ -111,7 +111,7 @@ This article explains how to enable the Microsoft Defender for Containers plan i
         - **Security findings:** Generates findings and links them to container images when new images are pushed or existing images are updated.
     
     > [!IMPORTANT]  
-    > If you enable Kubernetes API access,  API servers need to be publicly accessible. (edit)
+    > If you enable **Kubernetes API access**, the Kubernetes API server must be publicly accessible.
 
 1. Select **Save**.
 
@@ -149,7 +149,7 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 
 - A [GCP project onboarded to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
 
-- One or more GKE clusters running Kubernetes version that is allowed?. See the [support matrix](support-matrix-defender-for-containers.md).
+- One or more Google Kubernetes Engine (GKE) clusters running a supported Kubernetes version. See the [support matrix](support-matrix-defender-for-containers.md).
 
 ## Enable the Defender for Containers plan
 
