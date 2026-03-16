@@ -138,20 +138,25 @@ For recommendations with parameters that need to be customized, you need to set 
 1. Select the relevant subscription.
 
 1. From the navigation menu, select **Security policies**.
+   :::image type="content" source="media/kubernetes-workload-protections/security-policies-page.png" alt-text="Screenshot of the Security policies page.":::
 
-1. Select the **Recommendations** tab.
+1. On the **Standards** tab, search for the appropriate security standard.
 
-1. Select or search for the appropriate recommendation.
+1. Select the security standard's 3-dot menu and select **Manage**.
+   :::image type="content" source="media/kubernetes-workload-protections/security-policies-select-manage.png" alt-text="Screenshot of selecting Manage from the recommendation's 3-dot menu.":::
 
-1. Select the 3-dot menu. 
+1. Select the relevant policy assignment's 3-dot menu and select **Manage effect and parameters**.
+   :::image type="content" source="media/kubernetes-workload-protections/select-manage-effect-and-parameters.png" alt-text="Screenshot of selecting the 3-dot menu and then selecting Manage effect and aparameters.":::
+
+1. Modify the values as required.
+
 
 1. Select the relevant assignment. The default assignment is `ASC default`.
 
 1. Open the **Parameters** tab and modify the values as required.
+   :::image type="content" source="media/kubernetes-workload-protections/manage-effect-and-parameters.png" alt-text="Screenshot of the paraments panel.":::
 
     :::image type="content" source="media/kubernetes-workload-protections/containers-parameter-requires-configuration.png" alt-text="Screenshot showing where to modify the parameters for one of the recommendations in the Kubernetes data plane hardening protection bundle." lightbox="media/kubernetes-workload-protections/containers-parameter-requires-configuration.png":::
-
-1. Select **Review + save**.
 
 1. Select **Save**.
 
@@ -167,11 +172,21 @@ For recommendations with parameters that need to be customized, you need to set 
 
 **To see which recommendations apply to your clusters**:
 
-1. Open Defender for Cloud's [asset inventory](asset-inventory.md) page and set the resource type filter to **Kubernetes services**.
+1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Select a cluster to investigate and review the available recommendations available for it.
+1. Go to **Defender for Cloud** > **Inventory**.
 
-When you view a recommendation from the workload protection set, the number of affected pods ("Kubernetes components") is listed alongside the cluster. For a list of the specific pods, select the cluster and then select **Take action**.
+1. Set the resource type filter to **Kubernetes services** and select **Apply**.
+   :::image type="content" source="media/kubernetes-workload-protections/resource-type-kubernetes-service.png" alt-text="Screenshot of using the resource type filter to select kubernetes service.":::
+
+1. Select a cluster to investigate.
+
+1. Review the available recommendations for it. When you view a recommendation from the workload protection set, the number of affected pods ("Kubernetes components") is listed alongside the cluster.
+   
+
+1. Optional: For a list of the specific pods, select the recommendation.
+   :::image type="content" source="media/kubernetes-workload-protections/resource-health-recommendation.png" alt-text="Screenshot of selecting a recommendation from the Resource health page.":::
+1.  and then select **Take action**.
 
 :::image type="content" source="./media/defender-for-kubernetes-usage/view-affected-pods-for-recommendation.gif" alt-text="Screenshot showing where to view the affected pods for a Kubernetes recommendation.":::
 
