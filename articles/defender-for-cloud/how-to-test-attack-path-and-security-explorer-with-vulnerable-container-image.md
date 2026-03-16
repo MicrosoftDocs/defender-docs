@@ -19,7 +19,7 @@ You can explore and investigate [attack paths](how-to-manage-attack-path.md) by 
 
 ## Test the attack path and security explorer using a mock vulnerable container image for each cloud provider
 
-## [Azure)**](#tab/testing-the-attack-path-and-security-explorer-using-a-mock-vulnerable-container-image-for-azure)
+## [Azure](#tab/testing-the-attack-path-and-security-explorer-using-a-mock-vulnerable-container-image-for-azure)
 
 ### Testing the attack path and security explorer using a mock vulnerable container image for Azure
 
@@ -82,8 +82,6 @@ If the list of attack paths has no entries, you can still test this feature by u
 > It can take up to 24 hours to see results in the cloud security explorer and attack path.
 
 After you finish testing the attack path, investigate the created attack path by going to **Attack path analysis**, and search for the attack path you created. For more information, see [Identify and remediate attack paths](how-to-manage-attack-path.md).
-
-## AWS: 
 
 ## [**AWS**](#tab/testing-the-attack-path-and-security-explorer-using-a-mock-vulnerable-container-image-for-aws)
 
