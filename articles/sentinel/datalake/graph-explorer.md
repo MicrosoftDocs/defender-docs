@@ -26,21 +26,22 @@ To access Sentinel Graph and query it to produce visualizations, you must have t
 
 ## Access Sentinel Graph
 
-To access Sentinel Graph, select **Microsoft Sentinel** > **Graph** from the left-hand navigation pane.
-
-:::image type="content" source="media/graph-explorer/graphs-landing-page.png" alt-text="Screenshot showing how to access Sentinel Graph from the Microsoft Sentinel navigation pane." lightbox="media/graph-explorer/graphs-landing-page.png":::
+To use Sentinel Graph, select **Microsoft Sentinel** > **Graph** from the left-hand navigation pane.
 
 The Sentinel Graph management page lists any custom graphs that you've created in the Visual Studio Code Sentinel extension. If you haven't yet created a custom graph, see [Create a custom graph mapping](./create-custom-graphs.md) to get started.
 
 If you already created custom graphs, the Sentinel Graph management page displays all available custom graphs. View an overview of each custom graph by selecting the **...** menu on any graph tile.
 
-:::image type="content" source="media/graph-explorer/graph-management-page.png" alt-text="Screenshot showing the Sentinel Graph management page with custom graph tiles." lightbox="media/graph-explorer/graph-management-page.png":::
-
+:::image type="content" source="media/graph-explorer/graphs-landing-page.png" alt-text="Screenshot showing how to access Sentinel Graph from the Microsoft Sentinel navigation pane." lightbox="media/graph-explorer/graphs-landing-page.png":::
 ## Query a custom graph
 
-Decide which custom graph you'd like to query and select **Query graph** to be routed to the graph creation page.
+Select **Query graph** on the graph tile to view the graph query page.
 
-The graph creation page shows you the schema for the graph so you can better understand the mapped relationships you can use when querying. If you're unsure about what to query and want to see the schema in action with live data, it's recommended that you begin with the following generic query that produces a visualization for any custom graph:
+The graph creation page shows the graph schema. Use the schema to understand the mapped relationships when creating a query. 
+
+:::image type="content" source="media/graph-explorer/graph-creation-schema.png" alt-text="Screenshot showing the Sentinel Graph creation page with the schema panel and query input." lightbox="media/graph-explorer/graph-creation-schema.png":::
+
+Start with the following generic query that produces a visualization for any custom graph:
 
 ```gql
 MATCH (x)-[y]->(z)
@@ -50,30 +51,27 @@ LIMIT 100
 
 For more information on using GQL, see the [GQL help documentation](<!-- LINK HERE -->).
 
-Input your query and select **Run GQL query** to view your results. Once complete, the graph visualization appears.
+Paste the query into the quey field and select **Run GQL query** to view your results. Once complete, the graph visualization appears.
 
-:::image type="content" source="media/graph-explorer/graph-creation-schema.png" alt-text="Screenshot showing the Sentinel Graph creation page with the schema panel and query input." lightbox="media/graph-explorer/graph-creation-schema.png":::
+Select any node to view the node details, including the properties associated with that node. Use this information to inform subsequent queries and visualizations.
 
-:::image type="content" source="media/graph-explorer/graph-visualization-results.png" alt-text="Screenshot showing the Sentinel Graph visualization results after running a GQL query." lightbox="media/graph-explorer/graph-visualization-results.png":::
+:::image type="content" source="./media/graph-explorer/graph-basic-query.png" lightbox="./media/graph-explorer/graph-basic-query.png"  alt-text="Screenshot showing the Sentinel Graph visualization results after running a GQL query.":::
+
+Select the **Table** tab to view a tabular representation of your results. Select a row to see the underlying JSON data for each cell. 
+
+:::image type="content" source="media/graph-explorer/basic-query-table.png" alt-text="Screenshot showing the table visualization results after running a GQL query." lightbox="media/graph-explorer/basic-query-table.png":::
 
 ## GQL query guidance
 
-To familiarize yourself with some of the available properties that can be used to draft more complex queries, select the **Table** tab. You can select any cell within the table view to view the underlying JSON, which can be used in subsequent queries.
+The following example demonstrates how to query a Device Process Graph to understand device communication with external IP addresses. By examining the schema, you can identify the key relationships within your graph:
+- *IP Addresses* are linked to *Threat Intel Indicator IPs*
+- *Processes* and *Devices* are connected to *IP Addresses*
+- *Users* run *Processes*
+- *Processes* connect to *URLs*
 
-:::image type="content" source="media/graph-explorer/graph-table-view.png" alt-text="Screenshot showing the table view with query results and underlying JSON data." lightbox="media/graph-explorer/graph-table-view.png":::
-
-In the following example, we look at a Device Process Graph to understand how devices communicate with external IP addresses. Looking at the schema helps you understand the relationships defined within the graph. In this example, we can see that:
-
-- IP addresses are linked to threat intel indicator IPs
-- Processes and devices are connected to IP addresses
-- Users run processes
-- Processes connect to URLs
-
-On the **Schema** tab, you can also select an individual node to see the node details pane that displays the available properties for that node type. Once you start generating queries and produce a graph visualization, you can also view the raw property data by selecting any cell within the **Table** view. Both views provide key information that you can use to draft more advanced queries to surface the insights that you care about most.
-
-:::image type="content" source="media/graph-explorer/graph-schema-node-details.png" alt-text="Screenshot showing the schema tab with node details pane displaying available properties." lightbox="media/graph-explorer/graph-schema-node-details.png":::
-
-With this information, you can draft a more specific query. In the following example, the first line specifies that we're looking for devices that utilize a process that's connected to an IP address. The second line specifies that we're looking for public IPs, narrowing our results to external connected entities that pose a greater threat.
+You can now draft a more specific query. In the following example, the first line specifies that you're looking for devices that utilize a process that's connected to an IP address. `MATCH (d:Device)-[h]-(p:Process)-[c]->(ip:IPAddress)`
+The second line specifies that your're looking for public IPs, narrowing our results to external connected entities that pose a greater threat. `WHERE ip.RemoteIPType = 'Public'`
+The last two lines specify that you want to return all available data for the specified query, but limit results to 1000 to ensure the query runs efficiently. `RETURN * LIMIT 1000`
 
 ```gql
 MATCH (d:Device)-[h]-(p:Process)-[c]->(ip:IPAddress)
@@ -84,7 +82,7 @@ LIMIT 1000
 
 :::image type="content" source="media/graph-explorer/graph-specific-query.png" alt-text="Screenshot showing the graph visualization for a specific query filtering devices connected to public IP addresses." lightbox="media/graph-explorer/graph-specific-query.png":::
 
-Here's an example of a more granular query with additional search parameters. This query searches for malicious IP addresses and devices communicating with more than one device. The first line searches for devices that connect to IP addresses that are known to be used by threat actors. The `DISTINCT` clause searches for unique IP and device values. The `COLLECT_LIST` groups the device names in a singular column in the Table view, and `DeviceCount` specifies that only IPs with more than one connected device are listed.
+The following is an example of a more granular query with additional search parameters. This query searches for malicious IP addresses and devices communicating with more than one device. The first line searches for devices that connect to IP addresses that are known to be used by threat actors. The `DISTINCT` clause searches for unique IP and device values. The `COLLECT_LIST` groups the device names in a singular column in the **Table** view, and `DeviceCount` specifies that only IPs with more than one connected device are listed.
 
 ```gql
 MATCH (d:Device)-[c]->(ip:IPAddress)-[l]->(ti:ThreatIntelIndicatorIP)
@@ -97,29 +95,29 @@ ORDER BY DeviceCount desc
 RETURN *
 ```
 
-## Interact with a graph
+:::image type="content" source="media/graph-explorer/table-specific-query.png" alt-text="Screenshot showing the table view for a specific query filtering devices connected to malicious IP addresses." lightbox="media/graph-explorer/graph-specific-query.png":::
 
-The following graph capabilities help you traverse a graph and obtain insights from the represented data.
+## Interact with graphs
 
-### Node colors
+Use the following capabilities to traverse and explore your graphs:
 
-Nodes are color coded according to their type so you can easily visualize the breadth of node types represented on the graph.
+**Node colors**
+Nodes are color-coded by type, making it easy to visualize the different entity types in your graph.
 
-### Graph legend
+**Graph legend**
+The graph legend shows all node types in your graph with their corresponding colors and counts. It also lists all edge types, so you can understand how nodes connect to each other.
 
-The graph legend displays a list of all nodes represented on the graph and their associated colors. The legend also displays counts so you can understand the number of each node type present on the visualized graph. The legend also lists all applicable edges so you can understand how these nodes connect to one another.
+**View node details**
+Select a node to open a details pane on the right side. Use the metadata shown here to refine future queries—for example, by filtering on geographic region, department, or last updated date.
+:::image type="content" source="media/graph-explorer/graph-legend.png" lightbox="media/graph-explorer/graph-legend.png" alt-text="Screenshot showing the graph legend with node and edge types.":::
 
-### Node hover
+**Hover over nodes**
+Hover over a node to highlight its connections. This hides unrelated nodes and edges for a clearer view of the node's connectivity and displays key node information.
 
-To see the connections associated to a particular node, hover your cursor over the node of interest. This action obfuscates any unrelated nodes and edges, providing a clearer view of the connectivity of the specified node. This action also displays key information about the node. To view more metadata, select the node to see the details.
-
-### Node details
-
-When you select a node, a right-hand pane appears that provides additional data about the node. This data can be used in subsequent queries to create a graph visualization based on specific parameters. For instance, you can limit results to a certain geographic region, department, or "last updated" time frame.
-
-### Rearrange nodes
-
-You can drag nodes across the graph canvas to change their position. You can also recenter the graph with a button on the bottom right of the graph canvas. You can also zoom in or out on the graph using either your cursor or the zoom function on the bottom right of the graph canvas.
+**Rearrange and zoom**
+- Drag nodes to reposition them on the canvas
+- Use the recenter button in the bottom right to reset the view
+- Zoom in or out using your cursor or the zoom controls in the bottom right
 
 ### Table view
 
