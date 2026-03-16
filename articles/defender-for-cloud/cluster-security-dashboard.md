@@ -136,7 +136,7 @@ Defender for Cloud continuously assesses your environment against selected regul
 
 1. Configure the required compliance standard you need to adhere to. You configure the standard at the subscription level. Follow the link for configuration from the compliance tab or the dashboard settings.
 
-1. Once you select the relevant standards, use the compliance tab summary to understand which standard you comply with and which requires additional steps to comply with.
+1. Once you select the relevant standards, use the compliance tab summary to understand which standard you comply with and which requires additional steps.
 
 1. The compliance tab grid shows only recommendations for controls the cluster or its components aren't complying with.
 
