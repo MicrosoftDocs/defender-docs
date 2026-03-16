@@ -1,7 +1,7 @@
----
+﻿---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 02/23/2026
+ms.date: 02/25/2026
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality.
 ms.reviewer: AbbyMSFT
@@ -22,6 +22,10 @@ For more information, see also:
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
+## March 2026
+
+### Continued rollout of new health alert: Sensor v3.x RPC Audit Misconfigured 
+The **Sensor v3.x RPC Audit Misconfigured** health alert is continuing to be rolled out gradually to customers.  The new health alert helps identify v3.x sensors where Enhanced RPC auditing configuration is either missing or incorrectly applied. Enhanced RPC auditing is required for some Microsoft Defender for Identity advanced identity detections.  For more information, see [Configure RPC on sensors v3.x](deploy/prerequisites-sensor-version-3.md#configure-rpc-auditing).
 
 ## February 2026
 
@@ -31,11 +35,26 @@ For updates about versions and features released six months ago or earlier, see 
 |---|---|
 |2.255|This sensor update includes bug fixes.|
 
+### New Defender for Identity security alerts
+
+These new alerts were added to the Defender for Identity security alerts:
+
+**New alerts related to Entra ID**:
+
+- [Suspicious user configuration change activity from Entra ID sync application](alerts-xdr.md#suspicious-user-configuration-change-activity-from-entra-id-sync-application)
+- [Anomalous OAuth device code authentication activity](alerts-xdr.md#anomalous-oauth-device-code-authentication-activity)
+- [Suspicious Graph API request made from Entra ID sync application](alerts-xdr.md#suspicious-graph-api-request-made-from-entra-id-sync-application)
+- [Suspicious sign-in observed from Entra ID sync application](alerts-xdr.md#suspicious-sign-in-observed-from-entra-id-sync-application)
+- [Suspicious sign in with CSRF speedbump trigger](alerts-xdr.md#suspicious-sign-in-with-csrf-speedbump-trigger)
+
+**New alerts related to Active Directory**:
+
+- [Possible golden ticket attack (suspicious ticket)](alerts-xdr.md#possible-golden-ticket-attack-suspicious-ticket)
+- [Possible Kerberos key list attack](alerts-xdr.md#possible-kerberos-key-list-attack)
+
 ## January 2026
 
-### Changes to Defender for Identity security alerts
-
-### New alerts
+### New Defender for Identity security alerts
 
 These new alerts were added to the Defender for Identity security alerts:
 
@@ -45,6 +64,7 @@ These new alerts were added to the Defender for Identity security alerts:
 - [Suspicious sign-in observed to Entra ID sync application using an uncommon user agent](alerts-xdr.md#suspicious-sign-in-observed-to-entra-id-sync-application-using-an-uncommon-user-agent)
 - [Possible OAuth code theft detected through consent abuse](alerts-xdr.md#possible-oauth-code-theft-detected-through-consent-abuse)
 - [Possible adversary-in-the-middle (AiTM) attack detected (ConsentFix)](alerts-xdr.md#possible-adversary-in-the-middle-aitm-attack-detected-consentfix)
+- [Skipped MFA on remembered device from uncommon ISP sign-in](alerts-xdr.md#skipped-mfa-on-remembered-device-from-uncommon-isp-sign-in)
 
 **New alerts related to Active Directory**:
 
@@ -52,16 +72,8 @@ These new alerts were added to the Defender for Identity security alerts:
 - [Possible Active Directory Certificate Services enumeration](alerts-xdr.md#possible-active-directory-certificate-services-enumeration)
 - [Possible Active Directory enumeration via ADWS](alerts-xdr.md#possible-active-directory-enumeration-via-adws)
 - [Suspicious NTLM authentication](alerts-xdr.md#suspicious-ntlm-authentication)
-
-### Alerts migrated to the Defender XDR alert format
-
-As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, the following alerts were converted from the Microsoft Defender for Identity classic format to the Defender XDR alert format.
-
-- [Skipped MFA on remembered device from uncommon ISP sign-in](alerts-xdr.md#skipped-mfa-on-remembered-device-from-uncommon-isp-sign-in)
 - [Possible Kerberoasting attack using a stealthy LDAP search](alerts-xdr.md#possible-kerberoasting-attack-using-a-stealthy-ldap-search)
 - [Suspicious Kerberos authentication (TGT request using TGS-REQ)](alerts-xdr.md#suspicious-kerberos-authentication-tgt-request-using-tgs-req)
-
-All alerts are based on detections from Defender for Identity sensors. For the full list of Microsoft Defender alerts see [Microsoft Defender for Identity XDR security alerts](alerts-xdr.md).
 
 ### Identity inventory enhancements are now generally available
 
@@ -81,7 +93,7 @@ Enhanced RPC auditing is required for some Microsoft Defender for Identity advan
 
 ### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x (Preview)
 
-We’re gradually rolling out automatic Windows event-auditing configuration for sensors v3.x, along with related health alerts. Automatic Windows event-auditing streamlines deployment by automatically applying the required auditing settings to new sensors and correcting misconfigurations on existing ones.
+Weâ€™re gradually rolling out automatic Windows event-auditing configuration for sensors v3.x, along with related health alerts. Automatic Windows event-auditing streamlines deployment by automatically applying the required auditing settings to new sensors and correcting misconfigurations on existing ones.
 This update might identify existing auditing configuration gaps that weren't previously detected.
 To ensure consistent protection, we recommend that you make sure all servers with the v3 sensors are configured with:
 
@@ -93,13 +105,13 @@ For more information, see [Configure automatic windows auditing](deploy/configur
 
 |Version number|Updates|
 |---|---|
-|2.254|The sensor now supports a new DNS zone target for *.aatp.gcc.azure.com. Make sure your sensors in GCC can access this zone with your sensor DNS prefix.|
+|2.254|The sensor now supports a new DNS zone target for *.atp.gcc.azure.com. Make sure your sensors in GCC can access this zone with your sensor DNS prefix.|
 
 ### New security posture assessment: Identify service accounts in privileged groups
 
 This identity security posture assessment lists Active Directory service accounts with direct or nested membership in privileged groups.
 
-You can use this assessment to identify service accounts with elevated permissions and take action when privileged access isn’t required.
+You can use this assessment to identify service accounts with elevated permissions and take action when privileged access isnâ€™t required.
 
 For more information, see:[Security posture assessment: Identify service accounts in privileged groups](security-posture-assessments/accounts.md#identify-service-accounts-in-privileged-groups)
 
@@ -107,7 +119,7 @@ For more information, see:[Security posture assessment: Identify service account
 
 This identity security posture assessment lists Active Directory accounts that are members of built-in Operator Groups, including direct and indirect membership. 
 
-You can use this assessment to review legacy or unnecessary operator access and take action when elevated access isn’t required.
+You can use this assessment to review legacy or unnecessary operator access and take action when elevated access isnâ€™t required.
 
 For more information, see:[Security posture assessment: Locate accounts in built-in Operator Groups](security-posture-assessments/accounts.md#locate-accounts-in-built-in-operator-groups)
 

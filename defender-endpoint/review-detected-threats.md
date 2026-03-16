@@ -49,7 +49,7 @@ In the Microsoft Defender portal, you can view and manage threat detections usin
 
 ## Manage threat detections in Microsoft Intune
 
-You can manage threat detections for any devices that are [enrolled in Microsoft Intune](/mem/intune/enrollment/windows-enrollment-methods) using the following steps:
+You can manage threat detections for any devices that are [enrolled in Microsoft Intune](/intune/intune-service/fundamentals/deployment-guide-enroll) using the following steps:
 
 1. Go to the Microsoft Intune admin center at [intune.microsoft.com](https://intune.microsoft.com) and sign-in.
 
@@ -118,7 +118,7 @@ You need to ensure that when you run `%ProgramFiles%\Windows Defender\MpCmdRun.e
 #### I see a device that has been inactive for 180+ days but still showing up on the report for 'Devices with active malware'.  The device doesn't show in the "Device inventory", can't be turned on and can't be offboarded from Microsoft Defender for Endpoint.
 
   
-The device has not been [retired](/mem/intune/remote-actions/devices-wipe) from Intune.
+The device has not been [retired](/intune/intune-service/remote-actions/devices-wipe) from Intune.
 
 ## Related articles
 

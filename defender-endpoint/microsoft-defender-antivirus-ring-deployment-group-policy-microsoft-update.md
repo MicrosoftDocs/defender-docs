@@ -104,8 +104,8 @@ In [Group Policy Management Console](/previous-versions/windows/it-pro/windows-s
 
 ### Related articles
 
-- [Antivirus profiles - Devices managed by Microsoft Intune](/mem/intune/protect/endpoint-security-antivirus-policy#antivirus-profiles)
-- [Use Endpoint security Antivirus policy to manage Microsoft Defender update behavior (Preview)](/mem/intune/fundamentals/whats-new#use-endpoint-security-antivirus-policy-to-manage-microsoft-defender-update-behavior-preview)
+- [Antivirus profiles - Devices managed by Microsoft Intune](/intune/intune-service/protect/endpoint-security-antivirus-policy#antivirus-profiles)
+- [Use Endpoint security Antivirus policy to manage Microsoft Defender update behavior (Preview)](/intune/intune-service/fundamentals/whats-new#use-endpoint-security-antivirus-policy-to-manage-microsoft-defender-update-behavior-preview)
 - [Manage the gradual rollout process for Microsoft Defender updates](manage-gradual-rollout.md#manage-the-gradual-rollout-process-for-microsoft-defender-updates)
 
 ## Setting up the production environment
@@ -181,8 +181,8 @@ If you encounter problems with your deployment, create or append your Microsoft 
 
 ## See also
 
-- [Antivirus profiles - Devices managed by Microsoft Intune](/mem/intune/protect/endpoint-security-antivirus-policy#antivirus-profiles)
-- [Use Endpoint security Antivirus policy to manage Microsoft Defender update behavior (Preview)](/mem/intune/fundamentals/whats-new#use-endpoint-security-antivirus-policy-to-manage-microsoft-defender-update-behavior-preview)
+- [Antivirus profiles - Devices managed by Microsoft Intune](/intune/intune-service/protect/endpoint-security-antivirus-policy#antivirus-profiles)
+- [Use Endpoint security Antivirus policy to manage Microsoft Defender update behavior (Preview)](/intune/intune-service/fundamentals/whats-new#use-endpoint-security-antivirus-policy-to-manage-microsoft-defender-update-behavior-preview)
 - [Manage the gradual rollout process for Microsoft Defender updates](manage-gradual-rollout.md#manage-the-gradual-rollout-process-for-microsoft-defender-updates)
 - [Microsoft Defender Antivirus ring deployment overview](microsoft-defender-antivirus-ring-deployment.md#ring-deployment-overview)
 

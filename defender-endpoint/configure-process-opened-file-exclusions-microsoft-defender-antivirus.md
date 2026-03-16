@@ -94,11 +94,11 @@ A process exclusion might also be defined via a [Contextual exclusion](configure
 
 ### Use Microsoft Intune to exclude files that have been opened by specified processes from scans
 
-For more information, see [Configure device restriction settings in Microsoft Intune](/mem/intune/configuration/device-restrictions-configure) and [Microsoft Defender Antivirus device restriction settings for Windows 10 in Intune](/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus).
+For more information, see [Configure device restriction settings in Microsoft Intune](/intune/intune-service/configuration/device-restrictions-configure) and [Microsoft Defender Antivirus device restriction settings for Windows 10 in Intune](/intune/intune-service/configuration/device-restrictions-windows-10#microsoft-defender-antivirus).
 
 ### Use Microsoft Configuration Manager to exclude files that have been opened by specified processes from scans
 
-See [How to create and deploy anti-malware policies: Exclusion settings](/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings) for details on configuring Microsoft Configuration Manager (current branch).
+See [How to create and deploy anti-malware policies: Exclusion settings](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings) for details on configuring Microsoft Configuration Manager (current branch).
 
 ### Use Group Policy to exclude files that have been opened by specified processes from scans
 
@@ -162,7 +162,7 @@ Follow the instructions in [Add exclusions in the Windows Security app](microsof
 
 ## Review the list of exclusions
 
-You can retrieve the items in the exclusion list with MpCmdRun, PowerShell, [Microsoft Configuration Manager](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings), [Intune](/mem/intune/configuration/device-restrictions-configure), or the [Windows Security app](microsoft-defender-security-center-antivirus.md).
+You can retrieve the items in the exclusion list with MpCmdRun, PowerShell, [Microsoft Configuration Manager](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings), [Intune](/intune/intune-service/configuration/device-restrictions-configure), or the [Windows Security app](microsoft-defender-security-center-antivirus.md).
 
 If you use PowerShell, you can retrieve the list in two ways:
 
@@ -205,7 +205,7 @@ For more information on how to use PowerShell with Microsoft Defender Antivirus,
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)

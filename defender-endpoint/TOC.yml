@@ -118,13 +118,25 @@
             - name: Step 2 - Configure device proxy and Internet settings
               href: configure-proxy-internet.md
             - name: Step 3 - Verify client connectivity to service URLs
-              href: verify-connectivity.md        
+              href: verify-connectivity.md            
+        - name: Configure streamlined connectivity
+          items:
             - name: Onboard devices using streamlined method
-              href: configure-device-connectivity.md            
+              href: configure-device-connectivity.md
             - name: Migrate devices to streamlined method
-              href: migrate-devices-streamlined.md
-            - name: Enable access to service URLs - US government            
-              href: streamlined-device-connectivity-urls-gov.md                       
+              href: migrate-devices-streamlined.md        
+        - name: Enable access to service URLs
+          items:
+          - name: Streamlined device connectivity URLs (commercial)
+            href: streamlined-device-connectivity-urls-commercial.md
+          - name: Streamlined device connectivity URLs (US government)
+            href: streamlined-device-connectivity-urls-gov.md                                                           
+          - name: Standard device connectivity URLs
+            items: 
+            - name: Standard device connectivity URLs (commercial)
+              href: standard-device-connectivity-urls-commercial.md
+            - name: Standard device connectivity URLs (US government)
+              href: standard-device-connectivity-urls-gov.md
         - name: Onboard client devices
           items:
           - name: Onboard Windows devices using the Defender deployment tool
@@ -364,19 +376,20 @@
           - name: Configure library management for live response
             href: configure-libraries-live-response.md
 
-        - name: Permissions
+        - name: Permissions management
           items:
+          - name: Overview of permissions management
+            href: assign-portal-access.md
           - name: Use basic permissions to access the portal
             href: basic-permissions.md
-          - name: Assign user access to the portal
-            href: assign-portal-access.md
-            items:
-            - name: Create and manage roles
-              href: user-roles.md
-            - name: Create and manage device groups
-              href: machine-groups.md
-            - name: Create and manage device tags
-              href: machine-tags.md
+          - name: Manage portal access using role-based access control
+            href: rbac.md
+          - name: Create and manage roles
+            href: user-roles.md
+          - name: Create and manage device groups
+            href: machine-groups.md
+          - name: Create and manage device tags
+            href: machine-tags.md
         - name: Rules and exclusions
           items:
           - name: Exclusions overview
@@ -493,8 +506,6 @@
             href: linux-support-connectivity.md
           - name: Troubleshoot performance issues
             href: linux-support-perf.md
-          - name: Troubleshoot missing events issues
-            href: linux-support-events.md
 
         - name: Troubleshoot Mobile Threat Defense
           items:
@@ -868,7 +879,7 @@
           href: use-intune-config-manager-microsoft-defender-antivirus.md
         - name: Use Microsoft Defender for Endpoint Security Settings Management to manage
             Microsoft Defender Antivirus
-          href: mde-security-settings-management.md
+          href: /intune/intune-service/protect/mde-security-integration?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
           displayName: Use Microsoft Defender for Endpoint Security Settings Management to
             manage Microsoft Defender Antivirus MDE Attach MDE Attach v2
         - name: Use Group Policy settings to manage Microsoft Defender Antivirus
@@ -981,7 +992,7 @@
       - name: Manage endpoint security policies
         href: manage-security-policies.md
       - name: Deploy endpoint security policies from Intune
-        href: /mem/intune/protect/mde-security-integration?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
+        href: /intune/intune-service/protect/mde-security-integration?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
       - name: Increase compliance with the security baseline
         href: configure-machines-security-baseline.md
       - name: Optimize attack surface reduction rule deployment and detections
@@ -1059,9 +1070,9 @@
           - name: Contain user from the network
             href: respond-machine-alerts.md#contain-user-from-the-network
           - name: Automatically apply GPO hardening (predictive shielding)
-            href: respond-machine-alerts.md#gpo-hardening
+            href: respond-machine-alerts.md#gpo-hardening-preview
           - name: Automatically apply Safeboot hardening (predictive shielding)
-            href: respond-machine-alerts.md#safeboot-hardening                     
+            href: respond-machine-alerts.md#safeboot-hardening-preview
           - name: Consult a threat expert
             href: respond-machine-alerts.md#consult-a-threat-expert
           - name: Check activity details in Action center
