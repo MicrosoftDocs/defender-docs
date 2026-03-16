@@ -594,6 +594,8 @@
     - name: Compare KQL jobs, summary rules, and search jobs
       href: datalake/kql-jobs-summary-rules-search-jobs.md
       displayName: data lake
+    - name: Microsoft Sentinel Graphs
+      href: datalake/graph-explorer.md
     - name: Microsoft Sentinel Custom graphs
       items:
         - name: Custom graphs overview

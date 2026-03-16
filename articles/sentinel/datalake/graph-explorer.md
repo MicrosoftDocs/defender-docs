@@ -1,12 +1,12 @@
 ---
 title: Query custom graphs in Microsoft Sentinel Graph (preview)
 description: Learn how to use Microsoft Sentinel Graph to query, visualize, and interact with custom security graphs to gain new security insights.
-author: batami
-ms.author: bagmo
-ms.topic: how-to
+author: EdB-MSFT
+ms.author: edbaynash
 ms.date: 03/16/2026
-appliesto:
-    - Microsoft Sentinel in the Azure portal
+ms.topic: how-to 
+ms.service: microsoft-sentinel
+ms.subservice: sentinel-graph
 
 #Customer intent: As a security analyst, I want to use Microsoft Sentinel Graph to query and visualize custom security graphs so that I can gain new insights into entity relationships and threats in my environment.
 ---
@@ -30,9 +30,9 @@ To access Sentinel Graph, select **Microsoft Sentinel** > **Graph** from the lef
 
 :::image type="content" source="media/graph-explorer/graph-explorer-navigation.png" alt-text="Screenshot showing how to access Sentinel Graph from the Microsoft Sentinel navigation pane." lightbox="media/graph-explorer/graph-explorer-navigation.png":::
 
-The Sentinel Graph management page lists any custom graphs that you've created in the Visual Studio Code Sentinel extension. If you haven't yet created a custom graph, see [Create a custom graph mapping]() to get started.
+The Sentinel Graph management page lists any custom graphs that you've created in the Visual Studio Code Sentinel extension. If you haven't yet created a custom graph, see [Create a custom graph mapping](./create-custom-graphs.md) to get started.
 
-If you already created a custom graph and have the correct permissions, the Sentinel Graph management page displays all available custom graphs. You can view an overview of each custom graph by selecting the **...** menu on any graph tile.
+If you already created custom graphs, the Sentinel Graph management page displays all available custom graphs. View an overview of each custom graph by selecting the **...** menu on any graph tile.
 
 :::image type="content" source="media/graph-explorer/graph-management-page.png" alt-text="Screenshot showing the Sentinel Graph management page with custom graph tiles." lightbox="media/graph-explorer/graph-management-page.png":::
 
