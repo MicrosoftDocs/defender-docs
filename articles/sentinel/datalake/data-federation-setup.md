@@ -30,7 +30,7 @@ Before setting up data federation, ensure you meet the following requirements:
 - The external data source must be publicly accessible (private endpoints aren't supported)
 
 
-## Create a service principal for Azure Key Vault access
+## Create a service principal
 
 For Azure Databricks and ADLS Gen 2 federation, you need a service principal to securely access credentials stored in Azure Key Vault.
 
@@ -61,11 +61,12 @@ For more information on creating service principals, see [Microsoft Entra ID app
 1. **Create an Azure Key Vault**:
    1. In the Azure portal, create a new Azure Key Vault.
    1. Use the **Azure role-based access control (recommended)** permission model.
+   1. Enable soft delete and purge protection settings for the key vault. 
    1. Note the Key Vault URI after creation.
 
 1. **Configure Key Vault access**:
    1. Assign the **Key Vault Secrets Officer** role to your service principal on the Key Vault's **Access Control (IAM)** page.
-   1. Assign the **Key Vault Secrets User** role to the Microsoft Sentinel platform's managed identity. The system managed identity prefixed with `msg-resource`.
+   1. Assign the **Key Vault Secrets User** role to the Microsoft Sentinel platform's managed identity. The system managed identity prefixed with `msg-resources-`.
 
 
 1. **Store the client secret in Key Vault**:
@@ -82,18 +83,23 @@ Federated connectors are managed on the Data connectors page in Microsoft Sentin
 1. Navigate to **Microsoft Sentinel** > **Configuration** > **Data connectors**.
 1. Under **Data federation**, select **Catalog** to view the available federated connectors.
 
-:::image type="content" source="./media/data-federation-setup/federation-catalog.png" alt-text="Screenshot showing the data federation catalog with available connectors." lightbox="./media/data-federation-setup/federation-catalog.png":::
+    The catalog page displays:
+    - Available federation connector types
+    - Number of configured instances for each connector
+    - Publisher and support information
 
-The catalog page displays:
-- Available federation connector types
-- Number of configured instances for each connector
-- Publisher and support information
+   :::image type="content" source="./media/data-federation-setup/federation-catalog.png" alt-text="Screenshot showing the data federation catalog with available connectors." lightbox="./media/data-federation-setup/federation-catalog.png":::
 
-Select **My connectors page** to view all configured connector instances.
+
+1. Select **My connectors page** to view all configured connector instances.
+    The page lists your tenant's data federation connector instances along with their display name, version, status, and support provider. 
+1. Select each instance to view details, edit configurations, or delete the instance.
 
 :::image type="content" source="./media/data-federation-setup/my-connectors.png" alt-text="Screenshot showing the My connectors page with configured federation instances." lightbox="./media/data-federation-setup/my-connectors.png":::
 
 ## Create a connector instance
+
+The process for creating a connector instance varies based on the external data source you're connecting to. Follow the instructions for your specific data source type.
 
 # [Azure Data Lake Storage Gen 2](#tab/adls)
 
@@ -102,8 +108,8 @@ Select **My connectors page** to view all configured connector instances.
 Before creating the connector, prepare your storage account:
 
 1. If you're creating a new storage account, ensure the **Hierarchical namespaces** setting is enabled.
-1. Assign the **Storage Blob Data Reader** role to the service principal you created earlier.
-1. Take note of the ADLS Gen 2 storage account endpoint URL.
+1. Assign the **Storage Blob Data Reader** role to the service principal you created earlier. For more information on granting access through the Azure portal, see [Assign Azure roles using the Azure portal - Azure RBAC](/azure/role-based-access-control/role-assignments-portal).
+
 
 > [!NOTE]
 > The files in your ADLS Gen 2 storage account must be in delta parquet format to be read from the Sentinel data lake.
@@ -153,6 +159,7 @@ Select **Connect**, to complete the setup for the ADLS Gen 2 connector instance.
 Before creating the connector, configure access in your Databricks environment:
 
 1. In Azure Databricks, navigate to **Settings** > **Identity and Access**
+
 1. In your metastore, set **External data access** to **Enabled**.
 1.	In the catalog that you are federating with, select **Permissions** and then select **Grant**.
 1. Search for the service principal you created earlier.
@@ -204,9 +211,15 @@ After selecting **Connect**, the wizard closes and the instance count for Databr
 
 # [Microsoft Fabric](#tab/fabric)
 
-### Create the Microsoft Fabric connector instance
+### Create the Micro//soft Fabric connector instance
 
-Microsoft Fabric federation has simplified requirements compared to other sources.
+Before configuring the Fabric connector instance, you must set up permissions within the Microsoft Fabric environment to allow Microsoft Sentinel to access the data.
+
++ Configure the admin settings within Microsoft Fabric so that the tenant is enabled for External data sharing,  For more information, see [Create an external data share](fabric/governance/external-data-sharing-create)
+
++ Enable your instance so service principals can call Fabric public APIs.  For more information, see [Service principals can call Fabric public APIs](fabric/admin/service-admin-portal-developer#service-principals-can-call-fabric-public-apis)
+
++ Add the Sentinel platform identity and the service principal as a **Workspace Member** on the Lakehouse from which you want to federate tables. The sentinel platform identity is prefixed with `msg-resources-`.  For more information, see [Give access to workspaces](fabric/fundamentals/give-access-workspaces).
 
 1. On the **Data federation** > **Catalog** page, select the **Microsoft Fabric** row.
 1. In the side panel, select **Connect a connector**.
@@ -239,14 +252,27 @@ After creating a connector instance:
 
 1. Navigate to **Data federation** > **My connectors page**.
 1. Locate your new connector instance in the list.
-1. Select the instance row to open the details flyout.
+1. Select the instance row to open the details panel.
 
-:::image type="content" source="./media/data-federation-setup/connector-instance-details.png" alt-text="Screenshot showing connector instance details in the flyout panel." lightbox="./media/data-federation-setup/connector-instance-details.png":::
+:::image type="content" source="./media/data-federation-setup/connector-instance-details.png" alt-text="Screenshot showing the connector instance details panel." lightbox="./media/data-federation-setup/connector-instance-details.png":::
 
-The flyout displays:
-- Connection status
-- Configured tables
-- Connection properties
+## Verify tables from your connector instance
+
+After creating a connector instance check that the tables you federated are available in Microsoft Sentinel.
+
+1.	Navigate to **Microsoft Sentinel > Configuration > Tables**. 
+
+1.	Filter by Type **Federated** to see all federated tables.
+1.	Search by your connector instance name.
+1.	Tables from your connector instance are listed with their name followed by `_instance name`.  For example if your data connector instance name was `GlobalHRData` and your table was called `hrlogs`, your table name is shown as `hrlogs_GlobalHRData`.
+1.	Select a table from the list to open the details panel. 
+1. Select the **Overview** tab to see the table type and federation provider.
+1. Select the **Data source** tab to see the connector instance data provider and source product for the table.
+1. Select the **Schema** tab to see the table schema.
+1. On the **Schema** tab, select **Refresh** to refresh the table schema associated with the federated table.
+
+:::image type="content" source="./media/data-federation-setup/verify-tables.png" lightbox="./media/data-federation-setup/verify-tables.png" alt-text="Screenshot showing the federated table schema.":::
+
 
 ## Manage connector instances
 
@@ -254,10 +280,12 @@ To modify or delete a connector instance:
 
 1. Navigate to **Data federation** > **My connectors page**.
 1. Select the connector instance you want to manage.
-1. In the flyout panel, use the available options to:
+1. In the details panel, use the available options to:
    - Edit connection settings
    - Add or remove federated tables
    - Delete the connector instance
+    
+   :::image type="content" source="./media/data-federation-setup/my-connectors.png" alt-text="Screenshot showing the My Connectors page." lightbox="./media/data-federation-setup/my-connectors.png":::
 
 ## Troubleshooting
 

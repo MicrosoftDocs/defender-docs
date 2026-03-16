@@ -15,7 +15,7 @@ ms.collection: ms-security
 
 # Use federated data sources in Microsoft Sentinel
 
-After setting up federated data connectors, you can access your federated tables through multiple interfaces in Microsoft Sentinel. This article explains how to view federated tables, query them using KQL, and work with them in Jupyter notebooks.
+After setting up federated data connectors, you can access your federated tables through multiple interfaces in Microsoft Sentinel. Federated tables are used in the same way as other data lake tables. This article explains how to view federated tables, query them using KQL, and work with them in Jupyter notebooks.
 
 ## Prerequisites
 
