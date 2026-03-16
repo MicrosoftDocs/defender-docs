@@ -22,7 +22,7 @@ Defender for Containers supports multiple deployment models for deploying the se
 
 - [Enable Defender for Containers in the target subscription or security connector](defender-for-containers-enable-portal.md).
 
-- Ensure the following components of the Defender for containers plan are enabled:
+- Ensure the following components of the Defender for Containers plan are enabled:
    - Defender sensor
    - Security findings
    - Registry access
@@ -84,7 +84,7 @@ Depending on your deployment type, follow the relevant instructions to install t
   > [!NOTE]
   > To generate a list of your AKS clusters' Azure resource IDs, use the following command with a `<SUBSCRIPTION_ID>` and `<RESOURCE_GROUP>`:
   >
-  >```bash
+  >```azurecli
   >az aks list \
   >--subscription <SUBSCRIPTION_ID> \
   >--resource-group <RESOURCE_GROUP> \
@@ -111,32 +111,20 @@ Use the [install_defender_sensor_aks.sh](https://github.com/microsoft/Microsoft-
 
 Run the script with the command:
     
-```bash
-install_defender_sensor_aks.sh --id <CLUSTER_AZURE_RESOURCE_ID> --version <VERSION> [--release_train <RELEASE_TRAIN>] [--namespace <NAMESPACE>] [--antimalware]
+```bash   
+install_defender_sensor_aks.sh --resource-id <CLUSTER_AZURE_RESOURCE_ID> [--version <VERSION>] [--namespace <NAMESPACE>]
 ```
 
-Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<NAMESPACE>`, and `<VERSION>` with your own values: 
+Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>` and optional parameters with your own values: 
 
-- Replace `<VERSION>` with:
-    - `latest` for the most recent version.
-    - A specific semantic version.
-
-- Replace `<RELEASE_TRAIN>` with:
-    - `stable` (default).
-    - `public` for the preview version.
-
-- Replace `<NAMESPACE>` with `kube-system` if you are deploying to AKS Automatic.
-
-  > [!NOTE]
-  > Don’t provide this parameter for standard AKS deployments. If not specified, the default namespace is `mdc`.
+- Replace `<CLUSTER_AZURE_RESOURCE_ID>` with the Azure resource ID of your AKS cluster.
     
-- Replace `<NAMESPACE>` with `kube-system` if you are deploying to AKS Automatic.
-
- > [!NOTE]
- > Don’t provide this parameter for standard AKS deployments. If not specified, the default namespace is `mdc`.
-
-- Use the `--antimalware` flag to enable antimalware scanning.
-
+- Replace `<VERSION>` with:
+  - `latest` for the most recent version.
+  - A specific semantic version.
+    
+- For AKS Automatic clusters, replace `<NAMESPACE>` with `kube-system`. For standard AKS clusters, don’t specify the `--namespace` parameter. The default namespace is `mdc`.
+  
 > [!NOTE]
 > This script sets a new `kubeconfig` context and might create a Log Analytics workspace in your Azure account.
 
@@ -170,32 +158,26 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `
 1. Set the `kubeconfig` context to the target cluster by using the following command:
 
    ```bash
-   install_defender_sensor_mc.sh --id <SECURITY_CONNECTOR_AZURE_RESOURCE_ID> --version <VERSION> --distribution <DISTRIBUTION> [--release_train <RELEASE_TRAIN>] [--antimalware]
+   install_defender_sensor_mc.sh --id <SECURITY_CONNECTOR_AZURE_RESOURCE_ID> --version <VERSION> --distribution <DISTRIBUTION>
    ```
     
-    Replace the placeholder text `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`, `<RELEASE_TRAIN>`, `<VERSION>`, and `<DISTRIBUTION>` with your own values.
-   
-  - Replace `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>` with the Azure resource ID of your security connector.
-      
+    Replace the placeholder text `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`, `<VERSION>`, and `<DISTRIBUTION>` with your own values.
+
+    - Replace `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>` with the Azure resource ID of your security connector.
+
+    - Replace `<VERSION>` with:
+      - `latest` for the most recent version.
+      - A specific semantic version.
+    
+   - Replace `<DISTRIBUTION>` with:
+      - `eks`
+      - `gke`
+      - `eksautomode`
+
     > [!NOTE]
     > This script might create a Log Analytics workspace in your Azure account.
     >
-    > This script tests for an arc managed deployment of the Defender for Containers Sensor. If one exists, the script removes it prior to deploying the sensor by using helm.
-
-   - Replace `<VERSION>` with:
-      - `latest` for the most recent version.
-      - A specific semantic version.
-            
-   - Replace `<DISTRIBUTION>` with: 
-      - `eks`
-      - `gke`
-      - `eksautomode`. 
-            
-   - Replace `<RELEASE_TRAIN>` with:
-      - `stable` (default).
-      - `public` for the preview version.
-        
-   - Use the `--antimalware` flag to enable antimalware scanning.
+    > This script tests for an Arc-managed deployment of the Defender for Containers sensor. If one exists, the script removes it prior to deploying the sensor by using helm.
       
 ---
 
@@ -219,13 +201,12 @@ The installation is successful if the `STATUS` field displays **deployed**.
 
 ## Configure security rules for gated deployment
 
+> [!NOTE]
+> Kubernetes gated deployment is supported on AKS Automatic clusters only when the sensor is installed by using Helm in the `kube-system` namespace. Add-on deployment isn’t supported for this scenario.
+
 > [!IMPORTANT]
-> For Helm installations:
-> 
-> - **Subscription Support Warning**: When you create rules, your selected subscription might show as `not supported for Gated deployment`. This status occurs because you installed the Defender for Containers components by using Helm rather than through the dashboard's automatic installation.
->  - **Skip Auto-Installation**: If you're prompted to enable gating in the third tab of the security rule edit window, make sure to select **Skip**. This option enables autoinstallation, which conflicts with your existing Helm deployment.
-> 
->     :::image type="content" source="media/deploy-helm/edit-vulnerability-assessment-rule.png" alt-text="Screenshot showing the third tab of the security rule edit window." lightbox="media/deploy-helm/edit-vulnerability-assessment-rule.png":::
+> **Subscription Support Warning**:
+> When you create rules, your selected subscription might show as `not supported for Gated deployment`. This status occurs because you installed the Defender for Containers components by using Helm rather than through the dashboard's automatic installation.
 
 Define security rules to control what you can deploy into your Kubernetes clusters. These rules help you block or audit container images based on security criteria, such as images with too many vulnerabilities. 
 

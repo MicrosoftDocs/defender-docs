@@ -4,12 +4,12 @@ description: Configure private endpoints with Microsoft Security Private Link to
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 01/07/2025
+ms.date: 03/16/2026
 #customer intent: As a security administrator, I want to configure a private endpoint for Microsoft Defender for Cloud so that Defender traffic stays within my private network.
 
 ---
 
-# Configure private endpoints with Microsoft Security Private Link (Preview)
+# Configure private endpoints with Microsoft Security Private Link
 
 Use a [private endpoint](/azure/private-link/private-endpoint-overview) with Microsoft Security Private Link to connect workloads in your private network to Microsoft Defender for Cloud over [Azure Private Link](/azure/private-link/private-link-overview).
 

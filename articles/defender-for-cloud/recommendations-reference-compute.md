@@ -84,7 +84,7 @@ When you restore from a recovery point, you can restore the whole VM or specific
 
 ### [(Preview) Azure Local machine(s) should have consistently enforced application control policies](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f7384fde3-11b0-4047-acbd-b3cf3cc8ce07)
 
-**Description**: At a minimum, apply the Microsoft WDAC base policy in enforced mode on all Azure Local machine(s). Applied Windows Defender Application Control (WDAC) policies must be consistent across servers in the same cluster. (Related policy: [Guest Configuration extension should be installed on machines - Microsoft Azure](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc)).
+**Description**: At a minimum, apply the Microsoft WDAC base policy in enforced mode on all Azure Local machine(s). Applied Microsoft Defender Application Control (WDAC) policies must be consistent across servers in the same cluster. (Related policy: [Guest Configuration extension should be installed on machines - Microsoft Azure](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc)).
 
 **Severity**: High
 
@@ -403,10 +403,10 @@ Learn more about [Trusted launch for Azure virtual machines](/azure/virtual-mach
 
 **Severity**: High
 
-### Service Fabric clusters should only use Azure Active Directory for client authentication
+### Service Fabric clusters should only use Microsoft Entra ID for client authentication
 
-**Description**: Perform Client authentication only via Azure Active Directory in Service Fabric
-(Related policy: [Service Fabric clusters should only use Azure Active Directory for client authentication](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fb54ed75b-3e1a-44ac-a333-05ba39b99ff0)).
+**Description**: Perform Client authentication only via Microsoft Entra ID in Service Fabric
+(Related policy: [Service Fabric clusters should only use Microsoft Entra ID for client authentication](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fb54ed75b-3e1a-44ac-a333-05ba39b99ff0)).
 
 **Severity**: High
 
@@ -522,10 +522,10 @@ Learn more about [Trusted launch for Azure virtual machines](/azure/virtual-mach
 
 **Severity**: Low
 
-### Windows Defender Exploit Guard should be enabled on machines
+### Microsoft Defender Exploit Guard should be enabled on machines
 
-**Description**: Windows Defender Exploit Guard uses the Azure Policy Guest Configuration agent. Exploit Guard has four components that are designed to lock down devices against a wide variety of attack vectors and block behaviors commonly used in malware attacks while enabling enterprises to balance their security risk and productivity requirements (Windows only).
-(Related policy: [Audit Windows machines on which Windows Defender Exploit Guard is not enabled](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fmicrosoft.authorization%2fpolicyDefinitions%2fbed48b13-6647-468e-aa2f-1af1d3f4dd40)).
+**Description**: Microsoft Defender Exploit Guard uses the Azure Policy Guest Configuration agent. Exploit Guard has four components that are designed to lock down devices against a wide variety of attack vectors and block behaviors commonly used in malware attacks while enabling enterprises to balance their security risk and productivity requirements (Windows only).
+(Related policy: [Audit Windows machines on which Microsoft Defender Exploit Guard is not enabled](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fmicrosoft.authorization%2fpolicyDefinitions%2fbed48b13-6647-468e-aa2f-1af1d3f4dd40)).
 
 **Severity**: Medium
 

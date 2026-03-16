@@ -1,7 +1,7 @@
 ---
 ms.service: defender-for-cloud
 ms.topic: include
-ms.date: 07/19/2022
+ms.date: 03/16/2026
 ms.author: elkrieger
 author: Elazark
 ---
@@ -20,4 +20,8 @@ For clusters with restricted egress, you must allow specific FQDNs for Microsoft
 
 ### Private link configuration
 
+<<<<<<< HEAD:articles/defender-for-cloud/includes/defender-for-containers-network-requirements-aks.md
 For instructions, see [Microsoft Security Private Link for Microsoft Defender for Cloud](concept-private-links.md).
+=======
+For instructions, see [Microsoft Security Private Link for Microsoft Defender for Cloud](../concept-private-links.md).
+>>>>>>> a8bab7a657f217b8ab514c201e0480f58aef8abe:articles/defender-for-cloud/includes/defender-for-container-prerequisites-aks.md

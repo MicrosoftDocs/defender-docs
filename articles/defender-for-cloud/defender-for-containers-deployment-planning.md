@@ -27,13 +27,13 @@ After onboarding the environment, decide whether cluster components are deployed
 
 This decision determines how the Defender sensor and other cluster components are installed.
 
-### Automatic provisioning (recommended)
+### Automatic provisioning
 
 With automatic provisioning enabled, Microsoft Defender for Cloud automatically installs the required cluster components after the Defender for Containers plan is enabled.
 
-For AKS clusters, this deployment typically uses the **Defender add-on**.
+For AKS clusters, this deployment uses the **Defender AKS add-on**.
 
-This option requires minimal configuration and is recommended for most environments.
+This option requires minimal configuration and is the default for most environments.
 
 ### Manual deployment
 
