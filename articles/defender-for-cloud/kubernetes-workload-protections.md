@@ -133,11 +133,17 @@ For recommendations with parameters that need to be customized, you need to set 
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Navigate to **Microsoft Defender for Cloud** > **Management** > **Environment settings**.
+1. Go to **Microsoft Defender for Cloud** > **Management** > **Environment settings**.
 
 1. Select the relevant subscription.
 
-1. From Defender for Cloud's menu, select **Security policies**.
+1. From the navigation menu, select **Security policies**.
+
+1. Select the **Recommendations** tab.
+
+1. Select or search for the appropriate recommendation.
+
+1. Select the 3-dot menu. 
 
 1. Select the relevant assignment. The default assignment is `ASC default`.
 
