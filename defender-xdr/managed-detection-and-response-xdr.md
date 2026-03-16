@@ -17,7 +17,7 @@ ms.custom:
 - cx-ti
 - cx-dex
 search.appverid: met150
-ms.date: 03/06/2026
+ms.date: 03/01/2026
 ---
 
 # Managed detection and response
