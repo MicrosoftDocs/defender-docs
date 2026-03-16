@@ -28,7 +28,7 @@ To access Sentinel Graph and query it to produce visualizations, you must have t
 
 To access Sentinel Graph, select **Microsoft Sentinel** > **Graph** from the left-hand navigation pane.
 
-:::image type="content" source="media/graph-explorer/graph-explorer-navigation.png" alt-text="Screenshot showing how to access Sentinel Graph from the Microsoft Sentinel navigation pane." lightbox="media/graph-explorer/graph-explorer-navigation.png":::
+:::image type="content" source="media/graph-explorer/graphs-landing-page.png" alt-text="Screenshot showing how to access Sentinel Graph from the Microsoft Sentinel navigation pane." lightbox="media/graph-explorer/graphs-landing-page.png":::
 
 The Sentinel Graph management page lists any custom graphs that you've created in the Visual Studio Code Sentinel extension. If you haven't yet created a custom graph, see [Create a custom graph mapping](./create-custom-graphs.md) to get started.
 
