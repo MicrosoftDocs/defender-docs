@@ -188,30 +188,9 @@ To configure specific rule exclusions, you have the choices of using the Defende
 
 #### Via Group Policy
 
-Use Group Policy to set the per-user ASR rule exclusions.
+For instructions, see [Configure ASR rules via group policy](enable-attack-surface-reduction.md#group-policy).
 
-1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
-
-1. Right-click the Group Policy Object you want to configure, and then select **Edit**.
-
-1. In the **Group Policy Management Editor** go to **Computer configuration**.
-
-1. Select **Administrative templates**.
-
-1. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Microsoft Defender Exploit Guard > Attack Surface Reduction**.
-
-1. Double-click **Apply a list of exclusions to specific attack surface reduction (ASR) rules**, and set the option to **Enabled**. 
-
-1. Then select **Show...**.
-
-1. Under **Value Name**, enter GUID for the ASR Rule.
-
-1. Under **Value**, enter the <drive_letter:\Path\ProcessName>. In order to add multiple processes, it's separated by a greater than sign (>). For example, `C:\Notepad.exe>c:\regedit.exe>C:\SomeFolder\test.exe`.
-   
-1. select **OK**. This setting allows the processes that are being blocked by the particular ASR Rule to continue running.
-
-> [!NOTE]
-> If policies aren't applying, review [Troubleshoot Microsoft Defender Antivirus settings](/defender-endpoint/troubleshoot-settings).
+If the GPO isn't applied to devices, see [Troubleshoot Microsoft Defender Antivirus settings](/defender-endpoint/troubleshoot-settings).
 
 ### Use PowerShell as an alternative method to enable attack surface reduction rules
 
