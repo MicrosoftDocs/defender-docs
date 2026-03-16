@@ -31,6 +31,7 @@ Learn more about [Preview features](/defender-xdr/preview).
 
 |Type  |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|-------------|
+|Release - macOS |Build 101.26012.0015 |GA |Release version 20.126012.15.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--march-2026--101260120015).|
 |Feature |[Proactive user containment (contain user)](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) |GA |The proactive user containment (contain user) action as part of the predictive shielding feature is now generally available. This action infuses activity data with exposure data to identify exposed credentials at risk of being compromised and reused to conduct malicious activity.|
 
 ## February 2026
