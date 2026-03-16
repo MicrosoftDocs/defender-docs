@@ -76,7 +76,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `AIModel` | `string` |The AI model powering the agent |
 | `AccessCapabilities` | `dynamic` |Data access capabilities granted to the agent |
 | `ElementTypes` | `dynamic` |Technical component types that make up the agent |
-| `SourceAgentId` | `string` | Azure Resource Manager (ARM) identifier for a published Microsoft Foundry agent|
+| `SourceAgentId` | `string` | The platform-native identifier of the agent, such as the Azure Resource Manager (ARM) identifier for Microsoft Foundry agents or the environment-scoped agent identifier for Copilot Studio agents|
 
 
 ## Sample queries
