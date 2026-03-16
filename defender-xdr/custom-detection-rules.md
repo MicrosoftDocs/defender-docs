@@ -23,7 +23,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 03/11/2026
+ms.date: 03/16/2026
 ---
 
 # Create custom detection rules
@@ -58,7 +58,7 @@ To manage custom detections on Microsoft Sentinel data, you need to be assigned 
 ### Manage required permissions
 
 > [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> Use roles with the fewest permissions to help improve security for your organization. Global Administrator is a highly privileged role. Limit its use to emergency scenarios when you can't use an existing role.
 
 To manage required permissions, a Global Administrator can:
 
@@ -144,6 +144,7 @@ In the query editor, select **Create detection rule** and specify the following 
 
 - **Detection name** - Name of the detection rule; make it unique.
 - **Frequency** - Interval for running the query and taking action. [See more guidance in the rule frequency section](#rule-frequency).
+- **Lookback** - The time period covered by the query when the custom detection targets data from Microsoft Sentinel only. [See more guidance in the lookback section](#lookback). 
 - **Alert title** - Title displayed with alerts triggered by the rule; make it unique and use plaintext. Strings are sanitized for security purposes, so HTML, Markdown, and other code don't work. Any URLs included in the title should follow the [percent-encoding format](https://en.m.wikipedia.org/wiki/Percent-encoding) for them to display properly.
 - **Severity** - Potential risk of the component or activity identified by the rule.
 - **Category** - Threat component or activity identified by the rule.
@@ -223,6 +224,17 @@ When you select this frequency option, the **Run query every input** component a
 >When you select a custom frequency, Defender fetches your data from Microsoft Sentinel. This means that: 
 >1.	You must have data available in Microsoft Sentinel.
 >1.	Defender XDR data doesn't support scoping, since Microsoft Sentinel doesn't support scoping.
+
+#### Lookback
+
+The lookback period of your custom detections can range from five minutes to 30 days, depending on the frequency of your query.
+
+> [!NOTE]
+> Lookback only applies to custom detection queries that target data from Microsoft Sentinel only.
+
+- For detection frequencies **higher (more frequent) than one hour**, the lookback is limited to **less than 48 hours**. 
+- For frequencies **higher than one day**, the lookback can be set **up to 14 days**. 
+- For frequencies of **one day or less**, the lookback can be set **up to 30 days**.  
 
 ### 3. Define alert enrichment details 
 You can enrich alerts by providing and defining more details. When you enrich alerts, you can:
