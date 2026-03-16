@@ -78,9 +78,6 @@ If the list of attack paths has no entries, you can still test this feature by u
    - In the **Workloads-> Deployments** tab, verify "pod1" and "pod2" are created 3/3 and **ingress-controller-nginx-ingress-controller** is created 1/1.
    - In services and ingresses, look for-> service **service1** and **ingress-controller-nginx-ingress-controller**. In the ingress tab, verify one **ingress** is created with an IP address and nginx class.
 
-> [!NOTE]
-> It can take up to 24 hours to see results in the cloud security explorer and attack path.
-
 
 ## [**AWS**](#tab/testing-the-attack-path-and-security-explorer-using-a-mock-vulnerable-container-image-for-aws)
 
@@ -130,9 +127,6 @@ If the list of attack paths has no entries, you can still test this feature by u
 
 The Helm chart deploys resources onto your cluster that you can use to infer attack paths. It also includes the vulnerable image.
 
-> [!NOTE]
-> It can take up to 24 hours to see results in the cloud security explorer and attack path.
-
 
 ## [**GCP**](#tab/testing-the-attack-path-and-security-explorer-using-a-mock-vulnerable-container-image-for-gcp)
 
@@ -172,10 +166,10 @@ The Helm chart deploys resources onto your cluster that you can use to infer att
 
 The Helm chart deploys resources onto your cluster that you can use to infer attack paths. It also includes the vulnerable image.
 
+---
+
 > [!NOTE]
 > It can take up to 24 hours to see results in the cloud security explorer and attack path.
-
----
 
 After you finish testing the attack path, investigate the created attack path by going to **Attack path analysis**, and search for the attack path you created. For more information, see [Identify and remediate attack paths](how-to-manage-attack-path.md).
 
@@ -190,8 +184,7 @@ In the following sections, you can find examples of queries you can select or cr
 
 ### Explore risks with cloud security explorer templates
 
-1. Go to the Defender for Cloud overview page and open the cloud security explorer.
-
+1. Go to the **Microsoft Defender for Cloud overview** > **Cloud security explorer**.
 1. Some out-of-the-box templates for Kubernetes appear. Select one of the templates:
 
     - **Azure Kubernetes pods running images with high severity vulnerabilities**
@@ -199,7 +192,8 @@ In the following sections, you can find examples of queries you can select or cr
   
     :::image type="content" source="media/how-to-test-attack-path/select-template.png" alt-text="Screenshot showing where to select templates." lightbox="media/how-to-test-attack-path/select-template.png":::
 
-1. Select **Open query**. The template builds the query in the upper portion of the screen. Select **Search** to view the results.
+1. Select **Open query**. The template builds the query in the upper portion of the screen. 
+1. Select **Search** to view the results.
 
     :::image type="content" source="media/how-to-test-attack-path/query-builder-search.png" alt-text="Screenshot that shows the query built and where to select search." lightbox="media/how-to-test-attack-path/query-builder-search.png":::
 
