@@ -4,7 +4,7 @@ description: Learn how Microsoft Security Private Link provides secure, private 
 author: Elazark
 ms.author: elkrieger
 ms.topic: article
-ms.date: 01/07/2025
+ms.date: 03/16/2026
 ---
 
 # Microsoft Security Private Link for Microsoft Defender for Cloud
@@ -97,7 +97,7 @@ If you're using a custom DNS server, configure delegation or A records to resolv
 | Compliance alignment | Limited | Strong |
 | Multi-service integration | Manual | Simplified |
 
-## Next steps
+## Related content
 
 - [Configure private endpoints with Microsoft Security Private Link](configure-private-endpoints.md)
 
