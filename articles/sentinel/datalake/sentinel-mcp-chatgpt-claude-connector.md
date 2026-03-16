@@ -80,6 +80,8 @@ To create a custom Microsoft Sentinel connector, follow these steps:
 1. Select the MCP connector and choose **Connect**. 
 1. Select **Configure** to determine which tools to allow for your environment. 
 
+---
+
 ## Use the custom Microsoft Sentinel MCP connector in a chat
 
 To attach and use a Microsoft Sentinel connector, follow these steps:
@@ -97,6 +99,7 @@ Start a new chat in Claude. The connector tools become available automatically, 
 >[!NOTE]
 > You can only use the [data exploration tool collection](sentinel-mcp-data-exploration-tool.md). 
 
+---
 
 ## Related content
 - [Get started with Microsoft Sentinel MCP server](sentinel-mcp-get-started.md)
