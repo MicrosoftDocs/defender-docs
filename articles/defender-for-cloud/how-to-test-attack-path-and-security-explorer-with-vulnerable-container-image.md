@@ -175,6 +175,8 @@ The Helm chart deploys resources onto your cluster that you can use to infer att
 > [!NOTE]
 > It can take up to 24 hours to see results in the cloud security explorer and attack path.
 
+---
+
 After you finish testing the attack path, investigate the created attack path by going to **Attack path analysis**, and search for the attack path you created. For more information, see [Identify and remediate attack paths](how-to-manage-attack-path.md).
 
 ### Find container posture issues with cloud security explorer
