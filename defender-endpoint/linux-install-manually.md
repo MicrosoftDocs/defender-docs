@@ -507,9 +507,9 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
       
    1. Look at the alert details, machine timeline, and perform your typical investigation steps.
       
-## External package dependencies
+## Software requirements
 
-For information, see [Prerequisites for Microsoft Defender for Endpoint on Linux: External package dependency](./mde-linux-prerequisites.md#external-package-dependency).
+For information, see [Software requirements](./mde-linux-prerequisites.md#software-requirements).
 
 ## Troubleshoot installation issues
 
@@ -549,7 +549,7 @@ For example, to change channel from Insiders-Fast to Production, do the followin
 
 To configure antivirus and EDR settings, see the following articles:
 
-- [Defender for Endpoint security settings management](/mem/intune/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal. (*This method is recommended*.)
+- [Defender for Endpoint security settings management](/intune/intune-service/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal. (*This method is recommended*.)
 - [Set preferences for Defender for Endpoint on Linux](/defender-endpoint/linux-preferences) describes settings you can configure.
 
 ## Uninstall Defender for Endpoint on Linux

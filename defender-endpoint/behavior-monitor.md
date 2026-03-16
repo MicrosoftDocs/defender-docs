@@ -63,9 +63,9 @@ The following table shows the different ways to configure behavior monitoring.
 | Management tool | Name | Links |
 |---|---|---|
 | Security Settings Management | Allow behavior monitoring | This article |
-| Intune |  Allow behavior monitoring | [Windows Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-windows#real-time-protection) |
-| CSP | AllowBehaviorMonitoring | [Defender Policy CSP](/mem/intune/protect/antivirus-microsoft-defender-settings-windows#real-time-protection)   |
-| Configuration Manager Tenant Attach | Turn on behavior monitoring | [Windows Antivirus policy settings from Microsoft Defender Antivirus for tenant attached devices](/mem/intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach#real-time-protection) |
+| Intune |  Allow behavior monitoring | [Windows Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-windows#real-time-protection) |
+| CSP | AllowBehaviorMonitoring | [Defender Policy CSP](/intune/intune-service/protect/antivirus-microsoft-defender-settings-windows#real-time-protection)   |
+| Configuration Manager Tenant Attach | Turn on behavior monitoring | [Windows Antivirus policy settings from Microsoft Defender Antivirus for tenant attached devices](/intune/intune-service/protect/antivirus-microsoft-defender-settings-windows-tenant-attach#real-time-protection) |
 | Group Policy | Turn on behavior monitoring | [Download Group Policy Settings Reference Spreadsheet for Windows 11 2023 Update (23H2)](https://www.microsoft.com/download/details.aspx?id=105668)   |
 | PowerShell | Set-MpPreference -DisableBehaviorMonitoring | [Set-MpPreference](/powershell/module/defender/set-mppreference#-disablebehaviormonitoring) |
 | WMI | boolean  DisableBehaviorMonitoring;  | [MSFT\_MpPreference class](/previous-versions/windows/desktop/defender/msft-mppreference) |

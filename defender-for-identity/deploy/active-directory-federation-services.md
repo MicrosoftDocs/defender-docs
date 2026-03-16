@@ -110,6 +110,7 @@ $SQLConnection.Close()
 > [!NOTE]
 > This section is applicable only if the Entra Connect database is hosted on an external SQL server instance.
 >
+> Microsoft recommends that you use the most secure authentication flow available. The authentication flow described in this procedure requires a very high degree of trust in the application, and carries risks that are not present in other flows. You should only use this flow when other more secure flows, such as managed identities, aren't viable.
 
 Sensors running on Microsoft Entra Connect servers need to have access to the ADSync database, and have execute permissions for the relevant stored procedures. If you have more than one Microsoft Entra Connect server, make sure to run this across all of them. 
 

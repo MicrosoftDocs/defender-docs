@@ -16,7 +16,7 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 10/20/2025
+ms.date: 03/14/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -60,16 +60,14 @@ Our engineers continuously monitor impact and escalate any issues to create a fi
 
 ## How to customize your internal deployment process
 
-
 If your machines are receiving Defender updates from Windows Update, the gradual rollout process can result in some of your devices receiving Defender updates sooner than others. The following section explains how to define a strategy that will allow automatic updates to flow differently to specific groups of devices by using update channel configuration.
-
 
 > [!NOTE]
 > When planning for your own gradual release, please make sure to always have a selection of devices subscribed to the preview and staged channels. This will provide your organization as well as Microsoft the opportunity to prevent or find and fix issues specific to your environment.
 
 For machines receiving updates through, for example, Windows Server Update Services (WSUS) or Microsoft Configuration Manager, more options are available to all Windows updates, including options  for Microsoft Defender for Endpoint.
 
-- Learn more about how to use solutions such as WSUS and MECM to manage the distribution and application of updates at [Manage Microsoft Defender Antivirus updates and apply baselines - Windows security](microsoft-defender-antivirus-updates.md#product-updates).
+- Learn more about how to use solutions such as WSUS and ConfigMgr to manage the distribution and application of updates at [Manage Microsoft Defender Antivirus updates and apply baselines - Windows security](microsoft-defender-antivirus-updates.md#product-updates).
 
 ## Update channels for monthly updates
 
@@ -94,7 +92,7 @@ You can also assign a machine to a channel to define the cadence in which it rec
 
 |Channel name|Description|Application|
 |---|---|---|
-|Current Channel (Staged)|Same as Current Channel (Broad)|Same as Current Channel (Broad).|
+|Current Channel (Staged)|Get Current Channel updates earlier during gradual release |Devices are offered updates during the gradual release cycle. Suggested to apply to a small, representative part of your device population (~10%).|
 |Current Channel (Broad)|Get updates at the end of gradual release|Devices will be offered updates after the gradual release cycle. Suggested to apply to a broad set of devices in all populations, including production. Note: this setting applies to all Defender updates.|
 |(default)||If you disable or don't configure this policy, Microsoft will either assign the device to Current Channel (Broad) or a beta channel early in the gradual release cycle. The channel selected by Microsoft might be one that receives updates early during the gradual release cycle, which may not be suitable for devices in a production or critical environment.|
 
@@ -135,7 +133,7 @@ For details on how to use these tools, see [Create a custom gradual rollout proc
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
