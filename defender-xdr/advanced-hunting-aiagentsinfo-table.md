@@ -21,7 +21,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Defender for Cloud Apps
 ms.topic: reference
-ms.date: 11/06/2025
+ms.date: 03/23/2026
 ---
 
 # AIAgentsInfo (Preview)
@@ -63,17 +63,28 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `AgentToolsDetails` | `dynamic` |Specifications of the tools that the agent can access and perform actions on |
 | `EnvironmentId` | `string` |The identifier of the Microsoft Power Platform environment the agent resides in |
 | `Platform` | `string` |The platform that provided the information about the agents; possible values: Copilot Studio |
-| `IsGenerativeOrchestrationEnabled` | `boolean` |ndicates whether the agent uses generative orchestration (that is, dynamically chooses tools, knowledge, and actions based on context) to operate|
+| `IsGenerativeOrchestrationEnabled` | `boolean` |Indicates whether the agent uses generative orchestration (that is, dynamically chooses tools, knowledge, and actions based on context) to operate|
 | `AgentAppId` | `string` |The unique app identifier registered for the agent in Microsoft Entra |
 | `ConnectedAgentsSchemaNames` | `dynamic` |Lists the schema names of connected agents, which are independently managed agents that are linked to the main one for orchestration |
 | `ChildAgentsSchemaNames` | `dynamic` |Lists the schema names of the child agents that exist within the main agent |
+| `RegistrySource` | `string` |Registry that provided the agent's metadata |
+| `Version` | `string` | Version of the agent|
+| `IsBlocked` | `boolean` |Indicates whether the agent has been blocked by an administrator |
+| `Instructions` | `string` |The agent's system prompt that defines its default behavior, persona, and operating boundaries |
+| `EntraObjectId` | `string` |The agent's unique enterprise application object identifier by Microsoft Entra ID  |
+| `EntraBlueprintId` | `string` | The agent's identity blueprint principal identifier by Microsoft Entra Agent ID |
+| `AIModel` | `string` |The AI model powering the agent |
+| `AccessCapabilities` | `dynamic` |Data access capabilities granted to the agent |
+| `ElementTypes` | `dynamic` |Technical component types that make up the agent |
+| `SourceAgentId` | `string` | Azure Resource Manager (ARM) identifier for a published Microsoft Foundry agent|
+
 
 ## Sample queries
 
 
 ### Agent with no authentication
 
-It's critical to identify agents that lack authentication mechanisms, as these agents might pose significant risks to the organization due to their public availability. Organizations should know about these agents so they can address any issues.
+It's important to identify agents that don't use authentication mechanisms. These agents might pose significant risks to the organization because they're publicly available. Organizations need to know about these agents so they can address any problems.
 
 **Recommendations:**
 - Confirm the agent's use case with the owner to determine if it's intended for public access.
@@ -135,9 +146,9 @@ AIAgentsInfo
 | project-reorder AgentCreationTime ,AIAgentId, AIAgentName, ParsedUrl ,Url, Host, AgentStatus, CreatorAccountUpn, OwnerAccountUpns, Topic
 ```
 
-### Sending email to AI controlled input values 
+### Sending email to AI-controlled input values 
   
-Identify agents that use generative orchestration that involves sending email tools through Outlook, and the input values of the actions are populated by the generative orchestrator. This setup is risky, since with a successful XPIA attack, the agent can be used to leak data to arbitrary recipients.  
+Identify agents that use generative orchestration that involves sending email tools through Outlook, and the input values of the actions populated by the generative orchestrator. This setup is risky, since with a successful XPIA attack, the agent can be used to leak data to arbitrary recipients.  
  
 **Recommendations:** 
 - Confirm with the agent owner whether it's required and inquire about the business use case. If feasible, hard code the recipient of the email into the action.
@@ -161,8 +172,8 @@ AIAgentsInfo
 Agents with hard-coded credentials in Topics or Actions can expose clear-text credentials to unintended entities.
 
 **Recommendations:**
-- Consider keeping the credentials in Azure Key Vault and retrieve in runtime using Environment Variables (Use environment variables for Azure Key Vault secrets - Power Apps | Microsoft Learn) 
-- If not possible, make sure secured input option are enabled (Manage sensitive input like passwords in Power Automate - Power Automate | Microsoft Learn).
+- Consider keeping the credentials in Azure Key Vault and retrieving them at runtime by using environment variables (see [Use environment variables for Azure Key Vault secrets - Power Apps](https://learn.microsoft.com/powerapps/developer/data-platform/environment-variables-azure-key-vault-secrets)). 
+- If you can't use Azure Key Vault, make sure you enable the secured input option (see [Manage sensitive input like passwords in Power Automate](https://learn.microsoft.com/power-automate/manage-sensitive-input)).
 
 ```kusto  
 //Find Agents with hard-coded credentials in Topics or Actions can expose clear-text credentials to unintended entities. 
