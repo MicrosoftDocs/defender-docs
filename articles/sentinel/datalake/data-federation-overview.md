@@ -73,9 +73,6 @@ Before setting up data federation, ensure you meet the following requirements:
 3. **Select tables**: Choose which tables from the external source to federate.
 4. **Query federated data**: Use data lake experiences such as KQL queries, Notebooks, or MCP tools to access federated tables alongside native Sentinel data. 
 
-:::image type="content" source="media/data-federation-overview/federation-catalog.png" alt-text="Screenshot showing the data federation catalog page with available connectors in Microsoft Sentinel." lightbox="media/data-federation-overview/federation-catalog.png":::
-
-
 ## Common scenarios for data federation 
 
 Data federation lets you access data that resides outside of the data lake. This is especially valuable in the following scenarios:

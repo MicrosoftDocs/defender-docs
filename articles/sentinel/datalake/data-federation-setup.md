@@ -68,13 +68,12 @@ For more information on creating service principals, see [Microsoft Entra ID app
    1. Assign the **Key Vault Secrets Officer** role to your service principal on the Key Vault's **Access Control (IAM)** page.
    1. Assign the **Key Vault Secrets User** role to the Microsoft Sentinel platform's managed identity. The system managed identity prefixed with `msg-resources-`.
 
-
 1. **Store the client secret in Key Vault**:
    1. In your Key Vault, go to **Secrets** > **Generate/Import**.
    1. Create a new secret containing the service principal's client secret.
-   1. Note the secret name.
+   1. Note the secret name. It is used when configuring the data federation connector instance.
 
-:::image type="content" source="./media/data-federation-setup/key-vault-permissions.png" lightbox="./media/data-federation-setup/key-vault-permissions.png" alt-text="Screenshot showing the Key Vault secret details.":::
+For more information on configuring Azure Key vaults, see [Azure Key Vaults](/azure/key-vault/general/basic-concepts).
 
 ## Federated data connectors
 
@@ -114,7 +113,7 @@ Before creating the connector, prepare your storage account:
 > [!NOTE]
 > The files in your ADLS Gen 2 storage account must be in delta parquet format to be read from the Sentinel data lake.
 
-### Create the ADLS Gen 2 connector instance
+### Create an ADLS Gen 2 connector instance
 
 1. On the **Data federation** > **Catalog** page, select **Azure Data Lake Storage**.
 1. Select **Connect a connector**.
@@ -174,7 +173,7 @@ Before creating the connector, configure access in your Databricks environment:
 
 
 
-### Create the Azure Databricks connector instance
+### Create an Azure Databricks connector instance
 
 1. On the **Data federation** > **Catalog** page, select the **Azure Databricks** row.
 1. In the side panel, select **Connect a connector**.
@@ -211,7 +210,7 @@ After selecting **Connect**, the wizard closes and the instance count for Databr
 
 # [Microsoft Fabric](#tab/fabric)
 
-### Create the Micro//soft Fabric connector instance
+### Create a Microsoft Fabric connector instance
 
 Before configuring the Fabric connector instance, you must set up permissions within the Microsoft Fabric environment to allow Microsoft Sentinel to access the data.
 
