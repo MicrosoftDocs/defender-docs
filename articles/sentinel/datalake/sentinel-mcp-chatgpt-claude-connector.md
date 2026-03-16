@@ -54,7 +54,7 @@ To add a Microsoft Entra application, follow these steps:
 
 To create a custom Microsoft Sentinel connector, follow these steps:
 
-### [ChatGPT](#tab/chatgpt)
+### [For ChatGPT](#tab/for-chatgpt)
 
 >[!NOTE]
 >- If you're using the ChatGPT desktop application, you must first complete this connector setup in the ChatGPT web version.
@@ -68,7 +68,7 @@ To create a custom Microsoft Sentinel connector, follow these steps:
     - **Client ID:** The **Application (client) ID** of the Microsoft Entra application you created previously.
 1. When prompted, complete the OAuth consent flow. Once the MCP connector authenticates successfully, it appears in your ChatGPT connector list.
 
-### [Claude](#tab/claude)
+### [For Claude](#tab/for-claude)
 
 1. Go to https://claude.ai/customize/connectors, to create a new custom connector. Select the **+** icon and choose **Add a custom connector**. 
 1. Provide the following required details: 
@@ -86,13 +86,13 @@ To create a custom Microsoft Sentinel connector, follow these steps:
 
 To attach and use a Microsoft Sentinel connector, follow these steps:
 
-### [ChatGPT](tab/#chatgpt-1)
+### [In ChatGPT](tab/#in-chatgpt)
 
 1.	Start a new chat in ChatGPT.
 1.	Select the **(+)** icon next to the message box.
 1.	Select **More** > **Microsoft Sentinel MCP Connector**. The connector's tools become available automatically, and ChatGPT can begin calling Sentinel operations on your behalf.
 
-### [Claude](tab/#claude-1)
+### [In Claude](tab/#in-claude)
 
 Start a new chat in Claude. The connector tools become available automatically, and Claude can begin calling Microsoft Sentinel operations on your behalf. 
 
