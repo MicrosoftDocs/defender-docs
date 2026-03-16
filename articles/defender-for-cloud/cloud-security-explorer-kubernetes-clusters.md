@@ -36,8 +36,6 @@ For an introduction to Cloud Security Explorer queries, see [Build queries with 
 
 ## Create a query to identify vulnerabilities in cluster nodes
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
-
 1. Go to **Microsoft Defender for Cloud > Cloud Security Explorer**.
 
     :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/cloud-security-explorer-main-page.png" alt-text="Screenshot of main page of Cloud Security Explorer." lightbox="./media/cloud-security-explorer-kubernetes-clusters/cloud-security-explorer-main-page.png":::

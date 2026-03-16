@@ -34,20 +34,20 @@ The AKS Security Dashboard shows security issues for a cluster if at least one o
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 1. Search for **Kubernetes Services**
 1. Select **Clusters** and then select the relevant cluster.
-1. Select **Microsoft Defender for Cloud** from the left-hand menu.
+1. Select **Microsoft Defender for Cloud**.
 
 
 :::image type="content" source="media/cluster-security-dashboard/kubernetes-center-cluster.png" alt-text="Screenshot that shows where to find the clusters page in the Azure portal." lightbox="media/cluster-security-dashboard/kubernetes-center-cluster.png":::
 
 ### Understand the dashboard sections
 
-#### Security findings
+#### Security findings for this cluster
 
-The top findings bar shows the security status of the cluster. For each findings type, it shows the number of the highest severity or risk issues. Use the top findings to decide whether to check the different tabs for further investigation.
+The security findings bar shows the security status of the cluster. For each findings type, it shows the number of the highest severity or risk issues. Use the top findings to decide whether to check the different tabs for further investigation.
 
 :::image type="content" source="media/cluster-security-dashboard/security-findings-summary-bar.png" alt-text="Screenshot of the security findings summary bar." lightbox="media/cluster-security-dashboard/security-findings-summary-bar.png":::
 
-### Security alerts tab
+### Security alerts
 
 Security alerts are notifications from Defender for Cloud about suspicious activity or active potential threats in your environment. The service prioritizes the alerts by risk.
 
@@ -84,7 +84,7 @@ When you select an alert, you open a panel that provides more information about 
 
 :::image type="content" source="media/cluster-security-dashboard/alerts-tab-security-findings.png" alt-text="Screenshot of the AKS Security Dashboard Alerts tab showing a list of security alerts with columns for severity, title, activity start time, last updated time, and status." lightbox="media/cluster-security-dashboard/alerts-tab-security-findings.png":::
 
-### Vulnerability assessment tab
+### Vulnerability assessment
 
 The AKS security dashboard shows software vulnerability scan results for running containers and the cluster's node pools. It generates a prioritized list of vulnerable components. This list is ranked by a dynamic engine that assesses the risks in your environment (available with Defender CSPM plan enabled) and considers the potential for exploitation.
 
@@ -108,7 +108,7 @@ The scanning of container images includes the following types of packages:
 
 :::image type="content" source="media/cluster-security-dashboard/vulnerabilities-assessment-tab.png" alt-text=" Screenshot of the Vulnerabilities tab showing vulnerable components list with severity levels, CVE counts, affected packages, and risk assessment scores." lightbox="media/cluster-security-dashboard/vulnerabilities-assessment-tab.png":::
 
-### Misconfigurations tab
+### Misconfigurations
 
 Microsoft Defender for Cloud continuously monitors Azure and AKS APIs, along with Kubernetes workloads. It identifies configurations within the cluster or its running containers that could affect the cluster's security posture and expose the cluster to risk. Defender also offers guidelines and automatic fixes to address these issues.
 
@@ -128,7 +128,7 @@ Microsoft Defender for Cloud continuously monitors Azure and AKS APIs, along wit
 
 :::image type="content" source="media/cluster-security-dashboard/misconfigurations-assessment-tab.png" alt-text="Screenshot of the Misconfigurations tab displaying security configuration issues." lightbox="media/cluster-security-dashboard/misconfigurations-assessment-tab.png":::
 
-### Compliance tab
+### Compliance
 
 Defender for Cloud continuously assesses your environment against selected regulatory standards and benchmarks. It provides a clear view of your compliance status, highlights unmet requirements, and offers recommendations to help you improve your cloud security posture.
 
