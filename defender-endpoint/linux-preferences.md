@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-ms.date: 02/05/2024
+ms.date: 03/17/2026
 manager: bagol
 audience: ITPro
 ms.collection:
