@@ -110,7 +110,7 @@ The available modes for ASR rules are described in the following table:
 |**Not configured** <br/><br/> **Off** <br/><br/> **Deactivated**|0|The ASR rule isn't enabled or is disabled.|
 |**Block** <br/><br/> **Activated**|1|The ASR rule is enabled in **Block** mode.|
 |**Audit** <br/><br/> **Audit mode**|2|The ASR rule is evaluated as if enabled in **Block** mode, but without taking action.|
-|**Warn** <br/><br/> **Warning**|6|The ASR rule is enabled in blocking mode, but users can select **Unblock** in the warning toast notification to bypass the block for 24 hours. After 24 hours, the user needs to bypass the block again. <br/><br/> Supported only in Windows 10 version 1809 or later. ASR rules in **Warn** mode on older versions of Windows are effectively in **Block** mode (no bypass available). <br/><br/> Not all ASR rules support **Warn** mode**.|
+|**Warn** <br/><br/> **Warning**|6|The ASR rule is enabled in blocking mode, but users can select **Unblock** in the warning toast notification to bypass the block for 24 hours. After 24 hours, the user needs to bypass the block again. <br/><br/> Supported only in Windows 10 version 1809 or later. ASR rules in **Warn** mode on older versions of Windows are effectively in **Block** mode (no bypass available). <br/><br/> Not all ASR rules support **Warn** mode.|
 
 As previously mentioned, we recommend **Block** mode for the standard protection rules, and initial testing in **Audit** mode for other ASR rules before activating them in **Block** or **Warn** mode.
 
@@ -152,7 +152,7 @@ The supported operating systems for ASR rules are described in the following tab
 
 The supported configuration management systems for ASR rules are described in the following table:
 
-|Rule name|Microsoft Intune|Microsoft Configuration Manager¹|Group policy²|PowerShell²|
+|Rule name|Microsoft Intune|Microsoft Configuration Manager¹|Group policy|PowerShell|
 |---|:---:|:---:|:---:|:---:|
 |**Standard protection rules**|||||
 |Block abuse of exploited vulnerable signed drivers (Device)|Y||Y|Y|
@@ -162,7 +162,7 @@ The supported configuration management systems for ASR rules are described in th
 |Block Adobe Reader from creating child processes|Y||Y|Y|
 |Block all Office applications from creating child processes|Y|1710 or later|Y|Y|
 |Block executable content from email client and webmail|Y|1710 or later|Y||
-|Block executable files from running unless they meet a prevalence, age, or trusted list criterion³|Y|1802 or later|Y|Y|
+|Block executable files from running unless they meet a prevalence, age, or trusted list criterion²|Y|1802 or later|Y|Y|
 |Block execution of potentially obfuscated scripts|Y|1710 or later |Y|Y|
 |Block JavaScript or VBScript from launching downloaded executable content|Y|1710 or later|Y|Y|
 |Block Office applications from creating executable content|Y|1710 or later|Y|Y|
@@ -184,9 +184,7 @@ The supported configuration management systems for ASR rules are described in th
 
 For support and update information, see [Updates and servicing for Configuration Manager](/intune/configmgr/core/servers/manage/updates).
 
-² In group policies or PowerShell, you configure individual ASR rules by using the rule's GUID value.
-
-³ Currently, this ASR rule might not be available in the Intune ASR policy configuration due to a known backend issue. But, the rule is available through the [other available ASR policy configuration methods](attack-surface-reduction-rules-enable.md#enabling-attack-surface-reduction-rules) or in existing Intune ASR policies created before the issue.
+² Currently, this ASR rule might not be available in the Intune ASR policy configuration due to a known backend issue. But, the rule is available through the [other available ASR policy configuration methods](attack-surface-reduction-rules-enable.md#enabling-attack-surface-reduction-rules) or in existing Intune ASR policies created before the issue.
 
 <a name='per-asr-rule-alert-and-notification-details'></a>
 
@@ -601,7 +599,9 @@ This ASR rule provides an extra layer of protection against ransomware. It uses 
 - The file is a valid signed file.
 - The file is prevalent enough to not be considered as ransomware.
 
-This rule tends to err on the side of caution to prevent ransomware.
+This rule doesn't simply block files with a bad reputation. Instead, the rule errs on the side of caution and also blocks files _that don't yet have a positive reputation_. Typically, blocks on benign, unknown files by this rule eventually resolve themselves. The file's reputation and trust values incrementally increase as non-problematic usage increases.
+
+If blocks on benign, unknown files don't resolve in a timely manner, you can configure a [per-rule exclusion](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions) or use the [Allow action for an indicator of compromise (IoC)](indicators-overview.md#enforcement-types-for-indicators).
 
 - **Intune name**: `Advanced ransomware protection`
 - **Microsoft Configuration Manager name**: `Use advanced protection against ransomware`
