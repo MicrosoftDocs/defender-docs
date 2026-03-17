@@ -35,12 +35,15 @@ For AKS clusters, this deployment uses the **Defender AKS add-on**.
 
 This option requires minimal configuration and is the default for most environments.
 
-### Manual deployment
+### Manual or mixed deployment
 
-You might choose manual deployment if you want more control over how cluster components are installed or if your environment requires a specific deployment method.
+You might choose manual deployment if you want more control over how cluster components are installed and configured.
 
-If you plan to deploy components manually, exclude the cluster from automatic sensor deployment before enabling the Defender for Containers plan.
+If you plan to deploy components manually, toggle off
 
+exclude the cluster from automatic sensor deployment before enabling the Defender for Containers plan.
+
+Mixed:
 #### Exclude the Defender sensor from automatic provisioning
 
 To exclude the Defender sensor from automatic provisioning, add the following tag to the cluster resource in Azure:

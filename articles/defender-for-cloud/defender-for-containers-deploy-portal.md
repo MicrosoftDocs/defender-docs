@@ -1,19 +1,19 @@
 ---
-title: Remediate Defender for Containers security recommendations
-description: Learn how to remediate Microsoft Defender for Cloud recommendations related to Microsoft Defender for Containers on AKS, Amazon EKS, Google Kubernetes Engine, and Arc-enabled Kubernetes clusters.
+title: Deploy Defender for Containers components by remediating security recommendations
+description: Learn how to deploy Microsoft Defender for Containers components by remediating Microsoft Defender for Cloud security recommendations for AKS, Amazon EKS, Google Kubernetes Engine, and Arc-enabled Kubernetes clusters.
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
 ms.date: 01/29/2026
 ---
 
-# Remediate Defender for Containers security recommendations
+# Deploy Defender for Containers components by remediating security recommendations
 
-This article explains how to remediate Microsoft Defender for Cloud security recommendations related to Microsoft Defender for Containers.
+This article explains how to deploy Microsoft Defender for Containers components by remediating Microsoft Defender for Cloud security recommendations.
 
-After you deploy and configure Defender for Containers, Microsoft Defender for Cloud evaluates your Kubernetes environments and generates recommendations when required components such as the Defender sensor or Azure Policy extension aren't installed or configured correctly.
+After you enable the Defender for Containers plan, Microsoft Defender for Cloud evaluates your Kubernetes environments and generates recommendations when required components such as the Defender sensor or Azure Policy extension aren't installed or configured correctly.
 
-Remediating these recommendations installs or enables the required components.
+Remediating these recommendations installs or enables the required components on the cluster.
 
 # [Azure Kubernetes Service (AKS)](#tab/aks)
 
