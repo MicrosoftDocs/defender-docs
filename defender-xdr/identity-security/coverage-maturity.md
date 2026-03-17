@@ -17,10 +17,10 @@ ms.custom: msecd-doc-authoring-106
 
 The Coverage and maturity page shows how well your identities are protected in your on-premises, cloud, SaaS, and partner environments.
 
-The page serves two main purposes:
+You can use this page to:
 
-- **Check your protection status** — Get a quick, high-level view of how complete your identity coverage is. Track progress over time.
-- **Close protection gaps** — See exactly where coverage is missing and what to do about it. Tasks are prioritized by security impact and effort, so you can focus on the most important fixes first.
+- **Check your protection status**: Get a quick, high-level view of how complete your identity coverage is, and track progress over time.
+- **Close protection gaps**:  See where coverage is missing and what to do about it. Tasks are prioritized by security impact and effort, so you can focus on the most important fixes first.
 
 ## Prerequisites
 
