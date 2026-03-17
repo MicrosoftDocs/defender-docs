@@ -593,7 +593,7 @@
       items:
         - name: Microsoft Sentinel graph overview
           href: datalake/sentinel-graph-overview.md
-        - name: Graph visualiztion
+        - name: Graph visualization
           href: datalake/graph-explorer.md  
         - name: Microsoft Sentinel Custom graphs
           items:
