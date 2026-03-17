@@ -611,11 +611,8 @@
               href: datalake/sentinel-graph-provider-reference.md
             - name: Create custom graph using AI 
               href: datalake/graph-ai-authoring.md  
-        - name: GQL reference for Sentinel custom graph
-          href: datalake/gql-reference-for-sentinel-custom-graph.md
-    - name: Compare KQL jobs, summary rules, and search jobs
-      href: datalake/kql-jobs-summary-rules-search-jobs.md
-      displayName: data lake 
+            - name: GQL reference for Sentinel custom graph
+              href: datalake/gql-reference-for-sentinel-custom-graph.md
     - name: Microsoft Sentinel MCP server
       items:
         - name: Microsoft Sentinel MCP server overview
@@ -667,6 +664,9 @@
         - name: Manage KQL jobs
           href: datalake/kql-manage-jobs.md
           displayName: data lake
+        - name: Compare KQL jobs, summary rules, and search jobs
+          href: datalake/kql-jobs-summary-rules-search-jobs.md
+          displayName: data lake
         - name: Troubleshoot KQL for the lake
           href: datalake/kql-troubleshoot.md
           displayName: data lake
@@ -688,7 +688,6 @@
           href: datalake/notebook-examples.md
     - name: Microsoft Sentinel data lake service limits
       href: datalake/sentinel-lake-service-limits.md
-
 - name: Collect and manage data
   items:
     - name: Overview
