@@ -102,5 +102,5 @@ The Password Hygiene, Leaked Credentials, and Exposed Passwords tabs share the f
 ## Related content
 
 - [The Identity Security dashboard](/defender-for-identity/dashboard)
-- [View your identity coverage and maturity](/defender-xdr/identity-security/identity-security-dashboard)
+- [View your identity coverage and maturity](/defender-xdr/identity-security/coverage-maturity)
 - [Identity security recommendations coverage](/defender-xdr/identity-security/identity-security-recommendations)

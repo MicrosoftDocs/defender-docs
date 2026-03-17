@@ -62,4 +62,4 @@ Security recommendations are available for the following non-Microsoft identity 
 - [Identity security initiative (Preview)](/defender-for-identity/identity-security-initiative)
 - [SaaS security posture management](/defender-cloud-apps/posture-overview)
 - [Security posture assessments](/defender-for-identity/security-assessment)
-- [View your identity coverage and maturity](/defender-xdr/identity-security/identity-security-dashboard)
+- [View your identity coverage and maturity](/defender-xdr/identity-security/coverage-maturity)

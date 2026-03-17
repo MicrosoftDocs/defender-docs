@@ -495,7 +495,7 @@
       - name: Identity Security overview
         href: ./identity-security/identity-security-overview.md
       - name: View your identity coverage and maturity 
-        href: ./identity-security/identity-security-dashboard.md  
+        href: ./identity-security/coverage-maturity.md  
       - name: View your identities
         items:
         - name: The identity security dashboard
