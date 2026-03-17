@@ -151,7 +151,7 @@ The following configuration profile contains entries for all settings described 
             "value":"audit"
          }
       ],
-      "scanFileModifyPermissions":false,
+      "scanFileModifyPermissions":true,
       "scanFileModifyOwnership":false,
       "scanNetworkSocketEvent":false,
       "offlineDefinitionUpdateUrl": "http://172.22.199.67:8000/linux/production/<EXAMPLE DO NOT USE>",
