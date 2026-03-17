@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender Identity Security dashboard
 description: This article describes how to work with the identity threat detection and response (ITDR) dashboard in Microsoft Defender.
-ms.date: 03/10/2026
+ms.date: 03/17/2026
 ms.topic: how-to
 ms.reviewer: maelgami 
 ---
@@ -37,20 +37,33 @@ For example:
 
 This section describes the graphs and widgets available on the ITDR dashboard. 
 
-Select links in the cards to just to more details, such as documentation, related recommendations in [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score), and more.
+Select links in the cards to go to more details, such as documentation, related recommendations in [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score), and more.
 
+### Top carousel
+
+The top of the dashboard displays a rotating carousel with five summary cards that correspond to the coverage source categories. Each card shows identity counts and a coverage score gauge:
 
 |Name  |Description |
 |---------|---------|
-|**Identities overview (shield widget)** |Provides a quick overview of the number of users in hybrid, cloud, and on-premises environments (AD and Microsoft Entra ID). This feature includes direct links to the Advanced Hunting platform, offering detailed user information at your fingertips.|
+|**Identity Providers** | Shows the count of human identities, non-human identities, and agentic identities (Preview) from connected identity providers like Microsoft Entra ID, along with the coverage score. |
+|**On-premises** | Shows the count of human identities and non-human identities from on-premises Active Directory environments, along with the coverage score. |
+|**SaaS Identities** | Shows the count of human identities and non-human identities from connected SaaS applications, along with the coverage score. |
+|**PAM & IGA** | Shows the status of privileged access management (PAM) and identity governance and administration (IGA) integrations, and prompts you to connect available solutions. |
+|**Non-human identities** | Shows a donut chart of non-human identities (OAuth apps and service accounts) broken down by source: Entra ID, SaaS, and On-Premises. |
+
+### Widgets
+
+|Name  |Description |
+|---------|---------|
 |**Top insights** /<br>**Users identified in a risky lateral movement path** | Indicates any sensitive accounts with risky lateral movement paths, which are windows of opportunity for attackers and can expose risks.  <br><br>We recommend that you take action on any sensitive accounts found with risky lateral movement paths to minimize your risk. <br><br>For more information, see [Understand and investigate Lateral Movement Paths (LMPs) with Microsoft Defender for Identity](understand-lateral-movement-paths.md).|
-|**Top insights** /<br>**Dormant Active Directory users who should be removed from sensitive groups** | Lists accounts that have been left unused for at least 180 days. <br><br>An easy and quiet path deep into your organization is through inactive accounts that are a part of sensitive groups, therefore we recommend removing those users from sensitive groups. <br><br>|
-|**ITDR deployment health**     |  Lists any sensor deployment progress, any health alerts, and license availability derived from Defender for Identity data and Device Inventory, which relies on Defender for Endpoint coverage.  |
-|**Identity posture (Secure score)** | The score shown represents your organization's security posture with a focus on the *identity* score, reflecting the collective security state of your identities. The score is automatically updated in real-time to reflect the data shown in graphs and recommended actions. <br><br>Microsoft Secure Score updates daily with system data with new points for each recommended action take.<br><br> For more information, see [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score). |
-| **Highly privileged entities** | Lists a summary of the sensitive accounts in your organization, including Entra ID security administrators and Global admin users. |
+|**Top insights** /<br>**Dormant Active Directory users** | Lists accounts that have been left unused for at least 180 days. <br><br>Inactive accounts that are a part of sensitive groups provide an easy path into your organization. We recommend removing those users from sensitive groups. |
+|**Identity Security Deployment Status**     |  Shows the number of identities that are Protected, Need Attention, and Not Protected, giving you a quick view of your identity protection deployment progress. Select **Configure your identity protection** to review and improve your deployment.  |
+|**Identity posture (Secure score)** | The score shown represents your organization's security posture with a focus on the *identity* score, reflecting the collective security state of your identities. The score is automatically updated in real-time to reflect the data shown in graphs and recommended actions. <br><br>Microsoft Secure Score updates daily with system data with new points for each recommended action taken.<br><br> For more information, see [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score). |
+| **Highly privileged identities** | Lists a summary of the sensitive accounts in your organization, including Entra ID Global Admins, Security Administrators, and accounts tagged as sensitive. Select **View all identities** to go to the identity inventory. |
 | **Identity related incidents** | Lists alerts from both Defender for Identity and [Microsoft Entra ID Protection](/azure/active-directory/identity-protection/overview-identity-protection), and any corresponding, relevant incidents from the last 30 days. |
-|**Domains with unsecured configuration**     |  Lists Active Directory domains that have unsecured configuration settings. <br><br>Active Directory domains hold many security-related configurations, which, when misconfigured, can make organizations more susceptible to cyber-attacks. Make sure to configure your domains in accordance with security best practices to decrease the likelihood of identity compromise.  <br><br>For more information, see [Security assessment: Unsecure domain configurations](security-posture-assessments/identity-infrastructure.md#resolve-unsecure-domain-configurations)      |
-| **Entra ID active users at risk** | Lists active user accounts that may be vulnerable to security threats, unusual activities, or potential compromises. <br><br>Identifying and managing users at risk is a crucial aspect of maintaining a secure IT environment. For more information see [Remediate risks and unblock users in Microsoft Entra ID Protection](/entra/id-protection/howto-identity-protection-remediate-unblock). |
+|**Useful guides** | Provides links to key documentation, including introductions to Microsoft Defender for Identity, Zero Trust with Microsoft Defender XDR, and Microsoft Conditional Access. |
+|**Domains with unsecured configurations**     |  Lists Active Directory domains that have unsecured configuration settings. <br><br>Active Directory domains hold many security-related configurations, which, when misconfigured, can make organizations more susceptible to cyber-attacks. Make sure to configure your domains in accordance with security best practices to decrease the likelihood of identity compromise.  <br><br>For more information, see [Security assessment: Unsecure domain configurations](security-posture-assessments/identity-infrastructure.md#resolve-unsecure-domain-configurations)      |
+| **Active users at risk** | Lists active user accounts that may be vulnerable to security threats, unusual activities, or potential compromises. <br><br>Identifying and managing users at risk is a crucial aspect of maintaining a secure IT environment. Select **View all users** to investigate further. For more information, see [Remediate risks and unblock users in Microsoft Entra ID Protection](/entra/id-protection/howto-identity-protection-remediate-unblock). |
 
 ## Next steps
 

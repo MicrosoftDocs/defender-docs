@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender coverage and maturity dashboard
 description: Learn how to use the Coverage and maturity dashboard in Microsoft Defender to understand identity protection posture across on-premises, cloud, SaaS, and partner environments.
-ms.date: 02/16/2026
+ms.date: 03/17/2026
 ms.topic: how-to
 ms.author: abbyweisberg
 author: AbbyMSFT
@@ -52,7 +52,7 @@ The maturity tiers are:
 | Tier name | Customer state | Description |
 | --- | --- | --- |
 | Connected | Initial deployment | You connected your environments and gained visibility, but protection is partial. Only one environment is connected. |
-| Protected | Operational | You deployed sensors and SaaS connectors. Key assets are covered, but gaps in non-human or PIM/PAM/IdP remain. |
+| Protected | Operational | You deployed sensors and SaaS connectors. Key assets are covered, but gaps in non-human or PAM/IGA remain. |
 | Fortified | Advanced | You have high coverage across hybrid and multicloud environments. You're tackling advanced use cases like agentic and non-human identities. |
 | Resilient | Fully mature | You achieved full coverage of all identity types across all environments. |
 
@@ -74,7 +74,7 @@ The priority order for deployment gaps is:
 
 - On-premises sensor deployment, Entra ID connector, and App Governance
 - SaaS app connectors
-- IdP, PAM, and PIM integrations
+- IdP, PAM, and IGA integrations
 
 When you select a task, you go directly to the relevant location in the Microsoft Defender portal, where you can complete or fix the task. A green checkmark appears when you complete a task successfully.
 
@@ -84,7 +84,7 @@ If the dashboard detects no deployment gaps, the section indicates that your env
 
 ## Coverage sources
 
-The dashboard displays one coverage card for each identity domain: on-premises identities, SaaS identities, Entra ID identities, and PIM / PAM and IdPs. The cards you see depend on your environment and licensing. If you can enable coverage for a domain, the card provides a link to configure it.
+The dashboard displays one coverage card for each identity domain: identity providers, SaaS identities, on-premises identities, and PAM & IGA identities. The cards you see depend on your environment and licensing. If you can enable coverage for a domain, the card provides a link to configure it.
 
 Each card includes:
 
@@ -96,15 +96,17 @@ Each card includes:
 
 If any servers or applications have health issues, the card displays a health notification. Select the notification to go to the **Health issues** tab, where you can review and resolve the issues.
 
-### Entra ID identities card
+### Identity providers identities card
 
-When you connect Microsoft Entra ID, the card provides risk insights based on Entra ID Protection. You can search Entra sign‑in events by using advanced hunting, correlate identities across environments, and receive security posture recommendations for Entra identities. The integration also enhances detections for OAuth applications and Entra ID accounts.
+The Identity providers identities card consolidates identity coverage from Microsoft Entra ID and other connected identity providers into a single view. When you connect Microsoft Entra ID, you get risk insights based on Entra ID Protection, the ability to search Entra sign-in events by using advanced hunting, identity correlation across environments, and security posture recommendations for Entra identities. The integration also enhances detections for OAuth applications and Entra ID accounts.
 
-The Entra ID identities card shows the following information:
+The Identity providers identities card shows the following information:
 
 | Item | Description |
 | --- | --- |
-| Coverage score | The percentage of completed tasks that are connected to secure your Entra identities. |
+| Protected human identities | The number of human identities protected by connected identity providers. |
+| Protected non-human identities | The number of non-human identities protected by connected identity providers. |
+| Coverage score | The percentage of completed tasks that are connected to secure your identity provider identities. |
 | Actions required | Number of unresolved deployment gaps. |
 
 ### On-premises identities card
@@ -135,20 +137,25 @@ The SaaS identities card shows:
 
 If any app connectors have an unhealthy deployment, the card displays a notification. Select the notification to go to the **App connectors settings** page.
 
-### PIM / PAM and IdPs card
+### PAM & IGA identities card
 
-When you connect identity providers (IdPs) and privileged access management (PAM) solutions, this card provides a unified view of those identity sources. You can correlate and track user accounts across connected providers, investigate identity‑related activities, and use advanced hunting to identify suspicious behavior. You can also take remediation actions directly on affected identity provider accounts.
+When you connect privileged access management (PAM) and identity governance and administration (IGA) solutions, this card provides a unified view of those identity sources. You can correlate and track user accounts across connected providers, investigate identity-related activities, and use advanced hunting to identify suspicious behavior. You can also take remediation actions directly on affected accounts.
 
-The PIM / PAM and IdPs card shows the following information:
+Partner gaps count toward your organization's maturity score. For example, if your organization uses CyberArk or SailPoint, unresolved gaps are reflected in your score. When you resolve them, your maturity score increases.
+
+The PAM & IGA identities card shows the following information:
 
 | Item | Description |
 | --- | --- |
-| Coverage score | The percentage of connected identity providers out of discovered identity providers. |
-| Active connectors | X supported connectors identity providers / Y supported identity providers in use. |
+| Coverage score | The percentage of connected PAM and IGA solutions out of discovered solutions. |
+| Active connectors | X supported connectors / Y supported connectors in use. |
 | Actions required | Number of unresolved deployment gaps. |
 
-> [!NOTE]
-> The number of PIM and PAM deployments doesn't affect the maturity score.
+## Known limitation
+
+The Coverage and maturity dashboard identifies all servers without a Microsoft Defender for Identity sensor and links to sensor deployment instructions. Currently, the dashboard directs all such servers to [Defender for Identity sensor version 3 deployment](/defender-for-identity/deploy/activate-sensor). Sensor version 3 requires Microsoft Defender for Endpoint. Servers that don't have Defender for Endpoint must deploy [Defender for Identity sensor version 2](/defender-for-identity/deploy/install-sensor) instead.
+
+On the **Sensors** page (**Settings** > **Identities** > **Sensors**), the deployment table shows only servers that have Microsoft Defender for Endpoint installed. As a result, servers without Defender for Endpoint don't appear on that page, even though they appear in the Coverage and maturity dashboard.
 
 ## Next steps
 

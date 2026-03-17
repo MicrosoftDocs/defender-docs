@@ -97,6 +97,8 @@ items:
   items:
   - name: Manage related identities and accounts
     href: manage-related-identities-accounts.md
+  - name: Create custom account correlation rules
+    href: custom-account-correlation-rules.md
   - name: View the ITDR dashboard
     href: dashboard.md
   - name: View and manage health issues
