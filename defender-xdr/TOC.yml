@@ -506,6 +506,10 @@
           href: investigate-users.md
         - name: Investigate a non-human identity
           href: investigate-non-human-identities.md
+        - name: View app details with app governance
+          href: /defender-cloud-apps/app-governance-visibility-insights-view-apps?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+        - name: Investigate and protect service accounts
+          href: /defender-for-identity/service-account-discovery?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Identity security posture assessments
         href: ./identity-security/identity-security-assessments.md
       - name: Investigate and respond to identity threats

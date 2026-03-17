@@ -24,10 +24,10 @@ The **Identity inventory** provides a centralized view of all identities in your
 The **Identities inventory** page includes tabs for:
 
 - **Human identities**: Human identities discovered in your environment from Active Directory and Microsoft Entra ID.
-- **Non-Human identities (Preview)**: Non-human identities discovered in your SaaS and on-premises environments, including:
+- **Non-Human identities (Preview)**: Non-human identities discovered in your SaaS, Entra ID, and on-premises environments, including:
   - OAuth apps registered in:
     - Microsoft Entra ID
-    - Google
+    - Google Workspace
     - Salesforce
   - On-premises service accounts from Active Directory.
 
@@ -114,7 +114,7 @@ These statistics highlight non-human identities that might need prioritization. 
 
 | Name | Description |
 | --------- | --------- |
-| Risky | The number of non-human identities with an elevated risk score. Risk scores are based on factors described in the [Risk score tab of the identity](/defender-xdr/investigate-non-human-identities.md#risk-score). |
+| Risky | The number of non-human identities with a high risk score. Risk scores are based on factors described in the [Risk score tab of the identity](/defender-xdr/investigate-non-human-identities.md#risk-score). |
 | Highly privileged | The number of non-human identities with high-privilege permissions, such as admin consent or broad application permissions. |
 | Overprivileged | The number of non-human identities with more permissions than they use. |
 | Unused | The number of non-human identities with no recent sign-in activity. |
@@ -130,7 +130,7 @@ The Non-Human identities tab contains these sections:
 - **Salesforce**: OAuth apps registered in Salesforce.
 - **Google Workspace**: OAuth apps registered in Google.
 
-The **Identities** list highlights key details for each human identity, including these columns by default:
+The **Identities** list highlights key details for each non-human identity, including these columns by default:
 
 | Column name | Description |
 | --------- | --------- |

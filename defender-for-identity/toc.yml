@@ -144,6 +144,8 @@ items:
          href: /defender-xdr/investigate-user?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
        - name: Investigate a non-human identity
          href: /defender-xdr/investigate-non-human-identities?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
+       - name: View app details with app governance
+         href: /defender-cloud-apps/app-governance-visibility-insights-view-apps?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
     - name: View service accounts
       href: service-account-discovery.md
   - name: Lateral movement paths

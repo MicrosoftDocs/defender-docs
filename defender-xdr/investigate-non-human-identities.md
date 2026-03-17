@@ -1,49 +1,124 @@
 ---
-title: Investigate non-human identities
-description: Learn how to investigate non-human identities in Microsoft Defender, including OAuth apps and service accounts. Review risk scores, identity graphs, permissions, and data usage.
+title: Non-human identities in Microsoft Defender (Preview)
+description: Learn about non-human identities in Microsoft Defender, including OAuth apps and service accounts. Review inventory fields, risk scores, and identity graphs.
 #customer intent: As a security analyst using Microsoft Defender, I want to understand how to investigate non-human identities so that I can assess risk, understand permissions, and identify potential security issues with OAuth apps and service accounts.
 author: AbbyMSFT
 ms.author: abbyweisberg
-ms.date: 03/10/2026
-ms.topic: article
+ms.date: 03/17/2026
+ms.topic: concept-article
 ms.service: microsoft-defender-for-identity
+ms.custom: msecd-doc-authoring-106
 ai-usage: ai-assisted
 ---
 
-# Investigate non-human identities in Microsoft Defender (Preview)
+# Non-human identities in Microsoft Defender (Preview)
 
-When you select a non-human identity from the [Identity inventory](/defender-for-identity/identity-inventory), a details pane opens that helps you understand the identity's context, risk level, relationships, and activity.
+Non-human identities are accounts and applications that operate without direct human interaction. In Microsoft Defender, non-human identities include OAuth apps, service accounts, and SaaS apps. These identities often have elevated privileges and access to sensitive resources, which makes them a priority for security monitoring.
 
-The non-human identity details pane has these tabs:
+You can view and investigate non-human identities from the [Identity inventory](/defender-for-identity/identity-inventory) in the Microsoft Defender portal.
 
-- [Summary](#summary)
-- [Risk score](#risk-score)
-- [Graph](#graph)
-- [Permissions](#permissions)
-- [Data usage](#data-usage)
-- [Users](#users)
-- [Sensitivity labels](#sensitivity-labels)
+## Types of non-human identities
 
-:::image type="content" source="media/investigate-non-human-identities/non-human-identities.png" alt-text="Screenshot of the non-human identity details pane in the Microsoft Defender portal.":::
+Microsoft Defender organizes non-human identities into the following categories, each shown as a tab in the identity inventory:
 
-## Summary
+- **Entra ID** — OAuth apps registered in Microsoft Entra ID. These apps authenticate using OAuth and access resources through Microsoft Graph and other APIs.
+- **Active Directory** — Service accounts from on-premises Active Directory. These specialized accounts run applications, services, and automated tasks, and often have elevated privileges.
+- **Google Workspace** — OAuth apps connected through Google Workspace. These apps are authorized by users and have varying levels of access to Google Workspace resources.
+- **Salesforce** — OAuth apps connected through Salesforce. These apps are authorized by users and access Salesforce data and resources.
 
-The **Summary** tab gives a high-level overview of the selected non-human identity. Use this tab to quickly check the identity's basic profile.
+Each identity type shows different columns and filters in the inventory. The following sections describe the fields available for each type.
 
-:::image type="content" source="media/investigate-non-human-identities/non-human-identities-summary.png" alt-text="Screenshot of the Summary tab for a non-human identity in the Microsoft Defender portal.":::
+## Entra ID inventory
 
-## Risk score
+The **Entra ID** tab shows OAuth apps registered in Microsoft Entra ID. Summary cards at the top of the page highlight key categories: **Risky**, **Highly privileged**, **Overprivileged**, **Unused**, **External unverified publishers**, and **New**.
 
-The **Risk score** tab shows a 1-100 risk score for the identity, where higher values mean greater risk. The risk score helps you quickly prioritize which non-human identities need attention first, without manually sorting through long lists.
+| Column | Description |
+|---|---|
+| **Display name** | The name of the OAuth app as registered in Entra ID. |
+| **Status** | The current status of the app (enabled or disabled). |
+| **Risk score** | A 1-100 score indicating the risk level of the app. |
+| **Graph API access** | Whether the app has access to Microsoft Graph API. |
+| **Permission type** | The type of permissions granted: application-only, delegated, or both. |
+| **Origin** | Whether the app originates from within your tenant or externally. |
+| **Consent type** | Whether the app was consented to by an admin or a user. |
+| **Publisher** | The publisher of the app. |
+| **Last used** | The date when the app was last used. |
 
-The tab shows the risk summary, which includes the factors behind the identity's risk score. This helps you understand why it's flagged as risky and make informed decisions about next steps.
+You can filter by API access, risk score, privilege level, permission, permission usage, origin, and permission type.
+
+## Active Directory inventory
+
+The **Active Directory** tab shows service accounts discovered from on-premises Active Directory environments.
+
+| Column | Description |
+|---|---|
+| **Display name** | The full name of the service account as shown in Active Directory. |
+| **Domain** | The Active Directory domain the account belongs to. |
+| **Object ID** | The unique object identifier for the account in Active Directory. |
+| **UPN** | The User Principal Name of the service account. |
+| **Identity environment** | The environment where the identity exists (on-premises). |
+| **Identity provider** | The identity provider (Active Directory). |
+| **Criticality level** | The criticality level of the account, ranging from low to very high. |
+| **Tags** | Tags assigned to the account, such as Sensitive or Honey Token. |
+| **SID** | The Security Identifier, a unique value used to identify the account in Active Directory. |
+| **Account status** | Whether the account is enabled or disabled. |
+| **Type** | The type of service account (for example, Service). |
+| **Created date** | The date when the account was first created. |
+| **Defender risk score** | The risk score assigned by Microsoft Defender. |
+| **Last updated** | The date of the most recent update to the account. |
+
+You can filter by domain, tags, criticality level, Defender risk score, and account status.
+
+## Google Workspace inventory
+
+The **Google Workspace** tab shows OAuth apps connected through Google Workspace. A summary card at the top of the page shows the count of highly privileged apps.
+
+| Column | Description |
+|---|---|
+| **Name** | The name of the app. |
+| **Authorized by** | The user who authorized the app. |
+| **Instance** | The Google Workspace instance the app is connected to. |
+| **Permission level** | The level of permissions granted to the app. |
+| **Actions** | Available actions you can take on the app. |
+
+You can filter by app, user name, app state, instance, permissions, and permission level.
+
+## Salesforce inventory
+
+The **Salesforce** tab shows OAuth apps connected through Salesforce.
+
+| Column | Description |
+|---|---|
+| **Name** | The name of the app. |
+| **Authorized by** | The user who authorized the app. |
+| **Instance** | The Salesforce instance the app is connected to. |
+| **Permission level** | The level of permissions granted to the app. |
+| **Actions** | Available actions you can take on the app. |
+
+You can filter by app, user name, app state, instance, and community use.
+
+## Non-human identity details
+
+When you select a non-human identity from the inventory, a details pane opens with tabs that provide context about the identity. The following tabs are available across non-human identity types. The following screenshot shows an example of the Entra ID details pane:
+
+:::image type="content" source="media/investigate-non-human-identities/non-human-identities.png" alt-text="Screenshot of the Identity Inventory page showing the Non-Human Identities tab with the Entra ID list and a details pane for an OAuth app.":::
+
+### Summary
+
+The **Summary** tab gives a high-level overview of the selected non-human identity, including its basic profile and key attributes. Use this tab to quickly assess the identity.
+
+:::image type="content" source="media/investigate-non-human-identities/non-human-identities-summary.png" alt-text="Screenshot of the Summary tab showing the app profile, including display name, app ID, consent type, origin, and risk score.":::
+
+### Risk score
+
+The **Risk score** tab shows a 1-100 risk score for the identity, where higher values mean greater risk. The risk score helps you quickly prioritize which non-human identities need attention first. The tab also shows the factors behind the identity's risk score, so you can understand why it's flagged and make informed decisions about next steps.
 
 > [!NOTE]
 > The risk score currently applies only to OAuth apps registered in Microsoft Entra ID.
 
-:::image type="content" source="media/investigate-non-human-identities/non-human-identities-risk-score.png" alt-text="Screenshot of the Risk score tab for a non-human identity in the Microsoft Defender portal.":::
+:::image type="content" source="media/investigate-non-human-identities/non-human-identities-risk-score.png" alt-text="Screenshot of the Risk score tab showing a score of 43 with risk factors like inactive app, high privilege, and external origin.":::
 
-## Graph
+### Graph
 
 The **Graph** tab shows a visual identity graph of how the selected non-human identity connects to other entities in your organization, like users, resources, SaaS workloads, and critical assets.
 
@@ -53,45 +128,23 @@ Use the identity graph to:
 - Identify risky or unexpected relationships, like high-privilege access paths or sensitive resource exposure.
 - Make faster, more confident decisions about review, remediation, or deeper investigation.
 
-Select any node or edge in the graph to open a details panel with deeper context and attributes for that entity or relationship. When applicable, the details panel also shows attack paths involving the selected nodes or edges.
-
-To explore further, select **View in map** below the graph to open the full Attack Map experience in a new window.
+Select any node or edge in the graph to open a details panel with deeper context. When applicable, the details panel also shows attack paths involving the selected nodes or edges. To explore further, select **View in map** below the graph to open the full Attack Map experience in a new window.
 
 > [!NOTE]
-> The identity graph is currently only available for OAuth apps registered in Microsoft Entra ID.
+> The identity graph is currently available only for OAuth apps registered in Microsoft Entra ID.
 
-:::image type="content" source="media/investigate-non-human-identities/non-human-identities-graph.png" alt-text="Screenshot of the Graph tab for a non-human identity in the Microsoft Defender portal.":::
+:::image type="content" source="media/investigate-non-human-identities/non-human-identities-graph.png" alt-text="Screenshot of the Graph tab showing a visual identity graph with connections between an OAuth app, Microsoft Entra, and a user entity.":::
 
-## Permissions
+## Additional detail tabs
 
-The **Permissions** tab shows the permissions granted to the non-human identity, including the permission type (application-only, delegated, or mixed) and consent type (admin or user consent).
+Depending on the type of non-human identity you select, additional tabs are available in the details pane:
 
-Use this tab to review the identity's access level and identify overprivileged or unnecessarily broad permissions.
+- **Entra ID, Google Workspace, and Salesforce apps** — Additional tabs include Permissions, Data usage, Users, and Sensitivity labels. For details about these tabs, see [View your app details with app governance](/defender-cloud-apps/app-governance-visibility-insights-view-apps#getting-detailed-information-on-an-app).
+- **Active Directory service accounts** — Additional details include connections, authentication protocols, and sources and destinations. For details, see [Investigate and protect Service Accounts](/defender-for-identity/service-account-discovery#service-account-details).
 
-:::image type="content" source="media/investigate-non-human-identities/non-human-identities-permissions.png" alt-text="Screenshot of the Permissions tab for a non-human identity in the Microsoft Defender portal.":::
-
-## Data usage
-
-The **Data usage** tab shows the identity's activity patterns, including recent sign-in activity and resource access.
-
-Use this tab to learn how the identity is used and identify unusual or unexpected activity.
-
-:::image type="content" source="media/investigate-non-human-identities/non-human-identities-data-usage.png" alt-text="Screenshot of the Data usage tab for a non-human identity in the Microsoft Defender portal.":::
-
-## Users
-
-The **Users** tab shows the users associated with the non-human identity, like users who consented to the app or are assigned to it. Use this tab to learn which users interact with the identity and check the scope of its access.
-
-:::image type="content" source="media/investigate-non-human-identities/non-human-identities-users.png" alt-text="Screenshot of the Users tab for a non-human identity in the Microsoft Defender portal.":::
-
-## Sensitivity labels
-
-The **Sensitivity labels** tab shows the Microsoft Purview sensitivity labels applied to data that the non-human identity can access. Use this tab to learn whether the identity has access to sensitive or classified information.
-
-:::image type="content" source="media/investigate-non-human-identities/non-human-identities-sensitivity-labels.png" alt-text="Screenshot of the Sensitivity labels tab for a non-human identity in the Microsoft Defender portal.":::
-
-
-## Next steps
+## Related content
 
 - [View the identity inventory](/defender-for-identity/identity-inventory)
-- [Investigate users in Microsoft Defender XDR](/defender-xdr/investigate-users)
+- [Investigate a human identity](/defender-xdr/investigate-users)
+- [Investigate and protect Service Accounts](/defender-for-identity/service-account-discovery)
+- [View your app details with app governance](/defender-cloud-apps/app-governance-visibility-insights-view-apps)
