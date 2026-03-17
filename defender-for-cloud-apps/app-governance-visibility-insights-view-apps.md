@@ -61,17 +61,17 @@ Select a specific app in the grid to view more details on an apps details pane o
 
 The **Summary** tab shows more data about the app, such as the date first consented and the App ID. To see the properties of the app as registered in Microsoft Entra ID, select **View in Microsoft Entra ID**.
 
-In the details pane, select any of the following tabs to view more details:
+In the details pane, select any of the following tabs to view more details. Some tabs are available only for specific app types, as noted.
 
 - Select the **Risk score** tab to view a 1-100 risk score for the app, where higher values mean greater risk. The risk score helps you quickly prioritize which apps need attention first. The tab shows the risk summary, including the factors behind the app's risk score.
 
     > [!NOTE]
-    > The risk score is currently available only for OAuth apps registered in Microsoft Entra ID.
+    > The Risk score tab is available only for OAuth apps registered in Microsoft Entra ID.
 
-- Select the **Graph** tab to view a visual identity graph that shows how the app connects to other entities in your organization, like users, resources, SaaS workloads, and critical assets. Select any node or edge in the graph to open a details panel with deeper context. When applicable, the details panel also shows attack paths involving the selected nodes or edges. To explore further, select **View in map** below the graph to open the full Attack Map experience in a new window.
+- Select the **Graph** tab to view a visual identity graph that shows how the app connects to other entities in your organization, like users, resources, SaaS workloads, and critical assets. Select any node or edge in the graph to open a details pane with deeper context. When applicable, the pane also shows attack paths involving the selected nodes or edges. To explore further, select **View in map** below the graph to open the full Attack Map experience in a new window.
 
     > [!NOTE]
-    > The identity graph is currently available only for OAuth apps registered in Microsoft Entra ID.
+    > The Graph tab is available only for OAuth apps registered in Microsoft Entra ID.
 
 - Select the **Data usage** tab to view a graph of data usage over time, for Exchange, SharePoint, OneDrive, and Teams resources via Microsoft Graph and EWS APIs. For example:
 
