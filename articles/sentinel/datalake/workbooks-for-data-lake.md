@@ -46,28 +46,30 @@ When using Sentinel data lake as the data source for your workbooks, keep in min
 
 1. Paste the following KQL into the query editor:
     ```kql
-    SigninLogs
-    | summarize SignInCount = count(), FailedCount = countif(ResultType != "0") by UserPrincipalName
-    | extend FailureRate = round(100.0 * FailedCount / SignInCount, 2)
-    | order by FailedCount desc
-    | take 20
+    AWSCloudTrail
+    | where isnotempty(ErrorCode)
+    | summarize FailedEvents = count()
+        by bin(TimeGenerated, 1h), SourceIpAddress, UserIdentityPrincipalid
+    | where FailedEvents > 3
+    | summarize FailedEvents = sum(FailedEvents) by UserIdentityPrincipalid
+    | top 10 by FailedEvents
     ```
+1. Under **Visualization** select **Bar chart**.
+
 1. Select **Run query** to visualize the results.
+
+1. Seelect **Done editing** to exit edit mode and view your visual.
+
  
     :::image type="content" source="./media/workbooks-for-data-lake/edit-new-query.png" alt-text="Screenshot showing the editing of a new query and visualization." lightbox="./media/workbooks-for-data-lake/edit-new-query.png":::
 
+    This visual shows the top 10 AWS principal identities generating the highest number of failed API calls in AWSCloudTrail logs. Failed events are aggregated and filtered to highlight identities with repeated errors. The chart helps analysts quickly identify potentially suspicious or misconfigured identities producing abnormal failure patterns.
+    
     > [!NOTE]
     > The **Visualization** type **Set by query** is not supported. 
     >
     > Relative time ranges such as `> ago(10d) ` are supported up to 90 days. Absolute time ranges are supported according to your data retention policy. 
 
-1. Customize the visual by selecting **Visual formatting**
-
-1. Under **Visualization**, select **Bar Chart**
-1. Select **X Axis** and set the **Column** to `UserPrincipalName` 
-1. Select **Done editing** to save your changes.
-    
-    :::image type="content" source="./media/workbooks-for-data-lake/customize-visual.png" alt-text="Screenshot showing the results of a new query in a Microsoft Sentinel workbook." lightbox="./media/workbooks-for-data-lake/customize-visual.png":::
 
 1.  On the workbook page, select **Done editing**
 
