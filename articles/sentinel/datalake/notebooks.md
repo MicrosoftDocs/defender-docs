@@ -7,7 +7,7 @@ ms.author: edbaynash
 ms.topic: how-to  
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
-ms.date: 02/19/2026
+ms.date: 03/04/2026
 
 # Customer intent: As a security engineer or data scientist, I want to explore and analyze security data in the Microsoft Sentinel data lake using Jupyter notebooks, so that I can gain insights and build advanced analytics solutions.
 ---
@@ -254,6 +254,8 @@ InputError|MissingTableSuffixLake|2603|Invalid custom table name. All names of c
 InputError|MissingTableSuffixLA|2604|Invalid custom table name. All names of custom analytics tables must end with _SPRK_CL. |Add _SPRK_CL as a suffix to the table name before writing it to analytics storage.|
 UnknownError|InternalServerError|2901|Something went wrong. Restart the session and try again.|This problem is transient and can be resolved by restarting the session and trying again. If this problem persists, contact support.|
 
+> [!NOTE]
+> Querying legacy tables such as AzureDiagnostics is not supported.
 
 
 ## Related content
