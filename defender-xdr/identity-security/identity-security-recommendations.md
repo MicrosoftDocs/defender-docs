@@ -17,8 +17,8 @@ Microsoft Defender provides security recommendations that help you identify and 
 
 Security recommendations come from two capabilities:
 
-- **Identity security posture management (ISPM)** — Provides recommendations for Active Directory and non-Microsoft identity providers. For information about how to view and act on these recommendations, see [Identity security initiative (Preview)](/defender-for-identity/identity-security-initiative).
-- **SaaS security posture management (SSPM)** — Provides recommendations for SaaS application configurations. For information about how SSPM works and how to turn on recommendations, see [SaaS security posture management](/defender-cloud-apps/posture-overview).
+- **Identity security posture management (ISPM)**: Provides recommendations for Active Directory and non-Microsoft identity providers. For information about how to view and act on these recommendations, see [Identity security initiative (Preview)](/defender-for-identity/identity-security-initiative).
+- **SaaS security posture management (SSPM)**: Provides recommendations for SaaS application configurations. For information about how SSPM works and how to turn on recommendations, see [SaaS security posture management](/defender-cloud-apps/posture-overview).
 
 ## Supported identity sources
 

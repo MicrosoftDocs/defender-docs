@@ -30,14 +30,14 @@ In the Microsoft Defender portal, select **Identities** > **Password protection*
 
 The page includes a left panel where you select the identity source you want to review. Supported identity sources include:
 
-- **Active Directory** — Available across all four tabs.
-- **Microsoft Entra ID** — Available on the Leaked Credentials tab.
-- **Okta** — Available on the Password Hygiene and Password Policies tabs.
-- **PingOne** — Available on the Password Hygiene and Password Policies tabs.
+- **Active Directory**: Available on all four tabs.
+- **Microsoft Entra ID**: Available on the Leaked Credentials tab.
+- **Okta**: Available on the Password Hygiene and Password Policies tabs.
+- **PingOne**: Available on the Password Hygiene and Password Policies tabs.
 
 ## Password Hygiene
 
-The **Password Hygiene** tab surfaces foundational password hygiene weaknesses that attackers commonly exploit for persistence and privilege escalation. Each item is presented as an actionable recommendation that you can use to prioritize and reduce post-compromise risk.
+The **Password Hygiene** tab shows password hygiene weaknesses that attackers commonly exploit for persistence and privilege escalation. Each item is a recommendation you can use to prioritize and reduce post-compromise risk.
 
 > [!NOTE]
 > Supported identity sources: Active Directory, Okta, PingOne.

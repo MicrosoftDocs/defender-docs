@@ -21,17 +21,17 @@ You can view and investigate non-human identities from the [Identity inventory](
 
 Microsoft Defender organizes non-human identities into the following categories, each shown as a tab in the identity inventory:
 
-- **Entra ID** — OAuth apps registered in Microsoft Entra ID. These apps authenticate using OAuth and access resources through Microsoft Graph and other APIs.
-- **Active Directory** — Service accounts from on-premises Active Directory. These specialized accounts run applications, services, and automated tasks, and often have elevated privileges.
-- **Google Workspace** — OAuth apps connected through Google Workspace. Users authorize these apps, which have varying levels of access to Google Workspace resources.
-- **Salesforce** — OAuth apps connected through Salesforce. Users authorize these apps to access Salesforce data and resources.
+- **Entra ID**: OAuth apps registered in Microsoft Entra ID. These apps authenticate using OAuth and access resources through Microsoft Graph and other APIs.
+- **Active Directory**: Service accounts from on-premises Active Directory. These specialized accounts run applications, services, and automated tasks, and often have elevated privileges.
+- **Google Workspace**: OAuth apps connected through Google Workspace. Users authorize these apps, which have varying levels of access to Google Workspace resources.
+- **Salesforce**: OAuth apps connected through Salesforce. Users authorize these apps to access Salesforce data and resources.
 
 ## Investigate identity details
 
 Each identity type shows different columns, filters, and detail tabs in the inventory. For information about inventory fields and identity details, see the following articles:
 
-- **Entra ID, Google Workspace, and Salesforce** — These identity types are OAuth apps. For inventory columns, filtering options, and identity details, see [View your app details with app governance](/defender-cloud-apps/app-governance-visibility-insights-view-apps).
-- **Active Directory** — Active Directory service accounts are managed through Defender for Identity. For inventory columns, connections, and classification rules, see [Investigate and protect Service Accounts](/defender-for-identity/service-account-discovery).
+- **Entra ID, Google Workspace, and Salesforce**: These identity types are OAuth apps. For inventory columns, filtering options, and identity details, see [View your app details with app governance](/defender-cloud-apps/app-governance-visibility-insights-view-apps).
+- **Active Directory**: Active Directory service accounts are managed through Defender for Identity. For inventory columns, connections, and classification rules, see [Investigate and protect Service Accounts](/defender-for-identity/service-account-discovery).
 
 ## Related content
 

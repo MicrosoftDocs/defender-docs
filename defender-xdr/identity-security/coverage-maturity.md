@@ -71,11 +71,11 @@ The page shows one card for each identity source: **Identity providers**, **SaaS
 
 Each card shows:
 
-- **Identity count** — The number of protected identities. Select the count to view them in the identity inventory.
-- **Coverage score** — The percentage of setup tasks completed for this source.
-- **Active connections** — How many sources are connected out of the total detected (for example, "12 apps connected / 36 apps in use").
-- **Actions required** — The number of unresolved gaps.
-- **Review and improve coverage** — Select to see the specific gaps for this source.
+- **Identity count**: The number of protected identities. Select the count to view them in the identity inventory.
+- **Coverage score**: The percentage of setup tasks completed for this source.
+- **Active connections**: How many sources are connected out of the total detected (for example, "12 apps connected / 36 apps in use").
+- **Actions required**: The number of unresolved gaps.
+- **Review and improve coverage**: Select to see the specific gaps for this source.
 
 If any servers or app connectors have health issues, the card shows a notification that links to the **Health issues** page.
 
@@ -117,7 +117,7 @@ Shows identities from connected SaaS applications. Connecting SaaS apps enables 
 
 ### PAM & IGA identities card
 
-Shows partner integrations for privileged access management (PAM) and identity governance and administration (IGA) solutions. Partner gaps count toward your maturity score — resolving them increases the score.
+Shows partner integrations for privileged access management (PAM) and identity governance and administration (IGA) solutions. Partner gaps count toward your maturity score. Resolving them increases the score.
 
 | Item | Description |
 | --- | --- |

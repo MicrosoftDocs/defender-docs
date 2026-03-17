@@ -9,13 +9,13 @@ ms.custom: msecd-doc-authoring-106
 ms.date: 03/17/2026
 ai-usage: ai-assisted
 
-#customer intent: As a security admin using Microsoft Defender for Identity, I want to create custom account correlation rules so that I can automatically correlate accounts that don't share strong identifiers and gain comprehensive identity visibility.
+#customer intent: As a security admin using Microsoft Defender for Identity, I want to create custom account correlation rules so that I can automatically correlate accounts that don't share strong identifiers and get full identity visibility.
 
 ---
 
 # Create custom account correlation rules
 
-Custom account correlation rules allow you to correlate accounts that don't share strong identifiers such as account ID, SID, object ID, or UPN. This is especially useful for privileged accounts with unique naming conventions. By defining custom policies, you gain comprehensive visibility and enhanced identity protection across all accounts.
+Custom account correlation rules allow you to correlate accounts that don't share strong identifiers such as account ID, SID, object ID, or UPN. This is especially useful for privileged accounts with unique naming conventions. By defining custom policies, you get full visibility and better protection for all accounts.
 
 ## Prerequisites
 

@@ -13,9 +13,9 @@ ai-usage: ai-assisted
 
 # Investigate an Active Directory domain
 
-The Active Directory (AD) domain page in Microsoft Defender provides a consolidated view of your on-premises Active Directory environment. It centralizes domain health, sensor coverage, security policies, trust relationships, and actionable recommendations in one place, without requiring direct access to the on-premises environment.
+The Active Directory (AD) domain page in Microsoft Defender provides a single view of your on-premises Active Directory environment. It brings together domain health, sensor coverage, security policies, trust relationships, and recommendations in one place, without requiring direct access to the on-premises environment.
 
-Use the domain page to quickly determine whether a domain is healthy and secure. The page surfaces deployment status, sensor health, identity counts, and active recommendations that directly affect your domain's health score.
+Use the domain page to quickly determine whether a domain is healthy and secure. The page shows deployment status, sensor health, identity counts, and active recommendations that directly affect your domain's health score.
 
 ## Prerequisites
 
@@ -61,9 +61,9 @@ Shows sensor deployment coverage and sensor health status for the domain. A 100%
 
 Displays an overall health score for the domain (Low, Medium, or High) based on three factors:
 
-- **Identity infrastructure coverage** — Whether sensors are deployed across all domain controllers.
-- **Sensor health** — Whether deployed sensors are running and reporting correctly.
-- **Active recommendations** — The number of unresolved security recommendations.
+- **Identity infrastructure coverage**: Whether sensors are deployed on all domain controllers.
+- **Sensor health**: Whether deployed sensors are running and reporting correctly.
+- **Active recommendations**: The number of unresolved security recommendations.
 
 Select **How to fix** to view the recommended actions.
 
@@ -109,10 +109,10 @@ The tab includes default filters for **Status** (New, In progress) and **Alert s
 
 Provides human-readable summaries of key AD security policies in four cards:
 
-- **Password Policy** — Password maximum age, minimum age, history, complexity, authenticated password change only, no clear-text password change, admin lockout after failed attempts, password store clear text, and password change is refused.
-- **Account Lockout Policy** — Lockout duration and lockout threshold.
-- **Kerberos Policy** — Maximum ticket age and maximum renewal age.
-- **LDAP & Machine Account** — LDAP signing policy and machine account quota. If the domain has active recommendations for insecure configurations, a warning banner appears with a link to view the recommendations.
+- **Password Policy**: Password maximum age, minimum age, history, complexity, authenticated password change only, no clear-text password change, admin lockout after failed attempts, password store clear text, and password change is refused.
+- **Account Lockout Policy**: Lockout duration and lockout threshold.
+- **Kerberos Policy**: Maximum ticket age and maximum renewal age.
+- **LDAP & Machine Account**: LDAP signing policy and machine account quota. If the domain has active recommendations for insecure configurations, a warning banner appears with a link to view the recommendations.
 
 Use this tab to review critical configurations and determine whether they're aligned with modern security standards, without needing direct access to the on-premises environment.
 

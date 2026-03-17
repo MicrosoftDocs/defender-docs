@@ -20,7 +20,7 @@ To access this new dashboard, you need:
 
 - A user role with at least the [Security Reader](/azure/active-directory/roles/permissions-reference#security-reader) permissions
 
-To view a comprehensive list of recommendations and select all recommended action links, you need the [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role.
+To view a full list of recommendations and select all recommended action links, you need the [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role.
 
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to scenarios when you can't use an existing role.
