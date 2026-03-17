@@ -44,7 +44,7 @@ To see the version of the sensor run:
     
 ### Sensor v0.9 (deployed by Helm or Arc for K8s in Preview mode)
 
-**Sensor v0.9.52-preview — Preview**
+**Sensor v0.9.52— Preview**
 
 - **Released:** March 2026
  
