@@ -605,12 +605,18 @@
           items:
             - name: Custom graphs overview
               href: datalake/custom-graphs-overview.md
+            - name: Predefined graphs
+              items:
+                - name: Overview of predefined graphs
+                  href: datalake/predefined-graphs-overview.md
+                - name: Identity attack graph 
+                  href: datalake/identity-attack-graph.md
             - name: Create custom graphs
               href: datalake/create-custom-graphs.md
             - name: Microsoft Sentinel graph provider reference
               href: datalake/sentinel-graph-provider-reference.md
             - name: Create custom graph using AI 
-              href: datalake/custom-graphs-ai.md  
+              href: datalake/graph-ai-authoring.md  
         - name: GQL reference for Sentinel custom graph
           href: datalake/gql-reference-for-sentinel-custom-graph.md
     - name: Compare KQL jobs, summary rules, and search jobs
