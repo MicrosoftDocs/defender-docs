@@ -224,6 +224,9 @@ Consider overlapping the lookback period with job frequency to reduce the risk o
 For more information, see [Handle ingestion delay in scheduled analytics rules](/azure/sentinel/ingestion-delay).
 
 ### Column names
+
+Column names must start with a letter.
+
 The following standard columns aren't supported for export. The ingestion process overwrites these columns in the destination tier:
 
 + TenantId

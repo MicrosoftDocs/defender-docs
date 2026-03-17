@@ -3,7 +3,7 @@ title: Advanced threat detection with User and Entity Behavior Analytics (UEBA) 
 description: Create behavioral baselines for entities (users, hostnames, IP addresses) and use them to detect anomalous behavior and identify zero-day advanced persistent threats (APT).
 author: guywi-ms
 ms.author: guywild
-ms.topic: article
+ms.topic: concept-article
 ms.date: 12/15/2025
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
@@ -98,7 +98,7 @@ UEBA provides two scores to help security teams prioritize investigations and de
 | **Indicator of** | How unusual a single event is, based on profile-driven logic | Holistic anomalous behavior across multiple events using machine learning |
 | **Used for** | Quick triage and drilling into single events | Identifying patterns and aggregated anomalies over time |
 | **Processing** | Near real-time, event-level | Batch processing, behavior-level |
-| **How it's calculated** | Combines **Entity Anomaly Score** (rarity of entities like user, device, country) with **Time Series Score** (abnormal patterns over time, such as spikes in failed sign-ins). | AI/ML anomaly detector trained on your workspace's telemetry |
+| **How it's calculated** | Combines **Entity Anomaly Score** (rarity of entities like user, device, country/region) with **Time Series Score** (abnormal patterns over time, such as spikes in failed sign-ins). | AI/ML anomaly detector trained on your workspace's telemetry |
 
 
 For example, when a user performs an Azure operation for the first time:
