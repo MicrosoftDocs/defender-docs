@@ -148,8 +148,12 @@ items:
          href: /defender-xdr/investigate-user?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
        - name: Investigate a non-human identity
          href: /defender-xdr/investigate-non-human-identities?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
+       - name: Investigate an Active Directory domain
+         href: investigate-domain.md
     - name: View service accounts
       href: service-account-discovery.md
+    - name: Password protection
+      href: /defender-xdr/identity-security/password-protection?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
   - name: Lateral movement paths
     items:
     - name: Understand and investigate lateral movement paths
