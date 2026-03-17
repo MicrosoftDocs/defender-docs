@@ -3,7 +3,7 @@ title: Defender Sensor for Defender for Containers Changelog
 description: Learn about the version history and updates for the Defender sensor in Microsoft Defender for Containers.
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 03/02/2026
+ms.date: 03/17/2026
 ai-usage: ai-assisted
 ---
 
@@ -21,7 +21,18 @@ To see the version of the sensor run:
 
 ### Sensor v0.10 (deployed by Helm or Arc for K8s in Preview mode)
 
-**Sensor v0.10.2 – Public Preview**
+**Sensor v0.10.28 — Preview**
+
+- **Released:** March 2026
+ 
+- **What's included:**
+    - Added privileged security context for collectors on Nexus Baremetal
+    - Security fix: sanitized secrets from storage client retry logs
+    - Moved SELinux options to pod-level for improved collector compatibility
+    - Updated antimalware collector
+    - Security vulnerability fixes
+
+**Sensor v0.10.2 – Preview**
 
 - **Released:** February 2026
 
@@ -32,6 +43,16 @@ To see the version of the sensor run:
   - Binary drift blocking 
     
 ### Sensor v0.9 (deployed by Helm or Arc for K8s in Preview mode)
+
+**Sensor v0.9.52-preview — Preview**
+
+- **Released:** March 2026
+ 
+- **What's included:**
+    - Added privileged security context for collectors on Nexus Baremetal
+    - Security fix: sanitized secrets from storage client retry logs
+    - Moved SELinux options to pod-level for improved collector compatibility
+    - Security vulnerability fixes
 
 **Sensor v0.9.51 – Preview**
 
@@ -112,6 +133,15 @@ To see the version of the sensor run:
   - Bug fixes and security enhancements  
     
 ### Sensor v0.8 (relevant to all AKS supported versions and Arc for K8s)
+
+**Sensor v0.8.49 — GA**
+
+- **Released:** March 2026
+ 
+- **What's included:**
+    - Added privileged security context for collectors on Nexus Baremetal
+    - Security fix: sanitized secrets from storage client retry logs
+    - Security vulnerability fixes
 
 **Sensor v0.8.48 – GA**
 
