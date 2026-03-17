@@ -117,21 +117,32 @@ You can disable device discovery in the [Advanced features](advanced-features.md
 
 If you encounter issues with device discovery or authenticated network scans, see [Troubleshoot device discovery and authenticated network scans](troubleshoot-device-discovery-network-scans.md).
 
-### Filter network list
+## Explore devices in the network
 
-To filter the network list, select **Filter**, select the **Network monitor state** filter, and select **Apply**. In the network list, select the **Network monitor state** filter, and select a state:
+You can use the following advanced hunting query to get more context about each network name described in the networks list. The query lists all the onboarded devices that were connected to a certain network within the last seven days.
 
-- **Monitored**: Networks where device discovery is active.
-- **Ignored**: Networks where device discovery isn't active.
-- **All**: Shows both monitored and ignored networks.
+```kusto
+DeviceNetworkInfo
+| where Timestamp > ago(7d)
+| where ConnectedNetworks  != ""
+| extend ConnectedNetworksExp = parse_json(ConnectedNetworks)
+| mv-expand bagexpansion = array ConnectedNetworks=ConnectedNetworksExp
+| extend NetworkName = tostring(ConnectedNetworks ["Name"]), Description = tostring(ConnectedNetworks ["Description"]), NetworkCategory = tostring(ConnectedNetworks ["Category"])
+| where NetworkName == "<your network name here>"
+| summarize arg_max(Timestamp, *) by DeviceId
+```
 
 ### Get information on device
 
-To review and assess non-onboarded devices, and to find other device details, see [Review and assess devices](assess-devices.md).
+You can use the following advanced hunting query to get the latest complete information on a specific device.
 
-## Disable device discovery
+```kusto
+DeviceInfo
+| where DeviceName == "<device name here>" and isnotempty(OSPlatform)
+| summarize arg_max(Timestamp, *) by DeviceId
+```
 
-You can disable device discovery in the [Advanced features](advanced-features.md) page. When you disable device discovery, Defender for Endpoint doesn't discover devices in your network, but **SenseNDR.exe** still runs on the onboarded devices.
+## See also
 
 - [Device discovery overview](device-discovery.md)
 - [Device discovery FAQs](device-discovery-faq.md)
