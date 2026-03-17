@@ -103,8 +103,6 @@ items:
       href: manage-related-identities-accounts.md
     - name: Create custom account correlation rules
       href: custom-account-correlation-rules.md
-  - name: View and manage health issues
-    href: health-alerts.md
   - name: Best practices for security testing
     href: security-testing-best-practices.md
   - name: Defender for Identity reports
@@ -117,6 +115,8 @@ items:
       href: sensor-settings.md
     - name: Uninstall a sensor
       href: uninstall-sensor.md
+    - name: View and manage health issues
+      href: health-alerts.md
     - name: Configure scoped access
       href: configure-scoped-access.md
     - name: VPN integration
@@ -148,8 +148,6 @@ items:
          href: /defender-xdr/investigate-user?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
        - name: Investigate a non-human identity
          href: /defender-xdr/investigate-non-human-identities?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
-       - name: View app details with app governance
-         href: /defender-cloud-apps/app-governance-visibility-insights-view-apps?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
     - name: View service accounts
       href: service-account-discovery.md
   - name: Lateral movement paths

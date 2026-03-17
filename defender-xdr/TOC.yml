@@ -506,8 +506,14 @@
           href: investigate-users.md
         - name: Investigate a non-human identity
           href: investigate-non-human-identities.md
-      - name: Identity security posture assessments
-        href: ./identity-security/identity-security-assessments.md
+      - name: Security recommendations
+        items:
+        - name: Identity security initiative (Preview)
+          href: /defender-for-identity/identity-security-initiative?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+        - name: Security recommendations coverage
+          href: ./identity-security/identity-security-recommendations.md
+      - name: Password protection
+        href: ./identity-security/password-protection.md
       - name: Investigate and respond to identity threats
         href: ./identity-security/identity-security-investigate-respond.md
     - name: Enhance security operations
