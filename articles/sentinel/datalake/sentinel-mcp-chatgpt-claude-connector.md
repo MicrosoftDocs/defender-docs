@@ -23,10 +23,11 @@ This article shows you how to enable and use a custom Microsoft Sentinel Model C
 ## Prerequisites
 Before configuring a Microsoft Sentinel MCP connector in ChatGPT or Claude, you must have the following prerequisites:
 - A ChatGPT Pro or a Claude Pro, Max, Team, or Enterprise plan subscription  
-- A Microsoft Entra application, which represents ChatGPT as a client
+- A Microsoft Entra application, which represents ChatGPT or Claude as a client; for more information, see [Add a Microsoft Entra application](#add-a-microsoft-entra-application)
 - [Microsoft Sentinel data lake](sentinel-lake-onboarding.md)
 - Tenant-level administrative privileges
 
+### Add a Microsoft Entra application
 To add a Microsoft Entra application, follow these steps:
 1. Open your tenant's [Microsoft Entra admin center](https://entra.microsoft.com/), go to **App registrations**, and then select **New registration**. 
 1. On **Register an application**, enter a friendly user-facing **Name** for the app.
@@ -49,16 +50,18 @@ To add a Microsoft Entra application, follow these steps:
 1. Copy the **Value** and save it in a secure manner. This value disappears once you navigate away from the page. 
 1. Go back to your app's **Overview** page and copy its **Application (client) ID**. 
 
-## Create a custom Microsoft Sentinel MCP connector
+## Create and use a custom Microsoft Sentinel MCP connector
 
 
-To create a custom Microsoft Sentinel connector, follow these steps:
+To create and use a custom Microsoft Sentinel connector, follow these steps:
 
-### [For ChatGPT](#tab/for-chatgpt)
+### [ChatGPT](#tab/chatgpt)
 
 >[!NOTE]
 >- If you're using the ChatGPT desktop application, you must first complete this connector setup in the ChatGPT web version.
 >- For ChatGPT Enterprise, an administrator can roll out a connector to all users in that ChatGPT organization. 
+
+**To create a custom connector:**
 
 1. Turn on the ChatGPT developer mode. In ChatGPT, select your account icon, go to **Apps & connectors** > **Advanced Settings**, and toggle **Developer mode**. 
 1.	Go back to **Apps & connectors** and select **Create Connector**.
@@ -68,7 +71,14 @@ To create a custom Microsoft Sentinel connector, follow these steps:
     - **Client ID:** The **Application (client) ID** of the Microsoft Entra application you created previously.
 1. When prompted, complete the OAuth consent flow. Once the MCP connector authenticates successfully, it appears in your ChatGPT connector list.
 
-### [For Claude](#tab/for-claude)
+**To attach and use the connector:**
+1.	Start a new chat in ChatGPT.
+1.	Select the **(+)** icon next to the message box.
+1.	Select **More** > **Microsoft Sentinel MCP Connector**. The connector's tools become available automatically, and ChatGPT can begin calling Sentinel operations on your behalf.
+
+### [Claude](tab/#claude)
+
+**To create a custom connector:**
 
 1. Go to https://claude.ai/customize/connectors, to create a new custom connector. Select the **+** icon and choose **Add a custom connector**. 
 1. Provide the following required details: 
@@ -80,19 +90,7 @@ To create a custom Microsoft Sentinel connector, follow these steps:
 1. Select the MCP connector and choose **Connect**. 
 1. Select **Configure** to determine which tools to allow for your environment. 
 
----
-
-## Use the custom Microsoft Sentinel MCP connector in a chat
-
-To attach and use a Microsoft Sentinel connector, follow these steps:
-
-### [In ChatGPT](tab/#in-chatgpt)
-
-1.	Start a new chat in ChatGPT.
-1.	Select the **(+)** icon next to the message box.
-1.	Select **More** > **Microsoft Sentinel MCP Connector**. The connector's tools become available automatically, and ChatGPT can begin calling Sentinel operations on your behalf.
-
-### [In Claude](tab/#in-claude)
+**To attach and use the connector:**
 
 Start a new chat in Claude. The connector tools become available automatically, and Claude can begin calling Microsoft Sentinel operations on your behalf. 
 
@@ -100,6 +98,7 @@ Start a new chat in Claude. The connector tools become available automatically, 
 > You can only use the [data exploration tool collection](sentinel-mcp-data-exploration-tool.md). 
 
 ---
+
 
 ## Related content
 - [Get started with Microsoft Sentinel MCP server](sentinel-mcp-get-started.md)
