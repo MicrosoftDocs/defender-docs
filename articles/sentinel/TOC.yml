@@ -595,12 +595,6 @@
           href: datalake/sentinel-graph-overview.md
         - name: Graph visualiztion
           href: datalake/graph-explorer.md  
-        - name: Predefined graphs
-          items:
-            - name: Overview of predefined graphs
-              href: datalake/predefined-graphs-overview.md
-            - name: Identity attack graph 
-              href: datalake/identity-attack-graph.md  
         - name: Microsoft Sentinel Custom graphs
           items:
             - name: Custom graphs overview

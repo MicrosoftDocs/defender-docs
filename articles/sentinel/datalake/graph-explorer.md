@@ -18,11 +18,11 @@ Sentinel Graph is a user interface that enables you to visualize disparate datas
 This article explains how to use Sentinel Graph to query, visualize, and interact with graphs to obtain new insights.
 
 > [!IMPORTANT]
-> Sentinel Graph is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+> Sentinel Graph is currently in preview. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 ## Prerequisites
 
-To access Sentinel Graph and query it to produce visualizations, you must have the appropriate permissions. For more information, see [Roles and permissions in Microsoft Sentinel](roles.md).
+To access Sentinel Graph and query it to produce visualizations, you must have the appropriate permissions. For more information, see [Roles and permissions in Microsoft Sentinel](../roles.md).
 
 ## Access Sentinel Graph
 
@@ -134,5 +134,7 @@ You can also customize the table format by using the `RETURN` operator to define
 
 ## Related content
 
-- [Microsoft Sentinel overview](overview.md)
-- [Investigate incidents with Microsoft Sentinel](investigate-incidents.md)
+- [Microsoft Sentinel graph overview](sentinel-graph-overview.md)
+- [Custom graphs in Microsoft Sentinel](custom-graphs-overview.md)
+- [Create custom graphs in Microsoft Sentinel](create-custom-graphs.md)
+- [GQL reference for Microsoft Sentinel Graph](gql-reference-for-sentinel-custom-graph.md)
