@@ -191,7 +191,7 @@ Because these Defender for Endpoint-related processes generate network communica
 
 [!INCLUDE [Microsoft Defender for Endpoint processes](includes/streamlined-connectivity-processes.md)]
 
-## Change Log
+## Change log
 
 |Date|Change Log|
 |---|---|

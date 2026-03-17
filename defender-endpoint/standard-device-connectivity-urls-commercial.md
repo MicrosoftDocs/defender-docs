@@ -213,7 +213,7 @@ Because these Defender for Endpoint-related processes generate network communica
 |ConfigSecurityPolicy.exe|C:\Program Files\Microsoft Security Client|Microsoft Security Client Policy Configuration Tool (SCEP)|
 |NisSrv.exe|C:\Program Files\Microsoft Security Client|Microsoft Defender Antivirus Network real-time Inspection (SCEP)|
 
-## Change Log
+## Change log
 
 |Date|Change Log|
 |---|---|

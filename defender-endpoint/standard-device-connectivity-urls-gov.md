@@ -182,7 +182,7 @@ Because these Defender for Endpoint-related processes generate network communica
 |C:\Program Files\Microsoft Security Client|Microsoft Defender Antivirus Network Realtime Inspection (SCEP)|
 
 
-## Change Log
+## Change log
 
 |Date|Change log|
 |---|---|
