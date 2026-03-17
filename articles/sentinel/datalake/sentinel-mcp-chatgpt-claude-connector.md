@@ -76,7 +76,7 @@ To create and use a custom Microsoft Sentinel connector, follow these steps:
 1.	Select the **(+)** icon next to the message box.
 1.	Select **More** > **Microsoft Sentinel MCP Connector**. The connector's tools become available automatically, and ChatGPT can begin calling Sentinel operations on your behalf.
 
-### [Claude](tab/#claude)
+### [Claude](#claude)
 
 **To create a custom connector:**
 
