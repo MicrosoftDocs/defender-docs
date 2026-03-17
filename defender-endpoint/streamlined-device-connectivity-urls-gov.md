@@ -115,6 +115,6 @@ See the prerequisites for [streamlined connectivity](configure-device-connectivi
 |Microsoft Defender for Endpoint|DoD|https://*.securitycenter.microsoft.us|
 |Microsoft Defender for Endpoint|DoD|https://onboardingpckgsusgvprd.blob.core.usgovcloudapi.net|
 
-## Microsoft Defender process exclusions
+## Client processes
 
 [!INCLUDE [Microsoft Defender for Endpoint processes](includes/streamlined-connectivity-processes.md)]

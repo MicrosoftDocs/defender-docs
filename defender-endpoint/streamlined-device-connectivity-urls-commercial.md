@@ -185,7 +185,7 @@ Lists the URL endpoints required for administrative/security operations access t
 |https://*.api.security.microsoft.com|Microsoft Defender Security Center portal/APIs|
 |https://security.microsoft.com|Microsoft Defender XDR admin portal|
 
-## Client Processes
+## Client processes
 
 Because these Defender for Endpoint-related processes generate network communications, make sure that communications from these processes are not blocked.
 
