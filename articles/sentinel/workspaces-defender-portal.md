@@ -28,9 +28,9 @@ In such cases:
 
 |Area  |Description  |
 |---------|---------|
-|**Other workspaces previously connected to Defender XDR** | Any other workspaces that were previously connected to the Defender XDR connector are disconnected, and function as secondary workspaces. Defender XDR incidents and alerts aren't synced to secondary workspaces. However, secondary workspaces can ingest Defender table data if configured in the [Microsoft XDR connector in the Sentinel portal](connect-microsoft-365-defender.md#connect-to-microsoft-defender-xdr) in Azure, or under **Microsoft Sentinel** > **Configuration** > **Tables** in the Defender portal. Any analytics rules and automation that you had previously configured based on Defender XDR data no longer function until you configure this table ingestion.|
+|**Other workspaces previously connected to Defender XDR** | Any other workspaces that were previously connected to the Defender XDR connector are disconnected, and function as secondary workspaces. Any analytics rules and automation that you had previously configured based on Defender XDR data no longer function until you configure table ingestion.|
 |**Tenant-based alerts and standalone data connectors** |Alerts from other Microsoft services, including other Defender services, are tenant-based alerts and relate to the entire tenant instead of a specific workspace.  <br><br>To prevent duplication across workspaces, any direct, standalone data connectors for these services must be disconnected from Microsoft Sentinel in secondary workspaces. This results in tenant-based alerts surfacing only in the primary workspace. <br><br>Upon onboarding, standalone data connectors for Microsoft Defender for Office 365, Microsoft Entra ID Protection, Microsoft Defender for Cloud Apps, Microsoft Defender for Endpoint, and Microsoft Defender for Identity are automatically disconnected. <br><br>If you have other, standalone Microsoft data connectors with alerts in your workspaces, make sure to disconnect them before onboarding to the Defender portal. |
-|**Defender XDR alerts and incidents** | All Defender XDR alerts and incidents are synced to your primary workspace only.|
+|**Defender XDR alerts and incidents** | All Defender XDR alerts and incidents are synced to your primary workspace only. However, secondary workspaces can ingest Defender table data if configured in the [Microsoft XDR connector in the Sentinel portal](connect-microsoft-365-defender.md#connect-to-microsoft-defender-xdr) in Azure, or under **Microsoft Sentinel** > **Configuration** > **Tables** in the Defender portal.|
 |**Incident creation and alert correlation** | The Defender portal keeps incident creation and alert correlation separate between the Microsoft Sentinel workspaces. Incidents in secondary workspaces don't include data from any other workspace, or from Defender XDR.|
 |**One primary workspace required** | One primary workspace must always be connected to the Defender portal.|
 
@@ -56,7 +56,7 @@ After you connect Microsoft Sentinel to the Defender portal, your existing Azure
 |Workspace |Access  |
 |---------|---------|
 |**Primary**    | If you have access to the primary workspace, you're able to read and manage data from the workspace and Defender XDR.      |
-|**Secondary**    |   If you have access to a secondary workspace, you're able to read and manage data from the workspace only. Defender incidents and alerts aren't synchronized with secondary workspaces, but secondary workspaces can still ingest Defender table data.       |
+|**Secondary**    |   If you have access to a secondary workspace, you're able to read and manage data from the workspace only. Defender incidents and alerts aren't synchronized with secondary workspaces, but secondary workspaces can still ingest Defender table data. For more information, see [Primary and secondary workspaces](#primary-and-secondary-workspaces).       |
 
 **Exception:** If you've already onboarded one workspace to the Defender portal, any alerts created by using custom detections on `AlertInfo` and `AlertEvidence` tables before mid January 2025 are visible to all users.
 
