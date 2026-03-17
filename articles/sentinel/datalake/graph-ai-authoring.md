@@ -1,4 +1,4 @@
-n---  
+---  
 title: AI-assisted custom graph authoring in Microsoft Sentinel
 titleSuffix: Microsoft Security  
 description: Use AI assistance in Visual Studio Code to create, modify, and query custom security graphs using Jupyter notebooks and GitHub Copilot.
@@ -75,7 +75,7 @@ The assistant generates a complete notebook that follows the standard graph auth
 
 ### Refine the graph
 
-Once the graph is created, you can continue the conversation to refine it:
+Once the graph is created, you can continue the conversation to refine it, for example:
 
 ```text
 @sentinel Add an edge from User to IPAddress
@@ -88,9 +88,7 @@ Once the graph is created, you can continue the conversation to refine it:
 
 ## Modify or debug an existing graph
 
-You can ask Copilot to update or fix specific parts of your notebook.
-
-**Examples:**
+Ask Copilot to update or fix specific parts of your notebook. For example:
 
 ```text
 @sentinel Change the time range to the last 7 days
@@ -108,9 +106,7 @@ Only the affected cells are updated. Other cells remain unchanged.
 
 ## Understand graph code and queries
 
-You can also ask questions about the generated code without changing the notebook.
-
-**Examples:**
+Ask questions about the generated code without changing the notebook. For example:
 
 ```text
 @sentinel What does show_schema() do?
@@ -126,9 +122,7 @@ You can also ask questions about the generated code without changing the noteboo
 
 ## Look up graph APIs and examples
 
-If you want help with Sentinel graph APIs, method parameters, or example queries, you can ask Copilot for explanations.
-
-For more accurate, Sentinel-specific answers, include the `#Sentinel` reference helper in your prompt:
+If you want help with Sentinel graph APIs, method parameters, or example queries, you can ask Copilot for explanations. For more accurate, Sentinel-specific answers, include the `#Sentinel` reference helper in your prompt. For example:
 
 ```text
 What parameters does build_graph_with_data() accept? #sentinel
@@ -142,7 +136,7 @@ This helper provides Copilot with authoritative Sentinel graph API documentation
 
 ## Choose how to interact with Copilot
 
-Use this guideline to decide which approach to use:
+Use the following table to choose the best way to interact with Copilot based on your goal:
 
 | What you want to do | Recommended approach |
 |---|---|
