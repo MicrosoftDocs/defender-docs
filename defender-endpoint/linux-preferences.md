@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-ms.date: 02/05/2024
+ms.date: 03/17/2026
 manager: bagol
 audience: ITPro
 ms.collection:
@@ -151,7 +151,7 @@ The following configuration profile contains entries for all settings described 
             "value":"audit"
          }
       ],
-      "scanFileModifyPermissions":false,
+      "scanFileModifyPermissions":true,
       "scanFileModifyOwnership":false,
       "scanNetworkSocketEvent":false,
       "offlineDefinitionUpdateUrl": "http://172.22.199.67:8000/linux/production/<EXAMPLE DO NOT USE>",
