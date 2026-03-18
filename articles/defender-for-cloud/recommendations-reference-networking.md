@@ -992,7 +992,7 @@ Flow Logs provide visibility into network traffic for each VM inside the subnet 
 
 ### Missing cloud logging should be enabled on Load Balancer Backend Services
 
-**Description**: Defender for Cloud identified disabled logging in Load Balancer Backend Services. These services distribute network traffic among backend servers and rely on detailed logging to capture request and connection metadata. Without logging, it is harder to analyze traffic patterns and detect potential security incidents, which could impede forensic investigations and overall threat detection capabilities. For more details, visit https://cloud.google.com/load-balancing/docs/how-to-enable-logging.
+**Description**: Defender for Cloud identified disabled logging in Load Balancer Backend Services. These services distribute network traffic among backend servers and rely on detailed logging to capture request and connection metadata. Without logging, it is harder to analyze traffic patterns and detect potential security incidents, which could impede forensic investigations and overall threat detection capabilities. For more details, visit https://cloud.google.com/load-balancing/docs/https/https-logging-monitoring.
 
 **Severity**: Low
 

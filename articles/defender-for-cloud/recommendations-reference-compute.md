@@ -711,7 +711,7 @@ To learn more about the supported runtimes that this control checks for the supp
 
 **Severity**: Low
 
-## GCP Compute recommendations
+## Additional GCP Compute recommendations
 
 ### Compute Engine VMs should use the Container-Optimized OS
 
@@ -995,7 +995,7 @@ At least business critical VMs should have VM disks encrypted with CSEK.
 
 **Severity**: Medium
 
-## AWS Compute recommendations
+## AWS Compute recommendations for LightSail and additional services
 
 ### Administrative ports should not be publicly accessible on LightSail instances
 
@@ -1045,7 +1045,7 @@ At least business critical VMs should have VM disks encrypted with CSEK.
 
 **Severity**: Medium
 
-## GCP Compute recommendations
+## GCP Compute recommendations for App Engine and Cloud Run
 
 ### Custom service accounts should be configured for App Engine applications
 
