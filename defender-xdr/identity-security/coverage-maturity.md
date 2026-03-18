@@ -51,7 +51,7 @@ The maturity tiers are:
 
 ### Maturity level calculation
 
-The maturity score ranges from 0 to 100, based on the combined coverage scores of your identity sources. A score of 100% means all sources are fully connected and protected.
+The maturity score ranges from 0 to 100, based on the combined coverage scores of your identity sources. A score of 100% means all sources are fully connected and protected, which corresponds to the **Resilient** maturity tier.
 
 ## Top setup tasks
 
