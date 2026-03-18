@@ -75,6 +75,8 @@ items:
           href: deploy/prerequisites-sensor-version-3.md
         - name: Activate the Defender for Identity sensor
           href: deploy/activate-sensor.md
+        - name: Migrate from sensor v2.x to v3.x (Preview)
+          href: deploy/migrate-to-sensor-v3.md
     - name: Validate the sensor deployment
       href: deploy/test-sensor.md
   - name: Configure event collection

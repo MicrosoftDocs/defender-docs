@@ -121,6 +121,18 @@ The sensors page provides the following information about each sensor:
 
 * **Created**: Displays the date the sensor was installed
 
+## Migration status
+
+When you [migrate sensors from v2.x to v3.x](deploy/migrate-to-sensor-v3.md), the **Sensors** page shows a migration status for each server:
+
+| Status | Description |
+|---|---|
+| **Ready for migration** | The server meets all prerequisites and can be migrated. |
+| **Not ready for migration** | The server doesn't meet one or more prerequisites. Review the [v3.x prerequisites](deploy/prerequisites-sensor-version-3.md) and resolve any issues. |
+| **Migrating** | The migration is in progress. |
+| **Already v3.x** | The migration completed successfully. The server is running sensor v3.x. |
+| **Migration failed** | The migration encountered an error. You can retry the migration by selecting the server and selecting **Migrate** again. |
+
 ## Updating your sensors
 
 Keeping your Microsoft Defender for Identity sensors up to date, provides the best possible protection for your organization.
