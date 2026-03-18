@@ -24,7 +24,7 @@ You can use this page to:
 
 ## Prerequisites
 
-To access the Coverage and maturity dashboard, you need:
+To use the **Coverage and maturity** page, you need:
 
 - A Microsoft Defender for Cloud Apps or Microsoft Defender for Identity license.
 - A user role with at least [Security Reader](/azure/active-directory/roles/permissions-reference#security-reader) permissions.
@@ -32,9 +32,9 @@ To access the Coverage and maturity dashboard, you need:
 > [!IMPORTANT]
 > Use roles with the fewest permissions to help improve security for your organization. Global Administrator is a highly privileged role that you should limit to scenarios when you can't use an existing role.
 
-## Access the dashboard
+## Access the **Coverage and maturity** page
 
-To access the dashboard, sign in to the [Microsoft Defender portal](https://security.microsoft.com) and select **Identities > Coverage and maturity**.
+To access the page, sign in to the [Microsoft Defender portal](https://security.microsoft.com) and select **Identities > Coverage and maturity**.
 
 ## Maturity level
 
@@ -101,9 +101,7 @@ Shows identities from on-premises Active Directory. Deploying sensors enables th
 | Actions required | Number of unresolved gaps. |
 
 > [!NOTE]
-> The Coverage and maturity page lists all servers without a Defender for Identity sensor and links to deployment instructions. Currently, these links go to [sensor version 3 deployment](/defender-for-identity/deploy/activate-sensor), which requires Microsoft Defender for Endpoint. If a server doesn't have Defender for Endpoint, deploy [sensor version 2](/defender-for-identity/deploy/install-sensor) instead.
->
-> The **Sensors** page (**Settings** > **Identities** > **Sensors**) only shows servers with Defender for Endpoint installed. Servers without Defender for Endpoint don't appear there, even though they appear on this page.
+> The **Coverage and maturity** page lists all servers that don't have a Defender for Identity sensor. It links to the **Sensor activation** page (**Settings** > **Identities** > **Sensors**), where you can install sensor version 3. However, sensor version 3 requires Defender for Endpoint. If a server doesn't have Defender for Endpoint, it won't appear on the Sensor activation page. For those servers, deploy [sensor version 2](/defender-for-identity/deploy/install-sensor) instead.
 
 ### SaaS identities card
 

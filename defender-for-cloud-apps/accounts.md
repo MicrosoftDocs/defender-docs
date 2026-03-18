@@ -1,9 +1,11 @@
 ---
 title: Investigate accounts from connected apps | Microsoft Defender for Cloud Apps
-description: This article provides information about reviewing accounts from your connected apps.
+description: Learn how to investigate accounts from connected apps in Microsoft Defender for Cloud Apps. Review account activity, permissions, group memberships, and external user access.
+#customer intent: As a security admin, I want to investigate accounts from connected apps so that I can identify inactive accounts, review permissions, and detect external user activity.
 ms.date: 01/29/2023
 ms.topic: how-to
 ms.reviewer: gayasalomon
+ms.custom: msecd-doc-authoring-106
 ---
 # Cloud Application Accounts
 
@@ -13,7 +15,7 @@ Microsoft Defender for Cloud Apps gives you visibility into the accounts from yo
 
 The Cloud application accounts inventory enables you to investigate those accounts, permissions, the groups they're members of, their aliases, and the apps they're using. Additionally, when Defender for Cloud Apps detects a new account that wasn't previously seen in one of the connected apps - for example, in activities or file sharing - the account is added to the accounts list of that app. This enables you to have visibility into the activity of external users interacting with your cloud apps.
 
-You can view the Cloud application accounts inventory from the tile at the top of the the [Identity Inventory page](/defender-for-identity/identity-inventory).
+You can view the Cloud application accounts inventory from the tile at the top of the [Identity Inventory page](/defender-for-identity/identity-inventory).
 
 ## Cloud Application Accounts
 
@@ -60,11 +62,11 @@ Predefined filters include:
 
 ### Additional actions
 
-Additional actions for further investigation, such as viewing related activities and incidents, are available through the Cloud application accounts tab. Click the three dots at the end of the relevant account's row to view available actions, or click on the account row to see additional accounts related to a single user. Additional actions are also available via the three dots at the end of the table in this view.
+Additional actions for further investigation, such as viewing related activities and incidents, are available through the Cloud application accounts tab. Select the three dots at the end of the relevant account's row to view available actions, or select the account row to see additional accounts related to a single user. Additional actions are also available via the three dots at the end of the table in this view.
 
 ## Next steps
 
 > [!div class="nextstepaction"]
 > [Best practices for protecting your organization](best-practices.md)
 
-If you run into any problems, we're here to help. To get assistance or support for your product issue, please [open a support ticket](/defender-xdr/contact-defender-support)
+If you run into any problems, we're here to help. To get assistance or support for your product issue, [open a support ticket](/defender-xdr/contact-defender-support).
