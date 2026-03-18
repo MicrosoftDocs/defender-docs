@@ -1,48 +1,51 @@
 ---
 title: Manage and update sensors
-description: Learn how to manage and update your Microsoft Defender for Identity sensors.
+description: Learn how to view, manage, and update Microsoft Defender for Identity sensors in the Microsoft Defender portal, including sensor health, migration status, and delayed updates.
 ms.date: 07/10/2025
 ms.topic: how-to
 ms.reviewer: rlitinsky
+ms.custom: msecd-doc-authoring-106
+
+#customer intent: As a security admin, I want to manage and monitor my Defender for Identity sensors so that I can keep them healthy, up to date, and properly configured.
 ---
 
 # Manage and update Microsoft Defender for Identity sensors
 
 This article explains how to configure and manage Microsoft Defender for Identity sensors in [Microsoft Defender XDR](/microsoft-365/security/defender/overview-security-center).
 
-## View Defender for Identity sensor settings and status
+## View sensor settings and status
 
-1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings** and then **Identities**.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Identities**.
 
-    ![Go to Settings, then Identities.](media/settings-identities.png)
+    ![Screenshot that shows the Settings menu with Identities selected.](media/settings-identities.png)
 
-1. Select the **Sensors** page, which displays all of your Defender for Identity sensors. For each sensor, you'll see its name, its domain membership, the version number, if updates should be delayed, the service status, sensor status, health status, the number of health issues, and when the sensor was created. For details about each column, see [Sensor details](#sensor-details).
+1. Select **Sensors** to see all of your Defender for Identity sensors. For each sensor, the page shows the name, domain membership, version number, service status, sensor status, health status, health issues count, and creation date. For details about each column, see [Sensor details](#sensor-details).
 
-   :::image type="content" source="media/download-sensor/sensor-page.png" alt-text="Screenshot that shows where to find the sensors page in the Microsoft Defender portal.":::
+   :::image type="content" source="media/download-sensor/sensor-page.png" alt-text="Screenshot that shows the Sensors page in the Microsoft Defender portal.":::
 
-1. If you select **Filters**, you can choose which filters will be available. Then with each filter, you can choose which sensors to display.
+1. Select **Filters** to choose which sensors to display.
 
-    [![Sensor filters.](media/sensor-filters.png)](media/sensor-filters.png#lightbox)
+    [![Screenshot that shows the filter options on the Sensors page.](media/sensor-filters.png)](media/sensor-filters.png#lightbox)
 
-    ![Filtered sensor.](media/filtered-sensor.png)
+    ![Screenshot that shows the Sensors page with filters applied.](media/filtered-sensor.png)
 
-1. If you select one of the sensors, a pane will display with information about the sensor and its health status.
+1. Select a sensor to open a pane with information about the sensor and its health status.
 
-    [![Sensor details.](media/sensor-details.png)](media/sensor-details.png#lightbox)
+    [![Screenshot that shows the sensor details pane.](media/sensor-details.png)](media/sensor-details.png#lightbox)
 
-1. If you select any of the health issues, you'll get a pane with more details about them. If you choose a closed issue, you can reopen it from here.
+1. Select a health issue to see more details. You can reopen a closed issue from this pane.
 
-    ![Issue details.](media/issue-details.png)
+    ![Screenshot that shows the health issue details pane.](media/issue-details.png)
 
-1. If you select **Manage sensor**, a pane will open where you can configure the sensor details.
+1. Select **Manage sensor** to configure the sensor details.
 
-    ![Manage sensor.](media/manage-sensor.png)
+    ![Screenshot that shows the Manage sensor option.](media/manage-sensor.png)
 
-    ![Configure sensor details.](media/configure-sensor-details.png)
+    ![Screenshot that shows the sensor configuration pane.](media/configure-sensor-details.png)
 
-1. In the **Sensors** page, you can export your list of sensors to a .csv file by selecting **Export**.
+1. Select **Export** to download the sensor list as a .csv file.
 
-    ![Export list of sensors.](media/export-sensors.png)
+    ![Screenshot that shows the Export option on the Sensors page.](media/export-sensors.png)
 
 ## Sensor details
 
@@ -119,25 +122,21 @@ The sensors page provides the following information about each sensor:
 
 * **Health issues**: Displays the count of opened health issues on the sensor.
 
-* **Created**: Displays the date the sensor was installed
+* **Created**: The date the sensor was installed.
 
-## Migration status
+* **Migration status**: The migration status for sensors eligible for [migration from v2.x to v3.x](deploy/migrate-to-sensor-v3.md). Possible values are:
 
-When you [migrate sensors from v2.x to v3.x](deploy/migrate-to-sensor-v3.md), the **Sensors** page shows a migration status for each server:
+  * **Ready for migration**: The server meets all prerequisites and can be migrated.
+  * **Not ready for migration**: The server doesn't meet one or more prerequisites.
+  * **Migrating**: The migration is in progress.
+  * **Already v3.x**: The migration completed successfully. The server is running sensor v3.x.
+  * **Migration failed**: The migration encountered an error. You can retry the migration.
 
-| Status | Description |
-|---|---|
-| **Ready for migration** | The server meets all prerequisites and can be migrated. |
-| **Not ready for migration** | The server doesn't meet one or more prerequisites. Review the [v3.x prerequisites](deploy/prerequisites-sensor-version-3.md) and resolve any issues. |
-| **Migrating** | The migration is in progress. |
-| **Already v3.x** | The migration completed successfully. The server is running sensor v3.x. |
-| **Migration failed** | The migration encountered an error. You can retry the migration by selecting the server and selecting **Migrate** again. |
+## Update sensors
 
-## Updating your sensors
+Keeping your sensors up to date helps protect your organization from evolving threats.
 
-Keeping your Microsoft Defender for Identity sensors up to date, provides the best possible protection for your organization.
-
-The Microsoft Defender for Identity service is typically updated a few times a month with new detections, features, and  performance improvements. Typically these updates include a corresponding minor update to the sensors. Sensor update packages only control the Defender for Identity sensor and sensor detection capabilities.
+The Defender for Identity service is typically updated a few times a month with new detections, features, and performance improvements. These updates usually include a corresponding minor update to the sensors. Sensor update packages control only the sensor and its detection capabilities.
 
 ### Defender for Identity sensor update types
 
@@ -155,22 +154,22 @@ Defender for Identity sensors support two kinds of updates:
   
 > [!NOTE]
 >
-> * Defender for Identity sensors always reserve at least 15% of the available memory and CPU available on the domain controller where it is installed. If the Defender for Identity service consumes too much memory, the service is automatically stopped and restarted by the Defender for Identity sensor updater service.
+> Defender for Identity sensors always reserve at least 15% of the available memory and CPU on the domain controller where the sensor is installed. If the service consumes too much memory, it's automatically stopped and restarted by the sensor updater service.
 
 ### Delayed sensor update
 >[!NOTE]
->This feature is supported only by the Defender for Identity sensor version 2.x.
+>This feature is supported only by sensor version 2.x.
 
-Given the rapid speed of ongoing Defender for Identity development and release updates, you may decide to define a subset group of your sensors as a delayed update ring, allowing for a gradual sensor update process. Defender for Identity enables you to choose how your sensors are updated and set each sensor as a **Delayed update** candidate.
+You can define a subset of your sensors as a delayed update ring for a gradual update process. Defender for Identity lets you choose how your sensors are updated and set each sensor as a **Delayed update** candidate.
 
-Sensors not selected for delayed update are updated automatically, each time the Defender for Identity service is updated. Sensors set to **Delayed update** are updated on a delay of 72 hours, following the official release of each service update.
+Sensors not selected for delayed update are updated automatically each time the service is updated. Sensors set to **Delayed update** are updated 72 hours after each service update.
 
-The **delayed update** option enables you to select specific sensors as an automatic update ring, on which all updates are rolled out automatically, and set the rest of your sensors to update on delay, giving you time to confirm that the automatically updated sensors were successful.
+The **delayed update** option lets you select specific sensors as an automatic update ring and set the rest to update on delay, giving you time to confirm that the automatically updated sensors are working correctly.
 
 > [!NOTE]
 > If an error occurs and a sensor does not update, open a support ticket. To further harden your proxy to only communicate with your workspace, see [Proxy configuration](configure-proxy.md).
 
-Authentication between your sensors and the Azure cloud service uses strong, certificate-based mutual authentication. The client certificate is created at the sensor installation as a self-signed certificate, valid for 2 years. The Sensor Updater service is responsible for generating a new self-signed certificate before the existing certificate expires. The certificates are rolled with a 2-phase validation process against the backend to avoid a situation where a rolling certificate breaks the authentication.
+Authentication between your sensors and the Azure cloud service uses certificate-based mutual authentication. A self-signed client certificate is created during sensor installation and is valid for 2 years. The sensor updater service generates a new certificate before the existing one expires, using a 2-phase validation process to avoid authentication disruptions during the rollover.
 
 Each update is tested and validated on all supported operating systems to cause minimal impact to your network and operations.
 
@@ -249,4 +248,4 @@ For more information, see [Configure endpoint proxy and internet connectivity se
 
 * [Defender for Identity sensor v2.x prerequisites](deploy/prerequisites-sensor-version-2.md) and [Defender for Identity sensor v3.x prerequisites](deploy/prerequisites-sensor-version-3.md) 
 * [Configure event forwarding](deploy/configure-event-forwarding.md)
-* [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+* [Defender for Identity community forum](<https://aka.ms/MDIcommunity>)

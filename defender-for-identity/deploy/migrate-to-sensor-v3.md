@@ -14,7 +14,7 @@ ai-usage: ai-assisted
 
 # Migrate to the Defender for Identity sensor v3.x (Preview)
 
-You can migrate your Defender for Identity sensors from v2.x to v3.x directly from the Microsoft Defender portal. The migration handles the switchover automatically, so you don't need to uninstall the v2.x sensor or redeploy the v3.x sensor yourself. Server configurations and security coverage are preserved, with no data duplication or downtime.
+You can migrate your Defender for Identity sensors from v2.x to v3.x directly from the Microsoft Defender portal. The migration automatically completes the switchover and maintains your server configurations and security monitoring, with no downtime or data duplication.
 ## Prerequisites
 
 Before you migrate, make sure each server meets the following requirements:
@@ -35,7 +35,7 @@ Servers that meet all prerequisites appear as **Ready for migration** on the **S
 1. In the confirmation prompt, review the details and confirm to start the migration.
 
 > [!NOTE]
-> The migration typically takes up to 20 minutes. During this time, the v2.x sensor continues to run until the v3.x sensor is ready, so there's no gap in security coverage. 
+> The migration typically takes up to 20 minutes. During this time, the v2.x sensor continues to run until the v3.x sensor is ready, ..so your server stays protected without interruption.
 Audit logs are generated for each migration, including the date, status, and whether the migration was initiated by a user or the system.
 
 ## Configure the v3.x sensor
