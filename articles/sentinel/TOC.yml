@@ -817,6 +817,8 @@
         - name: Manage tables, tiers, and retention
           href: manage-table-tiers-retention.md
           displayName: table management, tiers, retention, tables
+        - name: Data transformation using filter and split
+          href: transformation-filter-split.md
 
 - name: SOC optimizations
   items:
