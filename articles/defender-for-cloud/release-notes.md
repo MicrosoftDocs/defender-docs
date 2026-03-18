@@ -27,6 +27,30 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## March 2026
+
+| Date | Category | Update |
+| -------- | -------- | -------- |
+| March 31, 2026 | Preview | [Expanded multi-cloud coverage for AWS and Google Cloud Platform (Preview)](#expanded-multi-cloud-coverage-for-aws-and-google-cloud-platform-preview) |
+
+### Expanded multi-cloud coverage for AWS and Google Cloud Platform (Preview)
+
+March 31, 2026
+
+Microsoft Defender for Cloud expands multi-cloud posture management with broader native coverage for AWS and Google Cloud Platform (GCP). This update adds discovery and posture assessment for additional resource types across compute, databases, storage, analytics, networking, identity, secrets, DevOps, and AI/ML services.
+
+**Asset inventory**: Newly supported AWS and GCP resources are now discovered and visible in the Asset inventory experience.
+
+**Security recommendations**: 152 new recommendations help identify misconfigurations and posture gaps across the newly supported resources. Learn more about [security recommendations](review-security-recommendations.md).
+
+**Regulatory compliance**: Existing compliance frameworks now include the new recommendations, providing more complete compliance assessments across multi-cloud environments.
+
+**Important notes**
+
+- Compliance results may change as new recommendations are evaluated. This reflects expanded coverage, not a regression in security posture.
+- Secure score is not affected by recommendations in preview.
+- Newly supported AWS and GCP resources are available as part of Defender for CSPM (Public Preview) and may be billable. See [Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/) and use the [pricing calculator](cost-calculator.md) for details.
+
 ## February 2026
 
 | Date | Category | Update |

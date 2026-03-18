@@ -995,6 +995,82 @@ At least business critical VMs should have VM disks encrypted with CSEK.
 
 **Severity**: Medium
 
+## AWS Compute recommendations
+
+### Administrative ports should not be publicly accessible on LightSail instances
+
+**Description**: Defender for Cloud identified publicly accessible administrative ports in your LightSail instance. Administrative ports, such as SSH on port 22 and RDP on port 3389, provide remote management access. Without IP restrictions, these ports are vulnerable to brute force and unauthorized access attacks that could compromise your system.
+
+**Severity**: Medium
+
+### Drift detections should be reviewed on AWS CloudFormation stacks
+
+**Description**: Defender for Cloud identified configuration drift in AWS CloudFormation stacks, where deployed resources no longer match the declared template configuration due to changes made directly to resources outside the CloudFormation deployment process. This introduces security and compliance risk by bypassing infrastructure-as-code controls and allowing configurations to deviate from approved security policies.
+
+**Severity**: Medium
+
+### Explicit capacity provider strategy should be configured on ECS services
+
+**Description**: Defender for Cloud identified an ECS service configuration issue where an explicit capacity provider strategy is missing. Without explicitly defining the capacity provider, ECS services default to the cluster's settings for task placement, which may inadvertently assign workloads to unmanaged or less-secure EC2 capacity providers instead of Fargate. This increases the attack surface and weakens isolation safeguards for your applications.
+
+**Severity**: Low
+
+### IMDSv2 enforcement should be enabled on LightSail instances
+
+**Description**: Defender for Cloud identified that your LightSail instance does not enforce IMDSv2, a security enhancement of the Instance Metadata Service that requires additional authentication. Without enforcement, the metadata endpoint remains vulnerable to unauthorized HTTP requests, potentially exposing sensitive instance details and increasing the risk of exploitation.
+
+**Severity**: Medium
+
+### LifecycleConfigArn should be configured on AWS SageMaker app
+
+**Description**: Defender for Cloud identified a missing LifecycleConfigArn configuration in your AWS SageMaker app. LifecycleConfigArn refers to the lifecycle configuration scripts responsible for initializing dependencies and setting up the runtime environment for training jobs, endpoints, or notebooks. Without this configuration, your app may experience inconsistent behavior, operational issues, and potential vulnerabilities due to incomplete environment setups.
+
+**Severity**: Low
+
+### Public exposure of non-essential ports should be disabled for LightSail instances
+
+**Description**: Defender for Cloud identified non-essential ports open to the public in your LightSail instance. Non-essential ports refer to those beyond HTTP (80), HTTPS (443), and standard administrative ports (22 and 3389). Open access to these ports exposes your instance to unauthorized scanning and exploitation, increasing the risk of unauthorized access. Limiting access to these ports to trusted IP addresses is recommended to reduce these vulnerabilities.
+
+**Severity**: Low
+
+### Secure data recovery automatic snapshots should be enabled on LightSail instances
+
+**Description**: Defender for Cloud identified that automatic snapshots are disabled on your LightSail instance. In this context, automatic snapshots refer to daily backups that store the seven most recent recovery points. Without these snapshots, your instance faces an increased risk of data loss and extended downtime in the event of a malware or ransomware attack. This assessment does not apply to Windows instances, as the feature is not supported on that platform.
+
+**Severity**: Low
+
+### Unintended termination protection should be enabled for AWS CloudFormation stacks
+
+**Description**: Defender for Cloud identified that termination protection is not enabled for your AWS CloudFormation stacks. Termination protection is a feature that prevents accidental or unauthorized deletion of stacks. Without it, your stacks are at risk of being unintentionally terminated, which can lead to service interruptions and potential data loss. For more information on enabling termination protection, please visit https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html.
+
+**Severity**: Medium
+
+## GCP Compute recommendations
+
+### Custom service accounts should be configured for App Engine applications
+
+**Description**: Defender for Cloud identified the use of the default App Engine service account for your applications. This poses a risk because default accounts are often granted broad permissions, such as the Editor role, at the project level, which can be exploited if compromised. Custom service accounts restrict permissions to only those needed for operations, minimizing potential exposure and following the principle of least privilege.
+
+**Severity**: Medium
+
+### Custom service accounts should be configured on Cloud Run services
+
+**Description**: Defender for Cloud identified Cloud Run services utilizing the default Compute Engine service account. Depending on your organization policy configuration, the default service account might automatically be granted the Editor role on your project. This configuration violates the principle of least privilege and poses a risk where a container compromise could allow an attacker to gain extensive administrative access to your GCP environment. Learn more.
+
+**Severity**: High
+
+### Identity-Aware Proxy protection should be enabled on App Engine applications
+
+**Description**: Defender for Cloud identified that Identity-Aware Proxy (IAP) is disabled in App Engine applications. IAP is a centralized authorization layer for HTTPS that verifies user identities and enforces contextual access controls before requests reach your application. Without IAP, your App Engine may be exposed to unauthorized access, increasing the risk of exploitation. Enabling IAP is recommended to strengthen your application's security.
+
+**Severity**: Medium
+
+### Internal or load balancer ingress should be configured on Cloud Run services
+
+**Description**: Defender for Cloud identified Cloud Run services that allow 'all' ingress traffic. This configuration allows the service to be directly reachable from the public internet via its default URL. This poses a risk of bypassing centralized security controls. Learn more.
+
+**Severity**: Medium
+
 ## Related content
 
 - [learn about security recommendations](security-policy-concept.md)

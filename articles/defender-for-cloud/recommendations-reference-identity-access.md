@@ -639,6 +639,12 @@ Secrets Manager can rotate secrets. You can use rotation to replace long-term se
 
 **Severity**: Medium
 
+### Stale access keys should be rotated for IAM users
+
+**Description**: Defender for Cloud identified stale primary access keys in IAM users. Stale keys are those that have not been rotated within the recommended 90-day period. Their continued use poses a risk by increasing the chance for unauthorized access if they are compromised. Attackers who exploit these outdated credentials can potentially breach sensitive systems and cause data loss, making regular key rotation essential for maintaining robust security.
+
+**Severity**: Medium
+
 ### Stopped EC2 instances should be removed after a specified time period
 
 **Description**: This control checks whether any EC2 instances have been stopped for more than the allowed number of days. An EC2 instance fails this check if it's stopped for longer than the maximum allowed time period, which by default is 30 days.
@@ -646,9 +652,27 @@ Secrets Manager can rotate secrets. You can use rotation to replace long-term se
 
 **Severity**: Medium
 
+### Timely password rotation should be enabled on IAM users
+
+**Description**: Defender for Cloud identified that password rotation is not enforced on your IAM user accounts. IAM users are individual accounts used to access cloud resources, and without updating passwords every 90 days, compromised credentials may remain valid indefinitely. This can lead to unauthorized access and data breaches, as attackers gain extended opportunity to exploit stale passwords.
+
+**Severity**: Medium
+
+### Unused access keys should be disabled for IAM users
+
+**Description**: Defender for Cloud identified enabled but unused primary access keys in IAM users. Access keys allow programmatic access to AWS resources, and unused keys remain active and pose a potential risk if compromised by malicious actors. Unauthorized use of active, unused keys could lead to unintended changes or data breaches in your environment. Disabling these keys reduces the attack surface and enhances your overall security posture.
+
+**Severity**: Medium
+
 ### Unused identities in your AWS environment should be removed
 
 **Description**: Inactive identities are human and non-human entities that haven't performed any action on any resource in the last 90 days. Inactive IAM identities with high-risk permissions in your AWS account can be prone to attack if left as is and leave organizations open to credential misuse or exploitation. Proactively detecting and responding to unused identities helps you prevent unauthorized entities from gaining access to your AWS resources.
+
+**Severity**: Medium
+
+### Unused passwords should be disabled for IAM users
+
+**Description**: Defender for Cloud identified IAM users with active but unused passwords in AWS Identity and Access Management (IAM). Unused passwords are credentials that remain enabled despite not being recently utilized, which may provide an exploitable entry point for attackers. Such dormant credentials can be leveraged in unauthorized access scenarios, increasing the risk of data breaches and other malicious activities. Disabling these passwords is recommended to bolster your AWS account security.
 
 **Severity**: Medium
 
@@ -908,6 +932,24 @@ GCP facilitates up to 10 external service account keys per service account to fa
 
 **Severity**: Medium
 
+### Active keys should be removed for disabled service accounts
+
+**Description**: Defender for Cloud identified active user-managed keys in disabled service accounts. Service accounts are nonhuman identities used for automated processes. With a disabled account, any active keys still present may be exploited if the account is inadvertently re-enabled, providing immediate access to your environment. Removing these keys mitigates risk by ensuring that no compromised credentials can enable unauthorized access.
+
+**Severity**: Low
+
+### Authentication should be enabled for Memorystore for Redis instances
+
+**Description**: Defender for Cloud identified that authentication is disabled in your Memorystore for Redis instance. Redis AUTH is a security feature that verifies client credentials before granting access. Without it, any workload with network access may connect without authentication, risking unauthorized entry, data exposure, and cache manipulation. Enabling AUTH ensures that only validated clients can access the instance, thereby strengthening its overall security.
+
+**Severity**: High
+
+### Custom Service Account with limited privileges should be configured on Dataproc Cluster
+
+**Description**: Defender for Cloud identified Dataproc clusters using the default Compute Engine service account. This poses a risk because the default account holds broad permissions instead of only the minimum required privileges. This excess privilege can lead to unauthorized access, increased attack surface, and potential privilege escalation. A custom service account with limited privileges reduces these risks by enforcing the principle of least privilege and improving auditability.
+
+**Severity**: Medium
+
 ### GCP overprovisioned identities should have only the necessary permissions
 
 **Description**: An over-provisioned active identity is an identity that has access to privileges that they haven't used. Over-provisioned active identities, especially for nonhuman accounts that have very defined actions and responsibilities, can increase the blast radius in the event of a user, key, or resource compromise The principle of least privilege states that a resource should only have access to the exact resources it needs in order to function. This principle was developed to address the risk of compromised identities granting an attacker access to a wide range of resources.
@@ -924,6 +966,12 @@ GCP facilitates up to 10 external service account keys per service account to fa
 
 **Severity**: High
 
+### OIDC token authentication should be enabled on Pub/Sub push subscriptions
+
+**Description**: Defender for Cloud identified missing OIDC token authentication in Pub/Sub push subscriptions. OIDC, or OpenID Connect, provides a secure method to verify that messages originate from the trusted Pub/Sub service. Without this authentication, unauthorized entities can impersonate legitimate requests, potentially exposing your push endpoints to security breaches. For more information, learn more.
+
+**Severity**: High
+
 ### Permissions of inactive identities in your GCP project should be revoked
 
 **Description**: Microsoft Defender for Cloud discovered an identity that has not performed any action on any resource within your GCP project in the past 45 days. It is recommended to revoke permissions of inactive identities, in order to reduce the attack surface of your cloud environment.
@@ -936,11 +984,23 @@ GCP facilitates up to 10 external service account keys per service account to fa
 
 **Severity**: High
 
+### Restrictive IAM policies should be enabled on DeliveryPipelines
+
+**Description**: Defender for Cloud identified a Delivery Pipeline without IAM access policies configured. IAM policies define who can access and modify pipelines. In this case, the absence of granular access control policy increases the risk of unauthorized changes, which could compromise pipeline integrity.
+
+**Severity**: Medium
+
 ### Service accounts should have restricted project access in a cluster
 
 **Description**: This recommendation evaluates the config property of a node pool to check if no service account is specified or if the default service account is used.
 
 **Severity**: High
+
+### User-managed key creation should be disabled on default service accounts
+
+**Description**: Defender for Cloud identified user-managed keys attached to default Google Cloud service accounts, such as the Compute Engine default service account. These accounts typically have broad permissions like the Editor role, making them high-value targets. The creation of long-lived keys increases the risk of credential theft and unauthorized lateral movement in your environment.
+
+**Severity**: Medium
 
 ### Users should have least privilege access with granular IAM roles
 

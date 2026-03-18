@@ -128,6 +128,18 @@ To enable this recommendation, navigate to your Security Policy for the applicab
 
 ## AWS networking recommendations
 
+### Active threat defense should be enabled on AWS Network Firewall
+
+**Description**: Defender for Cloud identified that active threat defense is not enabled in AWS Network Firewall. Active threat defense continuously monitors network traffic to detect suspicious patterns and potential threats. Without it, your network may be exposed to advanced attacks that bypass standard security measures, increasing the risk of a data breach or other malicious activity.
+
+**Severity**: Medium
+
+### Alias targets should be configured for Route53 Hostedzone A records
+
+**Description**: Defender for Cloud identified a Route 53 A record that is not using an alias target. Route 53 A records should use Alias targets to attach directly to AWS managed resources by referencing AWS resource names.Using static IP addresses in A records can result in stale DNS entries, traffic misrouting, reduced availability, and increased security risk when underlying AWS resource endpoints change.
+
+**Severity**: Medium
+
 ### Amazon EC2 should be configured to use VPC endpoints
 
 **Description**: This control checks whether a service endpoint for Amazon EC2 is created for each VPC. The control fails if a VPC doesn't have a VPC endpoint created for the Amazon EC2 service.
@@ -172,6 +184,18 @@ By default, ALBs aren't configured to drop invalid HTTP header values. Removing 
 
 **Severity**: Medium
 
+### Auto accept shared attachments should be disabled for AWS Transit Gateways
+
+**Description**: Defender for Cloud identified that your AWS Transit Gateway automatically approve shared VPC attachments. This poses a risk by potentially allowing unauthorized cross-account or cross-VPC connections, which increases the chances for lateral movement and exposure of internal networks. Remediate this risk by disabling cross-account sharing.
+
+**Severity**: Medium
+
+### Build artifact encryption using customer-managed keys should be configured on CodePipeline
+
+**Description**: Defender for Cloud identified that CodePipeline is not using a customer-managed AWS KMS key for encrypting build artifacts. In CodePipeline, a customer-managed key allows granular control over encryption, key rotation, and access permissions. This poses a risk to the confidentiality and integrity of your stored artifacts, potentially leading to unauthorized access and data compromise.
+
+**Severity**: Low
+
 ### Configure Lambda functions to a VPC
 
 **Description**: This control checks whether a Lambda function is in a VPC. It doesn't evaluate the VPC subnet routing configuration to determine public reachability.
@@ -215,6 +239,36 @@ Security Hub recommends that you configure your EC2 instances with IMDSv2.
  All subnets have an attribute that determines whether a network interface created in the subnet automatically receives a public IPv4 address. Instances that are launched into subnets that have this attribute enabled have a public IP address assigned to their primary network interface.
 
 **Severity**: Medium
+
+### Default route table association should be disabled on AWS Transit Gateways
+
+**Description**: Defender for Cloud identified AWS Transit Gateway with default route table association enabled. Enabling this setting means that any newly attached VPC, VPN, or peering connection is automatically mapped to the main transit gateway route table. This poses a risk of unintended lateral movement, unauthorized route propagation, and exposure of internal networks.
+
+**Severity**: Low
+
+### Default route table propagation should be disabled on AWS Transit Gateways
+
+**Description**: Defender for Cloud identified AWS Transit Gateway with default route table propagation enabled. Enabling this feature means that any attached VPC, VPN, or peering attachment can automatically propagate routes to the transit gateway's main route table, potentially allowing unauthorized routing paths.
+
+**Severity**: Low
+
+### Deletion protection should be enabled for AWS Network Firewall
+
+**Description**: Defender for Cloud identified that deletion protection is not enabled for your AWS Network Firewall. Deletion protection is a safeguard that prevents the accidental or unauthorized deletion of the firewall when it is in use. Without this control, an inadvertent removal could lead to gaps in network threat detection and result in noncompliance with security policies, increasing your exposure to potential risks.
+
+**Severity**: Medium
+
+### DNSSEC signing should be enabled on public Route 53 hosted zones
+
+**Description**: Defender for Cloud identified public DNS hosted zones without DNSSEC signing enabled. DNSSEC is a set of protocols that uses cryptographic techniques to validate DNS responses. Without DNSSEC, your public domains are vulnerable to DNS spoofing, cache poisoning, and unauthorized record tampering, increasing the risk of client misdirection and compromising data integrity.
+
+**Severity**: Medium
+
+### ECMP support should be enabled on AWS Transit Gateway
+
+**Description**: Defender for Cloud identified that ECMP support is disabled on your AWS Transit Gateway. ECMP (Equal Cost Multi Path) allows multiple VPN tunnels or BGP paths to be used concurrently, providing enhanced throughput, redundancy, and failover stability. Without ECMP, routing would be limited to a single active path, risking reduced resiliency and performance in traffic management.
+
+**Severity**: Low
 
 ### Ensure a log metric filter and alarm exist for AWS Config configuration changes
 
@@ -412,6 +466,78 @@ Unless a port is specifically allowed, the port should deny unrestricted access.
 
 **Severity**: Low
 
+### Health Checks should be enabled for Route 53
+
+**Description**: Defender for Cloud identified that health checks are not enabled on your Route 53 resources. Health checks are periodic tests that monitor the availability and performance of DNS endpoints, ensuring traffic is routed only to responsive servers. Without them, you risk directing traffic to unresponsive or underperforming endpoints, which could lead to service disruptions and extended downtime.
+
+**Severity**: High
+
+### Health checks should be enabled for primary records on Route53 Hosted zones
+
+**Description**: Defender for Cloud identified a Route 53 failover PRIMARY record without an enabled health check. Health checks are required to validate endpoint availability during failover. Without these checks, traffic may be inadvertently routed to endpoints that are unresponsive or compromised, increasing the risk of service disruption and reduced reliability.
+
+**Severity**: Medium
+
+### Missing VPC security groups should be configured on Redshift clusters
+
+**Description**: Defender for Cloud identified missing VPC security groups in Amazon Redshift clusters. VPC security groups are virtual firewalls used to control network traffic. Without these groups, your clusters are exposed to unauthorized access and potential data breaches, risking sensitive information and data integrity. Configuring the appropriate security groups is vital to limit access only to approved IP addresses, instances, or ports.
+
+**Severity**: Medium
+
+### Multiple subnets across different Availability Zones should be configured in the Bedrock VPC configuration
+
+**Description**: Defender for Cloud identified that your Bedrock VPC configuration uses a single subnet in one Availability Zone. A subnet is a segment of a VPC and confining endpoints to one zone creates a single point of failure. This means that if the zone goes down, your Bedrock services become unreachable. Configuring multiple subnets in different Availability Zones is necessary to ensure high availability and protect against outages.
+
+**Severity**: Low
+
+### Network isolation should be enabled for AWS SageMaker models
+
+**Description**: Defender for Cloud identified that AWS SageMaker models are not using network isolation. Network isolation confines models to a private network environment, preventing direct communication with public internet resources. Without this isolation, your models risk exposure to unauthorized access and potential data interception during training and inference activities.
+
+**Severity**: Medium
+
+### Network isolation should be enabled on AWS SageMaker endpoints
+
+**Description**: Defender for Cloud identified disabled network isolation in AWS SageMaker endpoints. Network isolation confines endpoint communications to approved, private channels instead of public networks. Without it, endpoints are exposed to unauthorized access and data leakage risks, potentially compromising sensitive machine learning operations. Enabling network isolation helps ensure that communications remain secure and regulated.
+
+**Severity**: Medium
+
+### Orphaned VPN gateways should be deleted from AWS VPC
+
+**Description**: Defender for Cloud identified an orphaned VPN gateway in your AWS VPC. An orphaned VPN gateway is an AWS VPN Gateway (VGW) that is not connected to any VPC, meaning it does not serve any functional purpose. This increases the attack surface and may unintentionally expose routing details. Removing orphaned VGWs helps ensure a clean and secure network posture.
+
+**Severity**: Low
+
+### Proper VPC configuration should be enabled on AWS SageMaker endpoints
+
+**Description**: Defender for Cloud identified a missing VpcConfig on your AWS SageMaker endpoint. A VpcConfig is used to restrict access to internal networks, ensuring secure communication with AWS resources. Without it, the endpoint may be exposed to public access and is at risk of unauthorized access and data breaches. For more details on securing your endpoint, please see our guidance. Learn more.
+
+**Severity**: Medium
+
+### Restricted access should be configured on VPC security groups
+
+**Description**: Defender for Cloud identified overly permissive ingress rules in your VPC security groups. VPC security groups are virtual firewalls that control network traffic by enforcing rules for inbound connections. The evaluation detected rules allowing traffic from 0.0.0.0/0, which bypasses the principle of least privilege. This poses a risk of unauthorized access and brute-force attacks that can lead to exploitation of vulnerabilities.
+
+**Severity**: High
+
+### Security group referencing should be enabled on AWS Transit Gateway
+
+**Description**: Defender for Cloud identified that the security group referencing feature is disabled on an AWS Transit Gateway. Security group referencing permits attached VPCs to reference security groups across VPC boundaries, potentially expanding trust relationships. This configuration poses a risk by increasing the surface area for lateral attacks and inadvertent permission leaks, thereby compromising network segmentation in multi-VPC environments.
+
+**Severity**: Medium
+
+### Server Name Indicator (SNI) should be enabled Route 53 Health Check
+
+**Description**: Defender for Cloud identified HTTPS Route 53 health checks without Server Name Indicator (SNI) support in AWS Route 53. HTTPS health checks use TLS to verify a server's certificate by matching it to the expected hostname, and SNI is the mechanism that communicates this hostname during the TLS handshake. Without SNI, the health check may target an unintended host or fail certificate validation, leading to inaccurate monitoring and potential failover issues.
+
+**Severity**: Medium
+
+### Unauthorized internet gateway and egress-only internet gateway routes should be blocked on VPC route tables
+
+**Description**: Defender for Cloud identified unauthorized Internet Gateway (IGW) and Egress-Only Internet Gateway (Egress-Only IGW) routes in your VPC route tables. VPC route tables determine the traffic flow within your network, and these routes allow unintended public and secure IPv6 access, potentially exposing internal resources to risks such as data exfiltration and unauthorized access.
+
+**Severity**: High
+
 ### Unused network access control lists should be removed
 
 **Description**: This control checks whether there are any unused network access control lists (ACLs).
@@ -420,6 +546,30 @@ Unless a port is specifically allowed, the port should deny unrestricted access.
 If other relationships are listed, then the control passes.
 
 **Severity**: Low
+
+### Valid destination should be configured on VPC Flow Logs
+
+**Description**: Defender for Cloud identified a missing valid LogDestination configuration in your AWS VPC Flow Logs. VPC Flow Logs record network traffic data that is essential for security investigations and anomaly detection. Without sending these logs to a designated destination, such as CloudWatch Logs or S3, your environment may miss detecting malicious activity and could face compliance issues.
+
+**Severity**: High
+
+### VPC configuration should be enabled on Access Points
+
+**Description**: Defender for Cloud identified Access Points that are not configured with a Virtual Private Cloud (VPC) in your environment. A VPC provides an isolated, private network that restricts public internet exposure, ensuring sensitive data remains secure. Without this configuration, your Access Points are more vulnerable to unauthorized access and data breaches, potentially compromising your overall network security.
+
+**Severity**: Medium
+
+### VPC-only network access should be configured on AWS SageMaker domains
+
+**Description**: Defender for Cloud identified that AWS SageMaker domains are not configured for VPC-only network access. This evaluation checks whether domain communications are restricted to your Virtual Private Cloud (VPC), ensuring that no direct public internet access is allowed. Lacking this configuration poses a risk by exposing sensitive data to potential threats and compromising compliance with strict security standards. Learn more.
+
+**Severity**: Medium
+
+### VpcConfig should be configured for AWS SageMaker models
+
+**Description**: Defender for Cloud identified AWS SageMaker models without a configured VpcConfig. VpcConfig (Virtual Private Cloud configuration) ensures that network traffic between your SageMaker models and other AWS resources is confined to a private, secure environment. Without this isolation, your models risk exposure to the public internet, increasing the likelihood of unauthorized access and potential data breaches.
+
+**Severity**: Medium
 
 ### VPC's default security group should restricts all traffic
 
@@ -792,9 +942,63 @@ Flow Logs provide visibility into network traffic for each VM inside the subnet 
 
 **Severity**: Low
 
+### Custom VPC network should be configured for Memorystore for Memcached instance
+
+**Description**: Defender for Cloud identified the use of a global default VPC network as the authorized network for a Memorystore for Memcached instance. The default VPC network, often broadly configured with permissive firewall rules, increases the risk of unintended internal access and lateral movement across systems. Using a dedicated or tightly controlled VPC network ensures that only explicitly authorized workloads can access cached data, thereby reducing the attack surface.
+
+**Severity**: Medium
+
+### Custom VPC network should be configured for Memorystore for Redis instances
+
+**Description**: Defender for Cloud identified use of the global default VPC network for Memorystore for Redis instances. The default VPC network is broadly scoped and typically has permissive firewall rules, increasing the risk that unauthorized internal services can access cached data and move laterally across systems. Configuring a dedicated or tightly controlled VPC network can restrict access to authorized workloads only.
+
+**Severity**: Medium
+
+### Custom VPC network should be configured on Filestore instances
+
+**Description**: Defender for Cloud identified Filestore instances running on the default VPC network. The default network is a shared environment that typically lacks the strict segmentation and isolated firewall boundaries required for sensitive data storage. This configuration increases the risk of lateral movement and unauthorized access. Deploying Filestore in custom VPC networks can provide tighter isolation and enhanced network controls. Learn more.
+
+**Severity**: Medium
+
+### Custom route exporting should be disabled on VPC network peerings
+
+**Description**: Defender for Cloud identified custom route exporting enabled in your VPC network peering configurations. Custom route exporting allows non-native routes to be exchanged between peered networks, which may expose isolated environments to unauthorized lateral movement if one network is compromised.
+
+**Severity**: Low
+
+### Default backup schedule for new databases should be enabled
+
+**Description**: Defender for Cloud identified that Public IP is enabled on your AlloyDB instance. Enabling Public IP allows an instance to receive an external IP address, which directly exposes it to the internet. This increased exposure and can lead to brute-force attacks and exploitation of vulnerabilities. Disabling public IPs and using private connectivity helps maintain a secure and limited access environment.
+
+**Severity**: High
+
+### Excess allowed ports should be restricted to essential services on GCP Forwarding rules
+
+**Description**: Defender for Cloud identified excessive port exposure in GCP forwarding rules. The evaluation found that when the allPorts property is enabled on internal TCP/UDP load balancers, it permits traffic on all ports (1-65535), bypassing layer-4 security controls. This increases the risk of unintended lateral movement within the VPC. Restricting ports to those required for essential services reduces this exploitation risk.
+
+**Severity**: Medium
+
 ### GKE clusters should have Private clusters enabled
 
 **Description**: This recommendation evaluates whether the enablePrivateNodes field of the privateClusterConfig property is set to false.
+
+**Severity**: High
+
+### Global access should be disabled for GCP Private Service Connect endpoints
+
+**Description**: Defender for Cloud identified global access enabled on your GCP Private Service Connect endpoints. In this context, the allowPscGlobalAccess property permits a regional endpoint to accept connections from other regions, which may inadvertently expose sensitive service attachments to unauthorized cross-region connectivity. This can increase the risk of data breaches and compromise traffic segregation, so restricting endpoints to their local region is recommended.
+
+**Severity**: Medium
+
+### Missing cloud logging should be enabled on Load Balancer Backend Services
+
+**Description**: Defender for Cloud identified disabled logging in Load Balancer Backend Services. These services distribute network traffic among backend servers and rely on detailed logging to capture request and connection metadata. Without logging, it is harder to analyze traffic patterns and detect potential security incidents, which could impede forensic investigations and overall threat detection capabilities. For more details, visit https://cloud.google.com/load-balancing/docs/how-to-enable-logging.
+
+**Severity**: Low
+
+### Missing deny-all network ACL on VPC
+
+**Description**: Defender for Cloud identified that your VPC is using its default network ACL. A network ACL is a subnet-level firewall that controls both inbound and outbound traffic. Using the default allow-all configuration poses a risk to your resources as it does not restrict traffic until explicitly permitted, potentially enabling unauthorized access and data breaches.
 
 **Severity**: High
 
@@ -803,6 +1007,42 @@ Flow Logs provide visibility into network traffic for each VM inside the subnet 
 **Description**: This recommendation evaluates the networkPolicy field of the addonsConfig property for the key-value pair, 'disabled': true.
 
 **Severity**: Medium
+
+### Private Service Connect should be enabled on AlloyDB clusters
+
+**Description**: Defender for Cloud identified AlloyDB cluster without Private Service Connect (PSC) enabled. PSC allows clusters to be accessed via dedicated endpoints rather than traditional VPC Peering. Without PSC, clusters remain exposed to network risks such as IP address overlapping and increased chances for lateral movement across peered networks. Enabling PSC improves isolation and gives you greater control over endpoint management, thereby reducing these risks.
+
+**Severity**: Low
+
+### Public access restrictions should be configured for CodeArtifact domains
+
+**Description**: Defender for Cloud identified AWS CodeArtifact domains with access policies that allow wildcard principals. These policies enable any AWS identity, including those from external accounts, to interact with the domain. This poses a risk of unauthorized authorization token issuance, unapproved repository creation, and administrative changes. Limiting access to explicitly trusted principals is essential to maintain secure boundaries and reduce exposure.
+
+**Severity**: High
+
+### Restrictions for transitive external package ingestion should be enabled on CodeArtifact repositories
+
+**Description**: Defender for Cloud identified transitive external package ingestion in CodeArtifact repositories. The evaluation flagged repositories that inherit external connections from upstream sources rather than using direct, explicit configuration. This transitive trust path allows packages from public sources to flow into internal systems without proper vetting, increasing the risk of introducing vulnerable or unverified packages into your dependency chains and downstream build systems.
+
+**Severity**: High
+
+### Strong authentication should be enabled on CodePipeline Webhook configuration
+
+**Description**: Defender for Cloud identified weak authentication on your CodePipeline webhook configuration. CodePipeline webhooks are designed to trigger actions only from trusted and verified sources. Without strong authentication, an unauthorized party could trigger the webhook, leading to unwanted actions, excessive resource usage, or even a denial-of-service (DoS) condition.
+
+**Severity**: High
+
+### Subnet groups should be configured on DAX clusters with private subnets
+
+**Description**: Defender for Cloud identified that your DAX cluster is using the default subnet group or does not have a subnet group configured. Default subnet groups contain public subnets with direct internet routing and automatic public IP assignment, which exposes your cluster to unnecessary security risks. A properly configured subnet group with private subnets is essential for isolating and protecting your DAX cluster from unauthorized network access. Private subnets ensure defense-in-depth security by preventing direct internet access to your database cache.
+
+**Severity**: Medium
+
+### Unrestricted global access should be disabled for GCP Internal forwarding rules
+
+**Description**: Defender for Cloud identified unrestricted global access in your GCP internal forwarding rules. The allowGlobalAccess flag is enabled, allowing internal load balancers to accept traffic from any region within the same VPC instead of being limited to a specific region. This increases the risk of violating regional data residency requirements and expands the potential blast radius in a security breach.
+
+**Severity**: Low
 
 ## Related content
 

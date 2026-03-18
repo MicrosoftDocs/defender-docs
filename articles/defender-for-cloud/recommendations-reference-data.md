@@ -673,6 +673,452 @@ Configure a private endpoint connection to enable access to traffic coming only 
 
 ## AWS data recommendations
 
+### 'Delete on termination' setting should be enabled for EBS volumes attached instance
+
+**Description**: Defender for Cloud identified a missing 'Delete on termination setting' EBS volume attached instance. This setting automatically removes the instance's primary storage upon termination. Without it, orphaned volumes may retain sensitive data, increasing the risk of unauthorized access and compliance issues.
+
+**Severity**: Low
+
+### AWS Key Management Service encryption should be configured for EventBridge Pipe
+
+**Description**: Configuring AWS Key Management Service (KMS) encryption for EventBridge Pipe ensures that data at rest is encrypted using customer-controlled keys, providing enhanced security and compliance capabilities. This measure allows to better manage and rotate encryption keys according to internal policies or regulatory requirements. If this is not implemented, the data will be encrypted using AWS-managed keys, which may not meet stringent security or compliance standards. This recommendation is particularly important for organizations handling sensitive or regulated data, such as personally identifiable information (PII), financial records, or intellectual property. To implement this, configure the EventBridge Pipe to use a customer-managed KMS key in the AWS Management Console or via the AWS CLI.
+
+**Severity**: Low
+
+### AWS Key Management Service encryption should be enabled for SageMaker domain
+
+**Description**: Defender for Cloud identified that your SageMaker domain is using AWS-managed KMS keys instead of customer-managed keys. AWS KMS encryption protects data at rest by allowing you to control key management-including rotation and access-ensuring compliance with stringent security requirements. Without customer-managed keys, sensitive data may be at higher risk of unauthorized access and non-compliance. Learn more.
+
+**Severity**: Low
+
+### AWS Key Management Service encryption should be enabled on SageMaker endpoints
+
+**Description**: Defender for Cloud identified a lack of AWS Key Management Service (KMS) encryption on Sagemaker endpoints. KMS encryption secures sensitive data by managing encryption keys-including their lifecycle activities such as generation, rotation, and deletion. Without KMS enabled, endpoints risk exposure to data breaches and unauthorized access. Learn more.
+
+**Severity**: Medium
+
+### Access logging should be enabled for LightSail buckets
+
+**Description**: Defender for Cloud identified that access logging is not configured on your LightSail bucket. Access logging records activities performed on the bucket and helps verify that only authorized actions occur. Without it, unauthorized access may go undetected, reducing security visibility and complicating forensic investigations and incident response.
+
+**Severity**: Low
+
+### Audit logs export should be enabled on Amazon DocumentDB clusters
+
+**Description**: Defender for Cloud identified that audit log export to CloudWatch is disabled in Amazon DocumentDB clusters. Audit logs capture critical information about user and system activities that support forensic analysis during security incidents. Without this information, there is an increased risk that unauthorized actions may go undetected, potentially delaying incident response and remediation.
+
+**Severity**: Low
+
+### Auto minor version upgrades should be enabled on MemoryDB clusters
+
+**Description**: Defender for Cloud identified MemoryDB cluster without auto minor-version upgrades enabled. MemoryDB clusters rely on these upgrades to automatically install essential security patches and minor software improvements. Without this automation, clusters could remain vulnerable to security issues. Enabling the upgrade process helps maintain a robust security posture.
+
+**Severity**: Low
+
+### Automated backup policies should be enabled on AlloyDB clusters
+
+**Description**: Defender for Cloud identified that the automated backup policy is disabled for the AlloyDB cluster, meaning daily snapshots for recovery are not automatically created. Without these backups, your clusters are exposed to risks such as data loss from accidental deletion or ransomware, which could compromise disaster recovery and compliance requirements.
+
+**Severity**: Medium
+
+### Automated snapshot retention should be enabled for Redshift clusters
+
+**Description**: Defender for Cloud identified that automated snapshot retention is not enabled for your Amazon Redshift cluster. Automated snapshots provide point-in-time recovery capabilities for your data warehouse. Without proper retention, critical recovery data may be lost, increasing the risk of data loss from accidental deletion, corruption, or ransomware attacks, and potentially violating compliance requirements.
+
+**Severity**: Low
+
+### Automatic backups should be enabled for Elasticache clusters
+
+**Description**: Defender for Cloud identified that automatic backups are not enabled for your Elasticache clusters. Elasticache clusters are critical caching resources that, without regular backups, are vulnerable to data loss from accidental or malicious deletions. This poses a risk of extended downtime and compromised data integrity, potentially impacting overall service reliability. We recommend enabling automatic backups to safeguard your data and maintain operational continuity.
+
+**Severity**: Medium
+
+### Automatic backups should be enabled for serverless Elasticache
+
+**Description**: Defender for Cloud identified that automatic backups are not enabled for your serverless ElastiCache. Without periodic snapshots, your ElastiCache lacks a recovery point to restore data in cases of accidental or malicious deletion, increasing the risk of irrecoverable data loss. Enabling automatic backups minimizes potential disruptions and protects the integrity of your cached data.
+
+**Severity**: Medium
+
+### Automatic security updates should be enabled on RedisOSS ElastiCache clusters
+
+**Description**: Defender for Cloud identified that auto-upgrade is disabled in your RedisOSS ElastiCache clusters. Auto-upgrade automatically installs the latest security patches and software updates to protect cluster nodes from known vulnerabilities. This poses a risk by leaving your clusters open to cyberattacks that exploit outdated software. Learn more.
+
+**Severity**: Low
+
+### Automatic snapshots should be enabled for MemoryDB clusters
+
+**Description**: Defender for Cloud identified MemoryDB cluster without automatic snapshot configuration. Automated snapshot automatically preserves resource snapshots for a specified duration, ensuring critical recovery data is available after incidents. Without it, there is an increased risk of data loss through accidental deletion or corruption.
+
+**Severity**: Medium
+
+### Backup retention should be enabled for LightSail Relational Database Service
+
+**Description**: Defender for Cloud identified that backup retention is disabled on your LightSail Relational Database Service. Backup retention automatically saves backups of your database over time so that you can restore data in case of accidental deletion or malicious corruption. Without it, recovery becomes more difficult and you risk losing up-to-date data if an attacker compromises your database.
+
+**Severity**: Medium
+
+### Broad Owner or Editor roles should be eliminated from service accounts on BigQuery datasets
+
+**Description**: Defender for Cloud identified service accounts with excessive permissions on BigQuery datasets. The evaluation discovered service accounts assigned broad roles such as OWNER, WRITER, or roles/bigquery.admin that provide more access than necessary. This poses a risk of lateral movement and data exfiltration if these credentials are compromised. It is essential to restrict permissions to roles that align with the service account's functional requirements, such as 'BigQuery Data Viewer' or 'BigQuery Data Editor'
+
+**Severity**: High
+
+### Cluster endpoint encryption should be enabled for DAX clusters
+
+**Description**: Defender for Cloud identified that cluster endpoint encryption is not enabled in clusters. Cluster endpoint encryption protects data during transmission between clients and the cluster. Without it, sensitive information may be intercepted or accessed by unauthorized parties, potentially compromising data confidentiality and integrity. Enable encryption to secure data in transit and reduce the risk of cyber attacks.
+
+**Severity**: Medium
+
+### Cross-account access should be restricted on Amazon SNS topics
+
+**Description**: Defender for Cloud identified that your Amazon SNS topic is configured for cross-account access, allowing external AWS accounts to interact with it. Cross-account access means that users outside your trusted environment can publish or subscribe to your topics. This poses a risk by potentially exposing sensitive notifications to unauthorized parties and misuse. Restricting such access will help secure your topic from external threats.
+
+**Severity**: Medium
+
+### Customer-managed KMS encryption should be enabled on Amazon Bedrock Agents
+
+**Description**: Defender for Cloud identified that Amazon Bedrock Custom Models are being deployed without customer-managed KMS encryption in place. Amazon Bedrock Custom Models can be created or imported without explicitly selecting a customer-managed key, which causes model artifacts to be encrypted with AWS-managed keys instead. This poses a risk by reducing control over key rotation, strict access policies, and audit transparency, potentially leading to compliance and security vulnerabilities.
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be enabled for CodeArtifact domains
+
+**Description**: Defender for Cloud identified that customer-managed keys (CMKs) are not enabled on your domains. CMKs are encryption keys that you control, including their lifecycle, rotation, and access policies. Without CMK configuration, your domains rely solely on provider-managed keys, reducing oversight and potentially leaving sensitive data more vulnerable to unauthorized access.
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be enabled for Datastream streams
+
+**Description**: Defender for Cloud identified Datastream streams that are not using Customer-Managed Encryption Keys (CMEK). This assessment evaluates whether your Datastream streams have CMEK enabled, a control that allows direct key rotation and access policy management. Without CMEK, the automatic encryption provided by Google Cloud may not meet the stringent requirements for sensitive data, leaving your workload more exposed to potential key compromise or unauthorized access. Learn more: https://cloud.google.com/datastream/docs/cmek
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be enabled for ElastiCache clusters
+
+**Description**: Defender for Cloud identified ElastiCache clusters that lack Customer Managed Key (CMK) encryption. CMK encryption uses custom keys that allow for controlled rotation and enhanced security compared to default keys. This poses a risk by potentially exposing your clusters to unauthorized data access and compliance issues. Learn more.
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be enabled for GCP Spanner databases
+
+**Description**: Defender for Cloud identified databases that are not configured with customer-managed encryption keys (CMEK). CMEK refers to encryption keys created and managed by your organization, as opposed to platform-managed keys. Without CMEK, databases may not meet regulatory or policy requirements, potentially exposing your data to unauthorized access or compliance issues due to reduced control over key lifecycle management.
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be enabled for Memorystore for Redis instances
+
+**Description**: Defender for Cloud identified that customer managed encryption keys are not enabled for Memorystore for Redis instances. This evaluation checks if encryption operations are solely managed by default Google-managed keys, which restricts key rotation, audit logging, and timely access control enhancements. Such limitations pose a risk by potentially compromising data protection and compliance efforts, as organizations lack explicit ownership and governance over their encryption keys.
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be enabled for Pub/Sub topics
+
+**Description**: Defender for Cloud identified Pub/Sub topics using default Google-managed encryption keys instead of customer-managed encryption keys (CMEK). CMEK allows you to control key rotation and access policies, while reliance on default keys limits control and may increase the risk of unauthorized access and compliance issues. Learn more.
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be enabled for Vertex AI Datastore
+
+**Description**: Defender for Cloud identified that Vertex AI Datastore is not configured with Customer Managed Encryption Keys (CMK), meaning it rely on the default Google-managed encryption. This poses a risk because GCP-managed keys do not allow you to control rotation policies, set granular access permissions, or audit key usage, potentially failing to meet strict compliance and data sovereignty requirements in regulated industries.
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be enabled for Vertex AI Engine
+
+**Description**: Defender for Cloud identified that Vertex AI Engine instance is not configured with Customer Managed Encryption Keys (CMK), meaning it rely on the default Google-managed encryption. This poses a risk because GCP-managed keys do not allow you to control rotation policies, set granular access permissions, or audit key usage, potentially failing to meet strict compliance and data sovereignty requirements in regulated industries.
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be enabled on AlloyDB clusters
+
+**Description**: Defender for Cloud identified that AlloyDB cluster is not configured with Customer Managed Encryption Keys (CMK), meaning it rely on the default Google-managed encryption. This poses a risk because GCP-managed keys do not allow you to control rotation policies, set granular access permissions, or audit key usage, potentially failing to meet strict compliance and data sovereignty requirements in regulated industries.
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be enabled on Amazon SNS topics
+
+**Description**: Defender for Cloud identified that your AWS SNS topics are using default encryption instead of customer-managed keys (CMK). CMK encryption enables you to control key policies and audit key usage, offering improved protection against unauthorized access and supporting compliance with internal and regulatory security standards. This configuration oversight may expose sensitive data to increased risks.
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be enabled on Artifact Registry repositories
+
+**Description**: Defender for Cloud identified that repositories are secured using platform-managed encryption keys instead of customer-managed encryption keys (CMEK). CMEK are keys that you control, offering advanced lifecycle management and stricter access control. Using platform-managed keys increases the risk of data protection vulnerabilities and may not meet compliance requirements. We recommend configuring CMEK to enhance encryption security and control.
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be enabled on Filestore instances
+
+**Description**: Defender for Cloud identified Filestore instances without Customer-Managed Encryption Keys (CMEK). This poses a risk of reduced control over encryption key rotation and access policies in Cloud KMS, which could compromise compliance with regulatory and organizational standards. Learn more: https://cloud.google.com/filestore/docs/cmek
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be enabled on MemoryDB clusters
+
+**Description**: Defender for Cloud identified that MemoryDB cluster is not using Customer Managed Keys (CMK) for encryption. Using Customer Managed Keys (CMK) allow enhanced control over key lifecycle and detailed auditing, ensuring that encryption practices meet compliance requirements.
+
+**Severity**: Low
+
+### Data encryption at rest should be enabled on ElastiCache clusters
+
+**Description**: Defender for Cloud identified that encryption at rest is not enabled on your ElastiCache cluster. Encryption at rest converts stored data into a cryptographically secure format, protecting information even if the underlying storage is breached. Without this safeguard, unauthorized access or data tampering may occur, risking compliance and overall system integrity.
+
+**Severity**: Medium
+
+### Database drop protection should be enabled for GCP Spanner databases
+
+**Description**: Defender for Cloud identified that database drop protection is disabled for your databases. Database drop protection prevents accidental or unauthorized deletion by requiring additional confirmation before removing a database. Without this safeguard, your critical data is exposed to potential loss from human error or misconfigured automation.
+
+**Severity**: Medium
+
+### Default backup schedule for new databases should be enabled
+
+**Description**: Enabling a default backup schedule for new Spanner Instance ensures automated data protection right from the creation of the databases. This helps in maintaining consistent backups without manual intervention and reduces the risk of human error. Regular backups provide recovery options in case of accidental data deletion, corruption, or system failures. If the default backup schedule is not enabled, new databases may remain unprotected and vulnerable, increasing the risk of permanent data loss. It is recommended to enable this setting to enhance database resiliency and business continuity.
+
+**Severity**: Medium
+
+### Defined snapshots retention periods should be enforced for Redshift clusters
+
+**Description**: Defender for Cloud identified indefinite retention in Amazon Redshift snapshots, where snapshots are configured to never expire (retention period set to -1). This poses a risk of accumulating unnecessary storage costs and prolonged exposure of potentially sensitive data. Defining a retention period ensures that outdated snapshots are automatically purged, reducing both financial impact and security vulnerabilities.
+
+**Severity**: Low
+
+### Deletion protection should be enabled on Amazon DocumentDB clusters
+
+**Description**: Defender for Cloud identified that deletion protection is not enabled on your Amazon DocumentDB clusters. Deletion protection is a safeguard that prevents accidental or malicious removal of database clusters. Without it, your DocumentDB clusters are exposed to risks of unauthorized deletions leading to significant downtime and operational disruption. Activate deletion protection to maintain the security and availability of your data.
+
+**Severity**: Medium
+
+### Deletion protection should be enabled on Firestore databases
+
+**Description**: Defender for Cloud identified Firestore databases with deletion protection disabled in Firestore. Deletion protection prevents databases from being removed unless explicitly turned off. Without this safeguard, accidental or malicious deletions may lead to irreversible data loss and operational disruptions in production environments.
+
+**Severity**: Medium
+
+### Encryption in transit should be enabled on MemoryDB clusters
+
+**Description**: Defender for Cloud identified that TLS (Transport Layer Security) encryption is not enabled on your MemoryDB cluster. TLS secures data and client communications by encrypting transmitted information. Without TLS enabled, data in transit is susceptible to interception and alteration by unauthorized parties.
+
+**Severity**: Medium
+
+### Encryption in transit should be enabled on cluster-based cache
+
+**Description**: Defender for Cloud identified that encryption in transit is not enabled in your cluster-based cache used by ElastiCache. Encryption in transit safeguards data as it moves between cache nodes and client applications. Without it, sensitive information may be exposed to interception or tampering during transmission, creating a risk of data breaches and non-compliance with security best practices.
+
+**Severity**: Medium
+
+### Encryption with AWS Key Management Service should be enabled on EventBridge Event Bus
+
+**Description**: Defender for Cloud identified that your EventBridge Event Bus is not using a customer-managed AWS Key Management Service key for data encryption. Customer-managed KMS keys provide enhanced control with key rotation features, which are critical for protecting sensitive data. Without this configuration, your Event Bus relies on AWS-managed keys that may not meet strict compliance and security standards.
+
+**Severity**: Low
+
+### Ensure AWS Backup plans include cross-Region or cross-account copy actions
+
+**Description**: AWS Backup plans without cross-Region or cross-account copy actions store recovery points in a single location, increasing the risk of data loss due to regional outages, account compromise, or ransomware. Configuring copy actions improves backup resilience by ensuring recovery points are preserved in an independent security and availability boundary.
+
+**Severity**: Low
+
+### Explicit prompt override control should be configured for Amazon Bedrock Agents
+
+**Description**: Defender for Cloud identified uncontrolled prompt override settings in Amazon Bedrock Agents. These agents, which execute generative AI tasks, are at risk when prompt override controls are misconfigured-allowing unsafe instructions to bypass established safety mechanisms. This misconfiguration could result in unpredictable AI behavior and potential security or compliance breaches, undermining the trusted operation of your services.
+
+**Severity**: Medium
+
+### In-transit encryption should be enabled for Memorystore for Redis instances
+
+**Description**: Defender for Cloud identified that in-transit encryption is disabled for Memorystore for Redis instances. In-transit encryption, usually provided via TLS, safeguards data as it travels across the network. Without it, sensitive cached data is transmitted in plaintext, exposing it to interception, traffic inspection, and man-in-the-middle attacks, which may compromise data confidentiality and integrity.
+
+**Severity**: Medium
+
+### KMS managed key configuration should be enabled for SQS server side encryption
+
+**Description**: Defender for Cloud identified that your SQS queue is not configured to use KMS managed keys for server-side encryption. KMS managed keys are fully controlled by the Key Management Service and provide enhanced oversight of key lifecycle and access auditing. Without these controls, your queue faces increased risk of unauthorized key usage and reduced protection of sensitive data at rest.
+
+**Severity**: Medium
+
+### Knowledge Base field mapping should be securely configured on Amazon Bedrock
+
+**Description**: Defender for Cloud identified misconfigured field mappings in Amazon Bedrock Knowledge Bases. This poses a risk of corrupting embeddings and causing inaccurate document retrieval, potentially leading to unsafe or misleading outputs in retrieval-augmented generation (RAG) pipelines when mappings for vector, text, and metadata fields are incomplete or incorrect.
+
+**Severity**: High
+
+### LockConfiguration should be enabled on Backup Vault
+
+**Description**: Defender for Cloud identified that the LockConfiguration is not enabled on your Backup Vault. LockConfiguration prevents unauthorized modifications or deletions of critical backup settings, ensuring that recovery points remain secure. Without this control, the Backup Vault is at increased risk of accidental or malicious changes that can compromise data resilience and backup integrity. Learn more.
+
+**Severity**: Medium
+
+### Managed admin credentials should be enabled for Amazon Redshift clusters
+
+**Description**: Defender for Cloud identified that your Amazon Redshift clusters are not using managed admin credentials. Managed admin credentials involve securely storing administrative credentials in AWS Secrets Manager with automatic rotation, which minimizes the risk of credential exposure. Without this setup, there is an increased risk of unauthorized database access and potential data breaches.
+
+**Severity**: Medium
+
+### Object versioning should be enabled on LightSail buckets
+
+**Description**: Defender for Cloud identified that object versioning is disabled on your LightSail bucket. Object versioning automatically saves and retains historical copies of objects, which is essential for recovering data from accidental deletions, modifications, or corruption. Without this feature, any unauthorized changes or errors can permanently compromise your data integrity.
+
+**Severity**: Low
+
+### Parser override should be disabled for Amazon Bedrock Agents
+
+**Description**: Defender for Cloud identified a custom parser override setting (ParserMode = OVERRIDDEN) in Amazon Bedrock Agents. Custom parser overrides modify the default parsing mechanism to meet specific output requirements but can increase operational complexity, potentially causing parsing errors or exposing security vulnerabilities if not rigorously maintained. We recommend disabling this override unless strict output validation is essential.
+
+**Severity**: High
+
+### Point-in-Time Recovery should be enabled for Firestore databases
+
+**Description**: Defender for Cloud identified Firestore databases with Point-in-Time Recovery (PITR) disabled. PITR is a feature that enables data recovery from a specific timestamp within the retention period, protecting against accidental deletions and erroneous writes. Without PITR, your databases are at risk of extended data loss and potential challenges in restoring data integrity after incidents.
+
+**Severity**: Medium
+
+### Prompt execution state should be enabled for critical agent stages on Amazon Bedrock
+
+**Description**: Defender for Cloud identified disabled prompt execution state for critical agent stages in Amazon Bedrock. Critical agent stages-such as orchestration and knowledge base response generation-are vital for ensuring complete reasoning and accurate outputs. Disabling these stages poses a risk of generating unsafe, incomplete, or incorrect responses, which could lead to compromised agent behavior and overall system integrity.
+
+**Severity**: High
+
+### Public Access Block configuration should be enabled on AWS S3 Access Point
+
+**Description**: Defender for Cloud identified the Public Access Block configuration is not enabled on your AWS S3 Access Point. Public Access Block settings are designed to prevent inadvertent public exposure by automatically blocking public access to S3 resources, regardless of bucket or object-level permissions. Without this setting, there's an increased risk of unauthorized access to sensitive data stored in your S3 buckets.
+
+**Severity**: High
+
+### Public access for publishers should be disabled on Amazon SNS topics
+
+**Description**: Defender for Cloud identified that your SNS topics have unrestricted publisher access enabled. This setting allows any entity to publish notifications to your topics, which can lead to unauthorized alerts, spam, or even malicious messages that weaken your notification system reliability and security. By ensuring publisher access is restricted, you minimize these risks and enhance the overall integrity of your messaging infrastructure.
+
+**Severity**: High
+
+### Public access for subscribers should be disabled on Amazon SNS topic
+
+**Description**: Defender for Cloud identified that SNS Topic subscriptions are publicly accessible. Here, "public access" means any entity can subscribe and receive notifications, exposing your messaging system to unauthorized monitoring and data leakage. Such exposure can allow malicious actors to intercept or misuse sensitive information. We recommend configuring subscriptions to allow only approved subscribers. Learn more.
+
+**Severity**: High
+
+### Public email domains should be barred from receiving privileged roles on BigQuery
+
+**Description**: Defender for Cloud identified highly privileged BigQuery roles (e.g., OWNER, WRITER, or Admin) assigned to members with public email domains. Public email domains are external to your organization's identity lifecycle management, which poses a risk of unauthorized data modification, deletion, or permission escalation.
+
+**Severity**: High
+
+### Public read access on LightSail buckets should be disabled
+
+**Description**: Defender for Cloud identified that your LightSail bucket permits public read access. This setting allows anyone to access stored objects without authentication, making sensitive data vulnerable to unauthorized exposure and exploitation.
+
+**Severity**: High
+
+### Resource labels should be configured on Artifact Registry repositories
+
+**Description**: Defender for Cloud identified missing resource labels in repositories. Resource labels are key-value pairs that categorize repositories and enable automated enforcement of security policies. Without proper labels, there is an increased risk of misconfigurations and unauthorized access due to inconsistent security controls.
+
+**Severity**: Low
+
+### Secure connectors should be enabled for AlloyDB instances
+
+**Description**: Defender for Cloud identified insecure client connection settings in AlloyDB instance. The evaluation checks the 'Require connectors' property, which when set to false permits direct PostgreSQL protocol connections without a secure mediator such as the AlloyDB Auth Proxy. This bypasses IAM-based authentication and automatic TLS encryption, increasing the risk of weaker authentication and potential exposure of unencrypted traffic within your VPC.
+
+**Severity**: Medium
+
+### Secured dead-letter topics should be enabled on Pub/Sub subscriptions
+
+**Description**: Defender for Cloud identified Pub/Sub subscriptions missing a dead-letter topic. A dead-letter topic is a dedicated resource that captures poison messages--those that repeatedly fail processing. Without it, continuous retries may overwhelm system resources and degrade message flow, increasing the risk of resource exhaustion and system instability. For more information, please visit: Learn more
+
+**Severity**: Low
+
+### Security groups should be configured for MemoryDB clusters
+
+**Description**: Defender for Cloud identified MemoryDB cluster without any security groups configured. Security groups function as firewall rules that regulate both inbound and outbound traffic for your cluster. Without them, your cluster is exposed to the risk of unauthorized access and potential data breaches. Enabling security groups can significantly reduce this risk by ensuring that only approved traffic is allowed to access your MemoryDB cluster.
+
+**Severity**: Medium
+
+### Security groups should be configured to restrict access for ElastiCache
+
+**Description**: Defender for Cloud identified insufficient security group configurations in your ElastiCache service. Security groups are network filters that control traffic between resources; when not properly configured, they fail to enforce fine-grain access restrictions, potentially exposing your cache to unauthorized access and exploitation. This increases the risk of data breaches and other security incidents. Learn more.
+
+**Severity**: Low
+
+### Security groups should restrict access for ElastiCache
+
+**Description**: Defender for Cloud identified lax security group restrictions in your ElastiCache setup. Security groups act as virtual firewalls that manage user and instance access, and insufficient segmentation can result in unauthorized access, increasing the risk of data exposure and potential malicious activity. We recommend reviewing and enforcing granular access rules to ensure that only authorized users and processes interact with your ElastiCache resources.
+
+**Severity**: Low
+
+### Security logs should be enabled for ElastiCache Replication Group
+
+**Description**: Defender for Cloud identified that logging is not enabled for your ElastiCache Replication Group. This recommendation was triggered upon detecting the absence of engine-logs, which capture detailed operational events, or slow-logs, which track latency issues. Without these logs, potential anomalies and unauthorized activities may go undetected, increasing the risk of delayed incident response or security breaches. Learn more.
+
+**Severity**: Low
+
+### Sensitive data exposure mitigation should be enabled on AWS CloudFormation stack outputs
+
+**Description**: Defender for Cloud identified exposed sensitive outputs in your AWS CloudFormation stack. CloudFormation outputs are used to pass data between stacks but should not include sensitive information such as passwords, API keys, tokens, or credentials. Exposing these details increases the risk of unauthorized data access. Remove these outputs or securely store secret data using AWS Secrets Manager or SSM Parameter Store. For more details, visit: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html
+
+**Severity**: High
+
+### Sensitive parameters should have NoEcho attribute enabled on AWS CloudFormation stacks
+
+**Description**: Defender for Cloud identified AWS CloudFormation stacks with parameters missing the NoEcho attribute. The NoEcho attribute masks sensitive values from logs and outputs, preventing credentials and other confidential data from being inadvertently exposed. Without it, your stacks may leak critical information, heightening the risk of unauthorized access. We recommend updating your templates to incorporate the NoEcho setting where applicable.
+
+**Severity**: High
+
+### Server-side encryption should be enabled for Amazon Bedrock Knowledge Bases data sources
+
+**Description**: Defender for Cloud identified a lack of specific server-side encryption configuration in Amazon Bedrock Knowledge Base data sources. Without proper ServerSideEncryptionConfiguration, ingested documents, metadata, and processing artifacts may be stored unencrypted or with AWS-managed keys, reducing customer control over encryption, key rotation, and audit capabilities, thus increasing the risk of unauthorized data access and diminished security governance.
+
+**Severity**: Medium
+
+### Server-side encryption should be enabled on SQS queues
+
+**Description**: Defender for Cloud identified that server-side encryption (SSE) is not enabled on your SQS queues. SSE is a method that uses encryption keys to transform sensitive data into an unreadable format until it is properly decrypted. Without this safeguard, your SQS queues are at risk of unauthorized data access, potentially exposing sensitive information and leading to data breaches and compliance issues.
+
+**Severity**: High
+
+### Strict cross-account access restrictions should be configured on LightSail buckets
+
+**Description**: Defender for Cloud identified cross-account access in your LightSail bucket. Cross-account access occurs when AWS accounts outside your trusted environment are granted permissions to access bucket objects. This poses a risk of unauthorized data exposure if these external accounts are unknown or unmonitored. Restricting access exclusively to accounts with a legitimate need can help safeguard your sensitive information.
+
+**Severity**: Medium
+
+### Unattached EBS volumes should be removed or attached to EC2 instance
+
+**Description**: Defender for Cloud identified unattached EBS volume. EBS volumes are persistent block storage devices intended for attachment to EC2 instances. Unattached volumes may indicate orphaned resources from terminated instances, increasing the attack surface and possibly holding sensitive data that no longer receives active security monitoring.
+
+**Severity**: Low
+
+### Unexpired subscriptions should have expiration policies configured on Pub/Sub subscriptions
+
+**Description**: Defender for Cloud identified missing expiration policies in Pub/Sub subscriptions. Expiration policies determine how long an inactive subscription remains active before auto deletion. Without this configuration, subscriptions may continue storing data indefinitely, leading to increased storage costs and a higher risk of sensitive information being retained longer than necessary. For more information, visit https://cloud.google.com/pubsub/docs/subscription-properties#expiration_period
+
+**Severity**: Low
+
+### Unsecured imported models should be in a READY or PREPARED state for Amazon Bedrock Agents
+
+**Description**: Defender for Cloud identified unsecured imported models in Amazon Bedrock Agents. Amazon Bedrock Imported Models must reach a READY or PREPARED state-meaning they are fully validated and configured-before use. Models in states such as NOT_PREPARED, FAILED, INVALID, DEPRECATED, REGISTER_ERROR, or DELETE_FAILED may lead to unpredictable behavior, operational failures, and unreliable inference results. Ensuring models are fully validated mitigates these risks.
+
+**Severity**: Medium
+
+### Unused CodeArtifact domains should be removed
+
+**Description**: Defender for Cloud identified CodeArtifact domains lacking active repositories or artifacts in CodeArtifact. An unused domain is one that does not host current content but may still hold legacy settings such as outdated permissions or encryption keys. This poses a risk by expanding your control plane attack surface and potentially allowing unauthorized access. Learn more.
+
+**Severity**: Low
+
+## AWS/GCP cross-category data and networking recommendations
+
+### In-transit encryption should be enabled for Memorystore for Redis clusters
+
+**Description**: Defender for Cloud identified that in-transit encryption is missing on your Redis clusters. In-transit encryption (TLS) secures data traveling between clients and your Redis clusters, including authentication credentials and cached data. Without TLS, attackers with network access through shared VPCs, peered networks, or compromised workloads could intercept or alter this sensitive data, increasing the risk of data exposure and manipulation.
+
+**Severity**: Medium
+
+### Public network access should be disabled for LightSail Relational Database Service
+
+**Description**: Defender for Cloud identified that public network access is enabled on your LightSail Relational Database Service. Public network access means that the database accepts connections over the internet, which bypasses network restrictions and exposes it to unauthorized access. This configuration increases the risk of data exfiltration or data loss by providing potential entry points for attackers.
+
+**Severity**: High
+
 ### Amazon Aurora clusters should have backtracking enabled
 
 **Description**: This control checks whether Amazon Aurora clusters have backtracking enabled.
