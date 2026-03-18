@@ -195,9 +195,8 @@ Because these Defender for Endpoint-related processes generate network communica
 
 |Date|Change Log|
 |---|---|
-|24/10/2023|File Created|
-|02/01/2024|Updated prerequisites|
-|03/11/2024|Updated Xplat MDE agent version to 101.24022.*+|
-|04/10/2024|Overhaul based on streamlined connectivity GA scope|
-|05/06/2024|Final adjustments before streamlined connectivity GA|
 |04/07/2025|Removed dm.microsoft.com|
+|05/06/2024|Final adjustments before streamlined connectivity GA|
+|04/10/2024|Overhaul based on streamlined connectivity GA scope|
+|03/11/2024|Updated Xplat MDE agent version to 101.24022.*+|
+|02/01/2024|Updated prerequisites|
