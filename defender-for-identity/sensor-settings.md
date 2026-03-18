@@ -20,8 +20,6 @@ This article explains how to view, manage, and update Defender for Identity sens
 1. In the left sidebar, under **Deployment**, select **On-premises**.
 1. Select the **Sensors** tab.
 
-<!-- TODO: Replace outdated screenshots. The UI now shows the "Identity Security" page with a sidebar (Deployment > On-premises) and three tabs (Activation, Sensors, Service accounts Classification). -->
-
 :::image type="content" source="media/sensor-page-overview.png" alt-text="Screenshot that shows the Sensors tab on the On-premises page in the Microsoft Defender portal, with the Deployment sidebar, tabs, filters, and sensor list." lightbox="media/sensor-page-overview.png":::
 
 The **Sensors** tab shows all Defender for Identity sensors deployed in your environment. From this tab you can:
@@ -68,6 +66,16 @@ The type column indicates the sensor type based on the server role where the sen
 ### Migration state
 
 The migration state column shows if the sensor is eligible for [migration from v2.x to v3.x](deploy/migrate-to-sensor-v3.md).
+
+For a server to be eligible for migration, it must be:
+
+- A domain controller, without additional identity roles running
+- Running a Defender for Identity sensor v2.x.
+- Running Windows Server 2019 or later.
+- Includes the [March 2026 or later](https://support.microsoft.com/en-us/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea) cumulative update.
+- Have Microsoft Defender for Endpoint deployed.
+
+For the full list of v3.x requirements, see [Defender for Identity sensor v3.x prerequisites](prerequisites-sensor-version-3.md).
 
 | State | Description |
 |---|---|
@@ -139,8 +147,9 @@ Defender for Identity sensors support two kinds of updates:
 > Defender for Identity sensors always reserve at least 15% of the available memory and CPU on the domain controller where the sensor is installed. If the service consumes too much memory, it's automatically stopped and restarted by the sensor updater service.
 
 ### Delayed sensor update
+
 >[!NOTE]
->This feature is supported only by sensor version 2.x.
+>Delayed sensor updates are only supported by sensor version 2.x.
 
 You can define a subset of your sensors as a delayed update ring. Sensors not in the delayed ring are updated automatically each time the service is updated. Sensors set to **Delayed update** are updated 72 hours later, giving you time to confirm that the automatically updated sensors are working correctly.
 
@@ -153,9 +162,6 @@ To set a sensor to delayed update:
 
 1. In the **Sensors** page, select the sensor you want to set for delayed updates.
 1. Select the **Enabled delayed update** button.
-
-    <!-- TODO: Replace outdated screenshot (enable-delayed-update.png). -->
-
 1. In the confirmation window, select **Enable**.
 
 To disable delayed updates, select the sensor and then select the **Disabled delayed update** button.
@@ -182,7 +188,6 @@ Every few minutes, sensors check whether a newer version is available. When the 
 
     For any sensor that fails to complete the update process, a relevant [health alert](health-alerts.md) is triggered, and is sent as a notification.
 
-    <!-- TODO: Replace outdated screenshot (sensor-outdated.png). -->
 
 ### Silently update the Defender for Identity sensor
 
