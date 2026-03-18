@@ -17,7 +17,7 @@ ms.collection:
  - highpri
  - tier1
  - mde-asr
-ms.date: 06/10/2025
+ms.date: 03/17/2026
 search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -39,11 +39,11 @@ When you're implementing attack surface reduction rules, move the first test rin
 1. Refine exclusions or create new exclusions as necessary.
 
 > [!TIP]
-> It's better to create exclusions for rules than to turn them off or switch them back to **Audit** mode.
+> Rule exclusions are better than turning off rules or switching them back to **Audit** mode.
 >
-> Take advantage of the **Warn** mode in available rules to limit disruptions. **Warn** mode enables you to capture triggered events and view potential disruptions without actually blocking user access. For more information about **Warn** mode, see [ASR rule modes](attack-surface-reduction-rules-reference.md#asr-rule-modes).
+> Take advantage of the **Warn** mode in available rules to limit disruptions. **Warn** mode enables you to capture triggered events and view potential disruptions without actually blocking user access (they can click through the warning notification). For more information, see [ASR rule modes](attack-surface-reduction-rules-reference.md#asr-rule-modes).
 
-### Step 2: Expand deployment to ring n + 1
+## Step 2: Expand deployment to ring n + 1
 
 When you're confident you correctly configured attack surface reduction rules for ring 1, you can widen the scope of your deployment to the next ring (ring n + 1).
 
@@ -65,22 +65,24 @@ In the following deployment process, steps 1 – 3 are essentially the same for 
 
 1. Disable problematic rules or switch them back to **Audit** mode.
 
-#### Customize attack surface reduction rules
+## Customize attack surface reduction rules
 
 As you continue to expand your attack surface reduction rules deployment, you might find it necessary or beneficial to customize the attack surface reduction rules that are enabled.
 
-##### Exclude files and folders
-
-You can choose to exclude files and folders from being evaluated by attack surface reduction rules. When excluded, the file isn't blocked from running even if an attack surface reduction rule detects that the file contains malicious behavior.
-
-For example, consider the ransomware rule:
-
-The ransomware rule is designed to help enterprise customers reduce risks of ransomware attacks while ensuring business continuity. By default, the ransomware rule errors on the side of caution and protect against files that haven't yet attained sufficient reputation and trust. To re-emphasize, the ransomware rule only triggers on files that haven't gained enough positive reputation and prevalence, based on usage metrics of millions of our customers. Usually, the blocks are self resolved, because each file's "reputation and trust" values are incrementally upgraded as nonproblematic usage increases.
-
-In cases in which blocks aren't self resolved in a timely manner, customers can - _at their own risk_ - make use of either the self-service mechanism or an Indicator of Compromise (IOC)-based "allowlist" capability to unblock the files themselves.
+### Exclude files and folders
 
 > [!WARNING]
 > Excluding or unblocking files or folders could potentially allow unsafe files to run and infect your devices. Excluding files or folders can severely reduce the protection provided by attack surface reduction rules. Files that would be blocked by a rule are allowed to run, and there's no report or event recorded.
+
+You can choose to exclude files and folders from being evaluated by attack surface reduction rules. Excluded files aren't blocked from running, even if an attack surface reduction rule detects malicious behavior in the files or folders.
+
+For example, consider the [Use advanced protection against ransomware](attack-surface-reduction-rules-reference.md#use-advanced-protection-against-ransomware) ASR rule. This rule errs on the side of caution by triggering on files that don't yet have a positive reputation. The rule doesn't trigger only on files with a bad reputation.
+
+The ransomware rule is designed to help enterprise customers reduce risks of ransomware attacks while ensuring business continuity. By default, the ransomware rule errors on the side of caution and protect against files that haven't yet attained sufficient reputation and trust. To re-emphasize, the ransomware rule only triggers on files that haven't gained enough positive reputation and prevalence, based on usage metrics of millions of our customers. Usually, the blocks are self resolved, because each file's "reputation and trust" values are incrementally upgraded as nonproblematic usage increases.
+
+
+
+
 
 An exclusion can apply to all rules that allow exclusions or apply to specific rules using [per-rule exclusions](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions). You can specify an individual file, folder path, or the fully qualified domain name for a resource.
 
