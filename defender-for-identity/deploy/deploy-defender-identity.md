@@ -25,11 +25,8 @@ Identify your architecture and requirements, and then use the following table to
 |---------|---------|---------|
 |Domain controller     | Windows Server 2019 or later with the [June 2025 or later Cumulative Update](https://support.microsoft.com/topic/june-10-2025-kb5060526-os-build-20348-3807-4e9453c4-6602-48ea-b349-689cd66dfdb9)|[Defender for Identity sensor v3.x](prerequisites-sensor-version-3.md)|
 |Domain controller      |Windows Server 2016 or later|[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)         |
-|[Active Directory Federation Services (AD FS)](active-directory-federation-services.md)|Windows Server 2019 or later with the [June 2025 or later Cumulative Update](https://support.microsoft.com/topic/june-10-2025-kb5060526-os-build-20348-3807-4e9453c4-6602-48ea-b349-689cd66dfdb9)|[Defender for Identity sensor v3.x](prerequisites-sensor-version-3.md)|
 |[Active Directory Federation Services (AD FS)](active-directory-federation-services.md)|Windows Server 2016 or later|[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)|
-|[Active Directory Certificate Services (AD CS)](active-directory-federation-services.md)|Windows Server 2019 or later with the [June 2025 or later Cumulative Update](https://support.microsoft.com/topic/june-10-2025-kb5060526-os-build-20348-3807-4e9453c4-6602-48ea-b349-689cd66dfdb9)|[Defender for Identity sensor v3.x](prerequisites-sensor-version-3.md)|
 |[Active Directory Certificate Services (AD CS)](active-directory-federation-services.md)|Windows Server 2016 or later|[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)|
-|[Microsoft Entra Connect](active-directory-federation-services.md)|Windows Server 2019 or later with the [June 2025 or later Cumulative Update](https://support.microsoft.com/topic/june-10-2025-kb5060526-os-build-20348-3807-4e9453c4-6602-48ea-b349-689cd66dfdb9)|[Defender for Identity sensor v3.x](prerequisites-sensor-version-3.md)|
 |[Microsoft Entra Connect](active-directory-federation-services.md)|Windows Server 2016 or later|[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)|
 
 Before you activate the Defender for Identity sensor v3.x, note that v3.x:
