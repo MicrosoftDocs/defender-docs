@@ -39,19 +39,35 @@ Select a sensor row to open a details pane with information about the sensor and
 The **Sensors** tab shows the following columns. For columns with multiple possible values, see the tables below.
 
 - **Sensor**: The sensor's NetBIOS computer name.
-- **Type**: The sensor type. Possible values: **Domain controller sensor**, **AD FS sensor** (Active Directory Federation Services), **Standalone sensor**, **Entra Connect sensor**, **ADCS sensor** (Active Directory Certificate Services). If a sensor is installed on a domain controller that also runs Entra Connect or AD CS, the type shows as **Domain controller sensor**.
+- **Type**: The sensor type. For possible values, see [Type](#type).
 - **Domain**: The fully qualified domain name of the Active Directory domain where the sensor is installed.
+- **Migration state**: Indicates if sensors are eligible for [migration from v2.x to v3.x](deploy/migrate-to-sensor-v3.md). For possible values, see [Migration state](#migration-state).
+- **Service status**: The current state of the sensor service on the server. For possible values, see [Service status](#service-status).
+- **Sensor status**: The current update and configuration state of the sensor software. For possible values, see [Sensor status](#sensor-status).
 - **Version**: The sensor version installed.
 - **Delayed update**: Whether delayed updates are enabled or disabled. For more information, see [Delayed sensor update](#delayed-sensor-update).
 - **Health issues**: The count of open health issues on the sensor.
+- **Health status**: The overall health of the sensor based on the highest severity open health issue. For possible values, see [Health status](#health-status).
 - **Created**: The date the sensor was installed.
 
 > [!NOTE]
 > The **Delayed update** feature is supported only by sensor version 2.x.
 
+### Type
+
+The type column indicates the sensor type based on the server role where the sensor is installed. If a sensor is installed on a domain controller that also runs Entra Connect or AD CS, the type shows as **Domain controller sensor**.
+
+| Type | Description |
+|---|---|
+| **Domain controller sensor** | Installed on an Active Directory domain controller. |
+| **AD FS sensor** | Installed on an Active Directory Federation Services (AD FS) server. |
+| **Standalone sensor** | Installed on a dedicated server that monitors domain controller traffic via port mirroring. |
+| **Entra Connect sensor** | Installed on a Microsoft Entra Connect server. |
+| **ADCS sensor** | Installed on an Active Directory Certificate Services (AD CS) server. |
+
 ### Migration state
 
-The migration state column shows the status for sensors eligible for [migration from v2.x to v3.x](deploy/migrate-to-sensor-v3.md).
+The migration state column shows if the sensor is eligible for [migration from v2.x to v3.x](deploy/migrate-to-sensor-v3.md).
 
 | State | Description |
 |---|---|
@@ -63,6 +79,8 @@ The migration state column shows the status for sensors eligible for [migration 
 
 ### Service status
 
+The service status column indicates the current operational state of the sensor service on the server.
+
 | Status | Description |
 |---|---|
 | **Running** | The sensor service is running. |
@@ -72,6 +90,8 @@ The migration state column shows the status for sensors eligible for [migration 
 | **Unknown** | The sensor is disconnected or unreachable. |
 
 ### Sensor status
+
+The sensor status column indicates the current update and configuration state of the sensor software.
 
 | Status | Description |
 |---|---|
@@ -86,6 +106,8 @@ The migration state column shows the status for sensors eligible for [migration 
 | **Unreachable** | The domain controller was deleted from Active Directory, but the sensor wasn't uninstalled before decommissioning. You can safely delete this entry. |
 
 ### Health status
+
+The health status column indicates the overall health of the sensor based on the severity of any open health issues.
 
 | Status | Description |
 |---|---|

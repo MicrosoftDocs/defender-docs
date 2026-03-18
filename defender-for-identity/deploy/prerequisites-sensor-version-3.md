@@ -29,13 +29,13 @@ Before activating the Defender for Identity sensor v3.x, make sure that the serv
 
 ### Supported server types
 
-The v3.x sensor supports domain controllers, including domain controllers that also run the following additional identity roles:
+The v3.x sensor supports domain controllers, including domain controllers with these identity roles:
 
 - Active Directory Federation Services (AD FS)
 - Active Directory Certificate Services (AD CS)
 - Microsoft Entra Connect
 
-Standalone servers that run AD FS, AD CS, or Microsoft Entra Connect without the domain controller role still require the [Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md).
+Use the [Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md) for standalone servers that run AD FS, AD CS, or Microsoft Entra Connect.
 
 ## Licensing requirements
 

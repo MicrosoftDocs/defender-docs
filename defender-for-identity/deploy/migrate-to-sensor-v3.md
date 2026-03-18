@@ -15,6 +15,7 @@ ai-usage: ai-assisted
 # Migrate to the Defender for Identity sensor v3.x (Preview)
 
 You can migrate your Defender for Identity sensors from v2.x to v3.x directly from the Microsoft Defender portal. The migration automatically completes the switchover and maintains your server configurations and security monitoring, with no downtime or data duplication.
+
 ## Prerequisites
 
 Before you migrate, make sure each server meets the following requirements:
@@ -22,7 +23,7 @@ Before you migrate, make sure each server meets the following requirements:
 - Running a Defender for Identity sensor v2.x.
 - Running Windows Server 2019 or later.
 - Includes the [March 2026 or later](https://support.microsoft.com/en-us/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea) cumulative update.
-- Already onboarded to Microsoft Defender for Endpoint (MDE).
+- Has Microsoft Defender for Endpoint deployed.
 
 For the full list of v3.x requirements, see [Defender for Identity sensor v3.x prerequisites](prerequisites-sensor-version-3.md).
 
@@ -42,7 +43,7 @@ Audit logs are generated for each migration, including the date, status, and whe
 
 Complete the configuration steps described in [Defender for Identity sensor v3.x prerequisites](prerequisites-sensor-version-3.md), including:
 
-- [Configure RPC auditing](prerequisites-sensor-version-3.md#configure-rpc-auditing)
+- [Configure RPC auditing](prerequisites-sensor-version-3.md#configure-rpc-auditing).
 - [Configure Windows event auditing](prerequisites-sensor-version-3.md#configure-windows-event-auditing). Existing auditing configurations from the v2.x sensor are preserved and converted for v3.x, but we recommend enabling automated auditing for optimal configuration validation.
 - [Switch from gMSA to local system](prerequisites-sensor-version-3.md#recommended-configurations-for-optimal-performance). The v3.x sensor uses the local system identity. If you had a gMSA configured for the v2.x sensor, remove the gMSA configuration.
 
