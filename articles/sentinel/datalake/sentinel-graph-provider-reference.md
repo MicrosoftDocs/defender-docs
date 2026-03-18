@@ -904,12 +904,12 @@ Sample response:
             "Path": null
           },
           {
-            "Value": "{ lastSeen: 2025-10-17T04:42:18.0000000Z, firstSeen: 2025-10-17T04:42:18.0000000Z, _sourceId: sharepointsystem, _targetId: fea4797a-89d9-4095-8a08-b821d6bfcd8e, _label: Deleted, _sourceLabel: ENTRAUSER, _targetLabel: ONLINEFILEn}",
+            "Value": "{ lastSeen: 2025-10-17T04:42:18.0000000Z, firstSeen: 2025-10-17T04:42:18.0000000Z, _sourceId: sharepointsystem, _targetId: 1b1b1b1b-2222-cccc-3333-4d4d4d4d4d4d, _label: Deleted, _sourceLabel: ENTRAUSER, _targetLabel: ONLINEFILEn}",
             "Metadata": {},
             "Path": null
           },
           {
-            "Value": "{ tenantId: 536279f6-15cc-45f2-be2d-61e352b51eef, _id: fea4797a-89d9-4095-8a08-b821d6bfcd8e, _label: ONLINEFILE, displayName: 0c8a8c07-a918-4540-ac1d-a78bf7c81a84_LThumb.jpgn}",
+            "Value": "{ tenantId: aaaa0000-bb11-2222-33cc-444444dddddd, _id: 1b1b1b1b-2222-cccc-3333-4d4d4d4d4d4d, _label: ONLINEFILE, displayName: 0c8a8c07-a918-4540-ac1d-a78bf7c81a84_LThumb.jpgn}",
             "Metadata": {},
             "Path": null
           }

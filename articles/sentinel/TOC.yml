@@ -603,7 +603,7 @@
         - name: Microsoft Sentinel graph overview
           href: datalake/sentinel-graph-overview.md
         - name: Graph visualization
-          href: datalake/graph-explorer.md  
+          href: datalake/sentinel-graph-visualization  
         - name: Microsoft Sentinel Custom graphs
           items:
             - name: Custom graphs overview
@@ -613,7 +613,7 @@
             - name: Microsoft Sentinel graph provider reference
               href: datalake/sentinel-graph-provider-reference.md
             - name: Create custom graph using AI 
-              href: datalake/create-graphs-using-ai.md 
+              href: datalake/create-graphs-with-ai.md 
             - name: GQL reference for Sentinel custom graph
               href: datalake/gql-reference-for-sentinel-custom-graph.md
     - name: Microsoft Sentinel MCP server

@@ -81,9 +81,9 @@ For detailed instructions on how to build custom graphs in Microsoft Sentinel, s
 
 ## Visualizing Graphs in Microsoft Sentinel
 
-Microsoft Sentinel provides multiple options for visualizing graphs, including the Graph explorer, Jupyter notebooks in the Sentinel Visual Studio Code extension. The Graph Explorer allows you to interactively explore and query your graphs using GQL, while Jupyter notebooks provide a flexible environment for building and analyzing custom graphs.
+Microsoft Sentinel provides multiple options for visualizing graphs, including the Sentinel graph, Jupyter notebooks in the Sentinel Visual Studio Code extension.  Sentinel graph allows you to interactively explore and query your graphs using GQL, while Jupyter notebooks provide a flexible environment for building and analyzing custom graphs.
 
-:::image type="content" source="media/custom-graphs-overview/graph-explorer.png" alt-text="Screenshot of the Graph explorer in Microsoft Sentinel showing a graph visualization." lightbox="media/custom-graphs-overview/graph-explorer.png":::
+:::image type="content" source="media/custom-graphs-overview/graph-explorer.png" alt-text="Screenshot of the Sentinel graph in Microsoft Sentinel showing a graph visualization." lightbox="media/custom-graphs-overview/graph-explorer.png":::
 
-For more information on visualizing graphs in Microsoft Sentinel using Graph explorer, see [Microsoft Sentinel Graph explorer](./graph-explorer.md).
+For more information on visualizing graphs in Microsoft Sentinel using Sentinel graph, see [Microsoft Sentinel graph](./sentinel-graph-visualization).
 

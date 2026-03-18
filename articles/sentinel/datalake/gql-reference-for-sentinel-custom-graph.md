@@ -349,9 +349,7 @@ RETURN COUNT(*) > 0 AS HasSuspiciousActivity
 > [!IMPORTANT]
 > When you design your graph schema, some common property names might conflict with GQL reserved keywords. Avoid or rename these property names.
 
-- **No INSERT/CREATE support**: Operations to change graph structures aren't supported.
-
-> Instead, use KQL for all graph creation, change, and management tasks.
+- **No INSERT/CREATE support**: Operations to change graph structures aren't supported. Instead, use KQL for all graph creation, change, and management tasks.
 
 - **Optional matches**: Supported only for node patterns (not edges).
 

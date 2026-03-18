@@ -72,7 +72,7 @@ The following steps walk you through creating your first custom graph by using a
    :::image type="content" source="media/create-custom-graphs/select-kernel.png"  lightbox="media/create-custom-graphs/select-kernel.png" alt-text="A screenshot of the select kernel page in Visual Studio Code.":::
 
     > [!TIP]
-    > You can use AI prompts to help you create a custom graph notebook. For more information, see [AI-assisted custom graph authoring in Microsoft Sentinel](create-graphs-using-ai.md). 
+    > You can use AI prompts to help you create a custom graph notebook. For more information, see [AI-assisted custom graph authoring in Microsoft Sentinel](create-graphs-with-ai.md). 
 
 1. In an empty cell in the new notebook, paste the following sample code to get started with custom graphs:
 
@@ -223,28 +223,28 @@ The following steps walk you through creating your first custom graph by using a
 
 You have now created a graph in the notebook.
 
-1. Show a visual representation of the graph. In a new cell, paste and run the following code:
+To show a visual representation of the graph, in a new cell paste and run the following code:
 
-    ```python
-    query1 = "MATCH (n:Users)-[e]->(s) WHERE n.department = 'Customer XP' RETURN * LIMIT 50"
-    builder.query(query1).show()
-    ```
+```python
+query1 = "MATCH (n:Users)-[e]->(s) WHERE n.department = 'Customer XP' RETURN * LIMIT 50"
+builder.query(query1).show()
+```
 
-    This code runs a sample GQL query to retrieve all user nodes and their relationships for users in the "Customer XP" department, limiting the results to 50 entries. The resulting graph is visualized in the output.
+This code runs a sample GQL query to retrieve all user nodes and their relationships for users in the "Customer XP" department, limiting the results to 50 entries. The resulting graph is visualized in the output.
 
-   :::image type="content" source="media/create-custom-graphs/graph-visualization.png" lightbox="media/create-custom-graphs/graph-visualization.png" alt-text="A screenshot showing the visualization of a graph in Visual Studio Code.":::
+:::image type="content" source="media/create-custom-graphs/graph-visualization.png" lightbox="media/create-custom-graphs/graph-visualization.png" alt-text="A screenshot showing the visualization of a graph in Visual Studio Code.":::
 
-    The following code runs another sample GQL query to retrieve all nodes that communicated with applications and belong to the "Customer XP" department, limiting the results to 50 entries. The resulting graph is visualized in the output.
+The following code runs another sample GQL query to retrieve all nodes that communicated with applications and belong to the "Customer XP" department, limiting the results to 50 entries. The resulting graph is visualized in the output.
 
-    ```python
-    query2 = """MATCH (n)-[e:communicatedWith]->(a), (n)-[b:BelongsTo]->(d)
-            WHERE d.Org IN ["Customer XP"]
-            RETURN *
-            LIMIT 50"""
-    builder.query(query2).show()
-    ```
+```python
+query2 = """MATCH (n)-[e:communicatedWith]->(a), (n)-[b:BelongsTo]->(d)
+        WHERE d.Org IN ["Customer XP"]
+        RETURN *
+        LIMIT 50"""
+builder.query(query2).show()
+```
 
-   :::image type="content" source="media/create-custom-graphs/graph-visualization-details.png" lightbox="media/create-custom-graphs/graph-visualization-details.png" alt-text="A screenshot showing the visualization of a graph and detail side-panel in Visual Studio Code.":::
+:::image type="content" source="media/create-custom-graphs/graph-visualization-details.png" lightbox="media/create-custom-graphs/graph-visualization-details.png" alt-text="A screenshot showing the visualization of a graph and detail side-panel in Visual Studio Code.":::
 
 
 ### Save a custom graph in your tenant
@@ -306,4 +306,4 @@ For more information on GQL, see [GQL language guide](/kusto/query/graph-query-l
 ## Related articles
 
 - [Microsoft Sentinel graph provider library reference](./sentinel-graph-provider-reference.md)
-- [AI-assisted custom graph authoring in Microsoft Sentinel](create-graphs-using-ai.md)
+- [AI-assisted custom graph authoring in Microsoft Sentinel](create-graphs-with-ai.md)
