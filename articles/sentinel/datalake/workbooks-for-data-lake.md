@@ -12,17 +12,17 @@ ms.author: edbaynash
 ms.collection: ms-security  
 ---  
 
-# Visualize data in Microsoft Sentinel data lake using Workbooks
+# Visualize data in Microsoft Sentinel data lake using workbooks
  
-Running Microsoft Sentinel workbooks on top of Microsoft Sentinel data lake data allows SOC teams to visualize and monitor security data directly from the lake using KQL, without duplicating or reshaping data. By selecting Sentinel data lake as the data source in a workbook, analysts can run the same analytical queries used for investigations and hunting, and render them as interactive charts and tables for operational monitoring and reporting. Using Sentinel data lake as a workbook data source enables consistent analytics across queries, supports longer data retention, and scales with high-volume historical data. This makes it ideal for advanced threat hunting, trend analysis, and executive dashboards.
+Running Microsoft Sentinel workbooks on top of Microsoft Sentinel data lake data allows SOC teams to visualize and monitor security data directly from the lake using KQL (Kusto Query Language), without duplicating or transforming data. By selecting Sentinel data lake as the data source in a workbook, analysts can run the same analytical queries used for investigations and hunting. They can render them as interactive charts and tables for operational monitoring and reporting. Using Sentinel data lake as a workbook data source enables consistent analytics across queries, supports longer data retention, and scales with high-volume historical data. This makes workbooks ideal for advanced threat hunting, trend analysis, and executive dashboards.
  
 This article walks you through the process of creating workbooks for using Microsoft Sentinel data lake as the data source. For more information on using workbooks with Sentinel, see [Visualize and monitor your data by using workbooks in Microsoft Sentinel](/azure/sentinel/monitor-your-data?tabs=defender-portal).
 
-When using Sentinel data lake as the data source for your workbooks, keep in mind the importance of query performance as workbook visualization may autorefresh and execute repeatedly. Queries should be scoped with appropriate time filters, summarization, and projections to avoid scanning excessive historical data in the lake. This ensures dashboards remain responsive while still using long-term, high-volume data for analysis.
+When using Sentinel data lake as the data source for your workbooks, keep in mind the importance of query performance as workbook visualization can autorefresh and execute repeatedly. Queries should be scoped with appropriate time filters, summarization, and projections to avoid scanning excessive historical data in the lake. Appropriately scoped queries ensure dashboards remain responsive while still using long-term, high-volume data for analysis.
 
-## Create a workbook with Sentinel data lake as the data source
+## Create a workbook with Microsoft Sentinel data lake as the data source
 
-1. In the defender portal go to **Microsoft Sentinel** > **Threat management** > **Workbooks**.
+1. In the Defender portal, go to **Microsoft Sentinel** > **Threat management** > **Workbooks**.
 
 1. Select the cube icon in the top right corner to select the workspaces you want to store your workbooks.
 
@@ -58,7 +58,7 @@ When using Sentinel data lake as the data source for your workbooks, keep in min
 
 1. Select **Run query** to visualize the results.
 
-1. Seelect **Done editing** to exit edit mode and view your visual.
+1. Select **Done editing** to exit edit mode and view your visual.
 
  
     :::image type="content" source="./media/workbooks-for-data-lake/edit-new-query.png" alt-text="Screenshot showing the editing of a new query and visualization." lightbox="./media/workbooks-for-data-lake/edit-new-query.png":::
@@ -66,7 +66,7 @@ When using Sentinel data lake as the data source for your workbooks, keep in min
     This visual shows the top 10 AWS principal identities generating the highest number of failed API calls in AWSCloudTrail logs. Failed events are aggregated and filtered to highlight identities with repeated errors. The chart helps analysts quickly identify potentially suspicious or misconfigured identities producing abnormal failure patterns.
     
     > [!NOTE]
-    > The **Visualization** type **Set by query** is not supported. 
+    > The **Visualization** type **Set by query** isn't supported. 
     >
     > Relative time ranges such as `> ago(10d) ` are supported up to 90 days. Absolute time ranges are supported according to your data retention policy. 
 
