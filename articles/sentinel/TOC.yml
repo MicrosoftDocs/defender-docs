@@ -598,11 +598,30 @@
     - name: Microsoft Sentinel data lake overview
       href: datalake/sentinel-lake-overview.md
       displayName: data lake
-    - name: Microsoft Sentinel graph overview
-      href: datalake/sentinel-graph-overview.md
-    - name: Compare KQL jobs, summary rules, and search jobs
-      href: datalake/kql-jobs-summary-rules-search-jobs.md
-      displayName: data lake
+    - name: Microsoft Sentinel graph  
+      items:
+        - name: Microsoft Sentinel graph overview
+          href: datalake/sentinel-graph-overview.md
+        - name: Graph visualization
+          href: datalake/graph-explorer.md  
+        - name: Microsoft Sentinel Custom graphs
+          items:
+            - name: Custom graphs overview
+              href: datalake/custom-graphs-overview.md
+            - name: Predefined graphs
+              items:
+                - name: Overview of predefined graphs
+                  href: datalake/predefined-graphs-overview.md
+                - name: Identity attack graph 
+                  href: datalake/identity-attack-graph.md
+            - name: Create custom graphs
+              href: datalake/create-custom-graphs.md
+            - name: Microsoft Sentinel graph provider reference
+              href: datalake/sentinel-graph-provider-reference.md
+            - name: Create custom graph using AI 
+              href: datalake/create-graphs-using-ai.md 
+            - name: GQL reference for Sentinel custom graph
+              href: datalake/gql-reference-for-sentinel-custom-graph.md
     - name: Microsoft Sentinel MCP server
       items:
         - name: Microsoft Sentinel MCP server overview
@@ -658,6 +677,9 @@
         - name: Manage KQL jobs
           href: datalake/kql-manage-jobs.md
           displayName: data lake
+        - name: Compare KQL jobs, summary rules, and search jobs
+          href: datalake/kql-jobs-summary-rules-search-jobs.md
+          displayName: data lake
         - name: Troubleshoot KQL for the lake
           href: datalake/kql-troubleshoot.md
           displayName: data lake
@@ -679,7 +701,6 @@
           href: datalake/notebook-examples.md
     - name: Microsoft Sentinel data lake service limits
       href: datalake/sentinel-lake-service-limits.md
-
 - name: Collect and manage data
   items:
     - name: Overview
