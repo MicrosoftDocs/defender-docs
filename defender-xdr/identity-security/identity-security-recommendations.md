@@ -1,5 +1,5 @@
 ---
-title: Identity security recommendations coverage
+title: Unified identity security recommendations
 description: Learn which identity sources and applications are covered by security recommendations in Microsoft Defender, including Active Directory, SaaS apps, and non-Microsoft identity providers.
 #customer intent: As a security admin, I want to understand which identity sources have security recommendations in Microsoft Defender so that I can assess my coverage and plan improvements.
 author: AbbyMSFT
@@ -11,7 +11,7 @@ ms.custom: msecd-doc-authoring-106
 ai-usage: ai-assisted
 ---
 
-# Identity security recommendations coverage
+# Unified identity security recommendations
 
 Microsoft Defender provides security recommendations that help you identify and fix configuration weaknesses across your identity sources. These recommendations cover Active Directory, SaaS applications, and non-Microsoft identity providers (IdPs), and they appear in [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management) and [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score).
 
