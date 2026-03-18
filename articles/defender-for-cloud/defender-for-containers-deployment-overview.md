@@ -76,7 +76,8 @@ Before deploying Defender for Containers, make sure you have:
 
 - An active Azure subscription
 - Owner or Contributor role on the subscription
-- Kubernetes cluster version 1.19 or later
+- Kubernetes cluster version 1.22 or later
+
 - Network connectivity to Azure services
 - For sensor-based capabilities: Sufficient cluster resources for Defender components - see [Defender sensor component details](defender-for-containers-architecture.md#defender-sensor-component-details)
 - [Enable an OpenId Connect (OIDC) issuer](/azure/aks/use-oidc-issuer) for your cluster.
