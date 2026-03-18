@@ -35,8 +35,7 @@ Before you activate the Defender for Identity sensor v3.x, note that v3.x:
 - Requires Defender for Endpoint.
 - Doesn't support VPN integration.
 - Doesn't support [syslog notifications](../notifications.md#configure-syslog-notifications).
-- Has limitations working with Azure ExpressRoute. For more information, see [Azure ExpressRoute for Microsoft 365](/microsoft-365/enterprise/azure-expressroute?view=o365-worldwide).
-
+- Has limitations working with Azure ExpressRoute. For more information, see [Azure ExpressRoute for Microsoft 365](/microsoft-365/enterprise/azure-expressroute).
 
 ## Next steps
 
