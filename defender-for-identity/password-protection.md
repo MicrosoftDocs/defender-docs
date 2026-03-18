@@ -32,13 +32,30 @@ The page includes a left panel where you select the identity source you want to 
 - **Microsoft Entra ID**: Available on the Leaked Credentials tab.
 - **Okta**: Available on the Password Hygiene and Password Policies tabs.
 
-## Password Hygiene
+## What the page shows
 
-The **Password Hygiene** tab shows password weaknesses that attackers commonly exploit. Each item is a recommendation you can act on to reduce risk.
+The page has four tabs:
 
-## Password Policies
+- **Password Hygiene**: Shows accounts with password weaknesses that attackers commonly exploit. Each item is a recommendation you can act on to reduce risk.
+- **Password Policies**: Shows password policies from your identity providers side by side. Use this tab to check whether your policies meet current security standards. See [Policy information](#policy-information) for details.
+- **Leaked Credentials**: Shows accounts with credentials that were found outside your organization, for example on public paste sites or the dark web. From this tab, you can reset passwords or disable accounts, individually or in bulk.
+- **Exposed Passwords**: Shows accounts and settings that store or expose passwords in insecure ways, such as in plain text or in easily discoverable locations. Examples include clear-text credentials in Active Directory attributes (identified using AI-based detection) and reversible passwords in Group Policy Objects (GPOs).
 
-The **Password Policies** tab shows password policies from your identity providers side by side. Use this tab to check whether your password policies meet current security standards.
+## Account information
+
+The **Password Hygiene**, **Leaked Credentials**, and **Exposed Passwords** tabs show account-level data with the following columns:
+
+| Column | Description |
+|---|---|
+| **Name** | The display name of the account. |
+| **SID** | The Security Identifier of the account. |
+| **Entity type** | The type of entity (for example, User or Computer). |
+| **Domain** | The Active Directory domain the account belongs to. |
+| **Service account type** | The type of service account, if applicable. |
+
+## Policy information
+
+The **Password Policies** tab shows a different set of columns:
 
 | Column | Description |
 |---|---|
@@ -50,39 +67,6 @@ The **Password Policies** tab shows password policies from your identity provide
 | **Password complexity** | Whether password complexity requirements are enabled. |
 | **Lockout threshold** | The number of failed sign-in attempts before the account is locked. |
 | **Lockout duration** | The duration of the account lockout after the threshold is reached. |
-
-## Leaked Credentials
-
-The **Leaked Credentials** tab shows accounts with credentials that were found outside your organization, for example on public paste sites or the dark web.
-
-Exposures are sourced from:
-
-- Public paste sites
-- Law enforcement intelligence
-- Dark web and underground research
-
-From this tab, you can reset passwords or disable accounts, individually or in bulk, to prevent misuse.
-
-## Exposed Passwords
-
-The **Exposed Passwords** tab shows accounts and settings that store or expose passwords in insecure ways, such as in plain text or in easily discoverable locations.
-
-Examples include:
-
-- Clear-text or discoverable credentials stored in Active Directory attributes, identified using AI-based detection.
-- Reversible passwords embedded in Group Policy Objects (GPOs).
-
-## Common columns
-
-The Password Hygiene, Leaked Credentials, and Exposed Passwords tabs share the following columns:
-
-| Column | Description |
-|---|---|
-| **Name** | The display name of the account. |
-| **SID** | The Security Identifier of the account. |
-| **Entity type** | The type of entity (for example, User or Computer). |
-| **Domain** | The Active Directory domain the account belongs to. |
-| **Service account type** | The type of service account, if applicable. |
 
 ## Related content
 

@@ -13,14 +13,14 @@ ai-usage: ai-assisted
 
 # Investigate an Active Directory domain
 
-The Active Directory (AD) domain page in Microsoft Defender shows domain health, sensor coverage, security policies, trust relationships, and recommendations for your on-premises Active Directory environment. Use it to check whether a domain is healthy and secure, review deployment status, and act on recommendations.
+The Active Directory domain page in Microsoft Defender shows domain health, sensor coverage, security policies, trust relationships, and recommendations for your on-premises Active Directory environment. Use it to check whether a domain is healthy and secure, review deployment status, and act on recommendations.
 
 ## Prerequisites
 
 - A Microsoft Defender for Identity license, or another license that includes Defender for Identity (such as E5).
 - A user role with at least [Security Reader](/azure/active-directory/roles/permissions-reference#security-reader) permissions.
 
-## Domain page entry points
+## Access the Domain page
 
 You can reach the AD domain page through multiple entry points in Microsoft Defender:
 
