@@ -11,13 +11,13 @@ ms.custom: msecd-doc-authoring-106
 ai-usage: ai-assisted
 ---
 
-# Password protection in Microsoft Defender
+# Investigate identity password protection
 
 The **Password protection** page in Microsoft Defender shows password-related risks across your identity sources in one place. Use it to find leaked credentials, exposed passwords, weak password policies, and configuration issues, and then take action directly from the page. It supports on-premises Active Directory, cloud identity providers like Microsoft Entra ID, and non-Microsoft providers like Okta.
 
 ## Prerequisites
 
-To access the Password protection page, you need:
+To access the **Password protection** page, you need:
 
 - A Microsoft Defender for Identity license, or another license that includes Defender for Identity (such as E5), and a Microsoft Entra ID Protection license.
 - A user role with at least [Security Reader](/azure/active-directory/roles/permissions-reference#security-reader) permissions.

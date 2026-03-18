@@ -514,10 +514,6 @@
           href: /defender-for-identity/identity-security-initiative?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
         - name: Unified identity security recommendations
           href: ./identity-security/identity-security-recommendations.md
-      - name: Password protection
-        href: ./identity-security/password-protection.md
-      - name: Investigate and respond to identity threats
-        href: ./identity-security/identity-security-investigate-respond.md
     - name: Enhance security operations
       items:
       - name: Security operations guide
