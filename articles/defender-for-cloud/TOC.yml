@@ -227,6 +227,8 @@
               href: defender-for-containers-network-access.md            
             - name: Cloud IAM permissions for AWS and GCP
               href: containers-permissions.md
+            - name: Exclude clusters from automatic provisioning
+              href: defender-for-containers-exclude-clusters.md
             - name: Enable Defender for Containers
               href: defender-for-containers-enable-portal.md
             - name: Deploy components manually

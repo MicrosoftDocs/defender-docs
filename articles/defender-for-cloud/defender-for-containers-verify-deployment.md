@@ -15,7 +15,9 @@ After deploying Microsoft Defender for Containers components, verify that the se
 
 If you deployed Defender components by remediating a security recommendation:
 
-1. In the Azure portal, go to **Microsoft Defender for Cloud** > **Recommendations**.
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
 
 2. Locate the relevant recommendation.
 
@@ -53,9 +55,13 @@ For Amazon EKS, Google Kubernetes Engine (GKE), and Arc-enabled Kubernetes clust
 
 To verify extension installation:
 
-1. In the Azure portal, open the **Arc-enabled Kubernetes** resource.
+1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Select **Extensions**.
+1. Go to **Azure Arc** > **Kubernetes clusters**.
+
+1. Select your Arc-enabled Kubernetes cluster.
+
+1. In the cluster resource, select **Extensions**.
 
 1. Confirm that the following extensions show **Succeeded**:
 

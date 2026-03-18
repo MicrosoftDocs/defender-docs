@@ -21,9 +21,7 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Go to **Microsoft Defender for Cloud**.
-
-1. In the left menu, select **Environment settings**.
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
 1. Select the subscription where your AKS clusters are located.
 
@@ -105,7 +103,7 @@ This article explains how to enable the Microsoft Defender for Containers plan i
     
     - **Kubernetes API access**  
       Allows Defender for Cloud to access the Kubernetes API server for cluster inventory, configuration analysis, and capabilities that rely on Kubernetes metadata and state.
-      
+
       > [!IMPORTANT]  
       > If you enable **Kubernetes API access**, the Kubernetes API server must be publicly accessible.
     
