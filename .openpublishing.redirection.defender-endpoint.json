@@ -206,7 +206,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "enable-attack-surface-reduction.md",
+      "source_path": "defender-endpoint/enable-attack-surface-reduction.md",
       "redirect_url": "/defender-endpoint/attack-surface-reduction-rules-enable",
       "redirect_document_id": false
     },

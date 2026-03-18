@@ -356,39 +356,19 @@ With web protection, you can protect your organization's devices from web threat
 
 ### Network firewall
 
-Network firewall helps reduce the risk of network security threats. Your security team can set rules that determine which traffic is permitted to flow to or from your organization's devices. We recommend using Intune to configure your network firewall.
+Network firewall helps reduce the risk of network security threats. Your security team can set rules that determine which traffic is permitted to flow to or from your organization's devices. We recommend using Microsoft Intune to configure your network firewall.
 
-:::image type="content" source="media/337756822-b80a84b9-fcb2-4c6e-9763-cb7aeb71153a.png" alt-text="Screenshot of Firewall policy in the Intune portal." lightbox="media/337756822-b80a84b9-fcb2-4c6e-9763-cb7aeb71153a.png":::
+To configure network firewall using a Microsoft Intune Endpoint Security **Firewall** policy, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
 
-To configure basic firewall settings, follow these steps:
+- **Policy type**: Firewall
+- **Platform**: Windows
+- **Profile**: Windows Firewall
+- **Configuration settings**: Set each of the following settings to **True (Default)**:
+  - **Enable Domain Network Firewall**
+  - **Enable Private Network Firewall**
+  - **Enable Public Network Firewall**
 
-1. Go to the [Intune admin center](https://intune.microsoft.com), and sign in.
-
-1. Choose **Endpoint security** > **Firewall**, and then choose **+ Create Policy**.
-
-1. Select a platform, such as **Windows 10, Windows 11, and Windows Server**, select the **Microsoft Firewall** profile, and then choose **Create**.
-
-1. On the **Basics** tab, specify a name and description, and then choose **Next**.
-
-1. Expand **Firewall**, and then scroll down to the bottom of the list.
-
-1. Set each of the following settings to **True**:
-
-   - **Enable Domain Network Firewall**
-   - **Enable Private Network Firewall**
-   - **Enable Public Network Firewall**
-
-   Review the list of settings under each of domain networks, private networks, and public networks. You can leave them set to **Not configured**, or change them to suit your organization's needs.
-
-   Then choose **Next**.
-
-1. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**.
-
- To learn more about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](/intune/intune-service/fundamentals/scope-tags).
-
-1. On the **Assignments** tab, select **Add all users** and **+ Add all devices**, and then choose **Next**. (You can alternately specify specific groups of users or devices.)
-
-1. On the **Review + create** tab, review your policy settings, and then choose **Create**.
+For more information about network firewall profiles available in Microsoft Intune, see [Firewall policy for endpoint security in Intune](/intune/intune-service/protect/endpoint-security-firewall-policy).
 
 > [!TIP]
 > Firewall settings are detailed and can seem complex. Refer to [Best practices for configuring Windows Defender Firewall](/windows/security/threat-protection/windows-firewall/best-practices-configuring).
@@ -410,4 +390,3 @@ To help with planning your WDAC deployment, see the following resources:
 Now that you've finished the setup and configuration process, your next step is to get started using Defender for Endpoint.
 
 - [Get started with Defender for Endpoint Plan 1](mde-plan1-getting-started.md)
-
