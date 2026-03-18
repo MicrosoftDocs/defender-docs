@@ -1,4 +1,4 @@
-﻿---
+---
 title: Cancel machine action API
 description: Learn how to cancel an already launched machine action
 search.appverid: met150
@@ -77,7 +77,7 @@ Here's an example of the request.
 
 ```HTTP
 POST
-https://api.security.microsoft.com/api/machineactions/988cc94e-7a8f-4b28-ab65-54970c5d5018/cancel
+https://api.security.microsoft.com/api/machineactions/aaaabbbb-0000-cccc-1111-dddd2222eeee/cancel
 ```
 
 ```JSON

@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-ms.date: 02/05/2026
+ms.date: 03/03/2026
 manager: orspodek
 audience: ITPro
 ms.collection:
@@ -32,8 +32,15 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+## March 2026
+
+- To improve accuracy and better protect organizational identities, we've made updates to the Secure Score category calculations. Some security recommendations categorized as **Cloud apps** recommendations are now considered identity‑related and grouped under the **Identity** category. While the total Secure Score remains unchanged, individual identity and app scores may change.
+- (Preview) Customers can now use filters on very large incidents with many alerts and entities or hide specific entities to simplify complex incident graphs. By simplifying the graphs, they can focus their investigations on what matters most. [Learn more](investigate-incidents.md#filter-and-focus-the-incident-graph-preview)
+- The [proactive user containment (contain user)](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) action as part of the predictive shielding feature is now generally available. This action infuses activity data with exposure data to identify exposed credentials at risk of being compromised and reused to conduct malicious activity.
+
 ## February 2026
 
+- Microsoft Defender Experts for Hunting customers can now set up [Notification contacts](onboarding-defender-experts-for-hunting.md#tell-us-who-to-contact-for-important-matters). These contacts are the individuals or groups that Microsoft needs to notify if there are critical incidents or service updates.
 - (GA) The following advanced hunting schema tables are now generally available:
     - The [`IdentityAccountInfo`](advanced-hunting-identityaccountinfo-table.md) table contains information about account information from various sources, including Microsoft Entra ID. It also includes information and link to the identity that owns the account.
     - The [`EntraIdSignInEvents`](advanced-hunting-entraidsigninevents-table.md) table contains information about Microsoft Entra interactive and non-interactive sign-ins.

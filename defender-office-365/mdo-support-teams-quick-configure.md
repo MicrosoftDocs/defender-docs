@@ -77,7 +77,9 @@ For complete instructions, see [Use the Microsoft Defender portal to modify cust
 > [!IMPORTANT]
 > Teams integration is on in the [Built-in protection preset security policy](preset-security-policies.md), but any other Safe Links policies [take precedence](preset-security-policies.md#order-of-precedence-for-preset-security-policies-and-other-threat-policies) over the Built-in protection preset security policy (as shown in the order they're listed on the **Safe Links** page). So, ensure that Teams protection is enabled in these policies.
 
-## Step 3: Verify warnings for unsafe links are shown in Microsoft Teams messages
+<a name="step-3-verify-warnings-for-unsafe-links-are-shown-in-microsoft-teams-messages"></a>
+
+## Step 3: Verify unsafe link warnings in Microsoft Teams messages
 
 > [!NOTE]
 > Currently, this feature is in Preview, isn't available in all organizations, and is subject to change.

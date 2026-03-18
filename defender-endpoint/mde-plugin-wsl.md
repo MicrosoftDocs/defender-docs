@@ -30,7 +30,7 @@ Windows Subsystem for Linux (WSL) 2, which replaces the previous version of WSL 
 
 ## Prerequisites
 
-- WSL version `2.0.7.0` or later must be running with at least one active distro. Run `wsl --update` to make sure you are on the latest version. If `wsl -–version` shows a version older than `2.0.7.0`, run `wsl -–update –pre-release` to get the latest update.
+- WSL version `2.0.7.0` or later must be running with at least one active distro. Run `wsl --update` to make sure you are on the latest version. If `wsl -–version` shows a version older than `2.0.7.0`, run `wsl --update --pre-release` to get the latest update.
 
 - The Windows client device must be onboarded to Defender for Endpoint.
 
@@ -92,7 +92,7 @@ If your Windows Subsystem for Linux isn't installed yet, follow these steps:
 
    1. Open a command prompt/terminal and run `wsl`.
 
-   You can [deploy the package using Microsoft Intune](/mem/intune/apps/lob-apps-windows).
+   You can [deploy the package using Microsoft Intune](/intune/intune-service/apps/lob-apps-windows).
 
 > [!NOTE]
 > If `WslService` is running, it stops during the installation process. You do not need to onboard the subsystem separately. Instead, the plug-in automatically onboards to the tenant the Windows host is onboarded to.

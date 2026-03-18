@@ -16,7 +16,7 @@ ms.topic: how-to
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 01/13/2026
+ms.date: 02/16/2026
 appliesto: 
 - Microsoft Defender XDR 
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -125,9 +125,6 @@ Keep the following points in mind when using correlation exclusion:
   - #dont_corr#    This rule monitors file modifications
   - #DONT_CORR#This rule has no space after the tag
 
-- In specific scenarios, the incident title might differ between the Defender portal and Microsoft Sentinel, even when you turn off incident correlation for the rule:
-  - When an incident contains alerts with different titles, the Defender portal displays the incident name as the common MITRE ATT&CK technique of all alerts, while Microsoft Sentinel uses the title of the first alert.
-  - Alerts within the same incident can have different titles when the alert title is configured as a dynamic title and alert grouping to incidents is turned on.
 
 ## Next steps
 

@@ -1,4 +1,4 @@
-﻿- name: Microsoft Defender for Endpoint
+- name: Microsoft Defender for Endpoint
   href: index.yml
   expanded: true
   items:
@@ -31,22 +31,14 @@
         - name: Setup and configuration
           href: mde-p1-setup-configuration.md
         - name: Get started
-          href: mde-plan1-getting-started.md
-    - name: What's new in Defender for Endpoint
-      href: whats-new-in-microsoft-defender-endpoint.md
-      items: 
-      - name: MsSense versions (Windows)
-        href: windows-whatsnew.md
-      - name: Defender for Endpoint on macOS releases
-        href: mac-whatsnew.md
-      - name: Defender for Endpoint on Linux releases
-        href: linux-whatsnew.md
-      - name: What's new in Defender for Endpoint on Android
-        href: android-whatsnew.md
-      - name: What's new in Defender for Endpoint on iOS
-        href: ios-whatsnew.md
-      - name: Previous Defender for Endpoint releases (archive)
-        href: whats-new-mde-archive.md
+          href: mde-plan1-getting-started.md        
+    - name: What's new
+      items:
+        - name: New features
+          href: whats-new-in-microsoft-defender-endpoint.md
+          displayName: What's new in Microsoft Defender for Endpoint
+        - name: Release notes
+          href: microsoft-defender-endpoint-releases.md
     - name: Trial user guide - Defender for Endpoint
       href: defender-endpoint-trial-user-guide.md
     - name: Pilot and deploy Defender for Endpoint
@@ -126,13 +118,25 @@
             - name: Step 2 - Configure device proxy and Internet settings
               href: configure-proxy-internet.md
             - name: Step 3 - Verify client connectivity to service URLs
-              href: verify-connectivity.md        
+              href: verify-connectivity.md            
+        - name: Configure streamlined connectivity
+          items:
             - name: Onboard devices using streamlined method
-              href: configure-device-connectivity.md            
+              href: configure-device-connectivity.md
             - name: Migrate devices to streamlined method
-              href: migrate-devices-streamlined.md
-            - name: Enable access to service URLs - US government            
-              href: streamlined-device-connectivity-urls-gov.md                       
+              href: migrate-devices-streamlined.md        
+        - name: Enable access to service URLs
+          items:
+          - name: Streamlined device connectivity URLs (commercial)
+            href: streamlined-device-connectivity-urls-commercial.md
+          - name: Streamlined device connectivity URLs (US government)
+            href: streamlined-device-connectivity-urls-gov.md                                                           
+          - name: Standard device connectivity URLs
+            items: 
+            - name: Standard device connectivity URLs (commercial)
+              href: standard-device-connectivity-urls-commercial.md
+            - name: Standard device connectivity URLs (US government)
+              href: standard-device-connectivity-urls-gov.md
         - name: Onboard client devices
           items:
           - name: Onboard Windows devices using the Defender deployment tool
@@ -369,20 +373,23 @@
             href: configure-vulnerability-email-notifications.md
           - name: Configure advanced features
             href: advanced-features.md
+          - name: Configure library management for live response
+            href: configure-libraries-live-response.md
 
-        - name: Permissions
+        - name: Permissions management
           items:
+          - name: Overview of permissions management
+            href: assign-portal-access.md
           - name: Use basic permissions to access the portal
             href: basic-permissions.md
-          - name: Assign user access to the portal
-            href: assign-portal-access.md
-            items:
-            - name: Create and manage roles
-              href: user-roles.md
-            - name: Create and manage device groups
-              href: machine-groups.md
-            - name: Create and manage device tags
-              href: machine-tags.md
+          - name: Manage portal access using role-based access control
+            href: rbac.md
+          - name: Create and manage roles
+            href: user-roles.md
+          - name: Create and manage device groups
+            href: machine-groups.md
+          - name: Create and manage device tags
+            href: machine-tags.md
         - name: Rules and exclusions
           items:
           - name: Exclusions overview
@@ -499,8 +506,6 @@
             href: linux-support-connectivity.md
           - name: Troubleshoot performance issues
             href: linux-support-perf.md
-          - name: Troubleshoot missing events issues
-            href: linux-support-events.md
 
         - name: Troubleshoot Mobile Threat Defense
           items:
@@ -600,34 +605,30 @@
 
   - name: Detect threats and protect endpoints
     items:
-    - name: Microsoft Defender Vulnerability Management
+    - name: Detect vulnerabilities
+    - name: Detect vulnerabilities
       href: /defender-vulnerability-management
-    - name: Device discovery
-      items:
-      - name: Device discovery overview
+    - name: Discover devices
+    - name: Discover devices
+      items:      
+      - name: Overview
         href: device-discovery.md
-      - name: Configure device discovery
+      - name: Manage device discovery
         href: configure-device-discovery.md
-      - name: Enterprise IoT security
-        items:
-        - name: Securing IoT devices in the enterprise
-          href: /azure/defender-for-iot/organizations/concept-enterprise/
-        - name: Enable Enterprise IoT security with Defender for Endpoint
-          href: /azure/defender-for-iot/organizations/eiot-defender-for-endpoint/
-        - name: Manage Defender for IoT plans
-          href: /azure/defender-for-iot/organizations/manage-subscriptions-enterprise/
-      - name: Device discovery FAQ
-        href: device-discovery-faq.md  
+      - name: Review and assess devices
+        href: assess-devices.md        
 
-    - name: Authenticated network scans
-      href: network-devices.md
+      - name: Configure network authenticated scans
+        href: network-devices.md
+      - name: Troubleshoot
+        href: troubleshoot-device-discovery-network-scans.md
     - name: Devices
-      items:
+      items:      
       - name: Device inventory
         href: machines-view-overview.md
       - name: Exclude devices
         href: exclude-devices.md
-      - name: Identifying transient devices
+      - name: Identify transient devices
         href: transient-device-tagging.md
       - name: Collect custom device data
         items:
@@ -639,7 +640,7 @@
         href: internet-facing-devices.md
       - name: Device timeline
         href: device-timeline-event-flag.md
-      - name: Manage device group and tags
+      - name: Manage device groups and tags
         href: machine-tags.md
 
     - name: Tamper resiliency
@@ -878,7 +879,7 @@
           href: use-intune-config-manager-microsoft-defender-antivirus.md
         - name: Use Microsoft Defender for Endpoint Security Settings Management to manage
             Microsoft Defender Antivirus
-          href: mde-security-settings-management.md
+          href: /intune/intune-service/protect/mde-security-integration?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
           displayName: Use Microsoft Defender for Endpoint Security Settings Management to
             manage Microsoft Defender Antivirus MDE Attach MDE Attach v2
         - name: Use Group Policy settings to manage Microsoft Defender Antivirus
@@ -991,7 +992,7 @@
       - name: Manage endpoint security policies
         href: manage-security-policies.md
       - name: Deploy endpoint security policies from Intune
-        href: /mem/intune/protect/mde-security-integration?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
+        href: /intune/intune-service/protect/mde-security-integration?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
       - name: Increase compliance with the security baseline
         href: configure-machines-security-baseline.md
       - name: Optimize attack surface reduction rule deployment and detections
@@ -1069,9 +1070,9 @@
           - name: Contain user from the network
             href: respond-machine-alerts.md#contain-user-from-the-network
           - name: Automatically apply GPO hardening (predictive shielding)
-            href: respond-machine-alerts.md#gpo-hardening
+            href: respond-machine-alerts.md#gpo-hardening-preview
           - name: Automatically apply Safeboot hardening (predictive shielding)
-            href: respond-machine-alerts.md#safeboot-hardening                     
+            href: respond-machine-alerts.md#safeboot-hardening-preview
           - name: Consult a threat expert
             href: respond-machine-alerts.md#consult-a-threat-expert
           - name: Check activity details in Action center
@@ -1616,11 +1617,12 @@
          href: malware/worms-malware.md
     - name: Understand threat intelligence concepts
       href: threat-indicator-concepts.md
-    - name: Release notes archive
-      items:
-        - name: Android
-          href: release-notes-archive-android.md
-      
+    - name: Release notes archive      
+      items: 
+      - name: What's new archive
+        href: whats-new-mde-archive.md
+      - name: Release notes archive
+        href: release-notes-mde-archive.md
   - name: Microsoft Defender XDR docs
     items:
     - name: Microsoft Defender XDR

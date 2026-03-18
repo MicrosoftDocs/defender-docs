@@ -55,6 +55,8 @@ To remove policy conflicts, here's our current, recommended process:
 
 > [!NOTE]
 > Microsoft Defender for Endpoint attach configurations can be overridden by other configuration tools that write to the same registry location.
+> 
+> Starting in February 2026, Microsoft Defender Antivirus on Windows is changing how antivirus settings (like exclusions) are stored when Microsoft Defender for Endpoint configuration management is enabled in an organization. Starting with the 4.18.25110.6 release, organizations using Microsoft Defender for Endpoint configuration management can no longer read exclusion values directly from the local device registry. Instead, setting configuration must be retrieved using supported Microsoft Defender PowerShell cmdlets. Organizations using Defender for Endpoint configuration management must use supported Defender PowerShell cmdlets (such as Get-MpPreference).
 
 When policies and settings are configured in multiple tools, in general, here's the order of precedence:
 

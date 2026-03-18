@@ -123,8 +123,8 @@ Copy the unified solution package, onboarding script, and migration script to th
 ## Related articles
 
 - [Microsoft Monitoring Agent Setup](/services-hub/health/mma-setup)
-- [Deploy applications - Configuration Manager](/mem/configmgr/apps/deploy-use/deploy-applications)
-- [Microsoft Defender for Endpoint - Configuration Manager](/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection)
+- [Deploy applications - Configuration Manager](/intune/configmgr/apps/deploy-use/deploy-applications)
+- [Microsoft Defender for Endpoint - Configuration Manager](/intune/configmgr/protect/deploy-use/defender-advanced-threat-protection)
 - [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
 - [Microsoft Defender for Endpoint: Defending Windows Server 2012 R2 and 2016](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/defending-windows-server-2012-r2-and-2016/ba-p/2783292)
 

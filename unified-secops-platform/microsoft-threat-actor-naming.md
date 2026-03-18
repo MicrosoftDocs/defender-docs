@@ -9,7 +9,7 @@ ms.sitesec: library
 ms.localizationpriority: medium
 ms.author: guywild
 author: guywi-ms
-manager: dansimp
+manager: orspodek
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -18,7 +18,7 @@ ms.custom:
 - cx-ti
 ms.topic: article
 search.appverid: met150
-ms.date: 01/15/2026
+ms.date: 03/06/2026
 ---
 
 # How Microsoft names threat actors
@@ -77,6 +77,7 @@ The following table lists publicly disclosed threat actor names with their origi
 |[Citrine Sleet](https://www.microsoft.com/en-us/security/blog/2024/08/30/north-korean-threat-actor-citrine-sleet-exploiting-chromium-zero-day/)|North Korea|Storm-0139, Storm-1222, LABYRINTH CHOLLIMA|
 |Clay Typhoon|China | Storm-2416|
 |Copper Typhoon|China|Tonto Team, Earth Akhlut, Sharp-R|
+|[Coral Sleet](https://aka.ms/threat-actors-operationalize-ai)|North Korea|Storm-1877|
 |Cotton Sandstorm|Iran|NEPTUNIUM, HAYWIRE KITTEN, Vice Leaker|
 |[CovertNetwork-1658](https://www.microsoft.com/en-us/security/blog/2024/10/31/chinese-threat-actor-storm-0940-uses-credentials-from-password-spray-attacks-from-a-covert-network/)|Covert network|ORB07|
 |Crescent Typhoon|China|CESIUM|
@@ -181,6 +182,7 @@ The following table lists publicly disclosed threat actor names with their origi
 |[Storm-1567](https://www.microsoft.com/en-us/security/blog/2023/10/11/automatic-disruption-of-human-operated-attacks-through-containment-of-compromised-user-accounts/)|Financially motivated|PUNK SPIDER|
 | [Storm-1607](https://www.microsoft.com/en-us/security/blog/2025/08/21/think-before-you-clickfix-analyzing-the-clickfix-social-engineering-technique/) | Group in development ||
 |[Storm-1674](https://www.microsoft.com/en-us/security/blog/2023/12/28/financially-motivated-threat-actors-misusing-app-installer/)|Financially motivated||
+|[Storm-1747](https://www.microsoft.com/en-us/security/blog/2026/03/04/inside-tycoon2fa-how-a-leading-aitm-phishing-kit-operated-at-scale/)|Group in development||
 |[Storm-1811](https://www.microsoft.com/en-us/security/blog/2024/05/15/threat-actors-misusing-quick-assist-in-social-engineering-attacks-leading-to-ransomware/)|Financially motivated|CURLY SPIDER|
 |Storm-1849|China|UAT4356|
 |[Storm-1865](https://www.microsoft.com/en-us/security/blog/2025/03/13/phishing-campaign-impersonates-booking-com-delivers-a-suite-of-credential-stealing-malware/)|Group in development||

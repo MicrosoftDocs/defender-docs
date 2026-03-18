@@ -24,6 +24,9 @@ To resolve (deanonymize) usernames in Cloud Discovery data:
 
 - You must have the [Cloud Discovery global admin](manage-admins.md#built-in-admin-roles-in-defender-for-cloud-apps) role with anonymization permissions enabled during role assignment.
 
+> [!NOTE]
+> Microsoft recommends that you use roles with the fewest permissions. This strategy helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
 ## How data anonymization works
 
 1. There are three ways to apply data anonymization:
