@@ -13,9 +13,7 @@ ai-usage: ai-assisted
 
 # Investigate an Active Directory domain
 
-The Active Directory (AD) domain page in Microsoft Defender provides a single view of your on-premises Active Directory environment. It brings together domain health, sensor coverage, security policies, trust relationships, and recommendations in one place, without requiring direct access to the on-premises environment.
-
-Use the domain page to quickly determine whether a domain is healthy and secure. The page shows deployment status, sensor health, identity counts, and active recommendations that directly affect your domain's health score.
+The Active Directory (AD) domain page in Microsoft Defender shows domain health, sensor coverage, security policies, trust relationships, and recommendations for your on-premises Active Directory environment. Use it to check whether a domain is healthy and secure, review deployment status, and act on recommendations.
 
 ## Prerequisites
 
@@ -34,9 +32,9 @@ To switch between domains when you're on the domain page, use the domain selecto
 
 ## Overview tab
 
-The **Overview** tab provides a high-level domain summary with the following sections:
+The **Overview** tab provides a domain summary with the following sections:
 
-### Summary
+### Domain details
 
 The **Details** section shows key domain attributes:
 
@@ -114,7 +112,7 @@ Provides human-readable summaries of key AD security policies in four cards:
 - **Kerberos Policy**: Maximum ticket age and maximum renewal age.
 - **LDAP & Machine Account**: LDAP signing policy and machine account quota. If the domain has active recommendations for insecure configurations, a warning banner appears with a link to view the recommendations.
 
-Use this tab to review critical configurations and determine whether they're aligned with modern security standards, without needing direct access to the on-premises environment.
+Use this tab to review critical AD configurations and check whether they meet current security standards.
 
 ## Trusts tab
 
@@ -126,11 +124,11 @@ Shows trust relationships for the domain. You can export the list.
 | **Direction** | The direction of the trust (for example, Inbound, Outbound, or Bidirectional). |
 | **Attributes** | The attributes of the trust relationship. |
 
-Use this tab to identify external exposure and understand how trust flows across your Active Directory forest.
+Use this tab to review which domains trust each other and in which direction.
 
 ## Group Accounts tab
 
-Lists the groups in the domain. You can filter by tags, type, and scope. You can mark groups as sensitive to support exposure analysis and lateral movement path detection.
+Lists the groups in the domain. You can filter by tags, type, and scope. You can mark groups as sensitive to support exposure analysis and detect potential attack paths.
 
 | Column | Description |
 |---|---|
@@ -144,7 +142,7 @@ Lists the groups in the domain. You can filter by tags, type, and scope. You can
 
 ## Computer Accounts tab
 
-Lists the computer accounts in the domain. You can filter by tags. You can mark computer accounts as sensitive to support exposure analysis and lateral movement path detection.
+Lists the computer accounts in the domain. You can filter by tags. You can mark computer accounts as sensitive to support exposure analysis and detect potential attack paths.
 
 | Column | Description |
 |---|---|
