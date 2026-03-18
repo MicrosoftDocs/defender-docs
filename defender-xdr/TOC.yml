@@ -256,6 +256,8 @@
             href: advanced-hunting-cloudappevents-table.md
           - name: CloudAuditEvents
             href: advanced-hunting-cloudauditevents-table.md
+          - name: CloudPolicyEnforcementEvents
+            href: advanced-hunting-cloudpolicyenforcementevents-table.md
           - name: CloudProcessEvents
             href: advanced-hunting-cloudprocessevents-table.md
           - name: CloudStorageAggregatedEvents
