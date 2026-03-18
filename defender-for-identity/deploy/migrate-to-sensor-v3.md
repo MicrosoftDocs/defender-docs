@@ -12,13 +12,9 @@ ai-usage: ai-assisted
 #customer intent: As a security admin, I want to migrate my Defender for Identity sensors from v2.x to v3.x so that I can use the latest sensor without downtime or data loss.
 ---
 
-# Migrate from sensor v2.x to sensor v3.x (Preview)
+# Migrate to the Defender for Identity sensor v3.x (Preview)
 
-You can migrate your Defender for Identity sensors from v2.x to v3.x directly from the Microsoft Defender portal. The migration doesn't require you to manually redeploy or uninstall the v2.x sensor. Server configurations and security coverage are preserved, with no data duplication or downtime.
-
-> [!IMPORTANT]
-> This feature is currently in Preview.
-
+You can migrate your Defender for Identity sensors from v2.x to v3.x directly from the Microsoft Defender portal. The migration handles the switchover automatically, so you don't need to uninstall the v2.x sensor or redeploy the v3.x sensor yourself. Server configurations and security coverage are preserved, with no data duplication or downtime.
 ## Prerequisites
 
 Before you migrate, make sure each server meets the following requirements:
@@ -32,32 +28,25 @@ For the full list of v3.x requirements, see [Defender for Identity sensor v3.x p
 
 ## Start the migration
 
-The migration is managed through the **Sensors** page in the Microsoft Defender portal. Servers that meet all prerequisites are marked as **Ready for migration** on the Sensors page.
+Servers that meet all prerequisites appear as **Ready for migration** on the **Sensors** page.
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **System** > **Settings** > **Identities** > **Sensors**.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Identities** > **On-premises** > **Sensors**.
 1. Select one or more servers marked as **Ready for migration** and select **Migrate**.
 1. In the confirmation prompt, review the details and confirm to start the migration.
 
 > [!NOTE]
-> The migration typically takes up to 20 minutes. During this time, the v2.x sensor continues to run until the v3.x sensor is ready, so there's no gap in security coverage. The Sensors page shows the current migration status for each server.
-
-If a migration fails, you can retry it. Select the server on the **Sensors** page and select **Migrate** again.
-
+> The migration typically takes up to 20 minutes. During this time, the v2.x sensor continues to run until the v3.x sensor is ready, so there's no gap in security coverage. 
 Audit logs are generated for each migration, including the date, status, and whether the migration was initiated by a user or the system.
 
-## Post-migration steps
-
-After the migration completes, configure the v3.x sensor and clean up the v2.x sensor on each migrated server.
-
-### Configure the v3.x sensor
+## Configure the v3.x sensor
 
 Complete the configuration steps described in [Defender for Identity sensor v3.x prerequisites](prerequisites-sensor-version-3.md), including:
 
 - [Configure RPC auditing](prerequisites-sensor-version-3.md#configure-rpc-auditing)
-- [Configure Windows event auditing](prerequisites-sensor-version-3.md#configure-windows-event-auditing) — existing auditing configurations from the v2.x sensor are preserved and converted for v3.x, but we recommend enabling automated auditing for optimal configuration validation.
-- [Switch from gMSA to local system](prerequisites-sensor-version-3.md#recommended-configurations-for-optimal-performance) — the v3.x sensor uses the local system identity. If you had a gMSA configured for the v2.x sensor, remove the gMSA configuration.
+- [Configure Windows event auditing](prerequisites-sensor-version-3.md#configure-windows-event-auditing). Existing auditing configurations from the v2.x sensor are preserved and converted for v3.x, but we recommend enabling automated auditing for optimal configuration validation.
+- [Switch from gMSA to local system](prerequisites-sensor-version-3.md#recommended-configurations-for-optimal-performance). The v3.x sensor uses the local system identity. If you had a gMSA configured for the v2.x sensor, remove the gMSA configuration.
 
-### Clean up the v2.x sensor
+## Clean up the v2.x sensor
 
 The migration disables the v2.x sensor service, but the v2.x sensor software remains installed on the server. Complete the following cleanup steps:
 

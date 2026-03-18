@@ -27,6 +27,16 @@ Before activating the Defender for Identity sensor v3.x, make sure that the serv
 - Is running Windows Server 2019 or later.
 - Includes the [March 2026 or later](https://support.microsoft.com/en-us/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea) cumulative update.
 
+### Supported server types
+
+The v3.x sensor supports domain controllers, including domain controllers that also run the following additional identity roles:
+
+- Active Directory Federation Services (AD FS)
+- Active Directory Certificate Services (AD CS)
+- Microsoft Entra Connect
+
+Standalone servers that run AD FS, AD CS, or Microsoft Entra Connect without the domain controller role still require the [Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md).
+
 ## Licensing requirements
 
 Deploying Defender for Identity requires one of the following Microsoft 365 licenses:
