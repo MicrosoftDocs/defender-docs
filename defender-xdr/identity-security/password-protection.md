@@ -1,7 +1,7 @@
 ---
 title: Password protection in Microsoft Defender
-description: Learn how password protection in Microsoft Defender helps you identify leaked credentials, exposed passwords, and policy weaknesses across your identity sources.
-#customer intent: As a security admin, I want to understand password-related risks across my identity estate so that I can identify exposed credentials, weak policies, and hygiene gaps and take action to reduce risk.
+description: Learn how the Password protection page in Microsoft Defender helps you find leaked credentials, exposed passwords, and weak password policies across your identity sources.
+#customer intent: As a security admin, I want to see password-related risks across my identity sources so that I can find exposed credentials, weak policies, and configuration issues and take action to reduce risk.
 author: AbbyMSFT
 ms.author: abbyweisberg
 ms.date: 03/17/2026
@@ -13,9 +13,7 @@ ai-usage: ai-assisted
 
 # Password protection in Microsoft Defender
 
-Password protection is a unified view of password-related risks across your identity estate. It brings together credential exposure, hygiene gaps, and policy weaknesses into a single experience, with built-in remediation actions you can take without switching tools.
-
-Compromised credentials remain one of the most effective attack vectors, even in environments with multifactor authentication (MFA) and modern authentication. Password protection helps security and identity teams understand where passwords are exposed, both externally and internally. Teams can then act quickly to contain risk across hybrid environments that include on-premises Active Directory, cloud identity providers, and SaaS platforms.
+The **Password protection** page in Microsoft Defender shows password-related risks across your identity sources in one place. Use it to find leaked credentials, exposed passwords, weak password policies, and configuration issues, and then take action directly from the page. It supports on-premises Active Directory, cloud identity providers like Microsoft Entra ID, and non-Microsoft providers like Okta.
 
 ## Prerequisites
 
@@ -33,21 +31,14 @@ The page includes a left panel where you select the identity source you want to 
 - **Active Directory**: Available on all four tabs.
 - **Microsoft Entra ID**: Available on the Leaked Credentials tab.
 - **Okta**: Available on the Password Hygiene and Password Policies tabs.
-- **PingOne**: Available on the Password Hygiene and Password Policies tabs.
 
 ## Password Hygiene
 
-The **Password Hygiene** tab shows password hygiene weaknesses that attackers commonly exploit for persistence and privilege escalation. Each item is a recommendation you can use to prioritize and reduce post-compromise risk.
-
-> [!NOTE]
-> Supported identity sources: Active Directory, Okta, PingOne.
+The **Password Hygiene** tab shows password weaknesses that attackers commonly exploit. Each item is a recommendation you can act on to reduce risk.
 
 ## Password Policies
 
-The **Password Policies** tab provides a normalized view of password-related policies across supported identity providers. Use this tab to determine whether your password policies are aligned with modern security standards across your environment.
-
-> [!NOTE]
-> Supported identity sources: Active Directory, Okta, PingOne.
+The **Password Policies** tab shows password policies from your identity providers side by side. Use this tab to check whether your password policies meet current security standards.
 
 | Column | Description |
 |---|---|
@@ -62,7 +53,7 @@ The **Password Policies** tab provides a normalized view of password-related pol
 
 ## Leaked Credentials
 
-The **Leaked Credentials** tab identifies accounts whose valid credentials were exposed outside your organization. These credentials are often shared or sold publicly, giving attackers immediate access using legitimate accounts.
+The **Leaked Credentials** tab shows accounts with credentials that were found outside your organization, for example on public paste sites or the dark web.
 
 Exposures are sourced from:
 
@@ -70,22 +61,16 @@ Exposures are sourced from:
 - Law enforcement intelligence
 - Dark web and underground research
 
-From this tab, you can immediately reset passwords or disable accounts, individually or in bulk, to prevent misuse before access occurs.
-
-> [!NOTE]
-> Supported identity sources: Active Directory, Microsoft Entra ID.
+From this tab, you can reset passwords or disable accounts, individually or in bulk, to prevent misuse.
 
 ## Exposed Passwords
 
-The **Exposed Passwords** tab highlights accounts and configurations that expose passwords in insecure ways. It focuses on reducing clear-text storage and discoverability that attackers commonly abuse for lateral movement.
+The **Exposed Passwords** tab shows accounts and settings that store or expose passwords in insecure ways, such as in plain text or in easily discoverable locations.
 
 Examples include:
 
 - Clear-text or discoverable credentials stored in Active Directory attributes, identified using AI-based detection.
 - Reversible passwords embedded in Group Policy Objects (GPOs).
-
-> [!NOTE]
-> Supported identity sources: Active Directory.
 
 ## Common columns
 
@@ -103,4 +88,4 @@ The Password Hygiene, Leaked Credentials, and Exposed Passwords tabs share the f
 
 - [The Identity Security dashboard](/defender-for-identity/dashboard)
 - [View your identity coverage and maturity](/defender-xdr/identity-security/coverage-maturity)
-- [Identity security recommendations coverage](/defender-xdr/identity-security/identity-security-recommendations)
+- [Unified identity security recommendations](/defender-xdr/identity-security/identity-security-recommendations)

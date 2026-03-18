@@ -95,10 +95,10 @@ items:
       href: integrate-microsoft-and-pam-services.md
 - name: Manage
   items:
-  - name: View the identity security dashboard
-    href: dashboard.md
   - name: Manage your identities
     items:
+    - name: View the identity security dashboard
+      href: dashboard.md
     - name: Manage related identities and accounts
       href: manage-related-identities-accounts.md
     - name: Create custom account correlation rules
