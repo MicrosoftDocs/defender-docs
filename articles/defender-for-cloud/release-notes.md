@@ -31,7 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| April 1, 2026 | Preview | AI model security for Azure Machine Learning (Preview) |
+| April 1, 2026 | Preview | [AI model security for Azure Machine Learning (Preview)](#ai-model-security-for-azure-machine-learning-preview) |
 
 ### AI model security for Azure Machine Learning (Preview)
 
