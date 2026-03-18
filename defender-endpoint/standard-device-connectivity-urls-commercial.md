@@ -151,7 +151,7 @@ For more information on how to manage Windows connections, see [Manage connectio
 
 While this list continues to be updated, Microsoft can't provide any guarantees on it being up-to-date with the latest product or OS changes. Customers should use this list as a baseline and conduct their testing before using it directly in production.
 
-Because these Defender for Endpoint-related processes generate network communications, make sure that communications from these processes are not blocked.
+Because these Defender for Endpoint-related processes generate network communications, make sure that communications from these processes aren't blocked.
 
 ## Windows 11, Windows 10, Windows Server 2022, and Windows Server 2019
 
