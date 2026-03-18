@@ -5,7 +5,7 @@ titleSuffix: Microsoft Security
 description: Learn how Microsoft Sentinel graph enables multi-modal security analytics through graph-based representation of security data, providing deep insights into digital environments and attack paths.
 author: mberdugo
 ms.topic: overview
-ms.date: 09/28/2025
+ms.date: 03/18/2026
 ms.author: monaberdugo
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-graph
@@ -81,7 +81,7 @@ With custom graphs you can:
 * Query graphs using the power of Graph Query Language (GQL) and visualize subgraphs and attack paths.
 * Run advanced graph algorithms on your custom graph.
 
-For more information see [Custom graph overview](custom-graphs-overview.md).
+For more information, see [Custom graph overview](custom-graphs-overview.md).
 
 
 ## Pricing

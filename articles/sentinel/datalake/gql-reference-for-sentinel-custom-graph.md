@@ -3,7 +3,7 @@ title: Graph Query Language (GQL) reference for Microsoft Sentinel graph (Previe
 description: Learn the fundamental concepts, functions, and operators of Graph Query Language (GQL) for querying graph data in Microsoft Sentinel graph.
 author: EdB-MSFT
 ms.author: edbaynash
-ms.date: 03/05/2026
+ms.date: 03/18/2026
 ms.topic: reference
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
@@ -137,7 +137,7 @@ Match modes control how graph elements can be reused across pattern variables wi
 
 ### DIFFERENT EDGES (default)
 
-The default mode. A matched edge cannot bind to more than one edge variable, but nodes can be reused freely.
+The default mode. A matched edge can't bind to more than one edge variable, but nodes can be reused freely.
 
 ```gql
 MATCH (a)-[r1]->(b)-[r2]->(c) 
@@ -170,7 +170,7 @@ MATCH WALK (a)-[]->{1,3}(b)
 
 ### TRAIL
 
-Filters out paths that have repeating edges. Nodes may repeat, but each edge can only appear once per path.
+Filters out paths that have repeating edges. Nodes can repeat, but each edge can only appear once per path.
 
 ```gql
 MATCH TRAIL (a)-[]->{1,3}(b)
@@ -312,7 +312,7 @@ The following table lists the core GQL functions and operators, and examples.
 
 ## Best practices 
 
-+  GQL does not clearly define how dynamic types should be handled. To avoid runtime errors, explicitly cast nested fields to their expected type (see CAST).
++  GQL doesn't clearly define how dynamic types should be handled. To avoid runtime errors, explicitly cast nested fields to their expected type (see CAST).
 
 ### Performance optimization 
 
@@ -349,7 +349,7 @@ RETURN COUNT(*) > 0 AS HasSuspiciousActivity
 > [!IMPORTANT]
 > When you design your graph schema, some common property names might conflict with GQL reserved keywords. Avoid or rename these property names.
 
-- **No INSERT/CREATE support**: Operations to change graph structures are not supported.
+- **No INSERT/CREATE support**: Operations to change graph structures aren't supported.
 
 > Instead, use KQL for all graph creation, change, and management tasks.
 
@@ -364,7 +364,7 @@ RETURN COUNT(*) > 0 AS HasSuspiciousActivity
 - **Traversal modes**: GQL defines configurable traversal modes for matching and paths. 
 For `MATCH`, the modes are `DIFFERENT EDGES` and `REPEATABLE EDGES`.
 For `PATH`, the modes are `WALK`, `TRAIL`, `ACYCLIC`, and `SIMPLE`. 
-The current implementation defaults to `DIFFERENT EDGES` and `WALK`, respectively. Some combinations are not supported.
+The current implementation defaults to `DIFFERENT EDGES` and `WALK`, respectively. Some combinations aren't supported.
 
 ## Labels() custom GQL function 
 

@@ -31,6 +31,10 @@ To interact with custom graphs, you need the following XDR permissions in Sentin
 | Persist a graph in tenant | Use one of the following Microsoft Entra ID roles:<br>[Security operator](/entra/identity/role-based-access-control/permissions-reference#security-operator)<br>[Security administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator)<br>[Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) |
 | Query a persisted graph | Use a [custom Microsoft Defender XDR unified RBAC role with *security data basics (read)*](/defender-xdr/custom-permissions-details) permissions over the Microsoft Sentinel data collection. |
 
+> [!IMPORTANT]
+> You must have permissions to read the data used in the graph. For example, if you don't have access to a specific dataset, that data won't be included in the graph.
+> To create a graph, you must not be restricted by a Sentinel scope. A scoped user would not be able to create a custom graphs.
+
 Microsoft Entra ID roles provide broad access across all workspaces in the data lake. For more information, see [Roles and permissions in Microsoft Sentinel](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake).
 
 ### Install Visual Studio Code and the Microsoft Sentinel extension 
@@ -67,6 +71,8 @@ The following steps walk you through creating your first custom graph by using a
 
    :::image type="content" source="media/create-custom-graphs/select-kernel.png"  lightbox="media/create-custom-graphs/select-kernel.png" alt-text="A screenshot of the select kernel page in Visual Studio Code.":::
 
+    > [!TIP]
+    > You can use AI prompts to help you create a custom graph notebook. For more information, see [AI-assisted custom graph authoring in Microsoft Sentinel](create-graphs-using-ai.md). 
 
 1. In an empty cell in the new notebook, paste the following sample code to get started with custom graphs:
 
@@ -87,7 +93,7 @@ The following steps walk you through creating your first custom graph by using a
     print(f"Logging level set to: {logging.getLevelName(logging.getLogger('sentinel_graph').level)} and above")
     ```
 
-    This checks the version of the library, your Spark custer region and account ID, and sets the logging level to DEBUG for detailed output.
+    This checks the version of the library, your Spark cluster region and account ID, and sets the logging level to DEBUG for detailed output.
     
 1. Run the cell to by selecting the run cell triangle icon to the left of the cell. The first time you run a cell, you might be prompted to select a kernel if you didn't already select one.
 
@@ -160,11 +166,11 @@ The following steps walk you through creating your first custom graph by using a
     ```
 
 1. Create a graph specification by using the DataFrames created in the previous step.  
-    This step creates 3 node types
+    This step creates three node types
         + Users
         + Applications 
         + Department
-    and 2 edge types
+    and two edge types
         + BelongsTo 
         + communicatedWith
 
@@ -243,7 +249,7 @@ You have now created a graph in the notebook.
 
 ### Save a custom graph in your tenant
 
-After you create a graph, you can persist it by storing the graph in your tenant with a scheduled job.
+After creating a graph, you can persist it by storing the graph in your tenant with a scheduled job.
 
 1. From your graph notebook, select **Create Scheduled Job**, then select **Create a graph job**.
 
@@ -279,12 +285,11 @@ After you create a graph job, you can view and manage the graph in your tenant f
 
     :::image type="content" source="media/create-custom-graphs/graph-job-details.png" lightbox="media/create-custom-graphs/graph-job-details.png" alt-text="A screenshot showing the graph job details tab in Visual Studio Code.":::
 
-1. When the graph build is complete, the **Status** updates to **Succeeded**. Select the **Graph Details** tab to view information about the graph. 
+1. When the graph build is complete, the **Status** updates to **Ready**. Select the **Graph Details** tab to view information about the graph. 
 
     :::image type="content" source="media/create-custom-graphs/graph-details.png" lightbox="media/create-custom-graphs/graph-details.png" alt-text="A screenshot of the graph details tab.":::
-<!-- The **Status** shows **Ready** when the graph is successfully built and stored in your tenant. -->
 
-1. You can now query the graph in the query editor.  Select the **Graph Query** tab to open the graph query editor.
+1. You can now query the graph in the query editor. Select the **Graph Query** tab to open the graph query editor.
 1. Paste the following sample GQL query to retrieve all user nodes in the graph:
 
     ```gql
@@ -301,3 +306,4 @@ For more information on GQL, see [GQL language guide](/kusto/query/graph-query-l
 ## Related articles
 
 - [Microsoft Sentinel graph provider library reference](./sentinel-graph-provider-reference.md)
+- [AI-assisted custom graph authoring in Microsoft Sentinel](create-graphs-using-ai.md)

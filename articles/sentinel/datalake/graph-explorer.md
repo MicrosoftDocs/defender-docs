@@ -1,5 +1,5 @@
 ---
-title: Query custom graphs in Microsoft Sentinel Graph (preview)
+title: Visualize custom graphs in Microsoft Sentinel Graph (preview)
 description: Learn how to use Microsoft Sentinel Graph to query, visualize, and interact with custom security graphs to gain new security insights.
 author: EdB-MSFT
 ms.author: edbaynash
@@ -11,9 +11,9 @@ ms.subservice: sentinel-graph
 #Customer intent: As a security analyst, I want to use Microsoft Sentinel Graph to query and visualize custom security graphs so that I can gain new insights into entity relationships and threats in my environment.
 ---
 
-# Query custom graphs in Microsoft Sentinel Graph (preview)
+# Visualize graphs in Microsoft Sentinel Graph (preview)
 
-Sentinel Graph is a user interface that enables you to visualize disparate datasets by querying a graph mapping. Sentinel Graph allows you to run queries to visualize the insights that matter most to your organization and supports ad hoc traversal of the graph so you can quickly investigate entities of interest. You can study the graph schema to understand the relationships defined on your graph and use any of the displayed metadata to narrow down your results. You can quickly validate your results with the table view and export them for easy integration into any preexisting workflows.  Use the Visual Studio Code Sentinel extension to create your own custom mappings that use tables in the Microsoft Sentinel data lake, then use Sentinel Graph to query and visualize the relationships between the entities in those tables. 
+Microsoft Sentinel Graph is a user interface that enables you to visualize disparate datasets by querying a graph mapping. Sentinel Graph allows you to run queries to visualize the insights that matter most to your organization and supports ad hoc traversal of the graph so you can quickly investigate entities of interest. You can study the graph schema to understand the relationships defined on your graph and use any of the displayed metadata to narrow down your results. You can quickly validate your results with the table view and export them for easy integration into any preexisting workflows. Use the Visual Studio Code Sentinel extension to create your own custom mappings that use tables in the Microsoft Sentinel data lake, then use Sentinel Graph to query and visualize the relationships between the entities in those tables. 
 
 This article explains how to use Sentinel Graph to query, visualize, and interact with graphs to obtain new insights.
 
@@ -28,7 +28,7 @@ To access Sentinel Graph and query it to produce visualizations, you must have t
 
 To use Sentinel Graph, select **Microsoft Sentinel** > **Graph** from the left-hand navigation pane.
 
-The Sentinel Graph management page lists any custom graphs that you've created in the Visual Studio Code Sentinel extension. If you haven't yet created a custom graph, see [Create a custom graph mapping](./create-custom-graphs.md) to get started.
+The Sentinel Graph management page lists any custom graphs that you created in the Visual Studio Code Sentinel extension. If you haven't created a custom graph, see [Create a custom graph mapping](./create-custom-graphs.md) to get started.
 
 If you already created custom graphs, the Sentinel Graph management page displays all available custom graphs. View an overview of each custom graph by selecting the **...** menu on any graph tile.
 
@@ -41,7 +41,7 @@ The graph creation page shows the graph schema. Use the schema to understand the
 
 :::image type="content" source="media/graph-explorer/graph-creation-schema.png" alt-text="Screenshot showing the Sentinel Graph creation page with the schema panel and query input." lightbox="media/graph-explorer/graph-creation-schema.png":::
 
-Start with the following generic query that produces a visualization for any custom graph:
+Start with the following GQL (Graph Query Language) generic query that produces a visualization for any custom graph:
 
 ```gql
 MATCH (x)-[y]->(z)
@@ -51,7 +51,7 @@ LIMIT 100
 
 For more information on using GQL, see the [GQL help documentation](./gql-reference-for-sentinel-custom-graph.md).
 
-Paste the query into the quey field and select **Run GQL query** to view your results. Once complete, the graph visualization appears.
+Paste the query into the query field and select **Run GQL query** to view your results. Once complete, the graph visualization appears.
 
 Select any node to view the node details, including the properties associated with that node. Use this information to inform subsequent queries and visualizations.
 
@@ -70,7 +70,7 @@ The following example demonstrates how to query a Device Process Graph to unders
 - *Processes* connect to *URLs*
 
 You can now draft a more specific query. In the following example, the first line specifies that you're looking for devices that utilize a process that's connected to an IP address. `MATCH (d:Device)-[h]-(p:Process)-[c]->(ip:IPAddress)`
-The second line specifies that your're looking for public IPs, narrowing our results to external connected entities that pose a greater threat. `WHERE ip.RemoteIPType = 'Public'`
+The second line specifies that you're looking for public IPs, narrowing our results to external connected entities that pose a greater threat. `WHERE ip.RemoteIPType = 'Public'`
 The last two lines specify that you want to return all available data for the specified query, but limit results to 1000 to ensure the query runs efficiently. `RETURN * LIMIT 1000`
 
 ```gql
@@ -82,7 +82,7 @@ LIMIT 1000
 
 :::image type="content" source="media/graph-explorer/graph-specific-query.png" alt-text="Screenshot showing the graph visualization for a specific query filtering devices connected to public IP addresses." lightbox="media/graph-explorer/graph-specific-query.png":::
 
-The following is an example of a more granular query with additional search parameters. This query searches for malicious IP addresses and devices communicating with more than one device. The first line searches for devices that connect to IP addresses that are known to be used by threat actors. The `DISTINCT` clause searches for unique IP and device values. The `COLLECT_LIST` groups the device names in a singular column in the **Table** view, and `DeviceCount` specifies that only IPs with more than one connected device are listed.
+The following example demonstrates a more granular query with additional search parameters. This query searches for malicious IP addresses and devices communicating with more than one device. The first line searches for devices that connect to IP addresses that are known to be used by threat actors. The `DISTINCT` clause searches for unique IP and device values. The `COLLECT_LIST` groups the device names in a singular column in the **Table** view, and `DeviceCount` specifies that only IPs with more than one connected device are listed.
 
 ```gql
 MATCH (d:Device)-[c]->(ip:IPAddress)-[l]->(ti:ThreatIntelIndicatorIP)

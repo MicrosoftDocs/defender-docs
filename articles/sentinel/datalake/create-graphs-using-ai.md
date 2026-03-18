@@ -17,7 +17,7 @@ ms.collection: ms-security
 
 Use GitHub Copilot in Visual Studio Code with Microsoft Sentinel to create, modify, and query custom security graphs using Jupyter notebooks. Describe what you want to build in natural language, review the generated notebook, and refine it as needed.
 
-Use Copilot for a variety of graph authoring tasks, including:
+Use Copilot for various graph authoring tasks, including:
 - Create a complete graph authoring notebook from a description
 - Modify or debug an existing graph
 - Understand generated graph code

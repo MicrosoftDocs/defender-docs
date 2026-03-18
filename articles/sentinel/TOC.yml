@@ -610,7 +610,7 @@
             - name: Microsoft Sentinel graph provider reference
               href: datalake/sentinel-graph-provider-reference.md
             - name: Create custom graph using AI 
-              href: datalake/graph-ai-authoring.md  
+              href: datalake/create-graphs-using-ai.md 
             - name: GQL reference for Sentinel custom graph
               href: datalake/gql-reference-for-sentinel-custom-graph.md
     - name: Microsoft Sentinel MCP server

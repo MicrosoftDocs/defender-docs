@@ -4,7 +4,7 @@ description: Reference documentation for the Microsoft Sentinel Graph Builder AP
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: reference
-ms.date: 03/03/2026
+ms.date: 03/18/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 
