@@ -133,7 +133,7 @@ In the support table, **NA** indicates that the feature isn't available.
 | [Defender for Azure Cosmos DB](concept-defender-for-cosmos.md) | GA | NA | NA |
 | **DEFENDER FOR SERVERS FEATURES** | | | |
 | [File Integrity Monitoring](file-integrity-monitoring-overview.md) | GA | GA<sup>[2](#footnote2)</sup> |  NA |
-| **AI Services Features** | | | |
+| **AI SERVICES FEATURES** | | | |
 | [Suspicious prompt evidence](ai-onboarding.md#enable-suspicious-prompt-evidence) | GA | NA | NA | 
 | [Data security for AI interactions](ai-onboarding.md#enable-data-security-for-microsoft-foundry-with-microsoft-purview) | Preview | NA | NA |
 | [AI model security](ai-model-security.md) | Preview | NA | NA |
