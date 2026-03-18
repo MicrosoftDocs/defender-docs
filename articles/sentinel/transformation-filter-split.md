@@ -96,7 +96,7 @@ Follow these steps to create a filter transformation rule:
 
 1. Select a table. In the side panel, select **Filter rule**.
 
-:::image type="content" source="media/transformation-filter-split/table-properties-filter.png" alt-text="Screenshot showing the table properties in Microsoft Sentinel." lightbox="media/transformation-filter-split/table-properties-filter.png":::
+    :::image type="content" source="media/transformation-filter-split/table-properties-filter.png" alt-text="Screenshot showing the table properties in Microsoft Sentinel." lightbox="media/transformation-filter-split/table-properties-filter.png":::
 
 
 1. In the side panel, enter a **Rule name**.
@@ -105,8 +105,8 @@ Follow these steps to create a filter transformation rule:
 1. Set the **rule status** switch to **On** to enable the filter.
 
 
-> [!IMPORTANT]
-> Filters filter data out. Data matching the filter condition is discarded and isn't ingested to either Analytics or Data lake tiers. Ensure your KQL expression accurately captures the data you want to exclude.
+    > [!IMPORTANT]
+    > Filters filter data out. Data matching the filter condition is discarded and isn't ingested to either Analytics or Data lake tiers. Ensure your KQL expression accurately captures the data you want to exclude.
 
 1. To add another condition, select **Add condition** and enter a new KQL expression to filter out data. Multiple conditions are combined with a logical OR, so data matching any of the conditions is filtered out.
 
@@ -114,9 +114,7 @@ Follow these steps to create a filter transformation rule:
 
 1. Verify that the filter rule is applied by checking the **Transformation Rules** column for the table. The column displays **Filter** when a filter rule is active.
 
-:::image type="content" source="media/transformation-filter-split/filter-rule.png" alt-text="Screenshot showing the filter rule applied in the table list in Microsoft Sentinel." lightbox="media/transformation-filter-split/filter-rule.png":::
-
-
+    :::image type="content" source="media/transformation-filter-split/filter-rule.png" alt-text="Screenshot showing the filter rule applied in the table list in Microsoft Sentinel." lightbox="media/transformation-filter-split/filter-rule.png":::
 
 ## Configure a split transformation rule
 
@@ -134,7 +132,7 @@ Follow these steps to create a split transformation rule:
 1. Verify that the split rule is applied by checking the **Transformation Rules** column for the table. The column displays **Split** when a split rule is active.
 
 > [!NOTE]
-> The split data ingested into the Data lake tier goes into a separate table with the same name as the original table but with a "_SPLT" suffix. For example, if you apply a split rule to the "FirewallLogs" table, the data routed to the Data lake tier is ingested into a separate "FirewallLogs_SPLT" table. This setup lets you manage retention and access policies separately for Analytics and Data lake tiers.
+> The split data ingested into the Data lake tier goes into a separate table with the same name as the original table but with an "_SPLT" suffix. For example, if you apply a split rule to the "FirewallLogs" table, the data routed to the Data lake tier is ingested into a separate "FirewallLogs_SPLT" table. This setup lets you manage retention and access policies separately for Analytics and Data lake tiers.
 
 :::image type="content" source="media/transformation-filter-split/split-rule.png" alt-text="Screenshot showing the split rule applied in the table list in Microsoft Sentinel." lightbox="media/transformation-filter-split/split-rule.png":::
 
