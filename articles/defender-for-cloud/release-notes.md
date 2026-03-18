@@ -37,13 +37,13 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 April 1, 2026
 
-Microsoft Defender for Cloud's AI model security is no available in preview for Azure Machine Learning registries and workspaces. AI model security provides security teams the ability to discover and scan custom AI models for risks before deployment and the ability to review findings in Defender for Cloud.
+Microsoft Defender for Cloud now offers AI model security in preview for Azure Machine Learning registries and workspaces. AI model security helps security teams discover and scan custom AI models for risks before deployment, and review findings in Defender for Cloud.
  
-With AI model security you can:
+By using AI model security, you can:
 - Discover AI models in Azure Machine Learning registries and workspaces.
 - Scan supported model artifacts for malware and unsafe operators. 
-- Review security findings and remediate and surfaced issues in Defender for Cloud.
-- Gain teh ability to perform CLI-based scanning for CI/CD integrations.
+- Review security findings and remediate surfaced issues in Defender for Cloud.
+- Perform CLI-based scanning for CI/CD integrations.
  
 Learn more about [AI model security](ai-model-security.md).
 
