@@ -27,11 +27,11 @@ To protect your Kubernetes containers, Defender for Containers receives and anal
 - Workload configuration from Azure Policy
 - Security signals and events from the node level
 
-## Deployment models
+## Deployment options
 
 Defender for Containers components can be deployed automatically when the Containers plan is enabled, using native AKS integrations or Azure Arc extensions for connected clusters.
 
-In environments that require additional control, the Defender sensor can also be deployed and managed manually using Helm, supporting Infrastructure as Code (IaC) and GitOps workflows.
+In environments that require additional control, components can also be deployed and managed manually using Helm, supporting Infrastructure as Code (IaC) and GitOps workflows.
 
 ## How Defender for Containers connects to your environment
 
@@ -51,6 +51,8 @@ The following table shows how key Defender for Containers capabilities are imple
 | Kubernetes posture assessment | Yes | No |
 | Runtime threat detection | No | Yes (Defender sensor) |
 | Control plane threat detection | Yes | No |
+
+Runtime threat detection requires the Defender sensor to be deployed on the cluster.
 
 ### Connection to container registries
 

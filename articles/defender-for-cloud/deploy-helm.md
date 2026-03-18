@@ -8,7 +8,7 @@ ms.author: elkrieger
 ai-usage: ai-assisted
 ---
 
-# Install Defender for Containers sensor by using Helm
+# Install Defender for Containers sensor using Helm
 
 This article describes how to install and configure the Microsoft Defender for Containers sensor on AKS, EKS, and GKE clusters by using Helm. You learn about prerequisites, enabling Defender for Containers, and step-by-step deployment instructions for different environments.
 
