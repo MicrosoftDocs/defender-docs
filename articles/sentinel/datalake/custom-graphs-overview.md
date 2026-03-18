@@ -85,5 +85,5 @@ Microsoft Sentinel provides multiple options for visualizing graphs, including t
 
 :::image type="content" source="media/custom-graphs-overview/graph-explorer.png" alt-text="Screenshot of the Sentinel graph in Microsoft Sentinel showing a graph visualization." lightbox="media/custom-graphs-overview/graph-explorer.png":::
 
-For more information on visualizing graphs in Microsoft Sentinel using Sentinel graph, see [Microsoft Sentinel graph](./sentinel-graph-visualization).
+For more information on visualizing graphs in Microsoft Sentinel using Sentinel graph, see [Microsoft Sentinel graph](./sentinel-graph-visualization.md).
 
