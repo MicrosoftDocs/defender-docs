@@ -2,7 +2,7 @@
 title: Enable threat protection for AI services
 description: Learn how to enable threat protection for AI services on your Azure subscription for Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
-ms.date: 02/12/2026
+ms.date: 04/01/2026
 ms.author: elkrieger
 author: Elazark
 ---
@@ -43,7 +43,7 @@ With the AI services threat protection plan enabled, you can control whether the
 
 - **[Data security for AI interactions](#enable-data-security-for-microsoft-foundry-with-microsoft-purview)**: allows Microsoft Purview to access and analyze prompts, responses, and related metadata to provide data security and compliance capabilities such as SIT classification, auditing, insider risk, communication compliance, and eDiscovery. It is a paid Purview feature and is not included in the Defender for AI Services plan.
 
-- **[AI model security](#enable-ai-model-security)**: provides a unified view of all models in Azure Machine Learning registries and automatically checks for security risks like serialization vulnerabilities, malware, and missing scans. By identifying misconfigurations and integrating with Defender for Cloud and developer workflows, it ensures models remain secure, compliant, and production‑ready.
+- **[AI model security](#enable-ai-model-security)**: AI model scanning gives you a clear, unified view of all your models registered in Azure Machine Learning Registries. It helps teams stay ahead of security risks by automatically checking for issues like serialization vulnerabilities, malware, and missing scans. By surfacing misconfigurations and integrating seamlessly with Defender for Cloud and developer workflows, it ensures your AI models are continuously protected and ready for production.
 
 ### Enable suspicious prompt evidence
 
@@ -162,6 +162,8 @@ By integrating directly with Azure Machine Learning workspaces, registries, and 
     :::image type="content" source="media/ai-onboarding/model-security.png" alt-text="Screenshot that shows where the toggle for AI model security is located." lightbox="media/ai-onboarding/model-security.png":::
 
 1. Select **Continue**.
+
+Learn more about [AI model security](ai-model-security.md).
 
 ## Related content
 

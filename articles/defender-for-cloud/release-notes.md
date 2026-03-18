@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 03/11/2026
+ms.date: 04/01/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -26,6 +26,26 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 4. In Category, specify whether the item is GA, Preview, Update, Deprecation, Upcoming update, Upcoming deprecation.-->
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
+
+## April 2026
+
+| Date | Category | Update |
+| -------- | -------- | -------- |
+| April 1, 2026 | Preview | AI model security for Azure Machine Learning (Preview) |
+
+### AI model security for Azure Machine Learning (Preview)
+
+April 1, 2026
+
+Microsoft Defender for Cloud's AI model security is no available in preview for Azure Machine Learning registries and workspaces. AI model security provides security teams the ability to discover and scan custom AI models for risks before deployment and the ability to review findings in Defender for Cloud.
+ 
+With AI model security you can:
+- Discover AI models in Azure Machine Learning registries and workspaces.
+- Scan supported model artifacts for malware and unsafe operators. 
+- Review security findings and remediate and surfaced issues in Defender for Cloud.
+- Gain teh ability to perform CLI-based scanning for CI/CD integrations.
+ 
+Learn more about [AI model security](ai-model-security.md).
 
 ## March 2026
 
