@@ -23,11 +23,24 @@ jobs:
 
       # --- Gather PR state ---
 
+      - name: Resolve PR number
+        id: resolve
+        run: |
+          PR_NUMBER="${{ github.event.pull_request.number || github.event.issue.number }}"
+          if [ -z "$PR_NUMBER" ]; then
+            echo "No PR number found. Skipping."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            echo "number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Fetch PR state
+        if: steps.resolve.outputs.skip != 'true'
         id: pr-state
         env:
           GITHUB_TOKEN: ${{ github.token }}
-          PR_NUMBER: ${{ github.event.pull_request.number || github.event.issue.number }}
+          PR_NUMBER: ${{ steps.resolve.outputs.number }}
           REPO: ${{ github.repository }}
         run: |
           VERSION="3.0.0"
@@ -47,6 +60,7 @@ jobs:
           echo "number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
 
       - name: Check if last PRMerger command is sign-off
+        if: steps.resolve.outputs.skip != 'true'
         id: signoff
         env:
           GITHUB_TOKEN: ${{ github.token }}
@@ -77,7 +91,7 @@ jobs:
       # --- Authorization checks ---
 
       - name: Check if sign-off author is authorized
-        if: steps.signoff.outputs.is_signoff == 'true'
+        if: steps.resolve.outputs.skip != 'true' && steps.signoff.outputs.is_signoff == 'true'
         id: signoff-auth
         uses: MicrosoftDocs/defender-docs/.github/actions/is-authorized@workflows-test
         with:
@@ -86,7 +100,7 @@ jobs:
           default: 'true'
 
       - name: Check if PR author is authorized
-        if: steps.pr-state.outputs.has_qualifies == 'true' && steps.signoff.outputs.is_signoff != 'true'
+        if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.has_qualifies == 'true' && steps.signoff.outputs.is_signoff != 'true'
         id: pr-author-auth
         uses: MicrosoftDocs/defender-docs/.github/actions/is-authorized@workflows-test
         with:
@@ -97,7 +111,7 @@ jobs:
       # --- Branch 1: Unauthorized sign-off → hold-off + block label ---
 
       - name: Hold off on unauthorized sign-off
-        if: steps.signoff.outputs.is_signoff == 'true' && steps.signoff-auth.outputs.authorized == 'false'
+        if: steps.resolve.outputs.skip != 'true' && steps.signoff.outputs.is_signoff == 'true' && steps.signoff-auth.outputs.authorized == 'false'
         env:
           GITHUB_TOKEN: ${{ github.token }}
           SIGNOFF_AUTHOR: ${{ env.TEST_USER || steps.signoff.outputs.author }}
@@ -138,7 +152,7 @@ jobs:
       # --- Branch 2: Authorized sign-off → restore label ---
 
       - name: Restore auto-merge label on authorized sign-off
-        if: steps.signoff.outputs.is_signoff == 'true' && steps.signoff-auth.outputs.authorized == 'true' && steps.pr-state.outputs.has_blocked == 'true'
+        if: steps.resolve.outputs.skip != 'true' && steps.signoff.outputs.is_signoff == 'true' && steps.signoff-auth.outputs.authorized == 'true' && steps.pr-state.outputs.has_blocked == 'true'
         env:
           GITHUB_TOKEN: ${{ github.token }}
           SIGNOFF_AUTHOR: ${{ env.TEST_USER || steps.signoff.outputs.author }}
@@ -164,7 +178,8 @@ jobs:
 
       - name: Block auto-merge for unauthorized PR author
         if: >-
-          steps.pr-state.outputs.has_qualifies == 'true'
+          steps.resolve.outputs.skip != 'true'
+          && steps.pr-state.outputs.has_qualifies == 'true'
           && steps.pr-author-auth.outputs.authorized == 'false'
           && steps.signoff.outputs.is_signoff != 'true'
         env:
