@@ -143,7 +143,7 @@ When you report a problem with attack surface reduction rules, you're asked to c
    > [!TIP]
    > Ensure that log collection takes place during the reproduction attempt. Also, close any applications that aren't essential to reproducing the issue.
 
-1. Run the MDE Client Analyzer with the `-v` switches:
+1. Run the MDE Client Analyzer with the `-v` switch:
 
    ```powershell
    C:\Work\tools\MDEClientAnalyzer\MDEClientAnalyzer.cmd -v
@@ -151,35 +151,34 @@ When you report a problem with attack surface reduction rules, you're asked to c
 
 ### Manual process
 
-1. Open an elevated Command Prompt (a Command Prompt window you opened after selecting **Run as administrator**) and then run the following commands:
+To manually generate the diagnostic log files, open an elevated Command Prompt (a Command Prompt window you opened after selecting **Run as administrator**), and then run the following commands:
 
-   ```console
-   for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n') do if not defined _done cd "%ProgramData%\Microsoft\Windows Defender\Platform\%d"
+```console
+set "_done=" & (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) >nul 2>&1
 
-   MpCmdRun.exe -Getfiles
-   ```
+MpCmdRun.exe -GetFiles
+```
 
-1. By default, they're saved to `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab`. Attach the file to the submission form.
+- After a few minutes, the files are generated, compressed, and saved to the file `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab`. This .cab file includes the following information:
+  - Any trace files from Microsoft Antimalware Service.
+  - The Windows Update history log.
+  - All Microsoft Antimalware Service events from the System event log.
+  - All relevant Microsoft Antimalware Service registry locations.
+  - The log file of MpCmdRun.
+  - The log file of the signature update helper tool.
 
-You can also view rule events through the Microsoft Defender Antivirus dedicated command-line tool, called `*mpcmdrun.exe*`, that can be used to manage and configure, and automate tasks if needed.
+- To specify a different root output folder, add the _SupportLogLocation_ switch and the folder path to the command. For example, `MpCmdRun.exe -GetFiles -SupportLogLocation "C:\Data"`.
 
-You can find this utility in *%ProgramFiles%\Windows Defender\MpCmdRun.exe*. You must run it from an elevated command prompt (that is, run as Admin).
+  Check the output of the command for the filename and folder location in the path you specified. For example `-SupportLogLocation "C:\Data"` results in the following destination: `C:\Data\<Date>\MPSupportFiles-<MachineName>-<UTC Time>.cab`
 
-To generate the support information, type `MpCmdRun.exe -getfiles`. After a while, several logs will be packaged into an archive (MpSupportFiles.cab) and made available at `C:\ProgramData\Microsoft\Windows Defender\Support`.
+In the .cab file, the following files are most relevant:
 
-:::image type="content" source="media/malware-prot-logsnew.png" alt-text="Screenshot that shows the malware protection logs." lightbox="media/malware-prot-logsnew.png":::
-
-Extract that archive and you have many files available for troubleshooting purposes.
-
-The most relevant files are as follows:
-
-- `MPOperationalEvents.txt`: This file contains same level of information found in Event Viewer for Windows Defender's Operational log.
-- `MPRegistry.txt`: In this file you can analyze all the current Windows Defender configurations, from the moment, the support logs were captured.
-- `MPLog.txt`: This log contains more verbose information about all the actions/operations of the Windows Defender.
+- `MPOperationalEvents.txt`: Contains same level of information found in Event Viewer for Windows Defender's Operational log.
+- `MPRegistry.txt`: Analyze all the current Windows Defender configurations from the moment you saved the .cab file.
+- `MPLog.txt`: Verbose information about all the actions and operations of Windows Defender.
 
 ## Related articles
 
 - [Attack surface reduction rules](attack-surface-reduction-rules-overview.md)
 - [Enable attack surface reduction rules](attack-surface-reduction-rules-enable.md)
 - [Evaluate attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
-
