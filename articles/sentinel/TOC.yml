@@ -603,7 +603,7 @@
         - name: Microsoft Sentinel graph overview
           href: datalake/sentinel-graph-overview.md
         - name: Graph visualization
-          href: datalake/sentinel-graph-visualization  
+          href: datalake/sentinel-graph-visualization.md 
         - name: Microsoft Sentinel Custom graphs
           items:
             - name: Custom graphs overview
