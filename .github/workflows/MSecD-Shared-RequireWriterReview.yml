@@ -2,17 +2,12 @@ name: Require Writer Review
 
 on:
   workflow_call:
-  pull_request_target:
-    types: [labeled]
 
 env:
   TEST_USER: '' # Set to a GitHub username to override the event-derived user for testing
 
 jobs:
   enforce-policy:
-    if: >-
-      (github.event_name == 'pull_request_target' && github.event.action == 'labeled' && github.event.label.name == 'qualifies-for-auto-merge')
-      || github.event_name == 'workflow_call'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -26,155 +21,182 @@ jobs:
             .github/authorized-approvers.txt
             docs/authorized-approvers.txt
 
-      # --- Label validation path (pull_request_target + labeled) ---
+      # --- Gather PR state ---
 
-      - name: Check if PR author is authorized
-        if: github.event_name == 'pull_request_target'
-        id: label-auth
-        uses: MicrosoftDocs/defender-docs/.github/actions/is-authorized@workflows-test
-        with:
-          token: ${{ secrets.MSECD_READTEAM_TOKEN }}
-          user: ${{ env.TEST_USER || github.event.pull_request.user.login }}
-          default: 'false'
-
-      - name: Remove label if not authorized
-        if: github.event_name == 'pull_request_target' && steps.label-auth.outputs.authorized == 'false'
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
-          PR_NUMBER: ${{ github.event.pull_request.number }}
-          REPO: ${{ github.repository }}
-        run: |
-          VERSION="2.0.0"
-          echo "Auto-Merge Label Validation Workflow Version: $VERSION"
-          
-          echo "PR author '$PR_AUTHOR' is not authorized. Removing label..."
-          
-          curl -s -X DELETE \
-            -H "Authorization: token $GITHUB_TOKEN" \
-            -H "Accept: application/vnd.github.v3+json" \
-            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels/qualifies-for-auto-merge"
-          
-          echo "Label removed successfully."
-          
-          # Add 'blocked-qualifies-for-auto-merge' label
-          curl -s -X POST \
-            -H "Authorization: token $GITHUB_TOKEN" \
-            -H "Accept: application/vnd.github.v3+json" \
-            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels" \
-            -d '{"labels":["blocked-qualifies-for-auto-merge"]}'
-          
-          echo "Added 'blocked-qualifies-for-auto-merge' label."
-          
-          # Add a comment explaining why the label was removed
-          COMMENT_BODY="The 'qualifies-for-auto-merge' label was removed because the PR author is not an authorized approver.\nOnly authorized approvers can have their PRs qualify for auto-merge.\nIf you believe this PR qualifies for auto-merge, please contact an authorized reviewer."
-          
-          curl -s -X POST \
-            -H "Authorization: token $GITHUB_TOKEN" \
-            -H "Accept: application/vnd.github.v3+json" \
-            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments" \
-            -d "{\"body\":\"$COMMENT_BODY\"}"
-          
-          echo "Explanation comment added."
-
-      # --- Hold-off comment path (workflow_call) ---
-
-      - name: Check if last PRMerger command is sign-off
-        if: github.event_name == 'workflow_call'
-        id: signoff
+      - name: Fetch PR state
+        id: pr-state
         env:
           GITHUB_TOKEN: ${{ github.token }}
           PR_NUMBER: ${{ github.event.pull_request.number || github.event.issue.number }}
           REPO: ${{ github.repository }}
         run: |
-          VERSION="2.0.0"
-          echo "Hold-off Comment Workflow Version: $VERSION"
-          
-          # Find the last PRMerger command and its author
+          VERSION="3.0.0"
+          echo "Require Writer Review Workflow Version: $VERSION"
+
+          PR_DATA=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+            "https://api.github.com/repos/$REPO/pulls/$PR_NUMBER")
+
+          HAS_QUALIFIES=$(echo "$PR_DATA" | jq -r '[.labels[].name] | contains(["qualifies-for-auto-merge"])')
+          HAS_BLOCKED=$(echo "$PR_DATA" | jq -r '[.labels[].name] | contains(["blocked-qualifies-for-auto-merge"])')
+          PR_AUTHOR=$(echo "$PR_DATA" | jq -r '.user.login')
+
+          echo "PR #$PR_NUMBER — author: $PR_AUTHOR, has_qualifies: $HAS_QUALIFIES, has_blocked: $HAS_BLOCKED"
+          echo "has_qualifies=$HAS_QUALIFIES" >> "$GITHUB_OUTPUT"
+          echo "has_blocked=$HAS_BLOCKED" >> "$GITHUB_OUTPUT"
+          echo "pr_author=$PR_AUTHOR" >> "$GITHUB_OUTPUT"
+          echo "number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+
+      - name: Check if last PRMerger command is sign-off
+        id: signoff
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ steps.pr-state.outputs.number }}
+          REPO: ${{ github.repository }}
+        run: |
           echo "Checking last PRMerger command..."
           COMMENTS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
             "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments?per_page=100")
-          
-          # Get the last comment whose body starts with a # command, extract command and author
+
           LAST_ENTRY=$(echo "$COMMENTS" | jq -r '
             [.[] | select(.body | test("^#[a-zA-Z-]+"))] | last |
             {command: (.body | split("\n")[0] | ascii_downcase), author: .user.login}
           ' 2>/dev/null || echo '{}')
-          
+
           LAST_COMMAND=$(echo "$LAST_ENTRY" | jq -r '.command // ""')
           SIGNOFF_AUTHOR=$(echo "$LAST_ENTRY" | jq -r '.author // ""')
-          
-          echo "Last PRMerger command found: $LAST_COMMAND (by: $SIGNOFF_AUTHOR)"
-          
-          if [ "$LAST_COMMAND" != "#sign-off" ]; then
-            echo "Last command is not #sign-off. Skipping workflow."
-            echo "skip=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "Last command is #sign-off. Continuing workflow."
-            echo "skip=false" >> "$GITHUB_OUTPUT"
+
+          echo "Last PRMerger command: $LAST_COMMAND (by: $SIGNOFF_AUTHOR)"
+
+          if [ "$LAST_COMMAND" = "#sign-off" ]; then
+            echo "is_signoff=true" >> "$GITHUB_OUTPUT"
             echo "author=$SIGNOFF_AUTHOR" >> "$GITHUB_OUTPUT"
+          else
+            echo "is_signoff=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Check if comment author is authorized
-        if: github.event_name == 'workflow_call' && steps.signoff.outputs.skip != 'true'
-        id: holdoff-auth
+      # --- Authorization checks ---
+
+      - name: Check if sign-off author is authorized
+        if: steps.signoff.outputs.is_signoff == 'true'
+        id: signoff-auth
         uses: MicrosoftDocs/defender-docs/.github/actions/is-authorized@workflows-test
         with:
           token: ${{ secrets.MSECD_READTEAM_TOKEN }}
           user: ${{ env.TEST_USER || steps.signoff.outputs.author }}
           default: 'true'
 
-      - name: Restore auto-merge label if authorized
-        if: github.event_name == 'workflow_call' && steps.signoff.outputs.skip != 'true' && steps.holdoff-auth.outputs.authorized == 'true'
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-          SIGNOFF_AUTHOR: ${{ env.TEST_USER || steps.signoff.outputs.author }}
-          PR_NUMBER: ${{ github.event.pull_request.number || github.event.issue.number }}
-          REPO: ${{ github.repository }}
-        run: |
-          # Check if PR has 'blocked-qualifies-for-auto-merge' label
-          PR_DATA=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
-            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER")
-          
-          HAS_REMOVED_LABEL=$(echo "$PR_DATA" | jq -r '[.labels[].name] | contains(["blocked-qualifies-for-auto-merge"])')
-          
-          if [ "$HAS_REMOVED_LABEL" = "true" ]; then
-            echo "Author '$SIGNOFF_AUTHOR' is now authorized and PR has 'blocked-qualifies-for-auto-merge' label. Restoring auto-merge label..."
-            
-            # Remove 'blocked-qualifies-for-auto-merge' label
-            curl -s -X DELETE \
-              -H "Authorization: token $GITHUB_TOKEN" \
-              -H "Accept: application/vnd.github.v3+json" \
-              "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels/blocked-qualifies-for-auto-merge"
-            
-            echo "Removed 'blocked-qualifies-for-auto-merge' label."
-            
-            # Add 'qualifies-for-auto-merge' label
-            curl -s -X POST \
-              -H "Authorization: token $GITHUB_TOKEN" \
-              -H "Accept: application/vnd.github.v3+json" \
-              "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels" \
-              -d '{"labels":["qualifies-for-auto-merge"]}'
-            
-            echo "Added 'qualifies-for-auto-merge' label."
-          else
-            echo "Author is authorized but PR does not have 'blocked-qualifies-for-auto-merge' label. Skipping."
-          fi
+      - name: Check if PR author is authorized
+        if: steps.pr-state.outputs.has_qualifies == 'true' && steps.signoff.outputs.is_signoff != 'true'
+        id: pr-author-auth
+        uses: MicrosoftDocs/defender-docs/.github/actions/is-authorized@workflows-test
+        with:
+          token: ${{ secrets.MSECD_READTEAM_TOKEN }}
+          user: ${{ env.TEST_USER || steps.pr-state.outputs.pr_author }}
+          default: 'false'
 
-      - name: Add hold-off comment if not authorized
-        if: github.event_name == 'workflow_call' && steps.signoff.outputs.skip != 'true' && steps.holdoff-auth.outputs.authorized == 'false'
+      # --- Branch 1: Unauthorized sign-off → hold-off + block label ---
+
+      - name: Hold off on unauthorized sign-off
+        if: steps.signoff.outputs.is_signoff == 'true' && steps.signoff-auth.outputs.authorized == 'false'
         env:
           GITHUB_TOKEN: ${{ github.token }}
           SIGNOFF_AUTHOR: ${{ env.TEST_USER || steps.signoff.outputs.author }}
-          PR_NUMBER: ${{ github.event.pull_request.number || github.event.issue.number }}
+          PR_NUMBER: ${{ steps.pr-state.outputs.number }}
           REPO: ${{ github.repository }}
+          HAS_QUALIFIES: ${{ steps.pr-state.outputs.has_qualifies }}
         run: |
           echo "Sign-off author '$SIGNOFF_AUTHOR' is not authorized. Adding hold-off comment..."
-          COMMENT_BODY="#hold-off\nThis PR requires a writer review before merging.\nThe review process typically takes 2-3 business days. For urgent requests, please contact the page's author or assigned team."
-          
+
+          COMMENT_BODY="#hold-off
+          This PR requires a writer review before merging.
+          The review process typically takes 2-3 business days. For urgent requests, please contact the page's author or assigned team."
+
+          jq -n --arg body "$COMMENT_BODY" '{body: $body}' | \
           curl -s -X POST \
             -H "Authorization: token $GITHUB_TOKEN" \
             -H "Accept: application/vnd.github.v3+json" \
             "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments" \
-            -d "{\"body\":\"$COMMENT_BODY\"}"
-          echo "Hold-off comment added successfully."
+            -d @-
+
+          echo "Hold-off comment added."
+
+          if [ "$HAS_QUALIFIES" = "true" ]; then
+            curl -s -X DELETE \
+              -H "Authorization: token $GITHUB_TOKEN" \
+              -H "Accept: application/vnd.github.v3+json" \
+              "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels/qualifies-for-auto-merge"
+
+            curl -s -X POST \
+              -H "Authorization: token $GITHUB_TOKEN" \
+              -H "Accept: application/vnd.github.v3+json" \
+              "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels" \
+              -d '{"labels":["blocked-qualifies-for-auto-merge"]}'
+
+            echo "Swapped 'qualifies-for-auto-merge' to 'blocked-qualifies-for-auto-merge'."
+          fi
+
+      # --- Branch 2: Authorized sign-off → restore label ---
+
+      - name: Restore auto-merge label on authorized sign-off
+        if: steps.signoff.outputs.is_signoff == 'true' && steps.signoff-auth.outputs.authorized == 'true' && steps.pr-state.outputs.has_blocked == 'true'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          SIGNOFF_AUTHOR: ${{ env.TEST_USER || steps.signoff.outputs.author }}
+          PR_NUMBER: ${{ steps.pr-state.outputs.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          echo "Author '$SIGNOFF_AUTHOR' is authorized. Restoring auto-merge label..."
+
+          curl -s -X DELETE \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels/blocked-qualifies-for-auto-merge"
+
+          curl -s -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels" \
+            -d '{"labels":["qualifies-for-auto-merge"]}'
+
+          echo "Restored 'qualifies-for-auto-merge' label."
+
+      # --- Branch 3: Unauthorized PR owner with qualifies-for-auto-merge ---
+
+      - name: Block auto-merge for unauthorized PR author
+        if: >-
+          steps.pr-state.outputs.has_qualifies == 'true'
+          && steps.pr-author-auth.outputs.authorized == 'false'
+          && steps.signoff.outputs.is_signoff != 'true'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PR_AUTHOR: ${{ steps.pr-state.outputs.pr_author }}
+          PR_NUMBER: ${{ steps.pr-state.outputs.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          echo "PR author '$PR_AUTHOR' is not authorized. Blocking auto-merge..."
+
+          curl -s -X DELETE \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels/qualifies-for-auto-merge"
+
+          curl -s -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels" \
+            -d '{"labels":["blocked-qualifies-for-auto-merge"]}'
+
+          echo "Swapped 'qualifies-for-auto-merge' to 'blocked-qualifies-for-auto-merge'."
+
+          COMMENT_BODY="The 'qualifies-for-auto-merge' label was removed because the PR author is not an authorized approver.
+          Only authorized approvers can have their PRs qualify for auto-merge.
+          If you believe this PR qualifies for auto-merge, please contact an authorized reviewer."
+
+          jq -n --arg body "$COMMENT_BODY" '{body: $body}' | \
+          curl -s -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments" \
+            -d @-
+
+          echo "Explanation comment added."
