@@ -59,6 +59,7 @@ To support ongoing API access, create a new user and assign the custom role.
 1. Navigate to the previously created custom role 
 1. Select **Members** and add the user as a member. 
 1. Select **Save**.
+1. Add the user to the **Privileged Cloud Auditors** role. This role is required to tag identities in the Microsoft Defender portal as privileged accounts.
 
 ### Connect CyberArk Identity to Defender for Identity 
 
@@ -88,7 +89,7 @@ To support ongoing API access, create a new user and assign the custom role.
 
     :::image type="content" source="media/connect-cyber-ark/my-connectors-status.png" alt-text="Screenshot that shows your CyberARk connector status in the Defender portal." lightbox="media/connect-cyber-ark/my-connectors-status.png":::
 
-1. To setup **Actions**, go to **Microsoft Sentinel > Configuration > Next Gen Automation**. 
+1. To setup **Actions**, go to **Microsoft Sentinel > Configuration > Automation**. 
 1. Select **Integration profile** and create one for CyberArk with the same credentials.
 
     :::image type="content" source="media/connect-cyber-ark/add-integration-profile.png" alt-text="Screenshot that shows how to add an integration profile in the Defender portal." lightbox="media/connect-cyber-ark/add-integration-profile.png":::

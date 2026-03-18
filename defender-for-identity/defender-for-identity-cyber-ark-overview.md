@@ -21,10 +21,11 @@ After you connect CyberArk Identity, Microsoft Defender for Identity provides th
 
 | Capability | Description |
 |------------|------------|
-| View CyberArk accounts in the identity inventory | - Adds CyberArk Identity users into the identity inventory and correlates them with identities from on-premises, Active Directory and Microsoft Entra ID.<br> - Accounts that are managed by CyberArk Identity as PAM accounts are tagged in the inventory.  |
+| View CyberArk accounts in the identity inventory | - Active Directory accounts that are managed by CyberArk Identity as PAM accounts are tagged in the inventory. <br> This applies only to AD accounts where the platform type in CyberArk Identity is a Windows Domain Account. |
 | Improve CyberArk security posture | Evaluates CyberArk Identity accounts for security risks such as stale privileged accounts and excessive privileged role assignments, and generates posture recommendations. Example recommendations include: <br> - Change password for CyberArk Identity privileged user accounts<br>- Remove stale CyberArk Identity privileged accounts <br>- Limit the number of CyberArk Identity accounts with system admin role <br>- High number of CyberArk Identity accounts with a privileged role assigned |
 | Use advanced hunting to investigate CyberArk identities and their related activities | Captures CyberArk Identity inventory The [IdentityInfo](/defender-xdr/advanced-hunting-identityinfo-table) table includes account metadata such as privilege level, group membership, and identity source. |
 | Take remediation actions | If an identity is determined to be at risk, the following remediation actions can be taken from within the MicrosoftDefender portal: <br>- Disable user in CyberArk Identity <br> - Enable user in CyberArk Identity  |
+| Reset password for PAM account in CyberArk Identity| If a privileged account is determined to be at risk, you can reset the password for the account from within the Microsoft Defender portal. This action will trigger a password reset in CyberArk Identity. |
 
 ## Next steps
 
