@@ -21,56 +21,40 @@ Connect the Kubernetes environment to Microsoft Defender for Cloud. For Azure, n
 
 - [Azure Arc-enabled Kubernetes clusters](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
 
-## Choose how cluster components are deployed
+## Deployment options
 
-After onboarding the environment, decide whether cluster components are deployed automatically or manually.
+After onboarding the environment, choose how cluster components are deployed to your clusters.
 
-This decision determines how the Defender sensor and other cluster components are installed.
+| Option | Description | When to use |
+|--------|-------------|-------------|
+| **Automatic provisioning** | Components are deployed automatically after the Defender for Containers plan is enabled. | Recommended for most environments |
+| **Manual deployment** | Components are not deployed automatically and must be installed manually. | When you require full control over deployment |
+| **Mixed deployment** | Automatic provisioning is enabled, but specific clusters are excluded and deployed manually. | When only some clusters require customization |
 
-### Automatic provisioning
 
-With automatic provisioning enabled, Microsoft Defender for Cloud automatically installs the required cluster components after the Defender for Containers plan is enabled.
+## Automatic provisioning
 
-For AKS clusters, this deployment uses the **Defender AKS add-on**.
+With automatic provisioning enabled, Microsoft Defender for Cloud installs the required cluster components after the Defender for Containers plan is enabled.
 
-This option requires minimal configuration and is the default for most environments.
+For AKS clusters, deployment uses the **Defender AKS add-on**. For Arc-enabled clusters, deployment uses Azure Arc extensions.
 
-### Manual or mixed deployment
+This option requires minimal configuration and is recommended for most environments.
 
-You might choose manual deployment if you want more control over how cluster components are installed and configured.
+You can customize automatic provisioning by excluding specific clusters using tags before enabling the Defender for Containers plan, and then deploying those clusters manually.
 
-If you plan to deploy components manually, toggle off
+## Manual deployment
 
-exclude the cluster from automatic sensor deployment before enabling the Defender for Containers plan.
+If automatic provisioning is disabled, no cluster components are deployed automatically. You must deploy all required components manually.
 
-Mixed:
-#### Exclude the Defender sensor from automatic provisioning
+## Mixed deployment (automatic with exclusions)
 
-To exclude the Defender sensor from automatic provisioning, add the following tag to the cluster resource in Azure:
+If you want to use automatic provisioning for most clusters but deploy specific clusters manually:
 
-`ms_defender_container_exclude_sensors = true`
+- Enable automatic provisioning.
+- Exclude specific clusters by using tags.
+- Deploy components manually on the excluded clusters.
 
-For clusters connected through Azure Arc (including Amazon EKS and Google Kubernetes Engine), apply the tag to the **Azure Arc-enabled Kubernetes resource** in Azure.
-
-## Enable the Defender for Containers plan
-
-Enable the Defender for Containers plan on your subscription.
-
-After the plan is enabled:
-
-- If automatic provisioning is enabled, Defender for Cloud automatically deploys the required cluster components.
-
-- If automatic provisioning is disabled or the cluster is excluded from automatic deployment, you must install the required cluster components manually.
-
-Learn how to [enable Defender for Containers](defender-for-containers-enable-portal.md).
-
-## Deploy cluster components manually
-
-If automatic provisioning is disabled, deploy the required cluster components manually.
-
-Depending on the Kubernetes environment and the enabled Defender capabilities, this deployment installs components such as the Defender sensor or Azure Policy extension.
-
-You can deploy these components by using one of the following methods:
+You can deploy components manually by using one of the following methods:
 
 - [Deploy Defender sensor and Azure Policy to clusters using Azure CLI](defender-for-containers-deploy-azure-cli.md)
 

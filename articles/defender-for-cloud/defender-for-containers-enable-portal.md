@@ -105,13 +105,13 @@ This article explains how to enable the Microsoft Defender for Containers plan i
     
     - **Kubernetes API access**  
       Allows Defender for Cloud to access the Kubernetes API server for cluster inventory, configuration analysis, and capabilities that rely on Kubernetes metadata and state.
+      
+      > [!IMPORTANT]  
+      > If you enable **Kubernetes API access**, the Kubernetes API server must be publicly accessible.
     
     - **Registry access** 
       Enables agentless vulnerability assessment for container images in Amazon ECR. Images pushed to ECR are scanned automatically (typically within 24 hours).
         - **Security findings:** Generates findings and links them to container images when new images are pushed or existing images are updated.
-    
-    > [!IMPORTANT]  
-    > If you enable **Kubernetes API access**, the Kubernetes API server must be publicly accessible.
 
 1. Select **Save**.
 
@@ -172,7 +172,7 @@ This article explains how to enable the Microsoft Defender for Containers plan i
       Deploys the Defender sensor as an Azure Arc Kubernetes extension. The sensor runs as a DaemonSet on cluster nodes and provides runtime threat detection based on node and workload telemetry.
         - **Enable Defender Security Gating**  
         Adds an admission control layer that evaluates deployments against security policies before workloads run in the cluster.
-    
+
     - **Auto provision Azure Policy extension for Azure Arc**  
       Deploys the Azure Policy extension to the cluster to enable Kubernetes security posture assessments and related security recommendations.
     
