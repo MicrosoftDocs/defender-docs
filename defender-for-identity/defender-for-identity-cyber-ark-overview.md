@@ -7,7 +7,7 @@ ms.reviewer: himanch
 # customer-intent: As a security administrator, I want to understand what happens when I connect CyberArk to Microsoft Defender for Identity, so that I can decide whether to enable the integration.
 ---
 
-# How Microsoft Defender for Identity protects your CyberArk identity accounts
+# How Microsoft Defender for Identity protects your CyberArk identity accounts (Preview)
 
 CyberArk Identity is a SaaS-based privileged access management (PAM) solution that manages privileged accounts across cloud and enterprise environments.
 

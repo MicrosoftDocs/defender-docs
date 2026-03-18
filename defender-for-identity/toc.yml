@@ -87,7 +87,7 @@ items:
   items:
     - name: Microsoft Defender for Identity and CyberArk
       items:
-        - name: Overview
+        - name: Overview (Prview)
           href: defender-for-identity-cyber-ark-overview.md
         - name: Connect CyberArk to Microsoft Defender for Identity (Preview)
           href: connect-cyber-ark.md
