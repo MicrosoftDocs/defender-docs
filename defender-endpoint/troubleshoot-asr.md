@@ -12,7 +12,7 @@ manager: bagol
 ms.custom: asr
 ms.subservice: asr
 ms.topic: how-to
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - mde-asr
@@ -24,15 +24,16 @@ appliesto:
 
 # Troubleshoot attack surface reduction rules
 
+When you use [attack surface reduction rules](attack-surface-reduction-rules-overview.md) you might run into issues. For example:
+
+- A rule blocks a file or process, or does some other action that it shouldn't (false positive).
+- A rule doesn't work as described, or doesn't block a file or process that it should (false negative).
 
 The first and most immediate way is to check locally, on a Windows device, which attack surface reduction rules are enabled (and their configuration) is by using the PowerShell cmdlets.
 
 Here are a few other sources of information that Windows offers, to troubleshoot attack surface reduction rules' impact and operation.
 
-When you use [attack surface reduction rules](attack-surface-reduction-rules-overview.md) you might run into issues, such as:
 
-- A rule blocks a file, process, or performs some other action that it shouldn't (false positive); or
-- A rule doesn't work as described, or doesn't block a file or process that it should (false negative).
 
 There are four steps to troubleshooting these problems:
 
@@ -100,7 +101,7 @@ Follow these instructions in [Use the demo tool to see how attack surface reduct
 
 1. [Review the attack surface reduction rule event logs](attack-surface-reduction-rules-overview.md) to see if the rule would block the file or process if the rule were set to `Enabled`.
 
-If a rule isn't blocking a file or process that you're expecting it should block, first check to see if audit mode is enabled. Audit mode might be enabled for testing another feature, or by an automated PowerShell script, and might not be disabled after the tests were completed. 
+If a rule isn't blocking a file or process that you're expecting it should block, first check to see if audit mode is enabled. Audit mode might be enabled for testing another feature, or by an automated PowerShell script, and might not be disabled after the tests were completed.
 
 If you tested the rule with the demo tool and with audit mode, and attack surface reduction rules are working on preconfigured scenarios, but the rule isn't working as expected, proceed to either of the following sections based on your situation:
 
@@ -150,20 +151,15 @@ When you report a problem with attack surface reduction rules, you're asked to c
 
 ### Manual process
 
-1. Open Command Prompt as an administrator and open the Windows Defender directory:
+1. Open an elevated Command Prompt (a Command Prompt window you opened after selecting **Run as administrator**) and then run the following commands:
 
    ```console
-   cd "c:\program files\Windows Defender"
-   ```
+   for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n') do if not defined _done cd "%ProgramData%\Microsoft\Windows Defender\Platform\%d"
 
-1. Run this command to generate the diagnostic logs:
-
-   ```console
-   mpcmdrun -getfiles
+   MpCmdRun.exe -Getfiles
    ```
 
 1. By default, they're saved to `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab`. Attach the file to the submission form.
-
 
 You can also view rule events through the Microsoft Defender Antivirus dedicated command-line tool, called `*mpcmdrun.exe*`, that can be used to manage and configure, and automate tasks if needed.
 
@@ -186,5 +182,4 @@ The most relevant files are as follows:
 - [Attack surface reduction rules](attack-surface-reduction-rules-overview.md)
 - [Enable attack surface reduction rules](attack-surface-reduction-rules-enable.md)
 - [Evaluate attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
-
 
