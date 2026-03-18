@@ -17,9 +17,7 @@ If you're a managed security service provider (MSSP) and you're using [Azure Lig
 > [!IMPORTANT]
 
 > After **March 31, 2027**, Microsoft Sentinel will no longer be supported in the Azure portal and will be available only in the Microsoft Defender portal. All customers using Microsoft Sentinel in the Azure portal will be [redirected to the Defender portal and will use Microsoft Sentinel in the Defender portal only](../overview.md#microsoft-sentinel-in-the-azure-portal-retirement-timeline).
-
 >
-
 > If you're still using Microsoft Sentinel in the Azure portal, we recommend that you start planning your move to the Defender portal to ensure a smooth experience and to take full advantage of unified security operations and multitenant management capabilities offered by the Defender portal. For guidance and best practices, see the [Microsoft Defender portal implementation guide for MSSPs](/unified-secops/playbook-managed-security). 
 
 ## Prerequisites
