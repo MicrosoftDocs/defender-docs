@@ -120,7 +120,7 @@ This recommendation replaces the old recommendation *Cognitive Services should u
 
 ### Azure Machine Learning Computes should have local authentication methods disabled (Preview)
 
-**Description & related policy**: Disabling local authentication methods improves security by ensuring that Machine Learning Computes require Azure Active Directory identities exclusively for authentication. For more information, see [Azure Policy Regulatory Compliance controls for Azure Machine Learning](/azure/machine-learning/security-controls-policy).
+**Description & related policy**: Disabling local authentication methods improves security by ensuring that Machine Learning Computes require Microsoft Entra ID identities exclusively for authentication. For more information, see [Azure Policy Regulatory Compliance controls for Azure Machine Learning](/azure/machine-learning/security-controls-policy).
 
 **Severity**: Medium
 

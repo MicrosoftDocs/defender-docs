@@ -33,7 +33,7 @@ To learn about actions that you can take in response to these recommendations, s
 
 **Severity**: High
 
-### Azure Cosmos DB accounts should use Azure Active Directory as the only authentication method
+### Azure Cosmos DB accounts should use Microsoft Entra ID as the only authentication method
 
 **Description**: The best way to authenticate to Azure services is by using Role-Based Access Control (RBAC). RBAC allows you to maintain the minimum privilege principle and supports the ability to revoke permissions as an effective method of response when compromised. You can configure your Azure Cosmos DB account to enforce RBAC as the only authentication method. When the enforcement is configured, all other methods of access will be denied (primary/secondary keys and access tokens).
 (No related policy)
@@ -107,21 +107,21 @@ These accounts can be targets for attackers looking to find ways to access your 
 
 ### Guest accounts with owner permissions on Azure resources should be removed
 
-**Description**: Accounts with owner permissions that have been provisioned outside of the Azure Active Directory tenant (different domain names), should be removed from your Azure resources. Guest accounts aren't managed to the same standards as enterprise tenant identities. These accounts can be targets for attackers looking to find ways to access your data without being noticed.
+**Description**: Accounts with owner permissions that have been provisioned outside of the Microsoft Entra tenant (different domain names), should be removed from your Azure resources. Guest accounts aren't managed to the same standards as enterprise tenant identities. These accounts can be targets for attackers looking to find ways to access your data without being noticed.
 (No related policy)
 
 **Severity**: High
 
 ### Guest accounts with read permissions on Azure resources should be removed
 
-**Description**: Accounts with read permissions that have been provisioned outside of the Azure Active Directory tenant (different domain names), should be removed from your Azure resources. Guest accounts aren't managed to the same standards as enterprise tenant identities. These accounts can be targets for attackers looking to find ways to access your data without being noticed.
+**Description**: Accounts with read permissions that have been provisioned outside of the Microsoft Entra tenant (different domain names), should be removed from your Azure resources. Guest accounts aren't managed to the same standards as enterprise tenant identities. These accounts can be targets for attackers looking to find ways to access your data without being noticed.
 (No related policy)
 
 **Severity**: High
 
 ### Guest accounts with write permissions on Azure resources should be removed
 
-**Description**: Accounts with write permissions that have been provisioned outside of the Azure Active Directory tenant (different domain names), should be removed from your Azure resources. Guest accounts aren't managed to the same standards as enterprise tenant identities. These accounts can be targets for attackers looking to find ways to access your data without being noticed.
+**Description**: Accounts with write permissions that have been provisioned outside of the Microsoft Entra tenant (different domain names), should be removed from your Azure resources. Guest accounts aren't managed to the same standards as enterprise tenant identities. These accounts can be targets for attackers looking to find ways to access your data without being noticed.
 (No related policy)
 
 **Severity**: High

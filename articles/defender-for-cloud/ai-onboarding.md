@@ -51,6 +51,8 @@ With the AI services threat protection plan enabled, you can control whether ale
 
 User prompt evidence consists of prompts and model responses. Both are considered your data. Evidence is available through the Azure portal, Defender portal, and any attached partners integrations.
 
+If User prompt evidence is disabled, Microsoft Defender for Cloud continues analyzing prompts and responses for threat detection, but the prompt content is masked in alerts.
+
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Search for and select **Microsoft Defender for Cloud**.

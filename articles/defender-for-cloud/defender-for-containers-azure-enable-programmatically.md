@@ -2,7 +2,7 @@
 title: Deploy Defender for Containers on Azure (AKS) programmatically
 description: Learn how to programmatically deploy Microsoft Defender for Containers components on AKS clusters using Azure CLI, REST API, and ARM templates.
 ms.topic: how-to
-ms.date: 11/27/2025
+ms.date: 03/16/2026
 ai-usage: ai-assisted
 ---
 
@@ -41,16 +41,6 @@ az aks update \
     --resource-group myResourceGroup \
     --name myAKSCluster \
     --enable-defender
-```
-
-To deploy with a custom Log Analytics workspace:
-
-```azurecli
-az aks update \
-    --resource-group myResourceGroup \
-    --name myAKSCluster \
-    --enable-defender \
-    --defender-config logAnalyticsWorkspaceResourceId=/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}
 ```
 
 ### [ARM template](#tab/aks-arm)
