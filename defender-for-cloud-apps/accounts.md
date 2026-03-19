@@ -13,7 +13,7 @@ Microsoft Defender for Cloud Apps shows you account information from your connec
 
 When Defender for Cloud Apps detects a new account in a connected app, for example through activities or file sharing, it adds the account to the accounts list. This lets you see external user activity in your cloud apps.
 
-You can view the Cloud application accounts inventory from the tile at the top of the [Identity Inventory page](/defender-for-identity/identity-inventory).
+You can view the **Cloud application accounts** inventory from the tile at the top of the [Identity Inventory page](/defender-for-identity/identity-inventory).
 
 ## Cloud application accounts tab
 
