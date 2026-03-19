@@ -31,6 +31,7 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|macOS |101.26012.0015  |March 2026 |- Release version: 20.126012.15.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--march-2026--101260120015) |
 |macOS |101.26012.0012  |February 2026 |- Release version: 20.126012.12.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--february-2026--101260120012) |
 |macOS |101.25122.0008  |February 2026 |- Release version: 20.125122.8.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--february-2026--101251220008) |
 |Linux  |101.25122.0004  |February 2026 |- Release version: 30.125122.0004.0<br>- Engine version: 1.1.25110.3002<br>- Signature version: 1.443.508.0 |[Release details and updates](#linux--february-2026--101251220004) |
@@ -128,6 +129,20 @@ To share feedback, open Defender for Endpoint on macOS and go to **Help > Send f
 To get latest features, configure your device for the Beta channel (formerly Insider-Fast) device.
 
 For known issues, see [macOS known issues](#macos-known-issues).
+
+### macOS | March-2026 | 101.26012.0015
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+|-----------------|----------------|-------------------|
+| 20.126012.15.0  | 1.1.25100.4000 | 1.439.74.0        |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|----------------|
+| General      | Fixed an epsext crash that could cause a black screen on some Macs. |
 
 ### macOS | February-2026 | 101.26012.0012
 
@@ -288,7 +303,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 | Feature area | Update summary |
 |--------------|---------------|
-| Network configuration | Defender for Endpoint on Linux now connects to additional endpoints to retrieve internal configuration data. Ensure the following URLs are allowed in network configurations: `https://config.edge.skype.com/config/v1` (default), `https://config.ecs.dod.teams.microsoft.us/config/v1`, `https://config.ecs.gov.teams.microsoft.us/config/v1`, `https://gccmod.ecs.office.com/config/v1`. |
+| Network configuration | The following URLs must be allowed to enable Defender on Linux endpoints to receive internal configurations from the cloud:<br/><br/>For commercial customers:<br/>`https://config.edge.skype.com/config/v1` (default)<br/>**Note**: The "skype" string in this URL is a legacy artifact, unrelated to Skype, and retained solely for backward compatibility.<br/><br/>For DoD customers:<br/>`https://config.ecs.dod.teams.microsoft.us/config/v1`<br/><br/>For GCC High customers:<br/>`https://config.ecs.gov.teams.microsoft.us/config/v1`<br/><br/>For GCC Mod customers:<br/>`https://gccmod.ecs.office.com/config/v1`<br/><br/>For all the URLs that Linux server endpoints should be able to access, see:<br/>- [Microsoft Defender for Endpoint streamlined connectivity URLs - commercial](./streamlined-device-connectivity-urls-commercial.md) (commercial customers)<br/>- [Microsoft Defender for Endpoint streamlined connectivity URLs - US government environments](./streamlined-device-connectivity-urls-gov.md) (US Government customers).|
 | Identity | Username information is now preserved for login events including nonexistent users. |
 | Diagnostics | Improved validation logic for log file permissions to provide more accurate `mdatp health` status reporting. |
 

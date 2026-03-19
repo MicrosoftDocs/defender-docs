@@ -65,6 +65,7 @@ You must have at least one of these roles to turn on app governance:
 
   > [!NOTE]
   > The Cloud App Security Admin role grants permissions turn on app governance for Microsoft Defender for Cloud Apps. However, this role doesn't grant access to view or manage app governance capabilities. To view or manage app governance capabilities, you must also have one of the other roles listed in the table  below.
+  > Microsoft recommends that you use roles with the fewest permissions. This strategy helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 The following table lists the app governance capabilities for each role.
 
