@@ -61,7 +61,7 @@ You can create multiple scopes and define your own values for each scope to refl
 > [!NOTE]
 > You can create up to 100 unique Sentinel scopes per tenant.
 
-:::image type="content" source="./media/scoping/add-scope.png" alt-text="Screenshot of the Add Sentinel scope tab and dialog.":::
+:::image type="content" source="./media/scoping/add-scope.png" alt-text="Screenshot of the Add Sentinel scope tab and dialog." lightbox="./media/scoping/add-scope.png":::
 
 ## Step 2: Assign scopes tags to users or groups
 
@@ -69,11 +69,11 @@ You can create multiple scopes and define your own values for each scope to refl
 1. Select **Create custom role**.
 1. Configure the role name and description and select **Next**.
 
-    :::image type="content" source="./media/scoping/set-up-basics.png" alt-text="Screenshot of dialog for creating name and description of a custom role.":::
+    :::image type="content" source="./media/scoping/set-up-basics.png" alt-text="Screenshot of dialog for creating name and description of a custom role." lightbox="./media/scoping/set-up-basics.png":::
 
 1. Assign the required permissions to the role and select **Apply**.
 
-     :::image type="content" source="./media/scoping/assign-permissions.png" alt-text="Screenshot of dialog for assigning permissions to a custom role.":::
+     :::image type="content" source="./media/scoping/assign-permissions.png" alt-text="Screenshot of dialog for assigning permissions to a custom role." lightbox="./media/scoping/assign-permissions.png":::
 
 1. In **Assignments**, give it a name and select:
    - Users or user groups (Azure AD groups)
@@ -84,7 +84,7 @@ You can create multiple scopes and define your own values for each scope to refl
 
 Users can be assigned to multiple scopes simultaneously over multiple workspaces, with access rights aggregated across all assigned scopes. Restricted users can only access SIEM data associated with their assigned scopes.
 
-:::image type="content" source="./media/scoping/edit-scope.png" alt-text="Screenshot of assigning Sentinel scopes to a custom role.":::
+:::image type="content" source="./media/scoping/edit-scope.png" alt-text="Screenshot of assigning Sentinel scopes to a custom role." lightbox="./media/scoping/edit-scope.png":::
 
 ## Step 3: Tag tables with scope
 
@@ -94,7 +94,7 @@ You enforce scopes by tagging data during ingestion. This tagging creates a Data
 1. Select a table that supports ingestion-time transformations.
 1. Select **Scope tag rule**.
 
-    :::image type="content" source="./media/scoping/scope-tag-rule.png" alt-text="Screenshot of the Scope tag rule tab.":::
+    :::image type="content" source="./media/scoping/scope-tag-rule.png" alt-text="Screenshot of the Scope tag rule tab." lightbox="./media/scoping/scope-tag-rule.png":::
 
 1. Enable the **Allow use of scope tags for RBAC** toggle.
 1. Enable the **Scope tag rule** toggle.
@@ -114,7 +114,7 @@ Only newly ingested data is tagged. Previously ingested data isn't included. Aft
 > [!TIP]
 > You can create multiple scope tag rules on the same table to tag different rows with different scopes. Records can belong to multiple scopes simultaneously.
 
-:::image type="content" source="./media/scoping/table-scope-tag-rule.png" alt-text="Screenshot of the table scope tag rule.":::
+:::image type="content" source="./media/scoping/table-scope-tag-rule.png" alt-text="Screenshot of the table scope tag rule." lightbox="./media/scoping/table-scope-tag-rule.png":::
 
 ## Step 4: Access scoped data
 
@@ -134,7 +134,7 @@ Alerts inherit scope from the underlying data. Incidents are visible if at least
 
 The `SentinelScope_CF` custom field is available for use in queries and detection rules to reference scope in your analytics.
 
-:::image type="content" source="./media/scoping/scoped-alerts-view.png" alt-text="Screenshot of alerts filtered by Sentinel scope.":::
+:::image type="content" source="./media/scoping/scoped-alerts-view.png" alt-text="Screenshot of alerts filtered by Sentinel scope." lightbox="./media/scoping/scoped-alerts-view.png":::
 
 ## Limitations
 
@@ -150,7 +150,7 @@ The following limitations apply:
   - Use the XDR `AlertsInfo` and `AlertsEvidence` tables where scope is automatically inherited, or
   - Apply scope to these Log Analytics tables manually (this method is limited to the attributes in the table and might not be equivalent to inheritance of the data tables that generated these alerts).
 
-## Known Issues
+## Known issues
 
 **Scope application issue**: Sometimes, scope doesn't correctly apply to a table. In that case, create a blank transformation rule on the table first (in Azure), and then continue to tag the table with scope.
 
