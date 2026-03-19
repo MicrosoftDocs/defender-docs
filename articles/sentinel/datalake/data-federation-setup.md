@@ -2,7 +2,7 @@
 title: Set up federated data connectors in Microsoft Sentinel data lake
 titleSuffix: Microsoft Security
 description: Learn how to configure federated data connectors for Azure Databricks, ADLS Gen 2, and Microsoft Fabric in Microsoft Sentinel data lake.
-author: edbaynash
+author: EdB-MSFT
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: how-to
@@ -25,8 +25,8 @@ Before setting up data federation, ensure you meet the following requirements:
 
 - **Public accessibility**: Azure Data Lake Storage Gen2 and Azure Databricks sources must be publicly accessible. Private endpoints for these sources aren't supported currently. 
 - **Service principal**: A service principal with access to the external data source. For more information on creating service principals. For more information, see [Microsoft Entra ID app registrations](/entra/identity-platform/quickstart-register-app).
-- **Azure Key Vault**: An Azure Key Vault configured with the Service principal client secret is required. The Microsoft sentinel application identity needs permissions assigned to the key vault. For more information on configuring Azure Key vaults, see [Azure Key Vaults](s/azure/key-vault/general/basic-concepts).
-- **Microsoft Sentinel permissions**: **Data (manage)** permissions on System tables to configure a data federation connector. For more information, see [Microsoft Sentinel permissions](https://learn.microsoft.com/en-us/azure/sentinel/permissions).
+- **Azure Key Vault**: An Azure Key Vault configured with the Service principal client secret is required. The Microsoft sentinel application identity needs permissions assigned to the key vault. For more information on configuring Azure Key vaults, see [Azure Key Vaults](/azure/key-vault/general/basic-concepts).
+- **Microsoft Sentinel permissions**: **Data (manage)** permissions on System tables to configure a data federation connector. For more information, see [Roles and permissions in the Microsoft Sentinel platform](/azure/sentinel/roles).
 
 
 ## Create a service principal
@@ -218,11 +218,11 @@ After selecting **Connect**, the wizard closes and the instance count for Databr
 
 Before configuring the Fabric connector instance, you must set up permissions within the Microsoft Fabric environment to allow Microsoft Sentinel to access the data.
 
-+ Configure the admin settings within Microsoft Fabric so that the tenant is enabled for External data sharing,  For more information, see [Create an external data share](fabric/governance/external-data-sharing-create)
++ Configure the admin settings within Microsoft Fabric so that the tenant is enabled for External data sharing,  For more information, see [Create an external data share](/fabric/governance/external-data-sharing-create)
 
-+ Enable your instance so service principals can call Fabric public APIs.  For more information, see [Service principals can call Fabric public APIs](fabric/admin/service-admin-portal-developer#service-principals-can-call-fabric-public-apis)
++ Enable your instance so service principals can call Fabric public APIs.  For more information, see [Service principals can call Fabric public APIs](/fabric/admin/service-admin-portal-developer#service-principals-can-call-fabric-public-apis)
 
-+ Add the Sentinel platform identity and the service principal as a **Workspace Member** on the Lakehouse from which you want to federate tables. The sentinel platform identity is prefixed with `msg-resources-`.  For more information, see [Give access to workspaces](fabric/fundamentals/give-access-workspaces).
++ Add the Sentinel platform identity and the service principal as a **Workspace Member** on the Lakehouse from which you want to federate tables. The sentinel platform identity is prefixed with `msg-resources-`.  For more information, see [Give access to workspaces](/fabric/fundamentals/give-access-workspaces).
 
 1. On the **Data federation** > **Catalog** page, select the **Microsoft Fabric** row.
 1. In the side panel, select **Connect a connector**.
@@ -314,5 +314,4 @@ To modify or delete a connector instance:
 ## Next steps
 
 - [Data federation overview](data-federation-overview.md)
-- [Use federated data sources in Microsoft Sentinel](data-federation-use.md)
 - [Query federated tables with KQL](kql-jobs-summary-rules-search-jobs.md)
