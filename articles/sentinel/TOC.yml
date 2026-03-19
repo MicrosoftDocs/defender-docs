@@ -598,6 +598,17 @@
     - name: Microsoft Sentinel data lake overview
       href: datalake/sentinel-lake-overview.md
       displayName: data lake
+    - name: Data federation in the Microsoft Sentinel data lake
+      items:
+        - name: Overview
+          href: datalake/data-federation-overview.md
+          displayName: data lake
+        - name: Set up federated tables
+          href: datalake/data-federation-setup.md
+          displayName: data lake
+        - name: Using federated tables
+          href: datalake/using-data-federation.md
+          displayName: data lake  
     - name: Microsoft Sentinel graph
       items:
         - name: Microsoft Sentinel graph overview
