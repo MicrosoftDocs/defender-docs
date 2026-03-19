@@ -5,7 +5,7 @@ titleSuffix: Microsoft Security
 description: Learn how Microsoft Sentinel graph enables multi-modal security analytics through graph-based representation of security data, providing deep insights into digital environments and attack paths.
 author: mberdugo
 ms.topic: overview
-ms.date: 11/13/2025
+ms.date: 03/18/2026
 ms.author: monaberdugo
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
@@ -67,6 +67,21 @@ To begin using Microsoft Sentinel graph in Microsoft Purview:
 * In **Microsoft Purview Data Security Investigation**, follow the instructions in [Data risk graph in Data Security Investigations](/purview/data-security-investigations-data-risk-graph).
 
 ---
+
+
+## Custom graphs in Microsoft Sentinel
+
+Custom graphs in Microsoft Sentinel let security teams model complex attack patterns, visualize relationships across data sources, and use advanced analytics for proactive threat detection and investigation. Custom graphs combine security telemetry from the Sentinel data lake so you build customized security graphs that model new attack patterns and investigate emerging threats in your environment.
+
+With custom graphs you can:
+
+* Create ad-hoc ephemeral graphs to rapidly model adversary attack patterns, investigate emerging threats, or investigation hypotheses.
+* Materialize a custom graph to continuously update latest security telemetry from the Sentinel data lake and detect systemic threats overtime.
+* Query graphs using the power of Graph Query Language (GQL) and visualize subgraphs and attack paths.
+* Run advanced graph algorithms on your custom graph.
+
+For more information, see [Custom graph overview](custom-graphs-overview.md).
+
 
 ## Pricing
 
