@@ -100,6 +100,20 @@ Microsoft Defender uses internal correlation logic to determine the primary acco
 
 :::image type="content" source="media/investigate-users/identity-observed-in-organization.png" alt-text="Screenshot of the Observed in organization tab on the Identity page in Microsoft Defender.":::
 
+## Risk score tab
+
+The **Risk score** tab provides an overall risk assessment for the identity based on alerts and identity attributes. Use this tab to understand an identity's risk level, identify contributing factors, and prioritize investigation.
+
+| Section | Description |
+| --- | --- |
+| **Risk Summary** | Displays the identity's overall risk score (0–100) and shows how it compares to other identities in your organization by percentile. Also lists the account sets linked to the identity. |
+| **Likelihood of Compromise** | Shows the likelihood severity level and breaks down alerts by MITRE ATT&CK kill chain stage (for example, Initial Access, Persistence, and Privilege Escalation) for each account set. |
+| **Impact of Compromise** | Shows the potential impact level based on the identity's criticality level, classification (for example, Global Administrator), and Microsoft Entra Privileged Identity Management (PIM) role assignments. |
+| **Risk Trend** | A line chart that shows how the risk score changed over a configurable time period (for example, 30 days). Select **Go to timeline** to view the full activity timeline. |
+| **Likelihood of Compromise Details** | A bar chart that shows alert distribution across MITRE ATT&CK categories, with a filterable alert table. Use the **Active alerts only** toggle to focus on unresolved alerts. Filter by account set, status, or kill chain stage. |
+
+Select **Reset risk** at the top of the tab to manually reset the identity's risk score, for example after completing remediation.
+
 ## Timeline tab
 
 The **Timeline** tab provides a chronological view of identity related activity and alerts aggregated from integrated Microsoft security products, such as Microsoft Defender for Identity, Microsoft Defender for Endpoint, Microsoft Defender for Cloud Apps, and Microsoft Sentinel.
