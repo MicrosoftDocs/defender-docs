@@ -33,12 +33,7 @@ For clusters that aren’t running in Azure Kubernetes Service (AKS), Defender f
 
 ## Deploy the Defender sensor
 
-If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](defender-for-containers-verify-deployment.md) before running these commands.
-
-> [!NOTE]
-> If the cluster has the tag `ms_defender_container_exclude_sensors = true`, the Defender sensor won't be installed automatically. However, this tag doesn't prevent manual installation by using Azure CLI.
-
-### Option 1: Deploy using Azure CLI
+If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](defender-for-containers-verify-deployment.md) if needed.
 
 To deploy the Defender sensor to a specific AKS cluster:
 
@@ -47,54 +42,6 @@ az aks update \
   --resource-group <resource-group> \
   --name <aks-cluster-name> \
   --enable-defender
-```
-
-To deploy the Defender sensor using a custom Log Analytics workspace:
-
-```azurecli
-az aks update \
-  --resource-group <resource-group> \
-  --name <aks-cluster-name> \
-  --enable-defender \
-  --defender-config logAnalyticsWorkspaceResourceID=<workspace-resource-id>
-```
-
-Replace `<workspace-resource-id>` with the full Log Analytics workspace resource ID. 
-For example, `/subscriptions/<subscription-id>/resourceGroups/<workspace-rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>`.
-
-### Option 2: Deploy using an ARM template
-
-For teams using Infrastructure-as-Code (IaC) for AKS deployment, you can enable the Defender sensor by configuring the `securityProfile.defender` property on the AKS cluster resource.
-
-This configuration is part of the `Microsoft.ContainerService/managedClusters` resource. This configuration is equivalent to running `az aks update --enable-defender`. For the full schema, see the [ARM template reference for managed clusters](/azure/templates/microsoft.containerservice/managedclusters).
-
-```json
-{
-  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-  "contentVersion": "1.0.0.0",
-  "parameters": {
-    "clusterName": { "type": "string" },
-    "location": { "type": "string" },
-    "workspaceResourceId": { "type": "string" }
-  },
-  "resources": [
-    {
-      "type": "Microsoft.ContainerService/managedClusters",
-      "apiVersion": "2023-01-01",
-      "name": "[parameters('clusterName')]",
-      "location": "[parameters('location')]",
-      "properties": {
-        "securityProfile": {
-          "defender": {
-            "logAnalyticsWorkspaceResourceId": "[parameters('workspaceResourceId')]",
-            "securityMonitoring": { "enabled": true }
-          }
-        }
-      }
-    }
-  ]
-}
-
 ```
 
 ## Deploy the Azure Policy add-on
