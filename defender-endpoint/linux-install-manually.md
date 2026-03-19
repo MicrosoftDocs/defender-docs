@@ -70,8 +70,11 @@ In order to preview new features and provide early feedback, it's recommended th
 
 ### RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)
 
-1. Install `yum-utils` if it isn't installed yet:
+1. Install either `dnf-utils` or `yum-utils` if the one you want to use isn't installed yet:
 
+   ```bash
+   sudo dnf install dnf-plugins-core
+   ```   
    ```bash
    sudo yum install yum-utils
    ```
@@ -101,20 +104,28 @@ In order to preview new features and provide early feedback, it's recommended th
 3. In the following commands, replace *[version]* and *[channel]* with the information you've identified:
 
    ```bash
+   sudo dnf config-manager --add-repo=https://packages.microsoft.com/config/rhel/[version]/[channel].repo
+   ```   
+   ```bash
    sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/[version]/[channel].repo
    ```
-
    > [!TIP]
    > Use hostnamectl command to identify system related information including release *[version]*.
 
    For example, if you're running CentOS 7 and want to deploy Defender for Endpoint on Linux from the `prod` channel:
 
    ```bash
+   sudo dnf config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/prod.repo
+   ```
+   ```bash
    sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/prod.repo
    ```
 
    Or if you wish to explore new features on selected devices, you might want to deploy Defender for Endpoint on Linux to *insiders-fast* channel:
 
+   ```bash
+   sudo dnf config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/insiders-fast.repo
+   ```
    ```bash
    sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/insiders-fast.repo
    ```
@@ -289,11 +300,19 @@ Use the commands in the following sections to install Defender for Endpoint on y
 ### RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)
 
 ```bash
+sudo dnf install mdatp
+```
+```bash
 sudo yum install mdatp
 ```
 
 > [!NOTE]
 > If you have multiple Microsoft repositories configured on your device, you can be specific about which repository to install the package from. The following example shows how to install the package from the `production` channel if you also have the `insiders-fast` repository channel configured on this device. This situation can happen if you're using multiple Microsoft products on your device. Depending on the distribution and the version of your server, the repository alias might be different than the one in the following example.
+
+```bash
+# list all repositories
+sudo dnf repolist
+```
 
 ```bash
 # list all repositories
@@ -533,6 +552,9 @@ For example, to change channel from Insiders-Fast to Production, do the followin
 
 1. Uninstall the `Insiders-Fast channel` version of Defender for Endpoint on Linux.
 
+   ```bash
+   sudo dnf remove mdatp
+   ```
    ```bash
    sudo yum remove mdatp
    ```
