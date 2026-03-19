@@ -33,7 +33,7 @@ For clusters that aren’t running in Azure Kubernetes Service (AKS), Defender f
 
 ## Deploy the Defender sensor
 
-If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](defender-for-containers-verify-deployment.md) if needed.
+If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](defender-for-containers-verify-deployment.md) before running this command.
 
 To deploy the Defender sensor to a specific AKS cluster:
 
@@ -75,10 +75,7 @@ az aks enable-addons \
 
 For EKS clusters, Defender components are deployed as Azure Arc Kubernetes extensions when you deploy them manually using Azure CLI.
 
-If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](defender-for-containers-verify-deployment.md) before running these commands.
-
-> [!NOTE]
-> If the cluster has the tag `ms_defender_container_exclude_sensors = true`, the Defender sensor won't be installed automatically. However, this tag doesn't prevent manual installation by using Azure CLI.
+If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](defender-for-containers-verify-deployment.md) before running this command.
 
 ```azurecli
 az k8s-extension create \
@@ -153,10 +150,7 @@ For Autopilot clusters:
 
 For GKE clusters, Defender components are deployed as Azure Arc Kubernetes extensions when you deploy them manually using Azure CLI.
 
-If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](defender-for-containers-verify-deployment.md) before running these commands.
-
-> [!NOTE]
-> If the cluster has the tag `ms_defender_container_exclude_sensors = true`, the Defender sensor won't be installed automatically. However, this tag doesn't prevent manual installation by using Azure CLI.
+If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](defender-for-containers-verify-deployment.md) before running this command.
 
 ```azurecli
 az k8s-extension create \
@@ -190,7 +184,7 @@ az k8s-extension create \
 
 - Azure CLI version 2.40.0 or later.
 
-- `kubectl` configured to access your ARC cluster.
+- `kubectl` configured to access your Arc-enabled Kubernetes cluster.
 
 - The cluster is [connected to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
 
@@ -202,10 +196,7 @@ az k8s-extension create \
 
 For Arc-enabled Kubernetes clusters, Defender components are deployed as Azure Arc Kubernetes extensions.
 
-If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](defender-for-containers-verify-deployment.md) before running these commands.
-
-> [!NOTE]
-> If the cluster has the tag `ms_defender_container_exclude_sensors = true`, the Defender sensor won't be installed automatically. However, this tag doesn't prevent manual installation by using Azure CLI.
+If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](defender-for-containers-verify-deployment.md) before running this command.
 
 ```azurecli
 az k8s-extension create \
