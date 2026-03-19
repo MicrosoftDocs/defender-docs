@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 11/03/2025
+ms.date: 03/19/2026
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux manually
@@ -70,11 +70,14 @@ In order to preview new features and provide early feedback, it's recommended th
 
 ### RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)
 
-1. Install either `dnf-utils` or `yum-utils` if the one you want to use isn't installed yet:
+You can use either the `dnf` or the `yum` package manager to deploy Defender for Endpoint on Linux on RHEL and its variants. The instructions in the following sections include commands for both package managers; use just the relevant one.
+
+1. Install either `dnf-plugins-core` or `yum-utils` if the one you want to use isn't installed yet:
 
    ```bash
    sudo dnf install dnf-plugins-core
-   ```   
+   ```
+   or   
    ```bash
    sudo yum install yum-utils
    ```
@@ -104,8 +107,9 @@ In order to preview new features and provide early feedback, it's recommended th
 3. In the following commands, replace *[version]* and *[channel]* with the information you've identified:
 
    ```bash
-   sudo dnf config-manager --add-repo=https://packages.microsoft.com/config/rhel/[version]/[channel].repo
-   ```   
+   sudo dnf config-manager --add-repo https://packages.microsoft.com/config/rhel/[version]/[channel].repo
+   ```
+   or   
    ```bash
    sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/[version]/[channel].repo
    ```
@@ -115,8 +119,9 @@ In order to preview new features and provide early feedback, it's recommended th
    For example, if you're running CentOS 7 and want to deploy Defender for Endpoint on Linux from the `prod` channel:
 
    ```bash
-   sudo dnf config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/prod.repo
+   sudo dnf config-manager --add-repo https://packages.microsoft.com/config/rhel/7/prod.repo
    ```
+   or
    ```bash
    sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/prod.repo
    ```
@@ -124,8 +129,9 @@ In order to preview new features and provide early feedback, it's recommended th
    Or if you wish to explore new features on selected devices, you might want to deploy Defender for Endpoint on Linux to *insiders-fast* channel:
 
    ```bash
-   sudo dnf config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/insiders-fast.repo
+   sudo dnf config-manager --add-repo https://packages.microsoft.com/config/rhel/7/insiders-fast.repo
    ```
+   or
    ```bash
    sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/insiders-fast.repo
    ```
@@ -240,12 +246,6 @@ In order to preview new features and provide early feedback, it's recommended th
       curl -sSL https://packages.microsoft.com/keys/microsoft-2025.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg > /dev/null
       sudo chmod o+r /usr/share/keyrings/microsoft-prod.gpg
       ```
-      
-   - For Debian 13 and later, run the following command.
-
-      ```bash
-      curl -sSL https://packages.microsoft.com/keys/microsoft-2025.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg > /dev/null
-      ```
 
 7. Install the HTTPS driver if not already installed:
 
@@ -302,6 +302,7 @@ Use the commands in the following sections to install Defender for Endpoint on y
 ```bash
 sudo dnf install mdatp
 ```
+or
 ```bash
 sudo yum install mdatp
 ```
@@ -313,10 +314,10 @@ sudo yum install mdatp
 # list all repositories
 sudo dnf repolist
 ```
-
+or
 ```bash
 # list all repositories
-yum repolist
+sudo yum repolist
 ```
 
 ```console
@@ -325,9 +326,12 @@ packages-microsoft-com-prod               packages-microsoft-com-prod        316
 packages-microsoft-com-prod-insiders-fast packages-microsoft-com-prod-ins      2
 ...
 ```
-
+For example to install the package from the production repository:
 ```bash
-# install the package from the production repository
+sudo dnf --enablerepo=packages-microsoft-com-prod install mdatp
+```
+or
+```bash
 sudo yum --enablerepo=packages-microsoft-com-prod install mdatp
 ```
 
@@ -555,12 +559,17 @@ For example, to change channel from Insiders-Fast to Production, do the followin
    ```bash
    sudo dnf remove mdatp
    ```
+   or
    ```bash
    sudo yum remove mdatp
    ```
 
 1. Disable the Defender for Endpoint on Linux Insiders-Fast channel
 
+   ```bash
+   sudo dnf config-manager --disable packages-microsoft-com-fast-prod
+   ```
+   or
    ```bash
    sudo yum-config-manager --disable packages-microsoft-com-fast-prod
    ```
@@ -578,7 +587,7 @@ To configure antivirus and EDR settings, see the following articles:
 
 For manual uninstallation, execute the following command for your Linux distribution.
 
-- `sudo yum remove mdatp` for RHEL and variants(CentOS and Oracle Linux).
+- `sudo dnf remove mdatp` or `sudo yum remove mdatp` (depending on your package manager) for RHEL and variants(CentOS and Oracle Linux).
 - `sudo zypper remove mdatp` for SLES and variants.
 - `sudo apt purge mdatp` for Ubuntu and Debian systems.
 - `sudo dnf remove mdatp` for Mariner
