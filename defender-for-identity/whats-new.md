@@ -24,6 +24,30 @@ For more information, see also:
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 ## March 2026
 
+### New Defender for Identity security alerts
+
+These new alerts were added to the Defender for Identity security alerts:
+
+**New alerts related to Entra ID**:
+
+- [Attempt to disable Defender for Identity service principal observed](alerts-xdr.md#attempt-to-disable-defender-for-identity-service-principal-observed)
+- [Suspicious Entra account enablement after disruption](alerts-xdr.md#suspicious-entra-account-enablement-after-disruption)
+- [Suspicious Intune device registration activity](alerts-xdr.md#suspicious-intune-device-registration-activity)
+- [Suspicious OS switch sign-in](alerts-xdr.md#suspicious-os-switch-sign-in)
+- [Suspicious shared client infrastructure activity](alerts-xdr.md#suspicious-shared-client-infrastructure-activity)
+- [Suspicious sign-in from unusual user agent and IP address using PowerShell](alerts-xdr.md#suspicious-sign-in-from-unusual-user-agent-and-ip-address-using-powershell)
+- [Suspicious sign-in from unusual user agent and IP address using device code flow](alerts-xdr.md#suspicious-sign-in-from-unusual-user-agent-and-ip-address-using-device-code-flow)
+
+**New alerts related to Active Directory**:
+
+- [Suspicious on-prem account enablement after disruption](alerts-xdr.md#suspicious-on-prem-account-enablement-after-disruption)
+- [Suspicious resource-based constrained delegation (RBCD) attribute change](alerts-xdr.md#suspicious-resource-based-constrained-delegation-rbcd-attribute-change)
+- [Suspicious resource-based constrained delegation (RBCD) authentication](alerts-xdr.md#suspicious-resource-based-constrained-delegation-rbcd-authentication)
+
+### Suspected pass-the-ticket attack alert is now generally available
+
+The [Suspected pass-the-ticket attack](alerts-xdr.md#suspected-pass-the-ticket-attack) alert is now generally available. This alert was previously available in public preview as *Pass-the-Ticket (PtT) attack*. For more information, see [Lateral movement alerts](alerts-xdr.md).
+
 ### Updates to Secure Score category calculations for increased accuracy
 
 To improve accuracy and better protect organizational identities, some security recommendations categorized as **Cloud apps** recommendations are now considered identity‑related and grouped under the **Identity** category. While the total Secure Score remains unchanged, individual identity and app scores may change.
