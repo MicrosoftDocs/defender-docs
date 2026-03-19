@@ -336,11 +336,11 @@ Apply these actions to devices in the `DeviceId` column of the query results:
 - When selected, the **Mark user as compromised** action takes on users in the `AccountObjectId`, `InitiatingProcessAccountObjectId`, or `RecipientObjectId` column of the query results. This action sets the user's risk level to "high" in Microsoft Entra ID, triggering corresponding [identity protection policies](/azure/active-directory/identity-protection/overview-identity-protection).
 
 - Select **Disable user** to temporarily prevent a user from signing in.
-- Select **Reset user authentication** to prompt the user to either change their password on the next sign in session (for on-Prem Identities) or require user to sign in again (for Entra Identities).
+- Select **Reset user authentication** to prompt the user to either change their password on their next sign-in session (for on-premises identities) or require them to sign in again (for Microsoft Entra identities).
 
-- Both the `Disable user` and `Reset user authentication` options require the user SID, which are in the columns `AccountSid`, `InitiatingProcessAccountSid`, `RequestAccountSid`, and `OnPremSid`.
+- Both the **Disable user** and **Reset user authentication** options require the user security identifier (SID), which are in the columns `AccountSid`, `InitiatingProcessAccountSid`, `RequestAccountSid`, and `OnPremSid`.
 
-- For Entra Identities, `AccountObjectId` parameter is needed for all actions.
+- For Microsoft Entra identities, `AccountObjectId` parameter is needed for all actions.
 
 For more information on user actions, see [Remediation actions in Microsoft Defender for Identity](/defender-for-identity/remediation-actions) and [Remediation actions in Microsoft Defender for Cloud Apps](/defender-cloud-apps/governance-actions).
 
