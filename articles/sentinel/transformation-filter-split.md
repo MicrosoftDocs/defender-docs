@@ -6,7 +6,7 @@ ms.author: edbaynash
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: how-to
-ms.date: 03/08/2026
+ms.date: 03/19/2026
 
 #Customer intent: As a security engineer, I want to filter and split incoming data during ingestion so that I can reduce noise, optimize costs, and route data to the appropriate storage tier.
 
@@ -16,7 +16,7 @@ ms.date: 03/08/2026
 
 As security data volumes continue to grow, organizations face the challenge of balancing cost-effective retention of telemetry used for AI, compliance, and investigations while ensuring that only necessary data is retained in high-performance storage tiers. Use filter and split data transformations in Microsoft Sentinel to address this challenge by modifying data at ingestion time to optimize your data retention strategy.
 
-This article describes how to configure filter and split data transformations without the need for custom Data Collection Rule (DCR) configurations to streamline your analytics pipelines in Microsoft Sentinel. By tailoring data ingestion, these transformations improve performance and reduce noise.
+This article describes how to configure filter and split data transformations without the need to manually create custom Data Collection Rule (DCR) configurations. By tailoring data ingestion, these transformations improve performance and reduce noise.
 
 By using data transformations, you can optimize your security data pipeline by controlling what data is stored and in which tier. Using filter and split transformations provides the following benefits:
 
