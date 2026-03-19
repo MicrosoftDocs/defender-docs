@@ -63,7 +63,7 @@ In the following example, the daily quick scan configuration is set to run at 88
 
 The following code shows the schema you need to use to schedule scans according to the requirements mentioned earlier.
 
-1. Open a text editor and use this example as a guide for your own scheduled scan file.
+Open a text editor and use the following examples as a guide for your own scheduled scan file.
 
 #### For Intune
 
@@ -196,6 +196,8 @@ In the results, you should be able to see [managed].
 
 In the following example, an hourly quick scan will run every 6 hours, a daily quick scan configuration is set to run at 885 minutes after midnight (2:45 p.m.), and a weekly full scan will run on Wednesdays at 880 minutes after midnight (2:40 p.m).
 
+Open a text editor and use the following examples as a guide for your own scheduled scan file.
+
 #### For Intune:
 
 ```XML
@@ -280,8 +282,6 @@ In the following example, an hourly quick scan will run every 6 hours, a daily q
 
 #### For JamF and other 3rd-party MDMs
 
-1. Open a text editor and use this example.
-
     ```XML
     <?xml version="1.0" encoding="UTF-8"?> 
     <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.  dtd"> 
@@ -321,7 +321,7 @@ In the following example, an hourly quick scan will run every 6 hours, a daily q
 
 1. Save the file as `com.microsoft.wdav.plist`.
 
-##### Upload the plist file to Jamf Pro
+### Upload the plist file to Jamf Pro
 
 1. Go to **Computers > Configuration Profiles.**
 
