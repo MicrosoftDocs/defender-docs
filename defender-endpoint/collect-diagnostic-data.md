@@ -62,7 +62,7 @@ On at least two devices that are experiencing the same issue, use the following 
      MpCmdRun.exe -GetFiles -SupportLogLocation <RootPath>
      ```
 
-     The diagnostic log files are still generated, compressed, and saved to the file `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab` by default. But then the .cab file is **copied with a new name** into a subfolder of the location specified by the `<RootPath>` value (for example, `P:\Data` or `\\Server01\Data`). The filename and path of the resulting .cab file uses the following syntax: `<RootPath>\<MMDD>\MpSupport-<Hostname>-<HHMM>.cab.
+     The diagnostic log files are still generated, compressed, and saved to the file `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab` by default. But then the .cab file is **copied with a new name** into a subfolder of the location specified by the `<RootPath>` value (for example, `P:\Data` or `\\Server01\Data`). The filename and path of the resulting .cab file uses the following syntax: `<RootPath>\<MMDD>\MpSupport-<Hostname>-<HHMM>.cab`.
 
      - `<RootPath>` is the value you specified for the _SupportLogLocation_ switch.
      - `<MMDD>` is the month and day when you ran the MpCmdRun.exe command (for example, 0318 for March 18).
