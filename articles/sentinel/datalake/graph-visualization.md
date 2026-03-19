@@ -4,7 +4,7 @@ description: Learn how to use Microsoft Sentinel graph to query, visualize, and 
 author: EdB-MSFT
 ms.author: edbaynash
 ms.date: 03/16/2026
-ms.topic: how-to 
+ms.topic: how-to
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-graph
 
@@ -32,7 +32,7 @@ The Sentinel graph management page lists any custom graphs that you created in t
 
 If you already created custom graphs, the Sentinel graph management page displays all available custom graphs. View an overview of each custom graph by selecting the **...** menu on any graph tile.
 
-:::image type="content" source="media/sentinel-graph-visualization/graphs-landing-page.png" alt-text="Screenshot showing how to access Sentinel graph from the Microsoft Sentinel navigation pane." lightbox="media/sentinel-graph-visualization/graphs-landing-page.png":::
+:::image type="content" source="media/graph-visualization/graphs-landing-page.png" alt-text="Screenshot showing how to access Sentinel graph from the Microsoft Sentinel navigation pane." lightbox="media/graph-visualization/graphs-landing-page.png":::
 
 
 ## Query a custom graph
@@ -41,7 +41,7 @@ Select **Query graph** on the graph tile to view the graph query page.
 
 The graph creation page shows the graph schema. Use the schema to understand the mapped relationships when creating a query. 
 
-:::image type="content" source="media/sentinel-graph-visualization/graph-creation-schema.png" alt-text="Screenshot showing the Sentinel graph creation page with the schema panel and query input." lightbox="media/sentinel-graph-visualization/graph-creation-schema.png":::
+:::image type="content" source="media/graph-visualization/graph-creation-schema.png" alt-text="Screenshot showing the Sentinel graph creation page with the schema panel and query input." lightbox="media/graph-visualization/graph-creation-schema.png":::
 
 1. Select the **Getting started** tab 
 
@@ -60,11 +60,11 @@ The graph creation page shows the graph schema. Use the schema to understand the
 
 1. Select any node to view the node details, including the properties associated with that node. Use this information to inform subsequent queries and visualizations.
 
-    :::image type="content" source="./media/sentinel-graph-visualization/graph-basic-query.png" lightbox="./media/sentinel-graph-visualization/graph-basic-query.png"  alt-text="Screenshot showing the Sentinel graph visualization results after running a GQL query.":::
+    :::image type="content" source="./media/graph-visualization/graph-basic-query.png" lightbox="./media/graph-visualization/graph-basic-query.png"  alt-text="Screenshot showing the Sentinel graph visualization results after running a GQL query.":::
 
 1. Select the **Table** tab to view a tabular representation of your results. Select a row to see the underlying JSON data for each cell. 
 
-    :::image type="content" source="media/sentinel-graph-visualization/basic-query-table.png" alt-text="Screenshot showing the table visualization results after running a GQL query." lightbox="media/sentinel-graph-visualization/basic-query-table.png":::
+    :::image type="content" source="media/graph-visualization/basic-query-table.png" alt-text="Screenshot showing the table visualization results after running a GQL query." lightbox="media/graph-visualization/basic-query-table.png":::
 
 ## GQL query guidance
 
@@ -74,7 +74,7 @@ The following example demonstrates how to query a Device Process Graph to unders
 - *Users* run *Processes*
 - *Processes* connect to *URLs*
 
-:::image type="content" source="./media/sentinel-graph-visualization/device-process-schema.png" lightbox="./media/sentinel-graph-visualization/device-process-schema.png" alt-text="Screenshot showing the schema of the device process graph.":::
+:::image type="content" source="./media/graph-visualization/device-process-schema.png" lightbox="./media/graph-visualization/device-process-schema.png" alt-text="Screenshot showing the schema of the device process graph.":::
 
 You can now draft a more specific query. In the following example, the first line specifies that you're looking for devices that utilize a process that's connected to an IP address. `MATCH (d:Device)-[h]-(p:Process)-[c]->(ip:IPAddress)`
 The second line specifies that you're looking for public IPs, narrowing our results to external connected entities that pose a greater threat. `WHERE ip.RemoteIPType = 'Public'`
@@ -87,7 +87,7 @@ RETURN *
 LIMIT 1000
 ```
 
-:::image type="content" source="media/sentinel-graph-visualization/graph-specific-query.png" alt-text="Screenshot showing the graph visualization for a specific query filtering devices connected to public IP addresses." lightbox="media/sentinel-graph-visualization/graph-specific-query.png":::
+:::image type="content" source="media/graph-visualization/graph-specific-query.png" alt-text="Screenshot showing the graph visualization for a specific query filtering devices connected to public IP addresses." lightbox="media/graph-visualization/graph-specific-query.png":::
 
 The following example demonstrates a more granular query with additional search parameters. This query searches for malicious IP addresses and devices communicating with more than one device. The first line searches for devices that connect to IP addresses that are known to be used by threat actors. The `DISTINCT` clause searches for unique IP and device values. The `COLLECT_LIST` groups the device names in a singular column in the **Table** view, and `DeviceCount` specifies that only IPs with more than one connected device are listed.
 
@@ -102,7 +102,7 @@ ORDER BY DeviceCount desc
 RETURN *
 ```
 
-:::image type="content" source="media/sentinel-graph-visualization/table-specific-query.png" alt-text="Screenshot showing the table view for a specific query filtering devices connected to malicious IP addresses." lightbox="media/sentinel-graph-visualization/graph-specific-query.png":::
+:::image type="content" source="media/graph-visualization/table-specific-query.png" alt-text="Screenshot showing the table view for a specific query filtering devices connected to malicious IP addresses." lightbox="media/graph-visualization/graph-specific-query.png":::
 
 ## Interact with graphs
 
@@ -122,7 +122,7 @@ Select a node to open a details pane on the right side. Use the metadata shown h
 
 **Explore connected assets** From the node details pane, you can select **Explore connected assets** to populate any more nodes with a relationship to the selected node. This is useful when you discover an entity of interest and want to more deeply investigate its connectivity.
 
-:::image type="content" source="media/sentinel-graph-visualization/graph-legend.png" lightbox="media/sentinel-graph-visualization/graph-legend.png" alt-text="Screenshot showing the graph legend with node and edge types.":::
+:::image type="content" source="media/graph-visualization/graph-legend.png" lightbox="media/graph-visualization/graph-legend.png" alt-text="Screenshot showing the graph legend with node and edge types.":::
 
 **Hover over nodes**
 Hover over a node to highlight its connections. This hides unrelated nodes and edges for a clearer view of the node's connectivity and displays key node information, including connected node labels.
@@ -132,7 +132,7 @@ Hover over a node to highlight its connections. This hides unrelated nodes and e
 
 You can use the filters at the top-right of the graph canvas to narrow down the visualized results by node type or edge relationship.
 
-:::image type="content" source="media/sentinel-graph-visualization/filters.png" lightbox="media/sentinel-graph-visualization/filters.png" alt-text="Screenshot showing the graph filters for node and edge types.":::
+:::image type="content" source="media/graph-visualization/filters.png" lightbox="media/graph-visualization/filters.png" alt-text="Screenshot showing the graph filters for node and edge types.":::
 
 **Canvas control - rearrange and zoom**
 - Drag nodes to reposition them on the canvas
@@ -148,7 +148,7 @@ You can view a tabular representation of your data by selecting the **Table** ta
 - View the underlying JSON for an individual cell, providing key context you can use in future queries.
 - Export to CSV format for use in other preexisting workflows.
 
-:::image type="content" source="media/sentinel-graph-visualization/graph-table-export.png" alt-text="Screenshot showing the table view with search, sort, and export capabilities." lightbox="media/sentinel-graph-visualization/graph-table-export.png":::
+:::image type="content" source="media/graph-visualization/graph-table-export.png" alt-text="Screenshot showing the table view with search, sort, and export capabilities." lightbox="media/graph-visualization/graph-table-export.png":::
 
 You can also customize the table format by using the `RETURN` operator to define the column structure, or order results to your preference. For more information, see the [GQL documentation](./gql-reference-for-sentinel-custom-graph.md).
 
