@@ -12,7 +12,7 @@ ms.collection:
 - tier2
 ms.topic: how-to
 search.appverid: met150
-ms.date: 02/01/2025
+ms.date: 03/19/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -96,3 +96,15 @@ The following options are available for managing existing files in the library:
 | **Download** | Download a selected file to your local device. | Top menu, right-click menu, view file window |
 | **Delete** | Remove a selected file from the list. | Top menu, right-click menu |
 | **Filter** | Filter the list of files based on specific criteria, such as type or creation date. | Top menu |
+
+## Audit logging
+
+Library management actions are tracked in the Microsoft Purview audit log. Actions such as uploading, downloading, deleting, and listing files in the library are recorded, giving you visibility into how library files are managed across your organization.
+
+To view audit logs for library management actions:
+
+1. In the [Microsoft Purview compliance portal](https://compliance.microsoft.com), go to **Audit**.
+1. Search for audit logs using the following criteria:
+   - **Activities - friendly names**: `Ran live response session`
+   - **Record Types**: `MSDEResponseActions`
+1. Review the results to see the library management actions performed, including the user, timestamp, and a description of the action (for example, "Library management - downloaded file" or "Library management - created file").
