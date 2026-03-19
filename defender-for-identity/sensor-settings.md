@@ -150,10 +150,7 @@ Defender for Identity sensors v2.x support two kinds of updates:
 >
 > Defender for Identity sensors v2.x always reserve at least 15% of the available memory and CPU on the domain controller where the sensor is installed. If the service consumes too much memory, it's automatically stopped and restarted by the sensor updater service.
 
-### Delayed sensor update
-
->[!NOTE]
->Delayed sensor updates are only supported by sensor version 2.x.
+### Delayed update for sensor v2.x
 
 You can define a subset of your sensors as a delayed update ring. Sensors not in the delayed ring are updated automatically each time the service is updated. Sensors set to **Delayed update** are updated 72 hours later, giving you time to confirm that the automatically updated sensors are working correctly.
 
