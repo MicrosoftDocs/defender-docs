@@ -37,12 +37,11 @@ Servers that meet all prerequisites appear as **Ready for migration** on the **S
 1. In the confirmation prompt, review the details and confirm to start the migration.
 
 > [!NOTE]
-> The migration typically takes up to 20 minutes. During this time, the v2.x sensor continues to run until the v3.x sensor is ready, ..so your server stays protected without interruption.
-Audit logs are generated for each migration, including the date, status, and whether the migration was initiated by a user or the system.
+> The migration typically takes up to 20 minutes. During this time, the v2.x sensor continues to run until the v3.x sensor is ready, so your server stays protected without interruption.
 
 ## Configure the v3.x sensor
 
-Complete the configuration steps described in [Defender for Identity sensor v3.x prerequisites](prerequisites-sensor-version-3.md), including:
+For optimal protection and monitoring, complete the configuration steps described in [Defender for Identity sensor v3.x prerequisites](prerequisites-sensor-version-3.md), including:
 
 - [Configure RPC auditing](prerequisites-sensor-version-3.md#configure-rpc-auditing).
 - [Configure Windows event auditing](prerequisites-sensor-version-3.md#configure-windows-event-auditing). Existing auditing configurations from the v2.x sensor are preserved and converted for v3.x, but we recommend enabling automated auditing for optimal configuration validation.

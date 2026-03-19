@@ -26,7 +26,7 @@ The **Sensors** tab shows all Defender for Identity sensors deployed in your env
 
 - **Filter** sensors by type, domain, delayed update, service status, sensor status, migration state, or health status.
 - **Export** the sensor list to a .csv file.
-- **Add a sensor** using the **+ Add sensor** option.
+- **Onboard a sensor** using the **+ Add sensor** option.
 - **Customize columns** to show or hide specific fields.
 - **Search** for a specific sensor by name.
 
@@ -82,7 +82,7 @@ For the full list of v3.x requirements, see [Defender for Identity sensor v3.x p
 | **Ready for migration** | The server meets all prerequisites and can be migrated. |
 | **Not ready for migration** | The server doesn't meet one or more prerequisites. |
 | **Migrating** | The migration is in progress. |
-| **Already v3.x** | The migration completed successfully. The server is running sensor v3.x. |
+| **Up to date** | The migration completed successfully. The server is running sensor v3.x. |
 | **Migration failed** | The migration encountered an error. You can retry the migration. |
 
 ### Service status
@@ -102,7 +102,7 @@ The service status column indicates the current operational state of the sensor 
 The sensor status column indicates the current update and configuration state of the sensor software.
 
 | Status | Description |
-|---|---|
+| --- | --- |
 | **Up to date** | The sensor is running the current version. |
 | **Outdated** | The sensor is running a version that is at least three versions behind the current version. |
 | **Updating** | The sensor software is being updated. |
@@ -118,7 +118,7 @@ The sensor status column indicates the current update and configuration state of
 The health status column indicates the overall health of the sensor based on the severity of any open health issues.
 
 | Status | Description |
-|---|---|
+| --- | --- |
 | **Healthy** (green icon) | No open health issues. |
 | **Not healthy** (yellow icon) | The highest severity open health issue is low. |
 | **Not healthy** (orange icon) | The highest severity open health issue is medium. |
@@ -126,25 +126,29 @@ The health status column indicates the overall health of the sensor based on the
 
 ## Update sensors
 
+Defender for Identity sensor v3.x is delivered as a component of Microsoft Defender for Endpoint and is updated automatically through Windows Updates. No manual sensor update process is required for v3.x sensors.
+
+The rest of this section applies only to Defender for Identity sensor v2.x.
+
+### Defender for Identity sensor v2.x update types
+
 The Defender for Identity service is typically updated a few times a month with new detections, features, and performance improvements. These updates usually include a corresponding minor update to the sensors.
 
-### Defender for Identity sensor update types
+Defender for Identity sensors v2.x support two kinds of updates:
 
-Defender for Identity sensors support two kinds of updates:
-
-* Minor version updates:
-  * Frequent
-  * Requires no MSI install, and no registry changes
-  * Restarted: Defender for Identity sensor services
+- Minor version updates:
+  - Frequent
+  - Requires no MSI install, and no registry changes
+  - Restarted: Defender for Identity sensor services
   
-* Major version updates:
-  * Rare
-  * Contains significant changes
-  * Restarted: Defender for Identity sensor services
+- Major version updates:
+  - Rare
+  - Contains significant changes
+  - Restarted: Defender for Identity sensor services
   
 > [!NOTE]
 >
-> Defender for Identity sensors always reserve at least 15% of the available memory and CPU on the domain controller where the sensor is installed. If the service consumes too much memory, it's automatically stopped and restarted by the sensor updater service.
+> Defender for Identity sensors v2.x always reserve at least 15% of the available memory and CPU on the domain controller where the sensor is installed. If the service consumes too much memory, it's automatically stopped and restarted by the sensor updater service.
 
 ### Delayed sensor update
 
@@ -166,9 +170,9 @@ To set a sensor to delayed update:
 
 To disable delayed updates, select the sensor and then select the **Disabled delayed update** button.
 
-### Sensor update process
+### Sensor v2.x update process
 
-Every few minutes, sensors check whether a newer version is available. When the cloud service is updated, sensors start the update process:
+Every few minutes, v2.x sensors check whether a newer version is available. When the cloud service is updated, sensors start the update process:
 
 1. The cloud service updates to the latest version.
 1. The sensor updater service detects the new version.
@@ -189,9 +193,9 @@ Every few minutes, sensors check whether a newer version is available. When the 
     For any sensor that fails to complete the update process, a relevant [health alert](health-alerts.md) is triggered, and is sent as a notification.
 
 
-### Silently update the Defender for Identity sensor
+### Silently update the Defender for Identity v2.x sensor
 
-Use the following command to silently update the Defender for Identity sensor:
+Use the following command to silently update the Defender for Identity v2.x sensor:
 
 **Syntax**:
 
@@ -227,6 +231,6 @@ For more information, see [Configure endpoint proxy and internet connectivity se
 
 ## Next steps
 
-* [Defender for Identity sensor v2.x prerequisites](deploy/prerequisites-sensor-version-2.md) and [Defender for Identity sensor v3.x prerequisites](deploy/prerequisites-sensor-version-3.md) 
-* [Configure event forwarding](deploy/configure-event-forwarding.md)
-* [Defender for Identity community forum](<https://aka.ms/MDIcommunity>)
+- [Defender for Identity sensor v2.x prerequisites](deploy/prerequisites-sensor-version-2.md) and [Defender for Identity sensor v3.x prerequisites](deploy/prerequisites-sensor-version-3.md) 
+- [Configure event forwarding](deploy/configure-event-forwarding.md)
+- [Defender for Identity community forum](<https://aka.ms/MDIcommunity>)
