@@ -25,7 +25,7 @@ Before setting up data federation, ensure you meet the following requirements:
 
 - **Public accessibility**: Azure Data Lake Storage Gen2 and Azure Databricks sources must be publicly accessible. Private endpoints for these sources aren't supported currently. 
 - **Service principal**: A service principal with access to the external data source. For more information on creating service principals. For more information, see [Microsoft Entra ID app registrations](/entra/identity-platform/quickstart-register-app).
-- **Azure Key Vault**: An Azure Key Vault configured with the Service principal client secret is required. The Microsoft sentinel application identity needs permissions assigned to the key vault. For more information on configuring Azure Key vaults, see [Azure Key Vaults](/azure/key-vault/general/basic-concepts).
+- **Azure Key Vault**: An Azure Key Vault configured with the Service principal client secret is required. The Microsoft Sentinel application identity needs permissions assigned to the key vault. For more information on configuring Azure Key vaults, see [Azure Key Vaults](/azure/key-vault/general/basic-concepts).
 - **Microsoft Sentinel permissions**: **Data (manage)** permissions on System tables to configure a data federation connector. For more information, see [Roles and permissions in the Microsoft Sentinel platform](/azure/sentinel/roles).
 
 
