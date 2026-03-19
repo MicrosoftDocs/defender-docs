@@ -176,7 +176,7 @@ Use the following procedure to enable network protection on domain-joined comput
 
     *-Or-*
 
-    On a domain-joined Group Policy management computer, open the [Group Policy Management Console](https://technet.microsoft.com/library/cc731212.aspx). Right-click the Group Policy Object you want to configure and select **Edit**.
+    On a domain-joined Group Policy management computer, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console). Right-click the Group Policy Object you want to configure and select **Edit**.
 
 2. In the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
 
@@ -231,7 +231,7 @@ Use the following procedure to enable network protection on domain-joined comput
    |Windows Server version|Commands|
    |---|---|
    |Windows Server 2019 and later|`Set-MpPreference -AllowNetworkProtectionOnWinServer $true`|
-   |Windows Server 2016 <br/> Windows Server 2012 R2 with the [unified agent for Microsoft Defender for Endpoint](/defender-endpoint/enable-network-protection)|`Set-MpPreference -AllowNetworkProtectionDownLevel $true` <br/> `Set-MpPreference -AllowNetworkProtectionOnWinServer $true`|
+   |Windows Server 2016 <br/> Windows Server 2012 R2 with the [unified agent for Microsoft Defender for Endpoint](enable-network-protection.md)|`Set-MpPreference -AllowNetworkProtectionDownLevel $true` <br/> `Set-MpPreference -AllowNetworkProtectionOnWinServer $true`|
 
   > [!IMPORTANT]
   > Disable the "AllowDatagramProcessingOnWinServer" setting. Disabling this setting is important for any roles that generate high volumes of UDP traffic such as Domain Controllers, Windows DNS servers, Windows File Servers, Microsoft SQL servers, Microsoft Exchange servers, and others. Enabling datagram processing in these cases can reduce network performance and reliability. Disabling it helps keep the network stable and ensures better use of system resources in high-demand environments.
