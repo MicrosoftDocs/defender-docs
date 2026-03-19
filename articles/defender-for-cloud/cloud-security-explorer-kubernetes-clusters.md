@@ -22,7 +22,7 @@ For an introduction to Cloud Security Explorer queries, see [Build queries with 
 
     :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/cloud-security-explorer-main-page.png" alt-text="Screenshot of main page of Cloud Security Explorer." lightbox="./media/cloud-security-explorer-kubernetes-clusters/cloud-security-explorer-main-page.png":::
 
-1. Search for container images that have installed softwares.
+1. Select **has installed softwares**.
 
     :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/security-explorer-containers-query.png" alt-text="Screenshot of Cloud Security Explorer query options to retrieve list of container images with software installed." lightbox="./media/cloud-security-explorer-kubernetes-clusters/security-explorer-containers-query.png":::
 
