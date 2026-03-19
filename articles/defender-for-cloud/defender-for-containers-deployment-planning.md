@@ -1,7 +1,7 @@
 ---
 title: Deployment planning for Microsoft Defender for Containers
 description: Learn how to plan deployment of Microsoft Defender for Containers across Kubernetes environments, including onboarding, deployment methods, and post-deployment verification.
-ms.topic: concept
+ms.topic: concept-article
 ms.author: elkrieger
 author: Elazark
 ms.date: 03/16/2026
@@ -65,7 +65,7 @@ After deployment, verify that Defender components are running correctly and addr
 
 - [Enable Defender for Containers](defender-for-containers-enable-portal.md)
 
-- [Exclude clusters from automatic provisioning](defender-for-containers-exclude-clusters.md)
+- [Exclude clusters from automatic provisioning](defender-for-containers-exclude-cluster.md)
 
 - [Deploy Defender sensor and Azure Policy to clusters using Azure CLI](defender-for-containers-deploy-azure-cli.md)
 

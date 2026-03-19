@@ -71,5 +71,6 @@ To confirm, verify that Defender sensor components weren't installed automatical
 
 ## Next steps
 
-- Learn how to [install the Defender sensor using Helm](defender-for-containers-helm-deploy.md).
-- Learn how to [deploy Defender components using Azure CLI](defender-for-containers-deploy-cli.md).
+- Learn how to [install the Defender sensor using Helm](deploy-helm.md).
+
+- Learn how to [deploy Defender components using Azure CLI](defender-for-containers-deploy-azure-cli.md).
