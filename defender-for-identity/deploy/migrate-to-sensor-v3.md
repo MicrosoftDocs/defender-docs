@@ -12,7 +12,7 @@ ai-usage: ai-assisted
 #customer intent: As a security admin, I want to migrate my Defender for Identity sensors from v2.x to v3.x so that I can use the latest sensor without downtime or data loss.
 ---
 
-# Migrate to the Defender for Identity sensor v3.x (Preview)
+# Migrate from Defender for Identity sensor v2 to sensor v3.x (Preview)
 
 You can migrate your Defender for Identity sensors from v2.x to v3.x directly from the Microsoft Defender portal. The migration automatically completes the switchover and maintains your server configurations and security monitoring, with no downtime or data duplication.
 
