@@ -29,7 +29,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 You can now migrate Defender for Identity sensors from v2.x to v3.x directly from the Microsoft Defender portal. The v2.x sensor continues running during the migration until the v3.x sensor is ready, so there's no downtime. Eligible servers appear as **Ready for migration** on the **Sensors** page, and migration takes up to 20 minutes. For more information, see [Migrate to Defender for Identity sensor v3.x](deploy/migrate-to-sensor-v3.md).
 
-### Sensor v3.x support for domain controllers with identity roles
+### Sensor v3.x support for domain controllers with additional identity roles
 
 Defender for Identity sensor v3.x now supports domain controllers that also run AD FS, AD CS, or Entra Connect identity roles. For v3, these domain controllers require Windows Server 2019 or later with at least the [March 2026 Cumulative Update](https://support.microsoft.com/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea). For deployment details, see [Defender for Identity deployment overview](deploy/deploy-defender-identity.md) and [Sensor v3.x prerequisites](deploy/prerequisites-sensor-version-3.md).
 
