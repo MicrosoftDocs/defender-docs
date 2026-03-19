@@ -102,7 +102,7 @@ Microsoft Defender uses internal correlation logic to determine the primary acco
 
 ## Risk score tab
 
-The **Risk score** tab provides an overall risk assessment for the identity based on alerts and identity attributes. Use this tab to understand an identity's risk level, identify contributing factors, and prioritize investigation.
+The **Risk score** tab summarizes the identity's risk level by combining alert activity with identity attributes like role assignments and sensitivity classification. Use this tab to understand an identity's risk level, identify contributing factors, and prioritize investigation.
 
 | Section | Description |
 | --- | --- |
