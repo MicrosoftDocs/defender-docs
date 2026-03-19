@@ -231,7 +231,7 @@ PSComputerName   :
 
 ## Get email notifications about PUA detections
 
-You can turn on email notifications to receive mail about PUA detections. For more information about Microsoft Defender Antivirus events, see [Troubleshoot event IDs](troubleshoot-microsoft-defender-antivirus.md). PUA events are recorded under event ID **1160**.
+You can turn on email notifications to receive mail about PUA detections. For more information about Microsoft Defender Antivirus events, see [Troubleshoot event IDs](troubleshoot-microsoft-defender-antivirus.yml). PUA events are recorded under event ID **1160**.
 
 ## View PUA events using advanced hunting
 
