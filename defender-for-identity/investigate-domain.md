@@ -13,7 +13,7 @@ ai-usage: ai-assisted
 
 # Investigate an Active Directory domain
 
-The Active Directory domain page in Microsoft Defender shows domain health, sensor coverage, security policies, trust relationships, and recommendations for your on-premises Active Directory environment. Use it to check whether a domain is healthy and secure, review deployment status, and act on recommendations.
+The Active Directory domain page is a security dashboard in Microsoft Defender that shows domain health, sensor coverage, security policies, trust relationships, and recommendations for your on-premises Active Directory environment. Use it to check whether a domain is healthy and secure, review deployment status, and act on recommendations.
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ The Active Directory domain page in Microsoft Defender shows domain health, sens
 
 ## Access the Domain page
 
-You can reach the AD domain page through multiple entry points in Microsoft Defender:
+You can reach the Active Directory domain page through multiple entry points in Microsoft Defender:
 
 - Select a domain name from the **Domain** column in the identity inventory.
 - Select a domain from a domain-related security alert or incident.
@@ -32,58 +32,21 @@ To switch between domains when you're on the domain page, use the domain selecto
 
 ## Overview tab
 
+:::image type="content" source="media/domain-page-overview-tab.png" alt-text="Screenshot that shows the domain overview tab with domain details, deployment health, health score, and identity summary cards.":::
+
 The **Overview** tab provides a domain summary with the following sections:
 
-### Domain details
-
-The **Details** section shows key domain attributes:
-
-| Field | Description |
+| Section | Description |
 |---|---|
-| **Provider** | The identity provider (Active Directory). |
-| **Name** | The domain name. |
-| **Functional Level** | The Active Directory functional level (for example, Windows Server 2025). |
-| **Created On** | The date the domain was created. |
-| **Identities** | The number of human identities in the domain. Select the count to view them in the identity inventory. |
-| **Service Accounts** | The number of service accounts in the domain. Select the count to view them. |
-| **Group Accounts** | The number of groups in the domain. Select the count to view them. |
-| **Computer Accounts** | The number of computer accounts in the domain. Select the count to view them. |
-
-The **Properties** section shows the domain's **Canonical Name**, **SID**, and **ID**.
-
-### Deployment Health
-
-Shows sensor deployment coverage and sensor health status for the domain. A 100% coverage score means all domain controllers have sensors deployed. If any domain controller is missing a sensor, the health score is affected until coverage is restored. Select a deployment issue to navigate directly to sensor deployment settings.
-
-### Health Score
-
-Displays an overall health score for the domain (Low, Medium, or High) based on three factors:
-
-- **Identity infrastructure coverage**: Whether sensors are deployed on all domain controllers.
-- **Sensor health**: Whether deployed sensors are running and reporting correctly.
-- **Active recommendations**: The number of unresolved security recommendations.
-
-Select **How to fix** to view the recommended actions.
-
-### All Domain Identities
-
-Shows the total number of identities in the domain, including how many are classified as **Critical** or **Sensitive**. Select **View domain identities** to open the identity inventory filtered to this domain.
-
-### Service accounts
-
-Shows a donut chart of service accounts in the domain, broken down by type: sMSA (standalone Managed Service Account), gMSA (group Managed Service Account), and User. Select **View domain service accounts** to open the service accounts page filtered to this domain.
-
-### Sensitive Entities
-
-Shows the count of sensitive identities, groups, and computers in the domain. Select any count to view the details.
-
-### Active Recommendations
-
-Lists security recommendations for the domain that directly affect the health score. Each recommendation links to remediation guidance. For example, the **Unsecure Domain Configurations** recommendation links to the corresponding security posture assessment.
-
-### Group Policies
-
-Lists Group Policy Objects (GPOs) applied in the domain. Use this section to verify which policies are active and identify domains with no GPOs configured.
+| **Domain details** | Shows key domain attributes: <ol><li>Provider</li><li>Domain name</li><li>Functional level</li><li>Creation date</li><li>Identities count</li><li>Service accounts count</li><li>Group accounts count</li><li>Computer accounts count</li></ol> Select any count to view the filtered list. |
+| **Properties** | Shows the domain's **Canonical Name**, **SID**, and **ID**. |
+| **Deployment Health** | Shows sensor deployment coverage and health status. A 100% coverage score means all domain controllers have sensors deployed. Select a deployment issue to navigate to sensor deployment settings. |
+| **Health Score** | Displays an overall health score (Low, Medium, or High) based on identity infrastructure coverage, sensor health, and active recommendations. Select **How to fix** to view recommended actions. |
+| **All Domain Identities** | Shows the total number of identities, including how many are classified as **Critical** or **Sensitive**. Select **View domain identities** to open the identity inventory filtered to this domain. |
+| **Service accounts** | Shows a donut chart of service accounts by type: sMSA (standalone Managed Service Account), gMSA (group Managed Service Account), and User. Select **View domain service accounts** to open the service accounts page. |
+| **Sensitive Entities** | Shows the count of sensitive identities, groups, and computers. Select any count to view the details. |
+| **Active Recommendations** | Lists security recommendations that affect the health score, with links to remediation guidance. For example, the **Unsecure Domain Configurations** recommendation links to the corresponding security posture assessment. |
+| **Group Policies** | Lists Group Policy Objects (GPOs) applied in the domain. Use this section to verify active policies and identify domains with no GPOs configured. |
 
 ## Incidents and alerts tab
 
@@ -105,14 +68,16 @@ The tab includes default filters for **Status** (New, In progress) and **Alert s
 
 ## Security Policies tab
 
-Provides human-readable summaries of key AD security policies in four cards:
+Provides human-readable summaries of key Active Directory security policies in four cards:
 
-- **Password Policy**: Password maximum age, minimum age, history, complexity, authenticated password change only, no clear-text password change, admin lockout after failed attempts, password store clear text, and password change is refused.
-- **Account Lockout Policy**: Lockout duration and lockout threshold.
-- **Kerberos Policy**: Maximum ticket age and maximum renewal age.
-- **LDAP & Machine Account**: LDAP signing policy and machine account quota. If the domain has active recommendations for insecure configurations, a warning banner appears with a link to view the recommendations.
+| Card | Details |
+|---|---|
+| **Password Policy** | Password maximum age, minimum age, history, complexity, authenticated password change only, no clear-text password change, admin lockout after failed attempts, password store clear text, and password change is refused. |
+| **Account Lockout Policy** | Lockout duration and lockout threshold. |
+| **Kerberos Policy** | Maximum ticket age and maximum renewal age. |
+| **LDAP & Machine Account** | LDAP signing policy and machine account quota. If the domain has active recommendations for insecure configurations, a warning banner appears with a link to view the recommendations. |
 
-Use this tab to review critical AD configurations and check whether they meet current security standards.
+Use this tab to review critical Active Directory configurations and check whether they meet current security standards.
 
 ## Trusts tab
 

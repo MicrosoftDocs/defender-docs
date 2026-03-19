@@ -16,7 +16,7 @@ Use the **Dashboard** page to view critical insights and real-time data about id
 
 To access this new dashboard, you need:
 
-- A Microsoft Defender for Identity license and an Entra ID Identity Protection license
+- A Microsoft Defender for Identity license and an Entra ID Identity Protection license.
 - A user role with at least the [Security Reader](/azure/active-directory/roles/permissions-reference#security-reader) permissions.
 - To view a full list of recommendations and select all recommended action links, you need the [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role.
 
@@ -27,27 +27,25 @@ To access this new dashboard, you need:
 
 To access the dashboard, sign into Microsoft Defender and select **Identities > Dashboard**.
 
-For example:
-
 :::image type="content" source="media/dashboard/dashboard.png" alt-text="A screenshot showing the Defender Identoty security Dashboard page.":::
 
 ## Summary cards
 
-The top of the dashboard displays a rotating carousel with five summary cards that correspond to the coverage source categories. Select links in the cards to go to more details, such as documentation, related recommendations in [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score), and more.
+The top of the dashboard shows five rotating summary cards that correspond to the coverage source categories. Select links in the cards to go to more details, such as documentation, related recommendations in [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score), and more.
 
 Each card shows identity counts and a coverage score gauge:
 
-|Name  |Description |
-|---------|---------|
-|**Identity Providers** | Shows the count of human identities, non-human identities, and agentic identities (Preview) from connected identity providers like Microsoft Entra ID, along with the coverage score. |
-|**On-premises** | Shows the count of human identities and non-human identities from on-premises Active Directory environments, along with the coverage score. |
-|**SaaS Identities** | Shows the count of human identities and non-human identities from connected SaaS applications, along with the coverage score. |
-|**PAM & IGA** | Shows the status of privileged access management (PAM) and identity governance and administration (IGA) integrations, and prompts you to connect available solutions. |
-|**Non-human identities** | Shows a donut chart of non-human identities (OAuth apps and service accounts) broken down by source: Entra ID, SaaS, and On-Premises. |
+| Name | Description |
+| -------- | ------- |
+| **Identity Providers** | Shows the count of human identities, non-human identities, and agentic identities (Preview) from connected identity providers like Microsoft Entra ID, along with the coverage score. |
+| **On-premises** | Shows the count of human identities and non-human identities from on-premises Active Directory environments, along with the coverage score. |
+| **SaaS Identities** | Shows the count of human identities and non-human identities from connected SaaS applications, along with the coverage score. |
+| **PAM & IGA** | Shows the status of privileged access management (PAM) and identity governance and administration (IGA) integrations, and prompts you to connect available solutions. |
+| **Non-human identities** | Shows a donut chart of non-human identities (OAuth apps and service accounts) broken down by source: Entra ID, SaaS, and On-Premises. |
 
 ## Top insights
 
-| Name  | Description |
+| Name | Description |
 | ----- | ---- |
 | **Users identified in a risky lateral movement path** | Indicates any sensitive accounts with risky lateral movement paths, which are windows of opportunity for attackers and can expose risks.<br><br>We recommend that you take action on any sensitive accounts found with risky lateral movement paths to minimize your risk. <br><br>For more information, see [Understand and investigate Lateral Movement Paths (LMPs) with Microsoft Defender for Identity](understand-lateral-movement-paths.md). |
 | **Dormant Active Directory users** | Lists accounts that have been left unused for at least 180 days. <br><br>Inactive accounts that are a part of sensitive groups provide an easy path into your organization. We recommend removing those users from sensitive groups. |

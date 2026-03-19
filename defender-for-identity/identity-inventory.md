@@ -29,7 +29,7 @@ The **Identity inventory** page includes tabs for:
     - Microsoft Entra ID
     - Google Workspace
     - Salesforce
-  - On-premises service accounts from Active Directory.
+  - On-premises service accounts from Active Directory
 
 From the top navigation:
 
@@ -45,9 +45,9 @@ From the top navigation:
 
 ## Access the Identity inventory
 
-:::image type="content" source="media/identity-inventory/identity-inventory-page.png" alt-text="Screenshot of the identity inventory page in the Microsoft Defender portal.":::
-
 In the [Microsoft Defender portal](https://security.microsoft.com), select **Assets** > **Identities**.
+
+:::image type="content" source="media/identity-inventory/identity-inventory-page.png" alt-text="Screenshot of the identity inventory page in the Microsoft Defender portal.":::
 
 ## Identity inventory insights
 

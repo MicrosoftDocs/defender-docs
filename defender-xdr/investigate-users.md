@@ -30,17 +30,6 @@ The Identity page is organized into a top section and a set of tabs. The top sec
 - Org information: The identity’s job title, department, and more.
 - Account tags: Active Directory tags associated with the identity
 
-The Identity page includes these tabs:
-
-- Overview
-- Incidents and alerts
-- Observed in organization
-- Timeline
-- Security recommendations
-- Attack paths
-- Policies
-- Microsoft Sentinel events (for Microsoft Sentinel customers)
-
 :::image type="content" source="media/investigate-users/identity-page.png" alt-text="Screenshot of the Identity page in Microsoft Defender portal." lightbox="media/investigate-users/identity-page.png":::
 
 ## Identity actions
