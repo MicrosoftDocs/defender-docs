@@ -129,7 +129,7 @@ When you're ready to onboard your organization's endpoints, you can choose from 
 |---|---|
 |**Windows**|[Local script (up to 10 devices)](configure-endpoints-script.md) <br>  [Group Policy](configure-endpoints-gp.md) <br>  [Microsoft Intune/ Mobile Device Manager](configure-endpoints-mdm.md) <br>   [Microsoft Configuration Manager](configure-endpoints-sccm.md) <br> [VDI scripts](configure-endpoints-vdi.md)|
 |**macOS**|[Local script](mac-install-manually.md) <br> [Microsoft Intune](mac-install-with-intune.md) <br> [JAMF Pro](mac-install-with-jamf.md) <br> [Mobile Device Management](mac-install-with-other-mdm.md)|
-|**Android**|[Microsoft Intune](/intune/intune-service/apps/apps-defender-android)|
+|**Android**|[Microsoft Intune](/intune/intune-service/apps/apps-defender-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json)|
 |**iOS**|[Microsoft Intune](ios-install.md) <br> [Mobile Application Manager](ios-install-unmanaged.md) |
 
 

@@ -143,7 +143,7 @@ The following table lists the available tools based on the endpoint that you nee
 | **Windows** | - [Local script (up to 10 devices)](/defender-endpoint/configure-endpoints-script)<br/>- [Group Policy](/defender-endpoint/configure-endpoints-gp)<br/>- [Microsoft Intune / Mobile Device Manager](/defender-endpoint/configure-endpoints-mdm)<br/>- [Microsoft Endpoint Configuration Manager](/defender-endpoint/configure-endpoints-sccm)<br/>- [VDI scripts](/defender-endpoint/configure-endpoints-vdi) |
 | **macOS** | - [Local scripts](/defender-endpoint/mac-install-manually)<br/>- [Microsoft Intune](/defender-endpoint/mac-install-with-intune)<br/>- [JAMF Pro](/defender-endpoint/mac-install-with-jamf)<br/>- [Mobile Device Management](/defender-endpoint/mac-install-with-other-mdm) |
 | **iOS** | [App-based](/defender-endpoint/ios-install) |
-| **Android** | [Microsoft Intune](/intune/intune-service/apps/apps-defender-android) |
+| **Android** | [Microsoft Intune](/intune/intune-service/apps/apps-defender-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json) |
 
 When you pilot Microsoft Defender for Endpoint, you may choose to onboard a few devices to the service before onboarding your entire organization.  
 
