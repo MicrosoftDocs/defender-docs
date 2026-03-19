@@ -62,13 +62,15 @@ az aks update \
 Replace `<workspace-resource-id>` with the full Log Analytics workspace resource ID. 
 For example, `/subscriptions/<subscription-id>/resourceGroups/<workspace-rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>`.
 
-### Option 2: Deploy using Azure Resource Manager (ARM)
+### Option 2: Deploy using an ARM template
 
-For teams using Infrastructure-as-Code (IaC) for AKS deployment, you can enable the Defender sensor by adding the `securityProfile` block to your ARM template.
+For teams using Infrastructure-as-Code (IaC) for AKS deployment, you can enable the Defender sensor by configuring the `securityProfile.defender` property on the AKS cluster resource.
+
+This configuration is part of the `Microsoft.ContainerService/managedClusters` resource. This configuration is equivalent to running `az aks update --enable-defender`. For the full schema, see the [ARM template reference for managed clusters](/azure/templates/microsoft.containerservice/managedclusters).
 
 ```json
 {
-  "$schema": "[https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#](https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#)",
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
     "clusterName": { "type": "string" },
