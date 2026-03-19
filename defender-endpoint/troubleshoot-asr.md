@@ -151,30 +151,12 @@ When you report a problem with attack surface reduction rules, you're asked to c
 
 ### Manual process
 
-To manually generate the diagnostic log files, open an elevated Command Prompt (a Command Prompt window you opened after selecting **Run as administrator**), and then run the following commands:
+To use `MpCmdRun.exe -GetFiles` to manually generate the diagnostic log files to `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab`, see the instructions at [Collect Microsoft Defender Antivirus diagnostic data](collect-diagnostic-data.md).
 
-```console
-set "_done=" & (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) >nul 2>&1
+In the `MpSupportFiles.cab` file, the following files are most relevant:
 
-MpCmdRun.exe -GetFiles
-```
-
-- After a few minutes, the files are generated, compressed, and saved to the file `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab`. This .cab file includes the following information:
-  - Any trace files from Microsoft Antimalware Service.
-  - The Windows Update history log.
-  - All Microsoft Antimalware Service events from the System event log.
-  - All relevant Microsoft Antimalware Service registry locations.
-  - The log file of MpCmdRun.
-  - The log file of the signature update helper tool.
-
-- To specify a different root output folder, add the _SupportLogLocation_ switch and the folder path to the command. For example, `MpCmdRun.exe -GetFiles -SupportLogLocation "C:\Data"`.
-
-  Check the output of the command for the filename and folder location in the path you specified. For example `-SupportLogLocation "C:\Data"` results in the following destination: `C:\Data\<Date>\MPSupportFiles-<MachineName>-<UTC Time>.cab`
-
-In the .cab file, the following files are most relevant:
-
-- `MPOperationalEvents.txt`: Contains same level of information found in Event Viewer for Windows Defender's Operational log.
-- `MPRegistry.txt`: Analyze all the current Windows Defender configurations from the moment you saved the .cab file.
+- `MPOperationalEvents.txt`: Contains same level of information found in Event Viewer for the Windows Defender Operational log.
+- `MPRegistry.txt`: Analyze all the current Windows Defender configurations from when you generated the .cab file.
 - `MPLog.txt`: Verbose information about all the actions and operations of Windows Defender.
 
 ## Related articles
