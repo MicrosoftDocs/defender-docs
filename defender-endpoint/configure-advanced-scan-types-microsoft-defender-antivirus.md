@@ -74,7 +74,7 @@ For details on configuring Microsoft Configuration Manager (current branch), see
 |Specify the maximum CPU load (as a percentage) during a scan. <p> **Scan** > **Specify the maximum percentage of CPU utilization during a scan**|50|`-ScanAvgCPULoadFactor`<br/><br/> The maximum CPU load isn't a hard limit, but is guidance for the scanning engine to not exceed the maximum on average. Manual scans ignore this setting and run without any CPU limits.|
 |Specify the maximum size (in kilobytes) of archive files that should be scanned.<br/>**Scan** > **Specify the maximum size of archive files to be scanned**|No limit|Not available <br/><br/>The default value of 0 applies no limit|
 |Configure low CPU priority for scheduled scans<br/>**Scan** > **Configure low CPU priority for scheduled scans**|Disabled|Not available|
-|Configure scanning of network files <br/>**Scan** > **Configure scanning of network files**|Enabled|-DisableScanningNetworkFiles|
+|Configure scanning of network files <br/>**Scan** > **Configure scanning of network files**|Disabled|-DisableScanningNetworkFiles|
 |CPU throttling type <br/>**Scan** > **CPU throttling type**|Disabled|-ThrottleForScheduledScanOnly |
 |Scan excluded files and directories during quick scan <br/>**Scan** > **Scan excluded files and directories during quick scan**|Disabled|Not available|
 

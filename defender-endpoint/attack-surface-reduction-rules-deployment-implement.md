@@ -101,7 +101,7 @@ See the [attack surface reduction rules reference](attack-surface-reduction-rule
 
 ##### Use Group Policy to exclude files and folders
 
-1. On your Group Policy management computer, open the [Group Policy Management Console](https://technet.microsoft.com/library/cc731212.aspx). Right-click the Group Policy Object you want to configure and select **Edit**.
+1. On your Group Policy management computer, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console). Right-click the Group Policy Object you want to configure and select **Edit**.
 
 1. In the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
 
