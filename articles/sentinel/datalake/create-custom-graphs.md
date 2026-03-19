@@ -123,7 +123,7 @@ The following steps walk you through creating your first custom graph by using a
         (col("id") != '') &
         (col('TimeGenerated') >= expr("current_timestamp() - INTERVAL 14 DAYS"))
     ).select(
-        "country", "department", "displayName", "employeeId", "givenName", "id", "mail", "TimeGenerated"
+        "department", "displayName", "employeeId", "givenName", "id", "mail", "TimeGenerated"
     ).dropDuplicates(["id"])\
     .persist()
     )
@@ -183,7 +183,7 @@ The following steps walk you through creating your first custom graph by using a
 
         .add_node("Users") \
             .from_dataframe(EntraUsers_df.df) \
-            .with_columns("country", "department", "displayName", "employeeId",     "givenName", "id", "mail", "TimeGenerated", "nodeType", key="id",   display="id")
+            .with_columns("department", "displayName", "employeeId",     "givenName", "id", "mail", "TimeGenerated", "nodeType", key="id",   display="id")
 
         .add_node("Applications") \
             .from_dataframe(AppInfo_df.df) \

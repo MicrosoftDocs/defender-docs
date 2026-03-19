@@ -598,7 +598,7 @@
     - name: Microsoft Sentinel data lake overview
       href: datalake/sentinel-lake-overview.md
       displayName: data lake
-    - name: Microsoft Sentinel graph  
+    - name: Microsoft Sentinel graph
       items:
         - name: Microsoft Sentinel graph overview
           href: datalake/sentinel-graph-overview.md
