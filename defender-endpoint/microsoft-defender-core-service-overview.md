@@ -94,7 +94,7 @@ We highly recommend keeping the default settings of the Microsoft Defender Core 
 
 ### What data storage and privacy does the Microsoft Defender Core service adhere to?
 
-Review [Microsoft Defender for Endpoint data storage and privacy](/microsoft-365/security/defender-endpoint/data-storage-privacy).
+Review [Microsoft Defender for Endpoint data storage and privacy](data-storage-privacy.md).
 
 ### Can I enforce the Microsoft Defender Core service stays running as an Administrator?
 
