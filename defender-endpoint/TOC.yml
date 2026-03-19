@@ -334,8 +334,8 @@
               href: mtd.md
             - name: Deploy
               items:
-              - name: Deployment on Android with Microsoft Intune
-                href: android-intune.md
+              - name: Deploy on Android with Microsoft Intune
+                href: microsoft-defender-endpoint-android.md
               - name: Deployment on iOS via Microsoft Intune
                 href: ios-install.md
               - name: Deployment on iOS with Mobile Application Manager
