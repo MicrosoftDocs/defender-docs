@@ -508,7 +508,7 @@ Known issues: These applications and "Block Office applications from injecting c
 
 |Application name|For information|
 |---|---|
-|Avecto (BeyondTrust) Privilege Guard|[September-2024 (Platform: 4.18.24090.11 \|Engine 1.1.24090.11)](/defender-endpoint/microsoft-defender-antivirus-updates).|
+|Avecto (BeyondTrust) Privilege Guard|[September-2024 (Platform: 4.18.24090.11 \|Engine 1.1.24090.11)](microsoft-defender-antivirus-updates.md).|
 |Heimdal security|n/a|
 
 For technical support, contact the software publisher.
@@ -700,4 +700,4 @@ Dependencies: Microsoft Defender Antivirus, Cloud Protection
 - [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 
-- [Troubleshoot attack surface reduction rules](/defender-endpoint/troubleshoot-asr)
+- [Troubleshoot attack surface reduction rules](troubleshoot-asr.md)

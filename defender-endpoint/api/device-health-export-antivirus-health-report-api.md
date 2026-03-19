@@ -93,7 +93,7 @@ One of the following permissions is required to call this API. To learn more, in
 |Application|Machine.Read.All|'Read all machine profiles'|
 |Delegated (work or school account)|Machine.Read|'Read machine information'|
 
-If you need to call the API without a user (Service-to-Service), refer to the official documentation: [Create an app to access Microsoft Defender for Endpoint without a user](/defender-endpoint/api/exposed-apis-create-app-webapp?tabs=PowerShell#get-an-access-token).
+If you need to call the API without a user (Service-to-Service), refer to the official documentation: [Create an app to access Microsoft Defender for Endpoint without a user](api/exposed-apis-create-app-webapp.md?tabs=PowerShell#get-an-access-token).
 
 Use the script below to ensure the scope is correctly defined for the Device Health in Defender for Endpoint API.
 
