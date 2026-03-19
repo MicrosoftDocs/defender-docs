@@ -36,6 +36,9 @@ For example:
 
 Use the procedures in this article to manually link accounts to identities, and to manually unlink unused, legacy, or orphaned accounts from identities in Defender for Identity.
 
+> [!TIP]
+> To automatically correlate accounts using naming conventions or employee IDs, see [Create custom account correlation rules](custom-account-correlation-rules.md).
+
 ## Prerequisites
 
 - You must have [Unified role-based access control (URBAC)](/defender-for-identity/role-groups) roles: Global Administrator or Security Data (Manage).
@@ -44,7 +47,7 @@ Use the procedures in this article to manually link accounts to identities, and 
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Assets** \> **Identities**. Or, to go directly to the **Identity Inventory** page, use <https://security.microsoft.com/identity-inventory>.
 
-   :::image type="content" source="media/identity-inventory/inventory-page.png" alt-text="Screenshot of the identity inventory page in the Microsoft Defender portal." lightbox="media/identity-inventory/inventory-page.png":::
+   :::image type="content" source="media/identity-inventory/identity-inventory-page.png" alt-text="Screenshot of the identity inventory page in the Microsoft Defender portal." lightbox="media/identity-inventory/identity-inventory-page.png":::
 
 1. On the **Identities** tab of the **Identity Inventory** page, select an identity from the list by clicking on the **Display name** value.
 
