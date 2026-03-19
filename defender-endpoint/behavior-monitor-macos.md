@@ -36,9 +36,9 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 - The device must be onboarded to Microsoft Defender for Endpoint.
 - For the best experience, Microsoft Defender should be up-to-date with the latest version.
-- The minimum Microsoft Defender for Endpoint version number must be [101.25032.0006](/defender-endpoint/mac-whatsnew#apr-2025-build-101250320006---release-version-2012503260) or newer. The version number refers to the `app_version` (also known as **Platform update**).
+- The minimum Microsoft Defender for Endpoint version number must be [101.25032.0006](mac-whatsnew.md#apr-2025-build-101250320006---release-version-2012503260) or newer. The version number refers to the `app_version` (also known as **Platform update**).
 - Real-time protection (RTP) must be enabled.
-- [Cloud-delivered protection](/defender-endpoint/mac-preferences) must be enabled.
+- [Cloud-delivered protection](mac-preferences.md) must be enabled.
 
 ## Deployment instructions for behavior monitoring
 
@@ -160,7 +160,7 @@ The following sections describe each of these methods in detail.
 1. Set preference domain to `com.microsoft.wdav`.
 1. Upload the plist file saved earlier.
 
-For more information, see: [Set preferences for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-preferences).
+For more information, see: [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md).
 
 #### Manual deployment
 
@@ -176,7 +176,7 @@ To disable:
 sudo mdatp config behavior-monitoring --value disabled
 ```
 
-For more information, see: [Resources for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-resources).
+For more information, see: [Resources for Microsoft Defender for Endpoint on macOS](mac-resources.md).
 
 ### Verifying behavior monitoring is enabled
 
@@ -256,7 +256,7 @@ NRI should have a low impact on network performance. Instead of holding the conn
 - The device must be onboarded to Microsoft Defender for Endpoint.
 - Preview features must be turned on in the [Microsoft Defender portal](https://security.microsoft.com).
 - The device must be in the Beta channel (formerly `InsiderFast`).
-- The minimum version number for Defender for Endpoint version number must be Beta (Insiders-Fast): [101.24092.0004](/defender-endpoint/mac-whatsnew#oct-2024-build-101240920004---release-version-2012409240) or newer. The version number refers to the `app version` (also known as Platform update).
+- The minimum version number for Defender for Endpoint version number must be Beta (Insiders-Fast): [101.24092.0004](mac-whatsnew.md#oct-2024-build-101240920004---release-version-2012409240) or newer. The version number refers to the `app version` (also known as Platform update).
 - Real-time protection must be enabled.
 - Behavior monitoring must be enabled.
 - Cloud-delivered protection must be enabled.

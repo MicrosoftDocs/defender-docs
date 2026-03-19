@@ -49,7 +49,7 @@ Before you get started, see [Prerequisites for Defender for Endpoint on Linux](m
 
 1. Select **Download onboarding package** and save the file as `WindowsDefenderATPOnboardingPackage.zip`.
 
-   ![The option to download the onboarded package.](/defender-endpoint/media/portal-onboarding-linux-2.png)
+   ![The option to download the onboarded package.](media/portal-onboarding-linux-2.png)
    
 1. Extract the contents of the archive using the following command:
 

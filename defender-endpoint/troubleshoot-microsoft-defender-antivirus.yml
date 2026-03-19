@@ -1556,7 +1556,7 @@ sections:
 
          Possible reason: This error indicates that the threat might no longer be present on the media, or malware might be stopping you from scanning your device.
 
-         Resolution: Run the [Microsoft Safety Scanner](/microsoft-365/security/intelligence/safety-scanner-download) then update your security software and try again.
+         Resolution: Run the [Microsoft Safety Scanner](safety-scanner-download.md) then update your security software and try again.
 
      - question: Error code 0x80508024
        answer: |
