@@ -11,7 +11,8 @@ ms.reviewer: yossidahan
 This article lists all Defender for Identity Extended Detection and Response (XDR) security alerts. XDR security alerts are based on alerts sent by Defender for Identity to the Microsoft Defender portal.
 
 > [!NOTE]
-> For alerts that continue to use the classic structure, see [Classic Defender for Identity security alerts](alerts-overview.md).
+> For alerts that continue to use the classic structure, see [Classic Defender for Identity security alerts](alerts-overview.md). 
+> There is nothing a customer needs to do to get the XDR alerts. New MDI alerts will be on the XDR engine and classic alerts will be migrated / moved on an as needed basis, such as when detection improvements are needed.
 
 ## Alert name mapping
 
