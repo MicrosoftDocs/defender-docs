@@ -321,7 +321,7 @@ In the following example, an hourly quick scan will run every 6 hours, a daily q
 
 1. Save the file as `com.microsoft.wdav.plist`.
 
-### Upload the plist file to Jamf Pro
+##### Upload the plist file to Jamf Pro
 
 1. Go to **Computers > Configuration Profiles.**
 
