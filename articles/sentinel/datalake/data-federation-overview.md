@@ -116,5 +116,5 @@ Combine security event data in Sentinel with:
 ## Next steps
 
 - [Set up federated data connectors](data-federation-setup.md)
-- [Use federated data sources in Microsoft Sentinel](data-federation-use.md)
+- [Use federated data sources in Microsoft Sentinel](using-data-federation.md)
 - [Query federated tables with KQL](kql-jobs-summary-rules-search-jobs.md)

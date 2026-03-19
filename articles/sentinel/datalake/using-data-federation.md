@@ -57,7 +57,7 @@ Select a table row to open the details panel. The panel contains three tabs:
 | **Data Sources** | Shows which connector instances provide data for this table. |
 | **Schema** | Displays the columns, data types, and descriptions for the table's columns. Users with permissions to write to the data lake System tables can select **Refresh schema** to update columns and other schema metadata from the source. |
 
-:::image type="content" source="./media/using-data-federation/federated-table-details.png" alt-text="Screenshot showing the federated table details flyout with overview, data sources, and schema tabs." lightbox="./media/data-federation/federated-table-details.png":::
+:::image type="content" source="./media/using-data-federation/federated-table-details.png" alt-text="Screenshot showing the federated table details flyout with overview, data sources, and schema tabs." lightbox="./media/using-data-federation/federated-table-details.png":::
 
 ## Query federated tables using KQL
 
@@ -103,7 +103,7 @@ Federated tables are accessible in Jupyter notebooks through the Microsoft Senti
 
 In the Microsoft Sentinel VS Code extension, federated tables appear under: **Lake tables** > **System tables** > **Assets**
 
-:::image type="content" source="./media/using-data-federation/vscode-federated-tables.png" alt-text="Screenshot showing federated tables in the Microsoft Sentinel VS Code extension under System tables Assets." lightbox="./media/data-federation/vscode-federated-tables.png":::
+:::image type="content" source="./media/using-data-federation/vscode-federated-tables.png" alt-text="Screenshot showing federated tables in the Microsoft Sentinel VS Code extension under System tables Assets." lightbox="./media/using-data-federation/vscode-federated-tables.png":::
 
 
 Working with federated tables in Jupyter notebooks follows the same patterns as native System tables:
