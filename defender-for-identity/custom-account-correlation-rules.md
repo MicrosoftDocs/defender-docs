@@ -19,13 +19,13 @@ Custom account correlation rules allow you to correlate accounts that don't shar
 
 ## Prerequisites
 
-- An active Microsoft Defender for Identity (MDI) license, or another license that includes MDI (such as E5). Without the required license, the policies page is read-only.
+- An active Microsoft Defender for Identity license, or another license that includes Defender for Identity (such as an E5 license). Without the required license, the policies page is read-only.
 - One of the following roles to **view** policies:
-  - **Entra ID roles**: Security Reader, Security Operator, Security Administrator, or Global Administrator
-  - **Defender roles**: Security operations, Security data, Alerts (manage)
+  - **Microsoft Entra ID roles**: Security Reader, Security Operator, Security Administrator, or Global Administrator
+  - **Microsoft Defender unified RBAC roles**: Security operations, Security data, Alerts (manage)
 - One of the following roles to **create, edit, or remove** policies:
-  - **Entra ID roles**: Security Administrator or Global Administrator
-  - **Defender roles**: Security operations, Security data, Alerts (manage)
+  - **Microsoft Entra ID roles**: Security Administrator or Global Administrator
+  - **Microsoft Defender unified RBAC roles**: Security operations, Security data, Alerts (manage)
 
 > [!TIP]
 > Use the least-privileged role that meets your needs. If your organization uses [Microsoft Entra Privileged Identity Management (PIM)](/entra/id-governance/privileged-identity-management/pim-configure), request just-in-time role activation instead of permanent role assignments.

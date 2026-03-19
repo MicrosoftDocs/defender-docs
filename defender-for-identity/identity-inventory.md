@@ -19,7 +19,7 @@ appliesto:
 
 # View the Identity inventory
 
-The **Identity inventory** provides a centralized view of all identities in your organization, so you can monitor and manage them efficiently. At a glance, see key details like the identity's type, domain, tags, and other attributes to quickly identify and manage identities that require attention.
+The **Identity inventory** provides a centralized view of all identities in your organization, so you can investigate, monitor, and manage them efficiently. At a glance, see key details like the identity's type, domain, tags, and other attributes to quickly spot identities that require attention.
 
 The **Identities inventory** page includes tabs for:
 
@@ -55,7 +55,7 @@ The top section of the Identity inventory page gives you quick insights into you
 
 - The **Classify critical assets** card lets you define identity groups as business critical. For more information, see [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management).
 
-- The **Highly privileged identities** card helps you investigate all sensitive accounts in your organization in Advanced hunting, including Microsoft Entra ID security administrators and Global admin users.
+- The **Highly privileged identities** card helps you investigate all sensitive accounts in your organization in Advanced hunting, including Microsoft Entra ID Security administrators and Global administrators.
 
 - The **Critical Active Directory service accounts** card helps you quickly identify all Active Directory accounts designated as critical, making it easier to focus on identities most at risk.
 
@@ -123,7 +123,7 @@ These statistics highlight non-human identities that might need prioritization. 
 
 ### Non-human identity details
 
-The Non-Human identities tab contains these sections:
+The **Non-Human identities** tab contains these sections:
 
 - **Entra ID**: OAuth apps registered in Microsoft Entra ID.
 - **Active Directory**: On-premises service accounts.

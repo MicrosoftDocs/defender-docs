@@ -15,7 +15,7 @@ ms.custom: msecd-doc-authoring-106
 
 # View your identity coverage and maturity
 
-The Coverage and maturity page shows how well your identities are protected in your on-premises, cloud, SaaS, and partner environments.
+The Microsoft Defender **Coverage and maturity** page shows how well your identities are protected in your on-premises, cloud, SaaS, and partner environments.
 
 You can use this page to:
 
@@ -34,7 +34,7 @@ To use the **Coverage and maturity** page, you need:
 
 ## Access the **Coverage and maturity** page
 
-To access the page, sign in to the [Microsoft Defender portal](https://security.microsoft.com) and select **Identities > Coverage and maturity**.
+To access the **Coverage and maturity** page, sign in to the [Microsoft Defender portal](https://security.microsoft.com) and select **Identities > Coverage and maturity**.
 
 ## Maturity level
 
