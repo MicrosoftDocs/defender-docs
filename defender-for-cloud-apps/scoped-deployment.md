@@ -22,7 +22,7 @@ You might not want to use Microsoft Defender for Cloud Apps for all the users in
 
   - **External users** group - All users who aren't members of any of the managed domains you configured for your organization.
 
-- Setting an include rule will automatically exclude all groups not within the included group. For example, if you set a rule to include all members of the US-office groups, any groups who aren't part of that group won't be monitored.
+- Setting an include rule automatically excludes all groups not within the included group. For example, if you set a rule to include all members of the US-office groups, any groups who aren't part of that group won't be monitored.
 
 - Excluded user groups override included user groups. If you include the user group **UK-employees** but exclude **Marketing**, Microsoft Defender for Cloud Apps doesn't monitor marketing members from the UK even if they're members of the **UK-employees** group.
 
@@ -38,7 +38,8 @@ You might not want to use Microsoft Defender for Cloud Apps for all the users in
         1. Under **Select user groups**, select all the groups you want to monitor using Microsoft Defender for Cloud Apps.
     1. Select whether you want to apply this rule to all connected apps or only to **Specific apps**. If you select **Specific apps**, the rule will only affect monitoring of the apps you select. For example, if you select the group **UI team users** and **Box**, Defender for Cloud Apps will only monitor Box activity for users in your UI team users group and for all other apps, Defender for Cloud Apps will monitor all activities for all users.
 
-        ![include rule.](media/include-rule.png)
+
+    :::image type="content" source="media/scoped-deployment/include-rule.png" alt-text="Screenshot that shows how to create a new include rule." lightbox="media/scoped-deployment/include-rule.png":::
 
 1. To set specific groups to be excluded from monitoring, in the **Exclude** tab, select **+Add rule**.
 
@@ -48,7 +49,8 @@ You might not want to use Microsoft Defender for Cloud Apps for all the users in
     1. Under **Select user groups**, select all the groups you don't want Microsoft Defender for Cloud Apps to monitor.
         1. Select whether you want to apply this rule to all connected apps or only to **Specific apps**. If you select **Specific apps**, Microsoft Defender for Cloud Apps stops monitoring the group you selected only for the apps you select. If you select the group **UI team users** and **Active Directory**, Microsoft Defender for Cloud Apps monitors all user activity except Active Directory activities that are performed by UI team users.
 
-       ![exclude rule.](media/exclude-rule.png)
+        :::image type="content" source="media/scoped-deployment/exclude-rule.png" alt-text="Screenshot that shows how to create a new exclude rule." lightbox="media/scoped-deployment/exclude-rule.png":::
+
 
 ## Example results for include and exclude rules
 
@@ -74,8 +76,7 @@ The following user activities are monitored:
 > The group scoping in these rules doesn't affect other apps.
 > In the example, for Salesforce, the monitoring includes all activities for all user groups.
 
-
-## Troubleshooting scoped deployment
+## Verify your scoped deployment
 
 After you configure scoped deployment, check for new events in the **Activity log** or the **CloudAppEvents** table.
 
@@ -85,6 +86,5 @@ To resolve this issue, create an additional scoped deployment group that matches
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Set up cloud discovery](set-up-cloud-discovery.md)
+- [Set up cloud discovery](set-up-cloud-discovery.md)
 
