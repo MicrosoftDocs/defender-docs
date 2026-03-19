@@ -40,7 +40,7 @@ The coverage and maturity page helps assess and improve identity protection acro
 
 Identity security provides integrated capabilities for detecting and responding to identity-based threats:
 
-- **Unified identity inventory** The unified identity inventory consolidates identity accounts and relationships across on-premises Active Directory, Entra ID, SaaS applications, and third-party identity providers.
+- **Unified identity inventory**: The unified identity inventory consolidates identity accounts and relationships across on-premises Active Directory, Entra ID, SaaS applications, and third-party identity providers.
 
   - Provides a single view of all identity types, including users and non-human identities.
   - Supplies context for posture management, threat detection, and investigation.
@@ -57,3 +57,8 @@ Defender integrates with Microsoft Entra to strengthen identity protection:
 - **Conditional Access coverage insights**: Identifies missing or weak CA policy coverage and provides recommendations during onboarding.
 - **Security Copilot integration**: Identity insights flow into Security Copilot to support faster triage and investigation.
 
+## Related content
+
+- [View the identity inventory](/defender-for-identity/identity-inventory)
+- [The identity security dashboard](/defender-for-identity/dashboard)
+- [Unified identity security recommendations](identity-security-recommendations.md)

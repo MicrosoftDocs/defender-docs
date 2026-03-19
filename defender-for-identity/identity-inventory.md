@@ -21,7 +21,7 @@ appliesto:
 
 The **Identity inventory** provides a centralized view of all identities in your organization, so you can investigate, monitor, and manage them efficiently. At a glance, see key details like the identity's type, domain, tags, and other attributes to quickly spot identities that require attention.
 
-The **Identities inventory** page includes tabs for:
+The **Identity inventory** page includes tabs for:
 
 - **Human identities**: Human identities discovered in your environment from Active Directory and Microsoft Entra ID.
 - **Non-Human identities (Preview)**: Non-human identities discovered in your SaaS, Entra ID, and on-premises environments, including:
@@ -81,7 +81,7 @@ These important statistics help you prioritize identities for security posture i
 
 ### Human identity details
 
-The **Identities** list highlights key details for each non-human identity, including these columns by default:
+The **Identities** list highlights key details for each human identity, including these columns by default:
 
 | Column name | Description |
 | --------- | --------- |

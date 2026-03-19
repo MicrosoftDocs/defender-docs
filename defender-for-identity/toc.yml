@@ -143,7 +143,7 @@ items:
        - name: View the identity inventory
          href: identity-inventory.md
        - name: Investigate a human identity
-         href: /defender-xdr/investigate-user?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
+         href: /defender-xdr/investigate-users?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
        - name: Investigate a non-human identity
          href: /defender-xdr/investigate-non-human-identities?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
        - name: Investigate an Active Directory domain

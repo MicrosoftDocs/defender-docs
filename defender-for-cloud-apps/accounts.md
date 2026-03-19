@@ -15,13 +15,13 @@ When Defender for Cloud Apps detects a new account in a connected app, for examp
 
 You can view the **Cloud application accounts** inventory from the tile at the top of the [Identity Inventory page](/defender-for-identity/identity-inventory).
 
-## Cloud application accounts tab
+## Cloud application accounts page
 
-The **Cloud application accounts** tab shows details about accounts from connected cloud applications, including activity history and security alerts.
+The **Cloud application accounts** page shows details about accounts from connected cloud applications, including activity history and security alerts.
 
 You can filter the tab to find specific accounts or narrow down to specific account types. For example, you can filter for all external accounts that haven't been accessed since last year.
 
-Use the **Cloud application accounts** tab to:
+Use the **Cloud application accounts** page to:
 
 - Check for accounts that are inactive in a particular service and consider revoking their license.
 - Filter for accounts with admin permissions.
@@ -34,9 +34,7 @@ Use the **Cloud application accounts** tab to:
 
 ### Accounts filters
 
-The **Cloud application accounts** tab includes predefined filters for common scenarios. You can also turn on the **Advanced filters** toggle to filter by additional attributes or create conditions such as "does not equal."
-
-![Screenshot that shows the Advanced filters toggle.](media/accounts/image.png)
+The **Cloud application accounts** tab includes predefined filters for common scenarios. You can also turn on the **Advanced filters** toggle to filter by additional attributes or create conditions such as "does not equal".
 
 Predefined filters include:
 

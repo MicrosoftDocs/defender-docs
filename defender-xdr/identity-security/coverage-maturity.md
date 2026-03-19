@@ -36,9 +36,11 @@ To use the **Coverage and maturity** page, you need:
 
 To access the **Coverage and maturity** page, sign in to the [Microsoft Defender portal](https://security.microsoft.com) and select **Identities > Coverage and maturity**.
 
+:::image type="content" source="media/coverage-maturity-page.png" alt-text="Screenshot that shows the Coverage and maturity page in Microsoft Defender.":::
+
 ## Maturity level
 
-The maturity level shows how complete your identity protection is overall. It reflects how much of your identity environment is connected, monitored, and secured.
+The maturity level shows how complete your identity protection is overall. It reflects how much of your identity environment is connected, monitored, and secured. The level is tailored to your environment based on the identity sources that Defender detects, so it reflects your specific coverage status.
 
 The maturity tiers are:
 
@@ -46,12 +48,12 @@ The maturity tiers are:
 | --- | --- |
 | **Connected** | You connected at least one environment and gained initial visibility, but protection is partial. |
 | **Protected** | You deployed sensors and SaaS connectors. Key assets are covered, but some gaps remain. |
-| **Fortified** | You have broad coverage in hybrid and multicloud environments, including non-human and agentic identities. |
+| **Fortified** | You have broad coverage in hybrid and multicloud environments, including non-human identities. |
 | **Resilient** | You achieved full coverage of all identity types in all environments. |
 
 ### Maturity level calculation
 
-The maturity score ranges from 0 to 100, based on the combined coverage scores of your identity sources. A score of 100% means all sources are fully connected and protected, which corresponds to the **Resilient** maturity tier.
+The maturity level is based on a score ranging from 0 to 100, based on the combined coverage scores of the identity sources detected in your organization. Sources that don't exist in your environment aren't included in the calculation. As your score increases, your maturity tier progresses from **Connected** through **Protected** and **Fortified** to **Resilient**.
 
 ## Top setup tasks
 
@@ -68,6 +70,8 @@ Select a task to go directly to the setup page in the portal. A green checkmark 
 ## Coverage sources
 
 The page shows one card for each identity source: **Identity providers**, **SaaS identities**, **On-premises identities**, and **PAM & IGA identities**. The cards you see depend on your environment and licensing.
+
+:::image type="content" source="media/coverage-sources.png" alt-text="Screenshot that shows the coverage sources section of the Coverage and maturity page in Microsoft Defender.":::
 
 Each card shows:
 

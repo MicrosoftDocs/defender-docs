@@ -17,6 +17,8 @@ Non-human identities are accounts and applications that operate without direct h
 
 You can view and investigate non-human identities from the [Identity inventory](/defender-for-identity/identity-inventory) in the Microsoft Defender portal.
 
+:::image type="content" source="media/investigate-nonhuman-identities/nonhuman-identites.png" alt-text="Screenshot that shows the non-human indentities page in the Defender portal.":::
+
 ## Types of non-human identities
 
 Microsoft Defender organizes non-human identities into the following categories, each shown as a tab in the identity inventory:
