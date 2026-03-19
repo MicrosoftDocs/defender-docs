@@ -975,6 +975,8 @@
               href: ../role-based-access-control/built-in-roles.md
             - name: Microsoft Sentinel roles
               href: ../role-based-access-control/built-in-roles.md#security
+            - name: Configure Microsoft Sentinel scoping (row-level RBAC)
+              href: scoping.md
     - name: Advanced Security Information Model (ASIM)
       items:
         - name: ASIM content
