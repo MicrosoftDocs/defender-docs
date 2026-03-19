@@ -22,13 +22,22 @@ For more information, see also:
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
+
 ## March 2026
+
+### Migrate Defender for Identity sensors from v2.x to v3.x
+
+You can now migrate Defender for Identity sensors from v2.x to v3.x directly from the Microsoft Defender portal. The v2.x sensor continues running during the migration until the v3.x sensor is ready, so there's no downtime. Eligible servers appear as **Ready for migration** on the **Sensors** page, and migration takes up to 20 minutes. For more information, see [Migrate to Defender for Identity sensor v3.x](deploy/migrate-to-sensor-v3.md).
+
+### Sensor v3.x support for domain controllers with identity roles
+
+Defender for Identity sensor v3.x now supports domain controllers that also run AD FS, AD CS, or Entra Connect identity roles. For v3, these domain controllers require Windows Server 2019 or later with at least the [March 2026 Cumulative Update](https://support.microsoft.com/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea). For deployment details, see [Defender for Identity deployment overview](deploy/deploy-defender-identity.md) and [Sensor v3.x prerequisites](deploy/prerequisites-sensor-version-3.md).
 
 ### Updates to Secure Score category calculations for increased accuracy
 
 To improve accuracy and better protect organizational identities, some security recommendations categorized as **Cloud apps** recommendations are now considered identity‑related and grouped under the **Identity** category. While the total Secure Score remains unchanged, individual identity and app scores may change.
 
-### Continued rollout of new health alert: Sensor v3.x RPC Audit Misconfigured
+### Continued rollout of new health alert: Sensor v3.x RPC audit misconfigured
 
 The **Sensor v3.x RPC Audit Misconfigured** health alert is continuing to be rolled out gradually to customers.  The new health alert helps identify v3.x sensors where Enhanced RPC auditing configuration is either missing or incorrectly applied. Enhanced RPC auditing is required for some Microsoft Defender for Identity advanced identity detections.  For more information, see [Configure RPC on sensors v3.x](deploy/prerequisites-sensor-version-3.md#configure-rpc-auditing).
 
@@ -197,75 +206,6 @@ The [Microsoft Defender for Identity sensor v3.x](/defender-for-identity/deploy/
 |Version number|Updates|
 |---|---|
 |2.249|The improved event log query method now captures a broader range of unique events at scale. As a result, you might notice an increase in captured activities. This update also delivers other security enhancements and performance improvements.|
-
-## September 2025
-
-### Defender for Identity alerts transitioned to the unified Defender alerting experience
-
-As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, the following alerts were converted from the Microsoft Defender for Identity classic format to the the unified Defender alerting format. Keep in mind that all alerts are based on detections from Defender for Identity sensors.
-
-|Classic Alert Title|External ID|XDR Alert Name|Detector ID|
-|---|---|---|---|
-|Active Directory attributes Reconnaissance using LDAP|2210|[LDAP reconnaissance attributes in Active Directory](alerts-xdr.md#ldap-reconnaissance-attributes-in-active-directory)|xdr_LdapSensitiveAttributeReconnaissance|
-|User and IP address reconnaissance|2012|[Suspicious Server Message Block (SMB) enumeration from untrusted host](alerts-xdr.md#suspicious-server-message-block-smb-enumeration-from-untrusted-host)|xdr_SmbSessionEnumeration|
-|Account enumeration reconnaissance|2003|[Suspected account enumeration (Kerberos, NTLM, AD FS)](alerts-xdr.md#suspected-account-enumeration-kerberos-ntlm-ad-fs)|xdr_SuspectedAccountEnumeration|
-|Suspected brute-force attack (LDAP)|2004|[Suspected brute-force attack on Lightweight Directory Access Protocol (LDAP) authentication](alerts-xdr.md#suspected-brute-force-attack-on-lightweight-directory-access-protocol-ldap-authentication)|xdr_LdapBindBruteforce|
-|||[Suspected password spray attack on Lightweight Directory Access Protocol (LDAP) authentication](alerts-xdr.md#suspected-password-spray-attack-on-lightweight-directory-access-protocol-ldap-authentication)|xdr_LdapBindBruteforce|
-|Suspicious network connection over Encrypting File System Remote Protocol|2416|[Suspicious network connection over Encrypting File System Remote Protocol](alerts-xdr.md#suspicious-network-connection-over-encrypting-file-system-remote-protocol)|xdr_SuspiciousConnectionOverEFSRPC|
-
-### Additional security value in the Defender for Identity sensor v3.x
-
-Apply the **Unified sensor RPC audit*- tag to your Defender for Identity sensor v3.x in the **Asset rule management*- page for enhanced protection. Learn more [here](/defender-for-identity/deploy/prerequisites-sensor-version-3).
-
-### Identity posture recommendations view on the identity page (preview)
-
-A new tab on the Identity profile page contains all active identity-related identity security posture assessments (ISPMs). This page consolidates all identity-specific security posture assessments into a single contextual view, helping security teams quickly spot weaknesses and take targeted actions.
-For more information, see [Investigate users in Microsoft Defender XDR](/microsoft-365/security/defender/investigate-users).
-
-### New Regional Availability: United Arab Emirates
-
-Defender for Identity data centers are now also deployed in the United Arab Emirates, North, and Central regions. For the most current list of regional deployments, see [Defender for Identity data locations](/defender-for-identity/privacy-compliance/#data-location).
-
-### New API support for the Defender for Identity sensor v3.x (Preview)
-
-We're excited to announce the availability of a new Graph-based API for managing the Defender for Identity sensor v3.x server actions.
-This capability is currently in preview and available in API Beta version.
-
-This API allows customers to:
-
-- Monitor the status of servers deployed with the Defender for Identity sensor v3.x.
-- Enable or disable the automatic activation of eligible servers.
-- Activate or deactivate the sensor on eligible server.
-
-For more information, see [Managing the Defender for Identity sensor v3.x actions using Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true).
-
-### Microsoft Defender for Identity sensor version updates
-
-|Version number|Updates|
-|---|---|
-|2.249|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
-
-### Updates to multiple detections to reduce noise and improve alert accuracy
-
-Several Defender for Identity detections are being updated to reduce noise and improve accuracy, making alerts more reliable and actionable. As the rollout continues, you might see a decrease in the number of alerts raised.
-
-The improvements will gradually take effect across the following detections:
-
-- Suspicious communication over DNS
-- Suspected Netlogon privilege elevation attempt (CVE-2020-1472)
-- Honeytoken authentication activity
-- Remote code execution attempt over DNS
-- Suspicious password reset by Microsoft Entra Connect account
-- Data exfiltration over SMB
-- Suspected skeleton key attack (encryption downgrade)
-- Suspicious modification of Resource Based Constrained Delegation by a machine account
-- Remote code execution attempt
-
-### Unified connectors is now available for Okta single sign-on connectors (Preview)
-
-Microsoft Defender for Identity supports the [Unified connectors](/azure/sentinel/unified-connector) experience, starting with the Okta single sign-on connector. The unified connector enables Defender for Identity to collect Okta system logs once and share them across supported Microsoft security products, reducing API usage and improving connector efficiency.
-
-For more information, see: [Connect Okta to Microsoft Defender for Identity (Preview)](okta-integration.md)
 
 ## Next steps
 
