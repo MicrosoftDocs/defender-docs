@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 03/19/2026
+ms.date: 03/20/2026
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux manually
