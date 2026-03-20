@@ -44,7 +44,7 @@ For detailed licensing information, see [Product Terms: Microsoft Defender for E
 - For installation at a custom path, refer to [Prerequisites and system requirements for custom location installation](linux-custom-location-installation.md#prerequisites-and-system-requirements).
 
 > [!NOTE]
-> Performance tuning might be needed based on workloads. For more information, see [Performance tuning for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-perf)
+> Performance tuning might be needed based on workloads. For more information, see [Performance tuning for Microsoft Defender for Endpoint on Linux](linux-support-perf.md)
 
 ## Software requirements
 
@@ -78,19 +78,19 @@ If necessary, [configure static proxy discovery](./linux-static-proxy-configurat
 
 ### Verify if devices can connect to Defender for Endpoint cloud services
 
-1. Prepare your environment, as described in Step 1 of the following article [Configure your network environment to ensure connectivity with Defender for Endpoint service](/defender-endpoint/configure-environment).
+1. Prepare your environment, as described in Step 1 of the following article [Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
 
 1. Connect Defender for Endpoint on Linux through a proxy server by using the following discovery methods:
 
    - Transparent proxy
-   - [Manual static proxy configuration](/defender-endpoint/linux-static-proxy-configuration#installation-time-configuration)
+   - [Manual static proxy configuration](linux-static-proxy-configuration.md#installation-time-configuration)
 
 1. Permit anonymous traffic in the previously listed URLs, if a proxy or firewall blocks traffic.
 
 > [!NOTE]
-> Configuration for transparent proxies isn't needed for Defender for Endpoint. See [Manual Static Proxy Configuration.](/defender-endpoint/linux-static-proxy-configuration)
+> Configuration for transparent proxies isn't needed for Defender for Endpoint. See [Manual Static Proxy Configuration.](linux-static-proxy-configuration.md)
 
-For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-connectivity).
+For troubleshooting steps, see [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](linux-support-connectivity.md).
 
 ## Supported Linux distributions
 
@@ -99,7 +99,7 @@ The following Linux server distributions are supported:
 | Distribution | x64 (AMD64/EM64T) | ARM64 |
 |---|---|---|
 | Red Hat Enterprise Linux | 7.2+, 8.x, 9.x, 10.x | 8.x, 9.x, 10.x |
-| CentOS | 7.2+, 8.x | Not supported |
+| CentOS | 7.2+, 8.x | - |
 | CentOS Stream | 8.x, 9.x, 10.x | 8.x, 9.x, 10.x |
 | Ubuntu LTS | 16.04, 18.04, 20.04, 22.04,24.04 | 20.04, 22.04, 24.04 |
 | Ubuntu Pro | 22.04, 24.04 | 22.04, 24.04 |
@@ -107,10 +107,10 @@ The following Linux server distributions are supported:
 | SUSE Linux Enterprise Server | 12.x, 15.x | 15 (SP5, SP6) |
 | Oracle Linux | 7.2+, 8.x, 9.x | 8.x, 9.x |
 | Amazon Linux | 2, 2023 | 2, 2023 |
-| Fedora | 33–42 | Not supported |
-| Rocky Linux | 8.7+, 9.2+ | Not supported |
-| Alma Linux | 8.4+, 9.2+ | Not supported |
-| Mariner | 2 | Not supported |
+| Fedora | 33–42 | - |
+| Rocky Linux | 8.7+, 9.2+ | - |
+| Alma Linux | 8.4+, 9.2+ | - |
+| Mariner | 2 | - |
 
 > [!NOTE]
 > Distributions and versions that aren't explicitly listed above, and custom operating systems, are unsupported (even if they're derived from the officially supported distributions).
@@ -119,7 +119,7 @@ The following Linux server distributions are supported:
 > [!WARNING]
 > Running Defender for Endpoint on Linux alongside other fanotify-based security solutions is not supported and may lead to unpredictable behavior, including system hangs.
 > If any applications use fanotify in blocking mode, they will appear in the conflicting_applications field of the mdatp health command output.
-> You can still safely take advantage of Defender for Endpoint on Linux by setting antivirus enforcement level to passive. See [Configure security settings in Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences).
+> You can still safely take advantage of Defender for Endpoint on Linux by setting antivirus enforcement level to passive. See [Configure security settings in Microsoft Defender for Endpoint on Linux](linux-preferences.md).
 > **EXCEPTION:** The Linux `FAPolicyD` feature, which also uses Fanotify in blocking mode, is supported with Defender for Endpoint in active mode on RHEL and Fedora platforms, provided that mdatp health reports a healthy status. This exception is based on validated compatibility specific to these distributions.
 
 ## Supported filesystems for real-time protection and quick, full, and custom scans
@@ -150,25 +150,25 @@ The following Linux server distributions are supported:
 ## Roles and permissions
 
 - Administrative privileges on the Linux server endpoint are required for installation.
-- An appropriate role assigned in Defender for Endpoint. See [Role-based access control](/defender-endpoint/prepare-deployment#role-based-access-control).
+- An appropriate role assigned in Defender for Endpoint. See [Role-based access control](prepare-deployment.md#role-based-access-control).
 
 ## Installation methods and tools
 
 There are several methods and tools that you can use to deploy Microsoft Defender for Endpoint on [supported Linux servers](#supported-linux-distributions).
 
-It's recommended to use Deployment Tool based deployment, as it simplifies the onboarding process, reduces manual tasks, and supports a wide range of deployment scenarios, including new installations, upgrades, and uninstalls. For more information, see [Deploy Microsoft Defender endpoint security to Linux devices using the Defender deployment tool (preview)](/defender-endpoint/linux-install-with-defender-deployment-tool).
+It's recommended to use Deployment Tool based deployment, as it simplifies the onboarding process, reduces manual tasks, and supports a wide range of deployment scenarios, including new installations, upgrades, and uninstalls. For more information, see [Deploy Microsoft Defender endpoint security to Linux devices using the Defender deployment tool (preview)](linux-install-with-defender-deployment-tool.md).
 
 - [Deployment tool based deployment (Recommended)](./linux-install-with-defender-deployment-tool.md)
-- [Installer script based deployment](/defender-endpoint/linux-installer-script)
-- [Ansible based deployment](/defender-endpoint/linux-install-with-ansible)
-- [Chef based deployment](/defender-endpoint/linux-deploy-defender-for-endpoint-with-chef)
-- [Puppet based deployment](/defender-endpoint/linux-install-with-puppet)
-- [SaltStack based deployment](/defender-endpoint/linux-install-with-saltack)
-- [Golden Image based deployment](/defender-endpoint/linux-deploy-defender-for-endpoint-using-golden-images)
-- [Deployment to a custom location](/defender-endpoint/linux-custom-location-installation)
-- [Manual deployment](/defender-endpoint/linux-install-manually)
+- [Installer script based deployment](linux-installer-script.md)
+- [Ansible based deployment](linux-install-with-ansible.md)
+- [Chef based deployment](linux-deploy-defender-for-endpoint-with-chef.md)
+- [Puppet based deployment](linux-install-with-puppet.md)
+- [SaltStack based deployment](linux-install-with-saltack.md)
+- [Golden Image based deployment](linux-deploy-defender-for-endpoint-using-golden-images.md)
+- [Deployment to a custom location](linux-custom-location-installation.md)
+- [Manual deployment](linux-install-manually.md)
 - [Direct onboarding with Defender for Cloud](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
-- [Guidance for Defender for Endpoint on Linux Server with SAP](/defender-endpoint/mde-linux-deployment-on-sap)
+- [Guidance for Defender for Endpoint on Linux Server with SAP](mde-linux-deployment-on-sap.md)
 
 > [!IMPORTANT]
 > On Linux, Microsoft Defender for Endpoint creates an mdatp user with random UID and GID values. If you want to control these values, create an mdatp user before installation using the `/usr/sbin/nologin` shell option. Here's an example: `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
@@ -178,8 +178,8 @@ If you experience any installation issues, self-troubleshooting resources are av
 ## Next steps
 
 - [Deploy Defender for Endpoint on Linux](./linux-install-with-defender-deployment-tool.md)
-- [Configure Defender for Endpoint on Linux](/defender-endpoint/linux-preferences)
-- [Deploy updates for Defender for Endpoint on Linux](/defender-endpoint/linux-updates)
+- [Configure Defender for Endpoint on Linux](linux-preferences.md)
+- [Deploy updates for Defender for Endpoint on Linux](linux-updates.md)
 
 ## Related content
 

@@ -103,7 +103,7 @@ To ensure optimal protection for your device, Microsoft Defender requests access
 
 #### How to resolve the noncompliance state due to silent auth failures
 
-- Microsoft Defender for Endpoint has a feature to let the user sign-in according to a set of policies called [Conditional Access policies](/defender-endpoint/configure-conditional-access).
+- Microsoft Defender for Endpoint has a feature to let the user sign-in according to a set of policies called [Conditional Access policies](configure-conditional-access.md).
 
 - If a policy is violated, or the user has reset their Microsoft account password, the Microsoft Defender app autosigns out and starts failing in silent auth (sign-in attempts in background).
 
