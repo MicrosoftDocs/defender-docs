@@ -36,7 +36,7 @@ To onboard client devices running Windows or macOS, follow this general process:
 
 1. Under **Select operating system to start onboarding process**, select the operating system for the device.
 
-1. Under **Connectivity type**, select either **Streamlined** or **Standard**. (See [prerequisites for streamlined connectivity](/defender-endpoint/configure-device-connectivity#prerequisites).)
+1. Under **Connectivity type**, select either **Streamlined** or **Standard**. (See [prerequisites for streamlined connectivity](configure-device-connectivity.md#prerequisites).)
 
 1. Under **Deployment method**, select an option. Then download the onboarding package (and installation package, if there's one available). Follow the instructions to onboard your devices. The following table lists available deployment methods:
 

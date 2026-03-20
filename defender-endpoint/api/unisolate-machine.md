@@ -39,7 +39,7 @@ Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 ### Supported operating systems
 
 - Full isolation is available for devices on Windows 10, version 1703.
-- Full isolation is available in **public preview** for all supported Microsoft Defender for Endpoint on Linux listed in [System requirements](/defender-endpoint/mde-linux-prerequisites).
+- Full isolation is available in **public preview** for all supported Microsoft Defender for Endpoint on Linux listed in [System requirements](../mde-linux-prerequisites.md).
 - Selective isolation is available for devices on Windows 10, version 1709 or later.
 
 ## Permissions
