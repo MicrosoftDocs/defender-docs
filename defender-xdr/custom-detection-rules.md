@@ -171,10 +171,6 @@ When you save a new rule, it runs and checks for matches from the past 30 days o
 
 When you edit a rule, the next run time scheduled according to the frequency you set applies the changes. The rule frequency is based on the event timestamp and not the ingestion time. Small delays might occur in specific runs, so the configured frequency isn't 100% accurate.
 
->[!IMPORTANT]
-> Custom detections evaluate `ingestion_time()` to account for ingestion delays. Because of this condition, events with `Timestamp` or `TimeGenerated` values older than the configured lookback period might still be included in the rule evaluation.
-
-
 ##### Continuous (NRT) frequency
 
 Setting a custom detection to run in Continuous (NRT) frequency increases your organization's ability to identify threats faster. Using the Continuous (NRT) frequency has minimal to no impact on your resource usage. Consider using it for any qualified custom detection rule in your organization.
@@ -239,6 +235,8 @@ If your custom detections target Microsoft Sentinel data only and you apply a cu
 - For detections set to run in frequencies of **one day or less**, the lookback can be set **up to 30 days**.  
 
 > [!IMPORTANT]
+> Custom detections evaluate `ingestion_time()` to account for ingestion delays. Because of this condition, events with `Timestamp` or `TimeGenerated` values older than the configured lookback period might still be included in the rule evaluation.
+> 
 > When the lookback period is longer than the frequency, duplicate events might occur. However, custom detections [group and deduplicate them automatically](#how-custom-detections-handle-duplicate-alerts) to reduce alert noise and fatigue.
 
 
