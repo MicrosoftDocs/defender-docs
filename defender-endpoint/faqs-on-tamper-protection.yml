@@ -49,7 +49,7 @@ sections:
         answer: |
           - Windows 11
           - Windows 11 Enterprise multi-session
-          - Windows 10 OS [1709](/lifecycle/announcements/revised-end-of-service-windows-10-1709), [1803](/lifecycle/announcements/windows-server-1803-end-of-servicing), [1809](/windows/release-health/status-windows-10-1809-and-windows-server-2019), or later together with [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint).
+          - Windows 10 OS [1709](/lifecycle/announcements/revised-end-of-service-windows-10-1709), [1803](/lifecycle/announcements/windows-server-1803-end-of-servicing), [1809](/windows/release-health/status-windows-10-1809-and-windows-server-2019), or later together with [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md).
           - Windows 10 Enterprise multi-session
 
           If you're using Configuration Manager, version 2006, with tenant attach, tamper protection can be extended to Windows Server 2012 R2 and later, and Azure Stack HCI OS, version 23H2 and later. For more information, see [Tenant attach: Create and deploy endpoint security Antivirus policy from the admin center (preview)](/intune/configmgr/tenant-attach/deploy-antivirus-policy).

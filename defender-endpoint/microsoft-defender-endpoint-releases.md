@@ -287,7 +287,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 >
 > - Continue to use Defender for Endpoint on Linux build `101.24072.0000` with Auditd. This build continues to be supported for several months, so you have time to plan and execute your migration to eBPF.
 > - If you are on versions later than `101.24072.0000`, Defender for Endpoint on Linux relies on `netlink` as a backup supplementary event provider. If a fallback occurs, all operations continue to flow seamlessly.
-> - Review your current Defender for Endpoint on Linux deployment, and begin planning your migration to the eBPF-supported build. For more information on eBPF and how it works, see [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-ebpf).
+> - Review your current Defender for Endpoint on Linux deployment, and begin planning your migration to the eBPF-supported build. For more information on eBPF and how it works, see [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](linux-support-ebpf.md).
 >
 > If you have any concerns or need assistance during this transition, contact support.
 
@@ -643,7 +643,7 @@ For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 
 | Feature area | Update summary |
 |--------------|---------------|
-| UX | UX Improvement. For more information, see [iOS UX Experience](/defender-endpoint/ios-new-ux). |
+| UX | UX Improvement. For more information, see [iOS UX Experience](ios-new-ux.md). |
 
 ## Microsoft Defender Antivirus releases
 
