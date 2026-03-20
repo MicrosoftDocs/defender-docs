@@ -145,9 +145,9 @@ There are several ways to uninstall Defender for Endpoint on Linux. If you are u
 
 To prevent decommissioned devices from showing up in your device inventory, and to help ensure a more accurate Secure Score rating, add device tags to devices that you want to offboard from Defender for Endpoint. Otherwise, you'll see those devices in the [Device inventory](machines-view-overview.md) for 180 days.
 
-1. Create a [device tag](/defender-endpoint/machine-tags), and name the tag `decommissioned`. Assign the tag to the Linux devices that you want to offboard from Defender for Endpoint.
+1. Create a [device tag](machine-tags.md), and name the tag `decommissioned`. Assign the tag to the Linux devices that you want to offboard from Defender for Endpoint.
 
-1. Create a [Device group](/defender-endpoint/machine-groups) and name it something like, `Decommissioned Linux`. Assign this tag to an appropriate user group.
+1. Create a [Device group](machine-groups.md) and name it something like, `Decommissioned Linux`. Assign this tag to an appropriate user group.
    
 1. In the [Microsoft Defender portal](https://security.microsoft.com), in the navigation pane, select **Settings** > **Offboard**. In the **Select operating system to start offboarding process**, select **Linux Server**, and then select a deployment method.  
 
