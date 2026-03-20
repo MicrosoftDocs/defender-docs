@@ -24,7 +24,7 @@ appliesto:
 
 # Troubleshoot attack surface reduction rules
 
-When you use [attack surface reduction rules](attack-surface-reduction-rules-overview.md), you might run into issues. For example:
+When you use [attack surface reduction rules](attack-surface-reduction.md), you might run into issues. For example:
 
 - A rule blocks a file or process, or does some other action that it shouldn't (false positive).
 - A rule doesn't work as described, or doesn't block a file or process that it should (false negative).
