@@ -23,7 +23,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 03/16/2026
+ms.date: 03/20/2026
 ---
 
 # Create custom detection rules
@@ -156,12 +156,12 @@ In the query editor, select **Create detection rule** and specify the following 
 
 #### Rule frequency
 
-When you save a new rule, it runs and checks for matches from the past 30 days of data. The rule then runs again at fixed intervals, applying a lookback period based on the frequency you choose:
+When you save a new rule, it runs and checks for matches from the past 30 days of data. The rule then runs again at fixed intervals, applying a [lookback period](#lookback) based on the frequency you choose:
 
-- **Every 24 hours** - Runs every 24 hours, checking data from the past 30 days.
-- **Every 12 hours** - Runs every 12 hours, checking data from the past 48 hours.
-- **Every 3 hours** - Runs every 3 hours, checking data from the past 12 hours.
-- **Every hour** - Runs hourly, checking data from the past 4 hours.
+- **Every 24 hours**
+- **Every 12 hours**
+- **Every 3 hours**
+- **Every hour**
 - **Continuous (NRT)** - Runs continuously, checking data from events as they're collected and processed in near real-time (NRT). For more information, see [Continuous (NRT) frequency](custom-detection-rules.md#continuous-nrt-frequency).
 - **Custom** - Runs according to the frequency you selected. This option is available if the rule is based only on data that is ingested to Microsoft Sentinel. For more information, see [Custom frequency for Microsoft Sentinel data](#custom-frequency-for-microsoft-sentinel-data).
 
@@ -172,8 +172,7 @@ When you edit a rule, the next run time scheduled according to the frequency you
 
 >[!IMPORTANT]
 > Custom detections evaluate `ingestion_time()` to account for ingestion delays. Because of this condition, events with `Timestamp` or `TimeGenerated` values older than the configured lookback period might still be included in the rule evaluation.
->
-> When the lookback period is longer than the frequency, duplicate events might occur. However, custom detections [group and deduplicate them automatically](#how-custom-detections-handle-duplicate-alerts) to reduce alert noise and fatigue.
+
 
 ##### Continuous (NRT) frequency
 
@@ -214,9 +213,7 @@ Near real-time detections support the following tables:
 
 Microsoft Sentinel customers who onboard to Microsoft Defender can select **Custom** frequency when the rule is based only on data that Microsoft Sentinel ingests. 
 
-When you select this frequency option, the **Run query every input** component appears. Type the desired frequency for the rule and use the dropdown to select the units: minutes, hours, or days. The supported range is any value from 5 minutes to 14 days. When you select a frequency, the lookback period is determined automatically by using the following logic: 
-1.	For detections set to run more frequently than once a day, the lookback is four times the frequency. For example, if the frequency is 20 minutes, the lookback is 80 minutes.  
-1.	For detections set to run once a day or less frequently, the lookback is 30 days. For example, if set to run every three days, the lookback is 30 days.  
+When you select this frequency option, the **Run query every input** component appears. Type the desired frequency for the rule and use the dropdown to select the units: minutes, hours, or days. The supported range is any value from 5 minutes to 14 days. 
 
 :::image type="content" source="media/custom-detection-rules/ah-custom-frequency.png" alt-text="Screenshot that shows the Custom frequency option in the Custom detections setup guide." lightbox="media/custom-detection-rules/ah-custom-frequency.png":::
 
@@ -227,14 +224,22 @@ When you select this frequency option, the **Run query every input** component a
 
 #### Lookback
 
-The lookback period of your custom detections can range from five minutes to 30 days, depending on the frequency of your query.
+The lookback period of your custom detections can range from five minutes to 30 days, depending on the target data and frequency of your query.
 
-> [!NOTE]
-> Lookback only applies to custom detection queries that target data from Microsoft Sentinel only.
+If your custom detections include Defender XDR data, a fixed lookback period is applied depending on the rule frequency that you choose:
+- For detections set to run **every 24 hours**, the lookback period is **30 days**.
+- For detections set to run **every 12 hours**, the lookback period is **48 hours**.
+- For detections set to run **every three hours**, the lookback period is **12 hours**.
+- For detections set to run **hourly**, the lookback period is **four hours**.
 
-- For detection frequencies **higher (more frequent) than one hour**, the lookback is limited to **less than 48 hours**. 
-- For frequencies **higher than one day**, the lookback can be set **up to 14 days**. 
-- For frequencies of **one day or less**, the lookback can be set **up to 30 days**.  
+If your custom detections target Microsoft Sentinel data only and you apply a custom frequency, the lookback period is determined automatically by using the following logic: 
+- For detections set to run in frequencies **higher (more frequent) than one hour**, the lookback is limited to **less than 48 hours**. 
+- For detections set to run in frequencies **higher than one day**, the lookback can be set **up to 14 days**. 
+- For detections set to run in frequencies of **one day or less**, the lookback can be set **up to 30 days**.  
+
+> [!IMPORTANT]
+> When the lookback period is longer than the frequency, duplicate events might occur. However, custom detections [group and deduplicate them automatically](#how-custom-detections-handle-duplicate-alerts) to reduce alert noise and fatigue.
+
 
 ### 3. Define alert enrichment details 
 You can enrich alerts by providing and defining more details. When you enrich alerts, you can:
@@ -299,7 +304,7 @@ The expanded **Entity mapping** section has two sections where you can select en
     - Azure resource 
     - Amazon Web Services resource 
     - Google Cloud Platform resource 
-- **Related evidence** – Add nonassets that appear in the selected events. The supported entity types are: 
+- **Related evidence** – Add nonassets that appear in the selected events. The supported entity types are: 
     - Process 
     - File 
     - Registry value 
@@ -389,7 +394,7 @@ After reviewing the rule, select **Create** to save it. The custom detection rul
 
 #### How custom detections handle duplicate alerts
 
-An important consideration when creating and reviewing custom detection rules is alert noise and fatigue. Custom detections group and deduplicate events into a single alert. If a custom detection rule fires twice on an event that contains the same entities, custom details, and dynamic details, it creates one alert for both events. If the detection rule recognizes that the events are identical, it logs one of the events on the created alert and takes care of the duplicates. Duplicates can occur when the lookback period is longer than the frequency. If the events are different, the custom detection logs both events on the alert.
+An important consideration when creating and reviewing custom detection rules is alert noise and fatigue. Custom detections group and deduplicate events into a single alert. If a custom detection rule runs twice on an event that contains the same entities, custom details, and dynamic details, it creates one alert for both events. If the detection rule recognizes that the events are identical, it logs one of the events on the created alert and takes care of the duplicates. Duplicates can occur when the lookback period is longer than the frequency. If the events are different, the custom detection logs both events on the alert.
 
 ## See also
 
