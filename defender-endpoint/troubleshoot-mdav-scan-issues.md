@@ -32,7 +32,7 @@ Understanding why a scan is launched can help identify what settings are applied
 | Schedule | Defined by policy as per policy table |
 | Scan after update | Defined by policy (Settings catalog in Intune) |
 | Catch up scan | Launched when a scheduled scan was missed twice |
-| Manually launched | A scan is launched manually by using any of the following methods: <br/>- Command Prompt: `MpCmdRun -scan -scantype` <br/>- [Taking a response action on a device](/defender-endpoint/respond-machine-alerts#run-microsoft-defender-antivirus-scan-on-devices) in the Microsoft Defender portal <br/>- Using the Windows Security app or Microsoft Defender app on the device |
+| Manually launched | A scan is launched manually by using any of the following methods: <br/>- Command Prompt: `MpCmdRun -scan -scantype` <br/>- [Taking a response action on a device](respond-machine-alerts.md#run-microsoft-defender-antivirus-scan-on-devices) in the Microsoft Defender portal <br/>- Using the Windows Security app or Microsoft Defender app on the device |
 
 ## CPU performance and scan throttling in Microsoft Defender Antivirus
 
@@ -87,11 +87,11 @@ In an Intune policy and in <a href="/intune/intune-service/protect/mde-security-
 
    Settings: `Scan Parameter`; `Schedule Scan Day`; and `Schedule Scan Time`
 
-If you're using Group Policy to manage your devices, see [Configure Microsoft Defender Antivirus with Group Policy](/defender-endpoint/use-group-policy-microsoft-defender-antivirus#group-policy-settings-and-resources)
+If you're using Group Policy to manage your devices, see [Configure Microsoft Defender Antivirus with Group Policy](use-group-policy-microsoft-defender-antivirus.md#group-policy-settings-and-resources)
 
-For information about troubleshooting antivirus settings, see [Troubleshoot Microsoft Defender Antivirus settings](/defender-endpoint/troubleshoot-settings)
+For information about troubleshooting antivirus settings, see [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md)
 
-For more information about scan behaviors when Microsoft Defender Antivirus is in passive mode, see [Microsoft Defender Antivirus compatibility with other security products](/defender-endpoint/microsoft-defender-antivirus-compatibility#notes-about-protection-states)
+For more information about scan behaviors when Microsoft Defender Antivirus is in passive mode, see [Microsoft Defender Antivirus compatibility with other security products](microsoft-defender-antivirus-compatibility.md#notes-about-protection-states)
 
 ## Frequently asked questions about scans
 
@@ -123,13 +123,13 @@ The following Event IDs are related to scan operations on a device.
 - Event ID 1001 - An anti-malware scan finished.
 - Event ID 1002 - An anti-malware scan was stopped before it finished.
 
-For more information, see [Microsoft Defender Antivirus event IDs and error codes](/defender-endpoint/troubleshoot-microsoft-defender-antivirus).
+For more information, see [Microsoft Defender Antivirus event IDs and error codes](troubleshoot-microsoft-defender-antivirus.yml).
 
 Event viewer can be access on the machine by the application or PowerShell. For more information, see [Review logs in Event Viewer](#review-logs-in-event-viewer) (in this article).
 
 ### Reports in the Microsoft Defender portal
 
-Reports are available that include current scan status. You can expand the view and export details. For more information, see [Device health report](/defender-endpoint/device-health-microsoft-defender-antivirus-health).
+Reports are available that include current scan status. You can expand the view and export details. For more information, see [Device health report](device-health-microsoft-defender-antivirus-health.md).
  
 ### Advanced hunting
 
@@ -161,7 +161,7 @@ Data about scan status can be exported by using the export health reporting API,
 
 ```
 
-For more information, see [Export device antivirus health report](/defender-endpoint/api/device-health-export-antivirus-health-report-api).
+For more information, see [Export device antivirus health report](api/device-health-export-antivirus-health-report-api.md).
 
 ## Reasons why scans are canceled or terminated
 
@@ -189,12 +189,12 @@ If, after following the guidance in this article, you haven't identified a misco
    - Top scans per file
    - Top scans per file per process
 
-For more information, see [Performance analyzer for Microsoft Defender Antivirus](/defender-endpoint/tune-performance-defender-antivirus).
+For more information, see [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 
 One outcome of this process might be identifying files or paths that you want to exclude from antivirus scans to improve performance. Make sure to review the following articles:
 
-- [Exclusions overview](/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions)
-- [Contextual file and folder exclusions](/defender-endpoint/configure-contextual-file-folder-exclusions-microsoft-defender-antivirus)
+- [Exclusions overview](navigate-defender-endpoint-antivirus-exclusions.md)
+- [Contextual file and folder exclusions](configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md)
 
 ## Reviewing Event logs
 
