@@ -64,7 +64,7 @@ The following screenshot shows the Timeline view of these events on a given endp
 
 ## How to troubleshoot attack surface reduction rules?
 
-Review [Troubleshoot attack surface reduction rules](/defender-endpoint/troubleshoot-asr)
+Review [Troubleshoot attack surface reduction rules](troubleshoot-asr.md)
 
 ## Related articles
 
@@ -72,7 +72,7 @@ Review [Troubleshoot attack surface reduction rules](/defender-endpoint/troubles
 - [Enable attack surface reduction rules](enable-attack-surface-reduction.md)
 - [Evaluate attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
 
-- [Troubleshoot attack surface reduction rules](/defender-endpoint/troubleshoot-asr)
+- [Troubleshoot attack surface reduction rules](troubleshoot-asr.md)
 
 
 
