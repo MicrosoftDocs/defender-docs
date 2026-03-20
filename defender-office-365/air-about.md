@@ -7,7 +7,7 @@ ms.author: chrisda
 manager: bagol
 audience: ITPro
 ms.topic: article
-ms.date: 01/30/2026
+ms.date: 02/23/2026
 ms.localizationpriority: medium
 search.appverid:
 - MET150
@@ -68,7 +68,7 @@ An alert is triggered, and a security playbook starts an automated investigation
 4. The SecOps team reviews the [investigation results and recommendations](air-view-investigation-results.md) in the investigation itself, the incident, or in the Action center, and [approves or rejects the remediation actions](air-review-approve-pending-completed-actions.md).
 
    > [!TIP]
-   > No remediation actions happen automatically. Remediation actions require manual approval by SecOps personnel. AIR capabilities save time by getting to the recommended remediation actions with all the details to make an informed decision.
+   > We expanded the auto-remediation capabilities in automated investigations and response (AIR) to fully automate the remediation of malicious similarity clusters. In 2025, we introduced auto-remediation for malicious URL and file clusters. Building on that foundation, this enhancement enables AIR to automatically approve all pending remediation actions it generates. This capability eliminates the need for manual intervention and streamlines the response process for SOC teams.
    >
    > AIR also saves time by evaluating and automatically resolving alerts and incidents where no threats were found. This result is common in user submission scenarios. AIR closes the investigation if no threats were found or threats were found in messages that were already remediated. Typically
 
