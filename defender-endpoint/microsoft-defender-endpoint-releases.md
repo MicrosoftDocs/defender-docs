@@ -298,7 +298,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
-|30.126012.0007.0 |1.1.25090.4000 |1.437.18.0 |
+|30.126012.0007.0 |1.1.25110.3002 |1.443.508.0 |
 
 #### Enhancements and features
 
