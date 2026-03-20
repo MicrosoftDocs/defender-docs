@@ -116,24 +116,24 @@ You can use either the `dnf` or the `yum` package manager to deploy Defender for
    > [!TIP]
    > Use hostnamectl command to identify system related information including release *[version]*.
 
-   For example, if you're running CentOS 7 and want to deploy Defender for Endpoint on Linux from the `prod` channel:
+   For example, if you're running CentOS 8 and want to deploy Defender for Endpoint on Linux from the `prod` channel:
 
    ```bash
-   sudo dnf config-manager --add-repo https://packages.microsoft.com/config/rhel/7/prod.repo
+   sudo dnf config-manager --add-repo https://packages.microsoft.com/config/rhel/8/prod.repo
    ```
    or
    ```bash
-   sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/prod.repo
+   sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/8/prod.repo
    ```
 
    Or if you wish to explore new features on selected devices, you might want to deploy Defender for Endpoint on Linux to *insiders-fast* channel:
 
    ```bash
-   sudo dnf config-manager --add-repo https://packages.microsoft.com/config/rhel/7/insiders-fast.repo
+   sudo dnf config-manager --add-repo https://packages.microsoft.com/config/rhel/8/insiders-fast.repo
    ```
    or
    ```bash
-   sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/insiders-fast.repo
+   sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/8/insiders-fast.repo
    ```
 
 4. Install the Microsoft GPG public key:
