@@ -48,7 +48,7 @@ In the advanced hunting page, select the hunting graph icon ![Screenshot of the 
 
 :::image type="content" source="./media/advanced-hunting-graph/hunting-graph-new.png" alt-text="Screenshot of the Create new Hunting graph option in the advanced hunting page." lightbox="./media/advanced-hunting-graph/hunting-graph-new.png":::
 
-A new hunting graph page appears as tab labeled **New hunt** in the advanced hunting page.
+A new hunting graph page appears as tab labeled **New graph** in the advanced hunting page.
 
 ## Hunting graph features
 
