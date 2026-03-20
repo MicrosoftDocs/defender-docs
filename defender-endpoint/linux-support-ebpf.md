@@ -244,7 +244,7 @@ Following are some common reasons for placing exclusions for AuditD:
 
 - Contact support: Reach out to Microsoft to apply the exclusions from the backend.
 
-- Global Exclusions: In the updated versions of Defender for Endpoint on Linux, exclusions can be managed with global exclusions. Global exclusions apply to both antivirus and EDR and can be configured through the managed json currently. For more information, see [Configure and validate exclusions for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-exclusions).
+- Global Exclusions: In the updated versions of Defender for Endpoint on Linux, exclusions can be managed with global exclusions. Global exclusions apply to both antivirus and EDR and can be configured through the managed json currently. For more information, see [Configure and validate exclusions for Microsoft Defender for Endpoint on Linux](linux-exclusions.md).
 
 **5. What Should I Do in Case There Are Issues?**
 

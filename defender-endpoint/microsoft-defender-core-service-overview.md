@@ -38,11 +38,11 @@ To enhance your endpoint security experience, Microsoft is releasing the Microso
    - Mid April 2024 to Enterprise customers running Windows clients.
    - Beginning of July 2024 to U.S. Government customers running Windows clients.
 
-     The Microsoft Defender Core service for Windows Server is releasing with [Microsoft Defender Antivirus platform version 4.18.25050.5.](/defender-endpoint/microsoft-defender-antivirus-updates)
+     The Microsoft Defender Core service for Windows Server is releasing with [Microsoft Defender Antivirus platform version 4.18.25050.5.](microsoft-defender-antivirus-updates.md)
 
    - Mid July 2025 to Enterprise customers running Windows Server 2019 or later.
 
-   - Mid September 2025 to Enterprise customers running the [unified Microsoft Defender for Endpoint client](/defender-endpoint/update-agent-mma-windows) for Windows Server 2012 R2 or Windows Server 2016.
+   - Mid September 2025 to Enterprise customers running the [unified Microsoft Defender for Endpoint client](update-agent-mma-windows.md) for Windows Server 2012 R2 or Windows Server 2016.
 
 1. If you're using the Microsoft Defender for Endpoint **streamlined** device connectivity experience, you don't need to add any other URLs.
 
@@ -94,7 +94,7 @@ We highly recommend keeping the default settings of the Microsoft Defender Core 
 
 ### What data storage and privacy does the Microsoft Defender Core service adhere to?
 
-Review [Microsoft Defender for Endpoint data storage and privacy](/microsoft-365/security/defender-endpoint/data-storage-privacy).
+Review [Microsoft Defender for Endpoint data storage and privacy](data-storage-privacy.md).
 
 ### Can I enforce the Microsoft Defender Core service stays running as an Administrator?
 
