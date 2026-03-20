@@ -15,17 +15,12 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
+appliesto:
+  - Microsoft Defender for Servers
 ms.date: 03/20/2026
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux manually
-
-
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=&country=us)
 
 You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using various tools and methods. This article describes how to deploy Defender for Endpoint on Linux manually. To use another method, refer to the [Related content section](#related-content). 
 
