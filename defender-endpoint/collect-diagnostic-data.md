@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
 ms.custom: nextgen
-ms.date: 03/18/2026
+ms.date: 03/20/2026
 ms.reviewer: pahuijbr, yongrhee
 manager: bagol
 ms.subservice: ngp
@@ -65,9 +65,9 @@ On at least two devices that are experiencing the same issue, use the following 
      The diagnostic log files are still generated, compressed, and saved to the file `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab` by default. But then the .cab file is **copied with a new name** into a subfolder of the location specified by the `<RootPath>` value (for example, `P:\Data` or `\\Server01\Data`). The filename and path of the resulting .cab file uses the following syntax: `<RootPath>\<MMDD>\MpSupport-<Hostname>-<HHMM>.cab`.
 
      - `<RootPath>` is the value you specified for the _SupportLogLocation_ switch.
-     - `<MMDD>` is the month and day when you ran the MpCmdRun.exe command (for example, 0318 for March 18).
-     - `<Hostname>` is the name of the device where you ran the MpCmdRun.exe command (for example, LAPTOP01).
-     - `<HHMM>` is the Universal Coordinated Time (UTC) when you ran the MpCmdRun.exe command (for example 2221 for 22:21 UTC).
+     - `<MMDD>` is the month and day when you ran the MpCmdRun command (for example, 0318 for March 18).
+     - `<Hostname>` is the name of the device where you ran the MpCmdRun command (for example, LAPTOP01).
+     - `<HHMM>` is the Universal Coordinated Time (UTC) when you ran the MpCmdRun command (for example 2221 for 22:21 UTC).
 
     > [!NOTE]
     > If you don't have write access to the location specified by the _SupportLogLocation_ switch, the diagnostic log files are still saved to the default location `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab` on the local device. But the step that copies and renames the .cab file to the  _SupportLogLocation_ path fails.
@@ -82,7 +82,7 @@ On at least two devices that are experiencing the same issue, use the following 
 
     In this example, the resulting .cab file is available at `\\SERVER01\Data\0318\MpSupport-LAPTOP01-2221.cab`
 
-    The resulting .cab filenames are guaranteed to be unique in the central location, even if you ran the MpCmdRun.exe command at exactly the same time on multiple devices.
+    The resulting .cab filenames are guaranteed to be unique in the central location, even if you ran the MpCmdRun command ond the same day on multiple devices.
 
 1. After a few minutes, the diagnostic log files are generated, compressed, and saved. The resulting .cab file includes the following information:
    - Any trace files from Microsoft Antimalware Service.
@@ -98,7 +98,7 @@ On at least two devices that are experiencing the same issue, use the following 
 
 ## Use group policy to specify where diagnostic log files are copied
 
-You can use group policy on the local device (registry-based settings) or in [the Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#the-central-store) on a domain controller to specify where the diagnostic log files are copied after they're generated on the local device. Setting the location in group policy eliminates the need to use the _SupportLogLocation_ switch in the `MpCmdRun.exe` command as described in the previous section.
+You can use group policy on the local device (registry-based settings) or in [the Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#the-central-store) on a domain controller to specify where the diagnostic log files are copied after they're generated on the local device. Setting the location in group policy eliminates the need to use the `-SupportLogLocation` option in the MpCmdRun command as described in the previous section.
 
 To set the _SupportLogLocation_ value in group policy, do the following steps:
 
