@@ -6,7 +6,6 @@ ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
 ms.reviewer: mkaminska
-manager: bagol
 ms.custom: nextgen
 ms.subservice: ngp
 ms.topic: concept-article
