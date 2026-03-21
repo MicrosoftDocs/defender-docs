@@ -6,7 +6,6 @@ ms.service: defender-xdr
 ms.author: bagol
 author: batamig
 ms.localizationpriority: medium
-manager: orspodek
 audience: ITPro
 ms.collection:
   - m365-security-compliance
