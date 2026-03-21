@@ -31,6 +31,7 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|macOS |101.26012.0017  |March 2026 |- Release version: 20.126012.17.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--march-2026--101260120017) |
 |macOS |101.26012.0015  |March 2026 |- Release version: 20.126012.15.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--march-2026--101260120015) |
 |Linux  |101.26012.0007  |March 2026 |- Release version: 30.126012.0007.0<br>- Engine version: 1.1.25110.3002<br>- Signature version: 1.443.508.0 |[Release details and updates](#linux--march-2026--101260120007) |
 |macOS |101.26012.0012  |February 2026 |- Release version: 20.126012.12.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--february-2026--101260120012) |
@@ -130,6 +131,20 @@ To share feedback, open Defender for Endpoint on macOS and go to **Help > Send f
 To get latest features, configure your device for the Beta channel (formerly Insider-Fast) device.
 
 For known issues, see [macOS known issues](#macos-known-issues).
+
+### macOS | March-2026 | 101.26012.0017
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+|-----------------|----------------|-------------------|
+| 20.126012.17.0  | 1.1.25100.4000 | 1.439.74.0        |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|----------------|
+| General      | Bug fixes      |
 
 ### macOS | March-2026 | 101.26012.0015
 
