@@ -83,13 +83,13 @@ Both users and admins can work with quarantined messages:
 - Users can work with their quarantined messages based on the protection feature that quarantined the message, and the setting in corresponding quarantine policy. For more information, see [Find and release quarantined messages as a user](quarantine-end-user.md).
 
   > [!NOTE]
-  > Users can't release their own quarantined messages in the following scenarios, regardless of how the quarantine policy is configured:
+  > Recipients can't release quarantined messages in the following scenarios, regardless of how the quarantine policy is configured:
   >
   > - Messages quarantined as malware by anti-malware policies.
   > - Messages quarantined as malware or phishing by Safe Attachments policies.
   > - Messages quarantined as high confidence phishing by anti-spam policies.
   >
-  > If the policy is configured for users to release these quarantined messages, users are instead allowed to _request_ the release of these quarantined messages.
+  > If the quarantine policy allows recipients to release messages, they can only _request_ the release of these quarantined messages.
 
 - Admins can report false positives to Microsoft from quarantine. For more information, see [Take action on quarantined email](quarantine-admin-manage-messages-files.md#take-action-on-quarantined-email) and [Take action on quarantined files](quarantine-admin-manage-messages-files.md#take-action-on-quarantined-files).
 

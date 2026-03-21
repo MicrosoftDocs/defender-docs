@@ -3,14 +3,12 @@ items:
   href: index.yml
 - name: Overview
   items:
-  - name: Welcome to Defender for Identity
+  - name: What is Microsoft Defender for Identity
     href: what-is.md
   - name: What's new?
     href: whats-new.md
   - name: Deploy and monitor for Zero Trust
     href: zero-trust.md
-  - name: System architecture
-    href: architecture.md
   - name: Defender for Identity in the Microsoft Defender portal
     href: microsoft-365-security-center-mdi.md
   - name: Pilot Microsoft Defender XDR
@@ -87,6 +85,12 @@ items:
         href: deploy/configure-windows-event-collection.md
 - name: Integrate with identity services
   items:
+    - name: Microsoft Defender for Identity and CyberArk
+      items:
+        - name: Overview (Prview)
+          href: defender-for-identity-cyber-ark-overview.md
+        - name: Connect CyberArk to Microsoft Defender for Identity (Preview)
+          href: connect-cyber-ark.md
     - name: Microsoft Defender for Identity and Okta
       items:
       - name: Overview
@@ -95,6 +99,7 @@ items:
         href: okta-integration.md
     - name: Integrate Defender for Identity with PAM services
       href: integrate-microsoft-and-pam-services.md
+
 - name: Manage
   items:
   - name: Manage related identities and accounts

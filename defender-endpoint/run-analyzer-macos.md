@@ -235,18 +235,18 @@ Usage example `./mde_support_tool.sh trace --length 5`
 
 ### Defender for Endpoint on macOS troubleshooting
 
-[Troubleshooting mode in Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-troubleshoot-mode)
+[Troubleshooting mode in Microsoft Defender for Endpoint on macOS](mac-troubleshoot-mode.md)
 
-[Troubleshoot installation issues for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-support-install)
+[Troubleshoot installation issues for Microsoft Defender for Endpoint on macOS](mac-support-install.md)
 
-[Troubleshoot license issues for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-support-license)
+[Troubleshoot license issues for Microsoft Defender for Endpoint on macOS](mac-support-license.md)
 
-[Troubleshoot system extension issues in Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-support-sys-ext)
+[Troubleshoot system extension issues in Microsoft Defender for Endpoint on macOS](mac-support-sys-ext.md)
 
-[Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on macOS](/defender-endpoint/troubleshoot-cloud-connect-mdemac)
+[Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on macOS](troubleshoot-cloud-connect-mdemac.md)
 
-[Overview for how to troubleshoot performance issues for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-support-perf-overview)
+[Overview for how to troubleshoot performance issues for Microsoft Defender for Endpoint on macOS](mac-support-perf-overview.md)
 
-[Address false positives/negatives in Microsoft Defender for Endpoint](/defender-endpoint/defender-endpoint-false-positives-negatives)
+[Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 
 

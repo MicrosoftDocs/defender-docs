@@ -120,7 +120,7 @@ In this scenario, a third-party app that isn't a threat is detected and identifi
 
 ### An app is incorrectly detected and identified as malicious by Defender for Endpoint
 
-In this scenario, a legitimate app is detected and identified as malicious by an attack surface reduction rule in Defender for Endpoint. Whenever a user uses the app, the app and any downloaded content are blocked by the attack surface reduction rule, [Block JavaScript or VBScript from launching downloaded executable content](/defender-endpoint/attack-surface-reduction-rules-reference#block-javascript-or-vbscript-from-launching-downloaded-executable-content). 
+In this scenario, a legitimate app is detected and identified as malicious by an attack surface reduction rule in Defender for Endpoint. Whenever a user uses the app, the app and any downloaded content are blocked by the attack surface reduction rule, [Block JavaScript or VBScript from launching downloaded executable content](attack-surface-reduction-rules-reference.md#block-javascript-or-vbscript-from-launching-downloaded-executable-content). 
 
 <!---**How to observe**: CONTENT NEEDED--->
 
@@ -136,7 +136,7 @@ In this scenario, a legitimate app is detected and identified as malicious by an
 
 ### Word templates that contain macros that launch other apps are blocked
 
-In this scenario, whenever a user opens documents that were created by using Microsoft Word templates that contain macros and those macros launch other applications, the attack surface reduction rule [Block Win32 API calls from Office macros](/defender-endpoint/attack-surface-reduction-rules-reference#block-win32-api-calls-from-office-macros) blocks Microsoft Word. 
+In this scenario, whenever a user opens documents that were created by using Microsoft Word templates that contain macros and those macros launch other applications, the attack surface reduction rule [Block Win32 API calls from Office macros](attack-surface-reduction-rules-reference.md#block-win32-api-calls-from-office-macros) blocks Microsoft Word. 
 
 <!---**How to observe**: CONTENT NEEDED--->
 

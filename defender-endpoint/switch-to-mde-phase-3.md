@@ -85,7 +85,7 @@ To verify that your onboarded devices are properly connected to Defender for End
 |---|---|
 |Windows 10 or later<br/><br/>Windows Server 2012 R2 and later <br/><br/><br/>Windows Server, version 1803, or later<br/><br/>|See [Run a detection test](run-detection-test.md).|
 |macOS (see [System requirements](microsoft-defender-endpoint-mac.md))| Download and use the DIY app at [https://aka.ms/mdatpmacosdiy](https://aka.ms/mdatpmacosdiy). Also see [Run the connectivity test](troubleshoot-cloud-connect-mdemac.md#run-the-connectivity-test).|
-|Linux (see [System requirements](/defender-endpoint/mde-linux-prerequisites))|1. Run the following command, and look for a result of **1**: `mdatp health --field real_time_protection_enabled`.<br/><br/>2. Open a Terminal window, and run the following command: `curl -o ~/Downloads/eicar.com.txt https://www.eicar.org/download/eicar.com.txt`.<br/><br/>3. Run the following command to list any detected threats: `mdatp threat list`.<br/><br/>For more information, see [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md).|
+|Linux (see [System requirements](mde-linux-prerequisites.md))|1. Run the following command, and look for a result of **1**: `mdatp health --field real_time_protection_enabled`.<br/><br/>2. Open a Terminal window, and run the following command: `curl -o ~/Downloads/eicar.com.txt https://www.eicar.org/download/eicar.com.txt`.<br/><br/>3. Run the following command to list any detected threats: `mdatp threat list`.<br/><br/>For more information, see [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md).|
 
 ## Step 3: Confirm that Microsoft Defender Antivirus is in passive mode on your endpoints
 
@@ -116,7 +116,7 @@ To set Microsoft Defender Antivirus to passive mode on Windows Server 2019 and l
 >
 > - [Group Policy Preference](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn581922(v=ws.11))
 > - [Local Group Policy Object tool](/windows/security/threat-protection/security-compliance-toolkit-10#what-is-the-local-group-policy-object-lgpo-tool)
-> - [A package in Configuration Manager](/mem/configmgr/apps/deploy-use/packages-and-programs)
+> - [A package in Configuration Manager](/intune/configmgr/apps/deploy-use/packages-and-programs)
 
 ### Start Microsoft Defender Antivirus on Windows Server 2016
 

@@ -282,16 +282,18 @@ If you're working with a dedicated server that has Active Directory Certificate 
 
     :::image type="content" source="../media/configure-windows-event-collection/group-policy-management-editor.png" alt-text="Screenshot of configuring audit events for Active Directory Certificate Services in the Group Policy Management Editor.":::
 
-1. Configure auditing on the certificate authority (CA) by using one of the following methods:
+1. Configure auditing on the certificate authority (CA) using one of the following methods:
 
-   - To configure CA auditing by using the command line, run:
+   - **To configure CA auditing using PowerShell, run:**
 
-    ```cmd
-     certutil –setreg CA\AuditFilter 127 
-     net stop certsvc && net start certsvc
-    ```
+```powershell
+certutil -setreg CA\AuditFilter 127 
+Restart-Service certsvc
+```
 
-   - To configure CA auditing in the Defender portal:
+This command updates the CA audit settings and restarts the Certificate Services service so the changes take effect.
+
+   - **To configure CA auditing in the Defender portal:**
 
      1. Select **Start** > **Certification Authority (MMC Desktop application)**. Right-click your CA's name and select **Properties**.
 

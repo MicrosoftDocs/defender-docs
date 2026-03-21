@@ -27,8 +27,8 @@ appliesto:
 
 > [!NOTE]
 > To use the proxy correctly, configure these two different proxy settings in Defender for Endpoint:
-> - [Endpoint Detection and Response (EDR)](/defender-endpoint/configure-proxy-internet)
-> - [Microsoft Defender Antivirus](/defender-endpoint/configure-proxy-internet)
+> - [Endpoint Detection and Response (EDR)](configure-proxy-internet.md)
+> - [Microsoft Defender Antivirus](configure-proxy-internet.md)
 
 Depending on the operating system, the proxy to be used for Microsoft Defender for Endpoint can be configured automatically. You can use autodiscovery, an autoconfig file, or a method statically specific to Defender for Endpoint services running on the device.
 
@@ -122,7 +122,7 @@ Configure the static proxy using the Group Policy available in Administrative Te
     For example, `http://10.0.0.6:8080`
 
 > [!NOTE]
-> If you are using static proxy setting on devices that are otherwise completely offline, meaning the operating system is unable to connect for the online certificate revocation list or Windows Update, then it is required to add the additional registry setting `SSLOptions` with a DWORD value of `2`. The parent registry path location for `SSLOptions` is `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet`. For more information about the `SSLOptions`, see [Cloud Protection](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus).
+> If you are using static proxy setting on devices that are otherwise completely offline, meaning the operating system is unable to connect for the online certificate revocation list or Windows Update, then it is required to add the additional registry setting `SSLOptions` with a DWORD value of `2`. The parent registry path location for `SSLOptions` is `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet`. For more information about the `SSLOptions`, see [Cloud Protection](configure-network-connections-microsoft-defender-antivirus.md).
 >
 > For resiliency purposes and the real-time nature of cloud-delivered protection, Microsoft Defender Antivirus caches the last known working proxy. Ensure your proxy solution does not perform SSL inspection, as that breaks the secure cloud connection.
 >

@@ -15,8 +15,17 @@ ms.topic: concept-article
 
 This article lists recent features added for unified security operations in the Microsoft Defender portal.
 
-## January 2026
+## February 2026
 
+### New content types for cross-tenant distribution now generally available
+
+The following content types are now generally available for [distribution across multiple tenants](./mto-distribution-profiles.md) in the Microsoft Defender multitenant portal:
+
+- Analytics rules
+- Automation rules
+- Workbooks
+
+## January 2026
 
 ### Updated date: Microsoft Sentinel in the Azure portal to be retired March 2027
 

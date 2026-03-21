@@ -315,7 +315,7 @@ Defender for Endpoint provides detailed reporting into events and blocks as part
 
 You can review the Windows event log to see events that are created when network protection blocks (or audits) access to a malicious IP or domain:
 
-1. [Create an XML query](/defender-endpoint/overview-attack-surface-reduction#copy-the-xml-directly).
+1. [Create an XML query](overview-attack-surface-reduction.md#copy-the-xml-directly).
 1. Select **OK**.
 
    This procedure creates a custom view that filters to only show the following events related to network protection:
@@ -487,7 +487,7 @@ Set-MpPreference -AllowSwitchToAsyncInspection $true
 
 - [Evaluate network protection](evaluate-network-protection.md) | Undertake a quick scenario that demonstrates how the feature works, and what events would typically be created.
 - [Enable network protection](enable-network-protection.md) | Use Group Policy, PowerShell, or MDM CSPs to enable and manage network protection in your network.
-- [Configuring attack surface reduction capabilities in Microsoft Intune](/mem/intune/protect/endpoint-security-asr-policy)
+- [Configuring attack surface reduction capabilities in Microsoft Intune](/intune/intune-service/protect/endpoint-security-asr-policy)
 - [Network protection for Linux](network-protection-linux.md) | To learn about using Microsoft Network protection for Linux devices.
 - [Network protection for macOS](network-protection-macos.md) | To learn more about Microsoft Network protection for macOS
 

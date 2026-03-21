@@ -65,6 +65,9 @@ Run the following command, using your information as follows:
 - `$appSecret`: Secret of your Microsoft Entra app.
 - `$suspiciousUrl`: The URL.
 
+> [!TIP]
+> Some Microsoft Defender for Endpoint APIs continue to require access tokens issued for the legacy resource `https://api.securitycenter.microsoft.com`. If the token audience doesn't match the resource expected by the API, requests fail with `403 Forbidden`, even if the API endpoint uses `https://api.security.microsoft.com`. Use `https://api.securitycenter.microsoft.com` as the resource or scope when acquiring tokens.
+
 ```powershell
 $tenantId = '00000000-0000-0000-0000-000000000000' # Paste your own tenant ID here
 $appId = '11111111-1111-1111-1111-111111111111' # Paste your own app ID here

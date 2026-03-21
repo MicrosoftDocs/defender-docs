@@ -50,6 +50,15 @@ It's important to understand the following requirements before creating indicato
 > - The children or parent of the allow/block certificate IOCs aren't included in the allow/block IoC functionality, only leaf certificates are supported.
 > - Microsoft signed certificates can't be blocked.
 
+> [!NOTE]
+> In situations where a certificate-based indicator is configured to **Block**, but a file hash indicator for one of its signed files is configured to **Allow**, this configuration is **not supported by design**. 
+> Certificate-based indicators have higher precedence in the Defender evaluation pipeline and will always override file hash allow indicators.
+> A configuration that simultaneously:
+> - blocks a certificate, and
+> - attempts to allow one of its signed files via file hash
+>
+> is **not supported**. Certificate-based indicators take precedence, and therefore the file will continue to be blocked.
+
 ## Create an indicator for certificates from the settings page:
 
 > [!IMPORTANT]

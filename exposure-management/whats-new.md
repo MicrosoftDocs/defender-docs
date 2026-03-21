@@ -20,6 +20,12 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 >
 > `https://aka.ms/msem/rss`
 
+## March 2026
+
+### Updates to Secure Score category calculations for increased accuracy
+
+To improve accuracy and better protect organizational identities, some security recommendations categorized as **Cloud apps** recommendations are now considered identity‑related and grouped under the **Identity** category. While the total Secure Score remains unchanged, individual identity and app scores may change.
+
 ## January 2026
 
 ### New predefined classifications

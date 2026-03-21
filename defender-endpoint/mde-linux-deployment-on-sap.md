@@ -62,8 +62,8 @@ Here are some important point about SAP applications on Linux Server:
 
 ## Prerequisites for deploying Microsoft Defender for Endpoint on Linux on SAP VMs
 
-- Microsoft Defender for Endpoint [Build: 101.24082.0004 | Release version: 30.124082.0004.0](/defender-endpoint/linux-whatsnew#oct-2024-build-101240820004--release-version-3012408200040) or later must be deployed.
-- Microsoft Defender for Endpoint on Linux supports [Linux releases](/defender-endpoint/mde-linux-prerequisites) used by SAP applications.
+- Microsoft Defender for Endpoint [Build: 101.24082.0004 | Release version: 30.124082.0004.0](linux-whatsnew.md#oct-2024-build-101240820004--release-version-3012408200040) or later must be deployed.
+- Microsoft Defender for Endpoint on Linux supports [Linux releases](mde-linux-prerequisites.md) used by SAP applications.
 - Microsoft Defender for Endpoint on Linux requires connectivity to specific Internet endpoints from VMs to update antivirus definitions. For more information, see [Verify that devices can connect to Defender for Endpoint cloud services](mde-linux-prerequisites.md#verify-if-devices-can-connect-to-defender-for-endpoint-cloud-services).
 - Microsoft Defender for Endpoint on Linux requires some `crontab` (or other task scheduler) entries to schedule scans, log rotation, and Microsoft Defender for Endpoint updates. Enterprise security teams normally manage these entries. For more information, see [How to schedule an update for Microsoft Defender for Endpoint on Linux](linux-update-mde-linux.md).
 
@@ -80,7 +80,7 @@ Online Kernel patching tools, such as Ksplice or similar, can lead to unpredicta
 
 When Microsoft Defender Antivirus is running with real-time protection, it's no longer required to schedule scans. You should run a scan at least once to set a baseline. Then, if necessary, the Linux crontab is typically used to schedule Microsoft Defender Antivirus scans and log rotation tasks. For more information, see [How to schedule scans with Microsoft Defender for Endpoint (Linux)](schedule-antivirus-scan-crontab.md).
 
-[Endpoint detection and response](overview-endpoint-detection-response.md) (EDR) functionality is active whenever Microsoft Defender for Endpoint on Linux is installed. EDR functionality can be disabled through command line or configuration by using [global exclusions](/defender-endpoint/linux-exclusions#supported-exclusion-scopes). For more information on troubleshooting EDR, see the sections [Useful Commands](#useful-commands) and [Useful Links](#useful-links) (in this article).
+[Endpoint detection and response](overview-endpoint-detection-response.md) (EDR) functionality is active whenever Microsoft Defender for Endpoint on Linux is installed. EDR functionality can be disabled through command line or configuration by using [global exclusions](linux-exclusions.md#supported-exclusion-scopes). For more information on troubleshooting EDR, see the sections [Useful Commands](#useful-commands) and [Useful Links](#useful-links) (in this article).
 
 ## Important configuration settings for Microsoft Defender for Endpoint on SAP on Linux  
 
@@ -105,7 +105,7 @@ For information about troubleshooting installation issues, see [Troubleshoot ins
 
 ## Recommended Microsoft Defender for Endpoint Antivirus Exclusions for SAP on Linux
 
-Your enterprise security team must obtain a full list of antivirus [exclusions](/defender-endpoint/linux-exclusions) from the SAP Administrators (typically the SAP Basis Team). It's recommended to initially exclude:
+Your enterprise security team must obtain a full list of antivirus [exclusions](linux-exclusions.md) from the SAP Administrators (typically the SAP Basis Team). It's recommended to initially exclude:
 
 - DBMS data files, log files, and temp files, including disks containing backup files
 - The entire contents of the SAPMNT directory
@@ -253,7 +253,7 @@ sudo mdatp diagnostic create
 
 - To analyze performance or other issues, see [Run the client analyzer on Linux](run-analyzer-linux.md).
 
-- Microsoft Intune doesn't support Linux at this time. See [Learn how to use Intune endpoint security policies to manage Microsoft Defender for Endpoint on devices that aren't enrolled with Intune](/mem/intune/protect/mde-security-integration).
+- Microsoft Intune doesn't support Linux at this time. See [Learn how to use Intune endpoint security policies to manage Microsoft Defender for Endpoint on devices that aren't enrolled with Intune](/intune/intune-service/protect/mde-security-integration).
 
 - [Microsoft Tech Community: Microsoft Defender for Endpoint Linux - Configuration and Operation Command List](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/microsoft-defender-for-endpoint-linux-configuration-and/ba-p/1577902)
 

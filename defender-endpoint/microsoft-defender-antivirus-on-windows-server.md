@@ -61,7 +61,7 @@ If you need to install or reinstall Microsoft Defender Antivirus on Windows Serv
 | Use PowerShell to install Microsoft Defender Antivirus | 1. On your Windows Server, open Windows PowerShell as an administrator. <br/><br/>2. Run the following PowerShell cmdlet: `Install-WindowsFeature -Name Windows-Defender` |
 
 > [!NOTE]
-> Event messages for the antimalware engine included with Microsoft Defender Antivirus can be found in [Microsoft Defender Antivirus Events](/defender-endpoint/troubleshoot-microsoft-defender-antivirus/).
+> Event messages for the antimalware engine included with Microsoft Defender Antivirus can be found in [Microsoft Defender Antivirus Events](troubleshoot-microsoft-defender-antivirus.yml).
 
 ## Verify Microsoft Defender Antivirus is running
 
@@ -75,7 +75,7 @@ To verify that firewall protection is turned on using PowerShell, run the follow
 To view verify the state of all services using Command Prompt, run the following command: `sc query state= all`.
 
 > [!IMPORTANT]
-> Beginning with [platform version 4.18.2208.0 and later](/defender-endpoint/msda-updates-previous-versions-technical-upgrade-support#september-2022-platform-41822097--engine-11197003), if a server is onboarded to Defender for Endpoint, the "Turn off Windows Defender" setting in [Group Policy](configure-endpoints-gp.md#update-endpoint-protection-configuration) no longer completely disables Windows Defender Antivirus on Windows Server 2012 R2 and later. Instead, it places Microsoft Defender Antivirus into passive mode. In addition, the [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) feature allows Microsoft Defender Antivirus to switch to active mode but not to passive mode.
+> Beginning with [platform version 4.18.2208.0 and later](msda-updates-previous-versions-technical-upgrade-support.md#september-2022-platform-41822097--engine-11197003), if a server is onboarded to Defender for Endpoint, the "Turn off Windows Defender" setting in [Group Policy](configure-endpoints-gp.md#update-endpoint-protection-configuration) no longer completely disables Windows Defender Antivirus on Windows Server 2012 R2 and later. Instead, it places Microsoft Defender Antivirus into passive mode. In addition, the [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) feature allows Microsoft Defender Antivirus to switch to active mode but not to passive mode.
 >
 > If "Turn off Windows Defender" is already set before onboarding the device to Defender for Endpoint, there's no change and Microsoft Defender Antivirus remains disabled.
 >

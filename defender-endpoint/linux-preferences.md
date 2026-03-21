@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-ms.date: 02/05/2024
+ms.date: 03/17/2026
 manager: bagol
 audience: ITPro
 ms.collection:
@@ -23,14 +23,12 @@ appliesto:
 
 # Configure security settings in Microsoft Defender for Endpoint on Linux
 
-## Configure your security settings
-
 Microsoft Defender for Endpoint on Linux includes antivirus, anti-malware protection, endpoint detection, and response capabilities. This article summarizes important security settings to configure and includes links to other resources.
 
 |Settings|Description|
 |---|---|
 |1. Configure static proxy discovery.|Configuring a static proxy helps ensure telemetry is submitted and helps avoid network timeouts. Perform this task during and after your Defender for Endpoint installation. <br/><br/> For more information, see [Configure Microsoft Defender for Endpoint on Linux for static proxy discovery](linux-static-proxy-configuration.md).|
-|2. Configure your antivirus scans.|You can schedule automatic antivirus scans by using either Anacron or Crontab. <br/><br/> For more information, see the following articles: <ul><li>[Use Anacron to schedule an antivirus scan in Microsoft Defender for Endpoint on Linux](/defender-endpoint/schedule-antivirus-scan-anacron)</li><li>[Use Crontab to schedule an antivirus scan in Microsoft Defender for Endpoint on Linux](/defender-endpoint/schedule-antivirus-scan-crontab)</li></ul>|
+|2. Configure your antivirus scans.|You can schedule automatic antivirus scans by using either Anacron or Crontab. <br/><br/> For more information, see the following articles: <ul><li>[Use Anacron to schedule an antivirus scan in Microsoft Defender for Endpoint on Linux](schedule-antivirus-scan-anacron.md)</li><li>[Use Crontab to schedule an antivirus scan in Microsoft Defender for Endpoint on Linux](schedule-antivirus-scan-crontab.md)</li></ul>|
 |3. Configure your security settings and policies.|You can use the Microsoft Defender portal (Defender for Endpoint Security Settings Management) or a configuration profile (`.json` file) to configure Defender for Endpoint on Linux. Or, you can use command line to configure certain settings. <br/><br/> For more information, see the following articles: <ul><li>[Defender for Endpoint Security Settings Management](#defender-for-endpoint-security-settings-management)</li><li> [Configuration profile](#configuration-profile)</li><li>[Command line](linux-resources.md#configure-from-the-command-line)</li></ul>|
 |4. Configure and validate exclusions (as appropriate)|You can exclude certain files, folders, processes, and process-opened files from Defender for Endpoint on Linux. Global exclusions apply to real-time protection (RTP), behavior monitoring (BM), and endpoint detection and response (EDR), thus stopping all associated antivirus detections, EDR alerts, and visibility for the excluded item. <br/><br/> For more information, see [Configure and validate exclusions for Microsoft Defender for Endpoint on Linux](linux-exclusions.md).|
 |5. Configure the eBPF-based sensor.|The extended Berkeley Packet Filter (eBPF) for Microsoft Defender for Endpoint on Linux is automatically enabled for all customers by default for agent versions `101.23082.0006` and later. It provides supplementary event data for Linux operating systems and helps reduce the possibility of conflicts between applications. <br/><br/> For more information, see [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](linux-support-ebpf.md).|
@@ -54,7 +52,7 @@ You can use the command line to configure specific settings, gather diagnostics,
 
 ### Defender for Endpoint Security Settings Management
 
-You can configure Defender for Endpoint on Linux in the Microsoft Defender portal at ([https://security.microsoft.com](https://security.microsoft.com)) using Defender for Endpoint Security Settings Management. For more information, including how to create, edit, and verify security policies, see [Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus](mde-security-settings-management.md).
+You can configure Defender for Endpoint on Linux in the Microsoft Defender portal at ([https://security.microsoft.com](https://security.microsoft.com)) using Defender for Endpoint Security Settings Management. For more information, including how to create, edit, and verify security policies, see <a href="/intune/intune-service/protect/mde-security-integration" target="_blank" rel="noopener noreferrer">Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus</a>.
 
 ### Configuration profile
 
@@ -153,7 +151,7 @@ The following configuration profile contains entries for all settings described 
             "value":"audit"
          }
       ],
-      "scanFileModifyPermissions":false,
+      "scanFileModifyPermissions":true,
       "scanFileModifyOwnership":false,
       "scanNetworkSocketEvent":false,
       "offlineDefinitionUpdateUrl": "http://172.22.199.67:8000/linux/production/<EXAMPLE DO NOT USE>",
@@ -176,7 +174,7 @@ The following configuration profile contains entries for all settings described 
         "enableRawSocketEvent":"disabled",
         "enableBootLoaderCalls":"disabled",
         "enableProcessCalls":"disabled",
-        "enablePseudofsCalls":"diabled",
+        "enablePseudofsCalls":"disabled",
         "enableEbpfModuleLoadEvents":"disabled",
         "sendLowfiEvents":"disabled"
       },
@@ -276,7 +274,7 @@ Specifies the enforcement preference of antivirus engine. There are three values
 >
 > - Available in Defender for Endpoint version `101.10.72` or later.
 > - In version `101.23062.0001` or later, the default value is `passive`. In previous versions, the default was `real_time`.
-> - We also recommended using [scheduled scans](/defender-endpoint/schedule-antivirus-scan-crontab) as per requirement.
+> - We also recommended using [scheduled scans](schedule-antivirus-scan-crontab.md) as per requirement.
 
 #### Enable or disable behavior monitoring (if RTP is enabled)
 
@@ -826,7 +824,7 @@ Specify whether cloud-delivered protection is enabled on the device. To improve 
 
 ### Diagnostic collection level
 
-Specify the level of diagnostic information sent to Microsoft. For more information, see [Privacy for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-privacy).
+Specify the level of diagnostic information sent to Microsoft. For more information, see [Privacy for Microsoft Defender for Endpoint on Linux](linux-privacy.md).
 
 Diagnostic data is used to keep Defender for Endpoint secure and up to date, detect, diagnose and fix problems, and also make product improvements.
 
