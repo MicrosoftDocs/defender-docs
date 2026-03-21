@@ -8,7 +8,6 @@ ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
 ms.date: 02/18/2026
-manager: bagol
 ai-usage: ai-assisted
 audience: ITPro
 ms.collection:
