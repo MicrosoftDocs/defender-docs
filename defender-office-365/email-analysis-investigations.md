@@ -2,8 +2,8 @@
 title: Email analysis in investigations for Microsoft Defender for Office 365
 f1.keywords:
 - NOCSH
-author: dansimp
-ms.author: dansimp
+author: chrisda
+ms.author: chrisda
 manager: deniseb
 audience: ITPro
 ms.topic: how-to

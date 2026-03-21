@@ -5,7 +5,7 @@ ms.service: defender-xdr
 ms.localizationpriority: medium
 f1.keywords:
 - NOCSH
-ms.author: dansimp
+ms.author: guywild
 author: diannegali
 manager: deniseb
 ms.date: 10/16/2024

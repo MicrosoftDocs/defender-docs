@@ -4,7 +4,6 @@ description: Learn how to view, edit, create, and delete cybersecurity policies 
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: bagol
 audience: Admin
 ms.topic: overview
 ms.service: defender-business

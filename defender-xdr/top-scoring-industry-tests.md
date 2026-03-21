@@ -4,8 +4,8 @@ ms.reviewer:
 description: View the latest scores and analysis of Microsoft Defender XDR. It consistently achieves high scores in independent tests (AV-TEST, AV Comparatives, SE Labs, MITRE ATT&CK). View the latest scores and analysis.
 ms.service: defender-xdr
 ms.localizationpriority: high
-ms.author: dansimp
-author: dansimp
+ms.author: guywild
+author: guywi-ms
 manager: dansimp
 audience: ITPro
 ms.collection: 

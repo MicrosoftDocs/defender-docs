@@ -5,8 +5,8 @@ ms.localizationpriority: medium
 f1.keywords:
   - NOCSH
 ms.service: defender-xdr
-ms.author: dansimp
-author: dansimp
+ms.author: deniseb
+author: denisebmsft
 manager: dansimp
 audience: ITPro
 ms.collection: 
