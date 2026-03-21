@@ -131,8 +131,6 @@ To get latest features, configure your device for the Beta channel (formerly Ins
 
 For known issues, see [macOS known issues](#macos-known-issues).
 
-### macOS | March-2026 | 101.26012.0015
-
 ### macOS | March-2026 | 101.26012.0017
 
 #### Versions
@@ -145,7 +143,9 @@ For known issues, see [macOS known issues](#macos-known-issues).
 
 | Feature area | Update summary |
 |--------------|----------------|
-| General      | Fixed an issue that could cause epsext to unexpectedly crash |
+| General      | Bug fixes      |
+
+### macOS | March-2026 | 101.26012.0015
 
 #### Versions
 
