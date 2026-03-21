@@ -1,8 +1,6 @@
 ---
 title: Plan an incident response workflow in the Microsoft Defender portal
 description: Plan an incident response workflow in the Microsoft Defender portal, including triage, investigation, and resolution.
-ms.service: defender-xdr
-ms.subservice: ""
 search.appverid: ""
 f1.keywords:
   - NOCSH
