@@ -28,7 +28,7 @@ Microsoft Defender for Endpoint for US Government customers, built in the Azure 
 This offering is available to GCC, GCC High, and DoD customers and is based on the same prevention, detection, investigation, and remediation as the commercial version. However, there are some differences in the availability of capabilities for this offering.
 
 > [!NOTE]
-> If you're a GCC customer using Defender for Endpoint in Commercial, see the [Defender for Endpoint documentation](/defender-endpoint/).
+> If you're a GCC customer using Defender for Endpoint in Commercial, see the [Defender for Endpoint documentation](microsoft-defender-endpoint.md).
 
 ## Licensing requirements
 

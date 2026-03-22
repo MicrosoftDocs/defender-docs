@@ -675,17 +675,17 @@ The Python version of the client analyzer accepts command line parameters to per
 
 #### Defender for Endpoint on Linux troubleshooting documents
 
-- [Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-install)
+- [Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux](linux-support-install.md)
 
-- [Investigate agent health issues](/defender-endpoint/health-status)
+- [Investigate agent health issues](health-status.md)
 
-- [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-connectivity)
+- [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](linux-support-connectivity.md)
 
-- [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-perf)
+- [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md)
 
-- [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-events)
+- [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](linux-support-events.md)
 
-- [Address false positives/negatives in Microsoft Defender for Endpoint](/defender-endpoint/defender-endpoint-false-positives-negatives)
+- [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 
 
 
