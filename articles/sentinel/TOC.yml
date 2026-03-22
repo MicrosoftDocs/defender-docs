@@ -925,8 +925,6 @@
       items:
       - name: Creating codeless data connectors (CCF)
         href: create-codeless-connector.md
-      - name: Creating codeless data connectors with the Sentinel Connector Wizard
-        href: create-custom-connector-wizard.md
       - name: Creating push codeless data connectors (CCF)
         href: create-push-codeless-connector.md
       - name: Creating analytics rules
