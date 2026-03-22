@@ -9,7 +9,6 @@ ms.localizationpriority: medium
 ms.custom:
   - has-azure-ad-ps-ref
   - azure-ad-ref-level-one-done 
-manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

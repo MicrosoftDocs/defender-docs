@@ -6,7 +6,6 @@ ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
 ms.reviewer: yongrhee
-manager: bagol
 ms.custom: nextgen
 ms.date: 10/20/2025
 ms.subservice: ngp

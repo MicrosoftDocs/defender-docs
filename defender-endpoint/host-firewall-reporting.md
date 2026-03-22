@@ -8,7 +8,6 @@ audience: ITPro
 ms.topic: concept-article
 author: batamig
 ms.author: bagol
-manager: bagol
 ms.subservice: asr
 ms.collection: 
 - m365-security
