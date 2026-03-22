@@ -1,5 +1,5 @@
 ---
-title: Custom account correlation rules in Defender for Identity
+title: Custom account correlation rules in Defender for Identity (Preview)
 description: Learn how to create custom account correlation rules in Defender for Identity to automatically correlate accounts that don't share strong identifiers.
 author: AbbyMSFT
 ms.author: abbyweisberg
@@ -13,18 +13,18 @@ ai-usage: ai-assisted
 
 ---
 
-# Create custom account correlation rules
+# Create custom account correlation rules (Preview)
 
 Custom account correlation rules allow you to correlate accounts that don't share strong identifiers such as account ID, SID, object ID, or UPN. This is especially useful for privileged accounts with unique naming conventions. By defining custom policies, you get full visibility and better protection for all accounts.
 
 ## Prerequisites
 
 - An active Microsoft Defender for Identity (MDI) license, or another license that includes MDI (such as E5). Without the required license, the policies page is read-only.
-- One of the following roles to **view** policies:
-  - **Entra ID roles**: Security Reader, Security Operator, Security Administrator, or Global Administrator
+- At least one of the following roles to **view** policies:
+  - **Microsoft Entra ID roles**: Security Reader, Security Operator, or Security Administrator
   - **Defender roles**: Security operations, Security data, Alerts (manage)
 - One of the following roles to **create, edit, or remove** policies:
-  - **Entra ID roles**: Security Administrator or Global Administrator
+  - **Microsoft Entra ID roles**: At least Security Administrator
   - **Defender roles**: Security operations, Security data, Alerts (manage)
 
 > [!TIP]
@@ -69,8 +69,7 @@ Changes take effect within 12 hours.
 1. Select **Delete**.
 1. In the confirmation prompt, select **Remove** to confirm, or **Cancel** to abort.
 
-> [!NOTE]
-> Correlation rule changes take effect within 12 hours.
+Correlation rule changes take effect within 12 hours.
 
 ## Related content
 
