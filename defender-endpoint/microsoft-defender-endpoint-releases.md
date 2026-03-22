@@ -277,7 +277,7 @@ Bug and performance fixes
 
 - Microsoft Defender for Endpoint crashes on macOS (Build 101.26012.0016)
    - **Date identified**: March 16, 2026
-   - Affected version**: Build 101.26012.0016 (Production ring)
+   - **Affected version**: Build 101.26012.0016 (Production ring)
    - **Symptoms**: Microsoft Defender for Endpoint on macOS may experience repeated crashes of the wdavdaemon process. Affected devices may exhibit:
       - Performance degradation
       - Repeated Defender process crashes
