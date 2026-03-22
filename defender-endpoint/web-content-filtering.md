@@ -7,7 +7,6 @@ author: limwainstein
 ms.reviewer: ericlaw
 ms.localizationpriority: medium
 ms.date: 01/05/2026
-manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
