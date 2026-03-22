@@ -45,6 +45,9 @@ These new alerts were added to the Defender for Identity security alerts:
 - [Suspicious resource-based constrained delegation (RBCD) attribute change](alerts-xdr.md#suspicious-resource-based-constrained-delegation-rbcd-attribute-change)
 - [Suspicious resource-based constrained delegation (RBCD) authentication](alerts-xdr.md#suspicious-resource-based-constrained-delegation-rbcd-authentication)
 
+### Suspected pass-the-ticket attack alert is now generally available
+
+The [Suspected pass-the-ticket attack](alerts-xdr.md#suspected-pass-the-ticket-attack) alert is now generally available. This alert was previously available in public preview as *Pass-the-Ticket (PtT) attack*. For more information, see [Lateral movement alerts](alerts-xdr.md).
 
 ### Updates to Secure Score category calculations for increased accuracy
 
@@ -95,6 +98,7 @@ These new alerts were added to the Defender for Identity security alerts:
 
 **New alerts related to Active Directory**:
 
+- [Pass-the-Ticket (PtT) attack](alerts-xdr.md#suspected-pass-the-ticket-attack)
 - [Possible Active Directory Certificate Services enumeration](alerts-xdr.md#possible-active-directory-certificate-services-enumeration)
 - [Possible Active Directory enumeration via ADWS](alerts-xdr.md#possible-active-directory-enumeration-via-adws)
 - [Suspicious NTLM authentication](alerts-xdr.md#suspicious-ntlm-authentication)
