@@ -54,7 +54,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - Azure Stack HCI OS support (version 23H2 and later) - Preview. Added support for Azure Stack HCI OS, version 23H2 and later. Support for Azure Stack HCI OS is rolling out across commercial and government clouds.
 
-- [Microsoft Defender Core service](/defender-endpoint/microsoft-defender-core-service-overview) - GA. Microsoft Defender Core service helps with the stability and performance of Microsoft Defender Antivirus.
+- [Microsoft Defender Core service](microsoft-defender-core-service-overview.md) - GA. Microsoft Defender Core service helps with the stability and performance of Microsoft Defender Antivirus.
 
 ## May 2025
 
@@ -74,7 +74,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## March 2025
 
-- **(iOS)** Improving usability: Key updates to the Microsoft Defender app interface on iOS. The new **Device Protection** feature card for enterprise users includes Web Protection, Device Health, and Jailbreak features with recommendation cards and a tile view. For more information, see [User Experience in Microsoft Defender for Endpoint on iOS](/defender-endpoint/ios-new-ux).
+- **(iOS)** Improving usability: Key updates to the Microsoft Defender app interface on iOS. The new **Device Protection** feature card for enterprise users includes Web Protection, Device Health, and Jailbreak features with recommendation cards and a tile view. For more information, see [User Experience in Microsoft Defender for Endpoint on iOS](ios-new-ux.md).
 
 ## February 2025
 
@@ -98,11 +98,11 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## November-December 2024
 
-- New demonstration scenarios - GA. Five new demonstration scenarios are available: [AMSI demos](mde-demonstration-amsi.md), [Cloud protection demo](/defender-endpoint/defender-endpoint-demonstration-cloud-delivered-protection), [Controlled folder access (block ransomware) demo](/defender-endpoint/defender-endpoint-demonstration-controlled-folder-access), [Endpoint detection and response (EDR) detection test](/defender-endpoint/edr-detection), [URL reputation (SmartScreen) demo](/defender-endpoint/defender-endpoint-demonstration-smartscreen-url-reputation).
+- New demonstration scenarios - GA. Five new demonstration scenarios are available: [AMSI demos](mde-demonstration-amsi.md), [Cloud protection demo](defender-endpoint-demonstration-cloud-delivered-protection.md), [Controlled folder access (block ransomware) demo](defender-endpoint-demonstration-controlled-folder-access.md), [Endpoint detection and response (EDR) detection test](edr-detection.md), [URL reputation (SmartScreen) demo](defender-endpoint-demonstration-smartscreen-url-reputation.md).
 
 ## December 2024
 
-- **(Android)** Android low-touch onboarding is now generally available. Low-touch onboarding simplifies setup on Android devices by supporting silent sign-on and autogranting certain permissions, so users only need to grant the necessary permissions to onboard. It supports Android Enterprise BYOD, COPE, and fully managed profiles. For configuration details, see [Android low-touch onboarding](/defender-endpoint/android-intune).
+- **(Android)** Android low-touch onboarding is now generally available. Low-touch onboarding simplifies setup on Android devices by supporting silent sign-on and autogranting certain permissions, so users only need to grant the necessary permissions to onboard. It supports Android Enterprise BYOD, COPE, and fully managed profiles. For configuration details, see [Android low-touch onboarding](android-intune.md).
 
 > [!IMPORTANT]
 > **Ending support for device administrator enrolled devices**: Microsoft Intune and Defender for Endpoint are ending support for device administrator enrolled devices with access to [Google Mobile Services](/intune/intune-service/apps/manage-without-gms) (GMS), beginning December 31, 2024. After support ends, Intune and Defender for Endpoint won't make changes or updates to Android device administrator management for devices with access to GMS, and technical support will no longer be available. For more information, see [Tech Community blog: Intune ending support for Android device administrator on devices with GMS in December 2024](https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-android-device-administrator-on-devices-with-gms-in-de/3915443).

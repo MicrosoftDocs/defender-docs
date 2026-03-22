@@ -45,7 +45,7 @@ There are three ways you can create indicators for files:
 Understand the following prerequisites before you create indicators for files:
 
 - [Behavior Monitoring is enabled](behavior-monitor.md)
-- [Cloud-based protection is turned on](/defender-endpoint/enable-cloud-protection-microsoft-defender-antivirus).
+- [Cloud-based protection is turned on](enable-cloud-protection-microsoft-defender-antivirus.md).
 - [Cloud Protection network connectivity is functional](configure-network-connections-microsoft-defender-antivirus.md)
 
 
@@ -69,7 +69,7 @@ Understand the following prerequisites before you create indicators for files:
 ### macOS prerequisites
 
 - Real-time protection (RTP) needs to be active.
-- [File hash computation must be enabled](/defender-endpoint/mac-resources#configuring-from-the-command-line). Run the following command: `mdatp config enable-file-hash-computation --value enabled`
+- [File hash computation must be enabled](mac-resources.md#configuring-from-the-command-line). Run the following command: `mdatp config enable-file-hash-computation --value enabled`
 
 > [!NOTE]
 > On macOS, file indicators support three types of files: Mach-O executables, POSIX shell scripts (e.g., those run by sh or bash), and AppleScript files (.scpt). (Mach-O is macOS's native executable format, comparable to .exe and .dll on Windows.)
@@ -77,7 +77,7 @@ Understand the following prerequisites before you create indicators for files:
 ### Linux prerequisites
 
 - Available in Defender for Endpoint version `101.85.27` or later.
-- [File hash computation must be enabled](/defender-endpoint/linux-preferences#configure-file-hash-computation-feature) in the Microsoft Defender portal or in the managed JSON
+- [File hash computation must be enabled](linux-preferences.md#configure-file-hash-computation-feature) in the Microsoft Defender portal or in the managed JSON
 - Behavior monitoring enabled is preferred, but this feature works with any other scan (RTP or Custom).
 
 > [!NOTE]
