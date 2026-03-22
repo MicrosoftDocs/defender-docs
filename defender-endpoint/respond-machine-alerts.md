@@ -48,7 +48,7 @@ Response actions run along the top of a specific device page and include:
 > - Stop and quarantine a file
 > - Add an indicator to block or allow a file.
 >
-> [Microsoft Defender for Business](/defender-business/mdb-overview) does not include the "Stop and quarantine a file" action at this time.
+> [Microsoft Defender for Business](/defender-business/mdb-overview) doesn't include the "Stop and quarantine a file" action at this time.
 >
 > Your subscription must include Defender for Endpoint Plan 2 to have all of the response actions described in this article.
 
@@ -112,7 +112,7 @@ Or, use this alternate procedure:
    ![Image of download package](media/download-package.png)
 
       > [!NOTE]
-   > The collection of the investigation package may fail if a device has a low battery level or is on a metered connection.
+   > The collection of the investigation package might fail if a device has a low battery level or is on a metered connection.
 
 ### Investigation package contents for Windows devices
 
@@ -130,7 +130,7 @@ For Windows devices, the package contains the folders described in the following
 |Services|Contains a .CSV file that lists services and their states.|
 |Windows Server Message Block (SMB) sessions|Lists shared access to files, printers, and serial ports and miscellaneous communications between nodes on a network. This can help identify data exfiltration or lateral movement.<br/><br/>Contains files for `SMBInboundSessions` and `SMBOutboundSession`. If there are no sessions (inbound or outbound), you get a text file that tells you that there are no SMB sessions found.|
 |System Information|Contains a `SystemInformation.txt` file that lists system information such as OS version and network cards.|
-|Temp Directories|Contains a set of text files that lists the files located in `%Temp%` for every user in the system. This can help to track suspicious files that an attacker might have dropped on the system. <br/><br/>If the file contains the following message: "The system cannot find the path specified", it means that there's no temp directory for this user, and might be because the user didn't sign in to the system.|
+|Temp Directories|Contains a set of text files that lists the files located in `%Temp%` for every user in the system. This can help to track suspicious files that an attacker might have dropped on the system. <br/><br/>If the file contains the following message: "The system can't find the path specified," it means that there's no temp directory for this user, and might be because the user didn't sign in to the system.|
 |Users and Groups|Provides a list of files that each represent a group and its members.|
 |WdSupportLogs|Provides the `MpCmdRunLog.txt` and `MPSupportFiles.cab`. This folder is only created on Windows 10, version 1709 or later with February 2020 update rollup or more recent versions installed: <br/><br/>- Win10 1709 (RS3) Build 16299.1717: [KB4537816](https://support.microsoft.com/help/4537816/windows-10-update-kb4537816)<br/><br/>- Win10 1803 (RS4) Build 17134.1345: [KB4537795](https://support.microsoft.com/help/4537795/windows-10-update-kb4537795)<br/><br/>- Win10 1809 (RS5) Build 17763.1075: [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818)<br/><br/>- Win10 1903/1909 (19h1/19h2) Builds 18362.693 and 18363.693: [KB4535996](https://support.microsoft.com/help/4535996/windows-10-update-kb4535996)|
 |CollectionSummaryReport.xls|This file is a summary of the investigation package collection, it contains the list of data points, the command used to extract the data, the execution status, and the error code if there's failure. You can use this report to track if the package includes all the expected data and identify if there were any errors.|
@@ -169,7 +169,7 @@ The Action center shows the scan information and the device timeline include a n
 
 > [!NOTE]
 > When triggering a scan using Defender for Endpoint response action, Microsoft Defender antivirus `ScanAvgCPULoadFactor` value applies and limits the CPU impact of the scan.
-> If `ScanAvgCPULoadFactor` is not configured, the default value is a limit of 50% maximum CPU load during a scan.
+> If `ScanAvgCPULoadFactor` isn't configured, the default value is a limit of 50% maximum CPU load during a scan.
 > For more information, see [configure-advanced-scan-types-microsoft-defender-antivirus](/windows/security/threat-protection/microsoft-defender-antivirus/configure-advanced-scan-types-microsoft-defender-antivirus).
 
 ## Restrict app execution
@@ -198,7 +198,7 @@ When an app is restricted, the following notification is displayed to inform the
 :::image type="content" source="media/atp-app-restriction.png" alt-text="The application restriction message" lightbox="media/atp-app-restriction.png":::
 
 > [!NOTE]
-> The notification is not available on Windows Server 2016 and Windows Server 2012 R2.
+> The notification isn't available on Windows Server 2016 and Windows Server 2012 R2.
 
 ## Isolate devices from the network
 
@@ -206,7 +206,7 @@ Depending on the severity of the attack and the sensitivity of the device, you m
 
 **Important points to keep in mind**:
 
-- In environments that use Proxy Auto Configuration (PAC) files or WPAD settings, devices may not be able to recover from network isolation. Use selective isolation in such cases. When using selective isolation, exclusion settings are not required to avoid this scenario.
+- In environments that use Proxy Auto Configuration (PAC) files or WPAD settings, devices might not be able to recover from network isolation. Use selective isolation in such cases. When using selective isolation, exclusion settings aren't required to avoid this scenario.
 - Isolating devices from the network is supported for macOS for client version 101.98.84 and above. You can also use live response to run the action. For more information on live response, see [Investigate entities on devices using live response](live-response.md)
 - Full isolation is available for devices running Windows 11, Windows 10, version 1703 or later, Windows Server 2012 R2 and later, and Azure Stack HCI OS, version 23H2 and later.
 - Isolating devices from the network is supported when Defender is running in passive mode on all supported Windows operating systems, macOS and Linux supported versions.
@@ -220,21 +220,22 @@ Depending on the severity of the attack and the sensitivity of the device, you m
 - The feature supports VPN connection.
 - You must have at least the `Active remediation actions` role assigned. For more information, see [Create and manage roles](user-roles.md).
 - You must have access to the device based on the device group settings. For more information, see [Create and manage device groups](machine-groups.md).
-- Exclusions, such as e-mail, messaging application and other applications for both macOS and Linux isolation aren't supported.
+- Exclusions, such as e-mail, messaging application, and other applications for both macOS and Linux isolation aren't supported.
 - An isolated device is removed from isolation when an administrator modifies or adds a new `iptable` rule to the isolated device.
 - Isolating a server running on Microsoft Hyper-V blocks network traffic to all child virtual machines of the server.
 
 The device isolation feature disconnects the compromised device from the network while retaining connectivity to the Defender for Endpoint service, which continues to monitor the device. On Windows 10, version 1709 or later, you can use selective isolation for more control over the network isolation level. You can also choose to enable Outlook and Microsoft Teams connectivity.
 
 > [!NOTE]
-> You'll be able to reconnect the device back to the network at any time. The button on the device page will change to say **Release from isolation**, and then you take the same steps as isolating the device.
+> You'll be able to reconnect the device back to the network at any time. The button on the device page changes to say **Release from isolation**, and then you take the same steps as isolating the device.
+> If a device is inactive or offline when an isolation action is submitted, Microsoft Defender for Endpoint retries enforcing the isolation for a limited period. Isolation actions are retried for up to three days. If the device doesn't reconnect within this time, the isolation will no longer be retried, and administrators should re‑issue the isolation action once the device becomes active.
 
 Once you have selected **Isolate device** on the device page, type a comment and select **Confirm**. The Action center shows the scan information and the device timeline include a new event.
 
 :::image type="content" source="media/isolate-device.png" alt-text="An isolated device details page" lightbox="media/isolate-device.png":::
 
 > [!NOTE]
-> The device will remain connected to the Defender for Endpoint service even if it is isolated from the network. If you've chosen to enable Outlook and Skype for Business communication, then you'll be able to communicate to the user while the device is isolated. Selective isolation only works on the classic versions of Outlook and Microsoft Teams.
+> The device will remain connected to the Defender for Endpoint service even if it's isolated from the network. If you've chosen to enable Outlook and Skype for Business communication, then you'll be able to communicate to the user while the device is isolated. Selective isolation only works on the classic versions of Outlook and Microsoft Teams.
 
 ### Forcibly release device from isolation
 
@@ -246,7 +247,7 @@ There's a downloadable script for these instances that you can run to forcibly r
 >
 > - Admins and manage security settings in Security Center permissions can forcibly release devices from isolation.
 > - The script is valid for the specific device only.
-> - The script will expire in three days.
+> - The script expires in three days.
 
 To forcibly release device from isolation:
 
@@ -269,7 +270,7 @@ When a device is being isolated, the following notification is displayed to info
 :::image type="content" source="media/atp-notification-isolate.png" alt-text="A no network connection message" lightbox="media/atp-notification-isolate.png":::
 
 > [!NOTE]
-> The notification is not available on non-Windows platforms.
+> The notification isn't available on non-Windows platforms.
 
 ## Containing critical assets
 
@@ -314,9 +315,9 @@ A device can also be contained from the device page by selecting **Contain devic
 
 > [!IMPORTANT]
 >
-> - If a contained device changes its IP address, all Microsoft Defender for Endpoint onboarded devices recognize this and start blocking communications with the new IP address. The original IP address is no longer be blocked (It may take up to 5 minutes to see these changes).
+> - If a contained device changes its IP address, all Microsoft Defenders for Endpoint onboarded devices recognize this and start blocking communications with the new IP address. The original IP address is no longer be blocked (It might take up to 5 minutes to see these changes).
 > - In cases where the contained device's IP is used by another device on the network, a warning while containing the device with a link to advanced hunting (with a pre-populated query) is displayed. This provides visibility to other devices using the same IP to help you make a conscious decision if you'd like to continue containing the device.
-> - In cases where the contained device is a network device, a warning appears with a message that containment can cause network connectivity issues (for example, containing a router that is acting as a default gateway). At this point, you're able to choose whether to contain the device or not.
+> - In cases where the contained device is a network device, a warning appears with a message that containment can cause network connectivity issues (for example, containing a router that's acting as a default gateway). At this point, you're able to choose whether to contain the device or not.
 
 After you contain a device, if the behavior isn't as expected, verify the Base Filtering Engine (BFE) service is enabled on the Defender for Endpoint onboarded devices.
 
@@ -331,9 +332,9 @@ You can stop containing a device at any time.
 ## Contain IP addresses of undiscovered devices
 
 > [!IMPORTANT]
-> Some information in this article relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+> Some information in this article relates to prereleased product, which might be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-Defender for Endpoint can also contain IP addresses associated with devices that are undiscovered or are not onboarded to Defender for Endpoint. The capability to contain an IP address prevents attackers from spreading attacks to other non-compromised devices. Containing an IP address results in Defender for Endpoint-onboarded devices blocking incoming and outgoing communication with devices using the contained IP address
+Defender for Endpoint can also contain IP addresses associated with devices that are undiscovered or aren't onboarded to Defender for Endpoint. The capability to contain an IP address prevents attackers from spreading attacks to other non-compromised devices. Containing an IP address results in Defender for Endpoint-onboarded devices blocking incoming and outgoing communication with devices using the contained IP address
 
 > [!NOTE]
 > Blocking incoming and outgoing communication with a 'contained' device is supported on onboarded Defender for Endpoint Windows 10, Windows 11, Windows 2012 R2, and Windows 2016 devices.
@@ -355,10 +356,9 @@ If a contained IP address is part of an incident, an indicator is present on the
 You can stop an IP address' containment at any time. To stop containment, select the **Contain IP** action in the **Action Center**. In the flyout, select **Undo**. This action restores the IP address’ connection to the network.
 
 
-
 ## Contain user from the network
 
-When an identity in your network might be compromised, you must prevent that identity from accessing the network and different endpoints. Defender for Endpoint can contain an identity, blocking it from access, and helping prevent attacks-- specifically, ransomware. When an identity is contained, any supported Microsoft Defender for Endpoint onboarded device will block incoming traffic in specific protocols related to attacks (deny network logons, RPC, SMB, RDP), terminate ongoing remote sessions and logoff existing RDP connections (terminating the session itself including all its related processes), while enabling legitimate traffic. This action can significantly help to reduce the impact of an attack. When an identity is contained, security operations analysts have extra time to locate, identify and remediate the threat to the compromised identity. Once contained by automatic attack disruption, a user is automatically removed from containment in the next five days.
+When an identity in your network might be compromised, you must prevent that identity from accessing the network and different endpoints. Defender for Endpoint can contain an identity, blocking it from access, and helping prevent attacks, specifically, ransomware. When an identity is contained, any supported Microsoft Defender for Endpoint onboarded device blocks incoming traffic in specific protocols related to attacks (deny network logons, RPC, SMB, RDP), terminate ongoing remote sessions and logoff existing RDP connections (terminating the session itself including all its related processes), while enabling legitimate traffic. This action can significantly help to reduce the impact of an attack. When an identity is contained, security operations analysts have extra time to locate, identify, and remediate the threat to the compromised identity. Once contained by automatic attack disruption, a user is automatically removed from containment in the next five days.
 
 ### Contain user important notes
 
@@ -366,7 +366,7 @@ When an identity in your network might be compromised, you must prevent that ide
 - When the contain user action is triggered by [predictive shielding](/defender-xdr/shield-predict-threats) (Preview), the contain user action applies restrictions more selectively, with a focus on users identified as high risk through prediction logic. The contain user action in predictive shielding prevents new sessions rather than terminating existing ones.
 - While the predictive shielding feature as a whole is in Preview, this action is generally available, both when triggered by attack disruption and predictive shielding.
 - Blocking incoming communication with a "contained" user is supported on onboarded Microsoft Defender for Endpoint Windows 10 and 11 devices (Sense version 8740 and higher), Windows Server 2019+ devices, and Windows Servers 2012R2 and 2016 with the modern agent.
-- **Important**: Once a **Contain user** action is enforced on a domain controller, it starts a GPO update on the Default Domain Controller policy. A change of a GPO starts a sync across the domain controllers in your environment.  This is expected behavior, and if you monitor your environment for AD GPO changes, you may be notified of such changes. Undoing the **Contain user** action reverts the GPO changes to their previous state, which will then start another AD GPO synchronization in your environment. Learn more about [merging of security policies on domain controllers](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj966251(v=ws.11)#merging-of-security-policies-on-domain-controllers).
+- **Important**: Once a **Contain user** action is enforced on a domain controller, it starts a GPO update on the Default Domain Controller policy. A change of a GPO starts a sync across the domain controllers in your environment.  This is expected behavior, and if you monitor your environment for AD GPO changes, you might be notified of such changes. Undoing the **Contain user** action reverts the GPO changes to their previous state, which will then start another AD GPO synchronization in your environment. Learn more about [merging of security policies on domain controllers](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj966251(v=ws.11)#merging-of-security-policies-on-domain-controllers).
 
 ### How to contain a user
 
@@ -378,7 +378,7 @@ After a user is contained, you can view the action in this History view of the A
 
 :::image type="content" source="/defender/media/defender-endpoint/user-contain-action-center.png" alt-text="View the user contain action in the action center" lightbox="/defender/media/defender-endpoint/user-contain-action-center.png":::
 
-Furthermore, after an identity is considered "contained", that user will be blocked by Defender for Endpoint and cannot perform any malicious lateral movement or remote encryption on or to any supported Defender for Endpoint onboarded device. These blocks will show up as alerts to help you quickly see the devices the compromised user attempted access and potential attack techniques:
+Furthermore, after an identity is considered "contained", that user will be blocked by Defender for Endpoint and can't perform any malicious lateral movement or remote encryption on or to any supported Defender for Endpoint onboarded device. These blocks show up as alerts to help you quickly see the devices the compromised user attempted access and potential attack techniques:
 
 :::image type="content" source="/defender/media/defender-endpoint/user-contain-lateral-move-block.png" alt-text="Shows a user contain lateral movement block event" lightbox="/defender/media/defender-endpoint/user-contain-lateral-move-block.png":::
 
@@ -391,9 +391,9 @@ Furthermore, after an identity is considered "contained", that user will be bloc
 
 You can release the blocks and containment on a user at any time:
 
-1. Select the **Contain User** action in the **Action Center**. In the side pane select **Undo**.
+1. Select the **Contain User** action in the **Action Center**. In the side pane, select **Undo**.
 
-1. Select the user from either the user inventory, Incident page side pane or alert side pane and select **Undo**.
+1. Select the user from either the user inventory, Incident page side pane, or alert side pane and select **Undo**.
 
 This action restores the user's connection to the network.
 
