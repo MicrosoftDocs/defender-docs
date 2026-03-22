@@ -8,8 +8,8 @@ ms.subservice: reference
 ms.mktglfcycl: secure
 ms.sitesec: library
 ms.localizationpriority: medium
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 manager: bagol
 audience: ITPro
 ms.collection: 

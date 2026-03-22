@@ -66,7 +66,14 @@
         "Ruchika-mittal01"
       ]
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "author": {
+        "malware/**": "chrisda"
+      },
+      "ms.author": {
+        "malware/**": "chrisda"
+      }
+    },
     "template": [],
     "dest": "defender-endpoint"
   }

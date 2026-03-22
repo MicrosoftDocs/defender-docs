@@ -6,8 +6,8 @@ ms.localizationpriority: medium
 ms.date: 12/18/2025
 audience: ITPro
 ms.topic: concept-article
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 manager: bagol
 ms.subservice: asr
 ms.collection: 
