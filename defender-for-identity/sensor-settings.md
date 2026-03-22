@@ -174,7 +174,7 @@ Every few minutes, v2.x sensors check whether a newer version is available. When
 1. The cloud service updates to the latest version.
 1. The sensor updater service detects the new version.
 1. Sensors that aren't set to **Delayed update** start the update process one at a time:
-    1. The sensor updater service pulls the updated version from the cloud service (in cab file format).
+    1. The sensor updater service pulls the updated version from the cloud service (in *.cab* file format).
     1. The sensor updater validates the file signature.
     1. The sensor updater extracts the cab file to a new folder in the sensor's installation folder. By default it's extracted to *C:\Program Files\Azure Advanced Threat Protection Sensor\<version number>*
     1. The sensor service points to the new files extracted from the cab file.
