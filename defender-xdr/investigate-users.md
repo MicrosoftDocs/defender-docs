@@ -100,7 +100,7 @@ Microsoft Defender uses internal correlation logic to determine the primary acco
 
 :::image type="content" source="media/investigate-users/identity-observed-in-organization.png" alt-text="Screenshot of the Observed in organization tab on the Identity page in Microsoft Defender.":::
 
-## Risk score tab
+## Risk score tab (Preview)
 
 The **Risk score** tab summarizes the identity's risk level by combining alert activity with identity attributes like role assignments and sensitivity classification. Use this tab to understand an identity's risk score, identify contributing factors, and prioritize investigation.
 

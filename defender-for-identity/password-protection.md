@@ -1,5 +1,5 @@
 ---
-title: Password protection in Microsoft Defender
+title: Password protection in Microsoft Defender (Preview)
 description: Learn how the Password protection page in Microsoft Defender helps you find leaked credentials, exposed passwords, and weak password policies across your identity sources.
 #customer intent: As a security admin, I want to see password-related risks across my identity sources so that I can find exposed credentials, weak policies, and configuration issues and take action to reduce risk.
 author: AbbyMSFT
@@ -11,7 +11,7 @@ ms.custom: msecd-doc-authoring-106
 ai-usage: ai-assisted
 ---
 
-# Investigate identity password protection
+# Investigate identity password protection (Preview)
 
 The **Password protection** page in Microsoft Defender shows password-related risks across your identity sources in one place. Use it to find leaked credentials, exposed passwords, weak password policies, and configuration issues, and then take action directly from the page. It supports on-premises Active Directory, cloud identity providers like Microsoft Entra ID, and non-Microsoft providers like Okta.
 

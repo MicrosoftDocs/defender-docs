@@ -9,7 +9,7 @@ author: AbbyMSFT
 ms.author: abbyweisberg
 ms.service: microsoft-defender-for-identity
 ms.topic: article
-ms.date: 01/25/2026
+ms.date: 03/22/2026
 ms.reviewer: maelgami 
 appliesto: 
 - Microsoft Defender for Identity
@@ -59,7 +59,7 @@ The top section of the Identity inventory page gives you quick insights into you
 
 - The **Critical Active Directory service accounts** card helps you quickly identify all Active Directory accounts designated as critical, making it easier to focus on identities most at risk.
 
-- The **Cloud application accounts** card connects you to your [Cloud application accounts](/defender-cloud-apps/accounts), including those from application connectors and third-party sources.
+- The **Cloud application accounts** card connects you to your [Cloud application accounts](/defender-cloud-apps/accounts) identified by the Defender for Cloud apps application connectors.
 
 ## The identity inventory lists
 

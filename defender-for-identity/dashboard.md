@@ -1,12 +1,12 @@
 ---
-title: Microsoft Defender Identity Security dashboard
+title: Microsoft Defender Identity Security dashboard (Preview)
 description: This article describes how to work with the identity threat detection and response (ITDR) dashboard in Microsoft Defender.
 ms.date: 03/17/2026
 ms.topic: how-to
 ms.reviewer: maelgami 
 ---
 
-# The Identity Security dashboard
+# The Identity Security dashboard (Preview)
 
 The Microsoft Defender for Identity **Dashboard** page shows data to help you better analyze your security posture, understand how well you're protected, identify vulnerabilities, and perform recommended actions.
 

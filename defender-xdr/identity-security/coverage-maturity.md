@@ -1,5 +1,5 @@
 ---
-title: View your identity coverage and maturity
+title: View your identity coverage and maturity (Preview)
 description: Learn how to use the Coverage and maturity page in Microsoft Defender to check your identity protection status and close coverage gaps in your environments.
 ms.date: 03/17/2026
 ms.topic: how-to
@@ -13,7 +13,7 @@ ms.custom: msecd-doc-authoring-106
 #customer intent: As a security admin, I want to see how well my identities are protected so that I can find and close coverage gaps in my environments.
 ---
 
-# View your identity coverage and maturity
+# View your identity coverage and maturity (Preview)
 
 The Microsoft Defender **Coverage and maturity** page shows how well your identities are protected in your on-premises, cloud, SaaS, and partner environments.
 

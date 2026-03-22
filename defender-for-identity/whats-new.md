@@ -1,7 +1,7 @@
 ﻿---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 03/12/2026
+ms.date: 03/22/2026
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality.
 ms.reviewer: AbbyMSFT
@@ -26,29 +26,30 @@ For updates about versions and features released six months ago or earlier, see 
 ## March 2026
 
 ### Identity security enhancements
+
 New identity security capabilities help you monitor and manage identity security for human and non-human identities:
 
-- **Identity Security dashboard**: A redesigned dashboard with summary cards for identity providers, on-premises identities, SaaS identities, PAM and IGA integrations, and non-human identities, and widgets for deployment status, highly privileged identities, users at risk, and domains with unsecured configurations. For more information, see [The Identity Security dashboard](dashboard.md).
+- **Identity Security dashboard (Preview)**: A redesigned dashboard with summary cards for identity providers, on-premises identities, SaaS identities, PAM and IGA integrations, and non-human identities, and widgets for deployment status, highly privileged identities, users at risk, and domains with unsecured configurations. For more information, see [The Identity Security dashboard](dashboard.md).
 
-- **Coverage and maturity page**: A new page to track your organization's identity security coverage for identity providers, on-premises identities, SaaS identities, and PAM and IGA integrations. Each source displays a maturity level, including Connected, Protected, Fortified, and Resilient, with identity counts, coverage scores, and prioritized setup tasks. For more information, see [Coverage and maturity](../defender-xdr/identity-security/coverage-maturity.md).
+- **Coverage and maturity page (Preview)**: A new page to track your organization's identity security coverage for identity providers, on-premises identities, SaaS identities, and PAM and IGA integrations. Each source displays a maturity level, including Connected, Protected, Fortified, and Resilient, with identity counts, coverage scores, and prioritized setup tasks. For more information, see [Coverage and maturity](../defender-xdr/identity-security/coverage-maturity.md).
 
 - **Identity inventory**: An updated page to view human and non-human identities in separate tabs, with insight cards for classifying critical assets, viewing highly privileged identities, identifying critical Active Directory service accounts, and viewing cloud application accounts. For more information, see [View the Identity inventory](identity-inventory.md).
 
-- **Non-human identities [Preview]**: A new tab on the **Identity inventory** page to view and investigate non-human identities, including Entra ID apps, Active Directory service accounts, Google Workspace apps, and Salesforce apps. The tab includes statistics for risky, highly privileged, overprivileged, unused, and externally published identities. A separate investigation page lets you view details for each identity. For more information, see [Identity inventory](identity-inventory.md) and [Investigate non-human identities](../defender-xdr/investigate-non-human-identities.md).
+- **Non-human identities (Preview)**: A new tab on the **Identity inventory** page to view and investigate non-human identities, including Entra ID apps, Active Directory service accounts, Google Workspace apps, and Salesforce apps. The tab includes statistics for risky, highly privileged, overprivileged, unused, and externally published identities. A separate investigation page lets you view details for each identity. For more information, see [Identity inventory](identity-inventory.md) and [Investigate non-human identities](../defender-xdr/investigate-non-human-identities.md).
 
-- **Risk score tab**: A new tab on the **Identity** page that shows a 0–100 risk score with percentile comparison, likelihood of compromise by MITRE ATT&CK kill chain stage, and impact of compromise based on criticality and PIM role assignments. You can also view risk trends and reset the risk score. For more information, see [Investigate an identity](../defender-xdr/investigate-users.md).
+- **Identity risk score (Preview)**: A new risk score for identities, ranging from 0 to 100, that indicates the likelihood of compromise by MITRE ATT&CK kill chain stage and impact based on criticality and PIM role assignments. The risk score is available in Microsoft Entra ID, where it can be used to inform conditional access policies and identity protection workflows. A new **Risk score** tab on the **Identity** page provides a detailed breakdown of the score, including percentile comparison and risk trends. For more information, see [Investigate an identity](../defender-xdr/investigate-users.md).
 
-- **Identity security recommendations**: View recommendations for Active Directory, Microsoft Entra ID, SaaS applications including Microsoft, Atlassian, GitHub, Google Workspace, Salesforce, and ServiceNow, and supported non-Microsoft identity providers including Okta, PingOne, CyberArk, and SailPoint. For more information, see [Identity security recommendations](../defender-xdr/identity-security/identity-security-recommendations.md).
+- **Identity security recommendations (Preview)**: View recommendations for Active Directory, Microsoft Entra ID, SaaS applications including Microsoft, Atlassian, GitHub, Google Workspace, Salesforce, and ServiceNow, and supported non-Microsoft identity providers including Okta, PingOne, CyberArk, and SailPoint. For more information, see [Identity security recommendations](../defender-xdr/identity-security/identity-security-recommendations.md).
 
-- **Domain investigation page**: A new page to view Active Directory domain security, including domain properties, deployment health, identity summary, service account breakdown, sensitive entities, active recommendations, group policies, and trust relationships. For more information, see [Investigate a domain](investigate-domain.md).
+- **Domain investigation page (Preview)**: A new page to view Active Directory domain security, including domain properties, deployment health, identity summary, service account breakdown, sensitive entities, active recommendations, group policies, and trust relationships. For more information, see [Investigate a domain](investigate-domain.md).
 
-- **Password protection page**: A new page to view identity password risk from Active Directory, Microsoft Entra ID, and Okta, with tabs for password hygiene, password policies, leaked credentials, and exposed passwords. For more information, see [Password protection](password-protection.md).
+- **Password protection page (Preview)**: A new page to view identity password risk from Active Directory, Microsoft Entra ID, and Okta, with tabs for password hygiene, password policies, leaked credentials, and exposed passwords. For more information, see [Password protection](password-protection.md).
 
 ### Defender for Identity sensor updates
 
-- **Migrate Defender for Identity sensors from v2.x to v3.x**: Migrate sensors from v2.x to v3.x directly from the Microsoft Defender portal. The v2.x sensor continues running during the migration until the v3.x sensor is ready, so there is no downtime. Eligible servers appear as **Ready for migration** on the **Sensors** page, and migration takes up to 20 minutes. For more information, see [Migrate to Defender for Identity sensor v3.x](deploy/migrate-to-sensor-v3.md).
+- **Migrate Defender for Identity sensors from v2.x to v3.x (Preview)**: Migrate sensors from v2.x to v3.x directly from the Microsoft Defender portal. The v2.x sensor continues running during the migration until the v3.x sensor is ready, so there is no downtime. Eligible servers appear as **Ready for migration** on the **Sensors** page, and migration takes up to 20 minutes. For more information, see [Migrate to Defender for Identity sensor v3.x](deploy/migrate-to-sensor-v3.md).
 
-- **Sensor v3.x support for domain controllers with additional identity roles**: Sensor v3.x supports domain controllers that also run AD FS, AD CS, or Entra Connect. Detections and identity security posture management recommendations for these roles roll out gradually, starting with Entra Connect. These domain controllers require Windows Server 2019 or later with at least the March 2026 Cumulative Update. For more information, see [Defender for Identity deployment overview](deploy/deploy-defender-identity.md) and [Sensor v3.x prerequisites](deploy/prerequisites-sensor-version-3.md).
+- **Sensor v3.x support for domain controllers with additional identity roles (Preview)**: Sensor v3.x supports domain controllers that also run AD FS, AD CS, or Entra Connect. Detections and identity security posture management recommendations for these roles roll out gradually, starting with Entra Connect. These domain controllers require Windows Server 2019 or later with at least the March 2026 Cumulative Update. For more information, see [Defender for Identity deployment overview](deploy/deploy-defender-identity.md) and [Sensor v3.x prerequisites](deploy/prerequisites-sensor-version-3.md).
 
 ### New Defender for Identity security alerts
 
