@@ -1,5 +1,5 @@
 ---  
-title: Workbooks for Microsoft Sentinel data lake
+title: Workbooks for Microsoft Sentinel Data Lake
 titleSuffix: Microsoft Security  
 description: Learn how to create and use Microsoft Sentinel workbooks with data from the Microsoft Sentinel data lake to visualize and monitor security data.
 author: EdB-MSFT  
@@ -26,7 +26,7 @@ When using Sentinel data lake as the data source for your workbooks, keep in min
 
 1. Select the cube icon in the top right corner to select the workspaces you want to store your workbooks.
 
-1. Select **Add workbook** 
+1. Select **Add workbook**.
 
     :::image type="content" source="./media/workbooks-for-data-lake/add-workbook.png" alt-text="Screenshot of a workbook in edit mode with the query editor open." lightbox="./media/workbooks-for-data-lake/add-workbook.png":::
    
@@ -40,7 +40,7 @@ When using Sentinel data lake as the data source for your workbooks, keep in min
 
     :::image type="content" source="./media/workbooks-for-data-lake/add-data-source-and-visualization.png" alt-text="Screenshot of the Add data source and visualization button in a Microsoft Sentinel workbook." lightbox="./media/workbooks-for-data-lake/add-data-source-and-visualization.png":::    
 
-1. Select **Sentinel data lake** as the data source
+1. Select **Sentinel data lake** as the data source.
 
 1. Select the workspace containing your SignInLogs table in the data lake.
 
@@ -71,7 +71,7 @@ When using Sentinel data lake as the data source for your workbooks, keep in min
     > Relative time ranges such as `> ago(10d) ` are supported up to 90 days. Absolute time ranges are supported according to your data retention policy. 
 
 
-1.  On the workbook page, select **Done editing**
+1.  On the workbook page, select **Done editing**.
 
 1. Select **Save** to save the workbook to your library, giving your workbook a name and location.
 
