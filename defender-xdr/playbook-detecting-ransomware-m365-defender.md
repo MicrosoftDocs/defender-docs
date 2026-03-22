@@ -4,7 +4,6 @@ description:               This article describes proactive detection of new or 
 search.appverid: MET150    
 author:                    nic-name
 ms.author:                 noriordan
-manager:                   dolmont
 audience:                  ITPro
 ms.topic:                  article
 ms.date:                   05/30/2022 
