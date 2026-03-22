@@ -250,27 +250,29 @@ The following table lists the features provided by Defender for Containers for t
 
 ### [Azure](#tab/azurecssc)
 
-| Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
+| Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Cloud availability |
 |--|--|--|--|--|--|--|--|
-| Gated deployment | Gated deployment of container images to your Kubernetes environment | AKS 1.31 or higher, Azure Container Registry (ACR) | GA | GA | Requires **Defender Sensor**, **Security Gating**, **Security Findings**, and **Registry Access** | **Defender for Containers** | Commercial clouds |
+| Gated deployment | Gated deployment of container images to your Kubernetes environment | AKS 1.31 or higher (including AKS Automatic)<sup>[1](#footnote1cssc)</sup> | GA | - | Requires **Defender sensor**, **Security gating**, **Security findings**, and **Registry access**.| Commercial clouds |
+
+<sup><a name="footnote1cssc"></a>1</sup> On AKS Automatic clusters, the Defender sensor must be installed by using Helm in the `kube-system` namespace. Installation in the `mdc` namespace and add-on deployment aren’t supported for gated deployment.
 
 ### [AWS](#tab/awscssc)
 
-| Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
+| Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method |
 |--|--|--|--|--|--|--|--|
-| Gated deployment | Gated deployment of container images to your Kubernetes environment | EKS 1.31 or higher, Amazon Elastic Container Registry (ECR) | GA | GA | Requires **Defender Sensor**, **Security Gating**, **Security Findings**, and **Registry Access** | **Defender for Containers** | AWS |
+| Gated deployment | Gated deployment of container images to your Kubernetes environment | EKS 1.31 or higher, Amazon Elastic Container Registry (ECR) | GA | - | Requires **Defender Sensor**, **Security Gating**, **Security Findings**, and **Registry Access** |
 
 ### [GCP](#tab/gcpcssc)
 
-| Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
+| Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method |
 |--|--|--|--|--|--|--|--|
-| Gated deployment | Gated deployment of container images to your Kubernetes environment | GKE 1.31 or higher, Google Artifact Registry | GA | GA | Requires **Defender Sensor**, **Security Gating**, **Security Findings**, and **Registry Access** | **Defender for Containers** | GCP |
+| Gated deployment | Gated deployment of container images to your Kubernetes environment | GKE 1.31 or higher, Google Artifact Registry | GA | - | Requires **Defender Sensor**, **Security Gating**, **Security Findings**, and **Registry Access** |
 
 ### [Arc enabled](#tab/arccssc)
 
-| Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
+| Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method |
 |--|--|--|--|--|--|--|--|
-| Gated deployment | Gated deployment of container images to your Kubernetes environment | Arc enabled Kubernetes clusters | Preview | Preview | Requires **Defender Sensor**, **Security Gating**, **Security Findings**, and **Registry Access** | **Defender for Containers** | - |
+| Gated deployment | Gated deployment of container images to your Kubernetes environment | Arc enabled Kubernetes clusters | GA | - | Requires **Defender Sensor**, **Security Gating**, **Security Findings**, and **Registry Access** |
 
 ---
 

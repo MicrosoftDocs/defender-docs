@@ -14,7 +14,8 @@ GitHub Advanced Security (GHAS) integration with Microsoft Defender for Cloud co
 
 Use this integration to:
 
-- Track vulnerabilities from source code to deployed applications.
+- Track vulnerabilities from source code to deployed applications 
+- Trace the code repository and the fix owner of origin for your vulnerable runtime workloads.
 - Focus on security issues that affect production workloads.
 - Coordinate fixes between GitHub repositories and Azure environments.
 - Take advantage of AI-powered remediation tools for faster resolution.
@@ -32,6 +33,8 @@ When you [connect your GitHub organization or repository to Microsoft Defender f
 
 This capability gives you instant end-to-end visibility, so you know which code powers each deployed application without time-consuming manual mapping.
 
+:::image type="content" source="media/github-advanced-security/cve-vulnerability-tracking.jpg" alt-text="Screenshot of the Associated CVEs tab in Defender for Cloud, including links for viewing related alerts on GitHub." lightbox="media/github-advanced-security/cve-vulnerability-tracking.jpg":::
+
 ### Production-aware alert prioritization
 
 Cut through noisy security alerts and focus on vulnerabilities that truly matter.
@@ -45,8 +48,6 @@ You can filter, triage, and act on only security issues that have actual product
 Bridge the gap between security and engineering teams with integrated workflows and relevant context.
 
 Within Defender for Cloud, security managers can see which security issues the engineering team already knows about, along with the status of those issues. Security managers open this view by selecting the **View on GitHub** link.
-
-:::image type="content" source="media/github-advanced-security/cve-vulnerability-tracking.jpg" alt-text="Screenshot of the Associated CVEs tab in Defender for Cloud, including links for viewing related alerts on GitHub." lightbox="media/github-advanced-security/cve-vulnerability-tracking.jpg":::
 
 Security managers can assign security recommendations for resolution to the relevant engineering teams by generating a GitHub issue assignment.
 
@@ -67,14 +68,6 @@ GitHub issue fixes, progress, and campaign advancements are tracked in real time
 :::image type="content" source="media/github-advanced-security/github-issue-status-details.jpg" alt-text="Screenshot of GitHub issue details, including repository URL, owner, and status." lightbox="media/github-advanced-security/github-issue-status-details.jpg":::
 
 This approach ensures that fixes are delivered rapidly, creates clear accountability, and simplifies collaboration. All these benefits happen inside the tools that your teams already use.
-
-## Prerequisites
-
-| Aspect | Details |
-| ------ | ------- |
-| Environmental requirements | - GitHub account with a connector created in Defender for Cloud<br>- GHAS license<br>- Defender Cloud Security Posture Management (CSPM) enabled on the subscription<br>- Microsoft Security Copilot (optional for automated remediation) |
-| Roles and permissions | - Security Admin permissions<br>- Security Reader on the Azure subscription (to view findings in Defender for Cloud)<br>- GitHub organization owner |
-| Cloud environments | - Available in commercial clouds only (not in Azure Government, Azure operated by 21Vianet, or other sovereign clouds) |
 
 ## Related content
 

@@ -71,7 +71,8 @@ Choose the approach that best aligns with your organization's DevOps practices a
 
 Before deploying Defender for Containers on AKS, ensure you meet these requirements:
 
-- AKS clusters running Kubernetes 1.19 or later
+- AKS clusters running Kubernetes 1.22 or later
+
 - Network connectivity for outbound HTTPS to Azure endpoints
 - By default, AKS clusters have unrestricted outbound (egress) internet access. Clusters with restricted egress must allow specific endpoints. See: [Microsoft Defender for Containers - Required FQDN/application rules](/azure/aks/outbound-rules-control-egress#microsoft-defender-for-containers)
 
