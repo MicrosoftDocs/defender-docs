@@ -282,7 +282,7 @@ Open a text editor and use the following examples as a guide for your own schedu
 
 #### For JamF and other 3rd-party MDMs
 
-    ```XML
+```XML
     <?xml version="1.0" encoding="UTF-8"?> 
     <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.  dtd"> 
     <plist version="1.0"> 
@@ -317,7 +317,7 @@ Open a text editor and use the following examples as a guide for your own schedu
             </dict> 
         </dict> 
     </plist> 
-    ```
+```
 
 1. Save the file as `com.microsoft.wdav.plist`.
 
