@@ -52,7 +52,6 @@ Before you create a rule, decide which correlation type fits your scenario. The 
 1. Review the summary, which includes the rule name, correlation type, and selected values.
 1. Select **Submit** to create the rule.
 
-> [!NOTE]
 > Correlation rule changes take effect within 12 hours.
 
 ## Edit a correlation rule
