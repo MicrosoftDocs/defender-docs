@@ -8,7 +8,6 @@ audience: ITPro
 ms.topic: concept-article
 author: paulinbar
 ms.author: painbar
-manager: bagol
 ms.subservice: asr
 ms.collection: 
 - m365-security

@@ -9,7 +9,6 @@ ms.author: chrisda
 ms.custom: nextgen
 ms.date: 04/11/2025
 ms.reviewer: yongrhee
-manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security

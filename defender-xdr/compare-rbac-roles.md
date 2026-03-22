@@ -5,7 +5,6 @@ ms.service: defender-xdr
 ms.author: monaberdugo
 author: mberdugo
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection:
 - m365-security

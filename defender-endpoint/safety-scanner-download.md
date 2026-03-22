@@ -10,7 +10,6 @@ ms.sitesec: library
 ms.localizationpriority: medium
 ms.author: painbar
 author: paulinbar
-manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

@@ -7,7 +7,6 @@ f1.keywords:
 - NOCSH
 ms.author: guywild
 author: guywi-ms
-manager: dansimp
 audience: ITPro
 ms.topic: how-to
 search.appverid: 

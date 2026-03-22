@@ -7,7 +7,6 @@ ms.topic: concept-article
 author: paulinbar
 ms.author: painbar
 ms.reviewer: yongrhee
-manager: bagol
 ms.custom: nextgen
 ms.subservice: ngp
 ms.collection: 
