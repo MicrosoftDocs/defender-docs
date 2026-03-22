@@ -113,7 +113,6 @@ Results are stored for 24 hours and can be accessed multiple times. You can expo
 
 Jobs are used to run KQL queries against the data in the data lake tier and promote the results to the analytics tier. You can create one-time or scheduled jobs, and you can enable, disable, edit, or delete jobs from the **Jobs** page. To create a job based on your current query, select the **Create job** button. For more information on creating and managing jobs, see [Create jobs in the Microsoft Sentinel data lake](kql-jobs.md).
 
-
 ## Azure Data Explorer
 
 You can run KQL queries against the Microsoft Sentinel data lake using Azure Data Explorer (ADX). ADX provides a powerful query engine and advanced analytics capabilities. To connect to the data lake using ADX, create a new connection using the following URI: `https://api.securityplatform.microsoft.com/lake/kql`
