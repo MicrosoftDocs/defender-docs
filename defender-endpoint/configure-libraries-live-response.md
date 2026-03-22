@@ -99,12 +99,17 @@ The following options are available for managing existing files in the library:
 
 ## Audit logging
 
-Library management actions are tracked in the Microsoft Purview audit log. Actions such as uploading, downloading, deleting, and listing files in the library are recorded, giving you visibility into how library files are managed across your organization.
+Library management actions are tracked in the Microsoft Defender [audit log](/defender-xdr/microsoft-xdr-auditing). Defender tracks actions such as upload, download, delete, or listing files, and you can view details on these actions in the audit log. This provides visibility into how library files are managed across your organization.
 
 To view audit logs for library management actions:
 
-1. In the [Microsoft Purview compliance portal](https://compliance.microsoft.com), go to **Audit**.
+1. In the Microsoft Defender portal, select **Settings** > **Audit**.
 1. Search for audit logs using the following criteria:
-   - **Activities - friendly names**: `Ran live response session`
-   - **Record Types**: `MSDEResponseActions`
-1. Review the results to see the library management actions performed, including the user, timestamp, and a description of the action (for example, "Library management - downloaded file" or "Library management - created file").
+   - **Activities - friendly names**: **Ran live response session**
+   - **Record Types**: **MSDEResponseActions**
+
+    :::image type="content" source="media/configure-libraries-live-response/library-management-audit-search.png" alt-text="Screenshot of the audit log search criteria for library management actions":::
+
+1. Review the results to see the library management actions performed, including the user, timestamp, and a description of the action. For example, the action description may be: **Library management - downloaded file** or **Library management - created file**, with specific details about the file involved in the action.
+
+    :::image type="content" source="media/configure-libraries-live-response/library-management-audit-result.png" alt-text="Screenshot of the audit log showing library management actions":::
