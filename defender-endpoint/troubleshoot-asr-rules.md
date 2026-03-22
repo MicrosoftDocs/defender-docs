@@ -7,7 +7,6 @@ audience: ITPro
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: yongrhee
-manager: bagol
 ms.custom: 
 - mde-asr
 - admindeeplinkDEFENDER
