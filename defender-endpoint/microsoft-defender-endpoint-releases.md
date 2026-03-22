@@ -276,7 +276,7 @@ Bug and performance fixes
 ### macOS known issues
 
 - Microsoft Defender for Endpoint might experience issues on macOS (Build 101.26012.0015, Production ring). Affected devices may exhibit performance degradation, repeated Defender process crashes, and devices not waking from sleep. To resolve this issue, deploy one of the following updates:
-   - Hotfix (Production): Update to version 101.26012.0017
+   - Hotfix (Production): Update to version 101.26012.0017.
    - Insider Fast (2602): Update to version 101.26022.0015.
 
 - In version 2506 (101.25062.0005), attempts to upgrade Microsoft Defender for Endpoint on macOS consistently failed.  Other versions of Defender are not impacted. To overcome this issue, there is a supported workaround for supported macOS versions and beta versions of macOS 26.  The instructions for the workaround can be found [here](https://github.com/microsoft/mdatp-xplat/tree/master/macos/upgrade_from_2506_helper).
