@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 11/24/2025
+ms.date: 02/26/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -23,7 +23,6 @@ appliesto:
 ---
 
 # Use installer script based deployment to deploy Microsoft Defender for Endpoint on Linux
-
 
 ## Introduction
 
@@ -36,6 +35,9 @@ To use another method, refer to the [Related content section](#related-content).
 ## Prerequisites and system requirements
 
 Before you get started, see [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md) for a description of prerequisites and system requirements.
+
+> [!TIP]
+> Before running the installer script to deploy Defender on your Linux server, it's recommended to run the script with the `--min-req` option to help identify and fix any potential issues that might impact the deployment.
 
 ## Deployment process
 
@@ -217,15 +219,15 @@ If you experience any installation issues, for self-troubleshooting, follow thes
 
 1. For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](linux-resources.md#log-installation-issues).
 
-1. For information about common installation issues, see [Installation issues](/defender-endpoint/linux-support-install).
+1. For information about common installation issues, see [Installation issues](linux-support-install.md).
 
-1. If health of the device is `false`, see [Defender for Endpoint agent health issues](/defender-endpoint/health-status).
+1. If health of the device is `false`, see [Defender for Endpoint agent health issues](health-status.md).
 
-1. For product performance issues, see [Troubleshoot performance issues](/defender-endpoint/linux-support-perf).
+1. For product performance issues, see [Troubleshoot performance issues](linux-support-perf.md).
 
-1. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](/defender-endpoint/linux-support-connectivity).
+1. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](linux-support-connectivity.md).
 
-To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](/defender-endpoint/overview-client-analyzer).
+To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](overview-client-analyzer.md).
 
 ## How to switch between channels
 
@@ -272,7 +274,7 @@ In order to preview new features and provide early feedback, it's recommended th
 To configure antivirus and EDR settings, see the following articles:
 
 - [Defender for Endpoint security settings management](/intune/intune-service/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal. (*This method is recommended*.)
-- [Set preferences for Defender for Endpoint on Linux](/defender-endpoint/linux-preferences) describes settings you can configure.
+- [Set preferences for Defender for Endpoint on Linux](linux-preferences.md) describes settings you can configure.
 
 ## Related content
 

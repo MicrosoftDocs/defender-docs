@@ -66,12 +66,12 @@ The **Download file** button can have the following states:
 - **Active** - You're able to collect the file. 
 - **Disabled** - If the button is grayed out or disabled during an active collection attempt, you might not have appropriate permissions to collect files.
 
-For more information, see [Download or collect file](/defender-endpoint/respond-file-alerts#download-or-collect-file).
+For more information, see [Download or collect file](respond-file-alerts.md#download-or-collect-file).
 
 ## See also
 
 - [Configure remediation for scans](configure-remediation-microsoft-defender-antivirus.md)
 - [Review scan results](review-scan-results-microsoft-defender-antivirus.md)
-- [Address false positives/negatives in Microsoft Defender for Endpoint](/defender-endpoint/defender-endpoint-false-positives-negatives)
+- [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 
 

@@ -48,6 +48,9 @@ If you can't take action, contact a Global Administrator about getting the follo
 
 To take action on emails through advanced hunting, you need a role in Microsoft Defender for Office 365 to [search and purge emails](/defender-office-365/scc-permissions).
 
+- [Microsoft Defender XDR Unified role based access control (URBAC)](manage-rbac.md):
+  - Membership assigned with the **Security operations** \> **Security data** \> **Security data basic (read)** \> **Response (manage)** and **Email & collaboration advanced actions (manage)** URBAC permissions enable the **Take action** option in Advanced hunting and grants users the required permissions to perform remediation actions. 
+ 
 ## Take various actions on devices
 
 You can take the following actions on devices identified by the `DeviceId` column in your query results:
