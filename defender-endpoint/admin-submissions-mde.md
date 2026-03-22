@@ -8,7 +8,6 @@ appliesto:
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
-manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.topic: how-to

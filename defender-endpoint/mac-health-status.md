@@ -4,7 +4,6 @@ description: Investigate macOS Defender agent health issues
 author: paulinbar
 ms.author: painbar
 ms.reviewer: lianx; joshbregman
-manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.service: defender-endpoint

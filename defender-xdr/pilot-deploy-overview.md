@@ -9,7 +9,6 @@ ms.author: tracyp
 author: MSFTTracyP
 ms.date: 12/11/2025
 ms.localizationpriority: medium
-manager: dansimp 
 audience: ITPro
 ms.collection: 
   - m365-security
