@@ -185,7 +185,7 @@ To enable Network Protection for Windows Servers, for now, please use PowerShell
 | OS | PowerShell cmdlet |
 | --- | --- |
 | Windows Server 2012 R2 and later    | `set-MpPreference -AllowNetworkProtectionOnWinServer $true` |
-| Windows Server 2016 and Windows Server 2012 R2 [unified MDE client](/defender-endpoint/update-agent-mma-windows#upgrade-to-the-new-unified-agent-for-defender-for-endpoint) | `set-MpPreference -AllowNetworkProtectionOnWinServer $true` <br/><br/>`set-MpPreference -AllowNetworkProtectionDownLevel $ true` |
+| Windows Server 2016 and Windows Server 2012 R2 [unified MDE client](update-agent-mma-windows.md#upgrade-to-the-new-unified-agent-for-defender-for-endpoint) | `set-MpPreference -AllowNetworkProtectionOnWinServer $true` <br/><br/>`set-MpPreference -AllowNetworkProtectionDownLevel $ true` |
 
 ## Attack Surface Reduction Rules
 
@@ -232,7 +232,7 @@ Assign the policies to the OU where the test machines are located.
 
 In the Microsoft Defender portal at [https://security.microsoft.com](https://security.microsoft.com), go to **Settings** > **Endpoints** > **Advanced features** > **Tamper Protection** > **On**.
 
-For more information, see [How do I configure or manage tamper protection?](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection).
+For more information, see [How do I configure or manage tamper protection?](prevent-changes-to-security-settings-with-tamper-protection.md).
 
 #### Check the Cloud Protection network connectivity
 
@@ -246,7 +246,7 @@ cd "C:\Program Files\Windows Defender"
 MpCmdRun.exe -ValidateMapsConnection
 ```
 
-For more information, see [Use the cmdline tool to validate cloud-delivered protection](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus).
+For more information, see [Use the cmdline tool to validate cloud-delivered protection](configure-network-connections-microsoft-defender-antivirus.md).
 
 ## Check the Platform Update version
 

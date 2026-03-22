@@ -47,7 +47,7 @@ The unified Action center brings together remediation actions across Defender fo
 
 You can use the unified Action center if you have appropriate permissions and one or more of the following subscriptions:
 
-- [Microsoft Defender XDR](/microsoft-365/security/mtp/microsoft-threat-protection)
+- [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)
 - [Defender for Endpoint](microsoft-defender-endpoint.md)
 - [Defender for Office 365](/defender-office-365/mdo-about)
 - [Defender for Business](/defender-business/mdb-overview)
