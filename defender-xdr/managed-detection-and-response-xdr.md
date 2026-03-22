@@ -6,7 +6,6 @@ ms.service: defender-experts-for-xdr
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: orspodek
 audience: ITPro
 ms.collection:
   - m365-security

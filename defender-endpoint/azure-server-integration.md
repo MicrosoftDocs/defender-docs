@@ -7,7 +7,6 @@ ms.subservice: onboard
 author: batamig
 ms.author: bagol
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

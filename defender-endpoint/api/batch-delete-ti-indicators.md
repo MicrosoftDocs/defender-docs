@@ -7,7 +7,6 @@ ms.reviewer: itsela
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
 ms.collection:
 - m365-security
 - tier3

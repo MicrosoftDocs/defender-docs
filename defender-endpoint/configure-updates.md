@@ -8,7 +8,6 @@ f1.keywords:
 ms.author: bagol
 author: batamig
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
