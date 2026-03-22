@@ -6,7 +6,6 @@ ms.localizationpriority: high
 author: batamig
 ms.author: bagol
 ms.reviewer: marcmcc
-manager: bagol
 ms.custom: nextgen
 ms.date: 10/20/2025
 ms.subservice: ngp
