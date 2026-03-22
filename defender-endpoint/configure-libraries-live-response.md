@@ -11,7 +11,7 @@ ms.collection:
 - tier2
 ms.topic: how-to
 search.appverid: met150
-ms.date: 02/01/2025
+ms.date: 03/19/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -95,3 +95,20 @@ The following options are available for managing existing files in the library:
 | **Download** | Download a selected file to your local device. | Top menu, right-click menu, view file window |
 | **Delete** | Remove a selected file from the list. | Top menu, right-click menu |
 | **Filter** | Filter the list of files based on specific criteria, such as type or creation date. | Top menu |
+
+## View audit logs for library management actions
+
+Library management actions are tracked in the Microsoft Defender [audit log](/defender-xdr/microsoft-xdr-auditing). Defender tracks actions such as upload, download, delete, or listing files, and you can view details on these actions in the audit log. This provides visibility into how library files are managed across your organization.
+
+To view audit logs for library management actions:
+
+1. In the Microsoft Defender portal, select **Settings** > **Audit**.
+1. Search for audit logs using the following criteria:
+   - **Activities - friendly names**: **Ran live response session**
+   - **Record Types**: **MSDEResponseActions**
+
+    :::image type="content" source="media/configure-libraries-live-response/library-management-audit-search.png" alt-text="Screenshot of the audit log search criteria for library management actions" lightbox="media/configure-libraries-live-response/library-management-audit-search.png":::
+
+1. Review the results to see the library management actions performed, including the user, timestamp, and a description of the action. For example, the action description may be: **Library management - downloaded file** or **Library management - created file**, with specific details about the file involved in the action.
+
+    :::image type="content" source="media/configure-libraries-live-response/library-management-audit-result.png" alt-text="Screenshot of the audit log showing library management actions" lightbox="media/configure-libraries-live-response/library-management-audit-result.png":::

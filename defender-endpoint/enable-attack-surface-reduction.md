@@ -6,7 +6,6 @@ ms.localizationpriority: medium
 audience: ITPro
 author: limwainstein
 ms.author: lwainstein
-manager: bagol
 ms.subservice: asr
 ms.topic: how-to
 ms.collection: 
