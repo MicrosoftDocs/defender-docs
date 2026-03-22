@@ -4,7 +4,7 @@ description: Learn about tracking file change with file integrity monitoring in 
 author: Elazark
 ms.author: elkrieger
 ms.topic: concept-article
-ms.date: 02/24/2026
+ms.date: 03/22/2026
 ---
 
 # File integrity monitoring
