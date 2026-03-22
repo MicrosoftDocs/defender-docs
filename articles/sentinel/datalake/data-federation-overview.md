@@ -6,7 +6,7 @@ author: EdB-MSFT
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: concept-article
-ms.date: 03/19/2026
+ms.date: 03/22/2026
 ms.author: edbaynash
 ms.collection: ms-security
 
@@ -19,7 +19,7 @@ Data federation in Microsoft Sentinel enables seamless querying of multiple exte
 
 ## What is data federation?
 
-Data federation allows you to query external data sources directly from the Microsoft Sentinel data lake using Kusto Query Language (KQL) or Jupyter notebooks using the Microsoft Sentinel VS Code extension. Instead of ingesting the data into Sentinel, federation creates connections to external data stores, enabling:
+Data federation allows you to query external data sources directly from the Microsoft Sentinel data lake using Kusto Query Language (KQL) or Jupyter notebooks using the Microsoft Sentinel Visual Studio Code extension. Instead of ingesting the data into Sentinel, federation creates connections to external data stores, enabling:
 
 - **Unified analytics**: Query federated sources alongside native Microsoft Sentinel data lake tables.
 - **Cost optimization**: Avoid data duplication by querying data where it resides.
@@ -27,7 +27,7 @@ Data federation allows you to query external data sources directly from the Micr
 - **Flexible data access**: Access historical or specialized datasets that complement your security operations.
 
 > [!IMPORTANT]
-> Federation is one-directional from the Sentinel data lake to the federated target. You can query a federated source from a KQL query in the data lake, but you cannot access the data lake from a federated source.
+> Data federation is one-directional from the Sentinel data lake to the federated target. You can query a federated source from the data lake, but you can't access the data lake from a federated source.
 
 ## Available federation sources
 
@@ -35,7 +35,7 @@ The following federation sources are available:
 
 | Source | Description |
 |--------|-------------|
-| **Azure Databricks** | Connect to Databricks Unity Catalog tables and query data using KQL from Sentinel. |
+| **Azure Databricks** | Connect to Databricks Unity Catalog tables and query data from Sentinel. |
 | **Azure Data Lake Storage Gen 2** | Query data stored in ADLS Gen 2 storage accounts directly from the Sentinel data lake. |
 | **Microsoft Fabric** | Connect to Microsoft Fabric Lakehouse tables for integrated analytics. |
 
@@ -45,13 +45,13 @@ The following federation sources are available:
 
 A federated connection is a configured link between the Sentinel data lake and an external data source. Each connection specifies:
 
-- The target data source (Databricks, ADLS Gen 2, or Fabric)
-- Authentication credentials stored securely in Azure Key Vault
-- The specific tables or data to federate
+- The target data source (Databricks, ADLS Gen 2, or Fabric).
+- Authentication credentials stored securely in Azure Key Vault for ADLS and Azure Databricks.
+- The specific tables to federate.
 
 ### Federated tables
 
-Federated tables appear in the Sentinel data lake schema and can be queried like native tables. Federated table names follow the pattern `<tableName>_<connectorInstanceName>`. For example, if your connector instance is named `my_adls_connector` and you federate with a table named `widgets`, the federated table name is `widgets_my_adls_connector`.
+Federated tables are tables that come from a federated connection. Federated tables appear in the Sentinel data lake **Table Management** page and can be queried like native tables. Federated table names follow the pattern `<tableName>_<connectorInstanceName>`. For example, if your connector instance is named `ADLS01` and you federate with a table named `widgets`, the federated table name is `widgets_ADLS01`.
 
 ### Connector instances
 
@@ -61,15 +61,16 @@ Each configured connection to an external data source is called a connector inst
 
 Before setting up data federation, ensure you meet the following requirements:
 
-- **Sentinel data lake onboarding**: Your Microsoft Sentinel workspace must be onboarded to the Sentinel data lake.
-- **Public accessibility**: The federation source must be publicly accessible. Private endpoints aren't supported currently.
-- **Service principal**: A service principal with appropriate permissions in the data source you want to connect with.  
-- **Azure Key Vault**: An Azure Key Vault to store authentication secrets for the service principal. You need to configure permissions for both the service principal as well as the Microsoft Sentinel managed identity to read secrets from the key vault.
+- Sentinel data lake onboarding: Your tenant must be onboarded to the Sentinel data lake. For more information, see [Onboard to Microsoft Sentinel data lake](./sentinel-lake-onboard-defender.md).
+- Public accessibility: The external source must be publicly accessible. Private endpoints aren't supported currently. 
+- Service principal: A service principal with appropriate permissions in the data source you want to connect with is required for Azure Databricks and Azure Data Lake Storage Gen2 sources.
+- Azure Key Vault: An Azure Key Vault to store authentication secrets for the service principal. You need to configure permissions for Microsoft Sentinel managed identity to read secrets from the key vault.
+
 
 ## How federation works
 
 1. **Configure authentication**: Create a service principal and store its credentials in Azure Key Vault.
-2. **Create a federated connection**: Use the Data connectors page in Microsoft Sentinel to create a connector instance for your chosen federation source.
+2. **Create a federated connection**: Use the Data connectors page in Microsoft Sentinel to create a connector instance for your chosen data federation source.
 3. **Select tables**: Choose which tables from the external source to federate.
 4. **Query federated data**: Use data lake experiences such as KQL queries, Notebooks, or MCP tools to access federated tables alongside native Sentinel data. 
 
@@ -77,29 +78,28 @@ Before setting up data federation, ensure you meet the following requirements:
 
 Data federation lets you access data that resides outside of the data lake. This is especially valuable in the following scenarios:
 
-+ Operationalization across multiple teams and systems.
++ Data sources that are operationalized across multiple teams and systems.
 
 + Years of historical data that you want to naturally age out and isn't cost effective to ingest.
 
 + Regional or compliance regulations that constrain data from being copied.
 
-+ Data that is not frequently accessed and is only contextually relevant in limited scenarios. 
++ Data that isn't frequently accessed and is only contextually relevant in limited scenarios. 
 
 ## Benefits of data federation
 
 ### Unified security analytics
 
-Combine security event data in Sentinel with:
+Combine security event data in Sentinel with context from external sources, such as:
 
-- Business application data from Databricks
+- Analytics outputs from Databricks
 - Historical logs stored in ADLS Gen 2
-- Analytics outputs from Microsoft Fabric
+- Business application data from Microsoft Fabric
 
 ### Cost efficiency
 
 - Reduce data ingestion costs by querying data in place
 - Avoid storage duplication across systems
-- Optimize retention strategies by keeping specialized data in appropriate storage tiers
 
 ### Operational flexibility
 
@@ -108,10 +108,14 @@ Combine security event data in Sentinel with:
 - Support complex investigations that span multiple data sources
 
 ## Limitations
-
-- Federated sources must be publicly accessible; private endpoints aren't supported.
-- Federation is read-only; you can't write data back to federated sources.
+- Data sources must be publicly accessible. Private endpoints aren't supported.
+- Azure Key Vault networking needs to be set for **Allow public access from all networks**, which is the default for Key Vault, during configuration of ADLS or Azure Databricks connection instances. Once you complete creating or editing a connection, the associated Key Vault can have a different networking setting configured.
+- Federated connections to Microsoft Fabric support schema-enabled lakehouses, where workspaces aren't enabled for outbound access protection.
+- Data federation is read-only; you can't write data back to federated sources.
 - Query performance depends on the external source's responsiveness and data volume.
+- Federated connections to a Fabric source can have a maximum of 100 tables within the connection instance.
+- You can have a maximum of 100 connector instances. Azure Databricks and ADLS use one connector instance per federated connection. Microsoft Fabric uses one connector instance per lakehouse schema in a federated connection.
+
 
 ## Next steps
 
