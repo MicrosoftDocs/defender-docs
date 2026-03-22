@@ -43,15 +43,15 @@ It's important to understand the following prerequisites before creating indicat
 
 Integration into Microsoft browsers is controlled by the browser's SmartScreen setting. For other browsers and applications, your organization must have:
 
-- [Microsoft Defender Antivirus](/defender-endpoint/microsoft-defender-antivirus-windows) configured in active mode.
+- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md) configured in active mode.
 
-- [Behavior Monitoring](/defender-endpoint/behavior-monitor) enabled.
+- [Behavior Monitoring](behavior-monitor.md) enabled.
 
 - [Cloud-based protection](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus) turned on.
 
-- [Cloud Protection network connectivity](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus).
+- [Cloud Protection network connectivity](configure-network-connections-microsoft-defender-antivirus.md).
 
-- The anti-malware client version must be `4.18.1906.x` or later. See [Monthly platform and engine versions](/defender-endpoint/microsoft-defender-antivirus-updates).
+- The anti-malware client version must be `4.18.1906.x` or later. See [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md).
 
 ### Supported operating systems
 
@@ -60,8 +60,8 @@ Integration into Microsoft browsers is controlled by the browser's SmartScreen s
 - Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
-- Windows Server 2016 running [Defender for Endpoint modern unified solution](/defender-endpoint/onboard-server#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) (requires installation through MSI)
-- Windows Server 2012 R2 running [Defender for Endpoint modern unified solution](/defender-endpoint/onboard-server#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) (requires installation through MSI)
+- Windows Server 2016 running [Defender for Endpoint modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) (requires installation through MSI)
+- Windows Server 2012 R2 running [Defender for Endpoint modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) (requires installation through MSI)
 - Azure Stack HCI OS, version 23H2 and later
 - macOS
 - Linux
