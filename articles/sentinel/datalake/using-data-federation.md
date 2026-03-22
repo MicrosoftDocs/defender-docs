@@ -6,7 +6,7 @@ author: EdB-MSFT
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: how-to
-ms.date: 03/19/2026
+ms.date: 03/22/2026
 ms.author: edbaynash
 ms.collection: ms-security
 
@@ -21,7 +21,7 @@ After setting up federated data connectors, you can access your federated tables
 
 Before you begin, ensure:
 
-- You have [set up federated data connectors](data-federation-setup.md) for your external data sources.
+- Your tenant must be onboarded to the Sentinel data lake. For more information, see [Onboard to Microsoft Sentinel data lake](./sentinel-lake-onboard-defender.md)
 - You have appropriate permissions to query data in the Sentinel data lake.
 
 ## Understand federated table naming
@@ -61,7 +61,7 @@ Select a table row to open the details panel. The panel contains three tabs:
 
 ## Query federated tables using KQL
 
-The KQL queries page in Microsoft Sentinel allows you to query federated tables alongside native Sentinel data.
+The KQL queries page in Microsoft Sentinel allows you to query federated tables alongside native Sentinel data. Federated tables are supported for KQL jobs, interactive and async queries, and MCP tools.
 
 1. Navigate to **Microsoft Sentinel** > **Data lake exploration** > **KQL queries**.
 
@@ -69,7 +69,7 @@ The KQL queries page in Microsoft Sentinel allows you to query federated tables 
 1. Select  **System Tables** as one of the workspaces.
 1. In the **Schema** tab, expand the **System tables** section.
 1. Expand the **Federated tables** section.
-1. Find the federation type for your data source (such as Azure Databricks or Azure Data Lake Storage Gen2).
+1. Find the federation type for your data source, such as Microsoft Fabric, Azure Databricks, or Azure Data Lake Storage Gen2.
 1. Expand the federation type to see your federated tables.
 1. Expand a table to view its columns.
 
@@ -79,9 +79,9 @@ The KQL queries page in Microsoft Sentinel allows you to query federated tables 
 
 Queries against federated tables work like queries against native lake tables with a few important differences:
 
-+ It's possible for a change to occur to the schema of a table in the external source.  This can result in a failure during a query that indicates a column isn’t present. Refresh columns on Table management page by selecting the federated table, selecting the **Schema** tab and selecting **Refresh Schema**.
++ It's possible for a change to occur to the schema of a table in the external source. This can result in a failure during a query that indicates a column isn’t present. Refresh columns on Table management page by selecting the federated table, selecting the **Schema** tab and selecting **Refresh Schema**.
 
-+ Federated tables without a `TimeGenerated` column, or where a `TimeGenerated` column is present with data in the wrong format, can't be used in data lake explorer to select time ranges in the user interface. Define date filters in the body of the KQL that match your federated table's date format. 
++ Federated tables without a `TimeGenerated` column, or where a `TimeGenerated` column is present with data in the wrong format, can't be used in data lake explorer to select time ranges using the time picker in the user interface. Define date filters in the body of the KQL that match your federated table's date format. 
 
 ### Create KQL jobs from federated queries
 
@@ -93,9 +93,24 @@ You can create KQL jobs based on queries that use federated tables:
 1. Save the job.
 
 > [!NOTE] 
-> If federated tables don't contain `TimeGenerated` columns, or your output doesn’t contain a `TimeGenerated` column with a properly formatted date value for each row, KQL queries won't function on the table once its created in the lake. 
+> + Writing data to a federated table isn't supported. KQL output is created based on the same criteria used today when creating a KQL job, where it can write out to a new or existing table based on your selected destination.
+>
+> + If federated tables don't contain `TimeGenerated` columns, or your output doesn’t contain a `TimeGenerated` column with a properly formatted date value for each row, KQL queries won't function on the table once its created in the lake. 
 
 Federated tables are fully supported for KQL jobs, async queries, and MCP tools.
+
+## Create MCP tool with federated table queries
+
+You can create MCP tools based on queries that use federated tables:
+
+1.	Write and test your KQL query using federated tables.
+
+1.	Select the **Save as tool** button above the query editor.
+1.	Adjust the query as needed, for example, parameterize values.
+1.	For any reference of a federated table, ensure you prefix the table name with `workspace("default").`.  For example, if your table was `widgets_ADLS01`, your code shows `workspace("default").widgets_ADLS01` for that table.
+1.	Save the tool.
+
+
 
 ## Use federated tables in Jupyter notebooks
 
@@ -160,8 +175,10 @@ large_dataset_adls_connector
 **Query returns no results**
 
 - Verify the connector instance is in a connected state.
+- Verify the external data source is available, along with the tables targeted in the query.
+- Verify permissions weren't removed from the service principal or Sentinel managed identity based on the targeted data source.
 - Check that you're using the correct federated table name format.
-- Ensure System Tables is selected as the workspace scope in KQL queries.
+- Ensure System Tables is available in the navigation pane for your KQL queries or Notebook session.
 
 **Query is slow**
 
@@ -174,6 +191,11 @@ large_dataset_adls_connector
 - Review the table schema in the table management view.
 - Adjust your query to handle schema differences.
 - Check if the external table schema has changed since connector creation.
+
+**Not able to run MCP tools for federated tables**
+
+Ensure you prefixed the table name with `workspace("default").` wherever you reference a federated table within the MCP tool.
+
 
 ## Next steps
 
