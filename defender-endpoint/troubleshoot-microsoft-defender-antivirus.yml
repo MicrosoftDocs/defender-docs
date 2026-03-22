@@ -1135,7 +1135,7 @@ sections:
 
          When a dynamic signature is received by Defender for Endpoint, a 2010 event is reported. However, when the dynamic signature expires or is manually deleted, a 2011 event is reported. In some cases, when a new signature is delivered to Defender for Endpoint, sometimes hundreds of dynamic signatures expire at the same time, resulting in hundreds of 2011 events reported. The generation of so many 2011 events can cause a Security Information and Event Management (SIEM) server to become flooded.
 
-         To avoid this situtation, beginning with [platform version 4.18.2207.7](/defender-endpoint/msda-updates-previous-versions-technical-upgrade-support#august-2022-platform-41822077--engine-11196003), by default, Defender for Endpoint doesn't report 2011 events. Keep the following points in mind:
+         To avoid this situtation, beginning with [platform version 4.18.2207.7](msda-updates-previous-versions-technical-upgrade-support.md#august-2022-platform-41822077--engine-11196003), by default, Defender for Endpoint doesn't report 2011 events. Keep the following points in mind:
 
             - This new default behavior is controlled by the following registry entry: `HKLM\SOFTWARE\Microsoft\Windows Defender\Reporting\EnableDynamicSignatureDroppedEventReporting`
             - The default value for `EnableDynamicSignatureDroppedEventReporting` is `false`, which means 2011 events aren't reported. If it's set to `true`, 2011 events are reported.

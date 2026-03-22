@@ -171,13 +171,13 @@ There are several ways to uninstall Microsoft Defender for Endpoint on macOS. Al
 
 All of the uninstall of Microsoft Defender for Endpoint on macOS require the following:
 
-1. Create a [device tag](/defender-endpoint/machine-tags), and name the tag *decommissioned* and assign it to the macOS where Microsoft Defender for macOS is being uninstalled.
+1. Create a [device tag](machine-tags.md), and name the tag *decommissioned* and assign it to the macOS where Microsoft Defender for macOS is being uninstalled.
 
-1. Create a [Device group](/defender-endpoint/machine-groups) and name it (for example, *Decommissioned macOS*) and assign a user *group* that should be able to see them.
+1. Create a [Device group](machine-groups.md) and name it (for example, *Decommissioned macOS*) and assign a user *group* that should be able to see them.
 
    Note: Steps 1 and 2 are optional if you don't want to see these devices that are retired in the "Device inventory" for 180 days.
    
-1. Remove the "Set Preferences" policies that contain [Tamper Protection](/defender-endpoint/tamperprotection-macos) or through the manual configuration.
+1. Remove the "Set Preferences" policies that contain [Tamper Protection](tamperprotection-macos.md) or through the manual configuration.
 
 1. In the Microsoft Defender portal, in the navigation pane, select **Settings** > **Offboard**, and then select the operating system to start the process.
 
@@ -213,7 +213,7 @@ The offboarding profile should be uploaded without any modifications, and with P
 
 When threats are detected, your security team can view detections and if necessary, take response actions on a device in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). The Microsoft Defender combines protection, detection, investigation, and response to threats in a central location. For more information, see the following resources:
 
-- [Overview of endpoint detection and response](/defender-endpoint/overview-endpoint-detection-response)
+- [Overview of endpoint detection and response](overview-endpoint-detection-response.md)
 - [Tech Community blog: EDR capabilities for macOS have now arrived](https://techcommunity.microsoft.com/t5/microsoft-defender-atp/edr-capabilities-for-macos-have-now-arrived/ba-p/1047801)
 - [Microsoft Defender portal overview](/defender-xdr/microsoft-365-defender-portal)
 
