@@ -135,7 +135,10 @@ For more information on Microsoft Entra tokens, see [Microsoft Entra tutorial](/
 > Some Microsoft Defender for Endpoint APIs continue to require access tokens issued for the legacy resource `https://api.securitycenter.microsoft.com`. If the token audience doesn't match the resource expected by the API, requests fail with `403 Forbidden`, even if the API endpoint uses `https://api.security.microsoft.com`. Use `https://api.securitycenter.microsoft.com` as the resource or scope when acquiring tokens.
 
 - Copy/Paste the below class in your application.
-- Use **AcquireUserTokenAsync** method with your application ID, tenant ID, user name, and password to acquire a token.
+- Use **AcquireUserTokenAsync** method with your application ID, tenant ID, user name, and user authentication to acquire a token.
+
+> [!NOTE]
+> Microsoft recommends that you use the most secure authentication flow available. The authentication flow described in the following example requires a very high degree of trust in the application, and carries risks that are not present in other flows. You should only use this flow when other more secure flows, such as managed identities, aren't viable.
 
     ```csharp
     namespace WindowsDefenderATP
