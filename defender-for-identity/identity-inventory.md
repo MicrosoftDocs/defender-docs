@@ -89,7 +89,7 @@ The **Identities** list highlights key details for each human identity, includin
 | Domain | The Active Directory domain to which the identity belongs. |
 | Object ID | A unique identifier for the identity in Microsoft Entra ID. |
 | UPN (User Principal Name) | The unique sign-in name of the identity in an email-like format. |
-| Identity environment |  Indicates whether the identity is on-premises (originates from Active Directory), Cloud only (Entra ID) or Hybrid (synced from Azure Active Directory to Microsoft Entra ID). |
+| Identity environment | Indicates whether the identity is on-premises (originates from Active Directory), Cloud only (Entra ID) or Hybrid (synced from Azure Active Directory to Microsoft Entra ID). |
 | Identity provider | The name of the identity provider. |
 | Risk score | The risk score assigned to the identity. |
 | Criticality level | The criticality level assigned to the identity. |

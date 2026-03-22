@@ -86,7 +86,7 @@ The **Observed in organization** tab shows where and how the identity appears ac
 This tab can include:
 
 | Section | Description |
-|----|----|
+| ---- | ---- |
 | Accounts | All accounts associated with the identity across identity systems, including automatically and manually correlated accounts. Analysts can [manually link other related accounts](/defender-for-identity/manage-related-identities-accounts). An indicator shows which account is the primary account. |
 | Devices | Devices the identity signed into. This usually shows you recent activity, |
 | Locations | Locations observed for sign-ins |
@@ -102,11 +102,11 @@ Microsoft Defender uses internal correlation logic to determine the primary acco
 
 ## Risk score tab
 
-The **Risk score** tab summarizes the identity's risk level by combining alert activity with identity attributes like role assignments and sensitivity classification. Use this tab to understand an identity's risk level, identify contributing factors, and prioritize investigation.
+The **Risk score** tab summarizes the identity's risk level by combining alert activity with identity attributes like role assignments and sensitivity classification. Use this tab to understand an identity's risk score, identify contributing factors, and prioritize investigation.
 
 | Section | Description |
 | --- | --- |
-| **Risk Summary** | Displays the identity's overall risk score (0–100) and shows how it compares to other identities in your organization by percentile. Also lists the account sets linked to the identity. |
+| **Risk Summary** | Displays: <ul><li>The identity's overall risk score (0–100)</li><li>How the identity compares to other identities in your organization by percentile</li><li>The account sets linked to the identity</li><li>For each Entra account, shows the Entra ID risk. Select the Entra ID risk level to see timeline details</li><li></li><li>Likelihood of compromise</li><li>Impact of compromise</li></ul> |
 | **Likelihood of Compromise** | Shows the likelihood severity level and breaks down alerts by MITRE ATT&CK kill chain stage (for example, Initial Access, Persistence, and Privilege Escalation) for each account set. |
 | **Impact of Compromise** | Shows the potential impact level based on the identity's criticality level, classification (for example, Global Administrator), and Microsoft Entra Privileged Identity Management (PIM) role assignments. |
 | **Risk Trend** | A line chart that shows how the risk score changed over a configurable time period (for example, 30 days). Select **Go to timeline** to view the full activity timeline. |
