@@ -8,7 +8,6 @@ audience: ITPro
 author: paulinbar
 ms.author: painbar
 ms.reviewer: sugamar; moeghasemi
-manager: bagol
 ms.subservice: asr
 ms.collection: 
 - m365-security

@@ -10,7 +10,6 @@ ms.sitesec: library
 ms.localizationpriority: medium
 ms.author: bagol
 author: batamig
-manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

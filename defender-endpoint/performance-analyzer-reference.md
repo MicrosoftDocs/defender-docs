@@ -8,7 +8,6 @@ ms.service: defender-endpoint
 ms.topic: troubleshooting
 ms.date: 11/22/2024
 ms.subservice: ngp
-manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection: 
