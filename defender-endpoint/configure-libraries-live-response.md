@@ -108,8 +108,8 @@ To view audit logs for library management actions:
    - **Activities - friendly names**: **Ran live response session**
    - **Record Types**: **MSDEResponseActions**
 
-    :::image type="content" source="media/configure-libraries-live-response/library-management-audit-search.png" alt-text="Screenshot of the audit log search criteria for library management actions":::
+    :::image type="content" source="media/configure-libraries-live-response/library-management-audit-search.png" alt-text="Screenshot of the audit log search criteria for library management actions" lightbox="media/configure-libraries-live-response/library-management-audit-search.png":::
 
 1. Review the results to see the library management actions performed, including the user, timestamp, and a description of the action. For example, the action description may be: **Library management - downloaded file** or **Library management - created file**, with specific details about the file involved in the action.
 
-    :::image type="content" source="media/configure-libraries-live-response/library-management-audit-result.png" alt-text="Screenshot of the audit log showing library management actions":::
+    :::image type="content" source="media/configure-libraries-live-response/library-management-audit-result.png" alt-text="Screenshot of the audit log showing library management actions" lightbox="media/configure-libraries-live-response/library-management-audit-result.png":::
