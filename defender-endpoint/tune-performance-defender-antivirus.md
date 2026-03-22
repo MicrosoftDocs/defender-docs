@@ -130,6 +130,6 @@ Starting with Defender version `4.18.2206.X`, users are able to view scan skip r
 
 To ensure machine-readable output for exporting with other data processing systems, it's recommended to use `-Raw` parameter for `Get-MpPerformanceReport`. See the following sections for more details.
 
-### [Microsoft Defender Antivirus Performance Analyzer reference](/defender-endpoint/performance-analyzer-reference)
+### [Microsoft Defender Antivirus Performance Analyzer reference](performance-analyzer-reference.md)
 
 
