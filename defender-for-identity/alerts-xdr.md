@@ -6,12 +6,14 @@ ms.topic: conceptual
 ms.reviewer: yossidahan
 ---
 
-# Microsoft Defender for Identity XDR security alerts
+#  Microsoft Defender for Identity alerts in Microsoft Defender format
 
-This article lists all Defender for Identity Extended Detection and Response (XDR) security alerts. XDR security alerts are based on alerts sent by Defender for Identity to the Microsoft Defender portal.
+This article lists all Defender for Identity security alerts in the Defender format. These security alerts are based on alerts sent by Defender for Identity to the Microsoft Defender portal.
 
-> [!NOTE]
-> For alerts that continue to use the classic structure, see [Classic Defender for Identity security alerts](alerts-overview.md).
+Defender for Identity generates alerts in both the Defender format and the [classic format](alerts-overview.md). 
+The Defender format provides an alert structure that is consistent with other Microsoft Defender products.  Both formats are based on the same underlying detections from Defender for Identity sensors, but they differ in structure, naming, and categorization. 
+You can identify the format of each alert on the security alerts page by checking the **Detection source** field.
+
 
 ## Alert name mapping
 

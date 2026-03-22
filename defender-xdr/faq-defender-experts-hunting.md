@@ -6,7 +6,6 @@ ms.service: defender-experts-for-hunting
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection:
   - m365-security

@@ -4,7 +4,6 @@ description: Microsoft Defender Antivirus engines and advanced technologies
 author: chrisda
 ms.author: chrisda
 ms.reviewer: yongrhee
-manager: bagol
 ms.service: defender-endpoint
 ms.topic: overview
 ms.date: 01/24/2025

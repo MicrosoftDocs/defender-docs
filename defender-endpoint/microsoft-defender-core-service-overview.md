@@ -3,7 +3,6 @@ title: Microsoft Defender Core service overview
 description: Get an overview of Microsoft Defender Core service.
 author: paulinbar
 ms.author: painbar
-manager: bagol
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.subservice: ngp

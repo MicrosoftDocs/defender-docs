@@ -6,7 +6,6 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: ratujdange, ardeshmukh
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
