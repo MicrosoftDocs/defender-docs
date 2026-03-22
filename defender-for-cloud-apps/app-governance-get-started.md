@@ -82,6 +82,7 @@ For more information about each role, see [Administrator role permissions](/azur
 > App governance alerts won't flow to Microsoft Defender XDR or show up in app governance until you have provisioned both Defender for Cloud Apps and Microsoft Defender XDR by accessing their respective portals at least once.
 >
 > The Cloud App Security Admin role grants permissions turn on app governance for Microsoft Defender for Cloud Apps. However, this role doesn't grant access to view or manage app governance capabilities. To view or manage app governance capabilities, you must also have one of the other roles listed in the table  below.
+>
 > Microsoft recommends that you use roles with the fewest permissions. This strategy helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Next steps
