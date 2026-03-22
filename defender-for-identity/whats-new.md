@@ -33,6 +33,29 @@ You can now migrate Defender for Identity sensors from v2.x to v3.x directly fro
 
 Defender for Identity sensor v3.x now supports domain controllers that also run AD FS, AD CS, or Microsoft Entra Connect identity roles. Detections and identity security posture management (ISPM) recommendations for these roles will roll out gradually, starting with Microsoft Entra Connect. For v3, these domain controllers require Windows Server 2019 or later with at least the [March 2026 Cumulative Update](https://support.microsoft.com/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea). For deployment details, see [Defender for Identity deployment overview](deploy/deploy-defender-identity.md) and [Sensor v3.x prerequisites](deploy/prerequisites-sensor-version-3.md).
 
+### New Defender for Identity security alerts
+
+These new alerts were added to the Defender for Identity security alerts:
+
+**New alerts related to Entra ID**:
+
+- [Attempt to disable Defender for Identity service principal observed](alerts-xdr.md#attempt-to-disable-defender-for-identity-service-principal-observed)
+- [Suspicious Entra account enablement after disruption](alerts-xdr.md#suspicious-entra-account-enablement-after-disruption)
+- [Suspicious Intune device registration activity](alerts-xdr.md#suspicious-intune-device-registration-activity)
+- [Suspicious OS switch sign-in](alerts-xdr.md#suspicious-os-switch-sign-in)
+- [Suspicious shared client infrastructure activity](alerts-xdr.md#suspicious-shared-client-infrastructure-activity)
+- [Suspicious sign-in from unusual user agent and IP address using PowerShell](alerts-xdr.md#suspicious-sign-in-from-unusual-user-agent-and-ip-address-using-powershell)
+- [Suspicious sign-in from unusual user agent and IP address using device code flow](alerts-xdr.md#suspicious-sign-in-from-unusual-user-agent-and-ip-address-using-device-code-flow)
+
+**New alerts related to Active Directory**:
+
+- [Suspicious on-prem account enablement after disruption](alerts-xdr.md#suspicious-on-prem-account-enablement-after-disruption)
+- [Suspicious resource-based constrained delegation (RBCD) attribute change](alerts-xdr.md#suspicious-resource-based-constrained-delegation-rbcd-attribute-change)
+- [Suspicious resource-based constrained delegation (RBCD) authentication](alerts-xdr.md#suspicious-resource-based-constrained-delegation-rbcd-authentication)
+
+### Suspected pass-the-ticket attack alert is now generally available
+
+The [Suspected pass-the-ticket attack](alerts-xdr.md#suspected-pass-the-ticket-attack) alert is now generally available. This alert was previously available in public preview as *Pass-the-Ticket (PtT) attack*. For more information, see [Lateral movement alerts](alerts-xdr.md).
 
 ### Updates to Secure Score category calculations for increased accuracy
 
@@ -83,7 +106,7 @@ These new alerts were added to the Defender for Identity security alerts:
 
 **New alerts related to Active Directory**:
 
-- [Pass-the-Ticket (PtT) attack (Preview)](alerts-xdr.md#pass-the-ticket-ptt-attack-preview)
+- [Pass-the-Ticket (PtT) attack](alerts-xdr.md#suspected-pass-the-ticket-attack)
 - [Possible Active Directory Certificate Services enumeration](alerts-xdr.md#possible-active-directory-certificate-services-enumeration)
 - [Possible Active Directory enumeration via ADWS](alerts-xdr.md#possible-active-directory-enumeration-via-adws)
 - [Suspicious NTLM authentication](alerts-xdr.md#suspicious-ntlm-authentication)
@@ -112,8 +135,8 @@ Weâ€™re gradually rolling out automatic Windows event-auditing configuratio
 This update might identify existing auditing configuration gaps that weren't previously detected.
 To ensure consistent protection, we recommend that you make sure all servers with the v3 sensors are configured with:
 
-- The latest Windows cumulative update 
-- Automatic Windows event auditing enabled 
+- The latest Windows cumulative update.
+- Automatic Windows event auditing enabled.
 For more information, see [Configure automatic windows auditing](deploy/configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically-preview).
 
 ### Sensor updates
@@ -134,7 +157,7 @@ For more information, see:[Security posture assessment: Identify service account
 
 This identity security posture assessment lists Active Directory accounts that are members of built-in Operator Groups, including direct and indirect membership. 
 
-You can use this assessment to review legacy or unnecessary operator access and take action when elevated access isnâ€™t required.
+You can use this assessment to review legacy or unnecessary operator access and take action when elevated access isn't required.
 
 For more information, see:[Security posture assessment: Locate accounts in built-in Operator Groups](security-posture-assessments/accounts.md#locate-accounts-in-built-in-operator-groups)
 
