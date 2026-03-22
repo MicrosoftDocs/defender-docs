@@ -50,26 +50,20 @@ Before you create a rule, decide which correlation type fits your scenario. The 
 1. Select the **Correlation Type** (Root UPN Prefix, Root UPN Suffix, Domain UPN, or Employee ID).
 1. Enter the required values for the selected correlation type, such as prefixes, suffixes, domains, or employee IDs.
 1. Review the summary, which includes the rule name, correlation type, and selected values.
-1. Select **Submit** to create the rule.
-
-> Correlation rule changes take effect within 12 hours.
+1. Select **Submit** to create the rule. Correlation rule changes take effect within 12 hours.
 
 ## Edit a correlation rule
 
 1. On the **Account Correlation Rules** page, select the checkbox next to the rule you want to edit. You can select only one rule at a time.
 1. Select **Edit**.
 1. In the wizard, update the rule configuration as needed.
-1. Review your changes, and then select **Save**.
-
-Changes take effect within 12 hours.
+1. Review your changes, and then select **Save**. Changes take effect within 12 hours.
 
 ## Remove a correlation rule
 
 1. On the **Account Correlation Rules** page, select the checkbox next to the rule you want to remove.
 1. Select **Delete**.
-1. In the confirmation prompt, select **Remove** to confirm, or **Cancel** to abort.
-
-Correlation rule changes take effect within 12 hours.
+1. In the confirmation prompt, select **Remove** to confirm, or **Cancel** to abort. Correlation rule changes take effect within 12 hours.
 
 ## Related content
 

@@ -25,6 +25,10 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## March 2026
 
+### **Custom account correlation rules (Preview)**
+
+ Custom account correlation rules let you link accounts that belong to the same identity, such as privileged accounts with unique naming conventions. You can correlate accounts that don't share strong identifiers such as account ID, SID, object ID, or UPN by defining rules based on UPN prefix, UPN suffix, domain UPN, or employee ID. For more information, see [Create custom account correlation rules](custom-account-correlation-rules.md).
+
 ### New Defender for Identity security alerts
 
 These new alerts were added to the Defender for Identity security alerts:
