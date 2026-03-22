@@ -27,7 +27,7 @@ appliesto:
 
 ## Requirements
 
-Device control for macOS is available on the versions listed in the [System requirements](/defender-endpoint/microsoft-defender-endpoint-mac) section of Defender for Endpoint on macOS documentation.
+Device control for macOS is available on the versions listed in the [System requirements](microsoft-defender-endpoint-mac.md) section of Defender for Endpoint on macOS documentation.
 
 ## Overview
 
