@@ -97,7 +97,7 @@ The following options are available for managing existing files in the library:
 | **Delete** | Remove a selected file from the list. | Top menu, right-click menu |
 | **Filter** | Filter the list of files based on specific criteria, such as type or creation date. | Top menu |
 
-## Audit logging
+## View audit logs for library management actions
 
 Library management actions are tracked in the Microsoft Defender [audit log](/defender-xdr/microsoft-xdr-auditing). Defender tracks actions such as upload, download, delete, or listing files, and you can view details on these actions in the audit log. This provides visibility into how library files are managed across your organization.
 
