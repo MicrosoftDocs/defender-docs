@@ -140,7 +140,7 @@ For more information on Microsoft Entra tokens, see [Microsoft Entra tutorial](/
 > [!NOTE]
 > Microsoft recommends that you use the most secure authentication flow available. The authentication flow described in the following example requires a very high degree of trust in the application, and carries risks that are not present in other flows. You should only use this flow when other more secure flows, such as managed identities, aren't viable.
 
-    ```csharp
+```csharp
     namespace WindowsDefenderATP
     {
         using System.Net.Http;
@@ -176,7 +176,7 @@ For more information on Microsoft Entra tokens, see [Microsoft Entra tutorial](/
             }
         }
     }
-    ```
+```
 
 ## Validate the token
 
