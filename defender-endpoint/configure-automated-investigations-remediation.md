@@ -6,7 +6,6 @@ ms.subservice: edr
 author: paulinbar
 ms.author: painbar
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

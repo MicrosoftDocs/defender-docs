@@ -5,7 +5,6 @@ ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
 author: paulinbar
-manager: bagol
 ms.author: painbar
 ms.topic: how-to
 ms.custom: nextgen
