@@ -9,7 +9,6 @@ ms.topic: overview
 ms.localizationpriority: medium
 ms.date: 04/16/2025
 ms.subservice: macos
-manager: bagol
 ms.custom: partner-contribution
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

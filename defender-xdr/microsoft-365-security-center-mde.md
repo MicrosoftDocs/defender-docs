@@ -7,7 +7,6 @@ f1.keywords:
 - NOCSH
 ms.author: guywild
 author: diannegali
-manager: deniseb
 ms.date: 10/16/2024
 audience: ITPro
 ms.topic: article

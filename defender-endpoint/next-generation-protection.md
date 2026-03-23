@@ -7,7 +7,6 @@ ms.topic: concept-article
 author: batamig
 ms.author: bagol
 ms.reviewer: yongrhee
-manager: bagol
 ms.custom: nextgen
 ms.subservice: ngp
 ms.collection: 

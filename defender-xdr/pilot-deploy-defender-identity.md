@@ -9,7 +9,6 @@ ms.author: guywild
 author: guywi-ms
 ms.date: 01/12/2025
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection: 
   - m365-security

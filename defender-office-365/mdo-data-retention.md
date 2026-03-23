@@ -2,9 +2,8 @@
 title: Microsoft Defender for Office 365 data retention
 f1.keywords:
 - NOCSH
-ms.author: chrisda
-author: chrisda
-manager: deniseb
+ms.author: dansimp
+author: dansimp
 ms.date: 05/08/2025
 audience: ITPro
 ms.topic: article

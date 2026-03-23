@@ -7,7 +7,6 @@ ms.date: 06/25/2024
 ms.author: lwainstein
 author: limwainstein
 ms.topic: article
-manager: bagol
 audience: ITPro
 ms.subservice: asr
 ms.collection: 
