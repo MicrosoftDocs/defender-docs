@@ -70,12 +70,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 > [!NOTE]
 > The connector covers all users in your organization that use the Atlassian platform, and shows activities from Confluence, Jira, and specific Bitbucket activities. For more information about Atlassian activities, see [Atlassian audit log activities](https://support.atlassian.com/security-and-access-policies/docs/track-organization-activities-from-the-audit-log/#Auditlogging-Accessauditlogactivities).
 
-### API key scopes
-When creating the Atlassian API key for Microsoft Defender for Cloud Apps, **do not select any scopes**.
 
-> [!NOTE]
-> The Atlassian App Connector currently supports API keys without scopes only. 
-> API keys created with scopes (including read‑only scopes) may fail to authenticate.
 
 ### Prerequisites
 
@@ -90,7 +85,9 @@ When creating the Atlassian API key for Microsoft Defender for Cloud Apps, **do 
 1. Sign in to the Atlassian Admin portal with an admin account.
 
 1. **Create an API key**. For more information, see [Manage an organization with the admin APIs](https://support.atlassian.com/organization-administration/docs/manage-an-organization-with-the-admin-apis/).
-
+> [!NOTE]
+> The Atlassian App Connector currently supports API keys without scopes only. 
+> API keys created with scopes (including read‑only scopes) may fail to authenticate.
 
 1. Give the following values to the API key:
 
