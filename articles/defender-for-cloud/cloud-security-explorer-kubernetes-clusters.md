@@ -44,10 +44,11 @@ For an introduction to Cloud Security Explorer queries, see [Build queries with 
 1. Select **Done**
 1. Select that **Maintains** > **Virtual machine clusters (group)** that **Has** > **Vulnerabilities**.
 1. Select **Search**.
+1. Select **View details** for the cluster node pool. 
 
     :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/security-cloud-explorer-kubernetes-nodes-results.png" alt-text="Screenshot of Cloud Security Explorer query options to retrieve list of cluster nodes with vulnerabilities." lightbox="./media/cloud-security-explorer-kubernetes-clusters/security-cloud-explorer-kubernetes-nodes-results.png":::
 
-1. Select **View details** for the cluster node pool. 
+
 1. In the **Result details** pane, select the **Virtual machine scale set** icon to view its vulnerabilities.
 
     :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/security-cloud-explorer-kubernetes-nodes-results-details.png" alt-text="Screenshot shows results of Cloud Security Explorer query to retrieve vulnerabilities in cluster nodes." lightbox="./media/cloud-security-explorer-kubernetes-clusters/security-cloud-explorer-kubernetes-nodes-results-details.png":::
