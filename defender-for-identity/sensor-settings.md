@@ -43,20 +43,17 @@ The **Sensors** tab shows the following columns. For columns with multiple possi
 - **Service status**: The current state of the sensor service on the server. For possible values, see [Service status](#service-status).
 - **Sensor status**: The current update and configuration state of the sensor software. For possible values, see [Sensor status](#sensor-status).
 - **Version**: The sensor version installed.
-- **Delayed update**: Whether delayed updates are enabled or disabled. For more information, see [Delayed sensor update](#delayed-sensor-update).
+- **Delayed update**: Whether delayed updates are enabled or disabled. Delayed updates are supported by version 2 of the sensor. For more information, see [Delayed sensor update](#delayed-update-for-sensor-v2x). 
 - **Health issues**: The count of open health issues on the sensor.
 - **Health status**: The overall health of the sensor based on the highest severity open health issue. For possible values, see [Health status](#health-status).
 - **Created**: The date the sensor was installed.
-
-> [!NOTE]
-> The **Delayed update** feature is supported only by sensor version 2.x.
 
 ### Type
 
 The type column indicates the sensor type based on the server role where the sensor is installed. If a sensor is installed on a domain controller that also runs Entra Connect or AD CS, the type shows as **Domain controller sensor**.
 
 | Type | Description |
-|---|---|
+| --- | --- |
 | **Domain controller sensor** | Installed on an Active Directory domain controller. |
 | **AD FS sensor** | Installed on an Active Directory Federation Services (AD FS) server. |
 | **Standalone sensor** | Installed on a dedicated server that monitors domain controller traffic via port mirroring. |
@@ -75,10 +72,10 @@ For a server to be eligible for migration, it must be:
 - Includes the [March 2026 or later](https://support.microsoft.com/en-us/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea) cumulative update.
 - Have Microsoft Defender for Endpoint deployed.
 
-For the full list of v3.x requirements, see [Defender for Identity sensor v3.x prerequisites](prerequisites-sensor-version-3.md).
+For the full list of v3.x requirements, see [Defender for Identity sensor v3.x prerequisites](./deploy/prerequisites-sensor-version-3.md).
 
 | State | Description |
-|---|---|
+| --- | --- |
 | **Ready for migration** | The server meets all prerequisites and can be migrated. |
 | **Not ready for migration** | The server doesn't meet one or more prerequisites. |
 | **Migrating** | The migration is in progress. |
