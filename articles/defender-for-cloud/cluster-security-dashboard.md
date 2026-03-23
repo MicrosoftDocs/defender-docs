@@ -19,6 +19,22 @@ The AKS Security Dashboard lets you:
 - Enable the Defender for Containers plan and configure settings for the specific AKS cluster.
 - Assign an owner and track progress on a security issue. This feature works when Defender Cloud Security Posture Management (Defender CSPM) is turned on for the subscription.
 
+## Prerequisites
+
+The AKS Security Dashboard shows security issues for a cluster if at least one of the following plans is enabled:
+
+- [Defender for Containers](tutorial-enable-containers-azure.md)
+- [Individual cluster](#plan-enablement) 
+- [Defender CSPM](tutorial-enable-cspm-plan.md) 
+
+## Using the AKS Security Dashboard
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+1. Search for **Kubernetes Services**
+1. Select **Clusters** > **relevant cluster**.
+1. Select **Microsoft Defender for Cloud**.
+
+:::image type="content" source="media/cluster-security-dashboard/kubernetes-center-cluster.png" alt-text="Screenshot that shows where to find the clusters page in the Azure portal." lightbox="media/cluster-security-dashboard/kubernetes-center-cluster.png":::
 
 ### Understand the dashboard sections
 
