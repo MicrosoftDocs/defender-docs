@@ -20,7 +20,7 @@ ms.collection:
 description: What are best practices for email and collaboration security settings in Microsoft 365? What are the current recommendations for standard protection? What should you use to be more strict? And what extras do you get if you also use Microsoft Defender for Office 365?
 ai-usage: ai-assisted
 ms.service: defender-office-365
-ms.date: 02/18/2026
+ms.date: 03/23/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -40,32 +40,26 @@ To automatically apply the Standard or Strict settings to users, use [Preset sec
 This article describes the default threat policy settings, and also the recommended Standard and Strict settings to help protect users. The tables contain the settings in the Microsoft Defender portal and Exchange Online PowerShell.
 
 > [!NOTE]
-> You can use the configuration analyzer to compare the settings in custom threat policies to the recommended Standard or Strict values. For more information, see [Configuration analyzer for threat policies](configuration-analyzer-for-security-policies.md).
 >
-> The Office 365 Advanced Threat Protection Recommended Configuration Analyzer (ORCA) module for PowerShell can help admins find the current values of these settings. Specifically, the **Get-ORCAReport** cmdlet generates an assessment of anti-spam, anti-phishing, and other message hygiene settings. You can download the ORCA module at <https://www.powershellgallery.com/packages/ORCA/>.
+> - Threat policies work best when the source email domains for your organization are correctly authenticated. Before tuning anti-phishing or other threat policies, verify the [email authentication](email-authentication-about.md) settings for outbound mail from each sending domains:
+>   - [Sender Policy Framework (SPF)](email-authentication-spf-configure.md): Authorizes the services permitted to send mail on behalf of your domain.
+>   - [DomainKeys Identified Mail (DKIM)](email-authentication-dkim-configure.md): Signs messages so recipients can verify the message wasn't altered and is authorized by the signing domain.
+>   - [Domain-based Message Authentication, Reporting, and Conformance (DMARC)](email-authentication-dmarc-configure.md): Tells recipient systems how to handle messages that fail authentication and whether authentication aligns with the visible From: domain.
 >
-> We recommend that you leave the Junk Email Filter in Outlook set to **No automatic filtering** to prevent unnecessary conflicts (both positive and negative) with the spam filtering verdicts from Microsoft 365. For more information, see the following articles:
+>   If SPF, DKIM, or DMARC are missing or misconfigured, legitimate messages might be delivered to the Junk Email folder or quarantine, even with the recommended threat policy settings. Fix authentication first, then review and tune policy settings.
 >
-> - [Configure junk email settings on cloud mailboxes](configure-junk-email-settings-on-exo-mailboxes.md)
-> - [About junk email settings in Outlook](configure-junk-email-settings-on-exo-mailboxes.md#about-outlook-junk-email-settings)
-> - [Change the level of protection in the Junk Email Filter](https://support.microsoft.com/office/e89c12d8-9d61-4320-8c57-d982c8d52f6b)
-> - [Create sender allowlists](create-safe-sender-lists-in-office-365.md)
-> - [Create sender blocklists](create-block-sender-lists-in-office-365.md)
+> - You can use the configuration analyzer to compare the settings in custom threat policies to the recommended Standard or Strict values. For more information, see [Configuration analyzer for threat policies](configuration-analyzer-for-security-policies.md).
+>
+> - The Office 365 Advanced Threat Protection Recommended Configuration Analyzer (ORCA) module for PowerShell can help admins find the current values of these settings. Specifically, the **Get-ORCAReport** cmdlet generates an assessment of anti-spam, anti-phishing, and other message hygiene settings. You can download the ORCA module at <https://www.powershellgallery.com/packages/ORCA/>.
+>
+> - We recommend that you leave the Junk Email Filter in Outlook set to **No automatic filtering** to prevent unnecessary conflicts (both positive and negative) with the spam filtering verdicts from Microsoft 365. For more information, see the following articles:
+>   - [Configure junk email settings on cloud mailboxes](configure-junk-email-settings-on-exo-mailboxes.md)
+>   - [About junk email settings in Outlook](configure-junk-email-settings-on-exo-mailboxes.md#about-outlook-junk-email-settings)
+>   - [Change the level of protection in the Junk Email Filter](https://support.microsoft.com/office/e89c12d8-9d61-4320-8c57-d982c8d52f6b)
+>   - [Create sender allowlists](create-safe-sender-lists-in-office-365.md)
+>   - [Create sender blocklists](create-block-sender-lists-in-office-365.md)
+>
 
-> [!TIP]
-> To see all information in the following tables in this article, use the :::image type="icon" source="media/m365-cc-sc-expand-table-icon.png" border="false"::: **Expand table** control at the top of each table.
-
-**Mail Authentication Prerequisites (SPF, DKIM, DMARC)**
-
-  Recommended threat policy settings work best when your organization's sending domains are correctly authenticated. Before tuning anti-phishing or other threat policies, confirm that outbound mail for each sending domain is configured for:
-
-•	SPF (Sender Policy Framework): Authorizes the services permitted to send mail on behalf of your domain.
-
-•	DKIM (DomainKeys Identified Mail): Signs messages so recipients can verify the message was not altered and is authorized by the signing domain.
-
-•	DMARC (Domain-based Message Authentication, Reporting, and Conformance): Tells recipients how to handle messages that fail authentication and whether authentication aligns with the visible From: domain.
-
-[!IMPORTANT] If SPF, DKIM, or DMARC are missing or misconfigured, legitimate messages may be routed to spam or quarantine even when recommended threat policy settings are in place. Fix authentication first, then review and tune policy settings.
 
 <a name='eop-anti-malware-policy-settings'></a>
 
