@@ -120,7 +120,7 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Date|Change log|
 |---|---|
 |03/23/2026|Renamed **Microsoft Defender process exclusions** section to **Client processes**, and aligned the content for all URL lists.|
-|15/08/2023|Removed URL:<br>Removed: <https://msdl.microsoft.com/download/symbols>|
+|15/08/2023|Removed URL: `https://msdl.microsoft.com/download/symbols`.|
 |05/12/2022|URL details updated:<br>Updated line 58: Updated from required to optional.<br>Updated line 62: Changed from optional to required. Guidance text updated. Added Mac and Linux.<br>Updated line 63: Changed from optional to required. Guidance text updated. Added Mac and Linux.<br>Updated line 64: Changed from optional to required. Guidance text updated. Added Mac and Linux.|
 |27/05/2022|Removed preview status from Server 2012 R2 and Server 2016 Unified Agent references.<br>Updated line 4: URL required for Mac and Linux platforms.<br>Updated line 5: URL required for Mac and Linux platforms.|
-|25/01/2022|Duplicate URLs consolidated.<br>Optional field added.<br>US Gov, GCC, and GCC High guidance moved to separate spreadsheet.<br>URLs removed:<br>eu-cdn.x.cp.wd.microsoft.com; wu-cdn.x.cp.wd.microsoft.com; *.azure-automation.net; *.notify.windows.com|
+|25/01/2022|Duplicate URLs consolidated.<br>Optional field added.<br>US Gov, GCC, and GCC High guidance moved to separate spreadsheet.<br>URLs removed:<br>`eu-cdn.x.cp.wd.microsoft.com`; `wu-cdn.x.cp.wd.microsoft.com`; `*.azure-automation.net`; `*.notify.windows.com`|
