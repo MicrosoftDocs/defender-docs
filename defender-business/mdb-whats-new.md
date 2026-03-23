@@ -3,7 +3,6 @@ title: What's new in Microsoft Defender for Business
 description: Learn about new features and capabilities in Microsoft Defender for Business.
 author: chrisda
 ms.author: chrisda
-manager: orspodek
 ms.date: 08/19/2025
 ms.topic: how-to
 ms.service: defender-business
