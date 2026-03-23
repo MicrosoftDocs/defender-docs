@@ -149,5 +149,6 @@ This article includes a list of the standard connectivity URLs required to onboa
 
 |Date|Change Log|
 |---|---|
+|03/23/2026|Moved client processes to shared include|
 |16/06/2025|Corrected row 94, Defender Core service and ECS, to be listed as "Required". <br> Corrected row 93, *.events.data.microsoft.com, to be listed as "Required".|
 |22/01/2024|Updates for URLs required for Microsoft Defender Core service and DLP service processes: <br> Added new line 93 for 1DS URL in Microsoft Defender URLs. <br> Added new line 94 for ECS URL in Microsoft Defender URLs. <br> Added new line 8 for Defender Core Service in Microsoft Defender Processes. <br> Added new line 9 for Purview DLP Process.|

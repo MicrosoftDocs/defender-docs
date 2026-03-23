@@ -119,6 +119,7 @@ This article includes a list of the standard connectivity URLs required to onboa
 
 |Date|Change log|
 |---|---|
+|03/23/2026|Added client processes section|
 |15/08/2023|Removed URL:<br>Removed: <https://msdl.microsoft.com/download/symbols>|
 |05/12/2022|URL details updated:<br>Updated line 58: Updated from required to optional.<br>Updated line 62: Changed from optional to required. Guidance text updated. Added Mac and Linux.<br>Updated line 63: Changed from optional to required. Guidance text updated. Added Mac and Linux.<br>Updated line 64: Changed from optional to required. Guidance text updated. Added Mac and Linux.|
 |27/05/2022|Removed preview status from Server 2012 R2 and Server 2016 Unified Agent references.<br>Updated line 4: URL required for Mac and Linux platforms.<br>Updated line 5: URL required for Mac and Linux platforms.|

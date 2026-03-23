@@ -194,6 +194,10 @@ Because these Defender for Endpoint-related processes generate network communica
 
 |Date|Change Log|
 |---|---|
+|03/23/2026|Added client processes section|
+|03/10/2026|Updated URL descriptions|
+|03/03/2026|Added Linux URL (config.edge.skype.com/config/v1) to Common endpoints|
+|02/25/2026|Added *.wdcpalt.microsoft.com to Windows 1607-1803 section|
 |04/07/2025|Removed dm.microsoft.com|
 |05/06/2024|Final adjustments before streamlined connectivity GA|
 |04/10/2024|Overhaul based on streamlined connectivity GA scope|

@@ -116,4 +116,15 @@ See the prerequisites for [streamlined connectivity](configure-device-connectivi
 
 ## Client processes
 
+Because these Defender for Endpoint-related processes generate network communications, make sure that communications from these processes are not blocked.
+
 [!INCLUDE [Microsoft Defender for Endpoint processes](includes/streamlined-connectivity-processes.md)]
+
+## Change log
+
+|Date|Change log|
+|---|---|
+|03/23/2026|Added client processes section|
+|03/10/2026|Updated URL descriptions|
+|03/03/2026|Added Linux URLs for internal configuration management (DoD, GCC High, GCC Mod)|
+|10/23/2025|Initial page published (Preview)|
