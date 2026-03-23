@@ -1,7 +1,7 @@
 ---
 title: View your identity coverage and maturity (Preview)
 description: Learn how to use the Coverage and maturity page in Microsoft Defender to check your identity protection status and close coverage gaps in your environments.
-ms.date: 03/17/2026
+ms.date: 03/23/2026
 ms.topic: how-to
 ms.author: abbyweisberg
 author: AbbyMSFT
@@ -23,7 +23,7 @@ You can use this page to:
 - **Close protection gaps**:  See where coverage is missing and what to do about it. Tasks are prioritized by security impact and effort, so you can focus on the most important fixes first.
 
 >[!NOTE]
->The **Coverage and maturity** page  is being rolled out gradually to customers, and might not yet be available in your organization. If you don't see this feature in your environment yet, check back soon.
+>The **Coverage and maturity** page  is being rolled out gradually to customers, and might not yet be available in your organization.
 
 ## Prerequisites
 
@@ -64,7 +64,7 @@ The **Top setup tasks** section shows the five most important things you can do 
 
 Tasks are ranked so that high-impact, low-effort items appear first:
 
-1. On-premises sensor deployment, Entra ID connector, and App Governance
+1. On-premises sensor deployment, Microsoft Entra ID connector, and app governance
 2. SaaS app connectors
 3. Identity provider, PAM, and IGA integrations
 
@@ -88,7 +88,7 @@ If any servers or app connectors have health issues, the card shows a notificati
 
 ### Identity providers card
 
-Shows identities from Microsoft Entra ID and other connected identity providers. Connecting Entra ID enables risk insights, sign-in event hunting, linking identities between environments, and security recommendations.
+Shows identities from Microsoft Entra ID and other connected identity providers. Connecting Microsoft Entra ID enables risk insights, sign-in event hunting, linking identities between environments, and security recommendations.
 
 | Item | Description |
 | --- | --- |

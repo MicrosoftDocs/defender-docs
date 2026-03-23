@@ -13,7 +13,7 @@ The Microsoft Defender for Identity **Dashboard** page shows data to help you be
 Use the **Dashboard** page to view critical insights and real-time data about identity threat detection and response (ITDR). View graphs and widgets that showcase important information related to unauthorized access, account compromise, insider threats, and abnormal activities, and then proactively monitor and manage potential identity-related security risks.
 
 >[!NOTE]
->The **Identity Security** dashboard is being rolled out gradually to customers, and might not yet be available in your organization. If you don't see this feature in your environment yet, check back soon.
+>The **Identity Security** dashboard is being rolled out gradually to customers, and might not yet be available in your organization. 
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ Each card shows identity counts and a coverage score gauge:
 | **On-premises** | Shows the count of human identities and non-human identities from on-premises Active Directory environments, along with the coverage score. |
 | **SaaS Identities** | Shows the count of human identities and non-human identities from connected SaaS applications, along with the coverage score. |
 | **PAM & IGA** | Shows the status of privileged access management (PAM) and identity governance and administration (IGA) integrations, and prompts you to connect available solutions. |
-| **Non-human identities** | Shows a donut chart of non-human identities (OAuth apps and service accounts) broken down by source: Entra ID, SaaS, and On-Premises. |
+| **Non-human identities** | Shows a donut chart of non-human identities (OAuth apps and service accounts) broken down by source: Entra ID, SaaS, and on-premises. |
 
 ## Top insights
 
@@ -67,4 +67,4 @@ Each card shows identity counts and a coverage score gauge:
 
 ## Next steps
 
-For more information, see [Microsoft Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi?bc=/defender-for-identity/breadcrumb/toc.json&toc=/defender-for-identity/TOC.json).
+For more information, see [Microsoft Defender for Identity in the Microsoft Defender portal](/microsoft-365/security/defender/microsoft-365-security-center-mdi?bc=/defender-for-identity/breadcrumb/toc.json&toc=/defender-for-identity/TOC.json).
