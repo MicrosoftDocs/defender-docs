@@ -31,7 +31,11 @@ New identity security capabilities help you monitor and manage identity security
 
 - **Identity Security dashboard (Preview)**: The **Identity Security** dashboard provides summary cards for identity providers, on-premises identities, SaaS identities, PAM and IGA integrations, and non-human identities. Widgets show deployment status, highly privileged identities, users at risk, and domains with unsecured configurations. For more information, see [The Identity Security dashboard](dashboard.md).
 
+The **Identity Security** dashboard is being rolled out gradually to customers, and might not yet be available in your organization. If you don't see this feature in your environment yet, check back soon.
+
 - **Coverage and maturity page (Preview)**: The **Coverage and maturity** page shows your organization's identity security coverage for identity providers, on-premises identities, SaaS identities, and PAM and IGA integrations. Each source displays a maturity level, including Connected, Protected, Fortified, and Resilient, with identity counts, coverage scores, and prioritized setup tasks. For more information, see [Coverage and maturity](/defender-xdr/identity-security/coverage-maturity).
+
+The **Coverage and maturity** page is being rolled out gradually to customers, and might not yet be available in your organization. If you don't see this feature in your environment yet, check back soon.
 
 - **Identity inventory**: The **Identity inventory** page now shows human and non-human identities in separate tabs. Insight cards help you classify critical assets, view highly privileged identities, identify critical Active Directory service accounts, and view cloud application accounts. For more information, see [View the Identity inventory](identity-inventory.md).
 

@@ -12,6 +12,9 @@ The Microsoft Defender for Identity **Dashboard** page shows data to help you be
 
 Use the **Dashboard** page to view critical insights and real-time data about identity threat detection and response (ITDR). View graphs and widgets that showcase important information related to unauthorized access, account compromise, insider threats, and abnormal activities, and then proactively monitor and manage potential identity-related security risks.
 
+>[!NOTE]
+>The **Identity Security** dashboard is being rolled out gradually to customers, and might not yet be available in your organization. If you don't see this feature in your environment yet, check back soon.
+
 ## Prerequisites
 
 To access this new dashboard, you need:

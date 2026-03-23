@@ -22,6 +22,9 @@ You can use this page to:
 - **Check your protection status**: Get a quick, high-level view of how complete your identity coverage is, and track progress over time.
 - **Close protection gaps**:  See where coverage is missing and what to do about it. Tasks are prioritized by security impact and effort, so you can focus on the most important fixes first.
 
+>[!NOTE]
+>The **Coverage and maturity** page  is being rolled out gradually to customers, and might not yet be available in your organization. If you don't see this feature in your environment yet, check back soon.
+
 ## Prerequisites
 
 To use the **Coverage and maturity** page, you need:
