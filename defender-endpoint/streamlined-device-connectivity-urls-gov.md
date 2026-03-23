@@ -124,7 +124,6 @@ Because these Defender for Endpoint-related processes generate network communica
 
 |Date|Change log|
 |---|---|
-|03/23/2026|Added client processes section|
-|03/10/2026|Updated URL descriptions|
-|03/03/2026|Added Linux URLs for internal configuration management (DoD, GCC High, GCC Mod)|
-|10/23/2025|Initial page published (Preview)|
+|03/23/2026|Renamed **Microsoft Defender process exclusions** section to **Client processes**, and aligned the content for all URL lists.|
+|03/03/2026|Added Linux URLs to [General URLs](#general-urls) for internal configuration management: `config.ecs.dod.teams.microsoft.us` (DoD), `config.ecs.gov.teams.microsoft.us` (GCC High), `gccmod.ecs.office.com` (GCC Mod).|
+|10/23/2025|Initial page published (Preview).|
