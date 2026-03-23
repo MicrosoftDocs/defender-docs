@@ -4,7 +4,6 @@ description: "Learn about security, privacy, and compliance in Defender for Busi
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: bagol
 audience: Admin
 ms.topic: overview
 ms.service: defender-business
