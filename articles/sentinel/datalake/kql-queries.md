@@ -29,6 +29,7 @@ You can run KQL queries in the Microsoft Defender portal after completing the on
 
 Microsoft Entra ID roles let you access all workspaces in the data lake. Alternatively, you can grant access to individual workspaces using Azure RBAC roles. Users with Azure RBAC permissions for Microsoft Sentinel workspaces can run KQL queries against those workspaces in the data lake tier. For more information on roles and permissions, see [Microsoft Sentinel data lake roles and permissions](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake).
 
+Optionally, Microsoft Sentinel scoping or row-level RBAC can be configured to further restrict data access within a workspace. When enabled, row-level scoping limits the data returned by queries based on the user’s assigned scope. If row-level scoping isn’t configured, the existing workspace-level permission model applies unchanged. For more information, see [Microsoft Sentinel scoping](../scoping.md).
 
 ## Write KQL queries
 
