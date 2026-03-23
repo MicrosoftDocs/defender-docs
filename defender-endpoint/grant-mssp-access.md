@@ -3,8 +3,8 @@ title: Grant access to managed security service provider (MSSP)
 description: Take the necessary steps to configure MSSP integration with the Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection: 

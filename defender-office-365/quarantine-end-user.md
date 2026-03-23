@@ -4,7 +4,6 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 audience: Consumer/IW
 ms.topic: how-to
 ms.localizationpriority: high
