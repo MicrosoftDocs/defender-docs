@@ -8,7 +8,6 @@ author: limwainstein
 ms.reviewer: jesquive
 ms.localizationpriority: medium
 ms.date: 01/05/2026
-manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

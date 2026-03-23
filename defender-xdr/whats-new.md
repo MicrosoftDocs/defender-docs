@@ -7,7 +7,6 @@ ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 03/22/2026
-manager: orspodek
 audience: ITPro
 ms.collection:
 - M365-security-compliance

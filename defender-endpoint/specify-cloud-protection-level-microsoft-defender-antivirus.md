@@ -8,7 +8,6 @@ author: chrisda
 ms.author: chrisda
 ms.reviewer: yongrhee
 ms.date: 10/20/2025
-manager: bagol
 ms.custom: nextgen
 ms.subservice: ngp
 ms.collection: 

@@ -8,7 +8,6 @@ ms.topic: how-to
 author: paulinbar
 ms.author: painbar
 ms.reviewer: tdoucett
-manager: bagol
 ms.subservice: asr
 ms.collection: 
 - m365-security
