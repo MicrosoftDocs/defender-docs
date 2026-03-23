@@ -127,14 +127,6 @@ Following privacy controls are available for configuring the data that is sent b
 |Vulnerability assessment of apps |By default only information about apps installed in the work profile is sent for vulnerability assessment. Admins can disable privacy to include personal apps|
 |Network Protection | Admins can enable or disable privacy in network protection. If enabled, then Defender won't send network details.|
 
-## Root Detection
-
-Microsoft Defender for Endpoint has the ability to detect unmanaged and managed devices that are rooted. These root detection checks are done periodically. If a device is detected as rooted, the following events occur:
-
-- A high-risk alert is reported to the Microsoft Defender portal. If Device Compliance and Conditional Access are set up based on device risk score, then the device is blocked from accessing corporate data.
-
-- User data on the app is cleared after the device has been detected as rooted. The feature is enabled by default; no action is required from admin or user.
-
 **Prerequisite**
 
 - Company portal must be installed, and version must be >=5.0.6621.0
