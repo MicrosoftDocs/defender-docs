@@ -8,7 +8,6 @@ author: chrisda
 ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: jesquive
-manager: bagol
 ms.subservice: ngp
 ms.service: defender-endpoint
 ms.collection:

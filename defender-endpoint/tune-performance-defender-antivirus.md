@@ -10,7 +10,6 @@ ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-manager: bagol
 ms.collection: 
 - m365-security
 - mde-ngp

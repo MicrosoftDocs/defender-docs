@@ -4,7 +4,6 @@ description: Get an overview of Defender for Endpoint Plan 1. Learn about the fe
 search.appverid: MET150 
 author: paulinbar
 ms.author: painbar
-manager: bagol 
 audience: ITPro
 ms.topic: overview
 ms.service: defender-endpoint

@@ -8,7 +8,6 @@ ms.author: chrisda
 ms.custom: nextgen
 ms.date: 05/07/2025
 ms.reviewer: phuijbr, yongrhee
-manager: bagol
 ms.subservice: ngp
 audience: ITPro
 ms.topic: how-to

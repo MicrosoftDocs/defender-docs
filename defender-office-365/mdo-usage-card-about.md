@@ -3,8 +3,8 @@ title: Usage card in Microsoft Defender for Office 365
 keywords: AIR, autoIR, Microsoft Defender for Endpoint, automated, investigation, response, remediation, threats, advanced, threat, protection
 f1.keywords:
 - NOCSH
-author: dansimp
-ms.author: dansimp
+author: chrisda
+ms.author: chrisda
 audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium

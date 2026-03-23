@@ -8,7 +8,6 @@ ms.localizationpriority: medium
 author: poliveria
 ms.author: pauloliveria
 ms.date: 04/25/2025
-manager: dansimp
 ms.topic: how-to
 ms.collection:
 - m365-security
