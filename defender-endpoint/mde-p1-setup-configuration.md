@@ -4,7 +4,6 @@ description: Learn how to set up and configure Defender for Endpoint Plan 1. Rev
 search.appverid: MET150 
 author: paulinbar
 ms.author: painbar
-manager: bagol 
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: onboard
@@ -188,9 +187,9 @@ Attack surface reduction rules are available on devices running Windows. We reco
 
    At a minimum, we recommend enabling the following three standard protection rules:
 
-   - [Block abuse of exploited vulnerable signed drivers](/defender-endpoint/attack-surface-reduction-rules-reference#block-abuse-of-exploited-vulnerable-signed-drivers)
-   - [Block credential stealing from the Windows local security authority subsystem (lsass.exe)](/defender-endpoint/attack-surface-reduction-rules-reference#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
-   - [Block persistence through Windows Management Instrumentation (WMI) event subscription](/defender-endpoint/attack-surface-reduction-rules-reference#block-persistence-through-wmi-event-subscription)
+   - [Block abuse of exploited vulnerable signed drivers](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers)
+   - [Block credential stealing from the Windows local security authority subsystem (lsass.exe)](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
+   - [Block persistence through Windows Management Instrumentation (WMI) event subscription](attack-surface-reduction-rules-reference.md#block-persistence-through-wmi-event-subscription)
 
 1. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**. 
    
