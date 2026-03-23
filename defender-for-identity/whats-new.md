@@ -45,12 +45,6 @@ New identity security capabilities help you monitor and manage identity security
 
 - **Password protection page (Preview)**: The **Password protection** page shows identity password risk from Active Directory, Microsoft Entra ID, and Okta, with tabs for password hygiene, password policies, leaked credentials, and exposed passwords. For more information, see [Password protection](password-protection.md).
 
-### Defender for Identity sensor updates
-
-- **Migrate Defender for Identity sensors from v2.x to v3.x (Preview)**: You can migrate sensors from v2.x to v3.x directly from the Microsoft Defender portal. The v2.x sensor continues running during the migration until the v3.x sensor is ready, so there is no downtime. Eligible servers appear as **Ready for migration** on the **Sensors** page, and migration takes up to 20 minutes. For more information, see [Migrate to Defender for Identity sensor v3.x](deploy/migrate-to-sensor-v3.md).
-
-- **Sensor v3.x support for domain controllers with additional identity roles (Preview)**: Sensor v3.x supports domain controllers that also run AD FS, AD CS, or Microsoft Entra Connect. Detections and identity security posture management recommendations for these roles roll out gradually, starting with Entra Connect. These domain controllers require Windows Server 2019 or later with at least the March 2026 Cumulative Update. For more information, see [Defender for Identity deployment overview](deploy/deploy-defender-identity.md) and [Sensor v3.x prerequisites](deploy/prerequisites-sensor-version-3.md).
-
 ### New Defender for Identity security alerts
 
 These new alerts were added to the Defender for Identity security alerts:
