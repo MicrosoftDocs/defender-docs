@@ -55,6 +55,18 @@ This article describes the default threat policy settings, and also the recommen
 > [!TIP]
 > To see all information in the following tables in this article, use the :::image type="icon" source="media/m365-cc-sc-expand-table-icon.png" border="false"::: **Expand table** control at the top of each table.
 
+**Mail Authentication Prerequisites (SPF, DKIM, DMARC)**
+
+  Recommended threat policy settings work best when your organization's sending domains are correctly authenticated. Before tuning anti-phishing or other threat policies, confirm that outbound mail for each sending domain is configured for:
+
+•	SPF (Sender Policy Framework): Authorizes the services permitted to send mail on behalf of your domain.
+
+•	DKIM (DomainKeys Identified Mail): Signs messages so recipients can verify the message was not altered and is authorized by the signing domain.
+
+•	DMARC (Domain-based Message Authentication, Reporting, and Conformance): Tells recipients how to handle messages that fail authentication and whether authentication aligns with the visible From: domain.
+
+[!IMPORTANT] If SPF, DKIM, or DMARC are missing or misconfigured, legitimate messages may be routed to spam or quarantine even when recommended threat policy settings are in place. Fix authentication first, then review and tune policy settings.
+
 <a name='eop-anti-malware-policy-settings'></a>
 
 <a name='default-email-protections-for-cloud-mailboxes'></a>
