@@ -3,7 +3,7 @@ title: Get started with custom graphs in Microsoft Sentinel
 description: Learn how to create and manage custom graphs in Microsoft Sentinel to model attack patterns, investigate threats, and run advanced graph algorithms.
 author: EdB-MSFT
 ms.author: edbaynash
-ms.date: 03/16/2026
+ms.date: 03/23/2026
 ms.topic: how-to 
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-graph
@@ -15,11 +15,17 @@ ms.subservice: sentinel-graph
 
 Custom graphs in Microsoft Sentinel enable security researchers and analysts to create tailored graph representations of their security data. By building custom graphs, you can model specific attack patterns, investigate threats, and run advanced graph algorithms to uncover hidden relationships within your digital environment. This guide walks you through the steps to create and manage custom graphs by using Jupyter notebooks in the Microsoft Sentinel Visual Studio Code extension.
 
+This article focuses on manually authoring custom graphs using code. For an AI‑driven experience, see [AI‑assisted custom graph authoring in Microsoft Sentinel](./create-graphs-with-ai.md).
+
 ## Prerequisites
 
-### Onboard to Microsoft Sentinel graph
+The following are required to create custom graphs in Microsoft Sentinel:
 
-To create custom graphs, you must be onboarded to Microsoft Sentinel data lake. For more information, see [Onboard to Microsoft Sentinel data lake](sentinel-lake-onboard-defender.md).
++ Microsoft Sentinel extension for Visual Studio Code. For more information, see [Run notebooks on the Microsoft Sentinel data lake](notebooks.md).
++ Jupyter extension for Visual Studio Code. 
++ Microsoft Sentinel data lake configured with appropriate permissions. For more information, see [Onboard to Microsoft Sentinel data lake](sentinel-lake-onboard-defender.md).
+
+Enable the Microsoft Entra ID connector to ingest the Microsoft Entra asset tables used in this article's sample code. See Asset data in Microsoft Sentinel data lake. For more information, see [Asset data ingestion in the Microsoft Sentinel data lake](enable-data-connectors.md).
 
 ### Permissions
 
@@ -32,8 +38,8 @@ To interact with custom graphs, you need the following XDR permissions in Sentin
 | Query a persisted graph | Use a [custom Microsoft Defender XDR unified RBAC role with *security data basics (read)*](/defender-xdr/custom-permissions-details) permissions over the Microsoft Sentinel data collection. |
 
 > [!IMPORTANT]
-> You must have permissions to read the data used in the graph. For example, if you don't have access to a specific dataset, that data won't be included in the graph.
-> To create a graph, you must not be restricted by a Sentinel scope. A scoped user would not be able to create a custom graphs.
+> You must have permissions to read the data used in the graph. If you don't have access to a specific dataset, that data won't be included in the graph.
+> To create a graph, you must not be restricted by a Sentinel scope. A scoped user isn't able to create a custom graph.
 
 Microsoft Entra ID roles provide broad access across all workspaces in the data lake. For more information, see [Roles and permissions in Microsoft Sentinel](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake).
 
@@ -47,15 +53,19 @@ Create custom graphs by using Jupyter notebooks in the Microsoft Sentinel Visual
 To create and work with custom graphs, complete the following steps:
 
 1. Model a custom graph
-1. Save the custom graph in your tenant
-1. View and manage custom graphs in your tenant
+1. Persist the custom graph by scheduling a graph job
+1. View and manage custom graphs 
+
 
 
 ## Model a custom graph
 
 Create a custom graph by using a Jupyter notebook in the Microsoft Sentinel Visual Studio Code extension. 
 
-The following steps walk you through creating your first custom graph by using a sample notebook:
+The following steps walk you through creating your first custom graph by using a sample notebook.
+
+
+### Set up your notebook and connect to the data lake
 
 1. In Visual Studio Code with the Microsoft Sentinel extension installed, select the **Microsoft Sentinel** icon in the left-hand menu.
 1. Select **Sign in to view graphs**
@@ -74,182 +84,279 @@ The following steps walk you through creating your first custom graph by using a
     > [!TIP]
     > You can use AI prompts to help you create a custom graph notebook. For more information, see [AI-assisted custom graph authoring in Microsoft Sentinel](create-graphs-with-ai.md). 
 
-1. In an empty cell in the new notebook, paste the following sample code to get started with custom graphs:
+1. Run a cell to by selecting the run cell triangle icon to the left of the cell. The first time you run a cell, you might be prompted to select a kernel if you didn't already select one.
 
-
-    ```python
-    import pkg_resources
-    from packaging import version
-    import logging
-
-    version = pkg_resources.get_distribution('MicrosoftSentinelGraphProvider').version
-    print(f"✅ MicrosoftSentinelGraphProvider: {version}" + f" using pool name : {spark.conf.get('spark.synapse.pool.   name')}")
-
-    print(f"Running in: Region  : {spark.conf.get('spark.cluster.region')}" + f" | Account id : {spark.conf.get ('spark.pjs.account.id')}")
-
-
-    # Set the logging level for the entire package
-    logging.getLogger('sentinel_graph').setLevel(logging.DEBUG)  # or ERROR, WARNING, INFO, DEBUG. Default is INFO
-    print(f"Logging level set to: {logging.getLevelName(logging.getLogger('sentinel_graph').level)} and above")
-    ```
-
-    This checks the version of the library, your Spark cluster region and account ID, and sets the logging level to DEBUG for detailed output.
-    
-1. Run the cell to by selecting the run cell triangle icon to the left of the cell. The first time you run a cell, you might be prompted to select a kernel if you didn't already select one.
-
-     The first time you run a cell, it might take up to five minutes to start the Spark session.
+     The first time you run a cell, takes about five minutes to start the Spark session.
 
    :::image type="content" source="media/create-custom-graphs/run-first-cell.png" lightbox="media/create-custom-graphs/run-first-cell.png" alt-text="A screenshot showing the running of the first cell in Visual Studio Code.":::
 
-1. Read the `SignInLogs` and `EntraUsers` tables from Sentinel data lake to create DataFrames to use in your graph specification. Replace `<LogAnalyiticsWorkspace>` with your Log Analytics workspace that contains your `SignInLogs` table.
+	
+### Create a graph 
 
-    In a new cell, paste and run the following code:
+The following sample creates a graph to traverse Microsoft Entra group memberships and understand nested group relationships. The same helps you get started with a simple use case to learn the custom graph capability and leverage the power of graph traversal for your investigations. You can create a graph from any table available in the Sentinel data lake.
+
+1.	Connect to your workspace and read Entra assets tables to begin building the graph.
 
     ```python
+    from pyspark.sql import functions as F
     from sentinel_lake.providers import MicrosoftSentinelProvider
-    from pyspark.sql.functions import col, count, lit, coalesce, window, expr, sum, first
-    #from pyspark.sql.types import StructType, StructField, StringType
-
-    sentinel_provider = MicrosoftSentinelProvider(spark)
-
-    ## Read SignIn logs and Entra User tables from Sentinel Lake
-    signIn_df = (sentinel_provider.read_table('SigninLogs',"<LogAnalyiticsWorkspace>")
-                  .filter((col("UserType").isin("Member")) & (col('TimeGenerated') >= expr("current_timestamp()     - INTERVAL 14 DAYS")) & (col("UserId").isNotNull()))\
-                    .select("Identity", "CorrelationId", "ResourceId", "AppId", "ResourceDisplayName",  "UserPrincipalName", "UserId", "IPAddress", "ResourceGroup", "UserDisplayName", "UserAgent",     "TimeGenerated")\
-                          ).persist()
-
-    users_df = (sentinel_provider.read_table('EntraUsers').filter(
-        (col("id").isNotNull()) &
-        (col("id") != '') &
-        (col('TimeGenerated') >= expr("current_timestamp() - INTERVAL 14 DAYS"))
-    ).select(
-        "department", "displayName", "employeeId", "givenName", "id", "mail", "TimeGenerated"
-    ).dropDuplicates(["id"])\
-    .persist()
-    )
-
-    ## Show the first 5 rows of each DataFrame
-    signIn_df.show(5, truncate=False)
-    users_df.show(5, truncate=False)
-    ```
-
-1. Create dataframes for the graph's nodes & edges. In a new cell, paste and run the following code:
-
-    ```python
     
-    EntraUsers_df = users_df.withColumn("nodeType", lit("User"))
-
-    Department_df = users_df.selectExpr("Department as Org").distinct().withColumn("nodeType", lit("Department"))
-
-    BelongsTo_df = users_df.withColumn("edgeType", lit("BelongsTo"))\
-                            .withColumn("UserId_BT", col("id"))
-
-    AppInfo_df = signIn_df.selectExpr("ResourceId", "AppId", "ResourceDisplayName as AppName")\
-                        .withColumn("nodeType", lit("App"))\
-                        .dropDuplicates(["ResourceId", "AppId"])
-                            #.withColumn("dest", concat(col("UserId"), lit("_User")))
-
-    CommunicatedWith_df = signIn_df.groupBy(
-                                        col("UserId"), col("IPAddress"), col("AppId"), col("UserAgent"),
-                                        col("UserId").alias("UserId_dest"), 
-                                        lit("communicatedWith").alias("edgeType"),
-                                        #window(col("TimeGenerated"), "4 hours").alias("TimeGenerated")
-                                    ).agg(count("*").alias("count"), first("TimeGenerated").alias   ("FirstTimeSeen"))
-
-
-    #- Validate the DataFrames
-    EntraUsers_df.show(5, truncate=False)
-    AppInfo_df.show(5, truncate=False)
-    BelongsTo_df.show(5, truncate=False)
-    Department_df.show(5, truncate=False)
-    CommunicatedWith_df.show(5, truncate=False) 
+    lake_provider = MicrosoftSentinelProvider(spark=spark)
+    
+    # Use the "System tables" workspace which contains the Entra* Assets tables
+    # If you are data is in a different workspace, update this variable accordingly and ensure the tables are present
+    LOG_ANALYTICS_WORKSPACE = "System tables"
+    
+    # Dynamically get the latest snapshot time from EntraUsers
+    snapshot_time = (
+        lake_provider.read_table("EntraUsers", LOG_ANALYTICS_WORKSPACE)
+        .df.agg(F.max("_SnapshotTime").alias("max_snapshot"))
+        .collect()[0]["max_snapshot"]
+        .strftime("%Y-%m-%dT%H:%M:%SZ")
+    )
+    print(f"Using snapshot_time: {snapshot_time}")
+    
+    snapshot_filter = (F.col("_SnapshotTime") == F.lit(snapshot_time).cast("timestamp"))
+    
+    # Load EntraMembers - edges: group contains user/group/servicePrincipal
+    df_members = (
+        lake_provider.read_table("EntraMembers", LOG_ANALYTICS_WORKSPACE)
+        .filter(
+            snapshot_filter
+            & (F.col("sourceType") == "group")
+            & (F.col("targetType").isin("user", "group", "servicePrincipal"))
+        )
+    )
+    
+    # Load EntraGroups - nodes
+    df_groups = (
+        lake_provider.read_table("EntraGroups", LOG_ANALYTICS_WORKSPACE)
+        .filter(snapshot_filter)
+        .select("id", "displayName", "mailEnabled")
+    )
+    
+    # Load EntraUsers - nodes
+    df_users = (
+        lake_provider.read_table("EntraUsers", LOG_ANALYTICS_WORKSPACE)
+        .filter(snapshot_filter)
+        .select("id", "accountEnabled", "displayName", "department",
+                "lastPasswordChangeDateTime", "userPrincipalName", "usageLocation")
+    )
+    
+    # Load EntraServicePrincipals - nodes
+    df_service_principals = (
+        lake_provider.read_table("EntraServicePrincipals", LOG_ANALYTICS_WORKSPACE)
+        .filter(snapshot_filter)
+        .select("accountEnabled", "id", "displayName", "servicePrincipalType",
+                "tenantId", "organizationId")
+    )
+    
+    # Fix for Spark 3.x Parquet datetime rebase issue. Required when reading Parquet files
+    # written by Spark 2.x which used the Julian calendar, whereas Spark 3.x uses Proleptic
+    # Gregorian. Without these settings, timestamp columns (e.g. lastPasswordChangeDateTime)
+    # may throw errors or return incorrect values. Safe to remove if all data was written by
+    # Spark 3.x (typical for current Fabric/Sentinel environments).
+    spark.conf.set("spark.sql.parquet.datetimeRebaseModeInRead", "CORRECTED")
+    spark.conf.set("spark.sql.parquet.datetimeRebaseModeInWrite", "CORRECTED")
+    spark.conf.set("spark.sql.parquet.int96RebaseModeInRead", "CORRECTED")
+    spark.conf.set("spark.sql.parquet.int96RebaseModeInWrite", "CORRECTED")
     ```
 
-1. Create a graph specification by using the DataFrames created in the previous step.  
-    This step creates three node types
-        + Users
-        + Applications 
-        + Department
-    and two edge types
-        + BelongsTo 
-        + communicatedWith
-
-    In a new cell, paste and run the following code:
+1.	Prepare the node and edge DataFrames required for building the graph
 
     ```python
-    from sentinel_graph.builders import GraphSpecBuilder
+    # ============================================================
+    # NODE PREPARATION
+    # ============================================================
+    
+    # EntraUser nodes - keyed by user id
+    user_nodes = (
+        df_users.df
+        .select(
+            F.col("id"),
+            F.col("displayName"),
+            F.col("accountEnabled"),
+            F.col("department"),
+            F.col("lastPasswordChangeDateTime"),
+            F.col("userPrincipalName"),
+            F.col("usageLocation")
+        )
+    )
+    
+    # EntraGroup nodes - keyed by group id
+    group_nodes = (
+        df_groups.df
+        .select(
+            F.col("id"),
+            F.col("displayName"),
+            F.col("mailEnabled")
+        )
+    )
+    
+    # EntraServicePrincipal nodes - keyed by SP id
+    sp_nodes = (
+        df_service_principals.df
+        .select(
+            F.col("id"),
+            F.col("displayName"),
+            F.col("accountEnabled"),
+            F.col("servicePrincipalType"),
+            F.col("tenantId"),
+            F.col("organizationId")
+        )
+    )
+    
+    # ============================================================
+    # EDGE PREPARATION
+    # ============================================================
+    
+    # Edge: EntraGroup --Contains--> EntraUser
+    edge_group_contains_user = (
+        df_members.df
+        .filter(F.col("targetType") == "user")
+        .select(
+            F.col("sourceId").alias("SourceGroupId"),
+            F.col("targetId").alias("TargetUserId")
+        )
+        .distinct()
+        .withColumn("EdgeKey", F.concat_ws("_", F.col("SourceGroupId"), F.col("TargetUserId")))
+    )
+    
+    # Edge: EntraGroup --Contains--> EntraGroup (nested groups)
+    edge_group_contains_group = (
+        df_members.df
+        .filter(F.col("targetType") == "group")
+        .select(
+            F.col("sourceId").alias("SourceGroupId"),
+            F.col("targetId").alias("TargetGroupId")
+        )
+        .distinct()
+        .withColumn("EdgeKey", F.concat_ws("_", F.col("SourceGroupId"), F.col("TargetGroupId")))
+    )
+    
+    # Edge: EntraGroup --Contains--> EntraServicePrincipal
+    edge_group_contains_sp = (
+        df_members.df
+        .filter(F.col("targetType") == "servicePrincipal")
+        .select(
+            F.col("sourceId").alias("SourceGroupId"),
+            F.col("targetId").alias("TargetSPId")
+        )
+        .distinct()
+        .withColumn("EdgeKey", F.concat_ws("_", F.col("SourceGroupId"), F.col("TargetSPId")))
+    )
+    ```
 
-    builder = (GraphSpecBuilder.start()
+1. Define your graph schema and bind to the DataFrames created in the previous step
 
-        .add_node("Users") \
-            .from_dataframe(EntraUsers_df.df) \
-            .with_columns("department", "displayName", "employeeId",     "givenName", "id", "mail", "TimeGenerated", "nodeType", key="id",   display="id")
-
-        .add_node("Applications") \
-            .from_dataframe(AppInfo_df.df) \
-            .with_columns("ResourceId", "AppId", "AppName", "nodeType", key ="AppId", display="AppId")
-
-         .add_node("Department") \
-            .from_dataframe(Department_df.df) \
-            .with_columns("Org", "nodeType", key="Org", display="Org")
-
-        .add_edge("BelongsTo") \
-            .from_dataframe(BelongsTo_df.df) \
-            .source(id_column="UserId_BT", node_type="Users") \
-            .target(id_column="department", node_type="Department") \
-            .with_columns("edgeType","TimeGenerated", key ="edgeType",  display="edgeType")
-
-        .add_edge("communicatedWith") \
-            .from_dataframe(CommunicatedWith_df) \
-            .source(id_column="UserId", node_type="Users") \
-            .target(id_column="AppId", node_type="Applications") \
-            .with_columns("edgeType","count", "FirstTimeSeen",
-                          #Other fields can be added here if needed
-                          #"TimeGenerated", 
-                      key="edgeType", display="edgeType")
+    ```python
+    from sentinel_graph import GraphSpecBuilder, Graph
+    
+    # Define the graph schema 
+    
+    entra_group_graph_spec = (
+        GraphSpecBuilder.start()
+    
+        # === NODES ===
+    
+        .add_node("EntraUser")
+        .from_dataframe(user_nodes)  # Native Spark DataFrame (from .df + .select + .distinct)
+        .with_columns(
+            "id", "displayName", "accountEnabled",
+            "department", "lastPasswordChangeDateTime", "userPrincipalName", "usageLocation",
+            key="id", display="displayName"
+        )
+    
+        .add_node("EntraGroup")
+        .from_dataframe(group_nodes)  # Native Spark DataFrame
+        .with_columns(
+            "id", "displayName", "mailEnabled",
+            key="id", display="displayName"
+        )
+    
+        .add_node("EntraServicePrincipal")
+        .from_dataframe(sp_nodes)  # Native Spark DataFrame
+        .with_columns(
+            "id", "displayName", "accountEnabled",
+            "servicePrincipalType", "tenantId", "organizationId",
+            key="id", display="displayName"
+        )
+    
+        # === EDGES ===
+    
+        # EntraGroup --ContainsUser--> EntraUser
+        .add_edge("ContainsUser")
+        .from_dataframe(edge_group_contains_user)  # Native Spark DataFrame
+        .source(id_column="SourceGroupId", node_type="EntraGroup")
+        .target(id_column="TargetUserId", node_type="EntraUser")
+        .with_columns("SourceGroupId", "TargetUserId", "EdgeKey",
+                      key="EdgeKey", display="EdgeKey")
+    
+        # EntraGroup --ContainsGroup--> EntraGroup (nested groups)
+        .add_edge("ContainsGroup")
+        .from_dataframe(edge_group_contains_group)  # Native Spark DataFrame
+        .source(id_column="SourceGroupId", node_type="EntraGroup")
+        .target(id_column="TargetGroupId", node_type="EntraGroup")
+        .with_columns("SourceGroupId", "TargetGroupId", "EdgeKey",
+                      key="EdgeKey", display="EdgeKey")
+    
+        # EntraGroup --ContainsServicePrincipal--> EntraServicePrincipal
+        .add_edge("ContainsServicePrincipal")
+        .from_dataframe(edge_group_contains_sp)  # Native Spark DataFrame
+        .source(id_column="SourceGroupId", node_type="EntraGroup")
+        .target(id_column="TargetSPId", node_type="EntraServicePrincipal")
+        .with_columns("SourceGroupId", "TargetSPId", "EdgeKey",
+                      key="EdgeKey", display="EdgeKey")
     
     ).done()
     ```
 
-1. Build the graph by using the graph specification created in the previous step. In a new cell, paste and run the following code:
+1.	Validate the graph schema
+    ```python
+    # Check the schema of the graph spec to ensure it's correct
+    entra_group_graph_spec.show_schema()
+    ```
+
+1. Build the graph, including preparing the data and publishing the graph
 
     ```python
-    # Create the graph object
-    build_result = my_graph.build_graph_with_data()
-
-    print(f"Status: {build_result.get('status')}")
+    # Build the graph from the spec - this will validate the spec and prepare it for querying
+    # Alter options is to use Graph.prepare() to prepare the graph nodes and edges in the lake
+    # and then use Graph.publish() to create the graph. You would typically call prepare() and publish()
+    # seperately to understand the cost of Graph API calls that are triggeterd by Graph.publish()
+    # see https://learn.microsoft.com/azure/sentinel/billing?tabs=simplified%2Ccommitment-tiers
+    intra_group_graph = Graph.build(entra_group_graph_spec)
     ```
-    When successful, the last line of the output cell displays *Status: success*.
+
+    > [!NOTE] 
+    > Graphs created during interactive notebook sessions are removed when the notebook session is closed. To persist the graph for reuse and sharing, see [Persist your custom graph](#persist-your-custom-graph)
+
 
 You have now created a graph in the notebook.
 
 To show a visual representation of the graph, in a new cell paste and run the following code:
 
 ```python
-query1 = "MATCH (n:Users)-[e]->(s) WHERE n.department = 'Customer XP' RETURN * LIMIT 50"
-builder.query(query1).show()
+# Query 1: Find nested group relationships nexting up to 8 levels deep
+# Update the Entra Group name that you want to traverse from
+query_nested_groups = """
+MATCH p=(g1:EntraGroup)-[cg]->{1,8}(g2)
+WHERE g1.displayName = 'tmplevel3'
+RETURN *
+"""
+intra_group_graph.query(query_nested_groups).show()
 ```
 
-This code runs a sample GQL query to retrieve all user nodes and their relationships for users in the "Customer XP" department, limiting the results to 50 entries. The resulting graph is visualized in the output.
+This code runs a sample Graph Query Language (GQL) query to retrieve all nested group membership up to 8 levels deep The resulting graph is visualized in the output
 
 :::image type="content" source="media/create-custom-graphs/graph-visualization.png" lightbox="media/create-custom-graphs/graph-visualization.png" alt-text="A screenshot showing the visualization of a graph in Visual Studio Code.":::
 
-The following code runs another sample GQL query to retrieve all nodes that communicated with applications and belong to the "Customer XP" department, limiting the results to 50 entries. The resulting graph is visualized in the output.
-
-```python
-query2 = """MATCH (n)-[e:communicatedWith]->(a), (n)-[b:BelongsTo]->(d)
-        WHERE d.Org IN ["Customer XP"]
-        RETURN *
-        LIMIT 50"""
-builder.query(query2).show()
-```
-
-:::image type="content" source="media/create-custom-graphs/graph-visualization-details.png" lightbox="media/create-custom-graphs/graph-visualization-details.png" alt-text="A screenshot showing the visualization of a graph and detail side-panel in Visual Studio Code.":::
 
 
-### Save a custom graph in your tenant
 
-After creating a graph, you can persist it by storing the graph in your tenant with a scheduled job.
+### Persist your custom graph 
+Once you create the graph code in notebook, you can run the notebook in an interactive session or schedule a graph job. Graphs created during the interactive notebook session are temporary and are available only in the context of the notebook session. To save your graph and share with your team, schedule a graph job to rebuild your graph frequently. Once the graph is saved, it's accessible from: the graph experience in Microsoft Defender portal under Sentinel, Visual Studio Code Notebooks, and Graph query APIs.  
+
 
 1. From your graph notebook, select **Create Scheduled Job**, then select **Create a graph job**.
 
@@ -258,6 +365,9 @@ After creating a graph, you can persist it by storing the graph in your tenant w
 1.  In the **Create graph job** form, enter the **Graph name** and **Description**, and verify the correct graph notebook is included in **Path**.
 
 1.  To build the graph without configuring a refresh schedule, select **On demand** in the **Schedule** section, then select **Submit** to create the graph.
+
+    > [!NOTE]
+    > Graphs created using on demand schedule have default retention of 30 days and are deleted on expiration.
 
 1.  To build the graph where the graph data is refreshed regularly, select **Scheduled** in the **Schedule** section.
 
@@ -275,7 +385,7 @@ After creating a graph, you can persist it by storing the graph in your tenant w
 
 .
 
-### View and manage custom graphs in your tenant
+### View and manage custom graphs
 
 After you create a graph job, you can view and manage the graph in your tenant from the Microsoft Sentinel extension in Visual Studio Code.
 
@@ -289,19 +399,8 @@ After you create a graph job, you can view and manage the graph in your tenant f
 
     :::image type="content" source="media/create-custom-graphs/graph-details.png" lightbox="media/create-custom-graphs/graph-details.png" alt-text="A screenshot of the graph details tab.":::
 
-1. You can now query the graph in the query editor. Select the **Graph Query** tab to open the graph query editor.
-1. Paste the following sample GQL query to retrieve all user nodes in the graph:
+1. You can now query and visualize your graph from the graph visualization in Microsoft Sentinel in the Defender portal. For more information, see [Visualize graphs in Microsoft Sentinel graph (preview)](./graph-visualization.md).
 
-    ```gql
-    MATCH (n)-[e:communicatedWith]->(a), (n)-[b:BelongsTo]->(d)
-            WHERE d.Org in ["Customer XP"]
-            RETURN *
-            LIMIT 30
-    ```
-
-:::image type="content" source="media/create-custom-graphs/graph-query.png" lightbox="media/create-custom-graphs/graph-query.png" alt-text="A screenshot of the graph query tab.":::
-
-For more information on GQL, see [GQL language guide](/kusto/query/graph-query-language-reference?view=microsoft-fabric).
 
 ## Related articles
 
