@@ -60,6 +60,8 @@ When you select an alert, you open a panel that provides more information about 
 
 - **Informational** An incident typically includes several alerts. Some alerts might appear on their own to be only informational, but in the context of the other alerts, they might warrant a closer look.
 
+To investigate alerts, see [How to use the AKS Security Dashboard](how-to-use-azure-kubernetes-service-dashboard.md#investigate-an-alert)
+
 
 ### Vulnerability assessment
 
@@ -73,9 +75,14 @@ The scanning of container images includes the following types of packages:
 
 For more details on how to use the vulnerability assessment findings, see the [review vulnerability assessment findings](/azure/defender-for-cloud/how-to-use-azure-kubernetes-service-dashboard.md#review-vulnerability-assessment-findings).
 
+To review and remediate vulnerabilities, see [Review vulnerability findings](how-to-use-azure-kubernetes-service-dashboard.md#review-vulnerability-assessment-findings).
+
+
 ### Misconfigurations
 
 Microsoft Defender for Cloud continuously monitors Azure and AKS APIs, along with Kubernetes workloads. It identifies configurations within the cluster or its running containers that could affect the cluster's security posture and expose the cluster to risk. Defender also offers guidelines and automatic fixes to address these issues.
+
+To review and fix misconfigurations, see [Review misconfigurations](how-to-use-azure-kubernetes-service-dashboard.md#review-misconfigurations).
 
 
 ### Compliance
@@ -83,8 +90,10 @@ Microsoft Defender for Cloud continuously monitors Azure and AKS APIs, along wit
 Defender for Cloud continuously assesses your environment against selected regulatory standards and benchmarks. It provides a clear view of your compliance status, highlights unmet requirements, and offers recommendations to help you improve your cloud security posture.
 
 
+To assess and remediate compliance issues, see [Assess compliance with regulatory standards](how-to-use-azure-kubernetes-service-dashboard.md#assess-compliance-with-regulatory-standards).
 
-### Setting
+
+### Settings
 
 #### Plan enablement
 
@@ -95,6 +104,9 @@ Enable Microsoft Defender for Cloud containers protection (Defender for Containe
 > - When you enable Defender for Containers at the subscription level, you can only change plan settings at the subscription level.
 >
 > - By enabling other Microsoft Defender for Cloud plans, you can scan all your cloud assets to identify cross-resource attack paths, more accurately identify risk, and provide alerts and full visibility into cross-resource security incidents. [Learn more.](/azure/defender-for-cloud/defender-for-cloud-introduction)
+>
+> If you configure settings at the subscription level, they override any settings configured at the cluster level.
+
 
 #### Plan configurations
 
@@ -106,7 +118,3 @@ Enable Microsoft Defender for Cloud containers protection (Defender for Containe
 
 - **Azure policy** - Deploys an agent on the cluster to generate recommendations for hardening the cluster data plane.
 
-> [!NOTE]
-> If you configure settings at the subscription level, they override any settings configured at the cluster level.
-
-Set the Defender for Containers plan for the cluster or the subscription by using [REST API commands](/rest/api/defenderforcloud-composite/pricings/update).

@@ -1,7 +1,7 @@
 ---
 title: How to use the AKS Security Dashboard
-description: Explain the views and actions in the AKS security Dashboard to enable and protect an individual cluster with Defender for Containers.
-ms.topic: how-to-article
+description: Learn how to use the AKS Security Dashboard in Microsoft Defender for Cloud to review and remediate security issues in your Azure Kubernetes Service clusters.
+ms.topic: how-to
 ms.date: 03/23/2026
 CustomerIntent: As the person responsible for the security of a cluster, I want know what views and actions the cluster security dashboard provides, so I can remediate security issues in the cluster.
 ---
@@ -16,7 +16,7 @@ This article explains how to use the AKS security dashboard to review and remedi
 The AKS Security Dashboard shows security issues for a cluster if at least one of the following plans is enabled:
 
 - [Defender for Containers](tutorial-enable-containers-azure.md)
-- [Individual cluster](#plan-enablement) 
+- [Individual cluster](cluster-security-dashboard.md#plan-enablement) 
 - [Defender CSPM](tutorial-enable-cspm-plan.md) 
 
 
@@ -67,7 +67,7 @@ The AKS Security Dashboard shows security issues for a cluster if at least one o
 
 :::image type="content" source="media/cluster-security-dashboard/vulnerabilities-assessment-tab.png" alt-text=" Screenshot of the Vulnerabilities tab showing vulnerable components list with severity levels, CVE counts, affected packages, and risk assessment scores." lightbox="media/cluster-security-dashboard/vulnerabilities-assessment-tab.png":::
 
-#### Review misconfiguration assessment findings
+### Review misconfiguration assessment findings
 
 1. Select the misconfigured component in the **Misconfigurations** tab to open the details panel.
 
@@ -83,7 +83,7 @@ Learn how to [remediate security misconfigurations with Defender for Cloud](/azu
 
 :::image type="content" source="media/cluster-security-dashboard/misconfigurations-assessment-tab.png" alt-text="Screenshot of the Misconfigurations tab displaying security configuration issues." lightbox="media/cluster-security-dashboard/misconfigurations-assessment-tab.png":::
 
-#### How to use the compliance tab
+### Assess compliance with regulatory standards
 
 1. Configure the required compliance standard you need to adhere to. You configure the standard at the subscription level. Follow the link for configuration from the compliance tab or the dashboard settings.
 
@@ -111,3 +111,7 @@ Learn how to [configure regulatory compliance standards](/azure/defender-for-clo
 ### Export security findings
 
 Select **Download CSV report** to download the cluster security findings as a CSV file. You can also use the [Defender for Cloud REST API](/rest/api/defenderforcloud-composite/assessments) to retrieve security findings.
+
+## Enable Defender for Containers
+
+To set the Defender for Containers plan for the cluster or the subscription use the [REST API commands](/rest/api/defenderforcloud-composite/pricings/update).
