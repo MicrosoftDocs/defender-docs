@@ -10,31 +10,6 @@ ms.date: 02/16/2026
 
 # Defender for Containers architecture
 
-Defender for Containers uses a different architecture depending on the Kubernetes environment:
-
-- **Azure Kubernetes Service (AKS)** - Microsoft's managed service for developing, deploying, and managing containerized applications.
-
-- **Amazon Elastic Kubernetes Service (EKS) in a connected Amazon Web Services (AWS) account** - Amazon's managed service for running Kubernetes on AWS without needing to install, operate, and maintain your own Kubernetes control plane or nodes.
-
-- **Google Kubernetes Engine (GKE) in a connected Google Cloud Platform (GCP) project** - Google’s managed environment for deploying, managing, and scaling applications using GCP infrastructure.
-
-- **An unmanaged Kubernetes distribution** (using Azure Arc-enabled Kubernetes) - Cloud Native Computing Foundation (CNCF) certified Kubernetes clusters hosted on-premises or on IaaS.
-
-To protect your Kubernetes containers, Defender for Containers receives and analyzes:
-
-- Audit logs and security events from the API server
-- Cluster configuration information from the control plane
-- Workload configuration from Azure Policy
-- Security signals and events from the node level
-
-## Deployment options
-
-Defender for Containers components can be deployed automatically when the Containers plan is enabled, using native AKS integrations or Azure Arc extensions for connected clusters.
-
-In environments that require additional control, components can also be deployed and managed manually using Helm, supporting Infrastructure as Code (IaC) and GitOps workflows.
-
-## How Defender for Containers connects to your environment
-
 Microsoft Defender for Containers uses multiple connectivity paths to collect security signals and provide protection across container registries and Kubernetes environments. The required connectivity depends on the enabled features and the environment in which your containers run.
 
 Implementation details vary between Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), Google Kubernetes Engine (GKE), and Arc-enabled Kubernetes clusters.
@@ -49,10 +24,8 @@ The following table shows how key Defender for Containers capabilities are imple
 |------------|------------|--------------------------------|
 | Image vulnerability assessment | Yes | No |
 | Kubernetes posture assessment | Yes | No |
-| Runtime threat detection | No | Yes (Defender sensor) |
+| Runtime threat detection | No | Yes |
 | Control plane threat detection | Yes | No |
-
-Runtime threat detection requires the Defender sensor to be deployed on the cluster.
 
 ### Connection to container registries
 
@@ -210,6 +183,8 @@ To get full protection from Microsoft Defender for Containers, you need these co
 
 ---
 
-## Next steps
+## Related content
+
+- [Network access and permissions reference for Defender for Containers](defender-for-containers-network-access.md).
 
 - [Enable Defender for Containers](defender-for-containers-enable-portal.md)
