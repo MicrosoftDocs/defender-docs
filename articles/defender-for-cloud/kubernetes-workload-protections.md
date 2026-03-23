@@ -4,7 +4,7 @@ description: Learn how to use Microsoft Defender for Cloud's set of Kubernetes d
 ms.topic: how-to
 author: Elazark
 ms.author: elkrieger
-ms.date: 03/15/2026
+ms.date: 03/23/2026
 ---
 
 # Protect your Kubernetes data plane hardening
@@ -56,11 +56,11 @@ If you disabled the "Azure Policy for Kubernetes" settings under the containers 
 
 1. Select **Settings**.
 
-    :::image type="content" source="media/kubernetes-workload-protections/containers-settings.png" alt-text="Screenshot showing the settings button in the Defender plan." lightbox="media/kubernetes-workload-protections/containers-settings.png":::
+   :::image type="content" source="media/kubernetes-workload-protections/containers-settings.png" alt-text="Screenshot showing the settings button in the Defender plan." lightbox="media/kubernetes-workload-protections/containers-settings.png":::
 
 1. In the Settings & Monitoring page, toggle the **Azure Policy for Kubernetes** to **On**.
 
-      :::image type="content" source="media/kubernetes-workload-protections/toggle-on-extensions.png" alt-text="Screenshot showing the toggles used to enable or disable the extensions." lightbox="media/kubernetes-workload-protections/toggle-on-extensions.png":::
+     :::image type="content" source="media/kubernetes-workload-protections/toggle-on-extensions.png" alt-text="Screenshot showing the toggles used to enable or disable the extensions." lightbox="media/kubernetes-workload-protections/toggle-on-extensions.png":::
 
 #### Enable for GCP projects
 
@@ -86,12 +86,14 @@ You can manually configure the Azure Policy for Kubernetes on existing Kubernete
    - **Azure -** `"Azure Kubernetes Service clusters should have the Azure Policy add-on for Kubernetes installed"`
    - **GCP** - `"GKE clusters should have the Azure Policy extension"`.
    - **AWS and On-premises** - `"Azure Arc-enabled Kubernetes clusters should have the Azure policy extension for Kubernetes extension installed"`.
-           :::image type="content" source="./media/kubernetes-workload-protections/azure-kubernetes-service-clusters-recommendation.png" alt-text="Screenshot showing the Azure Kubernetes service clusters recommendation." lightbox="media/kubernetes-workload-protections/azure-kubernetes-service-clusters-recommendation.png":::
+   
+   :::image type="content" source="./media/kubernetes-workload-protections/azure-kubernetes-service-clusters-recommendation.png" alt-text="Screenshot showing the Azure Kubernetes service clusters recommendation." lightbox="media/kubernetes-workload-protections/azure-kubernetes-service-clusters-recommendation.png":::
 
 1. Select a found recommendation.
 
 1. Select **Fix**.
-   :::image type="content" source="media/kubernetes-workload-protections/azure-kubernetes-service-clusters-recommendation-fix.png" alt-text="Screenshot of a recommendation with the Fix button highlighted.":::
+   
+   :::image type="content" source="media/kubernetes-workload-protections/azure-kubernetes-service-clusters-recommendation-fix.png" alt-text="Screenshot of a recommendation with the Fix button highlighted." lightbox="media/kubernetes-workload-protections/azure-kubernetes-service-clusters-recommendation-fix.png":::
 
 1. Repeat for each additional recommendation.
 
@@ -138,25 +140,22 @@ For recommendations with parameters that need to be customized, you need to set 
 1. Select the relevant subscription.
 
 1. From the navigation menu, select **Security policies**.
-   :::image type="content" source="media/kubernetes-workload-protections/security-policies-page.png" alt-text="Screenshot of the Security policies page.":::
+   
+   :::image type="content" source="media/kubernetes-workload-protections/security-policies-page.png" alt-text="Screenshot of the Security policies page." lightbox="media/kubernetes-workload-protections/security-policies-page.png":::
 
 1. On the **Standards** tab, search for the appropriate security standard.
 
 1. Select the security standard's 3-dot menu and select **Manage**.
-   :::image type="content" source="media/kubernetes-workload-protections/security-policies-select-manage.png" alt-text="Screenshot of selecting Manage from the recommendation's 3-dot menu.":::
+   
+   :::image type="content" source="media/kubernetes-workload-protections/security-policies-select-manage.png" alt-text="Screenshot of selecting Manage from the recommendation's 3-dot menu." lightbox="media/kubernetes-workload-protections/security-policies-select-manage.png":::
 
 1. Select the relevant policy assignment's 3-dot menu and select **Manage effect and parameters**.
-   :::image type="content" source="media/kubernetes-workload-protections/select-manage-effect-and-parameters.png" alt-text="Screenshot of selecting the 3-dot menu and then selecting Manage effect and aparameters.":::
+   
+   :::image type="content" source="media/kubernetes-workload-protections/select-manage-effect-and-parameters.png" alt-text="Screenshot of selecting the 3-dot menu and then selecting Manage effect and aparameters." lightbox="media/kubernetes-workload-protections/select-manage-effect-and-parameters.png":::
 
 1. Modify the values as required.
-
-
-1. Select the relevant assignment. The default assignment is `ASC default`.
-
-1. Open the **Parameters** tab and modify the values as required.
-   :::image type="content" source="media/kubernetes-workload-protections/manage-effect-and-parameters.png" alt-text="Screenshot of the paraments panel.":::
-
-    :::image type="content" source="media/kubernetes-workload-protections/containers-parameter-requires-configuration.png" alt-text="Screenshot showing where to modify the parameters for one of the recommendations in the Kubernetes data plane hardening protection bundle." lightbox="media/kubernetes-workload-protections/containers-parameter-requires-configuration.png":::
+   
+   :::image type="content" source="media/kubernetes-workload-protections/manage-effect-and-parameters.png" alt-text="Screenshot of the paraments panel." lightbox="media/kubernetes-workload-protections/manage-effect-and-parameters.png":::
 
 1. Select **Save**.
 
@@ -164,7 +163,7 @@ For recommendations with parameters that need to be customized, you need to set 
 
 1. Open the recommendation details page and select **Deny**:
 
-    :::image type="content" source="./media/defender-for-kubernetes-usage/enforce-workload-protection-example.png" alt-text="Screenshot showing the Deny option for Azure Policy parameter." lightbox="media/defender-for-kubernetes-usage/enforce-workload-protection-example.png":::
+   :::image type="content" source="./media/defender-for-kubernetes-usage/enforce-workload-protection-example.png" alt-text="Screenshot showing the Deny option for Azure Policy parameter." lightbox="media/defender-for-kubernetes-usage/enforce-workload-protection-example.png":::
 
     The pane to set the scope opens.
 
@@ -177,7 +176,8 @@ For recommendations with parameters that need to be customized, you need to set 
 1. Go to **Defender for Cloud** > **Inventory**.
 
 1. Set the resource type filter to **Kubernetes services** and select **Apply**.
-   :::image type="content" source="media/kubernetes-workload-protections/resource-type-kubernetes-service.png" alt-text="Screenshot of using the resource type filter to select kubernetes service.":::
+  
+    :::image type="content" source="media/kubernetes-workload-protections/resource-type-kubernetes-service.png" alt-text="Screenshot of using the resource type filter to select kubernetes service." lightbox="media/kubernetes-workload-protections/resource-type-kubernetes-service.png":::
 
 1. Select a cluster to investigate.
 
@@ -185,7 +185,8 @@ For recommendations with parameters that need to be customized, you need to set 
    
 
 1. Optional: For a list of the specific pods, select the recommendation.
-   :::image type="content" source="media/kubernetes-workload-protections/resource-health-recommendation.png" alt-text="Screenshot of selecting a recommendation from the Resource health page.":::
+   
+   :::image type="content" source="media/kubernetes-workload-protections/resource-health-recommendation.png" alt-text="Screenshot of selecting a recommendation from the Resource health page." lightbox="media/kubernetes-workload-protections/resource-health-recommendation.png":::
 1.  and then select **Take action**.
 
 :::image type="content" source="./media/defender-for-kubernetes-usage/view-affected-pods-for-recommendation.gif" alt-text="Screenshot showing where to view the affected pods for a Kubernetes recommendation.":::
