@@ -6,7 +6,6 @@ ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
 ms.date: 12/31/2025
-manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security

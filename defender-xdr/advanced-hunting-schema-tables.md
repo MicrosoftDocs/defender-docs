@@ -9,7 +9,6 @@ f1.keywords:
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -64,6 +63,7 @@ The following reference lists all the tables in the schema. Each table name link
 | **[CampaignInfo](advanced-hunting-campaigninfo-table.md)** (Preview) | Email campaigns identified by Microsoft Defender for Office 365 |	Yes|	Yes|
 | **[CloudAppEvents](advanced-hunting-cloudappevents-table.md)** | Events involving accounts and objects in Office 365 and other cloud apps and services |	Yes|	Yes|
 | **[CloudAuditEvents](advanced-hunting-cloudauditevents-table.md)** (Preview)| Cloud audit events for various cloud platforms protected by the organization's Microsoft Defender for Cloud |	No|	No|
+| **[CloudDnsEvents](advanced-hunting-clouddnsevents-table.md)** (Preview)| DNS activity events from cloud infrastructure environments |	No|	No|
 | **[CloudProcessEvents](advanced-hunting-cloudprocessevents-table.md)** (Preview)| Cloud process events for various cloud platforms protected by the organization's Microsoft Defender for Containers |	No|	No|
 | **[CloudStorageAggregatedEvents](advanced-hunting-cloudstorageaggregatedevents-table.md)** (Preview)| Cloud storage activity and related events |	No|	No|
 | **[DataSecurityBehaviors](advanced-hunting-datasecuritybehaviors-table.md)** (Preview)| Insights about potentially suspicious user behaviors that violate user-defined or default policies configured in the Microsoft Purview suite of solutions|	No|	No|

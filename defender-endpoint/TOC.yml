@@ -609,7 +609,6 @@
     - name: Detect vulnerabilities
       href: /defender-vulnerability-management
     - name: Discover devices
-    - name: Discover devices
       items:      
       - name: Overview
         href: device-discovery.md
