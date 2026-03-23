@@ -87,6 +87,12 @@ items:
         href: deploy/configure-windows-event-collection.md
 - name: Integrate with identity services
   items:
+    - name: Microsoft Defender for Identity and CyberArk
+      items:
+        - name: Overview (Preview)
+          href: defender-for-identity-cyber-ark-overview.md
+        - name: Connect CyberArk to Microsoft Defender for Identity (Preview)
+          href: connect-cyber-ark.md
     - name: Microsoft Defender for Identity and Okta
       items:
       - name: Overview
@@ -95,6 +101,7 @@ items:
         href: okta-integration.md
     - name: Integrate Defender for Identity with PAM services
       href: integrate-microsoft-and-pam-services.md
+
 - name: Manage
   items:
   - name: Manage related identities and accounts

@@ -7,7 +7,6 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: pahuijbr; yonghree
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -201,7 +200,7 @@ After onboarding devices to the service, it's important to take advantage of the
 
 ### Next generation protection configuration
 
-The configuration settings in this link are recommended: [Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment](/defender-endpoint/deployment-vdi-microsoft-defender-antivirus).
+The configuration settings in this link are recommended: [Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment](deployment-vdi-microsoft-defender-antivirus.md).
 
 ## Related articles
 
