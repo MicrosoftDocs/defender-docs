@@ -25,6 +25,10 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## March 2026
 
+### Migrate Defender for Identity sensors from v2.x to v3.x
+
+You can now migrate Defender for Identity sensors from v2.x to v3.x directly from the Microsoft Defender portal. The v2.x sensor continues running during the migration until the v3.x sensor is ready, so there's no downtime. Eligible servers appear as **Ready for migration** on the **Sensors** page, and migration takes up to 20 minutes. For more information, see [Migrate to Defender for Identity sensor v3.x](deploy/migrate-to-sensor-v3.md).
+
 ### New Defender for Identity security alerts
 
 These new alerts were added to the Defender for Identity security alerts:
