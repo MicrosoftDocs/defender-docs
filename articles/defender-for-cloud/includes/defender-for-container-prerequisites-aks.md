@@ -1,7 +1,7 @@
 ---
 ms.service: defender-for-cloud
 ms.topic: include
-ms.date: 07/19/2022
+ms.date: 03/16/2026
 ms.author: elkrieger
 author: Elazark
 ---
@@ -22,14 +22,4 @@ For clusters with restricted egress, you must allow specific FQDNs for Microsoft
 
 #### Private link configuration
 
-If event egress from the cluster requires the use of an Azure Monitor Private Link Scope (AMPLS), you must:
-
-1. Define the cluster with Container insights and a Log Analytics workspace
-1. Define the cluster's Log Analytics workspace as a resource in the AMPLS
-1. Create a virtual network private endpoint in the AMPLS between:
-   - The virtual network of the cluster
-   - The Log Analytics resource
-
-   The virtual network private endpoint integrates with a private DNS zone.
-
-For instructions, see [Create an Azure Monitor Private Link Scope](/azure/azure-monitor/logs/private-link-configure#create-an-azure-monitor-private-link-scope).
+For instructions, see [Microsoft Security Private Link for Microsoft Defender for Cloud](../concept-private-links.md).
