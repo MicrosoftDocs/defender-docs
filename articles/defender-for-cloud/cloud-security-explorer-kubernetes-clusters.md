@@ -28,12 +28,10 @@ For an introduction to Cloud Security Explorer queries, see [Build queries with 
     :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/security-explorer-containers-query.png" alt-text="Screenshot of Cloud Security Explorer query options to retrieve list of container images with software installed." lightbox="./media/cloud-security-explorer-kubernetes-clusters/security-explorer-containers-query.png":::
 
 1. Select the **View details** link to see the result details pane. 
+1. View the details of the installed software in the **Insights** section.
 
     :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/security-explorer-containers-query-result-details.png" alt-text="Screenshot shows results of Cloud Security Explorer query to retrieve container images with software installed." lightbox="./media/cloud-security-explorer-kubernetes-clusters/security-explorer-containers-query-result-details.png":::
 
-1. View the details of the installed software in the **Insights** section.
-
-    :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/security-explorer-containers-query-result-details-insights.png" alt-text="Screenshot shows Cloud Security Explorer query result details and insight results from the selected containers image." lightbox="./media/cloud-security-explorer-kubernetes-clusters/security-explorer-containers-query-result-details-insights.png":::
 
 ## Create a query to identify vulnerabilities in cluster nodes
 
