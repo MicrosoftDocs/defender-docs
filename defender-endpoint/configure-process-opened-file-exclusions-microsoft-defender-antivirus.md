@@ -9,7 +9,6 @@ ms.author: chrisda
 ms.topic: how-to
 ms.custom: nextgen
 ms.reviewer: yongrhee
-manager: bagol
 ms.collection: 
 - m365-security
 - tier2

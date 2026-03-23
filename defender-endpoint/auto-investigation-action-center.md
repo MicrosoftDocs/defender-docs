@@ -6,7 +6,6 @@ ms.subservice: edr
 author: chrisda
 ms.author: chrisda
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

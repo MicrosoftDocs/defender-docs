@@ -6,7 +6,6 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
 ms.date: 10/20/2025
 audience: ITPro
 ms.topic: troubleshooting

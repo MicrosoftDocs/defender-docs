@@ -4,7 +4,6 @@ description: Learn about order of priority with device policies in Defender for 
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: bagol
 audience: Admin
 ms.topic: overview
 ms.service: defender-business

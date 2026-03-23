@@ -9,7 +9,6 @@ ms.author: chrisda
 ms.topic: install-set-up-deploy
 ms.custom: nextgen
 ms.reviewer: yongrhee
-manager: bagol
 ms.collection: 
 - m365-security
 - tier2

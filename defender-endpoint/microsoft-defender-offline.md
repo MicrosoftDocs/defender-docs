@@ -6,7 +6,6 @@ ms.localizationpriority: medium
 ms.date: 09/18/2024
 author: limwainstein
 ms.author: lwainstein
-manager: bagol
 ms.custom: nextgen
 ms.reviewer: yongrhee
 ms.subservice: ngp

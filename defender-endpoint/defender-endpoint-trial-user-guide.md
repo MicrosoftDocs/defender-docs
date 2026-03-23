@@ -4,7 +4,6 @@ description: Use this guide to get the most of your 90-day free trial. See how D
 search.appverid: MET150 
 author: limwainstein
 ms.author: lwainstein
-manager: bagol 
 audience: ITPro
 ms.topic: how-to
 ms.date: 06/19/2025

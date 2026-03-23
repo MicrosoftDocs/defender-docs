@@ -1,7 +1,7 @@
 ﻿---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 03/12/2026
+ms.date: 03/23/2026
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality.
 ms.reviewer: AbbyMSFT
@@ -22,7 +22,42 @@ For more information, see also:
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
+
 ## March 2026
+
+### Defender for Identity sensor updates
+
+Sensor versions now display the full version number (for example, 2.255.19201.14651) instead of only the major/minor version (for example, 2.255). This makes it easier to identify the exact update installed on each sensor.
+
+When you validate upgrades or troubleshoot, the last two numbers in the version (for example, 19201.14651) show which update is installed.
+
+|Version number|Updates|
+|---|---|
+|2.255.19201.14651|This sensor update includes bug fixes.|
+
+### New Defender for Identity security alerts
+
+These new alerts were added to the Defender for Identity security alerts:
+
+**New alerts related to Entra ID**:
+
+- [Attempt to disable Defender for Identity service principal observed](alerts-xdr.md#attempt-to-disable-defender-for-identity-service-principal-observed)
+- [Suspicious Entra account enablement after disruption](alerts-xdr.md#suspicious-entra-account-enablement-after-disruption)
+- [Suspicious Intune device registration activity](alerts-xdr.md#suspicious-intune-device-registration-activity)
+- [Suspicious OS switch sign-in](alerts-xdr.md#suspicious-os-switch-sign-in)
+- [Suspicious shared client infrastructure activity](alerts-xdr.md#suspicious-shared-client-infrastructure-activity)
+- [Suspicious sign-in from unusual user agent and IP address using PowerShell](alerts-xdr.md#suspicious-sign-in-from-unusual-user-agent-and-ip-address-using-powershell)
+- [Suspicious sign-in from unusual user agent and IP address using device code flow](alerts-xdr.md#suspicious-sign-in-from-unusual-user-agent-and-ip-address-using-device-code-flow)
+
+**New alerts related to Active Directory**:
+
+- [Suspicious on-prem account enablement after disruption](alerts-xdr.md#suspicious-on-prem-account-enablement-after-disruption)
+- [Suspicious resource-based constrained delegation (RBCD) attribute change](alerts-xdr.md#suspicious-resource-based-constrained-delegation-rbcd-attribute-change)
+- [Suspicious resource-based constrained delegation (RBCD) authentication](alerts-xdr.md#suspicious-resource-based-constrained-delegation-rbcd-authentication)
+
+### Suspected pass-the-ticket attack alert is now generally available
+
+The [Suspected pass-the-ticket attack](alerts-xdr.md#suspected-pass-the-ticket-attack) alert is now generally available. This alert was previously available in public preview as *Pass-the-Ticket (PtT) attack*. For more information, see [Lateral movement alerts](alerts-xdr.md).
 
 ### Updates to Secure Score category calculations for increased accuracy
 
@@ -73,7 +108,7 @@ These new alerts were added to the Defender for Identity security alerts:
 
 **New alerts related to Active Directory**:
 
-- [Pass-the-Ticket (PtT) attack (Preview)](alerts-xdr.md#pass-the-ticket-ptt-attack-preview)
+- [Pass-the-Ticket (PtT) attack](alerts-xdr.md#suspected-pass-the-ticket-attack)
 - [Possible Active Directory Certificate Services enumeration](alerts-xdr.md#possible-active-directory-certificate-services-enumeration)
 - [Possible Active Directory enumeration via ADWS](alerts-xdr.md#possible-active-directory-enumeration-via-adws)
 - [Suspicious NTLM authentication](alerts-xdr.md#suspicious-ntlm-authentication)
@@ -102,8 +137,8 @@ Weâ€™re gradually rolling out automatic Windows event-auditing configuratio
 This update might identify existing auditing configuration gaps that weren't previously detected.
 To ensure consistent protection, we recommend that you make sure all servers with the v3 sensors are configured with:
 
-- The latest Windows cumulative update 
-- Automatic Windows event auditing enabled 
+- The latest Windows cumulative update.
+- Automatic Windows event auditing enabled.
 For more information, see [Configure automatic windows auditing](deploy/configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically-preview).
 
 ### Sensor updates
@@ -124,7 +159,7 @@ For more information, see:[Security posture assessment: Identify service account
 
 This identity security posture assessment lists Active Directory accounts that are members of built-in Operator Groups, including direct and indirect membership. 
 
-You can use this assessment to review legacy or unnecessary operator access and take action when elevated access isnâ€™t required.
+You can use this assessment to review legacy or unnecessary operator access and take action when elevated access isn't required.
 
 For more information, see:[Security posture assessment: Locate accounts in built-in Operator Groups](security-posture-assessments/accounts.md#locate-accounts-in-built-in-operator-groups)
 
@@ -197,75 +232,6 @@ The [Microsoft Defender for Identity sensor v3.x](/defender-for-identity/deploy/
 |Version number|Updates|
 |---|---|
 |2.249|The improved event log query method now captures a broader range of unique events at scale. As a result, you might notice an increase in captured activities. This update also delivers other security enhancements and performance improvements.|
-
-## September 2025
-
-### Defender for Identity alerts transitioned to the unified Defender alerting experience
-
-As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, the following alerts were converted from the Microsoft Defender for Identity classic format to the the unified Defender alerting format. Keep in mind that all alerts are based on detections from Defender for Identity sensors.
-
-|Classic Alert Title|External ID|XDR Alert Name|Detector ID|
-|---|---|---|---|
-|Active Directory attributes Reconnaissance using LDAP|2210|[LDAP reconnaissance attributes in Active Directory](alerts-xdr.md#ldap-reconnaissance-attributes-in-active-directory)|xdr_LdapSensitiveAttributeReconnaissance|
-|User and IP address reconnaissance|2012|[Suspicious Server Message Block (SMB) enumeration from untrusted host](alerts-xdr.md#suspicious-server-message-block-smb-enumeration-from-untrusted-host)|xdr_SmbSessionEnumeration|
-|Account enumeration reconnaissance|2003|[Suspected account enumeration (Kerberos, NTLM, AD FS)](alerts-xdr.md#suspected-account-enumeration-kerberos-ntlm-ad-fs)|xdr_SuspectedAccountEnumeration|
-|Suspected brute-force attack (LDAP)|2004|[Suspected brute-force attack on Lightweight Directory Access Protocol (LDAP) authentication](alerts-xdr.md#suspected-brute-force-attack-on-lightweight-directory-access-protocol-ldap-authentication)|xdr_LdapBindBruteforce|
-|||[Suspected password spray attack on Lightweight Directory Access Protocol (LDAP) authentication](alerts-xdr.md#suspected-password-spray-attack-on-lightweight-directory-access-protocol-ldap-authentication)|xdr_LdapBindBruteforce|
-|Suspicious network connection over Encrypting File System Remote Protocol|2416|[Suspicious network connection over Encrypting File System Remote Protocol](alerts-xdr.md#suspicious-network-connection-over-encrypting-file-system-remote-protocol)|xdr_SuspiciousConnectionOverEFSRPC|
-
-### Additional security value in the Defender for Identity sensor v3.x
-
-Apply the **Unified sensor RPC audit*- tag to your Defender for Identity sensor v3.x in the **Asset rule management*- page for enhanced protection. Learn more [here](/defender-for-identity/deploy/prerequisites-sensor-version-3).
-
-### Identity posture recommendations view on the identity page (preview)
-
-A new tab on the Identity profile page contains all active identity-related identity security posture assessments (ISPMs). This page consolidates all identity-specific security posture assessments into a single contextual view, helping security teams quickly spot weaknesses and take targeted actions.
-For more information, see [Investigate users in Microsoft Defender XDR](/microsoft-365/security/defender/investigate-users).
-
-### New Regional Availability: United Arab Emirates
-
-Defender for Identity data centers are now also deployed in the United Arab Emirates, North, and Central regions. For the most current list of regional deployments, see [Defender for Identity data locations](/defender-for-identity/privacy-compliance/#data-location).
-
-### New API support for the Defender for Identity sensor v3.x (Preview)
-
-We're excited to announce the availability of a new Graph-based API for managing the Defender for Identity sensor v3.x server actions.
-This capability is currently in preview and available in API Beta version.
-
-This API allows customers to:
-
-- Monitor the status of servers deployed with the Defender for Identity sensor v3.x.
-- Enable or disable the automatic activation of eligible servers.
-- Activate or deactivate the sensor on eligible server.
-
-For more information, see [Managing the Defender for Identity sensor v3.x actions using Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true).
-
-### Microsoft Defender for Identity sensor version updates
-
-|Version number|Updates|
-|---|---|
-|2.249|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
-
-### Updates to multiple detections to reduce noise and improve alert accuracy
-
-Several Defender for Identity detections are being updated to reduce noise and improve accuracy, making alerts more reliable and actionable. As the rollout continues, you might see a decrease in the number of alerts raised.
-
-The improvements will gradually take effect across the following detections:
-
-- Suspicious communication over DNS
-- Suspected Netlogon privilege elevation attempt (CVE-2020-1472)
-- Honeytoken authentication activity
-- Remote code execution attempt over DNS
-- Suspicious password reset by Microsoft Entra Connect account
-- Data exfiltration over SMB
-- Suspected skeleton key attack (encryption downgrade)
-- Suspicious modification of Resource Based Constrained Delegation by a machine account
-- Remote code execution attempt
-
-### Unified connectors is now available for Okta single sign-on connectors (Preview)
-
-Microsoft Defender for Identity supports the [Unified connectors](/azure/sentinel/unified-connector) experience, starting with the Okta single sign-on connector. The unified connector enables Defender for Identity to collect Okta system logs once and share them across supported Microsoft security products, reducing API usage and improving connector efficiency.
-
-For more information, see: [Connect Okta to Microsoft Defender for Identity (Preview)](okta-integration.md)
 
 ## Next steps
 
