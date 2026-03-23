@@ -4,7 +4,6 @@ f1.keywords:
   - CSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.date: 09/17/2025
 audience: ITPro
 ms.topic: how-to
