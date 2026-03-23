@@ -91,7 +91,7 @@ The **Identities** list highlights key details for each human identity, includin
 | UPN (User Principal Name) | The unique sign-in name of the identity in an email-like format. |
 | Identity environment | Indicates whether the identity is on-premises (originates from Active Directory), Cloud only (Entra ID) or Hybrid (synced from Azure Active Directory to Microsoft Entra ID). |
 | Identity provider | The name of the identity provider. |
-| Risk score | The risk score assigned to the identity. |
+| Risk score | The risk score dynamically calculated for the identity. |
 | Criticality level | The criticality level assigned to the identity. |
 | Tags | Custom labels that help categorize identities considered high-value assets. For example, **Sensitive**, **Honeytoken**, or **Privileged Accounts** managed by a [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) (PIM) service. |
 | SID | The Security Identifier, a unique value used to identify the identity in Active Directory. |
