@@ -3,13 +3,13 @@ title: Graph Query Language (GQL) reference for Microsoft Sentinel graph (Previe
 description: Learn the fundamental concepts, functions, and operators of Graph Query Language (GQL) for querying graph data in Microsoft Sentinel graph.
 author: EdB-MSFT
 ms.author: edbaynash
-ms.date: 03/18/2026
+ms.date: 03/23/2026
 ms.topic: reference
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ---
 
-# Graph Query Language (GQL) reference for Microsoft Sentinel graph (Preview)
+# Graph Query Language (GQL) reference for Microsoft Sentinel graph (preview)
 
  Applies to: Microsoft Sentinel Graph
 
@@ -159,15 +159,6 @@ MATCH REPEATABLE ELEMENTS (a)-[r1]->(b)-[r2]->(c)
 
 Path modes control which types of paths are included in results based on repetition constraints.
 
-### WALK (default)
-
-The default GQL path mode. Includes all possible paths with no restrictions on node or edge repetition.
-
-```gql
-MATCH WALK (a)-[]->{1,3}(b)
--- Allows paths with repeating nodes and edges
-``` 
-
 ### TRAIL
 
 Filters out paths that have repeating edges. Nodes can repeat, but each edge can only appear once per path.
@@ -176,98 +167,6 @@ Filters out paths that have repeating edges. Nodes can repeat, but each edge can
 MATCH TRAIL (a)-[]->{1,3}(b)
 -- No edge can appear twice in the same path
 -- Nodes may repeat
-```
-
-### ACYCLIC
-
-Filters out paths that have repeating nodes. Each node can only appear once per path.
-
-```gql
-MATCH ACYCLIC (a)-[]->{1,3}(b)
--- No node can appear twice in the same path
--- Prevents cycles entirely
-```
-
-### SIMPLE
-
-Same as ACYCLIC but allows the first and last nodes in the path to be the same (forming a simple cycle).
-
-```gql
-MATCH SIMPLE (a)-[]->{1,3}(b)
--- No node repetition except first/last can match
--- Currently not supported in implementation
-```
-
-## Mode combinations 
-
-Different combinations of match modes and path modes impact graph traversals and iterations.
-
-### DIFFERENT EDGES mode
-
-| **Path Mode** | **Single Path** | **Multi-path ("star" pattern)** |
-|---|---|---|
-| WALK | `unique_edges` | `unique_edges` (only if all paths are WALK/TRAIL) |
-| TRAIL | `unique_edges` | `unique_edges` (only if all paths are WALK/TRAIL) |
-| ACYCLIC | `none` | Not supported |
-| SIMPLE | Not supported | Not supported |
-
-### REPEATABLE ELEMENTS mode
-
-| **Path Mode** | **Single Path** | **Multi-path ("star" pattern)** |
-|---|---|---|
-| WALK | `all` | `all` (only if all paths are WALK) |
-| TRAIL | `unique_edges` | Not supported |
-| ACYCLIC | `none` | Not supported |
-| SIMPLE | Not supported | Not supported |
-
-### Syntax examples
-
-**Basic path modes**
-
-```gql
--- Default (WALK with DIFFERENT EDGES)
-MATCH (n)-[]->(m)
-RETURN n, m
-
--- Explicit WALK mode
-MATCH WALK (n)-[]->(m)
-RETURN n, m
-
--- TRAIL mode - no repeating edges
-MATCH TRAIL (n)-[]->{1,3}(m)
-RETURN n, m
-
--- ACYCLIC mode - no repeating nodes
-MATCH ACYCLIC (n)-[]->{1,3}(m)
-RETURN n, m
-```
-
-**Match mode combinations**
-
-```gql
--- DIFFERENT EDGES with WALK (default)
-MATCH DIFFERENT EDGES WALK (n)-[]->(m)
-RETURN n, m
-
--- REPEATABLE ELEMENTS with WALK
-MATCH REPEATABLE ELEMENTS WALK (n)-[]->(m)
-RETURN n, m
-
--- REPEATABLE ELEMENTS with TRAIL
-MATCH REPEATABLE ELEMENTS TRAIL (n)-[]->(m)
-RETURN n, m
-```
-
-**Multi-pattern queries**
-
-```gql
--- Multiple WALK patterns (star pattern)
-MATCH WALK (n)-[]->(a), WALK (n)-[]->(b)
-RETURN n, a, b
-
--- Mixed path modes (both must be WALK/TRAIL for multi-path)
-MATCH WALK (n)-[]->(a), TRAIL (n)-[]->(b)
-RETURN n, a, b
 ```
 
 ## Functions and operators reference 
@@ -300,13 +199,20 @@ The following table lists the core GQL functions and operators, and examples.
 | labels() | Show labels for a node or edge | RETURN labels(entity) |
 | UPPER() | Convert to uppercase | RETURN UPPER(person.name) |
 | LOWER() | Convert to lowercase | RETURN LOWER(person.name) |
-| LEFT() | Extract left substring | WHERE LEFT(person.name, 3) = 'Tom' |
-| RIGHT() | Extract right substring | WHERE RIGHT(person.name, 5) = 'Hanks' |
 | STARTS WITH | String starts with pattern | WHERE person.name STARTS WITH 'Tom' |
 | ENDS WITH | String ends with pattern | WHERE person.name ENDS WITH 'Hanks' |
 | CONTAINS | String contains pattern | WHERE person.name CONTAINS 'Tom' |
 | \|\| | String concatenation | RETURN n.firstName \|\| ' ' \|\| n.lastName |
 | TRIM() | Remove whitespace from both ends | RETURN TRIM(' abc ') |
+| STRING_JOIN() | Join array elements with delimiter | RETURN STRING_JOIN(["a", "b" \|\| "c"], "-") |
+| CAST() | Convert data types | CAST(person.age AS STRING) |
+| ZONED_DATETIME() | Create datetime from string | ZONED_DATETIME('2024-01-01') |
+| PATH_LENGTH() | Get the length of a path | RETURN PATH_LENGTH(path_variable) |
+| ORDER BY | Sort results | ORDER BY person.age DESC |
+| LIMIT | Limit result count | LIMIT 10 |
+| & (AND) | Label intersection | MATCH (p:Person & Male) |
+| \| (OR) | Label union | MATCH (n:Person \| Movie) |
+| ! (NOT) | Label negation | MATCH (p:!Female) |
 
 
 
@@ -342,14 +248,14 @@ RETURN COUNT(*) > 0 AS HasSuspiciousActivity
 
 ## Limitations 
 
-- **Query structure**: All openCypher queries must start with a MATCH statement.
+- **Query structure**: All GQL queries must start with a MATCH statement.
 
 - **Reserved keywords**: Some GQL keywords can't be used as identifiers in queries. Some reserved keywords aren't immediately obvious (for example, DATE is a reserved keyword). If your graph data has property names that conflict with GQL reserved keywords, use different property names in your graph schema or rename them to avoid parsing conflicts.
 
 > [!IMPORTANT]
 > When you design your graph schema, some common property names might conflict with GQL reserved keywords. Avoid or rename these property names.
 
-- **No INSERT/CREATE support**: Operations to change graph structures aren't supported. Instead, use KQL for all graph creation, change, and management tasks.
+- **No INSERT/CREATE support**: Operations to change graph structures aren't supported. 
 
 - **Optional matches**: Supported only for node patterns (not edges).
 
@@ -359,10 +265,6 @@ RETURN COUNT(*) > 0 AS HasSuspiciousActivity
 
 - **Duration granularity**: Durations support up to days and smaller units down to nanoseconds. Larger-than-day units (for example, weeks, months, years) aren't supported.
 
-- **Traversal modes**: GQL defines configurable traversal modes for matching and paths. 
-For `MATCH`, the modes are `DIFFERENT EDGES` and `REPEATABLE EDGES`.
-For `PATH`, the modes are `WALK`, `TRAIL`, `ACYCLIC`, and `SIMPLE`. 
-The current implementation defaults to `DIFFERENT EDGES` and `WALK`, respectively. Some combinations aren't supported.
 
 ## Labels() custom GQL function 
 

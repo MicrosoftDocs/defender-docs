@@ -1,5 +1,5 @@
 ---
-title: Get started with custom graphs in Microsoft Sentinel
+title: Get started with custom graphs in Microsoft Sentinel (preview)
 description: Learn how to create and manage custom graphs in Microsoft Sentinel to model attack patterns, investigate threats, and run advanced graph algorithms.
 author: EdB-MSFT
 ms.author: edbaynash
@@ -11,7 +11,7 @@ ms.subservice: sentinel-graph
 #customer intent: As a security researcher, I want to create custom graphs in my tenant so that I can continuously monitor and detect systemic threats.
 ---
 
-# Get started with custom graphs in Microsoft Sentinel
+# Get started with custom graphs in Microsoft Sentinel (preview)
 
 Custom graphs in Microsoft Sentinel enable security researchers and analysts to create tailored graph representations of their security data. By building custom graphs, you can model specific attack patterns, investigate threats, and run advanced graph algorithms to uncover hidden relationships within your digital environment. This guide walks you through the steps to create and manage custom graphs by using Jupyter notebooks in the Microsoft Sentinel Visual Studio Code extension.
 

@@ -1,5 +1,5 @@
 ---
-title: Custom graphs in Microsoft Sentinel- Overview
+title: Custom graphs in Microsoft Sentinel-Overview (preview)
 description: An overview of custom graphs in Microsoft Sentinel 
 author: EdB-MSFT
 ms.author: edbaynash
@@ -12,7 +12,7 @@ ms.subservice: sentinel-platform
 
 ---
 
-# Custom Graph overview
+# Custom Graph overview (preview)
 
 Custom graphs let you build tailored security graphs tuned to your unique security scenarios using data from Sentinel data lake as well as non-Microsoft sources. With custom graph, powered by Fabric, you can build, query, and visualize connected data, uncover hidden patterns and attack paths, and help surface risks that are hard to detect when data is analyzed in isolation. These graphs provide the knowledge context that enables AI-powered agent experiences to work more effectively, speeding investigations, revealing blast radius, and helping you move from noisy, disconnected alerts to confident decisions at scale. 
 

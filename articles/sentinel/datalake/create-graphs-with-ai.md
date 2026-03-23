@@ -1,19 +1,19 @@
 ---  
-title: AI-assisted custom graph authoring in Microsoft Sentinel
+title: AI-assisted custom graph authoring in Microsoft Sentinel (preview)
 titleSuffix: Microsoft Security  
 description: Use AI assistance in Visual Studio Code to create, modify, and query custom security graphs using Jupyter notebooks and GitHub Copilot.
 author: EdB-MSFT  
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
 ms.topic: how-to
-ms.date: 03/17/2026
+ms.date: 03/23/2026
 ms.author: edbaynash  
 ms.collection: ms-security  
 
 #customer intent: As a security engineer, I want to use AI assistance to create and modify custom security graphs so that I can efficiently model and analyze complex security relationships.
 ---  
 
-# AI-assisted custom graph authoring in Microsoft Sentinel
+# AI-assisted custom graph authoring in Microsoft Sentinel (preview)
 
 Use GitHub Copilot in Visual Studio Code with Microsoft Sentinel to create, modify, and query custom security graphs using Jupyter notebooks. Describe what you want to build in natural language, review the generated notebook, and refine it as needed.
 
@@ -43,6 +43,7 @@ Before you begin, make sure you have:
 - **The Microsoft Sentinel extension for Visual Studio Code** installed and signed in. For more information, see [Run notebooks on the Microsoft Sentinel data lake](notebooks.md).
 - **The Jupyter extension for Visual Studio Code** installed. Download from the [VS Code Extensions Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter).
 - **GitHub Copilot** installed and enabled. For more information, see [GitHub Copilot extension](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot).
+- **GitHub Copilot Business or Copilot Enterprise plan**, see [GitHub Copilot plans](https://github.com/features/copilot#pricing)
 - **A Microsoft Sentinel data lake** configured with appropriate permissions. For more information, see [Onboarding to Microsoft Sentinel data lake](sentinel-lake-onboarding.md).
 
 ## Create and edit a custom graph with Copilot
