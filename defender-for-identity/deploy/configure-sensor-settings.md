@@ -25,7 +25,7 @@ After the Defender for Identity sensor is installed, do the following to view an
           - Sensor name
           - Sensor domain membership
           - Sensor version number
-          - Whether updates should be [delayed](../sensor-settings.md#delayed-update-for-sensor-v2x)
+          - Whether updates should be [delayed](../sensor-settings.md#delayed-sensor-update)
           - Sensor service status
        :::column-end:::
        :::column:::
