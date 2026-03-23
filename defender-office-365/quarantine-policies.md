@@ -2,7 +2,6 @@
 title: Quarantine policies
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.reviewer:
 audience: ITPro
 ms.topic: how-to
