@@ -177,35 +177,8 @@ After you finish testing the attack path, investigate the created attack path by
 
 You can build queries in one of the following ways:
 
-- [Explore risks with built-in cloud security explorer templates](#explore-risks-with-cloud-security-explorer-templates)
-- [Create custom queries with cloud security explorer](#create-custom-queries-with-cloud-security-explorer)
-
-In the following sections, you can find examples of queries you can select or create.
-
-### Explore risks with cloud security explorer templates
-
-1. Go to the **Microsoft Defender for Cloud overview** > **Cloud security explorer**.
-1. Some out-of-the-box templates for Kubernetes appear. Select one of the templates:
-
-    - **Azure Kubernetes pods running images with high severity vulnerabilities**
-    - **Kubernetes namespaces contain vulnerable pods**
-  
-    :::image type="content" source="media/how-to-test-attack-path/select-template.png" alt-text="Screenshot showing where to select templates." lightbox="media/how-to-test-attack-path/select-template.png":::
-
-1. Select **Open query**. The template builds the query in the upper portion of the screen. 
-1. Select **Search** to view the results.
-
-    :::image type="content" source="media/how-to-test-attack-path/query-builder-search.png" alt-text="Screenshot that shows the query built and where to select search." lightbox="media/how-to-test-attack-path/query-builder-search.png":::
-
-### Create custom queries with cloud security explorer
-
-You can also create your own custom queries. The following example shows a search for pods running container images that are vulnerable to remote code execution.
-
-:::image type="content" source="media/how-to-test-attack-path/custom-query-search.png" alt-text="Screenshot that shows a custom query." lightbox="media/how-to-test-attack-path/custom-query-search.png":::
-
-The results are listed below the query.
-
-:::image type="content" source="media/how-to-test-attack-path/custom-query-results.png" alt-text="Screenshot that shows the results from a custom query." lightbox="media/how-to-test-attack-path/custom-query-results.png":::
+- [Explore risks with built-in cloud security explorer templates](how-to-manage-cloud-security-explorer.md#query-templates)
+- [Create custom queries with cloud security explorer](how-to-manage-cloud-security-explorer.md#build-a-query)
 
 
 ## Next steps

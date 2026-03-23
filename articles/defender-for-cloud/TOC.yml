@@ -844,8 +844,11 @@
                 displayName: faq, frequently asked questions, gated deployment
                 href: faq-runtime-gated.md
       - name: Protect clusters with AKS Security Dashboard
-        displayName: k8s, containers
-        href: cluster-security-dashboard.md
+        items:
+          - name: Overview
+            href: cluster-security-dashboard.md
+          - name: How to use the AKS Security Dashboard
+            href: how-to-use-azure-kubernetes-service-security-dashboard.md
       - name: Investigate clusters with Cloud Security Explorer
         displayName: k8s, containers
         href: cloud-security-explorer-kubernetes-clusters.md
