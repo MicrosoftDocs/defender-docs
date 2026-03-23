@@ -36,7 +36,6 @@ The AKS Security Dashboard shows security issues for a cluster if at least one o
 1. Select **Clusters** > **relevant cluster**.
 1. Select **Microsoft Defender for Cloud**.
 
-
 :::image type="content" source="media/cluster-security-dashboard/kubernetes-center-cluster.png" alt-text="Screenshot that shows where to find the clusters page in the Azure portal." lightbox="media/cluster-security-dashboard/kubernetes-center-cluster.png":::
 
 ### Understand the dashboard sections
