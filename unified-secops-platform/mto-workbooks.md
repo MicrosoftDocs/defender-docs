@@ -5,7 +5,6 @@ ms.service: microsoft-defender
 ms.subservice: unified-security-operations
 ms.author: monaberdugo
 author: mberdugo
-ms.localizationpriority: medium
 reviewer: Tomas Beerthuis
 audience: 
 ms.collection: 
