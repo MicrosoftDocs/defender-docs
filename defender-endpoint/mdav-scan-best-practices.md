@@ -12,7 +12,6 @@ ms.custom:
 - nextgen
 - partner-contribution
 ms.reviewer: bsabetghadam
-manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security

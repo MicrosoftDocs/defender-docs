@@ -7,7 +7,6 @@ f1.keywords:
 - NOCSH
 ms.author: dansimp
 author: diannegali
-manager: deniseb
 ms.date: 10/16/2024
 audience: ITPro
 ms.topic: article

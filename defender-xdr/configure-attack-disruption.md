@@ -4,7 +4,6 @@ description: Learn how to set up automatic attack disruption in Microsoft Defend
 search.appverid: MET150
 ms.author: guywild
 author: guywi-ms
-manager: deniseb
 audience: ITPro
 ms.topic: how-to
 ms.service: defender-xdr

@@ -8,7 +8,6 @@ audience: ITPro
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: sugamar, yongrhee
-manager: bagol
 ms.custom: asr
 ms.topic: article
 ms.collection: 

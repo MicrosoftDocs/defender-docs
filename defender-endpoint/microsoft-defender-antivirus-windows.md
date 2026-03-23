@@ -8,7 +8,6 @@ ms.topic: overview
 author: chrisda
 ms.author: chrisda
 ms.reviewer: mkaminska, yonghree, pahuijbr
-manager: bagol
 ms.custom: nextgen
 ms.subservice: ngp
 ms.collection: 

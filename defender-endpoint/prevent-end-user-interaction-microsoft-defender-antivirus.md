@@ -8,7 +8,6 @@ ms.author: painbar
 ms.custom: nextgen
 ms.date: 10/20/2025
 ms.reviewer: pahuijbr
-manager: bagol
 ms.subservice: ngp
 ms.topic: how-to
 ms.collection: 

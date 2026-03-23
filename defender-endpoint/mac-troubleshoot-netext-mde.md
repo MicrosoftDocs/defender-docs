@@ -4,7 +4,6 @@ description: Learn how to troubleshoot issues with the network extension (NetExt
 ms.service: defender-endpoint
 author: paulinbar
 ms.author: painbar
-manager: bagol
 ms.reviewer: joshbregman
 ms.localizationpriority: medium
 audience: ITPro
