@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-ms.date: 03/03/2026
+ms.date: 03/23/2026
 manager: orspodek
 audience: ITPro
 ms.collection:
@@ -34,6 +34,8 @@ You can also get product updates and important notifications through the [messag
 
 ## March 2026
 
+- (Preview) The following advanced hunting schema tables are now available for preview:
+    - The [`CloudDnsEvents`](advanced-hunting-clouddnsevents-table.md) table contains information about DNS activity events from cloud infrastructure environments.
 - To improve accuracy and better protect organizational identities, we've made updates to the Secure Score category calculations. Some security recommendations categorized as **Cloud apps** recommendations are now considered identity‑related and grouped under the **Identity** category. While the total Secure Score remains unchanged, individual identity and app scores may change.
 - (Preview) Customers can now use filters on very large incidents with many alerts and entities or hide specific entities to simplify complex incident graphs. By simplifying the graphs, they can focus their investigations on what matters most. [Learn more](investigate-incidents.md#filter-and-focus-the-incident-graph-preview)
 - The [proactive user containment (contain user)](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) action as part of the predictive shielding feature is now generally available. This action infuses activity data with exposure data to identify exposed credentials at risk of being compromised and reused to conduct malicious activity.

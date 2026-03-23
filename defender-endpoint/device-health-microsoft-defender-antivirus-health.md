@@ -7,7 +7,6 @@ ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
 ms.date: 04/08/2025
-manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security

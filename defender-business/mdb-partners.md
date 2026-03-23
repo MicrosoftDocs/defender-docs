@@ -4,7 +4,6 @@ description: Download our new security guide or integrate your remote monitoring
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: bagol
 audience: Admin
 ms.topic: overview
 ms.service: defender-business

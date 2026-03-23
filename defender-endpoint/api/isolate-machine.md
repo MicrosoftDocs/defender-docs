@@ -5,7 +5,6 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -40,7 +39,7 @@ Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 ### Supported operating systems
 
 - Full isolation is available for devices on Windows 10, version 1703, and on Windows 11.
-- Full isolation is available for all supported Linux devices. See [Microsoft Defender for Endpoint on Linux](/defender-endpoint/microsoft-defender-endpoint-linux).
+- Full isolation is available for all supported Linux devices. See [Microsoft Defender for Endpoint on Linux](../microsoft-defender-endpoint-linux.md).
 - Selective isolation is available for devices on Windows 10, version 1709 or later, and on Windows 11.
 
 ## Permissions

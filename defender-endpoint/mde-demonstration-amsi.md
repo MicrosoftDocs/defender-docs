@@ -24,7 +24,7 @@ appliesto:
 # AMSI demonstrations with Microsoft Defender for Endpoint
 
 
-Microsoft Defender for Endpoint uses the [Antimalware Scan Interface (AMSI)](/defender-endpoint/amsi-on-mdav) to provide better protection against fileless malware, dynamic script-based attacks, and other nontraditional cyber threats. This article explains how to test the AMSI engine by using a benign sample.
+Microsoft Defender for Endpoint uses the [Antimalware Scan Interface (AMSI)](amsi-on-mdav.md) to provide better protection against fileless malware, dynamic script-based attacks, and other nontraditional cyber threats. This article explains how to test the AMSI engine by using a benign sample.
 
 ## Prerequisites
 

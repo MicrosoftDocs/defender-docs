@@ -4,7 +4,6 @@ description: Security policies are applied to devices through device groups in D
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: bagol
 audience: Admin
 ms.topic: how-to
 ms.service: defender-business

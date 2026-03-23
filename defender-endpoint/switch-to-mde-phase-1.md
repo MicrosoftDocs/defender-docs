@@ -6,7 +6,6 @@ ms.subservice: onboard
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection:
   - m365-security
@@ -110,7 +109,7 @@ To enable communication between your devices and Defender for Endpoint, you migh
 |---|---|---|
 |[Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)|[Windows 11](/windows/whats-new/windows-11-overview)<br/>[Windows 10](/windows/release-health/release-information) <br/>  [Windows Server 1803, or later](/windows-server/get-started/whats-new-in-windows-server-1803) <br/> [Windows Server 2016 and later](/windows-server/get-started/whats-new-in-windows-server-2016)\*<br/>[Windows Server 2012 R2](/windows/release-health/status-windows-8.1-and-windows-server-2012-r2)\* <br/> Azure Stack HCI OS, version 23H2 and later. |[Configure and validate Microsoft Defender Antivirus network connections](configure-network-connections-microsoft-defender-antivirus.md)|
 |[Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)|macOS (see [System requirements](microsoft-defender-endpoint-mac-prerequisites.md))|[Defender for Endpoint on macOS: Network connections](microsoft-defender-endpoint-mac-prerequisites.md#network-connectivity)|
-|[Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)|Linux  (see [System requirements](/defender-endpoint/mde-linux-prerequisites))|[Verify that devices can connect to Defender for Endpoint cloud services](mde-linux-prerequisites.md#verify-if-devices-can-connect-to-defender-for-endpoint-cloud-services)|
+|[Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)|Linux  (see [System requirements](mde-linux-prerequisites.md))|[Verify that devices can connect to Defender for Endpoint cloud services](mde-linux-prerequisites.md#verify-if-devices-can-connect-to-defender-for-endpoint-cloud-services)|
 |[Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)|[Windows 11](/windows/whats-new/windows-11-overview)<br/>[Windows 10](/windows/release-health/release-information) <br/> Azure Stack HCI OS, version 23H2 and later. (beginning in February 2025 and rolling out over the next several weeks) <br/>[Windows Server 1803, or later](/windows-server/get-started/whats-new-in-windows-server-1803)  <br/>[Windows Server 2016 and later](/windows/release-health/status-windows-10-1607-and-windows-server-2016) <br/>[Windows Server 2012 R2](/windows/release-health/status-windows-8.1-and-windows-server-2012-r2) |[Configure machine proxy and internet connectivity settings](configure-proxy-internet.md)|
 |[Defender for Endpoint Plan 2](microsoft-defender-endpoint.md) |[Windows Server 2008 R2 SP1](/windows/release-health/status-windows-7-and-windows-server-2008-r2-sp1) <br/>[Windows 8.1](/windows/release-health/status-windows-8.1-and-windows-server-2012-r2)<br/>[Windows 7 SP1](/windows/release-health/status-windows-7-and-windows-server-2008-r2-sp1)|[Configure proxy and internet connectivity settings](onboard-downlevel.md#configure-proxy-and-internet-connectivity-settings)|
 |[Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)|macOS (see [System requirements](microsoft-defender-endpoint-mac.md))|[Defender for Endpoint on macOS: Network connections](microsoft-defender-endpoint-mac-prerequisites.md#network-connectivity)|

@@ -7,7 +7,6 @@ f1.keywords:
   - NOCSH
 ms.author: deniseb
 author: denisebmsft
-manager: dansimp
 audience: ITPro
 ms.collection:
 - m365-security

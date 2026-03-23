@@ -3,7 +3,6 @@ title: Microsoft Defender for Endpoint streamlined connectivity URLs - US govern
 description: Get a list of the streamlined connectivity URLs required to onboard and maintain devices in Microsoft Defender for Endpoint in US Government cloud environments (GCC, GCC High, DoD).         
 author: limwainstein
 ms.author: lwainstein
-manager: bagol
 ms.topic: how-to
 ms.service: defender-endpoint
 ms.subservice: onboard
