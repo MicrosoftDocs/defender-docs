@@ -8,7 +8,6 @@ ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 04/25/2025
-manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security

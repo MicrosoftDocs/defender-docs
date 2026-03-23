@@ -6,7 +6,6 @@ ms.subservice: onboard
 ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

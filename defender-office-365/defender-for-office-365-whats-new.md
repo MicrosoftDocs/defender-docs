@@ -6,7 +6,6 @@ search.appverid: met150
 f1.keywords: NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.localizationpriority: medium
 ms.date: 02/18/2026
 audience: ITPro
