@@ -75,7 +75,7 @@ These new alerts were added to the Defender for Identity security alerts:
 
 **New alerts related to Active Directory**:
 
-- [Suspicious on-prem account enablement after disruption](alerts-xdr.md#suspicious-on-prem-account-enablement-after-disruption)
+- [Suspicious on-premises account enablement after disruption](alerts-xdr.md#suspicious-on-prem-account-enablement-after-disruption)
 - [Suspicious resource-based constrained delegation (RBCD) attribute change](alerts-xdr.md#suspicious-resource-based-constrained-delegation-rbcd-attribute-change)
 - [Suspicious resource-based constrained delegation (RBCD) authentication](alerts-xdr.md#suspicious-resource-based-constrained-delegation-rbcd-authentication)
 
