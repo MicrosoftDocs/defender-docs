@@ -8,7 +8,6 @@ audience: ITPro
 author: batamig
 ms.author: bagol
 ms.reviewer: ericlaw
-manager: bagol
 ms.custom: asr
 ms.subservice: asr
 ms.topic: overview

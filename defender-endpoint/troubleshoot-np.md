@@ -7,7 +7,6 @@ audience: ITPro
 author: chrisda
 ms.author: chrisda
 ms.reviewer: oogunrinde, yongrhee
-manager: bagol
 ms.subservice: asr
 ms.topic: how-to
 ms.collection:

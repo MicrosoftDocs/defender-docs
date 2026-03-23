@@ -13,7 +13,6 @@ ms.custom:
 - cx-ti
 - cx-ean
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection:
   - m365-security

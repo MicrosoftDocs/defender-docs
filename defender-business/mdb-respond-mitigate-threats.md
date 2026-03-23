@@ -4,7 +4,6 @@ description: As threats are detected in Defender for Business, you can take acti
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: bagol
 audience: Admin
 ms.topic: how-to
 ms.service: defender-business

@@ -8,7 +8,6 @@ author: paulinbar
 ms.author: painbar
 audience: ITPro
 ms.reviewer: sugamar 
-manager: bagol
 ms.custom: asr
 ms.subservice: asr
 ms.topic: how-to

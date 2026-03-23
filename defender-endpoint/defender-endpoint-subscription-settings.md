@@ -4,7 +4,6 @@ description: Learn about your options for managing your Defender for Endpoint su
 search.appverid: MET150  
 author: limwainstein
 ms.author: lwainstein
-manager: bagol 
 audience: ITPro
 ms.topic: overview
 ms.date: 03/05/2025

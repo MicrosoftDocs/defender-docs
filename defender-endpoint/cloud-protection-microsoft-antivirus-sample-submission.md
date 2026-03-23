@@ -6,7 +6,6 @@ ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
 ms.reviewer: mkaminska, yongrhee
-manager: bagol
 ms.subservice: ngp
 ms.topic: concept-article
 ms.date: 10/20/2025
