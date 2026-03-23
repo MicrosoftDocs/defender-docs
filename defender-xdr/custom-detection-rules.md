@@ -24,7 +24,7 @@ appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Defender for Endpoint Plan 2
 ms.topic: how-to
-ms.date: 03/20/2026
+ms.date: 03/23/2026
 ---
 
 # Create custom detection rules
@@ -229,8 +229,8 @@ If your custom detections include Defender XDR data, a fixed lookback period is 
 - For detections set to run **every three hours**, the lookback period is **12 hours**.
 - For detections set to run **hourly**, the lookback period is **four hours**.
 
-If your custom detections target Microsoft Sentinel data only and you apply a custom frequency, the lookback period is determined automatically by using the following logic: 
-- For detections set to run in frequencies **higher (more frequent) than one hour**, the lookback is limited to **less than 48 hours**. 
+If your custom detections target Microsoft Sentinel data only, you can customize the lookback period depending on the rule frequency that you set: 
+- For detections set to run in frequencies **higher (more frequent) than one hour**, the lookback period is limited to **less than 48 hours**. 
 - For detections set to run in frequencies **higher than one day**, the lookback can be set **up to 14 days**. 
 - For detections set to run in frequencies of **one day or less**, the lookback can be set **up to 30 days**.  
 
