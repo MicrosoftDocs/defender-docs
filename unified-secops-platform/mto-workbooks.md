@@ -14,7 +14,7 @@ ms.collection:
 - tier1
 - usx-security
 ms.topic: how-to
-ms.date: 09/16/2025
+ms.date: 03/16/2026
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
