@@ -3,7 +3,7 @@ title: Visualize custom graphs in Microsoft Sentinel graph (preview)
 description: Learn how to use Microsoft Sentinel graph to query, visualize, and interact with custom security graphs to gain new security insights.
 author: EdB-MSFT
 ms.author: edbaynash
-ms.date: 03/16/2026
+ms.date: 03/23/2026
 ms.topic: how-to
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-graph
@@ -11,9 +11,9 @@ ms.subservice: sentinel-graph
 #Customer intent: As a security analyst, I want to use Microsoft Sentinel graph to query and visualize custom security graphs so that I can gain new insights into entity relationships and threats in my environment.
 ---
 
-# Visualize graphs in Microsoft Sentinel graph (preview)
+# Visualize graphs in Microsoft Sentinel (preview)
 
-Microsoft Sentinel graph is a user interface that enables you to visualize disparate datasets by querying a graph mapping. Sentinel graph allows you to run queries to visualize the insights that matter most to your organization and supports ad hoc traversal of the graph so you can quickly investigate entities of interest. You can study the graph schema to understand the relationships defined on your graph and use any of the displayed metadata to narrow down your results. You can quickly validate your results with the table view and export them for easy integration into any preexisting workflows. Use the Visual Studio Code Sentinel extension to create your own custom mappings that use tables in the Microsoft Sentinel data lake, then use Sentinel graph to query and visualize the relationships between the entities in those tables. 
+The graphs experience in the Microsoft Defender portal enables you to perform interactive graph-based investigations on your custom graphs, such as using a graph built for phishing analysis to help you quickly evaluate the impact of a recent incident, profile the attacker, and trace its paths across Microsoft telemetry and third-party data. This experience allows you to run graph queries to visualize the insights that matter most to your organization and supports ad hoc traversal of the graph so you can quickly investigate entities of interest. You can study the graph schema to understand the relationships defined on your graph and use any of the displayed metadata to narrow down your results. You can quickly validate your results with the table view and export them for easy integration into any preexisting workflows. Use Jupyter Notebooks in Microsoft Visual Studio Code to create and materialize your custom graphs, then use the graph experience in Microsoft Sentinel to query and visualize your custom graphs.
 
 This article explains how to use Sentinel graph to query, visualize, and interact with graphs to obtain new insights.
 
@@ -24,11 +24,15 @@ This article explains how to use Sentinel graph to query, visualize, and interac
 
 To access Sentinel graph and query it to produce visualizations, you must have the appropriate permissions. For more information, see [Roles and permissions in Microsoft Sentinel](../roles.md).
 
-## Access Sentinel graph
++ A custom graph exists in your tenant. 
++ To access the graph experience in Microsoft Sentinel and query it to produce visualizations, you must have the appropriate permissions. For more information, see [Get started with custom graphs in Microsoft Sentinel](./create-custom-graphs.md#permissions).
 
-To use Sentinel graph, select **Microsoft Sentinel** > **Graph** from the left-hand navigation pane.
 
-The Sentinel graph management page lists any custom graphs that you created in the Visual Studio Code Sentinel extension. If you haven't created a custom graph, see [Create a custom graph mapping](./create-custom-graphs.md) to get started.
+## Access graphs
+
+To access the graph experience in Microsoft Sentinel, login to the Microsoft Defender portal, select **Microsoft Sentinel** > **Graphs** from the navigation pane.
+
+The Sentinel Graph management page lists any custom graphs that you created using the Visual Studio Code Sentinel extension. If you haven't created a custom graph, [Create a custom graph mapping](./create-custom-graphs.md) to get started.
 
 If you already created custom graphs, the Sentinel graph management page displays all available custom graphs. View an overview of each custom graph by selecting the **...** menu on any graph tile.
 
@@ -39,7 +43,7 @@ If you already created custom graphs, the Sentinel graph management page display
 
 Select **Query graph** on the graph tile to view the graph query page.
 
-The graph creation page shows the graph schema. Use the schema to understand the mapped relationships when creating a query. 
+You can view the schema to understand the graph ontology – nodes, edges, and their properties available to query.
 
 :::image type="content" source="media/graph-visualization/graph-creation-schema.png" alt-text="Screenshot showing the Sentinel graph creation page with the schema panel and query input." lightbox="media/graph-visualization/graph-creation-schema.png":::
 
@@ -66,44 +70,6 @@ The graph creation page shows the graph schema. Use the schema to understand the
 
     :::image type="content" source="media/graph-visualization/basic-query-table.png" alt-text="Screenshot showing the table visualization results after running a GQL query." lightbox="media/graph-visualization/basic-query-table.png":::
 
-## GQL query guidance
-
-The following example demonstrates how to query a Device Process Graph to understand device communication with external IP addresses. By examining the schema, you can identify the key relationships within your graph:
-- *IP Addresses* are linked to *Threat Intel Indicator IPs*
-- *Processes* and *Devices* are connected to *IP Addresses*
-- *Users* run *Processes*
-- *Processes* connect to *URLs*
-
-:::image type="content" source="./media/graph-visualization/device-process-schema.png" lightbox="./media/graph-visualization/device-process-schema.png" alt-text="Screenshot showing the schema of the device process graph.":::
-
-You can now draft a more specific query. In the following example, the first line specifies that you're looking for devices that utilize a process that's connected to an IP address. `MATCH (d:Device)-[h]-(p:Process)-[c]->(ip:IPAddress)`
-The second line specifies that you're looking for public IPs, narrowing our results to external connected entities that pose a greater threat. `WHERE ip.RemoteIPType = 'Public'`
-The last two lines specify that you want to return all available data for the specified query, but limit results to 1000 to ensure the query runs efficiently. `RETURN * LIMIT 1000`
-
-```gql
-MATCH (d:Device)-[h]-(p:Process)-[c]->(ip:IPAddress)
-WHERE ip.RemoteIPType = 'Public'
-RETURN *
-LIMIT 1000
-```
-
-:::image type="content" source="media/graph-visualization/graph-specific-query.png" alt-text="Screenshot showing the graph visualization for a specific query filtering devices connected to public IP addresses." lightbox="media/graph-visualization/graph-specific-query.png":::
-
-The following example demonstrates a more granular query with additional search parameters. This query searches for malicious IP addresses and devices communicating with more than one device. The first line searches for devices that connect to IP addresses that are known to be used by threat actors. The `DISTINCT` clause searches for unique IP and device values. The `COLLECT_LIST` groups the device names in a singular column in the **Table** view, and `DeviceCount` specifies that only IPs with more than one connected device are listed.
-
-```gql
-MATCH (d:Device)-[c]->(ip:IPAddress)-[l]->(ti:ThreatIntelIndicatorIP)
-RETURN DISTINCT ti.ObservableValue, d.display_name
-NEXT
-RETURN ti.ObservableValue as ObservableValue, COLLECT_LIST(d.display_name) as Devices, COUNT(*) as DeviceCount
-NEXT FILTER
-DeviceCount > 1
-ORDER BY DeviceCount desc
-RETURN *
-```
-
-:::image type="content" source="media/graph-visualization/table-specific-query.png" alt-text="Screenshot showing the table view for a specific query filtering devices connected to malicious IP addresses." lightbox="media/graph-visualization/graph-specific-query.png":::
-
 ## Interact with graphs
 
 Use the following capabilities to traverse and explore your graphs:
@@ -120,7 +86,8 @@ As you zoom in on the graph, more node labels appear. The first labels to appear
 **View node details**
 Select a node to open a details pane on the right side. Use the metadata shown here to refine future queries—for example, by filtering on geographic region, department, or last updated date.
 
-**Explore connected assets** From the node details pane, you can select **Explore connected assets** to populate any more nodes with a relationship to the selected node. This is useful when you discover an entity of interest and want to more deeply investigate its connectivity.
+**Explore connected assets**
+From the node details pane or by right-clicking the node, you can select **Explore connected assets** to traverse the graph and view the next hop from this node.
 
 :::image type="content" source="media/graph-visualization/graph-legend.png" lightbox="media/graph-visualization/graph-legend.png" alt-text="Screenshot showing the graph legend with node and edge types.":::
 
