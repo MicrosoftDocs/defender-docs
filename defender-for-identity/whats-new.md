@@ -1,7 +1,7 @@
 ﻿---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 03/22/2026
+ms.date: 03/23/2026
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality.
 ms.reviewer: AbbyMSFT
@@ -44,6 +44,16 @@ New identity security capabilities help you monitor and manage identity security
 - **Domain investigation page (Preview)**: The **Domain investigation** page shows Active Directory domain security, including domain properties, deployment health, identity summary, service account breakdown, sensitive entities, active recommendations, group policies, and trust relationships. For more information, see [Investigate a domain](investigate-domain.md).
 
 - **Password protection page (Preview)**: The **Password protection** page shows identity password risk from Active Directory, Microsoft Entra ID, and Okta, with tabs for password hygiene, password policies, leaked credentials, and exposed passwords. For more information, see [Password protection](password-protection.md).
+
+### Defender for Identity sensor updates
+
+Sensor versions now display the full version number (for example, 2.255.19201.14651) instead of only the major/minor version (for example, 2.255). This makes it easier to identify the exact update installed on each sensor.
+
+When you validate upgrades or troubleshoot, the last two numbers in the version (for example, 19201.14651) show which update is installed.
+
+|Version number|Updates|
+|---|---|
+|2.255.19201.14651|This sensor update includes bug fixes.|
 
 ### New Defender for Identity security alerts
 
