@@ -305,5 +305,7 @@ For more information on GQL, see [GQL language guide](/kusto/query/graph-query-l
 
 ## Related articles
 
-- [Microsoft Sentinel graph provider library reference](./sentinel-graph-provider-reference.md)
 - [AI-assisted custom graph authoring in Microsoft Sentinel](create-graphs-with-ai.md)
+- [Microsoft Sentinel graph provider library reference](./sentinel-graph-provider-reference.md)
+- [Graph Query Language (GQL) reference for Sentinel custom graph](./gql-reference-for-sentinel-custom-graph.md)
+- [Visualize graphs in Microsoft Sentinel graph (preview)](./graph-visualization.md)
