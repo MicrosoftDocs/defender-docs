@@ -6,7 +6,7 @@ author: EdB-MSFT
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: how-to
-ms.date: 03/19/2026
+ms.date: 03/23/2026
 ms.author: edbaynash
 ms.collection: ms-security
 
@@ -103,7 +103,7 @@ The process for creating a connector instance varies based on the external data 
 
 # [Microsoft Fabric](#tab/fabric)
 
-### Create a Microsoft Fabric connector instance
+## Create a Microsoft Fabric connector instance
 
 Before configuring the Fabric connector instance, you must set up permissions within the Microsoft Fabric environment to allow Microsoft Sentinel to access the data.
 
@@ -111,7 +111,7 @@ Before configuring the Fabric connector instance, you must set up permissions wi
 
 + Configure the admin settings within Microsoft Fabric so that the setting is enabled for **Service principals can call Fabric public APIs**. For more information, see [Service principals can call Fabric public APIs](/fabric/admin/service-admin-portal-developer#service-principals-can-call-fabric-public-apis)
 
-+•	Add the Sentinel platform identity, prefixed with `msg-resources-` as a Workspace Member on the Lakehouse from which you want to federate tables. For more information, see [Give access to workspaces](/fabric/fundamentals/give-access-workspaces).
++ Add the Sentinel platform identity, prefixed with `msg-resources-` as a Workspace Member on the Lakehouse from which you want to federate tables. For more information, see [Give access to workspaces](/fabric/fundamentals/give-access-workspaces).
 
 1. On the **Data federation** > **Catalog** page, select the **Microsoft Fabric** row.
 1. In the side panel, select **Connect a connector**.
@@ -139,7 +139,7 @@ Before configuring the Fabric connector instance, you must set up permissions wi
 
 # [Azure Data Lake Storage Gen 2](#tab/adls)
 
-### Prepare your ADLS Gen 2 storage account
+## Create an ADLS Gen 2 connector instance
 
 Before creating the connector, prepare your storage account:
 
@@ -150,7 +150,6 @@ Before creating the connector, prepare your storage account:
 > [!NOTE]
 > The files in your ADLS Gen 2 storage account must be in delta parquet format to be read from the Sentinel data lake.
 
-### Create an ADLS Gen 2 connector instance
 
 1. On the **Data federation** > **Catalog** page, select **Azure Data Lake Storage**.
 1. Select **Connect a connector**.
@@ -190,11 +189,11 @@ Select **Connect**, to complete the setup for the ADLS Gen 2 connector instance.
 
 # [Azure Databricks](#tab/databricks)
 
-### Prepare Azure Databricks
+## Create an Azure Databricks connector instance
 
-Before creating the connector, configure access in your Databricks environment:
+Before creating the connector, configure access in your Databricks environment as follows:
 
-1. 1.	In Azure Databricks, select the catalog you want to connect to from Microsoft Sentinel data lake.
+1. In Azure Databricks, select the catalog you want to connect to from Microsoft Sentinel data lake.
 
 1. Select the gear icon for the catalog and select **Metastore**. 
 1. In your metastore details page, set **External data access** to **Enabled**.
@@ -207,8 +206,7 @@ Before creating the connector, configure access in your Databricks environment:
 1.	Use the Service principal box to select an existing principal.
 1.	Select the service principal you created earlier and select Add.
 
-
-### Create an Azure Databricks connector instance
+### Create the connector instance
 
 1. On the **Data federation** > **Catalog** page, select the **Azure Databricks** row.
 1. In the side panel, select **Connect a connector**.
