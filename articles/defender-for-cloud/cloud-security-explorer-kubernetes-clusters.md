@@ -42,7 +42,7 @@ For an introduction to Cloud Security Explorer queries, see [Build queries with 
 1. Select **Kubernetes clusters** > **Azure Kubernetes Service** 
 1. Select **Application** > **Maintains** > **Kubernetes Node Pools**.
 1. Select **Done**
-1. Select that **Maintains** > **Virtual machine clusters (group)** that **Has** > **Vulnerabilities**.
+1. Select **Maintains** > **Virtual machine clusters (group)** that **Has vulnerabilities**.
 1. Select **Search**.
 1. Select **View details** for the cluster node pool. 
 
