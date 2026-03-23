@@ -73,7 +73,7 @@ The scanning of container images includes the following types of packages:
 
 - **Language-specific packages (Linux only):** Supports scanning for language-specific packages and files, along with their dependencies, that are installed or copied without using the OS package manager. See the [complete list of supported languages](/azure/defender-for-cloud/support-matrix-defender-for-containers).
 
-For more details on how to use the vulnerability assessment findings, see the [review vulnerability assessment findings](/azure/defender-for-cloud/how-to-use-azure-kubernetes-service-dashboard.md#review-vulnerability-assessment-findings).
+For more details on how to use the vulnerability assessment findings, see the [review vulnerability assessment findings](how-to-use-azure-kubernetes-service-dashboard.md#review-vulnerability-assessment-findings).
 
 To review and remediate vulnerabilities, see [Review vulnerability findings](how-to-use-azure-kubernetes-service-dashboard.md#review-vulnerability-assessment-findings).
 
@@ -82,7 +82,7 @@ To review and remediate vulnerabilities, see [Review vulnerability findings](how
 
 Microsoft Defender for Cloud continuously monitors Azure and AKS APIs, along with Kubernetes workloads. It identifies configurations within the cluster or its running containers that could affect the cluster's security posture and expose the cluster to risk. Defender also offers guidelines and automatic fixes to address these issues.
 
-To review and fix misconfigurations, see [Review misconfigurations](how-to-use-azure-kubernetes-service-dashboard.md#review-misconfigurations).
+To review and fix misconfigurations, see [Review misconfigurations](how-to-use-azure-kubernetes-service-dashboard.md#review-misconfiguration-assessment-findings).
 
 
 ### Compliance
