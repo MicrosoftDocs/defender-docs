@@ -4,7 +4,6 @@ description: Get started using Defender for Endpoint Plan 1. Learn how to use th
 search.appverid: MET150 
 author: limwainstein
 ms.author: lwainstein
-manager: bagol 
 audience: ITPro
 ms.topic: overview
 ms.date: 03/21/2025

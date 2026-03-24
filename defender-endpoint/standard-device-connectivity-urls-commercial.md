@@ -3,7 +3,6 @@ title: Microsoft Defender for Endpoint standard connectivity URLs - commercial
 description: Get a list of the standard connectivity URLs required to onboard and maintain devices in Microsoft Defender for Endpoint in US commercial cloud environments.         
 author: limwainstein
 ms.author: lwainstein
-manager: bagol
 ms.topic: how-to
 ms.service: defender-endpoint
 ms.subservice: onboard

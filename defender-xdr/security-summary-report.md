@@ -7,7 +7,6 @@ audience: ITPro
 author: guywi-ms
 ms.author: guywild
 ms.date: 05/07/2025
-manager: deniseb
 ms.topic: how-to
 ms.collection:
 - m365-security
