@@ -68,7 +68,7 @@ Here are some common issues that might arise when configuring the Wiz Connector,
 | **Error code 429** 'Too many requests'                       | The system periodically pulls data from the configured external providers, which might have a limit on the number of concurrent requests. Creating a dedicated service account for the connector helps avoid reaching this limit. |
 | 'Temporary disconnected' or 'Temporary failure' error message | If this error message appears without any additional information, verify the connector configuration (authentication endpoint URL and credentials). If the configuration is valid and the issue doesn't resolve on its own, contact support. |
 | Not seeing my assets or the vulnerabilities reported by Wiz in the ingested data | See [Retrieved data](#retrieved-data) for a description of the expected retrieved data by the Wiz connector. If there's still missing data, contact Support. |
-| Wiz allowed IPs need to be configured to enable Exposure Management connectors to access Wiz | Read how to add the set of IPs to add to your allowlist here: [Allowlist IP addresses](configure-data-connectors.md#allowlist-ip-addresses). |
+| Wiz allowed IPs need to be configured to enable Exposure Management connectors to access Wiz | Read how to add the set of IPs to add to your allow list here: [Allow list IP addresses](configure-data-connectors.md#allowlist-ip-addresses). |
 
 ## Next steps
 
