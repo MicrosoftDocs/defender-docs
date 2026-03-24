@@ -36,7 +36,8 @@ To use another method, refer to the [Related content section](#related-content).
 Before you get started, see [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md) for a description of prerequisites and system requirements.
 
 > [!TIP]
-> Before running the installer script to deploy Defender on your Linux server, it's recommended to run the script with the `--min-req` option to help identify and fix any potential issues that might impact the deployment.
+> Before running the installer script to deploy Defender on your Linux server, it's recommended to run the script with the `--pre-req` option to check minimum system
+requirements (memory, CPU, disk space, supported OS) before deployment.
 
 ## Deployment process
 
@@ -79,10 +80,11 @@ Before you get started, see [Prerequisites for Defender for Endpoint on Linux](m
 1. Execute the installer script and provide the onboarding package as a parameter to install the agent and onboard the device to the Defender portal.
 
    ```bash
-   sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --channel prod --min_req
+   sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --channel prod --pre-req
    ```
 
-   This command deploys the latest agent version to the production channel, check for min system requisites and onboard the device to Defender Portal.
+   This command deploys the latest agent version to the production channel, checks minimum system requirements (memory, CPU, disk space, supported OS), and onboards the
+device to Defender Portal.
 
    Additionally you can pass more parameter based on your requirements to modify the installation. Check help for all the available options:
 
@@ -91,41 +93,46 @@ Before you get started, see [Prerequisites for Defender for Endpoint on Linux](m
    mde_installer.sh v0.7.0
    usage: basename ./mde_installer.sh [OPTIONS]
    Options:
-   -c|--channel         specify the channel(insiders-fast / insiders-slow / prod) from which you want to install. Default: prod
-   -i|--install         install the product
-   -r|--remove          uninstall the product
-   -u|--upgrade         upgrade the existing product to a newer version if available
-   -l|--downgrade       downgrade the existing product to a older version if available
-   -o|--onboard         onboard the product with <onboarding_script>
-   -f|--offboard        offboard the product with <offboarding_script>
-   -p|--passive-mode    set real time protection to passive mode
-   -a|--rtp-mode        set real time protection to active mode. passive-mode and rtp-mode are mutually exclusive
-   -t|--tag             set a tag by declaring <name> and <value>, e.g: -t GROUP Coders
-   -m|--min_req         enforce minimum requirements
-   -x|--skip_conflict   skip conflicting application verification
-   -w|--clean           remove repo from package manager for a specific channel
-   -y|--yes             assume yes for all mid-process prompts (default, deprecated)
-   -n|--no              remove assume yes sign
-   -s|--verbose         verbose output
-   -v|--version         print out script version
-   -d|--debug           set debug mode
-   --log-path <PATH>    also log output to PATH
-   --http-proxy <URL>   set http proxy
-   --https-proxy <URL>  set https proxy
-   --ftp-proxy <URL>    set ftp proxy
-   --mdatp              specific version of mde to be installed. will use the latest if not provided
-   -b|--install-path    specify the installation and configuration path for MDE. Default: /
-   -h|--help            display help
+   -c|--channel              specify the channel (insiders-fast / insiders-slow / prod) from which to install. Default: prod
+   -i|--install              install the product
+   -r|--remove               uninstall the product
+   -u|--upgrade              upgrade the existing product to a newer version if available
+   -l|--downgrade            downgrade the existing product to an older version if available
+   -o|--onboard <script>     onboard MDE with the specified onboarding script
+   -f|--offboard <script>    offboard MDE with the specified offboarding script
+   -p|--passive-mode         set real-time protection to passive mode
+   -a|--rtp-mode             set real-time protection to active mode. Passive-mode and rtp-mode are mutually exclusive
+   -t|--tag                  set a tag by declaring <name> and <value>, e.g.: -t GROUP Coders
+   -q|--pre-req              check minimum system requirements for MDE (memory, CPU, disk space, supported OS) without installing
+   --pre-req-non-blocking    override default prerequisite checks by allowing installation to proceed even if checks fail
+   -x|--skip_conflict        skip conflicting application verification
+   -w|--clean                remove MDE repository from the package manager for the specified channel
+   -n|--no                   disable the default assume-yes behavior for prompts
+   -s|--verbose              enable verbose output
+   -v|--version              print the script version
+   -d|--debug                enable debug mode
+   --log-path <PATH>         also log output to PATH
+   --http-proxy <URL>        set http proxy
+   --https-proxy <URL>       set https proxy
+   --ftp-proxy <URL>         set ftp proxy
+   --mdatp <version>         install a specific version of MDE; uses the latest if not provided
+   --use-local-repo          skip MDE repository setup and use the locally configured repository
+   --connectivity-test       run cloud connectivity test
+   -b|--install-path <PATH>  specify the installation and configuration path for MDE. Default: /
+   -h|--help                 display help
    ```
 
-   | Scenario | Command |
-   |---|---|
-   |Install to a custom path location | `sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --channel prod --min_req --install-path /custom/path/location` |
-   |Install a specific agent version | `sudo ./mde_installer.sh --install --channel prod --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --min_req –-mdatp 101.24082.0004 ` |
-   |Upgrade to the latest agent version | `sudo ./mde_installer.sh --upgrade` |
-   |Upgrade to a specific agent version | `sudo ./mde_installer.sh --upgrade –-mdatp 101.24082.0004` |
-   |Downgrade to a specific agent version | `sudo ./mde_installer.sh --downgrade –-mdatp 101.24082.0004` |
-   |Uninstall agent | `sudo ./mde_installer.sh --remove` |
+  | Scenario | Command |
+    |---|---|
+    |Install to a custom path location | `sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --channel prod --pre-req --install-path /custom/path/location` |
+    |Install a specific agent version | `sudo ./mde_installer.sh --install --channel prod --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --pre-req –-mdatp 101.24082.0004` |
+    |Upgrade to the latest agent version | `sudo ./mde_installer.sh --upgrade` |
+    |Upgrade to a specific agent version | `sudo ./mde_installer.sh --upgrade –-mdatp 101.24082.0004` |
+    |Downgrade to a specific agent version | `sudo ./mde_installer.sh --downgrade –-mdatp 101.24082.0004` |
+    |Uninstall agent | `sudo ./mde_installer.sh --remove` |
+    |Run pre-req checks only (no install) | `sudo ./mde_installer.sh --pre-req` |
+    |Install with non-blocking pre-req checks | `sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --pre-req-non-blocking` |
+    |Run connectivity test | `sudo ./mde_installer.sh --connectivity-test` |
 
    For details on installing to a custom path, refer: [Install Defender for Endpoint on Linux to a custom path](linux-custom-location-installation.md).
 
