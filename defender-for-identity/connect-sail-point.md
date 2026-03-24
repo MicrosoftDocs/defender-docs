@@ -40,6 +40,11 @@ This section provides instructions for connecting Microsoft Defender for Identit
 1. Sign in to SailPoint Identity .
 1. Go to **User's Preferences > Personal Access Tokens**
 1. Select **New Token.**
+1. Add the following scopes to the token:
+    1. idn:accounts:read 
+    1. idn:entitlement:read  
+    1. sp:search:read 
+    1. idn:accounts-state:manage
 1. Copy the **Client ID** and **Secret**. You'll need these values to connect SailPoint Identity to Microsoft Defender for Identity.
 
 
