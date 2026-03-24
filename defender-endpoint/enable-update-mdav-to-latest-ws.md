@@ -45,7 +45,7 @@ This article describes how to enable and update Microsoft Defender Antivirus on 
 
    > [!NOTE]
    > Re-enabling Microsoft Defender Antivirus doesn't automatically install the platform update. You can download and install the latest platform version using Windows update. Alternatively, you can download the update package from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623) or from the [Antimalware and cyber security portal](https://go.microsoft.com/fwlink/?linkid=870379&arch=x64).
-   >  
+   > 
    > If you're preparing to install the modern, unified solution on Windows Server 2016, you can leverage the [Installer help script](https://github.com/microsoft/mdefordownlevelserver/blob/main/Install.ps1) to automate the platform update and the subsequent installation and onboarding. This script can also assist in re-enabling Microsoft Defender Antivirus.
 
 ## Re-enable Microsoft Defender Antivirus on Windows Server if it was disabled
@@ -54,17 +54,21 @@ First, ensure that Microsoft Defender Antivirus is not disabled either through G
 
 If Microsoft Defender Antivirus features and installation files were previously removed from Windows Server 2016, follow the guidance in [Configure a Windows Repair Source](/windows-hardware/manufacture/desktop/configure-a-windows-repair-source) to restore the feature installation files.
 
+<!---
+The -WdEnable option doesn't appear to be available on Windows Server 2016. It doesn't error, but it doesn't do anything.
+
 On Windows Server 2016, in some cases, you may need to use the [Malware Protection Command-Line Utility](command-line-arguments-microsoft-defender-antivirus.md) to re-enable Microsoft Defender Antivirus.
 
 As a local administrator on the server, perform the following steps:
 
 1. Open Command Prompt.
 
-1. Run the following command: 
+1. Run the following command:
 
    `%ProgramFiles%\Windows Defender\MpCmdRun.exe -wdenable`
 
 1. Restart the device.
+--->
 
 ## Re-enable Microsoft Defender Antivirus on Windows Server if it was uninstalled
 

@@ -8,7 +8,7 @@ ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: ksarens
 manager: bagol
-ms.date: 03/20/2026
+ms.date: 03/23/2026
 ms.subservice: ngp
 ms.topic: how-to
 ms.collection: 
@@ -43,17 +43,17 @@ You can do tasks in Microsoft Defender Antivirus using the MpCmdRun command-line
 
 MpCmdRun uses the following syntax:
 
-```console
+```dos
 MpCmdRun.exe -Command [-CommandOptions]
 ```
 
 In the following example, MpCmdRun starts a full antivirus scan on the device.
 
-```console
+```dos
 MpCmdRun.exe -Scan -ScanType 2
 ```
 
-The rest of this article describes the available options and troubleshooting information for MpCmdRun.
+The rest of this article describes the available commands, options, and troubleshooting information for MpCmdRun.
 
 ## Prerequisites
 
@@ -106,13 +106,13 @@ The commands and their available options are described in the following table.
 |`-Restore`||Restores or lists quarantined items.|
 ||`-ListAll`|Lists all quarantined items.|
 ||`-Name <name> [-All]`|Restores the most recently quarantined item based on the specified threat name. If you use `-All`, all quarantined items are restored based on the specified threat name. A threat can map to multiple files.|
-||`-FilePath <QuarantinedFilePath>`|Restores a quarantined item based on the file path that was quarantined.|
-||`-Path <path>`|Specifies the location of the restored items. <ul><li>If you don't use `-Path`, the item is restored to its original location and is removed from quarantine.</li><li>If you use `-Path`, the item is restored to the specified path, but isn't removed from quarantine.</li></ul>|
+||`-FilePath <QuarantinedFilePath>`|Restores a quarantined item based on the file path of the quarantined item.|
+||`-Path <path>`|Specifies where to restore the quarantined items. <ul><li>If you don't use `-Path`, the item is restored to its original location and is removed from quarantine.</li><li>If you use `-Path`, the item is restored to the specified path, but the item isn't removed from quarantine.</li></ul>|
 ||`-Output <filename>`|Write all quarantine item names to the specified file with UTF-8 encoding.|
 |`-Trace`||Starts a trace of actions by the Microsoft Antimalware Service. By default all Error, Warning, and Informational events for all components are logged. The results are stored in `C:\ProgramData\Microsoft\Windows Defender\Support\MPTrace-<YYYMMDD>-<UTC HHMMSS>-<GUID>.bin`.|
 ||`-Grouping <value>`|Specifies the component to include in the trace. Valid values are: <ul><li>**0x1**: Service</li><li>**0x2**: Malware Protection Engine</li><li>**0x4**: User Interface</li><li>**0x8**: Real-Time Protection</li><li>**0x10**: Scheduled actions</li><li>**0x20**: WMI</li><li>**0x40**: NIS/GAPA</li><li>**0x80**: Windows Security Center</li><li>**0x100**: DLP external</li><li>**0x200**: Browser Protection</li></ul>|
 ||`-Level <value>`|Specifies the event severity levels to include in the trace. Valid values are: <ul><li>**0x1**: Errors</li><li>**0x2**: Warnings</li><li>**0x4**: Informational messages</li><li>**0x8**: Function calls</li><li>**0x10**: Verbose</li><li>**0x20**: Performance</li></ul>|
-|`-TrustCheck -File <PathAndFilename>`||Checks the trust status of the specified file. Benign files might not be trusted. Only known, good files are trusted.||
+|`-TrustCheck -File <PathAndFilename>`||Checks the trust status of the specified file. Benign files might not be trusted. Only known, good files are trusted.|
 |`-ValidateMapsConnection`||Verifies the device can communicate with the Microsoft Defender Antivirus cloud service. Available in Windows 10 version 1703 (October 2019) or later.|
 
 <a name="common-errors-in-running-commands-via-mpcmdrunexe"></a>

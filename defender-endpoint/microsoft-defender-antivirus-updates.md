@@ -93,20 +93,37 @@ To install the latest security intelligence and antivirus engine updates, you ca
 - Windows Update server (WSUS)
 - Software Update Point (SUP)
 - [File server](manage-protection-updates-microsoft-defender-antivirus.md)
-- Windows Security app: See [Microsoft Defender Antivirus in the Windows Security app](microsoft-defender-security-center-antivirus.md)
-- Command line, as follows:   
-   - `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -SignatureUpdate`
-   - `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -SignatureUpdate \\FileServer\ShareName`
-   - `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -SignatureUpdate -MMPC`
+- Windows Security app: See [Microsoft Defender Antivirus in the Windows Security app](microsoft-defender-security-center-antivirus.md).
+- [MpCmdRun command-line utility](configure-network-connections-microsoft-defender-antivirus.md):
+  1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
+     1. Open the **Start** menu, and then type **cmd**.
+     2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
 
-For more information, see [Manage the sources for Microsoft Defender Antivirus protection updates](manage-protection-updates-microsoft-defender-antivirus.md).
+  1. In the elevated Command Prompt, run the following command:
 
-To get the latest platform updates, you can use any of the following methods: 
+     > [!TIP]
+     > This command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Microsoft Defender`.
+
+     ```dos
+     (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
+
+  1. Run one of the following commands:
+
+     ```dos
+     MpCmdRun.exe" -SignatureUpdate
+
+     MpCmdRun.exe" -SignatureUpdate \\FileServer\ShareName
+
+     MpCmdRun.exe" -SignatureUpdate -MMPC
+     ```
+
+  For more information, see [Manage the sources for Microsoft Defender Antivirus protection updates](manage-protection-updates-microsoft-defender-antivirus.md).
+
+To get the latest platform updates, you can use any of the following methods:
 
 - Windows Update
 - Windows Update server (WSUS)
 - Software Update Point (SUP)
-
 - Windows Security app: See [Microsoft Defender Antivirus in the Windows Security app](microsoft-defender-security-center-antivirus.md)
 - The [Windows Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623)
 
@@ -114,27 +131,35 @@ To get the latest platform updates, you can use any of the following methods:
 
 In the unfortunate event that you encounter issues after an update, you can roll back to the previous or the inbox version.
 
-| Scenario | Command |
-|--|--|
-| Roll security intelligence updates back to the previous or to the original inbox version of the security intelligence version | `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -RemoveDefinitions` |
-| Roll the engine version back to the previous version | `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -RemoveDefinitions -Engine` |
-| Roll a platform update back to the previous version | `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -RevertPlatform` | 
-| Roll updates back to the version shipped with the operating system (`%ProgramFiles%\Windows Defender`) | `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -ResetPlatform` |
-  
+|Scenario|Command|
+|---|---|
+|Roll security intelligence updates back to the previous or to the original inbox version of the security intelligence version|`MpCmdRun.exe -RemoveDefinitions -All`|
+|Roll the engine version back to the previous version|`MpCmdRun.exe -RemoveDefinitions -Engine`|
+|Removes only dynamically downloaded security intelligence updates.|`MpCmdRun.exe -RemoveDefinitions -DynamicSignatures`|
+
+<!--->
+These switches don't exist anymore:
+
+|Roll a platform update back to the previous version|`MpCmdRun.exe" -RevertPlatform`|
+|Roll updates back to the version shipped with the operating system (`%ProgramFiles%\Windows Defender`)|`MpCmdRun.exe" -ResetPlatform`|
+--->
+
+For more information, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
+
 ## Platform version included with Windows 10 releases
 
 The table provides the Microsoft Defender Antivirus platform and engine versions that are shipped with the latest Windows 10 releases:
 
-|Windows 10 release  |Platform version  |Engine version |Support phase |
-|:---|:---|:---|:---|
-|2004  (20H1/20H2) | `4.18.1909.6` | `1.1.17000.2` | Technical upgrade support (only) |
-|1909  (19H2) |`4.18.1902.5` |`1.1.16700.3` | Technical upgrade support (only) |
-|1903  (19H1) |`4.18.1902.5` |`1.1.15600.4` | Technical upgrade support (only) |
-|1809  (RS5) |`4.18.1807.5` |`1.1.15000.2` | Technical upgrade support (only) |
-|1803  (RS4) |`4.13.17134.1` |`1.1.14600.4` | Technical upgrade support (only) |
-|1709  (RS3) |`4.12.16299.15` |`1.1.14104.0` | Technical upgrade support (only) |
-|1703  (RS2) |`4.11.15603.2` |`1.1.13504.0` | Technical upgrade support (only) |
-|1607 (RS1) |`4.10.14393.3683` |`1.1.12805.0` | Technical upgrade support (only) |
+|Windows 10 release|Platform version|Engine version|Support phase|
+|---|:---:|:---:|:---|
+|2004 (20H1/20H2)|`4.18.1909.6`|`1.1.17000.2`|Technical upgrade support (only)|
+|1909 (19H2)|`4.18.1902.5`|`1.1.16700.3`|Technical upgrade support (only)|
+|1903 (19H1)|`4.18.1902.5`|`1.1.15600.4`|Technical upgrade support (only)|
+|1809 (RS5)|`4.18.1807.5`|`1.1.15000.2`|Technical upgrade support (only)|
+|1803 (RS4)|`4.13.17134.1`|`1.1.14600.4`|Technical upgrade support (only)|
+|1709 (RS3)|`4.12.16299.15`|`1.1.14104.0`|Technical upgrade support (only)|
+|1703 (RS2)|`4.11.15603.2`|`1.1.13504.0`|Technical upgrade support (only)|
+|1607 (RS1)|`4.10.14393.3683`|`1.1.12805.0`|Technical upgrade support (only)|
 
 For Windows 10 release information, see the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
   

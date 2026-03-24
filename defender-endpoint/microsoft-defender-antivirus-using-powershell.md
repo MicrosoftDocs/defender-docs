@@ -126,14 +126,24 @@ For more information, see [How do I configure or manage tamper protection](preve
 
 #### Check the Cloud Protection network connectivity
 
-It's important to check that the Cloud Protection network connectivity is working during your pen testing. Using Command Prompt as an administrator, run the following command:
+It's important to check that Cloud Protection network connectivity is working during your penetration testing.
 
-```
-cd "C:\Program Files\Windows Defender"
-MpCmdRun.exe -ValidateMapsConnection
-```
+1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
+   1. Open the **Start** menu, and then type **cmd**.
+   2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
 
-For more information, see [Use the cmdline tool to validate cloud-delivered protection](configure-network-connections-microsoft-defender-antivirus.md).
+1. In the elevated Command Prompt, run the following commands:
+
+   > [!TIP]
+   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Microsoft Defender`.
+
+   ```dos
+   (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
+
+   MpCmdRun.exe -ValidateMapsConnection
+   ```
+
+For more information, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](configure-network-connections-microsoft-defender-antivirus.md).
 
 ## One-select Microsoft Defender Offline Scan
 
@@ -141,7 +151,7 @@ Microsoft Defender Offline Scan is a specialized tool that comes with Windows 10
 
 For more information, see [Microsoft Defender Offline](microsoft-defender-offline.md).
 
-| Description | PowerShell Command |
+|Description|PowerShell command|
 |---|---|
 |Ensure notifications allow you to boot the device into a specialized malware removal environment|`Set-MpPreference -UILockdown 0`|
 
@@ -150,4 +160,3 @@ For more information, see [Microsoft Defender Offline](microsoft-defender-offlin
 - [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
 - [Cloud protection and Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md)
 - [Microsoft Defender Antivirus security intelligence and product updates](microsoft-defender-antivirus-updates.md)
-

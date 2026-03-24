@@ -191,17 +191,24 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 
 #### Check the Cloud Protection network connectivity
 
-It's important to check that the Cloud Protection network connectivity is working during your penetration testing.
+It's important to check that Cloud Protection network connectivity is working during your penetration testing.
 
-CMD (Run as admin)
+1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
+   1. Open the **Start** menu, and then type **cmd**.
+   2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
 
+1. In the elevated Command Prompt, run the following commands:
 
-```powershell
-cd "C:\Program Files\Windows Defender"
-MpCmdRun.exe -ValidateMapsConnection
-```
+   > [!TIP]
+   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Microsoft Defender`.
 
-For more information [Use the cmdline tool to validate cloud-delivered protection](configure-network-connections-microsoft-defender-antivirus.md).
+   ```dos
+   (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
+
+   MpCmdRun.exe -ValidateMapsConnection
+   ```
+
+For more information, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](configure-network-connections-microsoft-defender-antivirus.md).
 
 #### Check the platform update version
 

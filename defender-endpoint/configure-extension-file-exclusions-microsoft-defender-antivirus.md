@@ -4,7 +4,7 @@ description: Exclude files from Microsoft Defender Antivirus scans based on thei
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 02/20/2026
+ms.date: 03/23/2026
 author: chrisda
 ms.author: chrisda
 ms.topic: how-to
@@ -303,8 +303,11 @@ You can retrieve the items in the exclusion list by using one of the following m
 
 You can use the [MpCmdRun.exe command-line tool](./command-line-arguments-microsoft-defender-antivirus.md) in Microsoft Defender Antivirus version 4.18.2111-5.0 or later (December 2021) to verify whether specific folder paths or file and folder paths are excluded from scanning by running the following commands in an elevated command prompt (a Command Prompt window you opened by selecting **Run as administrator**):
 
+> [!TIP]
+> The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Microsoft Defender`.
+
 ```dos
-for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n') do if not defined _done cd "%ProgramData%\Microsoft\Windows Defender\Platform\%d"
+(set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
 
 MpCmdRun.exe -CheckExclusion -Path <PathAndFile or Path>
 ```
@@ -328,9 +331,10 @@ For example, the command `MpCmdRun.exe -CheckExclusion -Path C:\Data\Test` retur
 Run the following commands in an elevated PowerShell window:
 
 ```PowerShell
-(Get-MpPreference).ExclusionExtension
-
-(Get-MpPreference).ExclusionPath
+$p=Get-MpPreference; @(
+  $p.ExclusionExtension | ForEach-Object {[pscustomobject]@{Type='ExclusionExtension'; Value=$_}}
+  $p.ExclusionPath      | ForEach-Object {[pscustomobject]@{Type='ExclusionPath';      Value=$_}}
+)
 ```
 
 For more information, see [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Defender Antivirus cmdlets](/powershell/module/defender/).

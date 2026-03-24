@@ -271,55 +271,64 @@ Here's a list of what to check:
 1. **Open a support case** if you need help. See [Contact Microsoft Defender for Endpoint support](contact-support.md).
 
 1. **If you're using production SAP VMs with [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction), keep in mind that Defender for Cloud deploys the Defender for Endpoint extension to all VMs**. If a VM isn't onboarded to Defender for Endpoint, it could be used as an attack vector. If you need more time to test Defender for Endpoint before deploying to your production environment, [contact support](contact-support.md).
+1. 
 ## Useful Commands: Microsoft Defender for Endpoint with SAP on Windows Server
 
 This section includes commands to confirm or configure Defender for Endpoint settings by using PowerShell and Command Prompt:
 
 ### Update Microsoft Defender Antivirus definitions manually
 
-Use Windows Update, or run the following command:
+Use one of the following methods:
 
-```powershell
+- Windows Update
 
-PS C:\Program Files\Windows Defender> .\MpCmdRun.exe -SignatureUpdate
+- [MpCmdRun command-line utility](configure-network-connections-microsoft-defender-antivirus.md):
+  1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
+     1. Open the **Start** menu, and then type **cmd**.
+     2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
 
-```
+  1. In the elevated Command Prompt, run the following commands:
 
-You should see an output that resembles the following code snippet:
+     > [!TIP]
+     > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Microsoft Defender`.
 
-```output
+     ```dos
+     (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
 
-Signature update started . . .
-Service Version: 4.18.23050.9
-Engine Version: 1.1.23060.1005
-AntiSpyware Signature Version: 1.393.925.0
-Antivirus Signature Version: 1.393.925.0
-Signature update finished.
-PS C:\Program Files\Windows Defender>
+     MpCmdRun.exe -SignatureUpdate
+     ```
 
-```
+  You should see output that looks like this:
 
-Another option is to use this command:
+  ```console
+  UpdateLogging: UpdateSessionGuid: 5A694F08-0962-4358-A370-95419D0A2EAE
+  Signature update started . . .
 
-```powershell
+  Service Version: 4.18.26010.5
+  Engine Version: 1.1.26010.1
+  AntiSpyware Signature Version: 1.445.727.0
+  AntiVirus Signature Version: 1.445.727.0
+  Signature update finished.
+  ```
 
-PS C:\Program Files\Windows Defender> Update-MpSignature
+- [Update-MpSignature](/powershell/module/defender/update-mpsignature):
 
-```
+  1. Open an elevated PowerShell session (a PowerShell window you opened by selecting **Run as administrator**). For example:
+     1. Open the **Start** menu, and then type **powershell**.
+     2. Right-click on the **PowerShell 7 (x64)** or **Windows PowerShell** result, and then select **Run as administrator**.
 
-For more information about these commands, see the following resources:
+  1. In the elevated PowerShell session, run the following command:
 
-- [MpCmdRun.exe](command-line-arguments-microsoft-defender-antivirus.md)
-- [Update-MpSignature](/powershell/module/defender/update-mpsignature?view=windowsserver2022-ps&preserve-view=true)
+     ```powershell
+     Update-MpSignature
+     ```
 
 ### Determine whether EDR in block mode is turned on
 
 [EDR in block mode](edr-in-block-mode.md) provides added protection from malicious artifacts when Microsoft Defender Antivirus isn't the primary antivirus product and is running in passive mode. You can determine whether EDR in block mode is enabled by running the following command:
 
 ```powershell
-
 Get-MPComputerStatus|select AMRunningMode
-
 ```
 
 There are two modes: *Normal* and *Passive Mode*. We used `AMRunningMode = Normal` when testing SAP systems.

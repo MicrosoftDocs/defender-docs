@@ -273,7 +273,7 @@ On a Windows File Server set up a network file share (UNC/mapped drive) to downl
 1. Set the share location in the policy to the share.
 
     > [!NOTE]
-    > Do not add the x64 (or x86) folder in the path. The `mpcmdrun.exe` process adds it automatically.
+    > Don't add the x64 (or x86) folder in the path. The `MpCmdRun.exe` process adds it automatically.
 
 ## Enable platform updates using UNC share
 
