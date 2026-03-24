@@ -99,7 +99,7 @@ Standard security intelligence updates can take hours to prepare and deliver; ou
 **Description**: Signature Update Fallback Order
 **Setting**: Select the checkbox for **Signature Update Fallback**
 
-InternalDefinitionUpdateServer|MicrosoftUpdateServer|MMPC, where 'InternalDefinitionUpdateServer' is WSUS with Microsoft Defender Antivirus updates allowed; 'MicrosoftUpdateServer' = Microsoft Update (formerly Windows Update); and MMPC = https://www.microsoft.com/en-us/wdsi/definitions.
+InternalDefinitionUpdateServer|MicrosoftUpdateServer|MMPC, where 'InternalDefinitionUpdateServer' is WSUS with Microsoft Defender Antivirus updates allowed; 'MicrosoftUpdateServer' = Microsoft Update (formerly Windows Update); and MMPC = https://www.microsoft.com/en-us/wdsi/defenderupdates.
 
 **Local administrator AV**:
 
