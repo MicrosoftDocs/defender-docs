@@ -33,7 +33,7 @@ First, you need to create a service account with the required permissions to get
 1. Set the **API Scopes** to **Read graph resource** and **Read vulnerabilities**
 
    > [!Note]
-   > At minimum, the Service Account should have permissions of Read graph resources and Read vulnerabilities, though we recommend Read:all permissions as we may retrieve additional data as we further develop connector.
+   > At minimum, the Service Account needs permissions of Read graph resources and Read vulnerabilities, though we recommend Read:all permissions as we may retrieve additional data as we further develop the connector.
 
 1. Select **Add Service Account**. The secret credentials dialog shows the newly created Client ID and Client Secret for the service account.
 1. Copy the Client ID and Client Secret to a secure place, such as a password management tool.
