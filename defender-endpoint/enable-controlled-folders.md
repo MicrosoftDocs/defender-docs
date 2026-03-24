@@ -8,7 +8,6 @@ audience: ITPro
 author: paulinbar
 ms.author: painbar
 ms.reviewer: sugamar; moeghasemi
-manager: bagol
 ms.subservice: asr
 ms.collection: 
 - m365-security
@@ -87,7 +86,7 @@ For more information about Microsoft Configuration Manager and Controlled Folder
 
 ## Group Policy
 
-1. On your Group Policy management device, open the [Group Policy Management Console](https://technet.microsoft.com/library/cc731212.aspx). Right-click the Group Policy Object you want to configure and select **Edit**.
+1. On your Group Policy management device, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console). Right-click the Group Policy Object you want to configure and select **Edit**.
 
 1. In the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
 

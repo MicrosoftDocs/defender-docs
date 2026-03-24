@@ -4,7 +4,6 @@ description:               This article provides a generalized playbook for resp
 search.appverid: MET150     
 author:                    nic-name
 ms.author:                 noriordan
-manager:                   dolmont
 audience:                  ITPro
 ms.topic: concept-article
 ms.date:                   05/30/2022 

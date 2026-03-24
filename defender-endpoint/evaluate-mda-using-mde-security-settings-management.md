@@ -6,7 +6,6 @@ ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -231,7 +230,7 @@ cd "C:\Program Files\Windows Defender"
 MpCmdRun.exe -ValidateMapsConnection
 ```
 
-For more information [Use the cmdline tool to validate cloud-delivered protection](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus).
+For more information [Use the cmdline tool to validate cloud-delivered protection](configure-network-connections-microsoft-defender-antivirus.md).
 
 #### Check the platform update version
 

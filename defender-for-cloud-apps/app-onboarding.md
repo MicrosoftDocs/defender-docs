@@ -3,7 +3,6 @@ title: Automatically onboard Microsoft Entra ID apps
 description:  Learn how to automatically onboard Microsoft Entra ID apps to Microsoft Defender for Cloud Apps conditional access app control
 author:  Adipkmic
 ms.author: adipavekatz  
-manager:  raynew
 ms.date: 10/10/2024  
 ms.topic:  concept-article
 ms.service: defender-for-cloud-apps

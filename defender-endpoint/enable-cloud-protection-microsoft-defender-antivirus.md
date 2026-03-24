@@ -8,7 +8,6 @@ author: chrisda
 ms.author: chrisda
 ms.date: 10/20/2025
 ms.reviewer: pahuijbr
-manager: bagol
 ms.custom: nextgen
 ms.subservice: asr
 ms.collection: 

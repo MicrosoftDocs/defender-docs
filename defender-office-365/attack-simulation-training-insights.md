@@ -2,7 +2,6 @@
 title: Reports for Attack simulation training
 author: chrisda
 ms.author: chrisda
-manager: bagol
 audience: ITPro
 ms.topic: concept-article
 ms.service: defender-office-365

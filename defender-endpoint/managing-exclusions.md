@@ -65,7 +65,7 @@ Most of the exclusions are available on the
 **Learn More**:
 
 - <a href="/intune/intune-service/protect/mde-security-integration" target="_blank" rel="noopener noreferrer">Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus</a>
-- [Add automatic folder exclusions](/defender-endpoint/manage-automation-folder-exclusions#add-an-automation-folder-exclusion)
+- [Add automatic folder exclusions](manage-automation-folder-exclusions.md#add-an-automation-folder-exclusion)
 
 ### Intune
 
@@ -82,9 +82,9 @@ Many exclusions can be managed in the [Microsoft Intune admin center](https://go
 
 **Learn More**:
 
-- [Create Microsoft Defender antivirus exclusion policies in Intune](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus#create-microsoft-defender-antivirus-exclusion-policies-in-intune)
-- [Modify exclusions in Microsoft Defender antivirus exclusion policies in Intune](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus#modify-exclusions-in-microsoft-defender-antivirus-exclusion-policies-in-intune))
-- [Configure attack surface reduction per-rule exclusions](/defender-endpoint/attack-surface-reduction-rules-deployment-test#configure-attack-surface-reduction-per-rule-exclusions)
+- [Create Microsoft Defender antivirus exclusion policies in Intune](configure-exclusions-microsoft-defender-antivirus.md#create-microsoft-defender-antivirus-exclusion-policies-in-intune)
+- [Modify exclusions in Microsoft Defender antivirus exclusion policies in Intune](configure-exclusions-microsoft-defender-antivirus.md#modify-exclusions-in-microsoft-defender-antivirus-exclusion-policies-in-intune))
+- [Configure attack surface reduction per-rule exclusions](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions)
 
 ### MDM CSP
 
@@ -128,7 +128,7 @@ Use `Set-MpPreference` or `Get-MpPreference` in the [Defender PowerShell Module]
 |Attack surface reduction rule per rule exclusion|**Windows components > Microsoft Defender Antivirus > Microsoft Defender Exploit Guard > Attack surface reduction > Apply a list of exclusions to specific Attack Surface Reduction (ASR) rules**|See [Group Policy](attack-surface-reduction-rules-enable.md#group-policy)|
 |Automatic antivirus exclusions|**Windows components** > **Microsoft Defender Antivirus** > **Exclusions** > **Enabled**|See [Use Group Policy to disable the auto-exclusions list on Windows Server 2016, Windows Server 2019, and later](configure-server-exclusions-microsoft-defender-antivirus.md#use-group-policy-to-disable-the-auto-exclusions-list-on-windows-server-2016-windows-server-2019-and-later)|
 |Automation folder exclusions|Not supported||
-|Controlled Folder Access exclusions|**Windows components** > **Microsoft Defender Antivirus** > **Windows Defender Exploit Guard** > **Controlled folder access** > **Configure allowed applications**|See [Use group policy to allow specific apps](/defender-endpoint/customize-controlled-folders#use-group-policy-to-allow-specific-apps)|
+|Controlled Folder Access exclusions|**Windows components** > **Microsoft Defender Antivirus** > **Windows Defender Exploit Guard** > **Controlled folder access** > **Configure allowed applications**|See [Use group policy to allow specific apps](/customize-controlled-folders.md#use-group-policy-to-allow-specific-apps)|
 
 ### Windows Management Instrumentation (WMI)
 
@@ -154,7 +154,7 @@ Use `Set-MpPreference` or `Get-MpPreference` in the [Defender PowerShell Module]
 |Custom antivirus exclusion|See [exclusion settings](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings)|
 |Attack Surface Reduction only exclusions|See [Microsoft Configuration Manager](attack-surface-reduction-rules-enable.md#microsoft-configuration-manager)|
 |Attack surface reduction rule per rule exclusion|Not supported|
-|Controlled Folder Access exclusions|See [Microsoft Configuration Manager](/defender-endpoint/enable-controlled-folders#microsoft-configuration-manager)|
+|Controlled Folder Access exclusions|See [Microsoft Configuration Manager](enable-controlled-folders.md#microsoft-configuration-manager)|
 |Automation folder exclusions|Not supported|
 
 ## Manage exclusions for Linux
@@ -171,6 +171,6 @@ See [Configure and validate exclusions for Microsoft Defender for Endpoint on ma
 
 ## See also
 
-- [Add exclusions to network protection](/defender-endpoint/troubleshoot-np#add-exclusions)
-- [Important points about exclusions](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus#important-points-about-exclusions)
-- [Isolation exclusions](/defender-endpoint/isolation-exclusions)
+- [Add exclusions to network protection](troubleshoot-np.md#add-exclusions)
+- [Important points about exclusions](configure-exclusions-microsoft-defender-antivirus.md#important-points-about-exclusions)
+- [Isolation exclusions](isolation-exclusions.md)

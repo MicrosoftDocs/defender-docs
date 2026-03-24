@@ -7,7 +7,6 @@ ms.topic: how-to
 author: chrisda
 ms.author: chrisda
 ms.reviewer: pahuijbr
-manager: bagol
 ms.custom: nextgen
 ms.subservice: ngp
 ms.collection:

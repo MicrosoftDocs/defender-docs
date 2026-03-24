@@ -6,7 +6,6 @@ ms.service: defender-endpoint
 author: chrisda
 ms.author: chrisda
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.custom: asr
 ms.topic: conceptual

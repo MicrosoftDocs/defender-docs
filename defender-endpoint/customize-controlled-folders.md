@@ -7,7 +7,6 @@ audience: ITPro
 author: paulinbar
 ms.author: painbar
 ms.reviewer: dbodorin, vladiso, nixanm, anvascon
-manager: bagol
 ms.subservice: asr
 ms.topic: how-to
 ms.collection: 
