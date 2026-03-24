@@ -41,7 +41,7 @@ First, you need to create a service account with the required permissions to get
 
 ### Getting the Authentication Endpoint URL
 
-1. At the top right of the Wiz portal, click **Profile** > **Tenant Info** [Direct link](https://app.wiz.io/tenant-info/general)
+1. At the top right of the Wiz portal, select **Profile** > **Tenant Info** [Direct link](https://app.wiz.io/tenant-info/general)
 1. `API Endpoint URL` - Copy the endpoint in the following form: `https://api.<TENANT_DATA_CENTER>.app.wiz.io/`
 
 ## Establish Wiz connection in Exposure Management
@@ -53,7 +53,7 @@ To establish a connection with Wiz in Exposure Management, follow these steps:
 
 ## Retrieved data
 
-Wiz connector retrieves data on compute devices. This includes virtual machines and cloud resources, along with vulnerability findings and configuration data from Wiz on those assets. It also retrieves network and configuration information to identify those devices.
+Wiz connector retrieves data on compute devices. This data includes virtual machines and cloud resources, along with vulnerability findings and configuration data from Wiz on those assets. It also retrieves network and configuration information to identify those devices.
 
 | **Category**            | **Properties**                                                                 |
 |-------------------------|--------------------------------------------------------------------------------|
