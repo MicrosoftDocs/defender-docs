@@ -91,11 +91,11 @@ items:
         href: okta-defender-for-identity-overview.md
       - name: Connect Okta to Microsoft Defender for Identity (Preview)
         href: okta-integration.md
-    - name: Microsoft Defender for Identity and SailPoint Identity
+    - name: Microsoft Defender for Identity and SailPoint Identity Security Cloud
       items:
-      - name: Overview
+      - name: Overview (Preview)
         href: sail-point-overview.md
-      - name: Connect SailPoint Identity to Microsoft Defender for Identity (Preview)
+      - name: Connect SailPoint Identity Security Cloud to Microsoft Defender for Identity (Preview)
         href: connect-sail-point.md
     - name: Integrate Defender for Identity with PAM services
       href: integrate-microsoft-and-pam-services.md
