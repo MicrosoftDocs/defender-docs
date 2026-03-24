@@ -4,7 +4,6 @@ description: Learn how built-in protection protects against ransomware as part o
 search.appverid: MET150
 author: paulinbar
 ms.author: painbar
-manager: bagol 
 audience: IT Pro
 ms.topic: overview
 ms.date: 06/24/2024

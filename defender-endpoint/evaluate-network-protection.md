@@ -8,7 +8,6 @@ ms.topic: how-to
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: yongrhee
-manager: bagol
 ms.subservice: asr
 ms.collection: 
 - m365-security

@@ -8,7 +8,6 @@ author: limwainstein
 ms.author: lwainstein
 ms.date: 04/01/2025
 ms.reviewer:
-manager: bagol
 ms.custom: asr
 ms.subservice: asr
 ms.topic: how-to

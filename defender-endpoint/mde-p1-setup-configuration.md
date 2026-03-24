@@ -4,7 +4,6 @@ description: Learn how to set up and configure Defender for Endpoint Plan 1. Rev
 search.appverid: MET150 
 author: paulinbar
 ms.author: painbar
-manager: bagol 
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: onboard
