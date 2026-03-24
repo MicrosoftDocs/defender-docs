@@ -6,7 +6,6 @@ ms.subservice: unified-security-operations
 ms.author: monaberdugo
 author: mberdugo
 reviewer: Tomas Beerthuis
-audience: 
 ms.collection: 
 - m365-security
 - highpri
