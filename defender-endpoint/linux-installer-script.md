@@ -133,7 +133,7 @@ Before you get started, see [Prerequisites for Defender for Endpoint on Linux](m
 
    > [!NOTE]
    > - Upgrading your operating system to a new major version after product installation requires the product to be reinstalled. You need to uninstall the existing Defender for Endpoint on Linux, upgrade the operating system, and then reconfigure Defender for Endpoint on Linux.
-   >The installation path can't be changed after Defender for Endpoint is installed. To use a different path, uninstall and reinstall the product at the new location.
+   > - The installation path can't be changed after Defender for Endpoint is installed. To use a different path, uninstall and reinstall the product at the new location.
 
 ## Verify deployment status
 
