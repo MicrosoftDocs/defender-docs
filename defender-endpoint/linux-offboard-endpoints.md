@@ -24,15 +24,16 @@ This article explains the difference between offboarding and unstalling Microsof
 
  a Linux device Microsoft Defender and uninstalling the Defender application from the Linux device. how to offboard and uninstall Microsoft Defender for Endpoint from a Linux server.
 
-There are important differences between offboarding and uninstalling Microsoft Defender for Endpoint on Linux. Review the following descriptions and choose the option that best fits your scenario.
+There are important differences between offboarding and uninstalling Microsoft Defender for Endpoint on Linux:
 
-- **Offboarding**
+- Offboarding disconnects a device from the Defender service so it stops sending security data while leaving the agent installed.
+- Uninstalling removes the Defender for Endpoint software and services from the device entirely, cleaning up or removing the installed components.
 
-    Use offboarding when you want to temporarily stop Defender from communicating with the Defender service while keeping the Defender application installed on the Linux server. This option is recommended if you plan to reenable Defender later without reinstalling the agent. For example, you might want to offboard if you need to troubleshoot an issue with the Defender application or if you want to temporarily stop Defender while performing maintenance on the server.
+Review the following descriptions and choose the option that best fits your scenario.
 
-- **Uninstalling**
+- **Offboarding**: Offboard when you want to temporarily stop Defender from communicating with the Defender service while keeping the Defender application installed on the Linux server. This option is recommended if you plan to reenable Defender later without reinstalling the agent. For example, you might want to offboard if you need to troubleshoot an issue with the Defender application, or if you want to temporarily stop Defender while performing maintenance on the server.
 
-   Uninstall when you want to completely remove the Defender application from the Linux server, for example, when changing the installation ring (Prod/Insider Slow/Insider Fast), or when you no longer plan to use Microsoft Defender on the device.
+- **Uninstalling**: Uninstall when you want to completely remove the Defender application from the Linux server, for example, when changing the installation ring (Prod/Insider Slow/Insider Fast), or when you no longer plan to use Microsoft Defender on the device.
 
 After a device has been successfully offboarded, the Defender application behaves as follows:
 
