@@ -133,7 +133,7 @@ For more information, see [Use next-gen technologies in Microsoft Defender Antiv
 | Description | Setting |
 | --- | --- |
 | Specify the interval to check for security intelligence updates | Enabled, 4 |
-| Define the order of sources for downloading security intelligence updates | Enabled, under 'Define the order of sources for downloading security intelligence updates'<br><br>InternalDefinitionUpdateServer \| MicrosoftUpdateServer \| MMPC<br><br>**Note:** Where InternalDefinitionUpdateServer is WSUS with Microsoft Defender Antivirus updates allowed.<br><br>MicrosoftUpdateServer == Microsoft Update (formerly Windows Update).<br><br>MMPC == https://www.microsoft.com/en-us/wdsi/definitions |
+| Define the order of sources for downloading security intelligence updates | Enabled, under 'Define the order of sources for downloading security intelligence updates'<br><br>InternalDefinitionUpdateServer \| MicrosoftUpdateServer \| MMPC<br><br>**Note:** Where InternalDefinitionUpdateServer is WSUS with Microsoft Defender Antivirus updates allowed.<br><br>MicrosoftUpdateServer == Microsoft Update (formerly Windows Update).<br><br>MMPC == https://www.microsoft.com/en-us/wdsi/defenderupdates |
 
 ## Disable local administrator AV settings
 
