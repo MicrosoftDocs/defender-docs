@@ -44,7 +44,7 @@ This article is a technical reference for ASR rules that provides the following 
 
 <a name='asr-rule-to-guid-matrix'></a>
 
-<a name='asr-rule-modes></a>
+<a name='asr-rule-modes'></a>
 
 ## Attack surface reduction rules
 
@@ -80,7 +80,7 @@ Detailed descriptions of each rule are available in the links to the end of this
 |[Block use of copied or impersonated system tools](#block-use-of-copied-or-impersonated-system-tools)|c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb|
 |[Block Webshell creation for Servers](#block-webshell-creation-for-servers)|a8f5898e-1dc8-49a9-9878-85004b8a61e6|
 |[Block Win32 API calls from Office macros](#block-win32-api-calls-from-office-macros)⁹|92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b|
-|[Use advanced protection against ransomware](#use-advanced-protection-against-ransomware)|c1db55ab-c21a-4637-bb3f-a12568109d35⁷|
+|[Use advanced protection against ransomware](#use-advanced-protection-against-ransomware)⁷|c1db55ab-c21a-4637-bb3f-a12568109d35|
 
 ¹ If you enabled [Local Security Authority (LSA) protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection), this ASR rule isn't required. For more information, see the [rule details](#block-credential-stealing-from-the-windows-local-security-authority-subsystem).
 
@@ -100,7 +100,7 @@ Detailed descriptions of each rule are available in the links to the end of this
 
 ⁹ This ASR rule doesn't honor Defender for Endpoint Indicators of Compromise (IOC) for certificates.
 
-### ASR rule modes
+## ASR rule modes
 
 The available modes for ASR rules are described in the following table:
 
@@ -115,7 +115,7 @@ As previously mentioned, we recommend **Block** mode for the standard protection
 
 <a name='asr-rules-supported-operating-systems'></a>
 
-### Operating system support for ASR rules
+## Operating system support for ASR rules
 
 The supported operating systems for ASR rules are described in the following table:
 
@@ -129,7 +129,7 @@ The supported operating systems for ASR rules are described in the following tab
 |Block Adobe Reader from creating child processes|Y|1809 or later|Y|Y|Y|
 |Block all Office applications from creating child processes|Y|1709 or later|Y|Y|Y|
 |Block executable content from email client and webmail|Y|1709 or later|Y|Y|Y|
-|Block executable files from running unless they meet a prevalence, age, or trusted list criterion²|Y|v1803 or later|Y|Y|Y|
+|Block executable files from running unless they meet a prevalence, age, or trusted list criterion²|Y|1803 or later|Y|Y|Y|
 |Block execution of potentially obfuscated scripts|Y|1709 or later|Y|Y|Y|
 |Block JavaScript or VBScript from launching downloaded executable content|Y|1709 or later|Y|N|N|
 |Block Office applications from creating executable content|Y|1709 or later|Y|Y|Y|
@@ -147,7 +147,7 @@ The supported operating systems for ASR rules are described in the following tab
 
 <a name='asr-rules-supported-configuration-management-systems'></a>
 
-### Configuration management system support for ASR rules
+## Configuration management system support for ASR rules
 
 The supported configuration management systems for ASR rules are described in the following table:
 
@@ -187,7 +187,7 @@ For support and update information, see [Updates and servicing for Configuration
 
 <a name='per-asr-rule-alert-and-notification-details'></a>
 
-### Alerts and notifications from ASR rule actions
+## Alerts and notifications from ASR rule actions
 
 ASR rules can generate [Endpoint Detection and Response (EDR)](overview-endpoint-detection-response.md) alerts in Defender for Endpoint when all of the following statements are true:
 
@@ -224,7 +224,7 @@ This behavior is summarized in the following table:
 |Block untrusted and unsigned processes that run from USB|Y|Y||
 |Block use of copied or impersonated system tools|N|Y||
 |Block Webshell creation for Servers|N|N|N|
-|Block Win32 API calls from Office macros|N|N|N|
+|Block Win32 API calls from Office macros|Y|N|N|
 |Use advanced protection against ransomware|Y|Y||
 
 ¹ This ASR rule doesn't support **Warn** mode.
