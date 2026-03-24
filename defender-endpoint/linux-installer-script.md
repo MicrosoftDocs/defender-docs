@@ -82,8 +82,7 @@ Before you get started, see [Prerequisites for Defender for Endpoint on Linux](m
    sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --channel prod --pre-req
    ```
 
-   This command deploys the latest agent version to the production channel, checks minimum system requirements (memory, CPU, disk space, supported OS), and onboards the
-device to Defender Portal.
+   This command deploys the latest agent version to the production channel, checks minimum system requirements (memory, CPU, disk space, supported OS), and onboards the device to Defender Portal.
 
    Additionally you can pass more parameter based on your requirements to modify the installation. Check help for all the available options:
 
@@ -103,9 +102,9 @@ device to Defender Portal.
    -a|--rtp-mode             set real-time protection to active mode. Passive-mode and rtp-mode are mutually exclusive
    -t|--tag                  set a tag by declaring <name> and <value>, e.g.: -t GROUP Coders
    -q|--pre-req              check minimum system requirements for MDE (memory, CPU, disk space, supported OS) without installing
-   --pre-req-non-blocking    override default prerequisite checks by allowing installation to proceed even if checks fail
    -x|--skip_conflict        skip conflicting application verification
    -w|--clean                remove MDE repository from the package manager for the specified channel
+   -y|--yes                  assume yes for all mid-process prompts (default, deprecated)
    -n|--no                   disable the default assume-yes behavior for prompts
    -s|--verbose              enable verbose output
    -v|--version              print the script version
@@ -116,7 +115,6 @@ device to Defender Portal.
    --ftp-proxy <URL>         set ftp proxy
    --mdatp <version>         install a specific version of MDE; uses the latest if not provided
    --use-local-repo          skip MDE repository setup and use the locally configured repository
-   --connectivity-test       run cloud connectivity test
    -b|--install-path <PATH>  specify the installation and configuration path for MDE. Default: /
    -h|--help                 display help
    ```
@@ -130,8 +128,6 @@ device to Defender Portal.
   |Downgrade to a specific agent version | `sudo ./mde_installer.sh --downgrade –-mdatp 101.24082.0004` |
   |Uninstall agent | `sudo ./mde_installer.sh --remove` |
   |Run pre-req checks only (no install) | `sudo ./mde_installer.sh --pre-req` |
-  |Install with non-blocking pre-req checks | `sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --pre-req-non-blocking` |
-  |Run connectivity test | `sudo ./mde_installer.sh --connectivity-test` |
 
    For details on installing to a custom path, refer: [Install Defender for Endpoint on Linux to a custom path](linux-custom-location-installation.md).
 
