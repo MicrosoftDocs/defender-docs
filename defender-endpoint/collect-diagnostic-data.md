@@ -59,7 +59,7 @@ On at least two devices that are experiencing the same issue, use the following 
    - **Copy the diagnostics log files to a central location**: To save the diagnostic log files from multiple devices in one place, use the following syntax:
 
      ```dos
-     set "_done=" & (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) >nul 2>&1
+     (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
 
      MpCmdRun.exe -GetFiles -SupportLogLocation <RootPath>
      ```
@@ -72,12 +72,12 @@ On at least two devices that are experiencing the same issue, use the following 
      - `<HHMM>` is the Universal Coordinated Time (UTC) when you ran the MpCmdRun command (for example 2221 for 22:21 UTC).
 
     > [!NOTE]
-    > If you don't have write access to the location specified by the command, the diagnostic log files are still saved to the default location `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab` on the local device. But the step that copies and renames the .cab file to the `-SupportLogLocation` path fails.
+    > If you don't have write access to the location specified by the command, the diagnostic log files are still saved to the default location `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab` on the local device. But the last step that copies and renames the .cab file to the `-SupportLogLocation` path fails.
 
      In this example, you ran the following commands on the device named LAPTOP01 on March 18 at 22:21 UTC:
 
      ```dos
-     set "_done=" & (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) >nul 2>&1
+     (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
 
      MpCmdRun.exe -GetFiles -SupportLogLocation "\\SERVER01\Data"
      ```
