@@ -8,9 +8,8 @@ ms.subservice: reference
 ms.mktglfcycl: secure
 ms.sitesec: library
 ms.localizationpriority: medium
-ms.author: bagol
-author: batamig
-manager: bagol
+ms.author: painbar
+author: paulinbar
 audience: ITPro
 ms.collection: 
 - m365-security

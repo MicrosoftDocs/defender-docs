@@ -5,7 +5,6 @@ ms.service: defender-xdr
 ms.localizationpriority: medium
 ms.author: guywild
 author: guywi-ms
-manager: dansimp
 audience: ITPro
 ms.collection:
 - m365-security

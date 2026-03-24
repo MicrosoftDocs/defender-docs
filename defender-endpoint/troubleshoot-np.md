@@ -7,7 +7,6 @@ audience: ITPro
 author: chrisda
 ms.author: chrisda
 ms.reviewer: oogunrinde, yongrhee
-manager: bagol
 ms.subservice: asr
 ms.topic: how-to
 ms.collection:
@@ -20,10 +19,9 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
 ---
-# Troubleshoot network protection
 
+# Troubleshoot network protection
 
 This article provides troubleshooting information for [network protection](network-protection.md), in cases, such as:
 
@@ -42,7 +40,8 @@ There are four steps to troubleshooting these problems:
 Network protection works on devices with the following conditions:
 
 > [!div class="checklist"]
-> > - Endpoints are running Windows 10 Pro or Enterprise edition, version 1709 or higher.
+>
+> - Endpoints are running Windows 10 Pro or Enterprise edition, version 1709 or higher.
 > - Endpoints are using Microsoft Defender Antivirus as the sole antivirus protection app. [See what happens when you're using a non-Microsoft antivirus solution](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-compatibility).
 > - [Real-time protection](/windows/security/threat-protection/microsoft-defender-antivirus/configure-real-time-protection-microsoft-defender-antivirus) is enabled.
 > - [Behavior Monitoring](behavior-monitor.md) is enabled.
@@ -110,21 +109,9 @@ If your network performance issues persist after following these troubleshooting
 
 ## Collect diagnostic data for file submissions
 
-When you report a problem with network protection, you're asked to collect and submit diagnostic data for Microsoft support and engineering teams to help troubleshoot issues.
+When you report a problem with network protection, you're asked to collect and submit diagnostic data for Microsoft support and engineering teams to help troubleshoot issues. You complete this step by running `MpCmdrun.exe -GetFiles`, which saves the diagnostic data at `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab`.
 
-1. Open an elevated command prompt and change to the Windows Defender directory:
-
-   ```console
-   cd c:\program files\windows defender
-   ```
-
-1. Run this command to generate the diagnostic logs:
-
-   ```console
-   mpcmdrun -getfiles
-   ```
-
-1. Attach the file to the submission form. By default, diagnostic logs are saved at `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab`.
+For detailed instructions, see [Collect Microsoft Defender Antivirus diagnostic data](collect-diagnostic-data.md).
 
 ## Resolve connectivity issues with network protection (for E5 customers)
 
@@ -153,6 +140,3 @@ You can configure the registry key by using PowerShell, Microsoft Configuration 
 - [Evaluate network protection](evaluate-network-protection.md)
 - [Enable network protection](enable-network-protection.md)
 - [Address false positives/negatives in Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
-
-
-

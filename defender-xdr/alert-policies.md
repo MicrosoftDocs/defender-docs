@@ -4,7 +4,6 @@ f1.keywords:
 - NOCSH
 ms.author: guywild
 author: guywi-ms
-manager: deniseb
 ms.date: 03/21/2025
 audience: Admin
 ms.topic: article

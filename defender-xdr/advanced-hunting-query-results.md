@@ -9,7 +9,6 @@ f1.keywords:
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: orspodek
 audience: ITPro
 ms.collection:
   - m365-security
@@ -18,7 +17,7 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: how-to
-ms.date: 10/27/2025
+ms.date: 03/06/2026
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -36,6 +35,7 @@ While you can construct your [advanced hunting](advanced-hunting-overview.md) qu
 - [Export tables and charts](#export-tables-and-charts)
 - [Drill down to detailed entity information](#drill-down-from-query-results)
 - [Tweak your queries directly from the results](#tweak-your-queries-from-the-results)
+- [View query execution details and troubleshoot errors](#view-query-execution-details-and-troubleshoot-errors)
 - [View timeline of events](#automatic-timeline-rendering)
 
 ## View query results as a table or chart
@@ -54,7 +54,7 @@ By default, advanced hunting displays query results as tabular data. You can als
 | **Time chart** | Plots values by count on a linear time scale |
 
 >[!IMPORTANT]
->Microsoft Defender portal displays up to 100,000 advanced hunting query results only. [Learn more about advanced hunting quotas and usage parameters](advanced-hunting-limits.md#understand-advanced-hunting-quotas-and-usage-parameters)
+>You can view up to 100,000 advanced hunting query results in Microsoft Defender portal. [Learn more about advanced hunting quotas and usage parameters](advanced-hunting-limits.md#understand-advanced-hunting-quotas-and-usage-parameters).
 
 ### Construct queries for effective charts
 
@@ -62,7 +62,7 @@ When rendering charts, advanced hunting automatically identifies columns of inte
 
 #### Alerts by severity
 
-Use the `summarize` operator to obtain a numeric count of the values you want to chart. The query below uses the `summarize` operator to get the number of alerts by severity.
+Use the `summarize` operator to get a numeric count of the values you want to chart. The following query uses the `summarize` operator to count the number of alerts by severity.
 
 ```kusto
 AlertInfo
@@ -82,7 +82,7 @@ AlertInfo
 
 #### Phishing emails across top ten sender domains
 
-If you're dealing with a list of values that isn't finite, you can use the `Top` operator to chart only the values with the most instances. For example, to get the top 10 sender domains with the most phishing emails, use the query below:
+If you're dealing with a list of values that isn't finite, use the `Top` operator to chart only the values with the most instances. For example, to get the top 10 sender domains with the most phishing emails, use the following query:
 
 ```kusto
 EmailEvents
@@ -97,7 +97,7 @@ Use the pie chart view to effectively show distribution across the top domains:
 
 
 #### File activities over time
-Using the `summarize` operator with the `bin()` function, you can check for events involving a particular indicator over time. The query below counts events involving the file `invoice.doc` at 30-minute intervals to show spikes in activity related to that file:
+By using the `summarize` operator with the `bin()` function, you can check for events involving a particular indicator over time. The following query counts events involving the file `invoice.doc` at 30-minute intervals to show spikes in activity related to that file:
 
 ```kusto
 CloudAppEvents
@@ -106,16 +106,16 @@ CloudAppEvents
 | summarize FileCount = count() by bin(Timestamp, 30m)
 ```
 
-The line chart below clearly highlights time periods with more activity involving `invoice.doc`:
+The following line chart clearly highlights time periods with more activity involving `invoice.doc`:
 
 :::image type="content" source="./media/advanced-hunting-query-results/line-chart-a.png" alt-text="The line chart that displays advanced hunting results in the Microsoft Defender portal" lightbox="./media/advanced-hunting-query-results/line-chart-a.png":::
 
 ## Export tables and charts
 
-After running a query, select **Export** to save the results to local file. Your chosen view determines how the results are exported:
+After running a query, select **Export** to save the results to a local file. Your chosen view determines how the results are exported:
 
-- **Table view**—The query results are exported in tabular form as a Microsoft Excel workbook
-- **Any chart**—The query results are exported as a JPEG image of the rendered chart
+- **Table view**—The query results are exported in tabular form as a Microsoft Excel workbook.
+- **Any chart**—The query results are exported as a JPEG image of the rendered chart.
 
 ## Filter results
 
@@ -131,21 +131,21 @@ You can narrow the results down even further to specific data by selecting the n
 
 :::image type="content" source="./media/advanced-hunting-query-results/add-filter3.png" alt-text="Screenshot of new filter pill in advanced hunting." lightbox="./media/advanced-hunting-query-results/add-filter3.png":::
 
-This opens a dropdown showing the possible filters you can use further. Select one or more of the check boxes, then select **Apply**.
+This selection opens a dropdown showing the possible filters you can use. Select one or more of the check boxes, and then select **Apply**.
 
 :::image type="content" source="./media/advanced-hunting-query-results/add-filter4.png" alt-text="Screenshot of new filter's dropdown in advanced hunting." lightbox="./media/advanced-hunting-query-results/add-filter4.png":::
 
-Confirm that you have added the filters that you wanted by checking the Filters section.
+Confirm that you added the filters you want by checking the **Filters** section.
 
 :::image type="content" source="./media/advanced-hunting-query-results/add-filter5.png" alt-text="Screenshot of filters added advanced hunting." lightbox="./media/advanced-hunting-query-results/add-filter5.png":::
 
 ## Drill down from query results
 
-You can also explore the results in-line with the following features:
+You can explore the results in-line by using the following features:
 
-- Expand a result by selecting the dropdown arrow at the left of each result
-- Where applicable, expand details for results that are in JSON and array formats by selecting the dropdown arrow at the left of applicable column names for added readability
-- Open the side pane to see a record's details (concurrent with expanded rows)
+- Expand a result by selecting the dropdown arrow at the left of each result.
+- Where applicable, expand details for results that are in JSON and array formats by selecting the dropdown arrow at the left of applicable column names for added readability.
+- Open the side pane to see a record's details (concurrent with expanded rows).
 
 :::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-query-results-expand.png" alt-text="Screenshot of expanding results to drill down" lightbox="./media/advanced-hunting-query-results/advanced-hunting-query-results-expand.png":::
 
@@ -153,14 +153,14 @@ You can also right-click on any result value in a row so that you can use it to 
 
 :::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-query-results-rightclick.png" alt-text="Screenshot of options upon right-clicking an option" lightbox="./media/advanced-hunting-query-results/advanced-hunting-query-results-rightclick.png":::
 
-Furthermore, for JSON and array fields, you can right-click and update the existing query to include or exclude the field, or to extend the field to a new column.
+For JSON and array fields, you can right-click and update the existing query to include or exclude the field, or to extend the field to a new column.
 
 :::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-query-results-json-right.png" alt-text="Screenshot of options upon right-clicking an option for JSON and array fields" lightbox="./media/advanced-hunting-query-results/advanced-hunting-query-results-json-right.png":::
 
 To quickly inspect a record in your query results, select the corresponding row to open the **Inspect record** panel. The panel provides the following information based on the selected record:
 
-- **Assets**—Summarized view of the main assets (mailboxes, devices, and users) found in the record, enriched with available information, such as risk and exposure levels
-- **All details**—All the values from the columns in the record
+- **Assets**—Summarized view of the main assets (mailboxes, devices, and users) found in the record, enriched with available information, such as risk and exposure levels.
+- **All details**—All the values from the columns in the record.
 
 :::image type="content" source="./media/advanced-hunting-query-results/results-inspect-record.png" alt-text="The selected record with panel for inspecting the record in the Microsoft Defender portal" lightbox="./media/advanced-hunting-query-results/results-inspect-record.png":::
 
@@ -168,7 +168,7 @@ To view more information about a specific entity in your query results, such as 
 
 ## Tweak your queries from the results
 
-Select the three dots to the right of any column in the **Inspect record** panel. You can use the options to:
+Select the three dots to the right of any column in the **Inspect record** panel. Use the options to:
 
 - Explicitly look for the selected value (`==`)
 - Exclude the selected value from the query (`!=`)
@@ -176,32 +176,48 @@ Select the three dots to the right of any column in the **Inspect record** panel
 
 :::image type="content" source="media/advanced-hunting-query-results/work-with-query-tweak-query.png" alt-text="Screenshot of the Action Type pane on the Inspect record page in the Microsoft Defender portal." lightbox="media/advanced-hunting-query-results/work-with-query-tweak-query.png":::
 
+## View query execution details and troubleshoot errors
+
+View a query's execution details to understand why the query behaved the way it did, whether it succeeds or fails. This feature provides more visibility into query execution and helps you troubleshoot any problems more efficiently.
+
+After running a query, select **Query Details** above the query results to open a side panel:
+
+:::image type="content" source="media/advanced-hunting-query-results/advance-hunting-view-query-details.png" alt-text="Screenshot of the advanced hunting page in the Defender portal with Query Details button highlighted." lightbox="media/advanced-hunting-query-results/advance-hunting-view-query-details.png":::
+
+In the **Query Details** side panel, select the **Overview**, **Raw Statistics**, and **Errors** tabs to explore your query's execution time breakdown, data source and scope, resource utilization, and other details:
+
+:::image type="content" source="media/advanced-hunting-query-results/advance-hunting-query-details-panel.png" alt-text="Screenshot of the Query Details side panel." lightbox="media/advanced-hunting-query-results/advance-hunting-query-details-panel.png":::
+
+If your query fails, select **View full query details** at the bottom of the error message to open the **Query Details** side panel. The error message might also provide an explanation why the query failed and actionable suggestions to fix it.
+
+:::image type="content" source="media/advanced-hunting-query-results/advance-hunting-query-details-error.png" alt-text="Screenshot of advanced hunting page in the Defender portal with View full query details button highlighted on an error message." lightbox="media/advanced-hunting-query-results/advance-hunting-query-details-error.png":::
+
 ## Add items to Favorites
 
-You can add your frequently used schemas, functions, queries, and detection rules to the Favorites section of each tab in the advanced hunting page for quick access.
+Add your frequently used schemas, functions, queries, and detection rules to the **Favorites** section of each tab in the advanced hunting page for quick access.
 
 :::image type="content" source="media/advanced-hunting-query-results/faves-1.png" alt-text="Screenshot of the advanced hunting page with the Favorites section highlighted." lightbox="media/advanced-hunting-query-results/faves-1.png":::
 
-For instance, to add `AlertInfo` to your **Favorites**, go to the **Schema** tab, and select the three dots to the right of the table and select **Add to favorites**. 
+For example, to add `AlertInfo` to your **Favorites**, go to the **Schema** tab, select the three dots to the right of the table, and select **Add to favorites**. 
 
 :::image type="content" source="media/advanced-hunting-query-results/faves-2.png" alt-text="Screenshot of the Add to Favorites option in the advanced hunting page." lightbox="media/advanced-hunting-query-results/faves-2.png":::
 
-A notification appears to inform you that the item was successfully added to Favorites.
+A notification appears to inform you that the item was successfully added to **Favorites**.
 
 ![Screenshot of notification that a new item was added to Favorites in advanced hunting.](media/advanced-hunting-query-results/faves-3.png)
 
-You can do the same for your saved functions, queries, and custom detections in their respective Favorites sections right under each tab (**Functions**, **Queries**, and **Detection Rules**).
+You can do the same for your saved functions, queries, and custom detections in their respective **Favorites** sections right under each tab (**Functions**, **Queries**, and **Detection Rules**).
 
 > [!NOTE]
 > Some tables in this article might not be available at Microsoft Defender for Endpoint. [Turn on Microsoft Defender XDR](m365d-enable.md) to hunt for threats using more data sources. You can move your advanced hunting workflows from Microsoft Defender for Endpoint to Microsoft Defender XDR by following the steps in [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).
 
 ## Automatic timeline rendering
 
-By default, a timeline appears above the advanced hunting results that displays event counts over time. The timeline is automatically rendered based on the `Timestamp` or `timeGenerated` column in the query results. It automatically updates when you apply filters and can help you quickly identify abnormal behavior and trends and focus on interesting results.
+By default, a timeline appears above the advanced hunting results that displays event counts over time. The timeline automatically renders based on the `Timestamp` or `timeGenerated` column in the query results. It automatically updates when you apply filters and can help you quickly identify abnormal behavior and trends and focus on interesting results.
 
 :::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-query-results-timeline.png" alt-text="Screenshot of the timeline above the query results in advanced hunting." lightbox="./media/advanced-hunting-query-results/advanced-hunting-query-results-timeline.png":::
 
-You can select whether or not the timeline is displayed by default in the **Chart preferences** settings.
+You can select whether to display the timeline by default in the **Chart preferences** settings.
 
 :::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-chart-preferences.png" alt-text="Screenshot of the Page preferences settings in advanced hunting." lightbox="./media/advanced-hunting-query-results/advanced-hunting-chart-preferences.png":::
 
@@ -209,7 +225,7 @@ The timeline automatically adjusts its resolution based on the range of results.
 
 ### Filter the timeline results
 
-Select any point on the timeline to filter both the results and the timeline to that specific time range. The timeline also updates its scale to match the selected time period, so when you filter by a specific range, it zooms in to show event distribution in high resolution.
+Select any point on the timeline to filter both the results and the timeline to that specific time range. The timeline also updates its scale to match the selected time period. When you filter by a specific range, it zooms in to show event distribution in high resolution.
 
 #### [Unfiltered timeline](#tab/unfiltered)
 
@@ -227,7 +243,7 @@ The following screenshot shows the zoomed in results of a query filtered to a sp
 
 ### Split the timeline by values
 
-You can split the results in the timeline by any column that has at least two but less than 50 unique values.
+You can split the results in the timeline by any column that has at least two but fewer than 50 unique values.
 
 #### [Ungrouped timeline](#tab/ungrouped)
 
@@ -255,10 +271,10 @@ You can change the chart type of the timeline by selecting a different option fr
 
 ### Rendering conditions
 
-The timeline only appears if the following conditions are met:
+The timeline appears only if your results meet the following conditions:
 
-- There are more than 40 events in your results.
-- There's `Timestamp` or `timeGenerated` column.
+- Your results include more than 40 events.
+- Your results include a `Timestamp` or `timeGenerated` column.
 
 ## Related topics
 

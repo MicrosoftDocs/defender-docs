@@ -3,7 +3,6 @@ title: Microsoft Defender for Endpoint streamlined connectivity URLs - US govern
 description: Get a list of the streamlined connectivity URLs required to onboard and maintain devices in Microsoft Defender for Endpoint in US Government cloud environments (GCC, GCC High, DoD).         
 author: limwainstein
 ms.author: lwainstein
-manager: bagol
 ms.topic: how-to
 ms.service: defender-endpoint
 ms.subservice: onboard
@@ -49,9 +48,9 @@ See the prerequisites for [streamlined connectivity](configure-device-connectivi
 |Microsoft Defender SmartScreen|GCC|Reporting and Notifications|443|unitedstates4.ss.wd.microsoft.us|SmartScreen protection, reporting, notifications, Network Protection, custom URL indicators|Required|Yes|||Yes|Yes|
 |Microsoft Defender SmartScreen|GCC High|Reporting and Notifications|443|unitedstates1.ss.wd.microsoft.us|SmartScreen protection, reporting, notifications, Network Protection, custom URL indicators|Required|Yes|||Yes|Yes|
 |Microsoft Defender SmartScreen|DoD|Reporting and Notifications|443|unitedstates2.ss.wd.microsoft.us|SmartScreen protection, reporting, notifications, Network Protection, custom URL indicators|Required|Yes|||Yes|Yes|
-|Defender for Endpoint|DoD|Internal configuration management|443|https://config.ecs.dod.teams.microsoft.us/config/v1|This URL is used for internal configuration management|Required|||||Yes|
-|Defender for Endpoint|GCC High|Internal configuration management|443|https://config.ecs.gov.teams.microsoft.us/config/v1|This URL is used for internal configuration management|Required|||||Yes|
-|Defender for Endpoint|GCC Mod|Internal configuration management|443|https://gccmod.ecs.office.com/config/v1|This URL is used for internal configuration management|Required|||||Yes|
+|Defender for Endpoint|DoD|Internal configuration management|443|https://config.ecs.dod.teams.microsoft.us/config/v1|This URL must be allowed to enable Defender on Linux endpoints to receive internal configurations from the cloud.|Required|||||Yes|
+|Defender for Endpoint|GCC High|Internal configuration management|443|https://config.ecs.gov.teams.microsoft.us/config/v1|This URL must be allowed to enable Defender on Linux endpoints to receive internal configurations from the cloud.|Required|||||Yes|
+|Defender for Endpoint|GCC Mod|Internal configuration management|443|https://gccmod.ecs.office.com/config/v1|This URL must be allowed to enable Defender on Linux endpoints to receive internal configurations from the cloud.|Required|||||Yes|
 
 ### URLs used for updates
 

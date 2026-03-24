@@ -4,7 +4,6 @@ description: How Microsoft Defender Antivirus incorporates Early Launch Antimalw
 author: chrisda
 ms.author: chrisda
 ms.reviewer: yongrhee
-manager: bagol
 ms.service: defender-endpoint
 ms.topic: overview
 ms.date: 10/20/2025

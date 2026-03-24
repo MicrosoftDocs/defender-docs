@@ -5,7 +5,6 @@ ms.service: defender-endpoint
 author: paulinbar
 ms.author: painbar
 ms.reviewer: joshbregman
-manager: bagol
 ms.localizationpriority: medium
 ms.date: 10/23/2024
 audience: ITPro
