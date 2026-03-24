@@ -34,8 +34,6 @@ This article is a technical reference for ASR rules that provides the following 
 
 [!Include[Prerelease information](../includes/prerelease.md)]
 
-[!Include [defender-endpoint-setup-guide.md](../includes/mde-automated-setup-guide.md)]
-
 <a name='microsoft-defender-antivirus-exclusions-and-asr-rules'></a>
 
 <a name='asr-rules-and-defender-for-endpoint-indicators-of-compromise-ioc'></a>
