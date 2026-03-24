@@ -72,7 +72,7 @@ sections:
       - question: |
           Do I need to turn on all attack surface reduction rules at the same time, or can I turn on individual rules?
         answer: |
-          We recommended that you first enable most attack surface reduction rules in [audit mode](overview-attack-surface-reduction.md). With this approach, you can determine the possible effect to your organization. For example, your line-of-business applications.
+          We recommend that you first enable most attack surface reduction rules in [audit mode](overview-attack-surface-reduction.md). With this approach, you can determine the possible effect to your organization. For example, your line-of-business applications.
 
       - question: |
           How do attack surface reduction rule exclusions work?
