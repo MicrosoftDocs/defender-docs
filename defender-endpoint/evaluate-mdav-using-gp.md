@@ -111,7 +111,7 @@ For more information, see [Use next-gen technologies in Microsoft Defender Antiv
 |Turn on script scanning|Enabled|
 |Scan archive files|Enabled|
 |Scan packed executables|Enabled|
-|Configure scanning of network files (Scan Network Files|Enabled|
+|Configure scanning of network files (Scan Network Files)|Enabled|
 |Scan removable drives|Enabled|
 |Turn on reparse point scanning|Enabled|
 
@@ -120,7 +120,7 @@ For more information, see [Use next-gen technologies in Microsoft Defender Antiv
 |Description|Setting|
 |---|---|
 |Specify the interval to check for security intelligence updates|Enabled, 4|
-|Define the order of sources for downloading security intelligence updates|Enabled, under 'Define the order of sources for downloading security intelligence updates' <br/><br/> `InternalDefinitionUpdateServer` \| `MicrosoftUpdateServer` \| `MMPC` <br/><br/> <ul><li>`InternalDefinitionUpdateServer`: WSUS with Microsoft Defender Antivirus updates allowed.</li><li>`MicrosoftUpdateServer`: Microsoft Update (formerly Windows Update).</li><li>>`MMPC`: <https://www.microsoft.com/wdsi/defenderupdates></li></ul>|
+|Define the order of sources for downloading security intelligence updates|Enabled, under 'Define the order of sources for downloading security intelligence updates' <br/><br/> `InternalDefinitionUpdateServer` \| `MicrosoftUpdateServer` \| `MMPC` <br/><br/> <ul><li>`InternalDefinitionUpdateServer`: WSUS with Microsoft Defender Antivirus updates allowed.</li><li>`MicrosoftUpdateServer`: Microsoft Update (formerly Windows Update).</li><li>`MMPC`: <https://www.microsoft.com/wdsi/defenderupdates></li></ul>|
 
 ## Disable local administrator AV settings
 
