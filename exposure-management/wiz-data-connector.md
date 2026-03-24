@@ -33,7 +33,7 @@ First, you need to create a service account with the required permissions to get
 1. Set the **API Scopes** to **Read graph resource** and **Read vulnerabilities**
 
    > [!Note]
-   > At minimum, the Service Account should have permissions of Read graph resources and Read vulnerabilities, though we recommend Read:all permissions as we may retrieve additional data as we further develop connector.
+   > At minimum, the Service Account needs permissions of Read graph resources and Read vulnerabilities, though we recommend Read:all permissions as we may retrieve additional data as we further develop the connector.
 
 1. Select **Add Service Account**. The secret credentials dialog shows the newly created Client ID and Client Secret for the service account.
 1. Copy the Client ID and Client Secret to a secure place, such as a password management tool.
@@ -41,7 +41,7 @@ First, you need to create a service account with the required permissions to get
 
 ### Getting the Authentication Endpoint URL
 
-1. At the top right of the Wiz portal, click **Profile** > **Tenant Info** [Direct link](https://app.wiz.io/tenant-info/general)
+1. At the top right of the Wiz portal, select **Profile** > **Tenant Info** [Direct link](https://app.wiz.io/tenant-info/general)
 1. `API Endpoint URL` - Copy the endpoint in the following form: `https://api.<TENANT_DATA_CENTER>.app.wiz.io/`
 
 ## Establish Wiz connection in Exposure Management
@@ -53,12 +53,12 @@ To establish a connection with Wiz in Exposure Management, follow these steps:
 
 ## Retrieved data
 
-Wiz connector retrieves data on compute devices. This includes virtual machines and cloud resources, along with vulnerability findings and configuration data from Wiz on those assets. It also retrieves network and configuration information to identify those devices.
+Wiz connector retrieves data on compute devices. This data includes virtual machines and cloud resources, along with vulnerability findings and configuration data from Wiz on those assets. It also retrieves network and configuration information to identify those devices.
 
 | **Category**            | **Properties**                                                                 |
 |-------------------------|--------------------------------------------------------------------------------|
 | **Assets/devices**      | - Cloud provider information<br>- Network Interfaces<br>- IP addresses<br>- Virtual Machine Properties (Device name, Cloud provider ID)<br>- Operating system details<br>- Has high or Admin Privileges<br>- Open to Internet or Internet facing<br>- Contains sensitive data<br>- Instance type<br>- Is Container Host<br>- Is Ephemeral<br>- isManaged<br>- Tags<br>- Wiz projects<br>- First seen<br>- Last seen<br>- Wiz Criticality |
-| **Vulnerability findings** | Wiz retrieves CVE findings on the assets that it ingests. |
+| **Vulnerability findings** | Wiz retrieves common vulnerabilities and exposures (CVE) findings on the assets that it ingests. |
 
 ## Troubleshooting the Wiz data connector
 
