@@ -9,7 +9,6 @@ author: paulinbar
 ms.author: painbar
 ms.custom: nextgen
 ms.reviewer: thdoucet
-manager: bagol
 ms.collection: 
 - m365-security
 - tier3

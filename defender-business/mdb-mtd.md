@@ -3,7 +3,6 @@ title: Mobile threat defense capabilities in Microsoft Defender for Business
 description: Get an overview of mobile threat defense in Defender for Business. Learn what mobile threat defense includes and how to onboard devices.
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.date: 09/25/2025
 ms.topic: article
 ms.service: defender-business

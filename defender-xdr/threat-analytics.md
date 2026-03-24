@@ -8,7 +8,6 @@ f1.keywords:
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: orspodek
 audience: ITPro
 ms.collection: 
 - m365-security 
@@ -16,6 +15,7 @@ ms.collection:
 - tier1
 ms.topic: article
 ms.custom: 
+- sfi-ga-nochange
 - cx-ti
 - cx-ta
 - seo-marvel-apr2020

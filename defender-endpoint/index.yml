@@ -13,8 +13,8 @@ metadata:
   - m365-security
   - essentials-navigation
   ms.custom: intro-hub-or-landing
-  author: batamig #Required; your GitHub user alias, with correct capitalization.
-  ms.author: bagol #Required; microsoft alias of author; optional team alias.
+  author: paulinbar #Required; your GitHub user alias, with correct capitalization.
+  ms.author: painbar #Required; microsoft alias of author; optional team alias.
   ms.date: 01/19/2024
   ms.localizationpriority: high
 

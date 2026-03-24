@@ -6,7 +6,6 @@ ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
 ms.date: 02/05/2026
-manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
