@@ -36,8 +36,7 @@ To use another method, refer to the [Related content section](#related-content).
 Before you get started, see [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md) for a description of prerequisites and system requirements.
 
 > [!TIP]
-> Before running the installer script to deploy Defender on your Linux server, it's recommended to run the script with the `--pre-req` option to check minimum system
-requirements (memory, CPU, disk space, supported OS) before deployment.
+> Before running the installer script to deploy Defender on your Linux server, it's recommended to run the script with the `--pre-req` option to check minimum system requirements (memory, CPU, disk space, supported OS) before deployment.
 
 ## Deployment process
 
@@ -123,23 +122,22 @@ device to Defender Portal.
    ```
 
   | Scenario | Command |
-    |---|---|
-    |Install to a custom path location | `sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --channel prod --pre-req --install-path /custom/path/location` |
-    |Install a specific agent version | `sudo ./mde_installer.sh --install --channel prod --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --pre-req –-mdatp 101.24082.0004` |
-    |Upgrade to the latest agent version | `sudo ./mde_installer.sh --upgrade` |
-    |Upgrade to a specific agent version | `sudo ./mde_installer.sh --upgrade –-mdatp 101.24082.0004` |
-    |Downgrade to a specific agent version | `sudo ./mde_installer.sh --downgrade –-mdatp 101.24082.0004` |
-    |Uninstall agent | `sudo ./mde_installer.sh --remove` |
-    |Run pre-req checks only (no install) | `sudo ./mde_installer.sh --pre-req` |
-    |Install with non-blocking pre-req checks | `sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --pre-req-non-blocking` |
-    |Run connectivity test | `sudo ./mde_installer.sh --connectivity-test` |
+  |---|---|
+  |Install to a custom path location | `sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --channel prod --pre-req --install-path /custom/path/location` |
+  |Install a specific agent version | `sudo ./mde_installer.sh --install --channel prod --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --pre-req –-mdatp 101.24082.0004` |
+  |Upgrade to the latest agent version | `sudo ./mde_installer.sh --upgrade` |
+  |Upgrade to a specific agent version | `sudo ./mde_installer.sh --upgrade –-mdatp 101.24082.0004` |
+  |Downgrade to a specific agent version | `sudo ./mde_installer.sh --downgrade –-mdatp 101.24082.0004` |
+  |Uninstall agent | `sudo ./mde_installer.sh --remove` |
+  |Run pre-req checks only (no install) | `sudo ./mde_installer.sh --pre-req` |
+  |Install with non-blocking pre-req checks | `sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --pre-req-non-blocking` |
+  |Run connectivity test | `sudo ./mde_installer.sh --connectivity-test` |
 
    For details on installing to a custom path, refer: [Install Defender for Endpoint on Linux to a custom path](linux-custom-location-installation.md).
 
    > [!NOTE]
    >
       > 1. Upgrading your operating system to a new major version after product installation requires the product to be reinstalled. You need to uninstall the existing Defender for Endpoint on Linux, upgrade the operating system, and then reconfigure Defender for Endpoint on Linux.
-      >
       > 2. The installation path can't be changed after Defender for Endpoint is installed. To use a different path, uninstall and reinstall the product at the new location.
 
 ## Verify deployment status
