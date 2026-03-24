@@ -151,7 +151,7 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
    - **Select a platform**: Select **Windows**.
    - **Select template**: Select **Attack Surface Reduction Rules**.
 
-   Select **Create policy**
+   Select **Create policy**.
 
 1. The create a new policy wizard opens. On the **Basics** page, configure the following settings:
    - **Name**: Enter a unique name for the policy.
