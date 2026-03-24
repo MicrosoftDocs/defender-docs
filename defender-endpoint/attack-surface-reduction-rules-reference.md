@@ -129,7 +129,7 @@ The supported operating systems for ASR rules are described in the following tab
 |Block Adobe Reader from creating child processes|Y|1809 or later|Y|Y|Y|
 |Block all Office applications from creating child processes|Y|1709 or later|Y|Y|Y|
 |Block executable content from email client and webmail|Y|1709 or later|Y|Y|Y|
-|Block executable files from running unless they meet a prevalence, age, or trusted list criterion²|Y|v1803 or later|Y|Y|Y|
+|Block executable files from running unless they meet a prevalence, age, or trusted list criterion²|Y|1803 or later|Y|Y|Y|
 |Block execution of potentially obfuscated scripts|Y|1709 or later|Y|Y|Y|
 |Block JavaScript or VBScript from launching downloaded executable content|Y|1709 or later|Y|N|N|
 |Block Office applications from creating executable content|Y|1709 or later|Y|Y|Y|
