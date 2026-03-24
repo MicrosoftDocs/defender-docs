@@ -44,7 +44,7 @@ Servers that meet all prerequisites appear as **Ready for migration** on the **S
 For optimal protection and monitoring, complete the configuration steps described in [Defender for Identity sensor v3.x prerequisites](prerequisites-sensor-version-3.md), including:
 
 - [Configure RPC auditing](prerequisites-sensor-version-3.md#configure-rpc-auditing).
-- [Configure automatic Windows event auditing](prerequisites-sensor-version-3.md#configure-windows-event-auditing). Existing auditing configurations from the v2.x sensor are preserved and converted for v3.x, but we recommend [enabling automatic Windows event auditing](configure-windows-event-collection#configure-defender-for-identity-to-collect-windows-events-automatically-preview) for optimal configuration validation.
+- [Configure automatic Windows event auditing](prerequisites-sensor-version-3.md#configure-windows-event-auditing). Existing auditing configurations from the v2.x sensor are preserved and converted for v3.x, but we recommend [enabling automatic Windows event auditing (Preview)](configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically-preview)) for optimal configuration validation.
 - [Switch from gMSA to local system](prerequisites-sensor-version-3.md#recommended-configurations-for-optimal-performance). The v3.x sensor uses the local system identity. If you had a gMSA configured for the v2.x sensor, remove the gMSA configuration.
 
 ## Clean up the v2.x sensor

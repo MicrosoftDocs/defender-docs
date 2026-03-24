@@ -20,7 +20,8 @@ This article explains how to view, manage, and update Defender for Identity sens
 1. In the left sidebar, under **Deployment**, select **On-premises**.
 1. Select the **Sensors** tab.
 
-:::image type="content" source="media/sensor-page-overview.png" alt-text="Screenshot that shows the Sensors tab on the On-premises page in the Microsoft Defender portal, with the Deployment sidebar, tabs, filters, and sensor list." lightbox="media/sensor-page-overview.png":::
+
+:::image type="content" source="media/sensor-settings/sensor-settings-page.png" alt-text="Screenshot that shows the Sensors tab on the On-premises page in the Microsoft Defender portal." lightbox="media/sensor-settings/sensor-settings-page.png":::
 
 The **Sensors** tab shows all Defender for Identity sensors deployed in your environment. From this tab you can:
 
