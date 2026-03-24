@@ -1,11 +1,7 @@
 ---
 title: Release notes
 description: This page is updated frequently with the latest updates in Microsoft Security Exposure Management.
-ms.author: dlanger
-author: dlanger
-manager: ornat-spodek
 ms.topic: overview
-ms.service: exposure-management
 ms.date: 01/26/2026
 
 ---
