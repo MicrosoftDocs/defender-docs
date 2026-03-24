@@ -5,7 +5,6 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 audience: Admin
 ms.topic: upgrade-and-migration-article
 ms.localizationpriority: medium

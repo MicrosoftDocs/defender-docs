@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.subservice: onboard
 f1.keywords:
 - NOCSH
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection: 
