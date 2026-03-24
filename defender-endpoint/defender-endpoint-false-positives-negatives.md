@@ -186,7 +186,7 @@ You can roll back and remove a file from quarantine if you determine it's clean 
    ```dos
    (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
 
-   MpCmdRun.exe" -Restore -Name EUS:Win32/CustomEnterpriseBlock -All
+   MpCmdRun.exe -Restore -Name EUS:Win32/CustomEnterpriseBlock -All
    ```
 
    For more information, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).

@@ -273,19 +273,23 @@ For Auto-IR testing labs, navigate to **Microsoft Defender XDR** \> **Evaluation
 
 #### Cloud-delivered protection
 
-1. Open a Command Prompt as an administrator.
+verify that Cloud Protection network connectivity is working.
 
-1. Right-click the item in the Start menu, select **Run as administrator** then select **Yes** at the permissions prompt.
+1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
+   1. Open the **Start** menu, and then type **cmd**.
+   2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
+2. In the elevated Command Prompt, run the following commands:
 
-1. Use the following argument with the Microsoft Defender Antivirus command-line utility (mpcmdrun.exe) to verify that your network can communicate with the Microsoft Defender Antivirus cloud service:
+   > [!TIP]
+   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Microsoft Defender`.
 
    ```dos
-   "%ProgramFiles%\Windows Defender\MpCmdRun.exe" -ValidateMapsConnection
+   (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
+
+   MpCmdRun.exe -ValidateMapsConnection
    ```
 
-  > [!NOTE]
-  > This command only works on Windows 10, version 1703 or higher, or Windows 11.
-  > For more information, see [Manage Microsoft Defender Antivirus with the mpcmdrun.exe commandline tool](command-line-arguments-microsoft-defender-antivirus.md).
+For more information about MpCmdRun, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
 
 #### Test Block at First Sight
 

@@ -106,15 +106,16 @@ To install the latest security intelligence and antivirus engine updates, you ca
 
      ```dos
      (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
+     ```
 
   1. Run one of the following commands:
 
      ```dos
-     MpCmdRun.exe" -SignatureUpdate
+     MpCmdRun.exe -SignatureUpdate
 
-     MpCmdRun.exe" -SignatureUpdate -UNC \\FileServer\ShareName
+     MpCmdRun.exe -SignatureUpdate -UNC \\FileServer\ShareName
 
-     MpCmdRun.exe" -SignatureUpdate -MMPC
+     MpCmdRun.exe -SignatureUpdate -MMPC
      ```
 
   For more information, see [Manage the sources for Microsoft Defender Antivirus protection updates](manage-protection-updates-microsoft-defender-antivirus.md).
@@ -137,11 +138,11 @@ In the unfortunate event that you encounter issues after an update, you can roll
 |Roll the engine version back to the previous version|`MpCmdRun.exe -RemoveDefinitions -Engine`|
 |Removes only dynamically downloaded security intelligence updates.|`MpCmdRun.exe -RemoveDefinitions -DynamicSignatures`|
 
-<!--->
+<!---
 These switches don't exist anymore:
 
-|Roll a platform update back to the previous version|`MpCmdRun.exe" -RevertPlatform`|
-|Roll updates back to the version shipped with the operating system (`%ProgramFiles%\Windows Defender`)|`MpCmdRun.exe" -ResetPlatform`|
+|Roll a platform update back to the previous version|`MpCmdRun.exe -RevertPlatform`|
+|Roll updates back to the version shipped with the operating system (`%ProgramFiles%\Windows Defender`)|`MpCmdRun.exe -ResetPlatform`|
 --->
 
 For more information, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).

@@ -99,7 +99,11 @@ Standard security intelligence updates can take hours to prepare and deliver; ou
 **Description**: Signature Update Fallback Order
 **Setting**: Select the checkbox for **Signature Update Fallback**
 
-InternalDefinitionUpdateServer|MicrosoftUpdateServer|MMPC, where 'InternalDefinitionUpdateServer' is WSUS with Microsoft Defender Antivirus updates allowed; 'MicrosoftUpdateServer' = Microsoft Update (formerly Windows Update); and MMPC = https://www.microsoft.com/en-us/wdsi/defenderupdates.
+`InternalDefinitionUpdateServer|MicrosoftUpdateServer|MMPC`
+
+- `InternalDefinitionUpdateServer`is WSUS with Microsoft Defender Antivirus updates allowed.
+- `MicrosoftUpdateServer` is Microsoft Update (formerly Windows Update).
+- `MMPC` is <https://www.microsoft.com/en-us/wdsi/defenderupdates>.
 
 **Local administrator AV**:
 
@@ -185,13 +189,13 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 1. From these groups, select the settings that you want to manage with this profile.
 1. Set the policies for the chosen groups of settings by configuring them as described in the following table:
 
-   |Description| Setting|
-   | -------- | -------- |
-   | TamperProtection (Device) | On|
+   |Description|Setting|
+   |---|---|
+   |TamperProtection (Device)|On|
 
 #### Check the Cloud Protection network connectivity
 
-It's important to check that Cloud Protection network connectivity is working during your penetration testing.
+It's important to verify that Cloud Protection network connectivity is working during your penetration testing.
 
 1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
    1. Open the **Start** menu, and then type **cmd**.

@@ -55,32 +55,32 @@ If you're using a non-Microsoft antivirus/anti-malware product on your device, y
 
 The following table summarizes Microsoft Defender Antivirus processes and services. You can view them in Task Manager in Windows.
 
-| Process or service | Where to view its status |
-|--|--|
-| **Microsoft Defender Antivirus Core service** <br/>(`MdCoreSvc`) | - **Processes** tab: `Antimalware Core Service` <br/>- **Details** tab: `MpDefenderCoreService.exe` <br/>- **Services** tab: `Microsoft Defender Core Service` | 
-| **Microsoft Defender Antivirus service** <br/>(`WinDefend`) | - **Processes** tab: `Antimalware Service Executable` <br/>- **Details** tab: `MsMpEng.exe` <br/>- **Services** tab: `Microsoft Defender Antivirus` | 
-| **Microsoft Defender Antivirus Network Realtime Inspection service** <br/>(`WdNisSvc`) |  - **Processes** tab: `Microsoft Network Realtime Inspection Service` <br/>- **Details** tab: `NisSrv.exe` <br/>- **Services** tab: `Microsoft Defender Antivirus Network Inspection Service` | 
-| **Microsoft Defender Antivirus command-line utility** | - **Processes** tab: N/A <br/>- **Details** tab: `MpCmdRun.exe` <br/>- **Services** tab: N/A  | 
-| **Microsoft Security Client Policy Configuration Tool** | - **Processes** tab: N/A <br/>- **Details** tab: `ConfigSecurityPolicy.exe` <br/>- **Services** tab: N/A | 
+|Process or service|Where to view its status|
+|---|---|
+|**Microsoft Defender Antivirus Core service** <br/>(`MdCoreSvc`)|<ul><li>**Processes** tab: `Antimalware Core Service`</li><li>**Details** tab: `MpDefenderCoreService.exe`</li><li>**Services** tab: `Microsoft Defender Core Service`</li></ul>|
+|**Microsoft Defender Antivirus service** <br/>(`WinDefend`)|<ul><li>**Processes** tab: `Antimalware Service Executable`</li><li>**Details** tab: `MsMpEng.exe`</li><li>**Services** tab: `Microsoft Defender Antivirus`</li></ul>|
+|**Microsoft Defender Antivirus Network Realtime Inspection service** <br/>(`WdNisSvc`)|<ul><li>**Processes** tab: `Microsoft Network Realtime Inspection Service`</li><li>**Details** tab: `NisSrv.exe`</li><li>**Services** tab: `Microsoft Defender Antivirus Network Inspection Service`</li></ul>|
+|**Microsoft Defender Antivirus command-line utility**|<ul><li>**Processes** tab: N/A</li><li>**Details** tab: `MpCmdRun.exe`</li><li>**Services** tab: N/A</li></ul>|
+|**Microsoft Security Client Policy Configuration Tool**|<ul><li>**Processes** tab: N/A</li><li>**Details** tab: `ConfigSecurityPolicy.exe`</li><li>**Services** tab: N/A</li></ul>|
 
 To learn more about the Microsoft Defender Core service, visit [Microsoft Defender Core service overview](microsoft-defender-core-service-overview.md).
 
 For [Microsoft Endpoint Data Loss Prevention](/purview/endpoint-dlp-getting-started) (Endpoint DLP), the following table summarizes processes and services. You can view them in Task Manager in Windows.
 
-| Process or service | Where to view its status |
-|--|--|
-| **Microsoft Endpoint DLP service** <br/>(`MDDlpSvc`) | - **Processes** tab: `MpDlpService.exe` <br/>- **Details** tab: `MpDlpService.exe` <br/>- **Services** tab: `Microsoft Data Loss Prevention Service` |
-| **Microsoft Endpoint DLP command-line utility**  | - **Processes** tab: N/A <br/>- **Details** tab: `MpDlpCmd.exe` <br/>- **Services** tab: N/A |
+|Process or service|Where to view its status|
+|---|---|
+|**Microsoft Endpoint DLP service** <br/>(`MDDlpSvc`)|<ul><li>**Processes** tab: `MpDlpService.exe`</li><li>**Details** tab: `MpDlpService.exe`</li><li>**Services** tab: `Microsoft Data Loss Prevention Service`|
+|**Microsoft Endpoint DLP command-line utility**|<ul><li>**Processes** tab: N/A</li><li>**Details** tab: `MpDlpCmd.exe`</li><li>**Services** tab: N/A</li></ul>|
 
 ## Comparing active mode, passive mode, and disabled mode
 
 The following table describes what to expect when Microsoft Defender Antivirus is in active mode, passive mode, or disabled.
 
-| Mode | What happens |
+|Mode|What happens|
 |---|---|
-| Active mode | In active mode, Microsoft Defender Antivirus is used as the primary antivirus app on the device. Files are scanned, threats are remediated, and detected threats are listed in your organization's security reports and in your Windows Security app. |
-| Passive mode | In passive mode, Microsoft Defender Antivirus isn't used as the primary antivirus app on the device. Files are scanned, and detected threats are reported, but threats aren't remediated by Microsoft Defender Antivirus. <br/><br/> **IMPORTANT**: Microsoft Defender Antivirus can run in passive mode only on endpoints that are onboarded to Microsoft Defender for Endpoint. See [Requirements for Microsoft Defender Antivirus to run in passive mode](microsoft-defender-antivirus-compatibility.md#requirements-for-microsoft-defender-antivirus-to-run-in-passive-mode). |
-| Disabled or uninstalled | When disabled or uninstalled, Microsoft Defender Antivirus isn't used. Files aren't scanned, and threats aren't remediated. In general, we don't recommend disabling or uninstalling Microsoft Defender Antivirus. |
+|Active mode|In active mode, Microsoft Defender Antivirus is used as the primary antivirus app on the device. Files are scanned, threats are remediated, and detected threats are listed in your organization's security reports and in your Windows Security app.|
+|Passive mode|In passive mode, Microsoft Defender Antivirus isn't used as the primary antivirus app on the device. Files are scanned, and detected threats are reported, but threats aren't remediated by Microsoft Defender Antivirus. <br/><br/> **IMPORTANT**: Microsoft Defender Antivirus can run in passive mode only on endpoints that are onboarded to Microsoft Defender for Endpoint. See [Requirements for Microsoft Defender Antivirus to run in passive mode](microsoft-defender-antivirus-compatibility.md#requirements-for-microsoft-defender-antivirus-to-run-in-passive-mode).|
+|Disabled or uninstalled|When disabled or uninstalled, Microsoft Defender Antivirus isn't used. Files aren't scanned, and threats aren't remediated. In general, we don't recommend disabling or uninstalling Microsoft Defender Antivirus.|
 
 To learn more, see [Microsoft Defender Antivirus compatibility](microsoft-defender-antivirus-compatibility.md).
 

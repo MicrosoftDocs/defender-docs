@@ -227,13 +227,13 @@ Navigate to **Computer Configuration** > **Administrative Templates** > **Window
 
 Assign the policies to the OU where the test machines are located.
 
-#### Enable Tamper Protection
+### Enable Tamper Protection
 
 In the Microsoft Defender portal at [https://security.microsoft.com](https://security.microsoft.com), go to **Settings** > **Endpoints** > **Advanced features** > **Tamper Protection** > **On**.
 
 For more information, see [How do I configure or manage tamper protection?](prevent-changes-to-security-settings-with-tamper-protection.md).
 
-#### Check the Cloud Protection network connectivity
+## Check the Cloud Protection network connectivity
 
 It's important to check that Cloud Protection network connectivity is working during your penetration testing.
 
@@ -263,7 +263,7 @@ The latest 'Platform Update' version Production channel (GA) is available here:
 To check which 'Platform Update' version is installed, use the following PowerShell command (Run as admin):
 
 ```powershell
-get-mpComputerStatus | ft AMProductVersion
+Get-MpComputerStatus | Format-Table AMProductVersion
 ```
 
 ## Check the Security Intelligence Update version
@@ -275,19 +275,19 @@ The latest 'Security Intelligence Update' version is available here:
 To check which 'Security Intelligence Update' version is installed, use the following PowerShell command (Run as admin):
 
 ```PowerShell
-get-mpComputerStatus | ft AntivirusSignatureVersion
+Get-MpComputerStatus | Format-Table AntivirusSignatureVersion
 ```
 
 ## Check the Engine Update version
 
 The latest scan 'engine update' version is available here:
 
-[Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware - Microsoft Security Intelligence](https://www.microsoft.com/en-us/wdsi/defenderupdates)
+[Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware - Microsoft Security Intelligence](https://www.microsoft.com/wdsi/defenderupdates)
 
 To check which 'Engine Update' version is installed, use the following PowerShell command(Run as admin):
 
 ```PowerShell
-get-mpComputerStatus | ft AMEngineVersion
+Get-MpComputerStatus | Format-Table AMEngineVersion
 ```
 
 If you're finding that your settings aren't taking effect, you might have a conflict. To resolve conflicts, refer:

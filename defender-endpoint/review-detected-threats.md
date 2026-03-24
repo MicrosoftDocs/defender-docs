@@ -67,7 +67,7 @@ You can manage threat detections for any devices that are [enrolled in Microsoft
 
 ## FAQs
 
-#### In the Microsoft Defender portal > Devices with active malware > Devices with malware detections report, why does the Last update seem to be occurring today?
+### In the Microsoft Defender portal > Devices with active malware > Devices with malware detections report, why does the Last update seem to be occurring today?
 
 To see when the malware was detected, you can take the following steps:
 
@@ -79,11 +79,11 @@ To see when the malware was detected, you can take the following steps:
 
 1. Open the CSV and find the **LastStateChangeDateTime** column to see when malware was detected.
 
-#### In the devices with malware detections report, why can't I see any information about which malware was detected on the device.
+### In the devices with malware detections report, why can't I see any information about which malware was detected on the device.
 
 To see the malware name, visit the [Intune portal](https://intune.microsoft.com) as this is an integration with Intune, select **Antivirus**,  and select **Active malware** tab and you see a column named **Malware name**.
 
-#### I see a different number for active malware in Devices with active malware report, when compared to numbers I see using Reports > Detected malware, and Intune > Antivirus > Active malware.
+### I see a different number for active malware in Devices with active malware report, when compared to numbers I see using Reports > Detected malware, and Intune > Antivirus > Active malware
 
 The **Devices with active malware** report is based on the devices that were active within the last 1 day (24 hours) and had malware detections within the last 15 days.
 
@@ -104,23 +104,37 @@ on DeviceName
 | distinct DeviceName, DeviceId, Title, AlertId, Timestamp
 ```
 
-#### I searched the computer name in the top search bar and got two devices with the same name. I don't know which one of those two devices the report is referring to?
+### I searched the computer name in the top search bar and got two devices with the same name. I don't know which one of those two devices the report is referring to?
 
 Use the Advanced Hunting query that is mentioned [here](#i-see-a-different-number-for-active-malware-in-devices-with-active-malware-report-when-compared-to-numbers-i-see-using-reports--detected-malware-and-intune--antivirus--active-malware) for details such as unique DeviceID, Title, AlertID, and the remediation process. After identifying, work with your IT admin's to make sure that the devices are uniquely named. If a device is retired, use [tags to decommission it.](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/how-to-use-tagging-effectively-part-1/ba-p/1964058)
 
-#### I see malware detection in Intune and on the Devices with active malware report, but I don't see it in the MDE Alerts queue or in the Incidents queue.
+### I see malware detection in Intune and on the Devices with active malware report, but I don't see it in the MDE Alerts queue or in the Incidents queue
 
-It might be that the URL's [Cloud Protection](configure-network-connections-microsoft-defender-antivirus.md) is currently not being allowed through your firewall or proxy.
+[Cloud Protection](configure-network-connections-microsoft-defender-antivirus.md) isn't allowed through your firewall or proxy.
 
-You need to ensure that when you run `%ProgramFiles%\Windows Defender\MpCmdRun.exe -ValidateMapsConnection` on your device, the reporting is Ok.
+Do the following steps to verify that your network can communicate with the Microsoft Defender Antivirus cloud service:
 
-#### I see a device that has been inactive for 180+ days but still showing up on the report for 'Devices with active malware'.  The device doesn't show in the "Device inventory", can't be turned on and can't be offboarded from Microsoft Defender for Endpoint.
+1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
+   1. Open the **Start** menu, and then type **cmd**.
+   2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
+2. In the elevated Command Prompt, run the following commands:
 
-  
+   > [!TIP]
+   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Microsoft Defender`.
+
+   ```dos
+   (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
+
+   MpCmdRun.exe -ValidateMapsConnection
+   ```
+
+For more information about MpCmdRun, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
+
+### I see a device that has been inactive for 180+ days but still showing up on the report for 'Devices with active malware'.  The device doesn't show in the "Device inventory", can't be turned on and can't be offboarded from Microsoft Defender for Endpoint
+
 The device has not been [retired](/intune/intune-service/remote-actions/devices-wipe) from Intune.
 
 ## Related articles
 
 - [Alerts in Microsoft Defender for Endpoint](investigate-alerts.md)
 - [Alerts queue in Microsoft Defender XDR](alerts-queue-endpoint-detection-response.md)
-

@@ -31,7 +31,7 @@ Understanding why a scan is launched can help identify what settings are applied
 |Schedule|Defined by policy as per policy table|
 |Scan after update|Defined by policy (Settings catalog in Intune)|
 |Catch up scan|Launched when a scheduled scan was missed twice|
-|Manually launched|A scan is launched manually by using any of the following methods: <ul><li>[Command Prompt](command-line-arguments-microsoft-defender-antivirus.md): `MpCmdRun.exe -ScanType <value>`</li><li>[Taking a response action on a device](respond-machine-alerts.md#run-microsoft-defender-antivirus-scan-on-devices) in the Microsoft Defender portal.</li><li>Using the Windows Security app or Microsoft Defender app on the device</li></ul>|
+|Manually launched|A scan is launched manually by using any of the following methods: <ul><li>[MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md): `MpCmdRun.exe -Scan -ScanType <value>`</li><li>[Taking a response action on a device](respond-machine-alerts.md#run-microsoft-defender-antivirus-scan-on-devices) in the Microsoft Defender portal.</li><li>Using the Windows Security app or Microsoft Defender app on the device</li></ul>|
 
 ## CPU performance and scan throttling in Microsoft Defender Antivirus
 
@@ -129,7 +129,7 @@ Event viewer can be access on the machine by the application or PowerShell. For 
 ### Reports in the Microsoft Defender portal
 
 Reports are available that include current scan status. You can expand the view and export details. For more information, see [Device health report](device-health-microsoft-defender-antivirus-health.md).
- 
+
 ### Advanced hunting
 
 You can also find information about scan completion and cancellation in [advanced hunting](/defender-xdr/advanced-hunting-overview). To get help with advanced hunting, see the following articles:
@@ -137,27 +137,25 @@ You can also find information about scan completion and cancellation in [advance
 - [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview)
 - [Choose between guided and advanced modes to hunt in Microsoft Defender XDR](/defender-xdr/advanced-hunting-modes)
 - [Learn the advanced hunting query language](/defender-xdr/advanced-hunting-query-language)
-        
+
 ### Device page in the Microsoft Defender portal
 
 In the Microsoft Defender portal, you can view information about scans on the device page. For more information, see the following articles:
 
 - [Device health reports in Microsoft Defender for Endpoint](device-health-reports.md)
 - [Device inventory](machines-view-overview.md)
- 
+
 ### APIs
 
 Data about scan status can be exported by using the export health reporting API, as follows:
 
 ```console
-
 "quickScanResult": "Completed",
 "quickScanError": "",
 "quickScanTime": "2202-08-02T18:40:15.882Z",
 "fullScanResult": "",
 "fullScanError": "",
 "fullScanTime": null,
-
 ```
 
 For more information, see [Export device antivirus health report](api/device-health-export-antivirus-health-report-api.md).
@@ -175,7 +173,7 @@ Identifying why a scan was canceled enables you to identify what needs to be rev
 
 ## Use performance analyzer on the device
 
-If, after following the guidance in this article, you haven't identified a misconfiguration issue on the device, you can use the `New-MpPerformanceRecording` command to generate a trace to identify problems on the device. This performance analyzer gives you the following information: 
+If, after following the guidance in this article, you haven't identified a misconfiguration issue on the device, you can use the `New-MpPerformanceRecording` command to generate a trace to identify problems on the device. This performance analyzer gives you the following information:
 
 - Top paths that impact scan time
 - Top files that impact scan time
