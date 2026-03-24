@@ -100,7 +100,7 @@ sections:
 
           :::image type="content" source="media/asrfaq1.png" alt-text="block credential stealing LSASS":::
 
-          If you need create an exception for the process that was blocked, use the file name and full path as shown in the following screenshot:
+          If you need to create an exception for the process that was blocked, use the file name and full path as shown in the following screenshot:
 
           :::image type="content" source="media/asrfaq2.png" alt-text="exclude files asr":::
 
