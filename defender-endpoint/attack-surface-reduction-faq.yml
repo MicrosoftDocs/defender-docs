@@ -170,7 +170,7 @@ sections:
           No. Attack surface reduction uses Microsoft Defender Antivirus to block apps. You can't configure attack surface reduction to use another security solution.
 
       - question: |
-          I have a Windows Enterprise E5 license and I enabled some attack surface reduction rules with Defender for Endpoint. Is it possible for an attack surface reduction event not appear in the event timeline in Defender for Endpoint?
+          I have a Windows Enterprise E5 license and I enabled some attack surface reduction rules with Defender for Endpoint. Is it possible for an attack surface reduction event not to appear in the event timeline in Defender for Endpoint?
         answer: |
           When an attack surface reduction rule locally triggers a notification, a report on the event is also sent to the Defender for Endpoint portal. If you're having trouble finding the event, you can filter the events timeline using the search box. You can also view attack surface reduction events by selecting **Go to attack surface management** from **Configuration management** in the Microsoft Defender for Cloud taskbar. The attack surface management page includes a tab for report detections, which includes a full list of attack surface reduction rule events reported to Defender for Endpoint.
 
