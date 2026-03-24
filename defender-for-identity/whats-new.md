@@ -25,6 +25,30 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## March 2026
 
+### Identity security enhancements
+
+New identity security capabilities help you monitor and manage identity security for human and non-human identities:
+
+- **Identity Security dashboard (Preview)**: The **Identity Security** dashboard provides summary cards for identity providers, on-premises identities, SaaS identities, PAM and IGA integrations, and non-human identities. Widgets show deployment status, highly privileged identities, users at risk, and domains with unsecured configurations. For more information, see [The Identity Security dashboard](dashboard.md).
+
+    The **Identity Security** dashboard is being rolled out gradually to customers, and might not yet be available in your organization.
+
+- **Coverage and maturity page (Preview)**: The **Coverage and maturity** page shows your organization's identity security coverage for identity providers, on-premises identities, SaaS identities, and PAM and IGA integrations. Each source displays a maturity level, including Connected, Protected, Fortified, and Resilient, with identity counts, coverage scores, and prioritized setup tasks. For more information, see [Coverage and maturity](/defender-xdr/identity-security/coverage-maturity).
+
+    The **Coverage and maturity** page is being rolled out gradually to customers, and might not yet be available in your organization. If you don't see this feature in your environment yet, check back soon.
+
+- **Identity inventory**: The **Identity inventory** page now shows human and non-human identities in separate tabs. Insight cards help you classify critical assets, view highly privileged identities, identify critical Active Directory service accounts, and view cloud application accounts. For more information, see [View the Identity inventory](identity-inventory.md).
+
+- **Non-human identities (Preview)**: The **Non-human identities** tab on the **Identity inventory** page shows non-human identities, including Microsoft Entra ID apps, Active Directory service accounts, Google Workspace apps, and Salesforce apps. The tab includes statistics for risky, highly privileged, overprivileged, unused, and externally published identities. A separate investigation page lets you view details for each identity. For more information, see [Identity inventory](identity-inventory.md) and [Investigate non-human identities](/defender-xdr/investigate-non-human-identities).
+
+- **Identity risk score (Preview)**: A new risk score for identities, ranging from 0 to 100, that indicates the likelihood of compromise and the potential impact based on criticality and privileged roles. The risk score is available in Microsoft Entra ID, where it can be used to inform conditional access policies and identity protection workflows. A new **Risk score** tab on the **Identity** page provides a detailed breakdown of the risk factors, including percentile comparison and risk trends. For more information, see [Investigate an identity](/defender-xdr/investigate-users).
+
+- **Identity security recommendations (Preview)**: View recommendations for Active Directory, Microsoft Entra ID, and SaaS applications such as Microsoft, Atlassian, GitHub, Google Workspace, Salesforce, and ServiceNow. Recommendations are also available for non-Microsoft identity providers such as Okta, PingOne, CyberArk, and SailPoint. For more information, see [Identity security recommendations](/defender-xdr/identity-security/identity-security-recommendations).
+
+- **Domain investigation page (Preview)**: The **Domain investigation** page shows Active Directory domain security, including domain properties, deployment health, identity summary, service account breakdown, sensitive entities, active recommendations, group policies, and trust relationships. For more information, see [Investigate a domain](investigate-domain.md).
+
+- **Password protection page (Preview)**: The **Password protection** page shows identity password risk from Active Directory, Microsoft Entra ID, and Okta, with tabs for password hygiene, password policies, leaked credentials, and exposed passwords. For more information, see [Password protection](password-protection.md).
+
 ### Defender for Identity sensor updates
 
 Sensor versions now display the full version number (for example, 2.255.19201.14651) instead of only the major/minor version (for example, 2.255). This makes it easier to identify the exact update installed on each sensor.
@@ -51,7 +75,7 @@ These new alerts were added to the Defender for Identity security alerts:
 
 **New alerts related to Active Directory**:
 
-- [Suspicious on-prem account enablement after disruption](alerts-xdr.md#suspicious-on-prem-account-enablement-after-disruption)
+- [Suspicious on-premises account enablement after disruption](alerts-xdr.md#suspicious-on-prem-account-enablement-after-disruption)
 - [Suspicious resource-based constrained delegation (RBCD) attribute change](alerts-xdr.md#suspicious-resource-based-constrained-delegation-rbcd-attribute-change)
 - [Suspicious resource-based constrained delegation (RBCD) authentication](alerts-xdr.md#suspicious-resource-based-constrained-delegation-rbcd-authentication)
 
