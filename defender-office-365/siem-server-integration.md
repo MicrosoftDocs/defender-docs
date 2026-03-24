@@ -4,7 +4,6 @@ f1.keywords:
   - NOCSH
 ms.author: deniseb
 author: denisebmsft
-manager: deniseb
 audience: ITPro
 ms.topic: how-to
 ms.date: 6/20/2023
