@@ -49,12 +49,12 @@ To establish a connection with Wiz in Exposure Management, follow these steps:
 
 ## Retrieved data
 
-Wiz connector retrieves data on compute devices. This includes virtual machines and cloud resources, along with vulnerability findings and configuration data from Wiz on those assets. It also retrieves network and configuration information to identify those devices.
+Wiz connector retrieves data on compute devices. This data includes virtual machines and cloud resources, along with vulnerability findings and configuration data from Wiz on those assets. It also retrieves network and configuration information to identify those devices.
 
 | **Category**            | **Properties**                                                                 |
 |-------------------------|--------------------------------------------------------------------------------|
 | **Assets/devices**      | - Cloud provider information<br>- Network Interfaces<br>- IP addresses<br>- Virtual Machine Properties (Device name, Cloud provider ID)<br>- Operating system details<br>- Has high or Admin Privileges<br>- Open to Internet or Internet facing<br>- Contains sensitive data<br>- Instance type<br>- Is Container Host<br>- Is Ephemeral<br>- isManaged<br>- Tags<br>- Wiz projects<br>- First seen<br>- Last seen<br>- Wiz Criticality |
-| **Vulnerability findings** | Wiz retrieves CVE findings on the assets that it ingests. |
+| **Vulnerability findings** | Wiz retrieves common vulnerabilities and exposures (CVE) findings on the assets that it ingests. |
 
 ## Troubleshooting the Wiz data connector
 

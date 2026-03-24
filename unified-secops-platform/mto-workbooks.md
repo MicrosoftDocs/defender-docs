@@ -4,9 +4,6 @@ description: Learn about multitenant management for Microsoft Sentinel situation
 author: mberdugo
 ms.author: monaberdugo
 ms.reviewer: tbeerthuis
-audience: ""
-search.appverid: ""
-audience: 
 ms.collection: 
 - m365-security
 - highpri
