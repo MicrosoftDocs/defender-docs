@@ -51,7 +51,7 @@ If you're a home user, or you aren't subject to settings managed by a security t
     > [!NOTE]
     > Tamper protection blocks attempts to modify Microsoft Defender Antivirus settings through the registry. 
     >
-    > To help ensure that tamper protection doesn't interfere with non-Microsoft security products or enterprise installation scripts that modify these settings, go to **Windows Security** and update **Security intelligence** to version 1.287.60.0 or later. (See [Security intelligence updates](https://www.microsoft.com/wdsi/definitions).)
+    > To help ensure that tamper protection doesn't interfere with non-Microsoft security products or enterprise installation scripts that modify these settings, go to **Windows Security** and update **Security intelligence** to version 1.287.60.0 or later. (See [Security intelligence updates](https://www.microsoft.com/wdsi/defenderupdates).)
     >
     > After you've made this update, tamper protection continues to protect your registry settings, and logs attempts to modify them without returning errors.
 
