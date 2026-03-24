@@ -112,7 +112,7 @@ To install the latest security intelligence and antivirus engine updates, you ca
      ```dos
      MpCmdRun.exe" -SignatureUpdate
 
-     MpCmdRun.exe" -SignatureUpdate \\FileServer\ShareName
+     MpCmdRun.exe" -SignatureUpdate -UNC \\FileServer\ShareName
 
      MpCmdRun.exe" -SignatureUpdate -MMPC
      ```
@@ -189,11 +189,11 @@ After a new package version is released, support for the previous two versions i
 - Platform version: `4.18.25050.5`
 - Engine version: `1.25050.6`
 
-#### Fixes
+#### 1.431.97.0 Fixes
 
 - None
 
-#### Additional information
+#### 1.431.97.0 Additional information
 
 - None
 
@@ -204,14 +204,13 @@ After a new package version is released, support for the previous two versions i
 - Platform version: `4.18.25050.5`
 - Engine version: `1.25050.2`
 
-#### Fixes
+#### 1.431.54.0 Fixes
 
 - None
 
-#### Additional information
+#### 1.431.54.0 Additional information
 
 - None
-
 
 ### 1.429.122.0
 
@@ -220,11 +219,11 @@ After a new package version is released, support for the previous two versions i
 - Platform version: `4.18.25040.2`
 - Engine version: `1.25040.1`
 
-#### Fixes
+#### 1.429.122.0 Fixes
 
 - None
 
-#### Additional information
+#### 1.429.122.0 Additional information
 
 - None
 
@@ -238,10 +237,11 @@ After a new package version is released, support for the previous two versions i
 |[Manage updates for endpoints that are out of date](manage-outdated-endpoints-microsoft-defender-antivirus.md) | If an endpoint misses an update or scheduled scan, you can force an update or scan the next time a user signs in. |
 |[Manage event-based forced updates](manage-event-based-updates-microsoft-defender-antivirus.md) | You can set protection updates to be downloaded at startup or after certain cloud-delivered protection events. |
 |[Manage updates for mobile devices and virtual machines (VMs)](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)| You can specify settings, such as whether updates should occur on battery power that's especially useful for mobile devices and virtual machines. |
-| [Microsoft Defender for Endpoint update for EDR Sensor](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) | You can update the EDR sensor (MsSense.exe) that's included in the new Microsoft Defender for Endpoint unified solution package released in 2021.   |
+| [Microsoft Defender for Endpoint update for EDR Sensor](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) | You can update the EDR sensor (MsSense.exe) that's included in the new Microsoft Defender for Endpoint unified solution package released in 2021.|
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
+
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
 > - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
@@ -249,5 +249,3 @@ After a new package version is released, support for the previous two versions i
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-
-
