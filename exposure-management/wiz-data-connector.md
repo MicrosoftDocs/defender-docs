@@ -10,7 +10,7 @@ ms.date: 08/27/2025
 To integrate with Wiz, you need to provide an authentication endpoint URL, and a valid Client ID and Client Secret generated using a Wiz service account.
 
 > [!NOTE]
-> It's recommended to create a dedicated user for use with data connectors in Exposure Management.
+> We revommend creating a dedicated user for use with data connectors in Exposure Management.
 
 ## Wiz configuration
 
@@ -25,7 +25,7 @@ First, you need to create a service account with the required permissions to get
 1. Enter a meaningful **Name** for the account.
 1. Choose the **Type** of service account to add. It should be **Custom Integration (GraphQL API)**
 1. You can select to limit access to specific projects only by choosing up to 50 projects from the drop-down list. If you aren't sure which project to choose, it's better to leave it empty.
-1. You can set an **Expiration date** for the service account, though leaving it empty is recommended.
+1. You can set an **Expiration date** for the service account, though we recommend leaving it empty.
 1. Set the **API Scopes** to **Read graph resource** and **Read vulnerabilities**
 
    > [!NOTE]
