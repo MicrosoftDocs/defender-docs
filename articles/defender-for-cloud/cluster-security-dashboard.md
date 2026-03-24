@@ -88,7 +88,7 @@ Enable Microsoft Defender for Cloud containers protection (Defender for Containe
 >
 > - By enabling other Microsoft Defender for Cloud plans, you can scan all your cloud assets to identify cross-resource attack paths, more accurately identify risk, and provide alerts and full visibility into cross-resource security incidents. [Learn more.](/azure/defender-for-cloud/defender-for-cloud-introduction)
 >
-> If you configure settings at the subscription level, they override any settings configured at the cluster level.
+> - If you configure settings at the subscription level, they override any settings configured at the cluster level.
 
 
 #### Plan configurations
