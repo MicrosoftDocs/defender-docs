@@ -80,7 +80,7 @@ The following user activities are monitored:
 
 After you configure scoped deployment, check for new events in the **Activity log** or the **CloudAppEvents** table.
 
-If no new events appear, the user accounts in the scoped deployment group might not be correlated with the account identifiers used by the application. This can occur when one application uses a UPN as the account ID and another application uses a different account ID format or a non‑UPN value.
+If no new events appear, or events from excluded accounts appear, the scoped user accounts might not be correctly correlated with the application’s account identifiers.This can occur when one application uses a UPN as the account ID and another application uses a different account ID format or a non‑UPN value.
 To resolve this issue, create an additional scoped deployment group that matches the account identifiers used by the affected application.
 
 
