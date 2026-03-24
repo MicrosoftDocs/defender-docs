@@ -10,7 +10,7 @@ ms.date: 08/27/2025
 To integrate with Wiz, you need to provide an authentication endpoint URL, and a valid Client ID and Client Secret generated using a Wiz service account.
 
 > [!NOTE]
-> We revommend creating a dedicated user for use with data connectors in Exposure Management.
+> We recommend creating a dedicated user for use with data connectors in Exposure Management.
 
 ## Wiz configuration
 
@@ -29,7 +29,7 @@ First, you need to create a service account with the required permissions to get
 1. Set the **API Scopes** to **Read graph resource** and **Read vulnerabilities**
 
    > [!NOTE]
-   > At minimum, the service account should have permissions of Read graph resources and Read vulnerabilities. Read:all permissions are recommended because more data might be retrieved as the connector is further developed.
+   > At minimum, the service account should have permissions of Read graph resources and Read vulnerabilities. We recommend Read:all permissions because more data might be retrieved as the connector is further developed.
 
 1. Select **Add Service Account**. The secret credentials dialog shows the newly created Client ID and Client Secret for the service account.
 1. Copy the Client ID and Client Secret to a secure place, such as a password management tool.
