@@ -166,7 +166,7 @@ The Helm chart deploys resources onto your cluster that you can use to infer att
 
 1. To install the Helm chart, follow these steps:
 
-    1. Go to **Artifact registry**  > **Repository**
+    1. Go to **Artifact registry** > **Repository**.
     1. Search for the image URI under **Pull by digest**.
     1. Run the following command to install the Helm chart:
     The Helm chart deploys resources onto your cluster that you can use to infer attack paths. It also includes the vulnerable image.
