@@ -59,7 +59,7 @@ The AKS Security Dashboard shows security problems for a cluster if you enable a
 
 1. Use the general details to identify the relevant component and ownership for fix.
 
-1. Review the list of CVEs, use the package name and the fixed version information to identify to which package version the package should be upgraded to remediate the issue.
+1. Review the list of CVEs. Use the package name and the fixed version information to identify the package version to upgrade to for fixing the problem.
 
 1. Use the assigned owner (available with the Defender CSPM plan) to assign an owner for the fix, and notify them by email or with a ticket in service now.
 
