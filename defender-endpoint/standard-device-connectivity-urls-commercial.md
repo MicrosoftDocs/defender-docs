@@ -53,10 +53,14 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|winatp-gw-eus.microsoft.com|Microsoft Defender for Endpoint Command and Control|Required|Yes|Yes|Yes|Yes|Yes||
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|winatp-gw-cus3.microsoft.com|Microsoft Defender for Endpoint Command and Control|Required|Yes|Yes|Yes|Yes|Yes||
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|winatp-gw-eus3.microsoft.com|Microsoft Defender for Endpoint Command and Control|Required|Yes|Yes|Yes|Yes|Yes||
+|Microsoft Defender for Endpoint|Azure UAE Central (AEC)|Microsoft Defender for Endpoint AEC|443|winatp-gw-aec0a.microsoft.com|Microsoft Defender for Endpoint Command and Control|Required|Yes|Yes|Yes|Yes|Yes||
+|Microsoft Defender for Endpoint|Azure UAE North (AEN)|Microsoft Defender for Endpoint AEN|443|winatp-gw-aen0a.microsoft.com|Microsoft Defender for Endpoint Command and Control|Required|Yes|Yes|Yes|Yes|Yes||
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|automatedirstrprdcus.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required|Yes|||Yes|Yes||
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|automatedirstrprdeus.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required|Yes|||Yes|Yes||
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|automatedirstrprdcus3.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required|Yes|||Yes|Yes||
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|automatedirstrprdeus3.blob.core.windows.net|Microsoft Defender for Endpoint AutoIR Sample Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|`https://automatedirstrprdaen0a.blob.core.windows.net`|Microsoft Defender for Endpoint AutoIR Sample Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|`https://automatedirstrprdaen0a.blob.core.windows.net`|Microsoft Defender for Endpoint AutoIR Sample Storage|Required|Yes|||Yes|Yes||
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus1eastprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||Yes|Yes||
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus2eastprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||Yes|Yes||
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|ussus3eastprod.blob.core.windows.net|Malware Sample Submission Storage|Required|Yes|||Yes|Yes||
