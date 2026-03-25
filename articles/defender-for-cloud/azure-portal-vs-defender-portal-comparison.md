@@ -4,7 +4,7 @@ description: Compare Microsoft Defender for Cloud features and capabilities betw
 author: dlanger
 ms.author: dlanger
 ms.topic: article
-ms.date: 10/16/2025
+ms.date: 03/30/2025
 ms.service: defender-for-cloud
 ---
 
@@ -31,7 +31,7 @@ This article provides a comprehensive comparison of Microsoft Defender for Cloud
 | Feature name | Azure portal | Defender portal |
 |-------------|--------------|-----------------|
 | **Security recommendations** | Yes | Yes - Integrated into Exposure Management<br><br>**Note**: In the Defender portal, some recommendations that previously appeared as a single aggregated item now display as multiple individual recommendations. |
-| **Asset inventory** | Yes<br><br>**Note**: Only assets that received security insights (such as recommendations) are reflected. | Yes<br><br>**Note**: All discovered resources in customers' environments are reflected, even if there are no security issues detected on them. |
+| **Asset inventory** | Yes<br><br>**Note**: Only assets that have security issues detected on them are reflected. | Yes<br><br>**Note**: All discovered resources in customers' environments are reflected, even if there are no security issues detected on them. |
 | **Secure score** | Yes | Yes - New risk-based secure score |
 | **Data visualization and reporting with Azure Workbooks** | Yes | No |
 | **Data exporting** | Yes | No |
