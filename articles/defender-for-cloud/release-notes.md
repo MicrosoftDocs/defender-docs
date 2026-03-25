@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 03/11/2026
+ms.date: 03/22/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -32,6 +32,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | Date | Category | Update |
 | -------- | -------- | -------- |
 | March 31, 2026 | Preview | [Expanded multi-cloud coverage for AWS and Google Cloud Platform (Preview)](#expanded-multi-cloud-coverage-for-aws-and-google-cloud-platform-preview) |
+| March 22, 2026| Update | [File Integrity Monitoring requires MDE agent version 10.8799+ for legacy Windows machines](#file-integrity-monitoring-requires-mde-agent-version-108799-for-legacy-windows-machines) |
 | March 12, 2026 | GA | [Kubernetes gated deployment support for AKS Automatic (GA)](#kubernetes-gated-deployment-support-for-aks-automatic-ga) |
 | March 11, 2026 | GA| [Severity‑based risk assignment for "Not evaluated" recommendations](#severitybased-risk-assignment-for-not-evaluated-recommendations) |
 | March 10, 2026| Preview |[Code to runtime enrichment for recommendations](#code-to-runtime-enrichment-for-recommendations-preview)|
@@ -56,6 +57,19 @@ Microsoft Defender for Cloud expands multi-cloud posture management with broader
 - Compliance results may change as new recommendations are evaluated. This reflects expanded coverage, not a regression in security posture.
 - Secure score is not affected by recommendations in preview.
 - Newly supported AWS and GCP resources are available as part of Defender for CSPM (Public Preview) and may be billable. See [Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/) and use the [pricing calculator](cost-calculator.md) for details.
+### File Integrity Monitoring requires MDE agent version 10.8799+ for legacy Windows machines
+
+March 22, 2026
+
+Due to a pipeline change in Microsoft Defender for Endpoint (MDE), File Integrity Monitoring now requires the **Defender for Servers Windows client (Microsoft Defender for Endpoint agent) version 10.8799 or above** for proper functionality on legacy Windows machines (downlevel clients).
+
+**Key details:**
+
+- **Affected systems**: Legacy Windows machines (Windows Server 2016, Windows Server 2012 R2, and other downlevel clients)
+- **Required version**: Defender for Servers Windows client (MDE agent) 10.8799 or later
+- **Impact**: FIM monitoring will not function properly on versions below the minimum requirement
+
+Learn more about [File Integrity Monitoring](file-integrity-monitoring-overview.md) and how to [enable File Integrity Monitoring](file-integrity-monitoring-enable-defender-endpoint.md).
 
 ### Kubernetes gated deployment support for AKS Automatic (GA)
 
@@ -205,7 +219,7 @@ Learn more about [reviewing security recommendations](review-security-recommenda
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| February 22, 2026 | Preview | [Container runtime anti-malware detection and blocking (Preview)](#container-runtime-anti-malware-detection-and-blocking-preview) |
+| February 22, 2026 | Preview | [Container runtime anti-malware detection and blocking (Preview)](#container-runtime-anti-malware-detection-and-blocking-preview) 
 | February 22, 2026 | Update - Preview | [Binary drift now supports blocking (Preview)](#binary-drift-now-supports-blocking-preview) |
 | February 10, 2026| Preview | [Database-level recommendations experience for SQL Vulnerability Assessment findings (Preview)](#database-level-recommendations-experience-for-sql-vulnerability-assessment-preview) |
 | February 10, 2026| GA | [Scanning support for Minimus and Photon OS container images](#scanning-support-for-minimus-and-photon-os-container-images) |
