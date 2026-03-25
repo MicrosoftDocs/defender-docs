@@ -246,9 +246,7 @@ sections:
               - Query the DNS server using reverse DNS lookup of the IP address (UDP 53)
 
               After getting the computer name,  Defender for Identity sensors cross check the details in Active Directory to see if there's a correlated computer object with the same computer name. If a match is found, an association is made between the IP address and the matched computer object.
-          - **Lateral Movement Path (LMP)**
-          To build potential LMPs to sensitive users, Defender for Identity requires information about the local administrators on computers. In this scenario, the Defender for Identity sensor uses SAM-R (TCP 445) to query the IP address identified in the network traffic, in order to determine the local administrators of the computer. To learn more about Defender for Identity and SAM-R, See [Configure SAM-R required permissions](/defender-for-identity/remote-calls-sam).
-
+          
           - **Querying Active Directory using LDAP** for entity data
           Defender for Identity sensors query the domain controller from the domain where the entity belongs. It can be the same sensor, or another domain controller from that domain.
 
