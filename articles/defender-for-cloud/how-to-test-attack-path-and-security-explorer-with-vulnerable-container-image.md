@@ -108,7 +108,7 @@ If the list of attack paths has no entries, you can still test this feature by u
     docker push <ACCOUNT>.dkr.ecr.<REGION>.amazonaws.com/mdc-mock-0001
     ```
 
-1. Connect to your EKS cluster 
+1. Connect to your EKS cluster.
 1. Configure `kubectl` to work with your EKS cluster. Replace `<your-region>` and `<your-cluster-name>` with your EKS cluster region and name
 
     ```awscli
