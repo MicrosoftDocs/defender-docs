@@ -13,7 +13,7 @@ The AKS security dashboard gives visibility and automated remediation for securi
 
 Consolidating security and operational data within the AKS portal gives engineers a unified view of their Kubernetes environment. This view helps detect and fix security issues efficiently, with minimal workflow disruption. It lowers the risk of missed security issues and speeds up remediation.
 
-The AKS Security Dashboard lets you:
+The AKS Security Dashboard helps you:
 
 - Review, investigate, and get guided remediation for runtime threat detection alerts, vulnerability assessment, security misconfigurations, and deviation from compliance standards.
 - Enable the Defender for Containers plan and configure settings for the specific AKS cluster.
