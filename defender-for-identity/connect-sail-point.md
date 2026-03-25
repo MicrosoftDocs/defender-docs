@@ -38,6 +38,7 @@ This section provides instructions for connecting Microsoft Defender for Identit
 ### Create a SailPoint Identity Security Cloud Personal Access Token
 
 1. Sign in to SailPoint Identity Security Cloud.
+1. Create a dedicated SailPoint Identity Security Cloud user for this integration.
 1. Go to **User's Preferences > Personal Access Tokens**.
 1. Select **New Token**.
 1. Add the following scopes to the token:
