@@ -35,9 +35,11 @@ With automatic provisioning enabled, Microsoft Defender for Cloud installs the r
 
 For AKS clusters, deployment uses the **Defender AKS add-on**. For Arc-enabled clusters, deployment uses Azure Arc extensions.
 
-This option requires minimal configuration and is default for most environments.
-
 You can customize automatic provisioning by excluding specific clusters using tags before enabling the Defender for Containers plan, and then deploying those clusters manually.
+
+With automatic provisioning, the Defender sensor is installed after the cluster is discovered and can take several hours to complete.
+
+Use manual deployment or exclude specific clusters from automatic provisioning and deploy them manually to install the Defender sensor immediately.  
 
 ## Manual deployment
 
@@ -56,8 +58,6 @@ You can deploy components manually by using one of the following methods:
 After deployment, verify that Defender components are running correctly and address any issues.
 
 - [Verify Defender for Containers deployment](defender-for-containers-verify-deployment.md)
-
-- [Remediate Defender for Containers recommendations](defender-for-containers-deploy-portal.md)
 
 - [Troubleshoot Defender for Containers deployment](defender-for-containers-troubleshoot.md)
 

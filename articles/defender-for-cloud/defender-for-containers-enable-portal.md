@@ -97,6 +97,9 @@ This article explains how to enable the Microsoft Defender for Containers plan i
     
     - **Auto provision Defender's sensor for Azure Arc**  
       Deploys the Defender sensor as an Azure Arc Kubernetes extension. The sensor runs as a DaemonSet on cluster nodes and provides runtime threat detection based on node and workload telemetry.
+
+      > [!NOTE]
+      > When automatic provisioning is enabled, the Defender sensor is installed after the cluster is discovered and can take several hours to complete.
     
     - **Auto provision Azure Policy extension for Azure Arc**  
       Deploys the Azure Policy extension to the cluster to enable Kubernetes security posture assessments and related security recommendations.
@@ -171,6 +174,9 @@ This article explains how to enable the Microsoft Defender for Containers plan i
         - **Enable Defender Security Gating**  
         Adds an admission control layer that evaluates deployments against security policies before workloads run in the cluster.
 
+      > [!NOTE]
+      > When automatic provisioning is enabled, the Defender sensor is installed after the cluster is discovered and can take several hours to complete.
+      
     - **Auto provision Azure Policy extension for Azure Arc**  
       Deploys the Azure Policy extension to the cluster to enable Kubernetes security posture assessments and related security recommendations.
     
