@@ -27,7 +27,7 @@ If the list of attack paths has no entries, you can still test this feature by u
 
 **Requirement:** An instance of Azure Container Registry (ACR) in the tested scope.
 
-## Import a mock vulnerable image to your Azure Container Registry:
+#### Import a mock vulnerable image to your Azure Container Registry:
 
 1. Pull a base image (for example, alpine) to your local environment by running:
 
@@ -72,7 +72,7 @@ If the list of attack paths has no entries, you can still test this feature by u
     helm install dcspmcharts  oci://mcr.microsoft.com/mdc/stable/dcspmcharts --version 1.0.0 --namespace mdc-dcspm-demo --create-namespace --set image=<your-image-uri> --set distribution=AZURE
     ```
 
-## Verify deployment
+#### Verify deployment
 
 1. Look for an entry with **mdc-dcspm-demo** as namespace.
 1. Go to **Workloads-> Deployments**
