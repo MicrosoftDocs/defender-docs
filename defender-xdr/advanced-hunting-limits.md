@@ -50,14 +50,11 @@ You can access the report in two ways:
 
   :::image type="content" source="./media/advanced-hunting-limits/reports-general-query-resources.png" alt-text="view the query resources report in the Reports section" lightbox="./media/advanced-hunting-limits/reports-general-query-resources.png":::
 
-All users can access the reports. However, only the Microsoft Entra Global Administrator, Microsoft Entra Security Administrator, and Microsoft Entra Security Reader roles can see queries done by all users in all interfaces. Other users can only see:
+All users can access the reports. However, only people with Microsoft Entra Security Reader and above roles can see queries done by all users in all interfaces. Other users can only see:
 
 - Queries they ran via the portal
 - Public API queries they ran themselves and not through the application
 - Custom detections they created
-
-> [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Query resource report contents
 
