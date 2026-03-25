@@ -87,7 +87,7 @@ If the list of attack paths has no entries, you can still test this feature by u
 ### Testing the attack path and security explorer by using a mock vulnerable container image for AWS
 
 1. Create an ECR repository named *mdc-mock-0001*.
-1. In your AWS account select the **Command line or programmatic access**
+1. In your AWS account, select **Command line or programmatic access**.
 1. Select **Option 1: Set AWS environment variables (Short-term credentials)**. 
 1. Copy the values for the following credentials:
    * *AWS_ACCESS_KEY_ID*
