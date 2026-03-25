@@ -8,7 +8,7 @@ ms.date: 03/02/2026
 
 # Attack path analysis and enhanced risk-hunting for containers
 
-Attack path analysis is a graph-based algorithm that scans the cloud security graph. The scans expose paths that attackers might exploit to breach your environment and reach your high-impact assets. Attack path analysis exposes attack paths and suggests recommendations as to how best remediate issues that break the attack path and prevent a successful breach.
+Attack path analysis is a graph-based algorithm that scans the cloud security graph. The scans expose paths that bad actors might exploit to breach your environment and reach your high-impact assets. Attack path analysis exposes attack paths and suggests recommendations for remediating issues that break the attack path and prevent a successful breach.
 
 You can explore and investigate [attack paths](how-to-manage-attack-path.md) by sorting them based on risk level, name, environment, and risk factors, entry point, target, affected resources, and active recommendations. You can also explore cloud security graph Insights on the resource. Examples of Insight types include:
 
