@@ -8,9 +8,8 @@ ms.subservice: reference
 ms.mktglfcycl: secure
 ms.sitesec: library
 ms.localizationpriority: medium
-ms.author: bagol
-author: batamig
-manager: bagol
+ms.author: painbar
+author: paulinbar
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -34,7 +33,7 @@ Microsoft Safety Scanner is a scan tool designed to find and remove malware from
 
 ## Important information
 
-- The security intelligence update version of the Microsoft Safety Scanner matches the version described [in this web page](https://www.microsoft.com/wdsi/definitions).
+- The security intelligence update version of the Microsoft Safety Scanner matches the version described [in this web page](https://www.microsoft.com/wdsi/defenderupdates).
 
 - Microsoft Safety Scanner only scans when manually triggered. Safety Scanner expires 10 days after being downloaded. To rerun a scan with the latest anti-malware definitions, download and run Safety Scanner again. We recommend that you always download the latest version of this tool before each scan.
 

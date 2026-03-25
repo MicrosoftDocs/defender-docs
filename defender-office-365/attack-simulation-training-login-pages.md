@@ -2,7 +2,6 @@
 title: Login pages in Attack simulation training
 author: chrisda
 ms.author: chrisda
-manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.service: defender-office-365

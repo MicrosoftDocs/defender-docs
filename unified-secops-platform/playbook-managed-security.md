@@ -3,9 +3,9 @@ title: Microsoft Defender portal implementation guide for Managed Security Servi
 description: Implementation guide for partners and SOC architects implementing Microsoft Defender portal with multitenant management capabilities.
 author: guywi-ms
 ms.author: guywild
+audience: ""
+search.appverid: ""
 ms.date: 12/20/2025
-ms.service: microsoft-defender
-ms.subservice: unified-security-operations
 ms.topic: concept-article
 ---
 
@@ -23,7 +23,7 @@ Key features of the Microsoft Defender portal for MSSPs include:
 
 - **Cross-platform threat hunting**: Unified hunting capabilities across security data, eliminates the need to switch between portals and allows analysts to easily locate the data they need across their entire customer base. For more information, see [Advanced hunting](#advanced-hunting).
 
-- **Proactive attack disruption**: Attack Disruption delivers proactive protection by stopping attacks in progress. It works on native Microsoft Defender technologies and across third-party environments, such as SAP, AWS, Proofpoint, and Okta. Microsoft Defender reduces dwell time and prevents lateral movement by automatically revoking compromised credentials, isolating malicious sessions, and neutralizing attacker footholds.
+- **Proactive attack disruption**: Attack Disruption delivers proactive protection by stopping attacks in progress. It works on native Microsoft Defender technologies and across third-party environments, such as SAP, [AWS](/azure/sentinel/aws-disruption), Proofpoint, and Okta. Microsoft Defender reduces dwell time and prevents lateral movement by automatically revoking compromised credentials, isolating malicious sessions, and neutralizing attacker footholds.
 
 - **Attack path analysis and exposure visualization**: Analyze attack paths and reduce exposure by visualizing how cyber attackers could exploit vulnerabilities to move laterally across exposed assets in customer environments. Get guided recommendations on reducing exposure and prioritize actions based on each exposure's potential impact. For more information, see [Microsoft Security Exposure Management](#exposure-management).
 

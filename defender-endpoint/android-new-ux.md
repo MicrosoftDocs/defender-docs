@@ -5,7 +5,6 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
 ms.reviewer: denishdonga
 audience: ITPro
 ms.collection:

@@ -506,8 +506,6 @@
             href: linux-support-connectivity.md
           - name: Troubleshoot performance issues
             href: linux-support-perf.md
-          - name: Troubleshoot missing events issues
-            href: linux-support-events.md
 
         - name: Troubleshoot Mobile Threat Defense
           items:
@@ -610,7 +608,6 @@
     - name: Detect vulnerabilities
     - name: Detect vulnerabilities
       href: /defender-vulnerability-management
-    - name: Discover devices
     - name: Discover devices
       items:      
       - name: Overview
@@ -890,7 +887,7 @@
           href: use-powershell-cmdlets-microsoft-defender-antivirus.md
         - name: Use Windows Management Instrumentation (WMI) to manage Microsoft Defender Antivirus
           href: use-wmi-microsoft-defender-antivirus.md
-        - name: Use the mpcmdrun.exe tool to manage Microsoft Defender Antivirus
+        - name: Use the MpCmdRun command-line tool to manage Microsoft Defender Antivirus
           href: command-line-arguments-microsoft-defender-antivirus.md
         - name: Configure the notifications that appear on endpoints
           href: configure-notifications-microsoft-defender-antivirus.md

@@ -4,7 +4,6 @@ description: Configure automated investigation and response with self-healing in
 search.appverid: MET150
 ms.author: guywild
 author: guywi-ms
-manager: dansimp
 audience: ITPro
 ms.topic: how-to
 ms.service: defender-xdr
