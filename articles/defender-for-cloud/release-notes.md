@@ -44,11 +44,11 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 March 31, 2026
 
-Microsoft Defender for Cloud expands multi-cloud posture management with broader native coverage for AWS and Google Cloud Platform (GCP). This update adds discovery and posture assessment for additional resource types across compute, databases, storage, analytics, networking, identity, secrets, DevOps, and AI/ML services.
+Microsoft Defender for Cloud expands multi-cloud posture management with broader native coverage for AWS and GCP. This update adds discovery and posture assessment for additional resource types across compute, databases, storage, analytics, networking, identity, secrets, DevOps, and AI/ML services.
 
 **Asset inventory**: Newly supported AWS and GCP resources are now discovered and visible in the Asset inventory experience.
 
-**Security recommendations**: 152 new recommendations help identify misconfigurations and posture gaps across the newly supported resources. Learn more about [security recommendations](review-security-recommendations.md).
+**Security recommendations**: Approximately 150 new recommendations help identify misconfigurations and posture gaps across the newly supported resources. 
 
 **Regulatory compliance**: Existing compliance frameworks now include the new recommendations, providing more complete compliance assessments across multi-cloud environments.
 
@@ -56,7 +56,11 @@ Microsoft Defender for Cloud expands multi-cloud posture management with broader
 
 - Compliance results may change as new recommendations are evaluated. This reflects expanded coverage, not a regression in security posture.
 - Secure score is not affected by recommendations in preview.
-- Newly supported AWS and GCP resources are available as part of Defender for CSPM (Public Preview) and may be billable. See [Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/) and use the [pricing calculator](cost-calculator.md) for details.
+- In the Azure portal, only assets that have security issues detected on them are reflected.
+- In the Defender portal, all discovered resources in customers' environments are reflected, even if there are no security issues detected on them.
+
+Learn more about [security recommendations](review-security-recommendations.md).
+  
 ### File Integrity Monitoring requires MDE agent version 10.8799+ for legacy Windows machines
 
 March 22, 2026
