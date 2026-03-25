@@ -423,7 +423,7 @@ What's new
 - [Microsoft Defender Core service overview](microsoft-defender-core-service-overview.md) is generally available for consumer devices and is coming soon for business customers.
 - Fixed an issue with device control so that device control policies remain enforced when a platform update requires a reboot
 - Improved performance of [device control for printing scenarios](device-control-policies.md)
-- Fixed truncation issue in the output of [MpCmdRun.exe -scan](command-line-arguments-microsoft-defender-antivirus.md) (processing Unicode characters)
+- Fixed truncation issue in the output of [MpCmdRun.exe -Scan](command-line-arguments-microsoft-defender-antivirus.md) (processing Unicode characters)
 
 #### Known issues
 

@@ -4,8 +4,8 @@ description: Learn how to enable Microsoft Defender XDR and start integrating yo
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: dansimp
-author: dansimp
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection: 

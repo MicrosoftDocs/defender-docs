@@ -15,6 +15,7 @@ ms.collection:
 - tier1
 ms.topic: article
 ms.custom: 
+- sfi-ga-nochange
 - cx-ti
 - cx-ta
 - seo-marvel-apr2020

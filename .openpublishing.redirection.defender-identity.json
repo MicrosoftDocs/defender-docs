@@ -6,6 +6,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "defender-for-identity/investigate-assets.md",
+      "redirect_url": "/defender-for-identity/identity-inventory",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "defender-for-identity/security-assessment-old-passwords.md",
       "redirect_url": "/defender-for-identity/security-assessment",
       "redirect_document_id": false
