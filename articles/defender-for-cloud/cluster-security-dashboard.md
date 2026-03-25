@@ -33,7 +33,7 @@ Security alerts are notifications from Defender for Cloud about suspicious activ
 
 When you select an alert, you open a panel that provides more information about the detection that triggered the alert. The panel also suggests actions you can take to resolve the issue.
 
-#### Alerts severity
+#### Alert severity
 
 - **High** There's a high probability that your resource is compromised. You should investigate immediately. 
 
