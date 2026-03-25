@@ -11,7 +11,6 @@ ms.custom:
 - nextgen
 - partner-contribution
 ms.reviewer: pahuijbr
-manager: bagol
 ms.collection: 
 - m365-security
 - tier2

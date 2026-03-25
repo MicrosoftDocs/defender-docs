@@ -7,7 +7,6 @@ author: paulinbar
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
 ms.date: 11/17/2025
-manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

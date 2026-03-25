@@ -6,7 +6,6 @@ ms.author: chrisda
 author: chrisda
 ms.reviewer: yongrhee
 ms.localizationpriority: high
-manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

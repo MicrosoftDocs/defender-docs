@@ -9,7 +9,6 @@ ms.author: chrisda
 ms.reviewer: yongrhee
 ms.topic: how-to
 ms.date: 10/20/2025
-manager: bagol
 ms.custom: nextgen
 ms.collection: 
 - m365-security

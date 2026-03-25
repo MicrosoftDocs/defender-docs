@@ -7,7 +7,6 @@ ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
 ms.date: 10/20/2025
-manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -25,10 +24,9 @@ search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
-# Address false positives/negatives in Microsoft Defender for Endpoint
 
+# Address false positives/negatives in Microsoft Defender for Endpoint
 
 In endpoint protection solutions, a false positive is an entity, such as a file or a process that was detected and identified as malicious even though the entity isn't actually a threat. A false negative is an entity that wasn't detected as a threat, even though it actually is malicious. False positives/negatives can occur with any threat protection solution, including [Defender for Endpoint](microsoft-defender-endpoint.md).
 
@@ -126,7 +124,7 @@ After you've reviewed your alerts, your next step is to [review remediation acti
 
 - [Restore a quarantined file from the Action Center](#restore-a-quarantined-file-from-the-action-center)
 - [Undo multiple actions at one time](#undo-multiple-actions-at-one-time)
-- [Remove a file from quarantine across multiple devices](#remove-a-file-from-quarantine-across-multiple-devices). and
+- [Remove a file from quarantine across multiple devices](#remove-a-file-from-quarantine-across-multiple-devices), and
 - [Restore file from quarantine](#restore-file-from-quarantine)
 
 When you're done reviewing and undoing actions that were taken as a result of false positives, proceed to [review or define exclusions](#part-3-review-or-define-exclusions).
@@ -174,29 +172,38 @@ When you're done reviewing and undoing actions that were taken as a result of fa
 
 ### Restore file from quarantine
 
-You can roll back and remove a file from quarantine if you determine that it's clean after an investigation. Run the following command on each device where the file was quarantined.
+You can roll back and remove a file from quarantine if you determine it's clean after an investigation. Do the following steps on each device where the file was quarantined:
 
-1. Open Command Prompt as an administrator on the device:
+1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
+   1. Open the **Start** menu, and then type **cmd**.
+   2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
 
-   1. Go to **Start** and type _cmd_.
-   1. Right-click **Command prompt** and select **Run as administrator**.
+1. In the elevated Command Prompt, run the following commands:
 
-1. Type the following command, and press **Enter**:
+   > [!TIP]
+   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
 
-    ```console
-    "%ProgramFiles%\Windows Defender\MpCmdRun.exe" -Restore -Name EUS:Win32/CustomEnterpriseBlock -All
-    ```
+   ```dos
+   (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
 
-    > [!IMPORTANT]
-    > In some scenarios, the **ThreatName** might appear as `EUS:Win32/CustomEnterpriseBlock!cl`. Defender for Endpoint restores all custom blocked files that were quarantined on this device in the last 30 days.
-    > A file that was quarantined as a potential network threat might not be recoverable. If a user attempts to restore the file after quarantine, that file might not be accessible. This can be due to the system no longer having network credentials to access the file. Typically, this is a result of a temporary sign-in a system or shared folder and the access tokens expired.
+   MpCmdRun.exe -Restore -Name EUS:Win32/CustomEnterpriseBlock -All
+   ```
+
+   For more information, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
+
+> [!IMPORTANT]
+> In some scenarios, the **ThreatName** might appear as `EUS:Win32/CustomEnterpriseBlock!cl`. Defender for Endpoint restores all custom blocked files that were quarantined on this device in the last 30 days.
+>
+> A file that was quarantined as a potential network threat might not be recoverable.
+>
+> A quarantined file might not be accessible. This issue can be due to the system no longer having network credentials to access the file. Typically, this issue is a result of an expired access token on a temporary sign-in a system or shared folder.
 
 1. In the pane on the right side of the screen, select **Apply to X more instances of this file**, and then select **Undo**.
 
 ## Part 3: Review or define exclusions
 
 > [!CAUTION]
-> Before you define an exclusion, review the detailed information in [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md). Keep in mind that every exclusion that is defined lowers your level of protection. 
+> Before you define an exclusion, review the detailed information in [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md). Keep in mind that every exclusion that is defined lowers your level of protection.
 
 An exclusion is an entity, such as a file or URL, that you specify as an exception to remediation actions. The excluded entity can still get detected, but no remediation actions are taken on that entity. That is, the detected file or process isn't stopped, sent to quarantine, removed, or otherwise changed by Microsoft Defender for Endpoint.
 
@@ -261,9 +268,9 @@ Before you create indicators for application certificates, make sure the followi
 - Microsoft Defender Antivirus is configured with cloud-based protection enabled. For more information, see: [Manage cloud-based protection](deploy-manage-report-microsoft-defender-antivirus.md)
 - Antimalware client version is 4.18.1901.x or later
 - Devices are running either:
-    - Windows 10, version 1703 or later or Windows 11
-    - Windows Server 2012 R2 and later  with the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2)
-    - Azure Stack HCI OS, version 23H2 and later
+  - Windows 10, version 1703 or later or Windows 11
+  - Windows Server 2012 R2 and later  with the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2)
+  - Azure Stack HCI OS, version 23H2 and later
 - Virus and threat protection definitions are up to date
 
 > [!TIP]
@@ -330,13 +337,9 @@ If you have a file that was either wrongly detected as malicious or was missed, 
 
 ### Submit a fileless detection for analysis
 
-If something was detected as malware based on behavior, and you don't have a file, you can submit your `Mpsupport.cab` file for analysis. You can get the *.cab* file by using the Microsoft Malware Protection Command-Line Utility (MPCmdRun.exe) tool on Windows 10 or Windows 11.
+If something was detected as malware based on behavior, and you don't have a file, you can submit your `MpSupportFiles.cab` file for analysis. You can get the *.cab* file by using the [MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md) on Windows 10 or Windows 11.
 
-1. Go to `C:\ProgramData\Microsoft\Windows Defender\Platform\<version>`, and then run `MpCmdRun.exe` as an administrator.
-
-1. Type `mpcmdrun.exe -GetFiles`, and then press **Enter**.
-
-   A .cab file is generated that contains various diagnostic logs. The location of the file is specified in the output of the command prompt. By default, the location is `C:\ProgramData\Microsoft\Microsoft Defender\Support\MpSupportFiles.cab`.
+1. Generate the file `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab` as described in [Collect Microsoft Defender Antivirus diagnostic data](collect-diagnostic-data.md).
 
 1. Review the guidelines here: [Submit files for analysis](/unified-secops-platform/submission-guide).
 

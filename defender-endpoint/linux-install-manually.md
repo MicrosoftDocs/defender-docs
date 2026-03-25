@@ -6,7 +6,6 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -24,6 +23,8 @@ ms.date: 03/20/2026
 
 You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using various tools and methods. This article describes how to deploy Defender for Endpoint on Linux manually. To use another method, refer to the [Related content section](#related-content). 
 
+ > [!NOTE] 
+ > We highly recommend using the [Defender Deployment Tool deployment](./linux-install-with-defender-deployment-tool.md) method,  as it simplifies the onboarding process, reduces manual tasks, and supports a wide range of deployment scenarios, including new installations, upgrades, and uninstalls. Please refer to the documentation for more details.
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## Manual deployment steps
@@ -592,11 +593,13 @@ For manual uninstallation, execute the following command for your Linux distribu
 - [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md)
 
 - Other deployment methods:
+   - [Deployment tool based deployment (Recommended)](./linux-install-with-defender-deployment-tool.md)
    - [Installer script based deployment](linux-installer-script.md) 
    - [Ansible based deployment](linux-install-with-ansible.md)
    - [Chef based deployment](linux-deploy-defender-for-endpoint-with-chef.md)
    - [Puppet based deployment](linux-install-with-puppet.md)
    - [Saltstack based deployment](linux-install-with-saltack.md)
+   - [Golden Image based deployment](./linux-deploy-defender-for-endpoint-using-golden-images.md)
    - [Connect your non-Azure machines to Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
    - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
    - [Install Defender for Endpoint on Linux to a custom location](linux-custom-location-installation.md)

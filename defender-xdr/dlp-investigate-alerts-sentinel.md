@@ -7,7 +7,6 @@ ms.service: defender-xdr
 ms.author: monaberdugo
 author: mberdugo
 ms.localizationpriority: medium
-manager: laurawi
 audience: ITPro
 ms.collection: 
   - m365-security

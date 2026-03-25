@@ -9,7 +9,6 @@ f1.keywords:
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: orspodek
 audience: ITPro
 ms.collection:
   - m365-security
@@ -54,18 +53,18 @@ Likewise, since the `IdentityLogonEvents` table holds authentication activity in
 > To manage custom detections, Security Operators must have the Manage Security Settings permission in Microsoft Defender for Endpoint if RBAC is turned on.
 
 ### Microsoft Sentinel
-To manage custom detections on Microsoft Sentinel data, you need to be assigned the **Microsoft Sentinel Contributor** role. Users with this [Azure role](/azure/role-based-access-control/built-in-roles/security#microsoft-sentinel-contributor) can manage Microsoft Sentinel SIEM workspace data, including alerts and detections. You can assign this role on a specific primary workspace, Azure resource group, or an entire subscription.
+
+To manage custom detections on Microsoft Sentinel data, you need to be assigned the **Microsoft Sentinel Contributor** role or higher. Users with this [Azure role](/azure/role-based-access-control/built-in-roles/security#microsoft-sentinel-contributor) can manage Microsoft Sentinel SIEM workspace data, including alerts and detections. You can assign this role on a specific primary workspace, Azure resource group, or an entire subscription.
 
 ### Manage required permissions
-
-> [!IMPORTANT]
-> Use roles with the fewest permissions to help improve security for your organization. Global Administrator is a highly privileged role. Limit its use to emergency scenarios when you can't use an existing role.
 
 To manage required permissions, a Global Administrator can:
 
 - Assign the Security Administrator or Security Operator role in [Microsoft 365 admin center](https://admin.microsoft.com/) under **Roles** > **Security Administrator**.
-
 - Check RBAC settings for Microsoft Defender for Endpoint in [Microsoft Defender XDR](https://security.microsoft.com/) under **Settings** > **Permissions** > **Roles**. Select the corresponding role to assign the **manage security settings** permission.
+
+> [!IMPORTANT]
+> Use roles with the fewest permissions to help improve security for your organization. Global Administrator is a highly privileged role. Limit its use to emergency scenarios when you can't use an existing role.
 
 > [!NOTE]
 > A user also needs the appropriate permissions for the devices in the [device scope](#5-set-the-rule-scope) of a custom detection rule that they're creating or editing. A user can't edit a custom detection rule that is scoped to run on all devices if the user doesn't have permissions for all devices. 
@@ -73,6 +72,7 @@ To manage required permissions, a Global Administrator can:
 ## Create a custom detection rule
 
 To create a custom detection rule, follow these steps:
+
 1. [Prepare the query](#1-prepare-the-query)
 1. [Create new rule and provide alert details](#2-create-new-rule-and-provide-alert-details)
 1. [Define alert enrichment details](#3-define-alert-enrichment-details)

@@ -6,7 +6,6 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: gopkr; meghapriya
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -15,7 +14,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 02/26/2026
+ms.date: 03/24/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -37,7 +36,7 @@ To use another method, refer to the [Related content section](#related-content).
 Before you get started, see [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md) for a description of prerequisites and system requirements.
 
 > [!TIP]
-> Before running the installer script to deploy Defender on your Linux server, it's recommended to run the script with the `--min-req` option to help identify and fix any potential issues that might impact the deployment.
+> Before running the installer script to deploy Defender on your Linux server, it's recommended to run the script with the `--pre-req` option to check minimum system requirements (memory, CPU, disk space, supported OS) before deployment.
 
 ## Deployment process
 
@@ -80,10 +79,10 @@ Before you get started, see [Prerequisites for Defender for Endpoint on Linux](m
 1. Execute the installer script and provide the onboarding package as a parameter to install the agent and onboard the device to the Defender portal.
 
    ```bash
-   sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --channel prod --min_req
+   sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --channel prod --pre-req
    ```
 
-   This command deploys the latest agent version to the production channel, check for min system requisites and onboard the device to Defender Portal.
+   This command deploys the latest agent version to the production channel, checks minimum system requirements (memory, CPU, disk space, supported OS), and onboards the device to Defender Portal.
 
    Additionally you can pass more parameter based on your requirements to modify the installation. Check help for all the available options:
 
@@ -92,49 +91,49 @@ Before you get started, see [Prerequisites for Defender for Endpoint on Linux](m
    mde_installer.sh v0.7.0
    usage: basename ./mde_installer.sh [OPTIONS]
    Options:
-   -c|--channel         specify the channel(insiders-fast / insiders-slow / prod) from which you want to install. Default: prod
-   -i|--install         install the product
-   -r|--remove          uninstall the product
-   -u|--upgrade         upgrade the existing product to a newer version if available
-   -l|--downgrade       downgrade the existing product to a older version if available
-   -o|--onboard         onboard the product with <onboarding_script>
-   -f|--offboard        offboard the product with <offboarding_script>
-   -p|--passive-mode    set real time protection to passive mode
-   -a|--rtp-mode        set real time protection to active mode. passive-mode and rtp-mode are mutually exclusive
-   -t|--tag             set a tag by declaring <name> and <value>, e.g: -t GROUP Coders
-   -m|--min_req         enforce minimum requirements
-   -x|--skip_conflict   skip conflicting application verification
-   -w|--clean           remove repo from package manager for a specific channel
-   -y|--yes             assume yes for all mid-process prompts (default, deprecated)
-   -n|--no              remove assume yes sign
-   -s|--verbose         verbose output
-   -v|--version         print out script version
-   -d|--debug           set debug mode
-   --log-path <PATH>    also log output to PATH
-   --http-proxy <URL>   set http proxy
-   --https-proxy <URL>  set https proxy
-   --ftp-proxy <URL>    set ftp proxy
-   --mdatp              specific version of mde to be installed. will use the latest if not provided
-   -b|--install-path    specify the installation and configuration path for MDE. Default: /
-   -h|--help            display help
+   -c|--channel              specify the channel (insiders-fast / insiders-slow / prod) from which to install. Default: prod
+   -i|--install              install the product
+   -r|--remove               uninstall the product
+   -u|--upgrade              upgrade the existing product to a newer version if available
+   -l|--downgrade            downgrade the existing product to an older version if available
+   -o|--onboard <script>     onboard MDE with the specified onboarding script
+   -f|--offboard <script>    offboard MDE with the specified offboarding script
+   -p|--passive-mode         set real-time protection to passive mode
+   -a|--rtp-mode             set real-time protection to active mode. Passive-mode and rtp-mode are mutually exclusive
+   -t|--tag                  set a tag by declaring <name> and <value>, e.g.: -t GROUP Coders
+   -q|--pre-req              check minimum system requirements for MDE (memory, CPU, disk space, supported OS) without installing
+   -x|--skip_conflict        skip conflicting application verification
+   -w|--clean                remove MDE repository from the package manager for the specified channel
+   -y|--yes                  assume yes for all mid-process prompts (default, deprecated)
+   -n|--no                   disable the default assume-yes behavior for prompts
+   -s|--verbose              enable verbose output
+   -v|--version              print the script version
+   -d|--debug                enable debug mode
+   --log-path <PATH>         also log output to PATH
+   --http-proxy <URL>        set http proxy
+   --https-proxy <URL>       set https proxy
+   --ftp-proxy <URL>         set ftp proxy
+   --mdatp <version>         install a specific version of MDE; uses the latest if not provided
+   --use-local-repo          skip MDE repository setup and use the locally configured repository
+   -b|--install-path <PATH>  specify the installation and configuration path for MDE. Default: /
+   -h|--help                 display help
    ```
 
-   | Scenario | Command |
-   |---|---|
-   |Install to a custom path location | `sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --channel prod --min_req --install-path /custom/path/location` |
-   |Install a specific agent version | `sudo ./mde_installer.sh --install --channel prod --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --min_req –-mdatp 101.24082.0004 ` |
-   |Upgrade to the latest agent version | `sudo ./mde_installer.sh --upgrade` |
-   |Upgrade to a specific agent version | `sudo ./mde_installer.sh --upgrade –-mdatp 101.24082.0004` |
-   |Downgrade to a specific agent version | `sudo ./mde_installer.sh --downgrade –-mdatp 101.24082.0004` |
-   |Uninstall agent | `sudo ./mde_installer.sh --remove` |
+  | Scenario | Command |
+  |---|---|
+  |Install to a custom path location | `sudo ./mde_installer.sh --install --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --channel prod --pre-req --install-path /custom/path/location` |
+  |Install a specific agent version | `sudo ./mde_installer.sh --install --channel prod --onboard ./MicrosoftDefenderATPOnboardingLinuxServer.py --pre-req –-mdatp 101.24082.0004` |
+  |Upgrade to the latest agent version | `sudo ./mde_installer.sh --upgrade` |
+  |Upgrade to a specific agent version | `sudo ./mde_installer.sh --upgrade –-mdatp 101.24082.0004` |
+  |Downgrade to a specific agent version | `sudo ./mde_installer.sh --downgrade –-mdatp 101.24082.0004` |
+  |Uninstall agent | `sudo ./mde_installer.sh --remove` |
+  |Run pre-req checks only (no install) | `sudo ./mde_installer.sh --pre-req` |
 
    For details on installing to a custom path, refer: [Install Defender for Endpoint on Linux to a custom path](linux-custom-location-installation.md).
 
    > [!NOTE]
-   >
-      > 1. Upgrading your operating system to a new major version after product installation requires the product to be reinstalled. You need to uninstall the existing Defender for Endpoint on Linux, upgrade the operating system, and then reconfigure Defender for Endpoint on Linux.
-      >
-      > 2. The installation path can't be changed after Defender for Endpoint is installed. To use a different path, uninstall and reinstall the product at the new location.
+   > - Upgrading your operating system to a new major version after product installation requires the product to be reinstalled. You need to uninstall the existing Defender for Endpoint on Linux, upgrade the operating system, and then reconfigure Defender for Endpoint on Linux.
+   > - The installation path can't be changed after Defender for Endpoint is installed. To use a different path, uninstall and reinstall the product at the new location.
 
 ## Verify deployment status
 
@@ -287,6 +286,5 @@ To configure antivirus and EDR settings, see the following articles:
 - [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
 - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
 - [Install Defender for Endpoint on Linux to a custom path](linux-custom-location-installation.md)
-
 
 
