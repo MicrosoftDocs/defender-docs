@@ -8,7 +8,7 @@ ms.reviewer: rlitinsky
 
 # Configure sensors for AD FS, AD CS, and Microsoft Entra Connect
 
-Install Defender for Identity sensors on Active Directory Federation Services (AD FS), Active Directory Certificate Services (AD CS), and Microsoft Entra Connect servers to help protect them from on-premise and cloud attacks. This article describes the installation steps.
+Install Defender for Identity sensors on Active Directory Federation Services (AD FS), Active Directory Certificate Services (AD CS), and Microsoft Entra Connect servers to help protect them from on-premises and cloud attacks. This article describes the installation steps.
 
 These considerations apply:
 
@@ -108,9 +108,9 @@ $SQLConnection.Close()
 ## Configure permissions for the Microsoft Entra Connect (ADSync) database
 
 > [!NOTE]
-> This section is applicable only if the Entra Connect database is hosted on an external SQL server instance.
+> This section is applicable only if the Microsoft Entra Connect database is hosted on an external SQL server instance.
 >
-> Microsoft recommends that you use the most secure authentication flow available. The authentication flow described in this procedure requires a very high degree of trust in the application, and carries risks that are not present in other flows. You should only use this flow when other more secure flows, such as managed identities, aren't viable.
+> Microsoft recommends that you use the most secure authentication flow available. The authentication flow described in this procedure requires a very high degree of trust in the application, and carries risks that aren't present in other flows. You should only use this flow when other more secure flows, such as managed identities, aren't viable.
 
 Sensors running on Microsoft Entra Connect servers need to have access to the ADSync database, and have execute permissions for the relevant stored procedures. If you have more than one Microsoft Entra Connect server, make sure to run this across all of them. 
 

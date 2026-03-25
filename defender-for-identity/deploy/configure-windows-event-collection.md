@@ -94,7 +94,7 @@ To configure auditing on a domain controller, complete the following steps:
 
 #### Configure Directory Services Advanced Auditing
 
-This section describes how to modify your domain controller's Advanced Audit Policy settings for Defender for Identity.
+This section describes how to modify your domain controller's Audit (Premium) Policy settings for Defender for Identity.
 
 1. Sign in to the server as **Domain Administrator**.
 1. Open the Group Policy Management Editor from **Server Manager** > **Tools** > **Group Policy Management**.
@@ -369,7 +369,7 @@ For more information, see the [Defender for Identity PowerShell reference](/powe
 - [Set-MDIConfiguration](/powershell/module/defenderforidentity/set-mdiconfiguration)
 - [Get-MDIConfiguration](/powershell/module/defenderforidentity/get-mdiconfiguration)
 
-The following commands show how to modify your domain controller's Advanced Audit Policy settings for Defender for Identity by using PowerShell.
+The following commands show how to modify your domain controller's Audit (Premium) Policy settings for Defender for Identity by using PowerShell.
 
 **To view your audit policies:**
 
