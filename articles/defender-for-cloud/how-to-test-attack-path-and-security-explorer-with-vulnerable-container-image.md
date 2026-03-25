@@ -21,7 +21,7 @@ You can explore and investigate [attack paths](how-to-manage-attack-path.md) by 
 
 ## [Azure](#tab/testing-the-attack-path-and-security-explorer-using-a-mock-vulnerable-container-image-for-azure)
 
-### Testing the attack path and security explorer using a mock vulnerable container image for Azure
+### Testing the attack path and security explorer by using a mock vulnerable container image for Azure
 
 If the list of attack paths has no entries, you can still test this feature by using a mock container image. Use the following steps to set up the test:
 
