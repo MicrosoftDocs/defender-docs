@@ -38,8 +38,8 @@ This section provides instructions for connecting Microsoft Defender for Identit
 ### Create a custom SailPoint Identity Security Cloud role
 
 1. Sign in to SailPoint Identity Security Cloud.
-1. Go to **User's Preferences > Personal Access Tokens**
-1. Select **New Token.**
+1. Go to **User's Preferences > Personal Access Tokens**.
+1. Select **New Token**.
 1. Add the following scopes to the token:
     1. idn:accounts:read 
     1. idn:entitlement:read  
