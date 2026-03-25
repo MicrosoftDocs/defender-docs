@@ -1,11 +1,10 @@
-﻿---
+---
 title: List exposed devices of one remediation activity
 description: Returns information about exposed devices for the specified remediation task.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -58,7 +57,7 @@ One of the following permissions is required to call this API. To learn more, in
 ### Request example
 
 ```http
-GET https://api.security.microsoft.com/api/remediationtasks/03942ef5-aecb-4c6e-b555-d6a97013844c/machinereferences
+GET https://api.security.microsoft.com/api/remediationtasks/aaaabbbb-0000-cccc-1111-dddd2222eeee/machinereferences
 ```
 
 ### Response example

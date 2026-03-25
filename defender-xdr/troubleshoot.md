@@ -7,7 +7,6 @@ f1.keywords:
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection: 
 - m365-security-compliance
@@ -112,7 +111,7 @@ All users in the tenant can now use this application.
 
 If neither of these options resolve the issue, try the following steps (as an admin):
 
-1. Remove previous configurations for the application. Go to [Enterprise applications](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ManagedAppMenuBlade/Properties/appId/f0cf43e5-8a9b-451c-b2d5-7285c785684d/objectId/982e94b2-fea9-4d1f-9fca-318cda92f90b)
+1. Remove previous configurations for the application. Go to [Enterprise applications](https://portal.azure.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/~/AppAppsPreview)
 and select **delete**.
 
    ![Delete app permissions.](media/troubleshoot/msi-properties.png)

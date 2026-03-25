@@ -8,14 +8,13 @@ audience: ITPro
 author: paulinbar
 ms.author: painbar
 ms.reviewer: sugamar; moeghasemi
-manager: bagol
 ms.subservice: asr
 ms.collection: 
 - m365-security
 - tier3
 - mde-asr
 search.appverid: met150
-ms.date: 01/05/2026
+ms.date: 03/10/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -53,41 +52,14 @@ You can enable controlled folder access by using any of the following methods de
 
 ## Enable controlled folder access in the Microsoft Intune admin center
 
-1. In the Microsoft Intune admin center at <https://intune.microsoft.com>, go to **Endpoint security** \> **Manage** \> **Attack surface reduction**. Or, to go directly to the **Endpoint security \| Attack surface reduction** page, use <https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/SecurityManagementMenu/~/asr>.
+To configure controlled folder access using a Microsoft Intune Endpoint Security **Attack surface reduction** policy, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
 
-1. On the **Policies** tab of the **Endpoint security \| Attack surface reduction** page, select **Create policy**.
+- **Policy type**: Attack surface reduction
+- **Platform**: Windows 10, Windows 11, and Windows Server
+- **Profile**: Attack Surface Reduction Rules
+- **Configuration settings**: Set **Enable Controlled Folder Access** to **Audit mode** to assess impact before switching to **Enabled**
 
-1. On the **Create a profile** flyout that opens, configure the following settings:
-   - **Platform**: Select **Windows**.
-   - **Profile**: Select **Attack surface reduction rules**.
-
-   Select **Create**.
-
-1. The **Create policy** wizard opens. On the **Basics** tab, configure the following settings:
-   - **Name**: Enter a unique, descriptive name for the policy.
-   - **Description**: Enter an optional description.
-
-   Select **Next**.
-
-1. On the **Configuration settings** tab, scroll down to the **Enable Controlled Folder Access** section and configured the following settings:
-   - In the box that says **Not configured**, select **Audit Mode**.
-  
-     We recommend enabling controlled folder access in audit mode first to see how it works in your organization. You can set it to another mode, such as **Enabled**, later.
-
-   - **Controlled Folder Access Protected Folders**: Optionally add folders that are protected. Files in these folders can't be modified or deleted by untrusted applications. Default system folders are automatically protected. You can view the list of default system folders in the Windows Security app on a Windows device. To learn more about this setting, see [Policy CSP - Defender: ControlledFolderAccessProtectedFolders](/windows/client-management/mdm/policy-csp-defender?#controlledfolderaccessprotectedfolders).
-
-   - **Controlled Folder Access Allowed Applications**: Optionally add applications that are trusted to access protected folders. Microsoft Defender Antivirus automatically determines which applications are trusted. Only use this setting to specify more applications. To learn more about this setting, see [Policy CSP - Defender: ControlledFolderAccessAllowedApplications](/windows/client-management/mdm/policy-csp-defender#controlledfolderaccessallowedapplications).
-
-   When you're finished on the **Configuration settings** tab, select **Next**.
-
-1. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing scope tags. When you're finished, select **Next**.
-
-1. On the **Assignments** tab, click in the box, select **All users**, click in the box again, and then select select **All Devices**. Verify the **Target type** value is **Include** for both, and then select **Next**.
-
-1. On the **Review + create** tab, verify the settings, and then select **Save**.
-
-> [!NOTE]
-> Wildcards are supported for applications, but not for folders. Allowed apps continue to trigger events until they're restarted.
+For more information about attack surface reduction profiles available in Microsoft Intune, see [Manage attack surface reduction settings with Microsoft Intune](/intune/intune-service/protect/endpoint-security-asr-policy#attack-surface-reduction-profiles).
 
 ## Mobile Device Management (MDM)
 
@@ -110,11 +82,11 @@ Use the [./Vendor/MSFT/Policy/Config/ControlledFolderAccessProtectedFolders](/wi
 
 1. After the policy is created, **Close**.
 
-For more information about Microsoft Configuration Manager and Controlled Folder Access, visit [Controlled folder access policies and options](/mem/configmgr/protect/deploy-use/create-deploy-exploit-guard-policy).
+For more information about Microsoft Configuration Manager and Controlled Folder Access, visit [Controlled folder access policies and options](/intune/configmgr/protect/deploy-use/create-deploy-exploit-guard-policy).
 
 ## Group Policy
 
-1. On your Group Policy management device, open the [Group Policy Management Console](https://technet.microsoft.com/library/cc731212.aspx). Right-click the Group Policy Object you want to configure and select **Edit**.
+1. On your Group Policy management device, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console). Right-click the Group Policy Object you want to configure and select **Edit**.
 
 1. In the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
 

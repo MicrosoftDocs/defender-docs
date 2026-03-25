@@ -1,11 +1,7 @@
 ---
 title: Release notes
 description: This page is updated frequently with the latest updates in Microsoft Security Exposure Management.
-ms.author: dlanger
-author: dlanger
-manager: ornat-spodek
 ms.topic: overview
-ms.service: exposure-management
 ms.date: 01/26/2026
 
 ---
@@ -23,6 +19,12 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 > Get notified when this page is updated by copying and pasting the following URL into your feed reader:
 >
 > `https://aka.ms/msem/rss`
+
+## March 2026
+
+### Updates to Secure Score category calculations for increased accuracy
+
+To improve accuracy and better protect organizational identities, some security recommendations categorized as **Cloud apps** recommendations are now considered identity‑related and grouped under the **Identity** category. While the total Secure Score remains unchanged, individual identity and app scores may change.
 
 ## January 2026
 

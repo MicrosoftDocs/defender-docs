@@ -4,7 +4,6 @@ description: Feedback-loop blocking, also called rapid protection, is part of be
 keywords: behavioral blocking, rapid protection, feedback blocking, Microsoft Defender for Endpoint
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.reviewer: shwetaj
 audience: ITPro
 ms.topic: concept-article
@@ -64,7 +63,7 @@ If your organization is using Defender for Endpoint, feedback-loop blocking is e
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)

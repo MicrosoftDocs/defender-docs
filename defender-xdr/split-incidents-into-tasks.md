@@ -2,7 +2,7 @@
 title: Streamline incident response using tasks in the Microsoft Defender portal (Preview)
 description: Create and manage tasks in the Microsoft Defender portal to investigate and resolve incidents collaboratively.
 search.appverid: met150
-ms.service: unified-secops-platform
+ms.service: microsoft-defender
 ms.author: guywild
 author: guywi-ms
 ms.date: 09/04/2025
@@ -13,6 +13,7 @@ ms.collection:
 ms.topic: how-to
 
 # customer intent: As a security operations analyst, I want to manage incidents using tasks in the Microsoft Defender portal so that I can improve collaboration, efficiency, and accountability in incident investigations.    
+ms.subservice: unified-security-operations
 ---
 
 # Streamline incident response using tasks in the Microsoft Defender portal (Preview)

@@ -4,7 +4,6 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
@@ -16,7 +15,7 @@ ms.collection:
   - tier1
 description: Admins can learn about Microsoft Teams features in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 02/18/2026
+ms.date: 03/12/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -33,6 +32,7 @@ With the increased use of collaboration tools like Microsoft Teams, the possibil
 All licenses of Microsoft Teams in Microsoft 365 include the following built-in protections:
 
 - [Built-in virus protection in SharePoint, SharePoint Embedded, OneDrive, and Microsoft Teams](anti-malware-protection-for-spo-odfb-teams-about.md)
+- [Microsoft Teams external domain anomalies report](/microsoftteams/teams-analytics-and-reports/external-domain-anomalies-report).
 - **Near real-time URL protection in Teams messages (currently in Preview)**: Known, malicious URLs in Teams messages are delivered with a warning. Messages found to contain malicious URLs up to 48 hours after delivery also receive a warning. The warning is added to messages in internal and external chats and channels for all URL verdicts (not just malware or high confidence phishing).
 
   :::image type="content" source="media/teams-message-url-warning.png" alt-text="Screenshot showing a Microsoft Teams message with a URL warning." lightbox="media/teams-message-url-warning.png":::
@@ -59,8 +59,6 @@ Microsoft 365 E5 and Defender for Office 365 Plan 2 extend Teams protection with
 
 - **Remove users from Teams chat**: To remediate malicious attacks, you can remove users from teams chats directly from the [Teams message entity panel](teams-message-entity-panel.md#remove-users-from-teams-chats-in-the-teams-message-entity-panel).
 
-- **Attack simulation training using Teams messages**: To ensure users are resilient to phishing attacks in Microsoft Teams, admins can configure phishing simulations using Teams messages instead of email messages. For more information, see [Microsoft Teams in Attack simulation training](attack-simulation-training-teams.md).
-
 - **Hunting on Teams messages with URLs**: You can hunt for Teams messages containing URL across three new advanced hunting tables: [MessageEvents](/defender-xdr/advanced-hunting-messageevents-table), [MessagePostDeliveryEvents](/defender-xdr/advanced-hunting-messagepostdeliveryevents-table), and [MessageURLInfo](/defender-xdr/advanced-hunting-messageurlinfo-table).
 
 These features are summarized in the following table:
@@ -68,6 +66,7 @@ These features are summarized in the following table:
 |Feature|All Teams<br/>licenses|Defender for Office 365<br/>Plan 1|Defender for Office 365<br/>Plan 2|
 |---|:---:|:---:|:---:|
 |Built-in virus protection (SharePoint, OneDrive, Teams)|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
+|Microsoft Teams external domain anomalies report|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
 |Near real-time URL warnings (up to 48 hours post-delivery)|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
 |Safe Links (time-of-click URL protection)||:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
 |Safe Attachments (time-of-click file protection)||:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
@@ -95,7 +94,7 @@ These features are summarized in the following table:
    - **Quarantine policies** section: You can select the existing quarantine policy to use for messages that are quarantined by ZAP for Teams protection as **Malware** or **High confidence phishing**. Quarantine policies define what users are able to do to quarantined messages, and whether users receive quarantine notifications. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
 
      > [!NOTE]
-     > Quarantine notifications are disabled in the policy named AdminOnlyAccessPolicy. To notify recipients that have messages quarantined as malware or high confidence phishing, create or use an existing quarantine policy where quarantine notifications are turned on. For instructions, see [Create quarantine policies in the Microsoft Defender portal](quarantine-policies.md#step-1-create-quarantine-policies-in-the-microsoft-defender-portal).
+     > Currently, quarantined Teams messages are available only to admins, and users don't receive quarantine notifications (the AdminOnlyAccess quarantine policy is used).
 
    - **Exclude these participants** section: Specify the **Users**, **Groups**, or **Domains** to exclude from ZAP for Teams protection. Exclusions matter for message _recipients_, not message _senders_. For more information, see [Zero-hour auto purge (ZAP) in Microsoft Teams](zero-hour-auto-purge.md#zero-hour-auto-purge-zap-in-microsoft-teams).
 

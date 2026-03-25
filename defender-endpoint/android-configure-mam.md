@@ -5,7 +5,6 @@ search.appverid: met150
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
-manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection:
@@ -30,7 +29,7 @@ Microsoft Defender for Endpoint on Android threat information is applied by Intu
 Microsoft Defender for Endpoint on Android supports both the configurations of MAM.
 
 - **Intune MDM + MAM**: IT administrators can only manage apps using App Protection Policies on devices that are enrolled with Intune mobile device management (MDM).
-- **MAM without device enrollment**: MAM without device enrollment, or MAM-WE, allows IT administrators to manage apps using [App Protection Policies](/mem/intune/apps/app-protection-policy) on devices not enrolled with Intune MDM. This provision means that apps can be managed by Intune on devices enrolled with third-party EMM providers.
+- **MAM without device enrollment**: MAM without device enrollment, or MAM-WE, allows IT administrators to manage apps using [App Protection Policies](/intune/intune-service/apps/app-protection-policy) on devices not enrolled with Intune MDM. This provision means that apps can be managed by Intune on devices enrolled with third-party EMM providers.
 To manage apps in both these configurations customers should use Intune in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 To enable this capability an administrator needs to configure the connection between Microsoft Defender for Endpoint and Intune, create the app protection policy, and apply the policy on targeted devices and applications.
@@ -87,7 +86,7 @@ End users also need to take steps to install Microsoft Defender for Endpoint on 
 
      1. Select Apps.
 
-        A managed app is an app that has app protection policies applied to it, and can be managed by Intune. Any app that has been integrated with the [Intune SDK](/mem/intune/developer/app-sdk) or wrapped by the [Intune App Wrapping Tool](/mem/intune/developer/apps-prepare-mobile-application-management) can be managed using Intune app protection Policies. See the official list of [Microsoft Intune protected apps](/mem/intune/apps/apps-supported-intune-apps) that have been built using these tools and are available for public use.
+        A managed app is an app that has app protection policies applied to it, and can be managed by Intune. Any app that has been integrated with the [Intune SDK](/intune/intune-service/developer/app-sdk) or wrapped by the [Intune App Wrapping Tool](/intune/intune-service/developer/apps-prepare-mobile-application-management) can be managed using Intune app protection Policies. See the official list of [Microsoft Intune protected apps](/intune/intune-service/apps/apps-supported-intune-apps) that have been built using these tools and are available for public use.
 
         *Example: Outlook as a managed app*
 

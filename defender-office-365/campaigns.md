@@ -4,7 +4,6 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.reviewer: mcostea
 audience: ITPro
 ms.topic: article

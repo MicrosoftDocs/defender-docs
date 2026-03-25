@@ -5,7 +5,6 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -23,8 +22,8 @@ You can use Configuration Manager to onboard endpoints to the Microsoft Defender
 
 There are several options you can use to onboard devices using Configuration Manager:
 
-- [Onboard devices using System Center Configuration Manager](/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection)
-- [Tenant attach](/mem/configmgr/tenant-attach/endpoint-security-get-started)
+- [Onboard devices using System Center Configuration Manager](/intune/configmgr/protect/deploy-use/defender-advanced-threat-protection)
+- [Tenant attach](/intune/configmgr/tenant-attach/endpoint-security-get-started)
 
 > [!NOTE]
 > Defender for Endpoint doesn't support onboarding during the [Out-Of-Box Experience (OOBE)](/windows-hardware/test/assessments/out-of-box-experience) phase. Make sure users complete OOBE after running Windows installation or upgrading.
@@ -37,7 +36,7 @@ You can create a detection rule on a Configuration Manager application to contin
 
 - See [Minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md).
 
-- [Endpoint Protection point site system role](/mem/configmgr/protect/deploy-use/endpoint-protection-site-role). This role is required so that antivirus and attack surface reduction policies are properly deployed to the targeted endpoints. Without this role, endpoints in the device collection won't receive the configured antivirus and attack surface reduction policies.
+- [Endpoint Protection point site system role](/intune/configmgr/protect/deploy-use/endpoint-protection-site-role). This role is required so that antivirus and attack surface reduction policies are properly deployed to the targeted endpoints. Without this role, endpoints in the device collection won't receive the configured antivirus and attack surface reduction policies.
 
 ## Configure sample collection settings
 
@@ -144,7 +143,7 @@ Follow the steps to enable endpoint protection and configuration of custom clien
 
 1. In the **Create Custom Client Device Settings** dialog box, provide a name and a description for the group of settings, and then select **Endpoint Protection**.
 
-1. Configure the Endpoint Protection client settings that you require. For a full list of Endpoint Protection client settings that you can configure, see the Endpoint Protection section in [About client settings.](/mem/configmgr/core/clients/deploy/about-client-settings#endpoint-protection)
+1. Configure the Endpoint Protection client settings that you require. For a full list of Endpoint Protection client settings that you can configure, see the Endpoint Protection section in [About client settings.](/intune/configmgr/core/clients/deploy/about-client-settings#endpoint-protection)
 
     > [!IMPORTANT]
     > Install the Endpoint Protection site system role before you configure client settings for Endpoint Protection.
@@ -156,10 +155,10 @@ Follow the steps to enable endpoint protection and configuration of custom clien
 
 1. In the **Select Collection** dialog box, choose the collection to which you want to deploy the client settings and then click **OK**.The new deployment is shown in the **Deployments** tab of the details pane.
 
-Clients are configured with these settings when they next download client policy. For more information, see [Initiate policy retrieval for a Configuration Manager client.](/mem/configmgr/core/clients/manage/manage-clients)
+Clients are configured with these settings when they next download client policy. For more information, see [Initiate policy retrieval for a Configuration Manager client.](/intune/configmgr/core/clients/manage/manage-clients)
 
 > [!NOTE]
-> For Windows Server 2012 R2 and Windows Server 2016 managed by Configuration Manager 2207 and later versions, onboard using the [Microsoft Defender for Endpoint (MDE) Client (recommended)](/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection#bkmk_2207) setting. Alternatively, you can use older versions of Configuration Manager to perform a migration. For more information, see [Migrating servers from Microsoft Monitoring Agent to the unified solution](application-deployment-via-mecm.md).
+> For Windows Server 2012 R2 and Windows Server 2016 managed by Configuration Manager 2207 and later versions, onboard using the [Microsoft Defender for Endpoint (MDE) Client (recommended)](/intune/configmgr/protect/deploy-use/defender-advanced-threat-protection#bkmk_2207) setting. Alternatively, you can use older versions of Configuration Manager to perform a migration. For more information, see [Migrating servers from Microsoft Monitoring Agent to the unified solution](application-deployment-via-mecm.md).
      
 ### Install the Endpoint Protection client using Command Prompt
 
@@ -225,7 +224,7 @@ For security reasons, the package used to Offboard devices will expire 7 days af
 
 ### Offboard devices using Microsoft Configuration Manager current branch
 
-If you use Microsoft Configuration Manager current branch, see [Create an offboarding configuration file](/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection#create-an-offboarding-configuration-file).
+If you use Microsoft Configuration Manager current branch, see [Create an offboarding configuration file](/intune/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection#create-an-offboarding-configuration-file).
 
 ### Offboard devices using System Center 2012 R2 Configuration Manager
 
@@ -246,7 +245,7 @@ If you use Microsoft Configuration Manager current branch, see [Create an offboa
 
 ## Monitor device configuration
 
-If you're using Microsoft Configuration Manager current branch, use the built-in Defender for Endpoint dashboard in the Configuration Manager console. For more information, see [Defender for Endpoint - Monitor](/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection#monitor).
+If you're using Microsoft Configuration Manager current branch, use the built-in Defender for Endpoint dashboard in the Configuration Manager console. For more information, see [Defender for Endpoint - Monitor](/intune/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection#monitor).
 
 If you're using System Center 2012 R2 Configuration Manager, monitoring consists of two parts:
 
