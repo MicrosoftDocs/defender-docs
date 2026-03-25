@@ -13,7 +13,7 @@ This article explains how to use the AKS security dashboard to review and fix se
 
 ## Prerequisites
 
-The AKS Security Dashboard shows security problems for a cluster if at least one of the following plans is enabled:
+The AKS Security Dashboard shows security problems for a cluster if you enable at least one of the following plans:
 
 - [Defender for Containers](tutorial-enable-containers-azure.md)
 - [Individual cluster](cluster-security-dashboard.md#plan-enablement) 
