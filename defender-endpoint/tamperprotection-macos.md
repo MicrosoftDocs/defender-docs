@@ -105,7 +105,7 @@ Microsoft Defender evaluates these settings in the following order. If a higher 
 1. If tamper protection is disabled in the Microsoft Defender portal:
 
    - Devices with a valid license default to "audit" mode.
-   - Devices without a license default to "block" mode.
+   - Devices without a license default to "disabled" mode.
 
 ### Before you begin
 
