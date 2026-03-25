@@ -23,7 +23,7 @@ Defender CSPM includes extensions that provide agentless visibility into Kuberne
 
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
-1. Go to the **Microsoft Defender for Cloud** > **Environment Settings**.
+1. Go to **Microsoft Defender for Cloud** > **Environment Settings**.
 1. Select the relevant subscription.
 1. Locate Defender CSPM and select **Settings**.
 1. Toggle **K8S API access** and **Registry access** extensions to **On**.
