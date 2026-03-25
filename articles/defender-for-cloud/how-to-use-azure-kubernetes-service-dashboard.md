@@ -23,7 +23,7 @@ The AKS Security Dashboard shows security problems for a cluster if at least one
 ## Access the AKS security dashboard
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
-1. Search for **Kubernetes Services**
+1. Search for **Kubernetes Services**.
 1. Select **Clusters** > **relevant cluster**.
 1. Select **Microsoft Defender for Cloud**.
 
