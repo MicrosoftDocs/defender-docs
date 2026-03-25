@@ -56,9 +56,6 @@ All users can access the reports. However, only people with Microsoft Entra Secu
 - Public API queries they ran themselves and not through the application
 - Custom detections they created
 
-> [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
-
 ## Query resource report contents
 
 By default, the report table displays queries from the last day. It's sorted by resource usage, so you can easily see which queries used the most CPU resources.

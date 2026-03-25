@@ -48,7 +48,6 @@ The following steps guide you on how to activate the Microsoft Defender XDR Unif
 
 > [!IMPORTANT]
 > You must be at least a Security Administrator in Microsoft Entra ID to perform this task. For more information on permissions, see [Permission prerequisites](manage-rbac.md#permissions-prerequisites).
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ### Activate from the Permissions and roles page
 

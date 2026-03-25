@@ -74,8 +74,6 @@ The following roles and permissions are also required to access Threat analytics
 By default, access to services available in the Defender portal is managed collectively using [Microsoft Entra global roles](m365d-permissions.md). If you need greater flexibility and control over access to specific product data, and aren't yet using the [Microsoft Defender XDR Unified role-based access control (RBAC)](manage-rbac.md) for centralized permissions management, we recommend creating custom roles for each service. [Learn more about creating custom roles](custom-roles.md)
 
 >[!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
->
 > You have visibility to all threat analytics reports even if you have just one of the supported products. However, you need each product and role to see that product's specific incidents, assets, exposure, and recommended actions associated with the threat.
 
 ## View the threat analytics dashboard
