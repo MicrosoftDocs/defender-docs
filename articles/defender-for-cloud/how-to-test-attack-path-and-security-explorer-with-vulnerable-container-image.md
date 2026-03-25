@@ -100,7 +100,7 @@ If the list of attack paths has no entries, you can still test this feature by u
     ```
 
 1. Create a Docker image that is tagged as vulnerable by name. The image name must include *mdc-mock-0001*. 
-1. Push the image to your ECR registry. Replace `<ACCOUNT>` and `<REGION>` with your AWS account ID and region
+1. Push the image to your ECR registry. Replace `<ACCOUNT>` and `<REGION>` with your AWS account ID and region.
 
     ```awscli
     docker pull alpine
