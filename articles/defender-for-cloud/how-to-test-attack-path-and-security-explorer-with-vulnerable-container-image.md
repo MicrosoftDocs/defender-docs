@@ -109,7 +109,7 @@ If the list of attack paths has no entries, you can still test this feature by u
     ```
 
 1. Connect to your EKS cluster.
-1. Configure `kubectl` to work with your EKS cluster. Replace `<your-region>` and `<your-cluster-name>` with your EKS cluster region and name
+1. Configure `kubectl` to work with your EKS cluster. Replace `<your-region>` and `<your-cluster-name>` with your EKS cluster region and name.
 
     ```awscli
     aws eks --region <your-region> update-kubeconfig --name <your-cluster-name>
