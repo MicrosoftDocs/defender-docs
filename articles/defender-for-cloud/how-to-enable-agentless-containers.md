@@ -33,7 +33,7 @@ Defender CSPM includes extensions that provide agentless visibility into Kuberne
 1. Select **Continue**.
 1. Select **Save**.
 
-A notification message pops up in the top right corner that verifies that the settings were saved successfully.
+A notification message in the top right corner verifies that the settings are saved successfully.
 
 > [!NOTE]
 > K8S API access uses AKS trusted access. For more information about AKS trusted access, see [Enable Azure resources to access Azure Kubernetes Service (AKS) clusters using Trusted Access](/azure/aks/trusted-access-feature).
