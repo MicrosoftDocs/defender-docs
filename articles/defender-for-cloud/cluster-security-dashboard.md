@@ -48,7 +48,7 @@ To investigate alerts, see [How to use the AKS Security Dashboard](how-to-use-az
 
 ### Vulnerability assessment
 
-The AKS security dashboard shows software vulnerability scan results for running containers and the cluster's node pools. It generates a prioritized list of vulnerable components. This list is ranked by a dynamic engine that assesses the risks in your environment (available with Defender CSPM plan enabled) and considers the potential for exploitation.
+The AKS security dashboard shows software vulnerability scan results for running containers and the cluster's node pools. It generates a prioritized list of vulnerable components. A dynamic engine ranks this list by assessing the risks in your environment (available with Defender CSPM plan enabled) and considers the potential for exploitation.
 
 The scanning of container images includes the following types of packages:
 
