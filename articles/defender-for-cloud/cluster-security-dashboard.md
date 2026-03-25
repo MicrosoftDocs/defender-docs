@@ -43,7 +43,7 @@ When you select an alert, you open a panel that provides more information about 
 
 - **Informational** An incident typically includes several alerts. Some alerts might appear on their own to be only informational, but in the context of the other alerts, they might warrant a closer look.
 
-To investigate alerts, see [How to use the AKS Security Dashboard](how-to-use-azure-kubernetes-service-dashboard.md#investigate-an-alert)
+To investigate alerts, see [How to use the AKS Security Dashboard](how-to-use-azure-kubernetes-service-dashboard.md#investigate-an-alert).
 
 
 ### Vulnerability assessment
