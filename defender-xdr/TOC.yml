@@ -424,6 +424,8 @@
           href: get-started-xdr.md
         - name: Start using Microsoft Defender Experts for XDR service
           items:
+          - name: Overview
+            href: start-using-mdex-xdr.md
           - name: Managed detection and response
             href: managed-detection-and-response-xdr.md
           - name: Scoped coverage
