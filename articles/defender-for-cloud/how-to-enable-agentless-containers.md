@@ -10,7 +10,7 @@ ms.date: 03/02/2026
 
 When you onboard agentless container posture in Defender CSPM, you get all its [capabilities](concept-agentless-containers.md#capabilities).
 
-Defender CSPM includes extensions that allow for agentless visibility into Kubernetes and containers registries across your organization's software development lifecycle: **Agentless scanning for machines** for scanning of runtime container images,  **K8S API access** for Kubernetes cluster discovery and **Registry access** to access images in a supported container registry.
+Defender CSPM includes extensions that provide agentless visibility into Kubernetes and container registries throughout your organization's software development lifecycle: **Agentless scanning for machines** for scanning runtime container images, **K8S API access** for Kubernetes cluster discovery, and **Registry access** to access images in a supported container registry.
 
 > [!NOTE]
 > Agentless container posture is available for Azure, AWS, and GCP clouds.
