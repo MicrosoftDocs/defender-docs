@@ -12,9 +12,9 @@ ms.reviewer: himanch
 Microsoft Defender for Identity helps protect your on-premises Active Directory and Azure Active Directory environments from advanced threats. 
 Connecting SailPoint Identity Security Cloud with Microsoft Defender for Identity (MDI) gives you the ability to detect, investigate, and respond to identity-based threats across both cloud and on-premises infrastructures. 
 
-## What you can do after connecting SailPoint Identity to Microsoft Defender for Identity
+## What you can do after connecting SailPoint Identity Security Cloud to Microsoft Defender for Identity
 
-After you connect SailPoint Identity, Microsoft Defender for Identity provides the following capabilities:
+After you connect SailPoint Identity Security Cloud, Microsoft Defender for Identity provides the following capabilities:
 
 | Capability | Description |
 |------------|------------|

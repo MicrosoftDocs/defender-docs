@@ -31,13 +31,13 @@ To configure the SailPoint Identity Security Cloud connector in Microsoft Defend
 - **Defender XDR Unified RBAC permission:** 
     - Core security settings (manage)
 
-## Connect SailPoint Identity to Microsoft Defender for Identity 
+## Connect SailPoint Identity Security Cloud to Microsoft Defender for Identity 
 
-This section provides instructions for connecting Microsoft Defender for Identity to your dedicated SailPoint Identity account using the connector APIs. This connection gives you visibility into and control over SailPoint Identity use.
+This section provides instructions for connecting Microsoft Defender for Identity to your dedicated SailPoint Identity Security Cloud account using the connector APIs. This connection gives you visibility into and control over SailPoint Identity Security Cloud use.
 
-### Create a custom SailPoint Identity role
+### Create a custom SailPoint Identity Security Cloud role
 
-1. Sign in to SailPoint Identity .
+1. Sign in to SailPoint Identity Security Cloud.
 1. Go to **User's Preferences > Personal Access Tokens**
 1. Select **New Token.**
 1. Add the following scopes to the token:
@@ -45,10 +45,10 @@ This section provides instructions for connecting Microsoft Defender for Identit
     1. idn:entitlement:read  
     1. sp:search:read 
     1. idn:accounts-state:manage
-1. Copy the **Client ID** and **Secret**. You'll need these values to connect SailPoint Identity to Microsoft Defender for Identity.
+1. Copy the **Client ID** and **Secret**. You'll need these values to connect SailPoint Identity Security Cloud to Microsoft Defender for Identity.
 
 
-### Connect SailPoint Identity to Defender for Identity 
+### Connect SailPoint Identity Security Cloud to Defender for Identity 
 
 1. Sign in to the [Microsoft Defender Portal](https://security.microsoft.com).
 1. Go to **System > Data Management > Data Connectors**.
