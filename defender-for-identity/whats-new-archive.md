@@ -20,7 +20,7 @@ For information about the latest versions and features, see [What's new in Micro
 
 ### Defender for Identity alerts transitioned to the unified Defender alerting experience
 
-As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, the following alerts were converted from the Microsoft Defender for Identity classic format to the the unified Defender alerting format. Keep in mind that all alerts are based on detections from Defender for Identity sensors.
+As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, the following alerts were converted from the Microsoft Defender for Identity classic format to the unified Defender alerting format. Keep in mind that all alerts are based on detections from Defender for Identity sensors.
 
 |Classic Alert Title|External ID|XDR Alert Name|Detector ID|
 |---|---|---|---|
