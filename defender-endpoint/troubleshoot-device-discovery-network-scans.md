@@ -8,7 +8,6 @@ f1.keywords:
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

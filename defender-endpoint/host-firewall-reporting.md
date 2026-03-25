@@ -6,9 +6,8 @@ ms.localizationpriority: medium
 ms.date: 12/18/2025
 audience: ITPro
 ms.topic: concept-article
-author: batamig
-ms.author: bagol
-manager: bagol
+author: paulinbar
+ms.author: painbar
 ms.subservice: asr
 ms.collection: 
 - m365-security

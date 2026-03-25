@@ -8,7 +8,6 @@ ms.author: chrisda
 ms.custom: nextgen
 audience: ITPro
 ms.reviewer: yongrhee, mimilone, julih
-manager: bagol
 ms.subservice: ngp
 ms.topic: how-to
 ms.collection: 

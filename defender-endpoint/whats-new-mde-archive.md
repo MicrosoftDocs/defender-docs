@@ -8,7 +8,6 @@ ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
 ms.date: 02/18/2026
-manager: bagol
 ai-usage: ai-assisted
 audience: ITPro
 ms.collection:
@@ -44,11 +43,11 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 |Platform  |Feature  |Preview/GA  |Description  |
 |----------|---------|------------|-------------|
-|Android |Build 1.0.8018.0103 |GA |Build 1.0.8018.0103 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#android--august-2025--1080180103). |
+|Android |Build 1.0.8018.0103 |GA |Build 1.0.8018.0103 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#android--august-2025--platform-1080180103). |
 |macOS |Build 101.25062.0006 |GA |Release version 20.125062.6.0 released: See [enhancements and features for this release](release-notes-mde-archive.md#macos--august-2025--101250620006). |
 |macOS |[Behavior Monitoring](behavior-monitor-macos.md) |GA |Defender for Endpoint can now monitor process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. Learn more: [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md) and [Behavior Monitoring GA announcement blog](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/behavior-monitoring-is-now-generally-available-for-microsoft-defender-for-endpoi/4415697). |
-|Linux |Build 101.25062.0003 |GA |Release version 30.125062.0003.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#linux--august-2025--101250620003). |
-|iOS |Build 1.1.68140102 |GA |Build 1.1.68140102 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#ios--august-2025--1168140102). |
+|Linux |Build 101.25062.0003 |GA |Release version 30.125062.0003.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#linux--august-2025--platform-101250620003). |
+|iOS |Build 1.1.68140102 |GA |Build 1.1.68140102 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#ios--august-2025--platform-1168140102). |
 
 ## July 2025
 

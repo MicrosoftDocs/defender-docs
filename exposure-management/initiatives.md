@@ -2,11 +2,7 @@
 title: Review security initiatives in Security Exposure Management
 description: Learn how to effectively manage and track security initiatives using Microsoft Security Exposure Management to improve your organization's security posture.
 #customer intent: As a security administrator, I want to understand and manage security initiatives so that I can improve my organization's security posture.
-ms.author: dlanger
-author: dlanger
-manager: ornat-spodek
 ms.topic: how-to
-ms.service: exposure-management
 ms.date: 07/30/2025
 ---
 
