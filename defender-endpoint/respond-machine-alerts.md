@@ -125,7 +125,7 @@ For Windows devices, the package contains the folders described in the following
 |Prefetch files|Windows Prefetch files are designed to speed up the application startup process. It can be used to track all the files recently used in the system and find traces for applications that might be deleted but can still be found in the prefetch file list. <br/><br/>- `Prefetch folder`: Contains a copy of the prefetch files from `%SystemRoot%\Prefetch`. We recommend downloading a prefetch file viewer to view the prefetch files.<br/><br/>- `PrefetchFilesList.txt`: Contains the list of all the copied files that can be used to track if there were any copy failures to the prefetch folder.|
 |Processes|Contains a .CSV file listing the running processes and provides the ability to identify current processes running on the device. This can be useful when identifying a suspicious process and its state.|
 |Scheduled tasks|Contains a .CSV file listing the scheduled tasks, which can be used to identify routines performed automatically on a chosen device to look for suspicious code that was set to run automatically.|
-|Security event log|Contains the security event log, which contains records of sign-in or sign-out activity, or other security-related events specified by the system's audit policy. <br/><br/>Open the event log file using Event viewer.|
+|Security event log|Contains the security event log, which contains records of sign-in or sign out activity, or other security-related events specified by the system's audit policy. <br/><br/>Open the event log file using Event viewer.|
 |Services|Contains a .CSV file that lists services and their states.|
 |Windows Server Message Block (SMB) sessions|Lists shared access to files, printers, and serial ports and miscellaneous communications between nodes on a network. This can help identify data exfiltration or lateral movement.<br/><br/>Contains files for `SMBInboundSessions` and `SMBOutboundSession`. If there are no sessions (inbound or outbound), you get a text file that tells you that there are no SMB sessions found.|
 |System Information|Contains a `SystemInformation.txt` file that lists system information such as OS version and network cards.|
@@ -184,7 +184,7 @@ In addition to containing an attack by stopping malicious processes, you can als
 To restrict an application from running, a code integrity policy is applied that only allows files to run if they're signed by a Microsoft issued certificate. This method of restriction can help prevent an attacker from controlling compromised devices and performing further malicious activities.
 
 > [!NOTE]
-> You'll be able to reverse the restriction of applications from running at any time. The button on the device page will change to say **Remove app restrictions**, and then you take the same steps as restricting app execution.
+> You are able to reverse the restriction of applications from running at any time. The button on the device page changes to say **Remove app restrictions**, and then you take the same steps as restricting app execution.
 
 Once you have selected **Restrict app execution** on the device page, type a comment and select **Confirm**. The Action center shows the scan information and the device timeline include a new event.
 
@@ -228,7 +228,7 @@ The device isolation feature disconnects the compromised device from the network
 > [!NOTE]
 > You can reconnect the device back to the network at any time. The button on the device page changes to say **Release from isolation**, and then you take the same steps as isolating the device.
 >
-> If a device is inactive or offline when an isolation action is submitted, Microsoft Defender for Endpoint retries enforcing the isolation for up to three days. If the device doesn't reconnect in that time, the isolation won't be retried, and administrators should reissue the isolation action after the device becomes active.*
+> If a device is inactive or offline when an isolation action is submitted, Microsoft Defender for Endpoint retries enforcing the isolation for up to three days. If the device doesn't reconnect in that time, the isolation won't be retried, and administrators should reissue the isolation action after the device becomes active.
 
 
 
@@ -237,7 +237,7 @@ Once you have selected **Isolate device** on the device page, type a comment and
 :::image type="content" source="media/isolate-device.png" alt-text="An isolated device details page" lightbox="media/isolate-device.png":::
 
 > [!NOTE]
-> The device will remain connected to the Defender for Endpoint service even if it's isolated from the network. If you've chosen to enable Outlook and Skype for Business communication, then you'll be able to communicate to the user while the device is isolated. Selective isolation only works on the classic versions of Outlook and Microsoft Teams.
+> The device remains connected to the Defender for Endpoint service even if it's isolated from the network. If you've chosen to enable Outlook and Skype for Business communication, then you're able to communicate to the user while the device is isolated. Selective isolation only works on the classic versions of Outlook and Microsoft Teams.
 
 ### Forcibly release device from isolation
 
@@ -336,7 +336,7 @@ You can stop containing a device at any time.
 > [!IMPORTANT]
 > Some information in this article relates to prereleased product, which might be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-Defender for Endpoint can also contain IP addresses associated with devices that are undiscovered or aren't onboarded to Defender for Endpoint. The capability to contain an IP address prevents attackers from spreading attacks to other non-compromised devices. Containing an IP address results in Defender for Endpoint-onboarded devices blocking incoming and outgoing communication with devices using the contained IP address
+Defender for Endpoint can also contain IP addresses associated with devices that are undiscovered or aren't onboarded to Defender for Endpoint. The capability to contain an IP address prevents attackers from spreading attacks to other noncompromised devices. Containing an IP address results in Defender for Endpoint-onboarded devices blocking incoming and outgoing communication with devices using the contained IP address
 
 > [!NOTE]
 > Blocking incoming and outgoing communication with a 'contained' device is supported on onboarded Defender for Endpoint Windows 10, Windows 11, Windows 2012 R2, and Windows 2016 devices.
@@ -435,7 +435,7 @@ See [Configure and manage Endpoint Attack Notifications](configure-microsoft-thr
 
 ## Check activity details in Action center
 
-The Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) provides information on actions that were taken on a device or file. You'll be able to view the following details:
+The Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) provides information on actions that were taken on a device or file. You are able to view the following details:
 
 - Investigation package collection
 - Antivirus scan
