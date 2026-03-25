@@ -58,6 +58,7 @@ With more sophisticated adversaries and new threats emerging frequently and prev
 Each report provides an analysis of a tracked threat and extensive guidance on how to defend against that threat. It also incorporates data from your network, indicating whether the threat is active and if you have applicable protections in place.
 
 ## Required roles and permissions
+
 To access Threat analytics in the Defender portal, you need a license for at least one Microsoft Defender XDR product. For more information, see [Microsoft Defender XDR prerequisites](prerequisites.md). 
 
 >[!NOTE]
@@ -65,7 +66,8 @@ To access Threat analytics in the Defender portal, you need a license for at lea
 >
 > Microsoft Sentinel SIEM customers have access to certain Threat analytics sections or tabs only. [Learn more](/azure/sentinel/threat-analytics-sentinel) 
 
-The following roles and permissions are also required to access Threat analytics: 
+The following roles and permissions are also required to access Threat analytics:
+
 - **Security data basics (read)**—to view threat analytics report, related incidents and alerts, and impacted assets
 - **Vulnerability management (read)** and **Exposure Management (read)**—to see related exposure data and recommended actions
 
@@ -74,7 +76,7 @@ By default, access to services available in the Defender portal is managed colle
 >[!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 >
-> You have visibility to all threat analytics reports even if you have just one of the supported products. However, you need each product and role to see that product's specific incidents, assets, exposure, and recommended actions associated with the threat. 
+> You have visibility to all threat analytics reports even if you have just one of the supported products. However, you need each product and role to see that product's specific incidents, assets, exposure, and recommended actions associated with the threat.
 
 ## View the threat analytics dashboard
 
@@ -88,7 +90,7 @@ The threat analytics dashboard ([security.microsoft.com/threatanalytics3](https:
 
 Select a threat from the dashboard to view the report for that threat. You can also select the **Search** field to key in a keyword that's related to the threat analytics report that you'd like to read.
 
-#### View reports by category
+### View reports by category
 
 You can filter the threat report list and view the most relevant reports according to the following options:
 

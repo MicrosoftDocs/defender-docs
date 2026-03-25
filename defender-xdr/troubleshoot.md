@@ -69,7 +69,7 @@ Open your Azure [Enterprise application settings](https://portal.azure.com/#blad
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-This process requires a Global Administrator or Application Administrator in the tenant.
+This process requires an Application Administrator or higher in the tenant.
 
 1. Open [Enterprise Application settings](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ManagedAppMenuBlade/Permissions/appId/f0cf43e5-8a9b-451c-b2d5-7285c785684d/objectId/4a918a14-4069-4108-9b7d-76486212d75d).
 
