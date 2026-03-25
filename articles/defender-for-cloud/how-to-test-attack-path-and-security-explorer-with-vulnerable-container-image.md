@@ -29,7 +29,7 @@ If the list of attack paths has no entries, you can still test this feature by u
 
 #### Import a mock vulnerable image to your Azure Container Registry
 
-1. Pull a base image (for example, alpine) to your local environment by running:
+1. Pull a base image (for example, alpine) to your local environment by running the following command:
 
     ```azurecli
        docker pull alpine
