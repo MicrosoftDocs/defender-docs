@@ -1,7 +1,6 @@
 ﻿---
 title: Manage tamper protection for your organization using Microsoft Intune
 ms.reviewer: joshbregman, mattcall, pahuijbr, hayhov, oogunrinde
-manager: bagol
 description: Turn tamper protection on or off for your organization in Microsoft Intune.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
@@ -57,14 +56,14 @@ Tamper protection helps protect certain [security settings](prevent-changes-to-s
 |Device management|Your organization uses Configuration Manager or [Intune to manage devices](/intune/intune-service/fundamentals/manage-devices). Co-managed devices aren't supported for this feature.|
 |Intune licenses|Intune licenses are required. See [Microsoft Intune licensing](/intune/intune-service/fundamentals/licenses).|
 |Operating System|Windows devices must be running Windows 10 [version 1709 or later](/lifecycle/announcements/revised-end-of-service-windows-10-1709) or Windows 11. (For more information about releases, see [Windows release information](/windows/release-health/release-information).) <br/><br/> For Mac, see [Protect macOS security settings with tamper protection](tamperprotection-macos.md).|
-|Security intelligence|You must be using Windows security with [security intelligence](https://www.microsoft.com/wdsi/definitions) updated to version `1.287.60.0` (or later).|
+|Security intelligence|You must be using Windows security with [security intelligence](https://www.microsoft.com/wdsi/defenderupdates) updated to version `1.287.60.0` (or later).|
 |Antimalware platform|Devices must be using antimalware platform version `4.18.1906.3` (or later) and anti-malware engine version `1.1.15500.X` (or later). See [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md).|
 |Microsoft Entra ID|Your Intune and Defender for Endpoint tenants must share the same Microsoft Entra infrastructure.|
 |Defender for Endpoint|Your devices must be onboarded to Defender for Endpoint.|
 
 > [!NOTE]
 > If devices aren't enrolled in Microsoft Defender for Endpoint, tamper protection shows up as **Not Applicable** until the onboarding process completes.
-> Tamper protection may block changes to certain security settings. If you see an error code with Event ID 5013, see [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](/defender-endpoint/troubleshoot-microsoft-defender-antivirus/).
+> Tamper protection may block changes to certain security settings. If you see an error code with Event ID 5013, see [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](troubleshoot-microsoft-defender-antivirus.yml).
 
 ## Turn tamper protection on (or off) in Microsoft Intune
 

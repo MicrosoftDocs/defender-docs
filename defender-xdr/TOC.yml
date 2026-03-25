@@ -256,6 +256,8 @@
             href: advanced-hunting-cloudappevents-table.md
           - name: CloudAuditEvents
             href: advanced-hunting-cloudauditevents-table.md
+          - name: CloudDnsEvents
+            href: advanced-hunting-clouddnsevents-table.md
           - name: CloudProcessEvents
             href: advanced-hunting-cloudprocessevents-table.md
           - name: CloudStorageAggregatedEvents
@@ -490,6 +492,30 @@
             href: advanced-hunting-security-copilot-threat-hunting-agent.md
           - name: Dynamic Threat Detection Agent
             href: dynamic-threat-detection-agent.md
+    - name: Identity Security
+      items:
+      - name: Identity Security overview
+        href: ./identity-security/identity-security-overview.md
+      - name: View your identity coverage and maturity 
+        href: ./identity-security/coverage-maturity.md  
+      - name: View your identities
+        items:
+        - name: The identity security dashboard
+          href: /defender-for-identity/dashboard?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+        - name: View the identity inventory
+          href: /defender-for-identity/identity-inventory?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+        - name: Investigate a human identity
+          href: investigate-users.md
+        - name: Investigate a non-human identity
+          href: investigate-non-human-identities.md
+        - name: Investigate an Active Directory domain
+          href: /defender-for-identity/investigate-domain?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+      - name: Security recommendations
+        items:
+        - name: Identity security initiative (Preview)
+          href: /defender-for-identity/identity-security-initiative?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+        - name: Unified identity security recommendations
+          href: ./identity-security/identity-security-recommendations.md
     - name: Enhance security operations
       items:
       - name: Security operations guide

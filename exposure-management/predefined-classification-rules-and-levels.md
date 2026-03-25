@@ -1,12 +1,9 @@
 ---
 title: Criticality Levels for Classifications
 description: Lists of all the current criticality levels for classifications in Microsoft Security Exposure Management.
-ms.author: dlanger
-author: dlanger
-manager: ornat-spodek
 ms.topic: reference
 ms.service: exposure-management
-ms.date: 01/26/2026
+ms.date: 03/18/2026
 ---
 
 # Predefined classifications - Microsoft Security Research
@@ -54,6 +51,7 @@ Current asset types are:
 | Devices with Sensitive Information (Azure Document DB Auth Key) | Device | High | Devices that have accessed documents containing Azure Document DB Auth Keys, which are identified as sensitive data. These devices are automatically classified as High criticality when interacting with sensitive content and revert to their baseline classification after 5 consecutive days without accessing the sensitive file. Learn more [here](/purview/sit-sensitive-information-type-learn-about) |
 | Devices with Sensitive Information (Azure Redis Cache Connection String) | Device | High | Devices that have accessed documents containing Azure Redis Cache Connection Strings, which are identified as sensitive data. These devices are automatically classified as High criticality when interacting with sensitive content and revert to their baseline classification after 5 consecutive days without accessing the sensitive file. Learm more [here](/purview/sit-defn-azure-redis-cache-connection-string).|
 | Devices with Sensitive Information (Azure Storage Account Key) | Device | High | Devices that have accessed documents containing Azure Storage Account Keys, which are identified as sensitive data. These devices are automatically classified as High criticality when interacting with sensitive content and revert to their baseline classification after 5 consecutive days without accessing the sensitive file. Learn more [here](/purview/sit-defn-azure-storage-account-key).|
+| Database Server | Device | Medium | Critical database servers in production that hold sensitive data and important information essential for the organization to function. These servers are at high risk of cyber threats and require top-level security measures to prevent unauthorized access.|
 
 ##### Identity
 

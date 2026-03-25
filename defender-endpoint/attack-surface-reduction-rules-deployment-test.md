@@ -8,7 +8,6 @@ audience: ITPro
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: sugamar
-manager: bagol
 ms.custom: asr
 ms.topic: how-to
 ms.collection:
@@ -190,7 +189,7 @@ To configure specific rule exclusions, you have the choices of using the Defende
 
 For instructions, see [Configure ASR rules via group policy](enable-attack-surface-reduction.md#group-policy).
 
-If the GPO isn't applied to devices, see [Troubleshoot Microsoft Defender Antivirus settings](/defender-endpoint/troubleshoot-settings).
+If the GPO isn't applied to devices, see [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md).
 
 ### Use PowerShell as an alternative method to enable attack surface reduction rules
 
@@ -239,7 +238,7 @@ Event ID | Description
 
 [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
 
-[Troubleshoot attack surface reduction rules](/defender-endpoint/troubleshoot-asr)
+[Troubleshoot attack surface reduction rules](troubleshoot-asr.md)
 
 
 

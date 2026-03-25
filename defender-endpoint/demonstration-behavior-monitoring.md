@@ -7,7 +7,6 @@ author: limwainstein
 ms.author: lwainstein
 ms.reviewer: yonghree
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -54,7 +53,7 @@ When real-time protection is enabled, the result shows a value of `True`.
 
 ### Enable Behavior Monitoring for Microsoft Defender for Endpoint
 
-For more information on how to enable Behavior Monitoring for Defender for Endpoint, see [how to enable Behavior Monitoring](/defender-endpoint/behavior-monitor).
+For more information on how to enable Behavior Monitoring for Defender for Endpoint, see [how to enable Behavior Monitoring](behavior-monitor.md).
 
 ### Demonstration of how Behavior Monitoring works in Windows and Windows Server
 

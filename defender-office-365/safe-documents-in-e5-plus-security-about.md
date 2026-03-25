@@ -2,7 +2,6 @@
 title: Safe Documents in Microsoft 365 A5/E5/G5 or Microsoft Defender Suite
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.reviewer:
 audience: ITPro
 ms.topic: how-to
