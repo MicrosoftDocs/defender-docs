@@ -53,12 +53,10 @@ Likewise, since the `IdentityLogonEvents` table holds authentication activity in
 > To manage custom detections, Security Operators must have the Manage Security Settings permission in Microsoft Defender for Endpoint if RBAC is turned on.
 
 ### Microsoft Sentinel
-To manage custom detections on Microsoft Sentinel data, you need to be assigned the **Microsoft Sentinel Contributor** role. Users with this [Azure role](/azure/role-based-access-control/built-in-roles/security#microsoft-sentinel-contributor) can manage Microsoft Sentinel SIEM workspace data, including alerts and detections. You can assign this role on a specific primary workspace, Azure resource group, or an entire subscription.
+
+To manage custom detections on Microsoft Sentinel data, you need to be assigned the **Microsoft Sentinel Contributor** role or higher. Users with this [Azure role](/azure/role-based-access-control/built-in-roles/security#microsoft-sentinel-contributor) can manage Microsoft Sentinel SIEM workspace data, including alerts and detections. You can assign this role on a specific primary workspace, Azure resource group, or an entire subscription.
 
 ### Manage required permissions
-
-> [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 To manage required permissions, a Global Administrator can:
 
@@ -72,6 +70,7 @@ To manage required permissions, a Global Administrator can:
 ## Create a custom detection rule
 
 To create a custom detection rule, follow these steps:
+
 1. [Prepare the query](#1-prepare-the-query)
 1. [Create new rule and provide alert details](#2-create-new-rule-and-provide-alert-details)
 1. [Define alert enrichment details](#3-define-alert-enrichment-details)
