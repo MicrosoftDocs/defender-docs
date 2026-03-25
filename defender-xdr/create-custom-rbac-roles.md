@@ -39,13 +39,10 @@ Creating custom roles for [Microsoft Sentinel data lake](https://aka.ms/data-lak
 
 To create custom roles in Microsoft Defender XDR Unified RBAC, you must be assigned one of the following roles or permissions:
 
-- Global Administrator or Security Administrator in Microsoft Entra ID.
+- At leastSecurity Administrator in Microsoft Entra ID.
 - All **Authorization** permissions assigned in Microsoft Defender XDR Unified RBAC.
 
 For more information on permissions, see [Permission prerequisites](manage-rbac.md#permissions-prerequisites).
-
-> [!TIP]
-> Microsoft recommends that you use roles with the fewest permissions. This practice helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 To create custom roles for the Microsoft Sentinel data lake using the **Security Operations** or **Data operations** permission group, you must have a Log Analytics workspace enabled for Microsoft Sentinel and onboarded to the Defender portal. 
 
@@ -105,9 +102,9 @@ The following steps describe how to create custom roles in the Microsoft Defende
 
 ## Create a role to access and manage roles and permissions
 
-To access and manage roles and permissions, without being a Global Administrator or Security Administrator in Microsoft Entra ID, create a role with **Authorization** permissions. To create this role:
+To access and manage roles and permissions, if you're not at least a Security Administrator in Microsoft Entra ID, create a role with **Authorization** permissions. To create this role:
 
-1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) as Global Administrator or Security Administrator.
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) as Security Administrator or higher.
 
 1. In the navigation pane, select **Permissions > Microsoft Defender XDR > Roles > Create custom role**.
 
