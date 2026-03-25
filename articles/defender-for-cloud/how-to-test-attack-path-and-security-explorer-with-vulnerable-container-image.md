@@ -75,7 +75,7 @@ If the list of attack paths has no entries, you can still test this feature by u
 #### Verify deployment
 
 1. Look for an entry with **mdc-dcspm-demo** as namespace.
-1. Go to **Workloads-> Deployments**
+1. Go to **Workloads-> Deployments**.
 1. Verify `pod1` and `pod2` are created 3/3 and **ingress-controller-nginx-ingress-controller** is created 1/1.
 1. Go to **Services and Ingresses**
 1. Verify that **service1** and **ingress-controller-nginx-ingress-controller** are listed. 
