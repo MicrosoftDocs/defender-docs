@@ -141,7 +141,7 @@ The Helm chart deploys resources onto your cluster that you can use to infer att
 
 1. Sign in to the GCP portal.
 1. Search for **Artifact Registry**.
-1. Create a GCP repository named *mdc-mock-0001*
+1. Create a GCP repository named *mdc-mock-0001*.
 1. Follow the GCP documentation ,[Push and pull images](https://cloud.google.com/artifact-registry/docs/docker/pushing-and-pulling) to push the image to your repository. Run these commands:
 
     ```docker
