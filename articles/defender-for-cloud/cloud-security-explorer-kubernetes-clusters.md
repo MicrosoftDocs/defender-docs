@@ -10,7 +10,7 @@ author: Elazark
 
 # Build Cloud Security Explorer queries to identify vulnerabilities in Kubernetes clusters
 
-You can use the Cloud Security Explorer to identify vulnerabilities in your Kubernetes clusters. The following examples demonstrate how to build queries that you can modify for your specific needs.
+Use Cloud Security Explorer to find vulnerabilities in your Kubernetes clusters. The following examples show how to build queries that you can customize for your specific needs.
 
 For an introduction to Cloud Security Explorer queries, see [Build queries with Cloud Security Explorer](how-to-manage-cloud-security-explorer.md).
 
