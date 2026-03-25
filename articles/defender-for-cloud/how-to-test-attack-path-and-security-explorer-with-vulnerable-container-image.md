@@ -137,7 +137,7 @@ The Helm chart deploys resources onto your cluster that you can use to infer att
 
 ## [**GCP**](#tab/testing-the-attack-path-and-security-explorer-using-a-mock-vulnerable-container-image-for-gcp)
 
-### Testing the attack path and security explorer using a mock vulnerable container image for GCP
+### Testing the attack path and security explorer by using a mock vulnerable container image for GCP
 
 1. Sign in to the GCP portal.
 1. Search for **Artifact Registry**
