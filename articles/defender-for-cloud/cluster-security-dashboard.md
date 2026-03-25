@@ -35,7 +35,7 @@ When you select an alert, you open a panel that provides more information about 
 
 #### Alert severity
 
-- **High** There's a high probability that your resource is compromised. You should investigate immediately. 
+- **High** There's a high probability that your resource is compromised. Investigate immediately. 
 
 - **Medium** The alert probably indicates suspicious activity and might show that a resource is compromised. The confidence in the analytic or finding is medium. The confidence of the malicious intent is medium to high. These alerts might come from machine learning or anomaly based detections.
 
