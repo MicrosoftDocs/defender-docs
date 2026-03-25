@@ -55,7 +55,7 @@ The AKS Security Dashboard shows security problems for a cluster if at least one
 
 ### Review vulnerability assessment findings
 
-1. Select the vulnerable component in the vulnerabilities tab to open the details panel.
+1. Select the vulnerable component in the **Vulnerabilities** tab to open the details panel.
 
 1. Use the general details to identify the relevant component and ownership for fix.
 
