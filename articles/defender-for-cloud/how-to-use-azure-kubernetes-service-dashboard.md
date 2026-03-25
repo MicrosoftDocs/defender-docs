@@ -9,7 +9,7 @@ CustomerIntent: As the person responsible for the security of a cluster, I want 
 
 # How to use the AKS Security Dashboard
 
-This article explains how to use the AKS security dashboard to review and remediate security issues in an individual cluster.
+This article explains how to use the AKS security dashboard to review and fix security problems in an individual cluster.
 
 ## Prerequisites
 
