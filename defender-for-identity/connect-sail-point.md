@@ -35,7 +35,7 @@ To configure the SailPoint Identity Security Cloud connector in Microsoft Defend
 
 This section provides instructions for connecting Microsoft Defender for Identity to your dedicated SailPoint Identity Security Cloud account using the connector APIs. This connection gives you visibility into and control over SailPoint Identity Security Cloud use.
 
-### Create a SailPoint Identity Security Cloud role
+### Create a SailPoint Identity Security Cloud Personal Access Token
 
 1. Sign in to SailPoint Identity Security Cloud.
 1. Go to **User's Preferences > Personal Access Tokens**.
