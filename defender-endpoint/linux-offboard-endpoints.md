@@ -20,11 +20,9 @@ ms.date: 03/23/2026
 
 # Offboard or uninstall Microsoft Defender for Endpoint on Linux
 
-This article explains the difference between offboarding and unstalling Microsoft Defender for Endpoint on a Linux device. In addition, it shows how to perform these operations, and provides guidance about how to choose between offboarding and unstalling. to offboard and when to uninstall.
+This article explains how to offboard and/or uninstall Microsoft Defender for Endpoing on a Linux device.
 
- a Linux device Microsoft Defender and uninstalling the Defender application from the Linux device. how to offboard and uninstall Microsoft Defender for Endpoint from a Linux server.
-
-There are important differences between offboarding and uninstalling Microsoft Defender for Endpoint on Linux:
+There are important differences between offboarding and uninstalling:
 
 - Offboarding disconnects a device from the Defender service so it stops sending security data while leaving the agent installed.
 - Uninstalling removes the Defender for Endpoint software and services from the device entirely, cleaning up or removing the installed components.
