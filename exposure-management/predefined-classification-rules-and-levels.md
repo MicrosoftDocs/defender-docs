@@ -6,7 +6,7 @@ author: dlanger
 manager: ornat-spodek
 ms.topic: reference
 ms.service: exposure-management
-ms.date: 03/18/2026
+ms.date: 03/25/2026
 ---
 
 # Predefined classifications - Microsoft Security Research
@@ -55,7 +55,9 @@ Current asset types are:
 | Devices with Sensitive Information (Azure Redis Cache Connection String) | Device | High | Devices that have accessed documents containing Azure Redis Cache Connection Strings, which are identified as sensitive data. These devices are automatically classified as High criticality when interacting with sensitive content and revert to their baseline classification after 5 consecutive days without accessing the sensitive file. Learm more [here](/purview/sit-defn-azure-redis-cache-connection-string).|
 | Devices with Sensitive Information (Azure Storage Account Key) | Device | High | Devices that have accessed documents containing Azure Storage Account Keys, which are identified as sensitive data. These devices are automatically classified as High criticality when interacting with sensitive content and revert to their baseline classification after 5 consecutive days without accessing the sensitive file. Learn more [here](/purview/sit-defn-azure-storage-account-key).|
 | Database Server | Device | Medium | Critical database servers in production that hold sensitive data and important information essential for the organization to function. These servers are at high risk of cyber threats and require top-level security measures to prevent unauthorized access.|
-| Global Administrator Workstation | Device | Medium | This rule applies to devices in frequent use by users having the Global Administrator role. **Note**: This rule logic relies on the predefined critical identity classification “Global Administrator”.|
+| Global Administrator Workstation | Device | High |
+Devices frequently used by users having the Global Administrator role. Device might contain sensitive information related to all aspects of Microsoft Entra and other services. Compromise could result in a Microsoft Entra identity breach, enabling unauthorized control over tenant‑wide administrative capabilities, privileged roles, and sensitive organizational data. These devices are at high risk of cyber threats and require top-level security measures to prevent unauthorized access.
+**Note**: This rule logic relies on the predefined critical identity classification “Global Administrator”.|
 
 ##### Identity
 
