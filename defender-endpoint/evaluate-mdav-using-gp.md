@@ -184,7 +184,7 @@ To enable Network Protection for Windows Servers, for now, please use PowerShell
 | OS | PowerShell cmdlet |
 | --- | --- |
 | Windows Server 2012 R2 and later    | `set-MpPreference -AllowNetworkProtectionOnWinServer $true` |
-| Windows Server 2016 and Windows Server 2012 R2 [unified MDE client](update-agent-mma-windows.md#upgrade-to-the-new-unified-agent-for-defender-for-endpoint) | `set-MpPreference -AllowNetworkProtectionOnWinServer $true` <br/><br/>`set-MpPreference -AllowNetworkProtectionDownLevel $ true` |
+| Windows Server 2016 and Windows Server 2012 R2 [unified MDE client](update-agent-mma-windows.md#upgrade-to-the-new-unified-agent-for-defender-for-endpoint) | `set-MpPreference -AllowNetworkProtectionOnWinServer $true` <br/><br/>`set-MpPreference -AllowNetworkProtectionDownLevel $true` |
 
 ## Attack Surface Reduction Rules
 
@@ -235,7 +235,7 @@ For more information, see [How do I configure or manage tamper protection?](prev
 
 ## Check the Cloud Protection network connectivity
 
-It's important to check that Cloud Protection network connectivity is working during your penetration testing.
+It's important to verify that Cloud Protection network connectivity is working during your penetration testing.
 
 1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
    1. Open the **Start** menu, and then type **cmd**.
@@ -244,7 +244,7 @@ It's important to check that Cloud Protection network connectivity is working du
 1. In the elevated Command Prompt, run the following commands:
 
    > [!TIP]
-   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Microsoft Defender`.
+   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
 
    ```dos
    (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
@@ -252,7 +252,7 @@ It's important to check that Cloud Protection network connectivity is working du
    MpCmdRun.exe -ValidateMapsConnection
    ```
 
-For more information, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](configure-network-connections-microsoft-defender-antivirus.md).
+For more information, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
 
 ## Check the Platform Update version
 
@@ -260,7 +260,7 @@ The latest 'Platform Update' version Production channel (GA) is available here:
 
 [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623+update)
 
-To check which 'Platform Update' version is installed, use the following PowerShell command (Run as admin):
+To see the installed version of 'Platform Update', run the following command in an elevated PowerShell session (a PowerShell window you opened by selecting **Run as administrator**):
 
 ```powershell
 Get-MpComputerStatus | Format-Table AMProductVersion
@@ -272,7 +272,7 @@ The latest 'Security Intelligence Update' version is available here:
 
 [Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware - Microsoft Security Intelligence](https://www.microsoft.com/wdsi/defenderupdates)
 
-To check which 'Security Intelligence Update' version is installed, use the following PowerShell command (Run as admin):
+To see the installed version of 'Security Intelligence Update', run the following command in an elevated PowerShell session:
 
 ```PowerShell
 Get-MpComputerStatus | Format-Table AntivirusSignatureVersion
@@ -284,14 +284,13 @@ The latest scan 'engine update' version is available here:
 
 [Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware - Microsoft Security Intelligence](https://www.microsoft.com/wdsi/defenderupdates)
 
-To check which 'Engine Update' version is installed, use the following PowerShell command(Run as admin):
+To see the installed version of 'Engine Update', run the following command in an elevated PowerShell session:
 
 ```PowerShell
 Get-MpComputerStatus | Format-Table AMEngineVersion
 ```
 
-If you're finding that your settings aren't taking effect, you might have a conflict. To resolve conflicts, refer:
-[Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md).
+If your settings don't take effect, you might have a conflict. To resolve conflicts, see [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md).
 
 ## For False Negatives (FNs) submissions
 
@@ -299,8 +298,7 @@ If you have any questions about a detection that Microsoft Defender AV makes, or
 
 If you have Microsoft XDR, Microsoft Defender for Endpoint P2/P1, or Microsoft Defender for Business: refer [Submit files in Microsoft Defender for Endpoint](admin-submissions-mde.md).
 
-If you have Microsoft Defender Antivirus, refer:
-https://www.microsoft.com/security/portal/mmpc/help/submission-help.aspx
+If you have Microsoft Defender Antivirus, see [Submit files for analysis](https://www.microsoft.com/security/portal/mmpc/help/submission-help.aspx).
 
 Microsoft Defender AV indicates a detection through [standard Windows notifications](configure-notifications-microsoft-defender-antivirus.md). You can also [review detections in the Microsoft Defender AV app](review-scan-results-microsoft-defender-antivirus.md).
 
@@ -308,6 +306,4 @@ The Windows event log also records detection and engine events. See the [Microso
 
 If your settings aren't applied properly, find out if there are conflicting policies that are enabled in your environment. For more information, see [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md).
 
-If you need to open a Microsoft support case:
-[Contact Microsoft Defender for Endpoint support](contact-support.md).
-
+If you need to open a Microsoft support case: [Contact Microsoft Defender for Endpoint support](contact-support.md).

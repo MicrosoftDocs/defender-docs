@@ -1,6 +1,6 @@
 ---
 title: Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management (Endpoint security policies)
-ms.reviewer: yonghree
+ms.reviewer: yongrhee
 description: Learn how to evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management (Endpoint security policies).
 ms.service: defender-endpoint
 ms.author: chrisda
@@ -101,7 +101,7 @@ Standard security intelligence updates can take hours to prepare and deliver; ou
 
 `InternalDefinitionUpdateServer|MicrosoftUpdateServer|MMPC`
 
-- `InternalDefinitionUpdateServer`is WSUS with Microsoft Defender Antivirus updates allowed.
+- `InternalDefinitionUpdateServer` is WSUS with Microsoft Defender Antivirus updates allowed.
 - `MicrosoftUpdateServer` is Microsoft Update (formerly Windows Update).
 - `MMPC` is <https://www.microsoft.com/en-us/wdsi/defenderupdates>.
 
@@ -204,7 +204,7 @@ It's important to verify that Cloud Protection network connectivity is working d
 1. In the elevated Command Prompt, run the following commands:
 
    > [!TIP]
-   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Microsoft Defender`.
+   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
 
    ```dos
    (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
@@ -212,7 +212,7 @@ It's important to verify that Cloud Protection network connectivity is working d
    MpCmdRun.exe -ValidateMapsConnection
    ```
 
-For more information, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](configure-network-connections-microsoft-defender-antivirus.md).
+For more information, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
 
 #### Check the platform update version
 
@@ -244,11 +244,11 @@ To check which "Engine Update" version you have installed, run the following com
 Get-MPComputerStatus | Format-Table AMEngineVersion
 ```
 
-If yo find that your settings aren't taking effect, you might have a conflict. For information on how to resolve conflicts, see [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md).
+If you find that your settings aren't taking effect, you might have a conflict. For information on how to resolve conflicts, see [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md).
 
 #### For False Negatives (FNs) submissions
 
-To information on how to make False Negatives (FNs) submissions, see:
+For information on how to make False Negatives (FNs) submissions, see:
 
 - [Submit files in Microsoft Defender for Endpoint](admin-submissions-mde.md) if you have Microsoft XDR, Microsoft Defender for Endpoint P2/P1, or Microsoft Defender for Business.
 - [Submit files for analysis](/unified-secops-platform/submission-guide) if you have Microsoft Defender Antivirus.

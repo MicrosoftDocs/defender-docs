@@ -1,4 +1,4 @@
----
+﻿---
 title: Deploy Microsoft Defender endpoint security to Windows devices using the Defender deployment tool (preview)
 description: Learn how to onboard and offboard Windows devices using the Defender deployment tool.
 ms.service: defender-endpoint
@@ -45,7 +45,7 @@ The following table describes some of the main features the tool supports.
 | **Custom expiry** | Defender deployment packages allow you to specify when you'd like them to expire, for any time up to a year, so that the package won't remain valid forever. This prevents adversaries from exploiting any old onboarding packages they might discover. Microsoft recommends making the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use. |
 | **Ability to view deployment packages** | You can see key properties of your deployment packages in one place by navigating to **Settings** > **Endpoints** > **Deployment packages**. You can filter by active, expired, or hidden deployment packages. |
 
-When the [interactive](#interactive-use), double-click experience is used, the tool automatically begins the onboarding process asks you to input the Defender deployment tool key generated in the portal when you create your Defender deployment tool package in **Settings** > **Endpoints** > **Onboarding**. It handles the installation of most prerequisite updates and the latest Defender components, and connects the device to the Defender services. If needed, the tool asks you to reboot the device to finish installation after you sign in again.
+When the [interactive](#interactive-use), double-click experience is used, the tool automatically begins the onboarding process and asks you to input the Defender deployment tool key generated in the portal when you create your Defender deployment tool package in **Settings** > **Endpoints** > **Onboarding**. It handles the installation of most prerequisite updates and the latest Defender components, and connects the device to the Defender services. If needed, the tool asks you to reboot the device to finish installation after you sign in again.
 
 For more [advanced and large-scale deployments](#advanced-and-large-scale-deployments), the tool offers functionality to perform additional and orchestrated steps through command-line parameters or a configuration file.
 
@@ -84,12 +84,6 @@ There are prerequisites that pertain to all supported Windows and Windows Server
    - SHA-2 update ([KB4474419](https://support.microsoft.com/help/4474419)) released September 10, 2019. If you use Windows Update, the required SHA-2 update is offered to you automatically. 
 
 - On Server 2008 R2 SP1 devices, .NET 3.5 or a higher version of the .NET framework must also be installed.
-
-R2 SP1, at a minimum, the updates for SHA2 code signing must be installed: 
-
-Servicing stack update (SSU) (KB4490628). If you use Windows Update, the required SSU is offered to you automatically. 
-
-SHA-2 update (KB4474419) released September 10, 2019. If you use Windows Update, the required SHA-2 update is offered to you automatically. 
 
 > [!NOTE]
 > For Windows 7 SP1, Windows Server 2008 R2, and Windows Server 2012, the Defender endpoint security solution that will be installed is currently in public preview. For more information about Defender endpoint security for Windows 7 SP1 and Windows Server 2008 R2 devices, see [Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security).
@@ -282,7 +276,7 @@ The following examples illustrate how to use the tool.
       DefenderDT.exe -File:\\server\DDT\Defenderconfig.txt
       ```
 
-      If the *MdeConfig.txt* file is stored in the same directory as the tool, you don't need need to specify a path.
+      If the *MdeConfig.txt* file is stored in the same directory as the tool, you don't need to specify a path.
 
 ## Using Group Policy for deployment
 
@@ -306,7 +300,7 @@ The following steps show how to create a scheduled task to run the tool using Gr
 
 1. In the **Name** field, type an appropriate name for the scheduled task.
 
-1. Go to the **Actions** tab and select **New**. Ensure that **Start a program** is selected in the Action field. Enter the full UNC path, using the file server's fully qualified domain name (FQDN), of the shared *DefenderDDT.exe* application.
+1. Go to the **Actions** tab and select **New**. Ensure that **Start a program** is selected in the Action field. Enter the full UNC path, using the file server's fully qualified domain name (FQDN), of the shared *DefenderDT.exe* application.
 
 1. In the **Add arguments (optional)** field, enter the [parameters](#advanced-and-large-scale-deployments) you wish to use. For example, to use an onboarding file that isn't in the working directory of the tool, specify the *-file:* parameter with the full UNC path to the onboarding file, for example `-file: \\server\share\WindowsDefenderATP.onboarding`.
 

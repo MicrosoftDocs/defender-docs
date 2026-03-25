@@ -124,7 +124,7 @@ After you've reviewed your alerts, your next step is to [review remediation acti
 
 - [Restore a quarantined file from the Action Center](#restore-a-quarantined-file-from-the-action-center)
 - [Undo multiple actions at one time](#undo-multiple-actions-at-one-time)
-- [Remove a file from quarantine across multiple devices](#remove-a-file-from-quarantine-across-multiple-devices). and
+- [Remove a file from quarantine across multiple devices](#remove-a-file-from-quarantine-across-multiple-devices), and
 - [Restore file from quarantine](#restore-file-from-quarantine)
 
 When you're done reviewing and undoing actions that were taken as a result of false positives, proceed to [review or define exclusions](#part-3-review-or-define-exclusions).
@@ -181,7 +181,7 @@ You can roll back and remove a file from quarantine if you determine it's clean 
 1. In the elevated Command Prompt, run the following commands:
 
    > [!TIP]
-   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Microsoft Defender`.
+   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
 
    ```dos
    (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1

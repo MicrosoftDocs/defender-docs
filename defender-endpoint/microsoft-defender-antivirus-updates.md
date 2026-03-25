@@ -17,7 +17,7 @@ appliesto:
 
 # Microsoft Defender Antivirus security intelligence and product updates and support
 
-Keeping Microsoft Defender Antivirus up to date is critical to assure your devices are protected against new malware and attack techniques. Update your antivirus protection, even if Microsoft Defender Antivirus is running in [passive mode](microsoft-defender-antivirus-compatibility.md). You can find the lates engine, platform, and signature date in [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/wdsi/defenderupdates).
+Keeping Microsoft Defender Antivirus up to date is critical to assure your devices are protected against new malware and attack techniques. Update your antivirus protection, even if Microsoft Defender Antivirus is running in [passive mode](microsoft-defender-antivirus-compatibility.md). You can find the latest engine, platform, and signature date in [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/wdsi/defenderupdates).
 
 This article is aimed at **Windows** devices, and includes information about [security intelligence updates](#security-intelligence-updates) and [product updates](#product-updates).
 
@@ -50,7 +50,7 @@ For more information, see [Manage the sources for Microsoft Defender Antivirus p
 
 ### Important points about product updates
 
-- Monthly updates are released in phases, resulting in multiple packages visible in your [Window Server Update Services](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).
+- Monthly updates are released in phases, resulting in multiple packages visible in your [Windows Server Update Services](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).
 
 - This article lists changes that are included in the broad release channel. [See the latest broad channel release here](https://www.microsoft.com/security/encyclopedia/adlpackages.aspx?action=info).
 
@@ -102,7 +102,7 @@ To install the latest security intelligence and antivirus engine updates, you ca
   1. In the elevated Command Prompt, run the following command:
 
      > [!TIP]
-     > This command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Microsoft Defender`.
+     > This command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
 
      ```dos
      (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1

@@ -177,5 +177,5 @@ Has Group Dependency Loop: no
 ## See also
 
 - [Device control in Defender for Endpoint](device-control-overview.md)
-- [Device control policies in and settings](device-control-policies.md)
+- [Device control policies and settings](device-control-policies.md)
 - [Device Control for macOS](mac-device-control-overview.md)

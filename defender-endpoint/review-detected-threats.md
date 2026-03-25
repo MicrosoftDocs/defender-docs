@@ -79,7 +79,7 @@ To see when the malware was detected, you can take the following steps:
 
 1. Open the CSV and find the **LastStateChangeDateTime** column to see when malware was detected.
 
-### In the devices with malware detections report, why can't I see any information about which malware was detected on the device.
+### In the devices with malware detections report, why can't I see any information about which malware was detected on the device?
 
 To see the malware name, visit the [Intune portal](https://intune.microsoft.com) as this is an integration with Intune, select **Antivirus**,  and select **Active malware** tab and you see a column named **Malware name**.
 
@@ -120,7 +120,7 @@ Do the following steps to verify that your network can communicate with the Micr
 2. In the elevated Command Prompt, run the following commands:
 
    > [!TIP]
-   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Microsoft Defender`.
+   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
 
    ```dos
    (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1

@@ -28,9 +28,11 @@ This article describes how to migrate (reonboard) devices that had been previous
 In most cases, full device offboarding isn't required when reonboarding. You can run the updated onboarding package and reboot your device to switch connectivity over. See the following information for details on individual operating systems.
 
 > [!IMPORTANT]
-> Limitations and known issues:- For device migrations (reonboarding): Offboarding isn't required to switch over to streamlined connectivity method. Once the updated onboarding package is run, a full device reboot is required for Windows devices and a service restart for macOS and Linux. For more information, see the details included in this article.
-- Windows 10 versions 1607, 1703, 1709, and 1803 don't support reonboarding. Offboard first and then onboard using the updated package. These versions also require a longer URL list.
-- Devices running the MMA agent aren't supported and must continue using the MMA onboarding method.
+> Limitations and known issues:
+>
+> - For device migrations (reonboarding): Offboarding isn't required to switch over to streamlined connectivity method. Once the updated onboarding package is run, a full device reboot is required for Windows devices and a service restart for macOS and Linux. For more information, see the details included in this article.
+> - Windows 10 versions 1607, 1703, 1709, and 1803 don't support reonboarding. Offboard first and then onboard using the updated package. These versions also require a longer URL list.
+> - Devices running the MMA agent aren't supported and must continue using the MMA onboarding method.
 
 [!INCLUDE [Microsoft Defender deployment tool preview](./includes/defender-deployment-tool-preview.md)]
 
@@ -182,7 +184,7 @@ You can use the following methods to check that you have successfully connected 
 - [Client analyzer](#use-defender-for-endpoint-client-analyzer-windows-to-validate-connectivity-after-onboarding-for-migrated-endpoints)
 - [Tracking with advanced hunting in Microsoft Defender XDR](#tracking-with-advanced-hunting-in-microsoft-365-defender)
 - [Track locally using Event Viewer (for Windows)](#tracking-locally-on-a-device-through-windows-event-viewer)
-- [Run tests to confirm connectivity with Defender for Endpoint services](#)
+- [Run tests to confirm connectivity with Defender for Endpoint services](#run-tests-to-confirm-connectivity-with-defender-for-endpoint-services)
 - Checking the registry editor
 - [PowerShell detection test](#powershell-detection-test)
 
@@ -232,7 +234,7 @@ Open the Defender for Endpoint service event log using the following steps:
 
    :::image type="content" source="media/log-summary-event-viewer.png" alt-text="Screenshot of Event Viewer with log summary section":::
 
-   You can also access the log by expanding**Applications and Services Logs>Microsoft>Windows>SENSE** and select **Operational**.
+   You can also access the log by expanding **Applications and Services Logs>Microsoft>Windows>SENSE** and select **Operational**.
 
 1. Event ID 4 tracks successful connections with Defender for Endpoint Command & Control channel. Verify successful connections with updated URL. For example:
 
@@ -244,7 +246,7 @@ Open the Defender for Endpoint service event log using the following steps:
    </EventData>
    ```
 
-1. Message 1 contains the contacted URL. Confirm the event includes the streamlined URL (endpoint.security.microsoft, com).
+1. Message 1 contains the contacted URL. Confirm the event includes the streamlined URL (endpoint.security.microsoft.com).
 
 1. Event ID 5 tracks errors if applicable.
 
@@ -269,7 +271,7 @@ Make sure to run a couple of basic commands post-connection to confirm connectiv
 
 Ensure that Automated investigation and response is working on your test device: [Configure automated investigation and response capabilities](/defender-xdr/m365d-configure-auto-investigation-response).
 
-For Auto-IR testing labs, navigate to **Microsoft Defender XDR** \> **Evaluations & Tutorials** \> **Tutorials & Simulations** \> **Tutorials \> **Automated Investigation tutorials**.
+For Auto-IR testing labs, navigate to **Microsoft Defender XDR** \> **Evaluations & Tutorials** \> **Tutorials & Simulations** \> **Tutorials** \> **Automated Investigation tutorials**.
 
 #### Cloud-delivered protection
 
@@ -281,7 +283,7 @@ verify that Cloud Protection network connectivity is working.
 2. In the elevated Command Prompt, run the following commands:
 
    > [!TIP]
-   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Microsoft Defender`.
+   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
 
    ```dos
    (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
@@ -325,7 +327,7 @@ Run `mdatp health --details edr` to confirm `edr_partner_geo_location` is availa
 
 Run mdatp connectivity test. Ensure the streamlined URL pattern is present. You should expect two for '\storage', one for '\mdav', one for '\xplat', and one for '/packages'.
 
-For example: `https:mdav.us.endpoint.security.microsoft/com/storage`
+For example: `https://mdav.us.endpoint.security.microsoft.com/storage`
 
 <a name='tracking-with-advanced-hunting-in-microsoft-365-defender'></a>
 
