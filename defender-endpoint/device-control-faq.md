@@ -53,11 +53,7 @@ Get-AuthenticodeSignature C:\Windows\System32\wbem\WmiPrvSE.exe
 
 ![Screenshot showing results of Get-AuthenticodeSignature cmdlet.](https://user-images.githubusercontent.com/81826151/202582101-5470dd54-ef32-4448-80c9-ba23a721dc70.png)
 
-If the policy still isn't working, contact support, and share your support cab. To get that file, open Command Prompt as an administrator, and then use the following command:
-
-```dos
-"%programfiles%\Windows Defender\MpCmdRun.exe" -GetFiles
-```
+If the policy still isn't working, generate the `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab` file, and then contact support. For instructions, see [Collect Microsoft Defender Antivirus diagnostic data](collect-diagnostic-data.md).
 
 ## Why is there no configuration UX for some policy groups?
 
