@@ -114,4 +114,4 @@ Select **Download CSV report** to download the cluster security findings as a CS
 
 ## Enable Defender for Containers
 
-To set the Defender for Containers plan for the cluster or the subscription use the [REST API commands](/rest/api/defenderforcloud-composite/pricings/update).
+To set the Defender for Containers plan for the cluster or the subscription, use the [REST API commands](/rest/api/defenderforcloud-composite/pricings/update).
