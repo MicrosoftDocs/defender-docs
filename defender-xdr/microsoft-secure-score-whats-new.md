@@ -233,7 +233,7 @@ We've integrated Microsoft Secure Score into Microsoft 365 Lighthouse. This inte
 
 ### Microsoft Secure Score permissions integration with Microsoft Defender XDR Unified role-based access control (RBAC) is now in Public Preview
 
-Previously, only Microsoft Entra global roles (such as Global Administrators) could access Microsoft Secure Score. Now, you can control access and grant granular permissions for the Microsoft Secure Score experience as part of the Microsoft Defender XDR Unified RBAC model.
+Previously, only Microsoft Entra global roles could access Microsoft Secure Score. Now, you can control access and grant granular permissions for the Microsoft Secure Score experience as part of the Microsoft Defender XDR Unified RBAC model.
 
 You can add the new permission and choose the data sources the user has access to by selecting the **Security posture** permissions group when creating the role. For more information, see [Create custom roles with Microsoft Defender XDR Unified RBAC](create-custom-rbac-roles.md). Users see Secure Score data for the data sources they have permissions to.
 
