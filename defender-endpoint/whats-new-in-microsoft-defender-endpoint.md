@@ -26,6 +26,12 @@ For recent releases of Microsoft Defender for Endpoint, including build numbers,
 
 Learn more about [Preview features](/defender-xdr/preview).
 
+## May 2026
+
+|Type  |Feature  |Preview/GA  |Description  |
+|---------|------------|-------------|-------------|
+|Release - Windows |Windows Defender Antivirus: Platform 4.18.26020.6 / Engine 1.1.26020.3 |GA |See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#windows-antivirus--february-2026--platform-418260206--engine-11260203). |
+
 ## March 2026
 
 |Type  |Feature  |Preview/GA  |Description  |
