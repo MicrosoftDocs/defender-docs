@@ -145,8 +145,6 @@ The following tables show the permissions granted to Defender for Containers rol
 | ---------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | MDCContainersImageAssessmentRole       | AmazonEC2ContainerRegistryPowerUser [AWS permissions list](https://docs.aws.amazon.com/AmazonECR/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-AmazonEC2ContainerRegistryPowerUser)<br /><br />AmazonElasticContainerRegistryPublicPowerUser  [AWS permissions list](https://docs.aws.amazon.com/AmazonECR/latest/public/public-security-iam-awsmanpol.html#public-security-iam-awsmanpol-AmazonElasticContainerRegistryPublicPowerUser) | Agentless container vulnerability assessment.                |
 | MDCContainersAgentlessDiscoveryK8sRole | eks:DescribeCluster<br/>eks:UpdateClusterConfig<br/>eks:CreateAccessEntry<br/>eks:ListAccessEntries<br/>eks:AssociateAccessPolicy<br/>eks:ListAssociatedAccessPolicies           | Agentless discovery of Kubernetes.<br />Updating EKS clusters to support IP restriction |
-|                                    |                                                              |                                                              |
-|                                    |                                                              |                                                              |
 
 ### AWS least privileged access
 
