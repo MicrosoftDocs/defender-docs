@@ -17,12 +17,7 @@ The graphs experience in the Microsoft Defender portal enables you to perform in
 
 This article explains how to use Sentinel graph to query, visualize, and interact with graphs to obtain new insights.
 
-> [!IMPORTANT]
-> Sentinel graph is currently in preview. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
-
 ## Prerequisites
-
-To access Sentinel graph and query it to produce visualizations, you must have the appropriate permissions. For more information, see [Roles and permissions in Microsoft Sentinel](../roles.md).
 
 + A custom graph exists in your tenant. 
 + To access the graph experience in Microsoft Sentinel and query it to produce visualizations, you must have the appropriate permissions. For more information, see [Get started with custom graphs in Microsoft Sentinel](./create-custom-graphs.md#permissions).
@@ -32,7 +27,7 @@ To access Sentinel graph and query it to produce visualizations, you must have t
 
 To access the graph experience in Microsoft Sentinel, login to the Microsoft Defender portal, select **Microsoft Sentinel** > **Graphs** from the navigation pane.
 
-The Sentinel Graph management page lists any custom graphs that you created using the Visual Studio Code Sentinel extension. If you haven't created a custom graph, [Create a custom graph mapping](./create-custom-graphs.md) to get started.
+The Sentinel Graph management page lists any custom graphs that you created using the Visual Studio Code Sentinel extension. If you haven't created a custom graph, [Create a custom graph](./create-custom-graphs.md) to get started.
 
 If you already created custom graphs, the Sentinel graph management page displays all available custom graphs. View an overview of each custom graph by selecting the **...** menu on any graph tile.
 
@@ -51,7 +46,8 @@ You can view the schema to understand the graph ontology – nodes, edges, and t
 
 1. A list of suggested queries is displayed. Select **Edit query** for the **Visualize any graph** query to copy the query to the query editor box. 
 
-    This generic query uses GQL syntax to specify the graph traversal and the data to return. In this example, the query traverses all nodes and edges in the graph and returns all available data for each entity, but limits results to 100 to ensure the query runs efficiently.
+    This query matches any one‑hop connection in the graph, finding a source node, a directed relationship, and a target node. It returns the full nodes and relationship for up to 100 such matches, making it useful for quickly exploring raw graph structure.
+
 
     ```gql
     MATCH (x)-[y]->(z)
@@ -74,34 +70,34 @@ You can view the schema to understand the graph ontology – nodes, edges, and t
 
 Use the following capabilities to traverse and explore your graphs:
 
-**Node colors**
+**Node colors**  
 Nodes are color-coded by type, making it easy to visualize the different entity types in your graph.
 
-**Graph legend**
+**Graph legend**  
 The graph legend shows all node types in your graph with their corresponding colors and counts. It also lists all edge types, so you can understand how nodes connect to each other.
 
-**Node labels** 
+**Node labels**   
 As you zoom in on the graph, more node labels appear. The first labels to appear are the most heavily connected nodes that are represented by larger circles. As you continue to zoom, more node labels appear in descending order of connectivity.  
 
-**View node details**
+**View node details**  
 Select a node to open a details pane on the right side. Use the metadata shown here to refine future queries—for example, by filtering on geographic region, department, or last updated date.
 
-**Explore connected assets**
+**Explore connected assets**  
 From the node details pane or by right-clicking the node, you can select **Explore connected assets** to traverse the graph and view the next hop from this node.
 
 :::image type="content" source="media/graph-visualization/graph-legend.png" lightbox="media/graph-visualization/graph-legend.png" alt-text="Screenshot showing the graph legend with node and edge types.":::
 
-**Hover over nodes**
+**Hover over nodes**  
 Hover over a node to highlight its connections. This hides unrelated nodes and edges for a clearer view of the node's connectivity and displays key node information, including connected node labels.
 
 
-**Filtering a graph** 
+**Filtering a graph**   
 
 You can use the filters at the top-right of the graph canvas to narrow down the visualized results by node type or edge relationship.
 
 :::image type="content" source="media/graph-visualization/filters.png" lightbox="media/graph-visualization/filters.png" alt-text="Screenshot showing the graph filters for node and edge types.":::
 
-**Canvas control - rearrange and zoom**
+**Canvas control - rearrange and zoom**  
 - Drag nodes to reposition them on the canvas
 - Use the recenter button in the bottom right to reset the view
 - Zoom in or out using your cursor or the zoom controls in the bottom right

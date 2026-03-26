@@ -74,6 +74,7 @@ To begin using Microsoft Sentinel graph in Microsoft Purview:
 * In **Microsoft Purview Insider Risk Management**, follow the instructions in [Data risk graph in Insider Risk Management](/purview/insider-risk-management-data-risk-graph).
 * In **Microsoft Purview Data Security Investigation**, follow the instructions in [Data risk graph in Data Security Investigations](/purview/data-security-investigations-data-risk-graph).
 
+---
 
 ## Related content
 
@@ -82,3 +83,4 @@ To begin using Microsoft Sentinel graph in Microsoft Purview:
 - [Microsoft Sentinel graph provider reference](./sentinel-graph-provider-reference.md)
 - [Graph Query Language (GQL) reference for Sentinel custom graph](./gql-reference-for-sentinel-custom-graph.md)
 - [Visualize graphs in Microsoft Sentinel graph (preview)](./graph-visualization.md)
+- [Plan costs and understand pricing and billing](../billing.md)

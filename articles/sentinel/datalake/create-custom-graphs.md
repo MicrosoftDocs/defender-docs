@@ -25,7 +25,7 @@ The following are required to create custom graphs in Microsoft Sentinel:
 + Jupyter extension for Visual Studio Code. 
 + Microsoft Sentinel data lake configured with appropriate permissions. For more information, see [Onboard to Microsoft Sentinel data lake](sentinel-lake-onboard-defender.md).
 
-Enable the Microsoft Entra ID connector to ingest the Microsoft Entra asset tables used in this article's sample code. See Asset data in Microsoft Sentinel data lake. For more information, see [Asset data ingestion in the Microsoft Sentinel data lake](enable-data-connectors.md).
+Enable the Microsoft Entra ID connector to ingest the Microsoft Entra asset tables used in this article's sample code. For more information, see [Asset data ingestion in the Microsoft Sentinel data lake](enable-data-connectors.md).
 
 ### Permissions
 
@@ -93,7 +93,7 @@ The following steps walk you through creating your first custom graph by using a
 	
 ### Create a graph 
 
-The following sample creates a graph to traverse Microsoft Entra group memberships and understand nested group relationships. The same helps you get started with a simple use case to learn the custom graph capability and leverage the power of graph traversal for your investigations. You can create a graph from any table available in the Sentinel data lake.
+The following sample creates a graph to traverse Microsoft Entra group memberships and understand nested group relationships. The sample code helps you get started with a simple use case to learn the custom graph capability and leverage the power of graph traversal for your investigations. You can create a graph from any table available in the Sentinel data lake.
 
 1.	Connect to your workspace and read Entra assets tables to begin building the graph.
 
@@ -383,7 +383,6 @@ Once you create the graph code in notebook, you can run the notebook in an inter
 
     :::image type="content" source="media/create-custom-graphs/configure-graph-job.png" lightbox="media/create-custom-graphs/configure-graph-job.png" alt-text="A screenshot of the create graph job page.":::
 
-.
 
 ### View and manage custom graphs
 
