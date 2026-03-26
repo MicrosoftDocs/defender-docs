@@ -226,7 +226,7 @@ Depending on the severity of the attack and the sensitivity of the device, you m
 The device isolation feature disconnects the compromised device from the network while retaining connectivity to the Defender for Endpoint service, which continues to monitor the device. On Windows 10, version 1709 or later, you can use selective isolation for more control over the network isolation level. You can also choose to enable Outlook and Microsoft Teams connectivity.
 
 > [!NOTE]
-> You can reconnect the device back to the network at any time. The button on the device page changes to say **Release from isolation**, and then you take the same steps as isolating the device.
+> You can reconnect the device back to the network at any time. The button on the device page changes to say **Release from isolation**. At this stage, you can take the same steps as isolating the device.
 >
 > If a device is inactive or offline when an isolation action is submitted, Microsoft Defender for Endpoint retries enforcing the isolation for up to three days. If the device doesn't reconnect in that time, the isolation won't be retried, and administrators should reissue the isolation action after the device becomes active.
 
