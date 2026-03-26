@@ -96,7 +96,6 @@ You can create different group types. Here's one group example XML file for any 
 
 :::image type="content" source="media/deploy-dc-gpo/define-policies.png" alt-text="Screenshot of define policies." lightbox="media/deploy-dc-gpo/define-policies.png":::
 
-
 1. Create one XML file for access policy rule.
 
 1. Use the properties in removable storage access policy rules to create an XML for each group's removable storage access policy rule. 
@@ -121,30 +120,46 @@ You can create different group types. Here's one group example XML file for any 
 
 ## Validating XML files
 
-Mpcmdrun built in functionality to validate XML files that are used for GPO deployments. This feature enables customers to detect any syntax errors the DC engine might encounter while parsing the settings. To perform this validation, administrators should copy the following PowerShell script and provide the appropriate file path for their XML files containing the Device Control rules and groups.
+The MpCmdRun command-line utility can validate XML files used for GPO deployments. This feature enables customers to detect any syntax errors the DC engine might encounter while parsing the settings. To do this validation, admins should copy and save the following PowerShell script and provide the appropriate file path for their XML files containing the Device Control rules and groups.
 
-```
-#Path to PolicyRules xml. Provide the filepath of the device control rules XML file
-$RulesXML="C:\Policies\PolicyRules.xml"
+1. Copy the following text into Notepad, and save the file as a .ps1 file in a location that's easy to find (for example, C:\Data\ValidateXML.ps1).
 
-#Path to Groups XML. Provide the filepath of the device control groups XML file
-$GroupsXML="C:\Policies\Groups.xml"
+   ```text
+   # Path to PolicyRules xml. Provide the filepath of the device control rules XML file
+   $RulesXML="C:\Policies\PolicyRules.xml"
 
-#Retrieve the install path from Defender
-$DefenderPath=(Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows Defender" -Name "InstallLocation").InstallLocation
+   # Path to Groups XML. Provide the filepath of the device control groups XML file
+   $GroupsXML="C:\Policies\Groups.xml"
 
-#Test PolicyRules
-& $DefenderPath\mpcmdrun.exe -devicecontrol -testpolicyxml $RulesXML -rules
+   # Retrieve the install path from Defender
+   $DefenderPath=(Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows Defender" -Name "InstallLocation").InstallLocation
 
-#Test Groups
-& $DefenderPath\mpcmdrun.exe -devicecontrol -testpolicyxml $GroupsXML -groups
-```
+   # Test PolicyRules
+   & $DefenderPath\MpCmdrun.exe -DeviceControl -TestPolicyXml $RulesXML -Rules
 
+   # Test Groups
+   & $DefenderPath\MpCmdRun.exe -DeviceControl -TestPolicyXml $GroupsXML -Groups
+   ```
 
-If there are no errors, the following output will be printed in the PowerShell console:
+1. Open an elevated PowerShell session (a PowerShell window you opened by selecting **Run as administrator**). For example:
+   1. Open the **Start** menu, and then type **powershell**.
+   2. Right-click on the **PowerShell 7 (x64)** or **Windows PowerShell** result, and then select **Run as administrator**.
 
+1. In the elevated PowerShell session, run the following command:
 
-```
+   ```powershell
+   & <PathToScriptFile>\<ScriptFileName.ps1>
+   ```
+
+   For example:
+
+   ```powershell
+   & C:\Data\ValidateXML.ps1
+   ```
+
+If there are no errors, the following output is shown:
+
+```console
 DC policy rules parsing succeeded
 Verifying absolute rules data against the original data
 Rules verified with success
@@ -156,13 +171,11 @@ Has Group Dependency Loop: no
 
 > [!NOTE]
 > To capture evidence of files being copied or printed, use [Endpoint DLP.](/purview/dlp-copy-matched-items-get-started?tabs=purview-portal%2Cpurview)
-> 
+>
 > Comments using XML comment notation `<!-- COMMENT -->` can be used in the Rule and Group XML files, but they must be inside the first XML tag, not the frontline of the XML file.
 
 ## See also
 
 - [Device control in Defender for Endpoint](device-control-overview.md)
-- [Device control policies in and settings](device-control-policies.md)
+- [Device control policies and settings](device-control-policies.md)
 - [Device Control for macOS](mac-device-control-overview.md)
-
-

@@ -1,6 +1,6 @@
 ---
 title: Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management (Endpoint security policies)
-ms.reviewer: yonghree
+ms.reviewer: yongrhee
 description: Learn how to evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management (Endpoint security policies).
 ms.service: defender-endpoint
 ms.author: chrisda
@@ -214,23 +214,30 @@ Select **Endpoint security policies** at the top of the page to return to the **
 1. From these groups, select the settings that you want to manage with this profile.
 1. Set the policies for the chosen groups of settings by configuring them as described in the following table:
 
-   |Description| Setting|
-   | -------- | -------- |
-   | TamperProtection (Device) | On|
+   |Description|Setting|
+   |---|---|
+   |TamperProtection (Device)|On|
 
 #### Check the Cloud Protection network connectivity
 
-It's important to check that the Cloud Protection network connectivity is working during your penetration testing.
+It's important to verify that Cloud Protection network connectivity is working during your penetration testing.
 
-CMD (Run as admin)
+1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
+   1. Open the **Start** menu, and then type **cmd**.
+   2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
 
+1. In the elevated Command Prompt, run the following commands:
 
-```powershell
-cd "C:\Program Files\Windows Defender"
-MpCmdRun.exe -ValidateMapsConnection
-```
+   > [!TIP]
+   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
 
-For more information [Use the cmdline tool to validate cloud-delivered protection](configure-network-connections-microsoft-defender-antivirus.md).
+   ```dos
+   (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
+
+   MpCmdRun.exe -ValidateMapsConnection
+   ```
+
+For more information, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
 
 #### Check the platform update version
 
@@ -262,11 +269,11 @@ To check which "Engine Update" version you have installed, run the following com
 Get-MPComputerStatus | Format-Table AMEngineVersion
 ```
 
-If yo find that your settings aren't taking effect, you might have a conflict. For information on how to resolve conflicts, see [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md).
+If you find that your settings aren't taking effect, you might have a conflict. For information on how to resolve conflicts, see [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md).
 
 #### For False Negatives (FNs) submissions
 
-To information on how to make False Negatives (FNs) submissions, see:
+For information on how to make False Negatives (FNs) submissions, see:
 
 - [Submit files in Microsoft Defender for Endpoint](admin-submissions-mde.md) if you have Microsoft XDR, Microsoft Defender for Endpoint P2/P1, or Microsoft Defender for Business.
 - [Submit files for analysis](/unified-secops-platform/submission-guide) if you have Microsoft Defender Antivirus.

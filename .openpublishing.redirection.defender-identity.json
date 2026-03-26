@@ -1129,6 +1129,16 @@
       "source_path": "defender-for-identity/link-unlink-account-to-identity.md",
       "redirect_url": "/defender-for-identity/manage-related-identities-accounts",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "defender-for-identity/deploy/remote-calls-sam.md",
+      "redirect_url": "/defender-for-identity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/understand-lateral-movement-paths.md",
+      "redirect_url": "/defender-for-identity",
+      "redirect_document_id": false
+    },
   ]
 }
