@@ -69,17 +69,14 @@ This section provides useful information on what you need to know before you sta
 
 ### Permissions prerequisites
 
-- You must be a Global Administrator or Security Administrator in Microsoft Entra ID to:
+- You must be at least a Security Administrator in Microsoft Entra ID to:
   - Gain initial access to [Permissions and roles](https://security.microsoft.com/mtp_roles) in the Microsoft Defender portal.
 
   - Manage roles and permissions in Microsoft Defender XDR Unified RBAC.
 
   - Create a custom role that can grant access to security groups or individual users to manage roles and permissions in Microsoft Defender XDR unified RBAC. This removes the need for Microsoft Entra global roles to manage permissions. To do this, you need to assign the **Authorization** permission in Microsoft Defender XDR Unified RBAC. For details on how to assign the Authorization permission, see [Create a role to access and manage roles and permissions](create-custom-rbac-roles.md#create-a-role-to-access-and-manage-roles-and-permissions).
 
-- The Microsoft Defender XDR security solution continues to respect existing Microsoft Entra global roles when you activate the Microsoft Defender XDR Unified RBAC model for some or all of your workloads, that is, Global Administrators retain assigned administrator privileges.
-
-> [!IMPORTANT]
-> Global Administrator is a highly privileged role that should be limited to scenarios when you can't use an existing role.
+- The Microsoft Defender XDR security solution continues to respect existing Microsoft Entra global roles when you activate the Microsoft Defender XDR Unified RBAC model for some or all of your workloads. That is, Administrators retain assigned administrator privileges.
 
 ### Migration of existing roles and permissions
 
