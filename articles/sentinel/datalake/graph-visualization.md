@@ -3,7 +3,7 @@ title: Visualize custom graphs in Microsoft Sentinel graph (preview)
 description: Learn how to use Microsoft Sentinel graph to query, visualize, and interact with custom security graphs to gain new security insights.
 author: EdB-MSFT
 ms.author: edbaynash
-ms.date: 03/23/2026
+ms.date: 03/26/2026
 ms.topic: how-to
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-graph
