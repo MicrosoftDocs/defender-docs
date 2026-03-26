@@ -20,12 +20,15 @@ Scoping is configured in the Microsoft Defender portal.
 
 ## What is Microsoft Sentinel scoping?
 
-Microsoft Sentinel scoping extends permissions management in the Defender portal to enable:
+Microsoft Sentinel scoping extends permissions management in the Defender portal so the administrator can grant permissions to specific subsets of data in Sentinel tables. To create scopes, do the following:
 
-- **Define logical scopes**: Create scope definitions that align with your organizational structure (by business unit, region, or data sensitivity)
-- **Tag data rows at ingestion time**: Apply scope tags to rows in tables using Table Management, allowing you to create rules that tag newly ingested data automatically
-- **Assign users or groups to scopes**: Assign specific users or groups to one or more scopes using Unified RBAC
-- **Restrict access by scope**: Limit user access to alerts, incidents, hunting queries, and data lake exploration based on their assigned scope
+- [Define logical scopes](#step-1-create-a-sentinel-scope): Create scope definitions that align with your organizational structure (by business unit, region, or data sensitivity)
+- [Assign users or groups to scopes](#step-2-assign-scopes-tags-to-users-or-groups): Assign specific users or groups to one or more scopes using Unified RBAC
+- [Tag data rows at ingestion time](#step-3-tag-tables-with-scope): Apply scope tags to rows in tables using Table Management, allowing you to create rules that tag newly ingested data automatically
+- [Restrict access by scope](#step-4-access-scoped-data): Limit user access to alerts, incidents, hunting queries, and data lake exploration based on their assigned scope
+
+> [!NOTE]
+> Scopes are additive. Users assigned multiple roles get the broadest permissions available to them from all their assignments. For example, if you hold both an Entra global reader role and a Defender XDR URBAC role that provides scoped permissions on *System tables*, you're unrestricted by scopes on System tables due to the Entra role. Another example is if you hold the same role permissions in Microsoft Defender XDR for a workspace, with two different scopes, you have that permission for both scopes.
 
 Scopes apply to Sentinel tables that support ingestion-time transformations.
 
@@ -135,7 +138,7 @@ Alerts inherit scope from the underlying data. Incidents are visible if at least
 The `SentinelScope_CF` custom field is available for use in queries and detection rules to reference scope in your analytics.
 
 > [!NOTE]
->When you create custom detections and analytics rules, you must project the `SentinelScope_CF` column in their KQL to make the triggered alerts visible to scoped analysts. If you don't project this column, alerts are unscoped and hidden from scoped users.
+When you create custom detections and analytics rules, you must project the `SentinelScope_CF` column in their KQL to make the triggered alerts visible to scoped analysts. If you don't project this column, alerts are unscoped and hidden from scoped users.
 
 :::image type="content" source="./media/scoping/scoped-alerts-view.png" alt-text="Screenshot of alerts filtered by Sentinel scope.":::
 
@@ -152,6 +155,7 @@ The following limitations apply:
 - **No automatic scope inheritance**: The Log Analytics tables `SecurityAlerts` and `SecurityIncidents` don't automatically inherit the scope from the raw data/tables from which they were generated. Therefore, scoped users can't access them by default. As a workaround you can do one of the following actions:
   - Use the XDR `AlertsInfo` and `AlertsEvidence` tables where scope is automatically inherited, or
   - Apply scope to these Log Analytics tables manually (this method is limited to the attributes in the table and might not be equivalent to inheritance of the data tables that generated these alerts).
+- **Supported experiences**: Sentinel scopes can only be assigned to Defender XDR RBAC roles. Azure RBAC permissions on workspaces or Entra global role permissions aren't supported. Experiences that can't use row level RBAC, such as Jupyter Notebooks, don't allow users who are restricted to a scope to view data for those respective workspaces.
 
 ## Known Issues
 
