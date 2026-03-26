@@ -29,7 +29,7 @@ If you're using [Defender for Business](/defender-business/mdb-overview), you ca
 
 > [!NOTE]
 >
-> - Only users with 'Manage security settings' permissions can configure email notifications. If you've chosen to use basic permissions management, users with Security Administrator higher roles can configure email notifications.
+> - Only users with **Manage security settings** permissions or higher roles can configure email notifications. If you've chosen to use basic permissions management, users with Security Administrator higher roles can configure email notifications.
 > - Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
 You can set the alert severity levels that trigger notifications. You can also add or remove recipients of the email notification. New recipients get notified about alerts triggered after they're added. For more information about alerts, see [View and organize the Alerts queue](/defender-endpoint/alerts-queue).
