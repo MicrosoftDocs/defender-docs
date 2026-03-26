@@ -127,7 +127,7 @@ jobs:
             HASH=$(sha256sum "$AUTH_FILE" | cut -d' ' -f1 | head -c 12)
             echo "hash=$HASH" >> "$GITHUB_OUTPUT"
           fi
-          echo "date=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+          echo "date=$(date -u +%Y-%m-%d-%H)" >> "$GITHUB_OUTPUT"
 
       - name: Restore approvers cache
         if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true'
