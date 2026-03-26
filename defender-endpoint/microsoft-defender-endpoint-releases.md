@@ -169,7 +169,7 @@ For known issues, see [macOS known issues](#macos-known-issues).
 | General      | CVE‑2025‑68664/5 LangGrinch (langchain vulnerability) |
 | General      | Mitigation for a possible EDLP performance issue related to MDM profile behavior |
 | General      | Device Control - policy conditional on secure digital card details |
-| Network configuration | Starting with this release, the MDE client uses a new CDN URL for product updates. For the updated URL, see [Using Custom channel and ManifestServer to control updates](/microsoft-365-apps/mac/mau-configure-organization-specific-updates). For the full list of required URLs, see [Standard connectivity URLs](standard-device-connectivity-urls-commercial.md).<br><br>If your organization uses a proxy allowlist, add this URL to ensure macOS platform updates are delivered. <br><br>The previous CDN URL (`officecdn-microsoft-com.akamaized.net`) remains valid. |
+| Documentation | Replaced endpoint URL for Microsoft CDN with a reference to the MAU product documentation. For more information, see [Using Custom channel and ManifestServer to control updates](/microsoft-365-apps/mac/mau-configure-organization-specific-updates). For the full list of required URLs, see [Standard connectivity URLs](standard-device-connectivity-urls-commercial.md). |
 | General      | Bug and performance fixes |
 
 ### macOS | February 2026 | Platform: 101.25122.0008
