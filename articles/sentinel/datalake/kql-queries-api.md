@@ -6,7 +6,7 @@ author: EdB-MSFT
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
 ms.topic: how-to
-ms.date: 03/23/2026
+ms.date: 03/26/2026
 ms.author: edbaynash  
 ms.collection: ms-security  
 ---  
@@ -85,10 +85,26 @@ You can include additional execution options in the request payload, such as:
 
 - Server timeout
 - Query consistency
-- Read-only enforcement
+- Read-only enforcement 
 
 These options are useful when running queries in automated or high-scale environments.
- 
+
+sample payload:
+```json
+{
+    "csl": "SigninLogs | take 10",
+    "db": "workspace1-12345678-abcd-abcd-1234-1234567890ab",
+    "properties": {
+        "Options": {
+            "servertimeout": "00:04:00",
+            "queryconsistency": "strongconsistency",
+            "query_language": "kql",
+            "request_readonly": False,
+            "request_readonly_hardline": False
+        }
+    }
+```
+
 ## Service limits and considerations
 
 Query execution is subject to time and result size limits. For current limits, see: [Microsoft Sentinel data lake service limits](sentinel-lake-service-limits.md)
