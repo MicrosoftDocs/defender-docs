@@ -134,6 +134,9 @@ Alerts inherit scope from the underlying data. Incidents are visible if at least
 
 The `SentinelScope_CF` custom field is available for use in queries and detection rules to reference scope in your analytics.
 
+> [!NOTE]
+>When you create custom detections and analytics rules, you must project the `SentinelScope_CF` column in their KQL to make the triggered alerts visible to scoped analysts. If you don't project this column, alerts are unscoped and hidden from scoped users.
+
 :::image type="content" source="./media/scoping/scoped-alerts-view.png" alt-text="Screenshot of alerts filtered by Sentinel scope.":::
 
 ## Limitations
