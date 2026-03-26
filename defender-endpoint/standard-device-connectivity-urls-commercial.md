@@ -248,8 +248,6 @@ This article includes a list of the standard connectivity URLs required to onboa
 
 ## Client processes
 
-## Client processes
-
 Because these Defender for Endpoint-related processes generate network communications, make sure that communications from these processes are not blocked.
 
 [!INCLUDE [Microsoft Defender for Endpoint processes](includes/streamlined-connectivity-processes.md)]
