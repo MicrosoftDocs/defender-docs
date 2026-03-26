@@ -22,7 +22,7 @@ A DSA is required for the following features and functionality:
 
 - When working with a sensor installed on an [AD FS / AD CS server](active-directory-federation-services.md).
 
-- Requesting member lists for local administrator groups from devices seen in network traffic, events and ETW activities via a [SAM-R call](remote-calls-sam.md) made to the device. Collected data is used to calculate potential lateral movement paths.
+- Requesting member lists for local administrator groups from devices seen in network traffic, events and ETW activities via a [SAM-R call](remote-calls-sam.md) made to the device. 
 
 - Accessing the *DeletedObjects* container to collect information about deleted users and computers. 
 
