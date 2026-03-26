@@ -157,10 +157,6 @@ The following limitations apply:
   - Apply scope to these Log Analytics tables manually (this method is limited to the attributes in the table and might not be equivalent to inheritance of the data tables that generated these alerts).
 - **Supported experiences**: Sentinel scopes can only be assigned to Defender XDR RBAC roles. Azure RBAC permissions on workspaces or Entra global role permissions aren't supported. Experiences that can't use row level RBAC, such as Jupyter Notebooks, don't allow users who are restricted to a scope to view data for those respective workspaces.
 
-## Known Issues
-
-**Scope application issue**: Sometimes, scope doesn't correctly apply to a table. In that case, create a blank transformation rule on the table first (in Azure), and then continue to tag the table with scope.
-
 ## Permissions and access
 
 - Users can view an incident if they have access to at least one alert in the incident. They can manage the incident only if they have access to all alerts in the incident and have the required permission.
