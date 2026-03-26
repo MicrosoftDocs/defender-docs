@@ -68,7 +68,7 @@ For more information on assigning roles to managed identities, see [Assign Azure
 
 ## Create a job
 
-You can create jobs to run on a schedule or one-time. When you create a job, you specify the destination workspace and table for the results. You can write the results to a new table or append them to an existing table in the analytics tier. You can create a new KQL job or create a job from a template containing the query and job settings. For more information, see [Create a KQL job from a template](#create-a-job-from-a-template).
+You can create jobs to run on a schedule or one-time. When you create a job, you specify the destination workspace and table for the results. You can write the results to a new table or append them to an existing table in the analytics or data lake tier. You can create a new KQL job or create a job from a template containing the query and job settings. For more information, see [Create a KQL job from a template](#create-a-job-from-a-template).
 
 
 1. Start the job creation process from KQL query editor, or from the jobs management page.
@@ -97,6 +97,9 @@ You can create jobs to run on a schedule or one-time. When you create a job, you
 
     > [!NOTE]
     > If you're writing to an existing table, the query must return results with a schema that matches the destination table schema. If the query doesn't return results with the correct schema, the job fails when it runs.
+    >  
+    >  Writing KQL jobs into System tables is currently in preview. 
+
 
 1. Select **Next**.
 
