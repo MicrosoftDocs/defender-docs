@@ -20,7 +20,7 @@ For information about the latest versions and features, see [What's new in Micro
 
 ### Defender for Identity alerts transitioned to the unified Defender alerting experience
 
-As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, the following alerts were converted from the Microsoft Defender for Identity classic format to the the unified Defender alerting format. Keep in mind that all alerts are based on detections from Defender for Identity sensors.
+As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, the following alerts were converted from the Microsoft Defender for Identity classic format to the unified Defender alerting format. Keep in mind that all alerts are based on detections from Defender for Identity sensors.
 
 |Classic Alert Title|External ID|XDR Alert Name|Detector ID|
 |---|---|---|---|
@@ -940,7 +940,7 @@ Released May 15, 2023
 
 - New health alert for verifying that ADFS Container Auditing is configured correctly. For more information, see [Microsoft Defender for Identity sensor health alerts](health-alerts.md).
 
-- The Microsoft Defender 365 **Identity** page includes UI updates for the lateral movement path experience. No functionality was changed. For more information, see [Understand and investigate Lateral Movement Paths (LMPs) with Microsoft Defender for Identity](understand-lateral-movement-paths.md).
+- The Microsoft Defender 365 **Identity** page includes UI updates for the lateral movement path experience. No functionality was changed.
 
 - This version includes improvements and bug fixes for internal sensor infrastructure.
 
