@@ -90,7 +90,7 @@ Defender for Cloud is [integrated with Microsoft Defender XDR](concept-integrati
 
 ### Microsoft-maintained container images
 
-Defender for Containers deploys container images that are maintained and updated by Microsoft as part of the runtime protection components. These images are hosted in Microsoft Container Registry (MCR).
+Defender for Containers deploys container images that are maintained and updated by Microsoft as part of the runtime protection components. These images are published to Microsoft Container Registry (MCR).
 
 Customers don't modify or patch these images directly. Microsoft maintains and updates them as part of the Defender for Containers release process.
 
@@ -102,6 +102,9 @@ The following images are used by Defender for Containers runtime protection comp
 | `low-level-collector` | Collects low-level runtime telemetry from Kubernetes nodes | `mcr.microsoft.com/azuredefender/stable/low-level-collector` |
 | `pod-collector` | Collects Kubernetes pod runtime data used for threat detection | `mcr.microsoft.com/azuredefender/stable/pod-collector` |
 | `anti-malware-collector` | Collects malware detection signals for container workloads | `mcr.microsoft.com/azuredefender/stable/anti-malware-collector` |
+| `old-file-cleaner` | Cleans up temporary and stale files as part of initialization workflows | `mcr.microsoft.com/azuredefender/stable/old-file-cleaner` |
+| `audit-logs-enabler` | Enables audit log collection for supported environments (for example, on-premises clusters) | `mcr.microsoft.com/azuredefender/stable/audit-logs-enabler` |
+| `defender-admission-controller` | Enforces runtime gating policies for Kubernetes workloads | `mcr.microsoft.com/mdc/prd/defender-admission-controller` |
 
 Updates are delivered through the deployment mechanism used by your environment. For example:
 
