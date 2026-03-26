@@ -145,7 +145,6 @@ In the query editor, select **Create detection rule** and specify the following 
 
 - **Detection name** - Name of the detection rule; make it unique.
 - **Frequency** - Interval for running the query and taking action. [See more guidance in the rule frequency section](#rule-frequency).
-- **Lookback** - The time period covered by the query when the custom detection targets data from Microsoft Sentinel only. [See more guidance in the lookback section](#lookback). 
 - **Alert title** - Title displayed with alerts triggered by the rule; make it unique and use plaintext. Strings are sanitized for security purposes, so HTML, Markdown, and other code don't work. Any URLs included in the title should follow the [percent-encoding format](https://en.m.wikipedia.org/wiki/Percent-encoding) for them to display properly.
 - **Severity** - Potential risk of the component or activity identified by the rule.
 - **Category** - Threat component or activity identified by the rule.
