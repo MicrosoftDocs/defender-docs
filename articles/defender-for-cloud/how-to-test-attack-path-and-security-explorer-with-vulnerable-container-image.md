@@ -84,7 +84,7 @@ If the list of attack paths has no entries, you can still test this feature by u
 
 ## [**AWS**](#tab/testing-the-attack-path-and-security-explorer-using-a-mock-vulnerable-container-image-for-aws)
 
-### Testing the attack path and security explorer by using a mock vulnerable container image for AWS
+### Test the attack path and security explorer by using a mock vulnerable container image for AWS
 
 1. Create an ECR repository named *mdc-mock-0001*.
 1. In your AWS account, select **Command line or programmatic access**.
@@ -137,7 +137,7 @@ The Helm chart deploys resources onto your cluster that you can use to infer att
 
 ## [**GCP**](#tab/testing-the-attack-path-and-security-explorer-using-a-mock-vulnerable-container-image-for-gcp)
 
-### Testing the attack path and security explorer by using a mock vulnerable container image for GCP
+### Test the attack path and security explorer by using a mock vulnerable container image for GCP
 
 1. Sign in to the GCP portal.
 1. Search for **Artifact Registry**.
