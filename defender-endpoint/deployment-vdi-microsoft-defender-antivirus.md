@@ -8,7 +8,6 @@ author: chrisda
 ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: jesquive
-manager: bagol
 ms.subservice: ngp
 ms.service: defender-endpoint
 ms.collection:
@@ -148,7 +147,7 @@ If you would prefer to do everything manually, here's what to do to replicate th
    > [!NOTE]
    > We set the script so that the last 12 digits of the GUID are the year, month, day, and time when the file was downloaded so that a new folder is created each time. You can change this so that the file is downloaded to the same folder each time.
 
-1. Download a security intelligence package from [https://www.microsoft.com/wdsi/definitions](https://www.microsoft.com/wdsi/definitions)  into the GUID folder. The file should be named `mpam-fe.exe`.
+1. Download a security intelligence package from [https://www.microsoft.com/wdsi/defenderupdates](https://www.microsoft.com/wdsi/defenderupdates)  into the GUID folder. The file should be named `mpam-fe.exe`.
 
 1. Open a Command Prompt window and navigate to the GUID folder you created. Use the `/X` extraction command to extract the files. For example, `mpam-fe.exe /X`.
 

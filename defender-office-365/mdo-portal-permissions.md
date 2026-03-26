@@ -4,7 +4,6 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.audience: Admin
 ms.topic: how-to
 audience: Admin

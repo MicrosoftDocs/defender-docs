@@ -8,7 +8,6 @@ audience: ITPro
 author: paulinbar
 ms.author: painbar
 ms.reviewer: ericlaw
-manager: bagol
 ms.custom: asr
 ms.subservice: macos
 ms.topic: overview

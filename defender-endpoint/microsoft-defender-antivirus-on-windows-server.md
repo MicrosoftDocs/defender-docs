@@ -7,7 +7,6 @@ ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
 ms.reviewer: pahuijbr
-manager: bagol
 ms.topic: how-to
 ms.date: 10/20/2025
 ms.collection: 

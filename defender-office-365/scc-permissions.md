@@ -4,7 +4,6 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 audience: Admin
 ms.topic: article
 f1_keywords: 
@@ -206,7 +205,7 @@ Roles that aren't assigned to the Organization Management role group by default 
 |<sup>\*</sup>**Insider Risk Management Investigation**|Access all insider risk management alerts, cases, notices templates, and the Content Explorer for all cases.|Data Security IRM Triage Agent <br/><br/> Data Security Management <br/><br/> Insider Risk Management <br/><br/> Insider Risk Management Investigators|
 |<sup>\*</sup>**Insider Risk Management Permanent contribution**|This role group is visible, but is used by background services only.|IRM Contributors|
 |<sup>\*</sup>**Insider Risk Management Reports Administrator**|Allows viewing Insider Risk reports related to cases and events for Insider Risk Management.|Data Security Management <br/><br/> Insider Risk Management|
-|<sup>\*</sup>**Insider Risk Management Sessions**|Perform investigation and remediation of message violations within the Insider Risk Management solution. Can view only message metadata.|Data Security Management <br/><br/> Insider Risk Management <br/><br/> Insider Risk Management Session Approvers|
+|<sup>\*</sup>**Insider Risk Management Sessions**|Allows for controlled approval and oversight of user session-based activities within Microsoft Purview Insider Risk Management, without granting access to investigations, alerts, cases, or sensitive content.|Data Security Management <br/><br/> Insider Risk Management <br/><br/> Insider Risk Management Session Approvers|
 |<sup>\*</sup>**Insider Risk Management Temporary contribution**|This role group is visible, but is used by background services only.|IRM Contributors|
 |<sup>\*</sup>**Insights Reader**|Provides read-only access to all Insights reports in the Data Estate Insights app. Insights readers need to have at least data reader role access to a collection to view reports about that specific collection.|Compliance Administrator <br/><br/> Data Estate Insights Admins <br/><br/> Data Estate Insights Readers <br/><br/> Data Security Management <br/><br/> Information Protection <br/><br/> Information Protection Admins <br/><br/> Information Protection Analysts <br/><br/> Information Protection Investigators <br/><br/> Privacy Management <br/><br/> Privacy Management Administrators <br/><br/> Privacy Management Analysts <br/><br/> Privacy Management Investigators <br/><br/> Privacy Management Viewers|
 |<sup>\*</sup>**Insights Writer**|Admin access to all insights reports in the Data Estate Insights app.|Data Estate Insights Admins|

@@ -6,7 +6,6 @@ ms.service: defender-xdr
 ms.localizationpriority: high
 ms.author: dansimp
 author: dansimp
-manager: dansimp
 audience: ITPro
 ms.collection: 
   -m365-security-compliance
