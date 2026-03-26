@@ -88,7 +88,7 @@ After installing the Microsoft Sentinel extension, you can start exploring data 
 
 ### View data lake tables and jobs
 
-Once you sign in, the Sentinel extension displays a list of **Lake tables** and **Jobs** in the left pane. The tables are grouped by the database and category. Federated tables are displayed under the **Assets** category under **System tables**. Select a table to see the column definitions.
+Once you sign in, the Sentinel extension displays a list of **Lake tables** and **Jobs** in the left pane. The tables are grouped by the database and category. Federated tables are displayed under the **Federated tables** category under **System tables**. Select a table to see the column definitions.
 
 For information on Jobs, see [Jobs and Scheduling](#jobs-and-scheduling). For more information on federated tables, see [Using federated tables in the Microsoft Sentinel data lake](using-data-federation.md).
 
