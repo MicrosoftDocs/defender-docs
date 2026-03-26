@@ -155,7 +155,7 @@ Set up a network file share (UNC/mapped drive) to download security intelligence
 1. Set the share location in the policy to the share.
 
     > [!NOTE]
-    > Do not add the x64 (or x86) folder in the path. The mpcmdrun.exe process adds it automatically.
+    > Do not add the x64 (or x86) folder in the path. The MpCmdRun.exe process adds it automatically.
 
 ## Setting up the Pilot (UAT/Test/QA) environment
 
