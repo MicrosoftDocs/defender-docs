@@ -116,9 +116,9 @@ You can create MCP tools based on queries that use federated tables:
 
 Federated tables are accessible in Jupyter notebooks through the Microsoft Sentinel VS Code extension.
 
-In the Microsoft Sentinel VS Code extension, federated tables appear under: **Lake tables** > **System tables** > **Assets**
+In the Microsoft Sentinel VS Code extension, federated tables appear under: **Lake tables** > **System tables** > **Federated tables**
 
-:::image type="content" source="./media/using-data-federation/vscode-federated-tables.png" alt-text="Screenshot showing federated tables in the Microsoft Sentinel VS Code extension under System tables Assets." lightbox="./media/using-data-federation/vscode-federated-tables.png":::
+:::image type="content" source="./media/using-data-federation/vscode-federated-tables.png" alt-text="Screenshot showing federated tables in the Microsoft Sentinel VS Code extension under System tables Federated tables." lightbox="./media/using-data-federation/vscode-federated-tables.png":::
 
 
 Working with federated tables in Jupyter notebooks follows the same patterns as native System tables:

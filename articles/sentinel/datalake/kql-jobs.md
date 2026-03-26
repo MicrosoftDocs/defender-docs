@@ -7,7 +7,7 @@ ms.author: edbaynash
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
 ms.topic: how-to
-ms.date: 11/19/2025
+ms.date: 03/26/2026
 ms.collection: ms-security  
 
 # Customer intent: As a security engineer or administrator, I want to create jobs in the Microsoft Sentinel data lake so that I can run KQL queries against the data in the lake tier and promote the results to the analytics tier.
@@ -17,7 +17,7 @@ ms.collection: ms-security
 
 #  Create KQL jobs in the Microsoft Sentinel data lake
 
-KQL jobs are one-time or scheduled KQL queries on data in the Microsoft Sentinel data lake. Use jobs for investigative and analytical scenarios, such as: 
+KQL jobs are one-time or scheduled KQL queries on data in the Microsoft Sentinel data lake and federated tables. Use jobs for investigative and analytical scenarios, such as: 
 + Long-running one-time queries for incident investigations and incident response (IR)
 + Data aggregation tasks that support enrichment workflows using low-fidelity logs
 + Historical threat intelligence (TI) matching scans for retrospective analysis
@@ -27,7 +27,7 @@ KQL jobs are especially effective when queries use joins or unions across differ
 
 Use jobs to promote data from the data lake tier to the analytics tier. Once in the analytics tier, use the advanced hunting KQL editor to query the data. Promoting data to the analytics tier has the following benefits:
 
-+ Combine current and historical data in the analytics tier to run advanced analytics and machine learning models on your data.
++ Combine current and historical data in the analytics tier or from federated tables to run advanced analytics and machine learning models on your data.
 + Reduce query costs by running queries in the analytics tier.
 + Combine data from multiple workspaces to a single workspace in the analytics tier. 
 + Combine Microsoft Entra ID, Microsoft 365, and Microsoft Resource Graph data in the analytics tier to run advanced analytics across data sources.
@@ -68,7 +68,7 @@ For more information on assigning roles to managed identities, see [Assign Azure
 
 ## Create a job
 
-You can create jobs to run on a schedule or one-time. When you create a job, you specify the destination workspace and table for the results. You can write the results to a new table or append them to an existing table in the analytics or data lake tier. You can create a new KQL job or create a job from a template containing the query and job settings. For more information, see [Create a KQL job from a template](#create-a-job-from-a-template).
+You can create jobs to run on a schedule or one-time. When you create a job, you specify the destination workspace and table for the results. You can write the results to a new table or append them to an existing table in the analytics or data lake tier. You can't write the results to federated tables. You can create a new KQL job or create a job from a template containing the query and job settings. For more information, see [Create a KQL job from a template](#create-a-job-from-a-template).
 
 
 1. Start the job creation process from KQL query editor, or from the jobs management page.
@@ -211,7 +211,7 @@ KQL jobs can write data to either the Analytics tier or the Data lake tier, depe
 
 ## Data lake ingestion latency
 
-The data lake tier stores data in cold storage. Unlike hot or near real-time analytics tiers, cold storage is optimized for long-term retention and cost efficiency and doesn't provide immediate access to newly ingested data. When new rows are added to existing tables in the data lake, there's a typical latency of up to 15 minutes before the data is available for querying. Account for the ingestion latency when you run queries and schedule KQL jobs by ensuring that lookback windows and job schedules are configured to avoid data that isn't available yet.
+The data lake tier stores data in cold storage. Unlike hot or near real-time analytics tiers, cold storage is optimized for long-term retention and cost efficiency and doesn't provide immediate access to newly ingested data. When new rows are added to existing tables in the data lake or in federated tables, there's a typical latency of up to 15 minutes before the data is available for querying. Account for the ingestion latency when you run queries and schedule KQL jobs by ensuring that lookback windows and job schedules are configured to avoid data that isn't available yet.
 
 To avoid querying data that might not yet be available, include a delay parameter in your KQL queries or jobs. For example, when you schedule automated jobs, set the query's end time to `now() - delay`, where `delay` matches the typical data readiness latency of 15 minutes. This approach ensures that queries only target data that's fully ingested and ready for analysis.
 
