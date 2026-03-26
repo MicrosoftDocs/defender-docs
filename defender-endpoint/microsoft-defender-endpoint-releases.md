@@ -318,9 +318,8 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 | Feature area | Update summary |
 |--------------|---------------|
-| Performance | Improved agent performance under sustained load |
-| Stability | Improved stability by fixing crashes observed under high-volume event processing |
-| Upgrade | Improved upgrade telemetry for better monitoring |
+| Performance and stability | Improved agent performance and stability under sustained, high‑throughput workloads |
+| Upgrade | Enhanced upgrade telemetry to improve visibility into upgrade health |
 
 ### Linux | March 2026 | 101.26012.0007
 
