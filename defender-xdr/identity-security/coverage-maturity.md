@@ -32,9 +32,6 @@ To use the **Coverage and maturity** page, you need:
 - A Microsoft Defender for Cloud Apps or Microsoft Defender for Identity license.
 - A user role with at least [Security Reader](/azure/active-directory/roles/permissions-reference#security-reader) permissions.
 
-> [!IMPORTANT]
-> Use roles with the fewest permissions to help improve security for your organization. Global Administrator is a highly privileged role that you should limit to scenarios when you can't use an existing role.
-
 ## Access the **Coverage and maturity** page
 
 To access the **Coverage and maturity** page, sign in to the [Microsoft Defender portal](https://security.microsoft.com) and select **Identities > Coverage and maturity**.
