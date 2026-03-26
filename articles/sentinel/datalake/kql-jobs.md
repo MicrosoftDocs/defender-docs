@@ -37,6 +37,8 @@ Use jobs to promote data from the data lake tier to the analytics tier. Once in 
 
 You can promote data to a new table or append the results to an existing table in the analytics tier. When creating a new table, the table name is suffixed with *_KQL_CL* to indicate that the table was created by a KQL job.  
 
+Optionally, you can write output of a KQL job into another table in data lake tier to speed up investigation or use the enriched data for threat hunting. When creating a new table, the table name is suffixed with _KQL if you write to System tables workspace.
+
 ## Prerequisites
 
 To create and manage KQL jobs in the Microsoft Sentinel data lake, you need the following prerequisites.
@@ -66,7 +68,7 @@ For more information on assigning roles to managed identities, see [Assign Azure
 
 ## Create a job
 
-You can create jobs to run on a schedule or one-time. When you create a job, you specify the destination workspace and table for the results. You can write the results to a new table or append them to an existing table in the analytics tier. You can create a new KQL job or create a job from a template containing the query and job settings. For more information, see [Create a KQL job from a template](#create-a-job-from-a-template).
+You can create jobs to run on a schedule or one-time. When you create a job, you specify the destination workspace and table for the results. You can write the results to a new table or append them to an existing table in the analytics or data lake tier. You can create a new KQL job or create a job from a template containing the query and job settings. For more information, see [Create a KQL job from a template](#create-a-job-from-a-template).
 
 
 1. Start the job creation process from KQL query editor, or from the jobs management page.
@@ -80,10 +82,9 @@ You can create jobs to run on a schedule or one-time. When you create a job, you
 
 1. Enter a **Job Description** providing the context and purpose of the job. 
 
-1. From the **Select workspace** dropdown, select the destination workspace. This workspace is in the analytics tier where you want to write the query results.
+1. From the **Select workspace** dropdown, select the destination workspace. This workspace can be either System tables or a Sentinel workspace where you want to write the query results.
 
 1. Select the destination table:
-    1. To create a new table, select **Create a new table** and enter a table name. Tables created by KQL jobs have the suffix *_KQL_CL* appended to the table name.
     
     1. To append to an existing table, select **Add to an existing table** and select the table name form the drop-down list. When adding to an existing table, the query results must match the schema of the existing table. 
     
@@ -96,6 +97,9 @@ You can create jobs to run on a schedule or one-time. When you create a job, you
 
     > [!NOTE]
     > If you're writing to an existing table, the query must return results with a schema that matches the destination table schema. If the query doesn't return results with the correct schema, the job fails when it runs.
+    >  
+    >  Writing KQL jobs into System tables is currently in preview. 
+
 
 1. Select **Next**.
 
@@ -181,6 +185,9 @@ The following templates are available:
 ## Considerations and limitations
 
 When you create jobs in the Microsoft Sentinel data lake, consider the following limitations and best practices:
+
+## Data tier
+KQL jobs can write data to either the Analytics tier or the Data lake tier, depending on the tier of the destination table. When creating a new table through the job creation wizard, you can select system tables as the destination workspace to write data directly to the data lake. Tables created in this way are created and stored directly in the data lake tier and are automatically suffixed with _KQL.
 
 ## KQL
 
