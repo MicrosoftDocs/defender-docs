@@ -6,7 +6,7 @@ ms.author: edbaynash
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: how-to
-ms.date: 03/19/2026
+ms.date: 03/26/2026
 
 #Customer intent: As a security engineer, I want to filter and split incoming data during ingestion so that I can reduce noise, optimize costs, and route data to the appropriate storage tier.
 
@@ -42,7 +42,6 @@ Before you configure filter or split transformation rules, verify the following 
 - **Log Analytics Contributor** role to provide:
     - **Microsoft.OperationalInsights/workspaces/write** 
     - **Microsoft.OperationalInsights/workspaces/tables/write** permissions to the Log Analytics workspace. 
-- **Monitoring Contributor** role.
  
 
 ### Supported tables
