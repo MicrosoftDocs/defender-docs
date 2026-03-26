@@ -6,11 +6,15 @@ permissions:
 
 on:
   pull_request_target:
-    types: [labeled]
+    types: [opened, synchronize, reopened, labeled]
   issue_comment:
     types:
       - created
       - edited
+
+concurrency:
+  group: require-writer-review-${{ github.event.pull_request.number || github.event.issue.number }}
+  cancel-in-progress: true
 
 jobs:
   require-writer-review:

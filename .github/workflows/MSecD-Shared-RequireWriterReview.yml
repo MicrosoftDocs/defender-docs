@@ -49,6 +49,15 @@ jobs:
           PR_DATA=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
             "https://api.github.com/repos/$REPO/pulls/$PR_NUMBER")
 
+          PR_STATE=$(echo "$PR_DATA" | jq -r '.state')
+          PR_MERGED=$(echo "$PR_DATA" | jq -r '.merged')
+          PR_DRAFT=$(echo "$PR_DATA" | jq -r '.draft')
+          if [ "$PR_STATE" = "closed" ] || [ "$PR_MERGED" = "true" ] || [ "$PR_DRAFT" = "true" ]; then
+            echo "PR #$PR_NUMBER is $PR_STATE (merged: $PR_MERGED, draft: $PR_DRAFT). Skipping."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
           HAS_QUALIFIES=$(echo "$PR_DATA" | jq -r '[.labels[].name] | contains(["qualifies-for-auto-merge"])')
           HAS_BLOCKED=$(echo "$PR_DATA" | jq -r '[.labels[].name] | contains(["blocked-qualifies-for-auto-merge"])')
           PR_AUTHOR=$(echo "$PR_DATA" | jq -r '.user.login')
@@ -60,7 +69,7 @@ jobs:
           echo "number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
 
       - name: Check if last PRMerger command is sign-off
-        if: steps.resolve.outputs.skip != 'true'
+        if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true'
         id: signoff
         env:
           GITHUB_TOKEN: ${{ github.token }}
@@ -90,28 +99,158 @@ jobs:
 
       # --- Authorization checks ---
 
-      - name: Check if sign-off author is authorized
-        if: steps.resolve.outputs.skip != 'true' && steps.signoff.outputs.is_signoff == 'true'
-        id: signoff-auth
-        uses: MicrosoftDocs/defender-docs/.github/actions/is-authorized@workflows-test
+      - name: Create GitHub App token
+        if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true'
+        id: app-token
+        uses: actions/create-github-app-token@v1
         with:
-          token: ${{ secrets.MSECD_READTEAM_TOKEN }}
-          user: ${{ env.TEST_USER || steps.signoff.outputs.author }}
-          default: 'true'
+          app-id: ${{ secrets.MSECD_APP_ID }}
+          private-key: ${{ secrets.MSECD_APP_PK }}
+          owner: ${{ github.repository_owner }}
+
+      - name: Compute approvers cache key
+        if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true'
+        id: cache-key
+        run: |
+          AUTH_FILE=""
+          for path in "authorized-approvers.txt" ".github/authorized-approvers.txt" "docs/authorized-approvers.txt"; do
+            if [ -f "$path" ]; then
+              AUTH_FILE="$path"
+              break
+            fi
+          done
+
+          if [ -z "$AUTH_FILE" ]; then
+            echo "::warning::No authorized-approvers.txt found."
+            echo "hash=none" >> "$GITHUB_OUTPUT"
+          else
+            HASH=$(sha256sum "$AUTH_FILE" | cut -d' ' -f1 | head -c 12)
+            echo "hash=$HASH" >> "$GITHUB_OUTPUT"
+          fi
+          echo "date=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+
+      - name: Restore approvers cache
+        if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true'
+        id: approvers-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: /tmp/resolved-approvers.txt
+          key: approvers-${{ steps.cache-key.outputs.hash }}-${{ steps.cache-key.outputs.date }}
+
+      - name: Resolve authorized approvers
+        if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true' && steps.approvers-cache.outputs.cache-hit != 'true'
+        id: resolve-approvers
+        env:
+          TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          # Find authorized-approvers.txt
+          AUTH_FILE=""
+          for path in "authorized-approvers.txt" ".github/authorized-approvers.txt" "docs/authorized-approvers.txt"; do
+            if [ -f "$path" ]; then
+              AUTH_FILE="$path"
+              break
+            fi
+          done
+
+          if [ -z "$AUTH_FILE" ]; then
+            echo "::warning::No authorized-approvers.txt found."
+            touch /tmp/resolved-approvers.txt
+            exit 0
+          fi
+          echo "Found: $AUTH_FILE"
+
+          # Resolve team references with pagination and cache
+          declare -A TEAM_CACHE
+          resolve_team() {
+            local org="$1" team="$2" key="$org/$team"
+            if [[ -n "${TEAM_CACHE[$key]+x}" ]]; then
+              echo "${TEAM_CACHE[$key]}"
+              return
+            fi
+            local page=1 all_members=""
+            while :; do
+              local response http_code body page_members count
+              response=$(curl -s -w "\n%{http_code}" \
+                -H "Authorization: token $TOKEN" \
+                "https://api.github.com/orgs/${org}/teams/${team}/members?per_page=100&page=${page}")
+              http_code=$(echo "$response" | tail -n1)
+              body=$(echo "$response" | sed '$d')
+              if [ "$http_code" != "200" ]; then
+                echo "::warning::Failed to resolve team $key (HTTP $http_code)" >&2
+                break
+              fi
+              page_members=$(echo "$body" | jq -r '.[].login' 2>/dev/null || true)
+              [ -z "$page_members" ] && break
+              all_members="$all_members $page_members"
+              count=$(echo "$body" | jq 'length')
+              [ "$count" -lt 100 ] && break
+              ((page++))
+            done
+            TEAM_CACHE["$key"]="$all_members"
+            echo "$all_members"
+          }
+
+          # Parse rules and collect all authorized usernames
+          ALL_USERS=""
+          while IFS= read -r line || [ -n "$line" ]; do
+            [[ "$line" =~ ^[[:space:]]*# ]] && continue
+            [[ -z "${line// }" ]] && continue
+            owners=$(echo "$line" | grep -oE '@[^ ]+' | sed 's/@//' || true)
+            [ -z "$owners" ] && continue
+            for entry in $owners; do
+              if [[ "$entry" == *"/"* ]]; then
+                org_name=$(echo "$entry" | cut -d'/' -f1)
+                team_name=$(echo "$entry" | cut -d'/' -f2)
+                resolved=$(resolve_team "$org_name" "$team_name")
+                ALL_USERS="$ALL_USERS $resolved"
+              else
+                ALL_USERS="$ALL_USERS $entry"
+              fi
+            done
+          done < "$AUTH_FILE"
+
+          # Write deduplicated lowercase list
+          echo "$ALL_USERS" | tr ' ' '\n' | grep -v '^$' | tr '[:upper:]' '[:lower:]' | sort -u > /tmp/resolved-approvers.txt
+          echo "Resolved $(wc -l < /tmp/resolved-approvers.txt) unique approvers."
+          cat /tmp/resolved-approvers.txt
+
+      - name: Save approvers cache
+        if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true' && steps.approvers-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: /tmp/resolved-approvers.txt
+          key: approvers-${{ steps.cache-key.outputs.hash }}-${{ steps.cache-key.outputs.date }}
+
+      - name: Check if sign-off author is authorized
+        if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true' && steps.signoff.outputs.is_signoff == 'true'
+        id: signoff-auth
+        run: |
+          USER=$(echo "${{ env.TEST_USER || steps.signoff.outputs.author }}" | tr '[:upper:]' '[:lower:]')
+          if grep -qx "$USER" /tmp/resolved-approvers.txt; then
+            echo "authorized=true" >> "$GITHUB_OUTPUT"
+            echo "Sign-off author '$USER' is authorized."
+          else
+            echo "authorized=false" >> "$GITHUB_OUTPUT"
+            echo "Sign-off author '$USER' is NOT authorized."
+          fi
 
       - name: Check if PR author is authorized
-        if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.has_qualifies == 'true' && steps.signoff.outputs.is_signoff != 'true'
+        if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true' && steps.pr-state.outputs.has_qualifies == 'true' && steps.signoff.outputs.is_signoff != 'true'
         id: pr-author-auth
-        uses: MicrosoftDocs/defender-docs/.github/actions/is-authorized@workflows-test
-        with:
-          token: ${{ secrets.MSECD_READTEAM_TOKEN }}
-          user: ${{ env.TEST_USER || steps.pr-state.outputs.pr_author }}
-          default: 'false'
+        run: |
+          USER=$(echo "${{ env.TEST_USER || steps.pr-state.outputs.pr_author }}" | tr '[:upper:]' '[:lower:]')
+          if grep -qx "$USER" /tmp/resolved-approvers.txt; then
+            echo "authorized=true" >> "$GITHUB_OUTPUT"
+            echo "PR author '$USER' is authorized."
+          else
+            echo "authorized=false" >> "$GITHUB_OUTPUT"
+            echo "PR author '$USER' is NOT authorized."
+          fi
 
       # --- Branch 1: Unauthorized sign-off → hold-off + block label ---
 
       - name: Hold off on unauthorized sign-off
-        if: steps.resolve.outputs.skip != 'true' && steps.signoff.outputs.is_signoff == 'true' && steps.signoff-auth.outputs.authorized == 'false'
+        if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true' && steps.signoff.outputs.is_signoff == 'true' && steps.signoff-auth.outputs.authorized == 'false'
         env:
           GITHUB_TOKEN: ${{ github.token }}
           SIGNOFF_AUTHOR: ${{ env.TEST_USER || steps.signoff.outputs.author }}
@@ -152,7 +291,7 @@ jobs:
       # --- Branch 2: Authorized sign-off → restore label ---
 
       - name: Restore auto-merge label on authorized sign-off
-        if: steps.resolve.outputs.skip != 'true' && steps.signoff.outputs.is_signoff == 'true' && steps.signoff-auth.outputs.authorized == 'true' && steps.pr-state.outputs.has_blocked == 'true'
+        if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true' && steps.signoff.outputs.is_signoff == 'true' && steps.signoff-auth.outputs.authorized == 'true' && steps.pr-state.outputs.has_blocked == 'true'
         env:
           GITHUB_TOKEN: ${{ github.token }}
           SIGNOFF_AUTHOR: ${{ env.TEST_USER || steps.signoff.outputs.author }}
@@ -179,6 +318,7 @@ jobs:
       - name: Block auto-merge for unauthorized PR author
         if: >-
           steps.resolve.outputs.skip != 'true'
+          && steps.pr-state.outputs.skip != 'true'
           && steps.pr-state.outputs.has_qualifies == 'true'
           && steps.pr-author-auth.outputs.authorized == 'false'
           && steps.signoff.outputs.is_signoff != 'true'
