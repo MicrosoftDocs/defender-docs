@@ -695,11 +695,11 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 
 #### Enhancements and features
 
-- Improved the Network protection feature to promptly release closed connections and reduce unnecessary memory usage.
+- Improved the **network protection** feature to promptly release closed connections and reduce unnecessary memory usage.
 - Fixed an issue where the `Get-MpComputerStatus` PowerShell cmdlet could fail after updates due to a configuration mismatch.
-- Improved performance for Network Response Intelligence (NRI) by reducing CPU usage during high-volume asynchronous message processing.
-- Added support for AMSI Path Exclusions for Exchange Server so configured path exclusions are now correctly evaluated during AMSI scanning for Exchange workloads.
-- Improved policy refresh behavior for Device Control by updating default policy and Azure AD refresh intervals to reduce retry frequency.
+- Improved performance for **Network Response Intelligence (NRI)** by reducing CPU usage during high-volume asynchronous message processing.
+- Added support for **AMSI path exclusions for Exchange Server** so configured path exclusions are now correctly evaluated during AMSI scanning for Exchange workloads.
+- Improved policy refresh behavior for **device control** by updating default policy and Azure AD refresh intervals to reduce retry frequency.
 
 ### Windows Antivirus | January 2026 | Platform 4.18.26010.5 | Engine 1.1.26010.1
 
