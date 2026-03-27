@@ -126,7 +126,7 @@ After you validate the connection, select **Disconnect** to stop the polling ses
 
 1. After the validation test succeeds, select **Deploy** in the chat window to start deploying the connector.
 
-    :::image type="content" source="media/custom-connector-builder-agent/connector-deploy.png" alt-text="Image of the deploy step for custom connector in VS Code" lightbox="media/custom-connector-builder-agent/connector-deploy.png":::
+      :::image type="content" source="media/custom-connector-builder-agent/connector-deploy.png" alt-text="Image of the deploy step for custom connector in VS Code" lightbox="media/custom-connector-builder-agent/connector-deploy.png":::
 
 1. The extension opens a panel where you can choose from your available Microsoft Sentinel workspaces.
 
@@ -136,11 +136,11 @@ After you validate the connection, select **Disconnect** to stop the polling ses
   
 Alternatively, right-click the folder that contains the generated files, select **Microsoft Sentinel** > **Deploy Connector**.
 
-    :::image type="content" source="media/custom-connector-builder-agent/connector-files-deploy.png" alt-text="Image of the alternate way of deploying in VS Code" lightbox="media/custom-connector-builder-agent/connector-files-deploy.png":::
+      :::image type="content" source="media/custom-connector-builder-agent/connector-files-deploy.png" alt-text="Image of the alternate way of deploying in VS Code" lightbox="media/custom-connector-builder-agent/connector-files-deploy.png":::
 
 When deployment completes, a success message appears in the **Output** window.
 
-    :::image type="content" source="media/custom-connector-builder-agent/successful-deployment.png" alt-text="Screenshot of successful deployment" lightbox="media/custom-connector-builder-agent/successful-deployment.png":::
+      :::image type="content" source="media/custom-connector-builder-agent/successful-deployment.png" alt-text="Screenshot of successful deployment" lightbox="media/custom-connector-builder-agent/successful-deployment.png":::
   
 > [!NOTE]
 > After deployment into a Sentinel workspace, this connector focuses on ingesting data into Microsoft Sentinel tables. It doesn’t include a complete solution package or prebuilt end-to-end SOAR workflows for security coverage. If you need automation, create the required playbooks and workflows for your scenario.
