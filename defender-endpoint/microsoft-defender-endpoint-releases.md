@@ -319,7 +319,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 | Feature area | Update summary |
 |--------------|---------------|
-| Performance and stability | Improved agent performance and stability under sustained, high‑throughput workloads |
+| Performance and stability | Improved agent performance and stability under sustained, high‑throughput workloads. |
 
 ### Linux | March 2026 | 101.26012.0007
 
