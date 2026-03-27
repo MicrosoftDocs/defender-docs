@@ -19,7 +19,7 @@ description: Admins can learn about the roles and role groups in Microsoft Defen
 ms.custom:
 - seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 01/23/2026
+ms.date: 03/27/2026
 ---
 
 # Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview
