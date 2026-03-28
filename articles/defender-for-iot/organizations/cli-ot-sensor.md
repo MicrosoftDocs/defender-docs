@@ -1,6 +1,6 @@
 ---
 title: CLI command reference from OT network sensors- Microsoft Defender for IoT
-description: Learn about the CLI commands available from Microsoft Defender for IoT OT network sensors.
+description: Learn about the CLI commands available from Microsoft Defender for IoT OT network sensors, including capture filters.
 ms.date: 12/19/2023
 ms.topic: reference
 ---
@@ -8,6 +8,9 @@ ms.topic: reference
 # CLI command reference from OT network sensors
 
 This article lists the CLI commands available from Defender for IoT OT network sensors.
+
+> [!TIP]
+> To reduce alert fatigue and focus your network monitoring on high priority traffic, you may decide to filter the traffic that streams into Defender for IoT at the source. For more information, see [Traffic capture filters](#traffic-capture-filters).
 
 [!INCLUDE [caution do not use manual configurations](includes/caution-manual-configurations.md)]
 
@@ -18,6 +21,51 @@ Before you can run any of the following CLI commands, you'll need access to the 
 While this article lists the command syntax for each user, we recommend using the *admin* user for all CLI commands where the *admin* user is supported.
 
 For more information, see [Access the CLI](../references-work-with-defender-for-iot-cli-commands.md#access-the-cli) and [Privileged user access for OT monitoring](references-work-with-defender-for-iot-cli-commands.md#privileged-user-access-for-ot-monitoring).
+
+## List of available commands
+
+| Category| Command |
+|****|*****|
+| config | config |
+| system | backup </br>date</br>hostname</br>ntp</br>password</br>reboot</br>sanity</br>shell</br>shutdown</br>syslog</br>version|
+| network |  blink</br>capture-filter</br>list</br>ping</br>reconfigure</br>statistics</br>validate|
+
+### List commands in a category
+
+To list the commands in a category, type ```help```. For example:
+
+```bash
+shell> help
+config:
+network:
+system:
+
+shell> help system
+backup:
+date:
+ntp:
+```
+
+### Commands at the shell and category level
+
+You can type commands at the shell or category level.
+
+At the shell level type: \<category> \<command> \<parameter>.
+
+Alternatively, type the \<category> and press ENTER. The shell will change to the category name, then type \<command> \<parameter>. For example:
+
+```bash
+shell> system ntp enable 10.0.0.1
+Starting ntp-enable 10.0.0.1
+.....
+Finished ntp-enable
+
+shell> system
+system> ntp enable 10.0.0.1
+Starting ntp-enable 10.0.0.1
+.....
+Finished ntp-enable
+```
 
 ## Appliance maintenance
 
@@ -105,14 +153,14 @@ Use the following commands to show the current system date and time on your OT n
 
 |User  |Command  |Full command syntax   |
 |---------|---------|---------|
-|**admin**     |   `date`      |   No attributes      |
+|**admin**     |   `system date`      |   No attributes      |
 |**cyberx**  , or **admin** with [root access](references-work-with-defender-for-iot-cli-commands.md#access-the-system-root-as-an-admin-user)    |   `date`      |   No attributes      |
 |**cyberx_host**  , or **admin** with [root access](references-work-with-defender-for-iot-cli-commands.md#access-the-system-root-as-an-admin-user)    |   `date`      |  No attributes    |
 
 For example, for the *admin* user:
 
 ```bash
-shell> date
+shell> system date
 Thu Sep 29 18:38:23 UTC 2022
 shell>
 ```
@@ -128,7 +176,7 @@ To use these commands, make sure that:
 
 |User  |Command  |Full command syntax   |
 |---------|---------|---------|
-|**admin**     |   `ntp enable <IP address>`      |  No attributes |
+|**admin**     |   `system ntp enable <IP address>`      |  No attributes |
 |**cyberx**  , or **admin** with [root access](references-work-with-defender-for-iot-cli-commands.md#access-the-system-root-as-an-admin-user)    |   `cyberx-xsense-ntp-enable <IP address>`      |  No attributes      |
 
 In these commands, `<IP address>` is the IP address of a valid IPv4 NTP server using port 123.
@@ -136,8 +184,7 @@ In these commands, `<IP address>` is the IP address of a valid IPv4 NTP server u
 For example, for the *admin* user:
 
 ```bash
-shell> ntp enable 129.6.15.28
-shell>
+shell> system ntp enable 129.6.15.28
 ```
 
 ### Turn off NTP time sync
@@ -146,7 +193,7 @@ Use the following commands to turn off the synchronization for the appliance tim
 
 |User  |Command  |Full command syntax   |
 |---------|---------|---------|
-|**admin**     |   `ntp disable <IP address>`      |   No attributes      |
+|**admin**     |   `system ntp disable <IP address>`      |   No attributes      |
 |**cyberx**  , or **admin** with [root access](references-work-with-defender-for-iot-cli-commands.md#access-the-system-root-as-an-admin-user)    |   `cyberx-xsense-ntp-disable <IP address>`      |  No attributes |
 
 In these commands, `<IP address>` is the IP address of a valid IPv4 NTP server using port 123.
@@ -154,8 +201,7 @@ In these commands, `<IP address>` is the IP address of a valid IPv4 NTP server u
 For example, for the *admin* user:
 
 ```bash
-shell> ntp disable 129.6.15.28
-shell>
+shell> system ntp disable 129.6.15.28
 ```
 
 ## Backup and restore

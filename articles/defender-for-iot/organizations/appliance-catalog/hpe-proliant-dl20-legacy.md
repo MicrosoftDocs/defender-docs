@@ -3,6 +3,7 @@ title: HPE ProLiant DL20 for OT monitoring in enterprise deployments - Microsoft
 description: Learn about the HPE ProLiant DL20 appliance when used for OT monitoring with Microsoft Defender for IoT in enterprise deployments.
 ms.date: 10/30/2022
 ms.topic: reference
+ms.custom: sfi-image-nochange
 ---
 
 # HPE ProLiant DL20 Gen10
@@ -149,7 +150,7 @@ The installation process takes about 20 minutes. After the installation, the sys
 
 ## Next steps
 
-Continue understanding system requirements for physical or virtual appliances. For more information, see [Which appliances do I need?](../ot-appliance-sizing.md).
+Continue understanding system requirements for physical or virtual appliances. For more information, see [Which appliances do I need?](../ot-appliance-sizing.md)
 
 Then, use any of the following procedures to continue:
 

@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # Maintain OT network sensors from the sensor console
 
-This article describes extra OT sensor maintenance activities that you might perform outside of a larger deployment process.
+This article describes extra Operational Technology (OT) sensor maintenance activities that you might perform outside of a larger deployment process.
 
 OT sensors can also be maintained from the OT sensor [CLI](cli-ot-sensor.md) or the [Azure portal](how-to-manage-sensors-on-the-cloud.md).
 
@@ -17,7 +17,7 @@ OT sensors can also be maintained from the OT sensor [CLI](cli-ot-sensor.md) or 
 
 Before performing the procedures in this article, make sure that you have:
 
-- An OT network sensor [installed](ot-deploy/install-software-ot-sensor.md), [configured, and activated](ot-deploy/activate-deploy-sensor.md) and [onboarded](onboard-sensors.md) to Defender for IoT in the Azure portal.
+- An OT network sensor [installed](ot-deploy/install-software-ot-sensor.md), [configured, and activated](ot-deploy/activate-deploy-sensor.md) and [onboarded](onboard-sensors.md) to Microsoft Defender for IoT in the Azure portal.
 
 - Access to the OT sensor as an **Admin** user. Selected procedures and CLI access also requires a privileged user. For more information, see [On-premises users and roles for OT monitoring with Defender for IoT](roles-on-premises.md).
 
@@ -63,7 +63,7 @@ Take action by selecting the **Learn more** option under :::image type="icon" so
 
 ## Download software for OT sensors
 
-You may need to download software for your OT sensor if you're [installing Defender for IoT software](ot-deploy/install-software-ot-sensor.md) on your own appliances, or [updating software versions](update-ot-software.md).
+You might need to download software for your OT sensor if you're [installing Defender for IoT software](ot-deploy/install-software-ot-sensor.md) on your own appliances, or [updating software versions](update-ot-software.md).
 
 In [Defender for IoT](https://portal.azure.com/#view/Microsoft_Azure_IoT_Defender/IoTDefenderDashboard/~/Getting_started) in the Azure portal, use one of the following options:
 
@@ -79,7 +79,7 @@ For more information, see [Update Defender for IoT OT monitoring software](updat
 
 Each OT sensor is onboarded as a cloud-connected or locally managed OT sensor and activated using a unique activation file. For cloud-connected sensors, the activation file is used to ensure the connection between the sensor and Azure.
 
-You need to upload a new activation file to your sensor if you want to switch sensor management modes, such as moving from a locally managed sensor to a cloud-connected sensor, or if you're [updating from a recent software version](update-ot-software.md?tabs=portal#update-ot-sensors). Uploading a new activation file to your sensor includes deleting your sensor from the Azure portal and onboarding it again.
+You need to upload a new activation file to your sensor if you want to switch sensor management modes, such as moving from a locally managed sensor to a cloud-connected sensor, or if you're [updating from a recent software version](update-ot-software.md?tabs=portal#update-ot-sensors-with-the-latest-ot-monitoring-software). Uploading a new activation file to your sensor includes deleting your sensor from the Azure portal and onboarding it again.
 
 **To add a new activation file:**
 
@@ -193,7 +193,7 @@ When you're done, use the following procedures to validate your certificate file
 
 ## Update the OT sensor network configuration
 
-You'd configured your OT sensor network configuring during [installation](ot-deploy/install-software-ot-sensor.md). You may need to make changes as part of OT sensor maintenance, such as to modify network values or setting up a proxy configuration.
+After configuring your OT sensor network during [installation](ot-deploy/install-software-ot-sensor.md), you might need to make changes as part of OT sensor maintenance, such as modifying network values or setting up a proxy configuration.
 
 **To update the OT sensor configuration:**
 
@@ -201,7 +201,7 @@ You'd configured your OT sensor network configuring during [installation](ot-dep
 
 1. In the **Sensor network settings** pane, update the following details for your OT sensor as needed:
 
-    - **IP address**. Changing the IP address may require users to sign into your OT sensor again.
+    - **IP address**. Changing the IP address might require users to sign into your OT sensor again.
     - **Subnet mask**
     - **Default gateway**
     - **DNS**. Make sure to use the same hostname that's configured in your organization's DNS server.
@@ -216,36 +216,44 @@ You'd configured your OT sensor network configuring during [installation](ot-dep
 
 1. Select **Save** to save your changes.
 
-### Turn off learning mode manually
+## Turn off learning mode manually
 
-A Microsoft Defender for IoT OT network sensor starts monitoring your network automatically as soon as it's connected to your network and you've [signed in](ot-deploy/activate-deploy-sensor.md#sign-in-to-the-sensor-console-and-change-the-default-password). Network devices start appearing in your [device inventory](device-inventory.md), and [alerts](alerts.md) are triggered for any security or operational incidents that occur in your network.
+An OT network sensor starts monitoring your network automatically as soon as it connects to your network and you [sign in](ot-deploy/activate-deploy-sensor.md#sign-in-to-the-sensor-console-and-change-the-default-password). Network devices start appearing in your [device inventory](device-inventory.md), and [alerts](alerts.md) are triggered for any security or operational incidents that occur in your network.
 
-Initially, this activity happens in *learning* mode, which instructs your OT sensor to learn your network's usual activity, including the devices and protocols in your network, and the regular file transfers that occur between specific devices. Any regularly detected activity becomes your network's [baseline traffic](ot-deploy/create-learned-baseline.md).
+There are three stages to the monitoring process. For more information, see [overview of the multi stage monitoring process](ot-deploy/create-learned-baseline.md).
 
-This procedure describes how to turn off learning mode manually when the current alerts accurately reflect your network activity.
+Two to six weeks after deploying your sensor the detection levels should accurately reflect your network activity. At this stage we recommend turning off learning mode.
 
 **To turn off learning mode**:
 
 1. Sign into your OT network sensor and select **System settings > Network monitoring > Detection engines and network modeling**.
 
-1. Toggle off one or both of the following options:
+1. In **Network modeling**, toggle off **Learning**.
 
-    - **Learning**. Toggle off this option about two-six weeks after you've deployed your sensor, when you feel that the OT sensor detections accurately reflect your network activity.
+1. Select **OK** in the confirmation message, and then select **Close** to save your changes.
 
-    - **Smart IT Learning**. Keep this option toggled on to keep the number of *nondeterministic* alerts and notifications low. 
-  
-    Nondeterministic behavior includes changes that are the result of normal IT activity, such as DNS and HTTP requests. Toggling off the **Smart IT Learning** option can trigger many false positive policy violation alerts.
+Once learning mode is turned off, the sensor starts to generate **Policy Violation** alerts and this setting is now available by selecting **Support** in the side menu. We recommend leaving the mode settings for each alert to automatically update from dynamic to operational. For testing or other reasons, you could manually change the mode setting, however, this isn't recommended as it can produce a large number of alerts.
 
-1. In the confirmation message, select **OK**, and then select **Close** to save your changes.
+**Manually change a Policy Violations setting**:
+
+1. In the main sensor menu, select **Support**. The **Engines** table shows the list of all the Defender for IoT alerts.
+
+1. In the **Learning Mode** column, change the mode for any **Policy Violation** alert by selecting **Learning**, **Dynamic** or **Operational** from the dropdown box.
+
+    When selecting **Learning**, you must enter the length of time, in hours, to maintain this setting. Select **Submit**.
 
 ## Update a sensor's monitoring interfaces (configure ERSPAN)
 
-You may want to change the interfaces used by your sensor to monitor traffic. You originally configured these details as part of your [initial sensor setup](ot-deploy/activate-deploy-sensor.md#define-the-interfaces-you-want-to-monitor), but may need to modify the settings as part of system maintenance, such as configuring ERSPAN monitoring.
+You might want to change the interfaces used by your sensor to monitor traffic. You originally configured these details as part of your [initial sensor setup](ot-deploy/activate-deploy-sensor.md#define-the-interfaces-you-want-to-monitor), but might need to modify the settings as part of system maintenance, such as configuring ERSPAN monitoring.
 
 For more information, see [ERSPAN ports](best-practices/traffic-mirroring-methods.md#erspan-ports).
 
 > [!NOTE]
 > This procedure restarts your sensor software to implement any changes made.
+>
+> Defender for IoT ERSPAN monitoring is tested, certified, and supported **only when the ERSPAN tunnel originates from Cisco equipment.**
+>
+> ERSPAN tunnels from non-Cisco vendors are **not supported** and might fail due to differences in ERSPAN implementations.
 
 **To update your sensor's monitoring interfaces**:
 
@@ -255,7 +263,7 @@ For more information, see [ERSPAN ports](best-practices/traffic-mirroring-method
 
     - Select the **Enable/Disable** toggle for any interfaces you want the sensor to monitor. You must have at least one interface enabled for each sensor.
 
-        If you're not sure about which interface to use, select the :::image type="icon" source="media/install-software-ot-sensor/blink-interface.png" border="false"::: **Blink physical interface LED** button to have the selected port blink on your machine. 
+        If you're not sure about which interface to use, select the :::image type="icon" source="media/install-software-ot-sensor/blink-interface.png" border="false"::: **Blink physical interface LED** button to have the selected port blink on your machine.
 
         > [!TIP]
         > We recommend that you optimize performance on your sensor by configuring your settings to monitor only the interfaces that are actively in use. 
@@ -264,20 +272,25 @@ For more information, see [ERSPAN ports](best-practices/traffic-mirroring-method
 
         |Name  |Description  |
         |---------|---------|
-        |**Mode**     | Select one of the following: <br><br>- **SPAN Traffic (no encapsulation)** to use the default SPAN port mirroring. <br>- **ERSPAN** if you're using ERSPAN mirroring. <br><br>For more information, see [Choose a traffic mirroring method for OT sensors](best-practices/traffic-mirroring-methods.md).       |
-        |**Description**     |  Enter an optional description for the interface. You'll see this later on in the sensor's **System settings > Interface configurations** page, and these descriptions may be helpful in understanding the purpose of each interface.  |
+        |**Mode**     | Select one of the following: <br><br>- **SPAN Traffic (no encapsulation)** to use the default SPAN port mirroring. <br>- **Tunneling** if you're using ERSPAN mirroring. <br><br>For more information, see [Choose a traffic mirroring method for OT sensors](best-practices/traffic-mirroring-methods.md).       |
+        |**Description**     |  Enter an optional description for the interface. You'll see this later on in the sensor's **System settings > Interface configurations** page, and these descriptions might be helpful in understanding the purpose of each interface.  |
+        |**Interface IP**     | The ERSPAN IP on the sensor side. <br> - The management interface IP and the ERSPAN interface IP must be configured on separate network subnets. <br>  - Configuring both the management and ERSPAN IP addresses on the same subnet might lead to asymmetric routing issues.   |
+        | **Subnet** | The subnet mask of the ERSPAN interface IP. |
+        |**Name**     | Enter a unique name for the virtual ERSPAN interface.|
+        |**ID** - ERSPAN tunnel ID | The ID value must be identical to the `erspan-id` value on the Cisco side. <br> In case of an ID mismatch, the sensor will discard all incoming tunnel traffic.  |
+        | **Source IP** | The IP address of the ERSPAN interface on the Cisco side that sends the tunnel traffic. |
+        | **Add tunneling** | The sensor supports adding multiple tunnels. Each tunnel must have a unique name and ID. |
         |**Auto negotiation**     | Relevant for physical machines only. Use this option to determine which sort of communication methods are used, or if the communication methods are automatically defined between components. <br><br>**Important**: We recommend that you change this setting only on the advice of your networking team. |
 
     For example:
 
-    :::image type="content" source="media/how-to-manage-individual-sensors/configure-erspan.png" alt-text="Screenshot of how to configure ERSPAN on the Interface configurations page.":::
+    :::image type="content" source="media/how-to-manage-individual-sensors/tunneling-advanced-settings.png" alt-text="Screenshot of how to configure Tunneling for ERSPAN on the Interface configurations page." lightbox="media/how-to-manage-individual-sensors/tunneling-advanced-settings.png":::
 
 1. Select **Save** to save your changes. Your sensor software restarts to implement your changes.
 
-
 ## Synchronize time zones on an OT sensor
 
-You may want to configure your OT sensor with a specific time zone so that all users see the same times regardless of the user's location.
+You might want to configure your OT sensor with a specific time zone so that all users see the same times regardless of the user's location.
 
 Time zones are used in [alerts](how-to-view-alerts.md), [trends and statistics widgets](how-to-create-trends-and-statistics-reports.md), [data mining reports](how-to-create-data-mining-queries.md), [risk assessment reports](how-to-create-risk-assessment-reports.md), and [attack vector reports](how-to-create-attack-vector-reports.md).
 
@@ -328,7 +341,7 @@ Make sure you can reach the SMTP server from the [sensor's management port](./be
 
 ## Upload and play PCAP files
 
-When troubleshooting your OT sensor, you may want to examine data recorded by a specific PCAP file. To do so, you can upload a PCAP file to your OT sensor and replay the data recorded.
+When troubleshooting your OT sensor, you might want to examine data recorded by a specific PCAP file. To do so, you can upload a PCAP file to your OT sensor and replay the data recorded.
 
 The **Play PCAP** option is enabled by default in the sensor console's settings.
 
@@ -361,7 +374,7 @@ The **Play PCAP** option is now available in the sensor console's settings, unde
 
 By default, each OT network sensor analyzes ingested data using [built-in analytics engines](architecture.md#defender-for-iot-analytics-engines), and triggers alerts based on both real-time and prerecorded traffic.
 
-While we recommend that you keep all analytics engines on, you may want to turn off specific analytics engines on your OT sensors to limit the type of anomalies and risks monitored by that OT sensor.
+While we recommend that you keep all analytics engines on, you might want to turn off specific analytics engines on your OT sensors to limit the type of anomalies and risks monitored by that OT sensor.
 
 > [!IMPORTANT]
 > When you disable a policy engine, information that the engine generates won't be available to the sensor. For example, if you disable the Anomaly engine, you won't receive alerts on network anomalies. If you'd created a [forwarding alert rule](how-to-forward-alert-information-to-partners.md), anomalies that the engine learns won't be sent.
@@ -409,11 +422,11 @@ After clearing data on a cloud-connected sensor:
 - Some actions on corresponding alerts in the Azure portal are no longer supported, such as downloading PCAP files or learning alerts.
 
 > [!NOTE]
-> Network settings such as IP/DNS/GATEWAY will not be changed by clearing system data.
+> Network settings such as IP/DNS/GATEWAY won't be changed by clearing system data.
 
 **To clear system data**:
 
-1. Sign in to the OT sensor as the *admin* user. For more information, see [Default privileged on-premises users](roles-on-premises.md#default-privileged-on-premises-users). 
+1. Sign into the OT sensor as the *admin* user. For more information, see [Default privileged on-premises users](roles-on-premises.md#default-privileged-on-premises-users). 
 
 1. Select **Support** > **Clear data**.
 

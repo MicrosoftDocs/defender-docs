@@ -9,6 +9,9 @@ ms.topic: reference
 
 This article describes the Dell Edge 5200 appliance for OT sensors.
 
+> [!NOTE]
+> Legacy appliances are certified but aren't currently offered as pre-configured appliances.
+
 | Appliance characteristic |Details |
 |---------|---------|
 |**Hardware profile** | E500|
@@ -50,7 +53,7 @@ The following image shows the hardware elements on the Dell Edge 5200 that are u
 
 ## Next steps
 
-Continue understanding system requirements for physical or virtual appliances. For more information, see [Which appliances do I need?](../ot-appliance-sizing.md).
+Continue understanding system requirements for physical or virtual appliances. For more information, see [Which appliances do I need?](../ot-appliance-sizing.md)
 
 Then, use any of the following procedures to continue:
 
