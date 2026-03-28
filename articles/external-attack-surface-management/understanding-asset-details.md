@@ -6,6 +6,7 @@ ms.author: dandennis
 ms.service: defender-easm
 ms.date: 07/14/2022
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 
 # Understand asset details
@@ -202,7 +203,7 @@ Web components are categorized based on their function.
 | Hosting Provider | hostingprovider.com |
 | Server | Apache |
 | DNS Server | ISC BIND |
-| Data stores | MySQL, ElasticSearch, MongoDB |
+| Data stores | MySQL, Elasticsearch, MongoDB |
 | Remote access | OpenSSH, Microsoft Admin Center, Netscaler Gateway |
 | Data Exchange | Pure-FTPd |
 | Internet of things (IoT) | HP Deskjet, Linksys Camera, Sonos |
