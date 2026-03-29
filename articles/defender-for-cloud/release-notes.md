@@ -39,7 +39,7 @@ April 1, 2026
 
 The Defender for SQL Server on machines plan in Microsoft Defender for Cloud protects SQL Server instances hosted on Azure, AWS, GCP, and on-premises machines.
 
-At the end of April, we'll begin releasing an enhanced agent solution for Fairfax customers who enabled the plan. The agent-based solution eliminates the need to deploy the Azure Monitor Agent (AMA) and instead uses the existing SQL infrastructure. The solution is designed to simplify the onboarding process and improve protection coverage.
+To simplify onboarding and improve protection coverage, we're releasing an enhanced agent solution for Fairfax customers at the end of April. The new solution uses the existing SQL infrastructure, so you no longer need to deploy the Azure Monitor Agent (AMA).
 
 **Required customer actions:**
 
