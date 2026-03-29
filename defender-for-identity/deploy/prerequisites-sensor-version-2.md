@@ -68,7 +68,6 @@ To enable the Defender for Identity sensor to communicate with the cloud service
 |SSL (\*.atp.azure.com)   |TCP      |443 |Defender for Identity sensor|Defender for Identity cloud service|Alternately, [configure access through a proxy](configure-proxy.md).|
 |Internal ports          | | | | |  |
 |DNS     |TCP and UDP           |53  |Defender for Identity sensor|DNS Servers           |
-|Netlogon  <br>(SMB, CIFS)|TCP/UDP  |445 |Defender for Identity sensor|All devices on the network (DCs, ADFS, ADCS, and Entra Connect)|  |
 |RADIUS         |UDP      |1813|RADIUS         |Defender for Identity sensor      |  |
 |Localhost port    | | | | |Required for the sensor service updater. By default, *localhost* to *localhost* traffic is allowed unless a custom firewall policy blocks it.|
 |SSL|TCP      |444 |Sensor service|Sensor updater service            |   |
