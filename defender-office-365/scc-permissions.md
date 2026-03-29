@@ -1,25 +1,25 @@
 ---
 title: Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview
-f1.keywords: 
+f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
 audience: Admin
 ms.topic: article
-f1_keywords: 
+f1_keywords:
   - 'ms.o365.cc.AdminRoleGroups'
-ms.collection: 
+ms.collection:
 - m365-security
 - tier1
 ms.localizationpriority: medium
-search.appverid: 
+search.appverid:
   - MOE150
   - MET150
 description: Admins can learn about the roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview.
-ms.custom: 
+ms.custom:
 - seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 01/23/2026
+ms.date: 03/27/2026
 ---
 
 # Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview
@@ -29,7 +29,7 @@ ms.date: 01/23/2026
 The [Microsoft Defender portal](/defender-xdr/microsoft-365-defender-portal), [Microsoft Purview portal](/purview/purview-portal), and the [governance](/purview/use-microsoft-purview-governance-portal) portals have replaced the Security & Compliance Center as the places to manage Microsoft Defender for Office 365 and Microsoft Purview roles and role groups for your organization. For more information about permissions within these portals, see the following articles:
 
 - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md)
-- [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac)
+- [Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/manage-rbac)
 - [Permissions in the Microsoft Purview portal](/purview/purview-portal)
 - [Permissions in Microsoft Purview solutions](/purview/purview-permissions)
 - [Permissions in the Microsoft Purview governance portal](/purview/roles-permissions)
@@ -43,9 +43,9 @@ This article contains the inventory of Defender for Office 365 and Microsoft Pur
 > [!NOTE]
 > In the Microsoft Defender XDR preview program, a different Microsoft Defender 365 RBAC model is also available. The permissions in this RBAC model are different from the Defender for Office 365 permissions as described in this article. For more information, see [Microsoft Defender XDR role-based access control (RBAC)](/defender-xdr/manage-rbac).
 >
-> **If you activate Defender XDR RBAC for Email & collaboration, the permissions page at <https://security.microsoft.com/emailandcollabpermissions> is no longer available in the Defender portal, so you need to ensure that you configure or import your roles _before_ you activate Defender XDR Unified RBAC.**
+> **If you activate Defender XDR RBAC for Email & collaboration, the permissions page at <https://security.microsoft.com/emailandcollabpermissions> is no longer available in the Defender portal, so you need to ensure that you configure or import your roles _before_ you activate Defender unified RBAC.**
 >
-> :::image type="content" source="media/defender-xdr-rbac-permissions-page.png" alt-text="Screenshot of the Permissions page in the Microsoft Defender portal showing Microsoft Defender XDR roles and Email & Collaboration roles." lightbox="media/defender-xdr-rbac-permissions-page.png":::
+> :::image type="content" source="media/defender-xdr-rbac-permissions-page.png" alt-text="Screenshot of the Permissions page in the Microsoft Defender portal showing Microsoft Defender unified RBAC roles and Email & Collaboration roles." lightbox="media/defender-xdr-rbac-permissions-page.png":::
 
 ## Role groups in Microsoft Defender for Office 365 and Microsoft Purview
 
@@ -83,7 +83,7 @@ Managing permissions in Defender for Office 365 or Microsoft Purview gives users
 |**Data Governance**|Grants access to data governance roles within Microsoft Purview.|Data Governance Administrator|
 |**Data Investigator**|Perform searches on mailboxes, SharePoint sites, and OneDrive locations.|Communication <br/><br/> Compliance Search <br/><br/> Custodian <br/><br/> Data Investigation Management <br/><br/> Export <br/><br/> Preview <br/><br/> Review <br/><br/> RMS Decrypt <br/><br/> Search And Purge|
 |**Data Security AI Admins**|Use this group to assign editing capabilities for Data Loss Prevention policies related to Copilot and viewing AI content in Data Security Posture Management. Review the role description for access details.|Data Security AI Admin|
-|**Data Security AI Content Viewers**|Use this group to assign read-only permissions to users in Data Security Posture Management for AI (classic) and the preview version of Data Security Posture Management to view prompts and responses of interactions in AI apps.|Data Security AI Content Viewer|
+|**Data Security AI Content Viewers**|Use this group to grant permissions for users to view extended prompt and response details in AI application interactions within Data Security Posture Management for AI (classic) and the preview version of Data Security Posture Management.|Data Security AI Content Viewer|
 |**Data Security AI Viewers**|Use this group to assign read-only permissions to users for Data Security Posture Management for AI (classic) and the preview version of Data Security Posture Management.|Data Security AI Viewer|
 |**Data Security DLP Triage Agent**|Intended exclusively for non-interactive agent users to triage and remediate data loss prevention alerts.|Data Classification Content Download <br/><br/> Data Classification Content Viewer <br/><br/> Information Protection Analyst <br/><br/> Purview Content Analyst <br/><br/> Purview Copilot Workspace Contributor|
 |**Data Security DSPM Posture Agent**|Intended exclusively for non-interactive agent users to search and classify the data based on the selected scope provided by Posture management administrators.|Purview Content Analyst <br/><br/> Purview Copilot Workspace Contributor|
