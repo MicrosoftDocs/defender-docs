@@ -25,11 +25,12 @@ appliesto:
 Tamper protection in macOS helps prevent unwanted changes to security settings from being made by unauthorized users. Tamper protection helps prevent unauthorized removal of Microsoft Defender for Endpoint on macOS. This capability also helps important security files, processes, and configuration settings from being tampered.
 
 > [!IMPORTANT]
-> Microsoft Defender for Endpoint on macOS respects the selection for tamper protection applied in the [Microsoft Defender portal](https://security.microsoft.com). You can also use a Mobile Device Management (MDM) solution, such as Microsoft Intune or Jamf, to enforce your own tamper protection setting on macOS, including block, audit, or disable.
+> Microsoft Defender for Endpoint on macOS uses the tamper protection setting configured in the [Microsoft Defender portal](https://security.microsoft.com) as a default value. 
+> You can enforce tamper protection by configuring the setting through a Mobile Device Management (MDM) solution such as Microsoft Intune or Jamf.
 >
 > When an MDM policy is applied, it takes precedence over both the portal setting and any local configuration.
 >
->If the tamper protection setting wasn't enforced via MDM, a local administrator can continue to manually change the setting with the following command: `sudo mdatp config tamper-protection enforcement-level --value (chosen mode)`.
+>If the tamper protection setting isn't enforced via MDM, a local administrator can manually change the setting using the following command: `sudo mdatp config tamper-protection enforcement-level --value (chosen mode)`.
 
 You can set the "tamper protection" setting in the following modes:
 
