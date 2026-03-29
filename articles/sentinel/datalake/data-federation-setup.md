@@ -6,7 +6,7 @@ author: EdB-MSFT
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: how-to
-ms.date: 03/23/2026
+ms.date: 03/29/2026
 ms.author: edbaynash
 ms.collection: ms-security
 
@@ -136,6 +136,8 @@ Before configuring the Fabric connector instance, you must set up permissions wi
 
 1. Select **Connect** to create the connection instance.
 
+> [!NOTE]
+> The files in your target data source must be in delta parquet format to be read from the Sentinel data lake.
 
 # [Azure Data Lake Storage Gen 2](#tab/adls)
 
@@ -147,8 +149,7 @@ Before creating the connector, prepare your storage account:
 1. Assign the **Storage Blob Data Reader** role to the service principal you created earlier. For more information on granting access through the Azure portal, see [Assign Azure roles using the Azure portal - Azure RBAC](/azure/role-based-access-control/role-assignments-portal).
 
 
-> [!NOTE]
-> The files in your ADLS Gen 2 storage account must be in delta parquet format to be read from the Sentinel data lake.
+
 
 
 1. On the **Data federation** > **Catalog** page, select **Azure Data Lake Storage**.

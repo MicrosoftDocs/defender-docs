@@ -6,7 +6,7 @@ author: EdB-MSFT
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: concept-article
-ms.date: 03/22/2026
+ms.date: 03/29/2026
 ms.author: edbaynash
 ms.collection: ms-security
 
@@ -22,7 +22,7 @@ Data federation in Microsoft Sentinel enables seamless querying of multiple exte
 Data federation allows you to query external data sources directly from the Microsoft Sentinel data lake using Kusto Query Language (KQL) or Jupyter notebooks using the Microsoft Sentinel Visual Studio Code extension. Instead of ingesting the data into Sentinel, federation creates connections to external data stores, enabling:
 
 - **Unified analytics**: Query federated sources alongside native Microsoft Sentinel data lake tables.
-- **Cost optimization**: Avoid data duplication by querying data where it resides.
+- **Preserve governance and compliance controls**: Maintain data security and compliance by querying data in place without moving it.
 - **Enhanced insights**: Combine security data with business data, logs, or other datasets stored in external systems.
 - **Flexible data access**: Access historical or specialized datasets that complement your security operations.
 
@@ -95,11 +95,6 @@ Combine security event data in Sentinel with context from external sources, such
 - Analytics outputs from Databricks
 - Historical logs stored in ADLS Gen 2
 - Business application data from Microsoft Fabric
-
-### Cost efficiency
-
-- Reduce data ingestion costs by querying data in place
-- Avoid storage duplication across systems
 
 ### Operational flexibility
 
