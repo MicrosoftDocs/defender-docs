@@ -1021,12 +1021,6 @@ Configure a private endpoint connection to enable access to traffic coming only 
 
 **Severity**: Medium
 
-### Secured dead-letter topics should be enabled on Pub/Sub subscriptions
-
-**Description**: Defender for Cloud identified Pub/Sub subscriptions missing a dead-letter topic. A dead-letter topic is a dedicated resource that captures poison messages--those that repeatedly fail processing. Without it, continuous retries may overwhelm system resources and degrade message flow, increasing the risk of resource exhaustion and system instability. For more information, please visit: Learn more
-
-**Severity**: Low
-
 ### Security groups should be configured for MemoryDB clusters
 
 **Description**: Defender for Cloud identified MemoryDB cluster without any security groups configured. Security groups function as firewall rules that regulate both inbound and outbound traffic for your cluster. Without them, your cluster is exposed to the risk of unauthorized access and potential data breaches. Enabling security groups can significantly reduce this risk by ensuring that only approved traffic is allowed to access your MemoryDB cluster.
