@@ -466,12 +466,6 @@ Unless a port is specifically allowed, the port should deny unrestricted access.
 
 **Severity**: Low
 
-### Health Checks should be enabled for Route 53
-
-**Description**: Defender for Cloud identified that health checks are not enabled on your Route 53 resources. Health checks are periodic tests that monitor the availability and performance of DNS endpoints, ensuring traffic is routed only to responsive servers. Without them, you risk directing traffic to unresponsive or underperforming endpoints, which could lead to service disruptions and extended downtime.
-
-**Severity**: High
-
 ### Health checks should be enabled for primary records on Route53 Hosted zones
 
 **Description**: Defender for Cloud identified a Route 53 failover PRIMARY record without an enabled health check. Health checks are required to validate endpoint availability during failover. Without these checks, traffic may be inadvertently routed to endpoints that are unresponsive or compromised, increasing the risk of service disruption and reduced reliability.
@@ -483,12 +477,6 @@ Unless a port is specifically allowed, the port should deny unrestricted access.
 **Description**: Defender for Cloud identified missing VPC security groups in Amazon Redshift clusters. VPC security groups are virtual firewalls used to control network traffic. Without these groups, your clusters are exposed to unauthorized access and potential data breaches, risking sensitive information and data integrity. Configuring the appropriate security groups is vital to limit access only to approved IP addresses, instances, or ports.
 
 **Severity**: Medium
-
-### Multiple subnets across different Availability Zones should be configured in the Bedrock VPC configuration
-
-**Description**: Defender for Cloud identified that your Bedrock VPC configuration uses a single subnet in one Availability Zone. A subnet is a segment of a VPC and confining endpoints to one zone creates a single point of failure. This means that if the zone goes down, your Bedrock services become unreachable. Configuring multiple subnets in different Availability Zones is necessary to ensure high availability and protect against outages.
-
-**Severity**: Low
 
 ### Network isolation should be enabled for AWS SageMaker models
 
