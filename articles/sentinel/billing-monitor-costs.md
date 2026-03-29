@@ -162,19 +162,19 @@ The new cost management experience, currently in preview and under **Microsoft S
 
 The Usage summary lets you visualize usage by capability over time. Select a meter from the **Meters** dropdown to view its usage. Once selected, daily usage is displayed for the chosen time range. By default, data is shown for a single month, but you can adjust the time window using the filter. The summary card shows the total usage for the selected period.
 
-:::image type="content" source="media/billing-monitor-costs/usage-summary-chart.png" alt-text="Screenshot of the Usage summary chart in Microsoft Sentinel cost management.":::
+:::image type="content" source="media/billing-monitor-costs/usage-summary-chart.png" alt-text="Screenshot of the Usage summary chart in Microsoft Sentinel cost management." lightbox="media/billing-monitor-costs/usage-summary-chart.png":::
 
-Below the summary chart, usage details vary by meter. For **Data lake query** and **Advanced data insights**, usage is split between **interactive analysis** and **scheduled analysis**.
+After the summary chart, usage details vary by meter. For **Data lake query** and **Advanced data insights**, usage is split between **interactive analysis** and **scheduled analysis**.
 
-:::image type="content" source="media/billing-monitor-costs/usage-details-by-analysis-type.png" alt-text="Screenshot of usage details split by analysis type for selected meters.":::
+:::image type="content" source="media/billing-monitor-costs/usage-details-by-analysis-type.png" alt-text="Screenshot of usage details split by analysis type for selected meters." lightbox="media/billing-monitor-costs/usage-details-by-analysis-type.png":::
 
-Below the charts, a table provides a breakdown of the resources contributing to the selected meter’s usage.
+After the charts, a table provides a breakdown of the resources contributing to the selected meter’s usage.
 
-:::image type="content" source="media/billing-monitor-costs/usage-resource-contributors-table.png" alt-text="Screenshot of the usage table showing resources contributing to meter usage.":::
+:::image type="content" source="media/billing-monitor-costs/usage-resource-contributors-table.png" alt-text="Screenshot of the usage table showing resources contributing to meter usage." lightbox="media/billing-monitor-costs/usage-resource-contributors-table.png":::
 
 Select a resource to view a detailed breakdown in the side panel.
 
-:::image type="content" source="media/billing-monitor-costs/resource-usage-side-panel.png" alt-text="Screenshot of the side panel with detailed resource usage breakdown.":::
+:::image type="content" source="media/billing-monitor-costs/resource-usage-side-panel.png" alt-text="Screenshot of the side panel with detailed resource usage breakdown." lightbox="media/billing-monitor-costs/resource-usage-side-panel.png":::
 
 #### Notification
 
@@ -195,31 +195,31 @@ To configure alerts or enforced thresholds on a capability:
 
 1. In **Microsoft Sentinel** > **Cost management**, select **Configure Policies** in the top right corner.
 
-   :::image type="content" source="media/billing-monitor-costs/configure-policies-button.png" alt-text="Screenshot of the Configure Policies button in Microsoft Sentinel cost management.":::
+   :::image type="content" source="media/billing-monitor-costs/configure-policies-button.png" alt-text="Screenshot of the Configure Policies button in Microsoft Sentinel cost management." lightbox="media/billing-monitor-costs/configure-policies-button.png":::
 
 1. On the **Configure Policies** page, select the policy you want to edit.
 
-   :::image type="content" source="media/billing-monitor-costs/configure-policies-page.png" alt-text="Screenshot of the Configure Policies page with a selected policy.":::
+   :::image type="content" source="media/billing-monitor-costs/configure-policies-page.png" alt-text="Screenshot of the Configure Policies page with a selected policy." lightbox="media/billing-monitor-costs/configure-policies-page.png":::
 
-1. In the **Edit policy** side panel, enter a value for the total threshold. 
+1. In the **Edit policy** side panel, enter a value for the total threshold.
 
-   :::image type="content" source="media/billing-monitor-costs/edit-policy-total-threshold.png" alt-text="Screenshot of the Edit policy panel with total threshold input.":::
+   :::image type="content" source="media/billing-monitor-costs/edit-policy-total-threshold.png" alt-text="Screenshot of the Edit policy panel with total threshold input." lightbox="media/billing-monitor-costs/edit-policy-total-threshold.png":::
 
 1. Enter an **Alert percentage** to define when email notifications are sent relative to the total threshold..
 
-   :::image type="content" source="media/billing-monitor-costs/edit-policy-alert-percentage.png" alt-text="Screenshot of the alert percentage setting in the Edit policy panel.":::
+   :::image type="content" source="media/billing-monitor-costs/edit-policy-alert-percentage.png" alt-text="Screenshot of the alert percentage setting in the Edit policy panel." lightbox="media/billing-monitor-costs/edit-policy-alert-percentage.png":::
 
-1. To block usage after the threshold is exceeded, enable **Enforcement.** 
+1. To block usage after the threshold is exceeded, enable **Enforcement.**
 
-   :::image type="content" source="media/billing-monitor-costs/edit-policy-enforcement-toggle.png" alt-text="Screenshot of the enforcement toggle enabled in the Edit policy panel.":::
+   :::image type="content" source="media/billing-monitor-costs/edit-policy-enforcement-toggle.png" alt-text="Screenshot of the enforcement toggle enabled in the Edit policy panel." lightbox="media/billing-monitor-costs/edit-policy-enforcement-toggle.png":::
 
 1. Review your settings and select **Submit.**
 
-   :::image type="content" source="media/billing-monitor-costs/configure-policies-submit.png" alt-text="Screenshot of submitting policy settings in the Configure Policies workflow.":::
+   :::image type="content" source="media/billing-monitor-costs/configure-policies-submit.png" alt-text="Screenshot of submitting policy settings in the Configure Policies workflow." lightbox="media/billing-monitor-costs/configure-policies-submit.png":::
 
 1. After enforcement is enabled and usage exceeds the configured threshold, supported actions fail. For KQL and Notebooks, users see a **Limit exceeded** error.
 
-   :::image type="content" source="media/billing-monitor-costs/limit-exceeded-error.png" alt-text="Screenshot of the Limit exceeded error after threshold enforcement is triggered.":::
+   :::image type="content" source="media/billing-monitor-costs/limit-exceeded-error.png" alt-text="Screenshot of the Limit exceeded error after threshold enforcement is triggered." lightbox="media/billing-monitor-costs/limit-exceeded-error.png":::
 
 ## Using Azure Prepayment with Microsoft Sentinel
 
