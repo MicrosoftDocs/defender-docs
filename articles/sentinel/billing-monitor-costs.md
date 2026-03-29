@@ -205,7 +205,7 @@ To configure alerts or enforced thresholds on a capability:
 
    :::image type="content" source="media/billing-monitor-costs/edit-policy-total-threshold.png" alt-text="Screenshot of the Edit policy panel with total threshold input." lightbox="media/billing-monitor-costs/edit-policy-total-threshold.png":::
 
-1. Enter an **Alert percentage** to define when email notifications are sent relative to the total threshold..
+1. Enter an **Alert percentage** to define when email notifications are sent relative to the total threshold.
 
    :::image type="content" source="media/billing-monitor-costs/edit-policy-alert-percentage.png" alt-text="Screenshot of the alert percentage setting in the Edit policy panel." lightbox="media/billing-monitor-costs/edit-policy-alert-percentage.png":::
 
