@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 03/22/2026
+ms.date: 03/29/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -31,7 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| March 31, 2026 | Preview | [Expanded multi-cloud coverage for AWS and Google Cloud Platform (Preview)](#expanded-multi-cloud-coverage-for-aws-and-google-cloud-platform-preview) |
+| March 29, 2026 | Preview | [Expanded multi-cloud coverage for AWS and Google Cloud Platform (Preview)](#expanded-multi-cloud-coverage-for-aws-and-google-cloud-platform-preview) |
 | March 22, 2026| Update | [File Integrity Monitoring requires MDE agent version 10.8799+ for legacy Windows machines](#file-integrity-monitoring-requires-mde-agent-version-108799-for-legacy-windows-machines) |
 | March 12, 2026 | GA | [Kubernetes gated deployment support for AKS Automatic (GA)](#kubernetes-gated-deployment-support-for-aks-automatic-ga) |
 | March 11, 2026 | GA| [Severity‑based risk assignment for "Not evaluated" recommendations](#severitybased-risk-assignment-for-not-evaluated-recommendations) |
@@ -42,7 +42,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ### Expanded multi-cloud coverage for AWS and Google Cloud Platform (Preview)
 
-March 31, 2026
+March 29, 2026
 
 Microsoft Defender for Cloud expands multi-cloud posture management with broader native coverage for AWS and GCP. This update adds discovery and posture assessment for additional resource types across compute, databases, storage, analytics, networking, identity, secrets, DevOps, and AI/ML services.
 
