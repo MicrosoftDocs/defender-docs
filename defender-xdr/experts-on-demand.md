@@ -51,11 +51,11 @@ You need to select one of the following Microsoft Entra ID roles to view and sub
 | Security Reader | Read inquiries |
 | Security Admin, Security Operator | Read and submit inquiries |
 
-To learn more about how Microsoft Entra ID roles map to Microsoft Defender Unified RBAC permissions, see [Microsoft Entra Global roles access](compare-rbac-roles.md#microsoft-entra-global-roles-access).
+To learn more about how Microsoft Entra ID roles map to Microsoft Defender unified RBAC permissions, see [Microsoft Entra Global roles access](compare-rbac-roles.md#microsoft-entra-global-roles-access).
 
-Microsoft Threat Experts customers using Ask Defender Experts capability will also be able to use the following permissions from [Microsoft Defender XDR Unified RBAC](../defender-xdr/custom-permissions-details.md).
+Microsoft Threat Experts customers using Ask Defender Experts capability will also be able to use the following permissions from [Microsoft Defender unified RBAC](../defender-xdr/custom-permissions-details.md).
 
-|Microsoft Defender XDR Unified RBAC role|Permission level|
+|Microsoft Defender unified RBAC role|Permission level|
 |---|---|---|
 | Security data basics | Read |
 | Alerts, Response | Read and submit |
