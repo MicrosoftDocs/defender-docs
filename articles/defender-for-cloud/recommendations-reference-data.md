@@ -4,7 +4,7 @@ description: This article lists all Microsoft Defender for Cloud data security r
 author: Elazark
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 03/18/2026
+ms.date: 03/29/2026
 ms.author: elkrieger
 ms.custom: generated
 ai-usage: ai-assisted
@@ -1086,12 +1086,6 @@ Configure a private endpoint connection to enable access to traffic coming only 
 **Description**: Defender for Cloud identified missing expiration policies in Pub/Sub subscriptions. Expiration policies determine how long an inactive subscription remains active before auto deletion. Without this configuration, subscriptions may continue storing data indefinitely, leading to increased storage costs and a higher risk of sensitive information being retained longer than necessary. For more information, visit https://cloud.google.com/pubsub/docs/subscription-properties#expiration_period
 
 **Severity**: Low
-
-### Unsecured imported models should be in a READY or PREPARED state for Amazon Bedrock Agents
-
-**Description**: Defender for Cloud identified unsecured imported models in Amazon Bedrock Agents. Amazon Bedrock Imported Models must reach a READY or PREPARED state-meaning they are fully validated and configured-before use. Models in states such as NOT_PREPARED, FAILED, INVALID, DEPRECATED, REGISTER_ERROR, or DELETE_FAILED may lead to unpredictable behavior, operational failures, and unreliable inference results. Ensuring models are fully validated mitigates these risks.
-
-**Severity**: Medium
 
 ### Unused CodeArtifact domains should be removed
 
