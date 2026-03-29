@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 03/29/2026
+ms.date: 03/30/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -31,7 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| March 29, 2026 | Preview | [Expanded multi-cloud coverage for AWS and Google Cloud Platform (Preview)](#expanded-multi-cloud-coverage-for-aws-and-google-cloud-platform-preview) |
+| March 29, 2026 | Preview | [Expanded multi-cloud coverage for AWS and GCP (Preview)](#expanded-multi-cloud-coverage-for-aws-and-gcp-preview) |
 | March 22, 2026| Update | [File Integrity Monitoring requires MDE agent version 10.8799+ for legacy Windows machines](#file-integrity-monitoring-requires-mde-agent-version-108799-for-legacy-windows-machines) |
 | March 12, 2026 | GA | [Kubernetes gated deployment support for AKS Automatic (GA)](#kubernetes-gated-deployment-support-for-aks-automatic-ga) |
 | March 11, 2026 | GA| [Severity‑based risk assignment for "Not evaluated" recommendations](#severitybased-risk-assignment-for-not-evaluated-recommendations) |
@@ -40,7 +40,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | March 04, 2026 | Deprecation | [Deprecation of preview of container and container images vulnerability recommendations](#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations) |
 | March 04, 2026 | Preview |[New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview)|
 
-### Expanded multi-cloud coverage for AWS and Google Cloud Platform (Preview)
+### Expanded multi-cloud coverage for AWS and GCP (Preview)
 
 March 29, 2026
 
