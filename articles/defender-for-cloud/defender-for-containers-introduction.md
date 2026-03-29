@@ -109,7 +109,7 @@ The following images are used by Defender for Containers runtime protection comp
 Updates are delivered through the deployment mechanism used by your environment. For example:
 
 - When deployed using the **AKS add-on**, updates are delivered through the AKS release lifecycle.
-- When deployed using **Helm**, updated images are available through updated chart versions.
+- When deployed using **Helm**, updates are released within 30 days through updated chart versions.
 
 If you detect a vulnerability in a Microsoft-maintained Defender image, open an Azure support request and include the image name, tag, and CVE identifier.
 
