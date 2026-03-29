@@ -30,6 +30,7 @@ Learn more about [Preview features](/defender-xdr/preview).
 
 |Type  |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|-------------|
+|Feature| New Microsoft Secure Score recommendations |GA |Microsoft Secure Score now includes new recommendations to help organizations proactively prevent common endpoint attack techniques: <br> **Block outbound network connections from Microsoft HTML Application Host (mshta.exe):** Helps mitigate attacks that leverage mshta.exe (a trusted Windows binary) to execute malicious scripts and communicate with external command-and-control (C2) infrastructure. Blocking outbound connections from mshta.exe disrupts common attack chains, prevents payload download and data exfiltration, and reduces the risk of living-off-the-land attacks.|
 |Release - Linux |Build 101.26021.0002 |GA |Release version 30.126021.0002.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#linux--march-2026--101260210002). |
 |Release - Windows |Windows Defender Antivirus: Platform 4.18.26020.6 / Engine 1.1.26020.3 |GA |See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#windows-antivirus--february-2026--platform-418260206--engine-11260203). |
 |Feature |[Library management for live response](configure-libraries-live-response.md) |GA |Library management for live response is now generally available. This feature provides a centralized view for managing files and scripts used during live response sessions. |
