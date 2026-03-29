@@ -4,7 +4,7 @@ description: Compare Microsoft Defender for Cloud features and capabilities betw
 author: dlanger
 ms.author: dlanger
 ms.topic: article
-ms.date: 03/30/2025
+ms.date: 03/29/2025
 ms.service: defender-for-cloud
 ---
 
