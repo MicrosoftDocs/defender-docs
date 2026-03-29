@@ -51,7 +51,7 @@ For more information, see:
 
 ## March 2025
 
-Starting March 2, 2025, new Microsoft Defender for Identity tenants will have the Unified RBAC model as their default permissions model. They won't be able to export roles and permissions from the current model. Existing Defender for Identity tenants will maintain their current roles and permissions configuration.
+Starting March 2, 2025, new Microsoft Defender for Identity tenants will have the unified RBAC model as their default permissions model. They won't be able to export roles and permissions from the current model. Existing Defender for Identity tenants will maintain their current roles and permissions configuration.
 
 ## February 2025
 
