@@ -79,7 +79,7 @@ To view and create alert policies, in the [Microsoft Defender portal](https://se
   :::image type="content" source="media/alert-policies/policies-rules-page-small.png" alt-text="Highlighting Alert policy in the Policies and rules page":::
 
 > [!NOTE]
-> You have to be assigned the View-Only Manage Alerts role to view alert policies in the Microsoft Defender portal. You have to be assigned the Manage Alerts role to create and edit alert policies. For more information, see [Map Microsoft Defender XDR Unified role-based access control (RBAC) permissions](compare-rbac-roles.md).
+> You have to be assigned the View-Only Manage Alerts role to view alert policies in the Microsoft Defender portal. You have to be assigned the Manage Alerts role to create and edit alert policies. For more information, see [Map Microsoft Defender unified role-based access control (RBAC) permissions](compare-rbac-roles.md).
 
 An alert policy consists of the following settings and conditions.
 
@@ -284,7 +284,7 @@ The following table lists the roles that are required to view alerts from the si
 To see which category a default alert policy is assigned to, see the tables in [Default alert policies](#default-alert-policies).
 
 > [!TIP]
-> For information about permissions in [Microsoft Defender XDR Unified role based access control (RBAC)](/microsoft-365/security/defender/manage-rbac), see [Alert policies in the Microsoft Defender portal](/microsoft-365/security/office-365-security/alert-policies-defender-portal).
+> For information about permissions in [Microsoft Defender unified role-based access control (RBAC)](/microsoft-365/security/defender/manage-rbac), see [Alert policies in the Microsoft Defender portal](/microsoft-365/security/office-365-security/alert-policies-defender-portal).
 
 |Role|Information<br>governance|Data loss<br>prevention|Mail<br>flow|Permissions|Threat<br>management|Others|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
