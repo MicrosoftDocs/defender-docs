@@ -6,7 +6,7 @@ author: EdB-MSFT
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: how-to
-ms.date: 03/22/2026
+ms.date: 03/29/2026
 ms.author: edbaynash
 ms.collection: ms-security
 
@@ -22,7 +22,7 @@ After setting up federated data connectors, you can access your federated tables
 Before you begin, ensure:
 
 - Your tenant must be onboarded to the Sentinel data lake. For more information, see [Onboard to Microsoft Sentinel data lake](./sentinel-lake-onboard-defender.md)
-- You have appropriate permissions to query data in the Sentinel data lake.
+- You have appropriate permissions to query data in the Sentinel data lake. For more information,see [Roles and permissions in the Microsoft Sentinel platform](../roles.md#microsoft-sentinel-data-lake-read-permissions).
 
 ## Understand federated table naming
 
@@ -33,6 +33,8 @@ Federated table names follow the pattern `<tableName>_<connectorInstanceName>`. 
 | `widgets` | `ADLS01` | `widgets_ADLS01` |
 | `sales_data` | `AzureDBX01` | `sales_data_AzureDBX01` |
 | `inventory` | `Fabric01` | `inventory_Fabric01` |
+
+If multiple tables in the connector instance have the same table name, a numerical identifier is appended to the connector instance name, for example `widgets_ADLS01_1` when two tables within the `ADLS01` connector instance are called `widgets`.
 
 Use the federated table name when querying data from the Sentinel data lake.
 
@@ -72,6 +74,9 @@ The KQL queries page in Microsoft Sentinel allows you to query federated tables 
 1. Find the federation type for your data source, such as Microsoft Fabric, Azure Databricks, or Azure Data Lake Storage Gen2.
 1. Expand the federation type to see your federated tables.
 1. Expand a table to view its columns.
+
+> [!NOTE]
+> Due to query performance optimization in KQL, it can take up to 15 minutes for new data in a federated table to become available for query.
 
 :::image type="content" source="./media/using-data-federation/kql-schema-federated.png" alt-text="Screenshot showing the KQL queries schema tab with federated tables expanded." lightbox="./media/using-data-federation/kql-schema-federated.png":::
 
@@ -126,6 +131,10 @@ Working with federated tables in Jupyter notebooks follows the same patterns as 
 1. **Use the full table name**: Reference tables using the `<tableName>_<connectorInstance>` format.
 1. **Don't specify a workspace name**: Read operations don't require a workspace specification.
 1. **Read-only access**: Federated tables are read-only; you can't write data back to federated sources.
+
+> [!NOTE]
+> After enabling data federation the first time, it can take up to 24 hours before you see federated tables within Jupyter notebooks.
+
 
 ### Jupyter notebook jobs
 
