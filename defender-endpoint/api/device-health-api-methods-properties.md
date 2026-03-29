@@ -6,7 +6,6 @@ ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
 ms.date: 11/11/2025
-manager: bagol
 ms.reviewr: mkaminska
 audience: ITPro
 ms.collection:

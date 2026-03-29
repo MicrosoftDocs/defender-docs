@@ -2,7 +2,6 @@
 title: Payloads in Attack simulation training
 author: chrisda
 ms.author: chrisda
-manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.service: defender-office-365
@@ -165,11 +164,7 @@ You can also create custom payloads that use QR codes as phishing links as descr
    >
    > You can also create payloads during the creation of simulations. For more information, see [Create a simulation: Select a payload and login page](attack-simulation-training-simulations.md#select-a-payload-and-login-page).
 
-2. On the **Select type** page, select one of the following values:
-   - **Email**
-   - **Teams**: Currently, this value is available only in Private Preview. For more information, see [Microsoft Teams in Attack simulation training](attack-simulation-training-teams.md).
-
-   When you're finished on the **Select type** page, select **Next**.
+2. On the **Select type** page, select **Email**, and then select **Next**.
 
 3. On the **Select technique** page, the available options are the same as on the **Select technique** page in the new simulation wizard:
    - **Credential Harvest**<sup>\*</sup>

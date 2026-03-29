@@ -5,7 +5,6 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -49,9 +48,7 @@ The following steps guide you on how to activate the Microsoft Defender unified 
 * [Activate in Microsoft Defender XDR settings](#activate-in-microsoft-365-defender-settings)
 
 > [!IMPORTANT]
-> You must be at least a Security Administrator in Microsoft Entra ID to perform this task. See [Permission prerequisites](manage-rbac.md#permissions-prerequisites) for more information, including prerequisites for activating Sentinel workspaces.
->
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization.
+> You must be at least a Security Administrator in Microsoft Entra ID to perform this task. For more information on permissions, see [Permission prerequisites](manage-rbac.md#permissions-prerequisites).
 
 ### Activate from the Permissions and roles page
 

@@ -9,7 +9,7 @@ ms.topic: article
 ms.service: microsoft-defender
 ---
 
-# Identity entity page in Microsoft Defender
+# Investigate an identity
 
 In Microsoft Defender, an **identity** represents a person or entity in your organization. Users often have multiple accounts across providers such as on-premises Active Directory, Microsoft Entra ID, SaaS applications, and other IDPs. Defender correlates these accounts into a single identity.
 
@@ -29,17 +29,6 @@ The Identity page is organized into a top section and a set of tabs. The top sec
 
 - Org information: The identity’s job title, department, and more.
 - Account tags: Active Directory tags associated with the identity
-
-The Identity page includes these tabs:
-
-- Overview
-- Incidents and alerts
-- Observed in organization
-- Timeline
-- Security recommendations
-- Attack paths
-- Policies
-- Microsoft Sentinel events (for Microsoft Sentinel customers)
 
 :::image type="content" source="media/investigate-users/identity-page.png" alt-text="Screenshot of the Identity page in Microsoft Defender portal." lightbox="media/investigate-users/identity-page.png":::
 
@@ -97,7 +86,7 @@ The **Observed in organization** tab shows where and how the identity appears ac
 This tab can include:
 
 | Section | Description |
-|----|----|
+| ---- | ---- |
 | Accounts | All accounts associated with the identity across identity systems, including automatically and manually correlated accounts. Analysts can [manually link other related accounts](/defender-for-identity/manage-related-identities-accounts). An indicator shows which account is the primary account. |
 | Devices | Devices the identity signed into. This usually shows you recent activity, |
 | Locations | Locations observed for sign-ins |
@@ -110,6 +99,20 @@ Each identity can include multiple related accounts from different identity prov
 Microsoft Defender uses internal correlation logic to determine the primary account.
 
 :::image type="content" source="media/investigate-users/identity-observed-in-organization.png" alt-text="Screenshot of the Observed in organization tab on the Identity page in Microsoft Defender.":::
+
+## Risk score tab (Preview)
+
+The **Risk score** tab summarizes the identity's risk level by combining alert activity with identity attributes like role assignments and sensitivity classification. Use this tab to understand an identity's risk score, identify contributing factors, and prioritize investigation.
+
+| Section | Description |
+| --- | --- |
+| **Risk Summary** | Displays: <ul><li>The identity's overall risk score (0–100)</li><li>How the identity compares to other identities in your organization by percentile</li><li>The account sets linked to the identity</li><li>The Microsoft Entra ID risk level for each Microsoft Entra account. Select the Microsoft Entra ID risk level to see timeline details</li><li></li><li>Likelihood of compromise</li><li>Impact of compromise</li></ul> |
+| **Likelihood of Compromise** | Shows the likelihood severity level and breaks down alerts by MITRE ATT&CK kill chain stage (for example, Initial Access, Persistence, and Privilege Escalation) for each account set. |
+| **Impact of Compromise** | Shows the potential impact level based on the identity's criticality level, classification (for example, Global Administrator), and Microsoft Entra Privileged Identity Management (PIM) role assignments. |
+| **Risk Trend** | A line chart that shows how the risk score changed over a configurable time period (for example, 30 days). Select **Go to timeline** to view the full activity timeline. |
+| **Likelihood of Compromise Details** | A bar chart that shows alert distribution across MITRE ATT&CK categories, with a filterable alert table. Use the **Active alerts only** toggle to focus on unresolved alerts. Filter by account set, status, or kill chain stage. |
+
+Select **Reset risk** at the top of the tab to manually reset the identity's risk score, for example after completing remediation.
 
 ## Timeline tab
 
@@ -177,9 +180,9 @@ This view provides investigation context by showing which policies apply to the 
 
 ## Microsoft Sentinel events tab
 
-When Microsoft Sentinel is connected to the Defender portal, this tab shows a Sentinel timeline for the identity. The timeline includes alerts associated with the identity, including alerts also shown on the **Incidents and alerts** tab and alerts created by Microsoft Sentinel. It also shows bookmarked hunts that reference the identity, activity events from external data sources, and unusual behaviors identified by Microsoft Sentinel anomaly rules.
+When Microsoft Sentinel is connected to the Defender portal, this tab shows a Microsoft Sentinel timeline for the identity. The timeline includes alerts associated with the identity, including alerts also shown on the **Incidents and alerts** tab and alerts created by Microsoft Sentinel. It also shows bookmarked hunts that reference the identity, activity events from external data sources, and unusual behaviors identified by Microsoft Sentinel anomaly rules.
 
-:::image type="content" source="media/investigate-users/user-incident-sentinel-events.png" alt-text="Screenshot of the sentinel events tab on the Identity page in Microsoft Defender.":::
+:::image type="content" source="media/investigate-users/user-incident-sentinel-events.png" alt-text="Screenshot of the Microsoft Sentinel events tab on the Identity page in Microsoft Defender.":::
 
 ### Insights
 

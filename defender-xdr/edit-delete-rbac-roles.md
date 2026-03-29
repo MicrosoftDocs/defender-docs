@@ -5,7 +5,6 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -38,10 +37,9 @@ In Microsoft Defender XDR Unified role-based access control (RBAC), you can edit
 The following steps guide you on how to edit roles in Microsoft Defender XDR Unified RBAC:
 
 > [!IMPORTANT]
-> You must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have all the Authorization permissions assigned in Microsoft Defender XDR Unified RBAC to perform this task. For more information on permissions, see [Permission prerequisites](manage-rbac.md#permissions-prerequisites).
-> Microsoft recommends that you use roles with the fewest permissions to help improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> You must be a Security Administrator or higher in Microsoft Entra ID, or have all the Authorization permissions assigned in Microsoft Defender XDR Unified RBAC to perform this task. For more information on permissions, see [Permission prerequisites](manage-rbac.md#permissions-prerequisites).
 
-1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) as global administrator or security administrator.
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) as security administrator or higher.
 
 2. In the navigation pane, select **Permissions**.
 
@@ -88,7 +86,7 @@ The CSV also includes a snapshot of the Defender XDR Unified RBAC activation sta
 The following steps guide you on how to export roles in Microsoft Defender XDR Unified RBAC:
 
 > [!NOTE]
-> To export roles, you must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have the **Authorization (manage)** permission assigned for all data sources in Microsoft Defender XDR Unified RBAC and have at least one workload activated for Defender XDR Unified RBAC.
+> To export roles, you must be a Security Administrator or higher in Microsoft Entra ID, or have the **Authorization (manage)** permission assigned for all data sources in Microsoft Defender XDR Unified RBAC and have at least one workload activated for Defender XDR Unified RBAC.
 >
 >For more information on permissions, see [Permission prerequisites](manage-rbac.md#permissions-prerequisites).
 
