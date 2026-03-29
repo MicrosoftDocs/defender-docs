@@ -22,7 +22,7 @@ After setting up federated data connectors, you can access your federated tables
 Before you begin, ensure:
 
 - Your tenant must be onboarded to the Sentinel data lake. For more information, see [Onboard to Microsoft Sentinel data lake](./sentinel-lake-onboard-defender.md)
-- You have appropriate permissions to query data in the Sentinel data lake. For more information,see [Roles and permissions in the Microsoft Sentinel platform](../roles#microsoft-sentinel-data-lake-read-permissions).
+- You have appropriate permissions to query data in the Sentinel data lake. For more information,see [Roles and permissions in the Microsoft Sentinel platform](../roles.md#microsoft-sentinel-data-lake-read-permissions).
 
 ## Understand federated table naming
 
