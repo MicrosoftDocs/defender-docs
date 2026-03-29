@@ -7,7 +7,6 @@ ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
 ms.date: 10/20/2025
-manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -25,10 +24,9 @@ search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
-# Address false positives/negatives in Microsoft Defender for Endpoint
 
+# Address false positives/negatives in Microsoft Defender for Endpoint
 
 In endpoint protection solutions, a false positive is an entity, such as a file or a process that was detected and identified as malicious even though the entity isn't actually a threat. A false negative is an entity that wasn't detected as a threat, even though it actually is malicious. False positives/negatives can occur with any threat protection solution, including [Defender for Endpoint](microsoft-defender-endpoint.md).
 
@@ -47,8 +45,8 @@ When you have a false positive, a good first step is to try to determine its det
 |Detection source| Information|
 | -------- | -------- |
 |Endpoint Detection and Response (EDR) | The alert is related to EDR in Defender for Endpoint <br/>- Solution: Submit the false positive to [https://aka.ms/wdsi](https://aka.ms/wdsi) <br/>- Work-around: Add an EDR exclusion or tune the alerts|
-|Antivirus|The alert relates to Microsoft Defender Antivirus in active mode (primary) where it blocks. <br/>- Solution: Submit the false positive to [https://aka.ms/wdsi](https://aka.ms/wdsi) <br/>- Work-around: Add [Indicators - File hash - allow ](/defender-endpoint/indicator-file) or an [Antivirus exclusion](/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions)<br/><br/>If Microsoft Defender Antivirus is in passive mode, EDR in block mode might just detect.|
-| Custom TI| Custom indicators:<br/>- [File hash](/defender-endpoint/indicator-file)<br/>- [IP address or URL](/defender-endpoint/indicator-ip-domain)<br/>- [Certificates](/defender-endpoint/indicator-certificates) <br/><br/>Solution: [Manage indicators](/defender-endpoint/indicator-manage). <br/><br/> Or, if you see `CustomEnterpriseBlock`, your detection source could be one of the following capabilities in Defender for Endpoint: <br/><br/>1. [Automated investigation and remediation](automated-investigations.md)<br/>-- Solution: Submit the false positive to [https://aka.ms/wdsi](https://aka.ms/wdsi) <br/>-- Work-around: [Automation folder exclusions  ](/defender-endpoint/manage-automation-folder-exclusions)<br/><br/>2. Custom detection rules deriving from [Advanced Hunting](/defender-xdr/advanced-hunting-overview) <br/>-- Solution: [Manage existing custom detection rules  ](/defender-xdr/custom-detection-rules)<br/><br/>3. [EDR in block mode](/defender-endpoint/edr-in-block-mode) <br/>-- Solution: Submit the false positive to [https://aka.ms/wdsi](https://aka.ms/wdsi)<br/>-- Work-around: [Indicators – File hash – allow](/defender-endpoint/indicator-file) or [Antivirus exclusions](/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions)<br/><br/>4. [Live response](live-response.md)<br/>-- Solution: Submit the false positive to [https://aka.ms/wdsi](https://aka.ms/wdsi)<br/>-- Work-around: [Indicators – File hash – allow](/defender-endpoint/indicator-file) or [Antivirus exclusions](/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions)<br/><br/>5. [PUA protection](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md)<br/>-- Solution: Submit the false positive to [https://aka.ms/wdsi](https://aka.ms/wdsi)<br/>-- Work-around: [Indicators – File hash – allow](/defender-endpoint/indicator-file) or [Antivirus exclusions](/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions)|
+|Antivirus|The alert relates to Microsoft Defender Antivirus in active mode (primary) where it blocks. <br/>- Solution: Submit the false positive to [https://aka.ms/wdsi](https://aka.ms/wdsi) <br/>- Work-around: Add [Indicators - File hash - allow ](indicator-file.md) or an [Antivirus exclusion](navigate-defender-endpoint-antivirus-exclusions.md)<br/><br/>If Microsoft Defender Antivirus is in passive mode, EDR in block mode might just detect.|
+| Custom TI| Custom indicators:<br/>- [File hash](indicator-file.md)<br/>- [IP address or URL](indicator-ip-domain.md)<br/>- [Certificates](indicator-certificates.md) <br/><br/>Solution: [Manage indicators](indicator-manage.md). <br/><br/> Or, if you see `CustomEnterpriseBlock`, your detection source could be one of the following capabilities in Defender for Endpoint: <br/><br/>1. [Automated investigation and remediation](automated-investigations.md)<br/>-- Solution: Submit the false positive to [https://aka.ms/wdsi](https://aka.ms/wdsi) <br/>-- Work-around: [Automation folder exclusions  ](manage-automation-folder-exclusions.md)<br/><br/>2. Custom detection rules deriving from [Advanced Hunting](/defender-xdr/advanced-hunting-overview) <br/>-- Solution: [Manage existing custom detection rules  ](/defender-xdr/custom-detection-rules)<br/><br/>3. [EDR in block mode](edr-in-block-mode.md) <br/>-- Solution: Submit the false positive to [https://aka.ms/wdsi](https://aka.ms/wdsi)<br/>-- Work-around: [Indicators – File hash – allow](indicator-file.md) or [Antivirus exclusions](navigate-defender-endpoint-antivirus-exclusions.md)<br/><br/>4. [Live response](live-response.md)<br/>-- Solution: Submit the false positive to [https://aka.ms/wdsi](https://aka.ms/wdsi)<br/>-- Work-around: [Indicators – File hash – allow](indicator-file.md) or [Antivirus exclusions](navigate-defender-endpoint-antivirus-exclusions.md)<br/><br/>5. [PUA protection](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md)<br/>-- Solution: Submit the false positive to [https://aka.ms/wdsi](https://aka.ms/wdsi)<br/>-- Work-around: [Indicators – File hash – allow](indicator-file.md) or [Antivirus exclusions](navigate-defender-endpoint-antivirus-exclusions.md)|
 | Smartscreen|[Smartscreen](https://feedback.smartscreen.microsoft.com/smartscreenfaq.aspx): You can [Report an unsafe site](https://www.microsoft.com/en-us/wdsi/support/report-unsafe-site) or [submit a network protection detection](https://www.microsoft.com/wdsi/support/report-exploit-guard)|
 
 ## False positives and how to address them
@@ -126,7 +124,7 @@ After you've reviewed your alerts, your next step is to [review remediation acti
 
 - [Restore a quarantined file from the Action Center](#restore-a-quarantined-file-from-the-action-center)
 - [Undo multiple actions at one time](#undo-multiple-actions-at-one-time)
-- [Remove a file from quarantine across multiple devices](#remove-a-file-from-quarantine-across-multiple-devices). and
+- [Remove a file from quarantine across multiple devices](#remove-a-file-from-quarantine-across-multiple-devices), and
 - [Restore file from quarantine](#restore-file-from-quarantine)
 
 When you're done reviewing and undoing actions that were taken as a result of false positives, proceed to [review or define exclusions](#part-3-review-or-define-exclusions).
@@ -174,29 +172,38 @@ When you're done reviewing and undoing actions that were taken as a result of fa
 
 ### Restore file from quarantine
 
-You can roll back and remove a file from quarantine if you determine that it's clean after an investigation. Run the following command on each device where the file was quarantined.
+You can roll back and remove a file from quarantine if you determine it's clean after an investigation. Do the following steps on each device where the file was quarantined:
 
-1. Open Command Prompt as an administrator on the device:
+1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
+   1. Open the **Start** menu, and then type **cmd**.
+   2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
 
-   1. Go to **Start** and type _cmd_.
-   1. Right-click **Command prompt** and select **Run as administrator**.
+1. In the elevated Command Prompt, run the following commands:
 
-1. Type the following command, and press **Enter**:
+   > [!TIP]
+   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
 
-    ```console
-    "%ProgramFiles%\Windows Defender\MpCmdRun.exe" -Restore -Name EUS:Win32/CustomEnterpriseBlock -All
-    ```
+   ```dos
+   (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
 
-    > [!IMPORTANT]
-    > In some scenarios, the **ThreatName** might appear as `EUS:Win32/CustomEnterpriseBlock!cl`. Defender for Endpoint restores all custom blocked files that were quarantined on this device in the last 30 days.
-    > A file that was quarantined as a potential network threat might not be recoverable. If a user attempts to restore the file after quarantine, that file might not be accessible. This can be due to the system no longer having network credentials to access the file. Typically, this is a result of a temporary sign-in a system or shared folder and the access tokens expired.
+   MpCmdRun.exe -Restore -Name EUS:Win32/CustomEnterpriseBlock -All
+   ```
+
+   For more information, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
+
+> [!IMPORTANT]
+> In some scenarios, the **ThreatName** might appear as `EUS:Win32/CustomEnterpriseBlock!cl`. Defender for Endpoint restores all custom blocked files that were quarantined on this device in the last 30 days.
+>
+> A file that was quarantined as a potential network threat might not be recoverable.
+>
+> A quarantined file might not be accessible. This issue can be due to the system no longer having network credentials to access the file. Typically, this issue is a result of an expired access token on a temporary sign-in a system or shared folder.
 
 1. In the pane on the right side of the screen, select **Apply to X more instances of this file**, and then select **Undo**.
 
 ## Part 3: Review or define exclusions
 
 > [!CAUTION]
-> Before you define an exclusion, review the detailed information in [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md). Keep in mind that every exclusion that is defined lowers your level of protection. 
+> Before you define an exclusion, review the detailed information in [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md). Keep in mind that every exclusion that is defined lowers your level of protection.
 
 An exclusion is an entity, such as a file or URL, that you specify as an exception to remediation actions. The excluded entity can still get detected, but no remediation actions are taken on that entity. That is, the detected file or process isn't stopped, sent to quarantine, removed, or otherwise changed by Microsoft Defender for Endpoint.
 
@@ -204,7 +211,7 @@ To define exclusions across Microsoft Defender for Endpoint, perform the followi
 
 - [Create "allow" indicators for Microsoft Defender for Endpoint](#indicators-for-defender-for-endpoint)
 - [Define exclusions for Microsoft Defender Antivirus](#exclusions-for-microsoft-defender-antivirus)
-- For Attack Surface Reduction Rule exclusions [Configure attack surface reduction per-rule exclusions](/defender-endpoint/attack-surface-reduction-rules-deployment-test#configure-attack-surface-reduction-per-rule-exclusions) or you can leverage [ASR rule only exclusions](/defender-endpoint/enable-attack-surface-reduction#exclude-files-and-folders-from-attack-surface-reduction-rules)
+- For Attack Surface Reduction Rule exclusions [Configure attack surface reduction per-rule exclusions](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions) or you can leverage [ASR rule only exclusions](enable-attack-surface-reduction.md#exclude-files-and-folders-from-attack-surface-reduction-rules)
 
 > [!NOTE]
 > Microsoft Defender Antivirus exclusions apply only to antivirus protection, not across other Microsoft Defender for Endpoint capabilities. To exclude files broadly, use [custom indicators](indicators-overview.md) for Microsoft Defender for Endpoint and exclusions for Microsoft Defender Antivirus.
@@ -261,9 +268,9 @@ Before you create indicators for application certificates, make sure the followi
 - Microsoft Defender Antivirus is configured with cloud-based protection enabled. For more information, see: [Manage cloud-based protection](deploy-manage-report-microsoft-defender-antivirus.md)
 - Antimalware client version is 4.18.1901.x or later
 - Devices are running either:
-    - Windows 10, version 1703 or later or Windows 11
-    - Windows Server 2012 R2 and later  with the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2)
-    - Azure Stack HCI OS, version 23H2 and later
+  - Windows 10, version 1703 or later or Windows 11
+  - Windows Server 2012 R2 and later  with the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2)
+  - Azure Stack HCI OS, version 23H2 and later
 - Virus and threat protection definitions are up to date
 
 > [!TIP]
@@ -271,7 +278,7 @@ Before you create indicators for application certificates, make sure the followi
 
 ### Exclusions for Microsoft Defender Antivirus
 
-In general, you shouldn't need to define exclusions for Microsoft Defender Antivirus. Make sure that you define exclusions sparingly, and that you only include the files, folders, processes, and process-opened files that are resulting in false positives. In addition, make sure to review your defined exclusions regularly. We recommend using [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to define or edit your antivirus exclusions; however, you can use other methods, such as [Group Policy](/azure/active-directory-domain-services/manage-group-policy) (see [Manage Microsoft Defender for Endpoint](preferences-setup.md)).
+In general, you shouldn't need to define exclusions for Microsoft Defender Antivirus. Make sure that you define exclusions sparingly, and that you only include the files, folders, processes, and process-opened files that are resulting in false positives. In addition, make sure to review your defined exclusions regularly. We recommend using [Microsoft Intune](/intune/intune-service/fundamentals/what-is-intune) to define or edit your antivirus exclusions; however, you can use other methods, such as [Group Policy](/azure/active-directory-domain-services/manage-group-policy) (see [Manage Microsoft Defender for Endpoint](preferences-setup.md)).
 
 > [!TIP]
 > Need help with antivirus exclusions? See [Configure and validate exclusions for Microsoft Defender Antivirus](configure-exclusions-microsoft-defender-antivirus.md).
@@ -306,9 +313,9 @@ In general, you shouldn't need to define exclusions for Microsoft Defender Antiv
    - **Excluded Paths** are exclusions that you define by their location (path). These types of exclusions are also known as file and folder exclusions. Separate each path in the list with a `|` character. For example, `C:\Example|C:\Example1`. For more information, see [ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#excludedpaths).
    - **Excluded Processes** are exclusions for files that are opened by certain processes. Separate each file type in the list with a `|` character. For example, `C:\Example. exe|C:\Example1.exe`. These exclusions aren't for the actual processes. To exclude processes, you can use file and folder exclusions. For more information, see [ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#excludedprocesses).
 
-1. On the **Scope tags** tab, if you're using scope tags in your organization, specify scope tags for the policy you're creating. (See [Scope tags](/mem/intune/fundamentals/scope-tags).)
+1. On the **Scope tags** tab, if you're using scope tags in your organization, specify scope tags for the policy you're creating. (See [Scope tags](/intune/intune-service/fundamentals/scope-tags).)
 
-1. On the **Assignments** tab, specify the users and groups to whom your policy should be applied, and then choose **Next**. (If you need help with assignments, see [Assign user and device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-assign).)
+1. On the **Assignments** tab, specify the users and groups to whom your policy should be applied, and then choose **Next**. (If you need help with assignments, see [Assign user and device profiles in Microsoft Intune](/intune/intune-service/configuration/device-profile-assign).)
 
 1. On the **Review + create** tab, review the settings, and then choose **Create**.
 
@@ -330,13 +337,9 @@ If you have a file that was either wrongly detected as malicious or was missed, 
 
 ### Submit a fileless detection for analysis
 
-If something was detected as malware based on behavior, and you don't have a file, you can submit your `Mpsupport.cab` file for analysis. You can get the *.cab* file by using the Microsoft Malware Protection Command-Line Utility (MPCmdRun.exe) tool on Windows 10 or Windows 11.
+If something was detected as malware based on behavior, and you don't have a file, you can submit your `MpSupportFiles.cab` file for analysis. You can get the *.cab* file by using the [MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md) on Windows 10 or Windows 11.
 
-1. Go to `C:\ProgramData\Microsoft\Windows Defender\Platform\<version>`, and then run `MpCmdRun.exe` as an administrator.
-
-1. Type `mpcmdrun.exe -GetFiles`, and then press **Enter**.
-
-   A .cab file is generated that contains various diagnostic logs. The location of the file is specified in the output of the command prompt. By default, the location is `C:\ProgramData\Microsoft\Microsoft Defender\Support\MpSupportFiles.cab`.
+1. Generate the file `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab` as described in [Collect Microsoft Defender Antivirus diagnostic data](collect-diagnostic-data.md).
 
 1. Review the guidelines here: [Submit files for analysis](/unified-secops-platform/submission-guide).
 
@@ -369,7 +372,7 @@ Defender for Endpoint offers a wide variety of options, including the ability to
 
 Check your cloud-delivered protection level for Microsoft Defender Antivirus. By default, cloud-delivered protection is set to **Not configured**; however, we recommend turning it on. To learn more about configuring your cloud-delivered protection, see [Turn on cloud protection in Microsoft Defender Antivirus](enable-cloud-protection-microsoft-defender-antivirus.md).
 
-You can use [Intune](/mem/intune/fundamentals/what-is-intune) or other methods, such as [Group Policy](/azure/active-directory-domain-services/manage-group-policy), to edit or set your cloud-delivered protection settings.
+You can use [Intune](/intune/intune-service/fundamentals/what-is-intune) or other methods, such as [Group Policy](/azure/active-directory-domain-services/manage-group-policy), to edit or set your cloud-delivered protection settings.
 
 See [Turn on cloud protection in Microsoft Defender Antivirus](enable-cloud-protection-microsoft-defender-antivirus.md).
 
@@ -381,7 +384,7 @@ To learn more about PUA, see [Detect and block potentially unwanted applications
 
 Depending on the apps your organization is using, you might be getting false positives as a result of your PUA protection settings. If necessary, consider running PUA protection in audit mode for a while, or apply PUA protection to a subset of devices in your organization. PUA protection can be configured for the Microsoft Edge browser and for Microsoft Defender Antivirus.
 
-We recommend using [Intune](/mem/endpoint-manager-overview) to edit or set PUA protection settings; however, you can use other methods, such as [Group Policy](/azure/active-directory-domain-services/manage-group-policy).
+We recommend using [Intune](/intune/endpoint-manager-overview) to edit or set PUA protection settings; however, you can use other methods, such as [Group Policy](/azure/active-directory-domain-services/manage-group-policy).
 
 See [Configure PUA protection in Microsoft Defender Antivirus](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md#configure-pua-protection-in-microsoft-defender-antivirus).
 

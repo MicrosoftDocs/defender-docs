@@ -4,7 +4,6 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: high
@@ -145,7 +144,7 @@ You can configure anti-spam policies in the Microsoft Defender portal or in [Exc
      >
      > For **High confidence phishing**, the **Move message to Junk Email folder** action is effectively deprecated. Although you might be able to select the **Move message to Junk Email folder** action, high confidence phishing messages are always quarantined (equivalent to selecting **Quarantine message**).
      >
-     > Users can't release their own messages that were quarantined as high confidence phishing, regardless of how the quarantine policy is configured. If the policy is configured for users to release these quarantined messages, users are instead allowed to _request_ the release of these quarantined messages.
+     > Recipients can't release messages quarantined as high confidence phishing, regardless of how the quarantine policy is configured. If the quarantine policy allows recipients to release messages, they can only _request_ the release of messages quarantined as high confidence phishing.
 
    - **Intra-Organizational messages to take action on**: Controls whether spam filtering and the corresponding verdict actions are applied to internal messages (messages sent between users within the organization). The available values are:
      - **Default**: The default value. This value is the same as selecting **High confidence phishing messages**.

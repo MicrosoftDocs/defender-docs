@@ -6,7 +6,6 @@ ms.author: chrisda
 author: chrisda
 ms.reviewer: yongrhee
 ms.localizationpriority: high
-manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -63,8 +62,8 @@ Recommended settings are as follows:
 
 ### References
 
-- [Antivirus profiles - Devices managed by Microsoft Intune](/mem/intune/protect/endpoint-security-antivirus-policy#antivirus-profiles)
-- [Use Endpoint security Antivirus policy to manage Microsoft Defender update behavior](/mem/intune/fundamentals/whats-new#use-endpoint-security-antivirus-policy-to-manage-microsoft-defender-update-behavior-preview)
+- [Antivirus profiles - Devices managed by Microsoft Intune](/intune/intune-service/protect/endpoint-security-antivirus-policy#antivirus-profiles)
+- [Use Endpoint security Antivirus policy to manage Microsoft Defender update behavior](/intune/intune-service/fundamentals/whats-new#use-endpoint-security-antivirus-policy-to-manage-microsoft-defender-update-behavior-preview)
 - - [Manage the gradual rollout process for Microsoft Defender updates](manage-gradual-rollout.md#manage-the-gradual-rollout-process-for-microsoft-defender-updates)
 
 ## Setting up the Production environment 
@@ -98,7 +97,7 @@ It forces Microsoft Defender Antivirus to look for the **Security Intelligence U
 
 If you update a policy, it's within a few minutes (3-5 minutes) via WNS, as long the WNS URLs' are open.
 
-Reference:   [Intune actions that immediately send a notification to a device](/mem/intune/configuration/device-profile-troubleshoot#intune-actions-that-immediately-send-a-notification-to-a-device)
+Reference:   [Intune actions that immediately send a notification to a device](/intune/intune-service/configuration/device-profile-troubleshoot#intune-actions-that-immediately-send-a-notification-to-a-device)
 
 After the issue is resolved, set the "Signature Update Fallback Order" back to the original setting"
 

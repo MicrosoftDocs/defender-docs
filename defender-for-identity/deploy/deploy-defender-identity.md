@@ -29,11 +29,13 @@ Identify your architecture and requirements, and then use the following table to
 |[Active Directory Certificate Services (AD CS)](active-directory-federation-services.md)|Windows Server 2016 or later|[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)|
 |[Microsoft Entra Connect](active-directory-federation-services.md)|Windows Server 2016 or later|[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)|
 
-Before you activate the Defender for Identity sensor v3.x, keep in mind that v3.x:
+Before you activate the Defender for Identity sensor v3.x, note that v3.x:
 
-- Doesn't support VPN integration.
-- Doesn't support ExpressRoute.
 - Requires Defender for Endpoint.
+- Doesn't support VPN integration.
+- Doesn't support [syslog notifications](../notifications.md#configure-syslog-notifications).
+- Has limitations working with Azure ExpressRoute. For more information, see [Azure ExpressRoute for Microsoft 365](/microsoft-365/enterprise/azure-expressroute?view=o365-worldwide).
+
 
 ## Next steps
 

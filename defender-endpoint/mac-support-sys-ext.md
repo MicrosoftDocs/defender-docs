@@ -5,7 +5,6 @@ ms.service: defender-endpoint
 author: paulinbar
 ms.author: painbar
 ms.reviewer: joshbregman
-manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection:
@@ -138,7 +137,7 @@ Prior to approving the system extension (using any of the specified management t
 
 #### Step 1: Are the profiles coming down to your macOS?
 
-If you're using Intune, see [Manage macOS software update policies in Intune](/mem/intune/protect/software-updates-macos).
+If you're using Intune, see [Manage macOS software update policies in Intune](/intune/intune-service/protect/software-updates-macos).
 
 :::image type="content" source="media/refresh-devices.png" alt-text="The screen on which you refresh the devices." lightbox="media/refresh-devices.png":::
 

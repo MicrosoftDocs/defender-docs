@@ -4,7 +4,6 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.date: 12/10/2025
 audience: ITPro
 ms.topic: overview
@@ -95,7 +94,7 @@ The following communication channels are available for issues and new features i
 
 This section provides a high-level overview of the main built-in security features for all cloud mailboxes.
 
-For information about requirements, important limits, and feature availability across all subscription plans, see the [Exchange Online Protection service description](/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-service-description).
+For information about requirements, important limits, and feature availability across all subscription plans, see the [Built-in security features for cloud mailboxes service description](/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-service-description).
 
 > [!TIP]
 >

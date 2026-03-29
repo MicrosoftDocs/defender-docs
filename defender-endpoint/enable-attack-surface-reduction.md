@@ -6,7 +6,6 @@ ms.localizationpriority: medium
 audience: ITPro
 author: limwainstein
 ms.author: lwainstein
-manager: bagol
 ms.subservice: asr
 ms.topic: how-to
 ms.collection: 
@@ -38,11 +37,11 @@ To use the entire feature-set of attack surface reduction rules, the following r
 
 - Microsoft Defender Antivirus must be set as the primary antivirus. It must not be running in passive mode or be disabled.
 
-- [Real-time protection](/defender-endpoint/configure-real-time-protection-microsoft-defender-antivirus) must be on.
+- [Real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md) must be on.
 
 - [Cloud-Delivery Protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus) must be on (some rules require Cloud Protection).
 
-- You must have [Cloud Protection network connectivity](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus)
+- You must have [Cloud Protection network connectivity](configure-network-connections-microsoft-defender-antivirus.md)
 
 - Recommended: Microsoft 365 E5
 
@@ -118,9 +117,9 @@ Attack surface reduction rules for managed devices support behavior for merging 
 Attack surface reduction rule merge behavior works as follows:
 
 - Attack surface reduction rules from the following profiles are evaluated for each device to which the rules apply:
-  - **Devices** \> **Configuration profiles** \> **Endpoint protection profile** \> **Microsoft Defender Exploit Guard** \> **Attack Surface Reduction**. (See [Attack Surface Reduction](/mem/intune/protect/endpoint-protection-windows-10#attack-surface-reduction-rules).)
-  - **Endpoint security** \> **Attack surface reduction policy** \> **Attack surface reduction rules**. (See [Attack surface reduction rules](/mem/intune/protect/endpoint-security-asr-policy#devices-managed-by-intune).)
-  - **Endpoint security** \> **Security baselines** \> **Microsoft Defender ATP Baseline** \> **Attack Surface Reduction Rules**. (See [Attack Surface Reduction Rules](/mem/intune/protect/security-baseline-settings-defender-atp#attack-surface-reduction-rules).)
+  - **Devices** \> **Configuration profiles** \> **Endpoint protection profile** \> **Microsoft Defender Exploit Guard** \> **Attack Surface Reduction**. (See [Attack Surface Reduction](/intune/intune-service/protect/endpoint-protection-windows-10#attack-surface-reduction-rules).)
+  - **Endpoint security** \> **Attack surface reduction policy** \> **Attack surface reduction rules**. (See [Attack surface reduction rules](/intune/intune-service/protect/endpoint-security-asr-policy#devices-managed-by-intune).)
+  - **Endpoint security** \> **Security baselines** \> **Microsoft Defender ATP Baseline** \> **Attack Surface Reduction Rules**. (See [Microsoft Defender for Endpoint security baseline settings reference for Microsoft Intune](/intune/intune-service/protect/security-baseline-settings-defender).)
 
 - Settings that don't have conflicts are added to a superset of policy for the device.
 
@@ -146,10 +145,10 @@ The following procedures for enabling attack surface reduction rules include ins
 > [!IMPORTANT]
 > If you're using Intune on Windows Server 2012 R2 and Windows Server 2016 with the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2), you need to set the following attack surface reduction rules to `Not Configured` because they're not supported on these OS versions. Otherwise, policies containing any of these rules targeted at Windows Server 2012 R2 or Windows Server 2016 will fail to apply:
 >
-> - [Block persistence through Windows Management Instrumentation (WMI) event subscription](/defender-endpoint/attack-surface-reduction-rules-reference#block-persistence-through-wmi-event-subscription)
-> - [Block JavaScript or VBScript from launching downloaded executable content](/defender-endpoint/attack-surface-reduction-rules-reference#block-javascript-or-vbscript-from-launching-downloaded-executable-content)
-> - [Block Win32 API calls from Office macro](/defender-endpoint/attack-surface-reduction-rules-reference#block-win32-api-calls-from-office-macros)
-> - [Block Webshell creation for Servers](/defender-endpoint/attack-surface-reduction-rules-reference), this isn't supported on Windows Server 2012 R2, but it is supported on Windows Server 2016. It only applies to the Exchange server role.
+> - [Block persistence through Windows Management Instrumentation (WMI) event subscription](attack-surface-reduction-rules-reference.md#block-persistence-through-wmi-event-subscription)
+> - [Block JavaScript or VBScript from launching downloaded executable content](attack-surface-reduction-rules-reference.md#block-javascript-or-vbscript-from-launching-downloaded-executable-content)
+> - [Block Win32 API calls from Office macro](attack-surface-reduction-rules-reference.md#block-win32-api-calls-from-office-macros)
+> - [Block Webshell creation for Servers](attack-surface-reduction-rules-reference.md), this isn't supported on Windows Server 2012 R2, but it is supported on Windows Server 2016. It only applies to the Exchange server role.
 
 #### Endpoint security policy (Preferred)
 
@@ -320,30 +319,89 @@ Example:
 > [!WARNING]
 > If you manage your computers and devices with Intune, Configuration Manager, or other enterprise-level management platform, the management software overwrites any conflicting group policy settings on startup.
 
-1. On your Group Policy management computer, open the [Group Policy Management Console](https://technet.microsoft.com/library/cc731212.aspx), right-click the Group Policy Object you want to configure and select **Edit**.
+1. Open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console) on your Group Policy management computer.
 
-1. In the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
+1. In the GPMC console tree, expand Group Policy Objects in the forest and domain containing the GPO that you want to edit.
 
-1. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Microsoft Defender Exploit Guard** > **Attack surface reduction**.
+1. Right-click on the GPO, and then select **Edit**.
 
-1. Select **Configure Attack surface reduction rules** and select **Enabled**. You can then set the individual state for each rule in the options section. Select **Show...** and enter the rule ID in the **Value name** column and your chosen state in the **Value** column as follows:
+1. In the **Group Policy Management Editor**, go to **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Microsoft Defender Exploit Guard \> Attack Surface Reduction**.
 
-   - 0: Disable (Disable the attack surface reduction rule)
-   - 1: Block (Enable the attack surface reduction rule)
-   - 2: Audit (Evaluate how the attack surface reduction rule would impact your organization if enabled)
-   - 6: Warn (Enable the attack surface reduction rule but allow the end-user to bypass the block)
+1. In the details pane of **Attack Surface Reduction**, the available settings are:
 
-   :::image type="content" source="media/asr-rules-gp.png" alt-text="attack surface reduction rules in Group Policy" lightbox="media/asr-rules-gp.png":::
+   - [Configure Attack Surface Reduction rules](#enable-asr-rules)
+   - [Exclude files and paths from Attack surface reduction rules](#apply-exclusions-for-all-asr-rules)
+   - [Apply a list of exclusions to specific attack surface reduction (ASR) rules](#apply-per-rule-exclusions)
 
-1. To exclude files and folders from attack surface reduction rules, select the **Exclude files and paths from Attack surface reduction rules** setting and set the option to **Enabled**. Select **Show** and enter each file or folder in the **Value name** column. Enter **0** in the **Value** column for each item.
+   To open and configure an ASR rule setting, use any of the following methods:
+   - Double-click on the setting.
+   - Right-click on the setting, and then select **Edit**
+   - Select the setting, and then select **Action** \> **Edit**.
 
-   > [!WARNING]
-   > Don't use quotes as they aren't supported for either the **Value name** column or the **Value** column.
-   > The rule ID shouldn't have any leading or trailing spaces.
+The available settings are described in the following subsections.
+
+> [!IMPORTANT]
+> Quotation marks aren't supported in any of the group policy values.
+>
+> Don't use leading or trailing spaces in ASR rule IDs.
+>
+> Microsoft renamed Windows Defender Antivirus to Microsoft Defender Antivirus beginning with Windows 10 version 2004 (May 2020). Group Policy paths on earlier versions of Windows might still reference Windows Defender Antivirus, while newer builds show Microsoft Defender Antivirus. Both names refer to the same policy location.
+
+#### Enable ASR rules
+
+1. In the details pane of **Attack Surface Reduction**, open the **Configure Attack Surface Reduction rules** setting.
+
+1. In the setting window that opens, configure the following options:
+   1. Select **Enabled**.
+   2. **Set the state for each ASR rule**: Select **Show...**.
+
+1. In the **Set the state for each ASR rule** dialog that opens, configure the following settings:
+   - **Value name**: Enter the [GUID value of the ASR rule](attack-surface-reduction-rules-reference.md#asr-rule-to-guid-matrix).
+   - **Value**: Enter one of the following values:
+     - 0: Off
+     - 1: Block
+     - 2: Audit
+     - 5: Not configured
+     - 6: Warn
+
+   :::image type="content" source="media/asr-rules-gp.png" alt-text="Screenshot of Configure Attack Surface Reduction rules in Group Policy." lightbox="media/asr-rules-gp.png":::
+
+   For more information, see [ASR rule modes](attack-surface-reduction-rules-reference.md#asr-rule-modes).
+
+   Repeat this step as many times as necessary. When you're finished, select **OK**.
+
+#### Apply exclusions for all ASR rules
+
+1. In the details pane of **Attack Surface Reduction**, open the **Exclude files and paths from Attack surface reduction rules** setting.
+
+1. In the setting window that opens, configure the following options:
+   1. Select **Enabled**.
+   2. **Exclusions from ASR rules**: Select **Show...**.
+
+1. In the **Exclusions from ASR rules** dialog that opens, configure the following settings:
+   - **Value name**: Enter the [GUID value of the ASR rule](attack-surface-reduction-rules-reference.md#asr-rule-to-guid-matrix).
+   - **Value**: Enter one of the following types of values:
+     - To exclude all files in a folder, enter the full folder path. For example, `C:\Data\Test`.
+     - To exclude a specific file in a specify folder (recommended), enter the path and filename. For example, `C:\Data\Test\test.exe`.
+
+   Repeat this step as many times as necessary. When you're finished, select **OK**.
+
+#### Apply per-rule exclusions
 
 > [!NOTE]
-> Microsoft rebranded Windows Defender Antivirus to Microsoft Defender Antivirus beginning with Windows 10 version 20H1.
-> Group Policy paths on earlier Windows versions may still reference Windows Defender Antivirus, while newer builds show Microsoft Defender Antivirus. Both names refer to the same policy location.
+> If the **Apply a list of exclusions to specific attack surface reduction (ASR) rules** setting isn't available in your GPMC, you need version 24H2 or later of the [Administrative Templates files](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#links-to-download-the-administrative-templates-files-based-on-the-operating-system-version) in your [Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#the-central-store).
+
+1. In the details pane of **Attack Surface Reduction**, open the **Apply a list of exclusions to specific attack surface reduction (ASR) rules** setting.
+
+1. In the setting window that opens, configure the following options:
+   1. Select **Enabled**.
+   2. **Exclusions for each ASR rule**: Select **Show...**.
+
+1. In the **Exclusions for each ASR rule** dialog that opens, configure the following settings:
+   - **Value name**: Enter the [GUID value of the ASR rule](attack-surface-reduction-rules-reference.md#asr-rule-to-guid-matrix).
+   - **Value**: Enter one or more exclusions for the ASR rule. Use the syntax `Path1\ProcessName1>Path2ProcessName2>...PathNProcessNameN`. For example, `C:\Windows\Notepad.exe>c:\Windows\regedit.exe>C:\SomeFolder\test.exe`.
+
+   Repeat this step as many times as necessary. When you're finished, select **OK**.
 
 ### PowerShell
 

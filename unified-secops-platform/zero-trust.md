@@ -3,8 +3,8 @@ title: Zero Trust with unified security operations | Microsoft Defender
 description: Learn how implementing unified security operations in the Defender portal can help you deploy a Zero Trust architecture.
 author: guywi-ms
 ms.author: guywild
-ms.service: microsoft-defender
-ms.subservice: unified-security-operations
+audience: ""
+search.appverid: ""
 ms.topic: concept-article #Don't change.
 ms.date: 01/16/2025
 ms.collection:

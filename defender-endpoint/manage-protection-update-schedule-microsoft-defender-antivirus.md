@@ -1,4 +1,4 @@
-﻿---
+---
 title: Schedule Microsoft Defender Antivirus protection updates
 description: Schedule the day, time, and interval for when protection updates should be downloaded
 ms.service: defender-endpoint
@@ -10,7 +10,6 @@ author: chrisda
 ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: pahuijbr
-manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security
@@ -24,7 +23,7 @@ appliesto:
 # Manage the schedule for when protection updates should be downloaded and applied
 
 > [!IMPORTANT]
-> Customers who applied the March 2022 Microsoft Defender engine update (**1.1.19100.5**) might have encountered high resource utilization (CPU and/or memory). Microsoft has released an update (**1.1.19200.5**) that resolves the bugs introduced in the earlier version. Customers are recommended to update to this new engine build of Antivirus Engine (**1.1.19200.5**). To ensure any performance issues are fully fixed, it's recommended to reboot machines after applying update. For more information, see [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases).
+> Customers who applied the March 2022 Microsoft Defender engine update (**1.1.19100.5**) might have encountered high resource utilization (CPU and/or memory). Microsoft has released an update (**1.1.19200.5**) that resolves the bugs introduced in the earlier version. Customers are recommended to update to this new engine build of Antivirus Engine (**1.1.19200.5**). To ensure any performance issues are fully fixed, it's recommended to reboot machines after applying update. For more information, see [Monthly platform and engine versions](microsoft-defender-endpoint-releases.md#microsoft-defender-antivirus-releases).
 
 
 Microsoft Defender Antivirus lets you determine when it should look for and download updates.
@@ -90,7 +89,7 @@ Set-MpPreference -SignatureUpdateInterval
 
 See [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md)  and [Defender Antivirus cmdlets](/powershell/module/defender/) for more information on how to use PowerShell with Microsoft Defender Antivirus.
 
-## Use Windows Management Instruction (WMI) to schedule protection updates
+## Use Windows Management Instrumentation (WMI) to schedule protection updates
 
 Use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class for the following properties:
 
@@ -108,7 +107,7 @@ See the following for more information and allowed parameters:
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)

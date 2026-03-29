@@ -7,7 +7,6 @@ ms.topic: how-to
 author: chrisda
 ms.author: chrisda
 ms.reviewer: yongrhee
-manager: bagol
 ms.date: 03/26/2025
 ms.subservice: ngp
 ms.collection:

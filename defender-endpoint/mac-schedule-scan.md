@@ -5,7 +5,6 @@ ms.service: defender-endpoint
 author: paulinbar
 ms.author: painbar
 ms.reviewer: joshbregman
-manager: bagol
 ms.localizationpriority: medium
 ms.date: 10/23/2024
 audience: ITPro
@@ -33,7 +32,7 @@ There are three types of scheduled scans that are configurable: hourly, daily, a
 
 **Prerequisites**:
 
-- Platform Update version: [101.23122.0005](mac-whatsnew.md#jan-2024-build-101231220005---release-version-2012312250) or newer
+- Platform Update version: 101.23122.0005 or newer.
 
 ## Schedule a scan with Microsoft Defender for Endpoint on macOS
 

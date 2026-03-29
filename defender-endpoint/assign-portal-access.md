@@ -1,5 +1,5 @@
 ﻿---
-title: Assign user access 
+title: Overview of permissions management  
 description: Assign read and write or read only access to the Microsoft Defender for Endpoint portal.
 search.appverid: met150
 ms.service: defender-endpoint
@@ -7,7 +7,6 @@ ms.subservice: onboard
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -19,7 +18,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
-# Assign user access 
+# Overview of permissions management 
 
 
 Defender for Endpoint supports two ways to manage permissions:

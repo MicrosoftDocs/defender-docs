@@ -5,7 +5,6 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -43,8 +42,7 @@ Importing roles migrates and maintains the roles with full parity in relation to
 The following steps guide you on how to import roles into Microsoft Defender unified RBAC:
 
 > [!IMPORTANT]
-> You must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have all the **Authorization** permissions assigned in Microsoft Defender unified RBAC to perform this task. For more information on permissions, see [Permission pre-requisites](manage-rbac.md#permissions-prerequisites).
-> Microsoft recommends that you use roles with the fewest permissions to help improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> You must be a Security Administrator or higher in Microsoft Entra ID, or have all the **Authorization** permissions assigned in Microsoft Defender XDR Unified RBAC to perform this task. For more information on permissions, see [Permission pre-requisites](manage-rbac.md#permissions-prerequisites).
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 

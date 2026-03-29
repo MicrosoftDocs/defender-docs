@@ -138,7 +138,7 @@ Use the following commands to perform a fully silent installation of the Defende
 |`InstallationPath`|`InstallationPath=""`|No|Sets the path for the installation of Defender for Identity sensor binaries. Default path: `%programfiles%\Azure Advanced Threat Protection Sensor`. |
 |`AccessKey`|`AccessKey="\*\*"`|Yes|Sets the access key that's used to register the Defender for Identity sensor with the Defender for Identity workspace.|
 |`AccessKeyFile`|`AccessKeyFile=""`|No|Sets the workspace access key from the provided text file path.|
-|`DelayedUpdate`|`DelayedUpdate=true`|No|Sets the sensor's update mechanism to delay the update for 72 hours from the official release of each service update. For more information, see [Delayed sensor update](../sensor-settings.md#delayed-sensor-update).|
+|`DelayedUpdate`|`DelayedUpdate=true`|No|Sets the sensor's update mechanism to delay the update for 72 hours from the official release of each service update. For more information, see [Delayed sensor update](../sensor-settings.md#delayed-update-for-sensor-v2x).|
 |`LogsPath`|`LogsPath=""`|No|Sets the path for the Defender for Identity sensor logs. Default path: `%programfiles%\Azure Advanced Threat Protection Sensor`.|
 
 #### Examples

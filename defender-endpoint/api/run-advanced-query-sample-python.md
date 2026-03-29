@@ -6,7 +6,6 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -39,6 +38,9 @@ In this section, we share Python samples to retrieve a token and use it to run a
 
 - Run the following commands:
 
+> [!TIP]
+> Some Microsoft Defender for Endpoint APIs continue to require access tokens issued for the legacy resource `https://api.securitycenter.microsoft.com`. If the token audience doesn't match the resource expected by the API, requests fail with `403 Forbidden`, even if the API endpoint uses `https://api.security.microsoft.com`. Use `https://api.securitycenter.microsoft.com` as the resource or scope when acquiring tokens.
+
 ```python
 import json
 import urllib.request
@@ -50,7 +52,7 @@ appSecret = '22222222-2222-2222-2222-222222222222' # Paste your own app secret h
 
 url = "https://login.microsoftonline.com/%s/oauth2/token" % (tenantId)
 
-resourceAppIdUri = 'https://api.security.microsoft.com'
+resourceAppIdUri = 'https://api.securitycenter.microsoft.com'
 
 body = {
     'resource' : resourceAppIdUri,

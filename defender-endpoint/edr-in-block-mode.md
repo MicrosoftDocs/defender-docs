@@ -3,7 +3,6 @@ title: Endpoint detection and response in block mode
 description: Learn about endpoint detection and response in block mode
 author: limwainstein
 ms.author: lwainstein
-manager: bagol
 ms.reviewer: pahuijbr, kausd
 audience: ITPro
 ms.topic: article
@@ -86,7 +85,7 @@ When EDR in block mode is turned on, and a malicious artifact is detected, Defen
 
 ### Intune
 
-To create a custom policy in Intune, see [Deploy OMA-URIs to target a CSP through Intune, and a comparison to on-premises](/troubleshoot/mem/intune/deploy-oma-uris-to-target-csp-via-intune).
+To create a custom policy in Intune, see [Deploy OMA-URIs to target a CSP through Intune, and a comparison to on-premises](/troubleshoot/mem/intune/device-configuration/deploy-oma-uris-to-target-csp-via-intune).
 
 For more information on the Defender CSP used for EDR in block mode, see "Configuration/PassiveRemediation" under [Defender CSP](/windows/client-management/mdm/defender-csp).
 

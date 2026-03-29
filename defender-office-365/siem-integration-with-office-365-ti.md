@@ -4,7 +4,6 @@ f1.keywords:
   - NOCSH
 ms.author: deniseb
 author: denisebmsft
-manager: deniseb
 audience: ITPro
 ms.topic: article
 ms.localizationpriority: low

@@ -4,7 +4,6 @@ f1.keywords:
 - NOCSH
 ms.author: guywild
 author: guywi-ms
-manager: deniseb
 ms.date: 03/21/2025
 audience: Admin
 ms.topic: article
@@ -295,7 +294,7 @@ To see which category a default alert policy is assigned to, see the tables in [
 |Information Protection Analyst||✔|||||
 |Information Protection Investigator||✔|||||
 |Manage Alerts||||||✔|
-|Organization Configuration||||||✔|
+|Organization Management||||||✔|
 |Privacy Management|||||||
 |Quarantine|||||||
 |Record Management|✔||||||

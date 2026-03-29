@@ -550,6 +550,8 @@ items:
         href: api-files-list.md
       - name: Fetch File
         href: api-files-fetch.md
+  - name: What's new archive
+    href: release-note-archive.md
 - name: Resources
   items:
   - name: Licensing datasheet
@@ -560,10 +562,6 @@ items:
     href: https://www.microsoft.com/security/business/cloud-apps-defender
   - name: External integrations
     href: additional-integrations.md
-  - name: Watch our webinars
-    href: webinars.md
-  - name: Release note archive
-    href: release-note-archive.md
 - name: Microsoft Defender XDR Docs
   items:
   - name: Microsoft Defender XDR

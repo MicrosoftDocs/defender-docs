@@ -6,7 +6,6 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: gopkr; meghapriya; lakshmyav
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -15,7 +14,7 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: linux
 search.appverid: met150
-ms.date: 01/31/2025
+ms.date: 02/09/2026
 ---
 
 # Configure and run antivirus scans with Microsoft Defender for Endpoint on Linux
@@ -28,9 +27,7 @@ Microsoft Defender for Endpoint on Linux offers robust antivirus scanning capabi
 
 ## Prerequisites
 
-To use antivirus scanning features, your Linux devices must meet the [prerequisites for Defender for Endpoint on Linux](./mde-linux-prerequisites.md).
-
-The principal running the scan must have at least a Security Operator or Security Administrator role.
+To launch a scan from the Defender portal, you must have at least **Alerts (manage)** permission. This permission requirement does not apply to manual scans triggered via the CLI.
 
 ## Supported scan types
 
@@ -97,17 +94,19 @@ Various antivirus settings and configurations can influence both performance and
 |Flag|Description|
 |--|--|
 |**Scan after definitions update**|This setting determines whether to start a process scan after new security intelligence updates are downloaded on the device. When enabled, it initiates an antivirus scan on the device's active processes.|
-|**Scan archives (on-demand antivirus scans only)**|This setting specifies whether to scan archives during on-demand antivirus scans. |
+|**Scan archives (on-demand antivirus scans only)**|This setting specifies whether to scan archives (such as *.zip*, *.rar*, *.7z*, etc.) during on-demand antivirus scans. |
 |**Maximum on-demand scan threads**|This setting controls how many threads are used for on-demand scans, impacting both CPU usage and the scan's duration.|
 
 For detailed instructions on configuring the above settings using CLI or managed JSON, see [Configure security settings in Microsoft Defender for Endpoint on Linux](./linux-preferences.md#antivirus-engine-preferences).
 
 ## Best practices
 
-Starting from version 101.23062.0001, Defender for Endpoint on Linux operates in passive mode by default, meaning real-time protection is turned off. To maintain security, it's recommended to use scheduled scans as needed.
-
-Once you've installed Defender for Endpoint on Linux, it's a good practice to run a full scan. This helps identify and address any potential threats that might be present on your system.
-
+Starting from version 101.23062.0001, Defender for Endpoint on Linux operates in passive mode by default, meaning real-time protection (RTP) is turned off. In this mode, it's recommended to use scheduled scans as needed to ensure the system is periodically protected.
+ 
+After installing Defender for Endpoint on Linux, it's a good practice to run a full scan (or a quick scan) to help identify and remediate any existing threats on the system.
+ 
+This is especially important before switching from passive mode to RTP mode, as enabling RTP primarily provides protection against newly introduced malware, and not the threats already present on the system. Running a scan beforehand helps ensure the device starts from a known clean state.
+ 
 For continuous protection, incorporate quick scans into your regular scheduled scans. Quick scans offer comprehensive coverage for malware that starts with the system and kernel-level threats, all while maintaining minimal impact on your device's performance.
 
 ## Related content

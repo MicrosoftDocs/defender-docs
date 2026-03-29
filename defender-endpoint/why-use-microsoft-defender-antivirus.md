@@ -9,7 +9,6 @@ author: chrisda
 ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: yongrhee
-manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security
@@ -51,13 +50,13 @@ Although you can use a non-Microsoft antivirus solution with Microsoft Defender 
 |10|File recovery via OneDrive|If you are using Microsoft Defender Antivirus together with [Office 365](/Office365/Enterprise), and your device is attacked by ransomware, your files are protected and recoverable. [OneDrive Files Restore and Windows Defender take ransomware protection one step further](https://techcommunity.microsoft.com/t5/Microsoft-OneDrive-Blog/OneDrive-Files-Restore-and-Windows-Defender-takes-ransomware/ba-p/188001).|
 |11|Controlled folder access |Your organization's security team can reduce malware from encrypting end-users data by preventing unknown applications or services being able to write to protected folders. [Get an overview of controlled folder access](enable-controlled-folders.md).|
 |12|Geographic data|Compliant with ISO 270001 and data retention, geographic data is provided according to your organization's selected geographic sovereignty. See [Compliance offerings: ISO/IEC 27001:2013 Information Security Management Standards](/microsoft-365/compliance/offering-iso-27001).|
-|13|Technical support|By using Microsoft Defender for Endpoint together with Microsoft Defender Antivirus, you have one company to call for technical support. [Troubleshoot service issues](troubleshoot-mdatp.md)and [review event logs and error codes with Microsoft Defender Antivirus](/defender-endpoint/troubleshoot-microsoft-defender-antivirus/).|
+|13|Technical support|By using Microsoft Defender for Endpoint together with Microsoft Defender Antivirus, you have one company to call for technical support. [Troubleshoot service issues](troubleshoot-mdatp.md)and [review event logs and error codes with Microsoft Defender Antivirus](troubleshoot-microsoft-defender-antivirus.yml).|
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)

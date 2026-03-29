@@ -51,7 +51,7 @@ Defender for Endpoint is available in three plans. You can find more information
 
 ## Defender for Endpoint capabilities
 
-This section lists key Defender for Endpoint capabilities and provides links to more detailed information. To view a list of core capabilities and the operating systems that support them, see [Supported Microsoft Defender for Endpoint capabilities by platform](/defender-endpoint/supported-capabilities-by-platform).
+This section lists key Defender for Endpoint capabilities and provides links to more detailed information. To view a list of core capabilities and the operating systems that support them, see [Supported Microsoft Defender for Endpoint capabilities by platform](supported-capabilities-by-platform.md).
 
 | Capability | Description |
 |---|---|

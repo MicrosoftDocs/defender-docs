@@ -4,7 +4,6 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -15,7 +14,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to allow or block email and spoofed sender entries in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 08/13/2025
+ms.date: 02/23/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -583,6 +582,9 @@ A domain pair for a spoofed sender in the Tenant Allow/Block List uses the follo
   - If the source IP address has no PTR record, then the sending infrastructure is identified as \<source IP\>/24 (for example, 192.168.100.100/24).
   - A verified DKIM domain.
   - The wildcard character (\*).
+
+  > [!TIP]
+  > Spoofed sender entries that use PTR record domains for the sending infrastructure don't work if PTR record resolutions fails for the domain. For those domains, use the IP address as the sending infrastructure (for example, 192.168.100.100/24).
 
 Here are some examples of valid domain pairs to identify spoofed senders:
 

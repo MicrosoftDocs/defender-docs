@@ -1,11 +1,10 @@
-﻿---
+---
 title: Take response actions on a file in Microsoft Defender for Endpoint
 description: Take response actions on file-related alerts by stopping and quarantining a file or blocking a file and checking activity details.
 ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -65,7 +64,7 @@ You can contain an attack in your organization by stopping the malicious process
 > You can only take this action if:
 >
 > - The device you're taking the action on is running Windows 10, version 1703 or later, Windows 11, and Windows Server 2012 R2+
-> - The file does not belong to trusted third-party publishers or is not signed by Microsoft
+> - The file does not belong to trusted non-Microsoft publishers or is not signed by Microsoft
 > - Microsoft Defender Antivirus must at least be running on Passive mode. For more information, see [Microsoft Defender Antivirus compatibility](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-compatibility).
 
 The **Stop and Quarantine File** action includes stopping running processes, quarantining the files, and deleting persistent data such as registry keys.
@@ -119,25 +118,28 @@ A warning is shown before the action is implemented for files widely used throug
 
 You can roll back and remove a file from quarantine if you've determined that it's clean after an investigation. Run the following command on each device where the file was quarantined.
 
-1. Open an elevated command-line prompt on the device:
+1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
+   1. Open the **Start** menu, and then type **cmd**.
+   2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
+2. In the elevated Command Prompt, run the following commands:
 
-   1. Go to **Start** and type _cmd_.
-
-   1. Right-click **Command prompt** and select **Run as administrator**.
-
-1. Enter the following command, and press **Enter**:
+   > [!TIP]
+   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
 
    ```dos
-   "%ProgramFiles%\Windows Defender\MpCmdRun.exe" -Restore -Name EUS:Win32/CustomEnterpriseBlock -All
+   (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
+
+   MpCmdRun.exe -Restore -Name EUS:Win32/CustomEnterpriseBlock -All
    ```
 
-   > [!NOTE]
-   > In some scenarios, the **ThreatName** may appear as: EUS:Win32/CustomEnterpriseBlock!cl.
-   >
-   > Defender for Endpoint will restore all custom blocked files that were quarantined on this device in the last 30 days.
+For more information about MpCmdRun, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
 
-> [!IMPORTANT]
-> A file that was quarantined as a potential network threat might not be recoverable. If a user attempts to restore the file after quarantine, that file might not be accessible. This can be due to the system no longer having network credentials to access the file. Typically, this is a result of a temporary log on to a system or shared folder and the access tokens expired.
+> [!NOTE]
+> In some scenarios, the **ThreatName** might appear as: `EUS:Win32/CustomEnterpriseBlock!cl`.
+>
+> Defender for Endpoint restores all custom blocked files that were quarantined on this device in the last 30 days.
+>
+> Files quarantined as a potential network threat might not be recoverable. This type of file might not be accessible in quarantine due to lack of network credentials or expired tokens from a temporary sign-in.
 
 ## Download or collect file
 
@@ -163,7 +165,7 @@ The **Download file** button can have the following states:
 
 > [!IMPORTANT]
 > Starting February 16, 2025, new Microsoft Defender for Endpoint customers will only have access to the Unified Role-Based Access Control (URBAC).
-> Existing customers keep their current roles and permissions. For more information, see URBAC [Unified Role-Based Access Control (URBAC) for Microsoft Defender for Endpoint](/defender-xdr/manage-rbac)
+> Existing customers keep their current roles and permissions. For more information, see [Unified Role-Based Access Control (URBAC) for Microsoft Defender for Endpoint](/defender-xdr/manage-rbac).
 
 ### Download quarantined files
 
@@ -183,7 +185,7 @@ This feature doesn't work if sample submission is turned off. If automatic sampl
 > Download quarantined file requirements:
 >
 > - Your organization uses Microsoft Defender Antivirus in active mode
-> - Antivirus engine version is 1.1.17300.4 or later. See [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases)
+> - Antivirus engine version is 1.1.17300.4 or later. See [Monthly platform and engine versions](microsoft-defender-endpoint-releases.md#microsoft-defender-antivirus-releases)
 > - Cloud–based protection is enabled. See [Turn on cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md)
 > - Sample submission is turned on
 > - Client devices must be running Windows 11 or Windows 10, version 1703 or later
@@ -220,7 +222,7 @@ Prevent further propagation of an attack in your organization by banning potenti
 >
 > - This feature is available if your organization uses Microsoft Defender Antivirus and Cloud-delivered protection is enabled. For more information, see [Manage cloud-delivered protection](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus).
 >
-> - The Antimalware client version must be 4.18.1901.x or later.
+> - The Anti-malware client version must be 4.18.1901.x or later.
 > - This feature is designed to prevent suspected malware (or potentially malicious files) from being downloaded from the web. It supports portable executable (PE) files, including _.exe_ and _.dll_ files. The coverage will be extended over time.
 > - This response action is available for devices on Windows 10, version 1703 or later, and Windows 11.
 > - The allow or block function cannot be done on files if the file's classification exists on the device's cache prior to the allow or block action.

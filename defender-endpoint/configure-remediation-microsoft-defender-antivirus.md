@@ -10,7 +10,6 @@ ms.topic: how-to
 ms.custom: nextgen
 ms.date: 10/20/2025
 ms.reviewer: yongrhee
-manager: bagol
 ms.collection: 
 - m365-security
 - tier2
@@ -71,14 +70,14 @@ Also see [About regular quick and full scans with Microsoft Defender Antivirus](
 
 1. Review your settings, and then choose **Save**.
 
-For more information about antivirus policies in Intune, see [Antivirus policy for endpoint security in Intune](/mem/intune/protect/endpoint-security-antivirus-policy).
+For more information about antivirus policies in Intune, see [Antivirus policy for endpoint security in Intune](/intune/intune-service/protect/endpoint-security-antivirus-policy).
 
 ## Configure remediation options using Configuration Manager
 
 If you're using Configuration Manager, see the following articles:
 
-- [Configure Endpoint Protection in Configuration Manager](/mem/configmgr/protect/deploy-use/endpoint-protection-configure)
-- [Default Actions Settings](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies#default-actions-settings)
+- [Configure Endpoint Protection in Configuration Manager](/intune/configmgr/protect/deploy-use/endpoint-protection-configure)
+- [Default Actions Settings](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#default-actions-settings)
 
 ## Configure remediation options using Group Policy
 

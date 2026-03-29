@@ -7,7 +7,6 @@ f1.keywords:
   - NOCSH
 ms.author: deniseb
 author: denisebmsft
-manager: dansimp
 audience: ITPro
 ms.collection:
 - m365-security
@@ -26,7 +25,14 @@ ms.date: 04/28/2025
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Microsoft Secure Score is a measurement of an organization's security posture, with a higher number indicating more recommended actions taken. It can be found at https://security.microsoft.com/securescore in the [Microsoft Defender portal](microsoft-365-defender.md).
+Microsoft Secure Score is a measurement of an organization's security posture, with a higher number indicating more recommended actions taken.
+
+To find your Microsoft Secure Score:
+
+1. Make sure you're signed in to the [Defender portal](https://security.microsoft.com).
+1. Go to [https://security.microsoft.com/securescore](https://security.microsoft.com/securescore).
+
+:::image type="content" source="media/secure-score-home-page.png" alt-text="The Secure Score homepage in the Microsoft Defender portal" lightbox="media/secure-score-home-page.png":::
 
 To help you find the information you need more quickly, Microsoft recommended actions are organized into groups:
 
@@ -37,11 +43,9 @@ To help you find the information you need more quickly, Microsoft recommended ac
 
 In the Microsoft Secure Score overview page, view how points are split between these groups and what points are available. You can also get an all-up view of the total score, historical trend of your secure score with benchmark comparisons, and prioritized recommended actions that can be taken to improve your score.
 
-:::image type="content" source="media/secure-score-home-page.png" alt-text="The Secure Score homepage in the Microsoft Defender portal" lightbox="media/secure-score-home-page.png":::
-
 ## Check your current score
-
-To check on your current score, go to the Microsoft Secure Score overview page and look for the tile that says **Your secure score**. Your score will be shown as a percentage, along with the number of points you've achieved out of the total possible points.
+ 
+On the (Microsoft Secure Score page)[https://security.microsoft.com/securescore], look for the tile that says **Your secure score**. Your score will be shown as a percentage, along with the number of points you've achieved out of the total possible points.
 
 Additionally, if you select the **Include** button next to your score, you can choose different views of your score. These different score views will display in the graph on the score tile and the point breakdown chart.
 
@@ -57,13 +61,17 @@ This view is what it will look like if you've included all possible score views:
 
 ## Take action to improve your score
 
-The **recommended actions** tab lists the security recommendations that address possible attack surfaces. It also includes their status (to address, planned, risk accepted, resolved through third party, resolved through alternate mitigation, and completed). You can search, filter, and group all the recommended actions.
+To access the recommended actions to improve your Microsoft Secure Score:
 
-Once you have completed an action it can take between 24-48 hours for the changes to be reflected in your secure score.
+1. Make sure you're signed in to the [Defender portal](https://security.microsoft.com).
+1. Go to [https://security.microsoft.com/securescore](https://security.microsoft.com/securescore).
+1. Select the **Recommended actions** tab.
 
-### Ranking
+:::image type="content" source="media/microsoft-secure-score-improvement-actions/secure-score-recommended-actions.png" alt-text="Screenshot showing the Recommended actions tab on the Microsoft Secure Score page.":::
 
-Ranking is based on the number of points left to achieve, implementation difficulty, user impact, and complexity. The highest ranked recommended actions have a large number of points remaining with low difficulty, user impact, and complexity.
+The **Recommended actions** tab lists the security recommendations that address possible attack surfaces. It also includes their status (to address, planned, risk accepted, resolved through third party, resolved through alternate mitigation, and completed). You can search, filter, and group all the recommended actions.
+
+Ranking is based on the number of points left to achieve, implementation difficulty, user impact, and complexity. The highest ranked recommended actions have a large number of points remaining with low difficulty, user impact, and complexity. Once you have completed an action it can take between 24-48 hours for the changes to be reflected in your secure score. Learn [how recommendations are scored](microsoft-secure-score.md#how-recommended-actions-are-scored).
 
 ### View recommended action details
 

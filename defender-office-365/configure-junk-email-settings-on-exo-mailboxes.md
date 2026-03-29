@@ -2,7 +2,6 @@
 title: Configure junk email settings on Exchange Online mailboxes
 author: chrisda
 ms.author: chrisda
-manager: bagol
 audience: Admin
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -37,7 +36,7 @@ But, there are also specific anti-spam settings that admins can configure on ind
 
 Microsoft 365 adds the header `X-Forefront-Antispam-Report: SFV:BLK` to incoming messages from senders in a user's Blocked Senders list, and any future messages from that sender are classified as spam. The message is delivered to the user's Junk Email folder or to quarantine based on the action configured in the applicable anti-spam policy (our [recommended action](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings) is **Move message to Junk Email folder**).
 
-If the sender is a user's Safe Senders list, the message is delivered to their Inbox.
+If the sender is in the user's Safe Senders list, the message is delivered to their Inbox.
 
 Admins can use Exchange Online PowerShell to configure entries in the safelist collection on mailboxes (the Safe Senders list, the Safe Recipients list, and the Blocked Senders list).
 
