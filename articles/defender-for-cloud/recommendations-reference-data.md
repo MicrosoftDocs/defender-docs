@@ -1491,6 +1491,17 @@ Even with key owner precautions, keys can be easily leaked by less than optimum 
 
 **Severity**: High
 
+### Geo-redundant backups should be enabled for PostgreSQL Servers
+
+**Description**:   
+__What is geo-redundant backup?__ Geo-redundant backup replicates server backups to a paired Azure region, providing resilience against regional failures.
+
+__Why is it a security concern?__ If geo-redundant backups are disabled, a regional outage could result in data loss and extended downtime, impacting availability and compliance.
+
+__How could attackers exploit it or how could it lead to data breaches?__ While not directly exploitable, lack of geo-redundancy increases the impact of disasters or targeted attacks on a single region.
+
+**Severity**: Low
+
 ## Related content
 
 - [Learn about security recommendations](security-policy-concept.md)
