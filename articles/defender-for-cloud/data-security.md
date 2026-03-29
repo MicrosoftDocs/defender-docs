@@ -17,9 +17,8 @@ This article explains how data is managed and safeguarded in Defender for Cloud.
 ## Data sources
 
 Defender for Cloud analyzes data from the following sources to provide visibility into your security state, identify vulnerabilities and recommend mitigations, and detect active threats:
-
-- **Azure services**: Uses information about the configuration of Azure services you have deployed by communicating with that service’s resource provider. For Azure AI resources this includes AI prompts and responses.
-
+ 
+-  **Azure services**: Uses information about the configuration of Azure services you have deployed by communicating with that service’s resource provider. For Azure AI resources, this includes prompts and responses used for AI threat detection.
 - **Network traffic**: Uses sampled network traffic metadata from Microsoft’s infrastructure, such as source/destination IP/port, packet size, and network protocol.
 - **Partner solutions**: Uses security alerts from integrated partner solutions, such as firewalls and antimalware solutions.
 - **Your machines**: Uses configuration details and information about security events, such as Windows event and audit logs, and syslog messages from your machines.

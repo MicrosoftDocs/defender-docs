@@ -3,7 +3,7 @@ title: Defender Sensor for Defender for Containers Changelog
 description: Learn about the version history and updates for the Defender sensor in Microsoft Defender for Containers.
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 03/02/2026
+ms.date: 03/17/2026
 ai-usage: ai-assisted
 ---
 
@@ -17,11 +17,36 @@ To see the version of the sensor run:
 
 `kubectl get -n kube-system daemonsets/microsoft-defender-collector-ds -o jsonpath='{.metadata.labels.app\.kubernetes\.io/version}'`
 
+
+## Defender for Containers – Sensor Support Policy
+
+The support policy here applies to all Helm-based and multicloud installations. For scenarios where the sensor is deployed as part of AKS, please refer to: [Supported Kubernetes versions in Azure Kubernetes Service (AKS) - Azure Kubernetes Service | Microsoft Learn](/azure/aks/supported-kubernetes-versions?tabs=azure-cli)
+
+|Version|Preview Date|GA Date|End of support|
+| -------- | -------- | -------- | -------- |
+|0.8| |Feb 2025|Feb 2027|
+|0.9|July 2025|Apr 2026|Apr 2027|
+|0.10|Feb 2026|Apr 2026|Apr 2027|
+|0.11|Apr 2026|Jul  2026|Jul 2027|
+
+Each stable (GA) version is supported for 12 months from its GA release date. After the 12-month window ends, the version is no longer supported. Customers should upgrade to the latest stable or Public release to maintain support and access new capabilities.
+
 ## Sensor versions available per release
 
 ### Sensor v0.10 (deployed by Helm or Arc for K8s in Preview mode)
 
-**Sensor v0.10.2 – Public Preview**
+**Sensor v0.10.3 — Preview**
+
+- **Released:** March 2026
+ 
+- **What's included:**
+    - Added privileged security context for collectors on Nexus Baremetal
+    - Security fix: sanitized secrets from storage client retry logs
+    - Moved SELinux options to pod-level for improved collector compatibility
+    - Updated antimalware collector
+    - Security vulnerability fixes
+
+**Sensor v0.10.2 – Preview**
 
 - **Released:** February 2026
 
@@ -32,6 +57,16 @@ To see the version of the sensor run:
   - Binary drift blocking 
     
 ### Sensor v0.9 (deployed by Helm or Arc for K8s in Preview mode)
+
+**Sensor v0.9.52— Preview**
+
+- **Released:** March 2026
+ 
+- **What's included:**
+    - Added privileged security context for collectors on Nexus Baremetal
+    - Security fix: sanitized secrets from storage client retry logs
+    - Moved SELinux options to pod-level for improved collector compatibility
+    - Security vulnerability fixes
 
 **Sensor v0.9.51 – Preview**
 
@@ -113,6 +148,15 @@ To see the version of the sensor run:
     
 ### Sensor v0.8 (relevant to all AKS supported versions and Arc for K8s)
 
+**Sensor v0.8.49 — GA**
+
+- **Released:** March 2026
+ 
+- **What's included:**
+    - Added privileged security context for collectors on Nexus Baremetal
+    - Security fix: sanitized secrets from storage client retry logs
+    - Security vulnerability fixes
+
 **Sensor v0.8.48 – GA**
 
 - **Released:** March 2026
@@ -165,18 +209,7 @@ To see the version of the sensor run:
   - Better memory efficiency and reduced CPU consumption  
   - Bug fixes and security enhancements  
     
-## Defender for Containers – Sensor Support Policy
 
-The support policy here applies to all Helm-based and multicloud installations. For scenarios where the sensor is deployed as part of AKS, please refer to: [Supported Kubernetes versions in Azure Kubernetes Service (AKS) - Azure Kubernetes Service | Microsoft Learn](/azure/aks/supported-kubernetes-versions?tabs=azure-cli)
-
-|Version|Preview Date|GA Date|End of support|
-| -------- | -------- | -------- | -------- |
-|0.8| |Feb 2025|Feb 2027|
-|0.9|July 2025|Apr 2026|Apr 2027|
-|0.10|Feb 2026|Apr 2026|Apr 2027|
-|0.11|Apr 2026|Jul  2026|Jul 2027|
-
-Each stable (GA) version is supported for 12 months from its GA release date. After the 12-month window ends, the version is no longer supported. Customers should upgrade to the latest stable or Public release to maintain support and access new capabilities.
 
 
 
