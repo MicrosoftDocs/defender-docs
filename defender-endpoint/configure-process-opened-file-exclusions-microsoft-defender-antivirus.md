@@ -1,4 +1,4 @@
-﻿---
+---
 title: Configure exclusions for files opened by specific processes
 description: You can exclude files from scans if they've been opened by a specific process.
 ms.service: defender-endpoint
@@ -13,7 +13,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

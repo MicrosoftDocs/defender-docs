@@ -1,4 +1,4 @@
-﻿---
+---
 title: Microsoft Defender Antivirus updates - Previous versions for technical upgrade support
 description: Understand the type of technical support offered for previous versions of Microsoft Defender Antivirus
 ms.service: defender-endpoint
@@ -7,14 +7,12 @@ author: chrisda
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
 ms.date: 07/23/2025
-audience: ITPro
 ms.collection:
 - m365-security
 - tier1
 - mde-ngp
 ms.topic: reference
 ms.subservice: ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

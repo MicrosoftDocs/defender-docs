@@ -1,4 +1,4 @@
-﻿---
+---
 title: Advanced technologies at the core of Microsoft Defender Antivirus
 description: Microsoft Defender Antivirus engines and advanced technologies
 author: chrisda
@@ -11,7 +11,6 @@ ms.subservice: ngp
 ms.localizationpriority: medium
 ms.custom: partner-contribution
 f1.keyboards: NOSCH
-audience: ITPro
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

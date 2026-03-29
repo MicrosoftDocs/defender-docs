@@ -4,7 +4,6 @@ description: Learn about content distribution across tenants in the Microsoft De
 author: mberdugo
 ms.author: monaberdugo
 ms.reviewer: tbeerthuis
-search.appverid: ""
 ms.collection: 
 - m365-security
 - tier1

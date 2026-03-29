@@ -1,13 +1,9 @@
 ---
 title: Tune anti-phishing protection
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid: 
 ms.collection: 
   - m365-security
   - tier2

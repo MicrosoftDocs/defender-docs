@@ -11,8 +11,6 @@ ms.collection:
 - m365-security
 - tier1
 ms.reviewer: pahuijbr
-search.appverid: MET150
-audience: ITPro
 ms.date: 12/25/2025
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ---
