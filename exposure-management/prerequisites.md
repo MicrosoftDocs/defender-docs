@@ -33,18 +33,18 @@ All data is processed within the Microsoft Defender XDR portal infrastructure. E
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-## Manage permissions with Microsoft Defender XDR Unified role-based access control (RBAC)
+## Manage permissions with Microsoft Defender unified role-based access control (RBAC)
 
-[Microsoft Defender XDR Unified role-based access control(RBAC)](/defender-xdr/manage-rbac) allows you to create custom roles with specific permissions for Exposure Management. These permissions are located under the **Security posture** category in Defender XDR Unified RBAC permissions model and are named:
+[Microsoft Defender unified role-based access control(RBAC)](/defender-xdr/manage-rbac) allows you to create custom roles with specific permissions for Exposure Management. These permissions are located under the **Security posture** category in Defender unified RBAC permissions model and are named:
 
 - **Exposure Management (read)** for read-only access 
 - **Exposure Management (manage)** for access to manage Exposure Management experiences
 
 For more sensitive actions in Exposure Management, users need the **Core security settings (manage)** permission that is located under the **Authorization and settings** category.
 
-To access Exposure Management data and actions, a custom role in Defender XDR Unified RBAC with any of the permissions mentioned here, shall be assigned to the **Microsoft Security Exposure Management** data source.
+To access Exposure Management data and actions, a custom role in Defender unified RBAC with any of the permissions mentioned here, shall be assigned to the **Microsoft Security Exposure Management** data source.
 
-To learn more about using Microsoft Defender XDR Unified RBAC to manage your Secure Score permissions, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
+To learn more about using Microsoft Defender unified RBAC to manage your Secure Score permissions, see [Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
 The following table highlights what a user can access or perform with each of the permissions:
 
@@ -67,7 +67,7 @@ Users with restricted access to some of the organization's device groups can:
 
 ## Access with Microsoft Entra ID roles
 
-An alternative to managing access with Microsoft Defender XDR Unified RBAC permissions, access to Microsoft Security Exposure Management data and actions is also possible with [Microsoft Entra ID Roles](/entra/identity/role-based-access-control/custom-overview). You need a tenant with at least one Global Admin or Security Admin to create a Security Exposure Management workspace.
+An alternative to managing access with Microsoft Defender unified RBAC permissions, access to Microsoft Security Exposure Management data and actions is also possible with [Microsoft Entra ID Roles](/entra/identity/role-based-access-control/custom-overview). You need a tenant with at least one Global Admin or Security Admin to create a Security Exposure Management workspace.
 
 For full access, users need one of the following Microsoft Entra ID roles:
 
