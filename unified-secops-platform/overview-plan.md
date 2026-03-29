@@ -187,7 +187,7 @@ The Microsoft Defender portal unifies the following role-based access control (R
 
 While permissions granted through Azure RBAC for Microsoft Sentinel are federated during runtime with Defender's unified RBAC, Azure RBAC and Defender RBAC are still managed separately.
 
-Defender's unified RBAC isn't required for your workspace to be onboarded to the Defender portal, and Microsoft Sentinel permissions continue to work as expected in the Defender portal even without unified RBAC. However, using unified RBAC does simplify the delegation of permissions across Defender solutions. For more information, see [Activate Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/activate-defender-rbac).
+Defender's unified RBAC isn't required for your workspace to be onboarded to the Defender portal, and Microsoft Sentinel permissions continue to work as expected in the Defender portal even without unified RBAC. However, using unified RBAC does simplify the delegation of permissions across Defender solutions. For more information, see [Activate Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/activate-defender-rbac).
 
 [!INCLUDE [mininum-access-requirements](includes/mininum-access-requirements.md)]
 
