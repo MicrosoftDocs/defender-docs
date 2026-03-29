@@ -1502,6 +1502,17 @@ __How could attackers exploit it or how could it lead to data breaches?__ While 
 
 **Severity**: Low
 
+### require_secure_transport should be set to “on” for Azure Database for PostgreSQL Servers
+
+**Description**:   
+__What is require_secure_transport?__ require_secure_transport is a server-level parameter that enforces the use of SSL/TLS for all client connections to PostgreSQL. When set to on, clients must connect using encrypted channels.
+
+__Why is it a security concern?__ If this setting is disabled (off), clients may connect over unencrypted channels, exposing sensitive data such as credentials, queries, and results to interception or manipulation.
+
+__How could attackers exploit it or how could it lead to data breaches?__ An attacker on the network could perform a man-in-the-middle attack, intercepting or altering data exchanged between the client and server if encryption is not enforced.
+
+**Severity**: High
+
 ## Related content
 
 - [Learn about security recommendations](security-policy-concept.md)
