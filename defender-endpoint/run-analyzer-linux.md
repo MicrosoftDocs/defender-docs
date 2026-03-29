@@ -124,7 +124,7 @@ To run this client analyzer, follow these steps:
     ```bash
     cd /opt/microsoft/mdatp/tools/client_analyzer/python
     ```
-1. Run with root privileges to install required dependencies.
+1. Run with `root privileges` to install required dependencies.
 
     ```bash
     sudo ./mde_support_tool.sh
