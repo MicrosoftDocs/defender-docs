@@ -594,24 +594,6 @@ All the [Kubernetes data plane security recommendations](kubernetes-workload-pro
 
 **Severity**: Medium
 
-### Cloud Map Service Discovery should be enabled for internal ECS services
-
-**Description**: Defender for Cloud identified that AWS Cloud Map is not enabled for internal ECS service discovery. AWS Cloud Map automatically maps friendly service names to dynamic endpoints, supporting secure, zero-trust inter-service communication. Without it, ECS services rely on static IP addresses or public load balancers, increasing attack surfaces and reducing internal DNS segmentation.
-
-**Severity**: Low
-
-### Container instance registration should be enabled for ECS clusters
-
-**Description**: Defender for Cloud identified zero registered container instances in your ECS cluster. Container instances are EC2 resources that join the cluster to run tasks, and their absence suggests potential misconfiguration, capacity problems, missing ECS agents, IAM role issues, or incorrect cluster naming during instance launch. Without registered instances, EC2 launch-type services cannot be scheduled, risking decreased application availability and scalability.
-
-**Severity**: Low
-
-### Deployment circuit breaker with rollback should be enabled for ECS services
-
-**Description**: Defender for Cloud identified that ECS services are not utilizing the deployment circuit breaker with rollback. This feature automatically halts unhealthy or misconfigured task deployments and reverts to the last known good state. Without this safeguard, failed deployments may persist, increasing exposure to instability and service disruption, potentially leading to prolonged service issues.
-
-**Severity**: Medium
-
 ### Read-only root filesystem should be enabled for ECS Containers
 
 **Description**: Defender for Cloud identified ECS task definitions with writable root filesystems. This configuration poses a risk by allowing runtime modifications to critical system paths, potentially enabling tampering, persistence of unauthorized changes, and exploitation of mutable directories. A read-only root filesystem limits these risks by preventing alterations during container execution, aligning with immutable infrastructure and least privilege best practices.
