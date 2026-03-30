@@ -31,6 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| March 30, 2026 | Preview | [AI model security for Azure Machine Learning (Preview)](#ai-model-security-for-azure-machine-learning-preview) |
 | March 29, 2026 | Preview | [Expanded multicloud coverage for AWS and GCP (Preview)](#expanded-multicloud-coverage-for-aws-and-gcp-preview) |
 | March 22, 2026| Update | [File Integrity Monitoring requires MDE agent version 10.8799+ for legacy Windows machines](#file-integrity-monitoring-requires-mde-agent-version-108799-for-legacy-windows-machines) |
 | March 12, 2026 | GA | [Kubernetes gated deployment support for AKS Automatic (GA)](#kubernetes-gated-deployment-support-for-aks-automatic-ga) |
@@ -39,6 +40,20 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | March 10, 2026 | Preview | [On-demand malware scanning of Azure Files in Microsoft Defender for Storage](#on-demand-malware-scanning-of-azure-files-in-microsoft-defender-for-storage-preview) |
 | March 04, 2026 | Deprecation | [Deprecation of preview of container and container images vulnerability recommendations](#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations) |
 | March 04, 2026 | Preview |[New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview)|
+
+### AI model security for Azure Machine Learning (Preview)
+
+March 30, 2026
+
+Microsoft Defender for Cloud now offers AI model security in preview for Azure Machine Learning registries and workspaces. AI model security helps security teams discover and scan custom AI models for risks before deployment, and review findings in Defender for Cloud.
+ 
+By using AI model security, you can:
+- Discover AI models in Azure Machine Learning registries and workspaces.
+- Scan supported model artifacts for malware and unsafe operators. 
+- Review security findings and remediate surfaced issues in Defender for Cloud.
+- Perform CLI-based scanning for CI/CD integrations.
+ 
+Learn more about [AI model security](ai-model-security.md).
 
 ### Expanded multicloud coverage for AWS and GCP (Preview)
 
