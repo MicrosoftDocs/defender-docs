@@ -48,7 +48,7 @@ By using AI model security, security teams can scan custom AI models uploaded to
 
 1. Select **AI & Mls** > **AI models**.
 
-    :::image type="content" source="media/models/ai-modelss.png" alt-text="Screenshot that shows where to select AI models from the drop-down list in the Cloud Security Explorer." lightbox="media/models/ai-models.png":::
+    :::image type="content" source="media/models/ai-models.png" alt-text="Screenshot that shows where to select AI models from the drop-down list in the Cloud Security Explorer." lightbox="media/models/ai-models.png":::
 
 1. Select **Done**.
 
