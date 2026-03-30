@@ -19,14 +19,11 @@ ms.collection: usx-security
 
 ---
 
-# Manage content as code with Microsoft Sentinel repositories (preview)
+# Manage content as code with Microsoft Sentinel repositories
 
 Microsoft Sentinel repositories let you deploy and manage custom Sentinel content from an external source control repository for continuous integration/continuous delivery (CI/CD). This automation removes the need for manual processes to update and deploy your custom content across workspaces. A subset of content as code is *detections* as code (DaC). Microsoft Sentinel **Repositories** implements DaC as well.
 
 For more information on Sentinel content, see [About Microsoft Sentinel content and solutions](sentinel-solutions.md).
-
-> [!IMPORTANT]
-> The Microsoft Sentinel **Repositories** feature is currently in **PREVIEW**. See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for more legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 ## How Microsoft Sentinel repositories work
 
@@ -55,7 +52,6 @@ Microsoft Sentinel repositories require careful planning to ensure you have the 
 Creating a connection to a repository requires an **Owner** role in the resource group that contains your Microsoft Sentinel workspace.
 
 If you find content in a public repository where you aren't a contributor, first import, fork, or clone the content to a repo where you're a contributor. Then connect your repo to your Microsoft Sentinel workspace. For more information, see [Deploy custom content from your repository](ci-cd.md).
-
 
 ### Maximum connections and deployments
 
@@ -112,9 +108,10 @@ Smart deployments are enabled by default on newly created connections. If you pr
 
 Consider the following customization options when deploying content with Microsoft Sentinel repositories.
 
-#### Customize the workflow or pipeline
+### Customize the workflow or pipeline
 
 Customize the workflow or pipeline in one of the following ways:
+
 - configure different deployment triggers
 - deploy content only from a specific root folder for a given workspace
 - schedule the workflow to run periodically
@@ -123,9 +120,10 @@ Customize the workflow or pipeline in one of the following ways:
 
 These customizations are defined in a .yml file specific to your workflow or pipeline. For more information on how to implement, see [Customize repository deployments](ci-cd-custom-deploy.md#customize-the-workflow-or-pipeline)
 
-#### Customize the deployment
+### Customize the deployment
 
 Once the workflow or pipeline is triggered, the deployment supports the following scenarios:
+
 - prioritize content to be deployed before the rest of the repo content
 - exclude content from deployment
 - specify ARM template parameter files 
@@ -137,7 +135,7 @@ These options are available through a feature of the PowerShell deployment scrip
 For information on managing Microsoft Sentinel repositories using the API, see the [Source Control](/rest/api/securityinsights/source-control) and [Source Controls](/rest/api/securityinsights/source-controls) actions in the Microsoft Sentinel REST API.
 
 > [!IMPORTANT]
-> Starting **June 15, 2026**, older API versions used by Microsoft Sentinel repositories will no longer be supported. If you are using APIs to create and manage repository connections, transition to API version **2025-09-01**, **2025-06-01**, or **2025-07-01-preview** before June 15, 2026 to avoid service disruption. Existing repository connections aren't affected. 
+> Starting **June 2026**, older API versions used by Microsoft Sentinel repositories will no longer be supported. If you are using APIs to create and manage repository connections, transition to API version **2025-09-01**, **2025-06-01**, or **2025-07-01-preview** before June 15, 2026 to avoid service disruption. Existing repository connections aren't affected.
 
 ## Next steps
 
