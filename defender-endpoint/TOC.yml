@@ -93,7 +93,7 @@
       - name: URL reputation demonstrations
         href: defender-endpoint-demonstration-smartscreen-url-reputation.md
  
-  - name: Deployment and onboarding
+  - name: Deployment, onboarding, and configuration
     items:
     - name: Plan your deployment
       items:
