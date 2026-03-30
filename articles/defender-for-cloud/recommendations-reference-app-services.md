@@ -54,6 +54,12 @@ To learn about actions that you can take in response to these recommendations, s
 
 **Severity**: Low
 
+### Custom service accounts should be configured for App Engine applications
+
+**Description**: Defender for Cloud identified the use of the default App Engine service account for your applications. This poses a risk because default accounts are often granted broad permissions, such as the Editor role, at the project level, which can be exploited if compromised. Custom service accounts restrict permissions to only those needed for operations, minimizing potential exposure and following the principle of least privilege.
+
+**Severity**: Medium
+
 ### Diagnostic logs in App Service should be enabled
 
 **Description**: Audit enabling of diagnostic logs on the app.
@@ -66,6 +72,12 @@ This enables you to recreate activity trails for investigation purposes if a sec
 
 **Description**: Client certificates allow for the app to request a certificate for incoming requests. Only clients that have a valid certificate will be able to reach the app.
 (Related policy: [Ensure API app has 'Client Certificates (Incoming client certificates)' set to 'On'](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f0c192fe8-9cbb-4516-85b3-0ade8bd03886)).
+
+**Severity**: Medium
+
+### Identity-Aware Proxy protection should be enabled on App Engine applications
+
+**Description**: Defender for Cloud identified that Identity-Aware Proxy (IAP) is disabled in App Engine applications. IAP is a centralized authorization layer for HTTPS that verifies user identities and enforces contextual access controls before requests reach your application. Without IAP, your App Engine may be exposed to unauthorized access, increasing the risk of exploitation. Enabling IAP is recommended to strengthen your application's security.
 
 **Severity**: Medium
 
