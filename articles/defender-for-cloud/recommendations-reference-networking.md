@@ -4,7 +4,7 @@ description: This article lists all Microsoft Defender for Cloud networking secu
 author: Elazark
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 05/18/2025
+ms.date: 03/30/2026
 ms.author: elkrieger
 ms.custom: generated
 ai-usage: ai-assisted
@@ -136,7 +136,7 @@ To enable this recommendation, navigate to your Security Policy for the applicab
 
 ### Alias targets should be configured for Route53 Hostedzone A records
 
-**Description**: Defender for Cloud identified a Route 53 A record that is not using an alias target. Route 53 A records should use Alias targets to attach directly to AWS managed resources by referencing AWS resource names.Using static IP addresses in A records can result in stale DNS entries, traffic misrouting, reduced availability, and increased security risk when underlying AWS resource endpoints change.
+**Description**: Defender for Cloud identified a Route 53 A record that is not using an alias target. Route 53 A records should use Alias targets to attach directly to AWS managed resources by referencing AWS resource names. Using static IP addresses in A records can result in stale DNS entries, traffic misrouting, reduced availability, and increased security risk when underlying AWS resource endpoints change.
 
 **Severity**: Medium
 
