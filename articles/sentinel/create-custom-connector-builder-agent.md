@@ -70,7 +70,7 @@ The following steps show how to create, validate, and deploy a custom Microsoft 
     
     ```
     
-    :::image type="content" source="media/custom-connector-builder-agent/connector-vscode-prompt-agent.png" alt-text="Image of the agent prompt in custom connector in VS Code" lightbox="media/custom-connector-builder-agent/connector-vscode-prompt-agent.png":::
+    :::image type="content" source="media/custom-connector-builder-agent/connector-vscode-prompt-agent.png" alt-text="Screenshot of the agent prompt in custom connector in VS Code" lightbox="media/custom-connector-builder-agent/connector-vscode-prompt-agent.png":::
 
 1. Provide the source API information, authentication methods to generate the appropriate connector pattern.
 
@@ -89,7 +89,7 @@ Based on your input, the agent generates the following four files:
 
 The illustration shows the JSON connector files generated.
 
-  :::image type="content" source="media/custom-connector-builder-agent/connector-files-sample.png" alt-text="Image of the connector file generated in VS Code" lightbox="media/custom-connector-builder-agent/connector-files-sample.png"::: 
+  :::image type="content" source="media/custom-connector-builder-agent/connector-files-sample.png" alt-text="Screenshot of the connector file generated in VS Code" lightbox="media/custom-connector-builder-agent/connector-files-sample.png"::: 
 
 >[!NOTE]
 > During agent evaluation, select **Allow responses once** to approve changes, or select the option **Bypass Approvals** in the chat. It might take up to several minutes for the evaluations to finish.
@@ -109,7 +109,7 @@ Iteratively refine the connector using agent or inline directly into the JSON fi
 
 1. To validate the API for data source events, right click on the folder that contains the ARM template and select **Microsoft Sentinel** > **Test Connector**.
 
-    :::image type="content" source="media/custom-connector-builder-agent/connector-validation.png" alt-text="Image of the validation step for custom connector in VS Code" lightbox="media/custom-connector-builder-agent/connector-validation.png":::
+    :::image type="content" source="media/custom-connector-builder-agent/connector-validation.png" alt-text="Screenshot of the validation step for custom connector in VS Code" lightbox="media/custom-connector-builder-agent/connector-validation.png":::
   
 1. In the **Test Connector** pane, enter the authentication details for your data source API, and then select **Connect**.
 
@@ -126,17 +126,17 @@ After you validate the connection, select **Disconnect** to stop the polling ses
 
 1. After the validation test succeeds, select **Deploy** in the chat window to start deploying the connector.
 
-      :::image type="content" source="media/custom-connector-builder-agent/connector-deploy.png" alt-text="Image of the deploy step for custom connector in VS Code" lightbox="media/custom-connector-builder-agent/connector-deploy.png":::
+      :::image type="content" source="media/custom-connector-builder-agent/connector-deploy.png" alt-text="Screenshot of the deploy step for custom connector in VS Code" lightbox="media/custom-connector-builder-agent/connector-deploy.png":::
 
 1. The extension opens a panel where you can choose from your available Microsoft Sentinel workspaces.
 
 1. Select a workspace, then select **Deploy** to deploy the connector to that workspace.
 
-      :::image type="content" source="media/custom-connector-builder-agent/connector-workspace-deploy.png" alt-text="Image of the deploy step to choose workspace" lightbox="media/custom-connector-builder-agent/connector-workspace-deploy.png":::
+      :::image type="content" source="media/custom-connector-builder-agent/connector-workspace-deploy.png" alt-text="Screenshot of the deploy step to choose workspace" lightbox="media/custom-connector-builder-agent/connector-workspace-deploy.png":::
   
 Alternatively, right-click the folder that contains the generated files, select **Microsoft Sentinel** > **Deploy Connector**.
 
-  :::image type="content" source="media/custom-connector-builder-agent/connector-files-deploy.png" alt-text="Image of the alternate way of deploying in VS Code" lightbox="media/custom-connector-builder-agent/connector-files-deploy.png":::
+  :::image type="content" source="media/custom-connector-builder-agent/connector-files-deploy.png" alt-text="Screenshot of the alternate way of deploying in VS Code" lightbox="media/custom-connector-builder-agent/connector-files-deploy.png":::
 
 When deployment completes, a success message appears in the **Output** window.
 
