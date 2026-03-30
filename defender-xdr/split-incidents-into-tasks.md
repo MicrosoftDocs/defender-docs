@@ -43,7 +43,7 @@ Categorize, prioritize, assign, and track each task to ensure consistency, colla
 | View tasks | **Read-only** permissions or **Security data basics (read)** under the **Security operations** permissions group in the Defender portal. |
 | Create tasks | **All read and manage permissions** permissions or **Response (manage)** under the **Security operations** permissions group in the Defender portal. |
 
-For more information about unified RBAC in the Defender portal, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
+For more information about unified RBAC in the Defender portal, see [Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
 
 ## View and manage tasks

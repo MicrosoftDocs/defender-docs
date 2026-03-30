@@ -4,7 +4,6 @@ description: Configure Microsoft Defender for Endpoint on macOS in enterprise or
 ms.service: defender-endpoint
 author: paulinbar
 ms.author: painbar
-manager: bagol
 ms.reviewer: joshbregman
 ms.localizationpriority: medium
 audience: ITPro

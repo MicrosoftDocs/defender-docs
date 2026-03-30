@@ -5,7 +5,6 @@ ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -97,7 +96,7 @@ Due to the limited commands available in Live Response the steps detailed must b
 
 #### Binary Client Analyzer Install Script
 
-The following script performs the first six steps of the [Running the Binary version of the Client Analyzer](/defender-endpoint/overview-client-analyzer). When complete, the XMDE Client Analyzer binary is available from the `/tmp/XMDEClientAnalyzerBinary/ClientAnalyzer` directory.
+The following script performs the first six steps of the [Running the Binary version of the Client Analyzer](overview-client-analyzer.md). When complete, the XMDE Client Analyzer binary is available from the `/tmp/XMDEClientAnalyzerBinary/ClientAnalyzer` directory.
 
 1. Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
 
@@ -123,7 +122,7 @@ The following script performs the first six steps of the [Running the Binary ver
    
 #### Python Client Analyzer Install Script
 
-The following script performs the first six steps of the [Running the Python version of the Client Analyzer](/defender-endpoint/overview-client-analyzer). When complete, the XMDE Client Analyzer Python scripts are available from the `/tmp/XMDEClientAnalyzer` directory.
+The following script performs the first six steps of the [Running the Python version of the Client Analyzer](overview-client-analyzer.md). When complete, the XMDE Client Analyzer Python scripts are available from the `/tmp/XMDEClientAnalyzer` directory.
 
 1. Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
 

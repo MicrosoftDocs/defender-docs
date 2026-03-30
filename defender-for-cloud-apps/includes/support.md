@@ -3,10 +3,10 @@ title: Include file
 description: Include file
 ms.collection: M365-security-compliance
 ms.service: defender-for-cloud-apps
-author: batamig
+author: AbbyMSFT
 ms.topic: include
 ms.date: 02/05/2023
-ms.author: bagol
+ms.author: abbyweisberg
 ms.custom: include file
 ---
 
