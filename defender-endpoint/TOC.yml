@@ -329,7 +329,7 @@
           - name: Schedule an update for Defender for Endpoint on Linux
             href: linux-update-mde-linux.md
         - name: Offboard Defender for Endpoint on Linux
-          href: linux-offboard-endpoints.md
+          href: linux-off-board-endpoints.md
         - name: Privacy for Defender for Endpoint on Linux
           href: linux-privacy.md
         - name: Additional resources for Defender for Endpoint on Linux
