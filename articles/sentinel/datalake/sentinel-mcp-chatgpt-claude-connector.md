@@ -8,7 +8,8 @@ ms.date: 12/09/2025
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
-
+ms.custom:
+ - sfi-ga-nochange
 #customer intent: As a security analyst, I want to use a custom Microsoft Sentinel MCP connector in ChatGPT.
 ---
 
@@ -26,6 +27,9 @@ Before configuring a Microsoft Sentinel MCP connector in ChatGPT or Claude, you 
 - A Microsoft Entra application, which represents ChatGPT or Claude as a client; for more information, see [Add a Microsoft Entra application](#add-a-microsoft-entra-application)
 - [Microsoft Sentinel data lake](sentinel-lake-onboarding.md)
 - Tenant-level administrative privileges
+
+> [!IMPORTANT]
+> Use roles with the fewest permissions to help improve security for your organization. Global Administrator is a highly privileged role. Limit its use to emergency scenarios when you can't use an existing role.
 
 ### Add a Microsoft Entra application
 To add a Microsoft Entra application, follow these steps:
