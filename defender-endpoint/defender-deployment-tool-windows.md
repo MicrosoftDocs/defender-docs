@@ -1,4 +1,4 @@
----
+﻿---
 title: Deploy Microsoft Defender endpoint security to Windows devices using the Defender deployment tool (preview)
 description: Learn how to onboard and offboard Windows devices using the Defender deployment tool.
 ms.service: defender-endpoint
@@ -9,7 +9,6 @@ author: paulinbar
 ms.author: painbar
 ms.custom: nextgen
 ms.reviewer: pahuijbr
-manager: bagol
 ms.collection: 
 - m365-security
 - tier3
@@ -46,7 +45,7 @@ The following table describes some of the main features the tool supports.
 | **Custom expiry** | Defender deployment packages allow you to specify when you'd like them to expire, for any time up to a year, so that the package won't remain valid forever. This prevents adversaries from exploiting any old onboarding packages they might discover. Microsoft recommends making the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use. |
 | **Ability to view deployment packages** | You can see key properties of your deployment packages in one place by navigating to **Settings** > **Endpoints** > **Deployment packages**. You can filter by active, expired, or hidden deployment packages. |
 
-When the [interactive](#interactive-use), double-click experience is used, the tool automatically begins the onboarding process asks you to input the Defender deployment tool key generated in the portal when you create your Defender deployment tool package in **Settings** > **Endpoints** > **Onboarding**. It handles the installation of most prerequisite updates and the latest Defender components, and connects the device to the Defender services. If needed, the tool asks you to reboot the device to finish installation after you sign in again.
+When the [interactive](#interactive-use), double-click experience is used, the tool automatically begins the onboarding process and asks you to input the Defender deployment tool key generated in the portal when you create your Defender deployment tool package in **Settings** > **Endpoints** > **Onboarding**. It handles the installation of most prerequisite updates and the latest Defender components, and connects the device to the Defender services. If needed, the tool asks you to reboot the device to finish installation after you sign in again.
 
 For more [advanced and large-scale deployments](#advanced-and-large-scale-deployments), the tool offers functionality to perform additional and orchestrated steps through command-line parameters or a configuration file.
 
@@ -85,12 +84,6 @@ There are prerequisites that pertain to all supported Windows and Windows Server
    - SHA-2 update ([KB4474419](https://support.microsoft.com/help/4474419)) released September 10, 2019. If you use Windows Update, the required SHA-2 update is offered to you automatically. 
 
 - On Server 2008 R2 SP1 devices, .NET 3.5 or a higher version of the .NET framework must also be installed.
-
-R2 SP1, at a minimum, the updates for SHA2 code signing must be installed: 
-
-Servicing stack update (SSU) (KB4490628). If you use Windows Update, the required SSU is offered to you automatically. 
-
-SHA-2 update (KB4474419) released September 10, 2019. If you use Windows Update, the required SHA-2 update is offered to you automatically. 
 
 > [!NOTE]
 > For Windows 7 SP1, Windows Server 2008 R2, and Windows Server 2012, the Defender endpoint security solution that will be installed is currently in public preview. For more information about Defender endpoint security for Windows 7 SP1 and Windows Server 2008 R2 devices, see [Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security).
@@ -174,112 +167,116 @@ The following examples illustrate how to use the tool.
 
 - Run the Defender deployment tool without changing settings and without interacting with it:
 
-   ```
+   ```dos
    DefenderDT.exe -Quiet
    ```
+
 - Use a *WindowsDefenderATP.onboarding* file in the same directory as the tool to run the default onboarding sequence, connect through and configure a proxy to use, and, if a reboot is required, initiate it without asking. Don't show the console window.
 
-   ```
+   ```dos
    DefenderDT.exe -Proxy:192.168.0.255:8080 -AllowReboot -Quiet
    ```
 
 - Use a *.onboarding* file stored in a network location to perform the onboarding sequence. Don't show the console window.
 
-   ```
+   ```dos
    DefenderDT.exe -File:\\server\share\Defender.onboarding -Quiet
    ```
 
 - Perform an offboarding operation. Don't ask for approval. Don't show console window.
 
-   ```
+   ```dos
    DefenderDT.exe -Offboard -File:c:"\Defender deployment tooltest\WindowsDefenderATPOffboardingScript_valid_until_2025-04-02.offboarding" -YES -Quiet
    ```
 
 - Perform a prerequisite check and display verbose output without displaying a dialog box.
 
-   ```
+   ```dos
    DefenderDT.exe -PreCheck -Verbose -Quiet
    ```
 
 - Download updates and installation files to be used for staging, to the current directory.
 
-   ```
+   ```dos
    DefenderDT.exe -Stage
    ```
-<a name="create-config-example"></a>
-- Create a configuration file, edit it and then use it to pass multiple parameters to the tool to perform an installation using staged installation files.
 
-   - Step 1: Generate a configuration file
+  <a name="create-config-example"></a>
 
+- Create and edit a configuration file, and then use it to pass multiple parameters to the tool to perform an installation using staged installation files.
+  1. Generate a configuration file:
+
+      ```dos
+      DefenderDT.exe -MakeConfig
       ```
-      DefenderDT.exe -makeconfig
-      ```
 
-   - Step 2: Use a text editor such as Notepad to open the *MdeConfig.txt* file that was created in the directory and specify parameters you wish to use. Sample:
+  2. Use Notepad to open the *MdeConfig.txt* file that was created in the directory. Specify parameters you want to use.
 
-      ```
-      # Only absolute paths can be used for the parameters accepting paths
+     For example:
 
-      # Configures the tool to perform offboarding.
+     ```text
+     # Only absolute paths can be used for the parameters accepting paths
 
-      # Add the parameter "YES" to proceed with offboarding without user approval. 
-      # Offboard: False 
+     # Configures the tool to perform offboarding.
+
+     # Add the parameter "YES" to proceed with offboarding without user approval. 
+     # Offboard: False 
        
-      # Used with "Offboard" and "Uninstall" parameters. 
-      # Yes: False 
+     # Used with "Offboard" and "Uninstall" parameters. 
+     # Yes: False 
        
-      # Downloads the installation files for all Windows versions supported by the tool to a specific location for staging purposes. 
-      # Stage: 
+     # Downloads the installation files for all Windows versions supported by the tool to a specific location for staging purposes. 
+     # Stage: 
        
-      # Specifies the path to the folder containing the installation files. To stage installation files, use the "Stage" parameter. 
-      # Source: 
+     # Specifies the path to the folder containing the installation files. To stage installation files, use the "Stage" parameter. 
+     # Source: 
        
-      # Specifies the full path to the .onboarding or .offboarding file if it is not placed in the current folder. 
-      # File: 
+     # Specifies the full path to the .onboarding or .offboarding file if it is not placed in the current folder. 
+     # File: 
        
-      # Proxy to use during and after installation. Empty string by default. 
+     # Proxy to use during and after installation. Empty string by default. 
       Proxy: 
        
-      # Prevents any dialogs from displaying. False by default. 
+     # Prevents any dialogs from displaying. False by default. 
       Quiet: False 
        
-      # Allows device reboots if needed. False by default 
+     # Allows device reboots if needed. False by default 
       AllowReboot: False 
        
-      # Prevents the tool from resuming activities after a reboot. False by default. 
+     # Prevents the tool from resuming activities after a reboot. False by default. 
       NoResumeAfterReboot: False 
        
-      # Windows Server only. Sets Defender antivirus to run in passive mode. 
+     # Windows Server only. Sets Defender antivirus to run in passive mode. 
       Passive: False 
        
-      # Installs updates but does not perform onboarding, even if an onboarding file is present. False by default. 
+     # Installs updates but does not perform onboarding, even if an onboarding file is present. False by default. 
       UpdateOnly: False 
        
-      # Displays detailed information. False by default. 
+     # Displays detailed information. False by default. 
       Verbose: False 
        
-      # Checks for prerequisites and logs results but does not proceed with installation or onboarding. False by default. 
+     # Checks for prerequisites and logs results but does not proceed with installation or onboarding. False by default. 
       Precheck: False 
        
-      # Offboards the device and uninstalls any components that were added during onboarding. 
-      # Will use the .offboarding file in the current folder if no path was specified. 
-      # Add the parameter "YES" to proceed without user approval. 
+     # Offboards the device and uninstalls any components that were added during onboarding. 
+     # Will use the .offboarding file in the current folder if no path was specified. 
+     # Add the parameter "YES" to proceed without user approval. 
       Uninstall: False 
        
-      # Optionally removes the specified workspace connection used by Microsoft Monitoring Agent (MMA). Empty string by default. 
+     # Optionally removes the specified workspace connection used by Microsoft Monitoring Agent (MMA). Empty string by default. 
       RemoveMMA: 
        
-      # Allows offboarding to proceed even if there is no connectivity. False by default. 
+     # Allows offboarding to proceed even if there is no connectivity. False by default. 
       Offline: False 
       ```
 
-   - Step 3: Run the tool with the configuration file.
+  3. Run the tool with the configuration file.
 
-      ```
+      ```dos
       DefenderDT.exe -File:\\server\DDT\Defenderconfig.txt
       ```
-      
-      If the *MdeConfig.txt* file is stored in the same directory as the tool, there's no need to specify a path.
+
+      If the *MdeConfig.txt* file is stored in the same directory as the tool, you don't need to specify a path.
 
 ## Using Group Policy for deployment
 
@@ -303,7 +300,7 @@ The following steps show how to create a scheduled task to run the tool using Gr
 
 1. In the **Name** field, type an appropriate name for the scheduled task.
 
-1. Go to the **Actions** tab and select **New**. Ensure that **Start a program** is selected in the Action field. Enter the full UNC path, using the file server's fully qualified domain name (FQDN), of the shared *DefenderDDT.exe* application.
+1. Go to the **Actions** tab and select **New**. Ensure that **Start a program** is selected in the Action field. Enter the full UNC path, using the file server's fully qualified domain name (FQDN), of the shared *DefenderDT.exe* application.
 
 1. In the **Add arguments (optional)** field, enter the [parameters](#advanced-and-large-scale-deployments) you wish to use. For example, to use an onboarding file that isn't in the working directory of the tool, specify the *-file:* parameter with the full UNC path to the onboarding file, for example `-file: \\server\share\WindowsDefenderATP.onboarding`.
 
@@ -323,7 +320,7 @@ General considerations and limitations, and additional considerations and limita
 
 ### Known issues and limitations for Windows 7 SP1 and Windows Server 2008 R2 SP1
 
-- You might get alerts about *mpclient.dll*, *mpcommu.dll*, *mpsvc.dll*, *msmplics.dll*, and *sense1ds.dll* loaded by either *mpcmdrun.exe* or *mssense.exe*. These should resolve over time.
+- You might get alerts about *mpclient.dll*, *mpcommu.dll*, *mpsvc.dll*, *msmplics.dll*, and *sense1ds.dll* loaded by either *MpCmdRun.exe* or *MsSense.exe*. These should resolve over time.
 
 - On Windows 7 SP1 and on Windows Server 2008 R2 SP1 with the Desktop Experience pack installed, you might see a notification from Action Center *Windows did not find antivirus software on this computer*. This isn't indicative of a problem.
 
@@ -345,25 +342,44 @@ You can reference the Defender deployment tool log to understand if there were a
 
 Events will also be written to the following Windows event logs:
 
-- Onboarding: Windows Logs > Application > Source: WDATPOnboarding
+- **Onboarding**: Windows Logs \> Application \> Source: WDATPOnboarding
+- **Offboarding**: Windows Logs \> Application \> Source: WDATPOffboarding
 
-- Offboarding: Windows Logs > Application > Source: WDATPOffboarding
+To test if the installation succeeded successfully, do the following checks:
 
-To test if the installation succeeded successfully, perform the following checks:
+1. Verify the services are running with the following commands:
 
-1. Check if services are running
+   ```dos
+   Sc.exe query sense
 
-   `Sc.exe query sense`<br>`Sc.exe query windefend`
+   Sc.exe query windefend
+   ```
 
-   You should see something similar to the following for both services:
+   You should see the following output:
 
-   :::image type="content" source="./media/defender-deployment-tool-windows/services-check.png" alt-text="Screenshot of service status check.":::
+   ```console
+   SERVICE_NAME: sense
+           TYPE               : 10  WIN32_OWN_PROCESS
+           STATE              : 4  RUNNING
+                                   (STOPPABLE, NOT_PAUSABLE, ACCEPTS_PRESHUTDOWN)
+           WIN32_EXIT_CODE    : 0  (0x0)
+           SERVICE_EXIT_CODE  : 0  (0x0)
+           CHECKPOINT         : 0x0
+           WAIT_HINT          : 0x0
 
-1. For detailed log collection for Defender Antivirus, including settings and other information, you can run the following command:
+   SERVICE_NAME: windefend
+           TYPE               : 10  WIN32_OWN_PROCESS
+           STATE              : 4  RUNNING
+                                   (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+           WIN32_EXIT_CODE    : 0  (0x0)
+           SERVICE_EXIT_CODE  : 0  (0x0)
+           CHECKPOINT         : 0x0
+           WAIT_HINT          : 0x0
+   ```
 
-   `C:\Program Files\Microsoft Defender for Endpoint\MpCmdRun.exe” -GetFiles -SupportLogLocation <FOLDEROFCHOICE>`
+1. For detailed log collection for Defender Antivirus, including settings and other information, see [Collect Microsoft Defender Antivirus diagnostic data](collect-diagnostic-data.md).
 
-   The latest preview version of the [client analyzer tool](https://aka.ms/betamdeanalyzer) can also be used to collect logs and perform connectivity troubleshooting on Windows 7 SP1 and Windows Server 2008 R2 SP1. It requires PowerShell 5.1 or later to be installed.
+1. You can use the [client analyzer tool](run-analyzer-windows.md) to collect logs and perform connectivity troubleshooting on Windows.
 
 ## Related content
 

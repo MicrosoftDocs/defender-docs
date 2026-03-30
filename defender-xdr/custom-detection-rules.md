@@ -9,7 +9,6 @@ f1.keywords:
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: orspodek
 audience: ITPro
 ms.collection:
   - m365-security
@@ -22,8 +21,9 @@ ms.custom:
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
+    - Microsoft Defender for Endpoint Plan 2
 ms.topic: how-to
-ms.date: 03/11/2026
+ms.date: 03/26/2026
 ---
 
 # Create custom detection rules
@@ -53,18 +53,18 @@ Likewise, since the `IdentityLogonEvents` table holds authentication activity in
 > To manage custom detections, Security Operators must have the Manage Security Settings permission in Microsoft Defender for Endpoint if RBAC is turned on.
 
 ### Microsoft Sentinel
-To manage custom detections on Microsoft Sentinel data, you need to be assigned the **Microsoft Sentinel Contributor** role. Users with this [Azure role](/azure/role-based-access-control/built-in-roles/security#microsoft-sentinel-contributor) can manage Microsoft Sentinel SIEM workspace data, including alerts and detections. You can assign this role on a specific primary workspace, Azure resource group, or an entire subscription.
+
+To manage custom detections on Microsoft Sentinel data, you need to be assigned the **Microsoft Sentinel Contributor** role or higher. Users with this [Azure role](/azure/role-based-access-control/built-in-roles/security#microsoft-sentinel-contributor) can manage Microsoft Sentinel SIEM workspace data, including alerts and detections. You can assign this role on a specific primary workspace, Azure resource group, or an entire subscription.
 
 ### Manage required permissions
-
-> [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 To manage required permissions, a Global Administrator can:
 
 - Assign the Security Administrator or Security Operator role in [Microsoft 365 admin center](https://admin.microsoft.com/) under **Roles** > **Security Administrator**.
-
 - Check RBAC settings for Microsoft Defender for Endpoint in [Microsoft Defender XDR](https://security.microsoft.com/) under **Settings** > **Permissions** > **Roles**. Select the corresponding role to assign the **manage security settings** permission.
+
+> [!IMPORTANT]
+> Use roles with the fewest permissions to help improve security for your organization. Global Administrator is a highly privileged role. Limit its use to emergency scenarios when you can't use an existing role.
 
 > [!NOTE]
 > A user also needs the appropriate permissions for the devices in the [device scope](#5-set-the-rule-scope) of a custom detection rule that they're creating or editing. A user can't edit a custom detection rule that is scoped to run on all devices if the user doesn't have permissions for all devices. 
@@ -72,6 +72,7 @@ To manage required permissions, a Global Administrator can:
 ## Create a custom detection rule
 
 To create a custom detection rule, follow these steps:
+
 1. [Prepare the query](#1-prepare-the-query)
 1. [Create new rule and provide alert details](#2-create-new-rule-and-provide-alert-details)
 1. [Define alert enrichment details](#3-define-alert-enrichment-details)
@@ -204,7 +205,7 @@ Near real-time detections support the following tables:
 
 |Microsoft Defender XDR| Microsoft Sentinel|
 |----------------------|-------------------|
-|<ul><li>`AlertEvidence`<li>`CloudAppEvents`<li>`DeviceEvents`<li>`DeviceFileCertificateInfo`<li>`DeviceFileEvents`<li>`DeviceImageLoadEvents`<li>`DeviceLogonEvents`<li>`DeviceNetworkEvents`<li>`DeviceNetworkInfo`<li>`DeviceInfo`<li>`DeviceProcessEvents`<li>`DeviceRegistryEvents`<li>`EmailAttachmentInfo`<li>`EmailEvents` (except `LatestDeliveryLocation` and `LatestDeliveryAction` columns)<li>`EmailPostDeliveryEvents`<li>`EmailUrlInfo`<li>`IdentityDirectoryEvents`<li>`IdentityLogonEvents`<li>`IdentityQueryEvents`<li>`UrlClickEvents`</ul>| <ul><li>`ABAPAuditLog_CL`<li>`AuditLogs`<li>`AWSCloudTrail`<li>`AWSGuardDuty`<li>`AzureActivity`<li>`Cisco_Umbrella_dns_CL`<li>`Cisco_Umbrella_proxy_CL`<li>`CommonSecurityLog`<li>`GCPAuditLogs`<li>`MicrosoftGraphActivityLogs`<li>`MicrosoftGraphActivityLogs`<li>`OfficeActivity`<li>`OfficeActivity`<li>`Okta_CL`<li>`OktaV2_CL`<li>`ProofpointPOD`<li>`ProofPointTAPClicksPermitted_CL`<li>`ProofPointTAPMessagesDelivered_CL`<li>`SecurityAlert`<li>`SecurityEvent`<li>`SigninLogs`</ul> 
+|<ul><li>`AlertEvidence`<li>`CloudAppEvents`<li>`DeviceEvents`<li>`DeviceFileCertificateInfo`<li>`DeviceFileEvents`<li>`DeviceImageLoadEvents`<li>`DeviceLogonEvents`<li>`DeviceNetworkEvents`<li>`DeviceNetworkInfo`<li>`DeviceInfo`<li>`DeviceProcessEvents`<li>`DeviceRegistryEvents`<li>`EmailAttachmentInfo`<li>`EmailEvents` (except `LatestDeliveryLocation` and `LatestDeliveryAction` columns)<li>`EmailPostDeliveryEvents`<li>`EmailUrlInfo`<li>`IdentityDirectoryEvents`<li>`IdentityLogonEvents`<li>`IdentityQueryEvents`<li>`UrlClickEvents`</ul>| <ul><li>`ABAPAuditLog_C`<li>`ABAPChangeDocsLog_CL`<li>`AuditLogs`<li>`AWSCloudTrail`<li>`AWSGuardDuty`<li>`AzureActivity`<li>`CommonSecurityLog`<li>`GCPAuditLogs`<li>`MicrosoftGraphActivityLogs`<li>`OfficeActivity`<li>`Okta_CL`<li>`OktaV2_CL`<li>`ProofpointPOD`<li>`ProofPointTAPClicksPermitted_CL`<li>`ProofPointTAPMessagesDelivered_CL`<li>`SecurityAlert`<li>`SecurityEvent`<li>`SigninLogs`</ul> 
 
 > [!NOTE]
 > Only generally available columns support **Continuous (NRT)** frequency.
@@ -223,6 +224,7 @@ When you select this frequency option, the **Run query every input** component a
 >When you select a custom frequency, Defender fetches your data from Microsoft Sentinel. This means that: 
 >1.	You must have data available in Microsoft Sentinel.
 >1.	Defender XDR data doesn't support scoping, since Microsoft Sentinel doesn't support scoping.
+
 
 ### 3. Define alert enrichment details 
 You can enrich alerts by providing and defining more details. When you enrich alerts, you can:
@@ -287,7 +289,7 @@ The expanded **Entity mapping** section has two sections where you can select en
     - Azure resource 
     - Amazon Web Services resource 
     - Google Cloud Platform resource 
-- **Related evidence** – Add nonassets that appear in the selected events. The supported entity types are: 
+- **Related evidence** – Add nonassets that appear in the selected events. The supported entity types are: 
     - Process 
     - File 
     - Registry value 
@@ -336,17 +338,20 @@ Apply these actions to devices in the `DeviceId` column of the query results:
 - When selected, the **Mark user as compromised** action takes on users in the `AccountObjectId`, `InitiatingProcessAccountObjectId`, or `RecipientObjectId` column of the query results. This action sets the user's risk level to "high" in Microsoft Entra ID, triggering corresponding [identity protection policies](/azure/active-directory/identity-protection/overview-identity-protection).
 
 - Select **Disable user** to temporarily prevent a user from signing in.
-- Select **Force password reset** to prompt the user to change their password on the next sign in session.
-- Both the `Disable user` and `Force password reset` options require the user SID, which are in the columns `AccountSid`, `InitiatingProcessAccountSid`, `RequestAccountSid`, and `OnPremSid`.
+- Select **Reset user authentication** to prompt the user to either change their password on their next sign-in session (for on-premises identities) or require them to sign in again (for Microsoft Entra identities).
 
-For more information on user actions, see [Remediation actions in Microsoft Defender for Identity](/defender-for-identity/remediation-actions).
+- Both the **Disable user** and **Reset user authentication** options require the user security identifier (SID), which are in the columns `AccountSid`, `InitiatingProcessAccountSid`, `RequestAccountSid`, and `OnPremSid`.
+
+- For Microsoft Entra identities, `AccountObjectId` parameter is needed for all actions.
+
+For more information on user actions, see [Remediation actions in Microsoft Defender for Identity](/defender-for-identity/remediation-actions) and [Remediation actions in Microsoft Defender for Cloud Apps](/defender-cloud-apps/governance-actions).
 
 #### Actions on emails
 
-- If the custom detection yields email messages, you can select **Move to mailbox folder** to move the email to  a selected folder (any of **Junk**, **Inbox**, or **Deleted items** folders). Specifically, you can move email results from quarantined items (for instance, in the case of false positives) by selecting the **Inbox** option.
+- If the custom detection yields email messages, you can select **Move to mailbox folder** to move the email to a selected folder (any of **Junk**, **Inbox**, or **Deleted items** folders). Specifically, you can move email results from quarantined items (for instance, in the case of false positives) by selecting the **Inbox** option.
 
    :::image type="content" source="media/custom-detection-rules/advanced-hunting-custom-quarantine-results.png" alt-text="Screenshot of the Inbox option under custom detections in the Microsoft Defender portal." lightbox="media/custom-detection-rules/advanced-hunting-custom-quarantine-results.png":::
-  :::image type="content" source="media/custom-detection-rules/advanced-hunting-custom-quarantine-results.png" alt-text="Screenshot of the Inbox option under custom detections in the Microsoft Defender portal." lightbox="media/custom-detection-rules/advanced-hunting-custom-quarantine-results.png":::
+    :::image type="content" source="media/custom-detection-rules/advanced-hunting-custom-quarantine-results.png" alt-text="Screenshot of the Inbox option under custom detections in the Microsoft Defender portal." lightbox="media/custom-detection-rules/advanced-hunting-custom-quarantine-results.png":::
 
 - Alternatively, you can select **Delete email** and then choose to either move the emails to Deleted Items (**Soft delete**) or delete the selected emails permanently (**Hard delete**).
 
@@ -377,7 +382,7 @@ After reviewing the rule, select **Create** to save it. The custom detection rul
 
 #### How custom detections handle duplicate alerts
 
-An important consideration when creating and reviewing custom detection rules is alert noise and fatigue. Custom detections group and deduplicate events into a single alert. If a custom detection rule fires twice on an event that contains the same entities, custom details, and dynamic details, it creates one alert for both events. If the detection rule recognizes that the events are identical, it logs one of the events on the created alert and takes care of the duplicates. Duplicates can occur when the lookback period is longer than the frequency. If the events are different, the custom detection logs both events on the alert.
+An important consideration when creating and reviewing custom detection rules is alert noise and fatigue. Custom detections group and deduplicate events into a single alert. If a custom detection rule runs twice on an event that contains the same entities, custom details, and dynamic details, it creates one alert for both events. If the detection rule recognizes that the events are identical, it logs one of the events on the created alert and takes care of the duplicates. Duplicates can occur when the lookback period is longer than the frequency. If the events are different, the custom detection logs both events on the alert.
 
 ## See also
 

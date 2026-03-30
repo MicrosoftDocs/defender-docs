@@ -1,17 +1,12 @@
 ---
 title: How Microsoft names threat actors
-ms.reviewer: 
 description: Learn how Microsoft names threat actors and how to use the naming convention to identify associated intelligence.
-ms.service: microsoft-defender
-ms.subservice: unified-security-operations
 ms.mktglfcycl: secure
 ms.sitesec: library
-ms.localizationpriority: medium
-ms.author: guywild
 author: guywi-ms
-manager: orspodek
-audience: ITPro
-ms.collection: 
+ms.author: guywild
+ms.reviewer:
+ms.collection:
 - m365-security
 - tier2
 ms.custom:

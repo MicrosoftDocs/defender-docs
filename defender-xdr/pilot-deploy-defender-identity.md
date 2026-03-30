@@ -5,11 +5,10 @@ search.appverid: met150
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: dansimp
-author: dansimp
+ms.author: guywild
+author: guywi-ms
 ms.date: 01/12/2025
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection: 
   - m365-security
