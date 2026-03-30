@@ -16,7 +16,7 @@ We recommend configuring [automatic Windows event auditing](deploy/configure-win
 
 The Microsoft Defender for Identity **Health issues** page lets you know when there's a problem with your Defender for Identity workspace, by raising a health issue. To access the page, follow these steps:
 
-1. In [Microsoft Defender XDR](https://security.microsoft.com), under **Identities**, select **Health issues**.
+1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings** > **Identities**. Under **Deployment**, select **Health issues**.
 
 1. The **Health issues** page appears, where you can see health issues for both your general Defender for Identity environment and specific sensors.
 

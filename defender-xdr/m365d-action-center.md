@@ -9,7 +9,6 @@ ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 4/28/2025
-manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-security
@@ -145,9 +144,6 @@ You have the following options:
 
 - [Defender for Endpoint permissions](/defender-endpoint/rbac):
   - _Microsoft Defender for Endpoint remediation (devices)_: Membership in the **Active remediation actions** role.
-
-> [!TIP]
-> Members of the **Global Administrator** role in Microsoft Entra ID can approve or reject any pending action in the Action center. However, as a best practice, you should limit the members of the **Global Administrator** role. We recommend using the alternative roles and role groups as described in the previous list for Action center permissions.
 
 ## Next step
 

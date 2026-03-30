@@ -7,7 +7,6 @@ f1.keywords:
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
 ms.collection: 
   - m365-security
@@ -76,14 +75,14 @@ The **terminate pod** response action functions regardless of the presence of a 
 
 ## Permissions
 
-To perform any of the response actions, users must have the following permissions for Microsoft Defender for Cloud in the Microsoft Defender XDR unified role-based access control:
+To perform any of the response actions, users must have the following permissions for Microsoft Defender for Cloud in the Microsoft Defender unified role-based access control:
 
 |Permission name|Level|
 |:---|:---:|
 |Alerts|Manage|
 |Response|Manage|
 
-For more information on these permissions, see [Permissions in Microsoft Defender XDR Unified role-based access control (RBAC)](custom-permissions-details.md).
+For more information on these permissions, see [Permissions in Microsoft Defender unified role-based access control (RBAC)](custom-permissions-details.md).
 
 ## Investigate container threats
 
@@ -136,7 +135,7 @@ The following section addresses issues that you might encounter when investigati
 
 If the isolate pod or restrict pod access action is grayed out, you need to verify that you have the necessary permissions to perform this action. Refer to the [Permissions](#permissions) section to check and validate that you have the correct permissions.
 
-See [Permissions in Microsoft Defender XDR Unified role-based access control (RBAC)](custom-permissions-details.md) for more information.
+See [Permissions in Microsoft Defender unified role-based access control (RBAC)](custom-permissions-details.md) for more information.
 
 ### The isolate pod or restrict pod access action failed
 

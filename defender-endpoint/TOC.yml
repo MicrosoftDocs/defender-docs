@@ -376,19 +376,20 @@
           - name: Configure library management for live response
             href: configure-libraries-live-response.md
 
-        - name: Permissions
+        - name: Permissions management
           items:
+          - name: Overview of permissions management
+            href: assign-portal-access.md
           - name: Use basic permissions to access the portal
             href: basic-permissions.md
-          - name: Assign user access to the portal
-            href: assign-portal-access.md
-            items:
-            - name: Create and manage roles
-              href: user-roles.md
-            - name: Create and manage device groups
-              href: machine-groups.md
-            - name: Create and manage device tags
-              href: machine-tags.md
+          - name: Manage portal access using role-based access control
+            href: rbac.md
+          - name: Create and manage roles
+            href: user-roles.md
+          - name: Create and manage device groups
+            href: machine-groups.md
+          - name: Create and manage device tags
+            href: machine-tags.md
         - name: Rules and exclusions
           items:
           - name: Exclusions overview
@@ -505,8 +506,6 @@
             href: linux-support-connectivity.md
           - name: Troubleshoot performance issues
             href: linux-support-perf.md
-          - name: Troubleshoot missing events issues
-            href: linux-support-events.md
 
         - name: Troubleshoot Mobile Threat Defense
           items:
@@ -609,7 +608,6 @@
     - name: Detect vulnerabilities
     - name: Detect vulnerabilities
       href: /defender-vulnerability-management
-    - name: Discover devices
     - name: Discover devices
       items:      
       - name: Overview
@@ -889,7 +887,7 @@
           href: use-powershell-cmdlets-microsoft-defender-antivirus.md
         - name: Use Windows Management Instrumentation (WMI) to manage Microsoft Defender Antivirus
           href: use-wmi-microsoft-defender-antivirus.md
-        - name: Use the mpcmdrun.exe tool to manage Microsoft Defender Antivirus
+        - name: Use the MpCmdRun command-line tool to manage Microsoft Defender Antivirus
           href: command-line-arguments-microsoft-defender-antivirus.md
         - name: Configure the notifications that appear on endpoints
           href: configure-notifications-microsoft-defender-antivirus.md

@@ -8,7 +8,6 @@ ms.author: chrisda
 ms.custom: nextgen
 audience: ITPro
 ms.reviewer: yongrhee, mimilone, julih
-manager: bagol
 ms.subservice: ngp
 ms.topic: how-to
 ms.collection: 
@@ -56,8 +55,8 @@ Potentially unwanted applications can increase the risk of your network being in
 - Windows 10
 - Windows 8.1
 - Azure Stack HCI OS, version 23H2 and later
-- For macOS, see [Detect and block potentially unwanted applications with Defender for Endpoint on macOS](/defender-endpoint/mac-pua).
-- For Linux, see [Detect and block potentially unwanted applications with Defender for Endpoint on Linux](/defender-endpoint/linux-pua).
+- For macOS, see [Detect and block potentially unwanted applications with Defender for Endpoint on macOS](mac-pua.md).
+- For Linux, see [Detect and block potentially unwanted applications with Defender for Endpoint on Linux](linux-pua.md).
 
 ## Microsoft Edge
 
@@ -208,7 +207,7 @@ For more information, see [Use PowerShell cmdlets to configure and run Microsoft
 
 ## Test and make sure that PUA blocking works
 
-Once you have PUA enabled in block mode, you can test to make sure that it's working properly.  For more information, see [Potentially unwanted applications (PUA) demonstration](/defender-endpoint/defender-endpoint-demonstration-potentially-unwanted-applications).
+Once you have PUA enabled in block mode, you can test to make sure that it's working properly.  For more information, see [Potentially unwanted applications (PUA) demonstration](defender-endpoint-demonstration-potentially-unwanted-applications.md).
 
 ## View PUA events using PowerShell
 
@@ -231,7 +230,7 @@ PSComputerName   :
 
 ## Get email notifications about PUA detections
 
-You can turn on email notifications to receive mail about PUA detections. For more information about Microsoft Defender Antivirus events, see [Troubleshoot event IDs](/defender-endpoint/troubleshoot-microsoft-defender-antivirus/). PUA events are recorded under event ID **1160**.
+You can turn on email notifications to receive mail about PUA detections. For more information about Microsoft Defender Antivirus events, see [Troubleshoot event IDs](troubleshoot-microsoft-defender-antivirus.yml). PUA events are recorded under event ID **1160**.
 
 ## View PUA events using advanced hunting
 

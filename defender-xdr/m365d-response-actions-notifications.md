@@ -6,8 +6,8 @@ f1.keywords:
   - NOCSH
 ms.author: guywild
 author: guywi-ms
+manager: orspodek
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
 ms.collection: 
   - m365-security
@@ -19,6 +19,8 @@ search.appverid:
 ms.date: 01/17/2025
 appliesto:
 - Microsoft Defender XDR
+
+#customer intent: As a security administrator, I want to set up email notifications for manual and automated response actions in Microsoft Defender XDR, so that I can stay informed about actions taken in my environment and respond accordingly.
 ---
 
 # Get email notifications for response actions
@@ -34,40 +36,52 @@ Manual response actions are actions that security teams can use to stop threats 
 Automated response actions are capabilities in Microsoft Defender XDR that scale investigation and resolution to threats automatically. Automated remediation capabilities consist of [automatic attack disruption](automatic-attack-disruption.md) and [automated investigation and response](m365d-autoir.md).
 
 > [!NOTE]
-> You need the **Manage security settings** permission to configure email notification settings. If you've chosen to use basic permissions management, users with Security Administrator or Global Administrator roles can configure email notifications. Likewise, if your organization is using [role-based access control (RBAC)](manage-rbac.md), you can only create, edit, delete, and receive notifications based on device groups that you are allowed to manage.
-
-> [!NOTE]
-> Microsoft recommends using roles with fewer permissions for better security. The Global Administrator role, which has many permissions, should only be used in emergencies when no other role fits.
+> You need the **Manage security settings** permission to configure email notification settings. If you use basic permissions management, users with Security Administrator or higher roles can configure email notifications. Likewise, if your organization is using [role-based access control (RBAC)](manage-rbac.md), you can only create, edit, delete, and receive notifications based on device groups that you're allowed to manage.
 
 ## Create a rule for email notifications
 
 > [!NOTE]
-> The response action email notification currently does not support custom detections containing response actions.
+> The response action email notification currently doesn't support custom detections containing response actions.
 
 To create a rule for email notifications, perform the following steps:
 
-1. In the navigation pane of the Microsoft Defender portal, select **Settings > Microsoft Defender XDR**.  Under **General**, select **Email notifications**. Go to the **Actions** tab.
-:::image type="content" source="media/m365d-response-actions-notifications/fig1-response-notifications.png" alt-text="Actions tab in the Microsoft Defender XDR Settings page" lightbox="media/m365d-response-actions-notifications/fig1-response-notifications.png":::
-2. Select **Add notification rule**. Add a rule name and description under Basics. Both Name and Description fields accept letters, numbers, and spaces only.
-:::image type="content" source="media/m365d-response-actions-notifications/fig2-response-notifications.png" alt-text="Basics section of the add notification rule" lightbox="media/m365d-response-actions-notifications/fig2-response-notifications.png":::
-3. Proceed to the next section by selecting Next located at the bottom of the pane.
-4. You can choose what type of action, what status, and where the action will be sourced from in the **Notification settings** section.
-:::image type="content" source="media/m365d-response-actions-notifications/fig3-response-notifications.png" alt-text="Notifications settings section of the add notification rule" lightbox="media/m365d-response-actions-notifications/fig3-response-notifications.png":::
-5. Under **Action source**, select if you want to be notified for manual or automated response actions. You can select both options.
-6. Select the specific response actions in the checklist that appears under **Action**. You can choose multiple actions available in the checklist. Note that response actions will vary depending on the Defender workload enabled in your environment. All actions selected appears in the Action field upon completion.
-:::image type="content" source="media/m365d-response-actions-notifications/fig4-response-notifications.png" alt-text="Highlighting the Actions field in the Notification settings section of the add notification rule" lightbox="media/m365d-response-actions-notifications/fig4-response-notifications.png":::
-7. You can choose to be notified based on the device groups where the response actions are applied in the **Device groups scope**. To be notified of response actions taken in all current and future device groups, selecting **All device** groups. To be notified of response actions taken in devices that belong to your selected device group, choose **Selected device groups**.
-:::image type="content" source="media/m365d-response-actions-notifications/fig5-response-notifications.png" alt-text="Highlighting the Device groups scope in the Notification settings section of the add notification rule" lightbox="media/m365d-response-actions-notifications/fig5-response-notifications.png":::
-8. Select if you want to be notified if an action is completed or failed in the **Action status** field. You can select all options available.
-9. At the bottom of the pane, you can proceed to the next section by selecting **Next**. Alternately, you can go back to the Basics section by selecting Back.
-10. In the **Recipients** section, you can add one or more email addresses that will receive notifications. Separate multiple addresses by adding a comma at the end of each address. Select **Add** to add the recipients. You can see the recipients at the bottom of the pane after successfully adding addresses.
-:::image type="content" source="media/m365d-response-actions-notifications/fig6-response-notifications.png" alt-text="Adding multiple addresses in the Recipients section of the add notification rule" lightbox="media/m365d-response-actions-notifications/fig6-response-notifications.png":::
-11. Test the notification by selecting **Send test email**. Select Next located on the bottom of the pane to proceed to the review section.
-12. Check the rule's details in the **Review rule** section. You can edit the details by selecting **Edit** under each section's details.
-:::image type="content" source="media/m365d-response-actions-notifications/fig7-response-notifications.png" alt-text="Highlighting the Edit option while in the Review rule section" lightbox="media/m365d-response-actions-notifications/fig7-response-notifications.png":::
-13. Select **Submit** at the bottom of the pane to finish the rule creation. Recipients will start receiving notifications through email based on the settings. The new rule appears in the Notifications rule list under the Actions tab.
-14. To edit or delete a notification rule, select the rule from the list. Select **Edit** to change the rule's details. Select **Delete** to remove the rule.
-:::image type="content" source="media/m365d-response-actions-notifications/fig8-response-notifications.png" alt-text="Highlighting the Edit and Delete options while in the rule list view" lightbox="media/m365d-response-actions-notifications/fig8-response-notifications.png":::
+1. In the navigation pane of the Microsoft Defender portal, select **Settings > Microsoft Defender XDR**. Under **General**, select **Email notifications**. Go to the **Actions** tab.
+
+    :::image type="content" source="media/m365d-response-actions-notifications/fig1-response-notifications.png" alt-text="Actions tab in the Microsoft Defender XDR Settings page" lightbox="media/m365d-response-actions-notifications/fig1-response-notifications.png":::
+
+1. Select **Add notification rule**. Add a rule name and description under Basics. Both Name and Description fields accept letters, numbers, and spaces only.
+
+    :::image type="content" source="media/m365d-response-actions-notifications/fig2-response-notifications.png" alt-text="Basics section of the add notification rule" lightbox="media/m365d-response-actions-notifications/fig2-response-notifications.png":::
+
+1. Proceed to the next section by selecting Next located at the bottom of the pane.
+1. You can choose what type of action, what status, and where the action is sourced from in the **Notification settings** section.
+
+    :::image type="content" source="media/m365d-response-actions-notifications/fig3-response-notifications.png" alt-text="Notifications settings section of the add notification rule" lightbox="media/m365d-response-actions-notifications/fig3-response-notifications.png":::
+
+1. Under **Action source**, select if you want to be notified for manual or automated response actions. You can select both options.
+1. Select the specific response actions in the checklist that appears under **Action**. You can choose multiple actions available in the checklist. Response actions vary depending on the Defender workload enabled in your environment. All actions selected appear in the Action field upon completion.
+
+    :::image type="content" source="media/m365d-response-actions-notifications/fig4-response-notifications.png" alt-text="Highlighting the Actions field in the Notification settings section of the add notification rule" lightbox="media/m365d-response-actions-notifications/fig4-response-notifications.png":::
+
+1. You can choose to be notified based on the device groups where the response actions are applied in the **Device groups scope**. To be notified of response actions taken in all current and future device groups, selecting **All device** groups. To be notified of response actions taken in devices that belong to your selected device group, choose **Selected device groups**.
+
+    :::image type="content" source="media/m365d-response-actions-notifications/fig5-response-notifications.png" alt-text="Highlighting the Device groups scope in the Notification settings section of the add notification rule" lightbox="media/m365d-response-actions-notifications/fig5-response-notifications.png":::
+
+1. Select if you want to be notified if an action is completed or failed in the **Action status** field. You can select all options available.
+1. At the bottom of the pane, you can proceed to the next section by selecting **Next**. Alternately, you can go back to the Basics section by selecting Back.
+1. In the **Recipients** section, you can add one or more email addresses to receive notifications. Separate multiple addresses by adding a comma at the end of each address. Select **Add** to add the recipients. You can see the recipients at the bottom of the pane after successfully adding addresses.
+
+    :::image type="content" source="media/m365d-response-actions-notifications/fig6-response-notifications.png" alt-text="Adding multiple addresses in the Recipients section of the add notification rule" lightbox="media/m365d-response-actions-notifications/fig6-response-notifications.png":::
+
+1. Test the notification by selecting **Send test email**. Select Next located on the bottom of the pane to proceed to the review section.
+1. Check the rule's details in the **Review rule** section. You can edit the details by selecting **Edit** under each section's details.
+
+    :::image type="content" source="media/m365d-response-actions-notifications/fig7-response-notifications.png" alt-text="Highlighting the Edit option while in the Review rule section" lightbox="media/m365d-response-actions-notifications/fig7-response-notifications.png":::
+
+1. Select **Submit** at the bottom of the pane to finish the rule creation. Recipients start receiving notifications through email based on the settings. The new rule appears in the Notifications rule list under the Actions tab.
+1. To edit or delete a notification rule, select the rule from the list. Select **Edit** to change the rule's details. Select **Delete** to remove the rule.
+
+    :::image type="content" source="media/m365d-response-actions-notifications/fig8-response-notifications.png" alt-text="Highlighting the Edit and Delete options while in the rule list view" lightbox="media/m365d-response-actions-notifications/fig8-response-notifications.png":::
 
 Once you get the notification, you can go directly to the action and review or remediate the action.
 

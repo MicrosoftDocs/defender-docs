@@ -3,7 +3,6 @@ title: Enable your attack surface reduction rules in Microsoft Defender for Busi
 description: Get an overview of attack surface reduction capabilities, including attack surface reduction rules, in Microsoft Defender for Business
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.date: 07/23/2024
 ms.topic: how-to
 ms.service: defender-business

@@ -6,7 +6,6 @@ ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
 ms.reviewer: yongrhee
 audience: ITPro
 ms.collection:

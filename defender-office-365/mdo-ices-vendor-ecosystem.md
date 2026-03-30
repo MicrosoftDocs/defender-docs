@@ -3,7 +3,6 @@ title: Defender for Office 365 ICES Vendor Ecosystem Integration Guide
 description: Understand how the ICES Vendor Ecosystem enables Microsoft Defender for Office 365 to integrate with trusted non-Microsoft email security vendors.
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.reviewer: aylamckorkle
 f1.keywords:
   - NOCSH

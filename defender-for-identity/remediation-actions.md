@@ -12,9 +12,24 @@ Applies to:
 - Microsoft Defender for Identity
 - Microsoft Defender XDR
 
-Microsoft Defender for Identity enables security remediation actions to reduce risk and contain suspicious activity from the Microsoft Defender portal. These actions let you manage identity state and access, such as disabling or enabling accounts, ending active sessions, and marking identities as compromised.
+Microsoft Defender for Identity allows you to respond to compromised users by disabling their accounts or resetting their password. After taking action on users, you can check on the activity details in the action center.
 
-You can perform remediation actions from the **Identity** page, the **Advanced hunting** page, or the Action center.
+The response actions on users are available directly from the user page, the user side panel, the advanced hunting page, or in the action center.
+
+Watch the following video to learn more about remediation actions in Defender for Identity:
+
+<br>
+
+> [!VIDEO https://www.youtube.com/embed/tpTJiJCgdck?si=prONSe2wj_KZBcKl]
+
+
+## Prerequisites
+
+To perform any of the [supported actions](#supported-actions), you need to:
+
+- Configure the account that Microsoft Defender for Identity will use to perform them. By default, the Microsoft Defender for Identity sensor installed on a domain controller will impersonate the *LocalSystem* account of the domain controller and perform the above actions. However, you can change this default behavior by [setting up a gMSA account](manage-action-accounts.md) and scope the permissions as you need.
+
+- Be signed into Microsoft Defender XDR to with relevant permissions. For Defender for Identity actions, you'll need a custom role with **Response (manage)** permissions. For more information, see [Create custom roles with Microsoft Defender unified RBAC](/microsoft-365/security/defender/create-custom-rbac-roles).
 
 ## Supported actions
 
