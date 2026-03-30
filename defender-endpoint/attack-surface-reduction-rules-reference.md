@@ -8,7 +8,6 @@ audience: ITPro
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: sugamar, ericlaw
-manager: bagol
 ms.custom: asr
 ms.topic: reference
 ms.collection: 
@@ -508,14 +507,14 @@ Known issues: These applications and "Block Office applications from injecting c
 
 |Application name|For information|
 |---|---|
-|Avecto (BeyondTrust) Privilege Guard|[September-2024 (Platform: 4.18.24090.11 \|Engine 1.1.24090.11)](/defender-endpoint/microsoft-defender-antivirus-updates).|
+|Avecto (BeyondTrust) Privilege Guard|[September-2024 (Platform: 4.18.24090.11 \|Engine 1.1.24090.11)](microsoft-defender-antivirus-updates.md).|
 |Heimdal security|n/a|
 
 For technical support, contact the software publisher.
 
 ### Block Office communication application from creating child processes
 
-This rule prevents Outlook from creating child processes, while still allowing legitimate Outlook functions. This rule protects against social engineering attacks and prevents exploiting code from abusing vulnerabilities in Outlook. It also protects against [Outlook rules and forms exploits](https://blogs.technet.microsoft.com/office365security/defending-against-rules-and-forms-injection/) that attackers can use when a user's credentials are compromised.
+This rule prevents Outlook from creating child processes, while still allowing legitimate Outlook functions. This rule protects against social engineering attacks and prevents exploiting code from abusing vulnerabilities in Outlook. It also protects against [Outlook rules and forms exploits](/archive/blogs/office365security/defending-against-rules-and-forms-injection) that attackers can use when a user's credentials are compromised.
 
 Intune name: `Process creation from Office communication products (beta)`
 
@@ -700,4 +699,4 @@ Dependencies: Microsoft Defender Antivirus, Cloud Protection
 - [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 
-- [Troubleshoot attack surface reduction rules](/defender-endpoint/troubleshoot-asr)
+- [Troubleshoot attack surface reduction rules](troubleshoot-asr.md)

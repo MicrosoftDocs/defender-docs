@@ -11,7 +11,6 @@ ms.custom:
 - nextgen
 - admindeeplinkDEFENDER
 ms.reviewer: yonghree 
-manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security

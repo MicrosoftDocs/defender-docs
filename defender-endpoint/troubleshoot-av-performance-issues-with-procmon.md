@@ -4,7 +4,6 @@ description: Troubleshoot Microsoft Defender Antivirus performance issues with P
 author: chrisda
 ms.author: chrisda
 ms.reviewer: yonghree
-manager: bagol
 ms.service: defender-endpoint
 ms.topic: troubleshooting-general
 ms.date: 03/20/2025
@@ -22,10 +21,10 @@ ai-usage: human-only
 # Troubleshoot Microsoft Defender Antivirus performance issues with Process Monitor
 
 > [!TIP]
-> First, review common reasons for performance issues, such as high CPU usage. See **[Troubleshoot performance issues related to Microsoft Defender Antivirus real-time protection (rtp) or scans (scheduled or on-demand](/defender-endpoint/troubleshoot-performance-issues)**.
-> Then, run the [Microsoft Defender Antivirus Performance Analyzer](/defender-endpoint/tune-performance-defender-antivirus). This tool will help identify the cause of high CPU usage in Microsoft Defender Antivirus, whether it's the Antimalware Service Executable, the Microsoft Defender Antivirus service, or MsMpEng.exe.
-> If the Microsoft Defender Antivirus Performance Analyzer doesn't identify the root cause of the high CPU utilization, proceed with running **[Processor Monitor](/defender-endpoint/troubleshoot-av-performance-issues-with-procmon)**.
-> The final tool in your toolkit to run is [Windows Performance Recorder UI (WPRUI) or Windows Performance Recorded (WPR command-line)](/defender-endpoint/troubleshoot-av-performance-issues-with-wprui).
+> First, review common reasons for performance issues, such as high CPU usage. See **[Troubleshoot performance issues related to Microsoft Defender Antivirus real-time protection (rtp) or scans (scheduled or on-demand](troubleshoot-performance-issues.md)**.
+> Then, run the [Microsoft Defender Antivirus Performance Analyzer](tune-performance-defender-antivirus.md). This tool will help identify the cause of high CPU usage in Microsoft Defender Antivirus, whether it's the Antimalware Service Executable, the Microsoft Defender Antivirus service, or MsMpEng.exe.
+> If the Microsoft Defender Antivirus Performance Analyzer doesn't identify the root cause of the high CPU utilization, proceed with running **[Processor Monitor](troubleshoot-av-performance-issues-with-procmon.md)**.
+> The final tool in your toolkit to run is [Windows Performance Recorder UI (WPRUI) or Windows Performance Recorded (WPR command-line)](troubleshoot-av-performance-issues-with-wprui.md).
 
 ## Capture process logs using Process Monitor
 
@@ -35,9 +34,9 @@ You can capture a Process Monitor (ProcMon) trace by using the MDE Client Analyz
 
 ### Using the MDE Client Analyzer
 
-1. Download the [MDE Client Analyzer](/defender-endpoint/overview-client-analyzer).
+1. Download the [MDE Client Analyzer](overview-client-analyzer.md).
 
-1. Run the MDE Client Analyzer using [Live Response or locally](/defender-endpoint/run-analyzer-windows).
+1. Run the MDE Client Analyzer using [Live Response or locally](run-analyzer-windows.md).
 
    > [!TIP]
    > Before starting the trace, please make sure that the issue is reproducible. Additionally, close any applications that do not contribute to the reproduction of the issue.

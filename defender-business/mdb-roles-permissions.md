@@ -4,7 +4,6 @@ description: Assign roles to your cybersecurity team. Learn about these roles an
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: bagol
 audience: Admin
 ms.topic: how-to
 ms.service: defender-business

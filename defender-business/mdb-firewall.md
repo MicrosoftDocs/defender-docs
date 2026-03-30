@@ -4,7 +4,6 @@ description: Learn about Windows Firewall settings in Defender for Business. Fir
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: bagol
 audience: Admin
 ms.topic: overview
 ms.service: defender-business
