@@ -12,6 +12,7 @@ metadata:
   ms.collection: usx-security # Optional; Remove if no collection is used.
   ms.author: guywild
   author: guywi-ms
+  manager: orspodek
   ms.date: 12/03/2024 #Required; mm/dd/yyyy format.
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | tutorial | overview | quickstart | reference | sample | tutorial | video | whats-new

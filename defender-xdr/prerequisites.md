@@ -61,7 +61,7 @@ For more information, [view the Microsoft 365 Enterprise service plans](https://
 Go to Microsoft 365 admin center ([admin.microsoft.com](https://admin.microsoft.com/)) to view your existing licenses. In the admin center, go to **Billing** \> **Licenses**.
 
 > [!NOTE]
-> You need to be assigned either the **Billing admin** or **Global reader** [role in Microsoft Entra ID](/azure/active-directory/roles/permissions-reference) to be able to see license information. If you encounter access problems, contact a Global Administrator.
+> You need to be assigned either the **Billing admin** or higher [role in Microsoft Entra ID](/azure/active-directory/roles/permissions-reference) to be able to see license information. If you encounter access problems, contact a Global Administrator.
 
 ## Required permissions
 
