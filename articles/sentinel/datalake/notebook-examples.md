@@ -1,29 +1,28 @@
 ---  
-title: Notebook examples for querying the Microsoft Sentinel data lake (preview)
+title: Notebook examples for querying the Microsoft Sentinel data lake
 titleSuffix: Microsoft Security  
 description: This article provides sample code snippets for querying the Microsoft Sentinel data lake using Jupyter notebooks, demonstrating how to access and analyze security data.
 author: EdB-MSFT  
 ms.topic: how-to  
-ms.date: 07/09/2025
+ms.date: 08/27/2025
 ms.author: edbaynash  
 ms.service: microsoft-sentinel
-ms.subservice: sentinel-graph
-
+ms.subservice: sentinel-platform
 
 # Customer intent: As a security engineer or data scientist, I want to see examples of how to query the Microsoft Sentinel data lake using Jupyter notebooks, so I can analyze security data effectively.
 ---
  
 # Jupyter notebook code examples  
  
-This article presents some sample code snippets that demonstrate how to interact with Microsoft Sentinel lake data (preview) using Jupyter notebooks to analyze security data in the Microsoft Sentinel data lake. These examples illustrate how to access and analyze data from various tables, such as Microsoft Entra ID sign-in logs, group information, and device network events. The code snippets are designed to run in Jupyter notebooks within Visual Studio Code using the Microsoft Sentinel extension.
+This article presents some sample code snippets that demonstrate how to interact with Microsoft Sentinel lake data using Jupyter notebooks to analyze security data in the Microsoft Sentinel data lake. These examples illustrate how to access and analyze data from various tables, such as Microsoft Entra ID sign-in logs, group information, and device network events. The code snippets are designed to run in Jupyter notebooks within Visual Studio Code using the Microsoft Sentinel extension.
 
-To run these examples, must have the required permissions and Visual Studio Code installed with the Microsoft Sentinel extension. For more information, see [Microsoft Sentinel data lake permissions](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake-preview) and  [Use Jupyter notebooks with Microsoft Sentinel data lake](./notebooks.md).
+To run these examples, must have the required permissions and Visual Studio Code installed with the Microsoft Sentinel extension. For more information, see [Microsoft Sentinel data lake permissions](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake) and  [Use Jupyter notebooks with Microsoft Sentinel data lake](./notebooks.md).
 
 ## Failed sign-in attempts analysis
 
 This example identifies users with failed sign-in attempts. To do so, this notebook example processes sign-in data from two tables: 
- + microsoft.entra.id.SignInLogs 
- + microsoft.entra.id.AADNonInteractiveUserSignInLogs
+ + SigninLogs 
+ + AADNonInteractiveUserSignInLogs
 
 The notebook performs the following steps:
 1. Create a function to process data from the specified tables, which includes:
@@ -32,7 +31,7 @@ The notebook performs the following steps:
     1. Aggregate the data to count the number of failed and successful sign-in attempts for each user.
     1. Filter the data to include only users with more than 100 failed sign-in attempts and at least one successful sign-in attempt.
     1. Order the results by the number of failed sign-in attempts.
-1. Call the function for both `SignInLogs` and `AADNonInteractiveUserSignInLogs` tables.
+1. Call the function for both `SigninLogs` and `AADNonInteractiveUserSignInLogs` tables.
 1. Combine the results from both tables into a single DataFrame.
 1. Convert the DataFrame to a Pandas DataFrame.
 1. Filter the Pandas DataFrame to show the top 20 users with the highest number of failed sign-in attempts.
@@ -81,7 +80,7 @@ def process_data(table_name,workspace_name):
 
 # Process the tables to a common schema
 workspace_name = "your-workspace-name"  # Replace with your actual workspace name
-aad_signin = process_data("SignInLogs", workspace_name)
+aad_signin = process_data("SigninLogs", workspace_name)
 aad_non_int = process_data("AADNonInteractiveUserSignInLogs", workspace_name)
 
 # Union the DataFrames
@@ -131,13 +130,13 @@ The following screenshot shows a sample of the output of the code above, display
 
 ## Access Microsoft Entra ID sign-in logs for a specific user  
 
-The following code sample demonstrates how to access the Microsoft Entra ID `SignInLogs` table and filter the results for a specific user. It retrieves various fields such as UserDisplayName, UserPrincipalName, UserId, and more.
+The following code sample demonstrates how to access the Microsoft Entra ID `SigninLogs` table and filter the results for a specific user. It retrieves various fields such as UserDisplayName, UserPrincipalName, UserId, and more.
 
 ```python  
 from sentinel_lake.providers import MicrosoftSentinelProvider
 data_provider = MicrosoftSentinelProvider(spark)
  
-table_name = "SignInLogs"  
+table_name = "SigninLogs"  
 workspace_name = "your-workspace-name"  # Replace with your actual workspace name
 df = data_provider.read_table(table_name, workspace_name)  
 df.select("UserDisplayName", "UserPrincipalName", "UserId", "CorrelationId", "UserType", 
@@ -149,7 +148,7 @@ df.select("UserDisplayName", "UserPrincipalName", "UserId", "CorrelationId", "Us
 
 ## Examine sign-in locations  
 
-The following code sample demonstrates how to extract and display sign-in locations from the Microsoft Entra ID SignInLogs table. It uses the `from_json` function to parse the JSON structure of the `LocationDetails` field, allowing you to access specific location attributes such as city, state, and country or region.
+The following code sample demonstrates how to extract and display sign-in locations from the Microsoft Entra ID SigninLogs table. It uses the `from_json` function to parse the JSON structure of the `LocationDetails` field, allowing you to access specific location attributes such as city, state, and country or region.
 
 ```python  
 from sentinel_lake.providers import MicrosoftSentinelProvider
@@ -158,7 +157,7 @@ from pyspark.sql.types import StructType, StructField, StringType
  
 data_provider = MicrosoftSentinelProvider(spark)  
 workspace_name = "your-workspace-name"  # Replace with your actual workspace name
-table_name = "SignInLogs"  
+table_name = "SigninLogs"  
 df = data_provider.read_table(table_name, workspace_name)  
  
 location_schema = StructType([  
@@ -240,7 +239,7 @@ def process_data(table_name, workspace_name):
            .withColumn("IPCustomEntity", col("IPAddress"))
     return df
 workspace_name = "your-workspace-name"  # Replace with your actual workspace name
-aad_signin = process_data("SignInLogs", workspace_name)
+aad_signin = process_data("SigninLogs", workspace_name)
 aad_non_int = process_data("AADNonInteractiveUserSignInLogs",workspace_name)
 result_df = aad_signin.unionByName(aad_non_int)
 result_df.show()
@@ -452,10 +451,10 @@ plt.show()
 
 ## Related content
 
-+ [Microsoft Sentinel Provider class reference (preview)](./sentinel-provider-class-reference.md)
-+ [Microsoft Sentinel data lake overview (preview)](./sentinel-lake-overview.md)
-+ [Microsoft Sentinel data lake permissions (preview)](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake-preview)
-+ [Explore the Microsoft Sentinel data lake using Jupyter notebooks (preview)](./notebooks.md)
-+ [Jupyter notebooks and the Microsoft Sentinel data lake (preview)](./notebooks-overview.md)
++ [Microsoft Sentinel Provider class reference](./sentinel-provider-class-reference.md)
++ [Microsoft Sentinel data lake overview](./sentinel-lake-overview.md)
++ [Microsoft Sentinel data lake permissions](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake)
++ [Explore the Microsoft Sentinel data lake using Jupyter notebooks](./notebooks.md)
++ [Jupyter notebooks and the Microsoft Sentinel data lake](./notebooks-overview.md)
 
 

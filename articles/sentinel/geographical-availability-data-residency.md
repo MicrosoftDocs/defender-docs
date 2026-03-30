@@ -3,7 +3,7 @@ title: Geographical availability and data residency in Microsoft Sentinel
 description: In this article, you learn about geographical availability and data residency in Microsoft Sentinel.
 author: batamig
 ms.author: bagol
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 08/29/2024
 ms.custom: references_regions
 
@@ -17,6 +17,8 @@ ms.custom: references_regions
 After your data is collected, stored, and processed, compliance can become an important design requirement, with a significant impact on your Microsoft Sentinel architecture. Having the ability to validate and prove who has access to what data under all conditions is a critical data sovereignty requirement in many countries and regions, and assessing risks and getting insights in Microsoft Sentinel workflows is a priority for many customers.
 
 This article can help you meet compliance requirements by describing where Microsoft Sentinel data is stored.
+
+[!INCLUDE [azure-21vianet-retirement](includes/azure-21vianet-retirement.md)]
 
 ## Collected data
 
@@ -37,52 +39,35 @@ Data used by the service, including customer data, might be stored and processed
  
 ### Supported regions
 
-Regions supported for Microsoft Sentinel raw data, and for processed and configuration data in workspaces not onboarded to the Defender portal, include:
+The following table shows the supported regions supporting Microsoft Sentinel SIEM and data lake.
 
-|Continent | Country/Region | Azure Region |
-|---------|---------|---------|
-| **North America**| **Canada** | • Canada Central<br>• Canada East |
-| |   **United States** | • Central US<br>• East US<br>• East US 2<br>• East US 2 EUAP<br>• North Central US<br>• South Central US<br>• West US<br>• West US 2<br>• West US 3<br>• West Central US<br><br>**Azure government** <br>• USGov Arizona<br>• USGov Virginia<br>• USNat East<br>• USNat West<br>• USSec East<br>• USSec West|
+| Continent | Country/Region | SIEM supported region | Data lake supported region |
+|---------|---------|---------|---------|
+| **North America**| **Canada** | • Canada Central<br>• Canada East | • Canada Central |
+| |   **United States** | • Central US<br>• East US<br>• East US 2<br>• East US 2 EUAP<br>• North Central US<br>• South Central US<br>• West US<br>• West US 2<br>• West US 3<br>• West Central US<br><br>**Azure government** <br>• USGov Arizona<br>• USGov Virginia<br>• USNat East<br>• USNat West<br>• USSec East<br>• USSec West| • Central US<br>• East US<br>• East US 2<br>• South Central US<br>• West US 2 |
 |**South America** | **Brazil** | • Brazil South<br>• Brazil Southeast |
-|**Asia and Middle East** | |• East Asia<br>• Southeast Asia |
+|**Asia and Middle East** | |• East Asia<br>• Southeast Asia | • Southeast Asia |
 | | **China 21Vianet**| • China East 2<br>• China North 3|
-| | **India**| • Central India<br>• Jio India West<br>• Jio India Central|
-| | **Israel** | • Israel Central |
-| | **Japan** | • Japan East<br>• Japan West|
+| | **India**| • Central India<br>• Jio India West<br>• Jio India Central| • Central India |
+| | **Israel** | • Israel Central | • Israel Central |
+| | **Japan** | • Japan East<br>• Japan West| • Japan East |
 | | **Korea**| • Korea Central<br>• Korea South| 
 | | **Qatar** | • Qatar Central|
 | | **UAE**| • UAE Central<br>• UAE North        |
-|**Europe**| | • North Europe<br>• West Europe|
-| |**France**| • France Central<br>• France South|
+|**Europe**| | • North Europe<br>• West Europe| • North Europe<br>• West Europe |
+| |**France**| • France Central<br>• France South| • France Central |
 | |**Germany**| • Germany West Central|
-| | **Italy** |• Italy North|
+| | **Italy** |• Italy North|• Italy North|
 | | **Norway**|• Norway East<br>• Norway West|
 | |**Sweden**| • Sweden Central | 
-| | **Switzerland**| • Switzerland North<br>• Switzerland West| 
-| | **UK**| • UK South<br>• UK West |
-|**Australia** | **Australia**| • Australia Central<br>Australia Central 2<br>• Australia East<br>• Australia Southeast	|
+| | **Switzerland**| • Switzerland North<br>• Switzerland West| • Switzerland North |
+| | **UK**| • UK South<br>• UK West | • UK South |
+|**Australia** | **Australia**| • Australia Central<br>Australia Central 2<br>• Australia East<br>• Australia Southeast	|  • Australia East |
 |**Africa** | **South Africa**| • South Africa North |
 
-### Regions supported for Microsoft Sentinel data lake
 
-> [!NOTE]
-> The Microsoft Sentinel data lake is currently in preview. During this time onboarding may be temporarily unavailable in some regions. When onboarding is available in your region, a onboarding banner appears on the Microsoft Defender portal home page to guide you through the process.
-
-
-| Continent              | Country/Region   | Azure Region                          |
-|------------------------|------------------|---------------------------------------|
-| North America          | Canada           | Canada Central                        |
-| North America          | United States    | Central US<br>East US<br>East US 2<br>South Central US<br>West US2 |
-| Asia and Middle East   |       -          | Southeast Asia                        |
-|  Asia and Middle East  | India            | Central India                         |
-|  Asia and Middle East  | Israel           | Israel Central                        |
-|  Asia and Middle East  | Japan            | Japan East                            |
-| Europe                 |                  | North Europe<br>West Europe           |
-| Europe                 | France           | France Central                        |
-|  Europe                | Switzerland      | Switzerland North                     |
-|  Europe                | UK               | UK South                              |
-| Australia              | Australia        | Australia East                       |
-
+> [!IMPORTANT]
+> Microsoft Sentinel data lake must be deployed in the same Azure region as the associated primary Sentinel workspace.
 
 ## Data retention
 

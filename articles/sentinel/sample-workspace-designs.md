@@ -1,9 +1,9 @@
 ---
 title: Sample Microsoft Sentinel workspace designs
 description: Learn from samples of Microsoft Sentinel architecture designs with multiple tenants, clouds or regions.
-author: cwatson-cat
-ms.author: cwatson
-ms.topic: conceptual
+author: EdB-MSFT
+ms.author: edbaynash
+ms.topic: best-practice
 ms.date: 08/27/2024
 
 #Customer intent: As a security architect, I want to design an optimal workspace architecture for multi-tenant and multi-region environments so that I can ensure compliance, cost efficiency, and effective data segregation.

@@ -8,6 +8,7 @@ ms.author: monaberdugo
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
+ms.custom: sfi-image-nochange
 
 #Customer intent: As a security analyst, I want to use the MITRE ATT&CK framework in Microsoft Sentinel so that I can assess and enhance my organization's threat detection and response capabilities.
 
@@ -36,7 +37,7 @@ Before you can view the MITRE coverage for your organization in Microsoft Sentin
 
 ## MITRE ATT&CK framework version
 
-Microsoft Sentinel is currently aligned to The MITRE ATT&CK framework, version 16.
+Microsoft Sentinel is currently aligned to The MITRE ATT&CK framework, version 18.
 
 ##  View current MITRE coverage
 

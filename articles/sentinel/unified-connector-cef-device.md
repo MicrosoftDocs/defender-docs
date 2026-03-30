@@ -1,8 +1,8 @@
 ---
 title: CEF via AMA connector - Configure appliances and devices
 description: Learn how to configure specific devices that use the Common Event Format (CEF) via AMA data connector for Microsoft Sentinel.
-author: cwatson-cat
-ms.author: cwatson
+author: EdB-MSFT
+ms.author: edbaynash
 ms.topic: reference
 ms.custom: linux-related-content
 ms.date: 06/27/2024
@@ -412,8 +412,6 @@ Set your TippingPoint SMS to send syslog messages in ArcSight CEF Format v4.2 fo
 ## vArmour Application Controller
 
 Send syslog messages in CEF format to the proxy machine. Make sure you to send the logs to port 514 TCP on the machine's IP address.
-
-Download the user guide from https://support.varmour.com/hc/en-us/articles/360057444831-vArmour-Application-Controller-6-0-User-Guide. In the user guide, refer to "Configuring Syslog for Monitoring and Violations" and follow steps 1 to 3.
 
 ## Vectra AI Detect
 

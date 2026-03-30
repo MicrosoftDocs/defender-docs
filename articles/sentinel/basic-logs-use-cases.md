@@ -3,7 +3,7 @@ title: When to use the Microsoft Sentinel data lake
 description: Learn what log sources might be appropriate for the Microsoft Sentinel data lake and what attributes to look for, to decide about other sources.
 author: EdB-MSFT
 ms.author: edbaynash
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 07/15/2025
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
@@ -19,8 +19,6 @@ ms.collection: usx-security
 This article highlights log sources to consider configuring as data lake tier only when enabling a connector. Before choosing a tier for which to configure a given table, check which tier is most appropriate for your use case. For more information about data categories and data tiers, see [Log retention plans in Microsoft Sentinel](log-plans.md).
 
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
-
-[!INCLUDE [sentinel-lake-preview](includes/sentinel-lake-preview.md)]
 
 ## Storage access logs for cloud providers
 
@@ -66,8 +64,8 @@ A new and growing source of log data is Internet of Things (IoT)-connected devic
 
 ## Next steps
 
-- [What is the Microsoft Sentinel data lake? (preview)](datalake/sentinel-lake-overview.md)
-- [Manage data tiers and retention in Microsoft Defender Portal (preview)](manage-data-overview.md)
-- [KQL and the Microsoft Sentinel data lake (preview)](datalake/kql-overview.md)
-- [Jupyter notebooks in the Microsoft Sentinel data lake (preview)](datalake/notebooks-overview.md)
+- [What is the Microsoft Sentinel data lake?](datalake/sentinel-lake-overview.md)
+- [Manage data tiers and retention in Microsoft Defender Portal](manage-data-overview.md)
+- [KQL and the Microsoft Sentinel data lake](datalake/kql-overview.md)
+- [Jupyter notebooks in the Microsoft Sentinel data lake](datalake/notebooks-overview.md)
 

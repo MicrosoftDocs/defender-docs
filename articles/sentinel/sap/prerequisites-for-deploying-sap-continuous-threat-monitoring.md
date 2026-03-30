@@ -1,10 +1,10 @@
 ---
 title: Prerequisites for deploying Microsoft Sentinel solution for SAP applications
 description: This article lists the prerequisites required for deployment of the Microsoft Sentinel solution for SAP applications.
-author: batamig
-ms.author: bagol
+author: mberdugo
+ms.author: monaberdugo
 ms.topic: reference
-ms.date: 11/05/2024
+ms.date: 09/30/2025
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
@@ -23,6 +23,9 @@ Reviewing and ensuring that you have or understand all the prerequisites is the 
 
 :::zone pivot="connection-agent"
 
+
+[!INCLUDE [data-connector-agent-deprecation](../includes/data-connector-agent-deprecation.md)]
+
 :::image type="content" source="media/deployment-steps/prerequisites.png" alt-text="Diagram of the steps included in deploying the Microsoft Sentinel solution for SAP applications, with the prerequisites step highlighted." border="false":::
 
 Content in this article is relevant for your **security**, **infrastructure**, and **SAP BASIS** teams.
@@ -34,9 +37,6 @@ Content in this article is relevant for your **security**, **infrastructure**, a
 :::image type="content" source="media/deployment-steps/prerequisites-agentless.png" alt-text="Diagram of the steps included in deploying the Microsoft Sentinel solution for SAP applications, with the prerequisites step highlighted." border="false":::
 
 Content in this article is relevant for your **security** and **SAP BASIS** teams.
-
-> [!IMPORTANT]
-> Microsoft Sentinel's agentless data connector for SAP is currently in **LIMITED PREVIEW**. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 :::zone-end
 
@@ -73,7 +73,7 @@ We recommend that your **SAP BASIS** team verify and ensure SAP system prerequis
 
 | Prerequisite | Description |
 | ---- | ----------- |
-| **Supported SAP versions** | The SAP data connector agent support SAP NetWeaver systems and was tested on [SAP_BASIS versions 731](https://support.sap.com/en/my-support/software-downloads/support-package-stacks/product-versions.html#:~:text=SAP%20NetWeaver%20%20%20%20SAP%20Product%20Version,%20%20SAPKB710%3Cxx%3E%20%207%20more%20rows) and above. <br><br>Certain steps in this tutorial provide alternative instructions if you're working on the older [SAP_BASIS version 740](https://support.sap.com/en/my-support/software-downloads/support-package-stacks/product-versions.html#:~:text=SAP%20NetWeaver%20%20%20%20SAP%20Product%20Version,%20%20SAPKB710%3Cxx%3E%20%207%20more%20rows). |
+| **Supported SAP versions** | The SAP data connector agent supports SAP NetWeaver systems on [SAP_BASIS versions 731](https://support.sap.com/en/my-support/software-downloads/support-package-stacks/product-versions.html#:~:text=SAP%20NetWeaver%20%20%20%20SAP%20Product%20Version,%20%20SAPKB710%3Cxx%3E%20%207%20more%20rows) and above.<br><br>**Note**: Systems with SAP Note 3446187 applied are not supported by the data connector agent. In such cases, use the [agentless data connector](prerequisites-for-deploying-sap-continuous-threat-monitoring.md?pivots=connection-agentless) instead, which is fully compatible with the enhanced behavior introduced by Note 3446187.<br><br>Certain steps in this tutorial provide alternative instructions if you're working on the older [SAP_BASIS version 740](https://support.sap.com/en/my-support/software-downloads/support-package-stacks/product-versions.html#:~:text=SAP%20NetWeaver%20%20%20%20SAP%20Product%20Version,%20%20SAPKB710%3Cxx%3E%20%207%20more%20rows). |
 | **Required software** | SAP NetWeaver RFC SDK 7.50 ([Download here](https://aka.ms/sentinel4sapsdk))<br>Make sure that you also have an SAP user account in order to access the SAP software download page. |
 | **SAP system details** | Make a note of the following SAP system details: <br>- SAP system IP address and FQDN hostname<br>- SAP system number, such as `00`<br>- SAP System ID, from the SAP NetWeaver system (for example, `NPL`) <br>- SAP client ID, such as `001` |
 | **SAP NetWeaver instance access** | The SAP data connector agent uses one of the following mechanisms to authenticate to the SAP system: <br>- SAP ABAP user/password<br>- A user with an X.509 certificate. This option requires extra configuration steps. For more information, see [Configure your system to use SNC for secure connections](preparing-sap.md#configure-your-system-to-use-snc-for-secure-connections).|
@@ -83,10 +83,6 @@ We recommend that your **SAP BASIS** team verify and ensure SAP system prerequis
 :::zone-end
 
 :::zone pivot="connection-agentless"
-
-## Sign up for limited preview
-
-To use the agentless data connector for SAP, [sign up for the limited preview](https://forms.cloud.microsoft/r/FeWbvc18MV).
 
 ## Azure prerequisites
 
@@ -106,7 +102,7 @@ We strongly recommend that any management of your SAP system is carried out by a
 
 | Prerequisite | Description |
 | ---- | ----------- |
-| **Supported SAP versions** | The **Agentless** solution supports SAP NetWeaver systems with [SAP_BASIS versions 750](https://userapps.support.sap.com/sap(bD1kZSZjPTAwMQ==)/support/pam/pam.html?smpsrv=https%3a%2f%2fwebsmp201.sap-ag.de#ts=60&s=netweaver%207.5&o=most_viewed%7Cdesc&st=l&rpp=20&page=1&pvnr=73554900100900000414&pt=g%7Cd) and above. <br><br>Change Docs logs running on Sybase aren't supported. If you're using Sybase, we recommend that you customize your system to turn off ingestion for Change Docs logs. For more information, see [Customize data connector behavior (optional)](deploy-data-connector-agent-container.md#customize-data-connector-behavior-optional).|
+| **Supported SAP versions** | The **Agentless** solution supports SAP NetWeaver systems with [SAP_BASIS versions 750](https://userapps.support.sap.com/sap(bD1kZSZjPTAwMQ==)/support/pam/pam.html?smpsrv=https%3a%2f%2fwebsmp201.sap-ag.de#ts=60&s=netweaver%207.5&o=most_viewed%7Cdesc&st=l&rpp=20&page=1&pvnr=73554900100900000414&pt=g%7Cd) and above. This includes SAP S/4HANA Cloud private edition systems operated by SAP ECS in RISE. For SAP S/4HANA Cloud public edition (SaaS) use [SAP's connector](https://azuremarketplace.microsoft.com/marketplace/apps/sap_jasondau.azure-sentinel-solution-s4hana-public?tab=Overview) instead. <br><br>Change Docs logs running on Sybase aren't supported. If you're using Sybase, we recommend that you customize your system to turn off ingestion for Change Docs logs. For more information, see [Customize data connector behavior (optional)](deploy-data-connector-agent-container.md#customize-data-connector-behavior-optional).|
 | **SAP environment** | Your SAP environment must have: <br><br> The **RSAU_API_GET_LOG_DATA** function module, remote enabled on your SAP System. For more information, see the [SAP documentation](https://me.sap.com/notes/3054326/E). <br>An SAP BTP Subaccount with following services enabled:  <br>    - SAP Integration Suite <br>- SAP Process Integration Runtime <br>- Cloud Foundry Runtime<br>    For more information, see the [SAP documentation](https://help.sap.com/docs/sap-hana-spatial-services/onboarding/creating-subaccount-on-sap-business-technology-platform-sap-btp ). [Trial accounts](https://developers.sap.com/tutorials/hcp-create-trial-account.html) are supported.<br><br>The [SAP Cloud Connector](https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/installation?locale=en-US) deployed <br><br>SAP NetWeaver version 7.5 or higher|
 | **SAP roles and permissions** | You must have the following roles in your SAP systems: <br><br>**In SAP NetWeaver 7.5+**: SAP Netweaver Administrator <br><br>**In SAP BTP, all of the following roles**:<br>- Subaccount administrator <br>- Integration Provisioner <br>- PI_Administrator <br>- PI_Integration_Developer <br>- PI_Business_Expert| 
 

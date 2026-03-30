@@ -9,12 +9,13 @@ ms.author: macapara
 author: mjcaparas 
 ms.localizationpriority: medium
 audience: ITPro
-ms.topic: conceptual
+ms.topic: concept-article
 appliesto:
     - Microsoft Sentinel with Defender XDR in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
     - Security Copilot
 ms.date: 11/16/2024
+ms.custom: sfi-image-nochange
 #Customer intent: As a security analyst, I want to integrate Security Copilot with Microsoft Sentinel data so that I can investigate incidents and generate advanced hunting queries at machine speed and scale.
 ---
 
