@@ -31,7 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| March 29, 2026 | Preview | [Expanded multi-cloud coverage for AWS and GCP (Preview)](#expanded-multi-cloud-coverage-for-aws-and-gcp-preview) |
+| March 29, 2026 | Preview | [Expanded multicloud coverage for AWS and GCP (Preview)](#expanded-multicloud-coverage-for-aws-and-gcp-preview) |
 | March 22, 2026| Update | [File Integrity Monitoring requires MDE agent version 10.8799+ for legacy Windows machines](#file-integrity-monitoring-requires-mde-agent-version-108799-for-legacy-windows-machines) |
 | March 12, 2026 | GA | [Kubernetes gated deployment support for AKS Automatic (GA)](#kubernetes-gated-deployment-support-for-aks-automatic-ga) |
 | March 11, 2026 | GA| [Severity‑based risk assignment for "Not evaluated" recommendations](#severitybased-risk-assignment-for-not-evaluated-recommendations) |
@@ -40,17 +40,17 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | March 04, 2026 | Deprecation | [Deprecation of preview of container and container images vulnerability recommendations](#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations) |
 | March 04, 2026 | Preview |[New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview)|
 
-### Expanded multi-cloud coverage for AWS and GCP (Preview)
+### Expanded multicloud coverage for AWS and GCP (Preview)
 
 March 29, 2026
 
-Microsoft Defender for Cloud expands multi-cloud posture management with broader native coverage for AWS and GCP. This update adds discovery and posture assessment for additional resource types across compute, databases, storage, analytics, networking, identity, secrets, DevOps, and AI/ML services.
+Microsoft Defender for Cloud expands multicloud posture management with broader native coverage for AWS and GCP. This update adds discovery and posture assessment for additional resource types across compute, databases, storage, analytics, networking, identity, secrets, DevOps, and AI/ML services.
 
 **Asset inventory**: Newly supported AWS and GCP resources are now discovered and visible in the Asset inventory experience.
 
 **Security recommendations**: Approximately 150 new recommendations help identify misconfigurations and posture gaps across the newly supported resources. 
 
-**Regulatory compliance**: Existing compliance frameworks now include the new recommendations, providing more complete compliance assessments across multi-cloud environments.
+**Regulatory compliance**: Existing compliance frameworks now include the new recommendations, providing more complete compliance assessments across multicloud environments.
 
 **Important notes**
 
