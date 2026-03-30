@@ -1,11 +1,7 @@
 ---
 title: Explore with the attack surface map in Microsoft Security Exposure Management
 description: Learn how to use the attack surface map in Microsoft Security Exposure Management.
-ms.author: dlanger
-author: dlanger
-manager: rayne-wiselman
 ms.topic: overview
-ms.service: exposure-management
 ms.date: 09/09/2025
 
 ---

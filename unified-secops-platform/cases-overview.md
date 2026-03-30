@@ -2,12 +2,9 @@
 title: Manage security operations cases natively in the Microsoft Defender portal
 description: Learn about the case management capabilities in the Defender portal for managing and standardizing unified security operations.
 search.appverid: met150
-ms.service: microsoft-defender
-ms.author: monaberdugo
 author: mberdugo
-ms.localizationpriority: medium
+ms.author: monaberdugo
 ms.date: 05/04/2025
-audience: ITPro
 ms.collection:
 - M365-security-compliance
 - tier1
@@ -15,7 +12,6 @@ ms.collection:
 ms.topic: concept-article
 
 # customer intent: As a business decision maker for a security operations center, I want to learn about the case management tools available in the Microsoft Defender portal so I can unify security tickets and increase visibility across hybrid, multitenant, and multicloud environments, and disrupt attacks on identities, endpoints, email, cloud apps, and data in real time.
-ms.subservice: unified-security-operations
 ---
 
 # Manage security operations cases natively in the Microsoft Defender portal
@@ -62,15 +58,15 @@ Case management is available in the Defender portal, and to use it, you must hav
 
 For more information, see [Connect Microsoft Sentinel to the Defender portal](microsoft-sentinel-onboard.md).
 
-Use Defender XDR unified RBAC or Microsoft Sentinel roles to grant access to case management features.
+Use Defender unified RBAC or Microsoft Sentinel roles to grant access to case management features.
 
-| Cases feature | Microsoft Defender Unified RBAC | Microsoft Sentinel role |
+| Cases feature | Microsoft Defender unified RBAC | Microsoft Sentinel role |
 | ------------- | ------------------------------- | ----------------------- |
 | View only</br>- case queue</br>- case details</br>- tasks</br>- comments</br>- case audits | Security operations > Security data basics (read)| Microsoft Sentinel Reader |
 | Create and Manage</br>- cases and case tasks</br>- assign</br>- update status</br>- link and unlink incidents | Security operations > Alerts (manage) | Microsoft Sentinel Responder |
 | Customize case status options | Authorization and setting > Core Security settings (manage)| Microsoft Sentinel Contributor |
 
-For more information, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
+For more information, see [Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
 ## Case queue
 

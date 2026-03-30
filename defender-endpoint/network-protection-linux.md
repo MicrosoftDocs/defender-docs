@@ -6,7 +6,6 @@ ms.localizationpriority: medium
 audience: ITPro
 author: paulinbar
 ms.author: painbar
-manager: bagol
 ms.subservice: linux
 ms.topic: overview
 ms.collection: 

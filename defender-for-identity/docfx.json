@@ -39,7 +39,7 @@
       "searchScope": ["Defender for Identity"],
       "titleSuffix": "Microsoft Defender for Identity",
       "author": "AbbyMSFT",
-      "manager": "AbbyMSFT",
+      "manager": "bagol",
       "ms.author": "abbyweisberg",
       "ms.collection": "M365-security-compliance",
       "ms.service": "microsoft-defender-for-identity",
