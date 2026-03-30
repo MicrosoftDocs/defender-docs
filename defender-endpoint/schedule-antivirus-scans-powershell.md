@@ -8,7 +8,6 @@ ms.author: chrisda
 ms.custom: nextgen
 ms.date: 12/16/2025
 ms.reviewer: pauhijbr, ksarens
-manager: bagol
 ms.subservice: ngp
 ms.topic: how-to
 ms.collection: 
@@ -157,9 +156,9 @@ Scheduled full scans to complete remediation use the following parameters:
 
 ## See also
 
-[Troubleshoot Microsoft Defender Antivirus scan issues](/defender-endpoint/troubleshoot-mdav-scan-issues)
+[Troubleshoot Microsoft Defender Antivirus scan issues](troubleshoot-mdav-scan-issues.md)
 
-[Use PowerShell cmdlets to configure and manage Microsoft Defender Antivirus](/defender-endpoint/use-powershell-cmdlets-microsoft-defender-antivirus)
+[Use PowerShell cmdlets to configure and manage Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md)
 
 [Set the PowerShell cmdlet to configure and manage Microsoft Defender Antivirus](/powershell/module/defender/set-mppreference)
 
@@ -170,7 +169,7 @@ Scheduled full scans to complete remediation use the following parameters:
 
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)

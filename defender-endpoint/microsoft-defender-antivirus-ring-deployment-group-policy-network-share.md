@@ -6,7 +6,6 @@ ms.author: chrisda
 author: chrisda
 ms.reviewer: yongrhee
 ms.localizationpriority: high
-manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -156,7 +155,7 @@ Set up a network file share (UNC/mapped drive) to download security intelligence
 1. Set the share location in the policy to the share.
 
     > [!NOTE]
-    > Do not add the x64 (or x86) folder in the path. The mpcmdrun.exe process adds it automatically.
+    > Do not add the x64 (or x86) folder in the path. The MpCmdRun.exe process adds it automatically.
 
 ## Setting up the Pilot (UAT/Test/QA) environment
 
@@ -207,8 +206,8 @@ In [Group Policy Management Console](/previous-versions/windows/it-pro/windows-s
 
 ### Related articles
 
-- [Antivirus profiles - Devices managed by Microsoft Intune](/mem/intune/protect/endpoint-security-antivirus-policy#antivirus-profiles)
-- [Use Endpoint security Antivirus policy to manage Microsoft Defender update behavior (Preview)](/mem/intune/fundamentals/whats-new#use-endpoint-security-antivirus-policy-to-manage-microsoft-defender-update-behavior-preview)
+- [Antivirus profiles - Devices managed by Microsoft Intune](/intune/intune-service/protect/endpoint-security-antivirus-policy#antivirus-profiles)
+- [Use Endpoint security Antivirus policy to manage Microsoft Defender update behavior (Preview)](/intune/intune-service/fundamentals/whats-new#use-endpoint-security-antivirus-policy-to-manage-microsoft-defender-update-behavior-preview)
 - [Manage the gradual rollout process for Microsoft Defender updates](manage-gradual-rollout.md)
 
 ## Setting up the production environment

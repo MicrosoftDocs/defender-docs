@@ -1,4 +1,4 @@
-﻿---
+---
 title: Get live response results
 description: Learn how to retrieve a specific live response command result by its index.
 search.appverid: met150
@@ -8,7 +8,6 @@ f1.keywords:
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -106,7 +105,7 @@ If successful, this method returns 200, Ok response code with object that holds 
 Here's an example of the request.
 
 ```HTTP
-GET https://api.security.microsoft.com/api/machineactions/988cc94e-7a8f-4b28-ab65-54970c5d5018/GetLiveResponseResultDownloadLink(index=0)
+GET https://api.security.microsoft.com/api/machineactions/aaaabbbb-0000-cccc-1111-dddd2222eeee/GetLiveResponseResultDownloadLink(index=0)
 ```
 
 ### Response example

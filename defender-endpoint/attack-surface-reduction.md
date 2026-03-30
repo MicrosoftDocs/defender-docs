@@ -8,7 +8,6 @@ audience: ITPro
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: sugamar
-manager: bagol
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
 ms.collection:
@@ -98,7 +97,7 @@ Also, make sure [Microsoft Defender Antivirus and anti-malware updates](/windows
 - Minimum platform release requirement: `4.18.2008.9`
 - Minimum engine release requirement: `1.1.17400.5`
 
-For more information and to get your updates, see [Update for Microsoft Defender anti-malware platform](/defender-endpoint/microsoft-defender-antivirus-updates).
+For more information and to get your updates, see [Update for Microsoft Defender anti-malware platform](microsoft-defender-antivirus-updates.md).
 
 ### Cases where warn mode isn't supported
 
@@ -208,7 +207,7 @@ Defender for Endpoint generates the "engine version" that's listed in the event 
 >
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)

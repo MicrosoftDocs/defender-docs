@@ -6,7 +6,6 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -35,7 +34,7 @@ appliesto:
 
 - Microsoft Defender for Endpoint license assigned to the end users of the app. See [Microsoft Defender for Endpoint licensing requirements](minimum-requirements.md).
 
-- **For enrolled devices**: Devices are [enrolled](/mem/intune/user-help/enroll-your-device-in-intune-ios) via the Intune Company Portal app to enforce Intune device compliance policies. This configuration requires the end user to be assigned a Microsoft Intune license. The Intune Company Portal app can be downloaded from the [Apple App Store](https://apps.apple.com/us/app/intune-company-portal/id719171358).
+- **For enrolled devices**: Devices are [enrolled](/intune/intune-service/user-help/enroll-your-device-in-intune-ios) via the Intune Company Portal app to enforce Intune device compliance policies. This configuration requires the end user to be assigned a Microsoft Intune license. The Intune Company Portal app can be downloaded from the [Apple App Store](https://apps.apple.com/us/app/intune-company-portal/id719171358).
 
    > [!NOTE]
    > Apple doesn't permit redirecting users to download other apps (Company Portal/Authenticator) from the App Store. Therefore, users need to complete this step themselves before onboarding to the Microsoft Defender for Endpoint app.
@@ -66,7 +65,7 @@ appliesto:
 
 > [!NOTE]
 >
-> - Microsoft Defender for Endpoint now extends protection to an organization's data within a managed application for those who aren't using mobile device management (MDM) but are using Intune to manage mobile applications. It also extends this support to customers who use other enterprise mobility management solutions, while still using Intune for [mobile application management (MAM)](/mem/intune/apps/mam-faq).
+> - Microsoft Defender for Endpoint now extends protection to an organization's data within a managed application for those who aren't using mobile device management (MDM) but are using Intune to manage mobile applications. It also extends this support to customers who use other enterprise mobility management solutions, while still using Intune for [mobile application management (MAM)](/intune/intune-service/apps/mam-faq).
 > - In addition, Microsoft Defender for Endpoint already supports devices that are enrolled using Intune mobile device management (MDM).
 
 ### System Requirements
@@ -100,7 +99,7 @@ Deployment of Microsoft Defender for Endpoint on iOS can be done via Microsoft I
 - [Configure app protection policy to include Defender for Endpoint risk signals (MAM)](ios-install-unmanaged.md)
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 - [Configure Conditional Access policy based on device risk score from Microsoft Defender for Endpoint](ios-configure-features.md#conditional-access-with-defender-for-endpoint-on-ios)
-- [Mobile Application Management (MAM) basics](/mem/intune/apps/app-management#mobile-application-management-mam-basics)
+- [Mobile Application Management (MAM) basics](/intune/intune-service/apps/app-management#mobile-application-management-mam-basics)
 
 
 

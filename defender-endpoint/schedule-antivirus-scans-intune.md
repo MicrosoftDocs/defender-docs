@@ -76,7 +76,7 @@ For more information: [Antivirus policy for endpoint security in Intune ](/intun
 > In this example, a quick scan runs for Windows clients on Wednesdays at 5:00 PM. (1020).
 
 > [!TIP]
-> Our recommendation for scheduled scans is to configure quick scan together with always-on real-time protection and [cloud protection](/defender-endpoint/cloud-protection-microsoft-defender-antivirus), as this combination provides strong coverage against malware that starts with the system and kernel-level malware. This configuration is the default configuration. In general, there's no need to schedule a full scan, and most users never need to manually run full scans (see [Comparing quick scan, full scan, and custom scan](/defender-endpoint/schedule-antivirus-scans)).
+> Our recommendation for scheduled scans is to configure quick scan together with always-on real-time protection and [cloud protection](cloud-protection-microsoft-defender-antivirus.md), as this combination provides strong coverage against malware that starts with the system and kernel-level malware. This configuration is the default configuration. In general, there's no need to schedule a full scan, and most users never need to manually run full scans (see [Comparing quick scan, full scan, and custom scan](schedule-antivirus-scans.md)).
 
 ## General settings for Scheduled scan to consider:
 
@@ -95,15 +95,15 @@ For more information: [Antivirus policy for endpoint security in Intune ](/intun
 
 ### See also
 
-- [Troubleshoot Microsoft Defender Antivirus scan issues](/defender-endpoint/troubleshoot-mdav-scan-issues)
+- [Troubleshoot Microsoft Defender Antivirus scan issues](troubleshoot-mdav-scan-issues.md)
 
-- [Troubleshoot Microsoft Defender Antivirus settings](/defender-endpoint/troubleshoot-settings)
+- [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md)
 
-- [Troubleshoot performance issues related to real-time protection](/defender-endpoint/troubleshoot-performance-issues)
+- [Troubleshoot performance issues related to real-time protection](troubleshoot-performance-issues.md)
 
-- [Run the client analyzer on Windows](/defender-endpoint/run-analyzer-windows)
+- [Run the client analyzer on Windows](run-analyzer-windows.md)
 
-- [Performance analyzer for Microsoft Defender Antivirus](/defender-endpoint/tune-performance-defender-antivirus)
+- [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)
 
-- [Microsoft Defender Antivirus full scan considerations and best practices](/defender-endpoint/mdav-scan-best-practices)
+- [Microsoft Defender Antivirus full scan considerations and best practices](mdav-scan-best-practices.md)
 

@@ -1,11 +1,10 @@
-﻿---
+---
 title: Add, update, or delete a scan definition
 description: Learn how to use the add, update, or delete scan definitions.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -154,7 +153,7 @@ Here's an example of the response.
 Here's an example of a request that updates a scan.
 
 ```http
-PATCH  https://api.security.microsoft.com/api/DeviceAuthenticatedScanDefinitions/289224fb-1686-472c-9751-5555960854ca
+PATCH  https://api.security.microsoft.com/api/DeviceAuthenticatedScanDefinitions/aaaabbbb-0000-cccc-1111-dddd2222eeee
 ```
 
 ```json

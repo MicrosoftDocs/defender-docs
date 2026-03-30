@@ -3,7 +3,6 @@ title: Onboarding devices using streamlined connectivity for Microsoft Defender 
 description: Learn how to use a streamlined domain or static IP ranges during onboarding when connecting devices to Microsoft Defender for Endpoint.         
 author: paulinbar
 ms.author: painbar
-manager: bagol
 ms.date: 09/29/2025
 ms.topic: how-to
 ms.service: defender-endpoint
@@ -163,7 +162,7 @@ To test streamlined connectivity for devices not yet onboarded to Defender for E
 
 - Run `mdeclientanalyzer.cmd -g <GW_US, GW_UK, GW_EU>` , where parameter is of GW_US, GW_EU, GW_UK. GW refers to the streamlined option. Run with applicable tenant geo.
 
-As a supplementary check, you can also use the client analyzer to test whether a device meets prerequisites: [MDEClientAnalyzerPreview.zip]{https://aka.ms/MDEClientAnalyzerPreview}.
+As a supplementary check, you can also use the client analyzer to test whether a device meets prerequisites: [MDEClientAnalyzerPreview.zip](https://aka.ms/MDEClientAnalyzerPreview).
  
 
 > [!NOTE]

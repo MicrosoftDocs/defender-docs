@@ -6,7 +6,6 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -36,7 +35,7 @@ This article describes how to install, configure, update, and use Defender for E
    - The end user must be assigned a Microsoft Intune license. For more information on how to assign licenses, see [Assign licenses to users](/azure/active-directory/users-groups-roles/licensing-groups-assign).
    - The users of the app must be assigned a Microsoft Defender for Endpoint license. For more information on how to assign licenses, see [Microsoft Defender for Endpoint licensing requirements](minimum-requirements.md).
    - Intune Company Portal app can be downloaded from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) and is available on the Android device.
-   - Additionally, devices can be [enrolled](/mem/intune/user-help/enroll-device-android-company-portal) via the Intune Company Portal app to enforce Intune device compliance policies. 
+   - Additionally, devices can be [enrolled](/intune/intune-service/user-help/enroll-device-android-company-portal) via the Intune Company Portal app to enforce Intune device compliance policies. 
 
 - **For Administrators**:
    - Access to the [Microsoft Defender portal](https://security.microsoft.com).
@@ -45,7 +44,7 @@ This article describes how to install, configure, update, and use Defender for E
       - Configure Microsoft Defender for Endpoint risk signals in app protection policy.
   
 > [!NOTE]
-> - Microsoft Defender for Endpoint now extends protection to organizational data within a managed application (MAM) for devices that aren't enrolled using mobile device management (MDM), but are using Intune to manage mobile applications. It also extends this support to customers who use other enterprise mobility management solutions, while still using Intune for [mobile application management (MAM)](/mem/intune/apps/mam-faq).
+> - Microsoft Defender for Endpoint now extends protection to organizational data within a managed application (MAM) for devices that aren't enrolled using mobile device management (MDM), but are using Intune to manage mobile applications. It also extends this support to customers who use other enterprise mobility management solutions, while still using Intune for [mobile application management (MAM)](/intune/intune-service/apps/mam-faq).
 > - In addition, Microsoft Defender for Endpoint already supports devices that are enrolled using Intune mobile device management (MDM).
 
 ### Network Requirements
@@ -103,7 +102,7 @@ To ensure optimal protection for your device, Microsoft Defender requests access
 
 #### How to resolve the noncompliance state due to silent auth failures
 
-- Microsoft Defender for Endpoint has a feature to let the user sign-in according to a set of policies called [Conditional Access policies](/defender-endpoint/configure-conditional-access).
+- Microsoft Defender for Endpoint has a feature to let the user sign-in according to a set of policies called [Conditional Access policies](configure-conditional-access.md).
 
 - If a policy is violated, or the user has reset their Microsoft account password, the Microsoft Defender app autosigns out and starts failing in silent auth (sign-in attempts in background).
 
@@ -131,7 +130,7 @@ For information on how to configure Defender for Endpoint on Android features, s
 
 - [Configure Microsoft Defender for Endpoint on Android features](android-configure.md)
 
-- [Mobile Application Management (MAM) basics](/mem/intune/apps/app-management#mobile-application-management-mam-basics)
+- [Mobile Application Management (MAM) basics](/intune/intune-service/apps/app-management#mobile-application-management-mam-basics)
 
 
 

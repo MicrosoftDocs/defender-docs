@@ -4,7 +4,6 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
@@ -16,7 +15,7 @@ ms.collection:
   - tier1
 description: A prescriptive playbook for SecOps personnel to manage Microsoft Teams protection in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 09/11/2025
+ms.date: 03/09/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -71,8 +70,8 @@ SecOps team members can triage and respond to false positive Teams messages (goo
 
 SecOps team members can also use allow entries in the Tenant Allow/Block List to allow the misclassified indicators:
 
-- URLs misidentified by Defender for Office 365. URL allows entries are enforced at time of click in Teams when [Teams integration in Safe Links policies is turned on](mdo-support-teams-quick-configure.md#step-2-verify-safe-links-integration-for-microsoft-teams).
-- Files by using the SHA256 hash value.
+- URLs misidentified by Defender for Office 365 via the [URL tab on the Submissions page](submissions-admin.md#report-good-urls-to-microsoft). URL allows entries are enforced at time of click in Teams when [Teams integration in Safe Links policies is turned on](mdo-support-teams-quick-configure.md#step-2-verify-safe-links-integration-for-microsoft-teams).
+- Files by using the SHA256 hash value from the [Email attachments tab on the Submissions page](submissions-admin.md#report-good-email-attachments-to-microsoft)
 
 > [!TIP]
 > Teams messages released from quarantine are available to senders and recipients in the original location in Teams chats and channel posts.
