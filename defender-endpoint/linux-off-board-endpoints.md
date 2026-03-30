@@ -35,8 +35,6 @@ There are important differences between offboarding and uninstalling:
 
 ## How to choose between offboarding and uninstalling
 
-Review the following descriptions and choose the option that best fits your scenario.
-
 - **Offboard** when you want to temporarily stop Defender from communicating with the Defender service while keeping the Defender application installed on the Linux server. This option is recommended if you plan to reenable Defender later without reinstalling the agent. For example, you might want to offboard if you need to troubleshoot an issue with the Defender application, or if you want to temporarily stop Defender while performing maintenance on the server.
 
 - **Uninstall** when you want to completely remove the Defender application from the Linux server, for example, when changing the installation ring (Prod/Insider Slow/Insider Fast), or when you no longer plan to use Microsoft Defender on the device.
@@ -45,19 +43,24 @@ Review the following descriptions and choose the option that best fits your scen
 
 After a device has been successfully offboarded, the Defender application behaves as follows:
 
-- The Defender application stops sending telemetry (such as alerts and vulnerabilities) to the Microsoft Defender portal.
-- The Defender application becomes unlicensed and nonfunctional.
+- It stops sending telemetry (such as alerts and vulnerabilities) to the Microsoft Defender portal.
+- It becomes unlicensed and nonfunctional.
 - Security policies applied through Microsoft Defender are removed.
 
-## How do offboarded and uninstalled devices appear in the Defender portal
+## How inactive devices appear in the Defender portal
+
+- The status of the offboarded or uninstalled device changes to *Inactive* after seven days of no telemetry.
+- Offboarded and uninstalled devices remain visible for up to 180 days. For more information about data retention, see [Microsoft Defender for Endpoint data storage and privacy](./data-storage-privacy.md).
+- Historical data (alerts, timeline, software inventory) remains accessible during the retention period.
+- No explicit 'Offboarded' or uninstalled label is shown in the portal. For information about how to track "Inactive" devices in the portal, see [XXX}().
 
 ## How to offboard a device
 
 ## How to uninstall a device
 
-## How to verify a devices offboarding state
+## How to verify a device's offboarding state
 
-You can verify the offboarding state by running the following command:
+To verify a device's offboarding state, run the following command:
 
 ```bash
 mdatp health --field health_issues
@@ -66,12 +69,16 @@ Expected output
 ```console
 ATTENTION: No license found. Contact your administrator for help. ["missing license"]
 ```
-
 The Defender application remains installed on the device unless it's manually uninstalled.
 
- ## Offboarding steps
+ ## How to offboard a device
 
-Short overview Two methods are available to offboard a Linux server from Microsoft Defender for Endpoint: Offboard using a script or offboard using an offboarding JSON file. Both methods achieve the same result, so you can choose the one that best fits your scenario.
+Two methods are available to offboard a Linux server from Microsoft Defender for Endpoint:
+
+- Offboard using a script
+- Offboard using an offboarding JSON file.
+
+Both methods achieve the same result, so you can choose the one that best fits your scenario.
 
 ### Offboard using a script 
 
