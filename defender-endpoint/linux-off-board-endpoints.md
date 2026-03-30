@@ -47,7 +47,7 @@ After a device has been successfully offboarded, the Defender application behave
 - It becomes unlicensed and nonfunctional.
 - Security policies applied through Microsoft Defender are removed.
 
-## How inactive devices appear in the Defender portal
+## How do inactive devices appear in the Defender portal
 
 - The status of the offboarded or uninstalled device changes to *Inactive* after seven days of no telemetry.
 - Offboarded and uninstalled devices remain visible for up to 180 days. For more information about data retention, see [Microsoft Defender for Endpoint data storage and privacy](./data-storage-privacy.md).
