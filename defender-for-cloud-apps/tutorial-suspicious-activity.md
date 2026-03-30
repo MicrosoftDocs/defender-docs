@@ -41,8 +41,6 @@ Learn how to tune user activity detections to identify true compromises and redu
 
 ## Phase 1: Configure IP address ranges
 
-### Prerequisites
-
 - Set up IP ranges to fine-tune any type of suspicious user activity detection policies.
 
 [Setting up known IP addresses](ip-tags.md) helps machine learning algorithms identify known locations and consider them as part of the machine learning models. For example, adding the IP address range of your VPN helps the model to correctly classify this IP range and automatically exclude it from impossible travel detections because the VPN location doesn't represent the true location of that user.
@@ -106,14 +104,16 @@ Defender for Cloud Apps includes several built-in [anomaly detection policies](a
 
 ## Phase 3: Tune cloud discovery anomaly detection policies
 
-You can fine-tune several built-in [cloud discovery anomaly detection policies](cloud-discovery-policies.md#cloud-discovery-anomaly-detection). The **Data exfiltration to unsanctioned apps** policy alerts you when data is being exfiltrated to an unsanctioned app. The policy is preconfigured with recommended settings. 
-Fine-tune the built-in policies or create your own policies to identify other scenarios worth investigating. These policies use cloud discovery logs, with [tuning capabilities](cloud-discovery-policies.md#cloud-discovery-anomaly-detection) that focus on anomalous app behavior and data exfiltration.
+You can fine-tune several built-in [cloud discovery anomaly detection policies](cloud-discovery-policies.md#cloud-discovery-anomaly-detection) or create your own policies to identify other scenarios worth investigating. These policies use cloud discovery logs, with [tuning capabilities](cloud-discovery-policies.md#cloud-discovery-anomaly-detection) that focus on anomalous app behavior and data exfiltration.
 
-1. **Tune usage monitoring**  
-Set the usage filters to control the baseline, scope, and activity period for detecting anomalous behavior. For example, receive alerts for anomalous activities from executive-level employees.
+1. **Tune usage monitoring**
 
-1. **Tune alert sensitivity**  
+Set the usage filters to control the scope, and activity period for detecting anomalous behavior. For example, receive alerts for anomalous activities from executive-level employees.
+
+1. **Tune alert sensitivity**
+
 To reduce unnecessary alerts, set up the sensitivity of alerts. Use the sensitivity slider to control the number of high-risk alerts sent per 1,000 users per week. Higher sensitivities require less variance to be considered an anomaly and generate more alerts. In general, set low sensitivity for users who don't have access to confidential data.
+
 
 ## Phase 4: Tune rule-based detection (activity) policies
 
@@ -121,7 +121,7 @@ To reduce unnecessary alerts, set up the sensitivity of alerts. Use the sensitiv
 
 If your organization doesn't have any presence in a particular country or region, create a policy that detects the anomalous activities from that location. For organizations with large branches in that country or region, such activities are normal and it doesn't make sense to detect such activities.
 
-1. Go to **Control** > **Templates** and set the **Type** filter to **Activity policy**. [Set up activity filters](activity-filters-queries.md) to detect behaviors that aren't normal for your environment. 
+1. Go to **Policies** > **Policy templates** and set the **Type** filter to **Activity policy**. [Set up activity filters](activity-filters-queries.md) to detect behaviors that aren't normal for your environment. 
 1. **Tune activity volume**  
 Choose the volume of activity required before the detection raises an alert. If your organization has no presence in a country or region, even a single activity is significant and warrants an alert. A single sign-in failure could be human error and only of interest if there are many failures in a short period.
 1. **Tune [activity filters](activity-filters-queries.md)**  
