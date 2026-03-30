@@ -48,7 +48,7 @@ By using AI model security, security teams can scan custom AI models uploaded to
 
 1. Select **AI & Mls** > **AI models**.
 
-    :::image type="content" source="media/ai-models/ai-models.png" alt-text="Screenshot that shows where to select AI models from the drop-down list in the Cloud Security Explorer." lightbox="media/ai-models/ai-models.png":::
+    :::image type="content" source="media/models/models.png" alt-text="Screenshot that shows where to select AI models from the drop-down list in the Cloud Security Explorer." lightbox="media/models/models.png":::
 
 1. Select **Done**.
 
@@ -56,7 +56,7 @@ By using AI model security, security teams can scan custom AI models uploaded to
 
 1. Select **Metadata** > **AI Model Metadata**.
 
-    :::image type="content" source="media/ai-models/ai-models-metadata.png" alt-text="Screenshot that shows how to select the 'AI Models Metadata' option." lightbox="media/ai-models/ai-models-metadata.png":::
+    :::image type="content" source="media/models/models-metadata.png" alt-text="Screenshot that shows how to select the 'AI Models Metadata' option." lightbox="media/models/models-metadata.png":::
 
 1. Select **Search**.
 
@@ -72,7 +72,7 @@ Use the Cloud Security Explorer to find AI models that have active security find
 
 1. Select **Recommendations** > **All recommendations**.
 
-    :::image type="content" source="media/ai-models/all-recommendations.png" alt-text="Screenshot that shows how to select the 'All recommendations' option." lightbox="media/ai-models/all-recommendations.png":::
+    :::image type="content" source="media/models/all-recommendations.png" alt-text="Screenshot that shows how to select the 'All recommendations' option." lightbox="media/models/all-recommendations.png":::
 
 1. Select **Search**.
 
@@ -90,15 +90,15 @@ The Defender portal **Assets** page provides a comprehensive view of all AI mode
 
 1. Go to **Assets** > **Cloud** > **AI** > **AI models**.
 
-    :::image type="content" source="media/ai-models/defender-ai-models.png" alt-text="Screenshot that shows how to navigate to the Defender portals asset page with all of the AI models presented." lightbox="media/ai-models/defender-ai-models.png":::
+    :::image type="content" source="media/models/defender-ai-models.png" alt-text="Screenshot that shows how to navigate to the Defender portals asset page with all of the AI models presented." lightbox="media/models/defender-ai-models.png":::
 
 1. Select an AI model with recommendations.
 
-    :::image type="content" source="media/ai-models/ai-models-recommendation.png" alt-text="Screenshot that shows AI models that have at least one recommendation affecting them.":::
+    :::image type="content" source="media/models/models-recommendation.png" alt-text="Screenshot that shows AI models that have at least one recommendation affecting them.":::
 
 1. Select **Open asset page**.
 
-    :::image type="content" source="media/ai-models/asset-page.png" alt-text="Screenshot that shows where the 'Open asset page' button is located." lightbox="media/ai-models/asset-page.png":::
+    :::image type="content" source="media/models/asset-page.png" alt-text="Screenshot that shows where the 'Open asset page' button is located." lightbox="media/models/asset-page.png":::
 
 1. Select **Security recommendations** > the relevant recommendation.
  
