@@ -22,7 +22,7 @@ appliesto:
 
 # Offboard devices
 
-[!INCLUDE [off-boarding-overview](includes/off-boarding-overview.md)]
+[!INCLUDE [offboard-overview](includes/offboard-overview.md)]
 
 ## Prerequisites
 
