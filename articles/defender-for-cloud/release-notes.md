@@ -32,6 +32,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | Date | Category | Update |
 | -------- | -------- | -------- |
 | March 30, 2026 | Upcoming change | [Update to Defender for SQL servers on machines plan for Fairfax customers](#update-to-defender-for-sql-servers-on-machines-plan-for-fairfax-customers) |
+| March 30, 2026 | Preview | [AI model security for Azure Machine Learning (Preview)](#ai-model-security-for-azure-machine-learning-preview) |
 | March 29, 2026 | Preview | [Expanded multicloud coverage for AWS and GCP (Preview)](#expanded-multicloud-coverage-for-aws-and-gcp-preview) |
 | March 22, 2026| Update | [File Integrity Monitoring requires MDE agent version 10.8799+ for legacy Windows machines](#file-integrity-monitoring-requires-mde-agent-version-108799-for-legacy-windows-machines) |
 | March 12, 2026 | GA | [Kubernetes gated deployment support for AKS Automatic (GA)](#kubernetes-gated-deployment-support-for-aks-automatic-ga) |
@@ -53,6 +54,20 @@ To simplify onboarding and improve protection coverage, we're releasing an enhan
 
 - [Update Defender for SQL Servers on Machines plan configuration](update-sql-machine-configuration.md): If you enabled the Defender for SQL Server on machines plan before April 2026, follow these instructions to update your configuration.
 - [Verify SQL Server instances protection status](verify-machine-protection.md): With an estimated starting date of May 2026, you must verify the protection status of your SQL Server instances across your environments. Learn how to [troubleshoot deployment issues for Defender for SQL on machines configuration](troubleshoot-sql-machines-guide.md).
+
+### AI model security for Azure Machine Learning (Preview)
+
+March 30, 2026
+
+Microsoft Defender for Cloud now offers AI model security in preview for Azure Machine Learning registries and workspaces. AI model security helps security teams discover and scan custom AI models for risks before deployment, and review findings in Defender for Cloud.
+ 
+By using AI model security, you can:
+- Discover AI models in Azure Machine Learning registries and workspaces.
+- Scan supported model artifacts for malware and unsafe operators. 
+- Review security findings and remediate surfaced issues in Defender for Cloud.
+- Perform CLI-based scanning for CI/CD integrations.
+ 
+Learn more about [AI model security](ai-model-security.md).
 
 ### Expanded multicloud coverage for AWS and GCP (Preview)
 
