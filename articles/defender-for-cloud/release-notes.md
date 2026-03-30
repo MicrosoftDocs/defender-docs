@@ -52,12 +52,12 @@ Microsoft Defender for Cloud expands multicloud posture management with broader 
 
 **Regulatory compliance**: Existing compliance frameworks now include the new recommendations, providing more complete compliance assessments across multicloud environments.
 
-**Important notes**
-
-- Compliance results may change as new recommendations are evaluated. This reflects expanded coverage, not a regression in security posture.
-- Secure score is not affected by recommendations in preview.
-- In the Azure portal, only assets that have security issues detected on them are reflected.
-- In the Defender portal, all discovered resources in customers' environments are reflected, even if there are no security issues detected on them.
+>[!Important]
+>
+> - Compliance results may change as new recommendations are evaluated. This reflects expanded coverage, not a regression in security posture.
+> - Secure score is not affected by recommendations in preview.
+> - In the Azure portal, only assets that have security issues detected on them are reflected.
+> - In the Defender portal, all discovered resources in customers' environments are reflected, even if there are no security issues detected on them.
 
 Learn more about [security recommendations](review-security-recommendations.md).
   
