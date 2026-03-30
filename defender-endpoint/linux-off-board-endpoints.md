@@ -22,7 +22,7 @@ ms.date: 03/23/2026
 
 This article explains how to offboard and/or uninstall Microsoft Defender for Endpoing on a Linux device.
 
-[!INCLUDE [offboarding-overview](includes/offboarding-overview.md)]
+[!INCLUDE [off-boarding-overview](includes/offboarding-overview.md)]
 
 ## Overview
 
