@@ -4,7 +4,7 @@ description: This article lists all Microsoft Defender for Cloud identity and ac
 author: Elazark
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 03/29/2025
+ms.date: 03/29/2026
 ms.author: elkrieger
 ms.custom: generated
 ai-usage: ai-assisted
@@ -47,7 +47,7 @@ To learn about actions that you can take in response to these recommendations, s
 
 **Severity**: High
 
-### Blocked accounts with read and write permissions on Azure resources should be remove
+### Blocked accounts with read and write permissions on Azure resources should be removed
 
 **Description**: Accounts that have been blocked from signing in on Active Directory, should be removed from your Azure resources. These accounts can be targets for attackers looking to find ways to access your data without being noticed.
 (No related policy)
