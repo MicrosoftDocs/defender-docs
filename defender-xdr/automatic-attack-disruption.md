@@ -91,7 +91,7 @@ Defender for Identity triggers the disable user action via onboarded domain cont
   - **When the user account is hosted in Microsoft Entra ID only (cloud‑native account)**:
 Defender for Identity executes the disable user action in Microsoft Entra ID by using a Microsoft‑managed enterprise application. This application validates the signed‑in user’s assigned roles and permissions through role‑based access control (RBAC) before the account is disabled.
 
-    The enterprise application is named `Microsoft Defender for Identity` and uses application ID `60ca1954‑583c‑4d1f‑86de‑39d835f3e452`. In older tenants, this same application may appear as `Radius Aad Syncer`.
+  The enterprise application is named `Microsoft Defender for Identity` and uses application ID `60ca1954‑583c‑4d1f‑86de‑39d835f3e452`. In older tenants, this application might appear as `Radius Aad Syncer`.
 
   > [!NOTE]
   > Disabling the user account in Microsoft Entra ID is not dependent on the deployment of Microsoft Defender for Identity.
