@@ -52,26 +52,9 @@ After a device has been successfully offboarded, the Defender application behave
 - The status of the offboarded or uninstalled device changes to *Inactive* after seven days of no telemetry.
 - Offboarded and uninstalled devices remain visible for up to 180 days. For more information about data retention, see [Microsoft Defender for Endpoint data storage and privacy](./data-storage-privacy.md).
 - Historical data (alerts, timeline, software inventory) remains accessible during the retention period.
-- No explicit 'Offboarded' or uninstalled label is shown in the portal. For information about how to track "Inactive" devices in the portal, see [XXX}().
+- No explicit **Offboarded* or *Uninstalled* label is shown in the portal. For information about how to track "Inactive" devices in the portal, see [XXX}().
 
 ## How to offboard a device
-
-## How to uninstall a device
-
-## How to verify a device's offboarding state
-
-To verify a device's offboarding state, run the following command:
-
-```bash
-mdatp health --field health_issues
-```
-Expected output
-```console
-ATTENTION: No license found. Contact your administrator for help. ["missing license"]
-```
-The Defender application remains installed on the device unless it's manually uninstalled.
-
- ## How to offboard a device
 
 Two methods are available to offboard a Linux server from Microsoft Defender for Endpoint:
 
@@ -102,8 +85,8 @@ This method can be performed either manually or automatically using your preferr
 1. Select **Download package** and then select **Download**. The zipped folder is named *WindowsDefenderATPOffboardingPackage_valid_until_YYYY-MM-DD.zip* (where YYYY-MM-DD is the expiry date of the package).  
 1. Extract the contents of the ZIP file and locate the *mdatp_offboard.json* file.
 1. Copy *mdatp_offboard.json* to the following location on the Linux server: `/etc/opt/microsoft/mdatp/mdatp_offboard.json`
- 
-## Uninstall Defender application
+
+## How to uninstall a device
 
 Two methods are available to uninstall the Defender application from a Linux server: Uninstall using the Defender deployment tool (Recommended) or manual uninstallation. Both methods achieve the same result, so you can choose the one that best fits your scenario.
 
@@ -143,12 +126,19 @@ Mariner
 ```bash
 sudo dnf remove mdatp
 ```
-## Visibility into offboarded and uninstalled devices on the Defender Portal  
 
-- The offboarded and uninstalled device's status transitions to 'Inactive' after seven days of no telemetry.
-- Offboarded and uninstalled devices remain visible in the Defender portal for up to 180 days. For more information, see [Microsoft Defender for Endpoint data storage and privacy](./data-storage-privacy.md).
-- Historical data (alerts, timeline, software inventory) remains accessible during the retention period.
-- No explicit *Offboarded* or *Uninstalled* label is shown in the portal.  
+## How to verify a device's offboarding state
+
+To verify a device's offboarding state, run the following command:
+
+```bash
+mdatp health --field health_issues
+```
+Expected output
+```console
+ATTENTION: No license found. Contact your administrator for help. ["missing license"]
+```
+The Defender application remains installed on the device unless it's manually uninstalled.
 
 ## Related content
 
