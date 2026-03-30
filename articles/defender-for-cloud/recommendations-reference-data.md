@@ -789,7 +789,7 @@ Configure a private endpoint connection to enable access to traffic coming only 
 
 ### Customer-managed encryption keys should be enabled for Datastream streams
 
-**Description**: Defender for Cloud identified Datastream streams that are not using Customer-Managed Encryption Keys (CMEK). This assessment evaluates whether your Datastream streams have CMEK enabled, a control that allows direct key rotation and access policy management. Without CMEK, the automatic encryption provided by Google Cloud may not meet the stringent requirements for sensitive data, leaving your workload more exposed to potential key compromise or unauthorized access. Learn more: https://cloud.google.com/datastream/docs/cmek
+**Description**: Defender for Cloud identified Datastream streams that are not using Customer-Managed Encryption Keys (CMEK). This assessment evaluates whether your Datastream streams have CMEK enabled, a control that allows direct key rotation and access policy management. Without CMEK, the automatic encryption provided by Google Cloud may not meet the stringent requirements for sensitive data, leaving your workload more exposed to potential key compromise or unauthorized access. Learn more: https://cloud.google.com/datastream/docs
 
 **Severity**: Low
 
