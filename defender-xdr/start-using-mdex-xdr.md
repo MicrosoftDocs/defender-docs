@@ -32,13 +32,13 @@ You can view and monitor Defender Experts activities in the following sections o
 - As a status card in the portal home page
 - In the portal navigation menu
 
+:::image type="content" source="media/start-using-mdex-xdr/defender-experts-experiences.png" alt-text="Screenshot of the Microsoft defender portal with the Defender Experts experiences highlighted." lightbox="media/start-using-mdex-xdr/defender-experts-experiences.png":::
+
 ### Home page card
 
 The Defender Experts status card in the Defender portal home page is located in the upper portion. You see a summary of the experts' activities and items requiring your attention immediately when you open the portal. 
 
-By default, this status card is located in the top row immediately after the home page banner: 
-
-The Defender Experts status card might surface the following information:
+By default, this status card is located in the top row immediately after the home page banner. It might surface the following information:
 - Onboarding and readiness calls to action
 - Managed response incidents that require customer action
 - Messages that might be awaiting your response
@@ -55,6 +55,8 @@ From this navigation menu, you can go directly to the Defender Experts overview 
 
 The **Defender Experts Overview** page provides a consolidated view of Defender Experts activity, status, and outcomes. You can understand the value of the service without navigating across multiple areas in the portal.
 
+:::image type="content" source="media/start-using-mdex-xdr/defender-experts-overview-page.png" alt-text="Screenshot of Defender Experts overview page." lightbox="media/start-using-mdex-xdr/defender-experts-overview-page.png":::
+
 The information it provides helps you answer the following questions:
 
 -	What does Defender Experts need me to do right now?
@@ -68,6 +70,8 @@ The page brings together high-signal information in a single place, including:
 #### Messages
 
 The Defender Experts messages page lets you track your managed response chat conversations and inquiries you submitted through Ask Defender Experts.
+
+:::image type="content" source="media/start-using-mdex-xdr/defender-experts-messages.png" alt-text="Screenshot of Defender Experts messages page." lightbox="media/start-using-mdex-xdr/defender-experts-messages.png":::
 
 Select a message topic to open a side panel where you can read through the conversation and respond to it. You can also perform several actions to manage your messages, including:
 - Export the list of messages into a .CSV file
