@@ -31,7 +31,7 @@ In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps*
 
 1. Enter each **IP address range** you wish to configure. You can add as many IP addresses and subnets as you want using network prefix notation (also known as CIDR notation), for example 192.168.1.0/32.
 
-1. **Categories** are used to easily recognize activities from important IP addresses in your logs and alerts. Categories are available in the portal. However, they typically require user configuration to determine which IP addresses are included in each category. The exception to this configuration is the **Risky** category, which includes two IP tags - Anonymous proxy and Tor.
+1. **Categories** are used to easily recognize activities from important IP addresses in your logs and alerts. Categories are available in the portal. However, they typically require user configuration to determine which IP addresses are included in each category. The exception to this configuration is the **Risky** category, which includes three IP tags - Anonymous proxy, Botnet and Tor.
 
     The following categories are available:
 
