@@ -97,16 +97,16 @@ No request body is required.
 | Property | Type | Description |
 |----------|------|-------------|
 | `name` | String | The name of the graph instance. |
-| `mapFileName` | String | The name of the map file associated with the graph. Null if not yet generated. |
-| `mapFileVersion` | String | The version of the map file. Null if not yet generated. |
+| `mapFileName` | String | The name of the map file associated with the graph.  |
+| `mapFileVersion` | String | The version of the map file. |
 | `graphDefinitionName` | String | The name of the graph definition used to build this instance. |
 | `graphDefinitionVersion` | String | The version of the graph definition. |
 | `refreshFrequency` | String | How often the graph data is refreshed. |
 | `createTime` | String | When the graph instance was created. |
 | `lastUpdateTime` | String | When the graph instance was last updated. |
-| `lastSnapshotTime` | String | The timestamp of the most recent data snapshot. Null if no snapshot exists. |
-| `lastSnapshotRequestTime` | String | When the last snapshot was requested. Null if no snapshot has been requested. |
-| `instanceStatus` | String | The current status of the graph instance: `Ready`, `Creating`, or `Failed`. |
+| `lastSnapshotTime` | String | The timestamp of the most recent data snapshot.  |
+| `lastSnapshotRequestTime` | String | When the last snapshot was requested.  |
+| `instanceStatus` | String | The current status of the graph instance. |
 
 ### Response status codes
 
@@ -116,7 +116,7 @@ No request body is required.
 
 ## Query a graph
 
-Query a custom graph using Graph Query Language (GQL). For more information on GQL, see [GQL language guide](gql-language-guide.md).
+Query a custom graph using Graph Query Language (GQL). For more information on GQL, see [GQL reference for Microsoft Sentinel graph](gql-reference-for-sentinel-custom-graph.md).
 
 > [!NOTE]
 > `{graphName}` refers to the `name` of a graph returned from the list operation.
@@ -324,6 +324,6 @@ Content-Type: application/json
 ## Next steps
 
 - [Create custom graphs in the security data lake](create-custom-graphs.md)
-- [GQL language guide](gql-language-guide.md)
+- [GQL reference for Microsoft Sentinel graph](gql-reference-for-sentinel-custom-graph.md)
 - [Microsoft Sentinel graph Python SDK provider reference](sentinel-graph-provider-reference.md)
 - [VS Code extension notebooks](notebooks.md)
