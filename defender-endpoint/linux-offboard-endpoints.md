@@ -22,6 +22,8 @@ ms.date: 03/23/2026
 
 This article explains how to offboard and/or uninstall Microsoft Defender for Endpoing on a Linux device.
 
+[!INCLUDE [offboarding-overview](includes/offboarding-overview.md)]
+
 There are important differences between offboarding and uninstalling:
 
 - Offboarding disconnects a device from the Defender service so it stops sending security data while leaving the agent installed.
