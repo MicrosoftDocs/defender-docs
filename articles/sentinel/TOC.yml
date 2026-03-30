@@ -627,6 +627,8 @@
               href: datalake/create-graphs-with-ai.md 
             - name: GQL reference for Sentinel custom graph
               href: datalake/gql-reference-for-sentinel-custom-graph.md
+            - name: Graph REST API
+              href: datalake/graph-rest-api.md
     - name: Microsoft Sentinel MCP server
       items:
         - name: Microsoft Sentinel MCP server overview
