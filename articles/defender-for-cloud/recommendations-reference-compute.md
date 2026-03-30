@@ -4,7 +4,7 @@ description: This article lists all Microsoft Defender for Cloud compute securit
 author: Elazark
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 05/18/2025
+ms.date: 03/30/2026
 ms.author: elkrieger
 ms.custom: generated
 ai-usage: ai-assisted
@@ -45,10 +45,10 @@ To learn about actions that you can take in response to these recommendations, s
 
 **Severity**: High
 
-### Allowlist rules in your adaptive application control policy should be updated
+### Allow list rules in your adaptive application control policy should be updated
 
 **Description**: Monitor for changes in behavior on groups of machines configured for auditing by Defender for Cloud's adaptive application controls. Defender for Cloud uses machine learning to analyze the running processes on your machines and suggest a list of known-safe applications. These are presented as recommended apps to allow in adaptive application control policies.
-(Related policy: [Allowlist rules in your adaptive application control policy should be updated](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f123a3936-f020-408a-ba0c-47873faf1534)).
+(Related policy: [Allow list rules in your adaptive application control policy should be updated](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f123a3936-f020-408a-ba0c-47873faf1534)).
 
 **Severity**: High
 
@@ -279,7 +279,7 @@ Replaces the older recommendation *Virtual machines should encrypt temp disks, c
 
 ### Linux virtual machines should use only signed and trusted boot components
 
-**Description**: With Secure Boot enabled, all OS boot components (boot loader, kernel, kernel drivers) must be signed by trusted publishers. Defender for Cloud has identified untrusted OS boot components on one or more of your Linux machines. To protect your machines from potentially malicious components, add them to your allowlist or remove the identified components.
+**Description**: With Secure Boot enabled, all OS boot components (boot loader, kernel, kernel drivers) must be signed by trusted publishers. Defender for Cloud has identified untrusted OS boot components on one or more of your Linux machines. To protect your machines from potentially malicious components, add them to your allow list or remove the identified components.
 (No related policy)
 
 **Severity**: Low
@@ -771,7 +771,7 @@ If you enable the interactive serial console on an instance, clients can attempt
 A virtual machine instance has four virtual serial ports. Interacting with a serial port is similar to using a terminal window, in that input and output is entirely in text mode and there's no graphical interface or mouse support.
 The instance's operating system, BIOS, and other system-level entities often write output to the serial ports, and can accept input such as commands or answers to prompts.
 Typically, these system-level entities use the first serial port (port 1) and serial port 1 is often referred to as the serial console.
-The interactive serial console doesn't support IP-based access restrictions such as IP allowlists. If you enable the interactive serial console on an instance, clients can attempt to connect to that instance from any IP address.
+The interactive serial console doesn't support IP-based access restrictions such as IP allow lists. If you enable the interactive serial console on an instance, clients can attempt to connect to that instance from any IP address.
 This allows anybody to connect to that instance if they know the correct SSH key, username, project ID, zone, and instance name.
 Therefore interactive serial console support should be disabled.
 
