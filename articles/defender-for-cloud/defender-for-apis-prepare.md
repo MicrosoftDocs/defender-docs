@@ -5,7 +5,7 @@ author: dlanger
 ms.author: dlanger
 ms.service: defender-for-cloud
 ms.topic: checklist
-ms.date: 07/15/2025
+ms.date: 03/31/2026
 ms.custom: references_regions
 ---
 # Support and prerequisites for Defender for APIs deployment
@@ -21,8 +21,15 @@ Defender for APIs is available in the Azure commercial cloud, in these regions:
 - Brazil (Brazil South, Brazil Southeast)
 - Canada (Canada Central, Canada East)
 - Europe (West Europe, North Europe)
+- France (France Central, France South)
+- Germany (Germany West Central, Germany North)
 - India (Central India, South India, West India)
+- Italy (Italy North)
 - Japan (Japan East, Japan West)
+- Korea (Korea Central, Korea South)
+- Norway (Norway East, Norway West)
+- Sweden (Sweden Central, Sweden South)
+- Switzerland (Switzerland North, Switzerland West)
 - UK (UK South, UK West)
 - US (East US, East US 2, West US, West US 2, West US 3, Central US, North Central US, South Central US, West Central US, East US 2 EUAP, Central US EUAP)
 

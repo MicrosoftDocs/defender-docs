@@ -4,7 +4,7 @@ description: Discover how to scan container images for security risks using Micr
 #customer intent: As a DevOps engineer, I want to scan container images for vulnerabilities so that I can ensure the security of my deployments.
 author: Elazark
 ms.author: elkrieger
-ms.date: 11/06/2025
+ms.date: 02/12/2026
 ms.topic: concept-article
 ---
 
@@ -84,4 +84,49 @@ defender scan sbom my-image:latest
 
 ```bash
 defender scan sbom /home/src --sbom-format cyclonedx1.6-xml
+```
+
+## AI Model Scan
+
+Use the `defender scan model` command to scan AI models for security risks including malware, unsafe operators, and exposed secrets. This command supports models stored locally or in cloud registries such as Hugging Face, and common formats including Pickle (`.pkl`), ONNX (`.onnx`), TorchScript (`.pt`), TensorFlow, and SafeTensors.
+
+### Usage
+
+```bash
+defender scan model <target> [--modelscanner-Output <path>]
+```
+
+### Options
+
+| Name                         | Required | Type   | Description                                                  |
+| ---------------------------- | -------- | ------ | ------------------------------------------------------------ |
+| \<target\>                   | Yes      | String | The path to a local model file or directory, or a Hugging Face model URL (for example, `./models/my-model.pkl`, `https://huggingface.co/org/model`). |
+| \-\-modelscanner-Output      | No       | String | Output path for SARIF scan results.                          |
+
+### Supported model formats
+
+- Pickle (`.pkl`)
+- ONNX (`.onnx`)
+- TorchScript (`.pt`)
+- TensorFlow (`.tf`, `.pb`)
+- SafeTensors (`.safetensors`)
+
+### Examples
+
+#### Scan a local model
+
+```bash
+defender scan model ./models/my-model.pkl
+```
+
+#### Scan a Hugging Face model
+
+```bash
+defender scan model "https://huggingface.co/org/model-name"
+```
+
+#### Scan and export SARIF results
+
+```bash
+defender scan model ./models/my-model.onnx --modelscanner-Output results.sarif
 ```

@@ -4,7 +4,7 @@ description: This article lists all Microsoft Defender for Cloud container secur
 author: Elazark
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 03/04/2026
+ms.date: 03/29/2026
 ms.author: elkrieger
 ms.custom: generated
 ai-usage: ai-assisted
@@ -581,6 +581,42 @@ All the [Kubernetes data plane security recommendations](kubernetes-workload-pro
 **Severity**: High
 
 **Type**: Vulnerability Assessment
+
+### AWS Batch job definitions should not run containers in privileged mode
+
+**Description**: Running containers in privileged mode grants them elevated access to the host system, effectively bypassing container isolation controls. This significantly increases the risk of host compromise, unauthorized access to sensitive resources, and lateral movement within the environment. Disabling privileged mode enforces the principle of least privilege and reduces the impact of compromised or malicious container workloads.
+
+**Severity**: High
+
+### AWS Batch job definitions should use a read-only root filesystem
+
+**Description**: Allowing containers to run with a writable root filesystem increases the risk of unauthorized modification of system binaries, configuration files, and runtime artifacts. This weakens container immutability guarantees and enables persistence, malware installation, and evasion techniques in the event of a container compromise. Enforcing a read-only root filesystem strengthens workload isolation and limits the blast radius of security incidents.
+
+**Severity**: Medium
+
+### Read-only root filesystem should be enabled for ECS Containers
+
+**Description**: Defender for Cloud identified ECS task definitions with writable root filesystems. This configuration poses a risk by allowing runtime modifications to critical system paths, potentially enabling tampering, persistence of unauthorized changes, and exploitation of mutable directories. A read-only root filesystem limits these risks by preventing alterations during container execution, aligning with immutable infrastructure and least privilege best practices.
+
+**Severity**: Medium
+
+### Secrets should be configured for containers to prevent the use of sensitive plaintext environment variables
+
+**Description**: Defender for Cloud identified plain text environment variables in your ECS task definitions. This issue arises when sensitive information such as credentials, tokens, or keys is stored directly within container configurations rather than secured using secrets. Plaintext variables can be accessed by any internal process or inadvertently logged, increasing the risk of unauthorized access and secret leakage.
+
+**Severity**: High
+
+### Secure networking modes should be enabled on ECS task definitions
+
+**Description**: Defender for Cloud identified insecure networking configurations in your ECS task definitions. The evaluation found that Fargate tasks must use the awsvpc mode-allocating dedicated elastic network interfaces and security group boundaries-and that EC2 tasks should avoid host or none modes that bypass container isolation. Without secure modes, tasks have increased exposure to lateral movement and other networking risks, potentially compromising workload isolation.
+
+**Severity**: Medium
+
+### Transit encryption should be enabled on ECS task definitions using EFS
+
+**Description**: Defender for Cloud identified ECS task definitions mounting Amazon EFS file systems without transit encryption enabled. Transit encryption secures data traveling between your ECS tasks and EFS mount targets by encrypting in transit, thereby minimizing the risk of network-based interception within your VPC. Without it, sensitive data is exposed to potential unauthorized access. Enabling transit encryption helps ensure that data-in-transit is adequately protected.
+
+**Severity**: Medium
 
 ## Related content
 
