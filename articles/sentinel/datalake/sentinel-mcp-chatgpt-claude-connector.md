@@ -18,15 +18,15 @@ ms.custom:
 > [!IMPORTANT]
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-This article shows you how to enable and use a custom Microsoft Sentinel Model Context Protocol (MCP) connector in ChatGPT by OpenAI or Claude by Anthropic. By using this approach, Security Operations Center (SOC) analysts can run security tasks by using Sentinel MCP. 
+This article shows you how to enable and use a custom Microsoft Sentinel Model Context Protocol (MCP) connector in ChatGPT by OpenAI or Claude by Anthropic. By using this approach, Security Operations Center (SOC) analysts can run security tasks by using Microsoft Sentinel MCP. 
 
 
 ## Prerequisites
 Before configuring a Microsoft Sentinel MCP connector in ChatGPT or Claude, you must have the following prerequisites:
-- A ChatGPT Pro or a Claude Pro, Max, Team, or Enterprise plan subscription  
-- A Microsoft Entra application, which represents ChatGPT or Claude as a client; for more information, see [Add a Microsoft Entra application](#add-a-microsoft-entra-application)
-- [Microsoft Sentinel data lake](sentinel-lake-onboarding.md)
-- Tenant-level administrative privileges
+- A ChatGPT Pro or a Claude Pro, Max, Team, or Enterprise plan subscription.
+- A Microsoft Entra application, which represents ChatGPT or Claude as a client; for more information, see [Add a Microsoft Entra application](#add-a-microsoft-entra-application).
+- [Microsoft Sentinel data lake](sentinel-lake-onboarding.md).
+- Tenant-level administrative privileges.
 
 > [!IMPORTANT]
 > Use roles with the fewest permissions to help improve security for your organization. Global Administrator is a highly privileged role. Limit its use to emergency scenarios when you can't use an existing role.
@@ -47,17 +47,17 @@ To add a Microsoft Entra application, follow these steps:
         ```    
 1. Select **Register**.
 1. On your newly registered app's page, go to **Manage** > **API permissions**, and then select **Add a permission**.
-1. On the **APIs my organization uses** tab, search for `Sentinel Platform Services`.
-1. Choose **SentinelPlatform.DelegatedAccess**, and then select **Add permissions**.
+1. On the **APIs my organization uses** tab, search for ` Platform Services`.
+1. Choose **Platform.DelegatedAccess**, and then select **Add permissions**.
 1. Select **Manage** > **Certificates & secrets** and select **New client secret**.
 1. Add a **Description** for your client secret and set an expiration date. Select **Add**. 
 1. Copy the **Value** and save it in a secure manner. This value disappears once you navigate away from the page. 
 1. Go back to your app's **Overview** page and copy its **Application (client) ID**. 
 
-## Create and use a custom Microsoft Sentinel MCP connector
+## Create and use a custom Microsoft  MCP connector
 
 
-To create and use a custom Microsoft Sentinel connector, follow these steps:
+To create and use a custom Microsoft  connector, follow these steps:
 
 ### [ChatGPT](#tab/chatgpt)
 
@@ -70,15 +70,15 @@ To create and use a custom Microsoft Sentinel connector, follow these steps:
 1. Turn on the ChatGPT developer mode. In ChatGPT, select your account icon, go to **Apps & connectors** > **Advanced Settings**, and toggle **Developer mode**. 
 1.	Go back to **Apps & connectors** and select **Create Connector**.
 1.	Provide the following required details:
-    - **Connector name:** For example, `Microsoft Sentinel MCP`
-    - **MCP Server URL:** `https://sentinel.microsoft.com/mcp/data-exploration`
+    - **Connector name:** For example, `Microsoft  MCP`
+    - **MCP Server URL:** `https://.microsoft.com/mcp/data-exploration`
     - **Client ID:** The **Application (client) ID** of the Microsoft Entra application you created previously.
 1. When prompted, complete the OAuth consent flow. Once the MCP connector authenticates successfully, it appears in your ChatGPT connector list.
 
 **To attach and use the connector:**
 1.	Start a new chat in ChatGPT.
 1.	Select the **(+)** icon next to the message box.
-1.	Select **More** > **Microsoft Sentinel MCP Connector**. The connector's tools become available automatically, and ChatGPT can begin calling Sentinel operations on your behalf.
+1.	Select **More** > **Microsoft  MCP Connector**. The connector's tools become available automatically, and ChatGPT can begin calling Microsoft Sentinel operations on your behalf.
 
 ### [Claude](#tab/claude)
 
