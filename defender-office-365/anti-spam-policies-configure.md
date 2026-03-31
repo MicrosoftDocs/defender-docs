@@ -146,7 +146,7 @@ You can configure anti-spam policies in the Microsoft Defender portal or in [Exc
      >
      > Recipients can't release messages quarantined as high confidence phishing, regardless of how the quarantine policy is configured. If the quarantine policy allows recipients to release messages, they can only _request_ the release of messages quarantined as high confidence phishing.
 
-   - **Bulk moves enabled** (currently in Preview): Slide the toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On** to deliver bulk messages classified as promotional messages to the **Promotions** folder in supported versions of Outlook. For more information, see zzz.
+   - **Bulk moves enabled** (currently in Preview): Slide the toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On** to tag all bulk mail as **Bulk** in supported versions of Outlook, and to deliver bulk mail below the **Bulk email threshold** value to the **Promotions** folder in the mailbox. For more information, see zzz.
 
    - **Intra-Organizational messages to take action on**: Controls whether spam filtering and the corresponding verdict actions are applied to internal messages (messages sent between users within the organization). The available values are:
      - **Default**: The default value. This value is the same as selecting **High confidence phishing messages**.
