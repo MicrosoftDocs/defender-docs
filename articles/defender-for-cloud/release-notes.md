@@ -55,7 +55,7 @@ Defender for Cloud now lets you configure automatic soft deletion of detected ma
 
 You can enable or disable automated malware remediation at the subscription level or the storage account level in Microsoft Defender for Cloud in the Azure portal or with an application programming interface (API).
 
-For more information, see [Built-in automated malware remediation for malicious blobs](/azure/defender-for-cloud/defender-for-storage-configure-malware-scan#built-in-automated-malware-remediation-for-malicious-blobs).  
+Learn how to use [built-in automated malware remediation for malicious blobs](/azure/defender-for-cloud/defender-for-storage-configure-malware-scan#built-in-automated-malware-remediation-for-malicious-blobs).  
 
 ### Support for additional Azure regions for Defender for APIs and API security posture management with Defender CSPM
 
