@@ -34,7 +34,7 @@ Tamper protection in macOS helps prevent unwanted changes to security settings f
 
 You can set the "tamper protection" setting in the following modes:
 
-|Article|Description|
+|Mode|Description|
 |---|---|
 |Disabled|Tamper protection is completely off.|
 |Audit|Tampering operations are logged, but not blocked. This mode is the default after installation.|
@@ -89,7 +89,7 @@ Make sure that the following requirements are met:
 - Ensure that Defender for Endpoint has **Full Disk Access** authorization.
 
    > [!NOTE]
-   > Both having SIP enabled and all configuration done via MDM isn't mandatory, but is required for a fully secured device. Otherwise, a local administrator can make tampering changes that macOS manages. For example, enabling **TCC** (Transparency, Consent & Control) through a Mobile Device Management solution such as [Intune](mac-install-with-intune.md), will eliminates the risk of a Security Administrator revoking **Full Disk Access** Authorization by a local admin.
+   > Both having SIP enabled and all configuration done via MDM isn't mandatory, but is required for a fully secured device. Otherwise, a local administrator can make tampering changes that macOS manages. For example, enabling **TCC** (Transparency, Consent & Control) through a Mobile Device Management solution such as [Intune](mac-install-with-intune.md) eliminates the risk of a Security Administrator revoking **Full Disk Access** Authorization by a local admin.
 
 ## Configure tamper protection on macOS devices
 
@@ -130,15 +130,15 @@ tamper_protection                           : "audit"
 
 1. Use the following command to switch to the most restrictive mode:
 
-```console
-sudo mdatp config tamper-protection enforcement-level --value block
-```
+    ```console
+      sudo mdatp config tamper-protection enforcement-level --value block
+    ```
 
-:::image type="content" source="media/tamper-protection-macos/manual-config-cmd.png" alt-text="Screenshot of the manual configuration config.":::
+    :::image type="content" source="media/tamper-protection-macos/manual-config-cmd.png" alt-text="Screenshot of the manual configuration.":::
 
 
-> [!NOTE]
-> You must use managed configuration profile (deployed via MDM) on production devices. If a local admin changed tamper protection mode via a manual configuration, they can change it to a less restrictive mode at any time as well. If tamper protection mode was set via a managed profile, only a Security Administrator is able to undo it.
+    > [!NOTE]
+    > You must use managed configuration profile (deployed via MDM) on production devices. If a local admin changed tamper protection mode via a manual configuration, they can change it to a less restrictive mode at any time as well. If tamper protection mode was set via a managed profile, only a Security Administrator is able to undo it.
 
 1. Verify the result.
 
