@@ -2,6 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
+ms.custom: references_regions
 ms.date: 03/31/2026
 ---
 
