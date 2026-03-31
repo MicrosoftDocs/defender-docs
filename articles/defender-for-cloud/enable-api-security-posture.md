@@ -4,7 +4,7 @@ description: Learn how to enable API security posture management in Microsoft De
 ms.author: elkrieger
 author: Elazark
 ms.topic: how-to
-ms.date: 01/04/2026
+ms.date: 03/31/2026
 ms.custom: sfi-image-nochange, references_regions
 #customer intent: As a cloud administrator, I want to learn how to enable API security posture management to protect my APIs in Azure API Management, Function Apps, and Logic Apps.
 ---
@@ -34,8 +34,15 @@ API Security Posture Management within Defender CSPM is available in the Azure c
 - Brazil (Brazil South, Brazil Southeast)
 - Canada (Canada Central, Canada East)
 - Europe (West Europe, North Europe)
+- France (France Central, France South)
+- Germany (Germany West Central, Germany North)
 - India (Central India, South India, West India)
+- Italy (Italy North)
 - Japan (Japan East, Japan West)
+- Korea (Korea Central, Korea South)
+- Norway (Norway East, Norway West)
+- Sweden (Sweden Central, Sweden South)
+- Switzerland (Switzerland North, Switzerland West)
 - UK (UK South, UK West)
 - US (East US, East US 2, West US, West US 2, West US 3, Central US, North Central US, South Central US, West Central US, East US 2 EUAP, Central US EUAP)
 

@@ -2,7 +2,8 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 03/30/2026
+ms.custom: references_regions
+ms.date: 03/31/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -32,6 +33,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | Date | Category | Update |
 | -------- | -------- | -------- |
 | March 31, 2026 | GA | [Malware automated remediation in Defender for Storage](#malware-automated-remediation-in-defender-for-storage)|
+| March 31, 2026| Update | [Support for additional Azure regions for Defender for APIs and API security posture management with Defender CSPM](#support-for-additional-azure-regions-for-defender-for-apis-and-api-security-posture-management-with-defender-cspm) |
 | March 30, 2026 | Preview | [AI model security for Azure Machine Learning (Preview)](#ai-model-security-for-azure-machine-learning-preview) |
 | March 29, 2026 | Preview | [Expanded multicloud coverage for AWS and GCP (Preview)](#expanded-multicloud-coverage-for-aws-and-gcp-preview) |
 | March 22, 2026| Update | [File Integrity Monitoring requires MDE agent version 10.8799+ for legacy Windows machines](#file-integrity-monitoring-requires-mde-agent-version-108799-for-legacy-windows-machines) |
@@ -55,9 +57,31 @@ You can enable or disable malware automated remediation at either the subscripti
 
 For more information, see [Built-in automated malware remediation for malicious blobs](/azure/defender-for-cloud/defender-for-storage-configure-malware-scan#built-in-automated-malware-remediation-for-malicious-blobs).  
 
+### Support for additional Azure regions for Defender for APIs and API security posture management with Defender CSPM
+
+
+Microsoft Defender for APIs and API security posture management with Defender CSPM has expanded to provide its capabilities in the following Azure regions:
+- Sweden Central
+- Sweden South
+- Germany West Central
+- Germany North
+- Italy North
+- France Central
+- France South
+- Norway East
+- Norway West
+- Switzerland North
+- Switzerland West
+- Korea Central
+- Korea South
+
+Customers who have Azure API Management services in these regions can now use the capabilities offered by Microsoft Defender for APIs and API security posture management with Defender CSPM.
+API discovery and security posture capabilities in Defender CSPM for Azure Function Apps and Azure Logic Apps have also been expanded to these regions. This feature is still in Preview.
+
+Learn more about [Microsoft Defender for APIs](defender-for-apis-introduction.md) and [API security posture management with Defender CSPM](api-security-posture-overview.md).
+
 ### AI model security for Azure Machine Learning (Preview)
 
-March 30, 2026
 
 Microsoft Defender for Cloud now offers AI model security in preview for Azure Machine Learning registries and workspaces. AI model security helps security teams discover and scan custom AI models for risks before deployment, and review findings in Defender for Cloud.
  
@@ -92,7 +116,6 @@ Learn more about [security recommendations](review-security-recommendations.md).
   
 ### File Integrity Monitoring requires MDE agent version 10.8799+ for legacy Windows machines
 
-March 22, 2026
 
 Due to a pipeline change in Microsoft Defender for Endpoint (MDE), File Integrity Monitoring now requires the **Defender for Servers Windows client (Microsoft Defender for Endpoint agent) version 10.8799 or above** for proper functionality on legacy Windows machines (downlevel clients).
 
