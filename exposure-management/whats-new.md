@@ -1,11 +1,7 @@
 ---
 title: Release notes
 description: This page is updated frequently with the latest updates in Microsoft Security Exposure Management.
-ms.author: dlanger
-author: dlanger
-manager: ornat-spodek
 ms.topic: overview
-ms.service: exposure-management
 ms.date: 01/26/2026
 
 ---
@@ -23,6 +19,12 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 > Get notified when this page is updated by copying and pasting the following URL into your feed reader:
 >
 > `https://aka.ms/msem/rss`
+
+## March 2026
+
+### Updates to Secure Score category calculations for increased accuracy
+
+To improve accuracy and better protect organizational identities, some security recommendations categorized as **Cloud apps** recommendations are now considered identity‑related and grouped under the **Identity** category. While the total Secure Score remains unchanged, individual identity and app scores may change.
 
 ## January 2026
 
@@ -332,15 +334,15 @@ The new Operational Technology (OT) security initiative equips practitioners wit
 
 For more information, see, [Review security initiatives](initiatives.md)
 
-### Microsoft Security Exposure Management is now supported in Microsoft Defender XDR Unified role-based access control (RBAC)
+### Microsoft Security Exposure Management is now supported in Microsoft Defender unified role-based access control (RBAC)
 
-Access control to Microsoft Security Exposure Management can now be managed using Microsoft Defender XDR Unified Role-Based Access Control (RBAC) permissions model with dedicated and granular permissions.
+Access control to Microsoft Security Exposure Management can now be managed using Microsoft Defender unified Role-Based Access Control (RBAC) permissions model with dedicated and granular permissions.
 
 This new capability enables admins to grant their posture managers with access to Exposure Management data and experiences with the least privilege access approach rather than the Microsoft Azure Entra ID roles, which is still supported and can be used if needed.
 
-To learn more about Microsoft Security Exposure Management access management using Microsoft Defender XDR Unified RBAC permissions model, see [Prerequisites and support](/security-exposure-management/prerequisites). 
+To learn more about Microsoft Security Exposure Management access management using Microsoft Defender unified RBAC permissions model, see [Prerequisites and support](/security-exposure-management/prerequisites). 
 
-To learn more about creating new custom roles in Microsoft Defender XDR Unified RBAC, see [Create custom roles in Microsoft Defender XDR Unified RBAC](/defender-xdr/create-custom-rbac-roles).
+To learn more about creating new custom roles in Microsoft Defender unified RBAC, see [Create custom roles in Microsoft Defender unified RBAC](/defender-xdr/create-custom-rbac-roles).
 
 ### Content versioning notifications
 

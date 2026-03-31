@@ -4,13 +4,12 @@ description: Exclude files from Microsoft Defender Antivirus scans based on thei
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 02/20/2026
+ms.date: 03/23/2026
 author: chrisda
 ms.author: chrisda
 ms.topic: how-to
 ms.custom: nextgen
 ms.reviewer: thdoucet
-manager: bagol
 ms.collection:
 - m365-security
 - tier2
@@ -91,10 +90,9 @@ You can use the following methods to define exclusions for Microsoft Defender An
 
 ### Use Intune to configure file name, folder, or file extension exclusions
 
-For more information, see the following articles:
+For more information, see the following article:
 
-- [Configure device restriction settings in Microsoft Intune](/intune/intune-service/configuration/device-restrictions-configure)
-- [Microsoft Defender Antivirus device restriction settings for Windows 10 in Intune](/intune/intune-service/configuration/device-restrictions-windows-10#microsoft-defender-antivirus)
+- [Create a Microsoft Defender Antivirus exclusions policy in Microsoft Intune](configure-exclusions-microsoft-defender-antivirus.md#create-microsoft-defender-antivirus-exclusion-policies-in-intune)
 
 ### Use Configuration Manager to configure file name, folder, or file extension exclusions
 
@@ -148,7 +146,7 @@ Use the following cmdlets in the [Defender module](/powershell/module/defender/)
   > If you already created a list of exclusions using the **Set-MpPreference** or **Add-MpPreference** cmdlets, the next use of **Set-MpPreference** _overwrites_ the existing list of exclusions with the entries you specify.
 
 - [Add-MpPreference](/powershell/module/defender/add-mppreference): Add entries to the existing list of exclusions.
-- [Remove-MpPreference](/powershell/module/defender/add-mppreference): Remove entries from the existing list of exclusions.
+- [Remove-MpPreference](/powershell/module/defender/remove-mppreference): Remove entries from the existing list of exclusions.
 
 Use the following parameters on those cmdlets:
 
@@ -305,8 +303,11 @@ You can retrieve the items in the exclusion list by using one of the following m
 
 You can use the [MpCmdRun.exe command-line tool](./command-line-arguments-microsoft-defender-antivirus.md) in Microsoft Defender Antivirus version 4.18.2111-5.0 or later (December 2021) to verify whether specific folder paths or file and folder paths are excluded from scanning by running the following commands in an elevated command prompt (a Command Prompt window you opened by selecting **Run as administrator**):
 
+> [!TIP]
+> The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
+
 ```dos
-for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n') do if not defined _done cd "%ProgramData%\Microsoft\Windows Defender\Platform\%d"
+(set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
 
 MpCmdRun.exe -CheckExclusion -Path <PathAndFile or Path>
 ```
@@ -330,9 +331,10 @@ For example, the command `MpCmdRun.exe -CheckExclusion -Path C:\Data\Test` retur
 Run the following commands in an elevated PowerShell window:
 
 ```PowerShell
-(Get-MpPreference).ExclusionExtension
-
-(Get-MpPreference).ExclusionPath
+$p=Get-MpPreference; @(
+  $p.ExclusionExtension | ForEach-Object {[pscustomobject]@{Type='ExclusionExtension'; Value=$_}}
+  $p.ExclusionPath      | ForEach-Object {[pscustomobject]@{Type='ExclusionPath';      Value=$_}}
+)
 ```
 
 For more information, see [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Defender Antivirus cmdlets](/powershell/module/defender/).

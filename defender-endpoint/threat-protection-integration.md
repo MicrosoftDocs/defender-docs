@@ -6,7 +6,6 @@ ms.author: lwainstein
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

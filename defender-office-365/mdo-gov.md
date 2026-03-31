@@ -2,7 +2,6 @@
 title: Microsoft Defender for Office 365 for US Government customers
 author: chrisda
 ms.author: chrisda
-manager: bagol
 audience: Admin
 ms.topic: overview
 ms.localizationpriority: high
