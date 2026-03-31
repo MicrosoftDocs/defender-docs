@@ -75,7 +75,7 @@ The bulk senders insight is available in the following locations in the Defender
 
 For more information, see [Bulk senders insight](anti-spam-bulk-senders-insight.md).
 
-## Deliver lower BCL bulk email to the Promotions folder
+## Deliver bulk email below the BCL threshold to the Promotions folder
 
 > [!NOTE]
 > The features described in this section are currently in Preview, aren't available to all organizations, and are subject to change.
@@ -118,14 +118,14 @@ But you can use anti-spam policies to deliver bulk messages below the BCL thresh
 After you complete the previous steps, the included users have the following experiences, based on their version of Outlook:
 
 - **Outlook on the web (formerly known as Outlook Web App or OWA) and Outlook for Windows**:
-  - Bulk messages below the BCL threshold that invokes the bulk action in the anti-spam policy are moved to the **Promotions** folder.
+  - Bulk messages below the BCL threshold that invokes the bulk action in the anti-spam policy are delivered to the **Promotions** folder.
   - All bulk messages (BCL 1 to 9) have the **Bulk** tag applied, regardless of their location in the mailbox.
   - Users can use the **Bulk** tag as a condition in [Inbox rules](https://support.microsoft.com/office/8400435c-f14e-4272-9004-1548bb1848f2).
 
 - **Classic Outlook**: Not available at this time.
 
 - **Outlook for iOS and Android**:
-  - Bulk messages below the BCL threshold that invokes the bulk action in the anti-spam policy are moved to the **Promotions** folder.
+  - Bulk messages below the BCL threshold that invokes the bulk action in the anti-spam policy are delivered to the **Promotions** folder.
 
 ### About the Promotions folder
 
@@ -134,7 +134,7 @@ After you complete the previous steps, the included users have the following exp
     - If you soft delete the folder (available in **Deleted items**), bulk messages are still delivered to the folder in **Deleted items**.
     - If you hard delete the folder (available in Recoverable items), the folder is recreated within approximately 5 minutes.
     - If an unrelated **Promotions** folder already exists in the mailbox, the new folder is named **Promotions(1)**.
-    - If you rename the folder, it continues to work (the name of the folder isn't important).
+    - If you rename the **Promotions** folder, it continues to work (the name of the folder isn't important).
   - Bulk email that would normally be delivered to the **Promotions** folder is delivered elsewhere (typically, to the Inbox) in the following scenarios:
     - The bulk sender is in the user's [Safe Senders list in Outlook](create-safe-sender-lists-in-office-365.md#use-outlook-safe-senders).
     - The bulk sender is in an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) of the organization.
