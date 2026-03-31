@@ -619,7 +619,7 @@
             href: datalake/sentinel-mcp-use-tool-azure-ai-foundry.md
           - name: Use Sentinel MCP tools in Visual Studio Code
             href: datalake/sentinel-mcp-use-tool-visual-studio-code.md
-          - name: Use Sentinel MCP connector in ChatGPT or Claude
+          - name: Use MCP connector in ChatGPT or Claude
             href: datalake/sentinel-mcp-chatgpt-claude-connector.md
         - name: Tool collection in Microsoft Sentinel MCP
           items:
