@@ -3,7 +3,7 @@ title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 03/31/2026
+ms.date: 04/01/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -27,6 +27,25 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 4. In Category, specify whether the item is GA, Preview, Update, Deprecation, Upcoming update, Upcoming deprecation.-->
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
+
+## April 2026
+
+| Date | Category | Update |
+| -------- | -------- | -------- |
+| April 1, 2026 | Upcoming change | [Update to Defender for SQL servers on machines plan for Fairfax customers](#update-to-defender-for-sql-servers-on-machines-plan-for-fairfax-customers) |
+
+### Update to Defender for SQL servers on machines plan for Fairfax customers
+
+April 1, 2026
+
+The Defender for SQL Server on machines plan in Microsoft Defender for Cloud protects SQL Server instances hosted on Azure, AWS, GCP, and on-premises machines.
+
+To simplify onboarding and improve protection coverage, we're releasing an enhanced agent solution for Fairfax customers at the end of April. The new solution uses the existing SQL infrastructure, so you no longer need to deploy the Azure Monitor Agent (AMA).
+
+**Required customer actions:**
+
+- [Update Defender for SQL Servers on Machines plan configuration](update-sql-machine-configuration.md): If you enabled the Defender for SQL Server on machines plan before April 2026, follow these instructions to update your configuration.
+- [Verify SQL Server instances protection status](verify-machine-protection.md): With an estimated starting date of May 2026, you must verify the protection status of your SQL Server instances across your environments. Learn how to [troubleshoot deployment issues for Defender for SQL on machines configuration](troubleshoot-sql-machines-guide.md).
 
 ## March 2026
 
