@@ -41,6 +41,7 @@ API Security Posture Management within Defender CSPM is available in the Azure c
 - Japan (Japan East, Japan West)
 - Korea (Korea Central, Korea South)
 - Norway (Norway East, Norway West)
+- South Africa (South Africa North, South Africa West)
 - Sweden (Sweden Central, Sweden South)
 - Switzerland (Switzerland North, Switzerland West)
 - UK (UK South, UK West)

@@ -74,6 +74,8 @@ Microsoft Defender for APIs and API security posture management with Defender CS
 - Switzerland West
 - Korea Central
 - Korea South
+- South Africa North
+- South Africa West
 
 Customers who have Azure API Management services in these regions can now use the capabilities offered by Microsoft Defender for APIs and API security posture management with Defender CSPM.
 API discovery and security posture capabilities in Defender CSPM for Azure Function Apps and Azure Logic Apps have also been expanded to these regions. This feature is still in Preview.
