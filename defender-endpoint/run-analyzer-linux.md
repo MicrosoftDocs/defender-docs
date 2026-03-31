@@ -47,11 +47,14 @@ To run this client analyzer, follow these steps:
     ```bash
     cd /opt/microsoft/mdatp/tools/client_analyzer/binary
     ```
-1. Run the tool with `root privileges` to generate a diagnostic package:
+1. Run the tool with root privileges to generate a diagnostic package:
 
    ```bash
    sudo ./MDESupportTool -d
    ```
+
+1. You can find the the diagnostic package ZIP file in the `/tmp` directory.
+
 ### Download and run the Client Analyzer standalone binary tool
 
 To use the standalone ClientAnalyzer binary, complete the following steps.
@@ -90,7 +93,7 @@ To use the standalone ClientAnalyzer binary, complete the following steps.
      ```bash
      unzip -q SupportToolLinuxamd64Binary.zip
      ```
-1. Run the tool with `root priviledges` to generate a diagnostic package:
+1. Run the tool with root priviledges to generate a diagnostic package:
 
    ```bash
    sudo ./MDESupportTool -d
@@ -124,7 +127,7 @@ To run this client analyzer, follow these steps:
     ```bash
     cd /opt/microsoft/mdatp/tools/client_analyzer/python
     ```
-1. Run with `root privileges` to install required dependencies.
+1. Run with root privileges to install required dependencies.
 
     ```bash
     sudo ./mde_support_tool.sh
@@ -173,7 +176,7 @@ To run this client analyzer, follow these steps:
     ./mde_support_tool.sh
     ```
 
-1. To collect the diagnostic package and generate the result archive file, run again as root:
+1. To collect the diagnostic package and generate the result archive file, run again with root priviledges:
 
     ```bash
     sudo ./mde_support_tool.sh -d
@@ -518,7 +521,7 @@ The XMDE Client Analyzer tool can be downloaded as a [binary](https://aka.ms/XMD
 - For execution, the `acl` package is required.
 
 > [!IMPORTANT]
-> Window uses the Carriage Return and Line Feed invisible characters to represent the end of one line and beginning of a new line in a file. Linux systems use only the Line Feed invisible character at the end of its file lines. When you use the following scripts, if done on Windows, this difference can result in errors and failures of the scripts to run. A potential solution to this is to utilize the Windows Subsystem for Linux and the `dos2unix` package to reformat the script so it aligns with the Unix and Linux format standard.
+> Window uses the carriage return and line feed invisible characters to represent the end of one line and beginning of a new line in a file. Linux systems use only the Line Feed invisible character at the end of its file lines. When you use the following scripts, if done on Windows, this difference can result in errors and failures of the scripts to run. A potential solution to this is to utilize the Windows Subsystem for Linux (WSL) and the `dos2unix` package to reformat the script so it aligns with the Unix and Linux format standard.
 
 ### Install the XMDE Client Analyzer
 
