@@ -40,7 +40,9 @@ The binary version of client analyzer is made available in two ways:
 > [!NOTE]
 > Starting with the Defender for Endpoint version `101.25082.0000`, the Client Analyzer is shipped with an agent. It can be found at the following location: `/opt/microsoft/mdatp/tools/client_analyzer/binary`
 
-To run this client analyzer, follow these steps:
+Running this tool generates a diagnostic package as a `.zip` file in the `/tmp` directory.
+
+To run the Client Analyzer, follow these steps:
 
 1. Go to the directory `/opt/microsoft/mdatp/tools/client_analyzer/binary`:
 
@@ -52,8 +54,6 @@ To run this client analyzer, follow these steps:
    ```bash
    sudo ./MDESupportTool -d
    ```
-
-1. You can find the the diagnostic package ZIP file in the `/tmp` directory.
 
 ### Download and run the Client Analyzer standalone binary tool
 
