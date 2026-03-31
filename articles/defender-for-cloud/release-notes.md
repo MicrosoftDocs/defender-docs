@@ -51,7 +51,7 @@ March 31, 2026
 
 Malware automated remediation in Defender for Storage malware scanning is now generally available. 
 
-With this new capability, malicious blobs detected during on-upload or on-demand scanning can be automatically soft-deleted. This ensures harmful content is quarantined while still recoverable for further investigation. 
+Defender for Cloud now lets you configure automatic soft deletion of detected malicious blobs during on-upload or on-demand scanning. Auto-deletion keeps harmful content in quarantine and makes it recoverable for further investigation.
 
 You can enable or disable malware automated remediation at either the subscription or storage account level from the Microsoft Defender for Cloud tab in the Azure portal, or by using the API. 
 
