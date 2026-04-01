@@ -127,7 +127,7 @@ Installing and configuring the Microsoft Sentinel's unified MCP server carries n
 
 To learn more about the entity analyzer, see [Entity analyzer](/azure/sentinel/datalake/sentinel-mcp-data-exploration-tool#entity-analyzer).  
 
-AI compute used by the analyzer to reason over the data doesn't incur any cost while this tool is in preview. Once the entity analyzer becomes generally available, customers are charged for the Security Compute Units (SCUs) for AI reasoning used to generate the entity risk analysis required to deliver the reasoned entity risk analysis based on prevalence, threat intelligence, and relationships. 
+Customers are charged for the Security Compute Units (SCUs) used for AI reasoning that generates the entity risk analysis, which is based on prevalence, threat intelligence, and relationships.
 
 Existing Security Copilot entitlements apply. Any usage that exceeds your Microsoft 365 E5 entitlement incurs additional charges. SCU overages are billed only when usage exceeds your provisioned amount, and customers are charged only for the SCUs consumed. For more information, see [Sentinel MCP billing](/azure/sentinel/datalake/sentinel-mcp-billing) and [Get started with Microsoft Security Copilot](/copilot/security/get-started-security-copilot) for SCUs information.  
 
