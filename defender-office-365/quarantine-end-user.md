@@ -19,12 +19,12 @@ ms.custom:
 description: Users can learn how to view and manage quarantined email messages in Microsoft 365 that were meant to be delivered to them.
 ms.service: defender-office-365
 adobe-target: true
-ms.date: 07/08/2025
+ms.date: 04/01/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
-#customer intent:  As an end user who receives email in Microsoft 365, I want clear, step‑by‑step guidance to find, view, and manage messages and files placed in quarantine (view, preview, release, request release, delete, and allow/block senders) so I can recover legitimate messages and keep my mailbox secure. 
+#customer intent:  As an end user who receives email in Microsoft 365, I want clear, step‑by‑step guidance to find, view, and manage messages and files placed in quarantine (view, preview, release, request release, delete, and allow/block senders) so I can recover legitimate messages and keep my mailbox secure.
 ---
 
 # Manage quarantined messages and files as a user
@@ -192,8 +192,10 @@ In the details flyout that opens, the following information is available:
     - The message matched a mail flow rule (**Transport rule**).
     - The message was identified as **Malware**.
   - **Policy type**
-  - **Recipient count**
-  - **Recipients**: If the message contains multiple recipients, you might need to select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: \> **Preview message** or :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: \> **View message header** to see the complete list of recipients.
+  - **Recipient**
+
+    If the original message was sent to multiple recipients, select :::image type="icon" source="media/m365-cc-sc-preview-message-icon.png" border="false"::: **Preview message** or :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: **View message headers** to see the complete list of recipients.
+
   - **Sender override reason**
   - **Released by**:
     - User released: The user's email address is shown.
