@@ -27,8 +27,8 @@ This article provides information on pricing, limits, and availability when sett
 Microsoft Sentinel pricing is based on the tier that you ingest data into. The **data lake tier** is a cost-effective option for ingesting secondary security data and querying security data over the long term. In this tier, Microsoft Sentinel's unified MCP server interface is offered **at no extra cost**. You pay for invoking tools that search and retrieve data by using Kusto Query Language (KQL) queries from Microsoft Sentinel data lake. With Microsoft Sentinel data lake's billing model, you pay as you go for queries that retrieve data. [Read more about Microsoft Sentinel data lake’s pricing here](../billing.md#data-lake-tier).
 
 ### Microsoft Sentinel entity analyzer tool
-You pay for the KQL queries the [entity analyzer](sentinel-mcp-data-exploration-tool.md#entity-analyzer-preview)
-performs over the Microsoft Sentinel data lake. AI compute used by the analyzer to reason over this data doesn't incur any cost while this tool is in preview. When the entity analyzer becomes generally available, you get charged for the Security Compute Units (SCUs) required to deliver the reasoned entity risk analysis based on prevalence, threat intelligence, and relationships. 
+You pay for the KQL queries the [entity analyzer](sentinel-mcp-data-exploration-tool.md#entity-analyzer)
+performs over the Microsoft Sentinel data lake. You're charged for the Security Compute Units (SCUs) required to deliver the reasoned entity risk analysis based on prevalence, threat intelligence, and relationships.  
 
 ### Triage tool
 
@@ -48,7 +48,7 @@ The following limits are specific to Microsoft Sentinel data lake MCP tools:
 | Query window for tools | 800 characters |
 
 ### Microsoft Sentinel entity analyzer tool
-Each tenant can use the entity analyzer MCP tool up to the following limits while this feature is in preview:
+Each tenant can use the entity analyzer MCP tool up to the following limits:
 - 250 total runs an hour
 - 500 total runs a day 
 - 10 concurrent runs at a time (based on available service capacity)
