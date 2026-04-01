@@ -1,6 +1,6 @@
 ---
-title: Permissions in Microsoft Defender XDR Unified role-based access control (RBAC)
-description: Learn about the custom permissions available in Microsoft Defender XDR Security role-based access control (RBAC)
+title: Permissions in Microsoft Defender unified role-based access control (RBAC)
+description: Learn about the custom permissions available in Microsoft Defender Security role-based access control (RBAC)
 ms.service: defender-xdr
 ms.author: monaberdugo
 author: mberdugo
@@ -25,10 +25,10 @@ appliesto:
 - Microsoft Defender for Cloud Apps
 ---
 
-# Permissions in Microsoft Defender XDR Unified role-based access control (RBAC)
+# Permissions in Microsoft Defender unified role-based access control (RBAC)
 <a name='microsoft-365-defender-unified-rbac-permission-details'></a>
 
-Use Microsoft Defender Unified role-based access control (RBAC) to manage permissions for users and groups in your organization. Unified RBAC supports selecting permissions from each permission group to customize a role.
+Use Microsoft Defender unified role-based access control (RBAC) to manage permissions for users and groups in your organization. Unified RBAC supports selecting permissions from each permission group to customize a role.
 
 This article provides details about the permissions available to configure for your users, based on the tasks they need to do.
 
@@ -95,5 +95,5 @@ The following permissions can be assigned for both Microsoft Sentinel SIEM and d
 ## Next steps
 
 - [Create custom roles](create-custom-rbac-roles.md)
-- [Activate Microsoft Defender XDR Unified RBAC](activate-defender-rbac.md)
+- [Activate Microsoft Defender unified RBAC](activate-defender-rbac.md)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
