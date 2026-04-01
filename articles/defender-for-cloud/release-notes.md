@@ -40,8 +40,11 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 April 1, 2026
 
 The service helps U.S. federal and government agencies, including the Department of Defense (DoD) and civilian agencies, secure Kubernetes workloads by providing cloud security posture management, vulnerability assessment, and runtime threat protection for containerized environments.
+
 The Defender for Containers plan in Azure Government cloud now aligns with the commercial cloud offering in feature coverage, including agentless Kubernetes discovery, comprehensive inventory, attack path analysis, enhanced risk hunting, vulnerability assessment, compliance and runtime protection capabilities.
+
 For more information about Microsoft Defender for Containers, see [Overview of Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction).
+
 For more information about feature and cloud availability, see [Containers support matrix in Defender for Cloud](/azure/defender-for-cloud/support-matrix-defender-for-containers).
 
 ### Update to Defender for SQL servers on machines plan for Fairfax customers
