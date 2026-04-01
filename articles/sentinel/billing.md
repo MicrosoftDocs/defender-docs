@@ -5,7 +5,7 @@ description: Learn how to plan your Microsoft Sentinel costs, and understand pri
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: concept-article
-ms.date: 03/11/2026
+ms.date: 04/01/2026
 ms.collection: usx-security
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
@@ -74,6 +74,44 @@ The data lake tier incurs charges based on usage of various data lake capabiliti
 - **Data lake query** charges apply per compute hour used when using within notebook sessions, running notebook jobs, or building nodes and edges for custom graphs. Compute hours are calculated by multiplying the number of cores in the pool selected for the notebook with the amount of time a session was active or a job was running. Data lake notebook sessions and jobs are available in pools of four12, 32, and 80 vCores.
 
 Once onboarded, usage from Microsoft Sentinel workspaces begins to be billed through the previously described meters rather than existing long-term retention (formerly known as Archive), search, or auxiliary logs ingestion meters.
+
+### Sentinel graph 
+
+#### Embedded graphs in Defender and Purview Portals  
+
+Hunting graph and blast radius visualizations in the Microsoft Defender portal, along with Insider Risk Management and Data Security Investigations in the Microsoft Purview portal, do not incur any billing or consumption charges. To learn more about the Microsoft Purview and Defender graphs powered by Sentinel, see [Microsoft Sentinel graph](/azure/sentinel/datalake/sentinel-graph-overview?tabs=defender).
+
+Accessing Defender and Purview graphs through the MCP graph tool collection results in additional charges.
+
+#### Custom graphs 
+
+Sentinel custom graph billing is consumption based, with graph operations charged per compute hour. To learn more about the Microsoft Sentinel custom graphs, see [Custom graphs](/azure/sentinel/datalake/custom-graphs-overview). 
+
+The following graph operations are billed per compute hour under the graph meter: 
+
+- Creating a graph using notebooks in Visual Studio Code.  
+
+- Querying a graph using notebooks in Visual Studio Code. 
+
+- Querying a graph using Sentinel graphs experiences via Defender portal. 
+
+- Querying a graph using Graph Query APIs. 
+
+- Querying a graph using Sentinel MCP graph tool collection. 
+
+#### Graph charges  
+
+Graph charges are calculated as core hours times execution time multiplied by the number of vCores in the selected SKU times the Sentinel graph meter price. There is a single graph SKU option which uses 49 vCores for graph build operations and 6 vCores for graph queries, with a minimum query execution time of one minute. 
+
+For example, when you run a Notebook job for one hour and use graph APIs to build a graph that takes five minutes, the graph cost is calculated as: 
+
+`cost = 49 × (Price per vCore hour) × (5/60)`
+
+Similarly, if your graph queries take one minute to complete, the cost is determined by: 
+
+`cost = 6 × (Price per vCore hour) × (1/60)`
+
+Any notebook/Spark compute and Data lake storage consumed for data transformations to build node and edges for the graph is billed independently per existing Sentinel Data lake meters (Data lake storage and Advanced Data Insights). 
 
 ### Understand your Microsoft Sentinel bill
 
