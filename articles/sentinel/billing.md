@@ -71,7 +71,7 @@ The data lake tier incurs charges based on usage of various data lake capabiliti
 - **Data lake ingestion** is charged per GB for all data ingested into tables with retention set to data lake tier only. Data lake ingestion charges don't apply when data is ingested into tables with retention set to include both analytic and data lake tiers.
 - **Data processing** is charged per GB for data ingested into tables with retention set to data lake tier only. It supports transformations like redaction, splitting, filtering, and normalization. Data processing charges don't apply when data is ingested into tables with retention set to include both analytic and data lake tiers.
 - **Data lake storage** charges are applied per GB per month for any data that remains in the data lake tier after the analytic tier retention period ends. Charges are based on a simple and uniform data compression rate of 6:1. For example, if you retain 600 GB of raw data, it's billed as 100 GB of compressed data.
-- **Data lake query** charges apply per compute hour used when using within notebook sessions, running notebook jobs, or building nodes and edges for custom graphs. Compute hours are calculated by multiplying the number of cores in the pool selected for the notebook with the amount of time a session was active or a job was running. Data lake notebook sessions and jobs are available in pools of four12, 32, and 80 vCores.
+- **Data lake query** charges apply per compute hour used when using within notebook sessions, running notebook jobs, or building nodes and edges for custom graphs. Compute hours are calculated by multiplying the number of cores in the pool selected for the notebook with the amount of time a session was active or a job was running. Data lake notebook sessions and jobs are available in pools of 12, 32, and 80 vCores.
 
 Once onboarded, usage from Microsoft Sentinel workspaces begins to be billed through the previously described meters rather than existing long-term retention (formerly known as Archive), search, or auxiliary logs ingestion meters.
 
@@ -87,7 +87,7 @@ Accessing Defender and Purview graphs through the MCP graph tool collection resu
 
 Sentinel custom graph billing is consumption based, with graph operations charged per compute hour. To learn more about the Microsoft Sentinel custom graphs, see [Custom graphs](/azure/sentinel/datalake/custom-graphs-overview). 
 
-The following graph operations are billed per compute hour under the graph meter: 
+The following custom graph operations are billed per compute hour under the graph meter: 
 
 - Creating a graph using notebooks in Visual Studio Code.  
 
@@ -135,9 +135,9 @@ In addition, when using entity analyzer, customers are charged for the KQL queri
 
 ##### Microsoft Sentinel MCP triage tool  
 
-To learn more about the triage too, see [Triage tool collection](/azure/sentinel/datalake/sentinel-mcp-triage-tool). 
+To learn more about the triage tool, see [Triage tool collection](/azure/sentinel/datalake/sentinel-mcp-triage-tool). 
 
-Installing, configuring, and using the triage tool carries no cost, provided you're onboarded to the required products and services. You can access to triage at no additional charge when Microsoft Defender, Microsoft Defender for Endpoint, or Microsoft Sentinel is set up in the Microsoft Defender portal. 
+Installing, configuring, and using the triage tool carries no cost, provided you're onboarded to the required products and services. You can get access to triage at no additional charge when Microsoft Defender, Microsoft Defender for Endpoint, or Microsoft Sentinel is set up in the Microsoft Defender portal. 
 
 ### Understand your Microsoft Sentinel bill
 
