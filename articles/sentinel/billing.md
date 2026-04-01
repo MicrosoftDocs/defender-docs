@@ -85,7 +85,7 @@ Accessing Defender and Purview graphs through the MCP graph tool collection resu
 
 #### Custom graphs 
 
-Sentinel custom graph billing is consumption based, with graph operations charged per compute hour. To learn more about the Microsoft Sentinel custom graphs, see [Custom graphs](/azure/sentinel/datalake/create-custom-graphs). 
+Sentinel custom graph billing is consumption based, with graph operations charged per compute hour. To learn more about the Microsoft Sentinel custom graphs, see [Custom graphs](/azure/sentinel/datalake/custom-graphs-overview). 
 
 The following graph operations are billed per compute hour under the graph meter: 
 
