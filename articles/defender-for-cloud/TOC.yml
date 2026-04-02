@@ -852,7 +852,7 @@
             href: cluster-security-dashboard.md
           - name: How to use the AKS Security Dashboard
             href: how-to-use-azure-kubernetes-service-dashboard.md
-      - name: Investigate clusters with Cloud Security Explorer
+      - name: Investigate Kubernetes vulnerabilities with Cloud Security Explorer
         displayName: k8s, containers
         href: cloud-security-explorer-kubernetes-clusters.md
       - name: Defender for container registries (deprecated)
