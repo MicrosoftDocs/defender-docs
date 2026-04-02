@@ -3,7 +3,7 @@ title: The Microsoft cloud security benchmark in Microsoft Defender for Cloud
 description: Learn about the Microsoft cloud security benchmark in Microsoft Defender for Cloud.
 author: dlanger
 ms.author: dlanger
-ms.topic: article
+ms.topic: concept-article
 ms.date: 10/29/2025
 ---
 

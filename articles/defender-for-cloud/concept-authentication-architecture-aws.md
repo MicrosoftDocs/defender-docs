@@ -1,7 +1,7 @@
 ---
 title: Authentication architecture for AWS connectors
 description: Learn how Microsoft Defender for Cloud authenticates to AWS using short-lived credentials, federated trust, and role-based access controls.
-ms.topic: article
+ms.topic: concept-article
 ms.date: 11/02/2025
 ---
 

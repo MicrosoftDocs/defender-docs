@@ -2,7 +2,7 @@
 title: Defender for Cloud glossary
 description: The glossary provides a brief description of important Defender for Cloud platform terms and concepts.
 ms.date: 09/09/2024
-ms.topic: article
+ms.topic: glossary
 ---
 
 # Defender for Cloud glossary
