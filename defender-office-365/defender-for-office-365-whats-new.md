@@ -40,9 +40,8 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## March 2026
 
-- **Expanding User reporting in Teams to include Calls**: Users can completed or missed [Microsoft Teams calls](submissions-teams.md) one to one calls from the call history as malicious (scam) or non malicious (non scam) to the specified reporting mailbox, or Microsoft and the reporting mailbox via [user reported settings](submissions-user-reported-messages-custom-mailbox.md).
-- **Added support for contextual Teams messages in User reported Teams Messages**:  When Users report[Microsoft Teams messages](submissions-teams.md) from chats, standard, shared, and private channels, meeting conversations to Microsoft as malicious (security risk) fifteen messages before the reported message and after the reported message (if present) is shared for analysis. 
-
+- **Expanding User reporting in Teams to include Calls**: Users can reported completed or missed one-to-one [Microsoft Teams calls](submissions-teams.md) from the call history as malicious (scam) or non malicious (non-scam) to the specified reporting mailbox, or Microsoft and the reporting mailbox via [user reported settings](submissions-user-reported-messages-custom-mailbox.md).
+- **Added support for contextual Teams messages in User reported Teams Messages**: When Users report [Microsoft Teams messages](submissions-teams.md) from chats, channels (standard, shared, and private), and meeting conversations to Microsoft as malicious (security risk), up to fifteen messages before and after the reported message are shared for analysis.
 
 ## February 2026
 
