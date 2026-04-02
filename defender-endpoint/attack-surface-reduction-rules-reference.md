@@ -10,11 +10,11 @@ ms.author: chrisda
 ms.reviewer: sugamar, ericlaw
 ms.custom: asr
 ms.topic: reference
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 01/20/2026
+ms.date: 04/02/2026
 search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
@@ -46,68 +46,68 @@ This article is a technical reference for ASR rules that provides the following 
 
 ## Attack surface reduction rules
 
-The available ASR rules and their corresponding GUID values are described in the following table.
+Attack surface reduction rules are grouped into the following categories:
 
-- **Standard protection rules** are the minimum set of ASR rules we recommend you always enable in **Block** mode<sup>\*</sup>. These rules typically have minimal or no noticeable effect on users. To quickly implement these ASR rules, see [Simplified standard protection option](attack-surface-reduction-rules-report.md#simplified-standard-protection-option).
+- **Standard protection rules** are the minimum set of ASR rules we recommend you always enable in **Block** mode without the need for extensive testing.<sup>\*</sup>. These rules typically have minimal or no noticeable effect on users. To quickly implement these ASR rules, see [Simplified standard protection option](attack-surface-reduction-rules-report.md#simplified-standard-protection-option).
 
   <sup>\*</sup> The notable exception is the [Block persistence through WMI event subscription](#block-persistence-through-wmi-event-subscription) ASR rule **if** you use Microsoft Configuration Manager (formerly known as Microsoft Endpoint Configuration Manager and Microsoft System Center Configuration Manager) to manage devices. The Configuration Manager client relies heavily on WMI, so we recommend extensive testing in **Audit** mode before you activate the rule in **Block** mode.
 
-- For other ASR rules, you should always test them in **Audit** mode before you activate them in **Block** or **Warn** mode as described in the [Attack surface reduction rules deployment guide](attack-surface-reduction-rules-deployment.md).
+- **Other ASR rules** provide important protection, but require testing in **Audit** mode before you activate them in **Block** or **Warn** mode as described in the [Attack surface reduction rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
-Detailed descriptions of each rule are available in the links to the end of this article.
+The available ASR rules and their corresponding GUID values are described in the following table. Links in the rule names take you to detailed descriptions later in this article.
 
 |Rule name|GUID|
 |---|---|
 |**Standard protection rules**||
 |[Block abuse of exploited vulnerable signed drivers (Device)](#block-abuse-of-exploited-vulnerable-signed-drivers)|56a863a9-875e-4185-98a7-b882c64b5ce5|
-|[Block credential stealing from the Windows local security authority subsystem](#block-credential-stealing-from-the-windows-local-security-authority-subsystem)¹ ² ³|9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2|
-|[Block persistence through WMI event subscription](#block-persistence-through-wmi-event-subscription)⁴ ⁵|e6db77e5-3df2-4cf1-b95a-636979351e5b|
+|[Block credential stealing from the Windows local security authority subsystem](#block-credential-stealing-from-the-windows-local-security-authority-subsystem)[[¹](#Rules1)] [[²](#Rules2)] [[³](#Rules3)]|9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2|
+|[Block persistence through WMI event subscription](#block-persistence-through-wmi-event-subscription)[[⁴](#Rules4)] [[⁵](#Rules5)]|e6db77e5-3df2-4cf1-b95a-636979351e5b|
 |**Other ASR rules**||
-|[Block Adobe Reader from creating child processes](#block-adobe-reader-from-creating-child-processes)²|7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c|
+|[Block Adobe Reader from creating child processes](#block-adobe-reader-from-creating-child-processes)[[²](#Rules2)]|7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c|
 |[Block all Office applications from creating child processes](#block-all-office-applications-from-creating-child-processes)|d4f940ab-401b-4efc-aadc-ad5f3c50688a|
 |[Block executable content from email client and webmail](#block-executable-content-from-email-client-and-webmail)|be9ba2d9-53ea-4cdc-84e5-9b1eeee46550|
-|[Block executable files from running unless they meet a prevalence, age, or trusted list criterion](#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)⁶ ⁷|01443614-cd74-433a-b99e-2ecdc07bfc25|
-|[Block execution of potentially obfuscated scripts](#block-execution-of-potentially-obfuscated-scripts)⁷|5beb7efe-fd9a-4556-801d-275e5ffc04cc|
+|[Block executable files from running unless they meet a prevalence, age, or trusted list criterion](#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)[[⁶](#Rules6)] [[⁷](#Rules7)]|01443614-cd74-433a-b99e-2ecdc07bfc25|
+|[Block execution of potentially obfuscated scripts](#block-execution-of-potentially-obfuscated-scripts)[[⁷](#Rules7)]|5beb7efe-fd9a-4556-801d-275e5ffc04cc|
 |[Block JavaScript or VBScript from launching downloaded executable content](#block-javascript-or-vbscript-from-launching-downloaded-executable-content)|d3e037e1-3eb8-44c8-a917-57927947596d|
-|[Block Office applications from creating executable content](#block-office-applications-from-creating-executable-content)²|3b576869-a4ec-4529-8536-b80a7769e899|
-|[Block Office applications from injecting code into other processes](#block-office-applications-from-injecting-code-into-other-processes)² ³|75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84|
-|[Block Office communication application from creating child processes](#block-office-communication-application-from-creating-child-processes)²|26190899-1602-49e8-8b27-eb1d0a1ce869|
-|[Block process creations originating from PSExec and WMI commands](#block-process-creations-originating-from-psexec-and-wmi-commands)² ⁸|d1e49aac-8f56-4280-b9ba-993a6d77406c|
+|[Block Office applications from creating executable content](#block-office-applications-from-creating-executable-content)[[²](#Rules2)]|3b576869-a4ec-4529-8536-b80a7769e899|
+|[Block Office applications from injecting code into other processes](#block-office-applications-from-injecting-code-into-other-processes)[[²](#Rules2)] [[³](#Rules3)]|75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84|
+|[Block Office communication application from creating child processes](#block-office-communication-application-from-creating-child-processes)[[²](#Rules2)]|26190899-1602-49e8-8b27-eb1d0a1ce869|
+|[Block process creations originating from PSExec and WMI commands](#block-process-creations-originating-from-psexec-and-wmi-commands)[[²](#Rules2)] [[⁸](#Rules8)]|d1e49aac-8f56-4280-b9ba-993a6d77406c|
 |[Block rebooting machine in Safe Mode](#block-rebooting-machine-in-safe-mode)|33ddedf1-c6e0-47cb-833e-de6133960387|
 |[Block untrusted and unsigned processes that run from USB](#block-untrusted-and-unsigned-processes-that-run-from-usb)|b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4|
 |[Block use of copied or impersonated system tools](#block-use-of-copied-or-impersonated-system-tools)|c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb|
 |[Block Webshell creation for Servers](#block-webshell-creation-for-servers)|a8f5898e-1dc8-49a9-9878-85004b8a61e6|
-|[Block Win32 API calls from Office macros](#block-win32-api-calls-from-office-macros)⁹|92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b|
+|[Block Win32 API calls from Office macros](#block-win32-api-calls-from-office-macros)[[⁹](#Rules9)]|92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b|
 |[Use advanced protection against ransomware](#use-advanced-protection-against-ransomware)⁷|c1db55ab-c21a-4637-bb3f-a12568109d35|
 
-¹ If you enabled [Local Security Authority (LSA) protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection), this ASR rule isn't required. For more information, see the [rule details](#block-credential-stealing-from-the-windows-local-security-authority-subsystem).
+<a id="#Rules1">¹</a> If you enabled [Local Security Authority (LSA) protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection), this ASR rule isn't required. For more information, see the [rule details](#block-credential-stealing-from-the-windows-local-security-authority-subsystem).
 
-² This ASR rule doesn't honor Microsoft Defender Antivirus exclusions. For information about configuring ASR per-rule exclusions, see [Configure attack surface reduction per-rule exclusions](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions).
+<a id="#Rules2">²</a> This ASR rule doesn't honor Microsoft Defender Antivirus exclusions. For information about configuring ASR per-rule exclusions, see [Configure attack surface reduction per-rule exclusions](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions).
 
-³ This ASR rule doesn't honor Defender for Endpoint Indicators of Compromise (IOC) for files or certificates.
+<a id="#Rules3">³</a> This ASR rule doesn't honor Defender for Endpoint Indicators of Compromise (IOC) for files or certificates.
 
-⁴ If you use Microsoft Configuration Manager to manage devices, we recommend extensive testing in **Audit** mode before you activate this ASR rule in **Block** or **Warn** mode. The Configuration Manager client relies heavily on WMI.
+<a id="#Rules4">⁴</a> If you use Microsoft Configuration Manager to manage devices, we recommend extensive testing in **Audit** mode before you activate this ASR rule in **Block** or **Warn** mode. The Configuration Manager client relies heavily on WMI.
 
-⁵ This ASR rule doesn't support file and folder exclusions.
+<a id="#Rules5">⁵</a> This ASR rule doesn't support file and folder exclusions.
 
-⁶ Currently, this ASR rule might not be available in the Intune ASR policy configuration due to a known backend issue. But, the rule is available through the [other available ASR policy configuration methods](attack-surface-reduction-rules-enable.md#enabling-attack-surface-reduction-rules) or in existing Intune ASR policies created before the issue.
+<a id="#Rules6">⁶</a> Currently, this ASR rule might not be available in the Intune ASR policy configuration due to a known backend issue. But, the rule is available through the [other available ASR policy configuration methods](attack-surface-reduction-rules-enable.md#enabling-attack-surface-reduction-rules) or in existing Intune ASR policies created before the issue.
 
-⁷ To use this ASR rule, you must [enable cloud-delivered protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus).
+<a id="#Rules7">⁷</a> To use this ASR rule, you must [enable cloud-delivered protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus).
 
-⁸ If you use Microsoft Configuration Manager to manage devices, don't use this ASR rule. The Configuration Manager client relies heavily on WMI.
+<a id="#Rules8">⁸</a> If you use Microsoft Configuration Manager to manage devices, don't use this ASR rule. The Configuration Manager client relies heavily on WMI.
 
-⁹ This ASR rule doesn't honor Defender for Endpoint Indicators of Compromise (IOC) for certificates.
+<a id="#Rules9">⁹</a> This ASR rule doesn't honor Defender for Endpoint Indicators of Compromise (IOC) for certificates.
 
 ## ASR rule modes
 
-The available modes for ASR rules are described in the following table:
+An ASR rule can be enabled or disabled. Enabled rules have different levels of protection available as described in the following table:
 
 |Rule mode|Code|Description|
 |---|:---:|---|
-|**Not configured** <br/><br/> **Off** <br/><br/> **Deactivated**|0|The ASR rule isn't enabled or is disabled.|
-|**Block** <br/><br/> **Activated**|1|The ASR rule is enabled in **Block** mode.|
-|**Audit** <br/><br/> **Audit mode**|2|The ASR rule is evaluated as if enabled in **Block** mode, but without taking action.|
-|**Warn** <br/><br/> **Warning**|6|The ASR rule is enabled in blocking mode, but users can select **Unblock** in the warning toast notification to bypass the block for 24 hours. After 24 hours, the user needs to bypass the block again. <br/><br/> Supported only in Windows 10 version 1809 or later. ASR rules in **Warn** mode on older versions of Windows are effectively in **Block** mode (no bypass available). <br/><br/> Not all ASR rules support **Warn** mode.|
+|**Not configured** <br/> **Off** <br/> **Deactivated**|0|The ASR rule isn't enabled or is disabled.|
+|**Block** <br/> **Activated**|1|The ASR rule is enabled in **Block** mode.|
+|**Audit** <br/> **Audit mode**|2|The ASR rule is enabled as if in **Block** mode, but without taking action. <br/><br/> ASR rule detections are available in the following locations: <ul><li>Event IDs 1122, 1125, 1132, and 1134 in [Windows Event Viewer](attack-surface-reduction-overview.md#list-of-attack-surface-reduction-events).</li><li>[Advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview): <br><code>DeviceEvent<br>&#124; where ActionType startswith "Asr"<br>&#124; where ActionType endswith "Audited"</code></li><li>The [Attack surface reduction rules report](attack-surface-reduction-rules-report.md).</li></ul>|
+|**Warn** <br/> **Warning**|6|The ASR rule is enabled as if in **Block** mode, but users can select **Unblock** in the warning notification pop-up to bypass the block for 24 hours. After 24 hours, the user needs to bypass the block again. <br/><br/> **Warn** mode is supported in Windows 10 version 1809 (November 2018) or later. ASR rules in **Warn** mode on unsupported versions of Windows are effectively in **Block** mode (bypass isn't available). <br/><br/> The following ASR rules don't support **Warn** mode: <ul><li>[Block credential stealing from the Windows local security authority subsystem](#block-credential-stealing-from-the-windows-local-security-authority-subsystem)</li><li>[Block Office applications from injecting code into other processes](#block-office-applications-from-injecting-code-into-other-processes)</li></ul>.|
 
 As previously mentioned, we recommend **Block** mode for the standard protection rules, and initial testing in **Audit** mode for other ASR rules before activating them in **Block** or **Warn** mode.
 
@@ -120,14 +120,14 @@ The supported operating systems for ASR rules are described in the following tab
 |Rule name|Windows 11 or later|Windows 10|Windows Server 2019 or later|Windows Server 2016<sup>\*</sup>|Windows Server 2012 R2<sup>\*</sup>|
 |---|:---:|:---:|:---:|:---:|:---:|
 |**Standard protection rules**||||||
-|Block abuse of exploited vulnerable signed drivers (Device)|Y|1709 or later|Y|Windows Server 1803 (Semi-Annual Enterprise Channel (SAC)) or later|Y|
+|Block abuse of exploited vulnerable signed drivers (Device)|Y|1709 or later|Y|Windows Server 1803 (SAC) or later|Y|
 |Block credential stealing from the Windows local security authority subsystem|Y|1803 or later|Y|Y|Y|
 |Block persistence through WMI event subscription|Y|1903 or later|Windows Server 1903 (SAC) or later|N|N|
 |**Other ASR rules**||||||
 |Block Adobe Reader from creating child processes|Y|1809 or later|Y|Y|Y|
 |Block all Office applications from creating child processes|Y|1709 or later|Y|Y|Y|
 |Block executable content from email client and webmail|Y|1709 or later|Y|Y|Y|
-|Block executable files from running unless they meet a prevalence, age, or trusted list criterion²|Y|1803 or later|Y|Y|Y|
+|Block executable files from running unless they meet a prevalence, age, or trusted list criterion|Y|1803 or later|Y|Y|Y|
 |Block execution of potentially obfuscated scripts|Y|1709 or later|Y|Y|Y|
 |Block JavaScript or VBScript from launching downloaded executable content|Y|1709 or later|Y|N|N|
 |Block Office applications from creating executable content|Y|1709 or later|Y|Y|Y|
@@ -147,33 +147,33 @@ The supported operating systems for ASR rules are described in the following tab
 
 ## Configuration management system support for ASR rules
 
-The supported configuration management systems for ASR rules are described in the following table:
+Although Defender for Endpoint provides ASR rules, you need a separate service to deploy the rules to devices. The supported configuration management systems for ASR rules are described in the following table:
 
-|Rule name|Microsoft Intune|Microsoft Configuration Manager¹|Group policy|PowerShell|
+|Rule name|Microsoft Intune|Microsoft Configuration Manager[[¹](#CMS1)]|Group policy|PowerShell|
 |---|:---:|:---:|:---:|:---:|
 |**Standard protection rules**|||||
-|Block abuse of exploited vulnerable signed drivers (Device)|Y||Y|Y|
+|Block abuse of exploited vulnerable signed drivers (Device)|Y|N|Y|Y|
 |Block credential stealing from the Windows local security authority subsystem|Y|1802 or later|Y|Y|
-|Block persistence through WMI event subscription|Y||Y|Y|
+|Block persistence through WMI event subscription|Y|N|Y|Y|
 |**Other ASR rules**|||||
-|Block Adobe Reader from creating child processes|Y||Y|Y|
+|Block Adobe Reader from creating child processes|Y|N|Y|Y|
 |Block all Office applications from creating child processes|Y|1710 or later|Y|Y|
-|Block executable content from email client and webmail|Y|1710 or later|Y||
-|Block executable files from running unless they meet a prevalence, age, or trusted list criterion²|Y|1802 or later|Y|Y|
-|Block execution of potentially obfuscated scripts|Y|1710 or later |Y|Y|
+|Block executable content from email client and webmail|Y|1710 or later|Y|N|
+|Block executable files from running unless they meet a prevalence, age, or trusted list criterion[[²](#CMS2)]|Y|1802 or later|Y|Y|
+|Block execution of potentially obfuscated scripts|Y|1710 or later|Y|Y|
 |Block JavaScript or VBScript from launching downloaded executable content|Y|1710 or later|Y|Y|
 |Block Office applications from creating executable content|Y|1710 or later|Y|Y|
 |Block Office applications from injecting code into other processes|Y|1710 or later|Y|Y|
 |Block Office communication application from creating child processes|Y|1710 or later|Y|Y|
-|Block process creations originating from PSExec and WMI commands|Y||Y|Y|
-|Block rebooting machine in Safe Mode|Y||Y|Y|
+|Block process creations originating from PSExec and WMI commands|Y|N|Y|Y|
+|Block rebooting machine in Safe Mode|Y|N|Y|Y|
 |Block untrusted and unsigned processes that run from USB|Y|1802 or later|Y|Y|
-|Block use of copied or impersonated system tools|Y||Y|Y|
-|Block Webshell creation for Servers|Y||Y|Y|
+|Block use of copied or impersonated system tools|Y|N|Y|Y|
+|Block Webshell creation for Servers|Y|N|Y|Y|
 |Block Win32 API calls from Office macros|Y|1710 or later|Y|Y|
 |Use advanced protection against ransomware|Y|1802 or later|Y|Y|
 
-¹ This product has been through several name changes:
+<a id="CMS1">¹</a> This product has been through several name changes:
 
 - **Microsoft Configuration Manager**: 2303 or later (April 2023 or later)
 - **Microsoft Endpoint Configuration Manager**: 1910 to 2211 (December 2019 to December 2022)
@@ -181,53 +181,47 @@ The supported configuration management systems for ASR rules are described in th
 
 For support and update information, see [Updates and servicing for Configuration Manager](/intune/configmgr/core/servers/manage/updates).
 
-² Currently, this ASR rule might not be available in the Intune ASR policy configuration due to a known backend issue. But, the rule is available through the [other available ASR policy configuration methods](attack-surface-reduction-rules-enable.md#enabling-attack-surface-reduction-rules) or in existing Intune ASR policies created before the issue.
+<a id="CMS2">²</a> Currently, this ASR rule might not be available in the Intune ASR policy configuration due to a known backend issue. But, the rule is available through the [other available ASR policy configuration methods](attack-surface-reduction-rules-enable.md#enabling-attack-surface-reduction-rules) or in existing Intune ASR policies created before the issue.
 
 <a name='per-asr-rule-alert-and-notification-details'></a>
 
 ## Alerts and notifications from ASR rule actions
 
-ASR rules can generate [Endpoint Detection and Response (EDR)](overview-endpoint-detection-response.md) alerts in Defender for Endpoint when all of the following statements are true:
+The following table describes the organization and local alerts that active ASR rules can generate.
 
-- The ASR rule supports EDR alerts (not all rules do).
-- The ASR rule is active in **Block** or **Warn** mode.
-- On the Windows device, the [cloud protection level in Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md) is set to **High plus** or **Zero tolerance**.
+- The **EDR alerts** value indicates whether the ASR rule in **Block** or **Warn** mode generates [Endpoint Detection and Response (EDR)](overview-endpoint-detection-response.md) alerts in Defender for Endpoint.
+- The **User notifications** value indicates whether the ASR rule supports user notification pop-ups in **Block** or **Warn** mode (if the rule supports **Warn** mode).
 
-ASR rules can generate user toast notifications on Windows devices independently of EDR alerts when all of the following statements are true:
-
-- The ASR rule supports toast notifications (not all rules do).
-- The ASR rule is active in **Block** or **Warn** mode. Toast availability in **Block** mode is required for toast availability in **Warn** mode, but not all rules that support toasts in **Block** mode support toasts in **Warn** mode.
-- On the Windows device, the [cloud protection level in Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md) is set to **High**, **High plus**, or **Zero tolerance**.
-
-This behavior is summarized in the following table:
-
-|Rule name|EDR alerts?|Toast notifications<br/>in Block mode?|Toast notifications<br/>in Warn mode?|
-|---|:---:|:---:|:---:|
-|**Standard protection rules**||||
-|Block abuse of exploited vulnerable signed drivers (Device)|N|Y||
-|Block credential stealing from the Windows local security authority subsystem|N|N|N¹|
-|Block persistence through WMI event subscription|Y|Y||
+|Rule name|EDR alerts|User<br>notifications|
+|---|:---:|:---:|
+|**Standard protection rules**|||
+|Block abuse of exploited vulnerable signed drivers (Device)|N|Y|
+|Block credential stealing from the Windows local security authority subsystem[[¹](#Alert1)]|N|N|
+|Block persistence through WMI event subscription|Y|Y|
 |**Other ASR rules**||||
-|Block Adobe Reader from creating child processes|Y|Y||
-|Block all Office applications from creating child processes|N|Y||
-|Block executable content from email client and webmail|Y|Y||
-|Block executable files from running unless they meet a prevalence, age, or trusted list criterion²|N|Y||
-|Block execution of potentially obfuscated scripts|Y|Y||
-|Block JavaScript or VBScript from launching downloaded executable content|Y|Y||
-|Block Office applications from creating executable content|N|Y||
-|Block Office applications from injecting code into other processes|N|Y|N¹|
-|Block Office communication application from creating child processes|N|Y||
-|Block process creations originating from PSExec and WMI commands|N|Y||
-|Block rebooting machine in Safe Mode|N|N|N|
-|Block untrusted and unsigned processes that run from USB|Y|Y||
-|Block use of copied or impersonated system tools|N|Y||
-|Block Webshell creation for Servers|N|N|N|
-|Block Win32 API calls from Office macros|Y|N|N|
-|Use advanced protection against ransomware|Y|Y||
+|Block Adobe Reader from creating child processes[[²](#Alert2)]|Y|Y|
+|Block all Office applications from creating child processes|N|Y|
+|Block executable content from email client and webmail[[²](#Alert2)]|Y|Y|
+|Block executable files from running unless they meet a prevalence, age, or trusted list criterion|N|Y|
+|Block execution of potentially obfuscated scripts|Y|Y|
+|Block JavaScript or VBScript from launching downloaded executable content[[²](#Alert2)]|Y|Y|
+|Block Office applications from creating executable content|N|Y|
+|Block Office applications from injecting code into other processes[[¹](#Alert1)]|N|Y|
+|Block Office communication application from creating child processes|N|Y|
+|Block process creations originating from PSExec and WMI commands|N|Y|
+|Block rebooting machine in Safe Mode|N|N|
+|Block untrusted and unsigned processes that run from USB|Y|Y|
+|Block use of copied or impersonated system tools|N|Y|
+|Block Webshell creation for Servers|N|N|
+|Block Win32 API calls from Office macros|Y|N|
+|Use advanced protection against ransomware|Y|Y|
 
-¹ This ASR rule doesn't support **Warn** mode.
+<a id="Alert1">¹</a> This ASR rule doesn't support **Warn** mode.
 
-² Currently, this ASR rule might not be available in the Intune ASR policy configuration due to a known backend issue. But, the rule is available through the [other available ASR policy configuration methods](attack-surface-reduction-rules-enable.md#enabling-attack-surface-reduction-rules) or in existing Intune ASR policies created before the issue.
+<a id="Alert2">²</a> This ASR rule in **Block** or **Warn** mode has the following extra requirements in the [cloud protection level in Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md):
+
+- EDR alerts are generated only when the cloud protection level on the device is **High plus** or **Zero tolerance**.
+- User notification pop-ups are generated only when the cloud protection level on the device is **High**, **High plus**, or **Zero tolerance**.
 
 <a name='per-rule-descriptions></a>
 
@@ -297,7 +291,7 @@ If you can't enable LSA protection and/or Credential Guard, you can configure th
 >
 > - This ASR rule doesn't support **Warn** mode.
 > - This ASR rule produces a large volume of audit events, almost all of which are safe to ignore when the rule is enabled in **Block** mode. You can choose to skip the audit mode evaluation and proceed to block mode deployment. We recommend starting with a small set of devices and gradually expanding to cover the rest.
-> - This ASR rule suppresses alerts and toast notifications for friendly processes and duplicate block actions.
+> - This ASR rule suppresses alerts and user notification pop-ups for friendly processes and duplicate block actions.
 > - This ASR rule blocks **access to LSASS process memory**. It doesn't block processes from **running**. When this ASR rule blocks processes like `svchost.exe`, it means the process is blocked from accessing LSASS process memory. You can often safely ignore blocking of these processes by this ASR rule.
 > - Some apps enumerate all running processes and attempt to open them with exhaustive permissions. This ASR rule denies the app's open process actions and records the details to the Security log in Windows Event Viewer. This rule can generate numerous noise. If you have an app that simply enumerates LSASS, but has no real effect in functionality, there's no need to add it to the exclusion list. By itself, this event log entry doesn't necessarily indicate a malicious threat.
 > - This ASR rule has issues with Quest Dirsync Password Sync. For more information, see [Dirsync Password Sync isn't working when Windows Defender is installed, error: "VirtualAllocEx failed: 5" (4253914)](https://support.quest.com/kb/4253914/dirsync-password-sync-isn-t-working-when-windows-defender-is-installed-error-virtualallocex-failed-5).
@@ -359,7 +353,7 @@ Creating malicious child processes is a common malware strategy. Malware that ab
 This rule blocks email opened with Microsoft Outlook, Outlook.com, and other popular webmail providers from propagating the following file types:
 
 - Executable files (for example, .exe, .dll, or .scr).
-- Script files (for example, PowerShell .ps1, Visual Basic .vbs, or JavaScript .js).
+- Script files (for example, .ps1, .vbs, or .js).
 - Archive files (for example, .zip).
 
 - **Intune name**: `Execution of executable content (exe, dll, ps, js, vbs, etc.) dropped from email (webmail/mail client) (no exceptions)`
@@ -400,7 +394,7 @@ This ASR rule blocks executable files (for example, .exe, .dll, or .scr, from la
 #### Block execution of potentially obfuscated scripts
 
 This ASR rule detects suspicious properties within an obfuscated script.
-  
+
 Script obfuscation is a common technique that both malware authors and legitimate applications use to hide intellectual property or decrease script loading times. Malware authors also use obfuscation to make malicious code harder to read, which hampers close scrutiny by humans and security software.
 
 - **Intune name**: `Obfuscated js/vbs/ps/macro code`
@@ -525,7 +519,7 @@ Safe Mode is still manually accessible from the Windows Recovery Environment.
 
 This ASR rule prevents unsigned or untrusted executable files (for example, .exe, .dll, or .scr) from running from USB removable drives, including SD cards.
 
-This ASR rule doesn't block the files from being copied from the USB drive to disk. It does block the copied files from being run from disk.
+This ASR rule doesn't block the files from being copied from the USB drive to disk. It blocks the copied files from running from disk.
 
 - **Intune name**: `Untrusted and unsigned processes that run from USB`
 - **Microsoft Configuration Manager name**: `Block untrusted and unsigned processes that run from USB`
@@ -596,7 +590,7 @@ This ASR rule provides an extra layer of protection against ransomware. It uses 
 - The file is a valid signed file.
 - The file is prevalent enough to not be considered as ransomware.
 
-This rule doesn't simply block files with a bad reputation. Instead, the rule errs on the side of caution and also blocks files _that don't yet have a positive reputation_. Typically, blocks on benign, unknown files by this rule eventually resolve themselves. The file's reputation and trust values incrementally increase as non-problematic usage increases.
+This rule doesn't just block files with a bad reputation. Instead, the rule errs on the side of caution and also blocks files _that don't yet have a positive reputation_. Typically, blocks on benign, unknown files by this rule eventually resolve themselves. The file's reputation and trust values incrementally increase as non-problematic usage increases.
 
 If blocks on benign, unknown files don't resolve in a timely manner, you can configure a [per-rule exclusion](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions) or use the [Allow action for an indicator of compromise (IoC)](indicators-overview.md#enforcement-types-for-indicators).
 

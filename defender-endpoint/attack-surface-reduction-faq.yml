@@ -8,14 +8,14 @@ metadata:
   audience: ITPro
   author: chrisda
   ms.author: chrisda
-  ms.reviewer: sugamar 
+  ms.reviewer: sugamar
   manager: bagol
   ms.custom: asr
   ms.topic: faq
   ms.collection:
   - m365-security
   - mde-asr
-  ms.date: 02/18/2026
+  ms.date: 04/02/2026
   appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
