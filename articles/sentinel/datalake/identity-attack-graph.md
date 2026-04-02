@@ -17,6 +17,7 @@ The identity attack graph in Microsoft Sentinel visualizes how identities connec
 
 The graph represents your environment as interconnected entities and relationships, making it easier to answer complex questions such as "What resources could an attacker reach if this account is compromised?" or "Which identities have paths to critical assets?"
 
+
 ## How the identity attack graph works
 
 The identity attack graph uses asset data from Sentinel lake's Entra ID asset and Azure resource graph connectors to build a comprehensive model of:
@@ -56,6 +57,7 @@ When your graph is ready:
 1. Use the **Schema** tab to understand the types of entities and relationships in the graph.
 1. Select any node to view detailed metadata.
 1. Query the graph to visualize relationships and privilege paths. Write your own GQL queries or use predefined queries to get started.
+1. Add screenshots here.
 
 ## Related content
 
