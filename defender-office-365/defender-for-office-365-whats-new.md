@@ -7,7 +7,7 @@ f1.keywords: NOCSH
 author: chrisda
 ms.author: chrisda
 ms.localizationpriority: medium
-ms.date: 02/18/2026
+ms.date: 04/02/2026
 audience: ITPro
 ms.collection:
   - m365-security
@@ -37,6 +37,11 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Endpoint](/defender-endpoint/whats-new-in-microsoft-defender-endpoint)
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/defender-cloud-apps/release-notes)
+
+## March 2026
+
+- **Expanding User reporting in Teams to include Calls**: Users can reported completed or missed one-to-one [Microsoft Teams calls](submissions-teams.md) from the call history as malicious (scam) or non malicious (non-scam) to the specified reporting mailbox, or Microsoft and the reporting mailbox via [user reported settings](submissions-user-reported-messages-custom-mailbox.md).
+- **Added support for contextual Teams messages in User reported Teams Messages**: When Users report [Microsoft Teams messages](submissions-teams.md) from chats, channels (standard, shared, and private), and meeting conversations to Microsoft as malicious (security risk), up to fifteen messages before and after the reported message are shared for analysis.
 
 ## February 2026
 
