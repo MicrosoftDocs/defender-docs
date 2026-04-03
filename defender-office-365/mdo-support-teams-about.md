@@ -15,7 +15,7 @@ ms.collection:
   - tier1
 description: Admins can learn about Microsoft Teams features in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 03/12/2026
+ms.date: 04/02/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -53,7 +53,7 @@ Microsoft Defender for Office 365 Plan 1 provides the following extra Teams prot
 
 - **Teams message entity panel**: A single place to store all Teams message metadata for immediate SecOps review. Any threats coming from Teams chats, group chats, meeting chats, and other channels can be found in one place as soon as they're assessed. For more information, see [the Teams message entity panel](teams-message-entity-panel.md).
 
-- **Report Teams messages**: Users can report Teams messages as malicious or not malicious. Depending on the reported message settings in the organization, reported messages go to the specified reporting mailbox, to Microsoft, or both. For more information, see [User reported settings in Teams](submissions-teams.md).
+- **Report Teams items**: Users can report Teams items (messages or calls) as malicious or not malicious. Depending on the reported items settings in the organization, reported items go to the specified reporting mailbox, to Microsoft, or both. For more information, see [User reported settings in Teams](submissions-teams.md).
 
 Microsoft 365 E5 and Defender for Office 365 Plan 2 extend Teams protection with a set of extra capabilities designed to disrupt the attack chain:
 
@@ -74,7 +74,7 @@ These features are summarized in the following table:
 |Zero-hour auto purge (ZAP) for Teams||:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
 |Teams messages in quarantine (admin-managed)||:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
 |Teams message entity panel||:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
-|User-reported Teams messages||:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
+|User-reported Teams items||:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
 |Remove users from Teams chats (admin remediation)|||:::image type="icon" source="media/feature_present_icon.png":::|
 |Attack simulation training with Teams messages|||:::image type="icon" source="media/feature_present_icon.png":::|
 |Advanced hunting on Teams messages|||:::image type="icon" source="media/feature_present_icon.png":::|
