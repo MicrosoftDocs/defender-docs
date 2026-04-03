@@ -52,6 +52,7 @@ Set up the identity attack graph as follows:
 1. Locate the identity attack graph card and select **Set up graph**.
 1. Follow the setup steps and turn on or update the required connectors.
 1. Select **Turn on graph** to create your graph.
+1. Select **Query graph** on the graph tile to view the graph query page.
 
 :::image type="content" source="./media/identity-attack-graph/identity-graph-overview-panel.png" alt-text="Screenshot showing the Microsoft Sentinel identity attack graph overview panel." lightbox="./media/identity-attack-graph/identity-graph-overview-panel.png":::
 
@@ -63,10 +64,16 @@ After you turn on the graph, the graph begins ingesting data and building relati
 When your graph is ready:
 
 1. Use the **Schema** tab to understand the types of entities and relationships in the graph.
-1. Select any node to view detailed metadata.
+
+:::image type="content" source="./media/identity-attack-graph/visualize-graph-schema.png" alt-text="Screenshot showing the schema tab on the graph query page" lightbox="./media/identity-attack-graph/visualize-graph-schema.png":::
+
+
+1. Select any node to view the detailed metadata.
 1. Query the graph to visualize relationships and privilege paths. Write your own GQL queries or use predefined queries to get started.
 
 :::image type="content" source="./media/identity-attack-graph/predefined-query.png" alt-text="Screenshot showing the predefined query on the graph" lightbox="./media/identity-attack-graph/predefined-query.png":::
+
+:::image type="content" source="./media/identity-attack-graph/visualize-query.png" alt-text="Screenshot showing the graph tab to visualize query" lightbox="./media/identity-attack-graph/visualize-query.png":::
 
 
 ## Related content
