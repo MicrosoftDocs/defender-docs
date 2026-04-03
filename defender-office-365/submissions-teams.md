@@ -83,7 +83,7 @@ To view or configure this setting, you need to be a member of the **Global Admin
 
    If the value is :::image type="icon" source="media/scc-toggle-off.png" border="false"::: **Off**, move the toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**, and then select **Save**.
 
-   :::image type="content" source="media/submissions-teams-turn-on-off-tac-security-risk.png" alt-text="Screenshot of the 'Report a security concern' toggle in Messaging policies in the Teams admin center." lightbox="media/submissions-teams-turn-on-off-tac-security-risk.png":::
+   :::image type="content" source="media/submissions-teams-turn-on-off-tac-security-risk.png" alt-text="Screenshot of the Report a security concern toggle in the policy details page in the Teams admin center." lightbox="media/submissions-teams-turn-on-off-tac-security-risk.png":::
 
 5. In the Teams admin center, go to the **Messaging settings** page at <https://admin.teams.microsoft.com/one-policy/settings/messaging>.
 
@@ -91,7 +91,7 @@ To view or configure this setting, you need to be a member of the **Global Admin
 
    If the value is :::image type="icon" source="media/scc-toggle-off.png" border="false"::: **Off**, move the toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**, and then select **Save**.
 
-   :::image type="content" source="media/submissions-teams-turn-on-off-tac-not-security-risk.png" alt-text="Screenshot of the 'Report incorrect security detections' toggle on the Messaging settings page in the Microsoft Teams admin center." lightbox="media/submissions-teams-turn-on-off-tac-not-security-risk.png":::
+   :::image type="content" source="media/submissions-teams-turn-on-off-tac-not-security-risk.png" alt-text="Screenshot of the Report incorrect security detections toggle on the Messaging settings page in the Microsoft Teams admin center." lightbox="media/submissions-teams-turn-on-off-tac-not-security-risk.png":::
 
 7. In the Teams admin center, go to the **Calling settings** page at <https://admin.teams.microsoft.com/one-policy/settings/calling>.
 
