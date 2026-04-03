@@ -16,18 +16,21 @@ ms.subservice: sentinel-platform
 
 The identity attack graph in Microsoft Sentinel visualizes how identities connect to Azure resources through permissions and group memberships. Security analysts can use the graph to identify lateral movement paths and privilege escalation risks that attackers might exploit.
 
-The graph represents your environment as interconnected entities and relationships, making it easier to answer complex questions, such as "What resources could an attacker reach if this account is compromised?" or "Which identities have paths to critical assets?"
+The predefined identity attack graph represents your environment as interconnected entities and relationships, making it easier to answer complex questions, such as "What resources could an attacker reach if this account is compromised?" or "Which identities have paths to critical assets?"
 
+SOC analysts, threat hunters, cloud security engineers, and IAM teams can use the graph to understand and reduce identity risk across Azure and Entra. 
 
 ## How the identity attack graph works
 
-The identity attack graph uses asset data from the Microsoft Sentinel data lake's Entra ID asset and Azure resource graph connectors to build a comprehensive model of your environment:
+The identity attack graph uses asset data from the Microsoft Sentinel lake's Entra ID asset and Azure resource graph connectors to build a comprehensive model of your environment:
 
 - **Identities**: Users, service principals, managed identities, and groups
 - **Resources**: Azure subscriptions, resource groups, virtual machines, storage accounts, and other assets
 - **Access and permission relationships**: Role assignments and group memberships that create paths to resources they can access
 
-After setup, use Graph Query Language (GQL) to uncover hidden risks that are difficult to detect with traditional methods. Query the graph to:
+After setup, use Graph Query Language (GQL) to uncover hidden risks that are difficult to detect with traditional methods. 
+
+You can query the graph to:
 
 - **Surface lateral movement paths**: Find all routes an attacker could take from a compromised identity to reach critical resources
 - **Identify overprivileged accounts**: Discover identities with excessive permissions or indirect paths to privileged roles
@@ -39,16 +42,19 @@ To set up the identity attack graph, you will need:
 
 - Microsoft Sentinel data lake enabled in your environment
 - Permissions to turn on or update the Microsoft Entra ID Assets and Azure Resource Graph connectors
-- Security admin or global admin to create the graph
+- Global administrator, Security administrator to create the graph
 
 ## Set up the identity attack graph
 
-To set up the identity attack graph:
+Set up the identity attack graph as follows:
 
 1. In the Defender portal, navigate to **Microsoft Sentinel** > **Graphs**.
-1. Find the identity attack graph card and select **Turn on graph**.
+1. Locate the identity attack graph card and select **Set up graph**.
 1. Follow the setup steps and turn on or update the required connectors.
 1. Select **Turn on graph** to create your graph.
+
+:::image type="content" source="./media/identity-attack-graph/identity-graph-overview-panel.png" alt-text="Screenshot showing the Microsoft Sentinel identity attack graph overview panel." lightbox="./media/identity-attack-graph/identity-graph-overview-panel.png":::
+
 
 After you turn on the graph, the graph begins ingesting data and building relationships. Initial processing may take up to 48 hours. 
 
@@ -59,6 +65,9 @@ When your graph is ready:
 1. Use the **Schema** tab to understand the types of entities and relationships in the graph.
 1. Select any node to view detailed metadata.
 1. Query the graph to visualize relationships and privilege paths. Write your own GQL queries or use predefined queries to get started.
+
+:::image type="content" source="./media/identity-attack-graph/predefined-query.png" alt-text="Screenshot showing the predefined query on the graph" lightbox="./media/identity-attack-graph/predefined-query.png":::
+
 
 ## Related content
 
