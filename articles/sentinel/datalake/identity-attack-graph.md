@@ -3,24 +3,25 @@ title: Identity attack graph in Microsoft Sentinel
 titleSuffix: Microsoft Security
 description: Learn how the identity attack graph in Microsoft Sentinel models identities, permissions, and Azure resources to surface lateral movement paths and privilege escalation risks.
 author: evangelinew
+ms.topic: overview
+ms.date: 04/03/2026
 ms.author: evwhite
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
-ms.topic: overview
-ms.date: 03/18/2026
 
 #CustomerIntent: As a security analyst, I want to turn on the identity attack graph so that I can identify lateral movement paths and privilege escalation risks in my environment.
 ---
+
 # What is the identity attack graph?
 
-The identity attack graph in Microsoft Sentinel visualizes how identities connect to Azure resources through permissions and group memberships. Security analysts can use it to identify lateral movement paths and privilege escalation risks that attackers could exploit.
+The identity attack graph in Microsoft Sentinel visualizes how identities connect to Azure resources through permissions and group memberships. Security analysts can use the graph to identify lateral movement paths and privilege escalation risks that attackers might exploit.
 
-The graph represents your environment as interconnected entities and relationships, making it easier to answer complex questions such as "What resources could an attacker reach if this account is compromised?" or "Which identities have paths to critical assets?"
+The graph represents your environment as interconnected entities and relationships, making it easier to answer complex questions, such as "What resources could an attacker reach if this account is compromised?" or "Which identities have paths to critical assets?"
 
 
 ## How the identity attack graph works
 
-The identity attack graph uses asset data from Sentinel lake's Entra ID asset and Azure resource graph connectors to build a comprehensive model of:
+The identity attack graph uses asset data from the Microsoft Sentinel data lake's Entra ID asset and Azure resource graph connectors to build a comprehensive model of your environment:
 
 - **Identities**: Users, service principals, managed identities, and groups
 - **Resources**: Azure subscriptions, resource groups, virtual machines, storage accounts, and other assets
@@ -33,6 +34,7 @@ After setup, use Graph Query Language (GQL) to uncover hidden risks that are dif
 - **Prioritize remediation**: Focus on the shortest paths to your most sensitive assets
 
 ## Prerequisites
+
 To set up the identity attack graph, you will need:
 
 - Microsoft Sentinel data lake enabled in your environment
@@ -57,7 +59,6 @@ When your graph is ready:
 1. Use the **Schema** tab to understand the types of entities and relationships in the graph.
 1. Select any node to view detailed metadata.
 1. Query the graph to visualize relationships and privilege paths. Write your own GQL queries or use predefined queries to get started.
-1. Add screenshots here.
 
 ## Related content
 
