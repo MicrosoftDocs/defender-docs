@@ -187,7 +187,7 @@ In the details flyout that opens, the following information is available:
   - **Received**: The date/time when the message was received.
   - **Expires**: The date/time when the message is automatically and permanently deleted from quarantine.
   - **Subject**
-  - **Quarantine reason**:
+  - **Quarantine reason**: For example:
     - The message was identified as **Spam**, **Bulk**, or **Phish**.
     - The message matched a mail flow rule (**Transport rule**).
     - The message was identified as **Malware**.
@@ -197,10 +197,10 @@ In the details flyout that opens, the following information is available:
     If the original message was sent to multiple recipients, select :::image type="icon" source="media/m365-cc-sc-preview-message-icon.png" border="false"::: **Preview message** or :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: **View message headers** to see the complete list of recipients.
 
   - **Sender override reason**
-  - **Released by**:
-    - User released: The user's email address is shown.
-    - Admin released: The value **Admin** is shown.
-    - System released: The value **System** is shown.
+  - **Released by**: For example:
+    - User released: The user's email address.
+    - Admin released: The value is **Admin**.
+    - System released: The value is **System**.
     - Other: The default value is **Admin**.
 - **Email details** section:
   - **Sender address**
@@ -208,7 +208,7 @@ In the details flyout that opens, the following information is available:
   - **Network message ID**
   - **Recipients**
 
-:::image type="content" source="media/quarantine-user-message-details-released-by.png" alt-text="The details flyout of a quarantined message" lightbox="media/quarantine-user-message-details-released-by.png":::
+:::image type="content" source="media/quarantine-user-message-details-with-actions.png" alt-text="Screenshot of the details flyout of a quarantined message." lightbox="media/quarantine-user-message-details-with-actions.png":::
 
 To take action on the message, see the next section.
 
