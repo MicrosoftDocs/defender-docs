@@ -43,10 +43,10 @@ The following alerts are automatically generated and correlated to Defender XDR 
 - **Teams call reported by user as a security risk**
 - **Teams call reported by user as a not security risk**
 
-We strongly recommend that SecOps team members start triage and investigation from the [Defender XDR incidents queue in the Microsoft Defender portal](/defender-office-365/mdo-sec-ops-manage-incidents-and-alerts) or SIEM/SOAR integration.
-
 > [!TIP]
 > Currently, these alerts don't generate automated investigation and response (AIR) investigations.
+
+We strongly recommend that SecOps team members start triage and investigation from the [Defender XDR incidents queue in the Microsoft Defender portal](/defender-office-365/mdo-sec-ops-manage-incidents-and-alerts) or SIEM/SOAR integration.
 
 SecOps team members can review submitted Teams message or call details in the following locations in the Defender portal:
 
