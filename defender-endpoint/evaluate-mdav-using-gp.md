@@ -7,7 +7,7 @@ ms.topic: how-to
 author: chrisda
 ms.author: chrisda
 ms.custom: nextgen
-ms.date: 10/20/2025
+ms.date: 04/03/2026
 ms.reviewer: yongrhee
 ms.subservice: ngp
 ms.collection:
@@ -23,9 +23,7 @@ appliesto:
 
 # Evaluate Microsoft Defender Antivirus using Group Policy
 
-In current versions of Microsoft Windows and Windows Server, you can use next-generation protection features offered by Microsoft Defender Antivirus (MDAV) and Microsoft Defender Exploit Guard (Microsoft Defender EG).
-
-This article explains how to enable and test the key protection features in Microsoft Defender AV and Microsoft Defender EG.
+This article explains how to enable and test the key protection features in Microsoft Defender Antivirus and Microsoft Defender Exploit Guard in current versions of Microsoft Windows and Windows Server.
 
 ## Prerequisites
 
@@ -60,7 +58,7 @@ This section describes how to use a [Group Policy Central Store](/troubleshoot/w
 
 For more information, see [Create and manage Central Store - Windows Client](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#the-central-store).
 
-## MDAV and Potentially Unwanted Applications (PUA)
+## MDAV and potentially unwanted applications (PUA)
 
 **Root**:
 
@@ -120,13 +118,13 @@ For more information, see [Use next-gen technologies in Microsoft Defender Antiv
 |Description|Setting|
 |---|---|
 |Specify the interval to check for security intelligence updates|Enabled, 4|
-|Define the order of sources for downloading security intelligence updates|Enabled, under 'Define the order of sources for downloading security intelligence updates' <br/><br/> `InternalDefinitionUpdateServer` \| `MicrosoftUpdateServer` \| `MMPC` <br/><br/> <ul><li>`InternalDefinitionUpdateServer`: WSUS with Microsoft Defender Antivirus updates allowed.</li><li>`MicrosoftUpdateServer`: Microsoft Update (formerly Windows Update).</li><li>`MMPC`: <https://www.microsoft.com/wdsi/defenderupdates></li></ul>|
+|Define the order of sources for downloading security intelligence updates|Enabled, under 'Define the order of sources for downloading security intelligence updates' <ul><li>`InternalDefinitionUpdateServer`: WSUS with Microsoft Defender Antivirus updates allowed.</li><li>`MicrosoftUpdateServer`: Microsoft Update (formerly Windows Update).</li><li>`MMPC`: <https://www.microsoft.com/wdsi/defenderupdates></li></ul>|
 
 ## Disable local administrator AV settings
 
 Disable local administrator AV settings such as exclusions, and enforce the policies from the Microsoft Defender for Endpoint Security Settings Management.
 
-**Root:**
+**Root**:
 
 |Description|Setting|
 |---|---|
@@ -159,7 +157,7 @@ Disable local administrator AV settings such as exclusions, and enforce the poli
 
 ## Network Protection
 
-**Microsoft Defender Exploit Guard\\Network Protection:**
+**Microsoft Defender Exploit Guard\\Network Protection**:
 
 |Description|Setting|
 |---|---|
@@ -226,20 +224,16 @@ For more information, see [How do I configure or manage tamper protection?](prev
 
 It's important to verify that Cloud Protection network connectivity is working during your penetration testing.
 
-1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
-   1. Open the **Start** menu, and then type **cmd**.
-   2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
+In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following commands:
 
-1. In the elevated Command Prompt, run the following commands:
+> [!TIP]
+> The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
 
-   > [!TIP]
-   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
+```dos
+(set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
 
-   ```dos
-   (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
-
-   MpCmdRun.exe -ValidateMapsConnection
-   ```
+MpCmdRun.exe -ValidateMapsConnection
+```
 
 For more information, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
 
@@ -263,7 +257,7 @@ The latest 'Security Intelligence Update' version is available here:
 
 To see the installed version of 'Security Intelligence Update', run the following command in an elevated PowerShell session:
 
-```PowerShell
+```powershell
 Get-MpComputerStatus | Format-Table AntivirusSignatureVersion
 ```
 
@@ -275,7 +269,7 @@ The latest scan 'engine update' version is available here:
 
 To see the installed version of 'Engine Update', run the following command in an elevated PowerShell session:
 
-```PowerShell
+```powershell
 Get-MpComputerStatus | Format-Table AMEngineVersion
 ```
 

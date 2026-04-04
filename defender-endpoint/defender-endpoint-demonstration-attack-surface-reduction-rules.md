@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint attack surface reduction rules demonstrat
 description: See how attack surface reduction rules block various known threat types.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: lwainstein
-author: limwainstein
+ms.author: chrisda
+author: chrisda
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
 audience: ITPro
@@ -14,7 +14,7 @@ ms.collection:
 - demo
 ms.topic: how-to
 ms.subservice: asr
-ms.date: 03/09/2025
+ms.date: 04/03/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -42,7 +42,7 @@ _Attack surfaces_ are the places where your organization is vulnerable to threat
 To enable all available ASR rules, run the following command in an elevated PowerShell window (a PowerShell window you opened after selecting **Run as administrator**):
 
 ```powershell
-Add-MpPreference -AttackSurfaceReductionRules_Ids 01443614-CD74-433A-B99E-2ECDC07BFC25,33DDEDF1-C6E0-47CB-833E-DE6133960387,3B576869-A4EC-4529-8536-B80A7769E899,56A863A9-875E-4185-98A7-B882C64B5CE5,5BEB7EFE-FD9A-4556-801D-275E5FFC04CC,75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84,92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B,9E6C4E1F-7D60-472F-BA1A-A39EF669E4B2,A8F5898E-1DC8-49A9-9878-85004B8A61E6,B2B3F03D-6A65-4F7B-A9C7-1C7EF74A9BA4,BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550,C0033C00-D16D-4114-A5A0-DC9B3A7D2CEB,C1DB55AB-C21A-4637-BB3F-A12568109D35,D1E49AAC-8F56-4280-B9BA-993A6D77406C,D3E037E1-3EB8-44C8-A917-57927947596D,D4F940AB-401B-4EFC-AADC-AD5F3C50688A,E6DB77E5-3DF2-4CF1-B95A-636979351E5B,26190899-1602-49E8-8B27-EB1D0A1CE869,7674BA52-37EB-4A4F-A9A1-F0F9A1619A2CC -AttackSurfaceReductionRules_Actions Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,AuditMode,AuditMode
+Add-MpPreference -AttackSurfaceReductionRules_Ids 01443614-cd74-433a-b99e-2ecdc07bfc25,33ddedf1-c6e0-47cb-833e-de6133960387,3b576869-a4ec-4529-8536-b80a7769e899,56a863a9-875e-4185-98a7-b882c64b5ce5,5beb7efe-fd9a-4556-801d-275e5ffc04cc,75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84,92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b,9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2,a8f5898e-1dc8-49a9-9878-85004b8a61e6,b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4,be9ba2d9-53ea-4cdc-84e5-9b1eeee46550,c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb,c1db55ab-c21a-4637-bb3f-a12568109d35,d1e49aac-8f56-4280-b9ba-993a6d77406c,d3e037e1-3eb8-44c8-a917-57927947596d,d4f940ab-401b-4efc-aadc-ad5f3c50688a,e6db77e5-3df2-4cf1-b95a-636979351e5b,26190899-1602-49e8-8b27-eb1d0a1ce869,7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c -AttackSurfaceReductionRules_Actions Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,AuditMode,AuditMode
 ```
 
 The ASR rule names and associated GUID values are listed in the [Test files](#test-files) section.
@@ -80,31 +80,31 @@ The available rule states are described in the following table:
 The following table associates the ASR rule names with the corresponding GUID values.
 
 > [!TIP]
-> ASR rule names with links are linked to test files.
+> Rule name links are links to available test files. Some test files contain multiple exploits that trigger multiple ASR rules.
 >
-> Some test files contain multiple exploits that trigger multiple ASR rules.
+> GUID value links are links to the rule details.
 
 |GUID value|Rule name|
 |---|---|
-|01443614-CD74-433A-B99E-2ECDC07BFC25|Block executable files from running unless they meet a prevalence, age, or trusted list criterion|
-|26190899-1602-49E8-8B27-EB1D0A1CE869|Block Office communication application from creating child processes|
-|33DDEDF1-C6E0-47CB-833E-DE6133960387|Block rebooting machine in Safe Mode|
-|3B576869-A4EC-4529-8536-B80A7769E899|[Block Office applications from creating executable content](https://demo.wd.microsoft.com/Content/TestFile_Block_Office_applications_from_creating_executable_content_3B576869-A4EC-4529-8536-B80A7769E899.docm)|
-|56A863A9-875E-4185-98A7-B882C64B5CE5|Block abuse of exploited vulnerable signed drivers (Device)|
-|5BEB7EFE-FD9A-4556-801D-275E5FFC04CC|Block execution of potentially obfuscated scripts|
-|75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84|Block Office applications from injecting code into other processes|
-|7674BA52-37EB-4A4F-A9A1-F0F9A1619A2C|Block Adobe Reader from creating child processes|
-|92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B|[Block Win32 API calls from Office macros](https://demo.wd.microsoft.com/Content/Block_Win32_imports_from_Macro_code_in_Office_92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B.docm)|
-|9E6C4E1F-7D60-472F-BA1A-A39EF669E4B2|Block credential stealing from the Windows local security authority subsystem|
-|A8F5898E-1DC8-49A9-9878-85004B8A61E6|Block Webshell creation for Servers|
-|B2B3F03D-6A65-4F7B-A9C7-1C7EF74A9BA4|[Block untrusted and unsigned processes that run from USB](https://demo.wd.microsoft.com/Content/UNSIGNED_ransomware_test_exe.exe)|
-|BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550|Block executable content from email client and webmail|
-|C0033C00-D16D-4114-A5A0-DC9B3A7D2CEB|Block use of copied or impersonated system tools|
-|C1DB55AB-C21A-4637-BB3F-A12568109D35|Use advanced protection against ransomware|
-|D1E49AAC-8F56-4280-B9BA-993A6D77406C|[Block process creations originating from PSExec and WMI commands](https://demo.wd.microsoft.com/Content/TestFile_PsexecAndWMICreateProcess_D1E49AAC-8F56-4280-B9BA-993A6D77406C.vbs)|
-|D3E037E1-3EB8-44C8-A917-57927947596D|[Block JavaScript or VBScript from launching downloaded executable content](https://demo.wd.microsoft.com/Content/TestFile_Impede_JavaScript_and_VBScript_to_launch_executables_D3E037E1-3EB8-44C8-A917-57927947596D.js)|
-|D4F940AB-401B-4EFC-AADC-AD5F3C50688A|[Block all Office applications from creating child processes](https://demo.wd.microsoft.com/Content/TestFile_OfficeChildProcess_D4F940AB-401B-4EFC-AADC-AD5F3C50688A.docm)|
-|E6DB77E5-3DF2-4CF1-B95A-636979351E5B|Block persistence through WMI event subscription|
+|[01443614-cd74-433a-b99e-2ecdc07bfc25](attack-surface-reduction-rules-reference.md#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)|Block executable files from running unless they meet a prevalence, age, or trusted list criterion|
+|[26190899-1602-49e8-8b27-eb1d0a1ce869](attack-surface-reduction-rules-reference.md#block-office-communication-application-from-creating-child-processes)|Block Office communication application from creating child processes|
+|[33ddedf1-c6e0-47cb-833e-de6133960387](attack-surface-reduction-rules-reference.md#block-rebooting-machine-in-safe-mode)|Block rebooting machine in Safe Mode|
+|[3b576869-a4ec-4529-8536-b80a7769e899](attack-surface-reduction-rules-reference.md#block-office-applications-from-creating-executable-content)|[Block Office applications from creating executable content](https://demo.wd.microsoft.com/Content/TestFile_Block_Office_applications_from_creating_executable_content_3b576869-a4ec-4529-8536-b80a7769e899.docm)|
+|[56a863a9-875e-4185-98a7-b882c64b5ce5](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers)|Block abuse of exploited vulnerable signed drivers (Device)|
+|[5beb7efe-fd9a-4556-801d-275e5ffc04cc](attack-surface-reduction-rules-reference.md#block-execution-of-potentially-obfuscated-scripts)|Block execution of potentially obfuscated scripts|
+|[75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84](attack-surface-reduction-rules-reference.md#block-office-applications-from-injecting-code-into-other-processes)|Block Office applications from injecting code into other processes|
+|[7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c](attack-surface-reduction-rules-reference.md#block-adobe-reader-from-creating-child-processes)|Block Adobe Reader from creating child processes|
+|[92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b](attack-surface-reduction-rules-reference.md#block-win32-api-calls-from-office-macros)|[Block Win32 API calls from Office macros](https://demo.wd.microsoft.com/Content/Block_Win32_imports_from_Macro_code_in_Office_92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b.docm)|
+|[9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem)|Block credential stealing from the Windows local security authority subsystem|
+|[a8f5898e-1dc8-49a9-9878-85004b8a61e6](attack-surface-reduction-rules-reference.md#block-webshell-creation-for-servers)|Block Webshell creation for Servers|
+|[b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4](attack-surface-reduction-rules-reference.md#block-untrusted-and-unsigned-processes-that-run-from-usb)|[Block untrusted and unsigned processes that run from USB](https://demo.wd.microsoft.com/Content/UNSIGNED_ransomware_test_exe.exe)|
+|[be9ba2d9-53ea-4cdc-84e5-9b1eeee46550](attack-surface-reduction-rules-reference.md#block-executable-content-from-email-client-and-webmail)|Block executable content from email client and webmail|
+|[c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb](attack-surface-reduction-rules-reference.md#block-use-of-copied-or-impersonated-system-tools)|Block use of copied or impersonated system tools|
+|[c1db55ab-c21a-4637-bb3f-a12568109d35](attack-surface-reduction-rules-reference.md#use-advanced-protection-against-ransomware)|Use advanced protection against ransomware|
+|[d1e49aac-8f56-4280-b9ba-993a6d77406c](attack-surface-reduction-rules-reference.md#block-process-creations-originating-from-psexec-and-wmi-commands)|[Block process creations originating from PSExec and WMI commands](https://demo.wd.microsoft.com/Content/TestFile_PsexecAndWMICreateProcess_d1e49aac-8f56-4280-b9ba-993a6d77406c.vbs)|
+|[d3e037e1-3eb8-44c8-a917-57927947596d](attack-surface-reduction-rules-reference.md#block-javascript-or-vbscript-from-launching-downloaded-executable-content)|[Block JavaScript or VBScript from launching downloaded executable content](https://demo.wd.microsoft.com/Content/TestFile_Impede_JavaScript_and_VBScript_to_launch_executables_d3e037e1-3eb8-44c8-a917-57927947596d.js)|
+|[d4f940ab-401b-4efc-aadc-ad5f3c50688a](attack-surface-reduction-rules-reference.md#block-all-office-applications-from-creating-child-processes)|[Block all Office applications from creating child processes](https://demo.wd.microsoft.com/Content/TestFile_OfficeChildProcess_d4f940ab-401b-4efc-aadc-ad5f3c50688a.docm)|
+|[e6db77e5-3df2-4cf1-b95a-636979351e5b](attack-surface-reduction-rules-reference.md#block-persistence-through-wmi-event-subscription)|Block persistence through WMI event subscription|
 
 ## Scenarios
 
@@ -138,7 +138,7 @@ You should immediately see an "Action blocked" notification.
 1. Configure the individual rule you want to test. For example, to enable the **Block all Office applications from creating child processes** rule, run the following command in an elevated PowerShell window:
 
    ```powershell
-   Add-MpPreference -AttackSurfaceReductionRules_Ids D4F940AB-401B-4EfC-AADC-AD5F3C50688A -AttackSurfaceReductionRules_Actions Enabled
+   Add-MpPreference -AttackSurfaceReductionRules_Ids d4f940ab-401b-4efc-aadc-ad5f3c50688a -AttackSurfaceReductionRules_Actions Enabled
    ```
 
 1. Download and open the test file/document for the rule you want to test. If prompted, enable editing and content. For example:
@@ -149,15 +149,20 @@ You should immediately see an "Action blocked" notification.
 
 You should immediately see an "Action blocked" notification.
 
-### Scenario 3 (Windows 10 version 1709 or later): ASR rule blocks unsigned USB content from executing
+<a name="scenario-3-windows-10-version-1709-or-later-asr-rule-blocks-unsigned-usb-content-from-executing"></a>
 
-1. Enable the rule named **Block untrusted and unsigned processes that run from USB** by running the following command in an elevated PowerShell window:
+### Scenario 3: ASR rule blocks untrusted files from running from USB drives
+
+> [!TIP]
+> This ASR rule is available in Windows 10 1709 (October 2017) or later.
+
+1. Enable the **Block untrusted and unsigned processes that run from USB** ASR rule by running the following command in an elevated PowerShell window:
 
     ```powershell
-    Add-MpPreference -AttackSurfaceReductionRules_Ids B2B3F03D-6A65-4F7B-A9C7-1C7EF74A9BA4 -AttackSurfaceReductionRules_Actions Enabled
+    Add-MpPreference -AttackSurfaceReductionRules_Ids b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4 -AttackSurfaceReductionRules_Actions Enabled
     ```
 
-1. Download the file to a USB drive (directly or copy it to the USB drive after you download it to the hard drive):
+1. Download the following file to a USB drive (directly or copy it to the USB drive after you download it elsewhere):
 
    [Block Execution of untrusted or unsigned executables inside removable USB media](https://demo.wd.microsoft.com/Content/UNSIGNED_ransomware_test_exe.exe)
 
@@ -185,7 +190,7 @@ Download, extract, and run this [clean-up script](https://demo.wd.microsoft.com/
 Or, you run the following command in an elevated PowerShell window to disable all ASR rules:
 
 ```powershell
-Add-MpPreference -AttackSurfaceReductionRules_Ids 01443614-CD74-433A-B99E-2ECDC07BFC25,33DDEDF1-C6E0-47CB-833E-DE6133960387,3B576869-A4EC-4529-8536-B80A7769E899,56A863A9-875E-4185-98A7-B882C64B5CE5,5BEB7EFE-FD9A-4556-801D-275E5FFC04CC,75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84,92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B,9E6C4E1F-7D60-472F-BA1A-A39EF669E4B2,A8F5898E-1DC8-49A9-9878-85004B8A61E6,B2B3F03D-6A65-4F7B-A9C7-1C7EF74A9BA4,BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550,C0033C00-D16D-4114-A5A0-DC9B3A7D2CEB,C1DB55AB-C21A-4637-BB3F-A12568109D35,D1E49AAC-8F56-4280-B9BA-993A6D77406C,D3E037E1-3EB8-44C8-A917-57927947596D,D4F940AB-401B-4EFC-AADC-AD5F3C50688A,E6DB77E5-3DF2-4CF1-B95A-636979351E5B,26190899-1602-49E8-8B27-EB1D0A1CE869,7674BA52-37EB-4A4F-A9A1-F0F9A1619A2CC -AttackSurfaceReductionRules_Actions Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled
+Add-MpPreference -AttackSurfaceReductionRules_Ids 01443614-cd74-433a-b99e-2ecdc07bfc25,33ddedf1-c6e0-47cb-833e-de6133960387,3b576869-a4ec-4529-8536-b80a7769e899,56a863a9-875e-4185-98a7-b882c64b5ce5,5beb7efe-fd9a-4556-801d-275e5ffc04cc,75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84,92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b,9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2,a8f5898e-1dc8-49a9-9878-85004b8a61e6,b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4,be9ba2d9-53ea-4cdc-84e5-9b1eeee46550,c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb,c1db55ab-c21a-4637-bb3f-a12568109d35,d1e49aac-8f56-4280-b9ba-993a6d77406c,d3e037e1-3eb8-44c8-a917-57927947596d,d4f940ab-401b-4efc-aadc-ad5f3c50688a,e6db77e5-3df2-4cf1-b95a-636979351e5b,26190899-1602-49e8-8b27-eb1d0a1ce869,7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c -AttackSurfaceReductionRules_Actions Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled
 ```
 
 Clean up **C:\Demo** encryption by running the [encrypt/decrypt file](https://demo.wd.microsoft.com/Content/ransomware_cleanup_encrypt_decrypt.exe).

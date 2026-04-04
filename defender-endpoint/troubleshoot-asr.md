@@ -4,8 +4,8 @@ description: Resources and sample code to troubleshoot issues with attack surfac
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: limwainstein
-ms.author: lwainstein
+author: chrisda
+ms.author: chrisda
 ms.date: 04/01/2025
 ms.reviewer:
 ms.custom: asr
@@ -64,7 +64,7 @@ For more information about configuring attack surface reduction rules in group p
 Run the following command in PowerShell to see the state of all configured attack surface reduction rules on a device:
 
 ```powershell
-$p=Get-MpPreference;0..([math]::Min($p.AttackSurfaceReductionRules_Ids.Count,$p.AttackSurfaceReductionRules_Actions.Count)-1) | % {[pscustomobject]@{Id=$p.AttackSurfaceReductionRules_Ids[$_];Action=$p.AttackSurfaceReductionRules_Actions[$_]}} | Format-Table -AutoSize
+$p = Get-MpPreference;0..([math]::Min($p.AttackSurfaceReductionRules_Ids.Count,$p.AttackSurfaceReductionRules_Actions.Count)-1) | % {[pscustomobject]@{Id=$p.AttackSurfaceReductionRules_Ids[$_];Action=$p.AttackSurfaceReductionRules_Actions[$_]}} | Format-Table -AutoSize
 ```
 
 Example output from this command might look like this:
