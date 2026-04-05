@@ -1,20 +1,22 @@
 ---
 title: Install a sensor | Microsoft Defender for Identity
 description: Learn how to install Microsoft Defender for Identity sensors on your domain controllers, AD FS servers, or AD CS servers.
-ms.date: 06/21/2023
+ms.date: 04/05/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ---
 
 # Install a Microsoft Defender for Identity sensor
 
-This article describes how to install a Microsoft Defender for Identity classic sensor, including a standalone sensor. We recommend installing the sensor from the Defender portal. 
+This article describes how to install a Microsoft Defender for Identity sensor v2.x, including a standalone sensor. We recommend installing the sensor from the Defender portal. 
 
 We recommend alternate installation methods for these use cases:
 
 - When you're installing the sensor on Windows Server Core, or to deploy the sensor via a software deployment system, follow the steps for [silent installation](#perform-a-defender-for-identity-silent-installation) instead.
 
 - If you're using a proxy, we recommend that you install the sensor and configure your proxy together [from the command line](#command-for-running-a-silent-installation-with-a-proxy-configuration). If you need to update your proxy settings later on, use PowerShell or the Azure CLI. For more information, see [Configure endpoint proxy and internet connectivity settings](configure-proxy.md).
+
+- Installing the v2.x sensor isn't recommended when using the MDE‑integrated MDI sensor (v3.x). For more information, see [Microsoft Defender for Identity deployment overview](deploy-defender-identity.md)
 
 ## Prerequisites
 
@@ -32,9 +34,9 @@ Before you start, make sure that you have:
 
 - Trusted root certificates on your machine. If your trusted root CA-signed certificates are missing, [you might receive a connection error](../troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error).
 
-## Install the classic sensor in the Defender portal
+## Install the sensor v2.x in the Defender portal
 
-Perform the following steps on the domain controller, Active Directory Federation Services (AD FS) server, Active Directory Certificate Services (AD CS) server or Entra Connect server.
+Perform the following steps on the domain controller, Active Directory Federation Services (AD FS) server, Active Directory Certificate Services (AD CS) server or Microsoft Entra Connect server.
 
 1. Verify that the machine has connectivity to the relevant [Defender for Identity cloud service endpoints](configure-proxy.md#enable-access-to-defender-for-identity-service-urls-in-the-proxy-server).
 
