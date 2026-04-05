@@ -125,13 +125,13 @@ If you see this alert, check to see if the *Log on as a service policy* is confi
 > [!NOTE]
 > If you use the Group Policy Management Editor to configure the **Log on as a service** setting, make sure to add both **NT Service\All Services** and the gMSA account you created.
 
-## Configure a Directory service account in Microsoft Defender XDR
+## Configure a Directory service account in Microsoft Defender portal
 
-To connect your sensors with your Active Directory domains, configure Directory service accounts in Microsoft Defender XDR.
+To connect your sensors with your Active Directory domains, configure Directory service accounts in Microsoft Defender portal.
 
-1. In [Microsoft Defender XDR](https://security.microsoft.com/), go to **Settings > Identities**.
+1. In [Microsoft Defender portal](https://security.microsoft.com/), go to **Settings > Identities**.
 
-    :::image type="content" source="../media/settings-identities.png" alt-text="Screenshot that shows the settings page and how to access the Defender for Identity page." lightbox="../media/settings-identities.png":::
+    :::image type="content" source="../media//detect-exclusions/settings-identities.png" alt-text="Screenshot that shows the settings page and how to access the Defender for Identity page." lightbox="../media/settings-identities.png":::
 
 1. Select **Directory service accounts** to see which accounts are associated with which domains. 
 
