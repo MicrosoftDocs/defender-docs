@@ -34,7 +34,7 @@ Before you start, make sure that you have:
 
 - Trusted root certificates on your machine. If your trusted root CA-signed certificates are missing, [you might receive a connection error](../troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error).
 
-## Install the sensor v2.x in the Defender portal
+## Install the v2.x sensor in the Defender portal
 
 Perform the following steps on the domain controller, Active Directory Federation Services (AD FS) server, Active Directory Certificate Services (AD CS) server, or Microsoft Entra Connect server.
 
