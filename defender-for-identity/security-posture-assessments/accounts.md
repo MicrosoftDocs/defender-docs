@@ -351,10 +351,27 @@ This is required to display the Security tab on domain objects.
 
 This recommendation lists all privileged accounts that don't have the "not delegated" setting enabled, highlighting those potentially exposed to delegation-related risks. Privileged accounts are accounts that are being members of a privileged group such as Domain admins, Schema admins, and so on. 
 
+- Domain Admins
+- Enterprise Admins
+- Service accounts with elevated privileges
+
 **User impact**
 
-If the sensitive flag is disabled, attackers could exploit Kerberos delegation to misuse privileged account credentials, leading to unauthorized access, lateral movement, and potential network-wide security breaches. Setting the sensitive flag on privileged user accounts prevent users from gaining access to the account and manipulating system settings.   
-For device accounts, setting them to "not delegated" is important to prevent it from being used in any delegation scenario, ensuring that credentials on this machine can't be forwarded to access other services.
+If the sensitive flag is disabled, attackers could exploit Kerberos delegation to misuse privileged account credentials, leading to unauthorized access, lateral movement, and potential network-wide security breaches. 
+
+Enabling the setting **This account is sensitive and can't be delegated** doesn't affect the account’s ability to login or its assigned permissions. The restriction applies only to delegation scenarios, such as constrained or unconstrained Kerberos delegation. 
+Privileged accounts such as Domain Admins or Enterprise Admins should not be delegated, as this poses a significant security risk. Enabling this setting helps prevent Kerberos delegation attacks by ensuring these accounts cannot be impersonated.
+
+**Security recommendation**
+
+It is recommended to enable this setting for:
+
+Domain Admins
+Enterprise Admins
+Service accounts with elevated privileges
+
+Avoid applying this setting to accounts that require delegation for legitimate business purposes unless the delegation model is redesigned.
+
 
 **Implementation**
 
@@ -363,11 +380,13 @@ For device accounts, setting them to "not delegated" is important to prevent it 
 
 1. Take appropriate action on those accounts:
 
-- For user accounts: by setting the account's control flags to "this account is sensitive and can't be delegated." Under the Account tab, select the check box to this flag in the Account Options section. This prevents users from gaining access to the account and manipulating system settings.    
+- User accounts: 
+    - Go to the **Accounts** tab >**Account options**.
+    - Select **Account is sensitive and cannot be delegated.** This prevents users from gaining access to the account and manipulating system settings.
 
     :::image type="content" source="../media/ensure-privileged-accounts-with-sensitive-flag/administrator-properties.png" alt-text="Screenshot of the user profile.":::
 
-- For device accounts:  
+- Device accounts:  
 The safest approach is to use a PowerShell script to configure the device to prevent it from being used in any delegation scenario, ensuring that credentials on this machine can't be forwarded to access other services.
 
   ```powershell
