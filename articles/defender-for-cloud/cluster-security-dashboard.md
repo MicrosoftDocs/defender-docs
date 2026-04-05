@@ -146,8 +146,9 @@ It lists controls that the cluster doesn't meet and provides recommendations to 
 
 1. Select a control to open the details pane.
 
-1. Review the recommendation and remediation steps.
+In the details pane:
 
-1. Apply the required changes to meet the control.
+- Review the recommendation and remediation steps.
+- Apply the required changes to meet the control.
 
 :::image type="content" source="media/cluster-security-dashboard/compliance-standards-tab.png" alt-text="Screenshot of the Compliance tab showing regulatory compliance assessment results." lightbox="media/cluster-security-dashboard/compliance-standards-tab.png":::
