@@ -36,7 +36,7 @@ Before you start, make sure that you have:
 
 ## Install the sensor v2.x in the Defender portal
 
-Perform the following steps on the domain controller, Active Directory Federation Services (AD FS) server, Active Directory Certificate Services (AD CS) server or Microsoft Entra Connect server.
+Perform the following steps on the domain controller, Active Directory Federation Services (AD FS) server, Active Directory Certificate Services (AD CS) server, or Microsoft Entra Connect server.
 
 1. Verify that the machine has connectivity to the relevant [Defender for Identity cloud service endpoints](configure-proxy.md#enable-access-to-defender-for-identity-service-urls-in-the-proxy-server).
 
