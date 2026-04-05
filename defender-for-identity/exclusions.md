@@ -28,11 +28,10 @@ When replacing an existing exclusion with an alert tuning rule, identify the det
 
     :::image type="content" source="media/detect-exclusions/settings-identities.png" alt-text="Screenshot that shows the identities settings page in the Microsoft Defender portal.":::
    
-1. Select **Excluded entities**.
+1. Select **Excluded entities**. You can set exclusions using two methods: **Exclusions by detection rule** and **Global excluded entities**.
 
     :::image type="content" source="media/detect-exclusions/excluded-entities.png" alt-text="Screenshot of the excluded entities list.":::
-   
-   You can set exclusions using two methods: **Exclusions by detection rule** and **Global excluded entities**.
+
 
 ## Exclusions by detection rule
 
@@ -45,23 +44,24 @@ When replacing an existing exclusion with an alert tuning rule, identify the det
    1. Select a detection rule from the list. 
    1. View the detection rule details.
 
-   :::image type="content" source="media/detect-exclusions/detection-rule-details.png" alt-text="Screenshot of the detection rule details.":::
+       :::image type="content" source="media/detect-exclusions/detection-rule-details.png" alt-text="Screenshot of the detection rule details.":::
    
-    1. To add an exclusion, select the **Excluded entities** button, and then choose the exclusion type. Different excluded entities are available for each rule. They include users, devices, domains, and IP addresses. In this example, the choices are **Exclude devices** and **Exclude IP addresses**.
+    1. To add an exclusion, select the **Excluded entities** button.
+    1. Choose the exclusion type. Different excluded entities are available for each rule. They include users, devices, domains, and IP addresses. In this example, the choices are **Exclude devices** and **Exclude IP addresses**.
 
-    :::image type="content" source="media//detect-exclusions/exclude-devices-or-ip-addresses.png" alt-text="Screenshot showing the options to exclude devices or IP addresses.":::
+        :::image type="content" source="media//detect-exclusions/exclude-devices-or-ip-addresses.png" alt-text="Screenshot showing the options to exclude devices or IP addresses.":::
 
     1. After choosing the exclusion type, select the **+** button to add the exclusion.
 
-    :::image type="content" source="media/detect-exclusions/add-exclusion.png" alt-text="Screenshot of the add exclusion button.":::
+        :::image type="content" source="media/detect-exclusions/add-exclusion.png" alt-text="Screenshot of the add exclusion button.":::
 
     1. Select **+ Add** to add the excluded entity to the list.
 
-    :::image type="content" source="media/detect-exclusions/add-excluded-entity.png" alt-text="Screenshot showing how to add an entity to be excluded.":::
+        :::image type="content" source="media/detect-exclusions/add-excluded-entity.png" alt-text="Screenshot showing how to add an entity to be excluded.":::
 
     1. Select **Exclude IP addresses** (in this example) to complete the exclusion.
 
-    :::image type="content" source="media//detect-exclusions/exclude-ip-addresses.png" alt-text="Screenshot showing the exclusion of IP addresses.":::
+        :::image type="content" source="media//detect-exclusions/exclude-ip-addresses.png" alt-text="Screenshot showing the exclusion of IP addresses.":::
 
     1. Once you've added exclusions, you can export the list or remove the exclusions by returning to the **Excluded entities** button. In this example, we've returned to **Exclude devices**. To export the list, select the down arrow button.
 
@@ -80,7 +80,6 @@ You can now also configure exclusions by **Global excluded entities**. Global ex
     :::image type="content" source="media//detect-exclusions/global-excluded-entities.png" alt-text="Screenshot showing the global excluded entities.":::
    
 1. Choose an exclusion type. In this example, we selected **Exclude domains**.
-
 
     :::image type="content" source="media//detect-exclusions/exclude-domains.png" alt-text="Screenshot showing the option to exclude domains.":::
    
