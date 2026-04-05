@@ -131,7 +131,7 @@ To connect your sensors with your Active Directory domains, configure Directory 
 
 1. In [Microsoft Defender portal](https://security.microsoft.com/), go to **Settings > Identities**.
 
-    :::image type="content" source="../media//detect-exclusions/settings-identities.png" alt-text="Screenshot that shows the settings page and how to access the Defender for Identity page." lightbox="../media/settings-identities.png":::
+    :::image type="content" source="../media/detect-exclusions/settings-identities.png" alt-text="Screenshot that shows the settings page and how to access the Defender for Identity page." lightbox="../media/detect-exclusions/settings-identities.png":::
 
 1. Select **Directory service accounts** to see which accounts are associated with which domains. 
 
