@@ -36,7 +36,7 @@ When replacing an existing exclusion with an alert tuning rule, identify the det
 
 ## Exclusions by detection rule
 
-1. Select **Exclusions by detection rule**. You'll see a list of detection rules.
+1. Select **Exclusions by detection rule**. 
 
     :::image type="content" source="media/detect-exclusions/exclusions-by-detection-rule.png" alt-text="Screenshot of the exclusions by detection rule option.":::
    
@@ -73,9 +73,9 @@ When replacing an existing exclusion with an alert tuning rule, identify the det
 
 ## Global excluded entities
 
-You can now also configure exclusions by **Global excluded entities**. Global exclusions allow you to define certain entities (IP addresses, subnets, devices, or domains) to be excluded across all of the detections Defender for Identity has. So for example, if you exclude a device, it will only apply to those detections that have device identification as part of the detection.
+You can now also configure exclusions by **Global excluded entities**. Global exclusions allow you to define certain entities (IP addresses, subnets, devices, or domains) to be excluded across all of the detections Microsoft Defender for Identity has. So for example, if you exclude a device, it will only apply to those detections that have device identification as part of the detection.
 
-1. In the left-hand menu, select **Global excluded entities**. You'll see the categories of entities that you can exclude.
+1. Select **Global excluded entities** to see the categories of entities that you can exclude.
 
     :::image type="content" source="media//detect-exclusions/global-excluded-entities.png" alt-text="Screenshot showing the global excluded entities.":::
    
@@ -90,7 +90,7 @@ You can now also configure exclusions by **Global excluded entities**. Global ex
    
 1. The domain is added to the list. Select **Exclude domains** to complete the exclusion.
 
-    :::image type="content" source="media//detect-exclusions/select-exclude-domains.png" alt-text="Screenshot showing how to select exclude domains.":::
+    :::image type="content" source="media//detect-exclusions/select-exclude-domains.png" alt-text="Screenshot showing how to exclude domains.":::
    
 1. You'll then see the domain in the list of entities to be excluded from all detection rules. You can export the list, or remove the entities by choosing them and selecting the **Remove** button.
 
