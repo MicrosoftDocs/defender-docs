@@ -69,14 +69,18 @@ Follow these steps to query the graph when the graph is ready:
 
 1. Select any node to view the detailed metadata.
 
-1. Query the graph to visualize relationships and privilege paths. Write your own GQL queries or use predefined queries to get started.
+1. Use the **Graph** tab to visualize relationships and privilege paths. Write your own GQL queries or use predefined queries to get started.
 
     > [!NOTE]
-    > The identity attack graph includes predefined queries designed to surface common and high‑value investigation scenarios. These queries help you get immediate value without writing GQL from scratch. We strongly encourage you to start here. 
+    > It is recommended that you start with the predefined queries, which is designed to surface common and high‑value investigation scenarios. These queries help you get immediate value without writing GQL from scratch.
+
+The illustration shows the predefined queries to try.
 
     :::image type="content" source="./media/identity-attack-graph/predefined-query.png" alt-text="Screenshot showing the predefined query on the graph" lightbox="./media/identity-attack-graph/predefined-query.png":::
 
-:::image type="content" source="./media/identity-attack-graph/visualize-query.png" alt-text="Screenshot showing the graph tab to visualize query" lightbox="./media/identity-attack-graph/visualize-query.png":::
+1. **Run GQL query** to see the results.
+
+    :::image type="content" source="./media/identity-attack-graph/visualize-query.png" alt-text="Screenshot showing the graph tab to visualize query" lightbox="./media/identity-attack-graph/visualize-query.png":::
 
 
 ## Related content
