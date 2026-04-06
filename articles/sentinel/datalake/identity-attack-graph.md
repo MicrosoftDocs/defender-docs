@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn how the identity attack graph in Microsoft Sentinel models identities, permissions, and Azure resources to surface lateral movement paths and privilege escalation risks.
 author: evangelinew
 ms.topic: overview
-ms.date: 04/03/2026
+ms.date: 04/06/2026
 ms.author: evwhite
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
@@ -41,8 +41,8 @@ You can query the graph to:
 To set up the identity attack graph, you will need:
 
 - Microsoft Sentinel data lake enabled in your environment
-- Permissions to turn on or update the Microsoft Entra ID Assets and Azure Resource Graph connectors
-- Global administrator, Security administrator to create the graph
+- Permissions to turn on or update the **Microsoft Entra ID Assets** and **Azure Resource Graph connectors**
+- Global Administrator, Security Administrator to create the graph
 
 ## Set up the identity attack graph
 
@@ -61,17 +61,20 @@ After you turn on the graph, the graph begins ingesting data and building relati
 
 ## Explore and query the identity attack graph
 
-When your graph is ready:
+Follow these steps to query the graph when the graph is ready:
 
 1. Use the **Schema** tab to understand the types of entities and relationships in the graph.
 
-:::image type="content" source="./media/identity-attack-graph/visualize-graph-schema.png" alt-text="Screenshot showing the schema tab on the graph query page" lightbox="./media/identity-attack-graph/visualize-graph-schema.png":::
-
+    :::image type="content" source="./media/identity-attack-graph/visualize-graph-schema.png" alt-text="Screenshot showing the schema tab on the graph query page" lightbox="./media/identity-attack-graph/visualize-graph-schema.png":::
 
 1. Select any node to view the detailed metadata.
+
 1. Query the graph to visualize relationships and privilege paths. Write your own GQL queries or use predefined queries to get started.
 
-:::image type="content" source="./media/identity-attack-graph/predefined-query.png" alt-text="Screenshot showing the predefined query on the graph" lightbox="./media/identity-attack-graph/predefined-query.png":::
+    > [!NOTE]
+    > The identity attack graph includes predefined queries designed to surface common and high‑value investigation scenarios. These queries help you get immediate value without writing GQL from scratch. We strongly encourage you to start here. 
+
+    :::image type="content" source="./media/identity-attack-graph/predefined-query.png" alt-text="Screenshot showing the predefined query on the graph" lightbox="./media/identity-attack-graph/predefined-query.png":::
 
 :::image type="content" source="./media/identity-attack-graph/visualize-query.png" alt-text="Screenshot showing the graph tab to visualize query" lightbox="./media/identity-attack-graph/visualize-query.png":::
 
