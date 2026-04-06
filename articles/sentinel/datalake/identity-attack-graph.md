@@ -73,8 +73,8 @@ Follow these steps to query the graph when the graph is ready:
 
     :::image type="content" source="./media/identity-attack-graph/predefined-query.png" alt-text="Screenshot showing the predefined query on the graph" lightbox="./media/identity-attack-graph/predefined-query.png":::
 
-> [!NOTE]
-> It's recommended that you start with the predefined queries, which is designed to surface common and high‑value investigation scenarios. These queries help you get immediate value without writing GQL from scratch.
+    > [!NOTE]
+    > It's recommended that you start with the predefined queries, which is designed to surface common and high‑value investigation scenarios. These queries help you get immediate value without writing GQL from scratch.
 
 1. **Run GQL query** to see the results.
 
