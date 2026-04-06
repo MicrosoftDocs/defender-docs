@@ -76,7 +76,7 @@ Follow these steps to query the graph when the graph is ready:
 
 The illustration shows the predefined queries to try.
 
-    :::image type="content" source="./media/identity-attack-graph/predefined-query.png" alt-text="Screenshot showing the predefined query on the graph" lightbox="./media/identity-attack-graph/predefined-query.png":::
+     :::image type="content" source="./media/identity-attack-graph/predefined-query.png" alt-text="Screenshot showing the predefined query on the graph" lightbox="./media/identity-attack-graph/predefined-query.png":::
 
 1. **Run GQL query** to see the results.
 
