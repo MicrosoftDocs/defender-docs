@@ -142,9 +142,9 @@ Open a text editor and use the following examples as a guide for your own schedu
 </plist>
 ```
 
-1. Save the file as `com.microsoft.wdav.mobileconfig`.
+- Save the file as `com.microsoft.wdav.mobileconfig`.
 
-#### For JamF and other 3rd-party MDMs
+#### For JamF and other third-party MDMs
 
 ``` XML
 <?xml version="1.0" encoding="UTF-8"?> 
@@ -277,9 +277,9 @@ Open a text editor and use the following examples as a guide for your own schedu
 </plist> 
 ```
 
-1. Save the file as `com.microsoft.wdav.mobileconfig`.
+- Save the file as `com.microsoft.wdav.mobileconfig`.
 
-#### For JamF and other 3rd-party MDMs
+#### For JamF and other third-party MDMs
 
 ```XML
     <?xml version="1.0" encoding="UTF-8"?> 
