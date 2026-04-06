@@ -8,10 +8,10 @@ ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: ksarens
 manager: bagol
-ms.date: 03/23/2026
+ms.date: 03/26/2026
 ms.subservice: ngp
 ms.topic: how-to
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - mde-ngp
@@ -28,7 +28,7 @@ You can do tasks in Microsoft Defender Antivirus using the MpCmdRun command-line
 - You need to run MpCmdRun in an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
   1. Open the **Start** menu, and then type **cmd**.
   2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
-  
+
 - By default, the folder that contains MpCmdRun isn't in the PATH environment variable, so you need to get to the folder that contains MpCmdRun before you can run it. MpCmdRun.exe is located in the following locations on Windows x64 devices:
   - `C:\Program Files\Windows Defender`
   - `C:\ProgramData\Microsoft\Windows Defender\Platform\<antimalware platform version>`
@@ -71,26 +71,26 @@ The commands and their available options are described in the following table.
 |---|---|---|
 |`-?` or `-h`||Displays all available commands and their options.|
 |`-Scan [Options]`||Scans for malicious software. Typically, `-Scan` with no options runs a quick scan, unless a different default scan type is configured on the device. <br/><br/> Quick scans and full scans have default timeouts. The scan automatically stops after the time passes: <ul><li>**Quick scans**: One day</li><li>**Full scans**: Seven days</li></ul>|
-||`-ScanType <value>`|Specifies the type of antimalware scan to run. Valid values are: <ul><li>**0**: Default, according to your configuration.</li><li>**1**: Quick scan.</li><li>**2**: Full system scan</li><li>**3**: File and folder custom scan</li></ul> <br/> The return code is one of the following values: <ul><li>**0**: Indicates one of the following results: <ul><li>No malware found.</li><li>Malware found and successfully remediated.</li></ul></li><li>**2**: Indicates one of the following results: <ul><li>Malware found and not remediated.</li><li>Malware found and user action required to complete remediation.</li><li>Scanning error.</li></ul></li></ul>|
+||`-ScanType <value>`|Specifies the type of antimalware scan to run. Valid values are: <ul><li>**0**: Default, according to the device configuration.</li><li>**1**: Quick scan.</li><li>**2**: Full scan</li><li>**3**: Custom scan</li></ul> <br/> The return code is one of the following values: <ul><li>**0**: One of the following results: <ul><li>No malware found.</li><li>Malware found and successfully remediated.</li></ul></li><li>**2**: One of the following results: <ul><li>Malware found and not remediated.</li><li>Malware found and user action required to complete remediation.</li><li>Scanning errors.</li></ul></li></ul>|
 ||`-BootSectorScan`|Valid only for custom scans. Enables boot sector scanning.|
 ||`-Cancel`|Try to cancel active quick scans or full scans.|
 ||`-CpuThrottling`|Specifies the maximum CPU usage percentage. The default value is 50.|
-||`-DisableRemediation`|Valid only for custom scans. <ul><li>File exclusions are ignored.</li><li>Archive files are scanned.</li><li>Actions aren't applied after detection.</li><li>Event log entries aren't written after detection.</li><li>Detections from the custom scan aren't displayed in the user interface.</li><li>Detections from the custom scan are displayed in the console output.</li></ul>|
-||`-File <path>`|Valid only for custom scans. Specifies the file or folder to scan.|
+||`-DisableRemediation`|Valid only for custom scans. <ul><li>File exclusions are ignored.</li><li>Archive files are scanned.</li><li>Actions aren't applied after detection.</li><li>Event log entries aren't written after detection.</li><li>Detections from the custom scan aren't displayed in the user interface.</li><li>Detections from the custom scan are displayed in the command output.</li></ul>|
+||`-File <PathAndFilename or Path>`|Valid only for custom scans. Specifies the file or folder to scan.|
 ||`-ReturnHR`|Instead of returning 0 or 2, return the actual HRESULT of the scan command.|
 ||`-Timeout <days>`|Default value is 7 for full scans and 1 for all other scan types. The maximum value is 30.|
 |`-AddDynamicSignature -Path <path>`||Loads dynamic security intelligence from the specified location.|
-|`-CaptureNetworkTrace -Path <path>`||Captures network input from the Network Protection service, and saves it to the specified location. To stop tracing, use the `Path` option without a value. <br/><br/>**Note**: NT AUTHORITY\LocalService must have write access to the specified path (for example, `C:\Windows\Temp\MpCmdRun`).|
-|`-CheckExclusion -Path <PathAndFile or Path>`||Verifies whether the specified file or path is excluded from scanning. For more information, see [Verify whether a specified path is excluded using MpCmdRun](configure-extension-file-exclusions-microsoft-defender-antivirus.md#verify-whether-a-specified-path-is-excluded-using-mpcmdrun).|
+|`-CaptureNetworkTrace -Path <path>`||Captures network input from the Network Protection service, and saves it to the specified location. To stop tracing, use `-Path` without a value. <br/><br/>**Note**: NT AUTHORITY\LocalService must have write access to the specified path (for example, `C:\Windows\Temp\MpCmdRun`).|
+|`-CheckExclusion -Path <PathAndFilename or Path>`||Verifies whether the specified file or path is excluded from scanning. For more information, see [Verify whether a specified path is excluded using MpCmdRun](configure-extension-file-exclusions-microsoft-defender-antivirus.md#verify-whether-a-specified-path-is-excluded-using-mpcmdrun).|
 |`-DeviceControl -TestPolicyXml <PathAndFilename> -Groups or -Rules`||Validate the specified Device Control rules XML policy file.|
 ||`-Groups`|Identifies the specified file as a groups policy file.|
 ||`-Rules`|Identifies the specified file as a rules policy file.|
 |`-DisplayECSConnection`||Displays the URLs used by the Defender Core service to connect to the Experimentation and Configuration Service (ECS).|
-|`-GetFiles`||Generates, compresses, and saves Microsoft Defender Antivirus-related log files into the default file `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab`. For more information, see [Collect Microsoft Defender Antivirus diagnostic data](collect-diagnostic-data.md).|
+|`-GetFiles` [Options]||Generates, compresses, and saves Microsoft Defender Antivirus-related log files into the default file `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab`. For more information, see [Collect Microsoft Defender Antivirus diagnostic data](collect-diagnostic-data.md).|
 ||`-DlpTrace`|Includes the data loss prevention (DLP) trace files in the .cab file.|
 ||`-SupportLogLocation <RootPath>`|Specifies the root folder of a central location where the local MpSupportFiles.cab file is copied. The file is copied with a unique filename into a date-based subfolder path: `<RootPath>\<MMDD>\MpSupport-<Hostname>-<HHMM>.cab`. For more information, see [Collect Microsoft Defender Antivirus diagnostic data](collect-diagnostic-data.md).|
 |`-GetFilesDiagTrack`||Generates, compresses, and saves Microsoft Defender Antivirus-related log files into the file `%TEMP%\DiagOutputDir\MpSupportFiles.cab`.|
-|`-HeapSnapshotConfig -Enable or -Disable`||Enable or Disable heap snapshot (tracing) configuration for the specified process ID or process name.|
+|`-HeapSnapshotConfig -Enable or -Disable -Pid <ProcessID> or -Name <ProcessName.exe>`||Enable or Disable heap snapshot (tracing) configuration for the specified process ID or process name.|
 ||`-Pid <ProcessID>`|The process ID value of the process. Valid values are: <ul><li>**0 (Default)**: MsMpEng.exe</li><li>**1**: MpDefenderCoreService.exe</li><li>**2**: NisSrv.exe</li><li>**3**: MpDlpService.exe</li><li>**A custom value**: The specified process ID.</li></ul>|
 ||`-Name <ProcessName.exe>`|The name of the process.|
 |`-ListAllDynamicSignatures`||Lists the SignatureSet IDs of all loaded dynamic security intelligence updates.|
@@ -102,16 +102,16 @@ The commands and their available options are described in the following table.
 ||`-DynamicSignatures`|Removes only dynamically downloaded security intelligence updates.|
 ||`-Engine`|Restores the previously installed engine.|
 |`-RemoveDynamicSignature -SignatureSetID <SignatureSetID>`||Removes the specified dynamic security intelligence update.|
-|`-Restore`||Restores or lists quarantined items.|
+|`-Restore [Options]`||Restores or lists quarantined items.|
 ||`-ListAll`|Lists all quarantined items.|
 ||`-Name <name> [-All]`|Restores the most recently quarantined item based on the specified threat name. If you use `-All`, all quarantined items are restored based on the specified threat name. A threat can map to multiple files.|
 ||`-FilePath <QuarantinedFilePath>`|Restores a quarantined item based on the file path of the quarantined item.|
 ||`-Path <path>`|Specifies where to restore the quarantined items. <ul><li>If you don't use `-Path`, the item is restored to its original location and is removed from quarantine.</li><li>If you use `-Path`, the item is restored to the specified path, but the item isn't removed from quarantine.</li></ul>|
-||`-Output <filename>`|Write all quarantine item names to the specified file with UTF-8 encoding.|
-|`-SignatureUpdate`||Checks for new security intelligence updates.|
+||`-Output <filename>`|Write all quarantined item names to the specified file with UTF-8 encoding.|
+|`-SignatureUpdate [Options]`||Checks for new security intelligence updates.|
 ||`-UNC <path>`|Downloads updates directly from the specified UNC file share. If you don't specify a path value, the update is done directly from the preconfigured UNC location.|
 ||`-MMPC`|Downloads updates directly from the Microsoft Malware Protection Center.|
-|`-Trace`||Starts a trace of actions by the Microsoft Antimalware Service. By default all Error, Warning, and Informational events for all components are logged. The results are stored in `C:\ProgramData\Microsoft\Windows Defender\Support\MPTrace-<YYYMMDD>-<UTC HHMMSS>-<GUID>.bin`.|
+|`-Trace [Options]`||Starts a trace of actions by the Microsoft Antimalware Service. By default all Error, Warning, and Informational events for all components are logged. The results are stored in `C:\ProgramData\Microsoft\Windows Defender\Support\MPTrace-<YYYMMDD>-<UTC HHMMSS>-<GUID>.bin`.|
 ||`-Grouping <value>`|Specifies the component to include in the trace. Valid values are: <ul><li>**0x1**: Service</li><li>**0x2**: Malware Protection Engine</li><li>**0x4**: User Interface</li><li>**0x8**: Real-Time Protection</li><li>**0x10**: Scheduled actions</li><li>**0x20**: WMI</li><li>**0x40**: NIS/GAPA</li><li>**0x80**: Windows Security Center</li><li>**0x100**: DLP external</li><li>**0x200**: Browser Protection</li></ul>|
 ||`-Level <value>`|Specifies the event severity levels to include in the trace. Valid values are: <ul><li>**0x1**: Errors</li><li>**0x2**: Warnings</li><li>**0x4**: Informational messages</li><li>**0x8**: Function calls</li><li>**0x10**: Verbose</li><li>**0x20**: Performance</li></ul>|
 |`-TrustCheck -File <PathAndFilename>`||Checks the trust status of the specified file. Benign files might not be trusted. Only known, good files are trusted.|
@@ -126,8 +126,8 @@ The following table lists common errors that you might encounter using MpCmdRun.
 |Error message|Possible reason|
 |---|---|
 |**ValidateMapsConnection failed (800106BA)** or **0x800106BA**|The Microsoft Defender Antivirus service is disabled. Enable the service and try again. If you need help re-enabling Microsoft Defender Antivirus, see [Reinstall/enable Microsoft Defender Antivirus on your endpoints](switch-to-mde-phase-2.md#step-1-reinstallenable-microsoft-defender-antivirus-on-your-endpoints). <br/><br/> In Windows 10 version 1909 (November 2019) or earlier and Windows Server 2019 or earlier, the service was formerly named *Windows Defender Antivirus*.|
-|**0x80070667**|You're running the `-ValidateMapsConnection` command on a Windows 10 version 1607 (August 2016) or earlier, or on Windows Server 2016 or earlier. Run the command on Windows 10 version 1703 or later (April 2017), or Windows Server 2019 or later.|
-|**MpCmdRun is not recognized as an internal or external command, operable program, or batch file.**|You need to run MpCmdRun from `%ProgramFiles%\Windows Defender` or `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>` (recommended). <br/><br/> To go to the best available directory in a Command Prompt window, use the following enhanced change directory (cd) command: `(set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1`.|
+|**0x80070667**|You ran the `MpCmdRun.exe -ValidateMapsConnection` command on an unsupported version of Windows. Run the command on a supported versions of Windows: <ul><li>Windows 10 version 1703 (April 2017) or later.</li><li>Windows Server 2019 or later.</li></ul>|
+|**MpCmdRun is not recognized as an internal or external command, operable program, or batch file.**|By default, the folder that contains MpCmdRun isn't in the PATH environment variable. You need to run MpCmdRun.exe from `%ProgramFiles%\Windows Defender` or `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>` (recommended). <br/><br/> To go to the best available directory in a Command Prompt window, use the following enhanced change directory (cd) command: `(set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1`.|
 |**ValidateMapsConnection failed to establish a connection to MAPS (hr=80070005 httpcode=450)**|You need to run MpCmdRun in an elevated Command Prompt. For example: <ol><li>Open the **Start** menu, and then type **cmd**.</li><li>Right-click on the **Command Prompt** result, and then select **Run as administrator**.</li></ol>|
 |**ValidateMapsConnection failed to establish a connection to MAPS (hr=80070006 httpcode=451)**|A firewall is blocking the connection or doing TLS inspection.|
 |**ValidateMapsConnection failed to establish a connection to MAPS (hr=80004005 httpcode=450)**|Possible network-related issues. For example, name resolution problems.|
