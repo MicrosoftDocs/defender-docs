@@ -13,7 +13,7 @@ ms.collection:
   - essentials-manage
 ms.topic: how-to
 search.appverid: met150
-ms.date: 03/24/2026
+ms.date: 04/06/2026
 ---
 
 # Start using Defender Experts for XDR service
@@ -22,7 +22,7 @@ ms.date: 03/24/2026
 
 - [Microsoft Defender XDR](microsoft-365-defender.md)
 
-After you complete the [onboarding steps and readiness checks](get-started-xdr.md) for Microsoft Defender Experts for XDR and once the experts begin to perform comprehensive response work on your behalf, you start receiving notifications about incidents that require remediation steps and targeted recommendations on critical incidents. You can also start chatting with the experts or your security delivery experts (SDXs) and viewing reports on the number of incidents they investigated and resolved.
+After you complete the [onboarding steps and readiness checks](get-started-xdr.md) for Microsoft Defender Experts for XDR and the experts start performing comprehensive response work on your behalf, you receive notifications about incidents that require remediation steps and targeted recommendations on critical incidents. You can also start chatting with the experts or your security delivery experts (SDXs) and view reports on the number of incidents they investigated and resolved.
 
 This article describes the different in-portal experiences in Microsoft Defender where you can view and perform the previously mentioned Defender Experts notifications and activities, among others. These experiences provide you visibility into the experts' activities and clear entry points into tasks that require your attention.
 
@@ -38,7 +38,7 @@ You can view and monitor Defender Experts activities in the following sections o
 
 The Defender Experts status card in the Defender portal home page is located in the upper portion. You see a summary of the experts' activities and items requiring your attention immediately when you open the portal. 
 
-By default, this status card is located in the top row immediately after the home page banner. It might surface the following information:
+By default, this status card is located in the top row immediately after the home page banner. It surfaces the following information, depending on the state of your environment:
 - Onboarding and readiness calls to action
 - Managed response incidents that require customer action
 - Messages that might be awaiting your response
@@ -53,7 +53,7 @@ From this navigation menu, you can go directly to the Defender Experts overview 
 
 #### Overview
 
-The **Defender Experts Overview** page provides a consolidated view of Defender Experts activity, status, and outcomes. You can understand the value of the service without navigating across multiple areas in the portal.
+The **Defender Experts Overview** page provides a consolidated view of Defender Experts activity, status, and outcomes. It helps you easily understand what Defender Experts needs you to do and observe the value of the service without navigating to multiple areas of the portal.
 
 :::image type="content" source="media/start-using-mdex-xdr/defender-experts-overview-page.png" alt-text="Screenshot of Defender Experts overview page." lightbox="media/start-using-mdex-xdr/defender-experts-overview-page.png":::
 
