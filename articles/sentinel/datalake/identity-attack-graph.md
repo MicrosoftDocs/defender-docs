@@ -38,7 +38,7 @@ You can query the graph to:
 
 ## Prerequisites
 
-To set up the identity attack graph, you will need:
+To set up the identity attack graph, make sure you meet the following prerequisites:
 
 - Microsoft Sentinel data lake enabled in your environment
 - Permissions to turn on or update the **Microsoft Entra ID Assets** and **Azure Resource Graph connectors**
@@ -72,7 +72,7 @@ Follow these steps to query the graph when the graph is ready:
 1. Use the **Graph** tab to visualize relationships and privilege paths. Write your own GQL queries or use predefined queries to get started.
 
     > [!NOTE]
-    > It is recommended that you start with the predefined queries, which is designed to surface common and high‑value investigation scenarios. These queries help you get immediate value without writing GQL from scratch.
+    > It's recommended that you start with the predefined queries, which is designed to surface common and high‑value investigation scenarios. These queries help you get immediate value without writing GQL from scratch.
 
 The illustration shows the predefined queries to try.
 
