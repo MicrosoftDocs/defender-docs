@@ -105,11 +105,10 @@ Agentless container posture is available for Azure, AWS, and GCP environments.
 
 ## Related content
 
-- Learn more about [agentless container posture capabilities](concept-agentless-containers.md#capabilities).
-- Check out [common questions about Defender for Containers](faq-defender-for-containers.yml).
-- Learn more about [Trusted Access](/azure/aks/trusted-access-feature).
-- Learn how to [view and remediate vulnerability assessment findings for registry images](view-and-remediate-vulnerability-assessment-findings.md).
-- Learn how to [view and remediate vulnerabilities for images running on your AKS clusters](view-and-remediate-vulnerabilities-for-images.md).
-- Learn how to [Test the Attack Path and Security Explorer using a vulnerable container image](how-to-test-attack-path-and-security-explorer-with-vulnerable-container-image.md)
-- Learn how to [create an exemption](exempt-resource.md) for a resource or subscription.
-- Learn more about [Cloud Security Posture Management](concept-cloud-security-posture-management.md).
+- [Enable Defender CSPM](enable-enhanced-security.md)
+
+- [Agentless container posture capabilities](concept-agentless-containers.md)
+
+- [View and remediate vulnerability assessment findings for registry images](view-and-remediate-vulnerability-assessment-findings.md)
+
+- [View and remediate vulnerabilities for images running on AKS clusters](view-and-remediate-vulnerabilities-for-images.md)
