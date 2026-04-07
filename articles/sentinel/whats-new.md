@@ -30,7 +30,7 @@ The listed features were released in the last six months. For information about 
 - [Unified RBAC and GDAP support](#unified-rbac-and-gdap-support)
 
 ### Microsoft Sentinel data federation (Preview)
-Powered by Microsoft Fabric, Microsoft Sentinel data federation lets you analyze security data where it already lives, without copying or duplicating it. You can federate data from Microsoft Fabric, Azure Data Lake Storage, and Azure Databricks into the Microsoft Sentinel data lake, then use familiar Microsoft Sentinel experiences like KQL, notebooks, and custom graphs across both federated and native data.
+Powered by Microsoft Fabric, Microsoft Sentinel data federation lets you analyze security data where it already lives, without copying or duplicating it. You can federate data from Microsoft Fabric, Azure Data Lake Storage, and Azure Databricks into Microsoft Sentinel data lake, then use familiar Microsoft Sentinel experiences like KQL, notebooks, and custom graphs across both federated and native data.
 
 For more information, see [Data federation overview in Microsoft Sentinel data lake](datalake/data-federation-overview.md).
 
@@ -40,8 +40,11 @@ Native filtering and splitting in the Microsoft Defender portal helps you reduce
 ### Accelerate Microsoft Sentinel connector development with VS Code connector builder agent (Preview)
 An AI-powered, low-code agent in Visual Studio (VS) Code helps you build Microsoft Sentinel connectors in minutes, bringing in new data sources faster and unlocking security outcomes sooner. For more information, see [Get started with custom connectors using AI agent in Microsoft Sentinel](create-custom-connector-builder-agent.md).
 
-### Build custom security graphs (Preview)
+### Build custom graphs (Preview)
 Build tailored security graphs across the Sentinel data lake and third-party data to uncover attack paths, blast radius, and hidden relationships. These graphs also serve as a foundation for advanced investigations and AI agents. For more information, see [Custom Graph overview](datalake/custom-graphs-overview.md).
+
+#### Graphs experience in the Microsoft Defender portal (Preview)
+After creating your custom graphs, you can access them in the graphs section of the Defender portal under **Microsoft Sentinel**. From there, you can run Graph Query Language (GQL) queries, view the graph schema, visualize the graph, view graph results in tabular format, and interactively traverse the graph to the next hop with a simple click.
 
 ### Cost estimation tool for customers and partners (Preview)
 A guided, meter-level Sentinel cost estimator with three-year projections helps organizations model data growth, predict spend, and plan Sentinel adoption with confidence. For more information, see
