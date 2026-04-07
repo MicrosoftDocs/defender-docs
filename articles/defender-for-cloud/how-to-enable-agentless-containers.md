@@ -103,6 +103,8 @@ Agentless container posture is available for Azure, AWS, and GCP environments.
 > [!NOTE]
 > Kubernetes API access uses AKS trusted access. For more information about AKS trusted access, see [Enable Azure resources to access Azure Kubernetes Service (AKS) clusters using Trusted Access](/azure/aks/trusted-access-feature).
 
+---
+
 ## Related content
 
 - [Enable Defender CSPM](enable-enhanced-security.md)
