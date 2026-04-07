@@ -32,8 +32,8 @@ Beyond the core detections automatically available for all Agent 365‑managed a
 
 To enable these extended detections:
 
-- For Microsoft Copilot Studio agents, see [Copilot Studio integration in Microsoft Defender for Cloud Apps](/defender-cloud-apps/ai-agent-inventory). 
-- For Microsoft Foundry agents, see [Enable threat protection for Microsoft Foundry AI workloads](/defender-for-cloud/ai-onboarding).
+- For **Microsoft Copilot Studio agents**, see [Copilot Studio integration in Microsoft Defender for Cloud Apps](/defender-cloud-apps/ai-agent-inventory). 
+- For **Microsoft Foundry agents**, see [Enable threat protection for Microsoft Foundry AI workloads](/defender-for-cloud/ai-onboarding).
 
 
 ## Block suspicious AI agent actions with real-time protection for supported agents 
@@ -49,4 +49,6 @@ If Microsoft Defender determines that a prompt is suspicious:
 ## Investigate AI agent threats 
 
 
+Microsoft Defender uses Microsoft Defender XDR incident correlation and Advanced Hunting to help security teams investigate AI agent threats across all Agent 365‑managed agents. By correlating alerts, agent activity, and related security signals into incidents, Defender helps defenders understand the full context and blast radius of AI agent‑related threats and assess their impact across the environment. For more information, see [Incidents and alerts in the Microsoft Defender portal](/defender-xdr/incidents-overview).
 
+You can collect audit logs for all Agent 365-managed agents for deeper investigation by enabling the Microsoft 365 app connector. For more information, see [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#connect-microsoft-365-to-microsoft-defender-for-cloud-apps).
