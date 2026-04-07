@@ -7,7 +7,6 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -19,12 +18,11 @@ ms.date: 03/31/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # Configure offline security intelligence updates for Microsoft Defender for Endpoint on Linux 
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
-
 
 ## How offline security intelligence updates work
 
@@ -240,7 +238,7 @@ offline_definition_update_fallback_to_cloud : false[managed]
 
 ### Automatic update
 
-- If the [enforcement level for the antivirus engine](/defender-endpoint/linux-preferences#enforcement-level-for-antivirus-engine) is set to `real_time`, and the fields `automaticDefinitionUpdateEnabled` and `offline_definition_update` in the managed json are set to `true`, then the offline security intelligence updates are triggered automatically at periodic intervals.
+- If the [enforcement level for the antivirus engine](linux-preferences.md#enforcement-level-for-microsoft-defender-antivirus) is set to `real_time`, and the fields `automaticDefinitionUpdateEnabled` and `offline_definition_update` in the managed json are set to `true`, then the offline security intelligence updates are triggered automatically at periodic intervals.
 - By default, this periodic interval is **8 hours**. But it can be configured by setting the `definitionUpdatesInterval` parameter in the managed json.
 
 ### Manual update

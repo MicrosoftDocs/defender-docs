@@ -4,7 +4,6 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
@@ -16,7 +15,7 @@ ms.collection:
   - tier1
 description: Admins who aren't using Microsoft Defender for Office 365 can learn how to quickly set up protection in Microsoft Teams.
 ms.service: defender-office-365
-ms.date: 12/16/2025
+ms.date: 04/02/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
 ---
@@ -134,10 +133,18 @@ For complete instructions, see [User reported message settings in Microsoft Team
 
    If the value is :::image type="icon" source="media/scc-toggle-off.png" border="false"::: **Off**, move the toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**, and then select **Save**.
 
-   :::image type="content" source="media/submissions-teams-turn-on-off-tac-not-security-risk.png" alt-text="Screenshot of the 'Report incorrect security detections' toggle on the Messaging settings page in the Microsoft Teams admin center." lightbox="media/submissions-teams-turn-on-off-tac-not-security-risk.png":::
+   :::image type="content" source="media/submissions-teams-turn-on-off-tac-not-security-risk.png" alt-text="Screenshot of the Report incorrect security detections toggle on the Messaging settings page in the Microsoft Teams admin center." lightbox="media/submissions-teams-turn-on-off-tac-not-security-risk.png":::
 
-7. In the Microsoft Defender portal, go to the **User reported settings** page at <https://security.microsoft.com/securitysettings/userSubmission>.
+7. In the Teams admin center, go to the **Calling settings** page at <https://admin.teams.microsoft.com/one-policy/settings/calling>.
 
-8. On the **User reported settings** page, go to the **Microsoft Teams** section, and verify **Monitor reported messages in Microsoft Teams** is selected.
+8. On the **Calling settings** page, go to the **General** section, find the **Report a call** toggle, and verify the value is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
+
+   If the value is :::image type="icon" source="media/scc-toggle-off.png" border="false"::: **Off**, move the toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**, and then select **Save**.
+
+   :::image type="content" source="media/submissions-teams-turn-on-off-tac-security-risk-call.png" alt-text="Screenshot of the 'Report a call toggle on the Call settings page in the Microsoft Teams admin center." lightbox="media/submissions-teams-turn-on-off-tac-security-risk-call.png":::
+
+9. In the Microsoft Defender portal, go to the **User reported settings** page at <https://security.microsoft.com/securitysettings/userSubmission>.
+
+10. On the **User reported settings** page, go to the **Microsoft Teams** section, and verify **Monitor reported items in Microsoft Teams** is selected.
 
    If it's not selected, select the check box, and then select **Save**.

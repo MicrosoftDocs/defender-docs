@@ -8,7 +8,6 @@ appliesto:
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
-manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.topic: how-to
@@ -32,7 +31,7 @@ You need to assign permissions before you can perform the procedures in this art
 - Submit files / file hashes: _"Alerts investigation" or "Manage security settings in Security Center"_
 - View submissions: "_View Data - Security operations"_
 
-**Microsoft Defender XDR Unified RBAC** permissions:
+**Microsoft Defender unified RBAC** permissions:
 
 - Submit files / file hashes: _"Alerts (Manage)" or "Core security settings (manage)"_
 - View submissions: _"Security data basics (read)"_

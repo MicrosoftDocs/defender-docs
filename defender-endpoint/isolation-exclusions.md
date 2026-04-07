@@ -5,7 +5,6 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -48,7 +47,7 @@ There are two modes of isolation: **full isolation** and **selective isolation**
 
 * **Full isolation**: In full isolation mode, the device is completely isolated from the network, and no exceptions are allowed. All traffic is blocked, except for essential communications with the Defender agent. Exclusions aren't applied in full isolation mode.
 
-   Full isolation mode is the most secure option, suitable for scenarios where a high level of containment is necessary. For more information about full isolation mode, see [Isolate devices from the network](/defender-endpoint/respond-machine-alerts#isolate-devices-from-the-network).
+   Full isolation mode is the most secure option, suitable for scenarios where a high level of containment is necessary. For more information about full isolation mode, see [Isolate devices from the network](respond-machine-alerts.md#isolate-devices-from-the-network).
 
 * **Selective isolation**: Selective isolation mode allows administrators to apply exclusions to ensure that critical tools and network communications can still function, while maintaining the device's isolated state.
 
@@ -111,7 +110,7 @@ Exclusions that were applied to a specific device can be reviewed in the Action 
  
 #### Apply selective isolation via API
 
-Alternatively, you can apply selective isolation via API. To do so, set the **IsolationType** parameter to *Selective*. For more information, see [Isolate machine API](/defender-endpoint/api/isolate-machine).
+Alternatively, you can apply selective isolation via API. To do so, set the **IsolationType** parameter to *Selective*. For more information, see [Isolate machine API](api/isolate-machine.md).
  
 ## Exclusion Logic
 

@@ -8,7 +8,6 @@ ms.topic: article
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: sugamar, moeghasemi
-manager: bagol
 ms.subservice: asr
 ms.collection: 
 - m365-security

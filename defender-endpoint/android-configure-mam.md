@@ -5,7 +5,6 @@ search.appverid: met150
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
-manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection:

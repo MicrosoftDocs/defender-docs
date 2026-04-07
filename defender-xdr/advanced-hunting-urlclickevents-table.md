@@ -9,7 +9,6 @@ f1.keywords:
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -21,7 +20,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 03/28/2025
+ms.date: 04/02/2026
 ---
 
 # UrlClickEvents
@@ -49,7 +48,7 @@ For information on other tables in the advanced hunting schema, see [the advance
 | `ThreatTypes` | `string` | Verdict at the time of click, which tells whether the URL led to malware, phish or other threats|
 | `DetectionMethods` | `string` | Detection technology that was used to identify the threat at the time of click|
 | `IPAddress` | `string` | Public IP address of the device from which the user clicked on the link|
-| `IsClickedThrough` | `bool` | Indicates whether the user was able to click through to the original URL (1) or not (0)|
+| `IsClickedThrough` | `bool` | Indicates whether the user was able to click through to the original URL (1) or not (0) on the Safe Links warning page using "Continue anyway" option|
 | `UrlChain` | `string` | For scenarios involving redirections, it includes URLs present in the redirection chain|
 | `ReportId` | `string` | The unique identifier for a click event. For clickthrough scenarios, report ID would have same value, and therefore it should be used to correlate a click event.|
 

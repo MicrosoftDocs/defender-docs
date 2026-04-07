@@ -6,7 +6,6 @@ ms.service: defender-experts-for-xdr
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection:
   - m365-security
@@ -31,7 +30,7 @@ Microsoft Defender Experts for XDR provides multiple channels of communication t
 
 ## Incident and managed response notifications
 
-When an incident requires your attention, such as the incidents our experts issue [managed response actions](start-using-mdex-xdr.md#managed-detection-and-response), you receive notifications through one or more of the following channels:
+When an incident requires your attention, such as the incidents our experts issue [managed response actions](managed-detection-and-response-xdr.md), you receive notifications through one or more of the following channels:
 
 ### In-portal chat
 

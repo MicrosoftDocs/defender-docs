@@ -8,7 +8,6 @@ author: chrisda
 ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: jesquive
-manager: bagol
 ms.subservice: ngp
 ms.service: defender-endpoint
 ms.collection:
@@ -148,7 +147,7 @@ If you would prefer to do everything manually, here's what to do to replicate th
    > [!NOTE]
    > We set the script so that the last 12 digits of the GUID are the year, month, day, and time when the file was downloaded so that a new folder is created each time. You can change this so that the file is downloaded to the same folder each time.
 
-1. Download a security intelligence package from [https://www.microsoft.com/wdsi/definitions](https://www.microsoft.com/wdsi/definitions)  into the GUID folder. The file should be named `mpam-fe.exe`.
+1. Download a security intelligence package from [https://www.microsoft.com/wdsi/defenderupdates](https://www.microsoft.com/wdsi/defenderupdates)  into the GUID folder. The file should be named `mpam-fe.exe`.
 
 1. Open a Command Prompt window and navigate to the GUID folder you created. Use the `/X` extraction command to extract the files. For example, `mpam-fe.exe /X`.
 
@@ -345,12 +344,11 @@ If you think you need to add exclusions, see [Manage exclusions for Microsoft De
 
 ## Next step
 
-If you're also deploying [endpoint detection and response](overview-endpoint-detection-response.md) (EDR) to your Windows-based VDI VMs, see [Onboard non-persistent virtual desktop infrastructure (VDI) devices in Microsoft Defender XDR](/defender-endpoint/configure-endpoints-vdi).
+If you're also deploying [endpoint detection and response](overview-endpoint-detection-response.md) (EDR) to your Windows-based VDI VMs, see [Onboard non-persistent virtual desktop infrastructure (VDI) devices in Microsoft Defender XDR](configure-endpoints-vdi.md).
 
 ## See also
 
 - [Tech Community Blog: Configuring Microsoft Defender Antivirus for non-persistent VDI machines](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/configuring-microsoft-defender-antivirus-for-non-persistent-vdi/ba-p/1489633)
-- [TechNet forums on Remote Desktop Services and VDI](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserverTS)
 - [SignatureDownloadCustomTask PowerShell script](https://www.powershellgallery.com/packages/SignatureDownloadCustomTask/1.4)
 
 If you're looking for information about Defender for Endpoint on non-Windows platforms, see the following resources:
@@ -359,6 +357,3 @@ If you're looking for information about Defender for Endpoint on non-Windows pla
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 - [Configure Defender for Endpoint on Android features](android-configure.md)
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-
-
-

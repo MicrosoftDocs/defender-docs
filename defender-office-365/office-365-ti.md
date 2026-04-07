@@ -4,7 +4,6 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.date: 10/10/2023
 audience: Admin
 ms.topic: overview
@@ -97,7 +96,7 @@ Microsoft Defender for Office 365 uses role-based access control. Permissions ar
 >
 > - [Permissions in the Microsoft Defender portal](mdo-portal-permissions.md)
 > - [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference)
-> - [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac)
+> - [Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/manage-rbac)
 
 |Activity|Roles and permissions|
 |---|---|

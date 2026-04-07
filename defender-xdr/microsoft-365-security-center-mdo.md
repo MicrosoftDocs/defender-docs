@@ -4,7 +4,6 @@ description: Learn about how Microsoft Defender for Office 365 operates in the M
 ms.date: 09/11/2024
 ms.author: chrisda
 author: chrisda
-manager: deniseb
 audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
