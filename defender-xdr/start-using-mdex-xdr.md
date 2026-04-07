@@ -13,7 +13,7 @@ ms.collection:
   - essentials-manage
 ms.topic: how-to
 search.appverid: met150
-ms.date: 04/06/2026
+ms.date: 04/07/2026
 ---
 
 # Start using Defender Experts for XDR service
