@@ -89,23 +89,13 @@ The following table summarizes how to deploy Microsoft Defender for Endpoint on 
 ## Supported Android enrollment scenarios
 
 |Scenarios|Company portal app required on the device?|Protection Profile/Prerequisites|How to deploy|
-<<<<<<< HEAD
-| -------- | -------- | -------- | -------- |
-|Android Enterprise personally owned devices using a work profile|Yes| Protects only the work profile section. [Learn more about the work profile](/intune/intune-service/apps/android-deployment-scenarios-app-protection-work-profiles)|[Deploy and configure Microsoft Defender for Endpoint on Android with Microsoft Intune](/intune/intune-service/apps/apps-defender-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#add-the-app-from-managed-google-play) |
-|Android Enterprise personally owned devices using a personal profile|Yes| Protects the personal profile. When a customer has a scenario with work profile as well then it protects the entire device. Note the following: The company portal app must be enabled on personal profile and the Microsoft Defender must be already installed and active in work profile to enable Microsoft Defender in personal profile.|[Deploy and configure Microsoft Defender for Endpoint on Android with Microsoft Intune](/intune/intune-service/apps/apps-defender-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json)|
-|Android Enterprise corporate owned work profile (COPE)|Yes|Protects only the work profile section. The Company Portal app and Microsoft Intune app both are automatically installed. | [Deploy and configure Microsoft Defender for Endpoint on Android with Microsoft Intune](/intune/intune-service/apps/apps-defender-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#add-the-app-from-managed-google-play) |
-|Android Enterprise corporate owned fully managed - no work profile (COBO)|Yes|Protects the entire device. The Company Portal app and Microsoft Intune app both are automatically installed.|[Deploy and configure Microsoft Defender for Endpoint on Android with Microsoft Intune](/intune/intune-service/apps/apps-defender-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#add-the-app-from-managed-google-play)|
-|MAM|Yes, (need to just install, setup isn't required) | Protects only enrolled apps. MAM supports with/without Device enrollment or enrolled with non-Microsoft Enterprise Mobility Management.|[Configure Microsoft Defender for Endpoint on Android risk signals using App Protection Policies (MAM)](android-configure-mam.md)|
-|Device Administrator (Deprecated on 31 December 2024)|Yes|Intune and Defender for Endpoint are ending support for android device administrator management on devices with access to Google Mobile Services (GMS) on December 31, 2024.|[Deploy and configure Microsoft Defender for Endpoint on Android with Microsoft Intune](/intune/intune-service/apps/apps-defender-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json)|
-=======
 |---|---|---|---|
-|Android Enterprise personally owned devices using a work profile|Yes|Protects only the work profile section. [Learn more about the work profile](/intune/intune-service/apps/android-deployment-scenarios-app-protection-work-profiles)|[Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](android-intune.md#deploy-on-android-enterprise-enrolled-devices)|
-|Android Enterprise personally owned devices using a personal profile|Yes|Protects the personal profile. When a customer also has a work profile, it protects the entire device. <ul><li>The company portal app must be enabled on personal profile.</li><li>Microsoft Defender must be already installed and active in the work profile to enable Microsoft Defender in the personal profile.</li></ul>|[Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](android-intune.md#set-up-microsoft-defender-in-personal-profile-on-android-enterprise-in-byod-mode)|
-|Android Enterprise corporate owned work profile (COPE)|Yes|Protects only the work profile section. The Company Portal app and Microsoft Intune app both are automatically installed.|[Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](android-intune.md#deploy-on-android-enterprise-enrolled-devices)|
-|Android Enterprise corporate owned fully managed - no work profile (COBO)|Yes|Protects the entire device. The Company Portal app and Microsoft Intune app both are automatically installed.|[Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](android-intune.md#deploy-on-android-enterprise-enrolled-devices)|
+|Android Enterprise personally owned devices using a work profile|Yes|Protects only the work profile section. [Learn more about the work profile](/intune/intune-service/apps/android-deployment-scenarios-app-protection-work-profiles)|[Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](/intune/intune-service/protect/microsoft-defender-deploy-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json)|
+|Android Enterprise personally owned devices using a personal profile|Yes|Protects the personal profile. When a customer also has a work profile, it protects the entire device. <ul><li>The company portal app must be enabled on personal profile.</li><li>Microsoft Defender must be already installed and active in the work profile to enable Microsoft Defender in the personal profile.</li></ul>|[Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](/intune/intune-service/protect/microsoft-defender-deploy-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json)|
+|Android Enterprise corporate owned work profile (COPE)|Yes|Protects only the work profile section. The Company Portal app and Microsoft Intune app both are automatically installed.|[Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](/intune/intune-service/protect/microsoft-defender-deploy-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json)|
+|Android Enterprise corporate owned fully managed - no work profile (COBO)|Yes|Protects the entire device. The Company Portal app and Microsoft Intune app both are automatically installed.|[Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](/intune/intune-service/protect/microsoft-defender-deploy-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json)|
 |MAM|Yes (installed; setup isn't required)|Protects only enrolled apps. MAM supports with/without Device enrollment or enrolled with non-Microsoft Enterprise Mobility Management.|[Configure Microsoft Defender for Endpoint on Android risk signals using App Protection Policies (MAM)](android-configure-mam.md)|
-|Device Administrator (Deprecated on 31 December 2024)|Yes|Intune and Defender for Endpoint ended support for Android device administrator management on devices with access to Google Mobile Services (GMS) in December 2024.|[Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](android-intune.md)|
->>>>>>> c732ee9167903b45528138642aceaa2de2c5115b
+|Device Administrator (Deprecated on 31 December 2024)|Yes|Intune and Defender for Endpoint ended support for Android device administrator management on devices with access to Google Mobile Services (GMS) in December 2024.|[Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](/intune/intune-service/protect/microsoft-defender-deploy-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json)|
 
 ### Unsupported Android enrollment scenarios
 
@@ -150,13 +140,8 @@ iOS Dedicated/shared/kiosk device enrollment isn't supported.
 ### Simplify onboarding
 
 - [iOS - Zero-Touch Onboard](ios-install.md#zero-touch-silent-onboarding-to-defender-for-endpoint)
-<<<<<<< HEAD
-- [Android Enterprise - Setup Always-on VPN](/intune/intune-service/apps/apps-defender-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#set-up-always-on-vpn)
-- [iOS - Auto-setup of VPN profile](ios-install.md#auto-onboarding-of-vpn-profile-simplified-onboarding)
-=======
-- [Android Enterprise - Setup Always-on VPN](android-intune.md#auto-setup-of-always-on-vpn).
+- [Android Enterprise - Setup Always-on VPN](/intune/intune-service/protect/microsoft-defender-deploy-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#set-up-always-on-vpn)
 - [iOS - Autosetup of VPN profile](ios-install.md#auto-onboarding-of-vpn-profile-simplified-onboarding)
->>>>>>> c732ee9167903b45528138642aceaa2de2c5115b
 
 ## Pilot evaluation
 
