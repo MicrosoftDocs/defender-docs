@@ -1,0 +1,95 @@
+---
+title: Secure your AI assets using Microsoft Defender
+ms.author: guywild
+author: guywi-ms
+ms.reviewer: itaicohen
+ms.service: microsoft-defender
+ms.update-cycle: 180-days
+ms.date: 03/03/2026
+audience: Admin
+ms.topic: concept-article
+description: Learn how Microsoft Defender secures AI workloads across their lifecycle - from build and configuration to runtime - and supports organizations in managing AI security risks.
+---
+
+# Secure AI assets and runtime behavior using Microsoft Defender
+
+Adopting artificial intelligence (AI) introduces new security vulnerabilities beyond the risks posed by traditional applications. AI exposes new attack surfaces across AI agents and applications, the AI models they use, plugins to these AI assets, and generative AI prompts and responses. 
+
+By embedding security into the fabric of AI development and operations, Microsoft lets you build AI responsibly and adopt AI with confidence, at scale.
+
+This article provides an overview of the Microsoft Defender capabilities that secure AI assets against vulnerabilities and emerging threats.
+
+## The AI threat landscape
+
+AI security threats span runtime risks with AI agents and applications - the main user interfaces - but it's equally important to secure the models, infrastructure, and integrations the agents and applications depend on.
+
+Key security risks to your AI assets include:
+
+- **Model and supply-chain risks** - The models your AI assets depend on are high-value targets. A single compromised dependency in a model's supply chain can turn every agent and application that relies on it into an attack vector for exfiltrating credentials, installing backdoors, and spreading vulnerabilities across your infrastructure. 
+- **Agent misconfiguration and over-privilege** - Agents with excessive permissions or improperly configured tool authentication can enable unauthorized access to sensitive resources.
+- **Runtime abuse and misuse** - Agents or applications can perform unsafe actions at execution time due to malicious inputs, unexpected reasoning paths, or compromised dependencies.
+- **Prompt- and content-based attacks** - Beyond malicious inputs, more subtle tactics, such as zero-click attacks using hidden instructions embedded in emails or retrieved content, can manipulate agent behavior, cause data leakage, or trigger unintended actions.
+
+Addressing these risks requires security controls that span discovery, posture management, detection, and runtime protection.
+
+## Secure AI assets using Microsoft Defender
+
+Microsoft Defender helps you secure AI assets as you deploy and scale across cloud environments, through a combination of preventive and detective capabilities:
+
+| Capability | Description |
+|---|---|
+| **AI asset discovery** | <ul><li>Discover AI agents, applications, models, and services to gain visibility across your AI estate.</li></ul> |
+| **Security posture management** | <ul><li>Identify unsafe AI artifacts, misconfigurations, risky dependencies, insecure instructions, and excessive privileges.</li><li>Prioritize risk by using security recommendations, risk factors, and attack-path analysis.</li></ul> |
+| **Threat detection and blocking** | <ul><li>Detect malicious or abnormal AI behavior, and correlate signals across Microsoft Defender, Microsoft Entra, and Microsoft Purview.</li><li>Help block unsafe actions in real time, such as prompt injection attempts, unsafe tool usage, and suspicious access patterns, before impact.</li></ul> |
+| **Threat investigation and hunting** | <ul><li>Investigate flagged events, and trace actions such as tool calls, MCP interactions, and memory changes.</li><li>Search and analyze threats across agents, applications, and devices by using Kusto Query Language (KQL).</li></ul> |
+
+The following sections explain how to apply these capabilities.
+
+## Protect AI agents using Microsoft Defender
+
+AI agents introduce unique security risks because of their ability to reason, invoke tools, access data, and take autonomous actions across systems. Securing agents at scale requires centralized visibility, governance, and runtime protections.
+
+[Microsoft Agent 365](/microsoft-agent-365/overview) provides an enterprise control plane for managing and governing AI agents across the organization.  Microsoft Defender integrates with Agent 365 and provides AI agent security at two levels, as described in the table below:
+- **Agents onboarded to Microsoft Agent 365** - Microsoft Defender provides a core set of security capabilities.
+- **Extended capabilities for supported agents** - Microsoft Defender provides extended security capabilities for agents when you enable the relevant features. These extended capabilities are available for agents built with Microsoft Copilot Studio and pro‑developer platforms, including Azure AI Foundry, AWS Bedrock, and GCP Vertex. Capability availability varies by platform and scenario, as detailed in the table below.
+
+
+| Capability | Description | Learn more |
+|---|---|---|
+| **AI agent discovery** | <ul><li>**All Agent 365-managed agents** - View agent details and configuration attributes using Kusto Query Language (KQL) queries in Advanced Hunting in Microsoft Defender.</li><li>**Extended capabilities for supported agents** - The AI agent inventory in the Defender portal shows supported agents in a unified UI. This is currently supported for agents built with Microsoft Copilot Studio or pro‑developer platforms (Azure AI Foundry, AWS Bedrock, GCP Vertex).</li></ul> | [Discover AI agents and assess security posture using Microsoft Defender](/defender-xdr/ai-agent-inventory) |
+| **Agent security posture management** | <ul><li>**All Agent 365-managed agents** - Use Advanced Hunting in Microsoft Defender to identify misconfigurations, risky agent settings, and excessive permissions.</li><li>**Extended capabilities for supported agents** - The AI agent inventory in the Defender portal lets you assess security posture through risk factors, attack paths, and prioritized security recommendations. This is currently supported for agents built with pro‑developer platforms (Microsoft Foundry, AWS Bedrock, GCP Vertex).</li></ul> | [Discover AI agents and assess security posture using Microsoft Defender](/defender-xdr/ai-agent-inventory) |
+| **Agent threat detection and blocking** | <ul><li>**All Agent 365-managed agents** - Near-real-time detections and alerts help you identify and respond to malicious agent behavior, including prompt‑based attacks, unsafe tool usage, and anomalous execution patterns.</li><li> **Extended capabilities for supported agents** - Microsoft Defender provides real-time protection by evaluating the safety of an action before an agent invokes a tool and blocks the action if it’s deemed unsafe. This helps prevent attempts to expose internal tools, exfiltrate data to malicious destinations, use obfuscated or hidden content to manipulate behavior, or leak credentials. This is currently supported for all Agent 365-managed agents except Microsoft Foundry agents.<br>Microsoft Defender also provides an extended set of near-real-time detections are also available for Microsoft Copilot Studio and Microsoft Foundry agents when you enable the relevant features.</li></ul>| [Detect, block, and investigate threats to AI agents using Microsoft Defender](real-time-agent-protection-during-runtime.md) |
+| **Agent threat investigation and hunting** | <ul><li>**All Agent 365-managed agents** - Microsoft Defender XDR incident correlation and Advanced Hunting capabilities help defenders understand the full context and blast radius of AI agent threats.</li><li> **Extended capabilities for supported agents** - Collect audit logs for Agent 365-managed agents for deep investigation and hunting by enabling the Microsoft 365 app connector. </li></ul> | [Detect, block, and investigate threats to AI agents using Microsoft Defender](real-time-agent-protection-during-runtime.md)|
+
+These capabilities help security teams reduce agent‑related risk while enabling organizations to adopt AI agents confidently and at scale.
+
+## Protect AI infrastructure using Microsoft Defender
+
+It’s critical to protect the generative AI models, services, and infrastructure that AI applications and agents depend on. Compromised models, insecure configurations, or exposed dependencies can introduce supply‑chain risks that affect multiple AI workloads.
+
+This table lists the Microsoft Defender capabilities that help secure generative AI models and applications:
+
+| Capability | Description | Learn more |
+|---|---|---|
+| **AI infrastructure discovery** | A unified view of your organization's AI infrastructure, including deployed models, services, and related AI resources. | [Discover generative AI workloads](/azure/defender-for-cloud/ai-security-posture) |
+| **AI infrastructure security posture management** | Identify vulnerabilities and misconfigurations across AI artifacts, including models, dependencies, code repositories, and container images. <br><br> Use built‑in security recommendations and attack‑path analysis to prioritize remediation. <br><br> Continuously assess AI models for security risks such as malware, unsafe operators, serialization vulnerabilities, and exposed secrets throughout the AI lifecycle.  | [AI security posture management](/azure/defender-for-cloud/ai-security-posture) |
+| **Threat detection and response** | Detect and respond to threats targeting generative AI applications built with Microsoft Foundry, including suspicious prompt activity and abnormal execution behavior, with contextual signals surfaced in security alerts. | [Threat protection for AI workloads](https://aka.ms/cloud-ai-threat-detection) |
+| **Threat investigation and hunting** | Microsoft Defender XDR incident correlation and Advanced Hunting capabilities help defenders understand the full context and blast radius of AI infrastructure threats. | [Investigate incidents and alerts in the Microsoft Defender portal](/defender-xdr/incidents-overview) |
+
+These capabilities help reduce supply‑chain risk, improve visibility into AI infrastructure, and strengthen the security posture of generative AI assets as they move from development to production.
+
+## Next steps
+
+Explore deeper content based on your role and scenario:
+
+- AI security posture management  
+- AI runtime protection  
+- Securing specific AI workloads, including copilots and agents 
+
+
+
+
+
+
+
+
