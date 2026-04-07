@@ -4,7 +4,7 @@ description: This article introduces the Microsoft Sentinel Solution for SAP int
 author: MartinPankraz
 ms.author: mapankra
 ms.topic: concept-article
-ms.date: 07/04/2026
+ms.date: 04/07/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
@@ -41,7 +41,7 @@ Check with SAP for the latest available log types and any updates to supported l
 > [!NOTE]
 > The SAP Security Audit Log (AS ABAP) for the application layer is handled by the [Microsoft Sentinel Solution for SAP applications](solution-overview.md) data connector, not by SAP LogServ. Deploy both solutions together for full-stack coverage.
 
-## How the solutions work together
+## How the two solutions work together
 
 Deploy the SAP LogServ solution alongside the Microsoft Sentinel Solution for SAP applications for comprehensive visibility across the entire SAP RISE stack:
 
@@ -66,7 +66,7 @@ Together, these solutions give your security team visibility from business logic
 - The SAP LogServ (RISE), S/4HANA Cloud private edition solution installed from the [Microsoft Sentinel Content Hub](https://marketplace.microsoft.com/en-us/product/sap_jasondau.azure-sentinel-solution-saplogserv?tab=Overview).
 
 > [!NOTE]
-> Only **Azure-hosted SAP RISE** customers have the option for native "hands-free" deployment. For SAP RISE on other platforms, [SAP's log forwarder](https://pypi.org/project/sap-ecs-log-forwarder/) needs to be installed on a customer-hosted component with network connectivity to the LogServ service and the Microsoft Sentinel Data Collection Endpoint. Contact SAP for details.
+> Only **Azure-hosted SAP RISE** customers have the option for native "hands-free" deployment. For SAP RISE on other platforms, [SAP's log forwarder](https://pypi.org/project/sap-ecs-log-forwarder/) needs to be installed on a customer-hosted component with network connectivity to the SAP LogServ service and the Microsoft Sentinel Data Collection Endpoint. Contact SAP for details.
 
 ## Deploy the solution
 
