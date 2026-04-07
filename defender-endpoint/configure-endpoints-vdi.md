@@ -28,7 +28,7 @@ Virtual desktop infrastructure (VDI) is an IT infrastructure concept that lets e
 Like any other system in an IT environment, VDI devices should have an endpoint detection and response (EDR) and antivirus solution to protect against advanced threats and attacks.
 
 > [!NOTE]
-> **Persistent VDI's** - Onboarding a persistent VDI machine into Microsoft Defender for Endpoint is handled the same way you would onboard a physical machine, such as a desktop or laptop. Group policy, Microsoft Configuration Manager, and other methods can be used to onboard a persistent machine. In the Microsoft Defender portal, (https://security.microsoft.com) under onboarding, select your preferred onboarding method, and follow the instructions for that type. For more information, see [Onboarding Windows client](onboard-client.md).
+> **Persistent VDIs** - Onboarding a persistent VDI machine into Microsoft Defender for Endpoint is handled the same way you would onboard a physical machine, such as a desktop or laptop. Group policy, Microsoft Configuration Manager, and other methods can be used to onboard a persistent machine. In the Microsoft Defender portal, (https://security.microsoft.com) under onboarding, select your preferred onboarding method, and follow the instructions for that type. For more information, see [Onboarding Windows client](onboard-client.md).
 
 [!INCLUDE [Microsoft Defender deployment tool preview](./includes/defender-deployment-tool-preview.md)]
 
