@@ -80,6 +80,8 @@ For complete instructions, see [Use the Microsoft Defender portal to modify cust
 
 <a name="step-3-verify-warnings-for-unsafe-links-are-shown-in-microsoft-teams-messages"></a>
 
+<a name="step-3-verify-unsafe-link-warnings-in-microsoft-teams-messages"></a>
+
 <a name="step-4-defender-for-office-365-verify-zero-hour-auto-purge-zap-for-microsoft-teams"></a>
 
 ## Step 3: Defender for Office 365: Verify Zero-hour auto purge (ZAP) for Microsoft Teams
