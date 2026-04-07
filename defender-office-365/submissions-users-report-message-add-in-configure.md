@@ -56,6 +56,9 @@ The following table describes the advantages of the built-in **Report** button o
 
 <sup>\*</sup>User reporting from shared and delegate mailboxes is available in [select supported clients](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook).
 
+> [!NOTE]
+> When reporting multiple messages or an email thread (conversation) using the built-in **Report** button, each email is submitted as a **separate, individual report** with its own sender, subject, and timestamp.
+
 The rest of this article describes how to remove the Report Message and Report Phishing add-ins.
 
 ## What do you need to know before you begin?
