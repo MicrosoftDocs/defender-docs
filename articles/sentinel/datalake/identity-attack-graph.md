@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn how the identity attack graph in Microsoft Sentinel models identities, permissions, and Azure resources to surface lateral movement paths and privilege escalation risks.
 author: evangelinew
 ms.topic: overview
-ms.date: 04/06/2026
+ms.date: 04/07/2026
 ms.author: evwhite
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
@@ -14,7 +14,7 @@ ms.subservice: sentinel-platform
 
 # What is the identity attack graph?
 
-The identity attack graph in Microsoft Sentinel visualizes how identities connect to Azure resources through permissions and group memberships. Security analysts can use the graph to identify lateral movement paths and privilege escalation risks that attackers might exploit.
+The identity attack graph in Microsoft Sentinel visualizes how identities connect to Azure resources through permissions and group memberships. Security analysts can use the graph to identify lateral movement paths, which are the potential routes an attacker could take to move from one identity or resource to another by exploiting existing permissions, group memberships, or trust relationships, often to escalate privileges or reach sensitive assets.
 
 The predefined identity attack graph represents your environment as interconnected entities and relationships, making it easier to answer complex questions, such as "What resources could an attacker reach if this account is compromised?" or "Which identities have paths to critical assets?"
 
@@ -61,7 +61,7 @@ After you turn on the graph, the graph begins ingesting data and building relati
 
 ## Explore and query the identity attack graph
 
-Follow these steps to query the graph when the graph is ready:
+Follow these steps to query the graph when the graph is ready to use:
 
 1. Use the **Schema** tab to understand the types of entities and relationships in the graph.
 
@@ -69,7 +69,7 @@ Follow these steps to query the graph when the graph is ready:
 
 1. Select any node to view the detailed metadata.
 
-1. Use the **Graph** tab to visualize relationships and privilege paths. Write your own GQL queries or use predefined queries to get started.
+1. Use the **Graph** tab to visualize relationships and privilege paths. Write your own GQL queries or use the predefined queries to get started.
 
     :::image type="content" source="./media/identity-attack-graph/predefined-query.png" alt-text="Screenshot showing the predefined query on the graph" lightbox="./media/identity-attack-graph/predefined-query.png":::
 
