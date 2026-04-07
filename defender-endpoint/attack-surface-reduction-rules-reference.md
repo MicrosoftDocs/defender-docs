@@ -54,7 +54,10 @@ Attack surface reduction rules are grouped into the following categories:
 
 - **Other ASR rules** provide important protection, but require testing in **Audit** mode before you activate them in **Block** or **Warn** mode as described in the [Attack surface reduction rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
-The available ASR rules and their corresponding GUID values are described in the following table. Links in the rule names take you to detailed descriptions later in this article.
+The available ASR rules and their corresponding GUID values are described in the following table:
+
+- Links in the rule names take you to detailed descriptions later in this article.
+- PowerShell, Group Policy, and the Windows registry identify ASR rules by GUID value.
 
 |Rule name|GUID|
 |---|---|
