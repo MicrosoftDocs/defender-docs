@@ -7,7 +7,7 @@ author: lwainstein
 ms.author: lwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 04/01/2026
+ms.date: 04/08/2026
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ---
 
@@ -25,6 +25,7 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|macOS |101.26022.0020  |April 2026 |- Release version: 20.126022.20.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--april-2026--101260220020) |
 |Linux  |101.26021.0002  |March 2026 |- Release version: 30.126021.0002.0<br>- Engine version: 1.1.26010.1003<br>- Signature version: 1.445.553.0 |[Release details and updates](#linux--march-2026--101260210002) |
 |macOS |101.26012.0017  |March 2026 |- Release version: 20.126012.17.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--march-2026--101260120017) |
 |macOS |101.26012.0015  |March 2026 |- Release version: 20.126012.15.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--march-2026--101260120015) |
@@ -127,6 +128,20 @@ To share feedback, open Defender for Endpoint on macOS and go to **Help > Send f
 To get latest features, configure your device for the Beta channel (formerly Insider-Fast) device.
 
 For known issues, see [macOS known issues](#macos-known-issues).
+
+### macOS | April-2026 | 101.26022.0020
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+|-----------------|----------------|-------------------|
+| 20.126022.20.0  | 1.1.25100.4000 | 1.439.74.0        |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+| ------------ | -------------- |
+| General      | Resolved a performance regression that caused degraded responsiveness and stability under high load conditions. |
 
 ### macOS | April-2026 | 101.26022.0018
 
