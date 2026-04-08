@@ -498,6 +498,20 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 See the full list of [Android UX improvements](android-new-ux.md).
 
+### Android | April 2026 | Platform: 1.0.8805.0103
+
+#### Release details
+
+| Platform version| Release Date |
+| -------- | -------- |
+|1.0.8805.0103 |April 7, 2025 |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|---------------|
+| General | Performance improvement and bug fixes. |
+
 ### Android | December 2025 | Platform: 1.0.8412.0101
 
 #### Release details
