@@ -41,7 +41,7 @@ You can query the graph to:
 To set up the identity attack graph, make sure you meet the following prerequisites:
 
 - Microsoft Sentinel data lake enabled in your environment
-- Permissions to turn on or update the **Microsoft Entra ID Assets** and **Azure Resource Graph connectors**
+- [Permissions](/azure/sentinel/datalake/enable-data-connectors#required-permissions-for-asset-sources) to turn on or update the **Microsoft Entra ID Assets** and **Azure Resource Graph connectors**
 - Global Administrator, Security Administrator to create the graph
 
 ## Set up the identity attack graph
@@ -74,7 +74,7 @@ Follow these steps to query the graph when the graph is ready to use:
     :::image type="content" source="./media/identity-attack-graph/predefined-query.png" alt-text="Screenshot showing the predefined query on the graph" lightbox="./media/identity-attack-graph/predefined-query.png":::
 
     > [!NOTE]
-    > It's recommended that you start with the predefined queries, which is designed to surface common and high‑value investigation scenarios. These queries help you get immediate value without writing GQL from scratch.
+    > It's recommended that you start with the predefined queries, which are designed to surface common and high‑value investigation scenarios. These queries help you get immediate value without writing GQL from scratch.
 
 1. **Run GQL query** to see the results.
 
