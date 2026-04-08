@@ -247,7 +247,7 @@
     },
     {
       "source_path": "defender-endpoint/android-intune.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-defender-deploy-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json",
+      "redirect_url": "/intune/intune-service/protect/microsoft-defender-deploy-android",
       "redirect_document_id": false
     }
   ]
