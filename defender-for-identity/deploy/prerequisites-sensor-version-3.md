@@ -46,6 +46,14 @@ Both F5 licenses require Microsoft 365 F1/F3 or Office 365 F3 and Enterprise Mob
   - `System settings (Read and manage)`
   - `Security settings (All permissions)`
 
+## Networking requirements
+
+The Defender for Identity sensor utilizes the same URIs as Microsoft Defender for Endpoint. Please review the following documents for Defender for Endpoint, based on your systems connectivity, for a complete list of required service endpoint.
+
+- [Microsoft Defender for Endpoint streamlined connectivity URLs - commercial](https://learn.microsoft.com/en-us/defender-endpoint/streamlined-device-connectivity-urls-commercial?tabs=Windows)
+
+- [Microsoft Defender for Endpoint standard connectivity URLs - commercial](https://learn.microsoft.com/en-us/defender-endpoint/standard-device-connectivity-urls-commercial)
+
 ## Memory requirements
 
 The following table describes memory requirements on the server used for the Defender for Identity sensor, depending on the type of virtualization you're using:
@@ -60,6 +68,8 @@ The following table describes memory requirements on the server used for the Def
 > When running as a virtual machine, always allocate all memory to the virtual machine.
 
 Version 3 of the sensor prevents the sensor from overusing CPU or memory by limiting CPU utilization at 30%, and memory usage to 1.5 GB. However, if Falcon Identity already uses substantial system resources, the domain controller might still experience performance strain.
+
+Refer to the [Defender for Identity Capacity Planning documentation](https://learn.microsoft.com/en-us/defender-for-identity/deploy/capacity-planning) to determine whether your domain controller servers have enough resources for a Microsoft Defender for Identity sensor. 
 
 ## Configure RPC auditing
 
@@ -79,7 +89,7 @@ Applying the **Unified Sensor RPC Audit** tag to a device improves security visi
 1. Add the **Unified Sensor RPC Audit** tag to the selected devices.
 
     ![Screenshot that shows the config tag.](media/prerequisites-sensor-version-3/tag.png)
-
+   
 1. Select **Next** to review and finish creating the rule, and then select **Submit**. The rule might take up to one hour to take effect.
 
 ### Remove RPC auditing from a device
