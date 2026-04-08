@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn about the different tools available in the Data exploration collection in Microsoft Sentinel 
 author: poliveria
 ms.topic: how-to
-ms.date: 04/02/2026
+ms.date: 04/08/2026
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
@@ -28,6 +28,10 @@ To access the data exploration tool collection, you need the following prerequis
     - [Microsoft Copilot Studio](sentinel-mcp-use-tool-copilot-studio.md#add-a-microsoft-sentinel-tool-collection)
     - [Microsoft Foundry](sentinel-mcp-use-tool-azure-ai-foundry.md#add-a-microsoft-sentinel-tool-collection)
     - [Visual Studio Code](sentinel-mcp-use-tool-visual-studio-code.md) 
+
+To use the [entity analyzer tool](#entity-analyzer), you also need the following roles:
+- **Security Reader** and **Security Copilot Contributor** - To use the tool, which uses [Security Compute Units (SCUs)](/copilot/security/manage-usage) to deliver the reasoned entity risk analysis. 
+- **Security Copilot Owner** - To view SCU usage. For more information, see [Understand authentication in Microsoft Security Copilot](/copilot/security/authentication).  
 
 ## Add the data exploration collection
 
@@ -77,6 +81,11 @@ These tools use AI to analyze your organization's data in the Microsoft Sentinel
 For example, `analyze_user_entity` reasons over the user's authentication patterns, behavioral anomalies, activity within your organization, and more to provide a verdict and analysis. Meanwhile, `analyze_url_entity` reasons over threat intelligence from Microsoft, your custom threat intelligence in Microsoft Sentinel threat intelligence platform (TIP), click, email, or connection activity on the URL within your organization, and presence in Microsoft Sentinel watchlists, among others to similarly provide a verdict and analysis.
 
 Entity analysis tools might require a few minutes to generate results, so there are tools to start analysis for each entity and another one that polls for the analysis results.
+
+> [!IMPORTANT]
+> This tool uses [Security Compute Units (SCUs)](/copilot/security/manage-usage) to deliver the reasoned entity risk analysis, so you need to have the **Security Reader** and **Security Copilot Contributor** roles to use it and generate results.
+> 
+> To view SCU usage, you also need to have the **Security Copilot Owner** role. For more information, see [Understand authentication in Microsoft Security Copilot](/copilot/security/authentication).  
 
 #### Start analysis (`analyze_user_entity` and `analyze_url_entity`)
 
