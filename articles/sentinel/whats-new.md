@@ -22,12 +22,10 @@ The listed features were released in the last six months. For information about 
 
 - [Microsoft Sentinel data federation (Preview)](#microsoft-sentinel-data-federation-preview)
 - [Transform data with filter and split features (Preview)](#transform-data-with-filter-and-split-features-preview)
-- [Accelerate Microsoft Sentinel connector development with Visual Studio Code connector builder agent (Preview)](#accelerate-microsoft-sentinel-connector-development-with-vs-code-connector-builder-agent-preview)
-- [Build custom security graphs (Preview)](#build-custom-security-graphs-preview)
-- [Cost estimation tool for customers and partners (Preview)](#cost-estimation-tool-for-customers-and-partners-preview)
+- [Accelerate Microsoft Sentinel connector development with Visual Studio Code connector builder agent (Preview)](#accelerate-microsoft-sentinel-connector-development-with-visual-studio-code-connector-builder-agent-preview)
+- [Build custom security graphs (Preview)](#build-custom-graphs-preview)
 - [Entity analyzer is now generally available](#entity-analyzer-is-now-generally-available)
 - [AI-powered SIEM migration tool is now generally available](#ai-powered-siem-migration-tool-is-now-generally-available)
-- [Unified RBAC and GDAP support](#unified-rbac-and-gdap-support)
 
 ### Microsoft Sentinel data federation (Preview)
 Powered by Microsoft Fabric, Microsoft Sentinel data federation lets you analyze security data where it already lives, without copying or duplicating it. You can federate data from Microsoft Fabric, Azure Data Lake Storage, and Azure Databricks into Microsoft Sentinel data lake, then use familiar Microsoft Sentinel experiences like KQL, notebooks, and custom graphs across both federated and native data.
@@ -37,17 +35,14 @@ For more information, see [Data federation overview in Microsoft Sentinel data l
 ### Transform data with filter and split features (Preview)
 Native filtering and splitting in the Microsoft Defender portal helps you reduce noise before ingestion, control costs, and intelligently route data between analytics and data lake tiers so you can optimize what gets analyzed versus retained. For more information, see [Transform data using filter and split in Microsoft Sentinel](transformation-filter-split.md).
 
-### Accelerate Microsoft Sentinel connector development with VS Code connector builder agent (Preview)
-An AI-powered, low-code agent in Visual Studio (VS) Code helps you build Microsoft Sentinel connectors in minutes, bringing in new data sources faster and unlocking security outcomes sooner. For more information, see [Get started with custom connectors using AI agent in Microsoft Sentinel](create-custom-connector-builder-agent.md).
+### Accelerate Microsoft Sentinel connector development with Visual Studio Code connector builder agent (Preview)
+An AI-powered, low-code agent in Visual Studio Code helps you build Microsoft Sentinel connectors in minutes, bringing in new data sources faster and unlocking security outcomes sooner. For more information, see [Get started with custom connectors using AI agent in Microsoft Sentinel](create-custom-connector-builder-agent.md).
 
 ### Build custom graphs (Preview)
 Build tailored security graphs across the Sentinel data lake and third-party data to uncover attack paths, blast radius, and hidden relationships. These graphs also serve as a foundation for advanced investigations and AI agents. For more information, see [Custom Graph overview](datalake/custom-graphs-overview.md).
 
 #### Graphs experience in the Microsoft Defender portal (Preview)
 After creating your custom graphs, you can access them in the graphs section of the Defender portal under **Microsoft Sentinel**. From there, you can run Graph Query Language (GQL) queries, view the graph schema, visualize the graph, view graph results in tabular format, and interactively traverse the graph to the next hop with a simple click.
-
-### Cost estimation tool for customers and partners (Preview)
-A guided, meter-level Sentinel cost estimator with three-year projections helps organizations model data growth, predict spend, and plan Sentinel adoption with confidence. For more information, see
 
 ### Entity analyzer is now generally available
 
@@ -59,8 +54,6 @@ A guided, meter-level Sentinel cost estimator with three-year projections helps 
 ### AI-powered SIEM migration tool is now generally available
 Accelerate migrations to Microsoft Sentinel from Splunk and QRadar using an AI-assisted SIEM migration experience designed to reduce manual effort and speed time-to-value. For more information, see [Migrate to Microsoft Sentinel with the SIEM migration experience](siem-migration.md).
 
-### Unified RBAC and GDAP support
-Enhanced role-based access control (RBAC) and granular delegated admin privileges (GDAP) help managed security service providers (MSSPs) and large enterprises manage multi-tenant Microsoft Sentinel environments securely within the Defender portal. This support also enables Defender or Microsoft Sentinel customers not managed through a Configuration Service Provider (CSP) to use GDAP. 
 
 ## March 2026
 
