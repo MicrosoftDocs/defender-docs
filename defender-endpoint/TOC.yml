@@ -339,7 +339,7 @@
           - name: Deploy
             items:
             - name: Deployment on Android with Microsoft Intune
-              href: android-intune.md
+              href: /intune/intune-service/protect/microsoft-defender-deploy-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
             - name: Deployment on iOS via Microsoft Intune
               href: ios-install.md
             - name: Deployment on iOS with Mobile Application Manager

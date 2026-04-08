@@ -31,6 +31,7 @@ Learn more about [Preview features](/defender-xdr/preview).
 |Type  |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|-------------|
 |Release - macOS |Build 101.26022.0020 |GA |Release version 20.126022.20.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--april-2026--101260220020). |
+|Release - macOS |Build 101.26022.0018 |GA |Release version 20.126022.18.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--april-2026--101260220018).|
 
 ## March 2026
 
