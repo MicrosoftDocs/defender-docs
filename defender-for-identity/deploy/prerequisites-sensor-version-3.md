@@ -50,9 +50,9 @@ Both F5 licenses require Microsoft 365 F1/F3 or Office 365 F3 and Enterprise Mob
 
 The Defender for Identity sensor utilizes the same URIs as Microsoft Defender for Endpoint. Please review the following documents for Defender for Endpoint, based on your systems connectivity, for a complete list of required service endpoint.
 
-- [Microsoft Defender for Endpoint streamlined connectivity URLs - commercial](https://learn.microsoft.com/en-us/defender-endpoint/streamlined-device-connectivity-urls-commercial?tabs=Windows)
+- [Microsoft Defender for Endpoint streamlined connectivity URLs - commercial](/defender-endpoint/streamlined-device-connectivity-urls-commercial?tabs=Windows)
 
-- [Microsoft Defender for Endpoint standard connectivity URLs - commercial](https://learn.microsoft.com/en-us/defender-endpoint/standard-device-connectivity-urls-commercial)
+- [Microsoft Defender for Endpoint standard connectivity URLs - commercial](/defender-endpoint/standard-device-connectivity-urls-commercial)
 
 ## Memory requirements
 
@@ -69,7 +69,7 @@ The following table describes memory requirements on the server used for the Def
 
 Version 3 of the sensor prevents the sensor from overusing CPU or memory by limiting CPU utilization at 30%, and memory usage to 1.5 GB. However, if Falcon Identity already uses substantial system resources, the domain controller might still experience performance strain.
 
-Refer to the [Defender for Identity Capacity Planning documentation](https://learn.microsoft.com/en-us/defender-for-identity/deploy/capacity-planning) to determine whether your domain controller servers have enough resources for a Microsoft Defender for Identity sensor. 
+Refer to the [Defender for Identity Capacity Planning documentation](/defender-for-identity/deploy/capacity-planning) to determine whether your domain controller servers have enough resources for a Microsoft Defender for Identity sensor. 
 
 ## Configure RPC auditing
 
