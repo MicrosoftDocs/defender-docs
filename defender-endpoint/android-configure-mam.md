@@ -295,6 +295,6 @@ Defender for Endpoint on Android is enabled by default in MAM mode. To prevent e
 
 - [Overview of Microsoft Defender for Endpoint on Android](microsoft-defender-endpoint-android.md)
 
-- [Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](android-intune.md)
+- [Deploy and configure Microsoft Defender for Endpoint on Android with Microsoft Intune](/intune/intune-service/protect/microsoft-defender-deploy-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json)
 
 
