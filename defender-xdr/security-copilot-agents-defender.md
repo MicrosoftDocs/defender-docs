@@ -103,6 +103,35 @@ The [Threat Intelligence Briefing Agent](threat-intel-briefing-agent-defender.md
 | Role-based access | The **Security Administrator** role is required to set up and manage the agent.<br><br>Users with the same permissions as the Threat Intelligence Briefing Agent can view the agent's activity and results. |
 | Trigger | Runs at the set time interval that you configured during setup, or manually when you want to run it |
 
+#### Configure Defender for Endpoint permissions for the agent identity
+
+When running the Threat Intelligence Briefing Agent with an [agent identity](threat-intel-briefing-agent-defender.md#set-up-an-agent-identity-for-the-agent), you must also configure the following Defender for Endpoint role permissions and Device Group access. Without these permissions, the Exposure Report may show as "not available" or return zero CVEs even when vulnerabilities exist in your environment.
+
+**Step 1 – Update the agent role permissions**
+
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
+1. Navigate to **Settings** > **Endpoints** > **Permissions** > **Roles**.
+1. Locate the custom role assigned to the Threat Intelligence Briefing Agent.
+1. Edit the role and confirm that the following permissions are enabled:
+   - **Advanced Hunting** – Read
+   - **Vulnerability Management** – Read
+   - **Machine Configuration** – Read
+   - **Device Inventory** – Read
+1. Save any changes if updates are made.
+
+**Step 2 – Grant Device Group access to the agent**
+
+1. In the Microsoft Defender portal, go to **Settings** > **Endpoints** > **Device Groups**.
+1. For each Device Group that contains production endpoints:
+   1. Open the Device Group.
+   1. Select the **User Access** section.
+   1. Add the Threat Intelligence Briefing Agent identity.
+   1. Assign **Read** access.
+1. Save the changes.
+
+> [!IMPORTANT]
+> Allow time for permission updates to synchronize across Microsoft Defender services before running the agent.
+
 ### Threat Hunting Agent
 
 The [Threat Hunting Agent](advanced-hunting-security-copilot-threat-hunting-agent.md) revolutionizes threat hunting by enabling you to investigate threats using natural language from start to finish. It not only generates KQL queries but also interprets results, surfaces insights, and guides you through full hunting sessions. These capabilities empower you to hunt threats faster, more accurately, and with greater confidence.
