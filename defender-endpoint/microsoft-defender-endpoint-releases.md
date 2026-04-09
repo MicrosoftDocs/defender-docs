@@ -7,7 +7,7 @@ author: lwainstein
 ms.author: lwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 09/03/2025
+ms.date: 04/08/2026
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ---
 
@@ -25,6 +25,8 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|macOS |101.26022.0020  |April 2026 |- Release version: 20.126022.20.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--april-2026--101260220020) |
+|macOS |101.26022.0018  |April 2026 |- Release version: 20.126022.18.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--april-2026--101260220018) |
 |Linux  |101.26021.0002  |March 2026 |- Release version: 30.126021.0002.0<br>- Engine version: 1.1.26010.1003<br>- Signature version: 1.445.553.0 |[Release details and updates](#linux--march-2026--101260210002) |
 |macOS |101.26012.0017  |March 2026 |- Release version: 20.126012.17.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--march-2026--101260120017) |
 |macOS |101.26012.0015  |March 2026 |- Release version: 20.126012.15.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--march-2026--101260120015) |
@@ -70,7 +72,7 @@ This table includes supported releases for all supported platforms in the past s
 
 ## Windows releases
 
-This section covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. You can also check the file information section in the monthly cumulative rollup updates in the following articles: 
+This section covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. You can also check the file information section in the monthly cumulative rollup updates in the following articles:
 
 - [Windows 11 release information](/windows/release-health/windows11-release-information)
 - [Windows 10 updates](https://support.microsoft.com/topic/windows-10-update-history-8127c2c6-6edf-4fdf-8b9f-0f7be1ef3562)
@@ -127,6 +129,36 @@ To share feedback, open Defender for Endpoint on macOS and go to **Help > Send f
 To get latest features, configure your device for the Beta channel (formerly Insider-Fast) device.
 
 For known issues, see [macOS known issues](#macos-known-issues).
+
+### macOS | April-2026 | 101.26022.0020
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+|-----------------|----------------|-------------------|
+| 20.126022.20.0  | 1.1.25100.4000 | 1.439.74.0        |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+| ------------ | -------------- |
+| General      | Resolved a performance regression that caused degraded responsiveness and stability under high load conditions. |
+
+### macOS | April-2026 | 101.26022.0018
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+|-----------------|----------------|-------------------|
+| 20.126022.18.0  | 1.1.25100.4000 | 1.439.74.0        |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+| ------------ | -------------- |
+| General      | \[packaging\] macOS >= 14 supported only |
+| General      | CVE-2025-68664/5 LangGrinch (langchain vulnerability) |
+| General      | Bug and performance fixes |
 
 ### macOS | March-2026 | 101.26012.0017
 
@@ -284,10 +316,10 @@ Bug and performance fixes
 
 - In macOS Sequoia (version 15.0), if you have Network Protection enabled, you might see crashes of the network extension (NetExt). This issue results in intermittent network connectivity issues for end users. Upgrade to macOS Sequoia version 15.1 or newer.
 
-- On macOS Sequoia (Version 15.0 - 15.1.1), users might encounter prompts about incoming network connections from applications when the native firewall is active.  
+- On macOS Sequoia (Version 15.0 - 15.1.1), users might encounter prompts about incoming network connections from applications when the native firewall is active.
 
    ![Screenshot showing prompts about incoming network connections.](media/mac-whatsnew/image.png)
-  
+
 If an end user encounters a prompt for Defender for Endpoint on macOS processes such as `wdavdaemon_enterprise` or `Microsoft Defender Helper`, the end user can safely choose the **Deny** option. This selection doesn't affect Defender for Endpoint's functionality.  Enterprises can also add *Microsoft Defender* to allow [incoming connections](https://support.apple.com/en-ca/guide/deployment/dep8d306275f/web). This issue is fixed in macOS Sequoia 15.2.
 
 ## Linux releases
@@ -367,6 +399,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 | Vulnerability detection | Enhanced vulnerability detection for React components through improved telemetry. This feature includes support for identifying [(CVE-2025-55182)](https://github.com/advisories/GHSA-fv66-9v8q-g76r), providing more comprehensive security coverage for React-based applications. |
 | Agent optimization | Agent process handling is now streamlined by removing the dependency on telemetryd_v2, enabling more efficient and consistent telemetry collection. This change applies to builds 101.24062.0001 and later, with no impact on functionality, data collection, or customer configurations. All features remain intact, and no customer action is required. |
 | Platform support | Added support for Debian 13. |
+| Critical fix | Fixed an issue where scanning of /dev/watchdog could trigger unexpected system reboots on Linux systems with watchdog enabled.|
 
 ### Linux | December 2025 | Platform: 101.25092.0005
 

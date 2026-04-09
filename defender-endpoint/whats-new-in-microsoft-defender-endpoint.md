@@ -7,7 +7,7 @@ author: lwainstein
 ms.author: lwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 11/19/2025
+ms.date: 04/08/2026
 audience: ITPro
 ms.collection:
 - m365-security
@@ -25,6 +25,13 @@ This article describes Microsoft Defender for Endpoint features that are in prev
 For recent releases of Microsoft Defender for Endpoint, including build numbers, improvements, and fixes, see [Microsoft Defender for Endpoint release notes](microsoft-defender-endpoint-releases.md).
 
 Learn more about [Preview features](/defender-xdr/preview).
+
+## April 2026
+
+|Type  |Feature  |Preview/GA  |Description  |
+|---------|------------|-------------|-------------|
+|Release - macOS |Build 101.26022.0020 |GA |Release version 20.126022.20.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--april-2026--101260220020). |
+|Release - macOS |Build 101.26022.0018 |GA |Release version 20.126022.18.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--april-2026--101260220018).|
 
 ## March 2026
 
