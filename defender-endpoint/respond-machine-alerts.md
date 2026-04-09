@@ -97,20 +97,20 @@ Or, use this alternate procedure:
 1. Select **Collect Investigation Package** from the response actions section of the device page.
 
    ![Image of collect investigation package](media/collect-investigation-package.png)
-
+   
 1. Add comments and then select **Confirm**.
 
    ![Image of confirm comment](media/comments-confirm.png)
-
+   
 1. Select **Action center** from the response actions section of the device page.
 
    ![Image of action center](media/action-center-selected.png)
-
+   
 1. Select **Package collection package available** to download the collection package.
 
    ![Image of download package](media/download-package.png)
-
-      > [!NOTE]
+   
+         > [!NOTE]
    > The collection of the investigation package might fail if a device has a low battery level or is on a metered connection.
 
 ### Investigation package contents for Windows devices
@@ -205,7 +205,7 @@ Depending on the severity of the attack and the sensitivity of the device, you m
 
 **Important points to keep in mind**:
 
-- In environments that use Proxy Auto Configuration (PAC) files or WPAD settings, devices might not be able to recover from network isolation. Use selective isolation in such cases. When using selective isolation, exclusion settings aren't required to avoid this scenario.
+- In environments that use web proxies (including Proxy Auto Configuration (PAC), WPAD, or static/direct proxy configurations), devices might not be able to recover from network isolation. Use selective isolation in such cases. When using selective isolation, exclusion settings aren't required to avoid this scenario.
 - Isolating devices from the network is supported for macOS for client version 101.98.84 and above. You can also use live response to run the action. For more information on live response, see [Investigate entities on devices using live response](live-response.md)
 - Full isolation is available for devices running Windows 11, Windows 10, version 1703 or later, Windows Server 2012 R2 and later, and Azure Stack HCI OS, version 23H2 and later.
 - Isolating devices from the network is supported when Defender is running in passive mode on all supported Windows operating systems, macOS and Linux supported versions.
