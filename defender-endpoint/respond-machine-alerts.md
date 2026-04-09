@@ -110,7 +110,7 @@ Or, use this alternate procedure:
 
    ![Image of download package](media/download-package.png)
    
-         > [!NOTE]
+   > [!NOTE]
    > The collection of the investigation package might fail if a device has a low battery level or is on a metered connection.
 
 ### Investigation package contents for Windows devices
