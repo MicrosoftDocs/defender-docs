@@ -307,7 +307,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 | Vulnerability detection | Enhanced vulnerability detection for React components through improved telemetry. This feature includes support for identifying [(CVE-2025-55182)](https://github.com/advisories/GHSA-fv66-9v8q-g76r), providing more comprehensive security coverage for React-based applications. |
 | Agent optimization | Agent process handling is now streamlined by removing the dependency on telemetryd_v2, enabling more efficient and consistent telemetry collection. This change applies to builds 101.24062.0001 and later, with no impact on functionality, data collection, or customer configurations. All features remain intact, and no customer action is required. |
 | Platform support | Added support for Debian 13. |
-| Critical fix | Defender now excludes watchdog device files from real‑time scanning, preventing unintended system reboots on Linux systems that use hardware watchdogs.
+| Critical fix | Fixed an issue where scanning of /dev/watchdog could trigger unexpected system reboots on Linux systems with watchdog enabled.|
 
 ### Linux | December 2025 | 101.25092.0005
 
