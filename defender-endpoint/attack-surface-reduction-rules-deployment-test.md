@@ -21,14 +21,13 @@ search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # Test attack surface reduction rules
 
+Testing Microsoft Defender for Endpoint attack surface reduction (ASR) rules helps you determine if rules impede line-of-business operations before you enable rules. By starting with a small, controlled group, you can limit potential work disruptions as you expand the deployment across your organization.
 
-Testing Microsoft Defender for Endpoint attack surface reduction rules helps you determine if rules impede line-of-business operations before you enable rules. By starting with a small, controlled group, you can limit potential work disruptions as you expand your deployment across your organization.
-
-In this section of the attack surface reduction rules deployment guide, you learn how to:
+In this step of the ASR rules deployment guide, you learn how to:
 
 - Configure rules using Microsoft Intune
 - Use Microsoft Defender for Endpoint attack surface reduction rules reports
@@ -220,11 +219,11 @@ You can also use Group Policy, Intune, or mobile device management (MDM) configu
 
 To review apps that would be blocked, open Event Viewer and filter for Event ID 1121 in the Microsoft-Windows-Windows Defender/Operational log. The following table lists all network protection events.
 
-Event ID | Description
--|-
- 5007 | Event when settings are changed
- 1121 | Event when an attack surface reduction rule fires in block mode
- 1122 | Event when an attack surface reduction rule fires in audit mode
+|Event ID|Description|
+|---|---|
+|5007|Event when settings are changed|
+|1121|Event when an attack surface reduction rule fires in block mode|
+|1122|Event when an attack surface reduction rule fires in audit mode|
 
 ## Other articles in this deployment collection
 
