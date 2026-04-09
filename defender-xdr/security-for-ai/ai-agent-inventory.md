@@ -24,7 +24,7 @@ This article explains how to discover AI agents, assess their security posture, 
 
 ## View all Agent 365-managed agents and configuration details using Advanced Hunting
 
-The [AIAgentsInfo table](/defender-xdr/advanced-hunting-aiagentsinfo-table) in Advanced Hunting provides a complete inventory of your A365 agents along with their security-relevant properties. This table enables you to:
+The [AIAgentsInfo table](/defender-xdr/advanced-hunting-aiagentsinfo-table) in Advanced Hunting provides a complete inventory of your Agent 365 agents along with their security-relevant properties. This table enables you to:
 
 - Discover all AI agents registered in your Agent 365 environment.
 - Assess security posture by querying authentication, access control, tools, knowledge sources, and orchestration settings.
@@ -57,9 +57,6 @@ We recommend that you reach out to the owners of the risky agents for more infor
 
 The AI agent inventory page in the Defender portal provides a centralized view of all agents you build with Microsoft Copilot Studio, Microsoft Foundry, AWS Bedrock, and GCP Vertex AI, along with their key attributes and security status.
 
-> [!NOTE]
-> For Microsoft Copilot Studio agents, the AI agent inventory currently supports agent discovery, but not security posture management.  
-
 1. Enable the required features for AI agent inventory:
     - For Copilot Studio agents, enable the [Copilot Studio integration in Microsoft Defender for Cloud Apps](/defender-cloud-apps/ai-agent-inventory). 
     - For Microsoft Foundry, AWS Bedrock, and GCP Vertex AI, enable the [Microsoft Foundry integration in Microsoft Defender for Cloud](/azure/defender-for-cloud/ai-security-posture#discover-ai-agents-preview). 
@@ -70,10 +67,13 @@ The AI agent inventory page in the Defender portal provides a centralized view o
 
     :::image type="content" source="media/ai-agent-inventory/ai-agent-inventory.png" alt-text="Screenshot that shows the AI agent inventory in the Defender portal." lightbox="media/ai-agent-inventory/ai-agent-inventory.png":::  
 
-1. Select **Copilot Studio** or **Microsoft Foundry** to see a filtered list of AI agents based on the tool used to create the agent.
-1. To see detailed information about a specific AI agent, select the agent from the list. This opens the **Agent** pane, which provides detailed information about the selected agent. The information displayed varies based on whether the agent was created in Microsoft Foundry or Copilot Studio.
+1. Select **Microsoft Foundry**, **Copilot Studio**, **AWS Bedrock**, or **GCP Vertex AI** to see a filtered list of AI agents based on the tool used to create the agent.
+1. To see detailed information about a specific AI agent, select the agent from the list. This opens the **Agent** pane, which provides detailed information about the selected agent. The information displayed varies based on whether the agent was created in Microsoft Copilot Studio, Microsoft Foundry, AWS Bedrock, or GCP Vertex AI.
 
-    ### [Microsoft Foundry](#tab/azure-ai-foundry)
+    :::image type="content" source="media/ai-agent-inventory/ai-agent-details-pane.png" alt-text="Screenshot of the AI agent inventory in the Defender portal showing agent list, filters, and detailed information for a selected Microsoft Foundry agent.":::
+
+    > [!NOTE]
+    > For Microsoft Copilot Studio agents, the AI agent inventory currently supports agent discovery, but not security posture management.
 
     - Select **Open agent page** to open the [**AI Agent** page](/azure/defender-for-cloud/identify-ai-workload-model).
 
@@ -82,46 +82,6 @@ The AI agent inventory page in the Defender portal provides a centralized view o
     - Select **Go hunt** to run [Advanced Hunting](/defender-xdr/advanced-hunting-overview) queries.
     - Select **View on map** to see the agent's [location and related attack paths](/azure/defender-for-cloud/concept-attack-path).
 
-    These AI agent details are displayed:
-
-    | AI Agent Information | Description |
-    | --------- | --------- |
-    | ID | Unique identifier for the agent as assigned to it in Microsoft Foundry |
-    | Name | Display name of the agent |
-    | Account | The account or tenant that the AI agent operates under, typically linked to organizational ownership. |
-    | Deployment | Details about where and how the AI agent is deployed, like cloud environment, on-premises, or hybrid. |
-    | Attack paths | Potential routes or methods that could be exploited to compromise the AI agent or its environment. |
-    | Risk factors | Key vulnerabilities or conditions that increase the likelihood of security threats to the AI agent. |
-    | Creation time | Date and time when the agent was created. |
-    | Project | The associated project or initiative that the AI agent supports or belongs to. |
-    | Model | The underlying AI or ML model powering the agent, including version or architecture details. |
-    | Recommendations | Suggested actions or best practices to improve security, performance, or compliance for the AI agent. |
-
-    ### [Copilot Studio](#tab/copilot-studio)
-
-    - Select **Open agent page** to open the Copilot Studio AI Agent page in the Defender portal.
-    - Select **Go hunt** to run [Advanced Hunting](/defender-xdr/advanced-hunting-overview) queries.
-
-        :::image type="content" source="media/ai-agent-inventory/copilot-agent-details.png" alt-text="Screenshot that shows the details for Copilot Studio AI agents in the Defender portal." lightbox="media/ai-agent-inventory/copilot-agent-details.png":::
-
-    These AI agent details are displayed:
-
-    | AI Agent Information  | Description |
-    | --------- | --------- |
-    | Description | Description of the agent as displayed in the agent's source. |
-    | ID | Unique identifier for the agent as assigned to it in Microsoft 365 Copilot or Copilot Studio |
-    | Environment ID | Identifier of the Microsoft Power Platform environment where the agent resides. |
-    | Name | Display name of the agent |
-    | Creator | User principal name (UPN) of the account that created the agent. |
-    | Authentication type | The agent's configured authentication type for users interacting with the agent. Possible values: None, Microsoft, Custom. |
-    | Access control | Users that can interact with the agent. Possible values: Any, Copilot readers, Group membership, Any (multitenant). |
-    | Creation time | Date and time when the agent was created |
-    | Owner | User principal names (UPN) of all the owners of the agent. |
-    | Authentication trigger | Indicates when authentication is triggered for the agent. Possible values: As Needed, Always. |
-    | Authorized security group IDs | List of Microsoft Entra group IDs that are allowed to interact with the agent. |
-    | Alerts | Microsoft Defender alerts related to the AI agent. |
-
----
 
 ## See also
 
