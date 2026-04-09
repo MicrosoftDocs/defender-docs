@@ -80,7 +80,7 @@ The AI agent inventory page in the Defender portal provides a centralized view o
         :::image type="content" source="media/ai-agent-inventory/foundry-agent-details.png" alt-text="Screenshot that shows the details for Microsoft Foundry AI agents in the Defender portal." lightbox="media/ai-agent-inventory/foundry-agent-details.png"::: 
 
     - Select **Go hunt** to run [Advanced Hunting](/defender-xdr/advanced-hunting-overview) queries.
-    - Select **View on map** to see the agent's [location and related attack paths](/azure/defender-for-cloud/concept-attack-path).
+    - Select **View on map** to see the agent's location and related attack paths.
 
 
 ## See also
