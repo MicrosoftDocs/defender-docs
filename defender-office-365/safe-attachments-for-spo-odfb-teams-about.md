@@ -20,7 +20,7 @@ ms.custom:
   - seo-marvel-jun2020
 description: Learn about Microsoft Defender for Office 365 for files in SharePoint, OneDrive, and Microsoft Teams.
 ms.service: defender-office-365
-ms.date: 06/09/2025
+ms.date: 04/09/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -40,11 +40,8 @@ When Safe Attachments for SharePoint, OneDrive, and Microsoft Teams is enabled a
 
 :::image type="content" source="media/2bba71cc-7ad1-4799-8b9d-d56f923db3a7.png" alt-text="Screenshot of files in OneDrive with one file detected as malicious." lightbox="media/2bba71cc-7ad1-4799-8b9d-d56f923db3a7.png":::
 
-
 > [!NOTE]
-> When Safe Attachments identifies a file stored in SharePoint or OneDrive as malicious, visual indicator that a file is blocked is shown in the underlying SharePoint document library or OneDrive location where the file is stored.
->
-> For example, files shared in Microsoft Teams are stored in either SharePoint or OneDrive depending on how they were shared. As a result, the indicator isn't surfaced directly within Microsoft Teams, but in the corresponding SharePoint document library or OneDrive location where the file is stored.
+> The visual indicator is shown where the file is stored. For example, if the file is shared in Microsoft Teams, the blocked file indicator is shown in the corresponding SharePoint document library or OneDrive location.
 
 Although the blocked file is still listed in the document library and in web, mobile, or desktop applications, people can't open, copy, move, or share the file. But, they can delete the blocked file.
 
