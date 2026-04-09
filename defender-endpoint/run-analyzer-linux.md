@@ -8,7 +8,7 @@ ms.service: defender-endpoint
 ms.subservice: linux
 ms.localizationpriority: medium
 ms.topic: troubleshooting-general
-ms.date: 09/23/2025
+ms.date: 04/09/2026
 ms.custom: partner-contribution
 ms.collection:
 - m365-security
@@ -590,6 +590,7 @@ The following script performs the first six steps of the [Running the Python ver
    ```
 > [!TIP]
 > Watch this video to learn more about endpoint settings: [Defender for Endpoint client analyzer endpoint settings](https://www.youtube.com/watch?v=Frw2xFjzphE)
+
 #### Run the client analyzer install scripts
 
 1. Initiate a [Live Response session](live-response.md#initiate-a-live-response-session-on-a-device) on the machine you want to investigate.
@@ -605,6 +606,41 @@ The following script performs the first six steps of the [Running the Python ver
    ```console
    run InstallXMDEClientAnalyzer.sh
    ```
+
+#### Run the client analyzer on devices with Microsoft Defender for Endpoint installed
+
+If Microsoft Defender for Endpoint is already installed on the device, you can run the Client Analyzer directly from the agent installation without downloading or installing additional packages.
+
+1. Create a `MDESupportToolBinary.sh` file and paste the following content into it.
+
+```bash
+#! /usr/bin/bash
+
+echo "cd /opt/microsoft/mdatp/tools/client_analyzer/binary"
+cd /opt/microsoft/mdatp/tools/client_analyzer/binary
+
+echo "Running MDESupportTool"
+./MDESupportTool $@
+
+Execute:
+run MDESupportToolBinary.sh -parameters "--bypass-disclaimer -d"
+
+
+MDESupportToolPython.sh
+
+#! /usr/bin/bash
+
+echo "cd /opt/microsoft/mdatp/tools/client_analyzer/python"
+cd /opt/microsoft/mdatp/tools/client_analyzer/python
+
+echo "Running MDESupportTool"
+./mde_support_tool.sh $@
+
+Execute:
+run MDESupportToolPython.sh -parameters "--bypass-disclaimer -d"
+
+```
+
 
 ### Run the XMDE client analyzer
 
