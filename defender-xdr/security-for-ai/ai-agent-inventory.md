@@ -18,8 +18,8 @@ appliesto:
 
 After you onboard to [Microsoft Agent 365](/microsoft-agent-365/overview), you can discover all of the AI agents in your organization and view their configuration details using Advanced Hunting in the Microsoft Defender portal.
 
-Microsoft Defender also provides a dedicated AI agent inventory experience in the Defender portal for agent discovery and posture management, including agent details, posture insights, risk factors, and security recommendations, where supported. This inventory is currently available for agents built with Microsoft Copilot Studio or pro‑developer platforms, including Microsoft Foundry, AWS Bedrock, and GCP Vertex. To use the inventory, you need to enable the required features.
-s
+Microsoft Defender also provides a dedicated AI agent inventory experience in the Defender portal for agent discovery and posture management, including agent details, posture insights, risk factors, and security recommendations, where supported. This inventory is currently available for agents built with Microsoft Copilot Studio, Microsoft Foundry, AWS Bedrock, and GCP Vertex AI. To use the inventory, you need to enable the required features.
+
 This article explains how to discover AI agents, assess their security posture, and use the AI agent inventory in the Microsoft Defender portal.
 
 ## View all Agent 365-managed agents and configuration details using Advanced Hunting
@@ -55,14 +55,14 @@ We recommend that you reach out to the owners of the risky agents for more infor
 
 ## Discover and manage security posture of supported AI agents using the AI agent inventory
 
-The AI agent inventory page in the Defender portal provides a centralized view of all agents you build with Microsoft Copilot Studio or pro‑developer platforms, including Microsoft Foundry, AWS Bedrock, and GCP Vertex, along with their key attributes and security status.
+The AI agent inventory page in the Defender portal provides a centralized view of all agents you build with Microsoft Copilot Studio, Microsoft Foundry, AWS Bedrock, and GCP Vertex AI, along with their key attributes and security status.
 
 > [!NOTE]
 > For Microsoft Copilot Studio agents, the AI agent inventory currently supports agent discovery, but not security posture management.  
 
 1. Enable the required features for AI agent inventory:
     - For Copilot Studio agents, enable the [Copilot Studio integration in Microsoft Defender for Cloud Apps](/defender-cloud-apps/ai-agent-inventory). 
-    - For pro‑developer platforms (Microsoft Foundry, AWS Bedrock, and GCP Vertex), enable the [Microsoft Foundry integration in Microsoft Defender for Cloud](/azure/defender-for-cloud/ai-security-posture#discover-ai-agents-preview). 
+    - For Microsoft Foundry, AWS Bedrock, and GCP Vertex AI, enable the [Microsoft Foundry integration in Microsoft Defender for Cloud](/azure/defender-for-cloud/ai-security-posture#discover-ai-agents-preview). 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com/).
 1. In the left navigation pane, select **Assets** > **AI Agents**.
 
