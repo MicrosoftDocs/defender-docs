@@ -7,7 +7,7 @@ author: lwainstein
 ms.author: lwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 11/19/2025
+ms.date: 04/08/2026
 audience: ITPro
 ms.collection:
 - m365-security
@@ -30,7 +30,9 @@ Learn more about [Preview features](/defender-xdr/preview).
 
 |Type  |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|-------------|
+|Release - macOS |Build 101.26022.0020 |GA |Release version 20.126022.20.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--april-2026--101260220020). |
 |Release - macOS |Build 101.26022.0018 |GA |Release version 20.126022.18.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--april-2026--101260220018).|
+|Release - Android |Build 1.0.8805.0103 |GA |Build 1.0.8805.0103 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#android--april-2026--platform-1088050103). |
 
 ## March 2026
 
