@@ -50,7 +50,7 @@ Both F5 licenses require Microsoft 365 F1/F3 or Office 365 F3 and Enterprise Mob
 
 The Defender for Identity sensor utilizes the same URIs as Microsoft Defender for Endpoint. Please review the following documents for Defender for Endpoint, based on your systems connectivity, for a complete list of required service endpoints.
 
-- [Microsoft Defender for Endpoint streamlined connectivity URLs - commercial](/defender-endpoint/streamlined-device-connectivity-urls-commercial?tabs=Windows)
+- [Microsoft Defender for Endpoint streamlined connectivity URLs](/defender-endpoint/streamlined-device-connectivity-urls-commercial?tabs=Windows)
 
 - [Microsoft Defender for Endpoint standard connectivity URLs - commercial](/defender-endpoint/standard-device-connectivity-urls-commercial)
 
