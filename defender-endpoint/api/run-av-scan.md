@@ -37,7 +37,9 @@ Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 
 ### Supported operating systems
 
-- This action is available for devices on Windows 10, version  1709 or later, and on Windows 11.
+- Windows 10, version  1709 or later, and on Windows 11.
+- Linux Servers. See [Supported Linux distributions](../mde-linux-prerequisites.md#supported-linux-distributions)
+- macOS. See [Microsoft Defender for Endpoint on macOS](../microsoft-defender-endpoint-mac.md#system-requirements)
 
 ## Permissions
 
