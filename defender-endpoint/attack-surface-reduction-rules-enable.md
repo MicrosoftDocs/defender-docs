@@ -334,7 +334,7 @@ For more information about the Microsoft Configuration Manager console, see [How
 >
 > To modify this behavior, you need to change "Disable admin merge" to `false`.
 
-### Group policy
+### Configure ASR rules in group policy
 
 > [!WARNING]
 > If you manage your computers and devices with Intune, Microsoft Configuration Manager, or other enterprise-level management software, the management software overwrites any conflicting group policy settings on startup.
@@ -349,9 +349,9 @@ For more information about the Microsoft Configuration Manager console, see [How
 
 1. In the details pane of **Attack Surface Reduction**, the available settings are:
 
-   - [Configure Attack Surface Reduction rules](#enable-asr-rules)
-   - [Exclude files and paths from Attack surface reduction rules](#apply-exclusions-for-all-asr-rules)
-   - [Apply a list of exclusions to specific attack surface reduction (ASR) rules](#apply-per-rule-exclusions)
+   - [Configure Attack Surface Reduction rules](#enable-asr-rules-in-group-policy)
+   - [Exclude files and paths from Attack surface reduction rules](#enable-exclusions-for-all-asr-rules-in-group-policy)
+   - [Apply a list of exclusions to specific attack surface reduction (ASR) rules](#enable-per-rule-exclusions-in-group-policy)
 
    To open and configure an ASR rule setting, use any of the following methods:
    - Double-click on the setting.
@@ -361,13 +361,11 @@ For more information about the Microsoft Configuration Manager console, see [How
 The available settings are described in the following subsections.
 
 > [!IMPORTANT]
-> Quotation marks aren't supported in any of the group policy values.
+> Quotation marks, leading spaces, trailing spaces, and extra characters aren't supported in any of the ASR rule-related values in group policy.
 >
-> Don't use leading or trailing spaces in ASR rule IDs.
->
-> Microsoft renamed Windows Defender Antivirus to Microsoft Defender Antivirus beginning in Windows 10 version 2004 (May 2020). Group Policy paths on earlier versions of Windows might still reference Windows Defender Antivirus. Both names refer to the same policy location.
+> Group Policy paths before Windows 10 version 2004 (May 2020) might use **Windows** Defender Antivirus instead of **Microsoft** Defender Antivirus. Both names refer to the same policy location.
 
-#### Enable ASR rules
+#### Enable ASR rules in group policy
 
 1. In the details pane of **Attack Surface Reduction**, open the **Configure Attack Surface Reduction rules** setting.
 
@@ -390,7 +388,9 @@ The available settings are described in the following subsections.
 
    Repeat this step as many times as necessary. When you're finished, select **OK**.
 
-#### Apply exclusions for all ASR rules
+#### Enable exclusions for all ASR rules in group policy
+
+The paths or filenames with paths you specify are used as exclusions for all ASR rules that support exclusions.
 
 1. In the details pane of **Attack Surface Reduction**, open the **Exclude files and paths from Attack surface reduction rules** setting.
 
@@ -406,7 +406,7 @@ The available settings are described in the following subsections.
 
    Repeat this step as many times as necessary. When you're finished, select **OK**.
 
-#### Apply per-rule exclusions
+#### Enable per-rule exclusions in group policy
 
 > [!NOTE]
 > If the **Apply a list of exclusions to specific attack surface reduction (ASR) rules** setting isn't available in your GPMC, you need version 24H2 or later of the [Administrative Templates files](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#links-to-download-the-administrative-templates-files-based-on-the-operating-system-version) in your [Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#the-central-store).
@@ -419,7 +419,7 @@ The available settings are described in the following subsections.
 
 1. In the **Exclusions for each ASR rule** dialog that opens, configure the following settings:
    - **Value name**: Enter the [GUID value of the ASR rule](attack-surface-reduction-rules-reference.md#asr-rule-to-guid-matrix).
-   - **Value**: Enter one or more exclusions for the ASR rule. Use the syntax `Path1\ProcessName1>Path2ProcessName2>...PathNProcessNameN`. For example, `C:\Windows\Notepad.exe>c:\Windows\regedit.exe>C:\SomeFolder\test.exe`.
+   - **Value**: Enter one or more exclusions for the ASR rule. Use the syntax `Path1\ProcessName1>Path2\ProcessName2>...PathN\ProcessNameN`. For example, `C:\Windows\Notepad.exe>c:\Windows\regedit.exe>C:\SomeFolder\test.exe`.
 
    Repeat this step as many times as necessary. When you're finished, select **OK**.
 
@@ -442,7 +442,7 @@ Use the following PowerShell command syntax in an elevated PowerShell session (a
 
   To add new rules and their corresponding modes without affecting any existing values, use the **Add-MpPreference** cmdlet. To remove the specified rules and their corresponding actions without affecting other existing values, use the **Remove-MpPreference** cmdlet.
 
-- GUID values for ASR rules are available at: [Attack surface reduction rules](attack-surface-reduction-rules-reference.md#attack-surface-reduction-rules).
+- GUID values for ASR rules are available at [Attack surface reduction rules](attack-surface-reduction-rules-reference.md#attack-surface-reduction-rules).
 - Valid values for the _AttackSurfaceReductionRules\_Actions_ parameter are:
   - `0` or `Disabled`
   - `1` or `Enabled` (**Block** mode)
@@ -463,7 +463,7 @@ Set-MpPreference -AttackSurfaceReductionRules_Ids 26190899-1602-49e8-8b27-eb1d0a
 > [!TIP]
 > An **Add-MpPreference** version of the same command would have added the specified rules in the specified modes without affecting any existing rules. Likewise, a **Remove-MpPreference** version of the same command would have removed the specified rules in the specified modes without affecting other rules.
 
-### Configure exclusions for all ASR rules in PowerShell
+#### Configure exclusions for all ASR rules in PowerShell
 
 The paths or filenames with paths you specify are used as exclusions for all ASR rules that support exclusions.
 
