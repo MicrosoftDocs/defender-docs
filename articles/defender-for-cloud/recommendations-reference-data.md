@@ -25,9 +25,6 @@ To learn about actions that you can take in response to these recommendations, s
 > For example, the recommendation *Endpoint protection health failures should be remediated* relies on the recommendation that checks whether an endpoint protection solution is installed (*Endpoint protection solution should be installed*). The underlying recommendation *does* have a policy.
 > Limiting policies to only foundational recommendations simplifies policy management.
 
-
-
-
 ## Azure data recommendations
 
 ### Azure Cosmos DB should disable public network access
@@ -1936,7 +1933,7 @@ __How could attackers exploit it or how could it lead to data breaches?__ While 
 
 **Severity**: Low
 
-### require_secure_transport should be set to “on” for Azure Database for PostgreSQL Servers
+### require_secure_transport should be set to **on** for Azure Database for PostgreSQL servers
 
 **Description**:   
 __What is require_secure_transport?__ require_secure_transport is a server-level parameter that enforces the use of SSL/TLS for all client connections to PostgreSQL. When set to on, clients must connect using encrypted channels.
