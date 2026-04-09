@@ -174,6 +174,8 @@ For devices running Windows 7, Windows 8.1, Windows Server 2008 R2, and servers 
 
 [STEP 3: Verify client connectivity to Microsoft Defender for Endpoint service URLs](verify-connectivity.md)
 
+For the required service endpoints, see [Microsoft Defender for Endpoint streamlined connectivity URLs - commercial](streamlined-device-connectivity-urls-commercial.md)
+
 ## Related articles
 
 - [Disconnected environments, proxies, and Microsoft Defender for Endpoint](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/disconnected-environments-proxies-and-microsoft-defender-for/ba-p/3710502)
