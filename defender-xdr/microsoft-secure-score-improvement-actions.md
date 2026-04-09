@@ -7,7 +7,6 @@ f1.keywords:
   - NOCSH
 ms.author: deniseb
 author: denisebmsft
-manager: dansimp
 audience: ITPro
 ms.collection:
 - m365-security
@@ -62,19 +61,17 @@ This view is what it will look like if you've included all possible score views:
 
 ## Take action to improve your score
 
-To access the recommendations to improve your Microsoft Secure Score:
+To access the recommended actions to improve your Microsoft Secure Score:
 
 1. Make sure you're signed in to the [Defender portal](https://security.microsoft.com).
 1. Go to [https://security.microsoft.com/securescore](https://security.microsoft.com/securescore).
 1. Select the **Recommended actions** tab.
 
+:::image type="content" source="media/microsoft-secure-score-improvement-actions/secure-score-recommended-actions.png" alt-text="Screenshot showing the Recommended actions tab on the Microsoft Secure Score page.":::
+
 The **Recommended actions** tab lists the security recommendations that address possible attack surfaces. It also includes their status (to address, planned, risk accepted, resolved through third party, resolved through alternate mitigation, and completed). You can search, filter, and group all the recommended actions.
 
-Once you have completed an action it can take between 24-48 hours for the changes to be reflected in your secure score.
-
-### Ranking
-
-Ranking is based on the number of points left to achieve, implementation difficulty, user impact, and complexity. The highest ranked recommended actions have a large number of points remaining with low difficulty, user impact, and complexity.
+Ranking is based on the number of points left to achieve, implementation difficulty, user impact, and complexity. The highest ranked recommended actions have a large number of points remaining with low difficulty, user impact, and complexity. Once you have completed an action it can take between 24-48 hours for the changes to be reflected in your secure score. Learn [how recommendations are scored](microsoft-secure-score.md#how-recommended-actions-are-scored).
 
 ### View recommended action details
 

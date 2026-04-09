@@ -7,7 +7,6 @@ ms.subservice: edr
 ms.author: chrisda
 ms.localizationpriority: medium
 ms.date: 04/04/2025
-manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security

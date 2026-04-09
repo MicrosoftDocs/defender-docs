@@ -6,7 +6,6 @@ ms.service: defender-endpoint
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.custom: asr
 ms.topic: how-to

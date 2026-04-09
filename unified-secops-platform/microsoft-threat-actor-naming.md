@@ -1,24 +1,19 @@
 ---
 title: How Microsoft names threat actors
-ms.reviewer: 
 description: Learn how Microsoft names threat actors and how to use the naming convention to identify associated intelligence.
-ms.service: microsoft-defender
-ms.subservice: unified-security-operations
 ms.mktglfcycl: secure
 ms.sitesec: library
-ms.localizationpriority: medium
-ms.author: guywild
-author: guywi-ms
-manager: orspodek
-audience: ITPro
-ms.collection: 
+author: poliveria
+ms.author: pauloliveria
+ms.reviewer:
+ms.collection:
 - m365-security
 - tier2
 ms.custom:
 - cx-ti
 ms.topic: article
 search.appverid: met150
-ms.date: 03/06/2026
+ms.date: 04/02/2026
 ---
 
 # How Microsoft names threat actors
@@ -142,7 +137,7 @@ The following table lists publicly disclosed threat actor names with their origi
 |Salmon Typhoon|China|SODIUM, MAVERICK PANDA, APT4|
 |Salt Typhoon|China|OPERATOR PANDA, GhostEmperor, FamousSparrow|
 |Sangria Tempest|Ukraine, Financially motivated|ELBRUS, CARBON SPIDER|
-|Sapphire Sleet|North Korea|COPERNICIUM, STARDUST CHOLLIMA, Genie Spider, BlueNoroff, CageyChameleon, CryptoCore|
+|[Sapphire Sleet](https://www.microsoft.com/en-us/security/blog/2026/04/01/mitigating-the-axios-npm-supply-chain-compromise/)|North Korea|COPERNICIUM, UNC1069, STARDUST CHOLLIMA, Alluring Pisces, BlueNoroff, CageyChameleon, CryptoCore|
 |Satin Typhoon|China|SCANDIUM, DYNAMITE PANDA, COMBINE, TG-0416, SILVERVIPER, Red Wraith, APT18, Elderwood Group, Wekby|
 |[Seashell Blizzard](https://www.microsoft.com/en-us/security/blog/2025/02/12/the-badpilot-campaign-seashell-blizzard-subgroup-conducts-multiyear-global-access-operation/)|Russia|IRIDIUM, VOODOO BEAR, BE2, UAC-0113, Blue Echidna, Sandworm, PHANTOM, BlackEnergy Lite, APT44|
 |[Secret Blizzard](https://www.microsoft.com/en-us/security/blog/2024/12/04/frequent-freeloader-part-i-secret-blizzard-compromising-storm-0156-infrastructure-for-espionage/)|Russia|KRYPTON, VENOMOUS BEAR, Uroburos, Snake, Blue Python, Turla, WRAITH, ATG26|

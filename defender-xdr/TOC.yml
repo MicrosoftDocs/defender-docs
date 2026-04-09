@@ -84,7 +84,7 @@
         href: incidents-overview.md      
       - name: Correlation and merging
         href: alerts-incidents-correlation.md
-      - name: Exclude analytics rules from correlation
+      - name: Manage analytics rule correlation settings
         href: exclude-analytics-rules-correlation.md
       - name: Prioritize incidents
         href: incident-queue.md
@@ -256,6 +256,10 @@
             href: advanced-hunting-cloudappevents-table.md
           - name: CloudAuditEvents
             href: advanced-hunting-cloudauditevents-table.md
+          - name: CloudDnsEvents
+            href: advanced-hunting-clouddnsevents-table.md
+          - name: CloudPolicyEnforcementEvents
+            href: advanced-hunting-cloudpolicyenforcementevents-table.md
           - name: CloudProcessEvents
             href: advanced-hunting-cloudprocessevents-table.md
           - name: CloudStorageAggregatedEvents
@@ -422,6 +426,8 @@
           href: get-started-xdr.md
         - name: Start using Microsoft Defender Experts for XDR service
           items:
+          - name: Overview
+            href: start-using-mdex-xdr.md
           - name: Managed detection and response
             href: managed-detection-and-response-xdr.md
           - name: Scoped coverage
@@ -490,6 +496,30 @@
             href: advanced-hunting-security-copilot-threat-hunting-agent.md
           - name: Dynamic Threat Detection Agent
             href: dynamic-threat-detection-agent.md
+    - name: Identity Security
+      items:
+      - name: Identity Security overview
+        href: ./identity-security/identity-security-overview.md
+      - name: View your identity coverage and maturity 
+        href: ./identity-security/coverage-maturity.md  
+      - name: View your identities
+        items:
+        - name: The identity security dashboard
+          href: /defender-for-identity/dashboard?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+        - name: View the identity inventory
+          href: /defender-for-identity/identity-inventory?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+        - name: Investigate a human identity
+          href: investigate-users.md
+        - name: Investigate a non-human identity
+          href: investigate-non-human-identities.md
+        - name: Investigate an Active Directory domain
+          href: /defender-for-identity/investigate-domain?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+      - name: Security recommendations
+        items:
+        - name: Identity security initiative (Preview)
+          href: /defender-for-identity/identity-security-initiative?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+        - name: Unified identity security recommendations
+          href: ./identity-security/identity-security-recommendations.md
     - name: Enhance security operations
       items:
       - name: Security operations guide
@@ -522,7 +552,7 @@
               href: m365d-permissions.md
             - name: Custom roles in role-based access
               href: custom-roles.md
-        - name: Manage permissions with Defender XDR Unified RBAC
+        - name: Manage permissions with Defender unified RBAC
           items:
             - name: Overview
               href: manage-rbac.md
@@ -532,13 +562,13 @@
               href: create-custom-rbac-roles.md
             - name: Import roles
               href: Import-rbac-roles.md
-            - name: Activate Defender XDR Unified RBAC
+            - name: Activate Defender unified RBAC
               href: activate-defender-rbac.md
             - name: Edit, delete and export roles
               href: edit-delete-rbac-roles.md
-            - name: Map Defender XDR Unified RBAC permissions
+            - name: Map Defender unified RBAC permissions
               href: compare-rbac-roles.md
-            - name: About Defender XDR Unified RBAC custom permissions
+            - name: About Defender unified RBAC custom permissions
               href: custom-permissions-details.md
     - name: Reference
       items:

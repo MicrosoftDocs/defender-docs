@@ -1,11 +1,7 @@
 ---
 title: Configuring the data connectors in Microsoft Security Exposure Management
 description: Learn about configuring the data connectors in Microsoft Security Exposure Management.
-ms.author: dlanger
-author: dlanger
-manager: rayne-wiselman
 ms.topic: overview
-ms.service: exposure-management
 ms.date: 09/21/2025
 ---
 
@@ -30,7 +26,7 @@ To view the status of the connectors, you can use one of the following roles:
 - Global Reader (read permissions)
 - Security Reader (read permissions)
 
-You can also use [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac) with the following permissions:
+You can also use [Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/manage-rbac) with the following permissions:
     - **Exposure Management (read)** for read-only access to Exposure Management experiences
     - **Exposure Management (manage)** for full access to manage Exposure Management experiences
     - **Core security settings (manage)** for connecting or changing vendor configurations (located under Authorization and settings category)

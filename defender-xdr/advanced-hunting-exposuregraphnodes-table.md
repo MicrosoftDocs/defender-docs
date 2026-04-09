@@ -9,7 +9,6 @@ f1.keywords:
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: rayne-wiselman
 audience: ITPro
 ms.collection: 
 - m365-security

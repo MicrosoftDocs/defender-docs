@@ -6,7 +6,6 @@ ms.service: defender-xdr
 ms.author: edbaynash
 author: EdB-MSFT
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -47,9 +46,6 @@ Once the storage account is created, you need to define the user who is signing 
 > When using the Streaming API to an Azure Storage account, ensure the option `Allow trusted Microsoft services to access this storage account` is enabled in the storage account settings to allow for data to be streamed from Microsoft Defender for Endpoint.
 
 1. Go to the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139) and sign in using an account with at least Security Administrator permissions.
-
-   > [!IMPORTANT]
-   > Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 2. Go to **Settings** > **Microsoft Defender XDR** > **Streaming API**. To go directly to the **Streaming API** page, use [https://security.microsoft.com/settings/mtp_settings/raw_data_export](https://security.microsoft.com/settings/mtp_settings/raw_data_export).
 

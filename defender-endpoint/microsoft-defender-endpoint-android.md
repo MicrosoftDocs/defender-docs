@@ -6,7 +6,6 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -74,7 +73,7 @@ This article describes how to install, configure, update, and use Defender for E
 
 Microsoft Defender for Endpoint on Android supports installation on Android Enterprise modes. Personally-owned devices with work profile, Corporate-owned devices with work profile, and Corporate-owned fully managed user device enrollments are supported in Android Enterprise.
 
-- Deployment of Microsoft Defender for Endpoint on Android is via Microsoft Intune (MDM). For more information, see [Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](android-intune.md).
+- Deployment of Microsoft Defender for Endpoint on Android is via Microsoft Intune (MDM). For more information, see [Deploy and configure Microsoft Defender for Endpoint on Android with Microsoft Intune](/intune/intune-service/protect/microsoft-defender-deploy-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json).
 
 - Installation of Microsoft Defender for Endpoint on devices that aren't enrolled using Intune mobile device management (MDM), see [Configure Microsoft Defender for Endpoint risk signals in app protection policy (MAM)](android-configure-mam.md).
 
@@ -103,7 +102,7 @@ To ensure optimal protection for your device, Microsoft Defender requests access
 
 #### How to resolve the noncompliance state due to silent auth failures
 
-- Microsoft Defender for Endpoint has a feature to let the user sign-in according to a set of policies called [Conditional Access policies](/defender-endpoint/configure-conditional-access).
+- Microsoft Defender for Endpoint has a feature to let the user sign-in according to a set of policies called [Conditional Access policies](configure-conditional-access.md).
 
 - If a policy is violated, or the user has reset their Microsoft account password, the Microsoft Defender app autosigns out and starts failing in silent auth (sign-in attempts in background).
 
@@ -127,7 +126,7 @@ For information on how to configure Defender for Endpoint on Android features, s
 
 ## Related articles
 
-- [Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](android-intune.md)
+- [Deploy and configure Microsoft Defender for Endpoint on Android with Microsoft Intune](/intune/intune-service/protect/microsoft-defender-deploy-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json)
 
 - [Configure Microsoft Defender for Endpoint on Android features](android-configure.md)
 

@@ -51,6 +51,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "defender-endpoint/linux-support-events.md",
+      "redirect_url": "/defender-endpoint/mde-linux-prerequisites",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "defender-endpoint/mssp-support.md",
       "redirect_url": "/defender-endpoint/configure-mssp-support",
       "redirect_document_id": true
@@ -239,6 +244,11 @@
       "source_path": "defender-endpoint/device-discovery-faq.md",
       "redirect_url": "/defender-endpoint/device-discovery",
       "redirect_document_id": false
-    }         
+    },
+    {
+      "source_path": "defender-endpoint/android-intune.md",
+      "redirect_url": "/intune/intune-service/protect/microsoft-defender-deploy-android",
+      "redirect_document_id": false
+    }
   ]
 }

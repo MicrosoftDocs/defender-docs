@@ -4,8 +4,7 @@ f1.keywords:
 - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-ms.date: 05/08/2025
+ms.date: 04/01/2026
 audience: ITPro
 ms.topic: concept-article
 ms.service: defender-office-365
@@ -118,3 +117,7 @@ Defender for Office 365 shares data, including customer data, among the followin
 - Microsoft 365 Defender XDR
 - Microsoft Sentinel
 - Audit logs
+
+## Advanced email analysis in Defender for Office 365
+
+Defender for Office 365 improves email filtering against unwanted, malicious and abusive email by analyzing email messages processed by the service. Microsoft uses limited email data, with human review, for research purposes to improve the security and effectiveness of Defender for Office 365 and to reduce unwanted or malicious email (for example, spam, phishing or malware), in accordance with Microsoft's compliance, legal, and privacy standards.
