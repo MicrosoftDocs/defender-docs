@@ -1,5 +1,5 @@
 ---
-title: Kubernetes Nodes Vulnerability Assessment
+title: Review and remediate Kubernetes node vulnerabilities
 description: Learn about Defender for Containers vulnerability assessment for Kubernetes nodes.
 ms.date: 04/09/2026
 ms.topic: how-to
