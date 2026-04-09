@@ -69,14 +69,14 @@ This table lists the Microsoft Defender capabilities that help secure generative
 
 | Capability | Description | Learn more |
 |---|---|---|
-| **AI infrastructure discovery** | A unified view of your organization's AI infrastructure, including deployed models, services, and related AI resources. | [Discover generative AI workloads](/azure/defender-for-cloud/ai-security-posture) |
+| **AI infrastructure discovery** | A unified view of your organization's AI infrastructure, including deployed models, services, and related AI resources. | [Discover generative AI workloads](/azure/defender-for-cloud/identify-ai-workload-model) |
 | **AI infrastructure security posture management** | Identify vulnerabilities and misconfigurations across AI artifacts, including models, dependencies, code repositories, and container images. <br><br> Use built‑in security recommendations and attack‑path analysis to prioritize remediation. <br><br> Continuously assess AI models for security risks such as malware, unsafe operators, serialization vulnerabilities, and exposed secrets throughout the AI lifecycle.  | [AI security posture management](/azure/defender-for-cloud/ai-security-posture) |
-| **Threat detection and response** | Detect and respond to threats targeting generative AI applications built with Microsoft Foundry, including suspicious prompt activity and abnormal execution behavior, with contextual signals surfaced in security alerts. | [Threat protection for AI workloads](https://aka.ms/cloud-ai-threat-detection) |
+| **Threat detection and response** | Detect and respond to threats targeting generative AI applications built with Microsoft Foundry, including suspicious prompt activity and abnormal execution behavior, with contextual signals surfaced in security alerts. | [Threat protection for AI workloads](/azure/defender-for-cloud/ai-threat-protection) |
 | **Threat investigation and hunting** | Microsoft Defender XDR incident correlation and Advanced Hunting capabilities help defenders understand the full context and blast radius of AI infrastructure threats. | [Investigate incidents and alerts in the Microsoft Defender portal](/defender-xdr/incidents-overview) |
 
 ## Next steps
 
-Explore deeper content based on your role and scenario:
+Learn more about:
 
 - AI security posture management  
 - AI runtime protection  
