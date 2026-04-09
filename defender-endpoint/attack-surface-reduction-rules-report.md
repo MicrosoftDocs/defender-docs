@@ -226,13 +226,17 @@ To enable ASR rules:
 
 To go directly to the **Add exclusions** tab of the **Attack surface reduction rules** report page, use <https://security.microsoft.com/asr?viewid=exclusions>.
 
-The **Add exclusions** tab presents a ranked list of detections by file name and provides a method to configure exclusions. By default, **Add exclusions** information is listed for three fields:
+The **Add exclusions** tab lists detections by ASR rules across all devices.
 
-- **File name**: The name of the file that triggered the ASR rules event.
-- **Detections**: The total number of detected events for named file. Individual devices can trigger multiple ASR rules events.
-- **Devices**: The number of devices on which the detection occurred.
+**Rules** allows you to filter the results on the page. By default, **Standard protection** is selected to show data for [standard protection rules](attack-surface-reduction-rules-reference.md#attack-surface-reduction-rules) only, but you can switch to **All** to show data for all ASR rules.
 
-:::image type="content" source="media/attack-surface-reduction-rules-report-exclusion-tab.png" alt-text="Shows the ASR rules report add exclusions tab." lightbox="media/attack-surface-reduction-rules-report-exclusion-tab.png":::
+The details table shows the following information:
+
+- **File name**: The name of the file that triggered the ASR rule event.
+- **Detections**: The total number of detected events for the file. Individual devices can trigger multiple ASR rule events.
+- **Devices**: The number of devices where the detection occurred.
+
+:::image type="content" source="media/attack-surface-reduction-rules-report-exclusion-tab.png" alt-text="Screenshot of the Add exclusions tab of the Attack surface reduction rules report page in the Microsoft Defender portal." lightbox="media/attack-surface-reduction-rules-report-exclusion-tab.png":::
 
 > [!IMPORTANT]
 > Excluding files or folders can severely reduce the protection provided by ASR rules. Excluded files are allowed to run, and no report or event is recorded.

@@ -24,10 +24,11 @@ appliesto:
 
 # Understand attack surface reduction in Microsoft Defender for Endpoint
 
-_Attack surfaces_ are places where your organization is vulnerable to threats and attacks. Microsoft Defender for Endpoint includes several capabilities to help reduce your attack surface:
+An organization's _attack surface_ includes all the places where an attacker could compromise devices or networks. Reducing your attack surface means protecting your organization's devices and networks, which leaves attackers with fewer entry points. Microsoft Defender for Endpoint includes several capabilities to help reduce your attack surface:
 
-- [Attack surface reduction (ASR) rules for Windows](attack-surface-reduction-rules-overview.md): Configure and deploy ASR rules to block risky app behavior in supported versions of Windows.
- - [Controlled folder access](controlled-folders.md): Allow only specified trusted apps to access specified protected folders on Windows devices. In Defender for Endpoint, you configure controlled folder access in ASR rule policies.
+- [Attack surface reduction (ASR) rules for Windows devices](attack-surface-reduction-rules-overview.md): Configure and deploy ASR rules to block risky app behavior in supported versions of Windows.
+
+- [Controlled folder access](controlled-folders.md): Allow only specified trusted apps to access specified protected folders on Windows devices. In Defender for Endpoint, you configure controlled folder access in ASR rule policies.
 
 - [Device control](device-control-overview.md): Allow or prevent connection by specified types of devices to Windows and macOS devices.
 

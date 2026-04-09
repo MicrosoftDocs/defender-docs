@@ -33,23 +33,23 @@ ms.date: 12/31/2025
 
 ## Prerequisites
 
-To use the entire feature-set of attack surface reduction rules, the following requirements must be met:
+To use all ASR rule features, you need to meet the following requirements:
 
-- Microsoft Defender Antivirus must be set as the primary antivirus. It must not be running in passive mode or be disabled.
+- Microsoft Defender Antivirus must be the primary anti-virus app on Windows devices. Microsoft Defender Antivirus can't be disabled or in passive mode.
 
 - [Real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md) must be on.
 
-- [Cloud-Delivery Protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus) must be on (some rules require Cloud Protection).
+- [Cloud-delivery Protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus) must be on (some rules require Cloud Protection).
 
 - You must have [Cloud Protection network connectivity](configure-network-connections-microsoft-defender-antivirus.md)
 
-- Recommended: Microsoft 365 E5
+- We recommend Microsoft 365 E5.
 
    Although attack surface reduction rules don't require a [Microsoft 365 E5 license](/microsoft-365/commerce/licenses/e3-extra-features-licenses), it is recommended to use attack surface reduction rules with a Microsoft 365 E5 license  (or similar licensing SKU) to take advantage of advanced management capabilities, including monitoring, analytics, and workflows available in Defender for Endpoint, as well as reporting and configuration capabilities in the [Microsoft Defender XDR](https://go.microsoft.com/fwlink/p/?linkid=2077139) portal. While these advanced capabilities aren't available with an E3 license, with an E3 license you can still use Event Viewer to review attack surface reduction rule events.
 
    If you have another license, such as Windows Professional or Microsoft 365 E3 that doesn't include advanced monitoring and reporting capabilities, you can develop your own monitoring and reporting tools on top of the events that are generated at each endpoint when attack surface reduction rules are triggered (for example, Event Forwarding).
 
-   To learn more about Windows licensing, see [Windows 10 Licensing](https://www.microsoft.com/licensing/product-licensing/windows10?activetab=windows10-pivot:primaryr5) and get the [Volume Licensing guide for Windows 10](https://www.microsoft.com/en-us/download/details.aspx?id=11091).
+   To learn more about Windows licensing, see [Windows Licensing](https://www.microsoft.com/licensing/product-licensing/windows) and get the [Microsoft Volume Licensing Reference Guide](https://www.microsoft.com/download/details.aspx?id=11091).
 
 ### Supported operating systems
 
@@ -57,9 +57,9 @@ You can set attack surface reduction rules for devices that are running any of t
 
 - [Windows 11 Pro](/windows/whats-new/windows-11-overview)
 - [Windows 11 Enterprise](https://www.microsoft.com/microsoft-365/windows/windows-11-enterprise)
-- Windows 10 Pro, [version 1709](/windows/whats-new/whats-new-windows-10-version-1709) or later
-- Windows 10 Enterprise, [version 1709](/windows/whats-new/whats-new-windows-10-version-1709) or later
-- Windows Server, [version 1803 (Semi-Annual Channel)](/windows-server/get-started/whats-new-in-windows-server-1803) or later
+- Windows 10 Pro [version 1709](/windows/whats-new/whats-new-windows-10-version-1709) or later
+- Windows 10 Enterprise [version 1709](/windows/whats-new/whats-new-windows-10-version-1709) or later
+- Windows Server [version 1803 (Semi-Annual Channel)](/windows-server/get-started/whats-new-in-windows-server-1803) or later
 - [Windows Server 2012 R2](/windows/win32/srvnodes/what-s-new-for-windows-server-2012-r2)
 - [Windows Server 2016](/windows-server/get-started/whats-new-in-windows-server-2016)
 - [Windows Server 2019](/windows-server/get-started-19/whats-new-19)
@@ -68,43 +68,60 @@ You can set attack surface reduction rules for devices that are running any of t
 - Azure Stack HCI OS, version 23H2 and later
 
 > [!NOTE]
-> Some attack surface reduction rules are only enforced if Office executables are installed under the system-defined %ProgramFiles% or %ProgramFiles(x86)% directories (on most systems, %ProgramFiles% points to C:\Program Files). If Office is installed in a custom path outside one of these system-defined directories, these rules won't apply. The affected rules are:
+> The following Office-related ASR rules are enforced only if Office is installed in the `%ProgramFiles%` or `%ProgramFiles(x86)%` locations (By default, `C:\Program Files` and `C:\Program Files (x86)`):
 >
-> - Block Office communication applications from creating child processes (26190899-1602-49e8-8b27-eb1d0a1ce869)
-> - Block all Office applications from creating child processes (D4F940AB-401B-4EFC-AADC-AD5F3C50688A)
-> - Block Office applications from injecting code into other processes (75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84)
+> - [Block all Office applications from creating child processes](attack-surface-reduction-rules-reference.md#block-all-office-applications-from-creating-child-processes) (d4f940ab-401b-4efc-aadc-ad5f3c50688a)
+> - [Block Office applications from injecting code into other processes](attack-surface-reduction-rules-reference.md#block-office-applications-from-injecting-code-into-other-processes) (75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84)
+> - [Block Office communication applications from creating child processes](attack-surface-reduction-rules-reference.md#block-office-communication-application-from-creating-child-processes) (26190899-1602-49e8-8b27-eb1d0a1ce869)
+>
+> The only Office-related ASR rule not affected by this requirement is [Block Office applications from creating executable content](attack-surface-reduction-rules-reference.md#block-office-applications-from-creating-executable-content) (3b576869-a4ec-4529-8536-b80a7769e899).
 
 ## Enabling attack surface reduction rules
-
-Each attack surface reduction rule contains one of four settings:
-
-- **Not configured** or **Disabled**: Disable the attack surface reduction rule
-- **Block**: Enable the attack surface reduction rule
-- **Audit**: Evaluate how the attack surface reduction rule would impact your organization if enabled
-- **Warn**: Enable the attack surface reduction rule but allow the end user to bypass the block
-
-You can enable attack surface reduction rules by using any of the following methods:
-
-- [Microsoft Intune](#intune)
-- [Mobile Device Management (MDM)](#mdm)
-- [Microsoft Configuration Manager](#microsoft-configuration-manager)
-- [Group policy (GP)](#group-policy)
-- [PowerShell](#powershell)
 
 Enterprise-level management such as Intune or Microsoft Configuration Manager is recommended. Enterprise-level management overwrites any conflicting group policy or PowerShell settings on startup.
 
 ### Exclude files and folders from attack surface reduction rules
 
-You can exclude files and folders from being evaluated by most attack surface reduction rules. This means that even if an attack surface reduction rule determines the file or folder contains malicious behavior, it doesn't block the file from running.
+<!--- |Rule|Honors MDAV Exclusions|Honors Global ASR Exclusions|Honors Per‑Rule ASR Exclusions|
+      |---|:---:|:---:|:---:|
+      |**Standard protection rules**||||
+      |Block abuse of exploited vulnerable signed drivers|❌*|❌*|❌*|
+      |Block credential stealing from LSASS|❌|❌*|❌*|
+      |Block persistence through WMI event subscription|✅*❌*❌*|
+      |**Other ASR rules**||||
+      |Block Adobe Reader from creating child processes|❌|❌*|❌*|
+      |Block JavaScript/VBScript from launching downloaded executable content|✅*✅*✅*|
+      |Block Office applications from creating executable content|❌|❌*|❌*|
+      |Block Office applications from injecting code into other processes|❌|❌*|❌*|
+      |Block Office communication applications from creating child processes|❌|❌*|❌*|
+      |Block Webshell creation for Servers|❌*|❌*|❌*|
+      |Block Win32 API calls from Office macros|✅*|❌*|❌*|
+      |Block all Office applications from creating child processes|✅*|✅*|✅*|
+      |Block executable content from email client and webmail|✅*|✅*|✅*|
+      |Block executable files unless prevalence/age/trusted|✅*|✅*|✅*|
+      |Block execution of potentially obfuscated scripts|✅*|✅*|✅*|
+      |Block process creations originating from PSExec and WMI commands|❌|❌*|❌*|
+      |Block rebooting machine in Safe Mode|✅*|✅*|✅*|
+      |Block untrusted and unsigned processes that run from USB|✅*|✅*|✅*|
+      |Block use of copied or impersonated system tools|❌*|❌*|❌*|
+      |Use advanced protection against ransomware|❌*|❌*|❌*|
+
+\* = not 100% verified
+--->
 
 > [!IMPORTANT]
-> Excluding files or folders can severely reduce the protection provided by attack surface reduction rules. Excluded files are allowed to run, and no report or event are recorded. If attack surface reduction rules are detecting files that you believe shouldn't be detected, you should [use audit mode first to test the rule](attack-surface-reduction-rules-deployment-test.md#step-1-test-attack-surface-reduction-rules-using-audit).
-> An exclusion is applied only when the excluded application or service starts. For example, if you add an exclusion for an update service that is already running, the update service continues to trigger events until the service is stopped and restarted.
+> Excluding files or folders can severely reduce ASR rule protection. Excluded files are allowed to run, and no reports or events about the file are recorded. IF ASR rules detect files that shouldn't be detected, [use Audit mode to test the rule](attack-surface-reduction-rules-deployment-test.md#step-1-test-attack-surface-reduction-rules-using-audit).
+
+You can exclude files and folders from being evaluated by most ASR rules. Even if an ASR rule determines the file or folder contains malicious behavior, it doesn't block the excluded file from running.
+
+
+>
+> Exclusion apply only when the application or service starts. For example, if you add an exclusion for an update service that's already running, the update service continues to trigger ASR rule detections until you restart the service.
 
 When adding exclusions, keep these points in mind:
 
 - Exclusions are typically based on individual files or folders (using folder paths or the full path of the file to be excluded).
-- Exclusion paths can use environment variables and wildcards. See [Use wildcards in the file name and folder path or extension exclusion lists](configure-extension-file-exclusions-microsoft-defender-antivirus.md#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists)
+- Exclusion paths can use environment variables and wildcards. For more information, see [Use wildcards in the file name and folder path or extension exclusion lists](configure-extension-file-exclusions-microsoft-defender-antivirus.md#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists)
 - When deployed through group policy, PowerShell, or Intune, you can configure exclusions for specific attack surface reduction rules. For Intune instructions, see [Configure attack surface reduction rules per-rule exclusions](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions).
 - Exclusions can be added based on certificate and file hashes, by allowing specified Defender for Endpoint file and certificate indicators. See [Overview of indicators](indicators-overview.md).
 
@@ -165,8 +182,8 @@ The following procedures for enabling attack surface reduction rules include ins
 1. Select **Next** on the three configuration panes, then select **Create** if you're creating a new policy or **Save** if you're editing an existing policy.
 
 > [!NOTE]
-> In the latest Intune interface, **Configuration profiles** is located under  **Devices > Configuration profiles**.  
-> Earlier versions of Intune showed this under **Device configuration > Profiles**.  
+> In the latest Intune interface, **Configuration profiles** is located under  **Devices > Configuration profiles**.
+> Earlier versions of Intune showed this under **Device configuration > Profiles**.
 > If you don't see "Configuration Profile" as written in older instructions, look for **Configuration profiles** under the Devices menu.
 
 #### Device Configuration Profiles (Alternative 1)
@@ -187,11 +204,11 @@ You can use Microsoft Intune OMA-URI to configure custom attack surface reductio
 
 1. In the Microsoft Intune admin center at <https://intune.microsoft.com>, select **Devices** \> **Manage devices** \> **Configuration**. Or, to go directly to the **Devices \| Configuration** page, use <https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/configuration>.
 
-2. On the **Policies** tab of the **Devices \| Configuration** page, select **Create** \> **New policy**.
+1. On the **Policies** tab of the **Devices \| Configuration** page, select **Create** \> **New policy**.
 
    :::image type="content" source="media/mem01-create-profile.png" alt-text="Screenshot of the Policies tab of the Devices - Configuration page in the Microsoft Intune admin center with Create selected." lightbox="media/mem01-create-profile.png":::
 
-3. In the **Create a profile** flyout that opens, configure the following settings:
+1. In the **Create a profile** flyout that opens, configure the following settings:
    - **Platform**: Select **Windows 10 and later**.
    - **Profile type**: Select one of the following values:
      - **Templates**
@@ -290,9 +307,11 @@ Example:
 
 ### Microsoft Configuration Manager
 
-1. In Microsoft Configuration Manager, go to **Assets and Compliance** > **Endpoint Protection** > **Windows Defender Exploit Guard**.
+For more information about the Microsoft Configuration Manager console, see [How to use the Configuration Manager console](/intune/configmgr/core/servers/manage/admin-console).
 
-1. Select **Home** > **Create Exploit Guard Policy**.
+1. In the Configuration Manager Console, go to **Assets and Compliance** \> **Endpoint Protection** \> **Windows Defender Exploit Guard**.
+
+1. Select **Home** \> **Create Exploit Guard Policy**.
 
 1. Enter a name and a description, select **Attack Surface Reduction**, and select **Next**.
 
@@ -312,12 +331,13 @@ Example:
 > - Intune (Disable Local Admin Merge)
 > - The Defender CSP (**[DisableLocalAdminMerge](/windows/client-management/mdm/defender-csp)**)
 > - Group Policy (Configure local administrator merge behavior for lists)
+>
 > To modify this behavior, you need to change "Disable admin merge" to `false`.
 
 ### Group policy
 
 > [!WARNING]
-> If you manage your computers and devices with Intune, Configuration Manager, or other enterprise-level management platform, the management software overwrites any conflicting group policy settings on startup.
+> If you manage your computers and devices with Intune, Microsoft Configuration Manager, or other enterprise-level management software, the management software overwrites any conflicting group policy settings on startup.
 
 1. Open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console) on your Group Policy management computer.
 
@@ -345,7 +365,7 @@ The available settings are described in the following subsections.
 >
 > Don't use leading or trailing spaces in ASR rule IDs.
 >
-> Microsoft renamed Windows Defender Antivirus to Microsoft Defender Antivirus beginning with Windows 10 version 2004 (May 2020). Group Policy paths on earlier versions of Windows might still reference Windows Defender Antivirus, while newer builds show Microsoft Defender Antivirus. Both names refer to the same policy location.
+> Microsoft renamed Windows Defender Antivirus to Microsoft Defender Antivirus beginning in Windows 10 version 2004 (May 2020). Group Policy paths on earlier versions of Windows might still reference Windows Defender Antivirus. Both names refer to the same policy location.
 
 #### Enable ASR rules
 
@@ -403,43 +423,75 @@ The available settings are described in the following subsections.
 
    Repeat this step as many times as necessary. When you're finished, select **OK**.
 
-### PowerShell
+### Configure ASR rules in PowerShell
 
 > [!WARNING]
-> If you manage your computers and devices with Intune, Configuration Manager, or another enterprise-level management platform, the management software overwrites any conflicting PowerShell settings on startup. 
+> If you manage your computers and devices with Intune, Configuration Manager, or another enterprise-level management platform, the management software overwrites any conflicting PowerShell settings on startup.
 
-1. Open an elevated PowerShell window (a PowerShell window you opened by selecting **Run as administrator**.
+Use the following PowerShell command syntax in an elevated PowerShell session (a PowerShell window you opened by selecting **Run as administrator**):
 
-1. Use one of the following commands. For information about each rule, including a mapping of rule name to rule GUID, see [Attack surface reduction rules](attack-surface-reduction-rules-reference.md#attack-surface-reduction-rules).
+```powershell
+<Add-MpPreference | Set-MpPreference | Remove> -AttackSurfaceReductionRules_Ids <RuleGuid1>,<RuleGuid2>,...<RuleGuidN> -AttackSurfaceReductionRules_Actions <ActionForRuleGuid1>,<ActionForRuleGuid2>,...<ActionForRuleGuidN>
+```
 
-   |Task|PowerShell cmdlet|
-   |---|---|
-   |EnableEnable ASR rules in **Block** mode|`Set-MpPreference -AttackSurfaceReductionRules_Ids <rule ID> -AttackSurfaceReductionRules_Actions Enabled`|
-   |Enable ASR rules in **Audit** mode|`Add-MpPreference -AttackSurfaceReductionRules_Ids <rule ID> -AttackSurfaceReductionRules_Actions AuditMode`|
-   |Enable ASR rules in **Warn** mode|`Add-MpPreference -AttackSurfaceReductionRules_Ids <rule ID> -AttackSurfaceReductionRules_Actions Warn`|
-   |Enable the ASR rule named **Block abuse of exploited vulnerable signed drivers (Device)**|`Add-MpPreference -AttackSurfaceReductionRules_Ids 56a863a9-875e-4185-98a7-b882c64b5ce5 -AttackSurfaceReductionRules_Actions Enabled`|
-   |Turn off attack surface reduction rules|`Add-MpPreference -AttackSurfaceReductionRules_Ids <rule ID> -AttackSurfaceReductionRules_Actions Disabled`|
+- **Set-MpPreference** _overwrites_ any existing rules and their corresponding modes with the values you specify. To see the list of existing values, run the following command:
 
-   You canYou must specify the state individually for each rule, but you can combine rules and states in a comma-separated list. In the following example, the first two rules are enabled in **Block** mode, the third rule is disabled, and the fourth rule is enabled in **Audit** mode: `Set-MpPreference -AttackSurfaceReductionRules_Ids <rule ID 1>,<rule ID 2>,<rule ID 3>,<rule ID 4> -AttackSurfaceReductionRules_Actions Enabled, Enabled, Disabled, AuditMode`
+  ```powershell
+  $p = Get-MpPreference;0..([math]::Min($p.AttackSurfaceReductionRules_Ids.Count,$p.AttackSurfaceReductionRules_Actions.Count)-1) | % {[pscustomobject]@{Id=$p.AttackSurfaceReductionRules_Ids[$_];Action=$p.AttackSurfaceReductionRules_Actions[$_]}} | Format-Table -AutoSize
+  ```
 
-   You can also use the `Add-MpPreference` PowerShell verb to add new rules to the existing list.
+  To add new rules and their corresponding modes without affecting any existing values, use the **Add-MpPreference** cmdlet. To remove the specified rules and their corresponding actions without affecting other existing values, use the **Remove-MpPreference** cmdlet.
 
-   > [!WARNING]
-   > `Set-MpPreference` overwrites the existing set of rules. If you want to add to the existing set, use `Add-MpPreference` instead. You can obtain a list of rules and their current state by using `Get-MpPreference`.
+- GUID values for ASR rules are available at: [Attack surface reduction rules](attack-surface-reduction-rules-reference.md#attack-surface-reduction-rules).
+- Valid values for the _AttackSurfaceReductionRules\_Actions_ parameter are:
+  - `0` or `Disabled`
+  - `1` or `Enabled` (**Block** mode)
+  - `2` or `AuditMode` or `Audit`
+  - `5` or `NotConfigured`
+  - `6` or `Warn`
 
-1. To exclude files and folders from attack surface reduction rules, use the following cmdlet: 
+The following example configures the specified ASR rules on the device:
 
-   `Add-MpPreference -AttackSurfaceReductionOnlyExclusions "<fully qualified path or resource>"`
+- The first two rules are enabled in **Block** mode.
+- The third rule is disabled.
+- The last rule is enabled in **Audit** mode.
 
-   Continue to use `Add-MpPreference -AttackSurfaceReductionOnlyExclusions` to add more files and folders to the list.
+```powershell
+Set-MpPreference -AttackSurfaceReductionRules_Ids 26190899-1602-49e8-8b27-eb1d0a1ce869,3b576869-a4ec-4529-8536-b80a7769e899,e6db77e5-3df2-4cf1-b95a-636979351e5,01443614-cd74-433a-b99e-2ecdc07bfc25 -AttackSurfaceReductionRules_Actions Enabled,Enabled,Disabled,AuditMode
+```
 
-   > [!IMPORTANT]
-   > Use `Add-MpPreference` to append or add apps to the list. Using the `Set-MpPreference` cmdlet will overwrite the existing list.
+> [!TIP]
+> An **Add-MpPreference** version of the same command would have added the specified rules in the specified modes without affecting any existing rules. Likewise, a **Remove-MpPreference** version of the same command would have removed the specified rules in the specified modes without affecting other rules.
+
+### Configure exclusions for all ASR rules in PowerShell
+
+The paths or filenames with paths you specify are used as exclusions for all ASR rules that support exclusions.
+
+Use the following PowerShell command syntax in an elevated PowerShell session:
+
+```powershell
+<Add-MpPreference | Set-MpPreference | Remove-MpPreference> -AttackSurfaceReductionOnlyExclusions "<PathOrPathAndFilename1>","<PathOrPathAndFilename2>"..."<PathOrPathAndFilenameN>"
+```
+
+- **Set-MpPreference** _overwrites_ any existing ASR rule exclusions with the values you specify. To see the list of existing values, run the following command:
+
+  ```powershell
+  (Get-MpPreference).AttackSurfaceReductionOnlyExclusions
+  ```
+
+  To add new exceptions without affecting any existing values, use the **Add-MpPreference** cmdlet. To remove the specified exceptions without affecting any other values, use the **Remove-MpPreference** cmdlet.
+
+  The following example configures the specified path and path with filename as exclusions for all supported ASR rules on the device:
+
+  ```powershell
+  Set-MpPreference -AttackSurfaceReductionOnlyExclusions "C:\Data\Test","C:\Data\LOBApp\app1.exe"
+  ```
+
+> [!TIP]
+> An **Add-MpPreference** version of the same command would have added the specified exclusions without affecting any existing exclusions. Likewise, a **Remove-MpPreference** version of the same command would have removed the specified exclusions without affecting other exclusions.
 
 ## Related content
 
 - [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
 - [Evaluate attack surface reduction](attack-surface-reduction-rules-deployment-test.md)
 - [Attack surface reduction FAQ](attack-surface-reduction-rules-overview.md)
-
-

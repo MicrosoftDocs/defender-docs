@@ -1,6 +1,6 @@
 ﻿---
-title: Use attack surface reduction rules to prevent malware infection
-description: Attack surface reduction rules can help prevent exploits from using apps and scripts to infect devices with malware.
+title: Overview of attack surface reduction rules
+description: "Admins can learn about attack surface reduction (ASR) rules for Windows devices in Microsoft Defender for Endpoint, and how they can help prevent exploits from using apps and scripts to infect devices with malware."
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
@@ -21,27 +21,48 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 ---
 
-# Attack surface reduction rules overview
+# Attack surface reduction (ASR) rules overview
 
 [!INCLUDE [MDE automated setup guide](../includes/security-analyzer-setup-guide.md)]
 
-Your organization's attack surface includes all the places where an attacker could compromise your devices or networks. Reducing your attack surface means protecting your organization's devices and network, which leaves attackers with fewer ways to perform attacks. Configuring attack surface reduction rules in Microsoft Defender for Endpoint can help!
+Attack surface reduction (ASR) rules for Windows devices in Microsoft Defender for Endpoint are a key component in reducing your organization's _attack surface_(entry points that could allow attackers access to your organization). For more information, see [Attack surface reduction in Microsoft Defender for Endpoint](attack-surface-reduction-overview.md).
 
-Attack surface reduction rules target specific software behavior, such as:
+ASR rules target specific software behavior on Windows devices that's often identified as malicious in nature. For example:
 
 - Launching executable files and scripts that attempt to download or run files.
-- Running obfuscated or otherwise suspicious scripts.
-- Doing things that apps don't normally do.
+- Running obfuscated or otherwise untrusted scripts.
+- Creating child processes from other, potentially vulnerable processes.
+- Injecting code into other processes.
 
-Although legitimate apps might sometimes do these actions, the behavior is considered risky because attackers use malware with this behavior. Attack surface reduction rules can constrain software-based risky behavior and help keep your organization safe.
+Although some legitimate apps might also take these types of actions, the actions are considered risky because attackers use malware that behaves in the same way. ASR rules rules can constrain software-based risky behavior on Windows devices to help keep your organization safe.
 
-For a sequential, end-to-end process of how to manage attack surface reduction rules, see:
+For a sequential deployment guide to plan, test, implement, and monitor ASR rules, see the following series of articles:
 
-- [Attack surface reduction rules deployment overview](attack-surface-reduction-rules-deployment.md)
-- [Plan attack surface reduction rules deployment](attack-surface-reduction-rules-deployment-plan.md)
-- [Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
-- [Enable attack surface reduction rules](attack-surface-reduction-rules-deployment-implement.md)
-- [Operationalize attack surface reduction rules](attack-surface-reduction-rules-deployment-operationalize.md)
+- [ASR rules deployment overview](attack-surface-reduction-rules-deployment.md)
+  - [Plan your ASR rules deployment](attack-surface-reduction-rules-deployment-plan.md)
+  - [Test ASR rules](attack-surface-reduction-rules-deployment-test.md)
+  - [Enable ASR rules](attack-surface-reduction-rules-deployment-implement.md)
+  - [Manage and monitor ASR rules](attack-surface-reduction-rules-deployment-operationalize.md)
+
+## Supported operating systems for ASR rules
+
+ASR rules are supported in all modern versions of Microsoft Windows and Windows Server:
+
+
+You can set attack surface reduction rules for devices that are running any of the following editions and versions of Windows:
+
+- [Windows 11 Pro](/windows/whats-new/windows-11-overview)
+- [Windows 11 Enterprise](https://www.microsoft.com/microsoft-365/windows/windows-11-enterprise)
+- Windows 10 Pro [version 1709](/windows/whats-new/whats-new-windows-10-version-1709) or later
+- Windows 10 Enterprise [version 1709](/windows/whats-new/whats-new-windows-10-version-1709) or later
+- Windows Server [version 1803 (Semi-Annual Channel)](/windows-server/get-started/whats-new-in-windows-server-1803) or later
+- [Windows Server 2012 R2](/windows/win32/srvnodes/what-s-new-for-windows-server-2012-r2)
+- [Windows Server 2016](/windows-server/get-started/whats-new-in-windows-server-2016)
+- [Windows Server 2019](/windows-server/get-started-19/whats-new-19)
+- [Windows Server 2022](/windows-server/get-started/whats-new-in-windows-server-2022)
+- Windows Server 2025
+- Azure Stack HCI OS, version 23H2 and later
+
 
 ## Prerequisites
 
