@@ -782,7 +782,7 @@
           - name: Kubernetes node vulnerability assessment
             displayName: k8s, containers, aks, node, vulnerability, assessment
             href: kubernetes-nodes-va.md
-          - name: Kubernetes node malware detection
+          - name: Review and remediate malware alerts for Kubernetes nodes
             displayName: k8s, containers, aks, node, malware
             href: kubernetes-nodes-malware.md
       - name: Image and runtime container vulnerability assessment
