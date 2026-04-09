@@ -52,7 +52,7 @@ The Defender for Identity sensor utilizes the same URIs as Microsoft Defender fo
 
 - [Microsoft Defender for Endpoint streamlined connectivity URLs](/defender-endpoint/streamlined-device-connectivity-urls-commercial?tabs=Windows)
 
-- [Microsoft Defender for Endpoint standard connectivity URLs - commercial](/defender-endpoint/standard-device-connectivity-urls-commercial)
+- [Microsoft Defender for Endpoint standard connectivity URLs](/defender-endpoint/standard-device-connectivity-urls-commercial)
 
 ## Memory requirements
 
