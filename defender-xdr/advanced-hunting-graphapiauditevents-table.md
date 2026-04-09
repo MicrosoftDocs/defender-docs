@@ -9,7 +9,6 @@ f1.keywords:
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: orspodek
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -18,16 +17,12 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: reference
-ms.date: 01/13/2026
+ms.date: 02/05/2026
 ---
 
-# GraphApiAuditEvents (Preview)
+# GraphApiAuditEvents
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-> [!IMPORTANT]
-> Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 The `GraphApiAuditEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant. Use this reference to construct queries that return information from this table.
 

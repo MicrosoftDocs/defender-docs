@@ -7,7 +7,6 @@ ms.subservice: reference
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -132,7 +131,7 @@ You can use threat-intelligence from providers and aggregators to maintain and u
 
 Defender for Endpoint allows you to integrate with these solutions and act on IoCs by correlating rich telemetry to create alerts. You can also use prevention and automated response capabilities to block execution and take remediation actions when there's a match.
 
-Defender for Endpoint currently supports IOC matching and remediation for file and network indicators. Blocking is supported for file indicators.
+Defender for Endpoint supports IOC matching and remediation for file and network indicators. Blocking is supported for file indicators.
 
 ## Support for non-Windows platforms
 

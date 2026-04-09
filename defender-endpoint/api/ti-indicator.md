@@ -5,7 +5,6 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -27,12 +26,12 @@ appliesto:
 
 |Property|Type|Description|
 |---|---|---|
-|id|String|Identity of the [Indicator](ti-indicator.md) entity.|
+|ID|String|Identity of the [Indicator](ti-indicator.md) entity.|
 |indicatorValue|String|The value of the [Indicator](ti-indicator.md).|
 |indicatorType|Enum|Type of the indicator. Possible values are: `FileSha1`, `FileSha256`, `FileMd5`, `CertificateThumbprint`, `IpAddress`, `DomainName`, and `Url`.|
 |application|String|The application associated with the indicator.|
 |action|Enum|The action that is taken if the indicator is discovered in the organization. Possible values are: `Warn`, `Block`, `Audit`, `Alert`, `AlertAndBlock`, `BlockAndRemediate`, and `Allowed`.|
-|externalID|String|Id the customer can submit in the request for custom correlation.|
+|externalID|String|ID the customer can submit in the request for custom correlation.|
 |sourceType|Enum|`User` in case the Indicator created by a user (for example, from the portal), `AadApp` in case it submitted using automated application via the API.|
 |createdBySource|string|The name of the user/application that submitted the indicator.|
 |createdBy|String|Unique identity of the user/application that submitted the indicator.|
@@ -62,7 +61,8 @@ For more information on the description of the response action types, see [Creat
 
 > [!NOTE]
 >
-> The prior response actions (AlertAndBlock, and Alert) will be supported until January 2022. After this date, all customers must be use one of the action types listed in this section.
+> AlertAndBlock and Alert are legacy response actions that were supported only until January 2022.
+
 
 ## Json representation
 
@@ -71,7 +71,7 @@ For more information on the description of the response action types, see [Creat
     "id": "994",
     "indicatorValue": "881c0f10c75e64ec39d257a131fcd531f47dd2cff2070ae94baa347d375126fd",
     "indicatorType": "FileSha256",
-    "action": "AlertAndBlock",
+    "action": "BlockAndRemediate",
     "application": null,
     "source": "user@contoso.onmicrosoft.com",
     "sourceType": "User",

@@ -1,24 +1,19 @@
 ---
 title: How Microsoft names threat actors
-ms.reviewer: 
 description: Learn how Microsoft names threat actors and how to use the naming convention to identify associated intelligence.
-ms.service: microsoft-defender
-ms.subservice: unified-security-operations
 ms.mktglfcycl: secure
 ms.sitesec: library
-ms.localizationpriority: medium
-ms.author: guywild
-author: guywi-ms
-manager: dansimp
-audience: ITPro
-ms.collection: 
+author: poliveria
+ms.author: pauloliveria
+ms.reviewer:
+ms.collection:
 - m365-security
 - tier2
 ms.custom:
 - cx-ti
 ms.topic: article
 search.appverid: met150
-ms.date: 01/15/2026
+ms.date: 04/02/2026
 ---
 
 # How Microsoft names threat actors
@@ -77,6 +72,7 @@ The following table lists publicly disclosed threat actor names with their origi
 |[Citrine Sleet](https://www.microsoft.com/en-us/security/blog/2024/08/30/north-korean-threat-actor-citrine-sleet-exploiting-chromium-zero-day/)|North Korea|Storm-0139, Storm-1222, LABYRINTH CHOLLIMA|
 |Clay Typhoon|China | Storm-2416|
 |Copper Typhoon|China|Tonto Team, Earth Akhlut, Sharp-R|
+|[Coral Sleet](https://aka.ms/threat-actors-operationalize-ai)|North Korea|Storm-1877|
 |Cotton Sandstorm|Iran|NEPTUNIUM, HAYWIRE KITTEN, Vice Leaker|
 |[CovertNetwork-1658](https://www.microsoft.com/en-us/security/blog/2024/10/31/chinese-threat-actor-storm-0940-uses-credentials-from-password-spray-attacks-from-a-covert-network/)|Covert network|ORB07|
 |Crescent Typhoon|China|CESIUM|
@@ -141,7 +137,7 @@ The following table lists publicly disclosed threat actor names with their origi
 |Salmon Typhoon|China|SODIUM, MAVERICK PANDA, APT4|
 |Salt Typhoon|China|OPERATOR PANDA, GhostEmperor, FamousSparrow|
 |Sangria Tempest|Ukraine, Financially motivated|ELBRUS, CARBON SPIDER|
-|Sapphire Sleet|North Korea|COPERNICIUM, STARDUST CHOLLIMA, Genie Spider, BlueNoroff, CageyChameleon, CryptoCore|
+|[Sapphire Sleet](https://www.microsoft.com/en-us/security/blog/2026/04/01/mitigating-the-axios-npm-supply-chain-compromise/)|North Korea|COPERNICIUM, UNC1069, STARDUST CHOLLIMA, Alluring Pisces, BlueNoroff, CageyChameleon, CryptoCore|
 |Satin Typhoon|China|SCANDIUM, DYNAMITE PANDA, COMBINE, TG-0416, SILVERVIPER, Red Wraith, APT18, Elderwood Group, Wekby|
 |[Seashell Blizzard](https://www.microsoft.com/en-us/security/blog/2025/02/12/the-badpilot-campaign-seashell-blizzard-subgroup-conducts-multiyear-global-access-operation/)|Russia|IRIDIUM, VOODOO BEAR, BE2, UAC-0113, Blue Echidna, Sandworm, PHANTOM, BlackEnergy Lite, APT44|
 |[Secret Blizzard](https://www.microsoft.com/en-us/security/blog/2024/12/04/frequent-freeloader-part-i-secret-blizzard-compromising-storm-0156-infrastructure-for-espionage/)|Russia|KRYPTON, VENOMOUS BEAR, Uroburos, Snake, Blue Python, Turla, WRAITH, ATG26|
@@ -181,6 +177,7 @@ The following table lists publicly disclosed threat actor names with their origi
 |[Storm-1567](https://www.microsoft.com/en-us/security/blog/2023/10/11/automatic-disruption-of-human-operated-attacks-through-containment-of-compromised-user-accounts/)|Financially motivated|PUNK SPIDER|
 | [Storm-1607](https://www.microsoft.com/en-us/security/blog/2025/08/21/think-before-you-clickfix-analyzing-the-clickfix-social-engineering-technique/) | Group in development ||
 |[Storm-1674](https://www.microsoft.com/en-us/security/blog/2023/12/28/financially-motivated-threat-actors-misusing-app-installer/)|Financially motivated||
+|[Storm-1747](https://www.microsoft.com/en-us/security/blog/2026/03/04/inside-tycoon2fa-how-a-leading-aitm-phishing-kit-operated-at-scale/)|Group in development||
 |[Storm-1811](https://www.microsoft.com/en-us/security/blog/2024/05/15/threat-actors-misusing-quick-assist-in-social-engineering-attacks-leading-to-ransomware/)|Financially motivated|CURLY SPIDER|
 |Storm-1849|China|UAT4356|
 |[Storm-1865](https://www.microsoft.com/en-us/security/blog/2025/03/13/phishing-campaign-impersonates-booking-com-delivers-a-suite-of-credential-stealing-malware/)|Group in development||

@@ -4,8 +4,7 @@ f1.keywords:
 - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-ms.date: 10/08/2025
+ms.date: 04/07/2026
 audience: ITPro
 ms.topic: article
 ms.service: defender-office-365
@@ -485,8 +484,12 @@ The following actions are available at the top of the Email entity page:
 
 ¹ The **Email preview** and **Download email** actions require the **Preview** role. You can assign this role in the following locations:
 
-- [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Security operations/Raw data (email & collaboration)/Email & collaboration content (read)**.
-- [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md): Membership in the **Data Investigator** or **eDiscovery Manager** role groups. Or, you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Preview** role assigned, and add the users to the custom role group.
+- [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell):
+  - **Security operations/Raw data (email & collaboration)/Email & collaboration content (read)**.
+  - **Security operations/Raw data (email & collaboration)/Email & collaboration content: Emails associated with alerts (read)**. Allows analysts to preview or download messages associated with specific security alerts. Currently, this permission applies to the alerts **Email reported by user as malware or phish** and **Email reported by user as junk**. In some cases, **Preview** or **Download** actions for an alert‑associated email might be available after a short delay.
+- [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md):
+  - Membership in the **Data Investigator** or **eDiscovery Manager** role groups.
+  - [Create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Preview** role assigned, and add the users to the custom role group.
 
 ² You can preview or download email messages that are available in cloud mailboxes. Examples of when messages are no longer available in mailboxes include:
 

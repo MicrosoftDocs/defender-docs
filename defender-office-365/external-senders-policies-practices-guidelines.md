@@ -4,7 +4,6 @@ f1.keywords:
   - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
@@ -68,7 +67,7 @@ Senders, ISP's, and other service providers should actively manage the reputatio
 
 ## Microsoft 365 limits
 
-Senders must adhere to Microsoft 365 limits listed in [Exchange Online Protection Limits](/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-limits).
+Senders must adhere to Microsoft 365 limits listed in [Built-in security features limits](/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-limits).
 
 ## Email delivery resources and organizations
 

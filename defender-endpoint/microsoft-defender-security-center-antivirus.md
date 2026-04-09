@@ -8,7 +8,6 @@ author: chrisda
 ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: yongrhee
-manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security
@@ -55,11 +54,14 @@ Beginning with Windows 10, version 1703 and later, Microsoft Defender Antivirus 
 
 :::image type="content" source="/defender/media/wdav-wdsc-defs.png" alt-text="Security intelligence version number" lightbox="/defender/media/wdav-wdsc-defs.png":::
 
+> [!NOTE]
+> The *security intelligence version* shown in the Windows Security app is the same as what was previously referred to as the *definition version* of Microsoft Defender Antivirus.
+
 1. Open the Windows Security app by searching the start menu for *Security*, and then selecting **Windows Security**.
 
 1. Select the **Virus & threat protection** tile (or the shield icon on the left menu bar).
 
-1. Select **Virus & threat protection updates**. The currently installed version is displayed along with some information about when it was downloaded. You can check your current against the latest version available for manual download, or review the change log for that version. See [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](/defender-endpoint/microsoft-defender-antivirus-updates/).
+1. Select **Virus & threat protection updates**. The currently installed version is displayed along with some information about when it was downloaded. You can check your current against the latest version available for manual download, or review the change log for that version. See [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](microsoft-defender-antivirus-updates.md).
 
 1. Select **Check for updates** to download new protection updates (if there are any).
 

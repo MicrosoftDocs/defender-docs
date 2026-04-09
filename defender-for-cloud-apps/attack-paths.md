@@ -31,7 +31,6 @@ Alternatively, you can use one of the following **Entra ID roles**:
 
 |Permission |Actions |
 |---------|---------|
-|**Global Admin**    | (read and write permissions)        |
 |**Security Admin**    | (read and write permissions)        |
 |**Security Operator**   | (read and limited write permissions)        |
 |**Global Reader**    | (read permissions)        |

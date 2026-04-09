@@ -5,7 +5,6 @@ ms.service: defender-endpoint
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: joshbregman
-manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection: 
@@ -27,7 +26,7 @@ appliesto:
 
 ## Requirements
 
-Device control for macOS is available on the versions listed in the [System requirements](/defender-endpoint/microsoft-defender-endpoint-mac) section of Defender for Endpoint on macOS documentation.
+Device control for macOS is available on the versions listed in the [System requirements](microsoft-defender-endpoint-mac.md) section of Defender for Endpoint on macOS documentation.
 
 ## Overview
 
@@ -143,6 +142,8 @@ Query type 2 is as follows:
 | `$type` | Identify the logical operation to perform on the subquery | not: logical negation of a query |
 | `query` | A subquery | **A query which will be negated.** |
 
+You can nest queries. For more examples, see [sample policies](https://github.com/microsoft/mdatp-devicecontrol/blob/ae2e00ee7f12e024f931357b6e5a22bf589c4053/macOS/policy/samples/deny_removable_media_sc_cards.json#L17-L43).
+
 ### Clause
 
 #### Clause properties
@@ -160,8 +161,13 @@ Query type 2 is as follows:
 | `vendorId` | Four digit hexadecimal string | Matches a device's vendor ID |
 | `productId` | Four digit hexadecimal string | Matches a device's product ID |
 | `serialNumber` | string | Matches a device's serial number. Doesn't match if the device doesn't have a serial number. |
+| `mediaSerialNumber` | integer | Serial number of a Secure Digital card (starting with 101.26021 versions) |
+| `mediaProductName` | string | Product name of a Secure Digital card (starting with 101.26021 versions) |
+| `mediaApplicationId` | string | Application id of a Secure Digital card (starting with 101.26021 versions) |
 | `encryption` | apfs | Match if a device is apfs-encrypted. |
 | `groupId` | UUID string | Match if a device is a member of another group. The value represents the UUID of the group to match against. <br> The group must be defined within the policy before the clause. |
+
+`serialNumber` applies to devices plugged into a machine. `mediaSerialNumber` and other `media*` clauses apply to a media plugged into a device (for example, Secure Digital cards in a built-in card reader). `media*` clauses are available in version 101.2601.* or later and aren't available in earlier versions.
 
 ### Access policy rule
 
@@ -463,11 +469,8 @@ In this case, only have one access rule policy, but if you have multiple, make s
 
 > [!WARNING]
 > Device Control on macOS restricts Android devices that are connected using PTP mode **only**.  Device control doesn't restrict other modes such as File Transfer, USB Tethering, and MIDI.
-
-> [!WARNING]
+>
 > Device Control on macOS doesn't prevent software developed on XCode from being transferred to an external device.
-
-
 
 ## See also
 

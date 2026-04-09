@@ -8,7 +8,6 @@ f1.keywords:
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.collection:
 - m365-security
@@ -29,6 +28,9 @@ appliesto:
 ## API description
 
 List live response library files.
+
+> [!TIP]
+> You can also view and manage live response files from the [Library management](../configure-libraries-live-response.md) page in the Microsoft Defender portal.
 
 ## Limitations
 

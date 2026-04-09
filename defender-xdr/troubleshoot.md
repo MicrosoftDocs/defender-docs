@@ -7,7 +7,6 @@ f1.keywords:
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection: 
 - m365-security-compliance
@@ -67,10 +66,7 @@ Open your Azure [Enterprise application settings](https://portal.azure.com/#blad
 
 ### Implement required Enterprise Application permissions
 
-> [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
-
-This process requires a Global Administrator or Application Administrator in the tenant.
+This process requires an Application Administrator or higher in the tenant.
 
 1. Open [Enterprise Application settings](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ManagedAppMenuBlade/Permissions/appId/f0cf43e5-8a9b-451c-b2d5-7285c785684d/objectId/4a918a14-4069-4108-9b7d-76486212d75d).
 
@@ -100,7 +96,7 @@ After providing consent, all users in the tenant will be able to use the applica
 
 #### Option 2: Provide admin consent by authenticating the application as an admin
 
-This process requires that Global Administrators go through the Enterprise customer sign-in flow at [Microsoft security intelligence](https://www.microsoft.com/wdsi/filesubmission).
+This process requires that a Global Administrator go through the Enterprise customer sign-in flow at [Microsoft security intelligence](https://www.microsoft.com/wdsi/filesubmission).
 
 ![Consent sign in flow.](media/troubleshoot/msi-microsoft-permission-required.jpg)
 
@@ -112,7 +108,7 @@ All users in the tenant can now use this application.
 
 If neither of these options resolve the issue, try the following steps (as an admin):
 
-1. Remove previous configurations for the application. Go to [Enterprise applications](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ManagedAppMenuBlade/Properties/appId/f0cf43e5-8a9b-451c-b2d5-7285c785684d/objectId/982e94b2-fea9-4d1f-9fca-318cda92f90b)
+1. Remove previous configurations for the application. Go to [Enterprise applications](https://portal.azure.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/~/AppAppsPreview)
 and select **delete**.
 
    ![Delete app permissions.](media/troubleshoot/msi-properties.png)

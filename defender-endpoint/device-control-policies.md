@@ -3,7 +3,6 @@ title: Device control policies in Microsoft Defender for Endpoint
 description: Learn about Device control policies in Defender for Endpoint
 author: limwainstein
 ms.author: lwainstein
-manager: bagol
 ms.date: 10/23/2025
 ms.topic: overview
 ms.service: defender-endpoint
@@ -539,6 +538,9 @@ The following values are supported as clauses:
 | `productId` | four-digit hexadecimal string | Matches a device's product ID |
 | `serialNumber` | string | Matches a device's serial number. Doesn't match if the device doesn't have a serial number. |
 | `encryption` | apfs | Match if a device is apfs-encrypted. |
+| `mediaSerialNumber` | integer | Serial number of a Secure Digital card (macOS, starting with 101.26021 versions) |
+| `mediaProductName` | string | Product name of a Secure Digital card (macOS, starting with 101.26021 versions) |
+| `mediaApplicationId` | string | Application id of a Secure Digital card (macOS, starting with 101.26021 versions) |
 | `groupId` | UUID string | Match if a device is a member of another group. The value represents the UUID of the group to match against. The group must be defined within the policy before the clause. |
 
 Here's an example query:

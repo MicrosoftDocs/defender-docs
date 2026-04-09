@@ -9,7 +9,6 @@ f1.keywords:
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -84,6 +83,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `AdditionalFields` | `string` | Additional information about the entity or event |
 | `LatestDeliveryLocation`* | `string` | Last known location of the email |
 |`LatestDeliveryAction`* | `string` | Last known action attempted on an email by the service or by an admin through manual remediation |
+|`DistributionList` | `string` | Name of the distribution list (DL) to which the email was sent, if applicable; in cases of nested DLs, it shows the top-level list |
 
 > [!NOTE]
 >\* The `LatestDeliveryLocation` and `LatestDeliveryAction` columns are **not** available in the Streaming API. 

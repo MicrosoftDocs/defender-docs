@@ -2,7 +2,7 @@
 title: Permissions needed for the site security feature of Microsoft Defender for IoT in the Defender portal
 description: This article describes the permissions required for the site security feature of Microsoft Defender for IoT in the Microsoft Defender portal.
 ms.service: defender-for-iot
-author: lwainstein
+author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
 ms.date: 07/23/2024
@@ -31,12 +31,12 @@ To make general changes to RBAC roles and permissions that relate to all other a
 There are three ways to manage user access to the Defender portal, depending on the type of tenent you're using. Each system has different named permissions that allow access for site security. The systems are:
 
 - [Global Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference).
-- [Microsoft Defender XDR Unified RBAC](/defender-xdr/manage-rbac): Use Defender XDR Unified role-based access control (RBAC) to manage access to specific data, tasks, and capabilities in the Defender portal.
+- [Microsoft Defender unified RBAC](/defender-xdr/manage-rbac): Use Microsoft Defender unified role-based access control (RBAC) to manage access to specific data, tasks, and capabilities in the Defender portal.
 - [Microsoft Defender for Endpoint XDR RBAC](/defender-endpoint/user-roles): Use Defender for Endpoint XDR role-based access control (RBAC) to manage access to specific data, tasks, and capabilities in the Defender portal.
 
-The instructions and permission settings listed in this article apply to both Defender XDR Unified and Microsoft Defender for Endpoint XDR RBAC.
+The instructions and permission settings listed in this article apply to both Defender unified RBAC and Microsoft Defender for Endpoint XDR RBAC.
 
-## Set up Defender XDR Unified RBAC roles for site security
+## Set up Defender unified RBAC roles for site security
 
 Assign RBAC permissions and roles, based on the [summary table](#summary-of-rbac-roles-and-permissions-for-site-security), to give users access to site security features:
 

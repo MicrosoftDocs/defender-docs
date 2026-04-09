@@ -5,7 +5,6 @@ ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
-manager: bagol
 audience: ITPro
 ms.reviewer: yongrhee
 ms.collection: 
@@ -197,6 +196,9 @@ See the following table for a list of events recorded by the service.
 ## View Defender for Endpoint events in the System event log
 
 Microsoft Defender for Endpoint events also appear in the System event log.
+
+> [!NOTE]
+> The Event Viewer UI can vary by Windows version. The steps in this article reflect a recent version of Windows 11.
 
 To open the System event log:
 

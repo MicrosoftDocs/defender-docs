@@ -3,7 +3,6 @@ title: Mobile threat defense capabilities in Microsoft Defender for Business
 description: Get an overview of mobile threat defense in Defender for Business. Learn what mobile threat defense includes and how to onboard devices.
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.date: 09/25/2025
 ms.topic: article
 ms.service: defender-business
@@ -32,7 +31,7 @@ The following table summarizes the capabilities that are included in mobile thre
 |Capability|Android|iOS|
 |---|---|---|
 |**Web Protection** <br/> Anti-phishing, blocking unsafe network connections, and support for custom indicators. <br/> Web protection is turned on by default with [web content filtering](mdb-web-content-filtering.md).|:::image type="icon" source="media/feature-present-icon.png" border="false":::|:::image type="icon" source="media/feature-present-icon.png" border="false":::|
-|**Malware protection** <br/> Scanning for malicious apps.|:::image type="icon" source="media/feature-present-icon.png" border="false":::|:::image type="icon" source="media/feature-absent-icon.png" border="false":::|
+|**Malware protection** <br/> Scanning for malicious apps (system apps included).|:::image type="icon" source="media/feature-present-icon.png" border="false":::|:::image type="icon" source="media/feature-absent-icon.png" border="false":::|
 |**Jailbreak detection** <br/> Detection of jailbroken devices.|:::image type="icon" source="media/feature-absent-icon.png" border="false":::|:::image type="icon" source="media/feature-present-icon.png" border="false":::|
 |**Microsoft Defender Vulnerability Management**<br/>Vulnerability assessment of onboarded mobile devices. Includes vulnerability assessments for operating systems and apps for Android and iOS. <br/> For more information, see [Use your vulnerability management dashboard in Microsoft Defender for Business](mdb-view-tvm-dashboard.md).|:::image type="icon" source="media/feature-present-icon.png" border="false":::|:::image type="icon" source="media/feature-present-icon.png" border="false":::¹|
 |**Network Protection** <br/> Protection against rogue Wi-Fi related threats and rogue certificates. <br/> Network protection is turned on by default with [next-generation protection](mdb-next-generation-protection.md). <br/> As part of mobile threat defense, network protection also includes the ability to allow root certification authority and private root certification authority certificates in Intune. It also establishes trust with endpoints.|:::image type="icon" source="media/feature-present-icon.png" border="false":::²|:::image type="icon" source="media/feature-present-icon.png" border="false":::²|

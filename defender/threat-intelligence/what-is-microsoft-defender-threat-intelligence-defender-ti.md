@@ -1,10 +1,6 @@
 --- 
 title: 'What is Microsoft Defender Threat Intelligence (Defender TI)?'
 description: 'Learn about the main features that come with Microsoft Defender Threat Intelligence (Defender TI).'
-author: alexroland24
-ms.author: aroland
-manager: dolmont
-ms.service: threat-intelligence 
 ms.collection: essentials-overview
 ms.topic: overview
 ms.date: 09/12/2025

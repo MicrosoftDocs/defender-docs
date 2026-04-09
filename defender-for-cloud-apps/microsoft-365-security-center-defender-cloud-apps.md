@@ -5,10 +5,9 @@ ms.service: defender-xdr
 ms.localizationpriority: medium
 f1.keywords:
 - NOCSH
-ms.author: bagol
-author: batamig
-manager: raynew
-ms.date: 07/31/2024
+ms.author: abbyweisberg 
+author: AbbyMSFT
+ms.date: 02/01/2026
 audience: ITPro
 ms.topic: article
 search.appverid: 
@@ -17,17 +16,13 @@ search.appverid:
 ms.collection: 
 - m365-security 
 - tier2
-ms.custom: admindeeplinkDEFENDER
+appliesto:
+- Microsoft Defender XDR
+- Microsoft Defender for Cloud Apps
 ---
 
 # Microsoft Defender for Cloud Apps in the Microsoft Defender portal
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)
-- [Microsoft Defender for Cloud Apps](/defender-cloud-apps/)
 
 Microsoft Defender for Cloud Apps is available inside the Microsoft Defender portal. The Defender portal is the home for monitoring and managing security across your Microsoft identities, data, devices, apps, and infrastructure, allowing security admins to perform their security tasks in one location, across multiple Microsoft Defender services.
 
@@ -71,14 +66,9 @@ Learn how to protect your cloud apps in Microsoft Defender XDR:
 
 <br>
 
-**Defender for Cloud Apps in Microsoft Defender XDR for customers migrating from the classic portal**<br>
-
-> [!VIDEO https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=2105e5c9-23bf-41fb-a61d-0f0fae8ef05f title="Defender for Cloud Apps in Microsoft Defender XDR for customers migrating from the classic portal"]
-
 
 ## Related content
 
 - [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)
 - [Investigate incidents in Microsoft Defender XDR](/defender-xdr/investigate-incidents)
 - [Contact support](/defender-cloud-apps/support-and-ts)
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

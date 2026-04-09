@@ -7,7 +7,6 @@ audience: ITPro
 author: paulinbar
 ms.author: painbar
 ms.reviewer: dbodorin, vladiso, nixanm, anvascon
-manager: bagol
 ms.subservice: asr
 ms.topic: how-to
 ms.collection: 
@@ -106,7 +105,7 @@ You can use the Windows Security app, Group Policy, PowerShell cmdlets, or mobil
 
 ### Use MDM CSPs to protect additional folders
 
-Use the [./Vendor/MSFT/Policy/Config/Defender/GuardedFoldersList](/windows/client-management/mdm/policy-csp-defender#defender-guardedfolderslist) configuration service provider (CSP) to allow apps to make changes to protected folders.
+Use the [./Device/Vendor/MSFT/Policy/Config/Defender/ControlledFolderAccessProtectedFolders](/windows/client-management/mdm/policy-csp-defender#controlledfolderaccessprotectedfolders) configuration service provider (CSP) to specify additional folders that should be protected by the Controlled folder access feature.
 
 ## Allow specific apps to make changes to controlled folders
 
