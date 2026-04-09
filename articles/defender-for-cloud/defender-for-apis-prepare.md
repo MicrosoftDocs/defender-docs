@@ -28,6 +28,7 @@ Defender for APIs is available in the Azure commercial cloud, in these regions:
 - Japan (Japan East, Japan West)
 - Korea (Korea Central, Korea South)
 - Norway (Norway East, Norway West)
+- South Africa (South Africa North, South Africa West)
 - Sweden (Sweden Central, Sweden South)
 - Switzerland (Switzerland North, Switzerland West)
 - UK (UK South, UK West)
