@@ -6,7 +6,7 @@ ms.author: guywild
 audience: ""
 search.appverid: ""
 ms.topic: concept-article #Don't change.
-ms.date: 06/22/2025
+ms.date: 04/10/2026
 ms.collection:
 - usx-security
 
@@ -23,7 +23,7 @@ This article provides information about support for US Government customers by u
 
 - All features in Microsoft's SecOps platform that are in general availability are available in commercial and GCC High and DoD clouds. 
 
-  GCC is supported with the following limitation: The [Advanced hunting](/defender-xdr/advanced-hunting-overview) [JOIN operator](/defender-xdr/advanced-hunting-query-language#learn-common-query-operators) isn't supported between Defender tables and Microsoft Sentinel tables unless you configure per-table retention on your Defender tables in Log Analytics. For more information, see [Advanced hunting event collection](/azure/sentinel/microsoft-365-defender-sentinel-integration?tabs=defender-portal#advanced-hunting-event-collection).
+  GCC is supported with the following limitation: [Advanced hunting](/defender-xdr/advanced-hunting-overview) queries that reference both Microsoft Sentinel and Microsoft Defender XDR tables aren't supported. As a workaround, narrow the search scope by providing the table parameters, or remove either all Microsoft Sentinel tables or Microsoft Defender XDR tables from your query.
   
 - Features still in preview are available only in the commercial cloud.
 
@@ -40,18 +40,18 @@ The following are the Microsoft Defender portal URLs for US Government customers
 - **GCC High**:	https://security.microsoft.us
 - **DoD**:	https://security.apps.mil
 
-If you are a GCC customer and are in the process of moving from Microsoft Defender for Endpoint commercial to GCC, use https://transition.security.microsoft.com to access your Microsoft Defender for Endpoint commercial data.
+If you're a GCC customer and are moving from Microsoft Defender for Endpoint commercial to GCC, use https://transition.security.microsoft.com to access your Microsoft Defender for Endpoint commercial data.
 
 ## API access
 
-When using a US government cloud, you need to use the following URIs instead of the public URIs listed in our API documentation:
+When you use a US government cloud, use the following URIs instead of the public URIs listed in the API documentation:
 
 - **Login**:
 
-  - **GCC**: https://login.microsoftonline.com
-  - **GCC High and DoD**: https://login.microsoftonline.us
+  - **GCC**: `https://login.microsoftonline.com`
+  - **GCC High and DoD**: `https://login.microsoftonline.us`
 
 - **Microsoft Defender XDR API**:
 
-  - **GCC**: https://api-gcc.security.microsoft.us
-  - **GCC High and DoD**: https://api-gov.security.microsoft.us
+  - **GCC**: `https://api-gcc.security.microsoft.us`
+  - **GCC High and DoD**: `https://api-gov.security.microsoft.us`
