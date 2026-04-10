@@ -48,8 +48,8 @@ To set up the identity attack graph, make sure you meet the following prerequisi
 
 Follow these steps to set up the identity attack graph:
 
-1. In the Defender portal, navigate to **Microsoft Sentinel** > **Graphs**.
-1. Locate the identity attack graph card and select **Set up graph**.
+1. In the Microsoft Defender portal, navigate to **Microsoft Sentinel** > **Graphs**.
+1. Locate the **identity attack graph** card and select **Set up graph**.
 1. Follow the setup steps and turn on or update the required connectors.
 1. Select **Turn on graph** to create your graph.
 1. Select **Query graph** on the graph tile to view the graph query page.
@@ -76,7 +76,7 @@ Follow these steps to query the graph when the graph is ready to use:
     > [!NOTE]
     > It's recommended that you start with the predefined queries, which are designed to surface common and high‑value investigation scenarios. These queries help you get immediate value without writing GQL from scratch.
 
-1. **Run GQL query** to see the results.
+1. Select **Run GQL query** to see the results.
 
     :::image type="content" source="./media/identity-attack-graph/visualize-query.png" alt-text="Screenshot showing the graph tab to visualize query" lightbox="./media/identity-attack-graph/visualize-query.png":::
 
