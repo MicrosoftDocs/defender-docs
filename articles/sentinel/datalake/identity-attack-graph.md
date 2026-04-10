@@ -46,7 +46,7 @@ To set up the identity attack graph, make sure you meet the following prerequisi
 
 ## Set up the identity attack graph
 
-Set up the identity attack graph as follows:
+Follow these steps to set up the identity attack graph:
 
 1. In the Defender portal, navigate to **Microsoft Sentinel** > **Graphs**.
 1. Locate the identity attack graph card and select **Set up graph**.
@@ -54,7 +54,7 @@ Set up the identity attack graph as follows:
 1. Select **Turn on graph** to create your graph.
 1. Select **Query graph** on the graph tile to view the graph query page.
 
-:::image type="content" source="./media/identity-attack-graph/identity-graph-overview-panel.png" alt-text="Screenshot showing the Microsoft Sentinel identity attack graph overview panel." lightbox="./media/identity-attack-graph/identity-graph-overview-panel.png":::
+    :::image type="content" source="./media/identity-attack-graph/identity-graph-overview-panel.png" alt-text="Screenshot showing the Microsoft Sentinel identity attack graph overview panel." lightbox="./media/identity-attack-graph/identity-graph-overview-panel.png":::
 
 
 After you turn on the graph, the graph begins ingesting data and building relationships. Initial processing may take up to 48 hours. 
