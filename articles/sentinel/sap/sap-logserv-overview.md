@@ -66,7 +66,7 @@ Together, these solutions give your security team visibility from business logic
 - The SAP LogServ (RISE), S/4HANA Cloud private edition solution installed from the [Microsoft Sentinel Content Hub](https://marketplace.microsoft.com/en-us/product/sap_jasondau.azure-sentinel-solution-saplogserv?tab=Overview).
 
 > [!NOTE]
-> Only **Azure-hosted SAP RISE** customers have the option for native "hands-free" deployment. For SAP RISE on other platforms, [SAP's log forwarder](https://pypi.org/project/sap-ecs-log-forwarder/) needs to be installed on a customer-hosted component with network connectivity to the SAP LogServ service and the Microsoft Sentinel Data Collection Endpoint. The forwarder has dedicated configuration options for Microsoft Sentinel for SAP.
+> Only **Azure-hosted SAP RISE** customers have the option for fully integrated deployment. For SAP RISE on other platforms, [SAP's self-hosted log forwarder](https://pypi.org/project/sap-ecs-log-forwarder/) needs to be installed on a customer-hosted component with network connectivity to the SAP LogServ service and the Microsoft Sentinel Data Collection Endpoint. The forwarder has dedicated configuration options for Microsoft Sentinel for SAP.
 
 ## Deploy the solution
 
