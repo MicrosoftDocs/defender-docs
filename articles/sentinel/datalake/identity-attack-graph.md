@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn how the identity attack graph in Microsoft Sentinel models identities, permissions, and Azure resources to surface lateral movement paths and privilege escalation risks.
 author: evangelinew
 ms.topic: overview
-ms.date: 04/07/2026
+ms.date: 04/10/2026
 ms.author: evwhite
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
