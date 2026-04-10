@@ -32,6 +32,8 @@ ms.date: 04/10/2026
 
 The [advanced hunting](advanced-hunting-overview.md) schema is made up of multiple tables that provide either event information or information about devices, alerts, identities, and other entity types. To effectively build queries that span multiple tables, you need to understand the tables and the columns in the advanced hunting schema.
 
+Microsoft Sentinel also ingests data from some of these tables through data connectors. For more information, see [Microsoft Sentinel tables and associated connectors](/azure/sentinel/sentinel-tables-connectors-reference).
+
 <a name="get-schema-information-in-the-security-center"></a>
 
 ## Get schema information
@@ -117,7 +119,6 @@ The following reference lists all the tables in the schema. Each table name link
 | **[OAuthAppInfo](advanced-hunting-oauthappinfo-table.md)** (Preview) | Microsoft 365-connected OAuth applications registered with Microsoft Entra ID and available in the Defender for Cloud Apps app governance capability |	
 | **[UrlClickEvents](advanced-hunting-urlclickevents-table.md)** | Safe Links clicks from email messages, Teams, and Office 365 apps |	
 
-Microsoft Sentinel also ingests some of these tables through data connectors. For more information, see [Microsoft Sentinel tables and associated connectors](/azure/sentinel/sentinel-tables-connectors-reference).
 
 ## Related topics
 - [Advanced hunting overview](advanced-hunting-overview.md)
