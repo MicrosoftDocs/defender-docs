@@ -66,7 +66,7 @@ Together, these solutions give your security team visibility from business logic
 - The SAP LogServ (RISE), S/4HANA Cloud private edition solution installed from the [Microsoft Sentinel Content Hub](https://marketplace.microsoft.com/en-us/product/sap_jasondau.azure-sentinel-solution-saplogserv?tab=Overview).
 
 > [!NOTE]
-> Only **Azure-hosted SAP RISE** customers have the option for native "hands-free" deployment. For SAP RISE on other platforms, [SAP's log forwarder](https://pypi.org/project/sap-ecs-log-forwarder/) needs to be installed on a customer-hosted component with network connectivity to the SAP LogServ service and the Microsoft Sentinel Data Collection Endpoint. Contact SAP for details.
+> Only **Azure-hosted SAP RISE** customers have the option for native "hands-free" deployment. For SAP RISE on other platforms, [SAP's log forwarder](https://pypi.org/project/sap-ecs-log-forwarder/) needs to be installed on a customer-hosted component with network connectivity to the SAP LogServ service and the Microsoft Sentinel Data Collection Endpoint. The forwarder has dedicated configuration options for Microsoft Sentinel for SAP.
 
 ## Deploy the solution
 
@@ -106,7 +106,7 @@ The workbook shows:
 - An **Alert Configuration** section that lets you create alert rules directly from the workbook, with configurable alert type, name, threshold, and severity.
 - A **Log Volume Timeline** that visualizes log ingestion trends over time, helping analysts identify spikes, drops, or anomalies that might be associated with infrastructure changes or security incidents.
 
-For more information, see [Tutorial: Visualize and monitor your data](../monitor-your-data.md).
+For more information on how to customize and use the workbook, see [Tutorial: Visualize and monitor your data](../monitor-your-data.md).
 
 ### Built-in analytics rules
 
@@ -117,7 +117,7 @@ The SAP LogServ solution and the Microsoft Sentinel Solution for SAP application
 
 Deploy both solutions together for cross-layer detection coverage spanning from SAP HANA database and OS infrastructure up through the SAP application layer.
 
-The following example shows a SAP LogServ infrastructure-layer detection for a HANA database audit trail deactivation, surfaced as an incident in Microsoft Defender:
+The following example shows a SAP LogServ infrastructure-layer detection for a HANA database audit trail deactivation in Microsoft Sentinel, surfaced as an incident in Microsoft Defender portal:
 
 :::image type="content" source="./media/partner/logserv-hana-db-detection.png" alt-text="Screenshot of a SAP LogServ HANA DB - Deactivation of Audit Trail incident in Microsoft Defender." lightbox="./media/partner/logserv-hana-db-detection.png":::
 
