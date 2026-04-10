@@ -90,10 +90,36 @@ SAP validates eligibility and configures automatic log forwarding to your Micros
 
 ## Discovering SAP LogServ data in Microsoft Sentinel for SAP
 
-Once the solution is deployed and logs are flowing, use the following resources to explore and analyze your SAP LogServ data in Microsoft Sentinel:
+Once the solution is deployed and logs are flowing, use the following resources to explore and analyze your SAP LogServ data in Microsoft Sentinel.
 
-- **Built-in workbooks**: Use the SAP LogServ-specific workbooks installed with the solution for visual insights into infrastructure and OS logs.
-- **Analytics rules**: Leverage the 60+ built-in analytics rules from the Microsoft Sentinel Solution for SAP complementing the ones provided by SAP LogServ to detect potential security incidents and anomalous activity.
+### SAP LogServ Insights workbook
+
+The SAP LogServ Insights Dashboard workbook provides real-time monitoring of SAP RISE infrastructure log ingestion and system activity.
+
+:::image type="content" source="./media/partner/logserv-workbook.png" alt-text="Screenshot of the SAP LogServ Insights Dashboard workbook." lightbox="./media/partner/logserv-workbook.png":::
+
+The workbook shows:
+
+- An overview of **Total Events**, **Active Systems**, **Data Volume**, **Data Status**, and **Most Recent Data**, helping analysts quickly assess log ingestion health and freshness.
+- A **Data Freshness Status** indicator using color-coded labels to highlight whether ingestion is current, delayed, or stale.
+- Filters for **Log Analytics Workspace**, **Time Range**, **Log Type**, **Log Sub-Type**, and **Activity Status** to narrow down specific log sources and systems.
+- An **Alert Configuration** section that lets you create alert rules directly from the workbook, with configurable alert type, name, threshold, and severity.
+- A **Log Volume Timeline** that visualizes log ingestion trends over time, helping analysts identify spikes, drops, or anomalies that might be associated with infrastructure changes or security incidents.
+
+For more information, see [Tutorial: Visualize and monitor your data](../monitor-your-data.md).
+
+### Built-in analytics rules
+
+The SAP LogServ solution and the Microsoft Sentinel Solution for SAP applications each provide analytics rules that target different layers of the SAP RISE stack:
+
+- **SAP LogServ analytics rules**: Focus on **infrastructure-layer detections**, such as SAP HANA database audit trail deactivation, OS-level anomalies, network and firewall events, and other logs from SAP-managed infrastructure. These rules are installed with the SAP LogServ solution from the Content Hub.
+- **Microsoft Sentinel Solution for SAP applications analytics rules**: Cover the **application layer**, including [60+ built-in rules](sap-solution-security-content.md#built-in-analytics-rules) for detecting privilege escalation, sensitive transactions, data exfiltration, and unauthorized user activity within the SAP business logic.
+
+Deploy both solutions together for cross-layer detection coverage spanning from SAP HANA database and OS infrastructure up through the SAP application layer.
+
+The following example shows a SAP LogServ infrastructure-layer detection for a HANA database audit trail deactivation, surfaced as an incident in Microsoft Defender:
+
+:::image type="content" source="./media/partner/logserv-hana-db-detection.png" alt-text="Screenshot of a SAP LogServ HANA DB - Deactivation of Audit Trail incident in Microsoft Defender." lightbox="./media/partner/logserv-hana-db-detection.png":::
 
 ## Related content
 
