@@ -65,20 +65,20 @@ Follow these steps to query the graph when the graph is ready to use:
 
 1. Use the **Schema** tab to understand the types of entities and relationships in the graph.
 
-    :::image type="content" source="./media/identity-attack-graph/visualize-graph-schema.png" alt-text="Screenshot showing the schema tab on the graph query page" lightbox="./media/identity-attack-graph/visualize-graph-schema.png":::
+    :::image type="content" source="./media/identity-attack-graph/visualize-graph-schema.png" alt-text="Screenshot showing the schema tab on the graph query page." lightbox="./media/identity-attack-graph/visualize-graph-schema.png":::
 
 1. Select any node to view the detailed metadata.
 
 1. Use the **Graph** tab to visualize relationships and privilege paths. Write your own GQL queries or use the predefined queries to get started.
 
-    :::image type="content" source="./media/identity-attack-graph/predefined-query.png" alt-text="Screenshot showing the predefined query on the graph" lightbox="./media/identity-attack-graph/predefined-query.png":::
+    :::image type="content" source="./media/identity-attack-graph/predefined-query.png" alt-text="Screenshot showing the predefined query on the graph." lightbox="./media/identity-attack-graph/predefined-query.png":::
 
     > [!NOTE]
     > It's recommended that you start with the predefined queries, which are designed to surface common and high‑value investigation scenarios. These queries help you get immediate value without writing GQL from scratch.
 
 1. Select **Run GQL query** to see the results.
 
-    :::image type="content" source="./media/identity-attack-graph/visualize-query.png" alt-text="Screenshot showing the graph tab to visualize query" lightbox="./media/identity-attack-graph/visualize-query.png":::
+    :::image type="content" source="./media/identity-attack-graph/visualize-query.png" alt-text="Screenshot showing the graph tab to visualize query." lightbox="./media/identity-attack-graph/visualize-query.png":::
 
 
 ## Related content
