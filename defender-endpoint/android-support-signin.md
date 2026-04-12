@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: troubleshooting-general
 ms.subservice: android
 search.appverid: met150
-ms.date: 12/10/2025
+ms.date: 04/12/2026
 appliesto:
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2
@@ -153,22 +153,10 @@ If a user faces an issue, which isn't already addressed in the above sections or
 
 1. Open the **Microsoft Defender for Endpoint application** on your device and select the **profile icon** in the top-left corner.
 
-    a. :::image type="content" source="media/select-profile-icon-1.jpg" alt-text="The profile icon in the Microsoft Defender for Endpoint portal" lightbox="media/select-profile-icon-1.jpg":::
+1. Select **Help & feedback** > **Send feedback**.
 
-1. Select **Help & feedback**.
+    :::image type="content" source="./media/android-new-ux/bottom-experience-android.png" alt-text="Screenshots showing how to send feedback and logs from the Microsoft Defender mobile app options menu." border="false" lightbox="./media/android-new-ux/bottom-experience-android.png":::
 
-    a. :::image type="content" source="media/selecthelpandfeedback2.png" alt-text="The Help & feedback option that can be selected in the Microsoft Defender for Endpoint portal" lightbox="media/selecthelpandfeedback2.png":::
+1. Provide details of the issue that you're facing and check **Include diagnostic data**. We recommend selecting **Include your email address** so that the team can reach back to you with a solution or a follow-up.
 
-1. Select "Send feedback to Microsoft".
-
-    a. :::image type="content" alt-text="Select send feedback to Microsoft" source="media/send-feedback-to-microsoft-3.jpg":::
-
-1. Choose from the given options. To report an issue, select "I want to report an issue".
-
-    a. :::image type="content" source="media/report-issue-4.jpg" alt-text="The I want to report an issue option" lightbox="media/report-issue-4.jpg":::
-
-1. Provide details of the issue that you're facing and check "Send diagnostic data". We recommend checking "Include your email address" so that the team can reach back to you with a solution or a follow-up.
-
-    a. :::image type="content" source="media/finalsubmit5.png" alt-text="The pane on which you can add details and attach diagnostic data" lightbox="media/finalsubmit5.png":::
-
-1. Select on "Submit" to successfully send the feedback.
+1. Select on **Submit** to successfully send the feedback.
