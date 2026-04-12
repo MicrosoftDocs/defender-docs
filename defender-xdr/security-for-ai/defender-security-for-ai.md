@@ -13,15 +13,15 @@ description: Learn how Microsoft Defender secures AI workloads across their life
 
 # Secure AI assets and runtime behavior using Microsoft Defender
 
-Adopting artificial intelligence (AI) introduces new security vulnerabilities beyond the risks posed by traditional applications. AI exposes new attack surfaces across AI agents and applications, the AI models they use, plugins to these AI assets, and generative AI prompts and responses. 
+Adopting artificial intelligence (AI) introduces new security threats and vulnerabilities beyond the risks posed by traditional applications. AI exposes new attack surfaces across AI agents and applications, the AI models they use, plugins to these assets, and generative AI prompts and responses.
 
-By embedding security into the fabric of AI development and operations, Microsoft lets you build AI responsibly and adopt AI with confidence, at scale.
+By embedding security into the fabric of AI development and operations, Microsoft lets you build AI responsibly and adopt AI with confidence, at scale. As part of Microsoft’s comprehensive approach to AI security, Microsoft Defender helps you discover AI assets and detect, block, and investigate AI‑specific threats during development, configuration, and runtime execution.
 
-This article provides an overview of the Microsoft Defender capabilities that secure AI assets against vulnerabilities and emerging threats.
+This article provides an overview of the Microsoft Defender capabilities that help secure AI assets against vulnerabilities and emerging threats.
 
 ## The AI threat landscape
 
-AI security threats span runtime risks with AI agents and applications - the main user interfaces - but it's equally important to secure the models, infrastructure, and integrations the agents and applications depend on.
+AI security threats span the full AI lifecycle, from build‑time and configuration risks - such as misconfigurations and insecure dependencies - to runtime threats affecting AI agents and applications.
 
 Key security risks to your AI assets include:
 
@@ -32,18 +32,16 @@ Key security risks to your AI assets include:
 
 Addressing these risks requires security controls that span discovery, posture management, detection, and runtime protection.
 
-## Secure AI assets using Microsoft Defender
+## Secure AI assets across the AI lifecycle using Microsoft Defender
 
-Microsoft Defender helps you secure AI assets as you deploy and scale across cloud environments, through a combination of preventive and detective capabilities:
+Microsoft Defender helps security teams address AI risks by providing visibility into AI assets and by discovering AI assets and their security posture, detecting and blocking threats, and facilitating investigation of AI‑specific threats - from build‑time through the AI application and agent lifecycle, including runtime. 
 
-| Capability | Description |
-|---|---|
-| **AI asset discovery** | <ul><li>Discover AI agents, applications, models, and services to gain visibility across your AI estate.</li></ul> |
-| **Security posture management** | <ul><li>Identify unsafe AI artifacts, misconfigurations, risky dependencies, insecure instructions, and excessive privileges.</li><li>Prioritize risk by using security recommendations, risk factors, and attack-path analysis.</li></ul> |
-| **Threat detection and blocking** | <ul><li>Detect malicious or abnormal AI behavior, and correlate signals across Microsoft Defender, Microsoft Entra, and Microsoft Purview.</li><li>Help block unsafe actions in real time, such as prompt injection attempts, unsafe tool usage, and suspicious access patterns, before impact.</li></ul> |
-| **Threat investigation and hunting** | <ul><li>Investigate flagged events, and trace actions such as tool calls, MCP interactions, and memory changes.</li><li>Search and analyze threats across agents, applications, and devices by using Kusto Query Language (KQL).</li></ul> |
+:::image type="content" source="media/defender-security-for-ai/defender-secure-ai-lifecycle.png" alt-text="Diagram of AI lifecycle risks, highlighting usage, agent misbehavior, data leaks, and model threats.":::
 
-The following sections explain how to apply these capabilities.
+The following sections describe how Microsoft Defender applies these capabilities to:
+
+- AI agents, where runtime behavior, tool usage, and agent decision‑making introduce exposure.
+- AI  applications and infrastructure, including models, platforms, services, and integrations, where configuration and deployment weaknesses can create broader attack paths.
 
 ## Protect AI agents using Microsoft Defender
 
