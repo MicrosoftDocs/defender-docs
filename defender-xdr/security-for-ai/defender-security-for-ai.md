@@ -1,5 +1,5 @@
 ---
-title: Secure your AI assets using Microsoft Defender
+title: Protect AI assets from emerging threats and vulnerabilities using Microsoft Defender
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: itaicohen
@@ -11,7 +11,7 @@ ms.topic: concept-article
 description: Learn how Microsoft Defender secures AI workloads across their lifecycle - from build and configuration to runtime - and supports organizations in managing AI security risks.
 ---
 
-# Defend AI assets from emerging threats and vulnerabilities using Microsoft Defender
+# Protect AI assets from emerging threats and vulnerabilities using Microsoft Defender
 
 Adopting artificial intelligence (AI) introduces new security threats and vulnerabilities beyond the risks posed by traditional applications. AI exposes new attack surfaces across AI agents and applications, the AI models they use, plugins to these assets, and generative AI prompts and responses.
 
