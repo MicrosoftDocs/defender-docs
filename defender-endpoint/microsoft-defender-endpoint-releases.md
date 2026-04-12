@@ -340,6 +340,10 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 >
 > If you have any concerns or need assistance during this transition, contact support.
 
+### Linux | March 24, 2026 | Update: post-release fix
+ 
+Fixed an issue in the January 2026 release, where real-time scanning of the /dev/watchdog device could trigger unexpected system reboots on systems with hardware watchdog enabled. For more information, see [Linux | January 2026 | Platform: 101.25102.0005](#linux--january-2026--platform-101251020005).
+
 ### Linux | March 2026 | 101.26021.0002
 
 #### Release details
