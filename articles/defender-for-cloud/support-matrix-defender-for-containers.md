@@ -82,9 +82,9 @@ The following table lists the features provided by Defender for Containers for t
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
 | Advanced hunting in XDR | View cluster incidents and alerts in Microsoft XDR | AKS | Preview - currently supports audit logs & process events | Preview - currently supports audit logs | Requires **Defender sensor** | **Defender for Containers** | Commercial clouds and National clouds: Azure Government, Azure operated by 21Vianet |
-| Anti-malware | Detection of malware | AKS | Preview | Preview | Requires **Defender sensor via Helm** | **Defender for Containers** | Commercial clouds |
+| Anti-malware | Detection of malware | AKS | Preview | - | Requires **Defender sensor via Helm** | **Defender for Containers** | Commercial clouds |
 | Binary drift detection | Detects binary of runtime container from container image | AKS | GA | - | Requires **Defender sensor** | **Defender for Containers** | Commercial clouds<br/><br/>National clouds: Azure Government, Azure operated by 21Vianet |
-| Binary drift blocking | Blocks binary drift in runtime containers | AKS | Preview | Preview | Requires **Defender sensor via Helm** | **Defender for Containers** | Commercial clouds |
+| Binary drift blocking | Blocks binary drift in runtime containers | AKS | Preview | - | Requires **Defender sensor via Helm** | **Defender for Containers** | Commercial clouds |
 | Control plane detection | Detection of suspicious activity for Kubernetes based on Kubernetes audit trail | AKS | GA | GA | Enabled with plan | **Defender for Containers**| Commercial clouds National clouds: Azure Government, Azure operated by 21Vianet |
 |DNS Detection|DNS Detection capabilities |AKS|Preview||Requires **Defender sensor via Helm**|**Defender for Containers**|Commercial clouds|
 | Malware detection | Detection of malware | AKS nodes | GA | GA | Requires **Agentless scanning for machines** | **Defender for Containers** or **Defender for Servers Plan 2** | Commercial clouds |
@@ -109,9 +109,9 @@ The following table lists the features provided by Defender for Containers for t
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
 | Advanced hunting in XDR | View cluster incidents and alerts in Microsoft XDR | EKS | Preview - currently supports audit logs & process events | Preview - currently supports audit logs | Requires **Defender sensor** | **Defender for Containers** | AWS |
-| Anti-malware | Detection of malware | EKS | Preview | Preview | Requires **Defender sensor via Helm** | **Defender for Containers** | Commercial clouds |
+| Anti-malware | Detection of malware | EKS | Preview | - | Requires **Defender sensor via Helm** | **Defender for Containers** | Commercial clouds |
 | Binary drift detection | Detects binary of runtime container from container image | EKS | GA | - | Requires **Defender sensor** | **Defender for Containers** | AWS |
-| Binary drift blocking | Blocks binary drift in runtime containers | EKS | Preview | Preview | Requires **Defender sensor via Helm** | **Defender for Containers** | AWS |
+| Binary drift blocking | Blocks binary drift in runtime containers | EKS | Preview | - | Requires **Defender sensor via Helm** | **Defender for Containers** | AWS |
 | Control plane detection | Detection of suspicious activity for Kubernetes based on Kubernetes audit trail | EKS | GA | GA | Enabled with plan | **Defender for Containers** | AWS |
 |DNS Detection|DNS Detection capabilities|EKS|Preview||Requires **Defender sensor via Helm**|**Defender for containers**|AWS|
 | Malware detection | Detection of malware | - | - | - | - | - | - |
@@ -136,9 +136,9 @@ The following table lists the features provided by Defender for Containers for t
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
 | Advanced hunting in XDR | View cluster incidents and alerts in Microsoft XDR | GKE | Preview - currently supports audit logs & process events | Preview - currently supports audit logs | Requires **Defender sensor** | **Defender for Containers** | GCP |
-| Anti-malware | Detection of malware | GKE | Preview | Preview | Requires **Defender sensor via Helm** | **Defender for Conatiners** | Commercial clouds |
+| Anti-malware | Detection of malware | GKE | Preview | - | Requires **Defender sensor via Helm** | **Defender for Conatiners** | Commercial clouds |
 | Binary drift detection | Detects binary of runtime container from container image | GKE | GA | - | Requires **Defender sensor** | **Defender for Containers** | GCP |
-| Binary drift blocking | Blocks binary drift in runtime containers | GKE | Preview | Preview | Requires **Defender sensor via Helm** | **Defender for Containers** | GCP |
+| Binary drift blocking | Blocks binary drift in runtime containers | GKE | Preview | - | Requires **Defender sensor via Helm** | **Defender for Containers** | GCP |
 | Control plane detection | Detection of suspicious activity for Kubernetes based on Kubernetes audit trail | GKE | GA | GA | Enabled with plan | **Defender for Containers** | GCP |
 |DNS Detection|DNS Detection capabilities|GKE|Preview||Requires **Defender Sensor via Helm**|**Defender for containers**|GCP|
 | Malware detection | Detection of malware | - | - | - | - | - | - |
