@@ -155,7 +155,7 @@ If a user faces an issue, which isn't already addressed in the above sections or
 
 1. Select **Help & feedback** > **Send feedback**.
 
-    :::image type="content" source="./media/android-new-ux/bottom-experience-android.png" alt-text="Screenshots showing how to send feedback and logs from the Microsoft Defender mobile app options menu." border="false":::
+    :::image type="content" source="./media/android-new-ux/bottom-experience-android.png" alt-text="Screenshots showing how to send feedback and logs from the Microsoft Defender mobile app options menu." border="false" lightbox="./media/android-new-ux/bottom-experience-android.png":::
 
 1. Provide details of the issue that you're facing and check **Include diagnostic data**. We recommend selecting **Include your email address** so that the team can reach back to you with a solution or a follow-up.
 
