@@ -11,44 +11,26 @@ ms.date: 03/23/2026
 
 Kubernetes data plane hardening helps enforce secure configurations for workloads running in your cluster, such as restricting privileged containers, enforcing resource limits, and limiting network access.
 
-In Microsoft Defender for Cloud, data plane hardening is implemented by using Azure Policy for Kubernetes to evaluate and enforce these configurations. Azure Policy is deployed as part of Defender for Containers automatically when automatic provisioning is enabled. If Azure Policy for Kubernetes is turned off in the Defender for Containers plan settings, you can deploy it by remediating the relevant recommendation.
+In Microsoft Defender for Cloud, data plane hardening is implemented by using [Azure Policy](defender-for-cloud-glossary.md#azure-policy-for-kubernetes) for Kubernetes to evaluate and enforce these configurations. Azure Policy is deployed as part of Defender for Containers automatically when automatic provisioning is enabled. If Azure Policy for Kubernetes is turned off in the Defender for Containers plan settings, you can deploy it by remediating the relevant recommendation.
 
 After Azure Policy for Kubernetes is deployed, Defender for Cloud generates data plane hardening recommendations based on your cluster configuration. This page shows how to review these recommendations, configure policy parameters, and enforce them on your clusters.
 
 > [!TIP]
 > For a list of the security recommendations that might appear for Kubernetes clusters and nodes, review [container recommendations](recommendations-reference-container.md).
 
-## Set up your workload protection
-
-Microsoft Defender for Cloud includes a bundle of recommendations that are available once you've installed the **[Azure Policy for Kubernetes](defender-for-cloud-glossary.md#azure-policy-for-kubernetes)**.
-
 ## Prerequisites
 
 - Add the [Required FQDN/application rules for Azure policy](/azure/aks/outbound-rules-control-egress#azure-policy).
 - (For non AKS clusters) [Connect an existing Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
 
-## Enable Kubernetes data plane hardening
-
-You can enable the Azure Policy for Kubernetes by one of two ways:
-
-- Enable for all current and future clusters using plan/connector settings:
-  - [Enabling for Azure subscriptions or on-premises](#enable-for-azure-subscriptions-or-on-premises)
-  - [Enabling for Google Cloud Platform (GCP) projects](#enable-for-gcp-projects)
-- [Deploy Azure Policy for Kubernetes on existing clusters](#deploy-azure-policy-for-kubernetes-on-existing-clusters)
-
-### Enable Azure Policy for Kubernetes for all current and future clusters using plan/connector settings
+## Enable Azure Policy for Kubernetes
 
 > [!NOTE]
 > When you enable this setting, the Azure Policy for Kubernetes pods are installed on the cluster. Doing so allocates a small amount of CPU and memory for the pods to use. This allocation might reach maximum capacity, but it doesn't affect the rest of the CPU and memory on the resource.
 
-> [!NOTE]
-> Enablement for AWS via the connector isn't supported due to a limitation in EKS that requires the cluster admin to add permissions for a new IAM role on the cluster itself.
+### Enable Azure Policy using 
 
-#### Enable for Azure subscriptions or on-premises
-
-When you enable Microsoft Defender for Containers, the "Azure Policy for Kubernetes" setting is enabled by default for the Azure Kubernetes Service and for Azure Arc-enabled Kubernetes clusters in the relevant subscription. If you disable the setting on initial configuration, you can enable it afterwards manually.
-
-If you disabled the "Azure Policy for Kubernetes" settings under the containers plan, you can follow the steps bellow to enable it across all clusters in your subscription:
+If you disabled the "Azure Policy for Kubernetes" settings under the containers plan, you can follow the steps below to enable it across all clusters in your subscription:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -103,51 +85,50 @@ You can manually configure the Azure Policy for Kubernetes on existing Kubernete
 
 ## View and configure the bundle of recommendations
 
-Approximately 30 minutes after the Azure Policy for Kubernetes installation completes, Defender for Cloud shows the clusters’ health status for the following recommendations, each in the relevant security control as shown:
+After Azure Policy for Kubernetes is deployed, Defender for Cloud evaluates your cluster configuration and generates data plane hardening recommendations. This can take up to 30 minutes.
 
-> [!NOTE]
-> If you're installing the Azure Policy for Kubernetes for the first time, these recommendations appear as new additions in the list of recommendations.
+> Microsoft components, such as the Defender sensor, are deployed in the `kube-system` namespace by default and aren't marked as noncompliant. Third-party components installed in other namespaces might be flagged. To exclude specific namespaces, configure policy exclusions.
 
-> [!TIP]
-> Some recommendations have parameters that must be customized via Azure Policy to use them effectively. For example, to benefit from the recommendation **Container images should be deployed only from trusted registries**, you have to define your trusted registries. If you don't enter the necessary parameters for the recommendations that require configuration, your workloads will be shown as unhealthy.
+The following table lists common data plane hardening recommendations:
 
-> [!NOTE]
-> Microsoft components like the Defender sensor are deployed in the kube-system namespace by default. This setup ensures they aren't marked as non-compliant in data plane recommendations. However, third-party vendor tools installed in a different namespace might be flagged as non-compliant. To exclude third-party vendors from these recommendations, you can add their namespace to the exclusion list.
+| Recommendation name | Security control | Configuration required |
+|---------------------|------------------|------------------------|
+| Container CPU and memory limits should be enforced | Protect applications against DDoS attack | **Yes** |
+| Container images should be deployed only from trusted registries | Remediate vulnerabilities | **Yes** |
+| Least privileged Linux capabilities should be enforced for containers | Manage access and permissions | **Yes** |
+| Containers should only use allowed AppArmor profiles | Remediate security configurations | **Yes** |
+| Services should listen on allowed ports only | Restrict unauthorized network access | **Yes** |
+| Usage of host networking and ports should be restricted | Restrict unauthorized network access | **Yes** |
+| Usage of pod HostPath volume mounts should be restricted to a known list | Manage access and permissions | **Yes** |
+| Container with privilege escalation should be avoided | Manage access and permissions | No |
+| Containers sharing sensitive host namespaces should be avoided | Manage access and permissions | No |
+| Immutable (read-only) root filesystem should be enforced for containers | Manage access and permissions | No |
+| Kubernetes clusters should be accessible only over HTTPS | Encrypt data in transit | No |
+| Kubernetes clusters should disable automounting API credentials | Manage access and permissions | No |
+| Kubernetes clusters shouldn't use the default namespace | Implement security best practices | No |
+| Kubernetes clusters shouldn't grant CAP_SYS_ADMIN capabilities | Manage access and permissions | No |
+| Privileged containers should be avoided | Manage access and permissions | No |
+| Running containers as root user should be avoided | Manage access and permissions | No |
 
-| Recommendation name | Security Control | Configuration required |
-|---------------------|--------------------|------------------------|
-| Container CPU and memory limits should be enforced                          | Protect applications against DDoS attack | **Yes**                |
-| Container images should be deployed only from trusted registries            | Remediate vulnerabilities                | **Yes**                |
-| Least privileged Linux capabilities should be enforced for containers       | Manage access and permissions            | **Yes**                |
-| Containers should only use allowed AppArmor profiles                        | Remediate security configurations        | **Yes**                |
-| Services should listen on allowed ports only                                | Restrict unauthorized network access     | **Yes**                |
-| Usage of host networking and ports should be restricted                     | Restrict unauthorized network access     | **Yes**                |
-| Usage of pod HostPath volume mounts should be restricted to a known list    | Manage access and permissions            | **Yes**                |
-| Container with privilege escalation should be avoided                       | Manage access and permissions            | No                     |
-| Containers sharing sensitive host namespaces should be avoided              | Manage access and permissions            | No                     |
-| Immutable (read-only) root filesystem should be enforced for containers     | Manage access and permissions            | No                     |
-| Kubernetes clusters should be accessible only over HTTPS                    | Encrypt data in transit                  | No                     |
-| Kubernetes clusters should disable automounting API credentials             | Manage access and permissions            | No                     |
-| Kubernetes clusters shouldn't use the default namespace                    | Implement security best practices        | No                     |
-| Kubernetes clusters shouldn't grant CAPSYSADMIN security capabilities      | Manage access and permissions            | No                     |
-| Privileged containers should be avoided                                     | Manage access and permissions            | No                     |
-| Running containers as root user should be avoided                           | Manage access and permissions            | No                     |
+### Configure policy parameters
 
-For recommendations with parameters that need to be customized, you need to set the parameters:
+Some recommendations require parameter configuration to be effective. For example, the recommendation **Container images should be deployed only from trusted registries** requires you to define a list of trusted registries.
 
-**To set the parameters**:
+If required parameters aren't configured, resources are shown as unhealthy.
+
+To configure policy parameters:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Go to **Microsoft Defender for Cloud** > **Management** > **Environment settings**.
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
 1. Select the relevant subscription.
 
-1. From the navigation menu, select **Security policies**.
+1. Select **Security policies**.
    
    :::image type="content" source="media/kubernetes-workload-protections/security-policies-page.png" alt-text="Screenshot of the Security policies page." lightbox="media/kubernetes-workload-protections/security-policies-page.png":::
 
-1. On the **Standards** tab, search for the appropriate security standard.
+1. On the **Standards** tab, search for the relevant security standard.
 
 1. Select the security standard's 3-dot menu and select **Manage**.
    
@@ -157,23 +138,37 @@ For recommendations with parameters that need to be customized, you need to set 
    
    :::image type="content" source="media/kubernetes-workload-protections/select-manage-effect-and-parameters.png" alt-text="Screenshot of selecting the 3-dot menu and then selecting Manage effect and aparameters." lightbox="media/kubernetes-workload-protections/select-manage-effect-and-parameters.png":::
 
-1. Modify the values as required.
+1. Update the required parameter values.
    
    :::image type="content" source="media/kubernetes-workload-protections/manage-effect-and-parameters.png" alt-text="Screenshot of the paraments panel." lightbox="media/kubernetes-workload-protections/manage-effect-and-parameters.png":::
 
 1. Select **Save**.
 
-**To enforce any of the recommendations**:
+### Enforce data plane hardening policies
 
-1. Open the recommendation details page and select **Deny**:
+By default, policies evaluate resources in audit mode. To enforce a policy, set its effect to **Deny**.
+
+To enforce a recommendation:
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
+
+1. Search for and select the relevant data plane hardening recommendation.
+
+1. Open the recommendation details page.
+
+1. Select **Deny**.
 
    :::image type="content" source="./media/defender-for-kubernetes-usage/enforce-workload-protection-example.png" alt-text="Screenshot showing the Deny option for Azure Policy parameter." lightbox="media/defender-for-kubernetes-usage/enforce-workload-protection-example.png":::
 
-    The pane to set the scope opens.
+1. Set the scope.
 
-1. Set the scope and select **Change to deny**.
+1. Select **Change to deny**.
 
-**To see which recommendations apply to your clusters**:
+### View recommendations for a cluster
+
+To view data plane hardening recommendations for a specific cluster:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -186,7 +181,6 @@ For recommendations with parameters that need to be customized, you need to set 
 1. Select a cluster to investigate.
 
 1. Review the available recommendations for it. When you view a recommendation from the workload protection set, the number of affected pods ("Kubernetes components") is listed alongside the cluster.
-   
 
 1. Optional: For a list of the specific pods, select the recommendation.
    
