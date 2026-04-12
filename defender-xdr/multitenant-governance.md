@@ -235,7 +235,7 @@ After configuring permissions, you can manage Microsoft Sentinel directly from t
 
 **Symptom**: The **Send relationship request** option is greyed out, and you see an error message stating "Failed to load data. Please try again later."
 
-:::image type="content" source="media/multitenant-governance/relationshop-request-disabled.png" alt-text="Screenshot showing disabled send relationship request option." lightbox="media/multitenant-governance/relationshop-request-disabled.png":::
+:::image type="content" source="media/multitenant-governance/relationship-request-disabled.png" alt-text="Screenshot showing disabled send relationship request option." lightbox="media\multitenant-governance\relationship-request-disabled.png":::
 
 **Cause**: This feature requires both Microsoft Entra ID and multitenant capabilities to be enabled for your tenant. The enrollment process can take up to 7 days to complete.
 
@@ -273,5 +273,5 @@ Security groups that don't meet these criteria aren't supported for GDAP delegat
 
 ## Related content
 
-- [Microsoft Defender XDR multitenant management](microsoft-365-defender-multitenant.md)
+- [Entra governance relationships](/entra/id-governance/tenant-governance/governance-relationships)
 - [MSSP portal access](mssp-access.md)
