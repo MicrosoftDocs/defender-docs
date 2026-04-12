@@ -135,8 +135,8 @@ To change the settings for Copilot incident summaries in Microsoft Sentinel, fol
 
     :::image type="content" source="./media/security-copilot-m365d-incident-summary/incident-severity.png" alt-text="Screenshot that shows the approximate number of incidents of each severity level.":::
 
-- Copilot saves generated incident summaries for a week. If the incident you select has a summary already in the cache, and the incident hasn't changed significantly, the summary is automatically redisplayed at no cost regardless of the setting.
-- To generate a summary on demand for an incident that's not automatically generated, select the **Generate** button.
+- Copilot saves generated incident summaries for a week. If the incident you select has a summary already in the cache, and the incident didn't change significantly, the summary is automatically redisplayed at no cost regardless of the setting.
+- To generate a summary on demand for an incident that doesn't automatically generate, select the **Generate** button.
 
     :::image type="content" source="media/security-copilot-m365d-incident-summary/generate-summary.png" alt-text="Screenshot that shows the Generate summary button on the incident page.":::
 
@@ -147,7 +147,7 @@ In the Security Copilot standalone portal, you can use the following prompt to g
 - *Provide a summary for Defender incident {incident ID}.*
 
 > [!TIP]
-> When generating an incident summary in the Security Copilot portal, Microsoft recommends including the word ***Defender*** in your prompts to ensure that the incident summary capability delivers the results.
+> When you generate an incident summary in the Security Copilot portal, include the word ***Defender*** in your prompts to ensure that the incident summary capability delivers the results.
 
 ## Provide feedback
 
