@@ -34,14 +34,15 @@ Addressing these risks requires security controls that span discovery, posture m
 
 ## Secure AI assets across the AI lifecycle using Microsoft Defender
 
-Microsoft Defender helps security teams address AI risks by providing visibility into AI assets and by discovering AI assets and their security posture, detecting and blocking threats, and facilitating investigation of AI‑specific threats - from build‑time through the AI application and agent lifecycle, including runtime. 
+Microsoft Defender helps security teams address AI risks across the AI lifecycle by providing visibility into AI assets, assessing their security posture, detecting and blocking AI‑specific threats, and providing the signals and context needed to investigate threats - from build time through the AI application and agent lifecycle, including runtime. 
 
-:::image type="content" source="media/defender-security-for-ai/defender-secure-ai-lifecycle.png" alt-text="Diagram of AI lifecycle risks, highlighting usage, agent misbehavior, data leaks, and model threats.":::
+:::image type="content" source="media/defender-security-for-ai/defender-secure-ai-lifecycle.png" alt-text="Diagram of AI lifecycle risks, highlighting usage, agent misbehavior, data leaks, and model threats." lightbox="media/defender-security-for-ai/defender-secure-ai-lifecycle.png":::
 
 The following sections describe how Microsoft Defender applies these capabilities to:
 
-- AI agents, where runtime behavior, tool usage, and agent decision‑making introduce exposure.
-- AI  applications and infrastructure, including models, platforms, services, and integrations, where configuration and deployment weaknesses can create broader attack paths.
+- **AI agents**, where configuration, permissions, and runtime behavior - including tool usage and agent decision‑making-introduce exposure.
+- **AI applications and infrastructure**, including models, platforms, services, and integrations, where supply-chain risks, configuration, and deployment weaknesses can create broader attack paths.
+
 
 ## Protect AI agents using Microsoft Defender
 
