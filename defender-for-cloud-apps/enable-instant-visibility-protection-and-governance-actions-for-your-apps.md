@@ -201,15 +201,14 @@ To re-enable connected apps:
 
 If expected activities don't appear after you connect an app, perform the following checks to determine where the data should be available and whether additional configuration is required.
 
-**Step 1: Confirm the connector is healthy**
+### Confirm the connector is healthy
 Verify that the app connector is connected successfully and that there are no configuration warnings or permission issues.
 
-**Step 2: Review connector-specific activity options**
+### Review connector-specific activity options
 For connectors that support selectable activity types, confirm that the required options are enabled. For example, if you're investigating sign-in activity, verify that the connector is configured to collect the relevant sign-in data.
 
-**Step 3: Validate the expected logging surface**
+### Validate the expected logging surface
 Not all events appear in the same place. Depending on the activity type, validate the event in the appropriate source:
-
 
 |Event  |Source  |
 |---------|---------|
@@ -217,7 +216,7 @@ Not all events appear in the same place. Depending on the activity type, validat
 |Microsoft Entra sign-in events     |  Microsoft Entra sign-in logs       |
 |Identity-related investigation data     |  Advanced Hunting identity tables       |
 
-**Step 4: Apply filters before concluding that data is missing**
+### Apply filters before concluding that data is missing
 
 Use filters such as:
 
@@ -226,14 +225,16 @@ Use filters such as:
 - Activity type
 - App or workload
 
-**Step 5: Check for known scope limitations**
+### Check for known scope limitations
 
 Some activities might not be fully represented in every logging surface. If an event is missing from one source, confirm whether that activity is documented as available in another source.
 
 > [!IMPORTANT]
 > Missing activity in one portal doesn't always indicate connector failure. First confirm whether the activity is expected in Defender for Cloud Apps, Microsoft Entra logs, Microsoft 365 audit logs, or Advanced Hunting.
 
-**Step 6: When to investigate further**
+### Investigate further
+
+Investigate further when:
 
 - The connector shows a healthy state but no expected data appears in any supported logging surface
 - Required activity options are enabled, but the event is still absent after a reasonable validation period
