@@ -7,9 +7,13 @@ ms.author: elkrieger
 ms.date: 03/23/2026
 ---
 
-# Protect your Kubernetes data plane hardening
+# Configure Kubernetes data plane hardening in Defender for Cloud
 
-This page describes how to use Microsoft Defender for Cloud's set of security recommendations dedicated to Kubernetes data plane hardening.
+Kubernetes data plane hardening helps enforce secure configurations for workloads running in your cluster, such as restricting privileged containers, enforcing resource limits, and limiting network access.
+
+In Microsoft Defender for Cloud, data plane hardening is implemented by using Azure Policy for Kubernetes to evaluate and enforce these configurations. Azure Policy is deployed as part of Defender for Containers automatically when automatic provisioning is enabled. If Azure Policy for Kubernetes is turned off in the Defender for Containers plan settings, you can deploy it by remediating the relevant recommendation.
+
+After Azure Policy for Kubernetes is deployed, Defender for Cloud generates data plane hardening recommendations based on your cluster configuration. This page shows how to review these recommendations, configure policy parameters, and enforce them on your clusters.
 
 > [!TIP]
 > For a list of the security recommendations that might appear for Kubernetes clusters and nodes, review [container recommendations](recommendations-reference-container.md).
@@ -48,7 +52,7 @@ If you disabled the "Azure Policy for Kubernetes" settings under the containers 
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Go to **Microsoft Defender for Cloud** > **Management** > **Environment settings**.
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
 1. Select the relevant subscription.
 

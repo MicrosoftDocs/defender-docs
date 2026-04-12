@@ -24,7 +24,7 @@ Agentless container posture is available for Azure, AWS, and GCP environments.
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
-1. Select your subscription.
+1. Select the relevant subscription.
 
 1. Under **Defender plans**, locate **Defender CSPM**.
 
@@ -46,7 +46,7 @@ Agentless container posture is available for Azure, AWS, and GCP environments.
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
-1. Select your AWS connector.
+1. Select the relevant AWS connector.
 
 1. Under **Defender plans**, locate **Defender CSPM**.
 
@@ -76,7 +76,7 @@ Agentless container posture is available for Azure, AWS, and GCP environments.
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
-1. Select your GCP connector.
+1. Select the relevant GCP connector.
 
 1. Under **Defender plans**, locate **Defender CSPM**.
 
