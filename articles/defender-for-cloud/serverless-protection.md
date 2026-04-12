@@ -12,11 +12,24 @@ Microsoft Defender for Cloud, as a Cloud-Native Application Protection Platform 
 
 Serverless protection automatically discovers and inventories all Web Apps, Azure Functions, and AWS Lambda functions in your environment. Once it discovers these resources, Defender for Cloud identifies misconfigurations, vulnerabilities, and insecure dependencies. Defender for Cloud then offers remediation guidance and continuous posture assessment, helping organizations maintain strong posture management and reduce risk in dynamic, serverless architectures.
 
-## Serverless protection requirements
+## Serverless protection requirements and availability
 
 Serverless protection is available as part of the [Defender Cloud Security Posture Management (CSPM) plan](concept-cloud-security-posture-management.md#cspm-plans). 
 
 To enable serverless protection, you must [Enable the Defender CSPM plan](tutorial-enable-cspm-plan.md) on your subscription, and [enable the Serverless protection component](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan) of the Defender CSPM plan.
+
+Currently, the available features vary by portal. The following table shows which features are available in each portal:
+
+| Feature | Defender for Cloud portal | Defender portal |
+|--|--|--|
+| Onboarding through the Defender CSPM plan | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: |
+| Review misconfiguration recommendations | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |
+| Build queries with the cloud security explorer | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: |
+| Explore workloads in Cloud Inventory | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |
+| Investigate attack paths | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |
+| Vulnerability Assessment | - | :::image type="icon" source="./media/icons/yes-icon.png"::: |
+
+To view the availability, see [cloud support](support-matrix-defender-for-cloud.md#cloud-support).
 
 See [limitations](#limitations) for serverless resources.
 
