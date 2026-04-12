@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: troubleshooting-general
 ms.subservice: android
 search.appverid: met150
-ms.date: 12/10/2025
+ms.date: 04/12/2026
 appliesto:
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2
