@@ -36,7 +36,7 @@ Real-time protection focuses on high-confidence threats, including:
 
 When Microsoft Defender blocks an action, it generates a detailed alert that explains what was blocked, why the action was considered risky, and which agent, user, and tool were involved. This ensures security teams can investigate attempted behavior using familiar Defender workflows.
 
-#### Enable extended real-time protection for Microsoft Copilot Studio and Microsoft Foundry  agents
+#### Enable extended real-time protection for Microsoft Copilot Studio agents
 
 Beyond the core real‑time protection capabilities available for all Microsoft Agent 365‑managed agents, you can enable an extended set of real‑time protection capabilities for agents built with Microsoft Copilot Studio and Microsoft Foundry.
 
@@ -76,7 +76,6 @@ For example, use Advanced Hunting to:
 - Investigate the root cause and scope of a detected AI agent threat
 - Identify anomalous execution patterns or risky agent behavior across environments
 - Build custom detection rules based on agent activity signals
-
 
 For deeper investigation and more flexible hunting scenarios, you can enable the Microsoft 365 app connector to collect detailed audit logs for AI agent actions. These audit logs provide a record of agent behavior and can be queried and correlated with other Defender data in Advanced Hunting. For more information, see [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#connect-microsoft-365-to-microsoft-defender-for-cloud-apps).
 
