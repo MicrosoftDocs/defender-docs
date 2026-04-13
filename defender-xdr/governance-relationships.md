@@ -40,9 +40,9 @@ Before you configure delegated access, ensure you meet the following requirement
 
 ## Enable tenant governance settings
 
-Before establishing delegated access, you must enable the ability to receive governance invitations in your tenant. This setting is disabled by default.
+Before you can configure delegated access, you must enable your tenant to receive governance invitations. This setting is disabled by default.
 
-### Enable governance invitations in Entra Admin Center (recommended)
+### Enable governance invitations in Microsoft Entra Admin Center (recommended)
 
 1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com).
 
@@ -101,7 +101,7 @@ The governed tenant initiates the relationship by sending an invitation to the g
 
 ### Step 2: Create and send access request from governing tenant
 
-After receiving the invitation, the governing tenant creates a relationship template that defines delegated access permissions.
+After it receives the invitation, the governing tenant creates a relationship template that defines delegated access permissions.
 
 1. In the governing tenant, sign in to the Microsoft Defender MTO portal.
 
@@ -198,5 +198,5 @@ Security groups that don't meet these criteria aren't supported for governance r
 
 ## Related content
 
-- [Entra governance relationships](/entra/id-governance/tenant-governance/governance-relationships)
+- [Microsoft Entra governance relationships](/entra/id-governance/tenant-governance/governance-relationships)
 - [MSSP portal access](mssp-access.md)
