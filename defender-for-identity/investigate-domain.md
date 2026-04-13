@@ -13,7 +13,9 @@ ai-usage: ai-assisted
 
 # Investigate an Active Directory domain (Preview)
 
-The Active Directory domain page is a security dashboard in Microsoft Defender that shows domain health, sensor coverage, security policies, trust relationships, and recommendations for your on-premises Active Directory environment. Use it to check whether a domain is healthy and secure, review deployment status, and act on recommendations.
+Active Directory domains are frequently targeted in identity-based attacks. Configuration issues such as unhealthy sensors, weak security policies, or risky trust relationships can expose an environment, but the information needed to assess a domain's security is often distributed between different tools and views.
+
+The Active Directory domain page in Microsoft Defender brings together domain health, sensor coverage, security policies, trust relationships, and recommendations for your on-premises Active Directory environment into a single view. Use it to determine whether a domain is healthy and fully monitored, identify configuration or policy issues that increase risk, review trust relationships, and act on prioritized recommendations.
 
 ## Prerequisites
 
@@ -32,7 +34,7 @@ To switch between domains when you're on the domain page, use the domain selecto
 
 ## Overview tab
 
-:::image type="content" source="media/domain-page-overview-tab.png" alt-text="Screenshot that shows the domain overview tab with domain details, deployment health, health score, and identity summary cards.":::
+:::image type="content" source="media/investigate-domain/domain-page-overview.png" alt-text="Screenshot that shows the domain overview tab with domain details, deployment health, health score, and identity summary cards.":::
 
 The **Overview** tab provides a domain summary with the following sections:
 
@@ -68,7 +70,9 @@ The tab includes default filters for **Status** (New, In progress) and **Alert s
 
 ## Security Policies tab
 
-Provides human-readable summaries of key Active Directory security policies in four cards:
+Provides human-readable summaries of key Active Directory security policies in four cards. Use this tab to review critical Active Directory configurations and check whether they meet current security standards.
+
+:::image type="content" source="media/investigate-domain/domain-page-security-policies.png" alt-text="Screenshot that shows the Security policies tab of the Investigate domains page in Microsoft Defender.":::
 
 | Card | Details |
 |---|---|
@@ -76,8 +80,6 @@ Provides human-readable summaries of key Active Directory security policies in f
 | **Account Lockout Policy** | Lockout duration and lockout threshold. |
 | **Kerberos Policy** | Maximum ticket age and maximum renewal age. |
 | **LDAP & Machine Account** | LDAP signing policy and machine account quota. If the domain has active recommendations for insecure configurations, a warning banner appears with a link to view the recommendations. |
-
-Use this tab to review critical Active Directory configurations and check whether they meet current security standards.
 
 ## Trusts tab
 

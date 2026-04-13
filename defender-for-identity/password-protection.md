@@ -13,7 +13,9 @@ ai-usage: ai-assisted
 
 # Investigate identity password protection (Preview)
 
-The **Password protection** page in Microsoft Defender shows password-related risks across your identity sources in one place. Use it to find leaked credentials, exposed passwords, weak password policies, and configuration issues, and then take action directly from the page. It supports on-premises Active Directory, cloud identity providers like Microsoft Entra ID, and non-Microsoft providers like Okta.
+Compromised credentials remain one of the most common ways attackers gain initial access, even in environments that use multifactor authentication and modern authentication protocols. Password risks are often spread between different tools and identity providers, which can make it difficult for security teams to assess exposure and prioritize remediation.
+
+The **Password protection** page in Microsoft Defender consolidates password-related risks from your identity sources into a single, prioritized view. Use it to find leaked credentials, exposed passwords, weak password policies, and configuration issues in on-premises Active Directory, Microsoft Entra ID, federated identities, and non-Microsoft providers like Okta. For each issue, you can see why an account is at risk and take action—such as resetting a password or disabling an account—directly from the page.
 
 ## Prerequisites
 
@@ -22,17 +24,17 @@ To access the **Password protection** page, you need:
 - A Microsoft Defender for Identity license, or another license that includes Defender for Identity (such as E5), and a Microsoft Entra ID Protection license.
 - A user role with at least [Security Reader](/azure/active-directory/roles/permissions-reference#security-reader) permissions.
 
-## Page layout and identity sources
+## The Password protection page
 
 In the Microsoft Defender portal, select **Identities** > **Password protection**.
+
+:::image type="content" source="media/investigate-passwords/password-protection.png" alt-text="Screenshot of the Microsoft Defender Password protection page.":::
 
 The page includes a left panel where you select the identity source you want to review. Supported identity sources include:
 
 - **Active Directory**: Available on all four tabs.
 - **Microsoft Entra ID**: Available on the Leaked Credentials tab.
 - **Okta**: Available on the Password Hygiene and Password Policies tabs.
-
-## What the page shows
 
 The page has four tabs:
 
