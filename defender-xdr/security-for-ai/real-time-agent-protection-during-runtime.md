@@ -38,7 +38,7 @@ When Microsoft Defender blocks an action, it generates a detailed alert that exp
 
 Beyond the core real‑time protection capabilities available for all Microsoft Agent 365‑managed agents, you can enable an extended set of real‑time protection capabilities for agents built with Microsoft Copilot Studio.
 
-#### Enable real-time protection
+### Enable real-time protection
 
 To enable real-time protection for your AI agents: 
 
@@ -65,7 +65,7 @@ For more information, see [Incidents and alerts in the Microsoft Defender portal
 > [!IMPORTANT]
 > To enable near-real-time alerts and threat hunting, you need to enable the Microsoft 365 app connector to collect detailed audit logs for AI agent actions. For more information, see [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#connect-microsoft-365-to-microsoft-defender-for-cloud-apps).
 
-#### Enable extended near-real-time detections for Microsoft Copilot Studio and Microsoft Foundry  agents
+### Enable extended near-real-time detections for Microsoft Copilot Studio and Microsoft Foundry agents
 
 When you enable the relevant features, agents built with Microsoft Copilot Studio and Microsoft Foundry have an extended set of near-real-time detection alerts beyond the baseline available to all Microsoft Agent 365‑managed agents.
 
