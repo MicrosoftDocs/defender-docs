@@ -14,11 +14,38 @@ ms.topic: concept-article
 
 # Detect, block, and investigate threats to AI agents using Microsoft Defender
 
-AI agents can be targeted by a range of threats, including prompt‑based attacks, unsafe tool usage, and attempts to exfiltrate data or manipulate agent behavior. Microsoft Defender helps security teams detect suspicious and malicious AI agent activity, block unsafe actions at runtime where supported, and investigate incidents using familiar security operations workflows.
+Deployed AI agents operate autonomously - invoking tools, accessing data, and taking actions across systems in response to natural‑language input. This makes runtime protection and investigation critical. Microsoft Defender lets you detect threats - such as prompt‑injection attacks, data exfiltration attempts, and tool misuse - block dangerous actions in real-time, investigate incidents quickly, and provide security teams with the context to trace the root cause and full blast radius.
 
-This article explains how Microsoft Defender detects threats across all Agent 365‑managed agents, provides real‑time protection to block malicious actions for supported agents, and enables investigation and hunting using incident correlation and Advanced Hunting.
+This article explains how Microsoft Defender detects, blocks, and enables security teams to investigate threats to AI agents managed through [Microsoft Agent 365](/microsoft-agent-365/overview), including the extended detection and protection capabilities available for supported agent platforms.
 
-## Detect threats for all Agent 365-managed agents
+## Block unsafe AI agent actions in real time
+
+Microsoft Defender provides real-time protection (RTP) to prevent AI agents from performing unsafe actions during runtime. Microsoft Defender integrates directly with Microsoft Agent 365’s Agent Tooling Gateway (ATG) to evaluate supported agent-initiated tool invocations before they execute. If Defender determines that an action is risky, it blocks the action before the agent performs it, preventing harmful behavior.
+
+Real-time protection focuses on high-confidence threats, including:
+
+- Attempts to extract or exfiltrate system instructions or internal tool details  
+- Direct attempts to leak sensitive data  
+- Misuse of internal-only tools  
+- Routing information to untrusted or malicious destinations  
+- Use of obfuscated or hidden content to manipulate agent behavior  
+- Credential leakage through legitimate channels such as email or external APIs  
+
+> [!NOTE]
+>  Microsoft Defender's real-time protection evaluates agent-initiated tool invocations at runtime. It does not inspect raw model prompts or responses outside the tool-execution path.
+
+When Microsoft Defender blocks an action, it generates a detailed alert that explains what was blocked, why the action was considered risky, and which agent, user, and tool were involved. This ensures security teams can investigate attempted behavior using familiar Defender workflows.
+
+### Enable extended real-time protection for Microsoft Copilot Studio and Microsoft Foundry  agents
+
+Beyond the core real‑time protection capabilities available for all Microsoft Agent 365‑managed agents, you can enable an extended set of real‑time protection capabilities for agents built with Microsoft Copilot Studio and Microsoft Foundry.
+
+To enable these extended capabilities:
+
+- For **Microsoft Copilot Studio agents**, see [Copilot Studio integration in Microsoft Defender for Cloud Apps](/defender-cloud-apps/ai-agent-inventory).  
+- For **Microsoft Foundry agents**, see [Enable threat protection for Microsoft Foundry AI workloads](/defender-for-cloud/ai-onboarding).
+
+## Detect AI agent threats in near-real-time
 
 Microsoft Defender continuously monitors AI agent activity and detects suspicious and malicious behavior across all Agent 365‑managed agents. Defender analyzes agent telemetry, tool usage, and execution patterns to identify threats such as *persistent jailbreak attempts*, *suspicious user activity involving a jailbreak attempt*, and *suspicious agent execution attempts*.
 
@@ -26,25 +53,32 @@ Microsoft Defender surfaces detections as near‑real‑time alerts in the Defen
 
 For more information, see [Incidents and alerts in the Microsoft Defender portal](/defender-xdr/incidents-overview).
 
-## Enable an extended set of detections for supported agents
+### Enable extended near-real-time detections for Microsoft Copilot Studio and Microsoft Foundry  agents
 
-Beyond the core detections automatically available for all Agent 365‑managed agents, you can enable an extended set of detections for agents built with Microsoft Copilot Studio and Microsoft Foundry. 
+When you enable the relevant features, agents built with Microsoft Copilot Studio and Microsoft Foundry have an extended set of near-real-time detection alerts beyond the baseline available to all Agent 365 agents.
 
-To enable these extended detections:
+To enable these extended capabilities:
 
-- For **Microsoft Copilot Studio agents**, see [Copilot Studio integration in Microsoft Defender for Cloud Apps](/defender-cloud-apps/ai-agent-inventory). 
+- For **Microsoft Copilot Studio agents**, see [Copilot Studio integration in Microsoft Defender for Cloud Apps](/defender-cloud-apps/ai-agent-inventory).  
 - For **Microsoft Foundry agents**, see [Enable threat protection for Microsoft Foundry AI workloads](/defender-for-cloud/ai-onboarding).
-
 
 ## Block suspicious AI agent actions with real-time protection for supported agents 
 
-Real-time protection during agent runtime in Microsoft Defender reduces these risks by inspecting tool invocations before the agent runs any actions.
+Microsoft Defender provides real-time protection (RTP) to prevent AI agents from performing unsafe actions during runtime. Microsoft Defender integrates directly with Microsoft Agent 365’s Agent Tooling Gateway (ATG) to evaluate supported agent-initiated tool invocations before they execute. If Defender determines that an action is risky, it blocks the action before the agent performs it, preventing harmful behavior.
+Real-time protection focuses on high-confidence threats, including:
 
-If Microsoft Defender determines that a prompt is suspicious:
+- Attempts to extract or exfiltrate system instructions or internal tool details  
+- Direct attempts to leak sensitive data  
+- Misuse of internal-only tools  
+- Routing information to untrusted or malicious destinations  
+- Use of obfuscated or hidden content to manipulate agent behavior  
+- Credential leakage through legitimate channels such as email or external APIs  
 
-- The tool invocation is blocked before it runs.
-- The user gets notified that their message was blocked.
-- An informative alert is created and appears in the Microsoft Defender portal under XDR Incidents and Alerts.
+> [!NOTE]
+>  Microsoft Defender's real-time protection evaluates agent-initiated tool invocations at runtime. It does not inspect raw model prompts or responses outside the tool-execution path.
+
+When Microsoft Defender blocks an action, it generates a detailed alert that explains what was blocked, why the action was considered risky, and which agent, user, and tool were involved. This ensures security teams can investigate attempted behavior using familiar Defender workflows.
+
 
 ## Investigate AI agent threats 
 
