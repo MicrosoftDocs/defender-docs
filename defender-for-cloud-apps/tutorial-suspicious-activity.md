@@ -106,11 +106,11 @@ Defender for Cloud Apps includes several built-in [anomaly detection policies](a
 
 You can fine-tune several built-in [cloud discovery anomaly detection policies](cloud-discovery-policies.md#cloud-discovery-anomaly-detection) or create your own policies to identify other scenarios worth investigating. These policies use cloud discovery logs, with [tuning capabilities](cloud-discovery-policies.md#cloud-discovery-anomaly-detection) that focus on anomalous app behavior and data exfiltration.
 
-1. **Tune usage monitoring**
+**Tune usage monitoring**
 
 Set the usage filters to control the scope, and activity period for detecting anomalous behavior. For example, receive alerts for anomalous activities from executive-level employees.
 
-1. **Tune alert sensitivity**
+**Tune alert sensitivity**
 
 To reduce unnecessary alerts, set up the sensitivity of alerts. Use the sensitivity slider to control the number of high-risk alerts sent per 1,000 users per week. Higher sensitivities require less variance to be considered an anomaly and generate more alerts. In general, set low sensitivity for users who don't have access to confidential data.
 
