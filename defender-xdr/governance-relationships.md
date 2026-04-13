@@ -2,10 +2,10 @@
 title: Configure delegated access with GDAP for multitenant organizations
 description: Learn how to set up granular delegated admin privileges (GDAP) for managing multiple tenants in Microsoft Defender.
 ms.service: defender-xdr
-ms.author: guywild
-author: guywi-ms
+ms.author: monaberdugo
+author: mberdugo
 ms.topic: how-to
-ms.date: 11/19/2024
+ms.date: 04/14/2026
 ---
 
 # Configure delegated access with governance relationships for multitenant organizations (preview)
@@ -48,7 +48,7 @@ Before establishing delegated access, you must enable the ability to receive gov
 
 1. In the **Governance invitations** section, change the setting to **Enabled**.
 
-   :::image type="content" source="media/multitenant-governance/governance-relationships.png" alt-text="Screenshot showing governance invitations enabled in tenant settings.":::
+   :::image type="content" source="media/governance-relationships/governance-relationships.png" alt-text="Screenshot showing governance invitations enabled in tenant settings.":::
 
 ### Enable governance invitations using API
 
@@ -89,11 +89,11 @@ The governed tenant initiates the relationship by sending an invitation to the g
 
 1. Select **Send invitation**.
 
-   :::image type="content" source="media/multitenant-governance/send-invitation.png" alt-text="Screenshot of delegated access interface with send invitation option.":::
+   :::image type="content" source="media/governance-relationships/send-invitation.png" alt-text="Screenshot of delegated access interface with send invitation option.":::
 
 1. Enter the tenant ID of the governing tenant that you want to invite.
 
-   :::image type="content" source="media/multitenant-governance/tenant-id.png" alt-text="Screenshot showing where to enter the tenant ID for the invitation.":::
+   :::image type="content" source="media/governance-relationships/tenant-id.png" alt-text="Screenshot showing where to enter the tenant ID for the invitation.":::
 
 1. Select **Send** to send the invitation.
 
@@ -107,7 +107,7 @@ After receiving the invitation, the governing tenant creates a relationship temp
 
 1. Select **Create access template**.
 
-   :::image type="content" source="media/multitenant-governance/access-template.png" alt-text="Screenshot of create access template interface.":::
+   :::image type="content" source="media/governance-relationships/access-template.png" alt-text="Screenshot of create access template interface.":::
 
 1. Define the access template with the following information:
 
@@ -115,15 +115,15 @@ After receiving the invitation, the governing tenant creates a relationship temp
    - **Microsoft Entra built-in roles**: Select one or more roles to assign
    - **Security groups**: Select security groups from your governing tenant that will receive the assigned roles
 
-   :::image type="content" source="media/multitenant-governance/define-access-template.png" alt-text="Screenshot showing fields for defining the access template." lightbox="media/multitenant-governance/define-access-template.png":::
+   :::image type="content" source="media/governance-relationships/define-access-template.png" alt-text="Screenshot showing fields for defining the access template." lightbox="media/governance-relationships/define-access-template.png":::
 
 1. Select **Send relationship request**.
 
-   :::image type="content" source="media/multitenant-governance/send-request.png" alt-text="Screenshot of send relationship request option.":::
+   :::image type="content" source="media/governance-relationships/send-request.png" alt-text="Screenshot of send relationship request option.":::
 
 1. Select the governed tenant that invited you, then select **Submit**.
 
-   :::image type="content" source="media/multitenant-governance/submit-request.png" alt-text="Screenshot showing the GDAP request submission.":::
+   :::image type="content" source="media/governance-relationships/submit-request.png" alt-text="Screenshot showing the GDAP request submission.":::
 
 ### Step 3: Approve access request in governed tenant
 
@@ -135,7 +135,7 @@ The governed tenant administrator reviews and approves the delegated access requ
 
 1. Review the pending access request and select **Approve** or **Reject**.
 
-   :::image type="content" source="media/multitenant-governance/approve-reject.png" alt-text="Screenshot showing options to approve or reject the access request.":::
+   :::image type="content" source="media/governance-relationships/approve-reject.png" alt-text="Screenshot showing options to approve or reject the access request.":::
 
 1. After approval, you'll see a confirmation message.
 
@@ -164,17 +164,17 @@ Follow these steps to grant Microsoft Sentinel permissions to your delegated acc
 
 1. Select **Access Control (IAM)**.
 
-   :::image type="content" source="media/multitenant-governance/access-control.png" alt-text="Screenshot of Access Control panel showing role assignments." lightbox="media/multitenant-governance/access-control.png":::
-
 1. Select **Add** > **Add role assignment**.
 
 1. Select the Microsoft Sentinel role you want to assign (for example, Microsoft Sentinel Contributor).
+
+   :::image type="content" source="media/governance-relationships/access-control.png" alt-text="Screenshot of Access Control panel showing role assignments." lightbox="media/governance-relationships/access-control.png":::
 
 1. On the **Members** tab, under **Assign access to**, select **Remote tenant group**.
 
 1. Select the synchronized security groups from the governing tenant.
 
-   :::image type="content" source="media/multitenant-governance/add-role-assignment.png" alt-text="Screenshot showing role assignment to a remote tenant group." lightbox="media/multitenant-governance/add-role-assignment.png":::
+   :::image type="content" source="media/governance-relationships/add-role-assignment.png" alt-text="Screenshot showing role assignment to a remote tenant group." lightbox="media/governance-relationships/add-role-assignment.png":::
 
 1. Select **Review + assign** to complete the assignment.
 
