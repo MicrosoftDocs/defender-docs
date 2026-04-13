@@ -67,7 +67,7 @@ Both methods achieve the same result, so you can choose the one that best fits y
 
 1. Go to the Microsoft Defender portal (https://security.microsoft.com), and sign in.
 
-1. In the navigation pane, choose **Settings** > **Endpoints**, and then, under **Device management**, choose **Offboarding**.
+1. In the navigation pane, under **System**, choose **Settings** > **Endpoints**, and then, under **Device management**, choose **Offboarding**.
 1. Select **Linux Server** as the operating system, and then in the **Deployment method** section, choose **Local script**.
 1. Select **Download package** and then select **Download**. The zipped folder that is downloaded is named *WindowsDefenderATPOffboardingPackage_valid_until_YYYY-MM-DD.zip* (where YYYY-MM-DD is the expiry date of the package).
 1. On your Linux server, extract the contents of the ZIP file to a local directory.
@@ -80,8 +80,8 @@ Both methods achieve the same result, so you can choose the one that best fits y
 > This method can be performed either manually or automatically using your preferred Linux configuration management tool.
 
 1. Go to the Microsoft Defender portal (https://security.microsoft.com), and sign in.
-1. In the navigation pane, choose **Settings** > **Endpoints**, and then, under **Device management**, choose **Offboarding**.
-1. Select **Linux Server** as the operating system, and then in the **Deployment method** section, choose **Your preferred Linux configuration management tool**.
+1. In the navigation pane, under **System**, choose **Settings** > **Endpoints**, and then, under **Device management**, choose **Offboarding**.
+1. Select **Linux Server** as the operating system, and then in the **Deployment method** section, choose your preferred Linux configuration management tool.
 1. Select **Download package** and then select **Download**. The zipped folder is named *WindowsDefenderATPOffboardingPackage_valid_until_YYYY-MM-DD.zip* (where YYYY-MM-DD is the expiry date of the package).  
 1. Extract the contents of the ZIP file and locate the *mdatp_offboard.json* file.
 1. Copy *mdatp_offboard.json* to the following location on the Linux server: `/etc/opt/microsoft/mdatp/mdatp_offboard.json`
@@ -93,8 +93,8 @@ Two methods are available to uninstall the Defender application from a Linux ser
 ### Uninstall using Defender deployment tool (Recommended) 
 
 This is the recommended method, as it allows you to uninstall the Defender application in a single step.
-
-1. Go to the Microsoft Defender portal and navigate to **Settings** > **Endpoints** > **Device Management** > **Onboarding**.
+1. Go to the Microsoft Defender portal (https://security.microsoft.com), and sign in.
+1. In the navigation pane, under **System**, choose **Settings** > **Endpoints**, and then, under **Device management**, choose **Onboarding**.
 1. Select **Linux Server** as the operating system.
 1. Go to Defender deployment tool as the deployment method and select **Download package** (a ZIP file is downloaded).
 1. Extract the package and run the following command. This removes the Defender application and cleans up the repository: 
