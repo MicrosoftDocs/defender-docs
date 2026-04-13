@@ -23,7 +23,7 @@ This article provides information about support for US Government customers by u
 
 - All features in Microsoft's SecOps platform that are in general availability are available in commercial and GCC High and DoD clouds. 
 
-  GCC is supported with the following limitation: [Advanced hunting](/defender-xdr/advanced-hunting-overview) queries that reference both Microsoft Sentinel and Microsoft Defender XDR tables aren't supported. As a workaround, narrow the search scope by providing the table parameters, or remove either all Microsoft Sentinel tables or Microsoft Defender XDR tables from your query.
+  GCC is supported with the following limitation: [Advanced hunting](/defender-xdr/advanced-hunting-overview) queries that reference both Microsoft Sentinel and Microsoft Defender XDR tables aren't supported in GCC Moderate environments. If you use _Search *_ or _Union_ in your queries, consider replacing the _*_ with an explicit list of tables that are limited to Microsoft Sentinel only or Defender XDR only.
   
 - Features still in preview are available only in the commercial cloud.
 

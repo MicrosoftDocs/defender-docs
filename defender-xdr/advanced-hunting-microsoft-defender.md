@@ -60,8 +60,8 @@ After connecting your Microsoft Sentinel workspace and Microsoft Defender XDR ad
 > Using the unified portal, where you can query Microsoft Sentinel data after connecting a Microsoft Sentinel workspace, doesn't automatically mean you can also query Defender XDR data while in Microsoft Sentinel. You still need to configure raw data ingestion of Defender XDR in Microsoft Sentinel for this to happen.
 
 > [!IMPORTANT]
-> Government cloud (GCC) customers should be aware of the following limitation in advanced hunting:
-> - Queries that reference both Microsoft Sentinel and Defender XDR tables aren't supported. As a workaround, narrow the search scope by providing the table parameters, or remove either all Microsoft Sentinel tables or Defender XDR tables from your query.
+> Microsoft Government Community Cloud Moderate (GCC-M) customers should be aware of the following limitation in advanced hunting:
+> - Queries that reference both Microsoft Sentinel and Defender XDR tables aren't supported. If you use _Search *_ or _Union_ in your queries, consider replacing the _*_ with an explicit list of tables that are limited to Microsoft Sentinel only or Defender XDR only.
 
 ## Where to find your Microsoft Sentinel data
 You can use advanced hunting KQL (Kusto Query Language) queries to hunt through Microsoft Defender XDR and Microsoft Sentinel data.
