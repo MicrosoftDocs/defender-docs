@@ -80,7 +80,31 @@ The following table lists common data plane hardening recommendations:
 | Privileged containers should be avoided | Manage access and permissions | No |
 | Running containers as root user should be avoided | Manage access and permissions | No |
 
-### Configure policy parameters
+### View recommendations for a cluster
+
+To view data plane hardening recommendations for a specific cluster:
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Go to **Defender for Cloud** > **Inventory**.
+
+1. Set the resource type filter to **Kubernetes service** and select **Apply**.
+  
+    :::image type="content" source="media/kubernetes-workload-protections/resource-type-kubernetes-service.png" alt-text="Screenshot of using the resource type filter to select kubernetes service." lightbox="media/kubernetes-workload-protections/resource-type-kubernetes-service.png":::
+
+1. Select the relevant cluster.
+
+1. Review the available recommendations. Data plane hardening recommendations show the number of affected Kubernetes components.
+
+1. Select a recommendation to view affected resources.
+   
+   :::image type="content" source="media/kubernetes-workload-protections/resource-health-recommendation.png" alt-text="Screenshot of selecting a recommendation from the Resource health page." lightbox="media/kubernetes-workload-protections/resource-health-recommendation.png":::
+
+1. Select the **Take action** tab to review remediation options.
+
+    :::image type="content" source="media/kubernetes-workload-protections/take-action-tab.png" alt-text="Use the Take action tab to view remediation steps for a recommendation." lightbox="media/kubernetes-workload-protections/take-action-tab.png":::
+
+## Configure policy parameters
 
 Some recommendations require parameter configuration to be effective. For example, the recommendation **Container images should be deployed from trusted registries only** requires you to define a list of trusted registries.
 
@@ -110,7 +134,7 @@ To configure policy parameters:
 
 1. Select **Save**.
 
-### Enforce data plane hardening policies
+## Enforce data plane hardening policies
 
 By default, policies evaluate resources in audit mode. To enforce a policy, set its effect to **Deny**.
 
@@ -129,30 +153,6 @@ To enforce a recommendation:
 1. Set the scope.
 
 1. Select **Change to deny**.
-
-### View recommendations for a cluster
-
-To view data plane hardening recommendations for a specific cluster:
-
-1. Sign in to the [Azure portal](https://portal.azure.com).
-
-1. Go to **Defender for Cloud** > **Inventory**.
-
-1. Set the resource type filter to **Kubernetes service** and select **Apply**.
-  
-    :::image type="content" source="media/kubernetes-workload-protections/resource-type-kubernetes-service.png" alt-text="Screenshot of using the resource type filter to select kubernetes service." lightbox="media/kubernetes-workload-protections/resource-type-kubernetes-service.png":::
-
-1. Select a cluster.
-
-1. Review the available recommendations. Data plane hardening recommendations show the number of affected Kubernetes components.
-
-1. Select a recommendation to view affected resources.
-   
-   :::image type="content" source="media/kubernetes-workload-protections/resource-health-recommendation.png" alt-text="Screenshot of selecting a recommendation from the Resource health page." lightbox="media/kubernetes-workload-protections/resource-health-recommendation.png":::
-
-1. Select the **Take action** tab to review remediation options.
-
-    :::image type="content" source="media/kubernetes-workload-protections/take-action-tab.png" alt-text="Use the Take action tab to view remediation steps for a recommendation." lightbox="media/kubernetes-workload-protections/take-action-tab.png":::
 
 ## Test policy enforcement
 
