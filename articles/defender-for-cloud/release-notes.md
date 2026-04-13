@@ -64,7 +64,7 @@ To simplify onboarding and improve protection coverage, we're releasing an enhan
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| March 31, 2026 | GA | [Malware automated remediation in Defender for Storage](#malware-automated-remediation-in-defender-for-storage)|
+| March 31, 2026 | GA | [Malware automated remediation in Defender for Storage](#automated-malware-remediation-in-defender-for-storage)|
 | March 31, 2026| Update | [Support for additional Azure regions for Defender for APIs and API security posture management with Defender CSPM](#support-for-additional-azure-regions-for-defender-for-apis-and-api-security-posture-management-with-defender-cspm) |
 | March 30, 2026 | Preview | [AI model security for Azure Machine Learning (Preview)](#ai-model-security-for-azure-machine-learning-preview) |
 | March 29, 2026 | Preview | [Expanded multicloud coverage for AWS and GCP (Preview)](#expanded-multicloud-coverage-for-aws-and-gcp-preview) |
@@ -77,20 +77,21 @@ To simplify onboarding and improve protection coverage, we're releasing an enhan
 | March 04, 2026 | Preview |[New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview)|
 
 
-### Malware automated remediation in Defender for Storage
+### Automated malware remediation in Defender for Storage
 
 March 31, 2026
 
-Malware automated remediation in Defender for Storage malware scanning is now generally available. 
+Automated malware remediation in Defender for Storage is now generally available.
 
-Defender for Cloud now lets you configure automatic soft deletion of detected malicious blobs during on-upload or on-demand scanning. Auto-deletion keeps harmful content in quarantine and makes it recoverable for further investigation.
+Defender for Cloud now lets you automatically soft-delete malicious blobs detected during on-upload or on-demand malware scanning. Soft-deleted blobs are quarantined and can be recovered for further investigation.
 
-You can enable or disable automated malware remediation at the subscription level or the storage account level in Microsoft Defender for Cloud in the Azure portal or with an application programming interface (API).
+You can enable or disable automated malware remediation at the subscription or storage account level in Microsoft Defender for Cloud in the Azure portal or through the API.
 
-Learn how to use [built-in automated malware remediation for malicious blobs](/azure/defender-for-cloud/defender-for-storage-configure-malware-scan#built-in-automated-malware-remediation-for-malicious-blobs).  
+Learn how to use [built-in automated malware remediation for malicious blobs](defender-for-storage-configure-malware-scan.md#built-in-automated-malware-remediation-for-malicious-blobs).
 
 ### Support for additional Azure regions for Defender for APIs and API security posture management with Defender CSPM
 
+March 31, 2026
 
 Microsoft Defender for APIs and API security posture management with Defender CSPM has expanded to provide its capabilities in the following Azure regions:
 - Sweden Central
@@ -116,6 +117,7 @@ Learn more about [Microsoft Defender for APIs](defender-for-apis-introduction.md
 
 ### AI model security for Azure Machine Learning (Preview)
 
+March 30, 2026
 
 Microsoft Defender for Cloud now offers AI model security in preview for Azure Machine Learning registries and workspaces. AI model security helps security teams discover and scan custom AI models for risks before deployment, and review findings in Defender for Cloud.
  
