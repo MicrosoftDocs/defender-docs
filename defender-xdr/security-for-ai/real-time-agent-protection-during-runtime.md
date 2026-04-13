@@ -32,7 +32,7 @@ Real-time protection focuses on high-confidence threats, including:
 - Credential leakage through legitimate channels such as email or external APIs  
 
 > [!NOTE]
->  Microsoft Defender's real-time protection evaluates agent-initiated tool invocations at runtime. It does not inspect raw model prompts or responses outside the tool-execution path.
+> Microsoft Defender's real-time protection evaluates agent-initiated tool invocations at runtime. It does not inspect raw model prompts or responses outside the tool-execution path.
 
 When Microsoft Defender blocks an action, it generates a detailed alert that explains what was blocked, why the action was considered risky, and which agent, user, and tool were involved. This ensures security teams can investigate attempted behavior using familiar Defender workflows.
 
@@ -50,6 +50,9 @@ Microsoft Defender surfaces detections as near‑real‑time alerts in the Defen
 
 For more information, see [Incidents and alerts in the Microsoft Defender portal](/defender-xdr/incidents-overview).
 
+> [!IMPORTANT]
+> To enable near-real-time alerts and threat hunting, you need to enable the Microsoft 365 app connector to collect detailed audit logs for AI agent actions. For more information, see [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#connect-microsoft-365-to-microsoft-defender-for-cloud-apps).
+
 #### Enable extended near-real-time detections for Microsoft Copilot Studio and Microsoft Foundry  agents
 
 When you enable the relevant features, agents built with Microsoft Copilot Studio and Microsoft Foundry have an extended set of near-real-time detection alerts beyond the baseline available to all Agent 365 agents.
@@ -61,12 +64,11 @@ To enable these extended capabilities:
 
 ## Investigate AI agent threats and hunt for risks using Advanced Hunting
 
-Microsoft Defender correlates AI agent alerts - including near‑real‑time detections and real‑time protection block events - with signals from other Microsoft Entra and Microsoft Purview into incidents.
+Microsoft Defender correlates AI agent alerts - including near‑real‑time detections and alerts related to real‑time protection block events - with signals from other Microsoft Entra and Microsoft Purview into incidents.
 
 Security analysts can use the incident graph and investigation experience to understand the full context of a potential attack, including relationships between involved entities and the blast radius of AI agent threats. For more information, see [Incidents and alerts in the Microsoft Defender portal](/defender-xdr/incidents-overview).
 
-Advanced Hunting in Microsoft Defender enables security teams to query AI agent activity alongside other security data using Kusto Query Language (KQL). This supports proactive threat hunting, incident investigation, and root‑cause analysis across agents, applications, identities, and devices.
-
+Advanced Hunting in Microsoft Defender enables security teams to query AI agent activity alongside other security data, including agent audit logs, using Kusto Query Language (KQL). This supports proactive threat hunting, incident investigation, and root‑cause analysis across agents, applications, identities, and devices.
 
 For example, use Advanced Hunting to:
 - Trace specific agent tool invocations and correlate them with related alerts or block events
@@ -74,6 +76,5 @@ For example, use Advanced Hunting to:
 - Identify anomalous execution patterns or risky agent behavior across environments
 - Build custom detection rules based on agent activity signals
 
-For deeper investigation and more flexible hunting scenarios, you can enable the Microsoft 365 app connector to collect detailed audit logs for AI agent actions. These audit logs provide a record of agent behavior and can be queried and correlated with other Defender data in Advanced Hunting. For more information, see [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#connect-microsoft-365-to-microsoft-defender-for-cloud-apps).
+AI agent audit logs are recorded in the [CloudAppEvents](/defender-xdr/advanced-hunting-cloudappevents-table) table. Alerts are recorded in the [AlertInfo](/defender-xdr/advanced-hunting-alertinfo-table) table.
 
-These audit logs are recorded in the `CloudAppEvents` table and can be queried and correlated with other Defender data in Advanced Hunting.
