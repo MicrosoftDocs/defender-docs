@@ -36,7 +36,7 @@ Real-time protection focuses on high-confidence threats, including:
 
 When Microsoft Defender blocks an action, it generates a detailed alert that explains what was blocked, why the action was considered risky, and which agent, user, and tool were involved. This ensures security teams can investigate attempted behavior using familiar Defender workflows.
 
-### Enable extended real-time protection for Microsoft Copilot Studio and Microsoft Foundry  agents
+#### Enable extended real-time protection for Microsoft Copilot Studio and Microsoft Foundry  agents
 
 Beyond the core real‑time protection capabilities available for all Microsoft Agent 365‑managed agents, you can enable an extended set of real‑time protection capabilities for agents built with Microsoft Copilot Studio and Microsoft Foundry.
 
@@ -53,7 +53,7 @@ Microsoft Defender surfaces detections as near‑real‑time alerts in the Defen
 
 For more information, see [Incidents and alerts in the Microsoft Defender portal](/defender-xdr/incidents-overview).
 
-### Enable extended near-real-time detections for Microsoft Copilot Studio and Microsoft Foundry  agents
+#### Enable extended near-real-time detections for Microsoft Copilot Studio and Microsoft Foundry  agents
 
 When you enable the relevant features, agents built with Microsoft Copilot Studio and Microsoft Foundry have an extended set of near-real-time detection alerts beyond the baseline available to all Agent 365 agents.
 
