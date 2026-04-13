@@ -144,20 +144,7 @@ Attack surface reduction rule merge behavior works as follows:
 
 - Only the configurations for conflicting settings are held back.
 
-## Configuration methods
-
-This section provides configuration details for the following configuration methods:
-
-- [Intune](#intune)
-- [Custom profile in Intune](#custom-profile-in-intune-alternative-2)
-- [MDM](#mdm)
-- [Microsoft Configuration Manager](#microsoft-configuration-manager)
-- [Group policy](#group-policy)
-- [PowerShell](#powershell)
-
-The following procedures for enabling attack surface reduction rules include instructions for how to exclude files and folders.
-
-### Intune
+## Configure ASR rules in Microsoft Intune using device configuration policies
 
 > [!IMPORTANT]
 > If you're using Intune on Windows Server 2012 R2 and Windows Server 2016 with the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2), you need to set the following attack surface reduction rules to `Not Configured` because they're not supported on these OS versions. Otherwise, policies containing any of these rules targeted at Windows Server 2012 R2 or Windows Server 2016 will fail to apply:
@@ -166,8 +153,6 @@ The following procedures for enabling attack surface reduction rules include ins
 > - [Block JavaScript or VBScript from launching downloaded executable content](attack-surface-reduction-rules-reference.md#block-javascript-or-vbscript-from-launching-downloaded-executable-content)
 > - [Block Win32 API calls from Office macro](attack-surface-reduction-rules-reference.md#block-win32-api-calls-from-office-macros)
 > - [Block Webshell creation for Servers](attack-surface-reduction-rules-reference.md#block-webshell-creation-for-servers) (Supported on Windows Server 2016 or later. Applies only to the Exchange server role.)
-
-#### Endpoint security policy (Preferred)
 
 1. Select **Endpoint Security** \> **Attack surface reduction**. Choose an existing attack surface reduction rule or create a new one. To create a new one, select **Create Policy** and enter information for this profile. For **Profile type**, select **Attack surface reduction rules**. If you've chosen an existing profile, select **Properties** and then select **Settings**.
 
@@ -186,21 +171,11 @@ The following procedures for enabling attack surface reduction rules include ins
 > Earlier versions of Intune showed this under **Device configuration > Profiles**.
 > If you don't see "Configuration Profile" as written in older instructions, look for **Configuration profiles** under the Devices menu.
 
-#### Device Configuration Profiles (Alternative 1)
+### Configure ASR rules in Microsoft Intune using OMA-URIs and CSPs
 
-1. Select **Device configuration** \> **Profiles**. Choose an existing endpoint protection profile or create a new one. To create a new one, select **Create profile** and enter information for this profile. For **Profile type**, select **Endpoint protection**. If you've chosen an existing profile, select **Properties** and then select **Settings**.
+Although we recommend using device configuration policies, you can also configure ASR rules in Intune using Open Mobile Alliance – Uniform Resource (OMA-URI) profiles using a Windows [Policy configuration service provider (CSP)](/windows/client-management/mdm/policy-configuration-service-provider).
 
-1. In the **Endpoint protection** pane, select **Windows Defender Exploit Guard**, and then select **Attack Surface Reduction**. Select the desired setting for each attack surface reduction rule.
-
-1. Under **Attack Surface Reduction exceptions**, enter individual files and folders. You can also select **Import** to import a CSV file that contains files and folders to exclude from attack surface reduction rules. Each line in the CSV file should be formatted as follows:
-
-   `C:\folder`, `%ProgramFiles%\folder\file`, `C:\path`
-
-1. Select **OK** on the three configuration panes. Then select **Create** if you're creating a new endpoint protection file or **Save** if you're editing an existing one.
-
-#### Custom profile in Intune (Alternative 2)
-
-You can use Microsoft Intune OMA-URI to configure custom attack surface reduction rules. The following procedure uses the rule [Block abuse of exploited vulnerable signed drivers (Device)](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers) for the example.
+For general information about OMA-URIs in Intune, see [Deploy OMA-URIs to target a CSP through Intune, and a comparison to on-premises](/troubleshoot/mem/intune/device-configuration/deploy-oma-uris-to-target-csp-via-intune).
 
 1. In the Microsoft Intune admin center at <https://intune.microsoft.com>, select **Devices** \> **Manage devices** \> **Configuration**. Or, to go directly to the **Devices \| Configuration** page, use <https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/configuration>.
 
@@ -210,102 +185,102 @@ You can use Microsoft Intune OMA-URI to configure custom attack surface reductio
 
 1. In the **Create a profile** flyout that opens, configure the following settings:
    - **Platform**: Select **Windows 10 and later**.
-   - **Profile type**: Select one of the following values:
-     - **Templates**
-
-       In the **Template name** section that appears, select **Custom**.
-
-       or
-
-     - If attack surface reduction rules are already set through Endpoint security, select **Settings Catalog**.
+   - **Profile type**: Select **Templates**. In the **Template name** section that appears, select **Custom**.
 
    When you're finished on the **Create a profile** flyout, select **Create**.
 
    :::image type="content" source="media/mem02-profile-attributes.png" alt-text="The rule profile attributes in the Microsoft Intune admin center portal." lightbox="media/mem02-profile-attributes.png":::
 
-1. The Custom template tool opens to step **1 Basics**. In **1 Basics**, in **Name**, type a name for your template, and in **Description** you can type a description (optional).
-   :::image type="content" source="media/mem03-1-basics.png" alt-text="The basic attributes in the Microsoft Intune admin center portal" lightbox="media/mem03-1-basics.png":::
+1. The Custom template wizard opens. On the **Basics** tab, configure the following settings:
+   - **Name**: Enter a unique a name for the template.
+   - **Description**: Enter an optional description.
 
-1. Click **Next**. Step **2 Configuration settings** opens. For OMA-URI Settings, click **Add**. Two options now appear: **Add** and **Export**.
+   When you're finished on the **Basics** tab, select **Next**.
+
+1. On the **Configuration settings** tab, select **Add**.
 
    :::image type="content" source="media/mem04-2-configuration-settings.png" alt-text="Screenshot showing the configuration settings in the Microsoft Intune admin center portal." lightbox="media/mem04-2-configuration-settings.png":::
 
-1. Click **Add** again. The **Add Row OMA-URI Settings** opens. In **Add Row**, fill in the following information:
+   In the **Add row** flyout that opens, configure the following settings:
 
-   1. In **Name**, type a name for the rule.
+   - **Name**: Enter a unique name for the rule.
+   - **Description**: Enter an optional, brief description.
+   - **OMA-URI**: Enter the **Device** value from the [AttackSurfaceReductionRules](/windows/client-management/mdm/policy-csp-defender#attacksurfacereductionrules) CSP: `./Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReductionRules`
+     - **Data type**: Select **String**.
+     - **Value**: Use the syntax `<RuleGuid1>=<ActionForRuleGuid1>|<RuleGuid2>=<ActionForRuleGuid2>|...<RuleGuidN>=<ActionForRuleGuidN>`
+       - GUID values for ASR rules are available at [Attack surface reduction rules](attack-surface-reduction-rules-reference.md#attack-surface-reduction-rules)
+       - The following [actions](attack-surface-reduction-rules-reference.md#asr-rule-modes) are available:
+         - `0`: Off
+         - `1`: Block
+         - `2`: Audit
+         - `5`: Not configured
+         - `6`: Warn
 
-   1. In **Description**, type a brief description.
+       For example, `75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84=2|3b576869-a4ec-4529-8536-b80a7769e899=1|d4f940ab-401b-4efc-aadc-ad5f3c50688a=2|d3e037e1-3eb8-44c8-a917-57927947596d=1|5beb7efe-fd9a-4556-801d-275e5ffc04cc=0|be9ba2d9-53ea-4cdc-84e5-9b1eeee46550=1`
 
-   1. In **OMA-URI**, type or paste the specific OMA-URI link for the rule that you're adding. Refer to the MDM section in this article for the OMA-URI to use for this example rule. For attack surface reduction rule (ASR rule) GUIDs, see [Attack surface reduction rules](attack-surface-reduction-rules-reference.md#attack-surface-reduction-rules).
+      :::image type="content" source="media/mem05-add-row-oma-uri.png" alt-text="Screenshot of the Add row flyout of the Configuration Settings tab of the OMA URI configuration in the Microsoft Intune admin center." lightbox="media/mem05-add-row-oma-uri.png":::
 
-   1. In **Value**, type or paste the GUID value, the `\=` sign and the State value with no spaces (`GUID=StateValue`):
-      - `0`: Disable (Disable the attack surface reduction rule)
-      - `1`: Block (Enable the attack surface reduction rule)
-      - `2`: Audit (Evaluate how the attack surface reduction rule would impact your organization if enabled)
-      - `6`: Warn (Enable the attack surface reduction rule but allow the end-user to bypass the block)
+     When you're finished on the **Add row** flyout, select **Save**.
 
-      :::image type="content" source="media/mem05-add-row-oma-uri.png" alt-text="The OMA URI configuration in the Microsoft Intune admin center portal." lightbox="media/mem05-add-row-oma-uri.png":::
+   Back on the **Configuration settings** tab, select **Next**.
 
-1. Select **Save**. **Add Row** closes. In **Custom**, select **Next**. In step **3 Scope tags**, scope tags are optional. Do one of the following:
-   - Select **Select Scope tags**, select the scope tag (optional) and then select **Next**.
-   - Or select **Next**
+1. On the **Assignments** tab, configure the following settings:
+   - **Included groups** section: Select one of the following options:
+     - **Add groups**: Select one or more groups to include.
+     - **Add all users**
+     - **Add all devices**
+   - **Excluded groups** section: Select **Add groups** to specify any groups to exclude.
 
-1. In step **4 Assignments**, in **Included Groups**, for the groups that you want this rule to apply, select from the following options:
-   - **Add groups**
-   - **Add all users**
-   - **Add all devices**
+   When you're finished on the **Assignments** tab, select **Next**.
 
-   :::image type="content" source="media/mem06-4-assignments.png" alt-text="The assignments in the Microsoft Intune admin center portal" lightbox="media/mem06-4-assignments.png":::
+   :::image type="content" source="media/mem06-4-assignments.png" alt-text="Screenshot of the Assignments tab of the OMA URI configuration in the Microsoft Intune admin center." lightbox="media/mem06-4-assignments.png":::
 
-1. In **Excluded groups**, select any groups that you want to exclude from this rule, and then select **Next**.
+1. On the **Applicability rules** tab, select **Next**.
 
-1. In step **5 Applicability Rules** for the following settings, do the following:
-    1. In **Rule**, select either **Assign profile if**, or **Don't assign profile if**.
-    1. In **Property**, select the property to which you want this rule to apply.
-    1. In **Value**, enter the applicable value or value range.
+   You can use the **OS edition** and **OS version** properties to define the types of devices that should or shouldn't get the profile.
 
-      :::image type="content" source="media/mem07-5-applicability-rules.png" alt-text="The applicability rules in the Microsoft Intune admin center portal." lightbox="media/mem07-5-applicability-rules.png":::
+   :::image type="content" source="media/mem07-5-applicability-rules.png" alt-text="The applicability rules in the Microsoft Intune admin center portal." lightbox="media/mem07-5-applicability-rules.png":::
 
-1. Select **Next**. In step **6 Review + create**, review the settings and information you've selected and entered, and then select **Create**.
+1. On the **Review + create** tab, review the settings. You can use **Previous** or select a tab to go back and make changes.
 
-    :::image type="content" source="media/mem08-6-review-create.png" alt-text="Screenshot showing the Review and create option in the Microsoft Intune admin center portal." lightbox="media/mem08-6-review-create.png":::
+   When you're ready to create the profile, select **Create** on the **Review + create** tab. and information you've selected and entered, and then select **Create**.
 
-   Rules are active and live within minutes.
+   :::image type="content" source="media/mem08-6-review-create.png" alt-text="Screenshot showing the Review and create tab in the Microsoft Intune admin center portal." lightbox="media/mem08-6-review-create.png":::
+
+You immediately return to the **Policies** tab of the **Devices \| Configuration** page. You might need to select **Refresh** to see the policy.
+
+ASR rules are active within minutes.
 
 > [!NOTE]
 > Regarding conflict handling, if you assign a device two different attack surface reduction policies, potential policy conflicts can occur, depending on whether rules are assigned different states, whether conflict management is in place, and whether the result is an error.
 >
 > Nonconflicting rules don't result in an error, and such rules are applied correctly. The first rule is applied, and subsequent nonconflicting rules are merged into the policy.
 
-### MDM
+### Configure ASR rules in the Policy CSP
 
-Use the [./Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReductionRules](/windows/client-management/mdm/policy-csp-defender#defender-attacksurfacereductionrules) configuration service provider (CSP) to individually enable and set the mode for each rule.
+The Policy configuration service provider (CSP) enables enterprise organizations to configure policies on Windows devices. For more information, see [Policy CSP](/windows/client-management/mdm/policy-configuration-service-provider).
 
-The following is a sample for reference, using GUID values for [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md).
+You can configure ASR rules using the [AttackSurfaceReductionRules](/windows/client-management/mdm/policy-csp-defender#attacksurfacereductionrules) CSP with the following settings:
 
-`OMA-URI path: ./Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReductionRules`
+**OMA-URI path**: `./Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReductionRules`<br/>
+`Value: <RuleGuid1>=<ActionForRuleGuid1>|<RuleGuid2>=<ActionForRuleGuid2>|...<RuleGuidN>=<ActionForRuleGuidN>`
+
+- GUID values for ASR rules are available at [Attack surface reduction rules](attack-surface-reduction-rules-reference.md#attack-surface-reduction-rules)
+- The following actions are available:
+  - 0: Off
+  - 1: Block
+  - 2: Audit
+  - 5: Not configured
+  - 6: Warn
+
+For example:
 
 `Value: 75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84=2|3b576869-a4ec-4529-8536-b80a7769e899=1|d4f940ab-401b-4efc-aadc-ad5f3c50688a=2|d3e037e1-3eb8-44c8-a917-57927947596d=1|5beb7efe-fd9a-4556-801d-275e5ffc04cc=0|be9ba2d9-53ea-4cdc-84e5-9b1eeee46550=1`
-
-The values to enable (Block), disable, warn, or enable in audit mode are:
-
-- 0: Disable (Disable the attack surface reduction rule)
-- 1: Block (Enable the attack surface reduction rule)
-- 2: Audit (Evaluate how the attack surface reduction rule would impact your organization if enabled)
-- 6: Warn  (Enable the attack surface reduction rule but allow the end-user to bypass the block). Warn mode is available for most of the attack surface reduction rules.
-
-Use the [./Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReductionOnlyExclusions](/windows/client-management/mdm/policy-csp-defender#defender-attacksurfacereductiononlyexclusions) configuration service provider (CSP) to add exclusions.
-
-Example:
-
-`OMA-URI path: ./Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReductionOnlyExclusions`
-
-`Value: c:\path|e:\path|c:\Exclusions.exe`
 
 > [!NOTE]
 > Be sure to enter OMA-URI values without spaces.
 
-### Microsoft Configuration Manager
+### Configure ASR rules in Microsoft Configuration Manager
 
 For more information about the Microsoft Configuration Manager console, see [How to use the Configuration Manager console](/intune/configmgr/core/servers/manage/admin-console).
 
@@ -470,7 +445,7 @@ The paths or filenames with paths you specify are used as exclusions for all ASR
 Use the following PowerShell command syntax in an elevated PowerShell session:
 
 ```powershell
-<Add-MpPreference | Set-MpPreference | Remove-MpPreference> -AttackSurfaceReductionOnlyExclusions "<PathOrPathAndFilename1>","<PathOrPathAndFilename2>"..."<PathOrPathAndFilenameN>"
+<Add-MpPreference | Set-MpPreference | Remove-MpPreference> -AttackSurfaceReductionOnlyExclusions "<PathOrPathAndFilename1>","<PathOrPathAndFilename2>",..."<PathOrPathAndFilenameN>"
 ```
 
 - **Set-MpPreference** _overwrites_ any existing ASR rule exclusions with the values you specify. To see the list of existing values, run the following command:
