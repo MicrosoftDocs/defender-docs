@@ -10,8 +10,6 @@ ms.collection:
   - m365-security
   - tier2
 ms.topic: how-to
-  - MOE150
-  - MET150
 ms.date: 03/30/2026
 appliesto: 
 - Microsoft Defender XDR 
