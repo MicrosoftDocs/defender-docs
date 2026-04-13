@@ -1,15 +1,9 @@
 ---
 title: Set up Safe Attachments policies in Microsoft Defender for Office 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.assetid: 078eb946-819a-4e13-8673-fe0c0ad3a775
 ms.collection:
   - m365-security

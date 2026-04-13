@@ -1,15 +1,10 @@
 ---
 title: Recommendations for Microsoft 365 security settings
 keywords: Office 365 security recommendations, Sender Policy Framework, Domain-based Message Reporting and Conformance, DomainKeys Identified Mail, steps, how does it work, security baselines, baselines for default protections, baselines for Defender for Office 365, set up Defender for Office 365, configure Defender for Office 365, security configuration
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
 ms.assetid: 6f64f2de-d626-48ed-8084-03cc72301aa4
 ms.collection:
   - m365-security

@@ -1,15 +1,11 @@
 ---
 title: "Report false positives or false negatives following automated investigation and response"
 description: Was something missed or wrongly detected by AIR in Microsoft Defender for Office 365 Plan 2? Learn how to submit false positives or false negatives to Microsoft for analysis.
-search.appverid: met150
-f1.keywords: 
-- NOCSH
 author: chrisda
 ms.author: chrisda
 ms.service: defender-office-365
 ms.date: 07/10/2024
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2

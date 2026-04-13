@@ -1,18 +1,16 @@
-﻿---
+---
 title: Manage automation folder exclusions
 description: Add automation folder exclusions to control the files that are excluded from an automated investigation.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-edr
 ms.topic: how-to
 ms.subservice: edr
-search.appverid: met150
 ms.date: 06/25/2024
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
