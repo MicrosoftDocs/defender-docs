@@ -36,11 +36,29 @@ Real-time protection focuses on high-confidence threats, including:
 
 When Microsoft Defender blocks an action, it generates a detailed alert that explains what was blocked, why the action was considered risky, and which agent, user, and tool were involved. This ensures security teams can investigate attempted behavior using familiar Defender workflows.
 
-#### Enable extended real-time protection for Microsoft Copilot Studio agents
-
 Beyond the core real‑time protection capabilities available for all Microsoft Agent 365‑managed agents, you can enable an extended set of real‑time protection capabilities for agents built with Microsoft Copilot Studio.
 
-To enable these extended capabilities, see [Copilot Studio integration in Microsoft Defender for Cloud Apps](/defender-cloud-apps/ai-agent-inventory).  
+#### Enable real-time protection
+
+To enable real-time protection for your AI agents: 
+
+1. Open the [Microsoft Defender portal](https://security.microsoft.com/)
+1. Select **System** > **Settings**.
+1. Make sure that **Security for AI agents** is toggled on.
+1. Make sure that **Agent 365** is connected under **AI real-time protection & investigation**. 
+
+    :::image type="content" source="media/real-time-agent-protection-during-runtime/enable-ai-real-time-protection.png" alt-text="Screenshot of Security for AI agents settings showing toggled on switch and connected status for Agent 365 and Copilot Studio.":::
+
+1. To enable the extended real-time protection capabilities for Microsoft Copilot Studio agents, make sure that **Copilot Studio** is connected under **AI real-time protection & investigation**. 
+
+    For more information, see [Copilot Studio integration in Microsoft Defender for Cloud Apps](/defender-cloud-apps/ai-agent-inventory).
+
+
+#### Enable extended real-time protection for Microsoft Copilot Studio agents
+
+
+
+  
 
 ## Detect AI agent threats in near-real-time
 
@@ -83,5 +101,6 @@ For example, use Advanced Hunting to:
 - Build custom detection rules based on agent activity signals  
 
 AI agent audit logs are recorded in the [CloudAppEvents](/defender-xdr/advanced-hunting-cloudappevents-table) table. Alerts are recorded in the [AlertInfo](/defender-xdr/advanced-hunting-alertinfo-table) table.
+
 
 
