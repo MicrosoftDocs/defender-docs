@@ -1,17 +1,15 @@
-﻿---
+---
 title: Microsoft Defender XDR time zone settings
 description: Use the info contained here to configure the Microsoft Defender XDR time zone settings.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: article
 ms.subservice: reference
-search.appverid: met150
 ms.date: 11/30/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

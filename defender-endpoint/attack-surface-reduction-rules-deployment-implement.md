@@ -1,10 +1,9 @@
-﻿---
+---
 title: Implement attack surface reduction rules
 description: Provides guidance to implement your attack surface reduction rules deployment.
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
-audience: ITPro
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: sugamar

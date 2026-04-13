@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 audience: ITPro
 author: chrisda
 ms.author: chrisda
-ms.date: 04/01/2025
+ms.date: 04/01/2026
 ms.reviewer:
 ms.custom: asr
 ms.subservice: asr
@@ -15,7 +15,6 @@ ms.collection:
 - m365-security
 - tier3
 - mde-asr
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

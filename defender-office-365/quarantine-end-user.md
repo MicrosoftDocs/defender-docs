@@ -1,15 +1,9 @@
 ---
 title: Find and release quarantined messages as a user
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: Consumer/IW
 ms.topic: how-to
 ms.localizationpriority: high
-search.appverid:
-  - MET150
-  - MEW150
 ms.assetid: efff08ec-68ff-4099-89b7-266e3c4817be
 ms.collection:
   - m365-security

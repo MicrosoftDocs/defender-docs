@@ -1,10 +1,9 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint attack surface reduction rules deployment overview
 description: Provides overview and prerequisite guidance about deploying Microsoft Defender for Endpoint attack surface reduction rules. Links to articles that show how to plan and ASR deployment, test ASR rules, configure ASR rules, and enable ASR rules.
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
-audience: ITPro
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: sugamar

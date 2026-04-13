@@ -1,17 +1,11 @@
 ---
 title: Transition from Report Message or the Report Phishing add-ins
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.reviewer: dhagarwal
 ms.topic: how-to
 ms.date: 04/07/2026
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.assetid: 4250c4bc-6102-420b-9e0a-a95064837676
 ms.collection:
   - m365-security

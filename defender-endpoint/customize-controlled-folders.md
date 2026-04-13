@@ -1,9 +1,8 @@
-﻿---
+---
 title: Customize controlled folder access
 description: Add other folders that should be protected by controlled folder access, or allow apps that are incorrectly blocking changes to important files.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-audience: ITPro
 author: paulinbar
 ms.author: painbar
 ms.reviewer: dbodorin, vladiso, nixanm, anvascon
@@ -13,7 +12,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-search.appverid: met150
 ms.date: 03/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

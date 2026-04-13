@@ -1,12 +1,16 @@
+<<<<<<< HEAD:defender-endpoint/attack-surface-reduction-overview.md
 ﻿---
 title: Understand attack surface reduction
+=======
+---
+title: Understand and use attack surface reduction
+>>>>>>> upstream/main:defender-endpoint/overview-attack-surface-reduction.md
 ms.reviewer: niwelton, joshbregman
 description: Admins can learn about the attack surface reduction capabilities of Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 author: chrisda
 ms.author: chrisda
 ms.localizationpriority: medium
-audience: ITPro
 ms.custom: asr
 ms.topic: conceptual
 ms.subservice: asr
@@ -14,8 +18,12 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
+<<<<<<< HEAD:defender-endpoint/attack-surface-reduction-overview.md
 ms.date: 01/16/2026
 search.appverid: met150
+=======
+ms.date: 10/20/2025
+>>>>>>> upstream/main:defender-endpoint/overview-attack-surface-reduction.md
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

@@ -9,7 +9,6 @@ ms.subservice: onboard
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 10/25/2024
-search.appverid: met150
 ms.custom: 
 - partner-contribution
 ms.collection: 

@@ -1,11 +1,10 @@
-﻿---
+---
 title: Review detected threats using the Microsoft Defender for Endpoint Antivirus and Intune integration
 description: Use the Microsoft Defender for Endpoint Antivirus and Intune integration to view and manage threat detections.
 ms.service: defender-endpoint
 author: chrisda
 ms.author: chrisda
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
@@ -13,7 +12,6 @@ ms.collection:
 ms.topic: how-to
 ms.date: 10/20/2025
 ms.subservice: edr
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

@@ -5,7 +5,6 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -13,7 +12,6 @@ ms.custom:
 ms.topic: overview
 ms.date: 03/12/2026
 ms.reviewer: 
-search.appverid: met150
 #customer intent: As a security administrator, I want to manage permissions and access to Microsoft Defender portal experiences using unified role-based access control (RBAC).
 ---
 

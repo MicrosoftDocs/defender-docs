@@ -4,9 +4,8 @@ description: "Admins can learn about attack surface reduction (ASR) rules for Wi
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
-audience: ITPro
-author: limwainstein
-ms.author: lwainstein
+author: chrisda
+ms.author: chrisda
 ms.reviewer: sugamar
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
@@ -14,7 +13,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-search.appverid: met150
 ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

@@ -14,7 +14,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 ---
 
 # Guidance for penetration testing and breach-and-attack-simulation scenarios with Microsoft Defender for Endpoint

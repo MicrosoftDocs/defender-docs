@@ -1,4 +1,4 @@
-﻿---
+---
 title: Migrating from non-Microsoft HIPS to attack surface reduction rules
 description: Describes how to approach a migration from a non-Microsoft Host Intrusion Prevention System (HIPS) solution into attack surface reduction rules.
 ms.topic: upgrade-and-migration-article
@@ -13,7 +13,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-search.appverid: met150
 ms.date: 04/03/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

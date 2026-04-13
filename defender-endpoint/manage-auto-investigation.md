@@ -1,4 +1,4 @@
-﻿---
+---
 title: Review remediation actions following automated investigations
 description: Review and approve (or reject) remediation actions following an automated investigation.
 ms.service: defender-endpoint
@@ -6,7 +6,6 @@ author: chrisda
 ms.author: chrisda
 ms.localizationpriority: medium
 ms.date: 04/04/2025
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -14,7 +13,6 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
 ms.subservice: edr
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business

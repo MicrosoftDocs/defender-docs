@@ -1,4 +1,4 @@
-﻿---
+---
 title: Microsoft Defender Antivirus exclusions on Windows Server
 ms.reviewer: pahuijbr
 description: Windows Server includes automatic exclusions, based on server role. You can also add custom exclusions.
@@ -14,7 +14,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

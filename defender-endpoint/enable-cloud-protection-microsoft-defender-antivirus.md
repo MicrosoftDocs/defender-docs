@@ -1,4 +1,4 @@
-﻿---
+---
 title: Turn on cloud protection in Microsoft Defender Antivirus
 description: Turn on cloud protection to benefit from fast and advanced protection features.
 ms.service: defender-endpoint
@@ -14,7 +14,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
