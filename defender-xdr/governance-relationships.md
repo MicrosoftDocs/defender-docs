@@ -36,7 +36,7 @@ Before you configure delegated access, ensure you meet the following requirement
 
 - Both tenants require at least one Microsoft Entra ID P1 license.
 - Both tenants require at least one Microsoft 365 E3/E5 license or Microsoft Sentinel enabled in Microsoft Defender.
-- A user with the Global Administrator (?) role in the governing tenant.
+- A user with the [Tenant Governance Relationship Administrator](/entra/identity/role-based-access-control/permissions-reference#tenant-governance-relationship-administrator) role in the governing tenant.
 
 ## Enable tenant governance settings
 
