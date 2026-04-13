@@ -8,12 +8,12 @@ ms.topic: how-to
 ms.date: 11/19/2024
 ---
 
-# Configure delegated access with GDAP for multitenant organizations
+# Configure delegated access with GDAP for multitenant organizations (preview)
 
 This article explains how to configure granular delegated admin privileges (GDAP) for multitenant organizations and managed security service providers (MSSPs) to manage delegated access to customer tenants through the Microsoft Defender portal.
 
 > [!IMPORTANT]
-> This feature is currently in limited preview.
+> This feature is currently in preview.
 
 ## Overview
 
@@ -30,7 +30,6 @@ GDAP (Granular Delegated Admin Privileges) enables governing tenants to manage s
 
 Before you configure delegated access, ensure you meet the following requirements:
 
-- Both the governing tenant and governed tenant must be enrolled in the limited preview. To enroll, contact your Microsoft account team with your tenant IDs.
 - Both tenants require at least one Microsoft Entra ID P1 license.
 - Both tenants require at least one Microsoft 365 E3/E5 license or Microsoft Sentinel enabled in Microsoft Defender.
 - Both tenants need access to Microsoft Defender XDR. Validate access by confirming you can view incidents in the portal.
