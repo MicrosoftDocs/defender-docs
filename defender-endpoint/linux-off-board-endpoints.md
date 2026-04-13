@@ -70,7 +70,7 @@ Both methods achieve the same result, so you can choose the one that best fits y
 1. In the navigation pane, choose **Settings** > **Endpoints**, and then, under **Device management**, choose **Offboarding**.
 1. Select **Linux Server** as the operating system, and then in the **Deployment method** section, choose **Local script**.
 1. Select **Download package** and then select **Download**. The zipped folder that is downloaded is named *WindowsDefenderATPOffboardingPackage_valid_until_YYYY-MM-DD.zip* (where YYYY-MM-DD is the expiry date of the package).
-1. On your Linux Server, extract the contents of the ZIP file to a local directory.
+1. On your Linux server, extract the contents of the ZIP file to a local directory.
 1. Open a terminal, and navigate to the directory where the *MicrosoftDefenderATPOffboardingLinuxServer_valid_until_YYYY-MM-DD* file is located.
 1. Type `sudo python3 MicrosoftDefenderATPOffboardingLinuxServer_valid_until_YYYY-MM-DD.py` in the terminal. This runs the offboarding script, which offboards the device from Microsoft Defender for Endpoint.
 
@@ -95,7 +95,7 @@ Two methods are available to uninstall the Defender application from a Linux ser
 This is the recommended method, as it allows you to uninstall the Defender application in a single step.
 
 1. Go to the Microsoft Defender portal and navigate to **Settings** > **Endpoints** > **Device Management** > **Onboarding**.
-1. Select **Linux** as the operating system.
+1. Select **Linux Server** as the operating system.
 1. Go to Defender deployment tool as the deployment method and select **Download package** (a ZIP file is downloaded).
 1. Extract the package and run the following command. This removes the Defender application and cleans up the repository: 
 
