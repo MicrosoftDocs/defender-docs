@@ -163,7 +163,7 @@ For recommendations with parameters that need to be customized, you need to set 
 
 1. Open the recommendation details page and select **Deny**:
 
-   :::image type="content" source="./media/defender-for-kubernetes-usage/enforce-workload-protection-example.png" alt-text="Screenshot showing the Deny option for Azure Policy parameter." lightbox="media/defender-for-kubernetes-usage/enforce-workload-protection-example.png":::
+   :::image type="content" source="./media/kubernetes-workload-protections/enforce-workload-protection-example.png" alt-text="Screenshot showing the Deny option for Azure Policy parameter." lightbox="media/kubernetes-workload-protections/enforce-workload-protection-example.png":::
 
     The pane to set the scope opens.
 

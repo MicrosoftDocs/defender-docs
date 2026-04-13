@@ -54,7 +54,7 @@ Agentless container posture is available for Azure, AWS, and GCP environments.
    - **Kubernetes API access**
    - **Registry access**
 
-    :::image type="content" source="media/concept-agentless-containers/toggle-on-components-aws.png" alt-text="Screenshot of the Defender CSPM plan configuration for AWS showing Kubernetes API access and Registry access enabled." lightbox="media/concept-agentless-containers/toggle-on-components-aws.png":::
+    :::image type="content" source="media/concept-agentless-containers/toggle-on-components-amazon.png" alt-text="Screenshot of the Defender CSPM plan configuration for AWS showing Kubernetes API access and Registry access enabled." lightbox="media/concept-agentless-containers/toggle-on-components-amazon.png":::
 
 1. Select **Continue**.
 
@@ -84,7 +84,7 @@ Agentless container posture is available for Azure, AWS, and GCP environments.
    - **Kubernetes API access**
    - **Registry access**
 
-    :::image type="content" source="media/concept-agentless-containers/toggle-on-components-gcp.png" alt-text="Screenshot of the Defender CSPM plan configuration for GCP showing Kubernetes API access and Registry access enabled." lightbox="media/concept-agentless-containers/toggle-on-components-gcp.png":::
+    :::image type="content" source="media/concept-agentless-containers/toggle-on-components-google.png" alt-text="Screenshot of the Defender CSPM plan configuration for GCP showing Kubernetes API access and Registry access enabled." lightbox="media/concept-agentless-containers/toggle-on-components-google.png":::
 
 1. Select **Continue**.
 
