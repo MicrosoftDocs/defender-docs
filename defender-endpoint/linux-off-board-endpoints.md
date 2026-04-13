@@ -39,7 +39,7 @@ There are important differences between offboarding and uninstalling:
 
 - **Uninstall** when you want to completely remove the Defender application from the Linux server, for example, when changing the installation ring (Prod/Insider Slow/Insider Fast), or when you no longer plan to use Microsoft Defender on the device.
 
-## How do offboarded and uninstalled devices behave
+## How do offboarded and uninstalled devices behave?
 
 After a device has been successfully offboarded, the Defender application behaves as follows:
 
@@ -47,12 +47,12 @@ After a device has been successfully offboarded, the Defender application behave
 - It becomes unlicensed and nonfunctional.
 - Security policies applied through Microsoft Defender are removed.
 
-## How do inactive devices appear in the Defender portal
+## How do inactive devices appear in the Defender portal?
 
 - The status of the offboarded or uninstalled device changes to *Inactive* after seven days of no telemetry.
 - Offboarded and uninstalled devices remain visible for up to 180 days. For more information about data retention, see [Microsoft Defender for Endpoint data storage and privacy](./data-storage-privacy.md).
 - Historical data (alerts, timeline, software inventory) remains accessible during the retention period.
-- No explicit **Offboarded* or *Uninstalled* label is shown in the portal. For information about how to track "Inactive" devices in the portal, see [XXX}().
+- No explicit *Offboarded* or *Uninstalled* label is shown in the portal. For information about how to track "Inactive" devices in the portal, see [XXX]().
 
 ## How to offboard a device
 
@@ -74,7 +74,7 @@ Both methods achieve the same result, so you can choose the one that best fits y
 1. Open a terminal, and navigate to the directory where the *MicrosoftDefenderATPOffboardingLinuxServer_valid_until_YYYY-MM-DD* file is located.
 1. Type `sudo python3 MicrosoftDefenderATPOffboardingLinuxServer_valid_until_YYYY-MM-DD.py` in the terminal. This runs the offboarding script, which offboards the device from Microsoft Defender for Endpoint.
 
-### Offboard using an offboarding json file  
+### Offboard using an offboarding JSON file  
 
 > [!NOTE]
 This method can be performed either manually or automatically using your preferred Linux configuration management tool.
@@ -86,7 +86,7 @@ This method can be performed either manually or automatically using your preferr
 1. Extract the contents of the ZIP file and locate the *mdatp_offboard.json* file.
 1. Copy *mdatp_offboard.json* to the following location on the Linux server: `/etc/opt/microsoft/mdatp/mdatp_offboard.json`
 
-## How to uninstall a device
+## How to uninstall the Defender application from a Linux server
 
 Two methods are available to uninstall the Defender application from a Linux server: Uninstall using the Defender deployment tool (Recommended) or manual uninstallation. Both methods achieve the same result, so you can choose the one that best fits your scenario.
 
@@ -94,7 +94,7 @@ Two methods are available to uninstall the Defender application from a Linux ser
 
 This is the recommended method, as it allows you to uninstall the Defender application in a single step.
 
-1. Go to the Microsoft Defender portal → Settings → Endpoints → Device Management → Onboarding.
+1. Go to the Microsoft Defender portal and navigate to **Settings** > **Endpoints** > **Device Management** > **Onboarding**.
 1. Select **Linux** as the operating system.
 1. Go to Defender deployment tool as the deployment method and select **Download package** (a ZIP file is downloaded).
 1. Extract the package and run the following command. This removes the Defender application and cleans up the repository: 
@@ -107,22 +107,22 @@ This is the recommended method, as it allows you to uninstall the Defender appli
  
 To manually remove the Defender application and clean up the repository, run one of the following commands (whichever is appropriate, depending on your Linux distribution):  
 
-Red Hat Enterprise Linux (RHEL) and variants (CentOS and Oracle Linux)
+**Red Hat Enterprise Linux (RHEL) and variants (CentOS and Oracle Linux)**
 ```bash
 sudo yum remove mdatp
-``` 
+```
 
-SUSE Linux Enterprise Server (SLES) and variants
+**SUSE Linux Enterprise Server (SLES) and variants**
 ```bash
 sudo zypper remove mdatp
-``` 
+```
 
-Ubuntu and Debian
+**Ubuntu and Debian**
 ```bash
 sudo apt-get purge mdatp
 ``` 
 
-Mariner 
+**Mariner**
 ```bash
 sudo dnf remove mdatp
 ```
@@ -134,6 +134,7 @@ To verify a device's offboarding state, run the following command:
 ```bash
 mdatp health --field health_issues
 ```
+
 Expected output
 ```console
 ATTENTION: No license found. Contact your administrator for help. ["missing license"]
