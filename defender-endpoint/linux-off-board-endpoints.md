@@ -77,7 +77,7 @@ Both methods achieve the same result, so you can choose the one that best fits y
 ### Offboard using an offboarding JSON file  
 
 > [!NOTE]
-This method can be performed either manually or automatically using your preferred Linux configuration management tool.
+> This method can be performed either manually or automatically using your preferred Linux configuration management tool.
 
 1. Go to the Microsoft Defender portal (https://security.microsoft.com), and sign in.
 1. In the navigation pane, choose **Settings** > **Endpoints**, and then, under **Device management**, choose **Offboarding**.
