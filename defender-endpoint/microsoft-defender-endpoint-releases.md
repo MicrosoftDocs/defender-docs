@@ -17,6 +17,9 @@ This article describes releases of Microsoft Defender for Endpoint across Window
 
 To learn about Microsoft Defender for Endpoint features that aren't version-specific, see [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md).
 
+> [!NOTE]
+> Microsoft Defender for Endpoint requires that you update your list of allowed URLs from time to time. To review recent changes in the list of allowed URLs, see [Microsoft Defender for Endpoint streamlined connectivity URLs - commercial](streamlined-device-connectivity-urls-commercial.md#change-log)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 ## All supported releases by date
@@ -70,6 +73,7 @@ This table includes supported releases for all supported platforms in the past s
 |Android |1.0.7901.0101  |July 2025 |- Build: 1.0.7901.0101<br>- Released: July 10, 2025 |[Release details and updates](#android--july-2025--platform-1079010101) |
 |Windows |10.8797.25857.1000  |May 2025 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#windows--may-2025--platform-108797258571000) |
 |Windows |10.8760.27617.1006  |July 2024 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#windows--july-2024--platform-108760276171006) |
+
 
 ## Windows releases
 
