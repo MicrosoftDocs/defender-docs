@@ -157,7 +157,7 @@ For known issues, see [macOS known issues](#macos-known-issues).
 
 | Feature area | Update summary |
 | ------------ | -------------- |
-| General      | \[packaging\] macOS >= 14 supported only |
+| General      | [packaging] macOS >= 14 supported only |
 | General      | CVE-2025-68664/5 LangGrinch (langchain vulnerability) |
 | General      | Bug and performance fixes |
 
@@ -320,7 +320,7 @@ Bug and performance fixes
 - On macOS Sequoia (Version 15.0 - 15.1.1), users might encounter prompts about incoming network connections from applications when the native firewall is active.
 
    ![Screenshot showing prompts about incoming network connections.](media/mac-whatsnew/image.png)
-
+  
 If an end user encounters a prompt for Defender for Endpoint on macOS processes such as `wdavdaemon_enterprise` or `Microsoft Defender Helper`, the end user can safely choose the **Deny** option. This selection doesn't affect Defender for Endpoint's functionality.  Enterprises can also add *Microsoft Defender* to allow [incoming connections](https://support.apple.com/en-ca/guide/deployment/dep8d306275f/web). This issue is fixed in macOS Sequoia 15.2.
 
 ## Linux releases
@@ -367,7 +367,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 | Feature area | Update summary |
 |--------------|---------------|
 | Vulnerability detection | Strengthened Linux security coverage for Python workloads by improving vulnerability detection across system, user, and virtual environments, expanding coverage for CVE‑2025‑68664/5 LangGrinch (langchain vulnerability).|
-| General | Bug and perfomance fixes |
+| General | Bug and performance fixes. <br> Real-time protection statistics collection is now disabled by default as a performance optimization; enable it on-demand when needed for diagnostics with `mdatp config real-time-protection-statistics --value enabled`.  |
 
 ### Linux | February 2026 | 101.25122.0004
 
