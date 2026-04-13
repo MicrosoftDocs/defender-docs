@@ -23,7 +23,7 @@ appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Defender for Endpoint Plan 2
 ms.topic: how-to
-ms.date: 03/26/2026
+ms.date: 04/10/2026
 ---
 
 # Create custom detection rules
@@ -139,6 +139,12 @@ DeviceEvents
 > [!TIP]
 > For better query performance, set a time filter that matches your intended run frequency for the rule. Since the least frequent run is _every 24 hours_, filtering for the past day covers all new data.
 
+#### Custom column for Microsoft Sentinel scoping
+
+If you configured [Microsoft Sentinel scoping](/azure/sentinel/scoping), the `SentinelScope_CF` custom field is available for use in queries and detection rules to reference scope in your analytics.
+
+When you create custom detections and analytics rules, you must project the `SentinelScope_CF` column in your queries to make the triggered alerts visible to scoped analysts. If you don't project this column, alerts are unscoped and hidden from scoped users.
+
 ### 2. Create new rule and provide alert details
 
 In the query editor, select **Create detection rule** and specify the following alert details:
@@ -221,7 +227,7 @@ When you select this frequency option, the **Run query every input** component a
 :::image type="content" source="media/custom-detection-rules/ah-custom-frequency.png" alt-text="Screenshot that shows the Custom frequency option in the Custom detections setup guide." lightbox="media/custom-detection-rules/ah-custom-frequency.png":::
 
 > [!IMPORTANT]
->When you select a custom frequency, Defender fetches your data from Microsoft Sentinel. This means that: 
+>When you select a custom frequency, Defender fetches your data from Microsoft Sentinel. This condition means that: 
 >1.	You must have data available in Microsoft Sentinel.
 >1.	Defender XDR data doesn't support scoping, since Microsoft Sentinel doesn't support scoping.
 
