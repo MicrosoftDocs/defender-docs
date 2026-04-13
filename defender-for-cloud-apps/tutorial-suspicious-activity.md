@@ -148,7 +148,7 @@ Use the following guidelines to configure your alerts:
 
 1. **Email**  
 Choose this option to receive alerts by email.
-1. **SIEM**
+1. **SIEM**    
 Several SIEM integration options exist, including [Microsoft Sentinel](siem-sentinel.md), [Microsoft Graph Security API](/graph/security-integration#list-of-connectors-from-microsoft), and other [generic SIEMs](siem.md). Choose the integration that best meets your requirements.
 1. **Power Automate automation**  
 Create the automation playbooks you require and set it as the policy's alert to Power Automate action.
