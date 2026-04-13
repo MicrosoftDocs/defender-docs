@@ -34,9 +34,7 @@ Agentless container posture is available for Azure, AWS, and GCP environments.
    - **Kubernetes API access**
    - **Registry access**
 
-    :::image type="content" source="media/concept-agentless-containers/toggle-on-components-aks.png" alt-text="Screenshot of the Defender CSPM plan configuration for Azure Kubernetes Service (AKS) showing Kubernetes API access and Registry access enabled." lightbox="media/concept-agentless-containers/toggle-on-components-aks.png":::
-
-1. Select **Continue**. (check this)
+1. Select **Continue**.
 
 1. Select **Save**.
 
