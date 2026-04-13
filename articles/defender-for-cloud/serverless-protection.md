@@ -2,15 +2,17 @@
 title: What is Serverless protection (Preview)
 description: Learn about Serverless protection in Microsoft Defender for Cloud and how it helps secure your serverless resources.
 ms.topic: overview
-ms.date: 03/01/2026
+ms.date: 04/13/2026
 #customer intent: As a reader, I want to understand what Serverless protection is in Microsoft Defender for Cloud.
 ---
 
 # Serverless protection (Preview)
 
-Microsoft Defender for Cloud, as a Cloud-Native Application Protection Platform (CNAPP), delivers comprehensive visibility, security, and posture management for serverless workloads across multicloud environments. It extends coverage to Azure Web Apps, Azure Functions, and Amazon Web Service (AWS) Lambda, ensuring these resources are fully protected. 
+Microsoft Defender for Cloud, as a Cloud-Native Application Protection Platform (CNAPP), delivers comprehensive visibility, security, and posture management for serverless workloads across multicloud environments. It extends coverage to Azure Web Apps, Azure Functions, and Amazon Web Service (AWS) Lambda, ensuring these resources are fully protected.
 
 Serverless protection automatically discovers and inventories all Web Apps, Azure Functions, and AWS Lambda functions in your environment. Once it discovers these resources, Defender for Cloud identifies misconfigurations, vulnerabilities, and insecure dependencies. Defender for Cloud then offers remediation guidance and continuous posture assessment, helping organizations maintain strong posture management and reduce risk in dynamic, serverless architectures.
+
+Learn more about the [cloud availability](support-matrix-defender-for-cloud.md#cloud-support) for this feature.
 
 ## Serverless protection requirements and availability
 
@@ -72,11 +74,11 @@ Defender for Cloud provides a unified inventory of all discovered serverless res
 
 After you filter your results, select any of the resources to view more details about its security posture, including any active security recommendations and their severity levels.
 
-:::image type="content" source="media/serverless-protection/resource-health.png" alt-text="Screenshot that shows a selected resources health." lightbox="media/defender-for-apis-posture/resource-health.png":::
+:::image type="content" source="media/serverless-protection/resource-health.png" alt-text="Screenshot that shows a selected resources health." lightbox="media/serverless-protection/resource-health.png":::
 
 You can also review the security recommendations associated with each resource to prioritize remediation efforts based on the severity of the findings and remediate them.
 
-Learn how to [remediate security recommendations](implement-security-recommendations.md). 
+Learn how to [remediate security recommendations](implement-security-recommendations.md).
 
 ### Cloud Security Explorer
 
