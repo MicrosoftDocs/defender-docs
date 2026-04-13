@@ -54,9 +54,7 @@ To view all of your Agent 365-managed agents and their configuration details:
 
     For more information about Advanced Hunting, see [Proactively hunt for threats with Advanced Hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
 
-We recommend that you reach out to the owners of the risky agents for more information, and that you consider quarantining or deleting risky agents.
-
-## Discover and manage security posture of supported AI agents using the AI agent inventory
+## Discover and manage security posture of supported AI agents using the AI agent inventory UI
 
 The AI agent inventory page in the Defender portal provides a centralized view of all agents you build with Microsoft Copilot Studio, Microsoft Foundry, AWS Bedrock, and GCP Vertex AI, along with their key attributes and security status.
 
