@@ -14,7 +14,7 @@ ms.topic: concept-article
 
 # Detect, block, and investigate threats to AI agents using Microsoft Defender
 
-Deployed AI agents operate autonomously, invoking tools, accessing data, and taking actions across systems in response to natural‑language input. This makes runtime protection and investigation critical. Microsoft Defender lets you detect threats - such as prompt‑injection attacks, data exfiltration attempts, and tool misuse - block dangerous actions in real-time, investigate incidents quickly, and provide security teams with the context to trace the root cause and full blast radius.
+Deployed AI agents operate autonomously, invoking tools, accessing data, and taking actions across systems in response to natural‑language input. This makes runtime protection and investigation critical. Microsoft Defender lets you detect threats such as prompt‑injection attacks, data exfiltration attempts, and tool misuse, block dangerous actions in real time, investigate incidents quickly, and provide security teams with the context to trace the root cause and full blast radius.
 
 This article explains how Microsoft Defender detects, blocks, and enables security teams to investigate threats to AI agents managed through [Microsoft Agent 365](/microsoft-agent-365/overview), including the extended detection and protection capabilities available for supported agent platforms.
 
