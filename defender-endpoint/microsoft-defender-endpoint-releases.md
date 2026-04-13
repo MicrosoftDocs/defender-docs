@@ -27,6 +27,7 @@ This table includes supported releases for all supported platforms in the past s
 |---------|---------|---------|---------|---------|
 |macOS |101.26022.0020  |April 2026 |- Release version: 20.126022.20.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--april-2026--101260220020) |
 |macOS |101.26022.0018  |April 2026 |- Release version: 20.126022.18.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--april-2026--101260220018) |
+|Android |1.0.8805.0103  |April 2026 |- Build: 1.0.8805.0103<br>- Released: April 7, 2025 |[Release details and updates](#android--april-2026--platform-1088050103) |
 |Linux  |101.26021.0002  |March 2026 |- Release version: 30.126021.0002.0<br>- Engine version: 1.1.26010.1003<br>- Signature version: 1.445.553.0 |[Release details and updates](#linux--march-2026--101260210002) |
 |macOS |101.26012.0017  |March 2026 |- Release version: 20.126012.17.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--march-2026--101260120017) |
 |macOS |101.26012.0015  |March 2026 |- Release version: 20.126012.15.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--march-2026--101260120015) |
@@ -156,7 +157,7 @@ For known issues, see [macOS known issues](#macos-known-issues).
 
 | Feature area | Update summary |
 | ------------ | -------------- |
-| General      | \[packaging\] macOS >= 14 supported only |
+| General      | [packaging] macOS >= 14 supported only |
 | General      | CVE-2025-68664/5 LangGrinch (langchain vulnerability) |
 | General      | Bug and performance fixes |
 
@@ -319,7 +320,7 @@ Bug and performance fixes
 - On macOS Sequoia (Version 15.0 - 15.1.1), users might encounter prompts about incoming network connections from applications when the native firewall is active.
 
    ![Screenshot showing prompts about incoming network connections.](media/mac-whatsnew/image.png)
-
+  
 If an end user encounters a prompt for Defender for Endpoint on macOS processes such as `wdavdaemon_enterprise` or `Microsoft Defender Helper`, the end user can safely choose the **Deny** option. This selection doesn't affect Defender for Endpoint's functionality.  Enterprises can also add *Microsoft Defender* to allow [incoming connections](https://support.apple.com/en-ca/guide/deployment/dep8d306275f/web). This issue is fixed in macOS Sequoia 15.2.
 
 ## Linux releases
@@ -366,7 +367,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 | Feature area | Update summary |
 |--------------|---------------|
 | Vulnerability detection | Strengthened Linux security coverage for Python workloads by improving vulnerability detection across system, user, and virtual environments, expanding coverage for CVE‑2025‑68664/5 LangGrinch (langchain vulnerability).|
-| General | Bug and perfomance fixes |
+| General | Bug and performance fixes. <br> Real-time protection statistics collection is now disabled by default as a performance optimization; enable it on-demand when needed for diagnostics with `mdatp config real-time-protection-statistics --value enabled`.  |
 
 ### Linux | February 2026 | 101.25122.0004
 
@@ -513,6 +514,20 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 ## Android releases
 
 See the full list of [Android UX improvements](android-new-ux.md).
+
+### Android | April 2026 | Platform: 1.0.8805.0103
+
+#### Release details
+
+| Platform version| Release Date |
+| -------- | -------- |
+|1.0.8805.0103 |April 7, 2025 |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|---------------|
+| General | Performance improvement and bug fixes. |
 
 ### Android | December 2025 | Platform: 1.0.8412.0101
 

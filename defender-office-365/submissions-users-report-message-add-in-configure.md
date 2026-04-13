@@ -7,7 +7,7 @@ ms.author: chrisda
 audience: Admin
 ms.reviewer: dhagarwal
 ms.topic: how-to
-ms.date: 10/06/2025
+ms.date: 04/07/2026
 ms.localizationpriority: medium
 search.appverid:
   - MET150
@@ -34,6 +34,9 @@ appliesto:
 The built-in **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) makes it easy for users to report false positives and false negatives to Microsoft for analysis. False positives are good email that was blocked or sent to the Junk Email folder. False negatives are unwanted email or phishing that was delivered to the Inbox.
 
 Microsoft uses these user reported messages to improve the effectiveness of email protection technologies. For example, suppose people are reporting many messages as phishing using the **Report** button. This information surfaces in the Security Dashboard and other reports. This information probably indicates the anti-phishing policies in your organization need to be updated.
+
+> [!NOTE]
+> When reporting multiple messages or an email thread (conversation) using the built-in **Report** button, each message is submitted as a **separate, individual report** with its own sender, subject, and timestamp.
 
 The following table describes the advantages of the built-in **Report** button over the Report Message and Report Phishing add-ins:
 
