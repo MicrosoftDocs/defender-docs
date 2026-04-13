@@ -74,7 +74,7 @@ The AI agent inventory page in the Defender portal provides a centralized view o
     :::image type="content" source="media/ai-agent-inventory/ai-agent-details-pane.png" alt-text="Screenshot of the AI agent inventory in the Defender portal showing agent list, filters, and detailed information for a selected Microsoft Foundry agent.":::
 
     > [!NOTE]
-    > For Microsoft Copilot Studio agents, the AI agent inventory currently supports agent discovery, but not security posture management.
+    > For Microsoft Copilot Studio agents, the AI agent inventory currently supports agent discovery, but not security posture management. To manage security posture for Copilot Studio agents, use [Advanced Hunting](#view-all-agent-365-managed-agents-and-configuration-details-using-advanced-hunting).
 
     - Select **Open agent page** to open the **AI Agent** page.
 
