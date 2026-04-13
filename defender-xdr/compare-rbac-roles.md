@@ -11,7 +11,7 @@ ms.collection:
 - tier3
 ms.custom:
 ms.topic: concept-article
-ms.date: 03/12/2026
+ms.date: 04/07/2026
 ms.reviewer:
 search.appverid: met150
 appliesto:
@@ -98,7 +98,7 @@ You configured Email & collaboration permissions in the Defender portal at <http
 |Security Reader|Role group|Security operations \ Security data \Security data basics (read) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) <br/> Security operations \ Security data \ Response (manage) <br/> Authorization and settings \ Security settings \ Core security settings (read) <br/> Authorization and settings \ System setting (read)|
 |Audit Logs|Role|Security operations \ Security data \ Security data basics (read)|
 |Manage Alerts|Role|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Security data \ Alerts (manage)|
-|Preview|Role|Security operations\ Security operations \ Raw data (Email & collaboration) \ Email & collaboration content (read)|
+|Preview|Role|Security operations\ Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: All Emails (read)|
 |Quarantine|Role|Security operations \ Security data \ Email quarantine (manage)|
 |Role Management|Role|Authorization and settings \ Authorization (Read and manage)|
 |Search and Purge|Role|Security operations \ Security data \ Email advanced actions (manage)|
