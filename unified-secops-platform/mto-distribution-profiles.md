@@ -36,7 +36,7 @@ The following table lists the requirements for using content distribution in the
 | Requirement | Description |
 |:---|:---|
 |**Licensing requirements** | Your organization must have a subscription to Microsoft 365 E5 or Office E5. To distribute Microsoft Sentinel content, you must have a Microsoft Sentinel subscription|
-|**Permissions** | Users must be assigned the correct roles and permission at the individual tenant level to view and manage the associated data in multitenant management. <br/> Access to content distribution is granted through the Security settings (manage) or Security Data Basic (read) permission in [Microsoft Defender XDR Unified role-based access control (URBAC)](/defender-xdr/manage-rbac). By default, both of these roles are assigned to the **Security Administrator** and **Security Reader** Microsoft Entra built-in roles.|
+|**Permissions** | Users must be assigned the correct roles and permission at the individual tenant level to view and manage the associated data in multitenant management. <br/> Access to content distribution is granted through the Security settings (manage) or Security Data Basic (read) permission in [Microsoft Defender unified role-based access control (URBAC)](/defender-xdr/manage-rbac). By default, both of these roles are assigned to the **Security Administrator** and **Security Reader** Microsoft Entra built-in roles.|
 |**Delegate access** |Delegated access via [Azure B2B](/entra/external-id/add-users-administrator) or [GDAP (CSP Parters only)](/microsoft-365/lighthouse/m365-lighthouse-setup-gdap) must be obtained for at least one other tenant.|
 
 ## Create distribution profiles

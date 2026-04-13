@@ -191,7 +191,7 @@ Permissions for managing Defender for Office 365 in the Microsoft Defender porta
 
 The following permissions (roles and role groups) are available in Defender for Office 365 and can be used to grant access to security team members:
 
-- **Microsoft Defender XDR Unified role based access control (RBAC)**: A single permissions management experience that provides one central location for administrators to control user permissions across different security solutions. For more information, see [Microsoft Defender XDR Unified RBAC](/defender-xdr/manage-rbac).
+- **Microsoft Defender unified role based access control (RBAC)**: A single permissions management experience that provides one central location for administrators to control user permissions across different security solutions. For more information, see [Microsoft Defender unified RBAC](/defender-xdr/manage-rbac).
   - _Read access for email and Teams message headers_: **Security operations/Raw data (email & collaboration)/Email & collaboration metadata (read)**.
   - _Preview and download email messages_: **Security operations/Raw data (email & collaboration)/Email & collaboration content (read)**.
   - _Remediate malicious email_: **Security operations/Security data/Email & collaboration advanced actions (manage)**.

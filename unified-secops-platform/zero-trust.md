@@ -62,7 +62,7 @@ The Defender portal also provides a comprehensive set of tools to help you imple
 
 For more information, see:
 
-- [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac)
+- [Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/manage-rbac)
 - [What is Microsoft Entra Privileged Identity Management?](/entra/id-governance/privileged-identity-management/pim-configure)
 - [Conditional Access app control in Microsoft Defender for Cloud Apps](/defender-cloud-apps/proxy-intro-aad)
 - [Start planning multicloud protection with Defender for Cloud](/azure/defender-for-cloud/plan-multicloud-security-get-started)
