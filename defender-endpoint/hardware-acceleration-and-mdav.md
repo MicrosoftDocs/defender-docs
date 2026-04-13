@@ -14,7 +14,6 @@ ms.collection:
 ms.localizationpriority: medium
 ms.custom: partner-contribution
 ROBOTS: NOINDEX, NOFOLLOW
-f1 keywords: NOCSH
 appliesto:
   - Microsoft Defender for Individuals
   - Microsoft Defender Antivirus

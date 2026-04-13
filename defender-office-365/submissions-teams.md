@@ -1,6 +1,5 @@
 ---
 title: User reported settings in Teams
-  - NOCSH
 author: chrisda
 ms.author: chrisda
 ms.topic: how-to

@@ -1,6 +1,5 @@
 ---
 title: Security Operations Guide for Teams protection
-  - NOCSH
 author: chrisda
 ms.author: chrisda
 ms.topic: overview

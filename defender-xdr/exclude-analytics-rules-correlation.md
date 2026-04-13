@@ -2,7 +2,6 @@
 title: Manage analytics rule correlation settings in Microsoft Defender XDR
 description: Learn how to exclude specific analytics rules from the correlation engine to maintain static incident grouping behavior similar to Microsoft Sentinel.
 ms.service: defender-xdr
-  - NOCSH
 ms.author: monaberdugo
 author: mberdugo
 ms.localizationpriority: medium

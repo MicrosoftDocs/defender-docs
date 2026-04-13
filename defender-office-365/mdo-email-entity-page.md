@@ -1,6 +1,5 @@
 ---
 title: The Email entity page in Defender for Office 365
-- NOCSH
 author: chrisda
 ms.author: chrisda
 ms.date: 04/07/2026

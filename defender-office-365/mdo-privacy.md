@@ -1,6 +1,5 @@
 ---
 title: Privacy in Microsoft Defender for Office 365
-- NOCSH
 author: chrisda
 ms.author: chrisda
 ms.date: 04/01/2026

@@ -10,7 +10,6 @@ ms.date: 10/20/2025
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.custom: partner-contribution
-f1 keywords: NOCSH
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

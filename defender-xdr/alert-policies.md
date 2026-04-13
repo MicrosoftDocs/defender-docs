@@ -1,6 +1,5 @@
 ---
 title: Alert policies in the Microsoft Defender portal
-- NOCSH
 ms.author: guywild
 author: guywi-ms
 manager: deniseb
