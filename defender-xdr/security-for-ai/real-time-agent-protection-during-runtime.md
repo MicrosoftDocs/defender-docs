@@ -64,7 +64,7 @@ To enable these extended capabilities:
 
 ## Investigate AI agent threats and hunt for risks using Advanced Hunting
 
-Microsoft Defender correlates AI agent alerts—including near‑real‑time detections and real‑time protection block events—with signals from other Defender products into Microsoft Defender XDR incidents.
+Microsoft Defender correlates AI agent alerts - including near‑real‑time detections and real‑time protection block events - with signals from other Microsoft Entra and Microsoft Purview into incidents.
 
 Security analysts can use the incident graph and investigation experience to understand the full context of a potential attack, including relationships between involved entities and the blast radius of AI agent threats. For more information, see [Incidents and alerts in the Microsoft Defender portal](/defender-xdr/incidents-overview).
 
