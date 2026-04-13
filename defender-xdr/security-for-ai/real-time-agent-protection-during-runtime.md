@@ -32,7 +32,7 @@ Real-time protection focuses on high-confidence threats, including:
 - Credential leakage through legitimate channels such as email or external APIs  
 
 > [!NOTE]
-> Microsoft Defender's real-time protection evaluates agent-initiated tool invocations at runtime. It does not inspect raw model prompts or responses outside the tool-execution path.
+> Microsoft Defender's real-time protection evaluates agent-initiated tool invocations at runtime. It doesn't inspect raw model prompts or responses outside the tool-execution path.
 
 When Microsoft Defender blocks an action, it generates a detailed alert that explains what was blocked, why the action was considered risky, and which agent, user, and tool were involved. This ensures security teams can investigate attempted behavior using familiar Defender workflows.
 
