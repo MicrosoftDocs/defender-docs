@@ -1,15 +1,11 @@
 ---
 title: CloudStorageAggregatedEvents table in the advanced hunting schema
 description: Learn about the CloudStorageAggregatedEvents table in the advanced hunting schema, which contains information about storage activity and related events.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3

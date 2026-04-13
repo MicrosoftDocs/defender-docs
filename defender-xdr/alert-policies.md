@@ -1,21 +1,15 @@
 ---
 title: Alert policies in the Microsoft Defender portal
-f1.keywords:
-- NOCSH
 ms.author: guywild
 author: guywi-ms
 manager: deniseb
 ms.date: 03/31/2026
-audience: Admin
 ms.topic: article
 ms.service: defender-xdr
 ms.localizationpriority: medium
 ms.collection:
 - tier1
 - M365-security-compliance
-search.appverid:
-- MET150
-- MOE150
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE

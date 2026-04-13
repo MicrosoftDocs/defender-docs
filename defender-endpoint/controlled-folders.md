@@ -1,4 +1,4 @@
-﻿---
+---
 title: Protect important folders from ransomware from encrypting your files with controlled folder access
 description: Files in default folders can be protected from changes through malicious apps. Prevent ransomware from encrypting your files.
 ms.service: defender-endpoint
@@ -6,7 +6,6 @@ ms.localizationpriority: medium
 ms.date: 10/20/2025
 author: paulinbar
 ms.author: painbar
-audience: ITPro
 ms.reviewer: sugamar 
 ms.custom: asr
 ms.subservice: asr
@@ -15,7 +14,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

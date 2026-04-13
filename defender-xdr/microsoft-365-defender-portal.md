@@ -1,14 +1,10 @@
 ---
 title: Microsoft Defender XDR in the Microsoft Defender portal
 description: Learn about Microsoft Defender XDR and how other services complement in the Microsoft Defender portal.
-search.appverid: met150
 ms.service: defender-xdr
-f1.keywords:
-  - NOCSH
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
