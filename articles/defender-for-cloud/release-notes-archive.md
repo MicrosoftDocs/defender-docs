@@ -4224,7 +4224,7 @@ Updates in February include:
 
 Defender for Containers previously only protected Kubernetes workloads running in Azure Kubernetes Service. We've now extended the protective coverage to include Azure Arc-enabled Kubernetes clusters.
 
-Learn how to [set up your Kubernetes workload protection](kubernetes-workload-protections.md#set-up-your-workload-protection) for AKS and Azure Arc enabled Kubernetes clusters.
+Learn how to [set up your Kubernetes workload protection](kubernetes-workload-protections.md) for AKS and Azure Arc enabled Kubernetes clusters.
 
 ### Native CSPM for GCP and threat protection for GCP compute instances
 
