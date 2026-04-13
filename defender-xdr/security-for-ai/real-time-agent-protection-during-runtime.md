@@ -70,4 +70,14 @@ Security analysts can use the incident graph and investigation experience to und
 
 Advanced Hunting in Microsoft Defender enables security teams to query AI agent activity alongside other security data using Kusto Query Language (KQL). This supports proactive threat hunting, incident investigation, and root‑cause analysis across agents, applications, identities, and devices.
 
+
+For example, use Advanced Hunting to:
+- Trace specific agent tool invocations and correlate them with related alerts or block events
+- Investigate the root cause and scope of a detected AI agent threat
+- Identify anomalous execution patterns or risky agent behavior across environments
+- Build custom detection rules based on agent activity signals
+
+
 For deeper investigation and more flexible hunting scenarios, you can enable the Microsoft 365 app connector to collect detailed audit logs for AI agent actions. These audit logs provide a record of agent behavior and can be queried and correlated with other Defender data in Advanced Hunting. For more information, see [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#connect-microsoft-365-to-microsoft-defender-for-cloud-apps).
+
+These audit logs are recorded in the `CloudAppEvents` table and can be queried and correlated with other Defender data in Advanced Hunting.
