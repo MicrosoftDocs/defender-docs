@@ -22,7 +22,9 @@ After Azure Policy for Kubernetes is deployed, Defender for Cloud generates data
 To begin, make sure that:
 
 - [Defender for Containers is enabled on your subscription](defender-for-containers-enable-portal.md).
+
 - You have added the [required FQDN/application rules for Azure policy](/azure/aks/outbound-rules-control-egress#azure-policy).
+
 - (For non AKS clusters) Your Kubernetes cluster is [connected to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
 
 ## Deploy Azure Policy for Kubernetes by remediating recommendations
