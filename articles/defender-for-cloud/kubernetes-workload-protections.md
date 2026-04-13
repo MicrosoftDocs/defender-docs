@@ -158,7 +158,7 @@ To enforce a recommendation:
 
 1. Open the recommendation details page.
 
-1. In the **Take action** tab, select **Deny**.
+1. On the **Take action** tab, select **Deny**.
 
    :::image type="content" source="./media/kubernetes-workload-protections/enforce-workload-protection-example.png" alt-text="Screenshot showing the Deny option for Azure Policy parameter." lightbox="media/kubernetes-workload-protections/enforce-workload-protection-example.png":::
 
