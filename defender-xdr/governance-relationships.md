@@ -1,25 +1,27 @@
 ---
-title: Configure delegated access with GDAP for multitenant organizations
-description: Learn how to set up granular delegated admin privileges (GDAP) for managing multiple tenants in Microsoft Defender.
+title: Configure delegated access with governance relationships for multitenant organizations
+description: Learn how to set up governance relationships for managing multiple tenants in Microsoft Defender.
 ms.service: defender-xdr
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: how-to
 ms.date: 04/14/2026
+
+#customer-intent: As a security administrator for a managed security service provider (MSSP), I want to configure delegated access to my customers' tenants through governance relationships, so that I can manage their security operations without needing full administrative access.
 ---
 
 # Configure delegated access with governance relationships for multitenant organizations (preview)
 
-This article explains how to configure granular delegated admin privileges (GDAP) for multitenant organizations and managed security service providers (MSSPs) to manage delegated access to customer tenants through the Microsoft Defender portal.
+This article explains how to configure governance relationships for multitenant organizations and managed security service providers (MSSPs) to manage delegated access to customer tenants through the Microsoft Defender portal.
 
 > [!IMPORTANT]
 > This feature is currently in preview.
 
 ## Overview
 
-GDAP (Granular Delegated Admin Privileges) enables governing tenants to manage security operations across multiple customer tenants with fine-grained role assignments. This capability supports multitenant organizations (MTOs) and MSSPs that need to provide security services across multiple Microsoft Entra tenants.
+Governance relationships enable governing tenants to manage security operations across multiple customer tenants with fine-grained role assignments. This capability supports multitenant organizations (MTOs) and MSSPs that need to provide security services across multiple Microsoft Entra tenants.
 
-This is the same GDAP model used in Microsoft Entra ID for delegating administrative access, but extended to support Microsoft Defender XDR workloads. By configuring GDAP for Microsoft Defender, you can assign specific security roles to users in the governing tenant, allowing them to manage security incidents, alerts, and configurations in the governed tenant without granting full administrative access.
+This is the same governance relationships model used in Microsoft Entra ID for delegating administrative access, but extended to support Microsoft Defender XDR workloads. By configuring governance relationships for Microsoft Defender, you can assign specific security roles to users in the governing tenant, allowing them to manage security incidents, alerts, and configurations in the governed tenant without granting full administrative access.
 
 ### Key concepts
 
@@ -123,7 +125,7 @@ After receiving the invitation, the governing tenant creates a relationship temp
 
 1. Select the governed tenant that invited you, then select **Submit**.
 
-   :::image type="content" source="media/governance-relationships/submit-request.png" alt-text="Screenshot showing the GDAP request submission.":::
+   :::image type="content" source="media/governance-relationships/submit-request.png" alt-text="Screenshot showing the governance relationships request submission.":::
 
 ### Step 3: Approve access request in governed tenant
 
@@ -184,7 +186,7 @@ Follow these steps to grant Microsoft Sentinel permissions to your delegated acc
 
 **Symptom**: Your security group doesn't appear in the list when creating a relationship template.
 
-**Cause**: Only security groups that meet specific criteria are supported for GDAP delegation.
+**Cause**: Only security groups that meet specific criteria are supported for governance relationships delegation.
 
 **Resolution**: Ensure your security group meets the following requirements:
 
@@ -192,7 +194,7 @@ Follow these steps to grant Microsoft Sentinel permissions to your delegated acc
 - IsAssignableToRole property is set to true
 - Not a Microsoft 365 group (unified group)
 
-Security groups that don't meet these criteria aren't supported for GDAP delegation.
+Security groups that don't meet these criteria aren't supported for governance relationships delegation.
 
 ## Related content
 
