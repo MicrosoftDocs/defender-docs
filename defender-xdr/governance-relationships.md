@@ -36,8 +36,9 @@ This is the same governance relationships model used in [Microsoft Entra ID](/en
 Before you configure delegated access, ensure you meet the following requirements:
 
 - Both tenants require at least one Microsoft Entra ID P1 license.
-- Both tenants require at least one Microsoft 365 E3/E5 license or Microsoft Sentinel enabled in Microsoft Defender.
+- Both tenants require at least one Microsoft 365 E5 license or Microsoft Sentinel enabled in Microsoft Defender.
 - A user with the [Tenant Governance Relationship Administrator](/entra/identity/role-based-access-control/permissions-reference#tenant-governance-relationship-administrator) role in the governing tenant.
+- To send an invitation from the governed tenant, the user must have the [Tenant Governance Administrator](/entra/identity/role-based-access-control/permissions-reference#tenant-governance-administrator) role.
 
 ## Enable tenant governance settings
 
@@ -45,7 +46,7 @@ Before you can configure delegated access, you must enable your tenant to receiv
 
 ### Enable governance invitations in Microsoft Entra Admin Center (recommended)
 
-1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com).
+To enable governance invitations from the governing tenant, follow these steps:
 
 1. Navigate to **Tenant Governance** > **Tenant Governance settings**.
 
