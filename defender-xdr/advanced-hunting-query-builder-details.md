@@ -1,15 +1,11 @@
 ---
 title: Supported data types and filters in guided mode for hunting in Microsoft Defender XDR
 description: Refine your query by using the different guided mode capabilities in advanced hunting in Microsoft Defender XDR.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - m365-security
   - m365initiative-m365-defender

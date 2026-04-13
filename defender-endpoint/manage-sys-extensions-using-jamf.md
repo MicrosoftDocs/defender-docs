@@ -6,14 +6,12 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: joshbregman
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-macos
 ms.topic: how-to
 ms.subservice: macos
-search.appverid: met150
 ms.date: 03/26/2025
 ---
 

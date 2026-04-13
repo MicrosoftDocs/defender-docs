@@ -2,12 +2,9 @@
 title: Data retention and data security in Microsoft Defender XDR
 description: Describes data retention, security, and privacy of the service.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -15,9 +12,6 @@ ms.collection:
 - essentials-privacy
 - essentials-compliance
 ms.topic: concept-article
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 08/24/2025
 appliesto: 
 - Microsoft Defender XDR 

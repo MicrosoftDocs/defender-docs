@@ -6,14 +6,12 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
 ms.topic: article
 ms.subservice: linux
-search.appverid: met150
 ms.date: 03/12/2026
 ---
 

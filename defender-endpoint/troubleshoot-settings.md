@@ -1,4 +1,4 @@
-﻿---
+---
 title: Troubleshoot Microsoft Defender Antivirus settings
 description: Find out where settings for Microsoft Defender Antivirus are coming from.
 author: chrisda
@@ -11,9 +11,6 @@ ms.subservice: ngp
 ms.localizationpriority: medium
 ms.collection: # Useful for querying on a set of strategic or high-priority content.
 ms.custom: partner-contribution
-search.appverid: MET150
-f1.keywords: NOCSH
-audience: ITPro
 appliesto:
 - Microsoft Defender for Business
   - Microsoft Defender for Individuals

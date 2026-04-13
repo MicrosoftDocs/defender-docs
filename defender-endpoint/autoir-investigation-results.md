@@ -1,15 +1,11 @@
-﻿---
+---
 title: View the details and results of an automated investigation
 description: During and after an automated investigation, you can view the results and key findings
-search.appverid: met150
-f1.keywords:
-- NOCSH
 author: chrisda
 ms.author: chrisda
 ms.service: defender-endpoint
 ms.subservice: edr
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3

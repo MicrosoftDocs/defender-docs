@@ -219,7 +219,7 @@ items:
       href: troubleshoot-policies.md
   - name: Configure threat protection
     items:
-    - name: Detect suspicious user activity with UEBA
+    - name: Detect suspicious user activity with behavioral analytics (UEBA)
       href: tutorial-suspicious-activity.md
     - name: Create activity policies
       href: user-activity-policies.md

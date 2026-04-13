@@ -2,12 +2,9 @@
 title: Hunting graph in advanced hunting
 description: Learn about the hunting graph in Microsoft Defender and how to use it to rendering threat scenarios as interactive graphs
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - m365-security
   - m365initiative-m365-defender
@@ -20,7 +17,6 @@ ms.topic: overview
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-search.appverid: met150
 ms.date: 03/31/2026
 
 ---

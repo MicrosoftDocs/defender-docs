@@ -5,7 +5,6 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -13,7 +12,6 @@ ms.custom:
 ms.topic: how-to
 ms.date: 03/02/2025
 ms.reviewer: 
-search.appverid: met150
 appliesto:
 - Microsoft Defender for Endpoint Plan 2
 - Microsoft Defender XDR

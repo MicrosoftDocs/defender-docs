@@ -2,21 +2,15 @@
 title: Security Copilot Phishing Triage Agent in Microsoft Defender
 description: Learn about the Security Copilot Phishing Triage Agent, including requirements for setup and providing feedback to the agent.
 ms.service: defender-xdr
-f1.keywords:
-- NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 - security-copilot
 - magic-ai-copilot 
 ms.topic: how-to
-search.appverid:
-- MOE150
-- MET150
 ms.date: 02/22/2026
 ms.update-cycle: 180-days
 appliesto:

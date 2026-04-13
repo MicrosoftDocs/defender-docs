@@ -1,7 +1,6 @@
 ---
 title: Microsoft Defender for Endpoint release notes archive
 description: Archived platform-specific build and version history for Microsoft Defender for Endpoint on Windows, macOS, and Linux.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: reference
 ms.author: lwainstein
@@ -9,7 +8,6 @@ author: limwainstein
 ms.localizationpriority: medium
 ms.date: 02/18/2026
 ai-usage: ai-assisted
-audience: ITPro
 ms.collection:
 - m365-security
 - tier1
