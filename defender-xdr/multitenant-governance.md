@@ -8,7 +8,7 @@ ms.topic: how-to
 ms.date: 11/19/2024
 ---
 
-# Configure delegated access with GDAP for multitenant organizations (preview)
+# Configure delegated access with governance relationships for multitenant organizations (preview)
 
 This article explains how to configure granular delegated admin privileges (GDAP) for multitenant organizations and managed security service providers (MSSPs) to manage delegated access to customer tenants through the Microsoft Defender portal.
 
@@ -19,11 +19,13 @@ This article explains how to configure granular delegated admin privileges (GDAP
 
 GDAP (Granular Delegated Admin Privileges) enables governing tenants to manage security operations across multiple customer tenants with fine-grained role assignments. This capability supports multitenant organizations (MTOs) and MSSPs that need to provide security services across multiple Microsoft Entra tenants.
 
+This is the same GDAP model used in Microsoft Entra ID for delegating administrative access, but extended to support Microsoft Defender XDR workloads. By configuring GDAP for Microsoft Defender, you can assign specific security roles to users in the governing tenant, allowing them to manage security incidents, alerts, and configurations in the governed tenant without granting full administrative access.
+
 ### Key concepts
 
-- **Governing tenant**: The home tenant that manages access to other tenants (also called "home tenant" or "managing tenant")
-- **Governed tenant**: The customer tenant that grants access to the governing tenant (also called "target tenant" or "managed tenant")
-- **GDAP**: Granular Delegated Admin Privileges - a permission model that allows delegated access with specific role assignments
+- **Governing tenant**: The home tenant that manages access to other tenants (also called *home tenant* or *managing tenant*)
+- **Governed tenant**: The customer tenant that grants access to the governing tenant (also called *target tenant* or *managed tenant*)
+- **Governance relationship**: directional connection between two Microsoft Entra tenants. One tenant acts as the *governing* tenant, and the other acts as the *governed* tenant.
 - **CSP**: Cloud Solution Provider - Microsoft partners who sell cloud services
 
 ## Prerequisites
@@ -32,10 +34,7 @@ Before you configure delegated access, ensure you meet the following requirement
 
 - Both tenants require at least one Microsoft Entra ID P1 license.
 - Both tenants require at least one Microsoft 365 E3/E5 license or Microsoft Sentinel enabled in Microsoft Defender.
-- Both tenants need access to Microsoft Defender XDR. Validate access by confirming you can view incidents in the portal.
-- A user with the Global Administrator role in the governing tenant.
-- A user with the Global Administrator role in the governed tenant.
-- Governance relationships enabled in the governing tenant.
+- A user with the Global Administrator (?) role in the governing tenant.
 
 ## Enable tenant governance settings
 
@@ -78,11 +77,11 @@ Content-Type: application/json
 
 ## Set up delegated access
 
-The GDAP setup process involves three steps: the governed tenant sends an invitation, the governing tenant creates and sends an access request, and the governed tenant approves the request.
+The tenant governance setup process involves three steps: the governed tenant sends an invitation, the governing tenant creates and sends an access request, and the governed tenant approves the request.
 
 ### Step 1: Send invitation from governed tenant
 
-The governed tenant initiates the relationship by sending an invitation to the governing tenant. This step is required for non-CSP scenarios to prevent unauthorized access.
+The governed tenant initiates the relationship by sending an invitation to the governing tenant.
 
 1. In the governed tenant, sign in to the Microsoft Defender portal.
 
@@ -102,21 +101,21 @@ The governed tenant initiates the relationship by sending an invitation to the g
 
 After receiving the invitation, the governing tenant creates a relationship template that defines delegated access permissions.
 
-1. In the governing tenant, sign in to the Microsoft Defender portal.
+1. In the governing tenant, sign in to the Microsoft Defender MTO portal.
 
-1. Navigate to **System** > **Permissions** > **Delegated Access**.
+1. Navigate to **System** > **Delegated Access**.
 
-1. Select **Create relationship template**.
+1. Select **Create access template**.
 
    :::image type="content" source="media/multitenant-governance/access-template.png" alt-text="Screenshot of create access template interface.":::
 
-1. Define the relationship template with the following information:
+1. Define the access template with the following information:
 
    - **Template name**: A descriptive name for this access template
    - **Microsoft Entra built-in roles**: Select one or more roles to assign
    - **Security groups**: Select security groups from your governing tenant that will receive the assigned roles
 
-   :::image type="content" source="media/multitenant-governance/define-access-template.png" alt-text="Screenshot showing fields for defining the relationship template." lightbox="media/multitenant-governance/define-access-template.png":::
+   :::image type="content" source="media/multitenant-governance/define-access-template.png" alt-text="Screenshot showing fields for defining the access template." lightbox="media/multitenant-governance/define-access-template.png":::
 
 1. Select **Send relationship request**.
 
@@ -140,13 +139,12 @@ The governed tenant administrator reviews and approves the delegated access requ
 
 1. After approval, you'll see a confirmation message.
 
-   :::image type="content" source="media/multitenant-governance/request-approved.png" alt-text="Screenshot of confirmation that delegated access was approved.":::
-
 After the approval is complete, users in the specified security groups receive permissions in the governed tenant based on the defined roles.
 
-## Configure GDAP permissions for Microsoft Sentinel
+## Configure tenant governance permissions for Microsoft Sentinel
 
-When GDAP access is established between tenants, synchronized security groups appear as "remote tenant groups" in the governed tenant. You can assign these groups to Azure Resource Manager (ARM) resources to enable Microsoft Sentinel management capabilities.
+Security groups used in the relationship template are synchronized to the governed tenant as "remote tenant groups." You can assign these groups to Microsoft Sentinel roles in the governed tenant to enable multitenant management capabilities.
+You can assign these groups to Azure Resource Manager (ARM) resources to enable Microsoft Sentinel management capabilities.
 
 Assigning Microsoft Sentinel roles enables multitenant management features including:
 
@@ -159,8 +157,6 @@ Assigning Microsoft Sentinel roles enables multitenant management features inclu
 ### Assign permissions to Log Analytics workspace
 
 Follow these steps to grant Microsoft Sentinel permissions to your delegated access groups.
-
-#### Step 1: Assign ARM permissions
 
 1. In the governed tenant, sign in to the [Azure portal](https://portal.azure.com).
 
@@ -182,79 +178,7 @@ Follow these steps to grant Microsoft Sentinel permissions to your delegated acc
 
 1. Select **Review + assign** to complete the assignment.
 
-1. Verify the role assignments by returning to **Access Control (IAM)** and reviewing the role assignments list.
-
-   :::image type="content" source="media/multitenant-governance/validate-role.png" alt-text="Screenshot showing validated role assignments.":::
-
-#### Step 2: Add tenant to tenant groups
-
-1. Sign in to the governing tenant at [mto.security.microsoft.com](https://mto.security.microsoft.com).
-
-1. Navigate to **Multi-tenant governance** > **Tenant Groups**.
-
-1. Verify that the governed tenant is included in your tenant groups.
-
-#### Step 3: Add Sentinel workspace to Advanced Hunting
-
-1. Navigate to **Hunting** > **Advanced Hunting**.
-
-1. Select **Tenant Scope** to open the scope selector.
-
-   :::image type="content" source="media/multitenant-governance/advanced-hunting.png" alt-text="Screenshot of Advanced Hunting interface with tenant scope option." lightbox="media/multitenant-governance/advanced-hunting.png":::
-
-1. Select the governed tenant and the Log Analytics workspace.
-
-1. Select **Apply** to save your selection.
-
-   :::image type="content" source="media/multitenant-governance/tenant-scope.png" alt-text="Screenshot showing tenant scope selection interface.":::
-
-### Manage Microsoft Sentinel in the governed tenant
-
-After configuring permissions, you can manage Microsoft Sentinel directly from the governing tenant's Defender portal.
-
-#### Step 1: Switch to the governed tenant
-
-1. In the governing tenant's Defender portal, select the multitenant switcher.
-
-1. Select the governed tenant you want to manage.
-
-   :::image type="content" source="media/multitenant-governance/switch-view.png" alt-text="Screenshot of tenant switcher with available tenants.":::
-
-#### Step 2: Access Microsoft Sentinel
-
-1. Navigate to **Microsoft Sentinel** in the left navigation.
-
-1. You can now fully manage the Microsoft Sentinel instance in the governed tenant.
-
-   :::image type="content" source="media/multitenant-governance/tables.png" alt-text="Screenshot of Microsoft Sentinel data management interface." lightbox="media/multitenant-governance/tables.png":::
-
 ## Troubleshooting
-
-### Send relationship request option is unavailable
-
-**Symptom**: The **Send relationship request** option is greyed out, and you see an error message stating "Failed to load data. Please try again later."
-
-:::image type="content" source="media/multitenant-governance/relationship-request-disabled.png" alt-text="Screenshot showing disabled send relationship request option." lightbox="media\multitenant-governance\relationship-request-disabled.png":::
-
-**Cause**: This feature requires both Microsoft Entra ID and multitenant capabilities to be enabled for your tenant. The enrollment process can take up to 7 days to complete.
-
-**Resolution**:
-
-1. Press F12 to open browser developer tools.
-
-1. Navigate to the **Network** tab.
-
-1. Filter by `governancePolicyTemplates`.
-
-1. Refresh the page and check the response for error messages.
-
-   :::image type="content" source="media/multitenant-governance/error-messages.png" alt-text="Screenshot of browser developer tools showing enrollment error.":::
-
-The following table lists common error messages and their resolutions:
-
-| Error message | Resolution |
-|---|---|
-| Tenant XXXX-XXXX-XXXX-XXXXXXX is not allowlisted | Allow up to 7 days for the enrollment process to complete. If the issue persists, contact Microsoft Support. |
 
 ### Security group not displayed when creating a template
 
