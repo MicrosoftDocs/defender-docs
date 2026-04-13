@@ -27,7 +27,7 @@ To begin, make sure that:
 
 - (For non AKS clusters) Your Kubernetes cluster is [connected to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
 
-## Deploy Azure Policy for Kubernetes by remediating recommendations
+## Enable Azure Policy for Kubernetes by remediating recommendations
 
 If Azure Policy for Kubernetes isn't deployed or was turned off in the Defender for Containers plan settings, you can install it by remediating the relevant recommendation in Defender for Cloud.
 
@@ -53,7 +53,7 @@ If Azure Policy for Kubernetes isn't deployed or was turned off in the Defender 
 
 1. Repeat for each recommendation.
 
-## Review data plane hardening recommendations
+## Data plane hardening recommendations
 
 After you deploy Azure Policy for Kubernetes Defender for Cloud evaluates your cluster configuration and generates data plane hardening recommendations. This process can take up to 30 minutes.
 
