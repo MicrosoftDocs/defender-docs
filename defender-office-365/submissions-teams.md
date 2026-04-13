@@ -4,7 +4,6 @@ author: chrisda
 ms.author: chrisda
 ms.topic: how-to
 ms.localizationpriority: medium
-  - MET150
 ms.collection:
   - m365-security
   - tier1

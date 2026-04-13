@@ -7,7 +7,6 @@ ms.localizationpriority: medium
 ms.collection: 
   - m365-security
   - tier2
-  - MET150
 description: Admins can learn to identify the reasons why and how a phishing message what delivered in Microsoft 365, and what to do to prevent more phishing messages in the future.
 ms.service: defender-office-365
 ms.date: 07/02/2025

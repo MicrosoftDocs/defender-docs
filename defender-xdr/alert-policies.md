@@ -10,8 +10,6 @@ ms.localizationpriority: medium
 ms.collection:
 - tier1
 - M365-security-compliance
-- MET150
-- MOE150
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE

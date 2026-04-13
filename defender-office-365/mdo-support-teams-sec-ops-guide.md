@@ -4,8 +4,6 @@ author: chrisda
 ms.author: chrisda
 ms.topic: overview
 ms.localizationpriority: medium
-  - MET150
-  - MOE150
 ms.collection:
   - m365-security
   - tier1
