@@ -120,7 +120,7 @@ Reviewing events is handy when you're evaluating the features. You can enable au
 
 This section lists all the events, their associated feature or setting, and describes how to create custom views to filter to specific events.
 
-Get detailed reporting into events, blocks, and warnings as part of Windows Security if you have an E5 subscription and use [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md).
+For detailed reporting into detections, blocks and rule configuration accross your environment, use the [Attack surface reduction rules report](attack-surface-reduction-rules-report.md) in the Microsoft Defender XDR portal. This report is available with Microsoft Defender for Endpoint Plan 1 and Plan 2. You can also review attack surface reduction events locally through Windows Event Viewer.
 
 ### Use custom views to review attack surface reduction capabilities
 
