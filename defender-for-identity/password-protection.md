@@ -43,21 +43,9 @@ The page has four tabs:
 - **Leaked Credentials**: Shows accounts with credentials that were found outside your organization, for example on public paste sites or the dark web. From this tab, you can reset passwords or disable accounts, individually or in bulk.
 - **Exposed Passwords**: Shows accounts and settings that store or expose passwords in insecure ways, such as in plain text or in easily discoverable locations. Examples include clear-text credentials in Active Directory attributes (identified using AI-based detection) and reversible passwords in Group Policy Objects (GPOs).
 
-## Account information
-
-The **Password Hygiene**, **Leaked Credentials**, and **Exposed Passwords** tabs show account-level data with the following columns:
-
-| Column | Description |
-|---|---|
-| **Name** | The display name of the account. |
-| **SID** | The Security Identifier of the account. |
-| **Entity type** | The type of entity (for example, User or Computer). |
-| **Domain** | The Active Directory domain the account belongs to. |
-| **Service account type** | The type of service account, if applicable. |
-
 ## Policy information
 
-The **Password Policies** tab shows a different set of columns:
+The **Password Policies** tab shows:
 
 | Column | Description |
 |---|---|
@@ -69,6 +57,20 @@ The **Password Policies** tab shows a different set of columns:
 | **Password complexity** | Whether password complexity requirements are enabled. |
 | **Lockout threshold** | The number of failed sign-in attempts before the account is locked. |
 | **Lockout duration** | The duration of the account lockout after the threshold is reached. |
+
+## Account information
+
+The **Password Hygiene**, **Leaked Credentials**, and **Exposed Passwords** tabs show account-level data with this information:
+
+:::image type="content" source="media/investigate-passwords/password-protection-exposed-passwords.png" alt-text="Screenshot that shows the Password protection page with the Exposed passwords tab showing. ":::
+
+| Column | Description |
+|---|---|
+| **Name** | The display name of the account. |
+| **SID** | The Security Identifier of the account. |
+| **Entity type** | The type of entity (for example, User or Computer). |
+| **Domain** | The Active Directory domain the account belongs to. |
+| **Service account type** | The type of service account, if applicable. |
 
 ## Related content
 

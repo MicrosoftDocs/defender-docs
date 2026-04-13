@@ -34,7 +34,7 @@ To switch between domains when you're on the domain page, use the domain selecto
 
 ## Overview tab
 
-:::image type="content" source="media/investigate-domain/domain-page-overview.png" alt-text="Screenshot that shows the domain overview tab with domain details, deployment health, health score, and identity summary cards.":::
+:::image type="content" source="media/investigate-domain/domain-page-overview.png" alt-text="Screenshot that shows the domain overview tab with domain details, deployment health, health score, and identity summary cards." lightbox="media/investigate-domain/domain-page-overview.png":::
 
 The **Overview** tab provides a domain summary with the following sections:
 
@@ -51,6 +51,8 @@ The **Overview** tab provides a domain summary with the following sections:
 | **Group Policies** | Lists Group Policy Objects (GPOs) applied in the domain. Use this section to verify active policies and identify domains with no GPOs configured. |
 
 ## Incidents and alerts tab
+
+:::image type="content" source="media/investigate-domain/domain-page-incidents-alerts.png" alt-text="Screenshot that shows the Incidents and alerts tab of the domain page in Microsoft Defender." lightbox="media/investigate-domain/domain-page-incidents-alerts.png":::
 
 Shows all incidents and alerts connected to the domain. Data on this tab includes only incidents and alerts created on or after February 1, 2026.
 
@@ -72,7 +74,7 @@ The tab includes default filters for **Status** (New, In progress) and **Alert s
 
 Provides human-readable summaries of key Active Directory security policies in four cards. Use this tab to review critical Active Directory configurations and check whether they meet current security standards.
 
-:::image type="content" source="media/investigate-domain/domain-page-security-policies.png" alt-text="Screenshot that shows the Security policies tab of the Investigate domains page in Microsoft Defender.":::
+:::image type="content" source="media/investigate-domain/domain-page-security-policies.png" alt-text="Screenshot that shows the Security policies tab of the Investigate domains page in Microsoft Defender." lightbox="media/investigate-domain/domain-page-security-policies.png":::
 
 | Card | Details |
 |---|---|
@@ -95,6 +97,8 @@ Use this tab to review which domains trust each other and in which direction.
 
 ## Group Accounts tab
 
+:::image type="content" source="media/investigate-domain/domain-page-groups.png" alt-text="Screenshot that shows the Group Accounts tab of the domain page in Microsoft Defender." lightbox="media/investigate-domain/domain-page-groups.png":::
+
 Lists the groups in the domain. You can filter by tags, type, and scope. You can mark groups as sensitive to support exposure analysis and detect potential attack paths.
 
 | Column | Description |
@@ -108,6 +112,8 @@ Lists the groups in the domain. You can filter by tags, type, and scope. You can
 | **Description** | The description of the group. |
 
 ## Computer Accounts tab
+
+:::image type="content" source="media/investigate-domain/domain-page-computers.png" alt-text="Screenshot that shows the Computer Accounts tab of the domain page in Microsoft Defender." lightbox="media/investigate-domain/domain-page-computers.png":::
 
 Lists the computer accounts in the domain. You can filter by tags. You can mark computer accounts as sensitive to support exposure analysis and detect potential attack paths.
 
