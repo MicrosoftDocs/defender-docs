@@ -64,12 +64,14 @@ AI agents introduce unique security risks because of their ability to reason, in
 
 It’s critical to protect the generative AI models, services, and infrastructure that AI applications and agents depend on. Compromised models, insecure configurations, or exposed dependencies can introduce supply‑chain risks that affect multiple AI workloads.
 
+For information on enabling threat protection for AI infrastructure, see [Enable threat protection for AI services](/azure/defender-for-cloud/ai-onboarding).
+
 This table lists the Microsoft Defender capabilities that help secure generative AI models and applications:
 
 | Capability | Description | Learn more |
 |---|---|---|
-| **AI infrastructure discovery** | A unified view of your organization's AI infrastructure, including deployed models, services, and related AI resources. | [Discover generative AI workloads](/azure/defender-for-cloud/identify-ai-workload-model) |
-| **AI infrastructure security posture management** | Identify vulnerabilities and misconfigurations across AI artifacts, including models, dependencies, code repositories, and container images. <br><br> Use built‑in security recommendations and attack‑path analysis to prioritize remediation. <br><br> Continuously assess AI models for security risks such as malware, unsafe operators, serialization vulnerabilities, and exposed secrets throughout the AI lifecycle.  | [Enable threat protection for AI services](/azure/defender-for-cloud/ai-onboarding)  |
+| **AI infrastructure discovery** | A unified view of your organization's AI infrastructure, including deployed models, services, and related AI resources. | [AI security posture management](/azure/defender-for-cloud/ai-security-posture) |
+| **AI infrastructure security posture management** | Identify vulnerabilities and misconfigurations across AI artifacts, including models, dependencies, code repositories, and container images. <br><br> Use built‑in security recommendations and attack‑path analysis to prioritize remediation. <br><br> Continuously assess AI models for security risks such as malware, unsafe operators, serialization vulnerabilities, and exposed secrets throughout the AI lifecycle.  | [AI security posture management](/azure/defender-for-cloud/ai-security-posture) |
 | **Threat detection** | Detect threats targeting generative AI applications built with Microsoft Foundry, including suspicious prompt activity and abnormal execution behavior, with contextual signals surfaced in security alerts. | [Alerts for AI services](/azure/defender-for-cloud/alerts-ai-workloads) |
 | **Threat investigation and hunting** | Microsoft Defender XDR incident correlation and Advanced Hunting capabilities help defenders understand the full context and blast radius of AI infrastructure threats. | [Investigate incidents and alerts in the Microsoft Defender portal](/defender-xdr/incidents-overview) |
 
