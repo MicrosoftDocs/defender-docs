@@ -13,8 +13,6 @@ Kubernetes data plane hardening helps enforce secure configurations for workload
 
 In Microsoft Defender for Cloud, data plane hardening is implemented by using [Azure Policy](defender-for-cloud-glossary.md#azure-policy-for-kubernetes) for Kubernetes to evaluate and enforce these configurations. Azure Policy is deployed as part of Defender for Containers when automatic provisioning is enabled.
 
-If Azure Policy for Kubernetes is turned off in the Defender for Containers plan settings, you can deploy it by remediating the relevant recommendation. You can also deploy Azure Policy manually by using [Azure CLI](defender-for-containers-deploy-azure-cli.md) or [Helm](deploy-helm.md) if you didn't use automatic provisioning or if you excluded clusters from automatic provisioning.
-
 If Azure Policy for Kubernetes is turned off in the Defender for Containers plan settings, you can deploy it by remediating the relevant recommendation. You can also deploy Azure Policy manually by using [Azure CLI](defender-for-containers-deploy-azure-cli.md) or [Helm](deploy-helm.md) if you disabled automatic provisioning during enablement or excluded specific clusters from automatic provisioning.
 
 After Azure Policy for Kubernetes is deployed, Defender for Cloud generates data plane hardening recommendations based on your cluster configuration. This page shows how to review these recommendations, configure policy parameters, and enforce them on your clusters.
@@ -272,11 +270,8 @@ spec:
     targetPort: 9001
 ```
 
-## Next steps
+## Related content
 
-In this article, you learned how to configure Kubernetes data plane hardening.
+- [Enable Defender for Containers in Microsoft Defender for Cloud](defender-for-containers-enable-portal.md)
 
-For related material, see the following pages:
-
-- [Defender for Cloud recommendations for compute](recommendations-reference-compute.md)
-- [Alerts for AKS cluster level](alerts-containers.md)
+- [Deploy Defender for Containers components using Azure CLI](defender-for-containers-deploy-azure-cli.md)
