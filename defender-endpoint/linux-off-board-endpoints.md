@@ -20,7 +20,7 @@ ms.date: 03/23/2026
 
 # Offboard or uninstall Microsoft Defender for Endpoint on Linux
 
-This article explains how to offboard and/or uninstall Microsoft Defender for Endpoint on a Linux device.
+This article is intended for IT administrators and security professionals who need to offboard or uninstall Microsoft Defender for Endpoint from Linux servers. It explains the difference between offboarding and uninstalling, helps you decide which option is right for your scenario, and provides step-by-step instructions for each method. It also describes how offboarded and uninstalled devices appear in the Microsoft Defender portal.
 
 ## Overview
 
