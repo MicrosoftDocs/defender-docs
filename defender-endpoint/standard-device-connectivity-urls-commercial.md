@@ -11,15 +11,11 @@ ms.collection:
 - m365-security
 - tier1
 ms.reviewer: pahuijbr
-search.appverid: MET150
-audience: ITPro
-ms.date: 12/25/2025
+ms.date: 03/11/2026
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ---
 
 # Microsoft Defender for Endpoint standard connectivity URLs - commercial
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 This article includes a list of the standard connectivity URLs required to onboard and maintain devices in Microsoft Defender for Endpoint in commercial cloud environments.
 
@@ -56,10 +52,14 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|`winatp-gw-eus.microsoft.com`|Microsoft Defender for Endpoint Command and Control|Required|Yes|Yes|Yes|Yes|Yes||
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|`winatp-gw-cus3.microsoft.com`|Microsoft Defender for Endpoint Command and Control|Required|Yes|Yes|Yes|Yes|Yes||
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|`winatp-gw-eus3.microsoft.com`|Microsoft Defender for Endpoint Command and Control|Required|Yes|Yes|Yes|Yes|Yes||
+|Microsoft Defender for Endpoint|Azure UAE Central (AEC)|Microsoft Defender for Endpoint AEC|443|`winatp-gw-aec0a.microsoft.com`|Microsoft Defender for Endpoint Command and Control|Required|Yes|Yes|Yes|Yes|Yes||
+|Microsoft Defender for Endpoint|Azure UAE North (AEN)|Microsoft Defender for Endpoint AEN|443|`winatp-gw-aen0a.microsoft.com`|Microsoft Defender for Endpoint Command and Control|Required|Yes|Yes|Yes|Yes|Yes||
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|`automatedirstrprdcus.blob.core.windows.net`|Microsoft Defender for Endpoint AutoIR Sample Storage|Required|Yes|||Yes|Yes||
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|`automatedirstrprdeus.blob.core.windows.net`|Microsoft Defender for Endpoint AutoIR Sample Storage|Required|Yes|||Yes|Yes||
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|`automatedirstrprdcus3.blob.core.windows.net`|Microsoft Defender for Endpoint AutoIR Sample Storage|Required|Yes|||Yes|Yes||
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|`automatedirstrprdeus3.blob.core.windows.net`|Microsoft Defender for Endpoint AutoIR Sample Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|`automatedirstrprdaen0a.blob.core.windows.net`|Microsoft Defender for Endpoint AutoIR Sample Storage|Required|Yes|||Yes|Yes||
+|Microsoft Defender for Endpoint|AU|Microsoft Defender for Endpoint AU|443|`automatedirstrprdaec0a.blob.core.windows.net`|Microsoft Defender for Endpoint AutoIR Sample Storage|Required|Yes|||Yes|Yes||
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|`ussus1eastprod.blob.core.windows.net`|Malware Sample Submission Storage|Required|Yes|||Yes|Yes||
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|`ussus2eastprod.blob.core.windows.net`|Malware Sample Submission Storage|Required|Yes|||Yes|Yes||
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|`ussus3eastprod.blob.core.windows.net`|Malware Sample Submission Storage|Required|Yes|||Yes|Yes||
@@ -144,70 +144,17 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender for Endpoint|WW|`https://onboardingpackagescusprd.blob.core.windows.net`|
 |Microsoft 365 Defender|WW|`https://security.microsoft.com`|
 
-## Microsoft Defender processes
+## Client processes
 
-The processes in this section are exclusively for Microsoft Defender for Endpoint for Windows platforms, including down-level OS. This list doesn't account for any other Windows communications requirements.
+Because these Defender for Endpoint-related processes generate network communications, make sure that communications from these processes are not blocked.
 
-For more information on how to manage Windows connections, see [Manage connections from Windows 10 and Windows 11 operating system components to Microsoft services](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services).
+[!INCLUDE [Microsoft Defender for Endpoint processes](includes/streamlined-connectivity-processes.md)]
 
-While this list continues to be updated, Microsoft can't provide any guarantees on it being up-to-date with the latest product or OS changes. Customers should use this list as a baseline and conduct their testing before using it directly in production.
+## Change log
 
-## Windows 11, Windows 10, Windows Server 2022, and Windows Server 2019
-
-|Process|Path|Comment|
-|---|---|---|
-|MpCmdRun.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus command-line utility|
-|MpDlpCmd.exe|C:\Program Files\Windows Defender|Microsoft Endpoint Data Loss Prevention (DLP) command-line utility|
-|MsMpEng.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus service executable|
-|ConfigSecurityPolicy.exe|C:\Program Files\Windows Defender|Microsoft Security Client Policy Configuration Tool|
-|MpDefenderCoreService.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Core Service|
-|MpDlpService.exe|C:\Program Files\Windows Defender|Microsoft Purview Data Loss Prevention Service|
-|NisSrv.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network real-time Inspection|
-|MsSense.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint service executable|
-|SenseCnCProxy.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint communication module|
-|SenseIR.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense IR (Incident Response) module|
-|SenseCE.exe|C:\Program Files\Windows Defender Advanced Threat Protection\Classification|Microsoft Defender for Endpoint Sense CE (Classification Engine) module|
-|SenseSampleUploader.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sample Upload module|
-|SenseNdr.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense NDR (Network Detection and Response) module|
-|SenseSC.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense SC (Screenshot Capture) module|
-|SenseCM.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense CM (Configuration Management)|
-|SenseTVM.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense TVM (Threat Vulnerability Management)|
-
-## Windows Server 2016 and Windows Server 2012 R2 (Unified Agent)
-
-|Process|Path|Comment|
-|---|---|---|
-|MsSense.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint service executable|
-|SenseCnCProxy.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint communication module|
-|SenseIR.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense IR (Incident Response) module|
-|SenseSampleUploader.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sample Upload module|
-|SenseCM.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense CM (Configuration Management)|
-|MpCmdRun.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus command-line utility|
-|MsMpEng.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus service executable|
-|ConfigSecurityPolicy.exe|C:\Program Files\Windows Defender|Microsoft Security Client Policy Configuration Tool|
-|NisSrv.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network real-time Inspection|
-|SenseTVM.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense TVM (Threat Vulnerability Management)|
-
-## Windows 8.1 and Windows Server 2016 (MMA Based)
-
-|Process|Path|Comment|
-|---|---|---|
-|MonitoringHost.exe|C:\Program Files\Microsoft Monitoring Agent\Agent|Microsoft Monitoring Agent Service Host Process|
-|HealthService.exe|C:\Program Files\Microsoft Monitoring Agent\Agent|Microsoft Monitoring Agent Service|
-|TestCloudConnection.exe|C:\Program Files\Microsoft Monitoring Agent\Agent|Microsoft Monitoring Agent Cloud Connection Test utility|
-|MpCmdRun.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus command-line utility (SCEP)|
-|MsMpEng.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus service executable (SCEP)|
-|ConfigSecurityPolicy.exe|C:\Program Files\Windows Defender|Microsoft Security Client Policy Configuration Tool (SCEP)|
-|NisSrv.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network real-time Inspection (SCEP)|
-
-## Windows 7 SP1, Windows Server 2012 R2, and Windows Server 2008 R2 (MMA Based)
-
-|Process|Path|Comment|
-|---|---|---|
-|MonitoringHost.exe|C:\Program Files\Microsoft Monitoring Agent\Agent|Microsoft Monitoring Agent Service Host Process|
-|HealthService.exe|C:\Program Files\Microsoft Monitoring Agent\Agent|Microsoft Monitoring Agent Service|
-|TestCloudConnection.exe|C:\Program Files\Microsoft Monitoring Agent\Agent|Microsoft Monitoring Agent Cloud Connection Test utility|
-|MpCmdRun.exe|C:\Program Files\Microsoft Security Client|Microsoft Defender Antivirus command-line utility (SCEP)|
-|MsMpEng.exe|C:\Program Files\Microsoft Security Client|Microsoft Defender Antivirus service executable (SCEP)|
-|ConfigSecurityPolicy.exe|C:\Program Files\Microsoft Security Client|Microsoft Security Client Policy Configuration Tool (SCEP)|
-|NisSrv.exe|C:\Program Files\Microsoft Security Client|Microsoft Defender Antivirus Network real-time Inspection (SCEP)|
+|Date|Change Log|
+|---|---|
+|03/26/2026|Added new Azure UAE North (AEN) and Azure UAE Central (AEC) URLs to the [Microsoft Defender URLs](#microsoft-defender-urls) section: `winatp-gw-aec0a.microsoft.com`, `winatp-gw-aen0a.microsoft.com`, `automatedirstrprdaen0a.blob.core.windows.net`,`automatedirstrprdaec0a.blob.core.windows.net`.|
+|03/26/2026|Renamed **Microsoft Defender processes** section to **Client processes**, and aligned the content for all URL lists.|
+|16/06/2025|Corrected row 94, Defender Core service and ECS, to be listed as "Required". <br> Corrected row 93, `*.events.data.microsoft.com`, to be listed as "Required".|
+|22/01/2024|Updates for URLs required for Microsoft Defender Core service and DLP service processes: <br> Added new line 93 for 1DS URL in Microsoft Defender URLs. <br> Added new line 94 for ECS URL in Microsoft Defender URLs. <br> Added new line 8 for Defender Core Service in Microsoft Defender Processes. <br> Added new line 9 for Purview DLP Process.|

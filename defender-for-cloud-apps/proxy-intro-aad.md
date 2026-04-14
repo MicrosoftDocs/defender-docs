@@ -85,6 +85,8 @@ Defender for Cloud Apps identifies apps by using data from the cloud app catalog
 
 ## Scope of support for session control
 
+Session controls apply only to web browser–based access and are enforced during interactive browser sessions.
+
 Although session controls are built to work with any browser on any major platform on any operating system, we support the latest versions of the following browsers:
 
 - [Microsoft Edge](https://www.microsoft.com/edge)

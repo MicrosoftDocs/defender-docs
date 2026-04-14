@@ -1,10 +1,8 @@
 ---
 title: Trial user guide - Microsoft Defender for Endpoint
 description: Use this guide to get the most of your 90-day free trial. See how Defender for Endpoint can help prevent, detect, investigate, and respond to advanced threats.
-search.appverid: MET150 
 author: limwainstein
 ms.author: lwainstein
-audience: ITPro
 ms.topic: how-to
 ms.date: 06/19/2025
 ms.collection: 
@@ -14,7 +12,6 @@ ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
 ms.reviewer: 
-f1.keywords: NOCSH
 ---
 
 # Trial user guide: Microsoft Defender for Endpoint

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Partner applications in Microsoft Defender for Endpoint
 ms.reviewer:
 description: View supported partner applications to enhance the detection, investigation, and threat intelligence capabilities of the platform
@@ -7,12 +7,10 @@ ms.subservice: reference
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: article
-search.appverid: met150
 ms.date: 06/03/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

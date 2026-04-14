@@ -7,7 +7,7 @@ author: lwainstein
 ms.author: lwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 09/03/2025
+ms.date: 04/08/2026
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ---
 
@@ -17,6 +17,9 @@ This article describes releases of Microsoft Defender for Endpoint across Window
 
 To learn about Microsoft Defender for Endpoint features that aren't version-specific, see [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md).
 
+> [!NOTE]
+> Microsoft Defender for Endpoint requires that you update your list of allowed URLs from time to time. To review recent changes in the list of allowed URLs, see [Microsoft Defender for Endpoint streamlined connectivity URLs - commercial](streamlined-device-connectivity-urls-commercial.md#change-log)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 ## All supported releases by date
@@ -25,6 +28,10 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|macOS |101.26022.0020  |April 2026 |- Release version: 20.126022.20.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--april-2026--101260220020) |
+|macOS |101.26022.0018  |April 2026 |- Release version: 20.126022.18.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--april-2026--101260220018) |
+|Android |1.0.8805.0103  |April 2026 |- Build: 1.0.8805.0103<br>- Released: April 7, 2025 |[Release details and updates](#android--april-2026--platform-1088050103) |
+|Linux  |101.26021.0002  |March 2026 |- Release version: 30.126021.0002.0<br>- Engine version: 1.1.26010.1003<br>- Signature version: 1.445.553.0 |[Release details and updates](#linux--march-2026--101260210002) |
 |macOS |101.26012.0017  |March 2026 |- Release version: 20.126012.17.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--march-2026--101260120017) |
 |macOS |101.26012.0015  |March 2026 |- Release version: 20.126012.15.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--march-2026--101260120015) |
 |Linux  |101.26012.0007  |March 2026 |- Release version: 30.126012.0007.0<br>- Engine version: 1.1.25110.3002<br>- Signature version: 1.443.508.0 |[Release details and updates](#linux--march-2026--101260120007) |
@@ -67,9 +74,10 @@ This table includes supported releases for all supported platforms in the past s
 |Windows |10.8797.25857.1000  |May 2025 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#windows--may-2025--platform-108797258571000) |
 |Windows |10.8760.27617.1006  |July 2024 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#windows--july-2024--platform-108760276171006) |
 
+
 ## Windows releases
 
-This section covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. You can also check the file information section in the monthly cumulative rollup updates in the following articles: 
+This section covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. You can also check the file information section in the monthly cumulative rollup updates in the following articles:
 
 - [Windows 11 release information](/windows/release-health/windows11-release-information)
 - [Windows 10 updates](https://support.microsoft.com/topic/windows-10-update-history-8127c2c6-6edf-4fdf-8b9f-0f7be1ef3562)
@@ -126,6 +134,36 @@ To share feedback, open Defender for Endpoint on macOS and go to **Help > Send f
 To get latest features, configure your device for the Beta channel (formerly Insider-Fast) device.
 
 For known issues, see [macOS known issues](#macos-known-issues).
+
+### macOS | April-2026 | 101.26022.0020
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+|-----------------|----------------|-------------------|
+| 20.126022.20.0  | 1.1.25100.4000 | 1.439.74.0        |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+| ------------ | -------------- |
+| General      | Resolved a performance regression that caused degraded responsiveness and stability under high load conditions. |
+
+### macOS | April-2026 | 101.26022.0018
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+|-----------------|----------------|-------------------|
+| 20.126022.18.0  | 1.1.25100.4000 | 1.439.74.0        |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+| ------------ | -------------- |
+| General      | [packaging] macOS >= 14 supported only |
+| General      | CVE-2025-68664/5 LangGrinch (langchain vulnerability) |
+| General      | Bug and performance fixes |
 
 ### macOS | March-2026 | 101.26012.0017
 
@@ -284,7 +322,7 @@ Bug and performance fixes
 
 - In macOS Sequoia (version 15.0), if you have Network Protection enabled, you might see crashes of the network extension (NetExt). This issue results in intermittent network connectivity issues for end users. Upgrade to macOS Sequoia version 15.1 or newer.
 
-- On macOS Sequoia (Version 15.0 - 15.1.1), users might encounter prompts about incoming network connections from applications when the native firewall is active.  
+- On macOS Sequoia (Version 15.0 - 15.1.1), users might encounter prompts about incoming network connections from applications when the native firewall is active.
 
    ![Screenshot showing prompts about incoming network connections.](media/mac-whatsnew/image.png)
   
@@ -307,6 +345,20 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 >
 > If you have any concerns or need assistance during this transition, contact support.
 
+### Linux | March 2026 | 101.26021.0002
+
+#### Release details
+
+| Release version | Engine version | Signature version |
+| -------- | -------- |-------- |
+|30.126021.0002.0 |1.1.26010.1003 |1.445.553.0 |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|---------------|
+| Performance and stability | Improved agent performance and stability under sustained, high‑throughput workloads. |
+
 ### Linux | March 2026 | 101.26012.0007
 
 #### Release details
@@ -320,7 +372,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 | Feature area | Update summary |
 |--------------|---------------|
 | Vulnerability detection | Strengthened Linux security coverage for Python workloads by improving vulnerability detection across system, user, and virtual environments, expanding coverage for CVE‑2025‑68664/5 LangGrinch (langchain vulnerability).|
-| General | Bug and perfomance fixes |
+| General | Bug and performance fixes. <br> Real-time protection statistics collection is now disabled by default as a performance optimization; enable it on-demand when needed for diagnostics with `mdatp config real-time-protection-statistics --value enabled`.  |
 
 ### Linux | February 2026 | 101.25122.0004
 
@@ -353,6 +405,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 | Vulnerability detection | Enhanced vulnerability detection for React components through improved telemetry. This feature includes support for identifying [(CVE-2025-55182)](https://github.com/advisories/GHSA-fv66-9v8q-g76r), providing more comprehensive security coverage for React-based applications. |
 | Agent optimization | Agent process handling is now streamlined by removing the dependency on telemetryd_v2, enabling more efficient and consistent telemetry collection. This change applies to builds 101.24062.0001 and later, with no impact on functionality, data collection, or customer configurations. All features remain intact, and no customer action is required. |
 | Platform support | Added support for Debian 13. |
+| Critical fix | Fixed an issue where scanning of /dev/watchdog could trigger unexpected system reboots on Linux systems with watchdog enabled.|
 
 ### Linux | December 2025 | Platform: 101.25092.0005
 
@@ -466,6 +519,20 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 ## Android releases
 
 See the full list of [Android UX improvements](android-new-ux.md).
+
+### Android | April 2026 | Platform: 1.0.8805.0103
+
+#### Release details
+
+| Platform version| Release Date |
+| -------- | -------- |
+|1.0.8805.0103 |April 7, 2025 |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|---------------|
+| General | Performance improvement and bug fixes. |
 
 ### Android | December 2025 | Platform: 1.0.8412.0101
 

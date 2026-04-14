@@ -2,19 +2,15 @@
 title: Add Advanced Hunting community queries to Microsoft Defender XDR and Microsoft Sentinel
 description: Detailed steps to add Advanced Hunting community queries
 ms.service: defender-office-365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
 manager: bagol
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-guidance-templates
 - m365-security
 - tier3
 ms.topic: how-to
-search.appverid: met150
 ms.date: 06/12/2025
 ---
 

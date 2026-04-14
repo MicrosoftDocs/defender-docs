@@ -3,8 +3,8 @@ title: How Microsoft names threat actors
 description: Learn how Microsoft names threat actors and how to use the naming convention to identify associated intelligence.
 ms.mktglfcycl: secure
 ms.sitesec: library
-author: guywi-ms
-ms.author: guywild
+author: poliveria
+ms.author: pauloliveria
 ms.reviewer:
 ms.collection:
 - m365-security
@@ -12,8 +12,7 @@ ms.collection:
 ms.custom:
 - cx-ti
 ms.topic: article
-search.appverid: met150
-ms.date: 03/06/2026
+ms.date: 04/02/2026
 ---
 
 # How Microsoft names threat actors
@@ -137,7 +136,7 @@ The following table lists publicly disclosed threat actor names with their origi
 |Salmon Typhoon|China|SODIUM, MAVERICK PANDA, APT4|
 |Salt Typhoon|China|OPERATOR PANDA, GhostEmperor, FamousSparrow|
 |Sangria Tempest|Ukraine, Financially motivated|ELBRUS, CARBON SPIDER|
-|Sapphire Sleet|North Korea|COPERNICIUM, STARDUST CHOLLIMA, Genie Spider, BlueNoroff, CageyChameleon, CryptoCore|
+|[Sapphire Sleet](https://www.microsoft.com/en-us/security/blog/2026/04/01/mitigating-the-axios-npm-supply-chain-compromise/)|North Korea|COPERNICIUM, UNC1069, STARDUST CHOLLIMA, Alluring Pisces, BlueNoroff, CageyChameleon, CryptoCore|
 |Satin Typhoon|China|SCANDIUM, DYNAMITE PANDA, COMBINE, TG-0416, SILVERVIPER, Red Wraith, APT18, Elderwood Group, Wekby|
 |[Seashell Blizzard](https://www.microsoft.com/en-us/security/blog/2025/02/12/the-badpilot-campaign-seashell-blizzard-subgroup-conducts-multiyear-global-access-operation/)|Russia|IRIDIUM, VOODOO BEAR, BE2, UAC-0113, Blue Echidna, Sandworm, PHANTOM, BlackEnergy Lite, APT44|
 |[Secret Blizzard](https://www.microsoft.com/en-us/security/blog/2024/12/04/frequent-freeloader-part-i-secret-blizzard-compromising-storm-0156-infrastructure-for-espionage/)|Russia|KRYPTON, VENOMOUS BEAR, Uroburos, Snake, Blue Python, Turla, WRAITH, ATG26|
@@ -170,7 +169,7 @@ The following table lists publicly disclosed threat actor names with their origi
 |[Storm-1113](https://www.microsoft.com/en-us/security/blog/2023/12/28/financially-motivated-threat-actors-misusing-app-installer/)|Financially motivated|APOTHECARY SPIDER|
 |Storm-1125|Belarus|MoustachedBouncer|
 |[Storm-1152](https://blogs.microsoft.com/on-the-issues/2023/12/13/cybercrime-cybersecurity-storm-1152-fraudulent-accounts/)|Financially motivated||
-|[Storm-1175](https://www.microsoft.com/en-us/security/blog/2025/10/06/investigating-active-exploitation-of-cve-2025-10035-goanywhere-managed-file-transfer-vulnerability/)|China, Financially motivated||
+|[Storm-1175](https://www.microsoft.com/en-us/security/blog/2026/04/06/storm-1175-focuses-gaze-on-vulnerable-web-facing-assets-in-high-tempo-medusa-ransomware-operations/)|China, Financially motivated||
 |Storm-1194|Group in development|MONTI|
 |[Storm-1249](https://www.microsoft.com/en-us/security/blog/2025/05/29/defending-against-evolving-identity-attack-techniques/)|Group in development||
 |Storm-1516|Russia, Influence operations||
@@ -191,6 +190,7 @@ The following table lists publicly disclosed threat actor names with their origi
 |[Storm-2477](https://www.microsoft.com/en-us/security/blog/2025/05/21/lumma-stealer-breaking-down-the-delivery-techniques-and-capabilities-of-a-prolific-infostealer/)|Group in development|Lumma Stealer|
 |[Storm-2603](https://www.microsoft.com/en-us/security/blog/2025/07/22/disrupting-active-exploitation-of-on-premises-sharepoint-vulnerabilities/)|China||
 |[Storm-2657](https://www.microsoft.com/en-us/security/blog/2025/05/21/lumma-stealer-breaking-down-the-delivery-techniques-and-capabilities-of-a-prolific-infostealer/)|United States, Financially motivated|Payroll Pirates|
+|[Storm-2755](https://www.microsoft.com/en-us/security/blog/2026/04/09/investigating-storm-2755-payroll-pirate-attacks-targeting-canadian-employees/)|Financially motivated||
 |Strawberry Tempest|Financially motivated|DEV-0537, SLIPPY SPIDER, LAPSUS$|
 |Sunglow Blizzard||DEV-0665|
 |Swirl Typhoon|China|TELLURIUM, STALKER PANDA, Tick, Bronze Butler, REDBALDKNIGHT|

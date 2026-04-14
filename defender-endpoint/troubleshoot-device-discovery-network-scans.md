@@ -1,20 +1,16 @@
-﻿---
+---
 title: Troubleshoot device discovery and authenticated network scans in Microsoft Defender for Endpoint
 description: Learn how to troubleshoot device discovery and authenticated network scans in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: onboard
-f1.keywords:
-- NOCSH
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
-search.appverid: met150
 ms.date: 01/12/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
