@@ -83,23 +83,23 @@ The available ASR rules and their corresponding GUID values are described in the
 |[Block Win32 API calls from Office macros](#block-win32-api-calls-from-office-macros)[[⁹](#Rules9)]|92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b|
 |[Use advanced protection against ransomware](#use-advanced-protection-against-ransomware)⁷|c1db55ab-c21a-4637-bb3f-a12568109d35|
 
-<a id="#Rules1">¹</a> If you enabled [Local Security Authority (LSA) protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection), this ASR rule isn't required. For more information, see the [rule details](#block-credential-stealing-from-the-windows-local-security-authority-subsystem).
+<a id="Rules1">¹</a> If you enabled [Local Security Authority (LSA) protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection), this ASR rule isn't required. For more information, see the [rule details](#block-credential-stealing-from-the-windows-local-security-authority-subsystem).
 
-<a id="#Rules2">²</a> This ASR rule doesn't honor Microsoft Defender Antivirus exclusions. For information about configuring ASR per-rule exclusions, see [Configure attack surface reduction per-rule exclusions](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions).
+<a id="Rules2">²</a> This ASR rule doesn't honor Microsoft Defender Antivirus exclusions. For information about configuring ASR per-rule exclusions, see [Configure attack surface reduction per-rule exclusions](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions).
 
-<a id="#Rules3">³</a> This ASR rule doesn't honor Defender for Endpoint Indicators of Compromise (IOC) for files or certificates.
+<a id="Rules3">³</a> This ASR rule doesn't honor Defender for Endpoint Indicators of Compromise (IOC) for files or certificates.
 
-<a id="#Rules4">⁴</a> If you use Microsoft Configuration Manager to manage devices, we recommend extensive testing in **Audit** mode before you activate this ASR rule in **Block** or **Warn** mode. The Configuration Manager client relies heavily on WMI.
+<a id="Rules4">⁴</a> If you use Microsoft Configuration Manager to manage devices, we recommend extensive testing in **Audit** mode before you activate this ASR rule in **Block** or **Warn** mode. The Configuration Manager client relies heavily on WMI.
 
-<a id="#Rules5">⁵</a> This ASR rule doesn't support file and folder exclusions.
+<a id="Rules5">⁵</a> This ASR rule doesn't support file and folder exclusions.
 
-<a id="#Rules6">⁶</a> Currently, this ASR rule might not be available in the Intune ASR policy configuration due to a known backend issue. But, the rule is available through the [other available ASR policy configuration methods](attack-surface-reduction-rules-enable.md) or in existing Intune ASR policies created before the issue.
+<a id="Rules6">⁶</a> Currently, this ASR rule might not be available in the Intune ASR policy configuration due to a known backend issue. But, the rule is available through the [other available ASR policy configuration methods](attack-surface-reduction-rules-enable.md) or in existing Intune ASR policies created before the issue.
 
-<a id="#Rules7">⁷</a> To use this ASR rule, you must [enable cloud-delivered protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus).
+<a id="Rules7">⁷</a> To use this ASR rule, you must [enable cloud-delivered protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus).
 
-<a id="#Rules8">⁸</a> If you use Microsoft Configuration Manager to manage devices, don't use this ASR rule. The Configuration Manager client relies heavily on WMI.
+<a id="Rules8">⁸</a> If you use Microsoft Configuration Manager to manage devices, don't use this ASR rule. The Configuration Manager client relies heavily on WMI.
 
-<a id="#Rules9">⁹</a> This ASR rule doesn't honor Defender for Endpoint Indicators of Compromise (IOC) for certificates.
+<a id="Rules9">⁹</a> This ASR rule doesn't honor Defender for Endpoint Indicators of Compromise (IOC) for certificates.
 
 ## ASR rule modes
 
