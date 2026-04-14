@@ -1,10 +1,8 @@
 ---
 title: Configure delegated access with governance relationships for multitenant organizations
 description: Learn how to set up governance relationships for managing multiple tenants in Microsoft Defender.
-ms.service: defender-xdr
 ms.author: monaberdugo
 author: mberdugo
-ms.manager: orspo
 ms.topic: how-to
 ms.date: 04/14/2026
 
@@ -207,4 +205,4 @@ Security groups that don't meet these criteria aren't supported for governance r
 ## Related content
 
 - [Microsoft Entra governance relationships](/entra/id-governance/tenant-governance/governance-relationships)
-- [MSSP portal access](mssp-access.md)
+- [MSSP portal access](../defender-xdr/mssp-access.md)
