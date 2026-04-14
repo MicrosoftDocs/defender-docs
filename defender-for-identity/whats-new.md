@@ -23,6 +23,11 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+### April 2026
+
+### **Custom account correlation rules (Preview)**
+
+ Custom account correlation rules let you link accounts that belong to the same identity, such as privileged accounts with unique naming conventions. You can correlate accounts that don't share strong identifiers such as account ID, SID, object ID, or UPN by defining rules based on UPN prefix, UPN suffix, domain UPN, or employee ID. For more information, see [Create custom account correlation rules](custom-account-correlation-rules.md).
 
 ## March 2026
 
@@ -103,10 +108,6 @@ When you validate upgrades or troubleshoot, the last two numbers in the version 
 |Version number|Updates|
 |---|---|
 |2.255.19201.14651|This sensor update includes bug fixes.|
-
-### **Custom account correlation rules (Preview)**
-
- Custom account correlation rules let you link accounts that belong to the same identity, such as privileged accounts with unique naming conventions. You can correlate accounts that don't share strong identifiers such as account ID, SID, object ID, or UPN by defining rules based on UPN prefix, UPN suffix, domain UPN, or employee ID. For more information, see [Create custom account correlation rules](custom-account-correlation-rules.md).
 
 ### New Defender for Identity security alerts
 
