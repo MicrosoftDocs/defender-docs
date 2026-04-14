@@ -205,4 +205,4 @@ Security groups that don't meet these criteria aren't supported for governance r
 ## Related content
 
 - [Microsoft Entra governance relationships](/entra/id-governance/tenant-governance/governance-relationships)
-- [MSSP portal access](../defender-xdr/mssp-access.md)
+- [MSSP portal access](/defender-xdr/mssp-access)
