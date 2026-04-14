@@ -26,9 +26,9 @@ ms.date: 04/15/2026
 > [!IMPORTANT]
 > Some information relates to prereleased product that may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-The `AIAgentsInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about various entities—files, IP addresses, URLs, users, or devices—associated with alerts from Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps, Microsoft Defender for Identity, and Microsoft Agent 365. Use this reference to construct queries that return information from this table.
+The `AIAgentsInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about AI agents and their associated entities. Use this reference to construct queries that return information from this table.
 
-Various Microsoft Defender services and Microsoft Agent 365 populate this advanced hunting table. If your organization doesn't deploy these services, queries that use the table don't work or return any results. For more information, see:
+Microsoft Defender populates this table through connectors in Microsoft Defender for Cloud Apps Power Plaform and Microsoft Agent 365. If your organization doesn't deploy these services, queries that use the table don't work or return any results. For more information, see:
 - [Deploy services supported by Microsoft Defender XDR](deploy-supported-services.md)
 - [Overview of Microsoft Agent 365](/microsoft-agent-365/overview)
 
@@ -78,7 +78,13 @@ For information on other tables in the advanced hunting schema, [see the advance
 
 ## Sample queries
 
-### List all agents in Microsoft Agent 365
+The following sample queries return results depending on the specified registry source or connector:
+- To return results in Agent 365, add `RegistrySource == "A365"` in your query.
+- To return results for Defender for Cloud Apps Power Platform, use `RegistrySource == "PowerPlatform"`.
+
+### Queries that use Agent 365 as registry source
+
+#### List all agents in Agent 365
 This query identifies all agents that are published in Agent 365.
 
 ```kusto
@@ -102,7 +108,7 @@ AIAgentsInfo
     | project-away OwnerId, CreatorId, AccountObjectId, AccountObjectId1
   | project-reorder AgentCreationTime, AIAgentId, AIAgentName,  OwnerUpn, CreatorUpn, DeveloperName
 ```
-### Published agents without instructions
+#### Published agents without instructions
 
 This query identifies Agent 365 AI agents that are published but lack configured instructions. Missing instructions increase the risk of prompt injection attacks, where malicious input can influence the agent to deviate from its intended behavior. Without clear guidance, the agent may respond unpredictably or expose sensitive data.
 
@@ -135,7 +141,7 @@ AIAgentsInfo
 | project-reorder AgentCreationTime, AIAgentId, AIAgentName, Instructions, OwnerUpn, CreatorUpn ,DeveloperName
 ```
 
-### MCP tools configured
+#### MCP tools configured
 
 This query identifies Agent 365 AI agents that have Model Context Protocol (MCP) tools configured. MCP tools extend agent capabilities but introduce additional security considerations because they can execute advanced operations and interact with external resources. If misconfigured or unnecessary, these tools might increase the attack surface and expose sensitive data or functionality.
 
@@ -169,7 +175,7 @@ let IdentityIdtoUPN = materialize (
   | project-reorder AgentCreationTime, AIAgentId, AIAgentName, ActionType, OwnerUpn, CreatorUpn, DeveloperName
 ```
 
-### HTTP requests to non-HTTPS endpoints
+#### HTTP requests to non-HTTPS endpoints
 
 This query identifies Agent 365 AI agents that send HTTP requests to endpoints using non-HTTPS schemes. Communication over unencrypted HTTP exposes sensitive data in transit and increases the risk of interception or tampering. Attackers could exploit this vulnerability to capture credentials, session tokens, or other confidential information, leading to data breaches or unauthorized access.
 
@@ -206,7 +212,9 @@ AIAgentsInfo
   | project-reorder AgentCreationTime, AIAgentId, AIAgentName, Url, Scheme, OwnerUpn, CreatorUpn, DeveloperName
 ```
 
-### Agent with no authentication
+### Queries that use Power Platform as registry source 
+
+#### Agent with no authentication
 
 It's important to identify agents that don't use authentication mechanisms. These agents might pose significant risks to the organization because they're publicly available. Organizations need to know about these agents so they can address any problems.
 
@@ -223,7 +231,7 @@ AIAgentsInfo
 | project-reorder AgentCreationTime ,AIAgentId, AIAgentName, AgentStatus, CreatorAccountUpn, OwnerAccountUpns
 ```
 
-### Suspicious HTTP request to nonstandard port 
+#### Suspicious HTTP request to nonstandard port 
 
 Identify agents that use HTTP actions on ports other than 443 or 80.
 
@@ -248,7 +256,7 @@ AIAgentsInfo
 | project-reorder AgentCreationTime ,AIAgentId, AIAgentName, ParsedUrl ,Url, Port, AgentStatus, CreatorAccountUpn, OwnerAccountUpns, Topic
 ```
 
-### Suspicious HTTP request to connector endpoint 
+#### Suspicious HTTP request to connector endpoint 
 
 Identify agents that use HTTP actions to an endpoint with an available Power Platform connector.
 
@@ -273,7 +281,7 @@ AIAgentsInfo
 | project-reorder AgentCreationTime ,AIAgentId, AIAgentName, ParsedUrl ,Url, Host, AgentStatus, CreatorAccountUpn, OwnerAccountUpns, Topic
 ```
 
-### Sending email to AI-controlled input values 
+#### Sending email to AI-controlled input values 
   
 Identify agents that use generative orchestration that involves sending email tools through Outlook, and the input values of the actions populated by the generative orchestrator. This setup is risky, since with a successful XPIA attack, the agent can be used to leak data to arbitrary recipients.  
  
@@ -295,7 +303,7 @@ AIAgentsInfo
 | project-reorder AgentCreationTime ,AIAgentId, AIAgentName, AgentStatus, CreatorAccountUpn, OwnerAccountUpns, ActionName
 ```
 
-### Hard-coded credentials in Topics or Actions
+#### Hard-coded credentials in Topics or Actions
  
 Agents with hard-coded credentials in Topics or Actions can expose clear-text credentials to unintended entities.
 
@@ -318,7 +326,7 @@ AIAgentsInfo
 | project-reorder AgentCreationTime ,AIAgentId, AIAgentName, AgentStatus, CreatorAccountUpn, OwnerAccountUpns, SuspiciousMatchTool, SuspiciousMatchTopic
 ```
 
-### Agents with a configured MCP tool 
+#### Agents with a configured MCP tool 
 Find agents with a configured MCP tool.
 
 **Recommendations:** 
