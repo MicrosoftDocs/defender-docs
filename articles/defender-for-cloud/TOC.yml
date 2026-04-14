@@ -779,7 +779,7 @@
           - name: Overview
             displayName: k8s, containers, aks, nodes
             href: kubernetes-nodes-overview.md
-          - name: Kubernetes node vulnerability assessment
+          - name: Review and remediate VA findings for Kubernetes nodes
             displayName: k8s, containers, aks, node, vulnerability, assessment
             href: kubernetes-nodes-va.md
           - name: Review and remediate malware alerts for Kubernetes nodes
