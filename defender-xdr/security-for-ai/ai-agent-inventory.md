@@ -31,7 +31,7 @@ The [AIAgentsInfo table](/defender-xdr/advanced-hunting-aiagentsinfo-table) in A
 - Hunt for risks such as unauthenticated agents, overprivileged configurations, data exposure, and misconfigurations.
 
 > [!NOTE]
->  The `AIAgentsInfo` table provides an extended set of properties for Copilot Studio agents, which are not currently available for other AI agents.
+> The `AIAgentsInfo` table provides an extended set of properties for Copilot Studio agents, which are not currently available for other AI agents.
 
 To view all of your Agent 365-managed agents and their configuration details:
 
@@ -50,7 +50,7 @@ To view all of your Agent 365-managed agents and their configuration details:
     ```
 
     > [!IMPORTANT]
-    > The `AIAgentsInfo` table stores multiple snapshots of each agent over time. Use `arg_max(Timestamp, *)` to get the latest state of each agent. For more information about the arg_max() aggregation function, see [arg_max() function](/kusto/query/arg-max-aggfunction).
+    > The `AIAgentsInfo` table stores multiple snapshots of each agent over time. Use `arg_max(Timestamp, *)` to get the latest state of each agent. For more information about the arg_max() aggregation function, see [arg_max() function](/kusto/query/arg-max-aggregation-function).
 
     For more information about Advanced Hunting, see [Proactively hunt for threats with Advanced Hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
 
