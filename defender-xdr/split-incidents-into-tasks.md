@@ -1,7 +1,6 @@
 ---
 title: Streamline incident response using tasks in the Microsoft Defender portal (Preview)
 description: Create and manage tasks in the Microsoft Defender portal to investigate and resolve incidents collaboratively.
-search.appverid: met150
 ms.service: microsoft-defender
 ms.author: guywild
 author: guywi-ms

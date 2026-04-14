@@ -1,4 +1,4 @@
-﻿---
+---
 title: Device control in Microsoft Defender for Endpoint
 description: Get an overview of device control, including removable storage access control and device installation policies in Defender for Endpoint.
 author: limwainstein
@@ -7,7 +7,6 @@ ms.date: 08/28/2024
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
@@ -15,8 +14,6 @@ ms.collection:
 ms.custom:
 - partner-contribution
 ms.reviewer: joshbregman
-search.appverid: MET150
-f1.keywords: NOCSH
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

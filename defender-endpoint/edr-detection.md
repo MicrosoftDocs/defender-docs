@@ -5,7 +5,6 @@ ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
@@ -13,7 +12,6 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
 ms.subservice: edr
-search.appverid: met150
 ms.date: 01/15/2026
 appliesto:
     - Microsoft Defender for Endpoint Plan 2

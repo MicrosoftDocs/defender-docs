@@ -1,11 +1,8 @@
 ---
 title: Order and precedence of email protection
 keywords: security, malware, Microsoft 365, M365, security center, Microsoft Defender portal, Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Identity
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: reference
 ms.localizationpriority: medium
 ms.collection: 
@@ -15,7 +12,6 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn how the order of protection settings and the priority order of threat policies affect the application of protection in Microsoft 365.
 ms.service: defender-office-365
-search.appverid: met150
 ms.date: 09/12/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
