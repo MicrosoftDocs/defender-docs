@@ -201,7 +201,7 @@ The following table describes the organization and local alerts that active ASR 
 |Block abuse of exploited vulnerable signed drivers (Device)|N|Y|
 |Block credential stealing from the Windows local security authority subsystem[[¹](#Alert1)]|N|N|
 |Block persistence through WMI event subscription|Y|Y|
-|**Other ASR rules**||||
+|**Other ASR rules**|||
 |Block Adobe Reader from creating child processes[[²](#Alert2)]|Y|Y|
 |Block all Office applications from creating child processes|N|Y|
 |Block executable content from email client and webmail[[²](#Alert2)]|Y|Y|
