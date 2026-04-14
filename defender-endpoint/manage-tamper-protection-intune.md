@@ -1,11 +1,10 @@
-﻿---
+---
 title: Manage tamper protection for your organization using Microsoft Intune
 ms.reviewer: joshbregman, mattcall, pahuijbr, hayhov, oogunrinde
 description: Turn tamper protection on or off for your organization in Microsoft Intune.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 12/30/2025
-audience: ITPro
 ms.topic: how-to
 author: limwainstein
 ms.author: lwainstein
@@ -17,7 +16,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

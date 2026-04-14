@@ -1,10 +1,7 @@
 ---
 title: Respond to a compromised connector in Microsoft 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.assetid:
@@ -14,7 +11,6 @@ ms.collection:
 ms.custom:
 description: Learn how to recognize and respond to a compromised connector in Microsoft 365.
 ms.service: defender-office-365
-search.appverid: met150
 ms.date: 6/14/2023
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>

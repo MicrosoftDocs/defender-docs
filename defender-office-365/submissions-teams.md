@@ -1,14 +1,9 @@
 ---
 title: User reported settings in Teams
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
 ms.collection:
   - m365-security
   - tier1

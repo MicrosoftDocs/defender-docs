@@ -1,16 +1,10 @@
 ---
 title: Threat investigation & response capabilities in Microsoft Defender for Office 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
 ms.date: 10/10/2023
-audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.assetid: 32405da5-bee1-4a4b-82e5-8399df94c512
 ms.collection:
   - m365-security

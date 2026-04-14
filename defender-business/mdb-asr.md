@@ -11,9 +11,6 @@ ms.collection:
 - m365-security
 - tier1
 ms.reviewer: efratka
-search.appverid: MET150
-f1.keywords: NOCSH
-audience: Admin
 ---
 
 # Enable your attack surface reduction rules in Microsoft Defender for Business
