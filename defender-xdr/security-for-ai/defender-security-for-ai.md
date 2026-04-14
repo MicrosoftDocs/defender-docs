@@ -79,9 +79,9 @@ This table lists the Microsoft Defender capabilities that help secure generative
 
 Learn more about these capabilities and how to use them to secure your AI assets:
 
+- [Discover AI agents and assess security posture using Microsoft Defender](ai-agent-inventory.md)
 - [Detect, block, and investigate threats to AI agents using Microsoft Defender](ai-agent-detection-protection.md)
-- [Protect AI agents from emerging threats and vulnerabilities using Microsoft Defender](defender-security-for-ai.md#protect-ai-assets-from-emerging-threats-and-vulnerabilities)
-- [Microsoft security for AI documentation](/security/security-for-ai)
+- [Microsoft security for AI](/security/security-for-ai)
 
 
 
