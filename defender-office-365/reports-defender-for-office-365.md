@@ -1,15 +1,9 @@
 ---
 title: View Defender for Office 365 reports
-f1.keywords:
-  - CSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: concept-article
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.assetid: e47e838c-d99e-4c0b-b9aa-e66c4fae902f
 ms.collection:
   - m365-security

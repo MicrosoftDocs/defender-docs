@@ -1,10 +1,7 @@
 ---
 title: Configure anti-phishing policies for all cloud mailboxes
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.assetid:
@@ -14,7 +11,6 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to create, modify, and delete the anti-phishing policies for all cloud mailboxes.
 ms.service: defender-office-365
-search.appverid: met150
 ms.date: 04/08/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>

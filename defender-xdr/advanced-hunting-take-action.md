@@ -1,15 +1,11 @@
 ---
 title: Take action on advanced hunting query results in Microsoft Defender XDR
 description: Quickly address threats and affected assets in your advanced hunting query results
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1

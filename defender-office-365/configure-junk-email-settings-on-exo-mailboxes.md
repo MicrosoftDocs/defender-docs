@@ -2,14 +2,8 @@
 title: Configure junk email settings on Exchange Online mailboxes
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid: 
-  - MOE150
-  - MED150
-  - MBS150
-  - MET150
 ms.collection: 
   - m365-security
   - tier2
@@ -124,7 +118,7 @@ To verify you successfully configured the safelist collection on a mailbox, use 
 
 ## About Outlook junk email settings
 
-To enable, disable, and configure the client-side Junk Email Filter settings that are available in Outlook, use [Group Policy](https://support.microsoft.com/help/2252421). For more information, see [Administrative Template files (ADMX/ADML) and Office Customization Tool for Microsoft 365 Apps for enterprise, Office 2019, and Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
+To enable, disable, and configure the client-side Junk Email Filter settings that are available in Outlook, use [Group Policy](/microsoft-365-apps/outlook/email-security/deploy-junk-email-settings). For more information, see [Administrative Template files (ADMX/ADML) and Office Customization Tool for Microsoft 365 Apps for enterprise, Office 2019, and Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
 
 When the Outlook Junk Email Filter is set to the default value **No automatic filtering** in **Home** \> **Junk** \> **Junk E-Mail Options** \> **Options**, Outlook doesn't attempt to classify messages as spam, but still uses the safelist collection (the Safe Senders list, the Safe Recipients list, and the Blocked Senders list) to move messages to the Junk Email folder after delivery. For more information about these settings, see [Overview of the Junk Email Filter](https://support.microsoft.com/office/5ae3ea8e-cf41-4fa0-b02a-3b96e21de089).
 

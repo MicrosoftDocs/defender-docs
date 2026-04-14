@@ -1,15 +1,11 @@
 ---
 title: DeviceBaselineComplianceAssessmentKB table in the advanced hunting schema
 description: Learn about the various security configurations used by baseline compliance to assess devices in the DeviceBaselineComplianceAssessmentKB table in the advanced hunting schema.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3

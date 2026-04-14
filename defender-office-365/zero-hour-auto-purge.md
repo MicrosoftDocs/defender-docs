@@ -1,17 +1,9 @@
 ---
 title: Zero-hour auto purge in Microsoft Defender for Office 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: article
 ms.localizationpriority: medium
-search.appverid:
-  - MOE150
-  - MED150
-  - MBS150
-  - MET150
 ms.assetid: 96deb75f-64e8-4c10-b570-84c99c674e15
 ms.collection:
   - m365-security

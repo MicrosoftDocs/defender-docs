@@ -1,16 +1,10 @@
 ---
 title: Threat investigation & response capabilities in Microsoft Defender for Office 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
 ms.date: 10/10/2023
-audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.assetid: 32405da5-bee1-4a4b-82e5-8399df94c512
 ms.collection:
   - m365-security
@@ -96,7 +90,7 @@ Microsoft Defender for Office 365 uses role-based access control. Permissions ar
 >
 > - [Permissions in the Microsoft Defender portal](mdo-portal-permissions.md)
 > - [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference)
-> - [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac)
+> - [Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/manage-rbac)
 
 |Activity|Roles and permissions|
 |---|---|

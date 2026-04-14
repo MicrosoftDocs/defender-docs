@@ -11,15 +11,13 @@ ms.collection:
 - m365-security
 - tier1
 ms.reviewer: pahuijbr
-search.appverid: MET150
-audience: ITPro
 ms.date: 12/25/2025
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
+
 ---
 
 # Microsoft Defender for Endpoint standard connectivity URLs - US government
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 This article includes a list of the standard connectivity URLs required to onboard and maintain devices in Microsoft Defender for Endpoint in US government cloud environments.
 
@@ -42,7 +40,7 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender for Endpoint|US Gov|Microsoft Monitoring Agent (MMA)|443|`*.ods.opinsights.azure.us`|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes|Yes|||Refer to steps at <https://aka.ms/mde_network_requirements> to eliminate wildcards (*)|
 |Microsoft Defender for Endpoint|US Gov|Microsoft Monitoring Agent (MMA)|443|`*.oms.opinsights.azure.us`|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes|Yes|||Refer to steps at <https://aka.ms/mde_network_requirements> to eliminate wildcards (*)|
 |Microsoft Defender for Endpoint|US Gov|Microsoft Monitoring Agent (MMA)|443|`*.blob.core.usgovcloudapi.net`|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes|Yes|||Refer to steps at <https://aka.ms/mde_network_requirements> to eliminate wildcards (*)|
-|Microsoft Defender for Endpoint|Government Community Cloud|Microsoft Defender for Endpoint GCC|443|`unitedstates4.x.cp.wd.microsoft.us`|Used by Microsoft Defender Antivirus to provide cloud-delivered protection and security intelligence updates|Required|||Yes|Yes||
+|Microsoft Defender for Endpoint|GCC|Microsoft Defender for Endpoint GCC|443|`unitedstates4.x.cp.wd.microsoft.us`|Used by Microsoft Defender Antivirus to provide cloud-delivered protection and security intelligence updates|Required|Yes|||Yes|Yes||
 |Microsoft Defender for Endpoint|GCC|Microsoft Defender for Endpoint GCC|443|`us4-v20.events.data.microsoft.com`|Microsoft Defender for Endpoint EDR Cyber Data|Required|Yes|||Yes|Yes||
 |Microsoft Defender for Endpoint|GCC|Microsoft Defender for Endpoint GCC|443|`winatp-gw-usmt.microsoft.com`|Microsoft Defender for Endpoint Command and Control|Required|Yes|Yes|Yes|Yes|Yes||
 |Microsoft Defender for Endpoint|GCC|Microsoft Defender for Endpoint GCC|443|`winatp-gw-usmv.microsoft.com`|Microsoft Defender for Endpoint Command and Control|Required|Yes|Yes|Yes|Yes|Yes||
@@ -111,68 +109,18 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender for Endpoint|DoD|`https://login.microsoftonline.us`|
 |Microsoft Defender for Endpoint|DoD|`https://onboardingpckgsusgvprd.blob.core.usgovcloudapi.net`|
 
-## Microsoft Defender processes
+## Client processes
 
-The processes in this section are exclusively for Microsoft Defender for Endpoint for Windows platforms, including down-level OS. This list doesn't account for any other Windows communications requirements.
+Because these Defender for Endpoint-related processes generate network communications, make sure that communications from these processes are not blocked.
 
-For more information on how to manage Windows connections, see [Manage connections from Windows 10 and Windows 11 operating system components to Microsoft services](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services).
+[!INCLUDE [Microsoft Defender for Endpoint processes](includes/streamlined-connectivity-processes.md)]
 
-While this list continues to be updated, Microsoft can't provide any guarantees on it being up-to-date with the latest product or OS changes. Customers should use this list as a baseline and conduct their testing before using it directly in production.
+## Change log
 
-## Windows 11, Windows 10, Windows Server, 2022 and Windows Server 2019
-
-|Process|Path|Comment|
-|---|---|---|
-|MpCmdRun.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus command-line utility|
-|MpDlpCmd.exe|C:\Program Files\Windows Defender|Microsoft Endpoint Data Loss Prevention (DLP) command-line utility|
-|MsMpEng.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus service executable|
-|ConfigSecurityPolicy.exe|C:\Program Files\Windows Defender|Microsoft Security Client Policy Configuration Tool|
-|NisSrv.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network Realtime Inspection|
-|MsSense.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint service executable|
-|SenseCnCProxy.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint communication module|
-|SenseIR.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense IR (Incident Response) module|
-|SenseCE.exe|C:\Program Files\Windows Defender Advanced Threat Protection\Classification|Microsoft Defender for Endpoint Sense CE (Classification Engine) module|
-|SenseSampleUploader.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sample Upload module|
-|SenseNdr.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense NDR (Network Detection and Response) module|
-|SenseSC.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense SC (Screenshot Capture) module|
-|SenseCM.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense CM (Configuration Management)|
-|SenseTVM.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense TVM (Threat Vulnerability Management)|
-
-## Windows Server 2016 and Windows Server 2012 R2 (Unified Agent)
-
-|Process|Path|Comment|
-|---|---|---|
-|MsSense.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint service executable|
-|SenseCnCProxy.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint communication module|
-|SenseIR.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense IR (Incident Response) module|
-|SenseSampleUploader.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sample Upload module|
-|SenseCM.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense CM (Configuration Management)|
-|MpCmdRun.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus command-line utility|
-|MsMpEng.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus service executable|
-|ConfigSecurityPolicy.exe|C:\Program Files\Windows Defender|Microsoft Security Client Policy Configuration Tool|
-|NisSrv.exe|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network Realtime Inspection|
-|SenseTVM.exe|C:\Program Files\Windows Defender Advanced Threat Protection|Microsoft Defender for Endpoint Sense TVM (Threat Vulnerability Management)|
-
-## Windows 8.1 and Windows Server 2016 (MMA Based)
-
-|Path|Comment|
+|Date|Change log|
 |---|---|
-|C:\Program Files\Microsoft Monitoring Agent\Agent|Microsoft Monitoring Agent Service Host Process|
-|C:\Program Files\Microsoft Monitoring Agent\Agent|Microsoft Monitoring Agent Service|
-|C:\Program Files\Microsoft Monitoring Agent\Agent|Microsoft Monitoring Agent Cloud Connection Test utility|
-|C:\Program Files\Windows Defender|Microsoft Defender Antivirus command-line utility|
-|C:\Program Files\Windows Defender|Microsoft Defender Antivirus service executable|
-|C:\Program Files\Windows Defender|Microsoft Security Client Policy Configuration Tool|
-|C:\Program Files\Windows Defender|Microsoft Defender Antivirus Network Realtime Inspection|
-
-## Windows 7 SP1, Windows Server 2012 R2, and Windows Server 2008 R2 (MMA Based)
-
-|Path|Comment|
-|---|---|
-|C:\Program Files\Microsoft Monitoring Agent\Agent|Microsoft Monitoring Agent Service Host Process|
-|C:\Program Files\Microsoft Monitoring Agent\Agent|Microsoft Monitoring Agent Service|
-|C:\Program Files\Microsoft Monitoring Agent\Agent|Microsoft Monitoring Agent Cloud Connection Test utility|
-|C:\Program Files\Microsoft Security Client|Microsoft Defender Antivirus command-line utility (SCEP)|
-|C:\Program Files\Microsoft Security Client|Microsoft Defender Antivirus service executable (SCEP)|
-|C:\Program Files\Microsoft Security Client|Microsoft Security Client Policy Configuration Tool (SCEP)|
-|C:\Program Files\Microsoft Security Client|Microsoft Defender Antivirus Network Realtime Inspection (SCEP)|
+|03/23/2026|Renamed **Microsoft Defender processes** section to **Client processes**, and aligned the content for all URL lists.|
+|15/08/2023|Removed URL: `https://msdl.microsoft.com/download/symbols`.|
+|05/12/2022|URL details updated:<br>Updated line 58: Updated from required to optional.<br>Updated line 62: Changed from optional to required. Guidance text updated. Added Mac and Linux.<br>Updated line 63: Changed from optional to required. Guidance text updated. Added Mac and Linux.<br>Updated line 64: Changed from optional to required. Guidance text updated. Added Mac and Linux.|
+|27/05/2022|Removed preview status from Server 2012 R2 and Server 2016 Unified Agent references.<br>Updated line 4: URL required for Mac and Linux platforms.<br>Updated line 5: URL required for Mac and Linux platforms.|
+|25/01/2022|Duplicate URLs consolidated.<br>Optional field added.<br>US Gov, GCC, and GCC High guidance moved to separate spreadsheet.<br>URLs removed:<br>`eu-cdn.x.cp.wd.microsoft.com`; `wu-cdn.x.cp.wd.microsoft.com`; `*.azure-automation.net`; `*.notify.windows.com`|

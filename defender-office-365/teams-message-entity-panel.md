@@ -2,12 +2,8 @@
 title: The Teams Message Entity Panel in Microsoft Defender for Office 365
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: how-to
 ms.localizationpriority: high
-search.appverid:
-  - MET150
-  - MOE150
 ms.assetid: e100fe7c-f2a1-4b7d-9e08-622330b83653
 ms.collection:
   - m365-security
@@ -123,8 +119,6 @@ The rest of the Teams message entity panel contains the following information, r
 ## Remove users from Teams chats in the Teams message entity panel
 
 > [!TIP]
-> Currently, this feature is in Preview, isn't available in all organizations, and is subject to change.
->
 > You can only remove _internal_ users in your organization from a chat.
 >
 > When you remove users from a chat, the sender of the chat isn't blocked, and the removed users can start new chats with the sender.

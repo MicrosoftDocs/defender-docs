@@ -6,13 +6,11 @@ ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: how-to
 ms.subservice: edr
-search.appverid: met150
 ms.date: 02/12/2025
 ---
 
