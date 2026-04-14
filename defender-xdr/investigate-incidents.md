@@ -2,20 +2,13 @@
 title: Investigate incidents in the Microsoft Defender portal
 description: Investigate incidents on various assets from correlated signals of various Defender services and other Microsoft security products like Microsoft Sentinel.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
 ms.topic: article
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 03/03/2026
 appliesto: 
 - Microsoft Defender XDR
@@ -113,7 +106,7 @@ The blast radius graph provides a unique unified view of both prebreach and post
 The following prerequisites are required to use the blast radius graph:
 
 +	You must be onboarded to Microsoft Sentinel data lake. For more information, see [Onboarding to Microsoft Sentinel data lake and graph](/azure/sentinel/datalake/sentinel-lake-onboarding).
-+	Exposure management (read) permission or higher. For more information, see [Manage permissions with Microsoft Defender XDR Unified role-based access control (RBAC)](/security-exposure-management/prerequisites#manage-permissions-with-microsoft-defender-xdr-unified-role-based-access-control-rbac).
++	Exposure management (read) permission or higher. For more information, see [Manage permissions with Microsoft Defender unified role-based access control (RBAC)](/security-exposure-management/prerequisites#manage-permissions-with-microsoft-defender-xdr-unified-role-based-access-control-rbac).
 > [!IMPORTANT]
 > Attack paths and blast radius features are calculated based on the organization’s available environment data. The value in the graph increases as more data is available for its calculation. If you don't enable further workloads or fully define critical assets, blast radius graphs won't fully represent your environmental risks. For more information on defining critical assets, see [Review and classify critical assets](/security-exposure-management/classify-critical-assets).
 

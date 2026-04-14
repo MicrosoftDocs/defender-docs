@@ -1,9 +1,8 @@
-﻿---
+---
 title: Run the client analyzer on Linux
 description: Run the Defender for Endpoint client analyzer on Linux
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.subservice: linux
@@ -15,9 +14,6 @@ ms.collection:
 - m365-security
 - tier3
 - mde-macos
-search.appverid: met150
-audience: ITPro
-f1.keywords: NOCSH
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -675,17 +671,17 @@ The Python version of the client analyzer accepts command line parameters to per
 
 #### Defender for Endpoint on Linux troubleshooting documents
 
-- [Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-install)
+- [Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux](linux-support-install.md)
 
-- [Investigate agent health issues](/defender-endpoint/health-status)
+- [Investigate agent health issues](health-status.md)
 
-- [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-connectivity)
+- [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](linux-support-connectivity.md)
 
-- [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-perf)
+- [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md)
 
-- [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-events)
+- [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](linux-support-events.md)
 
-- [Address false positives/negatives in Microsoft Defender for Endpoint](/defender-endpoint/defender-endpoint-false-positives-negatives)
+- [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 
 
 

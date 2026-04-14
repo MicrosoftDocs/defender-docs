@@ -5,8 +5,6 @@ ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
@@ -16,6 +14,7 @@ ms.subservice: reference
 search.appverid: met150
 ms.date: 02/25/2026
 ai-usage: ai-assisted
+ms.date: 02/27/2023
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

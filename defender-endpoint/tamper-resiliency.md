@@ -1,9 +1,8 @@
-﻿---
+---
 title: Tamper resiliency with Microsoft Defender for Endpoint
 description: Learn about the anti-tampering capabilities of Microsoft Defender for Endpoint.
 author: limwainstein
 ms.author: lwainstein
-manager: bagol
 ms.reviewer: joshbregman
 ms.service: defender-endpoint
 ms.subservice: ngp
@@ -13,8 +12,6 @@ ms.collection:
 - tier1
 - highpri
 - mde-ngp
-f1.keywords: NOCSH
-audience: ITPro
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

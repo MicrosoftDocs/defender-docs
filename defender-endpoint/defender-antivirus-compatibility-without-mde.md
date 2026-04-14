@@ -11,7 +11,6 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Individuals
 ms.subservice: ngp
-search.appverid: met150
 ms.localizationpriority: medium
 ms.custom:
 - partner-contribution
@@ -34,7 +33,7 @@ The following table summarizes what to expect:
 
 > [!NOTE]
 > Defender for Endpoint support for Windows Server 2025 is rolling out, beginning in February 2025 and over the next several weeks.
-> On Windows Server, if you're running a non-Microsoft antivirus product, you can uninstall Microsoft Defender Antivirus by using the following PowerShell cmdlet (as an administrator): `Uninstall-WindowsFeature Windows-Defender`. Restart your server to finish removing Microsoft Defender Antivirus. On Windows Server 2016, you might see *Windows Defender Antivirus* instead of *Microsoft Defender Antivirus*. If you uninstall your non-Microsoft antivirus product, make sure that Microsoft Defender Antivirus is re-enabled. See **[Re-enable Microsoft Defender Antivirus on Windows Server if it was disabled](/defender-endpoint/enable-update-mdav-to-latest-ws)**.
+> On Windows Server, if you're running a non-Microsoft antivirus product, you can uninstall Microsoft Defender Antivirus by using the following PowerShell cmdlet (as an administrator): `Uninstall-WindowsFeature Windows-Defender`. Restart your server to finish removing Microsoft Defender Antivirus. On Windows Server 2016, you might see *Windows Defender Antivirus* instead of *Microsoft Defender Antivirus*. If you uninstall your non-Microsoft antivirus product, make sure that Microsoft Defender Antivirus is re-enabled. See **[Re-enable Microsoft Defender Antivirus on Windows Server if it was disabled](enable-update-mdav-to-latest-ws.md)**.
 
 Check the services and filter drivers for Microsoft Defender Antivirus by using the following command:
 
@@ -89,7 +88,7 @@ Uninstall-WindowsFeature Windows-Defender-Gui
 
 **Q:** Can I use indicators, such as file hashes, IP addresses, URLs, or certificates with Microsoft Defender Antivirus (in active mode) with my Microsoft 365 E3/A3 license?
 
-**A:** Yes. See [Tech Community Blog: Microsoft Defender for Endpoint Plan 1 Now Included in Microsoft 365 E3/A3 Licenses](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/microsoft-defender-for-endpoint-plan-1-now-included-in-m365-e3a3-licenses/3060639) and [Overview of Microsoft Defender for Endpoint Plan 1](/defender-endpoint/defender-endpoint-plan-1).
+**A:** Yes. See [Tech Community Blog: Microsoft Defender for Endpoint Plan 1 Now Included in Microsoft 365 E3/A3 Licenses](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/microsoft-defender-for-endpoint-plan-1-now-included-in-m365-e3a3-licenses/3060639) and [Overview of Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md).
 
 ## See also
 
@@ -98,10 +97,10 @@ Uninstall-WindowsFeature Windows-Defender-Gui
   - [Defender CSP](/windows/client-management/mdm/defender-csp)
   - [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender)
   - [How to create and deploy antimalware policies for Endpoint Protection in Configuration Manager](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies)
-- [Use Group Policy settings to configure and manage Microsoft Defender Antivirus](/defender-endpoint/use-group-policy-microsoft-defender-antivirus)
-- [Use PowerShell cmdlets to configure and manage Microsoft Defender Antivirus](/defender-endpoint/use-powershell-cmdlets-microsoft-defender-antivirus)
-- [Exclusions overview](/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions)
-- [Address false positives/negatives in Microsoft Defender for Endpoint](/defender-endpoint/defender-endpoint-false-positives-negatives)
-- [Troubleshoot Microsoft Defender Antivirus settings](/defender-endpoint/troubleshoot-settings)
-- [Run the client analyzer on Windows](/defender-endpoint/run-analyzer-windows)
-- [Performance analyzer for Microsoft Defender Antivirus](/defender-endpoint/tune-performance-defender-antivirus)
+- [Use Group Policy settings to configure and manage Microsoft Defender Antivirus](use-group-policy-microsoft-defender-antivirus.md)
+- [Use PowerShell cmdlets to configure and manage Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md)
+- [Exclusions overview](navigate-defender-endpoint-antivirus-exclusions.md)
+- [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
+- [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md)
+- [Run the client analyzer on Windows](run-analyzer-windows.md)
+- [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)

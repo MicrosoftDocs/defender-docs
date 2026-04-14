@@ -1,15 +1,9 @@
 ---
 title: Outbound delivery pools
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: concept-article
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
 ms.assetid: ac11edd9-2da3-462d-8ea3-bbf9dbc6f948
 ms.collection: 
   - m365-security

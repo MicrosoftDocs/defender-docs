@@ -1,16 +1,13 @@
 ---
 title: Microsoft Defender for Endpoint release notes archive
 description: Archived platform-specific build and version history for Microsoft Defender for Endpoint on Windows, macOS, and Linux.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: reference
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
 ms.date: 02/18/2026
-manager: bagol
 ai-usage: ai-assisted
-audience: ITPro
 ms.collection:
 - m365-security
 - tier1
@@ -571,7 +568,7 @@ Network protection for macOS is now available for all Mac devices onboarded to D
 
 - **(GA) Live Response available for macOS**
 
-Live Response for macOS is now available for all Mac devices onboarded to Defender for Endpoint. Devices must meet the minimum requirements. To learn more, see  [Investigate entities on devices using live response](/defender-endpoint/live-response) 
+Live Response for macOS is now available for all Mac devices onboarded to Defender for Endpoint. Devices must meet the minimum requirements. To learn more, see  [Investigate entities on devices using live response](live-response.md) 
 
 ### Nov-2022 (Build: 101.87.30 | Release version: 20.122082.18681.0)
 
@@ -1414,7 +1411,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 - Mdatp package no longer has a dependency on SELinux packages.
   
-- Users can now query the status of supplementary event provider eBPF using the threat hunting query in `DeviceTvmInfoGathering`. To learn more about this query check: [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-ebpf). The result of this query can return the following two values as eBPF status:
+- Users can now query the status of supplementary event provider eBPF using the threat hunting query in `DeviceTvmInfoGathering`. To learn more about this query check: [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](linux-support-ebpf.md). The result of this query can return the following two values as eBPF status:
   - Enabled: When eBPF is enabled as working as expected.
   - Disabled: When eBPF is disabled due to one of the following reasons:
     - When MDE is using auditD as a supplementary sensor

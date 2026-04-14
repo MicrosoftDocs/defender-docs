@@ -22,8 +22,6 @@ Defender for Identity is a primary component of a Zero Trust strategy and your X
 
 When monitoring for Zero Trust, make sure review and mitigate open alerts from Defender for Identity together with your other security operations. You may also want to use [advanced hunting queries in Microsoft Defender XDR](/microsoft-365/security/defender/advanced-hunting-overview) to look for threats across identities, devices, and cloud apps.
 
-For example, you can use advanced hunting to discover an attacker's [lateral movement paths](understand-lateral-movement-paths.md), and then see if the same identity has been involved in other detections.
-
 > [!TIP]
 > Ingest your alerts into [Microsoft Sentinel with Microsoft Defender XDR](/azure/sentinel/microsoft-365-defender-sentinel-integration), a cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution to provide your Security Operations Center (SOC) with a single pane of glass for monitoring security events across your enterprise.
 >

@@ -3,10 +3,8 @@ title: Enable attack surface reduction rules
 description: Enable attack surface reduction rules to protect your devices from attacks that use macros, scripts, and common injection techniques.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-audience: ITPro
 author: limwainstein
 ms.author: lwainstein
-manager: bagol
 ms.subservice: asr
 ms.topic: how-to
 ms.collection: 
@@ -18,7 +16,6 @@ appliesto:
 - Microsoft Defender for Endpoint Plan 1 and Plan 2
 - Microsoft Defender XDR
 - Microsoft Defender Antivirus
-search.appverid: met150
 ms.date: 12/31/2025
 ---
 
@@ -38,11 +35,11 @@ To use the entire feature-set of attack surface reduction rules, the following r
 
 - Microsoft Defender Antivirus must be set as the primary antivirus. It must not be running in passive mode or be disabled.
 
-- [Real-time protection](/defender-endpoint/configure-real-time-protection-microsoft-defender-antivirus) must be on.
+- [Real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md) must be on.
 
 - [Cloud-Delivery Protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus) must be on (some rules require Cloud Protection).
 
-- You must have [Cloud Protection network connectivity](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus)
+- You must have [Cloud Protection network connectivity](configure-network-connections-microsoft-defender-antivirus.md)
 
 - Recommended: Microsoft 365 E5
 
@@ -146,10 +143,10 @@ The following procedures for enabling attack surface reduction rules include ins
 > [!IMPORTANT]
 > If you're using Intune on Windows Server 2012 R2 and Windows Server 2016 with the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2), you need to set the following attack surface reduction rules to `Not Configured` because they're not supported on these OS versions. Otherwise, policies containing any of these rules targeted at Windows Server 2012 R2 or Windows Server 2016 will fail to apply:
 >
-> - [Block persistence through Windows Management Instrumentation (WMI) event subscription](/defender-endpoint/attack-surface-reduction-rules-reference#block-persistence-through-wmi-event-subscription)
-> - [Block JavaScript or VBScript from launching downloaded executable content](/defender-endpoint/attack-surface-reduction-rules-reference#block-javascript-or-vbscript-from-launching-downloaded-executable-content)
-> - [Block Win32 API calls from Office macro](/defender-endpoint/attack-surface-reduction-rules-reference#block-win32-api-calls-from-office-macros)
-> - [Block Webshell creation for Servers](/defender-endpoint/attack-surface-reduction-rules-reference), this isn't supported on Windows Server 2012 R2, but it is supported on Windows Server 2016. It only applies to the Exchange server role.
+> - [Block persistence through Windows Management Instrumentation (WMI) event subscription](attack-surface-reduction-rules-reference.md#block-persistence-through-wmi-event-subscription)
+> - [Block JavaScript or VBScript from launching downloaded executable content](attack-surface-reduction-rules-reference.md#block-javascript-or-vbscript-from-launching-downloaded-executable-content)
+> - [Block Win32 API calls from Office macro](attack-surface-reduction-rules-reference.md#block-win32-api-calls-from-office-macros)
+> - [Block Webshell creation for Servers](attack-surface-reduction-rules-reference.md), this isn't supported on Windows Server 2012 R2, but it is supported on Windows Server 2016. It only applies to the Exchange server role.
 
 #### Endpoint security policy (Preferred)
 

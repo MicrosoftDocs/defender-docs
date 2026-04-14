@@ -7,8 +7,6 @@ ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
@@ -19,7 +17,6 @@ appliesto:
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2
 ms.subservice: edr
-search.appverid: met150
 ---
 
 # Alerts queue in Microsoft Defender XDR

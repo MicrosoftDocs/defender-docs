@@ -1,4 +1,4 @@
-﻿---
+---
 title: Protect important folders from ransomware from encrypting your files with controlled folder access
 description: Files in default folders can be protected from changes through malicious apps. Prevent ransomware from encrypting your files.
 ms.service: defender-endpoint
@@ -6,9 +6,7 @@ ms.localizationpriority: medium
 ms.date: 10/20/2025
 author: paulinbar
 ms.author: painbar
-audience: ITPro
 ms.reviewer: sugamar 
-manager: bagol
 ms.custom: asr
 ms.subservice: asr
 ms.topic: how-to
@@ -16,7 +14,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -94,7 +91,7 @@ The same profile folders are also protected for system accounts, such as `LocalS
 > You can configure more folders as protected, but you can't remove Windows system folders that are protected by default.
 
 > [!NOTE]
-> Scripting engines like PowerShell aren't trusted by controlled folder access, even if you create an "allow" indicator by using [certificate and file indicators](indicator-certificates.md). The only way to allow script engines to modify protected folders is by adding them as an allowed app. See [Allow specific apps to make changes to controlled folders](/defender-endpoint/customize-controlled-folders).  
+> Scripting engines like PowerShell aren't trusted by controlled folder access, even if you create an "allow" indicator by using [certificate and file indicators](indicator-certificates.md). The only way to allow script engines to modify protected folders is by adding them as an allowed app. See [Allow specific apps to make changes to controlled folders](customize-controlled-folders.md).  
 
 ## Review controlled folder access events in the Microsoft Defender portal
 

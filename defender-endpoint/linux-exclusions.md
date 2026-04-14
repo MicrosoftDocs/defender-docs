@@ -1,4 +1,4 @@
-﻿---
+---
 title: Configure and validate exclusions for Microsoft Defender for Endpoint on Linux
 description: Provide and validate exclusions for Microsoft Defender for Endpoint on Linux. Exclusions can be set for files, folders, and processes.
 ms.service: defender-endpoint
@@ -6,15 +6,12 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: ratujdange, ardeshmukh
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-linux
 ms.topic: how-to
 ms.subservice: linux
-search.appverid: met150
 ms.date: 06/06/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -170,7 +167,7 @@ Create a dynamic Microsoft Entra group based on the operating system type to ens
 
 1. On the **Review + create** page, when you're done, select **Save**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
-For more information refer: [Manage endpoint security policies in Microsoft Defender for Endpoint](/defender-endpoint/manage-security-policies#create-an-endpoint-security-policy).
+For more information refer: [Manage endpoint security policies in Microsoft Defender for Endpoint](manage-security-policies.md#create-an-endpoint-security-policy).
 
 ### Using the command line
 

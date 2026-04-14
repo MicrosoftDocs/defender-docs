@@ -6,15 +6,12 @@ ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-edr
 ms.topic: concept-article
 ms.subservice: edr
-search.appverid: met150
 ms.date: 03/26/2025
 ---
 

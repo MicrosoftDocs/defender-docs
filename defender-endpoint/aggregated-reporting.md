@@ -5,13 +5,10 @@ ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: article
-search.appverid: met150
 ms.date: 10/20/2025
 appliesto:
 - Microsoft Defender for Endpoint Plan 2
@@ -46,7 +43,7 @@ The following requirements must be met before turning on aggregated reporting:
 
 To turn aggregated reporting on, go to **Settings > Endpoints > Advanced features**. Toggle on the **Aggregated reporting** feature.
 
-:::image type="content" source="/defender-endpoint/media/reports/aggregated-reporting/aggregated-reporting-toggle.png" alt-text="Screenshot of the aggregated reporting toggle in the Microsoft Defender portal settings page.":::
+:::image type="content" source="media/reports/aggregated-reporting/aggregated-reporting-toggle.png" alt-text="Screenshot of the aggregated reporting toggle in the Microsoft Defender portal settings page.":::
 
 Once aggregated reporting is turned on, it can take up to seven days for aggregated reports to become available. You can then begin to query new data after the feature is turned on.
 
@@ -80,7 +77,7 @@ To query new data with aggregated reports:
 
     Here is an example of advanced hunting query results with aggregated reports.
 
-      :::image type="content" source="/defender-endpoint/media/reports/aggregated-reporting/sample-results-aggregated-reports-small.png" alt-text="Screenshot of advanced hunting query results with aggregated reports." lightbox="/defender-endpoint/media/reports/aggregated-reporting/sample-results-aggregated-reports.png":::
+      :::image type="content" source="media/reports/aggregated-reporting/sample-results-aggregated-reports-small.png" alt-text="Screenshot of advanced hunting query results with aggregated reports." lightbox="media/reports/aggregated-reporting/sample-results-aggregated-reports.png":::
 
 ## Sample advanced hunting queries
 

@@ -1,14 +1,11 @@
-﻿---
+---
 title: Server migration scenarios for the new version of Microsoft Defender for Endpoint
 description: Read this article to get an overview of how to migrate your servers from the previous, MMA-based solution to the current Defender for Endpoint unified solution package.
-search.appverid: met150
 ms.service: defender-endpoint
 author: paulinbar
 ms.author: painbar
 ms.localizationpriority: medium
 ms.date: 04/16/2025
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
@@ -22,7 +19,7 @@ appliesto:
 # Server migration scenarios from the previous, MMA-based Microsoft Defender for Endpoint solution
 
 > [!NOTE]
-> On Windows Server 2016, always ensure the operating system and Microsoft Defender Antivirus are fully updated before proceeding with installation or upgrade. To receive regular product improvements and fixes for the EDR Sensor component, ensure Windows Update [KB5005292](https://go.microsoft.com/fwlink/?linkid=2168277) gets applied or approved after installation. In addition, to keep protection components updated, please reference [Manage Microsoft Defender Antivirus updates and apply baselines](/defender-endpoint/microsoft-defender-antivirus-updates/#platform-and-engine-releases).
+> On Windows Server 2016, always ensure the operating system and Microsoft Defender Antivirus are fully updated before proceeding with installation or upgrade. To receive regular product improvements and fixes for the EDR Sensor component, ensure Windows Update [KB5005292](https://go.microsoft.com/fwlink/?linkid=2168277) gets applied or approved after installation. In addition, to keep protection components updated, please reference [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md#platform-and-engine-releases).
 
 These instructions apply to the new unified solution and installer (MSI) package of Defender for Endpoint for Windows Server 2012 R2 and Windows Server 2016. This article contains high-level instructions for various possible migration scenarios from the previous to the current solution. These high-level steps are intended as guidelines to be adjusted to the deployment and configuration tools available in your environment.
 

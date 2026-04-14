@@ -1,16 +1,11 @@
 ---
 title: Custom functions in the advanced hunting schema
 description: Learn about writing your own custom functions for hunting 
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: orspodek
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3

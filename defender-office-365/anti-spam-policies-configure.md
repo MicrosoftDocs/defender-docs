@@ -1,15 +1,9 @@
 ---
 title: Configure spam filter policies
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: high
-search.appverid:
-  - MET150
 ms.assetid: 316544cb-db1d-4c25-a5b9-c73bbcf53047
 ms.collection:
   - m365-security

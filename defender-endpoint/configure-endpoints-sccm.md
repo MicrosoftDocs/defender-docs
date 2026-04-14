@@ -5,8 +5,6 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
@@ -14,7 +12,6 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: install-set-up-deploy
 ms.date: 11/17/2025
 ms.subservice: onboard
-search.appverid: met150
 ---
 
 # Onboard Windows devices using Configuration Manager
