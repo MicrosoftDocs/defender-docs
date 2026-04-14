@@ -62,8 +62,16 @@ Microsoft Defender surfaces detections as near‑real‑time alerts in the Defen
 
 For more information, see [Incidents and alerts in the Microsoft Defender portal](/defender-xdr/incidents-overview).
 
-> [!IMPORTANT]
-> To enable near-real-time alerts and threat hunting, you need to enable the Microsoft 365 app connector to collect detailed audit logs for AI agent actions. For more information, see [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#connect-microsoft-365-to-microsoft-defender-for-cloud-apps).
+Near-real-time detections rely on AI agent audit logs, which also provide valuable context for [investigating incidents and threat hunting](#investigate-ai-agent-threats-and-hunt-for-risks-using-advanced-hunting). Microsoft Defender analyzes these audit logs to identify suspicious agent behavior and generate alerts.
+
+#### Enable near-real-time detections and advanced threat hunting
+
+To enable near-real-time alerts and threat hunting: 
+
+1. Enable the Microsoft 365 app connector to collect detailed audit logs for AI agent actions. For more information, see [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#connect-microsoft-365-to-microsoft-defender-for-cloud-apps).
+1. Ensure that your AI agent emits audit logs to Microsoft 365. 
+    - Agents built with Microsoft Copilot Studio send audit logs to Microsoft 365 by default.
+    - For AI agents built on other platforms, integrate the [Microsoft Agent 365 SDK](/microsoft-agent-365/developer/) to emit audit logs to Microsoft 365.
 
 ### Enable extended near-real-time detections for Microsoft Copilot Studio and Microsoft Foundry agents
 
