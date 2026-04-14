@@ -21,6 +21,6 @@ appliesto:
 
 # Target devices with device groups and tags
 
-This article has been merged into [Create and manage device tags and target devices](machine-tags.md).
+This article is now part of [Create and manage device tags and target devices](machine-tags.md).
 
-Redirecting — please update your bookmarks.
+Redirecting—update your bookmarks.

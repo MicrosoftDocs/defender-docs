@@ -22,6 +22,6 @@ appliesto:
 ---
 # Review device timeline in Microsoft Defender for Endpoint
 
-This article has been merged into [Investigate devices in Microsoft Defender for Endpoint](investigate-machines.md#investigate-device-timeline).
+This article is now part of [Investigate devices in Microsoft Defender for Endpoint](investigate-machines.md#investigate-device-timeline).
 
-Redirecting — please update your bookmarks.
+Redirecting—update your bookmarks.

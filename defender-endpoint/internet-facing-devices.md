@@ -22,6 +22,6 @@ appliesto:
 
 # Identify internet-facing devices
 
-This article has been merged into [Investigate devices in Microsoft Defender for Endpoint](investigate-machines.md#investigate-internet-facing-devices).
+This article is now part of [Investigate devices in Microsoft Defender for Endpoint](investigate-machines.md#investigate-internet-facing-devices).
 
-Redirecting — please update your bookmarks.
+Redirecting—update your bookmarks.
