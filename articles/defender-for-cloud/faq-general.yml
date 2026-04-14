@@ -5,9 +5,9 @@ metadata:
   services: defender-for-cloud
   author: Elazark
   ms.author: elkrieger
-  manager: raynew
+  manager: orspodek
   ms.topic: faq
-  ms.date: 09/17/2025
+  ms.date: 04/14/2026
   ms.custom: sfi-image-nochange
 title: Common questions - General questions
 summary: |
@@ -172,7 +172,7 @@ sections:
 
           - Identity recommendations aren't available for subscriptions with more than 6,000 accounts. In these cases, these types of subscriptions are listed under Not applicable tab.
           - Identity recommendations aren't available for Cloud Solution Provider (CSP) partner's admin agents.
-          - Identity recommendations don't identify accounts that are managed with a privileged identity management (PIM) system. If you're using a PIM tool, you might see inaccurate results in the **Manage access and permissions** control.
+          - Identity recommendations evaluate role assignments, including PIM‑eligible assignments, but do not currently differentiate risk based on PIM activation workflows or approval requirements. This may result in findings that include PIM‑managed identities.
           - Identity recommendations don't support Microsoft Entra conditional access policies with included Directory Roles instead of users and groups.
  
   
