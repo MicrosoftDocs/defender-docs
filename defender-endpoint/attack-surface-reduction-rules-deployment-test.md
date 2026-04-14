@@ -184,7 +184,7 @@ To configure specific rule exclusions, you have the choices of using the Defende
 
 #### Via Group Policy
 
-For instructions, see [Configure ASR rules via group policy](attack-surface-reduction-rules-enable.md#group-policy).
+For instructions, see [Configure ASR rules via group policy](attack-surface-reduction-rules-enable.md#configure-asr-rules-in-group-policy).
 
 If the GPO isn't applied to devices, see [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md).
 

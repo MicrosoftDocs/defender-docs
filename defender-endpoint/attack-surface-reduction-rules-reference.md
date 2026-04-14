@@ -93,7 +93,7 @@ The available ASR rules and their corresponding GUID values are described in the
 
 <a id="#Rules5">⁵</a> This ASR rule doesn't support file and folder exclusions.
 
-<a id="#Rules6">⁶</a> Currently, this ASR rule might not be available in the Intune ASR policy configuration due to a known backend issue. But, the rule is available through the [other available ASR policy configuration methods](attack-surface-reduction-rules-enable.md#enabling-attack-surface-reduction-rules) or in existing Intune ASR policies created before the issue.
+<a id="#Rules6">⁶</a> Currently, this ASR rule might not be available in the Intune ASR policy configuration due to a known backend issue. But, the rule is available through the [other available ASR policy configuration methods](attack-surface-reduction-rules-enable.md) or in existing Intune ASR policies created before the issue.
 
 <a id="#Rules7">⁷</a> To use this ASR rule, you must [enable cloud-delivered protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus).
 
@@ -184,7 +184,7 @@ Although Defender for Endpoint provides ASR rules, you need a separate service t
 
 For support and update information, see [Updates and servicing for Configuration Manager](/intune/configmgr/core/servers/manage/updates).
 
-<a id="CMS2">²</a> Currently, this ASR rule might not be available in the Intune ASR policy configuration due to a known backend issue. But, the rule is available through the [other available ASR policy configuration methods](attack-surface-reduction-rules-enable.md#enabling-attack-surface-reduction-rules) or in existing Intune ASR policies created before the issue.
+<a id="CMS2">²</a> Currently, this ASR rule might not be available in the Intune ASR policy configuration due to a known backend issue. But, the rule is available through the [other available ASR policy configuration methods](attack-surface-reduction-rules-enable.md) or in existing Intune ASR policies created before the issue.
 
 <a name='per-asr-rule-alert-and-notification-details'></a>
 
@@ -251,8 +251,8 @@ This ASR rule prevents apps from saving vulnerable signed drivers on the compute
 > [!NOTE]
 >
 > - You can configure this rule using the following alternate configuration methods:
->   - [Microsoft Intune Open Mobile Alliance - Uniform Resources \(OMA-URI\)](attack-surface-reduction-rules-enable.md#custom-profile-in-intune-alternative-2)
->   - [PowerShell](attack-surface-reduction-rules-enable.md#powershell)
+>   - [Custom profiles in Microsoft Intune using OMA-URIs and CSPs](attack-surface-reduction-rules-enable.md#configure-asr-rules-in-intune-using-custom-profiles-with-oma-uris-and-csps)
+>   - [PowerShell](attack-surface-reduction-rules-enable.md#configure-asr-rules-in-powershell)
 > - Use the following URL to submit a driver to Microsoft for analysis: <https://www.microsoft.com/wdsi/driversubmission>.
 > - To further protect your Windows devices from vulnerable drivers, you should also implement these extra protection methods:
 >   - [Microsoft App Control for Business](/windows/security/application-security/application-control/app-control-for-business/appcontrol)
@@ -351,6 +351,9 @@ Creating malicious child processes is a common malware strategy. Malware that ab
   - `AsrOfficeChildProcessBlocked`
 - **Dependencies**: Microsoft Defender Antivirus
 
+> [!NOTE]
+> This rule is enforced only if Office is installed in the `%ProgramFiles%` or `%ProgramFiles(x86)%` locations (By default, `C:\Program Files` and `C:\Program Files (x86)`).
+
 #### Block executable content from email client and webmail
 
 This rule blocks email opened with Microsoft Outlook, Outlook.com, and other popular webmail providers from propagating the following file types:
@@ -377,7 +380,7 @@ This rule blocks email opened with Microsoft Outlook, Outlook.com, and other pop
 #### Block executable files from running unless they meet a prevalence, age, or trusted list criterion
 
 > [!TIP]
-> Currently, this ASR rule might not be available in the Intune ASR policy configuration due to a known backend issue. But, the rule is available through the [other available ASR policy configuration methods](attack-surface-reduction-rules-enable.md#enabling-attack-surface-reduction-rules) or in existing Intune ASR policies created before the issue.
+> Currently, this ASR rule might not be available in the Intune ASR policy configuration due to a known backend issue. But, the rule is available through the [other available ASR policy configuration methods](attack-surface-reduction-rules-enable.md) or in existing Intune ASR policies created before the issue.
 
 This ASR rule blocks executable files (for example, .exe, .dll, or .scr, from launching). Launching untrusted or unknown executable files can be risky, as it's not initially clear if the files are malicious.
 
@@ -440,6 +443,8 @@ This ASR rule prevents Office apps (for example, Word, Excel, and PowerPoint) fr
 
 > [!NOTE]
 > This ASR rule doesn't honor Microsoft Defender Antivirus exclusions. For information about configuring ASR per-rule exclusions, see [Configure attack surface reduction per-rule exclusions](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions).
+>
+> This ASR rule isn't affected by the installation location of Office.
 
 #### Block Office applications from injecting code into other processes
 
@@ -463,6 +468,7 @@ This ASR rule blocks code injection attempts from Office apps into other process
 > - This ASR rule is incompatible with the following apps:
 >   - **BeyondTrust Privilege Guard**: For more information, see [September-2024 (Platform: 4.18.24090.11 \| Engine 1.1.24090.11)](msda-updates-previous-versions-technical-upgrade-support.md#september-2024-platform-4182409011--engine-112409011).
 >   - **Heimdal security**
+> - This ASR rule is enforced only if Office is installed in the `%ProgramFiles%` or `%ProgramFiles(x86)%` locations (By default, `C:\Program Files` and `C:\Program Files (x86)`).
 
 #### Block Office communication application from creating child processes
 
@@ -481,6 +487,8 @@ This ASR rule prevents Outlook from creating child processes, while still allowi
 
 > [!NOTE]
 > This ASR rule doesn't honor Microsoft Defender Antivirus exclusions. For information about configuring ASR per-rule exclusions, see [Configure attack surface reduction per-rule exclusions](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions).
+>
+> This rule is enforced only if Office is installed in the `%ProgramFiles%` or `%ProgramFiles(x86)%` locations (By default, `C:\Program Files` and `C:\Program Files (x86)`).
 
 #### Block process creations originating from PSExec and WMI commands
 
