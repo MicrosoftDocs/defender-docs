@@ -1,6 +1,6 @@
 ---
 title: Device inventory field reference
-description: Reference documentation for all columns, filters, and field values in the Microsoft Defender for Endpoint device inventory.
+description: Explore all columns, filters, and field values in the Microsoft Defender for Endpoint device inventory to understand your device data and take action.
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
@@ -12,7 +12,7 @@ ms.collection:
 - tier2
 ms.topic: reference
 search.appverid: met150
-ms.date: 02/25/2026
+ms.date: 04/14/2026
 ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -23,7 +23,7 @@ appliesto:
 
 # Device inventory field reference
 
-This article provides detailed descriptions of every column, filter, and field value available in the [device inventory](machines-view-overview.md). Use this reference to understand what each field means, what values to expect, and how to use the information for security operations.
+This article provides detailed descriptions of every column, filter, and field value available in the [device inventory](machines-view-overview.md). Use this reference to quickly look up what each field means, what values to expect, and what actions to take based on your device data.
 
 ## Device categories
 
@@ -39,12 +39,12 @@ The device inventory organizes devices into tabs based on their category. Each t
 
 ## Device counts and cards
 
-At the top of each device inventory tab, count pills summarize your device population at a glance.
+At the top of each device inventory tab, summary counts show your device population at a glance.
 
 | Count | Description | Available on tabs |
 |-------|-------------|-------------------|
 | **Total** | Total number of devices on the current tab. | All tabs |
-| **Critical assets** | Number of devices classified as business critical through [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management). | All devices only |
+| **Critical assets** | Number of devices classified as business critical through [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management). | All devices, Computers & mobile |
 | **High risk** | Devices with a **High** risk level based on active alerts and threat signals. | All tabs |
 | **High exposure** | Devices with a **High** exposure level based on unresolved security recommendations. | All tabs |
 | **Not onboarded** | Devices that don't have the Defender for Endpoint agent installed. | All devices, Computers & mobile |
@@ -65,13 +65,13 @@ The following tables list all available columns, organized by tab. Columns marke
 |--------|---------|-------------|----------------|
 | **Name** | Yes | The hostname or device name as reported by the device or discovered on the network. For discovered devices, this might be empty or show an IP-based name. | `DESKTOP-ABC123`, `server-prod-01` |
 | **IP** | Yes | The most recently observed IP address of the device. A device can have multiple IPs over time; this shows the latest. | `10.0.1.50`, `192.168.1.100` |
-| **MAC address** | Yes | The physical hardware address of the network interface. Used to uniquely identify devices when IP addresses change. | `00:1A:2B:3C:4D:5E` |
+| **MAC address** | No | The physical hardware address of the network interface. Used to uniquely identify devices when IP addresses change. | `00:1A:2B:3C:4D:5E` |
 | **Criticality level** | Yes | The business criticality assigned to the device by your organization. Higher criticality means the device is more important to protect. Configured through [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management). | Very high, High, Medium, Low, None |
 | **Device category** | Yes | The broad classification of the device. Determines which tab the device appears on. | Computers and Mobile, Network Device, IoT, OT, BMS, Medical, Unknown |
 | **Device type** | Yes | A more specific classification within the device category. Particularly relevant for IoT/OT devices. | Workstation, Server, Printer, Camera, Router, PLC |
 | **Domain** | Yes | The Active Directory domain the device is joined to. Empty for non-domain-joined or discovered-only devices. | `contoso.com`, `corp.fabrikam.com` |
-| **Device AAD id** | Yes | The Microsoft Entra ID (formerly Azure AD) object ID for the device. Empty for devices not registered with Microsoft Entra. | GUID format |
-| **Risk level** | Yes | An assessment of how risky the device is based on active alerts, alert severity, and other threat intelligence signals. Use this to prioritize investigation. See [Risk level values](#risk-level-values). | High, Medium, Low, Informational, No known risk |
+| **Device AAD ID** | Yes | The Microsoft Entra ID (formerly Azure AD) object ID for the device. Empty for devices not registered with Microsoft Entra. | GUID format |
+| **Risk level** | Yes | An assessment of how risky the device is based on active alerts, alert severity, and other threat intelligence signals. Use this to prioritize investigation. See [Risk level values](#risk-level-values). | High, Medium, Low, Informational, No known risks |
 | **Exposure level** | Yes | How exposed the device is based on the number and severity of pending security recommendations. Use this to prioritize patching and configuration changes. See [Exposure level values](#exposure-level-values). | High, Medium, Low, No data available |
 | **OS platform** | Yes | The operating system family running on the device. | Windows, macOS, Linux, iOS, Android |
 | **OS version** | Yes | The specific version of the operating system. | `22H2 (Build 22621.1105)`, `14.2` |
@@ -81,6 +81,7 @@ The following tables list all available columns, organized by tab. Columns marke
 | **Last device update** | Yes | The timestamp of the most recent data update from the device. For onboarded devices, this updates frequently as telemetry arrives. For discovered devices, this updates when the device is re-observed. | `2/24/2026 3:45 PM` |
 | **Tags** | Yes | Labels applied to the device for grouping and filtering. Tags can be set manually, through rules, or automatically by the system (for example, `internet-facing`). See [Create and manage device tags](machine-tags.md). | `Finance`, `Critical-Server`, `internet-facing` |
 | **Device role** | Yes | The functional role of the device in your organization, determined by [predefined classification rules](/security-exposure-management/predefined-classification-rules-and-levels). | Domain Controller, DNS Server, Exchange Server |
+| **Security operations** | Yes | The level of security operations access for the device. | Restricted, Full |
 | **Managed by** | Yes | The management tool that controls the device. Helps you understand which team or system is responsible for the device. See [Managed by values](#managed-by-values). | Intune, ConfigMgr, MDE, Unknown |
 | **Managed by status** | Yes | The compliance or management status as reported by the management tool. | Managed, Pending, Not managed |
 | **Mitigation status** | Yes | Whether a response action (containment or isolation) is currently applied to the device. | Contained, Isolated, (empty if none) |
@@ -95,15 +96,27 @@ The following tables list all available columns, organized by tab. Columns marke
 
 ### Network devices tab
 
-The Network devices tab shows columns relevant to network infrastructure. Default columns include: **IP**, **MAC address**, **Vendor**, **Model**, **Name**, **Discovery sources**, **Risk level**, **Exposure level**, **OS distribution**, **OS version**, **Last device update**, **Tags**.
+The Network devices tab shows columns relevant to network infrastructure. Default columns include: **IP**, **Vendor**, **Model**, **Name**, **Discovery sources**, **Risk level**, **Exposure level**, **OS distribution**, **OS version**, **Last device update**, **Tags**.
 
 Additional columns such as **Device subtype**, **Firmware version**, **First seen**, and **Site** are available through **Customize columns**.
 
 ### IoT/OT devices tab
 
-The IoT/OT devices tab shows columns relevant to IoT and OT devices. Default columns include: **IP**, **MAC address**, **Name**, **Device type**, **Device subtype**, **Vendor**, **Model**, **Risk level**, **Exposure level**, **OS distribution**, **OS version**, **Last device update**, **Tags**.
+The IoT/OT devices tab shows columns relevant to IoT and OT devices. Default columns include: **IP**, **MAC address**, **Name**, **Device type**, **Device subtype**, **Vendor**, **Model**, **Risk level**, **Exposure level**, **Discovery sources**, **OS distribution**, **OS version**, **Last device update**, **Tags**.
 
 Additional columns such as **Firmware version**, **First seen**, **Site**, and **Exclusion state** are available through **Customize columns**.
+
+### Computers & Mobile tab
+
+The Computers & Mobile tab shows columns relevant to enterprise endpoints. Default columns include: **Name**, **Domain**, **Device AAD ID**, **Risk level**, **Exposure level**, **OS platform**, **Windows version**, **Criticality level**, **Sensor health state**, **Onboarding status**, **Discovery sources**, **Last device update**, **Tags**, **Device role**, **Security operations**, **Managed by**, **Managed by status**, **Mitigation status**, **Cloud platforms**.
+
+Additional columns such as **IP**, **MAC address**, **Device subtype**, **Firmware version**, **First seen**, **Exclusion state**, **Device value**, **OS distribution**, and **Site** are available through **Customize columns**.
+
+### Uncategorized devices tab
+
+The Uncategorized devices tab shows columns for devices that couldn't be classified into a specific category. Default columns include: **Name**, **Vendor**, **IP**, **OS distribution**, **OS version**, **Last device update**, **Tags**.
+
+Additional columns such as **MAC address**, **Device type**, **Device subtype**, **Risk level**, **Exposure level**, **First seen**, and **Exclusion state** are available through **Customize columns**.
 
 ## Filters reference
 
@@ -130,9 +143,12 @@ Use filters to narrow the device inventory to specific device subsets. The follo
 | **Onboarding status** | All devices, Computers & mobile | Whether the device has the Defender for Endpoint agent installed and reporting telemetry. See [Onboarding status values](#onboarding-status-values). | Onboarded, Can be onboarded, Unsupported, Insufficient info | Track your onboarding progress. Filter for **Can be onboarded** to find discovered devices that should be prioritized for agent deployment. |
 | **OS distribution** | All devices, Computers & mobile | The specific edition or distribution of the OS. More granular than OS Platform. | Windows 11, Windows 10, Windows Server, Linux, macOS, iOS, Android, Other | Find devices running a specific OS version that needs patches or has known vulnerabilities. |
 | **OS Platform** | All devices, Computers & mobile | The operating system family. Use this for broad OS-level filtering; use **OS distribution** for more specific results. | Windows, macOS, Linux, iOS, Android | Scope your view to a specific OS family. For example, find all Linux servers for a security review. |
-| **Risk level** | All | The overall risk of the device based on active alerts and threat signals. See [Risk level values](#risk-level-values). | High, Medium, Low, Informational, No known risk | Prioritize investigation. Filter for **High** risk to find devices with active, high-severity alerts that need immediate attention. |
+| **OS version** | All devices | The specific version of the operating system. | Free text entry or select from discovered values | Find devices running a particular OS build or version number. |
+| **Risk level** | All | The overall risk of the device based on active alerts and threat signals. See [Risk level values](#risk-level-values). | High, Medium, Low, Informational, No known risks | Prioritize investigation. Filter for **High** risk to find devices with active, high-severity alerts that need immediate attention. |
 | **Sensor health state** | All devices, Computers & mobile | The health status of the Defender for Endpoint agent on onboarded devices. See [Sensor health state values](#sensor-health-state-values). | Active, Inactive, No sensor data, Impaired communications, Misconfigured | Monitor sensor health. Filter for **Inactive**, **No sensor data**, **Impaired communications**, or **Misconfigured** to find devices that aren't properly reporting to the service. Follow [Fix unhealthy sensors](fix-unhealthy-sensors.md). |
-| **Site** | All devices, IoT/OT | The Defender for IoT site that the device belongs to. Sites represent physical locations or network segments defined in your Defender for IoT configuration. Requires a Defender for IoT license. | Various site names from your configuration | Scope your view to a specific physical site or location. Useful for facility-specific security reviews. |
+| **Security operations** | All devices, Computers & mobile | The level of security operations access for the device, based on device group assignment. | Restricted, Full | Identify devices with restricted security operations access that might need group reassignment. |
+| **Firmware version** | All devices | The firmware version running on the device. Primarily relevant for network and IoT/OT devices. | Free text entry or select from discovered values | Find devices running a specific firmware version, for example to check for a known firmware vulnerability. |
+| **Site** | All devices, IoT/OT | The Defender for IoT site that the device belongs to. Sites represent physical locations or network segments defined in your Defender for IoT configuration. This filter is only visible when a Defender for IoT license is active. | Various site names from your configuration | Scope your view to a specific physical site or location. Useful for facility-specific security reviews. |
 | **Tags** | All | Custom labels applied to devices for grouping, filtering, and targeting. Tags can be set manually on individual devices, applied through dynamic tagging rules, or added automatically by the system (for example, `internet-facing`). | Free text entry matching tag names | Filter for a specific business context. For example, find all devices tagged `Finance` or `HQ-Building-A`. See [Create and manage device tags](machine-tags.md). |
 | **Transient device** | All | Whether the device appears intermittently on the network. Transient devices connect briefly and disappear — common with personal devices, guest devices, or devices used temporarily. These devices can add noise to your inventory. | Yes, No | Reduce noise in your inventory. Filter for **No** to focus on persistent devices. Review transient devices periodically. See [Manage device scope and relevance](manage-device-scope-relevance.md). |
 | **Vendor** | All devices | The manufacturer of the device hardware, as reported by the device or discovered by Defender for Endpoint. Primarily useful for network and IoT/OT devices. | Free text entry or select from discovered values (for example, Cisco, HP, Dell) | Find all devices from a specific vendor, for example to assess impact of a vendor-specific vulnerability or firmware update. |
@@ -164,6 +180,9 @@ The **Onboarding status** tells you whether a device has the Defender for Endpoi
 
 The **Sensor health state** indicates whether the Defender for Endpoint agent on an onboarded device is working correctly. This field only applies to onboarded devices.
 
+> [!NOTE]
+> In the portal filter, **Impaired communications** and **No sensor data** appear as sub-values under **Misconfigured**. All three represent unhealthy sensor states that need investigation.
+
 | Value | What it means | What to do |
 |-------|--------------|------------|
 | **Active** | The sensor is functioning correctly and regularly sending telemetry to the Defender for Endpoint service. The device is fully protected and monitored. | No action needed. |
@@ -182,7 +201,7 @@ The **Risk level** represents the overall threat risk of a device, based on a co
 | **Medium** | The device has medium-severity alerts or a moderate number of unresolved alerts. | Investigate soon. Review alerts and remediate issues before they escalate. |
 | **Low** | The device has low-severity alerts. Risk is present but limited. | Monitor and address when resources allow. |
 | **Informational** | The device has informational-level alerts that don't indicate a significant threat. | Review alerts for awareness. No urgent action required. |
-| **No known risk** | No active alerts or known threats on this device. | No action needed. The device is in a healthy state from a threat perspective. |
+| **No known risks** | No active alerts or known threats on this device. | No action needed. The device is in a healthy state from a threat perspective. |
 
 ### Exposure level values
 
