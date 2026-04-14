@@ -7,10 +7,11 @@ ms.date: 04/14/2026
 ms.topic: how-to
 ms.service: defender-for-cloud-apps
 ms.reviewer: gayasalomon
+ai-usage: ai-assisted
 #customer-intent: As a security administrator, I want view all of the AI Agents in my organization, and detect threats on my AI agents using advanced hunting.
 ---
 
-# Discover and protect your AI Agents (Preview)
+# Discover and protect your Copilot Studio AI Agents (Preview)
 
 Microsoft Defender detects all Copilot Studio custom AI agents in your tenant and provides tools to identify misconfigured or potentially risky agents, and collects data from Copilot Studio for use in [advanced hunting](/defender-xdr/advanced-hunting-overview).
 
@@ -26,7 +27,9 @@ To enable AI agent inventory and detection, you must:
   - Microsoft Defender for Cloud
   - Microsoft Defender XDR
 
-## Enable the Copilot Studio AI agent inventory
+## Enable discovery of Copilot Studio AI agents
+
+After you enable Security for AI, Microsoft Defender automatically discovers all Copilot Studio custom AI agents in your tenant. After discovery, you can view your agents in the [AI agent inventory](/defender-xdr/security-for-ai/ai-agent-inventory) and use [advanced hunting](/defender-xdr/advanced-hunting-overview) to investigate potential threats and misconfigurations.
 
 > [!NOTE]
 > The onboarding process for the AI agent inventory requires collaboration with Power Platform administrators.
@@ -46,23 +49,7 @@ To enable the Copilot Studio AI agent inventory, follow these steps:
 
 When Copilot Studio AI Agents are connected, a green indicator appears in the **AI Agents Inventory** section in the Microsoft Defender system settings. It can take up to 30 minutes for the initial connection status to update. Depending on the size and complexity of your environment, it might take longer to see the full deployment of the AI agent inventory.
 
-## Identify misconfigured or risky AI agents using advanced hunting
+## Related articles
 
-After you give Microsoft Defender access to your custom agents, you can use advanced hunting to help identify misconfigured or risky agents and minimize organizational exposure to potential threats. 
-
-See [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview) to learn how to use queries to proactively hunt for threats.
-
-We recommend that you reach out to the owners of the risky agents for more information, and that you consider quarantining or deleting risky agents.
-
-1. Sign in to the Defender portal, and go **Investigation & response** -> **Hunting** -> **Advanced hunting**.
-1. In the **Apps & identities** section, the [AIAgentsInfo table](/defender-xdr/advanced-hunting-aiagentsinfo-table) contains data for all your custom AI agents created using Copilot Studio. You can use this data to create custom queries.
-1. You can use the collection of community queries to identify misconfigured or risky agents.
-    1. **Sign in to the [Microsoft Defender portal](https://security.microsoft.com)**.
-    1. Go to **Investigation & response** -> **Hunting** -> **Advanced hunting**.
-    1. In the **Queries** tab, select **Community queries**. The **AI Agents** folder contains queries related to AI agents. For more information, see [Sample queries](/defender-xdr/advanced-hunting-aiagentsinfo-table).
-
-
- ## Related articles
- 
- - [Protect your Copilot Studio custom AI Agents (Preview)](ai-agent-protection.md)
- - [Enable real-time protection for Microsoft Copilot Studio Agents](real-time-agent-protection-during-runtime.md)  
+- [Protect your Copilot Studio custom AI Agents (Preview)](ai-agent-protection.md)
+- [Enable real-time protection for Microsoft Copilot Studio Agents](real-time-agent-protection-during-runtime.md)
