@@ -5,14 +5,12 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-android
 ms.topic: troubleshooting-general
 ms.subservice: android
-search.appverid: met150
 ms.date: 04/12/2026
 appliesto:
 - Microsoft Defender for Endpoint Plan 1

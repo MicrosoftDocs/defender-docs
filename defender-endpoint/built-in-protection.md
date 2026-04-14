@@ -1,10 +1,8 @@
-﻿---
+---
 title: Built-in protection helps guard against ransomware
 description: Learn how built-in protection protects against ransomware as part of Microsoft Defender for Endpoint.
-search.appverid: MET150
 author: paulinbar
 ms.author: painbar
-audience: IT Pro
 ms.topic: overview
 ms.date: 06/24/2024
 ms.service: defender-endpoint
@@ -16,7 +14,6 @@ ms.collection:
 - mde-ngp
 ms.custom: 
 ms.reviewer: joshbregman
-f1.keywords: NOCSH
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

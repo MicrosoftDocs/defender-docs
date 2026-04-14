@@ -3,7 +3,6 @@ title: Performance analyzer for Microsoft Defender Antivirus
 description: Describes the procedure to tune the performance of Microsoft Defender Antivirus.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-audience: ITPro
 author: chrisda
 ms.author: chrisda
 ms.date: 10/20/2025
@@ -15,7 +14,6 @@ ms.collection:
 - mde-ngp
 ms.topic: how-to
 ms.subservice: ngp
-search.appverid: met150
 ---
 
 # Performance analyzer for Microsoft Defender Antivirus

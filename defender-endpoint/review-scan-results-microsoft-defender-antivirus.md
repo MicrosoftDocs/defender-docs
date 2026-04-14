@@ -1,4 +1,4 @@
-﻿---
+---
 title: Review the results of Microsoft Defender Antivirus scans
 description: Review the results of scans using Microsoft Configuration Manager, Microsoft Intune, or the Windows Security app
 ms.service: defender-endpoint
@@ -14,7 +14,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
