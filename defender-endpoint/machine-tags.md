@@ -48,6 +48,7 @@ Device tagging is supported on:
 
 - Each device can have multiple tags.
 - Dynamic tags update approximately every hour.
+- There might be some latency between the time a tag is added to a device and its availability in the devices list and device page.
 - Large numbers of tags don't significantly affect performance.
 - Custom data collection rules can target multiple tag combinations.
 
