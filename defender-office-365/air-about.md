@@ -24,7 +24,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2
+# Automated investigation  response (AIR) in Microsoft Defender for Office 365 Plan 2
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
@@ -93,7 +93,6 @@ You need to be assigned permissions to use AIR. You have the following options:
   - _Set up AIR features_: Membership in the **Organization Management** or **Security Administrator** role groups.
   - _Start an automated investigation_ or _Approve or reject recommended actions_:
     - Membership in the **Organization Management**, **Security Administrator**, **Security Operator**, **Security Reader**, or **Global Reader** role groups.
-      and
     - The **Search and Purge** role, which is assigned only to the **Data Investigator** or **Organization Management** role groups by default. Or you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
 - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Give users the required permissions _and_ permissions for other features in Microsoft 365:
   - _Set up AIR features_ Membership in the **Global Administrator** or **Security Administrator** roles.
