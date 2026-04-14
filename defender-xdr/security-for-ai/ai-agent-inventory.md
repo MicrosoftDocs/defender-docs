@@ -39,7 +39,7 @@ To view all of your Agent 365-managed agents and their configuration details:
 1. Select **Investigation & response** > **Hunting** > **Advanced hunting**.
 1. Query the `AIAgentsInfo` table.
 
-    To run prebuilt queries that Microsoft writes and manages for AI agents, select the **Queries** tab, then select **AI Agents**. For more information, see [Sample queries](/defender-xdr/advanced-hunting-aiagentsinfo-table).
+    **To manage security posture**, use the prebuilt queries that Microsoft provides and maintains for AI agents. To access these queries, select the **Queries** tab, then select **AI Agents**. For more information, see [Sample queries](/defender-xdr/advanced-hunting-aiagentsinfo-table).
 
     Create your own queries using Kusto Query Language (KQL). For example, run this query to get a list of all AI agents registered with Microsoft Agent 365, along with their key security information:
 
