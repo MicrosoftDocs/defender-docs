@@ -47,7 +47,7 @@ To enable real-time protection for your AI agents:
 1. Make sure that **Security for AI agents** is toggled on.
 1. Make sure that **Agent 365** is connected under **AI real-time protection & investigation**. 
 
-    :::image type="content" source="media/real-time-agent-protection-during-runtime/enable-ai-real-time-protection.png" alt-text="Screenshot of Security for AI agents settings showing toggled on switch and connected status for Agent 365 and Copilot Studio." lightbox="media/real-time-agent-protection-during-runtime/enable-ai-real-time-protection.png":::
+    :::image type="content" source="media/ai-agent-detection-protection/enable-ai-real-time-protection.png" alt-text="Screenshot of Security for AI agents settings showing toggled on switch and connected status for Agent 365 and Copilot Studio." lightbox="media/ai-agent-detection-protection/enable-ai-real-time-protection.png":::
 
 1. To enable the extended real-time protection capabilities for Microsoft Copilot Studio agents, make sure that **Copilot Studio** is connected under **AI real-time protection & investigation**. 
 

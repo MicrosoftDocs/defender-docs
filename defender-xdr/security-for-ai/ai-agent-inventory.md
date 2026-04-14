@@ -31,7 +31,7 @@ The [AIAgentsInfo table](/defender-xdr/advanced-hunting-aiagentsinfo-table) in A
 - Hunt for risks such as unauthenticated agents, overprivileged configurations, data exposure, and misconfigurations.
 
 > [!NOTE]
-> The `AIAgentsInfo` table provides an extended set of properties for Copilot Studio agents, which are not currently available for other AI agents.
+> The `AIAgentsInfo` table provides an extended set of properties for Copilot Studio agents, which aren't currently available for other AI agents.
 
 To view all of your Agent 365-managed agents and their configuration details:
 

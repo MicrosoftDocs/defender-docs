@@ -71,7 +71,7 @@
         - name: Discover AI agents and manage posture
           href: security-for-ai/ai-agent-inventory.md
         - name: Detect, block, and investigate threats to AI agents
-          href: security-for-ai/real-time-agent-protection-during-runtime.md
+          href: security-for-ai/ai-agent-detection-protection.md
       - name: Microsoft Secure Score
         items:
           - name: Overview
