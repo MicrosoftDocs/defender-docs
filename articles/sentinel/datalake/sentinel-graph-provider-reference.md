@@ -2483,6 +2483,10 @@ builder.add_node("user") \
     .add_edge("follows")
 ```
 
+### Restrictions
+
+Builder support methods - add_node() and add_edge() does not allow use of underscores ('_') when naming nodes, edges or properties in a custom graph. Graph building operations will fail surfacing an invalid request error.
+
 ### Union Schemas
 
 Multiple edges with the same alias are automatically union'ed with merged properties:
