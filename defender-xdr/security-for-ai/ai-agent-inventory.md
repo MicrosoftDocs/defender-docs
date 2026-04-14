@@ -78,7 +78,7 @@ For Microsoft Foundry agents, Microsoft Defender also surfaces security posture 
 1. Select **Microsoft Foundry**, **Copilot Studio**, **AWS Bedrock**, or **GCP Vertex AI** to see a filtered list of AI agents based on the tool used to create the agent.
 1. To see detailed information about an AI agent, select the agent from the list. This opens the **Agent** pane, which provides detailed information about the selected agent. The information displayed varies based on whether the agent was created in Microsoft Copilot Studio, Microsoft Foundry, AWS Bedrock, or GCP Vertex AI.
 
-    :::image type="content" source="media/ai-agent-inventory/ai-agent-details-pane.png" alt-text="Screenshot of the AI agent inventory in the Defender portal showing agent list, filters, and detailed information for a selected Microsoft Foundry agent.":::
+    :::image type="content" source="media/ai-agent-inventory/ai-agent-details-pane.png" alt-text="Screenshot of the AI agent inventory in the Defender portal showing agent list, filters, and detailed information for a selected Microsoft Foundry agent." lightbox="media/ai-agent-inventory/ai-agent-details-pane.png":::
 
     > [!NOTE]
     > For Microsoft Copilot Studio agents, the AI agent inventory currently supports agent discovery, but not security posture management. To manage security posture for Copilot Studio agents, use [Advanced Hunting](#view-all-agent-365-managed-agents-and-configuration-details-using-advanced-hunting).
