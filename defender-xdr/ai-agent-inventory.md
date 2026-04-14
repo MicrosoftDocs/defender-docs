@@ -41,9 +41,9 @@ The AI agent inventory helps security teams discover, catalog, and continuously 
 To enable the AI agent inventory, complete these steps:
 
 1. [Enable the Microsoft 365 connector](/defender-cloud-apps/protect-office-365#connect-microsoft-365-to-microsoft-defender-for-cloud-apps) to allow Defender to collect audit logs and monitor your AI agents for suspicious activity.
-1. Set up inventory for the agent platforms your organization uses:
-   - **Copilot Studio**: See [Discover and protect your AI agents (Preview)](/defender-for-cloud-apps/ai-agent-inventory).
-   - **Azure AI Foundry**: See [Microsoft Defender for Cloud AI Security posture management](/azure/defender-for-cloud/ai-security-posture).
+1. Set up inventory for your AI agents:
+   - For **Copilot Studio** AI agents: See [Discover and protect your AI agents (Preview)](/defender-for-cloud-apps/ai-agent-inventory).
+   - For **Azure AI Foundry** AI agents: See [Microsoft Defender for Cloud AI Security posture management](/azure/defender-for-cloud/ai-security-posture).
 
 ## View the AI agent inventory
 
