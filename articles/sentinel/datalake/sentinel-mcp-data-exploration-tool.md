@@ -32,7 +32,6 @@ To access the data exploration tool collection, you need the following prerequis
 > [!IMPORTANT]
 > Access to Sentinel MCP tools is supported for users, managed identities, or service principals that are assigned with ***at least*** any of the following roles:
 > - Security Administrator
-> - Security Contributor
 > - Security Operator
 > - Security Reader
 
