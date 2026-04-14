@@ -1,11 +1,10 @@
-﻿---
+---
 title: Manage tamper protection on an individual device
 ms.reviewer: joshbregman, mattcall, pahuijbr, hayhov, oogunrinde
 description: Turn tamper protection on or off for an individual device.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 10/20/2025
-audience: ITPro
 ms.topic: how-to
 author: limwainstein
 ms.author: lwainstein
@@ -17,7 +16,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender Antivirus
 

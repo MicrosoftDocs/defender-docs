@@ -2,20 +2,14 @@
 title: List incidents API in Microsoft Defender XDR
 description: Learn how to list incidents API in Microsoft Defender XDR
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: edbaynash
 author: EdB-MSFT
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
  - m365-security
  - tier3
  - must-keep
 ms.topic: reference
-search.appverid: 
-  - MOE150
-  - MET150
 ms.custom: api
 ms.date: 04/18/2025
 appliesto:

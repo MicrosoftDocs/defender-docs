@@ -2,19 +2,15 @@
 title: Tune Microsoft Defender for Office 365
 description: Tune settings and protection in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-f1.keywords:
-  - NOCSH
 author: MSFTBen
 ms.author: chrisda
 manager: bagol
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-guidance-templates
 - m365-security
 - tier3
 ms.topic: how-to
-search.appverid: met150
 ms.date: 04/14/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>

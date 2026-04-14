@@ -6,14 +6,12 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: denishdonga
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-android
 ms.topic: how-to
 ms.subservice: android
-search.appverid: met150
 ms.date: 12/17/2025
 appliesto:
    - Microsoft Defender for Endpoint Plan 1
@@ -267,7 +265,6 @@ Use the following steps to configure the Device tags:
 
 1. Select Next and assign this policy to targeted devices and users.
 
-
 > [!NOTE]
 > The Defender app needs to be opened for tags to be synced with Intune and passed to Security Portal. It might take up to 18 hours for tags to reflect in the portal.
 
@@ -275,6 +272,6 @@ Use the following steps to configure the Device tags:
 
 - [Overview of Microsoft Defender for Endpoint on Android](microsoft-defender-endpoint-android.md)
 
-- [Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](android-intune.md)
+- <a href="/intune/intune-service/protect/microsoft-defender-deploy-android" target="_blank" rel="noopener noreferrer">Microsoft Intune: Deploy and configure Microsoft Defender for Endpoint on Android</a>
 
 

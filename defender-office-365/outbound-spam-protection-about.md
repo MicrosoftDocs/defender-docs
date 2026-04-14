@@ -1,15 +1,9 @@
 ---
 title: Outbound spam protection
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
-  - MOE150
 ms.assetid: 6a601501-a6a8-4559-b2e7-56b59c96a586
 ms.collection: 
   - m365-security

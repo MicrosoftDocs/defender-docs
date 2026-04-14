@@ -5,13 +5,11 @@ ms.service: defender-xdr
 ms.localizationpriority: medium
 ms.author: guywild
 author: guywi-ms
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - usx-security
 ms.topic: article
-search.appverid: met150
 ms.date: 03/27/2024
 appliesto:
     - Microsoft Defender XDR

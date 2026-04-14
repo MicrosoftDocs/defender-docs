@@ -1,15 +1,9 @@
 ---
 title: Details and results of AIR in Defender for Office 365 Plan 2
-f1.keywords: 
-- NOCSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
-search.appverid: 
-- MET150
-- MOE150
 ms.collection: 
 - m365-security
 - tier2
