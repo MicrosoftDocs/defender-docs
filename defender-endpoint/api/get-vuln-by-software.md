@@ -1,12 +1,10 @@
-﻿---
+---
 title: List vulnerabilities by software
 description: Retrieve a list of vulnerabilities in the installed software.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
@@ -14,7 +12,6 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 11/16/2025
 appliesto:
   - Microsoft Defender for Endpoint

@@ -7,7 +7,6 @@ author: chrisda
 ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: pahuijbr
-manager: bagol
 ms.subservice: ngp
 ms.date: 10/20/2025
 appliesto:
@@ -18,7 +17,6 @@ ms.collection:
 - tier2
 - mde-ngp
 ms.topic: how-to
-search.appverid: met150
 ---
 
 # Configure Microsoft Defender Antivirus scanning options

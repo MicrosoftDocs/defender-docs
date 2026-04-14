@@ -52,8 +52,6 @@ items:
             displayName: Directory Service Account, DSA
           - name: Configure a DSA with a gMSA
             href: deploy/create-directory-service-account-gmsa.md
-        - name: Configure remote calls to SAM
-          href: deploy/remote-calls-sam.md
         - name: Configure action accounts
           href: deploy/manage-action-accounts.md
         - name: Deploy a standalone sensor
@@ -75,6 +73,8 @@ items:
           href: deploy/prerequisites-sensor-version-3.md
         - name: Activate the Defender for Identity sensor
           href: deploy/activate-sensor.md
+    - name: Migrate from sensor v2 to sensor v3 (Preview)
+      href: deploy/migrate-to-sensor-v3.md
     - name: Validate the sensor deployment
       href: deploy/test-sensor.md
   - name: Configure event collection
@@ -97,6 +97,12 @@ items:
         href: okta-defender-for-identity-overview.md
       - name: Connect Okta to Microsoft Defender for Identity (Preview)
         href: okta-integration.md
+    - name: Microsoft Defender for Identity and SailPoint 
+      items:
+      - name: Overview (Preview)
+        href: sail-point-overview.md
+      - name: Connect SailPoint to Microsoft Defender for Identity (Preview)
+        href: connect-sail-point.md
     - name: Integrate Defender for Identity with PAM services
       href: integrate-microsoft-and-pam-services.md
 
@@ -124,6 +130,8 @@ items:
       href: sensor-settings.md
     - name: Uninstall a sensor
       href: uninstall-sensor.md
+    - name: View and manage health issues
+      href: health-alerts.md
     - name: Configure scoped access
       href: configure-scoped-access.md
     - name: VPN integration
@@ -147,16 +155,20 @@ items:
   items:
   - name: Assets
     items:
-    - name: Identity inventory
-      href: identity-inventory.md
-    - name: Investigate assets
-      href: investigate-assets.md
-    - name: Service accounts
+    - name: View your identities
+      items:
+       - name: View the identity inventory
+         href: identity-inventory.md
+       - name: Investigate a human identity
+         href: /defender-xdr/investigate-users?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
+       - name: Investigate a non-human identity
+         href: /defender-xdr/investigate-non-human-identities?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
+       - name: Investigate an Active Directory domain
+         href: investigate-domain.md
+       - name: Investigate identity password protection
+         href: password-protection.md
+    - name: View service accounts
       href: service-account-discovery.md
-  - name: Lateral movement paths
-    items:
-    - name: Understand and investigate lateral movement paths
-      href: understand-lateral-movement-paths.md
   - name: Alerts
     items:
       - name: Alerts overview

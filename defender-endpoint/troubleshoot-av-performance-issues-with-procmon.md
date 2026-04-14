@@ -4,7 +4,6 @@ description: Troubleshoot Microsoft Defender Antivirus performance issues with P
 author: chrisda
 ms.author: chrisda
 ms.reviewer: yonghree
-manager: bagol
 ms.service: defender-endpoint
 ms.topic: troubleshooting-general
 ms.date: 03/20/2025
@@ -14,8 +13,6 @@ ms.collection:
 - m365-security
 ms.custom:
 - partner-contribution
-f1.keywords: NOCSH
-audience: ITPro
 ai-usage: human-only
 ---
 

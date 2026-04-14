@@ -1,19 +1,16 @@
-﻿---
+---
 title: Isolation exclusions in Microsoft Defender for Endpoint
 description: Learn about to exclude specific processes, IP addresses, or services from network isolation when applying selective isolation action to devices.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-edr
 ms.topic: how-to
 ms.subservice: edr
-search.appverid: met150
 ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

@@ -1,17 +1,14 @@
-﻿---
+---
 title: Manage the live response file library in Microsoft Defender for Endpoint
 description: Use Microsoft Defender for Endpoint to configure libraries for live response.
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: how-to
-search.appverid: met150
 ms.date: 03/19/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

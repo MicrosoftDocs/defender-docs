@@ -10,12 +10,10 @@ ms.author: chrisda
 ms.custom: nextgen
 ms.date: 01/09/2025
 ms.reviewer: joshbregman
-manager: bagol
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 ---
 
 # Exclusions overview 

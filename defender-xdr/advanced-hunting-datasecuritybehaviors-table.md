@@ -1,16 +1,11 @@
 ---
 title: DataSecurityBehaviors table in the advanced hunting schema
 description: Learn about the DataSecurityBehaviors table of the advanced hunting schema, which contains insights about potentially suspicious user behaviors that violate the user-defined or default policies configured in the Microsoft Purview suite of solutions.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3

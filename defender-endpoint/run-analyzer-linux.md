@@ -1,9 +1,8 @@
-﻿---
+---
 title: Run the client analyzer on Linux
 description: Run the Defender for Endpoint client analyzer on Linux
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.subservice: linux
@@ -15,9 +14,6 @@ ms.collection:
 - m365-security
 - tier3
 - mde-macos
-search.appverid: met150
-audience: ITPro
-f1.keywords: NOCSH
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

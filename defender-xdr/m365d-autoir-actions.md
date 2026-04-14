@@ -1,16 +1,12 @@
 ---
 title: View and manage actions in the Action center
-description: Use the Action center in the Microsoft Defender portal to view and manage remediation actions for affected assets.
-search.appverid: met150
+description: View and manage remediation actions for affected assets using the Action center in the Microsoft Defender portal.
 ms.service: defender-xdr
-f1.keywords: 
-- NOCSH
 ms.author: guywild
 author: guywi-ms
+manager: orspodek
 ms.localizationpriority: medium
 ms.date: 04/28/2025
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -29,7 +25,7 @@ appliesto:
 Threat protection features in Microsoft Defender XDR can result in certain remediation actions. Here are some examples:
 
 - [Automated investigations](m365d-autoir.md) can result in remediation actions that are taken automatically or await your approval.
-- Antivirus, antimalware, and other threat protection features can result in remediation actions, such as blocking a file, URL, or process, or sending an artifact to quarantine.
+- Antivirus, anti-malware, and other threat protection features can result in remediation actions, such as blocking a file, URL, or process, or sending an artifact to quarantine.
 - Your security operations team can take remediation actions manually, such as during [advanced hunting](advanced-hunting-overview.md) or while investigating [alerts](investigate-alerts.md) or [incidents](investigate-incidents.md).
 
 > [!NOTE]
@@ -63,14 +59,14 @@ It's important to approve (or reject) pending actions as soon as possible so tha
 
 ## Undo completed actions
 
-If you've determined that a device or a file is not a threat, you can undo remediation actions that were taken, whether those actions were taken automatically or manually. In the Action center, on the **History** tab, you can undo any of the following actions:  
+If you determine that a device or a file isn't a threat, you can undo the remediation actions that were taken. You can undo actions whether they were taken automatically or manually. In the Action center, on the **History** tab, you can undo any of the following actions:  
 
 | Action source | Supported Actions |
 |:---|:---|
 | - Automated investigation <br/>- Microsoft Defender Antivirus <br/>- Manual response actions | - Isolate device <br/>- Contain device <br/>- Contain user <br/>- Restrict code execution <br/>- Quarantine a file <br/>- Remove a registry key <br/>- Stop a service <br/>- Disable a driver <br/>- Remove a scheduled task |
 
 > [!NOTE]
-> Only Security Administrators and Global Administrators are allowed access to undo operations such as File Quarantine.
+> Only Security Administrators and higher are allowed access to undo operations such as File Quarantine.
 
 ### Undo one remediation action
 

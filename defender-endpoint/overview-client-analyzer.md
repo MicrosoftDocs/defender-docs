@@ -1,22 +1,17 @@
-﻿---
+---
 title:  Troubleshoot sensor health using Microsoft Defender for Endpoint Client Analyzer
 description: Troubleshoot sensor health on devices to identify potential configuration, environment, connectivity, or telemetry issue affecting sensor data or capability.
 ms.service: defender-endpoint
-f1.keywords:
-- NOCSH
 ms.author: chrisda
 author: chrisda
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-ngp
 ms.topic: troubleshooting-general
 ms.subservice: ngp
-search.appverid: met150
 ms.date: 06/10/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

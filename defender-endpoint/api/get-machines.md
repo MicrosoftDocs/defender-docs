@@ -1,12 +1,10 @@
-﻿---
+---
 title: List machines API
 description: Learn how to use the List machines API to retrieve a collection of machines that have communicated with Microsoft Defender for Endpoint cloud.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.topic: reference
 ms.collection:
 - m365-security
@@ -14,7 +12,6 @@ ms.collection:
 - must-keep
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

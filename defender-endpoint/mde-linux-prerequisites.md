@@ -6,15 +6,12 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
 ms.topic: article
 ms.subservice: linux
-search.appverid: met150
 ms.date: 03/12/2026
 ---
 
@@ -103,7 +100,7 @@ The following Linux server distributions are supported:
 | CentOS Stream | 8.x, 9.x, 10.x | 8.x, 9.x, 10.x |
 | Ubuntu LTS | 16.04, 18.04, 20.04, 22.04,24.04 | 20.04, 22.04, 24.04 |
 | Ubuntu Pro | 22.04, 24.04 | 22.04, 24.04 |
-| Debian | 9–13 | 11, 12 |
+| Debian | 9–13 | 11, 12, 13 |
 | SUSE Linux Enterprise Server | 12.x, 15.x | 15 (SP5, SP6) |
 | Oracle Linux | 7.2+, 8.x, 9.x | 8.x, 9.x |
 | Amazon Linux | 2, 2023 | 2, 2023 |

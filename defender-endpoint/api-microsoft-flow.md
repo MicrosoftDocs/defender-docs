@@ -7,13 +7,10 @@ ms.subservice: reference
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: how-to
-search.appverid: met150
 ms.date: 03/21/2025
 appliesto:
 - Microsoft Defender for Endpoint Plan 1

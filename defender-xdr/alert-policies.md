@@ -1,22 +1,16 @@
 ---
 title: Alert policies in the Microsoft Defender portal
-f1.keywords:
-- NOCSH
 ms.author: guywild
 author: guywi-ms
 manager: deniseb
-ms.date: 03/21/2025
-audience: Admin
+ms.date: 03/31/2026
 ms.topic: article
 ms.service: defender-xdr
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - tier1
 - M365-security-compliance
-search.appverid:
-- MET150
-- MOE150
-ms.custom: 
+ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
 - admindeeplinkDEFENDER
@@ -80,7 +74,7 @@ To view and create alert policies, in the [Microsoft Defender portal](https://se
   :::image type="content" source="media/alert-policies/policies-rules-page-small.png" alt-text="Highlighting Alert policy in the Policies and rules page":::
 
 > [!NOTE]
-> You have to be assigned the View-Only Manage Alerts role to view alert policies in the Microsoft Defender portal. You have to be assigned the Manage Alerts role to create and edit alert policies. For more information, see [Map Microsoft Defender XDR Unified role-based access control (RBAC) permissions](compare-rbac-roles.md).
+> You have to be assigned the View-Only Manage Alerts role to view alert policies in the Microsoft Defender portal. You have to be assigned the Manage Alerts role to create and edit alert policies. For more information, see [Map Microsoft Defender unified role-based access control (RBAC) permissions](compare-rbac-roles.md).
 
 An alert policy consists of the following settings and conditions.
 
@@ -96,7 +90,7 @@ You can also define user tags as a condition of an alert policy. This definition
 - **When the alert is triggered**. You can configure a setting that defines how often an activity can occur before an alert is triggered. This allows you to set up a policy to generate an alert every time an activity matches the policy conditions, when a certain threshold is exceeded, or when the occurrence of the activity the alert is tracking becomes unusual for your organization.
 
     ![Configure how alerts are triggered, based on when the activity occurs, a threshold, or unusual activity for your organization.](media/alert-policies/howalertsaretriggered.png)
-  
+
     If you select the setting based on unusual activity, Microsoft establishes a baseline value that defines the normal frequency for the selected activity. It takes up to seven days to establish this baseline, during which alerts aren't generated. After the baseline is established, an alert is triggered when the frequency of the activity tracked by the alert policy greatly exceeds the baseline value. For auditing-related activities (such as file and folder activities), you can establish a baseline based on a single user or based on all users in your organization; for malware-related activities, you can establish a baseline based on a single malware family, a single recipient, or all messages in your organization.
 
     > [!NOTE]
@@ -143,6 +137,8 @@ The tables also indicate the Office 365 Enterprise and Office 365 US Government 
 |**Unusual volume of external file sharing**|Generates an alert when an unusually large number of files in SharePoint or OneDrive are shared with users outside of your organization.|Medium|No|E5/G5 or Defender for Office 365 Plan 2 add-on subscription.|
 
 <!---
+|Name|Description|Severity|Automated investigation|Subscription|
+|---|---|:---:|:---:|---|
 |**Unusual external user file activity**|Generates an alert when an unusually large number of activities are performed on files in SharePoint or OneDrive by users outside of your organization. This includes activities such as accessing files, downloading files, and deleting files.|High|No|E5/G5, Defender for Office 365 Plan 2, or Microsoft 365 E5 add-on subscription.|
 |**Unusual volume of file deletion**|Generates an alert when an unusually large number of files are deleted in SharePoint or OneDrive within a short time frame.|Medium|No|E5/G5, Defender for Office 365 Plan 2, or Microsoft 365 E5 add-on subscription.|
 --->
@@ -164,9 +160,9 @@ The tables also indicate the Office 365 Enterprise and Office 365 US Government 
 
 |Name|Description|Severity|Automated investigation|Required subscription|
 |---|---|:---:|:---:|---|
-|**A potentially malicious URL click was detected**|Generates an alert when a user protected by [Safe Links](/microsoft-365/security/office-365-security/safe-links-about) in your organization clicks a malicious link. This alert is generated when a user clicks on a link and this event triggers a URL verdict change identification by Microsoft Defender for Office 365. It also checks for any clicks in the past 48 hours from the time the malicious URL verdict is identified, and generates alerts for the clicks that happened in the 48-hour timeframe for that malicious link. This alert automatically triggers [automated investigation and response in Defender for Office 365 Plan 2](/microsoft-365/security/office-365-security/air-about). For more information on events that trigger this alert, see [Set up Safe Links policies](/microsoft-365/security/office-365-security/safe-links-policies-configure).|High|Yes|E5/G5 or Defender for Office 365 Plan 2 add-on subscription.|
+|**A potentially malicious URL click was detected**|Generates an alert when a user protected by [Safe Links](/microsoft-365/security/office-365-security/safe-links-about) in your organization clicks a malicious link. This alert is generated when a user clicks on a link and this event triggers a URL verdict change identification by Microsoft Defender for Office 365. It also checks for any clicks in the past 48 hours from the time the malicious URL verdict is identified, and generates alerts for the clicks that happened in the 48-hour timeframe for that malicious link. This alert automatically triggers [automated investigation and response in Defender for Office 365 Plan 2](/microsoft-365/security/office-365-security/air-about). For more information on events that trigger this alert, see [Set up Safe Links policies](/microsoft-365/security/office-365-security/safe-links-policies-configure). <br/><br/> This alert is also available in Microsoft Teams scenarios. An alert is generated if a user clicks on a link protected by Safe Links in a Teams chat. Clicks on links in Teams channels trigger alerts, but some message metadata might not be included. Currently, AIR isn't available for this alert. |High|Yes|E5/G5 or Defender for Office 365 Plan 2 add-on subscription.|
 |**A Tenant Allow Block List entry has been found malicious**|Generates an alert when Microsoft determines that the admin submission corresponding to an allow entry in the Tenant Allow/Block List is found to be malicious. This event is triggered as soon as the submission is analyzed by Microsoft. <br/><br/> The allow entry will continue to exist for its stipulated duration. For more information on events that trigger this alert, see [Manage the Tenant Allow/Block list](/microsoft-365/security/office-365-security/tenant-allow-block-list-about).|Informational|No|E1/F1/G1, E3/F3/G3, or E5/G5|
-|**A user clicked through to a potentially malicious URL**|Generates an alert when a user protected by [Safe Links](/microsoft-365/security/office-365-security/safe-links-about) in your organization clicks a malicious link. This event is triggered when user clicks on a URL (which is identified as malicious or pending validation) and overrides the Safe Links warning page (based on your organization's Microsoft 365 for business Safe Links policy) to continue to the URL hosted page / content. This alert automatically triggers [automated investigation and response in Defender for Office 365 Plan 2](/microsoft-365/security/office-365-security/air-about). For more information on events that trigger this alert, see [Set up Safe Links policies](/microsoft-365/security/office-365-security/safe-links-policies-configure).|High|Yes|E5/G5 or Defender for Office 365 Plan 2 add-on subscription.|
+|**A user clicked through to a potentially malicious URL**|Generates an alert when a user protected by [Safe Links](/microsoft-365/security/office-365-security/safe-links-about) in your organization clicks a malicious link. This event is triggered when user clicks on a URL (which is identified as malicious or pending validation) and overrides the Safe Links warning page (based on your organization's Microsoft 365 for business Safe Links policy) to continue to the URL hosted page / content. This alert automatically triggers [automated investigation and response in Defender for Office 365 Plan 2](/microsoft-365/security/office-365-security/air-about). For more information on events that trigger this alert, see [Set up Safe Links policies](/microsoft-365/security/office-365-security/safe-links-policies-configure). <br/><br/> This alert is also available in Microsoft Teams scenarios. An alert is generated if a user clicks on a link protected by Safe Links in a Teams chat. Clicks on links in Teams channels trigger alerts, but some message metadata might not be included. Currently, AIR isn't available for this alert.|High|Yes|E5/G5 or Defender for Office 365 Plan 2 add-on subscription.|
 |**Admin submission result completed**|Generates an alert when an [Admin Submission](/microsoft-365/security/office-365-security/submissions-admin) completes the rescan of the submitted entity. An alert is triggered every time a rescan result is rendered from an Admin Submission. <br/><br/> These alerts are meant to remind you to review the results of previous submissions, submit user reported messages to get the latest policy check and rescan verdicts, and help you determine if the filtering policies in your organization are having the intended impact.|Informational|No|E1/F1, E3/F3, or E5|
 |**Admin triggered manual investigation of email**|Generates an alert when an admin triggers the manual investigation of an email from Threat Explorer. For more information, see [Example: A security administrator triggers an investigation from Threat Explorer](/microsoft-365/security/office-365-security/air-about-office#example-a-security-administrator-triggers-an-investigation-from-threat-explorer). <br/><br/> This alert notifies your organization that the investigation was started. The alert provides information about who triggered it and includes a link to the investigation.|Informational|Yes|Microsoft 365 Business Premium, Defender for Office 365 Plan 1 add-on, E5/G5, or Defender for Office 365 Plan 2 add-on.|
 |**Admin triggered user compromise investigation**|Generates an alert when an admin triggers the manual user compromise investigation of either an email sender or recipient from Threat Explorer. For more information, see [Example: A security administrator triggers an investigation from Threat Explorer](/microsoft-365/security/office-365-security/air-about-office#example-a-security-administrator-triggers-an-investigation-from-threat-explorer), which shows the related manual triggering of an investigation on an email. <br/><br/> This alert notifies your organization that the user compromise investigation was started. The alert provides information about who triggered it and includes a link to the investigation.|Medium|Yes|Microsoft 365 Business Premium, Defender for Office 365 Plan 1 add-on, E5/G5, or Defender for Office 365 Plan 2 add-on.|
@@ -212,6 +208,8 @@ The tables also indicate the Office 365 Enterprise and Office 365 US Government 
 <sup>1</sup> This alert policy is part of the replacement functionality for the **Phish delivered due to tenant or user override** and **User impersonation phish delivered to inbox/folder** alert policies that were removed based on user feedback. For more information about anti-phishing in Office 365, see [Anti-phishing policies](/microsoft-365/security/office-365-security/anti-phishing-policies-about).
 
 <!---
+|Name|Description|Severity|Automated investigation|Required subscription|
+|---|---|:---:|:---:|---|
 |**Administrative action submitted by an Administrator**|Admins can take manual email actions on email entities using various surfaces. For example, Threat Explorer, advanced hunting or through custom detection. When the remediation starts, it generates an alert. This alert shows up in the alerts queue with the name **Administrative action submitted by an Administrator** to indicate that an admin took the action of remediating an entity. The alert contains details like the action type, supporting investigation link, time, etc. It's helpful to know whenever a sensitive action like remediation is performed on entities.|Informational|Yes|E5/G5 or Defender for Office 365 P2 add-on subscription.|
 |**New transport rule removing antispam header**|A new mail flow rule (transport rule) to remove anti-spam header was detected. This alert might indicate that a spam campaign using a mailbox in the organization is currently underway.|Medium|No|E5/G5 or Defender for Office 365 P2 add-on subscription.|
 |**Suspicious inbound connector and transport rule created to remove sender email headers**|A suspicious inbound connector and mail flow rule (transport rule) were created to remove headers that identify the true source addresses of message senders. This alert might indicate that a spam campaign using a mailbox in the organization is currently underway.|Medium|No|E5/G5 or Defender for Office 365 P2 add-on subscription.|
@@ -285,7 +283,7 @@ The following table lists the roles that are required to view alerts from the si
 To see which category a default alert policy is assigned to, see the tables in [Default alert policies](#default-alert-policies).
 
 > [!TIP]
-> For information about permissions in [Microsoft Defender XDR Unified role based access control (RBAC)](/microsoft-365/security/defender/manage-rbac), see [Alert policies in the Microsoft Defender portal](/microsoft-365/security/office-365-security/alert-policies-defender-portal).
+> For information about permissions in [Microsoft Defender unified role-based access control (RBAC)](/microsoft-365/security/defender/manage-rbac), see [Alert policies in the Microsoft Defender portal](/microsoft-365/security/office-365-security/alert-policies-defender-portal).
 
 |Role|Information<br>governance|Data loss<br>prevention|Mail<br>flow|Permissions|Threat<br>management|Others|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|

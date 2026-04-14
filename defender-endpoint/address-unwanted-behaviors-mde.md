@@ -3,16 +3,12 @@ title: Address unwanted behaviors in Microsoft Defender for Endpoint with exclus
 description: Learn how to use exclusions, indicators, and other techniques to address unwanted behaviors in Microsoft Defender for Endpoint.
 author: limwainstein
 ms.author: lwainstein
-manager: bagol 
 ms.date: 11/14/2024
 ms.topic: how-to
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium 
 ms.reviewer: joshbregman
-search.appverid: MET150
-f1.keywords: NOCSH 
-audience: ITPro
 ms.custom: 
 - partner-contribution
 ms.collection: 

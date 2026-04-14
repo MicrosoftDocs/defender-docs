@@ -1,13 +1,10 @@
-﻿---
+---
 title: Configure your devices to connect to the Defender for Endpoint service using a proxy
 description: Learn how to configure your devices to enable communication with the cloud service using a proxy.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
@@ -174,6 +171,8 @@ For devices running Windows 7, Windows 8.1, Windows Server 2008 R2, and servers 
 ## Next step
 
 [STEP 3: Verify client connectivity to Microsoft Defender for Endpoint service URLs](verify-connectivity.md)
+
+For the required service endpoints, see [Microsoft Defender for Endpoint streamlined connectivity URLs - commercial](streamlined-device-connectivity-urls-commercial.md)
 
 ## Related articles
 
