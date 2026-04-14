@@ -5,8 +5,6 @@ ms.service: defender-endpoint
 ms.subservice: onboard
 ms.author: lwainstein
 author: limwainstein
-ms.author: lwainstein
-author: limwainstein
 ms.localizationpriority: medium
 ms.collection: 
 - m365-security

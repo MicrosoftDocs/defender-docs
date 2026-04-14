@@ -1,3 +1,13 @@
+---
+title: Devices content analysis for Microsoft Defender for Endpoint
+description: Content-architecture view of the Devices area in Microsoft Defender for Endpoint, intended to guide content consolidation and page refactoring.
+author: limwainstein
+ms.author: lwainstein
+ms.service: defender-endpoint
+ms.topic: overview
+ms.date: 04/14/2026
+---
+
 # Microsoft Defender for Endpoint – Devices Content Analysis
 
 ## Purpose

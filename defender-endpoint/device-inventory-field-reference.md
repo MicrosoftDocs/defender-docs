@@ -44,7 +44,7 @@ At the top of each device inventory tab, count pills summarize your device popul
 | Count | Description | Available on tabs |
 |-------|-------------|-------------------|
 | **Total** | Total number of devices on the current tab. | All tabs |
-| **Critical assets** | Number of devices classified as business critical through [Microsoft Security Exposure Management](/security-exposure-management/overview). | All devices only |
+| **Critical assets** | Number of devices classified as business critical through [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management). | All devices only |
 | **High risk** | Devices with a **High** risk level based on active alerts and threat signals. | All tabs |
 | **High exposure** | Devices with a **High** exposure level based on unresolved security recommendations. | All tabs |
 | **Not onboarded** | Devices that don't have the Defender for Endpoint agent installed. | All devices, Computers & mobile |
@@ -52,8 +52,8 @@ At the top of each device inventory tab, count pills summarize your device popul
 
 Below the counts, the inventory might display special cards:
 
-- **Classify critical assets**: Define device groups as business critical to prioritize protection. Configured through [Microsoft Security Exposure Management](/security-exposure-management/overview).
-- **Attack path warning**: Examine whether any assets are part of an attack path. Requires [Microsoft Security Exposure Management](/security-exposure-management/overview).
+- **Classify critical assets**: Define device groups as business critical to prioritize protection. Configured through [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management).
+- **Attack path warning**: Examine whether any assets are part of an attack path. Requires [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management).
 
 ## Columns reference
 
@@ -66,7 +66,7 @@ The following tables list all available columns, organized by tab. Columns marke
 | **Name** | Yes | The hostname or device name as reported by the device or discovered on the network. For discovered devices, this might be empty or show an IP-based name. | `DESKTOP-ABC123`, `server-prod-01` |
 | **IP** | Yes | The most recently observed IP address of the device. A device can have multiple IPs over time; this shows the latest. | `10.0.1.50`, `192.168.1.100` |
 | **MAC address** | Yes | The physical hardware address of the network interface. Used to uniquely identify devices when IP addresses change. | `00:1A:2B:3C:4D:5E` |
-| **Criticality level** | Yes | The business criticality assigned to the device by your organization. Higher criticality means the device is more important to protect. Configured through [Microsoft Security Exposure Management](/security-exposure-management/overview). | Very high, High, Medium, Low, None |
+| **Criticality level** | Yes | The business criticality assigned to the device by your organization. Higher criticality means the device is more important to protect. Configured through [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management). | Very high, High, Medium, Low, None |
 | **Device category** | Yes | The broad classification of the device. Determines which tab the device appears on. | Computers and Mobile, Network Device, IoT, OT, BMS, Medical, Unknown |
 | **Device type** | Yes | A more specific classification within the device category. Particularly relevant for IoT/OT devices. | Workstation, Server, Printer, Camera, Router, PLC |
 | **Domain** | Yes | The Active Directory domain the device is joined to. Empty for non-domain-joined or discovered-only devices. | `contoso.com`, `corp.fabrikam.com` |
@@ -112,7 +112,7 @@ Use filters to narrow the device inventory to specific device subsets. The follo
 | Filter | Available on tabs | Description | Values | When to use |
 |--------|-------------------|-------------|--------|-------------|
 | **Cloud platforms** | All devices, Computers & mobile | The cloud environment where the device runs. Devices can be hosted in Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), connected through Azure Arc, or running on-premises (None). | Azure, AWS, GCP, Arc, None | Filter to see only cloud-hosted devices, or use **None** to find on-premises devices. Useful for teams responsible for specific cloud environments. |
-| **Criticality level** | All devices, Computers & mobile | The business criticality assigned through [Microsoft Security Exposure Management](/security-exposure-management/overview). **Very high** indicates a business-critical asset. | Very high, High, Medium, Low, None | Focus on your most important assets. Use **Very high** to review business-critical devices that need the strongest protections. |
+| **Criticality level** | All devices, Computers & mobile | The business criticality assigned through [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management). **Very high** indicates a business-critical asset. | Very high, High, Medium, Low, None | Focus on your most important assets. Use **Very high** to review business-critical devices that need the strongest protections. |
 | **Device category** | All devices | The broad classification of the device — equivalent to the tab the device appears on. | BMS, Computers and Mobile, IoT, Medical, Network Device, OT, Unknown | Use on the **All devices** tab to narrow to a specific device type without switching tabs. Useful when combining with other filters. |
 | **Device subtype** | All devices, IoT/OT | A granular classification within the device type. Especially relevant for IoT/OT devices where "Printer" or "Camera" alone isn't specific enough. | Free text entry or select from discovered values (for example, Video conference, Smart TV, VoIP Phone) | Drill down into specific kinds of IoT/OT devices. For example, find all video conferencing systems to assess firmware update status. |
 | **Device type** | All devices, IoT/OT | The specific type of device within a category. For computers and mobile, this is typically Workstation or Server. For IoT, categories like Printer, Camera, and Router are common. | Free text entry or select from discovered values (for example, Audio and Video, Printer, Router) | Find all devices of a particular type. For example, filter for all printers to check their security posture. |

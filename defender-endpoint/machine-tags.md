@@ -14,7 +14,6 @@ ms.subservice: reference
 search.appverid: met150
 ms.date: 02/25/2026
 ai-usage: ai-assisted
-ms.date: 02/27/2023
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
