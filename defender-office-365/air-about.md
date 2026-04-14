@@ -24,7 +24,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Automated investigation  response (AIR) in Microsoft Defender for Office 365 Plan 2
+# Automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
