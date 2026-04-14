@@ -98,12 +98,12 @@ Microsoft Edge users benefit from in-browser protection, without redirecting to 
 
 ### Supported clients and limitations
 
-Conditional Access App Control session controls are enforced only for supported browser-based sessions. Some desktop applications don’t support session control enforcement.
+Conditional Access App Control session controls are enforced only for supported browser-based sessions.
 
 > [!IMPORTANT]  
 > The Microsoft Teams desktop application isn’t supported for Conditional Access App Control session controls.
 
-Session controls, such as *Block download (preview)*, don’t apply to the Microsoft Teams desktop application. To restrict access from unsupported clients, you can use an approach that blocks the desktop application instead of relying on session controls.
+Session controls, such as *Block download (preview)*, don’t apply to the Microsoft Teams desktop application. 
 
 ### Restricting access for unsupported clients
 
