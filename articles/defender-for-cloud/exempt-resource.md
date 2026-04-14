@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.custom: ignite-2023
 ms.author: elkrieger
 author: Elazark
-ms.date: 02/05/2026
+ms.date: 04/14/2026
 ---
 
 # Exempt resources from recommendations
@@ -31,20 +31,30 @@ For each scope, create an exemption rule to:
 
 ## Before you start
 
- To create exemptions, you need the following permissions:
-  - **Owner** or **Security Admin** on the scope where you create the exemption.
-  - To create a rule, you need permissions to edit policies in Azure Policy. [Learn more](/azure/governance/policy/overview#azure-rbac-permissions-in-azure-policy).
+To create exemptions, you need the following permissions:
+
+- **Owner** or **Security Admin** on the scope where you create the exemption.
+- To create a rule, you need permissions to edit policies in Azure Policy. [Learn more](/azure/governance/policy/overview#azure-rbac-permissions-in-azure-policy).
+- You must have exemption permission on all initiative assignments at the target scope. If a recommendation is part of multiple initiatives, you must create the exemption with permissions across all of them. A missing permission on even one initiative can cause the exemption to fail.
+
+- Microsoft Cloud Security Benchmark (MCSB) must be assigned on the subscription.
+
+    > [!IMPORTANT]
+    > Defender for Cloud exemptions rely on the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) initiative to evaluate and retrieve the compliance state of resources in the Defender for Cloud portal. Without MCSB assigned:
+    >
+    > - Some portal features might not work as expected.
+    > - Resources might not appear in compliance views.
+    > - Exemption options might occasionally be unavailable.
 
 - You can create exemptions for recommendations that belong to Defender for Cloud's default [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) initiative or to other built-in regulatory standards.
-
-    > [!NOTE]  
-    > Defender for Cloud exemptions rely on the Microsoft Cloud Security Benchmark (MCSB) initiative to evaluate and retrieve the compliance state of resources in the Defender for Cloud portal. If the MCSB initiative isn't assigned, the portal works only partially and some resources might not appear.
 
 - Some recommendations in the Microsoft Cloud Security Benchmark (MCSB) don't support exemptions. You can find a list of these recommendations in [the exemptions FAQ](faq-general.yml).
 
 - You must exempt recommendations that appear in multiple policy initiatives in each initiative. For more information, see [the exemptions FAQ](faq-general.yml).
 
 - You don't create exemptions for custom recommendations.
+
+- KQL-based recommendations use standard assignments and don't use Azure Policy exemption events in the Activity Logs.
 
 - If you disable a recommendation, you also exempt all of its subrecommendations.
 
@@ -97,4 +107,4 @@ An exemption can take up to 24 hours to take effect. After it takes effect:
 ## Next step
 
 > [!div class="nextstep"]
-> [Review exempted resources](review-exemptions.md) in Defender for Cloud.
+> [Review and troubleshoot recommendation exemptions](review-exemptions.md) in Defender for Cloud.

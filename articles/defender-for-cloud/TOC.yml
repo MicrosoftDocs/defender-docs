@@ -540,8 +540,8 @@
             - name: Transition from grouped to individual recommendations
               displayName: grouped, individual, recommendations, transition, legacy, dynamic, best practices
               href: transition-grouped-individual-recommendations.md
-            - name: Review resources exempted from recommendations
-              displayName: review, exemptions, exempted, resources, recommendation, exempt
+            - name: Review and troubleshoot recommendation exemptions
+              displayName: review, exemptions, exempted, resources, recommendation, exempt, troubleshoot, permissions, secure score
               href: review-exemptions.md
             - name: Assign a recommendation to an active user
               displayName: assign, recommendation, user, owner
