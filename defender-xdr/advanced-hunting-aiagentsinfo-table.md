@@ -102,7 +102,7 @@ AIAgentsInfo
     | project-away OwnerId, CreatorId, AccountObjectId, AccountObjectId1
   | project-reorder AgentCreationTime, AIAgentId, AIAgentName,  OwnerUpn, CreatorUpn, DeveloperName
 ```
-## Published agents without instructions
+### Published agents without instructions
 
 This query identifies Agent 365 AI agents that are published but lack configured instructions. Missing instructions increase the risk of prompt injection attacks, where malicious input can influence the agent to deviate from its intended behavior. Without clear guidance, the agent may respond unpredictably or expose sensitive data.
 
@@ -135,7 +135,7 @@ AIAgentsInfo
 | project-reorder AgentCreationTime, AIAgentId, AIAgentName, Instructions, OwnerUpn, CreatorUpn ,DeveloperName
 ```
 
-## MCP tools configured
+### MCP tools configured
 
 This query identifies Agent 365 AI agents that have Model Context Protocol (MCP) tools configured. MCP tools extend agent capabilities but introduce additional security considerations because they can execute advanced operations and interact with external resources. If misconfigured or unnecessary, these tools might increase the attack surface and expose sensitive data or functionality.
 
@@ -169,7 +169,7 @@ let IdentityIdtoUPN = materialize (
   | project-reorder AgentCreationTime, AIAgentId, AIAgentName, ActionType, OwnerUpn, CreatorUpn, DeveloperName
 ```
 
-## HTTP requests to non-HTTPS endpoints
+### HTTP requests to non-HTTPS endpoints
 
 This query identifies Agent 365 AI agents that send HTTP requests to endpoints using non-HTTPS schemes. Communication over unencrypted HTTP exposes sensitive data in transit and increases the risk of interception or tampering. Attackers could exploit this vulnerability to capture credentials, session tokens, or other confidential information, leading to data breaches or unauthorized access.
 
@@ -217,6 +217,7 @@ It's important to identify agents that don't use authentication mechanisms. Thes
 ```kusto
 AIAgentsInfo
 | summarize arg_max(Timestamp, *) by AIAgentId
+| where RegistrySource == "PowerPlatform"
 | where AgentStatus != "Deleted" 
 | where UserAuthenticationType == "None"
 | project-reorder AgentCreationTime ,AIAgentId, AIAgentName, AgentStatus, CreatorAccountUpn, OwnerAccountUpns
