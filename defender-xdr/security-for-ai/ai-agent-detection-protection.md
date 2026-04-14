@@ -51,7 +51,7 @@ To enable real-time protection for your AI agents:
 
 1. To enable the extended real-time protection capabilities for Microsoft Copilot Studio agents, make sure that **Copilot Studio** is connected under **AI real-time protection & investigation**. 
 
-    For more information, see [Copilot Studio integration in Microsoft Defender for Cloud Apps](/defender-for-cloud-apps/ai-agent-inventory).
+    For more information, see [Copilot Studio integration in Microsoft Defender for Cloud Apps](/defender-cloud-apps/ai-agent-inventory).
 
 
 ## Detect AI agent threats in near-real-time
@@ -79,8 +79,8 @@ When you enable the relevant features, agents built with Microsoft Copilot Studi
 
 To enable these extended capabilities:
 
-- For **Microsoft Copilot Studio agents**, see [Copilot Studio integration in Microsoft Defender for Cloud Apps](/defender-for-cloud-apps/ai-agent-inventory).  
-- For **Microsoft Foundry agents**, see [Enable threat protection for Microsoft Foundry AI workloads](/azure/defender-for-cloud/ai-onboarding).
+- For **Microsoft Copilot Studio agents**, see [Copilot Studio integration in Microsoft Defender for Cloud Apps](/defender-cloud-apps/ai-agent-inventory).  
+- For **Microsoft Foundry agents**, see [Enable threat protection for Microsoft Foundry AI workloads](/azure/defender-cloud/ai-onboarding).
 
 ## Investigate AI agent threats and hunt for risks using Advanced Hunting
 
@@ -104,7 +104,7 @@ For example, use Advanced Hunting to:
 
 ### Advanced Hunting tables for AI agent investigation
 
-The following Advanced Hunting tables provide visibility into [AI agent configuration](/defender-xdr/security-for-ai/ai-agent-inventory#view-all-agent-365-managed-agents-and-configuration-details-using-advanced-hunting), alerts, and activity. You can query these tables individually or correlate them to investigate incidents and hunt for agent-related risks.
+The following Advanced Hunting tables provide visibility into [AI agent configuration](/defender-xdr/security-ai/ai-agent-inventory#view-all-agent-365-managed-agents-and-configuration-details-using-advanced-hunting), alerts, and activity. You can query these tables individually or correlate them to investigate incidents and hunt for agent-related risks.
 
 | Table name | Description | Common use cases |
 |-----------|-------------|------------------|
