@@ -19,7 +19,7 @@ Microsoft Defender detects all Copilot Studio custom AI agents in your tenant an
 To enable AI agent inventory and detection, you must:
 
 - Have one of the following:
-  - A Microsoft 365 E5 license.
+  - A Microsoft Agent 365 license.
   - Both a Microsoft Defender for Cloud Apps license and a Microsoft Copilot Studio license.
 
 - Opt in to the [Microsoft Defender preview features](https://security.microsoft.com/securitysettings/defender/preview_features) of:
