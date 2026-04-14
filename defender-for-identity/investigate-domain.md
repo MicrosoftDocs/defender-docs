@@ -4,7 +4,7 @@ description: Learn how to investigate an Active Directory domain in Microsoft De
 #customer intent: As a security admin, I want to view the security posture of my Active Directory domains so that I can identify coverage gaps, review security policies, and act on recommendations.
 author: AbbyMSFT
 ms.author: abbyweisberg
-ms.date: 03/17/2026
+ms.date: 04/14/2026
 ms.topic: concept-article
 ms.service: microsoft-defender-for-identity
 ms.custom: msecd-doc-authoring-106
@@ -13,7 +13,9 @@ ai-usage: ai-assisted
 
 # Investigate an Active Directory domain (Preview)
 
-The Active Directory domain page is a security dashboard in Microsoft Defender that shows domain health, sensor coverage, security policies, trust relationships, and recommendations for your on-premises Active Directory environment. Use it to check whether a domain is healthy and secure, review deployment status, and act on recommendations.
+Active Directory domains are frequently targeted in identity-based attacks. Configuration issues such as unhealthy sensors, weak security policies, or risky trust relationships can expose an environment, but the information needed to assess a domain's security is often distributed between different tools and views.
+
+The Active Directory domain page in Microsoft Defender brings together domain health, sensor coverage, security policies, trust relationships, and recommendations for your on-premises Active Directory environment into a single view. Use it to determine whether a domain is healthy and fully monitored, identify configuration or policy issues that increase risk, review trust relationships, and act on prioritized recommendations.
 
 ## Prerequisites
 
@@ -32,9 +34,9 @@ To switch between domains when you're on the domain page, use the domain selecto
 
 ## Overview tab
 
-:::image type="content" source="media/domain-page-overview-tab.png" alt-text="Screenshot that shows the domain overview tab with domain details, deployment health, health score, and identity summary cards.":::
+The **Overview** tab provides a domain summary.
 
-The **Overview** tab provides a domain summary with the following sections:
+:::image type="content" source="media/investigate-domain/domain-page-overview.png" alt-text="Screenshot that shows the domain overview tab with domain details, deployment health, health score, and identity summary cards." lightbox="media/investigate-domain/domain-page-overview.png":::
 
 | Section | Description |
 |---|---|
@@ -54,6 +56,8 @@ Shows all incidents and alerts connected to the domain. Data on this tab include
 
 The tab includes default filters for **Status** (New, In progress) and **Alert severity** (High, Medium, Low). You can export, copy the list link, refresh, and customize columns.
 
+:::image type="content" source="media/investigate-domain/domain-page-incidents-alerts.png" alt-text="Screenshot that shows the Incidents and alerts tab of the domain page in Microsoft Defender." lightbox="media/investigate-domain/domain-page-incidents-alerts.png":::
+
 | Column | Description |
 |---|---|
 | **Incident name** | The name of the incident. |
@@ -68,7 +72,9 @@ The tab includes default filters for **Status** (New, In progress) and **Alert s
 
 ## Security Policies tab
 
-Provides human-readable summaries of key Active Directory security policies in four cards:
+Provides human-readable summaries of key Active Directory security policies in four cards. Use this tab to review critical Active Directory configurations and check whether they meet current security standards.
+
+:::image type="content" source="media/investigate-domain/domain-page-security-policies.png" alt-text="Screenshot that shows the Security policies tab of the Investigate domains page in Microsoft Defender." lightbox="media/investigate-domain/domain-page-security-policies.png":::
 
 | Card | Details |
 |---|---|
@@ -76,8 +82,6 @@ Provides human-readable summaries of key Active Directory security policies in f
 | **Account Lockout Policy** | Lockout duration and lockout threshold. |
 | **Kerberos Policy** | Maximum ticket age and maximum renewal age. |
 | **LDAP & Machine Account** | LDAP signing policy and machine account quota. If the domain has active recommendations for insecure configurations, a warning banner appears with a link to view the recommendations. |
-
-Use this tab to review critical Active Directory configurations and check whether they meet current security standards.
 
 ## Trusts tab
 
@@ -91,9 +95,11 @@ Shows trust relationships for the domain. You can export the list.
 
 Use this tab to review which domains trust each other and in which direction.
 
-## Group Accounts tab
+## Groups tab
 
 Lists the groups in the domain. You can filter by tags, type, and scope. You can mark groups as sensitive to support exposure analysis and detect potential attack paths.
+
+:::image type="content" source="media/investigate-domain/domain-page-groups.png" alt-text="Screenshot that shows the Group Accounts tab of the domain page in Microsoft Defender." lightbox="media/investigate-domain/domain-page-groups.png":::
 
 | Column | Description |
 |---|---|
@@ -105,9 +111,12 @@ Lists the groups in the domain. You can filter by tags, type, and scope. You can
 | **Canonical Name** | The full canonical name path of the group in Active Directory. |
 | **Description** | The description of the group. |
 
-## Computer Accounts tab
+## Computers tab
 
 Lists the computer accounts in the domain. You can filter by tags. You can mark computer accounts as sensitive to support exposure analysis and detect potential attack paths.
+
+:::image type="content" source="media/investigate-domain/domain-page-computers.png" alt-text="Screenshot that shows the Computer Accounts tab of the domain page in Microsoft Defender." lightbox="media/investigate-domain/domain-page-computers.png":::
+
 
 | Column | Description |
 |---|---|
