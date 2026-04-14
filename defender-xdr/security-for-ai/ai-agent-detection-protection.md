@@ -115,6 +115,6 @@ The following Advanced Hunting tables provide visibility into [AI agent configur
 
 ## Next steps
 
-- [Discover AI agents and assess security posture using Microsoft Defender](/defender-xdr/security-for-ai/ai-agent-inventory)
-- [Protect AI assets from emerging threats and vulnerabilities using Microsoft Defender](/defender-xdr/security-for-ai/defender-security-for-ai#protect-ai-assets-from-emerging-threats-and-vulnerabilities)
+- [Discover AI agents and assess security posture using Microsoft Defender](ai-agent-inventory.md)
+- [Protect AI assets from emerging threats and vulnerabilities using Microsoft Defender](defender-security-for-ai.md#protect-ai-assets-from-emerging-threats-and-vulnerabilities)
 
