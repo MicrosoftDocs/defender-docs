@@ -69,7 +69,7 @@ An alert is triggered, and a security playbook starts an automated investigation
    > [!TIP]
    > We expanded the auto-remediation capabilities in automated investigations and response (AIR) to fully automate the remediation of malicious similarity clusters. In 2025, we introduced auto-remediation for malicious URL and file clusters. Building on that foundation, this enhancement enables AIR to automatically approve all pending remediation actions it generates. This capability eliminates the need for manual intervention and streamlines the response process for SOC teams.
    >
-   > AIR also saves time by evaluating and automatically resolving alerts and incidents where no threats were found. This result is common in user submission scenarios. AIR closes the investigation if no threats were found or threats were found in messages that were already remediated. Typically
+   > AIR also saves time by evaluating and automatically resolving alerts and incidents where no threats were found. This result is common in user submission scenarios. AIR closes the investigation if no threats were found or threats were found in messages that were already remediated.
 
 5. As pending remediation actions are approved or rejected, the automated investigation completes.
 
