@@ -21,7 +21,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Defender for Cloud Apps
 ms.topic: reference
-ms.date: 03/23/2026
+ms.date: 04/15/2026
 ---
 
 # AIAgentsInfo (Preview)
@@ -31,15 +31,18 @@ ms.date: 03/23/2026
 > [!IMPORTANT]
 > Some information relates to prereleased product that may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-The `AIAgentsInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about various entities—files, IP addresses, URLs, users, or devices—associated with alerts from Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps, and Microsoft Defender for Identity. Use this reference to construct queries that return information from this table.
+The `AIAgentsInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about various entities—files, IP addresses, URLs, users, or devices—associated with alerts from Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps, Microsoft Defender for Identity, and Microsoft Agent 365. Use this reference to construct queries that return information from this table.
 
-This advanced hunting table is populated by records from various Microsoft Defender services. If your organization doesn't deploy the service in Microsoft Defender XDR, queries that use the table don't work or return any results. For more information about how to deploy services in Microsoft Defender XDR, see [Deploy supported services](deploy-supported-services.md).
+Various Microsoft Defender services and Microsoft Agent 365 populate this advanced hunting table. If your organization doesn't deploy these services, queries that use the table don't work or return any results. For more information, see:
+- [Deploy services supported by Microsoft Defender XDR](deploy-supported-services.md)
+- [Overview of Microsoft Agent 365](/microsoft-agent-365/overview)
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
 | Column name | Data type | Description |
 |-------------|-----------|-------------|
 | `Timestamp` | `datetime` | Last date and time recorded for the agent info |
+| `RegistrySource` | `string` |Registry that provided the agent's metadata |
 | `AIAgentId` | `guid` | Unique identifier for the agent as assigned to it in Microsoft 365 Copilot or Copilot Studio |
 | `AIAgentName` | `string` | Display name of the agent |
 | `AgentCreationTime` | `datetime` | Date and time when the agent was created |
@@ -67,7 +70,6 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `AgentAppId` | `string` |The unique app identifier registered for the agent in Microsoft Entra |
 | `ConnectedAgentsSchemaNames` | `dynamic` |Lists the schema names of connected agents, which are independently managed agents that are linked to the main one for orchestration |
 | `ChildAgentsSchemaNames` | `dynamic` |Lists the schema names of the child agents that exist within the main agent |
-| `RegistrySource` | `string` |Registry that provided the agent's metadata |
 | `Version` | `string` | Version of the agent|
 | `IsBlocked` | `boolean` |Indicates whether the agent has been blocked by an administrator |
 | `Instructions` | `string` |The agent's system prompt that defines its default behavior, persona, and operating boundaries |
@@ -81,6 +83,133 @@ For information on other tables in the advanced hunting schema, [see the advance
 
 ## Sample queries
 
+### List all agents in Microsoft Agent 365
+This query identifies all agents that are published in Agent 365.
+
+```kusto
+let IdentityIdtoUPN = materialize (
+  IdentityInfo
+  | distinct AccountObjectId, AccountUpn
+  | extend AccountObjectId = tostring(AccountObjectId)
+  | where isnotempty(AccountObjectId) and isnotempty(AccountUpn));
+AIAgentsInfo
+  | where RegistrySource == "A365"
+  | summarize arg_max(Timestamp, *) by AIAgentId
+  | extend AIAgentId = tostring(AIAgentId)
+  | extend RawAgentInfoJson = parse_json(RawAgentInfo)
+  | extend DeveloperName = RawAgentInfoJson.developerName
+  | extend OwnerId = tostring(RawAgentInfoJson.owners[0].entityId)
+    | extend CreatorId = tostring(RawAgentInfoJson.creatorId)
+    | join kind=leftouter IdentityIdtoUPN on $left.OwnerId == $right.AccountObjectId
+    | project-rename OwnerUpn = AccountUpn
+    | join kind=leftouter IdentityIdtoUPN on $left.CreatorId == $right.AccountObjectId
+    | project-rename CreatorUpn = AccountUpn
+    | project-away OwnerId, CreatorId, AccountObjectId, AccountObjectId1
+  | project-reorder AgentCreationTime, AIAgentId, AIAgentName,  OwnerUpn, CreatorUpn, DeveloperName
+```
+## Published agents without instructions
+
+This query identifies Agent 365 AI agents that are published but lack configured instructions. Missing instructions increase the risk of prompt injection attacks, where malicious input can influence the agent to deviate from its intended behavior. Without clear guidance, the agent may respond unpredictably or expose sensitive data.
+
+**Recommendations:** 
+- Ensure all generative orchestration components have well-defined instructions that specify the agent's purpose, boundaries, and allowed actions. Regularly review and update instructions to maintain security and prevent misuse.
+
+```kusto
+let IdentityIdtoUPN = materialize (
+IdentityInfo
+| distinct AccountObjectId, AccountUpn
+| extend AccountObjectId = tostring(AccountObjectId)
+| where isnotempty(AccountObjectId) and isnotempty(AccountUpn));
+AIAgentsInfo 
+| summarize arg_max(Timestamp, *) by AIAgentId 
+| where RegistrySource == "A365"
+| where IsBlocked == 0 // not blocked
+| where isnotnull(Instructions)
+| where isempty(Instructions) or Instructions == "N/A"
+| extend RawAgentInfoJson = parse_json(RawAgentInfo)
+| extend DeveloperName = RawAgentInfoJson.developerName
+| extend PublishedStatus = RawAgentInfoJson.publishedStatus
+| where PublishedStatus == "Published" //published
+| extend OwnerId = tostring(RawAgentInfoJson.owners[0].entityId)
+| extend CreatorId = tostring(RawAgentInfoJson.creatorId)
+| join kind=leftouter IdentityIdtoUPN on $left.OwnerId == $right.AccountObjectId
+| project-rename OwnerUpn = AccountUpn
+| join kind=leftouter IdentityIdtoUPN on $left.CreatorId == $right.AccountObjectId
+| project-rename CreatorUpn = AccountUpn
+| project-away RawAgentInfoJson, OwnerId, CreatorId, AccountObjectId, AccountObjectId1
+| project-reorder AgentCreationTime, AIAgentId, AIAgentName, Instructions, OwnerUpn, CreatorUpn ,DeveloperName
+```
+
+## MCP tools configured
+
+This query identifies Agent 365 AI agents that have Model Context Protocol (MCP) tools configured. MCP tools extend agent capabilities but introduce additional security considerations because they can execute advanced operations and interact with external resources. If misconfigured or unnecessary, these tools might increase the attack surface and expose sensitive data or functionality.
+
+**Recommendations:**
+- Confirm with the agent owner whether the MCP tool is still required. If it is, review its configuration for compliance with security best practices and ensure least privilege access. Remove any unused or unnecessary MCP tools to reduce risk.
+
+```kusto
+let IdentityIdtoUPN = materialize (
+  IdentityInfo
+  | distinct AccountObjectId, AccountUpn
+  | extend AccountObjectId = tostring(AccountObjectId)
+  | where isnotempty(AccountObjectId) and isnotempty(AccountUpn));
+  AIAgentsInfo
+  | where RegistrySource == "A365"
+  | summarize arg_max(Timestamp, *) by AIAgentId
+  | extend RawAgentInfoJson = parse_json(RawAgentInfo)
+  | extend DeveloperName = RawAgentInfoJson.developerName
+  | extend OwnerId = tostring(RawAgentInfoJson.owners[0].entityId)
+  | extend CreatorId = tostring(RawAgentInfoJson.creatorId)
+  | join kind=leftouter IdentityIdtoUPN on $left.OwnerId == $right.AccountObjectId
+  | project-rename OwnerUpn = AccountUpn
+  | join kind=leftouter IdentityIdtoUPN on $left.CreatorId == $right.AccountObjectId
+  | project-rename CreatorUpn = AccountUpn
+  | where isnotempty(AgentActionTriggers)
+  | extend AgentActionTriggersJson = parse_json(AgentActionTriggers)
+  | where array_length(AgentActionTriggersJson) > 1
+  | mv-expand Trigger = AgentActionTriggersJson
+  | extend ActionType = Trigger.type
+  | where ActionType == "RemoteMCPServer"
+  | project-away Trigger, RawAgentInfoJson, AgentActionTriggersJson, OwnerId, CreatorId, AccountObjectId, AccountObjectId1
+  | project-reorder AgentCreationTime, AIAgentId, AIAgentName, ActionType, OwnerUpn, CreatorUpn, DeveloperName
+```
+
+## HTTP requests to non-HTTPS endpoints
+
+This query identifies Agent 365 AI agents that send HTTP requests to endpoints using non-HTTPS schemes. Communication over unencrypted HTTP exposes sensitive data in transit and increases the risk of interception or tampering. Attackers could exploit this vulnerability to capture credentials, session tokens, or other confidential information, leading to data breaches or unauthorized access.
+
+**Recommendations:**
+- Review these agents and update all HTTP actions to use HTTPS endpoints. If non-secure communication is absolutely required for a specific business case, document the justification and apply compensating controls such as network-level encryption or IP restrictions.
+
+```kusto
+let IdentityIdtoUPN = materialize (
+IdentityInfo
+| distinct AccountObjectId, AccountUpn
+| extend AccountObjectId = tostring(AccountObjectId)
+| where isnotempty(AccountObjectId) and isnotempty(AccountUpn)); 
+AIAgentsInfo
+  | where RegistrySource == "A365"
+  | summarize arg_max(Timestamp, *) by AIAgentId
+  | extend RawAgentInfoJson = parse_json(RawAgentInfo)
+  | extend DeveloperName = RawAgentInfoJson.developerName
+  | extend OwnerId = tostring(RawAgentInfoJson.owners[0].entityId)
+  | extend CreatorId = tostring(RawAgentInfoJson.creatorId)
+  | join kind=leftouter IdentityIdtoUPN on $left.OwnerId == $right.AccountObjectId
+  | project-rename OwnerUpn = AccountUpn
+  | join kind=leftouter IdentityIdtoUPN on $left.CreatorId == $right.AccountObjectId
+  | project-rename CreatorUpn = AccountUpn
+  | where isnotempty(AgentActionTriggers)
+  | extend AgentActionTriggersJson = parse_json(AgentActionTriggers)
+  | where array_length(AgentActionTriggersJson) > 1
+  | mv-expand Trigger = AgentActionTriggersJson
+  | extend ServerUrls = Trigger.serverUrls
+  | mv-expand Url = ServerUrls
+  | extend ParsedUrl = parse_url(tostring(Url))
+  | extend Scheme = tostring(ParsedUrl["Scheme"]) 
+  | where isnotempty(Scheme) and Scheme != "https"
+  | project-away RawAgentInfoJson, ParsedUrl, ServerUrls, OwnerId, CreatorId, AccountObjectId, AccountObjectId1
+  | project-reorder AgentCreationTime, AIAgentId, AIAgentName, Url, Scheme, OwnerUpn, CreatorUpn, DeveloperName
+```
 
 ### Agent with no authentication
 
@@ -91,7 +220,7 @@ It's important to identify agents that don't use authentication mechanisms. Thes
 - Review the topics, actions, and knowledge sources to ensure there's no internal or sensitive information included.
  
 ```kusto
- AIAgentsInfo
+AIAgentsInfo
 | summarize arg_max(Timestamp, *) by AIAgentId
 | where AgentStatus != "Deleted" 
 | where UserAuthenticationType == "None"
@@ -109,6 +238,7 @@ Identify agents that use HTTP actions on ports other than 443 or 80.
 AIAgentsInfo
 // Find agents with topic that contains Http request action to non 443 port
 | summarize arg_max(Timestamp, *) by AIAgentId
+| where RegistrySource == "PowerPlatform"
 | where AgentStatus != "Deleted"
 | mvexpand Topic = AgentTopicsDetails
 | where Topic has "HttpRequestAction"
@@ -133,6 +263,7 @@ Identify agents that use HTTP actions to an endpoint with an available Power Pla
 AIAgentsInfo
 // Find agents with topic that contains Http request to endpoint with built-in connector
 | summarize arg_max(Timestamp, *) by AIAgentId
+| where RegistrySource == "PowerPlatform"
 | where AgentStatus != "Deleted"
 | mvexpand Topic = AgentTopicsDetails
 | where Topic has "HttpRequestAction"
@@ -157,6 +288,7 @@ Identify agents that use generative orchestration that involves sending email to
 AIAgentsInfo
 //Find agents with email sending tool via microsoft 365 connector, where the input //parameters of the inputs are populated by generative orchestrator
 | summarize arg_max(Timestamp, *) by AIAgentId
+| where RegistrySource == "PowerPlatform"
 | where AgentStatus != "Deleted"
 | extend IsGenAIOrchestrator = tostring(todynamic(RawAgentInfo).Bot.Attributes.configuration) has '"GenerativeActionsEnabled": true'
 | where IsGenAIOrchestrator
@@ -180,6 +312,7 @@ Agents with hard-coded credentials in Topics or Actions can expose clear-text cr
 let suspicious_patterns = @"(AKIA[0-9A-Z]{16})|(AIza[0-9A-Za-z_\-]{35})|(xox[baprs]-[0-9a-zA-Z]{10,48})|(ghp_[A-Za-z0-9]{36,59})|(sk_(live|test)_[A-Za-z0-9]{24})|(SG\.[A-Za-z0-9]{22}\.[A-Za-z0-9]{43})|(\d{8}:[\w\-]{35})|(eyJ[A-Za-z0-9_\-]+\.[A-Za-z0-9_\-]+\.[A-Za-z0-9_\-]+)|(Authorization\s*:\s*Basic\s+[A-Za-z0-9=:+]+)|([A-Za-z]+:\/\/[^\/\s]+:[^\/\s]+@[^\/\s]+)";
 AIAgentsInfo
 | summarize arg_max(Timestamp, *) by AIAgentId 
+| where RegistrySource == "PowerPlatform"
 | where AgentStatus != "Deleted" 
 | mv-expand tool = AgentToolsDetails
 | mv-expand topic = AgentTopicsDetails
@@ -199,6 +332,7 @@ Find agents with a configured MCP tool.
 //Find agents with MCP tool configured
 AIAgentsInfo
 | summarize arg_max(Timestamp, *) by AIAgentId
+| where RegistrySource == "PowerPlatform"
 | where AgentStatus != "Deleted"
 | mvexpand Action = AgentToolsDetails
 | where  Action.action.operationDetails["$kind"] == "ModelContextProtocolMetadata"
