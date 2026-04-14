@@ -1,15 +1,9 @@
 ---
 title: Defender for Office 365 Overview dashboard
-f1.keywords:
-  - CSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: concept-article
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.assetid:
 ms.collection:
   - m365-security

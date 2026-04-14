@@ -1,4 +1,4 @@
-﻿---
+---
 title: Sign in to Jamf Pro
 description: Sign in to Jamf Pro.
 ms.service: defender-endpoint
@@ -6,14 +6,12 @@ author: paulinbar
 ms.author: painbar
 ms.reviewer: joshbregman
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-macos
 ms.topic: how-to
 ms.subservice: macos
-search.appverid: met150
 ms.date: 05/08/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

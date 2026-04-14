@@ -6,11 +6,7 @@ ms.topic: concept-article
 ms.collection:
 - m365-security
 - tier1
-audience: admin
-f1.keywords:
-  - NOCSH
 ms.localizationpriority: medium
-search.appverid: MET150
 description: Threat remediation
 ms.service: defender-office-365
 ms.date: 09/16/2025

@@ -1,15 +1,9 @@
 ---
 title: Threat trackers in Microsoft Defender for Office 365 Plan 2
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: overview
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
-  - MOE150
 ms.assetid: a097f5ca-eac0-44a4-bbce-365f35b79ed1
 ms.collection: 
   - m365-security

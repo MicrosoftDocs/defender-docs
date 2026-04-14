@@ -1,15 +1,11 @@
 ---
 title: DeviceNetworkEvents table in the advanced hunting schema
 description: Learn about network connection events you can query from the DeviceNetworkEvents table of the advanced hunting schema
-search.appverid: met150
 ms.service: defender-xdr
 ms.pagetype: security
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3

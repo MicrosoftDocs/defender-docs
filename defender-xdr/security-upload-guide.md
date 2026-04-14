@@ -11,9 +11,6 @@ ms.collection:
   - security-copilot
   - magic-ai-copilot
 ms.topic: install-set-up-deploy
-search.appverid:
-  - MOE150
-  - MET150
 ms.date: 11/18/2025
 appliesto:
 - Microsoft Defender XDR
