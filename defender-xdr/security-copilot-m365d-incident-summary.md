@@ -4,18 +4,14 @@ description: Generate incident summaries with Microsoft Copilot embedded in Micr
 ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
-ms.localizationpriority: medium
-ms.collection:
-  - m365-security
-  - tier1
-  - security-copilot
-  - magic-ai-copilot
 ms.topic: how-to
 ms.date: 11/18/2024
 ms.update-cycle: 180-days
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
+
+
 ---
 
 # Summarize an incident with Microsoft Copilot in Microsoft Defender
@@ -98,8 +94,6 @@ When you close a summary panel, the summary process stops.
 Incident chats persist across incidents. When you switch to a different incident, the chat automatically closes, but when you reopen the Copilot panel you see the chat history. This lets you compare summaries of different incidents and navigate to relevant reports.
 
 :::image type="content" source="media/security-copilot-m365d-incident-summary/multiple-summaries.png" alt-text="Screenshot that shows the Copilot chat history with summaries of different incidents." lightbox="media/security-copilot-m365d-incident-summary/multiple-summaries.png":::
-
-This feature will be further developed based on user feedback.
 
 You can also select **Recommendations** to get AI-powered recommendations for next steps on how to investigate and remediate the incident, or select **Report** to generate a comprehensive report of the incident that includes the summary, timelines, involved entities, and more.
 
