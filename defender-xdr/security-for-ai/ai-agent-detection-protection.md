@@ -20,7 +20,7 @@ This article explains how Microsoft Defender detects, blocks, and enables securi
 
 ## Block unsafe AI agent actions in real time
 
-Microsoft Defender provides real-time protection (RTP) to prevent AI agents from performing unsafe actions during runtime. Defender integrates directly with Microsoft Agent 365’s Agent Tooling Gateway (ATG) to evaluate supported agent-initiated tool invocations before they execute. If Defender determines that an action is risky, it blocks the action before the agent performs it, preventing harmful behavior.
+Microsoft Defender provides real-time protection (RTP) to prevent AI agents from performing unsafe actions during runtime. Defender integrates directly with [Microsoft Agent 365’s Agent Tooling Gateway (ATG)](/microsoft-agent-365/tooling-servers-overview) to evaluate supported agent-initiated tool invocations before they execute. If Defender determines that an action is risky, it blocks the action before the agent performs it, preventing harmful behavior.
 
 Real-time protection focuses on high-confidence threats, including:
 
