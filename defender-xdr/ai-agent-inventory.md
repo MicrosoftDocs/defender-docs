@@ -31,7 +31,7 @@ Microsoft Defender protects you against security threats with comprehensive AI a
     - [Enable the Microsoft 365 connector](/defender-cloud-apps/protect-office-365#connect-microsoft-365-to-microsoft-defender-for-cloud-apps).
 - For Copilot Studio AI agents, Microsoft Defender:  
     - Integrates data from Copilot Studio AI agents into [advanced hunting](advanced-hunting-overview.md) for proactive threat detection. You can use this data to create custom queries and hunt for potential threats. 
-    - [Protects your environment in real-time](/defender-cloud-apps/real-time-agent-protection-during-runtime) to block suspicious or harmful actions initiated by your Copilot Studio AI agents during agent runtime, and triggers an informative alert integrated into the XDR incidents and alerts environment.  
+    - [Protects your environment in real-time](/defender-xdr/security-for-ai/ai-agent-detection-protection) to block suspicious or harmful actions initiated by your Copilot Studio AI agents during agent runtime, and triggers an informative alert integrated into the XDR incidents and alerts environment.  
 - For Azure AI Foundry AI agents, Microsoft Defender:  
     - Monitors your AI agents for misconfigurations and vulnerabilities, and identifies potential attack paths.
     - Provides security recommendations to improve the security posture of your AI agents.
