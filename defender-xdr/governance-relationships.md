@@ -35,11 +35,16 @@ This is the same governance relationships model used in [Microsoft Entra ID](/en
 
 Before you configure delegated access, ensure you meet the following requirements:
 
+Licenses:
+
 - Both tenants require at least one Microsoft Entra ID P1 license.
 - Both tenants require at least one Microsoft 365 E5 license or Microsoft Sentinel enabled in Microsoft Defender.
+
+Permissions:
+
 - A user with the [Tenant Governance Relationship Administrator](/entra/identity/role-based-access-control/permissions-reference#tenant-governance-relationship-administrator) role in the governing tenant.
 - To send an invitation from the governed tenant, the user must have the [Tenant Governance Administrator](/entra/identity/role-based-access-control/permissions-reference#tenant-governance-administrator) role.
-- To assign permissions to a remote tenant group, the user must have the **User Access Administrator** role in Azure RBAC or **User Administrator** role in Entra RBAC.
+- To assign permissions to a remote tenant group, the user must have the [User Access Administrator](/azure/role-based-access-control/built-in-roles/privileged#user-access-administrator) role in Azure RBAC or [User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator) role in Entra RBAC.
 
 ## Enable tenant governance settings
 
