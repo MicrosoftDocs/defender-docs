@@ -1,17 +1,14 @@
-﻿---
+---
 title: Use role-based access control to grant fine-grained access to Microsoft Defender portal
 description: Create roles and groups within your security operations to grant access to the portal.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
 ms.topic: how-to
-search.appverid: met150
 ms.date: 01/28/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

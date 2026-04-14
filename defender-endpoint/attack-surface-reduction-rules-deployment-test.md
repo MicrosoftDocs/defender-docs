@@ -1,14 +1,12 @@
-﻿---
+---
 title: Test attack surface reduction rules
 description: Learn how to test attack surface reduction rules in Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
-audience: ITPro
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: sugamar
-manager: bagol
 ms.custom: asr
 ms.topic: how-to
 ms.collection:
@@ -18,7 +16,6 @@ ms.collection:
  - tier1
  - mde-asr
 ms.date: 03/06/2026
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -190,7 +187,7 @@ To configure specific rule exclusions, you have the choices of using the Defende
 
 For instructions, see [Configure ASR rules via group policy](enable-attack-surface-reduction.md#group-policy).
 
-If the GPO isn't applied to devices, see [Troubleshoot Microsoft Defender Antivirus settings](/defender-endpoint/troubleshoot-settings).
+If the GPO isn't applied to devices, see [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md).
 
 ### Use PowerShell as an alternative method to enable attack surface reduction rules
 
@@ -239,7 +236,7 @@ Event ID | Description
 
 [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
 
-[Troubleshoot attack surface reduction rules](/defender-endpoint/troubleshoot-asr)
+[Troubleshoot attack surface reduction rules](troubleshoot-asr.md)
 
 
 

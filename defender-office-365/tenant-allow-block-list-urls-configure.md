@@ -1,15 +1,9 @@
 ---
 title: Allow or block URLs using the Tenant Allow/Block List
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150manage-tenant-allows.md
 ms.collection:
   - m365-security
   - tier1

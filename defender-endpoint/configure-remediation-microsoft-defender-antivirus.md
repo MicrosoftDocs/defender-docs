@@ -1,4 +1,4 @@
-﻿---
+---
 title: Configure remediation for Microsoft Defender Antivirus detections
 description: Configure what Microsoft Defender Antivirus should do when it detects a threat, and how long quarantined files should be retained in the quarantine folder
 ms.service: defender-endpoint
@@ -10,12 +10,10 @@ ms.topic: how-to
 ms.custom: nextgen
 ms.date: 10/20/2025
 ms.reviewer: yongrhee
-manager: bagol
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

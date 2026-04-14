@@ -5,7 +5,6 @@ ms.service: defender-xdr
 ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection: 
 - m365-security

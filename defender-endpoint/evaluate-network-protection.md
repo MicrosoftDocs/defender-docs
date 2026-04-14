@@ -1,20 +1,17 @@
-﻿---
+---
 title: Evaluate network protection
 description: See how network protection works by testing common scenarios that it protects against.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-audience: ITPro
 ms.topic: how-to
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: yongrhee
-manager: bagol
 ms.subservice: asr
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
-search.appverid: met150
 ms.date: 04/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

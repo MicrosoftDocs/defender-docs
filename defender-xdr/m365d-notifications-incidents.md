@@ -2,20 +2,13 @@
 title: Get incident notifications by email
 description: Set up email notifications to get notified of new incidents or updates to incidents in the Microsoft Defender portal.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
 ms.topic: how-to
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 01/17/2025
 appliesto:
 - Microsoft Defender XDR
@@ -47,11 +40,8 @@ The email notification contains important details about the incident like the in
 You can add or remove recipients in the email notifications. New recipients get notified about incidents after they're added.
 
 > [!NOTE]
-> You need the **Manage security settings** permission to configure email notification settings. If you've chosen to use basic permissions management, users with Security Administrator or Global Administrator roles can configure email notifications. <br> <br>
+> You need the **Manage security settings** permission to configure email notification settings. If you've chosen to use basic permissions management, users with Security Administrator or higher roles can configure email notifications. <br> <br>
 Likewise, if your organization is using role-based access control (RBAC), you can only create, edit, delete, and receive notifications based on device groups that you are allowed to manage.
-
-> [!NOTE]
-> Microsoft recommends using roles with fewer permissions for better security. The Global Administrator role, which has many permissions, should only be used in emergencies when no other role fits.
 
 ## Create a rule for email notifications
 

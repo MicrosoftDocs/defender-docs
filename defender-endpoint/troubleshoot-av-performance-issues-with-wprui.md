@@ -8,10 +8,7 @@ ms.service: defender-endpoint
 ms.topic: troubleshooting-general
 ms.date: 01/08/2025
 ms.subservice: ngp
-manager: bagol
 ms.localizationpriority: medium 
-f1.keywords: NOCSH 
-audience: ITPro
 ai-usage: human-only
 ms.collection: 
 - m365-security
@@ -22,9 +19,9 @@ ms.custom:
 # Troubleshoot Microsoft Defender Antivirus performance issues with WPRUI
 
 > [!TIP]
-> First, review common reasons for performance issues such as high CPU usage in [Troubleshoot performance issues related to Microsoft Defender Antivirus real-time protection (RTP) or scans (scheduled or on-demand](/defender-endpoint/troubleshoot-performance-issues)).
-> Then, run the [Microsoft Defender Antivirus Performance Analyzer](/defender-endpoint/tune-performance-defender-antivirus) to analyze the cause of high CPU usage in Microsoft Defender Antivirus (Antimalware Service Executable, Microsoft Defender Antivirus service, or MsMpEng.exe).
-> If the Microsoft Defender Antivirus Performance Analyzer doesn't identify the root cause of high CPU utilization, run [Processor Monitor](/defender-endpoint/troubleshoot-av-performance-issues-with-procmon) to narrow down or determine the root cause of the high CPU utilization in Microsoft Defender Antivirus.
+> First, review common reasons for performance issues such as high CPU usage in [Troubleshoot performance issues related to Microsoft Defender Antivirus real-time protection (RTP) or scans (scheduled or on-demand](troubleshoot-performance-issues.md)).
+> Then, run the [Microsoft Defender Antivirus Performance Analyzer](tune-performance-defender-antivirus.md) to analyze the cause of high CPU usage in Microsoft Defender Antivirus (Antimalware Service Executable, Microsoft Defender Antivirus service, or MsMpEng.exe).
+> If the Microsoft Defender Antivirus Performance Analyzer doesn't identify the root cause of high CPU utilization, run [Processor Monitor](troubleshoot-av-performance-issues-with-procmon.md) to narrow down or determine the root cause of the high CPU utilization in Microsoft Defender Antivirus.
 > The final tool in your toolkit is to run the Windows Performance Recorder UI (WPRUI) or the Windows Performance Recorder (WPR command-line) as discussed in this article.
 
 ## Capture performance logs using Windows Performance Recorder
@@ -33,7 +30,7 @@ Windows Performance Recorder (WPR) is a powerful recording tool that creates Eve
 
 WPR is part of the Windows Assessment and Deployment Kit (Windows ADK) and can be downloaded from [Download and install the Windows ADK](/windows-hardware/get-started/adk-install). You can also download it as part of the Windows 10 Software Development Kit at [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk/).
 
-Alternatively, follow the steps in [Capture performance logs using the WPR UI](/defender-endpoint/troubleshoot-av-performance-issues-with-wprui), or use the command-line tool *wpr.exe* [Capture performance logs using the WPR CLI](/defender-endpoint/troubleshoot-av-performance-issues-with-wprui). Both are available in Windows 8 and later versions.
+Alternatively, follow the steps in [Capture performance logs using the WPR UI](troubleshoot-av-performance-issues-with-wprui.md), or use the command-line tool *wpr.exe* [Capture performance logs using the WPR CLI](troubleshoot-av-performance-issues-with-wprui.md). Both are available in Windows 8 and later versions.
 
 There are two ways to capture the Windows Performance Recorder (WPRUI) trace:
 
@@ -43,9 +40,9 @@ There are two ways to capture the Windows Performance Recorder (WPRUI) trace:
 
 ## Using the MDE Client Analyzer
 
-1. Download the [MDE Client Analyzer](/defender-endpoint/overview-client-analyzer).
+1. Download the [MDE Client Analyzer](overview-client-analyzer.md).
 
-1. Run the MDE Client Analyzer using [Live Response or locally](/defender-endpoint/run-analyzer-windows).
+1. Run the MDE Client Analyzer using [Live Response or locally](run-analyzer-windows.md).
 
    > [!TIP]
    > Before starting the trace, make sure the issue is reproducible. Additionally, close any applications that don't contribute to the reproduction of the issue.
@@ -182,20 +179,20 @@ To collect a WPR trace using the command-line tool wpr.exe:
 
 ## See also
 
-- [Run the client analyzer on Windows](/defender-endpoint/run-analyzer-windows)
+- [Run the client analyzer on Windows](run-analyzer-windows.md)
 
 - [Collect Microsoft Defender Antivirus diagnostic data](collect-diagnostic-data.md)
 
-- [Troubleshoot Microsoft Defender Antivirus settings](/defender-endpoint/troubleshoot-settings)
+- [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md)
 
 - [Configure and validate exclusions for Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md)
 
-- [Troubleshoot performance issues related to Microsoft Defender Antivirus](/defender-endpoint/troubleshoot-performance-issues)
+- [Troubleshoot performance issues related to Microsoft Defender Antivirus](troubleshoot-performance-issues.md)
 
 - [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)
 
-- [Troubleshoot Microsoft Defender Antivirus performance issues with Process Monitor](/defender-endpoint/troubleshoot-av-performance-issues-with-procmon)
+- [Troubleshoot Microsoft Defender Antivirus performance issues with Process Monitor](troubleshoot-av-performance-issues-with-procmon.md)
 
-- [Troubleshoot Microsoft Defender Antivirus performance issues with WPRUI](/defender-endpoint/troubleshoot-av-performance-issues-with-wprui)
+- [Troubleshoot Microsoft Defender Antivirus performance issues with WPRUI](troubleshoot-av-performance-issues-with-wprui.md)
 
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Configure Microsoft Defender Antivirus with Group Policy
 description: Learn how to use a Group Policy to configure and manage Microsoft Defender Antivirus on your endpoints in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
@@ -8,15 +8,12 @@ ms.author: chrisda
 ms.custom: nextgen
 ms.date: 10/20/2025
 ms.reviewer: ksarens, jtoole, pahuijbr, yongrhee
-manager: bagol
 ms.subservice: ngp
-audience: ITPro
 ms.topic: how-to
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -82,7 +79,7 @@ The following table lists commonly used Group Policy settings that are available
 | MAPS |  Configure local setting override for reporting to Microsoft MAPS| [Prevent or allow users to locally modify policy settings](configure-local-policy-overrides-microsoft-defender-antivirus.md) |
 | MpEngine | Configure extended cloud check| [Configure the cloud block time-out period](configure-cloud-block-timeout-period-microsoft-defender-antivirus.md) |
 | MpEngine | Disable gradual rollout of Microsoft Defender updates | [Configure updates: Group Policy](configure-updates.md#group-policy) |
-| MpEngine | Enable file hash computation feature |[Create indicators for files](/defender-endpoint/indicator-file#windows-prerequisites)<br/>This drives the ability to enforce Indicators of Compromise (IoC) by using file hash allow/block indicators, available in Defender for Endpoint Plan 1 and Plan 2, and in Defender for Business. Note that Microsoft Defender Antivirus automatically does hash-based computation for the antimalware engine, so you don't have to do anything extra unless it is a [VDI non-persistent image](/defender-endpoint/deployment-vdi-microsoft-defender-antivirus). |
+| MpEngine | Enable file hash computation feature |[Create indicators for files](indicator-file.md#windows-prerequisites)<br/>This drives the ability to enforce Indicators of Compromise (IoC) by using file hash allow/block indicators, available in Defender for Endpoint Plan 1 and Plan 2, and in Defender for Business. Note that Microsoft Defender Antivirus automatically does hash-based computation for the antimalware engine, so you don't have to do anything extra unless it is a [VDI non-persistent image](deployment-vdi-microsoft-defender-antivirus.md). |
 | MpEngine | Select cloud protection level | [Specify the cloud-delivered protection level](specify-cloud-protection-level-microsoft-defender-antivirus.md) |
 | Network inspection system | Convert warn verdict to block | [Network protection: Warn experience](network-protection.md#warn-experience) |
 | Network inspection system | Specify more definition sets for network traffic inspection | Not used (deprecated) |
@@ -152,7 +149,7 @@ The following table lists commonly used Group Policy settings that are available
 | Scan | Turn on reparse point scanning| [Configure scanning options in Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md) |
 | Scan | Run full scan on mapped network drives| [Configure scanning options in Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md) |
 | Scan | Scan archive files| [Configure scanning options in Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md) |
-| Scan | Scan excluded files and directories during quick scan | [Configure scanning options: Settings and locations](/defender-endpoint/configure-advanced-scan-types-microsoft-defender-antivirus#settings-and-locations) |
+| Scan | Scan excluded files and directories during quick scan | [Configure scanning options: Settings and locations](configure-advanced-scan-types-microsoft-defender-antivirus.md#settings-and-locations) |
 | Scan | Scan packed executables| [Configure scanning options in Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md) |
 | Scan | Scan scripts | [Configure scanning options in Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md) <p>Also see [Defender/AllowScriptScanning](/windows/client-management/mdm/policy-csp-defender).|
 | Scan | Scan removable drives| [Configure scanning options in Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md) |
@@ -165,7 +162,7 @@ The following table lists commonly used Group Policy settings that are available
 | Scan | Specify the time for a daily quick scan | [About scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md) |
 | Scan | Specify the time of day to run a scheduled scan | [About scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md) |
 | Scan | Start the scheduled scan only when computer is on but not in use| [About scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md) |
-| Scan | Trigger a quick scan after X days without any scans | [Configure scanning options: Settings and locations](/defender-endpoint/configure-advanced-scan-types-microsoft-defender-antivirus#settings-and-locations) |
+| Scan | Trigger a quick scan after X days without any scans | [Configure scanning options: Settings and locations](configure-advanced-scan-types-microsoft-defender-antivirus.md#settings-and-locations) |
 | Security intelligence updates|Allow security intelligence updates from Microsoft Update| [Manage updates for mobile devices and virtual machines (VMs)](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md) |
 | Security intelligence updates|Allow security intelligence updates when running on battery power | [Manage updates for mobile devices and virtual machines (VMs)](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md) |
 | Security intelligence updates | Allow Microsoft Defender Antivirus to update and communicate over a metered connection | [Manage Microsoft Defender Antivirus updates and scans for endpoints that are out of date](manage-outdated-endpoints-microsoft-defender-antivirus.md) |

@@ -1,15 +1,9 @@
 ---
 title: Bulk complaint level values
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: concept-article
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
 ms.assetid: a5b03b3c-37dd-429e-8e9b-2c1b25031794
 ms.collection: 
   - m365-security

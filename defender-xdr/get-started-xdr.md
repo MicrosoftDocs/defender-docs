@@ -6,8 +6,6 @@ ms.service: defender-experts-for-xdr
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: orspodek
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
@@ -16,7 +14,6 @@ ms.topic: get-started
 ms.custom: 
 - cx-ti
 - cx-dex
-search.appverid: met150
 ms.date: 02/27/2026
 ---
 
@@ -38,9 +35,6 @@ Select the link in the welcome email to directly launch the Defender Experts set
 :::image type="content" source="media/get-started-xdr/security-team-boost.png" alt-text="Screenshot of the Get started page in Defender for Experts XDR settings step-by-step guide." lightbox="media/get-started-xdr/security-team-boost.png":::
 
 ## Grant permissions to our experts
-
-> [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 By default, Defender Experts for XDR requires **Service provider access** that lets our experts sign into your tenant and deliver services based on assigned security roles. [Learn more about cross-tenant access](/azure/active-directory/external-identities/cross-tenant-access-overview)
 
@@ -90,8 +84,9 @@ Defender Experts for XDR lets you exclude devices and users from remediation act
 
 1. In the same Defender Experts settings setup, under **Exclusions**, go to the **User groups** tab.
 1. Select **+ Add user groups**, then search for and choose one or more user groups that you want to exclude.
+
    > [!NOTE]
-   > This page only lists existing user groups. If you want to create a new user group, you need to sign into the Microsoft Entra ID admin center as a Global Administrator. Then, refresh this page to search for and choose the newly created group. [Learn more about creating user groups](/entra/fundamentals/groups-view-azure-portal)
+   > This page only lists existing user groups. If you want to create a new user group, [learn more about creating user groups](/entra/fundamentals/groups-view-azure-portal)
 
 1. Select **Add user groups**.
 1. Back on the **User groups** tab, review the list of excluded user groups. If you want to remove a user group from the exclusion list, choose it then select **Remove user group**.
@@ -174,7 +169,7 @@ Apart from email and [in-portal chat](communicate-defender-experts-xdr.md#in-por
 1. Select **View readiness assessment** to complete the necessary actions required to [optimize your security posture](#prepare-your-environment-for-the-defender-experts-service).
 
 > [!NOTE]
-> To set up the Defender Experts Teams application, you must have either the **Global administrator** or **Security administrator** role assigned, and a Microsoft Teams license.
+> To set up the Defender Experts Teams application, you must have **Security administrator** or higher role assigned, and a Microsoft Teams license.
 
 To turn on Teams notifications and chat after the initial setup, go to **Settings** > **Defender Experts** > **Teams**.
 

@@ -1,18 +1,14 @@
 ---
 title: Manage your Microsoft Defender for Endpoint subscription settings across client devices
 description: Learn about your options for managing your Defender for Endpoint subscription settings. Choose Plan 1, Plan 2, or mixed mode.
-search.appverid: MET150  
 author: limwainstein
 ms.author: lwainstein
-manager: bagol 
-audience: ITPro
 ms.topic: overview
 ms.date: 03/05/2025
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
 ms.reviewer: shlomiakirav, efratka
-f1.keywords: NOCSH  
 ms.collection: 
 - M365-security-compliance
 - m365initiative-defender-endpoint
