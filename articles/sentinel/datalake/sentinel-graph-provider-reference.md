@@ -883,7 +883,7 @@ Node builder after data source is set: configuration methods available.
 NodeBuilderSourceSet(alias: str, graph_builder: GraphSpecBuilder, source_step: DataInputETLStep)
 ```
 
-**Note:** Created internally by NodeBuilderInitial source methods.
+**Note:** Created internally by NodeBuilderInitial source methods. 
 
 #### Methods
 
@@ -978,6 +978,8 @@ Configure columns with required key and display designation.
 - Properties are automatically built from column types
 - Time filter column is automatically added if specified
 - Property types are auto-inferred from source schema
+
+- See **Restrictions** 
 
 **Example:**
 ```python
