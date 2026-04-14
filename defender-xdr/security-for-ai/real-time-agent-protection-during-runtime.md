@@ -43,7 +43,7 @@ Beyond the core real‑time protection capabilities available for all Microsoft 
 To enable real-time protection for your AI agents: 
 
 1. Open the [Microsoft Defender portal](https://security.microsoft.com/)
-1. Select **System** > **Settings**.
+1. Select **System** > **Settings** > **Security for AI agents**.  This opens the [Security for AI agents settings page](https://security.microsoft.com/securitysettings/security_for_ai).
 1. Make sure that **Security for AI agents** is toggled on.
 1. Make sure that **Agent 365** is connected under **AI real-time protection & investigation**. 
 
