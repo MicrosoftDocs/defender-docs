@@ -104,7 +104,7 @@ For example, use Advanced Hunting to:
 
 ### Advanced Hunting tables for AI agent investigation
 
-The following Advanced Hunting tables provide visibility into AI agent inventory, alerts, and activity. You can query these tables individually or correlate them to investigate incidents and hunt for agent-related risks.
+The following Advanced Hunting tables provide visibility into AI agent configuration, alerts, and activity. You can query these tables individually or correlate them to investigate incidents and hunt for agent-related risks.
 
 | Table name | Description | Common use cases |
 |-----------|-------------|------------------|
