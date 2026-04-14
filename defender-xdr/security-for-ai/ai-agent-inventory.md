@@ -91,6 +91,8 @@ For Microsoft Foundry agents, Microsoft Defender also surfaces security posture 
     - Select **View on map** to see the agent's location and related attack paths.
 
 
-## See also
+## Next steps
 
+- [Detect, block, and investigate threats to AI agents using Microsoft Defender](/defender-xdr/security-for-ai/ai-agent-detection-protection)
+- [Protect AI agents from emerging threats and vulnerabilities using Microsoft Defender](/defender-xdr/security-for-ai/defender-security-for-ai#protect-ai-assets-from-emerging-threats-and-vulnerabilities)
 - [Microsoft Defender for Cloud AI security posture management](/azure/defender-for-cloud/ai-security-posture).

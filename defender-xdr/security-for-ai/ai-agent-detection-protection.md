@@ -113,3 +113,8 @@ The following Advanced Hunting tables provide visibility into [AI agent configur
 | [AIAgentsInfo](/defender-xdr/advanced-hunting-aiagentsinfo-table) | Contains inventory and configuration details for AI agents, including agent identity, platform, ownership, and metadata. | Review agent posture, identify risky or misconfigured agents, and correlate agent identity with alerts and activity. |
 | [AlertEvidence](/defender-xdr/advanced-hunting-alertevidence-table) | Contains entities and artifacts associated with alerts, such as agents, users, tools, URLs, or resources. | Understand the scope of an alert and identify related entities involved in an AI agent incident. |
 
+## Next steps
+
+- [Discover AI agents and assess security posture using Microsoft Defender](/defender-xdr/security-for-ai/ai-agent-inventory)
+- [Protect AI assets from emerging threats and vulnerabilities using Microsoft Defender](/defender-xdr/security-for-ai/defender-security-for-ai#protect-ai-assets-from-emerging-threats-and-vulnerabilities)
+
