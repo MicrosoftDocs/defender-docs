@@ -2,7 +2,7 @@
 title: Discover AI models
 description: Learn about AI model security in Microsoft Defender for Cloud.
 ms.topic: concept-article
-ms.date: 03/25/2026
+ms.date: 04/14/2026
 ms.author: elkrieger
 zone_pivot_groups: defender-portal-experience
 ---
@@ -10,7 +10,7 @@ zone_pivot_groups: defender-portal-experience
 # AI model security
 
 > [!IMPORTANT]
-> This feature is currently in preview and included with the Microsoft Defender for AI Services plan. During preview, there is no additional charge for model scanning. However, enabling the Defender for AI Services plan may incur costs related to threat protection features. Continued inclusion of this feature as part of Defender for AI Services is not guaranteed when it becomes generally available (GA), and licensing requirements may change. If that occurs, a notification will be sent before the feature is disabled with options to re‑enable it under the applicable license. 
+> This feature is currently in preview and included with the Microsoft Defender for AI Services plan. During preview, there is no additional charge for AI model scanning. However, enabling the Defender for AI Services plan may incur costs related to threat protection features. Continued inclusion of AI model scanning feature as part of Defender for AI Services is not guaranteed when it becomes generally available (GA), and licensing requirements may change. If that occurs, a notification will be sent before the feature is disabled with options to re‑enable it under the applicable license.
 
 As organizations increasingly use artificial intelligence (AI) models to drive automation, insights, and intelligent decision-making, security teams need visibility and control to assess the safety and compliance of AI models entering their environments. These models often have broad access to data and infrastructure. Without these capabilities, it becomes increasingly difficult to enforce internal standards. 
 
