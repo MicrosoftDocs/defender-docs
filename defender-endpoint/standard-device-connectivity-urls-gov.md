@@ -119,6 +119,7 @@ Because these Defender for Endpoint-related processes generate network communica
 
 |Date|Change log|
 |---|---|
+|04/14/2026|Replaced `officecdn-microsoft-com.akamaized.net` with new CDN ChannelURL reference for Mac/Linux product updates. New CDN endpoint starting with macOS build 101.26012.0012.|
 |03/23/2026|Renamed **Microsoft Defender processes** section to **Client processes**, and aligned the content for all URL lists.|
 |15/08/2023|Removed URL: `https://msdl.microsoft.com/download/symbols`.|
 |05/12/2022|URL details updated:<br>Updated line 58: Updated from required to optional.<br>Updated line 62: Changed from optional to required. Guidance text updated. Added Mac and Linux.<br>Updated line 63: Changed from optional to required. Guidance text updated. Added Mac and Linux.<br>Updated line 64: Changed from optional to required. Guidance text updated. Added Mac and Linux.|

@@ -192,6 +192,7 @@ Because these Defender for Endpoint-related processes generate network communica
 
 |Date|Change Log|
 |---|---|
+|04/14/2026|Removed `officecdn-microsoft-com.akamaized.net` from [URLs used for updates](#urls-used-for-updates). Mac app/platform updates now use the new CDN endpoint referenced in the standard URL list. Added SmartScreen row (`*.smartscreen.microsoft.com`, `*.checkappexec.microsoft.com`, `*.urs.microsoft.com`) to [Common endpoints](#common-endpoints).|
 |03/26/2026|Renamed **Microsoft Defender process exclusions** section to **Client processes**, and aligned the content for all URL lists.|
 |03/03/2026|Added Linux URL (`config.edge.skype.com/config/v1`) to [Common endpoints](#common-endpoints).|
 |02/25/2026|Added `*.wdcpalt.microsoft.com` to Windows 1607-1803 section.|
