@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn about the different tools available in the Data exploration collection in Microsoft Sentinel 
 author: poliveria
 ms.topic: how-to
-ms.date: 04/08/2026
+ms.date: 04/14/2026
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
@@ -35,11 +35,6 @@ To access the data exploration tool collection, you need the following prerequis
 > - Security Contributor
 > - Security Operator
 > - Security Reader
-> 
-> To use the entity analyzer tool, you also need the following roles:
-> - **Security Copilot Contributor** – This role is required to use the tool, which consumes Security Compute Units (SCUs) to deliver reasoned entity risk analysis.
-> - **Security Copilot Owner** (optional) – This role is only required to view and monitor SCU usage.
-> For more information, see [Understand authentication in Microsoft Security Copilot](/copilot/security/authentication).  
 
 ## Add the data exploration collection
 
@@ -89,6 +84,14 @@ These tools use AI to analyze your organization's data in the Microsoft Sentinel
 For example, `analyze_user_entity` reasons over the user's authentication patterns, behavioral anomalies, activity within your organization, and more to provide a verdict and analysis. Meanwhile, `analyze_url_entity` reasons over threat intelligence from Microsoft, your custom threat intelligence in Microsoft Sentinel threat intelligence platform (TIP), click, email, or connection activity on the URL within your organization, and presence in Microsoft Sentinel watchlists, among others to similarly provide a verdict and analysis.
 
 Entity analysis tools might require a few minutes to generate results, so there are tools to start analysis for each entity and another one that polls for the analysis results.
+
+> [!IMPORTANT]
+> To use the entity analyzer tool, you also need the following roles:
+> - **Security Copilot Contributor** – This role is required to use the tool, which consumes Security Compute Units (SCUs) to deliver reasoned entity risk analysis.
+> - **Security Copilot Owner** (optional) – This role is only required to view and monitor SCU usage.
+> 
+> For more information, see [Understand authentication in Microsoft Security Copilot](/copilot/security/authentication).  
+
 
 #### Start analysis (`analyze_user_entity` and `analyze_url_entity`)
 
