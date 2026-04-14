@@ -51,7 +51,7 @@ To enable real-time protection for your AI agents:
 
 1. To enable the extended real-time protection capabilities for Microsoft Copilot Studio agents, make sure that **Copilot Studio** is connected under **AI real-time protection & investigation**. 
 
-    For more information, see [Copilot Studio integration in Microsoft Defender for Cloud Apps](/defender-cloud-apps/ai-agent-inventory).
+    For more information, see [Copilot Studio integration in Microsoft Defender for Cloud Apps](/defender-for-cloud-apps/ai-agent-inventory).
 
 
 ## Detect AI agent threats in near-real-time
@@ -68,7 +68,7 @@ Near-real-time detections rely on AI agent audit logs, which also provide valuab
 
 To enable near-real-time alerts and threat hunting: 
 
-1. Enable the Microsoft 365 app connector to collect detailed audit logs for AI agent actions. For more information, see [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#connect-microsoft-365-to-microsoft-defender-for-cloud-apps).
+1. Enable the Microsoft 365 app connector to collect detailed audit logs for AI agent actions. For more information, see [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-for-cloud-apps/protect-office-365#connect-microsoft-365-to-microsoft-defender-for-cloud-apps).
 1. Ensure that your AI agent emits audit logs to Microsoft 365. 
     - Agents built with Microsoft Copilot Studio send audit logs to Microsoft 365 by default.
     - For AI agents built on other platforms, integrate the [Microsoft Agent 365 SDK](/microsoft-agent-365/developer/) to emit audit logs to Microsoft 365.
