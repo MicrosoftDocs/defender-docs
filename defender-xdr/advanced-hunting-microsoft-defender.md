@@ -22,7 +22,7 @@ ms.topic: concept-article
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 04/10/2026
+ms.date: 04/14/2026
 ---
 
 # Advanced hunting with Microsoft Sentinel data in Microsoft Defender portal
@@ -61,7 +61,7 @@ After connecting your Microsoft Sentinel workspace and Microsoft Defender XDR ad
 
 > [!IMPORTANT]
 > Microsoft Government Community Cloud Moderate (GCC-M) customers should be aware of the following limitation in advanced hunting:
-> - Queries that reference both Microsoft Sentinel and Defender XDR tables aren't supported. If you use _Search *_ or _Union_ in your queries, consider replacing the _*_ with an explicit list of tables that are limited to Microsoft Sentinel only or Defender XDR only.
+> - Queries that reference both Microsoft Sentinel and Defender XDR tables aren't supported. If you use _Search_ or _Union *_ in your queries, consider replacing the _*_ with an explicit list of tables that are limited to Microsoft Sentinel only or Defender XDR only.
 
 ## Where to find your Microsoft Sentinel data
 You can use advanced hunting KQL (Kusto Query Language) queries to hunt through Microsoft Defender XDR and Microsoft Sentinel data.
