@@ -106,7 +106,7 @@ p=()-[:works_at]->()         -- Binding a path variable
 - `{2,4}`: Exactly 2 to 4 hops
 - `{1,}`: 1 or more hops (unbounded). Today, the system limits an unbounded path query to 8 hops
 
-- `{,8}`: Up to 8 hops
+- `{,5}`: Up to 5 hops
 
 - `{5}`: Exactly 5 hops
 
