@@ -4,7 +4,7 @@ description: Learn how the Password protection page in Microsoft Defender helps 
 #customer intent: As a security admin, I want to see password-related risks across my identity sources so that I can find exposed credentials, weak policies, and configuration issues and take action to reduce risk.
 author: AbbyMSFT
 ms.author: abbyweisberg
-ms.date: 03/17/2026
+ms.date: 04/14/2026
 ms.topic: concept-article
 ms.service: defender-xdr
 ms.custom: msecd-doc-authoring-106
@@ -28,7 +28,7 @@ To access the **Password protection** page, you need:
 
 In the Microsoft Defender portal, select **Identities** > **Password protection**.
 
-:::image type="content" source="media/investigate-passwords/password-protection.png" alt-text="Screenshot of the Microsoft Defender Password protection page.":::
+:::image type="content" source="media/investigate-passwords/password-protection.png" alt-text="Screenshot of the Microsoft Defender Password protection page." lightbox="media/investigate-passwords/password-protection.png":::
 
 The page includes a left panel where you select the identity source you want to review. Supported identity sources include:
 
@@ -62,7 +62,7 @@ The **Password Policies** tab shows:
 
 The **Password Hygiene**, **Leaked Credentials**, and **Exposed Passwords** tabs show account-level data with this information:
 
-:::image type="content" source="media/investigate-passwords/password-protection-exposed-passwords.png" alt-text="Screenshot that shows the Password protection page with the Exposed passwords tab showing. ":::
+:::image type="content" source="media/investigate-passwords/password-protection-exposed-passwords.png" alt-text="Screenshot that shows the Password protection page with the Exposed passwords tab showing. " lightbox="media/investigate-passwords/password-protection-exposed-passwords.png":::
 
 | Column | Description |
 |---|---|

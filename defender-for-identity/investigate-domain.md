@@ -4,7 +4,7 @@ description: Learn how to investigate an Active Directory domain in Microsoft De
 #customer intent: As a security admin, I want to view the security posture of my Active Directory domains so that I can identify coverage gaps, review security policies, and act on recommendations.
 author: AbbyMSFT
 ms.author: abbyweisberg
-ms.date: 03/17/2026
+ms.date: 04/14/2026
 ms.topic: concept-article
 ms.service: microsoft-defender-for-identity
 ms.custom: msecd-doc-authoring-106
@@ -34,9 +34,9 @@ To switch between domains when you're on the domain page, use the domain selecto
 
 ## Overview tab
 
-:::image type="content" source="media/investigate-domain/domain-page-overview.png" alt-text="Screenshot that shows the domain overview tab with domain details, deployment health, health score, and identity summary cards." lightbox="media/investigate-domain/domain-page-overview.png":::
+The **Overview** tab provides a domain summary.
 
-The **Overview** tab provides a domain summary with the following sections:
+:::image type="content" source="media/investigate-domain/domain-page-overview.png" alt-text="Screenshot that shows the domain overview tab with domain details, deployment health, health score, and identity summary cards." lightbox="media/investigate-domain/domain-page-overview.png":::
 
 | Section | Description |
 |---|---|
@@ -52,11 +52,11 @@ The **Overview** tab provides a domain summary with the following sections:
 
 ## Incidents and alerts tab
 
-:::image type="content" source="media/investigate-domain/domain-page-incidents-alerts.png" alt-text="Screenshot that shows the Incidents and alerts tab of the domain page in Microsoft Defender." lightbox="media/investigate-domain/domain-page-incidents-alerts.png":::
-
 Shows all incidents and alerts connected to the domain. Data on this tab includes only incidents and alerts created on or after February 1, 2026.
 
 The tab includes default filters for **Status** (New, In progress) and **Alert severity** (High, Medium, Low). You can export, copy the list link, refresh, and customize columns.
+
+:::image type="content" source="media/investigate-domain/domain-page-incidents-alerts.png" alt-text="Screenshot that shows the Incidents and alerts tab of the domain page in Microsoft Defender." lightbox="media/investigate-domain/domain-page-incidents-alerts.png":::
 
 | Column | Description |
 |---|---|
@@ -95,11 +95,11 @@ Shows trust relationships for the domain. You can export the list.
 
 Use this tab to review which domains trust each other and in which direction.
 
-## Group Accounts tab
-
-:::image type="content" source="media/investigate-domain/domain-page-groups.png" alt-text="Screenshot that shows the Group Accounts tab of the domain page in Microsoft Defender." lightbox="media/investigate-domain/domain-page-groups.png":::
+## Groups tab
 
 Lists the groups in the domain. You can filter by tags, type, and scope. You can mark groups as sensitive to support exposure analysis and detect potential attack paths.
+
+:::image type="content" source="media/investigate-domain/domain-page-groups.png" alt-text="Screenshot that shows the Group Accounts tab of the domain page in Microsoft Defender." lightbox="media/investigate-domain/domain-page-groups.png":::
 
 | Column | Description |
 |---|---|
@@ -111,11 +111,12 @@ Lists the groups in the domain. You can filter by tags, type, and scope. You can
 | **Canonical Name** | The full canonical name path of the group in Active Directory. |
 | **Description** | The description of the group. |
 
-## Computer Accounts tab
+## Computers tab
+
+Lists the computer accounts in the domain. You can filter by tags. You can mark computer accounts as sensitive to support exposure analysis and detect potential attack paths.
 
 :::image type="content" source="media/investigate-domain/domain-page-computers.png" alt-text="Screenshot that shows the Computer Accounts tab of the domain page in Microsoft Defender." lightbox="media/investigate-domain/domain-page-computers.png":::
 
-Lists the computer accounts in the domain. You can filter by tags. You can mark computer accounts as sensitive to support exposure analysis and detect potential attack paths.
 
 | Column | Description |
 |---|---|
