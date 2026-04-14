@@ -68,7 +68,7 @@ Near-real-time detections rely on AI agent audit logs, which also provide valuab
 
 To enable near-real-time alerts and threat hunting: 
 
-1. Enable the Microsoft 365 app connector to collect detailed audit logs for AI agent actions. For more information, see [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#connect-microsoft-365-to-microsoft-defender-for-cloud-apps).
+1. Enable the Microsoft 365 app connector to collect detailed audit logs for AI agent actions. For more information, see [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](../../defender-for-cloud-apps/protect-office-365.md#connect-microsoft-365-to-microsoft-defender-for-cloud-apps).
 1. Ensure that your AI agent emits audit logs to Microsoft 365. 
     - Agents built with Microsoft Copilot Studio send audit logs to Microsoft 365 by default.
     - For AI agents built on other platforms, integrate the [Microsoft Agent 365 SDK](/microsoft-agent-365/developer/) to emit audit logs to Microsoft 365.
