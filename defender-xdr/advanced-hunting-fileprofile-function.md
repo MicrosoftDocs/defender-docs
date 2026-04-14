@@ -1,15 +1,11 @@
 ---
 title: FileProfile() function in advanced hunting for Microsoft Defender XDR
 description: Learn how to use the FileProfile() to enrich information about files in your advanced hunting query results.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3

@@ -1,12 +1,11 @@
-﻿---
+---
 title: Use network protection to help prevent connections to malicious or suspicious sites
 description: Protect your network by preventing users from accessing known malicious and suspicious network addresses
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 10/20/2025
-audience: ITPro
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.reviewer: ericlaw
 ms.custom: asr
 ms.subservice: asr
@@ -15,7 +14,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-search.appverid: met150
 appliesto:
   - Microsoft Defender Antivirus
 ---

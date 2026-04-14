@@ -2,12 +2,9 @@
 title: Hunting graph in advanced hunting
 description: Learn about the hunting graph in Microsoft Defender and how to use it to rendering threat scenarios as interactive graphs
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - m365-security
   - m365initiative-m365-defender
@@ -20,8 +17,7 @@ ms.topic: overview
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-search.appverid: met150
-ms.date: 12/01/2025
+ms.date: 03/31/2026
 
 ---
 # Hunt for threats using the hunting graph
@@ -73,22 +69,26 @@ To start hunting with a predefined scenario, on a new hunting graph page, select
 
 #### Step 1: Select a scenario and enter scenario inputs
 
-The following table describes the predefined scenarios in the hunting graph and their respective required scenario inputs, if applicable. For scenarios that require inputs, you can type or search and select for them in the search boxes provided.
+The following table describes the predefined scenarios in the hunting graph, their respective required scenario inputs (if applicable), and the techniques they're associated with based on the [MITRE ATT&CK framework](https://attack.mitre.org/). 
 
-| **Scenario** | **Description** | **Inputs** |
-|---|---|---|
-| **Paths between two entities** | Provide two entities (nodes) to view the paths between them.<br><br>Use this scenario if you want to discover if there’s a path leading from one entity to another. |<ul><li>Start Entity<li>End Entity</ul>|
-| **Entities that have access to a key vault** | Provide a specific key vault to view paths from various entities (devices, virtual machines, containers, servers, and others) that have direct or indirect access to it.<br><br>Use this scenario in case of a breach, maintenance work, or assessment of the impact of entities that might have access to a sensitive asset like a key vault. | Target key vault |
-| **Users with access to sensitive data** | Provide any sensitive data storage of interest to view users that have access to it.<br><br>Use this scenario if you want to know which entities have access to sensitive data, especially in cases when an incident indicates unusual access to confidential files. | Target storage account |
-| **Critical users with access to storage accounts containing sensitive data** | This scenario identifies critical users with access to storage resources containing sensitive data.<br><br>Use this scenario to prevent, assess, and monitor unauthorized access, exposure risk, and breach impact based on the privileged users. | (None) |
-| **Data exfiltration by a device** | Provide a device ID to view paths to storage accounts it has access to; for instance, to check what storage accounts a certain device can access in a bring your own device (BYOD) environment.<br><br>Use this scenario when investigating suspicious or unauthorized data transfer from corporate devices and to external sources. | Source device |
-| **Paths to a highly critical Kubernetes cluster** | Provide a Kubernetes cluster with high criticality to view users, virtual machines, and containers that have access to it.<br><br>Use this scenario to assess, analyze and prioritize handling of attack paths leading to highly critical Kubernetes cluster. | Target Kubernetes cluster |
-| **Identities with access to Azure DevOps repositories** | Provide an Azure DevOps (ADO) repository name to view users that have read and/or write access to said repository.<br><br>Use this scenario to identify entities with access to ADO repositories, which often contain sensitive assets and therefore valuable targets for threat actors. This scenario gives you visibility and lets you plan your response in case of a breach. | Target ADO repository |
-| **Identify nodes in the highest number of paths to SQL data stores** | This scenario identifies the nodes that appear in the highest number of paths leading to SQL data stores. The scenario discovers paths in the graph where users have roles or permissions to access the SQL data stores.<br><br>Use this scenario to gain visibility to stores that might contain sensitive information, assess the impact in case of a breach, and prepare your mitigation and response. | (None) |
-| **Attack paths to a critical asset** | View the potential routes through various nodes leading towards a target.<br>Use this scenario to examine potential lateral movement that could reach a critical asset through your network. | Target critical asset |
-| **Entity connections** | Find the direct connections of a given entity and analyze its relationships. | Source entity<br><br>**Note:** You can use any entity as the seeding node for the graph. The graph indicates incoming and outgoing connections. |
+| **Scenario** | **Description** | **Inputs** | **MITRE Technique** |
+|---|---|---|---|
+| **Attack paths to critical asset** | View the potential routes through various nodes leading towards a target.<br>Use this scenario to examine potential lateral movement that could reach a critical asset through your network. | Target critical asset | Lateral movement, Exploratory |
+| **Entity relationship map** | Find the direct connections of a given entity and analyze its relationships. | Source entity<br><br>**Note:** You can use any entity as the seeding node for the graph. The graph indicates incoming and outgoing connections. | Exploratory |
+| **Paths between two entities** | Provide two entities (nodes) to view the paths between them.<br><br>Use this scenario if you want to discover if there’s a path leading from one entity to another. |<ul><li>Start data source<li>Target data source</ul>| Lateral movement, Exploratory |
+| **Access to key vaults** | Provide a specific key vault to view paths from various entities (devices, virtual machines, containers, servers, and others) that have direct or indirect access to it.<br><br>Use this scenario in case of a breach, maintenance work, or assessment of the impact of entities that might have access to a sensitive asset like a key vault. | Target key vault | Lateral movement, Collection |
+| **Users with access to sensitive data** | Provide any sensitive data storage of interest to view users that have access to it.<br><br>Use this scenario if you want to know which entities have access to sensitive data, especially in cases when an incident indicates unusual access to confidential files. | Target storage account | Lateral movement, Exploratory, Collection |
+| **Critical identities with storage access** | This scenario identifies critical users with access to storage resources containing sensitive data.<br><br>Use this scenario to prevent, assess, and monitor unauthorized access, exposure risk, and breach impact based on the privileged users. | (None) | Lateral movement, Collection |
+| **Potential data exfiltration by device** | Provide a device ID to view paths to storage accounts it has access to; for instance, to check what storage accounts a certain device can access in a bring your own device (BYOD) environment.<br><br>Use this scenario when investigating suspicious or unauthorized data transfer from corporate devices and to external sources. | Source device | Exploratory, Collection |
+| **Attack paths to critical Kubernetes clusters** | Provide a Kubernetes cluster with high criticality to view users, virtual machines, and containers that have access to it.<br><br>Use this scenario to assess, analyze and prioritize handling of attack paths leading to highly critical Kubernetes cluster. | Target Kubernetes cluster | Privilege escalation, Lateral movement |
+| **Access to Azure DevOps repositories** | Provide an Azure DevOps (ADO) repository name to view users that have read and/or write access to said repository.<br><br>Use this scenario to identify entities with access to ADO repositories, which often contain sensitive assets and therefore valuable targets for threat actors. This scenario gives you visibility and lets you plan your response in case of a breach. | Target ADO repository | Collection |
+| **Choke points to SQL data stores** | This scenario identifies the nodes that appear in the highest number of paths leading to SQL data stores. The scenario discovers paths in the graph where users have roles or permissions to access the SQL data stores.<br><br>Use this scenario to gain visibility to stores that might contain sensitive information, assess the impact in case of a breach, and prepare your mitigation and response. | (None) | Lateral movement, Collection |
+
+Filter the scenarios according to MITRE technique they're associated with by selecting their corresponding buttons:
 
 :::image type="content" source="./media/advanced-hunting-graph/hunting-graph-select-scenario.png" alt-text="Screenshot of the predefined scenarios side panel highlighting the available options." lightbox="./media/advanced-hunting-graph/hunting-graph-select-scenario.png":::
+
+For scenarios that require inputs, type or search and then select for them in the search boxes provided:
 
 :::image type="content" source="./media/advanced-hunting-graph/hunting-graph-input.png" alt-text="Screenshot of the predefined scenarios side panel highlighting the required scenario inputs." lightbox="./media/advanced-hunting-graph/hunting-graph-input.png":::
 
@@ -117,7 +117,7 @@ To add a filter, select **Add filter** then the select any of the supported node
 
 #### Step 3: Render the graph
 
-After selecting a scenario and applying the necessary filters, select **Run** to render the graph. Once the graph is rendered, you can then explore it further by selecting nodes and edges to view more information about entities and relationships, or expand or focus on certain entities.
+After selecting a scenario and applying the necessary filters, select **Run scenario** to render the graph. Once the graph is rendered, you can then explore it further by selecting nodes and edges to view more information about entities and relationships, or expand or focus on certain entities.
 
 ## See also
 - [Proactively hunt for threats with advanced hunting in Microsoft Defender](advanced-hunting-overview.md)

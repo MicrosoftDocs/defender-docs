@@ -1,15 +1,9 @@
 ---
 title: Submit malware and good files to Microsoft for analysis
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
 ms.assetid: 12eba50e-661d-44b8-ae94-a34bc47fb84d
 ms.collection:
   - m365-security

@@ -8,14 +8,12 @@ ms.subservice: reference
 ms.mktglfcycl: secure
 ms.sitesec: library
 ms.localizationpriority: medium
-ms.author: bagol
-author: batamig
-audience: ITPro
+ms.author: painbar
+author: paulinbar
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: get-started
-search.appverid: met150
 ms.date: 04/04/2025
 #customer intent: As an IT or security operations engineer responsible for endpoint recovery, I want a simple, trusted tool I can download and run to detect and removemalware so I can quickly restore infected devices and validate remediation.
 ---
@@ -33,7 +31,7 @@ Microsoft Safety Scanner is a scan tool designed to find and remove malware from
 
 ## Important information
 
-- The security intelligence update version of the Microsoft Safety Scanner matches the version described [in this web page](https://www.microsoft.com/wdsi/definitions).
+- The security intelligence update version of the Microsoft Safety Scanner matches the version described [in this web page](https://www.microsoft.com/wdsi/defenderupdates).
 
 - Microsoft Safety Scanner only scans when manually triggered. Safety Scanner expires 10 days after being downloaded. To rerun a scan with the latest anti-malware definitions, download and run Safety Scanner again. We recommend that you always download the latest version of this tool before each scan.
 

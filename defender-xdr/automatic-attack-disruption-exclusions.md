@@ -2,24 +2,21 @@
 title: Exclude assets from automated response in attack disruption
 description: Learn more about how to exclude identities and devices from being automatically contained from automatic attack disruption.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
+manager: orspodek
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
   - usx-security
   - usx-security
 ms.topic: how-to
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 05/12/2025
 appliesto:
 - Microsoft Defender XDR
+
+#customer intent: As a security administrator, I want to learn how to exclude specific assets from being automatically contained by automatic attack disruption in Microsoft Defender XDR, so that I can prevent disruptions to critical assets while still maintaining security.
 ---
 
 # Exclude assets from automated responses in automatic attack disruption
@@ -28,17 +25,14 @@ appliesto:
 
 This article provides information on how to exclude assets from being automatically contained by [automatic attack disruption](automatic-attack-disruption.md) in Microsoft Defender XDR.
 
-Automatic attack disruption enables the exclusion of specific user accounts, devices, and IP addresses from automated containment actions. Once excluded, these assets won't be affected by automated actions triggered by attack disruption.
+Automatic attack disruption enables the exclusion of specific user accounts, devices, and IP addresses from automated containment actions. Once excluded, these assets aren't affected by automated actions triggered by attack disruption.
 
 > [!CAUTION]
-> Excluding assets from automated responses is not recommended. Excluding assets from automated responses can reduce the effectiveness of automatic attack disruption in protecting your environment from sophisticated, high-impact attacks.
+> Excluding assets from automated responses isn't recommended. Excluding assets from automated responses can reduce the effectiveness of automatic attack disruption in protecting your environment from sophisticated, high-impact attacks.
 
 ## Prerequisites
 
-To exclude assets from automated responses in automatic attack disruption, you must have one of the following roles assigned in either Microsoft Entra ID ([https://portal.azure.com](https://portal.azure.com)) or in the Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)):
-
-- Global Administrator
-- Security Administrator
+To exclude assets from automated responses in automatic attack disruption, you must be a **Security Administrator or higher** in either Microsoft Entra ID ([https://portal.azure.com](https://portal.azure.com)) or in the Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)).
 
 ## Review or change automated response exclusions for assets
 
@@ -84,9 +78,6 @@ To exclude assets from automated responses in automatic attack disruption, follo
 
 4. Select **Save** to save the automation level for the device group.
 
-> [!IMPORTANT]
-> Some information in this article relates to a prereleased product, which may be substantially modified before it's commercially released. Microsoft makes no warranties expressed or implied, with respect to the information provided here.
-
 ### Exclude IPs
 
 1. Under **Automated responses**, select **Devices**.
@@ -119,8 +110,7 @@ To remove an exclusion:
 
 Opting out of attack disruption can greatly increase security risk. Consider [excluding specific entities](automatic-attack-disruption-exclusions.md#review-or-change-automated-response-exclusions-for-assets) instead. 
 
-If you must opt out of attack disruption, you can do so by opening a support case in the Microsoft Defender portal with the subject *Attack disruption opt-out*. In your request, please specify that you wish to opt out of attack disruption and include a brief explanation about your decision. This feedback helps us improve the feature and better understand customer needs. By opting out, you'll still receive alerts related to attack disruption but no automated actions are taken.
-
+If you must opt out of attack disruption, you can do so by opening a support case in the Microsoft Defender portal with the subject *Attack disruption opt-out*. In your request, specify that you wish to opt out of attack disruption and include a brief explanation about your decision. This feedback helps us improve the feature and better understand customer needs. By opting out, you still receive alerts related to attack disruption but no automated actions are taken.
 
 ## See also
 

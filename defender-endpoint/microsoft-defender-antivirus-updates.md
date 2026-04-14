@@ -4,12 +4,10 @@ description: Manage how Microsoft Defender Antivirus receives protection and pro
 ms.service: defender-endpoint
 ms.localizationpriority: high
 ms.date: 10/20/2025
-audience: ITPro
 ms.topic: reference
 author: chrisda
 ms.author: chrisda
 ms.subservice: ngp
-search.appverid: met150
 appliesto:
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2
@@ -17,7 +15,7 @@ appliesto:
 
 # Microsoft Defender Antivirus security intelligence and product updates and support
 
-Keeping Microsoft Defender Antivirus up to date is critical to assure your devices are protected against new malware and attack techniques. Update your antivirus protection, even if Microsoft Defender Antivirus is running in [passive mode](microsoft-defender-antivirus-compatibility.md). You can find the lates engine, platform, and signature date in [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/wdsi/defenderupdates).
+Keeping Microsoft Defender Antivirus up to date is critical to assure your devices are protected against new malware and attack techniques. Update your antivirus protection, even if Microsoft Defender Antivirus is running in [passive mode](microsoft-defender-antivirus-compatibility.md). You can find the latest engine, platform, and signature date in [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/wdsi/defenderupdates).
 
 This article is aimed at **Windows** devices, and includes information about [security intelligence updates](#security-intelligence-updates) and [product updates](#product-updates).
 
@@ -50,7 +48,7 @@ For more information, see [Manage the sources for Microsoft Defender Antivirus p
 
 ### Important points about product updates
 
-- Monthly updates are released in phases, resulting in multiple packages visible in your [Window Server Update Services](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).
+- Monthly updates are released in phases, resulting in multiple packages visible in your [Windows Server Update Services](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).
 
 - This article lists changes that are included in the broad release channel. [See the latest broad channel release here](https://www.microsoft.com/security/encyclopedia/adlpackages.aspx?action=info).
 
@@ -93,20 +91,38 @@ To install the latest security intelligence and antivirus engine updates, you ca
 - Windows Update server (WSUS)
 - Software Update Point (SUP)
 - [File server](manage-protection-updates-microsoft-defender-antivirus.md)
-- Windows Security app: See [Microsoft Defender Antivirus in the Windows Security app](microsoft-defender-security-center-antivirus.md)
-- Command line, as follows:   
-   - `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -SignatureUpdate`
-   - `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -SignatureUpdate \\FileServer\ShareName`
-   - `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -SignatureUpdate -MMPC`
+- Windows Security app: See [Microsoft Defender Antivirus in the Windows Security app](microsoft-defender-security-center-antivirus.md).
+- [MpCmdRun command-line utility](configure-network-connections-microsoft-defender-antivirus.md):
+  1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
+     1. Open the **Start** menu, and then type **cmd**.
+     2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
 
-For more information, see [Manage the sources for Microsoft Defender Antivirus protection updates](manage-protection-updates-microsoft-defender-antivirus.md).
+  1. In the elevated Command Prompt, run the following command:
 
-To get the latest platform updates, you can use any of the following methods: 
+     > [!TIP]
+     > This command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
+
+     ```dos
+     (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
+     ```
+
+  1. Run one of the following commands:
+
+     ```dos
+     MpCmdRun.exe -SignatureUpdate
+
+     MpCmdRun.exe -SignatureUpdate -UNC \\FileServer\ShareName
+
+     MpCmdRun.exe -SignatureUpdate -MMPC
+     ```
+
+  For more information, see [Manage the sources for Microsoft Defender Antivirus protection updates](manage-protection-updates-microsoft-defender-antivirus.md).
+
+To get the latest platform updates, you can use any of the following methods:
 
 - Windows Update
 - Windows Update server (WSUS)
 - Software Update Point (SUP)
-
 - Windows Security app: See [Microsoft Defender Antivirus in the Windows Security app](microsoft-defender-security-center-antivirus.md)
 - The [Windows Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623)
 
@@ -114,27 +130,35 @@ To get the latest platform updates, you can use any of the following methods:
 
 In the unfortunate event that you encounter issues after an update, you can roll back to the previous or the inbox version.
 
-| Scenario | Command |
-|--|--|
-| Roll security intelligence updates back to the previous or to the original inbox version of the security intelligence version | `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -RemoveDefinitions` |
-| Roll the engine version back to the previous version | `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -RemoveDefinitions -Engine` |
-| Roll a platform update back to the previous version | `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -RevertPlatform` | 
-| Roll updates back to the version shipped with the operating system (`%ProgramFiles%\Windows Defender`) | `"%programdata%\Microsoft\Windows Defender\Platform\<version>\MpCmdRun.exe" -ResetPlatform` |
-  
+|Scenario|Command|
+|---|---|
+|Roll security intelligence updates back to the previous or to the original inbox version of the security intelligence version|`MpCmdRun.exe -RemoveDefinitions -All`|
+|Roll the engine version back to the previous version|`MpCmdRun.exe -RemoveDefinitions -Engine`|
+|Removes only dynamically downloaded security intelligence updates.|`MpCmdRun.exe -RemoveDefinitions -DynamicSignatures`|
+
+<!---
+These switches don't exist anymore:
+
+|Roll a platform update back to the previous version|`MpCmdRun.exe -RevertPlatform`|
+|Roll updates back to the version shipped with the operating system (`%ProgramFiles%\Windows Defender`)|`MpCmdRun.exe -ResetPlatform`|
+--->
+
+For more information, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
+
 ## Platform version included with Windows 10 releases
 
 The table provides the Microsoft Defender Antivirus platform and engine versions that are shipped with the latest Windows 10 releases:
 
-|Windows 10 release  |Platform version  |Engine version |Support phase |
-|:---|:---|:---|:---|
-|2004  (20H1/20H2) | `4.18.1909.6` | `1.1.17000.2` | Technical upgrade support (only) |
-|1909  (19H2) |`4.18.1902.5` |`1.1.16700.3` | Technical upgrade support (only) |
-|1903  (19H1) |`4.18.1902.5` |`1.1.15600.4` | Technical upgrade support (only) |
-|1809  (RS5) |`4.18.1807.5` |`1.1.15000.2` | Technical upgrade support (only) |
-|1803  (RS4) |`4.13.17134.1` |`1.1.14600.4` | Technical upgrade support (only) |
-|1709  (RS3) |`4.12.16299.15` |`1.1.14104.0` | Technical upgrade support (only) |
-|1703  (RS2) |`4.11.15603.2` |`1.1.13504.0` | Technical upgrade support (only) |
-|1607 (RS1) |`4.10.14393.3683` |`1.1.12805.0` | Technical upgrade support (only) |
+|Windows 10 release|Platform version|Engine version|Support phase|
+|---|:---:|:---:|:---|
+|2004 (20H1/20H2)|`4.18.1909.6`|`1.1.17000.2`|Technical upgrade support (only)|
+|1909 (19H2)|`4.18.1902.5`|`1.1.16700.3`|Technical upgrade support (only)|
+|1903 (19H1)|`4.18.1902.5`|`1.1.15600.4`|Technical upgrade support (only)|
+|1809 (RS5)|`4.18.1807.5`|`1.1.15000.2`|Technical upgrade support (only)|
+|1803 (RS4)|`4.13.17134.1`|`1.1.14600.4`|Technical upgrade support (only)|
+|1709 (RS3)|`4.12.16299.15`|`1.1.14104.0`|Technical upgrade support (only)|
+|1703 (RS2)|`4.11.15603.2`|`1.1.13504.0`|Technical upgrade support (only)|
+|1607 (RS1)|`4.10.14393.3683`|`1.1.12805.0`|Technical upgrade support (only)|
 
 For Windows 10 release information, see the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
   
@@ -164,11 +188,11 @@ After a new package version is released, support for the previous two versions i
 - Platform version: `4.18.25050.5`
 - Engine version: `1.25050.6`
 
-#### Fixes
+#### 1.431.97.0 Fixes
 
 - None
 
-#### Additional information
+#### 1.431.97.0 Additional information
 
 - None
 
@@ -179,14 +203,13 @@ After a new package version is released, support for the previous two versions i
 - Platform version: `4.18.25050.5`
 - Engine version: `1.25050.2`
 
-#### Fixes
+#### 1.431.54.0 Fixes
 
 - None
 
-#### Additional information
+#### 1.431.54.0 Additional information
 
 - None
-
 
 ### 1.429.122.0
 
@@ -195,11 +218,11 @@ After a new package version is released, support for the previous two versions i
 - Platform version: `4.18.25040.2`
 - Engine version: `1.25040.1`
 
-#### Fixes
+#### 1.429.122.0 Fixes
 
 - None
 
-#### Additional information
+#### 1.429.122.0 Additional information
 
 - None
 
@@ -213,10 +236,11 @@ After a new package version is released, support for the previous two versions i
 |[Manage updates for endpoints that are out of date](manage-outdated-endpoints-microsoft-defender-antivirus.md) | If an endpoint misses an update or scheduled scan, you can force an update or scan the next time a user signs in. |
 |[Manage event-based forced updates](manage-event-based-updates-microsoft-defender-antivirus.md) | You can set protection updates to be downloaded at startup or after certain cloud-delivered protection events. |
 |[Manage updates for mobile devices and virtual machines (VMs)](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)| You can specify settings, such as whether updates should occur on battery power that's especially useful for mobile devices and virtual machines. |
-| [Microsoft Defender for Endpoint update for EDR Sensor](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) | You can update the EDR sensor (MsSense.exe) that's included in the new Microsoft Defender for Endpoint unified solution package released in 2021.   |
+| [Microsoft Defender for Endpoint update for EDR Sensor](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) | You can update the EDR sensor (MsSense.exe) that's included in the new Microsoft Defender for Endpoint unified solution package released in 2021.|
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
+
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
 > - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
@@ -224,5 +248,3 @@ After a new package version is released, support for the previous two versions i
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-
-

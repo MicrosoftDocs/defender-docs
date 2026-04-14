@@ -11,7 +11,6 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Individuals
 ms.subservice: ngp
-search.appverid: met150
 ms.localizationpriority: medium
 ms.custom:
 - partner-contribution

@@ -2,12 +2,9 @@
 title: Manage incidents in Microsoft Defender
 description: Learn how to assign, update the status,
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - m365-security
   - usx-security
@@ -15,9 +12,6 @@ ms.collection:
   - sentinel-only
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 11/18/2024
 appliesto: 
 - Microsoft Defender XDR

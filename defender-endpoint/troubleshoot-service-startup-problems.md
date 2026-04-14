@@ -1,4 +1,4 @@
-﻿---
+---
 title: Troubleshoot Microsoft Defender Antivirus service startup problems
 description: Learn how to troubleshoot Microsoft Defender Antivirus service startup problems.
 author: chrisda
@@ -11,9 +11,6 @@ ms.subservice: ngp
 ms.localizationpriority: medium
 ms.collection: # Useful for querying on a set of strategic or high-priority content.
 ms.custom: partner-contribution
-search.appverid: MET150
-f1.keywords: NOCSH
-audience: ITPro
 appliesto:
   - Microsoft Defender for Business
   - Microsoft Defender for Individuals
@@ -90,17 +87,30 @@ To resolve the issue, do the following steps:
 
 3. If you're using Microsoft Defender Antivirus as your primary antivirus, make sure to uninstall non-Microsoft antivirus software.
 
-4. Remove the **Security Intelligence** and **engine**.
+4. Remove the **Security Intelligence** and **engine**:
+   1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
+      1. Open the **Start** menu, and then type **cmd**.
+      2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
 
-   Run the following command in an elevated Windows Command Prompt (a **Command Prompt** window you opened by selecting **Run as administrator**):
+   1. In the elevated Command Prompt, run the following commands.
 
-    ```dos
-    for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n') do if not defined _done "%ProgramData%\Microsoft\Windows Defender\Platform\%d\MpCmdRun.exe" -RemoveDefinitions -All
-    ```
+      > [!TIP]
+      > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Microsoft Defender`.
+
+      ```dos
+      (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
+
+      MpCmdRun.exe -RemoveDefinitions -All
+      ```
+
+   For more information, see [Manage the sources for Microsoft Defender Antivirus protection updates](manage-protection-updates-microsoft-defender-antivirus.md).
 
 5. Backup Microsoft Defender Antivirus policies.
+   1. Open an elevated PowerShell session (a PowerShell window you opened by selecting **Run as administrator**). For example:
+      1. Open the **Start** menu, and then type **powershell**.
+      2. Right-click on the **PowerShell 7 (x64)** or **Windows PowerShell** result, and then select **Run as administrator**.
 
-   Run the following command in an elevated PowerShell window:
+   1. In the elevated PowerShell session, run the following command:
 
     ```powershell
     New-Item -Path "C:\DefenderTemp" -ItemType Directory; Invoke-Command {reg export 'HKLM\SOFTWARE\Policies\Microsoft\Windows Defender' C:\DefenderTemp\_DefenderAVBackup.reg}
@@ -132,7 +142,7 @@ To resolve the issue, do the following steps:
 
 7. Delete any policies that are set for Microsoft Defender Antivirus.
 
-    Run the following command in an elevated PowerShell window:
+    Run the following command in an elevated PowerShell session:
 
     ```powershell
     Remove-Item -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender' -Force
@@ -142,11 +152,13 @@ To resolve the issue, do the following steps:
 
 8. Update Security Intelligence.
 
-   Run the following commands in an elevated Windows Command Prompt:
+   Run the following commands in an elevated Command Prompt:
 
-    ```dos
-    for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n') do if not defined _done "%ProgramData%\Microsoft\Windows Defender\Platform\%d\MpCmdRun.exe" -SignatureUpdate -MMPC
-    ```
+   ```dos
+   (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
+
+   MpCmdRun.exe -SignatureUpdate -MMPC
+   ```
 
 9. Verify **Tamper Protection** is enabled.
 
