@@ -68,7 +68,7 @@ You can add tags to devices using the following methods. Each method is suited f
 | **App configuration policy in Intune** | iOS, Android | Create an app configuration profile in Intune to define and apply tags for mobile devices. **For iOS**, see [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md). **For Android**, see [Configure Defender for Endpoint on Android features](android-configure.md). For more information, see [Tag mobile devices with Microsoft Defender for Endpoint](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-mobile-device-tagging-for-ios-and-android/ba-p/3897368). |
 
 > [!NOTE]
-> Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2. There might be some latency between the time a tag is added to a device and its availability in the devices list and device page.
+> Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
 To add device tags using API, see [Add or remove device tags API](api/add-or-remove-machine-tags.md).
 
