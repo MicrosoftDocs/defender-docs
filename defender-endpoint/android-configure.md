@@ -6,14 +6,12 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: denishdonga
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-android
 ms.topic: how-to
 ms.subservice: android
-search.appverid: met150
 ms.date: 12/17/2025
 appliesto:
    - Microsoft Defender for Endpoint Plan 1

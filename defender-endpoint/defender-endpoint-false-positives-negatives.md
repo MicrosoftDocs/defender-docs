@@ -1,4 +1,4 @@
-﻿---
+---
 title: Address false positives/negatives in Microsoft Defender for Endpoint
 description: Learn how to handle false positives or false negatives in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
@@ -7,7 +7,6 @@ ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
 ms.date: 10/20/2025
-audience: ITPro
 ms.collection:
 - m365-security
 - m365initiative-defender-endpoint
@@ -20,7 +19,6 @@ ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs, yonghree, jcedola
 ms.custom: 
 - FPFN
 - admindeeplinkDEFENDER
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

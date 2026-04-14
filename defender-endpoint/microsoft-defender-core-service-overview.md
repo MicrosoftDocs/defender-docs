@@ -8,9 +8,7 @@ ms.service: defender-endpoint
 ms.subservice: ngp
 ms.topic: overview
 ms.date: 01/08/2026
-search.appverid: met150
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2

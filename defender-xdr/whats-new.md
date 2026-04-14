@@ -1,14 +1,12 @@
 ---
 title: What's new in Microsoft Defender XDR
 description: Lists the new features and functionality in Microsoft Defender XDR
-search.appverid: met150
 ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 04/07/2026
 manager: orspodek
-audience: ITPro
 ms.collection:
 - M365-security-compliance
 - tier1

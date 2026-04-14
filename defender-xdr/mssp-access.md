@@ -3,15 +3,9 @@ title: Provide managed security service provider (MSSP) access
 description: Learn about changes from the Microsoft Defender Security Center to the Microsoft Defender portal.
 ms.service: defender-xdr
 ms.localizationpriority: medium
-f1.keywords:
-- NOCSH
 ms.author: guywild
 author: guywi-ms
-audience: ITPro
 ms.topic: how-to
-search.appverid: 
-- MOE150
-- MET150
 ms.collection: 
 - m365-security
 - tier2 

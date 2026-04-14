@@ -1,15 +1,11 @@
 ---
 title: MessageEvents table in the advanced hunting schema
 description: Learn about the MessageEvents table in the advanced hunting schema which contains details about messages sent and received within your organization at the time of delivery 
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3

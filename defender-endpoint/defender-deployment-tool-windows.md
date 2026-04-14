@@ -1,9 +1,8 @@
-﻿---
+---
 title: Deploy Microsoft Defender endpoint security to Windows devices using the Defender deployment tool (preview)
 description: Learn how to onboard and offboard Windows devices using the Defender deployment tool.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-audience: ITPro
 ms.topic: install-set-up-deploy
 author: paulinbar
 ms.author: painbar
@@ -13,7 +12,6 @@ ms.collection:
 - m365-security
 - tier3
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 02/12/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
