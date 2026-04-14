@@ -48,7 +48,7 @@ The following sections describe how Microsoft Defender applies these capabilitie
 
 AI agents introduce unique security risks because of their ability to reason, invoke tools, access data, and take autonomous actions across systems. Securing agents at scale requires centralized visibility, security posture and risk management, runtime protection, and advanced investigation capabilities to detect the root cause of the attack.
 
-[Microsoft Agent 365](/microsoft-agent-365/overview) provides an enterprise control plane for managing and governing AI agents across the organization.  Microsoft Defender seamlessly integrates with Agent 365 and provides AI agent security at two levels, as described in the table below:
+[Microsoft Agent 365](/microsoft-agent-365/overview) provides an enterprise control plane for managing and governing AI agents across the organization. When you enable your Agent 365 license, Microsoft Defender integrates with Agent 365 and provides AI agent security at two levels, as described in the table below:
 - **Agents onboarded to Microsoft Agent 365** - Microsoft Defender provides a core set of security capabilities, from discovery and risk-based prioritization to runtime and investigation capabilities.
 - **Extended capabilities for supported agents** - Microsoft Defender provides extended security capabilities for supported agents when you enable the relevant features. These extended capabilities are available for agents built with Microsoft Copilot Studio and the following pro‑developer platforms: Microsoft Foundry, AWS Bedrock, and GCP Vertex AI. Capability availability varies by platform and scenario, as detailed in the table below.
 
