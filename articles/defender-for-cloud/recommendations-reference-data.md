@@ -4,7 +4,7 @@ description: This article lists all Microsoft Defender for Cloud data security r
 author: Elazark
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 03/29/2026
+ms.date: 04/15/2026
 ms.author: elkrieger
 ms.custom: generated
 ai-usage: ai-assisted
@@ -622,6 +622,9 @@ Configure a private endpoint connection to enable access to traffic coming only 
 
 **Description**: Audit requirement of Microsoft Entra ID (Microsoft Entra ID) to authorize requests for your storage account. By default, requests can be authorized with either Microsoft Entra ID credentials, or by using the account access key for Shared Key authorization. Of these two types of authorization, Microsoft Entra ID provides superior security and ease of use over shared Key, and is recommended by Microsoft.
 (Related policy: [policy](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%8c6a50c6-9ffd-4ae7-986f-5fa6111f9a54))
+
+> [!NOTE]
+> Some Azure services still require Shared Key access to function. For example, Microsoft Configuration Manager (SCCM) Cloud Management Gateway (CMG) uses Shared Key-based authorization for its underlying storage accounts. Disabling Shared Key access on storage accounts used by CMG breaks CMG functionality. If you use CMG or other services that depend on Shared Key access, [exempt those storage accounts](exempt-resource.md) from this recommendation rather than applying the remediation. Keep the related Azure Policy in **Audit** mode instead of **Deny** for these accounts, and document the business justification for the exception.
 
 **Severity**: Medium
 
