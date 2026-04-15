@@ -21,13 +21,9 @@ ms.date: 12/31/2025
 
 # Enable attack surface reduction rules
 
-[Attack surface reduction rules](attack-surface-reduction-rules-overview.md) help prevent actions that malware often abuses to compromise devices and networks. This article describes how to enable and configure attack surface reduction rules via:
+[Attack surface reduction rules](attack-surface-reduction-rules-overview.md) help prevent actions that malware often abuses to compromise devices and networks. This article describes how to enable and configure attack surface reduction rules.
 
-- [Microsoft Intune](#intune)
-- [Mobile Device Management (MDM)](#mdm)
-- [Microsoft Configuration Manager](#microsoft-configuration-manager)
-- [Group policy (GP)](#group-policy)
-- [PowerShell](#powershell)
+To manage ASR rules, we always recommend enterprise-level management solutions like Microsoft Intune or Microsoft Configuration Manager. ASR rule settings from Intune or Configuration Manager overwrite any conflicting settings from group policy or PowerShell on startup.
 
 ## Prerequisites
 
@@ -65,13 +61,9 @@ You can set attack surface reduction rules for devices that are running any of t
 - Windows Server 2025
 - Azure Stack HCI OS, version 23H2 and later
 
-## Enabling attack surface reduction rules
-
-To manage ASR rules, we always recommend enterprise-level management solutions like Microsoft Intune or Microsoft Configuration Manager. ASR rule settings from Intune or Configuration Manager overwrite any conflicting settings fro settings from group policy or PowerShell on startup.
-
 <a name="exclude-files-and-folders-from-attack-surface-reduction-rules"></a>
 
-## Exclude files and folders from ASR rules
+## File and folder exclusions for ASR rules
 
 > [!IMPORTANT]
 > Excluding files or folders can severely reduce ASR rule protection. Excluded files are allowed to run, and no reports or events about the file are recorded. If ASR rules detect files that shouldn't be detected, [use Audit mode to test the rule](attack-surface-reduction-rules-deployment-test.md#step-1-test-attack-surface-reduction-rules-using-audit).
@@ -87,7 +79,6 @@ You can use the following methods to exclude files and folders from ASR rules:
   - PowerShell
 - **Per-ASR rule exclusions**: Assign different exclusions to different ASR rules. The following deployment methods support per-ASR rule exclusions:
   - Group policy
-  - PowerShell
 - **Indicators of compromise (IoCs)**: Most ASR rules honor IoCs for blocked files and blocked certificates. For more information about IoCs, see [Overview of indicators in Microsoft Defender for Endpoint](indicators-overview.md).
 
 The availability of the different types of exclusions for ASR rules is summarized in the following table:
@@ -97,7 +88,7 @@ The availability of the different types of exclusions for ASR rules is summarize
 |**Standard protection rules**||||||
 |Block abuse of exploited vulnerable signed drivers (Device)|Y|Y|Y|Y|Y|
 |Block credential stealing from the Windows local security authority subsystem|N|Y|Y|N|N|
-|Block persistence through WMI event subscription|N|N|N|N|N|
+|Block persistence through WMI event subscription|N|Y|Y|N|N|
 |**Other ASR rules**||||||
 |Block Adobe Reader from creating child processes|N|Y|Y|Y|Y|
 |Block all Office applications from creating child processes|Y|Y|Y|Y|Y|
@@ -128,13 +119,11 @@ When adding exclusions, keep these points in mind:
   >
   > For a list of system environment variables, see [System environment variables](configure-extension-file-exclusions-microsoft-defender-antivirus.md#system-environment-variables).
 
-- The following ASR rule deployment methods support per-ASR rule exclusions:
-
-- Exclusions apply only when the application or service starts. For example, if you add an exclusion for an update service that's already running, the update service continues to trigger ASR rule detections until you restart the service.
 - Wildcards can't define a drive letter.
 - To exclude more than one folder in a path, use multiple instances of `\*\` to indicate multiple nested folders. For example, `c:\Folder\*\*\Test`.
 - Microsoft Configuration Manager supports wildcards (`*` or `?`).
 - To exclude a file that contains random characters (for example, from automated file generation), use `?` symbol. For example, `C:\Folder\fileversion?.docx`.
+- Exclusions apply only when the application or service starts. For example, if you add an exclusion for an update service that's already running, the update service continues to trigger ASR rule detections until you restart the service.
 
 ## How policy conflicts are handled
 
@@ -188,7 +177,7 @@ To configure attack surface reduction rules using a Microsoft Intune Endpoint Se
     - You can also select **Import** to import a CSV file that contains files and folders to exclude from attack surface reduction rules. The CSV file uses the following format:
 
       ```text
-      "AttackSurfaceReductionOnlyExclusions"
+      AttackSurfaceReductionOnlyExclusions
       "C:\folder"
       "%ProgramFiles%\folder\file.exe"
       "C:\path"
@@ -196,7 +185,7 @@ To configure attack surface reduction rules using a Microsoft Intune Endpoint Se
       ```
 
       > [!TIP]
-      > Double quotation marks around the values are optional, and are ignored if you include them. Don't use single quotation marks around the values.
+      > Double quotation marks around the values are optional, and are ignored (aren't used in the value) if you include them. Don't use single quotation marks around the values.
 
     For more information about exclusions, see the [Exclude files and folders from attack surface reduction rules](#exclude-files-and-folders-from-attack-surface-reduction-rules) section earlier in this article.
 
@@ -284,6 +273,24 @@ ASR rules are active within minutes.
 
 ### Configure global ASR rule exclusions in Intune using custom profiles with OMA-URIs and CSPs
 
+The steps to configure global ASR rule exclusions in Intune using a custom profile are very similar to the steps in the previous section. The only difference is in Step 5 (the **Configuration settings** tab) where you enter the information for ASR rule exceptions:
+
+In the **Add row** flyout that opens, configure the following settings:
+
+- **Name**: Enter a unique name for the rule.
+  - **Description**: Enter an optional, brief description.
+  - **OMA-URI**: Enter the **Device** value from the [AttackSurfaceReductionOnlyExclusions](/windows/client-management/mdm/policy-csp-defender#attacksurfacereductiononlyexclusions) CSP: `./Device/Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReductionOnlyExclusions`
+    - **Data type**: Select **String**.
+    - **Value**: Use the syntax `<PathOrPathAndFilename1>=0|<PathOrPathAndFilename1>=0|...<PathOrPathAndFilenameN>=0`
+
+       For example, `75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84=2|3b576869-a4ec-4529-8536-b80a7769e899=1|d4f940ab-401b-4efc-aadc-ad5f3c50688a=2|d3e037e1-3eb8-44c8-a917-57927947596d=1|5beb7efe-fd9a-4556-801d-275e5ffc04cc=0|be9ba2d9-53ea-4cdc-84e5-9b1eeee46550=1`
+
+     When you're finished on the **Add row** flyout, select **Save**.
+
+Back on the **Configuration settings** tab, select **Next**.
+
+The rest of the steps are the same as configuring ASR rules.
+
 <a name="custom-profile-in-intune-alternative-2"></a>
 
 <a name="mdm"></a>
@@ -359,7 +366,7 @@ For more information about the Microsoft Configuration Manager console, see [How
 
 1. Open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console) on your Group Policy management computer.
 
-1. In the GPMC console tree, expand Group Policy Objects in the forest and domain containing the GPO that you want to edit.
+1. In the GPMC console tree, expand Group Policy Objects in the forest and domain containing the GPO you want to edit.
 
 1. Right-click on the GPO, and then select **Edit**.
 
