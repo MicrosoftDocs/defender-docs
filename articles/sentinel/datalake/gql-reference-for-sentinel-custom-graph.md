@@ -104,7 +104,7 @@ p=()-[:works_at]->()         -- Binding a path variable
 **Variable-length paths:**
 
 - `{2,4}`: Exactly 2 to 4 hops
-- `{1,}`: 1 or more hops (unbounded). Today, the system limits an unbounded path query to 8 hops
+- `{1,}`: 1 or more hops (unbounded). Unbounded path queries, are kimited to 8 hops.
 
 - `{,5}`: Up to 5 hops
 
