@@ -29,7 +29,7 @@ The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender
 
 API Security Posture Management within Defender CSPM is available in the Azure commercial cloud, in the following regions:
 
-- Asia (Southeast Asia, EastAsia)
+- Asia (Southeast Asia, East Asia)
 - Australia (Australia East, Australia Southeast, Australia Central, Australia Central 2)
 - Brazil (Brazil South, Brazil Southeast)
 - Canada (Canada Central, Canada East)
