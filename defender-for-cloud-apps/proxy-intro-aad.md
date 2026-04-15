@@ -102,8 +102,7 @@ Conditional Access App Control session controls are enforced only for supported 
 
 > [!IMPORTANT]  
 > The Microsoft Teams desktop application isn’t supported for Conditional Access App Control session controls.
-
-Session controls, such as *Block download (preview)*, don’t apply to the Microsoft Teams desktop application. 
+> Session controls, such as *Block download (preview)*, don’t apply to the Microsoft Teams desktop application. 
 
 ### Restricting access for unsupported clients
 
@@ -124,7 +123,7 @@ After configuring policies, verify behavior across supported and unsupported cli
 
 1. Sign in with a user that matches the policy scope.  
 2. Confirm that the expected restrictions are enforced in a supported browser session.  
-3. Verify behavior in the Microsoft Teams desktop application to confirm that access is restricted as intended.
+3. Verify behavior in the Microsoft Teams desktop application to confirm that access is restricted.
 
 ## App support for TLS 1.2+
 
