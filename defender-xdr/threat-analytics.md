@@ -252,6 +252,7 @@ When you review the threat analytics data, consider the following factors:
 - Antivirus-related statistics are based on Microsoft Defender Antivirus settings. 
 - The **Misconfigured devices** column in the main Threat analytics page shows the number of devices affected by a threat when the threat's related recommended actions aren't turned on. However, if Microsoft researchers don't link any recommended actions, the **Misconfigured devices** column shows the status *Not available*.  
 - The **Vulnerable devices** column in the main Threat analytics page shows the number of devices running software that are vulnerable to any of the vulnerabilities linked to the threat. However, if Microsoft researchers don't link any vulnerabilities, the **Vulnerable devices** column shows the status *Not available*.
+- Occasionally, you may observe that a **Threat Analytics Report is missing**, after receiving an email to it. Occasionally, these are under **Threat Intel** instead.
 
 ## See also
 
