@@ -1,5 +1,5 @@
 ---
-title: Protect AI assets from emerging threats and vulnerabilities using Microsoft Defender (Preview)
+title: Protect AI assets from emerging threats and vulnerabilities using Microsoft Defender
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: itaicohen
