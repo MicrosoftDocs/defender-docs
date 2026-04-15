@@ -1,5 +1,5 @@
 ---
-title: Protect AI assets from emerging threats and vulnerabilities using Microsoft Defender
+title: Protect AI assets from emerging threats and vulnerabilities using Microsoft Defender (Preview)
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: itaicohen
@@ -44,7 +44,7 @@ The following sections describe how Microsoft Defender applies these capabilitie
 - **AI applications and infrastructure**, including models, platforms, services, and integrations, where supply-chain risks, configuration, and deployment weaknesses can create broader attack paths.
 
 
-## Protect AI agents using Microsoft Defender
+## Protect AI agents using Microsoft Defender (Preview)
 
 AI agents introduce unique security risks because of their ability to reason, invoke tools, access data, and take autonomous actions across systems. Securing agents at scale requires centralized visibility, security posture and risk management, runtime protection, and advanced investigation capabilities to detect the root cause of the attack.
 
