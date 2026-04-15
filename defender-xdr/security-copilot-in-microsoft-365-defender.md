@@ -4,12 +4,6 @@ description: Learn about Microsoft Security Copilot capabilities embedded in Mic
 ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
-ms.localizationpriority: medium
-ms.collection: 
-- m365-security
-- tier1
-- security-copilot
-- magic-ai-copilot 
 ms.topic: article
 ms.update-cycle: 180-days
 ms.date: 01/08/2026
@@ -42,19 +36,25 @@ If you're new to Security Copilot, you should familiarize yourself with it by re
 
 ## Microsoft Security Copilot integration in Microsoft Defender
 
-[Microsoft Security Copilot](/security-copilot/microsoft-security-copilot) brings together the power of AI and human expertise to help security teams respond to attacks faster and more effectively. Security Copilot is embedded in the Microsoft Defender portal to help provide security teams with enhanced capabilities to investigate and respond to incidents, hunt for threats, and protect their organization with relevant threat intelligence. Copilot in Defender is available to users who have provisioned access to Security Copilot.
+[Microsoft Security Copilot](/security-copilot/microsoft-security-copilot) brings together the power of AI and human expertise to help security teams respond to attacks faster and more effectively. 
+You can access Copilot in 2 ways:
 
-Copilot in Defender operates using [Microsoft's AI principles](https://www.microsoft.com/ai/responsible-ai). For more information, see the [Responsible AI FAQs](responsible-ai-copilot-defender.md).
+- Security Copilot is embedded in the Microsoft Defender portal to help provide security teams with enhanced capabilities to investigate and respond to incidents, hunt for threats, and protect their organization with relevant threat intelligence.
+- Defender Chat experience (preview) is an open prompt chat assistant built into Microsoft Defender XDR. It helps SOC analysts investigate threats, explore incidents, and answer security questions in plain language, without needing to navigate multiple screens or write complex queries.
+
+Copilot in Defender and the Defender Chat experience operate using [Microsoft's AI principles](https://www.microsoft.com/ai/responsible-ai). For more information, see the [Responsible AI FAQs](responsible-ai-copilot-defender.md).
+
+### [Security Copilot](#tab/copilot-in-defender)
 
 ## Key features
 
 ### Investigate and respond to incidents like an expert
 
-Enable security teams to tackle attack investigations in a timely manner with ease and precision. Copilot helps teams to understand attacks immediately, quickly analyze suspicious files and scripts, and promptly assess and apply appropriate mitigation to stop and contain attacks.
+These AI tools enable security teams to tackle attack investigations in a timely manner with ease and precision. They can understand attacks immediately, quickly analyze suspicious files and scripts, and promptly assess and apply appropriate mitigation to stop and contain attacks.
 
 #### Summarize incidents quickly
 
-Investigating incidents with multiple alerts can be a daunting task. To immediately understand an incident, you can tap Copilot to [summarize an incident](security-copilot-m365d-incident-summary.md) for you. Copilot creates an overview of the attack. The overview contains essential information for you to understand what transpired in the attack, what assets are involved, and the timeline of the attack. Copilot automatically creates a summary when you navigate to an incident's page. It also helps you understand the assets involved and how to act by suggesting prompts about related identities, devices, IPs, and so on. 
+Investigating incidents with multiple alerts can be a daunting task. To immediately understand an incident, you can tap Copilot to [summarize an incident](security-copilot-m365d-incident-summary.md) for you. Copilot creates an overview of the attack. The overview contains essential information for you to understand what transpired in the attack, what assets are involved, and the timeline of the attack. Copilot automatically creates a summary when you navigate to an incident's page. It also helps you understand the assets involved and how to act by suggesting prompts about related identities, devices, IPs, and so on.
 
 :::image type="content" source="media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png" alt-text="Screenshot of the incident summary card on the Copilot pane as seen in the Microsoft Defender incident page." lightbox="media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png":::
 
@@ -137,20 +137,205 @@ You can extend your investigation in the Security Copilot standalone portal usin
 
 Prompting in Copilot helps you navigate and use the capabilities effectively. You can also use the prompt bar to generate KQL queries, summarize incidents, and analyze files. See tips to create effective prompts in [effective prompting](/copilot/security/prompting-tips). You can also use prebuilt promptbooks to help you get started with Copilot. To learn more about promptbooks, see [promptbooks in Copilot](/copilot/security/using-promptbooks).
 
+### [Defender Chat experience (preview)](#tab/defender-chat)
+
+## Get Started
+
+To open Defender Chat Agent, from anywhere in the Defender XDR portal, select the **Copilot** button in the top navigation bar of Microsoft Defender XDR. The chat panel slides open on the right side of the screen and stays in context while you continue working. A welcome screen appears with a greeting and an input field ready for your first question.
+
+:::image type="content" source="./media/security-copilot-in-microsoft-365-defender/open-chat.png" alt-text="Screenshot of the Defender Chat welcome screen and the Copilot icon selected in the top right corner.":::
+
+To close the panel, click **Close** in the header or click the Copilot button again. Your conversation is preserved and you can reopen the panel and pick up where you left off.
+
+### Supported Investigation Areas
+
+Defender Chat Agent supports questions across the following security domains:
+
+#### Incidents
+
+Ask about specific incidents or query your incident queue.
+
+| Example Prompt                                                           | What You Get                                                          |
+|--------------------------------------------------------------------------|-----------------------------------------------------------------------|
+| "Tell me about incident 12345"                                           | Full incident details - severity, status, assigned analyst, timeline  |
+| "Who are the users involved in this incident?"                           | List of identities associated with the incident                       |
+| "What are the MITRE techniques in this incident?"                        | MITRE ATT&CK techniques mapped to the incident's alerts               |
+| "Show me high-severity active incidents from the past week"              | Filtered incident queue results                                       |
+| "Which incidents involve critical assets?"                               | Incidents tagged with critical asset markers                          |
+| "Which day had the most incidents in the last 10 days?"                  | Incident trend analysis                                               |
+| "What are the most common attack techniques in current open incidents?"  | Cross-incident technique analysis                                     |
+
+#### Alerts
+
+Get details about specific alerts or alerts linked to an incident.
+
+| Example Prompt                                                           | What You Get                                                          |
+|--------------------------------------------------------------------------|-----------------------------------------------------------------------|
+| "What alerts are part of incident 789?"                                   | Alert list with IDs, titles, and severities                           |
+| "What is the severity and category of this alert?"                        | Alert classification details                                          |
+| "Which assets or endpoints are impacted by this alert?"                   | Impacted entities and assets                                          |
+| "What MITRE ATT&CK techniques are linked to this alert?"                  | MITRE mappings for the alert                                          |
+| "Has the user involved in this alert had any previous suspicious activity?" | Related user investigation history                                     |
+| "Generate a report summarizing this alert for escalation"                | Formatted alert summary                                               |
+
+#### Evidence
+
+Retrieve evidence items and impacted assets for incidents and alerts. 
+
+| Example Prompt                                                           | What You Get                                                          |
+|--------------------------------------------------------------------------|-----------------------------------------------------------------------|
+| "Show me the evidence for incident 456"                                   | Entities (IPs, files, processes), impacted assets (users, devices), and their verdicts |
+| "What evidence is associated with this alert?"                            | Alert-level evidence with entity details                              |
+
+#### Identities
+
+Research user accounts and identities that appear in your security data. 
+
+| Example Prompt                                                           | What You Get                                                          |
+|--------------------------------------------------------------------------|-----------------------------------------------------------------------|
+| "Give me details on user@contoso.com"                                    | User profile, risk scores, tags, associated devices, and activity    |
+| "When was the last authentication of this user?"                         | Most recent login information                                         |
+| "Which users are involved in the most incidents this month?"             | User-to-incident correlation                                         |
+| "Identify service accounts with interactive logons in the last 30 days"  | Service account activity (based on incident data)                    |
+
+#### Devices
+
+Look up device information and investigate device involvement in incidents. 
+
+| Example Prompt                                                           | What You Get                                                          |
+|--------------------------------------------------------------------------|-----------------------------------------------------------------------|
+| "What do you know about device XYZ?"                                     | Device details — OS, health state, risk level, exposure               |
+| "Which machines were involved in multiple incidents recently?"           | Multi-incident device correlation                                     |
+| "Are there other alerts linked to this device in the last 7 days?"       | Device-scoped alert history                                           |
+
+#### IP Addresses
+
+Check IP address intelligence and reputation. 
+
+| Example Prompt                                                           | What You Get                                                          |
+|--------------------------------------------------------------------------|-----------------------------------------------------------------------|
+| "Is the IP 203.0.113.42 suspicious?"                                     | Geolocation, organization prevalence, threat reputation, and associated devices |
+| "Analyze IP 10.0.0.15"                                                   | Full IP intelligence including observed device connections           |
+
+### Page Context Awareness
+
+Defender Chat Agent is aware of the page you're currently viewing in the Defender portal and can answer questions based on that context.
+
+If you ask a question such as "Which users are involved in *this* incident?",  the Chat Agent understands which incident, alert, device, or entity you're referring to based on your current page without having to need to provide IDs or names.
+
+How It Works 
+
+Conversational AI 
+
+Defender Chat Agent uses large language models to understand your questions and generate responses. It's designed specifically for security operations — it understands SOC terminology, threat concepts, and the structure of incidents, alerts, and entities in Defender XDR. 
+
+Automatic Data Retrieval 
+
+When you ask a question, the Chat Agent automatically queries the relevant data from Defender XDR on your behalf — such as incident details, alert lists, device information, or IP intelligence — and incorporates that data into its response. You don't need to look anything up manually. 
+
+Multi-Turn Conversations 
+
+You can ask follow-up questions naturally — the Chat Agent remembers the full context of your conversation. For example, you can start with "Show me high-severity incidents from the past week," then follow up with "Tell me more about the first one," and the Chat Agent understands what you mean. 
+
+Step-by-Step Plans 
+
+For complex or multi-step requests, the Chat Agent may first present a proposed plan outlining the steps it intends to take. You can Approve or Reject the plan before any actions are taken. This keeps you in control, especially for investigations that require multiple data lookups. 
+
+Example: If you ask "Investigate incident 12345 and summarize the key findings," the Chat Agent might propose a plan like: 
+
+Retrieve incident details 
+
+Fetch associated alerts 
+
+Collect evidence and impacted entities 
+
+Summarize findings 
+
+Once approved, the Chat Agent executes each step and shows its progress in real time — you can see which step is in progress and which have completed. 
+
+Clarifying Questions 
+
+If your request is ambiguous, the Chat Agent may ask a clarifying question and offer quick-select options (up to 4 suggestions) to help you get to the right answer faster. Simply click an option or type your own response. 
+
+Unsupported Questions 
+
+Defender Chat Agent is designed specifically for security investigation within Defender XDR. If you ask a question outside this scope (for example, general knowledge or non-security topics), the Chat Agent will politely let you know and offer to help with a security-related question instead. 
+
+ 
+
+Conversation History 
+
+Your conversations are saved automatically. Use the Conversations panel on the left side of the chat to: 
+
+Resume a previous conversation — click any past conversation to pick up where you left off 
+
+Start a new session — click New Session in the header to begin a fresh conversation 
+
+Delete a conversation — hover over a conversation and click Delete 
+
+Clear all conversations — use Clear all to remove your full history 
+
+Note: Conversations are stored locally in your browser. They are not synced across devices or shared with other users. 
+
+ 
+
+Working with Responses 
+
+Responses are formatted with structured tables, bullet points, and section headers for readability. You can: 
+
+Copy a response — click the copy icon on any message to copy it to your clipboard 
+
+Export tables — tables in responses can be exported to Excel for further analysis 
+
+Stop generation — if a response is taking too long or heading in the wrong direction, click Stop to interrupt it 
+
+Retry — if something goes wrong, you can retry a response with one click 
+
+### Important Notes
+
+- AI accuracy: Defender Chat Agent is an AI assistant. Responses may occasionally be incomplete or incorrect. Always validate critical findings before taking action.
+- Security focused: The Chat Agent only responds to security investigation questions related to Defender XDR. Off-topic questions are politely declined.
+- Data scope: The Chat Agent only accesses data within your organization's Defender XDR environment. It doesn't access external threat databases or data outside your tenant.
+- Rate limits: During periods of high demand, the Chat Agent may temporarily be unavailable. If this happens, wait a moment and try again.
+
+### Limitations
+
+The following capabilities are not available in the current public preview:
+
+- Response actions: the Chat Agent can't take actions (e.g., isolate a device, close an incident) on your behalf
+- Organization knowledge: custom SOPs or organizational documents are not integrated
+- Promptbook / saved prompts: saving favorite prompts or creating prompt libraries
+- Device timeline queries: detailed device timeline exploration (for example, *show all PowerShell executions on this device*)
+- Identity inventory queries: broad identity inventory questions beyond what's available in incident data
+- Threat intelligence lookups: hash, domain, or file-based TI queries
+- Natural language to KQL: converting questions to Advanced Hunting queries
+
+### Frequently Asked Questions
+
+#### What languages does Defender Chat Agent support?
+
+Defender Chat Agent is available in English, German, Spanish, French, Italian, Japanese, Korean, Portuguese (Brazil), Russian, Simplified Chinese, and Traditional Chinese.
+
+---
+
 ## Provide feedback
 
-All Copilot in Defender capabilities have an option for providing feedback. To provide feedback, perform the following steps:
+All Copilot in Defender capabilities have an option for providing feedback. Reviewing and [providing feedback](/security-copilot/rai-faqs-security-copilot#what-are-the-limitations-of-security-copilot-how-can-users-minimize-the-impact-of-security-copilots-limitations-when-using-the-system) about the results helps improve future responses. To provide feedback, perform the following steps:
+
+In Copilot:
 
 1. Select the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards.](media/copilot-in-defender/copilot-defender-feedback.png) located at the bottom of any results card in the Copilot side panel.
 2. Select **Looks right** if you deem the results accurate. You can provide more information in the next dialog box.
 3. Select **Needs improvement** if you assessed the result as lacking or incomplete. You can provide more information about your assessment in the next dialog box and submit this assessment to Microsoft.
 4. You can also report the results if it contains questionable or ambiguous information by selecting **Inappropriate**. Provide more information about the results in the next dialog box and select Submit.
 
+In Defender Chat experience:
+
+Use the 👍 / 👎 buttons on any response. During Private Preview, your feedback is especially important and directly influences future improvements.
+
 ## Privacy and data security
 
 Copilot continuously evolves using [data](/security-copilot/privacy-data-security#customer-data-and-system-generated-logs) that is [stored](/security-copilot/privacy-data-security#customer-data-storage-location), [processed](/security-copilot/privacy-data-security#location-for-prompt-evaluation), and [shared](/security-copilot/privacy-data-security#customer-data-sharing-preferences) depending on the settings defined by your administrator. Microsoft ensures that your data is always protected and secure when using Copilot. To learn more about data security and privacy in Copilot, see [Privacy and data security in Copilot](/security-copilot/privacy-data-security).
-
-Because of its continuing evolution, Copilot might miss some things. Reviewing and [providing feedback](/security-copilot/rai-faqs-security-copilot#what-are-the-limitations-of-security-copilot-how-can-users-minimize-the-impact-of-security-copilots-limitations-when-using-the-system) about the results helps improve Copilot's future responses.
 
 <a name='microsoft-365-defender-plugin-in-security-copilot'></a>
 
