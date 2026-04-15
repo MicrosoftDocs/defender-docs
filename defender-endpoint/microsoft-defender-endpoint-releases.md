@@ -763,14 +763,14 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 
 #### Enhancements and features
 
-- Fixed a bug where AMSI scan calls weren't passing exclusions in the scan configuration, causing unnecessary scans on excluded content.
-- Fixed deadlocks in the platform that occur during RPC calls.
-- Fixed a bug where MPAM packages downloaded for direct update from MMPC aren't cleaned up when the update fails, leading to unnecessary disk usage over time.
+- Fixed a bug where Antimalware Scan Interface (AMSI) scan calls weren't passing exclusions in the scan configuration, causing unnecessary scans on excluded content.
+- Fixed deadlocks in the platform that occur during remote procedure calls (RPC).
+- Fixed a bug where Microsoft Protection Antimalware (MPAM) packages downloaded for direct update from Microsoft Malware Protection Center (MMPC) aren't cleaned up when the update fails, leading to unnecessary disk usage over time.
 - Improved quick scan error handling logic to avoid scan interruptions due to corrupted user registry hive.
-- Fixed Tamper Protection Exclusions not activating after transitioning existing devices from co-management to full Intune management.
-- Fixed NisSrv ESP reputation mode checks to avoid blocks during service shutdown (impacting RDP sessions).
+- Fixed tamper protection exclusions not activating after transitioning existing devices from co-management to full Intune management.
+- Fixed Network Inspection Service (NisSrv) ESP reputation mode checks to avoid blocks during service shutdown, which impact Remote Desktop Protocol (RDP) sessions.
 - Fixed the Defender Core Service display name in the Windows Services console.
-- Fixed NisSrv self healing when the service crosses memory thresholds.
+- Fixed NisSrv self-healing when the service crosses memory thresholds.
 - Improved encrypted PDF scanning.
 - Fixed `Get-MpPerformanceReport` JSON parsing failures.
 
