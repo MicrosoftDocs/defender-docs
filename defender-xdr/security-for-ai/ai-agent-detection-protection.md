@@ -79,8 +79,8 @@ When you enable the relevant features, agents built with Microsoft Copilot Studi
 
 To enable these extended capabilities:
 
-- For **Microsoft Copilot Studio agents**, see [Copilot Studio integration in Microsoft Defender for Cloud Apps](/defender-cloud-apps/ai-agent-inventory).  
 - For **Microsoft Foundry agents**, see [Enable threat protection for Microsoft Foundry AI workloads](/azure/defender-for-cloud/ai-onboarding).
+- For **Microsoft Copilot Studio agents**, see [Copilot Studio integration in Microsoft Defender for Cloud Apps](/defender-cloud-apps/ai-agent-inventory).  
 
 ## Investigate AI agent threats and hunt for risks using Advanced Hunting
 
