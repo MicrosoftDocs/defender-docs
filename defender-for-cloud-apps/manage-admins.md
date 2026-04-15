@@ -21,6 +21,9 @@ Microsoft Defender for Cloud Apps supports role-based access control. This artic
 > - Defender for Cloud Apps uses Microsoft Entra ID to determine the user's [directory level inactivity timeout setting](/azure/azure-portal/set-preferences#change-the-directory-timeout-setting-admin). If a user is configured in Microsoft Entra ID to never sign out when inactive, the same setting applies in Defender for Cloud Apps as well.
 > - Defender for Cloud Apps Information Protection enablement requires an Microsoft Entra Admin ID, such as: Application Administrator or Cloud Application Administrator. For more details, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference) and [Protect your Microsoft 365 environment](/defender-cloud-apps/protect-office-365)
 
+> [!NOTE]
+> Identity correlations defined in the [Unified Identity Inventory](/defender-for-identity/identity-inventory) don't affect Defender for Cloud Apps RBAC scoping. Defender for Cloud Apps uses a different scoping mechanism that isn't currently in parity with the Unified Identity Inventory.
+
 By default, the following Microsoft 365 and [Microsoft Entra ID](/azure/active-directory/roles/permissions-reference) admin roles have access to Defender for Cloud Apps:
 
 |Role name|Description|

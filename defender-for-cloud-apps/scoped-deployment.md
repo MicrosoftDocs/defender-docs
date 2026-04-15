@@ -12,6 +12,9 @@ Microsoft Defender for Cloud Apps enables you to scope your deployment. Scoping 
 > [!NOTE]
 > Scoped deployment **doesn't** reduce the number of files, OAuth applications, or user accounts that are scanned. It only reduces the number of **user activities** based on the selected user group.
 
+> [!NOTE]
+> Scoped deployment isn't integrated with the [Unified Identity Inventory](/defender-for-identity/identity-inventory). Identity correlations defined in the Unified Identity Inventory, including manual and policy-based correlations, don't affect scoped deployment. Scoped deployment continues to use the Cloud Application Accounts inventory.
+
 ## Include or exclude user groups
 
 You might not want to use Microsoft Defender for Cloud Apps for all the users in your organization. Scoping is especially useful when you want to limit your deployment because of license restrictions. You might also need to limit because of compliance regulations requiring you not monitor users from certain countries/regions. For example, use scoped deployment to only monitor US-based employees. Alternatively, you can avoid showing any activities for your users based in Germany.

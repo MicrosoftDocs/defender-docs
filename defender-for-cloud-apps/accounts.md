@@ -15,6 +15,9 @@ When Defender for Cloud Apps detects a new account in a connected app, for examp
 
 You can view the **Cloud application accounts** inventory from the tile at the top of the [Identity Inventory page](/defender-for-identity/identity-inventory).
 
+> [!TIP]
+> If the [Unified Identity Inventory integration](/defender-cloud-apps/general-setup#enable-unified-identity-inventory-integration) is enabled, cloud application accounts also appear in the **Human identities** tab on the Identity inventory page, providing a centralized view of all identities across your environment.
+
 ## Cloud application accounts page
 
 The **Cloud application accounts** page shows details about accounts from connected cloud applications, including activity history and security alerts.

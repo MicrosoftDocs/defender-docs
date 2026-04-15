@@ -12,6 +12,9 @@ Policies allow you to define the way you want your users to behave in the cloud.
 
 For example, if there's a data violation threat that you want to quarantine, you need a different type of policy in place than if you want to block a risky cloud app from being used by your organization.
 
+> [!NOTE]
+> Defender for Cloud Apps policies and built-in detections operate at the user level based on the Cloud Application Accounts inventory. Identity correlations defined in the [Unified Identity Inventory](/defender-for-identity/identity-inventory), including manual and policy-based correlations, don't currently affect Defender for Cloud Apps policies or detections.
+
 ## Policy types
 
 When you look at the **Policy management** page, the various policies and templates can be distinguished by type and icon to see which policies are available. The policies can be viewed together on the **All policies** tab, or in their respective category tabs. The available policies depend on the data source and what you have enabled in Defender for Cloud Apps for your organization. For example, if you uploaded cloud discovery logs, the policies relating to cloud discovery are displayed.

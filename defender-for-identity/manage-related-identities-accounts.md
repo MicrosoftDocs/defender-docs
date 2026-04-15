@@ -1,7 +1,7 @@
 ---
-title: Link/Unlink an account to an identity
+title: Manually link an account to an identity
 description: This article explains how to link or unlink accounts to and from identities in Microsoft Defender for Identity, including legacy, orphaned, or unused accounts.
-ms.date: 01/28/2026
+ms.date: 04/15/2026
 ms.topic: how-to
 ms.service: microsoft-defender-for-identity
 ms.reviewer: Almog Omrad
@@ -35,6 +35,9 @@ For example:
 - **Accounts in multiple services**: A user might have a Microsoft Entra ID account, an Okta account, and a Ping account. Manually linking these accounts to the user's identity creates a consolidated view that supports identity-centric protection and investigation.
 
 Use the procedures in this article to manually link accounts to identities, and to manually unlink unused, legacy, or orphaned accounts from identities in Defender for Identity.
+
+> [!NOTE]
+> Manual and policy-based identity correlations defined in the Unified Identity Inventory don't currently affect Defender for Cloud Apps features such as built-in detections, UEBA, scoped deployment, governance actions, and Defender for Cloud Apps policies. These features continue to use the Cloud Application Accounts inventory.
 
 ## Prerequisites
 

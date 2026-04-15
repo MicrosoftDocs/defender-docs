@@ -20,6 +20,9 @@ The action types for events and activities are determined by the source service,
 For a full list of Microsoft 365 activities monitored by Defender for Cloud Apps, see [Search the audit log in the Microsoft Purview portal](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance#audited-activities).
 
 
+> [!NOTE]
+> The Defender for Cloud Apps activity log uses a separate data pipeline from the [Unified Identity Inventory](/defender-for-identity/identity-inventory). Identity correlations defined in the Unified Identity Inventory, including manual and policy-based correlations, don't affect the user details shown in the activity log.
+
 The **Activity log** can be filtered to enable you to find specific activities. You create policies based on the activities and then define what you want to be alerted about and act on. You can search for activities performed on certain files. The type of activities and the information we get for each activity depends on the app and what kind of data the app can provide.
 
 For example, you can use the **Activity log** to find users in your organization who are using operating systems or browsers that are out of date, as follows:
