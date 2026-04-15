@@ -1,5 +1,5 @@
 ---
-title: Discover AI agents and assess security posture using Microsoft Defender
+title: Discover AI agents and assess security posture using Microsoft Defender (Preview)
 description: Learn how to discover AI agents in your organization, assess their security posture, and manage risks using Microsoft Defender's AI agent inventory and Advanced Hunting capabilities.
 ms.service: defender-xdr
 ms.author: abbyweisberg
