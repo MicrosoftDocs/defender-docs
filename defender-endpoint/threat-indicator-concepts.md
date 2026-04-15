@@ -1,17 +1,15 @@
-﻿---
+---
 title: Understand threat intelligence concepts in Microsoft Defender for Endpoint
 description: Create custom threat alerts for your organization and learn the concepts around threat intelligence in Microsoft Defender for Endpoint
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - mde-edr
 ms.topic: concept-article
 ms.subservice: edr
-search.appverid: met150
 ms.date: 09/21/2024
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Deploy Microsoft Defender for Endpoint on iOS with Microsoft Intune
 ms.reviewer:
 description: Describes how to deploy Microsoft Defender for Endpoint on iOS using an app.
@@ -6,14 +6,12 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-ios
 ms.topic: install-set-up-deploy
 ms.subservice: ios
-search.appverid: met150
 ms.date: 03/28/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

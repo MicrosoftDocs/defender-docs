@@ -2,12 +2,8 @@
 title: The Teams Message Entity Panel in Microsoft Defender for Office 365
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: how-to
 ms.localizationpriority: high
-search.appverid:
-  - MET150
-  - MOE150
 ms.assetid: e100fe7c-f2a1-4b7d-9e08-622330b83653
 ms.collection:
   - m365-security

@@ -5,7 +5,6 @@ description: A prescriptive playbook for SecOps personnel to manage Microsoft De
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 03/26/2025
-audience: ITPro
 ms.topic: concept-article
 author: limwainstein
 ms.author: lwainstein
@@ -17,7 +16,6 @@ ms.subservice: ngp
 ms.collection:
 - m365-security
 - tier2
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

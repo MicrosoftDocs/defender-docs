@@ -2,21 +2,15 @@
 title: Investigate alerts in Microsoft Defender XDR
 description: Investigate alerts seen across devices, users, and mailboxes.
 ms.service: defender-xdr
-f1.keywords:
-- NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - m365initiative-m365-defender
 - tier1
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
-search.appverid:
-- MOE150
-- met150
 ms.date: 01/23/2026
 appliesto: 
 - Microsoft Defender XDR

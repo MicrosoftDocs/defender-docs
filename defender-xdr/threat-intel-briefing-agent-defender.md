@@ -2,20 +2,15 @@
 title: Security Copilot Threat Intelligence Briefing Agent in Microsoft Defender 
 description: Learn about the Security Copilot Threat Intelligence Briefing Agent, including requirements for setup and providing feedback to the agent
 ms.service: defender-xdr
-f1.keywords:
-- NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 - security-copilot
 - msec-ai-copilot
 ms.topic: how-to
-search.appverid:
-- MET150
 ms.date: 02/15/2026
 appliesto:
 - Microsoft Defender XDR
