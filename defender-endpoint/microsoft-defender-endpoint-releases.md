@@ -31,6 +31,7 @@ This table includes supported releases for all supported platforms in the past s
 |macOS |101.26022.0020  |April 2026 |- Release version: 20.126022.20.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--april-2026--101260220020) |
 |macOS |101.26022.0018  |April 2026 |- Release version: 20.126022.18.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--april-2026--101260220018) |
 |Android |1.0.8805.0103  |April 2026 |- Build: 1.0.8805.0103<br>- Released: April 7, 2025 |[Release details and updates](#android--april-2026--platform-1088050103) |
+|Windows Antivirus |Platform 4.18.26030.3011 / Engine 1.1.26030.3008 |March 2026 |- Platform: 4.18.26030.3011<br>- Engine: 1.1.26030.3008<br>- Security intelligence: 1.449.16.0 |[Release details and updates](#windows-antivirus--march-2026--platform-418260303011--engine-11260303008) |
 |Linux  |101.26021.0002  |March 2026 |- Release version: 30.126021.0002.0<br>- Engine version: 1.1.26010.1003<br>- Signature version: 1.445.553.0 |[Release details and updates](#linux--march-2026--101260210002) |
 |macOS |101.26012.0017  |March 2026 |- Release version: 20.126012.17.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--march-2026--101260120017) |
 |macOS |101.26012.0015  |March 2026 |- Release version: 20.126012.15.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--march-2026--101260120015) |
@@ -745,6 +746,33 @@ For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 ## Microsoft Defender Antivirus releases
 
 For more information about Microsoft Defender Antivirus updates, see [Microsoft Defender Antivirus security intelligence product updates and support](microsoft-defender-antivirus-updates.md).
+
+### Windows Antivirus | March 2026 | Platform 4.18.26030.3011 | Engine 1.1.26030.3008
+
+#### Release details
+
+| Component | Version | Date |
+| -------- | -------- | -------- |
+| Platform | 4.18.26030.3011 | April 14, 2026 |
+| Engine | 1.1.26030.3008 | April 8, 2026 |
+| Security intelligence<sup>1</sup> | 1.449.16.0 | April 14, 2026 |
+| Support phase | Security and Critical Updates | - |
+
+<sup>1</sup>The security intelligence version listed here is relevant to the listed engine release. Newer versions of security intelligence are released regularly. For more information, see
+[Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/wdsi/defenderupdates).
+
+#### Enhancements and features
+
+- Fixed a bug where Antimalware Scan Interface (AMSI) scan calls weren't passing exclusions in the scan configuration, causing unnecessary scans on excluded content.
+- Fixed deadlocks in the platform that occur during remote procedure calls (RPC).
+- Fixed a bug where Microsoft Protection Antimalware (MPAM) packages downloaded for direct update from Microsoft Malware Protection Center (MMPC) aren't cleaned up when the update fails, leading to unnecessary disk usage over time.
+- Improved quick scan error handling logic to avoid scan interruptions due to corrupted user registry hive.
+- Fixed tamper protection exclusions not activating after transitioning existing devices from co-management to full Intune management.
+- Fixed Network Inspection Service (NisSrv) ESP reputation mode checks to avoid blocks during service shutdown, which impact Remote Desktop Protocol (RDP) sessions.
+- Fixed the Defender Core Service display name in the Windows Services console.
+- Fixed NisSrv self-healing when the service crosses memory thresholds.
+- Improved encrypted PDF scanning.
+- Fixed `Get-MpPerformanceReport` JSON parsing failures.
 
 ### Windows Antivirus | February 2026 | Platform 4.18.26020.6 | Engine 1.1.26020.3
 
