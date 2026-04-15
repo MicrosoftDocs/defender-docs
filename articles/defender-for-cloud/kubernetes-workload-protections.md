@@ -151,11 +151,11 @@ For recommendations with parameters that need to be customized, you need to set 
 
 1. Select the relevant policy assignment's 3-dot menu and select **Manage effect and parameters**.
    
-   :::image type="content" source="media/kubernetes-workload-protections/select-manage-effect-and-parameters.png" alt-text="Screenshot of selecting the 3-dot menu and then selecting Manage effect and aparameters." lightbox="media/kubernetes-workload-protections/select-manage-effect-and-parameters.png":::
+   :::image type="content" source="media/kubernetes-workload-protections/select-manage-effect-and-parameters.png" alt-text="Screenshot of selecting the 3-dot menu and then selecting Manage effect and parameters." lightbox="media/kubernetes-workload-protections/select-manage-effect-and-parameters.png":::
 
 1. Modify the values as required.
    
-   :::image type="content" source="media/kubernetes-workload-protections/manage-effect-and-parameters.png" alt-text="Screenshot of the paraments panel." lightbox="media/kubernetes-workload-protections/manage-effect-and-parameters.png":::
+   :::image type="content" source="media/kubernetes-workload-protections/manage-effect-and-parameters.png" alt-text="Screenshot of the parameters panel." lightbox="media/kubernetes-workload-protections/manage-effect-and-parameters.png":::
 
 1. Select **Save**.
 
