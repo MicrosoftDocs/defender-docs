@@ -54,8 +54,8 @@ Use [this link](prerequisites.md#required-ports) to configure the minimum intern
 1. Configure a Directory Service account
 1. Download the new sensor agent package and copy the workspace key
 1. Make sure sensors have access to *.atp.gcc.azure.com (directly or through proxy)
-1. Uninstall existing sensor agents from the domain controllers, AD FS servers, and AD CS servers
-1. [Reinstall sensors with the new workspace key](install-sensor.md)
+1. Uninstall existing sensor agents from the domain controllers, AD FS servers, AD CS servers and Entra Connect servers.
+1. [Reinstall sensors with the new workspace](deploy-defender-identity.md)
 1. Migrate any settings after the initial sync (use the https://transition.security.microsoft.com portal in a separate browser session to compare)
 1. Eventually, delete the previous workspace (historical data will be lost)
 
