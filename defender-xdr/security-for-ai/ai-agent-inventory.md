@@ -1,5 +1,5 @@
 ---
-title: Discover AI agents and assess security posture using Microsoft Defender
+title: Discover AI agents and assess security posture using Microsoft Defender (Preview)
 description: Learn how to discover AI agents in your organization, assess their security posture, and manage risks using Microsoft Defender's AI agent inventory and Advanced Hunting capabilities.
 ms.service: defender-xdr
 ms.author: abbyweisberg
@@ -26,12 +26,11 @@ This article explains how to discover AI agents, assess their security posture, 
 
 The [AIAgentsInfo table](/defender-xdr/advanced-hunting-aiagentsinfo-table) in Advanced Hunting provides a complete inventory of your Agent 365 agents along with their security-relevant properties. This table enables you to:
 
-- Discover all AI agents registered in your Agent 365 environment.
-- Assess security posture by querying authentication, access control, tools, knowledge sources, and orchestration settings.
-- Hunt for risks such as unauthenticated agents, overprivileged configurations, data exposure, and misconfigurations.
+- **Discover AI agents** registered in your Agent 365 environment.
+- **Assess security posture and risks** by querying authentication, access control, tools, knowledge sources, and orchestration settings.
 
 > [!NOTE]
-> The `AIAgentsInfo` table provides an extended set of properties for Copilot Studio agents, which aren't currently available for other AI agents.
+> The `AIAgentsInfo` table provides an extended set of properties for Copilot Studio agents.
 
 To view all of your Agent 365-managed agents and their configuration details:
 
