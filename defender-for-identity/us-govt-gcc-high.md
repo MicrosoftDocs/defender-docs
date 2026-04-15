@@ -32,7 +32,7 @@ To access Microsoft Defender for Identity for US Government offerings, use the a
 |------------------------|-------------------------------|---------------------------------------------------|
 |DoD                     | `security.microsoft.us`       | `<your-workspace-name>sensorapi.atp.azure.us`      |
 |GCC-H                   | `security.microsoft.us`       | `<your-workspace-name>sensorapi.atp.azure.us`      |
-|GCC                     | `security.microsoft.com`      | `<your-workspace-name>sensorapi.gcc.atp.azure.com` |
+|GCC                     | `security.microsoft.com`      | `<your-workspace-name>sensorapi.atp.gcc.azure.com` |
 
 You can also use the IP address ranges in our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to Defender for Identity. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview) or download [the Azure IP Ranges and Service Tags – US Government Cloud file](https://www.microsoft.com/download/details.aspx?id=57063).
 
