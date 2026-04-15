@@ -34,7 +34,7 @@ You can also get product updates and important notifications through the [messag
 
 - (Preview) Microsoft Defender now integrates with Microsoft Agent 365 to provide comprehensive security for AI agents onboarded to A365. Microsoft Defender discovers agents registered with Agent 365 and provides visibility into agent inventory and configuration. Agents that integrate the [Microsoft Agent 365 SDK](/microsoft-agent-365/developer/) enable discovery, threat detection and investigation through near‑real‑time detections, alerts, and Advanced Hunting. Agents onboarded through the [Microsoft Agent 365’s Agent Tooling Gateway (ATG)](/microsoft-agent-365/tooling-servers-overview) benefit from by real-time protection, which evaluates and can block unsafe agent-initiated tool actions before execution.
 
-    For more information, see [Protect AI agents using Microsoft Defender](../defender-xdr/security-for-ai/defender-security-for-ai.md#protect-ai-agents-using-microsoft-defender).
+    For more information, see [Protect AI agents using Microsoft Defender](../defender-xdr/security-for-ai/defender-security-for-ai.md#protect-ai-agents-using-microsoft-defender-preview).
 
 - Microsoft Defender Experts for XDR customers can now see **Defender Experts** as a distinct entry in the Microsoft Defender portal navigation menu. This feature adds to the existing home page status card as in-portal experiences that provide consistent and predictable access to the service. [Learn more](start-using-mdex-xdr.md) 
 
