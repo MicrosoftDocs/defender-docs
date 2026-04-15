@@ -277,4 +277,4 @@ In this document, you learned how to connect AWS EKS audit logs to Microsoft Sen
 - Learn how to [get visibility into your data, and potential threats](get-visibility.md).
 - Get started [detecting threats with Microsoft Sentinel](detect-threats-built-in.md).
 - [Use workbooks](monitor-your-data.md) to monitor your data.
-- Learn about [Microsoft Sentinel solutions for container security](https://docs.microsoft.com/azure/sentinel/sentinel-solutions-catalog#containers).
+- Learn about [Microsoft Sentinel solutions for container security](sentinel-solutions-catalog.md).
