@@ -1,10 +1,10 @@
 ---
 title: Connect Microsoft Sentinel to Amazon Web Services to ingest AWS EKS logs
 description: Use the Amazon Web Services (AWS) S3-based Elastic Kubernetes Service (EKS) connector to ingest AWS EKS audit logs, collected in AWS S3 buckets, to Microsoft Sentinel.
-author: batamig
-ms.author: bagol
+author: EdB-MSFT
+ms.author: edbaynash
 ms.topic: how-to
-ms.date: 03/27/2026
+ms.date: 04/15/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
@@ -39,7 +39,7 @@ This article explains how to configure the Amazon Web Services S3 EKS connector.
 
 - You must have write permission on the Microsoft Sentinel workspace.
 
-- Install the Amazon Web Services solution from the **Content Hub** in Microsoft Sentinel. If you have an earlier version of the solution already installed, update the solution in the content hub to ensure you have the latest version that includes this connector. For more information, see [Discover and manage Microsoft Sentinel out-of-the-box content](sentinel-solutions-deploy.md).
+- Install the Amazon Web Services solution from the **Content Hub** in Microsoft Sentinel. If you already installed an earlier version of the solution, update the solution in the content hub to ensure you have the latest version that includes this connector. For more information, see [Discover and manage Microsoft Sentinel out-of-the-box content](sentinel-solutions-deploy.md).
 
 - You must have an existing AWS EKS cluster with audit logging enabled, or the ability to enable audit logging on your EKS cluster during the setup process.
 
@@ -54,11 +54,11 @@ This article explains how to configure the Amazon Web Services S3 EKS connector.
 
 ## Enable and configure the Amazon Web Services S3 EKS connector
 
-The process of enabling and configuring the connector consists of the following tasks: 
+To enable and configure the connector, complete the following tasks: 
 
 - **In your AWS environment:**
 
-    The **Amazon Web Services S3 EKS** connector page in Microsoft Sentinel contains downloadable AWS CloudFormation stack templates that automate the following AWS tasks:
+    The **Amazon Web Services S3 EKS** connector page in Microsoft Sentinel provides downloadable AWS CloudFormation stack templates that automate the following AWS tasks:
 
     - Configure your AWS EKS cluster to send audit logs to **CloudWatch Logs**.
 
@@ -82,14 +82,14 @@ The process of enabling and configuring the connector consists of the following 
 
 ## Set up the AWS environment
 
-To simplify the onboarding process, the **Amazon Web Services S3 EKS** connector page in Microsoft Sentinel contains downloadable templates for you to use with the AWS CloudFormation service. The CloudFormation service uses these templates to automatically create resource stacks in AWS. These stacks include the resources themselves as described in this article, and credentials, permissions, and policies.
+To simplify the onboarding process, the **Amazon Web Services S3 EKS** connector page in Microsoft Sentinel provides downloadable templates for use with the AWS CloudFormation service. The CloudFormation service uses these templates to automatically create resource stacks in AWS. These stacks include the resources described in this article, along with credentials, permissions, and policies.
 
 > [!NOTE]
-> We strongly recommend using the automatic setup process. For special cases, see the [manual setup instructions](connect-aws-configure-environment.md#manual-setup).
+> Use the automatic setup process. For special cases, see the [manual setup instructions](connect-aws-configure-environment.md#manual-setup).
 
 ### Prepare the template files
 
-To run the script to set up the AWS environment, use the following steps:
+To run the script that sets up the AWS environment, use the following steps:
 
 1. In the Azure portal, from the Microsoft Sentinel navigation menu, expand **Configuration**, and select **Data connectors**.
 
@@ -103,7 +103,7 @@ To run the script to set up the AWS environment, use the following steps:
 
     :::image type="content" source="media/connect-aws-s3-waf/find-aws-waf-connector.png" alt-text="Screenshot of data connectors gallery showing AWS S3 EKS connector.":::
 
-1. In the **Configuration** section, under **1. AWS CloudFormation Deployment**, select the [AWS CloudFormation Stacks](https://aka.ms/awsCloudFormationLink#/stacks/create) link. This opens the AWS console in a new browser tab.
+1. In the **Configuration** section, under **1. AWS CloudFormation Deployment**, select the [AWS CloudFormation Stacks](https://aka.ms/awsCloudFormationLink#/stacks/create) link. This action opens the AWS console in a new browser tab.
 
 1. Return to the tab of the portal where you have Microsoft Sentinel open. Select **Download** under *Template 1: OpenID Connect authentication deployment* to download the template that creates the OIDC web identity provider. The template is downloaded as a JSON file to your designated downloads folder.
 
@@ -118,18 +118,18 @@ To run the script to set up the AWS environment, use the following steps:
 
 Return to the AWS Console browser tab, which is open to the AWS CloudFormation page for creating a stack.
 
-If you're not already logged in to AWS, log in now, and you're redirected to the AWS CloudFormation page.
+If you're not already signed in to AWS, sign in now. You're redirected to the AWS CloudFormation page.
 
 #### Create the OIDC web identity provider
 
 > [!IMPORTANT]
-> If you already have the OIDC web identity provider from a previous AWS connector setup, skip this step and proceed to [Create the remaining AWS resources](#create-the-remaining-aws-resources).<br>If you already have an OIDC Connect provider set up for Microsoft Defender for Cloud, add Microsoft Sentinel as an audience to your existing provider (Commercial: `api://1462b192-27f7-4cb9-8523-0f4ecb54b47e`, Government:`api://d4230588-5f84-4281-a9c7-2c15194b28f7`). Do not try to create a new OIDC provider for Microsoft Sentinel.
+> If you already have the OIDC web identity provider from a previous AWS connector setup, skip this step and proceed to [Create the remaining AWS resources](#create-the-remaining-aws-resources).<br>If you already have an OIDC Connect provider set up for Microsoft Defender for Cloud, add Microsoft Sentinel as an audience to your existing provider (Commercial: `api://1462b192-27f7-4cb9-8523-0f4ecb54b47e`, Government:`api://d4230588-5f84-4281-a9c7-2c15194b28f7`). Don't try to create a new OIDC provider for Microsoft Sentinel.
 
 Follow the instructions on the AWS Console page for creating a new stack.
 
 1. Specify a template and upload a template file.
 
-1. Select **Choose file** and locate the "*Template 1: OpenID connect authentication deployment.json*" file you downloaded.
+1. Select **Choose file** and locate the *Template 1: OpenID connect authentication deployment.json* file you downloaded.
 
 1. Choose a name for the stack.
 
@@ -139,23 +139,23 @@ Follow the instructions on the AWS Console page for creating a new stack.
 
 1. Return to the AWS CloudFormation stacks page and create a new stack.
 
-1. Select **Choose file** and locate the "*Template 2: AWS EKS resources deployment.json*" file you downloaded.
+1. Select **Choose file** and locate the *Template 2: AWS EKS resources deployment.json* file you downloaded.
 
 1. Choose a name for the stack.
 
-1. Where prompted, enter the following parameters:
+1. When prompted, enter the following parameters:
 
     - **EKSClusterName**: Enter the name of your existing EKS cluster.
     - **Microsoft Sentinel Workspace ID**: To find your Workspace ID:
         - In the Azure portal, in the Microsoft Sentinel navigation menu, expand **Configuration** and select **Settings**. Select the **Workspace settings** tab, and find the Workspace ID on the Log Analytics workspace page.
         - In the Defender portal, in the quick launch menu, expand **System** and select **Settings**. Select **Microsoft Sentinel**, then select **Log Analytics settings** under **Settings for `[WORKSPACE_NAME]`**. Find the Workspace ID on the Log Analytics workspace page, which opens in a new browser tab.
-    - **BucketName**: Enter a unique name for the S3 bucket where EKS audit logs will be stored.
+    - **BucketName**: Enter a unique name for the S3 bucket where EKS audit logs are stored.
     - **SentinelSQSQueueName**: Enter a name for the SQS queue (default: MicrosoftSentinelEKSSqs).
     - **AwsRoleName**: Enter a name for the IAM role (must start with "OIDC_", default: OIDC_MicrosoftSentinelRoleEKS).
 
 1. Advance through the rest of the process and create the stack.
 
-1. After the stack creation is complete, navigate to the **Outputs** section of the CloudFormation stack and note the following values:
+1. After the stack creation is complete, go to the **Outputs** section of the CloudFormation stack and note the following values:
     - **SentinelRoleArn**: The ARN of the IAM role created for Microsoft Sentinel access.
     - **SentinelSQSQueueURL**: The URL of the SQS queue.
     - **Step1EnableEKSAuditLogging**: AWS CLI command to enable EKS audit logging.
@@ -163,42 +163,42 @@ Follow the instructions on the AWS Console page for creating a new stack.
 
 ### Enable EKS audit logging and configure log streaming
 
-After the CloudFormation stacks are created, you need to enable audit logging on your EKS cluster and configure log streaming:
+After creating the CloudFormation stacks, enable audit logging on your EKS cluster and configure log streaming:
 
-1. If audit logging is not already enabled on your EKS cluster, run the command provided in the **Step1EnableEKSAuditLogging** output from the CloudFormation stack.
+1. If audit logging isn't already enabled on your EKS cluster, run the command provided in the **Step1EnableEKSAuditLogging** output from the CloudFormation stack.
 
-2. Wait approximately 5 minutes for audit logs to start appearing in CloudWatch Logs.
+1. Wait about five minutes for audit logs to start appearing in CloudWatch Logs.
 
-3. Run the command provided in the **Step2CreateSubscriptionFilter** output to create a subscription filter that streams audit logs from CloudWatch to the Kinesis Data Firehose delivery stream.
+1. Run the command provided in the **Step2CreateSubscriptionFilter** output to create a subscription filter that streams audit logs from CloudWatch to the Kinesis Data Firehose delivery stream.
 
-4. The Lambda function will automatically transform the EKS audit logs into the format expected by Microsoft Sentinel and deliver them to S3, where they will trigger SQS notifications for ingestion.
+1. The Lambda function automatically transforms the EKS audit logs into the format expected by Microsoft Sentinel and delivers them to S3, where they trigger SQS notifications for ingestion.
 
 ## Add log collectors
 
-When the resource stacks are all created and EKS audit logging is configured, return to the browser tab open to the data connector page in Microsoft Sentinel, and begin the second part of the configuration process.
+When you create the resource stacks and configure EKS audit logging, return to the browser tab open to the data connector page in Microsoft Sentinel, and begin the second part of the configuration process.
 
 1. In the **Configuration** section, under **2. Connect new collectors**, select **Add new collector**.
 
     :::image type="content" source="media/connect-aws-s3-waf/add-new-collector.png" alt-text="Screenshot of second part of AWS EKS connector configuration." lightbox="media/connect-aws-s3-waf/add-new-collector.png":::
 
-1. Input the role ARN of the IAM role that was created. Use the value from the **SentinelRoleArn** output of your CloudFormation stack (e.g., `arn:aws:iam::{AWS_ACCOUNT_ID}:role/OIDC_MicrosoftSentinelRoleEKS`).
+1. Enter the role ARN of the IAM role that you created. Use the value from the **SentinelRoleArn** output of your CloudFormation stack (for example, `arn:aws:iam::{AWS_ACCOUNT_ID}:role/OIDC_MicrosoftSentinelRoleEKS`).
 
-1. Input the SQS queue URL that was created. Use the value from the **SentinelSQSQueueURL** output of your CloudFormation stack (e.g., `https://sqs.{AWS_REGION}.amazonaws.com/{AWS_ACCOUNT_ID}/MicrosoftSentinelEKSSqs`).
+1. Enter the SQS queue URL that you created. Use the value from the **SentinelSQSQueueURL** output of your CloudFormation stack (for example, `https://sqs.{AWS_REGION}.amazonaws.com/{AWS_ACCOUNT_ID}/MicrosoftSentinelEKSSqs`).
 
-1. Select **Connect** to add the collector. This creates a data collection rule for the Azure Monitor Agent to retrieve the logs and ingest them into the dedicated *AWSEKSLogs_CL* table in your Log Analytics workspace.
+1. Select **Connect** to add the collector. This action creates a data collection rule for the Azure Monitor Agent to retrieve the logs and ingest them into the dedicated *AWSEKSLogs_CL* table in your Log Analytics workspace.
 
     :::image type="content" source="media/connect-aws-s3-waf/enter-collector-details.png" alt-text="Screenshot of adding new collector for EKS logs.":::
 
 ## Verify data ingestion
 
-1. After the connector is set up, go to the **Logs** page (or the **Advanced hunting** page in the Defender portal) and run the following query. If you get any results, the connector is working properly.
+1. After setting up the connector, go to the **Logs** page (or the **Advanced hunting** page in the Defender portal) and run the following query. If you get any results, the connector is working properly.
 
     ```kusto
     AWSEKSLogs_CL
     | take 10
     ```
 
-2. You can also run more specific queries to explore your EKS audit data:
+1. You can also run more specific queries to explore your EKS audit data.
 
     ```kusto
     // View recent EKS audit events by verb (API action)
@@ -228,7 +228,7 @@ When the resource stacks are all created and EKS audit logging is configured, re
 
 ## Schema reference
 
-The EKS audit logs are ingested into the **AWSEKSLogs_CL** table with the following schema:
+The EKS audit logs ingest into the **AWSEKSLogs_CL** table with the following schema:
 
 | Column | Type | Description |
 |--------|------|-------------|
@@ -250,25 +250,25 @@ The EKS audit logs are ingested into the **AWSEKSLogs_CL** table with the follow
 
 ### Common issues and solutions
 
-- **No data appearing in AWSEKSLogs_CL table:**
-  - Verify that EKS audit logging is enabled on your cluster
-  - Check that the CloudWatch Logs subscription filter is correctly configured
-  - Ensure the Lambda function is processing logs without errors (check CloudWatch Logs for Lambda function logs)
-  - Verify that S3 bucket notifications are configured correctly to trigger SQS messages
+- **No data appears in AWSEKSLogs_CL table:**
+  - Verify that EKS audit logging is enabled on your cluster.
+  - Check that the CloudWatch Logs subscription filter is correctly configured.
+  - Ensure the Lambda function processes logs without errors. Check CloudWatch Logs for Lambda function logs.
+  - Verify that S3 bucket notifications are configured correctly to trigger SQS messages.
 
 - **CloudFormation stack creation fails:**
-  - Ensure you have sufficient IAM permissions to create all required resources
-  - Check that the EKS cluster name you provided exists in your account
-  - Verify that the S3 bucket name is globally unique
+  - Ensure you have sufficient IAM permissions to create all required resources.
+  - Check that the EKS cluster name you provided exists in your account.
+  - Verify that the S3 bucket name is globally unique.
 
 - **Authentication errors:**
-  - Verify that the OIDC web identity provider is correctly configured
-  - Ensure the IAM role permissions are sufficient for accessing S3 and SQS resources
-  - Check that the workspace ID used in the CloudFormation template matches your Microsoft Sentinel workspace
+  - Verify that the OIDC web identity provider is correctly configured.
+  - Ensure the IAM role permissions are sufficient for accessing S3 and SQS resources.
+  - Check that the workspace ID used in the CloudFormation template matches your Microsoft Sentinel workspace.
 
 ### Advanced monitoring
 
-If you haven't already done so, we recommend that you implement **data connector health monitoring** so that you can know when connectors aren't receiving data or have other issues. For more information, see [Monitor the health of your data connectors](monitor-data-connector-health.md).
+If you haven't already done so, implement data connector health monitoring so that you can know when connectors aren't receiving data or have other issues. For more information, see [Monitor the health of your data connectors](monitor-data-connector-health.md).
 
 ## Next steps
 
