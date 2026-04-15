@@ -110,7 +110,7 @@ An ASR rule can be enabled or disabled. Enabled rules have different levels of p
 |**Not configured** <br/> **Off** <br/> **Deactivated**|0|The ASR rule isn't enabled or is disabled.|
 |**Block** <br/> **Activated**|1|The ASR rule is enabled in **Block** mode.|
 |**Audit** <br/> **Audit mode**|2|The ASR rule is enabled as if in **Block** mode, but without taking action. <br/><br/> ASR rule detections are available in the following locations: <ul><li>Event IDs 1122, 1125, 1132, and 1134 in [Windows Event Viewer](attack-surface-reduction-overview.md#list-of-attack-surface-reduction-events).</li><li>[Advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview): <br><code>DeviceEvent<br>&#124; where ActionType startswith "Asr"<br>&#124; where ActionType endswith "Audited"</code></li><li>The [Attack surface reduction rules report](attack-surface-reduction-rules-report.md).</li></ul>|
-|**Warn** <br/> **Warning**|6|The ASR rule is enabled as if in **Block** mode, but users can select **Unblock** in the warning notification pop-up to bypass the block for 24 hours. After 24 hours, the user needs to bypass the block again. <br/><br/> **Warn** mode is supported in Windows 10 version 1809 (November 2018) or later. ASR rules in **Warn** mode on unsupported versions of Windows are effectively in **Block** mode (bypass isn't available). <br/><br/> The following ASR rules don't support **Warn** mode: <ul><li>[Block credential stealing from the Windows local security authority subsystem](#block-credential-stealing-from-the-windows-local-security-authority-subsystem)</li><li>[Block Office applications from injecting code into other processes](#block-office-applications-from-injecting-code-into-other-processes)</li></ul>.|
+|**Warn** <br/> **Warning**|6|The ASR rule is enabled as if in **Block** mode, but users can select **Unblock** in the warning notification pop-up to bypass the block for 24 hours. After 24 hours, the user needs to bypass the block again. <br/><br/> **Warn** mode is supported in Windows 10 version 1809 (November 2018) or later. ASR rules in **Warn** mode on unsupported versions of Windows are effectively in **Block** mode (bypass isn't available). <br/><br/> The following ASR rules don't support **Warn** mode: <ul><li>[Block credential stealing from the Windows local security authority subsystem](#block-credential-stealing-from-the-windows-local-security-authority-subsystem)<sup>\*</sup></li><li>[Block Office applications from injecting code into other processes](#block-office-applications-from-injecting-code-into-other-processes)</li></ul>.|
 
 As previously mentioned, we recommend **Block** mode for the standard protection rules, and initial testing in **Audit** mode for other ASR rules before activating them in **Block** or **Warn** mode.
 
@@ -144,7 +144,7 @@ The supported operating systems for ASR rules are described in the following tab
 |Block Win32 API calls from Office macros|Y|1709 or later|n/a|n/a|n/a|
 |Use advanced protection against ransomware|Y|1803 or later|Y|Y|Y|
 
-<sup>\*</sup> ASR rules in Windows Server 2016 and Windows Server 2012 R2 are available for devices onboarded using the modern unified solution package. For more information, see [New Windows Server 2012 R2 and 2016 functionality in the modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
+<sup>\*</sup> ASR rules in Windows Server 2016 and Windows Server 2012 R2 are available for servers onboarded using the modern unified solution package. For more information, see [New Windows Server 2012 R2 and 2016 functionality in the modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
 
 <a name='asr-rules-supported-configuration-management-systems'></a>
 
@@ -251,7 +251,7 @@ This ASR rule prevents apps from saving vulnerable signed drivers on the compute
 > [!NOTE]
 >
 > - You can configure this rule using the following alternate configuration methods:
->   - [Custom profiles in Microsoft Intune using OMA-URIs and CSPs](attack-surface-reduction-rules-enable.md#configure-asr-rules-in-intune-using-custom-profiles-with-oma-uris-and-csps)
+>   - [Custom profiles in Microsoft Intune using custom profiles with OMA-URIs and CSPs](attack-surface-reduction-rules-enable.md#configure-asr-rules-in-intune-using-custom-profiles-with-oma-uris-and-csps)
 >   - [PowerShell](attack-surface-reduction-rules-enable.md#configure-asr-rules-in-powershell)
 > - Use the following URL to submit a driver to Microsoft for analysis: <https://www.microsoft.com/wdsi/driversubmission>.
 > - To further protect your Windows devices from vulnerable drivers, you should also implement these extra protection methods:
@@ -315,7 +315,7 @@ Fileless threats use various tactics to stay hidden, to avoid being seen in the 
 
 > [!NOTE]
 >
-> - If you use Microsoft Configuration Manager, we recommend running this ASR rule in **Audit** mode for at least 60 days before you proceed to **Block** mode. The Configuration Manager client relies heavily on WMI.
+> - If you use Microsoft Configuration Manager, we recommend extensive testing of this ASR rule in **Audit** mode before you proceed to **Block** mode. The Configuration Manager client relies heavily on WMI.
 > - This ASR rule doesn't support file and folder exclusions.
 
 ### Other ASR rules
