@@ -143,4 +143,4 @@ If the recommendation still shows resources as unhealthy after 24 hours:
 ## Next step
 
 > [!div class="nextstep"]
-> [Review and manage recommendation exemptions](review-exemptions.md) in Defender for Cloud.
+> [Review and manage recommendation exemptions](review-exemptions.md)
