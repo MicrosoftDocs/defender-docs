@@ -50,7 +50,6 @@ This table includes supported releases for all supported platforms in the past s
 |Android |1.0.8321.0101  |December 2025 |- Build: 1.0.8321.0101<br>- Released: December 2, 2025 |[Release details and updates](#android--december-2025--platform-1083210101) |
 |macOS  |101.25102.0019  |December 2025 |- Release version: 20.125102.19.0<br>- Engine version: 1.1.25090.2000<br>- Signature version: 1.435.600.0 |[Release details and updates](#macos--december-2025--platform-101251020019) |
 |Linux  |101.25102.0003  |November 2025 |- Release version: 30.125102.0003.0<br>- Engine version: 1.1.25090.6000<br>- Signature version: 1.439.338.0 |[Release details and updates](#linux--november-2025--platform-101251020003) |
-|Windows Antivirus |4.18.25110.6  |November 2025 |- Platform: 4.18.25110.6<br>- Engine: 1.1.25110.1<br>- Security intelligence: 1.443.6.0 |[Release details and updates](#windows-antivirus--november-2025--platform-418251106--engine-11251101) |
 |iOS |1.1.70290103 |November 2025 |- Build: 1.1.70290103<br>- Released: November 6, 2025 |[Release details and updates](#ios--november-2025--platform-1170290103) |
 |Android |1.0.8315.0101  |November 2025 |- Build: 1.0.8315.0101<br>- Released: November 17, 2025 |[Release details and updates](#android--november-2025--platform-1083150101) |
 |Android |1.0.8303.0101  |November 2025 |- Build: 1.0.8303.0101<br>- Released: November 4, 2025 |[Release details and updates](#android--november-2025--platform-1083030101) |
@@ -61,7 +60,6 @@ This table includes supported releases for all supported platforms in the past s
 |Android |1.0.8201.0101  |October 2025 |- Build: 1.0.8201.0101<br>- Released: October 2, 2025 |[Release details and updates](#android--october-2025--platform-1082010101) |
 |macOS  |101.25082.0006  |October 2025 |- Release version: 20.125082.6.0<br>- Engine version: 1.1.25070.3000<br>- Signature version: 1.437.276.0 |[Release details and updates](#macos--october-2025--platform-101250820006) |
 |Linux  |101.25092.0001  |October 2025 |- Release version: 30.125092.0001.0<br>- Engine version: 1.1.25090.6000<br>- Signature version: 1.439.558.0 |[Release details and updates](#linux--october-2025--platform-101250920001) |
-|Windows Antivirus |4.18.25100.9008  |October 2025 |- Platform: 4.18.25100.9008<br>- Engine: 1.1.25100.9002<br>- Security intelligence: 1.441.131.0 |[Release details and updates](#windows-antivirus--october-2025--platform-418251009008--engine-11251009002) |
 |iOS |1.1.68200103  |September 2025 |- Build: 1.1.68200103<br>- Released: September 4, 2025 |[Release details and updates](#ios--september-2025--platform-1168200103) |
 |Android |1.0.8102.0101  |September 2025 |- Build: 1.0.8102.0101<br>- Released: September 4, 2025 |[Release details and updates](#android--september-2025--platform-1081020101) |
 |Linux  |101.25082.0003  |September 2025 |- Release version: 30.125082.0003.0<br>- Engine version: 1.1.25070.4000<br>- Signature version: 1.435.242.0 |[Release details and updates](#linux--september-2025--platform-101250820003-build-1) |
@@ -819,54 +817,3 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 - Fixed regression in the registry service path for the Core service.
 - Improved detection in OLEstream objects.
 - Fixed race condition during service initialization to read Tamper protection status.
-
-### Windows Antivirus | November 2025 | Platform 4.18.25110.6 | Engine 1.1.25110.1
-
-#### Release details
-
-| Component | Version | Date |
-| -------- | -------- | -------- |
-| Platform | 4.18.25110.6 | December 17, 2025 |
-| Engine | 1.1.25110.1 | December 11, 2025 |
-| Security intelligence<sup>1</sup> | 1.443.6.0 | December 17, 2025 |
-| Support phase | Security and Critical Updates | - |
-
-<sup>1</sup>The security intelligence version listed here is relevant to the listed engine release. Newer versions of security intelligence are released regularly. For more information, see
-[Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/wdsi/defenderupdates).
-
-#### Enhancements and features
-
-| Feature area | Update summary |
-|--------------|---------------|
-| Performance | Performance improvements when querying WMI due to Behavior Monitor detections. |
-| PowerShell compatibility | Fixed potential hang in PowerShell on Server 2016 due to Defender Filter Driver. |
-| Application compatibility | Resolved an application compatibility issue due to a loopback with SMB1 enabled. |
-| Attack Surface Reduction | Fixed issue with ASR path exclusion requiring extra "\" characters to function appropriately. |
-| Network Inspection | Resolved high I/O issue with NisSrv.exe due to high volume of network logging events. |
-| Threat enumeration | Fixed error in threat enumeration causing repeated failure notifications every 15 minutes in SCCM. |
-| Drive mapping | Improved drive mapping enumeration for devices with many drives, which resulted in false positive detections for ASR rules. |
-| Service stability | Fixed a crash with Defender related to long scan times causing the service to hang in Windows Server 2019. |
-
-### Windows Antivirus | October 2025 | Platform 4.18.25100.9008 | Engine 1.1.25100.9002
-
-#### Release details
-
-| Component | Version | Date |
-| -------- | -------- | -------- |
-| Platform | 4.18.25100.9008 | November 17, 2025 |
-| Engine | 1.1.25100.9002 | November 6, 2025 |
-| Security intelligence<sup>1</sup> | 1.441.131.0 | November 17, 2025 |
-| Support phase | Security and Critical Updates | - |
-
-<sup>1</sup>The security intelligence version listed here is relevant to the listed engine release. Newer versions of security intelligence are released regularly. For more information, see
-[Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/wdsi/defenderupdates).
-
-#### Enhancements and features
-
-| Feature area | Update summary |
-|--------------|---------------|
-| Network Inspection Service | Fixed Network Inspection Service stability issue: The service now correctly restarts when memory usage exceeds the threshold, which prevents the service from getting stuck in a faulty or pending state. |
-| Anti-malware Service | Reduced startup delay for Anti-malware Service: Improved Defender service startup time by removing its dependency on Core Service startup. This change improves overall system startup performance. |
-| x86 compatibility | Fixed crash in Defender settings on x86 devices: Corrected an issue that caused the system to crash when applying Defender configuration settings on 32-bit machines. |
-| Service startup | Fixed Defender startup issue: The platform no longer crashes when processing invalid Attack Surface Reduction rule exclusions. |
-| System resources | Reduced system resource usage: Defender no longer generates excessive Data Loss Prevention (DLP) logs that caused high disk activity, improving overall performance and stability. |
