@@ -39,6 +39,21 @@ There are important differences between offboarding and uninstalling:
 
 - **Uninstall** when you want to completely remove the Defender application from the Linux server, for example, when changing the installation ring (Prod/Insider Slow/Insider Fast), or when you no longer plan to use Microsoft Defender on the device.
 
+## How do offboarded and uninstalled devices behave?
+
+After a device has been successfully offboarded, the Defender application behaves as follows:
+
+- It stops sending telemetry (such as alerts and vulnerabilities) to the Microsoft Defender portal.
+- It becomes unlicensed and nonfunctional.
+- Security policies applied through Microsoft Defender are removed.
+
+## How do offboarded and uninstalled devices appear in the Defender portal?
+
+- The status of the offboarded or uninstalled device changes to *Inactive* after seven days of no telemetry.
+- Offboarded and uninstalled devices remain visible for up to 180 days. For more information about data retention, see [Microsoft Defender for Endpoint data storage and privacy](./data-storage-privacy.md).
+- Historical data (alerts, timeline, software inventory) remains accessible during the retention period.
+- No explicit *Offboarded* or *Uninstalled* label is shown in the portal. For information about how to track "Inactive" devices in the portal, see [XXX]().
+
 ## Offboard a device
 
 Two methods are available to offboard a Linux server from Microsoft Defender for Endpoint:
@@ -125,21 +140,6 @@ Expected output
 ATTENTION: No license found. Contact your administrator for help. ["missing license"]
 ```
 The Defender application remains installed on the device unless it's manually uninstalled.
-
-## How do offboarded and uninstalled devices behave?
-
-After a device has been successfully offboarded, the Defender application behaves as follows:
-
-- It stops sending telemetry (such as alerts and vulnerabilities) to the Microsoft Defender portal.
-- It becomes unlicensed and nonfunctional.
-- Security policies applied through Microsoft Defender are removed.
-
-## How do offboarded and uninstalled devices appear in the Defender portal?
-
-- The status of the offboarded or uninstalled device changes to *Inactive* after seven days of no telemetry.
-- Offboarded and uninstalled devices remain visible for up to 180 days. For more information about data retention, see [Microsoft Defender for Endpoint data storage and privacy](./data-storage-privacy.md).
-- Historical data (alerts, timeline, software inventory) remains accessible during the retention period.
-- No explicit *Offboarded* or *Uninstalled* label is shown in the portal. For information about how to track "Inactive" devices in the portal, see [XXX]().
 
 ## Related content
 
