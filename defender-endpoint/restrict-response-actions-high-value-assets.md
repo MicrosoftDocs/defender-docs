@@ -2,8 +2,9 @@
 title: Restrict response actions on high-value assets (preview)
 description: Learn how to onboard Tier-0 and high-value assets with restricted security operations in Microsoft Defender for Endpoint to reduce operational risk.
 ms.service: defender-endpoint
-ms.author: youralias
-author: youralias
+ms.author: painbar
+author: paulinbar
+ms.reviewer: amibarayev
 ms.localizationpriority: medium
 ms.date: 04/15/2026
 ms.topic: how-to
