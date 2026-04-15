@@ -14,7 +14,6 @@ Microsoft Defender for Cloud detects anomalous activities indicating unusual and
 
 - [Azure Database for PostgreSQL](/azure/postgresql/)
 - [Azure Database for MySQL](/azure/mysql/)
-- [Azure Database for MariaDB](/azure/mariadb/)
 
 To get alerts from the Microsoft Defender plan, you need to follow the instructions on this page to enable Defender for open-source relational databases Azure.
 
