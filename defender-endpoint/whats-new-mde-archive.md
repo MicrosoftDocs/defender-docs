@@ -1,7 +1,6 @@
 ---
 title: What's new in Microsoft Defender for Endpoint archive
 description: See what features were available for Microsoft Defender for Endpoint in past releases.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: reference
 ms.author: lwainstein
@@ -9,7 +8,6 @@ author: limwainstein
 ms.localizationpriority: medium
 ms.date: 02/18/2026
 ai-usage: ai-assisted
-audience: ITPro
 ms.collection:
 - m365-security
 - tier1

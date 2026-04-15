@@ -1,4 +1,4 @@
-﻿---
+---
 title: Migrate to Microsoft Defender for Endpoint - Onboard
 description: Move to Microsoft Defender for Endpoint. Onboard devices and then uninstall your non-Microsoft solution.
 ms.service: defender-endpoint
@@ -6,7 +6,6 @@ ms.subservice: onboard
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
   - m365-security
   - m365solution-migratetomdatp
@@ -18,7 +17,6 @@ ms.custom:
 ms.topic: how-to
 ms.date: 03/04/2025
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho, yongrhee
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

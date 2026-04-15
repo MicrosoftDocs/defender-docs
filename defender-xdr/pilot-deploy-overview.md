@@ -1,15 +1,11 @@
 ---
 title: How do I pilot and deploy Microsoft Defender XDR?
 description: How to pilot and deploy Microsoft Defender XDR and its components in your production Microsoft 365 tenant.
-search.appverid: met150
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: tracyp
 author: MSFTTracyP
 ms.date: 12/11/2025
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - m365-security
   - m365solution-overview

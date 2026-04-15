@@ -2,19 +2,13 @@
 title: Step 2. Perform a SOC integration readiness assessment using the Zero Trust Framework
 description: The basics of performing a SOC integration readiness assessment using the Zero Trust Framework when integrating Microsoft Defender XDR into your security operations.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - msftsolution-secops
   - tier2
 ms.topic: how-to
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 07/15/2021
 ---
 

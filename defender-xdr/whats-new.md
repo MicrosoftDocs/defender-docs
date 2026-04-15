@@ -1,14 +1,12 @@
 ---
 title: What's new in Microsoft Defender XDR
 description: Lists the new features and functionality in Microsoft Defender XDR
-search.appverid: met150
 ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 04/07/2026
 manager: orspodek
-audience: ITPro
 ms.collection:
 - M365-security-compliance
 - tier1
@@ -33,6 +31,11 @@ For more information on what's new with other Microsoft Defender security produc
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
 ## April 2026
+
+- Microsoft Defender now integrates with Microsoft Agent 365 to provide comprehensive security for AI agents onboarded to A365. Microsoft Defender discovers agents registered with Agent 365 and provides visibility into agent inventory and configuration. Agents that integrate the [Microsoft Agent 365 SDK](/microsoft-agent-365/developer/) enable threat detection and investigation through near‑real‑time detections, alerts, and Advanced Hunting. Agents onboarded through the Agent Tooling Gateway (ATG) are protected by real-time protection, which evaluates and can block unsafe agent-initiated tool actions before execution.
+
+    For more information, see [Protect AI agents using Microsoft Defender](../defender-xdr/security-for-ai/defender-security-for-ai.md#protect-ai-agents-using-microsoft-defender).
+
 - Microsoft Defender Experts for XDR customers can now see **Defender Experts** as a distinct entry in the Microsoft Defender portal navigation menu. This feature adds to the existing home page status card as in-portal experiences that provide consistent and predictable access to the service. [Learn more](start-using-mdex-xdr.md) 
 
 ## March 2026
