@@ -28,6 +28,9 @@ This article lists the prerequisites and permissions required to [enable Microso
   
 - Storage accounts that belong to a resource group with any of the following names are not supported: `App_Browsers`, `App_Code`, `App_Data`, `App_GlobalResources`, `App_LocalResources`, `App_Themes`, `App_WebReferences`, `Bin`.
 
+> [!NOTE]
+> AWS S3 buckets are not directly supported by Defender for Storage. You can use Microsoft Sentinel with the AWs S3 connector to consume AWS GaurdDuty findings and display them within the Defender portal **Alerts** table. [Learn more in Sentinel data connectors)](/azure/sentinel/data-connectors-reference#sentinel-data-connectors).
+
 ## Permissions
 
 Depending on the scenario, you need different levels of permissions to enable Defender for Storage and its features. You can enable and configure Defender for Storage at the subscription level or at the storage account level. You can also use built-in Azure policies to enable Defender for Storage and enforce its enablement on a desired scope.
