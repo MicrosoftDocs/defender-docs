@@ -37,9 +37,11 @@ This article describes how to download the Microsoft Defender for Identity class
 1. Copy the downloaded installation package to the dedicated server or domain controller where you're installing the Defender for Identity sensor.
 
    > [!Note]
-   > To download the installation package behind a firewall or proxy server, make sure you allow network traffic to the following FQDN through TCP/443.
+   > To download the installation package behind a firewall or proxy server, make sure you allow network traffic to the following FQDNs through TCP/443.
    > 
    > sensorpackage-prd.mdi.securitycenter.microsoft.com
+   > sensorpackage-fm.mdi.securitycenter.microsoft.us
+   > sensorpackage-ff.mdi.securitycenter.microsoft.us
 
 ## Next step
 

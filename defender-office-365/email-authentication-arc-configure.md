@@ -1,14 +1,9 @@
 ---
 title: Configure trusted ARC sealers
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: high
-search.appverid:
-  - MET150
 ms.collection:
   - m365-security
   - tier2

@@ -1,9 +1,8 @@
-﻿---
+---
 title: Report and troubleshoot Microsoft Defender for Endpoint attack surface reduction rules
 description: This article describes how to report and troubleshoot Microsoft Defender for Endpoint attack surface reduction rules
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-audience: ITPro
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: yongrhee
@@ -15,7 +14,6 @@ ms.subservice: asr
 ms.collection: 
 - m365-security
 - tier3
-search.appverid: met150
 ms.date: 03/10/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

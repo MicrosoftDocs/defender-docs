@@ -1,7 +1,6 @@
 ---
 title: Submit files in Microsoft Defender for Endpoint
 description: Learn how to use the unified submissions feature in Microsoft Defender XDR to submit suspicious emails, URLs, email attachments, and files to Microsoft for scanning.
-search.appverid: met150
 ms.date: 12/24/2025
 appliesto:
   - Microsoft Defender for Endpoint
@@ -9,7 +8,6 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.topic: how-to
 ms.collection:
 - m365-security

@@ -1,15 +1,11 @@
 ---
 title: Use the advanced hunting query resource report
 description: Learn how to use advanced hunting query resource report to keep the advanced hunting service responsive
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3

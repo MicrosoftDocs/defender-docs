@@ -1,19 +1,13 @@
 ---
 title: Microsoft Defender for Office 365 permissions in the Microsoft Defender portal
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
 ms.audience: Admin
 ms.topic: how-to
-audience: Admin
 ms.localizationpriority: high
 ms.collection: 
   - m365-security
   - tier1
-search.appverid: 
-  - MOE150
-  - MET150
 description: Admins can learn how to manage Microsoft Defender for Office 365 (Email & collaboration) permissions in the Microsoft Defender portal.
 ms.custom: 
 - seo-marvel-apr2020
