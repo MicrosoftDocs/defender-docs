@@ -1947,6 +1947,30 @@ __How could attackers exploit it or how could it lead to data breaches?__ An att
 
 **Severity**: High
 
+### Private endpoint should be configured for Azure Database for PostgreSQL Servers
+
+**Description**: 
+
+__What is a private endpoint?__ A private endpoint in Azure allows resources to be accessed securely over a private IP address within a virtual network. For Azure Database for PostgreSQL servers, configuring a private endpoint ensures that database traffic does not traverse the public internet.
+
+__Why is it a security concern?__ Without a private endpoint, the server may be exposed to public network access, increasing the risk of unauthorized access, data interception, and denial-of-service attacks.
+
+__How could attackers exploit it or how could it lead to data breaches?__ An attacker could scan public IP ranges to discover exposed servers and attempt brute-force or exploit-based attacks. Public exposure also increases the risk of data exfiltration via compromised clients.
+
+**Severity**: High
+
+### 'Allow access to Azure services' should be disabled for PostgreSQL Servers
+
+**Description**: 
+
+__What is 'Allow access to Azure services'?__ This setting creates a firewall rule that permits all Azure services to connect to the PostgreSQL server. While convenient, it introduces significant risk by allowing connections from any Azure subscription.
+
+__Why is it a security concern?__ Enabling this setting bypasses network isolation controls, potentially exposing the database to unauthorized access from external Azure tenants.
+
+__How could attackers exploit it or how could it lead to data breaches?__ An attacker operating from another Azure subscription could attempt brute-force attacks or exploit vulnerabilities if this rule is enabled.
+
+**Severity**: High
+
 ## Related content
 
 - [Learn about security recommendations](security-policy-concept.md)
