@@ -4,7 +4,7 @@ description: Learn how to review, manage, and delete recommendation exemptions i
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
-ms.date: 04/14/2026
+ms.date: 04/16/2026
 #customer intent: As a user, I want to review and manage exempted resources in Microsoft Defender for Cloud so that I can keep my security posture accurate.
 ---
 
@@ -99,7 +99,16 @@ To delete an exemption, you need the `Microsoft.Authorization/policyExemptions/d
 If you receive a "Failed to delete the exemption(s)" error or a deleted exemption reappears:
 
 - **Check permissions.** Verify that you have delete permissions at the scope where the exemption was created, not just at the subscription level.
-- **Handle orphaned exemptions.** If an exemption has no associated policy assignment, try adding an assignment first, then delete the exemption. You can also use Azure PowerShell:
+
+- **Check exemption state.** Run the following query in Azure Resource Graph Explorer to find exemptions:
+
+    ```kusto
+    policyresources
+    | where type == "microsoft.authorization/policyexemptions"
+    | where subscriptionId == "<your-subscription-id>"
+    ```
+
+- **Handle orphaned exemptions.** If an exemption has no associated policy assignment, try adding an assignment first, then delete the exemption. You can also use Azure CLI or PowerShell to delete the exemption:
 
     ```azurepowershell-interactive
     Remove-AzPolicyExemption -Name "<exemption-name>" -Scope "<scope>"
@@ -117,6 +126,50 @@ The exemption type that you select determines how secure score is affected:
 | Exemption type: **Waiver** | Exempt resources are excluded from the calculation. Neutral impact. |
 | Preview recommendations | No impact on secure score regardless of status. |
 | Disable rule applied | The finding is excluded from evaluation. Score might increase. |
+
+## Resolve an exemption that doesn't update the recommendation status
+
+After you create an exemption, the recommendation status might not update or might still show unhealthy. Defender for Cloud evaluates resources periodically, typically every 12-24 hours. Allow up to 24 hours for the exemption to take effect.
+
+If the recommendation still shows resources as unhealthy after 24 hours:
+
+- **Verify exemption scope.** Ensure the exemption covers the specific resources that show as unhealthy. Check whether the exemption is at the correct scope level (management group, subscription, or resource).
+
+- **Check exemption type.** Waiver exemptions exclude resources from the secure score calculation, but resources might still show in recommendations. Mitigated exemptions should show resources as healthy.
+
+- **Verify the recommendation evaluates the exempted policy.** Some recommendations are based on multiple policies. Ensure you exempted the correct underlying policy.
+
+- **Ensure the exemption was created from Defender for Cloud.** Exemptions created in Azure Policy instead of Defender for Cloud might not fully integrate. Always use **Defender for Cloud** > **Recommendations** > **Exempt**.
+
+- **Check for initiative conflicts.** If the same recommendation exists in multiple initiatives, you might need a separate exemption for each initiative. Newly assigned initiatives might override existing exemptions.
+
+- **Recreate the exemption.** Delete and recreate the exemption by using Defender for Cloud. Allow up to 24 hours for reevaluation.
+
+## Resolve permission errors at management group level
+
+You can create exemptions at the subscription level but receive permission errors at the management group level. A common error message is: "...does not have permission to perform action(s) on the linked scope(s) or the linked scope(s) are invalid."
+
+To resolve permission errors at the management group level:
+
+- **Assign permissions at the management group level.** Subscription-level permissions don't inherit upward. Go to **Management group** > **Access control (IAM)** and assign **Security Admin** or the appropriate role at the management group level.
+
+- **Verify role assignment scope.** Custom roles must be assigned at the management group level, not only at the subscription level. Use Azure CLI to verify:
+
+    ```azurecli-interactive
+    az role assignment list --scope "/providers/Microsoft.Management/managementGroups/<mg-name>"
+    ```
+
+- **Check policy assignment scope.** If the policy is assigned at the management group level, the exemption must be created there. Verify the policy assignment location in Azure Policy.
+
+## Find exemptions that aren't visible in the portal
+
+If previously visible exemptions no longer appear, or you can't find where exemptions are listed:
+
+- **Check the centralized exemptions view.** As of January 2026, exemptions are managed from a central location. Go to **Defender for Cloud** > **Environment settings** > **Exemptions box**, or go to **Azure Policy** > **Exemptions**.
+
+- **Verify scope and filters.** Exemptions are visible at the scope where they were created. Check whether you're viewing the correct subscription or management group.
+
+- **Check permissions.** Ensure you have `Microsoft.Authorization/policyExemptions/read` permission at the correct scope level.
 
 ## Get a notification when users create exemptions
 

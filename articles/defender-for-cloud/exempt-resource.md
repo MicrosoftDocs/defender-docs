@@ -132,13 +132,7 @@ The exemption type that you select determines how the exemption affects the reco
 
 ### Verify that the exemption is working
 
-If the recommendation still shows resources as unhealthy after 24 hours:
-
-- Ensure the exemption covers the specific resources that show as unhealthy. Check whether the exemption is at the correct scope level (management group, subscription, or resource).
-- Verify that you exempted the correct underlying policy. Some recommendations are based on multiple policies.
-- If the same recommendation exists in multiple initiatives, you might need a separate exemption for each initiative. Newly assigned initiatives might override existing exemptions.
-- Always create exemptions from **Defender for Cloud** > **Recommendations** > **Exempt**. Exemptions created directly in Azure Policy might not fully integrate with Defender for Cloud.
-- If the issue persists, delete the exemption and recreate it by using Defender for Cloud. Allow up to 24 hours for reevaluation.
+If the recommendation still shows resources as unhealthy after 24 hours, see [Resolve an exemption that doesn't update the recommendation status](review-exemptions.md#resolve-an-exemption-that-doesnt-update-the-recommendation-status) for detailed steps.
 
 ## Next step
 
