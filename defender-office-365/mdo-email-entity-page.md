@@ -2,7 +2,7 @@
 title: The Email entity page in Defender for Office 365
 author: chrisda
 ms.author: chrisda
-ms.date: 04/07/2026
+ms.date: 04/16/2026
 ms.topic: article
 ms.service: defender-office-365
 ms.localizationpriority: medium
@@ -468,6 +468,7 @@ Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="fal
 The following actions are available at the top of the Email entity page:
 
 - :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
+- :::image type="icon" source="media/m365-cc-sc-copilot-icon.png" border="false"::: **Copilot**: If you have a [Microsoft Security Copilot](/copilot/security/get-started-security-copilot) subscription (for example, in Microsoft 365 E5) use this action to generate an AI summary of entity data by selecting **Generate** in the **Email summary** section of the **Copilot** pane.
 - :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: **Email preview**¹ ²
 - :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options**:
   - :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Go to quarantined email**: Available only if the message was quarantined. Selecting this action opens the **Email** tab on the **Quarantine** page at <https://security.microsoft.com/quarantine>, filtered by the unique **Message ID** value of the message. For more information, see [View quarantined email](quarantine-admin-manage-messages-files.md#view-quarantined-email).
@@ -478,7 +479,7 @@ The following actions are available at the top of the Email entity page:
     >
     > **Email preview** and **Download email** actions are available in **Audit Logs** and **CloudAppEvents** table of Advanced Hunting (Record type 38) for auditing and reporting.
 
-¹ The **Email preview** and **Download email** actions require the **Preview** role. You can assign this role in the following locations:
+¹ This action requires the **Preview** role. You can assign this role in the following locations:
 
 - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell):
   - **Security operations/Raw data (email & collaboration)/Email & collaboration content (read)**.
