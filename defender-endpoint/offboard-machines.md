@@ -30,9 +30,8 @@ appliesto:
 - Windows Server 2012 R2 and later
 - Azure Stack HCI OS, version 23H2 and later
 - Mac devices
-- Linux servers
 
-## Offboard Windows client devices
+For information about offboarding and uninstalling Microsoft Defender for Endpoint on Linux, see [Offboard Microsoft Defender for Endpoint on Linux](linux-off-board-endpoints.md).
 
 In the [Microsoft Defender portal](https://security.microsoft.com), in the navigation pane, select **Settings** > **Offboard**, and then select an operating system to start the offboarding process.
 
@@ -76,3 +75,7 @@ In the following procedure, steps 1 and 2 are optional if you do not want to see
 ## Offboard Android or iOS devices
 
 To offboard an Android or iOS device, uninstall the Microsoft Defender app on the device.
+
+## Related content
+
+- [Offboard or uninstall Microsoft Defender for Endpoint on Linux](linux-off-board-endpoints.md)
