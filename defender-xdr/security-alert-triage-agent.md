@@ -85,7 +85,7 @@ The following prerequisites depend on the alert types you want the agent to tria
 - Turn on the **Email reported by user as malware or phish** alert policy to triage phishing alerts.  
   For more information, see [Alert policies in the Microsoft Defender portal](alert-policies.md).
 
-#### Configure user reported settings {#configure-user-reported-settings}
+#### Configure user reported settings
 
 Enable **Monitor reported messages in Outlook** to define how users report potentially malicious messages in Microsoft Outlook and select any of the **Reported message destinations** options:
 
@@ -142,17 +142,34 @@ Activate the workloads for the alert types you want the agent to triage in Micro
 
 For more information, see [Activate workloads in Microsoft Defender XDR settings](activate-defender-rbac.md#activate-in-microsoft-defender-xdr-settings).
 
-## Required permissions 
+## Required permissions
 
-This table outlines the permissions required to perform various actions related to the Security Alert Triage Agent in the Defender portal.
+This table outlines the permissions required to perform various actions related to the **Security Alert Triage Agent** in the Microsoft Defender portal.
 
-| **User action**                                              | **Permission required**                                      |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| View  agent results and teach agent through feedback | **Security Copilot (read)**, **Security data basics (read)**, **Alerts  (manage)**, **Email & collaboration metadata (read)**,  and **Email & collaboration content (read)** under the **Security  operations** permissions group in the Defender portal, scoped to the Microsoft Defender for Office 365 data source. For more information, see [Security Alert Triage Agent required permissions](#phishing-triage-agent-required-permissions). |
-| View  agent settings                                         | **Security  Copilot (read)** and **Security data  basics (read)** under the **Security operations** permissions  group in the Defender portal<br>OR<br>**Security Administrator** in Microsoft Entra ID |
-| View  feedback page | **Security  Copilot (read)**, **Security data basics  (read)**, and **Email & collaboration metadata (read)** under  the **Security operations** permissions group in the Defender  portal<br>OR<br>**Security Administrator** in Microsoft Entra ID |
-| Manage  agent settings (set up, pause, remove the agent, and manage agent identity) | **Security  Administrator** in Microsoft Entra ID            |
-| Reject  feedback                                             | **Security  Administrator** in Microsoft Entra ID            |
+### [Email and collaboration alerts](#tab/email-permissions)
+
+The following permissions apply when working with **email and collaboration alerts** (Microsoft Defender for Office 365).
+
+| User action | Permission required |
+|------------|---------------------|
+| **View agent results and teach agent through feedback** | **Security Copilot (read)**, **Security data basics (read)**, **Alerts (manage)**, **Email & collaboration metadata (read)**, and **Email & collaboration content (read)** under the **Security operations** permissions group in the Defender portal, scoped to the **Microsoft Defender for Office 365** data source. For more information, see *Security Alert Triage Agent required permissions*. |
+| **View agent settings** | **Security Copilot (read)** and **Security data basics (read)** under the **Security operations** permissions group in the Defender portal<br><br>**OR**<br><br>**Security Administrator** in **Microsoft Entra ID** |
+| **View feedback page** | **Security Copilot (read)**, **Security data basics (read)**, and **Email & collaboration metadata (read)** under the **Security operations** permissions group in the Defender portal<br><br>**OR**<br><br>**Security Administrator** in **Microsoft Entra ID** |
+| **Manage agent settings** (set up, pause, remove the agent, and manage agent identity) | **Security Administrator** in **Microsoft Entra ID** |
+| **Reject feedback** | **Security Administrator** in **Microsoft Entra ID** |
+
+
+### [Identity and cloud alerts](#tab/identity-cloud-permissions)
+
+The following permissions apply when working with **identity alerts** and **cloud alerts**.
+
+| User action | Permission required |
+|------------|---------------------|
+| **View agent settings** | **Security Administrator** in **Microsoft Entra ID** |
+| **View feedback page** | **Security Administrator** in **Microsoft Entra ID** |
+| **Manage agent settings** (set up, pause, remove the agent, and manage agent identity) | **Security Administrator** in **Microsoft Entra ID** |
+| **Reject feedback** | **Security Administrator** in **Microsoft Entra ID** |
+
 
 For more information about unified RBAC in the Defender portal, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
