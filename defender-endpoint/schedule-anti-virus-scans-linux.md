@@ -6,14 +6,12 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: gopkr; meghapriya; lakshmyav
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
 ms.topic: how-to
 ms.subservice: linux
-search.appverid: met150
 ms.date: 02/09/2026
 ---
 

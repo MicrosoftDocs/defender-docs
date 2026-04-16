@@ -1,4 +1,4 @@
-﻿---
+---
 title: Run Microsoft Defender Antivirus in a sandbox environment
 description: This article describes how to run Microsoft Defender Antivirus in a sandbox to further strengthen against tampering.
 ms.service: defender-endpoint
@@ -13,9 +13,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
-f1.keywords: NOCSH 
-audience: ITPro
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

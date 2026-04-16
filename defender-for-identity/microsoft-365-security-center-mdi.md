@@ -4,14 +4,8 @@ description: Learn how to use Microsoft Defender for Identity within the Microso
 ms.service: defender-xdr
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
-f1.keywords:
-- NOCSH
 ms.date: 02/14/2024
-audience: ITPro
 ms.topic: concept-article
-search.appverid: 
-- MOE150
-- MET150
 ms.collection: 
 - m365-security 
 - tier2

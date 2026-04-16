@@ -1,4 +1,4 @@
-﻿---
+---
 title: Use basic permissions to access the portal
 description: Learn how to use basic permissions to access the Microsoft Defender for Endpoint portal.
 ms.service: defender-endpoint
@@ -9,12 +9,10 @@ ms.localizationpriority: medium
 ms.custom:
   - has-azure-ad-ps-ref
   - azure-ad-ref-level-one-done 
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: how-to
-search.appverid: met150
 ms.date: 06/25/2024
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

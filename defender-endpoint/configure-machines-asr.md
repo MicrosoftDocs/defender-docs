@@ -1,11 +1,10 @@
-﻿---
+---
 title: Optimize ASR rule deployment and detections
 description: Optimize your attack surface reduction rules to identify and prevent typical malware exploits.
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -13,7 +12,6 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.subservice: asr
-search.appverid: met150
 ms.date: 03/27/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

@@ -1,14 +1,10 @@
-﻿---
+---
 title: Delete a file from the live response library
 description: Learn how to delete a file from the live response library.
-search.appverid: met150
 ms.service: defender-endpoint
-f1.keywords:
-- NOCSH
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3

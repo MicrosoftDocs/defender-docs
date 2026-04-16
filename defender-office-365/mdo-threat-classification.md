@@ -1,15 +1,9 @@
 ---
 title: Threat classification in Defender for Office 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.collection:
   - m365-security
   - tier1

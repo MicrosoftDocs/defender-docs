@@ -1,15 +1,11 @@
 ---
 title: IdentityAccountInfo table in the advanced hunting schema
 description: Learn about the IdentityAccountInfo table in the advanced hunting schema, which provides account information from various sources, including Microsoft Entra ID.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
