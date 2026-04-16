@@ -410,6 +410,10 @@
             href: faq-defender-experts-hunting.md
           - name: Server and cloud workload coverage
             href: faq-cloud-coverage-defender-experts.md
+      - name: Microsoft Defender Experts for Servers
+        items:
+        - name: Overview
+          href: dex-servers-overview.md
       - name: Collaborate with Microsoft Defender Experts for XDR
         items:
         - name: Overview
