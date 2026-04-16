@@ -129,7 +129,7 @@ By default, lists configured in local group policy and the Windows Security app 
 
 To disable local list merging in a Microsoft Intune Endpoint Security **Antivirus** policy, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation).
 
-When creating a policy, use these settings:
+When creating an Antivirus policy, use these settings:
 
 - **Policy type**: Antivirus
 - **Platform**: Windows
