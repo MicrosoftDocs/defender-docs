@@ -1,15 +1,9 @@
 ---
 title: ASF settings in anti-spam policies
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
 ms.assetid: b286f853-b484-4af0-b01f-281fffd85e7a
 ms.collection: 
   - m365-security

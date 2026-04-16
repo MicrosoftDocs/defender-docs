@@ -1,11 +1,8 @@
-﻿---
+---
 title: Built-in protection helps guard against ransomware
 description: Learn how built-in protection protects against ransomware as part of Microsoft Defender for Endpoint.
-search.appverid: MET150
 author: paulinbar
 ms.author: painbar
-manager: bagol 
-audience: IT Pro
 ms.topic: overview
 ms.date: 06/24/2024
 ms.service: defender-endpoint
@@ -17,19 +14,18 @@ ms.collection:
 - mde-ngp
 ms.custom: 
 ms.reviewer: joshbregman
-f1.keywords: NOCSH
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
-# Built-in protection helps guard against ransomware
 
+# Built-in protection helps guard against ransomware
 
 [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) helps prevent, detect, investigate, and respond to advanced threats, such as ransomware attacks. [Next-generation protection](next-generation-protection.md) and [attack surface reduction](overview-attack-surface-reduction.md) capabilities in Defender for Endpoint were designed to catch emerging threats. In order for the best protection from ransomware and other cyberthreats to be in place, certain settings must be configured. Built-in protection can help by providing you with default settings for better protection.
 
 > [!TIP]
 > **You don't have to wait for built-in protection to come to you**! You can protect your organization's devices now by configuring these capabilities:
+>
 > - [Enable cloud protection](enable-cloud-protection-microsoft-defender-antivirus.md)
 > - [Turn tamper protection on](prevent-changes-to-security-settings-with-tamper-protection.md)
 > - [Set standard attack surface reduction rules to block mode](attack-surface-reduction-rules-deployment.md)
@@ -42,7 +38,7 @@ Built-in protection is a set of default settings to help ensure your devices are
 As devices are onboarded to Defender for Endpoint, built-in protection settings are applied automatically. However, your security team can [change your built-in protection settings](#can-i-change-built-in-protection-settings). |
 
 > [!NOTE]
-> Built-in protection sets default values for Windows and Mac devices. If endpoint security settings change, such as through baselines or policies in [Microsoft Intune](/mem/endpoint-manager-overview), those settings override the built-in protection settings.  
+> Built-in protection sets default values for Windows and Mac devices. If endpoint security settings change, such as through baselines or policies in [Microsoft Intune](/intune/endpoint-manager-overview), those settings override the built-in protection settings.  
 
 ## Can I opt out?
 
@@ -76,6 +72,3 @@ Built-in protection is a set of default settings. Your security team isn't requi
 
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
-
-
-

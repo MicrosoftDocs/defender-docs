@@ -1,15 +1,9 @@
 ---
 title: What's the difference between junk email and bulk email?
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
 ms.assetid: 8079f193-1b40-4081-9e5d-d0e50dfbcc59
 ms.collection: 
   - m365-security

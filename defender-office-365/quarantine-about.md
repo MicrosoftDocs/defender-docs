@@ -1,17 +1,9 @@
 ---
 title: Quarantined email messages
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
-search.appverid:
-  - MOE150
-  - MED150
-  - MET150
 ms.assetid: 4c234874-015e-4768-8495-98fcccfc639b
 ms.collection:
   - m365-security
@@ -20,7 +12,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn about email quarantine in Microsoft 365 that holds potentially dangerous or unwanted messages.
 ms.service: defender-office-365
-ms.date: 01/26/2026
+ms.date: 02/02/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -36,6 +28,8 @@ In all organizations with cloud mailboxes, quarantine is available to hold poten
 
 > [!NOTE]
 > In Microsoft 365 operated by 21Vianet in China, quarantine isn't currently available in the Microsoft Defender portal. Quarantine is available only in the classic Exchange admin center (classic EAC).
+>
+> You can't completely turn off quarantine in Microsoft 365. Malware and high-confidence phishing messages are always quarantined to protect the service. Admin can reduce quarantined messages by changing actions to deliver messages to the Junk Email folder instead of quarantinemod in anti-spam polices and anti-phishing policies.
 
 Whether a detected message is quarantined by default depends on the following factors:
 
@@ -81,13 +75,13 @@ Both users and admins can work with quarantined messages:
 - Users can work with their quarantined messages based on the protection feature that quarantined the message, and the setting in corresponding quarantine policy. For more information, see [Find and release quarantined messages as a user](quarantine-end-user.md).
 
   > [!NOTE]
-  > Users can't release their own quarantined messages in the following scenarios, regardless of how the quarantine policy is configured:
+  > Recipients can't release quarantined messages in the following scenarios, regardless of how the quarantine policy is configured:
   >
   > - Messages quarantined as malware by anti-malware policies.
   > - Messages quarantined as malware or phishing by Safe Attachments policies.
   > - Messages quarantined as high confidence phishing by anti-spam policies.
   >
-  > If the policy is configured for users to release these quarantined messages, users are instead allowed to _request_ the release of these quarantined messages.
+  > If the quarantine policy allows recipients to release messages, they can only _request_ the release of these quarantined messages.
 
 - Admins can report false positives to Microsoft from quarantine. For more information, see [Take action on quarantined email](quarantine-admin-manage-messages-files.md#take-action-on-quarantined-email) and [Take action on quarantined files](quarantine-admin-manage-messages-files.md#take-action-on-quarantined-files).
 

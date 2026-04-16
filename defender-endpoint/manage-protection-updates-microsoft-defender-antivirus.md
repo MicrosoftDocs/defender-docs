@@ -1,4 +1,4 @@
-﻿---
+---
 title: Manage how and where Microsoft Defender Antivirus receives updates
 description: Manage the fallback order for how Microsoft Defender Antivirus receives protection updates.
 ms.service: defender-endpoint
@@ -7,21 +7,19 @@ ms.topic: how-to
 author: chrisda
 ms.author: chrisda
 ms.reviewer: pahuijbr
-manager: bagol
 ms.custom: nextgen
 ms.subservice: ngp
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
-search.appverid: met150
 ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 ---
-# Manage the sources for Microsoft Defender Antivirus protection updates
 
+# Manage the sources for Microsoft Defender Antivirus protection updates
 
 <a id="protection-updates"></a>
 <!-- this has been used as anchor in VDI content -->
@@ -58,16 +56,16 @@ The older the updates on an endpoint, the larger the download is. However, you m
 There are five locations where you can specify where an endpoint should obtain updates:
 
 - [Microsoft Update](https://support.microsoft.com/help/12373/windows-update-faq)
-- [Windows Server Update Service](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus) (See note 1 below)  
-- [Microsoft Endpoint Configuration Manager](/configmgr/core/servers/manage/updates)
+- [Windows Server Update Service](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus) (See note 1 below)
+- [Microsoft Configuration Manager](/intune/configmgr/core/servers/manage/updates)
 - [Network file share](#unc-share)
 - [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](manage-protection-update-schedule-microsoft-defender-antivirus.md) (See note 2 below)
 
 > [!NOTE]
-> Intune Internal Definition Update Server: If you use a Software Update Point (SUP) in Microsoft Endpoint Configuration Manager to get definition updates for Microsoft Defender Antivirus, and you must access Windows Update on blocked client devices, you can transition to co-management and offload the endpoint protection workload to Intune. In the antimalware policy configured in Intune, there's an "internal definition update server" option that you can set to use on-premises Windows Server Update Service (WSUS) as the update source. This configuration helps you control which updates from the official Windows Update (WU) server are approved for enterprise organizations. It also helps proxy and save network traffic to the official Windows Updates network.
+> Intune Internal Definition Update Server: If you use a Software Update Point (SUP) in Microsoft Configuration Manager to get definition updates for Microsoft Defender Antivirus, and you must access Windows Update on blocked client devices, you can transition to co-management and offload the endpoint protection workload to Intune. In the antimalware policy configured in Intune, there's an "internal definition update server" option that you can set to use on-premises Windows Server Update Service (WSUS) as the update source. This configuration helps you control which updates from the official Windows Update (WU) server are approved for enterprise organizations. It also helps proxy and save network traffic to the official Windows Updates network.
 > Your policy and registry might have this listed as Microsoft Malware Protection Center (MMPC) security intelligence, its former name.
 
-To ensure the best level of protection, Microsoft Update allows for rapid releases, which means smaller downloads on a frequent basis. The Windows Server Update Service, Microsoft Endpoint Configuration Manager, Microsoft security intelligence updates, and platform updates sources deliver less frequent updates. Thus, the delta might be larger, resulting in larger downloads.
+To ensure the best level of protection, Microsoft Update allows for rapid releases, which means smaller downloads on a frequent basis. The Windows Server Update Service, Microsoft Configuration Manager, Microsoft security intelligence updates, and platform updates sources deliver less frequent updates. Thus, the delta might be larger, resulting in larger downloads.
 
 Platform updates and engine updates are released on a monthly cadence. Security intelligence updates are delivered multiple times a day, but this delta package doesn't contain an engine update. See [Microsoft Defender Antivirus security intelligence and product updates](microsoft-defender-antivirus-updates.md).
 
@@ -83,13 +81,13 @@ Each source has typical scenarios that depend on how your network is configured,
 |Windows Server Update Service|You're using Windows Server Update Service to manage updates for your network.|
 |Microsoft Update|You want your endpoints to connect directly to Microsoft Update. This option is useful for endpoints that irregularly connect to your enterprise network, or if you don't use Windows Server Update Service to manage your updates.|
 |UNC Share|You have devices that aren't connected to the Internet (such as virtual machines, or VMs). You can use your Internet-connected VM host to download the updates to a network share, from which the VMs can obtain the updates. See the [VDI deployment guide](deployment-vdi-microsoft-defender-antivirus.md) for how file shares are used in virtual desktop infrastructure (VDI) environments. Platform updates can also be deployed using this method. |
-|Microsoft Endpoint Configuration Manager|You're using Microsoft Endpoint Configuration Manager to update your endpoints.|
+|Microsoft Configuration Manager|You're using Microsoft Configuration Manager to update your endpoints.|
 |Security intelligence updates and platform updates for Microsoft Defender Antivirus and other Microsoft anti-malware (formerly referred to as MMPC)|[Make sure devices are updated to support SHA-2](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus). Microsoft Defender Antivirus Security intelligence and platform updates are delivered through Windows Update. As of October 21, 2019, security intelligence updates and platform updates are SHA-2 signed exclusively. <br/>Download the latest protection updates because of a recent infection or to help provision a strong, base image for [VDI deployment](deployment-vdi-microsoft-defender-antivirus.md). This option should be used only as a final fallback source, and not the primary source. It's only to be used if updates can't be downloaded from Windows Server Update Service or Microsoft Update for [a specified number of days](manage-outdated-endpoints-microsoft-defender-antivirus.md#set-the-number-of-days-before-protection-is-reported-as-out-of-date).|
 
-You can manage the order in which update sources are used with Group Policy, Microsoft Endpoint Configuration Manager, PowerShell cmdlets, and WMI.
+You can manage the order in which update sources are used with Group Policy, Microsoft Configuration Manager, PowerShell cmdlets, and WMI.
 
 > [!IMPORTANT]
-> If you set Windows Server Update Service as a download location, you must approve the updates, regardless of the management tool you use to specify the location. You can set up an automatic approval rule with Windows Server Update Service, which might be useful as updates arrive at least once a day. To learn more, see [synchronize endpoint protection updates in standalone Windows Server Update Service](/configmgr/protect/deploy-use/endpoint-definitions-wsus#to-synchronize-endpoint-protection-definition-updates-in-standalone-wsus).
+> If you set Windows Server Update Service as a download location, you must approve the updates, regardless of the management tool you use to specify the location. You can set up an automatic approval rule with Windows Server Update Service, which might be useful as updates arrive at least once a day. To learn more, see [synchronize endpoint protection updates in standalone Windows Server Update Service](/intune/configmgr/protect/deploy-use/endpoint-definitions-wsus#to-synchronize-endpoint-protection-definition-updates-in-standalone-wsus).
 
 The procedures in this article first describe how to set the order, and then how to set up the Windows File Server - **File share** option if it's enabled.
 
@@ -108,7 +106,7 @@ The procedures in this article first describe how to set the order, and then how
    > - For Windows 10, version 1903, the policy path is **Windows Components > Microsoft Defender Antivirus > Security Intelligence Updates**
 
 1. Edit the **Define the order of sources for downloading security intelligence updates** setting. Set the option to **Enabled**.
-      
+
 1. Specify the order of sources, separated by a single pipe, for example: `InternalDefinitionUpdateServer|MicrosoftUpdateServer|MMPC`, as shown in the following screenshot.
 
    :::image type="content" source="/defender/media/wdav-order-update-sources.png" alt-text="Group policy setting listing the order of sources" lightbox="/defender/media/wdav-order-update-sources.png":::
@@ -117,16 +115,17 @@ The procedures in this article first describe how to set the order, and then how
 
 1. Edit the **Define file shares for downloading security intelligence updates** setting and then set the option to **Enabled**.
 
-1. On a Windows Server, specify the file share source. If you have multiple sources, specify each source in the order they should be used, separated by a single pipe. Use [standard UNC notation](/openspecs/windows_protocols/ms-dtyp/62e862f4-2a51-452e-8eeb-dc4ff5ee33cc) for denoting the path. For example: `\\WindowsFileServer\share-name\object-name|\\host-name2\share-name\object-name`. 
+1. On a Windows Server, specify the file share source. If you have multiple sources, specify each source in the order they should be used, separated by a single pipe. Use [standard UNC notation](/openspecs/windows_protocols/ms-dtyp/62e862f4-2a51-452e-8eeb-dc4ff5ee33cc) for denoting the path. For example: `\\WindowsFileServer\share-name\object-name|\\host-name2\share-name\object-name`.
 
    If you don't enter any paths, then this source is skipped when the VM downloads updates.
-   
+
 1. Select **OK**. This action sets the order of file shares when that source is referenced in the **Define the order of sources...** group policy setting.
 
+<a name="use-microsoft-endpoint-configuration-manager-to-manage-the-update-location"></a>
 
-## Use Microsoft Endpoint Configuration Manager to manage the update location
+## Use Microsoft Configuration Manager to manage the update location
 
-See [Configure Security intelligence Updates for Endpoint Protection](/configmgr/protect/deploy-use/endpoint-definition-updates) for details on configuring Microsoft Endpoint Configuration Manager (current branch).
+See [Configure Security intelligence Updates for Endpoint Protection](/intune/configmgr/protect/deploy-use/endpoint-definition-updates) for details on configuring Microsoft Configuration Manager (current branch).
 
 ## Use PowerShell cmdlets to manage the update location
 
@@ -144,7 +143,7 @@ For more information, see the following articles:
 - [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md)
 - [Defender Antivirus cmdlets](/powershell/module/defender/index)
 
-## Use Windows Management Instruction (WMI) to manage the update location
+## Use Windows Management Instrumentation (WMI) to manage the update location
 
 Use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class for the following properties:
 
@@ -273,7 +272,7 @@ On a Windows File Server set up a network file share (UNC/mapped drive) to downl
 1. Set the share location in the policy to the share.
 
     > [!NOTE]
-    > Do not add the x64 (or x86) folder in the path. The `mpcmdrun.exe` process adds it automatically.
+    > Don't add the x64 (or x86) folder in the path. The `MpCmdRun.exe` process adds it automatically.
 
 ## Enable platform updates using UNC share
 
@@ -281,24 +280,24 @@ To enable platform updates using UNC share, download KB4052623 and copy it into 
 
 KB4052623 is available for the following architectures:
 
-* [x86](https://go.microsoft.com/fwlink/?LinkID=870379&clcid=0x409&arch=x86)
+- [x86](https://go.microsoft.com/fwlink/?LinkID=870379&clcid=0x409&arch=x86)
 
-* [amd64](https://go.microsoft.com/fwlink/?LinkID=870379&clcid=0x409&arch=x64)
+- [amd64](https://go.microsoft.com/fwlink/?LinkID=870379&clcid=0x409&arch=x64)
 
-* [arm64](https://go.microsoft.com/fwlink/?LinkID=851034&clcid=0x409&arch=arm64) 
+- [arm64](https://go.microsoft.com/fwlink/?LinkID=851034&clcid=0x409&arch=arm64)
 
-**Example structure**
+**Example structure**:
 
 ```dos
-[UNC Share]\ 
-    x86\ 
-       mpam-fe.exe 
-       mpam-d.exe 
-       updateplatform.exe 
-    x64\ 
-       mpam-fe.exe 
-       mpam-d.exe 
-       updateplatform.exe 
+[UNC Share]\
+    x86\
+       mpam-fe.exe
+       mpam-d.exe
+       updateplatform.exe
+    x64\
+       mpam-fe.exe
+       mpam-d.exe
+       updateplatform.exe
 ```
 
 ## Related articles
@@ -309,6 +308,3 @@ KB4052623 is available for the following architectures:
 - [Manage event-based forced updates](manage-event-based-updates-microsoft-defender-antivirus.md)
 - [Manage updates for mobile devices and VMs](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)
 - [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-windows.md)
-
-
-

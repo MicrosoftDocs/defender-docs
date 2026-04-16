@@ -1,16 +1,10 @@
 ---
 title: Report spam, non-spam, phishing, suspicious emails and files to Microsoft
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.date: 02/24/2025
-audience: ITPro
 ms.topic: overview
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
 ms.assetid: c31406ea-2979-4fac-9288-f835269b9d2f
 ms.collection: 
   - m365-security
@@ -49,6 +43,9 @@ Watch this video that shows more information about the unified submissions exper
 |[The built-in Report button in supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook)|User||
 |[The Submissions page in the Microsoft Defender portal](submissions-admin.md)|Admin|Admins can report good (false positives) and bad (false negative) messages, email attachments, and URLs (entities) from the available tabs on the **Submissions** page. <br><br> Admins can also submit user reported messages from the **User reported** tab on the **Submissions** page to Microsoft for analysis. The **Submissions** page is available only in organizations with cloud mailboxes.|
 |Report messages from quarantine|Admin and User|Admins can [submit quarantined messages to Microsoft for analysis](quarantine-admin-manage-messages-files.md#submit-email-to-microsoft-for-review-from-quarantine) (false positives and false negatives). <br><br> If users are allowed to [release their own messages from quarantine](quarantine-end-user.md#release-quarantined-email), and [user reported settings](submissions-user-reported-messages-custom-mailbox.md) is configured to allow users to report quarantined messages, users can select **Report message as having no threats** (false positive) when they release a quarantined message.|
+
+> [!NOTE]
+> If your organization does not have Microsoft Defender for Office 365, users and admins can still report suspicious emails by submitting them directly through the Microsoft submission portals (for example, the Microsoft malware or phishing submission sites). Forwarding suspicious emails is not a replacement for Defender-based reporting and may not include full message metadata required for analysis.
 
 ## Related reporting settings for admins
 

@@ -1,16 +1,10 @@
 ---
 title: Mail flow intelligence
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: troubleshooting
 ms.custom:
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
 ms.assetid: c29f75e5-c16e-409e-a123-430691e38276
 description: Admins can learn about the error codes that are associated with message delivery using connectors (also known as mail flow intelligence).
 ms.service: defender-office-365

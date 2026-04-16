@@ -2,13 +2,10 @@
 title: Scoped coverage in Microsoft Defender Experts for XDR
 ms.reviewer:
 description: Defender Experts scoped coverage covers a specific section of the organization where SOC support is limited.
-ms.service: defender-experts
-ms.subservice: dex-xdr
+ms.service: defender-experts-for-xdr
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: orspodek
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
@@ -16,7 +13,6 @@ ms.topic: article
 ms.custom: 
 - cx-ti
 - cx-dex
-search.appverid: met150
 ms.date: 08/01/2025
 ---
 

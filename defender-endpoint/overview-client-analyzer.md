@@ -1,22 +1,17 @@
-﻿---
+---
 title:  Troubleshoot sensor health using Microsoft Defender for Endpoint Client Analyzer
 description: Troubleshoot sensor health on devices to identify potential configuration, environment, connectivity, or telemetry issue affecting sensor data or capability.
 ms.service: defender-endpoint
-f1.keywords:
-- NOCSH
 ms.author: chrisda
 author: chrisda
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-ngp
 ms.topic: troubleshooting-general
 ms.subservice: ngp
-search.appverid: met150
 ms.date: 06/10/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -60,7 +55,7 @@ For more information about our privacy statement, see [Microsoft Privacy Stateme
 
 - Before running the analyzer, we recommend ensuring your proxy or firewall configuration allows access to [Microsoft Defender for Endpoint service URLs](configure-environment.md#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server).
 
-- The analyzer can run on supported editions of [Windows](minimum-requirements.md#windows-versions-supported-by-defender-for-endpoint), [Linux](/defender-endpoint/mde-linux-prerequisites), or [macOS](microsoft-defender-endpoint-mac-prerequisites.md#system-requirements) either before of after onboarding to Microsoft Defender for Endpoint.
+- The analyzer can run on supported editions of [Windows](minimum-requirements.md#windows-versions-supported-by-defender-for-endpoint), [Linux](mde-linux-prerequisites.md), or [macOS](microsoft-defender-endpoint-mac-prerequisites.md#system-requirements) either before of after onboarding to Microsoft Defender for Endpoint.
 
 - For Windows devices, if you're running the analyzer directly on specific machines and not remotely via [Live Response](troubleshoot-collect-support-log.md), then SysInternals [PsExec.exe](/sysinternals/downloads/psexec) should be allowed (at least temporarily) to run. The analyzer calls into PsExec.exe tool to run cloud connectivity checks as Local System and emulate the behavior of the SENSE service.
 

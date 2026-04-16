@@ -1,16 +1,10 @@
 ---
 title: Configuration analyzer for threat policies
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.reviewer:
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
 ms.assetid:
 ms.collection:
   - m365-security

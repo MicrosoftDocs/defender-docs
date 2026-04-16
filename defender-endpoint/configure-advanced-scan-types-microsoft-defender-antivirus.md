@@ -7,7 +7,6 @@ author: chrisda
 ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: pahuijbr
-manager: bagol
 ms.subservice: ngp
 ms.date: 10/20/2025
 appliesto:
@@ -18,7 +17,6 @@ ms.collection:
 - tier2
 - mde-ngp
 ms.topic: how-to
-search.appverid: met150
 ---
 
 # Configure Microsoft Defender Antivirus scanning options
@@ -26,7 +24,7 @@ search.appverid: met150
 
 ## Use Microsoft Intune to configure scanning options
 
-For more information, see [Configure device restriction settings in Microsoft Intune](/mem/intune/configuration/device-restrictions-configure) and [Microsoft Defender Antivirus device restriction settings for Windows 10 in Intune](/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus).
+For more information, see [Configure device restriction settings in Microsoft Intune](/intune/intune-service/configuration/device-restrictions-configure) and [Microsoft Defender Antivirus device restriction settings for Windows 10 in Intune](/intune/intune-service/configuration/device-restrictions-windows-10#microsoft-defender-antivirus).
 
 
 ## Prerequisites
@@ -37,7 +35,7 @@ For more information, see [Configure device restriction settings in Microsoft In
 
 ## Use Microsoft Configuration Manager to configure scanning options
 
-For details on configuring Microsoft Configuration Manager (current branch), see [How to create and deploy anti-malware policies: Scan settings](/configmgr/protect/deploy-use/endpoint-antimalware-policies#scan-settings).
+For details on configuring Microsoft Configuration Manager (current branch), see [How to create and deploy anti-malware policies: Scan settings](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#scan-settings).
 
 ## Use Group Policy to configure scanning options
 
@@ -74,7 +72,7 @@ For details on configuring Microsoft Configuration Manager (current branch), see
 |Specify the maximum CPU load (as a percentage) during a scan. <p> **Scan** > **Specify the maximum percentage of CPU utilization during a scan**|50|`-ScanAvgCPULoadFactor`<br/><br/> The maximum CPU load isn't a hard limit, but is guidance for the scanning engine to not exceed the maximum on average. Manual scans ignore this setting and run without any CPU limits.|
 |Specify the maximum size (in kilobytes) of archive files that should be scanned.<br/>**Scan** > **Specify the maximum size of archive files to be scanned**|No limit|Not available <br/><br/>The default value of 0 applies no limit|
 |Configure low CPU priority for scheduled scans<br/>**Scan** > **Configure low CPU priority for scheduled scans**|Disabled|Not available|
-|Configure scanning of network files <br/>**Scan** > **Configure scanning of network files**|Enabled|-DisableScanningNetworkFiles|
+|Configure scanning of network files <br/>**Scan** > **Configure scanning of network files**|Disabled|-DisableScanningNetworkFiles|
 |CPU throttling type <br/>**Scan** > **CPU throttling type**|Disabled|-ThrottleForScheduledScanOnly |
 |Scan excluded files and directories during quick scan <br/>**Scan** > **Scan excluded files and directories during quick scan**|Disabled|Not available|
 

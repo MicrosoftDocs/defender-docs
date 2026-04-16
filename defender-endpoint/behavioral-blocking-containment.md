@@ -1,11 +1,9 @@
-﻿---
+---
 title: Behavioral blocking and containment
 description: Learn about behavioral blocking and containment capabilities at Microsoft Defender for Endpoint
 author: limwainstein
 ms.author: lwainstein
-manager: bagol
 ms.reviewer: shwetaj
-audience: ITPro
 ms.topic: concept-article
 ms.service: defender-endpoint
 ms.subservice: edr
@@ -14,7 +12,6 @@ ms.custom: admindeeplinkDEFENDER
 ms.collection: 
 - m365-security
 - tier2
-search.appverid: met150
 ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -116,7 +113,7 @@ This example shows that with behavioral blocking and containment capabilities, t
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
