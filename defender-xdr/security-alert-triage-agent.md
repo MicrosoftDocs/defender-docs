@@ -61,7 +61,6 @@ The Security Alert Triage Agent currently supports these alert types in Microsof
 
 To run the **Security Alert Triage Agent** in your environment, you must meet the following prerequisites.
 
----
 
 ## General prerequisites (all workloads)
 
@@ -91,13 +90,10 @@ The Security Alert Triage Agent doesn't classify alerts that you suppress by usi
 
 Make sure to disable tuning rules that suppress the alerts you want the agent to triage.
 
----
 
 ## Workload-specific prerequisites
 
 The following prerequisites depend on the alert types you want the agent to triage.
-
----
 
 ### [Email and collaboration alerts](#tab/email-alerts)
 
@@ -134,8 +130,6 @@ For more information, see [Alert policies in the Microsoft Defender portal](aler
 > The Security Alert Triage Agent doesn't classify alerts suppressed by [alert tuning](investigate-alerts.md#tune-an-alert).  
 > Make sure to disable the **Auto-Resolve – Email reported by user as malware or phish** built-in alert tuning rule and any custom tuning rules that suppress this alert.
 
----
-
 ### [Cloud container alerts](#tab/cloud-alerts)
 
 #### Products and licenses
@@ -143,8 +137,6 @@ For more information, see [Alert policies in the Microsoft Defender portal](aler
 - [Microsoft Defender for Containers (part of Microsoft Defender for Cloud)](/azure/defender-for-cloud/defender-for-containers-deployment-overview)
 
 No additional configuration is required beyond the general prerequisites.
-
----
 
 ### [Identity alerts](#tab/identity-alerts)
 
