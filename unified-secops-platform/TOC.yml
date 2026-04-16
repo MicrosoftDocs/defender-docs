@@ -98,6 +98,8 @@
               href: mto-overview.md
             - name: MSSP deployment guide
               href: playbook-managed-security.md
+            - name: Configure delegated access with governance relationships
+              href: governance-relationships.md
             - name: Set up multitenant management
               href: mto-requirements.md
             - name: View and manage incidents and alerts
