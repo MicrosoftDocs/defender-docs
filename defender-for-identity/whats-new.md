@@ -26,7 +26,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## March 2026
 
-### Sensor v3.x support for domain controllers with additional identity roles
+### Sensor v3.x support for domain controllers with Microsoft Entra Connect identity roles
 
 Defender for Identity sensor v3.x now supports domain controllers that run Microsoft Entra Connect, including detections and identity security posture management (ISPM) recommendations.
 Detections and ISPM recommendations for additional identity roles, including AD FS and AD CS, will become available soon. 
