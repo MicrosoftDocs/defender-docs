@@ -2,7 +2,7 @@
 title: Set up Microsoft Defender Experts for Servers
 description: Learn how to set up Microsoft Defender Experts for Servers by selecting coverage, granting permissions, and configuring notifications in the Microsoft Defender portal.
 ms.service: defender-experts
-ms.subservice: dex-servers
+ms.subservice: dex-xdr
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
