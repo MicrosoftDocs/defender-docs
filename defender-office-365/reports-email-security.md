@@ -1,16 +1,9 @@
 ---
 title: View email security reports
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.assetid: 3a137e28-1174-42d5-99af-f18868b43e86
 ms.collection:
   - m365-security
@@ -21,7 +14,7 @@ ms.custom:
 ms.service: defender-office-365
 ms.date: 07/08/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -455,7 +448,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 
 - **Date (UTC)** **Start date** and **End date**.
 - **Detection**: The same values as in the chart.
-- **Protected by**: **MDO** (Defender for Office 365) and **EOP**.
+- **Protected by**: **MDO** (Defender for Office 365) and **EOP** ([the built-in security features for all cloud mailboxes](eop-about.md)).
 - **Tag**: Leave the value **All** or remove it, double-click in the empty box, and then select **Priority account**. For more information about user tags, see [User tags](user-tags-about.md).
 - **Direction**: Leave the value **All** or remove it, double-click in the empty box, and then select **Inbound**, **Outbound**, or **Intra-org**.
 - **Domain**: Leave the value **All** or remove it, double-click in the empty box, and then select an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
@@ -523,7 +516,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 - **Detection**: The same values as in the chart.
 - **Priority account protection**: **Yes** and **No**. For more information, see [Configure and review priority account protection in Microsoft Defender for Office 365](priority-accounts-turn-on-priority-account-protection.md).
 - **Evaluation**: **Yes** or **No**.
-- **Protected by**: **MDO** (Defender for Office 365) and **EOP**
+- **Protected by**: **MDO** (Defender for Office 365) and **EOP** ([the built-in security features for all cloud mailboxes](eop-about.md)).
 - **Direction**: Leave the value **All** or remove it, double-click in the empty box, and then select **Inbound**, **Outbound**, or **Intra-org**.
 - **Tag**: Leave the value **All** or remove it, double-click in the empty box, and then select **Priority account**. For more information about user tags, see [User tags](user-tags-about.md).
 - **Domain**: Leave the value **All** or remove it, double-click in the empty box, and then select an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
@@ -658,7 +651,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 - **Detection**: The same values as in the chart.
 - **Priority account protection**: **Yes** and **No**. For more information, see [Configure and review Priority accounts in Microsoft Defender for Office 365](priority-accounts-turn-on-priority-account-protection.md).
 - **Evaluation**: **Yes** or **No**.
-- **Protected by**: **MDO** (Defender for Office 365) and **EOP**
+- **Protected by**: **MDO** (Defender for Office 365) and **EOP** ([the built-in security features for all cloud mailboxes](eop-about.md)).
 - **Direction**: Leave the value **All** or remove it, double-click in the empty box, and then select **Inbound**, **Outbound**, or **Intra-org**.
 - **Tag**: Leave the value **All** or remove it, double-click in the empty box, and then select **Priority account**. For more information about user tags, see [User tags](user-tags-about.md).
 - **Domain**: Leave the value **All** or remove it, double-click in the empty box, and then select an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
@@ -719,7 +712,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 - **Detection**: Detection technology values as previously described in this article and at [Detection technologies](/office/office-365-management-api/office-365-management-activity-api-schema#detection-technologies).
 - **Priority account protection**: **Yes** and **No**. For more information, see [Configure and review Priority accounts in Microsoft Defender for Office 365](priority-accounts-turn-on-priority-account-protection.md).
 - **Evaluation**: **Yes** or **No**.
-- **Protected by**: **MDO** (Defender for Office 365) and **EOP**
+- **Protected by**: **MDO** (Defender for Office 365) and **EOP** ([the built-in security features for all cloud mailboxes](eop-about.md)).
 - **Direction**: Leave the value **All** or remove it, double-click in the empty box, and then select **Inbound**, **Outbound**, or **Intra-org**.
 - **Tag**: Leave the value **All** or remove it, double-click in the empty box, and then select **Priority account**. For more information about user tags, see [User tags](user-tags-about.md).
 - **Domain**: Leave the value **All** or remove it, double-click in the empty box, and then select an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
@@ -806,7 +799,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 - **Threat classification**: Leave the value **All** or remove it, double-click in the empty box, and then select an available value.
 - **Priority account protection**: **Yes** and **No**. For more information, see [Configure and review priority account protection in Microsoft Defender for Office 365](priority-accounts-turn-on-priority-account-protection.md).
 - **Evaluation**: **Yes** or **No**.
-- **Protected by**: **MDO** (Defender for Office 365) and **EOP**
+- **Protected by**: **MDO** (Defender for Office 365) and **EOP** ([the built-in security features for all cloud mailboxes](eop-about.md)).
 - **Direction**: Leave the value **All** or remove it, double-click in the empty box, and then select **Inbound**, **Outbound**, or **Intra-org**.
 - **Tag**: Leave the value **All** or remove it, double-click in the empty box, and then select **Priority account**. For more information about user tags, see [User tags](user-tags-about.md).
 - **Domain**: Leave the value **All** or remove it, double-click in the empty box, and then select an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
@@ -868,7 +861,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 
 - **Date (UTC)** **Start date** and **End date**
 - **Detection**: Detection technology values as previously described in this article and at [Detection technologies](/office/office-365-management-api/office-365-management-activity-api-schema#detection-technologies).
-- **Protected by**: **MDO** (Defender for Office 365) and **EOP**
+- **Protected by**: **MDO** (Defender for Office 365) and **EOP** ([the built-in security features for all cloud mailboxes](eop-about.md)).
 - **Direction**: Leave the value **All** or remove it, double-click in the empty box, and then select **Inbound**, **Outbound**, or **Intra-org**.
 - **Tag**: Leave the value **All** or remove it, double-click in the empty box, and then select **Priority account**. For more information about user tags, see [User tags](user-tags-about.md).
 - **Domain**: Leave the value **All** or remove it, double-click in the empty box, and then select an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).

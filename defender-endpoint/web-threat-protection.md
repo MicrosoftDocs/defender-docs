@@ -1,14 +1,11 @@
-﻿---
+---
 title: Protect your organization against web threats
 description: Learn about web protection in Microsoft Defender for Endpoint and how it can protect your organization.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
 ms.date: 07/25/2024
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -54,5 +51,5 @@ The legacy **Web protection** policy in Intune has been deprecated and web threa
 - [Monitor web security](web-protection-monitoring.md)
 - [Respond to web threats](web-protection-response.md)
 - [Network protection](network-protection.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

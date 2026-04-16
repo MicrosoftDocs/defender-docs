@@ -1,12 +1,10 @@
-﻿---
+---
 title: Get browser extensions permission info
 description: Retrieves a list of all permissions required for a browser extension
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
@@ -14,7 +12,6 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 11/10/2025
 appliesto:
   - Microsoft Defender for Endpoint

@@ -1,13 +1,11 @@
-﻿---
+---
 title: Visit the Action center to see remediation actions
 description: Use the action center to view details and results following an automated investigation
 ms.service: defender-endpoint
 ms.subservice: edr
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -15,7 +13,6 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
 ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs
-search.appverid: met150
 ms.date: 03/26/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
@@ -47,7 +44,7 @@ The unified Action center brings together remediation actions across Defender fo
 
 You can use the unified Action center if you have appropriate permissions and one or more of the following subscriptions:
 
-- [Microsoft Defender XDR](/microsoft-365/security/mtp/microsoft-threat-protection)
+- [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)
 - [Defender for Endpoint](microsoft-defender-endpoint.md)
 - [Defender for Office 365](/defender-office-365/mdo-about)
 - [Defender for Business](/defender-business/mdb-overview)
@@ -87,5 +84,5 @@ To get to the unified Action center in the improved Microsoft Defender portal:
 
 - [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

@@ -1,20 +1,17 @@
-﻿---
+---
 title: Overview of indicators in Microsoft Defender for Endpoint
 description: Create indicators for a file hash, IP address, URLs, or domains that define the detection, prevention, and exclusion of entities.
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
 ms.reviewer: ericlaw
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-edr
 ms.topic: concept-article
 ms.subservice: edr
-search.appverid: met150
 ms.date: 04/08/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -52,7 +49,7 @@ You can use IP and URL/Domain indicators to manage site access.
 
 To block connections to an IP address, type the IPv4 address in dotted-quad form (for example, `8.8.8.8`). For IPv6 addresses, specify all eight segments (for example, `2001:4860:4860:0:0:0:0:8888`). Note that wildcards and ranges aren't supported.
 
-To block connections to a domain and any of its subdomains, specify the domain (for example, `contoso.com`). This indicator matches `contoso.com` as well as `sub.contoso.com` and `anything.sub.example.com`.
+To block connections to a domain and any of its subdomains, specify the domain (for example, `contoso.com`). This indicator matches `contoso.com` as well as `sub.contoso.com` and `anything.sub.contoso.com`.
 
 To block a specific URL path, specify the URL path (for example, `https://contoso.com/block`). This indicator matches resources under the `/block` path on `contoso.com`. Note that HTTPS URL paths will only be matched in Microsoft Edge; HTTP URL paths can be matched in any browser.
 
@@ -175,5 +172,5 @@ Customers might experience issues with alerts for IoCs. The following scenarios 
 - [Use partner integrated solutions](partner-applications.md)
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

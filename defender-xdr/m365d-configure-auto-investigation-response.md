@@ -1,11 +1,8 @@
 ---
 title: Configure automated investigation and response capabilities in Microsoft Defender XDR
 description: Configure automated investigation and response with self-healing in Microsoft Defender XDR
-search.appverid: MET150
 ms.author: guywild
 author: guywi-ms
-manager: dansimp
-audience: ITPro
 ms.topic: how-to
 ms.service: defender-xdr
 ms.localizationpriority: medium
@@ -17,7 +14,6 @@ ms.custom:
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
-f1.keywords: CSH
 #customer intent: As a SOC analyst, I want to configure automated investigation and response capabilities in Microsoft Defender XDR
 ---
 
@@ -45,14 +41,11 @@ Then, after you're all set up, you can [view and manage remediation actions in t
 |Network requirements|<ul><li>[Microsoft Defender for Identity](/azure-advanced-threat-protection/what-is-atp) enabled</li><li>[Microsoft Defender for Cloud Apps](/cloud-app-security/what-is-cloud-app-security) configured</li><li>[Microsoft Defender for Identity integration](/cloud-app-security/mdi-integration)</li></ul>|
 |Windows device requirements|<ul><li>Windows 11</li><li>Windows 10, version 1709 or later installed (See [Windows release information](/windows/release-information/))</li><li>The following threat protection services are configured:<ul><li>[Microsoft Defender for Endpoint](/defender-endpoint/onboard-windows-client)</li><li>[Microsoft Defender Antivirus](/windows/security/threat-protection/windows-defender-antivirus/configure-windows-defender-antivirus-features)</li></ul></li></ul>|
 |Protection for email content and Office files|<ul><li>[Microsoft Defender for Office 365 is configured](/defender-office-365/mdo-deployment-guide#step-2-configure-protection-policies)</li><li>[Automated investigation and remediation capabilities in Defender for Endpoint are configured](/defender-endpoint/configure-automated-investigations-remediation) (required for manual response actions, such as deleting email messages on devices)</li></ul>|
-|Permissions|To configure automated investigation and response capabilities, you must have one of the following roles assigned in either Microsoft Entra ID (<https://portal.azure.com>) or in the Microsoft 365 admin center (<https://admin.microsoft.com>): <ul><li>Global Administrator</li><li>Security Administrator</li></ul>To work with automated investigation and response capabilities, such as by reviewing, approving, or rejecting pending actions, see [Required permissions for Action center tasks](m365d-action-center.md#required-permissions-for-action-center-tasks).|
-
-> [!NOTE]
-> Microsoft recommends using roles with fewer permissions for better security. The Global Administrator role, which has many permissions, should only be used in emergencies when no other role fits.
+|Permissions|To configure automated investigation and response capabilities, you must have one of the following roles assigned in either Microsoft Entra ID (<https://portal.azure.com>) or in the Microsoft 365 admin center (<https://admin.microsoft.com>): <ul><li>Security Administrator or higher</li></ul>To work with automated investigation and response capabilities, such as by reviewing, approving, or rejecting pending actions, see [Required permissions for Action center tasks](m365d-action-center.md#required-permissions-for-action-center-tasks).|
 
 ## Review or change the automation level for device groups
 
-Whether automated investigations run, and whether remediation actions are taken automatically or only upon approval for your devices depend on certain settings, such as your organization's device group policies. Review the configured automation level for your device group policies. You must be a global administrator or security administrator to perform the following procedure:
+Whether automated investigations run, and whether remediation actions are taken automatically or only upon approval for your devices depend on certain settings, such as your organization's device group policies. Review the configured automation level for your device group policies. You must be at least a security administrator to perform the following procedure:
 
 1. Go to the Microsoft Defender portal at <https://security.microsoft.com> and sign in.
 
@@ -69,9 +62,9 @@ Microsoft provides built-in [alert policies](alert-policies.md) that help identi
 
 Although certain alerts and security policies can trigger automated investigations, *no remediation actions are taken automatically for email and content*. Instead, all remediation actions for email and email content await approval by your security operations team in the [Action center](m365d-action-center.md).
 
-Security settings in Exchange Online Protection (EOP) and Defender for Office 365 help protect email and content. We recommend using the Standard and Strict [preset security policies](/defender-office-365/preset-security-policies#preset-security-policies-in-eop-and-microsoft-defender-for-office-365) to assign protection to users.
+[The built-in security features for all cloud mailboxes](/defender-office-365/eop-about) and Defender for Office 365 help protect email and content. We recommend using the Standard and Strict [preset security policies](/defender-office-365/preset-security-policies#preset-security-policies-in-eop-and-microsoft-defender-for-office-365) to assign protection to users.
 
-If you're using custom policies, use the [Configuration analyzer](/defender-office-365/configuration-analyzer-for-security-policies) to compare your policy settings to the Standard and Strict preset security policy settings. For a detailed listing of all policy settings, see the tables in [Recommended settings for EOP and Microsoft Defender for Office 365 security](/defender-office-365/recommended-settings-for-eop-and-office365).
+If you're using custom policies, use the [Configuration analyzer](/defender-office-365/configuration-analyzer-for-security-policies) to compare your policy settings to the Standard and Strict preset security policy settings. For a detailed listing of all policy settings, see the tables in [Recommended email and collaboration threat policy settings for cloud organizations](/defender-office-365/recommended-settings-for-eop-and-office365).
 
 You can review your [alert policies](/defender-office-365/alert-policies-defender-portal) in the Defender portal at <https://security.microsoft.com> \> **Policies & rules** \> **Alert policy** or directly at <https://security.microsoft.com/alertpoliciesv2>. Several default alert policies are in the **Threat management** category. Some of the alert policies in the **Threat management** category can trigger automated investigation and response. To learn more, see [Threat management alert policies](alert-policies.md#threat-management-alert-policies).
 

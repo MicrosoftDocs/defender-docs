@@ -1,13 +1,11 @@
-﻿---
+---
 title: Manual deployment for Microsoft Defender for Endpoint on macOS
 description: Install Microsoft Defender for Endpoint on macOS manually, from the command line.
 ms.service: defender-endpoint
 author: paulinbar
 ms.author: painbar
 ms.reviewer: joshbregman
-manager: bagol
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
@@ -15,7 +13,6 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: install-set-up-deploy
 ms.subservice: macos
-search.appverid: met150
 ms.date: 05/01/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -234,8 +231,6 @@ For information on troubleshooting procedures, see:
 See [Uninstalling](mac-resources.md#uninstalling) for details on how to remove Microsoft Defender for Endpoint on macOS from client devices.
 
 > [!TIP]
->
-> - Do you want to learn more? Engage with the Microsoft Security community in our Tech Community: [Microsoft Defender for Endpoint Tech Community](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/bd-p/MicrosoftDefenderATP).
 > - If you have any feedback that you like to share, submit it by opening Microsoft Defender Endpoint on macOS on your device and navigate to **Help** \> **Send feedback**.
 
 ## Recommended content

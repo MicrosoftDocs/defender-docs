@@ -1,12 +1,10 @@
-﻿---
+---
 title: Use Microsoft Defender for Endpoint sensitivity labels to protect your data and prioritize security incident response
 description: Learn how to use Defender for Endpoint sensitivity labels to protect, prioritize, and investigate incidents that involve data loss, dlp, security incidents.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - ContentEngagementFY23
@@ -14,7 +12,6 @@ ms.collection:
  - EngageScoreSep2022
 ms.topic: how-to
 ms.subservice: edr
-search.appverid: met150
 ms.date: 03/26/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -69,5 +66,5 @@ Learn how to use data sensitivity labels to prioritize incident investigation.
 - [Learn about sensitivity labels in Office 365](/Microsoft-365/compliance/sensitivity-labels)
 - [Learn to apply sensitivity label inside of email or Office](https://support.microsoft.com/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)
 - [Learn how to use sensitivity labels as a condition when applying Data Loss Prevention](/Microsoft-365/compliance/dlp-sensitivity-label-as-condition)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

@@ -1,16 +1,10 @@
 ---
 title: Manage allows and blocks in the Tenant Allow/Block List
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 01/08/2025
-search.appverid:
-- MET150
 ms.collection:
 - m365-security
 - tier1
@@ -18,7 +12,7 @@ ms.custom:
 description: Learn about allow entries and block entries in the Tenant Allow/Block List in Microsoft 365.
 ms.service: defender-office-365
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 #customer intent: As an admin, I need to know when to create allow or block entries, their effects, and how to use the Tenant Allow/Block List safely so I can override filtering appropriately.

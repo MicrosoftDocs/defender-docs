@@ -1,20 +1,18 @@
-﻿---
+---
 title: Turn on network protection
 description: Enable network protection with Group Policy, PowerShell, or Mobile Device Management and Configuration Manager.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 01/05/2026
+ms.date: 03/09/2026
 ms.topic: how-to
-author: KesemSharabi
-ms.author: kesharab
+author: paulinbar
+ms.author: painbar
 ms.reviewer: tdoucett
-manager: bagol
 ms.subservice: asr
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -25,7 +23,7 @@ appliesto:
 
 [Network protection](network-protection.md) helps to prevent users from using any application to access dangerous domains that might host phishing scams, exploits, and other malicious content on the internet. You can [audit network protection](evaluate-network-protection.md) in a test environment to view which apps would be blocked before enabling network protection.
 
-[Learn more about network filtering configuration options.](/mem/intune/protect/endpoint-protection-windows-10#network-filtering)
+[Learn more about network filtering configuration options.](/intune/intune-service/protect/endpoint-protection-windows-10#network-filtering)
 
 ## Prerequisites
 
@@ -125,122 +123,42 @@ To enable network protection, you can use any of the methods described in this a
 
 #### Microsoft Defender for Endpoint Baseline method
 
-1. In the Microsoft Intune admin center at <https://intune.microsoft.com>, go to **Endpoint security** \> **Overview** section \> **Security baselines**. Or, to go directly to the **Endpoint security \| Security baselines** page, use <https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/SecurityManagementMenu/~/securityBaselines>.
+> [!IMPORTANT]
+> Security baselines apply a broad set of Microsoft-recommended settings to your devices — network protection is one setting among many. If your devices aren't already baseline-managed, deploying a baseline solely to enable network protection will enforce all other baseline settings too, which may conflict with your existing configurations. To configure only network protection, use the [Antivirus policy method](#antivirus-policy-method) or [Device configuration profile method](#device-configuration-profile-method) instead.
 
-2. On the **Endpoint security \| Security baselines** page, select **Microsoft Defender for Endpoint Baseline**.
+To configure network protection as part of a security baseline in Microsoft Intune, see <a href="/intune/intune-service/protect/security-baselines-configure#create-a-profile-for-a-security-baseline" target="_blank">Create a profile for a security baseline</a> (opens in a new tab in the Intune documentation). When creating the profile, use these settings:
 
-3. On the **Microsoft Defender for Endpoint Security Baseline \| Profiles** page, select **Create policy**.
+- **Baseline**: Microsoft Defender for Endpoint Security Baseline
+- **Configuration settings**: Expand **Defender** and set **Enable Network Protection** to **Enabled (block mode)** or **Enabled (audit mode)**
 
-4. On the **Create profile** flyout that opens, select **Create**.
+For more information about security baselines in Microsoft Intune, see [Learn about Intune security baselines for Windows devices](/intune/intune-service/protect/security-baselines).
 
-5. The **Create profile** wizard opens. On the **Basics** tab, configure the following settings:
-   - **Name**: Enter a unique, descriptive name for the policy.
-   - **Description**: Enter an optional description.
-
-   Select **Next**.
-
-6. On the **Configuration settings** tab, expand **Defender** and then select one of the following values for **Enable network protection**:
-   - **Disabled**
-   - **Enabled (block mode)**
-   - **Enable Network Protection**
-
-   Select **Next**.
-
-7. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing [scope tags](/mem/intune/fundamentals/scope-tags). When you're finished, select **Next**.
-
-8. On the **Assignments** tab, configure the following settings:
-   - **Included groups** section: Select one of the following options:
-     - **Add groups**: Select one or more groups to include.
-     - **Add all users**
-     - **Add all devices**
-   - **Excluded groups**: Select **Add groups** to specify groups to exclude.
-
-   When you're finished on the **Assignments** tab, select **Next**.
-
-9. On the **Review + create** tab, review the settings, and then select **Create**.
+After your profile is created and assigned, return to this article to continue with [verification](#check-if-network-protection-is-enabled).
 
 #### Antivirus policy method
 
-1. In the Microsoft Intune admin center at <https://intune.microsoft.com>, go to **Endpoint security** \> **Manage** section \> **Antivirus**. Or, to go directly to the **Endpoint security \| Antivirus** page, use <https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/SecurityManagementMenu/~/antivirus>.
+To configure network protection using a Microsoft Intune Endpoint Security **Antivirus** policy, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
 
-2. In the **AV policies** section of the **Summary** tab of the **Endpoint security \| Antivirus** page, select **Create policy**.
+- **Policy type**: Antivirus
+- **Platform**: Windows
+- **Profile**: Microsoft Defender Antivirus
+- **Configuration settings**: Set **Enable network protection** to **Enabled (block mode)** for enforcement, or **Enabled (audit mode)** to assess impact before enforcement
 
-3. On the **Create a profile** flyout that opens, configure the following settings:
-   - **Platform**: Select **Windows**.
-   - **Profile**: Select **Microsoft Defender Antivirus**.
+For more information about Microsoft Defender Antivirus profiles in Microsoft Intune, see [Antivirus policy for endpoint security](/intune/intune-service/protect/endpoint-security-antivirus-policy).
 
-   Select **Create**.
+After your policy is created and assigned, return to this article to continue with [verification](#check-if-network-protection-is-enabled).
 
-4. The **Create Policy** wizard opens. On the **Basics** tab, configure the following settings:
-   - **Name**: Enter a unique, descriptive name for the policy.
-   - **Description**: Enter an optional description.
+#### Device configuration profile method
 
-   Select **Next**.
+To configure network protection using a Microsoft Intune **Device configuration** profile, see <a href="/intune/intune-service/protect/endpoint-protection-configure#create-a-device-profile-containing-endpoint-protection-settings" target="_blank">Add Endpoint protection settings in Intune</a> (opens in a new tab in the Intune documentation). When creating the profile, use these settings:
 
-5. On the **Configuration settings** tab, select one of the following values for **Enable network protection**:
-   - **Disabled**
-   - **Enabled (block mode)**
-   - **Enable Network Protection**
+- **Platform**: Windows 10 and later
+- **Profile type**: Templates > Endpoint protection
+- **Configuration settings**: Expand **Microsoft Defender Exploit Guard** > **Network filtering** and set **Network protection** to **Enable** or **Audit**
 
-   Select **Next**.
+For more information about the Network protection setting and available values, see [Network filtering settings for endpoint protection](/intune/intune-service/protect/endpoint-protection-windows-10#network-filtering).
 
-6. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing [scope tags](/mem/intune/fundamentals/scope-tags). When you're finished, select **Next**.
-
-7. On the **Assignments** tab, click in the search box or start typing a group name, and then select it from the results.
-
-   You can select **All users** or **All devices**.
-
-   When you select a custom group, you can use that group to include or exclude the group members.
-
-   When you're finished on the **Assignments** tab, select **Next**.
-
-8. On the **Review + create** tab, review your settings, and then select **Save**.
-
-#### Configuration profile method
-
-1. In the Microsoft Intune admin center at <https://intune.microsoft.com>, go to **Devices** \> **Manage devices** section \> **Configuration**. Or, to go directly to the **Devices \| Configuration** page, use <https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/configuration>.
-
-2. On the **Policies** tab of the **Devices \| Configuration** page, select **Create** \> **New policy**.
-
-3. In the **Create a profile** flyout that opens, configure the following settings:
-   - **Platform**: Select **Windows 10 and later**.
-   - **Platform**: Select **Templates**.
-
-   In the **Template name** section that appears, select **Endpoint protection**.
-
-   When you're finished on the **Create a profile** flyout, select **Create**.
-
-4. The **Endpoint protection** wizard opens. On the **Basics** tab, configure the following settings:
-   - **Name**: Enter a unique, descriptive name for the policy.
-   - **Description**: Enter an optional description.
-
-   Select **Next**.
-
-5. On the **Configuration settings** tab, select **Microsoft Defender Exploit Guard** > **Network filtering**.
-
-   Change the **Network protection** value from **Not configured** to **Audit** (for testing and observation) or **Enable**.
-
-   Select **Next**.
-
-6. On the **Assignments** tab, configure the following settings:
-   - **Included groups** section: Select one of the following options:
-     - **Add groups**: Select one or more groups to include.
-     - **Add all users**
-     - **Add all devices**
-   - **Excluded groups**: Select **Add groups** to specify groups to exclude.
-
-   When you're finished on the **Assignments** tab, select **Next**.
-
-7. On the **Applicability rules** tab, create rules as required by configuring the following settings:
-   - **Rule**: Select **Assign profile if** or **Don't assign profile if**.
-   - **Property**: Select **OS edition** or **OS version**.
-   - **Value**:
-     - **OS edition**: Select one or more of the available values.
-     - **OS version**: Enter a beginning version number and an ending version number.
-
-   When you're finished on the **Applicability rules** tab, select **Next**.
-
-8. On the **Review + create** tab, review the settings, and then select **Create**.
+After your profile is created and assigned, return to this article to continue with [verification](#check-if-network-protection-is-enabled) and alternative deployment methods.
 
 ### Mobile device management (MDM)
 
@@ -256,7 +174,7 @@ Use the following procedure to enable network protection on domain-joined comput
 
     *-Or-*
 
-    On a domain-joined Group Policy management computer, open the [Group Policy Management Console](https://technet.microsoft.com/library/cc731212.aspx). Right-click the Group Policy Object you want to configure and select **Edit**.
+    On a domain-joined Group Policy management computer, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console). Right-click the Group Policy Object you want to configure and select **Edit**.
 
 2. In the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
 
@@ -311,7 +229,7 @@ Use the following procedure to enable network protection on domain-joined comput
    |Windows Server version|Commands|
    |---|---|
    |Windows Server 2019 and later|`Set-MpPreference -AllowNetworkProtectionOnWinServer $true`|
-   |Windows Server 2016 <br/> Windows Server 2012 R2 with the [unified agent for Microsoft Defender for Endpoint](/defender-endpoint/enable-network-protection)|`Set-MpPreference -AllowNetworkProtectionDownLevel $true` <br/> `Set-MpPreference -AllowNetworkProtectionOnWinServer $true`|
+   |Windows Server 2016 <br/> Windows Server 2012 R2 with the [unified agent for Microsoft Defender for Endpoint](enable-network-protection.md)|`Set-MpPreference -AllowNetworkProtectionDownLevel $true` <br/> `Set-MpPreference -AllowNetworkProtectionOnWinServer $true`|
 
   > [!IMPORTANT]
   > Disable the "AllowDatagramProcessingOnWinServer" setting. Disabling this setting is important for any roles that generate high volumes of UDP traffic such as Domain Controllers, Windows DNS servers, Windows File Servers, Microsoft SQL servers, Microsoft Exchange servers, and others. Enabling datagram processing in these cases can reduce network performance and reliability. Disabling it helps keep the network stable and ensures better use of system resources in high-demand environments.
@@ -383,4 +301,4 @@ $exploitGuardObject.Put()
 - [Evaluate network protection](evaluate-network-protection.md)
 - [Troubleshoot network protection](troubleshoot-np.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

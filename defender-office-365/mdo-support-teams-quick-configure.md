@@ -1,22 +1,15 @@
 ---
 title: Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.collection:
   - m365-security
   - tier1
 description: Admins who aren't using Microsoft Defender for Office 365 can learn how to quickly set up protection in Microsoft Teams.
 ms.service: defender-office-365
-ms.date: 12/16/2025
+ms.date: 04/07/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
 ---
@@ -45,6 +38,8 @@ This article contains the quick steps to turn on and configure Defender for Offi
 - For more information about licensing requirements, see [Licensing terms](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#licensing-terms).
 
 - Teams integration deployment is part of the overall deployment process of Defender for Office 365. For more information, see [Pilot and deploy Defender for Office 365](/defender-xdr/pilot-deploy-defender-office-365?toc=%2Fdefender-office-365%2FTOC.json&bc=%2Fdefender-office-365%2Fbreadcrumb%2Ftoc.json).
+  
+- Users are also protected with near real-time warnings for known bad links in Microsoft Teams messages, which is on by default. For more information, see [Microsoft Defender for Office 365 support for Microsoft Teams](mdo-support-teams-about.md).
 
 ## Step 1: Verify Safe Attachments integration for Microsoft Teams
 
@@ -77,25 +72,13 @@ For complete instructions, see [Use the Microsoft Defender portal to modify cust
 > [!IMPORTANT]
 > Teams integration is on in the [Built-in protection preset security policy](preset-security-policies.md), but any other Safe Links policies [take precedence](preset-security-policies.md#order-of-precedence-for-preset-security-policies-and-other-threat-policies) over the Built-in protection preset security policy (as shown in the order they're listed on the **Safe Links** page). So, ensure that Teams protection is enabled in these policies.
 
-## Step 3: Verify warnings for unsafe links are shown in Microsoft Teams messages
+<a name="step-3-verify-warnings-for-unsafe-links-are-shown-in-microsoft-teams-messages"></a>
 
-> [!NOTE]
-> Currently, this feature is in Preview, isn't available in all organizations, and is subject to change.
+<a name="step-3-verify-unsafe-link-warnings-in-microsoft-teams-messages"></a>
 
-You need to be assigned permissions before you can do the following procedure. Specifically, you need to be a member of the **Teams Administrator** or **Global Administrator**<sup>\*</sup> roles in [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal).
+<a name="step-4-defender-for-office-365-verify-zero-hour-auto-purge-zap-for-microsoft-teams"></a>
 
-> [!IMPORTANT]
-> <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you typically limit to emergency scenarios or when you can't use a different role.
-
-For more information about near real-time warning messages on known bad links in Microsoft Teams messages, see [Microsoft Defender for Office 365 support for Microsoft Teams](mdo-support-teams-about.md).
-
-1. In the Microsoft Teams admin center, go to the **Message settings** page at <https://admin.teams.microsoft.com/messaging/settings>.
-
-2. On the **Message settings** page, go to the **Messaging safety** section and verify the **Scan messages for unsafe links** toggle is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
-
-:::image type="content" source="media/teams-message-url-warning-on-off.png" alt-text="Screenshot of the Scan messages for unsafe links toggle in the Microsoft Teams admin center." lightbox="media/teams-message-url-warning-on-off.png":::
-
-## Step 4: Defender for Office 365: Verify Zero-hour auto purge (ZAP) for Microsoft Teams
+## Step 3: Defender for Office 365: Verify Zero-hour auto purge (ZAP) for Microsoft Teams
 
 For complete instructions, see [Configure ZAP for Teams protection in Defender for Office 365](mdo-support-teams-about.md#configure-zap-for-teams-protection-in-defender-for-office-365).
 
@@ -108,7 +91,9 @@ For complete instructions, see [Configure ZAP for Teams protection in Defender f
 > [!TIP]
 > When ZAP for Microsoft Teams is turned on, you can use **Exclude these participants** on the **Microsoft Teams protection** page to exclude users from Teams protection. For more information, see [Configure ZAP for Teams protection in Defender for Office 365](mdo-support-teams-about.md#configure-zap-for-teams-protection-in-defender-for-office-365).
 
-## Step 5: Defender for Office 365: Configure user reported settings for Microsoft Teams
+<a name="step-5-defender-for-office-365-configure-user-reported-settings-for-microsoft-teams"></a>
+
+## Step 4: Defender for Office 365: Configure user reported settings for Microsoft Teams
 
 For complete instructions, see [User reported message settings in Microsoft Teams](submissions-teams.md).
 
@@ -132,10 +117,18 @@ For complete instructions, see [User reported message settings in Microsoft Team
 
    If the value is :::image type="icon" source="media/scc-toggle-off.png" border="false"::: **Off**, move the toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**, and then select **Save**.
 
-   :::image type="content" source="media/submissions-teams-turn-on-off-tac-not-security-risk.png" alt-text="Screenshot of the 'Report incorrect security detections' toggle on the Messaging settings page in the Microsoft Teams admin center." lightbox="media/submissions-teams-turn-on-off-tac-not-security-risk.png":::
+   :::image type="content" source="media/submissions-teams-turn-on-off-tac-not-security-risk.png" alt-text="Screenshot of the Report incorrect security detections toggle on the Messaging settings page in the Microsoft Teams admin center." lightbox="media/submissions-teams-turn-on-off-tac-not-security-risk.png":::
 
-7. In the Microsoft Defender portal, go to the **User reported settings** page at <https://security.microsoft.com/securitysettings/userSubmission>.
+7. In the Teams admin center, go to the **Calling settings** page at <https://admin.teams.microsoft.com/one-policy/settings/calling>.
 
-8. On the **User reported settings** page, go to the **Microsoft Teams** section, and verify **Monitor reported messages in Microsoft Teams** is selected.
+8. On the **Calling settings** page, go to the **General** section, find the **Report a call** toggle, and verify the value is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
+
+   If the value is :::image type="icon" source="media/scc-toggle-off.png" border="false"::: **Off**, move the toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**, and then select **Save**.
+
+   :::image type="content" source="media/submissions-teams-turn-on-off-tac-security-risk-call.png" alt-text="Screenshot of the 'Report a call toggle on the Call settings page in the Microsoft Teams admin center." lightbox="media/submissions-teams-turn-on-off-tac-security-risk-call.png":::
+
+9. In the Microsoft Defender portal, go to the **User reported settings** page at <https://security.microsoft.com/securitysettings/userSubmission>.
+
+10. On the **User reported settings** page, go to the **Microsoft Teams** section, and verify **Monitor reported items in Microsoft Teams** is selected.
 
    If it's not selected, select the check box, and then select **Save**.

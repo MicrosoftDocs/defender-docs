@@ -1,33 +1,28 @@
-﻿---
+---
 title: Offboard devices
 description: Onboard Windows devices, servers, non-Windows devices from the Microsoft Defender for Endpoint service
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: article
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Vulnerability Management
   - Microsoft Defender for Business
-
 ---
 
 # Offboard devices
 
+When you offboard a device from Defender for Endpoint, no new detections, vulnerability, or security data are sent to the Microsoft Defender portal. Seven days after offboarding a device, its status changes to [inactive](fix-unhealthy-sensors.md#inactive-devices). Devices that weren't active within the past 30 days are not factored into your organization's [exposure score](/defender-vulnerability-management/tvm-exposure-score).
 
-When you offboard a device from Defender for Endpoint, no new detections, vulnerability, or security data are sent to the Microsoft Defender portal. Seven days after offboarding a device, its status changes to [inactive](/defender-endpoint/fix-unhealthy-sensors#inactive-devices). Devices that weren't active within the past 30 days are not factored into your organization's [exposure score](/defender-vulnerability-management/tvm-exposure-score).
-
-Past data, such as alerts, vulnerabilities, and the device timeline, for an offboarded device is displayed in the Microsoft Defender portal until the [configured retention period](/defender-endpoint/data-storage-privacy#how-long-will-microsoft-store-my-data-what-is-microsofts-data-retention-policy) expires. You also see the device profile (without data) in the device inventory for up to 180 days. To view data for active devices only, you can use filters, such as [sensor health state](/defender-endpoint/machines-view-overview#use-filters-to-customize-the-device-inventory-views), [device tags](/defender-endpoint/machine-tags), or [device groups](/defender-endpoint/machine-groups).
+Past data, such as alerts, vulnerabilities, and the device timeline, for an offboarded device is displayed in the Microsoft Defender portal until the [configured retention period](data-storage-privacy.md#data-retention) expires. You also see the device profile (without data) in the device inventory for up to 180 days. To view data for active devices only, you can use filters, such as [sensor health state](machines-view-overview.md#use-filters-to-customize-the-device-inventory-views), [device tags](machine-tags.md), or [device groups](machine-groups.md).
 
 ## Prerequisites
 
@@ -64,11 +59,11 @@ You can also use other methods, such as:
 
 In the following procedure, steps 1 and 2 are optional if you do not want to see these devices that are retired in the "Device inventory" for 180 days.
 
-1. Create a [device tag](/defender-endpoint/machine-tags), and name the tag `decommissioned`. Assign the tag to the Mac devices that you want to offboard from Defender for Endpoint.
+1. Create a [device tag](machine-tags.md), and name the tag `decommissioned`. Assign the tag to the Mac devices that you want to offboard from Defender for Endpoint.
 
-1. Create a [Device group](/defender-endpoint/machine-groups) and name it something like, `Decommissioned Mac`. Assign this tag to an appropriate user group.
-   
-1. Remove policies for [Tamper Protection](/defender-endpoint/tamperprotection-macos). See [Set preferences on Mac: Tamper protection](/defender-endpoint/mac-preferences#tamper-protection) or use manual configuration.
+1. Create a [Device group](machine-groups.md) and name it something like, `Decommissioned Mac`. Assign this tag to an appropriate user group.
+
+1. Remove policies for [Tamper Protection](tamperprotection-macos.md). See [Set preferences on Mac: Tamper protection](mac-preferences.md#tamper-protection) or use manual configuration.
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), in the navigation pane, select **Settings** > **Endpoints** > **Device management** > **Offboarding**, and then select an operating system to start the offboarding process.
 
@@ -83,7 +78,3 @@ In the following procedure, steps 1 and 2 are optional if you do not want to see
 ## Offboard Android or iOS devices
 
 To offboard an Android or iOS device, uninstall the Microsoft Defender app on the device.
-
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
-

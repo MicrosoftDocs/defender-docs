@@ -1,17 +1,14 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint reports
 description: Access the various reports for devices, protection features, and more in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
 ms.topic: article
-search.appverid: met150
 ms.date: 2/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -112,13 +109,13 @@ The following reports provide in-depth information about events and actions rela
 
 ## Create custom reports using Power BI
 
-You can also create customized reports using Power BI. To create your own report, see [Create custom reports using Power BI](/defender-endpoint/api/api-power-bi).
+You can also create customized reports using Power BI. To create your own report, see [Create custom reports using Power BI](api/api-power-bi.md).
 
 ## Aggregated reporting
 
 You can review all signals collected by Defender for Endpoint by turning on aggregated reporting.
 
-To turn aggregated reporting on, go to **Settings > Endpoints > Advanced features**. Toggle on the **Aggregated reporting** feature. Learn more about [aggregated reporting in Defender for Endpoint](/defender-endpoint/aggregated-reporting).
+To turn aggregated reporting on, go to **Settings > Endpoints > Advanced features**. Toggle on the **Aggregated reporting** feature. Learn more about [aggregated reporting in Defender for Endpoint](aggregated-reporting.md).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

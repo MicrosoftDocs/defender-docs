@@ -1,19 +1,16 @@
-﻿---
+---
 title: Technological partners of Microsoft Defender XDR
 ms.reviewer:
 description: View technological partners of Microsoft Defender XDR to enhance detection, investigation, and threat intelligence capabilities of the platform.
 ms.service: defender-endpoint
 ms.subservice: reference
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: article
-search.appverid: met150
 ms.date: 06/03/2025
 appliesto:
   - Microsoft Defender for Endpoint
@@ -175,5 +172,5 @@ The following are the solution's categories:
 
 - [Connect apps to get visibility and control|Microsoft Docs](/defender-cloud-apps/enable-instant-visibility-protection-and-governance-actions-for-your-apps)
 - [Partner applications in Microsoft Defender for Endpoint|Microsoft Docs](partner-applications.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

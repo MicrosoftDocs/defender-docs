@@ -1,14 +1,12 @@
-﻿---
+---
 title: Web content filtering
 description: Use web content filtering in Microsoft Defender for Endpoint to track and regulate access to websites based on their content categories.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: lwainstein
+author: limwainstein
 ms.reviewer: ericlaw
 ms.localizationpriority: medium
 ms.date: 01/05/2026
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
@@ -16,7 +14,6 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
 ms.subservice: asr
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -212,4 +209,4 @@ Use the time range filter at the top left of the page to select a time period. Y
 - [Respond to web threats](web-protection-response.md)
 - [Requirements for Network Protection](web-content-filtering.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

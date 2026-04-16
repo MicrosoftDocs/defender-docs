@@ -1,12 +1,10 @@
-﻿---
+---
 title: Investigate a user account in Microsoft Defender for Endpoint
 description: Investigate a user account for potential compromised credentials or pivot on the associated user account during an investigation.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -14,7 +12,6 @@ ms.collection:
 ms.topic: how-to
 ms.date: 03/26/2025
 ms.subservice: edr
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -92,11 +89,11 @@ You can filter the results by the following time periods:
 ## Related articles
 
 - [View and organize the Microsoft Defender for Endpoint Alerts queue](alerts-queue.md)
-- [Manage Microsoft Defender for Endpoint alerts](manage-alerts.md)
+- [Manage Microsoft Defender for Endpoint alerts](/defender-xdr/investigate-alerts?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#manage-alerts)
 - [Investigate Microsoft Defender for Endpoint alerts](investigate-alerts.md)
 - [Investigate a file associated with a Defender for Endpoint alert](investigate-files.md)
 - [Investigate devices in the Defender for Endpoint Devices list](investigate-machines.md)
 - [Investigate an IP address associated with a Defender for Endpoint alert](investigate-ip.md)
 - [Investigate a domain associated with a Defender for Endpoint alert](investigate-domain.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

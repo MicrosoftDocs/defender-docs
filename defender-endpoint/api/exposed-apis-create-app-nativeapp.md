@@ -1,14 +1,12 @@
-﻿---
+---
 title: Use Microsoft Defender for Endpoint APIs
 ms.reviewer:
 description: Learn how to design a native Windows app to get programmatic access to Microsoft Defender for Endpoint without a user.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 ms.date: 03/21/2025
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
@@ -16,7 +14,6 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -126,12 +123,21 @@ This page explains how to create a Microsoft Entra application, get an access to
 
 For more information on Microsoft Entra tokens, see [Microsoft Entra tutorial](/azure/active-directory/develop/active-directory-v2-protocols-oauth-client-creds).
 
+> [!NOTE]
+> Microsoft recommends that you use the most secure authentication flow available. The authentication flow described in this procedure requires a very high degree of trust in the application, and carries risks that are not present in other flows. You should only use this flow when other more secure flows, such as managed identities, aren't viable.
+
 ### Using C\#
 
-- Copy/Paste the below class in your application.
-- Use **AcquireUserTokenAsync** method with your application ID, tenant ID, user name, and password to acquire a token.
+> [!TIP]
+> Some Microsoft Defender for Endpoint APIs continue to require access tokens issued for the legacy resource `https://api.securitycenter.microsoft.com`. If the token audience doesn't match the resource expected by the API, requests fail with `403 Forbidden`, even if the API endpoint uses `https://api.security.microsoft.com`. Use `https://api.securitycenter.microsoft.com` as the resource or scope when acquiring tokens.
 
-    ```csharp
+- Copy/Paste the below class in your application.
+- Use **AcquireUserTokenAsync** method with your application ID, tenant ID, user name, and user authentication to acquire a token.
+
+> [!NOTE]
+> Microsoft recommends that you use the most secure authentication flow available. The authentication flow described in the following example requires a very high degree of trust in the application, and carries risks that are not present in other flows. You should only use this flow when other more secure flows, such as managed identities, aren't viable.
+
+```csharp
     namespace WindowsDefenderATP
     {
         using System.Net.Http;
@@ -143,7 +149,7 @@ For more information on Microsoft Entra tokens, see [Microsoft Entra tutorial](/
         {
             private const string Authority = "https://login.microsoftonline.com";
 
-            private const string WdatpResourceId = "https://api.security.microsoft.com";
+            private const string WdatpResourceId = "https://api.securitycenter.microsoft.com";
 
             public static async Task<string> AcquireUserTokenAsync(string username, string password, string appId, string tenantId)
             {
@@ -167,7 +173,7 @@ For more information on Microsoft Entra tokens, see [Microsoft Entra tutorial](/
             }
         }
     }
-    ```
+```
 
 ## Validate the token
 

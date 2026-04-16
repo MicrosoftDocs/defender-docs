@@ -1,16 +1,11 @@
 ---
 title: DeviceTvmBrowserExtensionsKB table in the advanced hunting schema
 description: Learn about the various browser extension details and permission information used in the Microsoft Defender Vulnerability Management browser extensions page in the DeviceTvmBrowserExtensionsKB table in the advanced hunting schema.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3

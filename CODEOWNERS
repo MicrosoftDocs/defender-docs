@@ -1,7 +1,2 @@
-docfx.json                          @microsoftdocs/officedocs-admin
-.openpublishing.build.ps1           @microsoftdocs/officedocs-admin
-.openpublishing.publish.config.json @microsoftdocs/officedocs-admin
-CODEOWNERS                          @microsoftdocs/officedocs-admin
-.acrolinx-config.edn                @microsoftdocs/officedocs-admin
-/defender-for-cloud-apps/           @AbbyMSFT
-/defender-for-identity/             @AbbyMSFT
+# These owners will be the default owners for everything in the repo unless a later match takes precedence
+* @batamig @abbyMSFT @DeCohen @paulinbar @chrisda @limwainstein @orspod @DebLanger @ElazarK @janetjo2510 @EdB-MSFT @guywi-ms @mjcaparas @mberdugo @sbreingold-ms @poliveria @snicklezzz @MicrosoftDocs/msecd-codeowners

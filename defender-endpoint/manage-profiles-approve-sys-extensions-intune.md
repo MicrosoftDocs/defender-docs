@@ -2,162 +2,100 @@
 title: Manage profiles and approve extensions using Intune
 description: Manage profiles and approve extensions using Intune for Microsoft Defender for Endpoint to work properly on macOS.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: how-to
-search.appverid: met150
-ms.date: 04/04/2025
+ms.date: 01/16/2026
 ---
 
 # Manage profiles and approve extensions using Intune
 
-This article describes the procedures to follow to manage profiles properly using the Intune management tool.
+> [!NOTE]
+> Intune policy support for macOS extensions was deprecated in the August 2024 service release (2048). Existing Intune policies with macOS extensions continue to work, but you can't create new policies with macOS extensions in Intune.
+>
+> Instead, use the settings catalog to create new Intune policies for macOS that configure the System Extension payload. For more information, see [Use the Intune settings catalog to configure settings](/intune/intune-service/configuration/settings-catalog).
 
-## Intune
+This article describes how to use the Intune settings catalog to approve the required extensions for macOS policies.
 
-### Intune System Extensions Policy
+## Intune system extensions policy
 
-To approve the system extensions:
+Do the following procedures to approve the required system extensions using the settings catalog.
 
-1. In Intune, select **Manage > Device configuration**, and then select **Manage > Profiles > Create Profile**.
-1. Choose a name for the profile. Change **Platform=macOS** to **Profile type=Extensions**, and then select **Create**.
-1. In the **Basics** tab, give a name to this new profile.
-1. In the **Configuration settings** tab, add the following entries in the **Allowed system extensions** section:
+1. In the Microsoft Intune admin center at <https://intune.microsoft.com>, go to **Devices**.
+2. On the **Devices \| Overview** page, go to the **Manage devices** section \> **Configuration**. Or, to go directly to the **Devices \| Configuration** page, use <https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/configuration>.
+3. On the **Policies** tab of the **Devices \| Configuration** page, select **Create** \> **New Policy**.
+4. In the **Create a profile** flyout that opens, configure the following settings:
+   - **Platform**: Select **macOS**
+   - **Profile type**: Select **Settings catalog**.
 
-   |Bundle identifier  |Team identifier  |
-   |---------|---------|
-   |com.microsoft.wdav.epsext     |    UBF8T346G9     |
-   |com.microsoft.wdav.netext     |    UBF8T346G9     |
+   Select **Create**.
 
-   :::image type="content" source="media/entries-in-configuration-settings-tab.png" alt-text="Adding entries in the Configuration settings tab." lightbox="media/entries-in-configuration-settings-tab.png":::
+5. The **Create profile** wizard opens. On the **Basics** tab, configure the following settings:
+   - **Name**: Enter a unique, descriptive name for the policy.
+   - **Description**: Enter an optional description.
 
-1. In the **Assignments** tab, assign this profile to **All Users & All devices**.
-1. Review and create this configuration profile.
+   When you're finished on the **Create profile** tab, select **Next**.
 
-### Create the custom configuration profile
+6. On the **Configuration settings** tab, select **Add settings**.
 
-The custom configuration profile enables the network extension and grants Full Disk Access to the Endpoint Security system extension.
+   In the **Settings picker** flyout that opens, do the following steps:
 
-1. Save the following content to a file named *sysext.xml*:
+   1. In the search box, enter "allowed system", and then select **Search**.
+   2. In the **Browse by category** section, select the one and only **System Configuration \> System Extensions** result.
+   3. In the new subcategory section that appears, select the check boxes next to both results:
+      - **Allowed System Extension Types**
+      - **Allowed System Extensions**
 
-    ```powershell
-    <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-    <plist version="1">
-        <dict>
-            <key>PayloadUUID</key>
-            <string>7E53AC50-B88D-4132-99B6-29F7974EAA3C</string>
-            <key>PayloadType</key>
-            <string>Configuration</string>
-            <key>PayloadOrganization</key>
-            <string>Microsoft Corporation</string>
-            <key>PayloadIdentifier</key>
-            <string>7E53AC50-B88D-4132-99B6-29F7974EAA3C</string>
-            <key>PayloadDisplayName</key>
-            <string>Microsoft Defender System Extensions</string>
-            <key>PayloadDescription</key>
-            <string/>
-            <key>PayloadVersion</key>
-            <integer>1</integer>
-            <key>PayloadEnabled</key>
-            <true/>
-            <key>PayloadRemovalDisallowed</key>
-            <true/>
-            <key>PayloadScope</key>
-            <string>System</string>
-            <key>PayloadContent</key>
-            <array>
-                <dict>
-                    <key>PayloadUUID</key>
-                    <string>2BA070D9-2233-4827-AFC1-1F44C8C8E527</string>
-                    <key>PayloadType</key>
-                    <string>com.apple.webcontent-filter</string>
-                    <key>PayloadOrganization</key>
-                    <string>Microsoft Corporation</string>
-                    <key>PayloadIdentifier</key>
-                    <string>CEBF7A71-D9A1-48BD-8CCF-BD9D18EC155A</string>
-                    <key>PayloadDisplayName</key>
-                    <string>Approved Network Extension</string>
-                    <key>PayloadDescription</key>
-                    <string/>
-                    <key>PayloadVersion</key>
-                    <integer>1</integer>
-                    <key>PayloadEnabled</key>
-                    <true/>
-                    <key>FilterType</key>
-                    <string>Plugin</string>
-                    <key>UserDefinedName</key>
-                    <string>Microsoft Defender Network Extension</string>
-                    <key>PluginBundleID</key>
-                    <string>com.microsoft.wdav</string>
-                    <key>FilterSockets</key>
-                    <true/>
-                    <key>FilterDataProviderBundleIdentifier</key>
-                    <string>com.microsoft.wdav.netext</string>
-                    <key>FilterDataProviderDesignatedRequirement</key>
-                    <string>identifier &quot;com.microsoft.wdav.netext&quot; and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9</string>
-                </dict>
-                <dict>
-                    <key>PayloadUUID</key>
-                    <string>56105E89-C7C8-4A95-AEE6-E11B8BEA0366</string>
-                    <key>PayloadType</key>
-                    <string>com.apple.TCC.configuration-profile-policy</string>
-                    <key>PayloadOrganization</key>
-                    <string>Microsoft Corporation</string>
-                    <key>PayloadIdentifier</key>
-                    <string>56105E89-C7C8-4A95-AEE6-E11B8BEA0366</string>
-                    <key>PayloadDisplayName</key>
-                    <string>Privacy Preferences Policy Control</string>
-                    <key>PayloadDescription</key>
-                    <string/>
-                    <key>PayloadVersion</key>
-                    <integer>1</integer>
-                    <key>PayloadEnabled</key>
-                    <true/>
-                    <key>Services</key>
-                    <dict>
-                        <key>SystemPolicyAllFiles</key>
-                        <array>
-                            <dict>
-                                <key>Identifier</key>
-                                <string>com.microsoft.wdav.epsext</string>
-                                <key>CodeRequirement</key>
-                                <string>identifier "com.microsoft.wdav.epsext" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9</string>
-                                <key>IdentifierType</key>
-                                <string>bundleID</string>
-                                <key>StaticCode</key>
-                                <integer>0</integer>
-                                <key>Allowed</key>
-                                <integer>1</integer>
-                            </dict>
-                        </array>
-                    </dict>
-                </dict>
-            </array>
-        </dict>
-    </plist>
-    ```
+      A new **System configuration** \> **System Extensions** section with these subsections appears on the **Configuration settings** tab behind the **Settings picker** flyout. You might need to resize the browser window to see them. Or you can close the **Settings picker** flyout.
 
-1. Verify that the above content was copied into the file correctly. From terminal, run the following command and verify that it outputs to the result as shown in the following example:
+      :::image type="content" source="media/intune-macos-settings-catalog-select.png" alt-text="Screenshot of the Configuration settings tab of the Create profile wizard with Allowed System Extension Types and Allowed System Extensions selected." lightbox="media/intune-macos-settings-catalog-select.png":::
 
-   ```powershell-interactive
-   $ plutil -lint sysext.xml
-   sysext.xml: OK
-   ```
+   4. On the **Configuration settings** tab in the **System configuration** \> **System Extensions** section, configure the following settings:
+      - **Allowed System Extensions** subsection:
+        1. Select **+ Edit instance** in the empty entry row.
+        2. In the **Configure instance** flyout that opens, configure the following settings:
+           - **Allowed System Extensions** (bundle identifiers): Enter the following values, one per box:
+             - `com.microsoft.wdav.epsext`
+             - `com.microsoft.wdav.netext`
+           - **Team identifier**: Enter `UBF8T346G9`.
+        3. Select **Save** on the **Configure instance** flyout.
 
-### Deploy this custom configuration profile
+        :::image type="content" source="media/intune-macos-settings-catalog-allowed-system-extensions.png" alt-text="Screenshot of the Configure instance flyout with the required Allowed system extensions values entered." lightbox="media/intune-macos-settings-catalog-allowed-system-extensions.png":::
 
-1. In Intune, select **Manage > Device configuration**, and then select **Manage > Profiles > Create profile**.
-1. Choose a name for the profile. For the **Platform** attribute, set the value as **macOS** and for the **Profile type** attribute, set the value as **Custom**, and then select **Configure**. The file *sysext.xml* is created.
-1. Open the configuration profile and upload the *sysext.xml* file.
-1. Select **OK**.
+      - **Allowed System Extension Types** subsection:
+        1. Select **+ Edit instance** in the empty entry row.
+        2. In the **Configure instance** flyout that opens, configure the following settings:
+           - **Allowed System Extension Types**: Enter the following values, one per box:
+             - `Network`
+             - `EndpointSecurity`
+           - **Team identifier**: Enter `UBF8T346G9`.
+        3. Select **Save** on the **Configure instance** flyout.
 
-   :::image type="content" source="media/deploy-custom-configuration-profile.png" alt-text="Deploying custom configuration profile." lightbox="media/deploy-custom-configuration-profile.png":::
+        :::image type="content" source="media/intune-macos-settings-catalog-allowed-system-extension-types.png" alt-text="Screenshot of the Configure instance flyout with the required Allowed system extension types values entered." lightbox="media/intune-macos-settings-catalog-allowed-system-extension-types.png":::
 
-1. In the **Assignments** tab, assign this profile to **All Users & All devices**.
-1. Review and create this configuration profile.
+   The configured **Allowed System Extensions** and **Allowed System Extension Types** entries are available on the **Configuration settings** tab.
+
+   :::image type="content" source="media/intune-macos-settings-catalog-configured-settings.png" alt-text="Screenshot of the completed Configuration settings tab of the Create profile wizard with the required values for Allowed System Extension Types and Allowed System Extensions." lightbox="media/intune-macos-settings-catalog-configured-settings.png":::
+
+   When you're finished on the **Configuration settings** tab, select **Next**.
+
+7. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing [scope tags](/intune/intune-service/fundamentals/scope-tags).
+
+   When you're finished on the **Scope tags** tab, select **Next**.
+
+8. On the **Assignments** tab, configure the following settings:
+   - **Included groups** section: Select one of the following options:
+     - **Add groups**: Select one or more groups to include.
+     - **Add all users**
+     - **Add all devices**
+   - **Excluded groups**: Select **Add groups** to specify groups to exclude.
+
+   When you're finished on the **Assignments** tab, select **Next**.
+
+9. On the **Review + create** tab, review the settings, select **Previous** or click on the appropriate tab to make changes.
+
+   When you're finished on the **Review + create** tab, select **Create**.

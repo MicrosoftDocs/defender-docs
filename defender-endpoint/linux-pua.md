@@ -1,4 +1,4 @@
-﻿---
+---
 title: Detect and block potentially unwanted applications with Microsoft Defender for Endpoint on Linux
 description: Detect and block Potentially Unwanted Applications (PUA) using Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
@@ -6,15 +6,12 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-linux
 ms.topic: concept-article
 ms.subservice: linux
-search.appverid: met150
 ms.date: 10/11/2024
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -64,5 +61,5 @@ In your enterprise, you can configure PUA protection from a management console, 
 ## Related articles
 
 - [Set preferences for Defender for Endpoint on Linux](linux-preferences.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

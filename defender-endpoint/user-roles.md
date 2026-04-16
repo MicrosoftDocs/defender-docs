@@ -1,4 +1,4 @@
-﻿---
+---
 title: Create and manage roles for role-based access control
 description: Create roles and define the permissions assigned to the role as part of the role-based access control implementation in the Microsoft Defender XDR
 ms.service: defender-endpoint
@@ -6,14 +6,11 @@ ms.subservice: onboard
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
-search.appverid: met150
 ms.date: 02/12/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -128,5 +125,5 @@ For more information on the available commands, see [Investigate devices using L
 - [Assign user access](assign-portal-access.md)
 - [Create and manage device groups](machine-groups.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

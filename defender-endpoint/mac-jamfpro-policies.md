@@ -1,20 +1,17 @@
-﻿---
+---
 title: Set up the Microsoft Defender for Endpoint on macOS policies in Jamf Pro
 description: Learn how to set up the Microsoft Defender for Endpoint on macOS policies in Jamf Pro.
 ms.service: defender-endpoint
-author: KesemSharabi
-ms.author: kesharab
-manager: bagol
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-macos
 ms.topic: how-to
 ms.subservice: macos
-search.appverid: met150
 ms.date: 04/16/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -110,7 +107,7 @@ In this step, we go over *Preferences* so you can configure anti-malware and EDR
 
 ### 3a. Set policies using Microsoft Defender portal
 
-1. Follow the guidance in [Configure Microsoft Defender for Endpoint in Intune](/mem/intune/protect/advanced-threat-protection-configure) before setting the security policies using Microsoft Defender.
+1. Follow the guidance in [Configure Microsoft Defender for Endpoint in Intune](/intune/intune-service/protect/advanced-threat-protection-configure) before setting the security policies using Microsoft Defender.
 
 2. In the [Microsoft Defender portal](https://sip.security.microsoft.com/homepage), go to **Configuration management** > **Endpoint security policies** > **Mac policies** > **Create new policy**.
 
@@ -124,7 +121,7 @@ In this step, we go over *Preferences* so you can configure anti-malware and EDR
 
    For more information about managing security settings, see the following articles:
 
-   - [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](/mem/intune/protect/mde-security-integration?pivots=mdssc-ga)
+   - [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](/intune/intune-service/protect/mde-security-integration?pivots=mdssc-ga)
 
    - [Manage security settings for Windows, macOS, and Linux natively in Defender for Endpoint](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/manage-security-settings-for-windows-macos-and-linux-natively-in/ba-p/3870617)
 
@@ -893,5 +890,5 @@ Jamf requires you to define a set of machines for a configuration profile. You n
 > 
 > Making configuration profiles depending on Defender's presence effectively delays deployment of configuration profiles, and results in an initially unhealthy product and/or prompts for manual approval of certain application permissions, that are otherwise auto approved by profiles. Deploying a policy with Microsoft Defender's package *after* deploying configuration profiles ensures the end user's best experience, because all required configurations will be applied before the package installs.
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

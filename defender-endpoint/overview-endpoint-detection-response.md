@@ -6,15 +6,12 @@ ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-edr
 ms.topic: concept-article
 ms.subservice: edr
-search.appverid: met150
 ms.date: 03/26/2025
 ---
 
@@ -50,4 +47,4 @@ The response capabilities give you the power to promptly remediate threats by ac
 - [Alerts queue](alerts-queue.md)
 - [Devices list](machines-view-overview.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

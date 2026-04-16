@@ -1,18 +1,15 @@
-﻿---
+---
 title: Onboard devices and configure Microsoft Defender for Endpoint capabilities
 description: Onboard Windows 10 and Windows 11 devices, servers, non-Windows devices and learn how to run a detection test.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 09/30/2024
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -50,5 +47,5 @@ Onboarding devices effectively enables the endpoint detection and response capab
 | [Configure Microsoft Defender Experts capabilities](/defender-xdr/defender-experts-for-hunting) | Microsoft  Experts is a managed hunting service that provides Security Operation Centers (SOCs) with expert level monitoring and analysis to help them ensure that critical threats in their unique environments don't get missed.|Not applicable|
 
 For more information, see [Supported Microsoft Defender for Endpoint capabilities by platform](supported-capabilities-by-platform.md).
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

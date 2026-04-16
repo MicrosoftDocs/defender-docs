@@ -2,21 +2,14 @@
 title: Custom data collection in Microsoft Defender for Endpoint
 description: Custom data collection allows organizations to tailor telemetry collection to their specific threat hunting needs with customizable filters and enhanced visibility.
 ms.service: defender-endpoint
-f1.keywords: 
-  - NOCSH
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
   - usx-security
 ms.topic: concept-article
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 11/12/2025
 appliesto:
   - Microsoft Defender for Endpoint

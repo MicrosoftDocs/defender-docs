@@ -1,16 +1,11 @@
 ---
 title: BehaviorInfo table in the advanced hunting schema
 description: Learn about alert generation events in the BehaviorInfo table of the advanced hunting schema
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -21,7 +16,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 03/28/2025
+ms.date: 01/12/2026
 ---
 
 # BehaviorInfo (Preview)
@@ -32,20 +27,20 @@ ms.date: 03/28/2025
 
 
 
-The `BehaviorInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about alerts from Microsoft Defender for Cloud Apps. Use this reference to construct queries that return information from this table.
+The `BehaviorInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about behaviors from [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps?toc=%2Fdefender-xdr%2Ftoc.json&bc=%2Fdefender-xdr%2Fbreadcrumb%2Ftoc.json) and [User and Entity Behavior Analytics (UEBA)](/azure/sentinel/identify-threats-with-entity-behavior-analytics). Use this reference to construct queries that return information from this table.
 
 > [!IMPORTANT]
 > The `BehaviorInfo` table is in preview and is not available for GCC. The information here may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. Have feedback to share? Fill out our [feedback form](https://forms.office.com/r/x0mX5hBkGu).
 
-Behaviors are a type of data in Microsoft Defender XDR based on one or more raw events. Behaviors provide contextual insight into events and can, but not necessarily, indicate malicious activity. [Read more about behaviors](/defender-cloud-apps/behaviors)
+**Behaviors** are a type of data in Microsoft Defender XDR based on one or more raw events. Behaviors provide contextual insight into events and can, but not necessarily, indicate malicious activity. For more information, see the following articles:
+- [Investigate behaviors with advanced hunting](/defender-cloud-apps/behaviors)
+- [Translate raw security logs to behavioral insights using UEBA behaviors in Microsoft Sentinel](/azure/sentinel/entity-behaviors-layer)
 
+This advanced hunting table is populated by records from both Defender for Cloud Apps and UEBA. If your organization doesn't deploy these services in Microsoft Defender XDR, queries that use the table won't work or return any results. For more information about how to deploy services in Defender XDR, see [Deploy supported services](deploy-supported-services.md).
 
-This advanced hunting table is populated by records from Microsoft Defender for Cloud Apps. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy services in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
-
-To make sure the `BehaviorInfo` table is populated by Microsoft Defender for Cloud Apps data:
-1.  Go to the Defender portal and select **Settings > Cloud apps > App connectors**.
-2.  In the **Select Microsoft 365 components** page, select the **Microsoft 365 activities** checkbox.
- For detailed instructions, see: [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#prerequisites)
+To make sure Defender for Cloud Apps and UEBA data populate the `BehaviorInfo` table, follow the instructions in the following articles:
+- [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#prerequisites)
+- [Enable the UEBA behaviors layer](/azure/sentinel/entity-behaviors-layer#enable-the-ueba-behaviors-layer)
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
@@ -53,9 +48,9 @@ For information on other tables in the advanced hunting schema, [see the advance
 |-------------|-----------|-------------|
 | `Timestamp` | `datetime` | Date and time when the record was generated |
 | `BehaviorId` | `string` | Unique identifier for the behavior|
-| `ActionType` | `string` | Type of behavior |
+| `Title` | `string` | Title of the behavior|
 | `Description` | `string` | Description of the behavior |
-| `Categories` | `string` | Type of threat indicator or  breach activity identified by the behavior|
+| `Categories` | `string` | Type of threat indicator or breach activity identified by the behavior, as defined by the MITRE ATT&CK framework |
 | `AttackTechniques` | `string` | MITRE ATT&CK techniques associated with the activity that triggered the behavior |
 | `ServiceSource` | `string` | Product or service that identified the behavior |
 | `DetectionSource` | `string` | Detection technology or sensor that identified the notable component or activity |
@@ -66,6 +61,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `StartTime` | `datetime` | Date and time of the first activity related to the behavior|
 | `EndTime` | `datetime` | Date and time of the last activity related to the behavior|
 | `AdditionalFields` | `string` | Additional information about the behavior|
+| `ActionType` | `string` | Type of behavior |
 
 
 

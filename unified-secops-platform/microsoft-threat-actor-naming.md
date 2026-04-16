@@ -1,24 +1,18 @@
 ---
 title: How Microsoft names threat actors
-ms.reviewer: 
 description: Learn how Microsoft names threat actors and how to use the naming convention to identify associated intelligence.
-ms.service: microsoft-defender
-ms.subservice: unified-security-operations
 ms.mktglfcycl: secure
 ms.sitesec: library
-ms.localizationpriority: medium
-ms.author: guywild
-author: guywi-ms
-manager: dansimp
-audience: ITPro
-ms.collection: 
+author: poliveria
+ms.author: pauloliveria
+ms.reviewer:
+ms.collection:
 - m365-security
 - tier2
 ms.custom:
 - cx-ti
 ms.topic: article
-search.appverid: met150
-ms.date: 11/07/2025
+ms.date: 04/02/2026
 ---
 
 # How Microsoft names threat actors
@@ -75,7 +69,9 @@ The following table lists publicly disclosed threat actor names with their origi
 |Cinnamon Tempest|China, Financially motivated|DEV-0401, HighGround|
 |Circle Typhoon|China|DEV-0322, EMISSARY PANDA, APT6, APT27|
 |[Citrine Sleet](https://www.microsoft.com/en-us/security/blog/2024/08/30/north-korean-threat-actor-citrine-sleet-exploiting-chromium-zero-day/)|North Korea|Storm-0139, Storm-1222, LABYRINTH CHOLLIMA|
+|Clay Typhoon|China | Storm-2416|
 |Copper Typhoon|China|Tonto Team, Earth Akhlut, Sharp-R|
+|[Coral Sleet](https://aka.ms/threat-actors-operationalize-ai)|North Korea|Storm-1877|
 |Cotton Sandstorm|Iran|NEPTUNIUM, HAYWIRE KITTEN, Vice Leaker|
 |[CovertNetwork-1658](https://www.microsoft.com/en-us/security/blog/2024/10/31/chinese-threat-actor-storm-0940-uses-credentials-from-password-spray-attacks-from-a-covert-network/)|Covert network|ORB07|
 |Crescent Typhoon|China|CESIUM|
@@ -140,7 +136,7 @@ The following table lists publicly disclosed threat actor names with their origi
 |Salmon Typhoon|China|SODIUM, MAVERICK PANDA, APT4|
 |Salt Typhoon|China|OPERATOR PANDA, GhostEmperor, FamousSparrow|
 |Sangria Tempest|Ukraine, Financially motivated|ELBRUS, CARBON SPIDER|
-|Sapphire Sleet|North Korea|COPERNICIUM, STARDUST CHOLLIMA, Genie Spider, BlueNoroff, CageyChameleon, CryptoCore|
+|[Sapphire Sleet](https://www.microsoft.com/en-us/security/blog/tag/sapphire-sleet/)|North Korea|COPERNICIUM, UNC1069, STARDUST CHOLLIMA, Alluring Pisces, BlueNoroff, CageyChameleon, CryptoCore|
 |Satin Typhoon|China|SCANDIUM, DYNAMITE PANDA, COMBINE, TG-0416, SILVERVIPER, Red Wraith, APT18, Elderwood Group, Wekby|
 |[Seashell Blizzard](https://www.microsoft.com/en-us/security/blog/2025/02/12/the-badpilot-campaign-seashell-blizzard-subgroup-conducts-multiyear-global-access-operation/)|Russia|IRIDIUM, VOODOO BEAR, BE2, UAC-0113, Blue Echidna, Sandworm, PHANTOM, BlackEnergy Lite, APT44|
 |[Secret Blizzard](https://www.microsoft.com/en-us/security/blog/2024/12/04/frequent-freeloader-part-i-secret-blizzard-compromising-storm-0156-infrastructure-for-espionage/)|Russia|KRYPTON, VENOMOUS BEAR, Uroburos, Snake, Blue Python, Turla, WRAITH, ATG26|
@@ -150,44 +146,56 @@ The following table lists publicly disclosed threat actor names with their origi
 |Smoke Sandstorm|Iran|IMPERIAL KITTEN, UNC1549|
 |Spandex Tempest|Financially motivated|MONTY SPIDER, TA505|
 |[Star Blizzard](https://www.microsoft.com/en-us/security/blog/tag/star-blizzard-seaborgium/)|Russia|SEABORGIUM, COLDRIVER, Callisto Group, BlueCharlie, TA446|
+|Storm-0133|Iran|HEXANE, Lyceum, Siamesekitten, Spirlin|
+|Storm-0156|Pakistan|MYTHIC LEOPARD, SideCopy, APT36, Transparent Tribe|
 |Storm-0216|Financially motivated|TUNNEL SPIDER, UNC2198|
 |Storm-0230|Group in development|WIZARD SPIDER, Conti Team 1|
 |Storm-0247|China|ToddyCat, Websiic|
-| [Storm-0249](https://www.microsoft.com/en-us/security/blog/2025/08/21/think-before-you-clickfix-analyzing-the-clickfix-social-engineering-technique/) | Group in development ||
+|[Storm-0249](https://www.microsoft.com/en-us/security/blog/2025/08/21/think-before-you-clickfix-analyzing-the-clickfix-social-engineering-technique/)|Group in development||
 |Storm-0252|Group in development|CHATTY SPIDER|
+|[Storm-0259](https://www.microsoft.com/en-us/security/blog/2026/01/14/inside-redvds-how-a-single-virtual-desktop-provider-fueled-worldwide-cybercriminal-operations/)|Group in development||
 |Storm-0288|Group in development|FIN8|
 |Storm-0302|Group in development|NARWHAL SPIDER, TA544|
 |[Storm-0408](https://www.microsoft.com/en-us/security/blog/2025/03/06/malvertising-campaign-leads-to-info-stealers-hosted-on-github/)|Group in development||
 |[Storm-0485](https://www.microsoft.com/en-us/security/blog/2025/05/29/defending-against-evolving-identity-attack-techniques/)|Group in development||
-| [Storm-0501](https://www.microsoft.com/en-us/security/blog/2025/08/27/storm-0501s-evolving-techniques-lead-to-cloud-based-ransomware/) | Financially motivated ||
+|[Storm-0501](https://www.microsoft.com/en-us/security/blog/2025/08/27/storm-0501s-evolving-techniques-lead-to-cloud-based-ransomware/)|Financially motivated ||
 |Storm-0538|Group in development|SKELETON SPIDER, FIN6|
 |[Storm-0539](https://www.microsoft.com/en-us/security/blog/2024/05/23/cyber-signals-inside-the-growing-risk-of-gift-card-fraud/)|Financially motivated||
 |[Storm-0569](https://www.microsoft.com/en-us/security/blog/2022/11/17/dev-0569-finds-new-ways-to-deliver-royal-ransomware-various-payloads/)|Financially motivated||
+|Storm-0593|Russia|InvisiMole|
 |Storm-0671|Group in development|UNC2596, Tropicalscorpius|
 |[Storm-0940](https://www.microsoft.com/en-us/security/blog/2024/10/31/chinese-threat-actor-storm-0940-uses-credentials-from-password-spray-attacks-from-a-covert-network/)|China||
 |[Storm-0978](https://www.microsoft.com/en-us/security/blog/2023/07/11/storm-0978-attacks-reveal-financial-and-espionage-motives/)|Russia|RomCom, Underground Team|
 |[Storm-1101](https://www.microsoft.com/en-us/security/blog/2023/03/13/dev-1101-enables-high-volume-aitm-campaigns-with-open-source-phishing-kit/)|Group in development||
 |[Storm-1113](https://www.microsoft.com/en-us/security/blog/2023/12/28/financially-motivated-threat-actors-misusing-app-installer/)|Financially motivated|APOTHECARY SPIDER|
+|Storm-1125|Belarus|MoustachedBouncer|
 |[Storm-1152](https://blogs.microsoft.com/on-the-issues/2023/12/13/cybercrime-cybersecurity-storm-1152-fraudulent-accounts/)|Financially motivated||
-|[Storm-1175](https://www.microsoft.com/en-us/security/blog/2025/10/06/investigating-active-exploitation-of-cve-2025-10035-goanywhere-managed-file-transfer-vulnerability/)|China, Financially motivated||
+|[Storm-1175](https://www.microsoft.com/en-us/security/blog/2026/04/06/storm-1175-focuses-gaze-on-vulnerable-web-facing-assets-in-high-tempo-medusa-ransomware-operations/)|China, Financially motivated||
 |Storm-1194|Group in development|MONTI|
 |[Storm-1249](https://www.microsoft.com/en-us/security/blog/2025/05/29/defending-against-evolving-identity-attack-techniques/)|Group in development||
 |Storm-1516|Russia, Influence operations||
 |[Storm-1567](https://www.microsoft.com/en-us/security/blog/2023/10/11/automatic-disruption-of-human-operated-attacks-through-containment-of-compromised-user-accounts/)|Financially motivated|PUNK SPIDER|
-| [Storm-1607](https://www.microsoft.com/en-us/security/blog/2025/08/21/think-before-you-clickfix-analyzing-the-clickfix-social-engineering-technique/) | Group in development ||
+|[Storm-1575](https://www.microsoft.com/en-us/security/blog/2026/01/14/inside-redvds-how-a-single-virtual-desktop-provider-fueled-worldwide-cybercriminal-operations/)|Group in development||
+|[Storm-1607](https://www.microsoft.com/en-us/security/blog/2025/08/21/think-before-you-clickfix-analyzing-the-clickfix-social-engineering-technique/) | Group in development ||
 |[Storm-1674](https://www.microsoft.com/en-us/security/blog/2023/12/28/financially-motivated-threat-actors-misusing-app-installer/)|Financially motivated||
+|[Storm-1747](https://www.microsoft.com/en-us/security/blog/2026/03/04/inside-tycoon2fa-how-a-leading-aitm-phishing-kit-operated-at-scale/)|Group in development||
 |[Storm-1811](https://www.microsoft.com/en-us/security/blog/2024/05/15/threat-actors-misusing-quick-assist-in-social-engineering-attacks-leading-to-ransomware/)|Financially motivated|CURLY SPIDER|
 |Storm-1849|China|UAT4356|
 |[Storm-1865](https://www.microsoft.com/en-us/security/blog/2025/03/13/phishing-campaign-impersonates-booking-com-delivers-a-suite-of-credential-stealing-malware/)|Group in development||
 |Storm-1982|China|SneakyCheff, UNK_SweetSpecter|
 |[Storm-2035](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/5bc57431-a7a9-49ad-944d-b93b7d35d0fc.pdf)|Iran, Influence operations||
 |[Storm-2077](https://www.microsoft.com/en-us/security/blog/2024/11/22/microsoft-shares-latest-intelligence-on-north-korean-and-chinese-threat-actors-at-cyberwarcon/#storm-2077)|China|TAG-100|
+|[Storm-2227](https://www.microsoft.com/en-us/security/blog/2026/01/14/inside-redvds-how-a-single-virtual-desktop-provider-fueled-worldwide-cybercriminal-operations/)|Group in development||
 |[Storm-2246](https://blogs.microsoft.com/on-the-issues/2025/09/16/microsoft-seizes-338-websites-to-disrupt-rapidly-growing-raccoono365-phishing-service/)|Group in development||
 |[Storm-2372](https://www.microsoft.com/en-us/security/blog/2025/02/13/storm-2372-conducts-device-code-phishing-campaign/)|Group in development||
 |[Storm-2460](https://www.microsoft.com/en-us/security/blog/2025/08/18/dissecting-pipemagic-inside-the-architecture-of-a-modular-backdoor-framework/)|Group in development||
+|[Storm-2470](https://www.microsoft.com/en-us/security/blog/2026/01/14/inside-redvds-how-a-single-virtual-desktop-provider-fueled-worldwide-cybercriminal-operations/)|Group in development||
 |[Storm-2477](https://www.microsoft.com/en-us/security/blog/2025/05/21/lumma-stealer-breaking-down-the-delivery-techniques-and-capabilities-of-a-prolific-infostealer/)|Group in development|Lumma Stealer|
+|[Storm-2561](https://www.microsoft.com/en-us/security/blog/2026/03/12/storm-2561-uses-seo-poisoning-to-distribute-fake-vpn-clients-for-credential-theft/)|Group in development||
 |[Storm-2603](https://www.microsoft.com/en-us/security/blog/2025/07/22/disrupting-active-exploitation-of-on-premises-sharepoint-vulnerabilities/)|China||
 |[Storm-2657](https://www.microsoft.com/en-us/security/blog/2025/05/21/lumma-stealer-breaking-down-the-delivery-techniques-and-capabilities-of-a-prolific-infostealer/)|United States, Financially motivated|Payroll Pirates|
+|[Storm-2755](https://www.microsoft.com/en-us/security/blog/2026/04/09/investigating-storm-2755-payroll-pirate-attacks-targeting-canadian-employees/)|Financially motivated||
+|Storm-2981|Group in development|Coinbase Cartel|
 |Strawberry Tempest|Financially motivated|DEV-0537, SLIPPY SPIDER, LAPSUS$|
 |Sunglow Blizzard||DEV-0665|
 |Swirl Typhoon|China|TELLURIUM, STALKER PANDA, Tick, Bronze Butler, REDBALDKNIGHT|

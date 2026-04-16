@@ -1,13 +1,11 @@
-﻿---
+---
 title: Overview of management and APIs
 ms.reviewer:
 description: Learn about the management tools and API categories in Microsoft Defender for Endpoint
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
@@ -15,7 +13,6 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 03/01/2025
 appliesto:
   - Microsoft Defender for Endpoint
@@ -30,7 +27,7 @@ Defender for Endpoint supports a wide variety of deployment, configuration, and 
 
 ## Endpoint onboarding and portal access
 
-Device onboarding is fully integrated into Microsoft Intune and Microsoft Configuration Manager for client devices. You can onboard both client and server devices using the Microsoft Defender portal. Or, for servers, you can use Defender for Cloud, which integrates with Defender for Endpoint and Defender for Business. (Server licenses are required; for more information, see [Onboard servers to Defender for Endpoint](/defender-endpoint/onboard-server) and [Onboard devices to Defender for Business](/defender-business/mdb-onboard-devices).)
+Device onboarding is fully integrated into Microsoft Intune and Microsoft Configuration Manager for client devices. You can onboard both client and server devices using the Microsoft Defender portal. Or, for servers, you can use Defender for Cloud, which integrates with Defender for Endpoint and Defender for Business. (Server licenses are required. For more information, see [Onboard servers to Defender for Endpoint](../onboard-server.md) and [Onboard devices to Defender for Business](/defender-business/mdb-onboard-devices).)
 
 The Microsoft Defender portal provides your security team with a robust, end-to-end experience for configuration, deployment, and monitoring. In addition, Microsoft Defender for Endpoint supports Group Policy and other non-Microosft tools used for managing devices.
 

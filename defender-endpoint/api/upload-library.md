@@ -1,15 +1,10 @@
-﻿---
+---
 title: Upload files to the live response library
 description: Learn how to upload a file to the live response library.
-search.appverid: met150
 ms.service: defender-endpoint
-f1.keywords:
-- NOCSH
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
@@ -29,6 +24,9 @@ appliesto:
 ## API description
 
 Upload file to live response library.
+
+> [!TIP]
+> You can also upload live response files from the [Library management](../configure-libraries-live-response.md) page in the Microsoft Defender portal.
 
 ## Limitations
 

@@ -1,19 +1,16 @@
-﻿---
+---
 title: Use network protection to help prevent Linux connections to bad sites
 description: Protect your network by preventing Linux users from accessing known malicious and suspicious network addresses
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-audience: ITPro
 author: paulinbar
 ms.author: painbar
-manager: bagol
 ms.subservice: linux
 ms.topic: overview
 ms.collection: 
 - m365-security
 - tier2
 - mde-linux
-search.appverid: met150
 ms.date: 03/31/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -217,5 +214,5 @@ Within 10-15 minutes, these domains will be listed in Microsoft Defender XDR und
 - [Web content filtering](web-content-filtering.md)
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

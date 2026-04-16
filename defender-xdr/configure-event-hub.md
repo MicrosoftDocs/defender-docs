@@ -1,15 +1,10 @@
 ---
 title: Configure your Event Hubs
 description: Learn how to configure your Event Hubs
-search.appverid: met150
 ms.service: defender-xdr
-f1.keywords:
-- NOCSH
 ms.author: edbaynash
 author: EdB-MSFT
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Deploy Microsoft Defender for Endpoint on iOS with Mobile Application Management
 description: Describes how to deploy Microsoft Defender for Endpoint on unenrolled iOS devices.
 ms.service: defender-endpoint
@@ -6,15 +6,12 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: sunasing
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-ios
 ms.topic: install-set-up-deploy
 ms.subservice: ios
-search.appverid: met150
 ms.date: 03/06/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -36,7 +33,7 @@ Microsoft Defender for Endpoint on iOS threat information is applied by Intune A
 
 Microsoft Defender for Endpoint on iOS supports both the configurations of MAM
 - **Intune MDM + MAM**: IT administrators can only manage apps using App Protection Policies on devices that are enrolled with Intune mobile device management (MDM).
-- **MAM without device enrollment**: MAM without device enrollment, or MAM-WE, allows IT administrators to manage apps using [App Protection Policies](/mem/intune/apps/app-protection-policy) on devices not enrolled with Intune MDM. This means apps can be managed by Intune on devices enrolled with non-Microsoft EMM providers. 
+- **MAM without device enrollment**: MAM without device enrollment, or MAM-WE, allows IT administrators to manage apps using [App Protection Policies](/intune/intune-service/apps/app-protection-policy) on devices not enrolled with Intune MDM. This means apps can be managed by Intune on devices enrolled with non-Microsoft EMM providers. 
 To manage apps using in both the above configurations customers should use Intune in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 
 To enable this capability an administrator needs to configure the connection between Microsoft Defender for Endpoint and Intune, create the app protection policy, and apply the policy on targeted devices and applications. 
@@ -68,7 +65,7 @@ Microsoft Defender for Endpoint can be configured to send threat signals to be u
        Use this option to specify whether this policy applies to unmanaged devices. You can also choose to target your policy to apps on devices of any management state. Because mobile app management doesn't require device management, you can protect company data on both managed and unmanaged devices. The management is centered on the user identity, which removes the requirement for device management. Companies can use app protection policies with or without MDM at the same time. For example, consider an employee that uses both a phone issued by the company, and their own personal tablet. The company phone is enrolled in MDM and protected by app protection policies while the personal device is protected by app protection policies only.
 
     b. Select Apps. <br>
-       A managed app is an app that has app protection policies applied to it, and can be managed by Intune. Any app that is integrated with the [Intune SDK](/mem/intune/developer/app-sdk) or wrapped by the [Intune App Wrapping Tool](/mem/intune/developer/apps-prepare-mobile-application-management) can be managed using Intune app protection Policies. See the official list of [Microsoft Intune protected apps](/mem/intune/apps/apps-supported-intune-apps) that are built using these tools and are available for public use.
+       A managed app is an app that has app protection policies applied to it, and can be managed by Intune. Any app that is integrated with the [Intune SDK](/intune/intune-service/developer/app-sdk) or wrapped by the [Intune App Wrapping Tool](/intune/intune-service/developer/apps-prepare-mobile-application-management) can be managed using Intune app protection Policies. See the official list of [Microsoft Intune protected apps](/intune/intune-service/apps/apps-supported-intune-apps) that are built using these tools and are available for public use.
 
     *Example: Outlook as a managed app*
 
@@ -84,7 +81,7 @@ Microsoft Defender for Endpoint can be configured to send threat signals to be u
 1. Assign user groups for whom the policy needs to be applied.<br>
    Select **Included groups**. Then add the relevant groups. 
 
-   For more information on MAM or app protection policy, see [iOS app protection policy settings](/mem/intune/apps/app-protection-policy-settings-ios).
+   For more information on MAM or app protection policy, see [iOS app protection policy settings](/intune/intune-service/apps/app-protection-policy-settings-ios).
 
 ## Deploy Microsoft Defender for Endpoint for MAM or on unenrolled devices
 
@@ -93,5 +90,5 @@ Microsoft Defender for Endpoint on iOS enables the app protection policy scenari
 When app protection policies are configured for apps to include device risk signals from Microsoft Defender for Endpoint, users are redirected to install Microsoft Defender for Endpoint when using such apps. Alternately, users can also install the latest version of the app directly from the Apple app store.
 
 Ensure the device is registered to Authenticator with the same account being used to onboard in Defender for successful MAM registration.
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

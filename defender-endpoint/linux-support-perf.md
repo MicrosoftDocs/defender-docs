@@ -1,4 +1,4 @@
-﻿---
+---
 title: Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux
 description: Troubleshoot performance issues in Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
@@ -7,15 +7,12 @@ author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
 ms.date: 02/04/2025
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
 ms.topic: troubleshooting-general
 ms.subservice: linux
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -329,5 +326,5 @@ Configure Microsoft Defender for Endpoint on Linux with exclusions for the proce
 
 - [Investigate agent health issues](health-status.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

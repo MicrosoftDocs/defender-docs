@@ -1,12 +1,10 @@
-﻿---
+---
 title: Release device from isolation API
 description: Use this API to create calls related to release a device from isolation.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
@@ -14,7 +12,6 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -39,7 +36,7 @@ Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 ### Supported operating systems
 
 - Full isolation is available for devices on Windows 10, version 1703.
-- Full isolation is available in **public preview** for all supported Microsoft Defender for Endpoint on Linux listed in [System requirements](/defender-endpoint/mde-linux-prerequisites).
+- Full isolation is available in **public preview** for all supported Microsoft Defender for Endpoint on Linux listed in [System requirements](../mde-linux-prerequisites.md).
 - Selective isolation is available for devices on Windows 10, version 1709 or later.
 
 ## Permissions

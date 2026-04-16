@@ -2,13 +2,9 @@
 title: Quarantine policies
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.reviewer:
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
 ms.assetid:
 ms.collection:
   - m365-security
@@ -18,7 +14,7 @@ description: Admins can learn how to use quarantine policies to control what use
 ms.service: defender-office-365
 ms.date: 07/08/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -875,7 +871,7 @@ If the **Allow recipients to release a message from quarantine** permission is d
 
 ##### Allow recipients to request a message to be released from quarantine permission
 
-The **Allow recipients to request a message to be released from quarantine** permission (_PermissionToRequestRelease_) allows users to _request_ the release of their quarantined messages. Messages are released only after an admin approves the request.
+The **Allow recipients to request a message to be released from quarantine** permission (_PermissionToRequestRelease_) allows users to _request_ the release of their quarantined messages. Messages are released only after an admin [approves the request](quarantine-admin-manage-messages-files.md#approve-or-deny-release-requests-from-users-for-quarantined-email).
 
 If the **Allow recipients to request a message to be released from quarantine** permission is enabled:
 

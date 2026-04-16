@@ -1,13 +1,11 @@
-﻿---
+---
 title: Microsoft Defender Antivirus Device Health export device antivirus health reporting
 description: Presents methods to retrieve Microsoft Defender Antivirus device health details.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-ms.date: 11/11/2025
-manager: bagol
-audience: ITPro
+ms.date: 02/05/2026
 ms.collection:
 - m365-security
 - tier3
@@ -15,7 +13,6 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
@@ -92,6 +89,43 @@ One of the following permissions is required to call this API. To learn more, in
 |---|---|---|
 |Application|Machine.Read.All|'Read all machine profiles'|
 |Delegated (work or school account)|Machine.Read|'Read machine information'|
+
+If you need to call the API without a user (Service-to-Service), refer to the official documentation: [Create an app to access Microsoft Defender for Endpoint without a user](exposed-apis-create-app-webapp.md#get-an-access-token).
+
+Use the script below to ensure the scope is correctly defined for the Device Health in Defender for Endpoint API.
+
+> [!TIP]
+> Some Microsoft Defender for Endpoint APIs continue to require access tokens issued for the legacy resource `https://api.securitycenter.microsoft.com`. If the token audience doesn't match the resource expected by the API, requests fail with `403 Forbidden`, even if the API endpoint uses `https://api.security.microsoft.com`. Use `https://api.securitycenter.microsoft.com` as the resource or scope when acquiring tokens.
+
+```powershell
+# This script acquires the App Context Token and stores it in the variable $token for later use.
+# Paste your Tenant ID, App ID, and App Secret (App key) into the quotes below.
+
+$tenantId    = '' ### Paste your Tenant ID here
+$appId       = '' ### Paste your Application ID here
+$appSecret   = '' ### Paste your Application key here
+
+# Corrected Source App ID URI
+$sourceAppIdUri = '[https://api.securitycenter.microsoft.com/.default](https://api.securitycenter.microsoft.com/.default)'
+$oAuthUri       = "[https://login.microsoftonline.com/$tenantId/oauth2/v2.0/token](https://login.microsoftonline.com/$tenantId/oauth2/v2.0/token)"
+
+$authBody = [Ordered] @{
+    scope         = "$sourceAppIdUri"
+    client_id     = "$appId"
+    client_secret = "$appSecret"
+    grant_type    = 'client_credentials'
+}
+
+$authResponse = Invoke-RestMethod -Method Post -Uri $oAuthUri -Body $authBody -ErrorAction Stop
+$token = $authResponse.access_token
+
+# Output the token
+$token
+```
+
+> [!IMPORTANT]
+> If permission is defined under **WindowsDefenderATP**, the scope must be set to:
+> `https://api.securitycenter.microsoft.com/.default`
 
 ### 1.3 URL (HTTP request)
 

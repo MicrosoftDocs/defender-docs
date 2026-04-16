@@ -1,16 +1,11 @@
 ---
 title: DisruptionAndResponseEvents table in the advanced hunting schema
 description: Learn about the DisruptionAndResponseEvents table in the advanced hunting schema
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -66,15 +61,15 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `SourceUserSid` | `string` | The security identifier of the account conducting the malicious activity   |
 | `SourceUserName` | `string` | The user name of the account conducting the malicious activity  |
 | `SourceUserDomainName` | `string` | The domain name of the account conducting the malicious activity  |
-| `SourceIPAddress` | `string` | IP address where the attacker communication originated from and was blocked by automatic attack disruption  |
+| `SourceIpAddress` | `string` | IP address where the attacker communication originated from and was blocked by automatic attack disruption  |
 | `SourcePort` | `integer` | Port where the attacker communication originated from  |
-| `IPAddress` | `string` | IP address that the attacker attempted to access |
+| `IpAddress` | `string` | IP address that the attacker attempted to access |
 | `Port` | `string` | Port that the attacker attempted to access |
 | `SourceDeviceName` | `string` | Host name of the device where the attack originated from |
 | `SourceDomainName` | `string` | Domain name of the device where the attack originated from  |
 | `AuthenticationProtocol` | `string` | Authentication protocol that the compromised user used to sign in; possible values: Undefined, NTLM, Kerberos |
 | `Service` | `string` | Name of the service the attacker attempted to use, if the attacker signed in using Kerberos or NTLM; for example: SMB, HTTP, cifs, SMB, host, ldap, SMB, krbtgt |
-| `InterfaceUuidSourceDomainName` | `string` | Unique identifier (UUID) for the Remote Procedure Call (RPC) interface that the attacker attempted to access |
+| `InterfaceUuid` | `string` | Unique identifier (UUID) for the Remote Procedure Call (RPC) interface that the attacker attempted to access |
 | `InterfaceFriendlyName` | `string` |Friendly name of the interface represented by the interface UUID  |
 | `FileName` | `string` | Name of the file that the attacker attempted to access |
 | `ShareName` | `string` | Name of the share location that the attacker attempted to access |
@@ -86,7 +81,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `PolicyName` | `string` | Name of the policy  |
 | `PolicyVersion` | `string` | Version of the policy |
 | `PolicyHash` | `string` | Unique hash of the policy  |
-| `DataSources` | `array` |Products or services that provided information for the event; for example: Microsoft Defender for Endpoint |
+| `DataSources` | `string` |Products or services that provided information for the event; for example: Microsoft Defender for Endpoint |
 | `IsPolicyOn` | `boolean` |Indicates the current state of the policy on the device at the time of the disruption event; possible values: true (the policy is on, therefore it was applied or enforced), false (the policy was turned off or revoked from the device) |
 |`ReportType` | `string` | The nature and impact level of the reported event; possible values: Prevented (the action, such as a connection or authentication attempt, was fully blocked before execution), Blocked (an active connection or session was forcibly terminated, with partial impact on the device), PolicyUpdated (the client received and possibly applied a new policy) |
 

@@ -1,15 +1,9 @@
 ---
 title: "What's new for Microsoft's unified security operations?"
 description: Lists the new features and functionality available for Microsoft unified security operations.
-search.appverid: met150
-ms.service: microsoft-defender
-ms.subservice: unified-security-operations
-ms.author: guywild
 author: guywi-ms
-ms.localizationpriority: medium
-ms.date: 08/20/2025
-manager: orspodek
-audience: ITPro
+ms.author: guywild
+ms.date: 01/30/2026
 ms.collection:
 - M365-security-compliance
 - tier1
@@ -20,6 +14,32 @@ ms.topic: concept-article
 # What's new for Microsoft unified security operations
 
 This article lists recent features added for unified security operations in the Microsoft Defender portal.
+
+## February 2026
+
+### New content types for cross-tenant distribution now generally available
+
+The following content types are now generally available for [distribution across multiple tenants](./mto-distribution-profiles.md) in the Microsoft Defender multitenant portal:
+
+- Analytics rules
+- Automation rules
+- Workbooks
+
+## January 2026
+
+### Updated date: Microsoft Sentinel in the Azure portal to be retired March 2027
+
+Microsoft Sentinel is [generally available in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal), including for customers without Microsoft Defender XDR or an E5 license. This means that you can use Microsoft Sentinel in the Defender portal even if you aren't using other Microsoft Defender services.
+
+After **March 31, 2027**, Microsoft Sentinel will no longer be supported in the Azure portal and will be available only in the Microsoft Defender portal.
+
+If you're currently using Microsoft Sentinel in the Azure portal, we recommend that you start planning your transition to the Defender portal now to ensure a smooth transition and take full advantage of the [unified security operations experience offered by Microsoft Defender](/unified-secops-platform/overview-unified-security).
+
+For more information, see:
+
+- [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
+- [Transition your Microsoft Sentinel environment to the Defender portal](/azure/sentinel/move-to-defender)
+- [Planning your move to Microsoft Defender portal for all Microsoft Sentinel customers](https://techcommunity.microsoft.com/blog/microsoft-security-blog/planning-your-move-to-microsoft-defender-portal-for-all-microsoft-sentinel-custo/4428613) (blog)
 
 ## November 2025
 
@@ -155,6 +175,9 @@ For more information, see:
 Microsoft Sentinel is [generally available in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal), including for customers without Microsoft Defender XDR or an E5 license. This means that you can use Microsoft Sentinel in the Defender portal even if you aren't using other Microsoft Defender services.
 
 Starting in **July 2026**, Microsoft Sentinel will be supported in the Defender portal only, and any remaining customers using the Azure portal will be automatically redirected.
+
+> [!NOTE]
+> This date has been extended. Microsoft Sentinel in the Azure portal will be retired **March 31, 2027**.
 
 If you're currently using Microsoft Sentinel in the Azure portal, we recommend that you start planning your transition to the Defender portal now to ensure a smooth transition and take full advantage of the [unified security operations experience offered by Microsoft Defender](/unified-secops-platform/overview-unified-security).
 

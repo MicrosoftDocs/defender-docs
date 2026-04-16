@@ -1,15 +1,9 @@
 ---
 title: Troubleshooting mail sent to Microsoft 365
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: troubleshooting
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
 ms.assetid: f4caa4e1-e414-4b21-8822-31c08064c059
 ms.collection: 
   - m365-security
@@ -20,7 +14,7 @@ description: This article provides troubleshooting information for issues with s
 ms.service: defender-office-365
 ms.date: 6/15/2023
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
 ---
 
@@ -32,7 +26,7 @@ This article provides troubleshooting information for senders who are experienci
 
 ## Are you managing your IP and domain's sending reputation?
 
-[The default email protections for cloud mailboxes](eop-about.md) provide anti-spam protection. We also use email authentication technologies like SPF, DKIM, and DMARC to verify that the domain sending the email is authorized to do so. Many factors influence Microsoft 365 filtering. For example, the sending IP, domain, email authentication, list accuracy, complaint rates, content, and more. One of the principal factors in driving down a sender's reputation and their ability to deliver email is their junk email complaint rate.
+[The built-in security features for all cloud mailboxes](eop-about.md) provide anti-spam protection. We also use email authentication technologies like SPF, DKIM, and DMARC to verify that the domain sending the email is authorized to do so. Many factors influence Microsoft 365 filtering. For example, the sending IP, domain, email authentication, list accuracy, complaint rates, content, and more. One of the principal factors in driving down a sender's reputation and their ability to deliver email is their junk email complaint rate.
 
 ## Are you sending email from new IP addresses?
 

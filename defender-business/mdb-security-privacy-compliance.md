@@ -1,17 +1,13 @@
 ---
 title: Security, privacy, and compliance
 description: "Learn about security, privacy, and compliance in Defender for Business."
-search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.date: 05/31/2024
 ms.localizationpriority: medium
 ms.reviewer: nehabha
-f1.keywords: NOCSH
 ms.collection:
  - essentials-security
  - essentials-privacy
@@ -21,7 +17,7 @@ ms.custom:
 
 # Security, privacy, and compliance in Microsoft Defender for Business
 
-At Microsoft, we're committed to security, privacy and compliance in Defender for Business. Your administrators and security teams can use the information in this article to see the steps we take to keep your organization and data secure.
+At Microsoft, we're committed to security, privacy, and compliance in Defender for Business. Your administrators and security teams can use the information in this article to see the steps we take to keep your organization and data secure.
 
 ## Security
 
@@ -52,5 +48,5 @@ For information about compliance in Defender for Business, see the [Microsoft Tr
 
 ## Related resources
 
-- [Small business Zero Trust guidance - Additional threat protection for Microsoft 365 Business Premium](/security/zero-trust/guidance-smb-partner#additional-threat-protection)
+- [Small business Zero Trust guidance - Threat protection for Microsoft 365 Business Premium](/security/zero-trust/guidance-smb-partner#additional-threat-protection)
 - [Privacy & data management overview](/compliance/assurance/assurance-privacy)

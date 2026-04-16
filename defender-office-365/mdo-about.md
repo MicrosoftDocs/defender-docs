@@ -2,13 +2,8 @@
 title: Why do I need Microsoft Defender for Office 365?
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: overview
 ms.localizationpriority: high
-search.appverid: 
-  - MET150
-  - MOE150
 ms.assetid: e100fe7c-f2a1-4b7d-9e08-622330b83653
 ms.collection: 
   - m365-security
@@ -22,9 +17,9 @@ ms.custom:
 description: Is Microsoft Defender for Office 365 worth it? Let's find out.
 ms.service: defender-office-365
 adobe-target: true
-ms.date: 10/13/2025
+ms.date: 01/16/2026
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -33,9 +28,9 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Although all organizations with cloud mailboxes include default email protections, Microsoft Defender for Office 365 is the primary email and collaboration security solution for Microsoft 365.
+Although all organizations with cloud mailboxes include [built-in security features](eop-about.md), Microsoft Defender for Office 365 is the primary email and collaboration security solution for Microsoft 365.
 
-This article explains the _protection ladder_ for email and collaboration. The ladder starts with the default email protections for cloud mailboxes, and continues to Defender for Office 365 Plan 1 and Defender for Office 365 Plan 2.
+This article explains the _protection ladder_ for email and collaboration. The ladder starts with the built-in security features for all cloud mailboxes, and continues to Defender for Office 365 Plan 1 and Defender for Office 365 Plan 2.
 
 [!INCLUDE [MDO Setup guide](../includes/mdo-setup-guide.md)]
 
@@ -48,7 +43,7 @@ This article is intended for Security Operations (SecOps) personnel, Microsoft 3
 
 The protection ladder in Defender for Office 365 contains the following elements:
 
-1. **Default email protections for cloud mailboxes**: Included in all Microsoft 365 subscriptions with cloud mailboxes.
+1. **The built-in security features for all cloud mailboxes**: Included in all Microsoft 365 subscriptions with cloud mailboxes.
 2. **Defender for Office 365 365 Plan 1**: Included in some Microsoft 365 subscriptions that cater to small to medium-sized businesses (for example, Microsoft 365 Business Premium).
 3. **Defender for Office 365 365 Plan 2**: Included in some Microsoft 365 subscriptions that cater to enterprise organizations (for example, Microsoft 365 A5/E5/G5).
 
@@ -67,7 +62,7 @@ Defender for Office 365 Plan 1 contains a subset of the features that are availa
 
 The following descriptions summarize the protection ladder in Defender for Office 365:
 
-- **Default email protections for cloud mailboxes** prevent broad, volume-based, known email attacks.
+- **The built-in security features for all cloud mailboxes** prevent broad, volume-based, known email attacks.
 - **Defender for Office 365 Plan 1** protects email and collaboration features from zero-day malware, phishing, and business email compromise (BEC).
 - **Defender for Office 365 Plan 2** adds phishing simulations, post-breach investigation, hunting, and response, and automation.
 
@@ -87,9 +82,11 @@ It can be difficult to identity the advantages of Defender for Office 365. The f
 - Investigating threats.
 - Responding to threats.
 
-### Default email protection capabilities
+<a name='default-email-protection-capabilities'></a>
 
-The default email protection capabilities included in all organizations with cloud mailboxes are summarized in the following table:
+### Capabilities of the built-in security features for all cloud mailboxes
+
+The built-in security features included in all organizations with cloud mailboxes are summarized in the following table:
 
 |Prevent/Detect|Investigate|Respond|
 |---|---|---|
@@ -97,13 +94,13 @@ The default email protection capabilities included in all organizations with clo
 
 <sup>\*</sup> The associated features are available in default threat policies, custom threat policies, and [the Standard and Strict preset security policies](preset-security-policies.md). For help with deciding which method to use, see [Determine your threat policy strategy](mdo-deployment-guide.md#determine-your-protection-policy-strategy).
 
-For more information, see [Default email protections for cloud mailboxes](eop-about.md).
+For more information, see [Built-in security features for all cloud mailboxes](eop-about.md).
 
 ### Defender for Office 365 Plan 1 capabilities
 
 Defender for Office 365 Plan 1 adds more _prevention_ and _detection_ capabilities.
 
-The extra features you get in **Defender for Office 365 Plan 1** on top of the default email protections for cloud mailboxes are described in the following table:
+The extra features you get in **Defender for Office 365 Plan 1** on top of the built-in security features for all cloud mailboxes are described in the following table:
 
 |Prevent/Detect|Investigate|Respond|
 |---|---|---|
@@ -129,7 +126,9 @@ The extra features that you get in **Defender for Office 365 Plan 2** on top of 
 
 ## Defender for Office 365 Plan 1 vs. Plan 2 cheat sheet
 
-This quick-reference section summarizes the different capabilities between Defender for Office 365 Plan 1 and Plan 2 that aren't included in the default email protections for cloud mailboxes.
+This quick-reference section summarizes the different capabilities between Defender for Office 365 Plan 1 and Plan 2 that aren't included in the built-in security features for all cloud mailboxes.
+
+To compare the different capabilities between Defender for Office 365 Plan 1 and Plan 2 **for Microsoft Teams**, see [Microsoft Defender for Office 365 support for Microsoft Teams](mdo-support-teams-about.md).
 
 |Defender for Office 365 Plan 1|Defender for Office 365 Plan 2|
 |---|---|

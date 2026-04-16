@@ -1,13 +1,12 @@
 ---
 title: Protect your Atlassian environment | Microsoft Defender for Cloud Apps
 description: Learn about connecting your Atlassian environment to Microsoft Defender for Cloud Apps.
-ms.date: 12/12/2023
+ms.date: 11/26/2025
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
+
 # How Defender for Cloud Apps helps protect your Atlassian environment
-
-
 
 Atlassian is an online collaborative and software development platform (including Confluence, Jira, and Bitbucket). Along with the benefits of effective collaboration in the cloud, your organization's most critical assets might be exposed to threats. Exposed assets include posts, tasks, and files with potentially sensitive information, collaboration, and partnership details, and more. Preventing exposure of this data requires continuous monitoring to prevent any malicious actors or security-unaware insiders from exfiltrating sensitive information.
 
@@ -53,7 +52,7 @@ Review our best practices for [securing and collaborating with external users](b
 
 For example, recommendations for Atlassian include: 
 
-- *Enable multi-factor authentication*
+- *Enable multifactor authentication*
 - *Enable session timeout for web users*
 - *Enhance password requirements*
 - *Atlassian mobile app security*
@@ -70,10 +69,8 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 > [!NOTE]
 > The connector covers all users in your organization that use the Atlassian platform, and shows activities from Confluence, Jira, and specific Bitbucket activities. For more information about Atlassian activities, see [Atlassian audit log activities](https://support.atlassian.com/security-and-access-policies/docs/track-organization-activities-from-the-audit-log/#Auditlogging-Accessauditlogactivities).
-### API key scopes 
-> read:jira-work – to read Jira issues and projects
-> read:confluence-content.all – to read Confluence content
-> read:confluence-space.summary – to access Confluence space metadata
+
+
 
 ### Prerequisites
 
@@ -81,33 +78,27 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 - You must be signed as an Organization admin to Atlassian.
 
 > [!NOTE]
-> Microsoft Defender for Cloud Apps monitors the Atlassian organization associated with the Atlassian Access plan. Monitoring does not extend to sub-organizations that may exist under the same Atlassian environment.
+> Microsoft Defender for Cloud Apps monitors the Atlassian organization associated with the Atlassian Access plan. Monitoring doesn't extend to sub-organizations that might exist under the same Atlassian environment.
 
 ### Configure Atlassian
 
 1. Sign in to the Atlassian Admin portal with an admin account.
 
-    ![Sign in to the  Atlassian Admin portal.](media/atlassian-sign-in.png)
-
-1. Go to **Settings -> API keys** and then **Create API key** without scopes. (Atlassian documentation for creating API keys can also be found [here](https://support.atlassian.com/organization-administration/docs/manage-an-organization-with-the-admin-apis/)).
-
-    ![Atlassian API keys.](media/atlassian-api-keys.png)
+1. **Create an API key**. For more information, see [Manage an organization with the admin APIs](https://support.atlassian.com/organization-administration/docs/manage-an-organization-with-the-admin-apis/).
+> [!NOTE]
+> The Atlassian App Connector currently supports API keys without scopes only. When creating the Atlassian API key for Microsoft Defender for Cloud Apps, **do not select any scopes**. API keys created with scopes (including read‑only scopes) may fail to authenticate.
 
 1. Give the following values to the API key:
 
     - **Name:** You can give any name. The recommended name is *Microsoft Defender for Cloud Apps* so you can be aware for this integration.
     - **Expires on:** Set the expiration date as one year from the date of creation (this is the Atlassian maximum time for the expiration date).
 
-        >[!NOTE]
-        >According to Atlassian API requirements, you'll need to create every year an API key for this integration.
 
-        ![Create API key.](media/atlassian-create-api-key.png)
-
-1. After selecting **Create**, copy the **Organization ID** and the **API key**. You'll need it later.
+1. Copy the **Organization ID** and the **API key**. You'll need them later.
 
     >[!NOTE]
-    >Verify your domain: To see your Atlassian users and their activities in Defender for Cloud Apps, you need to verify your domain. In Atlassian, domains are used to     determine which user accounts can be managed by your organization. You won't see users and their activities if their domains aren't verified in the Atlassian configuration.
-    >To verify domains in Atlassian see [Verify a domain to manage accounts](https://support.atlassian.com/user-management/docs/verify-a-domain-to-manage-accounts/).
+    > In Atlassian, domains are used to determine which user accounts can be managed by your organization. You won't see users and their activities if their domains aren't verified in the Atlassian configuration. 
+    > To verify domains in Atlassian, see [Verify a domain to manage accounts](https://support.atlassian.com/user-management/docs/verify-a-domain-to-manage-accounts/).
 
 ### Configure Defender for Cloud Apps
 
@@ -125,7 +116,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 >
 > - The first connection can take up to four hours to get all users and their activities.
 > - The activities displayed are the activities that were generated from the moment the connector is connected.
-> - Activities from the "Atlassian Access" audit log are fetched by Defender for Cloud apps. Other activities aren't fetched currently. See [Product Audit Logs](https://support.atlassian.com/security-and-access-policies/docs/track-organization-activities-from-the-audit-log/).
+> - Defender for Cloud Apps fetches activities from the Atlassian Access audit log. See [Product Audit Logs](https://support.atlassian.com/security-and-access-policies/docs/track-organization-activities-from-the-audit-log/).
 > - After the connector’s **Status** is marked as **Connected**, the connector is live and works.
 
 ### Revoke and renew API keys
@@ -133,23 +124,14 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 1. Microsoft recommends using short lived keys or tokens for connecting apps as a security best practice.
 1. We recommend refreshing the Atlassian API key every 6 months as a best practice. To refresh the key, revoke the existing API key and generate a new key.
 1. To revoke API key, navigate to **admin.atlassian.com** > **Settings** > **API keys**, determine the API key used for integration, and select **Revoke**.
-1. Recreate an API key in the Atlassian admin portal with the steps described above.
-1. Afterwards, go to the **App Connectors** page in the Microsoft Defender Portal and edit the connector.
+1. Recreate an API key in the Atlassian admin portal.
+1. In the Microsoft Defender Portal, go to the **App Connectors** page, and edit the connector.
 
 1. Enter the new generated new **API key** and select **Connect Atlassian**.
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**. Make sure the status of the connected App Connector is **Connected**.
 
 >[!NOTE]
->
 > By default, the API key is valid for 1 year and expires automatically after a year.
-
-## Related content
-
-- [Secure collaboration with external users by enforcing real-time session controls](best-practices.md#secure-collaboration-with-external-users-by-enforcing-real-time-session-controls)
-
-- [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
-
-- [Use the audit trail of activities for forensic investigations](best-practices.md#use-the-audit-trail-of-activities-for-forensic-investigations)
 
 
 ## Rate limits and limitations
@@ -168,9 +150,12 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
     - System activities are shown with the **Atlassian Internal System** account name.
 
-## Next steps
+## Related articles
 
-> [!div class="nextstepaction"]
-> [Control cloud apps with policies](control-cloud-apps-with-policies.md)
+- [Secure collaboration with external users by enforcing real-time session controls](best-practices.md#secure-collaboration-with-external-users-by-enforcing-real-time-session-controls)
 
-[!INCLUDE [Open support ticket](includes/support.md)]
+- [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
+
+- [Use the audit trail of activities for forensic investigations](best-practices.md#use-the-audit-trail-of-activities-for-forensic-investigations)
+
+-  [Control cloud apps with policies](control-cloud-apps-with-policies.md)

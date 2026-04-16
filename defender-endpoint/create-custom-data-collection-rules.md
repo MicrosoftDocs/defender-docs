@@ -2,21 +2,14 @@
 title: Create and manage custom data collection rules in Microsoft Defender for Endpoint
 description: Learn how to create and manage custom data collection rules in Microsoft Defender for Endpoint to enhance your threat hunting capabilities.
 ms.service: defender-endpoint
-f1.keywords: 
-  - NOCSH
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
   - usx-security
 ms.topic: how-to
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 11/12/2025
 appliesto:
   - Microsoft Defender for Endpoint

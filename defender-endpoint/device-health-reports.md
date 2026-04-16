@@ -1,14 +1,11 @@
-﻿---
+---
 title: Device health reporting in Microsoft Defender for Endpoint
 description: Use the device health report to track device health, antivirus status and versions, OS platforms, and Windows 10 versions.
-search.appverid: met150
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 ms.date: 03/25/2025
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -100,5 +97,5 @@ To Assign these permissions:
 - [Create and manage roles for role-based access control](user-roles.md).
 - [Export device antivirus health details API methods and properties](api/device-health-api-methods-properties.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

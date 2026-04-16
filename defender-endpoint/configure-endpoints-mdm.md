@@ -1,26 +1,23 @@
-﻿---
-title: Onboard Windows devices to Defender for Endpoint using Intune 
+---
+title: Onboard Windows devices to Defender for Endpoint using Intune
 description: Use Microsoft Intune to deploy the configuration package on devices so that they're onboarded to the Defender for Endpoint service.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier1
 ms.custom: admindeeplinkDEFENDER
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 11/17/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
-# Onboard Windows devices to Defender for Endpoint using Intune 
+
+# Onboard Windows devices to Defender for Endpoint using Intune
 
 [!INCLUDE [Microsoft Defender deployment tool preview](./includes/defender-deployment-tool-preview.md)]
 
@@ -32,21 +29,21 @@ For more information on using Defender for Endpoint CSP, see, [WindowsAdvancedTh
 
 Devices must be enrolled with Intune as your Mobile Device Management (MDM) solution.
 
-For more information on enabling MDM with Microsoft Intune, see [Device enrollment (Microsoft Intune)](/mem/intune/enrollment/device-enrollment).
+For more information on enabling MDM with Microsoft Intune, see [Device enrollment (Microsoft Intune)](/intune/intune-service/fundamentals/deployment-guide-enrollment).
 
 ## Onboard devices using Microsoft Intune
 
 Check out [Identify Defender for Endpoint architecture and deployment method](deployment-strategy.md) to see the various paths in deploying Defender for Endpoint.
 
-Follow the instructions from [Intune](/mem/intune/protect/advanced-threat-protection-configure#enable-microsoft-defender-for-endpoint-in-intune).
+Follow the instructions from [Intune](/intune/intune-service/protect/advanced-threat-protection-configure#enable-microsoft-defender-for-endpoint-in-intune).
 
 For more information on using Defender for Endpoint CSP, see, [WindowsAdvancedThreatProtection CSP](https://msdn.microsoft.com/library/windows/hardware/mt723296(v=vs.85).aspx) and [WindowsAdvancedThreatProtection DDF file](https://msdn.microsoft.com/library/windows/hardware/mt723297(v=vs.85).aspx).
 
 > [!NOTE]
+>
 > - The **Health Status for onboarded devices** policy uses read-only properties and can't be remediated.
 > - Configuration of diagnostic data reporting frequency is only available for devices on Windows 10, version 1703.
 > - Onboarding to Defender for Endpoint will onboard the device to [Data Loss Prevention (DLP)](/Microsoft-365/compliance/endpoint-dlp-learn-about), which is also a part of Microsoft 365 compliance.
-
 
 ## Run a detection test to verify onboarding
 
@@ -78,7 +75,7 @@ For security reasons, the package used to Offboard devices expires seven days af
    | Custom configuration policy | 1. In the navigation pane, select **Devices** \> **By platform** \> **Windows** \> **Manage Devices** \> **Configuration**. <br/><br/>2. Under **Policies** select **Create** \> **New Policy**.<br/><br/>3. In the **Create a profile** slide out, select **Windows 10 and later** as **Platform** and **Templates** as **Profile Type**.<br/><br/>4. Under **Template Name**, select the **Custom** template and select **Create**.<br/><br/>5. Enter a value for **Name** and select **Next**. <br/><br/>6. Under **Configuration settings**, select **Add** and use the following OMA-URI settings: <br/>- Name: Provide a name <br/>- OMA-URI: `./Device/Vendor/MSFT/WindowsAdvancedThreatProtection/Offboarding` <br/> - Date type: String<br/>- Value: Copy and paste the value from the content of the `WindowsDefenderATP_valid_until_YYYY-MM-DD` offboarding file. <br/><br/>7. Make the appropriate group assignments, applicability rules, and on the **Review + create** step, select **Create**. |
    | EDR policy | 1. In the navigation pane, select **Endpoint security** \> **Manage** \> **Endpoint detection and response**.<br/><br/>2. Under **Endpoint detection and response (EDR) policies**, select **Create policy**.<br/><br/>3. In the **Create a profile** slide out, select **Windows** as **Platform** and **Endpoint detection and response** and select **Create**.<br/><br/>5. Enter a value for **Name** and select **Next**. <br/><br/>6. Under **Configuration settings**, select **Offboard** for the setting **Microsoft Defender for Endpoint client configuration package type**.<br/><br/>7. Copy the value from the content of the `WindowsDefenderATP_valid_until_YYYY-MM-DD` offboarding file and paste it in the **Offboarding (Device)** setting. Then select **Next**.<br/><br/>8. Specify any scope tags if needed, make the appropriate group assignments and on the **Review + create** step, select **Create**. |
 
-   For more information on Microsoft Intune policy settings, see [Windows 10 policy settings in Microsoft Intune](/mem/intune/configuration/custom-settings-windows-10).
+   For more information on Microsoft Intune policy settings, see [Windows 10 policy settings in Microsoft Intune](/intune/intune-service/configuration/custom-settings-windows-10).
 
 > [!NOTE]
 > The **Health Status for offboarded devices** policy uses read-only properties and can't be remediated.
@@ -89,11 +86,8 @@ For security reasons, the package used to Offboard devices expires seven days af
 ## Related articles
 
 - [Onboard Windows devices using Group Policy](configure-endpoints-gp.md)
-- [Onboard Windows devices using Microsoft Endpoint Configuration Manager](configure-endpoints-sccm.md)
+- [Onboard Windows devices using Microsoft Configuration Manager](configure-endpoints-sccm.md)
 - [Onboard Windows devices using a local script](configure-endpoints-script.md)
 - [Onboard non-persistent virtual desktop infrastructure (VDI) devices](configure-endpoints-vdi.md)
 - [Run a detection test on a newly onboarded Microsoft Defender for Endpoint device](run-detection-test.md)
 - [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
-

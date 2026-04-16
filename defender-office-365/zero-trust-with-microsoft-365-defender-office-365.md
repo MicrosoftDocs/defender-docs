@@ -1,16 +1,11 @@
 ---
 title: Zero Trust with Microsoft Defender for Office 365
 description: Microsoft Defender for Office 365 contributes to a strong Zero Trust strategy and architecture
-search.appverid: met150
 ms.service: microsoft-365-zero-trust
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.localizationpriority: medium
 
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
@@ -41,7 +36,7 @@ Defender for Office 365 is the primary component of the **Assume breach** princi
 
 |Protection level|Description|
 |---|---|
-|Default email protections in all organizations with cloud mailboxes|Prevent broad, volume-based, known attacks.|
+|The built-in security features for all cloud mailboxes|Prevent broad, volume-based, known attacks.|
 |Defender for Office 365 P1|Protects email and collaboration from zero-day malware, phish, and business email compromise.|
 |Defender for Office 365 P2|Adds post-breach investigation, hunting, and response, as well as automation, and simulation (for training).|
 

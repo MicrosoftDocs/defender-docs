@@ -1,20 +1,17 @@
-﻿---
+---
 title: Deploy and manage device control using JAMF 
 description: Learn how to use device control policies using JAMF.
 ms.service: defender-endpoint
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: joshbregman
-manager: bagol
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-macos
 ms.topic: install-set-up-deploy
 ms.subservice: macos
-search.appverid: met150
 ms.date: 04/16/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -87,5 +84,5 @@ A new device control property is now available to add to the user experience.
 - [Deploy and manage Device Control using Intune](mac-device-control-intune.md)
 - [macOS Device Control frequently asked questions (FAQ)](mac-device-control-faq.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

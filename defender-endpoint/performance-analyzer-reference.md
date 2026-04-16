@@ -1,23 +1,20 @@
 ---
 title: Microsoft Defender Antivirus Performance Analyzer reference
 description: Microsoft Defender Antivirus Performance Analyzer reference
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: troubleshooting
 ms.date: 11/22/2024
 ms.subservice: ngp
-manager: bagol
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp 
 ms.custom: 
 - partner-contribution
-f1.keywords: NOCSH 
 ai-usage: human-only
 ---
 
@@ -453,4 +450,4 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

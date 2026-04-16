@@ -1,20 +1,17 @@
-﻿---
+---
 title: Troubleshoot license issues for Microsoft Defender for Endpoint on macOS
 description: Troubleshoot license issues in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
 author: paulinbar
 ms.author: painbar
 ms.reviewer: joshbregman
-manager: bagol
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-macos
 ms.topic: troubleshooting-general
 ms.subservice: macos
-search.appverid: met150
 ms.date: 05/24/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -157,5 +154,5 @@ You can also suppress switching to experience for Individuals on MDM-enrolled ma
 - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md): Learn how to install, configure, update, and use Microsoft Defender for Endpoint on Mac.
 - [Deploying Microsoft Defender for Endpoint on macOS with Jamf Pro](mac-install-with-jamf.md): Learn how to deploy Microsoft Defender for Endpoint on macOS with Jamf Pro.
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
