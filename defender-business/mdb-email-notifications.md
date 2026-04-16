@@ -1,17 +1,13 @@
 ---
 title: Set up email notifications for your security team
 description: Set up email notifications to tell your security team about alerts and vulnerabilities in Defender for Business.
-search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.reviewer: nehabha
 ms.date: 06/19/2024
-f1.keywords: NOCSH
 ms.collection:
  - m365-security
  - m365solution-mdb-setup

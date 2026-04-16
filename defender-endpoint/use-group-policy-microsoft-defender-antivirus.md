@@ -1,4 +1,4 @@
-﻿---
+---
 title: Configure Microsoft Defender Antivirus with Group Policy
 description: Learn how to use a Group Policy to configure and manage Microsoft Defender Antivirus on your endpoints in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
@@ -8,15 +8,12 @@ ms.author: chrisda
 ms.custom: nextgen
 ms.date: 10/20/2025
 ms.reviewer: ksarens, jtoole, pahuijbr, yongrhee
-manager: bagol
 ms.subservice: ngp
-audience: ITPro
 ms.topic: how-to
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

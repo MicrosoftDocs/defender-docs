@@ -1,4 +1,4 @@
-﻿---
+---
 title: Manage indicators
 ms.reviewer:
 description: Manage indicators for a file hash, IP address, URLs, or domains that define the detection, prevention, and exclusion of entities.
@@ -6,15 +6,12 @@ ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
 ms.topic: how-to
 ms.subservice: asr
-search.appverid: met150
 ms.date: 10/28/2024
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

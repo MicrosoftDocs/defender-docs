@@ -1,4 +1,4 @@
-﻿---
+---
 title: Production ring deployment using Group Policy and Microsoft Update (MU)
 description: Microsoft Defender Antivirus is an enterprise endpoint security platform that helps defend against advanced persistent threats. This article provides information about how to use a ring deployment method to update your Microsoft Defender Antivirus clients using Group Policy and Microsoft Update (MU).
 ms.service: defender-endpoint
@@ -6,8 +6,6 @@ ms.author: chrisda
 author: chrisda
 ms.reviewer: yongrhee
 ms.localizationpriority: high
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
@@ -15,7 +13,6 @@ ms.collection:
 ms.custom: intro-overview
 ms.topic: install-set-up-deploy
 ms.subservice: ngp
-search.appverid: met150
 ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 2

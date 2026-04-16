@@ -1,4 +1,4 @@
-﻿---
+---
 title: Behavior Monitoring demonstration
 description: Behavior Monitoring demonstration
 ms.service: defender-endpoint
@@ -7,15 +7,12 @@ author: limwainstein
 ms.author: lwainstein
 ms.reviewer: yonghree
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-macos
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
-search.appverid: met150
 ms.date: 03/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

@@ -2,19 +2,15 @@
 title: Microsoft Defender for Office 365 step-by-step guides and how to use them
 description: What are the step-by-step-guides for Microsoft Defender XDR for Office 365? See *only the steps needed to complete a task* and set up features. Information for use in trial subscriptions and production. Guidance designed to minimize information overload and speed up your configuration and use.
 ms.service: defender-office-365
-f1.keywords: 
- - NOCSH
 author: chrisda
 ms.author: chrisda
 manager: bagol
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-guidance-templates
 - m365-security
 - tier3
 ms.topic: overview
-search.appverid: met150
 ms.date: 04/04/2024
 ---
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Manage how and where Microsoft Defender Antivirus receives updates
 description: Manage the fallback order for how Microsoft Defender Antivirus receives protection updates.
 ms.service: defender-endpoint
@@ -7,13 +7,11 @@ ms.topic: how-to
 author: chrisda
 ms.author: chrisda
 ms.reviewer: pahuijbr
-manager: bagol
 ms.custom: nextgen
 ms.subservice: ngp
 ms.collection:
 - m365-security
 - tier2
-search.appverid: met150
 ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -274,7 +272,7 @@ On a Windows File Server set up a network file share (UNC/mapped drive) to downl
 1. Set the share location in the policy to the share.
 
     > [!NOTE]
-    > Do not add the x64 (or x86) folder in the path. The `mpcmdrun.exe` process adds it automatically.
+    > Don't add the x64 (or x86) folder in the path. The `MpCmdRun.exe` process adds it automatically.
 
 ## Enable platform updates using UNC share
 

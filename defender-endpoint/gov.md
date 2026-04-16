@@ -1,15 +1,12 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint for US Government customers
 description: Learn about the Microsoft Defender for Endpoint for US Government customers requirements and capabilities available
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.reviewer: jesquive
 ms.localizationpriority: medium
 ms.date: 01/05/2026
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3

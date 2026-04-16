@@ -2,13 +2,9 @@
 title: Overview - Advanced hunting
 description: Learn about advanced hunting queries in Microsoft Defender and how to use them to proactively find threats and weaknesses in your network.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: orspodek
-audience: ITPro
 ms.collection: 
   - m365-security
   - m365initiative-m365-defender
@@ -21,7 +17,6 @@ ms.topic: overview
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-search.appverid: met150
 ms.date: 01/15/2026
 
 ---

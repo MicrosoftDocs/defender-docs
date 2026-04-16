@@ -5,13 +5,11 @@ description: Understand how to Diagnose Defender for Endpoint issues with Client
 ms.service: defender-endpoint
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 - mde-ngp
 ms.subservice: ngp
-search.appverid: met150
 ms.date: 10/28/2025
 ---
 

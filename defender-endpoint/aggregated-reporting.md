@@ -5,13 +5,10 @@ ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: article
-search.appverid: met150
 ms.date: 10/20/2025
 appliesto:
 - Microsoft Defender for Endpoint Plan 2

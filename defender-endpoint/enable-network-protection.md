@@ -1,4 +1,4 @@
-﻿---
+---
 title: Turn on network protection
 description: Enable network protection with Group Policy, PowerShell, or Mobile Device Management and Configuration Manager.
 ms.service: defender-endpoint
@@ -8,13 +8,11 @@ ms.topic: how-to
 author: paulinbar
 ms.author: painbar
 ms.reviewer: tdoucett
-manager: bagol
 ms.subservice: asr
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

@@ -3,19 +3,15 @@ title: What's new in Microsoft Defender for Business
 description: Learn about new features and capabilities in Microsoft Defender for Business.
 author: chrisda
 ms.author: chrisda
-manager: orspodek
 ms.date: 08/19/2025
 ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.reviewer: nehabha
-f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security
 - tier1
-search.appverid: MET150
-audience: Admin
 ---
 
 # What's new in Microsoft Defender for Business

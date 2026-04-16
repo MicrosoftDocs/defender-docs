@@ -3,12 +3,10 @@ title: Troubleshoot problems with attack surface reduction rules
 description: Resources and sample code to troubleshoot issues with attack surface reduction rules in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-audience: ITPro
 author: limwainstein
 ms.author: lwainstein
 ms.date: 04/01/2025
 ms.reviewer:
-manager: bagol
 ms.custom: asr
 ms.subservice: asr
 ms.topic: how-to
@@ -16,7 +14,6 @@ ms.collection:
 - m365-security
 - tier3
 - mde-asr
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

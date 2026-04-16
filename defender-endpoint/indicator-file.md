@@ -7,15 +7,12 @@ ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
 ms.date: 10/20/2025
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
 ms.topic: how-to
 ms.subservice: asr
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

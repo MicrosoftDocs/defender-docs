@@ -1,4 +1,4 @@
-﻿---
+---
 title: Configure Microsoft Defender Antivirus using Microsoft Intune
 description: Use Microsoft Intune to configure Microsoft Defender Antivirus and Endpoint Protection
 ms.service: defender-endpoint
@@ -8,15 +8,12 @@ ms.author: chrisda
 ms.custom: nextgen
 ms.date: 05/07/2025
 ms.reviewer: phuijbr, yongrhee
-manager: bagol
 ms.subservice: ngp
-audience: ITPro
 ms.topic: how-to
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

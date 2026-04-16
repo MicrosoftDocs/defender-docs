@@ -1,16 +1,11 @@
 ---
 title: Use Microsoft Sentinel custom functions in advanced hunting in Microsoft Defender
 description: Using functions, saved queries, and custom rules in advanced hunting in the portal unifying Defender XDR and Sentinel data
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: orspodek
-audience: ITPro
 ms.collection: 
   - m365-security
   - m365initiative-m365-defender

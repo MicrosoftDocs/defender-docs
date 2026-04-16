@@ -1,12 +1,10 @@
-﻿---
+---
 title: Assign roles and permissions
 description: Configure permissions deploying Microsoft Defender for Endpoint
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
   - m365-security
   - m365solution-endpointprotect
@@ -15,7 +13,6 @@ ms.collection:
   - tier1
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 01/28/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
