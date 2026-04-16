@@ -12,24 +12,7 @@ ms.date: 12/22/2025
 
 This article describes the network connectivity and permission requirements for Microsoft Defender for Containers.
 
-The requirements in this article depend on the enabled features and the environment in which your container workloads run. Not all requirements apply to every scenario.
-
-## Connectivity and permission requirements by plan component
-
-The following table summarizes which connectivity patterns and permission sets apply based on the Defender for Containers components you enable.
-
-| Plan component | Registry access | Kubernetes API access | Runtime telemetry | Cloud audit log ingestion |
-|---------------|-----------------|------------------------|--------------------|----------------------------|
-| Registry access | ✔ | – | – | – |
-| Kubernetes API access | – | ✔ | – | – |
-| Defender sensor | – | ✔ | ✔ | – |
-| Agentless threat protection (control plane) | – | ✔ | – | ✔ |
-| Agentless scanning for machines | – | – | – | – |
-
-- **Registry access** connects to supported container registries to scan images for vulnerabilities and optionally publish assessment results.
-- **Kubernetes API access** allows Microsoft Defender for Cloud to discover clusters and collect configuration metadata.
-- **Defender sensor** sends runtime security telemetry from cluster nodes to Microsoft Defender for Cloud.
-- **Agentless threat protection** relies on cloud-native logging services (such as Azure infrastructure, AWS CloudWatch, or GCP Cloud Logging) to collect Kubernetes audit logs.
+The requirements in this article depend on the enabled features and the environment in which your container workloads run.
 
 ## Connectivity patterns used by Defender for Containers
 
@@ -40,7 +23,7 @@ Microsoft Defender for Containers establishes multiple connectivity paths to col
 - Runtime telemetry sent from Kubernetes worker nodes to the Defender for Cloud backend for threat detection.
 - Ingestion of Kubernetes audit logs from cloud-native logging services for control plane threat detection.
 
-:::image type="content" source="media/defender-for-containers-network-access/containers-network-access-diagram.png" alt-text="Connectivity diagram showing Microsoft Defender for Containers interactions with container registries, Kubernetes API servers, runtime sensor telemetry endpoints, and cloud provider logging services such as CloudWatch, Firehose, S3, and SQS." lightbox="media/defender-for-containers-network-access/containers-network-access-diagram.png":::
+Learn more about [connectivity and permission requirements by plan component](defender-for-containers-architecture.md).
 
 ## Microsoft Defender for Cloud to container registries
 
