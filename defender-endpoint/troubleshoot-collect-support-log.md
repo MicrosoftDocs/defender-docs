@@ -1,19 +1,16 @@
-﻿---
+---
 title: Collect support logs in Microsoft Defender for Endpoint using live response
 description: Learn how to collect logs using live response to troubleshoot Microsoft Defender for Endpoint issues
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-edr
 ms.topic: troubleshooting
 ms.subservice: edr
-search.appverid: met150
 ms.date: 07/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
@@ -97,7 +94,7 @@ Due to the limited commands available in Live Response the steps detailed must b
 
 #### Binary Client Analyzer Install Script
 
-The following script performs the first six steps of the [Running the Binary version of the Client Analyzer](/defender-endpoint/overview-client-analyzer). When complete, the XMDE Client Analyzer binary is available from the `/tmp/XMDEClientAnalyzerBinary/ClientAnalyzer` directory.
+The following script performs the first six steps of the [Running the Binary version of the Client Analyzer](overview-client-analyzer.md). When complete, the XMDE Client Analyzer binary is available from the `/tmp/XMDEClientAnalyzerBinary/ClientAnalyzer` directory.
 
 1. Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
 
@@ -123,7 +120,7 @@ The following script performs the first six steps of the [Running the Binary ver
    
 #### Python Client Analyzer Install Script
 
-The following script performs the first six steps of the [Running the Python version of the Client Analyzer](/defender-endpoint/overview-client-analyzer). When complete, the XMDE Client Analyzer Python scripts are available from the `/tmp/XMDEClientAnalyzer` directory.
+The following script performs the first six steps of the [Running the Python version of the Client Analyzer](overview-client-analyzer.md). When complete, the XMDE Client Analyzer Python scripts are available from the `/tmp/XMDEClientAnalyzer` directory.
 
 1. Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
 
@@ -232,5 +229,5 @@ The Python Client Analyzer accepts command line parameters to perform different 
 - [Data collection for advanced troubleshooting on Windows](data-collection-analyzer.md)
 - [Understand the analyzer HTML report](analyzer-report.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

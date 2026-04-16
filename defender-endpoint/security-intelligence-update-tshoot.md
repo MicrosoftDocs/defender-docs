@@ -1,9 +1,8 @@
-﻿---
+---
 title: Security Intelligence update troubleshooting from Microsoft Update source
 description: Learn how to troubleshoot security intelligence updates from your Microsoft Update source.
-author: KesemSharabi
-ms.author: kesharab
-manager: bagol 
+author: limwainstein
+ms.author: lwainstein
 ms.date: 05/08/2025
 ms.topic: troubleshooting
 ms.service: defender-endpoint
@@ -13,9 +12,6 @@ ms.collection: # Useful for querying on a set of strategic or high-priority cont
 ms.custom: 
 - partner-contribution
 ms.reviewer: yongrhee
-search.appverid: MET150
-f1.keywords: NOCSH
-audience: ITPro
 appliesto:
   - Microsoft Defender for Business
   - Microsoft Defender for Individuals

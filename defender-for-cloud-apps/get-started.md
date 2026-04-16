@@ -12,7 +12,7 @@ This quickstart describes how to start working with Microsoft Defender for Cloud
 Defender for Cloud Apps can help you use the benefits of cloud applications while maintaining control of your corporate resources. Defender for Cloud Apps improves your visibility into cloud activity and helps increase protection over your corporate data.
 
 > [!TIP]
-> As a companion to this article, we recommend using the [Microsoft Defender for Cloud Apps automated setup guide](https://go.microsoft.com/fwlink/?linkid=2251562) when signed in to the Microsoft 365 admin center. This guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup portal]( https://go.microsoft.com/fwlink/?linkid=2251561).
+> As a companion to this article, we recommend using the [Microsoft Defender for Cloud Apps automated setup guide](https://go.microsoft.com/fwlink/?linkid=2251562) when signed in to the Microsoft 365 admin center. This guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the Microsoft 365 setup portal.
 
 ## Prerequisites
 
@@ -25,11 +25,11 @@ Microsoft Defender for Cloud Apps is a security tool and therefore doesn't requi
 
 Microsoft Defender for Cloud Apps depends on the following Microsoft Entra ID applications to function properly. Do not disable these applications in Microsoft Entra ID:
 
-- Microsoft Defender for Cloud Apps - APIs (ID: 972bb84a-1d27-4bd3-8306-6b8e57679e8c)
-- Microsoft Defender for Cloud Apps - Customer Experience (ID: 9ba4f733-be8f-4112-9c4a-e3b417c44e7d)
-- Microsoft Defender for Cloud Apps - Information Protection (ID: ac6dbf5e-1087-4434-beb2-0ebf7bd1b883)
+- Microsoft Defender for Cloud Apps - APIs (or API Connectors (1st Party)) (ID: 972bb84a-1d27-4bd3-8306-6b8e57679e8c) 
+- Microsoft Defender for Cloud Apps - Customer Experience (ID: ac6dbf5e-1087-4434-beb2-0ebf7bd1b883)
+- Microsoft Defender for Cloud Apps - Information Protection (ID: 9ba4f733-be8f-4112-9c4a-e3b417c44e7d)
 - Microsoft Defender for Cloud Apps - MIP Server (ID: 0858ddce-8fca-4479-929b-4504feeed95e)
-- Microsoft Defender for Cloud Apps - Data Loss Prevention - SPO (ID: 71559765-2fa9-4207-b59f-a8bd85269d4a) 
+- Microsoft Defender for Cloud Apps - Data Loss Prevention - SPO  (ID: 71559765-2fa9-4207-b59f-a8bd85269d4a) 
 
 ## Access Defender for Cloud Apps
 

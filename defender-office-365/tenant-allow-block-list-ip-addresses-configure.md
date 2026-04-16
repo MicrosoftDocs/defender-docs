@@ -1,23 +1,17 @@
 ---
 title: Allow or block IPv6 addresses using the Tenant Allow/Block List
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
 ms.collection:
   - m365-security
   - tier1
 description: Admins can learn how to allow or block IPv6 addresses in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 07/08/2025
+ms.date: 01/26/2026
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -60,9 +54,9 @@ This article describes how admins can manage entries for IPv6 addresses in the M
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell):
-    - *Add and remove entries from the Tenant Allow/Block List*: Membership assigned with the following permissions:
+    - _Add and remove entries from the Tenant Allow/Block List_: Membership assigned with the following permissions:
       - **Authorization and settings/Security settings/Detection tuning (manage)**
-    - *Read-only access to the Tenant Allow/Block List*:
+    - _Read-only access to the Tenant Allow/Block List_:
       - **Authorization and settings/Security settings/Read-only**.
       - **Authorization and settings/Security settings/Core Security settings (read)**.
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo):
@@ -74,7 +68,13 @@ This article describes how admins can manage entries for IPv6 addresses in the M
       - **Security Reader**
       - **View-Only Configuration**
       - **View-Only Organization Management**
-  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
+  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in one of the following roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
+    - _Add and remove entries from the Tenant Allow/Block List_: Membership in one of the following roles:
+      - **Global Administrator**<sup>\*</sup>
+      - **Security Administrator**
+    - _Read-only access to the Tenant Allow/Block List_: Membership in one of the following roles:
+      - **Global Reader**
+      - **Security Reader**
 
     > [!IMPORTANT]
     > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.

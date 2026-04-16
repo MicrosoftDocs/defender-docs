@@ -3,12 +3,8 @@ title: Defender for Office 365 ICES Vendor Ecosystem Integration Guide
 description: Understand how the ICES Vendor Ecosystem enables Microsoft Defender for Office 365 to integrate with trusted non-Microsoft email security vendors.
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.reviewer: aylamckorkle
-f1.keywords:
-  - NOCSH
 ms.service: defender-office-365
-audience: ITPro
 ms.topic: article
 ms.date: 06/11/2025
 ms.custom:
@@ -17,9 +13,6 @@ ms.collection:
   - m365-security
   - tier2
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>

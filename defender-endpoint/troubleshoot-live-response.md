@@ -1,19 +1,16 @@
-﻿---
+---
 title: Troubleshoot Microsoft Defender for Endpoint live response issues
 description: Troubleshoot issues that might arise when using live response in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-edr
 ms.topic: troubleshooting
 ms.subservice: edr
-search.appverid: met150
 ms.date: 03/26/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -64,5 +61,5 @@ Refer to the following articles to fully understand the WpnService service behav
 - [Windows Push Notification Services (WNS) overview](/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview)
 - [Enterprise Firewall and Proxy Configurations to Support WNS Traffic](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)
 - [Microsoft Push Notifications Service (MPNS) Public IP ranges](https://www.microsoft.com/download/details.aspx?id=44535)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

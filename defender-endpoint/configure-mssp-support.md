@@ -1,18 +1,15 @@
-﻿---
+---
 title: Configure managed security service provider support
 description: Take the necessary steps to configure the MSSP integration with the Microsoft Defender for Endpoint
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: kesharab
-author: KesemSharabi
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: article
-search.appverid: met150
 ms.date: 07/24/2024
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -63,5 +60,5 @@ For information on how to implement a multitenant delegated access, see [multite
 - [Configure alert notifications](configure-mssp-notifications.md)
 - [Fetch alerts from customer tenant](api/fetch-alerts-mssp.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

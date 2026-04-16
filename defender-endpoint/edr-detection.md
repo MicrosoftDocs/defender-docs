@@ -5,8 +5,6 @@ ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
@@ -14,8 +12,7 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
 ms.subservice: edr
-search.appverid: met150
-ms.date: 12/31/2025
+ms.date: 01/15/2026
 appliesto:
     - Microsoft Defender for Endpoint Plan 2
     - Microsoft Defender for Business
@@ -33,22 +30,10 @@ appliesto:
 
 Endpoint detection and response for Endpoint provide advanced attack detections that are near real-time and actionable. Security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats. You can run an EDR detection test to verify that the device is properly onboarded and reporting to the service. This article describes how to run an EDR detection test on a newly onboarded device.
 
-### Windows client
-
-In PowerShell, run the following commands:
-
-```powershell
-Set-Content -Path "$env:TEMP\eicar.txt" -Value "X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*"
-
-Rename-Item "$env:TEMP\eicar.txt" "eicar.com"
-```
-
-If successful, a new alert appears within a few minutes.
-
-### Windows server
+### Windows
 
 > [!TIP]
-> The server must be listening for requests on TCP port 80 for the following commands to work. You can verify by running the following PowerShell command: `Test-NetConnection 127.0.0.1 -Port 80`.
+> The Windows device must be listening for requests on TCP port 80 for the following commands to work. You can verify by running the following PowerShell command: `Test-NetConnection 127.0.0.1 -Port 80`.
 
 In a Command Prompt window, run the following commands:
 

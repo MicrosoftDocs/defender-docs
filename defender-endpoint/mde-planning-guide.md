@@ -1,12 +1,10 @@
-﻿---
+---
 title: Get started with your Microsoft Defender for Endpoint deployment
 description: Learn how to get started with the deploy, setup, licensing validation, tenant configuration, network configuration stages.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
   - m365-security
   - m365solution-endpointprotect
@@ -17,7 +15,6 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: get-started
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 06/19/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -70,5 +67,5 @@ Here's a list of prerequisites required to deploy Defender for Endpoint:
 
 Start your deployment with [Step 1 - Set up Microsoft Defender for Endpoint deployment](production-deployment.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

@@ -1,18 +1,12 @@
 ---
 title: Create allowlists
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.collection: 
 - m365-security
 - tier2
 ms.localizationpriority: medium
-search.appverid:
-  - MET150s
 ms.assetid: 9721b46d-cbea-4121-be51-542395e6fd21
 ms.custom:
   - seo-marvel-apr2020
@@ -20,7 +14,7 @@ description: Admins can learn about the available and preferred options to allow
 ms.service: defender-office-365
 ms.date: 09/16/2024
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---

@@ -1,4 +1,4 @@
-﻿---
+---
 title: How to schedule an update for Microsoft Defender for Endpoint on Linux
 description: Learn how to schedule an update for Microsoft Defender for Endpoint on Linux to better protect your organization's assets.
 ms.service: defender-endpoint
@@ -6,15 +6,12 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-linux
 ms.topic: how-to
 ms.subservice: linux
-search.appverid: met150
 ms.date: 05/12/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -239,5 +236,5 @@ crontab -u username -r
 | | | | +—- day of week (values: 0 - 6) (Sunday=0 or 7) (special characters: , - * / L W C) <br>
 | | | | |*****command to be executed
 </pre>
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

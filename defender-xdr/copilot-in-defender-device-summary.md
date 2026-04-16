@@ -2,23 +2,17 @@
 title: Summarize device information with Microsoft Copilot in Microsoft Defender
 description: Generate a summary for devices with Microsoft Copilot in Microsoft Defender.
 ms.service: defender-xdr
-f1.keywords:
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
   - security-copilot
   - magic-ai-copilot
 ms.topic: concept-article
-search.appverid:
-  - MOE150
-  - MET150
 ms.date: 04/25/2025
+ms.update-cycle: 180-days
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel with Defender XDR in the Microsoft Defender portal

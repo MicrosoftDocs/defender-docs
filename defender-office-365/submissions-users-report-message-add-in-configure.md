@@ -1,18 +1,11 @@
 ---
 title: Transition from Report Message or the Report Phishing add-ins
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.reviewer: dhagarwal
 ms.topic: how-to
-ms.date: 10/06/2025
+ms.date: 04/07/2026
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.assetid: 4250c4bc-6102-420b-9e0a-a95064837676
 ms.collection:
   - m365-security
@@ -20,7 +13,7 @@ ms.collection:
 description: Learn how to transition from the Report Message or the Report Phishing add-ins for all version of Outlook to the build in Report button all versions of Outlook.
 ms.service: defender-office-365
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -35,6 +28,9 @@ appliesto:
 The built-in **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) makes it easy for users to report false positives and false negatives to Microsoft for analysis. False positives are good email that was blocked or sent to the Junk Email folder. False negatives are unwanted email or phishing that was delivered to the Inbox.
 
 Microsoft uses these user reported messages to improve the effectiveness of email protection technologies. For example, suppose people are reporting many messages as phishing using the **Report** button. This information surfaces in the Security Dashboard and other reports. This information probably indicates the anti-phishing policies in your organization need to be updated.
+
+> [!NOTE]
+> When reporting multiple messages or an email thread (conversation) using the built-in **Report** button, each message is submitted as a **separate, individual report** with its own sender, subject, and timestamp.
 
 The following table describes the advantages of the built-in **Report** button over the Report Message and Report Phishing add-ins:
 

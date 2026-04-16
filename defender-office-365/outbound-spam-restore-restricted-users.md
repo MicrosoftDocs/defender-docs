@@ -1,17 +1,11 @@
 ---
 title: Remove blocked users from the Restricted entities page
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 f1_keywords:
   - 'ms.exch.eac.ActionCenter.Restricted.Users.RestrictedUsers'
 ms.localizationpriority: high
-search.appverid:
-  - MET150
 ms.assetid: 712cfcc1-31e8-4e51-8561-b64258a8f1e5
 ms.collection:
   - m365-security
@@ -22,7 +16,7 @@ ms.custom:
 ms.service: defender-office-365
 ms.date: 05/07/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 #customer intent: As an admin, I need steps to unblock users restricted for outbound spam, including required checks and portal/PowerShell actions so I can safely restore sending.

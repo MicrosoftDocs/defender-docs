@@ -1,17 +1,10 @@
 ---
 
 title: "Migrate to Microsoft Defender for Office 365 Phase 1: Prepare"
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: upgrade-and-migration-article
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
-  - MOE150
 ms.collection:
   - m365-security
   - m365solution-mdo-migration

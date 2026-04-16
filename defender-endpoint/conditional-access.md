@@ -1,14 +1,11 @@
 ---
 title: Enable Conditional Access to better protect users, devices, and data
 description: Enable Conditional Access to prevent applications from running if a device is considered at risk and an application is determined to be non-compliant.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -71,4 +68,4 @@ The following example sequence of events explains Conditional Access in action:
 ## Related topic
 
 - [Configure Conditional Access in Microsoft Defender for Endpoint](configure-conditional-access.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

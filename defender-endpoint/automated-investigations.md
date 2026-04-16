@@ -1,21 +1,18 @@
-﻿---
+---
 title: Use automated investigations to investigate and remediate threats
 description: Understand the automated investigation flow in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: edr
-ms.author: kesharab
-author: KesemSharabi
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
 ms.date: 10/20/2025
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-edr
 ms.topic: how-to
 ms.custom: AIR
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
@@ -94,5 +91,5 @@ All remediation actions, whether pending or completed, are tracked in the [Actio
 - [PUA protection](/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus)
 - [Automated investigation and response in Microsoft Defender for Office 365](/defender-office-365/air-about)
 - [Automated investigation and response in Microsoft Defender XDR](/defender-xdr/m365d-autoir)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

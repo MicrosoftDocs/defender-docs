@@ -1,13 +1,11 @@
-﻿---
+---
 title: Ring deployment using Intune and Microsoft Update (MU)
 description: Microsoft Defender Antivirus is an enterprise endpoint security platform that helps defend against advanced persistent threats. This article provides information about how to use a ring deployment method to update your Microsoft Defender Antivirus clients using Intune and Microsoft Update (MU).
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: chrisda
+author: chrisda
 ms.reviewer: yongrhee
 ms.localizationpriority: high
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
@@ -15,7 +13,6 @@ ms.collection:
 ms.custom: intro-overview
 ms.topic: install-set-up-deploy
 ms.subservice: ngp
-search.appverid: met150
 ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
@@ -63,8 +60,8 @@ Recommended settings are as follows:
 
 ### References
 
-- [Antivirus profiles - Devices managed by Microsoft Intune](/mem/intune/protect/endpoint-security-antivirus-policy#antivirus-profiles)
-- [Use Endpoint security Antivirus policy to manage Microsoft Defender update behavior](/mem/intune/fundamentals/whats-new#use-endpoint-security-antivirus-policy-to-manage-microsoft-defender-update-behavior-preview)
+- [Antivirus profiles - Devices managed by Microsoft Intune](/intune/intune-service/protect/endpoint-security-antivirus-policy#antivirus-profiles)
+- [Use Endpoint security Antivirus policy to manage Microsoft Defender update behavior](/intune/intune-service/fundamentals/whats-new#use-endpoint-security-antivirus-policy-to-manage-microsoft-defender-update-behavior-preview)
 - - [Manage the gradual rollout process for Microsoft Defender updates](manage-gradual-rollout.md#manage-the-gradual-rollout-process-for-microsoft-defender-updates)
 
 ## Setting up the Production environment 
@@ -98,7 +95,7 @@ It forces Microsoft Defender Antivirus to look for the **Security Intelligence U
 
 If you update a policy, it's within a few minutes (3-5 minutes) via WNS, as long the WNS URLs' are open.
 
-Reference:   [Intune actions that immediately send a notification to a device](/mem/intune/configuration/device-profile-troubleshoot#intune-actions-that-immediately-send-a-notification-to-a-device)
+Reference:   [Intune actions that immediately send a notification to a device](/intune/intune-service/configuration/device-profile-troubleshoot#intune-actions-that-immediately-send-a-notification-to-a-device)
 
 After the issue is resolved, set the "Signature Update Fallback Order" back to the original setting"
 

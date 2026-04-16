@@ -1,22 +1,19 @@
-﻿---
+---
 title: Access the Microsoft Defender for Endpoint APIs
 ms.reviewer:
 description: Learn how you can use APIs to automate workflows and innovate based on Microsoft Defender for Endpoint capabilities
 ms.service: defender-endpoint
 ms.subservice: reference
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 ms.date: 11/11/2025
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.custom: api
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1

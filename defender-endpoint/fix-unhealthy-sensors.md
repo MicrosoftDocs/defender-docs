@@ -1,12 +1,10 @@
-﻿---
+---
 title: Fix unhealthy sensors in Microsoft Defender for Endpoint
 description: Fix device sensors that are reporting as misconfigured or inactive so that the service receives data from the device.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -14,7 +12,6 @@ ms.collection:
 ms.topic: article
 ms.date: 03/25/2025
 ms.subservice: onboard
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -94,5 +91,5 @@ If you took corrective actions and the device status is still misconfigured, [op
 - [Client analyzer overview](overview-client-analyzer.md)
 - [Data collection for advanced troubleshooting on Windows](data-collection-analyzer.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

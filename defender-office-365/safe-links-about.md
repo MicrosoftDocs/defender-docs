@@ -1,15 +1,11 @@
 ---
 title: Complete Safe Links overview for Microsoft Defender for Office 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: overview
 f1_keywords:
   - '197503'
-ms.date: 10/24/2025
+ms.date: 02/10/2026
 ms.localizationpriority: medium
 ms.collection:
   - Strat_O365_IP
@@ -17,13 +13,6 @@ ms.collection:
   - tier1
 ms.custom:
   - seo-marvel-apr2020
-search.appverid:
-  - MET150
-  - MOE150
-  - ZVO160
-  - ZXL160
-  - ZPP160
-  - ZWD160
 ms.assetid: dd6a1fef-ec4a-4cf4-a25a-bb591c5811e3
 description: Learn about Safe Links protection in Defender for Office 365 to protect an organization from phishing and other attacks that use malicious URLs. Discover Teams Safe Links, and see graphics of Safe Links messages.
 ms.service: defender-office-365
@@ -47,6 +36,8 @@ Watch this short video on how to protect against malicious links with Safe Links
 
 > [!NOTE]
 > Although there's no default Safe Links policy, the **Built-in protection** preset security policy provides Safe Links protection in e-mail messages, Microsoft Teams, and files in supported Office apps to all recipients for customers that have at least one Defender for Office 365 license (users who aren't defined in the Standard or Strict preset security policies or in custom Safe Links policies). For more information, see [Preset security policies](preset-security-policies.md). You can also create Safe Links policies that apply to specific users, group, or domains. For instructions, see [Set up Safe Links policies in Microsoft Defender for Office 365](safe-links-policies-configure.md).
+>
+> If a system failure occurs when reading the Safe Links policy configuration from certain apps (for example, classic Outlook), the user doesn't receive Safe Links protection, and the user is redirected to the clicked link.
 
 Safe Links protection by Safe Links policies is available in the following locations:
 

@@ -3,7 +3,6 @@ title: Enable your attack surface reduction rules in Microsoft Defender for Busi
 description: Get an overview of attack surface reduction capabilities, including attack surface reduction rules, in Microsoft Defender for Business
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.date: 07/23/2024
 ms.topic: how-to
 ms.service: defender-business
@@ -12,16 +11,17 @@ ms.collection:
 - m365-security
 - tier1
 ms.reviewer: efratka
-search.appverid: MET150
-f1.keywords: NOCSH
-audience: Admin
 ---
 
 # Enable your attack surface reduction rules in Microsoft Defender for Business
 
-Your attack surfaces are all the places and ways that your organization's network and devices are vulnerable to cyberthreats and attacks. Unsecured devices, unrestricted access to any URL on a company device, and allowing any type of app or script to run on company devices are all examples of attack surfaces. They leave your company vulnerable to cyberattacks.
+_Attack surfaces_ are all the places and ways the network and devices in your organization are vulnerable to attacks. For example:
 
-To help protect your network and devices, Microsoft Defender for Business includes several attack surface reduction capabilities, including attack surface reduction rules. This article describes how to set up your attack surface reduction rules and describes attack surface reduction capabilities.
+- Unsecured devices.
+- Unrestricted access to URLs on company devices.
+- Unrestricted running of apps or scripts on company devices.
+
+To help protect your network and devices, Microsoft Defender for Business includes several attack surface reduction capabilities, including _attack surface reduction (ASR) rules_. This article describes how to set up your attack surface reduction rules and describes attack surface reduction capabilities.
 
 ## Standard protection ASR rules
 
@@ -35,7 +35,7 @@ These rules help protect your network and devices but shouldn't cause disruption
 
 ## Set up ASR rules using Intune
 
-1. In the [Microsoft Intune admin center](https://intune.microsoft.com/), go to **Endpoint security** > **Attack surface reduction**.
+1. In the [Microsoft Intune admin center](https://intune.microsoft.com/), go to **Endpoint security** \> **Attack surface reduction**.
 
 2. Choose **Create policy** to create a new policy.
 
@@ -61,7 +61,7 @@ These rules help protect your network and devices but shouldn't cause disruption
    5. On the **Review + create** step, review the information, and then choose **Create**.
 
 > [!TIP]
-> If you prefer, you can set up your attack surface reduction rules in audit mode at first to see detections before files or processes are actually blocked. For more detailed information about attack surface reduction rules, see [Attack surface reduction rules deployment overview](/defender-endpoint/attack-surface-reduction-rules-deployment).
+> You can initially set up rules in audit mode to see detections without actually blocking the processes or files. For more information about attack surface reduction rules, see [Attack surface reduction rules deployment overview](/defender-endpoint/attack-surface-reduction-rules-deployment).
 
 ## View your attack surface reduction report
 
@@ -88,11 +88,11 @@ Attack surface reduction rules are available in Defender for Business. The follo
 
 |Capability|How to set it up|
 |---|---|
-|**Attack surface reduction rules** <br/> Prevent specific actions that are commonly associated with malicious activity to run on Windows devices.|[Enable your standard protection attack surface reduction rules](#standard-protection-asr-rules) (section in this article).|
-|**Controlled folder access** <br/>Controlled folder access allows only trusted apps to access protected folders on Windows devices. Think of this capability as ransomware mitigation.|[Set up controlled folder access policy in Microsoft Defender for Business](mdb-controlled-folder-access.md).|
-|**Network protection** <br/>Network protection prevents people from accessing dangerous domains through applications on their Windows and Mac devices. Network protection is also a key component of [Web content filtering in Microsoft Defender for Business](mdb-web-content-filtering.md).|Network protection is already enabled by default when devices are onboarded to Defender for Business and [next-generation protection policies in Defender for Business](mdb-next-generation-protection.md) are applied. Your default policies are configured to use recommended security settings.|
-|**Web protection** <br/>Web protection integrates with web browsers and works with network protection to protect against web threats and unwanted content. Web protection includes web content filtering and web threat reports.|[Set up Web content filtering in Microsoft Defender for Business](mdb-web-content-filtering.md).|
-|**Firewall protection** <br/>Firewall protection determines what network traffic is permitted to flow to or from your organization's devices.|Firewall protection is already enabled by default when devices are onboarded to Defender for Business and [firewall policies in Defender for Business](mdb-firewall.md) are applied.|
+|**Attack surface reduction rules** <br/> Prevent specific actions commonly associated with malicious activity from running on Windows devices.|[Enable your standard protection attack surface reduction rules](#standard-protection-asr-rules) (section in this article).|
+|**Controlled folder access** <br/> Allow only trusted apps to access protected folders on Windows devices. Think of this capability as ransomware mitigation.|[Set up controlled folder access policy in Microsoft Defender for Business](mdb-controlled-folder-access.md).|
+|**Network protection** <br/> Prevent users from accessing dangerous domains through applications on their Windows and Mac devices. Network protection is also a key component of [web content filtering](mdb-web-content-filtering.md).|Enabled by default when devices are onboarded to Defender for Business and [next-generation protection policies](mdb-next-generation-protection.md) are applied. Default policies are configured with the recommended security settings.|
+|**Web protection** <br/> Integrates with web browsers and works with network protection to protect against web threats and unwanted content. Web protection includes web content filtering and web threat reports.|[Set up Web content filtering in Microsoft Defender for Business](mdb-web-content-filtering.md).|
+|**Firewall protection** <br/> Determines the network traffic permitted to flow to or from your organization's devices.|Enabled by default when devices are onboarded to Defender for Business and [firewall policies in Defender for Business](mdb-firewall.md) are applied.|
 
 ## Next steps
 

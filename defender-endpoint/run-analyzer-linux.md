@@ -1,9 +1,8 @@
-﻿---
+---
 title: Run the client analyzer on Linux
 description: Run the Defender for Endpoint client analyzer on Linux
-author: KesemSharabi
-ms.author: kesharab
-manager: bagol
+author: chrisda
+ms.author: chrisda
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.subservice: linux
@@ -15,9 +14,6 @@ ms.collection:
 - m365-security
 - tier3
 - mde-macos
-search.appverid: met150
-audience: ITPro
-f1.keywords: NOCSH
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -66,7 +62,7 @@ Follow the steps below to use the standalone ClientAnalyzer binary
 1. Verify the download:
 
     ```bash
-    echo '042692269A7208AB30B4355A6FC1CD0A25FE59356D96CCD2E7F1F61DF9B4B85D XMDEClientAnalyzerBinary.zip' | sha256sum -c
+    echo '0C8F010D09557478E0CF626D439D5F7EAB1F6C7EEFF69FF1E98A7289520983E1 XMDEClientAnalyzerBinary.zip' | sha256sum -c
     ```
 
 1. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine.
@@ -107,6 +103,7 @@ The python version of client analyzer is made available in two ways:
 > [!NOTE]
 > - The analyzer depends on a few extra PIP packages (`decorator`, `sh`, `distro`, `lxml`, and `psutil`) which are installed in the operating system when in root to produce the result output. If not installed, the analyzer attempts to fetch it from the [official repository for Python packages](https://pypi.org/search/?q=lxml).
 > - In addition, the tool currently requires Python version 3 or later to be installed on your device.
+> - Starting with **Client Analyzer for MDE Linux version 1.7.0**, support for running the Python-based client analyzer in a Python virtual environment (venv) is available. Using a virtual environment is optional and not required.
 > - If your device is behind a proxy, then you can pass the proxy server as an environment variable to the `mde_support_tool.sh` script. For example: `https_proxy=https://myproxy.contoso.com:8080 ./mde_support_tool.sh"`.
 
 > [!WARNING]
@@ -146,7 +143,7 @@ To run this client analyzer follow these steps:
 1. Verify the download:
 
     ```bash
-    echo '9F29043CD3034DD4DF30B0EA25B37B5EE7BE5D81D5848CF047F9842B76C831EA XMDEClientAnalyzerPython.zip' | sha256sum -c
+    echo '62F92CD9D191063663FBAC7B29E1C967C8F9A30B9B769DA5E968FC4276C1F030 XMDEClientAnalyzerPython.zip' | sha256sum -c
     ```
 
 1. Extract the contents of `XMDEClientAnalyzer.zip` on the machine:
@@ -674,19 +671,18 @@ The Python version of the client analyzer accepts command line parameters to per
 
 #### Defender for Endpoint on Linux troubleshooting documents
 
-- [Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-install)
+- [Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux](linux-support-install.md)
 
-- [Investigate agent health issues](/defender-endpoint/health-status)
+- [Investigate agent health issues](health-status.md)
 
-- [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-connectivity)
+- [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](linux-support-connectivity.md)
 
-- [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-perf)
+- [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md)
 
-- [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-events)
+- [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](linux-support-events.md)
 
-- [Address false positives/negatives in Microsoft Defender for Endpoint](/defender-endpoint/defender-endpoint-false-positives-negatives)
+- [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
 
 

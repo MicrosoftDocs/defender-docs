@@ -1,4 +1,4 @@
-﻿---
+---
 title: Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux
 ms.reviewer: gopkr
 description: Learn how to troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux.
@@ -6,15 +6,12 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-linux
 ms.topic: troubleshooting-general
 ms.subservice: linux
-search.appverid: met150
 ms.date: 03/28/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -103,5 +100,5 @@ If the problem persists, contact customer support.
 
 For more information about how to configure the product to use a static proxy, see [Configure Microsoft Defender for Endpoint for static proxy discovery](linux-static-proxy-configuration.md).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

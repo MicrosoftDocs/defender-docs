@@ -2,8 +2,6 @@
 title: Reports for Attack simulation training
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: concept-article
 ms.service: defender-office-365
 ms.localizationpriority: medium
@@ -12,8 +10,7 @@ ms.collection:
   - tier2
 ms.custom:
 description: Admins can learn how Attack simulation training in the Microsoft Defender portal affects users and can gain insights from simulation and training outcomes.
-search.appverid: met150
-ms.date: 01/07/2026
+ms.date: 02/06/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -309,6 +306,9 @@ This section describes the information in the simulation report for regular simu
 
 The **Simulation impact** section on **Report** tab** for a simulation shows the number and percentage of **Compromised users** and **Users who reported** the message.
 
+> [!TIP]
+> Simulation messages reported by non-Microsoft tools aren't captured in attack simulation reports.
+
 If you hover over a section in the chart, the actual numbers for each category are shown.
 
 Select **View compromised users** to go to the [Users tab](attack-simulation-training-simulations.md#users-tab) tab in the report where the results are filtered by **Compromised: Yes**.
@@ -412,6 +412,8 @@ When you export information from the reports, the CSV file contains more informa
 
 > [!TIP]
 > For maximum information, verify that all available columns in the report are visible before you export.
+>
+> Simulation messages reported by non-Microsoft tools aren't captured in attack simulation reports.
 
 |Field Name|Description|
 |---|---|

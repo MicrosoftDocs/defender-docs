@@ -1,9 +1,8 @@
 ---
 title: "Anti-malware Scan Interface (AMSI) integration with Microsoft Defender Antivirus"
 description: Describes fileless malware and how Microsoft Defender Antivirus uses AMSI to protect against hidden threats.
-author: KesemSharabi
-ms.author: kesharab
-manager: bagol
+author: chrisda
+ms.author: chrisda
 ms.reviewer: yongrhee
 ms.date: 10/20/2025
 appliesto:
@@ -17,9 +16,6 @@ ms.subservice: ngp
 ms.custom: 
 - QuickDraft
 - partner-contribution
-search.appverid: MET150
-f1.keywords:
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2

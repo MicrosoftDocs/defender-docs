@@ -1,13 +1,11 @@
-﻿---
+---
 title: Find device information by internal IP API
 description: Use this API to create calls related to finding a device entry around a specific timestamp by internal IP.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
@@ -15,7 +13,6 @@ ms.collection:
 ms.topic: reference
 ms.custom: api
 ms.subservice: reference
-search.appverid: met150
 ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

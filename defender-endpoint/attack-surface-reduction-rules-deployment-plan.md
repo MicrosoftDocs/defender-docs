@@ -1,14 +1,12 @@
-﻿---
+---
 title: Plan attack surface reduction rules deployment
 description: Provides guidance to plan your attack surface reduction rules deployment.
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
-audience: ITPro
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: sugamar, yongrhee
-manager: bagol
 ms.custom: asr
 ms.topic: article
 ms.collection: 
@@ -18,7 +16,6 @@ ms.collection:
 - tier1
 - mde-asr
 ms.date: 03/27/2025
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -98,5 +95,5 @@ See: [Create a deployment plan for Windows](/windows/deployment/update/create-de
 [Operationalize attack surface reduction rules](attack-surface-reduction-rules-deployment-operationalize.md)
 
 [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

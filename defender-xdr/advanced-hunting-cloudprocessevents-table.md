@@ -1,16 +1,11 @@
 ---
 title: CloudProcessEvents table in the advanced hunting schema
 description: Learn about the CloudProcessEvents table in the advanced hunting schema, which contains information about process events in multicloud hosted environments.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3

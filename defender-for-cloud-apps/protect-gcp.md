@@ -1,18 +1,18 @@
 ---
 title: Protect your Google Cloud Platform environment | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your Google Cloud Platform app to Defender for Cloud Apps using the API connector.
-ms.date: 03/04/2025
+ms.date: 11/25/2025
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
+
 # How Defender for Cloud Apps helps protect your Google Cloud Platform (GCP) environment
 
 
+Google Cloud Platform is an IaaS provider that enables your organization to host and manage their entire workloads in the cloud. Along with the benefits of leveraging infrastructure in the cloud, your organization's most critical assets might be exposed to threats. Exposed assets include storage instances with potentially sensitive information, compute resources that operate some of your most critical applications, ports, and virtual private networks that enable access to your organization.
 
-Google Cloud Platform is an IaaS provider that enables your organization to host and manage their entire workloads in the cloud. Along with the benefits of leveraging infrastructure in the cloud, your organization's most critical assets may be exposed to threats. Exposed assets include storage instances with potentially sensitive information, compute resources that operate some of your most critical applications, ports, and virtual private networks that enable access to your organization.
-
-Connecting GCP to Defender for Cloud Apps helps you secure your assets and detect potential threats by monitoring administrative and sign-in activities, notifying on possible brute force attacks, malicious use of a privileged user account, and unusual deletions of VMs.
-
+Connecting GCP to Defender for Cloud Apps helps you secure your assets and detect potential threats by monitoring administrative and sign-in activities, notifying on possible brute force attacks, malicious use of a privileged user account, and unusual deletions of virtual machines (VMs).
+    
 ## Main threats
 
 - Abuse of cloud resources
@@ -64,7 +64,7 @@ We recommend that you use a dedicated project for the integration and restrict a
 > - [Pub/Sub topic – GCP project level](https://cloud.google.com/logging/docs/export/using_exported_logs#pubsub-overview)
 > - [Pub/Sub subscription – GCP project level](https://cloud.google.com/logging/docs/export/using_exported_logs#pubsub-overview)
 >
-> The Defender for Cloud Apps auditing connection only imports Admin Activity audit logs; Data Access and System Event audit logs are not imported. For more information about GCP logs, see [Cloud Audit Logs](https://go.microsoft.com/fwlink/?linkid=2109230).
+> The Defender for Cloud Apps auditing connection only imports Admin Activity audit logs; Data Access and System Event audit logs aren't imported. For more information about GCP logs, see [Cloud Audit Logs](https://go.microsoft.com/fwlink/?linkid=2109230).
 
 ### Prerequisites
 
@@ -77,57 +77,28 @@ You can connect GCP **Security auditing** to your Defender for Cloud Apps connec
 
 ### Configure Google Cloud Platform
 
-#### Create a dedicated project
 
-Create a dedicated project in GCP under your organization to enable integration isolation and stability
+1. Create a dedicated project in GCP under your organization to enable integration isolation and stability.
 
-1. Sign in to your GCP portal using your integrating GCP user account.
-1. Select **Create Project** to start a new project.
-1. In the **New project** screen, name your project and select **Create**.
 
-    ![Screenshot showing GCP create project dialog.](media/connect-gcp-create-project.png)
-
-#### Enable required APIs
-
-1. Switch to the dedicated project.
-1. Go to the **Library** tab.
-1. Search for and select **Cloud Logging API**, and then on the API page, select **ENABLE**.
-1. Search for and select **Cloud Pub/Sub API**, and then on the API page, select **ENABLE**.
+1. Enable the **Cloud Logging API** and **Cloud Pub/Sub API** for the dedicated project.
 
     > [!NOTE]
-    > Make sure that you do not select **Pub/Sub Lite API**.
+    > Make sure that you don't select **Pub/Sub Lite API**.
 
-#### Create a dedicated service account for the security auditing integration
+#### Create a dedicated service account with required roles
 
-1. Under **IAM & admin**, select **Service accounts**.
-1. Select **CREATE SERVICE ACCOUNT** to create a dedicated service account.
-1. Enter an account name, and then select **Create**.
-1. Specify the **Role** as **Pub/Sub Admin** and then select **Save**.
-
-    ![Screenshot showing GCP add IAM role.](media/connect-gcp-iam-role.PNG)
-
+1. Create a dedicated service account.
 1. Copy the **Email** value, you'll need this later.
+1. Assign the **Pub/Sub Admin** role to the service account.
+1. Assign the **Logs Configuration Writer** role to the service account at the organization level.
 
-    ![Screenshot showing GCP service account dialog.](media/connect-gcp-create-service-account.png)
-
-1. Under **IAM & admin**, select **IAM**.
-
-    1. Switch to organization level.
-    1. Select **ADD**.
-    1. In the **New members** box, paste the **Email** value you copied earlier.
-    1. Specify the **Role** as **Logs Configuration Writer** and then select **Save**.
-
-        ![Screenshot showing add member dialog.](media/connect-gcp-add-member.png)
 
 #### Create a private key for the dedicated service account
 
 1. Switch to project level.
-1. Under **IAM & admin**, select **Service accounts**.
-1. Open the dedicated service account and select **Edit**.
-1. Select **CREATE KEY**.
-1. In the **Create private key** screen, select **JSON**, and then select **CREATE**.
-
-    ![Screenshot showing create private key dialog.](media/connect-gcp-create-private-key.png)
+1. Select **Service accounts**.
+1. Generate a **JSON private key**.
 
     > [!NOTE]
     > You'll need the JSON file that is downloaded to your device later.
@@ -136,7 +107,6 @@ Create a dedicated project in GCP under your organization to enable integration 
 
 Make a note of your **Organization ID**, you'll need this later. For more information, see [Getting your organization ID](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id).
 
-![Screenshot showing organization ID dialog.](media/connect-gcp-org-id.png)
 
 ### Connect Google Cloud Platform auditing to Defender for Cloud Apps
 
@@ -147,46 +117,46 @@ This procedure describes how to add the GCP connection details to connect Google
 1. In the **App connectors** page, to provide the GCP connector credentials, do one of the following:
 
     > [!NOTE]
-    > We recommended that you connect your Google Workspace instance to get unified user management and governance. This is the recommended even if you do not use any Google Workspace products and the GCP users are managed via the Google Workspace user management system.
+    > We recommended that you connect your Google Workspace instance to get unified user management and governance. This is the recommended even if you don't use any Google Workspace products and the GCP users are managed via the Google Workspace user management system.
 
-    **For a new connector**
+**For a new connector**
 
-    1. Select **+Connect an app**, followed by **Google Cloud Platform**.
+1. Select **+Connect an app**, followed by **Google Cloud Platform**.
 
-        ![Connect GCP.](media/connect-gcp-add.png)
+    :::image type="content" source="media/connect-gcp-add.png" alt-text="Screenshot that shows where to find the Google Cloud Platform app connector in the Defender portal." lightbox="media/connect-gcp-add.png":::
 
-    1. In the next window, provide a name for the connector, and then select **Next**.
 
-        ![GCP connector name.](media/connect-gcp-name.png)
+1. In the next window, provide a name for the connector, and then select **Next**.
 
-    1. In the **Enter details** page, do the following, and then select **Submit**.
-        1. In the **Organization ID** box, enter the organization you made a note of earlier.
-        1. In the **Private key file** box, browse to the JSON file you downloaded earlier.
+    :::image type="content" source="media/connect-gcp-name.png" alt-text="Screenshot that shows where to add the instance name in the Defender portal." lightbox="media/connect-gcp-name.png":::
 
-        ![Connect GCP app security auditing for new connector.](media/connect-gcp-app-audit.png)
 
-    **For an existing connector**
+1. In the **Enter details** page, do the following, and then select **Submit**.
+    1. In the **Organization ID** box, enter the organization you made a note of earlier.
+    1. In the **Private key file** box, browse to the JSON file you downloaded earlier.
 
-    1. In the list of connectors, on the row in which the GCP connector appears, select **Edit settings**.
+    :::image type="content" source="media/connect-gcp-app-audit.png" alt-text="Screenshot that shows where to enter the organization ID and private key file in the Defender portal." lightbox="media/connect-gcp-app-audit.png":::
 
-    1. In the **Enter details** page, do the following, and then select **Submit**.
-        1. In the **Organization ID** box, enter the organization you made a note of earlier.
-        1. In the **Private key file** box, browse to the JSON file you downloaded earlier.
+**For an existing connector**
 
-        ![Connect GCP app security auditing for existing connector.](media/connect-gcp-app-audit.png)
+1. In the list of connectors, on the row in which the GCP connector appears, select **Edit settings**.
+
+1. In the **Enter details** page, do the following, and then select **Submit**.
+    1. In the **Organization ID** box, enter the organization you made a note of earlier.
+    1. In the **Private key file** box, browse to the JSON file you downloaded earlier.
+
+    :::image type="content" source="media/connect-gcp-app-audit.png" alt-text="Screenshot that shows where to enter the organization ID and private key file in the Defender portal." lightbox="media/connect-gcp-app-audit.png":::
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**. Make sure the status of the connected App Connector is **Connected**.
 
     > [!NOTE]
-    > Defender for Cloud Apps will create an aggregated export sink (organization level), a Pub/Sub topic and Pub/Sub subscription using the integration service account in the integration project.
+    > Defender for Cloud Apps will create an aggregated export sink (organization level), a Pub/Sub topic, and Pub/Sub subscription using the integration service account in the integration project.
     >
     > Aggregated export sink is used to aggregate logs across the GCP organization and the Pub/Sub topic created is used as the destination. Defender for Cloud Apps subscribes to this topic through the Pub/Sub subscription created to retrieve the admin activity logs across the GCP organization.
 
-If you have any problems connecting the app, see [Troubleshooting App Connectors](troubleshooting-api-connectors-using-error-messages.md).
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Control cloud apps with policies](control-cloud-apps-with-policies.md)
+- [Control cloud apps with policies](control-cloud-apps-with-policies.md)
+- If you have any problems connecting the app, see [Troubleshooting App Connectors](troubleshooting-api-connectors-using-error-messages.md).
 
-[!INCLUDE [Open support ticket](includes/support.md)]

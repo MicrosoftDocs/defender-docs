@@ -1,16 +1,13 @@
 ---
 title: Submit files in Microsoft Defender for Endpoint
 description: Learn how to use the unified submissions feature in Microsoft Defender XDR to submit suspicious emails, URLs, email attachments, and files to Microsoft for scanning.
-search.appverid: met150
 ms.date: 12/24/2025
 appliesto:
   - Microsoft Defender for Endpoint
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
-manager: bagol
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.topic: how-to
 ms.collection:
 - m365-security
@@ -32,7 +29,7 @@ You need to assign permissions before you can perform the procedures in this art
 - Submit files / file hashes: _"Alerts investigation" or "Manage security settings in Security Center"_
 - View submissions: "_View Data - Security operations"_
 
-**Microsoft Defender XDR Unified RBAC** permissions:
+**Microsoft Defender unified RBAC** permissions:
 
 - Submit files / file hashes: _"Alerts (Manage)" or "Core security settings (manage)"_
 - View submissions: _"Security data basics (read)"_

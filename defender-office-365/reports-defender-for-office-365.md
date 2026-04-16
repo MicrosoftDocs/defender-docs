@@ -1,16 +1,9 @@
 ---
 title: View Defender for Office 365 reports
-f1.keywords:
-  - CSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: concept-article
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.assetid: e47e838c-d99e-4c0b-b9aa-e66c4fae902f
 ms.collection:
   - m365-security
@@ -161,7 +154,7 @@ On the **Post delivery activities** page, the :::image type="icon" source="media
 
 ## Threat protection status report
 
-The **Threat protection status** report is a single view that brings together information about malicious content and malicious email detected and blocked by the [default email protections for cloud mailboxes](eop-about.md) and [Defender for Office 365](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet). For more information, see [Threat protection status report](reports-email-security.md#threat-protection-status-report).
+The **Threat protection status** report is a single view that brings together information about malicious content and malicious email detected and blocked by [the built-in security features for all cloud mailboxes](eop-about.md) and [Defender for Office 365](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet). For more information, see [Threat protection status report](reports-email-security.md#threat-protection-status-report).
 
 ## Top senders and recipients report
 

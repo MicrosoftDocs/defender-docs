@@ -13,6 +13,66 @@ description: Lists all Microsoft Defender for Identity security posture assessme
 > [!NOTE]
 > While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status might still take time until it's marked as **Completed**.
 
+
+## Remove stale Active Directory accounts (Preview)
+
+**Description**
+
+This recommendation lists any user accounts in Active Directory that are stale, meaning they haven't logged in at all during the past 90 days.
+
+Excluded accounts:
+
+- Service accounts
+- Disabled or deleted accounts.
+
+**User impact**
+
+Stale accounts pose a security risk because they provide potential targets for attackers without being actively monitored. Compromised stale accounts can be used to gain unauthorized access, move laterally in the environment, or escalate privileges. Removing or disabling them reduces unnecessary exposure and strengthens overall security posture.
+
+**Implementation**
+
+
+1. Review the exposed entities to identify which stale user accounts haven't logged in for the past 90 days.
+
+1. Disable the account if it's confirmed to be unused or remove it entirely according to your retention policy.
+
+1. Disable and delete user accounts with no logons for 90 days after a monitoring period.
+
+1. Remove accounts for former employees to prevent unauthorized access.
+
+
+##  Microsoft Entra ID privileged user accounts that are also privileged in Active Directory (Preview)
+
+
+**Description**
+
+This recommendation lists any user accounts that have privileged roles in Microsoft Entra ID (such as Global Administrator) and are also members of highly privileged Active Directory groups (for example, Domain Admins, Enterprise Admins). These dual-privileged accounts significantly increase the organization’s attack surface.
+ 
+> [!NOTE]
+> Guests, external identities, and accounts not synchronized to Microsoft Entra ID are excluded from this report. Only accounts that are enabled and hold privileges in both Entra ID and Active Directory are included.
+
+
+**User impact**
+
+Accounts with privileges in both Microsoft Entra ID and Active Directory can be leveraged by attackers to gain full control over both cloud and on-premises environments. Compromise of a single account might allow lateral movement, privilege escalation, and access to sensitive resources across hybrid environments. Dual-privileged accounts are high-value targets and can accelerate attacks if not properly managed.
+
+**Implementation**
+
+1. Review the list of exposed entities to identify which accounts have privileged access in both Entra ID and Active Directory.
+
+1. Remediate the account by reducing privileges in one or both environments to enforce least privilege. Only retain dual privileges if necessary, and document justification.
+
+1. Consider separating cloud and on-premises roles across different accounts or implementing just-in-time access to reduce standing exposure.
+
+1. Use Microsoft Entra Privileged Identity Management (PIM) to enforce approval workflows and limit standing access for accounts that must retain elevated privileges.
+
+For example:
+
+- A user who is a Global Administrator in Microsoft Entra ID and a Domain Admin in Active Directory should have one of the roles reduced or replaced with delegated administrative access.
+
+- If dual privileges are required for critical operations, enable MFA, monitor logins closely, and review memberships regularly.
+
+
 ## Identify service accounts in privileged groups
 
 
@@ -162,11 +222,14 @@ If the KRBTGT account's password is compromised, an attacker can use its hash to
 1. Take appropriate action on those accounts by resetting their password **twice** to invalidate the Golden Ticket attack. 
 
 > [!NOTE]
-> The krbtgt Kerberos account in all Active Directory domains supports key storage in all Kerberos Key Distribution Centers (KDC). To renew the Kerberos keys for TGT encryption, periodically change the krbtgt account password. 
-> You can use [one of these scripts](https://github.com/microsoft/New-KrbtgtKeys.ps1)to reset the password. 
-Reset the password twice, waiting at least 10 hours between resets. This wait time is enforced by the script and aligns with best practices to avoid Kerberos authentication issues.
+> The **krbtgt** Kerberos account in all Active Directory domains supports key storage in all Kerberos Key Distribution Centers (KDCs). To renew the Kerberos keys for TGT encryption, periodically change the **krbtgt** account password.  
+>  
+> We recommend resetting the password twice, waiting at least 10 hours between resets. This process invalidates  existing Kerberos tickets to help prevent Golden Ticket attacks.  
+>  
+> For the official and supported procedure, see [Reset the krbtgt password](/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-the-krbtgt-password).
 
-## Change password for on-prem account with potentially leaked credentials (Preview)
+
+## Change password for on-premises account with potentially leaked credentials (Preview)
 
 **Description**
 
@@ -466,36 +529,6 @@ To use this security assessment effectively, follow these steps:
     - **Delete the account:** If no issues are observed, delete the account and fully remove its access.
 
 
-## Riskiest lateral movement paths (LMP)
-
-**Description**
-
-Microsoft Defender for Identity continuously monitors your environment to identify **sensitive** accounts with the riskiest lateral movement paths that expose a security risk, and reports on these accounts to assist you in managing your environment. Paths are considered risky if they have three or more non-sensitive accounts that can expose the **sensitive** account to credential theft by malicious actors.
-
-For more information about lateral movement paths, see:
-
-- [Understand and investigate Lateral Movement Paths (LMPs) with Microsoft Defender for Identity](../understand-lateral-movement-paths.md)
-- [MITRE ATT&CK Lateral Movement](https://attack.mitre.org/tactics/TA0008/)
-
-**User impact**
-
-Organizations that fail to secure their **sensitive** accounts leave the door unlocked for malicious actors.
-
-Malicious actors, much like thieves, often look for the easiest and quietest way into any environment. Sensitive accounts with risky lateral movement paths are windows of opportunities for attackers and can expose risks.
-
-For example, the riskiest paths are more readily visible to attackers and, if compromised, can give an attacker access to your organization's most sensitive entities.
-
-**Implementation**
-
-1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your **sensitive** accounts have risky LMPs.
-
-    :::image type="content" source="../media/cas-isp-riskiest-lmp-1.png" alt-text="Screenshot that shows the impacted entities and the actions to take to reduce lateral movement path risk to sensitive entities. " lightbox="../media/cas-isp-riskiest-lmp-1.png":::
-
-1. Take appropriate action:
-    - Remove the entity from the group as specified in the recommendation.
-    - Remove the local administrator permissions for the entity from the device specified in the recommendation.
-
-
 ## Unsecure Kerberos delegation
 
 **Description**
@@ -555,7 +588,7 @@ Resource-based constrained delegation restricts which entities can impersonate t
 
 **Description**
 
-SID History is an attribute that supports [migration scenarios](/previous-versions/windows/it-pro/windows-server-2003/cc779590(v=ws.10)). Every user account has an associated [Security IDentifier (SID)](/windows/win32/secauthz/security-identifiers) which is used to track the security principal and the access the account has when connecting to resources. SID History enables access for another account to effectively be cloned to another and is useful to ensure users retain access when moved (migrated) from one domain to another.
+SID History is an attribute that supports [migration scenarios](/previous-versions/windows/it-pro/windows-server-2003/cc779590(v=ws.10)). Every user account has an associated [Security Identifier (SID)](/windows/win32/secauthz/security-identifiers) which is used to track the security principal and the access the account has when connecting to resources. SID History enables access for another account to effectively be cloned to another and is useful to ensure users retain access when moved (migrated) from one domain to another.
 
 The assessment checks for accounts with SID History attributes which Microsoft Defender for Identity profiles to be risky.
 
@@ -565,7 +598,7 @@ Organizations that fail to secure their account attributes leave the door unlock
 
 Malicious actors, much like thieves, often look for the easiest and quietest way into any environment. Accounts configured with an unsecure SID History attribute are windows of opportunities for attackers and can expose risks.
 
-For example, a non-sensitive account in a domain can contain the Enterprise Admin SID in its SID History from another domain in the Active Directory forest, thus "elevating" access for the user account to an effective Domain Admin in all domains in the forest. Also, if you have a forest trust without SID Filtering enabled (also called Quarantine), it's possible to inject a SID from another forest and it will be added to the user token when authenticated and used for access evaluations.
+For example, a non-sensitive account in a domain can contain the Enterprise Admin SID in its SID History from another domain in the Active Directory forest, thus "elevating" access for the user account to an effective Domain Admin in all domains in the forest. If you have a forest trust without SID Filtering enabled (also called Quarantine), it's possible to inject a SID from another forest and it will be added to the user token when authenticated and used for access evaluations.
 
 **Implementation**
 

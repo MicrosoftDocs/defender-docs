@@ -1,16 +1,11 @@
 ---
 title: How do I pilot and deploy Microsoft Defender XDR?
 description: How to pilot and deploy Microsoft Defender XDR and its components in your production Microsoft 365 tenant.
-search.appverid: met150
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: tracyp
 author: MSFTTracyP
-ms.date: 05/31/2024
+ms.date: 12/11/2025
 ms.localizationpriority: medium
-manager: dansimp 
-audience: ITPro
 ms.collection: 
   - m365-security
   - m365solution-overview
@@ -50,7 +45,7 @@ This table lists the components of Microsoft Defender XDR.
 |Component|Description|For more information|
 |---|---|---|
 | Microsoft Defender for Identity | Uses signals from your on-premises Active Directory Domain Services (AD DS) and Active Directory Federation Services (AD FS) to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization. | [What is Microsoft Defender for Identity?](/defender-for-identity/what-is) |
-| Exchange Online Protection | The native cloud-based SMTP relay and filtering service that helps protect your organization against spam and malware. | [Exchange Online Protection (EOP) overview - Office 365](/defender-office-365/eop-about) |
+| The built-in security features for all cloud mailboxes | Native cloud-based SMTP relay and filtering services that help protect your organization against spam and malware. | [Built-in security features for all cloud mailboxes](/defender-office-365/eop-about) |
 | Microsoft Defender for Office 365 | Safeguards your organization against malicious threats posed by email messages, links (URLs) and collaboration tools. | [Microsoft Defender for Office 365 - Office 365](/defender-office-365/defender-for-office-365-whats-new) |
 | Microsoft Defender for Endpoint | A unified platform for device protection, post-breach detection, automated investigation, and recommended response. | [Microsoft Defender for Endpoint - Windows security](/defender-endpoint/microsoft-defender-endpoint) |
 | Microsoft Defender for Cloud Apps | A comprehensive cross-SaaS solution bringing deep visibility, strong data controls, and enhanced threat protection to your cloud apps. | [What is Defender for Cloud Apps?](/cloud-app-security/what-is-cloud-app-security) |
@@ -63,7 +58,7 @@ This illustration shows the architecture and integration of Microsoft Defender X
 In this illustration:
 
 - Microsoft Defender XDR combines the signals from all of the Defender components to provide XDR across domains. This includes a unified incident queue, automated response to stop attacks, self-healing (for compromised devices, user identities, and mailboxes), cross-threat hunting, and threat analytics.
-- Microsoft Defender for Office 365 safeguards your organization against malicious threats posed by email messages, links (URLs), and collaboration tools. It shares signals resulting from these activities with Microsoft Defender XDR. Exchange Online Protection (EOP) is integrated to provide end-to-end protection for incoming email and attachments.
+- Microsoft Defender for Office 365 safeguards your organization against malicious threats posed by email messages, links (URLs), and collaboration tools. It shares signals resulting from these activities with Microsoft Defender XDR. [The built-in security features for all cloud mailboxes](/defender-office-365/eop-about) is integrated to provide end-to-end protection for incoming email and attachments.
 - Microsoft Defender for Identity gathers signals from AD DS domain controllers and servers running AD FS and AD CS. It uses these signals to protect your hybrid identity environment, including protecting against hackers that use compromised accounts to move laterally across workstations in the on-premises environment.
 - Microsoft Defender for Endpoint gathers signals from and protects devices managed by your organization.
 - Microsoft Defender for Cloud Apps gathers signals from your organization's use of cloud apps and protects data flowing between your IT environment and these apps, including both sanctioned and unsanctioned cloud apps.
@@ -95,7 +90,7 @@ The cyber-attack starts with a phishing email that arrives at the Inbox of an em
 
 In the illustration:
 
-- **Exchange Online Protection**, part of Microsoft Defender for Office 365, can detect the phishing email and use mail flow rules (also known as transport rules) to make certain it never arrives in a user's Inbox.
+- **The built-in security features for all cloud mailboxes**, part of Microsoft Defender for Office 365, can detect the phishing email and use Exchange mail flow rules (also known as transport rules) to make certain it never arrives in a user's Inbox.
 - **Defender for Office 365** uses Safe Attachments to test the attachment and determine that it's harmful, so the mail that arrives either isn't actionable by the user, or policies prevent the mail from arriving at all.
 - **Defender for Endpoint** detects device and network vulnerabilities that might otherwise be exploited for devices managed by your organization.
 - **Defender for Identity** takes note of sudden on-premises user account changes like privilege escalation or high-risk lateral movement. It also reports on easily exploited identity issues like unconstrained Kerberos delegation, for correction by your security team.
@@ -174,7 +169,7 @@ After successfully evaluating or piloting Defender for Office 365, it can be pro
 1. Purchase and provision the necessary licenses and assign them to your production users.
 2. Rerun recommended baseline policy configurations (either Standard or Strict) against your production email domain or specific groups of users.
 3. Optionally create and configure any custom Defender for Office 365 policies against your production email domain or groups of users.  However, remember that any assigned baseline policies will always take precedence over custom policies.
-4. Update the public MX record for your production email domain to resolve directly to EOP.
+4. Update the public MX record for your production email domain to resolve directly to Microsoft 365.
 5. Decommission any third-party SMTP gateways and disable or delete any EXO connectors associated with this relay.
 
 ### Microsoft Defender for Endpoint

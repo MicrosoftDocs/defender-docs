@@ -1,21 +1,18 @@
-﻿---
+---
 title: Use attack surface reduction rules to prevent malware infection
 description: Attack surface reduction rules can help prevent exploits from using apps and scripts to infect devices with malware.
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
-audience: ITPro
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: sugamar
-manager: bagol
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
 ms.collection:
 - m365-security
 - tier2
 - mde-asr
-search.appverid: met150
 ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -98,7 +95,7 @@ Also, make sure [Microsoft Defender Antivirus and anti-malware updates](/windows
 - Minimum platform release requirement: `4.18.2008.9`
 - Minimum engine release requirement: `1.1.17400.5`
 
-For more information and to get your updates, see [Update for Microsoft Defender anti-malware platform](/defender-endpoint/microsoft-defender-antivirus-updates).
+For more information and to get your updates, see [Update for Microsoft Defender anti-malware platform](microsoft-defender-antivirus-updates.md).
 
 ### Cases where warn mode isn't supported
 
@@ -208,9 +205,9 @@ Defender for Endpoint generates the "engine version" that's listed in the event 
 >
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

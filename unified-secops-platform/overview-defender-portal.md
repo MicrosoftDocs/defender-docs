@@ -1,14 +1,9 @@
 ---
 title: Microsoft Defender portal overview
 description: Learn about the Microsoft services and features available in the Microsoft Defender portal.
-search.appverid: met150
-ms.service: microsoft-defender
-ms.subservice: unified-security-operations
-ms.author: guywild
 author: guywi-ms
-ms.localizationpriority: medium
+ms.author: guywild
 ms.date: 11/14/2024
-audience: ITPro
 ms.collection:
 - M365-security-compliance
 - tier1
@@ -47,7 +42,7 @@ In the Defender portal **Permissions** page, use the following methods to config
 
 Methods | Details
 --- | ---
-[Global Microsoft Entra roles](/defender-xdr/m365d-permissions) | Accounts with the following Global Microsoft Entra roles can access Microsoft Defender XDR functionality and data: <ul><li>Global administrator</li><li>Security administrator</li><li>Security Operator</li><li>Global Reader</li><li>Security Reader</li>
+[Global Microsoft Entra roles](/defender-xdr/m365d-permissions) | Accounts with the following Global Microsoft Entra roles can access Microsoft Defender XDR functionality and data: <ul><li>Security administrator or higher</li><li>Security Operator</li><li>Global Reader</li><li>Security Reader</li>
 [Custom roles](/defender-xdr/custom-roles) | Allow access to specific data, tasks, and features using custom roles. Custom roles control granular access, and can be used together with Microsoft Entra global roles.
 [Unified RBAC](/defender-xdr/manage-rbac) | Unified role-based access control (RBAC) provides a permissions management model for controlling user permissions in the Defender portal, and across services within the portal.
 

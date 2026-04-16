@@ -1,15 +1,12 @@
-﻿---
+---
 title: Web protection
 description: Learn about the web protection in Microsoft Defender for Endpoint and how it can protect your organization.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.reviewer: ericlaw
 ms.localizationpriority: medium
 ms.date: 04/02/2025
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -185,5 +182,5 @@ For more information on how to submit false positives/negatives, see [Address fa
 |[Web threat protection](web-threat-protection.md) | Prevent access to phishing sites, malware vectors, exploit sites, untrusted or low-reputation sites, and sites that are blocked.|
 |[Web content filtering](web-content-filtering.md) | Track and regulate access to websites based on their content categories.|
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

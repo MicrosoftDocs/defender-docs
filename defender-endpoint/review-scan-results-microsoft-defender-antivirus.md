@@ -1,12 +1,11 @@
-﻿---
+---
 title: Review the results of Microsoft Defender Antivirus scans
-description: Review the results of scans using Microsoft Endpoint Configuration Manager, Microsoft Intune, or the Windows Security app
+description: Review the results of scans using Microsoft Configuration Manager, Microsoft Intune, or the Windows Security app
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.reviewer: yongrhee
-manager: bagol
 ms.custom: nextgen
 ms.date: 10/20/2025
 ms.subservice: ngp
@@ -15,7 +14,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -66,7 +64,7 @@ To view the scan results using Microsoft Intune admin center, follow the below p
 
 ## Use Configuration Manager to review scan results
 
-See [How to monitor Endpoint Protection status](/configmgr/protect/deploy-use/monitor-endpoint-protection).
+See [How to monitor Endpoint Protection status](/intune/configmgr/protect/deploy-use/monitor-endpoint-protection).
 
 ## Use PowerShell cmdlets to review scan results
 
@@ -90,7 +88,7 @@ Get-MpThreat
 
 See [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Defender Antivirus cmdlets](/powershell/module/defender/) for more information on how to use PowerShell with Microsoft Defender Antivirus.
 
-## Use Windows Management Instruction (WMI) to review scan results
+## Use Windows Management Instrumentation (WMI) to review scan results
 
 Use the [**Get** method of the **MSFT_MpThreat** and **MSFT_MpThreatDetection**](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal) classes.
 
@@ -98,7 +96,7 @@ Use the [**Get** method of the **MSFT_MpThreat** and **MSFT_MpThreatDetection**]
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
@@ -109,5 +107,5 @@ Use the [**Get** method of the **MSFT_MpThreat** and **MSFT_MpThreatDetection**]
 - [Customize, initiate, and review the results of Microsoft Defender Antivirus scans and remediation](customize-run-review-remediate-scans-microsoft-defender-antivirus.md)
 - [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 - [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-windows.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
