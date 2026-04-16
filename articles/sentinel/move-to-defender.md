@@ -93,7 +93,7 @@ For more information, see:
 
 - [**Azure Lighthouse documentation**](/azure/lighthouse/how-to/manage-sentinel-workspaces). Azure Lighthouse lets you use Microsoft Sentinel data from other tenants across onboarded workspaces. For example, you can run cross-workspace queries with the `workspace()` operator in Advanced hunting and analytics rules.
 
-- [**Microsoft Entra B2B**](/entra/identity/multi-tenant-organizations/overview#b2b-direct-connect). Microsoft Entra B2B lets you access data across tenants. GDAP isn't supported for Microsoft Sentinel data.
+- [**Microsoft Entra B2B**](/entra/identity/multi-tenant-organizations/overview#b2b-direct-connect). Microsoft Entra B2B lets you access data across tenants. GDAP for Microsoft Sentinel is in preview.
 
 ## Configure and review your settings and content
 
