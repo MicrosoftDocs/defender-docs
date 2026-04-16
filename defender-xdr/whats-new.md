@@ -32,9 +32,12 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
-## January 2026
+## April 2026
 
 - (Preview) You can now view the current status of automatic attack disruption and predictive shielding actions related to a specific incident. You view this data in the **Activities** tab of the incident page. [Learn more](autoad-results.md#track-the-action-status-in-the-activities-tab)
+
+## January 2026
+
 - (Preview) In advanced hunting, if the query result exceeds the 64-MB size limit, the portal now returns the maximum number of records it can within this limit and displays a message indicating that the displayed results are partial due to size constraints. [Learn more](advanced-hunting-overview.md#quotas-and-usage-parameters)
 - (Preview) The [`BehaviorInfo`](advanced-hunting-behaviorinfo-table.md) and [`BehaviorEntities`](advanced-hunting-behaviorentities-table.md) tables in advanced hunting now include additional columns and information about behavior data types and alerts from User and Entity Behavior Analytics (UEBA), providing more insights on the relationships between identified behaviors and entities. [Learn more about UEBA behaviors](/azure/sentinel/entity-behaviors-layer)
 

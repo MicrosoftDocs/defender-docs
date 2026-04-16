@@ -94,7 +94,7 @@ The Defender XDR user experience now includes additional visual cues to ensure v
     - A tag titled *Attack Disruption*
     - A yellow banner at the top of the page that highlights the automatic action taken
    - The current asset status is shown in the incident graph if an action is done on an asset, for example, account disabled or device contained
-   - The **Policy status** column (Preview) in the **Activities** tab shows the current status of all actions and policies relevant to the incident.
+   - The **Policy status** column (Preview) in the **Activities** tab shows the current status of all actions and policies relevant to the incident. Filter by **Provider: Attack disruption** and **Policy status: Active, Inactive, No status** to view disruption policy statuses.
       
 3. Via API:
 

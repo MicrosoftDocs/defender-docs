@@ -29,7 +29,7 @@ Learn more:
 - [What's new in Microsoft Defender for Endpoint on other operating systems and services](#whats-new-in-defender-for-endpoint-on-other-operating-systems-and-services)
 - [Preview features](/defender-xdr/preview)
 
-## January 2025
+## April 2026
 
 |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|
