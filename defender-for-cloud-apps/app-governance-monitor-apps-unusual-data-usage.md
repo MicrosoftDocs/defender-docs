@@ -31,13 +31,13 @@ Create policies that automatically flag and deactivate apps whose data usage mat
 
 Monitoring unusual data usage can help detect:
 
-- Sudden spikes in application activity
+- Sudden spikes in application activity.
 
-- Unexpected increases in API usage by an application
+- Unexpected increases in API usage by an application.
 
-- Potential misuse of applications accessing Microsoft 365 data
+- Potential misuse of applications accessing Microsoft 365 data.
 
-- Applications that might be transferring unusually large volumes of data"
+- Applications that might be transferring unusually large volumes of data.
 
 ## Next step
 
