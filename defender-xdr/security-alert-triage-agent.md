@@ -313,11 +313,11 @@ To review the agent’s findings, follow these steps:
 
 ### Teach the agent your organization's context through feedback
 
-<details>
-<summary>Teach the agent your organization's context through feedback (email and collaboration alerts only)</summary>
-
 > [!IMPORTANT]
 > The feedback option is currently only available for email and collaboration alerts.
+
+<details>
+<summary>**Learn how to teach the agent your organization's context through feedback**</summary>
 
 The Security Alert Triage Agent continuously improves its decision-making based on feedback tailored to your organization's needs. Analysts can provide input in plain, natural language - no complex configurations required - making it easy to guide and shape the agent's behavior. This feedback is stored in the agent's memory, allowing it to adapt to how your organization interprets and classifies security alerts. Over time, this adaptation enhances the agent's accuracy and effectiveness in triaging future alerts, with your team in control.
 
