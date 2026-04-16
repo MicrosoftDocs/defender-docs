@@ -25,7 +25,7 @@ ms.date: 01/29/2024
 
 After you completed the [onboarding steps and readiness checks](get-started-xdr.md) for Microsoft Defender Experts for XDR, our experts will start monitoring your environment to streamline the service so we can perform comprehensive service on your behalf. During this stage, our experts identify latent threats, sources of risk, and normal activity.
 
-Once our experts begin to perform comprehensive response work on your behalf, you'll start receiving notifications about incidents that require remediation steps and targeted recommendations on critical incidents. You can also chat with our experts or your service delivery managers (SDMs) regarding important queries and regular business and security posture reviews and view real-time reports on the number of incidents we've investigated and resolved on your behalf.
+Once our experts begin to perform comprehensive response work on your behalf, you'll start receiving notifications about incidents that require remediation steps and targeted recommendations on critical incidents. You can also chat with our experts or your Security Delivery Experts (SDXs) regarding important queries and regular business and security posture reviews and view real-time reports on the number of incidents we've investigated and resolved on your behalf.
 
 ## Managed detection and response
 
@@ -152,7 +152,7 @@ After configuring a connector, the updates by Defender Experts to an incident's 
 
 ## Get real-time visibility with Defender Experts for XDR reports
 
-Defender Experts for XDR includes an interactive, on-demand report that provides a clear summary of the work our expert analysts are doing on your behalf, aggregate information about your incident landscape, and granular details about specific incidents. Your service delivery manager (SDM) also uses the report to provide you with more context regarding the service during a monthly business review.
+Defender Experts for XDR includes an interactive, on-demand report that provides a clear summary of the work our expert analysts are doing on your behalf, aggregate information about your incident landscape, and granular details about specific incidents. Your Security Delivery Expert (SDX) also uses the report to provide you with more context regarding the service during a monthly business review.
 
 :::image type="content" source="media/defender-xdr-report.png" alt-text="Screenshot of Defender Experts for XDR report." lightbox="media/defender-xdr-report.png":::
 
