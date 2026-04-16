@@ -134,9 +134,9 @@ Activate the workloads for the alert types you want the agent to triage in Micro
 
 | Alert type | Workload to activate |
 |---|---|
-| Email and collaboration alerts | Defender for Office 365 |
+| Email and collaboration alerts | Microsoft Defender for Office 365 |
 | Cloud alerts | Enabled automatically |
-| Identity alerts | Cloud Apps |
+| Identity alerts | Microsoft Defender for Identity and Microsoft Defender for Cloud Apps |
 
 :::image type="content" source="media/phishing-triage-agent/activate-defender-for-office-365-workloads.png" alt-text="Screenshot of the Activate unified role-based access control page showing the Defender for Office 365 toggle, which needs to be enabled for the Security Alert Triage Agent." lightbox="media/phishing-triage-agent/activate-defender-for-office-365-workloads.png":::
 
