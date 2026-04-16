@@ -1,4 +1,4 @@
-﻿---
+---
 title: Create indicators for IPs and URLs/domains
 ms.reviewer: ericlaw
 description: Create indicators for IPs and URLs/domains that define the detection, prevention, and exclusion of entities.
@@ -6,15 +6,12 @@ ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - -asr
 ms.topic: how-to
 ms.subservice: 
-search.appverid: met150
 ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -43,15 +40,15 @@ It's important to understand the following prerequisites before creating indicat
 
 Integration into Microsoft browsers is controlled by the browser's SmartScreen setting. For other browsers and applications, your organization must have:
 
-- [Microsoft Defender Antivirus](/defender-endpoint/microsoft-defender-antivirus-windows) configured in active mode.
+- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md) configured in active mode.
 
-- [Behavior Monitoring](/defender-endpoint/behavior-monitor) enabled.
+- [Behavior Monitoring](behavior-monitor.md) enabled.
 
 - [Cloud-based protection](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus) turned on.
 
-- [Cloud Protection network connectivity](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus).
+- [Cloud Protection network connectivity](configure-network-connections-microsoft-defender-antivirus.md).
 
-- The anti-malware client version must be `4.18.1906.x` or later. See [Monthly platform and engine versions](/defender-endpoint/microsoft-defender-antivirus-updates).
+- The anti-malware client version must be `4.18.1906.x` or later. See [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md).
 
 ### Supported operating systems
 
@@ -60,12 +57,12 @@ Integration into Microsoft browsers is controlled by the browser's SmartScreen s
 - Windows Server 2025
 - Windows Server 2022
 - Windows Server 2019
-- Windows Server 2016 running [Defender for Endpoint modern unified solution](/defender-endpoint/onboard-server#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) (requires installation through MSI)
-- Windows Server 2012 R2 running [Defender for Endpoint modern unified solution](/defender-endpoint/onboard-server#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) (requires installation through MSI)
+- Windows Server 2016 running [Defender for Endpoint modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) (requires installation through MSI)
+- Windows Server 2012 R2 running [Defender for Endpoint modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) (requires installation through MSI)
 - Azure Stack HCI OS, version 23H2 and later
 - macOS
 - Linux
-- iOS 
+- iOS/iPadOS
 - Android
 
 ### Network Protection requirements
@@ -187,5 +184,5 @@ The result is that categories 1-4 are all blocked. This scenario is illustrated 
 - [Manage indicators](indicator-manage.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

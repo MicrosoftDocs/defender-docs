@@ -1,16 +1,11 @@
-﻿---
+---
 title: View the details and results of an automated investigation
 description: During and after an automated investigation, you can view the results and key findings
-search.appverid: met150
-f1.keywords:
-- NOCSH
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.service: defender-endpoint
 ms.subservice: edr
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -140,5 +135,5 @@ To provide more context about how investigation states show up, the following ta
 
 - [Review remediation actions following an automated investigation](manage-auto-investigation.md)
 - [View and organize the Microsoft Defender for Endpoint Incidents queue](view-incidents-queue.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

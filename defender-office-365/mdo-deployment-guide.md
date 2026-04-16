@@ -1,16 +1,9 @@
 ---
 title: Get started with Microsoft Defender for Office 365
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: get-started
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
-  - MOE150
 ms.collection: 
   - zerotrust-solution
   - tier1
@@ -18,7 +11,7 @@ ms.collection:
 ms.custom:
 description: Learn how to get started with the initial deployment and configuration of Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 07/09/2025
+ms.date: 02/06/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -45,7 +38,7 @@ The steps to configure Defender for Office 365 are described in the following di
 
 ## Requirements
 
-Default email protections are included in _all_ Microsoft 365 subscriptions with cloud mailboxes. Defender for Office 365 includes more protection features. For detailed feature comparisons, see [Microsoft Defender for Office 365 overview](mdo-about.md).
+[The built-in security features](eop-about.md) are included in _all_ Microsoft 365 subscriptions with cloud mailboxes. Defender for Office 365 includes more protection features. For detailed feature comparisons, see [Microsoft Defender for Office 365 overview](mdo-about.md).
 
 ### Roles and permissions
 
@@ -105,7 +98,7 @@ As you can probably imagine, a lot of threat policies for email and collaboratio
   - The Standard preset security policy.
   - Built-in protection.
 
-  The Standard and Strict preset security policies are turned off by default until you turn them on. You specify recipient conditions and exceptions (users, group members, domains, or all recipients) for default email protection features for cloud mailboxes and protection features in Defender for Office 365 within the Standard and Strict preset security policies.
+  The Standard and Strict preset security policies are turned off by default until you turn them on. You specify recipient conditions and exceptions (users, group members, domains, or all recipients) for the built-in security features for all cloud mailboxes and protection features in Defender for Office 365 within the Standard and Strict preset security policies.
 
   Built-in protection in Defender for Office 365 is on by default to provides basic Safe Attachments and Safe Links protection for all recipients. You can specify recipient exceptions to identify users who don't get the protection.
 
@@ -119,7 +112,7 @@ The previous information and the threat policies involved are summarized in the 
 
 |&nbsp;|Default threat policies|Preset security policies|Custom threat policies|
 |---|:---:|:---:|:---:|
-|**Threat policies in default email protections for cloud mailboxes**:||||
+|**Threat policies in the built-in security features for all cloud mailboxes**:||||
 |&nbsp;&nbsp;[Anti-malware](anti-malware-policies-configure.md)|✔|✔|✔|
 |&nbsp;&nbsp;[Anti-spam](anti-spam-policies-configure.md)|✔|✔|✔|
 |&nbsp;&nbsp;[Anti-phishing (spoofing protection)](anti-phishing-policies-about.md#spoof-settings)|✔|✔|✔|
@@ -143,7 +136,7 @@ The previous information and the threat policies involved are summarized in the 
 
 ⁴ The Built-in protection preset security policy (Safe Attachments and Safe Links protection in Defender for Office 365) is the only preset security policy that's on by default.
 
-⁵ For the Standard and Strict preset security policies, you can configure separate recipient conditions and optional exceptions for the default email protections for all cloud mailboxes and protections in Defender for Office 365. For Built-in protection in Defender for Office 365, you can only configure recipient exceptions from protection.
+⁵ For the Standard and Strict preset security policies, you can configure separate recipient conditions and optional exceptions for the built-in security features for all cloud mailboxes and protections in Defender for Office 365. For Built-in protection in Defender for Office 365, you can only configure recipient exceptions from protection.
 
 ⁶ The only customizable security settings in preset security policies are the entries and optional exceptions for user impersonation protection and domain impersonation protection in the Standard and Strict preset security policies in Defender for Office 365.
 
@@ -281,6 +274,9 @@ The important parts of user message reporting are:
 
 - The built-in **Report** button in Outlook on the web (formerly known as Outlook Web App or OWA).
 - Non-Microsoft reporting tools that use the [supported message submission format](submissions-user-reported-messages-custom-mailbox.md#message-submission-format-for-non-microsoft-reporting-tools).
+
+  > [!TIP]
+  > In [attack simulation training in Defender for Office 365 Plan 2](attack-simulation-training-get-started.md), simulation messages reported by non-Microsoft tools aren't captured in attack simulation reports.
 
 - **Where do user reported messages go?**: You have the following options:
   - To a designated reporting mailbox and to Microsoft (this value is the default).

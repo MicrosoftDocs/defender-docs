@@ -1,14 +1,10 @@
-﻿---
+---
 title: Review alerts in Microsoft Defender for Endpoint
 description: Review alert information, including a visualized alert story and details for each step of the chain.
 ms.service: defender-endpoint
-f1.keywords: 
-  - NOCSH
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
@@ -16,7 +12,6 @@ ms.collection:
 ms.topic: how-to
 ms.date: 5/1/2020
 ms.subservice: edr
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -80,5 +75,5 @@ Selecting a device or a user card in the affected assets sections will switch to
 - [View and organize the incidents queue](view-incidents-queue.md)
 - [Investigate incidents](investigate-incidents.md)
 - [Manage incidents](manage-incidents.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

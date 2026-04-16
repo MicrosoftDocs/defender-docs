@@ -1,27 +1,20 @@
 ---
 title: Microsoft Defender for Office 365 permissions in the Microsoft Defender portal
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.audience: Admin
 ms.topic: how-to
-audience: Admin
 ms.localizationpriority: high
 ms.collection: 
   - m365-security
   - tier1
-search.appverid: 
-  - MOE150
-  - MET150
 description: Admins can learn how to manage Microsoft Defender for Office 365 (Email & collaboration) permissions in the Microsoft Defender portal.
 ms.custom: 
 - seo-marvel-apr2020
 ms.service: defender-office-365
 ms.date: 09/29/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -40,7 +33,7 @@ You need to be member of the **Global Administrator**<sup>\*</sup> role in Micro
 - Microsoft Defender XDR has its own Unified role-based access control (RBAC). This model provides a single permissions management experience in one central location where admins can control permissions across different security solutions. These permissions are different from the permissions described in this article. For more information, see [Microsoft Defender XDR role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
   > [!IMPORTANT]
-  > If you activate Defender XDR RBAC for Email & collaboration, the permissions page at <https://security.microsoft.com/emailandcollabpermissions> is no longer available in the Defender portal, so you need to ensure that you configure or import your roles _before_ you activate Defender XDR Unified RBAC.
+  > If you activate Defender unified RBAC for Email & collaboration, the permissions page at <https://security.microsoft.com/emailandcollabpermissions> is no longer available in the Defender portal, so you need to ensure that you configure or import your roles _before_ you activate Defender unified RBAC.
 
   :::image type="content" source="media/defender-xdr-rbac-permissions-page.png" alt-text="Screenshot of the Permissions page in the Microsoft Defender portal showing Microsoft Defender XDR roles and Email & Collaboration roles." lightbox="media/defender-xdr-rbac-permissions-page.png":::
 

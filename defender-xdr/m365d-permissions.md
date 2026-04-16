@@ -2,21 +2,14 @@
 title: Manage access to Microsoft Defender XDR with Microsoft Entra global roles
 description: Learn how to manage access to Microsoft Defender XDR capabilities with Microsoft Entra global roles.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 - essentials-manage
 ms.topic: concept-article
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 05/08/2024
 appliesto:
   - Microsoft Defender XDR
@@ -25,7 +18,7 @@ appliesto:
 # Manage access to Microsoft Defender XDR with Microsoft Entra global roles
 
 > [!NOTE]
-> Microsoft Defender XDR users can now take advantage of a centralized permissions management solution to control user access and permissions across different Microsoft security solutions. Learn more about the [Microsoft Defender XDR Unified role-based access control (RBAC)](manage-rbac.md).
+> Microsoft Defender XDR users can now take advantage of a centralized permissions management solution to control user access and permissions across different Microsoft security solutions. Learn more about the [Microsoft Defender unified role-based access control (RBAC)](manage-rbac.md).
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 

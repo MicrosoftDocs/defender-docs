@@ -1,16 +1,11 @@
 ---
 title: Custom functions in the advanced hunting schema
 description: Learn about writing your own custom functions for hunting 
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: orspodek
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -21,7 +16,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 12/16/2025
+ms.date: 01/23/2026
 ---
 
 # Use custom functions
@@ -35,7 +30,7 @@ ms.date: 12/16/2025
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-A function is a type of query in advanced hunting that you can use in other queries as if it's a command. By creating your own custom functions, you can reuse any query logic when you hunt in your environment.
+A function is a type of query in advanced hunting that you can use in other queries as if it were a command. By creating your own custom functions, you can reuse any query logic when you hunt in your environment.
 
 This article explains the different types of functions available in advanced hunting, and the steps for creating and using custom functions.
 
@@ -78,7 +73,9 @@ To create a function from the current query in the editor:
 1. Select **Save**.
 
 > [!IMPORTANT]
-> You can use custom functions created in advanced hunting in custom detection rules and advanced hunting queries. They're not supported in workbooks or analytics rules. 
+> You can use custom functions you create in advanced hunting in custom detection rules and advanced hunting queries, as long as you don't save the function in a Microsoft Sentinel workspace.
+>
+>If you create a custom function and save it in a Microsoft Sentinel workspace, you can use it in workbooks and analytics rules on any Microsoft Sentinel content in this workspace, but not in custom detection rules.
 
 ### Add parameters to your custom function
 

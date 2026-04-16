@@ -1,12 +1,11 @@
-﻿---
+---
 title: Cloud protection and sample submission at Microsoft Defender Antivirus
 description: Learn about cloud-delivered protection and Microsoft Defender Antivirus
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.reviewer: mkaminska, yongrhee
-manager: bagol
 ms.subservice: ngp
 ms.topic: concept-article
 ms.date: 10/20/2025
@@ -14,7 +13,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -139,5 +137,5 @@ There are two more scenarios where Defender for Endpoint might request a file sa
 - [Microsoft Defender for Endpoint - Mobile Threat Defense](mtd.md)
 - [Configure remediation for Microsoft Defender Antivirus detections](configure-remediation-microsoft-defender-antivirus.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

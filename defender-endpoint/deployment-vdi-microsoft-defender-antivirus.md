@@ -1,14 +1,13 @@
-﻿---
+---
 title: Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment
 description: Get an overview of how to configure Microsoft Defender Antivirus in a remote desktop or non-persistent virtual desktop environment.
 ms.localizationpriority: medium
 ms.date: 10/20/2025
 ms.topic: how-to
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: jesquive
-manager: bagol
 ms.subservice: ngp
 ms.service: defender-endpoint
 ms.collection:
@@ -16,7 +15,6 @@ ms.collection:
 - tier2
 - ContentEngagementFY23
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -148,7 +146,7 @@ If you would prefer to do everything manually, here's what to do to replicate th
    > [!NOTE]
    > We set the script so that the last 12 digits of the GUID are the year, month, day, and time when the file was downloaded so that a new folder is created each time. You can change this so that the file is downloaded to the same folder each time.
 
-1. Download a security intelligence package from [https://www.microsoft.com/wdsi/definitions](https://www.microsoft.com/wdsi/definitions)  into the GUID folder. The file should be named `mpam-fe.exe`.
+1. Download a security intelligence package from [https://www.microsoft.com/wdsi/defenderupdates](https://www.microsoft.com/wdsi/defenderupdates)  into the GUID folder. The file should be named `mpam-fe.exe`.
 
 1. Open a Command Prompt window and navigate to the GUID folder you created. Use the `/X` extraction command to extract the files. For example, `mpam-fe.exe /X`.
 
@@ -167,6 +165,9 @@ It's important to take advantage of the included threat protection capabilities 
 - Configure detection for potentially unwanted applications: `Enabled - Block`
 
 - Configure local administrator merge behavior for lists: `Disabled`
+
+> [!NOTE]
+> Setting this policy to **Disabled** prevents locally defined exclusions and lists from being merged with centrally managed policies. Only centrally managed policies (for example, Group Policy) are applied.
 
 - Control whether or not exclusions are visible to Local Admins: `Enabled`
 
@@ -232,7 +233,7 @@ It's important to take advantage of the included threat protection capabilities 
 
 - Turn on catch-up full scan (Disable catch-up full scan): `Not configured`
 
-- Turn on catch-up quick scan (Disable catchup quick scan): `Not configured`
+- Turn on catch-up quick scan (Disable catch-up quick scan): `Not configured`
 
    > [!NOTE]
    > If you want to harden, you could change "Turn on catch-up quick scan" to `Enabled`, which helps when VMs are offline, and have missed two or more consecutive scheduled scans. But since it's running a scheduled scan, it uses additional CPU.
@@ -342,12 +343,11 @@ If you think you need to add exclusions, see [Manage exclusions for Microsoft De
 
 ## Next step
 
-If you're also deploying [endpoint detection and response](overview-endpoint-detection-response.md) (EDR) to your Windows-based VDI VMs, see [Onboard non-persistent virtual desktop infrastructure (VDI) devices in Microsoft Defender XDR](/defender-endpoint/configure-endpoints-vdi).
+If you're also deploying [endpoint detection and response](overview-endpoint-detection-response.md) (EDR) to your Windows-based VDI VMs, see [Onboard non-persistent virtual desktop infrastructure (VDI) devices in Microsoft Defender XDR](configure-endpoints-vdi.md).
 
 ## See also
 
 - [Tech Community Blog: Configuring Microsoft Defender Antivirus for non-persistent VDI machines](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/configuring-microsoft-defender-antivirus-for-non-persistent-vdi/ba-p/1489633)
-- [TechNet forums on Remote Desktop Services and VDI](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserverTS)
 - [SignatureDownloadCustomTask PowerShell script](https://www.powershellgallery.com/packages/SignatureDownloadCustomTask/1.4)
 
 If you're looking for information about Defender for Endpoint on non-Windows platforms, see the following resources:
@@ -356,6 +356,3 @@ If you're looking for information about Defender for Endpoint on non-Windows pla
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 - [Configure Defender for Endpoint on Android features](android-configure.md)
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
-

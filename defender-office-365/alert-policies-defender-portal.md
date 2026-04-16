@@ -1,11 +1,7 @@
 ---
 title: Alert policies in the Microsoft Defender portal
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.collection: 
   - m365-security
@@ -16,7 +12,6 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can use the Alert policy page in the Microsoft Defender portal to view and create alert policies to trigger alerts when the specified actions occur.
 ms.service: defender-office-365
-search.appverid: met150
 ms.date: 05/29/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -44,6 +39,8 @@ In organizations with cloud mailboxes, alert policies generate alerts in the ale
     > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 - For information about other alert policy categories, see [Permissions required to view alerts](/defender-xdr/alert-policies#rbac-permissions-required-to-view-alerts).
+
+[!INCLUDE [Built-in alert tuning rules](../includes/built-in-alert-tuning-rules.md)]
 
 ## Open alert policies
 

@@ -1,12 +1,8 @@
 ---
 title: Privacy in Microsoft Defender for Office 365
-f1.keywords:
-- NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-ms.date: 05/08/2025
-audience: ITPro
+ms.date: 04/01/2026
 ms.topic: concept-article
 ms.service: defender-office-365
 ms.localizationpriority: medium
@@ -16,9 +12,8 @@ ms.collection:
 - essentials-privacy
 ms.custom:
 description: Admins can learn about privacy in Defender for Office 365.
-search.appverid: met150
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
 ---
 
@@ -77,7 +72,7 @@ Defender for Office 365 operates in the Microsoft Entra datacenters. For the fol
 - United Kingdom
 - United States
 
-In the default email protections for cloud mailboxes, the following data is stored at rest in the local region geo:
+In [the built-in security features for all cloud mailboxes](eop-about.md), the following data is stored at rest in the local region geo:
 
 - Alerts
 - Attachments
@@ -118,3 +113,7 @@ Defender for Office 365 shares data, including customer data, among the followin
 - Microsoft 365 Defender XDR
 - Microsoft Sentinel
 - Audit logs
+
+## Advanced email analysis in Defender for Office 365
+
+Defender for Office 365 improves email filtering against unwanted, malicious and abusive email by analyzing email messages processed by the service. Microsoft uses limited email data, with human review, for research purposes to improve the security and effectiveness of Defender for Office 365 and to reduce unwanted or malicious email (for example, spam, phishing or malware), in accordance with Microsoft's compliance, legal, and privacy standards.

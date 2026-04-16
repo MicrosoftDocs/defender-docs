@@ -1,19 +1,16 @@
-﻿---
+---
 title: machineAction resource type
 description: Learn about the methods and properties of the MachineAction resource type in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 ms.topic: reference
 ms.custom: api
 ms.subservice: reference
-search.appverid: met150
 ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint

@@ -1,14 +1,12 @@
-﻿---
+---
 title: Attack surface reduction rules reporting
 description: Provides information about attack surface reduction rules detections, configuration, block threats, and methods to enable three standard rules and exclusions.
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
-audience: ITPro
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: sugamar,
-manager: bagol
 ms.custom: asr
 ms.topic: how-to
 ms.collection: 
@@ -16,7 +14,6 @@ ms.collection:
 - tier2
 - mde-asr
 ms.date: 12/29/2025
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -318,4 +315,4 @@ Select **Filter** to filter rules by **Standard protection** or **All**.
 - [Attack surface reduction \(ASR\) rules report](attack-surface-reduction-rules-report.md)
 - [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

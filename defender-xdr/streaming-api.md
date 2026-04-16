@@ -1,13 +1,10 @@
 ---
 title: Stream Microsoft Defender XDR events
 description: Learn how to configure Microsoft Defender XDR to stream Advanced Hunting events to Event Hubs or Azure storage account
-search.appverid: met150
 ms.service: defender-xdr
 ms.author: edbaynash
 author: EdB-MSFT
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3

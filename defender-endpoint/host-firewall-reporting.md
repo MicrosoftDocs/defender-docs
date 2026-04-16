@@ -1,21 +1,18 @@
-﻿---
+---
 title: Host firewall reporting in Microsoft Defender for Endpoint
 description: Host and view firewall reporting in Microsoft Defender portal.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 12/18/2025
-audience: ITPro
 ms.topic: concept-article
-author: batamig
-ms.author: bagol
-manager: bagol
+author: paulinbar
+ms.author: painbar
 ms.subservice: asr
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
 ms.custom: admindeeplinkDEFENDER
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -139,4 +136,4 @@ The query can now be executed, and all related Firewall events from the last 30 
 
 For more reporting, or custom changes, the query can be exported into Power BI for further analysis. Custom reporting can be facilitated by downloading the [Custom Reporting script](https://github.com/microsoft/MDATP-PowerBI-Templates/tree/master/Firewall) to monitor the Windows Defender Firewall activities using Power BI.
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

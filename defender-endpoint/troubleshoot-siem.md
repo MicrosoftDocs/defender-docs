@@ -1,18 +1,15 @@
-﻿---
+---
 title: Troubleshoot SIEM tool integration issues in Microsoft Defender for Endpoint
 description: Troubleshoot issues that might arise when using SIEM tools with Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: kesharab
-author: KesemSharabi
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: troubleshooting
-search.appverid: met150
 ms.date: 02/24/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -79,5 +76,5 @@ If you encounter an error when trying to enable the SIEM connector application, 
 - [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview)
 
 - [Pull detections to your SIEM tools](configure-siem.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

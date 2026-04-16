@@ -1,11 +1,7 @@
 ---
 title: Anti-phishing policies in Microsoft 365
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.assetid: 5a6f2d7f-d998-4f31-b4f5-f7cbf6f38578
@@ -14,12 +10,11 @@ ms.collection:
   - tier2
 ms.custom: 
   - seo-marvel-apr2020
-description: Admins can learn about the anti-phishing policies that are available in the default email protections for cloud mailboxes and in Microsoft Defender for Office 365.
+description: Admins can learn about the anti-phishing policies that are available in the built-in security features for all cloud mailboxes and in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-search.appverid: met150
-ms.date: 07/02/2025
+ms.date: 01/25/2026
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 #customer intent:As a security administrator, I need clear, step‑by‑step guidance for configuring anti‑phishing policies—especially spoofing and impersonation protections—so I can protect users and minimize false positives.
@@ -29,11 +24,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Policies to configure anti-phishing protection are available in all organizations with cloud mailboxes, and in organizations with Microsoft Defender for Office 365 (included or in an add-on subscription).
-
-[!INCLUDE [Security Analyzer setup guide](../includes/security-analyzer-setup-guide.md)]
-
-Anti-phishing policies are available on the **Anti-phishing** page in the Microsoft Defender portal at <https://security.microsoft.com/antiphishing>. Anti-phishing protection for all cloud mailboxes offers essential anti-phishing features. Defender for Office 365 enhances these basic capabilities by including the following advanced protections:
+Anti-phishing policies protect against phishing attacks by detecting spoofed senders, impersonation attempts, and other deceptive email techniques. Basic anti-phishing features are provided to all Microsoft 365 cloud mailboxes, such as spoof intelligence, first contact safety tip, and unauthenticated sender indicators. In addition, Microsoft Defender for Office 365 provides the following advanced protections:
 
 - **Impersonation protection**:
   - Protection against user, domain, and sender impersonation.
@@ -44,6 +35,23 @@ Anti-phishing policies are available on the **Anti-phishing** page in the Micros
   - Improved detection of sophisticated phishing attacks through advanced algorithms.
 - **Additional reporting and insights**:
   - Advanced reporting features and visibility into phishing attempts beyond basic logging.
+
+In Microsoft Defender, anti-phishing policies are available on the [**Email & Collaboration** > **Policies & rules** > **Threat policies** > **Anti-phishing**](https://security.microsoft.com/antiphishing) page. While a default anti-phishing policy automatically applies to all recipients, you can also create custom policies for specific users, groups, or domains. This article describes the settings that are available in anti-phishing policies for all cloud mailboxes and in anti-phishing policies in Defender for Office 365.
+
+## Configure anti-phishing policies
+
+To configure anti-phishing policies, see the following articles:
+
+- [Configure anti-phishing policies (basic protection)](anti-phishing-policies-eop-configure.md)
+- [Configure anti-phishing policies in Defender for Office 365](anti-phishing-policies-mdo-configure.md)
+- **Recommended settings**: See [Recommended anti-phishing policy settings](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-for-all-cloud-mailboxes).
+
+[!INCLUDE [Security Analyzer setup guide](../includes/security-analyzer-setup-guide.md)]
+
+> [!TIP]
+> As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/p/?linkid=2268088) when signed in to the Microsoft 365 admin center. This guide customizes your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/p/?linkid=2268087).
+
+## Comparison of anti-phishing policies for all cloud mailboxes and in Defender for Office 365
 
 The high-level differences between the anti-phishing policies for all cloud mailboxes and anti-phishing policies in Defender for Office 365 are described in the following table:
 
@@ -58,16 +66,6 @@ The high-level differences between the anti-phishing policies for all cloud mail
 |Phishing email thresholds||✔|
 
 <sup>\*</sup> In the default policy, the policy name and description are read-only (the description is blank), and you can't specify who the policy applies to (the default policy applies to all recipients).
-
-To configure anti-phishing policies, see the following articles:
-
-- [Configure anti-phishing policies if you don't have Microsoft Defender for Office 365](anti-phishing-policies-eop-configure.md)
-- [Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md)
-
-The rest of this article describes the settings that are available in anti-phishing policies for all cloud mailboxes and in anti-phishing policies in Defender for Office 365.
-
-> [!TIP]
-> As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/p/?linkid=2268088) when signed in to the Microsoft 365 admin center. This guide customizes your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/p/?linkid=2268087).
 
 ## Common policy settings
 
@@ -161,7 +159,7 @@ The relationship between spoof intelligence and whether sender DMARC policies ar
 |**Spoof intelligence Off**|Implicit email authentication checks aren't used. <br/><br/> Explicit email authentication failures: <ul><li>DMARC policy `p=quarantine`: Use the **If the message is detected as spoof and DMARC policy is set as p=quarantine** action in the anti-phishing policy.</li><li>DMARC policy `p=reject`: Use the **If the message is detected as spoof and DMARC policy is set as p=reject** action in the anti-phishing policy.</li><li>DMARC policy `p=none`: The message isn't identified as spoofing by Microsoft 365, but other protection features in the filtering stack are still able to act on the message.</li></ul>|Implicit email authentication checks aren't used. <br/><br/> Explicit email authentication failures: <ul><li>DMARC policy `p=quarantine`: Messages are quarantined.</li><li>DMARC policy `p=reject`: Messages are quarantined.</li><li>DMARC policy `p=none`: Microsoft 365 takes no action based on DMARC, but other protection features in the filtering stack are still able to act on the message.|
 
 > [!NOTE]
-> If the MX record for the Microsoft 365 domain points to a non-Microsoft service or device that sits in front of Microsoft 365, the **Honor DMARC policy** setting is applied only if [Enhanced Filtering for Connectors](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) is enabled for the connector that receives inbound messages.
+> If the MX record for the Microsoft 365 domain points to a non-Microsoft service or device that sits in front of Microsoft 365, the **Honor DMARC policy** setting is applied only if [Enhanced Filtering for Connectors](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) is enabled for the connector that receives inbound messages.
 >
 > Customers can override the **Honor DMARC policy** setting for specific email messages and/or senders using the following methods:
 >

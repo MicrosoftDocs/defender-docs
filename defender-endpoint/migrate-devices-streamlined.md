@@ -1,13 +1,10 @@
-﻿---
+---
 title: Migrate devices to use the streamlined onboarding method
 description: Learn how to migrate devices to Defender for Endpoint using the streamlined connectivity method.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier1
@@ -29,9 +26,11 @@ This article describes how to migrate (reonboard) devices that had been previous
 In most cases, full device offboarding isn't required when reonboarding. You can run the updated onboarding package and reboot your device to switch connectivity over. See the following information for details on individual operating systems.
 
 > [!IMPORTANT]
-> Limitations and known issues:- For device migrations (reonboarding): Offboarding isn't required to switch over to streamlined connectivity method. Once the updated onboarding package is run, a full device reboot is required for Windows devices and a service restart for macOS and Linux. For more information, see the details included in this article.
-- Windows 10 versions 1607, 1703, 1709, and 1803 don't support reonboarding. Offboard first and then onboard using the updated package. These versions also require a longer URL list.
-- Devices running the MMA agent aren't supported and must continue using the MMA onboarding method.
+> Limitations and known issues:
+>
+> - For device migrations (reonboarding): Offboarding isn't required to switch over to streamlined connectivity method. Once the updated onboarding package is run, a full device reboot is required for Windows devices and a service restart for macOS and Linux. For more information, see the details included in this article.
+> - Windows 10 versions 1607, 1703, 1709, and 1803 don't support reonboarding. Offboard first and then onboard using the updated package. These versions also require a longer URL list.
+> - Devices running the MMA agent aren't supported and must continue using the MMA onboarding method.
 
 [!INCLUDE [Microsoft Defender deployment tool preview](./includes/defender-deployment-tool-preview.md)]
 
@@ -81,11 +80,11 @@ Follow the guidance in [Group policy](configure-endpoints-gp.md) using the strea
 
 ### Microsoft Intune
 
-Follow the guidance in [Intune](/mem/intune/protect/endpoint-security-edr-policy#updating-the-onboarding-state-for-a-device) using the streamlined onboarding package. You can use the "auto from connector" option; however, this option doesn't automatically reapply the onboarding package. Create a new onboarding policy and target a test group first. After completing the steps, you must restart the device for device connectivity to switch over.
+Follow the guidance in [Intune](/intune/intune-service/protect/endpoint-security-edr-policy#updating-the-onboarding-state-for-a-device) using the streamlined onboarding package. You can use the "auto from connector" option; however, this option doesn't automatically reapply the onboarding package. Create a new onboarding policy and target a test group first. After completing the steps, you must restart the device for device connectivity to switch over.
 
 ### Microsoft Configuration Manager
 
-Follow the guidance in [Configuration Manager](/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection#bkmk_updateatp).
+Follow the guidance in [Configuration Manager](/intune/configmgr/protect/deploy-use/defender-advanced-threat-protection#bkmk_updateatp).
 
 ### VDI
 
@@ -105,7 +104,7 @@ Devices already onboarded don't reonboard automatically. Turn on the following A
 
 ### Microsoft Configuration Manager
 
-Follow the guidance in [Configuration Manager](/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection#bkmk_updateatp) to deploy a new policy.
+Follow the guidance in [Configuration Manager](/intune/configmgr/protect/deploy-use/defender-advanced-threat-protection#bkmk_updateatp) to deploy a new policy.
 
 ### Group policy
 
@@ -133,7 +132,7 @@ After completing the steps, you must either reboot the device or restart the ser
 
 1. In Microsoft Intune, create a new onboarding policy using Custom Configuration profile. Don't assign it yet. Follow the instructions under [Intune-based deployment for Microsoft Defender for Endpoint on Mac](mac-install-with-intune.md).
 
-1. Exclude the macOS device you're reonboarding from its existing onboarding policy. To learn more about excluding groups from policy assignments, see [Exclude groups from a policy assignment](/mem/intune/configuration/device-profile-assign#exclude-groups-from-a-policy-assignment).
+1. Exclude the macOS device you're reonboarding from its existing onboarding policy. To learn more about excluding groups from policy assignments, see [Exclude groups from a policy assignment](/intune/intune-service/configuration/device-profile-assign#exclude-groups-from-a-policy-assignment).
 
 1. Add the assignment of the policy using streamlined onboarding package.
 
@@ -183,7 +182,7 @@ You can use the following methods to check that you have successfully connected 
 - [Client analyzer](#use-defender-for-endpoint-client-analyzer-windows-to-validate-connectivity-after-onboarding-for-migrated-endpoints)
 - [Tracking with advanced hunting in Microsoft Defender XDR](#tracking-with-advanced-hunting-in-microsoft-365-defender)
 - [Track locally using Event Viewer (for Windows)](#tracking-locally-on-a-device-through-windows-event-viewer)
-- [Run tests to confirm connectivity with Defender for Endpoint services](#)
+- [Run tests to confirm connectivity with Defender for Endpoint services](#run-tests-to-confirm-connectivity-with-defender-for-endpoint-services)
 - Checking the registry editor
 - [PowerShell detection test](#powershell-detection-test)
 
@@ -233,7 +232,7 @@ Open the Defender for Endpoint service event log using the following steps:
 
    :::image type="content" source="media/log-summary-event-viewer.png" alt-text="Screenshot of Event Viewer with log summary section":::
 
-   You can also access the log by expanding**Applications and Services Logs>Microsoft>Windows>SENSE** and select **Operational**.
+   You can also access the log by expanding **Applications and Services Logs>Microsoft>Windows>SENSE** and select **Operational**.
 
 1. Event ID 4 tracks successful connections with Defender for Endpoint Command & Control channel. Verify successful connections with updated URL. For example:
 
@@ -245,7 +244,7 @@ Open the Defender for Endpoint service event log using the following steps:
    </EventData>
    ```
 
-1. Message 1 contains the contacted URL. Confirm the event includes the streamlined URL (endpoint.security.microsoft, com).
+1. Message 1 contains the contacted URL. Confirm the event includes the streamlined URL (endpoint.security.microsoft.com).
 
 1. Event ID 5 tracks errors if applicable.
 
@@ -270,23 +269,27 @@ Make sure to run a couple of basic commands post-connection to confirm connectiv
 
 Ensure that Automated investigation and response is working on your test device: [Configure automated investigation and response capabilities](/defender-xdr/m365d-configure-auto-investigation-response).
 
-For Auto-IR testing labs, navigate to **Microsoft Defender XDR** \> **Evaluations & Tutorials** \> **Tutorials & Simulations** \> **Tutorials \> **Automated Investigation tutorials**.
+For Auto-IR testing labs, navigate to **Microsoft Defender XDR** \> **Evaluations & Tutorials** \> **Tutorials & Simulations** \> **Tutorials** \> **Automated Investigation tutorials**.
 
 #### Cloud-delivered protection
 
-1. Open a Command Prompt as an administrator.
+verify that Cloud Protection network connectivity is working.
 
-1. Right-click the item in the Start menu, select **Run as administrator** then select **Yes** at the permissions prompt.
+1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
+   1. Open the **Start** menu, and then type **cmd**.
+   2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
+2. In the elevated Command Prompt, run the following commands:
 
-1. Use the following argument with the Microsoft Defender Antivirus command-line utility (mpcmdrun.exe) to verify that your network can communicate with the Microsoft Defender Antivirus cloud service:
+   > [!TIP]
+   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
 
    ```dos
-   "%ProgramFiles%\Windows Defender\MpCmdRun.exe" -ValidateMapsConnection
+   (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
+
+   MpCmdRun.exe -ValidateMapsConnection
    ```
 
-  > [!NOTE]
-  > This command only works on Windows 10, version 1703 or higher, or Windows 11.
-  > For more information, see [Manage Microsoft Defender Antivirus with the mpcmdrun.exe commandline tool](command-line-arguments-microsoft-defender-antivirus.md).
+For more information about MpCmdRun, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
 
 #### Test Block at First Sight
 
@@ -322,7 +325,7 @@ Run `mdatp health --details edr` to confirm `edr_partner_geo_location` is availa
 
 Run mdatp connectivity test. Ensure the streamlined URL pattern is present. You should expect two for '\storage', one for '\mdav', one for '\xplat', and one for '/packages'.
 
-For example: `https:mdav.us.endpoint.security.microsoft/com/storage`
+For example: `https://mdav.us.endpoint.security.microsoft.com/storage`
 
 <a name='tracking-with-advanced-hunting-in-microsoft-365-defender'></a>
 

@@ -1,18 +1,15 @@
-﻿---
+---
 title: Access the Microsoft Defender XDR MSSP customer portal
 description: Access the Microsoft Defender XDR MSSP customer portal
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: kesharab
-author: KesemSharabi
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: how-to
-search.appverid: met150
 ms.date: 12/24/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

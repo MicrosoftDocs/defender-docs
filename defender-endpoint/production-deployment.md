@@ -1,12 +1,10 @@
-﻿---
+---
 title: Prepare to deploy Microsoft Defender for Endpoint
 description: Learn how to set up the deployment for Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
   - m365-security
   - m365solution-endpointprotect
@@ -16,7 +14,6 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 06/19/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -89,5 +86,5 @@ In certain scenarios, you might want to allow traffic to IP addresses. Not all s
 
 - Continue to [Step 2 - Assign roles and permissions](prepare-deployment.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

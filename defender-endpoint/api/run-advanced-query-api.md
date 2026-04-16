@@ -1,13 +1,11 @@
-﻿---
+---
 title: Advanced Hunting API
 ms.reviewer:
 description: Learn to use the advanced hunting API to run advanced queries on Microsoft Defender for Endpoint. Find out about limitations and see an example.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
@@ -15,8 +13,7 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
-ms.date: 08/18/2025
+ms.date: 03/12/2026
 appliesto:
   - Microsoft Defender for Endpoint
 ---
@@ -46,7 +43,7 @@ appliesto:
 
 - `429` response represents reaching quota limit either by number of requests or by CPU. Read response body to understand what limit was reached.
 
-- The maximum query result size of a single request can't exceed 124 MB. If exceeded, an HTTP 400 Bad Request with the message "Query execution has exceeded the allowed result size. Optimize your query by limiting the number of results and try again" occurs.
+- The maximum query result size of a single request can't exceed 50 MB. If exceeded, an HTTP 400 Bad Request with the message "Query execution has exceeded the allowed result size. Optimize your query by limiting the number of results and try again" occurs.
 
 ## Permissions
 

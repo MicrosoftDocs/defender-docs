@@ -1,7 +1,7 @@
 ---
 title: Protect your Microsoft 365 environment | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your Microsoft 365 app to Defender for Cloud Apps using the API connector.
-ms.date: 12/06/2023
+ms.date: 01/13/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
@@ -144,19 +144,20 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
     :::image type="content" source="media/connect-an-app.png" alt-text="Screenshot that shows the connect an app button." lightbox="media/connect-an-app.png":::
 
-1. In the **Select Microsoft 365 components** page, select the options you require, and then select **Connect**.
+1. In the **Select Microsoft 365 components** page, select the components you want to protect, and then select **Connect**. By default, all components are selected for maximum protection.
 
     > [!NOTE]
-    >
-    > - For best protection, we recommend selecting all Microsoft 365 components. **Certain functionalities (such as threat detection and response) don't operate unless all required components are properly selected**.
-    > - The **Microsoft 365 files** component, requires enabling Defender for Cloud Apps file monitoring (**Settings** > **Cloud Apps** > **Files** > **Enable file monitoring**).
+    > - In January 2026, the default values were added to support complete security coverage. If you configured your application before January 2026, make sure you select all of the default options and select **Connect** again to update your configuration.
+    > - For maximum protection, we recommend selecting all Microsoft 365 components. **Some  threat detection and response functionalities don't work unless all required components are properly selected**.
+    > - To enable protection for **Microsoft 365 files**, you must enable Defender for Cloud Apps file monitoring (**Settings** > **Cloud Apps** > **Files** > **Enable file monitoring**).
 
     :::image type="content" source="media/connect-office-365-components.png" alt-text="Screenshot showing the Connect Office 365 components page with the Microsoft 365 files box checked." lightbox="media/connect-office-365-components.png":::
 
 1. On the **Follow the link** page, select **Connect Microsoft 365**.
 
 1. After Microsoft 365 is displayed as successfully connected, select **Done**.
-1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**. Make sure the status of the connected App Connector is **Connected**.
+1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**.
+1. Make sure the status of the connected App Connector is **Connected**.
 
     SaaS Security Posture Management (SSPM) data is shown in the Microsoft Defender Portal on the **Secure Score** page. For more information, see [Security posture management for SaaS apps](/defender-cloud-apps/security-saas).
 

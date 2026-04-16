@@ -1,14 +1,11 @@
-﻿---
+---
 title: Troubleshooting mode scenarios in Microsoft Defender for Endpoint 
 description: Use the Microsoft Defender for Endpoint troubleshooting mode to address various antivirus issues.
-search.appverid: met150
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: chrisda
+author: chrisda
 ms.reviewer: pricci
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -134,7 +131,8 @@ For more information, see [Use network protection to help prevent connections to
 - [Enable troubleshooting mode](enable-troubleshooting-mode.md)
 - [Protect security settings with tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md)
 - [Set-MpPreference](/powershell/module/defender/set-mppreference)
-- [Get an overview of Microsoft Defender for Endpoint](/defender-endpoint/)
+- [Get an overview of Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
+
+[customer intent:  As an IT security leader or SOC engineer responsible for endpoint protection, I want a concise overview of Microsoft Defender for Endpoint's capabilities, integrations, and deployment considerations, so I can evaluate its fit for my organization and plan onboarding and operations.](microsoft-defender-endpoint.md)

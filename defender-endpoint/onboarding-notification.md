@@ -1,13 +1,10 @@
-﻿---
+---
 title: Create an onboarding or offboarding notification rule
 description: Get a notification when a local onboarding or offboarding script is used.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -207,5 +204,5 @@ You can split it to two queries:
 1. Take all devices last seen in the past hour and check first seen property for them (if the first seen property is on the past hour, the last seen must be there too).
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

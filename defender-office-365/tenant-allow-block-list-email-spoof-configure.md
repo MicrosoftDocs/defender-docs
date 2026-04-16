@@ -1,23 +1,17 @@
 ---
 title: Allow or block email using the Tenant Allow/Block List
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
 ms.collection:
   - m365-security
   - tier1
 description: Admins can learn how to allow or block email and spoofed sender entries in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 08/13/2025
+ms.date: 02/23/2026
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 #customer intent: As a security administrator, I need step‑by‑step procedures to create, modify, and troubleshoot Tenant Allow/Block List entries (including spoofed senders) using the Microsoft Defender portal and Exchange Online PowerShell so I can control delivery overrides, prevent spoofing, and reduce false positives without increasing security risk.
@@ -61,7 +55,7 @@ This article describes how admins can manage entries for email senders in the Mi
 - An entry should be active within 5 minutes.
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
-  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell):
+  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** and **Email & collaboration** \> **Exchange Online permissions** are both :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell):
     - *Add and remove entries from the Tenant Allow/Block List*: Membership assigned with the following permissions:
       - **Authorization and settings/Security settings/Detection tuning (manage)**
     - *Read-only access to the Tenant Allow/Block List*:
@@ -583,6 +577,9 @@ A domain pair for a spoofed sender in the Tenant Allow/Block List uses the follo
   - If the source IP address has no PTR record, then the sending infrastructure is identified as \<source IP\>/24 (for example, 192.168.100.100/24).
   - A verified DKIM domain.
   - The wildcard character (\*).
+
+  > [!TIP]
+  > Spoofed sender entries that use PTR record domains for the sending infrastructure don't work if PTR record resolutions fails for the domain. For those domains, use the IP address as the sending infrastructure (for example, 192.168.100.100/24).
 
 Here are some examples of valid domain pairs to identify spoofed senders:
 

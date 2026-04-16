@@ -1,19 +1,16 @@
-﻿---
+---
 title: Isolation exclusions in Microsoft Defender for Endpoint
 description: Learn about to exclude specific processes, IP addresses, or services from network isolation when applying selective isolation action to devices.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-edr
 ms.topic: how-to
 ms.subservice: edr
-search.appverid: met150
 ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -48,7 +45,7 @@ There are two modes of isolation: **full isolation** and **selective isolation**
 
 * **Full isolation**: In full isolation mode, the device is completely isolated from the network, and no exceptions are allowed. All traffic is blocked, except for essential communications with the Defender agent. Exclusions aren't applied in full isolation mode.
 
-   Full isolation mode is the most secure option, suitable for scenarios where a high level of containment is necessary. For more information about full isolation mode, see [Isolate devices from the network](/defender-endpoint/respond-machine-alerts#isolate-devices-from-the-network).
+   Full isolation mode is the most secure option, suitable for scenarios where a high level of containment is necessary. For more information about full isolation mode, see [Isolate devices from the network](respond-machine-alerts.md#isolate-devices-from-the-network).
 
 * **Selective isolation**: Selective isolation mode allows administrators to apply exclusions to ensure that critical tools and network communications can still function, while maintaining the device's isolated state.
 
@@ -111,7 +108,7 @@ Exclusions that were applied to a specific device can be reviewed in the Action 
  
 #### Apply selective isolation via API
 
-Alternatively, you can apply selective isolation via API. To do so, set the **IsolationType** parameter to *Selective*. For more information, see [Isolate machine API](/defender-endpoint/api/isolate-machine).
+Alternatively, you can apply selective isolation via API. To do so, set the **IsolationType** parameter to *Selective*. For more information, see [Isolate machine API](api/isolate-machine.md).
  
 ## Exclusion Logic
 
@@ -155,5 +152,5 @@ This behavior ensures that isolation rules remain consistent throughout the dura
 - [Investigate files](investigate-files.md)
 - [Manual response actions in Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md#manual-response-actions)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

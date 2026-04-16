@@ -31,7 +31,7 @@ The following table describes the supported filters:
 | instance | integer | eq, neq | Filter files from specified instances |
 | fileType | integer | eq, neq | Filter files with the specified file type. Possible values include:<br /><br />**0**: Other<br />**1**: Document<br />**2**: Spreadsheet<br />**3**: Presentation<br />**4**: Text<br />**5**: Image<br />**6**: Folder |
 | allowDeleted | boolean | eq | Possible values include:<br /><br />**true**: Returns deleted files<br />**false** or not set: Returns nondeleted (including trashed) files. This value is overridden by the *trashed* operator |
-| policy | string | cabinetmatchedrulesequals, neq, isset, isnotset | Filter activities related to the specified policies |
+| policy | array of strings | cabinetmatchedrulesequals, neq, isset, isnotset | Filter file matches and associated governance tasks related to the specified policies |
 | filename | string | eq | Filter files by filename |
 | modifiedDate | timestamp | lte, gte, range, lte_ndays, gte_ndays | Filter files by the date they were last modified |
 | createdDate | timestamp | lte, gte, range | Filter files by the date they were created |

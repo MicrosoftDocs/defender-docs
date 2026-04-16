@@ -1,16 +1,9 @@
 ---
 title: Find and release quarantined messages as a user
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Consumer/IW
 ms.topic: how-to
 ms.localizationpriority: high
-search.appverid:
-  - MET150
-  - MEW150
 ms.assetid: efff08ec-68ff-4099-89b7-266e3c4817be
 ms.collection:
   - m365-security
@@ -20,12 +13,12 @@ ms.custom:
 description: Users can learn how to view and manage quarantined email messages in Microsoft 365 that were meant to be delivered to them.
 ms.service: defender-office-365
 adobe-target: true
-ms.date: 07/08/2025
+ms.date: 04/01/2026
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
-#customer intent:  As an end user who receives email in Microsoft 365, I want clear, step‑by‑step guidance to find, view, and manage messages and files placed in quarantine (view, preview, release, request release, delete, and allow/block senders) so I can recover legitimate messages and keep my mailbox secure. 
+#customer intent:  As an end user who receives email in Microsoft 365, I want clear, step‑by‑step guidance to find, view, and manage messages and files placed in quarantine (view, preview, release, request release, delete, and allow/block senders) so I can recover legitimate messages and keep my mailbox secure.
 ---
 
 # Manage quarantined messages and files as a user
@@ -129,7 +122,7 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
   - **Transport rule** (mail flow rule)
   - **Bulk**
   - **Spam**
-  - **Malware**: Anti-malware policies in the default email protections for cloud mailboxes or in Safe Attachments policies in Defender for Office 365. The **Policy Type** value indicates which feature was used.
+  - **Malware**: Anti-malware policies in [the built-in security features for all cloud mailboxes](eop-about.md) or in Safe Attachments policies in Defender for Office 365. The **Policy Type** value indicates which feature was used.
   - **Phishing**: The spam filter verdict was **Phishing** or anti-phishing protection quarantined the message ([spoof settings](anti-phishing-policies-about.md#spoof-settings) or [impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)).
   - **High confidence phishing**
 - **Blocked sender**: One of the following values:
@@ -188,18 +181,20 @@ In the details flyout that opens, the following information is available:
   - **Received**: The date/time when the message was received.
   - **Expires**: The date/time when the message is automatically and permanently deleted from quarantine.
   - **Subject**
-  - **Quarantine reason**:
+  - **Quarantine reason**: For example:
     - The message was identified as **Spam**, **Bulk**, or **Phish**.
     - The message matched a mail flow rule (**Transport rule**).
     - The message was identified as **Malware**.
   - **Policy type**
-  - **Recipient count**
-  - **Recipients**: If the message contains multiple recipients, you might need to select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: \> **Preview message** or :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: \> **View message header** to see the complete list of recipients.
+  - **Recipient**
+
+    If the original message was sent to multiple recipients, select :::image type="icon" source="media/m365-cc-sc-preview-message-icon.png" border="false"::: **Preview message** or :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: **View message headers** to see the complete list of recipients.
+
   - **Sender override reason**
-  - **Released by**:
-    - User released: The user's email address is shown.
-    - Admin released: The value **Admin** is shown.
-    - System released: The value **System** is shown.
+  - **Released by**: For example:
+    - User released: The user's email address.
+    - Admin released: The value is **Admin**.
+    - System released: The value is **System**.
     - Other: The default value is **Admin**.
 - **Email details** section:
   - **Sender address**
@@ -207,7 +202,7 @@ In the details flyout that opens, the following information is available:
   - **Network message ID**
   - **Recipients**
 
-:::image type="content" source="media/quarantine-user-message-details-released-by.png" alt-text="The details flyout of a quarantined message" lightbox="media/quarantine-user-message-details-released-by.png":::
+:::image type="content" source="media/quarantine-user-message-details-with-actions.png" alt-text="Screenshot of the details flyout of a quarantined message." lightbox="media/quarantine-user-message-details-with-actions.png":::
 
 To take action on the message, see the next section.
 
@@ -249,6 +244,8 @@ After you select the quarantined message, the available actions are described in
 > The quarantine policy assigned to the verdict that quarantined the message controls your ability to view quarantined messages. The quarantine policy might be the default quarantine policy as described in [Recommended email and collaboration threat policy settings for cloud organizations](recommended-settings-for-eop-and-office365.md).
 >
 > A quarantine policy can allow you to release a message or request the release of a message, but both options aren't available for the same message. A quarantine policy can also prevent you from releasing or requesting the release of quarantined messages.
+>
+> If the Release button is greyed out, this is an expected behavior. Some quarantined messages can't be released by users, based on the quarantine reason or assigned quarantine policy. In such cases, you can only request release, or an admin must release the message.
 
 This action isn't available for released email messages (the **Release status** value is **Released**).
 

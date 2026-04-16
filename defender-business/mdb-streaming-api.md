@@ -1,10 +1,9 @@
 ---
 title: Use the streaming API with Microsoft Defender for Business
-description:  The Defender for Endpoint streaming API is available for Defender for Business and Microsoft 365 Business Premium. Stream of device file, registry, network, sign-in events, and other data to Azure Event Hub, Azure Storage, and Microsoft Sentinel to support advanced hunting and attack detection.
+description:  The Defender for Endpoint streaming API is available for Defender for Business and Microsoft 365 Business Premium. Stream of device file, registry, network, sign-in events, and other data to Azure Event Hubs, Azure Storage, and Microsoft Sentinel to support advanced hunting and attack detection.
 author: chrisda
 ms.author: chrisda
-manager: bagol
-ms.date: 03/05/2025
+ms.date: 09/11/2025
 ms.topic: how-to
 ms.service:  microsoft-365-security
 ms.localizationpriority: medium
@@ -15,29 +14,26 @@ ms.collection:
 - highpri
 - tier1
 ms.reviewer: davidb, nehabha, efratka
-search.appverid: MET150
-f1.keywords: NOCSH
-audience: ITPro
 ---
 
 # Use the streaming API with Microsoft Defender for Business
 
-If your organization has a Security Operations Center (SOC), the ability to use the [Microsoft Defender for Endpoint streaming API](/defender-endpoint/api/raw-data-export) is available for [Defender for Business](mdb-overview.md) and [Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-overview). The API enables you to stream data, such as device file, registry, network, sign-in events, and more to one of the following services:
+If your organization has a Security Operations Center (SOC), the ability to use the [Microsoft Defender for Endpoint streaming API](/defender-endpoint/api/raw-data-export) is available for [Defender for Business](mdb-overview.md) and [Microsoft 365 Business Premium](/microsoft-365/business-premium/m365bp-overview). The API enables you to stream data, such as device file, registry, network, sign-in events, and more to one of the following services:
 
-- [Microsoft Sentinel](#use-the-streaming-api-with-microsoft-sentinel), a scalable, cloud-native solution that provides security information and event management (SIEM) and security orchestration, automation, and response (SOAR) capabilities.
-- [Azure Event Hubs](#use-the-streaming-api-with-event-hubs), a modern big data streaming platform and event ingestion service that can seamlessly integrate with other Azure and Microsoft services, such as Stream Analytics, Power BI, and Event Grid, along with outside services like Apache Spark.
-- [Azure Storage](/azure/storage/common/storage-introduction), Microsoft's cloud storage solution for modern data storage scenarios, with highly available, massively scalable, durable, and secure storage for a variety of data objects in the cloud.
+- [Microsoft Sentinel](#use-the-streaming-api-with-microsoft-sentinel): A scalable, cloud-native solution that provides security information and event management (SIEM) and security orchestration, automation, and response (SOAR) capabilities.
+- [Azure Event Hubs](#use-the-streaming-api-with-event-hubs): A modern, big data streaming platform and event ingestion service that can seamlessly integrate with other Azure and Microsoft services. For example, Stream Analytics, Power BI, and Event Grid, along with outside services like Apache Spark.
+- [Azure Storage](/azure/storage/common/storage-introduction): Microsoft's cloud storage solution for modern data storage scenarios, with highly available, massively scalable, durable, and secure storage for a variety of data objects in the cloud.
 
-With the streaming API, you can use [advanced hunting](/defender-xdr/advanced-hunting-overview) and [attack detection](/defender-endpoint/overview-endpoint-detection-response) with Defender for Business and Microsoft 365 Business Premium. The streaming API enables SOCs to view more data about devices, understand better how an attack occurred, and take steps to improve device security.
+With the streaming API, you can use [advanced hunting](/defender-xdr/advanced-hunting-overview) and [attack detection](/defender-endpoint/overview-endpoint-detection-response) with Defender for Business and Microsoft 365 Business Premium. The streaming API enables security operations centers to view more data about devices, understand better how an attack occurred, and take steps to improve device security.
 
 ## Use the streaming API with Microsoft Sentinel
 
 > [!NOTE]
-> [Microsoft Sentinel](/azure/sentinel/overview) is a paid service. Several plans and pricing options are available. See [Microsoft Sentinel pricing](https://azure.microsoft.com/pricing/details/microsoft-sentinel/).
+> [Microsoft Sentinel](/azure/sentinel/overview) is a paid service. Several plans and pricing options are available. See [Microsoft Sentinel pricing](https://www.microsoft.com/security/pricing/microsoft-sentinel/).
 
 1. Make sure that Defender for Business is set up and configured, and that devices are already onboarded. See [Set up and configure Microsoft Defender for Business](mdb-setup-configuration.md).
 
-2. Create a Log Analytics workspace that you'll use with Sentinel. See [Create a Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace?tabs=azure-portal).
+2. Create a Log Analytics workspace to use with Microsoft Sentinel. See [Create a Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace?tabs=azure-portal).
 
 3. Onboard to Microsoft Sentinel. See [Quickstart: Onboard Microsoft Sentinel](/azure/sentinel/quickstart-onboard).
 
@@ -46,8 +42,7 @@ With the streaming API, you can use [advanced hunting](/defender-xdr/advanced-hu
 ## Use the streaming API with Event Hubs
 
 > [!NOTE]
-> [Azure Event Hubs](/azure/event-hubs/event-hubs-about) requires an Azure subscription. Before you begin, make sure to create an [event hub](/azure/event-hubs/) in your tenant. Then, sign in to the [Azure portal](https://ms.portal.azure.com/), go to **Subscriptions** > **Your subscription** > **Resource Providers** > **Register to Microsoft.insights**.
->
+> [Azure Event Hubs](/azure/event-hubs/event-hubs-about) requires an Azure subscription. Before you begin, make sure to create an [event hub](/azure/event-hubs/) in your organization. Then, sign in to the [Azure portal](https://ms.portal.azure.com/), go to **Subscriptions** \> **Your subscription** \> **Resource Providers** \> **Register to Microsoft.insights**.
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
@@ -77,7 +72,7 @@ Here's what the schema of events in Azure Event Hubs looks like:
     "records": [
                     {
                         "time": "<The time WDATP received the event>"
-                        "tenantId": "<The Id of the tenant that the event belongs to>"
+                        "tenantId": "<The Id of the organization that the event belongs to>"
                         "category": "<The Advanced Hunting table name with 'AdvancedHunting-' prefix>"
                         "properties": { <WDATP Advanced Hunting event as Json> }
                     }
@@ -86,11 +81,11 @@ Here's what the schema of events in Azure Event Hubs looks like:
 }
 ```
 
-Each event hub message in Azure Event Hubs contains a list of records. Each record contains the event name, the time Defender for Business received the event, the tenant to which it belongs (you get events from your tenant only), and the event in JSON format in a property called "**properties**". For more information about the schema, see [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview).
+Each event hub message in Azure Event Hubs contains a list of records. Each record contains the event name, the time Defender for Business received the event, the organization to which it belongs (you get events from your organization only), and the event in JSON format in a property called "**properties**". For more information about the schema, see [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview).
 
 ## Use the streaming API with Azure Storage
 
-Azure Storage requires an Azure subscription. Before you begin, make sure to create a [Storage account](/azure/storage/common/storage-account-overview) in your tenant. Then, sign in to your [Azure tenant](https://ms.portal.azure.com/), and go to **Subscriptions** > **Your subscription** > **Resource Providers** > **Register to Microsoft.insights**.
+Azure Storage requires an Azure subscription. Before you begin, make sure to create a [Storage account](/azure/storage/common/storage-account-overview) in your organization. Then, sign in to your [Azure organization](https://ms.portal.azure.com/), and go to **Subscriptions** \> **Your subscription** \> **Resource Providers** \> **Register to Microsoft.insights**.
 
 ### Enable raw data streaming
 
@@ -121,7 +116,7 @@ A blob container is created for each event type. The schema of each row in a blo
   }
   ```
 
-Each blob contains multiple rows. Each row contains the event name, the time Defender for Business received the event, the tenant to which it belongs (you get events from your tenant only), and the event in JSON format properties. For more information about the schema of Microsoft Defender for Endpoint events, see [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview).
+Each blob contains multiple rows. Each row contains the event name, the time Defender for Business received the event, the organization to which it belongs (you get events from your organization only), and the event in JSON format properties. For more information about the schema of Microsoft Defender for Endpoint events, see [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview).
 
 ## See also
 

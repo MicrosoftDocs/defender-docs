@@ -1,17 +1,13 @@
 ---
 title: Assign security roles and permissions in Microsoft Defender for Business
 description: Assign roles to your cybersecurity team. Learn about these roles and permissions in Defender for Business.
-search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 06/07/2024
+ms.date: 09/11/2025
 ms.reviewer: efratka, nehabha
-f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security
@@ -34,7 +30,7 @@ Your organization's security team needs certain permissions to perform tasks, su
 - Viewing incidents and alerts
 - Taking response actions on detected threats
 
-Permissions are granted through certain roles in the [Microsoft Entra ID](/azure/active-directory/roles/manage-roles-portal). These roles can be assigned in the Microsoft 365 admin center or in the Microsoft Entra admin center.
+Permissions are granted through certain roles in the [Microsoft Entra ID](/entra/identity/role-based-access-control/manage-roles-portal). These roles can be assigned in the Microsoft 365 admin center or in the Microsoft Entra admin center.
 
 ## What to do
 
@@ -48,18 +44,18 @@ The following table describes the main roles that are assigned in Defender for B
 
 |Permission level|Description|
 |---|---|
-|**Security Administrator**|Security Administrators can perform the following tasks: <br/>- View and manage security policies<br/>- View, respond to, and manage alerts <br/>- Take response actions on devices with detected threats<br/>- View security information and reports <br/><br/>In general, security admins use the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) to perform security tasks.|
-|**Security Reader**|Security Readers can perform the following tasks:<br/>- View a list of onboarded devices<br/>- View security policies<br/>- View alerts and detected threats<br/>- View security information and reports <br/><br/>Security readers can't add or edit security policies, nor can they onboard devices.|
+|**Security Administrator**|Security Administrators can perform the following tasks: <ul><li>View and manage security policies</li><li>View, respond to, and manage alerts</li><li>Take response actions on devices with detected threats</li><li>View security information and reports</li></ul> <br/> In general, security admins use the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) to perform security tasks.|
+|**Security Reader**|Security Readers can perform the following tasks: <ul><li>View a list of onboarded devices</li><li>View security policies</li><li>View alerts and detected threats</li><li>View security information and reports </li></ul> <br/> Security readers can't add or edit security policies, nor can they onboard devices.|
 
 For more information about roles, see the following articles:
 
-- [About admin roles](/Microsoft-365/admin/add-users/about-admin-roles)
+- [About admin roles](/microsoft-365/admin/add-users/about-admin-roles)
 - [Security guidelines for assigning roles](/microsoft-365/admin/add-users/about-admin-roles#security-guidelines-for-assigning-roles)
 
 ## View and edit role assignments
 
 > [!IMPORTANT]
-> Microsoft recommends that you grant people access to only what they need to perform their tasks. We call this concept *least privilege* for permissions. To learn more, see [Best practices for least-privileged access for applications](/azure/active-directory/develop/secure-least-privileged-access).
+> Microsoft recommends that you grant people access to only what they need to perform their tasks. We call this concept *least privilege* for permissions. To learn more, see [Best practices for least-privileged access for applications](/entra/identity-platform/secure-least-privileged-access).
 
 You can use the Microsoft 365 admin center or the Microsoft Entra admin center to view and edit role assignments.
 
@@ -67,7 +63,7 @@ You can use the Microsoft 365 admin center or the Microsoft Entra admin center t
 
 1. Go to the Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) and sign in.
 
-2. In the navigation pane, go to **Users** > **Active users**.
+2. In the navigation pane, go to **Users** \> **Active users**.
 
 3. Select a user account to open their flyout pane.
 
@@ -77,16 +73,16 @@ You can use the Microsoft 365 admin center or the Microsoft Entra admin center t
 
    |Task|Procedure|
    |---|---|
-   |Add a role to a user account|1. Select **Admin center access**, scroll down, and then expand **Show all by category**.<br/><br/>2. Select one of the following roles:<br/><br/>- Security Administrator (listed under **Security & Compliance**)<br/>- Security Reader (listed under **Read-only**)<br/><br/>3. Select **Save changes**.|
-   |Remove a role from a user account|1. Either select **User (no admin center access)** to remove *all* admin roles, or clear the checkbox next to one or more of the assigned roles. <br/><br/>2. Select **Save changes**.|
+   |Add a role to a user account|<ol><li>Select **Admin center access**, scroll down, and then expand **Show all by category**.</li><li>Select one of the following roles: <ul><li>Security Administrator (listed under **Security & Compliance**)</li><li>Security Reader (listed under **Read-only**)</li>/ul></li><li>Select **Save changes**.</li></ol>|
+   |Remove a role from a user account|<ol><li>Either select **User (no admin center access)** to remove *all* admin roles, or clear the checkbox next to one or more of the assigned roles.</li><li>Select **Save changes**.</li></ol>|
 
 ## [**Microsoft Entra admin center**](#tab/Entra)
 
 1. Go to the Microsoft Entra admin center ([https://entra.microsoft.com](https://entra.microsoft.com/)) and sign in.
 
-2. In the navigation pane, go to **Users** > **All users**.
+2. In the navigation pane, go to **Users** \> **All users**.
 
-3. Select a user account to open their profile.
+3. Open a user profile by selecting the user account.
 
 4. To add or remove a role, use one of the following procedures:
 

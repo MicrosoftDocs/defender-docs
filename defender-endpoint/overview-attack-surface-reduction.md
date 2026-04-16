@@ -1,4 +1,4 @@
-﻿---
+---
 title: Understand and use attack surface reduction
 ms.reviewer: niwelton, joshbregman
 description: Learn about the attack surface reduction capabilities of Microsoft Defender for Endpoint.
@@ -6,8 +6,6 @@ ms.service: defender-endpoint
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.custom: asr
 ms.topic: how-to
 ms.subservice: asr
@@ -16,7 +14,6 @@ ms.collection:
 - tier2
 - mde-asr
 ms.date: 10/20/2025
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -296,5 +293,5 @@ As mentioned in the video, Defender for Endpoint includes several attack surface
 | [Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md) | Provides steps to use audit mode to test attack surface reduction rules. |
 | [Web protection](web-protection-overview.md) | Web protection lets you secure your devices against web threats and helps you regulate unwanted content. |
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

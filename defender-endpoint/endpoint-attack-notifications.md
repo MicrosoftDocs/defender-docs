@@ -1,13 +1,11 @@
-﻿---
+---
 title: Endpoint Attack Notifications
 ms.reviewer:
 description: Endpoint Attack Notifications provides proactive hunting for the most important threats to your network.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -16,7 +14,6 @@ ms.custom:
 - cx-ti
 - cx-ean
 ms.subservice: edr
-search.appverid: met150
 ms.date: 03/25/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
@@ -70,5 +67,5 @@ You can create rules to send email notifications for notification recipients. Se
 ## Next steps
 
 - To proactively hunt threats across endpoints, Office 365, cloud applications, and identity, refer to [Microsoft Defender Experts for Hunting](/defender-xdr/defender-experts-for-hunting).
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

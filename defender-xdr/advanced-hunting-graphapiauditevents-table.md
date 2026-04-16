@@ -1,16 +1,11 @@
 ---
 title: GraphApiAuditEvents table in the advanced hunting schema
 description: Learn about the GraphApiAuditEvents table in the advanced hunting schema, which provides information about Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: orspodek
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -18,16 +13,12 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: reference
-ms.date: 12/26/2025
+ms.date: 02/05/2026
 ---
 
-# GraphApiAuditEvents (Preview)
+# GraphApiAuditEvents
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-> [!IMPORTANT]
-> Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 The `GraphApiAuditEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant. Use this reference to construct queries that return information from this table.
 
@@ -55,6 +46,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `UniqueTokenIdentifier` | `string` | Unique identifier embedded in every access token and ID token that were issued |
 | `TargetWorkload` | `string` | The target workload (for example, Microsoft.Exchange, Microsoft.SharePoint) the API call was made to |
 | `ServicePrincipalId` | `string` | The identifier for the Service Principal making the request |
+| `ResponseSize` | `int` | The size of the response in bytes |
 
 ## Related articles
 

@@ -1,19 +1,16 @@
-﻿---
+---
 title: Configure general Defender for Endpoint settings 
 description: Use the settings page to configure general settings, permissions, APIs, and rules.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - essentials-manage
 ms.topic: article
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 03/26/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -35,5 +32,5 @@ APIs | Enable the threat intel and SIEM integration.
 Rules | Configure suppressions rules and automation settings.
 Device management | Onboard and offboard devices.
 Network assessments | Choose devices to be scanned regularly and added to the device inventory.
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

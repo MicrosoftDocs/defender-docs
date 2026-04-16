@@ -1,20 +1,17 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint API release notes
 description: Release notes for updates made to the Microsoft Defender for Endpoint set of APIs.
 ms.service: defender-endpoint
 ms.subservice: reference
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 03/21/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

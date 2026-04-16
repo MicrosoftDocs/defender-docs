@@ -1,20 +1,15 @@
-﻿---
+---
 title: Create a custom gradual rollout process for Microsoft Defender updates
 description: Learn how to use supported tools to create a custom gradual rollout process for updates
 ms.service: defender-endpoint
 ms.subservice: onboard
-f1.keywords:
-- NOCSH
-ms.author: bagol
-author: batamig
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: how-to
-search.appverid: met150
 ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -70,7 +65,7 @@ You can use [Group Policy](/windows/win32/srvnodes/group-policy?redirectedfrom=M
 
 Follow the instructions in below link to create a custom policy in Intune:
 
-[Add custom settings for Windows 10 devices in Microsoft Intune](/mem/intune/configuration/custom-settings-windows-10).
+[Add custom settings for Windows 10 devices in Microsoft Intune](/intune/intune-service/configuration/custom-settings-windows-10).
 
 For more information on the Defender CSP used for the gradual rollout process, see [Defender CSP](/windows/client-management/mdm/defender-csp).
 
@@ -102,17 +97,17 @@ These settings can be confirmed in the registry under `HKEY_LOCAL_MACHINE\SOFTWA
 - `SignaturesRing`
 
 > [!NOTE]
-> You can also use a management tool such as Microsoft Configuration Manager to run PowerShell scripts. See [Create and run PowerShell scripts from the Configuration Manager console](/mem/configmgr/apps/deploy-use/create-deploy-scripts).
+> You can also use a management tool such as Microsoft Configuration Manager to run PowerShell scripts. See [Create and run PowerShell scripts from the Configuration Manager console](/intune/configmgr/apps/deploy-use/create-deploy-scripts).
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

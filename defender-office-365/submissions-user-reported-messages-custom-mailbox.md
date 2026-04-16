@@ -1,24 +1,18 @@
 ---
 title: User reported settings
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
 ms.collection:
   - m365-security
   - tier1
 ms.custom:
 description: "Admins can configure where user reported messages go for analysis: to an internal reporting mailbox, to Microsoft, or both. Other settings complete the reporting experience for users when they report good messages, spam, or phishing messages from Outlook."
 ms.service: defender-office-365
-ms.date: 10/06/2025
+ms.date: 02/26/2026
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -287,14 +281,14 @@ When you're finished on the **User reported settings** page, select **Save**.
 
 > [!TIP]
 > If **Monitor reported messages in Microsoft Teams** is selected in the **Microsoft Teams** section when **Use a non-Microsoft add-in button** is also selected, the settings in the **Email notifications** sections are available. But, these settings apply only to user-reported Teams messages. For more information, see [User reported message settings in Microsoft Teams](submissions-teams.md).
+>
+> In [attack simulation training in Defender for Office 365 Plan 2](attack-simulation-training-get-started.md), simulation messages reported by non-Microsoft tools aren't captured in attack simulation reports.
 
 <a name='message-submission-format-for-third-party-reporting-tools'></a>
 
 #### Message submission format for non-Microsoft reporting tools
 
 Messages sent by non-Microsoft reporting tools to the reporting mailbox required specific formatting so they're correctly identified on the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>.
-
-Messages that don't follow the required formatting are always identified as phishing.
 
 To correctly identify why the original messages were reported, messages sent to the reporting mailbox must meet the following criteria:
 
@@ -314,15 +308,18 @@ To correctly identify why the original messages were reported, messages sent to 
    >
    > `X-Microsoft-Antispam-Message-Info` should be a valid header.
 
-- The Subject line (Envelope Title) of messages sent to the reporting mailbox must start with one of the following prefix values:
-  - `1|` or `Junk:`.
-  - `2|` or `Not junk:`.
-  - `3|` or `Phishing:`.
+- The Subject line (Envelope Title) of messages sent to the reporting mailbox should start with one of the following prefix values:
+  - `1|` or `Junk:`
+  - `2|` or `Not junk:`
+  - `3|` or `Phishing:`
 
   For example:
 
   - `3|This text in the Subject line is ignored by the system`
   - `Not Junk:This text in the Subject line is also ignored by the system`
+
+  > [!TIP]
+  > Messages without a prefix are always identified as phishing.
 
 ## Use Exchange Online PowerShell to configure the reported message settings
 

@@ -1,19 +1,16 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint partner opportunities and scenarios
 ms.reviewer: 
 description: Learn how you can extend existing security offerings on top of the open framework and a rich set of APIs to build extensions and integrations with Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: concept-article
-search.appverid: met150
 ms.date: 03/26/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -53,5 +50,5 @@ Follow the steps in [Become a Microsoft Defender for Endpoint partner](get-start
 
 - [Overview of management and APIs](api/management-apis.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

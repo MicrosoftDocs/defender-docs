@@ -1,14 +1,11 @@
-﻿---
+---
 title: Integration with Microsoft Defender for Cloud
 description: Learn about Microsoft Defender for Endpoint integration with Microsoft Defender for Cloud
-search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: onboard
-author: batamig
-ms.author: bagol
+author: limwainstein
+ms.author: lwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -46,5 +43,5 @@ The following capabilities are included in this integration:
 - [Onboard previous versions of Windows](onboard-downlevel.md)
 - [Onboard Windows Server 2012 R2, 2016, SAC version 1803, and 2019](onboard-server.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

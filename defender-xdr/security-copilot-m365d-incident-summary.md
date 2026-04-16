@@ -2,23 +2,17 @@
 title: Summarize incidents with Microsoft Copilot in Microsoft Defender
 description: Generate incident summaries with Microsoft Copilot embedded in Microsoft Defender.
 ms.service: defender-xdr
-f1.keywords:
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
   - security-copilot
   - magic-ai-copilot
 ms.topic: how-to
-search.appverid:
-  - MOE150
-  - MET150
 ms.date: 11/18/2024
+ms.update-cycle: 180-days
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal

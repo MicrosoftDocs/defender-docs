@@ -1,15 +1,11 @@
 ---
 title: Microsoft Security Copilot in advanced hunting
 description: Learn about the different Microsoft Security Copilot advanced hunting capabilities in Microsoft Defender.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
@@ -19,6 +15,7 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: how-to
+ms.update-cycle: 180-days
 ms.date: 12/12/2025
 appliesto:
 - Microsoft Defender

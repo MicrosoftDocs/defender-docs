@@ -1,12 +1,10 @@
-﻿---
+---
 title: Review events and errors using Event Viewer
 description: Get descriptions and further troubleshooting steps (if necessary) for all events reported by the Microsoft Defender for Endpoint service.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.reviewer: yongrhee
 ms.collection: 
 - m365-security
@@ -15,7 +13,6 @@ ms.collection:
 ms.topic: how-to
 ms.date: 03/25/2025
 ms.subservice: ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -198,6 +195,9 @@ See the following table for a list of events recorded by the service.
 
 Microsoft Defender for Endpoint events also appear in the System event log.
 
+> [!NOTE]
+> The Event Viewer UI can vary by Windows version. The steps in this article reflect a recent version of Windows 11.
+
 To open the System event log:
 
 1. Select **Start** on the Windows menu, type **Event Viewer**, and press **Enter**  to open the Event Viewer.
@@ -217,5 +217,5 @@ You can use this table for more information on the Defender for Endpoint events 
 - [Client analyzer overview](overview-client-analyzer.md)
 - [Understand the analyzer HTML report](analyzer-report.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

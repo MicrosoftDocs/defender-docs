@@ -1,15 +1,10 @@
-﻿---
+---
 title: Run live response commands on a device
 description: Learn how to run a sequence of live response commands on a device.
-search.appverid: met150
 ms.service: defender-endpoint
-f1.keywords:
-- NOCSH
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3

@@ -1,13 +1,12 @@
-﻿---
+---
 title: Configure the Microsoft Defender Antivirus cloud block time-out period
 description: You can configure how long Microsoft Defender Antivirus blocks a file from running while waiting for a cloud determination.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: yongrhee
-manager: bagol
 ms.subservice: ngp
 ms.topic: how-to
 ms.date: 10/20/2025
@@ -15,7 +14,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -55,7 +53,7 @@ To specify the cloud block time out period with Microsoft Defender for Endpoint 
 
 ## Specify the extended time out period using Microsoft Intune
 
-You can specify the cloud block time out period with an [endpoint security policy in Microsoft Intune](/mem/intune/protect/endpoint-security-policy).
+You can specify the cloud block time out period with an [endpoint security policy in Microsoft Intune](/intune/intune-service/protect/endpoint-security-policy).
 
 1. Go to the Intune admin center ([https://intune.microsoft.com/](https://intune.microsoft.com/)) and sign in.
 
@@ -65,7 +63,7 @@ You can specify the cloud block time out period with an [endpoint security polic
 
 1. In the **Configuration settings** section, scroll down to **Cloud Extended Timeout** and specify the time out, in seconds, from 0 to 50 seconds. Whatever you specify is added to the default 10 seconds.
 
-1. (This step is optional) Make any other changes to your antivirus policy. (Need help? See [Settings for Microsoft Defender Antivirus policy in Microsoft Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-windows).)
+1. (This step is optional) Make any other changes to your antivirus policy. (Need help? See [Settings for Microsoft Defender Antivirus policy in Microsoft Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-windows).)
 
 1. Choose **Next**, and finish configuring your policy.
 
@@ -91,10 +89,10 @@ You can use Group Policy to specify an extended time out for cloud checks.
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md) 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 
