@@ -1,21 +1,19 @@
-﻿---
+---
 title: Microsoft Defender Antivirus in Windows Overview
-description: Learn how to manage, configure, and use Microsoft Defender Antivirus, built-in antimalware and antivirus protection.
+description: Learn how to manage, configure, and use Microsoft Defender Antivirus, built-in anti-malware and antivirus protection.
 ms.service: defender-endpoint
 ms.localizationpriority: high
 ms.date: 10/20/2025
 ms.topic: overview
 author: chrisda
 ms.author: chrisda
-ms.reviewer: mkaminska, yonghree, pahuijbr
-manager: bagol
+ms.reviewer: mkaminska, yongrhee, pahuijbr
 ms.custom: nextgen
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Business
   - Microsoft Defender Antivirus
@@ -40,7 +38,7 @@ Microsoft Defender Antivirus is a major component of your next-generation protec
 
 Microsoft Defender Antivirus provides anomaly detection, a layer of protection for malware that doesn't fit any predefined pattern. Anomaly detection monitors for process creation events or files that are downloaded from the internet. Through machine learning and cloud-delivered protection, Microsoft Defender Antivirus can stay one step ahead of attackers. Anomaly detection is on by default and can help block attacks such as [3CX Security Alert for Electron Windows App](https://www.3cx.com/blog/news/desktopapp-security-alert/). Microsoft Defender Antivirus started blocking this malware four days before the attack was registered in VirusTotal.  
 
-Modern malware requires modern solutions. In 2015, Microsoft Defender Antivirus moved away from using a static signature-based engine to a model that uses predictive technologies such as, machine learning, applied science, and artificial intelligence as this switch is what's necessary to keep you and your organizations safe from the complexity of today's ever-evolving malware landscape.
+Modern malware requires modern solutions. In 2015, Microsoft Defender Antivirus moved away from using a static signature-based engine to a model that uses predictive technologies--such as machine learning, applied science, and artificial intelligence--as this switch is what's necessary to keep you and your organizations safe from the complexity of today's ever-evolving malware landscape.
 
 Microsoft Defender Antivirus can block almost all malware at first sight, in milliseconds.
 
@@ -50,38 +48,38 @@ Microsoft Defender Antivirus can also stop threats based on their behaviors and 
 
 ## Compatibility with other antivirus products
 
-If you're using a non-Microsoft antivirus/antimalware product on your device, you might be able to run Microsoft Defender Antivirus in passive mode alongside the non-Microsoft antivirus solution. It depends on the operating system used and whether your device is onboarded to Defender for Endpoint. To learn more, see [Microsoft Defender Antivirus compatibility](microsoft-defender-antivirus-compatibility.md).
+If you're using a non-Microsoft antivirus/anti-malware product on your device, you might be able to run Microsoft Defender Antivirus in passive mode alongside the non-Microsoft antivirus solution. It depends on the operating system used and whether your device is onboarded to Defender for Endpoint. To learn more, see [Microsoft Defender Antivirus compatibility](microsoft-defender-antivirus-compatibility.md).
 
 ## Microsoft Defender Antivirus processes and services
 
 The following table summarizes Microsoft Defender Antivirus processes and services. You can view them in Task Manager in Windows.
 
-| Process or service | Where to view its status |
-|--|--|
-| **Microsoft Defender Antivirus Core service** <br/>(`MdCoreSvc`) | - **Processes** tab: `Antimalware Core Service` <br/>- **Details** tab: `MpDefenderCoreService.exe` <br/>- **Services** tab: `Microsoft Defender Core Service` | 
-| **Microsoft Defender Antivirus service** <br/>(`WinDefend`) | - **Processes** tab: `Antimalware Service Executable` <br/>- **Details** tab: `MsMpEng.exe` <br/>- **Services** tab: `Microsoft Defender Antivirus` | 
-| **Microsoft Defender Antivirus Network Realtime Inspection service** <br/>(`WdNisSvc`) |  - **Processes** tab: `Microsoft Network Realtime Inspection Service` <br/>- **Details** tab: `NisSrv.exe` <br/>- **Services** tab: `Microsoft Defender Antivirus Network Inspection Service` | 
-| **Microsoft Defender Antivirus command-line utility** | - **Processes** tab: N/A <br/>- **Details** tab: `MpCmdRun.exe` <br/>- **Services** tab: N/A  | 
-| **Microsoft Security Client Policy Configuration Tool** | - **Processes** tab: N/A <br/>- **Details** tab: `ConfigSecurityPolicy.exe` <br/>- **Services** tab: N/A | 
+|Process or service|Where to view its status|
+|---|---|
+|**Microsoft Defender Antivirus Core service** <br/>(`MdCoreSvc`)|<ul><li>**Processes** tab: `Antimalware Core Service`</li><li>**Details** tab: `MpDefenderCoreService.exe`</li><li>**Services** tab: `Microsoft Defender Core Service`</li></ul>|
+|**Microsoft Defender Antivirus service** <br/>(`WinDefend`)|<ul><li>**Processes** tab: `Antimalware Service Executable`</li><li>**Details** tab: `MsMpEng.exe`</li><li>**Services** tab: `Microsoft Defender Antivirus`</li></ul>|
+|**Microsoft Defender Antivirus Network Realtime Inspection service** <br/>(`WdNisSvc`)|<ul><li>**Processes** tab: `Microsoft Network Realtime Inspection Service`</li><li>**Details** tab: `NisSrv.exe`</li><li>**Services** tab: `Microsoft Defender Antivirus Network Inspection Service`</li></ul>|
+|**Microsoft Defender Antivirus command-line utility**|<ul><li>**Processes** tab: N/A</li><li>**Details** tab: `MpCmdRun.exe`</li><li>**Services** tab: N/A</li></ul>|
+|**Microsoft Security Client Policy Configuration Tool**|<ul><li>**Processes** tab: N/A</li><li>**Details** tab: `ConfigSecurityPolicy.exe`</li><li>**Services** tab: N/A</li></ul>|
 
 To learn more about the Microsoft Defender Core service, visit [Microsoft Defender Core service overview](microsoft-defender-core-service-overview.md).
 
 For [Microsoft Endpoint Data Loss Prevention](/purview/endpoint-dlp-getting-started) (Endpoint DLP), the following table summarizes processes and services. You can view them in Task Manager in Windows.
 
-| Process or service | Where to view its status |
-|--|--|
-| **Microsoft Endpoint DLP service** <br/>(`MDDlpSvc`) | - **Processes** tab: `MpDlpService.exe` <br/>- **Details** tab: `MpDlpService.exe` <br/>- **Services** tab: `Microsoft Data Loss Prevention Service` |
-| **Microsoft Endpoint DLP command-line utility**  | - **Processes** tab: N/A <br/>- **Details** tab: `MpDlpCmd.exe` <br/>- **Services** tab: N/A |
+|Process or service|Where to view its status|
+|---|---|
+|**Microsoft Endpoint DLP service** <br/>(`MDDlpSvc`)|<ul><li>**Processes** tab: `MpDlpService.exe`</li><li>**Details** tab: `MpDlpService.exe`</li><li>**Services** tab: `Microsoft Data Loss Prevention Service`</li></ul>|
+|**Microsoft Endpoint DLP command-line utility**|<ul><li>**Processes** tab: N/A</li><li>**Details** tab: `MpDlpCmd.exe`</li><li>**Services** tab: N/A</li></ul>|
 
 ## Comparing active mode, passive mode, and disabled mode
 
 The following table describes what to expect when Microsoft Defender Antivirus is in active mode, passive mode, or disabled.
 
-| Mode | What happens |
+|Mode|What happens|
 |---|---|
-| Active mode | In active mode, Microsoft Defender Antivirus is used as the primary antivirus app on the device. Files are scanned, threats are remediated, and detected threats are listed in your organization's security reports and in your Windows Security app. |
-| Passive mode | In passive mode, Microsoft Defender Antivirus isn't used as the primary antivirus app on the device. Files are scanned, and detected threats are reported, but threats aren't remediated by Microsoft Defender Antivirus. <br/><br/> **IMPORTANT**: Microsoft Defender Antivirus can run in passive mode only on endpoints that are onboarded to Microsoft Defender for Endpoint. See [Requirements for Microsoft Defender Antivirus to run in passive mode](microsoft-defender-antivirus-compatibility.md#requirements-for-microsoft-defender-antivirus-to-run-in-passive-mode). |
-| Disabled or uninstalled | When disabled or uninstalled, Microsoft Defender Antivirus isn't used. Files aren't scanned, and threats aren't remediated. In general, we don't recommend disabling or uninstalling Microsoft Defender Antivirus. |
+|Active mode|In active mode, Microsoft Defender Antivirus is used as the primary antivirus app on the device. Files are scanned, threats are remediated, and detected threats are listed in your organization's security reports and in your Windows Security app.|
+|Passive mode|In passive mode, Microsoft Defender Antivirus isn't used as the primary antivirus app on the device. Files are scanned, and detected threats are reported, but threats aren't remediated by Microsoft Defender Antivirus. <br/><br/> **IMPORTANT**: Microsoft Defender Antivirus can run in passive mode only on endpoints that are onboarded to Microsoft Defender for Endpoint. See [Requirements for Microsoft Defender Antivirus to run in passive mode](microsoft-defender-antivirus-compatibility.md#requirements-for-microsoft-defender-antivirus-to-run-in-passive-mode).|
+|Disabled or uninstalled|When disabled or uninstalled, Microsoft Defender Antivirus isn't used. Files aren't scanned, and threats aren't remediated. In general, we don't recommend disabling or uninstalling Microsoft Defender Antivirus.|
 
 To learn more, see [Microsoft Defender Antivirus compatibility](microsoft-defender-antivirus-compatibility.md).
 
@@ -90,12 +88,12 @@ To learn more, see [Microsoft Defender Antivirus compatibility](microsoft-defend
 You can use one of several methods, such as the Windows Security app or Windows PowerShell, to check the state of Microsoft Defender Antivirus on your device.
 
 > [!IMPORTANT]
-> Beginning with [platform version 4.18.2208.0 and later](microsoft-defender-antivirus-updates.md#platform-and-engine-releases): If a server has been onboarded to Microsoft Defender for Endpoint, the "Turn off Windows Defender" [group policy](configure-endpoints-gp.md#update-endpoint-protection-configuration) setting will no longer completely disable Windows Defender Antivirus on Windows Server 2012 R2 and later. Instead, it will place it into passive mode. In addition, the [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) feature will allow a switch to active mode but not to passive mode.
-> 
-> - If "Turn off Windows Defender" is already in place before onboarding to Microsoft Defender for Endpoint, there will be no change and Defender Antivirus will remain disabled.
+> Beginning with [platform version 4.18.2208.0 and later](microsoft-defender-endpoint-releases.md#microsoft-defender-antivirus-releases): If a server has been onboarded to Microsoft Defender for Endpoint, the "Turn off Windows Defender" [group policy](configure-endpoints-gp.md#update-endpoint-protection-configuration) setting no longer completely disables Windows Defender Antivirus on Windows Server 2012 R2 and later. Instead, it places it into passive mode. In addition, the [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) feature allows a switch to active mode but not to passive mode.
+>
+> - If "Turn off Windows Defender" is already in place before onboarding to Microsoft Defender for Endpoint, there is no change and Defender Antivirus remains disabled.
 > - To switch Defender Antivirus to passive mode, even if it was disabled before onboarding, you can apply the [ForceDefenderPassiveMode configuration](switch-to-mde-phase-2.md#manually-set-microsoft-defender-antivirus-to-passive-mode-on-windows-server) with a value of `1`. To place it into active mode, switch this value to `0` instead.
-> 
-> Note the modified logic for `ForceDefenderPassiveMode` when tamper protection is enabled: Once Microsoft Defender Antivirus is toggled to active mode, tamper protection will prevent it from going back into passive mode even when `ForceDefenderPassiveMode` is set to `1`.
+>
+> Understand the modified logic for `ForceDefenderPassiveMode` when tamper protection is enabled: Once Microsoft Defender Antivirus is toggled to active mode, tamper protection prevents it from going back into passive mode even when `ForceDefenderPassiveMode` is set to `1`.
 
 ### Use the Windows Security app to check the status of Microsoft Defender Antivirus
 
@@ -105,7 +103,7 @@ You can use one of several methods, such as the Windows Security app or Windows 
 
 1. Under **Who's protecting me?**, choose **Manage Providers**.
 
-You'll see the name of your antivirus/antimalware solution on the security providers page.
+You'll see the name of your antivirus/anti-malware solution on the security providers page.
 
 ### Use PowerShell to check the status of Microsoft Defender Antivirus
 
@@ -117,16 +115,15 @@ You'll see the name of your antivirus/antimalware solution on the security provi
 
    - **Normal** means Microsoft Defender Antivirus is running in active mode.
 
-   - **Passive mode** means Microsoft Defender Antivirus running, but isn't the primary antivirus/antimalware product on your device. Passive mode is only available for devices that are onboarded to Microsoft Defender for Endpoint and that meet certain requirements. To learn more, see [Requirements for Microsoft Defender Antivirus to run in passive mode](microsoft-defender-antivirus-compatibility.md#requirements-for-microsoft-defender-antivirus-to-run-in-passive-mode).
+   - **Passive mode** means Microsoft Defender Antivirus running, but isn't the primary antivirus/anti-malware product on your device. Passive mode is only available for devices that are onboarded to Microsoft Defender for Endpoint and that meet certain requirements. To learn more, see [Requirements for Microsoft Defender Antivirus to run in passive mode](microsoft-defender-antivirus-compatibility.md#requirements-for-microsoft-defender-antivirus-to-run-in-passive-mode).
 
    - **EDR Block Mode** means Microsoft Defender Antivirus is running and [Endpoint detection and response (EDR) in block mode](edr-in-block-mode.md), a capability in Microsoft Defender for Endpoint, is enabled. Check the **ForceDefenderPassiveMode** registry key. If its value is 0, it's running in normal mode; otherwise, it's running in passive mode.
 
-   - **SxS Passive Mode** means Microsoft Defender Antivirus is running alongside another antivirus/antimalware product, and [limited periodic scanning is used](limited-periodic-scanning-microsoft-defender-antivirus.md).
+   - **SxS Passive Mode** means Microsoft Defender Antivirus is running alongside another antivirus/anti-malware product, and [limited periodic scanning is used](limited-periodic-scanning-microsoft-defender-antivirus.md).
 
 > [!TIP]
 > To learn more about the Get-MpComputerStatus PowerShell cmdlet, see the reference article [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus).
-
-> [!TIP]
+>
 > **Performance tip** Due to a variety of factors (examples listed below) Microsoft Defender Antivirus, like other antivirus software, can cause performance issues on endpoint devices. In some cases, you might need to tune the performance of Microsoft Defender Antivirus to alleviate those performance issues. Microsoft's **Performance analyzer** is a PowerShell command-line tool that helps determine which files, file paths, processes, and file extensions might be causing performance issues; some examples are:
 >
 > - Top paths that impact scan time
@@ -144,22 +141,22 @@ You'll see the name of your antivirus/antimalware solution on the security provi
 > See: [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 >
 
-## Get your antivirus/antimalware platform updates
+## Get your antivirus/anti-malware platform updates
 
-It's important to keep Microsoft Defender Antivirus (or any antivirus/antimalware solution) up to date. Microsoft releases regular updates to help ensure that your devices have the latest technology to protect against new malware and attack techniques. To learn more, see [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md).
+It's important to keep Microsoft Defender Antivirus (or any antivirus/anti-malware solution) up to date. Microsoft releases regular updates to help ensure that your devices have the latest technology to protect against new malware and attack techniques. To learn more, see [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md).
 
 > [!TIP]
-> If you're looking for Antivirus related information for other platforms, see:
-> - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
-> - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
-> - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
-> - [Configure Defender for Endpoint on Android features](android-configure.md)
-> - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-
->[!Note]
->After installing the latest Microsoft Defender Antivirus platform or engine update, certain registry entries may not update automatically. To ensure the registry reflects the current version, administrators should manually verify and update the relevant keys using **Registry Editor (regedit)** or a supported deployment script.
+>
+> - If you're looking for Antivirus related information for other platforms, see:
+>   - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
+>   - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
+>   - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
+>   - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
+>   - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
+>   - [Configure Defender for Endpoint on Android features](android-configure.md)
+>   - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
+>
+> - After you install the latest Microsoft Defender Antivirus platform or engine update, certain registry entries might not update automatically. To ensure the registry reflects the current version, admins should manually verify and update the relevant registry keys using the **Registry Editor (regedit)** or a supported deployment script.
 
 ## See also
 
@@ -167,5 +164,3 @@ It's important to keep Microsoft Defender Antivirus (or any antivirus/antimalwar
 - [Microsoft Defender Antivirus management and configuration](configuration-management-reference-microsoft-defender-antivirus.md)
 - [Evaluate Microsoft Defender Antivirus protection](evaluate-microsoft-defender-antivirus.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
-
-

@@ -6,13 +6,11 @@ ms.service: defender-endpoint
 author: chrisda
 ms.author: chrisda
 ms.localizationpriority: high
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 - mde-ngp
 ms.subservice: ngp
-search.appverid: met150
 ms.date: 03/26/2025
 ---
 

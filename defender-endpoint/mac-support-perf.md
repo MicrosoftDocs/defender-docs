@@ -1,20 +1,17 @@
-﻿---
+---
 title: Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS
 description: Troubleshoot performance issues in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
 author: paulinbar
 ms.author: painbar
 ms.reviewer: joshbregman
-manager: bagol
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-macos
 ms.topic: troubleshooting-general
 ms.subservice: macos
-search.appverid: met150
 ms.date: 06/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -47,7 +44,7 @@ Prerequisites:
 - If you have [Tamper protection](tamperprotection-macos.md) turned on in block mode, use [Troubleshooting mode](mac-troubleshoot-mode.md) to capture real-time-protection-statistics. Otherwise, you get null results. 
 
 > [!TIP]
-> As a general best practice, it's recommended to update the [Microsoft Defender for Endpoint agent to latest available version](linux-whatsnew.md) and confirming that the issue still persists before investigating further.
+> As a general best practice, it's recommended to update the [Microsoft Defender for Endpoint agent to latest available version](microsoft-defender-endpoint-releases.md#linux-releases) and confirming that the issue still persists before investigating further.
 
 To troubleshoot and mitigate performance issues, follow these steps:
 

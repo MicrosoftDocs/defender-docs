@@ -1,20 +1,17 @@
-﻿---
+---
 title: Onboard Windows devices in Azure Virtual Desktop
 description: Learn about onboarding Windows devices to Defender for Endpoint in Azure Virtual Desktop
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-audience: ITPro
 ms.topic: install-set-up-deploy
 author: paulinbar
 ms.author: painbar
 ms.custom: nextgen
 ms.reviewer: thdoucet
-manager: bagol
 ms.collection: 
 - m365-security
 - tier3
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 11/17/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -104,12 +101,12 @@ This scenario uses a centrally located script and runs it using a domain-based g
 
 #### *Scenario 3: Onboarding using management tools*
 
-If you plan to manage your machines using a management tool, you can onboard devices with Microsoft Endpoint Configuration Manager.
+If you plan to manage your machines using a management tool, you can onboard devices with Microsoft Configuration Manager.
 
 For more information, see [Onboard Windows devices using Configuration Manager](configure-endpoints-sccm.md).
 
 > [!WARNING]
-> If you plan to use [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md), note that the rule "[Block process creations originating from PSExec and WMI commands](attack-surface-reduction-rules-reference.md#block-process-creations-originating-from-psexec-and-wmi-commands)" should not be used, because that rule is incompatible with management through Microsoft Endpoint Configuration Manager. The rule blocks WMI commands that the Configuration Manager client uses to function correctly.
+> If you plan to use [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md), note that the rule "[Block process creations originating from PSExec and WMI commands](attack-surface-reduction-rules-reference.md#block-process-creations-originating-from-psexec-and-wmi-commands)" should not be used, because that rule is incompatible with management through Microsoft Configuration Manager. The rule blocks WMI commands that the Configuration Manager client uses to function correctly.
 
 > [!TIP]
 > After onboarding the device, you can choose to run a detection test to verify that the device is properly onboarded to the service. For more information, see [Run a detection test on a newly onboarded Microsoft Defender for Endpoint device](run-detection-test.md).

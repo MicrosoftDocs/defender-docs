@@ -1,21 +1,14 @@
 ---
 title: Investigate data loss prevention alerts with Microsoft Sentinel
 description: Investigate data loss prevention alerts in Microsoft Sentinel.
-f1.keywords: 
-  - NOCSH
 ms.service: defender-xdr
 ms.author: monaberdugo
 author: mberdugo
-ms.localizationpriority: medium
-manager: laurawi
-audience: ITPro
+manager: orspodek
 ms.collection: 
   - m365-security
   - tier2
 ms.topic: how-to
-search.appverid: 
-  - MOE150
-  - met150
 ms.date: 07/11/2023
 ---
 

@@ -7,7 +7,6 @@ manager: bagol
 ms.service: microsoft-365-security
 ms.topic: how-to
 ms.date: 06/19/2025
-audience: ITPro
 ms.collection:
 - m365-guidance-templates
 - m365-security

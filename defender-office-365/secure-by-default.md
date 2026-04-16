@@ -1,17 +1,10 @@
 ---
 title: Secure by default in Office 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-ms.date: 12/18/2025
-audience: ITPro
+ms.date: 02/13/2026
 ms.topic: concept-article
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.collection:
   - m365-security
   - tier2
@@ -39,7 +32,7 @@ However, security needs to be balanced with productivity. This balance includes:
 All organizations with cloud mailboxes automatically receive email protection. This protection includes:
 
 - Email with suspected malware is automatically quarantined. The quarantine policy used by the anti-malware policy controls whether recipients are notified. For more information, see [Configure anti-malware policies](anti-malware-policies-configure.md).
-- Email identified as high confidence phishing is quarantined due to secure by default and the action configured for high confidence phishing in the relevant anti-spam policy.
+- Email identified as high confidence phishing is quarantined by default.
 
 For more information, see [Built-in security features for all cloud mailboxes](eop-about.md).
 
@@ -75,9 +68,10 @@ You should only consider using overrides in the following scenarios:
 
 - Phishing simulations: Simulated attacks can help you identify vulnerable users before a real attack impacts your organization. To prevent phishing simulation messages from being filtered, see [Configure non-Microsoft phishing simulations in the advanced delivery policy](advanced-delivery-policy-configure.md#use-the-microsoft-defender-portal-to-configure-non-microsoft-phishing-simulations-in-the-advanced-delivery-policy).
 - Security/SecOps mailboxes: Dedicated mailboxes used by security teams to get unfiltered messages (both good and bad). Teams can then review to see if they contain malicious content. For more information, see [Configure SecOps mailboxes in the advanced delivery policy](advanced-delivery-policy-configure.md#use-the-microsoft-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy).
-- Non-Microsoft filters: Secure by default applies only when the MX record for your domain points to Microsoft 365 (for example, contoso.mail.protection.outlook.com). If the MX record for your domain points to a non-Microsoft service or device, the following scenarios can result in the delivery of messages detected as high confidence phishing by anti-spam policies:
+- Non-Microsoft filters: Secure by default applies only when the MX record for your domain points to Microsoft 365 (for example, contoso.mail.protection.outlook.com). If the MX record for your domain points to a non-Microsoft service or device, policies including but not limited to the following scenarios can result in the delivery of messages detected as high confidence phishing by anti-spam policies:
   - [Exchange mail flow rules to bypass spam filtering](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
   - Senders identified in the [Safe Senders list](configure-junk-email-settings-on-exo-mailboxes.md) in user mailboxes.
   - [Allow entries in the Tenant Allow/Block List](tenant-allow-block-list-about.md#allow-entries-in-the-tenant-allowblock-list).
   - Senders identified in the [allowed senders list and allowed domains list in anti-spam policies](anti-spam-protection-about.md#allow-and-block-lists-in-anti-spam-policies).
+  - Source IP addresses allowed by the [connection filter policy](connection-filter-policies-configure.md).
 - False positives: To temporarily allow certain messages that Microsoft 365 blocked, use [admin submissions](submissions-admin.md#report-good-email-to-microsoft). By default, allow entries for domains and email addresses, files, and URLs exist for 30 days. During those 30 days, Microsoft learns from the allow entries and removes them or automatically extends them. By default, allow entries for spoofed senders never expire.

@@ -219,7 +219,7 @@ items:
       href: troubleshoot-policies.md
   - name: Configure threat protection
     items:
-    - name: Detect suspicious user activity with UEBA
+    - name: Detect suspicious user activity with behavioral analytics (UEBA)
       href: tutorial-suspicious-activity.md
     - name: Create activity policies
       href: user-activity-policies.md
@@ -432,7 +432,7 @@ items:
   items:
   - name: Overview
     href: ai-agent-protection.md
-  - name: Enable the AI agent inventory
+  - name: Discover and protect Copilot Studio AI agents
     href: ai-agent-inventory.md
   - name: Enable real-time protection for AI agents
     href: real-time-agent-protection-during-runtime.md
@@ -550,6 +550,8 @@ items:
         href: api-files-list.md
       - name: Fetch File
         href: api-files-fetch.md
+  - name: What's new archive
+    href: release-note-archive.md
 - name: Resources
   items:
   - name: Licensing datasheet
@@ -560,10 +562,6 @@ items:
     href: https://www.microsoft.com/security/business/cloud-apps-defender
   - name: External integrations
     href: additional-integrations.md
-  - name: Watch our webinars
-    href: webinars.md
-  - name: Release note archive
-    href: release-note-archive.md
 - name: Microsoft Defender XDR Docs
   items:
   - name: Microsoft Defender XDR

@@ -1,20 +1,17 @@
-﻿---
+---
 title: Troubleshooting mode in Microsoft Defender for Endpoint on macOS
 description: This article describes how to enable the troubleshooting mode in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
 author: paulinbar
 ms.author: painbar
 ms.reviewer: joshbregman
-manager: bagol
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-macos
 ms.topic: troubleshooting-general
 ms.subservice: macos
-search.appverid: met150
 ms.date: 12/15/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -55,7 +52,7 @@ During troubleshooting mode, you can't:
 - Supported version of macOS for Microsoft Defender for Endpoint.
 - Microsoft Defender for Endpoint must be tenant-enrolled and active on the device.
 - Permissions for "Manage security settings in Security Center" in Microsoft Defender for Endpoint.
-- Platform Update version: [101.23122.0005](mac-whatsnew.md#jan-2024-build-101231220005---release-version-2012312250) or newer.
+- Platform Update version: 101.23122.0005 or newer.
 
 ## Enable troubleshooting mode on macOS
 
@@ -156,17 +153,15 @@ DeviceEvents
 
 If you can't enable troubleshooting mode, do the following troubleshooting steps on the target Mac:
 
-- Verify the app version by running the following commands:
+- Verify the app version by running the following command:
 
   ```terminal
   mdatp health --field app_version
-
-  mdatp health --field edr_client_version
   ```
 
-  As previously mentioned, you need Platform Update version: [101.23122.0005](mac-whatsnew.md#jan-2024-build-101231220005---release-version-2012312250) or newer.
+  As previously mentioned, you need Platform Update version: 101.23122.0005 or newer.
 
-- Verify the device is enrolled and and active by running the following commands:
+- Verify the device is enrolled and active by running the following commands:
 
   ```terminal
   mdatp health --field edr_machine_id

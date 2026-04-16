@@ -42,6 +42,11 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "author": "poliveria",
+      "ms.author": "pauloliveria",
+      "manager": "orspodek",
+      "ms.reviewer": "aroland",
+      "ms.service": "threat-intelligence",
       "breadcrumb_path": "/defender/breadcrumb/toc.json",
       "feedback_system": "Standard",
       "permissioned-type": "public",

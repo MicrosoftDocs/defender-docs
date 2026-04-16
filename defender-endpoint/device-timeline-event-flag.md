@@ -1,4 +1,4 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint device timeline
 description: Use Microsoft Defender for Endpoint device timeline and timeline event flags.
 keywords: Defender for Endpoint device timeline, event flags
@@ -7,14 +7,11 @@ ms.author: lwainstein
 author: limwainstein
 ms.reviewer: efratka, alonshar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: article
 ms.subservice: edr
-search.appverid: met150
 ms.date: 03/26/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
@@ -104,6 +101,11 @@ When the EDR client's resource usage goes back to normal levels, it will automat
 On the upper right-hand side of the device timeline, you can choose a date range to limit the number of events and techniques in the timeline.
 
 You can customize which columns to expose. You can also filter for flagged events by data type or by event group.
+
+**Timeline data retention:** Device timeline events in Microsoft Defender for Endpoint are retained according to the organization’s data retention policy configured in the security portal and the underlying workspace settings. By default, security event data (including device timeline items) in Defender for Endpoint is retained for 90 days. If your tenant sends logs to a connected Microsoft Sentinel or Log Analytics workspace with a custom retention period, then timeline events retained there may be available for longer durations, as defined by those retention settings.
+
+> [!IMPORTANT]
+> The availability of historical timeline data depends on your retention configuration. If the default 90-day retention is insufficient for your investigation or compliance needs, consider exporting events to long-term storage or increasing the retention period in the connected workspace.
 
 ### Choose columns to expose
 

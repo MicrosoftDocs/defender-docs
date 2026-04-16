@@ -3,21 +3,17 @@ title: Run the client analyzer on macOS
 description: Learn how to use the Defender for Endpoint Client Analyzer on Mac to identify health or performance issue causes.
 ms.author: chrisda
 author: chrisda
-manager: bagol
 ms.reviewer: joshbregman
 ms.service: defender-endpoint
 ms.subservice: macos
 ms.localizationpriority: medium
 ms.topic: troubleshooting-general
-ms.date: 01/25/2025
+ms.date: 02/05/2026
 ms.custom: partner-contribution
 ms.collection:
 - m365-security
 - tier3
 - mde-macos
-search.appverid: met150
-audience: ITPro
-f1.keywords: NOCSH
 ---
 
 # Run the client analyzer on macOS
@@ -32,18 +28,18 @@ If you're experiencing reliability or device health issues with Microsoft Defend
 
 ## Use the binary version of the client analyzer
 
-1. Download the [XMDE Client Analyzer Binary](https://go.microsoft.com/fwlink/?linkid=2297517) tool to the macOS machine you need to investigate.
+1. Download the [XMDE Client Analyzer Binary](https://aka.ms/XMDEClientAnalyzerBinary) tool to the macOS machine you need to investigate.
 
    If you're using a terminal, download the tool by running the following command:
 
    ```bash
-   curl -s -L -o XMDEClientAnalyzerBinary.zip "https://go.microsoft.com/fwlink/?linkid=2297517"
+   curl -s -L -o XMDEClientAnalyzerBinary.zip "https://aka.ms/XMDEClientAnalyzerBinary"
    ```
 
 1. Verify the download.
 
    ```bash
-   echo 'C65A4E4C6851D130942BFACD147A9D18B8A92B4F50FACF519477FD1C41A1C323  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
+   echo '8707A2327A0B3D7AE6734D9CA34E116FC628DA23FDCA61C7BA7C7A9965F0BE34  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
    ```
 
 1. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine.
@@ -98,13 +94,13 @@ The tool currently requires Python version 3 or later to be installed on your de
    - **Linux**:
 
      ```bash
-     echo '07E6A7B89E28A78309D5B6F1E25E4CDFBA9CA141450E422D76441C03AD3477E7 XMDEClientAnalyzer.zip| sha256sum -c`
+     echo 'CCADC17FDE907E63FBAF0A5F9D0FAA2FC6D03C49CBA62276BDE427D0F512167F XMDEClientAnalyzer.zip| sha256sum -c`
      ```
 
    - **macOS**:
 
      ```bash
-     echo '07E6A7B89E28A78309D5B6F1E25E4CDFBA9CA141450E422D76441C03AD3477E7 XMDEClientAnalyzer.zip| shasum -a 256 -c`
+     echo 'CCADC17FDE907E63FBAF0A5F9D0FAA2FC6D03C49CBA62276BDE427D0F512167F XMDEClientAnalyzer.zip| shasum -a 256 -c`
      ```
 
 3. Extract the contents of `XMDEClientAnalyzer.zip` on the machine.
@@ -235,18 +231,18 @@ Usage example `./mde_support_tool.sh trace --length 5`
 
 ### Defender for Endpoint on macOS troubleshooting
 
-[Troubleshooting mode in Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-troubleshoot-mode)
+[Troubleshooting mode in Microsoft Defender for Endpoint on macOS](mac-troubleshoot-mode.md)
 
-[Troubleshoot installation issues for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-support-install)
+[Troubleshoot installation issues for Microsoft Defender for Endpoint on macOS](mac-support-install.md)
 
-[Troubleshoot license issues for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-support-license)
+[Troubleshoot license issues for Microsoft Defender for Endpoint on macOS](mac-support-license.md)
 
-[Troubleshoot system extension issues in Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-support-sys-ext)
+[Troubleshoot system extension issues in Microsoft Defender for Endpoint on macOS](mac-support-sys-ext.md)
 
-[Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on macOS](/defender-endpoint/troubleshoot-cloud-connect-mdemac)
+[Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on macOS](troubleshoot-cloud-connect-mdemac.md)
 
-[Overview for how to troubleshoot performance issues for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-support-perf-overview)
+[Overview for how to troubleshoot performance issues for Microsoft Defender for Endpoint on macOS](mac-support-perf-overview.md)
 
-[Address false positives/negatives in Microsoft Defender for Endpoint](/defender-endpoint/defender-endpoint-false-positives-negatives)
+[Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 
 

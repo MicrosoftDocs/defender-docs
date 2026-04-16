@@ -1,20 +1,17 @@
-﻿---
+---
 title: Troubleshoot system extension issues for Microsoft Defender for Endpoint on macOS
 description: Troubleshoot system extension issues in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
 author: paulinbar
 ms.author: painbar
 ms.reviewer: joshbregman
-manager: bagol
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-macos
 ms.topic: troubleshooting-general
 ms.subservice: macos
-search.appverid: met150
 ms.date: 04/16/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -138,7 +135,7 @@ Prior to approving the system extension (using any of the specified management t
 
 #### Step 1: Are the profiles coming down to your macOS?
 
-If you're using Intune, see [Manage macOS software update policies in Intune](/mem/intune/protect/software-updates-macos).
+If you're using Intune, see [Manage macOS software update policies in Intune](/intune/intune-service/protect/software-updates-macos).
 
 :::image type="content" source="media/refresh-devices.png" alt-text="The screen on which you refresh the devices." lightbox="media/refresh-devices.png":::
 

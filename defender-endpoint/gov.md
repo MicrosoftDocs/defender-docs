@@ -1,15 +1,12 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint for US Government customers
 description: Learn about the Microsoft Defender for Endpoint for US Government customers requirements and capabilities available
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.reviewer: jesquive
 ms.localizationpriority: medium
 ms.date: 01/05/2026
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -28,7 +25,7 @@ Microsoft Defender for Endpoint for US Government customers, built in the Azure 
 This offering is available to GCC, GCC High, and DoD customers and is based on the same prevention, detection, investigation, and remediation as the commercial version. However, there are some differences in the availability of capabilities for this offering.
 
 > [!NOTE]
-> If you're a GCC customer using Defender for Endpoint in Commercial, see the [Defender for Endpoint documentation](/defender-endpoint/).
+> If you're a GCC customer using Defender for Endpoint in Commercial, see the [Defender for Endpoint documentation](microsoft-defender-endpoint.md).
 
 ## Licensing requirements
 
@@ -124,19 +121,14 @@ If a proxy or firewall is blocking all traffic by default and allowing only spec
 > [!NOTE]
 > You can use the [streamlined connectivity feature](configure-device-connectivity.md) to onboard new government devices to Defender for Endpoint, using a reduced URL set or static IP ranges. A dedicated endpoint group supports streamlined connectivity in government environments, and consolidates several service dependencies into a smaller set of URLs.
 
-The following downloadable spreadsheet lists the services and their associated URLs your network must be able to connect to. Verify there are no firewall or network-filtering rules that would deny access to these URLs, or create an *allow* rule specifically for them.
+The following URL lists include the services and their associated URLs your network must be able to connect to. Verify there are no firewall or network-filtering rules that would deny access to these URLs, or create an *allow* rule specifically for them.
 
-|Spreadsheet of domains list|Description|
+|URL list|Description|
 |---|---|
 |Microsoft Defender for Endpoint Streamlined Connectivity URL list for Gov/GCC/DoD (Preview)|List of consolidated URLs for service locations, geographic locations, and OS for Gov/GCC/DoD customers. <br/><br/> [See the full list](streamlined-device-connectivity-urls-gov.md).|
-|Microsoft Defender for Endpoint Standard Connectivity URL list for Gov/GCC/DoD|Spreadsheet of specific DNS records for service locations, geographic locations, and OS for Gov/GCC/DoD customers. <br/><br/> [Download the spreadsheet here.](https://aka.ms/MDE-gov-urls)|
+|Microsoft Defender for Endpoint Standard Connectivity URL list for Gov/GCC/DoD|List of specific DNS records for service locations, geographic locations, and OS for Gov/GCC/DoD customers. <br/><br/> [See the full list](standard-device-connectivity-urls-gov.md)|
 
 For more information, see [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md).
-
-> [!NOTE]
-> The spreadsheet contains commercial URLs as well, make sure you check the "US Gov" tabs.
->
-> When filtering, look for the records labeled as "US Gov" and your specific cloud under the geography column.
 
 ## API
 

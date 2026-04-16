@@ -1,19 +1,16 @@
-﻿---
+---
 title: Configure Microsoft Defender for Endpoint on iOS features
 description: Describes how to deploy Microsoft Defender for Endpoint on iOS features.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-ios
 ms.topic: how-to
 ms.subservice: ios
-search.appverid: met150
 ms.date: 05/19/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -32,7 +29,7 @@ Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go
 
 Microsoft Defender for Endpoint on iOS along with Microsoft Intune and Microsoft Entra ID enables enforcing Device compliance and Conditional Access policies based on device risk score. Defender for Endpoint is a Mobile Threat Defense (MTD) solution that you can deploy to use this capability via Intune.
 
-For more information about how to set up Conditional Access with Defender for Endpoint on iOS, see [Defender for Endpoint and Intune](/mem/intune/protect/advanced-threat-protection).
+For more information about how to set up Conditional Access with Defender for Endpoint on iOS, see [Defender for Endpoint and Intune](/intune/intune-service/protect/advanced-threat-protection).
 
 ## Web protection and VPN
 
@@ -182,7 +179,7 @@ Microsoft Defender for Endpoint can be configured to send threat signals to be u
 
 Follow the steps in the following link to set up app protection policies with Microsoft Defender for Endpoint [Configure Defender risk signals in app protection policy (MAM)](ios-install-unmanaged.md)
 
-For more information on MAM or app protection policy, see [iOS app protection policy settings](/mem/intune/apps/app-protection-policy-settings-ios).
+For more information on MAM or app protection policy, see [iOS app protection policy settings](/intune/intune-service/apps/app-protection-policy-settings-ios).
 
 ## Privacy controls
 

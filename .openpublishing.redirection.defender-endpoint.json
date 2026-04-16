@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "defender-endpoint/mde-security-settings-management.md",
+      "redirect_url": "/intune/intune-service/protect/mde-security-integration",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "defender-endpoint/threat-analytics-analyst-reports.md",
       "redirect_url": "/defender-xdr/threat-analytics-analyst-reports",
       "redirect_document_id": false
@@ -43,6 +48,11 @@
     {
       "source_path": "defender-endpoint/attack-simulations.md",
       "redirect_url": "/defender-endpoint/defender-endpoint-demonstrations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/linux-support-events.md",
+      "redirect_url": "/defender-endpoint/mde-linux-prerequisites",
       "redirect_document_id": true
     },
     {
@@ -194,7 +204,51 @@
       "source_path": "defender-vulnerability-management/retention-logic-mdvm.md",
       "redirect_url": "/defender-endpoint/data-storage-privacy",
       "redirect_document_id": false
-    } 
-         
+    },
+    {
+      "source_path": "defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management.md",
+      "redirect_url": "/defender-endpoint/whats-new-in-microsoft-defender-endpoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/android-whatsnew.md",
+      "redirect_url": "/defender-endpoint/whats-new-in-microsoft-defender-endpoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/windows-whatsnew.md",
+      "redirect_url": "/defender-endpoint/whats-new-in-microsoft-defender-endpoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/linux-whatsnew.md",
+      "redirect_url": "/defender-endpoint/whats-new-in-microsoft-defender-endpoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/mac-whatsnew.md",
+      "redirect_url": "/defender-endpoint/whats-new-in-microsoft-defender-endpoint",
+      "redirect_document_id": false
+    },    
+    {
+      "source_path": "defender-endpoint/ios-whatsnew.md",
+      "redirect_url": "/defender-endpoint/whats-new-in-microsoft-defender-endpoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/release-notes-archive-android.md",
+      "redirect_url": "/defender-endpoint/whats-new-mde-archive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/device-discovery-faq.md",
+      "redirect_url": "/defender-endpoint/device-discovery",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/android-intune.md",
+      "redirect_url": "/intune/intune-service/protect/microsoft-defender-deploy-android",
+      "redirect_document_id": false
+    }
   ]
 }

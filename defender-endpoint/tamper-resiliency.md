@@ -1,9 +1,8 @@
-﻿---
+---
 title: Tamper resiliency with Microsoft Defender for Endpoint
 description: Learn about the anti-tampering capabilities of Microsoft Defender for Endpoint.
 author: limwainstein
 ms.author: lwainstein
-manager: bagol
 ms.reviewer: joshbregman
 ms.service: defender-endpoint
 ms.subservice: ngp
@@ -13,8 +12,6 @@ ms.collection:
 - tier1
 - highpri
 - mde-ngp
-f1.keywords: NOCSH
-audience: ITPro
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -37,7 +34,7 @@ In order to provide an effective defense against tampering, devices must be heal
 
 - [Onboard devices to Defender for Endpoint](onboard-configure.md).
 - Make sure [security intelligence and antivirus updates](microsoft-defender-antivirus-updates.md) are installed.
-- Managed devices centrally, such as by [Microsoft Intune](/mem/intune/protect/advanced-threat-protection-configure), [Microsoft Defender for Endpoint Security Configuration Management](/mem/intune/protect/mde-security-integration), or [Configuration Manager](/mem/configmgr/protect/deploy-use/endpoint-protection-configure).
+- Managed devices centrally, such as by [Microsoft Intune](/intune/intune-service/protect/advanced-threat-protection-configure), [Microsoft Defender for Endpoint Security Configuration Management](/intune/intune-service/protect/mde-security-integration), or [Configuration Manager](/intune/configmgr/protect/deploy-use/endpoint-protection-configure).
 
 > [!NOTE]
 > On Windows devices, Microsoft Defender Antivirus can be managed by using Group Policy, Windows Management Instrumentation (WMI), and PowerShell cmdlets. However, those methods are more susceptible to tampering than by using Microsoft Intune, Configuration Manager, or Microsoft Defender for Endpoint Security Configuration Management.

@@ -1,12 +1,10 @@
-﻿---
+---
 title: Onboarding using Microsoft Intune
 description: Learn how to onboard to Microsoft Defender for Endpoint using Microsoft Intune.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
   - m365-security
   - m365solution-endpointprotect
@@ -15,7 +13,6 @@ ms.collection:
   - tier1
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 03/26/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -34,7 +31,7 @@ In the [Planning](deployment-strategy.md) article, there were several methods pr
 
 While Defender for Endpoint supports onboarding of various endpoints and tools, this article doesn't cover them. For information on general onboarding using other supported deployment tools and methods, see [Onboarding overview](onboarding.md).
 
-The Microsoft Intune family of products is a solution platform that unifies several services. It includes [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) and [Microsoft Configuration Manager](/mem/configmgr).
+The Microsoft Intune family of products is a solution platform that unifies several services. It includes [Microsoft Intune](/intune/intune-service/fundamentals/what-is-intune) and [Microsoft Configuration Manager](/intune/configmgr).
 
 This article guides users in:
 
@@ -54,9 +51,9 @@ Here are the links you need for the rest of the process:
 
 - [Intune admin center](https://aka.ms/memac)
 - [Microsoft Defender XDR](https://security.microsoft.com)
-- [Intune Security baselines](/mem/intune/protect/security-baseline-settings-defender-atp#microsoft-defender)
+- [Intune Security baselines](/intune/intune-service/protect/security-baseline-settings-defender)
 
-For more information about Microsoft Intune, go to [Microsoft Intune securely manages identities, manages apps, and manages devices](/mem/intune/fundamentals/what-is-intune).
+For more information about Microsoft Intune, go to [Microsoft Intune securely manages identities, manages apps, and manages devices](/intune/intune-service/fundamentals/what-is-intune).
 
 ## Step 1: Onboard devices by creating a group in Intune to assign configurations on
 
@@ -67,7 +64,7 @@ In this section, we create a test group to assign your configurations on.
 > [!NOTE]
 > Intune uses Microsoft Entra groups to manage devices and users. As an Intune admin, you can set up groups to suit your organizational needs.
 >
-> For more information, see [Add groups to organize users and devices](/mem/intune/fundamentals/groups-add).
+> For more information, see [Add groups to organize users and devices](/intune/intune-service/fundamentals/groups-add).
 
 ### Create a group
 
@@ -131,7 +128,7 @@ Then, you continue by creating several different types of endpoint security poli
     > :::image type="content" source="media/cea7e288b5d42a9baf1aef0754ade910.png" alt-text="The Microsoft Intune admin center6" lightbox="media/cea7e288b5d42a9baf1aef0754ade910.png":::
 
     > [!NOTE]
-    > In this instance, this has been auto populated as Defender for Endpoint has already been integrated with Intune. For more information on the integration, see [Enable Microsoft Defender for Endpoint in Intune](/mem/intune/protect/advanced-threat-protection-configure#to-enable-microsoft-defender-atp).
+    > In this instance, this has been auto populated as Defender for Endpoint has already been integrated with Intune. For more information on the integration, see [Enable Microsoft Defender for Endpoint in Intune](/intune/intune-service/protect/advanced-threat-protection-configure#to-enable-microsoft-defender-atp).
     >
     > The following image is an example of what you'll see when Microsoft Defender for Endpoint is NOT integrated with Intune:
     >
@@ -302,7 +299,7 @@ Then, you continue by creating several different types of endpoint security poli
 
 Once the Configuration policy has been assigned, it takes some time to apply.
 
-For information on timing, see [Intune configuration information](/mem/intune/configuration/device-profile-troubleshoot#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+For information on timing, see [Intune configuration information](/intune/intune-service/configuration/device-profile-troubleshoot#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
 To confirm that the configuration policy is applied to your test device, follow the following process for each configuration policy.
 

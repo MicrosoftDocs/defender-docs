@@ -6,15 +6,12 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: denishdonga
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-android
 ms.topic: how-to
 ms.subservice: android
-search.appverid: met150
 ms.date: 12/17/2025
 appliesto:
    - Microsoft Defender for Endpoint Plan 1
@@ -28,7 +25,7 @@ appliesto:
 
 Microsoft Defender for Endpoint on Android, along with Microsoft Intune and Microsoft Entra ID, enables enforcing Device compliance and Conditional Access policies based on device risk levels. Defender for Endpoint is a Mobile Threat Defense (MTD) solution that you can deploy through Intune.
 
-For more information about how to set up Defender for Endpoint on Android and Conditional Access, see [Defender for Endpoint and Intune](/mem/intune/protect/advanced-threat-protection).
+For more information about how to set up Defender for Endpoint on Android and Conditional Access, see [Defender for Endpoint and Intune](/intune/intune-service/protect/advanced-threat-protection).
 
 ## Configure custom indicators
 
@@ -49,7 +46,7 @@ Defender for Endpoint on Android allows IT Administrators the ability to configu
 > [!NOTE]
 > Defender for Endpoint on Android would use a VPN in order to provide the Web Protection feature. This VPN isn't a regular VPN. Instead, it's a local/self-looping VPN that doesn't take traffic outside the device.
 >
-> For more information, see [Configure web protection on devices that run Android](/mem/intune/protect/advanced-threat-protection-manage-android).
+> For more information, see [Configure web protection on devices that run Android](/intune/intune-service/protect/advanced-threat-protection-manage-android).
 
 ## Network Protection
 
@@ -128,14 +125,6 @@ Following privacy controls are available for configuring the data that is sent b
 |Vulnerability assessment of apps |By default only information about apps installed in the work profile is sent for vulnerability assessment. Admins can disable privacy to include personal apps|
 |Network Protection | Admins can enable or disable privacy in network protection. If enabled, then Defender won't send network details.|
 
-## Root Detection
-
-Microsoft Defender for Endpoint has the ability to detect unmanaged and managed devices that are rooted. These root detection checks are done periodically. If a device is detected as rooted, the following events occur:
-
-- A high-risk alert is reported to the Microsoft Defender portal. If Device Compliance and Conditional Access are set up based on device risk score, then the device is blocked from accessing corporate data.
-
-- User data on the app is cleared after the device has been detected as rooted. The feature is enabled by default; no action is required from admin or user.
-
 **Prerequisite**
 
 - Company portal must be installed, and version must be >=5.0.6621.0
@@ -186,7 +175,7 @@ From version 1.0.3425.0303 of Microsoft Defender for Endpoint on Android, you're
 
 **Notes about privacy related to apps from personal devices (BYOD):**
 
-- For Android Enterprise with a work profile, only apps installed on the work profile will be supported.
+- For Android Enterprise with a work profile, only apps installed on the work profile are supported.
 - For other BYOD modes, by default, vulnerability assessment of apps will **not** be enabled. However, when the device is on administrator mode, admins can explicitly enable this feature through Microsoft Intune to get the list of apps installed on the device. For more information, see details below.
 
 ### Configure privacy for Android Enterprise work profile
@@ -276,7 +265,6 @@ Use the following steps to configure the Device tags:
 
 1. Select Next and assign this policy to targeted devices and users.
 
-
 > [!NOTE]
 > The Defender app needs to be opened for tags to be synced with Intune and passed to Security Portal. It might take up to 18 hours for tags to reflect in the portal.
 
@@ -284,6 +272,6 @@ Use the following steps to configure the Device tags:
 
 - [Overview of Microsoft Defender for Endpoint on Android](microsoft-defender-endpoint-android.md)
 
-- [Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](android-intune.md)
+- <a href="/intune/intune-service/protect/microsoft-defender-deploy-android" target="_blank" rel="noopener noreferrer">Microsoft Intune: Deploy and configure Microsoft Defender for Endpoint on Android</a>
 
 
