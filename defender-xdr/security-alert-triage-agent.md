@@ -152,29 +152,29 @@ This table outlines the permissions required to perform various actions related 
 
 ### [Email and collaboration alerts](#tab/email-1)
 
-| User action | Permission required |
+| User action | Required permissions |
 |------------|---------------------|
-| **View agent results and teach agent through feedback** | **Security Copilot (read)**, **Security data basics (read)**, **Alerts (manage)**, **Email & collaboration metadata (read)**, and **Email & collaboration content (read)** under the **Security operations** permissions group in the Defender portal, scoped to the **Microsoft Defender for Office 365** data source.  |
-| **View agent settings** | **Security Copilot (read)** and **Security data basics (read)** under the **Security operations** permissions group in the Defender portal<br><br>**OR**<br><br>**Security Administrator** in **Microsoft Entra ID** |
-| **Manage agent settings** (set up, pause, remove the agent, and manage agent identity) | **Security Administrator** in **Microsoft Entra ID** |
-| **View feedback page** | **Security Copilot (read)**, **Security data basics (read)**, and **Email & collaboration metadata (read)** under the **Security operations** permissions group in the Defender portal<br><br>**OR**<br><br>**Security Administrator** in **Microsoft Entra ID** |
-| **Reject feedback** | **Security Administrator** in **Microsoft Entra ID** |
+| **View agent results and teach agent through feedback** | **Security Copilot (read)**, **Security data basics (read)**, **Alerts (manage)**, **Email & collaboration metadata (read)**, and **Email & collaboration content (read)** under the **Security operations** permissions group in the Defender portal, scoped to **Microsoft Defender for Office 365**. |
+| **View agent settings** | **Security Copilot (read)** and **Security data basics (read)** under the **Security operations** permissions group in the Defender portal.<br><br>**OR**<br><br>**Security Administrator** in **Microsoft Entra ID**. |
+| **Manage agent settings** (set up, pause, remove the agent, and manage agent identity) | **Security Administrator** in **Microsoft Entra ID**. |
+| **View feedback page** | **Security Copilot (read)**, **Security data basics (read)**, and **Email & collaboration metadata (read)** under the **Security operations** permissions group in the Defender portal.<br><br>**OR**<br><br>**Security Administrator** in **Microsoft Entra ID**. |
+| **Reject feedback** | **Security Administrator** in **Microsoft Entra ID**. |
 
 ### [Cloud alerts](#tab/cloud-1)
 
-| User action | Permission required |
+| User action | Required permissions |
 |------------|---------------------|
-| **View agent results** | **Security Copilot (read)**, **Security data basics (read)**, and **Alerts (manage)** under the **Security operations** permissions group in the Defender portal, scoped to the **Microsoft Defender for Cloud** data scope.  |
-| **View agent settings** | **Security Copilot (read)** and **Security data basics (read)** under the **Security operations** permissions group in the Defender portal<br><br>**OR**<br><br>**Security Administrator** in **Microsoft Entra ID** |
-| **Manage agent settings** (set up, pause, remove the agent, and manage agent identity) | **Security Administrator** in **Microsoft Entra ID** |
+| **View agent results** | **Security Copilot (read)**, **Security data basics (read)**, and **Alerts (manage)** under the **Security operations** permissions group in the Defender portal, scoped to **Microsoft Defender for Cloud**. |
+| **View agent settings** | **Security Copilot (read)** and **Security data basics (read)** under the **Security operations** permissions group in the Defender portal.<br><br>**OR**<br><br>**Security Administrator** in **Microsoft Entra ID**. |
+| **Manage agent settings** (set up, pause, remove the agent, and manage agent identity) | **Security Administrator** in **Microsoft Entra ID**. |
 
 ### [Identity alerts](#tab/identity-1)
 
-| User action | Permission required |
+| User action | Required permissions |
 |------------|---------------------|
-| **View agent results** | **Security Copilot (read)**, **Security data basics (read)**, and **Alerts (manage)** under the **Security operations** permissions group in the Defender portal, scoped to the **Microsoft Defender for Identity** and **Microsoft Defender for Cloud Apps** data scopes.  |
-| **View agent settings** | **Security Copilot (read)** and **Security data basics (read)** under the **Security operations** permissions group in the Defender portal<br><br>**OR**<br><br>**Security Administrator** in **Microsoft Entra ID** |
-| **Manage agent settings** (set up, pause, remove the agent, and manage agent identity) | **Security Administrator** in **Microsoft Entra ID** |
+| **View agent results** | **Security Copilot (read)**, **Security data basics (read)**, and **Alerts (manage)** under the **Security operations** permissions group in the Defender portal, scoped to **Microsoft Defender for Identity** and **Microsoft Defender for Cloud Apps**. |
+| **View agent settings** | **Security Copilot (read)** and **Security data basics (read)** under the **Security operations** permissions group in the Defender portal.<br><br>**OR**<br><br>**Security Administrator** in **Microsoft Entra ID**. |
+| **Manage agent settings** (set up, pause, remove the agent, and manage agent identity) | **Security Administrator** in **Microsoft Entra ID**. |
 
 ---
 
