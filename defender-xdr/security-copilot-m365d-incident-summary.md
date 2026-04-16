@@ -5,7 +5,7 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.topic: how-to
-ms.date: 11/18/2024
+ms.date: 11/18/2025
 ms.update-cycle: 180-days
 appliesto:
 - Microsoft Defender XDR

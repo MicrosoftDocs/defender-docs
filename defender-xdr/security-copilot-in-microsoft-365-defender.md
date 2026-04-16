@@ -94,6 +94,32 @@ Security operations teams usually write reports to record important information,
 
 :::image type="content" source="media/copilot-in-defender/create-report/incident-report-main1-small.png" alt-text="Screenshot of the incident report card in the incident page showing the top half of the card." lightbox="media/copilot-in-defender/create-report/incident-report-main1.png":::
 
+### Manage incidents in a unified experience
+
+The Copilot tab consolidates incident-related actions into a single, unified chat experience, eliminating the need to switch between multiple panels or layers. 
+
+:::image type="content" source="media/security-copilot-m365d-incident-summary/copilot-tab.png" alt-text="Screenshot that shows the Copilot tab in the top right corner of the screen.":::
+
+Select the **Copilot** tab on the incident page to view the incident summary, get recommendations, or generate a report.
+
+:::image type="content" source="./media/security-copilot-m365d-incident-summary/copilot-tab-details.png" alt-text="Screenshot that shows the available options in the Copilot tab, including incident summary, recommendations, and report generation.":::
+
+Select **Summarize** to generate the incident summary or view it if it already exists. You can view summaries and interact with of all your events and related prompts in the same panel.
+
+You can run multiple summary requests in parallel for different entities (such as users and devices), and the results are cached unless regenerated.
+
+:::image type="content" source="media/security-copilot-m365d-incident-summary/copilot-integrations.png" alt-text="Screenshot that shows the Copilot summary panel with multiple summary suggestions." lightbox="media/security-copilot-m365d-incident-summary/copilot-integrations.png":::
+
+:::image type="content" source="media/security-copilot-m365d-incident-summary/summarize-device.png" alt-text="Screenshot that shows the Copilot panel generating a device summary in response to a summarize request in the device page.":::
+
+When you close a summary panel, the summary process stops.
+
+Incident chats persist across incidents. When you switch to a different incident, the chat automatically closes, but when you reopen the Copilot panel you see the chat history. This lets you compare summaries of different incidents and navigate to relevant reports.
+
+:::image type="content" source="media/security-copilot-m365d-incident-summary/multiple-summaries.png" alt-text="Screenshot that shows the Copilot chat history with summaries of different incidents." lightbox="media/security-copilot-m365d-incident-summary/multiple-summaries.png":::
+
+You can also select **Recommendations** to get AI-powered recommendations for next steps on how to investigate and remediate the incident, or select **Report** to generate a comprehensive report of the incident that includes the summary, timelines, involved entities, and more.
+
 ### Hunt like a pro
 
 Copilot in Defender helps security teams proactively hunt for threats in their network by quickly building appropriate KQL queries.
