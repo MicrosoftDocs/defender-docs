@@ -103,13 +103,14 @@ The available ASR rules and their corresponding GUID values are described in the
 
 ## ASR rule modes
 
-An ASR rule can be enabled or disabled. Enabled rules have different levels of protection available as described in the following table:
+An ASR rule can be in one of the following modes as described in the following table:
 
 |Rule mode|Code|Description|
 |---|:---:|---|
-|**Not configured** <br/> **Off** <br/> **Deactivated**|0|The ASR rule isn't enabled or is disabled.|
+|**Off** <br/> **Disabled**|0|The ASR rule is explicitly disabled. <br/><br/> This value can cause conflicts when the same device is assigned the same ASR rule in this mode and also **Audit**, **Block**, or **Warn** modes by different policies or deployment methods.|
 |**Block** <br/> **Activated**|1|The ASR rule is enabled in **Block** mode.|
-|**Audit** <br/> **Audit mode**|2|The ASR rule is enabled as if in **Block** mode, but without taking action. <br/><br/> ASR rule detections are available in the following locations: <ul><li>Event IDs 1122, 1125, 1132, and 1134 in [Windows Event Viewer](attack-surface-reduction-overview.md#list-of-attack-surface-reduction-events).</li><li>[Advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview): <br><code>DeviceEvent<br>&#124; where ActionType startswith "Asr"<br>&#124; where ActionType endswith "Audited"</code></li><li>The [Attack surface reduction rules report](attack-surface-reduction-rules-report.md).</li></ul>|
+|**Audit** <br/> **Audit mode**|2|The ASR rule is enabled as if in **Block** mode, but without taking action. <br/><br/> Detections for ASR rules in **Audit** mode are available in the following locations: <ul><li>Event IDs 1122, 1125, 1132, and 1134 in [Windows Event Viewer](attack-surface-reduction-overview.md#list-of-attack-surface-reduction-events).</li><li>[Advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview): <br><code>DeviceEvent<br>&#124; where ActionType startswith "Asr"<br>&#124; where ActionType endswith "Audited"</code></li><li>The [Attack surface reduction rules report](attack-surface-reduction-rules-report.md).</li></ul>|
+|**Not configured**|5|The ASR rule isn't explicitly enabled. <br/><br/> This value is functionally equivalent to **Disabled** or **Off**, but without the potential for rule conflicts.|
 |**Warn** <br/> **Warning**|6|The ASR rule is enabled as if in **Block** mode, but users can select **Unblock** in the warning notification pop-up to bypass the block for 24 hours. After 24 hours, the user needs to bypass the block again. <br/><br/> **Warn** mode is supported in Windows 10 version 1809 (November 2018) or later. ASR rules in **Warn** mode on unsupported versions of Windows are effectively in **Block** mode (bypass isn't available). <br/><br/> The following ASR rules don't support **Warn** mode: <ul><li>[Block credential stealing from the Windows local security authority subsystem](#block-credential-stealing-from-the-windows-local-security-authority-subsystem)<sup>\*</sup></li><li>[Block Office applications from injecting code into other processes](#block-office-applications-from-injecting-code-into-other-processes)</li></ul>.|
 
 As previously mentioned, we recommend **Block** mode for the standard protection rules, and initial testing in **Audit** mode for other ASR rules before activating them in **Block** or **Warn** mode.
