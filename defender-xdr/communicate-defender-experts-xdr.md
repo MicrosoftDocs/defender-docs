@@ -24,7 +24,7 @@ ms.date: 03/16/2026
 - [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
 - Microsoft Defender Experts for Servers
 
-Microsoft Defender Experts for XDR provides multiple channels of communication to discuss incidents with experts, ask them questions on demand, or get service readiness or operations support from your service delivery managers (SDMs), if included in your service.
+Microsoft Defender Experts for XDR provides you with multiple channels of communication to discuss incidents with our experts, ask them questions on demand, or get service readiness or operations support from your Security Delivery Experts (SDXs), if included in your service.
 
 ## Incident and managed response notifications
 
@@ -83,9 +83,9 @@ In break-glass scenarios or matters that require immediate attention (for exampl
 
 While the previous scenarios involve the experts initiating communication with you, you can also request advanced threat expertise on demand by selecting **Ask Defender Experts** directly inside the Microsoft Defender portal. [Learn more](experts-on-demand.md).
 
-## Collaborating with your Security Delivery Expert (SDX)
+## Collaborating with your Security Delivery Expert
 
-The Security Delivery Expert (SDX) manages the overall relationship for your organization with the Defender Experts for XDR service. They're your trusted advisor who works along with the XDR experts team to help you protect your organization.
+The Security Delivery Expert (SDX) is responsible for managing the overall relationship for your organization with the Defender Experts for XDR service. They are your trusted advisor working along with XDR experts' team to help you protect your organization.
 
 > [!NOTE]
 > Security Delivery Experts are included if your Defender Experts for XDR service is licensed for 500 or more seats.
@@ -99,7 +99,7 @@ The SDX provides the following services:
   - Provide tailored service delivery content and reporting, including periodic business reviews.
   - Serve as a single point of contact for feedback and escalations related to Defender Experts Service.
 
-The SDX engages with your identified **service review contacts**. [Learn more about adding contact persons or groups for service review and delivery](get-started-xdr.md#tell-us-who-to-contact-for-important-matters).
+The SDX engages with your identified **service review contacts**. [Learn more about adding contact persons or groups for service review and delivery](get-started-xdr.md#tell-us-who-to-contact-for-important-matters)
 
 ### See also
 
