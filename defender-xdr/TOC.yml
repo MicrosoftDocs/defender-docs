@@ -414,6 +414,8 @@
         items:
         - name: Overview
           href: dex-servers-overview.md
+        - name: Set up Defender Experts for Servers
+          href: get-started-dex-servers.md
       - name: Collaborate with Microsoft Defender Experts for XDR
         items:
         - name: Overview
