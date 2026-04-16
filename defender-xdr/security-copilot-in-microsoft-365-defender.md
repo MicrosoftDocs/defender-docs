@@ -14,7 +14,7 @@ appliesto:
 #customer intent: As a security analyst, I want to learn about Microsoft Security Copilot capabilities embedded in Microsoft Defender so that I can use them to perform my security tasks efficiently.
 ---
 
-# Microsoft Security Copilot in Microsoft Defender
+# Microsoft Security Copilot and Chat in Microsoft Defender
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -36,13 +36,13 @@ If you're new to Security Copilot, you should familiarize yourself with it by re
 
 ## Microsoft Security Copilot integration in Microsoft Defender
 
-[Microsoft Security Copilot](/security-copilot/microsoft-security-copilot) brings together the power of AI and human expertise to help security teams respond to attacks faster and more effectively. 
+[Microsoft Security Copilot](/security-copilot/microsoft-security-copilot) brings together the power of AI and human expertise to help security teams respond to attacks faster and more effectively.
 You can access Copilot in two ways:
 
 - Security Copilot is embedded in the Microsoft Defender portal to help provide security teams with enhanced capabilities to investigate and respond to incidents, hunt for threats, and protect their organization with relevant threat intelligence.
 - Defender Chat experience (preview) is an open prompt chat assistant built into Microsoft Defender XDR. It helps SOC analysts investigate threats, explore incidents, and answer security questions in plain language, without needing to navigate multiple screens or write complex queries.
 
-Copilot in Defender and the Defender Chat experiences operate using [Microsoft's AI principles](https://www.microsoft.com/ai/responsible-ai). For more information, see the [Responsible AI FAQs](responsible-ai-copilot-defender.md).
+Both Copilot in Defender and the Defender Chat experiences operate using [Microsoft's AI principles](https://www.microsoft.com/ai/responsible-ai). For more information, see the [Responsible AI FAQs](responsible-ai-copilot-defender.md).
 
 ### [Security Copilot](#tab/copilot-in-defender)
 
