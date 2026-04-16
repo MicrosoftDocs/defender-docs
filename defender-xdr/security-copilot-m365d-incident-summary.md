@@ -50,7 +50,7 @@ Incidents containing up to 100 alerts can be summarized into one incident summar
 - Names of [threat actors](/unified-secops-platform/microsoft-threat-actor-naming) involved.
 - Suggested Security Copilot prompts, which guide you to focus on the most relevant next steps, gain deeper insights, and simplify investigations.
 
-To summarize an incident:
+### Summarize an incident
 
 1. Open an incident page. Copilot automatically creates an incident summary in the **Tasks** pane. You can stop the summary creation by selecting **Cancel** or restart creation by selecting **Regenerate**.
 
@@ -70,32 +70,6 @@ To summarize an incident:
 1. Select the **More actions** ellipsis (...) at the top of the incident summary card to copy or regenerate the summary, or view the summary in the Security Copilot portal. Selecting **Open in Security Copilot** opens a new tab to the Security Copilot standalone portal where you can input prompts and access other plugins.
 
    :::image type="content" source="media/security-copilot-m365d-incident-summary/incident-summary-options.png" alt-text="Screenshot that shows the actions available on the incident summary card.":::
-
-### Unified incident management
-
-The Copilot tab consolidates incident-related actions into a single, unified chat experience, eliminating the need to switch between multiple panels or layers. 
-
-:::image type="content" source="media/security-copilot-m365d-incident-summary/copilot-tab.png" alt-text="Screenshot that shows the Copilot tab in the top right corner of the screen.":::
-
-Select the **Copilot** tab on the incident page to view the incident summary, get recommendations, or generate a report.
-
-:::image type="content" source="./media/security-copilot-m365d-incident-summary/copilot-tab-details.png" alt-text="Screenshot that shows the available options in the Copilot tab, including incident summary, recommendations, and report generation.":::
-
-Select **Summarize** to generate the incident summary or view it if it already exists. You can view summaries and interact with of all your events and related prompts in the same panel.
-
-You can run multiple summary requests in parallel for different entities (such as users and devices), and the results are cached unless regenerated.
-
-:::image type="content" source="media/security-copilot-m365d-incident-summary/copilot-integrations.png" alt-text="Screenshot that shows the Copilot summary panel with multiple summary suggestions." lightbox="media/security-copilot-m365d-incident-summary/copilot-integrations.png":::
-
-:::image type="content" source="media/security-copilot-m365d-incident-summary/summarize-device.png" alt-text="Screenshot that shows the Copilot panel generating a device summary in response to a summarize request in the device page.":::
-
-When you close a summary panel, the summary process stops.
-
-Incident chats persist across incidents. When you switch to a different incident, the chat automatically closes, but when you reopen the Copilot panel you see the chat history. This lets you compare summaries of different incidents and navigate to relevant reports.
-
-:::image type="content" source="media/security-copilot-m365d-incident-summary/multiple-summaries.png" alt-text="Screenshot that shows the Copilot chat history with summaries of different incidents." lightbox="media/security-copilot-m365d-incident-summary/multiple-summaries.png":::
-
-You can also select **Recommendations** to get AI-powered recommendations for next steps on how to investigate and remediate the incident, or select **Report** to generate a comprehensive report of the incident that includes the summary, timelines, involved entities, and more.
 
 ### Manage Copilot incident summaries settings (preview)
 
