@@ -28,7 +28,9 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### Sensor v3.x support for domain controllers with additional identity roles
 
-Defender for Identity sensor v3.x now supports domain controllers that also run AD FS, AD CS, or Microsoft Entra Connect identity roles. Detections and identity security posture management (ISPM) recommendations for these roles will roll out gradually, starting with Microsoft Entra Connect. For v3, these domain controllers require Windows Server 2019 or later with at least the [March 2026 Cumulative Update](https://support.microsoft.com/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea). For deployment details, see [Defender for Identity deployment overview](deploy/deploy-defender-identity.md) and [Sensor v3.x prerequisites](deploy/prerequisites-sensor-version-3.md).
+Defender for Identity sensor v3.x supports domain controllers that also run additional identity roles, including AD FS, AD CS, and Microsoft Entra Connect. 
+**Detections and Identity Security Posture Management (ISPM) recommendations for remaining roles is rolling out gradually, starting with Microsoft Entra Connect, which is already available. We’ll update the What’s new documentation as each additional role becomes available.**
+For sensor v3.x, these domain controllers must run Windows Server 2019 or later and include at least the [March 2026 Cumulative Update](https://support.microsoft.com/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea). For deployment details, see [Defender for Identity deployment overview](deploy/deploy-defender-identity.md) and [Sensor v3.x prerequisites](deploy/prerequisites-sensor-version-3.md).
 
 ### Migrate Defender for Identity sensors from v2.x to v3.x
 
