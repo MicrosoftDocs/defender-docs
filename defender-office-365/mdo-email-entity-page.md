@@ -468,7 +468,7 @@ Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="fal
 The following actions are available at the top of the Email entity page:
 
 - :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
-- :::image type="icon" source="media/m365-cc-sc-copilot-icon.png" border="false":::  **Copilot**: Use AI to generate a summary of data for the entity.
+- :::image type="icon" source="media/m365-cc-sc-copilot-icon.png" border="false"::: **Copilot**: If you have a [Microsoft Security Copilot](/copilot/security/get-started-security-copilot) subscription (for example, in Microsoft 365 E5) use this action to generate an AI summary of entity data by selecting **Generate** in the **Email summary** section of the **Copilot** pane.
 - :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: **Email preview**¹ ²
 - :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options**:
   - :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Go to quarantined email**: Available only if the message was quarantined. Selecting this action opens the **Email** tab on the **Quarantine** page at <https://security.microsoft.com/quarantine>, filtered by the unique **Message ID** value of the message. For more information, see [View quarantined email](quarantine-admin-manage-messages-files.md#view-quarantined-email).
