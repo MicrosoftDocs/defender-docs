@@ -978,11 +978,11 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Sender**<sup>\*</sup>
 - **Reported reason**<sup>\*</sup>
 - **Result**<sup>\*</sup>: Contains the following information for reported messages based on the [user reported settings](submissions-user-reported-messages-custom-mailbox.md):
-  - **Send the reported messages to** \> **Microsoft and my reporting mailbox** or **Microsoft only**: Values derived from the following analysis:
+  - **Send reported items to** \> **Microsoft and my reporting mailbox** or **Microsoft only**: Values derived from the following analysis:
     - **Policy hits**: Information about any policies or overrides that may have allowed or blocked the incoming messages, including overrides to our filtering verdicts. The result should be available within several minutes. Otherwise, detonation and feedback from graders could take up to one day.
     - **Payload reputation/detonation**: Up-to-date examination of any URLs and files in the message.
     - **Grader analysis**: Review done by human graders in order to confirm whether or not messages are malicious.
-  - **Send the reported messages to** \> **My reporting mailbox only**: The value is always **Not submitted to Microsoft**, because the messages weren't analyzed by Microsoft.
+  - **Send reported items to** \> **My reporting mailbox only**: The value is always **Not submitted to Microsoft**, because the messages weren't analyzed by Microsoft.
 - **Message reported ID**
 - **Network Message ID**
 - **Teams message ID**
