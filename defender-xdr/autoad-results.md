@@ -61,10 +61,10 @@ To view all automatic attack disruption and predictive shielding actions taken a
 
 The following policy statuses are available:
 
-- **Active** - The policy is currently active and enforced.
-- **Inactive** - The policy was previously applied but is no longer active. For example, a user was contained but has since been released.
-- **Not applicable** - The policy status doesn't apply to the action. For example, policy status doesn't apply to uncontain actions.
-- **No status** - The policy status couldn't be retrieved for various reasons.
+- **Active**: The policy is currently active and enforced.
+- **Inactive**: The policy was previously applied but is no longer active. For example, a user was contained but has since been released.
+- **Not applicable**: The policy status doesn't apply to the action. For example, the policy status doesn't apply to an uncontain action, because uncontain actions are not policies but rather the reversal of a previous action.
+- **No status**: The policy status couldn't be retrieved for various reasons, for example, the action is still in progress and the final status is not yet determined.
 
 This view provides unique data on the activity and policy status in the selected timeframe. This data goes beyond Action center views, which provide a historical log of actions taken but do not reflect the current status of those actions.  
 
