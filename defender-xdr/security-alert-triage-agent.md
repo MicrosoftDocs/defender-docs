@@ -61,30 +61,11 @@ The Security Alert Triage Agent currently supports these alert types in Microsof
 
 These prerequisites apply regardless of the alert types you want the agent to triage.
 
-### Products and licenses
-
-- **Security Copilot** with provisioned capacity in **Security Compute Units (SCU)**.  
-  See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) or check whether you're entitled to SCUs as part of the [Microsoft Security Copilot inclusion model](/copilot/security/security-copilot-inclusion).
-
-### Microsoft Defender required features
-
-- Enable **unified role-based access control (URBAC)** for Defender for Office 365.  
-  For more information, see [Activate URBAC settings](#activate-urbac-settings).
-
-### Security Copilot plugins
-
-The Security Alert Triage Agent automatically activates the following Security Copilot plugins:
-
-- Microsoft Defender XDR  
-- Microsoft Threat Intelligence  
-- Security Alert Triage Agent  
-
-### Alert-tuning rules
-
-The Security Alert Triage Agent doesn't classify alerts that you suppress by using [alert tuning](investigate-alerts.md#tune-an-alert).
-
-Make sure to disable tuning rules that suppress the alerts you want the agent to triage.
-
+| Prerequisite | Details |
+|:---|:---|
+| **Security Copilot** | Provisioned capacity in **Security Compute Units (SCU)**. See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) or check whether you're entitled to SCUs as part of the [Microsoft Security Copilot inclusion model](/copilot/security/security-copilot-inclusion). |
+| **Security Copilot plugins** | The Security Alert Triage Agent automatically activates: Microsoft Defender XDR, Microsoft Threat Intelligence, and Security Alert Triage Agent. |
+| **Alert-tuning rules** | Disable tuning rules that suppress the alerts you want the agent to triage. The agent doesn't classify suppressed alerts. For more information, see [Tune an alert](investigate-alerts.md#tune-an-alert). |
 
 ## Workload-specific prerequisites
 
