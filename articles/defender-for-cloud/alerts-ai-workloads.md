@@ -323,8 +323,7 @@ Severity: High 
 
 ## Alerts for AI models
 
-### Malicious content detected in uploaded AI model (Preview)
-
+### (Preview) Malicious content detected in uploaded AI model
 (Ai.AIModelScan_MalwareDetected)
 
 **Description:** A user-uploaded machine learning model was scanned and found to contain malware. The detection indicates the file may execute malicious code if loaded, posing a threat to account integrity, data confidentiality, and the compute environment.
