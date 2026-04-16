@@ -82,14 +82,14 @@ On the **User reported settings** page, the available settings for reporting mes
     - Configure user reported messages to go to the reporting mailbox, to Microsoft, or both.
     - Decide whether users receive default or customized pre-reporting and post-reporting pop-ups in supported version of Outlook.
     - Decide whether to customize the feedback email sent to users after an admin reviews and marks the message on the **User submissions** tab on the **Submissions** page.
-    - Decide whether users can report email messages from quarantine as they release quarantined messages.
+    - Decide whether users can report email messages from quarantine as they release quarantined items.
 
     For details, see the [Options for Microsoft reporting tools](#options-for-microsoft-reporting-tools) section in this article.
 
   - **Use a non-Microsoft add-in button**:
     - Configure user reported messages to go to the reporting mailbox, or the reporting mailbox and Microsoft (Microsoft only isn't available).
     - Decide whether to customize the feedback email sent to users after an admin reviews and marks the message on the **User submissions** tab on the **Submissions** page.
-    - Decide whether users can report email messages from quarantine as they release quarantined messages.
+    - Decide whether users can report email messages from quarantine as they release quarantined items.
 
     For details, see the [Options for non-Microsoft reporting tools](#options-for-non-microsoft-reporting-tools) section in this article.
 
@@ -104,7 +104,7 @@ On the **User reported settings** page, the available settings for reporting mes
   |Email users the results of the investigation|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
   |Customize the body and footer of the results email for **Phishing**, **Junk**, and **No threats found**|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
   |Customize the logo in all reporting experiences|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
-  |Allow reporting for quarantined messages|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
+  |Allow reporting for quarantined items|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
 
 ### Options for Microsoft reporting tools
 
@@ -205,7 +205,7 @@ When **Monitor reported messages in Outlook** is selected and you also select **
     - **Specify a Microsoft 365 mailbox to use as the From address of email notifications**: Select this option and enter the sender's email address in the box that appears. If you don't select this option, the default sender is `submissions@messaging.microsoft.com`.
     - **Replace the Microsoft logo with my organization's logo across all reporting experiences**: Select this option to replace the default Microsoft logo that's used in notifications. Before you do this step, follow the instructions in [Customize the Microsoft 365 theme for your organization](/microsoft-365/admin/setup/customize-your-organization-theme) to upload your custom logo.
 
-- **Report from quarantine** section \> **Allow reporting for quarantined messages**: Verify that this setting is selected to let users report messages from quarantine as they [release quarantined email messages](quarantine-end-user.md#release-quarantined-email). Otherwise, uncheck this setting.
+- **Report from quarantine** section \> **Allow reporting for quarantined items**: Verify that this setting is selected to let users report messages from quarantine as they [release quarantined email messages](quarantine-end-user.md#release-quarantined-email). Otherwise, uncheck this setting.
 
 When you're finished on the **User reported settings** page, select **Save**.
 
@@ -275,7 +275,7 @@ When **Monitor reported messages in Outlook** is selected and you also select **
     - **Specify a Microsoft 365 mailbox to use as the From address of email notifications**: Select this option and enter the sender's email address in the box that appears. If you don't select this option, the default sender is `submissions@messaging.microsoft.com`.
     - **Replace the Microsoft logo with my organization's logo across all reporting experiences**: Select this option to replace the default Microsoft logo that's used in notifications. Before you do this step, follow the instructions in [Customize the Microsoft 365 theme for your organization](/microsoft-365/admin/setup/customize-your-organization-theme) to upload your custom logo.
 
-- **Report from quarantine** section \> **Allow reporting for quarantined messages**: Verify that this setting is selected to let users report messages from quarantine as they [release quarantined email messages](quarantine-end-user.md#release-quarantined-email). Otherwise, uncheck this setting.
+- **Report from quarantine** section \> **Allow reporting for quarantined items**: Verify that this setting is selected to let users report messages from quarantine as they [release quarantined email messages](quarantine-end-user.md#release-quarantined-email). Otherwise, uncheck this setting.
 
 When you're finished on the **User reported settings** page, select **Save**.
 
@@ -476,7 +476,7 @@ Other settings:
     - **Specify a Microsoft 365 mailbox to use as the From address of email notifications** isn't selected (`-EnableCustomNotificationSender $false` is the default value).
     - **Replace the Microsoft logo with my organization's logo across all reporting experiences** isn't selected (`-EnableOrganizationBranding $false` is the default value).
 
-- **Reporting from quarantine** section: **Allow reporting for quarantined messages** is selected (`-DisableQuarantineReportingOption $false` is the default value).
+- **Reporting from quarantine** section: **Allow reporting for quarantined items** is selected (`-DisableQuarantineReportingOption $false` is the default value).
 
 In this example, the email address of the reporting mailbox is reportedmessages@contoso.com in Exchange Online (you can't specify an external email address).
 
@@ -597,7 +597,7 @@ Turning off reporting in Outlook has the following consequences:
 
 - The built-in **Report** button is unavailable in all Outlook platforms.
 - Non-Microsoft reporting tools still work, but reported messages don't appear on the **User reported** tab on the **Submissions** page in the Defender portal.
-- **Allow reporting for quarantined messages** (_DisableQuarantineReportingOption_) is unaffected, and can be enabled or disabled when reporting in Outlook is turned off.
+- **Allow reporting for quarantined items** (_DisableQuarantineReportingOption_) is unaffected, and can be enabled or disabled when reporting in Outlook is turned off.
 
 This example creates the report submission policy with reporting in Outlook turned off (**Outlook** section \> **Monitor reported messages in Outlook** not selected): `-EnableThirdPartyAddress $false` is the default value, so you don't need to use the parameter. `-EnableReportToMicrosoft $false`, `-EnableThirdPartyAddress $false, -ReportJunkToCustomizedAddress $false, -ReportNotJunkToCustomizedAddress $false, and -ReportPhishToCustomizedAddress $false` are required.
 

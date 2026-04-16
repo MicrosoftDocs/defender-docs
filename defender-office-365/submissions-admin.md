@@ -1019,7 +1019,7 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
 - **Reported from**: The values **Microsoft** and **Third party**.
 - **Phish simulation**: The values **Yes** and **No**.
 - **Converted to admin submission**: The values **Yes** and **No**.
-- **Message type**: The available values are:
+- **Submission type**: The available values are:
   - **Email**
   - **Teams message** (Defender for Office 365 Plan 2 only; currently in Preview).
 - **Tags**: **All** or select one or more user tags (including Priority account) that are assigned to users. For more information about user tags, see [User tags in Microsoft Defender for Office 365](user-tags-about.md).
