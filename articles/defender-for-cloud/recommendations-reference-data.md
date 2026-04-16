@@ -1948,17 +1948,11 @@ __How could attackers exploit it or how could it lead to data breaches?__ An att
 
 **Description**: 
 
-__What is a private endpoint?__
+__What is a private endpoint?__ A private endpoint in Azure allows resources to be accessed securely over a private IP address within a virtual network. For Azure Database for PostgreSQL servers, configuring a private endpoint ensures that database traffic does not traverse the public internet.
 
-A private endpoint in Azure allows resources to be accessed securely over a private IP address within a virtual network. For Azure Database for PostgreSQL servers, configuring a private endpoint ensures that database traffic does not traverse the public internet.
+__Why is it a security concern?__ Without a private endpoint, the server may be exposed to public network access, increasing the risk of unauthorized access, data interception, and denial-of-service attacks.
 
-__Why is it a security concern?__
-
-Without a private endpoint, the server may be exposed to public network access, increasing the risk of unauthorized access, data interception, and denial-of-service attacks.
-
-__How could attackers exploit it or how could it lead to data breaches?__
-
-An attacker could scan public IP ranges to discover exposed servers and attempt brute-force or exploit-based attacks. Public exposure also increases the risk of data exfiltration via compromised clients.
+__How could attackers exploit it or how could it lead to data breaches?__ An attacker could scan public IP ranges to discover exposed servers and attempt brute-force or exploit-based attacks. Public exposure also increases the risk of data exfiltration via compromised clients.
 
 **Severity**: High
 
