@@ -82,7 +82,11 @@ You need the following RBAC actions:
 
 To create an exemption rule:
 
-1. In the Defender for Cloud portal, open the **Recommendations** page and select the recommendation that you want to exempt.
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Go to **Defender for Cloud** > **Recommendations**.
+
+1. Select a recommendation.
 
 1. Select **Exempt**.
 
