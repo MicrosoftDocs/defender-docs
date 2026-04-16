@@ -24,10 +24,14 @@ For an introduction to Cloud Security Explorer queries, see [Build queries with 
 
 1. Select **Container Images**.
 
-1. Search for and select **Has installed software**.
+1. Select **+**.
 
-   :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/query-search-has-installed-software.png" alt-text="Screenshot of search box in Select resource types showing 'Has installed software' under Insights." lightbox="./media/cloud-security-explorer-kubernetes-clusters/query-search-has-installed-software.png":::
-   
+1. **Select condition**.
+
+1. In **Application**, select **Has installed software**.
+
+   :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/software-vulnerabilities-in-container-images.png" alt-text="Screenshot of query for identifying software vulnerabilities in container images." lightbox="./media/cloud-security-explorer-kubernetes-clusters/software-vulnerabilities-in-container-images.png":::
+
 1. Select **Search**.
 
 1. Select **View details >** for the relevant container image.
@@ -73,6 +77,8 @@ For an introduction to Cloud Security Explorer queries, see [Build queries with 
 1. **Select condition**.
 
 1. In **Vulnerabilities**, select **All vulnerabilities**.
+
+   :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/vulnerabilities-in-cluster-nodes.png" alt-text="Screenshot of query for identifying vulnerabilities in cluster nodes." lightbox="./media/cloud-security-explorer-kubernetes-clusters/vulnerabilities-in-cluster-nodes.png":::
 
 1. Select **Search**.
 
