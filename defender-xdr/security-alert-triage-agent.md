@@ -170,6 +170,7 @@ The following permissions apply when working with **identity alerts** and **clou
 | **Manage agent settings** (set up, pause, remove the agent, and manage agent identity) | **Security Administrator** in **Microsoft Entra ID** |
 | **Reject feedback** | **Security Administrator** in **Microsoft Entra ID** |
 
+---
 
 For more information about unified RBAC in the Defender portal, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
