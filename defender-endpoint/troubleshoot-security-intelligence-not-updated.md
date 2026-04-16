@@ -1,4 +1,4 @@
-﻿---
+---
 title: Troubleshoot Microsoft Defender Antivirus Security intelligence not getting updated
 description: Learn how to troubleshoot Microsoft Defender Antivirus Security intelligence not getting updated.
 author: chrisda
@@ -12,9 +12,6 @@ ms.collection: # Useful for querying on a set of strategic or high-priority cont
 ms.custom:
 - partner-contribution
 ms.reviewer:
-search.appverid: MET150
-f1.keywords: NOCSH
-audience: ITPro
 appliesto:
   - Microsoft Defender for Business
   - Microsoft Defender for Individuals

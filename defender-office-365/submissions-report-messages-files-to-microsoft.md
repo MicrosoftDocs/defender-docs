@@ -1,15 +1,10 @@
 ---
 title: Report spam, non-spam, phishing, suspicious emails and files to Microsoft
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
 ms.date: 02/24/2025
-audience: ITPro
 ms.topic: overview
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
 ms.assetid: c31406ea-2979-4fac-9288-f835269b9d2f
 ms.collection: 
   - m365-security

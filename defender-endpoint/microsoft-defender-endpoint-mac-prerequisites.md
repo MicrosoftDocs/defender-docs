@@ -1,4 +1,4 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint on macOS Prerequisites
 ms.reviewer: joshbregman
 description: Learn how to install, and configure Microsoft Defender for Endpoint on macOS.
@@ -6,14 +6,12 @@ ms.service: defender-endpoint
 author: paulinbar
 ms.author: painbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-macos
 ms.topic: article
 ms.subservice: macos
-search.appverid: met150
 ms.date: 06/19/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

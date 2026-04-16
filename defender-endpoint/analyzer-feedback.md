@@ -2,19 +2,15 @@
 title:  Provide feedback on the Microsoft Defender for Endpoint Client Analyzer tool
 description: Provide feedback on the Microsoft Defender for Endpoint client analyzer tool
 ms.service: defender-endpoint
-f1.keywords:
-- NOCSH
 ms.author: chrisda
 author: chrisda
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: how-to
 ms.subservice: ngp
-search.appverid: met150
 appliesto:
    - Microsoft Defender for Endpoint Plan 1
    - Microsoft Defender for Endpoint Plan 2

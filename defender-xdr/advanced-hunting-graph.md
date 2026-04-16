@@ -2,12 +2,9 @@
 title: Hunting graph in advanced hunting
 description: Learn about the hunting graph in Microsoft Defender and how to use it to rendering threat scenarios as interactive graphs
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - m365-security
   - m365initiative-m365-defender
@@ -20,7 +17,6 @@ ms.topic: overview
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-search.appverid: met150
 ms.date: 03/31/2026
 
 ---
@@ -47,7 +43,7 @@ In the advanced hunting page, select the hunting graph icon ![Screenshot of the 
 
 :::image type="content" source="./media/advanced-hunting-graph/hunting-graph-new.png" alt-text="Screenshot of the Create new Hunting graph option in the advanced hunting page." lightbox="./media/advanced-hunting-graph/hunting-graph-new.png":::
 
-A new hunting graph page appears as tab labeled **New hunt** in the advanced hunting page.
+A new hunting graph page appears as tab labeled **New graph** in the advanced hunting page.
 
 ## Hunting graph features
 

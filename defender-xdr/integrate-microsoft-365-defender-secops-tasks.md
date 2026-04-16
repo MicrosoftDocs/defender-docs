@@ -2,19 +2,13 @@
 title: Step 6. Identify SOC maintenance tasks
 description: Identify SOC maintenance tasks when integrating Microsoft Defender XDR into your security operations.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - msftsolution-secops
   - tier2
 ms.topic: how-to
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 07/15/2021
 ---
 

@@ -1,15 +1,11 @@
 ---
 title: Work with query results in guided mode for hunting in Microsoft Defender XDR
 description: Use and customize query results in guided mode for advanced hunting in Microsoft Defender XDR
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
   - m365-security
   - tier2
