@@ -268,7 +268,7 @@ To create a role:
 > After assigning the agent its permissions, ensure the user group monitoring the agent has equal or higher permissions to oversee its activity and output. To do this, compare the permissions of the user group to the agent in the Permissions page in the Microsoft Defender portal.
 
 
-## Enhance incident response with the Security Alert Triage Agent
+## Use the Security Alert Triage Agent
 
 The agent is designed to help security teams manage the overwhelming volume of alerts organizations receive daily. Acting as a force multiplier for SOC teams, the agent offloads time-consuming triage tasks, reduces alert fatigue, and accelerates incident response by autonomously identifying true threats. This enables analysts to cut through the noise and focus their attention on the threats that truly matter.
 
