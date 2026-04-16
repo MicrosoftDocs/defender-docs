@@ -1,13 +1,10 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint SmartScreen URL reputation demonstrations
 description: Demonstrates how Microsoft Defender SmartScreen identifies phishing and malware websites based on URL reputation.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2

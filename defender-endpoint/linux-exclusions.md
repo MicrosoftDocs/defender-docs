@@ -1,4 +1,4 @@
-﻿---
+---
 title: Configure and validate exclusions for Microsoft Defender for Endpoint on Linux
 description: Provide and validate exclusions for Microsoft Defender for Endpoint on Linux. Exclusions can be set for files, folders, and processes.
 ms.service: defender-endpoint
@@ -6,15 +6,12 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: ratujdange, ardeshmukh
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-linux
 ms.topic: how-to
 ms.subservice: linux
-search.appverid: met150
 ms.date: 06/06/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

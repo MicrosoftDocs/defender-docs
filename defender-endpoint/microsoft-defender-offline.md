@@ -1,4 +1,4 @@
-﻿---
+---
 title: Microsoft Defender Offline scan in Windows
 description: You can use Microsoft Defender Offline Scan straight from the Microsoft Defender Antivirus app. You can also manage how it's deployed in your network.
 ms.service: defender-endpoint
@@ -6,7 +6,6 @@ ms.localizationpriority: medium
 ms.date: 09/18/2024
 author: limwainstein
 ms.author: lwainstein
-manager: bagol
 ms.custom: nextgen
 ms.reviewer: yongrhee
 ms.subservice: ngp
@@ -15,7 +14,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

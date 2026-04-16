@@ -1,14 +1,12 @@
-﻿---
+---
 title: Behavior Monitoring in Microsoft Defender Antivirus on macOS
 description: Behavior Monitoring in Microsoft Defender Antivirus on macOS
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.service: defender-endpoint
 ms.topic: overview
 ms.date: 06/27/2025
 ms.subservice: ngp
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
@@ -16,8 +14,6 @@ ms.collection:
 ms.custom:
 - partner-contribution
 ms.reviewer: yongrhee
-search.appverid: MET150
-f1.keywords: NOCSH
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

@@ -11,7 +11,7 @@ ms.reviewer: LiorShapiraa
 
 This article describes how to apply Microsoft Defender for Identity entity tags, for sensitive, Exchange server, or honeytoken accounts.
 
-- You must tag sensitive accounts for Defender for Identity detections that rely on an entity's sensitivity status, like sensitive group modification detections and lateral movement paths.
+- You must tag sensitive accounts for Defender for Identity detections that rely on an entity's sensitivity status, for example, sensitive group modification detections.
 
     While Defender for Identity automatically tags Exchange servers as high-value, sensitive assets, you can also manually tag devices as Exchange servers.
 

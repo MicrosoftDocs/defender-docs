@@ -1,16 +1,11 @@
 ---
 title: MessagePostDeliveryEvents table in the advanced hunting schema
 description: Learn about the MessagePostDeliveryEvents table in the advanced hunting schema which contains information about security events that occurred after the delivery of a Microsoft Teams message in your organization. 
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: orspodek
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3

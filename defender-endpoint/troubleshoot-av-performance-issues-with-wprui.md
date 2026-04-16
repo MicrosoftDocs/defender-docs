@@ -8,10 +8,7 @@ ms.service: defender-endpoint
 ms.topic: troubleshooting-general
 ms.date: 01/08/2025
 ms.subservice: ngp
-manager: bagol
 ms.localizationpriority: medium 
-f1.keywords: NOCSH 
-audience: ITPro
 ai-usage: human-only
 ms.collection: 
 - m365-security

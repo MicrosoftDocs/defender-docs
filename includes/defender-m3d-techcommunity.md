@@ -4,8 +4,8 @@ description: Microsoft Defender XDR tech community engagement.
 ms.date: 07/21/2023
 ms.reviewer: 
 manager: dansimp
-ms.author: dansimp
-author: dansimp
+ms.author: guywild
+author: guywi-ms
 ms.service: microsoft-365-security
 ms.topic: include
 ---

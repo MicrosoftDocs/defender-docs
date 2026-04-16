@@ -3,10 +3,8 @@ title: Enable attack surface reduction rules
 description: Enable attack surface reduction rules to protect your devices from attacks that use macros, scripts, and common injection techniques.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-audience: ITPro
 author: limwainstein
 ms.author: lwainstein
-manager: bagol
 ms.subservice: asr
 ms.topic: how-to
 ms.collection: 
@@ -18,7 +16,6 @@ appliesto:
 - Microsoft Defender for Endpoint Plan 1 and Plan 2
 - Microsoft Defender XDR
 - Microsoft Defender Antivirus
-search.appverid: met150
 ms.date: 12/31/2025
 ---
 

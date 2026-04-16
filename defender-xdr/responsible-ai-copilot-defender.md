@@ -2,22 +2,15 @@
 title: Responsible AI FAQs for Microsoft Copilot in Defender
 description: Learn about how Microsoft applies responsible AI principles to Microsoft Copilot in Microsoft Defender.
 ms.service: defender-xdr
-f1.keywords:
-- NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 - security-copilot
 - magic-ai-copilot 
 ms.topic: concept-article
-search.appverid:
-- MOE150
-- MET150
 ms.date: 03/25/2025
 #customer intent: I want to learn about how Microsoft applies responsible AI principles to Microsoft Copilot in Microsoft Defender.
 ---

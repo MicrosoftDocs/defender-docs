@@ -1,15 +1,10 @@
 ---
 title: Get notified about remediation actions
 description: Get an overview of remediation actions that follow automated investigations in the Microsoft Defender portal
-search.appverid: met150
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier3

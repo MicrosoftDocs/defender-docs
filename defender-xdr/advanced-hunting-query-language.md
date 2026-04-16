@@ -1,16 +1,11 @@
 ---
 title: Learn the advanced hunting query language in Microsoft Defender
 description: Create your first threat hunting query and learn about common operators and other aspects of the advanced hunting query language
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection:
   - m365-security
   - m365initiative-m365-defender

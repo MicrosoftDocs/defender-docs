@@ -6,7 +6,6 @@ ms.service: defender-experts-for-xdr
 ms.author: vpattnaik
 author: vpattnai
 ms.localizationpriority: medium
-manager: dolmont
 audience: ITPro
 ms.collection:
   - m365-security

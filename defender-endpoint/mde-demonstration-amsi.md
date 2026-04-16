@@ -1,4 +1,4 @@
-﻿---
+---
 title: AMSI demonstrations with Microsoft Defender for Endpoint
 description: Demonstration of AMSI detection by Microsoft Defender for Endpoint
 author: limwainstein
@@ -7,12 +7,10 @@ ms.reviewer: yongrhee
 ms.localizationpriority: medium
 ms.service: defender-endpoint
 ms.subservice: ngp
-audience: ITPro
 ms.collection: 
 - m365-security
 ms.topic: how-to
 ms.date: 01/14/2026
-search.appverid: met150
 ms.custom: 
 - partner-contribution
 appliesto:

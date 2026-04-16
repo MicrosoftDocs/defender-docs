@@ -1,11 +1,9 @@
-﻿---
+---
 title: Endpoint detection and response in block mode
 description: Learn about endpoint detection and response in block mode
 author: limwainstein
 ms.author: lwainstein
-manager: bagol
 ms.reviewer: pahuijbr, kausd
-audience: ITPro
 ms.topic: article
 ms.service: defender-endpoint
 ms.subservice: edr
@@ -19,7 +17,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-edr
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus

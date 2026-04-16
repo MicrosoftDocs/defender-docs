@@ -1,16 +1,11 @@
 ---
 title: Work with advanced hunting query results in Microsoft Defender
 description: Make the most of the query results returned by advanced hunting in Microsoft Defender
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: orspodek
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1

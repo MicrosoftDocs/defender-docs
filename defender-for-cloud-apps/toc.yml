@@ -219,7 +219,7 @@ items:
       href: troubleshoot-policies.md
   - name: Configure threat protection
     items:
-    - name: Detect suspicious user activity with UEBA
+    - name: Detect suspicious user activity with behavioral analytics (UEBA)
       href: tutorial-suspicious-activity.md
     - name: Create activity policies
       href: user-activity-policies.md
@@ -432,7 +432,7 @@ items:
   items:
   - name: Overview
     href: ai-agent-protection.md
-  - name: Enable the AI agent inventory
+  - name: Discover and protect Copilot Studio AI agents
     href: ai-agent-inventory.md
   - name: Enable real-time protection for AI agents
     href: real-time-agent-protection-during-runtime.md

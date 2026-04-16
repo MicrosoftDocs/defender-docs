@@ -2,13 +2,9 @@
 title: Automatic attack disruption in Microsoft Defender
 description: Automatically contain assets controlled by attackers by using automatic attack disruption in Microsoft Defender.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
@@ -16,9 +12,6 @@ ms.collection:
   - usx-security
 ms.topic: concept-article
 ai-usage: ai-assisted
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 06/22/2025
 appliesto:
   - Microsoft Defender XDR

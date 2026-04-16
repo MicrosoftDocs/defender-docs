@@ -1,16 +1,11 @@
 ---
 title: DeviceTvmHardwareFirmware table in the advanced hunting schema
 description: Learn about the DeviceTvmHardwareFirmware table in the advanced hunting schema, which includes information on devices like processor, BIOS, and others, as checked in threat and vulnerability management in Microsoft Defender XDR.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3

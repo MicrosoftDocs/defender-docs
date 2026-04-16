@@ -6,14 +6,11 @@ ms.service: defender-experts-for-hunting
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: orspodek
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
   - essentials-overview
 ms.topic: overview
-search.appverid: met150
 ms.custom: 
 - cx-ti
 - cx-ean
