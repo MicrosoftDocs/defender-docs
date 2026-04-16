@@ -328,6 +328,8 @@
             href: linux-updates.md
           - name: Schedule an update for Defender for Endpoint on Linux
             href: linux-update-mde-linux.md
+        - name: Offboard Defender for Endpoint on Linux
+          href: linux-off-board-endpoints.md
         - name: Privacy for Defender for Endpoint on Linux
           href: linux-privacy.md
         - name: Additional resources for Defender for Endpoint on Linux
@@ -339,7 +341,7 @@
           - name: Deploy
             items:
             - name: Deployment on Android with Microsoft Intune
-              href: android-intune.md
+              href: /intune/intune-service/protect/microsoft-defender-deploy-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
             - name: Deployment on iOS via Microsoft Intune
               href: ios-install.md
             - name: Deployment on iOS with Mobile Application Manager

@@ -1,12 +1,10 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint Potentially unwanted applications (PUA) demonstration
 description: Demonstration to show how the Potentially Unwanted Applications (PUA) protection feature can identify and block PUAs from downloading and installing on endpoints.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2

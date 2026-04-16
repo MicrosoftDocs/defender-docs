@@ -1,15 +1,11 @@
 ---
 title: Go to the Action center to view and approve your automated investigation and remediation tasks
 description: Use the Action center to view details about automated investigation and approve pending actions
-search.appverid: met150
 ms.service: defender-xdr
-f1.keywords:
-- NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 4/28/2025
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2

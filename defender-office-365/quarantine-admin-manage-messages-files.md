@@ -2,13 +2,8 @@
 title: Manage quarantined messages and files as an admin
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MOE150
-  - MED150
-  - MET150
 ms.assetid: 065cc2cf-2f3a-47fd-a434-2a20b8f51d0c
 ms.collection:
   - m365-security
@@ -60,6 +55,7 @@ Watch this short video to learn how to manage quarantined messages as an admin.
   - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell):
     - _Take action on quarantined messages for all users_: **Security operations / Security data / Email & collaboration quarantine (manage)**.
     - _Read-only access to quarantined messages for all users_: **Security operations / Security data / Security data basics (read)**.
+    - _Preview and download quarantined messages for all users_: **Security operations/Raw data (email & collaboration)/Email and Collaboration content: Quarantine Emails (read)**.
   - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md):
     - _Take action on quarantined messages for all users_: Membership in the **Quarantine Administrator**, **Security Administrator**, or **Organization Management** role groups.
       - _Submit messages from quarantine to Microsoft_: Membership in the **Security Administrator** role groups.

@@ -7,14 +7,12 @@ ms.author: chrisda
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
 ms.date: 10/25/2024
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
 ms.topic: article
 ms.subservice: ngp
-search.appverid: met150
 ---
 
 # Contextual file and folder exclusions

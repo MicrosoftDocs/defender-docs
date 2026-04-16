@@ -1,13 +1,11 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint demonstration scenarios
 description: Lists Microsoft Defender for Endpoint demonstration scenarios that you can run.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2

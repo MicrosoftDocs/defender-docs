@@ -1,15 +1,10 @@
 ---
 title: Use DMARC to validate email, setup steps
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: how-to
 ms.date: 05/07/2025
 ms.localizationpriority: high
-search.appverid:
-  - MET150
 ms.assetid: 4a05898c-b8e4-4eab-bd70-ee912e349737
 ms.collection:
   - m365-security

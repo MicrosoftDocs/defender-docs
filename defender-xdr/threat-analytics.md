@@ -3,12 +3,9 @@ title: Threat analytics in Microsoft Defender
 ms.reviewer: 
 description: Learn about emerging threats and attack techniques and how to stop them. Assess their impact to your organization and evaluate your organizational resilience.
 ms.service: defender-xdr
-f1.keywords:
-- NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security 
 - m365initiative-m365-defender 
@@ -19,7 +16,6 @@ ms.custom:
 - cx-ti
 - cx-ta
 - seo-marvel-apr2020
-search.appverid: met150
 ms.date: 12/18/2025
 ---
 

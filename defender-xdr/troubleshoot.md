@@ -2,19 +2,13 @@
 title: Troubleshoot Microsoft Defender XDR service issues
 description: Find and solve known Microsoft Defender XDR issues and use workarounds to resolve blocks while using the service.
 ms.service: defender-xdr
-f1.keywords:
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security-compliance
 - tier3
 ms.topic: how-to
-search.appverid:
-  - MOE150
-  - MET150
 ms.date: 02/19/2025
 appliesto:
   - Microsoft Defender XDR

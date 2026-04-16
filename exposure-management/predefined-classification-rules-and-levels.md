@@ -3,7 +3,7 @@ title: Criticality Levels for Classifications
 description: Lists of all the current criticality levels for classifications in Microsoft Security Exposure Management.
 ms.topic: reference
 ms.service: exposure-management
-ms.date: 03/25/2026
+ms.date: 04/16/2026
 ---
 
 # Predefined classifications - Microsoft Security Research
@@ -137,3 +137,4 @@ Current asset types are:
 | Premium tier Azure Kubernetes Service cluster        | Cloud resource | High                      | This rule applies to Azure Kubernetes Service clusters with premium tier cluster management. Premium tiers are recommended for running production or mission-critical workloads that need high availability and reliability. |
 | Azure Kubernetes Service cluster with multiple nodes | Cloud resource | High                      | This rule applies to Azure Kubernetes Service clusters with a large number of nodes. This often indicates that the cluster is used for critical workloads, such as production workloads. |
 | Azure Arc Kubernetes cluster with multiple nodes                | Cloud Resource | High                      | This rule applies to Azure Arc Kubernetes clusters with a large number of nodes. This often indicates that the cluster is used for critical workloads, such as production workloads. |
+| APIs with Sensitive Data | Cloud Resource | Medium | This rule applies to APIs that contain sensitive data. This often indicates that the API is used for critical production workloads, and might require additional monitoring and protection. |
