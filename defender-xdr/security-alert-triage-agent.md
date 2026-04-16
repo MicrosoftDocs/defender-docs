@@ -59,51 +59,113 @@ The Security Alert Triage Agent currently supports these alert types in Microsof
 
 ## Prerequisites
 
-To run the Security Alert Triage Agent in your environment, you need:
+To run the **Security Alert Triage Agent** in your environment, make sure the following prerequisites are met.
 
-|Components|Details|
-|:---|:---|
-|Products and licenses|- Security Copilot and provisioned capacity in Security Compute Units (SCU). See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) or check whether you're entitled to SCUs as part of the [Microsoft Security Copilot inclusion model](/copilot/security/security-copilot-inclusion) <br>- [For email and collaboration alerts](#supported-alerts) - [Microsoft Defender for Office P2](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)<br>- [For cloud container alerts](#supported-alerts) - [Microsoft Defender for Containers (part of Microsoft Defender for Cloud)](/azure/defender-for-cloud/defender-for-containers-deployment-overview)<br> - [For identity alerts](#supported-alerts) - [Entra ID P2 license](/entra/fundamentals/licensing) and Microsoft for Defender for Identity and Microsoft for Cloud Apps deployed |
-|Microsoft Defender required features|- Enable unified role-based access control (URBAC) for Defender for Office 365. See [Activate URBAC settings](#activate-urbac-settings) for more information. </br>**For email and collaboration alerts**</br> - Enable **Monitor reported messages in Outlook** in **User reported settings**. See [User reported settings](#configure-user-reported-settings) for more information </br>- Turn on the **Email reported by user as malware or phish** alert policy to triage phishing alerts. For more information, see [Alert policies in the Microsoft Defender portal](alert-policies.md).|
-| Plugins | The Security Alert Triage Agent automatically activates these Security Copilot plugins: <br>- Microsoft Defender XDR<br>- Microsoft Threat Intelligence<br>- Security Alert Triage Agent |
-| Alert-tuning rules | The Security Alert Triage Agent doesn't classify alerts that you suppress by using [alert tuning](investigate-alerts.md#tune-an-alert). Make sure to disable tuning rules that suppress the alerts you want the agent to triage.|
+---
 
-### Activate URBAC settings
+## Required for all deployments
 
-Microsoft Defender uses unified role-based access control (RBAC) to govern access to alerts and incidents. You must enable unified RBAC and activate the relevant workloads before the agent can triage alerts.
+These prerequisites apply regardless of the alert types you want the agent to triage.
 
-Activate the workloads for the alert types you want the agent to triage in Microsoft Defender XDR settings:
+### Products and licenses
 
-| Alert type | Workload to activate |
-|:---|:---|
-| Email and collaboration alerts | Defender for Office 365 |
-| Cloud alerts | Enabled automatically | 
-| Identity alerts | Cloud Apps |
+- **Microsoft Security Copilot**, with provisioned capacity in **Security Compute Units (SCUs)**  
+  See [Get started with Security Copilot] or check whether you’re entitled to SCUs as part of the Microsoft Security Copilot inclusion model.
 
-:::image type="content" source="media/phishing-triage-agent/activate-defender-for-office-365-workloads.png" alt-text="Screenshot of the Activate unified role-based access control page showing the Defender for Office 365 toggle, which needs to be enabled for the Security Alert Triage Agent." lightbox="media/phishing-triage-agent/activate-defender-for-office-365-workloads.png":::
+### Microsoft Defender required features
 
-For more information, see [Activate workloads in Microsoft Defender XDR settings](activate-defender-rbac.md#activate-in-microsoft-defender-xdr-settings).
+- **Unified role-based access control (URBAC)** must be enabled in Microsoft Defender.  
+  URBAC governs access to alerts and incidents and must be activated before the agent can triage alerts.
 
-### Set up email and collaboration alert triage prerequisites
+  For more information, see **Activate URBAC settings**.
 
-These prerequisites are required to enable the agent to triage email and collaboration alerts. 
+### Security Copilot plugins
+
+The Security Alert Triage Agent automatically activates the following Security Copilot plugins:
+
+- Microsoft Defender XDR  
+- Microsoft Threat Intelligence  
+- Security Alert Triage Agent
+
+---
+
+## Activate workloads for supported alert types
+
+After enabling URBAC, activate the workloads corresponding to the alert types you want the agent to triage in Microsoft Defender XDR settings.
+
+| Alert type                    | Workload to activate            |
+|------------------------------|----------------------------------|
+| Email and collaboration alerts | Defender for Office 365          |
+| Cloud alerts                  | Enabled automatically           |
+| Identity alerts               | Cloud Apps                      |
+
+> Screenshot: **Activate unified role-based access control** page showing the *Defender for Office 365* toggle enabled.
+
+For more information, see **Activate workloads in Microsoft Defender XDR settings**.
+
+---
+
+## Additional prerequisites by alert type
+
+The following requirements apply only if you want the agent to triage specific alert types.
+
+---
+
+### Email and collaboration alerts
+
+These prerequisites are required to enable triage for email and collaboration alerts.
+
+#### Products and licenses
+
+- **Microsoft Defender for Office 365 P2**
 
 #### Configure user reported settings
 
-Enable **Monitor reported messages in Outlook** to define how users report potentially malicious messages in Microsoft Outlook and select any of the **Reported message destinations** options: 
+- Enable **Monitor reported messages in Outlook** to define how users report potentially malicious messages in Microsoft Outlook.
+- Select one or more **Reported message destinations**.
 
-:::image type="content" source="media/phishing-triage-agent/configure-user-reported-settings.png" alt-text="Screenshot of the User reported settings page showing the Outlook report button and reported message destinations configurations." lightbox="media/phishing-triage-agent/configure-user-reported-settings.png":::
+> Screenshot: **User reported settings** page showing the Outlook report button and reported message destinations configuration.
 
-For more information, see [Use the Microsoft Defender portal to configure user reported settings](/defender-office-365/submissions-user-reported-messages-custom-mailbox).
+For more information, see **Use the Microsoft Defender portal to configure user reported settings**.
 
-If you’re using a third-party email reporting tool, review [Options for third-party reporting tools](/defender-office-365/submissions-user-reported-messages-custom-mailbox) and view your vendor’s configuration options to integrate reported messages with Microsoft Defender.
+If you’re using a third-party email reporting tool, review **Options for third-party reporting tools** and your vendor’s configuration options to integrate reported messages with Microsoft Defender XDR.
 
 #### Add alert policy
 
-The Security Alert Triage Agent addresses email and collaboration incidents that include alerts with the type **Email reported by user as malware or phish**. Ensure that you have the corresponding alert policy enabled. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information.
+The Security Alert Triage Agent addresses email and collaboration incidents that include alerts of the type **Email reported by user as malware or phish**.
 
-> [!IMPORTANT]
-> The Security Alert Triage Agent doesn't classify alerts suppressed by [alert tuning](investigate-alerts.md#tune-an-alert). Make sure to disable the **Auto-Resolve - Email reported by user as malware or phish** built-in alert tuning rule and any custom tuning rules that suppress this alert.
+- Ensure that the corresponding **alert policy** is enabled.
+
+For more information, see **Alert policies in the Microsoft Defender portal**.
+
+---
+
+### Identity alerts
+
+To enable triage for identity alerts, you must have:
+
+- **Microsoft Entra ID P2**
+- **Microsoft Defender for Identity**
+- **Microsoft Defender for Cloud Apps** deployed
+
+---
+
+### Cloud container alerts
+
+To enable triage for cloud container alerts, you must have:
+
+- **Microsoft Defender for Containers** (part of Microsoft Defender for Cloud)
+
+---
+
+## Alert tuning rules (important)
+
+The Security Alert Triage Agent **does not classify alerts that are suppressed by alert tuning rules**.
+
+If you want the agent to triage an alert, make sure it is not suppressed, including:
+
+- The built-in **Auto-Resolve – Email reported by user as malware or phish** alert tuning rule
+- Any custom alert tuning rules that suppress relevant alerts
 
 ## Required permissions 
 
