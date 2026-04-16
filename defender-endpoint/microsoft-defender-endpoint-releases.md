@@ -28,6 +28,7 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|Linux  |101.26032.0000  |April 2026 |- Release version: 30.126032.0000.0<br>- Engine version: 1.1.26010.1004<br>- Signature version: 1.445.617.0 |[Release details and updates](#linux--april-2026--101260320000) |
 |macOS |101.26022.0020  |April 2026 |- Release version: 20.126022.20.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--april-2026--101260220020) |
 |macOS |101.26022.0018  |April 2026 |- Release version: 20.126022.18.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--april-2026--101260220018) |
 |Android |1.0.8805.0103  |April 2026 |- Build: 1.0.8805.0103<br>- Released: April 7, 2025 |[Release details and updates](#android--april-2026--platform-1088050103) |
@@ -342,6 +343,23 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 > - Review your current Defender for Endpoint on Linux deployment, and begin planning your migration to the eBPF-supported build. For more information on eBPF and how it works, see [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](linux-support-ebpf.md).
 >
 > If you have any concerns or need assistance during this transition, contact support.
+
+### Linux | April 2026 | 101.26032.0000
+
+#### Release details
+
+| Release version | Engine version | Signature version |
+| -------- | -------- |-------- |
+|30.126032.0000.0 |1.1.26010.1004 |1.445.617.0 |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|---------------|
+| Threat Detection | Extend threat detection coverage to kernel module files (.ko). |
+| Definition updates | offline definition updates are now rate-limited to one attempt per definition update interval, preventing excessive server load during repeated service restarts. Does not alter non-offline definition updates. |
+| General | Addressed security vulnerabilities in TVM on Linux to improve robustness and protect sensitive runtime information. |
+| General | Safely scoped SELinux cleanup during MDE Linux upgrades to avoid impacting customer‑defined policies. |
 
 ### Linux | March 2026 | 101.26021.0002
 
