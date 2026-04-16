@@ -48,7 +48,9 @@ For an introduction to Cloud Security Explorer queries, see [Build queries with 
 
 1. Select **Done**.
 
-1. Select **+** > **Select condition**.
+1. Select **+**.
+
+1. **Select condition**.
 
 1. In **Application**, select **Maintains**.
 
@@ -56,7 +58,9 @@ For an introduction to Cloud Security Explorer queries, see [Build queries with 
 
 1. Select **Done**.
 
-1. Select **+** > **Select condition**.
+1. Select **+**.
+
+1. **Select condition**.
 
 1. Select **Maintains**.
 
@@ -64,7 +68,9 @@ For an introduction to Cloud Security Explorer queries, see [Build queries with 
 
 1. Select **Done**.
 
-1. Select **+** > **Select condition**.
+1. Select **+**.
+
+1. **Select condition**.
 
 1. In **Vulnerabilities**, select **All vulnerabilities**.
 
