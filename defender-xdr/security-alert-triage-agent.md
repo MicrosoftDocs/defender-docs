@@ -59,11 +59,6 @@ The Security Alert Triage Agent currently supports these alert types in Microsof
 
 ## Prerequisites
 
-To run the **Security Alert Triage Agent** in your environment, you must meet the following prerequisites.
-
-
-## General prerequisites (all workloads)
-
 These prerequisites apply regardless of the alert types you want the agent to triage.
 
 ### Products and licenses
