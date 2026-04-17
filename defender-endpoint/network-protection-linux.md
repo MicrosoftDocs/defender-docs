@@ -19,14 +19,7 @@ appliesto:
 ---
 # Network protection for Linux (preview)
 
-
-
-> [!IMPORTANT]
-> Some information relates to prereleased product, which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-
 ## Overview
-
-Microsoft is bringing Network Protection functionality to Linux.
 
 Network protection helps reduce the attack surface of your devices from Internet-based events. It prevents employees from using any application to access dangerous domains that may host:
 
@@ -35,6 +28,9 @@ Network protection helps reduce the attack surface of your devices from Internet
 - other malicious content on the Internet
 
 Network protection expands the scope of Microsoft Defender [SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) to block all outbound HTTP(s) traffic that attempts to connect to low-reputation sources. The blocks on outbound HTTP(s) traffic are based on the domain or hostname.
+
+> [!IMPORTANT]
+> The network protection feature requires Microsoft Defender for Endpoint Linux client version: 101.78.13 or later and **is supported only on the insiders-slow or insiders-fast channels** It isn't supported on the production channel.
 
 ## Web content filtering for Linux
 
@@ -205,6 +201,12 @@ Within 10-15 minutes, these domains will be listed in Microsoft Defender XDR und
 
 :::image type="content" source="media/network-protection-macos-mcas-cloud-app-security.png" alt-text="Shows network protection mcas cloud app security." lightbox="media/network-protection-macos-mcas-cloud-app-security.png":::
 
+## Troubleshooting
+
+If network protection doesn't start, or shows "unsupported release ring", it means the device is using the production channel, which isn't supported for network protection. Network protection on Linux requires that the device be on the insider slow or insider fast channel.
+
+To resolve this issue, move the device to one of the insider channels. Alternatively, disable network protection on devices that must remain on the production channel.
+
 ## See also
 
 - [Protect your network](network-protection.md)
@@ -213,6 +215,3 @@ Within 10-15 minutes, these domains will be listed in Microsoft Defender XDR und
 - [Create indicators](indicators-overview.md)
 - [Web content filtering](web-content-filtering.md)
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
-
-
-
