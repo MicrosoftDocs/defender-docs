@@ -457,7 +457,7 @@
         - name: Unified identity security recommendations
           href: ./identity-security/identity-security-recommendations.md
     - name: Collaborate with Microsoft Defender Experts
-      iitems:
+      items:
       - name: Defender Experts for Hunting
         items:
         - name: Overview
