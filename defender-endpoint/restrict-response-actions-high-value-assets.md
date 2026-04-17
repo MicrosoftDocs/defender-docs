@@ -126,12 +126,14 @@ After the device is onboarded, you can verify the security operations mode in se
 - **Device page**: A **Security operations status** section reflects the configured level of remote security capabilities. Devices in Restricted mode are automatically tagged with **Restricted security operations**. Select **View security operations information** to see a detailed list of all security controls and their current status.
 - **Advanced Hunting**: A new property, `RestrictedDeviceSecurityOperations`, is available in the `DeviceInfo` table to identify which security operations are restricted on the device. For example, if the value is `LiveResponse`, only the Live Response capability is restricted while all other operations remain enabled.
 
-## Offboard a device
+## Changing a device's security operations configuration
 
-Once a device is onboarded with restricted settings, its security operations configuration can't be changed or modified—neither from the Microsoft Defender portal nor locally on the device. To update the device's response capabilities, you must first offboard the device and then re-onboard it using a new installation package with the desired settings.
+Once a device is onboarded with restricted settings, its security operations configuration can't be changed or modified—neither from the Defender portal nor locally on the device. To update the device's response capabilities, you must first offboard the device and then re-onboard it using a new installation package with the desired settings.
 
 > [!NOTE]
 > The device ID remains the same after offboarding and re-onboarding, and all historical data is preserved.
+
+For information about how to offboard a device, see 
 
 ### Step 1: Create and download an offboarding package
 
