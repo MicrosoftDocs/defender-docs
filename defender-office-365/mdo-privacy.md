@@ -1,11 +1,8 @@
 ---
 title: Privacy in Microsoft Defender for Office 365
-f1.keywords:
-- NOCSH
 author: chrisda
 ms.author: chrisda
 ms.date: 04/01/2026
-audience: ITPro
 ms.topic: concept-article
 ms.service: defender-office-365
 ms.localizationpriority: medium
@@ -15,7 +12,6 @@ ms.collection:
 - essentials-privacy
 ms.custom:
 description: Admins can learn about privacy in Defender for Office 365.
-search.appverid: met150
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>

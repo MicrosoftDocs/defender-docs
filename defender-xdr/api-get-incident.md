@@ -5,14 +5,12 @@ ms.service: defender-xdr
 ms.author: edbaynash
 author: EdB-MSFT
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
  - m365-security
  - tier3
  - must-keep
 ms.topic: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 04/15/2025
 appliesto:
  - Microsoft Defender XDR

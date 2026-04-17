@@ -1,4 +1,4 @@
-﻿---
+---
 title: Collect diagnostic data of Microsoft Defender Antivirus
 description: Use MpCmdRun to collect diagnostic log files to help troubleshoot Microsoft Defender Antivirus.
 ms.service: defender-endpoint
@@ -14,7 +14,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

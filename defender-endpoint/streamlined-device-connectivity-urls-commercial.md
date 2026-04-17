@@ -11,8 +11,6 @@ ms.collection:
 - m365-security
 - tier1
 ms.reviewer: pahuijbr
-search.appverid: MET150
-audience: ITPro
 ms.date: 12/25/2025
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ---
@@ -43,6 +41,7 @@ See the [streamlined connectivity prerequisites](configure-device-connectivity.m
 |-|-|-|-|-|-|-|
 |Core Defender for Endpoint services|443|*.endpoint.security.microsoft.com|Core Defender for Endpoint services. Formerly: MAPS, Malware Sample Submission Storage, AutoIR Sample Storage, Command and Control, Cyber data.|Required|Core Defender for Endpoint services. Prerequisites must be met to successfully connect to the new URL patterns.|All|
 |Web & network protection|443|*.smartscreen-prod.microsoft.com *.smartscreen.microsoft.com|Used for Microsoft Defender SmartScreen browsing protection, reporting, notifications, and web content filtering. Network/web protection and custom URL/IP indicators.|Required|Optional in disconnected environments where web browsing and connectivity to external destinations is limited. Required for custom URL/IP indicators.|All|
+|SmartScreen|443|*.smartscreen.microsoft.com *.checkappexec.microsoft.com *.urs.microsoft.com|Used for Microsoft Defender SmartScreen to check application execution for trusted apps|Optional|Needed for checking reputation/trust for downloaded applications|Windows|
 |Defender for Endpoint|443|https://config.edge.skype.com/config/v1|Internal configuration management|Required|This URL must be allowed to enable Defender on Linux endpoints to receive internal configurations from the cloud.<br/>**Note**: The "skype" string in this URL is a legacy artifact, unrelated to Skype, and retained solely for backward compatibility.|Linux|
 
 ## URLs used for updates
@@ -184,6 +183,19 @@ Lists the URL endpoints required for administrative/security operations access t
 |https://*.api.security.microsoft.com|Microsoft Defender Security Center portal/APIs|
 |https://security.microsoft.com|Microsoft Defender XDR admin portal|
 
-## Microsoft Defender process exclusions
+## Client processes
+
+Because these Defender for Endpoint-related processes generate network communications, make sure that communications from these processes are not blocked.
 
 [!INCLUDE [Microsoft Defender for Endpoint processes](includes/streamlined-connectivity-processes.md)]
+
+## Change log
+
+|Date|Change Log|
+|---|---|
+|03/26/2026|Renamed **Microsoft Defender process exclusions** section to **Client processes**, and aligned the content for all URL lists.|
+|03/03/2026|Added Linux URL (`config.edge.skype.com/config/v1`) to [Common endpoints](#common-endpoints).|
+|02/25/2026|Added `*.wdcpalt.microsoft.com` to Windows 1607-1803 section.|
+|04/07/2025|Removed `dm.microsoft.com`.|
+|03/11/2024|Updated Xplat MDE agent version to 101.24022.|
+|02/01/2024|Updated prerequisites.|

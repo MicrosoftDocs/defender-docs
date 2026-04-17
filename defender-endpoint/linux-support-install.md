@@ -1,4 +1,4 @@
-﻿---
+---
 title: Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux
 ms.reviewer: gopkr
 description: Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux.
@@ -6,14 +6,12 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-linux
 ms.topic: troubleshooting-general
 ms.subservice: linux
-search.appverid: met150
 ms.date: 10/11/2024
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

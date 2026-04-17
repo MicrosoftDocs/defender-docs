@@ -7,7 +7,6 @@ ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
 ms.date: 05/08/2025
-audience: ITPro
 ms.collection:
   - m365-security
   - m365solution-migratetomdatp
@@ -18,7 +17,6 @@ ms.collection:
 ms.topic: how-to
 ms.custom: migrationguides
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho, yongrhee
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

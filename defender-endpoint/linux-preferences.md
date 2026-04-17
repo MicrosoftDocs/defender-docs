@@ -7,14 +7,12 @@ ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
 ms.date: 03/17/2026
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
 ms.topic: how-to
 ms.subservice: linux
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
