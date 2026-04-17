@@ -73,7 +73,7 @@ You view and manage your quarantined messages in the Microsoft Defender portal o
 > [!NOTE]
 > The quarantine policy assigned to the verdict that quarantined the message controls your ability to view quarantined messages. The quarantine policy might be the default quarantine policy as described in [Recommended email and collaboration threat policy settings for cloud organizations](recommended-settings-for-eop-and-office365.md).
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Review** \> **Quarantine** \> **Email** tab, or to go directly to the **Email** tab on the **Quarantine** page, use <https://security.microsoft.com/quarantine?viewid=Email>.
+In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Review** \> **Quarantine** \> **Email** tab. Or, to go directly to the **Email** tab on the **Quarantine** page, use <https://security.microsoft.com/quarantine?viewid=Email>.
 
 On the **Email** tab, you can decrease the vertical spacing in the list by clicking :::image type="icon" source="media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal** and then selecting :::image type="icon" source="media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
 
@@ -122,7 +122,7 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
   - **Transport rule** (mail flow rule)
   - **Bulk**
   - **Spam**
-  - **Malware**: Anti-malware policies in [Built-in security features for all cloud mailboxes](eop-about.md) or in Safe Attachments policies in Defender for Office 365. The **Policy Type** value indicates which feature was used.
+  - **Malware**: Anti-malware policies in [the built-in security features for all cloud mailboxes](eop-about.md) or in Safe Attachments policies in Defender for Office 365. The **Policy Type** value indicates which feature was used.
   - **Phishing**: The spam filter verdict was **Phishing** or anti-phishing protection quarantined the message ([spoof settings](anti-phishing-policies-about.md#spoof-settings) or [impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)).
   - **High confidence phishing**
 - **Blocked sender**: One of the following values:
@@ -171,7 +171,7 @@ After you find a specific quarantined message, select the message to view detail
 
 #### View quarantined message details
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Review** \> **Quarantine** \> **Email** tab, or to go directly to the **Email** tab on the **Quarantine** page, use <https://security.microsoft.com/quarantine?viewid=Email>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Review** \> **Quarantine** \> **Email** tab. Or, to go directly to the **Email** tab on the **Quarantine** page, use <https://security.microsoft.com/quarantine?viewid=Email>.
 
 2. On the **Email** tab, select the quarantined message by clicking anywhere in the row other than the check box.
 
@@ -256,7 +256,7 @@ After you select the message, use either of the following methods to release it 
 - **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-check-mark-icon.png" border="false"::: **Release**.
 - **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-check-mark-icon.png" border="false"::: **Release email**.
 
-In the **Release message to your Inbox** flyout that opens, select **Report message as having no threats** as appropriate, then select **Release message**.
+In the **Release message to your Inbox** flyout that opens, select **Report message as having no threats** as appropriate, and then select **Release message**.
 
 When you're finished on the **Release message to your Inbox** flyout, select **Release message**.
 
