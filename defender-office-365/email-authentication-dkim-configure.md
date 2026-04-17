@@ -289,11 +289,11 @@ If you'd rather use PowerShell to enable DKIM signing of outbound messages using
         New-DkimSigningConfig -DomainName contoso.com -Enabled $false
         ```
 
-     1. Run the command from Step 1 again to confirm that the domain is listed with the following property values:
+     2. Run the command from Step 1 again to confirm that the domain is listed with the following property values:
         - **Enabled**: False
         - **Status**: `CnameMissing`
 
-     1. Go to Step 3 to copy the selector values.
+     3. Go to Step 3 to copy the selector values.
 
 3. Copy the `Selector1CNAME` and `Selector2CNAME` values for the domain from the output of the command from Step 1.
 
@@ -377,10 +377,10 @@ The relevant information about DKIM key rotation for a domain Microsoft 365 is s
 Get-DkimSigningConfig -Identity <CustomDomain> | Format-List
 ```
 
-- **KeyCreationTime`*: The UTC date/time that the DKIM public-private key pair was created.
-- **RotateOnDate**: The date/time of the previous or next DKIM key rotation.
-- **SelectorBeforeRotateOnDate**: Remember, DKIM signing using a custom domain in Microsoft 365 requires two CNAME records in the domain. This property shows the CNAME record that DKIM uses before the `RotateOnDate` date-time (also known as a _selector_). The value is `selector1` or `selector2` and is different than the `SelectorAfterRotateOnDate` value.
-- **SelectorAfterRotateOnDate**: Shows the CNAME record that DKIM uses after the `RotateOnDate` date-time. The value is `selector1` or `selector2` and is different than the `SelectorBeforeRotateOnDate` value.
+- `KeyCreationTime`: The UTC date/time that the DKIM public-private key pair was created.
+- `RotateOnDate`: The date/time of the previous or next DKIM key rotation.
+- `SelectorBeforeRotateOnDate`: Remember, DKIM signing using a custom domain in Microsoft 365 requires two CNAME records in the domain. This property shows the CNAME record that DKIM uses before the `RotateOnDate` date-time (also known as a _selector_). The value is `selector1` or `selector2` and is different than the `SelectorAfterRotateOnDate` value.
+- `SelectorAfterRotateOnDate`: Shows the CNAME record that DKIM uses after the `RotateOnDate` date-time. The value is `selector1` or `selector2` and is different than the `SelectorBeforeRotateOnDate` value.
 
 When you do a DKIM key rotation on a domain as described in this section, the change isn't immediate. It takes four days (96 hours) for the new private key to start signing messages (the `RotateOnDate` date/time and the corresponding `SelectorAfterRotateOnDate` value). Until then, the existing private key is used (the corresponding `SelectorBeforeRotateOnDate` value).
 
