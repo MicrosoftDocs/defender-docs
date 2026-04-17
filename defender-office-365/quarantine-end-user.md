@@ -64,7 +64,7 @@ You view and manage your quarantined messages in the Microsoft Defender portal o
 
 - To open the Microsoft Defender portal, go to <https://security.microsoft.com>. To go directly to the **Quarantine** page, use <https://security.microsoft.com/quarantine>.
 
-- Admins can configure how long messages are kept in quarantine before they're permanently deleted in anti-spam policies. Messages expired from quarantine are unrecoverable. For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md).
+- Admins can configure how long messages are kept in quarantine before they're permanently deleted in anti-spam policies. Messages expired from quarantine are unrecoverable. For more information, see [Configure anti-spam policies for cloud mailboxes](anti-spam-policies-configure.md).
 
 - By default, messages that were quarantined for high confidence phishing, malware, or by mail flow rules are only available to admins, and aren't visible to users. For more information, see [Manage quarantined messages and files as an admin](quarantine-admin-manage-messages-files.md).
 
@@ -79,7 +79,7 @@ You view and manage your quarantined messages in the Microsoft Defender portal o
 > [!NOTE]
 > The quarantine policy assigned to the verdict that quarantined the message controls your ability to view quarantined messages. The quarantine policy might be the default quarantine policy as described in [Recommended email and collaboration threat policy settings for cloud organizations](recommended-settings-for-eop-and-office365.md).
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Review** \> **Quarantine** \> **Email** tab. Or, to go directly to the **Email** tab on the **Quarantine** page, use <https://security.microsoft.com/quarantine?viewid=Email>.
+In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Review** \> **Quarantine** \> **Email** tab, or to go directly to the **Email** tab on the **Quarantine** page, use <https://security.microsoft.com/quarantine?viewid=Email>.
 
 On the **Email** tab, you can decrease the vertical spacing in the list by clicking :::image type="icon" source="media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal** and then selecting :::image type="icon" source="media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
 
@@ -128,7 +128,7 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
   - **Transport rule** (mail flow rule)
   - **Bulk**
   - **Spam**
-  - **Malware**: Anti-malware policies in [the built-in security features for all cloud mailboxes](eop-about.md) or in Safe Attachments policies in Defender for Office 365. The **Policy Type** value indicates which feature was used.
+  - **Malware**: Anti-malware policies in [Built-in security features for all cloud mailboxes](eop-about.md) or in Safe Attachments policies in Defender for Office 365. The **Policy Type** value indicates which feature was used.
   - **Phishing**: The spam filter verdict was **Phishing** or anti-phishing protection quarantined the message ([spoof settings](anti-phishing-policies-about.md#spoof-settings) or [impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)).
   - **High confidence phishing**
 - **Blocked sender**: One of the following values:
@@ -160,10 +160,10 @@ When you're finished on the **Filters** flyout, select **Apply**. To clear the f
 
 Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific messages. Wildcards aren't supported. You can search by the following values:
 
-- Sender email address
-- Subject. Use the entire subject of the message. The search isn't case-sensitive.
+- **Sender email address**
+- **Subject**: Use the entire subject of the message. The search isn't case-sensitive.
 
-After you enter the search criteria, press the ENTER key to filter the results.
+After you enter the search criteria, press the **Enter** key to filter the results.
 
 > [!NOTE]
 > The **Search** box searches for quarantined items in the current view, not all quarantined items. To search all quarantined items, use :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** and the resulting **Filters** flyout.
@@ -173,11 +173,11 @@ After you find a specific quarantined message, select the message to view detail
 > [!TIP]
 > On mobile devices, the previously described controls are available under :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More**.
 >
-> :::image type="content" source="media/quarantine-user-message-main-page-mobile-actions.png" alt-text="Selecting a quarantined message and then selecting More on a mobile device." lightbox="media/quarantine-user-message-main-page-mobile-actions.png":::
+> :::image type="content" source="media/quarantine-user-message-main-page-mobile-actions.png" alt-text="Screenshot of selecting a quarantined message and then selecting More on a mobile device." lightbox="media/quarantine-user-message-main-page-mobile-actions.png":::
 
 #### View quarantined message details
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Review** \> **Quarantine** \> **Email** tab. Or, to go directly to the **Email** tab on the **Quarantine** page, use <https://security.microsoft.com/quarantine?viewid=Email>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Review** \> **Quarantine** \> **Email** tab, or to go directly to the **Email** tab on the **Quarantine** page, use <https://security.microsoft.com/quarantine?viewid=Email>.
 
 2. On the **Email** tab, select the quarantined message by clicking anywhere in the row other than the check box.
 
@@ -223,11 +223,11 @@ To take action on the message, see the next section.
 
    - Select the message from the list by selecting the check box next to the first column. The available actions are no longer grayed out.
 
-     :::image type="content" source="media/quarantine-user-message-selected-message-actions.png" alt-text="Available actions after you select a quarantined message on the Email tab of the Quarantine page." lightbox="media/quarantine-user-message-selected-message-actions.png":::
+     :::image type="content" source="media/quarantine-user-message-selected-message-actions.png" alt-text="Screenshot of available actions after you select a quarantined message on the Email tab of the Quarantine page." lightbox="media/quarantine-user-message-selected-message-actions.png":::
 
    - Select the message from the list by clicking anywhere in the row other than the check box. The available actions are in the details flyout that opens.
 
-     :::image type="content" source="media/quarantine-user-message-details-flyout-actions.png" alt-text="The available actions in the details flyout of a quarantined message" lightbox="media/quarantine-user-message-details-flyout-actions.png":::
+     :::image type="content" source="media/quarantine-user-message-details-flyout-actions.png" alt-text="Screenshot of the available actions in the details flyout of a quarantined message" lightbox="media/quarantine-user-message-details-flyout-actions.png":::
 
    Using either method to select the message, some actions are available under :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More** or **More options**.
 
@@ -238,11 +238,11 @@ After you select the quarantined message, the available actions are described in
 >
 > - When you select the message by selecting the check box, all actions are under :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More**:
 >
->   :::image type="content" source="media/quarantine-user-message-main-page-mobile-actions.png" alt-text="Selecting a quarantined message and then selecting More on a mobile device." lightbox="media/quarantine-user-message-main-page-mobile-actions.png":::
+>   :::image type="content" source="media/quarantine-user-message-main-page-mobile-actions.png" alt-text="Screenshot of selecting a quarantined message and then selecting More on a mobile device." lightbox="media/quarantine-user-message-main-page-mobile-actions.png":::
 >
 > - When you select the message by clicking anywhere in the row other than the check box, most options are available under :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More** in the details flyout:
 >
->   :::image type="content" source="media/quarantine-user-message-details-flyout-mobile-actions.png" alt-text="The details of a quarantined message with available actions shown." lightbox="media/quarantine-user-message-details-flyout-mobile-actions.png":::
+>   :::image type="content" source="media/quarantine-user-message-details-flyout-mobile-actions.png" alt-text="Screenshot of the details of a quarantined message with available actions shown." lightbox="media/quarantine-user-message-details-flyout-mobile-actions.png":::
 
 #### Release quarantined email
 
@@ -262,7 +262,7 @@ After you select the message, use either of the following methods to release it 
 - **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-check-mark-icon.png" border="false"::: **Release**.
 - **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-check-mark-icon.png" border="false"::: **Release email**.
 
-In the **Release message to your Inbox** flyout that opens, select **Report message as having no threats** as appropriate, and then select **Release message**.
+In the **Release message to your Inbox** flyout that opens, select **Report message as having no threats** as appropriate, then select **Release message**.
 
 When you're finished on the **Release message to your Inbox** flyout, select **Release message**.
 
