@@ -136,6 +136,18 @@
       "template_folder": "_themes"
     },
     {
+      "docset_name": "easm-azure",
+      "build_source_folder": "easm",
+      "build_output_subfolder": "easm-azure",
+      "locale": "en-us",
+      "monikers": [],
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs"
+    },
+    {
       "docset_name": "exposure-management",
       "build_source_folder": "exposure-management",
       "build_output_subfolder": "exposure-management",
