@@ -127,7 +127,7 @@ Similar to the other excluded device or user groups, you instead get remediation
 Defender Experts for XDR lets you determine the individuals or groups within your organization that need to be notified if there are critical incidents, service updates, occasional queries, and other recommendations:
 
 - **Incident notification contacts** – These contacts are persons or teams that we can notify for managed response actions or any communication that requires immediate response. Given the urgent nature of the communications, we recommended that these contacts are always available.
-- **Service review contacts** – These contacts are persons or teams that will be engaged with for service updates and, if your service includes a service delivery manager, service briefings.
+- **Service review contacts** – These contacts are persons or teams that will be engaged with for service updates and, if your service includes a Security Delivery Expert, service briefings.
 
 When you add these contacts, the individuals or groups receive an email notifying them that they were added as a contact for incident notification or service review purposes.
 
