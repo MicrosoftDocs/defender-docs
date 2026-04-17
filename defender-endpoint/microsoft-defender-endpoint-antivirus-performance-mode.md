@@ -22,7 +22,7 @@ appliesto:
 # Protect Dev Drive using performance mode
 
 > [!NOTE]
-> Want to experience Microsoft Defender XDR? Learn more about how you can [Pilot and deploy Microsoft Defender XDR](s/defender-xdr/pilot-deploy-overview).
+> Want to experience Microsoft Defender XDR? Learn more about how you can [Pilot and deploy Microsoft Defender XDR](/defender-xdr/pilot-deploy-overview).
 
 [!Include [defender-endpoint-setup-guide.md](../includes/mde-automated-setup-guide.md)]
 
