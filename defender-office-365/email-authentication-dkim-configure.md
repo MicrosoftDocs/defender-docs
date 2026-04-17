@@ -1,16 +1,11 @@
 ---
 title: How to use DKIM for email in your custom domain
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
 ms.date: 01/30/2026
-audience: ITPro
 ms.topic: how-to
 
 ms.localizationpriority: high
-search.appverid:
-  - MET150
 ms.assetid: 56fee1c7-dc37-470e-9b09-33fff6d94617
 ms.collection:
   - m365-security

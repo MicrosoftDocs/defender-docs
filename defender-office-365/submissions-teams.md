@@ -1,14 +1,9 @@
 ---
 title: User reported settings in Teams
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
 ms.collection:
   - m365-security
   - tier1
@@ -113,7 +108,7 @@ The value of this setting is meaningful only if reporting is turned on in the Te
 
 2. On the **User reported settings** page, go to the **Microsoft Teams** section for the **Monitor reported items in Microsoft Teams** setting.
 
-   As previously described, this setting is turned on by default for new tenants, and existing tenants need to enable it. Typically, you leave it turned on if message reporting is also turned on in Teams admin center. [Learn more about reported message destinations](submissions-report-messages-files-to-microsoft.md#report-suspicious-email-messages-to-microsoft).
+   As previously described, this setting is turned on by default for new tenants, and existing tenants need to enable it. Typically, you leave it turned on if message reporting is also turned on in Teams admin center. [Learn more about reported item destinations](submissions-report-messages-files-to-microsoft.md#report-suspicious-email-messages-to-microsoft).
 
    :::image type="content" source="media/submissions-teams-turn-on-off-defender-portal.png" alt-text="Screenshot of the 'Monitor reported items in Microsoft Teams' setting in the Microsoft Defender portal." lightbox="media/submissions-teams-turn-on-off-defender-portal.png":::
 

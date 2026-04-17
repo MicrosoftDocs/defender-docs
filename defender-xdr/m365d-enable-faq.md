@@ -2,20 +2,14 @@
 title: Microsoft Defender XDR frequently asked questions
 description: Get answers to the most commonly asked questions about topics and issues related to Microsoft Defender XDR.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.custom: admindeeplinkDEFENDER
 ms.topic: concept-article
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 01/17/2025
 appliesto:
 - Microsoft Defender XDR

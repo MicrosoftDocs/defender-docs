@@ -1,15 +1,10 @@
 ---
 title: Manage allows and blocks in the Tenant Allow/Block List
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 01/08/2025
-search.appverid:
-- MET150
 ms.collection:
 - m365-security
 - tier1

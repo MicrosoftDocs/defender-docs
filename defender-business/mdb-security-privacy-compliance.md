@@ -1,16 +1,13 @@
 ---
 title: Security, privacy, and compliance
 description: "Learn about security, privacy, and compliance in Defender for Business."
-search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.date: 05/31/2024
 ms.localizationpriority: medium
 ms.reviewer: nehabha
-f1.keywords: NOCSH
 ms.collection:
  - essentials-security
  - essentials-privacy
