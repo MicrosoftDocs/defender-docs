@@ -53,9 +53,7 @@ Onboarding a device with restricted response actions involves the following step
 ### Step 1: Enable restriction options for security operations
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints** > **Advanced features**.
-2. Turn on **Allow restricted operations during onboarding** to enable the restricted security operations options when creating Defender deployment packages for Windows.
-
-   These restrictions limit the actions that can be performed on onboarded devices.
+2. Turn on **Allow restricted operations during onboarding**. This makes the restricted security operations options available when creating Defender deployment packages for Windows. These restrictions limit the actions that can be performed on onboarded devices.
 
 ### Step 2: Create a new onboarding package
 
