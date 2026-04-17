@@ -103,7 +103,7 @@ Continue with the onboarding wizard to set up the following configurations:
    - [Microsoft Teams notifications](get-started-xdr.md#receive-managed-response-notifications-and-updates-in-microsoft-teams)
 
 1. Review and submit settings. The onboarding wizard finishes its initial setup.
-1. Select **View readiness assessment** to complete the necessary actions required to [optimize your security posture](#prepare-your-environment-for-the-defender-experts-service).
+1. Select **View readiness assessment** to complete the necessary actions required to [optimize your security posture](get-started-xdr.md#prepare-your-environment-for-the-defender-experts-service).
 
 
 ## Turn off Defender Experts for Servers service
