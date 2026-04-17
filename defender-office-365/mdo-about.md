@@ -5,7 +5,7 @@ ms.author: chrisda
 ms.topic: overview
 ms.localizationpriority: high
 ms.assetid: e100fe7c-f2a1-4b7d-9e08-622330b83653
-ms.collection: 
+ms.collection:
   - m365-security
   - tier1
   - highpri
@@ -14,14 +14,16 @@ ms.custom:
   - seo-marvel-apr2020
   - intro-overview
   - curated-apr-2023
-description: Is Microsoft Defender for Office 365 worth it? Let's find out.
+  - msecd-doc-authoring-1012
+description: Learn how Microsoft Defender for Office 365 protects email and collaboration from phishing, malware, and business email compromise with Plan 1 and Plan 2 features.
 ms.service: defender-office-365
 adobe-target: true
-ms.date: 01/16/2026
+ms.date: 04/17/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+#customer intent: As a security admin or decision maker, I want to understand the Defender for Office 365 protection ladder so that I can choose the right plan for my organization.
 ---
 
 # Microsoft Defender for Office 365 overview
@@ -34,18 +36,18 @@ This article explains the _protection ladder_ for email and collaboration. The l
 
 [!INCLUDE [MDO Setup guide](../includes/mdo-setup-guide.md)]
 
-This article is intended for Security Operations (SecOps) personnel, Microsoft 365 admins, or decisions makers who want to learn more about Defender for Office 365.
+This article is intended for Security Operations (SecOps) personnel, Microsoft 365 admins, or decision makers who want to learn more about Defender for Office 365.
 
 > [!TIP]
 > If you're using **Outlook.com**, **Microsoft 365 Family**, or **Microsoft 365 Personal**, and need information about _Safelinks_ or _advanced attachment scanning_, see [Advanced Outlook.com security for Microsoft 365 subscribers](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
 >
-> If you're new to your Microsoft 365 subscription and would like to know your licenses before you begin, go the **Your products** page in the Microsoft 365 admin center at <https://admin.microsoft.com/Adminportal/Home#/subscriptions>.
+> If you're new to your Microsoft 365 subscription and would like to know your licenses before you begin, go to the **Your products** page in the Microsoft 365 admin center at <https://admin.microsoft.com/Adminportal/Home#/subscriptions>.
 
 The protection ladder in Defender for Office 365 contains the following elements:
 
 1. **The built-in security features for all cloud mailboxes**: Included in all Microsoft 365 subscriptions with cloud mailboxes.
-2. **Defender for Office 365 365 Plan 1**: Included in some Microsoft 365 subscriptions that cater to small to medium-sized businesses (for example, Microsoft 365 Business Premium).
-3. **Defender for Office 365 365 Plan 2**: Included in some Microsoft 365 subscriptions that cater to enterprise organizations (for example, Microsoft 365 A5/E5/G5).
+2. **Defender for Office 365 Plan 1**: Included in some Microsoft 365 subscriptions that cater to small to medium-sized businesses (for example, Microsoft 365 Business Premium).
+3. **Defender for Office 365 Plan 2**: Included in some Microsoft 365 subscriptions that cater to enterprise organizations (for example, Microsoft 365 A5/E5/G5).
 
 Defender for Office 365 is also available as an add-on subscription to many Microsoft 365 subscriptions with cloud mailboxes.
 
@@ -76,7 +78,7 @@ Whether you're using the onmicrosoft.com domain only or custom domains for email
 
 ## The Defender for Office 365 security ladder
 
-It can be difficult to identity the advantages of Defender for Office 365. The following subsections describe the capabilities of each product using the following security emphases:
+It can be difficult to identify the advantages of Defender for Office 365. The following subsections describe the capabilities of each product using the following security emphases:
 
 - Preventing and detecting threats.
 - Investigating threats.
@@ -137,16 +139,12 @@ To compare the different capabilities between Defender for Office 365 Plan 1 and
 - For more information, see [Feature availability across Defender for Office 365 plans](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#feature-availability).
 - [Safe Documents](safe-documents-in-e5-plus-security-about.md) is available to users with the Microsoft 365 A5 or Microsoft Defender Suite licenses (not included in Defender for Office 365 plans).
 - If your current subscription doesn't include Defender for Office 365 Plan 2, you can [try Defender for Office 365](try-microsoft-defender-for-office-365.md) free for 90 days. Or, [contact sales to start a trial](https://info.microsoft.com/ww-landing-M365SMB-web-contact.html).
-- Organizations with Defender for Office 365 Plan 2 have access to **Microsoft Defender Extended detection and response (XDR) integration** to efficiently detect, review, and respond to incidents and alerts.
+- Organizations with Defender for Office 365 Plan 2 have access to **Microsoft Defender XDR integration** to efficiently detect, review, and respond to incidents and alerts.
 
-## Where to go next
+## Related content
 
-[Get started with Microsoft Defender for Office 365](mdo-deployment-guide.md)
-
-[Microsoft Defender for Office 365 Security Operations Guide](mdo-sec-ops-guide.md)
-
-[Migrate from a non-Microsoft protection service or device to Microsoft Defender for Office 365](migrate-to-defender-for-office-365.md)
-
-[What's new in Microsoft Defender for Office 365](defender-for-office-365-whats-new.md)
-
-The [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=Microsoft%20Defender%20for%20Office%20365) describes new features that are being added to Defender for Office 365.
+- [Get started with Microsoft Defender for Office 365](mdo-deployment-guide.md)
+- [Microsoft Defender for Office 365 Security Operations Guide](mdo-sec-ops-guide.md)
+- [Migrate from a non-Microsoft protection service or device to Microsoft Defender for Office 365](migrate-to-defender-for-office-365.md)
+- [What's new in Microsoft Defender for Office 365](defender-for-office-365-whats-new.md)
+- [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=Microsoft%20Defender%20for%20Office%20365) - Describes new features that are being added to Defender for Office 365.
