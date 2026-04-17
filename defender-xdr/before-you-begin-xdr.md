@@ -24,7 +24,7 @@ ms.date: 08/01/2025
 - [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
 - Microsoft Defender Experts for Servers
 
-This document outlines the key prerequisites you must meet and essential information you must know before purchasing the Microsoft Defender Experts for XDR service and its add-on offering, Microsoft Defender Experts for Servers.
+This document outlines the key prerequisites you must meet and essential information you must know before purchasing the Microsoft Defender Experts for XDR and Microsoft Defender Experts for Servers services.
 
 ## Prerequisites and licensing
 
@@ -109,7 +109,7 @@ Defender Experts for XDR operational data, such as case tickets and analyst note
 Microsoft experts hunt over [advanced hunting logs](advanced-hunting-schema-tables.md) in Microsoft Defender XDR advanced hunting tables. The data in these tables depend on the set of Defender services the customer is enabled for (for example, Defender for Endpoint, Defender for Office 365, Defender for Identity, Defender for Cloud Apps, and Microsoft Entra ID). Experts also use a large set of internal threat intelligence data to inform their hunting and automation.
 
 > [!NOTE]
-> Microsoft Defender for Cloud is integrated with Microsoft Defender XDR. This integration allows security teams to access Defender for Cloud alerts and incidents within the Microsoft Defender portal. The Defender Experts for Servers add-on service accesses data through the Defender portal, so the same data collection, usage, and retention policies apply to this service.
+> Microsoft Defender for Cloud is integrated with Microsoft Defender XDR. This integration allows security teams to access Defender for Cloud alerts and incidents within the Microsoft Defender portal. The Defender Experts for Servers service accesses data through the Defender portal, so the same data collection, usage, and retention policies apply to this service.
 
 ### Security and compliance
 

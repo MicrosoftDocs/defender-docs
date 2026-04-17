@@ -30,6 +30,9 @@ ms.date: 04/16/2026
 
 - [Microsoft Defender XDR](microsoft-365-defender.md)
 
+> [!IMPORTANT]
+> Defender Experts for Servers is sold separately from other Microsoft Defender XDR products. If you're interested in purchasing Defender Experts for Servers, complete the [Defender Experts customer interest form](https://aka.ms/IWantDefenderExperts).
+
 **Microsoft Defender Experts for Servers** is a managed extended detection and response service that provides expert-driven coverage for on-premises and multicloud servers protected by [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction). It combines automation and Microsoft's security analyst expertise to help you detect and respond to threats targeting your server infrastructure across Microsoft Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP).
 
 Defender Experts for Servers augments your SOC with threat intelligence and dedicated analyst support to help you:
@@ -48,8 +51,7 @@ Defender Experts for Servers is a standalone service that you can purchase indep
 
 Depending on the coverage you're looking for, you can enable the Defender for Servers plan for an Azure subscription, AWS account, or GCP project.
 
-> [!IMPORTANT]
-> Defender Experts for Servers is sold separately from other Microsoft Defender XDR products. If you're interested in purchasing Defender Experts for Servers, complete the [Defender Experts customer interest form](https://aka.ms/IWantDefenderExperts).
+For more information, see [Before you begin using Defender Experts for XDR](before-you-begin-xdr.md)
 
 ## Service capabilities
 
