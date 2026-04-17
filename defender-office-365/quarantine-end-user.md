@@ -58,7 +58,7 @@ You view and manage your quarantined messages in the Microsoft Defender portal o
 
 - To open the Microsoft Defender portal, go to <https://security.microsoft.com>. To go directly to the **Quarantine** page, use <https://security.microsoft.com/quarantine>.
 
-- Admins can configure how long messages are kept in quarantine before they're permanently deleted in anti-spam policies. Messages expired from quarantine are unrecoverable. For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md).
+- Admins can configure how long messages are kept in quarantine before they're permanently deleted in anti-spam policies. Messages expired from quarantine are unrecoverable. For more information, see [Configure anti-spam policies for cloud mailboxes](anti-spam-policies-configure.md).
 
 - By default, messages that were quarantined for high confidence phishing, malware, or by mail flow rules are only available to admins, and aren't visible to users. For more information, see [Manage quarantined messages and files as an admin](quarantine-admin-manage-messages-files.md).
 
@@ -154,10 +154,10 @@ When you're finished on the **Filters** flyout, select **Apply**. To clear the f
 
 Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific messages. Wildcards aren't supported. You can search by the following values:
 
-- Sender email address
-- Subject. Use the entire subject of the message. The search isn't case-sensitive.
+- **Sender email address**
+- **Subject**: Use the entire subject of the message. The search isn't case-sensitive.
 
-After you enter the search criteria, press the ENTER key to filter the results.
+After you enter the search criteria, press the **Enter** key to filter the results.
 
 > [!NOTE]
 > The **Search** box searches for quarantined items in the current view, not all quarantined items. To search all quarantined items, use :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** and the resulting **Filters** flyout.
@@ -167,7 +167,7 @@ After you find a specific quarantined message, select the message to view detail
 > [!TIP]
 > On mobile devices, the previously described controls are available under :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More**.
 >
-> :::image type="content" source="media/quarantine-user-message-main-page-mobile-actions.png" alt-text="Selecting a quarantined message and then selecting More on a mobile device." lightbox="media/quarantine-user-message-main-page-mobile-actions.png":::
+> :::image type="content" source="media/quarantine-user-message-main-page-mobile-actions.png" alt-text="Screenshot of selecting a quarantined message and then selecting More on a mobile device." lightbox="media/quarantine-user-message-main-page-mobile-actions.png":::
 
 #### View quarantined message details
 
@@ -217,11 +217,11 @@ To take action on the message, see the next section.
 
    - Select the message from the list by selecting the check box next to the first column. The available actions are no longer grayed out.
 
-     :::image type="content" source="media/quarantine-user-message-selected-message-actions.png" alt-text="Available actions after you select a quarantined message on the Email tab of the Quarantine page." lightbox="media/quarantine-user-message-selected-message-actions.png":::
+     :::image type="content" source="media/quarantine-user-message-selected-message-actions.png" alt-text="Screenshot of available actions after you select a quarantined message on the Email tab of the Quarantine page." lightbox="media/quarantine-user-message-selected-message-actions.png":::
 
    - Select the message from the list by clicking anywhere in the row other than the check box. The available actions are in the details flyout that opens.
 
-     :::image type="content" source="media/quarantine-user-message-details-flyout-actions.png" alt-text="The available actions in the details flyout of a quarantined message" lightbox="media/quarantine-user-message-details-flyout-actions.png":::
+     :::image type="content" source="media/quarantine-user-message-details-flyout-actions.png" alt-text="Screenshot of the available actions in the details flyout of a quarantined message" lightbox="media/quarantine-user-message-details-flyout-actions.png":::
 
    Using either method to select the message, some actions are available under :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More** or **More options**.
 
@@ -232,11 +232,11 @@ After you select the quarantined message, the available actions are described in
 >
 > - When you select the message by selecting the check box, all actions are under :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More**:
 >
->   :::image type="content" source="media/quarantine-user-message-main-page-mobile-actions.png" alt-text="Selecting a quarantined message and then selecting More on a mobile device." lightbox="media/quarantine-user-message-main-page-mobile-actions.png":::
+>   :::image type="content" source="media/quarantine-user-message-main-page-mobile-actions.png" alt-text="Screenshot of selecting a quarantined message and then selecting More on a mobile device." lightbox="media/quarantine-user-message-main-page-mobile-actions.png":::
 >
 > - When you select the message by clicking anywhere in the row other than the check box, most options are available under :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More** in the details flyout:
 >
->   :::image type="content" source="media/quarantine-user-message-details-flyout-mobile-actions.png" alt-text="The details of a quarantined message with available actions shown." lightbox="media/quarantine-user-message-details-flyout-mobile-actions.png":::
+>   :::image type="content" source="media/quarantine-user-message-details-flyout-mobile-actions.png" alt-text="Screenshot of the details of a quarantined message with available actions shown." lightbox="media/quarantine-user-message-details-flyout-mobile-actions.png":::
 
 #### Release quarantined email
 
