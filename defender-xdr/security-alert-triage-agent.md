@@ -178,7 +178,7 @@ For more information about unified RBAC in the Defender portal, see [Microsoft D
 
 ## Set up the Security Alert Triage Agent
 
-Make sure you have the [permissions required](#permissions-required) and all [prerequisites](#prerequisites) are met before setting up the agent.
+Make sure you have the [permissions required](#required-permissions) and all [prerequisites](#prerequisites) are met before setting up the agent.
 
 ### Begin setup
 
@@ -213,7 +213,7 @@ Select:
    
    OR
 
-- **Connect an existing user account** - Assign an existing user account as the agent identity. The agent inherits the user account's access and permissions. To use this identity option, you need to create the identity yourself and assign it the [permissions the agent requires](#phishing-triage-agent-required-permissions) before setup. For information on creating a user account, see [Create a new user](/entra/fundamentals/how-to-create-delete-users#create-a-new-user).
+- **Connect an existing user account** - Assign an existing user account as the agent identity. The agent inherits the user account's access and permissions. To use this identity option, you need to create the identity yourself and assign it the [permissions the agent requires](#security-alert-triage-agent-required-permissions) before setup. For information on creating a user account, see [Create a new user](/entra/fundamentals/how-to-create-delete-users#create-a-new-user).
 
    When you connect the agent to an account, we recommend setting a long account expiration date and closely monitoring its authentication status to ensure continuous operation of the agent. If authentication expires, the agent stops functioning until it’s renewed.
    
@@ -229,13 +229,13 @@ Select:
 
 #### Assign permissions
 
-In alignment with [the principle of least privileges](/entra/identity-platform/secure-least-privileged-access), we recommend assigning the agent identity only the [permissions the Security Alert Triage Agent requires to perform its tasks](#phishing-triage-agent-required-permissions).
+In alignment with [the principle of least privileges](/entra/identity-platform/secure-least-privileged-access), we recommend assigning the agent identity only the [permissions the Security Alert Triage Agent requires to perform its tasks](#security-alert-triage-agent-required-permissions).
 
 - If you use an Agent ID, the dropdown only displays roles in your organization that have the permissions the agent needs. Select an existing role in your organization or automatically create a new role with the required permissions if you don't already have a suitable role set up.
 
    :::image type="content" source="media/phishing-triage-agent/setup-assign-entra-agent-id.PNG" alt-text="Screenshot of the Create a new agent identity screen in the Security Alert Triage Agent setup wizard." lightbox="media/phishing-triage-agent/setup-assign-entra-agent-id.PNG":::   
 
-- If you use an existing user account, you need to [assign the required permissions](#phishing-triage-agent-required-permissions) to that identity before assigning the agent identity during setup - you can't do this from the setup wizard.
+- If you use an existing user account, you need to [assign the required permissions](#security-alert-triage-agent-required-permissions) to that identity before assigning the agent identity during setup - you can't do this from the setup wizard.
 
    :::image type="content" source="media/phishing-triage-agent/setup-assign-user.PNG" alt-text="Screenshot of the Connect with an existing user accout screen in the Security Alert Triage Agent setup wizard" lightbox="media/phishing-triage-agent/setup-assign-user.PNG":::
 
@@ -482,22 +482,21 @@ To remove the agent:
 
 ## Frequently asked questions
 
-Following are responses to commonly asked questions about the Security Alert Triage Agent. For information about the agent's capabilities and requirements, see [How the Security Alert Triage Agent works](#how-the-alert-triage-agent-works) and [prerequisites](#prerequisites) sections of this article.
+Following are responses to commonly asked questions about the Security Alert Triage Agent. For information about the agent's capabilities and requirements, see [How the Security Alert Triage Agent works](#how-the-security-alert-triage-agent-works) and [prerequisites](#prerequisites) sections of this article.
 
-### What is the Security Alert Triage Agent, how does it differ from the Phishing Triage Agent, and how can I try it?
+
+### What is the Security Alert Triage Agent, how does it differ from the Phishing Triage Agent, and how do I onboard if I’m already using the agent to triage phishing alerts?
 
 The **Security Alert Triage Agent** is an autonomous Microsoft Security Copilot agent in Microsoft Defender that helps security teams triage alerts at scale. It evaluates alerts using AI‑driven reasoning, determines their relevance and risk, and records its conclusions directly in Microsoft Defender incidents to help analysts prioritize what requires action.
 
-The Security Alert Triage Agent builds on the **Phishing Triage Agent**, which focuses specifically on triaging user‑reported email and collaboration alerts. Those email and collaboration triage capabilities are **generally available (GA)**.
+The Security Alert Triage Agent builds on the **Phishing Triage Agent**, which focuses on triaging user‑reported email and collaboration alerts. Those email and collaboration triage capabilities are **generally available (GA)**.
 
-The Security Alert Triage Agent extends this model by expanding autonomous triage to additional alert types, including **identity** and **cloud alerts**. These extended capabilities are currently in **public preview**, while the email and collaboration alert triage functionality continues to be GA.
+The Security Alert Triage Agent extends this same triage model to additional alert types, including **identity** and **cloud alerts**. These extended capabilities are currently in **public preview**, while email and collaboration alert triage functionality remains GA.
 
-If you already have the Phishing Triage Agent installed and want to try the expanded Security Alert Triage Agent capabilities: 
+If you’re already using the Phishing Triage Agent, you don’t need to install a new agent. To onboard to the expanded capabilities, open the agent setup wizard, review the prerequisites for the additional alert types, and select the alert types you want the agent to triage.
 
-1. open the **Phishing Triage Agent** page, select **Security Copilot > Agents**, locate the **Phishing Triage Agent** under **Agents in use**, and select **Go to agent**. 
-1. Select **Edit** and add the alert types you want the triage agent to run on.
+Your existing phishing triage configuration and feedback carry over automatically. For more information, see [How the Security Alert Triage Agent works](#how-the-security-alert-triage-agent-works) and [Set up the Security Alert Triage Agent](#set-up-the-security-alert-triage-agent).
 
-Make sure to review the prerequisites for the new alert types you want to add. For more information about the agent's capabilities and requirements, see [How the Security Alert Triage Agent works](#how-the-alert-triage-agent-works) and [prerequisites](#prerequisites) sections of this article. 
 
 ### When is the agent triggered?
 
@@ -540,12 +539,6 @@ It's important to ensure that your organization has sufficient SCUs for healthy 
 You can also export the dashboard data into Excel for more detailed analysis, and to filter on agent operations only.
 
 After evaluating your SCU usage needs, update the SCU capacity for your organization. For more information about managing SCUs, see [Manage security compute unit usage in Security Copilot](/copilot/security/manage-usage).
-
-### I'm already using the Phishing Triage Agent - how do I onboard to the Security Alert Triage Agent?
-
-The Security Alert Triage Agent is the evolution of the Phishing Triage Agent, expanding its scope to cover a broader range of security alert types. It's the same agent, with a broader scope - your existing phishing triage settings and feedback carry over.
-
-To onboard to the expanded agent, open the agent setup wizard, review the prerequisites for the new alert types, and select the other alert types you want the agent to triage. For detailed instructions, see [Set up the Security Alert Triage Agent](#set-up-the-security-alert-triage-agent).
 
 ## Related content
 
