@@ -276,7 +276,7 @@ The agent helps security teams manage the large volume of alerts organizations r
 
 ### Agent trigger and flow
 
-Once fully set up and running, the Security Alert Triage Agent is automatically triggered when a relevant alert is created. The agent then autonomously analyzes the alert using sophisticated AI tools and your organization's context to determine whether the associated threat is malicious or just a false alarm.
+After setup, the Security Alert Triage Agent automatically runs when a relevant alert is created. The agent then autonomously analyzes the alert using sophisticated AI tools and your organization's context to determine whether the associated threat is malicious or just a false alarm.
 
 If the alert is determined to be a false alarm, the agent classifies it as a False Positive and resolves it accordingly. If the alert is deemed malicious, it's classified as a True Positive, and the status of the associated incident remains open and in progress for an analyst to investigate and take further action.
 
@@ -318,7 +318,7 @@ To review the agent’s findings, follow these steps:
 > [!IMPORTANT]
 > The feedback option is currently only available for email and collaboration alerts.
 
-For supported alert types, analysts can optionally provide feedback on agent classifications in plain, natural language - no complex configurations required. Authorized users can review feedback, evaluate it, and explicitly apply it to influence how the agent classifies similar alerts in the future. This capability is currently available for email and collaboration alerts only.
+For supported alert types, analysts can optionally provide feedback on agent classifications in plain, natural language, with no complex configurations required. Authorized users can review feedback, evaluate it, and explicitly apply it to influence how the agent classifies similar alerts in the future. This capability is currently available for email and collaboration alerts only.
 
 To provide feedback and teach the agent, follow these steps:
 
