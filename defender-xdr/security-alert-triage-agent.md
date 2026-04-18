@@ -32,7 +32,7 @@ Security Operations Centers (SOCs) process large volumes of alerts across multip
 
 The Microsoft Security Copilot Security Alert Triage Agent is an autonomous Microsoft Security Copilot agent that helps security teams triage alerts at scale by applying consistent reasoning, prioritization, and enrichment across supported security workloads.
 
-The Security Alert Triage Agent evaluates alerts using AI‑driven reasoning, determines their relevance and risk, and records its conclusions directly in Microsoft Defender incidents. This reduces alert fatigue, accelerates response, and helps analysts focus on the alerts that matter most.
+The Security Alert Triage Agent evaluates alerts using AI‑driven reasoning, determines their relevance and risk, and records its conclusions directly in Microsoft Defender incidents. 
 
 This article provides an overview of the Security Alert Triage Agent, how it works, and its alert triage capabilities.
 
@@ -41,11 +41,11 @@ This article provides an overview of the Security Alert Triage Agent, how it wor
 
 ## How the Security Alert Triage Agent works
 
-The Security Alert Triage Agent is a [Security Copilot agent](/copilot/security/agents-overview) in Microsoft Defender that enhances the efficiency of security operations teams by classifying and triaging alerts across Microsoft Defender workloads and alert types. The agent’s key capabilities include:
+The Security Alert Triage Agent is a [Security Copilot agent](/copilot/security/agents-overview) in Microsoft Defender that classifies and triages alerts across supported workloads and alert types. The agent’s key capabilities include:
 
-- **Autonomous triage:** Uses advanced AI tools to perform sophisticated assessments and determine whether a submission is a real threat or a false alarm, without requiring step-by-step human input or code.
-- **Transparent rationale:** Provides transparent rationale for its classification verdicts in natural language, detailing the reasoning behind its conclusions and the evidence used to reach them. It also provides a visual representation of its reasoning process.
-- **Learning based on feedback:** For supported alerts, the agent incorporates analyst feedback to continuously improve future triage decisions while keeping humans in control. Over time, this feedback helps refine the agent’s behavior to better reflect organizational context and reduce manual follow‑up. This capability is currently available for email and collaboration alerts only.
+- **Autonomous triage:** Uses advanced AI tools to evaluate alerts and determine whether they represent malicious activity or benign behavior without requiring step‑by‑step human input.
+- **Transparent rationale:** Records classification verdicts and supporting reasoning in natural language, including the evidence used to reach each conclusion.
+- **Learning based on feedback:** For supported alert types, the agent can incorporate analyst feedback when explicitly provided and approved. This capability is currently available for email and collaboration alerts only.
 
 ## Supported alerts
 
@@ -272,7 +272,7 @@ To create a role:
 
 ## Use the Security Alert Triage Agent
 
-The agent is designed to help security teams manage the overwhelming volume of alerts organizations receive daily. Acting as a force multiplier for SOC teams, the agent offloads time-consuming triage tasks, reduces alert fatigue, and accelerates incident response by autonomously identifying true threats. This enables analysts to cut through the noise and focus their attention on the threats that truly matter.
+The agent helps security teams manage the large volume of alerts organizations receive daily by automatically triaging supported alerts and updating their classification and status in Microsoft Defender incidents.
 
 ### Agent trigger and flow
 
@@ -280,7 +280,7 @@ Once fully set up and running, the Security Alert Triage Agent is automatically 
 
 If the alert is determined to be a false alarm, the agent classifies it as a False Positive and resolves it accordingly. If the alert is deemed malicious, it's classified as a True Positive, and the status of the associated incident remains open and in progress for an analyst to investigate and take further action.
 
-For every alert it processes, the agent provides a detailed explanation of its verdict - enhancing transparency and building analyst confidence in the corresponding incident.
+For every alert it processes, the agent provides a detailed explanation of its verdict in the corresponding incident.
 
 ### Collaborate with the agent
 
@@ -289,13 +289,13 @@ To maintain transparency, the agent routinely updates incident fields during the
 > [!TIP]
 > You can also filter the incident queue using the name of the identity you assigned to the Security Alert Triage Agent to see the incidents the agent is actively working on.
 
-When an alert is identified as a true threat, the Security Alert Triage Agent marks it as a True Positive. This enables analysts to prioritize confirmed threats and respond more swiftly. With these alerts clearly flagged, analysts can easily filter the queue to focus on verified threats, resulting in significant queue reduction and minimizing the time spent sorting through false positives. This allows them to concentrate their efforts where they matter most.
+When an alert is identified as a true threat, the Security Alert Triage Agent marks it as a True Positive, allowing analysts to filter and prioritize incidents based on confirmed classifications.
 
 :::image type="content" source="media/phishing-triage-agent/incident-queue-agent-only.png" alt-text="Screenshot of the incident queue filtered by the Security Alert Triage Agent tag" lightbox="media/phishing-triage-agent/incident-queue-agent-only.png":::
 
 ### Transparency and explainability in alert triage
 
-The Security Alert Triage Agent is purpose-built to clearly explain *why* and *how* it made each decision. For every alert it processes, it provides a detailed explanation in plain text along with a full graphical representation of its decision-making workflow. This level of transparency allows analysts to quickly interpret results, build trust in the agent’s output, and focus their time on making informed decisions—rather than repeating manual steps in the email and collaboration alert triage process.
+For each alert it processes, the Security Alert Triage Agent provides a detailed explanation of its verdict and a graphical representation of its decision‑making workflow.
 
 To review the agent’s findings, follow these steps:
 
@@ -318,7 +318,7 @@ To review the agent’s findings, follow these steps:
 > [!IMPORTANT]
 > The feedback option is currently only available for email and collaboration alerts.
 
-The Security Alert Triage Agent continuously improves its decision-making based on feedback tailored to your organization's needs. Analysts can provide input in plain, natural language - no complex configurations required - making it easy to guide and shape the agent's behavior. This feedback is stored in the agent's memory, allowing it to adapt to how your organization interprets and classifies security alerts. Over time, this adaptation enhances the agent's accuracy and effectiveness in triaging future alerts, with your team in control.
+For supported alert types, analysts can optionally provide feedback on agent classifications in plain, natural language - no complex configurations required. Authorized users can review feedback, evaluate it, and explicitly apply it to influence how the agent classifies similar alerts in the future. This capability is currently available for email and collaboration alerts only.
 
 To provide feedback and teach the agent, follow these steps:
 
@@ -377,10 +377,7 @@ Here are examples of failures you might encounter when writing feedback to the a
 > [!NOTE]
 > You can choose not to resolve feedback failures. You can leave your feedback and select **Save** without checking the box for teaching the agent. The feedback won't be saved to the agent's memory and will only be documented on the feedback management page for your future tracking classification changes.
 
-Once the agent is taught and equipped with organizational knowledge, it begins to refine its decision-making capabilities. This interactive teaching process ensures that the agent evolves continuously, delivering increasingly precise classifications and responses over time. By integrating feedback loops, the system adapts dynamically to the changing landscape of organizational priorities and incident patterns.
-
-</details>
-
+When applicable feedback is approved and stored, the agent can apply it when triaging similar alerts in the future, subject to the same permissions and controls.
 
 ## Monitor and manage the Security Alert Triage Agent
 
@@ -506,19 +503,17 @@ Make sure to review the prerequisites for the new alert types you want to add. F
 
 The agent automatically runs when a relevant alert is created. For example, the Security Alert Triage Agent automatically runs when a user reports a potential phishing attempt.
 
-### Why is the Security Alert Triage Agent important?
-
-Security alerts often arrive in high volume, overwhelming analysts with repetitive investigations—many of which turn out to be false positives. This manual triage can consume significant time, sometimes up to 30 minutes per alert. By automating classification, prioritization, and enrichment, the Security Alert Triage Agent reduces analyst fatigue and frees up time for higher-impact investigations and proactive security work.
-
 ### Can the Security Alert Triage Agent be trusted?
 
 Microsoft AI agents follow strict Responsible AI guidelines and undergo thorough reviews to ensure compliance with all AI standards and safeguards. The Security Alert Triage Agent is fully incorporated into these controls. During setup, you assign the agent an identity and configure it with the minimum permissions required for its operation, ensuring that it doesn't have unnecessary permissions. All agent activities are logged in detail, with the complete flow available for review by analysts and admins at any time. Feedback provided to the agent to help it adapt to the organization's environment is logged, reflected in the system, and accessible for review and modification by admins as needed.
 
 ### How does the agent differ from a standard SOAR solution?
 
-While both SOAR solutions and the Security Alert Triage Agent aim to automate aspects of security operations, their approaches are fundamentally different. SOAR tools rely on static, policy- and rule-based workflows that require predefined logic and manual tuning. In contrast, the agent uses recursive reasoning to autonomously complete tasks—learning, adapting, and improving over time.
+While both SOAR solutions and the Security Alert Triage Agent automate aspects of security operations, they use different approaches.
 
-The agent doesn't need to be reprogrammed for every new situation. Within defined boundaries, it adjusts to the task at hand, making it far more flexible than traditional automation. Rather than being rigid and reactive, it continuously evolves with your environment and threat landscape, guided by analyst feedback and grounded in real data. Purpose-built for security teams, the Security Alert Triage Agent helps accelerate responses and reduce manual workloads, freeing up analysts to focus on strategic initiatives.
+SOAR solutions typically rely on predefined, rule-based workflows that require manual configuration and ongoing maintenance. In contrast, the Security Alert Triage Agent uses reasoning-based analysis to triage alerts and record classifications within Microsoft Defender, with human oversight and optional feedback where supported.
+
+The agent operates within defined permissions and workflows in Microsoft Defender and does not replace existing investigation or response tools.
 
 ### What level of visibility and control do I have over the agent?
 
