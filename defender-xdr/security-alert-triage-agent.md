@@ -195,6 +195,8 @@ Follow the steps in the setup wizard, as described in the sections below.
 
 Select the alert types you want the agent to triage from the list of [supported alert types](#supported-alerts). Permissions and data scopes depend on that selection.
 
+:::image type="content" source="media/security-alert-triage-agent/security-alert-triage-alert-types.png" alt-text="Screenshot of agent supported alerts setup with toggles for email, cloud, and identity alerts, and Continue and Back buttons." lightbox="media/security-alert-triage-agent/security-alert-triage-alert-types.png":::
+
 ### Assign the agent’s identity and permissions
 
 The setup wizard walks you through assigning the agent an identity and the permissions required to do its work. 
