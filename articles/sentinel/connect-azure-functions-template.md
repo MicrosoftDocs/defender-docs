@@ -48,10 +48,7 @@ Make sure that you have the following permissions and credentials before using A
 
 ### Azure Functions runtime configuration
 > [!NOTE]
-> - Microsoft Sentinel connectors that use Azure Functions include precompiled
-Python dependencies. The Azure Function App runtime, including the Python
-version, is preconfigured in the solution ARM template and should not be
-modified by customers.
+> Microsoft Sentinel connectors that use Azure Functions include precompiled Python dependencies. The Azure Function App runtime, including the Python version, is preconfigured in the solution ARM template and should not be modified.
 
 ### Step 1: Get your source system's API credentials
 
