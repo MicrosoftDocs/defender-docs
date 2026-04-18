@@ -413,10 +413,7 @@ To view agent metrics and manage the agent, go to the Security Alert Triage Agen
 
 - To open the Security Alert Triage Agent card in the incident queue, select **Investigation & response > Incidents & alerts > Incidents** .  
 
-   The Security Alert Triage Agent card above the incident queue shows some of the agent’s key metrics, including: 
-
-   - **Incidents addressed:** Incidents containing alerts that the agent classified as true threats or false alarms.
-   - **Incidents resolved:** Incidents that no longer require further handling, like false alarms.
+   The Security Alert Triage Agent card above the incident queue shows some of the agent’s key metrics, including **Incidents addressed**, which are incidents containing alerts that the agent classified as true threats or false alarms.
 
    This data helps demonstrate the agent’s impact and can be used to inform broader strategic conversations, highlight return on investment, or support decisions around scaling automation across your organization.
 
