@@ -44,7 +44,7 @@ For detailed instructions on creating and deploying onboarding packages, see [De
 
 ### Configurable capabilities in Restricted mode
 
-When Restricted mode is selected, the following capabilities can be individually enabled or disabled:
+When Restricted mode is selected, the following capabilities can be individually allowed or disallowed:
 
 | Capability | Description | Remarks |
 |---|---|---|
