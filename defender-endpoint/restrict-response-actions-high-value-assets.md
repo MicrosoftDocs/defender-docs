@@ -98,10 +98,6 @@ Restricted mode requires:
 
 ## Frequently asked questions
 
-### How long does it take until an onboarded device appears in the Defender portal?
-
-In most cases, an onboarded device appears in the Defender portal within a few minutes. Full data population and telemetry visibility can take up to 1 hour.
-
 ### Is using a Restricted package with all response actions allowed the same as Full mode?
 
 No. Even if all response actions are allowed, onboarding a device using a Restricted package isn't the same as Full mode. In restricted mode, running scripts is disabled by design. Full mode provides unrestricted access to all supported response actions and capabilities.
@@ -120,7 +116,7 @@ You must first offboard the device and then re-onboard it using an onboarding pa
 
 ## Related resources
 
-- [Deploy Microsoft Defender for Endpoint to Windows devices using the Defender deployment tool (preview)](defender-deployment-tool-windows.md) — covers onboarding, offboarding, non-interactive deployment, and large-scale deployment scenarios.
-- [Troubleshoot Defender deployment tool issues](defender-deployment-tool-windows.md#troubleshooting) — includes deployment tool log locations and Windows event log sources for onboarding and offboarding issues.
+- [Deploy Microsoft Defender for Endpoint to Windows devices using the Defender deployment tool (preview)](defender-deployment-tool-windows.md)
+- [Troubleshoot Defender deployment tool issues](defender-deployment-tool-windows.md#troubleshooting)
 - [Onboard devices to Microsoft Defender for Endpoint](onboard-configure.md)
 - [Take response actions on a device](respond-machine-alerts.md)
