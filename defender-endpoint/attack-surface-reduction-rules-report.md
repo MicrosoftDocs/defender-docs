@@ -250,7 +250,7 @@ When you select a file, a **Summary & expected impact** fly out opens, presentin
 
 The Add exclusion page has two buttons for actions that can be used on any detected files (after selection). You can:
 
-- **Add exclusion** which opens Microsoft Intune ASR policy page. For more information, see [Intune](enable-attack-surface-reduction.md) in "Enable ASR rules alternate configuration methods."
+- **Add exclusion** which opens Microsoft Intune ASR policy page. For more information, see [Configure ASR rules in Microsoft Intune](attack-surface-reduction-rules-enable.md#configure-asr-rules-in-microsoft-intune) in "Enable ASR rules alternate configuration methods."
 - **Get exclusion paths** which downloads file paths in a csv format.
 
   :::image type="content" source="media/attack-surface-reduction-rules-report-main-add-exclusions-flyout.png" alt-text="Shows the ASR rules report add exclusions tab flyout impact summary." lightbox="media/attack-surface-reduction-rules-report-main-add-exclusions-flyout.png":::

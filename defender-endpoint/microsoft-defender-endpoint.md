@@ -54,7 +54,7 @@ This section lists key Defender for Endpoint capabilities and provides links to 
 | Capability | Description |
 |---|---|
 |[APIs](api/management-apis.md) |Automate Defender for Endpoint and integrate it into your existing workflows. |
-|[Attack surface reduction](overview-attack-surface-reduction.md) |Ensures endpoint settings are properly configured and secure, and that vulnerabilities are mitigated. Includes [network protection](network-protection.md) and [web protection](web-protection-overview.md), which regulate access to malicious IP addresses, domains, and URLs. |
+|[Attack surface reduction](attack-surface-reduction-overview.md) |Ensures endpoint settings are properly configured and secure, and that vulnerabilities are mitigated. Includes [network protection](network-protection.md) and [web protection](web-protection-overview.md), which regulate access to malicious IP addresses, domains, and URLs. |
 |[Automated investigation and remediation](automated-investigations.md) |Automatic investigation and remediation capabilities. |
 |[Endpoint Attack Notifications](endpoint-attack-notifications.md) |Proactive hunting, prioritization, and insights that help identify and respond to threats. |
 |[Endpoint detection and response](overview-endpoint-detection-response.md) |Detect, investigate, and respond to advanced threats. Includes [advanced hunting](/defender-xdr/advanced-hunting-overview) which provides a query-based threat-hunting tool that lets you proactively find breaches and create custom detections. |

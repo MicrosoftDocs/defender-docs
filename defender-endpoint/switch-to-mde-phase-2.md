@@ -120,13 +120,13 @@ This article describes how to configure your Defender for Endpoint capabilities 
     1. If you're planning to use Configuration Manager, set the toggle for **Manage Security settings using Configuration Manager** to **On**. (If you need help with this step, see [Coexistence with Microsoft Configuration Manager](/intune/intune-service/protect/mde-security-integration#co-existence-with-microsoft-endpoint-configuration-manager).)
     1. Scroll down and select **Save**.
 
-1. Configure your initial [attack surface reduction capabilities](overview-attack-surface-reduction.md). At a minimum, enable the standard protection rules that are listed in the following table right away:
+1. Configure your initial [attack surface reduction capabilities](attack-surface-reduction-overview.md). At a minimum, enable the standard protection rules that are listed in the following table right away:
 
    |Standard protection rules|Configuration methods|
    |---|---|
    |[Block credential stealing from the Windows local security authority subsystem](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem) <br/><br/>[Block abuse of exploited vulnerable signed drivers (Device)](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers)<br/><br/>[Block persistence through WMI event subscription](attack-surface-reduction-rules-reference.md#block-persistence-through-wmi-event-subscription)|[Intune](attack-surface-reduction-rules-enable.md#configure-asr-rules-in-microsoft-intune) (Device configuration profiles or Endpoint Security policies) <br/><br/>[Mobile Device Management (MDM)](attack-surface-reduction-rules-enable.md#configure-asr-rules-in-any-mdm-solution-using-the-policy-csp) (Use the [./Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReductionRules](/windows/client-management/mdm/policy-csp-defender#defender-attacksurfacereductionrules) configuration service provider (CSP) to individually enable and set the mode for each rule.)<br/><br/>[Group Policy](attack-surface-reduction-rules-enable.md#configure-asr-rules-and-exclusions-in-group-policy) or [PowerShell](attack-surface-reduction-rules-enable.md#configure-asr-rules-in-powershell) (only if you're not using Intune, Configuration Manager, or another enterprise-level management platform)|
 
-   [Learn more about attack surface reduction capabilities](overview-attack-surface-reduction.md).
+   [Learn more about attack surface reduction capabilities](attack-surface-reduction-overview.md).
 
 1. Configure your [next-generation protection capabilities](next-generation-protection.md).
 

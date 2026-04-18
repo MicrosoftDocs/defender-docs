@@ -73,7 +73,7 @@ During your initial preparation, it's vital to understand the capabilities of th
 Before you start, review the following documentation:
 
 - **Foundational information**:
-  - [Overview of attack surface reduction](overview-attack-surface-reduction.md)
+  - [Overview of attack surface reduction](attack-surface-reduction-overview.md)
   - [Demystifying attack surface reduction rules - Part 1](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/demystifying-attack-surface-reduction-rules-part-1/ba-p/1306420)
 - **ASR rule details**:
   - [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md), which also includes the rule to GUID mapping.
@@ -169,7 +169,7 @@ Some rules don't work well if unsigned, internally developed application and scr
 
 ### Attack surface reduction rules collection
 
-[Overview of attack surface reduction](overview-attack-surface-reduction.md)
+[Overview of attack surface reduction](attack-surface-reduction-overview.md)
 
 [Use attack surface reduction rules to prevent malware infection](attack-surface-reduction-rules-overview.md)
 

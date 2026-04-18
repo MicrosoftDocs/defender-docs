@@ -57,7 +57,7 @@ The following table lists the available demonstrations alphabetically, with thei
 
 ## See also
 
-[Attack surface protection overview](overview-attack-surface-reduction.md)
+[Attack surface protection overview](attack-surface-reduction-overview.md)
 [Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
 [Next Generation Protection overview](next-generation-protection.md)
 [Endpoint detection and response overview](overview-endpoint-detection-response.md)

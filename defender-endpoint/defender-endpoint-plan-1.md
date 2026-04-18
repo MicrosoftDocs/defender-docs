@@ -86,7 +86,7 @@ Your organization's attack surfaces are all the places where you're vulnerable t
 - [Network firewall](#network-firewall)
 - [Application control](#application-control)
 
-To learn more about attack surface reduction capabilities in Defender for Endpoint, see [Overview of attack surface reduction](overview-attack-surface-reduction.md).
+To learn more about attack surface reduction capabilities in Defender for Endpoint, see [Overview of attack surface reduction](attack-surface-reduction-overview.md).
 
 ### Attack surface reduction rules
 

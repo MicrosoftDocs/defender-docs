@@ -346,7 +346,7 @@ What's new
 - Added an opt-out feature for Experimental Configuration Services (ECS) and One collector in the Core Service.
 - Fixed an issue where occasionally exclusions deployed via Intune were not being honored when tamper protection was enabled.
 - After a new engine version is released, support for older versions (N-2) will now reduce to technical support only. Engine versions older than N-2 are no longer supported.
-- Improved health monitoring and telemetry for [attack surface rules](overview-attack-surface-reduction.md) exclusions.
+- Improved health monitoring and telemetry for [attack surface reduction rules](attack-surface-reduction-rules-overview.md) exclusions.
 - Updated inaccurate information in [Configure exclusions for files opened by processes](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md) regarding wildcard usage with contextual exclusions.
 
 ### March-2024 (Engine: 1.1.24030.4 | Platform: 4.18.24030.9)
@@ -432,7 +432,7 @@ What's new
 - Fixed an issue with Microsoft Defender Vulnerability Management to allow the execution of a [blocked application](/defender-vulnerability-management/tvm-block-vuln-apps) when the [warn option](/defender-vulnerability-management/tvm-block-vuln-apps#block-or-warn-mitigation-action) is selected
 - Added support for managing schedule day/time for [signature updates in Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-windows#updates) and [Defender for Endpoint security settings management](/intune/intune-service/protect/mde-security-integration)
 - Fixed non-standard signature path loading across platforms ([Windows](microsoft-defender-antivirus-windows.md), [Mac](microsoft-defender-endpoint-mac.md), [Linux](microsoft-defender-endpoint-linux.md), [Android](microsoft-defender-endpoint-android.md), and [iOS](microsoft-defender-endpoint-ios.md))
-- Improved handling of cached detections in [attack surface reduction](overview-attack-surface-reduction.md) capabilities
+- Improved handling of cached detections in [attack surface reduction](attack-surface-reduction-overview.md) capabilities
 - Improved performance for enumerating virtual memory ranges
 
 #### Known issues
@@ -684,7 +684,7 @@ What's new
 - Improved Defender performance during file copy operations for .NET applications
 - Fixed [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) app block warn feature
 - Added opt-in feature to allow users seeing exclusions
-- Fixed [ASR](overview-attack-surface-reduction.md) warn policy
+- Fixed [ASR rules](attack-surface-reduction-rules-overview.md) warn policy
 - Increased maximum size for quarantine archive file to 4 GB
 - Improvements to threat remediation logic
 - Improved [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) hardening for temporary exclusions

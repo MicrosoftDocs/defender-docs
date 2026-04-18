@@ -54,7 +54,7 @@ If these prerequisites are met, proceed to the next step to test the rule in aud
 
 If you used group policy to configure attack surface reduction rules, verify there are no extra characters like quotation marks or spaces in the identifying GUID value.
 
-For more information about configuring attack surface reduction rules in group policy, see [Enable attack surface reduction rules with group policy](enable-attack-surface-reduction.md#group-policy).
+For more information about configuring attack surface reduction rules in group policy, see [Configure ASR rules in group policy](attack-surface-reduction-rules-enable.md#configure-asr-rules-in-group-policy).
 
 <a name="querying-which-rules-are-active"></a>
 
@@ -96,7 +96,7 @@ In this example, [the displayed rules](attack-surface-reduction-rules-reference.
 
  **Audit mode** doesn't block files or processes identified by the attack surface reduction rule, but logs the detection. Follow these instructions from [Use the demo tool to see how attack surface reduction rules work](attack-surface-reduction-rules-deployment-test.md) to test the specific rule you're having problems with:
 
-1. Enable **Audit** mode for the rule. Use group policy to set the rule mode to 2 as described in [Enable attack surface reduction rules](enable-attack-surface-reduction.md).
+1. Enable **Audit** mode for the rule. Use group policy to set the rule mode to 2 as described in [Configure ASR rules in group policy](attack-surface-reduction-rules-enable.md#configure-asr-rules-in-group-policy).
 
 1. Do the action that causes the issue. For example, open the file or run the process that isn't blocked but should be blocked (false negative).
 

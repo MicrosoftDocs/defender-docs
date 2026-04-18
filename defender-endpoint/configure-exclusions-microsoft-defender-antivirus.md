@@ -57,7 +57,7 @@ Custom exclusions apply to [scheduled scans](schedule-antivirus-scans.md), [on-d
     - Malware protection.
     - [File IOCs](indicator-file.md).
     - [Certificate IOCs](indicator-certificates.md).
-  - Process exclusions on any platform prevent [network protection](network-protection.md) and [attack surface reduction rules](attack-surface-reduction.md) from inspecting traffic or enforcing rules for excluded processes.
+  - Process exclusions on any platform prevent [network protection](network-protection.md) and [attack surface reduction rules](attack-surface-reduction-rules-overview.md) from inspecting traffic or enforcing rules for excluded processes.
 
 - Periodically review and audit exclusions. Recheck and re-enforce mitigations as part of your review process. To avoid confusion, your security team should preserve context around why a certain exclusion was required.
 
