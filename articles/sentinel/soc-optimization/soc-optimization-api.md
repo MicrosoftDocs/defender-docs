@@ -2,8 +2,8 @@
 title: Use SOC optimizations programmatically
 description: Learn how to use Microsoft Sentinel SOC optimization recommendations programmatically.
 ms.pagetype: security
-ms.author: bagol
-author: batamig
+ms.author: monaberdugo
+author: mberdugo
 manager: raynew
 ms.collection:
   - usx-security
