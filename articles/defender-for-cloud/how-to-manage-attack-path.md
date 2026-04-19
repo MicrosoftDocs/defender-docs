@@ -4,7 +4,7 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how to identify and remediate attack paths in Microsoft Defender for Cloud and enhance the security of your environment.
 ms.topic: how-to
-ms.date: 05/18/2025
+ms.date: 04/19/2026
 ms.custom: sfi-image-nochange
 zone_pivot_groups: defender-portal-experience
 #customer intent: As a security analyst, I want to learn how to identify and remediate attack paths in Microsoft Defender for Cloud so that I can enhance the security of my environment.
@@ -32,7 +32,7 @@ By default attack paths are organized by risk level. The risk level is determine
 
 ## Prerequisites
 
-- You must [enable Defender Cloud Security Posture Management (CSPM)](enable-enhanced-security.md) and have [agentless scanning](enable-vulnerability-assessment-agentless.md) enabled.
+- You must [enable Defender Cloud Security Posture Management (CSPM)](connect-azure-subscription.md) and have [agentless scanning](enable-agentless-scanning-vms.md) enabled.
 
 - **Required roles and permissions**: Security Reader, Security Admin, Reader, Contributor, or Owner.
 
