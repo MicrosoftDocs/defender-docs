@@ -4,7 +4,6 @@ description: Learn more about how to exclude identities and devices from being a
 ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
-manager: orspodek
 ms.localizationpriority: medium
 ms.collection: 
   - m365-security
