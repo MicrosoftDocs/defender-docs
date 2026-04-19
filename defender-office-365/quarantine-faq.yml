@@ -5,7 +5,8 @@ metadata:
     - NOCSH
   author: chrisda
   ms.author: chrisda
-  ms.date: 10/22/2025
+  manager: bagol
+  ms.date: 04/02/2026
   audience: ITPro
   ms.topic: faq
   ms.localizationpriority: medium
@@ -123,7 +124,7 @@ sections:
           If the previous suggestion doesn't apply to you, open a support case within 7 days of the affected messages for a better chance of fixing the issue.
 
           > [!TIP]
-          > If a sender is blocked and **Don't show blocked senders** is selected (default), messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides.
+          > If a sender is blocked and **Don't show blocked senders** is selected (default), messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides. For more information, see [Limits for junk email settings](configure-junk-email-settings-on-exo-mailboxes.md#limits-for-junk-email-settings).
 
       - question: |
           A message was released from quarantine, but the original recipient can't find it. How can I determine what happened to the message?

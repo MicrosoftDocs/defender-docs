@@ -17,7 +17,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Bulk email detection in cloud organizations
+# Bulk email detection and bulk complaint level (BCL) in cloud organizations
 
 Microsoft 365 assigns a bulk complaint level (BCL) value to inbound messages from bulk senders. The BCL value is added to the message in an X-header and is similar to the [spam confidence level (SCL)](anti-spam-spam-confidence-level-scl-about.md) that identifies messages as spam. A higher BCL value indicates a bulk message is more likely to exhibit undesirable spam-like behavior. Microsoft uses both internal and external sources to identify bulk mail and determine the appropriate BCL value.
 
@@ -113,7 +113,6 @@ But you can configure anti-spam policies to deliver bulk mail below the BCL thre
      - **Users, groups, and domains** page:
        - **Include these users, groups and domains** section: Click in the **Groups** box to enter and select the **opt-in** mail-enabled security group you used in the previous steps.
        - **Exclude these users, groups and domains**: Optionally select the check box to find and enter **Users** or **Groups** (not both) to exclude from the policy.
-
      - **Actions** page: Move the **Bulk moves enabled** toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
 
        :::image type="content" source="media/anti-spam-policy-bulk-moves-enabled.png" alt-text="Screenshot of the Actions page of the new anti-spam policy wizard in the Microsoft Defender portal with Bulk moves enabled turned on." lightbox="media/anti-spam-policy-bulk-moves-enabled.png":::
@@ -143,3 +142,4 @@ The **Promotions** folder in user mailboxes has the following characteristics:
 - Bulk mail that would normally be delivered to the **Promotions** folder is delivered to the Inbox in the following scenarios:
   - The bulk sender is in the user's [Safe Senders list](create-safe-sender-lists-in-office-365.md#use-outlook-safe-senders).
   - The bulk sender is in an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) of the organization.
+- Microsoft 365 learns from user activity in the **Promotions** folder (moving messages in or out), and remembers the action for future messages.
