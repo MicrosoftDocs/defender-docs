@@ -51,6 +51,8 @@ Storage Center provides a centralized, storage-native view of Defender for Stora
 1. Where malware scanning, activity monitoring, and sensitive data discovery are enabled  
 1. Where security gaps exist across Azure Blob Storage and Azure Files storage
 
+Learn more about [Azure storage](/azure/storage/blobs/storage-blobs-overview).
+
 ### General availability of container security capabilities in Azure Government cloud
 
 April 1, 2026
