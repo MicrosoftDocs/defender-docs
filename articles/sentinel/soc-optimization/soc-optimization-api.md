@@ -4,7 +4,6 @@ description: Learn how to use Microsoft Sentinel SOC optimization recommendation
 ms.pagetype: security
 ms.author: monaberdugo
 author: mberdugo
-manager: raynew
 ms.collection:
   - usx-security
 ms.topic: concept-article
