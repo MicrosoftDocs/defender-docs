@@ -32,7 +32,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| April 20, 2026 | GA | [General availability of Defender for Storage integration in Azure Portal Storage Center](#general-availability-of-defender-for-storage-integration-in-azure-poartal-storage-center) |
+| April 20, 2026 | GA | [General availability of Defender for Storage integration in Azure Portal Storage Center](#general-availability-of-defender-for-storage-integration-in-azure-portal-storage-center) |
 | April 1, 2026 | GA | [General availability of container security capabilities in Azure Government cloud](#general-availability-of-container-security-capabilities-in-azure-government-cloud) |
 | April 1, 2026 | Upcoming change | [Update to Defender for SQL servers on machines plan for Fairfax customers](#update-to-defender-for-sql-servers-on-machines-plan-for-fairfax-customers) |
 
