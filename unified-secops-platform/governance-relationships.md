@@ -162,13 +162,13 @@ Assigning Microsoft Sentinel roles enables multitenant management features inclu
 - Content distribution
 - Direct management through the Defender portal
 
-### Assign permissions to Log Analytics workspace
+### Assign permissions to resource group
 
 Follow these steps to grant Microsoft Sentinel permissions to your delegated access groups.
 
 1. In the governed tenant, sign in to the [Azure portal](https://portal.azure.com).
 
-1. Navigate to your Log Analytics workspace.
+1. Navigate to your resource group.
 
 1. Select **Access Control (IAM)**.
 
