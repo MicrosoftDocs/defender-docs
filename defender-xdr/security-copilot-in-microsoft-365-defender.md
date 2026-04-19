@@ -65,13 +65,10 @@ For complex or multi-step requests, the chat might first present a proposed pl
 
 For example: If you ask *Investigate incident 12345 and summarize the key findings*, the chat might propose the following plan:
 
-Retrieve incident details
-
-Fetch associated alerts
-
-Collect evidence and impacted entities
-
-Summarize findings
+1. Retrieve incident details
+1. Fetch associated alerts
+1. Collect evidence and impacted entities
+1. Summarize findings
 
 Once approved, the chat executes each step and shows its progress in real time.
 
