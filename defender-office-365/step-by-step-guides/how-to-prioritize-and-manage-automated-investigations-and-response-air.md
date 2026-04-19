@@ -4,7 +4,6 @@ description: How to steps to analyze and approve AIR actions directly from the A
 ms.service: defender-office-365
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.localizationpriority: medium
 ms.collection: 
 - m365-guidance-templates
