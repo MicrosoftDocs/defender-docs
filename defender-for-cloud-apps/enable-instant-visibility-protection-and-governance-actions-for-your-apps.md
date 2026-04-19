@@ -13,7 +13,7 @@ App connectors use the APIs of app providers to enable greater visibility and co
 Microsoft Defender for Cloud Apps uses the APIs provided by the cloud provider. All communication between Defender for Cloud Apps and connected apps is encrypted using HTTPS. Each service has its own framework and API limitations such as throttling, API limits, dynamic time-shifting API windows, and others. Microsoft Defender for Cloud Apps works with the services to optimize the usage of the APIs and to provide the best performance. Taking into account different limitations that services impose on the APIs, the Microsoft Defender for Cloud Apps engines use the allowed capacity. Some operations, such as scanning all files in the tenant, require numerous APIs so they're spread over a longer period. Expect some policies to run for several hours or several days.
 
 > [!IMPORTANT]
-> Starting **September 1, 2024**, Microsoft deprecated the **Files** page from Microsoft Defender for Cloud Apps. At that point, create and modify Information Protection policies and find malware files from the **Cloud apps > Policies > Policy Management** page. For more information, see [File policies in Microsoft Defender for Cloud Apps](data-protection-policies.md).
+> Starting **September 1, 2024**, Microsoft deprecated the **Files** page from Microsoft Defender for Cloud Apps. For more information, see [File policies in Microsoft Defender for Cloud Apps](data-protection-policies.md).
 
 ## Multi-instance support
 
