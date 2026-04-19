@@ -32,8 +32,26 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| April 20, 2026 | GA | [General availability of Defender for Storage integration in Azure Portal Storage Center](#general-availability-of-defender-for-storage-integration-in-azure-portal-storage-center) |
 | April 1, 2026 | GA | [General availability of container security capabilities in Azure Government cloud](#general-availability-of-container-security-capabilities-in-azure-government-cloud) |
 | April 1, 2026 | Upcoming change | [Update to Defender for SQL servers on machines plan for Fairfax customers](#update-to-defender-for-sql-servers-on-machines-plan-for-fairfax-customers) |
+
+
+## General availability of Defender for Storage integration in Azure Portal Storage Center
+
+April 20, 2026
+
+This integration brings Defender for Storage insights directly into the native storage management experience. This approach makes it easier for customers to understand and improve their storage security posture at scale.
+
+Customers can now view Defender for Storage threat protection and security posture coverage directly in Storage Center, next to their storage resources.
+
+Storage Center provides a centralized, storage-native view of Defender for Storage protection status. This view helps customers quickly understand the following items:
+
+1. Which storage accounts are protected, partly protected, or not protected  
+1. Where malware scanning, activity monitoring, and sensitive data discovery are enabled  
+1. Where security gaps exist across Azure Blob Storage and Azure Files storage
+
+Learn more about [Azure storage](/azure/storage/blobs/storage-blobs-overview).
 
 ### General availability of container security capabilities in Azure Government cloud
 
