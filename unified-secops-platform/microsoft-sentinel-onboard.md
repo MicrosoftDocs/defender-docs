@@ -1,8 +1,6 @@
 ---
 title: Connect Microsoft Sentinel to the Microsoft Defender portal
 description: Learn how to connect your Microsoft Sentinel environment to the Defender portal to unify your security operations.
-f1.keywords: 
-  - NOCSH
 author: mberdugo
 ms.author: monaberdugo
 ms.localizationpriority: high
@@ -15,9 +13,6 @@ ms.collection:
 - zerotrust-solution
 - msftsolution-secops
 ms.topic: how-to
-search.appverid: 
-- MOE150
-- MET150
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal

@@ -3,12 +3,9 @@ title: Choose between guided and advanced modes for hunting in Microsoft Defende
 description: Guided hunting in Microsoft Defender XDR does not require KQL knowledge while advanced hunting allows you to write a query from scratch.
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
   - m365-security
   - m365initiative-m365-defender
@@ -21,7 +18,6 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-search.appverid: met150
 ms.date: 03/28/2025
 ---
 

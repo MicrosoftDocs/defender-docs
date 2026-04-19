@@ -1,10 +1,8 @@
 ---
 title: Configure automatic attack disruption in Microsoft Defender XDR
 description: Learn how to set up automatic attack disruption in Microsoft Defender XDR and ensure prerequisites are met.
-search.appverid: MET150
 ms.author: guywild
 author: guywi-ms
-audience: ITPro
 ms.topic: how-to
 ms.service: defender-xdr
 ms.localizationpriority: medium
@@ -16,7 +14,6 @@ ms.custom:
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
-f1.keywords: CSH
 ---
 
 # Configure automatic attack disruption in Microsoft Defender XDR
