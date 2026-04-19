@@ -53,6 +53,7 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 >[!NOTE] 
 > **Directory services user credentials are incorrect:**
+>
 > Automatic group managed service account (gMSA) password rotation can temporarily trigger directory credential–related health alerts. During password rotation, a sensor might briefly fail to authenticate until it retrieves the updated gMSA password.
 > These alerts are expected to resolve automatically after the sensor successfully updates its credentials. If the alert closes automatically and does not reoccur, no manual remediation is required. Administrators should verify that the gMSA is correctly configured and that the affected sensor returns to a healthy state.
 
