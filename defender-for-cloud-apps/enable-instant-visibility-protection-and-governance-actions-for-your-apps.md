@@ -159,7 +159,8 @@ The following tables list, per cloud app, which abilities are supported with App
 To enable an app connector for the first time, configure an API connection for the specific cloud app you want to connect. See the individual connector guides for each app for detailed instructions.
 
 
-1. In the Microsoft Defender portal, go to **Cloud Apps** > **Connected apps**.
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com/).
+1. Go to **Cloud Apps** > **Connected apps**.
 1. Select **Connect an app** or **Add a new connector**.
 1. Choose the cloud app you want to connect.
 1. Follow the instructions in the corresponding app-specific API connector guide. These instructions include the required permissions and authentication steps.
@@ -199,9 +200,6 @@ To re-enable connected apps:
 ## Troubleshoot missing activities after you connect an app
 
 If expected activities don't show after you connect an app, use the following checks to determine where the data should be available and whether additional configuration is required.
-
-> [!IMPORTANT]
-> Missing activity doesn't always indicate connector failure. First confirm whether the activity is expected in Defender for Cloud Apps, Microsoft Entra logs, Microsoft 365 audit logs, or Advanced Hunting.
 
 **1. Confirm the connector is healthy**
 
@@ -246,6 +244,9 @@ Use filters such as:
 **8. Check for known scope limitations**
 
 Some activities might not be fully represented in every logging surface. If an event is missing from one source, confirm whether that activity is documented as available in another source.
+
+> [!IMPORTANT]
+> Missing activity doesn't always indicate connector failure. First confirm whether the activity is expected in Defender for Cloud Apps, Microsoft Entra logs, Microsoft 365 audit logs, or Advanced Hunting.
 
 ### Investigate further
 
