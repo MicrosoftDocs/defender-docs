@@ -161,7 +161,7 @@
              href: anti-spam-spam-vs-bulk-about.md
            - name: Spam confidence level (SCL)
              href: anti-spam-spam-confidence-level-scl-about.md
-           - name: Bulk complaint level (BCL)
+           - name: Bulk email detection and bulk complaint level (BCL)
              href: anti-spam-bulk-complaint-level-bcl-about.md
            - name: Bulk senders insight
              href: anti-spam-bulk-senders-insight.md
