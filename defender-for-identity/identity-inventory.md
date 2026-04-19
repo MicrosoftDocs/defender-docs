@@ -30,9 +30,18 @@ When you enable the Unified Identity Inventory integration in Microsoft Defender
 For more information, see [Enable Unified Identity Inventory integration](/defender-cloud-apps/general-setup#enable-unified-identity-inventory-integration).
 
 > [!IMPORTANT]
-> While the Unified Identity Inventory improves identity correlation, these improvements don't currently affect some Defender for Cloud Apps capabilities. Features such as built-in detections, UEBA, scoped deployment, governance actions, and Defender for Cloud Apps policies continue to use the Cloud Application Accounts inventory. Manual and policy-based identity correlations defined in the Unified Identity Inventory aren't recognized by these features. For more information, see the relevant Defender for Cloud Apps documentation.
+> As Microsoft Defender moves toward a fully unified identity platform, some Defender for Cloud Apps data pipelines remain separate from the Unified Identity Inventory. As a result, identity correlations defined in the Unified Identity Inventory, including manual and policy-based correlations, don't currently affect the following Defender for Cloud Apps capabilities:
 >
-> This integration isn't compatible with Defender for Cloud Apps scoping. If your organization uses or plans to use Cloud Apps scoping, don't enable this integration.
+> - Built-in detections
+> - UEBA (User and Entity Behavior Analytics)
+> - Scoped deployment
+> - Governance actions
+> - Defender for Cloud Apps policies
+> - Activity log
+> - Cloud discovery user enrichment and anonymization
+> - RBAC scoping
+>
+> These features continue to use the Cloud Application Accounts inventory. For more information, see the relevant Defender for Cloud Apps documentation.
 
 The **Identity inventory** page includes tabs for:
 

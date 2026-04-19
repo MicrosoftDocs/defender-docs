@@ -21,7 +21,7 @@ For a full list of Microsoft 365 activities monitored by Defender for Cloud Apps
 
 
 > [!NOTE]
-> The Defender for Cloud Apps activity log uses a separate data pipeline from the [Unified Identity Inventory](/defender-for-identity/identity-inventory). Identity correlations defined in the Unified Identity Inventory, including manual and policy-based correlations, don't affect the user details shown in the activity log.
+> As Microsoft Defender moves toward a fully unified identity platform, some Defender for Cloud Apps data pipelines remain separate. The activity log uses a separate data pipeline that isn't yet integrated with the [Unified Identity Inventory](/defender-for-identity/identity-inventory). Correlations defined in the Unified Identity Inventory don't affect the user details shown in the activity log. For a full list of affected features, see [Enable Unified Identity Inventory integration](/defender-cloud-apps/general-setup#enable-unified-identity-inventory-integration).
 
 The **Activity log** can be filtered to enable you to find specific activities. You create policies based on the activities and then define what you want to be alerted about and act on. You can search for activities performed on certain files. The type of activities and the information we get for each activity depends on the app and what kind of data the app can provide.
 

@@ -17,7 +17,7 @@ Key points:
 - Private data is encrypted using AES-128 with a dedicated key per tenant.
 - Resolving usernames is done ad-hoc, per-username by deciphering a given encrypted username.
 - Anonymization capabilities aren't supported when using the "Defender for Cloud Apps Proxy" stream.
-- Identity correlations defined in the [Unified Identity Inventory](/defender-for-identity/identity-inventory), including manual and policy-based correlations, don't affect cloud discovery data anonymization.
+- As Microsoft Defender moves toward a fully unified identity platform, some Defender for Cloud Apps data pipelines remain separate. Cloud discovery data anonymization uses a separate data pipeline that isn't yet integrated with the [Unified Identity Inventory](/defender-for-identity/identity-inventory). Correlations defined in the Unified Identity Inventory don't affect anonymization. For a full list of affected features, see [Enable Unified Identity Inventory integration](/defender-cloud-apps/general-setup#enable-unified-identity-inventory-integration).
 
 ## Prerequisites
 

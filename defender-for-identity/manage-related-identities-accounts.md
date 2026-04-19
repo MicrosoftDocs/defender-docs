@@ -37,7 +37,18 @@ For example:
 Use the procedures in this article to manually link accounts to identities, and to manually unlink unused, legacy, or orphaned accounts from identities in Defender for Identity.
 
 > [!NOTE]
-> Manual and policy-based identity correlations defined in the Unified Identity Inventory don't currently affect Defender for Cloud Apps features such as built-in detections, UEBA, scoped deployment, governance actions, and Defender for Cloud Apps policies. These features continue to use the Cloud Application Accounts inventory.
+> As Microsoft Defender moves toward a fully unified identity platform, some Defender for Cloud Apps data pipelines remain separate from the Unified Identity Inventory. Manual and policy-based identity correlations defined in the Unified Identity Inventory don't currently affect the following Defender for Cloud Apps features:
+>
+> - Built-in detections
+> - UEBA (User and Entity Behavior Analytics)
+> - Scoped deployment
+> - Governance actions
+> - Defender for Cloud Apps policies
+> - Activity log
+> - Cloud discovery user enrichment and anonymization
+> - RBAC scoping
+>
+> These features continue to use the Cloud Application Accounts inventory.
 
 ## Prerequisites
 

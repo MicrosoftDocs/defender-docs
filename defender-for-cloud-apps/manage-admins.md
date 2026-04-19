@@ -22,7 +22,7 @@ Microsoft Defender for Cloud Apps supports role-based access control. This artic
 > - Defender for Cloud Apps Information Protection enablement requires an Microsoft Entra Admin ID, such as: Application Administrator or Cloud Application Administrator. For more details, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference) and [Protect your Microsoft 365 environment](/defender-cloud-apps/protect-office-365)
 
 > [!NOTE]
-> Identity correlations defined in the [Unified Identity Inventory](/defender-for-identity/identity-inventory) don't affect Defender for Cloud Apps RBAC scoping. Defender for Cloud Apps uses a different scoping mechanism that isn't currently in parity with the Unified Identity Inventory.
+> As Microsoft Defender moves toward a fully unified identity platform, some Defender for Cloud Apps data pipelines remain separate. Defender for Cloud Apps RBAC scoping uses a separate data pipeline that isn't yet integrated with the [Unified Identity Inventory](/defender-for-identity/identity-inventory). Correlations defined in the Unified Identity Inventory don't affect Defender for Cloud Apps scoping. For a full list of affected features, see [Enable Unified Identity Inventory integration](/defender-cloud-apps/general-setup#enable-unified-identity-inventory-integration).
 
 By default, the following Microsoft 365 and [Microsoft Entra ID](/azure/active-directory/roles/permissions-reference) admin roles have access to Defender for Cloud Apps:
 

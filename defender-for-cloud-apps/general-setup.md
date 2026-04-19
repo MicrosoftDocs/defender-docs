@@ -43,8 +43,17 @@ Enable the Unified Identity Inventory integration to ingest cloud app accounts i
 
 Review the following important considerations before enabling this setting:
 
-- This integration is **not compatible with Defender for Cloud Apps scoping**. Organizations that currently use Cloud Apps scoping can't enable this integration, and organizations that plan to use Cloud Apps scoping in the future shouldn't enable it.
-- While the Unified Identity Inventory improves identity correlation, these improvements **don't currently affect some Defender for Cloud Apps capabilities**. Features such as built-in detections, UEBA, scoped deployment, governance actions, and Defender for Cloud Apps policies continue to use the Cloud Application Accounts inventory. For more information, see the relevant Defender for Cloud Apps documentation.
+- As Microsoft Defender moves toward a fully unified identity platform, some Defender for Cloud Apps data pipelines remain separate. These improvements **don't currently affect the following Defender for Cloud Apps capabilities**:
+  - Built-in detections
+  - UEBA (User and Entity Behavior Analytics)
+  - Scoped deployment
+  - Governance actions
+  - Defender for Cloud Apps policies
+  - Activity log
+  - Cloud discovery user enrichment and anonymization
+  - RBAC scoping
+
+  These features continue to use the Cloud Application Accounts inventory. For more information, see the relevant Defender for Cloud Apps documentation.
 - The existing **Cloud Apps Accounts view remains available** to ensure backward compatibility.
 - After you enable it, **this integration can't be disabled**.
 
@@ -71,7 +80,7 @@ To change the configuration, you need one of the following roles:
 1. On the **Unified Identity Inventory Integration** page, select the **Enable Unified Identity Inventory Integration** checkbox.
 
    > [!NOTE]
-   > If Defender for Cloud Apps scoping is enabled for your tenant, the checkbox is unavailable. This integration is incompatible with Cloud Apps scoping and can't be enabled when scoping is in use.
+   > If Defender for Cloud Apps scoping is enabled for your tenant, the checkbox is unavailable.
 
 1. Select **Confirm**.
 

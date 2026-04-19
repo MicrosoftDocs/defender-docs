@@ -16,7 +16,7 @@ Cloud discovery data can now be enriched with Microsoft Entra username data. Whe
 - You can then create custom reports based on Microsoft Entra user groups. For example, a Shadow IT report for a specific Marketing department.
 
 > [!NOTE]
-> Cloud discovery user enrichment uses the Defender for Cloud Apps data pipeline. Identity correlations defined in the [Unified Identity Inventory](/defender-for-identity/identity-inventory), including manual and policy-based correlations, don't affect cloud discovery user enrichment.
+> As Microsoft Defender moves toward a fully unified identity platform, some Defender for Cloud Apps data pipelines remain separate. Cloud discovery user enrichment uses a separate data pipeline that isn't yet integrated with the [Unified Identity Inventory](/defender-for-identity/identity-inventory). Correlations defined in the Unified Identity Inventory don't affect cloud discovery user enrichment. For a full list of affected features, see [Enable Unified Identity Inventory integration](/defender-cloud-apps/general-setup#enable-unified-identity-inventory-integration).
 
 ## Prerequisites
 
