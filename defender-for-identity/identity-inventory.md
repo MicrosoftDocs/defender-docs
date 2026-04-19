@@ -25,12 +25,10 @@ appliesto:
 
 The **Identity inventory** provides a centralized view of all identities in your organization, so you can investigate, monitor, and manage them efficiently. At a glance, see key details like the identity's type, domain, tags, and other attributes to quickly spot identities that require attention.
 
-When you enable the Unified Identity Inventory integration in Microsoft Defender for Cloud Apps, SaaS and cloud application accounts are ingested into the Identity inventory. This provides a centralized view of identities across on-premises, cloud, and SaaS environments. With the integration enabled, you get access to unified experiences including the identity timeline, identity-centric response, improved identity correlation, and identity-centric protection.
-
-For more information, see [Enable Unified Identity Inventory integration](/defender-cloud-apps/general-setup#enable-unified-identity-inventory-integration).
+When you [enable the Identity inventory integration](/defender-cloud-apps/general-setup#enable-identity-inventory-integration) in Microsoft Defender for Cloud Apps, SaaS and cloud application accounts are ingested into the Identity inventory. This provides a centralized view of identities across on-premises, cloud, and SaaS environments. With the integration enabled, you get access to unified experiences including the identity timeline, identity-centric response, improved identity correlation, and identity-centric protection.
 
 > [!IMPORTANT]
-> As Microsoft Defender moves toward a fully unified identity platform, some Defender for Cloud Apps data pipelines remain separate from the Unified Identity Inventory. As a result, identity correlations defined in the Unified Identity Inventory, including manual and policy-based correlations, don't currently affect the following Defender for Cloud Apps capabilities:
+> As Microsoft Defender moves toward a fully unified identity platform, some Defender for Cloud Apps data pipelines remain separate from the Identity inventory. As a result, identity correlations defined in the Identity inventory, including manual and policy-based correlations, don't currently affect the following Defender for Cloud Apps capabilities:
 >
 > - Built-in detections
 > - UEBA (User and Entity Behavior Analytics)
@@ -45,7 +43,7 @@ For more information, see [Enable Unified Identity Inventory integration](/defen
 
 The **Identity inventory** page includes tabs for:
 
-- **Human identities**: Human identities discovered in your environment from Active Directory and Microsoft Entra ID. When the Unified Identity Inventory integration is enabled, this tab also includes SaaS and cloud application accounts from Defender for Cloud Apps.
+- **Human identities**: Human identities discovered in your environment from Active Directory and Microsoft Entra ID. When the Identity inventory integration is enabled, this tab also includes SaaS and cloud application accounts from Defender for Cloud Apps.
 - **Non-Human identities (Preview)**: Non-human identities discovered in your SaaS, Entra ID, and on-premises environments, including:
   - OAuth apps registered in:
     - Microsoft Entra ID
@@ -81,7 +79,7 @@ The top section of the Identity inventory page gives you quick insights into you
 
 - The **Critical Active Directory service accounts** card helps you quickly identify all Active Directory accounts designated as critical, making it easier to focus on identities most at risk.
 
-- The **Cloud application accounts** card connects you to your [Cloud application accounts](/defender-cloud-apps/accounts) identified by the Defender for Cloud apps application connectors. When the Unified Identity Inventory integration is enabled, cloud application accounts also appear in the **Human identities** tab.
+- The **Cloud application accounts** card connects you to your [Cloud application accounts](/defender-cloud-apps/accounts) identified by the Defender for Cloud apps application connectors. When the Identity inventory integration is enabled, cloud application accounts also appear in the **Human identities** tab.
 
 ## The identity inventory lists
 

@@ -1,6 +1,6 @@
 ---
 title: Basic setup
-description: Set up your Defender for Cloud Apps environment and enable the Unified Identity Inventory integration to get a centralized view of identities.
+description: Set up your Defender for Cloud Apps environment and enable the Identity inventory integration to get a centralized view of identities.
 ms.date: 04/15/2026
 ms.topic: how-to
 ms.custom: msecd-doc-authoring-106
@@ -37,9 +37,9 @@ For portal access requirements, see [Portal access](network-requirements.md#port
 
     * To work with Microsoft Purview Information Protection integration, you must enable the [App connector for Microsoft 365](./connect-office-365.md).
 
-## Enable Unified Identity Inventory integration
+## Enable Identity inventory integration
 
-Enable the Unified Identity Inventory integration to ingest cloud app accounts into the [Unified Identity Inventory](/defender-for-identity/identity-inventory), providing a centralized view of identities across your environment. With this integration, you get access to unified identity experiences including the identity timeline and response, improved identity correlation, and identity-centric protection.
+Enable this integration to ingest cloud app accounts into the [Identity inventory](/defender-for-identity/identity-inventory), providing a centralized view of identities across on-premises, cloud, and SaaS environments.
 
 Review the following important considerations before enabling this setting:
 
@@ -71,20 +71,20 @@ To change the configuration, you need one of the following roles:
 > [!TIP]
 > Use the least-privileged role that's sufficient for the task. Security Administrator or Cloud App Administrator is preferred over Global Administrator. If Global Administrator access is needed, consider using [Privileged Identity Management (PIM)](/entra/id-governance/privileged-identity-management/pim-configure) for just-in-time access.
 
-### Steps
+To enable the integration:
 
 1. In the Microsoft Defender portal, select **Settings**. Then choose **Cloud Apps**.
 
 1. Under **System**, select **Identity Inventory Integration**.
 
-1. On the **Unified Identity Inventory Integration** page, select the **Enable Unified Identity Inventory Integration** checkbox.
+1. On the **Identity Inventory Integration** page, select the **Enable Identity Inventory Integration** checkbox.
 
    > [!NOTE]
    > If Defender for Cloud Apps scoping is enabled for your tenant, the checkbox is unavailable.
 
 1. Select **Confirm**.
 
-After the integration is enabled, SaaS and cloud accounts are ingested into the Unified Identity Inventory. These accounts appear in the **Human identities** tab on the [Identity inventory](/defender-for-identity/identity-inventory) page.
+After the integration is enabled, SaaS and cloud accounts are ingested into the Identity inventory. These accounts appear in the **Human identities** tab on the [Identity inventory](/defender-for-identity/identity-inventory) page.
 
 
 ## Next steps

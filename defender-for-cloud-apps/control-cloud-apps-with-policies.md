@@ -13,7 +13,7 @@ Policies allow you to define the way you want your users to behave in the cloud.
 For example, if there's a data violation threat that you want to quarantine, you need a different type of policy in place than if you want to block a risky cloud app from being used by your organization.
 
 > [!NOTE]
-> As Microsoft Defender moves toward a fully unified identity platform, some Defender for Cloud Apps data pipelines remain separate. Defender for Cloud Apps policies and built-in detections use a separate data pipeline that isn't yet integrated with the [Unified Identity Inventory](/defender-for-identity/identity-inventory). Correlations defined in the Unified Identity Inventory don't currently affect these features. For a full list of affected features, see [Enable Unified Identity Inventory integration](/defender-cloud-apps/general-setup#enable-unified-identity-inventory-integration).
+> As Microsoft Defender moves toward a fully unified identity platform, some Defender for Cloud Apps data pipelines remain separate. Defender for Cloud Apps policies and built-in detections use a separate data pipeline that isn't yet integrated with the [Identity inventory](/defender-for-identity/identity-inventory). Correlations defined in the Identity inventory don't currently affect these features. For a full list of affected features, see [Enable Identity inventory integration](/defender-cloud-apps/general-setup#enable-identity-inventory-integration).
 
 ## Policy types
 

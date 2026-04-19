@@ -13,7 +13,7 @@ Microsoft Defender for Cloud Apps enables you to scope your deployment. Scoping 
 > Scoped deployment **doesn't** reduce the number of files, OAuth applications, or user accounts that are scanned. It only reduces the number of **user activities** based on the selected user group.
 
 > [!NOTE]
-> As Microsoft Defender moves toward a fully unified identity platform, some Defender for Cloud Apps data pipelines remain separate. Scoped deployment uses a separate data pipeline that isn't yet integrated with the [Unified Identity Inventory](/defender-for-identity/identity-inventory). Correlations defined in the Unified Identity Inventory don't affect scoped deployment. For a full list of affected features, see [Enable Unified Identity Inventory integration](/defender-cloud-apps/general-setup#enable-unified-identity-inventory-integration).
+> As Microsoft Defender moves toward a fully unified identity platform, some Defender for Cloud Apps data pipelines remain separate. Scoped deployment uses a separate data pipeline that isn't yet integrated with the [Identity inventory](/defender-for-identity/identity-inventory). Correlations defined in the Identity inventory don't affect scoped deployment. For a full list of affected features, see [Enable Identity inventory integration](/defender-cloud-apps/general-setup#enable-identity-inventory-integration).
 
 ## Include or exclude user groups
 
