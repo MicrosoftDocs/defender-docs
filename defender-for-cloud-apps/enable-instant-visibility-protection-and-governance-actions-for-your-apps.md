@@ -205,13 +205,12 @@ If expected activities don't show after you connect an app, use the following ch
 
 **1. Confirm the connector is healthy**
 Verify that the app connector is connected successfully and that there are no configuration warnings or permission issues.
- 
-### Step 2: Check ingestion delay expectations
+**2. Check ingestion delay expectations**
 Some connectors have expected latency before activities appear. Validate whether the connector has a documented ingestion delay before treating missing activity as an issue.
  
 **3. Confirm that the connector supports activity ingestion**
 
-Not all connectors support activity ingestion. Check whether the connector supports activity collection under the [Users and activities section](#users-and-activities).
+Check whether the connector supports activity collection under the [Users and activities section](#users-and-activities).
 
 
 **4. Review connector-specific activity options**
@@ -223,7 +222,9 @@ If scoped deployment is enabled, confirm that the account performing the activit
 Also verify whether account identifiers are being matched correctly across connected applications, especially when different identifier formats are used. 
 
 **6. Validate the expected logging surface**
-Not all events appear in the same place. Depending on the activity type, validate the event in the appropriate source:
+
+Depending on the activity type, validate the event in the appropriate source.
+
 |Event  |Source  |
 |---------|---------|
 |Defender for Cloud Apps policy administration changes     |  Microsoft Defender for Cloud Apps Activity log       |
@@ -240,7 +241,6 @@ Use filters such as:
 
 **8. Check for known scope limitations**
 Some activities might not be fully represented in every logging surface. If an event is missing from one source, confirm whether that activity is documented as available in another source.
-Important: Missing activity in one portal doesn't always indicate connector failure. First confirm whether the activity is expected in Defender for Cloud Apps, Microsoft Entra logs, Microsoft 365 audit logs, or Advanced Hunting.
 
 ### Investigate further
 
