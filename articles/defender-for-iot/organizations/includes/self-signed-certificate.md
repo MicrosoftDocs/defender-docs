@@ -1,7 +1,5 @@
 ---
 title: include
-author: limwainstein
-ms.author: lwainstein
 ms.date: 02/05/2023
 ms.topic: include
 ms.custom: sfi-image-nochange

@@ -1,8 +1,6 @@
 ---
 title: Defender for IoT - OT architecture and components
 description: Discover the OT architecture and data flow of Microsoft Defender for IoT, providing comprehensive coverage and visibility from diverse data sources.
-author: limwainstein
-ms.author: lwainstein
 ms.topic: concept-article
 ms.date: 01/30/2025
 ---

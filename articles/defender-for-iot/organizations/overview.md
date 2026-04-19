@@ -2,8 +2,6 @@
 title: Enhance your OT security with Defender for IoT
 description: Learn about Microsoft Defender for IoT's features for OT/IoT security for OT and Enterprise IoT networks.
 ms.topic: overview
-ms.author: lwainstein
-author: limwainstein
 ms.date: 01/30/2025
 ms.custom: enterprise-iot
 ---

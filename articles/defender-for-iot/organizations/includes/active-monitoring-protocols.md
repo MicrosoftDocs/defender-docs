@@ -1,7 +1,5 @@
 ---
 title: include
-author: limwainstein
-ms.author: lwainstein
 ms.date: 06/02/2022
 ms.topic: include
 ---
