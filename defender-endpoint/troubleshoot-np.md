@@ -1,9 +1,8 @@
-﻿---
+---
 title: Troubleshoot problems with Network protection
 description: Resources and sample code to troubleshoot issues with Network protection in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-audience: ITPro
 author: chrisda
 ms.author: chrisda
 ms.reviewer: oogunrinde, yongrhee
@@ -13,7 +12,6 @@ ms.collection:
 - m365-security
 - tier3
 - mde-asr
-search.appverid: met150
 ms.date: 02/24/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

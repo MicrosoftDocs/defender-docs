@@ -5,7 +5,6 @@ ms.service: defender-xdr
 ms.author: monaberdugo
 author: mberdugo
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
@@ -13,7 +12,6 @@ ms.custom:
 ms.topic: concept-article
 ms.date: 07/13/2025
 ms.reviewer:
-search.appverid: met150
 appliesto:
 - Microsoft Defender for Endpoint Plan 2
 - Microsoft Defender XDR
@@ -55,6 +53,9 @@ Permissions for managing day-to-day operations and responding to incidents and a
 |---|---|---|---|
 |Email & collaboration metadata|Read|View email and collaboration data in hunting scenarios, including advanced hunting, threat explorer, campaigns, and email entity.|
 |Email & collaboration content|Read|View and download email content and attachments.|
+|Email & collaboration content: Emails associated with alerts|Read|View and download email content associated with security alerts **Email reported by user as malware or phish** and **Email reported by user as junk**.|
+|Email & collaboration content: Quarantine Emails|Read|View and download quarantined messages for all users.|
+
 
 ## Security posture – Posture management
 

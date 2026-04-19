@@ -1,18 +1,16 @@
-﻿---
+---
 title: Troubleshoot issues and find answers on FAQs related to Microsoft Defender for Endpoint on iOS
 description: Troubleshooting and FAQ - Microsoft Defender for Endpoint on iOS
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-ios
 ms.topic: faq
 ms.subservice: ios
-search.appverid: met150
 ms.date: 01/22/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

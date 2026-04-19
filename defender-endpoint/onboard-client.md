@@ -1,4 +1,4 @@
-﻿---
+---
 title: Onboard Windows client devices to Microsoft Defender for Endpoint
 description: Find out how to onboard Windows client devices to Defender for Endpoint.
 ms.service: defender-endpoint
@@ -6,13 +6,11 @@ ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 11/17/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

@@ -2,7 +2,6 @@
 title: Schedule Microsoft Defender Antivirus protection updates
 description: Schedule the day, time, and interval for when protection updates should be downloaded
 ms.service: defender-endpoint
-search.appverid: met150
 ms.localizationpriority: medium
 ms.date: 10/20/2025
 ms.topic: how-to
