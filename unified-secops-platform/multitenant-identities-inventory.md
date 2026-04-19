@@ -7,8 +7,6 @@ title: Multitenant identities
 description: A multi-tenant identity inventory
 author: guywi-ms
 ms.author: guywild
-audience: ""
-search.appverid: ""
 ms.topic: article
 ms.date: 06/29/2025
 ---

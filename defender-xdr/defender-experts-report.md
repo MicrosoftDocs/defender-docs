@@ -2,14 +2,10 @@
 title: Understand the Defender Experts for Hunting report in Microsoft Defender
 ms.reviewer: 
 description: The Defender Experts for Hunting service publishes reports to help you understand all the threats the hunting service surfaced in your environment
-search.appverid: met150
 ms.service: defender-experts-for-hunting
-f1.keywords:
-- NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.custom: 
 - cx-ti
 - cx-ean
@@ -18,7 +14,7 @@ ms.collection:
 - tier1
 - essentials-manage
 ms.topic: concept-article
-ms.date: 10/31/2025
+ms.date: 04/16/2026
 ---
 
 # Understand the Defender Experts for Hunting report in Microsoft Defender
@@ -98,15 +94,5 @@ Each hunt that Defender Experts conduct tells a story, even when they don't find
 When you select one of the threat titles in the **Emerging threats** section or one of the activity tiles with the scroll icon in the **Hunts by threat category** section, a side panel opens that displays the **hunting summary**, or summary of the investigation related to the threat or activity: what the Defender Experts hunted for, why they hunted for it, and how they reached their final determination. The summary also provides the dates and times the hunt started and concluded, the hunt classification, and impacted assets. If applicable, it also provides links to view related Defender Experts Notifications.
 
 :::image type="content" source="media/defender-experts-report/hunting-report-hunt-summary.png" alt-text="Screenshot of a hunting summary in the Defender Experts for Hunting report." lightbox="media/defender-experts-report/hunting-report-hunt-summary.png":::
-
-## Know and understand the security weak spots in your environment
-
-The **Top trending suspicious activities** section of the report identifies up to 20 suspicious activities that Defender Experts consistently observed in your environment in the last three months, sorted based on their severity rating and frequency of occurrence:
-
-:::image type="content" source="media/defender-experts-report/top-trending-suspicious-activities.png" alt-text="Screenshot of the Top trending suspicious activities section of the report." lightbox="media/defender-experts-report/top-trending-suspicious-activities.png":::
-
-By showing the most critical and frequently observed activities, you can assess and evaluate their impact and develop strategies to prevent or mitigate potential threats to your environment.
-
-Select **View details** in each card to open a flyout panel that details the impacted devices and users. If applicable, the page also provides links to view related Defender Expert Notifications.
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

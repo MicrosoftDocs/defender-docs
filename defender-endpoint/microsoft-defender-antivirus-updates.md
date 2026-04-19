@@ -4,12 +4,10 @@ description: Manage how Microsoft Defender Antivirus receives protection and pro
 ms.service: defender-endpoint
 ms.localizationpriority: high
 ms.date: 10/20/2025
-audience: ITPro
 ms.topic: reference
 author: chrisda
 ms.author: chrisda
 ms.subservice: ngp
-search.appverid: met150
 appliesto:
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2

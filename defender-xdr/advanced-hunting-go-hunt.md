@@ -1,15 +1,11 @@
 ---
 title: Get relevant info about an entity with go hunt
 description: Learn how to use the go hunt tool on to quickly query for relevant information about an entity or event using advanced hunting.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier1

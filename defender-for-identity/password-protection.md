@@ -4,7 +4,7 @@ description: Learn how the Password protection page in Microsoft Defender helps 
 #customer intent: As a security admin, I want to see password-related risks across my identity sources so that I can find exposed credentials, weak policies, and configuration issues and take action to reduce risk.
 author: AbbyMSFT
 ms.author: abbyweisberg
-ms.date: 03/17/2026
+ms.date: 04/14/2026
 ms.topic: concept-article
 ms.service: defender-xdr
 ms.custom: msecd-doc-authoring-106
@@ -13,7 +13,9 @@ ai-usage: ai-assisted
 
 # Investigate identity password protection (Preview)
 
-The **Password protection** page in Microsoft Defender shows password-related risks across your identity sources in one place. Use it to find leaked credentials, exposed passwords, weak password policies, and configuration issues, and then take action directly from the page. It supports on-premises Active Directory, cloud identity providers like Microsoft Entra ID, and non-Microsoft providers like Okta.
+Compromised credentials remain one of the most common ways attackers gain initial access, even in environments that use multifactor authentication and modern authentication protocols. Password risks are often spread between different tools and identity providers, which can make it difficult for security teams to assess exposure and prioritize remediation.
+
+The **Password protection** page in Microsoft Defender consolidates password-related risks from your identity sources into a single, prioritized view. Use it to find leaked credentials, exposed passwords, weak password policies, and configuration issues in on-premises Active Directory, Microsoft Entra ID, federated identities, and non-Microsoft providers like Okta. For each issue, you can see why an account is at risk and take action—such as resetting a password or disabling an account—directly from the page.
 
 ## Prerequisites
 
@@ -22,17 +24,17 @@ To access the **Password protection** page, you need:
 - A Microsoft Defender for Identity license, or another license that includes Defender for Identity (such as E5), and a Microsoft Entra ID Protection license.
 - A user role with at least [Security Reader](/azure/active-directory/roles/permissions-reference#security-reader) permissions.
 
-## Page layout and identity sources
+## The Password protection page
 
 In the Microsoft Defender portal, select **Identities** > **Password protection**.
+
+:::image type="content" source="media/investigate-passwords/password-protection.png" alt-text="Screenshot of the Microsoft Defender Password protection page." lightbox="media/investigate-passwords/password-protection.png":::
 
 The page includes a left panel where you select the identity source you want to review. Supported identity sources include:
 
 - **Active Directory**: Available on all four tabs.
 - **Microsoft Entra ID**: Available on the Leaked Credentials tab.
 - **Okta**: Available on the Password Hygiene and Password Policies tabs.
-
-## What the page shows
 
 The page has four tabs:
 
@@ -41,21 +43,9 @@ The page has four tabs:
 - **Leaked Credentials**: Shows accounts with credentials that were found outside your organization, for example on public paste sites or the dark web. From this tab, you can reset passwords or disable accounts, individually or in bulk.
 - **Exposed Passwords**: Shows accounts and settings that store or expose passwords in insecure ways, such as in plain text or in easily discoverable locations. Examples include clear-text credentials in Active Directory attributes (identified using AI-based detection) and reversible passwords in Group Policy Objects (GPOs).
 
-## Account information
-
-The **Password Hygiene**, **Leaked Credentials**, and **Exposed Passwords** tabs show account-level data with the following columns:
-
-| Column | Description |
-|---|---|
-| **Name** | The display name of the account. |
-| **SID** | The Security Identifier of the account. |
-| **Entity type** | The type of entity (for example, User or Computer). |
-| **Domain** | The Active Directory domain the account belongs to. |
-| **Service account type** | The type of service account, if applicable. |
-
 ## Policy information
 
-The **Password Policies** tab shows a different set of columns:
+The **Password Policies** tab shows:
 
 | Column | Description |
 |---|---|
@@ -67,6 +57,20 @@ The **Password Policies** tab shows a different set of columns:
 | **Password complexity** | Whether password complexity requirements are enabled. |
 | **Lockout threshold** | The number of failed sign-in attempts before the account is locked. |
 | **Lockout duration** | The duration of the account lockout after the threshold is reached. |
+
+## Account information
+
+The **Password Hygiene**, **Leaked Credentials**, and **Exposed Passwords** tabs show account-level data with this information:
+
+:::image type="content" source="media/investigate-passwords/password-protection-exposed-passwords.png" alt-text="Screenshot that shows the Password protection page with the Exposed passwords tab showing. " lightbox="media/investigate-passwords/password-protection-exposed-passwords.png":::
+
+| Column | Description |
+|---|---|
+| **Name** | The display name of the account. |
+| **SID** | The Security Identifier of the account. |
+| **Entity type** | The type of entity (for example, User or Computer). |
+| **Domain** | The Active Directory domain the account belongs to. |
+| **Service account type** | The type of service account, if applicable. |
 
 ## Related content
 

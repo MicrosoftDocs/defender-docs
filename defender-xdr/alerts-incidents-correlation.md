@@ -2,21 +2,15 @@
 title: Alert correlation and incident merging in the Microsoft Defender portal
 description: Learn how alerts are correlated, and how and why incidents might be merged, in the Microsoft Defender portal.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - m365-security
   - usx-security
   - tier1
   - sentinel-only
 ms.topic: concept-article
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 03/17/2025
 appliesto: 
 - Microsoft Defender XDR 

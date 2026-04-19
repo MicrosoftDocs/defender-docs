@@ -1,15 +1,10 @@
 ---
 title: Recommendations for Microsoft 365 security settings
 keywords: Office 365 security recommendations, Sender Policy Framework, Domain-based Message Reporting and Conformance, DomainKeys Identified Mail, steps, how does it work, security baselines, baselines for default protections, baselines for Defender for Office 365, set up Defender for Office 365, configure Defender for Office 365, security configuration
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
 ms.assetid: 6f64f2de-d626-48ed-8084-03cc72301aa4
 ms.collection:
   - m365-security
@@ -19,7 +14,7 @@ ms.collection:
 description: What are best practices for email and collaboration security settings in Microsoft 365? What are the current recommendations for standard protection? What should you use to be more strict? And what extras do you get if you also use Microsoft Defender for Office 365?
 ai-usage: ai-assisted
 ms.service: defender-office-365
-ms.date: 03/23/2026
+ms.date: 03/30/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -57,8 +52,6 @@ This article describes the default threat policy settings, and also the recommen
 >   - [Change the level of protection in the Junk Email Filter](https://support.microsoft.com/office/e89c12d8-9d61-4320-8c57-d982c8d52f6b)
 >   - [Create sender allowlists](create-safe-sender-lists-in-office-365.md)
 >   - [Create sender blocklists](create-block-sender-lists-in-office-365.md)
->
-
 
 <a name='eop-anti-malware-policy-settings'></a>
 
@@ -133,6 +126,7 @@ Admins can create or use quarantine policies with more restrictive or less restr
 > |**Quarantine policy** for **High confidence phishing** (_HighConfidencePhishQuarantineTag_)|<details><summary>Show details</summary><br>**Default**: AdminOnlyAccessPolicy<br>**Standard**: AdminOnlyAccessPolicy<br>**Strict**: AdminOnlyAccessPolicy</details>|
 > |**Bulk compliant level (BCL) met or exceeded** (_BulkSpamAction_)|<details><summary>Show details</summary><br>**Default**: **Move message to Junk Email folder** (`MoveToJmf`)<br>**Standard**: **Move message to Junk Email folder** (`MoveToJmf`)<br>**Strict**: **Quarantine message** (`Quarantine`)</details>|
 > |**Quarantine policy** for **Bulk compliant level (BCL) met or exceeded** (_BulkQuarantineTag_)|<details><summary>Show details</summary><br>**Default**: DefaultFullAccessPolicy¹<br>**Standard**: DefaultFullAccessPolicy<br>**Strict**: DefaultFullAccessWithNotificationPolicy<br>**Comment**: The quarantine policy is meaningful only if bulk detections are quarantined.</details>|
+> |**Bulk moves enabled** (currently in Preview) (_BulkMovesEnabled_)|<details><summary>Show details</summary><br>**Default**: **Off** (`NotSet`)<br>**Standard**: **Off** (`NotSet`)<br>**Strict**: **Off** (`NotSet`)<br>**Comment**: For more information, see [Deliver bulk mail below the BCL threshold to the Promotions folder](anti-spam-bulk-complaint-level-bcl-about.md#deliver-bulk-mail-below-the-bcl-threshold-to-the-promotions-folder).</details>|
 > |**Intra-Organizational messages to take action on** (_IntraOrgFilterState_)|<details><summary>Show details</summary><br>**Default**: **Default** (Default)<br>**Standard**: **Default** (Default)<br>**Strict**: **Default** (Default)<br>**Comment**: The value **Default** is the same as selecting **High confidence phishing messages**. Currently, in U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD), the value **Default** is the same as selecting **None**.</details>|
 > |**Retain spam in quarantine for this many days** (_QuarantineRetentionPeriod_)|<details><summary>Show details</summary><br>**Default**: 15 days<br>**Standard**: 30 days<br>**Strict**: 30 days<br>**Comment**: This value also affects messages quarantined by anti-phishing policies. For more information, see [Quarantine retention](quarantine-about.md#quarantine-retention).</details>|
 > |**Enable spam safety tips** (_InlineSafetyTipsEnabled_)|<details><summary>Show details</summary><br>**Default**: Selected (`$true`)<br>**Standard**: Selected (`$true`)<br>**Strict**: Selected (`$true`)</details>|

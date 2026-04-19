@@ -1,10 +1,7 @@
 ---
 title: Report phishing and suspicious emails in Outlook for admins
-f1.keywords:
-- NOCSH
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.collection:
@@ -12,7 +9,6 @@ ms.collection:
   - tier1
 description: Learn how to report phishing and suspicious emails in supported versions of Outlook using the built-in Report button.
 ms.service: defender-office-365
-search.appverid: met150
 ms.date: 12/05/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>

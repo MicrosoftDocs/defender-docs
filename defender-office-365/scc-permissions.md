@@ -1,10 +1,7 @@
 ---
 title: Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: article
 f1_keywords:
   - 'ms.o365.cc.AdminRoleGroups'
@@ -12,9 +9,6 @@ ms.collection:
 - m365-security
 - tier1
 ms.localizationpriority: medium
-search.appverid:
-  - MOE150
-  - MET150
 description: Admins can learn about the roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview.
 ms.custom:
 - seo-marvel-apr2020

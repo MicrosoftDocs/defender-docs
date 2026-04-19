@@ -8,12 +8,10 @@ ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
 ms.date: 03/19/2026
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
 ms.topic: article
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -90,12 +88,12 @@ The following table summarizes how to deploy Microsoft Defender for Endpoint on 
 
 |Scenarios|Company portal app required on the device?|Protection Profile/Prerequisites|How to deploy|
 |---|---|---|---|
-|Android Enterprise personally owned devices using a work profile|Yes|Protects only the work profile section. [Learn more about the work profile](/intune/intune-service/apps/android-deployment-scenarios-app-protection-work-profiles)|[Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](/intune/intune-service/protect/microsoft-defender-deploy-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json)|
-|Android Enterprise personally owned devices using a personal profile|Yes|Protects the personal profile. When a customer also has a work profile, it protects the entire device. <ul><li>The company portal app must be enabled on personal profile.</li><li>Microsoft Defender must be already installed and active in the work profile to enable Microsoft Defender in the personal profile.</li></ul>|[Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](/intune/intune-service/protect/microsoft-defender-deploy-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json)|
-|Android Enterprise corporate owned work profile (COPE)|Yes|Protects only the work profile section. The Company Portal app and Microsoft Intune app both are automatically installed.|[Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](/intune/intune-service/protect/microsoft-defender-deploy-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json)|
-|Android Enterprise corporate owned fully managed - no work profile (COBO)|Yes|Protects the entire device. The Company Portal app and Microsoft Intune app both are automatically installed.|[Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](/intune/intune-service/protect/microsoft-defender-deploy-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json)|
+|Android Enterprise personally owned devices using a work profile|Yes|Protects only the work profile section. [Learn more about the work profile](/intune/intune-service/apps/android-deployment-scenarios-app-protection-work-profiles)|<a href="/intune/intune-service/protect/microsoft-defender-deploy-android" target="_blank" rel="noopener noreferrer">Microsoft Intune: Deploy and configure Microsoft Defender for Endpoint on Android</a>|
+|Android Enterprise personally owned devices using a personal profile|Yes|Protects the personal profile. When a customer also has a work profile, it protects the entire device. <ul><li>The company portal app must be enabled on personal profile.</li><li>Microsoft Defender must be already installed and active in the work profile to enable Microsoft Defender in the personal profile.</li></ul>|<a href="/intune/intune-service/protect/microsoft-defender-deploy-android" target="_blank" rel="noopener noreferrer">Microsoft Intune: Deploy and configure Microsoft Defender for Endpoint on Android</a>|
+|Android Enterprise corporate owned work profile (COPE)|Yes|Protects only the work profile section. The Company Portal app and Microsoft Intune app both are automatically installed.|<a href="/intune/intune-service/protect/microsoft-defender-deploy-android" target="_blank" rel="noopener noreferrer">Microsoft Intune: Deploy and configure Microsoft Defender for Endpoint on Android</a>|
+|Android Enterprise corporate owned fully managed - no work profile (COBO)|Yes|Protects the entire device. The Company Portal app and Microsoft Intune app both are automatically installed.|<a href="/intune/intune-service/protect/microsoft-defender-deploy-android" target="_blank" rel="noopener noreferrer">Microsoft Intune: Deploy and configure Microsoft Defender for Endpoint on Android</a>|
 |MAM|Yes (installed; setup isn't required)|Protects only enrolled apps. MAM supports with/without Device enrollment or enrolled with non-Microsoft Enterprise Mobility Management.|[Configure Microsoft Defender for Endpoint on Android risk signals using App Protection Policies (MAM)](android-configure-mam.md)|
-|Device Administrator (Deprecated on 31 December 2024)|Yes|Intune and Defender for Endpoint ended support for Android device administrator management on devices with access to Google Mobile Services (GMS) in December 2024.|[Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](/intune/intune-service/protect/microsoft-defender-deploy-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json)|
+|Device Administrator (Deprecated on 31 December 2024)|Yes|Intune and Defender for Endpoint ended support for Android device administrator management on devices with access to Google Mobile Services (GMS) in December 2024.|<a href="/intune/intune-service/protect/microsoft-defender-deploy-android" target="_blank" rel="noopener noreferrer">Microsoft Intune: Deploy and configure Microsoft Defender for Endpoint on Android</a>|
 
 ### Unsupported Android enrollment scenarios
 
@@ -140,7 +138,7 @@ iOS Dedicated/shared/kiosk device enrollment isn't supported.
 ### Simplify onboarding
 
 - [iOS - Zero-Touch Onboard](ios-install.md#zero-touch-silent-onboarding-to-defender-for-endpoint)
-- [Android Enterprise - Setup Always-on VPN](/intune/intune-service/protect/microsoft-defender-deploy-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#set-up-always-on-vpn)
+- <a href="/intune/intune-service/protect/microsoft-defender-deploy-android#set-up-always-on-vpn" target="_blank" rel="noopener noreferrer">Microsoft Intune: Android Enterprise - Setup Always-on VPN</a>
 - [iOS - Autosetup of VPN profile](ios-install.md#auto-onboarding-of-vpn-profile-simplified-onboarding)
 
 ## Pilot evaluation
