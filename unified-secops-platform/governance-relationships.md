@@ -42,7 +42,7 @@ Permissions:
 
 - A user with the [Tenant Governance Relationship Administrator](/entra/identity/role-based-access-control/permissions-reference#tenant-governance-relationship-administrator) role in the governing tenant.
 - To send an invitation from the governed tenant, the user must have the [Tenant Governance Administrator](/entra/identity/role-based-access-control/permissions-reference#tenant-governance-administrator) role.
-- To assign permissions to a remote tenant group, the user must have the [User Access Administrator](/azure/role-based-access-control/built-in-roles/privileged#user-access-administrator) role in Azure RBAC or [User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator) role in Entra RBAC.
+- To assign permissions to a remote tenant group, the user must have the [User Access Administrator](/azure/role-based-access-control/built-in-roles/privileged#user-access-administrator) role in Azure RBAC and a [User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator) role in Entra RBAC.
 
 ## Enable tenant governance settings
 
