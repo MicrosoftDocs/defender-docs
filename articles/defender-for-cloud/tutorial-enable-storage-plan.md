@@ -63,6 +63,8 @@ Storage Center gives you a centralized, storage-native view of Defender for Stor
 
 You can drill down from high-level insights to service-level and resource-level views, and seamlessly deep‑link into Defender for Cloud to take action and remediate gaps.
 
+Learn more about [Azure storage](/azure/storage/blobs/storage-blobs-overview).
+
 ## Related content
 
 - Learn how to [enable and configure the Defender for Storage plan at scale by using an Azure built-in policy](defender-for-storage-policy-enablement.md).
