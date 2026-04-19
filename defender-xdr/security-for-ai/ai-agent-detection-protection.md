@@ -1,5 +1,5 @@
 ---
-title: Detect, block, and investigate threats to AI agents using Microsoft Defender
+title: Detect, block, and investigate threats to AI agents using Microsoft Defender  (Preview)
 description: Learn how to detect, block, and investigate threats to AI agents in real-time using Microsoft Defender.
 ms.author: guywild
 author: guywi-ms
@@ -12,7 +12,7 @@ ms.topic: concept-article
 #customer-intent: As a security administrator, I want to learn how to detect, block, and investigate threats to AI agents in real-time using Microsoft Defender.
 ---
 
-# Detect, block, and investigate threats to AI agents using Microsoft Defender
+# Detect, block, and investigate threats to AI agents using Microsoft Defender  (Preview)
 
 Deployed AI agents operate autonomously, invoking tools, accessing data, and taking actions across systems in response to natural‑language input. This makes continuous detection, runtime protection, and investigation critical. Microsoft Defender detects suspicious and malicious agent behavior, blocks dangerous actions in real time, provides alerts in near‑real‑time, and enables security teams to investigate incidents and trace the full root cause and blast radius.
 
@@ -79,8 +79,8 @@ When you enable the relevant features, agents built with Microsoft Copilot Studi
 
 To enable these extended capabilities:
 
-- For **Microsoft Copilot Studio agents**, see [Copilot Studio integration in Microsoft Defender for Cloud Apps](/defender-cloud-apps/ai-agent-inventory).  
 - For **Microsoft Foundry agents**, see [Enable threat protection for Microsoft Foundry AI workloads](/azure/defender-for-cloud/ai-onboarding).
+- For **Microsoft Copilot Studio agents**, see [Copilot Studio integration in Microsoft Defender for Cloud Apps](/defender-cloud-apps/ai-agent-inventory).  
 
 ## Investigate AI agent threats and hunt for risks using Advanced Hunting
 
