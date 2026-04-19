@@ -1,17 +1,15 @@
-﻿---
+---
 title: Identify your architecture and select a deployment method for Defender for Endpoint
 description: Select the best Microsoft Defender for Endpoint deployment strategy for your environment.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 11/17/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -50,7 +48,7 @@ Once you have determined the architecture of your environment and have created a
 |**Windows Server** <br/>(Requires a server plan) | [Local script](configure-endpoints-script.md)<br/>[Integration with Microsoft Defender for Cloud](azure-server-integration.md)<br/>[Guidance for Windows Server with SAP](mde-sap-windows-server.md)<br/>[Defender deployment tool (preview)](./defender-deployment-tool-windows.md) for Windows Server 2008 R2 SP1 |
 |**macOS**| [Intune](mac-install-with-intune.md)<br/>[JAMF Pro](mac-install-with-jamf.md) <br/>[Local script](mac-install-manually.md)(manual deployment) <br/>[MDM tools](mac-install-with-other-mdm.md)|
 |**Linux server**<br/>(Requires a server plan)|[Defender deployment tool](./linux-install-with-defender-deployment-tool.md)<br/>[Installer script based deployment](linux-installer-script.md)<br/>[Ansible](linux-install-with-ansible.md)<br/>[Chef](linux-deploy-defender-for-endpoint-with-chef.md)<br/>[Puppet](linux-install-with-puppet.md) <br/>[Saltstack](linux-install-with-saltack.md)<br/>[Manual deployment](linux-install-manually.md)<br/>[Direct onboarding with Defender for Cloud](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)<br/>[Guidance for Linux with SAP](mde-linux-deployment-on-sap.md)|
-|**Android**|[Microsoft Intune](android-intune.md)|
+|**Android**|<a href="/intune/intune-service/protect/microsoft-defender-deploy-android" target="_blank" rel="noopener noreferrer">Microsoft Intune</a>|
 |**iOS**|[Microsoft Intune](ios-install.md) <br/> [Mobile Application Manager](ios-install-unmanaged.md) |
 
 > [!NOTE]

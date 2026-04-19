@@ -2,21 +2,15 @@
 title: Manage predictive shielding in Microsoft Defender
 description: Manage the predictive shielding feature in Microsoft Defender.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
   - usx-security
   - usx-security
 ms.topic: how-to
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 11/04/2025
 appliesto:
   - Microsoft Defender XDR

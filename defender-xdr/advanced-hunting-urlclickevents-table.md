@@ -1,15 +1,11 @@
 ---
 title: UrlClickEvents table in the advanced hunting schema
 description: Learn how to hunt for phishing campaigns and suspicious clicks using the UrlClickEvents table in the advanced hunting schema.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3

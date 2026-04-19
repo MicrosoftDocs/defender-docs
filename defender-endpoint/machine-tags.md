@@ -1,18 +1,16 @@
-﻿---
+---
 title: Create and manage device tags
 description: Use device tags to group devices to capture context and enable dynamic list creation as part of an incident
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
 ms.topic: reference
 ms.custom: api
 ms.subservice: reference
-search.appverid: met150
 ms.date: 02/27/2023
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

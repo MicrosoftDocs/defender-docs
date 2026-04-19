@@ -1,10 +1,8 @@
 ---
 title: Configure automated investigation and response capabilities in Microsoft Defender XDR
 description: Configure automated investigation and response with self-healing in Microsoft Defender XDR
-search.appverid: MET150
 ms.author: guywild
 author: guywi-ms
-audience: ITPro
 ms.topic: how-to
 ms.service: defender-xdr
 ms.localizationpriority: medium
@@ -16,7 +14,6 @@ ms.custom:
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
-f1.keywords: CSH
 #customer intent: As a SOC analyst, I want to configure automated investigation and response capabilities in Microsoft Defender XDR
 ---
 

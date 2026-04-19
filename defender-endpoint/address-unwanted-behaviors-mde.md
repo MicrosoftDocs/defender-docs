@@ -9,9 +9,6 @@ ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium 
 ms.reviewer: joshbregman
-search.appverid: MET150
-f1.keywords: NOCSH 
-audience: ITPro
 ms.custom: 
 - partner-contribution
 ms.collection: 

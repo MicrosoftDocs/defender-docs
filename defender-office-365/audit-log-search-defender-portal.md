@@ -1,10 +1,7 @@
 ---
 title: Audit log search in the Microsoft Defender portal
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: how-to
 ms.collection: 
   - m365-security
@@ -15,7 +12,6 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can use the Audit page in the Microsoft Defender portal to search the unified audit log for user and admin actions in the organization.
 ms.service: defender-office-365
-search.appverid: met150
 ms.date: 10/9/2023
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>

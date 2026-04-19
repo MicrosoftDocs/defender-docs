@@ -6,13 +6,11 @@ author: MSFTBen
 ms.author: chrisda
 manager: bagol
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-guidance-templates
 - m365-security
 - tier3
 ms.topic: how-to
-search.appverid: met150
 ms.date: 01/05/2023
 ---
 

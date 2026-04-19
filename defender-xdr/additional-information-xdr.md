@@ -9,7 +9,6 @@ ms.pagetype: security
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
@@ -17,7 +16,6 @@ ms.topic: article
 ms.custom: 
 - cx-ti
 - cx-dex
-search.appverid: met150
 ms.date: 03/05/2025
 appliesto:
   - Microsoft Defender XDR
