@@ -4,7 +4,6 @@ description: What are the step-by-step-guides for Microsoft Defender XDR for Off
 ms.service: defender-office-365
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.localizationpriority: medium
 ms.collection:
 - m365-guidance-templates

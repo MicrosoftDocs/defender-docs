@@ -4,7 +4,6 @@ description: Set up email notifications to get notified of manual and automated 
 ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
-manager: orspodek
 ms.localizationpriority: medium
 ms.collection: 
   - m365-security
