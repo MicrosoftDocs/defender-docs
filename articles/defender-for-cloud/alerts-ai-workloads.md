@@ -3,7 +3,7 @@ title: Alerts for AI services
 description: This article lists the security alerts for AI services visible in Microsoft Defender for Cloud.
 ms.topic: reference
 ms.custom: linux-related-content
-ms.date: 03/25/2026
+ms.date: 04/16/2026
 ai-usage: ai-assisted
 ms.author: elkrieger
 author: Elazark
@@ -321,8 +321,9 @@ Severity: High 
 
 **Severity:** Low 
 
-### Malicious content detected in uploaded AI model
+## Alerts for AI models
 
+### (Preview) Malicious content detected in uploaded AI model
 (Ai.AIModelScan_MalwareDetected)
 
 **Description:** A user-uploaded machine learning model was scanned and found to contain malware. The detection indicates the file may execute malicious code if loaded, posing a threat to account integrity, data confidentiality, and the compute environment.
