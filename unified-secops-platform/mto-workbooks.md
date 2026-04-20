@@ -3,7 +3,6 @@ title: Microsoft Sentinel situational awareness workbooks multitenant management
 description: Learn about multitenant management for Microsoft Sentinel situational awareness workbooks in the Microsoft Defender portal.
 author: mberdugo
 ms.author: monaberdugo
-manager: orspodek
 ms.reviewer: tbeerthuis
 ms.collection: 
 - m365-security

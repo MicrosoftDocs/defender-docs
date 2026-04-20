@@ -5,7 +5,6 @@ ms.service: defender-office-365
 ms.author: chrisda
 author: MSFTBen
 ms.localizationpriority: medium
-manager: jarogers
 ms.collection:
 - m365-guidance-templates
 - m365-security

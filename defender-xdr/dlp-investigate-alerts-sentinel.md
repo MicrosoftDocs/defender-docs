@@ -4,7 +4,6 @@ description: Investigate data loss prevention alerts in Microsoft Sentinel.
 ms.service: defender-xdr
 ms.author: monaberdugo
 author: mberdugo
-manager: orspodek
 ms.collection: 
   - m365-security
   - tier2

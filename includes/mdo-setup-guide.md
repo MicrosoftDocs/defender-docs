@@ -3,7 +3,7 @@ title: Go to the Microsoft Defender for Office 365 setup guide
 description: Learn about the Microsoft Defender for Office 365 setup guide.
 ms.reviewer: 
 ms.date: 12/20/2024
-manager: deniseb
+manager: bagol
 ms.author: chrisda
 author: chrisda
 ms.service: microsoft-365-security

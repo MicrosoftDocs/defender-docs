@@ -4,7 +4,6 @@ description: View and manage remediation actions for affected assets using the A
 ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
-manager: orspodek
 ms.localizationpriority: medium
 ms.date: 04/28/2025
 ms.collection: 
