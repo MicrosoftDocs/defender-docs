@@ -41,9 +41,7 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
  
 - **What's included:**
 
-    - Upgraded Go and related dependencies and libraries to address security vulnerabilities and improve runtime stability
-  - Improved secret handling in sensor log messages
-    
+  - Upgraded Go and related dependencies and libraries to address security vulnerabilities and improve runtime stability
 **Sensor v0.10.3 — Preview**
 
 - **Released:** March 2026
@@ -72,9 +70,8 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
 - **Released:** April 2026
  
 - **What's included:**
-    - Upgraded Go and related dependencies and libraries to address security vulnerabilities and improve runtime stability
-    - Improved secret handling in sensor log messages
 
+  - Upgraded Go and related dependencies and libraries to address security vulnerabilities and improve runtime stability
 **Sensor v0.9.52— Preview**
 
 - **Released:** March 2026
@@ -168,10 +165,8 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
 - **Released:** April 2026
  
 - **What's included:**
-    - Upgraded Go and related dependencies and libraries to address security vulnerabilities and improve runtime stability
-    - Improved secret handling in sensor log messages
 
-
+  - Upgraded Go and related dependencies and libraries to address security vulnerabilities and improve runtime stability
 **Sensor v0.8.49 — GA**
 
 - **Released:** March 2026
