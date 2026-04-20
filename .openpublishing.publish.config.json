@@ -235,6 +235,7 @@
     ".openpublishing.redirection.defender-identity.json",
     ".openpublishing.redirection.defender-office-365.json",
     ".openpublishing.redirection.defender-xdr.json",
-    ".openpublishing.redirection.unified-secops.json"
+    ".openpublishing.redirection.unified-secops.json",
+    ".openpublishing.redirection.sentinel.json"
   ]
 }
