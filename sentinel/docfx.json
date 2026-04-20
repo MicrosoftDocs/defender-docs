@@ -7,42 +7,139 @@
           "**/*.yml"
         ],
         "exclude": [
-          "**/obj/**",
+          "iot-edge/**",
+          "migrate/**",
+          "cyclecloud/**",
+          "**/_themes/**",
           "**/includes/**",
-          "_themes/**",
-          "**/docfx.json",
-          "_repo.en-us/**",
-          "README.md",
-          "LICENSE",
-          "LICENSE-CODE",
-          "ThirdPartyNotices.md",
-          "SECURITY.md"
-        ]
+          "**/obj/**",
+          "**/*.graffle"
+        ],
+        "src": ".",
+        "dest": "sentinel"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "breadcrumb",
+        "dest": "breadcrumb/sentinel"
       }
     ],
     "resource": [
       {
         "files": [
+          "**/*.gif",
+          "**/*.jpeg",
+          "**/*.jpg",
           "**/*.png",
-          "**/*.jpg"
+          "**/*.svg"
         ],
         "exclude": [
-          "**/obj/**",
-          "**/includes/**",
-          "_themes/**",
-          "**/docfx.json",
-          "_repo.en-us/**"
-        ]
+          "iot-edge/**",
+          "**/_themes/**",
+          "**/obj/**"
+        ],
+        "src": ".",
+        "dest": "sentinel"
       }
     ],
-    "overwrite": [],
-    "externalReference": [],
     "globalMetadata": {
+      "contributors_to_exclude": [
+        "alexbuckgit",
+        "American-Dipper",
+        "AnnaMHuff",
+        "cdpark",
+        "Court72",
+        "damabe",
+        "denrea",
+        "dksimpson",
+        "garycentric",
+        "GitHubber17",
+        "Jak-MS",
+        "JamesJBarnett",
+        "JasonWHowell",
+        "JillGrant615",
+        "JKirsch1",
+        "Jmart1428",
+        "JustPies",
+        "ktoliver",
+        "LizCasey1",
+        "MeeraDi",
+        "meganbradley",
+        "mohitp930",
+        "mSarts",
+        "ms-robkni",
+        "openpublishingbuild",
+        "paulth1",
+        "PMEds28",
+        "PRmerger",
+        "PRMerger17",
+        "PRMerger-2",
+        "PRMerger3",
+        "PRMerger4",
+        "PRMerger5",
+        "PRMerger9",
+        "rjagiewich",
+        "rmca14",
+        "Saisang",
+        "sdwheeler",
+        "ShannonLeavitt",
+        "ShawnJackson",
+        "ShawnKupfer",
+        "tfosmark",
+        "TimShererWithAquent",
+        "ttorble",
+        "tysonn",
+        "v-albemi",
+        "v-ccolin",
+        "v-dirichards",
+        "v-emilypr",
+        "v-lmcdonald",
+        "v-regandowner",
+        "v-savila",
+        "v-shils",
+        "v-stsavell",
+        "v-thepet",
+        "v-thpra"
+      ],
+      "breadcrumb_path": "~/breadcrumb/sentinel/toc.yml",
+      "_op_documentIdPathDepotMapping": {
+        "articles/iot-central/": {}
+      },
+      "brand": "azure",
+      "feedback_github_repo": "MicrosoftDocs/defender-docs",
+      "feedback_help_link_url": "https://learn.microsoft.com/answers/tags/423/microsoft-sentinel/",
+      "feedback_help_link_type": "get-help-at-qna",
+      "feedback_product_url": "https://feedback.azure.com/d365community/forum/79b1327d-d925-ec11-b6e6-000d3a4f06a4",
       "feedback_system": "Standard",
-      "breadcrumb_path": "~/breadcrumb/sentinel-azure/toc.yml",
-      "permissioned-type": "public"
+      "learn_banner_products": [
+        "azure"
+      ],
+      "featureFlags": [
+        "show_learn_banner"
+      ],
+      "searchScope": [
+        "Azure"
+      ],
+      "permissioned-type": "public",
+      "recommendations": true,
+      "recommendation_types": [
+        "Training",
+        "Certification"
+      ],
+      "uhfHeaderId": "azure",
+      "ms.suite": "office",
+      "adobe-target": true,
+      "zone_pivot_group_filename": "zone-pivot-groups.json",
+      "manager": "orspodek",
+      "ms.service": "microsoft-sentinel",
+      "ms.subservice": "sentinel-siem",
+      "search.appverid": "met150"
     },
     "fileMetadata": {},
+    "overwrite": [],
+    "externalReference": [],
     "template": []
   }
 }
