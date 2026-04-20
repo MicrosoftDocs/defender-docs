@@ -3,7 +3,7 @@ title: Protect your Virtual Machines (VMs) with Microsoft Defender for Servers
 description: This tutorial shows you how to configure a just-in-time VM access policy and an application control policy.
 ms.topic: tutorial
 ms.custom: mvc
-ms.date: 07/15/2025
+ms.date: 04/19/2026
 
 ---
 # Protect your Virtual Machines (VMs) with Microsoft Defender for Servers
@@ -19,7 +19,7 @@ In this tutorial you'll learn how to:
 
 ## Prerequisites
 
-To step through the features covered in this tutorial, you must have Defender for Cloud's enhanced security features enabled. A free trial is available. To upgrade, see [Enable enhanced protections](enable-enhanced-security.md).
+To step through the features covered in this tutorial, you must have Defender for Cloud's enhanced security features enabled. A free trial is available. To upgrade, see [Enable enhanced protections](connect-azure-subscription.md).
 
 ## Manage VM access
 

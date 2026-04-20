@@ -306,6 +306,7 @@ The following table lists the features provided by Defender for Containers for t
 Defender for Containers relies on the Defender sensor for several features. The Defender sensor is supported only with Linux Kernel 5.4 and above, on the following host operating systems:
 
 - Amazon Linux 2
+- AWS Bottlerocket (provisioning Via Helm only)
 - CentOS 8  (CentOS reached end of service on June 30, 2024. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).)
 - Debian 10
 - Debian 11

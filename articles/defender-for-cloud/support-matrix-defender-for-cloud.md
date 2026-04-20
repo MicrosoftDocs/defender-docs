@@ -4,7 +4,7 @@ description: Learn about the Azure cloud environments where Defender for Cloud c
 ms.topic: limits-and-quotas
 author: Elazark
 ms.author: elkrieger
-ms.date: 01/27/2026
+ms.date: 04/19/2026
 ---
 
 # Support matrices for Defender for Cloud
@@ -50,7 +50,7 @@ Defender for Cloud provides recommendations, security alerts, and vulnerability 
 
 \* These features are currently supported in preview.
 
-\*\* Microsoft Entra recommendations are available only for subscriptions with [enhanced security features enabled](enable-enhanced-security.md).
+\*\* Microsoft Entra recommendations are available only for subscriptions with [enhanced security features enabled](connect-azure-subscription.md).
 
 ## Cloud support
 

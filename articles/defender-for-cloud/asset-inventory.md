@@ -1,7 +1,7 @@
 ---
 title: Cloud asset inventory
 description: Learn about the cloud asset inventory in Microsoft Defender for Cloud and Security Exposure Management
-ms.date: 12/03/2025
+ms.date: 04/19/2026
 ms.topic: how-to
 ms.author: dlanger
 author: dlanger
@@ -181,7 +181,7 @@ securityresources
 - [Manage and respond to security alerts](manage-respond-alerts.md)
 - [Continuous export](continuous-export.md) - Export security data to SIEM, SOAR, or other tools
 - [Create custom security dashboards with Azure Workbooks](custom-dashboards-azure-workbooks.md)
-- [Enable Defender for Cloud plans](enable-enhanced-security.md)
+- [Enable Defender for Cloud plans](connect-azure-subscription.md)
 - [Connect AWS accounts](quickstart-onboard-aws.md)
 - [Connect GCP projects](quickstart-onboard-gcp.md)
 

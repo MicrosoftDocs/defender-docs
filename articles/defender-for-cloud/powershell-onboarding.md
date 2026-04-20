@@ -2,7 +2,7 @@
 title: Onboard with PowerShell
 description: This document walks you through the process of enabling Microsoft Defender for Cloud with PowerShell cmdlets.
 ms.topic: quickstart
-ms.date: 05/25/2025
+ms.date: 04/19/2026
 ms.custom: mode-api, devx-track-azurepowershell
 ---
 
@@ -16,7 +16,7 @@ This article provides a sample PowerShell script that can be modified and used i
 
 In this example, we'll enable Defender for Cloud on a subscription with ID: `<Subscription ID>` and apply the recommended settings that provide a high level of protection, by enabling Microsoft Defender for Cloud's enhanced security features, which provides advanced threat protection and detection capabilities:
 
-1. Enable [the enhanced security in Microsoft Defender for Cloud](enable-enhanced-security.md).
+1. Enable [the enhanced security in Microsoft Defender for Cloud](connect-azure-subscription.md).
 
 1. Set the organization’s [CISO as the security contact for Defender for Cloud alerts and notable events](configure-email-notifications.md).
 
