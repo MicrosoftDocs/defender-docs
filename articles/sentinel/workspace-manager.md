@@ -1,8 +1,8 @@
 ---
 title: Manage multiple Microsoft Sentinel workspaces with workspace manager
 description: Learn how to centrally manage multiple Microsoft Sentinel workspaces within one or more Azure tenants with workspace manager. This article takes you through provisioning and usage of Workspace Manager to help you gain operational efficiency and operate at scale.
-author: batamig
-ms.author: bagol
+author: EdB-MSFT
+ms.author: edbaynash
 ms.topic: how-to
 ms.date: 10/17/2024
 ms.custom: template-how-to
@@ -19,10 +19,11 @@ appliesto:
 Learn how to centrally manage multiple Microsoft Sentinel workspaces within one or more Azure tenants with workspace manager. This article takes you through provisioning and usage of workspace manager. Whether you're a global enterprise or a Managed Security Services Provider (MSSP), workspace manager helps you operate at scale efficiently.
 
 Here are the active content types supported with workspace manager:
+
 - Analytics rules
 - Automation rules (excluding Playbooks)
 - Parsers, Saved Searches and Functions
-- Hunting and Livestream queries
+- Hunting queries
 - Workbooks
 
 > [!IMPORTANT]

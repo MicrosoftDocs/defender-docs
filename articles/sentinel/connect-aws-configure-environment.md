@@ -80,6 +80,9 @@ Follow these instructions in the AWS documentation:<br>[Creating OpenID Connect 
 
 ### 3. Create an AWS assumed role
 
+   > [!IMPORTANT]
+   > The name must include the exact prefix `OIDC_`; otherwise, the connector can't function properly.
+
 1. Follow these instructions in the AWS documentation:<br>[Creating a role for web identity or OpenID Connect Federation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-idp_oidc.html#idp_oidc_Create). 
    
    | Parameter | Selection/Value | Comments |
@@ -152,6 +155,7 @@ Microsoft Sentinel provides these AWS connectors:
 
 - [Amazon Web Services Web Application Firewall (WAF) connector](connect-aws-s3-waf.md): Ingests AWS WAF logs, collected in AWS S3 buckets, to Microsoft Sentinel.
 - [Amazon Web Services service log connector](connect-aws.md): Ingests AWS service logs, collected in AWS S3 buckets, to Microsoft Sentinel.
+- [Amazon Web Services Elastic Kubernetes Service (EKS) log connector](connect-aws-eks.md): Ingests AWS EKS audit logs, collected in AWS S3 buckets, to Microsoft Sentinel.
  
 ---
 
