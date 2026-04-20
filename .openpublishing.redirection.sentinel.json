@@ -3321,87 +3321,87 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "articles/sentinel/datalake/sentinel-mcp-chatgpt-connector.md",
+      "source_path": "sentinel/datalake/sentinel-mcp-chatgpt-connector.md",
       "redirect_url": "/azure/sentinel/datalake/sentinel-mcp-chatgpt-claude-connector",
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/articles/sentinel/automation-in-azure-sentinel.md",
+      "source_path_from_root": "/sentinel/automation-in-azure-sentinel.md",
       "redirect_url": "/azure/sentinel/automation",
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/articles/sentinel/azure-sentinel-billing.md",
+      "source_path_from_root": "/sentinel/azure-sentinel-billing.md",
       "redirect_url": "/azure/sentinel/billing",
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/articles/sentinel/connect-azure-security-center.md",
+      "source_path_from_root": "/sentinel/connect-azure-security-center.md",
       "redirect_url": "/azure/sentinel/connect-defender-for-cloud",
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/articles/sentinel/data-connectors/azure-information-protection.md",
+      "source_path_from_root": "/sentinel/data-connectors/azure-information-protection.md",
       "redirect_url": "/azure/sentinel/data-connectors-reference",
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/articles/sentinel/entities-in-azure-sentinel.md",
+      "source_path_from_root": "/sentinel/entities-in-azure-sentinel.md",
       "redirect_url": "/azure/sentinel/entities",
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/articles/sentinel/normalization-schema.md",
+      "source_path_from_root": "/sentinel/normalization-schema.md",
       "redirect_url": "/azure/sentinel/network-normalization-schema",
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/articles/sentinel/quickstart-get-visibility.md",
+      "source_path_from_root": "/sentinel/quickstart-get-visibility.md",
       "redirect_url": "/azure/sentinel/get-visibility",
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/articles/sentinel/tutorial-detect-threats-built-in.md",
+      "source_path_from_root": "/sentinel/tutorial-detect-threats-built-in.md",
       "redirect_url": "/azure/sentinel/detect-threats-built-in",
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/articles/sentinel/tutorial-detect-threats-custom.md",
+      "source_path_from_root": "/sentinel/tutorial-detect-threats-custom.md",
       "redirect_url": "/azure/sentinel/detect-threats-custom",
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/articles/sentinel/tutorial-investigate-cases.md",
+      "source_path_from_root": "/sentinel/tutorial-investigate-cases.md",
       "redirect_url": "/azure/sentinel/investigate-cases",
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/articles/sentinel/tutorial-monitor-your-data.md",
+      "source_path_from_root": "/sentinel/tutorial-monitor-your-data.md",
       "redirect_url": "/azure/sentinel/monitor-your-data",
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/articles/sentinel/data-connectors/threat-intelligence-upload-indicators-api.md",
+      "source_path_from_root": "/sentinel/data-connectors/threat-intelligence-upload-indicators-api.md",
       "redirect_url": "/azure/sentinel/data-connectors/threat-intelligence-upload-api",
       "redirect_document_id": false
     },
     {
-      "source_path": "articles/sentinel/resources.md",
+      "source_path": "sentinel/resources.md",
       "redirect_url": "/azure/sentinel/overview",
       "redirect_document_id": false
     },
     {
-      "source_path": "articles/sentinel/kusto-resources.md",
+      "source_path": "sentinel/kusto-resources.md",
       "redirect_url": "/kusto/query/kql-learning-resources?view=microsoft-sentinel?view=microsoft-sentinel&preserve-view=true&toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json",
       "redirect_document_id": false
     },
     {
-      "source_path": "articles/sentinel/work-with-styx-objects-and-indicators.md",
+      "source_path": "sentinel/work-with-styx-objects-and-indicators.md",
       "redirect_url": "/azure/sentinel/work-with-styx-objects-indicators",
       "redirect_document_id": false
     },
     {
-      "source_path": "articles/sentinel/work-with-styx-objects-indicators.md",
+      "source_path": "sentinel/work-with-styx-objects-indicators.md",
       "redirect_url": "/azure/sentinel/work-with-stix-objects-indicators",
       "redirect_document_id": false
     }
