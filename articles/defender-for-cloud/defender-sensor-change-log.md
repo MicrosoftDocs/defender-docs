@@ -35,6 +35,15 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
 
 ### Sensor v0.10 (deployed by Helm or Arc for K8s in Preview mode)
 
+**Sensor v0.10.4 — Preview**
+
+- **Released:** April 2026
+ 
+- **What's included:**
+
+    - Upgraded Go and related dependencies and libraries to address security vulnerabilities and improve runtime stability
+  - Improved secret handling in sensor log messages
+    
 **Sensor v0.10.3 — Preview**
 
 - **Released:** March 2026
@@ -57,6 +66,14 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
   - Binary drift blocking 
     
 ### Sensor v0.9 (deployed by Helm or Arc for K8s in Preview mode)
+
+**Sensor v0.9.53— Preview**
+
+- **Released:** April 2026
+ 
+- **What's included:**
+    - Upgraded Go and related dependencies and libraries to address security vulnerabilities and improve runtime stability
+    - Improved secret handling in sensor log messages
 
 **Sensor v0.9.52— Preview**
 
@@ -102,15 +119,13 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
         
       - Various configuration and path fixes to ensure reliable log collection and prevent duplicate data. 
             
-
-
 **Sensor v0.9.50 – Preview**
 
 - **Released:** February 2026
-
 - **What's included:**
 
-  - Performance Improvements 
+  - Performance improvements
+    
     
 **Sensor v0.9.49 – Preview**
 
@@ -147,6 +162,15 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
   - Bug fixes and security enhancements  
     
 ### Sensor v0.8 (relevant to all AKS supported versions and Arc for K8s)
+
+**Sensor v0.8.50 — GA**
+
+- **Released:** April 2026
+ 
+- **What's included:**
+    - Upgraded Go and related dependencies and libraries to address security vulnerabilities and improve runtime stability
+    - Improved secret handling in sensor log messages
+
 
 **Sensor v0.8.49 — GA**
 
@@ -206,6 +230,7 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
 **Sensor v0.8.30 – GA**  
 - **Released:** August 2025  
 - **What's included:**
+
   - Better memory efficiency and reduced CPU consumption  
   - Bug fixes and security enhancements  
     
