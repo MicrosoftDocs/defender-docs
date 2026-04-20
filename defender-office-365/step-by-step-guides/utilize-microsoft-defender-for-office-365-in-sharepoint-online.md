@@ -4,7 +4,6 @@ description: The steps to ensure that you can use, and get the value from, Micro
 ms.service: defender-office-365
 author: MSFTBen
 ms.author: chrisda
-manager: bagol
 ms.localizationpriority: medium
 ms.collection: 
 - m365-guidance-templates
