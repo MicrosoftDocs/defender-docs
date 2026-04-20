@@ -356,10 +356,10 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 | Feature area | Update summary |
 |--------------|---------------|
-| Threat Detection |Extend threat detection coverage to kernel module files (.ko). |
-| Definition updates |offline definition updates are now rate-limited to one attempt per definition update interval, preventing excessive server load during repeated service restarts. Does not alter non-offline definition updates. |
-| General |Addressed security vulnerabilities in TVM on Linux to improve robustness and protect sensitive runtime information. |
-| General |Safely scoped SELinux cleanup during MDE Linux upgrades to avoid impacting customer‑defined policies. |
+| Visibility |File creation activity is now recorded for Linux kernel module files (.ko). This improves visibility into kernel‑level changes on Linux systems.|
+| Configuration|Offline definition updates now run at most once per configured definition update interval. This prevents repeated full downloads during service restarts while leaving cloud‑based updates unchanged.|
+| Vulnerability detection|Improved robustness of MDVM vulnerability detection on Linux by strengthening runtime data handling.|
+| Bug Fix|Resolved an SELinux policy cleanup issue affecting upgrades on some RHEL‑based Linux systems. Upgrading to version 101.26032.0000 ensures safe removal of legacy SELinux modules while preserving customer‑defined policies.|
 
 ### Linux | March 2026 | 101.26021.0002
 
