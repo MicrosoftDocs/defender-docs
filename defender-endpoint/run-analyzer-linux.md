@@ -1,4 +1,4 @@
----
+﻿---
 title: Run the client analyzer on Linux
 description: Run the Defender for Endpoint client analyzer on Linux
 author: chrisda
@@ -14,6 +14,9 @@ ms.collection:
 - m365-security
 - tier3
 - mde-macos
+search.appverid: met150
+audience: ITPro
+f1.keywords: NOCSH
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -512,7 +515,7 @@ sudo ./mde_support_tool.sh skipfaultyrules -e true
 
 ## Use live response in Defender for Endpoint to collect support logs
 
-The XMDE Client Analyzer tool can be downloaded as a [binary](https://aka.ms/XMDEClientAnalyzerBinary) or [Python](https://aka.ms/XMDEClientAnalyzer) package that can be extracted and executed on Linux machines. Both versions of the XMDE Client Analyzer can be executed during a Live Response session.
+The XMDE Client Analyzer can be run during a Live Response session either by using the version that is already included with Microsoft Defender for Endpoint on Linux, or by downloading the Client Analyzer as a [binary](https://aka.ms/XMDEClientAnalyzerBinary) or [Python](https://aka.ms/XMDEClientAnalyzer) package and extracting it on the device.
 
 - For installation, the `unzip` package is required.
 - For execution, the `acl` package is required.
@@ -722,9 +725,3 @@ The Python version of the client analyzer accepts command line parameters to per
 - [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](linux-support-events.md)
 
 - [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
-
-
-
-
-
-
