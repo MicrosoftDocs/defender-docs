@@ -45,7 +45,7 @@ This section covers the first three of the five components discussed earlier. Yo
 
 ### Acquire an access token
 
-Acquire a Microsoft Entra access token with [OAuth 2.0 authentication](../active-directory/fundamentals/auth-oauth2.md). [V1.0 and V2.0](/entra/identity-platform/access-tokens#token-formats) are valid tokens accepted by the API.
+Acquire a Microsoft Entra access token with [OAuth 2.0 authentication](/azure/active-directory/fundamentals/auth-oauth2). [V1.0 and V2.0](/entra/identity-platform/access-tokens#token-formats) are valid tokens accepted by the API.
 
 The version of the token (v1.0 or v2.0) that your application receives is determined by the `accessTokenAcceptedVersion` property in the [app manifest](/entra/identity-platform/reference-app-manifest#manifest-reference) of the API that your application is calling. If `accessTokenAcceptedVersion` is set to 1, then your application will receive a v1.0 token.
 

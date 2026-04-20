@@ -80,7 +80,7 @@ The steps in this procedure reference specific articles in the Azure Machine Lea
 
 1. Create a virtual machine (VM) jump box within a virtual network. Since the virtual network restricts access from the public internet, the jump box is used as a way to connect to resources behind the virtual network.
 
-1. Access the jump box, and then go to your Microsoft Sentinel workspace. We recommend using [Azure Bastion](../bastion/bastion-overview.md) to access the VM.
+1. Access the jump box, and then go to your Microsoft Sentinel workspace. We recommend using [Azure Bastion](/azure/bastion/bastion-overview) to access the VM.
 
 1.  For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), under **Threat management**, select **Notebooks**.<br> For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Microsoft Sentinel** > **Threat management** > **Notebooks**.
 
@@ -131,7 +131,7 @@ Continue with one of the following sets of steps:
 
     1. For each resource, including both **privatelink.api.azureml.ms** and **privatelink.notebooks.azure.ms**, add a virtual network link.
 
-        Select the resource > **Virtual network links** > **Add**. For more information, see [Link the virtual network](../dns/private-dns-getstarted-portal.md).
+        Select the resource > **Virtual network links** > **Add**. For more information, see [Link the virtual network](/azure/dns/private-dns-getstarted-portal).
 
 For more information, see:
 

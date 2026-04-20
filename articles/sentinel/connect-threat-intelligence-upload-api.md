@@ -51,13 +51,13 @@ Follow these steps to import threat intelligence STIX objects to Microsoft Senti
 
 ## Register a Microsoft Entra application
 
-The [default user role permissions](../active-directory/fundamentals/users-default-permissions.md#restrict-member-users-default-permissions) allow users to create application registrations. If this setting was switched to **No**, you need permission to manage applications in Microsoft Entra. Any of the following Microsoft Entra roles include the required permissions:
+The [default user role permissions](/azure/active-directory/fundamentals/users-default-permissions#restrict-member-users-default-permissions) allow users to create application registrations. If this setting was switched to **No**, you need permission to manage applications in Microsoft Entra. Any of the following Microsoft Entra roles include the required permissions:
 
 - Application administrator
 - Application developer
 - Cloud application administrator
 
-For more information on registering your Microsoft Entra application, see [Register an application](../active-directory/develop/quickstart-register-app.md#register-an-application).
+For more information on registering your Microsoft Entra application, see [Register an application](/azure/active-directory/develop/quickstart-register-app#register-an-application).
 
 After you register your application, record its application (client) ID from the application's **Overview** tab.
 
@@ -76,14 +76,14 @@ The upload API ingests threat intelligence objects at the workspace level and re
 
 1. Select **Review + assign**.
 
-For more information on assigning roles to applications, see [Assign a role to the application](../active-directory/develop/howto-create-service-principal-portal.md#assign-a-role-to-the-application).
+For more information on assigning roles to applications, see [Assign a role to the application](/azure/active-directory/develop/howto-create-service-principal-portal#assign-a-role-to-the-application).
 
 ## Configure your threat intelligence platform solution or custom application
 
 The following configuration information is required by the upload API:
 
 - Application (client) ID
-- Microsoft Entra access token with [OAuth 2.0 authentication](../active-directory/fundamentals/auth-oauth2.md)
+- Microsoft Entra access token with [OAuth 2.0 authentication](/azure/active-directory/fundamentals/auth-oauth2)
 - Microsoft Sentinel workspace ID
 
 Enter these values in the configuration of your integrated TIP or custom solution where required.

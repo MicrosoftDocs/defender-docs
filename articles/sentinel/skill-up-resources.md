@@ -442,7 +442,7 @@ To provide robust workflow-based automation capabilities, automation rules use [
 
 - View the "Unleash the automation Jedi tricks and build Logic Apps playbooks like a boss" webinar: [YouTube](https://www.youtube.com/watch?v=G6TIzJK8XBA&ab_channel=MicrosoftSecurityCommunity), [MP4](https://onedrive.live.com/?authkey=%21AMHoD01Fnv0Nkeg&cid=66C31D2DBF8E0F71&id=66C31D2DBF8E0F71%21513&parId=66C31D2DBF8E0F71%21511&o=OneUp), or [presentation](https://onedrive.live.com/?authkey=%21AJK2W6MaFrzSzpw&cid=66C31D2DBF8E0F71&id=66C31D2DBF8E0F71%21514&parId=66C31D2DBF8E0F71%21511&o=OneUp).
 
-- Read about [Logic Apps](../logic-apps/logic-apps-overview.md), which is the core technology that drives Microsoft Sentinel playbooks.
+- Read about [Logic Apps](/azure/logic-apps/logic-apps-overview), which is the core technology that drives Microsoft Sentinel playbooks.
 
 - See [The Microsoft Sentinel Logic Apps connector](/connectors/azuresentinel/), the link between Logic Apps and Microsoft Sentinel.
 

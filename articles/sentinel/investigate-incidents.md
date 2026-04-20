@@ -24,11 +24,11 @@ This article describes how to investigate an incident in depth, helping you navi
 
 ## Prerequisites
 
-- The [**Microsoft Sentinel Responder**](../role-based-access-control/built-in-roles.md#microsoft-sentinel-responder) role assignment is required to investigate incidents.
+- The [**Microsoft Sentinel Responder**](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-responder) role assignment is required to investigate incidents.
 
     Learn more about [roles in Microsoft Sentinel](roles.md).
 
-- If you have a guest user that needs to assign incidents, the user must be assigned the [Directory Reader](../active-directory/roles/permissions-reference.md#directory-readers) role in your Microsoft Entra tenant. Regular (nonguest) users have this role assigned by default.
+- If you have a guest user that needs to assign incidents, the user must be assigned the [Directory Reader](/azure/active-directory/roles/permissions-reference#directory-readers) role in your Microsoft Entra tenant. Regular (nonguest) users have this role assigned by default.
 
 If you're currently viewing the [legacy experience](investigate-cases.md) of the incident details page, toggle on the new experience at the top-right of the page to continue with the procedures in this article for the new experience.
 

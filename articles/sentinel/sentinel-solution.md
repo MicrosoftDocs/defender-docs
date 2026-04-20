@@ -54,7 +54,7 @@ Before installing the **Zero Trust (TIC 3.0)** solution, make sure you have the 
 
     - Continuously export Microsoft Defender for Cloud data to your Log Analytics workspace. For more information, see [Continuously export Microsoft Defender for Cloud data](/azure/defender-for-cloud/continuous-export?tabs=azure-portal).
 
-- **Required user permissions**. To install the **Zero Trust (TIC 3.0)** solution, you must have access to your Microsoft Sentinel workspace with [Security Reader](../active-directory/roles/permissions-reference.md#security-reader) permissions.
+- **Required user permissions**. To install the **Zero Trust (TIC 3.0)** solution, you must have access to your Microsoft Sentinel workspace with [Security Reader](/azure/active-directory/roles/permissions-reference#security-reader) permissions.
 
 The **Zero Trust (TIC 3.0)** solution is also enhanced by integrations with other Microsoft Services, such as:
 
@@ -165,13 +165,13 @@ For more information, see [Use Azure Monitor workbooks to visualize and monitor 
 
 ### Is this available in government regions?
 
-Yes. The **Zero Trust (TIC 3.0)** solution is in Public Preview and deployable to Commercial/Government regions. For more information, see [Cloud feature availability for commercial and US Government customers](../security/fundamentals/feature-availability.md).
+Yes. The **Zero Trust (TIC 3.0)** solution is in Public Preview and deployable to Commercial/Government regions. For more information, see [Cloud feature availability for commercial and US Government customers](/azure/security/fundamentals/feature-availability).
 
 ### Which permissions are required to use this content?
 
-- [Microsoft Sentinel Contributor](../role-based-access-control/built-in-roles.md#microsoft-sentinel-contributor) users can create and edit workbooks, analytics rules, and other Microsoft Sentinel resources.
+- [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor) users can create and edit workbooks, analytics rules, and other Microsoft Sentinel resources.
 
-- [Microsoft Sentinel Reader](../role-based-access-control/built-in-roles.md#microsoft-sentinel-reader) users can view data, incidents, workbooks, and other Microsoft Sentinel resources.
+- [Microsoft Sentinel Reader](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-reader) users can view data, incidents, workbooks, and other Microsoft Sentinel resources.
 
 For more information, see [Permissions in Microsoft Sentinel](roles.md).
 

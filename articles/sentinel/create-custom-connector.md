@@ -78,7 +78,7 @@ For examples of useful Logstash plugins, see:
 
 ## Connect with Logic Apps
 
-Use [Azure Logic Apps](../logic-apps/index.yml) to create a serverless, custom connector for Microsoft Sentinel.
+Use [Azure Logic Apps](/azure/logic-apps/) to create a serverless, custom connector for Microsoft Sentinel.
 
 > [!NOTE]
 > While creating serverless connectors using Logic Apps may be convenient, using Logic Apps for your connectors may be costly for large volumes of data.
@@ -90,9 +90,9 @@ Use [Azure Logic Apps](../logic-apps/index.yml) to create a serverless, custom c
 
     |Trigger  |Description  |
     |---------|---------|
-    |**A recurring task**     |   For example, schedule your Logic App to retrieve data regularly from specific files, databases, or external APIs. <br>For more information, see [Create, schedule, and run recurring tasks and workflows in Azure Logic Apps](../connectors/connectors-native-recurrence.md).      |
-    |**On-demand triggering**     | Run your Logic App on-demand for manual data collection and testing. <br>For more information, see  [Call, trigger, or nest logic apps using HTTPS endpoints](../logic-apps/logic-apps-http-endpoint.md).        |
-    |**HTTP/S endpoint**     |  Recommended for streaming, and if the source system can start the data transfer. <br>For more information, see [Call service endpoints over HTTP or HTTPS](../connectors/connectors-native-http.md).       |
+    |**A recurring task**     |   For example, schedule your Logic App to retrieve data regularly from specific files, databases, or external APIs. <br>For more information, see [Create, schedule, and run recurring tasks and workflows in Azure Logic Apps](/azure/connectors/connectors-native-recurrence).      |
+    |**On-demand triggering**     | Run your Logic App on-demand for manual data collection and testing. <br>For more information, see  [Call, trigger, or nest logic apps using HTTPS endpoints](/azure/logic-apps/logic-apps-http-endpoint).        |
+    |**HTTP/S endpoint**     |  Recommended for streaming, and if the source system can start the data transfer. <br>For more information, see [Call service endpoints over HTTP or HTTPS](/azure/connectors/connectors-native-http).       |
 
 
 1. **Use any of the Logic App connectors that read information to get your events**. For example:
@@ -107,9 +107,9 @@ Use [Azure Logic Apps](../logic-apps/index.yml) to create a serverless, custom c
 
 1. **Prepare the information you want to retrieve**.
 
-    For example, use the [parse JSON action](../logic-apps/logic-apps-perform-data-operations.md#parse-json-action) to access properties in JSON content, enabling you to select those properties from the dynamic content list when you specify inputs for your Logic App.
+    For example, use the [parse JSON action](/azure/logic-apps/logic-apps-perform-data-operations#parse-json-action) to access properties in JSON content, enabling you to select those properties from the dynamic content list when you specify inputs for your Logic App.
 
-    For more information, see [Perform data operations in Azure Logic Apps](../logic-apps/logic-apps-perform-data-operations.md).
+    For more information, see [Perform data operations in Azure Logic Apps](/azure/logic-apps/logic-apps-perform-data-operations).
 
 1. **Write the data to Log Analytics**.
 
@@ -134,7 +134,7 @@ For more information, see the following articles:
 
 ## Connect with Azure Functions
 
-Use Azure Functions together with a RESTful API and various coding languages, such as [PowerShell](../azure-functions/functions-reference-powershell.md), to create a serverless custom connector.
+Use Azure Functions together with a RESTful API and various coding languages, such as [PowerShell](/azure/azure-functions/functions-reference-powershell), to create a serverless custom connector.
 
 For examples of this method, see:
 

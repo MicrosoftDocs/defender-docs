@@ -52,18 +52,18 @@ Review which Microsoft Sentinel or Azure Logic Apps features map to the main QRa
 |QRadar  |Microsoft Sentinel/Azure Logic Apps  |
 |---------|---------|
 |Rules |[Analytics rules](detect-threats-built-in.md) attached to playbooks or automation rules |
-|Gateway |[Condition control](../logic-apps/logic-apps-control-flow-conditional-statement.md) |
-|Scripts |[Inline code](../logic-apps/logic-apps-add-run-inline-code.md) |
-|Custom action processors |[Custom API calls](../logic-apps/logic-apps-create-api-app.md) in Azure Logic Apps or third party connectors |
-|Functions |[Azure Function connector](../logic-apps/logic-apps-azure-functions.md) |
-|Message destinations |[Azure Logic Apps with Azure Service Bus](../connectors/connectors-create-api-servicebus.md) |
+|Gateway |[Condition control](/azure/logic-apps/logic-apps-control-flow-conditional-statement) |
+|Scripts |[Inline code](/azure/logic-apps/logic-apps-add-run-inline-code) |
+|Custom action processors |[Custom API calls](/azure/logic-apps/logic-apps-create-api-app) in Azure Logic Apps or third party connectors |
+|Functions |[Azure Function connector](/azure/logic-apps/logic-apps-azure-functions) |
+|Message destinations |[Azure Logic Apps with Azure Service Bus](/azure/connectors/connectors-create-api-servicebus) |
 |IBM X-Force Exchange |• [Automation > Templates tab](use-playbook-templates.md)<br>• [Content hub catalog](sentinel-solutions-catalog.md)<br>• [GitHub](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks/Block-OnPremADUser) |
 
 ## Operationalize playbooks and automation rules in Microsoft Sentinel
 
 Most of the playbooks that you use with Microsoft Sentinel are available in either the [Automation > Templates tab](use-playbook-templates.md), the [Content hub catalog](sentinel-solutions-catalog.md), or [GitHub](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks/Block-OnPremADUser). In some cases, however, you might need to create playbooks from scratch or from existing templates.
 
-You typically build your custom logic app using the Azure Logic App Designer feature. The logic apps code is based on [Azure Resource Manager (ARM) templates](../azure-resource-manager/templates/overview.md), which facilitate development, deployment and portability of Azure Logic Apps across multiple environments. To convert your custom playbook into a portable ARM template, you can use the [ARM template generator](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/export-microsoft-sentinel-playbooks-or-azure-logic-apps-with/ba-p/3275898).
+You typically build your custom logic app using the Azure Logic App Designer feature. The logic apps code is based on [Azure Resource Manager (ARM) templates](/azure/azure-resource-manager/templates/overview), which facilitate development, deployment and portability of Azure Logic Apps across multiple environments. To convert your custom playbook into a portable ARM template, you can use the [ARM template generator](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/export-microsoft-sentinel-playbooks-or-azure-logic-apps-with/ba-p/3275898).
 
 Use these resources for cases where you need to build your own playbooks either from scratch or from existing templates.
 - [Automate incident handling in Microsoft Sentinel](automate-incident-handling-with-automation-rules.md)

@@ -12,7 +12,7 @@ ms.date: 06/05/2023
 
 # Use Azure Functions to connect Microsoft Sentinel to your data source
 
-You can use [Azure Functions](../azure-functions/functions-overview.md), in conjunction with various coding languages such as [PowerShell](../azure-functions/functions-reference-powershell.md) or Python, to create a serverless connector to the REST API endpoints of your compatible data sources. Azure Function Apps then allow you to connect Microsoft Sentinel to your data source's REST API to pull in logs.
+You can use [Azure Functions](/azure/azure-functions/functions-overview), in conjunction with various coding languages such as [PowerShell](/azure/azure-functions/functions-reference-powershell) or Python, to create a serverless connector to the REST API endpoints of your compatible data sources. Azure Function Apps then allow you to connect Microsoft Sentinel to your data source's REST API to pull in logs.
 
 This article describes how to configure Microsoft Sentinel for using Azure Function Apps. You may also need to configure your source system, and you can find vendor- and product-specific information links in each data connector's page in the portal, or the section for your service in the [Microsoft Sentinel data connectors reference](data-connectors-reference.md) page.
 
@@ -31,7 +31,7 @@ Make sure that you have the following permissions and credentials before using A
 
 - You must have read permissions to shared keys for the workspace. [Learn more about workspace keys](/azure/azure-monitor/agents/agent-windows#workspace-id-and-key).
 
-- You must have read and write permissions on Azure Functions to create a Function App. [Learn more about Azure Functions](../azure-functions/index.yml).
+- You must have read and write permissions on Azure Functions to create a Function App. [Learn more about Azure Functions](/azure/azure-functions/).
 
 - You will also need credentials for accessing the product's API - either a username and password, a token, a key, or some other combination. You may also need other API information such as an endpoint URI.
 
@@ -42,7 +42,7 @@ Make sure that you have the following permissions and credentials before using A
 ## Configure and connect your data source
 
 > [!NOTE]
-> - You can securely store workspace and API authorization keys or tokens in Azure Key Vault. Azure Key Vault provides a secure mechanism to store and retrieve key values. [Follow these instructions](../app-service/app-service-key-vault-references.md) to use Azure Key Vault with an Azure Function App.
+> - You can securely store workspace and API authorization keys or tokens in Azure Key Vault. Azure Key Vault provides a secure mechanism to store and retrieve key values. [Follow these instructions](/azure/app-service/app-service-key-vault-references) to use Azure Key Vault with an Azure Function App.
 >
 > - Some data connectors depend on a parser based on a [Kusto Function](/kusto/query/functions/user-defined-functions?view=microsoft-sentinel&preserve-view=true) to work as expected. See the section for your service in the [Microsoft Sentinel data connectors reference](data-connectors-reference.md) page for links to instructions to create the Kusto function and alias.
 
@@ -152,7 +152,7 @@ Use the following step-by-step instructions to manually deploy Azure Functions-b
 1. **Deploy a Function App**
 
     > [!NOTE]
-    > You will need to [prepare Visual Studio Code](../azure-functions/how-to-create-function-vs-code.md?pivot=programming-language-python) (VS Code) for Azure Function development.
+    > You will need to [prepare Visual Studio Code](/azure/azure-functions/how-to-create-function-vs-code?pivot=programming-language-python) (VS Code) for Azure Function development.
 
     1. Download the Azure Function App file using the link supplied on the data connector page and in the section for your service in the [Microsoft Sentinel data connectors reference](data-connectors-reference.md) page. Extract the archive to your local development computer.
 

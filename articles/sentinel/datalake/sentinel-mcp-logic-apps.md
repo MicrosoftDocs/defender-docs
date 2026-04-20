@@ -17,7 +17,7 @@ ms.subservice: sentinel-platform
 > [!IMPORTANT]
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-You can access the value of Microsoft Sentinel's collection of Model Context Protocol (MCP) tools in [Azure Logic Apps](../../logic-apps/logic-apps-overview.md), starting with the [entity analyzer tool](sentinel-mcp-data-exploration-tool.md#entity-analyzer). Security analysts and automation engineers often spend significant time creating complex Security Orchestration, Automation, and Response (SOAR) templates to enrich entities and reach verdicts.
+You can access the value of Microsoft Sentinel's collection of Model Context Protocol (MCP) tools in [Azure Logic Apps](/azure/logic-apps/logic-apps-overview), starting with the [entity analyzer tool](sentinel-mcp-data-exploration-tool.md#entity-analyzer). Security analysts and automation engineers often spend significant time creating complex Security Orchestration, Automation, and Response (SOAR) templates to enrich entities and reach verdicts.
 
 The entity analyzer tool, built on Microsoft Sentinel data lake data, offers a single action that combines multiple data points to deliver a verdict for the entity. It supports user and URL entities, and you can easily access it through templates or integrate it into preexisting playbooks.
 
@@ -108,7 +108,7 @@ To prevent timeouts from too many analyses running at once and to avoid hitting 
 
 :::image type="content" source="media/sentinel-mcp/logic-app-concurrency.png" alt-text="Screenshot of the logic app loop settings." lightbox="media/sentinel-mcp/logic-app-concurrency.png":::
 
-For more information about loops, see [Add loops to repeat actions in workflows for Azure Logic Apps](../../logic-apps/logic-apps-control-flow-loops.md).
+For more information about loops, see [Add loops to repeat actions in workflows for Azure Logic Apps](/azure/logic-apps/logic-apps-control-flow-loops).
 
  
 ## Related content

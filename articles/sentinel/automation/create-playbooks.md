@@ -243,7 +243,7 @@ Follow these steps to create your Standard logic app:
 
    :::image type="content" source="../media/create-playbooks/designer-standard.png" alt-text="Screenshot shows designer in Standard logic app workflow." lightbox="../media/create-playbooks/designer-standard.png":::
 
-1. [Follow these general steps to find the **Microsoft Sentinel** triggers](../../logic-apps/create-workflow-with-trigger-or-action.md?tabs=standard#add-trigger), which include these triggers:
+1. [Follow these general steps to find the **Microsoft Sentinel** triggers](/azure/logic-apps/create-workflow-with-trigger-or-action?tabs=standard#add-trigger), which include these triggers:
 
    - **Microsoft Sentinel entity**
    - **Microsoft Sentinel alert**
@@ -296,7 +296,7 @@ When you add a trigger or subsequent action that requires authentication, you mi
 
 ### Add actions to your playbook
 
-Now that you have a workflow for your playbook, define what happens when you call the playbook. Add actions, logical conditions, loops, or switch case conditions, all by selecting the plus sign (**+**) on the designer. For more information, see [Create a workflow with a trigger or action](../../logic-apps/create-workflow-with-trigger-or-action.md).
+Now that you have a workflow for your playbook, define what happens when you call the playbook. Add actions, logical conditions, loops, or switch case conditions, all by selecting the plus sign (**+**) on the designer. For more information, see [Create a workflow with a trigger or action](/azure/logic-apps/create-workflow-with-trigger-or-action).
 
 This selection opens the **Add an action** pane where you can browse or search for services, applications, systems, control flow actions, and more. After you enter your search terms or select the resource that you want, the results list shows you the available actions.
 
@@ -319,7 +319,7 @@ Playbooks created with the **Microsoft Sentinel entity** trigger often use the *
 
 To prevent this failure, we recommend that you create a condition that checks for a value in the incident ID field before the workflow takes any other actions. You can prescribe a different set of actions to take if the field has a null value, due to the playbook not being run from an incident.
 
-1. In your workflow, preceding the first action that refers to the **Incident ARM ID** field, [follow these general steps to add a **Condition** action](../../logic-apps/create-workflow-with-trigger-or-action.md).
+1. In your workflow, preceding the first action that refers to the **Incident ARM ID** field, [follow these general steps to add a **Condition** action](/azure/logic-apps/create-workflow-with-trigger-or-action).
 
 1. In the **Condition** pane, on the condition row, select the left **Choose a value** field, and then select the dynamic content option (lightning icon).
 

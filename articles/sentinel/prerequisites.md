@@ -18,9 +18,9 @@ Before deploying Microsoft Sentinel, make sure that your Azure tenant meets the 
 
 |Requirement  |Description  |
 |---------|---------|
-|**Licensing, tenant, or individual account**     |   A [Microsoft Entra ID license and tenant](../active-directory/develop/quickstart-create-new-tenant.md), or an [individual account with a valid payment method](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn), are required to access Azure and deploy resources.      |
-|**Azure subscription**     |    An [Azure subscription](../cost-management-billing/manage/create-subscription.md) is required to track resource creation and billing.     |
-|**Permissions**     | Assign [relevant permissions](../role-based-access-control/index.yml) to your subscription. For new subscriptions, designate an [owner/contributor](../role-based-access-control/rbac-and-directory-admin-roles.md).   <br><br>- To maintain the least privileged access, assign roles at resource group level.<br>  - For more control over permissions and access, set up custom roles. For more information, see [Role-based access control](../role-based-access-control/custom-roles.md) (RBAC).<br>- For extra separation between users and security users, consider [resource-context](resource-context-rbac.md) or [table-level RBAC](https://techcommunity.microsoft.com/t5/azure-sentinel/table-level-rbac-in-azure-sentinel/ba-p/965043). <br><br>  For more information about other roles and permissions supported for Microsoft Sentinel, see [Permissions in Microsoft Sentinel](roles.md).     |
+|**Licensing, tenant, or individual account**     |   A [Microsoft Entra ID license and tenant](/azure/active-directory/develop/quickstart-create-new-tenant), or an [individual account with a valid payment method](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn), are required to access Azure and deploy resources.      |
+|**Azure subscription**     |    An [Azure subscription](/azure/cost-management-billing/manage/create-subscription) is required to track resource creation and billing.     |
+|**Permissions**     | Assign [relevant permissions](/azure/role-based-access-control/) to your subscription. For new subscriptions, designate an [owner/contributor](/azure/role-based-access-control/rbac-and-directory-admin-roles).   <br><br>- To maintain the least privileged access, assign roles at resource group level.<br>  - For more control over permissions and access, set up custom roles. For more information, see [Role-based access control](/azure/role-based-access-control/custom-roles) (RBAC).<br>- For extra separation between users and security users, consider [resource-context](resource-context-rbac.md) or [table-level RBAC](https://techcommunity.microsoft.com/t5/azure-sentinel/table-level-rbac-in-azure-sentinel/ba-p/965043). <br><br>  For more information about other roles and permissions supported for Microsoft Sentinel, see [Permissions in Microsoft Sentinel](roles.md).     |
 
   
 
@@ -30,11 +30,11 @@ A [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) is
 
 The Log Analytics workspace must not have a resource lock applied, and the workspace pricing tier must be pay-as-you-go or a commitment tier. Log Analytics legacy pricing tiers and resource locks aren't supported when enabling Microsoft Sentinel. For more information about pricing tiers, see [Simplified pricing tiers for Microsoft Sentinel](enroll-simplified-pricing-tier.md#prerequisites).
 
-[Network security perimeters](../private-link/network-security-perimeter-concepts.md) aren't supported for Log Analytics workspaces enabled for Microsoft Sentinel. If a network security perimeter is enabled on the workspace, analytic rules are automatically disabled.
+[Network security perimeters](/azure/private-link/network-security-perimeter-concepts) aren't supported for Log Analytics workspaces enabled for Microsoft Sentinel. If a network security perimeter is enabled on the workspace, analytic rules are automatically disabled.
 
 ### Dedicated resource group (recommended)
 
-To reduce complexity, we recommend a dedicated [resource group](../azure-resource-manager/management/manage-resource-groups-portal.md) for your Log Analytics workspace enabled for Microsoft Sentinel. This resource group should only contain the resources that Microsoft Sentinel uses, including the Log Analytics workspace, any playbooks, workbooks, and so on.
+To reduce complexity, we recommend a dedicated [resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal) for your Log Analytics workspace enabled for Microsoft Sentinel. This resource group should only contain the resources that Microsoft Sentinel uses, including the Log Analytics workspace, any playbooks, workbooks, and so on.
 
 A dedicated resource group allows for permissions to be assigned once, at the resource group level, with permissions automatically applied to dependent resources. With a dedicated resource group, access management of Microsoft Sentinel is efficient and less prone to improper permissions. Reducing permission complexity ensures users and service principals have the permissions required to complete actions and makes it easier to keep less privileged roles from accessing inappropriate resources.
 

@@ -43,7 +43,7 @@ To enable or disable this feature (these prerequisites aren't required to use th
     - **Contributor** at the resource group level or above.
     - (Least privileged) **Microsoft Sentinel Contributor** at the workspace level or above and **Log Analytics Contributor** at the resource group level or above.
 
-- Your workspace must not have any Azure resource locks applied to it. [Learn more about Azure resource locking](../azure-resource-manager/management/lock-resources.md).
+- Your workspace must not have any Azure resource locks applied to it. [Learn more about Azure resource locking](/azure/azure-resource-manager/management/lock-resources).
 
 > [!NOTE]
 > - No special license is required to add UEBA functionality to Microsoft Sentinel, and there's no extra cost for using it.

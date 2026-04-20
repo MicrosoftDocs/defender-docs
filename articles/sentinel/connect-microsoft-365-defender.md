@@ -29,7 +29,7 @@ Microsoft Defender XDR incidents include alerts, entities, and other relevant in
 Before you begin, you must have the appropriate licensing, access, and configured resources described in this section.
 
 - You must have a valid license for Microsoft Defender XDR, as described in [Microsoft Defender XDR prerequisites](/microsoft-365/security/mtp/prerequisites).
-- Your user must have the [Security Administrator](../active-directory/roles/permissions-reference.md#security-administrator) role on the tenant you want to stream the logs from, or the equivalent permissions.
+- Your user must have the [Security Administrator](/azure/active-directory/roles/permissions-reference#security-administrator) role on the tenant you want to stream the logs from, or the equivalent permissions.
 - You must have read and write permissions on your Microsoft Sentinel workspace.
 - To make any changes to the connector settings, your account must be a member of the same Microsoft Entra tenant with which your Microsoft Sentinel workspace is associated.
 - Install the **Microsoft Defender XDR** solution from the **Content Hub** in Microsoft Sentinel. For more information, see [Discover and manage Microsoft Sentinel out-of-the-box content](sentinel-solutions-deploy.md). If you're working in the Defender portal, this solution is automatically installed.

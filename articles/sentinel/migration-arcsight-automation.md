@@ -52,10 +52,10 @@ Review which Microsoft Sentinel or Azure Logic Apps features map to the main Arc
 
 |ArcSight  |Microsoft Sentinel/Azure Logic Apps  |
 |---------|---------|
-|Trigger     |[Trigger](../logic-apps/logic-apps-overview.md)         |
-|Automation bit     |[Azure Function connector](../logic-apps/logic-apps-azure-functions.md)         |
-|Action     |[Action](../logic-apps/logic-apps-overview.md)         |
-|Scheduled playbooks     |Playbooks initiated by the [recurrence trigger](../connectors/connectors-native-recurrence.md)         |
+|Trigger     |[Trigger](/azure/logic-apps/logic-apps-overview)         |
+|Automation bit     |[Azure Function connector](/azure/logic-apps/logic-apps-azure-functions)         |
+|Action     |[Action](/azure/logic-apps/logic-apps-overview)         |
+|Scheduled playbooks     |Playbooks initiated by the [recurrence trigger](/azure/connectors/connectors-native-recurrence)         |
 |Workflow playbooks     |Playbooks automatically initiated by Microsoft Sentinel [alert or incident triggers](playbook-triggers-actions.md)         |
 |Marketplace     |• [Automation > Templates tab](use-playbook-templates.md)<br>• [Content hub catalog](sentinel-solutions-catalog.md)<br>• [GitHub](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks/Block-OnPremADUser) |
 
@@ -63,7 +63,7 @@ Review which Microsoft Sentinel or Azure Logic Apps features map to the main Arc
 
 Most of the playbooks that you use with Microsoft Sentinel are available in either the [Automation > Templates tab](use-playbook-templates.md), the [Content hub catalog](sentinel-solutions-catalog.md), or [GitHub](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks/Block-OnPremADUser). In some cases, however, you might need to create playbooks from scratch or from existing templates.
 
-You typically build your custom logic app using the Azure Logic App Designer feature. The logic apps code is based on [Azure Resource Manager (ARM) templates](../azure-resource-manager/templates/overview.md), which facilitate development, deployment and portability of Azure Logic Apps across multiple environments. To convert your custom playbook into a portable ARM template, you can use the [ARM template generator](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/export-microsoft-sentinel-playbooks-or-azure-logic-apps-with/ba-p/3275898).
+You typically build your custom logic app using the Azure Logic App Designer feature. The logic apps code is based on [Azure Resource Manager (ARM) templates](/azure/azure-resource-manager/templates/overview), which facilitate development, deployment and portability of Azure Logic Apps across multiple environments. To convert your custom playbook into a portable ARM template, you can use the [ARM template generator](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/export-microsoft-sentinel-playbooks-or-azure-logic-apps-with/ba-p/3275898).
 
 Use these resources for cases where you need to build your own playbooks either from scratch or from existing templates.
 - [Automate incident handling in Microsoft Sentinel](automate-incident-handling-with-automation-rules.md)

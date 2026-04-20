@@ -63,9 +63,9 @@ To ingest your historical data into Microsoft Sentinel Auxiliary Logs or Basic L
 
 To ingest your historical data into Azure Blob Storage (option 3 in the [diagram above](#export-data-from-the-legacy-siem)): 
 
-1. [Install and configure AzCopy](../storage/common/storage-use-azcopy-v10.md) on the system to which you exported the logs. Alternatively, install AzCopy on another system that has access to the exported logs.  
-1. [Create an Azure Blob Storage account](../storage/common/storage-account-create.md) and copy the authorized [Microsoft Entra ID](../storage/common/storage-use-azcopy-v10.md#option-1-use-azure-active-directory) credentials or [Shared Access Signature](../storage/common/storage-use-azcopy-v10.md#option-2-use-a-sas-token) token.   
-1. [Run AzCopy](../storage/common/storage-use-azcopy-v10.md#run-azcopy) with the folder path that includes the exported logs as the source, and the Azure Blob Storage connection string as the output.
+1. [Install and configure AzCopy](/azure/storage/common/storage-use-azcopy-v10) on the system to which you exported the logs. Alternatively, install AzCopy on another system that has access to the exported logs.  
+1. [Create an Azure Blob Storage account](/azure/storage/common/storage-account-create) and copy the authorized [Microsoft Entra ID](/azure/storage/common/storage-use-azcopy-v10#option-1-use-azure-active-directory) credentials or [Shared Access Signature](/azure/storage/common/storage-use-azcopy-v10#option-2-use-a-sas-token) token.   
+1. [Run AzCopy](/azure/storage/common/storage-use-azcopy-v10#run-azcopy) with the folder path that includes the exported logs as the source, and the Azure Blob Storage connection string as the output.
 
 ## Next steps
 

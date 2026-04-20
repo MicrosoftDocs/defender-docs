@@ -127,4 +127,4 @@ The following example shows a SAP LogServ infrastructure-layer detection for a H
 - [Deploy the Microsoft Sentinel solution for SAP applications](deployment-overview.md)
 - [Microsoft Sentinel Solution for SAP BTP overview](sap-btp-solution-overview.md)
 - [Microsoft Sentinel solution for SAP - Partner add-ons](solution-partner-overview.md)
-- [Azure identity and security services with SAP RISE](../../sap/workloads/rise-integration-security.md)
+- [Azure identity and security services with SAP RISE](/azure/sap/workloads/rise-integration-security)

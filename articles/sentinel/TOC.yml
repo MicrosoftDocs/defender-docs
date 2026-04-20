@@ -210,9 +210,9 @@
         - name: Integrate Microsoft Defender for IoT
           items:
             - name: Connect Defender for IoT data with Microsoft Sentinel
-              href: ../defender-for-iot/organizations/iot-solution.md?bc=%2fazure%2fsentinel%2fbreadcrumb%2ftoc.json&toc=%2fazure%2fsentinel%2fTOC.json
+              href: /azure/defender-for-iot/organizations/iot-solution?bc=%2fazure%2fsentinel%2fbreadcrumb%2ftoc.json&toc=%2fazure%2fsentinel%2fTOC.json
             - name: Investigate Defender for IoT incidents with Microsoft Sentinel
-              href: ../defender-for-iot/organizations/iot-advanced-threat-monitoring.md?bc=%2fazure%2fsentinel%2fbreadcrumb%2ftoc.json&toc=%2fazure%2fsentinel%2fTOC.json
+              href: /azure/defender-for-iot/organizations/iot-advanced-threat-monitoring?bc=%2fazure%2fsentinel%2fbreadcrumb%2ftoc.json&toc=%2fazure%2fsentinel%2fTOC.json
         - name: Integrate Microsoft Defender XDR
           href: microsoft-365-defender-sentinel-integration.md
         - name: Integrate Microsoft Defender for Cloud
@@ -1000,9 +1000,9 @@
         - name: Azure RBAC roles
           items:
             - name: All Azure roles
-              href: ../role-based-access-control/built-in-roles.md
+              href: /azure/role-based-access-control/built-in-roles
             - name: Microsoft Sentinel roles
-              href: ../role-based-access-control/built-in-roles.md#security
+              href: /azure/role-based-access-control/built-in-roles#security
             - name: Configure Microsoft Sentinel scoping (row-level RBAC)
               href: scoping.md
     - name: Advanced Security Information Model (ASIM)

@@ -20,7 +20,7 @@ Your Microsoft Sentinel pre-purchase plan automatically uses your SCUs to pay fo
 
 To buy a pre-purchase plan, you must have one of the following Azure subscriptions and roles:
 - For an Azure subscription, the owner role or reservation purchaser role is required.
-- For an Enterprise Agreement (EA) subscription, the [**Reserved Instances** policy option](../cost-management-billing/manage/direct-ea-administration.md#view-and-manage-enrollment-policies) must be enabled. To enable that policy option, you must be an EA administrator of the subscription.
+- For an Enterprise Agreement (EA) subscription, the [**Reserved Instances** policy option](/azure/cost-management-billing/manage/direct-ea-administration#view-and-manage-enrollment-policies) must be enabled. To enable that policy option, you must be an EA administrator of the subscription.
 - For a Cloud Solution Provider (CSP) subscription, follow one of these articles:
    - [Buy Azure reservations on behalf of a customer](/partner-center/customers/azure-reservations-buying)
    - [Allow the customer to buy their own reservations](/partner-center/customers/give-customers-permission)
@@ -70,16 +70,16 @@ Purchase Microsoft Sentinel pre-purchase plans in the [Azure portal reservations
 
    :::image type="content" source="media/sentinel-pre-purchase-plan.png" alt-text="Screenshot showing Microsoft Sentinel pre-purchase plan discount tiers and their term lengths." lightbox="media/sentinel-pre-purchase-plan.png":::
 
-1. Choose to automatically renew the pre-purchase reservation. *The setting is configured to renew automatically by default*. For more information, see [Renew a reservation](../cost-management-billing/reservations/reservation-renew.md).
+1. Choose to automatically renew the pre-purchase reservation. *The setting is configured to renew automatically by default*. For more information, see [Renew a reservation](/azure/cost-management-billing/reservations/reservation-renew).
 
 ## Change scope and ownership
 
 You can make the following types of changes to a reservation after purchase:
 
 - Update reservation scope
-- Update who can view or manage the reservation. For more information, see [Who can manage a reservation by default](../cost-management-billing/reservations/manage-reserved-vm-instance.md#who-can-manage-a-reservation-by-default).
+- Update who can view or manage the reservation. For more information, see [Who can manage a reservation by default](/azure/cost-management-billing/reservations/manage-reserved-vm-instance#who-can-manage-a-reservation-by-default).
 
-You can't split or merge a **Microsoft Sentinel Pre-Purchase Plan**. For more information about managing reservations, see [Manage reservations after purchase](../cost-management-billing/reservations/manage-reserved-vm-instance.md).
+You can't split or merge a **Microsoft Sentinel Pre-Purchase Plan**. For more information about managing reservations, see [Manage reservations after purchase](/azure/cost-management-billing/reservations/manage-reserved-vm-instance).
 
 ## Cancellations and exchanges
 
@@ -88,7 +88,7 @@ Cancel and exchange operations aren't supported for **Microsoft Sentinel Pre-Pur
 ## Related content
 
 To learn more about Azure Reservations, see the following articles:
-- [What are Azure Reservations?](../cost-management-billing/reservations/save-compute-costs-reservations.md)
-- [Manage Reservations for Azure resources](../cost-management-billing/reservations/manage-reserved-vm-instance.md)
+- [What are Azure Reservations?](/azure/cost-management-billing/reservations/save-compute-costs-reservations)
+- [Manage Reservations for Azure resources](/azure/cost-management-billing/reservations/manage-reserved-vm-instance)
 
 To learn more about Microsoft Sentinel costs, see [Plan costs and understand Microsoft Sentinel pricing and billing](billing.md).

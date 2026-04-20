@@ -49,7 +49,7 @@ appliesto:
 
 - You'll need to enable at least one plan within Microsoft Defender for Cloud for each subscription where you want to enable the connector. To enable Microsoft Defender plans on a subscription, you must have the **Security Admin** role for that subscription.
 
-- You'll need the `SecurityInsights` resource provider to be registered for each subscription where you want to enable the connector. Review the guidance on the [resource provider registration status](../azure-resource-manager/management/resource-providers-and-types.md#register-resource-provider) and the ways to register it.
+- You'll need the `SecurityInsights` resource provider to be registered for each subscription where you want to enable the connector. Review the guidance on the [resource provider registration status](/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider) and the ways to register it.
 
 ## Connect to Microsoft Defender for Cloud
 
@@ -82,7 +82,7 @@ appliesto:
     > [!TIP]
     > When configuring [custom analytics rules](detect-threats-custom.md) for alerts from Microsoft Defender for Cloud, consider the alert severity to avoid opening incidents for informational alerts. 
     >
-    > Informational alerts in Microsoft Defender for Cloud don't represent a security risk on their own, and are relevant only in the context of an existing, open incident. For more information, see [Security alerts and incidents in Microsoft Defender for Cloud](../security-center/security-center-alerts-overview.md).
+    > Informational alerts in Microsoft Defender for Cloud don't represent a security risk on their own, and are relevant only in the context of an existing, open incident. For more information, see [Security alerts and incidents in Microsoft Defender for Cloud](/azure/security-center/security-center-alerts-overview).
     >
 
 ## Find and analyze your data

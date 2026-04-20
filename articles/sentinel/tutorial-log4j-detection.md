@@ -36,7 +36,7 @@ To complete this tutorial, make sure you have:
 
 - A Log Analytics workspace with the Microsoft Sentinel solution deployed on it and data being ingested into it.
 
-- An Azure user with the [**Microsoft Sentinel Contributor**](../role-based-access-control/built-in-roles.md#microsoft-sentinel-contributor) role assigned on the Log Analytics workspace where Microsoft Sentinel is deployed. 
+- An Azure user with the [**Microsoft Sentinel Contributor**](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor) role assigned on the Log Analytics workspace where Microsoft Sentinel is deployed. 
 
 - The following data sources are referenced in this rule. The more of these you have deployed connectors for, the more effective the rule will be. You must have at least one.
 

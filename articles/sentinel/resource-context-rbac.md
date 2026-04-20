@@ -66,7 +66,7 @@ Use the following steps if you want to configure resource-context RBAC, but your
 
 1. Make sure that you've [enabled resource-context RBAC](/azure/azure-monitor/logs/manage-access) in Azure Monitor. 
 
-1. [Create a resource group](../azure-resource-manager/management/manage-resource-groups-portal.md) for each team of users who needs to access your resources without the entire Microsoft Sentinel environment.
+1. [Create a resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal) for each team of users who needs to access your resources without the entire Microsoft Sentinel environment.
 
     Assign [log reader permissions](/azure/azure-monitor/logs/manage-access#resource-permissions) for each of the team members.
 

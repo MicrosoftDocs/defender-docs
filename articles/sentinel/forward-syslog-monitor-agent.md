@@ -39,9 +39,9 @@ To complete the steps in this tutorial, you must have the following resources an
 
   |Built-in role  |Scope  |Reason  |
   |---------|---------|---------|
-  |- [Virtual Machine Contributor](../role-based-access-control/built-in-roles.md)</br>- [Azure Connected Machine Resource Administrator](../role-based-access-control/built-in-roles.md)     |  - Virtual machines</br>- Scale sets</br>- Azure Arc-enabled servers        |   To deploy the agent      |
+  |- [Virtual Machine Contributor](/azure/role-based-access-control/built-in-roles)</br>- [Azure Connected Machine Resource Administrator](/azure/role-based-access-control/built-in-roles)     |  - Virtual machines</br>- Scale sets</br>- Azure Arc-enabled servers        |   To deploy the agent      |
   |Any role that includes the action Microsoft.Resources/deployments/*    | - Subscription </br>- Resource group</br>- Existing data collection rule       |  To deploy Azure Resource Manager templates       |
-  |[Monitoring Contributor ](../role-based-access-control/built-in-roles.md)    |- Subscription </br>- Resource group </br>- Existing data collection rule        | To create or edit data collection rules        |
+  |[Monitoring Contributor ](/azure/role-based-access-control/built-in-roles)    |- Subscription </br>- Resource group </br>- Existing data collection rule        | To create or edit data collection rules        |
 - A Log Analytics workspace.
 - A Linux server that's running an operating system that supports Azure Monitor Agent.
    - [Supported Linux operating systems for Azure Monitor Agent](/azure/azure-monitor/agents/agents-overview#linux).

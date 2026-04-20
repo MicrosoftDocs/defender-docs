@@ -12,7 +12,7 @@ ms.date: 11/11/2024
 
 # Integrate Microsoft Sentinel and Microsoft Purview
 
-[Microsoft Purview](../purview/index.yml) provides organizations with visibility into where sensitive information is stored, helping prioritize at-risk data for protection. Integrate Microsoft Purview with Microsoft Sentinel to help narrow down the high volume of incidents and threats surfaced in Microsoft Sentinel, and understand the most critical areas to start.
+[Microsoft Purview](/azure/purview/) provides organizations with visibility into where sensitive information is stored, helping prioritize at-risk data for protection. Integrate Microsoft Purview with Microsoft Sentinel to help narrow down the high volume of incidents and threats surfaced in Microsoft Sentinel, and understand the most critical areas to start.
 
 Start by ingesting your Microsoft Purview logs into Microsoft Sentinel through a data connector. Then use a Microsoft Sentinel workbook to view data such as assets scanned, classifications found, and labels applied by Microsoft Purview. Use analytics rules to create alerts for changes within data sensitivity.
 
@@ -20,11 +20,11 @@ Customize the Microsoft Purview workbook and analytics rules to best suit the ne
 
 ## Prerequisites
 
-Before you start, make sure you have both a [Microsoft Sentinel workspace](quickstart-onboard.md) and [Microsoft Purview](../purview/create-catalog-portal.md) onboarded, and that your user has the following roles:
+Before you start, make sure you have both a [Microsoft Sentinel workspace](quickstart-onboard.md) and [Microsoft Purview](/azure/purview/create-catalog-portal) onboarded, and that your user has the following roles:
 
-- **A Microsoft Purview account [Owner](../role-based-access-control/built-in-roles.md) or [Contributor](../role-based-access-control/built-in-roles.md) role**, to set up diagnostic settings and configure the data connector.
+- **A Microsoft Purview account [Owner](/azure/role-based-access-control/built-in-roles) or [Contributor](/azure/role-based-access-control/built-in-roles) role**, to set up diagnostic settings and configure the data connector.
 
-- **A [Microsoft Sentinel Contributor](../role-based-access-control/built-in-roles.md#microsoft-sentinel-contributor) role**, with write permissions to enable data connector, view the workbook, and create analytic rules.
+- **A [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor) role**, with write permissions to enable data connector, view the workbook, and create analytic rules.
 
 - **The Microsoft Purview** solution installed in your Log Analytics workspace enabled for Microsoft Sentinel.
 
@@ -56,7 +56,7 @@ For more information, see [Connect Microsoft Sentinel to other Microsoft service
 
 **To run a Microsoft Purview scan and view data in Microsoft Sentinel**:
 
-1. In Microsoft Purview, run a full scan of your resources. For more information, see [Scan data sources in Microsoft Purview](../purview/scan-data-sources.md).
+1. In Microsoft Purview, run a full scan of your resources. For more information, see [Scan data sources in Microsoft Purview](/azure/purview/scan-data-sources).
 
 1. After your Microsoft Purview scans have completed, go back to the Microsoft Purview data connector in Microsoft Sentinel and confirm that data has been received.
 
@@ -88,7 +88,7 @@ Use this procedure to customize the Microsoft Purview analytics rules' queries t
 1. On the **Set rule logic** tab, adjust the **Rule query** to query for the data fields and classifications you want to generate alerts for. For more information on what can be included in your query, see:
 
     - Supported data fields are the columns of the [PurviewDataSensitivityLogs](/azure/azure-monitor/reference/tables/purviewdatasensitivitylogs) table
-    - [Supported classifications](../purview/supported-classifications.md)
+    - [Supported classifications](/azure/purview/supported-classifications)
 
     Formatted queries have the following syntax: `| where {data-field} contains {specified-string}`.
 

@@ -105,18 +105,18 @@ It might take several minutes for the watchlist to be created and the new data t
 
 If you have a large watchlist up to 500 MB in size, upload your watchlist file to your Azure Storage account. Then create a shared access signature URL for Microsoft Sentinel to retrieve the watchlist data. A shared access signature URL is an URI that contains both the resource URI and shared access signature token of a resource like a CSV file in your storage account. Finally, add the watchlist to your workspace in Microsoft Sentinel.
 
-For more information about shared access signatures, see [Azure Storage shared access signature token](../storage/common/storage-sas-overview.md#sas-token).
+For more information about shared access signatures, see [Azure Storage shared access signature token](/azure/storage/common/storage-sas-overview#sas-token).
 
 ### Step 1: Upload a watchlist file to Azure Storage
 
 To upload a large watchlist file to your Azure Storage account, use AzCopy or the Azure portal.
 
-1. If you don't already have an Azure Storage account, [create a storage account](../storage/common/storage-account-create.md). The storage account can be in a different resource group or region from your workspace in Microsoft Sentinel.
+1. If you don't already have an Azure Storage account, [create a storage account](/azure/storage/common/storage-account-create). The storage account can be in a different resource group or region from your workspace in Microsoft Sentinel.
 1. Use either AzCopy or the Azure portal to upload your CSV file with your watchlist data into the storage account.
 
 #### Upload your file with AzCopy
 
-Upload files and directories to Blob storage by using the AzCopy v10 command-line utility. To learn more, see [Upload files to Azure Blob storage by using AzCopy](../storage/common/storage-use-azcopy-blobs-upload.md).
+Upload files and directories to Blob storage by using the AzCopy v10 command-line utility. To learn more, see [Upload files to Azure Blob storage by using AzCopy](/azure/storage/common/storage-use-azcopy-blobs-upload).
 
 1. If you don't already have a storage container, create one by running the following command.
 
@@ -135,8 +135,8 @@ Upload files and directories to Blob storage by using the AzCopy v10 command-lin
 
 If you don't use AzCopy, upload your file by using the Azure portal. Go to your storage account in Azure portal to upload the CSV file with your watchlist data.
 
-1. If you don't already have an existing storage container, [create a container](../storage/blobs/storage-quickstart-blobs-portal.md#create-a-container). For the level of public access to the container, use the default which is set to **Private (no anonymous access)**.
-1. [Upload a block blob](../storage/blobs/storage-quickstart-blobs-portal.md#upload-a-block-blob) to upload your CSV file to the storage account.
+1. If you don't already have an existing storage container, [create a container](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container). For the level of public access to the container, use the default which is set to **Private (no anonymous access)**.
+1. [Upload a block blob](/azure/storage/blobs/storage-quickstart-blobs-portal#upload-a-block-blob) to upload your CSV file to the storage account.
 
 ### Step 2: Create shared access signature URL
 

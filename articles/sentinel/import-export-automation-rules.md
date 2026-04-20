@@ -71,4 +71,4 @@ If you have any issues importing an exported automation rule, consult the follow
 
 In this document, you learned how to export and import automation rules to and from ARM templates.
 - Learn more about [automation rules](automate-incident-handling-with-automation-rules.md) and [how to create and work with them](create-manage-use-automation-rules.md).
-- Learn more about [ARM templates](../azure-resource-manager/templates/overview.md).
+- Learn more about [ARM templates](/azure/azure-resource-manager/templates/overview).

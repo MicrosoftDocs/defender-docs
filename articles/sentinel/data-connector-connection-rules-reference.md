@@ -93,7 +93,7 @@ The CCF supports the following authentication types:
 
 As a best practice, use parameters in the authentication section instead of hard-coding credentials. For more information, see [Secure confidential input](create-codeless-connector.md#secure-confidential-input).
 
-To create the deployment template, which also uses parameters, you need to escape the parameters in this section with an extra starting `[`. This step allows the parameters to assign a value based on the user interaction with the connector. For more information, see [Template expressions escape characters](../azure-resource-manager/templates/template-expressions.md#escape-characters).
+To create the deployment template, which also uses parameters, you need to escape the parameters in this section with an extra starting `[`. This step allows the parameters to assign a value based on the user interaction with the connector. For more information, see [Template expressions escape characters](/azure/azure-resource-manager/templates/template-expressions#escape-characters).
 
 To enable the credentials to be entered from the UI, the `connectorUIConfig` section requires you enter the desired parameters in `instructions`. For more information, see [Data connector definitions reference for the Codeless Connector Framework](data-connector-ui-definitions-reference.md#instructions).
 

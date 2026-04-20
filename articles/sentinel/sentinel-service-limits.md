@@ -13,7 +13,7 @@ ms.service: microsoft-sentinel
 
 # Service limits for Microsoft Sentinel
 
-This article lists the most common service limits you might encounter as you use Microsoft Sentinel. For other limits that might impact services or features you use, like Azure Monitor, see [Azure subscription and service limits, quotas, and constraints](../azure-resource-manager/management/azure-subscription-service-limits.md).
+This article lists the most common service limits you might encounter as you use Microsoft Sentinel. For other limits that might impact services or features you use, like Azure Monitor, see [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits).
 
 ## Analytics rule limits
 
@@ -173,5 +173,5 @@ The following limits apply to workspace manager in Microsoft Sentinel.
 
 ## Next steps
 
-- [Azure subscription and service limits, quotas, and constraints](../azure-resource-manager/management/azure-subscription-service-limits.md)
+- [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits)
 - [Azure Monitor service limits](/azure/azure-monitor/service-limits)

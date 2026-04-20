@@ -168,7 +168,7 @@ The data connector definition creates a UI element to prompt for security creden
 
 ### Store confidential input
 
-A section of the ARM deployment template provides a place for the administrator deploying the data connector to enter the password. Use `securestring` to keep the confidential information secured in an object that isn't readable after deployment. For more information, see [Security recommendations for parameters](../azure-resource-manager/templates/best-practices.md#security-recommendations-for-parameters).
+A section of the ARM deployment template provides a place for the administrator deploying the data connector to enter the password. Use `securestring` to keep the confidential information secured in an object that isn't readable after deployment. For more information, see [Security recommendations for parameters](/azure/azure-resource-manager/templates/best-practices#security-recommendations-for-parameters).
 
 ```json
 "mainTemplate": {
@@ -217,7 +217,7 @@ Finally, the CCF utilizes the credential objects in the data connector section.
 > The strange syntax for the credential object, `"ClientSecret": "[[parameters('Password')]",` isn't a typo! 
 > In order to create the deployment template which also uses parameters, you need to escape the parameters in that section with an extra starting`[`. This allows the parameters to assign a value based on the user interaction with the connector.
 >
-> For more information, see [Template expressions escape characters](../azure-resource-manager/templates/template-expressions.md#escape-characters).
+> For more information, see [Template expressions escape characters](/azure/azure-resource-manager/templates/template-expressions#escape-characters).
   
 
 ## Create the deployment template
@@ -248,7 +248,7 @@ Deploy your codeless connector as a custom template.
 >Delete resources you created in previous steps. The DCR and custom table is created with the deployment. If you don't remove those resources before deploying, it's more difficult to verify your template.
 
 1. Copy the contents of the ARM [deployment template](#create-the-deployment-template).
-1. Follow the **Edit and deploy the template** instructions from the article, [Quickstart: Create and deploy ARM templates by using the Azure portal](../azure-resource-manager/templates/quickstart-create-templates-use-the-portal.md#edit-and-deploy-the-template).
+1. Follow the **Edit and deploy the template** instructions from the article, [Quickstart: Create and deploy ARM templates by using the Azure portal](/azure/azure-resource-manager/templates/quickstart-create-templates-use-the-portal#edit-and-deploy-the-template).
 
 ### Maintain network isolation for logging source
 
@@ -475,17 +475,17 @@ Build the ARM deployment template with the following structure, which includes t
 
 Stitch the sections together with a JSON-aware editor like Visual Code to minimize syntax errors like commas and closing brackets and parentheses.
 
-To guide the template building process, comments appear in the **metadata** `description` or inline with `//` comment notation. For more information, see [ARM template best practices - comments](../azure-resource-manager/templates/best-practices.md#comments).
+To guide the template building process, comments appear in the **metadata** `description` or inline with `//` comment notation. For more information, see [ARM template best practices - comments](/azure/azure-resource-manager/templates/best-practices#comments).
 
-Consider using the ARM template test toolkit (arm-ttk) to validate the template you build. For more information, see [arm-ttk](../azure-resource-manager/templates/test-toolkit.md).
+Consider using the ARM template test toolkit (arm-ttk) to validate the template you build. For more information, see [arm-ttk](/azure/azure-resource-manager/templates/test-toolkit).
 
 #### Example ARM template - parameters
 
-For more information, see [Parameters in ARM templates](../azure-resource-manager/templates/parameters.md).
+For more information, see [Parameters in ARM templates](/azure/azure-resource-manager/templates/parameters).
 
 >[!Warning]
 > Use `securestring` for all passwords and secrets in objects readable after resource deployment.
-> For more information, see [Secure confidential input](#secure-confidential-input) and [Security recommendations for parameters](../azure-resource-manager/templates/best-practices.md#security-recommendations-for-parameters).
+> For more information, see [Secure confidential input](#secure-confidential-input) and [Security recommendations for parameters](/azure/azure-resource-manager/templates/best-practices#security-recommendations-for-parameters).
 
 
 ```json
@@ -536,7 +536,7 @@ For more information, see [Parameters in ARM templates](../azure-resource-manage
 
 #### Example ARM template - variables
 
-These recommended variables help simplify the template. Use more or less as needed. For more information, see [Variables in ARM templates](../azure-resource-manager/templates/variables.md).
+These recommended variables help simplify the template. Use more or less as needed. For more information, see [Variables in ARM templates](/azure/azure-resource-manager/templates/variables).
 
 ```json
     "variables": {

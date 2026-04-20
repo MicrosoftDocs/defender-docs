@@ -164,7 +164,7 @@ For more information, see the [Azure DevOps documentation](/azure/devops/pipelin
 
 ## Scale your deployments with parameter files
 
-Rather than passing parameters as inline values in your content files, consider [using a Bicep parameter file](../azure-resource-manager/bicep/parameter-files.md) or a [JSON file that contains the parameter values](../azure-resource-manager/templates/parameter-files.md). Then map those parameter files to their associated Microsoft Sentinel content files to better scale your deployments across different workspaces. 
+Rather than passing parameters as inline values in your content files, consider [using a Bicep parameter file](/azure/azure-resource-manager/bicep/parameter-files) or a [JSON file that contains the parameter values](/azure/azure-resource-manager/templates/parameter-files). Then map those parameter files to their associated Microsoft Sentinel content files to better scale your deployments across different workspaces. 
 
 There are several ways to map parameter files to the content files. Keep in mind, Bicep parameter files only support Bicep file templates, but JSON parameter files support both. The repositories deployment pipeline considers parameter files in the following order: 
  
@@ -245,8 +245,8 @@ Here's an example of the entire contents of a valid *sentinel-deployment.config*
 
 A sample repository is available demonstrating the deployment config file and all three parameter mapping methods. For more information, see [Microsoft Sentinel CICD repositories sample](https://github.com/SentinelCICD/RepositoriesSampleContent).
 
-- [Understand the structure and syntax of Bicep files](../azure-resource-manager/bicep/file.md)
-- [Parameters in Bicep](../azure-resource-manager/bicep/parameters.md)
-- [Create Resource Manager parameter file](../azure-resource-manager/templates/parameter-files.md)
-- [Parameters in ARM templates](../azure-resource-manager/templates/parameters.md)
+- [Understand the structure and syntax of Bicep files](/azure/azure-resource-manager/bicep/file)
+- [Parameters in Bicep](/azure/azure-resource-manager/bicep/parameters)
+- [Create Resource Manager parameter file](/azure/azure-resource-manager/templates/parameter-files)
+- [Parameters in ARM templates](/azure/azure-resource-manager/templates/parameters)
 

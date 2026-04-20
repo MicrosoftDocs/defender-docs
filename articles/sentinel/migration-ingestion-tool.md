@@ -69,10 +69,10 @@ To optimize performance, [configure the Logstash tier size](https://www.elastic.
 ## Azure Blob Storage
 
 You can ingest data to Azure Blob Storage in several ways. 
-- [Azure Data Factory or Azure Synapse](../data-factory/connector-azure-blob-storage.md)
-- [AzCopy](../storage/common/storage-use-azcopy-v10.md)
+- [Azure Data Factory or Azure Synapse](/azure/data-factory/connector-azure-blob-storage)
+- [AzCopy](/azure/storage/common/storage-use-azcopy-v10)
 - [Azure Storage Explorer](/azure/architecture/data-science-process/move-data-to-azure-blob-using-azure-storage-explorer)
-- [Python](../storage/blobs/storage-quickstart-blobs-python.md)
+- [Python](/azure/storage/blobs/storage-quickstart-blobs-python)
 - [SSIS](/azure/architecture/data-science-process/move-data-to-azure-blob-using-ssis)
 
 Review the Azure Data Factory (ADF) and Azure Synapse methods, which are better tailored to the data migration use case.
@@ -81,27 +81,27 @@ Review the Azure Data Factory (ADF) and Azure Synapse methods, which are better 
 
 To use the Copy activity in Azure Data Factory (ADF) or Synapse pipelines:
 1. Create and configure a self-hosted integration runtime. This component is responsible for copying the data from your on-premises host.
-1. Create linked services for the source data store ([filesystem](../data-factory/connector-file-system.md?tabs=data-factory#create-a-file-system-linked-service-using-ui) and the sink data store [blob storage](../data-factory/connector-azure-blob-storage.md?tabs=data-factory#create-an-azure-blob-storage-linked-service-using-ui).
-3. To copy the data, use the [Copy data tool](../data-factory/quickstart-hello-world-copy-data-tool.md). Alternatively, you can use method such as PowerShell, Azure portal, a .NET SDK, and so on.
+1. Create linked services for the source data store ([filesystem](/azure/data-factory/connector-file-system?tabs=data-factory#create-a-file-system-linked-service-using-ui) and the sink data store [blob storage](/azure/data-factory/connector-azure-blob-storage?tabs=data-factory#create-an-azure-blob-storage-linked-service-using-ui).
+3. To copy the data, use the [Copy data tool](/azure/data-factory/quickstart-hello-world-copy-data-tool). Alternatively, you can use method such as PowerShell, Azure portal, a .NET SDK, and so on.
 
 ### AzCopy
 
-[AzCopy](../storage/common/storage-use-azcopy-v10.md) is a simple command-line utility that copies files to or from storage accounts. AzCopy is available for Windows, Linux, and macOS. Learn how to [copy on-premises data to Azure Blob storage with AzCopy](../storage/common/storage-use-azcopy-v10.md). 
+[AzCopy](/azure/storage/common/storage-use-azcopy-v10) is a simple command-line utility that copies files to or from storage accounts. AzCopy is available for Windows, Linux, and macOS. Learn how to [copy on-premises data to Azure Blob storage with AzCopy](/azure/storage/common/storage-use-azcopy-v10). 
 
 You can also use these options to copy the data:
-- Learn how to [optimize the performance](../storage/common/storage-use-azcopy-optimize.md) of AzCopy.
-- Learn how to [configure AzCopy](../storage/common/storage-ref-azcopy-configuration-settings.md). 
-- Learn how to use the [copy command](../storage/common/storage-ref-azcopy-copy.md).
+- Learn how to [optimize the performance](/azure/storage/common/storage-use-azcopy-optimize) of AzCopy.
+- Learn how to [configure AzCopy](/azure/storage/common/storage-ref-azcopy-configuration-settings). 
+- Learn how to use the [copy command](/azure/storage/common/storage-ref-azcopy-copy).
 
 ## Azure Data Box
 
-In a scenario where the source SIEM doesn't have good connectivity to Azure, ingesting the data using the tools reviewed in this section might be slow or even impossible. To address this scenario, you can use [Azure Data Box](../databox/data-box-overview.md) to copy the data locally from the customer's data center into an appliance, and then ship that appliance to an Azure data center. While Azure Data Box isn't a replacement for AzCopy or LightIngest, you can use this tool to accelerate the data transfer between the customer data center and Azure.
+In a scenario where the source SIEM doesn't have good connectivity to Azure, ingesting the data using the tools reviewed in this section might be slow or even impossible. To address this scenario, you can use [Azure Data Box](/azure/databox/data-box-overview) to copy the data locally from the customer's data center into an appliance, and then ship that appliance to an Azure data center. While Azure Data Box isn't a replacement for AzCopy or LightIngest, you can use this tool to accelerate the data transfer between the customer data center and Azure.
 
 Azure Data Box offers three different SKUs, depending on the amount of data to migrate: 
 
-- [Data Box Disk](../databox/data-box-disk-overview.md) 
-- [Data Box](../databox/data-box-overview.md)
-- [Data Box Heavy](../databox/data-box-heavy-overview.md)
+- [Data Box Disk](/azure/databox/data-box-disk-overview) 
+- [Data Box](/azure/databox/data-box-overview)
+- [Data Box Heavy](/azure/databox/data-box-heavy-overview)
 
 After you complete the migration, the data is available in a storage account under one of your Azure subscriptions. You can then use [AzCopy](#azcopy), [LightIngest](#lightingest), or [ADF](#azure-data-factory-or-azure-synapse) to ingest data from the storage account. 
 

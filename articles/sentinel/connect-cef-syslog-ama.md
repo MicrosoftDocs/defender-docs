@@ -48,9 +48,9 @@ Install the appropriate Microsoft Sentinel solution and make sure you have the p
 
   | Built-in role | Scope | Reason |
   | ------------- | ----- | ------ |
-  | - [Virtual Machine Contributor](../role-based-access-control/built-in-roles/compute.md#virtual-machine-contributor)<br>- [Azure Connected Machine<br>&nbsp;&nbsp;&nbsp;Resource Administrator](../role-based-access-control/built-in-roles/management-and-governance.md#azure-connected-machine-resource-administrator) | <li>Virtual machines (VM)<li>Virtual Machine Scale Sets<li>Azure Arc-enabled servers | To deploy the agent |
+  | - [Virtual Machine Contributor](/azure/role-based-access-control/built-in-roles/compute#virtual-machine-contributor)<br>- [Azure Connected Machine<br>&nbsp;&nbsp;&nbsp;Resource Administrator](/azure/role-based-access-control/built-in-roles/management-and-governance#azure-connected-machine-resource-administrator) | <li>Virtual machines (VM)<li>Virtual Machine Scale Sets<li>Azure Arc-enabled servers | To deploy the agent |
   | Any role that includes the action<br>*Microsoft.Resources/deployments/\** | <li>Subscription<li>Resource group<li>Existing data collection rule | To deploy Azure Resource Manager templates |
-  | [Monitoring Contributor](../role-based-access-control/built-in-roles/monitor.md#monitoring-contributor) | <li>Subscription<li>Resource group<li>Existing data collection rule | To create or edit data collection rules |
+  | [Monitoring Contributor](/azure/role-based-access-control/built-in-roles/monitor#monitoring-contributor) | <li>Subscription<li>Resource group<li>Existing data collection rule | To create or edit data collection rules |
 
 ### Log forwarder prerequisites
 
@@ -75,7 +75,7 @@ If you're collecting messages from a log forwarder, the following prerequisites 
 
 ### Machine security prerequisites
 
-Configure the machine's security according to your organization's security policy. For example, configure your network to align with your corporate network security policy and change the ports and protocols in the daemon to align with your requirements. To improve your machine security configuration, [secure your VM in Azure](/azure/virtual-machines/security-policy), or review these [best practices for network security](../security/fundamentals/network-best-practices.md).
+Configure the machine's security according to your organization's security policy. For example, configure your network to align with your corporate network security policy and change the ports and protocols in the daemon to align with your requirements. To improve your machine security configuration, [secure your VM in Azure](/azure/virtual-machines/security-policy), or review these [best practices for network security](/azure/security/fundamentals/network-best-practices).
 
 If your devices are sending syslog and CEF logs over TLS because, for example, your log forwarder is in the cloud, you need to configure the syslog daemon (`rsyslog` or `syslog-ng`) to communicate in TLS. For more information, see:
 
