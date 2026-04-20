@@ -1,6 +1,6 @@
 ---
 title: Overview of Defender for Databases
-description: Discover the advantages and capabilities of Microsoft Defender for Databases, including support for PostgreSQL, MySQL, and .
+description: Discover the advantages and capabilities of Microsoft Defender for Databases, including support for PostgreSQL and MySQL.
 ms.date: 05/13/2025
 ms.topic: overview
 ms.author: elkrieger
