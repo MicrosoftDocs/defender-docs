@@ -66,10 +66,10 @@ Starting with macOS Big Sur (11), system extensions require explicit approval be
 
 For installation instructions, see your deployment method:
 
-[Microsoft Intune](mac-install-with-intune.md)
-[JAMF Pro](mac-install-with-jamf.md)
-[Other MDM solutions](mac-install-with-other-mdm.md)
-[Manual deployment](mac-install-manually.md#application-installation-macos-13-and-newer-versions)
+- [Microsoft Intune](mac-install-with-intune.md)
+- [JAMF Pro](mac-install-with-jamf.md)
+- [Other MDM solutions](mac-install-with-other-mdm.md)
+- [Manual deployment](mac-install-manually.md#application-installation-macos-13-and-newer-versions)
 
 For troubleshooting, see [Troubleshoot system extension issues](mac-support-sys-ext.md).
 
