@@ -39,7 +39,7 @@ Defender for Cloud Apps helps you mitigate different risks in the cloud. You can
 
 - **Access control:** Who accesses what from where?
 
-    Continuously monitor behavior and detect anomalous activities, including high-risk insider and external attacks, and apply a policy to alert, block, or require identity verification for any app or specific action within an app. Enables on-premises and mobile access control policies based on user, device, and geography with coarse blocking and granular view, edit, and block. Detect suspicious login events, including multi-factor authentication failures, disabled account login failures, and impersonation events.
+    Continuously monitor behavior and detect anomalous activities, including high-risk insider and external attacks, and apply a policy to alert, block, or require identity verification for any app or specific action within an app. Enables on-premises and mobile access control policies based on user, device, and geography with coarse blocking and granular view, edit, and block. Detect suspicious login events, including multifactor authentication failures, disabled account login failures, and impersonation events.
 
 - **Compliance:** Are your compliance requirements breached?
 
@@ -176,7 +176,7 @@ To export a log, perform the following steps:
 
 To download the exported report:
 
-1. After the report is ready, i n the Microsoft Defender Portal, go to **Reports** and then **Cloud Apps** -> **Exported reports**.
+1. After the report is ready, in the Microsoft Defender Portal, go to **Reports** and then **Cloud Apps** -> **Exported reports**.
 
 1. In the table, select the relevant report, and then select download.
 

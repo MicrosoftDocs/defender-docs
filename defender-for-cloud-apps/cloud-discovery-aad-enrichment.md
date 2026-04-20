@@ -29,7 +29,7 @@ Cloud discovery data can now be enriched with Microsoft Entra username data. Whe
 
 1. Under **Cloud Discovery**, select **User enrichment**.
 
-1. In the **User enrichment** tab, select **Enrich discovered user identifiers with Entra ID usernames**. This option enables Defender for Cloud Apps to use Entra ID data to enrich usernames by default.
+1. In the **User enrichment** tab, select **Enrich discovered user identifiers with Microsoft Entra ID usernames**. This option enables Defender for Cloud Apps to use Microsoft Entra ID data to enrich usernames by default.
 
     ![Screenshot that shows enrich Defender for Cloud Apps Discovery with Entra ID usernames.](media/discovery-enrichment.png) 
    

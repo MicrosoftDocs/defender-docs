@@ -27,11 +27,11 @@ For portal access requirements, see [Portal access](network-requirements.md#port
 
    Logos are stored in publicly accessible storage. The source URL for your image is protected and stored internally. 
 
-   Providing this image is voluntary, it’s up to you to decide if you want to share this data with us. You can also choose to delete this image at anytime and it will be deleted from our storage. This decision does not affect the security of your organization or your users in any way.
+   Providing this image is voluntary, it’s up to you to decide if you want to share this data with us. You can also choose to delete this image at any time and it will be deleted from our storage. This decision does not affect the security of your organization or your users in any way.
 
 1. Make sure you add a list of your **Managed domains** to identify internal users. Adding managed domains is a crucial step. Defender for Cloud Apps uses the managed domains to determine which users are internal, external, and where files should and shouldn't be shared. This information is used for reports and alerts.
 
-    * Users in domains that aren't configured as internal are marked as external. External users aren't scanned for activities or files.
+    * Users in domains that aren't configured as internal are marked as external. People outside the organization aren't scanned for activities or files.
 
 1. If you're integrating with Microsoft Purview Information Protection, see [Microsoft Purview Information Protection Integration](azip-integration.md) for information.
 

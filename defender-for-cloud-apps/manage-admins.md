@@ -19,7 +19,7 @@ Microsoft Defender for Cloud Apps supports role-based access control. This artic
 >
 > - Microsoft 365 and Microsoft Entra roles aren't listed in the Defender for Cloud Apps **Manage admin access** page. To assign roles in Microsoft 365 or Microsoft Entra ID, go to the relevant RBAC settings for that service.
 > - Defender for Cloud Apps uses Microsoft Entra ID to determine the user's [directory level inactivity timeout setting](/azure/azure-portal/set-preferences#change-the-directory-timeout-setting-admin). If a user is configured in Microsoft Entra ID to never sign out when inactive, the same setting applies in Defender for Cloud Apps as well.
-> - Defender for Cloud Apps Information Protection enablement requires an Microsoft Entra Admin ID, such as: Application Administrator or Cloud Application Administrator. For more details, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference) and [Protect your Microsoft 365 environment](/defender-cloud-apps/protect-office-365)
+> - Defender for Cloud Apps Information Protection enablement requires a Microsoft Entra Admin ID, such as: Application Administrator or Cloud Application Administrator. For more details, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference) and [Protect your Microsoft 365 environment](/defender-cloud-apps/protect-office-365)
 
 > [!NOTE]
 > As Microsoft Defender moves toward a fully unified identity platform, some Defender for Cloud Apps data pipelines remain separate. Defender for Cloud Apps RBAC scoping uses a separate data pipeline that isn't yet integrated with the [Identity inventory](/defender-for-identity/identity-inventory). Correlations defined in the Identity inventory don't affect Defender for Cloud Apps scoping. For a full list of affected features, see [Enable Identity inventory integration](/defender-cloud-apps/general-setup#enable-identity-inventory-integration).
@@ -132,7 +132,7 @@ Defender for Cloud Apps enables you to invite external admins (MSSPs) as adminis
 
 ### To add MSSPs to the MSSP customer Defender for Cloud Apps service
 
-1. Add MSSPs as a guest in the MSSP customer directory using the steps under [Add guest users to the directory](/azure/active-directory/external-identities/add-users-administrator#add-guest-users-to-the-directory).
+1. Add MSSPs as people outside the organization in the MSSP customer directory using the steps under [Add people outside the organization to the directory](/azure/active-directory/external-identities/add-users-administrator#add-guest-users-to-the-directory).
 1. Add MSSPs and assign an administrator role in the MSSP customer Defender for Cloud Apps using the steps under [Add additional admins](#add-additional-admins). Provide the same external email address used when adding them as guests in the MSSP customer directory.
 
 ### Access for MSSPs to the MSSP customer Defender for Cloud Apps service

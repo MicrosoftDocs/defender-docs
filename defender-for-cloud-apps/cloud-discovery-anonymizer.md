@@ -94,7 +94,7 @@ To resolve (deanonymize) usernames in Cloud Discovery data:
 1. The action is audited in the portal's **Audit log**.
 
 > [!NOTE]
-> Starting October,2025 - **Resolve Anonymization** actions are no longer part of **Governance logs**. Instead, they will be audited in the **Activity log** only.
+> Starting October, 2025 - **Resolve Anonymization** actions are no longer part of **Governance logs**. Instead, they will be audited in the **Activity log** only.
 
 
 

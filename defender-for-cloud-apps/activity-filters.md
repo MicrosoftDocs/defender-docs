@@ -122,9 +122,9 @@ To view IP address insights:
 
     - **Admin activities**: The number of administrative activities performed from this IP address in the past 30 days. You can perform the following IP address actions:
 
-        - Set as a Corporate IP and add to allowlist
-        - Set as a VPN IP address and add to allowlist
-        - Set as a Risky IP and add to blocklist
+        - Set as a Corporate IP and add to allow list
+        - Set as a VPN IP address and add to allow list
+        - Set as a Risky IP and add to block list
 
 :::image type="content" source="media/activity-filters/ip-address-insights.png" alt-text="Screenshot that shows IP address activities over the last 30 days." lightbox="media/activity-filters/ip-address-insights.png":::
 
