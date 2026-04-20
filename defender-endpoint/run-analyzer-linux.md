@@ -93,7 +93,7 @@ To use the standalone ClientAnalyzer binary, complete the following steps.
      ```bash
      unzip -q SupportToolLinuxamd64Binary.zip
      ```
-1. Run the tool with root priviledges to generate a diagnostic package:
+1. Run the tool with root privileges to generate a diagnostic package:
 
    ```bash
    sudo ./MDESupportTool -d
@@ -176,7 +176,7 @@ To run this client analyzer, follow these steps:
     ./mde_support_tool.sh
     ```
 
-1. To collect the diagnostic package and generate the result archive file, run again with root priviledges:
+1. To collect the diagnostic package and generate the result archive file, run again with root privileges:
 
     ```bash
     sudo ./mde_support_tool.sh -d
@@ -521,42 +521,42 @@ The XMDE Client Analyzer can be run during a Live Response session either by usi
 - For execution, the `acl` package is required.
 
 > [!IMPORTANT]
-> Window uses the carriage return and line feed invisible characters to represent the end of one line and beginning of a new line in a file. Linux systems use only the Line Feed invisible character at the end of its file lines. When you use the following scripts, if done on Windows, this difference can result in errors and failures of the scripts to run. A potential solution to this is to utilize the Windows Subsystem for Linux (WSL) and the `dos2unix` package to reformat the script so it aligns with the Unix and Linux format standard.
+> Windows uses the carriage return and line feed invisible characters to represent the end of one line and beginning of a new line in a file. Linux systems use only the Line Feed invisible character at the end of file lines. When you use the following scripts, if done on Windows, this difference can result in errors and failures of the scripts to run. A potential solution to this is to utilize the Windows Subsystem for Linux (WSL) and the `dos2unix` package to reformat the script so it aligns with the Unix and Linux format standard.
 
 
 #### Run Client Analyzer from the Microsoft Defender for Endpoint installation
 
 If Microsoft Defender for Endpoint is already installed on the device, you can run the Client Analyzer directly from the agent installation without downloading or installing additional packages.
 
-1. Create a `MDESupportToolBinary.sh` file and paste the following content into it.
+- Create an `MDESupportToolBinary.sh` file and paste the following content into it.
 
-```bash
-#! /usr/bin/bash
+   ```bash
+   #! /usr/bin/bash
 
-echo "cd /opt/microsoft/mdatp/tools/client_analyzer/binary"
-cd /opt/microsoft/mdatp/tools/client_analyzer/binary
+   echo "cd /opt/microsoft/mdatp/tools/client_analyzer/binary"
+   cd /opt/microsoft/mdatp/tools/client_analyzer/binary
 
-echo "Running MDESupportTool"
-./MDESupportTool $@
+   echo "Running MDESupportTool"
+   ./MDESupportTool $@
 
-Execute:
-run MDESupportToolBinary.sh -parameters "--bypass-disclaimer -d"
+   Execute:
+   run MDESupportToolBinary.sh -parameters "--bypass-disclaimer -d"
 
 
-MDESupportToolPython.sh
+   MDESupportToolPython.sh
 
-#! /usr/bin/bash
+   #! /usr/bin/bash
 
-echo "cd /opt/microsoft/mdatp/tools/client_analyzer/python"
-cd /opt/microsoft/mdatp/tools/client_analyzer/python
+   echo "cd /opt/microsoft/mdatp/tools/client_analyzer/python"
+   cd /opt/microsoft/mdatp/tools/client_analyzer/python
 
-echo "Running MDESupportTool"
-./mde_support_tool.sh $@
+   echo "Running MDESupportTool"
+   ./mde_support_tool.sh $@
 
-Execute:
-run MDESupportToolPython.sh -parameters "--bypass-disclaimer -d"
+   Execute:
+   run MDESupportToolPython.sh -parameters "--bypass-disclaimer -d"
 
-```
+   ```
 
 ### Install the XMDE Client Analyzer
 
@@ -574,7 +574,7 @@ Due to the limited commands available in live response, the steps detailed must 
 
 The following script performs the first six steps of the [Running the Binary version of the Client Analyzer](run-analyzer-linux.md#run-the-binary-version-of-the-client-analyzer). When complete, the XMDE Client Analyzer binary is available from the `/tmp/XMDEClientAnalyzerBinary/ClientAnalyzer` directory.
 
-1. Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
+- Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
 
    ```bash
    #! /usr/bin/bash 
@@ -600,7 +600,7 @@ The following script performs the first six steps of the [Running the Binary ver
 
 The following script performs the first six steps of the [Running the Python version of the Client Analyzer](run-analyzer-linux.md#run-the-python-based-client-analyzer). When complete, the XMDE Client Analyzer Python scripts are available from the `/tmp/XMDEClientAnalyzer` directory.
 
-1. Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
+- Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
 
    ```bash
    #! /usr/bin/bash
@@ -654,7 +654,7 @@ Live response doesn't support running the XMDE Client Analyzer or Python directl
 
 The binary version of the client analyzer accepts command line parameters to perform different analysis tests. To provide similar capabilities during live response, the execution script takes advantage of the `$@` bash variable to pass all input parameters provided to the script to the XMDE Client Analyzer.
 
-1. Create a bash file `MDESupportTool.sh` and paste the following content into it.
+- Create a bash file `MDESupportTool.sh` and paste the following content into it.
 
    ```bash
    #! /usr/bin/bash
@@ -671,7 +671,7 @@ The binary version of the client analyzer accepts command line parameters to per
 
 The Python version of the client analyzer accepts command line parameters to perform different analysis tests. To provide similar capabilities during live response, the execution script takes advantage of the `$@` bash variable to pass all input parameters provided to the script to the XMDE Client Analyzer.
 
-1. Create a bash file `MDESupportTool.sh` and paste the following content into it.
+- Create a bash file `MDESupportTool.sh` and paste the following content into it.
 
    ```bash
    #! /usr/bin/bash  
