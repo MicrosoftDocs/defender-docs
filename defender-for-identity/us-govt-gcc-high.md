@@ -32,7 +32,7 @@ To access Microsoft Defender for Identity for US Government offerings, use the a
 |------------------------|-------------------------------|---------------------------------------------------|
 |DoD                     | `security.microsoft.us`       | `<your-workspace-name>sensorapi.atp.azure.us`      |
 |GCC-H                   | `security.microsoft.us`       | `<your-workspace-name>sensorapi.atp.azure.us`      |
-|GCC                     | `security.microsoft.com`      | `<your-workspace-name>sensorapi.gcc.atp.azure.com` |
+|GCC                     | `security.microsoft.com`      | `<your-workspace-name>sensorapi.atp.gcc.azure.com` |
 
 You can also use the IP address ranges in our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to Defender for Identity. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview) or download [the Azure IP Ranges and Service Tags – US Government Cloud file](https://www.microsoft.com/download/details.aspx?id=57063).
 
@@ -54,8 +54,8 @@ Use [this link](prerequisites.md#required-ports) to configure the minimum intern
 1. Configure a Directory Service account
 1. Download the new sensor agent package and copy the workspace key
 1. Make sure sensors have access to *.atp.gcc.azure.com (directly or through proxy)
-1. Uninstall existing sensor agents from the domain controllers, AD FS servers, and AD CS servers
-1. [Reinstall sensors with the new workspace key](install-sensor.md)
+1. Uninstall existing sensor agents from the domain controllers, AD FS servers, AD CS servers and Entra Connect servers.
+1. [Reinstall sensors with the new workspace](deploy-defender-identity.md)
 1. Migrate any settings after the initial sync (use the https://transition.security.microsoft.com portal in a separate browser session to compare)
 1. Eventually, delete the previous workspace (historical data will be lost)
 

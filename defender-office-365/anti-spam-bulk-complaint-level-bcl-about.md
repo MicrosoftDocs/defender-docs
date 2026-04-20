@@ -5,19 +5,19 @@ ms.author: chrisda
 ms.topic: concept-article
 ms.localizationpriority: medium
 ms.assetid: a5b03b3c-37dd-429e-8e9b-2c1b25031794
-ms.collection: 
+ms.collection:
   - m365-security
   - tier2
 description: Admins can learn about bulk email detection, including the bulk complain level (BCL) values that are used in Microsoft 365.
 ms.service: defender-office-365
-ms.date: 03/30/2026
+ms.date: 04/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Bulk email detection in cloud organizations
+# Bulk email detection and bulk complaint level (BCL) in cloud organizations
 
 Microsoft 365 assigns a bulk complaint level (BCL) value to inbound messages from bulk senders. The BCL value is added to the message in an X-header and is similar to the [spam confidence level (SCL)](anti-spam-spam-confidence-level-scl-about.md) that identifies messages as spam. A higher BCL value indicates a bulk message is more likely to exhibit undesirable spam-like behavior. Microsoft uses both internal and external sources to identify bulk mail and determine the appropriate BCL value.
 
@@ -113,7 +113,6 @@ But you can configure anti-spam policies to deliver bulk mail below the BCL thre
      - **Users, groups, and domains** page:
        - **Include these users, groups and domains** section: Click in the **Groups** box to enter and select the **opt-in** mail-enabled security group you used in the previous steps.
        - **Exclude these users, groups and domains**: Optionally select the check box to find and enter **Users** or **Groups** (not both) to exclude from the policy.
-
      - **Actions** page: Move the **Bulk moves enabled** toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
 
        :::image type="content" source="media/anti-spam-policy-bulk-moves-enabled.png" alt-text="Screenshot of the Actions page of the new anti-spam policy wizard in the Microsoft Defender portal with Bulk moves enabled turned on." lightbox="media/anti-spam-policy-bulk-moves-enabled.png":::
@@ -123,7 +122,7 @@ But you can configure anti-spam policies to deliver bulk mail below the BCL thre
    > [!TIP]
    > For important information about why you shouldn't mix **Users** and **Groups** to include in or exclude from an anti-spam policy, see Step 4 in [Use the Microsoft Defender portal to create anti-spam policies](anti-spam-policies-configure.md#use-the-microsoft-defender-portal-to-create-anti-spam-policies).
 
-After you complete the previous steps, members of the **opt-in** mail-enabled security group (users who have the **opt-in** anti-spam policy applied) have the following experiences, based on their version of Outlook:
+After you complete the previous steps, members of the **opt-in** mail-enabled security group (users who have the **opt-in** anti-spam policy applied) _currently_ have the following experiences, based on their version of Outlook:
 
 |Feature|Outlook on<br>the web|Outlook for Windows|Outlook for<br>iOS and Android|Classic Outlook|
 |---|:---:|:---:|:---:|:---:|
@@ -137,9 +136,10 @@ The **Promotions** folder in user mailboxes has the following characteristics:
 
 - **Promotions** is a regular folder, not a system folder.
   - If you soft delete the folder (available in **Deleted items**), bulk messages are delivered to the folder in **Deleted items**.
-  - If you hard delete the folder (available in Recoverable items), the folder is recreated and used within approximately 5 minutes.
+  - Currently, if you hard delete the folder (available in Recoverable items), the folder is recreated and used within approximately 5 minutes.
   - If an unrelated **Promotions** folder already exists in the mailbox, a new folder named **Promotions(1)** is created and used.
   - If you rename or move the **Promotions** folder, it continues to work (the name or location of the folder isn't important).
 - Bulk mail that would normally be delivered to the **Promotions** folder is delivered to the Inbox in the following scenarios:
   - The bulk sender is in the user's [Safe Senders list](create-safe-sender-lists-in-office-365.md#use-outlook-safe-senders).
   - The bulk sender is in an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) of the organization.
+- Microsoft 365 learns from user activity in the **Promotions** folder (moving messages in or out), and remembers the action for future messages.
