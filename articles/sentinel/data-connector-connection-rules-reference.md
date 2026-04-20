@@ -353,7 +353,8 @@ The request section defines how the CCF data connector sends requests to your da
 |Field |Required |Type |Description	|
 | ---- | ---- | ---- | ---- |
 | `ApiEndpoint` | True. | String | This field determines the URL for the remote server and defines the endpoint from which to pull data. |
-| `RateLimitQPS` |  | Integer | This field defines the number of calls or queries allowed in a second. |
+| `RateLimitQPS` |  | Integer | This field defines the number of calls or queries allowed in a second for the initial request. It does not apply to paginated requests. To throttle pagination, also set `PaginatedCallsPerSecond`. |
+| `PaginatedCallsPerSecond` |  | Double (0...1000) | This field defines the number of calls per second allowed for paginated requests to the RESTful API. It introduces a delay of `(1000 / paginatedCallsPerSecond)` milliseconds between each paginated API call. This throttling applies only to pagination requests and is separate from `RateLimitQPS`, which controls the initial request rate. Typically, this will be set the same value as `RateLimitQPS` to respect the data source's rate limit across all requests. `0` value means no pagination throttling is applied. |
 | `RateLimitConfig` |  | Object | This field defines the rate-limit configuration for the RESTful API. For more, go to [`RateLimitConfig` example](#ratelimitconfig-example). |
 | `QueryWindowInMin` |  | Integer | This field defines the available query window in minutes. The minimum is 1 minute. The default is 5 minutes.|
 | `HttpMethod` |  | String | This field defines the API method: `GET`(default) or `POST`. |
@@ -369,6 +370,7 @@ The request section defines how the CCF data connector sends requests to your da
 | `QueryTimeIntervalPrepend` | True when `QueryTimeIntervalAttributeName` is set. | String | Reference `QueryTimeIntervalAttributeName`. |
 | `QueryTimeIntervalDelimiter` |  True when `QueryTimeIntervalAttributeName` is set. | String | Reference `QueryTimeIntervalAttributeName`. |
 | `QueryParametersTemplate` |  | String | This field references the query template to use when passing parameters in advanced scenarios.<br><br>For example: `"queryParametersTemplate": "{'cid': 1234567, 'cmd': 'reporting', 'format': 'siem', 'data': { 'from': '{_QueryWindowStartTime}', 'to': '{_QueryWindowEndTime}'}, '{_APIKeyName}': '{_APIKey}'}"`. |
+| `InitialCheckpointTimeUtc` |  | DateTime (UTC) | Specifies the query start time for the very first poll when no stored checkpoint exists. Once a checkpoint is persisted after the first successful poll, this value is ignored. This setting only takes effect when the connector's request configuration defines a start-time query parameter (such as `startTimeAttributeName` or the `{_QueryWindowStartTime}` replacement token) without a corresponding end-time parameter. It has no effect on connectors that rely solely on pagination cursors or tokens. Format: ISO 8601 UTC datetime (for example, `2024-01-15T00:00:00Z`). |
 
 When the API requires complex parameters, use `queryParameters` or `queryParametersTemplate`. These commands include some built-in variables.
 

@@ -1,10 +1,10 @@
 ---
 title: Visualize your data using workbooks in Microsoft Sentinel | Microsoft Docs
 description: Learn how to visualize your data using workbooks in Microsoft Sentinel.
-author: batamig
+author: EdB-MSFT
 ms.topic: how-to
 ms.date: 08/20/2025
-ms.author: bagol
+ms.author: edbaynash
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
@@ -20,8 +20,6 @@ ms.collection: usx-security
 After you connect your data sources to Microsoft Sentinel, visualize and monitor the data using workbooks in Microsoft Sentinel. Microsoft Sentinel workbooks are based on Azure Monitor workbooks, and add tables and charts with analytics for your logs and queries to the tools already available in Azure.
 
 Microsoft Sentinel allows you to create custom workbooks across your data or use existing workbook templates available with packaged solutions or as standalone content from the content hub. Each workbook is an Azure resource like any other, and you can assign it with Azure role-based access control (RBAC) to define and limit who can access.
-
-This article describes how to visualize your data in Microsoft Sentinel by using workbooks. Editing workbooks directly in the Defender portal is as Preview.
 
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 
@@ -215,16 +213,6 @@ See more information on the following items used in the preceding examples, in t
 - [***count()*** aggregation function](/kusto/query/count-aggregation-function?view=microsoft-sentinel&preserve-view=true)
 
 [!INCLUDE [kusto-reference-general-no-alert](includes/kusto-reference-general-no-alert.md)]
-
-## Known issues for editing workbooks in the Defender portal (Preview)
-
-Editing workbooks directly in the Defender portal is currently in Preview, and currently includes the following known issues:
-
-- The advanced editor might show up in light mode, even if your portal is set to dark mode.
-- Custom endpoint data isn't supported for editing workbooks in the Defender portal.
-- Workbooks within workbooks aren't supported for editing in the Defender portal.
-- Read-only sharing isn't supported for workbooks in the Defender portal.
-- Mermaid diagrams aren't supported for editing workbooks in the Defender portal.
 
 ## Related articles
 

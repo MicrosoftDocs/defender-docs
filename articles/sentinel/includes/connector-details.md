@@ -2,7 +2,7 @@
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: include
-ms.date: 03/17/2026
+ms.date: 04/13/2026
 
 # This file is auto-generated. Do not edit manually. Changes will be overwritten.
 ---
@@ -54,6 +54,23 @@ This solution depends on the following technologies, and some of which may be in
 - **1Password Events API Token**: A 1Password Events API Token is required. For more information, see [the 1Password API](https://developer.1password.com/docs/events-api/reference). 
 
 **Note:** A 1Password Business account is required<br><br>
+</details> 
+
+ ---
+   
+<a name="a365-observability"></a><details><summary>**A365 Observability**</summary>
+
+**Supported by:** [Microsoft Corporation](https://support.microsoft.com/)
+
+A365 Observability data connector gives richer insights into AI agent activity by bringing AI agent telemetry from A365, AI Foundry, and Copilot in the Microsoft Sentinel data lake to investigate agent behavior, tool usage, and execution with hunting, graph, and MCP workflows. Data from this connector is used to investigate AI agent behavior, tool usage, and execution in Microsoft Sentinel. If you have enabled these workflows, deactivating this connector will prevent those investigations from being performed.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+
+
+**Data collection rule support:** Not currently supported<br><br>
 </details> 
 
  ---
@@ -123,6 +140,27 @@ The [Alibaba Cloud ActionTrail](https://www.alibabacloud.com/product/actiontrail
 
  ---
    
+<a name="alibaba-cloud-networking-data-connector-via-codeless-connector-framework"></a><details><summary>**Alibaba Cloud Networking Data Connector (via Codeless Connector Framework)**</summary>
+
+**Supported by:** [Microsoft Corporation](https://support.microsoft.com/)
+
+The Alibaba Cloud Networking data connector provides the capability to ingest [Alibaba Cloud](https://www.alibabacloud.com/) networking data into Microsoft Sentinel through the Simple Log Service (SLS) REST API. Refer to [API documentation](https://www.alibabacloud.com/help/en/sls/developer-reference/api-sls-2020-12-30-endpoint) for more information. The connector provides the ability to get VPC Flow Logs, WAF Logs, and API Gateway Logs from Alibaba Cloud.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`AlibabaCloudVPCFlowLogs`|No|No|
+
+**Data collection rule support:** Not currently supported
+
+**Prerequisites:**
+
+- **Alibaba Cloud SLS API access**: **Alibaba Cloud Simple Log Service** access is required for the SLS API.<br><br>
+</details> 
+
+ ---
+   
 <a name="alicloud-using-azure-functions"></a><details><summary>**AliCloud (using Azure Functions)**</summary>
 
 **Supported by:** [Microsoft Corporation](https://support.microsoft.com/)
@@ -175,6 +213,27 @@ This data connector enables the integration of AWS CloudFront logs with Microsof
 |`AWSCloudFront_AccessLog_CL`|Yes|Yes|
 
 **Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)<br><br>
+</details> 
+
+ ---
+   
+<a name="amazon-web-services-elastic-load-balancing-via-codeless-connector-framework"></a><details><summary>**Amazon Web Services Elastic Load Balancing (via Codeless Connector Framework)**</summary>
+
+**Supported by:** [Microsoft Corporation](https://support.microsoft.com/)
+
+The AWS Elastic Load Balancing (ELB) connector for Microsoft Sentinel allows you to ingest access logs and flow logs from AWS Application Load Balancers (ALB), Network Load Balancers (NLB), and Gateway Load Balancers (GLB) into Microsoft Sentinel. These logs provide detailed information about requests processed by your load balancers and VPC traffic flows, enabling security monitoring, threat detection, and traffic analysis.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`AWSALBAccessLogsData`|No|No|
+
+**Data collection rule support:** Not currently supported
+
+**Prerequisites:**
+
+- **AWS IAM Role ARN and SQS Queue**: An **AWS IAM Role ARN** with cross-account access and an **SQS Queue URL** configured for S3 event notifications are required. See [AWS ELB connector documentation](/azure/sentinel/connect-aws) for setup instructions.<br><br>
 </details> 
 
  ---
@@ -403,7 +462,7 @@ The [Atlassian Jira](https://www.atlassian.com/software/jira) Audit data connect
 
  ---
    
-<a name="atlassian-jira-audit-using-rest-api"></a><details><summary>**Atlassian Jira Audit (using REST API)**</summary>
+<a name="atlassian-jira-audit-via-codeless-connector-framework"></a><details><summary>**Atlassian Jira Audit (via Codeless Connector Framework)**</summary>
 
 **Supported by:** [Microsoft Corporation](https://support.microsoft.com/)
 
@@ -446,7 +505,7 @@ The [Auth0 Access Management](https://auth0.com/access-management) data connecto
 
  ---
    
-<a name="auth0-logs"></a><details><summary>**Auth0 Logs**</summary>
+<a name="auth0-logsvia-codeless-connector-framework"></a><details><summary>**Auth0 Logs(via Codeless Connector Framework)**</summary>
 
 **Supported by:** [Microsoft Corporation](https://support.microsoft.com/)
 
@@ -476,6 +535,23 @@ You can stream the audit logs from the WebCTRL SQL server hosted on Windows mach
 |[`Event`](/azure/azure-monitor/reference/tables/Event)|Yes|No|
 
 **Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)<br><br>
+</details> 
+
+ ---
+   
+<a name="aws-eks-data-connector-via-codeless-connector-framework"></a><details><summary>**AWS EKS Data Connector (via Codeless Connector Framework)**</summary>
+
+**Supported by:** [Microsoft Corporation](https://support.microsoft.com/)
+
+The AWS EKS data connector provides the capability to ingest audit logs from [Amazon Elastic Kubernetes Service](https://aws.amazon.com/eks/) into Microsoft Sentinel. This connector focuses on EKS audit logs (JSON format) which contain detailed information about API server requests, authentication decisions, and cluster activities. The connector uses AWS SQS to receive notifications when new audit log files are exported to S3, ensuring real-time security monitoring and compliance tracking for your Kubernetes clusters.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`AWSEKSLogs_CL`|No|No|
+
+**Data collection rule support:** Not currently supported<br><br>
 </details> 
 
  ---
@@ -892,10 +968,10 @@ This connector uses Azure Functions to pull data from the BeyondTrust PM Cloud A
 
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
-|`BeyondTrustPM_ActivityAudits_CL`|No|No|
-|`BeyondTrustPM_ClientEvents_CL`|No|No|
+|`BeyondTrustPM_ActivityAudits_CL`|Yes|Yes|
+|`BeyondTrustPM_ClientEvents_CL`|Yes|Yes|
 
-**Data collection rule support:** Not currently supported
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
 
 **Prerequisites:**
 
@@ -944,38 +1020,6 @@ The [Bitglass](https://www.forcepoint.com/bitglass) data connector provides the 
 
 - **Microsoft.Web/sites permissions**: Read and write permissions to Azure Functions to create a Function App is required. For more information, see [Azure Functions](/azure/azure-functions/).
 - **REST API Credentials/permissions**: **BitglassToken** and **BitglassServiceURL** are required for making API calls.<br><br>
-</details> 
-
- ---
-   
-<a name="bitsight-data-connector-using-azure-functions"></a><details><summary>**Bitsight data connector (using Azure Functions)**</summary>
-
-**Supported by:** [BitSight Support](https://help.bitsight.com/)
-
-The [BitSight](https://www.BitSight.com/) Data Connector supports evidence-based cyber risk monitoring by bringing BitSight data in Microsoft Sentinel.
-
-**Log Analytics table(s):**  
-
-|Table|DCR support|Lake-only ingestion|
-|---|---|---|
-|`BitsightAlerts_data_CL`|Yes|Yes|
-|`BitsightBreaches_data_CL`|Yes|Yes|
-|`BitsightCompany_details_CL`|Yes|Yes|
-|`BitsightCompany_rating_details_CL`|Yes|Yes|
-|`BitsightDiligence_historical_statistics_CL`|Yes|Yes|
-|`BitsightDiligence_statistics_CL`|Yes|Yes|
-|`BitsightFindings_data_CL`|Yes|Yes|
-|`BitsightFindings_summary_CL`|Yes|Yes|
-|`BitsightGraph_data_CL`|Yes|Yes|
-|`BitsightIndustrial_statistics_CL`|Yes|Yes|
-|`BitsightObservation_statistics_CL`|Yes|Yes|
-
-**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
-
-**Prerequisites:**
-
-- **Microsoft.Web/sites permissions**: Read and write permissions to Azure Functions to create a Function App is required. For more information, see [Azure Functions](/azure/azure-functions/).
-- **REST API Credentials/permissions**: BitSight API Token is required.  See the documentation to [learn more](https://help.bitsighttech.com/hc/en-us/articles/115014888388-API-Token-Management) about API Token.<br><br>
 </details> 
 
  ---
@@ -1980,6 +2024,23 @@ Ingest IP reputation and malware URL indicators from Cyren using the Common Conn
 **Prerequisites:**
 
 - **Cyren JWT Tokens**: JWT tokens stored in Azure Key Vault or provided at deployment time.<br><br>
+</details> 
+
+ ---
+   
+<a name="d3-smart-soar-incidents"></a><details><summary>**D3 Smart SOAR Incidents**</summary>
+
+**Supported by:** [D3 Security](https://d3security.com/company/contact/)
+
+The D3 Smart SOAR data connector pulls incidents from D3 Smart SOAR into Microsoft Sentinel using the D3 codeless REST API command endpoint.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`D3SOARIncidents_CL`|No|No|
+
+**Data collection rule support:** Not currently supported<br><br>
 </details> 
 
  ---
@@ -3196,6 +3257,23 @@ The [Imperva Cloud WAF](https://www.imperva.com/resources/resource-library/datas
 
  ---
    
+<a name="imperva-cloud-waf-via-codeless-connector-framework"></a><details><summary>**Imperva Cloud WAF (via Codeless Connector Framework)**</summary>
+
+**Supported by:** [Microsoft Corporation](https://support.microsoft.com/)
+
+The Imperva WAF Cloud data connector provides the capability to ingest logs into Microsoft Sentinel using the Imperva Log Integration via AWS S3 with SQS notifications. The connector parses CEF-formatted WAF events including access logs and security alerts for threat detection and investigation.Refer to [Imperva WAF Cloud Log Integration](https://docs.imperva.com/bundle/cloud-application-security/page/settings/log-integration.htm) for more information.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`ImpervaWAFCloud`|No|No|
+
+**Data collection rule support:** Not currently supported<br><br>
+</details> 
+
+ ---
+   
 <a name="infoblox-cloud-data-connector-via-ama"></a><details><summary>**Infoblox Cloud Data Connector via AMA**</summary>
 
 **Supported by:** [Infoblox](https://support.infoblox.com/)
@@ -3311,11 +3389,13 @@ Use this data connector to integrate with InfoSec Crypto Analytics and get data 
 
  ---
    
-<a name="ionix-security-logs"></a><details><summary>**IONIX Security Logs**</summary>
+<a name="ionix-security-logs-via-codeless-connector-framework"></a><details><summary>**IONIX Security Logs (via Codeless Connector Framework)**</summary>
 
-**Supported by:** [IONIX](https://cyberpion.com/)
+**Supported by:** [IONIX](https://ionix.io/)
 
-The IONIX Security Logs data connector, ingests logs from the IONIX system directly into Sentinel. The connector allows users to visualize their data, create alerts and incidents and improve security investigations.
+The IONIX connector allows you to ingest action items from your IONIX Attack Surface Management platform into Microsoft Sentinel using the Codeless Connector Framework (CCF). Action items represent security findings and vulnerabilities that require remediation.
+
+**This connector automatically polls the IONIX API and writes data to the CyberpionActionItems_CL table.**
 
 **Log Analytics table(s):**  
 
@@ -3327,7 +3407,7 @@ The IONIX Security Logs data connector, ingests logs from the IONIX system direc
 
 **Prerequisites:**
 
-- **IONIX Subscription**: A subscription and account is required for IONIX logs. [One can be acquired here.](https://azuremarketplace.microsoft.com/en/marketplace/apps/cyberpion1597832716616.cyberpion)<br><br>
+- **IONIX API Token**: An API token from IONIX Portal is required. Create one in **Settings > API** in your [IONIX Portal](https://portal.ionix.io/).<br><br>
 </details> 
 
  ---
@@ -4053,7 +4133,7 @@ These alerts can be imported into Microsoft Sentinel with this connector, allowi
 
 **Supported by:** [Microsoft](https://support.microsoft.com/)
 
-The Microsoft Copilot logs connector in Microsoft Sentinel enables the seamless ingestion of Copilot-generated activity logs into Microsoft Sentinel for advanced threat detection, investigation, and response. It collects telemetry from Microsoft Copilot services - such as usage data, prompts and system responses - and ingests into Microsoft Sentinel, allowing security teams to monitor for misuse, detect anomalies, and maintain compliance with organizational policies.
+The Microsoft Copilot logs connector in Microsoft Sentinel enables seamless ingestion of Copilot-generated activity logs from M365 Copilot and Security Copilot into Microsoft Sentinel for advanced threat detection, investigation and response. It collects telemetry from Microsoft Copilot services such as usage data and system responses and ingests into Microsoft Sentinel, allowing security teams to monitor for misuse, detect anomalies, and maintain compliance with organizational policies.
 
 **Log Analytics table(s):**  
 
@@ -4992,6 +5072,42 @@ The [Netskope](https://docs.netskope.com/en/netskope-help/admin-console/rest-api
 
  ---
    
+<a name="netskope-web-transaction-connector-via-blob-storage"></a><details><summary>**Netskope Web Transaction Connector (via Blob Storage)**</summary>
+
+**Supported by:** [Netskope](https://support.netskope.com/access/)
+
+The Netskope Web Transaction connector ingests web transaction logs from Netskope Log Streaming into Microsoft Sentinel via Azure Blob Storage using the Codeless Connector Framework (CCF).
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`NetskopeWebTransactions_CL`|Yes|Yes|
+
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+
+**Prerequisites:**
+
+- **Subscription permissions**: You need permissions to create the data flow resources: 
+- storage queues (notification queue and dead-letter queue) 
+- event grid topic and subscription (to send 'blob created event' notifications to the notification queue) 
+- role assignments (to grant access for Microsoft Sentinel app to the blob container and the storage queues.)
+- **Storage Account Network Configuration**: Network restrictions (firewall/IP rules) on the Azure Blob Storage account are **not supported** for this connector due to [Azure Storage firewall restrictions and limitations](/azure/storage/common/storage-network-security-limitations):
+- IP network rules have**no effect**on requests originating from the same Azure region as the storage account.
+- IP network rules**cannot restrict**access to Azure services deployed in the same region, as these services use private Azure IP addresses for communication.
+- Virtual network service endpoint rules do not apply to clients in a paired region.
+
+Ensure the storage account's **Networking** blade is set to **Enabled from all networks**.
+- **Storage Account Role Assignments**: The following Azure RBAC roles must be assigned to the Microsoft Sentinel enterprise application service principal (displayed below) on the **Storage Account** that contains your blob container:
+- **Storage Blob Data Contributor** — required for reading blob data from the container.
+- **Storage Queue Data Contributor** — required for managing notification and dead-letter queue messages.
+
+To assign these roles: navigate to the Storage Account → **Access Control (IAM)** → **Add role assignment**, search for the service principal ID shown below, and assign both roles.
+- **Collecting data from Netskope to your blob container**: Follow the steps in the [Netskope Log Streaming documentation](https://docs.netskope.com/en/log-streaming.html) to configure Netskope to stream Web Transaction logs to your Azure Blob Storage container.<br><br>
+</details> 
+
+ ---
+   
 <a name="netskope-web-transactions-data-connector"></a><details><summary>**Netskope Web Transactions Data Connector**</summary>
 
 **Supported by:** [Netskope](https://support.netskope.com/access/)
@@ -5216,12 +5332,12 @@ The Open Systems Logs API Microsoft Sentinel Connector provides the capability t
 
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
-|`OpenSystemsZtnaLogs_CL`|No|No|
+|`OpenSystemsZtnaLogs_CL`|Yes|Yes|
 |`OpenSystemsFirewallLogs_CL`|No|No|
 |`OpenSystemsAuthenticationLogs_CL`|No|No|
 |`OpenSystemsProxyLogs_CL`|No|No|
 
-**Data collection rule support:** Not currently supported
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
 
 **Prerequisites:**
 
@@ -5589,6 +5705,27 @@ Ingest Qscout application events into Microsoft Sentinel
 
  ---
    
+<a name="qualys-knowledge-base-via-codeless-connector-framework"></a><details><summary>**Qualys Knowledge Base (via Codeless Connector Framework)**</summary>
+
+**Supported by:** [Microsoft Corporation](https://support.microsoft.com/)
+
+Ingest Qualys Knowledge Base Vulnerability Data into Microsoft Sentinel using version 2.0 of the Qualys API.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|[`QualysKnowledgeBase`](/azure/azure-monitor/reference/tables/QualysKnowledgeBase)|Yes|Yes|
+
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+
+**Prerequisites:**
+
+- **Qualys API access**: Requires a Qualys User Account with read access to the Knowledge Base endpoints.<br><br>
+</details> 
+
+ ---
+   
 <a name="qualys-vm-knowledgebase-using-azure-functions"></a><details><summary>**Qualys VM KnowledgeBase (using Azure Functions)**</summary>
 
 **Supported by:** [Microsoft Corporation](https://support.microsoft.com/)
@@ -5909,6 +6046,30 @@ SecurityBridge enhances SAP security by integrating seamlessly with Microsoft Se
 
  ---
    
+<a name="semperis-lightning-logs"></a><details><summary>**Semperis Lightning Logs**</summary>
+
+**Supported by:** [Semperis](https://www.semperis.com/support/)
+
+The [Semperis Lightning](https://www.semperis.com/platform/) connector uses Azure Functions to ingest Semperis Lightning identity security data into Microsoft Sentinel. The connector deploys an Azure Function and collects data into custom Log Analytics tables for investigation and threat hunting.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`LightningTier0Nodes_CL`|No|No|
+|`LightningAttackPaths_CL`|No|No|
+|`LightningIOEResults_CL`|No|No|
+
+**Data collection rule support:** Not currently supported
+
+**Prerequisites:**
+
+- **Microsoft.Web/sites permissions**: Read and write permissions to Azure Functions to create a Function App is required. For more information, see [Azure Functions](/azure/azure-functions/).
+- **Semperis Lightning API credentials**: A Semperis Lightning **API Key** and selected **Zone** (na or eu) are required to authenticate the connector to Semperis Lightning.<br><br>
+</details> 
+
+ ---
+   
 <a name="sentinelone"></a><details><summary>**SentinelOne**</summary>
 
 **Supported by:** [Microsoft Corporation](https://support.microsoft.com/)
@@ -6073,23 +6234,6 @@ Use this data connector to integrate with Sonrai Security and get Sonrai tickets
 
  ---
    
-<a name="sophos-cloud-optix"></a><details><summary>**Sophos Cloud Optix**</summary>
-
-**Supported by:** [Sophos](https://community.sophos.com/products/sophos-cloud-optix/)
-
-The [Sophos Cloud Optix](https://www.sophos.com/products/cloud-optix.aspx) connector allows you to easily connect your Sophos Cloud Optix logs with Microsoft Sentinel, to view dashboards, create custom alerts, and improve investigation. This gives you more insight into your organization's cloud security and compliance posture and improves your cloud security operation capabilities.
-
-**Log Analytics table(s):**  
-
-|Table|DCR support|Lake-only ingestion|
-|---|---|---|
-|`SophosCloudOptix_CL`|No|No|
-
-**Data collection rule support:** Not currently supported<br><br>
-</details> 
-
- ---
-   
 <a name="sophos-endpoint-protection-using-azure-functions"></a><details><summary>**Sophos Endpoint Protection (using Azure Functions)**</summary>
 
 **Supported by:** [Microsoft Corporation](https://support.microsoft.com/)
@@ -6112,7 +6256,7 @@ The [Sophos Endpoint Protection](https://www.sophos.com/en-us/products/endpoint-
 
  ---
    
-<a name="sophos-endpoint-protection-using-rest-api"></a><details><summary>**Sophos Endpoint Protection (using REST API)**</summary>
+<a name="sophos-endpoint-protection-via-codeless-connector-platform"></a><details><summary>**Sophos Endpoint Protection (via Codeless Connector Framework)**</summary>
 
 **Supported by:** [Microsoft Corporation](https://support.microsoft.com/)
 
@@ -6546,7 +6690,7 @@ The [Varonis Purview](https://www.varonis.com/) connector provides the capabilit
 
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
-|`varonisresources_CL`|No|No|
+|`VaronisResources_CL`|No|No|
 
 **Data collection rule support:** Not currently supported
 
@@ -6780,7 +6924,7 @@ The [VMware Carbon Black Cloud](https://www.broadcom.com/products/carbon-black/t
 
  ---
    
-<a name="vmware-carbon-black-cloud-via-aws-s3"></a><details><summary>**VMware Carbon Black Cloud via AWS S3**</summary>
+<a name="vmware-carbon-black-cloud-via-aws-s3-via-codeless-connector-framework"></a><details><summary>**VMware Carbon Black Cloud via AWS S3 (via Codeless Connector Framework)**</summary>
 
 **Supported by:** [Microsoft](https://support.microsoft.com/)
 
@@ -7008,6 +7152,58 @@ The [Workplace](https://www.workplace.com/) data connector provides the capabili
 
  ---
    
+<a name="xbow-security-platform-via-azure-function"></a><details><summary>**XBOW Security Platform (via Azure Function)**</summary>
+
+**Supported by:** [XBOW](https://xbow.com/contact)
+
+The **XBOW** data connector ingests asset snapshots, vulnerability findings, and assessment activity from the [XBOW Security Platform](https://console.xbow.com) into Microsoft Sentinel. An Azure Function polls the XBOW API on a timer and pushes asset JSON snapshots into `XbowAssets_CL`, enriched findings (with evidence, PoC recipes, impact, and mitigations) into `XbowFindings_CL`, and assessment lifecycle events into `XbowAssessments_CL`, using the [Azure Monitor Ingestion API](/azure/azure-monitor/logs/logs-ingestion-api-overview) (DCE/DCR).
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`XbowAssets_CL`|No|No|
+|`XbowFindings_CL`|No|No|
+|`XbowAssessments_CL`|No|No|
+
+**Data collection rule support:** Not currently supported
+
+**Prerequisites:**
+
+- **XBOW API Token**: A XBOW Personal Access Token is required. Generate one in the [XBOW console](https://console.xbow.com) under **Settings > Personal Access Tokens**. Scope the token to the organization you want to monitor.
+- **XBOW Organization ID**: The Organization ID from your XBOW account. Find it in the XBOW console URL or via the API.
+- **Microsoft.Web/sites permissions**: Read and write permissions to Azure Functions to create a Function App is required. For more information, see [Azure Functions](/azure/azure-functions/).
+- **Custom prerequisites if necessary, otherwise delete this customs tag**: Description for any custom pre-requisites
+- **Azure AD App Registration**: An Azure AD App Registration (service principal) is required. You must manually assign the **Monitoring Metrics Publisher** role on the Data Collection Rule (DCR) to this App Registration after deployment.<br><br>
+</details> 
+
+ ---
+   
+<a name="zero-networks-segment-push"></a><details><summary>**Zero Networks Segment (Push)**</summary>
+
+**Supported by:** [Zero Networks](https://zeronetworks.com/)
+
+The [Zero Networks Segment](https://zeronetworks.com/) push connector allows Zero Networks to send Audits, Network Activities, Identity Activities, and RPC Activities directly to Microsoft Sentinel in real time. Deploy the connector to create a Data Collection Rule (DCR) and Microsoft Entra app; then configure your Zero Networks application with the connection details to push events.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`ZNAudit_CL`|Yes|Yes|
+|`ZNNetworkActivity_CL`|Yes|Yes|
+|`ZNIdentityActivity_CL`|Yes|Yes|
+|`ZNRPCActivity_CL`|Yes|Yes|
+
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+
+**Prerequisites:**
+
+- **Microsoft Entra**: Permission to create an app registration in Microsoft Entra ID. Typically requires Entra ID Application Developer role or higher.
+- **Microsoft Azure**: Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR). Typically requires Azure RBAC Owner or User Access Administrator role.<br><br>
+</details> 
+
+ ---
+   
 <a name="zero-networks-segment-audit"></a><details><summary>**Zero Networks Segment Audit**</summary>
 
 **Supported by:** [Zero Networks](https://zeronetworks.com/)
@@ -7018,9 +7214,9 @@ The [Zero Networks Segment](https://zeronetworks.com/) Audit data connector prov
 
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
-|`ZNSegmentAuditNativePoller_CL`|No|No|
+|`ZNSegmentAuditNativePoller_CL`|Yes|Yes|
 
-**Data collection rule support:** Not currently supported
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
 
 **Prerequisites:**
 
@@ -7134,20 +7330,19 @@ The [Zoom](https://zoom.us/) Reports data connector provides the capability to i
 
 **Supported by:** [Microsoft Corporation](https://support.microsoft.com/)
 
-The [Zoom Reports](https://developers.zoom.us/docs/api/) data connector enables you to ingest Zoom Reports data into Microsoft Sentinel through the Zoom REST API v2, allowing you to monitor and audit Zoom usage across your organization. This connector uses server-to-server OAuth account credentials for authentication and supports ingestion of multiple report types including Daily Usage Reports for meeting statistics and usage metrics, User Reports for active/inactive user host information, Telephony Reports for telephony usage statistics, Cloud Recording Usage Reports for cloud storage and recording usage, Operation Logs for administrative operations and audit trail, and Activity Logs for user sign-in/sign-out activities. Each report type is collected in a separate polling configuration with automatic pagination support using NextPageToken, polling every 5 minutes per 7-day window with a rate limit of 2 queries per second per endpoint and up to 3 automatic retries with exponential backoff. The data connector is built on Microsoft Sentinel Codeless Connector Framework and supports DCR-based [ingestion time transformations](/azure/azure-monitor/logs/custom-logs-overview) for optimized query performance.
+The [Zoom Reports](https://developers.zoom.us/docs/api/) data connector enables you to ingest Zoom Reports data into Microsoft Sentinel through the Zoom REST API v2, allowing you to monitor and audit Zoom usage across your organization. This connector uses server-to-server OAuth account credentials for authentication and supports ingestion of multiple report types including Daily Usage Reports for meeting statistics and usage metrics, User Reports for active/inactive user host information, Telephony Reports for telephony usage statistics, Cloud Recording Usage Reports for cloud storage and recording usage, Operation Logs for administrative operations and audit trail, and Activity Logs for user sign-in/sign-out activities. Each report type is collected in a separate polling configuration with automatic pagination support using NextPageToken. The data connector is built on Microsoft Sentinel Codeless Connector Framework and supports DCR-based [ingestion time transformations](/azure/azure-monitor/logs/custom-logs-overview) for optimized query performance.
 
 **Log Analytics table(s):**  
 
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
-|`Zoom_CL`|Yes|Yes|
+|`ZoomV2_CL`|No|No|
 
-**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+**Data collection rule support:** Not currently supported
 
 **Prerequisites:**
 
-- **Zoom API access**: Access to Zoom REST API v2 with account credentials
-- **If you've used an `Azure Functions` based connector that uses the same table Zoom_CL before**: Migrate your classic custom table to use the CCF connector. Open your `Log Analytics Workspace` attached to the current `Microsoft Sentinel Workspace`, find the existing Zoom_CL and edit its schema, then click `Migrate to manual schema management` to migrate. Please close the current data connector page and reopen it after migration to see the effect, in case you run into errors asking for table migration.<br><br>
+- **Zoom API access**: Access to Zoom REST API v2 with account credentials<br><br>
 </details> 
 
  ---
