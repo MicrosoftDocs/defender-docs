@@ -53,6 +53,26 @@ These three most recent major releases of macOS are supported:
 > [!CAUTION]
 > We recommend that you keep [System Integrity Protection](https://support.apple.com/HT204899) (SIP) enabled on client devices. SIP is a built-in macOS security feature that prevents low-level tampering with the OS, and is enabled by default.
 
+### System extensions
+
+Microsoft Defender for Endpoint on macOS uses two system extensions:
+
+|Extension  |Function  |
+|---------|---------|
+|Endpoint Security Extension (com.microsoft.wdav.epsext)     |Real-time protection — monitors file, process, and system events |
+|Network Extension (com.microsoft.wdav.netext)     |Network content inspection — enables Network Protection, Web Content Filtering, and custom indicators |
+
+Starting with macOS Big Sur (11), system extensions require explicit approval before they can run. During manual installation, macOS prompts you to approve the extensions in **System Settings > Privacy & Security**. For enterprise deployments, you can pre-approve these extensions using MDM configuration profiles.
+
+For installation instructions, see your deployment method:
+
+[Microsoft Intune](mac-install-with-intune.md)
+[JAMF Pro](mac-install-with-jamf-pro.md)
+[Other MDM solutions](mac-install-with-other-mdm.md)
+[Manual deployment](mac-install-manually.md#application-installation-macos-13-and-newer-versions)
+
+For troubleshooting, see [Troubleshoot system extension issues](mac-support-sys-ext.md).
+
 ### Enterprise deployment requirements
 
 There are several methods and deployment tools that you can use to centrally install and configure Defender for Endpoint on macOS across your devices:
