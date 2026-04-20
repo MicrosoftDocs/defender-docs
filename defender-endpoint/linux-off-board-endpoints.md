@@ -7,7 +7,6 @@ ms.topic: article
 author: paulinbar
 ms.author: painbar
 ms.reviewer: gopkr, pahuijbr, megphapriya
-manager: bagol
 audience: ITPro
 ms.localizationpriority: medium
 ms.collection:
