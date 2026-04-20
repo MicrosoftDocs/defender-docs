@@ -1,10 +1,7 @@
 ---
 title: Mail flow in Microsoft 365
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: overview
 ms.localizationpriority: medium
 ms.assetid: e109077e-cc85-4c19-ae40-d218ac7d0548
@@ -15,7 +12,6 @@ ms.service: defender-office-365
 ms.collection: 
 - m365-security
 - tier3
-search.appverid: met150
 ms.date: 07/09/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>

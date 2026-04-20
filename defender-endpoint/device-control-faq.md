@@ -1,4 +1,4 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint Device Control frequently asked questions
 description: Answers frequently asked questions about device control in Defender for Endpoint
 ms.service: defender-endpoint
@@ -6,7 +6,6 @@ ms.subservice: asr
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -15,7 +14,6 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: faq
 ms.date: 01/05/2026
 ms.reviewer: tewchen, joshbregman
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

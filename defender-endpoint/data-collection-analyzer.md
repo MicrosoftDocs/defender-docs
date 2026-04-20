@@ -1,21 +1,17 @@
-﻿---
+---
 title:  Data collection for advanced troubleshooting on Windows
 description: Learn how to use the client analyzer to collect data for complex troubleshooting scenarios.
 ms.service: defender-endpoint
-f1.keywords:
-- NOCSH
 ms.author: chrisda
 author: chrisda
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
 ms.topic: troubleshooting-general
 ms.subservice: ngp
-search.appverid: met150
 ms.date: 04/01/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

@@ -1,16 +1,13 @@
 ---
 title: Visit the Microsoft Defender portal
 description: Your security center in Defender for Business is the Microsoft Defender portal. Learn how to navigate the portal, and see your next steps.
-search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: get-started
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.date: 07/03/2024
 ms.reviewer: nehabha
-f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security

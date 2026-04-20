@@ -2,7 +2,7 @@
 title: Release notes
 description: This page is updated frequently with the latest updates in Microsoft Security Exposure Management.
 ms.topic: overview
-ms.date: 01/26/2026
+ms.date: 04/16/2026
 
 ---
 
@@ -19,6 +19,18 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 > Get notified when this page is updated by copying and pasting the following URL into your feed reader:
 >
 > `https://aka.ms/msem/rss`
+
+## April 2026
+
+### New predefined classifications
+
+The following predefined **Cloud resource** classification rule was added to the critical assets list:
+
+| Classification | Description |
+| -------------- | ----------- |
+| APIs with Sensitive Data | This rule applies to APIs that contain sensitive data. This often indicates that the API is used for critical production workloads, and might require additional monitoring and protection.|
+
+For more information, see [Predefined classifications](predefined-classification-rules-and-levels.md).
 
 ## March 2026
 

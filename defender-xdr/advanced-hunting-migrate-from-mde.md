@@ -1,15 +1,11 @@
 ---
 title: Migrate advanced hunting queries from Microsoft Defender for Endpoint
 description: Learn how to adjust your Microsoft Defender for Endpoint queries so you can use them in Microsoft Defender XDR
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
   - m365-security
   - tier2
