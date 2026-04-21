@@ -1,4 +1,4 @@
-﻿---
+---
 title: Specify the cloud protection level for Microsoft Defender Antivirus
 description: Set your level of cloud protection for Microsoft Defender Antivirus.
 ms.service: defender-endpoint
@@ -8,14 +8,12 @@ author: chrisda
 ms.author: chrisda
 ms.reviewer: yongrhee
 ms.date: 10/20/2025
-manager: bagol
 ms.custom: nextgen
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

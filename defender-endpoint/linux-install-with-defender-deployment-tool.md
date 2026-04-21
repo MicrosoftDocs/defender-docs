@@ -6,16 +6,13 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
 ms.topic: install-set-up-deploy
 ms.subservice: linux
-search.appverid: met150
-ms.date: 11/17/2025
+ms.date: 02/26/2026
 appliesto:
   - Microsoft Defender for Business
   - Microsoft Defender for Endpoint Plan 1
@@ -35,14 +32,15 @@ Before you get started, see [Prerequisites for Microsoft Defender for Endpoint o
 - Allow connection to the URL: `msdefender.download.prss.microsoft.com`. Before you begin deployment, make sure to run the [connectivity test](#check-connectivity-issues), which checks if the URLs Defender for Endpoint uses are accessible or not.
 - The endpoint must have either **wget** or **curl** installed.
 
-
-The Defender deployment tool enforces the following set of prerequisites checks, which if not met will abort the deployment process:
+The deployment tool enforces the following set of prerequisites checks, which if not met will abort the deployment process:
 
 - Device memory: Greater than 1 GB
 - Available disk space on the device: Greater than 2GB
 - Glibc library version on the device: Newer than 2.17
 - mdatp version on the device: Must be a supported version and not expired. To check product expiration date, run the command `-mdatp health`.
 
+> [!TIP]
+> Before running the deployment tool to onboard Defender onto your Linux server, it's recommended to run the tool with the `--pre-req` option to help identify and fix any potential issues that might impact the deployment.
 
 ## Deployment: Step-by-step guide
 

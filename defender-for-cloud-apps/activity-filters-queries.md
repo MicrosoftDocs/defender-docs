@@ -61,6 +61,14 @@ Below is a list of the activity filters that can be applied. Most filters suppor
   The built-in IP tags include the following:
     - Microsoft apps (14 of them)
     - Anonymous proxy
+      - Active - The anonymizer tested positive within the last month. 
+            
+      - Suspect - The anonymizer tested positive within the last three months, but not the last month.
+            
+      - Inactive - The anonymizer tested positive within the last six months, but not in the last three months. 
+            
+      - Private - The anonymizer is not publicly accessible, and cannot be tested using automated tools. These addresses usually belong to **commercial VPN ventures**.
+            
     - Botnet (you'll see that the activity was performed by a botnet with a link to learn more about the specific botnet)
     - Darknet scanning IP
     - Malware C&C server
@@ -172,8 +180,7 @@ You can export all activities from the past six months by clicking the Export bu
 
 > [!NOTE]
 > **Required Permissions for Exporting Capabilities:** To utilize the exporting features, users must be assigned one of the following roles:
-> - **Built-in admin roles in Defender for Cloud Apps-** These roles must be granted via [Microsoft Defender for Cloud Apps Permissions and roles settings](/defender-cloud-apps/manage-admins):
->   - Global Admin
+> - **Built-in admin roles in Defender for Cloud Apps-** At least, one of the following roles must be granted via [Microsoft Defender for Cloud Apps Permissions and roles settings](/defender-cloud-apps/manage-admins):
 >   - Cloud Discovery Global Admin
 >   - Security Operator
 >   - Compliance Admin

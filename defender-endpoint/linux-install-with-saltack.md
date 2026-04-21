@@ -1,4 +1,4 @@
-﻿---
+---
 title: Deploy Microsoft Defender for Endpoint on Linux with SaltStack
 ms.reviewer: dmcwee, gopkr
 description: Describes how to deploy Microsoft Defender for Endpoint on Linux using Saltstack.
@@ -6,15 +6,12 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
 ms.topic: install-set-up-deploy
 ms.subservice: linux
-search.appverid: met150
 ms.date: 08/11/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -281,21 +278,21 @@ To troubleshoot issues:
 
 1. For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](linux-resources.md#log-installation-issues).
 
-1. For information about common installation issues, see [Installation issues](/defender-endpoint/linux-support-install).
+1. For information about common installation issues, see [Installation issues](linux-support-install.md).
 
-1. If the health of the device is `false`, see [Defender for Endpoint agent health issues](/defender-endpoint/health-status).
+1. If the health of the device is `false`, see [Defender for Endpoint agent health issues](health-status.md).
 
-1. For product performance issues, see [Troubleshoot performance issues](/defender-endpoint/linux-support-perf).
+1. For product performance issues, see [Troubleshoot performance issues](linux-support-perf.md).
 
-1. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](/defender-endpoint/linux-support-connectivity).
+1. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](linux-support-connectivity.md).
 
-To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](/defender-endpoint/overview-client-analyzer).
+To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](overview-client-analyzer.md).
 
 ## How to configure policies for Microsoft Defender on Linux
 
 You can configure antivirus or EDR settings on your endpoints using any of the following methods:
 
-- See [Set preferences for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences).
+- See [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md).
 - See [security settings management](/intune/intune-service/protect/mde-security-integration) to configure settings in the Microsoft Defender portal.
 
 ## Operating system upgrades

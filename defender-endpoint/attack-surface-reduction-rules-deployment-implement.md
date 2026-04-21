@@ -1,14 +1,12 @@
-﻿---
+---
 title: Implement attack surface reduction rules
 description: Provides guidance to implement your attack surface reduction rules deployment.
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
-audience: ITPro
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: sugamar
-manager: bagol
 ms.custom: asr
 ms.topic: how-to
 ms.collection: 
@@ -18,7 +16,6 @@ ms.collection:
  - tier1
  - mde-asr
 ms.date: 06/10/2025
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -101,7 +98,7 @@ See the [attack surface reduction rules reference](attack-surface-reduction-rule
 
 ##### Use Group Policy to exclude files and folders
 
-1. On your Group Policy management computer, open the [Group Policy Management Console](https://technet.microsoft.com/library/cc731212.aspx). Right-click the Group Policy Object you want to configure and select **Edit**.
+1. On your Group Policy management computer, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console). Right-click the Group Policy Object you want to configure and select **Edit**.
 
 1. In the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
 

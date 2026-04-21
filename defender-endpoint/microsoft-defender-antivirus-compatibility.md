@@ -12,12 +12,10 @@ ms.custom:
 - nextgen
 - partner-contribution
 ms.reviewer: pahuijbr, dmcwee, yongrhee
-manager: bagol
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -134,7 +132,7 @@ In order for Microsoft Defender Antivirus to run in passive mode, endpoints must
 
 - Microsoft Defender Antivirus must be installed.
 
-- Another non-Microsoft antivirus/antimalware product must be installed and used as the primary antivirus solution. ([Add Microsoft Defender for Endpoint to your exclusion list for your existing solution](/defender-endpoint/switch-to-mde-phase-2)). 
+- Another non-Microsoft antivirus/antimalware product must be installed and used as the primary antivirus solution. ([Add Microsoft Defender for Endpoint to your exclusion list for your existing solution](switch-to-mde-phase-2.md)). 
 
 - Endpoints must be onboarded to Defender for Endpoint.
 

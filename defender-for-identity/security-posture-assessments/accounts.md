@@ -226,7 +226,7 @@ If the KRBTGT account's password is compromised, an attacker can use its hash to
 >  
 > We recommend resetting the password twice, waiting at least 10 hours between resets. This process invalidates  existing Kerberos tickets to help prevent Golden Ticket attacks.  
 >  
-> For the official and supported procedure, see [Reset the krbtgt password](https://learn.microsoft.com/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-the-krbtgt-password).
+> For the official and supported procedure, see [Reset the krbtgt password](/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-the-krbtgt-password).
 
 
 ## Change password for on-premises account with potentially leaked credentials (Preview)
@@ -527,36 +527,6 @@ To use this security assessment effectively, follow these steps:
     - **Monitor for impact:** Wait several weeks and monitor for operational issues, such as service disruptions or errors.
 
     - **Delete the account:** If no issues are observed, delete the account and fully remove its access.
-
-
-## Riskiest lateral movement paths (LMP)
-
-**Description**
-
-Microsoft Defender for Identity continuously monitors your environment to identify **sensitive** accounts with the riskiest lateral movement paths that expose a security risk, and reports on these accounts to assist you in managing your environment. Paths are considered risky if they have three or more non-sensitive accounts that can expose the **sensitive** account to credential theft by malicious actors.
-
-For more information about lateral movement paths, see:
-
-- [Understand and investigate Lateral Movement Paths (LMPs) with Microsoft Defender for Identity](../understand-lateral-movement-paths.md)
-- [MITRE ATT&CK Lateral Movement](https://attack.mitre.org/tactics/TA0008/)
-
-**User impact**
-
-Organizations that fail to secure their **sensitive** accounts leave the door unlocked for malicious actors.
-
-Malicious actors, much like thieves, often look for the easiest and quietest way into any environment. Sensitive accounts with risky lateral movement paths are windows of opportunities for attackers and can expose risks.
-
-For example, the riskiest paths are more readily visible to attackers and, if compromised, can give an attacker access to your organization's most sensitive entities.
-
-**Implementation**
-
-1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your **sensitive** accounts have risky LMPs.
-
-    :::image type="content" source="../media/cas-isp-riskiest-lmp-1.png" alt-text="Screenshot that shows the impacted entities and the actions to take to reduce lateral movement path risk to sensitive entities. " lightbox="../media/cas-isp-riskiest-lmp-1.png":::
-
-1. Take appropriate action:
-    - Remove the entity from the group as specified in the recommendation.
-    - Remove the local administrator permissions for the entity from the device specified in the recommendation.
 
 
 ## Unsecure Kerberos delegation

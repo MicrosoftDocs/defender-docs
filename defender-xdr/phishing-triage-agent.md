@@ -2,21 +2,15 @@
 title: Security Copilot Phishing Triage Agent in Microsoft Defender
 description: Learn about the Security Copilot Phishing Triage Agent, including requirements for setup and providing feedback to the agent.
 ms.service: defender-xdr
-f1.keywords:
-- NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 - security-copilot
 - magic-ai-copilot 
 ms.topic: how-to
-search.appverid:
-- MOE150
-- MET150
 ms.date: 02/22/2026
 ms.update-cycle: 180-days
 appliesto:
@@ -66,6 +60,8 @@ To run the Phishing Triage Agent in your environment, you need:
 |Products|- Security Copilot and provisioned capacity in Security Compute Units (SCU). See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) or check whether you're entitled to SCUs as part of the [Microsoft Security Copilot inclusion model](/copilot/security/security-copilot-inclusion)</br> - Microsoft Defender for Office 365 Plan 2 deployed |
 |Microsoft Defender required features|- Unified role-based access control (URBAC) enabled for Defender for Office 365. See [Activate URBAC settings](#activate-urbac-settings) for more information. </br> - Enable **Monitor reported messages in Outlook** in **User reported settings**. See [User reported settings](#configure-user-reported-settings) for more information </br> - The alert policy **Email reported by user as malware or phish** must be turned on. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information|
 | Plugins | The Phishing Triage Agent automatically activates these Security Copilot plugins: <br>- Microsoft Defender XDR<br>- Microsoft Threat Intelligence<br>- Phishing Triage Agent |
+| Alert-tuning rules | The Phishing Triage Agent doesn't classify alerts that you suppress by using [alert tuning](investigate-alerts.md#tune-an-alert). Make sure to disable the **Auto-Resolve - Email reported by user as malware or phish** built-in alert tuning rule and any custom tuning rules that suppress this alert.|
+
 ### Activate URBAC settings
 
 Activate the Defender for Office 365 workload in the Microsoft Defender XDR settings:

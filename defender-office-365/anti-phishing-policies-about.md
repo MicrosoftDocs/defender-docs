@@ -1,11 +1,7 @@
 ---
 title: Anti-phishing policies in Microsoft 365
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.assetid: 5a6f2d7f-d998-4f31-b4f5-f7cbf6f38578
@@ -16,7 +12,6 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn about the anti-phishing policies that are available in the built-in security features for all cloud mailboxes and in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-search.appverid: met150
 ms.date: 01/25/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
