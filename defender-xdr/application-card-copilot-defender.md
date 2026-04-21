@@ -6,7 +6,6 @@ f1.keywords:
 - NOCSH
 ms.author: guywild
 author: guywi-ms
-ms.reviewer: corinaf
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection: 
