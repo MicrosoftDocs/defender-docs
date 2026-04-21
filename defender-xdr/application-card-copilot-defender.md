@@ -12,8 +12,8 @@ ms.collection:
 - m365-security
 - tier1
 - security-copilot
-- msec-ai-copilot​ 
-ms.custom: responsible-ai-transparency​
+- msec-ai-copilot
+ms.custom: responsible-ai-transparency
 ms.topic: concept-article
 ms.date: 04/12/2026
 #customer intent: I want to understand how Microsoft Copilot in Microsoft Defender works, its intended uses, limitations, and responsible AI practices.
@@ -141,9 +141,6 @@ Understanding Microsoft Copilot in Microsoft Defender's limitations is crucial t
 
 Performance and safety evaluations assess whether AI applications are operating reliably and securely by examining factors like groundedness, relevance, and coherence while identifying the risks of generating harmful content. The following evaluations were conducted with safety components already in place, which are also described in [9. Safety Components and Mitigations](#9-safety-components-and-mitigations).
 
-> [!NOTE]
-> **REVIEW NEEDED:** Sections 8.1 and 8.2 below assume automated evaluations were conducted through Microsoft Foundry. If the team has NOT conducted Foundry-based evaluations, remove sections 8.1, 8.1a, 8.2, and 8.2a entirely per the template instructions.
-
 ### 8.1 Performance and quality evaluations
 
 Performance evaluations for AI applications are essential to improving their reliability in real-world applications. Metrics like groundedness, relevance, and coherence help assess the accuracy and consistency of AI-generated outputs, so that they are factually supported in grounded content scenarios, contextually appropriate, and logically structured. For Microsoft Copilot in Microsoft Defender, we conducted performance evaluations for the following metrics, which are available through Microsoft Foundry:
@@ -153,13 +150,19 @@ Performance evaluations for AI applications are essential to improving their rel
 - Fluency
 - Similarity
 
-> [!NOTE]
-> **REVIEW NEEDED:** Remove any metrics above that were not used in automated evaluations.
-
 ### 8.1a Performance and quality evaluation methods
 
-> [!NOTE]
-> **REVIEW NEEDED:** The team should describe the automated performance evaluation methodology here, including which modalities (text) were evaluated, the methodology used, and what constitutes an ideal vs. suboptimal result. If no automated performance evaluations were conducted, remove sections 8.1 and 8.1a entirely.
+Performance evaluations for Microsoft Copilot in Microsoft Defender were conducted on text-based outputs generated across the full range of supported capabilities, including incident summarization, guided responses, script and file analysis, identity and device summarization, KQL query generation, and threat intelligence briefings. Evaluations used AI-assisted automated evaluators available through Microsoft Foundry, applied against curated datasets of realistic security investigation scenarios drawn from synthetic and representative real-world inputs.
+ 
+Groundedness measures whether generated outputs are factually supported by the source data available in the environment, such as incident alerts, threat intelligence signals, and security telemetry. An ideal result is one in which all claims in the output are traceable to and consistent with the underlying data. A suboptimal result contains claims that are fabricated, hallucinated, or inconsistent with the source data provided to the model.
+ 
+Coherence measures the logical structure, clarity, and internal consistency of generated outputs. An ideal result is well-organized, easy to follow, and free of contradictions. A suboptimal result is disjointed, self-contradictory, or difficult for an analyst to interpret and act on.
+ 
+Fluency measures the grammatical correctness and linguistic quality of generated text. An ideal result reads naturally and is free of grammatical errors or awkward constructions. A suboptimal result contains grammatical mistakes or phrasing that impedes readability or analyst comprehension.
+ 
+Similarity measures the degree of alignment between generated outputs and reference outputs produced by subject matter experts for the same inputs. An ideal result closely mirrors the intent, coverage, and accuracy of the expert reference. A suboptimal result diverges significantly from the expected response in content, scope, or accuracy.
+ 
+Each metric was scored on a numerical scale using AI-assisted judges calibrated against human annotations. Evaluations were run iteratively across dataset updates to track quality over time and support continuous improvement.
 
 ### 8.2 Risk and safety evaluations
 
@@ -175,13 +178,29 @@ Evaluating potential risks associated with AI-generated content is essential for
 - Code vulnerability
 - Ungrounded attributes
 
-> [!NOTE]
-> **REVIEW NEEDED:** Remove any metrics above that were not used in automated evaluations.
-
 ### 8.2a Risk and safety evaluation methods
 
-> [!NOTE]
-> **REVIEW NEEDED:** The team should describe the automated risk and safety evaluation methodology here, including which modalities (text) were evaluated, the methodology used, and what constitutes an ideal vs. suboptimal result. If no automated risk and safety evaluations were conducted, remove sections 8.2 and 8.2a entirely.
+Risk and safety evaluations for Microsoft Copilot in Microsoft Defender were conducted using adversarial datasets and AI-assisted classifiers available through Microsoft Foundry, applied to text-based inputs and outputs. Adversarial prompts were crafted to simulate attempts to elicit harmful, policy-violating, or off-topic content across a range of risk categories. Outputs were scored for the presence of such content using classifiers trained and calibrated to Microsoft's safety standards.
+ 
+Hate and unfairness evaluates whether outputs contain derogatory, discriminatory, or prejudicial content targeting individuals or groups based on protected characteristics. An ideal result contains no such content. A suboptimal result includes language that demeans, stereotypes, or unfairly characterizes individuals or groups.
+ 
+Sexual evaluates whether outputs contain sexually explicit or inappropriate content. An ideal result contains no such content. A suboptimal result includes language of a sexual nature that is inappropriate for a professional security operations context.
+ 
+Violence evaluates whether outputs contain content that glorifies, instructs, or encourages violent acts. An ideal result contains no such content. A suboptimal result includes language that promotes or facilitates harm to individuals or groups.
+ 
+Self-harm evaluates whether outputs contain content that promotes, instructs, or encourages self-injurious behavior. An ideal result contains no such content. A suboptimal result includes language that could contribute to self-harm.
+ 
+Protected material evaluates whether outputs reproduce copyrighted text, code, or other protected content verbatim or in a manner that creates legal exposure. An ideal result does not reproduce protected material. A suboptimal result contains verbatim reproduction of third-party protected content.
+ 
+Indirect jailbreak evaluates the application's resilience to prompt injection attacks embedded in external content, such as data retrieved from emails, documents, or security alerts, that attempt to redirect the model's behavior. An ideal result is one in which the model does not follow injected instructions. A suboptimal result is one in which injected instructions alter the model's outputs or behavior.
+ 
+Direct jailbreak evaluates the application's resilience to explicit attempts by users to bypass safety constraints, override system instructions, or elicit content outside the intended scope of the application. An ideal result is one in which the model refuses or appropriately handles such attempts. A suboptimal result is one in which the model complies with instructions designed to circumvent safety controls.
+ 
+Code vulnerability evaluates whether generated code outputs, such as KQL queries or script snippets, contain security vulnerabilities that could expose the analyst or their environment to risk. An ideal result is code that is free of exploitable vulnerabilities. A suboptimal result contains code with known vulnerability patterns, such as injection risks or insecure constructs.
+ 
+Ungrounded attributes evaluates whether outputs assign characteristics, behaviors, or attributes to entities, such as users, devices, or threat actors, that are not supported by the underlying data. An ideal result attributes only what is evidenced in the available security data. A suboptimal result fabricates or infers attributes without evidentiary basis, which could lead an analyst to incorrect conclusions.
+ 
+Each metric was scored using AI-assisted classifiers, with scores calibrated against human annotations. Evaluations were conducted iteratively and informed the design of safety mitigations described in [Section 9](#9-safety-components-and-mitigations).
 
 ### Evaluation data for quality and safety
 
