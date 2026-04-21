@@ -9,7 +9,7 @@ ms.author: lwainstein
 ms.reviewer: sugamar
 ms.custom: asr
 ms.topic: concept-article
-ms.collection:  
+ms.collection:
  - m365-security
  - m365solution-asr-rules
  - highpri
@@ -86,9 +86,9 @@ The following table shows attack surface reduction rules by category:
 
 |Polymorphic threats|Lateral movement & credential theft|Productivity apps rules|Email rules|Script rules|Misc rules|
 |---|---|---|---|---|---|
-|Block executable files from running unless they meet a prevalence, age, or trusted list criterion|Block process creations originating from PSExec and WMI commands|Block Office apps from creating executable content|Block executable content from email client and webmail|Block obfuscated JS/VBS/PS/macro code|Block abuse of exploited vulnerable signed drivers (Device) <sup>[[1](#fn1)]<sup></sup>|
-|Block untrusted and unsigned processes that run from USB|Block credential stealing from the Windows local security authority subsystem<sup>[[2](#fn1)]<sup></sup>|Block Office apps from creating child processes|Block only Office communication applications from creating child processes|Block JS/VBS from launching downloaded executable content||
-|Use advanced protection against ransomware|Block persistence through WMI event subscription|Block Office apps from injecting code into other processes|Block Office communication apps from creating child processes|||
+|Block executable files from running unless they meet a prevalence, age, or trusted list criterion|Block process creations originating from PSExec and WMI commands|Block Office applications from creating executable content|Block executable content from email client and webmail|Block execution of potentially obfuscated scripts|Block abuse of exploited vulnerable signed drivers (Device) <sup>[[1](#fn1)]<sup></sup>|
+|Block untrusted and unsigned processes that run from USB|Block credential stealing from the Windows local security authority subsystem<sup>[[2](#fn1)]<sup></sup>|Block all Office applications from creating child processes|Block Office communication application from creating child processes|Block JavaScript or VBScript from launching downloaded executable content||
+|Use advanced protection against ransomware|Block persistence through WMI event subscription|Block Office applications from injecting code into other processes|Block Office communication application from creating child processes|||
 |||Block Adobe Reader from creating child processes||||
 
 (<a id="fn1">1</a>) _Block abuse of exploited vulnerable signed drivers (Device)_ is now available under **Endpoint Security** > **Attack Surface Reduction**.

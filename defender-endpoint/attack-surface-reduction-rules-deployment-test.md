@@ -236,6 +236,3 @@ To review apps that would be blocked, open Event Viewer and filter for Event ID 
 [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
 
 [Troubleshoot attack surface reduction rules](troubleshoot-asr.md)
-
-
-

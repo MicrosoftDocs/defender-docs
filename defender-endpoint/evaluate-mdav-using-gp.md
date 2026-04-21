@@ -194,7 +194,7 @@ To enable Network Protection for Windows Servers, for now, please use PowerShell
 |c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb|[Block use of copied or impersonated system tools](attack-surface-reduction-rules-reference.md#block-use-of-copied-or-impersonated-system-tools)|1 (Block)|
 |c1db55ab-c21a-4637-bb3f-a12568109d35|[Use advanced protection against ransomware](attack-surface-reduction-rules-reference.md#use-advanced-protection-against-ransomware)|1 (Block)|
 |d1e49aac-8f56-4280-b9ba-993a6d77406c|[Block process creations originating from PSExec and WMI commands](attack-surface-reduction-rules-reference.md#block-process-creations-originating-from-psexec-and-wmi-commands)|1 (Block)<sup>\*</sup>|
-|d3e037e1-3eb8-44c8-a917-57927947596d|[Block JavaScript or VBScript from launching downloaded executable content](attack-surface-reduction-rules-reference.md#block-process-creations-originating-from-psexec-and-wmi-commands)|1 (Block)|
+|d3e037e1-3eb8-44c8-a917-57927947596d|[Block JavaScript or VBScript from launching downloaded executable content](attack-surface-reduction-rules-reference.md#block-javascript-or-vbscript-from-launching-downloaded-executable-content)|1 (Block)|
 |d4f940ab-401b-4efc-aadc-ad5f3c50688a|[Block all Office applications from creating child processes](attack-surface-reduction-rules-reference.md#block-all-office-applications-from-creating-child-processes)|1 (Block)|
 |e6db77e5-3df2-4cf1-b95a-636979351e5b|[Block persistence through WMI event subscription](attack-surface-reduction-rules-reference.md#block-persistence-through-wmi-event-subscription)|1 (Block)|
 

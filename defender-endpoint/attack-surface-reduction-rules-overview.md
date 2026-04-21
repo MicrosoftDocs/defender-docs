@@ -23,7 +23,7 @@ appliesto:
 
 [!INCLUDE [MDE automated setup guide](../includes/security-analyzer-setup-guide.md)]
 
-Attack surface reduction (ASR) rules for Windows devices in Microsoft Defender for Endpoint are a key component in reducing your organization's _attack surface_(entry points that could allow attackers access to your organization). For more information, see [Attack surface reduction in Microsoft Defender for Endpoint](attack-surface-reduction-overview.md).
+Attack surface reduction (ASR) rules for Windows devices in Microsoft Defender for Endpoint are a key component in reducing your organization's _attack surface_ (entry points that could allow attackers access to your organization). For more information, see [Attack surface reduction in Microsoft Defender for Endpoint](attack-surface-reduction-overview.md).
 
 ASR rules target specific software behavior on Windows devices that's often identified as malicious in nature. For example:
 
@@ -79,7 +79,7 @@ You can set attack surface reduction rules for devices that are running any of t
 You can assess how an attack surface reduction rule might affect your network using the following methods:
 
 - **Security recommendations in [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)**: In Defender for Endpoint Plan 2 or with the Defender Vulnerability Management add-on, you can use the **Devices** tab of the **Recommendations** page in the Microsoft Defender portal at **Exposure management** \> **Recommendations** (directly at <https://security.microsoft.com/exposure-recommendations>). When you select an ASR rule, the details flyout shows allows you to check the  user impact to determine what percentage of your devices can accept a new policy enabling the rule in blocking mode without adversely affecting productivity.
-- 
+-
 by opening the security recommendation for that rule in [Microsoft Defender Vulnerability Management](/windows/security/threat-protection/).
 
 :::image type="content" source="media/asrrecommendation.png" alt-text="The attack surface reduction recommendation" lightbox="media/asrrecommendation.png":::
@@ -163,7 +163,7 @@ You can set attack surface reduction rules for devices that are running any of t
 - Windows 11 Enterprise, version 21H2 or later
 - Windows Server, [version 1803 (Semi-Annual Channel)](/windows-server/get-started/whats-new-in-windows-server-1803) or later
 - Windows Server 2025
-- [Windows Server 2022](/windows-server/get-started/whats-new-in-windows-server-2022) 
+- [Windows Server 2022](/windows-server/get-started/whats-new-in-windows-server-2022)
 - [Windows Server 2019](/windows-server/get-started-19/whats-new-19)
 - [Windows Server 2016](/windows-server/get-started/whats-new-in-windows-server-2016)
 - [Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh801901(v=ws.11))
@@ -238,4 +238,3 @@ Defender for Endpoint generates the "engine version" that's listed in the event 
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-

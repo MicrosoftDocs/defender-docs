@@ -496,7 +496,7 @@ The paths or filenames with paths you specify are used as exclusions for all ASR
 > [!WARNING]
 > If you manage your computers and devices with Intune, Configuration Manager, or another enterprise-level management platform, the management software overwrites any conflicting PowerShell settings on startup.
 
-Use the following PowerShell command syntax in an elevated PowerShell session (a PowerShell window you opened by selecting **Run as administrator**):
+On the target device, use the following PowerShell command syntax in an elevated PowerShell session (a PowerShell window you opened by selecting **Run as administrator**):
 
 ```powershell
 <Add-MpPreference | Set-MpPreference | Remove-MpPreference> -AttackSurfaceReductionRules_Ids <RuleGuid1>,<RuleGuid2>,...<RuleGuidN> -AttackSurfaceReductionRules_Actions <ModeForRuleGuid1>,<ModeForRuleGuid2>,...<ModeForRuleGuidN>
@@ -530,7 +530,7 @@ Set-MpPreference -AttackSurfaceReductionRules_Ids 26190899-1602-49e8-8b27-eb1d0a
 
 ### Configure global ASR rule exclusions in PowerShell
 
-Use the following PowerShell command syntax in an elevated PowerShell session:
+On the target device, use the following PowerShell command syntax in an elevated PowerShell session:
 
 ```powershell
 <Add-MpPreference | Set-MpPreference | Remove-MpPreference> -AttackSurfaceReductionOnlyExclusions "<PathOrPathAndFilename1>","<PathOrPathAndFilename2>",..."<PathOrPathAndFilenameN>"
