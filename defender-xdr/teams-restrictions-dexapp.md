@@ -18,7 +18,7 @@ ms.custom:
 - cx-ti
 - cx-dex
 search.appverid: met150
-ms.date: 04/17/2026
+ms.date: 04/21/2026
 ---
 
 # Troubleshooting issues with Microsoft Defender Experts app in Microsoft Teams
@@ -101,14 +101,14 @@ You can't receive updates or chat with Defender Experts if the Managed Response 
 
 ## Disabled Unified Group creation 
 
-In some environments, Teams channel creation might fail if Microsoft 365 Unified Group creation is disabled in your organization.
+Teams channel creation might fail if Microsoft 365 Unified Group creation is disabled in your organization.
 
-The Defender Experts onboarding flow requires the onboarding user to create a Microsoft 365 Unified Group during Teams provisioning. If Unified group creation (`EnableGroupCreation`) is disabled in the tenant, the Teams channel can't be created.
+The Defender Experts teams onboarding flow requires the creation of Microsoft 365 Unified Group during Teams provisioning on-behalf-of user performing the onboarding. If Unified group creation (`EnableGroupCreation`) is disabled in the tenant, the Teams team can't be created.
 
 To verify your organization’s group settings, use one of the following options:
 
-1. Use [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer?request=groupSettings&method=GET&version=v1.0&GraphUrl=https://graph.microsoft.com) to review Microsoft 365 Group settings and determine whether the `EnableGroupCreation` setting is set to `false`.
-1. If group creation is restricted, use [Manage creation of Microsoft 365 Groups](/previous-versions/microsoft-365/solutions/manage-creation-of-groups#step-2-run-powershell-commands) to update your tenant configurations and allow the onboarding user to create Unified Groups before retrying setup.
+1. **Using Graph Explorer:** Use [List group settings Graph API](https://developer.microsoft.com/en-us/graph/graph-explorer?request=groupSettings&method=GET&version=v1.0&GraphUrl=https://graph.microsoft.com) to review Microsoft 365 Group settings and determine whether the `EnableGroupCreation` setting is set to `false`.
+1. **Using PowerShell:** Use the [Microsoft Graph PowerShell module](/previous-versions/microsoft-365/solutions/manage-creation-of-groups#step-2-run-powershell-commands) to view and update your tenant configurations and allow the onboarding user to create Unified Groups before retrying setup.
 
 
 ### See also
