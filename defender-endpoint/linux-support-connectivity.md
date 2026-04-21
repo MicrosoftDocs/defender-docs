@@ -50,20 +50,20 @@ Testing connection with https://v20.events.data.microsoft.com/ping ... [OK]
 
 If the connectivity test fails, check if the device has Internet access. Also check to see if network connections are blocked by a proxy or firewall. For more information, see [Verify that devices can connect to Defender for Endpoint cloud services](mde-linux-prerequisites.md#verify-if-devices-can-connect-to-defender-for-endpoint-cloud-services).
 
-Check to see if the connection is under SSL or HTTPS inspection. If so, add Microsoft Defender for Endpoint to the allowlist.
+Check to see if the connection is under SSL or HTTPS inspection. If so, add Microsoft Defender for Endpoint to the allow list.
 
 Failures with curl error 35 or 60 typically indicate certificate pinning rejection caused by TLS/SSL inspection. For diagnostic steps and resolution, see [TLS/SSL inspection](#tlsssl-inspection). 
 
 
 ## TLS/SSL inspection
 
-TLS/SSL inspection is not supported by Microsoft Defender for Endpoint on Linux.
+TLS/SSL inspection isn't supported by Microsoft Defender for Endpoint on Linux.
 
 | Symptom or error                                            | What it indicates                          | Required action                                               |
 | ----------------------------------------------------------- | ------------------------------------------ | ------------------------------------------------------------- |
-| `curl error 60`                                             | Certificate validation failure             | TLS/SSL inspection is active — configure a bypass                 |
-| `CERTIFICATE_VERIFY_FAILED`                                 | Certificate chain has been replaced        | TLS/SSL inspection is active — configure a bypass                 |
-| `HTTP 502 Bad Gateway`                                      | TLS session disrupted by proxy or firewall | TLS/SSL inspection is active — configure a bypass |
+| `curl error 60`                                             | Certificate validation failure             | TLS/SSL inspection is active. Configure a bypass                 |
+| `CERTIFICATE_VERIFY_FAILED`                                 | Certificate chain has been replaced        | TLS/SSL inspection is active. Configure a bypass                 |
+| `HTTP 502 Bad Gateway`                                      | TLS session disrupted by proxy or firewall | TLS/SSL inspection is active. Configure a bypass |
 
 
 
@@ -85,9 +85,9 @@ OK https://cdn.x.cp.wd.microsoft.com/ping
 ## Troubleshooting steps for environments with static proxy
 
 > [!WARNING]
-> PAC, WPAD, and authenticated proxies are not supported. Ensure that only a static proxy or transparent proxy is being used.
+> PAC, WPAD, and authenticated proxies aren't supported. Ensure that only a static proxy or transparent proxy is being used.
 >
-> SSL inspection and intercepting proxies are also not supported for security reasons. Configure an exception for SSL inspection and your proxy server to directly pass through data from Defender for Endpoint on Linux to the relevant URLs without interception. Adding your interception certificate to the global store will not allow for interception.
+> SSL inspection and intercepting proxies are also not supported for security reasons. Configure an exception for SSL inspection and your proxy server to directly pass through data from Defender for Endpoint on Linux to the relevant URLs without interception. Adding your interception certificate to the global store won't allow for interception.
 
 If a static proxy is required, add a proxy parameter to the above command, where `proxy_address:port` correspond to the proxy address and port:
 
