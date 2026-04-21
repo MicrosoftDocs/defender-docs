@@ -106,7 +106,7 @@ For more information, see [Alert policies in the Microsoft Defender portal](aler
 > The Security Alert Triage Agent doesn't classify alerts suppressed by [alert tuning](investigate-alerts.md#tune-an-alert).  
 > Make sure to disable the **Auto-Resolve – Email reported by user as malware or phish** built-in alert tuning rule and any custom tuning rules that suppress this alert.
 
-#### [Cloud container alerts](#tab/cloud-alerts)
+#### [Cloud alerts](#tab/cloud-alerts)
 
 ##### Products and licenses
 
