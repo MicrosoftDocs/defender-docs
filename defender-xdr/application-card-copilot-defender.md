@@ -106,7 +106,7 @@ Microsoft Copilot in Microsoft Defender can be used in multiple scenarios across
 
 ## 5. Models and training data
 
-Microsoft Copilot in Microsoft Defender leverages a variety of AI models to power the experience that users see. Some examples include [OpenAI GPT-4](/azure/ai-services/openai/concepts/models) and other large language models available through [Azure OpenAI Service](/azure/ai-services/openai/overview). To learn more about the data used to train the foundation models behind Microsoft Copilot in Microsoft Defender, refer to the linked model cards to find the relevant data cards.
+Microsoft Defender extends Microsoft Security Copilot, leveraging its existing agents and underlying AI models. As such, it's dependent on any external configuration that these provide. For example, model choice for Microsoft Security Copilot for the embedded natural language prompt experience. To learn more, see [Microsoft Security Copilot Responsible AI FAQ](/copilot/security/rai-faqs-security-copilot).
 
 ## 6. Performance
 
