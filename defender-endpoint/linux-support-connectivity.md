@@ -50,7 +50,22 @@ Testing connection with https://v20.events.data.microsoft.com/ping ... [OK]
 
 If the connectivity test fails, check if the device has Internet access. Also check to see if network connections are blocked by a proxy or firewall. For more information, see [Verify that devices can connect to Defender for Endpoint cloud services](mde-linux-prerequisites.md#verify-if-devices-can-connect-to-defender-for-endpoint-cloud-services).
 
-Failures with curl error 35 or 60, indicate certificate pinning rejection. Check to see if the connection is under SSL or HTTPS inspection. If so, add Microsoft Defender for Endpoint to the allowlist.
+Check to see if the connection is under SSL or HTTPS inspection. If so, add Microsoft Defender for Endpoint to the allowlist.
+
+Failures with curl error 35 or 60 typically indicate certificate pinning rejection caused by TLS/SSL inspection. For diagnostic steps and resolution, see [TLS/SSL inspection](#tlsssl-inspection). 
+
+
+## TLS/SSL inspection
+
+TLS/SSL inspection is not supported by Microsoft Defender for Endpoint on Linux.
+
+| Symptom or error                                            | What it indicates                          | Required action                                               |
+| ----------------------------------------------------------- | ------------------------------------------ | ------------------------------------------------------------- |
+| `curl error 60`                                             | Certificate validation failure             | TLS/SSL inspection is active — configure a bypass                 |
+| `CERTIFICATE_VERIFY_FAILED`                                 | Certificate chain has been replaced        | TLS/SSL inspection is active — configure a bypass                 |
+| `HTTP 502 Bad Gateway`                                      | TLS session disrupted by proxy or firewall | TLS/SSL inspection is active — configure a bypass |
+
+
 
 ## Troubleshooting steps for environments without proxy or with transparent proxy
 
