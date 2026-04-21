@@ -19,7 +19,7 @@ appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Defender for Endpoint Plan 2
 ms.topic: how-to
-ms.date: 04/10/2026
+ms.date: 04/16/2026
 ---
 
 # Create custom detection rules
