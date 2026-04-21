@@ -2,7 +2,6 @@
 title: Alert policies in the Microsoft Defender portal
 ms.author: guywild
 author: guywi-ms
-manager: deniseb
 ms.date: 03/31/2026
 ms.topic: article
 ms.service: defender-xdr

@@ -3,7 +3,7 @@ title: Microsoft Defender for Endpoint third-party troubleshooting support Discl
 description: Disclaimer for third-party troubleshooting Microsoft Defender for Endpoint.
 ms.date: 03/08/2023
 ms.reviewer: 
-manager: dansimp
+manager: bagol
 ms.author: macapara
 author: mjcaparas
 ms.service: microsoft-365-security
