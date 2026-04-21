@@ -28,6 +28,7 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|macOS |101.26032.0016  |April 2026 |- Release version: 20.126032.16.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--april-2026--101260320016) |
 |macOS |101.26022.0020  |April 2026 |- Release version: 20.126022.20.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--april-2026--101260220020) |
 |macOS |101.26022.0018  |April 2026 |- Release version: 20.126022.18.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--april-2026--101260220018) |
 |Android |1.0.8805.0103  |April 2026 |- Build: 1.0.8805.0103<br>- Released: April 7, 2025 |[Release details and updates](#android--april-2026--platform-1088050103) |
@@ -133,6 +134,20 @@ To share feedback, open Defender for Endpoint on macOS and go to **Help > Send f
 To get latest features, configure your device for the Beta channel (formerly Insider-Fast) device.
 
 For known issues, see [macOS known issues](#macos-known-issues).
+
+### macOS | April-2026 | 101.26032.0016
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+|-----------------|----------------|-------------------|
+| 20.126032.16.0  | 1.1.25100.4000 | 1.439.74.0        |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|----------------|
+| General      | Bug and performance fixes |
 
 ### macOS | April-2026 | 101.26022.0020
 
