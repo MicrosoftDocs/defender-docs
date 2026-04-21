@@ -146,6 +146,17 @@ You can elect not to show events from Microsoft Sentinel in the main timeline, a
 
 For more information about these activity events, see [Entity pages in Microsoft Sentinel](/azure/sentinel/entity-pages?tabs=defender-portal#entity-pages).
 
+### Strong Identifier Requirements for Unified Timeline (Sentinel → XDR Mapping)
+
+To ensure that custom activity data (e.g., Sophos alerts) is correctly mapped and visible in **Microsoft Defender XDR** (`security.microsoft.com`) under the **Device Timeline**, the ingested data must include multiple strong identifiers for the host/device.
+
+#### ✅ Required Strong Identifiers
+
+At minimum, one of the following valid combinations must be present:
+
+- **Hostname + NTDomain**
+- **Hostname + DNS Domain**
+
 > [!NOTE]
 >
 > For firewall events to be displayed, you'll need to enable the audit policy. For instructions, see [Audit Filtering Platform connection](/windows/security/threat-protection/auditing/audit-filtering-platform-connection).
