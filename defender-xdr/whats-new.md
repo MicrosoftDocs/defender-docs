@@ -6,7 +6,6 @@ ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 04/15/2026
-manager: orspodek
 ms.collection:
 - M365-security-compliance
 - tier1

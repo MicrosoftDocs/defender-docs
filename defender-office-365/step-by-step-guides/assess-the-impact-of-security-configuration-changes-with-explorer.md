@@ -4,7 +4,6 @@ description: Examples and walk-through of using Explorer to determine the impact
 ms.service: defender-office-365
 author: MSFTBen
 ms.author: chrisda
-manager: bagol
 ms.localizationpriority: medium
 ms.collection: 
 - m365-guidance-templates
