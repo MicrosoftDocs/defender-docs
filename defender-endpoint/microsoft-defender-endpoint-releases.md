@@ -354,12 +354,11 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 #### Enhancements and features
 
-| Feature area | Update summary |
+|Feature area | Update summary |
 |--------------|---------------|
-| Visibility |File creation activity is now recorded for Linux kernel module files (.ko). This improves visibility into kernel‑level changes on Linux systems.|
-| Configuration|Offline definition updates now run at most once per configured definition update interval. This prevents repeated full downloads during service restarts while leaving cloud‑based updates unchanged.|
-| Vulnerability detection|Improved robustness of MDVM vulnerability detection on Linux by strengthening runtime data handling.|
-| Bug Fix|Resolved an SELinux policy cleanup issue affecting upgrades on some RHEL‑based Linux systems. Upgrading to version 101.26032.0000 ensures safe removal of legacy SELinux modules while preserving customer‑defined policies.|
+|Visibility |Expanded visibility into Linux kernel module (.ko) file activity - including creation, rename, and deletion.|
+|Configuration|Offline security intelligence updates now run at most once per configured update interval, reducing redundant downloads during service restarts while leaving cloud‑based updates unchanged.|
+|Bug Fix|Resolved an SELinux policy cleanup issue affecting upgrades on some RHEL‑based Linux systems. Upgrading to version 101.26032.0000 ensures safe removal of legacy SELinux modules while preserving customer‑defined policies.|
 
 ### Linux | March 2026 | 101.26021.0002
 
