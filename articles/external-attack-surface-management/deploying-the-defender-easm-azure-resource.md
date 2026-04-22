@@ -22,8 +22,8 @@ Creating the Defender EASM Azure resource involves two steps:
 
 Before you create a Defender EASM resource group, become familiar with how to access and use the [Azure portal](https://portal.azure.com/). Also read the [Defender EASM Overview article](overview.md) for key context on the product. You need:
 
-- A valid Azure subscription or free Defender EASM trial account. If you don’t have an [Azure subscription](../guides/developer/azure-developer-guide.md#understanding-accounts-subscriptions-and-billing), create a free Azure account before you begin.
-- A Contributor role assigned for you to create a resource. To get this role assigned to your account, follow the steps in the [Assign roles](../role-based-access-control/role-assignments-steps.md) documentation. Or you can contact your administrator.
+- A valid Azure subscription or free Defender EASM trial account. If you don’t have an [Azure subscription](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), create a free Azure account before you begin.
+- A Contributor role assigned for you to create a resource. To get this role assigned to your account, follow the steps in the [Assign roles](/azure/role-based-access-control/role-assignments-steps) documentation. Or you can contact your administrator.
 
 ## Create a resource group
 
